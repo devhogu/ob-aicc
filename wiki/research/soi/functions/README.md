@@ -1,6 +1,6 @@
 # Function pages
 
-Research per bank function. Each page has use cases with maturity ratings, target state for O!Bank, phased path, prerequisites, risks, metrics, sources, and gaps. Serves the [statement of intent](../statement-of-intent.md).
+Research per bank function. Each page has use cases with maturity ratings, target state for O!Bank, phased path, prerequisites, risks, metrics, sources, and gaps. Serves the [statement of intent](../../../statement-of-intent.md).
 
 Drafted 2026-09-29 from web research. Many figures are self-reported by banks or vendors, and pages mark them. Some sources were read only through search summaries. Verify before external use.
 
