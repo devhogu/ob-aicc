@@ -1,0 +1,26 @@
+# aicc-deploy dry run against the real deploy repository (/devops/websvc/websvc-ob-aicc)
+# source: clean clone of this repository at ffad4b6
+Source:  /tmp/aicc-clone/html/aicc (commit ffad4b6ae9f9)
+Deploy:  /devops/websvc/websvc-ob-aicc -> html/aicc/
+Added (141):
+  assets/aicc.css
+  assets/site.js
+  assets/tokens/tokens.css
+  assets/ui-comps/fonts/aicc-fonts.css
+  assets/ui-comps/fonts/font-face.css
+  assets/ui-comps/fonts/golos-text/GolosText-variable.ttf
+  assets/ui-comps/fonts/golos-text/GolosText-variable.woff2
+  assets/ui-comps/fonts/golos-text/METADATA.pb
+  assets/ui-comps/fonts/golos-text/OFL.txt
+  assets/ui-comps/fonts/golos-text/sources.json
+  assets/ui-comps/fonts/inter/inter-400.woff2
+  assets/ui-comps/fonts/inter/inter-600.woff2
+  assets/ui-comps/fonts/inter/inter-700.woff2
+  assets/ui-comps/fonts/montserrat/montserrat-400.woff2
+  assets/ui-comps/fonts/montserrat/montserrat-500.woff2
+  ... and 126 more
+Changed (1):
+  index.html
+Summary: 141 added, 1 changed, 0 removed, 142 files in total.
+Dry run: nothing written, nothing pushed. Use --publish to publish.
+exit=0

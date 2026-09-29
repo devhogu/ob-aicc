@@ -1,5 +1,5 @@
 <GraceDeployment graceVersion="4.0">
   <Applicability>applicable</Applicability>
-  <Target>Static HTML output rendered from this repository into a separate clean deployment repository, which is then published by its own hosting path</Target>
-  <Notes>The deployment repository name, hosting platform, render command, and release gates are not yet decided and belong to a later specification. Push to the deployment repository needs separate explicit authority.</Notes>
+  <Target>Static HTML output rendered from this repository into html/aicc, mirrored by the aicc-deploy tool into the clean deployment repository /devops/websvc/websvc-ob-aicc (folder html/aicc), then pushed to its origin (GitHub) and websvc remotes; the websvc push triggers a server hook and Caddy serves the result</Target>
+  <Notes>Internal URL http://hetzner-cx43.alpines-krait.ts.net/aicc/ and external URL https://aicc.hejihogusei.link/ behind Cloudflare Access; the allow-list was checked by the practitioner on 2026-09-29 and contains only the practitioner. Server side is owned by websvc-infra. Publishing is a deliberate act: aicc-deploy defaults to a dry run and pushes only with --publish. See deploy/README.md.</Notes>
 </GraceDeployment>

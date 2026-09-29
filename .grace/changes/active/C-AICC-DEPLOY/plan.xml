@@ -1,0 +1,115 @@
+<GraceChangePlan graceVersion="4.0" status="approved">
+  <C-AICC-DEPLOY>
+    <IntentSummary>Build the standard-library-only Rust tool deploy/aicc-deploy that mirrors html/aicc into the deploy repository, writes a hashed manifest, and with an explicit flag commits, pushes origin then websvc, and verifies the served manifest, defaulting to a dry run and refusing unsafe states.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist>
+        <Value>portal/tools/check.py</Value>
+      </MustExist>
+      <MustExist>
+        <Value>html/aicc/index.html</Value>
+      </MustExist>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify>
+        <Module>M-AICC-DEPLOY</Module>
+      </MustVerify>
+      <MustPassCommand>
+        <Command>cargo test --offline --manifest-path deploy/Cargo.toml</Command>
+      </MustPassCommand>
+      <MustPassCommand>
+        <Command>cargo build --offline --release --manifest-path deploy/Cargo.toml</Command>
+      </MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors>
+        <M-AICC-DEPLOY />
+      </GraphAnchors>
+      <VerificationAnchors>
+        <V-M-AICC-DEPLOY />
+      </VerificationAnchors>
+      <ContextArtifact>deployment.xml</ContextArtifact>
+      <ContextArtifact>technology.xml</ContextArtifact>
+    </DurableScope>
+    <ObservedWriteScope>
+      <Glob>deploy/**</Glob>
+      <File>.gitignore</File>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001>
+        <Title>Create the crate with SHA-256, manifest, and tree-diff logic</Title>
+        <DependsOn></DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>deploy/Cargo.toml defines the aicc-deploy binary with no dependencies, and .gitignore ignores deploy/target.</Criterion>
+          <Criterion>The SHA-256 implementation matches the standard test vectors for empty input, abc, and a multi-block input.</Criterion>
+          <Criterion>A tree scanner lists files under a directory with relative paths and hashes in sorted order, and a diff function reports added, changed, and removed files.</Criterion>
+          <Criterion>The manifest writer produces stable JSON listing each file with its SHA-256 and size plus the source commit, and identical input gives identical bytes.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>cargo test --offline --manifest-path deploy/Cargo.toml</Command>
+        </Verification>
+      </T-001>
+      <T-002>
+        <Title>Implement preflight safety checks</Title>
+        <DependsOn>T-001</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The tool runs portal/tools/check.py --idempotent in the source repository and stops if it fails, so a stale or broken html/aicc is never published.</Criterion>
+          <Criterion>It stops when tracked files in the source repository are modified, when the deploy path is not a git repository, when the deploy branch is not main, when the origin or websvc remote is missing, or when the deploy repository has changes outside html/aicc.</Criterion>
+          <Criterion>Each refusal prints one clear message and exits non-zero before any write.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>cargo test --offline --manifest-path deploy/Cargo.toml</Command>
+        </Verification>
+      </T-002>
+      <T-003>
+        <Title>Implement mirroring and the commit-and-push flow</Title>
+        <DependsOn>T-001, T-002</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>Applying a sync copies added and changed files, deletes removed files and empty directories under the deploy repository's html/aicc, writes package-manifest.json there, and touches nothing else.</Criterion>
+          <Criterion>Publishing stages only html/aicc, commits with a message naming the source commit, and pushes origin and then websvc, stopping if the first push fails.</Criterion>
+          <Criterion>When there are no differences, no commit is made and nothing is pushed.</Criterion>
+          <Criterion>The tool never force-pushes and never changes git configuration.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>cargo test --offline --manifest-path deploy/Cargo.toml</Command>
+        </Verification>
+      </T-003>
+      <T-004>
+        <Title>Implement served-site verification</Title>
+        <DependsOn>T-001</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>A plain HTTP GET client built on the standard library fetches package-manifest.json from the served URL, follows no redirects, and handles a chunked or content-length response.</Criterion>
+          <Criterion>Verification retries for a bounded time and succeeds only when the served manifest equals the published manifest. Otherwise it reports the difference and returns failure.</Criterion>
+          <Criterion>A unit test runs the client against a local test server.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>cargo test --offline --manifest-path deploy/Cargo.toml</Command>
+        </Verification>
+      </T-004>
+      <T-005>
+        <Title>Add the command line and the integration test</Title>
+        <DependsOn>T-002, T-003, T-004</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The command line has --dry-run as the default, --publish, --no-origin, --source, --deploy-repo, --url, --branch, --skip-verify, and --help, with defaults for this host recorded in one place.</Criterion>
+          <Criterion>An integration test creates a temporary source tree and deploy repository with a local bare repository as both remotes, then checks the first publish, a stale file removal, a no-change second run, and each refusal case, and confirms no file outside html/aicc changed.</Criterion>
+          <Criterion>The dry run prints added, changed, and removed files and a summary, and exits zero without writing.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>cargo test --offline --manifest-path deploy/Cargo.toml</Command>
+          <Command>cargo build --offline --release --manifest-path deploy/Cargo.toml</Command>
+        </Verification>
+      </T-005>
+      <T-006>
+        <Title>Document the tool and run it in dry-run mode against the real repositories</Title>
+        <DependsOn>T-005</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>deploy/README.md explains what the tool does, its flags, the publish sequence, how the push to websvc triggers the server hook, and how to roll back with git revert.</Criterion>
+          <Criterion>A dry run against /devops/obank/aicc/html/aicc and /devops/websvc/websvc-ob-aicc leaves both repositories unchanged, verified by comparing git status and a tree hash before and after.</Criterion>
+          <Criterion>The dry-run output is saved under deploy/verification/.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>deploy/target/release/aicc-deploy --dry-run</Command>
+        </Verification>
+      </T-006>
+    </ImplementationPlan>
+  </C-AICC-DEPLOY>
+</GraceChangePlan>

@@ -13,3 +13,6 @@ __pycache__/
 # Local portal tooling (recreate with portal/tools/setup_browser.sh)
 portal/.venv/
 portal/.tools/
+
+# Rust build output
+deploy/target/

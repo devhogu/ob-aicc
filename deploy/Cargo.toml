@@ -1,0 +1,13 @@
+[package]
+name = "aicc-deploy"
+version = "0.1.0"
+edition = "2021"
+description = "Publish the generated AICC portal (html/aicc) into the clean deploy repository and push it"
+publish = false
+
+[dependencies]
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true

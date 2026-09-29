@@ -1,6 +1,6 @@
 <GraceTechnology graceVersion="4.0">
   <Language>HTML, CSS, and JavaScript; final stack choices are open</Language>
-  <Runtime>Static files served by any web host; no server-side runtime. Local build tooling to be selected by the first approved specification.</Runtime>
+  <Runtime>Static files served by any web host; no server-side runtime. Build and checks are Python 3 scripts under portal/tools. Publishing uses the Rust tool aicc-deploy under deploy/, built offline with the installed cargo toolchain.</Runtime>
   <Framework>Undecided; a static-site generator versus hand-authored pages is an open decision for the first specification.</Framework>
   <TestingStack>To be defined; expected to cover HTML validity, link integrity, accessibility, and rendered-output checks. GRACE lint runs on .grace state.</TestingStack>
   <Observability>None for this source repository; the published site's hosting analytics are a deployment decision.</Observability>

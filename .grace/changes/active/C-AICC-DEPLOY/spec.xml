@@ -1,0 +1,57 @@
+<GraceChangeSpec graceVersion="4.0" status="approved">
+  <C-AICC-DEPLOY>
+    <Summary>Add a Rust command-line tool, aicc-deploy, that publishes the generated html/aicc site from this repository into the clean deploy repository /devops/websvc/websvc-ob-aicc, commits it, and pushes it to the origin and websvc remotes so the existing git hook updates the web server.</Summary>
+    <Problem>The generated portal lives in html/aicc here, while the served copy lives in a separate deploy repository whose push to the websvc remote triggers a post-receive checkout on CX43. Publishing today is manual: copy files, commit, push twice, and check the result. Manual copying can leave stale files, publish an unchecked build, or push the wrong tree.</Problem>
+    <Goals>
+      <Goal>Provide one command that checks the source build, mirrors html/aicc into the deploy repository's html/aicc folder, and shows exactly what will change.</Goal>
+      <Goal>With an explicit publish flag, commit the change in the deploy repository with a message that names the source commit, push to origin, then push to websvc, and verify the served site afterwards.</Goal>
+      <Goal>Default to a dry run that writes nothing and pushes nothing, so publishing is always a deliberate act.</Goal>
+      <Goal>Write a package manifest with the SHA-256 of every published file and the source commit, so the served copy can be compared with what was published.</Goal>
+      <Goal>Refuse unsafe states: source build not current, source checkout dirty in tracked portal files, deploy repository dirty outside html/aicc, wrong branch, or a missing remote.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>The tool is written in Rust with the standard library only, matching the small-dependency style of websvc-onboard, and builds with the installed cargo toolchain without network access.</Constraint>
+      <Constraint>The tool only modifies files under html/aicc in the deploy repository. It never edits the deploy repository's README, gitignore, or git configuration, and never uses force pushes or history rewriting.</Constraint>
+      <Constraint>html/aicc in this repository remains the single source. The deploy repository holds a generated copy that is never edited by hand.</Constraint>
+      <Constraint>Pushing publishes content. The tool pushes only when the publish flag is given on the command line. Nothing in this change pushes to the deploy remotes as part of the build or tests.</Constraint>
+      <Constraint>The tool does not need sudo, credentials beyond the operator's existing SSH access to the remotes, or model inference. Root-only server operations remain with the operator.</Constraint>
+      <Constraint>Verification of the served site uses plain HTTP GET requests against the internal Tailscale URL and does not change any server or Cloudflare configuration.</Constraint>
+      <Constraint>Paths, remote names, and the served URL are configurable by flags with defaults for this host, and the defaults are recorded in one place.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Changes to websvc-infra, the Caddy configuration, the Cloudflare tunnel or Access policy, or the server-side git hook.</NonGoal>
+      <NonGoal>Continuous integration or a git hook in this repository that publishes automatically on every commit.</NonGoal>
+      <NonGoal>Rollback automation beyond documenting git revert in the deploy repository.</NonGoal>
+      <NonGoal>Publishing the first real release. That is a separate explicit instruction after the tool is verified.</NonGoal>
+      <NonGoal>Deciding who may access the site through Cloudflare Access.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>cargo build --release in deploy/ succeeds offline and produces the aicc-deploy binary, and cargo test passes.</Criterion>
+      <Criterion>A dry run against the real source and deploy repositories prints the files that would be added, changed, and removed, and leaves both repositories byte-for-byte unchanged.</Criterion>
+      <Criterion>Against a temporary deploy repository with a local bare repository as both remotes, a publish run mirrors the site, removes stale files, writes the manifest, commits with the source commit in the message, and pushes origin then websvc. A second publish run with no changes commits nothing and pushes nothing.</Criterion>
+      <Criterion>The tool refuses, with a clear message and no writes, when the deploy repository has uncommitted changes outside html/aicc, is not on the expected branch, lacks a required remote, or when the source html/aicc is not identical to a fresh build.</Criterion>
+      <Criterion>The manifest lists every published file with its SHA-256 and records the source commit, and the SHA-256 implementation matches known test vectors.</Criterion>
+      <Criterion>The post-publish check fetches the manifest from the served URL, retries for a bounded time, and reports success only when the served manifest equals the published one. It reports a clear failure otherwise and exits non-zero.</Criterion>
+      <Criterion>No file outside html/aicc in the deploy repository is modified by any run, including refused and failed runs.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-AICC-DEPLOY />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>cargo test --offline --manifest-path deploy/Cargo.toml</ExpectedCommand>
+      <ExpectedCommand>cargo build --offline --release --manifest-path deploy/Cargo.toml</ExpectedCommand>
+      <ExpectedCommand>deploy/target/release/aicc-deploy --dry-run</ExpectedCommand>
+      <ExpectedCommand>grace lint --path . --assertions current</ExpectedCommand>
+      <ExpectedEvidence>Unit tests for hashing, tree diff, manifest, and safety refusals, and an integration test using temporary repositories and a local bare remote.</ExpectedEvidence>
+      <ExpectedEvidence>Dry-run output against the real repositories and a check that neither repository changed.</ExpectedEvidence>
+      <ExpectedEvidence>GRACE lint output with no errors.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The Rust crate lives in deploy/ in this repository, with its build output ignored by git.</Assumption>
+      <Assumption>The serving path is as recorded in websvc-infra: pushing the websvc remote runs a post-receive checkout into /home/websvc/deploy/aicc, and Caddy serves html/aicc from it. The internal URL is http://hetzner-cx43.alpines-krait.ts.net/aicc/.</Assumption>
+      <Assumption>The portal uses relative links, so the same files work under the internal /aicc/ path and at the root of the external hostname.</Assumption>
+      <Assumption>The external hostname is gated by Cloudflare Access with an email allow-list managed outside this repository. The practitioner checked it on 2026-09-29 and it contains only the practitioner.</Assumption>
+      <Assumption>The source build check reuses portal/tools/check.py --idempotent, which confirms html/aicc equals a fresh build.</Assumption>
+    </Assumptions>
+  </C-AICC-DEPLOY>
+</GraceChangeSpec>

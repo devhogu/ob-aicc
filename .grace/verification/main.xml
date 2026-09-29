@@ -21,5 +21,16 @@
       <Scenario kind="failure">Passing does not prove assistive-technology behaviour or rendering in other browsers. It uses one Chromium build.</Scenario>
       <TraceAssertion>Both commands must pass. The browser check needs the local Playwright environment from portal/tools/setup_browser.sh.</TraceAssertion>
     </V-M-PORTAL-PROJECTION>
+    <V-M-AICC-DEPLOY>
+      <M-AICC-DEPLOY />
+      <TestFiles>
+        <File>deploy/tests/publish.rs</File>
+      </TestFiles>
+      <Command>cargo test --offline --manifest-path deploy/Cargo.toml</Command>
+      <Command>cargo build --offline --release --manifest-path deploy/Cargo.toml</Command>
+      <Scenario kind="success">Unit tests and integration tests pass: hashing vectors, folder diff, manifest, HTTP client, safety refusals, dry run writes nothing, publish mirrors and removes stale files and pushes origin then websvc, a second run does nothing, and verification compares the served manifest.</Scenario>
+      <Scenario kind="failure">Passing does not prove the real server hook, Caddy, or Cloudflare path works. Integration tests use temporary repositories and local bare remotes, and never touch the real deploy repository. The first real publish is verified by the tool's own served-manifest check.</Scenario>
+      <TraceAssertion>Both commands must pass. Evidence covers the deploy tool only, not the portal build, which is verified by V-M-PORTAL-SOURCE.</TraceAssertion>
+    </V-M-AICC-DEPLOY>
   </VD-MAIN>
 </GraceVerificationDocument>

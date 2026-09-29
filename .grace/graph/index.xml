@@ -5,6 +5,7 @@
       <Owns>
         <M-PORTAL-SOURCE />
         <M-PORTAL-PROJECTION />
+        <M-AICC-DEPLOY />
       </Owns>
     </GD-MAIN>
   </GraphDocuments>

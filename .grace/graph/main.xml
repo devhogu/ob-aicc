@@ -9,5 +9,10 @@
       <Path>html/aicc/index.html</Path>
       <M-PORTAL-SOURCE />
     </M-PORTAL-PROJECTION>
+    <M-AICC-DEPLOY>
+      <Summary>Rust command-line tool that checks the generated site, mirrors html/aicc into the clean deploy repository, writes a hashed manifest, and with an explicit flag commits, pushes origin then websvc, and verifies the served manifest. Dry run by default.</Summary>
+      <Path>deploy/src/main.rs</Path>
+      <M-PORTAL-PROJECTION />
+    </M-AICC-DEPLOY>
   </GD-MAIN>
 </GraceGraphDocument>
