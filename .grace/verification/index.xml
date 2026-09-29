@@ -2,7 +2,10 @@
   <VerificationDocuments>
     <VD-MAIN>
       <Path>verification/main.xml</Path>
-      <Owns></Owns>
+      <Owns>
+        <V-M-PORTAL-SOURCE />
+        <V-M-PORTAL-PROJECTION />
+      </Owns>
     </VD-MAIN>
   </VerificationDocuments>
 </GraceVerificationIndex>

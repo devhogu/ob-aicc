@@ -6,3 +6,10 @@
 .LSOverride
 .Spotlight-V100
 .Trashes
+
+__pycache__/
+*.py[cod]
+
+# Local portal tooling (recreate with portal/tools/setup_browser.sh)
+portal/.venv/
+portal/.tools/

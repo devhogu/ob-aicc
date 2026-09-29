@@ -1,0 +1,40 @@
+{
+ "id": "home",
+ "slug": "",
+ "source_language": "ru",
+ "source_revision": "initial",
+ "title": {
+  "ru": "Центр компетенций по искусственному интеллекту",
+  "en": "AI Competence Center"
+ },
+ "blocks": [
+  {
+   "type": "lead",
+   "text": {
+    "ru": "Портал AICC объединяет стратегию, заявление о намерениях, дорожную карту, базу знаний и процессы управления жизненным циклом ИИ в O!Bank.",
+    "en": "The AICC portal brings together the strategy, statement of intent, roadmap, knowledge base and AI lifecycle-management processes at O!Bank."
+   }
+  },
+  {
+   "type": "cards",
+   "items": [
+    {
+     "page": "statement-of-intent",
+     "kicker": {
+      "ru": "Стратегия",
+      "en": "Strategy"
+     },
+     "title": {
+      "ru": "Заявление о намерениях",
+      "en": "Statement of intent"
+     },
+     "note": {
+      "ru": "Принципы, обязательства и путь к агентной платформе банка. Черновик для рассмотрения руководством.",
+      "en": "Principles, commitments and the path to the bank's agentic platform. Draft for leadership review."
+     }
+    }
+   ]
+  }
+ ],
+ "nav": "nav_home"
+}

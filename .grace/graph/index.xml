@@ -2,7 +2,10 @@
   <GraphDocuments>
     <GD-MAIN>
       <Path>graph/main.xml</Path>
-      <Owns></Owns>
+      <Owns>
+        <M-PORTAL-SOURCE />
+        <M-PORTAL-PROJECTION />
+      </Owns>
     </GD-MAIN>
   </GraphDocuments>
 </GraceGraphIndex>

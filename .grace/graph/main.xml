@@ -1,3 +1,13 @@
 <GraceGraphDocument graceVersion="4.0">
-  <GD-MAIN></GD-MAIN>
+  <GD-MAIN>
+    <M-PORTAL-SOURCE>
+      <Summary>Editable AICC portal source: design tokens, copied O! UI kit and brand assets, per-field page content, interface messages, templates, and the build and check tools.</Summary>
+      <Path>portal/tools/build.py</Path>
+    </M-PORTAL-SOURCE>
+    <M-PORTAL-PROJECTION>
+      <Summary>Generated static site under html/aicc with Russian (primary) and English paths and shared assets. Never edited by hand.</Summary>
+      <Path>html/aicc/index.html</Path>
+      <M-PORTAL-SOURCE />
+    </M-PORTAL-PROJECTION>
+  </GD-MAIN>
 </GraceGraphDocument>

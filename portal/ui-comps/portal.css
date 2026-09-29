@@ -1,0 +1,92 @@
+/*
+ * portal.css — reusable portal UI elements (app shell, page, cards, chips, footer).
+ * Builds on tokens.css + ui.css primitives. Canonical source lives here in portal/;
+ * the site build copies it into the shipped html/ bundle. Consumes semantic tokens only.
+ */
+@import url('../tokens/tokens.css');
+@import url('./fonts/aicc-fonts.css');   /* Golos Text (body), TT Travels Text (headings) */
+@import url('./ui.css');
+
+/* ---- Base ---- */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font-body);color:var(--text);background:var(--canvas);
+  font-size:var(--text-body);line-height:var(--line-body);
+}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.oc-skiplink{position:absolute;left:-9999px}
+.oc-skiplink:focus{left:var(--space-4);top:var(--space-4);z-index:20;background:var(--surface);padding:8px 12px;border-radius:var(--radius-control)}
+
+/* ---- App header ---- */
+.oc-appheader{
+  display:flex;align-items:center;gap:var(--space-4);
+  height:64px;padding:0 var(--space-6);
+  background:var(--surface);border-bottom:1px solid var(--border);
+}
+.oc-appheader .oc-spacer{flex:1}
+.oc-brand{display:flex;align-items:center;gap:var(--space-3);text-decoration:none;color:var(--text)}
+.oc-brand img{height:32px;width:auto;display:block}
+.oc-brand b{font-weight:600}
+.oc-brand small{color:var(--text-muted);font-size:var(--text-sm)}
+.oc-langswitch{display:flex;gap:var(--space-2);align-items:center;font-size:var(--text-sm)}
+.oc-langswitch a{padding:6px 10px;border-radius:var(--radius-control);text-decoration:none;color:var(--text-muted)}
+.oc-langswitch a[aria-current="true"]{background:var(--surface-selected);color:var(--action);font-weight:600}
+
+/* ---- Page shell & reading rhythm ---- */
+.oc-page{max-width:var(--content-width);margin:0 auto;padding:var(--space-8) var(--space-6)}
+.oc-reading{max-width:var(--reading-width)}
+.oc-page h1{font-family:var(--font-heading);font-size:var(--text-title);line-height:var(--line-title);font-weight:700;margin:0 0 var(--space-4)}
+.oc-page h2{font-family:var(--font-heading);font-size:var(--text-section);line-height:var(--line-section);font-weight:600;margin:var(--space-12) 0 var(--space-4)}
+.oc-page h3{font-family:var(--font-heading);font-size:var(--text-subhead);line-height:var(--line-subhead);font-weight:600;margin:0 0 var(--space-2)}
+.oc-page p{margin:0 0 var(--space-4)}
+.oc-lede{font-size:var(--text-subhead);line-height:var(--line-subhead);color:var(--text-muted)}
+.oc-breadcrumb{display:flex;gap:var(--space-2);flex-wrap:wrap;font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--space-4)}
+.oc-breadcrumb a{color:var(--text-muted)}
+
+/* ---- Card grid & cards ---- */
+.oc-cardgrid{display:grid;gap:var(--space-4);grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin:var(--space-6) 0}
+.oc-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);
+  padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-2);
+}
+.oc-card__kicker{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted)}
+.oc-card h3{margin:0}
+.oc-card__note{margin:0;color:var(--text-muted);font-size:var(--text-sm)}
+.oc-card__icon{width:28px;height:28px;color:var(--action)}
+.oc-card--selected{background:var(--surface-selected);border-color:var(--action)}
+a.oc-card{text-decoration:none;color:inherit}
+a.oc-card:hover{border-color:var(--border-control)}
+
+/* ---- Qualification chips (textual, not colour scores) ---- */
+.oc-qual{display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:var(--radius-pill);
+  font:500 var(--text-xs)/1.5 var(--font-body);background:var(--surface-subtle);color:var(--text-muted);
+  border:1px solid var(--border)}
+.oc-qual--working{}
+.oc-qual--hypothesis{border-style:dashed}
+.oc-qual--historical{color:var(--text-muted)}
+.oc-qual--proposed{background:var(--info-bg);color:var(--info);border-color:transparent}
+.oc-qual--needs{background:var(--warning-bg);color:var(--warning);border-color:transparent}
+
+/* ---- Footer ---- */
+.oc-footer{border-top:1px solid var(--border);color:var(--text-muted);font-size:var(--text-sm);
+  padding:var(--space-6);margin-top:var(--space-16)}
+
+/* ---- Language gateway (site root) ---- */
+.oc-gateway{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:var(--space-6);padding:var(--space-8);text-align:center}
+.oc-gateway img{height:48px}
+.oc-gateway .oc-choices{display:flex;gap:var(--space-4);flex-wrap:wrap;justify-content:center}
+.oc-gateway .oc-choices a{min-width:180px}
+
+/* ---- Responsive (content-driven, per foundations.md) ---- */
+@media (max-width:767px){
+  .oc-appheader{padding:0 var(--space-4)}
+  .oc-page{padding:var(--space-6) var(--space-4)}
+  .oc-brand small{display:none}
+}
+@media print{
+  .oc-appheader,.oc-langswitch{display:none}
+  body{background:#fff}
+}

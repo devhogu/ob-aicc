@@ -1,0 +1,637 @@
+{
+ "base": "served from html/aicc",
+ "viewports": {
+  "mobile": [
+   390,
+   844
+  ],
+  "desktop": [
+   1440,
+   900
+  ]
+ },
+ "passed": 124,
+ "failed": 0,
+ "checks": [
+  {
+   "check": "lang attribute ru/home/light/mobile",
+   "ok": true,
+   "detail": "ru"
+  },
+  {
+   "check": "no horizontal overflow ru/home/light/mobile",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font ru/home/light/mobile",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font ru/home/light/mobile",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded ru/home/light/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible ru/home/light/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute ru/home/dark/mobile",
+   "ok": true,
+   "detail": "ru"
+  },
+  {
+   "check": "no horizontal overflow ru/home/dark/mobile",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font ru/home/dark/mobile",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font ru/home/dark/mobile",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded ru/home/dark/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible ru/home/dark/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute ru/statement/light/mobile",
+   "ok": true,
+   "detail": "ru"
+  },
+  {
+   "check": "no horizontal overflow ru/statement/light/mobile",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font ru/statement/light/mobile",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font ru/statement/light/mobile",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded ru/statement/light/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible ru/statement/light/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute ru/statement/dark/mobile",
+   "ok": true,
+   "detail": "ru"
+  },
+  {
+   "check": "no horizontal overflow ru/statement/dark/mobile",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font ru/statement/dark/mobile",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font ru/statement/dark/mobile",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded ru/statement/dark/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible ru/statement/dark/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "ru statement shows translation marker",
+   "ok": true,
+   "detail": "Перевод этой страницы на русский язык пока недоступен. Текст показан на языке оригинала."
+  },
+  {
+   "check": "ru statement fallback fragments carry lang=en",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "lang attribute en/home/light/mobile",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "no horizontal overflow en/home/light/mobile",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font en/home/light/mobile",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font en/home/light/mobile",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded en/home/light/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible en/home/light/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute en/home/dark/mobile",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "no horizontal overflow en/home/dark/mobile",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font en/home/dark/mobile",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font en/home/dark/mobile",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded en/home/dark/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible en/home/dark/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute en/statement/light/mobile",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "no horizontal overflow en/statement/light/mobile",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font en/statement/light/mobile",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font en/statement/light/mobile",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded en/statement/light/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible en/statement/light/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute en/statement/dark/mobile",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "no horizontal overflow en/statement/dark/mobile",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font en/statement/dark/mobile",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font en/statement/dark/mobile",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded en/statement/dark/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible en/statement/dark/mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "en statement has no translation marker",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "skip link focusable and visible mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "skip link moves to main mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "visible focus state mobile",
+   "ok": true,
+   "detail": "['solid', 3]"
+  },
+  {
+   "check": "mobile menu button visible",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile nav hidden by default",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile menu opens",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "mobile menu closes on Escape",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "theme switch and persistence mobile",
+   "ok": true,
+   "detail": "dark/dark"
+  },
+  {
+   "check": "language switch ru->en same page mobile",
+   "ok": true,
+   "detail": "http://127.0.0.1:41055/en/statement-of-intent/index.html"
+  },
+  {
+   "check": "language switch en->ru same page mobile",
+   "ok": true,
+   "detail": "http://127.0.0.1:41055/ru/statement-of-intent/index.html"
+  },
+  {
+   "check": "root leads to ru mobile",
+   "ok": true,
+   "detail": "http://127.0.0.1:41055/ru/index.html"
+  },
+  {
+   "check": "no console errors, failed or external requests mobile",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute ru/home/light/desktop",
+   "ok": true,
+   "detail": "ru"
+  },
+  {
+   "check": "no horizontal overflow ru/home/light/desktop",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font ru/home/light/desktop",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font ru/home/light/desktop",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded ru/home/light/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible ru/home/light/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute ru/home/dark/desktop",
+   "ok": true,
+   "detail": "ru"
+  },
+  {
+   "check": "no horizontal overflow ru/home/dark/desktop",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font ru/home/dark/desktop",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font ru/home/dark/desktop",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded ru/home/dark/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible ru/home/dark/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute ru/statement/light/desktop",
+   "ok": true,
+   "detail": "ru"
+  },
+  {
+   "check": "no horizontal overflow ru/statement/light/desktop",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font ru/statement/light/desktop",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font ru/statement/light/desktop",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded ru/statement/light/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible ru/statement/light/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute ru/statement/dark/desktop",
+   "ok": true,
+   "detail": "ru"
+  },
+  {
+   "check": "no horizontal overflow ru/statement/dark/desktop",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font ru/statement/dark/desktop",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font ru/statement/dark/desktop",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded ru/statement/dark/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible ru/statement/dark/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "ru statement shows translation marker",
+   "ok": true,
+   "detail": "Перевод этой страницы на русский язык пока недоступен. Текст показан на языке оригинала."
+  },
+  {
+   "check": "ru statement fallback fragments carry lang=en",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "lang attribute en/home/light/desktop",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "no horizontal overflow en/home/light/desktop",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font en/home/light/desktop",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font en/home/light/desktop",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded en/home/light/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible en/home/light/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute en/home/dark/desktop",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "no horizontal overflow en/home/dark/desktop",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font en/home/dark/desktop",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font en/home/dark/desktop",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded en/home/dark/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible en/home/dark/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute en/statement/light/desktop",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "no horizontal overflow en/statement/light/desktop",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font en/statement/light/desktop",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font en/statement/light/desktop",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded en/statement/light/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible en/statement/light/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "lang attribute en/statement/dark/desktop",
+   "ok": true,
+   "detail": "en"
+  },
+  {
+   "check": "no horizontal overflow en/statement/dark/desktop",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "check": "heading font en/statement/dark/desktop",
+   "ok": true,
+   "detail": "\"TT Travels Text\", \"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "body font en/statement/dark/desktop",
+   "ok": true,
+   "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
+  },
+  {
+   "check": "logo loaded en/statement/dark/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "one theme icon visible en/statement/dark/desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "en statement has no translation marker",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "skip link focusable and visible desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "skip link moves to main desktop",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "visible focus state desktop",
+   "ok": true,
+   "detail": "['solid', 3]"
+  },
+  {
+   "check": "desktop menu button hidden",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "desktop nav visible",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "theme switch and persistence desktop",
+   "ok": true,
+   "detail": "dark/dark"
+  },
+  {
+   "check": "language switch ru->en same page desktop",
+   "ok": true,
+   "detail": "http://127.0.0.1:41055/en/statement-of-intent/index.html"
+  },
+  {
+   "check": "language switch en->ru same page desktop",
+   "ok": true,
+   "detail": "http://127.0.0.1:41055/ru/statement-of-intent/index.html"
+  },
+  {
+   "check": "root leads to ru desktop",
+   "ok": true,
+   "detail": "http://127.0.0.1:41055/ru/index.html"
+  },
+  {
+   "check": "no console errors, failed or external requests desktop",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

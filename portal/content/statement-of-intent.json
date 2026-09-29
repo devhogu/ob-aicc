@@ -1,0 +1,644 @@
+{
+ "id": "statement-of-intent",
+ "slug": "statement-of-intent",
+ "source_language": "en",
+ "source": "wiki/statement-of-intent.md",
+ "source_revision": "add2031",
+ "title": {
+  "en": "AICC Statement of Intent"
+ },
+ "blocks": [
+  {
+   "type": "p",
+   "text": {
+    "en": "Status: **DRAFT** for AICC leadership review. Not approved policy. Evidence base: industry research."
+   }
+  },
+  {
+   "type": "h2",
+   "text": {
+    "en": "Purpose"
+   }
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "The AI Competence Center (AICC) makes generative AI a safe, governed, everyday part of how O!Bank works. We move the bank from isolated pilots to one bank-native AI layer that staff, engineers, and eventually autonomous agents share."
+   }
+  },
+  {
+   "type": "h2",
+   "text": {
+    "en": "Principles"
+   }
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "en": "**Governed by default.** Every AI system is inventoried, owned, risk-tiered, and auditable before it reaches production. AI sits inside the bank's existing risk, model-risk, third-party, and information-security frameworks."
+    },
+    {
+     "en": "**Human accountability.** People own outcomes. Humans review high-stakes decisions such as credit, AML/SAR, and customer-impacting actions."
+    },
+    {
+     "en": "**Grounded in bank knowledge.** Answers come from approved, current, traceable bank sources and cite them."
+    },
+    {
+     "en": "**Measured value.** Each initiative has a baseline and a measured result. We report adoption and outcomes, not activity."
+    },
+    {
+     "en": "**Data stays protected.** Data classification and residency rules decide which data may reach which model, and where it runs."
+    },
+    {
+     "en": "**Build once, reuse everywhere.** Shared platform components come before one-off solutions."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "text": {
+    "en": "Four commitments"
+   }
+  },
+  {
+   "type": "h3",
+   "text": {
+    "en": "1. Workdesk adoption"
+   }
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "Give every employee a safe AI assistant for daily work: drafting, summarising, search, analysis, translation. Pair it with role-based training, usage guidelines, and a simple way to request new use cases. *Industry signal:* large banks run internal LLM assistants across their workforce (for example, JPMorgan's LLM Suite)."
+   }
+  },
+  {
+   "type": "h3",
+   "text": {
+    "en": "2. Knowledge bases"
+   }
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "Turn policies, procedures, product rules, and regulations into governed, searchable knowledge with named owners, review cycles, and access control. Grounded retrieval with source citations is the standard. *Industry signal:* Morgan Stanley's advisor assistant over about 100,000 documents, reported at over 98% adoption in advisor teams. The critical factor was retrieval quality and evaluation."
+   }
+  },
+  {
+   "type": "h3",
+   "text": {
+    "en": "3. Routine-operations automation"
+   }
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "Automate document-heavy, rule-bound work such as onboarding and due diligence, case preparation, reporting, reconciliation, and customer-request handling. Start with human review, and relax it only as measured evidence supports. *Industry signal:* ING's GenAI due-diligence reports save about two hours per client across its markets."
+   }
+  },
+  {
+   "type": "h3",
+   "text": {
+    "en": "4. Software development"
+   }
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "Make AI a standard part of the engineering lifecycle: coding assistants, code review, testing, legacy-code understanding, and documentation. Add coding agents under review controls once assistants are established. Track delivery outcomes and quality, not code volume. *Industry signal:* banks report roughly 10–20% developer productivity gains from assistants (JPMorgan, Goldman Sachs, Bank of America). Reports are self-measured and not comparable."
+   }
+  },
+  {
+   "type": "h2",
+   "text": {
+    "en": "Priority functions"
+   }
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "The four commitments apply to every function. These functions are high priority, and each has a research page with use cases, target state, adoption path, risks, and metrics."
+   }
+  },
+  {
+   "type": "table",
+   "header": [
+    {
+     "en": "Function"
+    },
+    {
+     "en": "Intent"
+    },
+    {
+     "en": "Human decision points"
+    },
+    {
+     "en": "Page"
+    }
+   ],
+   "rows": [
+    [
+     {
+      "en": "Board and executive committee"
+     },
+     {
+      "en": "Board-level focus. Sourced intelligence for directors: pack synthesis, KPI and risk drill-down, peer and competitor view, parent and investor reporting. Board oversight of AI itself: AI inventory, risk appetite, director literacy"
+     },
+     {
+      "en": "Directors decide. Board materials never go into public tools"
+     },
+     {
+      "en": "Board and governance"
+     }
+    ],
+    [
+     {
+      "en": "Investor relations"
+     },
+     {
+      "en": "Give IR on-the-spot intelligence for the Board and investors (ALGA Group): question forecasts with sourced answers, peer comparison, consistency checks across materials, drafted results materials"
+     },
+     {
+      "en": "Disclosure committee sign-off. MNPI controls. Every public number tied to a locked source"
+     },
+     {
+      "en": "IR and FP&A"
+     }
+    ],
+    [
+     {
+      "en": "FP&A"
+     },
+     {
+      "en": "Monthly and quarterly packs, driver commentary, forecasts and scenarios, ALM and cost-of-risk analytics, peer and operational benchmarking, natural-language access to one governed finance data layer"
+     },
+     {
+      "en": "Analysts approve commentary. Numbers come from queries, not from the model"
+     },
+     {
+      "en": "IR and FP&A"
+     }
+    ],
+    [
+     {
+      "en": "Compliance"
+     },
+     {
+      "en": "Regulatory change mapped to an obligations register, cited policy assistant, AI-assisted controls testing and reporting"
+     },
+     {
+      "en": "Compliance and Internal Audit decide on results"
+     },
+     {
+      "en": "Compliance and KYC"
+     }
+    ],
+    [
+     {
+      "en": "KYC end to end"
+     },
+     {
+      "en": "Onboarding with liveness and deepfake detection, continuous screening, CDD and UBO assembly, perpetual KYC, immutable case records"
+     },
+     {
+      "en": "Rejection, exit, PEP and EDD stay human. The risk score is deterministic, and the LLM only drafts the narrative"
+     },
+     {
+      "en": "Compliance and KYC"
+     }
+    ],
+    [
+     {
+      "en": "AML and fraud"
+     },
+     {
+      "en": "Alert triage with reasons, pre-built case packs, STR drafts with citations, shared fraud and AML signals"
+     },
+     {
+      "en": "The MLRO reviews and files every STR"
+     },
+     {
+      "en": "Compliance and KYC"
+     }
+    ],
+    [
+     {
+      "en": "HR"
+     },
+     {
+      "en": "One multilingual employee assistant, AI literacy for all staff, recruiting support"
+     },
+     {
+      "en": "Hiring decisions are always human. Any candidate ranking is advisory and bias-tested"
+     },
+     {
+      "en": "HR and accounting"
+     }
+    ],
+    [
+     {
+      "en": "Accounting"
+     },
+     {
+      "en": "Touchless invoice matching and routine reconciliations, drafted journals and commentary, faster close"
+     },
+     {
+      "en": "Named preparer and reviewer approve entries. IFRS and tax judgement stay with qualified staff"
+     },
+     {
+      "en": "HR and accounting"
+     }
+    ],
+    [
+     {
+      "en": "Loans (retail, SME, corporate)"
+     },
+     {
+      "en": "One credit workbench: document extraction, memo drafting, covenant and early-warning monitoring, collections support"
+     },
+     {
+      "en": "Approvals and declines come from a validated engine plus a human approver. Applicants can request review"
+     },
+     {
+      "en": "Lending and insurance"
+     }
+    ],
+    [
+     {
+      "en": "Insurance"
+     },
+     {
+      "en": "Bancassurance offers in customer journeys on insurer-approved text, claims intake and triage with the partner insurer"
+     },
+     {
+      "en": "The insurer keeps underwriting and claims decisions"
+     },
+     {
+      "en": "Lending and insurance"
+     }
+    ],
+    [
+     {
+      "en": "Customer support"
+     },
+     {
+      "en": "Copilot for every agent, tier-1 assistant in app and messaging, Russian and Kyrgyz support at measured quality"
+     },
+     {
+      "en": "A customer can always reach a human"
+     },
+     {
+      "en": "Service, operations, front office"
+     }
+    ],
+    [
+     {
+      "en": "Operations"
+     },
+     {
+      "en": "AI-prepared cases for disputes, trade documents, account maintenance, and KYC files"
+     },
+     {
+      "en": "Humans approve exceptions and anything that moves money"
+     },
+     {
+      "en": "Service, operations, front office"
+     }
+    ],
+    [
+     {
+      "en": "Customer front office: retail, SME, corporate sales"
+     },
+     {
+      "en": "Client briefs before meetings, drafted summaries and CRM entries, next-best-action from the bank's own data, consent-aware marketing"
+     },
+     {
+      "en": "Staff own the client relationship and advice"
+     },
+     {
+      "en": "Service, operations, front office"
+     }
+    ],
+    [
+     {
+      "en": "IT and banking systems"
+     },
+     {
+      "en": "AI in the full delivery lifecycle, legacy documentation and modernization, AI-assisted incident handling and SOC, the platform foundations below"
+     },
+     {
+      "en": "Humans own merges, releases, and containment actions"
+     },
+     {
+      "en": "IT and banking systems"
+     }
+    ],
+    [
+     {
+      "en": "Risk management"
+     },
+     {
+      "en": "Credit, market, liquidity, and operational risk analytics, early warning, stress testing support, model risk including validation of AI models"
+     },
+     {
+      "en": "Risk owners decide. Validated models and human approval for material decisions"
+     },
+     {
+      "en": "Risk and treasury"
+     }
+    ],
+    [
+     {
+      "en": "Treasury and ALM"
+     },
+     {
+      "en": "Liquidity and deposit forecasting, cash and FX management, market commentary, treasury operations"
+     },
+     {
+      "en": "Dealers and the ALCO own positions and limits"
+     },
+     {
+      "en": "Risk and treasury"
+     }
+    ],
+    [
+     {
+      "en": "Legal and corporate secretary"
+     },
+     {
+      "en": "Contract review, policy drafting, regulatory tracking, legal research"
+     },
+     {
+      "en": "Lawyers verify every citation and sign off. Privilege and confidentiality rules apply"
+     },
+     {
+      "en": "Board and governance"
+     }
+    ],
+    [
+     {
+      "en": "Internal audit"
+     },
+     {
+      "en": "AI-assisted audit planning, population testing, evidence review, and audit of AI systems"
+     },
+     {
+      "en": "Auditors form the opinion"
+     },
+     {
+      "en": "Board and governance"
+     }
+    ],
+    [
+     {
+      "en": "Marketing, product, digital channels"
+     },
+     {
+      "en": "Consent-aware personalisation, content in Russian and Kyrgyz, in-app assistant, product analytics, customer insight, competitor intelligence"
+     },
+     {
+      "en": "Marketing compliance approves campaigns. Consent is enforced in code"
+     },
+     {
+      "en": "Marketing, product, ecosystem"
+     }
+    ],
+    [
+     {
+      "en": "Payments, cards, ecosystem"
+     },
+     {
+      "en": "Ecosystem cross-sell, merchant and SME services, agent-initiated payment readiness"
+     },
+     {
+      "en": "Customers authorise payments"
+     },
+     {
+      "en": "Marketing, product, ecosystem"
+     }
+    ],
+    [
+     {
+      "en": "Procurement and administration"
+     },
+     {
+      "en": "Contract lifecycle and vendor management, facilities, cash logistics support"
+     },
+     {
+      "en": "Budget owners approve spend"
+     },
+     {
+      "en": "Corporate services, data, AICC"
+     }
+    ],
+    [
+     {
+      "en": "Data office"
+     },
+     {
+      "en": "Data quality, governance, lineage, and self-service analytics that every AI function depends on"
+     },
+     {
+      "en": "Data owners approve access"
+     },
+     {
+      "en": "Corporate services, data, AICC"
+     }
+    ],
+    [
+     {
+      "en": "AICC itself"
+     },
+     {
+      "en": "Use-case intake, prioritisation, ROI measurement, AI champions network, vendor and model selection"
+     },
+     {
+      "en": "AICC leadership and the Board committee approve the portfolio"
+     },
+     {
+      "en": "Corporate services, data, AICC"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "Further functions are added as pages under `functions/` when needed."
+   }
+  },
+  {
+   "type": "h2",
+   "text": {
+    "en": "Destination: the bank's agentic platform"
+   }
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "One uniform layer that makes AI native to bank operations. It grows out of the four commitments rather than replacing them. Its building blocks:"
+   }
+  },
+  {
+   "type": "table",
+   "header": [
+    {
+     "en": "Layer"
+    },
+    {
+     "en": "Role"
+    }
+   ],
+   "rows": [
+    [
+     {
+      "en": "Model gateway"
+     },
+     {
+      "en": "One controlled access point to models, with routing, cost control, and data-protection policy"
+     }
+    ],
+    [
+     {
+      "en": "Knowledge layer"
+     },
+     {
+      "en": "Governed retrieval over bank knowledge, shared by all assistants and agents"
+     }
+    ],
+    [
+     {
+      "en": "Tool gateway (MCP-style)"
+     },
+     {
+      "en": "Standard, permissioned access from agents to bank systems and APIs"
+     }
+    ],
+    [
+     {
+      "en": "Agent registry"
+     },
+     {
+      "en": "Every agent's owner, scope, data access, and risk limits"
+     }
+    ],
+    [
+     {
+      "en": "Guardrails and policy"
+     },
+     {
+      "en": "Enforced permissions, limits, and deterministic checks before actions execute"
+     }
+    ],
+    [
+     {
+      "en": "Human-in-the-loop"
+     },
+     {
+      "en": "Approval points for high-stakes actions, on channels the agent cannot influence"
+     }
+    ],
+    [
+     {
+      "en": "Observability and evaluation"
+     },
+     {
+      "en": "Full audit trail, domain-specific evaluation, monitoring, and lineage"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "h2",
+   "text": {
+    "en": "Sequence"
+   }
+  },
+  {
+   "type": "ol",
+   "items": [
+    {
+     "en": "**Foundation:** governance, AI inventory, data classification rules, secure model access, first assistant, initial knowledge bases."
+    },
+    {
+     "en": "**Scale:** workforce rollout, engineering adoption, first automated operations flows with human review."
+    },
+    {
+     "en": "**Platform:** shared gateways, registry, and guardrails. Agents take on bounded operational tasks."
+    },
+    {
+     "en": "**Agentic bank:** agents integrated into core operations under continuous evaluation and human oversight."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "text": {
+    "en": "Timing and scope belong in the roadmap, not here."
+   }
+  },
+  {
+   "type": "h2",
+   "text": {
+    "en": "Success measures (to be baselined)"
+   }
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "en": "Share of staff actively using approved AI tools"
+    },
+    {
+     "en": "Knowledge coverage: share of key processes with an owned, current source"
+    },
+    {
+     "en": "Hours saved and cycle-time change in automated operations flows"
+    },
+    {
+     "en": "Engineering delivery metrics: cycle time, review time, defect rate"
+    },
+    {
+     "en": "Share of AI systems inventoried, tiered, and reviewed"
+    },
+    {
+     "en": "Incidents and escalations per use case"
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "text": {
+    "en": "Open items for leadership"
+   }
+  },
+  {
+   "type": "ul",
+   "items": [
+    {
+     "en": "Local regulatory position: no National Bank of the Kyrgyz Republic (NBKR) rule on bank AI use was found. Data localization and cross-border transfer for AI hosting are unclear and need local counsel. See industry research."
+    },
+    {
+     "en": "Kyrgyz and Russian language quality: unmeasured for most use cases. Test per language before customer-facing use."
+    },
+    {
+     "en": "Confirm the listing venue and reporting duties to investors (ALGA Group). IR AI work is scoped at Board level: sourced intelligence for the Board and IR, with disclosure controls. Ownership details from web search are unverified."
+    },
+    {
+     "en": "Function priority order: which of the functions above goes first."
+    },
+    {
+     "en": "Approved model providers and hosting: cloud, local, or hybrid, given data residency."
+    },
+    {
+     "en": "Audience and classification of this document."
+    },
+    {
+     "en": "Ownership: who chairs AI governance and approves use cases."
+    }
+   ]
+  }
+ ],
+ "nav": "nav_statement"
+}

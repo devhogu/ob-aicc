@@ -1,0 +1,343 @@
+[
+  {
+    "file": "collection/devcats/font-e06f6b1bc553.woff2",
+    "source_url": "https://devcats.kg/assets/Inter-Regular-COLGFB3M.woff2",
+    "family": "Inter",
+    "style": "Regular",
+    "observed_on": [
+      "devcats"
+    ],
+    "sha256": "e06f6b1bc553aaea4e4668023ed0ab0a147129c3107f511bc7d03d361b0ae085",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/devcats/font-fa888127b6da.woff2",
+    "source_url": "https://devcats.kg/assets/Inter-Bold-BOs3KVhN.woff2",
+    "family": "Inter",
+    "style": "Bold",
+    "observed_on": [
+      "devcats"
+    ],
+    "sha256": "fa888127b6da015b65569f0351f3b5c391ad928904951f1c20e9f8462a8d95ea",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/devcats/font-5cb7103e4e60.woff2",
+    "source_url": "https://devcats.kg/assets/Inter-SemiBold-BAEEcJ4E.woff2",
+    "family": "Inter SemiBold",
+    "style": "Regular",
+    "observed_on": [
+      "devcats"
+    ],
+    "sha256": "5cb7103e4e605989afebc03d989c79201e54b21b5183db33981f70db9178a301",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/gts/font-0f1143ee4b85.woff2",
+    "source_url": "https://cdn.greentelecom.kg/dengikg/fonts/golos/GolosText-Regular.woff2",
+    "family": "Golos Text",
+    "style": "Regular",
+    "observed_on": [
+      "gts"
+    ],
+    "sha256": "0f1143ee4b8567d6b1a4553f5429f32659dcb5bcb0c5bf73de84ded4760bbc08",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/gts/font-ae5a86fc2046.woff2",
+    "source_url": "https://cdn.greentelecom.kg/dengikg/fonts/golos/GolosText-Medium.woff2",
+    "family": "Golos Text Medium",
+    "style": "Regular",
+    "observed_on": [
+      "gts"
+    ],
+    "sha256": "ae5a86fc2046e94c8365065488307be3558f647b0e06a8efa9f1faac6a1abf99",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/gts/font-8792174bd501.woff2",
+    "source_url": "https://cdn.greentelecom.kg/dengikg/fonts/golos/GolosText-Bold.woff2",
+    "family": "Golos Text",
+    "style": "Bold",
+    "observed_on": [
+      "gts"
+    ],
+    "sha256": "8792174bd50196589967fdf81c2392a06c08486de02662bb9d81f6cbefd6b41e",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/bank/font-e1e8c5a362e2.woff2",
+    "source_url": "https://cdn.obank.kg/obank/prod/static/assets/fonts/TTTravelsText/TT_Travels_Text_Regular.woff2",
+    "family": "TT Travels Text",
+    "style": "Regular",
+    "observed_on": [
+      "bank",
+      "business"
+    ],
+    "sha256": "e1e8c5a362e257141f3a6be556d84c8918592585bfc4d2d94d494ac391846a21",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "",
+    "use": "Web reference; not in default portal font CSS.",
+    "metadata_family": "",
+    "name_basis": "Source filename and captured Bank stylesheet; embedded family name is empty."
+  },
+  {
+    "file": "collection/bank/font-aabc1f8d171a.woff2",
+    "source_url": "https://cdn.obank.kg/obank/prod/static/assets/fonts/TTTravelsText/TT_Travels_Text_Bold.woff2",
+    "family": "TT Travels Text",
+    "style": "Bold",
+    "observed_on": [
+      "bank",
+      "business"
+    ],
+    "sha256": "aabc1f8d171a379eb34a2b4f0fe0f776fd0666f5b6e362631dd8beaa551ebc1f",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "",
+    "use": "Web reference; not in default portal font CSS.",
+    "metadata_family": "",
+    "name_basis": "Source filename and captured Bank stylesheet; embedded family name is empty."
+  },
+  {
+    "file": "collection/bank/font-b6f086ab139f.woff2",
+    "source_url": "https://cdn.obank.kg/obank/prod/static/assets/fonts/TTTravelsText/TT_Travels_Text_Medium.woff2",
+    "family": "TT Travels Text",
+    "style": "Medium",
+    "observed_on": [
+      "bank",
+      "business"
+    ],
+    "sha256": "b6f086ab139f8c6c8c5ccb6bc8f7dbca8d290b1b831ab5e9eeb0ec4488fb936e",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "",
+    "use": "Web reference; not in default portal font CSS.",
+    "metadata_family": "",
+    "name_basis": "Source filename and captured Bank stylesheet; embedded family name is empty."
+  },
+  {
+    "file": "collection/bank/font-e31bbb57a305.woff2",
+    "source_url": "https://cdn.obank.kg/obank/prod/static/assets/fonts/TTTravelsText/TT_Travels_Text_VF.woff2",
+    "family": "TT Travels Text",
+    "style": "VF",
+    "observed_on": [
+      "bank",
+      "business"
+    ],
+    "sha256": "e31bbb57a3054f7d9bbc178f0a6c1d3ecfb5a16aca03d2083051d9343d224fcb",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This font software is the property of TypeType LLC. Your use of the font software is subject to the terms of the applicable EULA.",
+    "use": "Web reference; not in default portal font CSS.",
+    "metadata_family": "",
+    "name_basis": "Source filename and captured Bank stylesheet; embedded family name is empty."
+  },
+  {
+    "file": "collection/bank/font-387c0cc0a324.ttf",
+    "source_url": "https://cdn.obank.kg/obank/local/static/assets/fonts/GolosText/GolosText-Regular.ttf",
+    "family": "Golos Text",
+    "style": "Regular",
+    "observed_on": [
+      "bank",
+      "business"
+    ],
+    "sha256": "387c0cc0a324fb1f8289b3c1d38d31441a0311c72e52ac9b5b5062d36cc3afed",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/bank/font-cbe836efadaa.woff2",
+    "source_url": "https://cdn.obank.kg/obank/prod/static/assets/fonts/TTTravelsText/TT_Travels_Text_DemiBold.woff2",
+    "family": "TT Travels Text",
+    "style": "DemiBold",
+    "observed_on": [
+      "bank",
+      "business"
+    ],
+    "sha256": "cbe836efadaa11a89d3ab0fcc2ca32a33195393932aa9f5c8fb286f290cecb60",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "",
+    "use": "Web reference; not in default portal font CSS.",
+    "metadata_family": "",
+    "name_basis": "Source filename and captured Bank stylesheet; embedded family name is empty."
+  },
+  {
+    "file": "collection/bank/font-d0beb91a1290.ttf",
+    "source_url": "https://cdn.obank.kg/obank/local/static/assets/fonts/GolosText/GolosText-SemiBold.ttf",
+    "family": "Golos Text SemiBold",
+    "style": "Regular",
+    "observed_on": [
+      "bank"
+    ],
+    "sha256": "d0beb91a129094b218f0da6250cc938c429d13c93598c1c0d13d5675baec6aad",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/bank/font-cac7fc9fd8c5.ttf",
+    "source_url": "https://cdn.obank.kg/obank/local/static/assets/fonts/GolosText/GolosText-Bold.ttf",
+    "family": "Golos Text",
+    "style": "Bold",
+    "observed_on": [
+      "bank",
+      "business"
+    ],
+    "sha256": "cac7fc9fd8c577f0f2ed0119e01a4c1169c3142158b8bfb0b6ecf6cc6eb97cad",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/bank/font-c940764593d0.woff2",
+    "source_url": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+    "family": "Inter",
+    "style": "Regular",
+    "observed_on": [
+      "bank",
+      "business",
+      "nur"
+    ],
+    "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+    "russian_glyphs": false,
+    "kyrgyz_extra_glyphs": false,
+    "license_metadata": "",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/market/font-e3aa2710d491.woff",
+    "source_url": "https://market.o.kg/assets/fonts/Roboto-Medium.woff",
+    "family": "Roboto Medium",
+    "style": "Regular",
+    "observed_on": [
+      "market"
+    ],
+    "sha256": "e3aa2710d491e00e12efac880a32633506131aa8cf337ade92ee723cfc9733aa",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "Licensed under the Apache License, Version 2.0",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/market/font-4d7dd6e02d84.woff2",
+    "source_url": "https://market.o.kg/assets/fonts/Roboto-Bold.woff2",
+    "family": "Roboto",
+    "style": "Bold",
+    "observed_on": [
+      "market"
+    ],
+    "sha256": "4d7dd6e02d849e181e51db84d9d230d369b8ce7412dbcee9d7d1d19ad8a16741",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "Licensed under the Apache License, Version 2.0",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/nur/font-12758b375361.woff2",
+    "source_url": "https://o.kg/_nuxt/TTNormsPro-Medium.g14epfq1.woff2",
+    "family": "TT Norms Pro Medium",
+    "style": "Regular",
+    "observed_on": [
+      "nur"
+    ],
+    "sha256": "12758b3753610e1fc269cdaaae7813624378d8c3b6707ae9f1452cfedcfe746d",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/nur/font-e4e99c5674be.woff2",
+    "source_url": "https://o.kg/_nuxt/TTNormsPro-Regular.DVLoQycQ.woff2",
+    "family": "TT Norms Pro",
+    "style": "Regular",
+    "observed_on": [
+      "nur"
+    ],
+    "sha256": "e4e99c5674be6dbb14c492efd893794466b2681e4cf76081d8b629b267642b4e",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/nur/font-00a9c36fb29e.woff2",
+    "source_url": "https://o.kg/_nuxt/TTNormsPro-Bold.Do_5G6xO.woff2",
+    "family": "TT Norms Pro",
+    "style": "Bold",
+    "observed_on": [
+      "nur"
+    ],
+    "sha256": "00a9c36fb29e289f6efd4dd6008fc84e388e3f7865c3419715cbc937443f7a47",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/akcha/font-249b0eddab14.woff2",
+    "source_url": "https://www.akchabulak.kg/fonts/Montserrat/Montserrat-SemiBold.woff2",
+    "family": "Montserrat SemiBold",
+    "style": "Regular",
+    "observed_on": [
+      "akcha"
+    ],
+    "sha256": "249b0eddab1489e5315854bfcbad591e77574310688806ae50784b5c3342d7e8",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/akcha/font-010b0ec135e5.woff2",
+    "source_url": "https://www.akchabulak.kg/fonts/Montserrat/Montserrat-Medium.woff2",
+    "family": "Montserrat Medium",
+    "style": "Regular",
+    "observed_on": [
+      "akcha"
+    ],
+    "sha256": "010b0ec135e5910b0439508d989384ec665db3cb30aa4abe74957440fff09dce",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  },
+  {
+    "file": "collection/akcha/font-17b243dfeddd.woff2",
+    "source_url": "https://www.akchabulak.kg/fonts/Montserrat/Montserrat-Regular.woff2",
+    "family": "Montserrat",
+    "style": "Regular",
+    "observed_on": [
+      "akcha"
+    ],
+    "sha256": "17b243dfeddd20c58489be81ba6e58fdb26d427cd3d809ecbbe424fd79933a54",
+    "russian_glyphs": true,
+    "kyrgyz_extra_glyphs": true,
+    "license_metadata": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+    "use": "Web reference; not in default portal font CSS."
+  }
+]

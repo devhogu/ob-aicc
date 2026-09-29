@@ -1,0 +1,63 @@
+/* AICC portal styles. Builds on the copied O! tokens and UI kit; consumes semantic tokens only. */
+@import url('./ui-comps/portal.css');
+
+:root{--header-bg:#121212;--header-text:#FFFFFF;--header-muted:#C9CDD2;--header-hover:#2A2A2A;--header-height:64px}
+
+/* ---- Site header: dark in both themes, as on the O!Bank site ---- */
+.site-header{background:var(--header-bg);color:var(--header-text);position:sticky;top:0;z-index:10}
+.site-header__bar{max-width:var(--content-width);margin:0 auto;min-height:var(--header-height);display:flex;align-items:center;gap:var(--space-6);padding:0 var(--space-6);flex-wrap:wrap}
+.site-brand{display:flex;align-items:center;gap:var(--space-3);color:var(--header-text);text-decoration:none;min-height:var(--header-height)}
+.site-brand img{display:block;height:32px;width:auto}
+.site-brand__name{display:flex;flex-direction:column;line-height:1.2;padding-left:var(--space-3);border-left:1px solid #3A3A3A}
+.site-brand__name b{font-family:var(--font-heading);font-weight:700;font-size:var(--text-body)}
+.site-brand__name small{color:var(--header-muted);font-size:var(--text-xs)}
+.site-nav{display:flex;gap:var(--space-2);flex:1}
+.site-nav a{color:var(--header-muted);text-decoration:none;padding:10px 14px;border-radius:var(--radius-control);font-size:var(--text-sm);font-weight:500}
+.site-nav a:hover{color:var(--header-text);background:var(--header-hover)}
+.site-nav a[aria-current="page"]{color:var(--header-text);box-shadow:inset 0 -3px 0 var(--brand)}
+.site-tools{display:flex;align-items:center;gap:var(--space-3);margin-left:auto}
+.site-lang{display:flex;gap:2px;background:#232323;border-radius:var(--radius-pill);padding:3px}
+.site-lang a{color:var(--header-muted);text-decoration:none;padding:6px 12px;border-radius:var(--radius-pill);font-size:var(--text-sm);font-weight:500;min-height:32px;display:inline-flex;align-items:center}
+.site-lang a:hover{color:var(--header-text)}
+.site-lang a[aria-current="true"]{background:var(--brand);color:#FFFFFF}
+.site-theme-button,.site-menu-button{background:transparent;border:1px solid #4A4A4A;color:var(--header-text);border-radius:var(--radius-control);width:var(--control-height);height:var(--control-height);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.site-theme-button:hover,.site-menu-button:hover{background:var(--header-hover)}
+.site-menu-button{display:none}
+.site-theme-button .oc-icon,.site-menu-button .oc-icon{width:20px;height:20px}
+.theme-icon{display:inline-flex}
+.theme-icon--moon{display:none}
+[data-theme="dark"] .theme-icon--sun{display:none}
+[data-theme="dark"] .theme-icon--moon{display:inline-flex}
+.site-header a:focus-visible,.site-header button:focus-visible{outline:3px solid #8AB4FF;outline-offset:2px}
+
+@media(max-width:900px){
+  .site-header__bar{gap:var(--space-3);padding:0 var(--space-4)}
+  .site-menu-button{display:inline-flex;order:2;margin-left:auto}
+  .site-tools{order:3;margin-left:0}
+  .site-brand__name small{display:none}
+  .site-nav{display:none;order:4;flex-basis:100%;flex-direction:column;padding-bottom:var(--space-3)}
+  .site-nav.is-open{display:flex}
+  .site-nav a{padding:12px 14px;min-height:44px;display:flex;align-items:center}
+}
+
+/* ---- Page content ---- */
+.oc-page{padding-top:var(--space-8)}
+.oc-page h1{max-width:var(--reading-width)}
+.oc-page ul,.oc-page ol{max-width:var(--reading-width);padding-left:1.4rem;margin:0 0 var(--space-4)}
+.oc-page li{margin-bottom:var(--space-2)}
+.oc-page :where(p,li):not(.oc-lede){max-width:var(--reading-width)}
+.oc-page code{font-family:var(--font-mono);font-size:.92em;background:var(--surface-subtle);padding:1px 5px;border-radius:4px}
+.oc-tablewrap{overflow-x:auto;margin:var(--space-4) 0 var(--space-6);border:1px solid var(--border);border-radius:var(--radius-card);background:var(--surface)}
+.oc-table{border-collapse:collapse;width:100%;min-width:640px;font-size:var(--text-sm);line-height:var(--line-sm)}
+.oc-table th,.oc-table td{padding:var(--space-3) var(--space-4);text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
+.oc-table th{font-family:var(--font-heading);font-weight:600;background:var(--surface-subtle);white-space:nowrap}
+.oc-table tr:last-child td{border-bottom:0}
+.oc-table td:first-child{font-weight:600}
+.oc-table td{max-width:none}
+.oc-source-note{color:var(--text-muted);font-size:var(--text-sm);margin-top:var(--space-12)}
+.oc-page .oc-notice{max-width:var(--reading-width);margin:0 0 var(--space-6)}
+[data-theme="dark"] .oc-notice{background:var(--info-bg);color:var(--info)}
+
+/* ---- Gateway ---- */
+.oc-gateway{background:var(--canvas);color:var(--text)}
+.oc-gateway .gateway-logo{background:var(--header-bg);padding:12px 20px;border-radius:var(--radius-card);height:72px;width:auto}

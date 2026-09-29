@@ -1,0 +1,60 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-PORTAL-FOUNDATION>
+    <Summary>Establish the AICC portal foundation: portal/ as the working source and build folder, and html/aicc/ as the generated static projection with Russian (primary) and English (secondary) paths, styled with the O!Bank brand copied from the sibling EA portal foundation.</Summary>
+    <Problem>The repository has no portal source, build tooling, brand assets, or generated site. The sibling repository /devops/obank/ea has a mature design foundation (tokens, UI kit, fonts, icons, logos, header and language-switch patterns) that AICC should reuse so both portals look like O! products, but AICC needs its own working folder and its own generated output.</Problem>
+    <Goals>
+      <Goal>Create portal/ as the only editable home for portal sources: tokens, UI kit, brand assets, page content, templates, and build tools.</Goal>
+      <Goal>Create html/aicc/ as generated output only, with /ru/ as the primary version, /en/ as the secondary version, and a shared assets/ folder.</Goal>
+      <Goal>Provide a language switch in the header on every page that leads to the same page in the other language, and a site root that leads to /ru/.</Goal>
+      <Goal>Apply the O!Bank look: O!Bank logo, magenta brand tokens, light and dark themes, Golos Text for body text and TT Travels Text for headings (the faces the O!Bank site uses), copied with all shared assets from the EA portal.</Goal>
+      <Goal>Render pages from one authored source per page, with each page declaring its source language and translations kept per field, so there is never a second independently edited model. The Russian text is added later.</Goal>
+      <Goal>Deliver a first two-page slice, a home page and the statement of intent. The statement of intent is published in English now from its English source. Its Russian text is added later, and until then the Russian page shows the English text labelled as English with a visible marker that the Russian translation is not yet available.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>The product is Russian-first. All repository work, code, documentation, commit messages, and specifications are in English.</Constraint>
+      <Constraint>html/aicc/ is generated. It is never edited by hand and holds no business facts that are not present in portal/ sources.</Constraint>
+      <Constraint>Output is static HTML, CSS, and JavaScript with no server-side runtime and no external network requests at page load.</Constraint>
+      <Constraint>Audience is bank employees behind the bank network. The bank's licensed brand fonts may be committed to this repository under that internal-use decision. Publishing the output outside the bank network requires a new decision.</Constraint>
+      <Constraint>Assets are copied from /devops/obank/ea/portal with their licence notes. Later divergence from EA is allowed; there is no live link between the repositories.</Constraint>
+      <Constraint>Build and checks use existing host tools and need no credentials or model inference.</Constraint>
+      <Constraint>Pages meet WCAG 2.2 AA contrast through the copied tokens, work at mobile and desktop widths, and respect reduced motion.</Constraint>
+      <Constraint>No push to any deployment repository happens in this change.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Deployment repository, hosting platform, and release process.</NonGoal>
+      <NonGoal>Portal pages beyond the home page and the statement of intent, including the function pages, roadmap, and knowledge base.</NonGoal>
+      <NonGoal>Machine translation performed at build or page load, and the Russian text of the statement of intent, which follows in a later change.</NonGoal>
+      <NonGoal>Search, authentication, analytics, and a CMS.</NonGoal>
+      <NonGoal>Kyrgyz language support.</NonGoal>
+      <NonGoal>Changes to the EA repository.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>portal/ contains tokens, UI kit, fonts, icons, logos, page sources, templates, and a build tool. It contains no generated site output.</Criterion>
+      <Criterion>Running the documented build command regenerates html/aicc/ completely and a second run produces no file differences.</Criterion>
+      <Criterion>html/aicc/index.html leads to ru/. html/aicc/ru/ and html/aicc/en/ each contain the home page and the statement of intent. Interface text follows the page language. Statement content without a Russian translation renders in English with lang="en" on that fragment and a visible Russian marker that the translation is not available.</Criterion>
+      <Criterion>Every page has a header with the O!Bank logo, portal name, primary navigation, theme control, and a language switch. The switch on any page links to the same page in the other language.</Criterion>
+      <Criterion>The build fails when Russian and English interface message keys or page sets differ, or when a page references a missing asset or link target. A missing content translation is reported as a warning listing the affected fields, not an error.</Criterion>
+      <Criterion>Pages render in Golos Text and TT Travels Text from local files, with the token fallback chain in place, and the copied contrast checks pass for both themes.</Criterion>
+      <Criterion>A browser check at mobile and desktop widths shows no horizontal overflow, a visible focus state, a working skip link, a working navigation menu on mobile, and correct language switching, with evidence recorded.</Criterion>
+      <Criterion>The statement-of-intent page content matches wiki/statement-of-intent.md in structure and text at the recorded source revision, and the page source records that revision.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-PORTAL-SOURCE />
+      <M-PORTAL-PROJECTION />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 portal/tools/build.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py</ExpectedCommand>
+      <ExpectedCommand>grace lint --path . --assertions current</ExpectedCommand>
+      <ExpectedEvidence>Build log showing a clean, repeatable render, and a check report for key parity, links, assets, and contrast.</ExpectedEvidence>
+      <ExpectedEvidence>Browser check report and screenshots for both languages, both themes, mobile and desktop widths.</ExpectedEvidence>
+      <ExpectedEvidence>GRACE lint output with no errors.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>For this slice the statement of intent has an English source only. The practitioner will arrange the Russian text later, and the product remains Russian-first in interface, default path, and navigation.</Assumption>
+      <Assumption>Portal source is written in Python for the build and plain HTML, CSS, and JavaScript for output, matching the EA tooling, so tokens and checks can be copied as is.</Assumption>
+      <Assumption>Browser checks can use the same local headless-browser tooling as the EA repository, or an equivalent host tool.</Assumption>
+      <Assumption>The O!Bank brand faces are TT Travels Text for headings and Golos Text for body text, per the EA brand research of the O!Bank site. The exact O!Bank logo variant for light and dark headers is confirmed during planning.</Assumption>
+    </Assumptions>
+  </C-PORTAL-FOUNDATION>
+</GraceChangeSpec>

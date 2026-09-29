@@ -1,3 +1,25 @@
 <GraceVerificationDocument graceVersion="4.0">
-  <VD-MAIN></VD-MAIN>
+  <VD-MAIN>
+    <V-M-PORTAL-SOURCE>
+      <M-PORTAL-SOURCE />
+      <TestFiles>
+        <File>portal/tools/check.py</File>
+      </TestFiles>
+      <Command>python3 portal/tools/check.py --idempotent</Command>
+      <Scenario kind="success">Message keys and page sets match in ru and en, links and assets resolve, no external requests, contrast passes for both themes, and two builds are identical to html/aicc.</Scenario>
+      <Scenario kind="failure">Passing does not prove translated content exists or that the pages look right in a browser. Missing content translations are warnings only.</Scenario>
+      <TraceAssertion>The command must exit 0. Its evidence covers the source and the projection consistency, not browser behaviour.</TraceAssertion>
+    </V-M-PORTAL-SOURCE>
+    <V-M-PORTAL-PROJECTION>
+      <M-PORTAL-PROJECTION />
+      <TestFiles>
+        <File>portal/tools/browser_check.py</File>
+      </TestFiles>
+      <Command>python3 portal/tools/check.py --idempotent</Command>
+      <Command>portal/.venv/bin/python portal/tools/browser_check.py</Command>
+      <Scenario kind="success">Both languages of both pages load in both themes at mobile and desktop widths with correct fonts, no overflow, no console errors or external requests, working skip link, focus, mobile menu, theme switch and language switch.</Scenario>
+      <Scenario kind="failure">Passing does not prove assistive-technology behaviour or rendering in other browsers. It uses one Chromium build.</Scenario>
+      <TraceAssertion>Both commands must pass. The browser check needs the local Playwright environment from portal/tools/setup_browser.sh.</TraceAssertion>
+    </V-M-PORTAL-PROJECTION>
+  </VD-MAIN>
 </GraceVerificationDocument>

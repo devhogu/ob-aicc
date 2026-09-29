@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{lang}}" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}} · {{portal_name}}</title>
+<link rel="icon" href="{{root}}assets/ui-comps/logos/o-mark-small.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{root}}assets/aicc.css">
+<script>try{var t=localStorage.getItem('aicc-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script src="{{root}}assets/site.js" defer></script>
+</head>
+<body>
+<a class="oc-skiplink" href="#main">{{skip}}</a>
+<header class="site-header">
+ <div class="site-header__bar">
+  <a class="site-brand" href="{{home_href}}">
+   <img src="{{root}}assets/ui-comps/logos/obank-on-dark.svg" alt="O!Bank" width="84" height="32">
+   <span class="site-brand__name"><b>{{portal_short}}</b><small>{{portal_name}}</small></span>
+  </a>
+  <button class="site-menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-open="{{menu_open}}" data-close="{{menu_close}}" aria-label="{{menu_open}}">{{icon_menu}}</button>
+  <nav id="site-nav" class="site-nav" aria-label="{{nav_label}}">
+{{nav}}
+  </nav>
+  <div class="site-tools">
+   <button class="site-theme-button" type="button" data-to-dark="{{theme_to_dark}}" data-to-light="{{theme_to_light}}" aria-label="{{theme_to_dark}}">
+    <span class="theme-icon theme-icon--sun">{{icon_sun}}</span><span class="theme-icon theme-icon--moon">{{icon_moon}}</span>
+   </button>
+   <nav class="site-lang" aria-label="{{language_label}}">
+{{lang_links}}
+   </nav>
+  </div>
+ </div>
+</header>
+<main id="main" tabindex="-1" class="oc-page">
+{{body}}
+</main>
+<footer class="oc-footer">{{footer}}</footer>
+</body>
+</html>

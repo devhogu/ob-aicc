@@ -1,0 +1,134 @@
+<GraceChangePlan graceVersion="4.0" status="applied">
+  <C-PORTAL-FOUNDATION>
+    <IntentSummary>Create portal/ as the editable source and build home, copy the O! design foundation and O!Bank brand assets from the sibling EA portal, and generate html/aicc/ with /ru/ and /en/ paths containing a home page and the English statement of intent, with the Russian page showing a marked English fallback.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist>
+        <Value>wiki/statement-of-intent.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>.grace/context/requirements.xml</Value>
+      </MustExist>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify>
+        <Module>M-PORTAL-SOURCE</Module>
+      </MustVerify>
+      <MustVerify>
+        <Module>M-PORTAL-PROJECTION</Module>
+      </MustVerify>
+      <MustPassCommand>
+        <Command>python3 portal/tools/build.py</Command>
+      </MustPassCommand>
+      <MustPassCommand>
+        <Command>python3 portal/tools/check.py --idempotent</Command>
+      </MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors>
+        <M-PORTAL-SOURCE />
+        <M-PORTAL-PROJECTION />
+      </GraphAnchors>
+      <VerificationAnchors>
+        <V-M-PORTAL-SOURCE />
+        <V-M-PORTAL-PROJECTION />
+      </VerificationAnchors>
+      <ContextArtifact>technology.xml</ContextArtifact>
+      <ContextArtifact>ux-guidelines.xml</ContextArtifact>
+      <ContextArtifact>deployment.xml</ContextArtifact>
+    </DurableScope>
+    <ObservedWriteScope>
+      <Glob>portal/**</Glob>
+      <Glob>html/aicc/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001>
+        <Title>Copy the design foundation and brand assets from the EA portal into portal/</Title>
+        <DependsOn></DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>portal/tokens has tokens.json copied from /devops/obank/ea/portal/tokens, and the contrast build check is copied with it.</Criterion>
+          <Criterion>portal/ui-comps has ui.css, portal.css, the Lucide icons, service icons, logos including the O!Bank light and dark logos and the O! mark, and all fonts with their licence and source notes (Golos Text, TT Travels Text, TT Norms Pro, and the provider faces). It has no gallery, research captures, or EA examples.</Criterion>
+          <Criterion>A short portal/README.md records the source path and date of the copy, that no live link to EA exists, and the internal-use font decision.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>test -f portal/tokens/tokens.json &amp;&amp; test -f portal/ui-comps/ui.css &amp;&amp; test -f portal/ui-comps/fonts/tt-travels-text/tt-travels-text-500.woff2 &amp;&amp; test -f portal/ui-comps/fonts/golos-text/GolosText-variable.woff2 &amp;&amp; ls portal/ui-comps/logos | grep -i obank</Command>
+        </Verification>
+      </T-001>
+      <T-002>
+        <Title>Write the site build tool and page/message model</Title>
+        <DependsOn>T-001</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>portal/tools/build.py generates portal/tokens/tokens.css from tokens.json, copies shared assets to html/aicc/assets, and renders html/aicc/index.html, ru/ and en/ pages from templates in portal/templates and page sources in portal/content.</Criterion>
+          <Criterion>Each page source declares its source language and source revision. Interface messages live in portal/messages/ru.json and en.json with identical key sets.</Criterion>
+          <Criterion>A page field without a translation renders in its source language with a lang attribute on that fragment and a visible marker in the page language saying the translation is not available.</Criterion>
+          <Criterion>The build removes stale output so html/aicc/ contains only what the sources produce, and prints missing-translation warnings.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 portal/tools/build.py</Command>
+        </Verification>
+      </T-002>
+      <T-003>
+        <Title>Author the home page and statement-of-intent content sources</Title>
+        <DependsOn></DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The home page source has Russian and English titles, lead text, and cards linking to the statement of intent.</Criterion>
+          <Criterion>The statement-of-intent source holds the English text from wiki/statement-of-intent.md in the same section structure, records the wiki commit revision, and has no Russian text yet.</Criterion>
+          <Criterion>The evidence links in the statement point to published locations or are removed. No link points to a repository file that the site does not ship.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>test -f portal/content/home.json &amp;&amp; test -f portal/content/statement-of-intent.json</Command>
+        </Verification>
+      </T-003>
+      <T-004>
+        <Title>Build the shared layout: header, navigation, language switch, theme, footer</Title>
+        <DependsOn>T-001</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The header is 64px with the O!Bank logo, portal name, primary navigation, theme control, and a language switch whose links go to the same page in the other language.</Criterion>
+          <Criterion>Headings use TT Travels Text and body text uses Golos Text through the --font-heading and --font-body tokens, with the fallback chain intact.</Criterion>
+          <Criterion>The layout provides a skip link, a mobile navigation menu, a visible focus state, light and dark themes with the preference saved locally, and respects reduced motion.</Criterion>
+          <Criterion>The Russian language link is the default, and the site root page leads to /ru/ without relying on browser language.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 portal/tools/build.py</Command>
+        </Verification>
+      </T-004>
+      <T-005>
+        <Title>Generate html/aicc/ and confirm the build is repeatable</Title>
+        <DependsOn>T-002, T-003, T-004</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>html/aicc/ contains index.html, ru/index.html, ru/statement-of-intent/index.html, en/index.html, en/statement-of-intent/index.html, and assets/.</Criterion>
+          <Criterion>A second build run produces byte-identical output.</Criterion>
+          <Criterion>No page loads anything from an external host.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 portal/tools/build.py</Command>
+          <Command>python3 portal/tools/check.py --idempotent</Command>
+        </Verification>
+      </T-005>
+      <T-006>
+        <Title>Write the static checks</Title>
+        <DependsOn>T-002</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>portal/tools/check.py fails on differing ru and en message keys or page sets, missing assets, broken internal links, external requests, a missing lang attribute, and language links that do not point at the counterpart page.</Criterion>
+          <Criterion>It runs the copied token contrast check for both themes and reports missing translations as warnings.</Criterion>
+          <Criterion>Its --idempotent option builds twice and fails on any difference.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 portal/tools/check.py</Command>
+        </Verification>
+      </T-006>
+      <T-007>
+        <Title>Run browser checks and record evidence</Title>
+        <DependsOn>T-005, T-006</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>A browser check loads both languages of both pages in both themes at mobile and desktop widths and finds no horizontal overflow and no console errors.</Criterion>
+          <Criterion>It confirms the skip link, visible focus, mobile menu, theme switch, and that the language switch lands on the counterpart page.</Criterion>
+          <Criterion>It confirms the Russian statement page shows the English text and the translation marker.</Criterion>
+          <Criterion>The report and screenshots are saved under portal/verification/. The check uses the EA repository's local browser tooling read-only, or an equivalent host tool, and changes nothing in EA.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>/devops/obank/ea/portal/.venv/bin/python portal/tools/browser_check.py</Command>
+        </Verification>
+      </T-007>
+    </ImplementationPlan>
+  </C-PORTAL-FOUNDATION>
+</GraceChangePlan>
