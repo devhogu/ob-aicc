@@ -1,4 +1,4 @@
-<GraceChangeSpec graceVersion="4.0" status="approved">
+<GraceChangeSpec graceVersion="4.0" status="applied">
   <C-AICC-DEPLOY>
     <Summary>Add a Rust command-line tool, aicc-deploy, that publishes the generated html/aicc site from this repository into the clean deploy repository /devops/websvc/websvc-ob-aicc, commits it, and pushes it to the origin and websvc remotes so the existing git hook updates the web server.</Summary>
     <Problem>The generated portal lives in html/aicc here, while the served copy lives in a separate deploy repository whose push to the websvc remote triggers a post-receive checkout on CX43. Publishing today is manual: copy files, commit, push twice, and check the result. Manual copying can leave stale files, publish an unchecked build, or push the wrong tree.</Problem>

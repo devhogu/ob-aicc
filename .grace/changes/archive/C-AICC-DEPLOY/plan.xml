@@ -1,4 +1,4 @@
-<GraceChangePlan graceVersion="4.0" status="approved">
+<GraceChangePlan graceVersion="4.0" status="applied">
   <C-AICC-DEPLOY>
     <IntentSummary>Build the standard-library-only Rust tool deploy/aicc-deploy that mirrors html/aicc into the deploy repository, writes a hashed manifest, and with an explicit flag commits, pushes origin then websvc, and verifies the served manifest, defaulting to a dry run and refusing unsafe states.</IntentSummary>
     <BaselineAssertions>
