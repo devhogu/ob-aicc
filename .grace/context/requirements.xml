@@ -1,0 +1,19 @@
+<GraceRequirements graceVersion="4.0">
+  <ProjectName>AICC Portal</ProjectName>
+  <Annotation>Source repository for the static HTML portal of the AI Competence Center (AICC) at O!Bank Kyrgyzstan; the portal projects the center's strategy, statement of intent, roadmap, knowledge base, and lifecycle-management processes.</Annotation>
+  <Keywords>aicc, o-bank, kyrgyzstan, genai, ai-competence-center, portal, static-site, knowledge-base, roadmap, strategy</Keywords>
+  <Goals>
+    <Goal>Present the AICC's strategy, statement of intent, roadmap, knowledge base, and process and knowledge information as one portal that mirrors the center's activities and responsibilities.</Goal>
+    <Goal>Support GenAI adoption across O!Bank business functions by making AICC guidance and lifecycle-management information easy to find.</Goal>
+    <Goal>Develop and shape the portal in this repository, then render a clean static output to a separate deployment repository.</Goal>
+  </Goals>
+  <Users>
+    <User>O!Bank staff across business functions adopting GenAI</User>
+    <User>AICC team members who maintain portal content and lifecycle information</User>
+  </Users>
+  <Constraints>
+    <Constraint>The published portal is static HTML; it needs no server-side runtime.</Constraint>
+    <Constraint>This repository is the development source; the deployment repository receives only rendered output and is never edited as a second source.</Constraint>
+    <Constraint>Portal content is bank-internal or public-facing status is undecided; confirm audience and data classification before publishing any content.</Constraint>
+  </Constraints>
+</GraceRequirements>

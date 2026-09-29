@@ -1,0 +1,5 @@
+<GraceDeployment graceVersion="4.0">
+  <Applicability>applicable</Applicability>
+  <Target>Static HTML output rendered from this repository into a separate clean deployment repository, which is then published by its own hosting path</Target>
+  <Notes>The deployment repository name, hosting platform, render command, and release gates are not yet decided and belong to a later specification. Push to the deployment repository needs separate explicit authority.</Notes>
+</GraceDeployment>

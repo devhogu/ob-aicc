@@ -1,0 +1,11 @@
+<GraceTechnology graceVersion="4.0">
+  <Language>HTML, CSS, and JavaScript; final stack choices are open</Language>
+  <Runtime>Static files served by any web host; no server-side runtime. Local build tooling to be selected by the first approved specification.</Runtime>
+  <Framework>Undecided; a static-site generator versus hand-authored pages is an open decision for the first specification.</Framework>
+  <TestingStack>To be defined; expected to cover HTML validity, link integrity, accessibility, and rendered-output checks. GRACE lint runs on .grace state.</TestingStack>
+  <Observability>None for this source repository; the published site's hosting analytics are a deployment decision.</Observability>
+  <OperationalConstraints>
+    <Constraint>Use existing host tools; do not require credentials or model inference for build and check.</Constraint>
+    <Constraint>Generated agent projections under .claude and .agents are replaceable output from dev-pipe, not authority.</Constraint>
+  </OperationalConstraints>
+</GraceTechnology>
