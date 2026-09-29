@@ -18,5 +18,7 @@
  "source_language_en": "English",
  "footer": "AI Competence Center, O!Bank. Internal portal.",
  "gateway_title": "AI Competence Center",
- "gateway_link": "Continue in Russian"
+ "gateway_link": "Continue in Russian",
+ "badge_draft": "Draft",
+ "sidebar_eyebrow": "AICC · O!Bank"
 }

@@ -19,7 +19,7 @@
   }
 
   var menuButton = document.querySelector('.site-menu-button');
-  var nav = document.getElementById('site-nav');
+  var nav = document.getElementById('site-sidebar');
   if (menuButton && nav) {
     menuButton.addEventListener('click', function () {
       var open = menuButton.getAttribute('aria-expanded') !== 'true';

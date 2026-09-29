@@ -14,6 +14,7 @@
 #   PAGE_ORDER - module-internal helper or constant
 #   Site - module-internal helper or constant
 #   icon - module-internal helper or constant
+#   logo_svg - module-internal helper or constant
 #   fill - module-internal helper or constant
 #   inline - module-internal helper or constant
 #   PageRenderer - module-internal helper or constant
@@ -63,6 +64,15 @@ def icon(name):
     svg = (ROOT / f'ui-comps/icons/ui-{name}.svg').read_text(encoding='utf-8')
     svg = re.sub(r'\s+', ' ', svg).strip()
     return svg.replace('<svg ', '<svg class="oc-icon" aria-hidden="true" focusable="false" ', 1)
+
+
+def logo_svg():
+    """Inline O!Bank logo. The magenta mark keeps its artwork colour; the white wordmark follows the text colour."""
+    svg = (ROOT / 'ui-comps/logos/obank-on-dark.svg').read_text(encoding='utf-8')
+    svg = re.sub(r'\sstyle="[^"]*"', '', svg)
+    svg = re.sub(r'<path([^>]*) fill="white"', r'<path\1 fill="currentColor"', svg)
+    svg = re.sub(r'^<svg [^>]*>', '<svg class="site-logo" role="img" aria-label="O!Bank" viewBox="0 0 240 91" width="105" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">', svg)
+    return re.sub(r'\s+', ' ', svg).strip()
 
 
 def fill(template, values):
@@ -181,6 +191,9 @@ def render_page(site, pid, lang):
         parts.append(f'<p class="oc-notice" role="note">{html.escape(msg["translation_missing"])}</p>')
         site.warnings.append(f'{pid}/{lang}: {len(rd.missing)} field(s) shown in {page["source_language"]}: '
                              + ', '.join(rd.missing[:4]) + (' ...' if len(rd.missing) > 4 else ''))
+    if 'eyebrow' in page:
+        eb, ebl = rd.text_html(page['eyebrow'], 'eyebrow')
+        parts.append(f'<p class="oc-eyebrow"{ebl}>{eb}</p>')
     parts.append(h1)
     parts.extend(body_blocks)
     if 'source' in page:
@@ -207,6 +220,8 @@ def render_page(site, pid, lang):
         'menu_close': html.escape(msg['menu_close']), 'theme_to_dark': html.escape(msg['theme_to_dark']),
         'theme_to_light': html.escape(msg['theme_to_light']), 'language_label': html.escape(msg['language_label']),
         'footer': html.escape(msg['footer']), 'nav': '\n'.join(nav), 'lang_links': '\n'.join(lang_links),
+        'badge_draft': html.escape(msg['badge_draft']), 'sidebar_eyebrow': html.escape(msg['sidebar_eyebrow']),
+        'logo': logo_svg(),
         'icon_menu': icon('menu'), 'icon_sun': icon('sun'), 'icon_moon': icon('moon'),
         'body': '\n'.join(parts),
     }

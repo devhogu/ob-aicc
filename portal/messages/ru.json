@@ -18,5 +18,7 @@
  "source_language_en": "английский",
  "footer": "Центр компетенций по ИИ, O!Bank. Внутренний портал.",
  "gateway_title": "Центр компетенций по ИИ",
- "gateway_link": "Продолжить на русском"
+ "gateway_link": "Продолжить на русском",
+ "badge_draft": "Черновик",
+ "sidebar_eyebrow": "AICC · O!Bank"
 }

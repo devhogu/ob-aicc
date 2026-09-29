@@ -640,5 +640,9 @@
    ]
   }
  ],
- "nav": "nav_statement"
+ "nav": "nav_statement",
+ "eyebrow": {
+  "ru": "Стратегия",
+  "en": "Strategy"
+ }
 }

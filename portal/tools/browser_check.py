@@ -54,6 +54,30 @@ class Quiet(SimpleHTTPRequestHandler):
         pass
 
 
+class Prefixed(SimpleHTTPRequestHandler):
+    """Serve html/aicc under /aicc the way Caddy handle_path does: /aicc itself is answered with the site
+    index and no redirect, so relative links on it resolve against the server root."""
+
+    def log_message(self, *args):
+        pass
+
+    def do_GET(self):
+        if self.path.split('?')[0] == '/aicc':
+            body = (OUT_SITE / 'index.html').read_bytes()
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/html; charset=utf-8')
+            self.send_header('Content-Length', str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+        super().do_GET()
+
+    def translate_path(self, path):
+        if path.startswith('/aicc/'):
+            return super().translate_path(path[len('/aicc'):])
+        return super().translate_path('/__none__')
+
+
 def browser_env():
     env = dict(os.environ)
     if LOCAL_LIBS.is_dir():
@@ -65,7 +89,7 @@ def browser_env():
     return env
 
 
-async def check(base):
+async def check(base, prefixed):
     results, failures = [], []
 
     def record(name, ok, detail=''):
@@ -83,7 +107,7 @@ async def check(base):
             page.on('pageerror', lambda e: problems.append(f'pageerror {e}'))
             page.on('console', lambda m: problems.append(f'console {m.text}') if m.type == 'error' else None)
             page.on('response', lambda r: problems.append(f'{r.status} {r.url}') if r.status >= 400 else None)
-            page.on('request', lambda r: problems.append(f'external {r.url}') if not r.url.startswith(base) and not r.url.startswith('data:') else None)
+            page.on('request', lambda r: problems.append(f'external {r.url}') if not r.url.startswith((base, prefixed, 'data:')) else None)
             for lang in LANGS:
                 for pname, sub in PAGES.items():
                     for theme in THEMES:
@@ -98,13 +122,13 @@ async def check(base):
                             body: getComputedStyle(document.body).fontFamily,
                             headingLoaded: document.fonts.check('700 16px "TT Travels Text"'),
                             bodyLoaded: document.fonts.check('400 16px "Golos Text"'),
-                            logo: (() => { const i = document.querySelector('.site-brand img'); return i && i.naturalWidth > 0; })(),
+                            logo: (() => { const i = document.querySelector('.site-logo'); if (!i) return false; const r = i.getBoundingClientRect(); return r.width > 40 && r.left < 40; })(),
                         })''')
                         record(f'lang attribute {tag}', info['lang'] == lang, info['lang'])
                         record(f'no horizontal overflow {tag}', info['overflow'] <= 0, str(info['overflow']))
                         record(f'heading font {tag}', info['h1'].startswith('"TT Travels Text"') and info['headingLoaded'], info['h1'])
                         record(f'body font {tag}', info['body'].startswith('"Golos Text"') and info['bodyLoaded'], info['body'])
-                        record(f'logo loaded {tag}', info['logo'])
+                        record(f'logo at far left {tag}', info['logo'])
                         record(f'one theme icon visible {tag}', await page.locator('.theme-icon:visible').count() == 1)
                         await page.screenshot(path=str(VERIFY / 'screenshots' / f'{lang}-{pname}-{theme}-{vp_name}.png'))
                     # fallback marker on the Russian statement page
@@ -133,16 +157,18 @@ async def check(base):
 
             if vp_name == 'mobile':
                 btn = page.locator('.site-menu-button')
-                nav = page.locator('#site-nav')
+                nav = page.locator('#site-sidebar')
                 record('mobile menu button visible', await btn.is_visible())
-                record('mobile nav hidden by default', not await nav.is_visible())
+                record('mobile sidebar hidden by default', not await nav.is_visible())
                 await btn.click()
                 record('mobile menu opens', await nav.is_visible() and await btn.get_attribute('aria-expanded') == 'true')
                 await page.keyboard.press('Escape')
                 record('mobile menu closes on Escape', not await nav.is_visible())
             else:
                 record('desktop menu button hidden', not await page.locator('.site-menu-button').is_visible())
-                record('desktop nav visible', await page.locator('#site-nav').is_visible())
+                record('desktop sidebar navigation visible', await page.locator('#site-nav').is_visible())
+                box = await page.locator('.site-sidebar').bounding_box()
+                record('desktop sidebar is on the left', box['x'] < 2 and box['width'] > 200, str(box))
 
             await page.goto(f'{base}/ru/index.html')
             await page.evaluate("localStorage.clear()")
@@ -167,6 +193,18 @@ async def check(base):
             await page.wait_for_url('**/ru/index.html')
             record(f'root leads to ru {vp_name}', page.url.endswith('/ru/index.html'), page.url)
 
+            # /aicc without a trailing slash must still lead into /aicc/ru/, not the server root. Speculative
+            # requests made before the redirect are expected to miss, so this page has no request listeners.
+            slash = await ctx.new_page()
+            try:
+                await slash.goto(f'{prefixed}/aicc')
+                await slash.wait_for_url('**/aicc/ru/index.html', timeout=5000)
+                await slash.wait_for_selector('h1', timeout=5000)
+            except Exception:
+                pass
+            record(f'/aicc without slash stays under /aicc {vp_name}', slash.url.endswith('/aicc/ru/index.html'), slash.url)
+            await slash.close()
+
             record(f'no console errors, failed or external requests {vp_name}', not problems, '; '.join(problems[:3]))
             await ctx.close()
         await browser.close()
@@ -185,11 +223,15 @@ def main():
         server = ThreadingHTTPServer(('127.0.0.1', 0), handler)
         Thread(target=server.serve_forever, daemon=True).start()
         base = f'http://127.0.0.1:{server.server_address[1]}'
+    pref_server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Prefixed, directory=str(OUT_SITE)))
+    Thread(target=pref_server.serve_forever, daemon=True).start()
+    prefixed = f'http://127.0.0.1:{pref_server.server_address[1]}'
     try:
-        results, failures = asyncio.run(check(base))
+        results, failures = asyncio.run(check(base, prefixed))
     finally:
         if server:
             server.shutdown()
+        pref_server.shutdown()
     report = {'base': 'served from html/aicc' if server else base, 'viewports': VIEWPORTS,
               'passed': sum(r['ok'] for r in results), 'failed': len(failures), 'checks': results}
     (VERIFY / 'browser-report.json').write_text(json.dumps(report, indent=1, ensure_ascii=False) + '\n', encoding='utf-8')

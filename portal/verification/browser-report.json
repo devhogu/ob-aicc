@@ -10,7 +10,7 @@
    900
   ]
  },
- "passed": 124,
+ "passed": 127,
  "failed": 0,
  "checks": [
   {
@@ -34,7 +34,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded ru/home/light/mobile",
+   "check": "logo at far left ru/home/light/mobile",
    "ok": true,
    "detail": ""
   },
@@ -64,7 +64,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded ru/home/dark/mobile",
+   "check": "logo at far left ru/home/dark/mobile",
    "ok": true,
    "detail": ""
   },
@@ -94,7 +94,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded ru/statement/light/mobile",
+   "check": "logo at far left ru/statement/light/mobile",
    "ok": true,
    "detail": ""
   },
@@ -124,7 +124,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded ru/statement/dark/mobile",
+   "check": "logo at far left ru/statement/dark/mobile",
    "ok": true,
    "detail": ""
   },
@@ -164,7 +164,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded en/home/light/mobile",
+   "check": "logo at far left en/home/light/mobile",
    "ok": true,
    "detail": ""
   },
@@ -194,7 +194,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded en/home/dark/mobile",
+   "check": "logo at far left en/home/dark/mobile",
    "ok": true,
    "detail": ""
   },
@@ -224,7 +224,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded en/statement/light/mobile",
+   "check": "logo at far left en/statement/light/mobile",
    "ok": true,
    "detail": ""
   },
@@ -254,7 +254,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded en/statement/dark/mobile",
+   "check": "logo at far left en/statement/dark/mobile",
    "ok": true,
    "detail": ""
   },
@@ -289,7 +289,7 @@
    "detail": ""
   },
   {
-   "check": "mobile nav hidden by default",
+   "check": "mobile sidebar hidden by default",
    "ok": true,
    "detail": ""
   },
@@ -311,17 +311,22 @@
   {
    "check": "language switch ru->en same page mobile",
    "ok": true,
-   "detail": "http://127.0.0.1:41055/en/statement-of-intent/index.html"
+   "detail": "http://127.0.0.1:33157/en/statement-of-intent/index.html"
   },
   {
    "check": "language switch en->ru same page mobile",
    "ok": true,
-   "detail": "http://127.0.0.1:41055/ru/statement-of-intent/index.html"
+   "detail": "http://127.0.0.1:33157/ru/statement-of-intent/index.html"
   },
   {
    "check": "root leads to ru mobile",
    "ok": true,
-   "detail": "http://127.0.0.1:41055/ru/index.html"
+   "detail": "http://127.0.0.1:33157/ru/index.html"
+  },
+  {
+   "check": "/aicc without slash stays under /aicc mobile",
+   "ok": true,
+   "detail": "http://127.0.0.1:45877/aicc/ru/index.html"
   },
   {
    "check": "no console errors, failed or external requests mobile",
@@ -349,7 +354,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded ru/home/light/desktop",
+   "check": "logo at far left ru/home/light/desktop",
    "ok": true,
    "detail": ""
   },
@@ -379,7 +384,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded ru/home/dark/desktop",
+   "check": "logo at far left ru/home/dark/desktop",
    "ok": true,
    "detail": ""
   },
@@ -409,7 +414,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded ru/statement/light/desktop",
+   "check": "logo at far left ru/statement/light/desktop",
    "ok": true,
    "detail": ""
   },
@@ -439,7 +444,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded ru/statement/dark/desktop",
+   "check": "logo at far left ru/statement/dark/desktop",
    "ok": true,
    "detail": ""
   },
@@ -479,7 +484,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded en/home/light/desktop",
+   "check": "logo at far left en/home/light/desktop",
    "ok": true,
    "detail": ""
   },
@@ -509,7 +514,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded en/home/dark/desktop",
+   "check": "logo at far left en/home/dark/desktop",
    "ok": true,
    "detail": ""
   },
@@ -539,7 +544,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded en/statement/light/desktop",
+   "check": "logo at far left en/statement/light/desktop",
    "ok": true,
    "detail": ""
   },
@@ -569,7 +574,7 @@
    "detail": "\"Golos Text\", system-ui, -apple-system, \"Segoe UI\", Arial, sans-serif"
   },
   {
-   "check": "logo loaded en/statement/dark/desktop",
+   "check": "logo at far left en/statement/dark/desktop",
    "ok": true,
    "detail": ""
   },
@@ -604,9 +609,14 @@
    "detail": ""
   },
   {
-   "check": "desktop nav visible",
+   "check": "desktop sidebar navigation visible",
    "ok": true,
    "detail": ""
+  },
+  {
+   "check": "desktop sidebar is on the left",
+   "ok": true,
+   "detail": "{'x': 0, 'y': 72, 'width': 248, 'height': 828}"
   },
   {
    "check": "theme switch and persistence desktop",
@@ -616,17 +626,22 @@
   {
    "check": "language switch ru->en same page desktop",
    "ok": true,
-   "detail": "http://127.0.0.1:41055/en/statement-of-intent/index.html"
+   "detail": "http://127.0.0.1:33157/en/statement-of-intent/index.html"
   },
   {
    "check": "language switch en->ru same page desktop",
    "ok": true,
-   "detail": "http://127.0.0.1:41055/ru/statement-of-intent/index.html"
+   "detail": "http://127.0.0.1:33157/ru/statement-of-intent/index.html"
   },
   {
    "check": "root leads to ru desktop",
    "ok": true,
-   "detail": "http://127.0.0.1:41055/ru/index.html"
+   "detail": "http://127.0.0.1:33157/ru/index.html"
+  },
+  {
+   "check": "/aicc without slash stays under /aicc desktop",
+   "ok": true,
+   "detail": "http://127.0.0.1:45877/aicc/ru/index.html"
   },
   {
    "check": "no console errors, failed or external requests desktop",

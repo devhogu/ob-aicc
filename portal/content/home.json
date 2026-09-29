@@ -36,5 +36,9 @@
    ]
   }
  ],
- "nav": "nav_home"
+ "nav": "nav_home",
+ "eyebrow": {
+  "ru": "Портал",
+  "en": "Portal"
+ }
 }

@@ -4,9 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Центр компетенций по ИИ</title>
-<meta http-equiv="refresh" content="0; url=ru/index.html">
+<script>
+/* Servers such as Caddy handle_path answer /aicc (no trailing slash) with this page, which would make the
+   relative links below resolve at the server root. Add the slash first, then choose the language. */
+try{var p=location.pathname;
+if(!/\/$|\.html$/.test(p)){location.replace(p+'/'+location.search+location.hash)}
+else{var l=localStorage.getItem('aicc-lang');location.replace((l==='en'?'en':'ru')+'/index.html')}}catch(e){}
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=ru/index.html"></noscript>
 <link rel="stylesheet" href="assets/aicc.css">
-<script>try{var l=localStorage.getItem('aicc-lang');if(l==='en'||l==='ru')location.replace(l+'/index.html')}catch(e){}</script>
+
 </head>
 <body>
 <div class="oc-gateway">
