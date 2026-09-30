@@ -2,20 +2,20 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: draft
-revision: 1.0
+revision: 1.1
 created: 2026-09-30
 revised: 2026-09-30
 ```
 
 # Initiative Brief
 
-**Template.** Copy for each Initiative above an Investment Guardrail. One page.
+**Template.** Copy for each Initiative above an Investment Guardrail. One page. For a discovery goal, an outcome list may replace the benefit table, the Domain Owner field may list several Domain Owners, and baselines are dated instead of set later.
 
 | Field | Entry |
 | --- | --- |
 | Identifier | INI-[nnn] |
 | Title | [title] |
-| Status | [draft / submitted / approved / rejected] |
+| Status | [draft / submitted / approved / returned / rejected] |
 | Strategic Priority | [PRI-n] |
 | Domain Owner | [name] |
 | Date of last change | [date] |

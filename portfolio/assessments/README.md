@@ -10,3 +10,4 @@ Issues Record.
 | 2026-09-30-2 | [first corpus, independent check](2026-09-30-2/corpus-assessment-report.md) | 72 findings; led to the simplification (DR-2026-009) |
 | 2026-09-30-3 | [six documents: consistency](2026-09-30-3/consistency-report.md) and [coverage](2026-09-30-3/coverage-report.md) | Not ready; fixed in DR-2026-010 |
 | 2026-09-30-4 | [six documents: re-check](2026-09-30-4/recheck-report.md) | Ready after named fixes; fixed in DR-2026-011 |
+| 2026-09-30-5 | [acceptance: documents](2026-09-30-5/acceptance-documents.md) and [end to end](2026-09-30-5/acceptance-end-to-end.md) | Accept after named fixes; fixed in DR-2026-015 |

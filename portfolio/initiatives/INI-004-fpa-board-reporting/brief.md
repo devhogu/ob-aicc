@@ -39,7 +39,7 @@ If the AI-generated reports of FP&A reach the Board through one portal and one a
 - The definitions of the metrics, agreed with FP&A.
 - The approval of the Executive Sponsor for each edition, in place.
 
-**Measures.** Editions issued on time; Share of figures traceable to a governed source; Manual steps removed; Hours per cycle, against the baseline. Baselines and targets are set with the Domain Owner in the first month.
+**Measures.** Editions issued on time; Share of figures traceable to a governed source; Manual steps removed; Hours per cycle, against the baseline. Baselines and targets are set with the Domain Owner by 31 October 2026.
 
 **Cost.** The time of the AICC Lead. No other cost is stated.
 

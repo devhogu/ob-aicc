@@ -8,6 +8,8 @@ The architecture standards of AICC and the requirements that the use of AI place
 | --- | --- | --- | --- |
 | ARC-001 | A Solution that answers from knowledge cites the source, and each source has a named owner and a review date noted in the AI Registry. | Every Solution that uses knowledge | 2026-09-30 |
 | ARC-002 | The design lets the Solution be suspended without loss of the record of its use. | Every Solution | 2026-09-30 |
+| ARC-003 | Each figure in a published edition has its source, date, calculation, and reviewer recorded. | Output published to the Board or to investors | 2026-09-30 |
+| ARC-004 | Where a person decides, the Solution records the contribution of the AI and the decision of the person. | Every Solution used in a decision process | 2026-09-30 |
 
 ## Requirements on the AI Platform
 

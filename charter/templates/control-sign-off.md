@@ -2,7 +2,7 @@
 id: AICC-TPL-03-EN
 title: Control Sign-Off
 status: draft
-revision: 1.1
+revision: 1.2
 created: 2026-09-30
 revised: 2026-09-30
 ```
@@ -23,6 +23,10 @@ revised: 2026-09-30
 
 [The requirements of the AI Policy for the Risk Tier that were checked: validation, human oversight, testing for bias and error, monitoring and logging, disclosure and contestability.]
 
-## 2. Conditions or reasons
+## 2. Limits of use
+
+[What the Solution shall not be used for, for example: no output on an individual application. Any change to these limits needs a new validation.]
+
+## 3. Conditions or reasons
 
 [Conditions to meet, with owner and date; or the reasons for a stop.]

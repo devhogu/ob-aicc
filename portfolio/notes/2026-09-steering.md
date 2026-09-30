@@ -8,7 +8,7 @@
 
 ## Decisions
 
-- The goals of the first 100 days, September to December 2026, are confirmed by the Executive Sponsor (confirmation attached): DR-2026-012. The wording and scope are restated in DR-2026-013.
+- The goals of the first 100 days, September to December 2026, are confirmed by the Executive Sponsor: DR-2026-012. The wording and scope are restated in DR-2026-013.
 
 ## Actions
 

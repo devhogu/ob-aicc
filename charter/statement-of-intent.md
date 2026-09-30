@@ -2,7 +2,7 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: draft
-revision: 1.0
+revision: 1.1
 created: 2026-09-29
 revised: 2026-09-30
 ```
@@ -132,8 +132,8 @@ advises the Executive Sponsor on the Portfolio and on conflicts between Entities
 
 7.6. The Board oversees AI through the Board Committee, the committee that the Board names for the purpose.
 
-7.7. The Group shall maintain a statement of its appetite for AI risk, activated at the appropriate level, against which
-the use of AI is assessed.
+7.7. The Group shall maintain a statement of its appetite for AI risk, approved by the Executive Sponsor and noted by the Board
+Committee, against which the use of AI is assessed.
 
 7.8. Each Use Case is assigned a Risk Tier. The Risk Tier determines the review, validation, human oversight, and
 speed of release that apply to it.
@@ -306,10 +306,11 @@ of AI in each jurisdiction in which they operate.
 provider, or in regulation, or following audit or supervisory findings.
 
 13.4. This Statement shall be documented and communicated to all employees, and made available to regulators, investors,
-and customers as appropriate.
+and customers as the Executive Sponsor decides.
 
 13.5. This Statement takes effect on the date of its activation, as recorded in its change log. Amendments are activated by the same
-authority.
+authority. Its activation binds the Bank. An Entity takes part by its own recorded decision, and the Entities that take part are
+listed in the Appointments Record.
 
 ## Change log
 
@@ -321,3 +322,4 @@ authority.
 | 0.8 | 2026-09-30 | Bias testing and disclosure qualified by Risk Tier; Exceptions. | DR-2026-007 |
 | 0.9 | 2026-09-30 | References aligned to the simplified corpus: AI Policy, Risks and Issues Record, Executive Sponsor for the Investment Guardrails. | DR-2026-009 |
 | 1.0 | 2026-09-30 | Internal audit gives assurance only; the Board Committee is named by the Board; wording aligned. | DR-2026-010 |
+| 1.1 | 2026-09-30 | Acceptance fixes: appetite approval, communication, participation of Entities. | DR-2026-015 |

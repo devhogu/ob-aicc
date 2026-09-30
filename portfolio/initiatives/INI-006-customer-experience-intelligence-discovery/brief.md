@@ -38,7 +38,7 @@ If the challenges that customers experience are consolidated from their sources 
 - A first view of the inefficiencies of the front office, from the sample where permitted.
 - A proposal for the next quarter, for decision at the quarterly Steering.
 
-**Measures.** Sources mapped, with owner and data class; Themes identified in the sample; Proposal delivered. Baselines and targets are set with the Domain Owner in the first month.
+**Measures.** Sources mapped, with owner and data class; Themes identified in the sample; Proposal delivered. Baselines and targets are set with the Domain Owner by 31 October 2026.
 
 **Cost.** The time of the AICC Lead. No other cost is stated.
 

@@ -2,18 +2,18 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: draft
-revision: 1.1
+revision: 1.2
 created: 2026-09-30
 revised: 2026-09-30
 ```
 
 # Quarterly Report
 
-**Template.** The AICC Lead prepares the report each quarter for the AI Steering Committee.
+**Template.** The AICC Lead prepares the report each quarter for the quarterly Steering. The report to the Board Committee uses sections 1, 2, 4, and 5, and the Executive Sponsor approves it.
 
 | Field | Entry |
 | --- | --- |
-| Quarter | [year and quarter] |
+| Quarter | [year and quarter, or Quarter 0] |
 | Date | [date] |
 
 ## 1. Summary

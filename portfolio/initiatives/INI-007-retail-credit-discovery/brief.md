@@ -38,11 +38,11 @@ If AICC and the function discuss in full what AI can do for credit lines, loans,
 - The approach to the analysis of mortgage rejections, agreed: data, method, and controls.
 - A first analysis, delivered where permitted.
 
-**Measures.** Sessions held and documented; Opportunities ranked; Approach agreed with the function. Baselines and targets are set with the Domain Owner in the first month.
+**Measures.** Sessions held and documented; Opportunities ranked; Approach agreed with the function. Baselines and targets are set with the Domain Owner by 31 October 2026.
 
 **Cost.** The time of the AICC Lead. No other cost is stated.
 
-**Risk.** Customer and credit data is involved: Risk Tier 2 is expected. Data protection and model risk check before any analysis of real customer data (RI-014).
+**Risk.** Customer and credit data is involved: Risk Tier 2 is expected. Data protection and model risk check before any analysis of real customer data (RI-014). Conditions of any validation: the analysis gives no output on an individual application, and the AI contribution and the decision of the person are recorded (Standards ARC-004).
 
 ## 4. Decision
 

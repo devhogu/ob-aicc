@@ -23,7 +23,7 @@ If compliance, HR, legal, finance, and accounting find the routine tasks that ge
 1. Meet each function and go through its daily and monthly work to find the routine, mechanical tasks with files and reports.
 2. Rank the tasks with the function by the time they would release and by their risk.
 3. Introduce the functions that do not yet use AI to an approved assistant, and train their people on the job, on their own tasks.
-4. Agree with information security which data classes each function may use with the assistant.
+4. Each Domain Owner approves which data classes the function uses with the assistant, and obtains the approvals that the rules of the Bank require. AICC provides the technical means.
 5. Collect what worked and what did not, and enter the ranked tasks in the Backlog.
 
 **Out of scope.** The automation of decisions; custom Solutions in this period; use of data classes that are not approved.
@@ -36,11 +36,11 @@ If compliance, HR, legal, finance, and accounting find the routine tasks that ge
 - The first working use of an approved assistant in each function, with training on the job.
 - Guidance for each function on approved use.
 
-**Measures.** People trained and using the assistant weekly; Tasks adopted; Time released, estimated by the function. Baselines and targets are set with the Domain Owner in the first month.
+**Measures.** People trained and using the assistant weekly; Tasks adopted; Time released, estimated by the function. Baselines and targets are set with the Domain Owner by 31 October 2026.
 
 **Cost.** The time of the AICC Lead. No other cost is stated.
 
-**Risk.** HR and compliance data is confidential or personal: the data classes are approved first (AI Policy 2.1). Risk Tier 2 is expected for any Use Case that follows (RI-014).
+**Risk.** HR and compliance data is confidential or personal: the Domain Owner approves the data classes first (AI Policy 2.1). Risk Tier 2 is expected for any Use Case that follows (RI-014).
 
 ## 4. Decision
 

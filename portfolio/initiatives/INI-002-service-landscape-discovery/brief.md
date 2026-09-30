@@ -37,11 +37,11 @@ If AICC consolidates the knowledge and the artifacts that the functions and serv
 - A list of where AI is used today.
 - A ranked list of candidates for AI adoption.
 
-**Measures.** Functions and services mapped; share reviewed by their owners; AI uses found; Candidates ranked. Baselines and targets are set with the Domain Owner in the first month.
+**Measures.** Functions and services mapped; share reviewed by their owners; AI uses found; Candidates ranked. Baselines and targets are set with the Domain Owner by 31 October 2026.
 
 **Cost.** The time of the AICC Lead. No other cost is stated.
 
-**Risk.** No Solution is built, so no Risk Tier applies. The portal shows internal information, so its access is confirmed with information security (RI-005).
+**Risk.** No Solution is built, so no Risk Tier applies. The portal shows internal information, so its access is confirmed with information security (RI-018).
 
 ## 4. Decision
 

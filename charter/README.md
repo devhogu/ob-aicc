@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: draft
-revision: 2.0
+revision: 2.1
 created: 2026-09-30
 revised: 2026-09-30
 ```
@@ -11,7 +11,7 @@ revised: 2026-09-30
 
 ## 1. Purpose and scope
 
-1.1. This Catalog lists the documents of the charter folder and states how they are labeled, kept, activated, and checked. It
+1.1. This Catalog lists the documents of the documents and states how they are labeled, kept, activated, and checked. It
 is the only place for these rules.
 
 1.2. The AICC Lead owns every document. A document is short and is changed like software: in small steps, with the change
@@ -37,14 +37,17 @@ row may cover several revisions made while the document was a draft.
 
 ## 4. Activation
 
-4.1. A document becomes active when the Role that activates it sets the status to active, records the date in the change log,
-and enters the Decision in the Decision Log. The AICC Lead activates a document that does not bind persons outside AICC. The
-Executive Sponsor activates a document that does, which are the Statement of Intent, the AICC Charter, the Operating Model, and
-the AI Policy.
+4.1. A document becomes active when the Role that activates it sets the status to active and the next whole revision number,
+records the date in the change log, and enters the Decision in the Decision Log. The AICC Lead activates a document that does not
+bind persons outside AICC, and does so first for the Vocabulary and Style and this Catalog. The Executive Sponsor activates a
+document that does, which are the Statement of Intent, the AICC Charter, the Operating Model, and the AI Policy. The AICC Lead
+activates a Template by setting its status and its revised date. The activation of a document binds the Bank. An Entity takes part
+by its own recorded decision.
 
-4.2. A document passes the checks of section 7 before activation where section 7.1 requires them. A change that alters the
-meaning takes the next whole revision number. A correction that does not change the meaning needs only a change log row. The
-activator announces to all employees the activation of a document that binds persons outside AICC.
+4.2. The first activation of a document needs the checks of section 7. A later change that alters the meaning takes the next whole
+revision number and is a new draft revision that does not replace the active text until it is activated, with a Decision Log
+entry. A correction that does not change the meaning needs only a change log row. The activator announces to all employees the
+activation of a document that binds persons outside AICC.
 
 ## 5. The documents
 
@@ -60,7 +63,7 @@ language.
 | AICC-REF-01 | Vocabulary and Style | Terms and style | EN |
 | AICC-REF-02 | Document Catalog | This Catalog | EN |
 
-5.2. A new document is added only when no existing document can hold its content. The documents together number no more than eight, and no document is longer than about 150 clauses. A translation states the revision of the source that it translates.
+5.2. A new document is added only when no existing document can hold its content. The documents together number no more than eight, and no document is longer than about 80 clauses. A translation states the revision of the source that it translates.
 
 ## 6. Templates
 
@@ -78,7 +81,7 @@ log, and a copy of it carries no metadata block.
 ## 7. Checks
 
 7.1. A document shall be checked before its activation when its meaning changes, and the documents together once a year, by a person
-other than the author whom the Executive Sponsor names. The check asks the following ten questions. A failure shall be entered as a Finding in the Risks and Issues Record with a Severity.
+other than the author whom the Executive Sponsor names. The check asks the following ten questions. A failure shall be entered as a Finding in the Risks and Issues Record with a Severity. One line may cover the Findings of one report.
 
 | Number | Question |
 | --- | --- |
@@ -88,13 +91,13 @@ other than the author whom the Executive Sponsor names. The check asks the follo
 | 4 | Does it agree with every document that is higher in precedence? |
 | 5 | Is every Role, Record, and Template that it names defined? |
 | 6 | Does each requirement have one Role that must meet it? |
-| 7 | Is it free of open questions, lineage, and references to files? |
+| 7 | Is it free of open questions, lineage, and references to files, except in its change log? |
 | 8 | Does every table other than a change log have an introducing clause, and does every link work? |
 | 9 | Is it within the size limit, and does it say nothing that another document says? |
 | 10 | Can a person do what it asks today, with the people and the tools that exist? |
 
-7.2. The documents are ready when every document to be activated has no open Finding, Risk, or Issue of Severity Blocker or Major
-that concerns the documents.
+7.2. The documents are ready when every document to be activated has no open Finding of Severity Blocker or Major from the check.
+Missing Appointments are tracked in the Risks and Issues Record and do not block activation.
 
 ## Change log
 
@@ -104,3 +107,4 @@ that concerns the documents.
 | 1.0 | 2026-09-30 | Rewritten for the simplified corpus of six documents and five Templates; ten checks replace the Corpus Assessment; the Artifact Standards are folded into the Operating Model. | DR-2026-009 |
 | 1.1 | 2026-09-30 | Fixes from the independent check: Status and Revision columns removed, TPL category, check cadence and checker, activation announced. | DR-2026-010 |
 | 2.0 | 2026-09-30 | Second fixes: activation and announcement; checks apply where required; change logs exempt from the table rule. | DR-2026-011 |
+| 2.1 | 2026-09-30 | Acceptance fixes: activation order and revision, Templates, change to an active document, participation of Entities, readiness gate, size limit. | DR-2026-015 |

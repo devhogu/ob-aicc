@@ -2,7 +2,7 @@
 id: AICC-TPL-01-EN
 title: Use Case Card
 status: draft
-revision: 1.2
+revision: 1.3
 created: 2026-09-30
 revised: 2026-09-30
 ```
@@ -38,7 +38,7 @@ revised: 2026-09-30
 
 ## 4. Risk Tier
 
-[Tier 1, 2, or 3; the reasons; assigned by the Control Function Contact of model risk on [date], or provisionally by the AICC Lead for Tier 1.]
+[Tier 1, 2, or 3; the reasons; assigned by the AICC Lead on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies.]
 
 ## 5. Scores
 

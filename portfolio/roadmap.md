@@ -1,6 +1,6 @@
 # Roadmap
 
-Quarter 0 is the first 100 days, September to December 2026. The Executive Sponsor confirmed its goals (DR-2026-012). The later quarters are counted from it.
+Quarter 0 is the first 100 days, September to December 2026. The Executive Sponsor confirmed its goals (DR-2026-012). The Objectives of quarter 0 are these goals. The later quarters are counted from it.
 
 | Identifier | Milestone | Evidence | Owner | Quarter | Status |
 | --- | --- | --- | --- | --- | --- |
@@ -9,8 +9,8 @@ Quarter 0 is the first 100 days, September to December 2026. The Executive Spons
 | MS-003 | Every known AI use is in the AI Registry with a Risk Tier | AI Registry | AICC Lead | 1 | Planned |
 | MS-004 | The three meetings are running | Notes | AICC Lead | 1 | Planned |
 | MS-005 | Maturity Level 1 reached | Quarterly Report | AICC Lead | 1 | Planned |
-| MS-006 | First Domain engaged, with the first Use Case | Use Case Card | AICC Lead | 1 | Planned |
-| MS-007 | First Pilot completed | Results against the success Measures; Control Sign-Off | Domain Owner | 2 | Planned |
+| MS-006 | First Domain engaged, with the first Use Case | Use Case Card | AICC Lead | 0 | Planned |
+| MS-007 | First Pilot completed | Results against the success Measures; Control Sign-Off | Domain Owner | 1 | Planned |
 | MS-008 | Maturity Level 2 reached for the first Strategic Priorities | Quarterly Report | AICC Lead | 2 | Planned |
 | MS-009 | The service landscape map is presented | Landscape portal reviewed by owners; list of where AI is used; ranked candidates (INI-002) | AICC Lead | 0 | Planned |
 | MS-010 | Customer experience discovery is complete | Sources mapped; approach to consolidate and analyze; proposal for next quarter (INI-006) | AICC Lead | 0 | Planned |

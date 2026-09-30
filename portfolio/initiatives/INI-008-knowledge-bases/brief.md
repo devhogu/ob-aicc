@@ -37,7 +37,7 @@ If knowledge bases are built on one common approach across functions, then answe
 - The first knowledge base, for legal, in use with owned and dated sources.
 - The second knowledge base, started.
 
-**Measures.** Sources with an owner and a review date; Questions answered with a cited source; People using the knowledge base. Baselines and targets are set with the Domain Owner in the first month.
+**Measures.** Sources with an owner and a review date; Questions answered with a cited source; People using the knowledge base. Baselines and targets are set with the Domain Owner by 31 October 2026.
 
 **Cost.** The time of the AICC Lead. No other cost is stated.
 

@@ -2,7 +2,7 @@
 id: AICC-MND-02-EN
 title: AICC Charter
 status: draft
-revision: 0.5
+revision: 0.6
 created: 2026-09-30
 revised: 2026-09-30
 ```
@@ -35,9 +35,10 @@ recorded in the Decision Log. It states the Entities, the data, the legal basis,
 ## 4. Funding
 
 4.1. The Executive Sponsor shall set each year an Investment Envelope for each Strategic Priority and Investment Guardrails. Funding
-goes to Strategic Priorities and to the capacity of teams, and not to individual Initiatives.
+goes to Strategic Priorities and to the capacity of teams. The Domain Owners fund the Use Cases of their Domains from the
+Envelope, within the Guardrails.
 
-4.2. The Investment Guardrails state the amount that may be committed without the Executive Sponsor, and the Initiatives that
+4.2. The Investment Guardrails shall state the amount that may be committed without the Executive Sponsor, and the Initiatives that
 need an Initiative Brief and the approval of the Executive Sponsor. They are kept in the Priorities Record. Until they are set, the Executive Sponsor approves any commitment.
 
 ## 5. AI Risk Appetite Statement
@@ -50,8 +51,8 @@ confidential or personal data. It has moderate appetite for error in internal pr
 5.3. The Group does not accept AI that takes a decision without review in a regulated process, or an agent that acts on systems
 or funds, without validation by the Control Functions and the release decision of the Executive Sponsor.
 
-5.4. The Executive Sponsor shall approve this Statement and review it each year. A risk beyond it may be accepted only by the
-Executive Sponsor, with a report to the Board Committee.
+5.4. The Executive Sponsor shall approve this Statement and review it each year, and the Board Committee notes it in its first
+report. A risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
 
 ## 6. What AICC offers
 
@@ -81,7 +82,7 @@ of the Maturity Levels are in the Statement of Intent, and their targets are set
 7.2. The AICC Lead shall report each quarter in the Quarterly Report, which goes to the next quarterly Steering. The AICC Lead prepares the
 report to the Board Committee from it each quarter, and the Executive Sponsor approves and issues it. Each figure in it traces to
 a Record or a governed source, with its date. The Executive Sponsor tells the Board Committee of a High Severity AI Incident and of
-any risk accepted beyond the AI Risk Appetite Statement without waiting for the next report. Internal audit provides independent
+any risk accepted beyond the AI Risk Appetite Statement without waiting for the next report. Until the Board Committee is named, the report goes to the chair of the Board. Internal audit provides independent
 assurance.
 
 ## Change log
@@ -93,3 +94,4 @@ assurance.
 | 0.3 | 2026-09-30 | Fixes from the independent check: Board reporting, commitments of the Statement of Intent, appetite, training, Group Arrangement. | DR-2026-010 |
 | 0.4 | 2026-09-30 | Second fixes: approval of commitments until Guardrails are set; risk beyond appetite with a Board Committee report. | DR-2026-011 |
 | 0.5 | 2026-09-30 | The Quarterly Report goes to the quarterly Steering. | none |
+| 0.6 | 2026-09-30 | Acceptance fixes: Domain Owners fund Use Cases; appetite noted by the Board Committee; report before the Board Committee is named. | DR-2026-015 |

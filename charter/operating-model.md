@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: draft
-revision: 3.1
+revision: 3.4
 created: 2026-09-29
 revised: 2026-09-30
 ```
@@ -57,12 +57,12 @@ separation in section 4.4.
 
 | Role | Does | Decides |
 | --- | --- | --- |
-| Executive Sponsor | Holds the mandate and the funding; appoints the AICC Lead; approves and issues the report to the Board Committee | The Strategic Priorities, the Investment Envelopes, and the Investment Guardrails; the release of a Risk Tier 3 Use Case; any risk beyond the AI Risk Appetite Statement; the retirement of an Initiative; the activation of documents that bind persons outside AICC |
-| AICC Lead | Leads AICC as its lead engineer and architect; is accountable for this Operating Model and for every document and Record of AICC; prepares the Quarterly Report; presents to the AI Steering Committee | Intake; standards, architecture, and Templates; questions between Domains; the activation of documents that do not bind persons outside AICC; an Exception to a requirement set by AICC |
+| Executive Sponsor | Holds the mandate and the funding; appoints the AICC Lead; approves and issues the report to the Board Committee | The Strategic Priorities, the Investment Envelopes, and the Investment Guardrails; the release of a Risk Tier 3 Use Case; any risk beyond the AI Risk Appetite Statement; the retirement of an Initiative; the approval of AI output published outside AICC; the naming of acting Contacts; the activation of documents that bind persons outside AICC |
+| AICC Lead | Leads AICC as its lead engineer and architect; is accountable for this Operating Model and for every document and Record of AICC; prepares the Quarterly Report; presents to the AI Steering Committee | Intake; the approval of the use of a Solution in AICC for a data class; the Risk Tier, which the AICC Lead tells to the Domain Owner; the suspension of a Solution; standards, architecture, and Templates; questions between Domains; the activation of documents that do not bind persons outside AICC; an Exception to a requirement set by AICC |
 | AICC Engineer | Builds and runs Solutions with the Domains; keeps the work visible; coaches Domain Experts; checks the work of others | How a Solution is built; the order in which the team pulls work within the agreed priorities |
-| Domain Owner | Owns the results of AI adoption in the Domain and acts as product owner of its Use Cases; names the Domain Expert | Whether the Domain takes part in an Initiative; funding of the Use Cases of the Domain; the release of a Risk Tier 1 or 2 Use Case, after the check or the validation; the retirement of a Use Case |
+| Domain Owner | Owns the results of AI adoption in the Domain and acts as product owner of its Use Cases; names the Domain Expert | Whether the Domain takes part in an Initiative; funding of the Use Cases of the Domain; the approval of the use of a Solution in the Domain for a data class, and the approvals that the rules of the Bank require; the release of a Risk Tier 1 or 2 Use Case, after the check or the validation; the retirement of a Use Case |
 | Domain Expert | Explains the routine work; works with the AICC Engineer; tries the Solution in real work; then scales adoption and trains colleagues | Nothing on funding, acceptance, or control |
-| Control Function Contact | Advises on requirements; the Contact of model risk assigns the Risk Tier and every Contact may raise it within its remit; validates Solutions; may stop a Use Case | Validation, the Risk Tier, a stop, and an Exception to a control requirement, each within the remit of the Control Function |
+| Control Function Contact | Advises on requirements; may raise the Risk Tier within its remit, and the Contact of model risk alone may lower it; validates Solutions; may stop a Use Case | Validation, raising the Risk Tier, a stop, and an Exception to a control requirement, each within the remit of the Control Function |
 | Platform Owner | Provides and operates the AI Platform, outside AICC, to the requirements in the Standards Record; keeps the evidence, logs, and traces on which the Stages rely | The design of the AI Platform within those requirements |
 
 4.3. The team of AICC agrees who takes the Hats that the work needs, such as the keeper of the Backlog, the facilitator of
@@ -72,7 +72,7 @@ the Sync and Demo, or the coach. A Hat is not a Role, changes when the team deci
 
 (a) No person shall validate or check work that the person built.
 
-(b) The Domain Owner of a Use Case accepts and releases it and shall not validate it.
+(b) The Domain Owner of a Use Case accepts it and, for Risk Tier 1 and 2, releases it, and shall not validate it.
 
 (c) A Control Function Contact is not a member of AICC and shall not build Solutions that the Contact reviews.
 
@@ -88,7 +88,7 @@ the Board and receives the report of the Executive Sponsor. Neither is a Role.
 
 4.6. The Holders of the Roles are named in the Appointments Record. The Executive Sponsor appoints the AICC Lead. The AICC Lead
 appoints the AICC Engineers. The head of a Domain names the Domain Owner, and the Domain Owner names the Domain Expert. Each
-Control Function names its Control Function Contact for each Entity. The head of technology names the Platform Owner. Each Holder shall name a deputy in the Appointments Record, who acts during an absence, and a delegation of more than two weeks is entered in the Decision Log. Until a head of function or the Platform Owner is named, the Executive Sponsor names an acting Holder. For the work of AICC itself, the AICC Lead is the Domain Owner.
+Control Function names its Control Function Contact for each Entity. The head of technology names the Platform Owner. Each Holder shall name a deputy in the Appointments Record, who acts during an absence, and a delegation of more than two weeks is entered in the Decision Log. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Until a head of function or the Platform Owner is named, the Executive Sponsor names an acting Holder. For the work of AICC itself, the AICC Lead is the Domain Owner.
 
 ## 5. Decisions
 
@@ -144,31 +144,32 @@ work of AICC that builds no AI Solution has no Risk Tier. Enabling work and an I
 
 6.3. Every Initiative and Use Case moves through the Stages in the following table, with the conditions to leave each Stage.
 The AICC Lead shall confirm that each condition is met and note it in the Backlog. A change that raises the Risk Tier, or that
-the check or the validation named as requiring a new check, returns the Use Case to Discovery for the checks that the change
-touches. Use continues unless the checker, the AICC Lead, or a Control Function Contact suspends it.
+the check or the validation named as requiring a new check, returns the Use Case to Discovery, as the AI Policy states. An
+Initiative, and enabling work, is done when its outcome is met, which the AICC Lead notes in the Backlog.
 
 | Stage | Purpose | To leave the Stage |
 | --- | --- | --- |
-| Intake | Capture the idea, check it against the Strategic Priorities, assign a Risk Tier to a Use Case, and size it | For a Use Case: a Use Case Card; a Risk Tier, confirmed by the checker for Risk Tier 1; an entry in the AI Registry; the applicable law of the Entity confirmed by the Control Function Contact of compliance where the Use Case is Risk Tier 2 or 3. An Initiative leaves Intake with an entry in the Backlog |
+| Intake | Capture the idea, check it against the Strategic Priorities, assign a Risk Tier to a Use Case, and size it | For a Use Case: a Use Case Card; a Risk Tier assigned by the AICC Lead and told to the Domain Owner, and confirmed by the checker for Risk Tier 1; an entry in the AI Registry; the applicable law of the Entity confirmed by the Control Function Contact of compliance where the Use Case is Risk Tier 2 or 3. An Initiative leaves Intake with an entry in the Backlog |
 | Discovery | Assess benefit, cost, and risk; wait ranked until capacity is free | Success Measures stated; the Domain Owner and the Domain Expert named; the provider checked where one is used; for Risk Tier 2 and 3, the effect on affected persons assessed in the Use Case Card |
 | Pilot | A narrow trial in real work with a trained Domain Expert. It starts after the check for Risk Tier 1, and after validation by the Control Function Contacts for Risk Tier 2 and 3 | Results against the success Measures; the conditions of the validation met; the release, decided by the Domain Owner for Risk Tier 1 and 2 and by the Executive Sponsor for Risk Tier 3, after the check or the validation |
 | Scale | Adoption across the Domain, which starts with the release | Adoption across the Domain is complete |
 | Operate | The Solution runs, is monitored, and is improved by the team that built it; the Risk Tier is reassessed on change and on the date in the AI Registry | Retirement |
 | Retire | The Solution is withdrawn or replaced | Users told; data and access removed; the AI Registry entry closed |
 
-6.4. The Control Function Contacts take part at Intake, in validation, and in the quarterly risk check of the Quarterly Review.
+6.4. The Control Function Contacts shall take part at Intake, in validation, and in the quarterly risk check of the Quarterly Review.
 Evidence is taken from the records of the AI Platform.
 
 ## 7. Cadence
 
-7.1. AICC holds three meetings, which the following table states. Notes are kept only for the Decisions and the actions, which
+7.1. AICC holds three meetings, which the following table states. A meeting runs with those who are named. While the AI Steering
+Committee is not formed, the Executive Sponsor decides alone. Notes are kept only for the Decisions and the actions, which
 go to the Decision Log and the work items.
 
 | Meeting | When | Who | Purpose |
 | --- | --- | --- | --- |
 | Sync and Demo | Every two weeks | The AICC team, Domain Owners, Domain Experts | Show working Solutions, choose what is pulled next, clear blockers, and share practice in a Community of Practice |
 | Quarterly Review | Every quarter | The AICC team, Domain Owners, Control Function Contacts | Set the Objectives of the quarter, score the value achieved, review the risks (the quarterly risk check), and agree improvements; the output is the Quarterly Report |
-| Steering | Every month for tactical matters; every quarter for strategic matters | The Executive Sponsor and the AI Steering Committee; the AICC Lead presents | Monthly: review progress, risks, and blockers, and take the Decisions of the Executive Sponsor. Quarterly: assess the results of the past quarter from the Quarterly Report, confirm priorities and funding, and review benefits and risks |
+| Steering | Every month for tactical matters; every quarter for strategic matters | The Executive Sponsor and the AI Steering Committee; the AICC Lead presents | Monthly: review progress, risks, and blockers, and take the Decisions of the Executive Sponsor. Quarterly: assess the results of the past quarter from the Quarterly Report, confirm priorities and funding, and review benefits and risks, and confirm the Maturity Level reached |
 
 7.2. The first quarterly Steering of the year also sets the Strategic Priorities, the Investment Envelopes, the Investment Guardrails, and
 the roadmap, and reviews the Statement of Intent, the AICC Charter, this Operating Model, the AI Policy, and the AI Risk Appetite
@@ -220,3 +221,6 @@ keeper adapts as needed.
 | 2.3 | 2026-09-30 | Fixes from the independent check: separation and release, Risk Tier 3 release, Stages, interim checker, internal audit, deputy, yearly review, Records retention. | DR-2026-010 |
 | 3.0 | 2026-09-30 | Second fixes from the independent check: release at the Pilot exit, acting Holders, Stage conditions, return to Discovery, checker wording. | DR-2026-011 |
 | 3.1 | 2026-09-30 | Steering is monthly for tactical matters and quarterly for strategic matters. | none |
+| 3.2 | 2026-09-30 | Acceptance fixes: Appointments transition, decisions of the AICC Lead and the Executive Sponsor, meetings with those named, Maturity Level confirmed, done for an Initiative. | DR-2026-015 |
+| 3.3 | 2026-09-30 | The Domain Owner approves the use of a Solution in the Domain for a data class. | DR-2026-016 |
+| 3.4 | 2026-09-30 | The AICC Lead assigns the Risk Tier and tells the Domain Owner. | DR-2026-017 |

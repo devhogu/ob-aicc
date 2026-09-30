@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: draft
-revision: 1.3
+revision: 1.4
 created: 2026-09-29
 revised: 2026-09-30
 ```
@@ -11,7 +11,7 @@ revised: 2026-09-30
 
 ## 1. Purpose and scope
 
-1.1. This document fixes the terms and the style of the documents of the charter folder, so that each term has one meaning and
+1.1. This document fixes the terms and the style of the documents of the documents, so that each term has one meaning and
 each document reads the same way.
 
 ## 2. Precedence
@@ -22,7 +22,7 @@ and Records yield to the documents.
 
 ## 3. Style
 
-3.1. Write short numbered clauses, one requirement in each. Use "shall" for an obligation and the present tense otherwise.
+3.1. Write short numbered clauses, one requirement in each. Use "shall" for a duty, and the present tense for a fact or an authority.
 
 3.2. Use American spelling and plain words. Write "Decide", not "take a decision to".
 
@@ -36,8 +36,6 @@ few definitions because it is read alone.
 3.6. A Role is named for its responsibility, not for a person. The Appointments Record names persons.
 
 3.7. Headings use sentence case. Document titles use title case. Each table has an introducing clause, except a change log.
-
-3.8. Diagrams are written in Mermaid and numbered from 1 within each document.
 
 ## 4. Defined terms
 
@@ -81,6 +79,10 @@ few definitions because it is read alone.
 | Backlog | The ranked list of Initiatives and Use Cases | |
 | Stage | A step of the flow of work: Intake, Discovery, Pilot, Scale, Operate, or Retire | phase, gate |
 | Check | The review of work by a person other than the one who built or wrote it | peer review |
+| Checker | The person who performs a Check; for a Risk Tier 1 Use Case, named in the Appointments Record | |
+| Validation | The review by the Control Function Contacts that a Solution meets the requirements of its Risk Tier | |
+| Suspension and stop | A suspension pauses a Solution pending review. A stop ends a Use Case, and is decided by a Control Function | |
+| Governed source | A source with a named owner and a review date | |
 | Release | The decision, at the exit from Pilot, to use a Solution beyond the pilot group | go-live |
 | Community of Practice | The sharing of practice among Domain Experts and engineers, held within the Sync and Demo | guild |
 | Limit on Work in Progress | The most items allowed in a Stage or a Domain at one time | WIP limit |
@@ -112,3 +114,4 @@ few definitions because it is read alone.
 | 1.1 | 2026-09-30 | Fixes from the independent check: Board, Holder, Portfolio, Check, Release, Milestone defined; internal audit; precedence. | DR-2026-010 |
 | 1.2 | 2026-09-30 | Second fixes: Release at the exit from Pilot; Check in general; Community of Practice. | DR-2026-011 |
 | 1.3 | 2026-09-30 | Steering is monthly and quarterly. | none |
+| 1.4 | 2026-09-30 | Acceptance fixes: Checker, Validation, Suspension and stop, Governed source defined; duty wording. | DR-2026-015 |
