@@ -1,6 +1,6 @@
 # Industry Research Notes
 
-Basis for the [statement of intent](../../statement-of-intent.md). Gathered 2026-09-29 from web search. Many figures are **self-reported by banks or from vendor blogs**. Verify against primary sources before external use.
+Basis for the [statement of intent](../../../charter/statement-of-intent.md). Gathered 2026-09-29 from web search. Many figures are **self-reported by banks or from vendor blogs**. Verify against primary sources before external use.
 
 ## Direction of the industry
 

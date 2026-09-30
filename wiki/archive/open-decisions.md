@@ -1,5 +1,7 @@
 # Open decisions
 
+Superseded; kept for history.
+
 - Static-site generator or hand-authored pages
 - Build and check tooling (HTML validity, link integrity, accessibility)
 - Deployment repo name, hosting platform, render command, release gates

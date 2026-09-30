@@ -1,0 +1,129 @@
+```yaml
+id: AICC-POL-01-EN
+title: AI Policy
+status: draft
+revision: 0.3
+created: 2026-09-30
+revised: 2026-09-30
+```
+
+# AI Policy
+
+## 1. Purpose and scope
+
+1.1. This policy states the rules for the use of AI in the Bank and in each Participating Entity: the rules of use, the Risk
+Tiers and what each requires, AI from providers, and AI Incidents and Exceptions.
+
+1.2. It applies to every use of AI, whether the Solution is built or bought.
+
+## 2. Rules of use
+
+2.1. Employees shall use only Solutions that the AICC Lead has approved, with the Control Function Contact of information
+security, for the data class and the purpose, and that are recorded in the AI Registry. An employee shall complete the training
+that AICC sets for a Solution before first use. Uses already in place are listed in the AI Registry within 90 days of the
+activation of this policy and are tolerated until then.
+
+2.2. The data classification rules of the Bank apply to AI. Data of a class shall not be sent to a model or a service that is not
+approved for that class.
+
+2.3. A named person is accountable for each Use Case and its outcome. A person reviews AI output before it is relied on, except
+where the Risk Tier allows otherwise.
+
+2.4. AI output that reaches a customer shall be identified as AI output where the Risk Tier requires it. AI output published to
+investors, lenders, regulators, or the Board shall be approved by a named person before it is issued.
+
+2.5. No person shall use AI to bypass a control, a limit, or a Decision of a Control Function. AI that uses personal data shall
+use only the data that the Use Case requires. AI that records or transcribes a meeting shall be used only with the consent of
+all participants.
+
+## 3. Risk Tiers
+
+3.1. There are three Risk Tiers, which the following table states. The Risk Tier of a Use Case is the highest that any of its attributes indicates. The
+attributes are the class of data, the influence of the AI on a decision, whether the output reaches or affects a customer, and
+the degree of autonomy. A Control Function Contact may raise the Risk Tier for any other reason within its remit, such as the
+scale of use, the provider, or whether the effect can be reversed.
+
+| Risk Tier | Name | Description |
+| --- | --- | --- |
+| 1 | Low | Personal productivity on data that is public or unclassified under the rules of the Bank; no customer data; no influence on a decision; the user reviews the output |
+| 2 | Medium | Internal, confidential, personal, or customer data; output that informs work or a decision, or reaches a customer under human review |
+| 3 | High | AI that decides or acts without review in a regulated process; an agent with rights over systems or funds; a decision on credit or insurance for a natural person |
+
+3.2. The Control Function Contact of model risk shall assign the Risk Tier at Intake. The Contact of any other Control Function
+may raise it within its remit, and only the Contact of model risk may lower it. The person who checks a Risk Tier 1 Use Case
+shall confirm the Risk Tier. A Use Case in a category that the law of the
+Entity treats as high risk, as the Contact of compliance confirms, is at least Risk Tier 2. Until the Contact of model risk is
+named, the AICC Lead may assign Risk Tier 1 to a Use Case whose attributes all indicate Risk Tier 1, and shall record it; any
+other Use Case waits for the Contact.
+
+3.3. The requirements of each Risk Tier are in the following table. A higher Risk Tier includes the requirements of the lower.
+
+| Requirement | Risk Tier 1 | Risk Tier 2 | Risk Tier 3 |
+| --- | --- | --- | --- |
+| Use Case Card and AI Registry entry | Required | Required | Required |
+| Validation | A check by a person other than the builder, noted in the AI Registry | Validation by the Control Function Contacts of model risk and of information security, and of each other remit concerned where the output reaches or affects a customer or the Use Case uses personal data; it includes a security test against attacks on AI | The same, with review at the quarterly risk check |
+| Human oversight | The user reviews the output | A person reviews the output; a person decides each case that affects an individual | Oversight designed with authority to stop; no autonomy without the release decision of the Executive Sponsor |
+| Testing for bias and error | Not required | Before the Pilot and in monitoring | Before the Pilot and continuously |
+| Monitoring and logging | Periodic | Logs kept | Continuous, with alerts, and logs kept as the rules require |
+| Disclosure, explanation, and contestability | Not applicable | Where the output reaches or affects a customer | Required |
+| Release | The Domain Owner, after the check | The Domain Owner, after validation | The Executive Sponsor, after validation |
+| Reassessment of the Risk Tier | On change | On change and each year | On change and each six months |
+
+3.4. A change that raises the Risk Tier, or that the check or the validation named as requiring a new check, returns the Use Case
+to Discovery for the checks that the change touches. A validation states the date until which it is valid and the changes that
+require a new one. Use continues unless the checker, the AICC Lead, or a Control Function Contact suspends it.
+
+3.5. The AICC Engineer shall meet the requirements for the design of human oversight, testing, and logging. The Domain Owner
+shall meet those for oversight in operation, disclosure, and contestability. The Platform Owner shall provide logging and
+monitoring. The Control Function Contacts check them at validation.
+
+## 4. AI from providers
+
+4.1. A provider of models or services shall be checked before use by the Control Function Contacts of information security, data
+protection, and legal: where data is processed and kept, whether the provider may train on it, the contractual terms, and the
+arrangements to fall back and to exit. The check is repeated at each reassessment and on a change of terms or model. The AICC Lead
+reports in the Quarterly Report the concentration of the Group on one provider.
+
+4.2. The Bank is answerable for AI that it buys to the same extent as for AI that it builds. The same Risk Tiers apply.
+
+## 5. AI Incidents
+
+5.1. An AI Incident is an event in which the use of AI causes, or could cause, harm, a breach of law or policy, or a loss of
+control. It includes harm to a customer or an employee, a leak or misuse of data, an attack on or through an AI system, an action
+of an agent beyond its limits, a material failure of a Solution, and a near miss.
+
+5.2. Each AI Incident has a Severity of High, Medium, or Low. High is serious harm, a material breach or loss of data, a breach
+that a regulator must be told of, or an agent acting beyond its limits with effect. Medium is limited or reversible harm, a
+breach of policy, or a failure that affects a Domain. Low is a near miss or an event without harm.
+
+5.3. Anyone who becomes aware of an AI Incident shall report it to the AICC Engineer of the Solution or to the AICC Lead. The
+report of a High Severity AI Incident goes at once to the AICC Lead, to the Control Function Contacts, to the Platform Owner, and
+to the Executive Sponsor, who tells the Board Committee without waiting for the next report.
+
+5.4. The AICC Engineer shall contain the AI Incident, and the AICC Lead or any Control Function Contact may suspend a Solution.
+The Control Function Contacts assess it within their remits: compliance decides whether a regulator is notified, and data
+protection decides whether a person whose data is affected is notified, as the law of the Entity requires. Providers are told as
+the contract requires.
+
+5.5. Within ten working days after containment the people involved shall review what happened and what to change, without blame. The
+AI Incident and its actions are entered in the Risks and Issues Record.
+
+## 6. Exceptions
+
+6.1. A departure from this policy is an Exception. It is decided by the Control Function Contact for the remit concerned, is
+limited in time, and shall be entered in the Risks and Issues Record. A departure from a requirement set by AICC alone is
+decided by the AICC Lead. An Exception is not a bypass of a control.
+
+## 7. Until a Contact is named
+
+7.1. The Executive Sponsor may name at any time, in the Appointments Record, who acts for a Control Function, including for an AI
+Incident. Until a Control Function has a Control Function Contact or an acting person, nothing that needs that Control Function
+proceeds: no Risk Tier 2 or 3 Use Case, no provider, and no Group Arrangement.
+
+## Change log
+
+| Revision | Date | Change | Decision |
+| --- | --- | --- | --- |
+| 0.1 | 2026-09-30 | Drafted: replaces the AI Use, Risk Tier, Third-Party AI, and AI Incident policies and the Exception rules; three Risk Tiers. | DR-2026-009 |
+| 0.2 | 2026-09-30 | Fixes from the independent check: tools approval and training, Risk Tier attributes and interim assignment, release, revalidation, providers, incident chain, Until a Contact is named. | DR-2026-010 |
+| 0.3 | 2026-09-30 | Second fixes from the independent check: Tier 1 data boundary, lighter Tier 2 validation, testing before the Pilot, acting Contacts, return to Discovery. | DR-2026-011 |
