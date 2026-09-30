@@ -12,7 +12,9 @@ Quarter 0 is the first 100 days, September to December 2026. The Executive Spons
 | MS-006 | First Domain engaged, with the first Use Case | Use Case Card | AICC Lead | 1 | Planned |
 | MS-007 | First Pilot completed | Results against the success Measures; Control Sign-Off | Domain Owner | 2 | Planned |
 | MS-008 | Maturity Level 2 reached for the first Strategic Priorities | Quarterly Report | AICC Lead | 2 | Planned |
-| MS-009 | The service architecture landscape is presented | Landscape portal; list of where AI adoption can start and where it has started (INI-002) | AICC Lead | 0 | Planned |
-| MS-010 | FP&A reports reach Board visibility through a portal and a consistent monthly and quarterly pipeline | Portal; pipeline running (INI-004) | AICC Lead | 0 | Planned |
-| MS-011 | Opportunities in compliance, HR, legal, and finance are identified, and HR, compliance, and accounting are introduced to AI | Ranked opportunities in the Backlog; people trained (INI-003, INI-005) | AICC Lead | 0 | Planned |
-| MS-012 | Exploration of the commercial front office started; retail credit and legal knowledge bases started | First sources gathered; first analysis of rejection reasoning and knowledge bases (INI-006, INI-007, INI-008) | AICC Lead | 0 | Planned |
+| MS-009 | The service landscape map is presented | Landscape portal reviewed by owners; list of where AI is used; ranked candidates (INI-002) | AICC Lead | 0 | Planned |
+| MS-010 | Customer experience discovery is complete | Sources mapped; approach to consolidate and analyze; proposal for next quarter (INI-006) | AICC Lead | 0 | Planned |
+| MS-011 | FP&A Board reporting is running | Board portal; monthly pipeline run once; quarterly edition designed; named approver (INI-004) | Ademi Moldogazieva | 0 | Planned |
+| MS-012 | Functions are introduced to AI | Ranked tasks for compliance, HR, legal, finance, accounting; first use with training (INI-003) | AICC Lead | 0 | Planned |
+| MS-013 | Retail credit discovery is complete | Discussions documented; opportunities ranked; mortgage rejection analysis approach agreed (INI-007) | AICC Lead | 0 | Planned |
+| MS-014 | Knowledge base approach is agreed and the first base is in use | Common approach; ranked list; legal knowledge base (INI-008) | AICC Lead | 0 | Planned |

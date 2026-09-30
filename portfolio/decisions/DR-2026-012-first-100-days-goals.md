@@ -1,6 +1,6 @@
 # DR-2026-012 Goals of the first 100 days, September to December 2026
 
-Date: September 2026 (exact date to be entered). Decided by the Executive Sponsor (Simen Munter); recorded by the AICC Lead on the AICC Lead's report of the meeting. Attach the Executive Sponsor's confirmation when it is available.
+Date: September 2026 (exact date to be entered). Decided by the Executive Sponsor (Simen Munter); recorded by the AICC Lead on the AICC Lead's report of the meeting. The Executive Sponsor's confirmation is attached by the AICC Lead. The wording and the scope are restated in DR-2026-013.
 
 ## Decision
 

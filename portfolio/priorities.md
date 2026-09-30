@@ -4,10 +4,10 @@ The Strategic Priorities come from the Statement of Intent. The Executive Sponso
 
 | Identifier | Strategic Priority | Domain Owners | Investment Envelope | Maturity Level reached | Target | Target date |
 | --- | --- | --- | --- | --- | --- | --- |
-| PRI-1 | Customer intelligence | Commercial front office | | | | |
-| PRI-2 | Business intelligence | FP&A | | | | |
+| PRI-1 | Customer intelligence | Commercial front office, retail functions, commercial sales | | | | |
+| PRI-2 | Business intelligence | FP&A (Ademi Moldogazieva) | | | | |
 | PRI-3 | Adoption within Domains | Compliance, HR, legal, finance, accounting | | | | |
-| PRI-4 | Expertise at the point of work | Legal, retail credit | | | | |
+| PRI-4 | Expertise at the point of work | Legal, HR, commercial functions, retail credit | | | | |
 | PRI-5 | AI in banking operations and systems | Retail credit | | | | |
 | PRI-6 | Information technology operations and service lifecycle | | | | | |
 | PRI-7 | Software engineering | | | | | |
