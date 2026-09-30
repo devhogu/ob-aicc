@@ -2,7 +2,7 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: draft
-revision: 0.3
+revision: 0.4
 created: 2026-09-30
 revised: 2026-09-30
 ```
@@ -30,7 +30,8 @@ approved for that class.
 where the Risk Tier allows otherwise.
 
 2.4. AI output that reaches a customer shall be identified as AI output where the Risk Tier requires it. AI output published to
-investors, lenders, regulators, or the Board shall be approved by a named person before it is issued.
+investors, lenders, regulators, or the Board shall be approved by the Executive Sponsor before it is issued. The Executive Sponsor may name a
+delegate in the Appointments Record.
 
 2.5. No person shall use AI to bypass a control, a limit, or a Decision of a Control Function. AI that uses personal data shall
 use only the data that the Use Case requires. AI that records or transcribes a meeting shall be used only with the consent of
@@ -127,3 +128,4 @@ proceeds: no Risk Tier 2 or 3 Use Case, no provider, and no Group Arrangement.
 | 0.1 | 2026-09-30 | Drafted: replaces the AI Use, Risk Tier, Third-Party AI, and AI Incident policies and the Exception rules; three Risk Tiers. | DR-2026-009 |
 | 0.2 | 2026-09-30 | Fixes from the independent check: tools approval and training, Risk Tier attributes and interim assignment, release, revalidation, providers, incident chain, Until a Contact is named. | DR-2026-010 |
 | 0.3 | 2026-09-30 | Second fixes from the independent check: Tier 1 data boundary, lighter Tier 2 validation, testing before the Pilot, acting Contacts, return to Discovery. | DR-2026-011 |
+| 0.4 | 2026-09-30 | The Executive Sponsor approves AI output published to investors, lenders, regulators, or the Board. | DR-2026-014 |

@@ -24,10 +24,10 @@ If the AI-generated reports of FP&A reach the Board through one portal and one a
 2. Define with FP&A the standard set of financial metrics and the monthly and quarterly editions: definitions, sources, and periods.
 3. Build the Board portal with FP&A and deliver the monthly edition through it.
 4. Set up the agentic pipeline that collects, calculates, drafts, and publishes the metrics in place of the manual steps, with each figure traceable to its governed source and date.
-5. Agree the named person who approves each edition before it is issued.
+5. The Executive Sponsor approves each edition before it is issued.
 6. Run one monthly cycle and design the quarterly edition.
 
-**Out of scope.** Investor communications beyond the financial metrics; changes to the methods of FP&A or to accounting systems; issue of an edition without the named approver.
+**Out of scope.** Investor communications beyond the financial metrics; changes to the methods of FP&A or to accounting systems; issue of an edition without the approval of the Executive Sponsor.
 
 ## 3. Outcome, Measures, cost, and risk
 
@@ -37,13 +37,13 @@ If the AI-generated reports of FP&A reach the Board through one portal and one a
 - The pipeline, having run one monthly cycle.
 - The quarterly edition, designed.
 - The definitions of the metrics, agreed with FP&A.
-- The named approver.
+- The approval of the Executive Sponsor for each edition, in place.
 
 **Measures.** Editions issued on time; Share of figures traceable to a governed source; Manual steps removed; Hours per cycle, against the baseline. Baselines and targets are set with the Domain Owner in the first month.
 
 **Cost.** The time of the AICC Lead. No other cost is stated.
 
-**Risk.** The output reaches the Board and may reach investors: a named approver and a governed source for every figure are required (AI Policy 2.4, Charter 7.2; RI-015). Risk Tier 2 is expected. The checks come before the first issue.
+**Risk.** The output reaches the Board and may reach investors: the Executive Sponsor approves each edition and every figure has a governed source (AI Policy 2.4, Charter 7.2). Risk Tier 2 is expected. The checks come before the first issue.
 
 ## 4. Decision
 
