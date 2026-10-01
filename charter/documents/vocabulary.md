@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 4.5
+revision: 4.6
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -108,6 +108,9 @@ few definitions because it is read alone.
 | Calendar | The Record of the Program Increments, the Iterations, the weeks, and the blocked and gray days |  |
 | Cadence | The Record of the general flow of the events by week, without dates; the template of the dated calendar of events |  |
 | Blocked day, gray day | A blocked day is an official or expected non-working day. A gray day is a working day on which people are likely to be out. Events move to the working day before them |  |
+| AICC portal | The static portal of the charter and the governance, for auditors, which links to the evidence records of the Registry | |
+| Operating portal | The portal of non-sensitive information on the services portfolio and the development efforts, for the internal consumers of AICC | |
+| Service portal | The portal of a Service, as a product resource separate from AICC | |
 | Dashboard | The Record of the state of the Program Increment, the flow, the Dependencies at risk, the risks, and the Measures |  |
 | Stage | A phase of the work inside the discovery or the active state of an item, specific to its level | gate |
 | Check | The review of work by a person other than the one who built or wrote it | peer review |
@@ -202,3 +205,4 @@ few definitions because it is read alone.
 | 4.3 | 2026-10-01 | Engagement is an Initiative with a client function; Phase and Adopted Solution defined; Handover replaces Handoff; the lane Urgent; Agreement Log removed. | DR-2026-027 |
 | 4.4 | 2026-10-01 | Evidence record, Working state, and Light mode defined; Record redefined. | DR-2026-028 |
 | 4.5 | 2026-10-01 | Steering Summary defined. | DR-2026-029 |
+| 4.6 | 2026-10-01 | AICC portal, Operating portal, and Service portal defined. | DR-2026-030 |

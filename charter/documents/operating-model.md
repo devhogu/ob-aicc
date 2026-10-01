@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 7.1
+revision: 7.2
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -309,13 +309,16 @@ Service Management are not an evidence store.
 Registry, and the Appointments. The README of the Registry lists all the Records by class.
 
 9.4. The Registry shall be kept in a repository with a protected main branch and restricted visibility, and its history is not
-rewritten. Each Record is kept for the period that the record retention rules of the Bank require for its type. Personal data in the
+rewritten. It is promoted to the corporate share, where the AICC portal links to its records. Each Record is kept for the period that the record retention rules of the Bank require for its type. Personal data in the
 Registry is limited to the names and the posts of the Holders.
 
 9.5. A Record is kept by whoever does the work, and the AICC Lead is accountable for all of them. Internal audit has read access to the
 Registry and, read only, to Jira, Confluence, and Service Management.
 
-9.6. The Templates for the Records that need a form are listed in the Document Catalog. Every other Record is a table that its keeper
+9.6. The tools and the portals of AICC, what each is used for, and the workflows that use it are listed in the collaboration tooling of
+the charter.
+
+9.7. The Templates for the Records that need a form are listed in the Document Catalog. Every other Record is a table that its keeper
 adapts as needed.
 
 ## 10. Controls
@@ -374,3 +377,4 @@ and it leaves an evidence record. The table lists the controls that an auditor c
 | 6.3 | 2026-10-01 | An Engagement is an Initiative with a client function; phases mapped; appointment and delegation entries; Adopted Solution; the Agreement Log removed. | DR-2026-027 |
 | 7.0 | 2026-10-01 | The evidence model: working state, living records, and evidence records; the cutover Decision; integrity and retention; the Controls section; light mode. | DR-2026-028 |
 | 7.1 | 2026-10-01 | The Templates of the controls exist; the Steering Summary replaces Notes. | DR-2026-029 |
+| 7.2 | 2026-10-01 | The collaboration tooling is listed in the charter; the Registry is promoted to the corporate share. | DR-2026-030 |
