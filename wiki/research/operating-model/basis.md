@@ -2,7 +2,7 @@
 
 > This page describes the lineage of the first corpus, now archived. See [Simplification](simplification.md) for what replaced it.
 
-Where the elements of [charter/operating-model.md](../../../charter/operating-model.md) come from. The charter
+Where the elements of [charter/documents/operating-model.md](../../../charter/documents/operating-model.md) come from. The charter
 documents carry no references. This page keeps the lineage. Gathered 2026-09-29 from web search.
 
 ## What comes from where

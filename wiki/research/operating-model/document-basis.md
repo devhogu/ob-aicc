@@ -2,7 +2,7 @@
 
 > This page describes the lineage of the first corpus, now archived. See [Simplification](simplification.md) for what replaced it.
 
-Where seven documents of the [charter folder](../../../charter/README.md) come from. The charter documents carry no
+Where seven documents of the [charter folder](../../../charter/documents/document-catalog.md) come from. The charter documents carry no
 references. This page keeps the lineage of the documents that the other basis pages
 ([operating model basis](basis.md), [scaffolding basis](scaffolding-basis.md), [agile mapping](agile-mapping.md)) do not
 cover. It restates what those pages and the documents already say. Where a document has no external basis, the page says so.

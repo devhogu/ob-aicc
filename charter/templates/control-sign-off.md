@@ -1,10 +1,10 @@
 ```yaml
 id: AICC-TPL-03-EN
 title: Control Sign-Off
-status: draft
-revision: 1.2
+status: active
+revision: 2.0
 created: 2026-09-30
-revised: 2026-09-30
+revised: 2026-10-01
 ```
 
 # Control Sign-Off
@@ -13,7 +13,7 @@ revised: 2026-09-30
 
 | Field | Entry |
 | --- | --- |
-| Use Case | UC-[nnn] |
+| Solution | SOL-[nnn] |
 | Control Function and Contact | [function, name] |
 | Result | [validated / validated with conditions / stopped] |
 | Date | [date] |

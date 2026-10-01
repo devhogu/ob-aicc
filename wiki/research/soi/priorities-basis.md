@@ -1,6 +1,6 @@
 # Statement of intent: basis for the strategic priorities and the maturity roadmap
 
-Where the priorities and the maturity roadmap in the [statement of intent](../../../charter/statement-of-intent.md) come
+Where the priorities and the maturity roadmap in the [statement of intent](../../../charter/documents/statement-of-intent.md) come
 from. The charter carries no references. Gathered 2026-09-30, on top of the earlier
 [industry research](industry-research.md) and the [function pages](functions/README.md).
 

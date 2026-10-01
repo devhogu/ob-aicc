@@ -1,15 +1,15 @@
 ```yaml
 id: AICC-TPL-05-EN
 title: Quarterly Report
-status: draft
-revision: 1.2
+status: active
+revision: 2.1
 created: 2026-09-30
-revised: 2026-09-30
+revised: 2026-10-01
 ```
 
 # Quarterly Report
 
-**Template.** The AICC Lead prepares the report each quarter for the quarterly Steering. The report to the Board Committee uses sections 1, 2, 4, and 5, and the Executive Sponsor approves it.
+**Template.** The AICC Lead prepares the report each quarter for the quarterly Steering. The report to the Board Committee uses sections 1, 2, 4, 5, and 6, and the Executive Sponsor approves it.
 
 | Field | Entry |
 | --- | --- |
@@ -28,7 +28,7 @@ revised: 2026-09-30
 
 ## 3. Flow and Measures
 
-[Time from Intake to Pilot and from Pilot to Scale; work in progress; Measures of the Maturity Level, against baseline.]
+[Time from proposal to approval and from approval to acceptance; work in progress; Measures of the Maturity Level, against baseline.]
 
 ## 4. Benefits against the Investment Envelope
 
@@ -36,12 +36,16 @@ revised: 2026-09-30
 | --- | --- | --- | --- |
 |  |  |  |  |
 
-## 5. Risks, AI Incidents, and Exceptions
+## 5. Portfolio and Adoption
+
+[The Solutions by type and state, the Initiatives by state, and the Adoptions that others deliver, with what works.]
+
+## 6. Risks, AI Incidents, and Exceptions
 
 [From the Risks and Issues Record: open items by Severity, and the AI Incidents and Exceptions of the quarter.]
 
 [Position against the AI Risk Appetite Statement and any risk accepted beyond it. Concentration of the Group on one provider.]
 
-## 6. Decisions needed
+## 7. Decisions needed
 
 [Decisions for the Executive Sponsor, with the recommendation and the facts.]

@@ -1,6 +1,6 @@
 # Statement of intent: what it should contain
 
-The form of the [AI adoption statement of intent](../../../charter/statement-of-intent.md) and where it comes from. The
+The form of the [AI adoption statement of intent](../../../charter/documents/statement-of-intent.md) and where it comes from. The
 charter document carries no references. Gathered 2026-09-30.
 
 ## Finding

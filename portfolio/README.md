@@ -1,23 +1,14 @@
-# Records
+# Portfolio
 
-The Records show the state and history of the work. They change continuously and are kept by whoever does the work. The AICC Lead is accountable for all of them. The history of the repository is the audit trail.
+The Portfolio lists and defines the Solutions that AICC delivers or oversees for the functions of the Bank: what AICC can do, what it decided
+to do, and how each Solution is defined. It holds definitions, scope, methods, and architecture. It holds no figures of the Bank, no data,
+no documents of the functions, and no code. The work in progress and the decisions about it are in the Registry (`registry/`), and the rules
+are in the charter (`charter/`).
 
-| Record | Where | Holds |
-| --- | --- | --- |
-| Priorities | [priorities.md](priorities.md) | Strategic Priorities, Investment Envelopes, Investment Guardrails |
-| Backlog | [backlog.md](backlog.md) | Ranked Initiatives and Use Cases |
-| Roadmap | [roadmap.md](roadmap.md) | Milestones and quarters |
-| Decision Log | [decision-log.md](decision-log.md) | Decisions, one line each; full notes in [decisions/](decisions/) |
-| AI Registry | [ai-registry.md](ai-registry.md) | Each Use Case, model, and agent |
-| Risks and Issues | [risks-and-issues.md](risks-and-issues.md) | Risks, issues, AI Incidents, Exceptions, Findings |
-| Appointments | [appointments.md](appointments.md) | Holders of the Roles |
-| Standards | [standards.md](standards.md) | Architecture standards and Platform requirements |
-| Reports | [reports/](reports/) | Quarterly Reports, named `2027Q1.md` |
-| Notes | [notes/](notes/) | Notes of the three meetings, named `2027-01-15-sync.md` |
-| Initiatives | [initiatives/](initiatives/) | One folder for each: `INI-001-short-title/brief.md` |
-| Use Cases | [use-cases/](use-cases/) | One folder for each: `UC-001-short-title/` with the card and sign-offs |
-| Assessments | [assessments/](assessments/) | Earlier checks of the corpus, kept for history |
+| Folder | Holds |
+| --- | --- |
+| [solutions/](solutions/SOL-001-fpa-board-reporting-pipeline.md) | One Solution Definition for each Solution, from the Solution Definition Template, with its type (Service, Product, or Experiment), its receiver, and its state |
+| adoptions/ | One entry for each Adoption: a Solution that others deliver, which AICC oversees. Created with the first Adoption |
 
-Identifiers: PRI-n priority, INI-nnn Initiative, UC-nnn Use Case, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards.
-
-Earlier versions of the Records are in `wiki/archive/records-v1/`.
+The catalog follows the states and Stages of the Operating Model. A Solution Definition is created when a Solution is proposed and is
+kept current by the AICC Lead.

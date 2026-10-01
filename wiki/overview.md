@@ -1,6 +1,6 @@
 # Overview
 
-Static HTML portal presenting the AICC's strategy, Statement of Intent, roadmap, knowledge base, and lifecycle-management processes. The formal documents that define AICC are kept in the [charter folder](../charter/README.md), and the Records of the Portfolio in the [portfolio folder](../portfolio/README.md).
+Static HTML portal presenting the AICC's strategy, Statement of Intent, roadmap, knowledge base, and lifecycle-management processes. The formal documents that define AICC are kept in the [charter folder](../charter/documents/document-catalog.md), and the Records of the Portfolio in the [portfolio folder](../portfolio/README.md).
 
 ## Users
 

@@ -1,6 +1,6 @@
 # Group context: vision, mission, and strategy
 
-The higher-level goals that the [AI adoption statement of intent](../../../charter/statement-of-intent.md) aligns to.
+The higher-level goals that the [AI adoption statement of intent](../../../charter/documents/statement-of-intent.md) aligns to.
 Gathered 2026-09-30 from the group's public site. Values were looked for and not found.
 
 ## What ALGA Group publishes

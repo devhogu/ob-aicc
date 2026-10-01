@@ -2,7 +2,7 @@
 
 > Mechanisms named on this page refer to the first corpus (archived). The responsible-AI mapping still holds. See [Simplification](../simplification.md).
 
-How the values and the principles of application in the [statement of intent](../../../../charter/statement-of-intent.md) line up with
+How the values and the principles of application in the [statement of intent](../../../../charter/documents/statement-of-intent.md) line up with
 what banks, fintechs, standards bodies, and regulators publish. The charter carries no references. This page keeps the
 lineage. Gathered 2026-09-30.
 

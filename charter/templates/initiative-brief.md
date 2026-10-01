@@ -1,21 +1,22 @@
 ```yaml
 id: AICC-TPL-02-EN
 title: Initiative Brief
-status: draft
-revision: 1.1
+status: active
+revision: 2.0
 created: 2026-09-30
-revised: 2026-09-30
+revised: 2026-10-01
 ```
 
 # Initiative Brief
 
-**Template.** Copy for each Initiative above an Investment Guardrail. One page. For a discovery goal, an outcome list may replace the benefit table, the Domain Owner field may list several Domain Owners, and baselines are dated instead of set later.
+**Template.** Copy for each Initiative above an Investment Guardrail. It is the business case of the Initiative. One page. For a discovery goal, an outcome list may replace the benefit table, the Domain Owner field may list several Domain Owners, and baselines are dated instead of set later.
 
 | Field | Entry |
 | --- | --- |
 | Identifier | INI-[nnn] |
 | Title | [title] |
-| Status | [draft / submitted / approved / returned / rejected] |
+| State and Stage | [state, and Stage if in discovery or active] |
+| Solutions expected | [the Solutions it should deliver, with their types] |
 | Strategic Priority | [PRI-n] |
 | Domain Owner | [name] |
 | Date of last change | [date] |
@@ -36,6 +37,8 @@ revised: 2026-09-30
 
 [Estimated cost and Investment Envelope; risks and the expected Risk Tier; dependencies.]
 
-## 4. Decision
+## 4. Decision and acceptance
 
 [Approved, rejected, or returned; by whom; the date; the Decision Log entry.]
+
+[On delivery: accepted, returned, or rejected by the product owner, with the date. Acceptance closes the item.]
