@@ -167,14 +167,30 @@ event its week (for example 2026-PIQ4 IT10W1) and its actual date, taken from th
 Calendar rules moved it. It is built at the PI Planning for the next two quarters and is revised in the Weekly Review. It is not
 built yet.
 
-## 9. Vocabulary of the cadence
+## 9. Light mode
 
-### 9.1. Short forms and names
+While the Team has up to three people, the Operating Model 7.5 applies. The following table shows which events remain.
+
+| Event | In light mode |
+| --- | --- |
+| Daily Stand-up | Optional |
+| Weekly Planning and Weekly Review | One session each week |
+| Backlog Refinement | Optional, within the weekly session |
+| IT Planning | Held |
+| IT Review and Demo | Held, with the IT Retrospective and the monthly Steering inside it |
+| PI Review and Demo | Held, with Inspect and Adapt inside it |
+| Innovation | Optional |
+| PI Planning | Held |
+| Steering, quarterly | Held |
+
+## 10. Vocabulary of the cadence
+
+### 10.1. Short forms and names
 
 The short forms PI, IT, and IP, the names PIQ1 to PIQ4, IT01 to IT12, and W1 to W5, and the terms Loop and Review week are defined in the
 Vocabulary.
 
-### 9.2. Events and their intent
+### 10.2. Events and their intent
 
 | Event | Loop | Where in the flow | Takes in | Gives | Intent |
 | --- | --- | --- | --- | --- | --- |

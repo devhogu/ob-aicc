@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 6.3
+revision: 7.0
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -280,45 +280,72 @@ provider, or in regulation, or after an audit or supervisory finding.
 7.4. The Executive Sponsor may take a time-critical Decision between meetings after asking the heads of the risk and compliance
 functions and recording the answers.
 
+7.5. While the Team has up to three people, AICC runs in light mode. The Weekly Planning and the Weekly Review are one session. The IT
+Retrospective and the monthly Steering are held in the IT Review and Demo, and Inspect and Adapt is held in the PI Review and Demo. The
+Daily Stand-up, the Backlog Refinement, and the Innovation are optional. In light mode Waiting is a flag, Completed is skipped, Accepted and
+Closed are one step with the acceptance recorded, Pivoted is recorded as Cancelled with a link to the new item, Stages are used for
+Initiatives and Solutions only, and Work Items are not tracked in the charter. Everything else stays as stated.
+
 ## 8. Engaging a Domain
 
 8.1. AICC engages a Domain through a Service Agreement, as the Business Model states. The Domain Owner names a Domain Expert, usually
 the person who does the routine work. The first Solution is narrow. An AICC Engineer, or an engineer of the technology function or the
 Domain under AICC direction, builds the Solution with the Domain Expert, and the states in section 6.4 follow.
 
-## 9. Records
+## 9. Records and evidence
 
-9.1. Until Jira and Confluence run the work, the Registry is the live state and is kept current by hand. After that, Jira and Confluence hold the live state, and the Registry holds the Records as files: the record of each outcome that audit may ask for, taken when the event happens and at the close of each IT and PI. The history of the files is the audit trail and is not rewritten. A Record is kept by
-whoever does the work, and the AICC Lead is accountable for all of them. A Record is closed, not deleted, and is kept for the
-period that the record retention rules of the Bank require. Internal audit has read access.
+9.1. The live state of the work is the working state: the backlogs, the boards, the Roadmap, the Calendar, the Dependency Map, the
+Dashboard, the Teams, and the Program Increment folder. Until Jira and Confluence run the work, the Registry holds the working state and
+the AICC Lead keeps it current by hand. From the date of a Decision of the AICC Lead that moves the working state to Jira and
+Confluence, the Registry no longer holds it. The Decision is taken when Jira and Confluence hold the working state and the first
+Registry Snapshot has been taken.
 
-9.2. The Records are as follows.
+9.2. The evidence records are always in the Registry. An evidence record is a closed and dated extract, taken when an event happens, such
+as a Decision, an approval, a sign-off, an acceptance, an incident, or an appointment, and at the close of each IT and each PI. It
+states what happened, who decided or acted, on which facts, and where the live item is. It copies no discussion. Jira, Confluence, and
+Service Management are not an evidence store.
 
-| Record | Holds |
-| --- | --- |
-| Priorities | The Strategic Priorities, and references to the Investment Envelopes, the Investment Guardrails, and the Measures of the Maturity Levels, with owner and source of each figure |
-| Portfolio Backlog | The ranked Initiatives, with their state, Stage, and the product owner who accepts them |
-| Program Backlog | The ranked Epics and Features, with their state, Stage, scores, and the product owner who accepts them |
-| Portfolio Kanban and Program Kanban | The Initiatives, and the Epics and Features, by state, with the classes of service as lanes and the Limits on Work in Progress |
-| Roadmap | The three-month Roadmap by Program Increment, and the Milestones |
-| Calendar | The Program Increments, the Iterations, the weeks, and the blocked and gray days |
-| Cadence | The general flow of the events by week, without dates, which is kept in the charter |
-| Teams | The Teams, their members, Domains, and capacity |
-| Program Increment | For each: the PI Objectives as intent and direction, the Iterations with their IT Backlogs and Weekly Review notes, and the results of the IP week |
-| Dependency Map | For each item of a Program Increment: its Dependencies on other items, Teams, functions, and persons, and its scope by month |
-| Dashboard | The state of the Program Increment, the flow, the Dependencies at risk, the risks, and the Measures |
-| Decision Log | The Decisions, one line each |
-| AI Registry | Each Solution, model, and agent, with owner, scope, data access, approval, Risk Tier, model versions, knowledge sources, and reassessment date |
-| Risks and Issues | Risks, issues, AI Incidents, Exceptions, and Findings, one line each, with owner and status |
-| Appointments | The Holders of the Roles, with the date of appointment |
-| Standards | The architecture standards and the requirements that the use of AI places on the AI Platform |
-| Reports | The Quarterly Reports |
-| Notes | The notes of the events that need them |
-| Initiatives | One folder for each Initiative, with its brief, its Service Agreements, its Outcome Reports, and its Epics and Features. The Portfolio Backlog shows, for each Engagement, its client function, phases, support level, Service Agreement, and Outcome Report |
-| Portfolio | The catalog of the Solutions, with their Solution Definitions, and of the Adopted Solutions that others deliver |
+9.3. The Registry also keeps living records that are current by nature: the Priorities, the Standards, the Risks and Issues, the AI
+Registry, and the Appointments. The README of the Registry lists all the Records by class.
 
-9.3. The Templates for the Records that need a form are listed in the Document Catalog. Every other Record is a table that its
-keeper adapts as needed.
+9.4. The Registry shall be kept in a repository with a protected main branch and restricted visibility, and its history is not
+rewritten. Each Record is kept for the period that the record retention rules of the Bank require for its type. Personal data in the
+Registry is limited to the names and the posts of the Holders.
+
+9.5. A Record is kept by whoever does the work, and the AICC Lead is accountable for all of them. Internal audit has read access to the
+Registry and, read only, to Jira, Confluence, and Service Management.
+
+9.6. The Templates for the Records that need a form are listed in the Document Catalog. Every other Record is a table that its keeper
+adapts as needed.
+
+## 10. Controls
+
+10.1. Each control in the following table is a rule of this model, of the AI Policy, or of the Business Model, or an event of the Cadence,
+and it leaves an evidence record. The table lists the controls that an auditor can test. A Template marked "to be added" is not yet in
+the Document Catalog.
+
+| Control | Rule | Owner | When | Evidence record | Template |
+| --- | --- | --- | --- | --- | --- |
+| The mandate and the appointment of the AICC Lead | 4.6; Charter 3.1 | Executive Sponsor | When it changes | Appointments, with the decision reference | Assignment Map (to be added) |
+| Priorities, funding, and guardrails | Charter 4 | Executive Sponsor | Yearly, and on change | Priorities; Decision Record | Decision Record (to be added) |
+| The risk appetite and the policy | Charter 5.4 | AICC Lead; the Executive Sponsor for a risk beyond appetite | Yearly, and on an extra review | Decision Record | Decision Record (to be added) |
+| Review of the documents | Document Catalog 7 | AICC Lead | Yearly, and when the meaning changes | Decision Record of the check | Decision Record (to be added) |
+| Monthly review of progress, risks, and blockers, with a sample of the AICC Lead's Decisions | 7.1 | Executive Sponsor | Monthly | Steering Summary | Steering Summary (to be added) |
+| Results, risk check, and Maturity Level | 7.1; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot (to be added) |
+| Report to the Board Committee | Charter 7.2 | AICC Lead prepares; Executive Sponsor approves and issues | Quarterly | Quarterly Report, with its issuance block | Quarterly Report |
+| Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
+| Approval of the business case | 6.5; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail | When the Initiative is approved | Initiative Brief; Decision Record | Initiative Brief |
+| Outcome Report and acceptance | 6.9; Business Model 5.5 | AICC Lead issues; product owner accepts | At the end of the Engagement | Outcome Report | Outcome Report |
+| Capacity used and benefit confirmed | Business Model 6 | AICC Lead | Quarterly | Quarterly Report | Quarterly Report |
+| Risk Tier assignment | AI Policy 3.2 | AICC Lead | When the Solution is defined | Solution Definition | Solution Definition |
+| Check or validation before the first deployment | AI Policy 3.3; 6.6 | The Checker; the Control Function Contacts | Before the first deployment | Control Sign-Off | Control Sign-Off |
+| Release | 6.6 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | Solution Definition; Decision Record | Solution Definition |
+| Approval of the use of a Solution for a data class | AI Policy 2.1 | Domain Owner | Before use | AI Registry | Not needed |
+| An AI Incident | AI Policy 5 | AICC Lead; the Control Function Contacts | When it happens | Risks and Issues; AI Incident Review | AI Incident Review (to be added) |
+| An Exception | AI Policy 6 | The Control Function concerned | When requested | Control Sign-Off; Risks and Issues | Control Sign-Off |
+| Output published to the Board or investors | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record (to be added) |
+| Separation of duties and independence | 4.4 | Everyone; checked in the review of the documents | Always | Appointments | Assignment Map (to be added) |
+| Access of internal audit | 9.5 | AICC Lead | Always | The Registry | Not needed |
 
 ## Change log
 
@@ -346,3 +373,4 @@ keeper adapts as needed.
 | 6.1 | 2026-10-01 | One transition table for the states; deciders for Epics, Features, and each exit; Solution lifecycle; validation attaches to the Solution; Experiment and Adoption rules; source of truth. | DR-2026-025 |
 | 6.2 | 2026-10-01 | Engagements run on the Service Agreement of the Business Model; principle (h); the Agreement Log. | DR-2026-026 |
 | 6.3 | 2026-10-01 | An Engagement is an Initiative with a client function; phases mapped; appointment and delegation entries; Adopted Solution; the Agreement Log removed. | DR-2026-027 |
+| 7.0 | 2026-10-01 | The evidence model: working state, living records, and evidence records; the cutover Decision; integrity and retention; the Controls section; light mode. | DR-2026-028 |

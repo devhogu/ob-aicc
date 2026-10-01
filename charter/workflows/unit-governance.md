@@ -84,29 +84,9 @@ Figure 3: the movement of a decision.
 
 ## 5. The controls an auditor can test
 
-Each control is an event that already exists, and each leaves a record. The following table lists them.
-
-| Control | When | Owner | Evidence in the Registry |
-| --- | --- | --- | --- |
-| The mandate and the appointment of the AICC Lead | When it changes | Executive Sponsor | Appointments |
-| Priorities, funding, and guardrails | Yearly, and on change | Executive Sponsor | Priorities; Decision Log |
-| The risk appetite and the policy | Yearly, and on an extra review | AICC Lead, with the Executive Sponsor | Decision Log |
-| Review of the documents | Yearly, and when the meaning changes | AICC Lead | Document check; Decision Log |
-| Monthly review of progress, risks, and blockers | Monthly | Executive Sponsor | Decision Log; Notes |
-| Results, risk check, and Maturity Level | Quarterly | Executive Sponsor | Quarterly Report; PI snapshot |
-| Report to the Board Committee | Quarterly | AICC Lead prepares; Executive Sponsor approves | Board report |
-| Service Agreement for an Engagement | When the Initiative is approved | AICC Lead | Service Agreement; Portfolio Backlog |
-| Outcome Report and acceptance of an Engagement | At the end of the Engagement | AICC Lead issues; product owner accepts | Outcome Report |
-| Capacity committed and used, and benefit confirmed | Quarterly | AICC Lead | Quarterly Report |
-| Risk Tier assignment | When each Solution is defined | AICC Lead | Solution Definition |
-| Validation before the first deployment of Tier 2 or 3 | Before the first deployment | Control Function Contacts | Control Sign-Off |
-| Release | Before use beyond the first users | Domain Owner; Executive Sponsor for Tier 3 | Decision Log |
-| Acceptance of a deliverable | At the IT Review | Product owner | Deliverable record |
-| An AI Incident | When it happens | AICC Lead; Control Function Contacts | Incident record |
-| An Exception | When requested | The Control Function concerned | Exception record |
-| Output published to the Board or investors | Each issue | Executive Sponsor | Record of the approval |
-| Separation of duties and independence | Always | Everyone; checked in the document check | Appointments |
-| Access of internal audit to the records | Always | AICC Lead | The Registry itself |
+Each control is an event that already exists, and each leaves a record. The Operating Model 10 lists the controls, with their rule, their
+owner, their timing, and their evidence record. The loop above shows where they sit: the yearly controls on the strategy horizon, the
+quarterly ones on the results, the monthly ones on the review, and the event-driven ones when an incident, an exception, or a change occurs.
 
 ## 6. Separation and independence
 
@@ -140,6 +120,6 @@ Figure 4: the life of a document.
 
 ## 8. Where it runs
 
-The loop runs in the tools of AICC, Confluence for the notes and reports and Jira for the dashboards and the board. The charter
-holds this schema. The Registry holds the static record of each outcome that an auditor may ask for, taken when the event happens
-or at the close of the PI. Raw material stays in the tools or in the systems of the functions, and the Registry points to it.
+The loop will run in Jira and Confluence from the cutover of the Operating Model 9: Confluence for the notes and reports, and Jira for the
+dashboards and the board. Until then the Registry holds the working state. The charter holds this schema. The Registry always holds the
+evidence record of each outcome that an auditor may ask for, and the raw material stays in the tools or in the systems of the functions.

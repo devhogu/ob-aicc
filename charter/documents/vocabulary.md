@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 4.3
+revision: 4.4
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -132,7 +132,10 @@ few definitions because it is read alone.
 | Decision Log | The Record of the Decisions, one line each |  |
 | Registry | The folder of the Records of AICC: the process records of the work, the decisions, the proposals, and the governance records | |
 | Workflow | The description of a loop or a flow of AICC as intent and control flow, in the charter; it states no rule | |
-| Record | A file that holds the state or history of the work, as distinct from a document of the charter | register |
+| Record | A file in the Registry, as distinct from a document of the charter: working state, a living record, or an evidence record | register |
+| Evidence record | A closed and dated extract in the Registry of an event: a Decision, an approval, a sign-off, an acceptance, an incident, or an appointment | |
+| Working state | The live state of the work: the backlogs, boards, Roadmap, Calendar, Dependency Map, Dashboard, Teams, and Program Increment folder. It moves to Jira and Confluence at the cutover | |
+| Light mode | The way AICC runs while its Team has up to three people, with fewer events and a smaller set of states | |
 | Loop | A cycle that starts with planning and ends with review: the day, the week, the IT, and the PI | |
 | Review week | The last week of an IT | |
 | Short forms | PI is Program Increment, IT is Iteration, and IP is the Innovation and Planning week. PIQ1 to PIQ4 name the PIs of a year, IT01 to IT12 its ITs, and W1 to W5 the weeks of an IT |  |
@@ -196,3 +199,4 @@ few definitions because it is read alone.
 | 4.1 | 2026-10-01 | Registry, Workflow, and the Stages defined; states clarified; stray cells removed. | DR-2026-025 |
 | 4.2 | 2026-10-01 | Business Model, Engagement, Service Agreement, Assumption, Support level, Outcome Report, Agreement Log, Stakeholder, and Reusable asset defined. | DR-2026-026 |
 | 4.3 | 2026-10-01 | Engagement is an Initiative with a client function; Phase and Adopted Solution defined; Handover replaces Handoff; the lane Urgent; Agreement Log removed. | DR-2026-027 |
+| 4.4 | 2026-10-01 | Evidence record, Working state, and Light mode defined; Record redefined. | DR-2026-028 |

@@ -187,9 +187,9 @@ This is the mission side of the lab.
 
 ## 9. Where it runs
 
-The stream runs in Jira and Confluence. The charter holds this schema, and the Registry and the Portfolio hold the records that an
-auditor may ask for. Jira stays clean: a few statuses, one flag, and one resolution, while the business states are in the charter and
-the Registry.
+From the cutover of the Operating Model 9 the stream runs in Jira and Confluence. The charter holds this schema, and the Registry and the
+Portfolio hold the records that an auditor may ask for. Jira stays clean: a few statuses, one flag, and one resolution, while the business states are in the charter and a
+field.
 
 | Business state | Jira status |
 | --- | --- |

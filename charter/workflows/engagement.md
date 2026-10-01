@@ -72,7 +72,7 @@ Bank decides.
 
 ## 6. Where it runs
 
-The Engagement runs in Jira and Confluence. The Initiative and its Epics and Features are in Jira, the Service Agreement and the
-Outcome Report are drafted in Confluence, and requests and support are taken in Service Management. The charter holds this schema. The
-Registry holds the Service Agreement as issued, the Outcome Report as accepted, and the Initiative package, as real
-documents for audit and for sharing.
+From the cutover of the Operating Model 9, the Engagement runs in Jira and Confluence: the Initiative and its Epics and Features in Jira, the
+Service Agreement and the Outcome Report drafted in Confluence, and requests and support taken in Service Management. Until then the Registry
+holds the working state. The charter holds this schema. The Registry always holds the Service Agreement as issued, the Outcome Report as
+accepted, and the Initiative package, as real documents for audit and for sharing.

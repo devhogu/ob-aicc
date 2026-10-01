@@ -28,5 +28,5 @@ flowchart TB
 
 Figure 1: the workflows.
 
-The workflows run in Jira and Confluence. The charter holds the schema, and the Registry and the Portfolio hold the static records
-that an auditor may ask for.
+The workflows will run in Jira and Confluence from the cutover of the Operating Model 9. The charter holds the schema, and the Registry and
+the Portfolio hold the records that an auditor may ask for.
