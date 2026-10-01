@@ -2,7 +2,7 @@
 id: AICC-ORG-02-EN
 title: Solution Lifecycle Model
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -36,15 +36,19 @@ revised: 2026-10-01
 | Strategic Priority | A strategic theme set with the Board, with an Investment Envelope | Priorities |
 | Initiative | A business program: a long-term business service or product that delivers one or more Solutions. An Initiative that has a client function is an Engagement, with one Service Agreement for each client function; the client of enabling work is the Executive Sponsor | Portfolio Backlog |
 | Solution | A solution or service that an Initiative delivers for a Domain, with an offering type, a Risk Tier, and an AI Registry entry | The Portfolio, as a Solution Definition |
-| Capability | A capability of a Solution, delivered over one or more Program Increments | Program Backlog |
-| Feature | A deliverable of an Epic, which closes within one Program Increment | Program Backlog, then IT Backlog |
+| Capability | A capability of a Solution, delivered over one or more Program Increments (PI) | Program Backlog |
+| Feature | A deliverable of an Epic, which closes within one Program Increment and delivered over one or more Iterations (IT) | Program Backlog, then IT Backlog |
 | Work Item | A task of a Team within a Feature | The Team board |
 
-3.2. AICC keeps three backlogs. The Portfolio Backlog holds the Initiatives. The Program Backlog, also called the PI Backlog, holds the Capabilities and the Features. The IT Backlog holds the Features that the Teams work on in the IT. Each is ranked by value and urgency relative to effort, scored 1 to 5 for value, urgency, risk reduction or opportunity, and effort. The backlogs change continuously, because much of the work depends on people and events outside AICC. An Epic may run over several Program Increments. A Feature closes within its Program Increment. The items of a Program Increment state intent and direction, and what is done in an IT is decided in that IT. Every Initiative is written in a one-page Initiative Brief, which is its business case, and an Initiative that exceeds an Investment Guardrail needs the approval of the Executive Sponsor. A Capability of enabling work may sit directly under an Initiative, without a Solution. Enabling work of AICC that builds no AI Solution has no Risk Tier.
+3.2. AICC keeps three backlogs. The Portfolio Backlog holds the Initiatives. The Program Backlog, also called the PI Backlog, holds the Capabilities and the Features. The IT Backlog holds the Features that the Teams work on in the IT. Each is ranked by value and urgency relative to effort, scored 1 to 5 for value, urgency, risk reduction or opportunity, and effort. The backlogs change continuously, because much of the work depends on people and events outside AICC. An Epic may run over several Program Increments. A Feature closes within its Program Increment. The items of a Program Increment state intent and direction, and what is done in an IT is decided in that IT.
 
 3.3. Work flows as in Kanban. The Portfolio Kanban shows the Initiatives by state. The Program Kanban shows the Capabilites and the Features by state, with the classes of service as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress apply to the states, the lanes, and each Domain. The Team pulls an approved item only when there is capacity. At each IT Planning the Team selects the Features for the month from the Program Backlog into its IT Backlog, and the Weekly Review keeps them under control. An item that waits for a person or an event outside AICC is waiting, and names its Dependency.
 
 3.4. AICC engages a Domain through a Service Agreement, as the Business Model states. The Domain Owner names a Domain Expert, usually the person who does the routine work. The first Solution is narrow. A Solution Engineer, appointed from AICC, the technology function, or the Domain under AICC direction, builds the Solution with the Domain Expert, and the states in section 4.1 follow.
+
+3.5. Every Initiative shall be written in a one-page Initiative Brief, which is its business case. An Initiative that exceeds an Investment Guardrail needs the approval of the Executive Sponsor.
+
+3.6. A Capability of enabling work may sit directly under an Initiative, without a Solution. Enabling work of AICC that builds no AI Solution has no Risk Tier.
 
 ## 4. States and Stages
 
@@ -70,8 +74,6 @@ revised: 2026-10-01
 | Review | Active, or Accepted, or Cancelled | It is returned with what is missing; its criteria are met; or its outcome is no longer wanted |
 | Accepted | Closed | The item is finished |
 
-Rejected means decided against on its merits, and applies only before an item is approved. Cancelled means no longer needed, and applies in any state from Discovery to Review except Completed. A suspension of a Solution is a flag on it, like waiting, and does not change its state. A stop by a Control Function cancels the Solution. Retirement closes it, with no acceptance. The person who approves an item at its level also defers, rejects, cancels, or pivots it.
-
 4.2. A Stage is a phase of the work inside the discovery state or the active state of an item. The Stages, the approver, and the conditions of each level are in the following table. The AICC Lead shall confirm that the conditions are met and note it in the backlog of the level, or in the Portfolio for a Solution.
 
 | Level | Discovery Stages | Approved by, and conditions | Active Stages | To be completed |
@@ -80,6 +82,8 @@ Rejected means decided against on its merits, and applies only before an item is
 | Solution | Definition | The Domain Owner approves the Solution Definition, with its type, Receiver, scope, capabilities, architecture, and data classes. The Risk Tier is assigned by the AICC Lead and told to the Domain Owner; the AI Registry entry is made; for Risk Tier 2 and 3, the Control Function Contact of compliance confirms the applicable law; an Experiment has its time-box and a Service its run cost and sunset | Delivery, then the Stages of its type in section 7.1 | It is delivered, as section 7.1 states |
 | Epic | Analysis: define the capability and break it into Features | The AICC Lead, with the Domain Owner consulted. Its Features are defined and ranked in the Program Backlog | Implementation | Its Features are closed |
 | Feature | Explore, Design | The Team, at IT Planning. Its acceptance criteria are stated, and its Dependencies are known, with any open one named | Develop, Verify, Deploy | It is deployed |
+
+4.3. Rejected means decided against on its merits, and applies only before an item is approved. Cancelled means no longer needed, and applies in any state from Discovery to Review except Completed. A suspension of a Solution is a flag on it, like waiting, and does not change its state. A stop by a Control Function is final and cancels the Solution. Retirement closes it, with no acceptance. The person who approves an item at its level also defers, rejects, cancels, or pivots it.
 
 ## 5. Cadence
 
@@ -95,13 +99,13 @@ The events of the delivery loops are the Daily Stand-up, the Weekly Planning, th
 
 ## 6. Verification, release, and acceptance
 
-6.1. The check for Risk Tier 1 and the validation by the Control Function Contacts for Risk Tier 2 and 3 attach to the Solution. They are taken in Verify of the first Feature that reaches real users or data, they cover the later Features unless a change requires a new one, and no deployment to real users or data comes before them. The release of a Solution beyond its first users is decided by the Domain Owner for Risk Tier 1 and 2, and by the Executive Sponsor for Risk Tier 3, after the check or the validation, and is recorded in the Solution Definition. A Feature that cannot close within its Program Increment is split: the part that is done is a Feature that goes to review, and the rest is a new Feature in the next Program Increment. The original Feature is Pivoted and linked to both.
+6.1. The check for Risk Tier 1 and the validation by the Control Function Contacts for Risk Tier 2 and 3 attach to the Solution. They are taken in Verify of the first Feature that reaches real users or data, they cover the later Features unless a change requires a new one, which the AICC Lead shall decide and enter, with the reason, in the Solution Definition, and no deployment to real users or data comes before them. A deployment to production follows the change management of the Bank, the Solution Engineer shall enter the change ticket and the test result in the Feature, and the access of a Solution Engineer to production is granted through the access process of the Bank. The release of a Solution beyond its first users is decided by the Domain Owner for Risk Tier 1 and 2, and by the Executive Sponsor for Risk Tier 3, after the check or the validation, and is recorded in the Solution Definition. A Feature that cannot close within its Program Increment is split: the part that is done is a Feature that goes to review, and the rest is a new Feature in the next Program Increment. The original Feature is Pivoted and linked to both.
 
-6.2. The Control Function Contacts shall take part when a Solution is defined and in validation. Evidence is taken from the records of the AI Platform.
+6.2. The Control Function Contacts that this model and the AI Policy name shall take part when a Solution of Risk Tier 2 or 3 is defined and in its validation. The validation relies on the evidence, the logs, and the traces that the Platform Owner keeps.
 
 6.3. Acceptance closes an item. The product owner accepts the delivered outcome against its acceptance criteria, and the AICC Lead notes the acceptance with who and when in the backlog of the level. The product owner is the Domain Owner for an item of a Domain, and the Executive Sponsor for an item that spans Domains or is enabling work of AICC. The product owner may accept the item, return it with what is missing, or cancel it when its outcome is no longer wanted. The acceptance of an Engagement is recorded in its Outcome Report.
 
-6.4. When AICC hands a Solution to a Domain as ready for use at scale, before its release beyond the first users, the AICC Lead completes the Acceptance Checklist of the Solution. The checklist lists, for each party concerned, the items that the party confirms within its remit and signs: the Domain Owner, the Solution Engineer, the AICC Lead, the Checker, the Control Functions (model risk, compliance, information security, data protection, and legal), and the IT function that operates the Solution with the Platform Owner. An item that is not met stops the release. The Domain Owner receives the checklist signed and signs the acceptance of the package. A Domain adopts a Solution of Risk Tier 1 or 2 on its own risk, within the AI Risk Appetite Statement. A Solution of Risk Tier 3, which is of high impact and risk, is adopted only with the signature of the Executive Sponsor, who accepts the risk and releases it. The checklist is not used during development or trials, where 6.1 applies, and a change after the release that requires a new check or validation brings a new checklist. It adds no approval of its own: the decisions are those that the AI Policy and this model state.
+6.4. When AICC hands a Solution to a Domain as ready for use at scale, before its release beyond the first users, the AICC Lead completes the Acceptance Checklist of the Solution. The checklist lists, for each party concerned, the items that the party confirms within its remit and signs: the Domain Owner, the Solution Engineer, the AICC Lead, the Checker, the Control Functions (model risk, compliance, information security, data protection, and legal), and the IT function that operates the Solution with the Platform Owner. An item that is not met shall stop the release. The Domain Owner receives the checklist signed and signs the acceptance of the package. A Domain adopts a Solution of Risk Tier 1 or 2 on its own risk, within the AI Risk Appetite Statement. A Solution of Risk Tier 3, which is of high impact and risk, is adopted only with the signature of the Executive Sponsor, who accepts the risk and releases it. The checklist is not used during development or trials, where 6.1 applies, and a change after the release that requires a new check or validation brings a new checklist. It adds no approval of its own: the decisions are those that the AI Policy and this model state.
 
 ## 7. Life-cycle management
 
@@ -117,9 +121,16 @@ The phases of an Engagement map to the items as follows: the study is the discov
 
 7.2. AICC oversees and reports on the Adopted Solutions that others deliver, in the Portfolio, as a Solution Definition marked as an Adopted Solution with its Receiver as owner. It is recorded when others begin to deliver a Solution that AICC proposed or oversees. It uses the states Proposed, Approved, Active, Closed, Rejected, and Cancelled, and records the Risk Tier when it is known. The owners and the Executive Sponsor decide on a Proposal of a Solution, and the Bank decides on a Proposal of the AI adoption strategy. The AI adoption strategy is a series of Proposals that AICC shapes from what it learns.
 
+7.3. A change to a released Solution is a Feature. A change of model, provider, data class, degree of autonomy, or any attribute of the Risk Tier is significant. The AICC Lead shall decide whether a change requires a new check or validation, and the Domain Owner, or the Executive Sponsor for Risk Tier 3, releases it. A change to a Solution in production follows the change management of the Bank, and the Solution Engineer shall enter the change ticket and the test result in the Feature. An emergency change may be deployed on the decision of the AICC Lead, and shall be reviewed and entered in the Decision Log within five working days. A change of terms or of model by a provider is a change under this clause.
+
+7.4. The product owner of a live Solution shall review its monitoring, its incidents, its use, and the notices of its providers at each IT Review and Demo, and shall note the review in the Solution Definition.
+
+7.5. Before a Solution is Closed as retired, the Solution Engineer shall remove the access and the credentials, the data and the logs shall be kept or deleted under the retention rules of the Bank, and the AI Registry entry shall be marked retired. The Domain Owner, or the Executive Sponsor for a Service across Domains, approves the retirement, and the approval is entered in the Solution Definition.
+
 ## Change log
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-01 | Created from the Operating Model: the flow of work, the states and Stages, the cadence of the delivery loops, verification, release, acceptance, and the life cycle of a Solution. | DR-2026-040 |
 | 1.1 | 2026-10-01 | The Acceptance Checklist at the handover of a ready Solution to a Domain for use at scale; the Executive Sponsor signs for Risk Tier 3. | DR-2026-041 |
+| 1.2 | 2026-10-01 | Auditor review: change after release (7.3), review of live Solutions (7.4), retirement (7.5), production deployment, a stop is final (4.3), and clauses split. | DR-2026-042 |

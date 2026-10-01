@@ -17,14 +17,14 @@ The Control Matrix keeps the state of every control of the Operating Model 8, by
 | --- | --- | --- | --- | --- |
 | C-01 | Mandate and appointment of the AICC Lead | None | Appointments Record Part A and C (`appointments.md`) | Open: the references are not entered (RI-021) |
 | C-02 | Priorities, funding, and guardrails | Priorities set | Priorities (`priorities.md`); Decision Record | Open: the Guardrails and the Envelopes are not set (RI-012) |
-| C-03 | Risk appetite and the policy | DR-2026-018 | Decision Record (`decisions/`) | Operating |
+| C-03 | Yearly review of the risk appetite and the policy | DR-2026-018 (activation) | Decision Record (`decisions/`) | Not yet due: the first yearly review is at the first quarterly Steering of the year |
 | C-04 | Review of the documents | DR-2026-034 | Decision Record of the check (`decisions/`); assessments | Operating |
 | C-05 | Monthly review of progress, risks, and blockers, with a sample of the Decisions of the AICC Lead | `steering/2026-09-steering.md` | Steering Summary (`steering/`) | Open: the one record is reconstructed and records no sample |
 | C-06 | Results, risk check, and Maturity Level | None | Quarterly Report (`reports/`); Registry Snapshot (`snapshots/`) | Not yet due: first at the close of 2026-PIQ4 |
 | C-07 | Report to the Board Committee | None | Quarterly Report with its issuance block (`reports/`) | Not yet due; the Board Committee is not named (RI-010) |
 | C-08 | Service Agreement for an Engagement | None | Service Agreement (`initiatives/INI-nnn/`); Portfolio Backlog | Open: not issued for INI-002, 003, 004, 006, 007, 008 (RI-022) |
 | C-09 | Approval of the business case | None | Initiative Brief complete in its six sections; Decision Record | Not yet due: all Initiatives are in Scoping |
-| C-10 | Outcome Report and acceptance | None | Outcome Report (`initiatives/INI-nnn/`) | Not yet due |
+| C-10 | Outcome Report, acceptance, and confirmation of the benefit | None | Outcome Report (`initiatives/INI-nnn/`) | Not yet due |
 | C-11 | Capacity used and benefit confirmed | None | Quarterly Report section 4 | Not yet due |
 | C-12 | Risk Tier assignment | None | Solution Definition (`portfolio/solutions/`); AI Registry | Not yet due: SOL-001 is Proposed |
 | C-13 | Check or validation before the first deployment | None | AI Registry entry for the check; Control Sign-Off (`sign-offs/`) | No occurrence yet |
@@ -38,9 +38,15 @@ The Control Matrix keeps the state of every control of the Operating Model 8, by
 | C-21 | Output published to the Board or investors | None | Decision Record of the approval | No occurrence yet: the first edition of INI-004 is not issued |
 | C-22 | Separation of duties and independence | RI-023 | Appointments Record Part A and B | Open: the Appointments Record is incomplete |
 | C-23 | Capacity ceiling and intake | None | Service Agreement; Portfolio Backlog; Teams | Open: the capacity is not stated (`teams.md`) |
-| C-24 | Completeness of the Outcome Reports, and the sample of the Decisions of the AICC Lead | None | Steering Summary | Not yet due |
-| C-25 | Confirmation of the benefit | None | Outcome Report | Not yet due |
-| C-26 | Access of internal audit | None | Appointments Record Part E | Open: the audit contact is not named |
+| C-24 | Completeness of the Outcome Reports | None | Steering Summary | Not yet due |
+| C-25 | Access of internal audit | None | Appointments Record Part E | Open: the audit contact is not named |
+| C-26 | Access review of the Registry and the tools | None | Steering Summary | Not yet due |
+| C-27 | Acceptance of a risk beyond the appetite | None | Decision Record (`decisions/`) | No occurrence yet |
+| C-28 | Reassessment of the Risk Tier and expiry of a validation | None | AI Registry; Control Sign-Off (`sign-offs/`) | Not yet due |
+| C-29 | Review of live Solutions | None | Solution Definition (`portfolio/solutions/`) | Not yet due |
+| C-30 | Change to a released Solution | None | The Feature; Solution Definition; Decision Log | No occurrence yet |
+| C-31 | Retirement of a Solution | None | Solution Definition; AI Registry | No occurrence yet |
+| C-32 | Deficiencies and findings | None | Risks and Issues; Steering Summary | Open: the monthly review is not yet recorded |
 
 ## 3. Populations for sampling
 

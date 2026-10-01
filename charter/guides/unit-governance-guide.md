@@ -38,30 +38,36 @@ The Operating Model 8 lists each control with its rule, owner, timing, and evide
 | --- | --- | --- | --- | --- |
 | C-01 | Mandate and appointment of the AICC Lead | AICC acts only under a documented authority | Directive | Compare the decision reference with the mandate and the appointment order |
 | C-02 | Priorities, funding, and guardrails | Funding and commitments stay within a limit that the Executive Sponsor sets | Directive | Read the Priorities against the Guardrails and the Decision Records of the year |
-| C-03 | Risk appetite and the policy | The use of AI stays within the appetite of the Bank | Directive | Read the Statement and the Decision Record of its review |
+| C-03 | Yearly review of the risk appetite and the policy | The use of AI stays within the appetite of the Bank | Directive | Read the Statement and the Decision Record of its review |
 | C-04 | Review of the documents | The documents stay consistent and in force | Detective | Read the report of the check and the Decision Record that closes its findings |
 | C-05 | Monthly review of progress, risks, and blockers, with a sample of the Decisions of the AICC Lead | A single person's decisions are reviewed by another | Detective | Read the Summary of each month and the sample it records |
 | C-06 | Results, risk check, and Maturity Level | The Executive Sponsor sees results and risk each quarter | Detective | Read the Report and the Snapshot of the quarter |
 | C-07 | Report to the Board Committee | The Board Committee is informed | Detective | Read the issuance block: approver, date, recipient |
 | C-08 | Service Agreement for an Engagement | The commitment to a function is written before the work | Preventive | Compare the Agreement with the Initiative and its dates |
 | C-09 | Approval of the business case | An Initiative is funded only on a complete case | Preventive | Read the Completeness table and the Decision Record |
-| C-10 | Outcome Report and acceptance | The outcome is reported and accepted by its owner | Detective | Read the Report and the acceptance, with who and when |
+| C-10 | Outcome Report, acceptance, and confirmation of the benefit | The outcome is reported, accepted by its owner, and the benefit is confirmed by the function, not by AICC | Detective | Read the Report, the acceptance with who and when, and the confirmation with its source |
 | C-11 | Capacity used and benefit confirmed | AICC does not overcommit and claims only confirmed benefit | Detective | Compare capacity used with the Agreements and the benefit with the Outcome Report |
 | C-12 | Risk Tier assignment | Every Solution has a Tier that sets its checks | Preventive | Read the Tier, who assigned it, and when |
 | C-13 | Check or validation before the first deployment | Nothing reaches real users or data unchecked | Preventive | Compare the date of the check with the first deployment |
 | C-14 | Release | Use beyond the first users is decided by the right owner | Preventive | Compare the release with the check and the Tier |
 | C-15 | Approval of the use of a Solution for a data class | Data is used only where its owner approved | Preventive | Read the approval, who gave it, and when |
-| C-16 | AI Incident | Incidents are handled in the incident management of the Bank, with AICC taking part, and reviewed | Detective | Read the nil statement; for an Incident, the ticket in Service Management and the AI Incident Review |
-| C-17 | Exception | A departure from a requirement is decided, limited, and recorded | Preventive | Read the nil statement; for an Exception, its expiry and compensating control |
+| C-16 | AI Incident | Incidents are handled in the incident management of the Bank, with AICC taking part, and reviewed | Detective | Read the nil statement; for an Incident, the ticket in Service Management and the AI Incident Review; read the quarterly reconciliation with the incident management of the Bank |
+| C-17 | Exception | A departure from a requirement is decided, limited, and recorded | Preventive | Read the nil statement; for an Exception, its expiry and its monthly review |
 | C-18 | Check of a provider | A provider is checked for data, terms, and exit before use | Preventive | Compare the date of the check with the first use of the provider |
 | C-19 | Sharing outside the Bank | Data and decisions stay within the Bank unless permitted | Preventive | Read the Data Sharing Arrangement and its Decision Record |
 | C-20 | Proposal to adopt a Solution at scale | Adoption is decided by its owners | Directive | Read the Proposal and the decision |
-| C-21 | Output published to the Board or investors | Published output is approved and its figures have a governed source | Preventive | Read the approval for each edition |
-| C-22 | Separation of duties and independence | No person checks or accepts their own work | Preventive | Compare the Holders of the Roles with the rules of separation and the accepted limits |
+| C-21 | Output published to the Board or investors | Published output is approved before it is issued | Preventive | Read the approval for each edition |
+| C-22 | Separation of duties and independence | No person checks, accepts, or releases their own work | Preventive | At a release, compare the builder, the Checker, and the releaser; compare the Holders of the Roles with the rules of separation and the accepted limits |
 | C-23 | Capacity ceiling and intake | AICC commits no more than it can deliver | Preventive | Compare the capacity of the Agreements with the capacity available |
-| C-24 | Completeness of the Outcome Reports, and the sample of the Decisions of the AICC Lead | Closed Engagements are reported, and the Lead's decisions are reviewed | Detective | Read section 7 and section 8 of the Summary |
-| C-25 | Confirmation of the benefit | The benefit is confirmed by the function, not by AICC | Detective | Read the confirmation and its source |
-| C-26 | Access of internal audit | Internal audit can see the records | Directive | Test read access to the Registry, and read-only access to Jira, Confluence, and Service Management |
+| C-24 | Completeness of the Outcome Reports | Closed Engagements are reported | Detective | Read section 8 of the Summary |
+| C-25 | Access of internal audit | Internal audit can see the records | Directive | Test read access to the Registry, and read-only access to Jira, Confluence, and Service Management |
+| C-26 | Access review of the Registry and the tools | Access follows the Roles | Preventive | Read the result of the quarterly comparison with the Appointments Record |
+| C-27 | Acceptance of a risk beyond the appetite | Only the Executive Sponsor accepts a risk beyond the appetite, and the Board Committee is told | Preventive | Read the Decision Record and the report to the Board Committee |
+| C-28 | Reassessment of the Risk Tier and expiry of a validation | A Solution is not used on a validation that has expired or on a stale Risk Tier | Preventive | Compare the dates in the AI Registry with the dates of the reassessment and the validation |
+| C-29 | Review of live Solutions | Live Solutions are monitored by their owners | Detective | Read the note of the review in the Solution Definition at each IT Review and Demo |
+| C-30 | Change to a released Solution | A change is decided, tested, and released by the right owner | Preventive | Take a change: read the decision on a new check, the change ticket, the test result, and the release |
+| C-31 | Retirement of a Solution | A retired Solution leaves no access, data, or registry entry behind | Preventive | Read the approval, and compare access, data, and the AI Registry entry with the retirement |
+| C-32 | Deficiencies and findings | A failed control or a finding is followed up to closure | Detective | Take a finding: read its owner, its due date, and the monthly review |
 
 ## 8. What an auditor will ask, and the record that answers
 

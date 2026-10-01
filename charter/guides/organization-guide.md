@@ -93,10 +93,10 @@ The expectations below are general practice of internal audit and HR in a bank, 
 | Expectation | Where the rule is | The record | Open |
 | --- | --- | --- | --- |
 | A mandate above the unit | Charter 3.1 | Appointments, the mandate reference | [ The decision or order by which the Executive Sponsor holds the mandate of AICC and appointed the AICC Lead: its number, date, and issuer, entered in the Appointments Record with the real names ] |
-| Delegation of authority and decision rights | Operating Model 4.2, 5.3, 4.6 | Decision Log; the delegations in the Appointments Record | [ The amounts that may be committed without the Executive Sponsor, given as references to the financial planning of the Bank, set by the Executive Sponsor each year ] |
+| Delegation of authority and decision rights | Operating Model 4.2, 5.3, 4.7 | Decision Log; the delegations in the Appointments Record | [ The amounts that may be committed without the Executive Sponsor, given as references to the financial planning of the Bank, set by the Executive Sponsor each year ] |
 | Role profiles and responsibilities | This guide, sections 3 and 4 | The Appointments Record, Part B | [ HR confirms the profiles and the typical competence, and that they match the job descriptions of the Bank ] |
 | The place of the unit in the organization | This guide, section 2 | The organization chart of the Bank | [ HR confirms where AICC sits in the organization chart of the Bank and its reporting line ] |
-| Appointments, changes, and leavers | Operating Model 4.6 | The Appointments Record, Part C | [ Each appointment, acting designation, change, and relief entered with its effective date and its decision reference, as the Appointments Record Part C requires ] |
+| Appointments, changes, and leavers | Operating Model 4.6, 4.8 | The Appointments Record, Part C | [ Each appointment, acting designation, change, and relief entered with its effective date and its decision reference, as the Appointments Record Part C requires ] |
 | Conflict-of-interest declarations | Operating Model 5.7 | The Appointments Record, Part D | [ HR and internal audit decide whether the declaration is made each year, and in what form ] |
 | Minutes and decisions of the Steering | Operating Model 6, 5.6 | Steering Summary; Decision Record | None |
 | Risk, issue, incident, and exception registers | AI Policy 5, 6; Operating Model 7 | Risks and Issues; AI Incident Review; Control Sign-Off | [ A method to rate a risk, aligned with the risk register of the Bank and set with the risk function ] |

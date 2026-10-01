@@ -53,7 +53,7 @@ Value: a unit that an auditor and HR can test, and that its people can follow.
 
 Risk: one person writes and owns the documents, so a person who did not write them checks them.
 
-Expected Risk Tier: none, because the work builds no AI Solution (Solution Lifecycle Model 3.2).
+Expected Risk Tier: none, because the work builds no AI Solution (Solution Lifecycle Model 3.6).
 
 Control Functions to consult: none.
 

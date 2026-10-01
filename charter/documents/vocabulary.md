@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 5.3
+revision: 5.4
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -15,7 +15,7 @@ revised: 2026-10-01
 
 ## 2. Precedence
 
-2.1. Where two documents differ, the higher prevails: the Statement of Intent on the Adoption of Artificial Intelligence, the AICC Charter, the Business Model, the Operating Model, the AI Policy, the Document Catalog. This Vocabulary prevails on terms and style. Templates and Records yield to the documents. The workflows and the guides explain the documents and state no rule of their own.
+2.1. Where two documents differ, the higher prevails: the Statement of Intent on the Adoption of Artificial Intelligence, the AICC Charter, the Business Model, the Operating Model, the Solution Lifecycle Model, the AI Policy, the Document Catalog. This Vocabulary prevails on terms and style. Templates and Records yield to the documents. The workflows and the guides explain the documents and state no rule of their own.
 
 ## 3. Style
 
@@ -102,7 +102,7 @@ revised: 2026-10-01
 | Calendar | The Record of the Program Increments, the Iterations, the weeks, and the blocked and gray days |  |
 | Cadence | The workflow of the general flow of the events by week, without dates; the template of the dated calendar of events |  |
 | Blocked day, gray day | A blocked day is an official or expected non-working day. A gray day is a working day on which people are likely to be out. Events move to the working day before them |  |
-| AICC portal | The static portal of the charter and the governance, for auditors, which links to the evidence records of the Registry | |
+| AICC portal | The portal of the charter and the governance, for auditors, which links to the evidence records of the Registry | |
 | Operating portal | The portal of non-sensitive information on the services portfolio and the development efforts, for the internal consumers of AICC | |
 | Service portal | The portal of a Service, as a product resource separate from AICC | |
 | Dashboard | The Record of the state of the Program Increment, the flow, the Dependencies at risk, the risks, and the Measures |  |
@@ -152,7 +152,7 @@ revised: 2026-10-01
 | Finding | A deviation found by a check of the documents, by an audit, or by a supervisor |  |
 | Activation | The decision that makes a document active | approval (of a document) |
 
-4.2. The following table defines the states. Every item of every level is in one state. The Operating Model states how an item moves between them.
+4.2. The following table defines the states. Every item of every level is in one state. The Solution Lifecycle Model states how an item moves between them.
 
 | State | Meaning | Not used |
 | --- | --- | --- |
@@ -217,3 +217,4 @@ revised: 2026-10-01
 | 5.1 | 2026-10-01 | The Service Agreement is on a best-effort basis within the available capacity and capability. | DR-2026-037 |
 | 5.2 | 2026-10-01 | The Solution Engineer replaces the AICC Engineer. | DR-2026-038 |
 | 5.3 | 2026-10-01 | Severity of an AI Incident is set by the incident management of the Bank. | DR-2026-039 |
+| 5.4 | 2026-10-01 | Precedence lists the Solution Lifecycle Model; the states are moved by the Solution Lifecycle Model. | DR-2026-042 |
