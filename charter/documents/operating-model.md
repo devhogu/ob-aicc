@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 7.0
+revision: 7.1
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -251,7 +251,7 @@ PI Review. Evidence is taken from the records of the AI Platform.
 month of four or five whole weeks. The last week of the third Iteration of a Program Increment is the IP week.
 The Calendar Record states the dates and the blocked and gray days, and the Cadence Record states the general flow of the events by
 week, without dates, which is the template for the dated calendar of events. The events of each loop are in the following table, each with its intent. A Team of one holds them short and records them
-in the IT Backlog or the Notes.
+in the IT Backlog or the Steering Summary.
 
 | Loop | Event | Intent |
 | --- | --- | --- |
@@ -270,7 +270,7 @@ in the IT Backlog or the Notes.
 | Program Increment | Steering, quarterly | Assess the results of the past quarter, confirm priorities and funding, and confirm the Maturity Level reached |
 
 7.2. A meeting runs with those who are named. While the AI Steering Committee is not formed, the Executive Sponsor decides alone.
-Notes are kept only for the Decisions and the actions, which go to the Decision Log and the work items.
+A record of an event is kept only for the Decisions and the actions, in the Steering Summary for a Steering, and otherwise in the work items and the Decision Log.
 
 7.3. The first quarterly Steering of the year also sets the Strategic Priorities, the Investment Envelopes, the Investment
 Guardrails, and the Roadmap, and reviews the Statement of Intent, the AICC Charter, this Operating Model, the AI Policy, and the AI
@@ -321,17 +321,16 @@ adapts as needed.
 ## 10. Controls
 
 10.1. Each control in the following table is a rule of this model, of the AI Policy, or of the Business Model, or an event of the Cadence,
-and it leaves an evidence record. The table lists the controls that an auditor can test. A Template marked "to be added" is not yet in
-the Document Catalog.
+and it leaves an evidence record. The table lists the controls that an auditor can test.
 
 | Control | Rule | Owner | When | Evidence record | Template |
 | --- | --- | --- | --- | --- | --- |
-| The mandate and the appointment of the AICC Lead | 4.6; Charter 3.1 | Executive Sponsor | When it changes | Appointments, with the decision reference | Assignment Map (to be added) |
-| Priorities, funding, and guardrails | Charter 4 | Executive Sponsor | Yearly, and on change | Priorities; Decision Record | Decision Record (to be added) |
-| The risk appetite and the policy | Charter 5.4 | AICC Lead; the Executive Sponsor for a risk beyond appetite | Yearly, and on an extra review | Decision Record | Decision Record (to be added) |
-| Review of the documents | Document Catalog 7 | AICC Lead | Yearly, and when the meaning changes | Decision Record of the check | Decision Record (to be added) |
-| Monthly review of progress, risks, and blockers, with a sample of the AICC Lead's Decisions | 7.1 | Executive Sponsor | Monthly | Steering Summary | Steering Summary (to be added) |
-| Results, risk check, and Maturity Level | 7.1; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot (to be added) |
+| The mandate and the appointment of the AICC Lead | 4.6; Charter 3.1 | Executive Sponsor | When it changes | Appointments, with the decision reference | Assignment Map |
+| Priorities, funding, and guardrails | Charter 4 | Executive Sponsor | Yearly, and on change | Priorities; Decision Record | Decision Record |
+| The risk appetite and the policy | Charter 5.4 | AICC Lead; the Executive Sponsor for a risk beyond appetite | Yearly, and on an extra review | Decision Record | Decision Record |
+| Review of the documents | Document Catalog 7 | AICC Lead | Yearly, and when the meaning changes | Decision Record of the check | Decision Record |
+| Monthly review of progress, risks, and blockers, with a sample of the AICC Lead's Decisions | 7.1 | Executive Sponsor | Monthly | Steering Summary | Steering Summary |
+| Results, risk check, and Maturity Level | 7.1; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot |
 | Report to the Board Committee | Charter 7.2 | AICC Lead prepares; Executive Sponsor approves and issues | Quarterly | Quarterly Report, with its issuance block | Quarterly Report |
 | Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
 | Approval of the business case | 6.5; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail | When the Initiative is approved | Initiative Brief; Decision Record | Initiative Brief |
@@ -341,10 +340,10 @@ the Document Catalog.
 | Check or validation before the first deployment | AI Policy 3.3; 6.6 | The Checker; the Control Function Contacts | Before the first deployment | Control Sign-Off | Control Sign-Off |
 | Release | 6.6 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | Solution Definition; Decision Record | Solution Definition |
 | Approval of the use of a Solution for a data class | AI Policy 2.1 | Domain Owner | Before use | AI Registry | Not needed |
-| An AI Incident | AI Policy 5 | AICC Lead; the Control Function Contacts | When it happens | Risks and Issues; AI Incident Review | AI Incident Review (to be added) |
+| An AI Incident | AI Policy 5 | AICC Lead; the Control Function Contacts | When it happens | Risks and Issues; AI Incident Review | AI Incident Review |
 | An Exception | AI Policy 6 | The Control Function concerned | When requested | Control Sign-Off; Risks and Issues | Control Sign-Off |
-| Output published to the Board or investors | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record (to be added) |
-| Separation of duties and independence | 4.4 | Everyone; checked in the review of the documents | Always | Appointments | Assignment Map (to be added) |
+| Output published to the Board or investors | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record |
+| Separation of duties and independence | 4.4 | Everyone; checked in the review of the documents | Always | Appointments | Assignment Map |
 | Access of internal audit | 9.5 | AICC Lead | Always | The Registry | Not needed |
 
 ## Change log
@@ -374,3 +373,4 @@ the Document Catalog.
 | 6.2 | 2026-10-01 | Engagements run on the Service Agreement of the Business Model; principle (h); the Agreement Log. | DR-2026-026 |
 | 6.3 | 2026-10-01 | An Engagement is an Initiative with a client function; phases mapped; appointment and delegation entries; Adopted Solution; the Agreement Log removed. | DR-2026-027 |
 | 7.0 | 2026-10-01 | The evidence model: working state, living records, and evidence records; the cutover Decision; integrity and retention; the Controls section; light mode. | DR-2026-028 |
+| 7.1 | 2026-10-01 | The Templates of the controls exist; the Steering Summary replaces Notes. | DR-2026-029 |

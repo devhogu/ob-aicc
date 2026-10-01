@@ -2,7 +2,7 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: active
-revision: 2.1
+revision: 2.2
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -49,3 +49,13 @@ revised: 2026-10-01
 ## 7. Decisions needed
 
 [Decisions for the Executive Sponsor, with the recommendation and the facts.]
+
+## Issuance
+
+| Field | Entry |
+| --- | --- |
+| Approved by | [Executive Sponsor] |
+| Date issued | [date] |
+| Sent to | [Board Committee, or the chair of the Board] |
+| Version | [number] |
+| Source and date of each figure | [by reference] |

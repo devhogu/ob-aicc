@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 2.9
+revision: 2.10
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -73,15 +73,22 @@ not activated. They state no rule of their own: the rules are in the documents.
 6.1. The following Templates give the form of the Records that need one. A Template has a status and a revision but no change
 log, and a copy of it carries no metadata block.
 
-| Template | Used for |
-| --- | --- |
-| AICC-TPL-01 Solution Definition | Each Solution: its type, receiver, scope, capabilities, Risk Tier, and the effect on affected persons |
-| AICC-TPL-02 Initiative Brief | Each Initiative: its business case |
-| AICC-TPL-03 Control Sign-Off | The validation or the stop of a Control Function Contact |
-| AICC-TPL-04 Notes | The events that need notes: the IT Review and Demo, the PI Review and Demo, Inspect and Adapt, PI Planning, and the Steering |
-| AICC-TPL-05 Quarterly Report | The Quarterly Report |
-| AICC-TPL-06 Service Agreement | Each Engagement: the commitment and the working agreement |
-| AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, the capacity, and the acceptance |
+| Order of use | Template | Used for |
+| --- | --- | --- |
+| 1 | AICC-TPL-02 Initiative Brief | Each Initiative: its business case, as the lean business case of SAFe |
+| 2 | AICC-TPL-06 Service Agreement | Each Engagement: the commitment and the working agreement |
+| 3 | AICC-TPL-01 Solution Definition | Each Solution: its type, Receiver, scope, capabilities, architecture, Risk Tier, and acceptance criteria |
+| 4 | AICC-TPL-03 Control Sign-Off | The decision of a Control Function Contact: a validation, a stop, a provider check, or an Exception |
+| 5 | AICC-TPL-08 Decision Record | A Decision at the level of the AICC Lead or above, an activation, a delegation, an approval of output, and the cutover |
+| 6 | AICC-TPL-04 Steering Summary | Each Steering, monthly or quarterly: attendance, advice, Decisions, and actions |
+| 7 | AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, the capacity, and the acceptance |
+| 8 | AICC-TPL-10 AI Incident Review | The review of each AI Incident |
+| 9 | AICC-TPL-11 Registry Snapshot | The closed extract of the working state at the close of each IT and PI, and at the cutover |
+| 10 | AICC-TPL-05 Quarterly Report | The Quarterly Report, and the report to the Board Committee |
+| 11 | AICC-TPL-09 Assignment Map | The Roles mapped to people, the appointment log, the declarations, and the access |
+| 12 | AICC-TPL-12 Proposal | A Proposal to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy |
+
+The identifiers keep the order of creation, and the table is in the order of use.
 
 ## 7. Checks
 
@@ -122,3 +129,4 @@ Risks and Issues Record and do not block activation.
 | 2.7 | 2026-10-01 | The workflows, templates, and guides are part of the charter and state no rule. | DR-2026-025 |
 | 2.8 | 2026-10-01 | The Business Model is added. | DR-2026-026 |
 | 2.9 | 2026-10-01 | Service Agreement and Outcome Report Templates; the Initiative Brief for every Initiative. | DR-2026-026 |
+| 2.10 | 2026-10-01 | The twelve evidence Templates: Decision Record, Assignment Map, AI Incident Review, Registry Snapshot, Proposal added; Notes became the Steering Summary; listed in the order of use. | DR-2026-029 |

@@ -2,7 +2,7 @@
 id: AICC-TPL-07-EN
 title: Outcome Report
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -34,8 +34,8 @@ no data, and no code. Start with the executive summary, and keep it short.
 
 ## 3. Outcome against the targets
 
-[The outcome targets and the leading indicators of the Service Agreement, and where the figures live. The benefit that the function
-claims and confirms, by reference.]
+[The outcome against the targets of the Initiative Brief, by reference to where the figures live. The benefit that the function claims and
+confirms, and who confirms it, by reference.]
 
 ## 4. Capacity
 

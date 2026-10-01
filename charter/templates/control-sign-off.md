@@ -3,30 +3,34 @@ id: AICC-TPL-03-EN
 title: Control Sign-Off
 status: active
 revision: 2.0
-created: 2026-09-30
+created: 2026-10-01
 revised: 2026-10-01
 ```
 
 # Control Sign-Off
 
-**Template.** The Control Function Contact completes this for a validation or a stop.
+**Template.** The decision of a Control Function Contact: a validation, a stop, a provider check, or an Exception. It is a simple sign-off: the
+decision, its date, and its scope. It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |
-| Solution | SOL-[nnn] |
+| Type | [validation / stop / provider check / Exception] |
+| Subject | [SOL-nnn, or the provider] |
+| Scope | [what the decision covers] |
 | Control Function and Contact | [function, name] |
-| Result | [validated / validated with conditions / stopped] |
+| Decision | [validated / validated with conditions / stopped / Exception granted / refused] |
 | Date | [date] |
 | Valid until, or revalidate on | [date, or the change that requires it] |
 
-## 1. Requirements checked
+## Limits and conditions
 
-[The requirements of the AI Policy for the Risk Tier that were checked: validation, human oversight, testing for bias and error, monitoring and logging, disclosure and contestability.]
+[What the subject shall not be used for, for example no output on an individual application. Any change to these limits needs a new
+decision. Conditions, with owner and date.]
 
-## 2. Limits of use
+## For an Exception
 
-[What the Solution shall not be used for, for example: no output on an individual application. Any change to these limits needs a new validation.]
+[The expiry date and the compensating control.]
 
-## 3. Conditions or reasons
+## Evidence reviewed
 
-[Conditions to meet, with owner and date; or the reasons for a stop.]
+[References only.]

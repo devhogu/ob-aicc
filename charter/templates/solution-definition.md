@@ -2,7 +2,7 @@
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 2.1
+revision: 2.2
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -45,11 +45,9 @@ mitigation, and the residual risk. Knowledge sources, with owner and review date
 [Tier 1, 2, or 3, with the reasons, assigned by the AICC Lead on [date] and told to the Domain Owner; raised by a Control Function Contact
 where that applies.]
 
-## 5. Benefit and acceptance
+## 5. Acceptance criteria
 
-| Benefit | How it is measured | Where the figures live | Acceptance criteria |
-| --- | --- | --- | --- |
-|  |  |  |  |
+[The criteria for the acceptance of the Solution. The benefit and the outcome targets are in the Initiative Brief.]
 
 ## 6. Life after delivery
 

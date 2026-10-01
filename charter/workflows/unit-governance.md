@@ -39,7 +39,7 @@ The following table states each horizon.
 | --- | --- | --- | --- | --- |
 | Yearly | The first quarterly Steering of the year | Strategic Priorities, Investment Envelopes, Guardrails, the Roadmap, the AI Risk Appetite Statement, the documents, and the strategy proposal | Executive Sponsor, with the AICC Lead owning the documents | Decision Log; Priorities; strategy proposal |
 | Quarterly | PI Review and Demo, Inspect and Adapt, PI Planning, quarterly Steering | The results of the PI, the quarterly risk check with the Control Function Contacts, the Maturity Level, the next PI | Executive Sponsor | Quarterly Report; report to the Board Committee; PI snapshot; Decision Log |
-| Monthly | IT Review and Demo, monthly Steering | Progress, risks, blockers, acceptances | Executive Sponsor for his decisions; product owners for acceptance | Decision Log; Notes |
+| Monthly | IT Review and Demo, monthly Steering | Progress, risks, blockers, acceptances | Executive Sponsor for his decisions; product owners for acceptance | Decision Log; Steering Summary |
 | Weekly | Weekly Planning, Weekly Review | The flow, the Limits on Work in Progress, the Dependencies | AICC Lead | Dashboard |
 | On an event | Not scheduled | An AI Incident, an Exception, a stop, a risk beyond appetite, a change of provider or regulation, a change of a Role holder | As the Operating Model states | Decision Log; Risks and Issues; Appointments |
 

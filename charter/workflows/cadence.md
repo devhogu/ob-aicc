@@ -157,7 +157,7 @@ the longest.
 1. The flow is a template. A real week or event moves by the rules of the Calendar: to the working day before a blocked or gray day,
 never after, and the IP week to the week before when it is blocked or gray.
 2. An event that is missed is not held later. Its intent is covered at the next event, and the Weekly Review notes it.
-3. The Weekly Review may be held in writing. Notes are kept only for Decisions and actions, with the Notes Template.
+3. The Weekly Review may be held in writing. A record of an event is kept only for Decisions and actions, in the Steering Summary for a Steering and otherwise in the work items.
 4. Nothing in the Cadence is approved by anyone.
 
 ## 8. The dated calendar of events

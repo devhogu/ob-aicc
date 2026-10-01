@@ -2,7 +2,7 @@
 id: AICC-TPL-06-EN
 title: Service Agreement
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -26,7 +26,7 @@ one page. It is reviewed at each IT, and each change is noted at the end.
 | Issued by the AICC Lead on | [date] |
 | Notified | [Domain Owner, business owners, stakeholders] |
 
-**Scope.** [The intent, and the backlog by reference.] **Out of scope.** [What is excluded.]
+**Scope and outcome targets.** [As in the Initiative Brief of the Initiative; state here only what the Brief does not, or what has changed.] **Out of scope.** [What is excluded.]
 
 **Deliverables and definition of done.**
 
@@ -34,8 +34,7 @@ one page. It is reviewed at each IT, and each change is noted at the end.
 | --- | --- |
 |  |  |
 
-**Capacity per IT.** [Days per IT for AICC.] **Outcome targets and leading indicators.** [The outcome, and the indicators by
-reference to where the figures live.]
+**Capacity per IT.** [Days per IT for AICC.]
 
 **Assumptions.** [What AICC relies on from the function, such as the expert, the access, and the data. If one fails, AICC re-plans the
 scope and the dates.]

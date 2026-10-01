@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 4.4
+revision: 4.5
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -140,6 +140,7 @@ few definitions because it is read alone.
 | Review week | The last week of an IT | |
 | Short forms | PI is Program Increment, IT is Iteration, and IP is the Innovation and Planning week. PIQ1 to PIQ4 name the PIs of a year, IT01 to IT12 its ITs, and W1 to W5 the weeks of an IT |  |
 | Event | A meeting of a loop, with a stated intent: Daily Stand-up, Weekly Planning, Weekly Review, Backlog Refinement, IT Planning, IT Review and Demo, IT Retrospective, PI Review and Demo, Inspect and Adapt, PI Planning, and Steering |  |
+| Steering Summary | The evidence record of one Steering: attendance, advice, Decisions, and actions | minutes |
 | Quarterly Report | The report of the AICC Lead at the PI Review on the Portfolio, benefits, risks, and Maturity Levels |  |
 | Finding | A deviation found by a check of the documents, by an audit, or by a supervisor |  |
 | Activation | The decision that makes a document active | approval (of a document) |
@@ -200,3 +201,4 @@ few definitions because it is read alone.
 | 4.2 | 2026-10-01 | Business Model, Engagement, Service Agreement, Assumption, Support level, Outcome Report, Agreement Log, Stakeholder, and Reusable asset defined. | DR-2026-026 |
 | 4.3 | 2026-10-01 | Engagement is an Initiative with a client function; Phase and Adopted Solution defined; Handover replaces Handoff; the lane Urgent; Agreement Log removed. | DR-2026-027 |
 | 4.4 | 2026-10-01 | Evidence record, Working state, and Light mode defined; Record redefined. | DR-2026-028 |
+| 4.5 | 2026-10-01 | Steering Summary defined. | DR-2026-029 |
