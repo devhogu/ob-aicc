@@ -2,46 +2,84 @@
 
 ## 1. Intent and scope
 
-This workflow is the control loop of AICC as an organizational unit: how the unit is directed, how its work is organized and reported, and how it is controlled. It is the governance and administration that an auditor expects to find in a bank, and the answer to the question "how does your unit operate?". It covers the mandate, the planning, the reporting, the decisions, the controls, and the assurance. It does not cover how a solution is delivered, which is in the service delivery workflow.
+This workflow shows how AICC is directed, reported, and controlled as a unit of the Bank, and who does what in sequence. It answers the question "how does your unit operate?". The loops, the states, and the controls are drawn in the Operating Model, and this workflow does not draw them again. It adds the sequences between the Roles, which show the flow in time.
 
-The rules are in the Operating Model, the AICC Charter, and the AI Policy. This workflow shows the flow and the intent. It states no rule of its own. The events are those of the Cadence. Each control produces a record, and the Operating Model 8 states which.
+The rules are in the Operating Model, the AICC Charter, and the AI Policy. This workflow shows the flow and the intent, and states no rule of its own.
 
-## 2. The control loop by horizon
+## 2. Where each loop is drawn
 
-The loop runs on four horizons and on events. Each horizon takes the result of the shorter one below it and sets the direction of the next.
+The control of the unit runs as four loops that apply one control cycle. The following table says where each loop and each state machine is drawn.
 
-Figure 1 shows the loop. Direction flows down, from the yearly horizon to the weekly one, and control flows up, from the weekly review to the yearly strategy.
+| Loop | What it answers | Where it is drawn | Controls it carries |
+| --- | --- | --- | --- |
+| The cycle of a control | Trigger, decision, record, review, and correction | Operating Model, Figure 5 | Every control |
+| Direction, by horizon | Who sets direction, and who sees the results, and when | Operating Model, Figure 2 | C-02 to C-07, C-11, C-24 |
+| Decision | Who decides, and how a Decision is logged and sampled | Operating Model, Figure 1 | C-01, C-05, C-08, C-09, C-14, C-27 |
+| Event | What happens when something goes wrong or changes | Operating Model, Figure 3 | C-16, C-17, C-19, C-30, C-32 |
+| Evidence and assurance | How an auditor sees that the controls operate | Operating Model 7 and the Control Matrix | C-25, C-26, C-29 and the Control Matrix |
+| The life of a Risks and Issues item, and of a control status | The states of each | Operating Model, Figures 4 and 6 | C-32 and the Control Matrix |
+
+## 3. A month and a quarter in sequence
+
+The Teams, the AICC Lead, the Executive Sponsor, the Control Function Contacts, and the Board Committee exchange the following each month and each quarter. Figure 1 shows the sequence.
 
 ```mermaid
-flowchart TB
-  Y["Yearly: priorities, funding, guardrails, risk appetite, review of the documents, strategy proposal"]
-  Q["Quarterly: results of the PI, risk check, Maturity Level, report to the Board Committee"]
-  M["Monthly: progress, risks, blockers, decisions of the Executive Sponsor"]
-  W["Weekly: control of the flow and the Dependencies"]
-  E["On an event: AI Incident, Exception, stop, risk beyond appetite, change of provider or regulation, change of a Role holder"]
-  Y --> Q --> M --> W
-  W -.-> M -.-> Q -.-> Y
-  E -.-> M
-  E -.-> Q
+sequenceDiagram
+  participant T as Teams
+  participant L as AICC Lead
+  participant ES as Executive Sponsor
+  participant CF as Control Function Contacts
+  participant BC as Board Committee
+  participant R as Registry
+  T->>L: Weekly Review: flow, limits, Dependencies
+  L->>R: Dashboard kept current
+  T->>L: IT Review and Demo: results and acceptances
+  L->>ES: Monthly Steering: progress, risks, blockers
+  ES->>L: Samples the Decisions of the AICC Lead
+  ES-->>R: Steering Summary
+  Note over L,BC: Each quarter
+  L->>CF: Quarterly risk check
+  CF-->>ES: View within their remit
+  L->>ES: Quarterly Report
+  ES->>BC: Report approved and issued
+  L->>R: Registry Snapshot
 ```
 
-Figure 1: the control loop of the unit.
+Figure 1: a month and a quarter in sequence.
 
-The following table states each horizon.
+## 4. An AI Incident in sequence
 
-| Horizon | Events of the Cadence | What is set or reviewed | Decided by | Record produced |
-| --- | --- | --- | --- | --- |
-| Yearly | The first quarterly Steering of the year | Strategic Priorities, Investment Envelopes, Guardrails, the AI Risk Appetite Statement, the documents, and the strategy proposal | Executive Sponsor, with the AICC Lead owning the documents | Decision Log; Priorities; strategy proposal |
-| Quarterly | PI Review and Demo, Inspect and Adapt, PI Planning, quarterly Steering | The results of the PI, the quarterly risk check with the Control Function Contacts, the Maturity Level, the next PI, and the Roadmap, which the PI Planning proposes and the quarterly Steering confirms | Executive Sponsor | Quarterly Report; report to the Board Committee; Registry Snapshot; Decision Log |
-| Monthly | IT Review and Demo, monthly Steering | Progress, risks, blockers, acceptances | Executive Sponsor for the Decisions of the Steering; product owners for acceptance | Decision Log; Steering Summary |
-| Weekly | Weekly Planning, Weekly Review | The flow, the Limits on Work in Progress, the Dependencies | AICC Lead | Dashboard |
-| On an event | Not scheduled | An AI Incident, an Exception, a stop, a risk beyond appetite, a change of provider or regulation, a change of a Role holder | As the Operating Model states | Decision Log; Risks and Issues; Appointments |
+The incident is owned by the incident management of the Bank, and the AICC Lead is a stakeholder. Figure 2 shows who does what, in order.
 
-## 3. The reporting chain
+```mermaid
+sequenceDiagram
+  participant U as Anyone aware
+  participant IM as Incident management of the Bank
+  participant IT as IT function that operates the Solution
+  participant L as AICC Lead
+  participant CF as Control Function Contacts
+  participant ES as Executive Sponsor
+  participant BC as Board Committee
+  participant R as Registry
+  U->>IM: Reports the incident and says that AI is involved
+  IM->>L: Notifies the AICC Lead
+  IM->>IT: Handles and contains
+  L->>IT: Advises on the AI aspects, may bring the Solution Engineers
+  L->>CF: Informs
+  CF->>CF: Compliance decides on the regulator, data protection on the persons
+  opt Classified as major
+    L->>ES: Informs
+    ES->>BC: Tells the Board Committee
+  end
+  IM->>L: Post-incident review
+  L->>R: Risks and Issues entry and AI Incident Review
+```
 
-Reporting flows from the Team up to the Board Committee, and the Control Functions and internal audit stand beside it, independent of it.
+Figure 2: an AI Incident in sequence.
 
-Figure 2 shows the reporting chain and the independent lines.
+## 5. The reporting chain
+
+Reporting flows from the Teams up to the Board Committee, and the Control Functions and internal audit stand beside it, independent of it. Figure 3 shows the reporting chain and the independent lines.
 
 ```mermaid
 flowchart LR
@@ -52,37 +90,9 @@ flowchart LR
   IA -.assurance.-> B
 ```
 
-Figure 2: the reporting chain.
+Figure 3: the reporting chain.
 
-## 4. How a decision moves
-
-A decision is taken by the person doing the work, on the facts. It goes up only when one of the conditions of the Operating Model applies. A Control Function decides within its remit, and nobody overrides it.
-
-Figure 3 shows how a decision moves.
-
-```mermaid
-flowchart TB
-  A["A decision arises in the work"] --> B["The person doing the work decides on the facts"]
-  B --> C{"Affects another Domain or reaches outside the Bank, hard to reverse, exceeds a guardrail, accepts a risk beyond the appetite, or is Tier 3?"}
-  C -->|No| D["Noted in the work item"]
-  C -->|Yes| E["AICC Lead decides, or the Executive Sponsor for the strategic matters"]
-  E --> F["Entered in the Decision Log"]
-  B --> G{"Within the remit of a Control Function?"}
-  G -->|Yes| H["The Control Function decides; nobody overrides it"]
-  H --> F
-```
-
-Figure 3: the movement of a decision.
-
-## 5. The controls an auditor can test
-
-Each control is an event that already exists, and each leaves a record. The Operating Model 8 lists the controls, with their rule, their owner, their timing, and their evidence record. The loop above shows where they sit: the yearly controls on the strategy horizon, the quarterly ones on the results, the monthly ones on the review, and the event-driven ones when an incident, an exception, or a change occurs.
-
-## 6. Separation and independence
-
-The rules of separation and independence are in the Operating Model 4.4.
-
-## 7. The life of a document
+## 6. The life of a document
 
 The Document Catalog 3 and 4 state the life of a document. Figure 4 shows it.
 
@@ -98,6 +108,6 @@ stateDiagram-v2
 
 Figure 4: the life of a document.
 
-## 8. Where it runs
+## 7. Where it runs
 
 The loop will run in Jira and Confluence from the cutover of the working state (Operating Model 7.1): Confluence for the notes and reports, and Jira for the dashboards and the board. Until then the Registry holds the working state. The charter holds this schema. The Registry always holds the evidence record of each outcome that an auditor may ask for, and the raw material stays in the tools or in the systems of the functions.

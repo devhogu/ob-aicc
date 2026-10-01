@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 10.3
+revision: 10.4
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -16,6 +16,8 @@ revised: 2026-10-01
 1.2. It applies to AICC and to the Domains and Control Functions of the Bank that work with AICC.
 
 1.3. The Solution Lifecycle Model states how a Solution moves from a business need to its retirement, and how the work is paced. It works within this Operating Model, and this Operating Model prevails. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, and the unit governance. They state no rule of their own.
+
+1.4. A figure in this Operating Model illustrates a clause and states no rule of its own. Where a figure and a clause differ, the clause prevails.
 
 ## 2. What AICC is
 
@@ -103,6 +105,25 @@ revised: 2026-10-01
 | AICC Lead | The AICC Lead | Taking an item into discovery, standards, Templates, questions between Domains |
 | Executive Sponsor | The Executive Sponsor, after asking the AI Steering Committee | Strategic Priorities, funding, release of a Risk Tier 3 Solution, risks beyond appetite, retirement of an Initiative |
 
+Figure 1 shows how a Decision moves, and how it returns to the Steering as a sample and as a date to revisit.
+
+```mermaid
+flowchart TB
+  A["Decision arises in the work"] --> B["Person doing the work decides on the facts"]
+  B --> C{"Affects another Domain or reaches outside the Bank, hard to reverse, over a guardrail, risk beyond appetite, or Tier 3?"}
+  C -->|no| D["Noted in the work item"]
+  C -->|yes| E["AICC Lead, or the Executive Sponsor for strategic matters"]
+  B --> G{"Within the remit of a Control Function?"}
+  G -->|yes| H["Control Function decides; nobody overrides it"]
+  E --> F["Decision Log, and a Decision Record where required"]
+  H --> F
+  F --> S["Monthly Steering samples the Lead's Decisions"]
+  F --> R["Revisit date"]
+  R --> B
+```
+
+Figure 1: the movement of a Decision.
+
 5.4. A Control Function decides within its remit, and its validation or stop is final for that remit. Nobody shall override it. A disagreement goes to the head of that Control Function. The Executive Sponsor may raise it with executive management and shall not set a validation or a stop aside. A risk beyond the AI Risk Appetite Statement may be accepted only with a report to the Board Committee. A stop is final. The person who suspended a Solution lifts the suspension when the facts allow.
 
 5.5. Where the people concerned do not agree, the person who holds the decision under 5.3 decides after hearing them. The others then support the Decision. A dissent may be noted in the Decision Log.
@@ -123,6 +144,23 @@ revised: 2026-10-01
 | Weekly | The Weekly Review | The flow, the Limits on Work in Progress, and the Dependencies, as the Solution Lifecycle Model states | AICC Lead | Dashboard |
 | On an event | Not scheduled | An AI Incident, an Exception, a stop, a risk beyond the appetite, a change of provider or regulation, a material change in the use of AI, a finding of an audit or a supervisor, or a change of a Holder | As this Operating Model states | Decision Record; Risks and Issues; Appointments |
 
+Figure 2 shows the horizons: direction flows down from the yearly horizon to the weekly one, and evidence flows up.
+
+```mermaid
+flowchart TB
+  Y["Yearly<br/>priorities, funding, appetite, documents"]
+  Q["Quarterly<br/>results, risk check, Maturity Level, Board report"]
+  M["Monthly<br/>progress, risks, sample of decisions"]
+  W["Weekly<br/>flow, limits, Dependencies"]
+  E["On an event<br/>incident, exception, stop, finding, change"]
+  Y -->|direction| Q -->|direction| M -->|direction| W
+  W -.->|evidence| M -.->|evidence| Q -.->|evidence| Y
+  E -.-> M
+  E -.-> Q
+```
+
+Figure 2: the control loop by horizon.
+
 6.2. The Steering shall meet monthly and quarterly. The monthly Steering shall review progress, risks, and blockers, the acceptances, and a sample of the Decisions of the AICC Lead, of at least three Decisions chosen by the Executive Sponsor. The quarterly Steering shall review the results of the Program Increment, take the quarterly risk check, confirm the Maturity Level and the Roadmap that the PI Planning proposes, and receive the Quarterly Report, from which the report to the Board Committee is prepared. The quarterly risk check reviews the open Risks and Issues, the open Exceptions, the Risk Tier reassessments that are due, and the reliance on providers and on the Platform Owner. The Control Function Contacts shall take part in it.
 
 6.3. The first quarterly Steering of the year also sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails, considers the yearly Proposal of the AI adoption strategy, and reviews the Statement of Intent, the AICC Charter, this Operating Model, the Solution Lifecycle Model, the AI Policy, and the AI Risk Appetite Statement. The Executive Sponsor calls an extra review on a material change in the use of AI, in a principal provider, or in regulation, or after an audit or supervisory finding.
@@ -137,11 +175,32 @@ revised: 2026-10-01
 
 6.8. An event in the last row of the table in 6.1 is handled in the section that governs it: a stop and a risk beyond the appetite under 5.4, a change of a Holder under 4.6, and an AI Incident and an Exception under the AI Policy. Each leaves the record that the table names.
 
+Figure 3 shows where each event is handled and how it returns to the Steering.
+
+```mermaid
+flowchart TB
+  EV["Event"] --> W{"Which event?"}
+  W -->|AI Incident| I["Incident management of the Bank<br/>IT function operates, AICC Lead is a stakeholder"]
+  W -->|Exception| X["Control Function, or AICC Lead for its own requirement"]
+  W -->|Stop or suspension| P["Control Function Contact, or AICC Lead"]
+  W -->|Risk beyond appetite| A["Executive Sponsor, with a report to the Board Committee"]
+  W -->|Change of provider, regulation, or Holder| H["Extra review, or Appointments Record"]
+  I --> L["Recorded: ticket, Risks and Issues, Review"]
+  X --> L
+  P --> L
+  A --> L
+  H --> L
+  L --> M["Monthly Steering reviews until closed"]
+  M --> Y["Lessons into Standards, AI Policy, and the yearly review"]
+```
+
+Figure 3: the handling of an event.
+
 ## 7. Records and evidence
 
-7.1. The live state of the work is the working state: the backlogs, the boards, the Roadmap, the Calendar, the Dependency Map, the Dashboard, the Teams, and the Program Increment folder. Until Jira and Confluence run the work, the Registry holds the working state and the AICC Lead keeps it current by hand. From the date of a Decision of the AICC Lead that moves the working state to Jira and Confluence, the Registry no longer holds it. The Decision is taken when Jira and Confluence hold the working state and the first Registry Snapshot has been taken.
+7.1. The live state of the work is the working state: the backlogs, the boards, the Roadmap, the Calendar, the Dependency Map, the Dashboard, the Teams, and the Program Increment folder. 
 
-7.2. The evidence records shall always be kept in the Registry. An evidence record is a closed and dated extract, taken when an event happens, such as a Decision, an approval, a sign-off, an acceptance, an incident, or an appointment, and at the close of each IT and each PI. It states what happened, who decided or acted, on which facts, and where the live item is. It copies no discussion. Jira, Confluence, and Service Management are not an evidence store.
+7.2. The evidence records shall always be kept in the Registry. An evidence record is a closed and dated extract, taken when an event happens, such as a portfolio Decision, an approval, a sign-off, an acceptance, an high-impact incident, or an appointment. It states what happened, who decided or acted, on which facts, and where the live item is.  Jira, Confluence, and Service Management are not an evidence store.
 
 7.3. The Registry also keeps living records that are current by nature: the Priorities, the Standards, the Risks and Issues, the AI Registry, and the Appointments. The Solution Definitions are living records in the Portfolio, and each Registry Snapshot records their state, Risk Tier, and release, which makes the Snapshot their evidence. The README of the Registry lists all the Records by class.
 
@@ -194,6 +253,56 @@ revised: 2026-10-01
 
 8.2. A control that did not operate, and each finding of an audit or a supervisor, shall be entered in the Risks and Issues Record with an owner and a due date, and the monthly Steering shall review it until it is closed.
 
+Figure 4 shows the states of an item of the Risks and Issues Record. An AI Incident, an Exception, a finding, a risk, and an issue follow the same states.
+
+```mermaid
+stateDiagram-v2
+  [*] --> Raised
+  Raised --> Owned: owner and due date
+  Owned --> Handled: contained or decided
+  Handled --> Reviewed: reviewed at the monthly Steering
+  Reviewed --> Closed: closed
+  Reviewed --> Owned: not resolved
+  Owned --> Expired: Exception reaches its expiry
+  Expired --> [*]
+  Closed --> [*]
+```
+
+Figure 4: the life of an item of the Risks and Issues Record.
+
+8.3. Each control follows the cycle of Figure 5: a trigger, a decision at the level that this Operating Model names, a record, and a review. The Control Matrix gives each control one of four statuses, which Figure 6 shows: Operating, Open, No occurrence yet, or Not yet due.
+
+```mermaid
+flowchart LR
+  T["Trigger<br/>event, date, request"] --> D["Decide<br/>at the level the Operating Model names"]
+  D --> R["Record<br/>Decision Log, Sign-Off, Checklist"]
+  R --> V["Review<br/>monthly sample, quarterly check, audit test"]
+  V --> C{"Operated as required?"}
+  C -->|yes| K["Control stays Operating"]
+  C -->|no| F["Deficiency entered in Risks and Issues"]
+  F --> X["Corrected and reviewed monthly until closed"]
+  X --> T
+  K --> T
+```
+
+Figure 5: the cycle of a control.
+
+```mermaid
+stateDiagram-v2
+  state "Not yet due" as NotYetDue
+  state "No occurrence yet" as NoOccurrence
+  [*] --> NotYetDue
+  [*] --> NoOccurrence
+  NotYetDue --> Operating: first occurrence evidenced
+  NoOccurrence --> Operating: trigger happens and is evidenced
+  Operating --> Open: evidence missing or late
+  Open --> Operating: evidence entered
+  Open --> Deficiency: not corrected
+  Deficiency --> Operating: closed in Risks and Issues
+```
+
+Figure 6: the status of a control in the Control Matrix.
+
 ## Change log
 
 | Revision | Date | Change | Decision |
@@ -239,3 +348,4 @@ revised: 2026-10-01
 | 10.1 | 2026-10-01 | Acceptance Checklist as evidence of the release. | DR-2026-041 |
 | 10.2 | 2026-10-01 | A Decision goes to a higher level when it accepts a risk beyond the appetite, not for any risk accepted within it. | DR-2026-041 |
 | 10.3 | 2026-10-01 | Auditor review: the AICC Lead may not accept or release a Solution that the AICC Lead built; 4.6 split into 4.6 to 4.8; a stop is final; the Steering sample and the quarterly risk check defined; record integrity and access review; deficiencies (8.2); controls tightened and C-26 to C-32 added. | DR-2026-042 |
+| 10.4 | 2026-10-01 | Six figures: the movement of a Decision, the horizons, the handling of an event, the life of a Risks and Issues item, the cycle of a control, and the status of a control; clause 1.4 and clause 8.3. | DR-2026-043 |

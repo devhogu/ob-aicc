@@ -8,7 +8,7 @@ The loops and flows of AICC, as intent and control flow, not as activity detail.
 | [Portfolio and service delivery](service-delivery.md) | The value stream from a business need to a retired solution: scoping, business case, service definition, features, backlog, execution, deployment, operation, and life cycle | The portfolio Kanban, the execution of a Program Increment, and the continuous delivery pipeline |
 | [Cadence](cadence.md) | The events of the loops by week, IT, and PI, without dates | The cadence of iterations and Program Increments |
 | [Collaboration tooling](collaboration-tooling.md) | The tools and the portals that AICC uses, for what, and in which workflows | The tooling around the program |
-| [Unit governance](unit-governance.md) | The control loop of AICC as a unit: mandate, planning, reporting, decisions, controls, and assurance, on yearly, quarterly, monthly, and weekly horizons and on events | Lean governance and the portfolio funding and control |
+| [Unit governance](unit-governance.md) | The control of AICC as a unit in sequence: a month and a quarter, an AI Incident, the reporting chain, and the life of a document. The loops themselves are drawn in the Operating Model | Lean governance and the portfolio funding and control |
 
 Figure 1 shows how the workflows relate.
 

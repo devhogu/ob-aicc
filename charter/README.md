@@ -38,7 +38,7 @@ The contents list every file of the charter in the order of reading, with its li
 | 3.2 |  | [Portfolio and service delivery](workflows/service-delivery.md) | The value stream from a business need to a retired Solution |
 | 3.3 |  | [Cadence](workflows/cadence.md) | The events of the loops by week, Iteration, and Program Increment |
 | 3.4 |  | [Collaboration tooling](workflows/collaboration-tooling.md) | The tools and portals, and the workflows that use them |
-| 3.5 |  | [Unit governance](workflows/unit-governance.md) | The control loop of the unit: mandate, planning, reporting, decisions, controls, and assurance |
+| 3.5 |  | [Unit governance](workflows/unit-governance.md) | The control of the unit in sequence: a month and a quarter, an AI Incident, the reporting chain, and the life of a document |
 | 4 |  | **[Guides](guides/README.md)** | How the workflows and the organization are used, and what each leaves on record |
 | 4.1 |  | [Engagement guide](guides/engagement-guide.md) | How AICC engages a function, commits to it, delivers, and reports |
 | 4.2 |  | [Service delivery guide](guides/service-delivery-guide.md) | How an item moves from a need to a retired Solution, and who decides on the way |

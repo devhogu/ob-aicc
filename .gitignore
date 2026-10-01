@@ -16,3 +16,6 @@ portal/.tools/
 
 # Rust build output
 deploy/target/
+
+# Samba
+.smbdelete*
