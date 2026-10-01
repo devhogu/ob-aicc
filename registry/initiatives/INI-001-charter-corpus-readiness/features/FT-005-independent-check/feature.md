@@ -4,7 +4,7 @@
 | --- | --- |
 | Identifier | FT-005 |
 | Title | Independent check of the documents |
-| Epic | EP-001 Charter readiness |
+| Capability | CAP-001 Charter readiness |
 | Initiative | INI-001 |
 | State | Deferred |
 | Product owner | Executive Sponsor |

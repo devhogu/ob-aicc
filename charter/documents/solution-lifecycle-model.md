@@ -1,8 +1,8 @@
 ```yaml
-id: AICC-ORG-02-EN
+id: AICC-ORG-03-EN
 title: Solution Lifecycle Model
 status: active
-revision: 1.2
+revision: 1.5
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -11,11 +11,11 @@ revised: 2026-10-01
 
 ## 1. Purpose and scope
 
-1.1. This Solution Lifecycle Model states how a Solution moves from a business need to its retirement, and how the work is organized and paced on the way: the portfolio, the design, the delivery, and the management of the life cycle. Section 3 states the portfolio, section 4 the states and the Stages through design and delivery, section 5 the cadence, section 6 verification, release, and acceptance, and section 7 the life cycle.
+1.1. This Solution Lifecycle Model states how the work of AICC moves from the Program Backlog to the retirement of a Solution, and how it is organized and paced on the way: the levels and the backlogs, the states and the Stages, the cadence of the program and the iteration, verification, release, and acceptance, and the management of the life cycle. The portfolio level, which decides which Initiatives are taken in, funded, and stopped, is in the Portfolio Management Model.
 
 1.2. It applies to AICC and to the Domains and Control Functions of the Bank that work with AICC.
 
-1.3. The Operating Model states how AICC is governed and controlled as a unit of the Bank: its Roles, its Decisions, its control loop, its records, and its controls. This model works within them, and the Operating Model prevails. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, and the unit governance. They state no rule of their own.
+1.3. The Operating Model states how AICC is governed and controlled as a unit of the Bank: its Roles, its Decisions, its control loop, its records, and its controls. This model works within them, and the Operating Model prevails. The Portfolio Management Model states how the Initiatives are decided; this model takes the work from the Capabilities of an Initiative. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, and the unit governance. They state no rule of their own.
 
 ## 2. Principles of delivery
 
@@ -27,9 +27,9 @@ revised: 2026-10-01
 
 (c) Put value first: rank work by value and urgency relative to effort.
 
-## 3. Portfolio
+## 3. Levels and backlogs
 
-3.1. The work of AICC is structured in the levels of the following table. A Team delivers the work: a Solution Engineer with the Domain Expert and the Domain Owner, who is the product owner. AICC has the AICC Team, and a Domain may have its own Team.
+3.1. The work of AICC is structured in the levels of the following table. The Strategic Priority and the Initiative are managed by the Portfolio Management Model. A Team delivers the work: a Solution Engineer with the Domain Expert and the Domain Owner, who is the product owner. AICC has the AICC Team, and a Domain may have its own Team.
 
 | Level | Meaning | Kept in |
 | --- | --- | --- |
@@ -37,53 +37,47 @@ revised: 2026-10-01
 | Initiative | A business program: a long-term business service or product that delivers one or more Solutions. An Initiative that has a client function is an Engagement, with one Service Agreement for each client function; the client of enabling work is the Executive Sponsor | Portfolio Backlog |
 | Solution | A solution or service that an Initiative delivers for a Domain, with an offering type, a Risk Tier, and an AI Registry entry | The Portfolio, as a Solution Definition |
 | Capability | A capability of a Solution, delivered over one or more Program Increments (PI) | Program Backlog |
-| Feature | A deliverable of an Epic, which closes within one Program Increment and delivered over one or more Iterations (IT) | Program Backlog, then IT Backlog |
+| Feature | A deliverable of a Capability, which closes within one Program Increment and delivered over one or more Iterations (IT) | Program Backlog, then IT Backlog |
 | Work Item | A task of a Team within a Feature | The Team board |
 
-3.2. AICC keeps three backlogs. The Portfolio Backlog holds the Initiatives. The Program Backlog, also called the PI Backlog, holds the Capabilities and the Features. The IT Backlog holds the Features that the Teams work on in the IT. Each is ranked by value and urgency relative to effort, scored 1 to 5 for value, urgency, risk reduction or opportunity, and effort. The backlogs change continuously, because much of the work depends on people and events outside AICC. An Epic may run over several Program Increments. A Feature closes within its Program Increment. The items of a Program Increment state intent and direction, and what is done in an IT is decided in that IT.
+3.2. At this level AICC keeps two backlogs; the Portfolio Backlog is in the Portfolio Management Model. The Program Backlog, also called the PI Backlog, holds the Capabilities and the Features, grouped under their Initiatives. The IT Backlog holds the Features that the Teams work on in the IT. Each is ranked by value and urgency relative to effort, scored 1 to 5 for value, urgency, risk reduction or opportunity, and effort. The backlogs change continuously, because much of the work depends on people and events outside AICC. A Capability may run over several Program Increments. A Feature closes within its Program Increment. The items of a Program Increment state intent and direction, and what is done in an IT is decided in that IT.
 
-3.3. Work flows as in Kanban. The Portfolio Kanban shows the Initiatives by state. The Program Kanban shows the Capabilites and the Features by state, with the classes of service as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress apply to the states, the lanes, and each Domain. The Team pulls an approved item only when there is capacity. At each IT Planning the Team selects the Features for the month from the Program Backlog into its IT Backlog, and the Weekly Review keeps them under control. An item that waits for a person or an event outside AICC is waiting, and names its Dependency.
-
-3.4. AICC engages a Domain through a Service Agreement, as the Business Model states. The Domain Owner names a Domain Expert, usually the person who does the routine work. The first Solution is narrow. A Solution Engineer, appointed from AICC, the technology function, or the Domain under AICC direction, builds the Solution with the Domain Expert, and the states in section 4.1 follow.
-
-3.5. Every Initiative shall be written in a one-page Initiative Brief, which is its business case. An Initiative that exceeds an Investment Guardrail needs the approval of the Executive Sponsor.
-
-3.6. A Capability of enabling work may sit directly under an Initiative, without a Solution. Enabling work of AICC that builds no AI Solution has no Risk Tier.
+3.3. Work flows as in Kanban. The Program Kanban shows the Capabilities and the Features by state, with the classes of service as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress apply to the states, the lanes, and each Domain. The Team pulls an approved item only when there is capacity. At each IT Planning the Team selects the Features for the month from the Program Backlog into its IT Backlog, and the Weekly Review keeps them under control. An item that waits for a person or an event outside AICC is waiting, and names its Dependency.
 
 ## 4. States and Stages
 
-4.1. Every Initiative, Solution, Epic, and Feature is in one of the states of the Vocabulary. A Strategic Priority is Proposed, Active, Closed, or Cancelled, as the Executive Sponsor decides. An item moves as the following table states. This table is the only source of the moves.
+4.1. Every Initiative, Solution, Capability, and Feature is in one of the states of the Vocabulary. A Strategic Priority is Proposed, Active, Closed, or Cancelled, as the Executive Sponsor decides. An item moves as the following table states. This table is the only source of the moves.
 
 | From | To | When |
 | --- | --- | --- |
-| Proposed | Discovery | The AICC Lead takes it in: Initiatives, Solutions, and Epics, and Features at refinement |
+| Proposed | Discovery | The AICC Lead takes it in: Initiatives, Solutions, and Capabilities, and Features at refinement |
 | Proposed | Rejected, or Deferred | It is decided against at triage, or put on hold |
 | Discovery | Approved | The conditions of its level in section 4.2 are met, and its approver decides |
-| Discovery | Waiting, Deferred, Rejected, Pivoted, or Cancelled | A Dependency blocks it; it is put on hold; it is decided against; it is rerouted into a new item; or it is no longer needed |
-| Approved | Active | The Team pulls it, when there is capacity and its Dependencies are known. An Initiative or a Solution becomes active when its first Epic or Feature is pulled |
+| Discovery | Waiting, Deferred, Rejected, Pivoted, or Cancelled | A Dependency blocks it; it is put on hold; it is decided against; it is rerouted into a new item; or it is withdrawn without a decision on the merits |
+| Approved | Active | The Team pulls it, when there is capacity and its Dependencies are known. An Initiative becomes active when the AICC Lead pulls it into its MVP (Portfolio Management Model 5.2). A Solution becomes active when its first Capability or Feature is pulled |
 | Approved | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
 | Active | Completed | The work is finished |
 | Active | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
+| Active | Rejected | Only for an Initiative at the end of its MVP: the value is not seen (Portfolio Management Model 7.2) |
 | Active | Closed | Only for a Solution: it is retired, handed off, or ended, as section 7.1 states |
 | Active | Discovery | Only for a Solution: a change raises its Risk Tier or the check or the validation named it as requiring a new check, as the AI Policy states |
 | Waiting | The state it came from | The Dependency is cleared |
-| Waiting | Deferred or Cancelled | The Dependency will not clear, or the item is no longer needed |
+| Waiting | Deferred or Cancelled | The Dependency will not clear, or the item is withdrawn without a decision on the merits |
 | Deferred | Proposed | It is taken up again, and the keeper may resume it at the state it left |
-| Deferred | Rejected or Cancelled | It is decided against, if it was never approved, or it is no longer needed |
+| Deferred | Rejected or Cancelled | It is decided against, if it was never approved, or it is withdrawn without a decision on the merits |
 | Completed | Review | The product owner assesses it against its acceptance criteria |
-| Review | Active, or Accepted, or Cancelled | It is returned with what is missing; its criteria are met; or its outcome is no longer wanted |
+| Review | Active, or Accepted, or Rejected | It is returned with what is missing; its criteria are met; or its outcome is not wanted |
 | Accepted | Closed | The item is finished |
 
-4.2. A Stage is a phase of the work inside the discovery state or the active state of an item. The Stages, the approver, and the conditions of each level are in the following table. The AICC Lead shall confirm that the conditions are met and note it in the backlog of the level, or in the Portfolio for a Solution.
+4.2. A Stage is a phase of the work inside the discovery state or the active state of an item. The Stages of an Initiative are in the Portfolio Management Model 5.2. The Stages, the approver, and the conditions of each level are in the following table. The AICC Lead shall confirm that the conditions are met and note it in the backlog of the level, or in the Portfolio for a Solution.
 
 | Level | Discovery Stages | Approved by, and conditions | Active Stages | To be completed |
 | --- | --- | --- | --- | --- |
-| Initiative | Scoping, Business case | The Domain Owner, or the Executive Sponsor for an Initiative that spans Domains, and the Executive Sponsor above a guardrail. Until the Guardrails are set, the Executive Sponsor approves any commitment. The scope is agreed, the Initiative Brief is complete in its six sections, and the business case in it is approved | Implementation | Its Solutions are delivered, and its outcome is reviewed |
 | Solution | Definition | The Domain Owner approves the Solution Definition, with its type, Receiver, scope, capabilities, architecture, and data classes. The Risk Tier is assigned by the AICC Lead and told to the Domain Owner; the AI Registry entry is made; for Risk Tier 2 and 3, the Control Function Contact of compliance confirms the applicable law; an Experiment has its time-box and a Service its run cost and sunset | Delivery, then the Stages of its type in section 7.1 | It is delivered, as section 7.1 states |
-| Epic | Analysis: define the capability and break it into Features | The AICC Lead, with the Domain Owner consulted. Its Features are defined and ranked in the Program Backlog | Implementation | Its Features are closed |
+| Capability | Analysis: define the capability and break it into Features | The AICC Lead, with the Domain Owner consulted. Its Features are defined and ranked in the Program Backlog | Implementation | Its Features are closed |
 | Feature | Explore, Design | The Team, at IT Planning. Its acceptance criteria are stated, and its Dependencies are known, with any open one named | Develop, Verify, Deploy | It is deployed |
 
-4.3. Rejected means decided against on its merits, and applies only before an item is approved. Cancelled means no longer needed, and applies in any state from Discovery to Review except Completed. A suspension of a Solution is a flag on it, like waiting, and does not change its state. A stop by a Control Function is final and cancels the Solution. Retirement closes it, with no acceptance. The person who approves an item at its level also defers, rejects, cancels, or pivots it.
+4.3. Rejected means decided against on the merits because the value is not seen, before approval or after the MVP of an Initiative, or when the outcome under review is not wanted. Cancelled means withdrawn without a decision on the merits, such as an error, a mistake, or a duplicate, and applies in any state from Discovery to Review except Completed. A suspension of a Solution is a flag on it, like waiting, and does not change its state. A stop by a Control Function is final and cancels the Solution. Retirement closes it, with no acceptance. The person who approves an item at its level also defers, rejects, cancels, or pivots it.
 
 ## 5. Cadence
 
@@ -113,11 +107,11 @@ The events of the delivery loops are the Daily Stand-up, the Weekly Planning, th
 
 | Type | Owner after delivery | Stages after delivery | End |
 | --- | --- | --- | --- |
-| Service | AICC, for the whole life cycle, with a business case that states the run cost and a sunset rule. The product owner is the Domain Owner of the Domain it serves, and the Executive Sponsor for a Service across Domains | Operate, Evolve, Retire. New features come as Epics and Features | Retired, or cancelled |
+| Service | AICC, for the whole life cycle, with a business case that states the run cost and a sunset rule. The product owner is the Domain Owner of the Domain it serves, and the Executive Sponsor for a Service across Domains | Operate, Evolve, Retire. New features come as Capabilities and Features | Retired, or cancelled |
 | Product | The consumer owns the version delivered, and AICC supports it on demand | Handover, Support, Revise (a new version comes through the Portfolio Backlog), Retire for that consumer. A Product with many consumers or recurring requests becomes a Service through a business case | Retired for that consumer |
 | Experiment | None yet: it is time-boxed to a stated number of ITs, and ends in a Proposal. Its product owner is the Executive Sponsor when it has no Domain | Trial, Proposal, Handover | At the end of its time-box it goes to review: it is accepted with its lessons and closed, a Proposal is made, or it is cancelled. When a Receiver accepts the Handover, it is closed and AICC oversees the Adopted Solution |
 
-The phases of an Engagement map to the items as follows: the study is the discovery of the Initiative, the proof is the Experiment or the first Features of the Solution, delivery is the active state of the Epics and Features, and support is the life of the Solution after delivery.
+The phases of an Engagement map to the items as follows: the study is the discovery of the Initiative, the proof is the Experiment or the first Features of the Solution, delivery is the active state of the Capabilities and Features, and support is the life of the Solution after delivery.
 
 7.2. AICC oversees and reports on the Adopted Solutions that others deliver, in the Portfolio, as a Solution Definition marked as an Adopted Solution with its Receiver as owner. It is recorded when others begin to deliver a Solution that AICC proposed or oversees. It uses the states Proposed, Approved, Active, Closed, Rejected, and Cancelled, and records the Risk Tier when it is known. The owners and the Executive Sponsor decide on a Proposal of a Solution, and the Bank decides on a Proposal of the AI adoption strategy. The AI adoption strategy is a series of Proposals that AICC shapes from what it learns.
 
@@ -134,3 +128,6 @@ The phases of an Engagement map to the items as follows: the study is the discov
 | 1.0 | 2026-10-01 | Created from the Operating Model: the flow of work, the states and Stages, the cadence of the delivery loops, verification, release, acceptance, and the life cycle of a Solution. | DR-2026-040 |
 | 1.1 | 2026-10-01 | The Acceptance Checklist at the handover of a ready Solution to a Domain for use at scale; the Executive Sponsor signs for Risk Tier 3. | DR-2026-041 |
 | 1.2 | 2026-10-01 | Auditor review: change after release (7.3), review of live Solutions (7.4), retirement (7.5), production deployment, a stop is final (4.3), and clauses split. | DR-2026-042 |
+| 1.3 | 2026-10-01 | The portfolio layer moved to the Portfolio Management Model; Capability replaces Epic outside Jira; an Initiative becomes active when it is pulled into its MVP. | DR-2026-044 |
+| 1.4 | 2026-10-01 | Rejected is a decision on the merits, including after the MVP and in review; Cancelled is a withdrawal without such a decision. | DR-2026-045 |
+| 1.5 | 2026-10-01 | Citations of the Portfolio Management Model follow its new numbering. | DR-2026-047 |

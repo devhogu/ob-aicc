@@ -13,7 +13,7 @@ AICC is an internal consulting and innovation lab. It reports to the Executive S
 | Role | Purpose | Main responsibilities | Authority | Reports in | Typical competence |
 | --- | --- | --- | --- | --- | --- |
 | Executive Sponsor | Holds the mandate and the funding | Appoints the AICC Lead; sets the Strategic Priorities, the Envelopes, and the Guardrails; approves published output; reports to the Board Committee | Priorities, funding, the release of a Risk Tier 3 Solution, risks beyond appetite, the retirement of an Initiative | The line of the Bank | Executive management |
-| AICC Lead | Leads AICC as lead engineer and architect | Owns every document and Record; takes items in; issues Service Agreements and Outcome Reports; assigns and reassesses the Risk Tier; sets the training; leads the AI Incident review; prepares the Quarterly Report, with the concentration on one provider | Intake, standards, Templates, Epics, activation of documents, the approval of the use of a Solution in AICC for a data class | The Executive Sponsor | Engineering and architecture, delivery, and governance |
+| AICC Lead | Leads AICC as lead engineer and architect | Owns every document and Record; takes items in; issues Service Agreements and Outcome Reports; assigns and reassesses the Risk Tier; sets the training; leads the AI Incident review; prepares the Quarterly Report, with the concentration on one provider | Intake, standards, Templates, Capabilities, activation of documents, the approval of the use of a Solution in AICC for a data class | The Executive Sponsor | Engineering and architecture, delivery, and governance |
 | Solution Engineer | Owns a Solution end to end with the Domains | Designs the architecture, builds, deploys, and runs a Solution, checks the work of others, coaches Domain Experts, and keeps work visible | How a Solution is designed and built; the approval of Features at IT Planning | The AICC Lead for AICC; otherwise the own line | Engineering |
 | Domain Owner | Owns the results of AI adoption in a Domain | Names the Domain Expert; approves the business case and the Solution Definition; approves the data classes; releases; accepts; confirms the benefit; owns oversight in operation, disclosure, and contestability, and reviews monitoring and provider notices at each IT Review and Demo | Participation, funding, release for Risk Tier 1 and 2, acceptance | The line of the Domain | Business ownership |
 | Domain Expert | Early adopter and partner in a Domain | Explains the routine work, tries the Solution, scales adoption | None on funding, acceptance, or control | The line of the Domain | The routine work of the Domain |
@@ -34,12 +34,12 @@ R means responsible, A accountable, C consulted, and I informed. Each activity h
 | Activate and change the documents | I | | A | | | | | |
 | Take an item into discovery | | | A | | C | | | |
 | Approve the business case, below a guardrail and within a Domain | I | | R | | A | C | C | |
-| Approve the business case, above a guardrail or across Domains, and any business case until the Guardrails are set | A | C | R | | C | | | |
+| Approve the business case, above a guardrail or across Domains | A | C | R | | C | | | |
 | Issue the Service Agreement | | | A | R | C | | | |
 | Define the Solution, and approve its Solution Definition | | | R | C | A | C | C | |
 | Assign the Risk Tier | | | A | | I | | C | |
 | Approve the use of a Solution in a Domain for a data class | | | R | R | A | | C | |
-| Approve an Epic | | | A | | C | | | |
+| Approve a Capability | | | A | | C | | | |
 | Approve a Feature at IT Planning | | | C | A | C | C | | |
 | Check a Risk Tier 1 Solution, by the Checker | | | A | | | | | |
 | Validate a Risk Tier 2 or 3 Solution | | | C | C | I | | A | |

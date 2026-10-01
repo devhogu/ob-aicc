@@ -71,7 +71,7 @@ Risk: Customer and credit data is involved. Data protection and model risk check
 
 Expected Risk Tier: Risk Tier 2 is expected.
 
-Control Functions to consult: Data protection, model risk, information security, and compliance.
+Control Functions to clear the business case: Data protection, model risk, information security, and compliance.
 
 Dependencies: DEP-004 (named Domain Owners and Domain Experts), DEP-010 (the common approach for knowledge bases from INI-008), DEP-011 (access to mortgage rejection data and its data class; the controls), DEP-014 (validation by the Control Function Contacts).
 
@@ -79,7 +79,9 @@ Dependencies: DEP-004 (named Domain Owners and Domain Experts), DEP-010 (the com
 
 The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
 
-Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor while the Guardrails are not set (AICC Charter 4.2), with the date and the Decision Record ]
+Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, with the date and the Decision Record ]
+
+Clearance of the Control Function Contacts: [ The Contacts named in section 5, with the date of each clearance, before the business case is approved ]
 
 Acceptance on delivery: The head of the retail credit function. Acceptance closes the item.
 

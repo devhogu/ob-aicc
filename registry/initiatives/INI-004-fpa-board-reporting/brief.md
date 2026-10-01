@@ -71,7 +71,7 @@ Risk: The output reaches the Board and may reach investors, so the Executive Spo
 
 Expected Risk Tier: Risk Tier 2 is expected.
 
-Control Functions to consult: Model risk and information security, and each other remit concerned (AI Policy 3.3).
+Control Functions to clear the business case: Model risk and information security, and each other remit concerned (AI Policy 3.3).
 
 Dependencies: DEP-004 (a named Domain Expert), DEP-006 (the time of FP&A, the data sources, the Board portal), DEP-007 (the approval of each edition by the Executive Sponsor), DEP-014 (validation by the Control Function Contacts).
 
@@ -79,7 +79,9 @@ Dependencies: DEP-004 (a named Domain Expert), DEP-006 (the time of FP&A, the da
 
 The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
 
-Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor while the Guardrails are not set (AICC Charter 4.2), with the date and the Decision Record ]
+Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, with the date and the Decision Record ]
+
+Clearance of the Control Function Contacts: [ The Contacts named in section 5, with the date of each clearance, before the business case is approved ]
 
 Acceptance on delivery: Ademi Moldogazieva, head of the FP&A function. Acceptance closes the item.
 

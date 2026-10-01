@@ -28,11 +28,12 @@ The contents list every file of the charter in the order of reading, with its li
 | 2.1 | AICC-MND-02 | [AICC Charter](documents/aicc-charter.md) | Mission, authority, funding, risk appetite, offer, and measures of AICC |
 | 2.2 | AICC-MND-03 | [Business Model](documents/business-model.md) | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity |
 | 2.3 | AICC-ORG-01 | [Operating Model](documents/operating-model.md) | AICC as a unit of the Bank: Roles, Decisions, the control loop, records, and controls |
-| 2.4 | AICC-ORG-02 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How a Solution moves from a business need to retirement: portfolio, design, delivery, and life-cycle management |
-| 2.5 | AICC-POL-01 | [AI Policy](documents/ai-policy.md) | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions |
-| 2.6 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined terms and style |
-| 2.7 | AICC-MND-01 | [Statement of Intent on the Adoption of Artificial Intelligence](documents/statement-of-intent.md) | The intent, values, principles, and strategy of the Bank for AI |
-| 2.8 | AICC-REF-02 | [Document Catalog](documents/document-catalog.md) | The list of the documents and Templates, their life cycle, and their activation |
+| 2.4 | AICC-ORG-02 | [Portfolio Management Model](documents/portfolio-management-model.md) | How AICC decides which business initiatives to take in, fund, continue, and stop: the strategic themes, the portfolio Kanban, the business case, and the MVP |
+| 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How the work moves from the Program Backlog to the retirement of a Solution: levels and backlogs, states, cadence, verification, release, acceptance, and life-cycle management |
+| 2.6 | AICC-POL-01 | [AI Policy](documents/ai-policy.md) | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions |
+| 2.7 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined terms and style |
+| 2.8 | AICC-MND-01 | [Statement of Intent on the Adoption of Artificial Intelligence](documents/statement-of-intent.md) | The intent, values, principles, and strategy of the Bank for AI |
+| 2.9 | AICC-REF-02 | [Document Catalog](documents/document-catalog.md) | The list of the documents and Templates, their life cycle, and their activation |
 | 3 |  | **[Workflows](workflows/README.md)** | How the work flows, and on which events |
 | 3.1 |  | [Engagement](workflows/engagement.md) | How AICC and a function work together, from first contact to follow-on |
 | 3.2 |  | [Portfolio and service delivery](workflows/service-delivery.md) | The value stream from a business need to a retired Solution |
@@ -65,14 +66,14 @@ The contents list every file of the charter in the order of reading, with its li
 
 ## 4. How to read the charter
 
-A reader who is new to the charter reads the items 1, 2.1 to 2.5, and 2.6 as a reference, in the order of the contents. The Statement of Intent (2.7) gives the reasons behind the rules, and the Document Catalog (2.8) gives the status and the life cycle of each document. The workflows (3), the guides (4), and the Templates (5) follow, as the reader needs them.
+A reader who is new to the charter reads the items 1, 2.1 to 2.6, and 2.7 as a reference, in the order of the contents. The Statement of Intent (2.8) gives the reasons behind the rules, and the Document Catalog (2.9) gives the status and the life cycle of each document. The workflows (3), the guides (4), and the Templates (5) follow, as the reader needs them.
 
 A reader with a specific purpose follows the route in the following table.
 
 | Reader | Route | To find |
 | --- | --- | --- |
-| A head of function who brings a need | [Business Model](documents/business-model.md); [Engagement guide](guides/engagement-guide.md); [Engagement workflow](workflows/engagement.md); the Initiative Brief and Service Agreement Templates | How AICC engages a function, what it commits to, and what the function receives |
-| A new member of AICC | [Operating Model](documents/operating-model.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md); [AI Policy](documents/ai-policy.md); [Organization guide](guides/organization-guide.md); [Cadence guide](guides/cadence-guide.md) | The Roles, the rules, the first week of a Holder, and the rhythm of the events |
+| A head of function who brings a need | [Business Model](documents/business-model.md); [Portfolio Management Model](documents/portfolio-management-model.md); [Engagement guide](guides/engagement-guide.md); [Engagement workflow](workflows/engagement.md); the Initiative Brief and Service Agreement Templates | How AICC engages a function, what it commits to, and what the function receives |
+| A new member of AICC | [Operating Model](documents/operating-model.md); [Portfolio Management Model](documents/portfolio-management-model.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md); [AI Policy](documents/ai-policy.md); [Organization guide](guides/organization-guide.md); [Cadence guide](guides/cadence-guide.md) | The Roles, the rules, the first week of a Holder, and the rhythm of the events |
 | The Executive Sponsor or the Board Committee | [AICC Charter](documents/aicc-charter.md); [Unit governance guide](guides/unit-governance-guide.md), section 7; the Quarterly Report Template | The mandate, the funding, the risk appetite, the reporting chain, and what is reported |
 | A Control Function Contact | [AI Policy](documents/ai-policy.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md), section 6; [Operating Model](documents/operating-model.md), section 8; the Control Sign-Off Template | The Risk Tiers, the checks, the validation, and the right to stop |
 | Internal audit | [Operating Model](documents/operating-model.md), sections 6 to 8; the [Control Matrix](../registry/control-matrix.md); [Unit governance guide](guides/unit-governance-guide.md); [Organization guide](guides/organization-guide.md), section 8; the [Registry](../registry/README.md) | Each control with its rule, owner, timing, and evidence record, and the records themselves |

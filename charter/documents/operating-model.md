@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 10.4
+revision: 10.7
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -15,7 +15,7 @@ revised: 2026-10-01
 
 1.2. It applies to AICC and to the Domains and Control Functions of the Bank that work with AICC.
 
-1.3. The Solution Lifecycle Model states how a Solution moves from a business need to its retirement, and how the work is paced. It works within this Operating Model, and this Operating Model prevails. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, and the unit governance. They state no rule of their own.
+1.3. The Portfolio Management Model states how the Initiatives are taken in, funded, and stopped, and the Solution Lifecycle Model states how the work moves from the Program Backlog to the retirement of a Solution and how it is paced. They work within this Operating Model, and this Operating Model prevails. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, and the unit governance. They state no rule of their own.
 
 1.4. A figure in this Operating Model illustrates a clause and states no rule of its own. Where a figure and a clause differ, the clause prevails.
 
@@ -52,11 +52,11 @@ revised: 2026-10-01
 | Role | Does | Decides |
 | --- | --- | --- |
 | Executive Sponsor | Holds the mandate and the funding; appoints the AICC Lead; approves and issues the report to the Board Committee | The Strategic Priorities, the Investment Envelopes, and the Investment Guardrails; the release of a Risk Tier 3 Solution; any risk beyond the AI Risk Appetite Statement; the retirement of an Initiative; the approval of AI output published outside AICC; the acceptance of an item that spans Domains or is enabling work of AICC; the naming of acting Contacts |
-| AICC Lead | Leads AICC as its lead engineer and architect; is accountable for this Operating Model and for every document and Record of AICC; prepares the Quarterly Report; presents to the AI Steering Committee | Taking an item into discovery; the issue of a Service Agreement; the approval of Epics; the approval of the use of a Solution in AICC for a data class; the Risk Tier, which the AICC Lead tells to the Domain Owner; the suspension of a Solution; standards, architecture, and Templates; questions between Domains; the activation of every document; an Exception to a requirement set by AICC |
+| AICC Lead | Leads AICC as its lead engineer and architect; is accountable for this Operating Model and for every document and Record of AICC; prepares the Quarterly Report; presents to the AI Steering Committee | Taking an item into discovery; the issue of a Service Agreement; the approval of Capabilities; the approval of the use of a Solution in AICC for a data class; the Risk Tier, which the AICC Lead tells to the Domain Owner; the suspension of a Solution; standards, architecture, and Templates; questions between Domains; the activation of every document; an Exception to a requirement set by AICC |
 | Solution Engineer | Owns a Solution end to end: designs it, decides its architecture, builds it, deploys it, and runs it with the Domains; keeps the work visible; coaches Domain Experts; checks the work of others | How a Solution is designed and built; the approval of Features at IT Planning; the order in which the team pulls work within the agreed priorities |
 | Domain Owner | Owns the results of AI adoption in the Domain and acts as product owner of its Solutions; names the Domain Expert | Whether the Domain takes part in an Initiative; funding of the Solutions of the Domain; the approval of the use of a Solution in the Domain for a data class, and the approvals that the rules of the Bank require; the acceptance of an item of the Domain; the release of a Risk Tier 1 or 2 Solution, after the check or the validation; the retirement of a Solution |
 | Domain Expert | Explains the routine work; works with the Solution Engineer; tries the Solution in real work; then scales adoption and trains colleagues | Nothing on funding, acceptance, or control |
-| Control Function Contact | Advises on requirements; may raise the Risk Tier within its remit, and the Contact of model risk alone may lower it; validates Solutions; may suspend or stop a Solution | Validation, raising the Risk Tier, a suspension, a stop, and an Exception to a control requirement, each within the remit of the Control Function |
+| Control Function Contact | Advises on requirements; may raise the Risk Tier within its remit, and the Contact of model risk alone may lower it; clears a business case that expects Risk Tier 2 or 3; validates Solutions; may suspend or stop a Solution | The clearance of a business case, validation, raising the Risk Tier, a suspension, a stop, and an Exception to a control requirement, each within the remit of the Control Function |
 | Platform Owner | Provides and operates the AI Platform, outside AICC, to the requirements in the Standards Record; keeps the evidence, logs, and traces on which the validation relies | The design of the AI Platform within those requirements |
 
 4.3. The team of AICC agrees who takes the Hats that the work needs, such as the keeper of the Program Backlog, the facilitator of the events, or the coach. A Hat is not a Role, changes when the team decides, and needs no appointment.
@@ -226,7 +226,7 @@ Figure 3: the handling of an event.
 | C-06 | Results, risk check, and Maturity Level | 6.2; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot |
 | C-07 | Report to the Board Committee | Charter 7.2 | AICC Lead prepares; Executive Sponsor approves and issues | Quarterly | Quarterly Report, with its issuance block | Quarterly Report |
 | C-08 | Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
-| C-09 | Approval of the business case | Solution Lifecycle Model 4.2; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail | When the Initiative is approved | Initiative Brief, complete in its six sections; Decision Record | Initiative Brief |
+| C-09 | Approval of the business case | Portfolio Management Model 6.3, 6.4; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail or across Domains; the Control Function Contacts clear it | When the Initiative is approved | Initiative Brief, complete in its six sections, with the clearances; Decision Record | Initiative Brief |
 | C-10 | Outcome Report, acceptance, and confirmation of the benefit | Solution Lifecycle Model 6.3; Business Model 5.5, 7.3 | AICC Lead issues; product owner accepts; Domain Owner confirms the benefit | At the end of the Engagement | Outcome Report | Outcome Report |
 | C-11 | Capacity used and benefit confirmed | Business Model 6 | AICC Lead | Quarterly | Quarterly Report | Quarterly Report |
 | C-12 | Risk Tier assignment | AI Policy 3.2 | AICC Lead | When the Solution is defined | Solution Definition; AI Registry entry, with who assigned it and when | Solution Definition |
@@ -349,3 +349,6 @@ Figure 6: the status of a control in the Control Matrix.
 | 10.2 | 2026-10-01 | A Decision goes to a higher level when it accepts a risk beyond the appetite, not for any risk accepted within it. | DR-2026-041 |
 | 10.3 | 2026-10-01 | Auditor review: the AICC Lead may not accept or release a Solution that the AICC Lead built; 4.6 split into 4.6 to 4.8; a stop is final; the Steering sample and the quarterly risk check defined; record integrity and access review; deficiencies (8.2); controls tightened and C-26 to C-32 added. | DR-2026-042 |
 | 10.4 | 2026-10-01 | Six figures: the movement of a Decision, the horizons, the handling of an event, the life of a Risks and Issues item, the cycle of a control, and the status of a control; clause 1.4 and clause 8.3. | DR-2026-043 |
+| 10.5 | 2026-10-01 | The Portfolio Management Model separates the portfolio layer; the business case is approved under it. | DR-2026-044 |
+| 10.6 | 2026-10-01 | The Control Function Contacts clear a business case that expects Risk Tier 2 or 3; C-09 names the clearance. | DR-2026-045 |
+| 10.7 | 2026-10-01 | Citations of the Portfolio Management Model follow its new numbering. | DR-2026-047 |

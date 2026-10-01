@@ -4,7 +4,7 @@
 | --- | --- |
 | Identifier | FT-001 |
 | Title | Decide the open questions |
-| Epic | EP-001 Charter readiness |
+| Capability | CAP-001 Charter readiness |
 | Initiative | INI-001 |
 | State | Closed |
 | Product owner | Executive Sponsor |

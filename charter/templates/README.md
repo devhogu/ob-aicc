@@ -18,4 +18,4 @@ The forms of the records that AICC produces. A Template gives the form of a Reco
 | 12 | Appointments Record | [appointments-record.md](appointments-record.md) | An appointment, acting designation, change, or relief | `registry/appointments.md` |
 | 13 | Proposal | [proposal.md](proposal.md) | A Solution is proposed for adoption at scale | `registry/proposals/` |
 
-An Epic or a Feature has no Template. It is a line in the Program Backlog, and a Feature that needs more has a short file in the folder of its Initiative, with its acceptance criteria and its Dependencies.
+A Capability or a Feature has no Template. It is a line in the Program Backlog, and a Feature that needs more has a short file in the folder of its Initiative, with its acceptance criteria and its Dependencies.

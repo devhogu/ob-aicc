@@ -9,7 +9,7 @@ Kept here by hand until the cutover Decision, then held in Jira and Confluence. 
 | Record | Where | Holds |
 | --- | --- | --- |
 | Portfolio Backlog | [portfolio-backlog.md](portfolio-backlog.md) | The ranked Initiatives, and for each Engagement its client function, phases, support level, Service Agreement, and Outcome Report |
-| Program Backlog | [program-backlog.md](program-backlog.md) | The ranked Epics and Features |
+| Program Backlog | [program-backlog.md](program-backlog.md) | The ranked Capabilities and Features |
 | Kanban boards | [board.md](board.md) | The Portfolio Kanban and the Program Kanban, by state, with lanes and Limits on Work in Progress |
 | Roadmap | [roadmap.md](roadmap.md) | The three-month Roadmap by Program Increment, and the Milestones |
 | Calendar | [calendar.md](calendar.md) | Program Increments, Iterations, weeks, and the blocked and gray days |
@@ -38,7 +38,7 @@ Closed and dated extracts, always kept here. The Operating Model 8 lists the con
 | Record | Where | Holds |
 | --- | --- | --- |
 | Decision Log | [decision-log.md](decision-log.md) | Decisions, one line each; the Decision Records are in [decisions/](decisions/) |
-| Initiatives | [initiatives/](initiatives/) | One folder for each: `INI-001-short-title/` with its brief, Service Agreements, Outcome Reports, Epics, and Features |
+| Initiatives | [initiatives/](initiatives/) | One folder for each: `INI-001-short-title/` with its brief, Service Agreements, Outcome Reports, Capabilities, and Features |
 | Reports | [reports/](reports/) | Quarterly Reports, named `2026-PIQ4.md` |
 | Steering | [steering/](steering/) | The Steering Summaries |
 | Proposals | `proposals/` | The Proposals to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy. Created with the first one |
@@ -49,7 +49,7 @@ Closed and dated extracts, always kept here. The Operating Model 8 lists the con
 | Appointments | [appointments.md](appointments.md) | The Part C log of the Appointments Record is the evidence of every appointment, change, and relief |
 | Assessments | [assessments/](assessments/) | Earlier checks of the documents, kept for history |
 
-Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfolio), EP-nnn Epic, FT-nnn Feature, DEP-nnn Dependency, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards, AGR-nnn Service Agreement, OUT-nnn Outcome Report, SGN-nnn Control Sign-Off, AIR-nnn AI Incident Review, ACL-nnn Acceptance Checklist, SNP-yyyy-PIQn-ITnn Registry Snapshot, PRP-nnn Proposal, AP-nnn appointment entry. A Service Agreement and an Outcome Report are files in the folder of their Initiative, named `AGR-001.md` and `OUT-001.md`.
+Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfolio), CAP-nnn Capability, FT-nnn Feature, DEP-nnn Dependency, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards, AGR-nnn Service Agreement, OUT-nnn Outcome Report, SGN-nnn Control Sign-Off, AIR-nnn AI Incident Review, ACL-nnn Acceptance Checklist, SNP-yyyy-PIQn-ITnn Registry Snapshot, PRP-nnn Proposal, AP-nnn appointment entry. A Service Agreement and an Outcome Report are files in the folder of their Initiative, named `AGR-001.md` and `OUT-001.md`.
 
 The Registry holds the nil statements that an auditor needs. The Risks and Issues states the AI Incidents and Exceptions to date, and the AI Registry states the uses listed to date.
 

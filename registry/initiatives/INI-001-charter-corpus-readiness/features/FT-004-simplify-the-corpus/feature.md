@@ -4,7 +4,7 @@
 | --- | --- |
 | Identifier | FT-004 |
 | Title | Simplify the corpus |
-| Epic | EP-001 Charter readiness |
+| Capability | CAP-001 Charter readiness |
 | Initiative | INI-001 |
 | State | Closed |
 | Product owner | Executive Sponsor |

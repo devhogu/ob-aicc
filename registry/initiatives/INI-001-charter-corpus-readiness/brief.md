@@ -7,7 +7,7 @@
 | State and Stage | Active: Implementation |
 | Strategic Priority | None: enabling work of AICC |
 | Domain Owner (represents the client function) | AICC Lead, for the work of AICC itself (Operating Model 4.6) |
-| Solutions expected | None: enabling work, with Epics under the Initiative and no Solution |
+| Solutions expected | None: enabling work, with Capabilities under the Initiative and no Solution |
 | Service Agreement | Not applicable: enabling work, with the Executive Sponsor as client (Solution Lifecycle Model 3.1) |
 | Period | September to December 2026 |
 | Date of last change | 2026-10-01 |
@@ -53,15 +53,15 @@ Value: a unit that an auditor and HR can test, and that its people can follow.
 
 Risk: one person writes and owns the documents, so a person who did not write them checks them.
 
-Expected Risk Tier: none, because the work builds no AI Solution (Solution Lifecycle Model 3.6).
+Expected Risk Tier: none, because the work builds no AI Solution (Portfolio Management Model 8.2).
 
-Control Functions to consult: none.
+Control Functions to clear the business case: none.
 
 Dependencies: an independent person to check the documents [ named by the Executive Sponsor ].
 
 ## 6. Decision and acceptance
 
-Business case: [ Approved by the Executive Sponsor, as the Guardrails are not set (AICC Charter 4.2), with the date and the Decision Record ]
+Business case: [ Approved by the Executive Sponsor, as the client of enabling work, with the date and the Decision Record ]
 
 Acceptance on delivery: the Executive Sponsor, because it is enabling work of AICC. Acceptance closes the item.
 

@@ -4,7 +4,7 @@
 | --- | --- |
 | Identifier | FT-006 |
 | Title | Activate the documents |
-| Epic | EP-001 Charter readiness |
+| Capability | CAP-001 Charter readiness |
 | Initiative | INI-001 |
 | State | Closed |
 | Product owner | Executive Sponsor |

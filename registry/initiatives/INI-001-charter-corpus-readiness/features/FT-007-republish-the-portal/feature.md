@@ -4,7 +4,7 @@
 | --- | --- |
 | Identifier | FT-007 |
 | Title | Republish the portal from the active charter |
-| Epic | EP-001 Charter readiness |
+| Capability | CAP-001 Charter readiness |
 | Initiative | INI-001 |
 | State | Deferred |
 | Product owner | Executive Sponsor |

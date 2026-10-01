@@ -16,7 +16,7 @@ AICC commits to each Engagement in a Service Agreement, which states the outcome
 
 ## 4. Flow of work
 
-A business need becomes an Initiative with a business case. An Initiative delivers Solutions, and a Solution is delivered through monthly Iterations and quarterly Program Increments. Product owner accepts the delivered outcome. Source: Solution Lifecycle Model 3 to 7.
+A business need becomes an Initiative with a business case. An Initiative delivers Solutions, and a Solution is delivered through monthly Iterations and quarterly Program Increments. Product owner accepts the delivered outcome. Source: Portfolio Management Model; Solution Lifecycle Model 3 to 7.
 
 ## 5. Decisions and authority
 

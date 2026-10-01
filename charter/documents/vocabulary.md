@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 5.4
+revision: 5.6
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -15,7 +15,7 @@ revised: 2026-10-01
 
 ## 2. Precedence
 
-2.1. Where two documents differ, the higher prevails: the Statement of Intent on the Adoption of Artificial Intelligence, the AICC Charter, the Business Model, the Operating Model, the Solution Lifecycle Model, the AI Policy, the Document Catalog. This Vocabulary prevails on terms and style. Templates and Records yield to the documents. The workflows and the guides explain the documents and state no rule of their own.
+2.1. Where two documents differ, the higher prevails: the Statement of Intent on the Adoption of Artificial Intelligence, the AICC Charter, the Business Model, the Operating Model, the Portfolio Management Model, the Solution Lifecycle Model, the AI Policy, the Document Catalog. This Vocabulary prevails on terms and style. Templates and Records yield to the documents. The workflows and the guides explain the documents and state no rule of their own.
 
 ## 3. Style
 
@@ -84,14 +84,18 @@ revised: 2026-10-01
 | Handover | The transfer of a Solution to its Receiver, or its delivery to a consumer; it is complete when the Receiver accepts it |  |
 | Proposal | A proposal to the Bank to adopt a Solution at scale, or a proposal of the AI adoption strategy, submitted for decision |  |
 | Adopted Solution | A Solution that others deliver, which AICC oversees and reports on |  |
-| Epic | A capability of a Solution, delivered by the Teams over one or more Program Increments, held in the Program Backlog | capability (alone) |
-| Feature | A deliverable of an Epic that closes within one Program Increment | story |
+| Capability | A capability of a Solution, delivered by the Teams over one or more Program Increments, held in the Program Backlog, and grouped under its Initiative. It is an Epic in Jira only | epic (outside Jira) |
+| Feature | A deliverable of a Capability that closes within one Program Increment | story |
 | Work Item | A task of a Team within a Feature | ticket |
 | Portfolio Backlog | The ranked list of Initiatives |  |
-| Program Backlog | The ranked list of Epics and Features. Also called the PI Backlog | backlog (alone) |
+| Program Backlog | The ranked list of Capabilities and Features. Also called the PI Backlog | backlog (alone) |
 | IT Backlog | The Features that the Teams work on in one IT, tracked on the Program Kanban with priority lanes | sprint backlog |
-| Portfolio Kanban | The board of the Initiatives by state |  |
-| Program Kanban | The board of the Epics and Features by state, with the classes of service as lanes and the Limits on Work in Progress |  |
+| Portfolio Kanban | The board of the Initiatives by state, from the funnel to done |  |
+| Lean Portfolio Management (LPM) | The management of the portfolio on lean principles: the initiatives are tied to the strategy, the priorities are funded by an envelope and guardrails and not project by project, and decisions are taken in small steps on evidence. Its model is the Portfolio Management Model | |
+| Funnel | The Proposed state of an Initiative: an idea or a need not yet taken in | |
+| Minimum viable product (MVP) | A probe: the smallest version of the first Solution that is tried, to see whether it works and satisfies the need, and that tests the hypothesis of an Initiative against its leading indicators | |
+| Leading indicator | A measure that shows early whether the hypothesis of an Initiative holds | |
+| Program Kanban | The board of the Capabilities and Features by state, with the classes of service as lanes and the Limits on Work in Progress |  |
 | Lane | A class of service of the Program Kanban: Urgent, High priority, or Normal | swimlane (alone) |
 | Team | The people who deliver together: a Solution Engineer with the Domain Expert and the Domain Owner, who is the product owner | squad, pod |
 | Program Increment | One quarter of work, made of three Iterations; named PIQ1 to PIQ4 with the year. Short form: PI | release train |
@@ -157,7 +161,7 @@ revised: 2026-10-01
 | State | Meaning | Not used |
 | --- | --- | --- |
 | Proposed | Incoming, in a backlog, and not yet looked at |  |
-| Discovery | Being clarified: scoped, sized, defined, or designed. Work that precedes approval |  |
+| Discovery | Being clarified: researched, scoped, sized, defined, or designed. Work that precedes approval; it learns and does not try the Solution |  |
 | Approved | Cleared for work and queued to be pulled, with its Dependencies known |  |
 | Active | Work in progress |  |
 | Waiting | Stopped on a Dependency outside AICC, which is named |  |
@@ -167,8 +171,8 @@ revised: 2026-10-01
 | Accepted | The acceptance criteria are met, as a fact recorded with who and when. The Domain Owner approves a Solution Definition, and accepts a deliverable |  |
 | Closed | Complete and finished: accepted, or for a Solution retired, handed off, or ended |  |
 | Pivoted | Decomposed or rerouted into a new item, to which it is linked |  |
-| Rejected | Decided against before approval; it will not be done |  |
-| Cancelled | Work whose outcome is no longer needed, in any state from discovery to review, or a Solution that a Control Function stopped |  |
+| Rejected | Decided against on the merits, because the value is not seen: before approval, after the MVP, or in review. It will not be done |  |
+| Cancelled | Withdrawn without a decision on the merits, such as an error, a mistake, or a duplicate, in any state from discovery to review, or a Solution that a Control Function stopped |  |
 
 4.3. The following table defines the Stages. A Stage is a phase of the work inside the discovery or the active state of an item.
 
@@ -176,10 +180,11 @@ revised: 2026-10-01
 | --- | --- | --- |
 | Scoping | Initiative, discovery | Scoping the need with the function |
 | Business case | Initiative, discovery | Writing and approving the business case in the Initiative Brief |
-| Implementation | Initiative and Epic, active | Delivering the Solutions of the Initiative, or the Features of the Epic |
+| MVP | Initiative, active | Defining the architecture and the Solution Definition of the first Solution, and trying it as a probe to test the hypothesis |
+| Implementation | Initiative and Capability, active | Delivering the Solutions of the Initiative, or the Features of the Capability |
 | Definition | Solution, discovery | Defining the Solution in its Solution Definition |
-| Delivery | Solution, active | Delivering the Solution through its Epics and Features |
-| Analysis | Epic, discovery | Defining the capability and breaking it into Features |
+| Delivery | Solution, active | Delivering the Solution through its Capabilities and Features |
+| Analysis | Capability, discovery | Defining the capability and breaking it into Features |
 | Explore, Design | Feature, discovery | Exploring the need, and designing the executable architecture |
 | Develop, Verify, Deploy | Feature, active | Building it, checking or validating it, and deploying it |
 | Operate, Evolve, Retire | Service, active | Running the Service, improving it, and withdrawing it |
@@ -218,3 +223,5 @@ revised: 2026-10-01
 | 5.2 | 2026-10-01 | The Solution Engineer replaces the AICC Engineer. | DR-2026-038 |
 | 5.3 | 2026-10-01 | Severity of an AI Incident is set by the incident management of the Bank. | DR-2026-039 |
 | 5.4 | 2026-10-01 | Precedence lists the Solution Lifecycle Model; the states are moved by the Solution Lifecycle Model. | DR-2026-042 |
+| 5.5 | 2026-10-01 | Capability replaces Epic outside Jira; Lean Portfolio Management, Funnel, MVP, and Leading indicator defined; the MVP Stage; precedence lists the Portfolio Management Model. | DR-2026-044 |
+| 5.6 | 2026-10-01 | Rejected is a decision on the merits, including after the MVP; Cancelled is a withdrawal without one; Discovery is research and the MVP is a probe. | DR-2026-045 |

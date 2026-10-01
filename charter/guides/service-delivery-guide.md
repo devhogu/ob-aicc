@@ -11,8 +11,8 @@ This guide explains how an item moves through AICC, from a business need to a re
 | Strategic Priority | A theme set with the Board | Executive Sponsor | Priorities |
 | Initiative | A business program that delivers Solutions | Domain Owner; the Executive Sponsor above a guardrail or across Domains | Portfolio Backlog |
 | Solution | A solution or service, with a type, a Risk Tier, and a Receiver | Domain Owner approves its Solution Definition | The Portfolio |
-| Epic | A capability of a Solution | AICC Lead | Program Backlog |
-| Feature | A deliverable of an Epic, closed within one PI | The Team at IT Planning | Program Backlog, then IT Backlog |
+| Capability | A capability of a Solution | AICC Lead | Program Backlog |
+| Feature | A deliverable of a Capability, closed within one PI | The Team at IT Planning | Program Backlog, then IT Backlog |
 
 ## 3. The life of an item
 
@@ -55,4 +55,4 @@ A Solution has one type, and the type sets its life. A Service is run by AICC fo
 
 ## 8. Rule source
 
-Operating Model 4.2, 4.4, 5; Solution Lifecycle Model 3 to 7; AI Policy 2 and 3; the Service delivery workflow.
+Operating Model 4.2, 4.4, 5; Portfolio Management Model; Solution Lifecycle Model 3 to 7; AI Policy 2 and 3; the Service delivery workflow.

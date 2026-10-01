@@ -31,7 +31,7 @@ revised: 2026-10-01
 
 ## 2. Scope and capabilities
 
-[The minimum scope that tests the hypothesis and what is excluded. The capabilities (Epics) that deliver it.]
+[The minimum scope that tests the hypothesis and what is excluded. The capabilities (Capabilities) that deliver it.]
 
 ## 3. Architecture and data
 

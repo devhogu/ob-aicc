@@ -44,7 +44,7 @@ The Operating Model 8 lists each control with its rule, owner, timing, and evide
 | C-06 | Results, risk check, and Maturity Level | The Executive Sponsor sees results and risk each quarter | Detective | Read the Report and the Snapshot of the quarter |
 | C-07 | Report to the Board Committee | The Board Committee is informed | Detective | Read the issuance block: approver, date, recipient |
 | C-08 | Service Agreement for an Engagement | The commitment to a function is written before the work | Preventive | Compare the Agreement with the Initiative and its dates |
-| C-09 | Approval of the business case | An Initiative is funded only on a complete case | Preventive | Read the Completeness table and the Decision Record |
+| C-09 | Approval of the business case | An Initiative is funded only on a complete case that the Control Functions have cleared | Preventive | Read the Completeness table, the clearances of the Control Function Contacts, and the Decision Record |
 | C-10 | Outcome Report, acceptance, and confirmation of the benefit | The outcome is reported, accepted by its owner, and the benefit is confirmed by the function, not by AICC | Detective | Read the Report, the acceptance with who and when, and the confirmation with its source |
 | C-11 | Capacity used and benefit confirmed | AICC does not overcommit and claims only confirmed benefit | Detective | Compare capacity used with the Agreements and the benefit with the Outcome Report |
 | C-12 | Risk Tier assignment | Every Solution has a Tier that sets its checks | Preventive | Read the Tier, who assigned it, and when |

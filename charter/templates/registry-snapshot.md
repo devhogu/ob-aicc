@@ -24,7 +24,7 @@ revised: 2026-10-01
 | Level | Proposed | Discovery | Approved | Active | Review | Closed | Other |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Initiatives |  |  |  |  |  |  |  |
-| Epics |  |  |  |  |  |  |  |
+| Capabilities |  |  |  |  |  |  |  |
 | Features |  |  |  |  |  |  |  |
 
 ## 2. Changes since the last Snapshot

@@ -69,7 +69,7 @@ Risk: HR and compliance data is confidential or personal, so the Domain Owner ap
 
 Expected Risk Tier: Risk Tier 2 is expected for any Solution that follows (RI-014).
 
-Control Functions to consult: Information security, data protection, model risk, and compliance.
+Control Functions to clear the business case: Information security, data protection, model risk, and compliance.
 
 Dependencies: DEP-003 (the ranked candidates from INI-002), DEP-004 (named Domain Owners and Domain Experts), DEP-005 (approval of the data classes by each Domain Owner), DEP-014 (validation by the Control Function Contacts).
 
@@ -77,7 +77,9 @@ Dependencies: DEP-003 (the ranked candidates from INI-002), DEP-004 (named Domai
 
 The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
 
-Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor while the Guardrails are not set (AICC Charter 4.2), with the date and the Decision Record ]
+Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, with the date and the Decision Record ]
+
+Clearance of the Control Function Contacts: [ The Contacts named in section 5, with the date of each clearance, before the business case is approved ]
 
 Acceptance on delivery: The head of each function, for the part of its function. Acceptance closes the item.
 

@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 3.2
+revision: 3.3
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -47,12 +47,13 @@ revised: 2026-10-01
 | AICC-MND-02 | AICC Charter | Mission, authority, funding, risk appetite, offer, and measures of AICC | EN |
 | AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | EN |
 | AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the control loop, Records, and controls | EN |
-| AICC-ORG-02 | Solution Lifecycle Model | How a Solution moves from a business need to its retirement: portfolio, design, delivery, and life-cycle management | EN |
+| AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, and stop: the strategic themes, the portfolio Kanban, the business case, and the MVP | EN |
+| AICC-ORG-03 | Solution Lifecycle Model | How the work moves from the Program Backlog to the retirement of a Solution: levels and backlogs, states, cadence, verification, release, acceptance, and life-cycle management | EN |
 | AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN |
 | AICC-REF-01 | Vocabulary and Style | Terms and style | EN |
 | AICC-REF-02 | Document Catalog | This Catalog | EN |
 
-5.2. A new document is added only when no existing document can hold its content. The documents together number no more than eight, and no document is longer than about 80 clauses. A translation states the revision of the source that it translates.
+5.2. A new document is added only when no existing document can hold its content. The documents together number no more than nine, and no document is longer than about 80 clauses. A translation states the revision of the source that it translates.
 
 5.3. The workflows and the guides of the charter are changed like software, with their history in the repository, and are not activated. A Template is activated as 4.1 states. They state no rule of their own: the rules are in the documents.
 
@@ -120,3 +121,4 @@ The identifiers keep the order of creation, and the table is in the order of use
 | 3.0 | 2026-10-01 | The documents bind the Bank only: Entities and Group Arrangement removed. | DR-2026-036 |
 | 3.1 | 2026-10-01 | The Solution Lifecycle Model is added as the eighth document; the Operating Model is the governance and control model of the unit. | DR-2026-040 |
 | 3.2 | 2026-10-01 | The Acceptance Checklist Template. | DR-2026-041 |
+| 3.3 | 2026-10-01 | The Portfolio Management Model is added as the ninth document; the limit is nine. | DR-2026-044 |

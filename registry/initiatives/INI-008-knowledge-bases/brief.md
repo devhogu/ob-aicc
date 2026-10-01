@@ -70,7 +70,7 @@ Risk: Confidential documents are involved, so access follows the data class.
 
 Expected Risk Tier: Risk Tier 2 is expected.
 
-Control Functions to consult: Information security and data protection.
+Control Functions to clear the business case: Information security and data protection.
 
 Dependencies: DEP-004 (named Domain Owners and Domain Experts), DEP-012 (the list of functions and the knowledge they hold, from INI-002), DEP-013 (source documents with an owner and a review date), DEP-014 (validation by the Control Function Contacts).
 
@@ -78,7 +78,9 @@ Dependencies: DEP-004 (named Domain Owners and Domain Experts), DEP-012 (the lis
 
 The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
 
-Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor while the Guardrails are not set (AICC Charter 4.2), with the date and the Decision Record ]
+Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, with the date and the Decision Record ]
+
+Clearance of the Control Function Contacts: [ The Contacts named in section 5, with the date of each clearance, before the business case is approved ]
 
 Acceptance on delivery: The head of each function, for its knowledge base; the Executive Sponsor for the common approach. Acceptance closes the item.
 

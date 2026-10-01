@@ -28,7 +28,7 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 | --- | --- | --- | --- | --- | --- | --- |
 | Items | 0 | 6 | 0 | 1 | 0 | 0 |
 
-| Program Kanban: Epics and Features | Backlog | Ready | Active | Review | Done | Waiting on someone outside AICC |
+| Program Kanban: Capabilities and Features | Backlog | Ready | Active | Review | Done | Waiting on someone outside AICC |
 | --- | --- | --- | --- | --- | --- | --- |
 | Items | 2 | 0 | 1 | 0 | 5 | 0 |
 

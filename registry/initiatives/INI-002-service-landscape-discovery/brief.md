@@ -70,7 +70,7 @@ Risk: No Solution is built, so no Risk Tier applies. The portal shows internal i
 
 Expected Risk Tier: None.
 
-Control Functions to consult: Information security.
+Control Functions to clear the business case: Information security.
 
 Dependencies: DEP-001 (time and knowledge of the function heads and service owners), DEP-002 (access to and classification of the EA repository and the portal).
 
@@ -78,7 +78,9 @@ Dependencies: DEP-001 (time and knowledge of the function heads and service owne
 
 The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
 
-Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor while the Guardrails are not set (AICC Charter 4.2), with the date and the Decision Record ]
+Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, with the date and the Decision Record ]
+
+Clearance of the Control Function Contacts: [ The Contacts named in section 5, with the date of each clearance, before the business case is approved ]
 
 Acceptance on delivery: Executive Sponsor, because it is enabling work across all functions. Acceptance closes the item.
 

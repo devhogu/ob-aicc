@@ -18,7 +18,7 @@ Figure 1 shows the levels and how each one is broken into the next.
 flowchart TB
   T["Strategic Priority: a strategic theme set with the Board"] --> I["Initiative: a business program, long-term, held in the Portfolio Backlog"]
   I --> S["Solution: a solution or service, with a type, a Risk Tier, and a Receiver"]
-  S --> E["Epic: a capability, runs over one or more PIs, held in the Program Backlog"]
+  S --> E["Capability: a capability, runs over one or more PIs, held in the Program Backlog"]
   E --> F["Feature: closes within one PI, worked in the IT Backlog"]
   F --> W["Work Item: a task of the Team"]
 ```
@@ -30,7 +30,7 @@ Figure 1: the levels of the work.
 | Strategic Priority | Priorities | Years, reviewed yearly | Closed or cancelled by the Executive Sponsor |
 | Initiative | Portfolio Backlog and Portfolio Kanban | Long-term | When its outcome is reviewed and accepted |
 | Solution | The Portfolio | Per type | When its type ends |
-| Epic | Program Backlog and Program Kanban | One or more PIs | When its Features are closed |
+| Capability | Program Backlog and Program Kanban | One or more PIs | When its Features are closed |
 | Feature | Program Backlog, then IT Backlog | Within one PI | Within its PI, or split |
 | Work Item | The Team board | Within the IT | With its Feature |
 
@@ -93,7 +93,7 @@ The portfolio flow takes a need through the discovery stages of an Initiative an
 | Business scoping | Initiative, discovery: Scoping | Scope the need with the function: the problem, the outcome wanted, the fit with the Strategic Priorities | AICC Lead with the Domain Owner | The scope |
 | Business case | Initiative, discovery: Business case | State the hypothesis, the minimum scope, the benefit and how it is measured, the cost, and the risk | Domain Owner with the AICC Lead; the Executive Sponsor above a guardrail | The Initiative Brief; the Initiative is approved |
 | Solution definition | Solution, discovery: Definition | Define each Solution: its type, its Receiver, its scope, its capabilities, its architecture, its data classes, and its Risk Tier | AICC Lead with the Domain Expert; the Domain Owner approves | The Solution Definition in the Portfolio; the AI Registry entry |
-| Capabilities and features | Epic, discovery: Analysis; Feature, discovery: Explore and Design | Break the Solution into Epics and the Epics into Features, each with acceptance criteria and Dependencies | AICC Lead with the Domain Owner | Epics and Features in the Program Backlog; the Dependency Map |
+| Capabilities and features | Capability, discovery: Analysis; Feature, discovery: Explore and Design | Break the Solution into Capabilities and the Capabilities into Features, each with acceptance criteria and Dependencies | AICC Lead with the Domain Owner | Capabilities and Features in the Program Backlog; the Dependency Map |
 
 ## 5. The execution in the Program Increment
 
@@ -101,7 +101,7 @@ The execution takes the approved Features and builds them, on the loops of the C
 
 | Step | Event of the Cadence | Intent | Who | Output |
 | --- | --- | --- | --- | --- |
-| Set the intent | PI Planning | Choose the Epics and Features that the PI aims at, with their Dependencies | The Teams, the Domain Owners, the Executive Sponsor | The PI Objectives; the Roadmap |
+| Set the intent | PI Planning | Choose the Capabilities and Features that the PI aims at, with their Dependencies | The Teams, the Domain Owners, the Executive Sponsor | The PI Objectives; the Roadmap |
 | Select the Features | IT Planning | Select the Features for the month into the IT Backlog | The Team with the product owners | The IT Backlog |
 | Develop | Weekly loops | Build the minimum solution with the function | Solution Engineer with the Domain Expert | Working increments |
 | Verify | Before the first deployment | The check for Risk Tier 1; the validation by the Control Function Contacts for Risk Tier 2 and 3 | The Checker; the Control Function Contacts | The check, or the Control Sign-Off |
@@ -126,7 +126,7 @@ flowchart LR
   subgraph SV["Service: AICC owns the whole life cycle"]
     direction LR
     S1["Operate"] --> S2["Evolve"] --> S3["Retire"]
-    S2 -.new Epics and Features.-> S1
+    S2 -.new Capabilities and Features.-> S1
   end
   subgraph PR["Product: built for one consumer"]
     direction LR

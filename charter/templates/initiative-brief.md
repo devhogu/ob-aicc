@@ -2,7 +2,7 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 4.0
+revision: 4.1
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -58,11 +58,11 @@ The brief has these six sections from the day it is created, and no section is r
 
 ## 5. Risks, dependencies, and Risk Tier
 
-[The risks, the expected Risk Tier of the Solutions, the Control Functions to consult, and the Dependencies on other items, functions, or persons.]
+[The risks, the expected Risk Tier of the Solutions, the Control Functions that clear the business case, and the Dependencies on other items, functions, or persons.]
 
 ## 6. Decision and acceptance
 
-[Go, no-go, or return, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, and for any commitment until the Guardrails are set. The Service Agreement issued (AGR-nnn). On delivery: accepted, returned, or cancelled by the product owner, with the date. Acceptance closes the item.]
+[Go, no-go, or return, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail or across Domains. For an Initiative that expects Risk Tier 2 or 3, the clearance of the Control Function Contacts concerned, with their names and dates. The Service Agreement issued (AGR-nnn). On delivery: accepted, returned, or cancelled by the product owner, with the date. Acceptance closes the item.]
 
 ## Amendments after approval
 
