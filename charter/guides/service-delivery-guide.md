@@ -2,9 +2,7 @@
 
 ## 1. Purpose and when it applies
 
-This guide explains how an item moves through AICC, from a business need to a retired Solution, and who decides on the way. It applies to every
-Initiative and everything beneath it. It explains the governance of the flow: the levels, the states, the Stages, and the records. The live guidance
-on how a Team plans and builds, which changes with the work, is kept in Confluence and in the portfolio management set, and is not part of the charter.
+This guide explains how an item moves through AICC, from a business need to a retired Solution, and who decides on the way. It applies to every Initiative and everything beneath it. It explains the governance of the flow: the levels, the states, the Stages, and the records. The live guidance on how a Team plans and builds, which changes with the work, is kept in Confluence and in the portfolio management set, and is not part of the charter.
 
 ## 2. The levels and who owns them
 
@@ -18,10 +16,7 @@ on how a Team plans and builds, which changes with the work, is kept in Confluen
 
 ## 3. The life of an item
 
-Every item is in one of thirteen states. It starts as Proposed, is clarified in Discovery, is Approved when its conditions are met, is Active while it
-is worked, and goes through Review to Accepted and Closed. Waiting, Deferred, Pivoted, Rejected, and Cancelled cover the other routes. The person
-who approves an item at its level also defers, rejects, cancels, or pivots it. While the Team has up to three people, light mode uses a smaller
-set of states, with Waiting as a flag and Accepted and Closed as one step.
+Every item is in one of thirteen states. It starts as Proposed, is clarified in Discovery, is Approved when its conditions are met, is Active while it is worked, and goes through Review to Accepted and Closed. Waiting, Deferred, Pivoted, Rejected, and Cancelled cover the other routes. The person who approves an item at its level also defers, rejects, cancels, or pivots it. While the Team has up to three people, light mode uses a smaller set of states, with Waiting as a flag and Accepted and Closed as one step.
 
 ## 4. The decisions along the stream, and who takes each
 
@@ -37,10 +32,7 @@ set of states, with Waiting as a flag and Accepted and Closed as one step.
 
 ## 5. After delivery: the three types
 
-A Solution has one type, and the type sets its life. A Service is run by AICC for its whole life, with a business case that states the run cost and a
-sunset. A Product is a version built for one consumer, supported on demand or at agreed targets, and revised through the Portfolio Backlog. An
-Experiment is a time-boxed trial that ends in a Proposal, and the Handover to its Receiver is complete when the Receiver accepts it. AICC also oversees
-and reports on the Adopted Solutions that others deliver.
+A Solution has one type, and the type sets its life. A Service is run by AICC for its whole life, with a business case that states the run cost and a sunset. A Product is a version built for one consumer, supported on demand or at agreed targets, and revised through the Portfolio Backlog. An Experiment is a time-boxed trial that ends in a Proposal, and the Handover to its Receiver is complete when the Receiver accepts it. AICC also oversees and reports on the Adopted Solutions that others deliver.
 
 ## 6. Situations
 
@@ -63,4 +55,4 @@ and reports on the Adopted Solutions that others deliver.
 
 ## 8. Rule source
 
-Operating Model 4.2, 4.4, 5, 6.1 to 6.11; AI Policy 2 and 3; the Service delivery workflow.
+Operating Model 4.2, 4.4, 5; Solution Lifecycle Model 3 to 7; AI Policy 2 and 3; the Service delivery workflow.

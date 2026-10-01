@@ -9,9 +9,7 @@ revised: 2026-10-01
 
 # Initiative Brief
 
-**Template.** The business case of an Initiative, in the form of the lean business case of SAFe. Copy for each Initiative. The Domain Owner
-and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials
-stays in Jira and Confluence. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One to two pages.
+**Template.** The business case of an Initiative, in the form of the lean business case of SAFe. Copy for each Initiative. The Domain Owner and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in Jira and Confluence. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One to two pages.
 
 | Field | Entry |
 | --- | --- |
@@ -52,23 +50,19 @@ The brief has these six sections from the day it is created, and no section is r
 
 ## 3. Scope and the minimum viable product
 
-[What is in and out of scope, any non-functional requirements, the minimum viable product that tests the hypothesis, and the Features and
-Solutions it may spawn.]
+[What is in and out of scope, any non-functional requirements, the minimum viable product that tests the hypothesis, and the Features and Solutions it may spawn.]
 
 ## 4. Cost, capacity, and value
 
-[The capacity in days for the minimum viable product, and the estimate for the full scope if it succeeds. The cost and the Investment
-Envelope as references to the financial planning of the Bank. The expected value and where it is tracked.]
+[The capacity in days for the minimum viable product, and the estimate for the full scope if it succeeds. The cost and the Investment Envelope as references to the financial planning of the Bank. The expected value and where it is tracked.]
 
 ## 5. Risks, dependencies, and Risk Tier
 
-[The risks, the expected Risk Tier of the Solutions, the Control Functions to consult, and the Dependencies on other items, functions, or
-persons.]
+[The risks, the expected Risk Tier of the Solutions, the Control Functions to consult, and the Dependencies on other items, functions, or persons.]
 
 ## 6. Decision and acceptance
 
-[Go, no-go, or return, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, and for any commitment until the Guardrails are set. The Service Agreement issued (AGR-nnn). On delivery: accepted,
-returned, or cancelled by the product owner, with the date. Acceptance closes the item.]
+[Go, no-go, or return, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, and for any commitment until the Guardrails are set. The Service Agreement issued (AGR-nnn). On delivery: accepted, returned, or cancelled by the product owner, with the date. Acceptance closes the item.]
 
 ## Amendments after approval
 

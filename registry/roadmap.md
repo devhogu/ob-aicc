@@ -1,8 +1,6 @@
 # Roadmap
 
-The Roadmap shows three months: the current Program Increment as intent and direction, the next as planned, and the period beyond as
-indicative. The Program Increments and their dates are in the Calendar. The PI Objectives of the current Program Increment are in
-pi/2026-PIQ4/objectives.md. The Roadmap is revised at each PI Planning.
+The Roadmap shows three months: the current Program Increment as intent and direction, the next as planned, and the period beyond as indicative. The Program Increments and their dates are in the Calendar. The PI Objectives of the current Program Increment are in pi/2026-PIQ4/objectives.md. The Roadmap is revised at each PI Planning.
 
 ## Roadmap by Program Increment
 

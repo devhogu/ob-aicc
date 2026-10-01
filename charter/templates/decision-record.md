@@ -9,9 +9,7 @@ revised: 2026-10-01
 
 # Decision Record
 
-**Template.** Written for a Decision of the Executive Sponsor that is hard to reverse, for a Decision that the Operating Model 10 names as evidenced by a Decision Record, and for an activation of a document, an appointment, a delegation, a Data Sharing Arrangement, an
-Exception of the AICC Lead, an approval of published output, and the cutover. It is an evidence record, and the Decision Log is its
-one-line index. A Decision of the Team is noted in the work item. It carries no figures of the Bank, no data, and no code. Keep it short.
+**Template.** Written for a Decision of the Executive Sponsor that is hard to reverse, for a Decision that the Operating Model 8 names as evidenced by a Decision Record, and for an activation of a document, an appointment, a delegation, a Data Sharing Arrangement, an Exception of the AICC Lead, an approval of published output, and the cutover. It is an evidence record, and the Decision Log is its one-line index. A Decision of the Team is noted in the work item. It carries no figures of the Bank, no data, and no code. Keep it short.
 
 | Field | Entry |
 | --- | --- |

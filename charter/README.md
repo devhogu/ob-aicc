@@ -27,11 +27,12 @@ The contents list every file of the charter in the order of reading, with its li
 | 2 |  | **Documents** | The rules. The Document Catalog states their status and life cycle |
 | 2.1 | AICC-MND-02 | [AICC Charter](documents/aicc-charter.md) | Mission, authority, funding, risk appetite, offer, and measures of AICC |
 | 2.2 | AICC-MND-03 | [Business Model](documents/business-model.md) | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity |
-| 2.3 | AICC-ORG-01 | [Operating Model](documents/operating-model.md) | Roles, decisions, flow of work, cadence, records, and controls |
-| 2.4 | AICC-POL-01 | [AI Policy](documents/ai-policy.md) | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions |
-| 2.5 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined terms and style |
-| 2.6 | AICC-MND-01 | [Statement of Intent on the Adoption of Artificial Intelligence](documents/statement-of-intent.md) | The intent, values, principles, and strategy of the Bank for AI |
-| 2.7 | AICC-REF-02 | [Document Catalog](documents/document-catalog.md) | The list of the documents and Templates, their life cycle, and their activation |
+| 2.3 | AICC-ORG-01 | [Operating Model](documents/operating-model.md) | AICC as a unit of the Bank: Roles, Decisions, the control loop, records, and controls |
+| 2.4 | AICC-ORG-02 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How a Solution moves from a business need to retirement: portfolio, design, delivery, and life-cycle management |
+| 2.5 | AICC-POL-01 | [AI Policy](documents/ai-policy.md) | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions |
+| 2.6 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined terms and style |
+| 2.7 | AICC-MND-01 | [Statement of Intent on the Adoption of Artificial Intelligence](documents/statement-of-intent.md) | The intent, values, principles, and strategy of the Bank for AI |
+| 2.8 | AICC-REF-02 | [Document Catalog](documents/document-catalog.md) | The list of the documents and Templates, their life cycle, and their activation |
 | 3 |  | **[Workflows](workflows/README.md)** | How the work flows, and on which events |
 | 3.1 |  | [Engagement](workflows/engagement.md) | How AICC and a function work together, from first contact to follow-on |
 | 3.2 |  | [Portfolio and service delivery](workflows/service-delivery.md) | The value stream from a business need to a retired Solution |
@@ -48,34 +49,35 @@ The contents list every file of the charter in the order of reading, with its li
 | 5.1 |  | [Initiative Brief](templates/initiative-brief.md) | The business case of an Initiative |
 | 5.2 |  | [Service Agreement](templates/service-agreement.md) | The commitment to a function and the working agreement |
 | 5.3 |  | [Solution Definition](templates/solution-definition.md) | The definition of a Solution |
-| 5.4 |  | [Control Sign-Off](templates/control-sign-off.md) | The decision of a Control Function Contact |
-| 5.5 |  | [Decision Record](templates/decision-record.md) | A Decision with its facts, options, and effect |
-| 5.6 |  | [Steering Summary](templates/steering-summary.md) | The record of one Steering |
-| 5.7 |  | [Outcome Report](templates/outcome-report.md) | The end of an Engagement |
-| 5.8 |  | [AI Incident Review](templates/ai-incident-review.md) | The review of one AI Incident |
-| 5.9 |  | [Registry Snapshot](templates/registry-snapshot.md) | The closed extract at the close of an Iteration or Program Increment |
-| 5.10 |  | [Quarterly Report](templates/quarterly-report.md) | The quarterly report and the report to the Board Committee |
-| 5.11 |  | [Appointments Record](templates/appointments-record.md) | The Roles mapped to Holders, with the appointment log |
-| 5.12 |  | [Proposal](templates/proposal.md) | A Proposal to adopt a Solution at scale |
+| 5.4 |  | [Acceptance Checklist](templates/acceptance-checklist.md) | The signed answers of the Domain, the Control Functions, and the IT function when a ready Solution is handed to a Domain for use at scale |
+| 5.5 |  | [Control Sign-Off](templates/control-sign-off.md) | The decision of a Control Function Contact |
+| 5.6 |  | [Decision Record](templates/decision-record.md) | A Decision with its facts, options, and effect |
+| 5.7 |  | [Steering Summary](templates/steering-summary.md) | The record of one Steering |
+| 5.8 |  | [Outcome Report](templates/outcome-report.md) | The end of an Engagement |
+| 5.9 |  | [AI Incident Review](templates/ai-incident-review.md) | The review of one AI Incident |
+| 5.10 |  | [Registry Snapshot](templates/registry-snapshot.md) | The closed extract at the close of an Iteration or Program Increment |
+| 5.11 |  | [Quarterly Report](templates/quarterly-report.md) | The quarterly report and the report to the Board Committee |
+| 5.12 |  | [Appointments Record](templates/appointments-record.md) | The Roles mapped to Holders, with the appointment log |
+| 5.13 |  | [Proposal](templates/proposal.md) | A Proposal to adopt a Solution at scale |
 | 6 |  | **Records outside the charter** | |
 | 6.1 |  | [Registry](../registry/README.md) | The working state, the living records, and the evidence records, including the [Control Matrix](../registry/control-matrix.md) |
 | 6.2 |  | [Portfolio](../portfolio/README.md) | The catalog of Solutions |
 
 ## 4. How to read the charter
 
-A reader who is new to the charter reads the items 1, 2.1 to 2.4, and 2.5 as a reference, in the order of the contents. The Statement of Intent (2.6) gives the reasons behind the rules, and the Document Catalog (2.7) gives the status and the life cycle of each document. The workflows (3), the guides (4), and the Templates (5) follow, as the reader needs them.
+A reader who is new to the charter reads the items 1, 2.1 to 2.5, and 2.6 as a reference, in the order of the contents. The Statement of Intent (2.7) gives the reasons behind the rules, and the Document Catalog (2.8) gives the status and the life cycle of each document. The workflows (3), the guides (4), and the Templates (5) follow, as the reader needs them.
 
 A reader with a specific purpose follows the route in the following table.
 
 | Reader | Route | To find |
 | --- | --- | --- |
 | A head of function who brings a need | [Business Model](documents/business-model.md); [Engagement guide](guides/engagement-guide.md); [Engagement workflow](workflows/engagement.md); the Initiative Brief and Service Agreement Templates | How AICC engages a function, what it commits to, and what the function receives |
-| A new member of AICC | [Operating Model](documents/operating-model.md); [AI Policy](documents/ai-policy.md); [Organization guide](guides/organization-guide.md); [Cadence guide](guides/cadence-guide.md) | The Roles, the rules, the first week of a Holder, and the rhythm of the events |
+| A new member of AICC | [Operating Model](documents/operating-model.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md); [AI Policy](documents/ai-policy.md); [Organization guide](guides/organization-guide.md); [Cadence guide](guides/cadence-guide.md) | The Roles, the rules, the first week of a Holder, and the rhythm of the events |
 | The Executive Sponsor or the Board Committee | [AICC Charter](documents/aicc-charter.md); [Unit governance guide](guides/unit-governance-guide.md), section 7; the Quarterly Report Template | The mandate, the funding, the risk appetite, the reporting chain, and what is reported |
-| A Control Function Contact | [AI Policy](documents/ai-policy.md); [Operating Model](documents/operating-model.md), sections 6.6 and 10; the Control Sign-Off Template | The Risk Tiers, the checks, the validation, and the right to stop |
-| Internal audit | [Operating Model](documents/operating-model.md), section 10; the [Control Matrix](../registry/control-matrix.md); [Unit governance guide](guides/unit-governance-guide.md); [Organization guide](guides/organization-guide.md), section 8; the [Registry](../registry/README.md) | Each control with its rule, owner, timing, and evidence record, and the records themselves |
+| A Control Function Contact | [AI Policy](documents/ai-policy.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md), section 6; [Operating Model](documents/operating-model.md), section 8; the Control Sign-Off Template | The Risk Tiers, the checks, the validation, and the right to stop |
+| Internal audit | [Operating Model](documents/operating-model.md), sections 6 to 8; the [Control Matrix](../registry/control-matrix.md); [Unit governance guide](guides/unit-governance-guide.md); [Organization guide](guides/organization-guide.md), section 8; the [Registry](../registry/README.md) | Each control with its rule, owner, timing, and evidence record, and the records themselves |
 | Human resources | [Organization guide](guides/organization-guide.md); [Operating Model](documents/operating-model.md), sections 4 and 5; the Appointments Record Template | The Roles, the profiles, the RACI, and the people records |
 
 ## 5. Control of the charter
 
-The Document Catalog states the status, the revision, and the life cycle of each document and Template, and the AICC Lead activates them. The documents and the Templates carry a change log. The workflows and the guides are changed with the history of the repository. The Operating Model 10 lists the controls that can be tested, and the Registry holds the evidence of each.
+The Document Catalog states the status, the revision, and the life cycle of each document and Template, and the AICC Lead activates them. The documents and the Templates carry a change log. The workflows and the guides are changed with the history of the repository. The Operating Model 8 lists the controls that can be tested, and the Registry holds the evidence of each.

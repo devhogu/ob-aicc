@@ -1,14 +1,10 @@
 # Registry
 
-The Registry holds the Records of AICC: the process records of the work in progress and delivered, the decisions, the proposals, and the
-governance records. It holds no figures of the Bank, no data, and no code. The Registry names the people who hold the Roles, in the Appointments Record. A comment in brackets marks an open place and states what is expected there. The Operating Model 9 states the rules: the working state
-moves to Jira and Confluence at the cutover, and the evidence records are always here, as closed and dated extracts. Jira, Confluence,
-and Service Management are not an evidence store. The AICC Lead is accountable for all the Records.
+The Registry holds the Records of AICC: the process records of the work in progress and delivered, the decisions, the proposals, and the governance records. It holds no figures of the Bank, no data, and no code. The Registry names the people who hold the Roles, in the Appointments Record. A comment in brackets marks an open place and states what is expected there. The Operating Model 7 states the rules: the working state moves to Jira and Confluence at the cutover, and the evidence records are always here, as closed and dated extracts. Jira, Confluence, and Service Management are not an evidence store. The AICC Lead is accountable for all the Records.
 
 ## Working state
 
-Kept here by hand until the cutover Decision, then held in Jira and Confluence. The Registry keeps an extract of it in each Registry
-Snapshot.
+Kept here by hand until the cutover Decision, then held in Jira and Confluence. The Registry keeps an extract of it in each Registry Snapshot.
 
 | Record | Where | Holds |
 | --- | --- | --- |
@@ -32,12 +28,12 @@ Current by nature, and always kept here.
 | Standards | [standards.md](standards.md) | Architecture standards and Platform requirements |
 | Risks and Issues | [risks-and-issues.md](risks-and-issues.md) | Risks, issues, AI Incidents, Exceptions, Findings |
 | AI Registry | [ai-registry.md](ai-registry.md) | Each Solution, model, and agent |
-| Control Matrix | [control-matrix.md](control-matrix.md) | Each control of the Operating Model 10 with its objective, test, latest evidence, and status, and the populations for sampling |
+| Control Matrix | [control-matrix.md](control-matrix.md) | Each control of the Operating Model 8 with its objective, test, latest evidence, and status, and the populations for sampling |
 | Appointments | [appointments.md](appointments.md) | The Appointments Record: the map of the Roles to the Holders, the appointment log, the declarations, the access, and the delegations of the Executive Sponsor |
 
 ## Evidence records
 
-Closed and dated extracts, always kept here. The Operating Model 10 lists the controls and the record that evidences each.
+Closed and dated extracts, always kept here. The Operating Model 8 lists the controls and the record that evidences each.
 
 | Record | Where | Holds |
 | --- | --- | --- |
@@ -46,13 +42,14 @@ Closed and dated extracts, always kept here. The Operating Model 10 lists the co
 | Reports | [reports/](reports/) | Quarterly Reports, named `2026-PIQ4.md` |
 | Steering | [steering/](steering/) | The Steering Summaries |
 | Proposals | `proposals/` | The Proposals to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy. Created with the first one |
+| Acceptance Checklists | `checklists/` | The Acceptance Checklist of each Solution at its first deployment and its release, named `ACL-001.md`. Created with the first one |
 | Control Sign-Offs | `sign-offs/` | The decisions of the Control Function Contacts, named `SGN-001.md`. Created with the first one |
 | AI Incident Reviews | `incident-reviews/` | The review of each AI Incident, named `AIR-001.md`. Created with the first one |
 | Registry Snapshots | `snapshots/` | The closed extract at the close of each IT and PI, named `SNP-2026-PIQ4-IT10.md`. The first is due at the close of IT10 |
 | Appointments | [appointments.md](appointments.md) | The Part C log of the Appointments Record is the evidence of every appointment, change, and relief |
 | Assessments | [assessments/](assessments/) | Earlier checks of the documents, kept for history |
 
-Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfolio), EP-nnn Epic, FT-nnn Feature, DEP-nnn Dependency, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards, AGR-nnn Service Agreement, OUT-nnn Outcome Report, SGN-nnn Control Sign-Off, AIR-nnn AI Incident Review, SNP-yyyy-PIQn-ITnn Registry Snapshot, PRP-nnn Proposal, AP-nnn appointment entry. A Service Agreement and an Outcome Report are files in the folder of their Initiative, named `AGR-001.md` and `OUT-001.md`.
+Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfolio), EP-nnn Epic, FT-nnn Feature, DEP-nnn Dependency, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards, AGR-nnn Service Agreement, OUT-nnn Outcome Report, SGN-nnn Control Sign-Off, AIR-nnn AI Incident Review, ACL-nnn Acceptance Checklist, SNP-yyyy-PIQn-ITnn Registry Snapshot, PRP-nnn Proposal, AP-nnn appointment entry. A Service Agreement and an Outcome Report are files in the folder of their Initiative, named `AGR-001.md` and `OUT-001.md`.
 
 The Registry holds the nil statements that an auditor needs. The Risks and Issues states the AI Incidents and Exceptions to date, and the AI Registry states the uses listed to date.
 

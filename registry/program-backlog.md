@@ -1,9 +1,6 @@
 # Program Backlog
 
-The Program Backlog, also called the PI Backlog: the ranked Epics (capabilities) and Features. An Epic may run over several Program
-Increments. A Feature closes within its Program Increment, or is split. It flows through the Program Kanban (board.md). A Feature is
-approved only when its Dependencies are known. Initiatives INI-002, INI-003, INI-004, INI-006, INI-007, and INI-008 are in discovery, so they have no Epics yet. Their Epics
-come from the Solution Definitions.
+The Program Backlog, also called the PI Backlog: the ranked Epics (capabilities) and Features. An Epic may run over several Program Increments. A Feature closes within its Program Increment, or is split. It flows through the Program Kanban (board.md). A Feature is approved only when its Dependencies are known. Initiatives INI-002, INI-003, INI-004, INI-006, INI-007, and INI-008 are in discovery, so they have no Epics yet. Their Epics come from the Solution Definitions.
 
 ## Epics
 

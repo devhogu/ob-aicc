@@ -1,12 +1,8 @@
 # Guides
 
-The guides explain how AICC works, at the level of the charter: how each workflow is used, by whom, when, and what it leaves on record. They
-are static and governing: they describe the way of working that the documents require, and they state no rule of their own. Each chapter ends
-with the clauses of the documents that it explains. A guide uses Roles only and names no persons.
+The guides explain how AICC works, at the level of the charter: how each workflow is used, by whom, when, and what it leaves on record. They are static and governing: they describe the way of working that the documents require, and they state no rule of their own. Each chapter ends with the clauses of the documents that it explains. A guide uses Roles only and names no persons.
 
-The guides serve the business model and the governance of the unit, so that internal audit and HR can see how the unit is run. The live guidance
-on development and portfolio management, which changes with the work, is kept separately in Confluence and in the portfolio management set. It
-does not belong here.
+The guides serve the business model and the governance of the unit, so that internal audit and HR can see how the unit is run. The live guidance on development and portfolio management, which changes with the work, is kept separately in Confluence and in the portfolio management set. It does not belong here.
 
 | Guide | Explains | For |
 | --- | --- | --- |
@@ -16,5 +12,4 @@ does not belong here.
 | [Unit governance](unit-governance-guide.md) | How the unit is directed, reported, and controlled | The Executive Sponsor, auditors, and HR |
 | [Organization](organization-guide.md) | The Roles, the profiles, the RACI, the people records, and the audit and HR reference | HR, auditors, and AICC |
 
-Suggested reading order: the [charter README](../README.md), the Engagement guide, the Service delivery guide, the Cadence guide, the Unit
-governance guide, and the Organization guide.
+Suggested reading order: the [charter README](../README.md), the Engagement guide, the Service delivery guide, the Cadence guide, the Unit governance guide, and the Organization guide.

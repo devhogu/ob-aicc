@@ -1,6 +1,6 @@
 # Control Matrix
 
-The Control Matrix keeps the state of every control of the Operating Model 10, by its reference: the latest evidence and the status. The rule, the owner, and the timing of a control are in the Operating Model 10, and its objective, type, and test are in the Unit governance guide. This Record is a living record. The AICC Lead updates it at each monthly Steering and at each Registry Snapshot, and a change of status is entered with its date.
+The Control Matrix keeps the state of every control of the Operating Model 8, by its reference: the latest evidence and the status. The rule, the owner, and the timing of a control are in the Operating Model 8, and its objective, type, and test are in the Unit governance guide. This Record is a living record. The AICC Lead updates it at each monthly Steering and at each Registry Snapshot, and a change of status is entered with its date.
 
 ## 1. Status
 
@@ -28,7 +28,7 @@ The Control Matrix keeps the state of every control of the Operating Model 10, b
 | C-11 | Capacity used and benefit confirmed | None | Quarterly Report section 4 | Not yet due |
 | C-12 | Risk Tier assignment | None | Solution Definition (`portfolio/solutions/`); AI Registry | Not yet due: SOL-001 is Proposed |
 | C-13 | Check or validation before the first deployment | None | AI Registry entry for the check; Control Sign-Off (`sign-offs/`) | No occurrence yet |
-| C-14 | Release | None | Release block of the Solution Definition; Decision Record | No occurrence yet |
+| C-14 | Release | None | Release block of the Solution Definition; Acceptance Checklist (`checklists/`); Decision Record | No occurrence yet |
 | C-15 | Approval of the use of a Solution for a data class | None | AI Registry | Open: no use is approved for any data class (RI-019) |
 | C-16 | AI Incident | Nil statement in `risks-and-issues.md` | Risks and Issues; AI Incident Review (`incident-reviews/`) | No occurrence yet |
 | C-17 | Exception | Nil statement in `risks-and-issues.md` | Control Sign-Off or Decision Record; Risks and Issues | No occurrence yet |
@@ -48,6 +48,7 @@ The Control Matrix keeps the state of every control of the Operating Model 10, b
 | --- | --- | --- |
 | Decisions | `decision-log.md` | 35 |
 | Steering Summaries | `steering/` | 1, reconstructed |
+| Acceptance Checklists | `checklists/` | 0 |
 | Control Sign-Offs | `sign-offs/` | 0 |
 | AI Incident Reviews | `incident-reviews/` | 0 |
 | Exceptions | `risks-and-issues.md` | 0 |

@@ -9,9 +9,7 @@ revised: 2026-10-01
 
 # Steering Summary
 
-**Template.** Written by the AICC Lead for each Steering, monthly or quarterly, and approved by the chair. It is an evidence record: it states
-what was considered and decided, and it copies no discussion. It carries no figures of the Bank, no data, and no code. The notes of the
-other events stay in Confluence, or in the work items.
+**Template.** Written by the AICC Lead for each Steering, monthly or quarterly, and approved by the chair. It is an evidence record: it states what was considered and decided, and it copies no discussion. It carries no figures of the Bank, no data, and no code. The notes of the other events stay in Confluence, or in the work items.
 
 | Field | Entry |
 | --- | --- |

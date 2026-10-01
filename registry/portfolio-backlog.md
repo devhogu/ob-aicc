@@ -1,8 +1,6 @@
 # Portfolio Backlog
 
-The Portfolio Backlog: the ranked list of Initiatives, which are business programs. It flows through the Portfolio Kanban (board.md).
-Scores are 1 to 5: value and urgency (5 is highest), risk reduction or opportunity (5 is highest), and effort (5 is largest). The
-order of the goals of the first 100 days follows DR-2026-013, not the scores. An Engagement is an Initiative that has a client function. The Service Agreements are issued at the start of the study, so those of the running Initiatives are still to be issued. Limits on Work in Progress are set by the team.
+The Portfolio Backlog: the ranked list of Initiatives, which are business programs. It flows through the Portfolio Kanban (board.md). Scores are 1 to 5: value and urgency (5 is highest), risk reduction or opportunity (5 is highest), and effort (5 is largest). The order of the goals of the first 100 days follows DR-2026-013, not the scores. An Engagement is an Initiative that has a client function. The Service Agreements are issued at the start of the study, so those of the running Initiatives are still to be issued. Limits on Work in Progress are set by the team.
 
 | Rank | Identifier | Initiative | Strategic Priority | Domain Owner | State | Stage | Value | Urgency | Risk or opportunity | Effort | Product owner | Accepted by and date | Client function | Phases and support level | Service Agreement | Outcome Report |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

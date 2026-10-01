@@ -8,7 +8,7 @@
 | Strategic Priority | None: enabling work of AICC |
 | Domain Owner (represents the client function) | AICC Lead, for the work of AICC itself (Operating Model 4.6) |
 | Solutions expected | None: enabling work, with Epics under the Initiative and no Solution |
-| Service Agreement | Not applicable: enabling work, with the Executive Sponsor as client (Operating Model 6.1) |
+| Service Agreement | Not applicable: enabling work, with the Executive Sponsor as client (Solution Lifecycle Model 3.1) |
 | Period | September to December 2026 |
 | Date of last change | 2026-10-01 |
 
@@ -53,7 +53,7 @@ Value: a unit that an auditor and HR can test, and that its people can follow.
 
 Risk: one person writes and owns the documents, so a person who did not write them checks them.
 
-Expected Risk Tier: none, because the work builds no AI Solution (Operating Model 6.2).
+Expected Risk Tier: none, because the work builds no AI Solution (Solution Lifecycle Model 3.2).
 
 Control Functions to consult: none.
 

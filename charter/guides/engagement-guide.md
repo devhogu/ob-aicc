@@ -2,9 +2,7 @@
 
 ## 1. Purpose and when it applies
 
-This guide explains how AICC works with a function of the Bank. AICC acts as an internal consulting unit: a function brings a need, AICC commits
-to an Engagement in a Service Agreement, delivers an outcome with its evidence, and supports it at the agreed level. It applies to every
-Engagement, from a short study to a Service that AICC runs.
+This guide explains how AICC works with a function of the Bank. AICC acts as an internal consulting unit: a function brings a need, AICC commits to an Engagement in a Service Agreement, delivers an outcome with its evidence, and supports it at the agreed level. It applies to every Engagement, from a short study to a Service that AICC runs.
 
 ## 2. Who takes part
 
@@ -13,7 +11,7 @@ Engagement, from a short study to a Service that AICC runs.
 | Domain Owner | Represents the client function, approves the business case, accepts the outcome, and confirms the benefit |
 | Domain Expert | Partner from the function who works with AICC |
 | AICC Lead | Takes the need in, writes the business case with the Domain Owner, issues the Service Agreement, and writes the Outcome Report |
-| AICC Engineer | Builds and runs the Solution with the Domain Expert |
+| Solution Engineer | Designs, builds, and runs the Solution with the Domain Expert |
 | Executive Sponsor | Is the client of enabling work, and approves what exceeds a guardrail or spans Domains |
 | Stakeholders and other heads of function | Are notified, and commit to nothing |
 
@@ -28,18 +26,14 @@ A head of function brings a need to the AICC Lead, in any form: a conversation, 
 | Contact | A function raises a need, or AICC finds one | Anyone; the AICC Lead takes it in | Any time | An entry in the Portfolio Backlog |
 | Study | The need is scoped and the business case written | AICC Lead with the Domain Owner | The first IT of the Engagement | The Initiative Brief |
 | Service Agreement | AICC states what it commits to | AICC Lead; the function is notified | Issued when the study starts, amended when the business case is approved | The Service Agreement |
-| Delivery | The Solution is proved, built, and released | AICC Engineer with the Domain Expert | In the ITs of the PI | The Solution Definition, the Control Sign-Off, and the release |
+| Delivery | The Solution is proved, built, and released | Solution Engineer with the Domain Expert | In the ITs of the PI | The Solution Definition, the Control Sign-Off, and the release |
 | Outcome Report | The outcome is reported and accepted | AICC Lead; the product owner accepts | At the end of the Engagement | The Outcome Report |
-| Support | The Solution is supported at the agreed level | AICC Engineer | After delivery | Service Management records, and the AI Incident Review |
+| Support | The Solution is supported at the agreed level | Solution Engineer | After delivery | Service Management records, and the AI Incident Review |
 | Follow-on | A new need, or the end | The Domain Owner and the AICC Lead | At each IT check-in | A new entry, or the close |
 
 ## 5. The commitment in practice
 
-The Service Agreement has two parts. The commitment states the phases, the support level, the scope and what is out of scope, the deliverables
-and their definition of done, the capacity per IT in days, the Assumptions, the check-in, and the end. The working agreement states who works on
-it and when, how AICC and the function communicate and decide, who is notified, how data is handled, how issues are escalated, and how progress
-is reported. AICC commits to the capacity and the outcome, and the function commits to nothing. What AICC relies on from the function is written
-as an Assumption.
+The Service Agreement has two parts. The commitment states the phases, the support level, the scope and what is out of scope, the deliverables and their definition of done, the capacity per IT in days, the Assumptions, the check-in, and the end. The working agreement states who works on it and when, how AICC and the function communicate and decide, who is notified, how data is handled, how issues are escalated, and how progress is reported. AICC commits to the capacity and works toward the outcome on a best-effort basis, within the capacity and the capability that it has available, and the function commits to nothing. What AICC relies on from the function is written as an Assumption.
 
 ## 6. Situations
 
@@ -62,4 +56,4 @@ as an Assumption.
 
 ## 8. Rule source
 
-Business Model 2 to 7; Operating Model 6.1, 6.7, 6.9, 8.1; AI Policy 5; the Engagement workflow.
+Business Model 2 to 7; Solution Lifecycle Model 3.1, 3.4, 6.3, 7.1; AI Policy 5; the Engagement workflow.

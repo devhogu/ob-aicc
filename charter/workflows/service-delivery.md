@@ -2,19 +2,11 @@
 
 ## 1. Intent and scope
 
-This workflow is the value stream of AICC from a business need to a retired solution. It follows the flow of the Scaled Agile
-Framework: a portfolio funnel that ends in a ranked backlog, the breakdown into capabilities and features, the execution in the
-Program Increments, and the continuous delivery pipeline. It covers the business scoping, the business case, the definition of the
-solution, its capabilities and features, the backlog, the execution, and the deployment, operation, and life cycle of what AICC
-delivers.
+This workflow is the value stream of AICC from a business need to a retired solution. It follows the flow of the Scaled Agile Framework: a portfolio funnel that ends in a ranked backlog, the breakdown into capabilities and features, the execution in the Program Increments, and the continuous delivery pipeline. It covers the business scoping, the business case, the definition of the solution, its capabilities and features, the backlog, the execution, and the deployment, operation, and life cycle of what AICC delivers.
 
-AICC is a lab. It defines and tries solutions with the functions, so that the Bank can decide on adoption at scale. Some solutions
-become services that AICC runs. Some are products built for one consumer. Some are experiments that end in a proposal, which another
-owner may adopt. AICC also oversees the adoption of solutions that others deliver.
+AICC is a lab. It defines and tries solutions with the functions, so that the Bank can decide on adoption at scale. Some solutions become services that AICC runs. Some are products built for one consumer. Some are experiments that end in a proposal, which another owner may adopt. AICC also oversees the adoption of solutions that others deliver.
 
-The Engagement workflow sits on top of this one: it states the commitment to the function, and this workflow carries the work. The rules
-are in the Operating Model, the AI Policy, and the Vocabulary. This workflow shows the flow and the intent, and states no
-rule of its own. The events are those of the Cadence.
+The Engagement workflow sits on top of this one: it states the commitment to the function, and this workflow carries the work. The rules are in the Operating Model, the AI Policy, and the Vocabulary. This workflow shows the flow and the intent, and states no rule of its own. The events are those of the Cadence.
 
 ## 2. The levels
 
@@ -44,10 +36,9 @@ Figure 1: the levels of the work.
 
 ## 3. The states
 
-Every item of every level has one of thirteen states, defined in the Vocabulary. A Stage is a phase of the work inside the discovery
-state or the active state.
+Every item of every level has one of thirteen states, defined in the Vocabulary. A Stage is a phase of the work inside the discovery state or the active state.
 
-Figure 2 shows how an item moves between the states. It follows the transition table of the Operating Model 6.4, which is the only source of the moves. Waiting returns to the state the item came from.
+Figure 2 shows how an item moves between the states. It follows the transition table of the Solution Lifecycle Model 4.1, which is the only source of the moves. Waiting returns to the state the item came from.
 
 ```mermaid
 stateDiagram-v2
@@ -94,8 +85,7 @@ Figure 2: the states of an item.
 
 ## 4. The portfolio flow: from need to Initiative to Solution
 
-The portfolio flow takes a need through the discovery stages of an Initiative and defines its Solutions. Each step ends in a decision
-that can approve, return, defer, or reject the item. The Portfolio Kanban holds the Initiatives.
+The portfolio flow takes a need through the discovery stages of an Initiative and defines its Solutions. Each step ends in a decision that can approve, return, defer, or reject the item. The Portfolio Kanban holds the Initiatives.
 
 | Step | Level and Stage | Intent | Who | Output |
 | --- | --- | --- | --- | --- |
@@ -107,27 +97,24 @@ that can approve, return, defer, or reject the item. The Portfolio Kanban holds 
 
 ## 5. The execution in the Program Increment
 
-The execution takes the approved Features and builds them, on the loops of the Cadence. The Program Increment states intent and
-direction, and what is done in an IT is decided in that IT.
+The execution takes the approved Features and builds them, on the loops of the Cadence. The Program Increment states intent and direction, and what is done in an IT is decided in that IT.
 
 | Step | Event of the Cadence | Intent | Who | Output |
 | --- | --- | --- | --- | --- |
 | Set the intent | PI Planning | Choose the Epics and Features that the PI aims at, with their Dependencies | The Teams, the Domain Owners, the Executive Sponsor | The PI Objectives; the Roadmap |
 | Select the Features | IT Planning | Select the Features for the month into the IT Backlog | The Team with the product owners | The IT Backlog |
-| Develop | Weekly loops | Build the minimum solution with the function | AICC Engineer with the Domain Expert | Working increments |
+| Develop | Weekly loops | Build the minimum solution with the function | Solution Engineer with the Domain Expert | Working increments |
 | Verify | Before the first deployment | The check for Risk Tier 1; the validation by the Control Function Contacts for Risk Tier 2 and 3 | The Checker; the Control Function Contacts | The check, or the Control Sign-Off |
-| Deploy | Weekly loops | Deploy the first Feature to the function, with training for the users, only after the check or the validation | AICC Engineer; the Platform Owner for the platform | A deployed Feature |
+| Deploy | Weekly loops | Deploy the first Feature to the function, with training for the users, only after the check or the validation | Solution Engineer; the Platform Owner for the platform | A deployed Feature |
 | Release | At the IT Review, or when ready | Decide that the Solution goes beyond its first users | Domain Owner; Executive Sponsor for Risk Tier 3 | The release, in the Solution Definition |
 | Demonstrate and accept | IT Review and Demo | Show what works, and take the acceptance | Product owner | The acceptance, with who and when |
 | Control the flow | Weekly Review | Keep the boards, the Limits, and the Dependencies under control | AICC Lead | The Dashboard |
 
-A Feature closes within its Program Increment. A Feature that cannot close is split: the part that is done is a Feature that goes to review,
-and the rest is a new Feature in the next Program Increment. The original is Pivoted and linked to both. A Feature does not become approved until its Dependencies are known.
+A Feature closes within its Program Increment. A Feature that cannot close is split: the part that is done is a Feature that goes to review, and the rest is a new Feature in the next Program Increment. The original is Pivoted and linked to both. A Feature does not become approved until its Dependencies are known.
 
 ## 6. After delivery: three types of Solution
 
-The offering type of a Solution, set in its definition, decides its life after delivery and who owns it. The Receiver is named in the
-Solution Definition before the Solution is approved.
+The offering type of a Solution, set in its definition, decides its life after delivery and who owns it. The Receiver is named in the Solution Definition before the Solution is approved.
 
 Figure 3 shows the three lives.
 
@@ -161,25 +148,19 @@ Figure 3: the life of a Solution by type.
 | Product | The consumer owns the version; AICC supports on demand | Handover, Support, Revise, Retire for the consumer | A Product with many consumers or recurring requests becomes a Service through a business case | Retired for the consumer |
 | Experiment | None yet | Trial, Proposal, Handover | Time-boxed to a stated number of ITs; the Handover is complete when the Receiver accepts it | Handed off, closed with its lessons, or cancelled |
 
-Operation and support answer the requests of the users and the incidents, with the lane Urgent first. AICC reassesses the Risk
-Tier on a change and on its date in the AI Registry.
+Operation and support answer the requests of the users and the incidents, with the lane Urgent first. AICC reassesses the Risk Tier on a change and on its date in the AI Registry.
 
 ## 7. Oversight of the Adopted Solutions
 
-AICC oversees the Adopted Solutions that others deliver, in the Portfolio, with their state, and reports on what was adopted and
-what works. The AI adoption strategy is a series of Proposals that AICC shapes from what it learns, and the Bank decides on them.
-This is the mission side of the lab.
+AICC oversees the Adopted Solutions that others deliver, in the Portfolio, with their state, and reports on what was adopted and what works. The AI adoption strategy is a series of Proposals that AICC shapes from what it learns, and the Bank decides on them. This is the mission side of the lab.
 
 ## 8. Decisions along the stream
 
-Who decides what along the stream is in the Operating Model 4.2, 5.3, and 6.4 to 6.9, and in the AI Policy 2 and 3. This workflow states no
-decider of its own.
+Who decides what along the stream is in the Operating Model 4.2 and 5.3, in the Solution Lifecycle Model 4 to 7, and in the AI Policy 2 and 3. This workflow states no decider of its own.
 
 ## 9. Where it runs
 
-From the cutover of the working state (Operating Model 9.1) the stream runs in Jira and Confluence. The charter holds this schema, and the Registry and the
-Portfolio hold the records that an auditor may ask for. Jira stays clean: a few statuses, one flag, and one resolution, while the business states are in the charter and a
-field.
+From the cutover of the working state (Operating Model 7.1) the stream runs in Jira and Confluence. The charter holds this schema, and the Registry and the Portfolio hold the records that an auditor may ask for. Jira stays clean: a few statuses, one flag, and one resolution, while the business states are in the charter and a field.
 
 | Business state | Jira status |
 | --- | --- |

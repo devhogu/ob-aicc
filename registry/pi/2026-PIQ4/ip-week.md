@@ -4,8 +4,7 @@ The results of the events of the last week of the Program Increment (2026-PIQ4 I
 
 ## PI Review and Demo
 
-What the Program Increment delivered, the business value achieved against the PI Objectives (objectives.md), the acceptances, and the
-quarterly risk check. The AICC Lead writes the Quarterly Report from it (reports/).
+What the Program Increment delivered, the business value achieved against the PI Objectives (objectives.md), the acceptances, and the quarterly risk check. The AICC Lead writes the Quarterly Report from it (reports/).
 
 ## Inspect and Adapt
 

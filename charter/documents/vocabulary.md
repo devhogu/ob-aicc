@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 5.0
+revision: 5.3
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -11,14 +11,11 @@ revised: 2026-10-01
 
 ## 1. Purpose and scope
 
-1.1. This document fixes the terms and the style of the documents, so that each term has one meaning and
-each document reads the same way.
+1.1. This document fixes the terms and the style of the documents, so that each term has one meaning and each document reads the same way.
 
 ## 2. Precedence
 
-2.1. Where two documents differ, the higher prevails: the Statement of Intent on the Adoption of Artificial Intelligence, the
-AICC Charter, the Business Model, the Operating Model, the AI Policy, the Document Catalog. This Vocabulary prevails on terms and style. Templates
-and Records yield to the documents. The workflows and the guides explain the documents and state no rule of their own.
+2.1. Where two documents differ, the higher prevails: the Statement of Intent on the Adoption of Artificial Intelligence, the AICC Charter, the Business Model, the Operating Model, the AI Policy, the Document Catalog. This Vocabulary prevails on terms and style. Templates and Records yield to the documents. The workflows and the guides explain the documents and state no rule of their own.
 
 ## 3. Style
 
@@ -30,8 +27,7 @@ and Records yield to the documents. The workflows and the guides explain the doc
 
 3.4. A defining document states what is and what is to be done. Lineage, references, and open questions belong in the wiki folder of the repository.
 
-3.5. A document refers to another by its title, not by a file path, and does not restate it. The Statement of Intent repeats a
-few definitions because it is read alone.
+3.5. A document refers to another by its title, not by a file path, and does not restate it. The Statement of Intent repeats a few definitions because it is read alone.
 
 3.6. A Role is named for its responsibility, not for a person. The Appointments Record names persons.
 
@@ -53,7 +49,7 @@ few definitions because it is read alone.
 | Executive Sponsor | The Role that holds the mandate and funding of AICC | sponsor |
 | Holder | The person who holds a Role, named in the Appointments Record | incumbent |
 | AICC Lead | The Role of the lead engineer and architect of AICC, accountable for its way of working |  |
-| AICC Engineer | The Role of a member of AICC who builds and runs Solutions with Domains | AI developer, AI solution engineer |
+| Solution Engineer | The Role of the person who owns a Solution end to end: designs it, decides its architecture, builds it, deploys it, and runs it with the Domain. The AICC Lead, or a person whom a function assigns to AICC, holds it | AI engineer, AI developer, AICC Engineer, forward deployed engineer |
 | AI Steering Committee | The heads of the business, technology, risk, and compliance functions, who advise the Executive Sponsor | SteerCo |
 | Steering | The meeting of the Executive Sponsor and the AI Steering Committee: monthly for tactical matters and quarterly for strategic matters |  |
 | Domain | A business function or a product line of the Bank | business unit, business line |
@@ -70,7 +66,7 @@ few definitions because it is read alone.
 | Business Model | The document that states what AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | |
 | Engagement | An Initiative that has a client function. One Service Agreement is issued for each client function | project |
 | Phase | A part of an Engagement that its Service Agreement covers: a study, a proof, delivery, or support | |
-| Service Agreement | The working agreement in which AICC commits to an Engagement: a commitment and a working agreement. It is not a legal document | contract (alone), SOW |
+| Service Agreement | The working agreement in which AICC commits to an Engagement: a commitment and a working agreement, on a best-effort basis within the capacity and the capability of AICC. It is not a legal document | contract (alone), SOW |
 | Assumption | A thing that AICC relies on from the function, stated in the Service Agreement, which is re-planned if it fails | |
 | Support level | What AICC provides after delivery: none, on demand, at agreed response targets, or run by AICC | SLA (alone) |
 | Outcome Report | The report at the end of an Engagement: what was delivered, with the evidence referenced, the capacity used, and who accepted it | final report |
@@ -97,7 +93,7 @@ few definitions because it is read alone.
 | Portfolio Kanban | The board of the Initiatives by state |  |
 | Program Kanban | The board of the Epics and Features by state, with the classes of service as lanes and the Limits on Work in Progress |  |
 | Lane | A class of service of the Program Kanban: Urgent, High priority, or Normal | swimlane (alone) |
-| Team | The people who deliver together: an AICC Engineer with the Domain Expert and the Domain Owner, who is the product owner | squad, pod |
+| Team | The people who deliver together: a Solution Engineer with the Domain Expert and the Domain Owner, who is the product owner | squad, pod |
 | Program Increment | One quarter of work, made of three Iterations; named PIQ1 to PIQ4 with the year. Short form: PI | release train |
 | Iteration | One calendar month of work of a Team, of four or five whole weeks, named IT01 to IT12, with a goal and an IT Backlog. A week belongs to the month that contains its Thursday. Short form: IT | sprint |
 | Innovation and Planning week | The last week of the third Iteration of a Program Increment, or the week before when it is blocked or gray, for the PI Review and Demo, Inspect and Adapt, PI Planning, the quarterly Steering, and innovation. Short form: IP week |  |
@@ -123,7 +119,7 @@ few definitions because it is read alone.
 | Risk Tier | The class of a Solution by risk: 1 Low, 2 Medium, or 3 High | risk level |
 | AI Registry | The Record of each Solution, model, and agent, with owner, scope, data access, Risk Tier, and reassessment date |  |
 | AI Incident | An event in which the use of AI causes or could cause harm, a breach of law or policy, or a loss of control |  |
-| Severity | The class of an AI Incident: High, Medium, or Low; or of a Risk, Issue, or Finding: Blocker, Major, or Minor | criticality |
+| Severity | The class of an AI Incident, as the incident management of the Bank sets it; or of a Risk, Issue, or Finding: Blocker, Major, or Minor | criticality |
 | Exception | A limited departure from a policy, decided by the Control Function concerned, or by the AICC Lead for a requirement set by AICC alone | waiver |
 | AI Risk Appetite Statement | The statement in the AICC Charter of the appetite of the Bank for AI risk |  |
 | Maturity Level | One of the five levels of the Maturity Roadmap of the Statement of Intent |  |
@@ -218,3 +214,6 @@ few definitions because it is read alone.
 | 4.8 | 2026-10-01 | Decision Record, Appointments Record, Control Sign-Off, AI Incident Review, Registry Snapshot, Dependency Map, Roadmap, Template, Priorities Record, and Standards Record defined; Cancelled and Closed restated; Innovation is an Event. | DR-2026-034 |
 | 4.9 | 2026-10-01 | Control Sign-Off includes a stop. | DR-2026-034 |
 | 5.0 | 2026-10-01 | Group, Entity, and Participating Entity removed; Data Sharing Arrangement replaces Group Arrangement; Domain, Control Function Contact, and the Statement of appetite refer to the Bank. | DR-2026-036 |
+| 5.1 | 2026-10-01 | The Service Agreement is on a best-effort basis within the available capacity and capability. | DR-2026-037 |
+| 5.2 | 2026-10-01 | The Solution Engineer replaces the AICC Engineer. | DR-2026-038 |
+| 5.3 | 2026-10-01 | Severity of an AI Incident is set by the incident management of the Bank. | DR-2026-039 |

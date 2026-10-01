@@ -1,6 +1,6 @@
 # Decision Log
 
-One line for each Decision at the AICC Lead level or above, and for any Decision that others will need to find. Hard-to-reverse Decisions of the Executive Sponsor, and the Decisions that the Operating Model 10 names, also have a Decision Record in decisions/. Status: Decided, Superseded, or Revoked.
+One line for each Decision at the AICC Lead level or above, and for any Decision that others will need to find. Hard-to-reverse Decisions of the Executive Sponsor, and the Decisions that the Operating Model 8 names, also have a Decision Record in decisions/. Status: Decided, Superseded, or Revoked.
 
 | Identifier | Date | Decision | Facts | Decided by | Status | Revisit |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -40,3 +40,8 @@ One line for each Decision at the AICC Lead level or above, and for any Decision
 | DR-2026-034 | 2026-10-01 | Fixes from the final audit and the walk-through: one Appointments Record, activation of the Business Model and Templates, state table closed from Active, the Checker, evidence places, and the reader aids | Independent audit and walk-through of four journeys | AICC Lead | Decided | At the re-check |
 | DR-2026-035 | 2026-10-01 | The Control Matrix: a reference for each control, and a living record of its objective, test, latest evidence, and status | An auditor needs to plan a test and see what has operated | AICC Lead | Decided | When internal audit has reviewed it |
 | DR-2026-036 | 2026-10-01 | The charter is of the Bank: the Group, Entities, and Participating Entities are removed; the Data Sharing Arrangement replaces the Group Arrangement | AICC serves the functions of the Bank only | AICC Lead | Decided | When another company takes part, or the Bank confirms its Strategic Pillars |
+| DR-2026-037 | 2026-10-01 | The Business Model states the principles of the commitment; the support level and the commercial details are settled in the Service Agreement | The details belong to the two parties of an Engagement | AICC Lead | Decided | When the first Service Agreements are issued |
+| DR-2026-038 | 2026-10-01 | The Solution Engineer replaces the AICC Engineer: the Role owns a Solution end to end and is appointed from the people whom the functions assign | AICC owns no engineers, and the title was ambiguous | AICC Lead | Decided | When AICC has a second Solution Engineer |
+| DR-2026-039 | 2026-10-01 | AI Incidents are handled in the incident management of the Bank; the IT function operates, and the AICC Lead is a stakeholder | The Bank's process meets the compliance requirements; AICC should not run a second one | AICC Lead | Decided | When compliance has confirmed the applicable requirements |
+| DR-2026-040 | 2026-10-01 | The Operating Model is the governance and control model of the unit; the Solution Lifecycle Model is the model of the work from portfolio to retirement | One document held two subjects; the standards separate them | AICC Lead | Decided | When the Solution Lifecycle Model is shaped for audit |
+| DR-2026-041 | 2026-10-01 | The Acceptance Checklist: when a ready Solution is handed to a Domain for use at scale, the Domain, compliance, information security, legal, and the others sign what they confirm | The handover needs one signed record | AICC Lead | Decided | At the first Solution that reaches handover |

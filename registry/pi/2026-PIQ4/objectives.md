@@ -1,8 +1,6 @@
 # PI Objectives: 2026-PIQ4
 
-The intent and direction of the Teams for the Program Increment, which are the goals of the first 100 days (DR-2026-012, DR-2026-013).
-They are not commitments of scope: the work depends on people and events outside AICC, and what is done is decided in each Iteration.
-Business value is scored 1 to 10 by the product owner at the PI Review. Confidence is rated 1 to 5 by the Team at PI Planning.
+The intent and direction of the Teams for the Program Increment, which are the goals of the first 100 days (DR-2026-012, DR-2026-013). They are not commitments of scope: the work depends on people and events outside AICC, and what is done is decided in each Iteration. Business value is scored 1 to 10 by the product owner at the PI Review. Confidence is rated 1 to 5 by the Team at PI Planning.
 
 | Objective | Initiative | Team | Product owner | Business value planned | Confidence | Business value achieved | State |
 | --- | --- | --- | --- | --- | --- | --- | --- |

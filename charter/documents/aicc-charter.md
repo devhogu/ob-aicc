@@ -11,8 +11,7 @@ revised: 2026-10-01
 
 ## 1. Purpose and scope
 
-1.1. This Charter states the mission, the authority, the limits, the funding, and the risk appetite of AICC, and what AICC
-offers and reports.
+1.1. This Charter states the mission, the authority, the limits, the funding, and the risk appetite of AICC, and what AICC offers and reports.
 
 ## 2. Mission
 
@@ -20,23 +19,17 @@ offers and reports.
 
 ## 3. Authority and limits
 
-3.1. AICC acts under the mandate of the Executive Sponsor, whose appointment of the AICC Lead and whose decision reference are entered in the Appointments Record. AICC may decide the matters that the Operating Model gives to the
-AICC Lead and the Competence Center team. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent (SOI) that are for AICC, and the Executive Sponsor for its annual review and its communication.
+3.1. AICC acts under the mandate of the Executive Sponsor, whose appointment of the AICC Lead and whose decision reference are entered in the Appointments Record. AICC may decide the matters that the Operating Model gives to the AICC Lead and the Competence Center team. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent (SOI) that are for AICC, and the Executive Sponsor for its annual review and its communication.
 
-3.2. AICC shall not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function,
-validate its own work, or decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function.
+3.2. AICC shall not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, validate its own work, or decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function.
 
-3.3. Data and decisions stay within the Bank unless a Data Sharing Arrangement permits sharing outside it. A Data Sharing Arrangement is decided by the
-Executive Sponsor after consulting the Control Function Contacts of data protection, legal, compliance, and information security, and is recorded in the Decision Log. It states the parties, the data, the legal basis, the controls, and the end date.
+3.3. Data and decisions stay within the Bank unless a Data Sharing Arrangement permits sharing outside it. A Data Sharing Arrangement is decided by the Executive Sponsor after consulting the Control Function Contacts of data protection, legal, compliance, and information security, and is recorded in the Decision Log. It states the parties, the data, the legal basis, the controls, and the end date.
 
 ## 4. Funding
 
-4.1. The Executive Sponsor shall set each year an Investment Envelope for each Strategic Priority and Investment Guardrails. Funding
-goes to Strategic Priorities and to the capacity of teams. The Domain Owners fund the Solutions of their Domains from the
-Envelope, within the Guardrails. The Executive Sponsor owns the budget of AICC itself.
+4.1. The Executive Sponsor shall set each year an Investment Envelope for each Strategic Priority and Investment Guardrails. Funding goes to Strategic Priorities and to the capacity of teams. The Domain Owners fund the Solutions of their Domains from the Envelope, within the Guardrails. The Executive Sponsor owns the budget of AICC itself.
 
-4.2. The Investment Guardrails shall state the amount that may be committed without the Executive Sponsor, and the Initiatives that
-need the approval of the Executive Sponsor. Every Initiative has an Initiative Brief. The Priorities Record points to them, and the figures are kept in the financial planning of the Bank. 
+4.2. The Investment Guardrails shall state the amount that may be committed without the Executive Sponsor, and the Initiatives that need the approval of the Executive Sponsor. Every Initiative has an Initiative Brief. The Priorities Record points to them, and the figures are kept in the financial planning of the Bank.
 
 ## 5. AI Risk Appetite Statement
 
@@ -46,8 +39,7 @@ need the approval of the Executive Sponsor. Every Initiative has an Initiative B
 
 5.3. The Bank does not accept AI that takes a decision without review in a regulated process, or an agent that acts on systems or funds, without validation by the Control Functions and the release decision of the Executive Sponsor.
 
-5.4. The AICC Lead owns this Statement and shall review it each year, and the Board Committee notes it in its first report. A
-risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
+5.4. The AICC Lead owns this Statement and shall review it each year, and the Board Committee notes it in its first report. A risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
 
 ## 6. What AICC offers
 

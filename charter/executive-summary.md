@@ -12,20 +12,20 @@ The clients of AICC are the functions of the Bank. A function is the client of a
 
 ## 3. Commitment
 
-AICC commits to each Engagement in a Service Agreement, which states the outcome and the capacity. An Outcome Report ends the Engagement, and the product owner accepts it. Source: Business Model 5.
+AICC commits to each Engagement in a Service Agreement, which states the outcome and the capacity. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. An Outcome Report ends the Engagement, and the product owner accepts it. Source: Business Model 5.
 
 ## 4. Flow of work
 
-A business need becomes an Initiative with a business case. An Initiative delivers Solutions, and a Solution is delivered through monthly Iterations and quarterly Program Increments. Product owner accepts the delivered outcome. Source: Operating Model 6 and 7.
+A business need becomes an Initiative with a business case. An Initiative delivers Solutions, and a Solution is delivered through monthly Iterations and quarterly Program Increments. Product owner accepts the delivered outcome. Source: Solution Lifecycle Model 3 to 7.
 
 ## 5. Decisions and authority
 
-The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain or reaches outside the Bank, cannot be reversed without significant cost, exceeds a guardrail, accepts a risk, or concerns a Risk Tier 3 Solution. The Control Functions validate and may stop a Solution, and no one overrides them. Source: Operating Model 4 and 5; AICC Charter 3.
+The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain or reaches outside the Bank, cannot be reversed without significant cost, exceeds a guardrail, accepts a risk beyond the appetite, or concerns a Risk Tier 3 Solution. The Control Functions validate and may stop a Solution, and no one overrides them. Source: Operating Model 4 and 5; AICC Charter 3.
 
 ## 6. Risk and control
 
-Three Risk Tiers set the checks that a Solution passes before it reaches users. The Executive Sponsor holds the Steering monthly and quarterly, and reports each quarter to the Board Committee. Internal audit has read access to the records and gives assurance only. The controls that can be tested are listed in the Operating Model 10 and kept in the Control Matrix. Source: AI Policy 3; Operating Model 7 and 10; AICC Charter 7.
+Three Risk Tiers set the checks that a Solution passes before it reaches users. The Executive Sponsor holds the Steering monthly and quarterly, and reports each quarter to the Board Committee. Internal audit has read access to the records and gives assurance only. The controls that can be tested are listed in the Operating Model 8 and kept in the Control Matrix. Source: AI Policy 3; Operating Model 6 and 8; AICC Charter 7.
 
 ## 7. Records
 
-The charter states the rules. Jira and Confluence run the live work. The Registry holds the records and the evidence for audit, and the Portfolio holds the catalog of Solutions. Source: Operating Model 9.
+The charter states the rules. Jira and Confluence run the live work. The Registry holds the records and the evidence for audit, and the Portfolio holds the catalog of Solutions. Source: Operating Model 7.

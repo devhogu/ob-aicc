@@ -1,7 +1,6 @@
 # Dashboard
 
-The state of the Program Increment at a glance. The AICC Lead updates it at each IT Review, from the Records named in each
-section. Last updated: 2026-10-01.
+The state of the Program Increment at a glance. The AICC Lead updates it at each IT Review, from the Records named in each section. Last updated: 2026-10-01.
 
 ## 1. Program Increment
 

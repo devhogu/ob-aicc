@@ -2,9 +2,7 @@
 
 ## 1. Intent and scope
 
-This page lists the tools and the portals that AICC uses, what each is used for, and within which workflows. The charter holds the rules, and
-the tools hold the work. Each tool adapts to the workflows of the charter, and the charter does not configure the tools. When a tool is
-deployed, its link is added to the list.
+This page lists the tools and the portals that AICC uses, what each is used for, and within which workflows. The charter holds the rules, and the tools hold the work. Each tool adapts to the workflows of the charter, and the charter does not configure the tools. When a tool is deployed, its link is added to the list.
 
 ## 2. The tools and the portals
 
@@ -41,4 +39,4 @@ The following table lists them.
 
 ## 3. Where the rules are
 
-The charter prevails, and Confluence, the supporting folder, and the portals never override it. The rules on the content of the tools, on the keeper of each tool, and on the evidence are in the Operating Model 9. Jira and Confluence hold the working state from the cutover, and they are never an evidence store: the Registry holds the evidence as extracts, and the AICC portal links to them. The Registry and the Portfolio are promoted to the corporate share when they are ready, and the portals link to the documents there and do not embed them.
+The charter prevails, and Confluence, the supporting folder, and the portals never override it. The rules on the content of the tools, on the keeper of each tool, and on the evidence are in the Operating Model 7. Jira and Confluence hold the working state from the cutover, and they are never an evidence store: the Registry holds the evidence as extracts, and the AICC portal links to them. The Registry and the Portfolio are promoted to the corporate share when they are ready, and the portals link to the documents there and do not embed them.

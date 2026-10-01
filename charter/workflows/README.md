@@ -1,7 +1,6 @@
 # Workflows
 
-The loops and flows of AICC, as intent and control flow, not as activity detail. They explain how the unit operates. The rules are in
-the documents of the charter, and the workflows state no rule of their own.
+The loops and flows of AICC, as intent and control flow, not as activity detail. They explain how the unit operates. The rules are in the documents of the charter, and the workflows state no rule of their own.
 
 | Workflow | Intent | SAFe equivalent |
 | --- | --- | --- |
@@ -29,5 +28,4 @@ flowchart TB
 
 Figure 1: the workflows.
 
-The workflows will run in Jira and Confluence from the cutover of the working state (Operating Model 9.1). The charter holds the schema, and the Registry and
-the Portfolio hold the records that an auditor may ask for.
+The workflows will run in Jira and Confluence from the cutover of the working state (Operating Model 7.1). The charter holds the schema, and the Registry and the Portfolio hold the records that an auditor may ask for.

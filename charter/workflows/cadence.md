@@ -1,18 +1,12 @@
 # Cadence
 
-The general flow of AICC for a PI, its ITs, and their weeks. It has no dates. It is the template and the guidance for the dated
-calendar of events that is built later for a rolling two quarters, from the real days in the Calendar. It assumes a clean calendar:
-Monday and Friday are the planning and review days, and nothing is blocked or gray. The Calendar records what is not clean, and its
-rules move events to the day before.
+The general flow of AICC for a PI, its ITs, and their weeks. It has no dates. It is the template and the guidance for the dated calendar of events that is built later for a rolling two quarters, from the real days in the Calendar. It assumes a clean calendar: Monday and Friday are the planning and review days, and nothing is blocked or gray. The Calendar records what is not clean, and its rules move events to the day before.
 
-The Cadence holds the control flow only: the loops, the events, and the control of each loop. What is done inside each event is
-described in the other workflows. The short forms and the events are defined in the vocabulary
-at the end of this workflow.
+The Cadence holds the control flow only: the loops, the events, and the control of each loop. What is done inside each event is described in the other workflows. The short forms and the events are defined in the vocabulary at the end of this workflow.
 
 ## 1. Every week
 
-Every week starts with planning and ends with review, as in Kanban. The Daily Stand-up is held each working day, and is not marked
-on the cadence.
+Every week starts with planning and ends with review, as in Kanban. The Daily Stand-up is held each working day, and is not marked on the cadence.
 
 | Day | Event |
 | --- | --- |
@@ -22,8 +16,7 @@ on the cadence.
 
 ## 2. Every IT
 
-An IT is one calendar month. It is four or five whole weeks, and its last week is the review week, except in the third IT of a PI, where the IP week takes its place. A five-week IT has one
-more working week in the middle.
+An IT is one calendar month. It is four or five whole weeks, and its last week is the review week, except in the third IT of a PI, where the IP week takes its place. A five-week IT has one more working week in the middle.
 
 | Week of the IT | Events in addition to the weekly events |
 | --- | --- |
@@ -50,8 +43,7 @@ A PI is a quarter of three ITs. The same flow repeats in each, and the last week
 
 ## 4. The IP week
 
-The last week of the third IT. It holds the events of the PI, in this order. It also holds the IT Review and Demo and the IT
-Retrospective of the third IT, inside the PI Review and Demo and Inspect and Adapt.
+The last week of the third IT. It holds the events of the PI, in this order. It also holds the IT Review and Demo and the IT Retrospective of the third IT, inside the PI Review and Demo and Inspect and Adapt.
 
 | Day | Event |
 | --- | --- |
@@ -63,11 +55,9 @@ Retrospective of the third IT, inside the PI Review and Demo and Inspect and Ada
 
 ## 5. The loops
 
-The cadence has two levels of loops, the PI loop and the IT loops inside it, and inside every IT the weekly loop. Each loop starts
-with planning and ends with review, and each review feeds the planning of the next loop.
+The cadence has two levels of loops, the PI loop and the IT loops inside it, and inside every IT the weekly loop. Each loop starts with planning and ends with review, and each review feeds the planning of the next loop.
 
-Figure 1 shows the PI loop with the three IT loops inside it. The last week of the third IT is the IP week, in which the PI ends
-and the next one is planned.
+Figure 1 shows the PI loop with the three IT loops inside it. The last week of the third IT is the IP week, in which the PI ends and the next one is planned.
 
 ```mermaid
 flowchart LR
@@ -137,8 +127,7 @@ Figure 4: planning down and control up.
 
 ## 6. The controls through the loops
 
-Each loop has a control, and each control is an event that already exists. The following table lists them from the shortest loop to
-the longest.
+Each loop has a control, and each control is an event that already exists. The following table lists them from the shortest loop to the longest.
 
 | Control | Event | What it controls | Record kept current |
 | --- | --- | --- | --- |
@@ -154,19 +143,15 @@ the longest.
 
 ## 7. Rules
 
-The rules for events that move or are missed, and for the Weekly Review, are in the Operating Model 7.5. Nothing in the Cadence is
-approved by anyone.
+The rules for events that move or are missed, and for the Weekly Review, are in the Solution Lifecycle Model 5.2. Nothing in the Cadence is approved by anyone.
 
 ## 8. The dated calendar of events
 
-The dated calendar of events is built from this flow for a rolling two quarters: the current PI and the next. It records under each
-event its week (for example 2026-PIQ4 IT10W1) and its actual date, taken from the Calendar, and the day it moved from when the
-Calendar rules moved it. It is built at the PI Planning for the next two quarters and is revised in the Weekly Review. It is not
-built yet.
+The dated calendar of events is built from this flow for a rolling two quarters: the current PI and the next. It records under each event its week (for example 2026-PIQ4 IT10W1) and its actual date, taken from the Calendar, and the day it moved from when the Calendar rules moved it. It is built at the PI Planning for the next two quarters and is revised in the Weekly Review. It is not built yet.
 
 ## 9. Light mode
 
-While the Team has up to three people, the Operating Model 7.7 applies. The following table shows which events remain.
+While the Team has up to three people, the Solution Lifecycle Model 5.3 applies. The following table shows which events remain.
 
 | Event | In light mode |
 | --- | --- |
@@ -184,8 +169,7 @@ While the Team has up to three people, the Operating Model 7.7 applies. The foll
 
 ### 10.1. Short forms and names
 
-The short forms PI, IT, and IP, the names PIQ1 to PIQ4, IT01 to IT12, and W1 to W5, and the terms Loop and Review week are defined in the
-Vocabulary.
+The short forms PI, IT, and IP, the names PIQ1 to PIQ4, IT01 to IT12, and W1 to W5, and the terms Loop and Review week are defined in the Vocabulary.
 
 ### 10.2. Events and their intent
 

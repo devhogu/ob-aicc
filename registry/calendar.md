@@ -1,29 +1,19 @@
 # Calendar
 
-The year calendar of AICC: the Program Increments, the Iterations, the weeks, and the days that are blocked or gray. The general flow of
-the events, without dates, is in the Cadence, in the charter workflows. This calendar is a schedule, and nobody approves it. The AICC Lead keeps it current.
+The year calendar of AICC: the Program Increments, the Iterations, the weeks, and the days that are blocked or gray. The general flow of the events, without dates, is in the Cadence, in the charter workflows. This calendar is a schedule, and nobody approves it. The AICC Lead keeps it current.
 
 ## 1. Rules
 
-1. An Iteration is one calendar month, named IT01 to IT12. A week runs from Monday to Sunday and belongs to the month that contains
-its Thursday. So an Iteration is four or five whole weeks, named W1 to W5, and every boundary falls on a Monday.
-2. A Program Increment is a quarter: IT01 to IT03 are PIQ1, IT04 to IT06 PIQ2, IT07 to IT09 PIQ3, and IT10 to IT12 PIQ4. It is a
-bundle of three Iterations and has no boundary of its own.
-3. A week is named with its year, Program Increment, Iteration, and week, for example 2026-PIQ4 IT10W1. The Iteration number tells the
-month, and the week number the week of that month.
-4. The IP week is the last week of the third Iteration of a Program Increment. If more than two of its
-working days are blocked or gray, it is the week before.
-5. A blocked day is an official non-working day or an expected one. A gray day is a working day on which people are likely to be out
-in some way, such as the eve of a holiday or a bridge day. A short day is a working day that ends early. Blocked and gray days are
-listed in section 4. The official calendar of the Kyrgyz Republic prevails, and the list is revised when it changes. Days marked
-Expected are not yet confirmed.
-6. Nothing that needs people outside AICC is planned for a blocked or gray day. An event that falls on one moves to the working day
-before it, and never after.
+1. An Iteration is one calendar month, named IT01 to IT12. A week runs from Monday to Sunday and belongs to the month that contains its Thursday. So an Iteration is four or five whole weeks, named W1 to W5, and every boundary falls on a Monday.
+2. A Program Increment is a quarter: IT01 to IT03 are PIQ1, IT04 to IT06 PIQ2, IT07 to IT09 PIQ3, and IT10 to IT12 PIQ4. It is a bundle of three Iterations and has no boundary of its own.
+3. A week is named with its year, Program Increment, Iteration, and week, for example 2026-PIQ4 IT10W1. The Iteration number tells the month, and the week number the week of that month.
+4. The IP week is the last week of the third Iteration of a Program Increment. If more than two of its working days are blocked or gray, it is the week before.
+5. A blocked day is an official non-working day or an expected one. A gray day is a working day on which people are likely to be out in some way, such as the eve of a holiday or a bridge day. A short day is a working day that ends early. Blocked and gray days are listed in section 4. The official calendar of the Kyrgyz Republic prevails, and the list is revised when it changes. Days marked Expected are not yet confirmed.
+6. Nothing that needs people outside AICC is planned for a blocked or gray day. An event that falls on one moves to the working day before it, and never after.
 
 ## 2. Program Increments and Iterations
 
-2.1. The following table lists the Iterations of the rest of 2026 and of 2027, with their weeks and the Innovation and Planning
-week of each Program Increment.
+2.1. The following table lists the Iterations of the rest of 2026 and of 2027, with their weeks and the Innovation and Planning week of each Program Increment.
 
 | Program Increment | Iteration | Starts | Ends | Weeks | IP week | Blocked days | Gray days |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -45,8 +35,7 @@ week of each Program Increment.
 
 ## 3. Weeks
 
-3.1. The following table lists each week with its name, its Monday, and what is blocked or gray in it. Weeks are the checkpoints of
-the Weekly Review.
+3.1. The following table lists each week with its name, its Monday, and what is blocked or gray in it. Weeks are the checkpoints of the Weekly Review.
 
 | Week | Monday | Note |
 | --- | --- | --- |
@@ -119,9 +108,7 @@ the Weekly Review.
 
 ## 4. Blocked, gray, and short days
 
-4.1. The following table lists the days that are not ordinary working days, from 2026-10-01 to the end of 2027. The kind is Official,
-Expected, Gray, or Short. The summer leave season, from 2027-07-12 to 2027-08-27, is a period of reduced availability of people
-outside AICC, and its days are not listed one by one.
+4.1. The following table lists the days that are not ordinary working days, from 2026-10-01 to the end of 2027. The kind is Official, Expected, Gray, or Short. The summer leave season, from 2027-07-12 to 2027-08-27, is a period of reduced availability of people outside AICC, and its days are not listed one by one.
 
 | Date | Day | Kind | What | Basis |
 | --- | --- | --- | --- | --- |

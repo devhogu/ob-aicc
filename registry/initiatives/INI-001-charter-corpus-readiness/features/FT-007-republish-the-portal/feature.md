@@ -12,6 +12,4 @@
 
 ## The work
 
-Regenerate the portal from the active Statement of Intent and the charter, in Russian and English, and promote the charter to the
-clean portal repository and the corporate folder. It waits for the charter to be complete: the workflows, the guides, and the
-templates. It was split from FT-006.
+Regenerate the portal from the active Statement of Intent and the charter, in Russian and English, and promote the charter to the clean portal repository and the corporate folder. It waits for the charter to be complete: the workflows, the guides, and the templates. It was split from FT-006.

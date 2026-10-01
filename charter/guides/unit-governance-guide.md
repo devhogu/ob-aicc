@@ -2,14 +2,11 @@
 
 ## 1. Purpose and when it applies
 
-This guide explains how AICC is directed, reported, and controlled as an organizational unit: the mandate, the planning, the reporting, the decisions, the
-controls, and the assurance. It is the answer to the question "how does your unit operate?". It applies throughout.
+This guide explains how AICC is directed, reported, and controlled as an organizational unit: the mandate, the planning, the reporting, the decisions, the controls, and the assurance. It is the answer to the question "how does your unit operate?". It applies throughout.
 
 ## 2. The mandate and the authority
 
-AICC acts under the mandate of the Executive Sponsor, and the Charter states its limits: it does not own the AI Platform, it does not own the results of a
-Domain, it does not set the rules of a Control Function, it does not validate its own work, and it does not decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function. The appointment of the AICC Lead and the decision reference of the mandate are entered in the Appointments Record. The Executive Sponsor may
-delegate a decision in writing, for a scope and a period, and each delegation is entered there.
+AICC acts under the mandate of the Executive Sponsor, and the Charter states its limits: it does not own the AI Platform, it does not own the results of a Domain, it does not set the rules of a Control Function, it does not validate its own work, and it does not decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function. The appointment of the AICC Lead and the decision reference of the mandate are entered in the Appointments Record. The Executive Sponsor may delegate a decision in writing, for a scope and a period, and each delegation is entered there.
 
 ## 3. The yearly, quarterly, monthly, and weekly loops
 
@@ -23,25 +20,19 @@ delegate a decision in writing, for a scope and a period, and each delegation is
 
 ## 4. How a decision moves
 
-The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain or reaches outside the Bank,
-cannot be reversed without significant cost, exceeds a guardrail or changes a Strategic Priority, or accepts a risk or concerns a Risk Tier 3 Solution. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in
-the Decision Log, and a Decision of the Executive Sponsor that is hard to reverse also has a Decision Record.
+The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain or reaches outside the Bank, cannot be reversed without significant cost, exceeds a guardrail or changes a Strategic Priority, or accepts a risk or concerns a Risk Tier 3 Solution. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in the Decision Log, and a Decision of the Executive Sponsor that is hard to reverse also has a Decision Record.
 
 ## 5. Reporting and assurance
 
-Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The Control Functions stand beside it, independent of AICC.
-Internal audit gives assurance only, and has read access to the Registry and, read only, to Jira, Confluence, and Service Management. The Executive Sponsor
-tells the Board Committee of a High Severity AI Incident and of any risk accepted beyond the appetite without waiting for the next report.
+Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The Control Functions stand beside it, independent of AICC. Internal audit gives assurance only, and has read access to the Registry and, read only, to Jira, Confluence, and Service Management. The Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major, as it requires, and of any risk accepted beyond the appetite, without waiting for the next report.
 
 ## 6. Where the evidence is
 
-The working state is in the Registry until the cutover and then in Jira and Confluence. The evidence records are always in the Registry as closed and dated
-extracts. The Operating Model 10 lists each control with its evidence record, and the Registry README lists the Records by class. The AICC portal links to the
-evidence records on the corporate share. The Document Catalog states how a document is activated, changed, and checked.
+The working state is in the Registry until the cutover and then in Jira and Confluence. The evidence records are always in the Registry as closed and dated extracts. The Operating Model 8 lists each control with its evidence record, and the Registry README lists the Records by class. The AICC portal links to the evidence records on the corporate share. The Document Catalog states how a document is activated, changed, and checked.
 
 ## 7. The controls and how to test them
 
-The Operating Model 10 lists each control with its rule, owner, timing, and evidence record. The table below gives, for each control, its objective, its type, and how an auditor tests it. Type is Directive (sets a rule or a direction), Preventive (stops an error before it happens), or Detective (finds an error after it happens). The test and the status of each control at a date are in the Control Matrix in the Registry.
+The Operating Model 8 lists each control with its rule, owner, timing, and evidence record. The table below gives, for each control, its objective, its type, and how an auditor tests it. Type is Directive (sets a rule or a direction), Preventive (stops an error before it happens), or Detective (finds an error after it happens). The test and the status of each control at a date are in the Control Matrix in the Registry.
 
 | Ref | Control | Objective | Type | How to test |
 | --- | --- | --- | --- | --- |
@@ -60,7 +51,7 @@ The Operating Model 10 lists each control with its rule, owner, timing, and evid
 | C-13 | Check or validation before the first deployment | Nothing reaches real users or data unchecked | Preventive | Compare the date of the check with the first deployment |
 | C-14 | Release | Use beyond the first users is decided by the right owner | Preventive | Compare the release with the check and the Tier |
 | C-15 | Approval of the use of a Solution for a data class | Data is used only where its owner approved | Preventive | Read the approval, who gave it, and when |
-| C-16 | AI Incident | Incidents are contained, reviewed, and reported | Detective | Read the nil statement; for an Incident, the review within ten working days |
+| C-16 | AI Incident | Incidents are handled in the incident management of the Bank, with AICC taking part, and reviewed | Detective | Read the nil statement; for an Incident, the ticket in Service Management and the AI Incident Review |
 | C-17 | Exception | A departure from a requirement is decided, limited, and recorded | Preventive | Read the nil statement; for an Exception, its expiry and compensating control |
 | C-18 | Check of a provider | A provider is checked for data, terms, and exit before use | Preventive | Compare the date of the check with the first use of the provider |
 | C-19 | Sharing outside the Bank | Data and decisions stay within the Bank unless permitted | Preventive | Read the Data Sharing Arrangement and its Decision Record |
@@ -85,4 +76,4 @@ The Operating Model 10 lists each control with its rule, owner, timing, and evid
 
 ## 9. Rule source
 
-Charter 3 to 7; Operating Model 4 to 5, 9, 10; AI Policy 5 to 7; Document Catalog 3, 4, 7; the Unit governance workflow.
+Charter 3 to 7; Operating Model 4 to 8; AI Policy 5 to 7; Document Catalog 3, 4, 7; the Unit governance workflow.

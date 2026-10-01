@@ -9,8 +9,7 @@ revised: 2026-10-01
 
 # Control Sign-Off
 
-**Template.** The decision of a Control Function Contact: a validation, a stop, a provider check, or an Exception. The check of a Risk Tier 1 Solution is not a sign-off: it is noted in the AI Registry. An Exception to a requirement set by AICC alone is a Decision Record. It is a simple sign-off: the
-decision, its date, and its scope. It carries no figures of the Bank, no data, and no code.
+**Template.** The decision of a Control Function Contact: a validation, a stop, a provider check, or an Exception. The check of a Risk Tier 1 Solution is not a sign-off: it is noted in the AI Registry. An Exception to a requirement set by AICC alone is a Decision Record. It is a simple sign-off: the decision, its date, and its scope. It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |
@@ -25,8 +24,7 @@ decision, its date, and its scope. It carries no figures of the Bank, no data, a
 
 ## Limits and conditions
 
-[What the subject shall not be used for, for example no output on an individual application. Any change to these limits needs a new
-decision. Conditions, with owner and date.]
+[What the subject shall not be used for, for example no output on an individual application. Any change to these limits needs a new decision. Conditions, with owner and date.]
 
 ## For an Exception
 

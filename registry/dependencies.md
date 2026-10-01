@@ -1,8 +1,6 @@
 # Dependency Map
 
-For each item of the Program Increment: its intent, what it needs from other items, Teams, functions, and persons (most of it is
-outside AICC), and its scope by month. The scope by month is decided at IT Planning and changes with the Dependencies. It is
-reviewed in the Weekly Review. Status of a Dependency: Open, Met, or At risk.
+For each item of the Program Increment: its intent, what it needs from other items, Teams, functions, and persons (most of it is outside AICC), and its scope by month. The scope by month is decided at IT Planning and changes with the Dependencies. It is reviewed in the Weekly Review. Status of a Dependency: Open, Met, or At risk.
 
 ## 1. Dependencies
 

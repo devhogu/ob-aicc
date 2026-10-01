@@ -2,10 +2,7 @@
 
 ## 1. Purpose and when it applies
 
-This guide explains the rhythm of AICC and what each beat leaves on record. Work runs in Program Increments (PI) of one quarter. A PI has three
-Iterations (IT), each one calendar month of four or five whole weeks, and the last week of the third IT is the Innovation and Planning (IP) week. Every week
-starts with planning and ends with review. The Cadence workflow shows the general flow without dates, and the Calendar holds the dates with the blocked and
-gray days.
+This guide explains the rhythm of AICC and what each beat leaves on record. Work runs in Program Increments (PI) of one quarter. A PI has three Iterations (IT), each one calendar month of four or five whole weeks, and the last week of the third IT is the Innovation and Planning (IP) week. Every week starts with planning and ends with review. The Cadence workflow shows the general flow without dates, and the Calendar holds the dates with the blocked and gray days.
 
 ## 2. The beats and what each is for
 
@@ -18,12 +15,7 @@ gray days.
 
 ## 3. A month and a quarter in practice
 
-A month starts with IT Planning, in which the Team selects the Features for the month. Each Monday and Friday it plans and reviews the week. The last
-week is the review week: the IT Review and Demo, the retrospective, and the monthly Steering, on a day fixed with the people outside AICC. The
-Registry Snapshot is taken at the close. In the IP week of a quarter, the PI Review and Demo shows what the quarter delivered, Inspect and Adapt solves the
-main problems, Innovation gives time to learn, the PI Planning sets the intent and direction of the next PI, and the quarterly Steering confirms the
-priorities and funding and the Maturity Level. The AICC Lead writes the Quarterly Report, and the Executive Sponsor approves and issues the report to the
-Board Committee.
+A month starts with IT Planning, in which the Team selects the Features for the month. Each Monday and Friday it plans and reviews the week. The last week is the review week: the IT Review and Demo, the retrospective, and the monthly Steering, on a day fixed with the people outside AICC. The Registry Snapshot is taken at the close. In the IP week of a quarter, the PI Review and Demo shows what the quarter delivered, Inspect and Adapt solves the main problems, Innovation gives time to learn, the PI Planning sets the intent and direction of the next PI, and the quarterly Steering confirms the priorities and funding and the Maturity Level. The AICC Lead writes the Quarterly Report, and the Executive Sponsor approves and issues the report to the Board Committee.
 
 ## 4. When the calendar is not clean
 
@@ -44,4 +36,4 @@ Board Committee.
 
 ## 6. Rule source
 
-Operating Model 7; the Cadence workflow; the Calendar.
+Solution Lifecycle Model 5; Operating Model 6; the Cadence workflow; the Calendar.

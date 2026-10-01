@@ -2,21 +2,15 @@
 
 ## 1. Intent and scope
 
-This workflow is the control loop of AICC as an organizational unit: how the unit is directed, how its work is organized and
-reported, and how it is controlled. It is the governance and administration that an auditor expects to find in a bank, and the
-answer to the question "how does your unit operate?". It covers the mandate, the planning, the reporting, the decisions, the
-controls, and the assurance. It does not cover how a solution is delivered, which is in the service delivery workflow.
+This workflow is the control loop of AICC as an organizational unit: how the unit is directed, how its work is organized and reported, and how it is controlled. It is the governance and administration that an auditor expects to find in a bank, and the answer to the question "how does your unit operate?". It covers the mandate, the planning, the reporting, the decisions, the controls, and the assurance. It does not cover how a solution is delivered, which is in the service delivery workflow.
 
-The rules are in the Operating Model, the AICC Charter, and the AI Policy. This workflow shows the flow and the intent. It states no
-rule of its own. The events are those of the Cadence. Each control produces a record, and the Operating Model 10 states which.
+The rules are in the Operating Model, the AICC Charter, and the AI Policy. This workflow shows the flow and the intent. It states no rule of its own. The events are those of the Cadence. Each control produces a record, and the Operating Model 8 states which.
 
 ## 2. The control loop by horizon
 
-The loop runs on four horizons and on events. Each horizon takes the result of the shorter one below it and sets the direction of
-the next.
+The loop runs on four horizons and on events. Each horizon takes the result of the shorter one below it and sets the direction of the next.
 
-Figure 1 shows the loop. Direction flows down, from the yearly horizon to the weekly one, and control flows up, from the weekly
-review to the yearly strategy.
+Figure 1 shows the loop. Direction flows down, from the yearly horizon to the weekly one, and control flows up, from the weekly review to the yearly strategy.
 
 ```mermaid
 flowchart TB
@@ -45,8 +39,7 @@ The following table states each horizon.
 
 ## 3. The reporting chain
 
-Reporting flows from the Team up to the Board Committee, and the Control Functions and internal audit stand beside it, independent
-of it.
+Reporting flows from the Team up to the Board Committee, and the Control Functions and internal audit stand beside it, independent of it.
 
 Figure 2 shows the reporting chain and the independent lines.
 
@@ -63,15 +56,14 @@ Figure 2: the reporting chain.
 
 ## 4. How a decision moves
 
-A decision is taken by the person doing the work, on the facts. It goes up only when one of the conditions of the Operating Model
-applies. A Control Function decides within its remit, and nobody overrides it.
+A decision is taken by the person doing the work, on the facts. It goes up only when one of the conditions of the Operating Model applies. A Control Function decides within its remit, and nobody overrides it.
 
 Figure 3 shows how a decision moves.
 
 ```mermaid
 flowchart TB
   A["A decision arises in the work"] --> B["The person doing the work decides on the facts"]
-  B --> C{"Affects another Domain or reaches outside the Bank, hard to reverse, exceeds a guardrail, accepts a risk, or is Tier 3?"}
+  B --> C{"Affects another Domain or reaches outside the Bank, hard to reverse, exceeds a guardrail, accepts a risk beyond the appetite, or is Tier 3?"}
   C -->|No| D["Noted in the work item"]
   C -->|Yes| E["AICC Lead decides, or the Executive Sponsor for the strategic matters"]
   E --> F["Entered in the Decision Log"]
@@ -84,9 +76,7 @@ Figure 3: the movement of a decision.
 
 ## 5. The controls an auditor can test
 
-Each control is an event that already exists, and each leaves a record. The Operating Model 10 lists the controls, with their rule, their
-owner, their timing, and their evidence record. The loop above shows where they sit: the yearly controls on the strategy horizon, the
-quarterly ones on the results, the monthly ones on the review, and the event-driven ones when an incident, an exception, or a change occurs.
+Each control is an event that already exists, and each leaves a record. The Operating Model 8 lists the controls, with their rule, their owner, their timing, and their evidence record. The loop above shows where they sit: the yearly controls on the strategy horizon, the quarterly ones on the results, the monthly ones on the review, and the event-driven ones when an incident, an exception, or a change occurs.
 
 ## 6. Separation and independence
 
@@ -110,6 +100,4 @@ Figure 4: the life of a document.
 
 ## 8. Where it runs
 
-The loop will run in Jira and Confluence from the cutover of the working state (Operating Model 9.1): Confluence for the notes and reports, and Jira for the
-dashboards and the board. Until then the Registry holds the working state. The charter holds this schema. The Registry always holds the
-evidence record of each outcome that an auditor may ask for, and the raw material stays in the tools or in the systems of the functions.
+The loop will run in Jira and Confluence from the cutover of the working state (Operating Model 7.1): Confluence for the notes and reports, and Jira for the dashboards and the board. Until then the Registry holds the working state. The charter holds this schema. The Registry always holds the evidence record of each outcome that an auditor may ask for, and the raw material stays in the tools or in the systems of the functions.

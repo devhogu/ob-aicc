@@ -9,8 +9,7 @@ revised: 2026-10-01
 
 # Registry Snapshot
 
-**Template.** Taken by the AICC Lead at the close of each IT and each PI, and at the cutover, because Jira and Confluence are not an evidence store. It
-is a closed and dated extract of the working state. It carries no figures of the Bank, no data, and no code.
+**Template.** Taken by the AICC Lead at the close of each IT and each PI, and at the cutover, because Jira and Confluence are not an evidence store. It is a closed and dated extract of the working state. It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |

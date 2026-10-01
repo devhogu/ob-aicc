@@ -8,14 +8,14 @@ This is the Appointments Record, in the form of the Appointments Record Template
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Executive Sponsor | The Bank | Simen Munter, Chief Executive Officer of the Bank | [ A deputy named by the Executive Sponsor ] | Appointed | [ The date of the mandate ] | | The Bank | [ The decision or order of the mandate of AICC: its number, date, and issuer ] |
 | AICC Lead | AICC | Timur Alimbayev, head of AICC | [ A deputy named by the AICC Lead ] | Appointed | [ The date of the appointment ] | | Executive Sponsor | [ The decision or order of the appointment: its number, date, and issuer ] |
-| AICC Engineer | AICC | Timur Alimbayev, head of AICC | [ A deputy named by the AICC Lead ] | Appointed | [ The date of the appointment ] | | [ The Executive Sponsor, because the AICC Lead may not appoint their own person to a Role (Operating Model 4.6, 5.7) ] | [ The decision reference ] |
+| Solution Engineer | AICC | Timur Alimbayev, head of AICC | [ A deputy named by the AICC Lead ] | Appointed | [ The date of the appointment ] | | [ The Executive Sponsor, because the AICC Lead may not appoint their own person to a Role (Operating Model 4.6, 5.7) ] | [ The decision reference ] |
 | Platform Owner | The AI Platform | [ The person who owns the platform AICC runs on, named when a platform is in use ] | | | | | Head of technology | |
 | Domain Owner | FP&A | Ademi Moldogazieva, head of the FP&A function | | Appointed | [ The date ] | | The head of the Domain, by Operating Model 4.6; the Executive Sponsor confirmed it with INI-004 | [ The decision reference ] |
 | Domain Owner | Other Domains | [ The head of the function that owns the Domain, named at the start of an Engagement ] | | | | | The head of the Domain | |
 | Domain Expert | Each Domain | [ The practitioner the Domain Owner names to work with the Team ] | | | | | Domain Owner | |
 | Checker | Each Risk Tier 1 Solution | [ A person who did not build the Solution, named for each Solution ] | | | | | AICC Lead | |
 
-The heads of the functions of the AI Steering Committee are named when the Committee convenes. Until then the Executive Sponsor decides alone (Operating Model 7.2).
+The heads of the functions of the AI Steering Committee are named when the Committee convenes. Until then the Executive Sponsor decides alone (Operating Model 6.4).
 
 | Function | Holder | Deputy | Status | From | To | Decision Record |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ The RACI of the charter is in the Organization guide. Role combinations that the
 
 | Role | Jira, Confluence, and Service Management group | Repository permission | Last access review (date and reviewer) |
 | --- | --- | --- | --- |
-| AICC Lead and AICC Engineer | [ The group, entered when the tool is deployed ] | [ The permission ] | [ The date and the reviewer ] |
+| AICC Lead and Solution Engineer | [ The group, entered when the tool is deployed ] | [ The permission ] | [ The date and the reviewer ] |
 | Internal audit | [ Read-only access to Jira, Confluence, and Service Management ] | Read | [ The date and the reviewer ] |
 
 | Tool | Keeper (Role and name) | From | To |
