@@ -2,12 +2,12 @@
 
 The Holders of the Roles, with the date of appointment. A closed appointment is kept with its end date. One person may hold several Roles; list each in its own row.
 
-| Role | Holder | Entity or Domain | Appointed by | Deputy | From | To |
-| --- | --- | --- | --- | --- | --- | --- |
-| Executive Sponsor | Simen Munter, Chief Executive Officer of the Bank | The Bank | | | | |
-| AICC Lead | Timur Alimbayev | AICC | Executive Sponsor | | | |
-| AICC Engineer | Timur Alimbayev | AICC | AICC Lead | | | |
-| Platform Owner | | | | | | |
+| Role | Holder | Entity or Domain | Appointed by | Authority and decision reference | Deputy | From | To |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Executive Sponsor | Simen Munter, Chief Executive Officer of the Bank | The Bank | | Mandate of AICC: reference to be entered | | | |
+| AICC Lead | Timur Alimbayev | AICC | Executive Sponsor | Appointment: reference to be entered | | | |
+| AICC Engineer | Timur Alimbayev | AICC | AICC Lead | Appointment: reference to be entered | | | |
+| Platform Owner | | | | | | | |
 
 | Checker | Function or Domain | Named by | From | To |
 | --- | --- | --- | --- | --- |
@@ -37,3 +37,9 @@ The Holders of the Roles, with the date of appointment. A closed appointment is 
 | Internal audit (assurance only) | Contact | Entity | Named by | From | To |
 | --- | --- | --- | --- | --- | --- |
 | Independent assurance over AICC and the Portfolio; read access to every Record | | | | | |
+
+Delegations of the Executive Sponsor, in writing, for a stated scope and period:
+
+| Scope | Delegate | From | To | Decision reference |
+| --- | --- | --- | --- | --- |
+| | | | | |

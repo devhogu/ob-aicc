@@ -5,7 +5,7 @@ The Registry holds the Records of AICC: the process records of the work in progr
 | Record | Where | Holds |
 | --- | --- | --- |
 | Priorities | [priorities.md](priorities.md) | Strategic Priorities, Investment Envelopes, Investment Guardrails |
-| Portfolio Backlog | [portfolio-backlog.md](portfolio-backlog.md) | The ranked Initiatives |
+| Portfolio Backlog | [portfolio-backlog.md](portfolio-backlog.md) | The ranked Initiatives, and for each Engagement its client function, phases, support level, Service Agreement, and Outcome Report |
 | Program Backlog | [program-backlog.md](program-backlog.md) | The ranked Epics and Features |
 | Kanban boards | [board.md](board.md) | The Portfolio Kanban and the Program Kanban, by state, with lanes and Limits on Work in Progress |
 | Roadmap | [roadmap.md](roadmap.md) | The three-month Roadmap by Program Increment, and the Milestones |

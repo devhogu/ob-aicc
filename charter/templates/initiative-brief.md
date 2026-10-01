@@ -2,43 +2,53 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 2.0
+revision: 3.0
 created: 2026-09-30
 revised: 2026-10-01
 ```
 
 # Initiative Brief
 
-**Template.** Copy for each Initiative above an Investment Guardrail. It is the business case of the Initiative. One page. For a discovery goal, an outcome list may replace the benefit table, the Domain Owner field may list several Domain Owners, and baselines are dated instead of set later.
+**Template.** The business case of an Initiative, in the form of the lean business case of SAFe. Copy for each Initiative. The Domain Owner
+and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials
+stays in Jira and Confluence. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One to two pages.
 
 | Field | Entry |
 | --- | --- |
 | Identifier | INI-[nnn] |
 | Title | [title] |
 | State and Stage | [state, and Stage if in discovery or active] |
-| Solutions expected | [the Solutions it should deliver, with their types] |
 | Strategic Priority | [PRI-n] |
-| Domain Owner | [name] |
+| Domain Owner (represents the client function) | [name; several for an Initiative that spans Domains] |
+| Solutions expected | [the Solutions it should deliver, with their types] |
 | Date of last change | [date] |
 
 ## 1. Hypothesis
 
-[If we do X, then Y, measured by Z.]
+[For [the client] who [need], the [solution] is a [type] that [value]. Unlike [the current way], ours [difference].]
 
-## 2. Problem or opportunity, and minimum scope
+## 2. Business outcomes and leading indicators
 
-[The problem, with evidence; the smallest scope that tests the hypothesis; what is excluded.]
+| Business outcome | Leading indicator | Where the figures live | Date |
+| --- | --- | --- | --- |
+|  |  |  |  |
 
-## 3. Benefit, cost, and risk
+## 3. Scope and the minimum viable product
 
-| Benefit | Measure | Baseline | Target | Date |
-| --- | --- | --- | --- | --- |
-|  |  |  |  |  |
+[What is in and out of scope, any non-functional requirements, the minimum viable product that tests the hypothesis, and the Features and
+Solutions it may spawn.]
 
-[Estimated cost and Investment Envelope; risks and the expected Risk Tier; dependencies.]
+## 4. Cost, capacity, and value
 
-## 4. Decision and acceptance
+[The capacity in days for the minimum viable product, and the estimate for the full scope if it succeeds. The cost and the Investment
+Envelope as references to the financial planning of the Bank. The expected value and where it is tracked.]
 
-[Approved, rejected, or returned; by whom; the date; the Decision Log entry.]
+## 5. Risks, dependencies, and Risk Tier
 
-[On delivery: accepted, returned, or rejected by the product owner, with the date. Acceptance closes the item.]
+[The risks, the expected Risk Tier of the Solutions, the Control Functions to consult, and the Dependencies on other items, functions, or
+persons.]
+
+## 6. Decision and acceptance
+
+[Go, no-go, or return, by whom, and the date, with the Decision Record. The Service Agreement issued (AGR-nnn). On delivery: accepted,
+returned, or cancelled by the product owner, with the date. Acceptance closes the item.]

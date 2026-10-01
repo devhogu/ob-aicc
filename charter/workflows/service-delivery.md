@@ -12,7 +12,8 @@ AICC is a lab. It defines and tries solutions with the functions, so that the Ba
 become services that AICC runs. Some are products built for one consumer. Some are experiments that end in a proposal, which another
 owner may adopt. AICC also oversees the adoption of solutions that others deliver.
 
-The rules are in the Operating Model, the AI Policy, and the Vocabulary. This workflow shows the flow and the intent, and states no
+The Engagement workflow sits on top of this one: it states the commitment to the function, and this workflow carries the work. The rules
+are in the Operating Model, the AI Policy, and the Vocabulary. This workflow shows the flow and the intent, and states no
 rule of its own. The events are those of the Cadence.
 
 ## 2. The levels
@@ -146,8 +147,8 @@ flowchart LR
   end
   subgraph EX["Experiment: time-boxed, no consumer"]
     direction LR
-    X1["Trial"] --> X2["Proposal"] --> X3["Handoff to the receiver"]
-    X3 -.AICC oversees the Adoption.-> A["Adoption"]
+    X1["Trial"] --> X2["Proposal"] --> X3["Handover to the receiver"]
+    X3 -.AICC oversees.-> A["Adopted Solution"]
   end
 ```
 
@@ -157,14 +158,14 @@ Figure 3: the life of a Solution by type.
 | --- | --- | --- | --- | --- |
 | Service | AICC | Operate, Evolve, Retire | A business case with the run cost and a sunset rule | Retired or cancelled |
 | Product | The consumer owns the version; AICC supports on demand | Handover, Support, Revise, Retire for the consumer | A Product with many consumers or recurring requests becomes a Service through a business case | Retired for the consumer |
-| Experiment | None yet | Trial, Proposal, Handoff | Time-boxed to a stated number of ITs; the Handoff is complete when the receiver accepts it | Handed off, closed with its lessons, or cancelled |
+| Experiment | None yet | Trial, Proposal, Handover | Time-boxed to a stated number of ITs; the Handover is complete when the receiver accepts it | Handed off, closed with its lessons, or cancelled |
 
-Operation and support answer the requests of the users and the incidents, with the lane Incident first. AICC reassesses the Risk
+Operation and support answer the requests of the users and the incidents, with the lane Urgent first. AICC reassesses the Risk
 Tier on a change and on its date in the AI Registry.
 
-## 7. Oversight of the Adoption
+## 7. Oversight of the Adopted Solutions
 
-AICC oversees the Adoption of the solutions that others deliver, in the Portfolio, with their state, and reports on what was adopted and
+AICC oversees the Adopted Solutions that others deliver, in the Portfolio, with their state, and reports on what was adopted and
 what works. The AI adoption strategy is a series of Proposals that AICC shapes from what it learns, and the Bank decides on them.
 This is the mission side of the lab.
 
@@ -204,6 +205,6 @@ the Registry.
 | The Stage and the exact business state of an item | Fields on the issue, where the five statuses are not enough to tell proposed, discovery, and deferred apart | The state and Stage in the snapshot |
 | A Solution | A Confluence page for its Solution Definition, and a label or component on its Epics | The Solution Definition in the Portfolio |
 | Waiting on a Dependency | A link between items and a flag on the issue | The Dependency Map at the close of the PI |
-| Lanes | The priority of the issue: Incident, High, Normal | Not kept |
+| Lanes | The priority of the issue: Urgent, High, Normal | Not kept |
 | IT and PI | A Jira sprint for each IT, and a field for the PI | The Calendar |
 | Solution definitions, notes, forms, and reports | Confluence pages and page templates | The Solution Definition, the decisions, the Control Sign-Offs, the incident records, and the Quarterly Report |

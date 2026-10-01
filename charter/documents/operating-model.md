@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 6.1
+revision: 6.3
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -49,6 +49,8 @@ accountability, Control Functions, and data.
 
 (g) Keep only the process and the records that someone uses, and remove the rest.
 
+(h) Put outcomes before outputs, and collaboration before negotiation. The plan changes and the intent holds.
+
 3.2. AICC shall apply the Values and the Principles of the Statement of Intent.
 
 ## 4. Roles
@@ -61,7 +63,7 @@ separation in section 4.4.
 | Role | Does | Decides |
 | --- | --- | --- |
 | Executive Sponsor | Holds the mandate and the funding; appoints the AICC Lead; approves and issues the report to the Board Committee | The Strategic Priorities, the Investment Envelopes, and the Investment Guardrails; the release of a Risk Tier 3 Solution; any risk beyond the AI Risk Appetite Statement; the retirement of an Initiative; the approval of AI output published outside AICC; the acceptance of an item that spans Domains or is enabling work of AICC; the naming of acting Contacts |
-| AICC Lead | Leads AICC as its lead engineer and architect; is accountable for this Operating Model and for every document and Record of AICC; prepares the Quarterly Report; presents to the AI Steering Committee | Taking an item into discovery; the approval of Epics; the approval of the use of a Solution in AICC for a data class; the Risk Tier, which the AICC Lead tells to the Domain Owner; the suspension of a Solution; standards, architecture, and Templates; questions between Domains; the activation of every document; an Exception to a requirement set by AICC |
+| AICC Lead | Leads AICC as its lead engineer and architect; is accountable for this Operating Model and for every document and Record of AICC; prepares the Quarterly Report; presents to the AI Steering Committee | Taking an item into discovery; the issue of a Service Agreement; the approval of Epics; the approval of the use of a Solution in AICC for a data class; the Risk Tier, which the AICC Lead tells to the Domain Owner; the suspension of a Solution; standards, architecture, and Templates; questions between Domains; the activation of every document; an Exception to a requirement set by AICC |
 | AICC Engineer | Builds and runs Solutions with the Domains; keeps the work visible; coaches Domain Experts; checks the work of others | How a Solution is built; the approval of Features at IT Planning; the order in which the team pulls work within the agreed priorities |
 | Domain Owner | Owns the results of AI adoption in the Domain and acts as product owner of its Solutions; names the Domain Expert | Whether the Domain takes part in an Initiative; funding of the Solutions of the Domain; the approval of the use of a Solution in the Domain for a data class, and the approvals that the rules of the Bank require; the acceptance of an item of the Domain; the release of a Risk Tier 1 or 2 Solution, after the check or the validation; the retirement of a Solution |
 | Domain Expert | Explains the routine work; works with the AICC Engineer; tries the Solution in real work; then scales adoption and trains colleagues | Nothing on funding, acceptance, or control |
@@ -91,7 +93,7 @@ the Board and receives the report of the Executive Sponsor. Neither is a Role.
 
 4.6. The Holders of the Roles are named in the Appointments Record. The Executive Sponsor appoints the AICC Lead. The AICC Lead
 appoints the AICC Engineers. The head of a Domain names the Domain Owner, and the Domain Owner names the Domain Expert. Each
-Control Function names its Control Function Contact for each Entity. The head of technology names the Platform Owner. Each Holder shall name a deputy in the Appointments Record, who acts during an absence, and a delegation of more than two weeks is entered in the Decision Log. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Until a head of function or the Platform Owner is named, the Executive Sponsor names an acting Holder. For the work of AICC itself, the AICC Lead is the Domain Owner.
+Control Function names its Control Function Contact for each Entity. The head of technology names the Platform Owner. Each Holder shall name a deputy in the Appointments Record, who acts during an absence, and a delegation of more than two weeks is entered in the Decision Log. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference. The Executive Sponsor may delegate any decision in writing, for a stated scope and period, and the delegation is entered in the Appointments Record. Until a head of function or the Platform Owner is named, the Executive Sponsor names an acting Holder. For the work of AICC itself, the AICC Lead is the Domain Owner.
 
 ## 5. Decisions
 
@@ -141,7 +143,7 @@ Domain Expert and the Domain Owner, who is the product owner. AICC has the AICC 
 | Level | Meaning | Kept in |
 | --- | --- | --- |
 | Strategic Priority | A strategic theme set with the Board, with an Investment Envelope | Priorities |
-| Initiative | A business program: a long-term business service or product that delivers one or more Solutions | Portfolio Backlog |
+| Initiative | A business program: a long-term business service or product that delivers one or more Solutions. An Initiative that has a client function is an Engagement, with one Service Agreement for each client function; the client of enabling work is the Executive Sponsor | Portfolio Backlog |
 | Solution | A solution or service that an Initiative delivers for a Domain, with an offering type, a Risk Tier, and an AI Registry entry | The Portfolio, as a Solution Definition |
 | Epic | A capability of a Solution, delivered over one or more Program Increments | Program Backlog |
 | Feature | A deliverable of an Epic, which closes within one Program Increment | Program Backlog, then IT Backlog |
@@ -156,7 +158,7 @@ decided in that IT. Every Initiative is written in a one-page Initiative Brief, 
 AICC that builds no AI Solution has no Risk Tier.
 
 6.3. Work flows as in Kanban. The Portfolio Kanban shows the Initiatives by state. The Program Kanban shows the Epics and the
-Features by state, with the classes of service as lanes: Incident, High priority, and Normal. The Limits on Work in Progress apply
+Features by state, with the classes of service as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress apply
 to the states, the lanes, and each Domain. The Team pulls an approved item only when there is capacity. At each IT Planning the Team
 selects the Features for the month from the Program Backlog into its IT Backlog, and the Weekly Review keeps them under control.
 An item that waits for a person or an event outside AICC is waiting, and names its Dependency.
@@ -216,18 +218,23 @@ handed off, or ended. The Receiver is named in the Solution Definition before th
 | --- | --- | --- | --- |
 | Service | AICC, for the whole life cycle, with a business case that states the run cost and a sunset rule. The product owner is the Domain Owner of the Domain it serves, and the Executive Sponsor for a Service across Domains | Operate, Evolve, Retire. New features come as Epics and Features | Retired, or cancelled |
 | Product | The consumer owns the version delivered, and AICC supports it on demand | Handover, Support, Revise (a new version comes through the Portfolio Backlog), Retire for that consumer. A Product with many consumers or recurring requests becomes a Service through a business case | Retired for that consumer |
-| Experiment | None yet: it is time-boxed to a stated number of ITs, and ends in a Proposal. Its product owner is the Executive Sponsor when it has no Domain | Trial, Proposal, Handoff | At the end of its time-box it goes to review: it is accepted with its lessons and closed, a Proposal is made, or it is cancelled. When a Receiver accepts the Handoff, it is closed and AICC oversees the Adoption |
+| Experiment | None yet: it is time-boxed to a stated number of ITs, and ends in a Proposal. Its product owner is the Executive Sponsor when it has no Domain | Trial, Proposal, Handover | At the end of its time-box it goes to review: it is accepted with its lessons and closed, a Proposal is made, or it is cancelled. When a Receiver accepts the Handover, it is closed and AICC oversees the Adopted Solution |
 
-6.8. AICC oversees and reports on the Adoption of Solutions that others deliver, in the Portfolio. An Adoption is recorded when others
+The phases of an Engagement map to the items as follows: the study is the discovery of the Initiative, the proof is the Experiment
+or the first Features of the Solution, delivery is the active state of the Epics and Features, and support is the life of the Solution
+after delivery.
+
+6.8. AICC oversees and reports on the Adopted Solutions that others deliver, in the Portfolio. An Adopted Solution is recorded when others
 begin to deliver a Solution that AICC proposed or oversees. It uses the states Proposed, Approved, Active, Closed, Rejected, and
 Cancelled, and records the Risk Tier when it is known. The owners and the Executive Sponsor decide on a Proposal of a Solution, and the
 Bank decides on a Proposal of the AI adoption strategy. The AI adoption strategy is a series of Proposals that AICC shapes from what it
 learns.
 
-6.9. Acceptance closes an item, as in agile work. The product owner accepts the delivered outcome against its acceptance criteria,
+6.9. Acceptance closes an item. The product owner accepts the delivered outcome against its acceptance criteria,
 and the AICC Lead notes the acceptance with who and when in the backlog of the level. The product owner is the Domain Owner for an
 item of a Domain, and the Executive Sponsor for an item that spans Domains or is enabling work of AICC. The product owner may accept
-the item, return it with what is missing, or cancel it when its outcome is no longer wanted.
+the item, return it with what is missing, or cancel it when its outcome is no longer wanted. The acceptance of an Engagement is
+recorded in its Outcome Report.
 
 6.10. The Roadmap shows three months: the current Program Increment as intent and direction, the next as planned, and the period
 beyond as indicative, with its Milestones. The Dependency Map shows, for each item of a Program Increment, what it needs from other
@@ -275,9 +282,9 @@ functions and recording the answers.
 
 ## 8. Engaging a Domain
 
-8.1. The AICC Lead discusses adoption with the Domain Owner, who names a Domain Expert, usually the person who does the routine
-work. The first Solution is narrow. An AICC Engineer, or an engineer of the technology function or the Domain under AICC
-direction, builds the Solution with the Domain Expert, and the states in section 6.4 follow.
+8.1. AICC engages a Domain through a Service Agreement, as the Business Model states. The Domain Owner names a Domain Expert, usually
+the person who does the routine work. The first Solution is narrow. An AICC Engineer, or an engineer of the technology function or the
+Domain under AICC direction, builds the Solution with the Domain Expert, and the states in section 6.4 follow.
 
 ## 9. Records
 
@@ -307,8 +314,8 @@ period that the record retention rules of the Bank require. Internal audit has r
 | Standards | The architecture standards and the requirements that the use of AI places on the AI Platform |
 | Reports | The Quarterly Reports |
 | Notes | The notes of the events that need them |
-| Initiatives | One folder for each Initiative, with its brief and its Epics and Features |
-| Portfolio | The catalog of the Solutions, with their Solution Definitions, and of the Adoptions that others deliver |
+| Initiatives | One folder for each Initiative, with its brief, its Service Agreements, its Outcome Reports, and its Epics and Features. The Portfolio Backlog shows, for each Engagement, its client function, phases, support level, Service Agreement, and Outcome Report |
+| Portfolio | The catalog of the Solutions, with their Solution Definitions, and of the Adopted Solutions that others deliver |
 
 9.3. The Templates for the Records that need a form are listed in the Document Catalog. Every other Record is a table that its
 keeper adapts as needed.
@@ -337,3 +344,5 @@ keeper adapts as needed.
 | 5.4 | 2026-10-01 | Refers to the workflows of the charter. | none |
 | 6.0 | 2026-10-01 | Initiatives, Solutions, Epics, and Features; the Portfolio, Program, and IT Backlogs; thirteen states with Stages inside discovery and active; offering types Service, Product, and Experiment; Adoption oversight; the live state in Jira and Confluence. | DR-2026-024 |
 | 6.1 | 2026-10-01 | One transition table for the states; deciders for Epics, Features, and each exit; Solution lifecycle; validation attaches to the Solution; Experiment and Adoption rules; source of truth. | DR-2026-025 |
+| 6.2 | 2026-10-01 | Engagements run on the Service Agreement of the Business Model; principle (h); the Agreement Log. | DR-2026-026 |
+| 6.3 | 2026-10-01 | An Engagement is an Initiative with a client function; phases mapped; appointment and delegation entries; Adopted Solution; the Agreement Log removed. | DR-2026-027 |

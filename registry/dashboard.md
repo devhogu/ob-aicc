@@ -36,7 +36,7 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 | Flow Measure | Value |
 | --- | --- |
 | Throughput: Features accepted in the IT | not yet measured |
-| Items by lane: Incident, High priority, Normal | 0, 0, 8 |
+| Items by lane: Urgent, High priority, Normal | 0, 0, 8 |
 | Cycle time from approved to closed, in days | not yet measured |
 | Work in progress against the Limits | Limits not set |
 

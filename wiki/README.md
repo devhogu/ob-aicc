@@ -10,6 +10,7 @@ The wiki holds lineage, research, open items, and an archive. It is explanatory 
 
 ### Lineage and research
 
+- [Consulting practices borrowed](research/operating-model/consulting-borrowings.md) - what AICC takes from consulting engagements, and what it leaves out
 - [Alignment with SAFe and Kanban](research/operating-model/safe-alignment.md) - how the cadence, loops, and Records follow SAFe and Kanban
 - [Simplification](research/operating-model/simplification.md) - why the corpus was cut to six documents, and what was removed
 - [Document basis](research/operating-model/document-basis.md) - the basis of the earlier Vocabulary and Style, Corpus Assessment, Register of Appointments, Document Catalog, Reporting, and Decision Rights

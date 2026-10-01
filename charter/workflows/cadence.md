@@ -171,18 +171,8 @@ built yet.
 
 ### 9.1. Short forms and names
 
-| Term | Meaning |
-| --- | --- |
-| PI | Program Increment: one quarter of three ITs |
-| IT | Iteration: one calendar month of four or five whole weeks |
-| IP | Innovation and Planning: the last week of the third IT of a PI |
-| PIQ1 to PIQ4 | The PIs of a year: IT01 to IT03, IT04 to IT06, IT07 to IT09, and IT10 to IT12 |
-| IT01 to IT12 | The ITs of a year, one for each calendar month |
-| W1 to W5 | The weeks of an IT. A week belongs to the month that contains its Thursday |
-| Loop | A cycle that starts with planning and ends with review: the day, the week, the IT, and the PI |
-| Event | A fixed point of a loop with a stated intent |
-| Review week | The last week of an IT |
-| Control | The event of a loop in which the loop is checked and its result fed to the loop above |
+The short forms PI, IT, and IP, the names PIQ1 to PIQ4, IT01 to IT12, and W1 to W5, and the terms Loop and Review week are defined in the
+Vocabulary.
 
 ### 9.2. Events and their intent
 

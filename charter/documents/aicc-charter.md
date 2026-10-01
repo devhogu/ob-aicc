@@ -2,7 +2,7 @@
 id: AICC-MND-02-EN
 title: AICC Charter
 status: active
-revision: 1.2
+revision: 1.4
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -17,11 +17,13 @@ offers and reports.
 ## 2. Mission
 
 2.1. The mission of AICC is to enable the Bank and the Group to adopt AI as a governed capability that delivers measured value,
-by providing a governance framework, a program office, and a capability to build and run Solutions with the Domains.
+by providing a governance framework, a program office, and a capability to build and run Solutions with the Domains, and by
+working as an internal consulting unit.
 
 ## 3. Authority and limits
 
-3.1. AICC acts under the mandate of the Executive Sponsor. AICC may decide the matters that the Operating Model gives to the
+3.1. AICC acts under the mandate of the Executive Sponsor, whose appointment of the AICC Lead and whose decision reference are entered in
+the Appointments Record. AICC may decide the matters that the Operating Model gives to the
 AICC Lead and the AICC Engineers. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent that
 are for AICC, and the Executive Sponsor for its annual review and its communication.
 
@@ -56,22 +58,8 @@ risk beyond it may be accepted only by the Executive Sponsor, with a report to t
 
 ## 6. What AICC offers
 
-6.1. AICC offers the following to the Domains.
-
-(a) Adoption engagement: finding routine work that AI can do.
-
-(b) An AICC Engineer to design, build, and run a Solution with the Domain Expert.
-
-(c) The scoping of requests, Risk Tier assignment, and the AI Registry.
-
-(d) Architecture guidance and standards.
-
-(e) Training of employees in the approved Solutions, coaching of Domain Experts, and a Community of Practice within the IT Review
-and Demo.
-
-(f) Reporting on the Portfolio, its benefits, and its risks.
-
-6.2. A Domain asks the AICC Lead. The AICC Lead answers at the next IT Planning, or sooner for a blocker.
+6.1. The Business Model states what AICC offers, whom it serves, and how it commits. A Domain asks the AICC Lead. The AICC Lead answers
+at the next IT Planning, or sooner for a blocker.
 
 ## 7. What AICC measures and reports
 
@@ -101,3 +89,5 @@ assurance.
 | 1.0 | 2026-10-01 | The Priorities Record points to the figures of the Guardrails and Envelopes and holds none. | none |
 | 1.1 | 2026-10-01 | Event and item names follow the new hierarchy; Solution replaces Use Case. | DR-2026-024 |
 | 1.2 | 2026-10-01 | Event names corrected; every Initiative has a brief, and the guardrail decides the Executive Sponsor approval. | DR-2026-025 |
+| 1.3 | 2026-10-01 | What AICC offers moves to the Business Model; AICC works as an internal consulting unit. | DR-2026-026 |
+| 1.4 | 2026-10-01 | The mandate and its decision reference are entered in the Appointments Record. | DR-2026-027 |

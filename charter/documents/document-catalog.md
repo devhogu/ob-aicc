@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 2.7
+revision: 2.9
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -57,6 +57,7 @@ language.
 | --- | --- | --- | --- |
 | AICC-MND-01 | Statement of Intent on the Adoption of Artificial Intelligence | The intent, values, principles, and strategy of the Group for AI | EN |
 | AICC-MND-02 | AICC Charter | Mission, authority, funding, risk appetite, offer, and measures of AICC | EN |
+| AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | EN |
 | AICC-ORG-01 | Operating Model | Roles, decisions, flow of work, meetings, and Records | EN |
 | AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN |
 | AICC-REF-01 | Vocabulary and Style | Terms and style | EN |
@@ -75,10 +76,12 @@ log, and a copy of it carries no metadata block.
 | Template | Used for |
 | --- | --- |
 | AICC-TPL-01 Solution Definition | Each Solution: its type, receiver, scope, capabilities, Risk Tier, and the effect on affected persons |
-| AICC-TPL-02 Initiative Brief | Each Initiative above an Investment Guardrail |
+| AICC-TPL-02 Initiative Brief | Each Initiative: its business case |
 | AICC-TPL-03 Control Sign-Off | The validation or the stop of a Control Function Contact |
 | AICC-TPL-04 Notes | The events that need notes: the IT Review and Demo, the PI Review and Demo, Inspect and Adapt, PI Planning, and the Steering |
 | AICC-TPL-05 Quarterly Report | The Quarterly Report |
+| AICC-TPL-06 Service Agreement | Each Engagement: the commitment and the working agreement |
+| AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, the capacity, and the acceptance |
 
 ## 7. Checks
 
@@ -117,3 +120,5 @@ Risks and Issues Record and do not block activation.
 | 2.5 | 2026-10-01 | Content rule: no bank figures, function documents, data, or code in the documents and Records. | none |
 | 2.6 | 2026-10-01 | Solution Definition replaces the Use Case Card. | DR-2026-024 |
 | 2.7 | 2026-10-01 | The workflows, templates, and guides are part of the charter and state no rule. | DR-2026-025 |
+| 2.8 | 2026-10-01 | The Business Model is added. | DR-2026-026 |
+| 2.9 | 2026-10-01 | Service Agreement and Outcome Report Templates; the Initiative Brief for every Initiative. | DR-2026-026 |

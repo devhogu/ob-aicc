@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 4.1
+revision: 4.3
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -17,7 +17,7 @@ each document reads the same way.
 ## 2. Precedence
 
 2.1. Where two documents differ, the higher prevails: the Statement of Intent on the Adoption of Artificial Intelligence, the
-AICC Charter, the Operating Model, the AI Policy, the Document Catalog. This Vocabulary prevails on terms and style. Templates
+AICC Charter, the Business Model, the Operating Model, the AI Policy, the Document Catalog. This Vocabulary prevails on terms and style. Templates
 and Records yield to the documents. The workflows and the guides explain the documents and state no rule of their own.
 
 ## 3. Style
@@ -69,6 +69,15 @@ few definitions because it is read alone.
 | Strategic Priority | A strategic theme of the Statement of Intent, set with the Board, with an Investment Envelope |  |
 | Investment Envelope | The funding allocated for a year to a Strategic Priority | budget line |
 | Investment Guardrails | The limits that decide what may be committed without the Executive Sponsor | thresholds |
+| Business Model | The document that states what AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | |
+| Engagement | An Initiative that has a client function. One Service Agreement is issued for each client function | project |
+| Phase | A part of an Engagement that its Service Agreement covers: a study, a proof, delivery, or support | |
+| Service Agreement | The working agreement in which AICC commits to an Engagement: a commitment and a working agreement. It is not a legal document | contract (alone), SOW |
+| Assumption | A thing that AICC relies on from the function, stated in the Service Agreement, which is re-planned if it fails | |
+| Support level | What AICC provides after delivery: none, on demand, at agreed response targets, or run by AICC | SLA (alone) |
+| Outcome Report | The report at the end of an Engagement: what was delivered, with the evidence referenced, the capacity used, and who accepted it | final report |
+| Stakeholder | A person who does not belong to AICC and is notified under a Service Agreement; the person has no Role and commits to nothing | |
+| Reusable asset | A method or playbook that an Engagement leaves in the Portfolio | |
 | Portfolio | The Initiatives of AICC and the Solutions that they deliver, taken together |  |
 | Initiative | A business program: a long-term business service or product that delivers one or more Solutions, held in the Portfolio Backlog | project |
 | Initiative Brief | The one-page business case of an Initiative: hypothesis, scope, benefit, cost, and risk |  |
@@ -78,9 +87,9 @@ few definitions because it is read alone.
 | Product | An offering type: a Solution built for one consumer, delivered as a version, and supported on demand |  |
 | Experiment | An offering type: a time-boxed trial of a Solution without a consumer, which ends in a proposal |  |
 | Receiver | The owner who will run or adopt a Solution after its delivery, named in the Solution Definition |  |
-| Handoff | The transfer of a Solution to its receiver; it is complete when the receiver accepts it |  |
+| Handover | The transfer of a Solution to its Receiver, or its delivery to a consumer; it is complete when the Receiver accepts it |  |
 | Proposal | A proposal to the Bank to adopt a Solution at scale, or a proposal of the AI adoption strategy, submitted for decision |  |
-| Adoption | A Solution that others deliver, which AICC oversees and reports on |  |
+| Adopted Solution | A Solution that others deliver, which AICC oversees and reports on |  |
 | Epic | A capability of a Solution, delivered by the Teams over one or more Program Increments, held in the Program Backlog | capability (alone) |
 | Feature | A deliverable of an Epic that closes within one Program Increment | story |
 | Work Item | A task of a Team within a Feature | ticket |
@@ -89,7 +98,7 @@ few definitions because it is read alone.
 | IT Backlog | The Features that the Teams work on in one IT, tracked on the Program Kanban with priority lanes | sprint backlog |
 | Portfolio Kanban | The board of the Initiatives by state |  |
 | Program Kanban | The board of the Epics and Features by state, with the classes of service as lanes and the Limits on Work in Progress |  |
-| Lane | A class of service of the Program Kanban: Incident, High priority, or Normal | swimlane (alone) |
+| Lane | A class of service of the Program Kanban: Urgent, High priority, or Normal | swimlane (alone) |
 | Team | The people who deliver together: an AICC Engineer with the Domain Expert and the Domain Owner, who is the product owner | squad, pod |
 | Program Increment | One quarter of work, made of three Iterations; named PIQ1 to PIQ4 with the year. Short form: PI | release train |
 | Iteration | One calendar month of work of a Team, of four or five whole weeks, named IT01 to IT12, with a goal and an IT Backlog. A week belongs to the month that contains its Thursday. Short form: IT | sprint |
@@ -100,7 +109,7 @@ few definitions because it is read alone.
 | Cadence | The Record of the general flow of the events by week, without dates; the template of the dated calendar of events |  |
 | Blocked day, gray day | A blocked day is an official or expected non-working day. A gray day is a working day on which people are likely to be out. Events move to the working day before them |  |
 | Dashboard | The Record of the state of the Program Increment, the flow, the Dependencies at risk, the risks, and the Measures |  |
-| Stage | A phase of the work inside the discovery or the active state of an item, specific to its level | phase (alone), gate |
+| Stage | A phase of the work inside the discovery or the active state of an item, specific to its level | gate |
 | Check | The review of work by a person other than the one who built or wrote it | peer review |
 | Checker | The person who performs a Check; for a Risk Tier 1 Solution, named in the Appointments Record |  |
 | Validation | The review by the Control Function Contacts that a Solution meets the requirements of its Risk Tier |  |
@@ -124,7 +133,9 @@ few definitions because it is read alone.
 | Registry | The folder of the Records of AICC: the process records of the work, the decisions, the proposals, and the governance records | |
 | Workflow | The description of a loop or a flow of AICC as intent and control flow, in the charter; it states no rule | |
 | Record | A file that holds the state or history of the work, as distinct from a document of the charter | register |
-| Short forms | PI is Program Increment, IT is Iteration, and IP is the Innovation and Planning week. W1 to W5 are the weeks of an Iteration |  |
+| Loop | A cycle that starts with planning and ends with review: the day, the week, the IT, and the PI | |
+| Review week | The last week of an IT | |
+| Short forms | PI is Program Increment, IT is Iteration, and IP is the Innovation and Planning week. PIQ1 to PIQ4 name the PIs of a year, IT01 to IT12 its ITs, and W1 to W5 the weeks of an IT |  |
 | Event | A meeting of a loop, with a stated intent: Daily Stand-up, Weekly Planning, Weekly Review, Backlog Refinement, IT Planning, IT Review and Demo, IT Retrospective, PI Review and Demo, Inspect and Adapt, PI Planning, and Steering |  |
 | Quarterly Report | The report of the AICC Lead at the PI Review on the Portfolio, benefits, risks, and Maturity Levels |  |
 | Finding | A deviation found by a check of the documents, by an audit, or by a supervisor |  |
@@ -162,7 +173,7 @@ few definitions because it is read alone.
 | Develop, Verify, Deploy | Feature, active | Building it, checking or validating it, and deploying it |
 | Operate, Evolve, Retire | Service, active | Running the Service, improving it, and withdrawing it |
 | Handover, Support, Revise, Retire | Product, active | Delivering a version, supporting it on demand, issuing a new version, and withdrawing it for the consumer |
-| Trial, Proposal, Handoff | Experiment, active | Trying the Solution, proposing its adoption, and handing it to its Receiver |
+| Trial, Proposal, Handover | Experiment, active | Trying the Solution, proposing its adoption, and handing it to its Receiver |
 
 ## Change log
 
@@ -183,3 +194,5 @@ few definitions because it is read alone.
 | 3.3 | 2026-10-01 | The Program Backlog is also called the PI Backlog. | none |
 | 4.0 | 2026-10-01 | Solution replaces Use Case; Initiative, Epic, Feature, the offering types, Handoff, Proposal, Adoption, and the thirteen states defined; Stage is a phase inside discovery or active. | DR-2026-024 |
 | 4.1 | 2026-10-01 | Registry, Workflow, and the Stages defined; states clarified; stray cells removed. | DR-2026-025 |
+| 4.2 | 2026-10-01 | Business Model, Engagement, Service Agreement, Assumption, Support level, Outcome Report, Agreement Log, Stakeholder, and Reusable asset defined. | DR-2026-026 |
+| 4.3 | 2026-10-01 | Engagement is an Initiative with a client function; Phase and Adopted Solution defined; Handover replaces Handoff; the lane Urgent; Agreement Log removed. | DR-2026-027 |

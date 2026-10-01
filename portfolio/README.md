@@ -8,7 +8,7 @@ are in the charter (`charter/`).
 | Folder | Holds |
 | --- | --- |
 | [solutions/](solutions/SOL-001-fpa-board-reporting-pipeline.md) | One Solution Definition for each Solution, from the Solution Definition Template, with its type (Service, Product, or Experiment), its receiver, and its state |
-| adoptions/ | One entry for each Adoption: a Solution that others deliver, which AICC oversees. Created with the first Adoption |
+| adopted-solutions/ | One entry for each Adopted Solution: a Solution that others deliver, which AICC oversees. Created with the first one |
 
 The catalog follows the states and Stages of the Operating Model. A Solution Definition is created when a Solution is proposed and is
 kept current by the AICC Lead.

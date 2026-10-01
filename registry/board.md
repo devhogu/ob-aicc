@@ -1,7 +1,7 @@
 # Kanban boards
 
 The Portfolio Kanban shows the Initiatives by state. The Program Kanban shows the Epics and Features by state, with the classes of service
-as lanes: Incident, High priority, and Normal. The Limits on Work in Progress are not yet set (RI-012). An item that waits on someone outside
+as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress are not yet set (RI-012). An item that waits on someone outside
 AICC is marked with W and its Dependency, and a Deferred item is parked in the backlog. The Weekly Review keeps the boards current.
 
 ## Portfolio Kanban

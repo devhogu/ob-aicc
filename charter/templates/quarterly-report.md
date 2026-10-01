@@ -36,9 +36,9 @@ revised: 2026-10-01
 | --- | --- | --- | --- |
 |  |  |  |  |
 
-## 5. Portfolio and Adoption
+## 5. Portfolio and Adopted Solutions
 
-[The Solutions by type and state, the Initiatives by state, and the Adoptions that others deliver, with what works.]
+[The Solutions by type and state, the Initiatives by state, and the Adopted Solutions that others deliver, with what works.]
 
 ## 6. Risks, AI Incidents, and Exceptions
 

@@ -95,6 +95,9 @@ Each control is an event that already exists, and each leaves a record. The foll
 | Monthly review of progress, risks, and blockers | Monthly | Executive Sponsor | Decision Log; Notes |
 | Results, risk check, and Maturity Level | Quarterly | Executive Sponsor | Quarterly Report; PI snapshot |
 | Report to the Board Committee | Quarterly | AICC Lead prepares; Executive Sponsor approves | Board report |
+| Service Agreement for an Engagement | When the Initiative is approved | AICC Lead | Service Agreement; Portfolio Backlog |
+| Outcome Report and acceptance of an Engagement | At the end of the Engagement | AICC Lead issues; product owner accepts | Outcome Report |
+| Capacity committed and used, and benefit confirmed | Quarterly | AICC Lead | Quarterly Report |
 | Risk Tier assignment | When each Solution is defined | AICC Lead | Solution Definition |
 | Validation before the first deployment of Tier 2 or 3 | Before the first deployment | Control Function Contacts | Control Sign-Off |
 | Release | Before use beyond the first users | Domain Owner; Executive Sponsor for Tier 3 | Decision Log |
