@@ -10,7 +10,7 @@
 | Approved by the Domain Owner on | [ The date, when the Solution Definition is approved ] |
 | Time-box | Not applicable: the type is not an Experiment |
 | Receiver | [ The owner who will run or adopt it after delivery, named when the Solution is defined ] |
-| Domain, Entity, Domain Owner | FP&A, the Bank, the head of the FP&A function |
+| Domain, Domain Owner | FP&A, the head of the FP&A function |
 | Domain Expert, AICC Engineer | [ the Domain Expert, named by the Domain Owner ]; the AICC Lead |
 | Date of last change | 2026-10-01 |
 

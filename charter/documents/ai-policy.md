@@ -2,7 +2,7 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: active
-revision: 1.3
+revision: 2.0
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -11,7 +11,7 @@ revised: 2026-10-01
 
 ## 1. Purpose and scope
 
-1.1. This policy states the rules for the use of AI in the Bank and in each Participating Entity: the rules of use, the Risk
+1.1. This policy states the rules for the use of AI in the Bank: the rules of use, the Risk
 Tiers and what each requires, AI from providers, and AI Incidents and Exceptions.
 
 1.2. It applies to every use of AI, including the work of AICC itself, whether the Solution is built or bought.
@@ -54,7 +54,7 @@ scale of use, the provider, or whether the effect can be reversed.
 
 3.2. The AICC Lead shall assign the Risk Tier when the Solution is defined, using the attributes in 3.1, and shall inform the Domain Owner of the
 Risk Tier assigned. The Contact of any Control Function may raise it within its remit, and only the Contact of model risk may
-lower it. A Solution in a category that the law of the Entity treats as high risk is at least Risk Tier 2. The person who checks a
+lower it. A Solution in a category that the law applicable to the Bank treats as high risk is at least Risk Tier 2. The person who checks a
 Risk Tier 1 Solution, and the Control Function Contacts at the validation of a Risk Tier 2 or 3 Solution, confirm the Risk Tier and ask whether
 the Solution is in such a category.
 
@@ -84,7 +84,7 @@ monitoring. The Control Function Contacts check them at validation. The AICC Lea
 4.1. A provider of models or services shall be checked before use by the Control Function Contacts of information security, data
 protection, and legal: where data is processed and kept, whether the provider may train on it, the contractual terms, and the
 arrangements to fall back and to exit. The check is repeated at each reassessment and on a change of terms or model. For a Risk Tier 1 Solution, and for a provider already checked, the Contact of information security alone checks. The AICC Lead
-reports in the Quarterly Report the concentration of the Group on one provider.
+reports in the Quarterly Report the concentration of the Bank on one provider.
 
 4.2. The Bank is answerable for AI that it buys to the same extent as for AI that it builds. The same Risk Tiers apply.
 
@@ -104,7 +104,7 @@ AICC Lead, to the Control Function Contacts, to the Platform Owner, to the Domai
 
 5.4. The AICC Engineer shall contain the AI Incident, and the AICC Lead or any Control Function Contact may suspend a Solution.
 The Control Function Contacts assess it within their remits: compliance decides whether a regulator is notified, and data
-protection decides whether a person whose data is affected is notified, as the law of the Entity requires. Providers are told as
+protection decides whether a person whose data is affected is notified, as the law requires. Providers are told as
 the contract requires.
 
 5.5. Within ten working days after containment the AICC Lead shall lead a review with the people involved of what happened and what to change, without blame. The
@@ -120,7 +120,7 @@ decided by the AICC Lead. An Exception is not a bypass of a control.
 
 7.1. The Executive Sponsor may name at any time, in the Appointments Record, who acts for a Control Function, including for an AI
 Incident. The acting person is a member of that function named with the consent of its head, and is marked as acting. Until a Control Function has a Control Function Contact or an acting person, nothing that needs that Control Function
-proceeds: no Risk Tier 2 or 3 Solution, no provider, and no Group Arrangement.
+proceeds: no Risk Tier 2 or 3 Solution, no provider, and no Data Sharing Arrangement.
 
 ## Change log
 
@@ -139,3 +139,4 @@ proceeds: no Risk Tier 2 or 3 Solution, no provider, and no Group Arrangement.
 | 1.1 | 2026-10-01 | Solution replaces Use Case; the Risk Tier is assigned when the Solution is defined; testing before the first deployment. | DR-2026-024 |
 | 1.2 | 2026-10-01 | The Risk Tier is confirmed at every validation; the AICC Lead leads the review of an AI Incident. | DR-2026-031 |
 | 1.3 | 2026-10-01 | The AICC Lead reassesses the Risk Tier and, with a Control Function Contact, may suspend; the open place for the channel of an AI Incident report. | DR-2026-034 |
+| 2.0 | 2026-10-01 | The policy applies to the Bank only; Entity references removed; Data Sharing Arrangement replaces Group Arrangement. | DR-2026-036 |

@@ -2,7 +2,7 @@
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 2.3
+revision: 2.4
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -22,7 +22,7 @@ describes the Solution: its scope, methods, and architecture. It carries no figu
 | Receiver | [who runs or adopts it after delivery; for an Experiment, "none yet, to be asked" is allowed] |
 | Approved by the Domain Owner on | [date] |
 | Time-box | [for an Experiment: the number of ITs] |
-| Domain, Entity, Domain Owner | [names] |
+| Domain, Domain Owner | [names] |
 | Domain Expert, AICC Engineer | [names] |
 | Date of last change | [date] |
 

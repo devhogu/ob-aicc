@@ -2,7 +2,7 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 1.5
+revision: 2.0
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -11,26 +11,24 @@ revised: 2026-10-01
 
 ## 1. Purpose and scope
 
-1.1. This Statement sets out the intent, values, principles, and strategy of the Bank and the Group for the adoption of
-artificial intelligence ("AI"). In this Statement, "the Bank" means O!Bank; "the Group" means the group of companies of
-which the Bank is part, including its fintech and digital entities; "Entity" means a legal entity of the Group, including
-the Bank; "Participating Entity" means an Entity that takes part in this Statement; and "Domain" means a business
-function or a product line of the Bank or of an Entity.
+1.1. This Statement sets out the intent, values, principles, and strategy of the Bank for the adoption of
+artificial intelligence ("AI"). In this Statement, "the Bank" means O!Bank, and "Domain" means a business function or a
+product line of the Bank.
 
-1.2. This Statement applies to the use of AI in the operations, products, and services of the Bank and of each
-Participating Entity, whether or not that use is managed by the AI Competence Center ("AICC").
+1.2. This Statement applies to the use of AI in the operations, products, and services of the Bank, whether or not that
+use is managed by the AI Competence Center ("AICC").
 
-1.3. This Statement records what the Bank and the Group intend to achieve and the commitments they make in doing so. The
+1.3. This Statement records what the Bank intends to achieve and the commitments it makes in doing so. The
 internal operation of AICC is set out in the Operating Model and is not repeated here.
 
 1.4. Capitalized terms that are not defined in this Statement have the meaning given in the Vocabulary and Style.
 
 ## 2. Summary of intent
 
-2.1. The Bank and the Group intend to adopt AI as a governed capability that improves the quality, speed, and consistency
-of their operations and services, and that is used on the basis of shared values, principles, and minimum standards.
+2.1. The Bank intends to adopt AI as a governed capability that improves the quality, speed, and consistency
+of its operations and services, and that is used on the basis of shared values, principles, and minimum standards.
 
-2.2. To that end, the Bank and the Group shall:
+2.2. To that end, the Bank shall:
 
 (a) give first priority to customer intelligence and to business intelligence;
 
@@ -45,18 +43,16 @@ remaining with qualified persons;
 
 2.3. Accountability for every Solution remains with a named individual, and controls remain proportionate to risk.
 
-## 3. Alignment with the Group's vision and strategy
+## 3. Alignment with the strategy of the Bank
 
-3.1. The adoption of AI supports the Group's mission to improve people's lives with digital products and services.
+3.1. The adoption of AI supports the mission of the Bank to improve people's lives with digital products and services.
 
-3.2. The adoption of AI contributes to each of the six Strategic Pillars of the Group, as set out below.
+3.2. The adoption of AI contributes to the Strategic Pillars of the Bank, as set out below. [ The Bank confirms its Strategic Pillars; the rows below are those of the earlier text that apply to the Bank ]
 
 | Strategic Pillar | Contribution of AI adoption |
 | --- | --- |
 | Innovative leadership | AI capability for every employee and for software development, and the use of AI and data to understand customers |
 | Financial inclusion | Digital onboarding and identification, service in the Kyrgyz and Russian languages, and responsible lending decisions that extend access to financial services |
-| E-commerce | Assistance for merchants and customers across the marketplace, and personalization within the customer's consent |
-| Monetize business synergies | A single AI Platform, knowledge layer, and set of standards serving every Entity, with data kept separate as each Entity requires |
 | Shareholder value and dividends | Higher productivity, lower cost of routine operations, better decisions, and better information for investors and the Board, each measured against a baseline |
 | ESG goals | Responsible lending, fair treatment of customers, protection of data, and governance practice consistent with international standards |
 
@@ -70,7 +66,7 @@ trained and involved.
 
 ## 5. Principles of adoption
 
-5.1. **Value.** AI is adopted where it delivers measured value to customers, employees, or the Group, and its use is
+5.1. **Value.** AI is adopted where it delivers measured value to customers, employees, or the Bank, and its use is
 discontinued where it does not.
 
 5.2. **Evidence.** Each Solution is piloted and measured against defined success Measures, and is extended only on the
@@ -83,8 +79,8 @@ basis of that evidence.
 5.5. **People.** AI augments the work of employees. Employees receive training before use, and specialists of each
 Domain take part in shaping the adoption of AI in that Domain.
 
-5.6. **Federation.** Principles and minimum standards are set for the whole Group. Each Entity and Domain
-applies them within its own regulation and responsibility.
+5.6. **Shared standards.** Principles and minimum standards are set for the whole Bank. Each Domain
+applies them within the regulation and the responsibility that apply to it.
 
 ## 6. Principles of Application
 
@@ -99,7 +95,7 @@ before release and monitored in use, to the extent that the AI Policy requires f
 auditors. Individuals are informed when they interact with AI, to the extent that the AI Policy requires for the Risk Tier of the Solution.
 
 6.4. **Privacy and data protection.** AI uses only the data that it requires, retains that data within the boundaries of
-the Entity and the data classification rules of the Bank, and protects it.
+the Bank and its data classification rules, and protects it.
 
 6.5. **Security and reliability.** AI is tested, evaluated, and monitored, and is protected against attacks specific to AI.
 Critical AI services and providers are subject to fallback and exit arrangements.
@@ -112,27 +108,25 @@ before release. Controls are proportionate to the Risk Tier. A control requireme
 
 ## 7. Governance and accountability
 
-7.1. The Group sets the values, principles, and minimum standards in this Statement. They apply to every Entity that
-takes part.
+7.1. The Bank sets the values, principles, and minimum standards in this Statement. They apply to every Domain.
 
-7.2. Each Entity retains its own regulator, accountability, Control Functions, and data. It applies the principles
-within its own regulation and may set stricter requirements. Data and decisions remain within the Entity unless a Group
-Arrangement permits sharing.
+7.2. Each Domain applies the principles within the regulation that applies to it, and may set stricter requirements.
+Data and decisions remain within the Bank unless a Data Sharing Arrangement permits sharing outside it.
 
 7.3. The model risk, compliance, information security, data protection, and legal functions remain independent. They
 validate the use of AI and may stop it. Internal audit remains independent and gives assurance only. No person validates
 their own work.
 
-7.4. AICC is the governance framework and program office for the adoption of AI across the Group. It manages the
+7.4. AICC is the governance framework and program office for the adoption of AI across the Bank. It manages the
 Portfolio of Initiatives, provides a delivery capability, and coordinates the Domains. Execution is
 carried out by the Domains.
 
 7.5. The AI Steering Committee, composed of the heads of the business, technology, risk, and compliance functions,
-advises the Executive Sponsor on the Portfolio and on conflicts between Entities and Domains.
+advises the Executive Sponsor on the Portfolio and on conflicts between Domains.
 
 7.6. The Board oversees AI through the Board Committee, the committee that the Board names for the purpose.
 
-7.7. The Group shall maintain a statement of its appetite for AI risk, owned by the AICC Lead and noted by the Board Committee,
+7.7. The Bank shall maintain a statement of its appetite for AI risk, owned by the AICC Lead and noted by the Board Committee,
 against which the use of AI is assessed.
 
 7.8. Each Solution is assigned a Risk Tier. The Risk Tier determines the review, validation, human oversight, and
@@ -140,7 +134,7 @@ speed of release that apply to it.
 
 ## 8. Areas of application
 
-8.1. AI is applied across the Bank and the Group. The areas of application are:
+8.1. AI is applied across the Bank. The areas of application are:
 
 - customers and products, including service and contact centers, sales and relationship management, marketing, and
   digital channels;
@@ -159,17 +153,16 @@ speed of release that apply to it.
 
 ## 9. Strategic Priorities
 
-9.1. The Bank and the Group have seven Strategic Priorities, stated in order. Each rests on the governed foundation set
+9.1. The Bank has seven Strategic Priorities, stated in order. Each rests on the governed foundation set
 out in section 10.
 
 ### 9.2. Customer intelligence
 
-- **Objective.** To develop an end-to-end understanding of each customer across every service and product of the Bank
-  and the Group.
+- **Objective.** To develop an end-to-end understanding of each customer across every service and product of the Bank.
 - **Scope.** Know-your-customer procedures establish the identity and risk profile of the customer and keep them current
   throughout the customer lifecycle. The understanding extends to customer behavior, changes in customer needs, and
-  difficulties encountered in the use of services. Each Entity retains its own data. Group-level views are established
-  only under a Group Arrangement.
+  difficulties encountered in the use of services. A view that draws on data from outside the Bank is established
+  only under a Data Sharing Arrangement.
 - **Intended outcome.** Risk-aware service, earlier detection of problems in customer journeys, and proactive support to
   customers.
 
@@ -229,8 +222,7 @@ Communities of Practice.
 10.2. **Data and knowledge.** Data shall be classified, and the classification shall determine which data may reach which
 models and services and where they may run. Knowledge sources shall have named owners and review cycles.
 
-10.3. **AI Platform.** A shared AI Platform shall serve the Bank and the Participating Entities, with data separated
-by Entity. The AI Platform is provided and operated outside AICC. AICC states the requirements that the use of AI places on
+10.3. **AI Platform.** A shared AI Platform shall serve the Bank, with data separated as its classification requires. The AI Platform is provided and operated outside AICC. AICC states the requirements that the use of AI places on
 it.
 
 10.4. **Funding.** Investment shall be allocated to Strategic Priorities and to the capacity of teams by means of
@@ -245,16 +237,16 @@ work made visible and limited in progress.
 
 ## 11. Maturity Roadmap
 
-11.1. The Bank and the Group advance the adoption of AI through five Maturity Levels. A Maturity Level is reached for a
+11.1. The Bank advances the adoption of AI through five Maturity Levels. A Maturity Level is reached for a
 Strategic Priority when its Measures are met. Each Strategic Priority advances at its own pace. The timing and scope of
 advancement are set by the Executive Sponsor in the Priorities and are not stated in this Statement. The Maturity Levels are as follows.
 
 | Maturity Level | Name | Capability | Use of AI |
 | --- | --- | --- | --- |
 | 1 | Foundation | AI use is governed before it is extended | Controlled experiments, and one approved assistant for a pilot group |
-| 2 | Controlled adoption | Employees have secure access to AI, and knowledge capture begins | Approved assistants for employees of Participating Entities, first knowledge bases, and first governed pilots in the priorities |
+| 2 | Controlled adoption | Employees have secure access to AI, and knowledge capture begins | Approved assistants for employees, first knowledge bases, and first governed pilots in the priorities |
 | 3 | Embedded | AI operates within selected processes and systems, under human decision | AI proposes and prepares in operations, in customer and business intelligence, and in technology operations, with persons deciding |
-| 4 | Scaled | One governed AI Platform is reused across Domains and Entities | AI is standard practice in every Strategic Priority, on shared gateways, the AI Registry, and Platform Guardrails, with data separated by Entity |
+| 4 | Scaled | One governed AI Platform is reused across Domains | AI is standard practice in every Strategic Priority, on shared gateways, the AI Registry, and Platform Guardrails, with data separated by classification |
 | 5 | Agentic | Bounded tasks are delegated to agents under continuous evaluation | Agents act within limits and permissions set by Risk Tier, with human oversight on channels that the agent cannot influence |
 
 ### 11.2. AI Platform capability by level
@@ -266,7 +258,7 @@ advancement are set by the Executive Sponsor in the Priorities and are not state
 | Model gateway: a single controlled access point to models, with routing, cost control, and data protection policy | Basic | Established | Established | Established | Established |
 | Knowledge layer: governed retrieval over the Bank's knowledge | | First knowledge bases | Priority processes | Shared by all assistants | Shared by all agents |
 | Tool gateway: permissioned access from AI to systems and interfaces | | | Read access to selected systems | Governed access across systems | Scoped action rights for agents |
-| AI Registry: each Solution, model, and agent, with owner, scope, data access, and Risk Tier | List of known AI uses | List with Risk Tiers | Registry | Registry across Entities | Agent registry with limits |
+| AI Registry: each Solution, model, and agent, with owner, scope, data access, and Risk Tier | List of known AI uses | List with Risk Tiers | Registry | Registry across Domains | Agent registry with limits |
 | Platform Guardrails: enforced permissions, limits, and checks | Policies activated | Policies applied | Checks at the Stages of an item | Enforced in the AI Platform | Deterministic checks before actions |
 | Human oversight: approval points for high-stakes actions | By policy | By policy | Within operational flows | Standard across the AI Platform | On channels that agents cannot influence |
 | Observability and evaluation: audit trail, evaluation, monitoring, and lineage | Manual | Basic logs | Evaluation before release | Continuous monitoring | Continuous evaluation of agents |
@@ -277,10 +269,10 @@ advancement are set by the Executive Sponsor in the Priorities and are not state
 
 | Level | Measures |
 | --- | --- |
-| 1 Foundation | AI Policy activated. Control Function Contacts appointed for each Participating Entity. Each known AI use recorded in the AI Registry and assigned a Risk Tier. Baselines established for the Measures of Maturity Levels 2 to 5 |
-| 2 Controlled adoption | Share of employees in Participating Entities with access to an approved assistant and trained in its use. Share of priority processes with an owned and current knowledge source. Use of approved tools relative to unapproved tools. First pilots reported against defined success Measures |
+| 1 Foundation | AI Policy activated. Control Function Contacts appointed. Each known AI use recorded in the AI Registry and assigned a Risk Tier. Baselines established for the Measures of Maturity Levels 2 to 5 |
+| 2 Controlled adoption | Share of employees with access to an approved assistant and trained in its use. Share of priority processes with an owned and current knowledge source. Use of approved tools relative to unapproved tools. First pilots reported against defined success Measures |
 | 3 Embedded | Number of processes and systems with AI embedded under human decision, and share of their cases handled with AI support. Change in time and errors against baseline in those processes. Rates of human override and correction. Incidents and control breaches per Solution. Customer intelligence: share of customers with a current, risk-based KYC view, and journey problems identified and resolved. Business intelligence: reporting cycle time and forecast accuracy against baseline. Technology operations: incident detection and recovery times against baseline |
-| 4 Scaled | Share of Solutions recorded in the AI Registry, assigned a Risk Tier, validated, and monitored on the AI Platform. Reuse of AI Platform components across Domains and Entities. Benefits realized against the Investment Envelope. Predictability of delivery against quarterly Objectives. Audit and regulatory findings relating to AI |
+| 4 Scaled | Share of Solutions recorded in the AI Registry, assigned a Risk Tier, validated, and monitored on the AI Platform. Reuse of AI Platform components across Domains. Benefits realized against the Investment Envelope. Predictability of delivery against quarterly Objectives. Audit and regulatory findings relating to AI |
 | 5 Agentic | Share of eligible tasks handled by agents within their limits. Agent actions stopped or reversed by persons or by Platform Guardrails. Loss, error, and complaint rates against the human baseline. Evaluation coverage of agents in operation. Time to detect and contain an agent incident |
 
 ## 12. Performance assessment and reporting
@@ -297,10 +289,10 @@ Committee each quarter.
 
 ## 13. Commitments, review, and activation
 
-13.1. The Bank and the Group commit to satisfy the legal, regulatory, and contractual requirements that apply to the use
-of AI in each jurisdiction in which they operate.
+13.1. The Bank commits to satisfy the legal, regulatory, and contractual requirements that apply to the use
+of AI in each jurisdiction in which it operates.
 
-13.2. The Bank and the Group commit to the continual improvement of their adoption and governance of AI.
+13.2. The Bank commits to the continual improvement of its adoption and governance of AI.
 
 13.3. This Statement shall be reviewed at least annually, and upon a material change in the use of AI, in a principal AI
 provider, or in regulation, or following audit or supervisory findings.
@@ -309,8 +301,7 @@ provider, or in regulation, or following audit or supervisory findings.
 and customers as the Executive Sponsor decides.
 
 13.5. This Statement takes effect on the date of its activation, as recorded in its change log. Amendments are activated by the same
-authority, the AICC Lead. Its activation binds the Bank. An Entity takes part by its own recorded decision, and the Entities that take part are
-listed in the Appointments Record.
+authority, the AICC Lead. Its activation binds the Bank.
 
 ## Change log
 
@@ -327,3 +318,4 @@ listed in the Appointments Record.
 | 1.3 | 2026-10-01 | Solution replaces Use Case. | DR-2026-024 |
 | 1.4 | 2026-10-01 | Guardrails decide the approval of the Executive Sponsor; the timing of the Maturity Levels is in the Priorities; the Board Committee report is quarterly. | DR-2026-031 |
 | 1.5 | 2026-10-01 | Cross-reference to section 10 corrected. | DR-2026-034 |
+| 2.0 | 2026-10-01 | The Statement is of the Bank: the Group, the Entities, and the Participating Entities are removed; Data Sharing Arrangement replaces Group Arrangement. | DR-2026-036 |

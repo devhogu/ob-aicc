@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 2.12
+revision: 3.0
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -40,8 +40,7 @@ row may cover several revisions made while the document was a draft.
 
 ## 4. Activation
 
-4.1. The AICC Lead activates every document and Template by setting its status to active, recording the date in the change log (for a Template, in the Decision Log entry, because a Template has no change log), and entering the Decision in the Decision Log. The activation of a document binds the Bank. An Entity takes part by its own
-recorded decision.
+4.1. The AICC Lead activates every document and Template by setting its status to active, recording the date in the change log (for a Template, in the Decision Log entry, because a Template has no change log), and entering the Decision in the Decision Log. The activation of a document binds the Bank.
 
 4.2. Until the first publication of the charter, a change of meaning may take a decimal revision. After it, a change that alters the meaning of an active document takes the next whole revision number, and is activated in the same
 way. A correction that does not change the meaning needs only a change log row. The AICC Lead tells those concerned of an
@@ -54,7 +53,7 @@ language.
 
 | Identifier | Title | Purpose | Languages |
 | --- | --- | --- | --- |
-| AICC-MND-01 | Statement of Intent on the Adoption of Artificial Intelligence | The intent, values, principles, and strategy of the Group for AI | EN |
+| AICC-MND-01 | Statement of Intent on the Adoption of Artificial Intelligence | The intent, values, principles, and strategy of the Bank for AI | EN |
 | AICC-MND-02 | AICC Charter | Mission, authority, funding, risk appetite, offer, and measures of AICC | EN |
 | AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | EN |
 | AICC-ORG-01 | Operating Model | Roles, decisions, flow of work, meetings, and Records | EN |
@@ -78,7 +77,7 @@ log, and a copy of it carries no metadata block.
 | 2 | AICC-TPL-06 Service Agreement | Each Engagement: the commitment and the working agreement |
 | 3 | AICC-TPL-01 Solution Definition | Each Solution: its type, Receiver, scope, capabilities, architecture, Risk Tier, and acceptance criteria |
 | 4 | AICC-TPL-03 Control Sign-Off | The decision of a Control Function Contact: a validation, a stop, a provider check, or an Exception |
-| 5 | AICC-TPL-08 Decision Record | A Decision of the Executive Sponsor that is hard to reverse, a Decision that the Operating Model 10 names as evidenced by a Decision Record, an activation, an appointment, a delegation, a Group Arrangement, an Exception of the AICC Lead, an approval of output, and the cutover |
+| 5 | AICC-TPL-08 Decision Record | A Decision of the Executive Sponsor that is hard to reverse, a Decision that the Operating Model 10 names as evidenced by a Decision Record, an activation, an appointment, a delegation, a Data Sharing Arrangement, an Exception of the AICC Lead, an approval of output, and the cutover |
 | 6 | AICC-TPL-04 Steering Summary | Each Steering, monthly or quarterly: attendance, advice, Decisions, and actions |
 | 7 | AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, the capacity, and the acceptance |
 | 8 | AICC-TPL-10 AI Incident Review | The review of each AI Incident |
@@ -131,3 +130,4 @@ Risks and Issues Record and do not block activation.
 | 2.10 | 2026-10-01 | The twelve evidence Templates: Decision Record, Appointments Record, AI Incident Review, Registry Snapshot, Proposal added; Notes became the Steering Summary; listed in the order of use. | DR-2026-029 |
 | 2.11 | 2026-10-01 | Templates are activated; decimal revisions until first publication; Decision Record triggers aligned. | DR-2026-034 |
 | 2.12 | 2026-10-01 | Activation of a Template is recorded in the Decision Log. | DR-2026-034 |
+| 3.0 | 2026-10-01 | The documents bind the Bank only: Entities and Group Arrangement removed. | DR-2026-036 |

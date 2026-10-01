@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 4.9
+revision: 5.0
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -44,12 +44,9 @@ few definitions because it is read alone.
 | Term | Meaning | Not used |
 | --- | --- | --- |
 | Bank | O!Bank |  |
-| Group | The group of companies of which the Bank is part, including its fintech and digital entities | holding, ecosystem |
-| Entity | A legal entity of the Group, including the Bank | subsidiary, business unit |
-| Participating Entity | An Entity that takes part in the Statement of Intent |  |
 | Board | The board of directors of the Bank |  |
 | Board Committee | The committee of the Board that oversees AI, as the Board names it |  |
-| Group Arrangement | An arrangement that permits the sharing of data or decisions between Entities |  |
+| Data Sharing Arrangement | An arrangement that permits the sharing of data or decisions outside the Bank, with another company | Group Arrangement |
 | AICC | The AI Competence Center: the governance framework, the program office, and the engineering team for the adoption of AI |  |
 | Role | A set of responsibilities and authority, held by one or more persons | position, job title |
 | Hat | A duty that the AICC team takes for a time, such as keeper of the Program Backlog; not a Role |  |
@@ -59,12 +56,12 @@ few definitions because it is read alone.
 | AICC Engineer | The Role of a member of AICC who builds and runs Solutions with Domains | AI developer, AI solution engineer |
 | AI Steering Committee | The heads of the business, technology, risk, and compliance functions, who advise the Executive Sponsor | SteerCo |
 | Steering | The meeting of the Executive Sponsor and the AI Steering Committee: monthly for tactical matters and quarterly for strategic matters |  |
-| Domain | A business function or a product line of the Bank or of an Entity | business unit, business line |
+| Domain | A business function or a product line of the Bank | business unit, business line |
 | Product owner | The person who accepts a delivered outcome: the Domain Owner for an item of a Domain, and the Executive Sponsor for an item that spans Domains or is enabling work | |
 | Domain Owner | The Role that owns the results of AI adoption in a Domain and is the product owner of its Solutions | business owner |
 | Domain Expert | The Role of a specialist of the Domain who acts as early adopter | champion, ambassador |
 | Control Function | The model risk, compliance, information security, data protection, or legal function, which validates and may stop. Internal audit is the third line and gives assurance only | second line |
-| Control Function Contact | The Role of the named member of a Control Function who advises, validates, and may stop, for an Entity | liaison |
+| Control Function Contact | The Role of the named member of a Control Function who advises, validates, and may stop | liaison |
 | Platform Owner | The Role that provides and operates the AI Platform |  |
 | AI Platform | The shared platform that provides the model gateway, the knowledge layer, the tool gateway, the AI Registry, guardrails, human oversight, and observability | AI stack |
 | Strategic Priority | A strategic theme of the Statement of Intent, set with the Board, with an Investment Envelope |  |
@@ -128,7 +125,7 @@ few definitions because it is read alone.
 | AI Incident | An event in which the use of AI causes or could cause harm, a breach of law or policy, or a loss of control |  |
 | Severity | The class of an AI Incident: High, Medium, or Low; or of a Risk, Issue, or Finding: Blocker, Major, or Minor | criticality |
 | Exception | A limited departure from a policy, decided by the Control Function concerned, or by the AICC Lead for a requirement set by AICC alone | waiver |
-| AI Risk Appetite Statement | The statement in the AICC Charter of the appetite of the Group for AI risk |  |
+| AI Risk Appetite Statement | The statement in the AICC Charter of the appetite of the Bank for AI risk |  |
 | Maturity Level | One of the five levels of the Maturity Roadmap of the Statement of Intent |  |
 | Measure | An indicator with a baseline and an owner | KPI, metric |
 | Milestone | A dated event in the Roadmap that marks a deliverable or a Maturity Level |  |
@@ -220,3 +217,4 @@ few definitions because it is read alone.
 | 4.7 | 2026-10-01 | Product owner defined. | DR-2026-031 |
 | 4.8 | 2026-10-01 | Decision Record, Appointments Record, Control Sign-Off, AI Incident Review, Registry Snapshot, Dependency Map, Roadmap, Template, Priorities Record, and Standards Record defined; Cancelled and Closed restated; Innovation is an Event. | DR-2026-034 |
 | 4.9 | 2026-10-01 | Control Sign-Off includes a stop. | DR-2026-034 |
+| 5.0 | 2026-10-01 | Group, Entity, and Participating Entity removed; Data Sharing Arrangement replaces Group Arrangement; Domain, Control Function Contact, and the Statement of appetite refer to the Bank. | DR-2026-036 |

@@ -2,7 +2,7 @@
 id: AICC-TPL-09-EN
 title: Appointments Record
 status: active
-revision: 1.2
+revision: 1.3
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -20,11 +20,7 @@ entered here.
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  | [Appointed / Acting / Relieved] |  |  |  | DR-[yyyy]-[nnn] |
 
-The Participating Entities, and the heads and the Contacts named below the Roles, are listed in the same way, each with a Status and a Decision Record.
-
-| Participating Entity | Joined by decision | Domain Owner of the Entity | From | To |
-| --- | --- | --- | --- | --- |
-|  | DR-[yyyy]-[nnn] |  |  |  |
+The heads and the Contacts named below the Roles are listed in the same way, each with a Status and a Decision Record.
 
 ## Part B. The responsibilities
 

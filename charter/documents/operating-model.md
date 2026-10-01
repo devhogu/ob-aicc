@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 8.4
+revision: 9.0
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -14,7 +14,7 @@ revised: 2026-10-01
 1.1. This Operating Model states how AICC works: who does what, how work flows, how Decisions are taken, and what is
 kept on record.
 
-1.2. It applies to AICC and to the Domains and Control Functions of the Bank and of each Participating Entity that work with
+1.2. It applies to AICC and to the Domains and Control Functions of the Bank that work with
 AICC.
 
 1.3. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, and the unit governance. They state no rule of their own, and this Operating Model prevails.
@@ -26,8 +26,7 @@ AICC.
 2.2. AICC does not own the AI Platform, the Solutions, or the business results of the Domains. The Domains execute. AICC
 directs, guides, and may supply AICC Engineers to build and run Solutions.
 
-2.3. AICC is not a Control Function. The Control Functions are independent of it. Each Entity keeps its own regulator,
-accountability, Control Functions, and data.
+2.3. AICC is not a Control Function. The Control Functions are independent of it, and keep their own accountability for their remit.
 
 ## 3. Principles of work
 
@@ -86,12 +85,12 @@ the events, or the coach. A Hat is not a Role, changes when the team decides, an
 (f) Internal audit gives assurance only. It shall not validate, release, or stop, and has read access to every Record.
 
 4.5. The AI Steering Committee is the group of the heads of the business, technology, risk, and compliance functions of the
-Bank and of the Participating Entities. It advises the Executive Sponsor, who chairs it. It is formed of the heads who are named, and a function joins when its head is named. The Board Committee oversees AI for
+Bank. It advises the Executive Sponsor, who chairs it. It is formed of the heads who are named, and a function joins when its head is named. The Board Committee oversees AI for
 the Board and receives the report of the Executive Sponsor. Neither is a Role.
 
 4.6. The Holders of the Roles are named in the Appointments Record. The Executive Sponsor appoints the AICC Lead. The AICC Lead
 appoints the AICC Engineers. The head of a Domain names the Domain Owner, and the Domain Owner names the Domain Expert. Each
-Control Function names its Control Function Contact for each Entity. The head of technology names the Platform Owner. The AICC Lead names the Checker of a Risk Tier 1 Solution. An appointment to a Role of the appointer's own person is made by the next level (5.7). Each Holder shall name a deputy in the Appointments Record, who acts during an absence, and a delegation of more than two weeks is entered in the Decision Log. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference. The Executive Sponsor may delegate any decision in writing, for a stated scope and period, and the delegation is entered in the Appointments Record. Until a head of function or the Platform Owner is named, the Executive Sponsor names an acting Holder. For the work of AICC itself, the AICC Lead is the Domain Owner.
+Control Function names its Control Function Contact. The head of technology names the Platform Owner. The AICC Lead names the Checker of a Risk Tier 1 Solution. An appointment to a Role of the appointer's own person is made by the next level (5.7). Each Holder shall name a deputy in the Appointments Record, who acts during an absence, and a delegation of more than two weeks is entered in the Decision Log. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference. The Executive Sponsor may delegate any decision in writing, for a stated scope and period, and the delegation is entered in the Appointments Record. Until a head of function or the Platform Owner is named, the Executive Sponsor names an acting Holder. For the work of AICC itself, the AICC Lead is the Domain Owner.
 
 ## 5. Decisions
 
@@ -100,7 +99,7 @@ facts that it rests on, such as a measurement, a test result, a cost, or a sourc
 
 5.2. A Decision goes to a higher level only when at least one of the following is true.
 
-(a) It affects another Domain or Entity, or sets a standard for others.
+(a) It affects another Domain, reaches outside the Bank, or sets a standard for others.
 
 (b) It cannot be reversed without significant cost or harm.
 
@@ -320,36 +319,36 @@ adapts as needed.
 ## 10. Controls
 
 10.1. Each control in the following table is a rule of this model, of the AI Policy, or of the Business Model, or an event of the Cadence,
-and it leaves an evidence record. The table lists the controls that an auditor can test.
+and it leaves an evidence record. The table lists the controls that an auditor can test, each with a reference. The Control Matrix in the Registry keeps the test and the status of each control by that reference.
 
-| Control | Rule | Owner | When | Evidence record | Template |
-| --- | --- | --- | --- | --- | --- |
-| The mandate and the appointment of the AICC Lead | 4.6; Charter 3.1 | Executive Sponsor | When it changes | Appointments, with the decision reference | Appointments Record |
-| Priorities, funding, and guardrails | Charter 4 | Executive Sponsor | Yearly, and on change | Priorities; Decision Record | Decision Record |
-| The risk appetite and the policy | Charter 5.4 | AICC Lead; the Executive Sponsor for a risk beyond appetite | Yearly, and on an extra review | Decision Record | Decision Record |
-| Review of the documents | Document Catalog 7 | AICC Lead | Yearly, and when the meaning changes | Decision Record of the check | Decision Record |
-| Monthly review of progress, risks, and blockers, with a sample of the AICC Lead's Decisions | 7.1 | Executive Sponsor | Monthly | Steering Summary | Steering Summary |
-| Results, risk check, and Maturity Level | 7.1; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot |
-| Report to the Board Committee | Charter 7.2 | AICC Lead prepares; Executive Sponsor approves and issues | Quarterly | Quarterly Report, with its issuance block | Quarterly Report |
-| Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
-| Approval of the business case | 6.5; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail | When the Initiative is approved | Initiative Brief, complete in its six sections; Decision Record | Initiative Brief |
-| Outcome Report and acceptance | 6.9; Business Model 5.5 | AICC Lead issues; product owner accepts | At the end of the Engagement | Outcome Report | Outcome Report |
-| Capacity used and benefit confirmed | Business Model 6 | AICC Lead | Quarterly | Quarterly Report | Quarterly Report |
-| Risk Tier assignment | AI Policy 3.2 | AICC Lead | When the Solution is defined | Solution Definition; AI Registry entry, with who assigned it and when | Solution Definition |
-| Check or validation before the first deployment | AI Policy 3.3; 6.6 | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment | AI Registry entry for the check; Control Sign-Off for the validation | Control Sign-Off |
-| Release | 6.6 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | The release block of the Solution Definition; Decision Record for Risk Tier 3 | Solution Definition |
-| Approval of the use of a Solution for a data class | AI Policy 2.1 | Domain Owner; the AICC Lead for use in AICC | Before use | AI Registry, with who approved it and when | Not needed |
-| An AI Incident | AI Policy 5 | AICC Lead; the Control Function Contacts | When it happens | Risks and Issues; AI Incident Review | AI Incident Review |
-| An Exception | AI Policy 6 | The Control Function concerned; the AICC Lead for a requirement set by AICC alone | When requested | Control Sign-Off, or Decision Record for the AICC Lead; Risks and Issues | Control Sign-Off; Decision Record |
-| Check of a provider | AI Policy 4.1 | The Control Function Contacts of information security, data protection, and legal | Before use, and at each reassessment | Control Sign-Off | Control Sign-Off |
-| Sharing of data or decisions between Entities | Charter 3.3 | The Executive Sponsor | Before the sharing | Decision Record | Decision Record |
-| A Proposal to adopt a Solution at scale | 6.8 | AICC Lead prepares; the owners and the Executive Sponsor decide | When a Solution is ready to be adopted | Proposal; Decision Record | Proposal |
-| Output published to the Board or investors | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record |
-| Separation of duties and independence | 4.4 | AICC Lead; checked in the review of the documents | Always | Appointments | Appointments Record |
-| Capacity ceiling and intake of Engagements | Business Model 7.1, 7.2 | AICC Lead | When a Service Agreement is issued | Service Agreement; Portfolio Backlog | Service Agreement |
-| Completeness of the Outcome Reports, and the sample of the Decisions of the AICC Lead | Business Model 7.4, 7.5 | Executive Sponsor | Quarterly, and monthly for the sample | Steering Summary | Steering Summary |
-| Confirmation of the benefit | Business Model 7.3 | Domain Owner | At the Outcome Report | Outcome Report | Outcome Report |
-| Access of internal audit | 9.5 | AICC Lead | Always | The Registry | Not needed |
+| Ref | Control | Rule | Owner | When | Evidence record | Template |
+| --- | --- | --- | --- | --- | --- | --- |
+| C-01 | The mandate and the appointment of the AICC Lead | 4.6; Charter 3.1 | Executive Sponsor | When it changes | Appointments, with the decision reference | Appointments Record |
+| C-02 | Priorities, funding, and guardrails | Charter 4 | Executive Sponsor | Yearly, and on change | Priorities; Decision Record | Decision Record |
+| C-03 | The risk appetite and the policy | Charter 5.4 | AICC Lead; the Executive Sponsor for a risk beyond appetite | Yearly, and on an extra review | Decision Record | Decision Record |
+| C-04 | Review of the documents | Document Catalog 7 | AICC Lead | Yearly, and when the meaning changes | Decision Record of the check | Decision Record |
+| C-05 | Monthly review of progress, risks, and blockers, with a sample of the AICC Lead's Decisions | 7.1 | Executive Sponsor | Monthly | Steering Summary | Steering Summary |
+| C-06 | Results, risk check, and Maturity Level | 7.1; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot |
+| C-07 | Report to the Board Committee | Charter 7.2 | AICC Lead prepares; Executive Sponsor approves and issues | Quarterly | Quarterly Report, with its issuance block | Quarterly Report |
+| C-08 | Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
+| C-09 | Approval of the business case | 6.5; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail | When the Initiative is approved | Initiative Brief, complete in its six sections; Decision Record | Initiative Brief |
+| C-10 | Outcome Report and acceptance | 6.9; Business Model 5.5 | AICC Lead issues; product owner accepts | At the end of the Engagement | Outcome Report | Outcome Report |
+| C-11 | Capacity used and benefit confirmed | Business Model 6 | AICC Lead | Quarterly | Quarterly Report | Quarterly Report |
+| C-12 | Risk Tier assignment | AI Policy 3.2 | AICC Lead | When the Solution is defined | Solution Definition; AI Registry entry, with who assigned it and when | Solution Definition |
+| C-13 | Check or validation before the first deployment | AI Policy 3.3; 6.6 | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment | AI Registry entry for the check; Control Sign-Off for the validation | Control Sign-Off |
+| C-14 | Release | 6.6 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | The release block of the Solution Definition; Decision Record for Risk Tier 3 | Solution Definition |
+| C-15 | Approval of the use of a Solution for a data class | AI Policy 2.1 | Domain Owner; the AICC Lead for use in AICC | Before use | AI Registry, with who approved it and when | Not needed |
+| C-16 | An AI Incident | AI Policy 5 | AICC Lead; the Control Function Contacts | When it happens | Risks and Issues; AI Incident Review | AI Incident Review |
+| C-17 | An Exception | AI Policy 6 | The Control Function concerned; the AICC Lead for a requirement set by AICC alone | When requested | Control Sign-Off, or Decision Record for the AICC Lead; Risks and Issues | Control Sign-Off; Decision Record |
+| C-18 | Check of a provider | AI Policy 4.1 | The Control Function Contacts of information security, data protection, and legal | Before use, and at each reassessment | Control Sign-Off | Control Sign-Off |
+| C-19 | Sharing of data or decisions outside the Bank | Charter 3.3 | The Executive Sponsor | Before the sharing | Decision Record | Decision Record |
+| C-20 | A Proposal to adopt a Solution at scale | 6.8 | AICC Lead prepares; the owners and the Executive Sponsor decide | When a Solution is ready to be adopted | Proposal; Decision Record | Proposal |
+| C-21 | Output published to the Board or investors | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record |
+| C-22 | Separation of duties and independence | 4.4 | AICC Lead; checked in the review of the documents | Always | Appointments | Appointments Record |
+| C-23 | Capacity ceiling and intake of Engagements | Business Model 7.1, 7.2 | AICC Lead | When a Service Agreement is issued | Service Agreement; Portfolio Backlog | Service Agreement |
+| C-24 | Completeness of the Outcome Reports, and the sample of the Decisions of the AICC Lead | Business Model 7.4, 7.5 | Executive Sponsor | Quarterly, and monthly for the sample | Steering Summary | Steering Summary |
+| C-25 | Confirmation of the benefit | Business Model 7.3 | Domain Owner | At the Outcome Report | Outcome Report | Outcome Report |
+| C-26 | Access of internal audit | 9.5 | AICC Lead | Always | The Registry | Not needed |
 
 ## Change log
 
@@ -385,3 +384,5 @@ and it leaves an evidence record. The table lists the controls that an auditor c
 | 8.2 | 2026-10-01 | Rules on the content of the tools, the keeper of each tool (moved from the collaboration tooling workflow). | DR-2026-034 |
 | 8.3 | 2026-10-01 | Personal data of the Appointments Record; Decision Record trigger; Solution Definitions evidenced by the Snapshot; Cancelled except Completed; the Appointments Record named in 7.6. | DR-2026-034 |
 | 8.4 | 2026-10-01 | An Initiative is approved only when its Initiative Brief is complete in its six sections. | DR-2026-034 |
+| 8.5 | 2026-10-01 | Each control has a reference, and the Control Matrix keeps its test and status. | DR-2026-035 |
+| 9.0 | 2026-10-01 | The Group, Entities, and Participating Entities are removed: Control Function Contacts are named for the Bank, and sharing outside the Bank is a Data Sharing Arrangement. | DR-2026-036 |

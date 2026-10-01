@@ -18,6 +18,6 @@ The architecture standards of AICC and the requirements that the use of AI place
 | PLT-001 | The AI Platform holds the AI Registry and keeps it current. | Every Solution | 2026-09-30 |
 | PLT-002 | The AI Platform provides logging, with the retention that the rules require. | Risk Tier 2 and 3 | 2026-09-30 |
 | PLT-003 | The AI Platform supports continuous monitoring, with alerts. | Risk Tier 3 | 2026-09-30 |
-| PLT-004 | The AI Platform keeps the data of each Entity separated, as the data classification rules require. | Every Entity | 2026-09-30 |
+| PLT-004 | The AI Platform keeps data separated, as the data classification rules require. | Every Solution | 2026-09-30 |
 | PLT-005 | The AI Platform allows a Solution to be suspended pending review. | Every Solution | 2026-09-30 |
-| PLT-006 | The AI Platform, or information security, reports use of AI services that are not in the AI Registry. | Every Entity | 2026-09-30 |
+| PLT-006 | The AI Platform, or information security, reports use of AI services that are not in the AI Registry. | The Bank | 2026-09-30 |

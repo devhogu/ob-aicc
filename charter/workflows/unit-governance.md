@@ -71,7 +71,7 @@ Figure 3 shows how a decision moves.
 ```mermaid
 flowchart TB
   A["A decision arises in the work"] --> B["The person doing the work decides on the facts"]
-  B --> C{"Crosses a Domain or Entity, hard to reverse, exceeds a guardrail, accepts a risk, or is Tier 3?"}
+  B --> C{"Affects another Domain or reaches outside the Bank, hard to reverse, exceeds a guardrail, accepts a risk, or is Tier 3?"}
   C -->|No| D["Noted in the work item"]
   C -->|Yes| E["AICC Lead decides, or the Executive Sponsor for the strategic matters"]
   E --> F["Entered in the Decision Log"]

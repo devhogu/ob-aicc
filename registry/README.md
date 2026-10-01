@@ -1,7 +1,7 @@
 # Registry
 
 The Registry holds the Records of AICC: the process records of the work in progress and delivered, the decisions, the proposals, and the
-governance records. It holds no figures of the Bank, no data, and no code. The Operating Model 9 states the rules: the working state
+governance records. It holds no figures of the Bank, no data, and no code. The Registry names the people who hold the Roles, in the Appointments Record. A comment in brackets marks an open place and states what is expected there. The Operating Model 9 states the rules: the working state
 moves to Jira and Confluence at the cutover, and the evidence records are always here, as closed and dated extracts. Jira, Confluence,
 and Service Management are not an evidence store. The AICC Lead is accountable for all the Records.
 
@@ -32,6 +32,7 @@ Current by nature, and always kept here.
 | Standards | [standards.md](standards.md) | Architecture standards and Platform requirements |
 | Risks and Issues | [risks-and-issues.md](risks-and-issues.md) | Risks, issues, AI Incidents, Exceptions, Findings |
 | AI Registry | [ai-registry.md](ai-registry.md) | Each Solution, model, and agent |
+| Control Matrix | [control-matrix.md](control-matrix.md) | Each control of the Operating Model 10 with its objective, test, latest evidence, and status, and the populations for sampling |
 | Appointments | [appointments.md](appointments.md) | The Appointments Record: the map of the Roles to the Holders, the appointment log, the declarations, the access, and the delegations of the Executive Sponsor |
 
 ## Evidence records

@@ -2,7 +2,7 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: active
-revision: 2.3
+revision: 2.4
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -52,7 +52,7 @@ revised: 2026-10-01
 
 [From the Risks and Issues Record: open items by Severity, and the AI Incidents and Exceptions of the quarter.]
 
-[Position against the AI Risk Appetite Statement and any risk accepted beyond it. Concentration of the Group on one provider.]
+[Position against the AI Risk Appetite Statement and any risk accepted beyond it. Concentration of the Bank on one provider.]
 
 ## 8. Decisions needed
 

@@ -9,7 +9,7 @@ people is the Appointments Record in the Registry, with the log of appointments.
 ## 2. The place of AICC in the Bank
 
 AICC is an internal consulting and innovation lab. It reports to the Executive Sponsor, and through the Executive Sponsor to the Board Committee. It is not a
-Control Function, and the Control Functions are independent of it. Each Entity keeps its own regulator, accountability, Control Functions, and data. AICC has
+Control Function, and the Control Functions are independent of it. The Control Functions keep their own accountability for their remit. AICC has
 no administrative line over the people assigned to it, who stay in their own reporting line, or over the partners from the functions.
 
 ## 3. The Roles and their profiles
@@ -21,7 +21,7 @@ no administrative line over the people assigned to it, who stay in their own rep
 | AICC Engineer | Builds and runs Solutions with the Domains | Builds, checks the work of others, coaches Domain Experts, and keeps work visible | How a Solution is built; the approval of Features at IT Planning | The AICC Lead for AICC; otherwise the own line | Engineering |
 | Domain Owner | Owns the results of AI adoption in a Domain | Names the Domain Expert; approves the business case and the Solution Definition; approves the data classes; releases; accepts; confirms the benefit; owns oversight in operation, disclosure, and contestability, and reviews monitoring and provider notices at each IT Review and Demo | Participation, funding, release for Risk Tier 1 and 2, acceptance | The line of the Domain | Business ownership |
 | Domain Expert | Early adopter and partner in a Domain | Explains the routine work, tries the Solution, scales adoption | None on funding, acceptance, or control | The line of the Domain | The routine work of the Domain |
-| Control Function Contact | Advises, validates, and may stop, for an Entity | Raises the Risk Tier within the remit; validates; decides Exceptions | Validation, a stop, and an Exception within the remit | The Control Function | The remit of the function |
+| Control Function Contact | Advises, validates, and may stop | Raises the Risk Tier within the remit; validates; decides Exceptions | Validation, a stop, and an Exception within the remit | The Control Function | The remit of the function |
 | Platform Owner | Provides and operates the AI Platform | Meets the requirements in the Standards; keeps the evidence | The design of the platform within the requirements | The technology line | Platform engineering |
 
 One person may hold several Roles, within the rules of separation. A Hat, such as keeper of a backlog or facilitator of the events, is a duty that the team
@@ -68,7 +68,7 @@ Board Committee is informed of what the Charter states, and internal audit gives
 | Body | Purpose | Members | Rhythm | How it records |
 | --- | --- | --- | --- | --- |
 | Executive Sponsor | Holds the mandate; decides the strategic matters | One person | Monthly and quarterly Steering | Decision Records and the Steering Summary |
-| AI Steering Committee | Advises the Executive Sponsor on the Portfolio and on conflicts between Entities and Domains | The heads of the business, technology, risk, and compliance functions, named in the Appointments Record | With the Steering | Advice and dissent in the Steering Summary |
+| AI Steering Committee | Advises the Executive Sponsor on the Portfolio and on conflicts between Domains | The heads of the business, technology, risk, and compliance functions, named in the Appointments Record | With the Steering | Advice and dissent in the Steering Summary |
 | Board Committee | Oversees AI for the Board | As the Board names it | As it meets | The Quarterly Report and its issuance block |
 | Internal audit | Gives independent assurance | The audit function | As it plans | Its own reports; read access to the Registry |
 

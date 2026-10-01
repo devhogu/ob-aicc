@@ -17,35 +17,28 @@ This is the Appointments Record, in the form of the Appointments Record Template
 
 The heads of the functions of the AI Steering Committee are named when the Committee convenes. Until then the Executive Sponsor decides alone (Operating Model 7.2).
 
-| Function | Holder | Entity | Deputy | Status | From | To | Decision Record |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Business | [ The head of the function ] | | | | | | |
-| Technology | [ The head of the function ] | | | | | | |
-| Risk | [ The head of the function ] | | | | | | |
-| Compliance | [ The head of the function ] | | | | | | |
+| Function | Holder | Deputy | Status | From | To | Decision Record |
+| --- | --- | --- | --- | --- | --- | --- |
+| Business | [ The head of the function ] | | | | | |
+| Technology | [ The head of the function ] | | | | | |
+| Risk | [ The head of the function ] | | | | | |
+| Compliance | [ The head of the function ] | | | | | |
 
-The Control Function Contacts. Each Control Function names its Contact for each Entity.
+The Control Function Contacts. Each Control Function names its Contact.
 
-| Control Function | Remit | Control Function Contact | Entity | Named by | Deputy | Status | From | To | Decision Record |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Model risk | Risk Tier and model validation, including language models | [ The contact named by the function ] | | | [ The deputy named by the function ] | | | | |
-| Compliance | Regulation, conduct, consumer protection, and anti-money-laundering rules of the Entity | [ The contact named by the function ] | | | [ The deputy named by the function ] | | | | |
-| Information security | Security requirements, access, and attacks specific to AI | [ The contact named by the function ] | | | [ The deputy named by the function ] | | | | |
-| Data protection | Lawful use of personal data, retention, cross-border transfer, sharing between Entities | [ The contact named by the function ] | | | [ The deputy named by the function ] | | | | |
-| Legal | Contracts, intellectual property, partners, and liability | [ The contact named by the function ] | | | [ The deputy named by the function ] | | | | |
+| Control Function | Remit | Control Function Contact | Named by | Deputy | Status | From | To | Decision Record |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Model risk | Risk Tier and model validation, including language models | [ The contact named by the function ] | | [ The deputy named by the function ] | | | | |
+| Compliance | Regulation, conduct, consumer protection, and anti-money-laundering rules of the Bank | [ The contact named by the function ] | | [ The deputy named by the function ] | | | | |
+| Information security | Security requirements, access, and attacks specific to AI | [ The contact named by the function ] | | [ The deputy named by the function ] | | | | |
+| Data protection | Lawful use of personal data, retention, cross-border transfer, sharing outside the Bank | [ The contact named by the function ] | | [ The deputy named by the function ] | | | | |
+| Legal | Contracts, intellectual property, partners, and liability | [ The contact named by the function ] | | [ The deputy named by the function ] | | | | |
 
 Internal audit gives assurance only.
 
 | Function | Contact | Named by | Status | From | To | Decision Record |
 | --- | --- | --- | --- | --- | --- | --- |
 | Internal audit, with read access to every Record | [ The named contact of internal audit ] | | | | | |
-
-## Participating Entities
-
-| Participating Entity | Joined by decision | Domain Owner of the Entity | From | To |
-| --- | --- | --- | --- | --- |
-| The Bank | [ The mandate of AICC ] | [ The head of the Bank's Domain, if one is named ] | | |
-| [ Another Entity of the Group, when it takes part by its own recorded decision ] | | | | |
 
 ## Part B. The responsibilities
 
