@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 4.6
+revision: 4.7
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -28,7 +28,7 @@ and Records yield to the documents. The workflows and the guides explain the doc
 
 3.3. Capitalize a defined term and use it in one meaning. Do not use a term listed as "Not used".
 
-3.4. A defining document states what is and what is to be done. Lineage, references, and open questions belong in the wiki.
+3.4. A defining document states what is and what is to be done. Lineage, references, and open questions belong in the wiki folder of the repository.
 
 3.5. A document refers to another by its title, not by a file path, and does not restate it. The Statement of Intent repeats a
 few definitions because it is read alone.
@@ -60,6 +60,7 @@ few definitions because it is read alone.
 | AI Steering Committee | The heads of the business, technology, risk, and compliance functions, who advise the Executive Sponsor | SteerCo |
 | Steering | The meeting of the Executive Sponsor and the AI Steering Committee: monthly for tactical matters and quarterly for strategic matters |  |
 | Domain | A business function or a product line of the Bank or of an Entity | business unit, business line |
+| Product owner | The person who accepts a delivered outcome: the Domain Owner for an item of a Domain, and the Executive Sponsor for an item that spans Domains or is enabling work | |
 | Domain Owner | The Role that owns the results of AI adoption in a Domain and is the product owner of its Solutions | business owner |
 | Domain Expert | The Role of a specialist of the Domain who acts as early adopter | champion, ambassador |
 | Control Function | The model risk, compliance, information security, data protection, or legal function, which validates and may stop. Internal audit is the third line and gives assurance only | second line |
@@ -206,3 +207,4 @@ few definitions because it is read alone.
 | 4.4 | 2026-10-01 | Evidence record, Working state, and Light mode defined; Record redefined. | DR-2026-028 |
 | 4.5 | 2026-10-01 | Steering Summary defined. | DR-2026-029 |
 | 4.6 | 2026-10-01 | AICC portal, Operating portal, and Service portal defined. | DR-2026-030 |
+| 4.7 | 2026-10-01 | Product owner defined. | DR-2026-031 |

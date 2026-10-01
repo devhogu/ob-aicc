@@ -2,7 +2,7 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -55,7 +55,8 @@ scale of use, the provider, or whether the effect can be reversed.
 3.2. The AICC Lead shall assign the Risk Tier when the Solution is defined, using the attributes in 3.1, and shall inform the Domain Owner of the
 Risk Tier assigned. The Contact of any Control Function may raise it within its remit, and only the Contact of model risk may
 lower it. A Solution in a category that the law of the Entity treats as high risk is at least Risk Tier 2. The person who checks a
-Risk Tier 1 Solution confirms the Risk Tier and asks whether the Solution is in such a category.
+Risk Tier 1 Solution, and the Control Function Contacts at the validation of a Risk Tier 2 or 3 Solution, confirm the Risk Tier and ask whether
+the Solution is in such a category.
 
 3.3. The requirements of each Risk Tier are in the following table. A higher Risk Tier includes the requirements of the lower.
 
@@ -106,7 +107,7 @@ The Control Function Contacts assess it within their remits: compliance decides 
 protection decides whether a person whose data is affected is notified, as the law of the Entity requires. Providers are told as
 the contract requires.
 
-5.5. Within ten working days after containment the people involved shall review what happened and what to change, without blame. The
+5.5. Within ten working days after containment the AICC Lead shall lead a review with the people involved of what happened and what to change, without blame. The
 AI Incident and its actions are entered in the Risks and Issues Record.
 
 ## 6. Exceptions
@@ -136,3 +137,4 @@ proceeds: no Risk Tier 2 or 3 Solution, no provider, and no Group Arrangement.
 | 0.9 | 2026-10-01 | Iteration Review replaces the Sync and Demo. | DR-2026-020 |
 | 1.0 | 2026-10-01 | Event names use the short forms IT and IP. | DR-2026-023 |
 | 1.1 | 2026-10-01 | Solution replaces Use Case; the Risk Tier is assigned when the Solution is defined; testing before the first deployment. | DR-2026-024 |
+| 1.2 | 2026-10-01 | The Risk Tier is confirmed at every validation; the AICC Lead leads the review of an AI Incident. | DR-2026-031 |

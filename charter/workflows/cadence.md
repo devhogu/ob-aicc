@@ -154,11 +154,8 @@ the longest.
 
 ## 7. Rules
 
-1. The flow is a template. A real week or event moves by the rules of the Calendar: to the working day before a blocked or gray day,
-never after, and the IP week to the week before when it is blocked or gray.
-2. An event that is missed is not held later. Its intent is covered at the next event, and the Weekly Review notes it.
-3. The Weekly Review may be held in writing. A record of an event is kept only for Decisions and actions, in the Steering Summary for a Steering and otherwise in the work items.
-4. Nothing in the Cadence is approved by anyone.
+The rules for events that move or are missed, and for the Weekly Review, are in the Operating Model 7.5. Nothing in the Cadence is
+approved by anyone.
 
 ## 8. The dated calendar of events
 
@@ -205,5 +202,5 @@ Vocabulary.
 | PI Review and Demo | PI | IP week, Monday | The ITs of the PI, the PI Objectives | The value scored, the quarterly risk check, the Quarterly Report | Show what the PI delivered, and score its value |
 | Inspect and Adapt | PI | IP week, Tuesday | The results and the flow of the PI | Improvements in the Program Backlog | Solve the main problems of the PI |
 | Innovation | PI | IP week, Wednesday | Free time | New ideas and learning | Time to learn, explore, and recover |
-| PI Planning | PI | IP week, Thursday | The Program Backlog, the Quarterly Report, the Dependency Map | The PI Objectives, the Roadmap, the Dependencies | Set the intent and direction of the next PI |
+| PI Planning | PI | IP week, Thursday | The Program Backlog, the Quarterly Report, the Dependency Map | The PI Objectives, the proposed Roadmap, the Dependencies | Set the intent and direction of the next PI |
 | Steering, quarterly | PI | IP week, Friday | The Quarterly Report, the PI Objectives | Decisions on priorities and funding, the Maturity Level | Assess the past quarter, and decide the strategic matters |

@@ -44,6 +44,7 @@ Closed and dated extracts, always kept here. The Operating Model 10 lists the co
 | Initiatives | [initiatives/](initiatives/) | One folder for each: `INI-001-short-title/` with its brief, Service Agreements, Outcome Reports, Epics, and Features |
 | Reports | [reports/](reports/) | Quarterly Reports, named `2026-PIQ4.md` |
 | Steering | [steering/](steering/) | The Steering Summaries |
+| Proposals | proposals/ | The Proposals to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy. Created with the first one |
 | Assessments | [assessments/](assessments/) | Earlier checks of the documents, kept for history |
 
 Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfolio), EP-nnn Epic, FT-nnn Feature, DEP-nnn Dependency, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards, AGR-nnn Service Agreement, OUT-nnn Outcome Report.

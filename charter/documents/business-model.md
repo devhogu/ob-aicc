@@ -2,7 +2,7 @@
 id: AICC-MND-03-EN
 title: Business Model
 status: active
-revision: 0.3
+revision: 0.4
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -50,7 +50,8 @@ release of a Solution; and support after delivery.
 
 4.2. The support level is chosen for each Engagement: none, on demand, at agreed response targets, or run by AICC, in which AICC runs
 the Solution for its whole life. AICC runs a Service only for the few Services that it owns, such as the service landscape
-portal, and states the run cost and the sunset rule in the business case of each.
+portal, and states the run cost and the sunset rule in the business case of each. The support of a Service is taken in Service Management:
+requests and incidents come to the queue of AICC, and the response targets in the Service Agreement are targets and not guarantees.
 
 4.3. What an Engagement delivers is a Solution of one type: an Experiment, which is a proof that ends in a Proposal; a Product, which is
 a version for one consumer that AICC supports as agreed; or a Service, which AICC runs. The Operating Model states the life of each
@@ -90,6 +91,27 @@ confirms. The money and the other figures of the Bank stay in the systems of the
 6.2. The Quarterly Report shows the capacity committed and used and the benefit confirmed for each Engagement. The Investment
 Envelopes remain the funding of AICC, and AICC does not charge the functions.
 
+## 7. Controls on the commitment
+
+7.1. AICC shall not commit more capacity per IT than its people can deliver. The AICC Lead states the capacity available per IT in the
+Assignment Map, adds up the capacity of the Service Agreements, and does not issue a Service Agreement that takes the sum above the
+capacity available. The work above it waits in the Portfolio Backlog.
+
+7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, and fits the capacity.
+Otherwise the item is deferred or rejected.
+
+7.3. The Domain Owner confirms the benefit of an Engagement against the Initiative Brief, from the source that the Brief names.
+
+7.4. At each quarterly Steering the AICC Lead shows that every closed Engagement has an Outcome Report that its product owner accepted,
+and that the capacity of the Service Agreements is within the capacity available. The Steering Summary records it.
+
+7.5. The AICC Lead issues the Service Agreement, delivers, and writes the Outcome Report, and the product owner accepts it. The Steering
+samples the Decisions of the AICC Lead each month. This is an accepted limit while the Team is small, and it is recorded in the Risks and
+Issues.
+
+7.6. The Executive Sponsor owns the budget of AICC itself. The Quarterly Report points to the cost of AICC in the financial planning of the
+Bank, and holds no figure of it.
+
 ## Change log
 
 | Revision | Date | Change | Decision |
@@ -97,3 +119,4 @@ Envelopes remain the funding of AICC, and AICC does not charge the functions.
 | 0.1 | 2026-10-01 | Drafted. | DR-2026-026 |
 | 0.2 | 2026-10-01 | Activated by the AICC Lead. | DR-2026-018 |
 | 0.3 | 2026-10-01 | An Engagement is an Initiative with a client function; the Service Agreement is issued when the study starts; Adopted Solutions; the Portfolio Backlog replaces the Agreement Log. | DR-2026-027 |
+| 0.4 | 2026-10-01 | Controls on the commitment: capacity ceiling, intake, benefit confirmer, completeness check, accepted limit, budget owner; support in Service Management. | DR-2026-031 |

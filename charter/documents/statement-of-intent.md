@@ -2,7 +2,7 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 1.3
+revision: 1.4
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -234,7 +234,7 @@ by Entity. The AI Platform is provided and operated outside AICC. AICC states th
 it.
 
 10.4. **Funding.** Investment shall be allocated to Strategic Priorities and to the capacity of teams by means of
-Investment Envelopes. Investment Guardrails shall determine which Initiatives require an Initiative Brief and approval by the Executive
+Investment Envelopes. Investment Guardrails shall determine which Initiatives require the approval of the Executive
 Sponsor.
 
 10.5. **Providers.** Providers of AI models and services shall be subject to due diligence, contractual terms, ongoing
@@ -247,7 +247,7 @@ work made visible and limited in progress.
 
 11.1. The Bank and the Group advance the adoption of AI through five Maturity Levels. A Maturity Level is reached for a
 Strategic Priority when its Measures are met. Each Strategic Priority advances at its own pace. The timing and scope of
-advancement are set in the roadmap of the Portfolio and are not stated in this Statement. The Maturity Levels are as follows.
+advancement are set by the Executive Sponsor in the Priorities and are not stated in this Statement. The Maturity Levels are as follows.
 
 | Maturity Level | Name | Capability | Use of AI |
 | --- | --- | --- | --- |
@@ -289,7 +289,7 @@ advancement are set in the roadmap of the Portfolio and are not stated in this S
 Level 1.
 
 12.2. AICC shall report progress, benefits, and risks to the AI Steering Committee each quarter, and to the Board
-Committee at regular intervals.
+Committee each quarter.
 
 12.3. Benefits shall be reported against the Investment Envelope of each Strategic Priority.
 
@@ -325,3 +325,4 @@ listed in the Appointments Record.
 | 1.1 | 2026-09-30 | Acceptance fixes: appetite approval, communication, participation of Entities. | DR-2026-015 |
 | 1.2 | 2026-10-01 | Activated by the AICC Lead; takes effect on this date. | DR-2026-018 |
 | 1.3 | 2026-10-01 | Solution replaces Use Case. | DR-2026-024 |
+| 1.4 | 2026-10-01 | Guardrails decide the approval of the Executive Sponsor; the timing of the Maturity Levels is in the Priorities; the Board Committee report is quarterly. | DR-2026-031 |

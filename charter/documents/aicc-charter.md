@@ -2,7 +2,7 @@
 id: AICC-MND-02-EN
 title: AICC Charter
 status: active
-revision: 1.4
+revision: 1.5
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -16,9 +16,8 @@ offers and reports.
 
 ## 2. Mission
 
-2.1. The mission of AICC is to enable the Bank and the Group to adopt AI as a governed capability that delivers measured value,
-by providing a governance framework, a program office, and a capability to build and run Solutions with the Domains, and by
-working as an internal consulting unit.
+2.1. The mission of AICC is to enable the Bank and the Group to adopt AI as a governed capability that delivers measured value.
+The Business Model states what AICC is and how it works.
 
 ## 3. Authority and limits
 
@@ -38,7 +37,7 @@ recorded in the Decision Log. It states the Entities, the data, the legal basis,
 
 4.1. The Executive Sponsor shall set each year an Investment Envelope for each Strategic Priority and Investment Guardrails. Funding
 goes to Strategic Priorities and to the capacity of teams. The Domain Owners fund the Solutions of their Domains from the
-Envelope, within the Guardrails.
+Envelope, within the Guardrails. The Executive Sponsor owns the budget of AICC itself.
 
 4.2. The Investment Guardrails shall state the amount that may be committed without the Executive Sponsor, and the Initiatives that
 need the approval of the Executive Sponsor. Every Initiative has an Initiative Brief. The Priorities Record points to them, and the figures are kept in the financial planning of the Bank. Until they are set, the Executive Sponsor approves any commitment.
@@ -63,7 +62,7 @@ at the next IT Planning, or sooner for a blocker.
 
 ## 7. What AICC measures and reports
 
-7.1. AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, and the share of PI Objectives achieved,
+7.1. AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, and the value scored for the PI Objectives,
 the number of Domains and employees using approved Solutions, and the number of AI Incidents and control breaches. The Measures
 of the Maturity Levels are in the Statement of Intent, and their targets are set by the Executive Sponsor each year.
 
@@ -91,3 +90,4 @@ assurance.
 | 1.2 | 2026-10-01 | Event names corrected; every Initiative has a brief, and the guardrail decides the Executive Sponsor approval. | DR-2026-025 |
 | 1.3 | 2026-10-01 | What AICC offers moves to the Business Model; AICC works as an internal consulting unit. | DR-2026-026 |
 | 1.4 | 2026-10-01 | The mandate and its decision reference are entered in the Appointments Record. | DR-2026-027 |
+| 1.5 | 2026-10-01 | The mission points to the Business Model; the Executive Sponsor owns the budget of AICC; measures aligned. | DR-2026-031 |

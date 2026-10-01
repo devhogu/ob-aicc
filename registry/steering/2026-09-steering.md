@@ -3,7 +3,7 @@
 | Field | Entry |
 | --- | --- |
 | Meeting | Steering |
-| Date | September 2026 (exact date to be entered) |
+| Date | September 2026 (reconstructed; the exact date was not recorded) |
 | Present | Executive Sponsor (Simen Munter), AICC Lead (Timur Alimbayev) |
 
 ## Decisions

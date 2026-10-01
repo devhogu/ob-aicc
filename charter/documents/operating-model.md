@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 7.2
+revision: 8.0
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -22,13 +22,12 @@ cadence. They state no rule of their own, and this Operating Model prevails.
 
 ## 2. What AICC is
 
-2.1. AICC is a small team of engineers that provides the governance framework and the program office for the adoption of
-AI in the Bank and the Group, and builds Solutions with the Domains.
+2.1. The Business Model states what AICC is. In this Operating Model AICC is a small team of engineers who work with the Domains.
 
 2.2. AICC does not own the AI Platform, the Solutions, or the business results of the Domains. The Domains execute. AICC
 directs, guides, and may supply AICC Engineers to build and run Solutions.
 
-2.3. AICC is a first-line function. The Control Functions are independent of it. Each Entity keeps its own regulator,
+2.3. AICC is not a Control Function. The Control Functions are independent of it. Each Entity keeps its own regulator,
 accountability, Control Functions, and data.
 
 ## 3. Principles of work
@@ -169,11 +168,11 @@ source of the moves.
 
 | From | To | When |
 | --- | --- | --- |
-| Proposed | Discovery | The keeper of the backlog of its level takes it in: the AICC Lead for Initiatives, Solutions, and Epics, and for Features at refinement |
+| Proposed | Discovery | The AICC Lead takes it in: Initiatives, Solutions, and Epics, and Features at refinement |
 | Proposed | Rejected, or Deferred | It is decided against at triage, or put on hold |
 | Discovery | Approved | The conditions of its level in section 6.5 are met, and its approver decides |
 | Discovery | Waiting, Deferred, Rejected, Pivoted, or Cancelled | A Dependency blocks it; it is put on hold; it is decided against; it is rerouted into a new item; or it is no longer needed |
-| Approved | Active | The Team pulls it, when there is capacity and its Dependencies are known |
+| Approved | Active | The Team pulls it, when there is capacity and its Dependencies are known. An Initiative or a Solution becomes active when its first Epic or Feature is pulled |
 | Approved | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
 | Active | Completed | The work is finished |
 | Active | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
@@ -196,7 +195,7 @@ of the level, or in the Portfolio for a Solution.
 
 | Level | Discovery Stages | Approved by, and conditions | Active Stages | To be completed |
 | --- | --- | --- | --- | --- |
-| Initiative | Scoping, Business case | The Domain Owner, and the Executive Sponsor above a guardrail. The scope is agreed, and the business case in the Initiative Brief is approved | Implementation | Its Solutions are delivered, and its outcome is reviewed |
+| Initiative | Scoping, Business case | The Domain Owner, or the Executive Sponsor for an Initiative that spans Domains, and the Executive Sponsor above a guardrail. Until the Guardrails are set, the Executive Sponsor approves any commitment. The scope is agreed, and the business case in the Initiative Brief is approved | Implementation | Its Solutions are delivered, and its outcome is reviewed |
 | Solution | Definition | The Domain Owner approves the Solution Definition, with its type, Receiver, scope, capabilities, architecture, and data classes. The Risk Tier is assigned by the AICC Lead and told to the Domain Owner; the AI Registry entry is made; for Risk Tier 2 and 3, the Control Function Contact of compliance confirms the applicable law; an Experiment has its time-box and a Service its run cost and sunset | Delivery, then the Stages of its type in section 6.7 | It is delivered, as section 6.7 states |
 | Epic | Analysis: define the capability and break it into Features | The AICC Lead, with the Domain Owner consulted. Its Features are defined and ranked in the Program Backlog | Implementation | Its Features are closed |
 | Feature | Explore, Design | The Team, at IT Planning. Its acceptance criteria are stated, and its Dependencies are known, with any open one named | Develop, Verify, Deploy | It is deployed |
@@ -224,7 +223,8 @@ The phases of an Engagement map to the items as follows: the study is the discov
 or the first Features of the Solution, delivery is the active state of the Epics and Features, and support is the life of the Solution
 after delivery.
 
-6.8. AICC oversees and reports on the Adopted Solutions that others deliver, in the Portfolio. An Adopted Solution is recorded when others
+6.8. AICC oversees and reports on the Adopted Solutions that others deliver, in the Portfolio, as a Solution Definition marked as an Adopted
+Solution with its Receiver as owner. It is recorded when others
 begin to deliver a Solution that AICC proposed or oversees. It uses the states Proposed, Approved, Active, Closed, Rejected, and
 Cancelled, and records the Risk Tier when it is known. The owners and the Executive Sponsor decide on a Proposal of a Solution, and the
 Bank decides on a Proposal of the AI adoption strategy. The AI adoption strategy is a series of Proposals that AICC shapes from what it
@@ -250,37 +250,33 @@ PI Review. Evidence is taken from the records of the AI Platform.
 7.1. Work runs in Program Increments. A Program Increment is one quarter, made of three Iterations. An Iteration is one calendar
 month of four or five whole weeks. The last week of the third Iteration of a Program Increment is the IP week.
 The Calendar Record states the dates and the blocked and gray days, and the Cadence Record states the general flow of the events by
-week, without dates, which is the template for the dated calendar of events. The events of each loop are in the following table, each with its intent. A Team of one holds them short and records them
+week, without dates, which is the template for the dated calendar of events. The events of each loop are listed below. A Team of one holds them short and records them
 in the IT Backlog or the Steering Summary.
 
-| Loop | Event | Intent |
-| --- | --- | --- |
-| Day | Daily Stand-up | Share progress, and clear blockers |
-| Week | Weekly Planning | Set the focus of the week from the IT Backlog, and check the Dependencies |
-| Week | Weekly Review | Keep control of the flow: review the Program Kanban and the Dependency Map, reorder the Program Backlog, and note what changed |
-| Iteration | Backlog Refinement | Keep the next items of the backlogs ready |
-| Iteration | IT Planning | Select the Features for the month from the Program Backlog into the IT Backlog, for the Iteration goal |
-| Iteration | IT Review and Demo | Show working Solutions to the Domain Owners and Domain Experts, and take acceptance and feedback |
-| Iteration | IT Retrospective | Improve the way of working |
-| Iteration | Steering, monthly | Review progress, risks, and blockers, and take the Decisions of the Executive Sponsor, in the review week |
-| Program Increment | PI Review and Demo | Show what the Program Increment delivered, score the value achieved against the PI Objectives, review the risks (the quarterly risk check), and produce the Quarterly Report |
-| Program Increment | Inspect and Adapt | Review the results and the flow, solve the main problems, and put improvements in the Program Backlog |
-| Program Increment | PI Planning | Set the intent and direction, the Roadmap, and the Dependencies for the next Program Increment |
-| Program Increment | Innovation | Time to learn, explore, and recover |
-| Program Increment | Steering, quarterly | Assess the results of the past quarter, confirm priorities and funding, and confirm the Maturity Level reached |
+The events are the Daily Stand-up, the Weekly Planning, the Weekly Review, the Backlog Refinement, the IT Planning, the IT Review and
+Demo, the IT Retrospective, the monthly Steering, the PI Review and Demo, Inspect and Adapt, the PI Planning, the Innovation, and the
+quarterly Steering. The Cadence states the intent, the inputs, and the outputs of each.
 
 7.2. A meeting runs with those who are named. While the AI Steering Committee is not formed, the Executive Sponsor decides alone.
 A record of an event is kept only for the Decisions and the actions, in the Steering Summary for a Steering, and otherwise in the work items and the Decision Log.
 
-7.3. The first quarterly Steering of the year also sets the Strategic Priorities, the Investment Envelopes, the Investment
-Guardrails, and the Roadmap, and reviews the Statement of Intent, the AICC Charter, this Operating Model, the AI Policy, and the AI
+7.3. The PI Planning proposes the Roadmap, and the quarterly Steering confirms it. The first quarterly Steering of the year also sets the
+Strategic Priorities, the Investment Envelopes, and the Investment Guardrails, considers the yearly Proposal of the AI adoption strategy,
+and reviews the Statement of Intent, the AICC Charter, this Operating Model, the AI Policy, and the AI
 Risk Appetite Statement. The Executive Sponsor calls an extra review on a material change in the use of AI, in a principal
 provider, or in regulation, or after an audit or supervisory finding.
 
 7.4. The Executive Sponsor may take a time-critical Decision between meetings after asking the heads of the risk and compliance
 functions and recording the answers.
 
-7.5. While the Team has up to three people, AICC runs in light mode. The Weekly Planning and the Weekly Review are one session. The IT
+7.5. An event that falls on a blocked or gray day moves to the working day before it, and never after. An event that is missed is not held
+later, and its intent is covered at the next event. The Weekly Review may be held in writing.
+
+7.6. The AI Steering Committee is the heads of the business, technology, risk, and compliance functions, who are named in the Assignment
+Map. Its advice, and any dissent, is recorded in the Steering Summary. A head may be represented by a named deputy. If no head of a function
+attends, the Executive Sponsor may still decide, and the Steering Summary records the absence.
+
+7.7. While the Team has up to three people, AICC runs in light mode. The Weekly Planning and the Weekly Review are one session. The IT
 Retrospective and the monthly Steering are held in the IT Review and Demo, and Inspect and Adapt is held in the PI Review and Demo. The
 Daily Stand-up, the Backlog Refinement, and the Innovation are optional. In light mode Waiting is a flag, Completed is skipped, Accepted and
 Closed are one step with the acceptance recorded, Pivoted is recorded as Cancelled with a link to the new item, Stages are used for
@@ -347,6 +343,9 @@ and it leaves an evidence record. The table lists the controls that an auditor c
 | An Exception | AI Policy 6 | The Control Function concerned | When requested | Control Sign-Off; Risks and Issues | Control Sign-Off |
 | Output published to the Board or investors | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record |
 | Separation of duties and independence | 4.4 | Everyone; checked in the review of the documents | Always | Appointments | Assignment Map |
+| Capacity ceiling and intake of Engagements | Business Model 7.1, 7.2 | AICC Lead | When a Service Agreement is issued | Service Agreement; Portfolio Backlog | Service Agreement |
+| Completeness of the Outcome Reports, and the sample of the Decisions of the AICC Lead | Business Model 7.4, 7.5 | Executive Sponsor | Quarterly, and monthly for the sample | Steering Summary | Steering Summary |
+| Confirmation of the benefit | Business Model 7.3 | Domain Owner | At the Outcome Report | Outcome Report | Outcome Report |
 | Access of internal audit | 9.5 | AICC Lead | Always | The Registry | Not needed |
 
 ## Change log
@@ -378,3 +377,4 @@ and it leaves an evidence record. The table lists the controls that an auditor c
 | 7.0 | 2026-10-01 | The evidence model: working state, living records, and evidence records; the cutover Decision; integrity and retention; the Controls section; light mode. | DR-2026-028 |
 | 7.1 | 2026-10-01 | The Templates of the controls exist; the Steering Summary replaces Notes. | DR-2026-029 |
 | 7.2 | 2026-10-01 | The collaboration tooling is listed in the charter; the Registry is promoted to the corporate share. | DR-2026-030 |
+| 8.0 | 2026-10-01 | The events listed with the Cadence holding their intent; moves of events; terms of the AI Steering Committee; the Initiative that spans Domains; active for Initiatives and Solutions; the Adopted Solution record; commercial controls. | DR-2026-031 |

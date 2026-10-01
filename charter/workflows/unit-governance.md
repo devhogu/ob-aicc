@@ -90,21 +90,11 @@ quarterly ones on the results, the monthly ones on the review, and the event-dri
 
 ## 6. Separation and independence
 
-| Who | May not |
-| --- | --- |
-| Anyone | Validate or check work they built |
-| The owner of a Solution | Validate it |
-| The AICC Lead | Validate a Solution within the remit of a Control Function |
-| A Control Function Contact | Be a member of AICC, or build what the Contact reviews |
-| Internal audit | Validate, release, or stop; it gives assurance only |
-| The Executive Sponsor | Set aside a validation or a stop |
+The rules of separation and independence are in the Operating Model 4.4.
 
 ## 7. The life of a document
 
-Documents are changed like software. A change that alters the meaning is a new draft revision that does not replace the active text
-until it is activated, and every activation is entered in the Decision Log.
-
-Figure 4 shows the life of a document.
+The Document Catalog 3 and 4 state the life of a document. Figure 4 shows it.
 
 ```mermaid
 stateDiagram-v2

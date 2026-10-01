@@ -171,19 +171,8 @@ This is the mission side of the lab.
 
 ## 8. Decisions along the stream
 
-| Decision | Decided by | Rule |
-| --- | --- | --- |
-| Take an item into discovery | The keeper of the backlog; the AICC Lead for the Portfolio Backlog | Operating Model 6.4 |
-| Assign the Risk Tier | AICC Lead; a Control Function Contact may raise it | AI Policy 3.2 |
-| Approve the business case | Domain Owner; Executive Sponsor above a guardrail | AICC Charter 4.2 |
-| Approve the Solution Definition | Domain Owner | Operating Model 6.5 |
-| Approve the use of a Solution for a data class | Domain Owner | AI Policy 2.1 |
-| Validate before the first deployment of Risk Tier 2 or 3 | Control Function Contacts | AI Policy 3.3 |
-| Release | Domain Owner; Executive Sponsor for Risk Tier 3 | Operating Model 6.6 |
-| Accept a deliverable | Product owner | Operating Model 6.9 |
-| Adopt at scale | The owners and the Executive Sponsor, on the Proposal of AICC; the Bank for the AI adoption strategy | Operating Model 6.8 |
-| Defer, reject, cancel, or pivot | The person who approves the item at its level | Operating Model 6.4 |
-| Retire | Domain Owner; Executive Sponsor for an Initiative | Operating Model 4.2 |
+Who decides what along the stream is in the Operating Model 4.2, 5.3, and 6.4 to 6.9, and in the AI Policy 2 and 3. This workflow states no
+decider of its own.
 
 ## 9. Where it runs
 

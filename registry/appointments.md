@@ -22,7 +22,7 @@ The Holders of the Roles, with the date of appointment. A closed appointment is 
 
 | Role | Holder | Domain | Appointed by | Deputy | From | To |
 | --- | --- | --- | --- | --- | --- | --- |
-| Domain Owner | Ademi Moldogazieva, head of FP&A function | FP&A | Head of the FP&A function, by position; goal confirmed by the Executive Sponsor | | | |
+| Domain Owner | Ademi Moldogazieva, head of FP&A function | FP&A | Executive Sponsor, by the confirmation of INI-004 | | | |
 | Domain Owner | | | | | | |
 | Domain Expert | | | | | | |
 
