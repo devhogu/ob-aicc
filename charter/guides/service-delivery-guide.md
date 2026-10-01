@@ -3,7 +3,7 @@
 ## 1. Purpose and when it applies
 
 This guide explains how an item moves through AICC, from a business need to a retired Solution, and who decides on the way. It applies to every
-Initiative and everything beneath it. It explains the governance of the flow: the levels, the states, the gates, and the records. The live guidance
+Initiative and everything beneath it. It explains the governance of the flow: the levels, the states, the Stages, and the records. The live guidance
 on how a Team plans and builds, which changes with the work, is kept in Confluence and in the portfolio management set, and is not part of the charter.
 
 ## 2. The levels and who owns them
@@ -23,15 +23,15 @@ is worked, and goes through Review to Accepted and Closed. Waiting, Deferred, Pi
 who approves an item at its level also defers, rejects, cancels, or pivots it. While the Team has up to three people, light mode uses a smaller
 set of states, with Waiting as a flag and Accepted and Closed as one step.
 
-## 4. The gates, and who decides at each
+## 4. The decisions along the stream, and who takes each
 
-| Gate | Decided by | When | Record |
+| Decision | Decided by | When | Record |
 | --- | --- | --- | --- |
 | Taking an item in | AICC Lead | Proposed to Discovery | Portfolio Backlog |
 | Business case | Domain Owner; the Executive Sponsor above a guardrail or across Domains | End of the discovery of an Initiative | Initiative Brief; Decision Record |
 | Solution Definition and Risk Tier | Domain Owner approves; the AICC Lead assigns the Risk Tier and tells the Domain Owner | When the Solution is defined | Solution Definition |
 | Use of a Solution for a data class | Domain Owner | Before use | AI Registry |
-| Check or validation | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment to real users or data | Control Sign-Off |
+| Check or validation | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment to real users or data | The AI Registry entry for the check; the Control Sign-Off for the validation |
 | Release | Domain Owner; the Executive Sponsor for Risk Tier 3 | Before use beyond the first users | Solution Definition; Decision Record |
 | Acceptance | The product owner | At the IT Review and Demo | Outcome Report, or the Registry Snapshot |
 
@@ -57,7 +57,7 @@ and reports on the Adopted Solutions that others deliver.
 | Question | Answer |
 | --- | --- |
 | Who approved this Solution, and on what basis? | The Solution Definition and the Decision Record |
-| Was it checked before it reached users? | The Control Sign-Off |
+| Was it checked before it reached users? | The AI Registry entry for a Risk Tier 1 check; the Control Sign-Off for a validation |
 | Who released it, and when? | The release block of the Solution Definition |
 | How does AICC know what is live and what is closed? | The Registry Snapshot at each IT and PI close |
 

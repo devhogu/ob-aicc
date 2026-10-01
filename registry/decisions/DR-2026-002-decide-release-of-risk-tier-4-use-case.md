@@ -1,5 +1,7 @@
 # Decision Record: DR-2026-002 Decide the release of a Risk Tier 4 Use Case
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 ## 1. Header
 
 | Field | Entry |

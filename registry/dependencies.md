@@ -11,7 +11,7 @@ reviewed in the Weekly Review. Status of a Dependency: Open, Met, or At risk.
 | DEP-001 | INI-002 Service landscape | Time and knowledge of the function heads and service owners; their existing artifacts | The functions | each month, as the functions are visited | Open |
 | DEP-002 | INI-002 Service landscape | Access to and classification of the EA repository and the portal | Information security (RI-018) | before publication | Open |
 | DEP-003 | INI-003 Daily work of functions | The ranked candidates for adoption | INI-002 | when the function is engaged | Open |
-| DEP-004 | INI-003, INI-004, INI-006, INI-007, INI-008 | Named Domain Owners and Domain Experts | Executive Sponsor and the heads of function (RI-016) | before the item is selected into an Iteration | Open |
+| DEP-004 | INI-003, INI-004, INI-006, INI-007, INI-008 | Named Domain Owners and Domain Experts | Executive Sponsor and the heads of function (RI-016) | before the item is selected into an Iteration | At risk |
 | DEP-005 | INI-003 Daily work of functions | Approval of the data classes for the function | The Domain Owner of each function | before first use | Open |
 | DEP-006 | INI-004 FP&A Board reporting | The time of the FP&A analytics function; the financial data sources; the Board portal | FP&A | each monthly edition | Open |
 | DEP-007 | INI-004 FP&A Board reporting | The approval of each edition | Executive Sponsor (DR-2026-014) | each issue | Open |
@@ -21,7 +21,7 @@ reviewed in the Weekly Review. Status of a Dependency: Open, Met, or At risk.
 | DEP-011 | INI-007 Retail credit | Access to mortgage rejection data and its data class; the controls | Retail credit; data protection; model risk (RI-014) | before any analysis | Open |
 | DEP-012 | INI-008 Knowledge bases | The list of functions and the knowledge they hold | INI-002 | when the first base is chosen | Open |
 | DEP-013 | INI-008 Knowledge bases | Source documents with an owner and a review date | The function that owns each base | for each base | Open |
-| DEP-014 | Any Risk Tier 2 or 3 Solution | Validation by the Control Function Contacts | Control Functions (RI-008, RI-014) | before the first deployment | Open |
+| DEP-014 | Any Risk Tier 2 or 3 Solution | Validation by the Control Function Contacts | Control Functions (RI-008, RI-014) | before the first deployment | At risk |
 
 ## 2. Scope of each item by month
 

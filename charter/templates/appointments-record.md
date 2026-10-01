@@ -1,17 +1,18 @@
 ```yaml
 id: AICC-TPL-09-EN
-title: Assignment Map
+title: Appointments Record
 status: active
-revision: 1.0
+revision: 1.2
 created: 2026-10-01
 revised: 2026-10-01
 ```
 
-# Assignment Map
+# Appointments Record
 
-**Template.** The mapping of the Roles and responsibilities of the charter to real people, with the log of appointments. It is the only record
-that names people, and the charter names Roles only. Part C is append-only. Parts A and B derive from it. Each change makes a new dated copy in
-the Registry. It holds the names and posts of the Holders and no other personal data.
+**Template.** The mapping of the Roles and responsibilities of the charter to real people, with the log of appointments. It is the living record
+that names the Holders, and the charter names Roles only. Part C is append-only. Parts A and B derive from it. The Registry Snapshot at each IT close keeps a dated
+extract. It holds the names and posts of the Holders, and their declarations, consents, and access, and no other personal data. Other records may name a person as the owner of an item, but the Holder of a Role is
+entered here.
 
 ## Part A. The map
 
@@ -19,10 +20,16 @@ the Registry. It holds the names and posts of the Holders and no other personal 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  | [Appointed / Acting / Relieved] |  |  |  | DR-[yyyy]-[nnn] |
 
+The Participating Entities, and the heads and the Contacts named below the Roles, are listed in the same way, each with a Status and a Decision Record.
+
+| Participating Entity | Joined by decision | Domain Owner of the Entity | From | To |
+| --- | --- | --- | --- | --- |
+|  | DR-[yyyy]-[nnn] |  |  |  |
+
 ## Part B. The responsibilities
 
 The RACI of the charter by activity, with one accountable Role for each activity, is in the charter. The Holders in Part A resolve each Role
-to a person. A Role combination that the rules of separation forbid is listed here as an accepted limit, with its compensating control.
+to a person. A Role combination that the rules of separation forbid is listed here as an accepted limit, with its compensating control. The capacity available per IT is in the Teams Record.
 
 ## Part C. The appointment log
 
@@ -39,6 +46,10 @@ to a person. A Role combination that the rules of separation forbid is listed he
 ## Part E. Tools and access
 
 | Role | Jira, Confluence, and Service Management group | Repository permission | Last access review (date and reviewer) |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
+| Tool | Keeper (Role and name) | From | To |
 | --- | --- | --- | --- |
 |  |  |  |  |
 

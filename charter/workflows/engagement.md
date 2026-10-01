@@ -12,7 +12,7 @@ rule of its own.
 
 ## 2. The engagement lifecycle
 
-An Engagement passes through five steps. Each step ends in a decision or a record, and the function is kept informed throughout.
+An Engagement passes through six steps. Each step ends in a decision or a record, and the function is kept informed throughout.
 
 Figure 1 shows the lifecycle. The Service Agreement is issued at the contact and the study, and amended at the approval.
 
@@ -72,7 +72,7 @@ Bank decides.
 
 ## 6. Where it runs
 
-From the cutover of the Operating Model 9, the Engagement runs in Jira and Confluence: the Initiative and its Epics and Features in Jira, the
+From the cutover of the working state (Operating Model 9.1), the Engagement runs in Jira and Confluence: the Initiative and its Epics and Features in Jira, the
 Service Agreement and the Outcome Report drafted in Confluence, and requests and support taken in Service Management. Until then the Registry
 holds the working state. The charter holds this schema. The Registry always holds the Service Agreement as issued, the Outcome Report as
 accepted, and the Initiative package, as real documents for audit and for sharing.

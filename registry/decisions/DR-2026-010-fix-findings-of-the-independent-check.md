@@ -1,5 +1,7 @@
 # DR-2026-010 Fix the findings of the independent check
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-09-30. Decided by the AICC Lead. Basis: the independent checks in portfolio/assessments/2026-09-30-3/ (consistency and coverage).
 
 ## Decisions

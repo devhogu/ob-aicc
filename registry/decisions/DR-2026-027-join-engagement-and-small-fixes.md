@@ -1,5 +1,7 @@
 # DR-2026-027 Join the Engagement to the Operating Model, and the small fixes of the shape review
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead, after the shape review (registry/assessments/2026-10-01-3). All thirteen states are kept.
 
 ## Decision

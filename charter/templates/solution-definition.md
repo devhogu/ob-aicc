@@ -2,14 +2,14 @@
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 2.2
+revision: 2.3
 created: 2026-09-30
 revised: 2026-10-01
 ```
 
 # Solution Definition
 
-**Template.** Copy for each Solution when it is defined. The AICC Lead and the Domain Expert complete it, and the Domain Owner accepts it. It
+**Template.** Copy for each Solution when it is defined. The AICC Lead and the Domain Expert complete it, and the Domain Owner approves it. It
 describes the Solution: its scope, methods, and architecture. It carries no figures of the Bank, no data, and no code. Keep it to one page.
 
 | Field | Entry |
@@ -49,11 +49,15 @@ where that applies.]
 
 [The criteria for the acceptance of the Solution. The benefit and the outcome targets are in the Initiative Brief.]
 
-## 6. Life after delivery
+## 6. Check or validation, and release
+
+[The check of a Risk Tier 1 Solution, with the Checker and the date, noted in the AI Registry; or the Control Sign-Off of the validation, by reference. The AI Registry entry, by reference. The release beyond the first users: the decision, who decided, and the date.]
+
+## 7. Life after delivery
 
 [For a Service: the run cost source and the sunset rule. For a Product: the consumer and the version. For an Experiment: the time-box in
 ITs, and the receiver of the proposal.]
 
-## 7. Scores and next step
+## 8. Scores and next step
 
 [Value, urgency, risk reduction or opportunity, and effort, each 1 to 5. The next step, who, and when.]

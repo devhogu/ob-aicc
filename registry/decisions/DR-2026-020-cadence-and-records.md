@@ -1,4 +1,6 @@
-# DR-2026-020 Agile cadence and Records aligned with SAFe and Kanban
+# DR-2026-020 Cadence and Records aligned with SAFe and Kanban
+
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
 
 Date: 2026-10-01. Decided by the AICC Lead, on the direction to structure the flow, cadence, calendar, backlogs, roadmap, dependency map, and dashboard as the Scaled Agile Framework and Kanban would. Only the scaffolding and the intent of the events are in place now, not the process of the Iteration or Program level.
 

@@ -1,5 +1,7 @@
 # Decision Record: DR-2026-006 Set the core set of documents and the Forums active at Maturity Level 1
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 ## 1. Header
 
 | Field | Entry |

@@ -1,5 +1,7 @@
 # DR-2026-031 The commercial controls and the remaining findings
 
+*In its own short form, not the Decision Record Template.*
+
 Date: 2026-10-01. Decided by the AICC Lead, after the re-evaluation of the charter and the shape review.
 
 ## Decision

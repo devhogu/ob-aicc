@@ -17,7 +17,7 @@ Snapshot.
 | Kanban boards | [board.md](board.md) | The Portfolio Kanban and the Program Kanban, by state, with lanes and Limits on Work in Progress |
 | Roadmap | [roadmap.md](roadmap.md) | The three-month Roadmap by Program Increment, and the Milestones |
 | Calendar | [calendar.md](calendar.md) | Program Increments, Iterations, weeks, and the blocked and gray days |
-| Teams | [teams.md](teams.md) | The Teams, members, and capacity |
+| Teams | [teams.md](teams.md) | The Teams, members, capacity, and the Hats |
 | Program Increment | [pi/](pi/2026-PIQ4/objectives.md) | For each: PI Objectives, monthly Iterations with their IT Backlogs and Weekly Review notes, and the IP week |
 | Dependency Map | [dependencies.md](dependencies.md) | Dependencies of each item, and its scope by month |
 | Dashboard | [dashboard.md](dashboard.md) | The state of the Program Increment, flow, Dependencies, risks, and Measures |
@@ -32,7 +32,7 @@ Current by nature, and always kept here.
 | Standards | [standards.md](standards.md) | Architecture standards and Platform requirements |
 | Risks and Issues | [risks-and-issues.md](risks-and-issues.md) | Risks, issues, AI Incidents, Exceptions, Findings |
 | AI Registry | [ai-registry.md](ai-registry.md) | Each Solution, model, and agent |
-| Appointments | [appointments.md](appointments.md) | Holders of the Roles, with the decision reference, and the delegations of the Executive Sponsor |
+| Appointments | [appointments.md](appointments.md) | The Appointments Record: the map of the Roles to the Holders, the appointment log, the declarations, the access, and the delegations of the Executive Sponsor |
 
 ## Evidence records
 
@@ -44,9 +44,15 @@ Closed and dated extracts, always kept here. The Operating Model 10 lists the co
 | Initiatives | [initiatives/](initiatives/) | One folder for each: `INI-001-short-title/` with its brief, Service Agreements, Outcome Reports, Epics, and Features |
 | Reports | [reports/](reports/) | Quarterly Reports, named `2026-PIQ4.md` |
 | Steering | [steering/](steering/) | The Steering Summaries |
-| Proposals | proposals/ | The Proposals to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy. Created with the first one |
+| Proposals | `proposals/` | The Proposals to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy. Created with the first one |
+| Control Sign-Offs | `sign-offs/` | The decisions of the Control Function Contacts, named `SGN-001.md`. Created with the first one |
+| AI Incident Reviews | `incident-reviews/` | The review of each AI Incident, named `AIR-001.md`. Created with the first one |
+| Registry Snapshots | `snapshots/` | The closed extract at the close of each IT and PI, named `SNP-2026-PIQ4-IT10.md`. The first is due at the close of IT10 |
+| Appointments | [appointments.md](appointments.md) | The Part C log of the Appointments Record is the evidence of every appointment, change, and relief |
 | Assessments | [assessments/](assessments/) | Earlier checks of the documents, kept for history |
 
-Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfolio), EP-nnn Epic, FT-nnn Feature, DEP-nnn Dependency, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards, AGR-nnn Service Agreement, OUT-nnn Outcome Report.
+Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfolio), EP-nnn Epic, FT-nnn Feature, DEP-nnn Dependency, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards, AGR-nnn Service Agreement, OUT-nnn Outcome Report, SGN-nnn Control Sign-Off, AIR-nnn AI Incident Review, SNP-yyyy-PIQn-ITnn Registry Snapshot, PRP-nnn Proposal, AP-nnn appointment entry. A Service Agreement and an Outcome Report are files in the folder of their Initiative, named `AGR-001.md` and `OUT-001.md`.
+
+The Registry holds the nil statements that an auditor needs. The Risks and Issues states the AI Incidents and Exceptions to date, and the AI Registry states the uses listed to date.
 
 The Solutions that AICC defines and tries are in the Portfolio (`portfolio/`), and the cadence is in the charter workflows. Earlier versions of the Records are in `wiki/archive/records-v1/`.

@@ -15,9 +15,13 @@ Engagement, from a short study to a Service that AICC runs.
 | AICC Lead | Takes the need in, writes the business case with the Domain Owner, issues the Service Agreement, and writes the Outcome Report |
 | AICC Engineer | Builds and runs the Solution with the Domain Expert |
 | Executive Sponsor | Is the client of enabling work, and approves what exceeds a guardrail or spans Domains |
-| Stakeholders and business owners | Are notified, and commit to nothing |
+| Stakeholders and other heads of function | Are notified, and commit to nothing |
 
-## 3. How an Engagement runs
+## 3. How a function starts
+
+A head of function brings a need to the AICC Lead, in any form: a conversation, a message, or a ticket in Service Management. The AICC Lead is named in the Appointments Record. [ The channel of the request in Service Management and the short form to bring: the problem, who does the work today, and the outcome wanted, entered when Service Management is joined ] The AICC Lead enters the need in the Portfolio Backlog and takes it in when it fits a Strategic Priority, has a client function with a Domain Owner, and fits the capacity (Business Model 7.2). Otherwise it is deferred or rejected. What waits until a Control Function Contact is named is in the AI Policy 7.
+
+## 4. How an Engagement runs
 
 | Step | What happens | Who | When | What is left on record |
 | --- | --- | --- | --- | --- |
@@ -29,7 +33,7 @@ Engagement, from a short study to a Service that AICC runs.
 | Support | The Solution is supported at the agreed level | AICC Engineer | After delivery | Service Management records, and the AI Incident Review |
 | Follow-on | A new need, or the end | The Domain Owner and the AICC Lead | At each IT check-in | A new entry, or the close |
 
-## 4. The commitment in practice
+## 5. The commitment in practice
 
 The Service Agreement has two parts. The commitment states the phases, the support level, the scope and what is out of scope, the deliverables
 and their definition of done, the capacity per IT in days, the Assumptions, the check-in, and the end. The working agreement states who works on
@@ -37,7 +41,7 @@ it and when, how AICC and the function communicate and decide, who is notified, 
 is reported. AICC commits to the capacity and the outcome, and the function commits to nothing. What AICC relies on from the function is written
 as an Assumption.
 
-## 5. Situations
+## 6. Situations
 
 | Situation | What happens |
 | --- | --- |
@@ -47,7 +51,7 @@ as an Assumption.
 | The capacity is full | A new Service Agreement is not issued above the capacity; the item waits in the Portfolio Backlog |
 | A request or an incident arrives after delivery | It comes through Service Management; the response targets are targets and not guarantees |
 
-## 6. What an auditor or HR will ask, and the record that answers
+## 7. What an auditor or HR will ask, and the record that answers
 
 | Question | Answer |
 | --- | --- |
@@ -56,6 +60,6 @@ as an Assumption.
 | Did AICC take on more than it could deliver? | The capacity check in the Steering Summary of the quarter |
 | What did it cost and what was the benefit? | References in the Outcome Report and the Quarterly Report; the figures are in the systems of the Bank |
 
-## 7. Rule source
+## 8. Rule source
 
 Business Model 2 to 7; Operating Model 6.1, 6.7, 6.9, 8.1; AI Policy 5; the Engagement workflow.

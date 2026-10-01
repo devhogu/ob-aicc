@@ -1,5 +1,7 @@
 # DR-2026-009 Simplify the operating model
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-09-30. Decided by the AICC Lead, on the instruction that AICC is a few engineers who work in an agile way and that decisions are distributed, light, and based on facts.
 
 ## Context

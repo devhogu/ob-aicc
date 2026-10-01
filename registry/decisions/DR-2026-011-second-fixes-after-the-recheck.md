@@ -1,5 +1,7 @@
 # DR-2026-011 Second fixes after the re-check
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-09-30. Decided by the AICC Lead. Basis: portfolio/assessments/2026-09-30-4/recheck-report.md.
 
 ## Decisions

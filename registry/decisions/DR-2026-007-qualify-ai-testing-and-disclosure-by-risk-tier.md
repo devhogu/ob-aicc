@@ -1,5 +1,7 @@
 # Decision Record: DR-2026-007 Qualify the bias testing and disclosure commitments by Risk Tier
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 ## 1. Header
 
 | Field | Entry |

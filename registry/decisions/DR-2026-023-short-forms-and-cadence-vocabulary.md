@@ -1,5 +1,7 @@
 # DR-2026-023 Short forms in the cadence
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead. The cadence uses the short forms PI (Program Increment), IT (Iteration), and IP (Innovation and Planning), so that the flow is easy to read and to track through the year.
 
 ## Decision

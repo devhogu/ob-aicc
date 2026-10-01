@@ -46,7 +46,7 @@ Source: roadmap.md.
 
 | Milestones | Done | Due in this Program Increment | At risk |
 | --- | --- | --- | --- |
-| 14 | 1 | 8 | 0 |
+| 14 | 1 | 9 | 0 |
 
 ## 5. Dependencies
 
@@ -54,7 +54,7 @@ Source: dependencies.md.
 
 | Dependencies | Open | Met | At risk |
 | --- | --- | --- | --- |
-| 14 | 14 | 0 | 0 |
+| 14 | 12 | 0 | 2 |
 
 ## 6. Risks and issues
 
@@ -63,7 +63,7 @@ Source: risks-and-issues.md.
 | Severity | Open |
 | --- | --- |
 | Blocker | 0 |
-| Major | 9 |
+| Major | 12 |
 | Minor | 5 |
 
 ## 7. Measures of the Maturity Level

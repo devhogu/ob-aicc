@@ -2,7 +2,7 @@
 id: AICC-TPL-04-EN
 title: Steering Summary
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -55,5 +55,9 @@ other events stay in Confluence, or in the work items.
 ## 7. Review of the Decisions of the AICC Lead
 
 [The sample of the Decision Log lines of the period that the Steering reviewed, and the result.]
+
+## 8. Quarterly check of the Engagements
+
+[At the quarterly Steering: that every closed Engagement has an Outcome Report that its product owner accepted, and that the capacity of the Service Agreements is within the capacity available.]
 
 Approved by the chair on [date].

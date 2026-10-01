@@ -1,5 +1,7 @@
 # DR-2026-017 AICC assigns the Risk Tier
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-09-30. Decided by the AICC Lead, on the direction that AICC assigns the categories and informs the function heads.
 
 ## Decision
@@ -12,3 +14,5 @@ Date: 2026-09-30. Decided by the AICC Lead, on the direction that AICC assigns t
 ## Revisit
 
 2026-12-31.
+
+Note of 2026-10-01: the AI Policy 3.2 states that the Risk Tier is assigned when the Solution is defined. "At Intake" in item 1 means that the assignment is made when the Solution enters the definition.

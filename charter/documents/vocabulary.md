@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 4.7
+revision: 4.9
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -107,7 +107,7 @@ few definitions because it is read alone.
 | PI Objective | The intent and direction of the Teams for a Program Increment, with the business value scored by the Domain Owner. It is not a commitment of scope | goal, OKR |
 | Dependency | A need of one item from another item, Team, function, or person, by a stated IT |  |
 | Calendar | The Record of the Program Increments, the Iterations, the weeks, and the blocked and gray days |  |
-| Cadence | The Record of the general flow of the events by week, without dates; the template of the dated calendar of events |  |
+| Cadence | The workflow of the general flow of the events by week, without dates; the template of the dated calendar of events |  |
 | Blocked day, gray day | A blocked day is an official or expected non-working day. A gray day is a working day on which people are likely to be out. Events move to the working day before them |  |
 | AICC portal | The static portal of the charter and the governance, for auditors, which links to the evidence records of the Registry | |
 | Operating portal | The portal of non-sensitive information on the services portfolio and the development efforts, for the internal consumers of AICC | |
@@ -134,16 +134,26 @@ few definitions because it is read alone.
 | Milestone | A dated event in the Roadmap that marks a deliverable or a Maturity Level |  |
 | Decision | A choice made on the facts by the person who holds it under the Operating Model | resolution |
 | Decision Log | The Record of the Decisions, one line each |  |
+| Decision Record | The evidence record of one Decision that others will need to find later: the facts, the options, the decision, and where it is entered | |
+| Appointments Record | The living Record in the Registry that maps the Roles to real people, with the log of appointments, the declarations, and the access | assignment map |
+| Control Sign-Off | The evidence record of the decision of a Control Function Contact: a validation, a stop, an Exception, or a provider check | |
+| AI Incident Review | The evidence record of the review of one AI Incident | |
+| Registry Snapshot | The evidence record that closes an IT or a PI: the state of the working state at that date | |
+| Dependency Map | The Record of what each item of a Program Increment needs from other items, Teams, functions, and persons | |
+| Roadmap | The Record of the three months: the current PI as intent and direction, the next as planned, the rest indicative, with its Milestones | |
+| Template | A form for a Record that needs one; it has a status and a revision, and a copy of it carries no metadata block | |
+| Priorities Record | The living Record of the Strategic Priorities, with references to the Investment Envelopes, Guardrails, and Measures | |
+| Standards Record | The living Record of the architecture standards and Platform requirements | |
 | Registry | The folder of the Records of AICC: the process records of the work, the decisions, the proposals, and the governance records | |
 | Workflow | The description of a loop or a flow of AICC as intent and control flow, in the charter; it states no rule | |
 | Record | A file in the Registry, as distinct from a document of the charter: working state, a living record, or an evidence record | register |
 | Evidence record | A closed and dated extract in the Registry of an event: a Decision, an approval, a sign-off, an acceptance, an incident, or an appointment | |
 | Working state | The live state of the work: the backlogs, boards, Roadmap, Calendar, Dependency Map, Dashboard, Teams, and Program Increment folder. It moves to Jira and Confluence at the cutover | |
-| Light mode | The way AICC runs while its Team has up to three people, with fewer events and a smaller set of states | |
+| Light mode | The way AICC runs while the AICC Team has up to three people, with fewer events and a smaller set of states | |
 | Loop | A cycle that starts with planning and ends with review: the day, the week, the IT, and the PI | |
 | Review week | The last week of an IT | |
 | Short forms | PI is Program Increment, IT is Iteration, and IP is the Innovation and Planning week. PIQ1 to PIQ4 name the PIs of a year, IT01 to IT12 its ITs, and W1 to W5 the weeks of an IT |  |
-| Event | A meeting of a loop, with a stated intent: Daily Stand-up, Weekly Planning, Weekly Review, Backlog Refinement, IT Planning, IT Review and Demo, IT Retrospective, PI Review and Demo, Inspect and Adapt, PI Planning, and Steering |  |
+| Event | A meeting of a loop, with a stated intent: Daily Stand-up, Weekly Planning, Weekly Review, Backlog Refinement, IT Planning, IT Review and Demo, IT Retrospective, PI Review and Demo, Inspect and Adapt, PI Planning, Innovation, and Steering |  |
 | Steering Summary | The evidence record of one Steering: attendance, advice, Decisions, and actions | minutes |
 | Quarterly Report | The report of the AICC Lead at the PI Review on the Portfolio, benefits, risks, and Maturity Levels |  |
 | Finding | A deviation found by a check of the documents, by an audit, or by a supervisor |  |
@@ -162,10 +172,10 @@ few definitions because it is read alone.
 | Completed | The work is finished and not yet reviewed |  |
 | Review | Being assessed against the acceptance criteria. It may return to active |  |
 | Accepted | The acceptance criteria are met, as a fact recorded with who and when. The Domain Owner approves a Solution Definition, and accepts a deliverable |  |
-| Closed | Complete, accepted, and finished |  |
+| Closed | Complete and finished: accepted, or for a Solution retired, handed off, or ended |  |
 | Pivoted | Decomposed or rerouted into a new item, to which it is linked |  |
 | Rejected | Decided against before approval; it will not be done |  |
-| Cancelled | Approved or delivered work whose outcome is no longer needed, or a Solution that a Control Function stopped |  |
+| Cancelled | Work whose outcome is no longer needed, in any state from discovery to review, or a Solution that a Control Function stopped |  |
 
 4.3. The following table defines the Stages. A Stage is a phase of the work inside the discovery or the active state of an item.
 
@@ -208,3 +218,5 @@ few definitions because it is read alone.
 | 4.5 | 2026-10-01 | Steering Summary defined. | DR-2026-029 |
 | 4.6 | 2026-10-01 | AICC portal, Operating portal, and Service portal defined. | DR-2026-030 |
 | 4.7 | 2026-10-01 | Product owner defined. | DR-2026-031 |
+| 4.8 | 2026-10-01 | Decision Record, Appointments Record, Control Sign-Off, AI Incident Review, Registry Snapshot, Dependency Map, Roadmap, Template, Priorities Record, and Standards Record defined; Cancelled and Closed restated; Innovation is an Event. | DR-2026-034 |
+| 4.9 | 2026-10-01 | Control Sign-Off includes a stop. | DR-2026-034 |

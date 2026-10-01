@@ -2,15 +2,15 @@
 id: AICC-TPL-08-EN
 title: Decision Record
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-01
 revised: 2026-10-01
 ```
 
 # Decision Record
 
-**Template.** Written for a Decision at the level of the AICC Lead or above, for an activation of a document, a delegation, a Group Arrangement, an
-Exception to a requirement of AICC, an approval of published output, and the cutover. It is an evidence record, and the Decision Log is its
+**Template.** Written for a Decision of the Executive Sponsor that is hard to reverse, for a Decision that the Operating Model 10 names as evidenced by a Decision Record, and for an activation of a document, an appointment, a delegation, a Group Arrangement, an
+Exception of the AICC Lead, an approval of published output, and the cutover. It is an evidence record, and the Decision Log is its
 one-line index. A Decision of the Team is noted in the work item. It carries no figures of the Bank, no data, and no code. Keep it short.
 
 | Field | Entry |
@@ -18,8 +18,8 @@ one-line index. A Decision of the Team is noted in the work item. It carries no 
 | Identifier | DR-[yyyy]-[nnn] |
 | Title | [verb and subject] |
 | Date | [date] |
-| Type | [Decision / activation / delegation / Group Arrangement / Exception / approval of output / cutover] |
-| Level | [AICC Lead / Executive Sponsor] |
+| Type | [Decision / activation / appointment / delegation / Group Arrangement / Exception / approval of output / cutover] |
+| Level | [AICC Lead / Executive Sponsor / Domain Owner] |
 | Decided by | [Role and name] |
 | Status | [Decided / Superseded / Revoked] |
 

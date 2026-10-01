@@ -16,7 +16,7 @@ delegate a decision in writing, for a scope and a period, and each delegation is
 
 | Loop | What is set or reviewed | By whom | Record |
 | --- | --- | --- | --- |
-| Yearly, at the first quarterly Steering | The Strategic Priorities, the Investment Envelopes and Guardrails, the Roadmap, the documents, the AI Risk Appetite Statement, and the yearly Proposal of the strategy | Executive Sponsor; the AICC Lead owns the documents | Decision Records; Priorities |
+| Yearly, at the first quarterly Steering | The Strategic Priorities, the Investment Envelopes and Guardrails, the documents, the AI Risk Appetite Statement, and the yearly Proposal of the strategy | Executive Sponsor; the AICC Lead owns the documents | Decision Records; Priorities |
 | Quarterly | The results of the PI, the risk check with the Control Function Contacts, the Maturity Level, and the report to the Board Committee | Executive Sponsor | Quarterly Report; Registry Snapshot; Steering Summary |
 | Monthly | Progress, risks, and blockers, and a sample of the Decisions of the AICC Lead | Executive Sponsor | Steering Summary |
 | Weekly | The flow and the Dependencies | AICC Lead | The working state |
@@ -25,9 +25,8 @@ delegate a decision in writing, for a scope and a period, and each delegation is
 ## 4. How a decision moves
 
 The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it crosses a Domain or an Entity,
-cannot be reversed without significant cost, exceeds a guardrail or changes a Strategic Priority, accepts a risk or concerns a Risk Tier 3 Solution, or binds
-persons outside AICC. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in
-the Decision Log, and one that is hard to reverse also has a Decision Record.
+cannot be reversed without significant cost, exceeds a guardrail or changes a Strategic Priority, or accepts a risk or concerns a Risk Tier 3 Solution. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in
+the Decision Log, and a Decision of the Executive Sponsor that is hard to reverse also has a Decision Record.
 
 ## 5. Reporting and assurance
 

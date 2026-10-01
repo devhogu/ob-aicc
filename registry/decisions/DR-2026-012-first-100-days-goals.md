@@ -1,5 +1,7 @@
 # DR-2026-012 Goals of the first 100 days, September to December 2026
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: September 2026 (reconstructed; the exact date was not recorded). Decided by the Executive Sponsor (Simen Munter); recorded by the AICC Lead on the AICC Lead's report of the meeting. It is recorded as reported; no further proof is kept. The wording and the scope are restated in DR-2026-013.
 
 ## Decision

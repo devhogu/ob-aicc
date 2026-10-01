@@ -1,5 +1,7 @@
 # DR-2026-016 The Domain Owner approves the use of a Solution for a data class
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-09-30. Decided by the AICC Lead, on the direction of the Executive Sponsor's goals: the head of the function is the product owner and is responsible for approvals in functional use. AICC does the technical work.
 
 ## Decision

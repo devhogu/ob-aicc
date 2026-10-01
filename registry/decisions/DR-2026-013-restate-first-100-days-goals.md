@@ -1,5 +1,7 @@
 # DR-2026-013 Restate the goals of the first 100 days
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-09-30. Decided by the AICC Lead. The intent of the goals confirmed by the Executive Sponsor (DR-2026-012) is unchanged. The wording and the scope are restated so that each goal states what AICC does, with whom, what is out of scope, and what the outcome is by 31 December 2026.
 
 ## Decision

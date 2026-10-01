@@ -8,7 +8,7 @@ answer to the question "how does your unit operate?". It covers the mandate, the
 controls, and the assurance. It does not cover how a solution is delivered, which is in the service delivery workflow.
 
 The rules are in the Operating Model, the AICC Charter, and the AI Policy. This workflow shows the flow and the intent. It states no
-rule of its own. The events are those of the Cadence. Each control produces a record, and the guide to the Registry, when it exists, states which.
+rule of its own. The events are those of the Cadence. Each control produces a record, and the Operating Model 10 states which.
 
 ## 2. The control loop by horizon
 
@@ -37,9 +37,9 @@ The following table states each horizon.
 
 | Horizon | Events of the Cadence | What is set or reviewed | Decided by | Record produced |
 | --- | --- | --- | --- | --- |
-| Yearly | The first quarterly Steering of the year | Strategic Priorities, Investment Envelopes, Guardrails, the Roadmap, the AI Risk Appetite Statement, the documents, and the strategy proposal | Executive Sponsor, with the AICC Lead owning the documents | Decision Log; Priorities; strategy proposal |
-| Quarterly | PI Review and Demo, Inspect and Adapt, PI Planning, quarterly Steering | The results of the PI, the quarterly risk check with the Control Function Contacts, the Maturity Level, the next PI | Executive Sponsor | Quarterly Report; report to the Board Committee; PI snapshot; Decision Log |
-| Monthly | IT Review and Demo, monthly Steering | Progress, risks, blockers, acceptances | Executive Sponsor for his decisions; product owners for acceptance | Decision Log; Steering Summary |
+| Yearly | The first quarterly Steering of the year | Strategic Priorities, Investment Envelopes, Guardrails, the AI Risk Appetite Statement, the documents, and the strategy proposal | Executive Sponsor, with the AICC Lead owning the documents | Decision Log; Priorities; strategy proposal |
+| Quarterly | PI Review and Demo, Inspect and Adapt, PI Planning, quarterly Steering | The results of the PI, the quarterly risk check with the Control Function Contacts, the Maturity Level, the next PI, and the Roadmap, which the PI Planning proposes and the quarterly Steering confirms | Executive Sponsor | Quarterly Report; report to the Board Committee; Registry Snapshot; Decision Log |
+| Monthly | IT Review and Demo, monthly Steering | Progress, risks, blockers, acceptances | Executive Sponsor for the Decisions of the Steering; product owners for acceptance | Decision Log; Steering Summary |
 | Weekly | Weekly Planning, Weekly Review | The flow, the Limits on Work in Progress, the Dependencies | AICC Lead | Dashboard |
 | On an event | Not scheduled | An AI Incident, an Exception, a stop, a risk beyond appetite, a change of provider or regulation, a change of a Role holder | As the Operating Model states | Decision Log; Risks and Issues; Appointments |
 
@@ -110,6 +110,6 @@ Figure 4: the life of a document.
 
 ## 8. Where it runs
 
-The loop will run in Jira and Confluence from the cutover of the Operating Model 9: Confluence for the notes and reports, and Jira for the
+The loop will run in Jira and Confluence from the cutover of the working state (Operating Model 9.1): Confluence for the notes and reports, and Jira for the
 dashboards and the board. Until then the Registry holds the working state. The charter holds this schema. The Registry always holds the
 evidence record of each outcome that an auditor may ask for, and the raw material stays in the tools or in the systems of the functions.

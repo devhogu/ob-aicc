@@ -16,10 +16,10 @@ pi/2026-PIQ4/objectives.md. The Roadmap is revised at each PI Planning.
 
 | Identifier | Milestone | Evidence | Owner | Program Increment | Status |
 | --- | --- | --- | --- | --- | --- |
-| MS-001 | The six documents are active | Decision Log entries of activation | AICC Lead | 2026-PIQ4 | Done (2026-10-01) |
-| MS-002 | The Holders of the Roles are named | Appointments | AICC Lead | 2026-PIQ4 | Planned |
-| MS-003 | Every known AI use is in the AI Registry with a Risk Tier | AI Registry | AICC Lead | 2027-PIQ1 | Planned |
-| MS-004 | The events of the loops are running: Iterations, the Program Increment, and the Steering | Notes; IT Backlogs | AICC Lead | 2027-PIQ1 | Planned |
+| MS-001 | The documents are active | Decision Log entries of activation | AICC Lead | 2026-PIQ4 | Done (2026-10-01) |
+| MS-002 | The Holders of the Roles are named, by 2026-11-30 | Appointments | AICC Lead | 2026-PIQ4 | Planned |
+| MS-003 | Every known AI use is in the AI Registry with a Risk Tier | AI Registry | AICC Lead | 2026-PIQ4 | Planned |
+| MS-004 | The events of the loops are running: Iterations, the Program Increment, and the Steering | Steering Summaries; IT Backlogs | AICC Lead | 2027-PIQ1 | Planned |
 | MS-005 | Maturity Level 1 reached | Quarterly Report | AICC Lead | 2027-PIQ1 | Planned |
 | MS-006 | First Domain engaged, with the first Solution | Solution Definition | AICC Lead | 2026-PIQ4 | Planned |
 | MS-007 | First Solution deployed to a function and released | The release; Control Sign-Off where it applies | Domain Owner | 2027-PIQ1 | Planned |

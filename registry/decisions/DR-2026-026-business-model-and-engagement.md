@@ -1,5 +1,7 @@
 # DR-2026-026 The Business Model and the Engagement workflow
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead. AICC works as an internal consulting and innovation lab, with its own commitments and its own record of value and capacity.
 
 ## Decision

@@ -1,5 +1,7 @@
 # Decision Record: DR-2026-008 Require a check of a Risk Tier 1 Use Case by a person other than the owner
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 ## 1. Header
 
 | Field | Entry |

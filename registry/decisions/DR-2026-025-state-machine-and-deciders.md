@@ -1,5 +1,7 @@
 # DR-2026-025 One transition table, deciders, and the Solution lifecycle
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead, after the independent check of the new hierarchy (registry/assessments/2026-10-01).
 
 ## Decision

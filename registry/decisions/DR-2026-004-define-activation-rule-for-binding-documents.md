@@ -1,5 +1,7 @@
 # Decision Record: DR-2026-004 Define the activation rule for documents that bind persons outside AICC
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 ## 1. Header
 
 | Field | Entry |

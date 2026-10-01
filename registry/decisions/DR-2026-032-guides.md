@@ -1,5 +1,7 @@
 # DR-2026-032 The guides at the level of the charter
 
+*In its own short form, not the Decision Record Template.*
+
 Date: 2026-10-01. Decided by the AICC Lead.
 
 ## Decision

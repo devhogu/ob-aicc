@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 8.0
+revision: 8.4
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -17,8 +17,7 @@ kept on record.
 1.2. It applies to AICC and to the Domains and Control Functions of the Bank and of each Participating Entity that work with
 AICC.
 
-1.3. The workflows of the charter show how the loops run: the unit governance, the portfolio and service delivery, and the
-cadence. They state no rule of their own, and this Operating Model prevails.
+1.3. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, and the unit governance. They state no rule of their own, and this Operating Model prevails.
 
 ## 2. What AICC is
 
@@ -92,7 +91,7 @@ the Board and receives the report of the Executive Sponsor. Neither is a Role.
 
 4.6. The Holders of the Roles are named in the Appointments Record. The Executive Sponsor appoints the AICC Lead. The AICC Lead
 appoints the AICC Engineers. The head of a Domain names the Domain Owner, and the Domain Owner names the Domain Expert. Each
-Control Function names its Control Function Contact for each Entity. The head of technology names the Platform Owner. Each Holder shall name a deputy in the Appointments Record, who acts during an absence, and a delegation of more than two weeks is entered in the Decision Log. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference. The Executive Sponsor may delegate any decision in writing, for a stated scope and period, and the delegation is entered in the Appointments Record. Until a head of function or the Platform Owner is named, the Executive Sponsor names an acting Holder. For the work of AICC itself, the AICC Lead is the Domain Owner.
+Control Function names its Control Function Contact for each Entity. The head of technology names the Platform Owner. The AICC Lead names the Checker of a Risk Tier 1 Solution. An appointment to a Role of the appointer's own person is made by the next level (5.7). Each Holder shall name a deputy in the Appointments Record, who acts during an absence, and a delegation of more than two weeks is entered in the Decision Log. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference. The Executive Sponsor may delegate any decision in writing, for a stated scope and period, and the delegation is entered in the Appointments Record. Until a head of function or the Platform Owner is named, the Executive Sponsor names an acting Holder. For the work of AICC itself, the AICC Lead is the Domain Owner.
 
 ## 5. Decisions
 
@@ -130,7 +129,7 @@ others then support the Decision. A dissent may be noted in the Decision Log.
 
 5.6. A Decision at the AICC Lead level or above, and any Decision that others will need to find later, shall be entered in the
 Decision Log as one line: the date, the Decision, the facts, who decided, and when to revisit it. A Decision of the
-Executive Sponsor that is hard to reverse also has a short note. A Decision of the Team is noted in the work item.
+Executive Sponsor that is hard to reverse, and a Decision that section 10 names as evidenced by a Decision Record, also has a Decision Record. A Decision of the Team is noted in the work item.
 
 5.7. A person with a conflict of interest on a Decision shall declare it and shall not decide. The next level decides.
 
@@ -176,6 +175,7 @@ source of the moves.
 | Approved | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
 | Active | Completed | The work is finished |
 | Active | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
+| Active | Closed | Only for a Solution: it is retired, handed off, or ended, as section 6.7 states |
 | Active | Discovery | Only for a Solution: a change raises its Risk Tier or the check or the validation named it as requiring a new check, as the AI Policy states |
 | Waiting | The state it came from | The Dependency is cleared |
 | Waiting | Deferred or Cancelled | The Dependency will not clear, or the item is no longer needed |
@@ -185,8 +185,8 @@ source of the moves.
 | Review | Active, or Accepted, or Cancelled | It is returned with what is missing; its criteria are met; or its outcome is no longer wanted |
 | Accepted | Closed | The item is finished |
 
-Rejected applies only before an item is approved. Cancelled applies after it. A suspension of a Solution is a flag on it, like waiting,
-and does not change its state. A stop by a Control Function cancels the Solution. Retirement closes it. The person who approves an item at
+Rejected means decided against on its merits, and applies only before an item is approved. Cancelled means no longer needed, and applies in any state from Discovery to Review except Completed. A suspension of a Solution is a flag on it, like waiting,
+and does not change its state. A stop by a Control Function cancels the Solution. Retirement closes it, with no acceptance. The person who approves an item at
 its level also defers, rejects, cancels, or pivots it.
 
 6.5. A Stage is a phase of the work inside the discovery state or the active state of an item. The Stages, the approver, and the
@@ -195,7 +195,7 @@ of the level, or in the Portfolio for a Solution.
 
 | Level | Discovery Stages | Approved by, and conditions | Active Stages | To be completed |
 | --- | --- | --- | --- | --- |
-| Initiative | Scoping, Business case | The Domain Owner, or the Executive Sponsor for an Initiative that spans Domains, and the Executive Sponsor above a guardrail. Until the Guardrails are set, the Executive Sponsor approves any commitment. The scope is agreed, and the business case in the Initiative Brief is approved | Implementation | Its Solutions are delivered, and its outcome is reviewed |
+| Initiative | Scoping, Business case | The Domain Owner, or the Executive Sponsor for an Initiative that spans Domains, and the Executive Sponsor above a guardrail. Until the Guardrails are set, the Executive Sponsor approves any commitment. The scope is agreed, the Initiative Brief is complete in its six sections, and the business case in it is approved | Implementation | Its Solutions are delivered, and its outcome is reviewed |
 | Solution | Definition | The Domain Owner approves the Solution Definition, with its type, Receiver, scope, capabilities, architecture, and data classes. The Risk Tier is assigned by the AICC Lead and told to the Domain Owner; the AI Registry entry is made; for Risk Tier 2 and 3, the Control Function Contact of compliance confirms the applicable law; an Experiment has its time-box and a Service its run cost and sunset | Delivery, then the Stages of its type in section 6.7 | It is delivered, as section 6.7 states |
 | Epic | Analysis: define the capability and break it into Features | The AICC Lead, with the Domain Owner consulted. Its Features are defined and ranked in the Program Backlog | Implementation | Its Features are closed |
 | Feature | Explore, Design | The Team, at IT Planning. Its acceptance criteria are stated, and its Dependencies are known, with any open one named | Develop, Verify, Deploy | It is deployed |
@@ -249,7 +249,7 @@ PI Review. Evidence is taken from the records of the AI Platform.
 
 7.1. Work runs in Program Increments. A Program Increment is one quarter, made of three Iterations. An Iteration is one calendar
 month of four or five whole weeks. The last week of the third Iteration of a Program Increment is the IP week.
-The Calendar Record states the dates and the blocked and gray days, and the Cadence Record states the general flow of the events by
+The Calendar Record states the dates and the blocked and gray days, and the Cadence workflow of the charter states the general flow of the events by
 week, without dates, which is the template for the dated calendar of events. The events of each loop are listed below. A Team of one holds them short and records them
 in the IT Backlog or the Steering Summary.
 
@@ -269,16 +269,16 @@ provider, or in regulation, or after an audit or supervisory finding.
 7.4. The Executive Sponsor may take a time-critical Decision between meetings after asking the heads of the risk and compliance
 functions and recording the answers.
 
-7.5. An event that falls on a blocked or gray day moves to the working day before it, and never after. An event that is missed is not held
+7.5. An event that falls on a blocked or gray day moves to the working day before it, and never after. When moved events meet on one day, the larger event keeps the day and the smaller one moves to the working day before it. An event that is missed is not held
 later, and its intent is covered at the next event. The Weekly Review may be held in writing.
 
-7.6. The AI Steering Committee is the heads of the business, technology, risk, and compliance functions, who are named in the Assignment
-Map. Its advice, and any dissent, is recorded in the Steering Summary. A head may be represented by a named deputy. If no head of a function
+7.6. The AI Steering Committee is the heads of the business, technology, risk, and compliance functions, who are named in the Appointments
+Record. Its advice, and any dissent, is recorded in the Steering Summary. A head may be represented by a named deputy. If no head of a function
 attends, the Executive Sponsor may still decide, and the Steering Summary records the absence.
 
-7.7. While the Team has up to three people, AICC runs in light mode. The Weekly Planning and the Weekly Review are one session. The IT
+7.7. While the AICC Team has up to three people, AICC runs in light mode. The Weekly Planning and the Weekly Review are one session, held on the day of the Weekly Planning. The IT
 Retrospective and the monthly Steering are held in the IT Review and Demo, and Inspect and Adapt is held in the PI Review and Demo. The
-Daily Stand-up, the Backlog Refinement, and the Innovation are optional. In light mode Waiting is a flag, Completed is skipped, Accepted and
+Daily Stand-up, the Backlog Refinement, and the Innovation are optional. In light mode Waiting is a flag, Completed is skipped and an item goes from Active to Review, Accepted and
 Closed are one step with the acceptance recorded, Pivoted is recorded as Cancelled with a link to the new item, Stages are used for
 Initiatives and Solutions only, and Work Items are not tracked in the charter. Everything else stays as stated.
 
@@ -302,17 +302,17 @@ states what happened, who decided or acted, on which facts, and where the live i
 Service Management are not an evidence store.
 
 9.3. The Registry also keeps living records that are current by nature: the Priorities, the Standards, the Risks and Issues, the AI
-Registry, and the Appointments. The README of the Registry lists all the Records by class.
+Registry, and the Appointments. The Solution Definitions are living records in the Portfolio, and each Registry Snapshot records their state, Risk Tier, and release, which makes the Snapshot their evidence. The README of the Registry lists all the Records by class.
 
 9.4. The Registry shall be kept in a repository with a protected main branch and restricted visibility, and its history is not
 rewritten. It is promoted to the corporate share, where the AICC portal links to its records. Each Record is kept for the period that the record retention rules of the Bank require for its type. Personal data in the
-Registry is limited to the names and the posts of the Holders.
+Registry is limited to the names and the posts of the Holders, and the declarations, consents, and access of the Appointments Record.
 
 9.5. A Record is kept by whoever does the work, and the AICC Lead is accountable for all of them. Internal audit has read access to the
 Registry and, read only, to Jira, Confluence, and Service Management.
 
 9.6. The tools and the portals of AICC, what each is used for, and the workflows that use it are listed in the collaboration tooling of
-the charter.
+the charter. Jira and Confluence carry no figures of the Bank, no data, and no code in the process content of AICC, and a ticket in Service Management for an AI Incident describes it without data and the records point to the ticket key. The operating portal holds non-sensitive information only and carries no governance and no evidence. Each tool has a keeper named in the Appointments Record, and access to a tool follows the Roles.
 
 9.7. The Templates for the Records that need a form are listed in the Document Catalog. Every other Record is a table that its keeper
 adapts as needed.
@@ -324,7 +324,7 @@ and it leaves an evidence record. The table lists the controls that an auditor c
 
 | Control | Rule | Owner | When | Evidence record | Template |
 | --- | --- | --- | --- | --- | --- |
-| The mandate and the appointment of the AICC Lead | 4.6; Charter 3.1 | Executive Sponsor | When it changes | Appointments, with the decision reference | Assignment Map |
+| The mandate and the appointment of the AICC Lead | 4.6; Charter 3.1 | Executive Sponsor | When it changes | Appointments, with the decision reference | Appointments Record |
 | Priorities, funding, and guardrails | Charter 4 | Executive Sponsor | Yearly, and on change | Priorities; Decision Record | Decision Record |
 | The risk appetite and the policy | Charter 5.4 | AICC Lead; the Executive Sponsor for a risk beyond appetite | Yearly, and on an extra review | Decision Record | Decision Record |
 | Review of the documents | Document Catalog 7 | AICC Lead | Yearly, and when the meaning changes | Decision Record of the check | Decision Record |
@@ -332,17 +332,20 @@ and it leaves an evidence record. The table lists the controls that an auditor c
 | Results, risk check, and Maturity Level | 7.1; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot |
 | Report to the Board Committee | Charter 7.2 | AICC Lead prepares; Executive Sponsor approves and issues | Quarterly | Quarterly Report, with its issuance block | Quarterly Report |
 | Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
-| Approval of the business case | 6.5; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail | When the Initiative is approved | Initiative Brief; Decision Record | Initiative Brief |
+| Approval of the business case | 6.5; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail | When the Initiative is approved | Initiative Brief, complete in its six sections; Decision Record | Initiative Brief |
 | Outcome Report and acceptance | 6.9; Business Model 5.5 | AICC Lead issues; product owner accepts | At the end of the Engagement | Outcome Report | Outcome Report |
 | Capacity used and benefit confirmed | Business Model 6 | AICC Lead | Quarterly | Quarterly Report | Quarterly Report |
-| Risk Tier assignment | AI Policy 3.2 | AICC Lead | When the Solution is defined | Solution Definition | Solution Definition |
-| Check or validation before the first deployment | AI Policy 3.3; 6.6 | The Checker; the Control Function Contacts | Before the first deployment | Control Sign-Off | Control Sign-Off |
-| Release | 6.6 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | Solution Definition; Decision Record | Solution Definition |
-| Approval of the use of a Solution for a data class | AI Policy 2.1 | Domain Owner | Before use | AI Registry | Not needed |
+| Risk Tier assignment | AI Policy 3.2 | AICC Lead | When the Solution is defined | Solution Definition; AI Registry entry, with who assigned it and when | Solution Definition |
+| Check or validation before the first deployment | AI Policy 3.3; 6.6 | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment | AI Registry entry for the check; Control Sign-Off for the validation | Control Sign-Off |
+| Release | 6.6 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | The release block of the Solution Definition; Decision Record for Risk Tier 3 | Solution Definition |
+| Approval of the use of a Solution for a data class | AI Policy 2.1 | Domain Owner; the AICC Lead for use in AICC | Before use | AI Registry, with who approved it and when | Not needed |
 | An AI Incident | AI Policy 5 | AICC Lead; the Control Function Contacts | When it happens | Risks and Issues; AI Incident Review | AI Incident Review |
-| An Exception | AI Policy 6 | The Control Function concerned | When requested | Control Sign-Off; Risks and Issues | Control Sign-Off |
+| An Exception | AI Policy 6 | The Control Function concerned; the AICC Lead for a requirement set by AICC alone | When requested | Control Sign-Off, or Decision Record for the AICC Lead; Risks and Issues | Control Sign-Off; Decision Record |
+| Check of a provider | AI Policy 4.1 | The Control Function Contacts of information security, data protection, and legal | Before use, and at each reassessment | Control Sign-Off | Control Sign-Off |
+| Sharing of data or decisions between Entities | Charter 3.3 | The Executive Sponsor | Before the sharing | Decision Record | Decision Record |
+| A Proposal to adopt a Solution at scale | 6.8 | AICC Lead prepares; the owners and the Executive Sponsor decide | When a Solution is ready to be adopted | Proposal; Decision Record | Proposal |
 | Output published to the Board or investors | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record |
-| Separation of duties and independence | 4.4 | Everyone; checked in the review of the documents | Always | Appointments | Assignment Map |
+| Separation of duties and independence | 4.4 | AICC Lead; checked in the review of the documents | Always | Appointments | Appointments Record |
 | Capacity ceiling and intake of Engagements | Business Model 7.1, 7.2 | AICC Lead | When a Service Agreement is issued | Service Agreement; Portfolio Backlog | Service Agreement |
 | Completeness of the Outcome Reports, and the sample of the Decisions of the AICC Lead | Business Model 7.4, 7.5 | Executive Sponsor | Quarterly, and monthly for the sample | Steering Summary | Steering Summary |
 | Confirmation of the benefit | Business Model 7.3 | Domain Owner | At the Outcome Report | Outcome Report | Outcome Report |
@@ -378,3 +381,7 @@ and it leaves an evidence record. The table lists the controls that an auditor c
 | 7.1 | 2026-10-01 | The Templates of the controls exist; the Steering Summary replaces Notes. | DR-2026-029 |
 | 7.2 | 2026-10-01 | The collaboration tooling is listed in the charter; the Registry is promoted to the corporate share. | DR-2026-030 |
 | 8.0 | 2026-10-01 | The events listed with the Cadence holding their intent; moves of events; terms of the AI Steering Committee; the Initiative that spans Domains; active for Initiatives and Solutions; the Adopted Solution record; commercial controls. | DR-2026-031 |
+| 8.1 | 2026-10-01 | Closed from Active for a retired Solution; Rejected and Cancelled stated; Checker named by the AICC Lead; moved events that meet; controls table completed; light mode clarified. | DR-2026-034 |
+| 8.2 | 2026-10-01 | Rules on the content of the tools, the keeper of each tool (moved from the collaboration tooling workflow). | DR-2026-034 |
+| 8.3 | 2026-10-01 | Personal data of the Appointments Record; Decision Record trigger; Solution Definitions evidenced by the Snapshot; Cancelled except Completed; the Appointments Record named in 7.6. | DR-2026-034 |
+| 8.4 | 2026-10-01 | An Initiative is approved only when its Initiative Brief is complete in its six sections. | DR-2026-034 |

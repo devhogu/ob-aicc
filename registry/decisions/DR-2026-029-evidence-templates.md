@@ -1,5 +1,7 @@
 # DR-2026-029 The evidence Templates
 
+*In its own short form, not the Decision Record Template.*
+
 Date: 2026-10-01. Decided by the AICC Lead, after the shape review and the re-evaluation of the charter.
 
 ## Decision

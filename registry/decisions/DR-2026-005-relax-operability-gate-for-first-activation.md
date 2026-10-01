@@ -1,5 +1,7 @@
 # Decision Record: DR-2026-005 Relax the operability gate for first activation
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 ## 1. Header
 
 | Field | Entry |

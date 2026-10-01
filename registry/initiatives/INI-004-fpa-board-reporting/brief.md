@@ -4,22 +4,45 @@
 | --- | --- |
 | Identifier | INI-004 |
 | Title | FP&A: Board reporting of financial metrics |
-| State and Stage | Discovery: Scoping. A goal of the first 100 days, confirmed by the Executive Sponsor |
+| State and Stage | Discovery: Scoping |
 | Strategic Priority | PRI-2 Business intelligence |
-| Solutions expected | To be defined in discovery |
-| Domain and Domain Owner | FP&A analytics function; Domain Owner: Ademi Moldogazieva, head of FP&A function |
+| Domain Owner (represents the client function) | FP&A analytics function. Domain Owner: Ademi Moldogazieva, head of the FP&A function |
+| Solutions expected | SOL-001 FP&A Board reporting pipeline [ its type is set when the Solution is defined ] |
+| Service Agreement | [ AGR-nnn: the Service Agreement of this Engagement, issued at the start of the study and amended at the approval of the business case (Business Model 5; RI-022) ] |
 | Period | September to December 2026 |
-| Date of last change | 2026-09-30 |
+| Date of last change | 2026-10-01 |
+
+## Completeness
+
+| Section | Required at | State |
+| --- | --- | --- |
+| 1. Hypothesis | Scoping | Complete |
+| 2. Business outcomes and leading indicators | Business case | Open: the source system of the figures, and the baseline and target of each indicator |
+| 3. Scope and the minimum viable product | Scoping | Complete |
+| 4. Cost, capacity, and value | Business case | Open: the capacity in days, and the Investment Envelope |
+| 5. Risks, dependencies, and Risk Tier | Business case | Complete |
+| 6. Decision and acceptance | Business case | Open: the approver and the Service Agreement |
 
 ## 1. Hypothesis
 
 If the AI-generated reports of FP&A reach the Board through one portal and one automated pipeline, then financial metrics are reported consistently each month and each quarter, with fewer manual steps and one delivery channel.
 
-## 2. Problem or opportunity, and scope
+Today FP&A already produces reports with AI. The reporting is not consistent from one period to the next and relies on manual steps and on no common delivery channel to the Board.
 
-**Problem or opportunity.** FP&A already produces reports with AI. The reporting is not consistent from one period to the next and relies on manual steps and on no common delivery channel to the Board.
+## 2. Business outcomes and leading indicators
 
-**AICC does.**
+| Business outcome | Leading indicator | Where the figures live | Date |
+| --- | --- | --- | --- |
+| The Board portal, live with the first monthly edition | Editions issued on time | [ The source system of the function ] | 2026-12-31 |
+| The pipeline, having run one monthly cycle | Share of figures traceable to a governed source; manual steps removed; hours per cycle | [ The source system of the function ] | 2026-12-31 |
+| The definitions of the metrics, agreed with FP&A, and the quarterly edition, designed | Metrics defined and agreed | [ The source system of the function ] | 2026-12-31 |
+| The approval of the Executive Sponsor for each edition, in place | Editions issued with the approval of the Executive Sponsor | [ The source system of the function ] | 2026-12-31 |
+
+The baseline and the target of each indicator are figures of the Bank. They are kept in the source system of the function, and this brief points to them. [ The source system of the function that holds the figures, named with the Domain Owner by 2026-10-31, with the baseline and the target of each indicator ]
+
+## 3. Scope and the minimum viable product
+
+AICC does the following.
 
 1. Take stock of the reports that FP&A already produces with AI: the metrics, their sources, the schedule, and the manual steps.
 2. Define with FP&A the standard set of financial metrics and the monthly and quarterly editions: definitions, sources, and periods.
@@ -28,26 +51,42 @@ If the AI-generated reports of FP&A reach the Board through one portal and one a
 5. The Executive Sponsor approves each edition before it is issued.
 6. Run one monthly cycle and design the quarterly edition.
 
-**Out of scope.** Investor communications beyond the financial metrics; changes to the methods of FP&A or to accounting systems; issue of an edition without the approval of the Executive Sponsor.
+Out of scope: Investor communications beyond the financial metrics; changes to the methods of FP&A or to accounting systems; issue of an edition without the approval of the Executive Sponsor.
 
-## 3. Outcome, Measures, cost, and risk
+Minimum viable product: The monthly edition, issued through the Board portal by the pipeline for one cycle.
 
-**Outcome by 31 December 2026.**
+## 4. Cost, capacity, and value
 
-- The Board portal, live with the first monthly edition.
-- The pipeline, having run one monthly cycle.
-- The quarterly edition, designed.
-- The definitions of the metrics, agreed with FP&A.
-- The approval of the Executive Sponsor for each edition, in place.
+Cost: the time of the AICC Lead. No other cost is stated.
 
-**Measures.** Editions issued on time; Share of figures traceable to a governed source; Manual steps removed; Hours per cycle, against the baseline. Baselines and targets are set with the Domain Owner by 31 October 2026. They are figures of the Bank, so they are kept in the source system of the function, and this brief points to them.
+Capacity: [ The capacity in days per IT for the minimum viable product, within the capacity available (Business Model 7.1), and the estimate for the full scope ]
 
-**Cost.** The time of the AICC Lead. No other cost is stated.
+Investment Envelope: [ The Investment Envelope of the Strategic Priority, by reference to the financial planning of the Bank, set with the Guardrails ]
 
-**Risk.** The output reaches the Board and may reach investors: the Executive Sponsor approves each edition and every figure has a governed source (AI Policy 2.4, Charter 7.2). Risk Tier 2 is expected. The checks come before the first issue.
+Value: tracked by the indicators of section 2, and confirmed by the Domain Owner at the Outcome Report (Business Model 7.3).
 
-## 4. Decision and acceptance
+## 5. Risks, dependencies, and Risk Tier
 
-Confirmed as a goal of the first 100 days by the Executive Sponsor (DR-2026-012), with the wording and scope restated in DR-2026-013. The business case is approved when scoping is complete.
+Risk: The output reaches the Board and may reach investors, so the Executive Sponsor approves each edition and every figure has a governed source (AI Policy 2.4, Charter 7.2). The checks come before the first issue.
 
-Acceptance on delivery: Ademi Moldogazieva, head of FP&A function. Acceptance closes the item.
+Expected Risk Tier: Risk Tier 2 is expected.
+
+Control Functions to consult: Model risk and information security, and each other remit concerned (AI Policy 3.3).
+
+Dependencies: DEP-004 (a named Domain Expert), DEP-006 (the time of FP&A, the data sources, the Board portal), DEP-007 (the approval of each edition by the Executive Sponsor), DEP-014 (validation by the Control Function Contacts).
+
+## 6. Decision and acceptance
+
+The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
+
+Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor while the Guardrails are not set (AICC Charter 4.2), with the date and the Decision Record ]
+
+Acceptance on delivery: Ademi Moldogazieva, head of the FP&A function. Acceptance closes the item.
+
+## Amendments after approval
+
+A change after the approval of the business case is entered here with its date and its Decision Record, and the sections above stay as approved.
+
+| Date | Section | Change | Decision Record |
+| --- | --- | --- | --- |
+|  |  |  | DR-[yyyy]-[nnn] |

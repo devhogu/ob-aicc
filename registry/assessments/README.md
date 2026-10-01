@@ -1,7 +1,7 @@
 # Assessments
 
 Earlier checks of the documents, kept for history. The first two checked the first corpus of 25 documents, which is archived. The
-later ones checked the simplified set of six documents, as the Document Catalog describes. Findings are tracked in the Risks and
+later ones checked the simplified set of documents, as the Document Catalog describes. Findings are tracked in the Risks and
 Issues Record.
 
 | Check | Report | Result |
@@ -11,3 +11,6 @@ Issues Record.
 | 2026-09-30-3 | [six documents: consistency](2026-09-30-3/consistency-report.md) and [coverage](2026-09-30-3/coverage-report.md) | Not ready; fixed in DR-2026-010 |
 | 2026-09-30-4 | [six documents: re-check](2026-09-30-4/recheck-report.md) | Ready after named fixes; fixed in DR-2026-011 |
 | 2026-09-30-5 | [acceptance: documents](2026-09-30-5/acceptance-documents.md) and [end to end](2026-09-30-5/acceptance-end-to-end.md) | Accept after named fixes; fixed in DR-2026-015 |
+| 2026-10-01 | [consistency report](2026-10-01/consistency-report.md) | Findings fixed; see the Decision Log from DR-2026-025 |
+| 2026-10-01-2 | [charter re-evaluation](2026-10-01-2/charter-reeval.md) | Findings fixed; see the Decision Log from DR-2026-027 |
+| 2026-10-01-3 | [shape review](2026-10-01-3/shape-review.md) | Findings fixed; see DR-2026-031 |

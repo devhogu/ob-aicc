@@ -2,7 +2,7 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 3.0
+revision: 4.0
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -21,7 +21,22 @@ stays in Jira and Confluence. It carries no figures of the Bank, no data, and no
 | Strategic Priority | [PRI-n] |
 | Domain Owner (represents the client function) | [name; several for an Initiative that spans Domains] |
 | Solutions expected | [the Solutions it should deliver, with their types] |
+| Service Agreement | [AGR-nnn, or not applicable for enabling work] |
+| Period | [from and to] |
 | Date of last change | [date] |
+
+## Completeness
+
+The brief has these six sections from the day it is created, and no section is removed. A section that is not yet known holds a comment in brackets that states what is expected there, who supplies it, and where it comes from. The Initiative is not approved until every section is complete.
+
+| Section | Required at | State |
+| --- | --- | --- |
+| 1. Hypothesis | Scoping | [Complete / Open: what is missing] |
+| 2. Business outcomes and leading indicators | Business case | [Complete / Open: what is missing] |
+| 3. Scope and the minimum viable product | Scoping | [Complete / Open: what is missing] |
+| 4. Cost, capacity, and value | Business case | [Complete / Open: what is missing] |
+| 5. Risks, dependencies, and Risk Tier | Business case | [Complete / Open: what is missing] |
+| 6. Decision and acceptance | Business case | [Complete / Open: what is missing] |
 
 ## 1. Hypothesis
 
@@ -31,7 +46,9 @@ stays in Jira and Confluence. It carries no figures of the Bank, no data, and no
 
 | Business outcome | Leading indicator | Where the figures live | Date |
 | --- | --- | --- | --- |
-|  |  |  |  |
+|  |  | [the source system of the function] |  |
+
+[The baseline and the target of each indicator are figures of the Bank: they stay in the source system, and the brief points to them.]
 
 ## 3. Scope and the minimum viable product
 
@@ -50,5 +67,13 @@ persons.]
 
 ## 6. Decision and acceptance
 
-[Go, no-go, or return, by whom, and the date, with the Decision Record. The Service Agreement issued (AGR-nnn). On delivery: accepted,
+[Go, no-go, or return, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, and for any commitment until the Guardrails are set. The Service Agreement issued (AGR-nnn). On delivery: accepted,
 returned, or cancelled by the product owner, with the date. Acceptance closes the item.]
+
+## Amendments after approval
+
+A change after the approval of the business case is entered here with its date and its Decision Record, and the sections above stay as approved.
+
+| Date | Section | Change | Decision Record |
+| --- | --- | --- | --- |
+|  |  |  | DR-[yyyy]-[nnn] |

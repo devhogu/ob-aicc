@@ -1,5 +1,7 @@
 # DR-2026-018 The AICC Lead activates all documents
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead, who owns the AICC Charter and is responsible for AICC. AICC works in an agile way and does not keep a chain of approvals for its own documents.
 
 ## Decision

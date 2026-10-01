@@ -1,5 +1,7 @@
 # Decision Record: DR-2026-001 Assign ownership of the Templates
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 ## 1. Header
 
 | Field | Entry |

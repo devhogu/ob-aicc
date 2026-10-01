@@ -1,5 +1,7 @@
 # DR-2026-024 Hierarchy, states, and offering types
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead, on the direction that AICC works as a SAFe-inspired lab and keeps Jira statuses clean.
 
 ## Decision

@@ -171,3 +171,5 @@ outside AICC, and its days are not listed one by one.
 | 2027-12-29 | Wed | Gray | Year-end period | common practice |
 | 2027-12-30 | Thu | Gray | Year-end period | common practice |
 | 2027-12-31 | Fri | Short | Pre-holiday short day | pattern of 2026; confirm |
+
+[ The day of the monthly Steering and of the one session of the Weekly Planning and the Weekly Review in light mode, set when the calendars of the Executive Sponsor are known. The events held in IT10 are entered as they are held ]

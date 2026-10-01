@@ -1,4 +1,6 @@
-# Notes: Steering, first 100 days
+# Steering, first 100 days
+
+Reconstructed after the event, before the Steering Summary Template existed. It carries the date as it was known, and no chair or sample of the Decisions of the AICC Lead was recorded.
 
 | Field | Entry |
 | --- | --- |

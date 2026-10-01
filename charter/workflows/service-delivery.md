@@ -25,7 +25,7 @@ Figure 1 shows the levels and how each one is broken into the next.
 ```mermaid
 flowchart TB
   T["Strategic Priority: a strategic theme set with the Board"] --> I["Initiative: a business program, long-term, held in the Portfolio Backlog"]
-  I --> S["Solution: a solution or service, with a type, a Risk Tier, and a receiver"]
+  I --> S["Solution: a solution or service, with a type, a Risk Tier, and a Receiver"]
   S --> E["Epic: a capability, runs over one or more PIs, held in the Program Backlog"]
   E --> F["Feature: closes within one PI, worked in the IT Backlog"]
   F --> W["Work Item: a task of the Team"]
@@ -35,7 +35,7 @@ Figure 1: the levels of the work.
 
 | Level | Backlog or board | Horizon | Closes |
 | --- | --- | --- | --- |
-| Strategic Priority | Priorities | Years, reviewed yearly | Retired by the Steering |
+| Strategic Priority | Priorities | Years, reviewed yearly | Closed or cancelled by the Executive Sponsor |
 | Initiative | Portfolio Backlog and Portfolio Kanban | Long-term | When its outcome is reviewed and accepted |
 | Solution | The Portfolio | Per type | When its type ends |
 | Epic | Program Backlog and Program Kanban | One or more PIs | When its Features are closed |
@@ -72,6 +72,7 @@ stateDiagram-v2
   Active --> Pivoted: rerouted
   Active --> Cancelled: no longer needed
   Active --> Discovery: Solution only, Risk Tier change
+  Active --> Closed: Solution only, retired or handed off
   Waiting --> Active: Dependency cleared
   Waiting --> Deferred: will not clear
   Waiting --> Cancelled: no longer needed
@@ -114,7 +115,7 @@ direction, and what is done in an IT is decided in that IT.
 | Set the intent | PI Planning | Choose the Epics and Features that the PI aims at, with their Dependencies | The Teams, the Domain Owners, the Executive Sponsor | The PI Objectives; the Roadmap |
 | Select the Features | IT Planning | Select the Features for the month into the IT Backlog | The Team with the product owners | The IT Backlog |
 | Develop | Weekly loops | Build the minimum solution with the function | AICC Engineer with the Domain Expert | Working increments |
-| Verify | Before the first deployment | The check for Risk Tier 1; the validation by the Control Function Contacts for Risk Tier 2 and 3 | The checker; the Control Function Contacts | The check, or the Control Sign-Off |
+| Verify | Before the first deployment | The check for Risk Tier 1; the validation by the Control Function Contacts for Risk Tier 2 and 3 | The Checker; the Control Function Contacts | The check, or the Control Sign-Off |
 | Deploy | Weekly loops | Deploy the first Feature to the function, with training for the users, only after the check or the validation | AICC Engineer; the Platform Owner for the platform | A deployed Feature |
 | Release | At the IT Review, or when ready | Decide that the Solution goes beyond its first users | Domain Owner; Executive Sponsor for Risk Tier 3 | The release, in the Solution Definition |
 | Demonstrate and accept | IT Review and Demo | Show what works, and take the acceptance | Product owner | The acceptance, with who and when |
@@ -125,7 +126,7 @@ and the rest is a new Feature in the next Program Increment. The original is Piv
 
 ## 6. After delivery: three types of Solution
 
-The offering type of a Solution, set in its definition, decides its life after delivery and who owns it. The receiver is named in the
+The offering type of a Solution, set in its definition, decides its life after delivery and who owns it. The Receiver is named in the
 Solution Definition before the Solution is approved.
 
 Figure 3 shows the three lives.
@@ -147,7 +148,7 @@ flowchart LR
   end
   subgraph EX["Experiment: time-boxed, no consumer"]
     direction LR
-    X1["Trial"] --> X2["Proposal"] --> X3["Handover to the receiver"]
+    X1["Trial"] --> X2["Proposal"] --> X3["Handover to the Receiver"]
     X3 -.AICC oversees.-> A["Adopted Solution"]
   end
 ```
@@ -158,7 +159,7 @@ Figure 3: the life of a Solution by type.
 | --- | --- | --- | --- | --- |
 | Service | AICC | Operate, Evolve, Retire | A business case with the run cost and a sunset rule | Retired or cancelled |
 | Product | The consumer owns the version; AICC supports on demand | Handover, Support, Revise, Retire for the consumer | A Product with many consumers or recurring requests becomes a Service through a business case | Retired for the consumer |
-| Experiment | None yet | Trial, Proposal, Handover | Time-boxed to a stated number of ITs; the Handover is complete when the receiver accepts it | Handed off, closed with its lessons, or cancelled |
+| Experiment | None yet | Trial, Proposal, Handover | Time-boxed to a stated number of ITs; the Handover is complete when the Receiver accepts it | Handed off, closed with its lessons, or cancelled |
 
 Operation and support answer the requests of the users and the incidents, with the lane Urgent first. AICC reassesses the Risk
 Tier on a change and on its date in the AI Registry.
@@ -176,7 +177,7 @@ decider of its own.
 
 ## 9. Where it runs
 
-From the cutover of the Operating Model 9 the stream runs in Jira and Confluence. The charter holds this schema, and the Registry and the
+From the cutover of the working state (Operating Model 9.1) the stream runs in Jira and Confluence. The charter holds this schema, and the Registry and the
 Portfolio hold the records that an auditor may ask for. Jira stays clean: a few statuses, one flag, and one resolution, while the business states are in the charter and a
 field.
 

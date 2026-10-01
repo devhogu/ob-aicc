@@ -1,5 +1,7 @@
 # DR-2026-019 Acceptance closes Backlog items
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead, on the direction that AICC stays close to agile: the product owner accepts the delivered work and the Backlog item is closed.
 
 ## Decision

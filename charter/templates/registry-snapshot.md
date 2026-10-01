@@ -2,7 +2,7 @@
 id: AICC-TPL-11-EN
 title: Registry Snapshot
 status: active
-revision: 1.0
+revision: 1.2
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -14,7 +14,7 @@ is a closed and dated extract of the working state. It carries no figures of the
 
 | Field | Entry |
 | --- | --- |
-| Identifier | SNP-[yyyy]-[nn] |
+| Identifier | SNP-[yyyy]-[PIQn]-[ITnn], or SNP-[yyyy]-[PIQn] for a PI close |
 | Date | [date] |
 | Scope | [IT close / PI close / cutover, with the IT or PI] |
 | Source | [the Jira query or the Registry file, with the version] |
@@ -34,7 +34,17 @@ is a closed and dated extract of the working state. It carries no figures of the
 | --- | --- | --- |
 |  |  | DR-[yyyy]-[nnn] |
 
-## 3. Engagements
+## 3. Solutions
+
+[For each Solution: its state, Risk Tier, check or validation, and release, taken from the Solution Definition.]
+
+## 4. Initiative Briefs
+
+| Initiative | Sections open | Approved on |
+| --- | --- | --- |
+|  | [the numbers of the open sections of the brief, or none] |  |
+
+## 5. Engagements
 
 [For each Engagement: the client function, the Service Agreement, the Outcome Report if any, and the state.]
 

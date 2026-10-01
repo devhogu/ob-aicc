@@ -2,7 +2,7 @@
 id: AICC-MND-03-EN
 title: Business Model
 status: active
-revision: 0.4
+revision: 0.5
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -35,7 +35,7 @@ the Adopted Solutions that others deliver. The Bank decides on the Proposals.
 3.1. An Engagement is an Initiative that has a client function. One Service Agreement is issued for each client function of an
 Initiative, and the client of an Initiative that is enabling work of AICC is the Executive Sponsor. The Domain Owner represents the
 function. A Domain Expert of the function is the
-partner who works with AICC. The business owners and the stakeholders who do not belong to AICC are notified, and they commit to
+partner who works with AICC. The other heads of function and the stakeholders who do not belong to AICC are notified, and they commit to
 nothing. A provider that has an agreement with the Bank commits as that agreement states.
 
 3.2. The AICC team is the AICC Lead, the people who are assigned to AICC and are not administratively owned by it, and the partners
@@ -89,12 +89,12 @@ and its Outcome Report.
 confirms. The money and the other figures of the Bank stay in the systems of the Bank, and the records point to them.
 
 6.2. The Quarterly Report shows the capacity committed and used and the benefit confirmed for each Engagement. The Investment
-Envelopes remain the funding of AICC, and AICC does not charge the functions.
+Envelopes fund the Strategic Priorities and the capacity of teams, as the Charter 4.1 states, and AICC does not charge the functions.
 
 ## 7. Controls on the commitment
 
 7.1. AICC shall not commit more capacity per IT than its people can deliver. The AICC Lead states the capacity available per IT in the
-Assignment Map, adds up the capacity of the Service Agreements, and does not issue a Service Agreement that takes the sum above the
+Teams Record, adds up the capacity of the Service Agreements, and does not issue a Service Agreement that takes the sum above the
 capacity available. The work above it waits in the Portfolio Backlog.
 
 7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, and fits the capacity.
@@ -120,3 +120,4 @@ Bank, and holds no figure of it.
 | 0.2 | 2026-10-01 | Activated by the AICC Lead. | DR-2026-018 |
 | 0.3 | 2026-10-01 | An Engagement is an Initiative with a client function; the Service Agreement is issued when the study starts; Adopted Solutions; the Portfolio Backlog replaces the Agreement Log. | DR-2026-027 |
 | 0.4 | 2026-10-01 | Controls on the commitment: capacity ceiling, intake, benefit confirmer, completeness check, accepted limit, budget owner; support in Service Management. | DR-2026-031 |
+| 0.5 | 2026-10-01 | Other heads of function in place of business owners; capacity in the Teams Record; funding by the Charter 4.1; activation entered with the Templates. | DR-2026-034 |

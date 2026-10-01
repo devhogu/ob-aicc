@@ -1,5 +1,7 @@
 # DR-2026-015 Fixes from the acceptance assessment
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-09-30. Decided by the AICC Lead. Basis: portfolio/assessments/2026-09-30-5/ (documents, and end to end).
 
 ## Decisions

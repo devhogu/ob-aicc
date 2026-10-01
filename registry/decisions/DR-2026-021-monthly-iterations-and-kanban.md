@@ -1,5 +1,7 @@
 # DR-2026-021 Monthly Iterations, Kanban lanes, and a year calendar
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead. The work of AICC is exploratory, and about 60 percent or more of it depends on people and events outside AICC, so tight two-week sprints cannot be kept. The Iteration follows the calendar month, so that anyone can map it without knowing an artificial number.
 
 ## Decision

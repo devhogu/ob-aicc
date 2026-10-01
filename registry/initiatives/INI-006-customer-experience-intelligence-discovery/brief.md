@@ -4,22 +4,44 @@
 | --- | --- |
 | Identifier | INI-006 |
 | Title | Customer experience intelligence: discovery |
-| State and Stage | Discovery: Scoping. A goal of the first 100 days, confirmed by the Executive Sponsor |
+| State and Stage | Discovery: Scoping |
 | Strategic Priority | PRI-1 Customer intelligence |
-| Solutions expected | To be defined in discovery |
-| Domain and Domain Owner | Commercial front office, retail functions, and commercial sales; Domain Owner to be named |
+| Domain Owner (represents the client function) | Commercial front office, retail functions, and commercial sales. [ The Domain Owner, named by the head of the function concerned ] |
+| Solutions expected | [ The Solutions, with their types, proposed at the end of the discovery ] |
+| Service Agreement | [ AGR-nnn: the Service Agreement of this Engagement, issued at the start of the study and amended at the approval of the business case (Business Model 5; RI-022) ] |
 | Period | September to December 2026 |
-| Date of last change | 2026-09-30 |
+| Date of last change | 2026-10-01 |
+
+## Completeness
+
+| Section | Required at | State |
+| --- | --- | --- |
+| 1. Hypothesis | Scoping | Complete |
+| 2. Business outcomes and leading indicators | Business case | Open: the source system of the figures, and the baseline and target of each indicator |
+| 3. Scope and the minimum viable product | Scoping | Complete |
+| 4. Cost, capacity, and value | Business case | Open: the capacity in days, and the Investment Envelope |
+| 5. Risks, dependencies, and Risk Tier | Business case | Complete |
+| 6. Decision and acceptance | Business case | Open: the approver and the Service Agreement |
 
 ## 1. Hypothesis
 
 If the challenges that customers experience are consolidated from their sources and analyzed with AI, then the front office can see where its service is inefficient and what to improve first.
 
-## 2. Problem or opportunity, and scope
+Today customer experience information is spread across support requests, issues, and challenges raised in sales and service. It is not gathered in one place, so the inefficiencies of the front office are hard to see.
 
-**Problem or opportunity.** Customer experience information is spread across support requests, issues, and challenges raised in sales and service. It is not gathered in one place, so the inefficiencies of the front office are hard to see.
+## 2. Business outcomes and leading indicators
 
-**AICC does.**
+| Business outcome | Leading indicator | Where the figures live | Date |
+| --- | --- | --- | --- |
+| A map of the sources of customer experience information | Sources mapped, with owner and data class | [ The source system of the function ] | 2026-12-31 |
+| The approach to consolidate and analyze them with AI, and a first view of the inefficiencies of the front office, from the sample where permitted | Themes identified in the sample | [ The source system of the function ] | 2026-12-31 |
+| A proposal for the next quarter, for decision at the quarterly Steering | Proposal delivered | [ The source system of the function ] | 2026-12-31 |
+
+The baseline and the target of each indicator are figures of the Bank. They are kept in the source system of the function, and this brief points to them. [ The source system of the function that holds the figures, named with the Domain Owner by 2026-10-31, with the baseline and the target of each indicator ]
+
+## 3. Scope and the minimum viable product
+
+AICC does the following.
 
 1. With the front office, retail functions, and commercial sales, list where customer experience information arises: support requests, issues, challenges, and others.
 2. Establish for each source its owner, format, volume, data class, and how it can be brought together.
@@ -28,25 +50,42 @@ If the challenges that customers experience are consolidated from their sources 
 5. Describe the inefficiencies of the front office that the analysis points to.
 6. Propose what to build, with its expected Risk Tier, for the next quarter.
 
-**Out of scope.** Building a platform; any change to channels, processes, or customer contact; the use of customer data before its data class and the controls are confirmed.
+Out of scope: Building a platform; any change to channels, processes, or customer contact; the use of customer data before its data class and the controls are confirmed.
 
-## 3. Outcome, Measures, cost, and risk
+Minimum viable product: The map of the sources and the approach tested on one small sample, where permitted.
 
-**Outcome by 31 December 2026.**
+## 4. Cost, capacity, and value
 
-- A map of the sources of customer experience information.
-- The approach to consolidate and analyze them with AI.
-- A first view of the inefficiencies of the front office, from the sample where permitted.
-- A proposal for the next quarter, for decision at the quarterly Steering.
+Cost: the time of the AICC Lead. No other cost is stated.
 
-**Measures.** Sources mapped, with owner and data class; Themes identified in the sample; Proposal delivered. Baselines and targets are set with the Domain Owner by 31 October 2026. They are figures of the Bank, so they are kept in the source system of the function, and this brief points to them.
+Capacity: [ The capacity in days per IT for the minimum viable product, within the capacity available (Business Model 7.1), and the estimate for the full scope ]
 
-**Cost.** The time of the AICC Lead. No other cost is stated.
+Investment Envelope: [ The Investment Envelope of the Strategic Priority, by reference to the financial planning of the Bank, set with the Guardrails ]
 
-**Risk.** Customer data is involved: Risk Tier 2 is expected for any Solution that follows. Data protection and information security check before the first deployment (RI-014).
+Value: tracked by the indicators of section 2, and confirmed by the Domain Owner at the Outcome Report (Business Model 7.3).
 
-## 4. Decision and acceptance
+## 5. Risks, dependencies, and Risk Tier
 
-Confirmed as a goal of the first 100 days by the Executive Sponsor (DR-2026-012), with the wording and scope restated in DR-2026-013. The business case is approved when scoping is complete.
+Risk: Customer data is involved. Data protection and information security check before the first deployment (RI-014).
 
-Acceptance on delivery: The heads of the functions concerned (commercial front office, retail, commercial sales). Acceptance closes the item.
+Expected Risk Tier: Risk Tier 2 is expected for any Solution that follows.
+
+Control Functions to consult: Data protection, information security, and model risk.
+
+Dependencies: DEP-004 (named Domain Owners and Domain Experts), DEP-008 (the map of the sources from INI-002), DEP-009 (access to support requests, issues, and challenges, and their data class), DEP-014 (validation by the Control Function Contacts).
+
+## 6. Decision and acceptance
+
+The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
+
+Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor while the Guardrails are not set (AICC Charter 4.2), with the date and the Decision Record ]
+
+Acceptance on delivery: The heads of the functions concerned: the commercial front office, retail, and commercial sales. Acceptance closes the item.
+
+## Amendments after approval
+
+A change after the approval of the business case is entered here with its date and its Decision Record, and the sections above stay as approved.
+
+| Date | Section | Change | Decision Record |
+| --- | --- | --- | --- |
+|  |  |  | DR-[yyyy]-[nnn] |

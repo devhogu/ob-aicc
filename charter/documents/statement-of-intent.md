@@ -2,7 +2,7 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 1.4
+revision: 1.5
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -160,7 +160,7 @@ speed of release that apply to it.
 ## 9. Strategic Priorities
 
 9.1. The Bank and the Group have seven Strategic Priorities, stated in order. Each rests on the governed foundation set
-out in section 11.
+out in section 10.
 
 ### 9.2. Customer intelligence
 
@@ -326,3 +326,4 @@ listed in the Appointments Record.
 | 1.2 | 2026-10-01 | Activated by the AICC Lead; takes effect on this date. | DR-2026-018 |
 | 1.3 | 2026-10-01 | Solution replaces Use Case. | DR-2026-024 |
 | 1.4 | 2026-10-01 | Guardrails decide the approval of the Executive Sponsor; the timing of the Maturity Levels is in the Priorities; the Board Committee report is quarterly. | DR-2026-031 |
+| 1.5 | 2026-10-01 | Cross-reference to section 10 corrected. | DR-2026-034 |

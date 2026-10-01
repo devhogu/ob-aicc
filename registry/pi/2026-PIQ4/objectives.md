@@ -12,4 +12,4 @@ Business value is scored 1 to 10 by the product owner at the PI Review. Confiden
 | AI in the daily work of functions | INI-003 | Compliance, HR, legal, finance, accounting | The head of each function | | | | Discovery |
 | Retail credit: discovery and mortgage rejection analysis | INI-007 | Retail credit | The head of the retail credit function | | | | Discovery |
 | Knowledge bases across functions | INI-008 | The functions concerned | The head of each function | | | | Discovery |
-| Charter corpus readiness | INI-001 | AICC Team | AICC Lead | | | | Active |
+| Charter corpus readiness | INI-001 | AICC Team | Executive Sponsor | | | | Active |

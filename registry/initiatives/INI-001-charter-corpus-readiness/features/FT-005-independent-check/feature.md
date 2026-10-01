@@ -1,9 +1,9 @@
-# Feature: FT-005 Independent check of the six documents
+# Feature: FT-005 Independent check of the documents
 
 | Field | Entry |
 | --- | --- |
 | Identifier | FT-005 |
-| Title | Independent check of the six documents |
+| Title | Independent check of the documents |
 | Epic | EP-001 Charter readiness |
 | Initiative | INI-001 |
 | State | Deferred |

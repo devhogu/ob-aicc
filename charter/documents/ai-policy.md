@@ -2,7 +2,7 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: active
-revision: 1.2
+revision: 1.3
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -73,11 +73,11 @@ the Solution is in such a category.
 
 3.4. A change that raises the Risk Tier, or that the check or the validation named as requiring a new check, returns the Solution
 to discovery for the checks that the change touches. A validation states the date until which it is valid and the changes that
-require a new one. Use continues unless the checker, the AICC Lead, or a Control Function Contact suspends it.
+require a new one. Use continues unless the AICC Lead or a Control Function Contact suspends it.
 
 3.5. The AICC Engineer shall meet the requirements for the design of human oversight, testing, and logging. The Domain Owner
 shall meet those for oversight in operation, disclosure, and contestability. The Platform Owner shall provide logging and
-monitoring. The Control Function Contacts check them at validation. The AICC Engineer reassesses the Risk Tier, the Domain Owner reviews monitoring and provider notices at each IT Review, and the AICC Lead sets the training and notes the owners of knowledge sources in the AI Registry. For Risk Tier 2 and 3 the validation replaces the check. A condition of a validation may state what the Solution shall not be used for.
+monitoring. The Control Function Contacts check them at validation. The AICC Lead reassesses the Risk Tier, the Domain Owner reviews monitoring and provider notices at each IT Review and Demo, and the AICC Lead sets the training and notes the owners of knowledge sources in the AI Registry. For Risk Tier 2 and 3 the validation replaces the check. A condition of a validation may state what the Solution shall not be used for.
 
 ## 4. AI from providers
 
@@ -98,7 +98,7 @@ of an agent beyond its limits, a material failure of a Solution, and a near miss
 that a regulator must be told of, or an agent acting beyond its limits with effect. Medium is limited or reversible harm, a
 breach of policy, or a failure that affects a Domain. Low is a near miss or an event without harm.
 
-5.3. Anyone who becomes aware of an AI Incident shall report it to the AICC Engineer of the Solution or to the AICC Lead, who
+5.3. Anyone who becomes aware of an AI Incident shall report it to the AICC Engineer of the Solution or to the AICC Lead [ The channel of the report and the time limit to report and to classify, set when Service Management of the Bank is joined ], who
 classifies the Severity and enters the AI Incident in the Risks and Issues Record. The report of a High Severity AI Incident goes at once to the
 AICC Lead, to the Control Function Contacts, to the Platform Owner, to the Domain Owner, and to the Executive Sponsor, who tells the Board Committee without waiting for the next report.
 
@@ -138,3 +138,4 @@ proceeds: no Risk Tier 2 or 3 Solution, no provider, and no Group Arrangement.
 | 1.0 | 2026-10-01 | Event names use the short forms IT and IP. | DR-2026-023 |
 | 1.1 | 2026-10-01 | Solution replaces Use Case; the Risk Tier is assigned when the Solution is defined; testing before the first deployment. | DR-2026-024 |
 | 1.2 | 2026-10-01 | The Risk Tier is confirmed at every validation; the AICC Lead leads the review of an AI Incident. | DR-2026-031 |
+| 1.3 | 2026-10-01 | The AICC Lead reassesses the Risk Tier and, with a Control Function Contact, may suspend; the open place for the channel of an AI Incident report. | DR-2026-034 |

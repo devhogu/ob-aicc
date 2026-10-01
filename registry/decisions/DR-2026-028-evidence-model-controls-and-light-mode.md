@@ -1,5 +1,7 @@
 # DR-2026-028 The evidence model, the controls, and the light mode
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead, after the shape review. All thirteen states are kept.
 
 ## Decision

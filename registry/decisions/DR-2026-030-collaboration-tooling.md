@@ -1,5 +1,7 @@
 # DR-2026-030 The collaboration tooling
 
+*In its own short form, not the Decision Record Template.*
+
 Date: 2026-10-01. Decided by the AICC Lead.
 
 ## Decision

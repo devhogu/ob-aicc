@@ -1,5 +1,7 @@
 # DR-2026-014 The Executive Sponsor approves the output of AICC
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-09-30. Decided by the Executive Sponsor (Simen Munter, Chief Executive Officer), on the AICC Lead's report: he is the approver for everything that AICC does.
 
 ## Decision

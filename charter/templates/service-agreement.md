@@ -24,7 +24,7 @@ one page. It is reviewed at each IT, and each change is noted at the end.
 | Phases covered | [study / proof / delivery / support] |
 | Support level | [none / on demand / at agreed response targets / run by AICC] |
 | Issued by the AICC Lead on | [date] |
-| Notified | [Domain Owner, business owners, stakeholders] |
+| Notified | [Domain Owner, other heads of function, stakeholders] |
 
 **Scope and outcome targets.** [As in the Initiative Brief of the Initiative; state here only what the Brief does not, or what has changed.] **Out of scope.** [What is excluded.]
 
@@ -48,7 +48,7 @@ Report, or the sunset rule for a Service.]
 | --- | --- |
 | Who works on it | [AICC Lead, AICC Engineers, Domain Expert, and the availability expected of each] |
 | Communication and decisions | [Channels, the rhythm, and who decides what] |
-| Who is notified | [Business owners and stakeholders, and when] |
+| Who is notified | [Other heads of function and stakeholders, and when] |
 | Data handling | [Data classes approved by the Domain Owner; no figures, documents, data, or code in the records] |
 | Escalation | [Who, and when] |
 | Reporting | [Progress in the Weekly Review; the Outcome Report at the end] |

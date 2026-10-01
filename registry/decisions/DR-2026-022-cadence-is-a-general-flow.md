@@ -1,5 +1,7 @@
 # DR-2026-022 The Cadence is a general flow without dates
 
+*Written before the Decision Record Template (DR-2026-029), in its own form.*
+
 Date: 2026-10-01. Decided by the AICC Lead. The Calendar is the dated timeline. The Cadence is the general flow of the events, by Program Increment, Iteration, and week, with no dates. It assumes a clean calendar, with Monday and Friday as the planning and review days of every week. It is the template and the guidance for a dated calendar of events, built later for a rolling two quarters.
 
 ## Decision

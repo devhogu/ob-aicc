@@ -7,7 +7,7 @@ rules move events to the day before.
 
 The Cadence holds the control flow only: the loops, the events, and the control of each loop. What is done inside each event is
 described in the other workflows. The short forms and the events are defined in the vocabulary
-at the end of this Record.
+at the end of this workflow.
 
 ## 1. Every week
 
@@ -22,7 +22,7 @@ on the cadence.
 
 ## 2. Every IT
 
-An IT is one calendar month. It is four or five whole weeks, and its last week is always the review week. A five-week IT has one
+An IT is one calendar month. It is four or five whole weeks, and its last week is the review week, except in the third IT of a PI, where the IP week takes its place. A five-week IT has one
 more working week in the middle.
 
 | Week of the IT | Events in addition to the weekly events |
@@ -166,7 +166,7 @@ built yet.
 
 ## 9. Light mode
 
-While the Team has up to three people, the Operating Model 7.5 applies. The following table shows which events remain.
+While the Team has up to three people, the Operating Model 7.7 applies. The following table shows which events remain.
 
 | Event | In light mode |
 | --- | --- |
