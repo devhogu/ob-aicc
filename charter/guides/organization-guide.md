@@ -96,42 +96,24 @@ R means responsible, A accountable, C consulted, and I informed. Each activity h
 | Competence and training | The training that a Role needs is completed and recorded | The Holder and the AICC Lead | The Appointments Record, Part D |
 | Access to the tools | Access to Jira, Confluence, Service Management, and the repository follows the Role and is reviewed | The AICC Lead | The Appointments Record, Part E |
 
-The first week of a new Holder runs in this order. The Holder accepts the Role and declares any conflict of interest. The line manager consents and the time allocation is stated, where the Holder is assigned. The AICC Lead enters the appointment in the Appointments Record within five working days, and names the deputy. Access to the tools is granted for the Role. The Holder reads the reading path in the README of the charter, and completes the training that the Role needs as the AICC Lead sets it. [ The training for each Role, set by the AICC Lead and agreed with HR ]
+The first week of a new Holder runs in this order. The Holder accepts the Role and declares any conflict of interest. The line manager consents and the time allocation is stated, where the Holder is assigned. The AICC Lead enters the appointment in the Appointments Record within five working days, and names the deputy. Access to the tools is granted for the Role. The Holder reads the reading path in the README of the charter, and completes the training that the Role needs as the AICC Lead sets it. 
 
 An appointment missing at the activation of the Operating Model is made within 60 days, and the Executive Sponsor names acting Holders meanwhile. An appointer shall not appoint themselves to a Role: the next level appoints (Operating Model 4.6).
 
-The rules of separation of the Operating Model 4.4 apply to every appointment: nobody validates or checks work they built (4.4(a)); the owner of a Solution accepts it and does not validate it (4.4(b)); a Control Function Contact is not a member of AICC (4.4(c)); the AICC Lead may build a Solution but does not check or validate it, does not release it, and does not give its business acceptance, and may accept its Features and Capabilities and give the final acceptance of the Team as product owner (Solution Lifecycle Model 7.3), the Executive Sponsor then approves its Solution Definition, assigns its Risk Tier, and approves its use for a data class, and the AICC Lead does not validate a Solution within the remit of a Control Function (4.4(d)); and until AICC has a second Solution Engineer, a check by a person other than the builder is done by an engineer of the IT function or the Domain whom the AICC Lead names in the Appointments Record (4.4(e)). While the Team is small, one person holds several Roles within these rules, and the combinations accepted are two: that of the Business Model 7.5, in which the AICC Lead issues the Service Agreement, delivers, and writes the Outcome Report, and that of the Solution Lifecycle Model 7.3(d), in which the AICC Lead gives the acceptance of the Features and the final acceptance of the Team for a Solution that the AICC Lead built. Each is listed in the Appointments Record as an accepted limit, with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead.
+The rules of separation of the Operating Model 4.4 apply to every appointment.
+
+- Nobody checks or validates work that the person built.
+- The owner of a Solution accepts it and does not validate it.
+- A Control Function Contact is not a member of AICC.
+- The AICC Lead may build a Solution, may accept its Features and Capabilities as product owner, and gives the final acceptance of the Team. The AICC Lead does not check, validate, release, or give the business acceptance of it, and the Executive Sponsor then approves its Solution Definition, assigns its Risk Tier, and approves its use for a data class.
+- Until AICC has a second Solution Engineer, the person other than the builder who checks is an engineer of the IT function or the Domain whom the AICC Lead names in the Appointments Record.
+
+While the Team is small, one person holds several Roles within these rules. Two combinations are accepted as limits, and each is listed in the Appointments Record with its compensating controls: the AICC Lead issues the Service Agreement, delivers, and writes the Outcome Report (Business Model 7.5), and the AICC Lead gives the acceptance of the Features and the final acceptance of the Team for a Solution that the AICC Lead built (Solution Lifecycle Model 7.3(d)).
 
 ## 7. Records and evidence
 
 The charter holds the rules, and Jira and Confluence run the live work. The Registry holds the evidence records as closed and dated extracts, taken when an event happens and at the close of each Iteration and PI. Jira, Confluence, and Service Management are not an evidence store. The Registry is kept in a repository with a protected main branch, its history is not rewritten, and each Record is kept for the period that the Bank requires for its type. Personal data in the Registry is limited to the names and the posts of the Holders, and the declarations, consents, and access of the Appointments Record (Operating Model 7.4). The Operating Model 8 lists the controls and the record that evidences each.
 
-## 8. Audit and HR reference
-
-The expectations below are general practice of internal audit and HR in a bank, and are to be validated with the internal audit and HR of the Bank. The charter names Roles and bodies only. Real names and bodies are entered in the records of the Registry, such as the Appointments Record. A bracketed comment states what is expected in an open place.
-
-| Expectation | Where the rule is | The record | Open |
-| --- | --- | --- | --- |
-| A mandate above the unit | Charter 3.1 | Appointments, the mandate reference | [ The decision or order by which the Executive Sponsor holds the mandate of AICC and appointed the AICC Lead: its number, date, and issuer, entered in the Appointments Record with the real names ] |
-| Delegation of authority and decision rights | Operating Model 4.2, 5.3, 4.7 | Decision Log; the delegations in the Appointments Record | [ The amounts that may be committed without the Executive Sponsor, given as references to the financial planning of the Bank, set by the Executive Sponsor each year ] |
-| Role profiles and responsibilities | This guide, sections 3 and 4 | The Appointments Record, Part B | [ HR confirms the profiles and the typical competence, and that they match the job descriptions of the Bank ] |
-| The place of the unit in the organization | This guide, section 2 | The organization chart of the Bank | [ HR confirms where AICC sits in the organization chart of the Bank and its reporting line ] |
-| Appointments, changes, and leavers | Operating Model 4.6, 4.8 | The Appointments Record, Part C | [ Each appointment, acting designation, change, and relief entered with its effective date and its decision reference, as the Appointments Record Part C requires ] |
-| Conflict-of-interest declarations | Operating Model 5.7 | The Appointments Record, Part D | [ HR and internal audit decide whether the declaration is made each year, and in what form ] |
-| Steering Summaries and decisions of the Steering | Operating Model 6, 5.6 | Steering Summary; Decision Record | None |
-| Risk, issue, incident, and exception Records | AI Policy 5, 6; Operating Model 7 | Risks and Issues; AI Incident Review; Control Sign-Off | [ A method to rate a risk, aligned with the risk register of the Bank and set with the risk function ] |
-| Policy and document control | Document Catalog 3, 4, 7 | Decision Record of each activation and check | None |
-| Training and competence | Statement of Intent 10.1; AI Policy 2.1 | The Appointments Record, Part D | None |
-| Budget and funding trace | Charter 4; Business Model 7.6 | The funding reference in the Decision Record | [ The system of the Bank where the budget and the Envelopes live; the records point to it and hold no figure ] |
-| Performance reporting | Charter 7 | Quarterly Report | [ The committee of the Board that oversees AI, as the Board names it; the Executive Sponsor enters it in the Appointments Record ] |
-| Vendor and provider records | AI Policy 4 | Control Sign-Off of the provider check | None |
-| AI inventory | AI Policy 2.1, 3 | AI Registry | [ The AI Registry holds every known AI use with its Risk Tier once the AICC Lead has listed them; HR and audit see the list when it is complete ] |
-| Segregation of duties | Operating Model 4.4 | The Appointments Record | [ The accepted limits of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d) are in Part B of the Appointments Record, with their compensating controls ] |
-| Access to the tools, and its review | Operating Model 7.6 | The Appointments Record, Part E | None |
-| Audit access and follow-up | Operating Model 7.5 | Findings in Risks and Issues | [ The named contact of internal audit, entered in the Appointments Record ] |
-| Retention and integrity | Operating Model 7.4 | The Registry itself | [ The retention period of each type of Record, as the record retention rules of the Bank require ] |
-| Role-based objectives tied to appraisal | None | None | [ HR decides whether the Roles carry objectives tied to appraisal, and how ] |
-
-## 9. Rule source
+## 8. Rule source
 
 Charter 3 to 7; Business Model 3 and 7; Operating Model 2, 4, 5, 6, 7, 8; AI Policy 2 to 6; Document Catalog; the Unit governance workflow.

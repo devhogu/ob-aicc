@@ -2,15 +2,63 @@
 
 ## 1. Purpose and when it applies
 
-This guide explains how AICC is directed, reported, and controlled as an organizational unit: the mandate, the planning, the reporting, the decisions, the controls, and the assurance. It is the answer to the question "how does your unit operate?". It applies throughout.
+This guide explains how AICC is directed, reported, and controlled as an organizational unit: the mandate, the planning, the reporting, the decisions, the controls, and the assurance. It is the answer to the question "how does your unit operate?". It applies throughout. It states no rule of its own, and the rules are in the Charter, the Operating Model, the Portfolio Management Model, the Solution Lifecycle Model, and the AI Policy.
 
-## 2. The mandate and the authority
+## 2. The mandate, the authority, and independence
 
 AICC acts under the mandate of the Executive Sponsor, and the Charter states its limits: it does not own the AI Platform, it does not own the results of a Domain, it does not set the rules of a Control Function, it does not validate its own work, and it does not decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function. The appointment of the AICC Lead and the decision reference of the mandate are entered in the Appointments Record. The Executive Sponsor may delegate a decision in writing, for a scope and a period, and each delegation is entered there.
+
+Figure 1 shows who holds the authority, who is independent of AICC, and the direction of the reporting.
+
+```mermaid
+flowchart TB
+  BD["Board Committee<br/>oversees AI for the Board"]
+  ES["Executive Sponsor<br/>holds the mandate and the funding"]
+  AS["AI Steering Committee<br/>advises; the Executive Sponsor chairs"]
+  AL["AICC Lead<br/>appointed by the Executive Sponsor"]
+  TM["Solution Engineers and the Teams<br/>appointed by the AICC Lead"]
+  DO["Domain Owners and Domain Experts<br/>own the results of AI adoption in a Domain"]
+  CF["Control Function Contacts<br/>decide within their remit<br/>nobody overrides them"]
+  PO["Platform Owner<br/>AI Platform, logging, monitoring"]
+  IA["Internal audit<br/>assurance only<br/>read access to every Record"]
+  ES -->|"appoints"| AL
+  ES --- AS
+  AL -->|"appoints"| TM
+  AL --- DO
+  TM -->|"reports"| AL
+  AL -->|"reports"| ES
+  ES -->|"Quarterly Report"| BD
+  CF -.->|"independent of AICC"| AL
+  PO -.->|"provides the Platform"| TM
+  IA -.->|"assures"| ES
+  classDef ext fill:#eef6ee,stroke:#5a8a5a,color:#111
+  class CF,PO,IA ext
+```
+
+Figure 1: the authority, the independent functions, and the reporting.
 
 ## 3. The loops
 
 The control of the unit runs as five loops of the Operating Model 6, and the portfolio runs as four loops of the Portfolio Management Model 4. They run on the same events and add no meeting.
+
+Figure 2 shows the loops with the person who decides in each, and the way the frame passes down and the evidence passes up.
+
+```mermaid
+flowchart TB
+  DI["Direction loop, yearly<br/>yearly Steering, December<br/>decides: Executive Sponsor"]
+  AS["Assurance loop, quarterly<br/>quarterly Steering<br/>decides: Executive Sponsor"]
+  CO["Control loop, monthly<br/>monthly Steering<br/>decides: Executive Sponsor"]
+  OP["Operating loop, weekly<br/>Weekly Review<br/>decides: AICC Lead<br/>record: the Dashboard"]
+  DI <-->|"frame down: appetite, Priorities, Guardrails<br/>evidence up: Quarterly Report"| AS
+  AS <-->|"frame down: results, risk check, Maturity Level<br/>evidence up: Steering Summary"| CO
+  CO <-->|"frame down: sample, deficiencies, gate decisions<br/>evidence up: Dashboard, Dependencies"| OP
+  EV["Event loop, when it happens<br/>an AI Incident, an Exception, a stop, a risk beyond appetite,<br/>a finding, a change of Holder"]
+  EV -.->|"entered in Risks and Issues<br/>or a Decision Record, then reviewed"| CO
+```
+
+Figure 2: the control loops and their deciders.
+
+The following table states each loop, its event, what is set or reviewed, who decides, and the record that it leaves.
 
 | Loop | Cadence and event | What is set or reviewed | By whom | Record |
 | --- | --- | --- | --- | --- |
@@ -24,6 +72,23 @@ The control of the unit runs as five loops of the Operating Model 6, and the por
 
 The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain, reaches outside the Bank, or sets a standard for others; cannot be reversed without significant cost; exceeds a guardrail or changes a Strategic Priority; or accepts a risk beyond the appetite or concerns a Risk Tier 3 Solution. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in the Decision Log, and a Decision of the Executive Sponsor that is hard to reverse, and a Decision that the Operating Model 8 names as evidenced by a Decision Record, also has a Decision Record (Operating Model 5.6).
 
+Figure 3 shows how the level of a decision is chosen and what it leaves on record.
+
+```mermaid
+flowchart LR
+  DEC(["A decision is needed"]) --> Q1["Is it within the remit<br/>of a Control Function?"]
+  Q1 -->|"yes"| CFD["The Control Function decides<br/>nobody overrides it<br/>Control Sign-Off"]
+  Q1 -->|"no"| Q2["Does a condition of<br/>Operating Model 5.2 apply?"]
+  Q2 -->|"no"| TMD["The person who does the work<br/>decides on the facts<br/>noted in the work item"]
+  Q2 -->|"yes"| LV["The AICC Lead, or the Executive Sponsor<br/>at the level that Operating Model 5.3 names"]
+  LV --> LOG["Decision Log, one line<br/>and a Decision Record when hard<br/>to reverse or named in section 8"]
+  LOG --> REV["Reviewed in the monthly sample<br/>and at the date to revisit"]
+  classDef gate fill:#e8eefc,stroke:#5a6fa8,color:#111
+  class Q1,Q2 gate
+```
+
+Figure 3: the choice of the level of a decision, and its record.
+
 ## 5. Reporting and assurance
 
 Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The Control Functions stand beside it, independent of AICC. Internal audit gives assurance only, and has read access to the Registry and, read only, to Jira, Confluence, and Service Management. The Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major, as it requires, and of any risk accepted beyond the appetite, without waiting for the next report.
@@ -34,7 +99,7 @@ The working state is in the Registry until the cutover and then in Jira and Conf
 
 ## 7. The controls and how to test them
 
-The Operating Model 8 lists each control with its rule, owner, timing, and evidence record. The table below gives, for each control, its objective, its type, and how an auditor tests it. Type is Directive (sets a rule or a direction), Preventive (stops an error before it happens), or Detective (finds an error after it happens). The test and the status of each control at a date are in the Control Matrix in the Registry.
+This section is the reference of internal audit, and the rest of the guide can be read without it. The Operating Model 8 lists each control with its rule, owner, timing, and evidence record. The table below gives, for each control, its objective, its type, and how it is tested. Type is Directive (sets a rule or a direction), Preventive (stops an error before it happens), or Detective (finds an error after it happens). The test and the status of each control at a date are in the Control Matrix in the Registry.
 
 | Ref | Control | Objective | Type | How to test |
 | --- | --- | --- | --- | --- |
@@ -71,17 +136,6 @@ The Operating Model 8 lists each control with its rule, owner, timing, and evide
 | C-31 | Retirement of a Solution | A retired Solution leaves no access, data, or registry entry behind | Preventive | Read the approval, and compare access, data, and the AI Registry entry with the retirement |
 | C-32 | Deficiencies and findings | A failed control or a finding is followed up to closure | Detective | Take a finding: read its owner, its due date, and the monthly review |
 
-## 8. What an auditor will ask, and the record that answers
-
-| Question | Answer |
-| --- | --- |
-| What is the source of your authority? | The mandate and its decision reference in the Appointments Record |
-| Who may decide what, and what are the limits? | Operating Model 4.2 and 5.3 and the Charter 3; the delegations in the Appointments Record |
-| How are decisions recorded and reviewed? | The Decision Log and Decision Records; the monthly sample in the Steering Summary |
-| How do you control risk? | The AI Policy, the Control Sign-Offs, and the Risks and Issues |
-| How is independence kept? | The rules of separation, and the Appointments |
-| What did you report, and to whom? | The Quarterly Report and its issuance block |
-
-## 9. Rule source
+## 8. Rule source
 
 Charter 3 to 7; Business Model 5 to 7; Operating Model 4 to 8; Portfolio Management Model 4 and 6; Solution Lifecycle Model 7 to 9; AI Policy 2 to 6; Document Catalog 3, 4, 7; the Unit governance workflow.
