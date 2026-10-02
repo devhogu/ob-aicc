@@ -53,7 +53,7 @@ The Control Matrix keeps the state of every control of the Operating Model 8, by
 
 | Population | Where | Items to date |
 | --- | --- | --- |
-| Decisions | `decision-log.md` | 58 |
+| Decisions | `decision-log.md` | 59 |
 | Steering Summaries | `steering/` | 1, reconstructed |
 | Acceptance Checklists | `checklists/` | 0 |
 | Control Sign-Offs | `sign-offs/` | 0 |

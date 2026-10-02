@@ -8,20 +8,12 @@
 | Strategic Priority | None: enabling work of AICC |
 | Domain Owner (represents the client function) | AICC Lead, for the work of AICC itself (Operating Model 4.6) |
 | Solutions expected | None: enabling work, with Capabilities under the Initiative and no Solution |
+| Business acceptor | The Executive Sponsor, because it is enabling work of AICC (section 6) |
 | Service Agreement | [ AGR-nnn: to be issued when the Initiative is approved at the charter baseline; the Executive Sponsor is the client of enabling work (Solution Lifecycle Model 3.2) ] |
 | Period | September to December 2026 |
 | Date of last change | 2026-10-02 |
 
-## Completeness
-
-| Section | Required at | State |
-| --- | --- | --- |
-| 1. Hypothesis | Scoping | Complete |
-| 2. Business outcomes and leading indicators | Business case | Complete |
-| 3. Scope and the minimum viable product | Scoping | Complete |
-| 4. Cost, capacity, and value | Business case | Complete |
-| 5. Risks, dependencies, and Risk Tier | Business case | Complete |
-| 6. Decision and acceptance | Business case | Open: approval pending until the charter is baselined (DR-2026-054, RI-031) |
+Open sections: 6 (approval pending until the charter is baselined (DR-2026-054, RI-031)).
 
 ## 1. Hypothesis
 

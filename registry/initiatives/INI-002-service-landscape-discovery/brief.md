@@ -8,20 +8,12 @@
 | Strategic Priority | Enabling (all priorities) |
 | Domain Owner (represents the client function) | Enterprise architecture, with the function heads and service owners of the Bank. Domain Owner: the Enterprise architecture lead [ named by the Executive Sponsor ] |
 | Solutions expected | [ None expected: the Initiative ends in ranked candidates for the Backlog ] |
+| Business acceptor | Executive Sponsor, because it is enabling work across all functions (section 6) |
 | Service Agreement | [ AGR-nnn: the Service Agreement of this Engagement, issued at the start of the study and amended at the approval of the business case (Business Model 5; RI-022) ] |
 | Period | September to December 2026 |
-| Date of last change | 2026-10-01 |
+| Date of last change | 2026-10-02 |
 
-## Completeness
-
-| Section | Required at | State |
-| --- | --- | --- |
-| 1. Hypothesis | Scoping | Complete |
-| 2. Business outcomes and leading indicators | Business case | Open: the source system of the figures, and the baseline and target of each indicator |
-| 3. Scope and the minimum viable product | Scoping | Complete |
-| 4. Cost, capacity, and value | Business case | Open: the capacity in days, and the Investment Envelope |
-| 5. Risks, dependencies, and Risk Tier | Business case | Complete |
-| 6. Decision and acceptance | Business case | Open: the approver and the Service Agreement |
+Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 4 (the capacity in days, and the Investment Envelope); 6 (the approver and the Service Agreement).
 
 ## 1. Hypothesis
 

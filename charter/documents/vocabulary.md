@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 6.4
+revision: 6.5
 created: 2026-09-29
 revised: 2026-10-02
 ```
@@ -142,6 +142,7 @@ revised: 2026-10-02
 | Decision Record | The evidence record of one Decision that others will need to find later: the facts, the options, the decision, and where it is entered | |
 | Appointments Record | The living Record in the Registry that maps the Roles to real people, with the log of appointments, the declarations, and the access | assignment map |
 | Control Sign-Off | The evidence record of the decision of a Control Function Contact: a validation, a clearance of a business case, a stop, an Exception, or a provider check | |
+| Business acceptor | The requester who gives the business acceptance of a Solution against its acceptance criteria: the Domain Owner, or the Executive Sponsor for an item that spans Domains, is enabling work, or is an Experiment with no Domain (Solution Lifecycle Model 7.3(c)) | |
 | Acceptance Checklist | The evidence record of the release of a Solution beyond its first users, listing for each party concerned the items that it confirms within its remit and signs | |
 | AI Incident Review | The evidence record of the review of one AI Incident | |
 | Registry Snapshot | The evidence record that closes an Iteration or a PI: the state of the working state at that date | |
@@ -246,3 +247,4 @@ revised: 2026-10-02
 | 6.2 | 2026-10-02 | Acceptance at three levels: Product owner, Domain Owner, Acceptance, Acceptance criteria, Team, and Accepted aligned. | DR-2026-056 |
 | 6.3 | 2026-10-02 | Yearly Steering defined; Steering aligned. | DR-2026-057 |
 | 6.4 | 2026-10-02 | Lean Portfolio Management replaced by Portfolio management; the AICC portal is for AICC, the Executive Sponsor, employees, and internal audit; Environment of use defined. | DR-2026-058 |
+| 6.5 | 2026-10-02 | Business acceptor defined. | DR-2026-059 |

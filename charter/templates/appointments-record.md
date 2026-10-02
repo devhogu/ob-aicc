@@ -2,7 +2,7 @@
 id: AICC-TPL-09-EN
 title: Appointments Record
 status: active
-revision: 1.5
+revision: 1.6
 created: 2026-10-01
 revised: 2026-10-02
 ```
@@ -13,45 +13,45 @@ revised: 2026-10-02
 
 ## Part A. The map
 
-| Role | Scope | Holder (name and post) | Deputy | Status | From | To | Appointed by | Decision Record |
+| Role | Scope | Holder (name and post) | Deputy | Status | From | To | Appointed by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  | [Appointed / Acting / Relieved] |  |  |  | DR-[yyyy]-[nnn] |
 
-The heads and the Contacts named below the Roles are listed in the same way, each with a Status and a Decision Record.
+The heads and the Contacts named below the Roles are listed in the same way, each with a Status and a decision reference.
 
 **Checkers.** The Checker of a Risk Tier 1 Solution, whom the AICC Lead names, and the engineer of the IT function or the Domain who checks until AICC has a second Solution Engineer (Operating Model 4.4(e)), are entered here. A Checker is a designation and not a Role.
 
-| Solution | Name | Named by | Date | Decision Record |
+| Solution | Name | Named by | Date | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- |
 | SOL-[nnn] | [name and post] | [AICC Lead] | [date] | DR-[yyyy]-[nnn] |
 
 **Product owners.** While a Team has up to three people the AICC Lead is its product owner, and no entry is needed. When the AICC Lead names another person as the product owner of a Team (Solution Lifecycle Model 7.3), the person is entered here. A product owner is a designation and not a Role.
 
-| Team | Name | Named by | Date | Decision Record |
+| Team | Name | Named by | Date | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- |
 | [Team] | [name and post] | [AICC Lead] | [date] | DR-[yyyy]-[nnn] |
 
 ## Part B. The responsibilities
 
-The RACI of the charter by activity, with one accountable Role for each activity, is in the charter. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead. The capacity available per Iteration is in the Teams Record.
+The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead. The capacity available per Iteration is in the Teams Record.
 
 ## Part C. The appointment log
 
-| Entry | Date entered | Event | Role | Scope | Person | Previous Holder | Effective from and to | Decided by | Decision Record | Role accepted and conflict declared | Tool access granted or removed |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| AP-[nnn] |  | [Appointed / Acting / Relieved / Changed / Deputy named / Confirmed / Left] |  |  |  |  |  |  | DR-[yyyy]-[nnn] | [date] | [date] |
+| Entry | Date entered | Event | Role | Person | Effective from and to | Decided by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| AP-[nnn] |  | [Appointed / Acting / Relieved / Changed / Deputy named / Confirmed / Left] |  |  |  |  | DR-[yyyy]-[nnn] |
 
 ## Part D. Declarations and competence
 
-| Holder | Conflict declaration (date, outcome) | Training required and completed | Line manager's consent and time allocation |
-| --- | --- | --- | --- |
-|  |  |  |  |
+| Holder | Role accepted (date) | Conflict declaration (date, outcome) | Training required and completed | Line manager's consent and time allocation |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
 
 ## Part E. Tools and access
 
-| Role | Jira, Confluence, and Service Management group | Repository permission | Last access review (date and reviewer) |
-| --- | --- | --- | --- |
-|  |  |  |  |
+| Role | Jira, Confluence, and Service Management group | Repository permission | Access granted or removed (date) | Last access review (date and reviewer) |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
 
 | Tool | Keeper (Role and name) | From | To |
 | --- | --- | --- | --- |
@@ -59,6 +59,8 @@ The RACI of the charter by activity, with one accountable Role for each activity
 
 ## Delegations of the Executive Sponsor
 
-| Scope | Delegate | From | To | Decision Record |
+| Scope | Delegate | From | To | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- |
 |  |  |  |  | DR-[yyyy]-[nnn] |
+
+A delegation of more than two weeks is also entered in the Decision Log (Operating Model 4.7).

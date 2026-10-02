@@ -2,9 +2,9 @@
 id: AICC-TPL-06-EN
 title: Service Agreement
 status: active
-revision: 1.5
+revision: 1.6
 created: 2026-10-01
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Service Agreement
@@ -17,10 +17,12 @@ revised: 2026-10-01
 | --- | --- |
 | Identifier | AGR-[nnn] |
 | Engagement | [title] |
-| Function, Domain Owner | [function, name] |
+| Function, Domain Owner | [function, name; for enabling work the Executive Sponsor is the client] |
 | Initiative | [INI-nnn] |
 | Phases covered | [study / proof / delivery / support] |
 | Support level | [none / on demand / at agreed response targets / run by AICC]. Requests and incidents come to the queue of AICC in Service Management; response targets are targets and not guarantees |
+| Service levels (for a Service) | [targets per class of service, Solution Lifecycle Model 10.4] |
+| Funding | AICC supplies the capacity; the Domain pays the run, the licenses, and the provider costs |
 | Issued by the AICC Lead on | [date] |
 | Notified | [Domain Owner, other heads of function, stakeholders] |
 
@@ -44,7 +46,6 @@ revised: 2026-10-01
 | --- | --- |
 | Who works on it | [AICC Lead, Solution Engineers, Domain Expert, and the availability expected of each] |
 | Communication and decisions | [Channels, the rhythm, and who decides what] |
-| Who is notified | [Other heads of function and stakeholders, and when] |
 | Data handling | [Data classes approved by the Domain Owner; no figures, documents, data, or code in the records] |
 | Escalation | [Who, and when] |
 | Reporting | [Progress in the Weekly Review; the Outcome Report at the end] |

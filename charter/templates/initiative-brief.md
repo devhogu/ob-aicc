@@ -2,14 +2,14 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 4.5
+revision: 4.6
 created: 2026-09-30
 revised: 2026-10-02
 ```
 
 # Initiative Brief
 
-**Template.** The business case of an Initiative, in lean form. Copy for each Initiative. The Domain Owner and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in Jira and Confluence. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One to two pages.
+**Template.** The business case of an Initiative, in lean form. Copy for each Initiative. The Domain Owner and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in the working state (Jira and Confluence after the cutover). It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One page.
 
 | Field | Entry |
 | --- | --- |
@@ -18,23 +18,14 @@ revised: 2026-10-02
 | State and Stage | [state, and Stage if in discovery or active] |
 | Strategic Priority | [PRI-n] |
 | Domain Owner (represents the client function) | [name; several for an Initiative that spans Domains] |
+| Pivot of | [INI-nnn, when the Initiative is a pivot of another] |
 | Solutions expected | [the Solutions it should deliver, with their types] |
-| Service Agreement | [AGR-nnn, or not applicable for enabling work] |
+| Business acceptor | [Domain Owner, or Executive Sponsor for items across Domains, enabling work, or an Experiment with no Domain] |
+| Service Agreement | [AGR-nnn (for enabling work the Executive Sponsor is the client)] |
 | Period | [from and to] |
 | Date of last change | [date] |
 
-## Completeness
-
-The brief has these six sections from the day it is created, and no section is removed. A section that is not yet known holds a comment in brackets that states what is expected there, who supplies it, and where it comes from. The Initiative is not approved until every section is complete.
-
-| Section | Required at | State |
-| --- | --- | --- |
-| 1. Hypothesis | Scoping | [Complete / Open: what is missing] |
-| 2. Business outcomes and leading indicators | Business case | [Complete / Open: what is missing] |
-| 3. Scope and the minimum viable product | Scoping | [Complete / Open: what is missing] |
-| 4. Cost, capacity, and value | Business case | [Complete / Open: what is missing] |
-| 5. Risks, dependencies, and Risk Tier | Business case | [Complete / Open: what is missing] |
-| 6. Decision and acceptance | Business case | [Complete / Open: what is missing] |
+Open sections: [none, or the numbers and what is missing]
 
 ## 1. Hypothesis
 
@@ -54,15 +45,21 @@ The brief has these six sections from the day it is created, and no section is r
 
 ## 4. Cost, capacity, and value
 
-[The capacity in days for the minimum viable product, and the estimate for the full scope if it succeeds. The cost and the Investment Envelope as references to the financial planning of the Bank. The expected value and where it is tracked.]
+[The capacity in days for the minimum viable product, and the estimate for the full scope if it succeeds. The cost and the Investment Envelope as references to the financial planning of the Bank. The expected value and where it is tracked. AICC supplies the capacity and does not charge; the Domain pays the run, the licenses, and the provider costs from its Envelope (Portfolio Management Model 6.6, AICC Charter 4.1).]
 
 ## 5. Risks, dependencies, and Risk Tier
 
-[The risks, the expected Risk Tier of the Solutions, the Control Functions that clear the business case, and the Dependencies on other items, functions, or persons.]
+[The risks, the expected Risk Tier of the Solutions, the providers, the Control Functions that clear the business case, and the Dependencies on other items, functions, or persons.]
 
 ## 6. Decision and acceptance
 
-[Approve, return, defer, or reject, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail, across Domains, or for enabling work. For an Initiative that expects Risk Tier 2 or 3, the clearance of the Control Function Contacts concerned, recorded with the Control Sign-Off reference, their names, and the dates. A Risk Tier assigned later that is higher than the one cleared returns the business case for a new clearance. The Service Agreement issued (AGR-nnn). After the MVP: continue, pivot, defer, or reject, by whom, and the date, with the Decision Record. On delivery: accepted, returned, or rejected by the Domain Owner, or by the Executive Sponsor for enabling work, with the date. Acceptance closes the item.]
+| Decision | By | Date | Record |
+| --- | --- | --- | --- |
+| Approval of the business case: [approved / returned / deferred / rejected] | [Domain Owner, or the Executive Sponsor above a guardrail, across Domains, or for enabling work (Portfolio Management Model 6.3)] | [date] | DR-[yyyy]-[nnn] |
+| Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected: [cleared / not cleared] (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | [Control Function Contacts concerned] | [date] | [Control Sign-Off reference] |
+| Service Agreement issued | [AICC Lead] | [date] | AGR-[nnn] |
+| Decision after the MVP: [continue / pivot / defer / reject] (Portfolio Management Model 7.2) | [approver of the business case] | [date] | DR-[yyyy]-[nnn] |
+| Acceptance on delivery: [accepted / returned / rejected] (Solution Lifecycle Model 7.3(c)) | [Business acceptor] | [date] | [Outcome Report or release block] |
 
 ## Amendments after approval
 

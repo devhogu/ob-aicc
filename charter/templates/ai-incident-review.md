@@ -2,36 +2,32 @@
 id: AICC-TPL-10-EN
 title: AI Incident Review
 status: active
-revision: 1.2
+revision: 1.3
 created: 2026-10-01
 revised: 2026-10-02
 ```
 
 # AI Incident Review
 
-**Template.** Written by the AICC Lead after the post-incident review of an AI Incident in the incident management of the Bank. It is an evidence record: it states what happened and what was decided for AI, and the details stay in the ticket. It carries no figures of the Bank, no data, and no code.
+**Template.** Written by the AICC Lead after the post-incident review of an AI Incident in the incident management of the Bank (AI Policy 5.8). It states what happened and what was decided for AI, and the details stay in the ticket. It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |
+| Identifier | AIR-[nnn] |
 | Risks and Issues entry | RI-[nnn] |
 | Solution | SOL-[nnn] |
 | Ticket in Service Management | [key] |
 | Severity | [as classified by the incident management of the Bank] |
-| Occurred, detected, reported, contained, reviewed | [dates] |
+| Occurred | [date] |
+| Reviewed | [date] |
+| Notified | [regulator / persons / provider, by whom, date] |
+| Notice of a major incident to the Executive Sponsor and the Board Committee | [date, Decision Log reference] (AI Policy 5.7) |
 
 ## 1. What happened
 
 [A description without data.]
 
-## 2. Notification decisions
-
-| Notification | Decided by | Result | Reference |
-| --- | --- | --- | --- |
-| Regulator | Control Function Contact of compliance, in the time that the incident management of the Bank sets |  |  |
-| Persons whose data is affected | Control Function Contact of data protection |  |  |
-| Provider | As the contract requires |  |  |
-
-## 3. Cause, actions, and lessons
+## 2. Cause, actions, and lessons
 
 | Action | Owner | By when |
 | --- | --- | --- |
@@ -39,7 +35,7 @@ revised: 2026-10-02
 
 [The cause, and the lessons for the Standards and the AI Policy.]
 
-**Controls that failed.** [The controls of the Operating Model 8 that did not operate, each entered in the Risks and Issues Record.]
+**Controls that failed.** [Each entered in the Risks and Issues Record.]
 
 **Risk Tier reassessed.** [Date and result.]
 

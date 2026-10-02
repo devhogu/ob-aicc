@@ -2,7 +2,7 @@
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 2.9
+revision: 2.10
 created: 2026-09-30
 revised: 2026-10-02
 ```
@@ -20,6 +20,7 @@ revised: 2026-10-02
 | Type | [Service / Product / Experiment] |
 | Receiver | [who runs or adopts it after delivery; for an Experiment, "none yet, to be asked" is allowed] |
 | Approved by the Domain Owner on | [date; for a Solution that the AICC Lead built, by the Executive Sponsor] |
+| Approved for the data class by | [Role], on [date] (noted in the AI Registry); the Executive Sponsor for a Solution that the AICC Lead built (Operating Model 4.4(d)) |
 | Time-box | [for an Experiment: the number of Iterations] |
 | Domain, Domain Owner | [names] |
 | Domain Expert, Solution Engineer | [names] |
@@ -35,15 +36,15 @@ revised: 2026-10-02
 
 ## 3. Architecture and data
 
-[The architecture in outline. The data classes used, whether the AI influences a decision and how autonomous it is, the users, and whether the output reaches or affects a customer or an employee, and how. For Risk Tier 2 and 3: the harms to affected persons, the mitigation, and the residual risk. Knowledge sources, with owner and review date.]
+[The architecture in outline. The data classes used, whether the AI influences a decision and how autonomous it is, the users, and whether the output reaches or affects a customer or an employee, and how. Knowledge sources, with owner and review date.]
 
 ## 4. Risk Tier
 
-[Tier 1, 2, or 3, with the reasons, assigned by the AICC Lead, or by the Executive Sponsor for a Solution that the AICC Lead built, on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies. A Tier higher than the one cleared in the business case returns the case to the Control Function Contacts. For Tier 2 and 3: the confirmation of the Control Function Contact of compliance that the applicable law is met, with the date.]
+[Tier 1, 2, or 3, with the reasons, assigned by the AICC Lead, or by the Executive Sponsor for a Solution that the AICC Lead built, on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies. (AI Policy 3.2; Portfolio Management Model 6.4). For Tier 2 and 3: the confirmation of the Control Function Contact of compliance that the applicable law is met, with the date.]
 
 ## 5. Acceptance criteria
 
-[The criteria for the acceptance of the Solution, on which the AICC Lead gives the final acceptance of the Team and the Domain Owner judges it. The benefit and the outcome targets are in the Initiative Brief.]
+[The criteria for the acceptance of the Solution, in the form Given a situation, when an action is taken, then a result that can be observed (Solution Lifecycle Model 3.3), on which the AICC Lead gives the final acceptance of the Team and the Domain Owner judges it. The benefit and the outcome targets are in the Initiative Brief.]
 
 ## 6. Check or validation, and release block
 
@@ -65,16 +66,24 @@ revised: 2026-10-02
 
 [For a Service: the run cost source and the sunset rule. For a Product: the consumer and the version. For an Experiment: the time-box in Iterations, and the receiver of the proposal.]
 
-**Review of the live Solution.** [The note of the Domain Owner, or of the Executive Sponsor for a Service across Domains, at each Iteration Review and Demo on the monitoring, incidents, use, and notices of the providers.]
+**Review of the live Solution.** [The note at each Iteration Review and Demo on the monitoring, incidents, use, and notices of the providers.]
 
-**Changes and new-check decisions.** [Each significant change, and the decision of the AICC Lead on whether it requires a new check or validation, with the reason and the date.]
+| Date of the Iteration Review and Demo | Reviewed by | Note |
+| --- | --- | --- |
+| [date] | [Domain Owner, or the Executive Sponsor for a Service across Domains] |  |
+
+**Changes and new-check decisions.** [Each significant change, and the decision of the AICC Lead on whether it requires a new check or validation, with the reason, the date, and its Decision Log reference.]
+
+**Significant change.** [Team final acceptance and release of a significant change: by whom and on [date] (Solution Lifecycle Model 7.3(b), 8.6).]
+
+**Emergency change.** [Authorized by [the AICC Lead] on [date], reviewed by the Executive Sponsor within five working days, Decision Log reference; for Risk Tier 3 the Control Function Contacts told (Solution Lifecycle Model 8.6).]
 
 **Backup and recovery.** [Those of the AI Platform and of the Bank that apply, by reference.]
 
-**Retirement.** [Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]
+**Retirement or end.** [Handover accepted by the Receiver on [date] (Solution Lifecycle Model 8.1). Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]
 
-**Adopted Solution.** [Marked as adopted: yes or no; the Receiver as owner; date of the last quarterly review.]
+**Adopted Solution.** [Marked as adopted: yes or no; the Receiver as owner.]
 
-## 8. Scores and next step
+## 8. Next step
 
-[Value, urgency, risk reduction or opportunity, and effort, each 1 to 5. The next step, who, and when.]
+[The next step, who, and when.]

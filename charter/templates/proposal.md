@@ -2,9 +2,9 @@
 id: AICC-TPL-12-EN
 title: Proposal
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-01
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Proposal
@@ -25,7 +25,7 @@ revised: 2026-10-01
 
 ## 2. Evidence
 
-[The Outcome Report, the Control Sign-Off, and other evidence, by reference.]
+[The Outcome Report, the Control Sign-Off, and other evidence, by reference. For the yearly Proposal, the Quarterly Reports of the year.]
 
 ## 3. Options and recommendation
 
@@ -33,4 +33,4 @@ revised: 2026-10-01
 
 ## 4. Decision
 
-[The decision, who decided, the date, and the Decision Record. If adopted: the Receiver, and the Handover.]
+[The decision, who decided, the date, and the Decision Record. If adopted: the Receiver, and the Handover, accepted by the Receiver on [date].]

@@ -2,24 +2,26 @@
 id: AICC-TPL-08-EN
 title: Decision Record
 status: active
-revision: 1.4
+revision: 1.5
 created: 2026-10-01
 revised: 2026-10-02
 ```
 
 # Decision Record
 
-**Template.** Written for a Decision of the Executive Sponsor that is hard to reverse, for a Decision that the Operating Model 8 names as evidenced by a Decision Record, and for a Data Sharing Arrangement, an Exception of the AICC Lead, an approval of published output, and the cutover. It is an evidence record, and the Decision Log is its one-line index. A Decision of the Team is noted in the work item. It carries no figures of the Bank, no data, and no code. Keep it short.
+**Template.** The evidence record of a Decision that the Operating Model 5.6 and 8 name as evidenced by a Decision Record, of which the Decision Log is the one-line index. It carries no figures of the Bank, no data, and no code. Keep it short.
 
 | Field | Entry |
 | --- | --- |
 | Identifier | DR-[yyyy]-[nnn] |
 | Title | [verb and subject] |
 | Date | [date] |
-| Type | [Decision / activation / appointment / delegation / Data Sharing Arrangement / Exception / approval of output / cutover / business case approval / decision after the MVP] |
+| Type | [Decision of the Executive Sponsor that is hard to reverse / check of the documents (Document Catalog 7.1) / Data Sharing Arrangement / Exception of the AICC Lead / approval of published output / cutover / business case approval / decision after the MVP / release of a Risk Tier 3 Solution / risk beyond the appetite / Strategic Priorities, Envelopes, or Guardrails / the appetite, or the review of the documents / Proposal decision] |
 | Level | [AICC Lead / Executive Sponsor / Domain Owner] |
 | Decided by | [Role and name] |
 | Status | [Decided / Superseded / Revoked] |
+| Expires | [date, for an Exception] |
+| Risks and Issues entry | [RI-nnn, for an Exception] |
 
 ## 1. Facts
 
@@ -37,16 +39,36 @@ revised: 2026-10-02
 
 [Conflicts declared, and the advice taken, with by whom.]
 
-## 5. Evidence of the Decision
+## 5. Where it was decided
 
-[The channel and the reference, such as the Jira approval key or the signed message. A Decision of the Executive Sponsor carries it.]
+[For a Decision of the Executive Sponsor: the channel and the reference, such as the approval key or the signed message.]
 
-## 6. Funding and review
+## 6. Review
 
 | Field | Entry |
 | --- | --- |
-| Funding reference | [system and number, no figure] |
+| Funding reference | [optional: system and number, no figure] |
 | Revisit | [date] |
 | Supersedes | [Decision Record, or none] |
 
-For an activation of a document, list the ten questions of the Document Catalog with the result of each.
+## For a Data Sharing Arrangement
+
+| Field | Entry |
+| --- | --- |
+| Parties | [the parties] |
+| Data | [the data shared, by class, no data] |
+| Legal basis | [the basis] |
+| Controls | [the controls] |
+| End date | [date] |
+
+## For an activation of a document
+
+[The ten questions of the Document Catalog, with the result of each.]
+
+## For an approval of published output (AI Policy 2.4)
+
+One line is the record of the approval.
+
+| Title | Date | Reviewed by | Decided by | Decision | Reference |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |

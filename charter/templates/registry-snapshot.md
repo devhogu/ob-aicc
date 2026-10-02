@@ -2,14 +2,14 @@
 id: AICC-TPL-11-EN
 title: Registry Snapshot
 status: active
-revision: 1.3
+revision: 1.4
 created: 2026-10-01
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Registry Snapshot
 
-**Template.** Taken by the AICC Lead at the close of each Iteration and each PI, and at the cutover, because Jira and Confluence are not an evidence store. It is a closed and dated extract of the working state. It carries no figures of the Bank, no data, and no code.
+**Template.** Taken by the AICC Lead at the close of each Iteration and each PI, and at the cutover, as a closed and dated extract of the working state (Operating Model 7.2, 7.3). It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |
@@ -18,6 +18,7 @@ revised: 2026-10-01
 | Scope | [Iteration close / PI close / cutover, with the Iteration or PI] |
 | Source | [the Jira query or the Registry file, with the version] |
 | Taken by | [name] |
+| Attached | [the Appointments Record, the Control Matrix, the Risks and Issues Record, the backlogs, the boards, the Dependencies, and the Dashboard measures, with their names and versions] |
 
 ## 1. State of the work
 
@@ -27,8 +28,6 @@ revised: 2026-10-01
 | Capabilities |  |  |  |  |  |  |  |  |  |
 | Features |  |  |  |  |  |  |  |  |  |
 
-For an Initiative the Discovery column is split into Reviewing and Analyzing in the notes, and the Active column into MVP and Implementation.
-
 ## 2. Changes since the last Snapshot
 
 | Item | Change | Decision Record |
@@ -37,7 +36,9 @@ For an Initiative the Discovery column is split into Reviewing and Analyzing in 
 
 ## 3. Solutions
 
-[For each Solution: its state, Risk Tier, check or validation, and release, taken from the Solution Definition.]
+| Solution | State | Risk Tier | Release |
+| --- | --- | --- | --- |
+| SOL-[nnn] |  |  |  |
 
 ## 4. Initiative Briefs
 
@@ -47,12 +48,6 @@ For an Initiative the Discovery column is split into Reviewing and Analyzing in 
 
 ## 5. Engagements
 
-[For each Engagement: the client function, the Service Agreement, the Outcome Report if any, and the state.]
-
-## 6. Reconciliation
-
-[That the counts agree with the last Snapshot and the changes above.]
-
-## 7. Files exported
-
-[The backlogs, the boards, the Dependencies, and the Dashboard measures exported with this Snapshot, with their names.]
+| Engagement | Client function | Service Agreement | Outcome Report | State |
+| --- | --- | --- | --- | --- |
+|  |  | AGR-[nnn] | OUT-[nnn] |  |

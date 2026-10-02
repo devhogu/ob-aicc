@@ -1,9 +1,9 @@
-# DR-2026-056 Acceptance in two levels: the Team and the requester
+# DR-2026-056 Acceptance in three levels: the product owner, the Team, and the requester
 
 | Field | Entry |
 | --- | --- |
 | Identifier | DR-2026-056 |
-| Title | Acceptance in two levels: the Team and the requester |
+| Title | Acceptance in three levels: the product owner, the Team, and the requester |
 | Date | 2026-10-02 |
 | Type | Decision |
 | Level | AICC Lead |
@@ -19,7 +19,7 @@
 ## 2. Options
 
 1. Keep the acceptance of every Feature with the requester, and keep the AICC Lead barred from accepting what the AICC Lead built.
-2. Accept at two levels: the product owner during development, with the AICC Lead as the product owner while the Team is small, and the requester for the Solution, with the final acceptance of the Team by the AICC Lead before the Solution is deployed to the requester.
+2. Accept at three levels: the product owner during development, with the AICC Lead as the product owner while the Team is small; the final acceptance of the Team by the AICC Lead before the Solution is deployed to the requester; and the business acceptance of the Solution by the requester.
 
 ## 3. Decision
 

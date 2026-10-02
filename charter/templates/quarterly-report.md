@@ -2,19 +2,20 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: active
-revision: 2.6
+revision: 2.7
 created: 2026-09-30
 revised: 2026-10-02
 ```
 
 # Quarterly Report
 
-**Template.** The AICC Lead prepares the report each quarter for the quarterly Steering. The report to the Board Committee uses sections 1, 2, 5, 6, and 7, and the Executive Sponsor approves it.
+**Template.** The AICC Lead prepares the report each quarter for the quarterly Steering. The Executive Sponsor approves it. It carries no figures of the Bank, no data, and no code; figures are given by reference.
 
 | Field | Entry |
 | --- | --- |
-| Quarter | [year and quarter, or Quarter 0] |
+| Quarter | [year and quarter] |
 | Date | [date] |
+| Inputs | [Registry Snapshot, Control Matrix, Risks and Issues Record, Dashboard, by reference] |
 
 ## 1. Summary
 
@@ -22,9 +23,11 @@ revised: 2026-10-02
 
 ## 2. Objectives and value achieved
 
-| Objective | Team | Result | Value scored by the Domain Owner |
+| Objective | Team | Result | Value scored by the Business acceptor |
 | --- | --- | --- | --- |
 |  |  |  |  |
+
+[The Business acceptor is the Domain Owner, or the Executive Sponsor for items across Domains, enabling work, or an Experiment with no Domain.]
 
 ## 3. Flow and Measures
 
@@ -32,11 +35,11 @@ revised: 2026-10-02
 
 ## 4. Capacity and benefit of the Engagements
 
-| Engagement | Capacity committed and used, in days | Benefit claimed | Benefit confirmed by the Domain Owner | Outcome Report |
+| Engagement | Capacity committed and used, in days | Benefit claimed | Benefit confirmed by the Business acceptor | Outcome Report |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
-[The cost of AICC, by reference to the financial planning of the Bank. The capacity of the Service Agreements against the capacity available.]
+[The cost of AICC, by reference to the financial planning of the Bank. The capacity of the Service Agreements against the capacity available; the detail of each Engagement is in its Outcome Report.]
 
 ## 5. Benefits against the Investment Envelope
 
@@ -46,11 +49,15 @@ revised: 2026-10-02
 
 ## 6. Portfolio and Adopted Solutions
 
-[The Solutions by type and state, the Initiatives by step of the portfolio Kanban, and the Adopted Solutions that others deliver, with what works. For each Active Initiative: its leading indicators against the plan, the benefit that the Domain Owner confirms, and the decision of the quarter (continue, pivot, defer, or reject).]
+[The Solutions by type and state, the Initiatives by step of the portfolio Kanban, and the Adopted Solutions that others deliver, with what works. For each Active Initiative: its leading indicators against the plan, the benefit that the Business acceptor confirms, and the decision of the quarter (continue, pivot, defer, or reject).]
 
 ## 7. Risks, AI Incidents, control breaches, and Exceptions
 
 [From the Risks and Issues Record: open items by Severity, and the AI Incidents, the control breaches, and the Exceptions of the quarter.]
+
+[Review of each Risk Tier 3 Solution (AI Policy 3.3), with the result and the date.]
+
+[Control Matrix status, by reference to the Matrix.]
 
 [Position against the AI Risk Appetite Statement and any risk accepted beyond it. Concentration of the Bank on one provider and reliance on the Platform Owner. The Risk Tier reassessments that are due, the result of the access review, and the reconciliation of the AI Incidents with the incident management of the Bank.]
 
@@ -64,6 +71,6 @@ revised: 2026-10-02
 | --- | --- |
 | Approved by | [Executive Sponsor] |
 | Date issued | [date] |
-| Sent to | [Board Committee, or the chair of the Board] |
+| Sent to | [Board Committee] |
 | Version | [number] |
 | Source and date of each figure | [by reference] |
