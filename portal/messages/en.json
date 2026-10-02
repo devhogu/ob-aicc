@@ -13,7 +13,7 @@
  "nav_summary": "Sections of the site",
  "on_this_page": "On this page",
  "breadcrumb": "Breadcrumb",
- "home": "Home",
+ "home": "AICC",
  "parts_label": "Parts of this document",
  "previous": "Previous",
  "next": "Next",
@@ -92,7 +92,9 @@
  "pagefb": "Page feedback",
  "fb_prov": "Provide feedback on the content of this page:",
  "fb_word": "feedback",
- "fb_questions": "For all questions about this portal, please contact",
- "fb_quote": "and quote the page ID.",
+ "fb_subject": "AICC Portal [{ref}] page feedback",
+ "vp_applies": "Applies to",
+ "vp_source": "Source",
+ "maturity_levels": "Maturity Levels",
  "fb_id": "Page ID"
 }

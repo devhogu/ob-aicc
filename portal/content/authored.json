@@ -1,15 +1,20 @@
 {
  "sections": {
   "about": {
-   "label": {"en": "About AICC", "ru": "О центре AICC"},
+   "label": {
+    "en": "About AICC",
+    "ru": "О центре AICC"
+   },
    "intro": {
-    "en": "This section states what AICC is, why it exists, and on what authority it acts. It holds the Statement of Intent of the Bank, the AICC Charter, and an outline of the whole charter. The live records of AICC are not held on this site; they are kept in the Registry.",
-    "ru": "Раздел излагает, что такое AICC, зачем он создан и на каком основании действует. В нём находятся Заявление о намерениях Банка, Устав AICC и описание всего устава. Текущие записи AICC на этом сайте не хранятся: они ведутся в Реестре."
+    "en": "AICC is the internal consulting and innovation lab of the Bank for the adoption of artificial intelligence. This page is the summary of AICC: what it is, its goal, its strategy, its approach, its authority, and its safeguards. Each part points to the page that holds the detail."
    },
    "icon": "file-text"
   },
   "what-aicc-does": {
-   "label": {"en": "What AICC does", "ru": "Что делает AICC"},
+   "label": {
+    "en": "What AICC does",
+    "ru": "Что делает AICC"
+   },
    "intro": {
     "en": "This section describes the services that AICC offers to the functions of the Bank, the Solutions that it delivers, and the way a function engages AICC.",
     "ru": "Раздел описывает услуги, которые AICC предоставляет функциям Банка, решения, которые он создаёт, и порядок обращения функции в AICC."
@@ -17,7 +22,10 @@
    "icon": "users"
   },
   "how-aicc-works": {
-   "label": {"en": "How AICC works", "ru": "Как работает AICC"},
+   "label": {
+    "en": "How AICC works",
+    "ru": "Как работает AICC"
+   },
    "intro": {
     "en": "This section states the method of AICC: how Initiatives are taken in and decided, how Solutions are delivered, released, and operated, how the work is paced, and how it is measured. The workflows show the flow, and the guides explain it.",
     "ru": "Раздел излагает метод AICC: как принимаются и решаются инициативы, как создаются, выпускаются и эксплуатируются решения, как организован ритм работы и как она измеряется. Процессы показывают ход работы, руководства поясняют его."
@@ -25,7 +33,10 @@
    "icon": "workflow"
   },
   "organization": {
-   "label": {"en": "Organization", "ru": "Организация"},
+   "label": {
+    "en": "Organization",
+    "ru": "Организация"
+   },
    "intro": {
     "en": "This section states the Roles of AICC, the levels at which decisions are taken, and the bodies that advise and decide. The people who hold the Roles are named in the Appointments Record of the Registry, and the charter names Roles only.",
     "ru": "Раздел излагает роли AICC, уровни принятия решений и органы, которые консультируют и решают. Лица, исполняющие роли, названы в Журнале назначений Реестра; устав называет только роли."
@@ -33,7 +44,10 @@
    "icon": "list-tree"
   },
   "responsible-ai": {
-   "label": {"en": "Responsible AI", "ru": "Ответственный ИИ"},
+   "label": {
+    "en": "Responsible AI",
+    "ru": "Ответственный ИИ"
+   },
    "intro": {
     "en": "This section states the rules for the use of AI at the Bank: the Risk Tiers, the checks and validations before use, the review of providers, the handling of AI Incidents, and the Exceptions. It links to the AI Risk Appetite Statement and to the gates of delivery.",
     "ru": "Раздел излагает правила использования ИИ в Банке: уровни риска, проверки и валидацию перед использованием, оценку поставщиков, обработку инцидентов ИИ и исключения. В нём есть ссылки на Заявление о риск-аппетите ИИ и на контрольные точки поставки."
@@ -41,7 +55,10 @@
    "icon": "shield-check"
   },
   "governance": {
-   "label": {"en": "Governance and oversight", "ru": "Управление и надзор"},
+   "label": {
+    "en": "Governance and oversight",
+    "ru": "Управление и надзор"
+   },
    "intro": {
     "en": "This section states how AICC is controlled, reported, and assured: the control loops, the records and the evidence, the catalogue of controls, and the reporting to the Board Committee. The status of each control at a date is kept in the Control Matrix of the Registry.",
     "ru": "Раздел излагает, как осуществляются контроль, отчётность и обеспечение уверенности в AICC: контуры контроля, записи и свидетельства, каталог контролей и отчётность перед комитетом совета. Статус каждого контроля на дату ведётся в Матрице контролей Реестра."
@@ -49,7 +66,10 @@
    "icon": "table-properties"
   },
   "library": {
-   "label": {"en": "Library", "ru": "Библиотека"},
+   "label": {
+    "en": "Library",
+    "ru": "Библиотека"
+   },
    "intro": {
     "en": "This section holds the thirteen templates, the forms of the records that AICC produces. A template gives the form, and the rules for the record are in the documents.",
     "ru": "Раздел содержит тринадцать шаблонов: формы записей, которые ведёт AICC. Шаблон задаёт форму, а правила ведения записи изложены в документах."
@@ -57,7 +77,10 @@
    "icon": "copy"
   },
   "reference": {
-   "label": {"en": "Reference", "ru": "Справочник"},
+   "label": {
+    "en": "Reference",
+    "ru": "Справочник"
+   },
    "intro": {
     "en": "This section holds the Vocabulary, the Document Catalog, the change history of the documents, and the page that states where each record is kept.",
     "ru": "Раздел содержит Словарь, Каталог документов, историю изменений документов и страницу, которая указывает, где хранится каждая запись."
@@ -66,48 +89,406 @@
   }
  },
  "home": {
-  "eyebrow": {"en": "Charter and governance of the unit", "ru": "Устав и управление подразделением"},
-  "title": {"en": "AI Competence Center", "ru": "Центр компетенций по искусственному интеллекту"},
+  "eyebrow": {
+   "en": "Charter and governance of the unit",
+   "ru": "Устав и управление подразделением"
+  },
+  "title": {
+   "en": "AI Competence Center",
+   "ru": "Центр компетенций по искусственному интеллекту"
+  },
   "lead": {
    "en": "The mission of AICC is to enable the Bank to adopt AI as a governed capability that delivers measured value. This site is the charter of AICC: its intent, its method, its organization, and its controls.",
    "ru": "Миссия AICC состоит в том, чтобы позволить Банку использовать ИИ как управляемую возможность, которая приносит измеримую ценность. Этот сайт является уставом AICC: его намерения, метод, организация и контроли."
   },
   "map": {
    "en": [
-    {"title": "What AICC does", "text": "Explores, trials, and proves the use of AI with the functions, and proposes what the Bank should adopt at scale.", "to": "what-aicc-does/business-model"},
-    {"title": "How AICC works", "text": "Takes in Initiatives, decides on them, delivers Solutions, and measures the flow.", "to": "how-aicc-works/"},
-    {"title": "How AICC is safeguarded", "text": "Sets the rules of use, assigns Risk Tiers, controls and reports.", "to": "governance/"}
+    {
+     "title": "What AICC does",
+     "text": "Explores, trials, and proves the use of AI with the functions, and proposes what the Bank should adopt at scale.",
+     "to": "what-aicc-does/business-model"
+    },
+    {
+     "title": "How AICC works",
+     "text": "Takes in Initiatives, decides on them, delivers Solutions, and measures the flow.",
+     "to": "how-aicc-works/"
+    },
+    {
+     "title": "How AICC is safeguarded",
+     "text": "Sets the rules of use, assigns Risk Tiers, controls and reports.",
+     "to": "governance/"
+    }
    ],
    "ru": [
-    {"title": "Что делает AICC", "text": "Исследует, пробует и доказывает применение ИИ вместе с функциями и предлагает, что Банку внедрять в масштабе.", "to": "what-aicc-does/business-model"},
-    {"title": "Как работает AICC", "text": "Принимает инициативы, принимает по ним решения, создаёт решения и измеряет поток работы.", "to": "how-aicc-works/"},
-    {"title": "Как обеспечена безопасность", "text": "Устанавливает правила использования, назначает уровни риска, контролирует и отчитывается.", "to": "governance/"}
+    {
+     "title": "Что делает AICC",
+     "text": "Исследует, пробует и доказывает применение ИИ вместе с функциями и предлагает, что Банку внедрять в масштабе.",
+     "to": "what-aicc-does/business-model"
+    },
+    {
+     "title": "Как работает AICC",
+     "text": "Принимает инициативы, принимает по ним решения, создаёт решения и измеряет поток работы.",
+     "to": "how-aicc-works/"
+    },
+    {
+     "title": "Как обеспечена безопасность",
+     "text": "Устанавливает правила использования, назначает уровни риска, контролирует и отчитывается.",
+     "to": "governance/"
+    }
    ]
   }
  },
  "routes": [
-  {"id": "orientation", "title": {"en": "Orientation", "ru": "Знакомство"}, "reader": {"en": "A new member of staff, or any reader", "ru": "Новый сотрудник или любой читатель"}, "purpose": {"en": "To learn what AICC is and how its pages relate", "ru": "Понять, что такое AICC и как связаны его страницы"},
-   "pages": ["about/statement-of-intent", "about/aicc-charter", "about/also-stated-in", "what-aicc-does/business-model", "about/charter-outline", "reference/vocabulary"]},
-  {"id": "executive", "title": {"en": "Executive", "ru": "Руководство"}, "reader": {"en": "The Executive Sponsor and the Board Committee", "ru": "Исполнительный спонсор и комитет совета"}, "purpose": {"en": "To read the intent, the Strategic Priorities, the roadmap, the decisions, and the oversight", "ru": "Прочитать намерения, стратегические приоритеты, дорожную карту, решения и надзор"},
-   "pages": ["about/statement-of-intent", "about/statement-of-intent/strategic-priorities", "about/statement-of-intent/capability-and-maturity-roadmap", "about/aicc-charter", "organization/operating-model/decisions", "governance/control-loops", "responsible-ai/ai-policy"]},
-  {"id": "function", "title": {"en": "Function", "ru": "Функция"}, "reader": {"en": "A head of function or a Domain Owner", "ru": "Руководитель функции или владелец домена"}, "purpose": {"en": "To learn how a need becomes an Initiative and a Solution, and what the function decides", "ru": "Понять, как потребность становится инициативой и решением и что решает функция"},
-   "pages": ["what-aicc-does/business-model", "what-aicc-does/engagement-workflow", "how-aicc-works/portfolio-management-model/the-business-case-and-the-mvp", "library/initiative-brief", "responsible-ai/ai-policy"]},
-  {"id": "delivery", "title": {"en": "Delivery", "ru": "Поставка"}, "reader": {"en": "A Solution Engineer or a member of a Team", "ru": "Инженер решений или участник команды"}, "purpose": {"en": "To learn the method of delivery and the forms that it uses", "ru": "Изучить метод поставки и используемые формы"},
-   "pages": ["how-aicc-works/solution-lifecycle-model/the-flow-of-value", "how-aicc-works/service-delivery-workflow", "how-aicc-works/service-delivery-guide", "how-aicc-works/solution-lifecycle-model/verification-release-and-acceptance", "how-aicc-works/cadence-workflow", "library/index"]},
-  {"id": "review", "title": {"en": "Review", "ru": "Проверка"}, "reader": {"en": "Internal audit and the control functions", "ru": "Внутренний аудит и контрольные функции"}, "purpose": {"en": "To read the rules, the controls, and the evidence, and to find where each record is kept", "ru": "Прочитать правила, контроли и свидетельства и найти, где хранится каждая запись"},
-   "pages": ["about/aicc-charter", "organization/operating-model/roles", "governance/controls", "responsible-ai/ai-policy", "governance/unit-governance-workflow", "reference/records-and-systems", "reference/change-history"]}
+  {
+   "id": "orientation",
+   "title": {
+    "en": "Orientation",
+    "ru": "Знакомство"
+   },
+   "reader": {
+    "en": "A new member of staff, or any reader",
+    "ru": "Новый сотрудник или любой читатель"
+   },
+   "purpose": {
+    "en": "To learn what AICC is and how its pages relate",
+    "ru": "Понять, что такое AICC и как связаны его страницы"
+   },
+   "pages": [
+    "about/statement-of-intent",
+    "about/aicc-charter",
+    "about/values-and-principles",
+    "what-aicc-does/business-model",
+    "about/charter-outline",
+    "reference/vocabulary"
+   ]
+  },
+  {
+   "id": "executive",
+   "title": {
+    "en": "Executive",
+    "ru": "Руководство"
+   },
+   "reader": {
+    "en": "The Executive Sponsor and the Board Committee",
+    "ru": "Исполнительный спонсор и комитет совета"
+   },
+   "purpose": {
+    "en": "To read the intent, the Strategic Priorities, the roadmap, the decisions, and the oversight",
+    "ru": "Прочитать намерения, стратегические приоритеты, дорожную карту, решения и надзор"
+   },
+   "pages": [
+    "about/statement-of-intent",
+    "about/statement-of-intent/strategic-priorities",
+    "about/statement-of-intent/capability-and-maturity-roadmap",
+    "about/aicc-charter",
+    "organization/operating-model/decisions",
+    "governance/control-loops",
+    "responsible-ai/ai-policy"
+   ]
+  },
+  {
+   "id": "function",
+   "title": {
+    "en": "Function",
+    "ru": "Функция"
+   },
+   "reader": {
+    "en": "A head of function or a Domain Owner",
+    "ru": "Руководитель функции или владелец домена"
+   },
+   "purpose": {
+    "en": "To learn how a need becomes an Initiative and a Solution, and what the function decides",
+    "ru": "Понять, как потребность становится инициативой и решением и что решает функция"
+   },
+   "pages": [
+    "what-aicc-does/business-model",
+    "what-aicc-does/engagement-workflow",
+    "how-aicc-works/portfolio-management-model/the-business-case-and-the-mvp",
+    "library/initiative-brief",
+    "responsible-ai/ai-policy"
+   ]
+  },
+  {
+   "id": "delivery",
+   "title": {
+    "en": "Delivery",
+    "ru": "Поставка"
+   },
+   "reader": {
+    "en": "A Solution Engineer or a member of a Team",
+    "ru": "Инженер решений или участник команды"
+   },
+   "purpose": {
+    "en": "To learn the method of delivery and the forms that it uses",
+    "ru": "Изучить метод поставки и используемые формы"
+   },
+   "pages": [
+    "how-aicc-works/solution-lifecycle-model/the-flow-of-value",
+    "how-aicc-works/service-delivery-workflow",
+    "how-aicc-works/service-delivery-guide",
+    "how-aicc-works/solution-lifecycle-model/verification-release-and-acceptance",
+    "how-aicc-works/cadence-workflow",
+    "library/index"
+   ]
+  },
+  {
+   "id": "review",
+   "title": {
+    "en": "Review",
+    "ru": "Проверка"
+   },
+   "reader": {
+    "en": "Internal audit and the control functions",
+    "ru": "Внутренний аудит и контрольные функции"
+   },
+   "purpose": {
+    "en": "To read the rules, the controls, and the evidence, and to find where each record is kept",
+    "ru": "Прочитать правила, контроли и свидетельства и найти, где хранится каждая запись"
+   },
+   "pages": [
+    "about/aicc-charter",
+    "organization/operating-model/roles",
+    "governance/controls",
+    "responsible-ai/ai-policy",
+    "governance/unit-governance-workflow",
+    "reference/records-and-systems",
+    "reference/change-history"
+   ]
+  }
  ],
- "also_stated_in": {
-  "title": {"en": "AICC in brief: where it is stated", "ru": "AICC в кратком виде: где это изложено"},
-  "intro": {"en": "The following statements describe what AICC is. Each is stated once in its own document, and this page lists them and restates none.", "ru": "Следующие положения описывают, что такое AICC. Каждое изложено один раз в своём документе; эта страница лишь перечисляет их и ничего не повторяет."},
-  "items": [
-   {"label": {"en": "Summary of intent", "ru": "Краткое изложение намерения"}, "ref": ["statement-of-intent", "2"]},
-   {"label": {"en": "Mission of AICC", "ru": "Миссия AICC"}, "ref": ["aicc-charter", "2"]},
-   {"label": {"en": "What AICC is (Business Model)", "ru": "Что такое AICC (Бизнес-модель)"}, "ref": ["business-model", "2"]},
-   {"label": {"en": "What AICC is (Operating Model)", "ru": "Что такое AICC (Операционная модель)"}, "ref": ["operating-model", "2"]},
-   {"label": {"en": "Principles of work", "ru": "Принципы работы"}, "ref": ["operating-model", "3"]},
-   {"label": {"en": "Principles of adoption", "ru": "Принципы внедрения"}, "ref": ["statement-of-intent", "5"]},
-   {"label": {"en": "Principles of application", "ru": "Принципы применения"}, "ref": ["statement-of-intent", "6"]}
+ "about_page": {
+  "blocks": [
+   {
+    "id": "what",
+    "title": {
+     "en": "What AICC is"
+    },
+    "text": {
+     "en": "AICC is an internal consulting and innovation lab of the Bank. It explores, trials, and proves the use of AI with the functions, delivers the outcome, and proposes what the Bank should adopt at scale. It works as a consulting unit does: it engages with a function on a defined scope, delivers an outcome with its evidence, and keeps its commitments and its records in order."
+    },
+    "links": [
+     {
+      "label": {
+       "en": "Business Model"
+      },
+      "to": "what-aicc-does/business-model"
+     },
+     {
+      "label": {
+       "en": "What AICC does"
+      },
+      "to": "what-aicc-does/index"
+     }
+    ]
+   },
+   {
+    "id": "goal",
+    "title": {
+     "en": "The goal"
+    },
+    "text": {
+     "en": "The mission of AICC is to enable the Bank to adopt AI as a governed capability that delivers measured value. The adoption improves the quality, speed, and consistency of the operations and services of the Bank, and supports its mission to improve people's lives with digital products and services. Accountability for every Solution stays with a named individual, and controls stay proportionate to risk."
+    },
+    "links": [
+     {
+      "label": {
+       "en": "Statement of Intent"
+      },
+      "to": "about/statement-of-intent"
+     },
+     {
+      "label": {
+       "en": "AICC Charter"
+      },
+      "to": "about/aicc-charter"
+     }
+    ]
+   },
+   {
+    "id": "strategy",
+    "title": {
+     "en": "The strategy"
+    },
+    "text": {
+     "en": "The Bank pursues seven Strategic Priorities, in order, and advances each through five Maturity Levels. A Maturity Level is reached for a Strategic Priority when its Measures are met."
+    },
+    "priorities": true,
+    "links": [
+     {
+      "label": {
+       "en": "Strategic Priorities"
+      },
+      "to": "about/statement-of-intent/strategic-priorities"
+     },
+     {
+      "label": {
+       "en": "Capability and maturity roadmap"
+      },
+      "to": "about/statement-of-intent/capability-and-maturity-roadmap"
+     }
+    ]
+   },
+   {
+    "id": "approach",
+    "title": {
+     "en": "The approach"
+    },
+    "text": {
+     "en": "A function brings a need to AICC. AICC takes it in as an Initiative, tries it first as a minimum viable product, measures it against defined success Measures, and extends it only on that evidence. The work runs on a common cadence, is made visible, and is limited in progress. Before a Solution reaches its users, it is checked or validated by a person other than its builder, accepted by the Team, and accepted by the Domain Owner who asked for it."
+    },
+    "links": [
+     {
+      "label": {
+       "en": "How AICC works"
+      },
+      "to": "how-aicc-works/index"
+     },
+     {
+      "label": {
+       "en": "Engagement workflow"
+      },
+      "to": "what-aicc-does/engagement-workflow"
+     }
+    ]
+   },
+   {
+    "id": "authority",
+    "title": {
+     "en": "Authority and limits"
+    },
+    "text": {
+     "en": "AICC acts under the mandate of the Executive Sponsor, whom the Board names. It does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work. The Control Functions stay independent and may stop a Solution, and internal audit gives assurance only. The AICC Lead reports each quarter, and the Board oversees AI through the Board Committee."
+    },
+    "links": [
+     {
+      "label": {
+       "en": "Organization"
+      },
+      "to": "organization/index"
+     },
+     {
+      "label": {
+       "en": "Governance and oversight"
+      },
+      "to": "governance/index"
+     }
+    ]
+   },
+   {
+    "id": "safeguards",
+    "title": {
+     "en": "Safeguards"
+    },
+    "text": {
+     "en": "Each Solution is assigned a Risk Tier, which sets the review, validation, human oversight, and speed of release that apply to it. The Bank accepts risk from AI where the benefit is measured and the controls are proportionate, and it does not accept a breach of law or regulation."
+    },
+    "links": [
+     {
+      "label": {
+       "en": "AI Policy"
+      },
+      "to": "responsible-ai/ai-policy"
+     },
+     {
+      "label": {
+       "en": "Responsible AI"
+      },
+      "to": "responsible-ai/index"
+     }
+    ]
+   },
+   {
+    "id": "values",
+    "title": {
+     "en": "Values and principles"
+    },
+    "text": {
+     "en": "Three values guide the work: integrity, prudence, and respect for people. The principles of adoption, application, work, and delivery follow from them."
+    },
+    "links": [
+     {
+      "label": {
+       "en": "Values and principles"
+      },
+      "to": "about/values-and-principles"
+     }
+    ]
+   }
+  ],
+  "deeper": {
+   "en": "Go deeper"
+  }
+ },
+ "values_page": {
+  "intro": {
+   "en": "The values and the principles of AICC are stated once, in the documents named below. This page gathers them. Each group states what it applies to."
+  },
+  "groups": [
+   {
+    "id": "values",
+    "title": {
+     "en": "Values"
+    },
+    "applies": {
+     "en": "All adoption of AI in the Bank, and all delivery by AICC."
+    },
+    "source": [
+     "statement-of-intent",
+     "4"
+    ]
+   },
+   {
+    "id": "adoption",
+    "title": {
+     "en": "Principles of adoption"
+    },
+    "applies": {
+     "en": "The decision to adopt, extend, or discontinue the use of AI in the Bank."
+    },
+    "source": [
+     "statement-of-intent",
+     "5"
+    ]
+   },
+   {
+    "id": "application",
+    "title": {
+     "en": "Principles of application"
+    },
+    "applies": {
+     "en": "Every use of AI in the operations, products, and services of the Bank, whether or not AICC manages it."
+    },
+    "source": [
+     "statement-of-intent",
+     "6"
+    ]
+   },
+   {
+    "id": "work",
+    "title": {
+     "en": "Principles of work"
+    },
+    "applies": {
+     "en": "How AICC operates and decides as a unit."
+    },
+    "source": [
+     "operating-model",
+     "3"
+    ]
+   },
+   {
+    "id": "delivery",
+    "title": {
+     "en": "Principles of delivery"
+    },
+    "applies": {
+     "en": "How the Teams of AICC build, verify, release, and look after Solutions."
+    },
+    "source": [
+     "solution-lifecycle-model",
+     "2"
+    ]
+   }
   ]
  }
 }

@@ -47,8 +47,8 @@ flowchart LR
   H --> X
   A --> A1["Statement of Intent: 4 pages"]
   A --> A2["AICC Charter"]
-  A --> A3["The charter in outline"]
-  A --> A4["Where AICC is stated"]
+  A --> A3["Values and principles"]
+  A --> A4["Explore AICC"]
   W --> W1["Business Model"]
   W --> W2["Engagement workflow and guide"]
   M --> M1["Portfolio Management Model: 5 pages"]
@@ -180,10 +180,11 @@ The charter text is complete. The site needs only the following short authored i
 | Home introduction | Two sentences | From the Summary of intent and the Mission |
 | Eight section introductions | Three to five lines each | State what the section covers and what is kept elsewhere |
 | The map of AICC | One diagram and a text version | Connects what AICC does, how it works, and how it is safeguarded |
-| Where AICC is stated | One short page | Lists the lead statements and the also-stated-in statements |
+| About AICC | One page, a summary of AICC | What it is, the goal, the strategy, the approach, the authority, the safeguards, with links to the deep pages |
+| Values and principles | One page | The values and the principles of adoption, application, work, and delivery, each with what it applies to |
 | Reading routes | The five routes | Based on the routes of the charter README |
 | Records and systems | One table | Built from the Operating Model 7 and the Registry README |
-| The charter in outline | An introduction | The rest is generated from the charter README |
+| Explore AICC | An introduction | The rest is generated from the charter README; the last page of About AICC |
 
 ## 9. Open points
 

@@ -1,8 +1,8 @@
 ---
 id: about/charter-outline
-title: The charter in outline
+title: Explore AICC
 section: about
-order: 6
+order: 7
 type: outline
 slug: /about/charter-outline/
 source: charter/README.md; charter/executive-summary.md; charter/guides/README.md
@@ -10,7 +10,7 @@ production: generated, with an authored introduction
 status: scaffold
 ---
 
-# The charter in outline
+# Explore AICC
 
 Page type: outline. Address: /about/charter-outline/
 

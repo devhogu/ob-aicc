@@ -152,11 +152,44 @@ dialog.dz .mm-dark{display:none}
 .pagefb{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;padding:4px 9px;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text-muted);font:inherit;font-size:11px;line-height:1.3;cursor:pointer;text-align:left}
 .pagefb span+span{font-family:var(--font-mono);letter-spacing:.04em}
 .pagefb:hover,.pagefb:focus-visible{border-color:var(--border-control);color:var(--text)}
-dialog.fb{width:min(420px,calc(100vw - 32px));padding:20px 22px;font-size:14px}
-dialog.fb h2{font-size:17px;margin:0 0 10px}
-dialog.fb p{margin:0 0 10px}
-dialog.fb .fb-id{color:var(--text-muted);font-size:13px}
-dialog.fb code{background:var(--surface-subtle);color:var(--text);padding:1px 6px;border-radius:4px;letter-spacing:.04em}
-.fb-copy{margin-left:6px;padding:2px 8px;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text-muted);font:inherit;font-size:12px;cursor:pointer}
+dialog.fb{width:min(340px,calc(100vw - 32px));padding:18px 20px;font-size:14px}
+dialog.fb .fb-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px}
+dialog.fb h2{font-size:17px;margin:0 6px 0 0}
+dialog.fb code{background:var(--surface-subtle);color:var(--text);padding:1px 6px;border-radius:4px;letter-spacing:.04em;font-size:13px}
+.fb-copy{padding:2px 8px;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text-muted);font:inherit;font-size:12px;cursor:pointer}
 .fb-copy:hover{border-color:var(--border-control);color:var(--text)}
-.fb-actions{display:flex;justify-content:flex-end;margin-top:14px}
+dialog.fb .fb-body{display:flex;align-items:flex-end;gap:16px}
+dialog.fb .fb-body p{flex:1 1 auto;margin:0}
+dialog.fb .fb-body .oc-button{flex:none}
+/* breadcrumb line with the next page at the right */
+.crumbbar{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 10px}
+.crumbbar .crumbs{margin:0;min-width:0}
+.crumb-next{flex:0 1 auto;min-width:0;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;color:var(--text-muted);text-decoration:none}
+.crumb-next strong{font-weight:500;color:var(--link);text-decoration:underline;text-underline-offset:3px}
+.crumb-next:hover strong{color:var(--text)}
+@media(max-width:650px){.crumbbar{flex-direction:column;gap:4px}.crumb-next{max-width:100%}}
+@media print{.crumb-next{display:none}}
+/* About AICC: the summary */
+.about-block{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 32px;padding:20px 0;border-top:1px solid var(--border)}
+.about-block h2{margin:0;font-size:18px}
+.about-block p{margin:0 0 10px;max-width:78ch}
+.about-links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}
+.about-pri{display:flex;flex-wrap:wrap;gap:6px 8px;list-style:none;margin:0 0 10px;padding:0;counter-reset:pri}
+.about-pri li{counter-increment:pri;padding:3px 10px;border:1px solid var(--border);border-radius:999px;font-size:13px}
+.about-pri li::before{content:counter(pri) ". ";color:var(--text-muted)}
+.about-pri a{text-decoration:none;color:var(--text)}
+.about-pri a:hover{color:var(--link);text-decoration:underline}
+.about-levels{font-size:14px}
+.about-deeper{margin-top:28px}
+@media(max-width:800px){.about-block{grid-template-columns:1fr}}
+/* Values and principles: numbered, standing out */
+.vp-group{margin:36px 0 0}
+.vp-group h2{margin:0 0 6px}
+.vp-applies{margin:0 0 14px;color:var(--text-muted)}
+.vp-applies strong{color:var(--text)}
+.vp-intro{margin:0 0 14px}
+.vp-list{list-style:none;margin:0;padding:0;counter-reset:vp;display:grid;gap:10px}
+.vp-list li{counter-increment:vp;display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:start;padding:12px 16px;border:1px solid var(--border);border-radius:10px;background:var(--surface)}
+.vp-list li::before{content:counter(vp);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--surface-subtle);border:1px solid var(--border-control);font-weight:600;font-size:16px;color:var(--text)}
+.vp-list li strong{font-weight:600}
+.vp-source{margin:10px 0 0;font-size:13px;color:var(--text-muted)}

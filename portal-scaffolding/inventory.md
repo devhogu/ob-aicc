@@ -11,8 +11,8 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Capability and maturity roadmap | /about/statement-of-intent/capability-and-maturity-roadmap/ | document | documents/statement-of-intent.md | 10, 11 | 1051 | generated |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Performance and commitments | /about/statement-of-intent/performance-and-commitments/ | document | documents/statement-of-intent.md | 12, 13 | 223 | generated |
 | About AICC | AICC Charter | /about/aicc-charter/ | document | documents/aicc-charter.md | all | 900 | generated |
-| About AICC | The charter in outline | /about/charter-outline/ | outline | README.md; executive-summary.md; guides/README.md | all |  | generated, with an authored introduction |
-| About AICC | AICC in brief: where it is stated | /about/also-stated-in/ | outline | none | none |  | authored |
+| About AICC | Values and principles | /about/values-and-principles/ | outline | none | none |  | generated from the documents, with an authored statement of what each group applies to |
+| About AICC | Explore AICC | /about/charter-outline/ | outline | README.md; executive-summary.md; guides/README.md | all |  | generated, with an authored introduction |
 | What AICC does | What AICC does | /what-aicc-does/ | section | none | none |  | authored, with a generated list |
 | What AICC does | Business Model | /what-aicc-does/business-model/ | document | documents/business-model.md | all | 1381 | generated |
 | What AICC does | Engagement workflow | /what-aicc-does/engagement-workflow/ | workflow | workflows/engagement.md | all |  | generated |

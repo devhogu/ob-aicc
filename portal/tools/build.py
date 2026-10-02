@@ -306,7 +306,11 @@ class Site:
         self.pages = sm['pages']
         self.by_id = {p['id']: p for p in self.pages}
         self.msg = {lang: jload(os.path.join(PORTAL, 'messages', lang + '.json')) for lang in LANGS}
+        en_msg = self.msg['en']
+        for lang in LANGS:
+            self.msg[lang] = dict(en_msg, **self.msg[lang])     # a string not yet translated shows in English
         self.auth = jload(os.path.join(PORTAL, 'content', 'authored.json'))
+        self._fill_untranslated(self.auth)
         self.section_page = {}
         self.file_page = {}
         for p in self.pages:
@@ -327,11 +331,23 @@ class Site:
             if p['type'] == 'outline' and p['id'] == 'about/charter-outline':
                 pass
         self.md = Renderer(self)
+        self.extra_search = {}
         self.bodies = {}     # page id -> dict(html, outline, anchors, chunks, diagrams, extra)
         self.svgs = {}
         self.tables = {}
         self.catalog = {}
         self.load_catalogs()
+
+    def _fill_untranslated(self, o):
+        if isinstance(o, dict):
+            if 'en' in o and 'ru' not in o:
+                o['ru'] = o['en']
+            else:
+                for v in o.values():
+                    self._fill_untranslated(v)
+        elif isinstance(o, list):
+            for v in o:
+                self._fill_untranslated(v)
 
     # ----- catalogs of descriptions
     def load_catalogs(self):
@@ -622,7 +638,7 @@ def desc_of(site, p):
         return site.roles['om'].get(p['title'], {}).get('Does', '')
     fixed = {
         'about/charter-outline': 'How the charter is organized, and how its documents, workflows, guides, and templates relate',
-        'about/also-stated-in': 'Where the lead statements of what AICC is are made',
+        'about/values-and-principles': 'The values and the principles of adoption, application, work, and delivery, and what each applies to',
         'reference/vocabulary': 'The defined terms of the charter and its style',
         'reference/change-history': 'The revision history of the documents',
         'reference/records-and-systems': 'Where each record is kept, and which control it evidences',
@@ -635,7 +651,7 @@ def render_pages(site):
     diagrams = []
     for p in site.pages:
         t = p['type']
-        if p['id'] in ('reference/change-history', 'about/also-stated-in', 'reference/records-and-systems', 'organization/roles', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
+        if p['id'] in ('reference/change-history', 'about/values-and-principles', 'reference/records-and-systems', 'organization/roles', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
             continue
         if not p.get('source'):
             continue
@@ -733,20 +749,25 @@ def layout(site, p, lang, main_html, outline):
     if p['id'] != 'index' and not p['id'].endswith('/index'):
         crumbs.append(esc(disp(p['title'])))
     bc = '<nav class="o-eyebrow crumbs" aria-label="%s">%s</nav>' % (esc(m['breadcrumb']), ' / '.join(crumbs))
+    nx = next_page(site, p)
+    if nx:
+        bc = '<div class="crumbbar">%s<a class="crumb-next" href="%s" rel="next"><span>%s:</span> <strong>%s</strong> &rsaquo;</a></div>' % (
+            bc, site.rel(url, site.url(nx, lang)), esc(m['next']), esc(flow_label(site, nx, lang)))
     ctx = ''
     if outline:
         links = ''.join('<a class="lv%d" href="#%s">%s</a>' % (lv, i, esc(t)) for lv, i, t in outline)
         ctx = '<aside class="o-context" aria-label="%s"><strong>%s</strong>%s</aside>' % (esc(m['on_this_page']), esc(m['on_this_page']), links)
     reading = '<div class="o-reading"><div class="o-copy">%s</div>%s</div>' % (main_html, ctx) if ctx else '<div class="o-wide">%s</div>' % main_html
     ref = p.get('ref', '')
+    subject = m['fb_subject'].replace('{ref}', ref)
     title = (p['title'] if p['id'] != 'index' else site.auth['home']['title'][lang]) + ' · ' + m['site_short']
     return f'''<!doctype html>
-<html lang="{lang}" data-theme="dark">
+<html lang="{lang}" data-theme="light">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark light">
+<meta name="color-scheme" content="light dark">
 <title>{esc(title)}</title>
-<script>try{{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}}catch(e){{}}</script>
+<script>try{{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}}catch(e){{}}</script>
 <link rel="stylesheet" href="{A}/ui/fonts.css">
 <link rel="stylesheet" href="{A}/ui/tokens.css">
 <link rel="stylesheet" href="{A}/ui/primitives.css">
@@ -761,7 +782,7 @@ def layout(site, p, lang, main_html, outline):
   <a class="o-identity" href="{home}"><img src="{A}/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>{esc(m['site_name'])}</span></a>
   <span class="header-scope">{esc(m['header_scope'])}</span>
   <div class="o-search" role="search"><label class="o-sr-only" for="q">{esc(m['search_label'])}</label><input id="q" type="search" autocomplete="off" placeholder="{esc(m['search_placeholder'])}" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
-  <div class="o-tools"><nav class="lang-switch" aria-label="{esc(m['language_label'])}">{''.join(sw)}</nav><button id="theme-switch" type="button">{esc(m['theme_to_light'])}</button></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="{esc(m['language_label'])}">{''.join(sw)}</nav><button id="theme-switch" type="button">{esc(m['theme_to_dark'])}</button></div>
 </header>
 <div class="o-frame">
   <aside class="o-nav"><details open><summary>{esc(m['nav_summary'])}</summary><nav aria-label="{esc(m['nav_label'])}">{''.join(nav)}</nav></details>
@@ -770,18 +791,15 @@ def layout(site, p, lang, main_html, outline):
     {bc}
     {reading}
     <footer class="o-footer">
-      <span class="foot-text">{esc(m['footer'])} <a class="contact" href="mailto:{CONTACT['email']}?subject={quote('AICC portal, page ' + ref)}">{esc(m['contact_us'])}</a></span>
+      <span class="foot-text">{esc(m['footer'])} <a class="contact" href="mailto:{CONTACT['email']}?subject={quote(subject)}">{esc(m['contact_us'])}</a></span>
       <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>{esc(m['pagefb'])}</span><span>ID: {esc(ref)}</span></button>
     </footer>
   </main>
 </div>
-<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="{esc('AICC portal, page ' + ref)}" data-ref="{esc(ref)}" data-page="{esc(p['title'])}">
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="{esc(subject)}" data-ref="{esc(ref)}" data-page="{esc(p['title'])}">
   <form method="dialog">
-    <h2 id="fb-t">{esc(m['pagefb'])}</h2>
-    <p>{esc(m['fb_prov'])} <a data-mail href="mailto:{CONTACT['email']}">{esc(m['fb_word'])}</a>.</p>
-    <p>{esc(m['fb_questions'])} <a data-mail href="mailto:{CONTACT['email']}">{esc(CONTACT['name'])}</a> ({CONTACT['email']}), {esc(m['fb_quote'])}</p>
-    <p class="fb-id">{esc(m['fb_id'])}: <code>{esc(ref)}</code> <button type="button" class="fb-copy" data-copy-text="{esc(ref)}">{esc(m['fb_copy'])}</button></p>
-    <div class="fb-actions"><button class="oc-button" value="close">{esc(m['fb_close'])}</button></div>
+    <div class="fb-head"><h2 id="fb-t">{esc(m['pagefb'])}</h2><code>ID: {esc(ref)}</code><button type="button" class="fb-copy" data-copy-text="{esc(ref)}">{esc(m['fb_copy'])}</button></div>
+    <div class="fb-body"><p>{esc(m['fb_prov'])} <a data-mail href="mailto:{CONTACT['email']}">{esc(m['fb_word'])}</a>.</p><button class="oc-button" value="close">{esc(m['fb_close'])}</button></div>
   </form>
 </dialog>
 </body>
@@ -849,6 +867,41 @@ def parts_html(site, p, lang):
     return '<nav class="o-tabs parts" aria-label="%s">%s</nav>' % (esc(tr(site, lang, 'parts_label')), ''.join(links))
 
 
+def flow_pages(site):
+    if not hasattr(site, '_flow'):
+        flow = [site.by_id['index']]
+        for sec in site.sections:
+            flow.append(site.by_id[sec['id'] + '/index'])
+            flow += sorted([x for x in site.pages if x.get('section') == sec['id'] and x['type'] not in ('section', 'control', 'role')], key=lambda x: (x['order'], x['id']))
+        site._flow = flow
+    return site._flow
+
+
+def next_page(site, p):
+    """The page that follows in the reading flow: the next page of the section, then the next section."""
+    if p['type'] in ('control', 'role'):
+        sib = sorted([x for x in site.pages if x['type'] == p['type']], key=lambda x: (x['control']['ref'] if p['type'] == 'control' else '', x['order'], x['id']))
+        ids = [x['id'] for x in sib]
+        i = ids.index(p['id'])
+        if i + 1 < len(sib):
+            return sib[i + 1]
+        p = site.by_id['governance/controls' if p['type'] == 'control' else 'organization/roles']
+    flow = flow_pages(site)
+    ids = [x['id'] for x in flow]
+    if p['id'] not in ids:
+        return None
+    i = ids.index(p['id'])
+    return flow[i + 1] if i + 1 < len(flow) else None
+
+
+def flow_label(site, q, lang):
+    if q['type'] == 'section':
+        return site.auth['sections'][q['section']]['label'][lang]
+    if q['type'] == 'control':
+        return q['control']['ref']
+    return disp(q['title'])
+
+
 def prev_next(site, p, lang):
     if not p.get('section') or p['type'] in ('section', 'control', 'role', 'home'):
         return ''
@@ -862,8 +915,9 @@ def prev_next(site, p, lang):
     out = []
     if i > 0:
         out.append('<a class="pn prev" href="%s" rel="prev"><span>%s</span>%s</a>' % (site.rel(url, site.url(sib[i - 1], lang)), esc(m['previous']), esc(disp(sib[i - 1]['title']))))
-    if i + 1 < len(sib):
-        out.append('<a class="pn next" href="%s" rel="next"><span>%s</span>%s</a>' % (site.rel(url, site.url(sib[i + 1], lang)), esc(m['next']), esc(disp(sib[i + 1]['title']))))
+    nx = next_page(site, p)
+    if nx:
+        out.append('<a class="pn next" href="%s" rel="next"><span>%s</span>%s</a>' % (site.rel(url, site.url(nx, lang)), esc(m['next']), esc(flow_label(site, nx, lang))))
     return '<nav class="o-pn" aria-label="%s / %s">%s</nav>' % (esc(m['previous']), esc(m['next']), ''.join(out)) if out else ''
 
 
@@ -1059,16 +1113,98 @@ def home_page(site, p, lang):
     return layout(site, p, lang, main, [])
 
 
-def also_stated(site, p, lang):
-    a = site.auth['also_stated_in']
+def plain_md(t):
+    return re.sub(r'\*\*([^*]+)\*\*', r'\1', re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', t))
+
+
+def vp_items(doc, num):
+    """The items of one group of values or principles, read from the clauses of the document: (lead, text) pairs, and an introduction where the clause has one."""
+    pre, ss, ch = split_sections(read('charter/documents/%s.md' % doc))
+    body = [b for n, t, b in ss if str(n) == num][0]
+    items, intro = [], ''
+    for l in body.split('\n'):
+        mm = re.match(r'^\d+\.\d+\. \*\*(.+?)\.\*\* (.*)$', l)
+        if mm:
+            items.append((mm.group(1), plain_md(mm.group(2))))
+            continue
+        mm = re.match(r'^\(([a-z])\) (.*)$', l)
+        if mm:
+            items.append(('', plain_md(mm.group(2))))
+            continue
+        mm = re.match(r'^4\.2\. (.*)$', l) if (doc, num) == ('statement-of-intent', '4') else None
+        if mm:
+            for sent in re.split(r'(?<=\.) ', mm.group(1)):
+                lead = re.match(r'(Integrity|Prudence|Respect for people)', sent)
+                items.append((lead.group(1), sent[len(lead.group(1)):].lstrip()))
+            continue
+        mm = re.match(r'^2\.1\. (.*)$', l) if doc == 'solution-lifecycle-model' else None
+        if mm:
+            intro = plain_md(mm.group(1))
+    return items, intro
+
+
+VP_DOC_NAMES = {'statement-of-intent': 'Statement of Intent', 'operating-model': 'Operating Model', 'solution-lifecycle-model': 'Solution Lifecycle Model'}
+
+
+def values_page(site, p, lang):
+    a = site.auth['values_page']
+    m = site.msg[lang]
     url = site.url(p, lang)
-    items = []
-    for it in a['items']:
-        doc, num = it['ref']
-        ctx = {'url': url, 'lang': lang}
+    ctx = {'url': url, 'lang': lang, 'source': 'charter/documents/statement-of-intent.md'}
+    out, outline = [], []
+    for g in a['groups']:
+        doc, num = g['source']
+        items, intro = vp_items(doc, num)
+        lis = []
+        for lead, text in items:
+            if g['id'] == 'values':
+                lis.append('<li><span lang="en"><strong>%s</strong> %s</span></li>' % (esc(lead), esc(text)))
+            elif lead:
+                lis.append('<li><span lang="en"><strong>%s.</strong> %s</span></li>' % (esc(lead), esc(text)))
+            else:
+                first, _, rest = text.partition('. ')
+                lis.append('<li><span lang="en">%s</span></li>' % (('<strong>%s.</strong> %s' % (esc(first), esc(rest))) if rest else esc(text)))
         href = site._target(doc, num, ctx)
-        items.append('<li><a href="%s">%s</a></li>' % (href, esc(it['label'][lang])))
-    main = '<h1>%s</h1><p class="o-lead">%s</p><ul class="stated">%s</ul>%s' % (esc(a['title'][lang]), esc(a['intro'][lang]), ''.join(items), prev_next(site, p, lang))
+        title = g['title'][lang]
+        hid = 'g-' + g['id']
+        outline.append((2, hid, title))
+        intro_html = '<p class="vp-intro" lang="en">%s</p>' % link_terms(site, esc(intro), ctx) if intro else ''
+        block = ('<section class="vp-group" aria-labelledby="%s"><h2 id="%s">%s</h2><p class="vp-applies"><strong>%s</strong> %s</p>%s<ol class="vp-list">%s</ol>'
+                 '<p class="vp-source">%s: <a href="%s" lang="en">%s %s</a></p></section>') % (
+            hid, hid, esc(title), esc(m['vp_applies']), esc(g['applies'][lang]), intro_html, link_terms(site, ''.join(lis), ctx), esc(m['vp_source']), href, VP_DOC_NAMES[doc], num)
+        out.append(block)
+        site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': p['title'], 'h': title, 'x': (g['applies'][lang] + ' ' + ' '.join((l + ' ' + t) for l, t in items))[:360]})
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(p['title']), esc(a['intro'][lang]), lang_note(site, lang), ''.join(out)) + prev_next(site, p, lang)
+    return layout(site, p, lang, main, outline)
+
+
+def about_page(site, p, lang):
+    a = site.auth['about_page']
+    sec = site.auth['sections']['about']
+    m = site.msg[lang]
+    url = site.url(p, lang)
+    soi = read('charter/documents/statement-of-intent.md')
+    sp = site.by_id['about/statement-of-intent/strategic-priorities']
+    sp_url = site.rel(url, site.url(sp, lang))
+    blocks = []
+    for b in a['blocks']:
+        extra = ''
+        if b.get('priorities'):
+            pri = re.findall(r'^### (9\.\d+)\. (.*)$', soi, re.M)
+            lv = parse_table(soi, '| Maturity Level | Name | Capability')
+            extra = '<ol class="about-pri" lang="en">%s</ol><p class="about-levels"><strong>%s</strong> <span lang="en">%s</span></p>' % (
+                ''.join('<li><a href="%s#c-%s">%s</a></li>' % (sp_url, n.replace('.', '-'), esc(t)) for n, t in pri), esc(m['maturity_levels']),
+                ' &rarr; '.join(esc(r['Name']) for r in lv))
+        links = []
+        for l in b['links']:
+            q = site.by_id.get(l['to']) or site.by_id.get(l['to'] + '/index')
+            links.append('<a href="%s">%s</a>' % (site.rel(url, site.url(q, lang)), esc(l['label'][lang])))
+        blocks.append('<section class="about-block" aria-labelledby="a-%s"><h2 id="a-%s">%s</h2><div><p>%s</p>%s<p class="about-links">%s</p></div></section>' % (
+            b['id'], b['id'], esc(b['title'][lang]), esc(b['text'][lang]), extra, ' '.join(links)))
+        site.extra_search.setdefault(lang, []).append({'u': url + '#a-' + b['id'], 't': sec['label'][lang], 'h': b['title'][lang], 'x': b['text'][lang][:360]})
+    deeper = ''.join(card(site, q, lang, url, 'card--primary') for q in nav_groups(site, 'about'))
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s<h2 class="about-deeper">%s</h2><ul class="o-grid card-list cards-primary">%s</ul>' % (
+        esc(sec['label'][lang]), esc(sec['intro'][lang]), ''.join(blocks), esc(a['deeper'][lang]), deeper)
     return layout(site, p, lang, main, [])
 
 
@@ -1190,10 +1326,12 @@ def build_page(site, p, lang):
     t = p['type']
     if t == 'home':
         return home_page(site, p, lang)
+    if p['id'] == 'about/index':
+        return about_page(site, p, lang)
     if t == 'section':
         return section_page(site, p, lang)
-    if p['id'] == 'about/also-stated-in':
-        return also_stated(site, p, lang)
+    if p['id'] == 'about/values-and-principles':
+        return values_page(site, p, lang)
     if p['id'] == 'reference/change-history':
         return change_history(site, p, lang)
     if p['id'] == 'reference/records-and-systems':
@@ -1215,7 +1353,7 @@ def plain(s):
 
 
 def search_index(site, lang):
-    out = []
+    out = list(site.extra_search.get(lang, []))
     for p in site.pages:
         u = site.url(p, lang)
         if p['id'] in site.bodies:
@@ -1257,8 +1395,8 @@ def write(path, text):
 def gateway():
     links = ''.join('<li><a lang="%s" hreflang="%s" href="%s/">%s</a></li>' % (l, l, l, {'en': 'English', 'ru': 'Русский'}[l]) for l in LANGS)
     return f'''<!doctype html>
-<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark light"><meta http-equiv="refresh" content="0; url={DEFAULT_LANG}/">
+<html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark"><meta http-equiv="refresh" content="0; url={DEFAULT_LANG}/">
 <title>AI Competence Center</title>
 <link rel="stylesheet" href="assets/ui/fonts.css"><link rel="stylesheet" href="assets/ui/tokens.css"><link rel="stylesheet" href="assets/ui/workspace.css"><link rel="stylesheet" href="assets/charter.css">
 </head><body class="charter"><main class="o-main gateway" id="main"><img src="assets/ui/assets/logos/o-mark.svg" width="48" height="54" alt="">
