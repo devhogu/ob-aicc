@@ -172,14 +172,18 @@ dialog.fb .fb-body .oc-button{flex:none}
 /* About AICC: the summary */
 .about-block{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 32px;padding:20px 0;border-top:1px solid var(--border)}
 .about-block h2{margin:0;font-size:18px}
-.about-block p{margin:0 0 10px;max-width:78ch}
+.about-block p{margin:0 0 10px}
 .about-links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}
-.about-pri{display:flex;flex-wrap:wrap;gap:6px 8px;list-style:none;margin:0 0 10px;padding:0;counter-reset:pri}
-.about-pri li{counter-increment:pri;padding:3px 10px;border:1px solid var(--border);border-radius:999px;font-size:13px}
-.about-pri li::before{content:counter(pri) ". ";color:var(--text-muted)}
-.about-pri a{text-decoration:none;color:var(--text)}
-.about-pri a:hover{color:var(--link);text-decoration:underline}
-.about-levels{font-size:14px}
+.about-pri-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:6px 0 14px}
+.about-pri-grid .o-card{padding:12px 14px}
+.about-pri-grid h3{font-size:15px;margin:6px 0 4px}
+.about-pri-grid .card-desc{font-size:13px;margin:0}
+.about-pri-grid .o-tag{font-size:12px;padding:2px 6px}
+.about-levels-t{margin:0 0 6px;font-size:14px}
+.about-levels{margin:0 0 14px;gap:8px;grid-template-columns:repeat(5,minmax(0,1fr))}
+.about-levels li{padding:10px 12px;font-size:13px}
+.about-levels li strong{font-size:14px}
+@media(max-width:1250px){.about-levels{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .about-deeper{margin-top:28px}
 @media(max-width:800px){.about-block{grid-template-columns:1fr}}
 /* Values and principles: numbered, standing out */

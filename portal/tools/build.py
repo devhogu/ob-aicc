@@ -1200,11 +1200,18 @@ def about_page(site, p, lang):
     for b in a['blocks']:
         extra = ''
         if b.get('priorities'):
-            pri = re.findall(r'^### (9\.\d+)\. (.*)$', soi, re.M)
+            lines = soi.split('\n')
+            pri = []
+            for i, l in enumerate(lines):
+                mm = re.match(r'### (9\.\d+)\. (.*)', l)
+                if mm:
+                    obj = next((l2.replace('- **Objective.**', '').strip() for l2 in lines[i + 1:i + 4] if l2.startswith('- **Objective.**')), '')
+                    pri.append((mm.group(1), mm.group(2), obj))
             lv = parse_table(soi, '| Maturity Level | Name | Capability')
-            extra = '<ol class="about-pri" lang="en">%s</ol><p class="about-levels"><strong>%s</strong> <span lang="en">%s</span></p>' % (
-                ''.join('<li><a href="%s#c-%s">%s</a></li>' % (sp_url, n.replace('.', '-'), esc(t)) for n, t in pri), esc(m['maturity_levels']),
-                ' &rarr; '.join(esc(r['Name']) for r in lv))
+            pcards = ''.join('<li class="o-card linked card--secondary" data-tip="%s"><p class="o-tag">PRI-%d</p><h3><a href="%s#c-%s">%s</a></h3><p class="card-desc" lang="en">%s</p></li>' % (
+                esc(o), k + 1, sp_url, n.replace('.', '-'), esc(t), esc(o)) for k, (n, t, o) in enumerate(pri))
+            lcards = ''.join('<li class="level"><span class="lv-n">%s %s</span><strong lang="en">%s</strong></li>' % (esc(m['level']), esc(r['Maturity Level']), esc(r['Name'])) for r in lv)
+            extra = '<ul class="o-grid card-list pri-grid about-pri-grid" lang="en">%s</ul><p class="about-levels-t"><strong>%s</strong></p><ol class="levels about-levels">%s</ol>' % (pcards, esc(m['maturity_levels']), lcards)
         links = []
         for l in b['links']:
             q = site.by_id.get(l['to']) or site.by_id.get(l['to'] + '/index')
@@ -1213,9 +1220,10 @@ def about_page(site, p, lang):
             b['id'], b['id'], esc(b['title'][lang]), esc(b['text'][lang]), extra, ' '.join(links)))
         site.extra_search.setdefault(lang, []).append({'u': url + '#a-' + b['id'], 't': sec['label'][lang], 'h': b['title'][lang], 'x': b['text'][lang][:360]})
     deeper = ''.join(card(site, q, lang, url, 'card--primary') for q in nav_groups(site, 'about'))
-    main = '<h1>%s</h1><p class="o-lead">%s</p>%s<h2 class="about-deeper">%s</h2><ul class="o-grid card-list cards-primary">%s</ul>' % (
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s<h2 class="about-deeper" id="a-further">%s</h2><ul class="o-grid card-list cards-primary">%s</ul>' % (
         esc(sec['label'][lang]), esc(sec['intro'][lang]), ''.join(blocks), esc(a['deeper'][lang]), deeper)
-    return layout(site, p, lang, main, [])
+    outline = [(2, 'a-' + b['id'], b['title'][lang]) for b in a['blocks']] + [(2, 'a-further', a['deeper'][lang])]
+    return layout(site, p, lang, main, outline)
 
 
 def change_history(site, p, lang):
