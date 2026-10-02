@@ -650,7 +650,7 @@ def desc_of(site, p):
     if p['type'] == 'role':
         return site.roles['om'].get(p['title'], {}).get('Does', '')
     fixed = {
-        'about/charter-outline': 'How the charter is organized, and how its documents, workflows, guides, and templates relate',
+        'about/charter-outline': 'How the charter is organized on this site, where each part is, and where to start',
         'about/values-and-principles': 'The values and the principles of adoption, application, work, and delivery, and what each applies to',
         'reference/vocabulary': 'The defined terms of the charter and its style',
         'reference/change-history': 'The revision history of the documents',
@@ -666,7 +666,7 @@ def render_pages(site):
     diagrams = []
     for p in site.pages:
         t = p['type']
-        if p['id'] in ('reference/change-history', 'about/values-and-principles', 'reference/records-and-systems', 'organization/roles', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
+        if p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'reference/records-and-systems', 'organization/roles', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
             continue
         if not p.get('source'):
             continue
@@ -1237,6 +1237,61 @@ def values_page(site, p, lang):
     return layout(site, p, lang, main, outline)
 
 
+def explore_page(site, p, lang):
+    a = site.auth['explore_page']
+    m = site.msg[lang]
+    url = site.url(p, lang)
+    ctx = {'url': url, 'lang': lang, 'source': 'charter/documents/operating-model.md'}
+    outline = []
+    out = []
+    # the four parts
+    rows = []
+    for r in a['parts']:
+        where = esc(r['where'][lang])
+        if r.get('to'):
+            q = site.by_id[r['to']]
+            where = '%s: <a href="%s">%s</a>' % (where, site.rel(url, site.url(q, lang)), esc(disp(q['title'])))
+        rows.append('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % (esc(r['part'][lang]), esc(r['answers'][lang]), where))
+    out.append('<section aria-labelledby="x-parts"><h2 id="x-parts">%s</h2><p>%s</p><div class="o-table-wrap" role="region" tabindex="0" aria-label="%s"><table><thead><tr><th>%s</th><th>%s</th><th>%s</th></tr></thead><tbody>%s</tbody></table></div></section>' % (
+        esc(a['parts_title'][lang]), esc(a['parts_lead'][lang]), esc(a['parts_title'][lang]), esc(m['x_part']), esc(m['x_answers']), esc(m['x_where']), ''.join(rows)))
+    outline.append((2, 'x-parts', a['parts_title'][lang]))
+    # the sections and their pages, from the sitemap
+    secs = []
+    for sdef in site.sections:
+        sec = site.auth['sections'][sdef['id']]
+        sp = site.by_id[sdef['id'] + '/index']
+        items = nav_groups(site, sdef['id'])
+        if sdef['id'] == 'library':
+            tpls = sorted([x for x in site.pages if x['type'] == 'template'], key=lambda x: x['order'])
+            lis = '<li>%s</li>' % ', '.join('<a href="%s">%s</a>' % (site.rel(url, site.url(q, lang)), esc(q['title'])) for q in tpls)
+        else:
+            lis = ''.join('<li><a href="%s">%s</a><span class="x-kind"> · %s</span><span lang="en"> &mdash; %s</span></li>' % (
+                site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(page_meta(site, q, lang).split(' · ')[0]), esc(section_desc(site, q))) for q in items)
+        hid = 'x-' + sdef['id']
+        secs.append('<section class="x-sec" aria-labelledby="%s"><h3 id="%s"><a href="%s">%s</a></h3><p>%s</p><ul class="support-list">%s</ul></section>' % (
+            hid, hid, site.rel(url, site.url(sp, lang)), esc(sec['label'][lang]), esc(sec['intro'][lang].split('. ')[0].rstrip('.') + '.'), lis))
+        outline.append((3, hid, sec['label'][lang]))
+    out.insert(1, '<section aria-labelledby="x-sections"><h2 id="x-sections">%s</h2>%s</section>' % (esc(a['sections_title'][lang]), ''.join(secs)))
+    outline.insert(1, (2, 'x-sections', a['sections_title'][lang]))
+    # routes
+    routes = ''
+    for r in site.auth['routes']:
+        links = []
+        for pid in r['pages']:
+            q = site.by_id.get(pid) or site.by_id.get(pid + '/index')
+            links.append('<li><a href="%s">%s</a></li>' % (site.rel(url, site.url(q, lang)), esc(flow_label(site, q, lang))))
+        routes += '<li class="o-card route"><h3>%s</h3><p class="route-reader">%s</p><p>%s</p><ol>%s</ol></li>' % (esc(r['title'][lang]), esc(r['reader'][lang]), esc(r['purpose'][lang]), ''.join(links))
+    out.append('<section aria-labelledby="x-routes"><h2 id="x-routes">%s</h2><p>%s</p><ul class="o-grid card-list routes">%s</ul></section>' % (esc(a['routes_title'][lang]), esc(a['routes_lead'][lang]), routes))
+    outline.append((2, 'x-routes', a['routes_title'][lang]))
+    # control of the charter
+    out.append('<section aria-labelledby="x-control"><h2 id="x-control">%s</h2><p>%s</p></section>' % (esc(a['control_title'][lang]), site.link_xrefs(esc(a['control'][lang]), ctx)))
+    outline.append((2, 'x-control', a['control_title'][lang]))
+    for hid, t, x in (('x-parts', a['parts_title'][lang], a['parts_lead'][lang]), ('x-routes', a['routes_title'][lang], a['routes_lead'][lang]), ('x-control', a['control_title'][lang], a['control'][lang])):
+        site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': p['title'], 'h': t, 'x': x[:360]})
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(p['title']), esc(a['intro'][lang]), lang_note(site, lang), ''.join(out)) + prev_next(site, p, lang) + read_further(site, p, lang)
+    return layout(site, p, lang, main, outline)
+
+
 def about_page(site, p, lang):
     a = site.auth['about_page']
     sec = site.auth['sections']['about']
@@ -1406,6 +1461,8 @@ def build_page(site, p, lang):
         return section_page(site, p, lang)
     if p['id'] == 'about/values-and-principles':
         return values_page(site, p, lang)
+    if p['id'] == 'about/charter-outline':
+        return explore_page(site, p, lang)
     if p['id'] == 'reference/change-history':
         return change_history(site, p, lang)
     if p['id'] == 'reference/records-and-systems':

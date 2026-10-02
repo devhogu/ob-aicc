@@ -229,3 +229,14 @@ dialog.fb .fb-body .oc-button{flex:none}
 :root[data-theme="dark"] .doc-facts .status-withdrawn,:root[data-theme="dark"] .doc-facts .status-rejected{color:#f0a0a0;background:#3f1818;border-color:#5e2424}
 .doc-facts a.src{font-family:var(--font-mono);font-size:13px;font-weight:400;color:var(--text);text-decoration:underline dotted;text-underline-offset:3px}
 .doc-facts a.src:hover{color:var(--link)}
+.x-sec{margin:18px 0 0}
+.x-sec h3{margin:0 0 4px;font-size:17px}
+.x-sec h3 a{text-decoration:none;color:var(--text)}
+.x-sec h3 a:hover{color:var(--link);text-decoration:underline}
+.x-sec p{margin:0 0 6px;color:var(--text-muted);font-size:14px}
+.x-sec .support-list{margin:0 0 8px}
+.x-kind{color:var(--text-muted);font-size:13px}
+/* the header stays in view while the page scrolls */
+.o-header{position:sticky;top:0;z-index:50}
+.o-nav{position:sticky;top:var(--header-height);align-self:start;max-height:calc(100vh - var(--header-height));overflow:auto}
+.o-context{top:calc(var(--header-height) + 20px)}

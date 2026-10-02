@@ -521,5 +521,89 @@
     "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve our customers, to set the standard by which the Bank adopts it, and to keep every use of it accountable to people, so that the Bank serves its customers better, works with greater confidence, and leads with care."
    }
   }
+ },
+ "explore_page": {
+  "intro": {
+   "en": "The charter is the body of knowledge of the AI Competence Center. It states how the unit is mandated, governed, and operated, and it is the source of truth for what AICC is, what it produces, and how it keeps its records. This page shows how the charter is organized on this site and where to start."
+  },
+  "parts_title": {
+   "en": "The charter in four parts"
+  },
+  "parts_lead": {
+   "en": "The charter has four kinds of content. Each answers one question, and each has its place on this site. The Registry and the Portfolio hold the records of the work; they are outside the charter and are not on this site."
+  },
+  "parts": [
+   {
+    "part": {
+     "en": "Documents"
+    },
+    "answers": {
+     "en": "What are the rules?"
+    },
+    "where": {
+     "en": "About AICC, What AICC does, How AICC works, Organization, Responsible AI, and Governance and oversight, each document in the section of its subject; long documents are split into parts"
+    }
+   },
+   {
+    "part": {
+     "en": "Workflows"
+    },
+    "answers": {
+     "en": "How does the work flow, and on which events?"
+    },
+    "where": {
+     "en": "Beside the documents that they illustrate, in What AICC does, How AICC works, Responsible AI, and Governance and oversight"
+    }
+   },
+   {
+    "part": {
+     "en": "Guides"
+    },
+    "answers": {
+     "en": "Who does what, when, and what is left on record?"
+    },
+    "where": {
+     "en": "Beside their workflows, as companion guides"
+    }
+   },
+   {
+    "part": {
+     "en": "Templates"
+    },
+    "answers": {
+     "en": "What is the form of each record?"
+    },
+    "where": {
+     "en": "Library"
+    }
+   },
+   {
+    "part": {
+     "en": "Registry and Portfolio"
+    },
+    "answers": {
+     "en": "What is the state of the work, and what is the evidence? Which Solutions exist, and in what state?"
+    },
+    "where": {
+     "en": "Outside this site, on the corporate folder; the page Records and systems states where each record is kept"
+    },
+    "to": "reference/records-and-systems"
+   }
+  ],
+  "sections_title": {
+   "en": "The sections of this site"
+  },
+  "routes_title": {
+   "en": "Where to start"
+  },
+  "routes_lead": {
+   "en": "A reader who is new to AICC reads About AICC, then What AICC does, and keeps the Vocabulary at hand. A reader with a purpose follows one of the routes below."
+  },
+  "control_title": {
+   "en": "How the charter is kept"
+  },
+  "control": {
+   "en": "Every page of this site is generated from the documents of the charter at the baseline revision stated in the footer; where a page and a document differ, the document prevails. The Document Catalog states the status, the revision, and the life cycle of each document and template, and the AICC Lead activates them. Each document carries its change history, shown at the end of its page. The controls that can be tested are listed in the Operating Model, section 8, and the evidence of each is held in the Registry."
+  }
  }
 }
