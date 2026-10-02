@@ -13,7 +13,13 @@ A function does not need a form, a budget line, or a project to start with AICC.
 | 5. Outcome Report | The outcome is reported with its evidence, and the Domain Owner accepts it as the requester | AICC Lead issues; the Domain Owner accepts | Outcome Report |
 | 6. Support | The Solution is supported at the agreed level; a check-in at each Iteration decides follow-on or end | Solution Engineer; the AICC Lead with the Domain Owner | Service Management records |
 
-## 2. The commitment
+## 2. The phases of a service, and the three types of Solution
+
+2.1. Whatever the service line, an Engagement runs through the same phases: a study, which is the exploration, the scoping, and the business case; a proof, which is the trial of a Solution as an MVP or an Experiment, with its Outcome Report and Proposal; delivery, which is the build and the release; and support after delivery. A run-rate request may run only the study and the delivery, in days.
+
+2.2. What an Engagement delivers is a Solution of one type: an Experiment, a time-boxed proof that ends in a Proposal; a Product, a version built for one function that AICC supports as agreed; or a Service, which AICC runs for its whole life with a run cost and a sunset rule. The Services in operation are in the Service catalog.
+
+## 3. The commitment
 
 2.1. AICC commits in a Service Agreement. It is a working agreement and not a legal document, and it needs no signature chain. AICC works toward the outcome on a best-effort basis, within the capability that it has available. The function commits to nothing; what AICC relies on from the function is written as an Assumption.
 
@@ -21,7 +27,7 @@ A function does not need a form, a budget line, or a project to start with AICC.
 
 2.3. AICC does not charge the functions. The Domain pays from its Investment Envelope for the run, the licenses, and the provider costs of a Solution.
 
-## 3. Service levels
+## 4. Service levels
 
 | Support level | What AICC does | Solution type |
 | --- | --- | --- |
@@ -30,12 +36,12 @@ A function does not need a form, a budget line, or a project to start with AICC.
 | At agreed response targets | Supports to the targets that the Service Agreement states | Service |
 | Run by AICC | Runs the Solution for its whole life, with its run cost and its sunset rule | Service |
 
-## 4. What AICC does not do
+## 5. What AICC does not do
 
 4.1. AICC does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, validate its own work, or decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function.
 
 4.2. AICC does not deliver at scale. It proves and builds, and it relies on the platform teams and the IT functions of the Bank to run what the Bank adopts.
 
-## 5. Rule source
+## 6. Rule source
 
 Business Model 3 to 7; AICC Charter 3.2 and 4; Solution Lifecycle Model 7.3 and 8; the Engagement workflow and guide.

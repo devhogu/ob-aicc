@@ -447,135 +447,187 @@
    ]
   },
   {
-   "id": "services/advisory",
+   "id": "services/strategy-and-governance-office",
    "section": "services",
    "order": 1,
    "type": "service",
-   "slug": "/services/advisory/",
-   "title": "Advisory",
+   "slug": "/services/strategy-and-governance-office/",
+   "title": "Strategy and governance office",
    "source": [
-    "portal/content/services/advisory.md"
+    "portal/content/services/strategy-and-governance-office.md"
    ],
    "production": "authored",
    "outline": [
-    "AI strategy and roadmap for a Domain, use-case discovery and the business case (the study), maturity and readiness assessment, provider assessment, Risk Tier advice",
-    "What the client receives, the typical shape, and what it leads to",
-    "The templates used, and who decides",
-    "Rule source: Business Model 4.1; Portfolio Management Model 6; AI Policy 4"
+    "What AICC built for itself, built for any unit: strategy, charter, operating and governance model, process set, portal and repository, developed with AI; program",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Business Model 2.4 and 4 (clause proposed)"
    ]
   },
   {
-   "id": "services/proof-and-prototyping",
+   "id": "services/normative-documents-and-processes",
    "section": "services",
    "order": 2,
    "type": "service",
-   "slug": "/services/proof-and-prototyping/",
-   "title": "Proof and prototyping",
+   "slug": "/services/normative-documents-and-processes/",
+   "title": "Normative documents and processes",
    "source": [
-    "portal/content/services/proof-and-prototyping.md"
+    "portal/content/services/normative-documents-and-processes.md"
    ],
    "production": "authored",
    "outline": [
-    "Experiments, proofs of concept, MVPs, and trials of platforms and concepts; each ends in an Outcome Report and a Proposal",
-    "What the client receives, the typical shape, and what it leads to",
-    "The templates used, and who decides",
-    "Rule source: Business Model 4.1 and 4.3; Portfolio Management Model 7; Solution Lifecycle Model 8"
+    "Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for HR, legal, accounting, compliance, operations, and any function; run-rate and program",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Business Model 4 (clause proposed)"
    ]
   },
   {
-   "id": "services/solution-delivery",
+   "id": "services/knowledge-services",
    "section": "services",
    "order": 3,
    "type": "service",
-   "slug": "/services/solution-delivery/",
-   "title": "Solution delivery",
+   "slug": "/services/knowledge-services/",
+   "title": "Knowledge services",
    "source": [
-    "portal/content/services/solution-delivery.md"
+    "portal/content/services/knowledge-services.md"
    ],
    "production": "authored",
    "outline": [
-    "Products built for one function: knowledge bases, assistants, and the automation of routine work; handed over and supported on demand",
-    "What the client receives, the typical shape, and what it leads to",
-    "The templates used, and who decides",
-    "Rule source: Business Model 4.3; Solution Lifecycle Model 3, 7, and 8"
+    "The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask; program",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Statement of Intent 5.3, 9.5, 10.2; AI Policy 2, 3"
    ]
   },
   {
-   "id": "services/ai-services",
+   "id": "services/workplace-automation",
    "section": "services",
    "order": 4,
    "type": "service",
-   "slug": "/services/ai-services/",
-   "title": "AI services run by AICC",
+   "slug": "/services/workplace-automation/",
+   "title": "Workplace automation",
    "source": [
-    "portal/content/services/ai-services.md"
+    "portal/content/services/workplace-automation.md"
    ],
    "production": "authored",
    "outline": [
-    "The portals, engines, and backends that AICC operates as Services, with Service Management support and response targets; the live list is the catalog",
-    "What the client receives, the typical shape, and what it leads to",
-    "The templates used, and who decides",
-    "Rule source: Business Model 4.2; Solution Lifecycle Model 8.1"
+    "Routing, forms, reports, consolidation, and documents from templates, done by assistants under human validation; run-rate; the catalog of automations",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Statement of Intent 9.4; AI Policy 2, 3"
    ]
   },
   {
-   "id": "services/enablement",
+   "id": "services/information-and-decision-support",
    "section": "services",
    "order": 5,
    "type": "service",
-   "slug": "/services/enablement/",
-   "title": "Enablement",
+   "slug": "/services/information-and-decision-support/",
+   "title": "Information and decision support",
    "source": [
-    "portal/content/services/enablement.md"
+    "portal/content/services/information-and-decision-support.md"
    ],
    "production": "authored",
    "outline": [
-    "Training by role, coaching of Domain Experts, communities of practice, playbooks and reusable assets",
-    "What the client receives, the typical shape, and what it leads to",
-    "The templates used, and who decides",
+    "ETL and consolidation, dashboards, analytical and research tooling, the factual base for decisions; run-rate and program",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Statement of Intent 9.3, 10.2; Business Model 6"
+   ]
+  },
+  {
+   "id": "services/content-and-document-engines",
+   "section": "services",
+   "order": 6,
+   "type": "service",
+   "slug": "/services/content-and-document-engines/",
+   "title": "Content and document engines",
+   "source": [
+    "portal/content/services/content-and-document-engines.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Public, investor, and management material generated from governed data and templates, pre-filled for people to finish; program",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Statement of Intent 9.3; Operating Model 4.2"
+   ]
+  },
+  {
+   "id": "services/enablement-at-the-workplace",
+   "section": "services",
+   "order": 7,
+   "type": "service",
+   "slug": "/services/enablement-at-the-workplace/",
+   "title": "Enablement at the workplace",
+   "source": [
+    "portal/content/services/enablement-at-the-workplace.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Training by role, coaching at the desk, Domain Experts, skill libraries, communities of practice; run-rate",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
     "Rule source: Business Model 4.4; Statement of Intent 10.1"
    ]
   },
   {
-   "id": "services/oversight-of-adopted-solutions",
+   "id": "services/assurance-and-governance-support",
    "section": "services",
-   "order": 6,
+   "order": 8,
    "type": "service",
-   "slug": "/services/oversight-of-adopted-solutions/",
-   "title": "Oversight of Adopted Solutions",
+   "slug": "/services/assurance-and-governance-support/",
+   "title": "Assurance and governance support",
    "source": [
-    "portal/content/services/oversight-of-adopted-solutions.md"
+    "portal/content/services/assurance-and-governance-support.md"
    ],
    "production": "authored",
    "outline": [
-    "AICC oversees and reports on the Solutions that others deliver",
-    "What the client receives, the typical shape, and what it leads to",
-    "The templates used, and who decides",
-    "Rule source: Business Model 2.3; Solution Lifecycle Model 8"
+    "Risk Tier, AI Registry entry, provider assessment, evaluation before use, Acceptance Checklist, oversight of Adopted Solutions; run-rate",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: AI Policy 2 to 4; Business Model 2.3"
    ]
   },
   {
-   "id": "services/research-and-partnering",
+   "id": "services/watch-research-and-partnering",
    "section": "services",
-   "order": 7,
+   "order": 9,
    "type": "service",
-   "slug": "/services/research-and-partnering/",
-   "title": "Research and partnering",
+   "slug": "/services/watch-research-and-partnering/",
+   "title": "Watch, research, and partnering",
    "source": [
-    "portal/content/services/research-and-partnering.md"
+    "portal/content/services/watch-research-and-partnering.md"
    ],
    "production": "authored",
    "outline": [
-    "Trends and methods, partnerships with other organizations and with providers. DECISION 2: not in the charter today; needs a clause in Business Model 4, or stays a sentence in the lead of the Services page",
-    "What the client receives, the typical shape, and what it leads to",
-    "The templates used, and who decides",
-    "Rule source: to be added to Business Model 4"
+    "Regulatory and technology watch with digests, trials, relations with organizations and providers; run-rate and program. Not yet in the Business Model (clause proposed)",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Business Model 2.3, 2.4; Statement of Intent 10.5"
+   ]
+  },
+  {
+   "id": "services/service-model",
+   "section": "services",
+   "order": 10,
+   "type": "outline",
+   "slug": "/services/service-model/",
+   "title": "The service model",
+   "source": [
+    "portal/content/services/service-model.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "The composition of a service: line, mode, client, Solution type, support level, Risk Tier, owner, package, records",
+    "The life of a service; the operation of a service; the records; the catalog"
    ]
   },
   {
    "id": "services/how-to-engage",
    "section": "services",
-   "order": 8,
+   "order": 11,
    "type": "outline",
    "slug": "/services/how-to-engage/",
    "title": "How to engage",
@@ -594,24 +646,24 @@
   {
    "id": "services/catalog",
    "section": "services",
-   "order": 9,
-   "type": "catalog",
+   "order": 12,
+   "type": "outline",
    "slug": "/services/catalog/",
-   "title": "Service catalog",
+   "title": "Service catalog: the form",
    "source": [
-    "portfolio/README.md"
+    "portal/content/services/catalog-form.md"
    ],
-   "production": "generated from portfolio/solutions at each build, dated",
+   "production": "authored; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal",
    "outline": [
-    "DECISION 1: dynamic content on the site. One row for each Solution of the Portfolio: name, type (Service, Product, Experiment), state, receiver, support level, Solution Definition",
-    "Filter by type and state",
-    "The date of the build and a statement that the Portfolio prevails"
+    "The two kinds of entry: Solution and package",
+    "The fields of each; the states of an entry",
+    "One illustration of each kind"
    ]
   },
   {
    "id": "services/business-model",
    "section": "services",
-   "order": 10,
+   "order": 13,
    "type": "document",
    "slug": "/services/business-model/",
    "title": "Business Model",
@@ -624,7 +676,7 @@
   {
    "id": "services/engagement-workflow",
    "section": "services",
-   "order": 11,
+   "order": 14,
    "type": "workflow",
    "slug": "/services/engagement-workflow/",
    "title": "Engagement workflow",
@@ -637,7 +689,7 @@
   {
    "id": "services/engagement-guide",
    "section": "services",
-   "order": 12,
+   "order": 15,
    "type": "guide",
    "slug": "/services/engagement-guide/",
    "title": "Guide: Engagement",
@@ -931,6 +983,75 @@
     "charter/workflows/collaboration-tooling.md"
    ],
    "production": "generated"
+  },
+  {
+   "id": "portfolio/service-lines-in-the-portfolio",
+   "section": "portfolio",
+   "order": 6,
+   "type": "outline",
+   "slug": "/portfolio/service-lines-in-the-portfolio/",
+   "title": "The service lines in the Portfolio",
+   "source": [
+    "portal/content/portfolio/service-lines-in-the-portfolio.md"
+   ],
+   "production": "authored; proposed for Portfolio Management Model 5",
+   "outline": [
+    "The two lanes: run-rate and program",
+    "The lines by lane",
+    "Screening at the front door: lens, size, Risk Tier, package",
+    "The Portfolio at a glance: the four groups"
+   ]
+  },
+  {
+   "id": "delivery/experiment-workflow",
+   "section": "delivery",
+   "order": 18,
+   "type": "outline",
+   "slug": "/delivery/experiment-workflow/",
+   "title": "The Experiment workflow: the Lab",
+   "source": [
+    "portal/content/delivery/experiment-workflow.md"
+   ],
+   "production": "authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB",
+   "outline": [
+    "Six stages: define, establish, prepare data, build, validate, decide, with concerns and records",
+    "The rules of the Lab: decision rights, data, time-box, guardrails scorecard"
+   ]
+  },
+  {
+   "id": "delivery/life-of-a-service",
+   "section": "delivery",
+   "order": 19,
+   "type": "outline",
+   "slug": "/delivery/life-of-a-service/",
+   "title": "The life of a Service",
+   "source": [
+    "portal/content/delivery/life-of-a-service.md"
+   ],
+   "production": "authored; proposed for Solution Lifecycle Model 8; draws on STS",
+   "outline": [
+    "Seven states with question, signals, action, gate",
+    "The reviews",
+    "The hand-over to scale"
+   ]
+  },
+  {
+   "id": "delivery/service-operations",
+   "section": "delivery",
+   "order": 20,
+   "type": "outline",
+   "slug": "/delivery/service-operations/",
+   "title": "Service operations",
+   "source": [
+    "portal/content/delivery/service-operations.md"
+   ],
+   "production": "authored; the run-book template of a Service; draws on STS",
+   "outline": [
+    "The practices: request, incident, problem, change, knowledge, service level, financial, supplier",
+    "The classes of service",
+    "The health of a Service",
+    "Sizing for a small unit"
+   ]
   },
   {
    "id": "organization/operating-model",
@@ -1473,6 +1594,23 @@
     "DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution",
     "For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it",
     "Links to the Reference page Regulators and acts for the bodies and the texts"
+   ]
+  },
+  {
+   "id": "knowledge-base/package-definition",
+   "section": "knowledge-base",
+   "order": 19,
+   "type": "outline",
+   "slug": "/knowledge-base/package-definition/",
+   "title": "Package Definition (draft template)",
+   "source": [
+    "portal/content/knowledge-base/package-definition.md"
+   ],
+   "production": "authored; proposed as the fourteenth template of the charter",
+   "outline": [
+    "When it is used",
+    "The form",
+    "The sections"
    ]
   },
   {

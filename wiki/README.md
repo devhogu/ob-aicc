@@ -11,6 +11,9 @@ The wiki holds lineage, research, open items, and an archive. It is explanatory 
 
 ### Lineage and research
 
+- [Service ideas, work in progress](research/services/service-ideas.md) - the running collection of service ideas for the nine service lines and the catalog of packages, with source, line, mode, and status
+- [Findings from the four concept portals](research/services/portal-findings.md) - the Financial Services framework, Cloud LAB, STS, and CSR read for services, constructs, and Portfolio candidates
+
 - [Consulting practices borrowed](research/operating-model/consulting-borrowings.md) - what AICC takes from consulting engagements, and what it leaves out
 - [Alignment with SAFe and Kanban](research/operating-model/safe-alignment.md) - how the cadence, loops, and Records follow SAFe and Kanban
 - [Simplification](research/operating-model/simplification.md) - why the corpus was cut to six documents, and what was removed

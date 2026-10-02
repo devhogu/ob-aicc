@@ -22,15 +22,18 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Responsible AI | AI Policy | /responsible-ai/ai-policy/ | document | documents/ai-policy.md | all | 2155 | generated |
 | Responsible AI | AI risk and control workflow | /responsible-ai/ai-risk-control-workflow/ | workflow | workflows/ai-risk-control.md | all |  | generated |
 | Services | Services | /services/ | section | none | none |  | authored, with a generated list |
-| Services | Advisory | /services/advisory/ | service | portal/content/services/advisory.md | all |  | authored |
-| Services | Proof and prototyping | /services/proof-and-prototyping/ | service | portal/content/services/proof-and-prototyping.md | all |  | authored |
-| Services | Solution delivery | /services/solution-delivery/ | service | portal/content/services/solution-delivery.md | all |  | authored |
-| Services | AI services run by AICC | /services/ai-services/ | service | portal/content/services/ai-services.md | all |  | authored |
-| Services | Enablement | /services/enablement/ | service | portal/content/services/enablement.md | all |  | authored |
-| Services | Oversight of Adopted Solutions | /services/oversight-of-adopted-solutions/ | service | portal/content/services/oversight-of-adopted-solutions.md | all |  | authored |
-| Services | Research and partnering | /services/research-and-partnering/ | service | portal/content/services/research-and-partnering.md | all |  | authored |
+| Services | Strategy and governance office | /services/strategy-and-governance-office/ | service | portal/content/services/strategy-and-governance-office.md | all |  | authored |
+| Services | Normative documents and processes | /services/normative-documents-and-processes/ | service | portal/content/services/normative-documents-and-processes.md | all |  | authored |
+| Services | Knowledge services | /services/knowledge-services/ | service | portal/content/services/knowledge-services.md | all |  | authored |
+| Services | Workplace automation | /services/workplace-automation/ | service | portal/content/services/workplace-automation.md | all |  | authored |
+| Services | Information and decision support | /services/information-and-decision-support/ | service | portal/content/services/information-and-decision-support.md | all |  | authored |
+| Services | Content and document engines | /services/content-and-document-engines/ | service | portal/content/services/content-and-document-engines.md | all |  | authored |
+| Services | Enablement at the workplace | /services/enablement-at-the-workplace/ | service | portal/content/services/enablement-at-the-workplace.md | all |  | authored |
+| Services | Assurance and governance support | /services/assurance-and-governance-support/ | service | portal/content/services/assurance-and-governance-support.md | all |  | authored |
+| Services | Watch, research, and partnering | /services/watch-research-and-partnering/ | service | portal/content/services/watch-research-and-partnering.md | all |  | authored |
+| Services | The service model | /services/service-model/ | outline | portal/content/services/service-model.md | all |  | authored |
 | Services | How to engage | /services/how-to-engage/ | outline | portal/content/services/how-to-engage.md | all |  | authored, with the Engagement workflow |
-| Services | Service catalog | /services/catalog/ | catalog | portfolio/README.md | all |  | generated from portfolio/solutions at each build, dated |
+| Services | Service catalog: the form | /services/catalog/ | outline | portal/content/services/catalog-form.md | all |  | authored; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal |
 | Services | Business Model | /services/business-model/ | document | documents/business-model.md | all | 1381 | generated |
 | Services | Engagement workflow | /services/engagement-workflow/ | workflow | workflows/engagement.md | all |  | generated |
 | Services | Guide: Engagement | /services/engagement-guide/ | guide | guides/engagement-guide.md | all |  | generated |
@@ -40,6 +43,7 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Portfolio | Portfolio Management Model: The portfolio Kanban | /portfolio/portfolio-management-model/the-portfolio-kanban/ | document | documents/portfolio-management-model.md | 5 | 1074 | generated |
 | Portfolio | Portfolio Management Model: The business case and the MVP | /portfolio/portfolio-management-model/the-business-case-and-the-mvp/ | document | documents/portfolio-management-model.md | 6, 7 | 984 | generated |
 | Portfolio | Portfolio Management Model: Levels, review, measures, and records | /portfolio/portfolio-management-model/levels-review-and-records/ | document | documents/portfolio-management-model.md | 8, 9 | 353 | generated |
+| Portfolio | The service lines in the Portfolio | /portfolio/service-lines-in-the-portfolio/ | outline | portal/content/portfolio/service-lines-in-the-portfolio.md | all |  | authored; proposed for Portfolio Management Model 5 |
 | Delivery | Delivery | /delivery/ | section | workflows/README.md | all |  | authored, with a generated list |
 | Delivery | Solution Lifecycle Model | /delivery/solution-lifecycle-model/ | document | documents/solution-lifecycle-model.md | 1, 2 | 414 | generated |
 | Delivery | Solution Lifecycle Model: The flow of value | /delivery/solution-lifecycle-model/the-flow-of-value/ | document | documents/solution-lifecycle-model.md | 3 | 1358 | generated |
@@ -48,6 +52,9 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Delivery | Solution Lifecycle Model: The cadence | /delivery/solution-lifecycle-model/the-cadence/ | document | documents/solution-lifecycle-model.md | 6 | 1325 | generated |
 | Delivery | Solution Lifecycle Model: Verification, release, and acceptance | /delivery/solution-lifecycle-model/verification-release-and-acceptance/ | document | documents/solution-lifecycle-model.md | 7 | 1255 | generated |
 | Delivery | Solution Lifecycle Model: Life-cycle management | /delivery/solution-lifecycle-model/life-cycle-management/ | document | documents/solution-lifecycle-model.md | 8 | 1805 | generated |
+| Delivery | The Experiment workflow: the Lab | /delivery/experiment-workflow/ | outline | portal/content/delivery/experiment-workflow.md | all |  | authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB |
+| Delivery | The life of a Service | /delivery/life-of-a-service/ | outline | portal/content/delivery/life-of-a-service.md | all |  | authored; proposed for Solution Lifecycle Model 8; draws on STS |
+| Delivery | Service operations | /delivery/service-operations/ | outline | portal/content/delivery/service-operations.md | all |  | authored; the run-book template of a Service; draws on STS |
 | Delivery | Portfolio and service delivery workflow | /delivery/service-delivery-workflow/ | workflow | workflows/service-delivery.md | all |  | generated |
 | Delivery | Guide: Service delivery | /delivery/service-delivery-guide/ | guide | guides/service-delivery-guide.md | all |  | generated |
 | Delivery | Cadence | /delivery/cadence-workflow/ | workflow | workflows/cadence.md | all |  | generated |
@@ -87,6 +94,7 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Knowledge base | Quarterly Report | /knowledge-base/quarterly-report/ | template | templates/quarterly-report.md | all |  | generated |
 | Knowledge base | Appointments Record | /knowledge-base/appointments-record/ | template | templates/appointments-record.md | all |  | generated |
 | Knowledge base | Proposal | /knowledge-base/proposal/ | template | templates/proposal.md | all |  | generated |
+| Knowledge base | Package Definition (draft template) | /knowledge-base/package-definition/ | outline | portal/content/knowledge-base/package-definition.md | all |  | authored; proposed as the fourteenth template of the charter |
 | Knowledge base | Guides | /knowledge-base/guides/ | index | guides/README.md | all |  | generated from the sitemap |
 | Knowledge base | Acts and compliance | /knowledge-base/acts-and-compliance/ | outline | portal/content/knowledge-base/acts-and-compliance.md | all |  | authored; curated by the AICC Lead with the Control Function Contacts |
 | Knowledge base | Publications | /knowledge-base/publications/ | outline | portal/content/knowledge-base/publications.md | all |  | authored; a list kept by the AICC Lead |

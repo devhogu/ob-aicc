@@ -2,7 +2,7 @@
 id: services/how-to-engage
 title: How to engage
 section: services
-order: 8
+order: 11
 type: outline
 slug: /services/how-to-engage/
 source: portal/content/services/how-to-engage.md

@@ -2,7 +2,7 @@
 id: services/engagement-workflow
 title: Engagement workflow
 section: services
-order: 11
+order: 14
 type: workflow
 slug: /services/engagement-workflow/
 source: charter/workflows/engagement.md

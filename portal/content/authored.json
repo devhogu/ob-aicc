@@ -60,7 +60,7 @@
     "ru": "Услуги"
    },
    "intro": {
-    "en": "AICC serves the functions of the Bank as an internal consulting and innovation lab. It advises, proves, builds, runs what is worth running, enables, and oversees, and it commits to each Engagement in a Service Agreement. The service lines below state what a function can ask for, how an Engagement runs, and what AICC does not do."
+    "en": "AICC serves the functions and units of the Bank as their internal consulting and innovation lab. Its services run along nine lines in three families: advise and found, build and run, enable and assure. Each line is a direction with examples; each Engagement follows one service model and leaves a reusable package. This section states the lines, how a function engages AICC, the service model, and the form of the catalog."
    },
    "icon": "users"
   },
@@ -70,7 +70,7 @@
     "ru": "Портфель"
    },
    "intro": {
-    "en": "The Portfolio decides what AICC works on. Business initiatives are taken in, funded, continued, deferred, or rejected on evidence, through four loops from the strategic loop of the year to the backlog care of the week, a portfolio Kanban with a limit on the Active Initiatives, a business case for every Initiative, and an MVP before the decision to continue."
+    "en": "The Portfolio decides what AICC works on. Business initiatives are taken in, funded, continued, deferred, or rejected on evidence, through four loops from the strategic loop of the year to the backlog care of the week, a portfolio Kanban with a limit on the Active Initiatives, a business case for every Initiative, and an MVP before the decision to continue. Run-rate work and programs enter through the same front door in two lanes."
    },
    "icon": "git-branch"
   },
@@ -80,7 +80,7 @@
     "ru": "Поставка"
    },
    "intro": {
-    "en": "AICC delivers in small steps on a common cadence: the Capabilities and Features of an Initiative are built in Iterations of one month within Program Increments of one quarter, the work is visible and limited in progress, and a Solution is checked or validated, accepted by the Team, and accepted by its Domain Owner before it reaches its users and for the rest of its life."
+    "en": "AICC delivers in small steps on a common cadence: the Capabilities and Features of an Initiative are built in Iterations of one month within Program Increments of one quarter, the work is visible and limited in progress, and a Solution is checked or validated, accepted by the Team, and accepted by its Domain Owner before it reaches its users. An Experiment runs in the Lab and ends in a decision; a Service lives through seven states after release and is operated under named practices."
    },
    "icon": "workflow"
   },
@@ -811,11 +811,58 @@
   "docs_title": {
    "en": "The documents behind the services"
   },
-  "catalog_title": {
-   "en": "Service catalog"
+  "lines_lead": {
+   "en": "Nine lines in three families. A line is a direction along which AICC provides services, with examples on its page; what AICC commits to is stated in the Service Agreement of each Engagement. Run-rate lines are asked for through the front door and done in days to one Iteration; programs start with a study and a business case."
   },
-  "catalog_lead": {
-   "en": "The Solutions of AICC, drawn from the Portfolio at each build of this site: what AICC runs, what it has delivered, and what it is proving. The Portfolio prevails over this list."
+  "families": [
+   {
+    "id": "advise",
+    "title": {
+     "en": "Advise and found"
+    },
+    "text": {
+     "en": "The strategy, governance, and process office of the Bank for AI: the direction, the documents, the processes, and the knowledge of the rules."
+    },
+    "lines": [
+     "strategy-and-governance-office",
+     "normative-documents-and-processes",
+     "watch-research-and-partnering"
+    ]
+   },
+   {
+    "id": "build",
+    "title": {
+     "en": "Build and run"
+    },
+    "text": {
+     "en": "The solutions: knowledge a function can ask, routine work done by assistants, facts prepared for decisions, and material generated for people to finish."
+    },
+    "lines": [
+     "knowledge-services",
+     "workplace-automation",
+     "information-and-decision-support",
+     "content-and-document-engines"
+    ]
+   },
+   {
+    "id": "enable",
+    "title": {
+     "en": "Enable and assure"
+    },
+    "text": {
+     "en": "The people and the compliance: each person able to use AI for their own work, and each use of AI kept within the rules."
+    },
+    "lines": [
+     "enablement-at-the-workplace",
+     "assurance-and-governance-support"
+    ]
+   }
+  ],
+  "model_title": {
+   "en": "The service model and the catalog"
+  },
+  "model_lead": {
+   "en": "Every service of AICC follows one model: its composition, its life, its operation, and its records. The catalog has a defined form for a Solution and for a package. This site states the model and the form; the live catalog is an instance kept in the Portfolio and presented in the live portal of AICC."
   }
  }
 }
