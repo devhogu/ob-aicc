@@ -107,6 +107,8 @@ for path, (p, text) in parsed.items():
         target, frag = urldefrag(h)
         if target.startswith(('http:', 'https:')):
             continue
+        if target.startswith('//charter/'):
+            continue    # the placeholder address of the published charter folder, set at publication
         dest = os.path.normpath(os.path.join(here, target)) if target else path
         if os.path.isdir(dest):
             dest = os.path.join(dest, 'index.html')

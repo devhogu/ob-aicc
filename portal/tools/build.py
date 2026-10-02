@@ -29,6 +29,8 @@ CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v3')
 NPX = os.environ.get('MMDC_NPX', os.path.expanduser('~/.npm/_npx/668c188756b835f3/node_modules'))
 CHROME = os.environ.get('MMDC_CHROME', os.path.expanduser('~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'))
 FONT_FILE = os.path.join(PORTAL, 'ui', 'assets', 'fonts', 'golos-text', 'GolosText-variable.woff2')
+# where the charter is published; the link behind the source file in the facts of a document. Set when the charter is published to the corporate folder.
+CHARTER_BASE = '//charter/'
 CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
 PREFIX = {'about': 'ABT', 'what-aicc-does': 'WHT', 'how-aicc-works': 'HOW', 'organization': 'ORG', 'responsible-ai': 'RAI', 'governance': 'GOV', 'library': 'LIB', 'reference': 'REF'}
 LANGS = ['en', 'ru']
@@ -471,7 +473,7 @@ class Site:
             href = self._target(stem_here, m.group(2), ctx)
             if not href:
                 return m.group(0)
-            return '%s <a class="xref" href="%s">%s</a>' % (m.group(1), href, m.group(2))
+            return '<a class="xref" href="%s">%s</a>' % (href, m.group(0))
         return LOCALXREF.sub(sub2, text)
 
 
@@ -850,12 +852,16 @@ def facts_html(site, p, lang, fm):
     if fm.get('revised'):
         items.append((m['revised'], fm['revised']))
     if fm.get('status'):
-        items.append((m['status'], fm['status']))
+        st = fm['status'].strip().lower()
+        items.append((m['status'], '<span class="status status-%s">%s</span>' % (esc(re.sub(r'[^a-z]+', '-', st)), esc(fm['status']))))
     if items:
-        items.append((m['owner'], m['owner_value']))
+        items.append((m['owner'], esc(m['owner_value'])))
+        src = (p.get('source') or [''])[0]
+        if src.startswith('charter/'):
+            items.append((m['source_file'], '<a class="src" href="%s%s">%s</a>' % (CHARTER_BASE, src[len('charter/'):], esc(os.path.basename(src)))))
     if not items:
         return ''
-    return '<dl class="doc-facts">%s</dl>' % ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), esc(v)) for k, v in items)
+    return '<dl class="doc-facts">%s</dl>' % ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v if k in (m['status'], m['owner'], m['source_file']) else esc(v)) for k, v in items)
 
 
 def parts_html(site, p, lang):
@@ -914,11 +920,7 @@ def flow_label(site, q, lang):
 def prev_next(site, p, lang):
     if p['type'] in ('control', 'role', 'home') or not (p.get('section') or p['type'] == 'legal'):
         return ''
-    if p['type'] in ('legal', 'section'):
-        sib = list(flow_pages(site))
-    else:
-        sib = [x for x in site.pages if x.get('section') == p['section'] and x['type'] not in ('section', 'control', 'role')]
-        sib.sort(key=lambda x: (x['order'], x['id']))
+    sib = list(flow_pages(site))
     i = [x['id'] for x in sib].index(p['id']) if p['id'] in [x['id'] for x in sib] else -1
     if i < 0:
         return ''
@@ -948,6 +950,19 @@ def lang_note(site, lang):
     return '<p class="o-callout lang-note" role="note">%s</p>' % esc(tr(site, lang, 'translation_missing'))
 
 
+def read_further(site, p, lang):
+    """The other pages of the section, as compact cards, below the navigation of a page."""
+    if not p.get('section'):
+        return ''
+    url = site.url(p, lang)
+    m = site.msg[lang]
+    mine = {x['id'] for x in doc_parts(site, p)} | {p['id']}
+    items = [q for q in nav_groups(site, p['section']) if q['id'] not in mine and not (q.get('document') and q['source'][0] == (p.get('source') or [''])[0])]
+    if not items:
+        return ''
+    return '<h2 class="about-deeper">%s</h2><ul class="o-grid card-list cards-compact">%s</ul>' % (esc(m['read_further']), ''.join(card(site, q, lang, url, 'card--compact') for q in items))
+
+
 def content_page(site, p, lang):
     b = site.bodies[p['id']]
     ctx = {'source': b['src'], 'lang': lang, 'url': site.url(p, lang)}
@@ -975,9 +990,9 @@ def content_page(site, p, lang):
         ch = site.md.md.render(re.sub(r'^## .*$', '', b['change'], count=1, flags=re.M).strip())
         ch = ch.replace('<table>', '<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>').replace('</table>', '</table></div>')
         change = '<details class="oc-disclosure change"><summary>%s</summary><div>%s</div></details>' % (esc(tr(site, lang, 'change_history')), ch)
-    main = '%s%s<div class="o-doc" lang="en">%s</div>%s%s' % (head, extra if p['type'] == 'template' else '', body, change, prev_next(site, p, lang))
+    main = '%s%s<div class="o-doc" lang="en">%s</div>%s%s%s' % (head, extra if p['type'] == 'template' else '', body, change, prev_next(site, p, lang), read_further(site, p, lang))
     if p['type'] == 'catalogue':
-        main = '%s<div class="o-doc" lang="en">%s%s</div>%s' % (head, extra, body, prev_next(site, p, lang))
+        main = '%s<div class="o-doc" lang="en">%s%s</div>%s%s' % (head, extra, body, prev_next(site, p, lang), read_further(site, p, lang))
     return layout(site, p, lang, main, b['outline'])
 
 
@@ -1019,12 +1034,23 @@ def section_desc(site, q):
     return desc_of(site, q)
 
 
+def doc_id(site, q):
+    """The identifier of the document behind a page, from its front matter, or ''."""
+    src = (q.get('source') or [''])[0]
+    if not src.startswith('charter/documents/'):
+        return ''
+    fm = site.bodies.get(q['id'], {}).get('fm') or front_matter(read(src))
+    return fm.get('id', '')
+
+
 def card(site, q, lang, url, cls, extra=''):
     d = section_desc(site, q)
     meta = page_meta(site, q, lang)
-    tip = meta + (' · ' + q.get('ref', '') if q.get('ref') else '')
-    return ('<li class="o-card linked %s" data-tip="%s"><p class="card-kicker">%s</p><h3><a href="%s">%s</a></h3><p class="card-desc" lang="en">%s</p>%s</li>' % (
-        cls, esc(tip), esc(meta), site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(d), extra))
+    did = doc_id(site, q)
+    title = nav_title(site, q)
+    tip_title = title + (' · ' + did if did else '')
+    return ('<li class="o-card linked %s" data-tip="%s" data-tip-title="%s"><p class="card-kicker">%s</p><h3><a href="%s">%s</a></h3><p class="card-desc" lang="en">%s</p>%s</li>' % (
+        cls, esc(d), esc(tip_title), esc(meta), site.rel(url, site.url(q, lang)), esc(title), esc(d), extra))
 
 
 def cards_for(site, section, lang, from_url):

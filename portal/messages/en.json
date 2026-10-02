@@ -101,5 +101,7 @@
  "intended_outcome": "Intended outcome",
  "name": "Name",
  "capability": "Capability",
+ "source_file": "Source",
+ "read_further": "Read further",
  "fb_id": "Page ID"
 }

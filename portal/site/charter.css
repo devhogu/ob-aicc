@@ -100,8 +100,11 @@ body.charter .o-frame{flex:1 0 auto;width:calc(100% - 16px)}
 .nav-sub a{line-height:1.3;white-space:normal}
 .nav-sub a.sub2{margin-left:14px;min-height:32px;font-size:12.5px;position:relative}
 .nav-sub a.sub2::before{content:'';position:absolute;left:-8px;top:50%;width:6px;border-top:1px solid var(--border)}
-.o-tabs.parts{flex-wrap:wrap;overflow:visible;row-gap:0}
-.o-tabs.parts a{white-space:normal;text-align:left}
+/* the parts of a document as folder tabs */
+.o-tabs.parts{flex-wrap:wrap;overflow:visible;row-gap:4px;gap:4px;padding:0;margin:18px 0 20px;border-bottom:1px solid var(--border-control)}
+.o-tabs.parts a{white-space:normal;text-align:left;min-height:0;padding:8px 14px;margin-bottom:-1px;border:1px solid var(--border);border-bottom:0;border-radius:8px 8px 0 0;background:var(--surface-subtle);color:var(--text-muted);font-size:14px;line-height:1.3}
+.o-tabs.parts a:hover{color:var(--text);background:var(--surface)}
+.o-tabs.parts a[aria-current=page]{background:var(--surface);color:var(--text);font-weight:500;border-color:var(--border-control);border-top:3px solid var(--brand);border-bottom:1px solid var(--surface);padding-top:6px}
 /* whole-box navigation cards */
 .o-card.linked{position:relative;transition:border-color var(--motion-fast),background var(--motion-fast),transform var(--motion-fast);cursor:pointer}
 .o-card.linked h3 a::after{content:'';position:absolute;inset:0;border-radius:inherit}
@@ -206,3 +209,17 @@ dialog.fb .fb-body .oc-button{flex:none}
 /* legal pages at the end of the navigation */
 .nav-legal{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:2px}
 .nav-legal a{min-height:34px;padding:6px 12px;font-size:13px;color:var(--text-muted)}
+/* status of a document, and its source file */
+.doc-facts .status{display:inline-block;padding:1px 8px;border-radius:999px;font-size:13px;font-weight:500;border:1px solid transparent}
+.doc-facts .status-active{color:#0f6b3a;background:#e4f5ea;border-color:#b9e3c8}
+.doc-facts .status-draft{color:#7a5300;background:#fff3d6;border-color:#f3dc9a}
+.doc-facts .status-review,.doc-facts .status-in-review,.doc-facts .status-proposed{color:#0b4f8a;background:#e3f0fb;border-color:#b8d6f2}
+.doc-facts .status-retired,.doc-facts .status-superseded,.doc-facts .status-archived{color:#555;background:#eee;border-color:#ddd}
+.doc-facts .status-withdrawn,.doc-facts .status-rejected{color:#8a1c1c;background:#fde7e7;border-color:#f3bcbc}
+:root[data-theme="dark"] .doc-facts .status-active{color:#8fe3b0;background:#133d26;border-color:#1f5c38}
+:root[data-theme="dark"] .doc-facts .status-draft{color:#f2cf6b;background:#3d2f0b;border-color:#5c4713}
+:root[data-theme="dark"] .doc-facts .status-review,:root[data-theme="dark"] .doc-facts .status-in-review,:root[data-theme="dark"] .doc-facts .status-proposed{color:#8fc4f2;background:#0f2b45;border-color:#1b4568}
+:root[data-theme="dark"] .doc-facts .status-retired,:root[data-theme="dark"] .doc-facts .status-superseded,:root[data-theme="dark"] .doc-facts .status-archived{color:#bbb;background:#2a2a2a;border-color:#3a3a3a}
+:root[data-theme="dark"] .doc-facts .status-withdrawn,:root[data-theme="dark"] .doc-facts .status-rejected{color:#f0a0a0;background:#3f1818;border-color:#5e2424}
+.doc-facts a.src{font-family:var(--font-mono);font-size:13px;font-weight:400;color:var(--text);text-decoration:underline dotted;text-underline-offset:3px}
+.doc-facts a.src:hover{color:var(--link)}
