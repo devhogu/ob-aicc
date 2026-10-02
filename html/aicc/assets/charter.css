@@ -164,9 +164,9 @@ dialog.fb .fb-body .oc-button{flex:none}
 /* breadcrumb line with the next page at the right */
 .crumbbar{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 10px}
 .crumbbar .crumbs{margin:0;min-width:0}
-.crumb-next{flex:0 1 auto;min-width:0;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;color:var(--text-muted);text-decoration:none}
-.crumb-next strong{font-weight:500;color:var(--link);text-decoration:underline;text-underline-offset:3px}
-.crumb-next:hover strong{color:var(--text)}
+.crumb-next{flex:0 1 auto;min-width:0;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;line-height:inherit;color:var(--text-muted);text-decoration:none}
+.crumb-next strong{font-weight:400;color:var(--text-muted);text-decoration:underline;text-underline-offset:3px}
+.crumb-next:hover strong{color:var(--link)}
 @media(max-width:650px){.crumbbar{flex-direction:column;gap:4px}.crumb-next{max-width:100%}}
 @media print{.crumb-next{display:none}}
 /* About AICC: the summary */
