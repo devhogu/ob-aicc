@@ -139,7 +139,10 @@
   document.querySelectorAll('[data-copy-text]').forEach(function (b) {
     b.addEventListener('click', function () {
       if (!navigator.clipboard) return;
-      navigator.clipboard.writeText(b.dataset.copyText).then(function () { var old = b.textContent; b.textContent = d.tCopied; setTimeout(function () { b.textContent = old; }, 1500); });
+      navigator.clipboard.writeText(b.dataset.copyText).then(function () {
+        if (b.classList.contains('icon-copy')) { b.classList.add('copied'); var t = b.getAttribute('title'); b.setAttribute('title', d.tCopied); setTimeout(function () { b.classList.remove('copied'); b.setAttribute('title', t); }, 1500); return; }
+        var old = b.textContent; b.textContent = d.tCopied; setTimeout(function () { b.textContent = old; }, 1500);
+      });
     });
   });
 

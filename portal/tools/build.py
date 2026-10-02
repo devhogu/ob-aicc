@@ -48,6 +48,8 @@ BASELINE = {'revision': '1.0', 'date': '2026-10-02'}
 
 FONTS = os.path.join(ROOT, 'portal', '.tools', 'pw-syslibs')
 SHORT = {'Statement of Intent on the Adoption of Artificial Intelligence': 'Statement of Intent', 'Vocabulary and Style': 'Vocabulary'}
+NAV_SHORT = {'AICC Charter': 'Charter'}      # shorter in the left navigation
+PAGE_TITLE = {'AICC Charter': 'AI Competence Center Charter'}      # fuller as the page title
 
 
 def disp(t):
@@ -701,8 +703,10 @@ def nav_groups(site, section):
 
 def nav_title(site, p):
     if p.get('source_sections') and p.get('document') and p['id'] != 'governance/delivery-records-controls-and-measures':
-        return disp(h1_of(p['source'][0])) if p['type'] != 'catalogue' else disp(p['title'])
-    return disp(p['title'])
+        t = disp(h1_of(p['source'][0])) if p['type'] != 'catalogue' else disp(p['title'])
+    else:
+        t = disp(p['title'])
+    return NAV_SHORT.get(t, t)
 
 
 def doc_parts(site, p):
@@ -868,8 +872,8 @@ def facts_html(site, p, lang, fm):
         src = (p.get('source') or [''])[0]
         if src.startswith('charter/'):
             rel_path = src[len('charter/'):]
-            items.append((m['source_file'], '<a class="src" href="%s%s" title="%s">%s</a> <button type="button" class="fb-copy" data-copy-text="%s">%s</button>' % (
-                CHARTER_BASE, rel_path, esc(unc(CHARTER_BASE, rel_path)), esc(os.path.basename(src)), esc(unc(CHARTER_BASE, rel_path)), esc(m['copy_path']))))
+            items.append((m['source_file'], '<a class="src" href="%s%s" title="%s">%s</a> <button type="button" class="icon-copy" data-copy-text="%s" aria-label="%s" title="%s">%s</button>' % (
+                CHARTER_BASE, rel_path, esc(unc(CHARTER_BASE, rel_path)), esc(os.path.basename(src)), esc(unc(CHARTER_BASE, rel_path)), esc(m['copy_path']), esc(m['copy_path']), icon('copy'))))
     if not items:
         return ''
     return '<dl class="doc-facts">%s</dl>' % ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v if k in (m['status'], m['owner'], m['source_file']) else esc(v)) for k, v in items)
@@ -925,7 +929,8 @@ def flow_label(site, q, lang):
         return site.auth['sections'][q['section']]['label'][lang]
     if q['type'] == 'control':
         return q['control']['ref']
-    return disp(q['title'])
+    t = disp(q['title'])
+    return NAV_SHORT.get(t, t)
 
 
 def prev_next(site, p, lang):
@@ -985,7 +990,8 @@ def content_page(site, p, lang):
     body = substitute(site, body, lang)
     desc = desc_of(site, p)
     lead = '<p class="o-lead" lang="en">%s</p>' % esc(desc) if desc and p['type'] != 'catalogue' else ''
-    head = '<h1>%s</h1>%s%s%s%s%s' % (esc(p['title'] if p['title'] in SHORT else disp(p['title'])), lead, facts_html(site, p, lang, b['fm']), companion_html(site, p, lang), parts_html(site, p, lang), lang_note(site, lang))
+    h1 = p['title'] if p['title'] in SHORT else disp(p['title'])
+    head = '<h1>%s</h1>%s%s%s%s%s' % (esc(PAGE_TITLE.get(h1, h1)), lead, facts_html(site, p, lang, b['fm']), companion_html(site, p, lang), parts_html(site, p, lang), lang_note(site, lang))
     extra = ''
     if p['type'] == 'catalogue':
         extra = controls_catalogue(site, p, lang)
@@ -1218,12 +1224,16 @@ def values_page(site, p, lang):
         hid = 'g-' + g['id']
         outline.append((2, hid, title))
         intro_html = '<p class="vp-intro" lang="en">%s</p>' % link_terms(site, esc(intro), ctx) if intro else ''
-        block = ('<section class="vp-group" aria-labelledby="%s"><h2 id="%s">%s</h2><p class="vp-applies"><strong>%s</strong> %s</p>%s<ol class="vp-list">%s</ol>'
+        block = ('<section class="vp-group" aria-labelledby="%s"><h2 id="%s">%s</h2><p class="vp-applies">%s</p>%s<ol class="vp-list">%s</ol>'
                  '<p class="vp-source">%s: <a href="%s" lang="en">%s %s</a></p></section>') % (
-            hid, hid, esc(title), esc(m['vp_applies']), esc(g['applies'][lang]), intro_html, link_terms(site, ''.join(lis), ctx), esc(m['vp_source']), href, VP_DOC_NAMES[doc], num)
+            hid, hid, esc(title), esc(g['applies'][lang]), intro_html, link_terms(site, ''.join(lis), ctx), esc(m['vp_source']), href, VP_DOC_NAMES[doc], num)
         out.append(block)
         site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': p['title'], 'h': title, 'x': (g['applies'][lang] + ' ' + ' '.join((l + ' ' + t) for l, t in items))[:360]})
-    main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(p['title']), esc(a['intro'][lang]), lang_note(site, lang), ''.join(out)) + prev_next(site, p, lang)
+    ms = a['mission']
+    mission = '<section class="vp-mission" aria-labelledby="g-mission"><h2 id="g-mission">%s</h2><p>%s</p></section>' % (esc(ms['title'][lang]), esc(ms['text'][lang]))
+    outline.insert(0, (2, 'g-mission', ms['title'][lang]))
+    site.extra_search.setdefault(lang, []).append({'u': url + '#g-mission', 't': p['title'], 'h': ms['title'][lang], 'x': ms['text'][lang][:360]})
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s%s' % (esc(p['title']), esc(a['intro'][lang]), lang_note(site, lang), mission, ''.join(out)) + prev_next(site, p, lang) + read_further(site, p, lang)
     return layout(site, p, lang, main, outline)
 
 
@@ -1305,8 +1315,8 @@ def records_page(site, p, lang):
         ctl = ', '.join('<a href="%s">%s</a>' % (site.rel(url, '/%s/governance/controls/%s/' % (lang, r.lower())), r) for r in sorted(set(controls)))
         rows.append('<tr><td><a href="%s">%s</a></td><td lang="en">%s</td><td lang="en"><code>%s</code></td><td>%s</td></tr>' % (
             site.rel(url, site.url(page, lang)), esc(d['name']), esc(d['used']), esc(d['kept'].strip('`')), ctl or '&ndash;'))
-    systems = [('Registry', 'Decisions, appointments, controls, backlogs, roadmap, calendar, and other evidence records, as closed and dated extracts. Kept on the corporate folder: <a href="%s" title="%s">%s</a> <button type="button" class="fb-copy" data-copy-text="%s">%s</button>' % (
-                    REGISTRY_BASE, esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(m['copy_path']))),
+    systems = [('Registry', 'Decisions, appointments, controls, backlogs, roadmap, calendar, and other evidence records, as closed and dated extracts. Kept on the corporate folder: <a href="%s" title="%s">%s</a> <button type="button" class="icon-copy" data-copy-text="%s" aria-label="%s" title="%s">%s</button>' % (
+                    REGISTRY_BASE, esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(m['copy_path']), esc(m['copy_path']), icon('copy'))),
                ('Jira and Confluence', 'The working state of the Program Backlog, boards, and Work Items, and the working documents, from the cutover of the working state'),
                ('Service Management', 'Requests and incidents, including AI Incidents')]
     srows = ''.join('<tr><th scope="row">%s</th><td lang="en">%s</td></tr>' % (esc(a), b if a == 'Registry' else esc(b)) for a, b in systems)

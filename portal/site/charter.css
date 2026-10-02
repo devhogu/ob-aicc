@@ -197,8 +197,14 @@ dialog.fb .fb-body .oc-button{flex:none}
 /* Values and principles: numbered, standing out */
 .vp-group{margin:36px 0 0}
 .vp-group h2{margin:0 0 6px}
-.vp-applies{margin:0 0 14px;color:var(--text-muted)}
-.vp-applies strong{color:var(--text)}
+.vp-applies{margin:0 0 14px;font-size:17px;line-height:1.5;color:var(--text)}
+.vp-mission{margin:28px 0 8px;padding:22px 26px;border-left:4px solid var(--brand);background:var(--surface-subtle);border-radius:0 12px 12px 0}
+.vp-mission h2{margin:0 0 8px;font-size:20px}
+.vp-mission p{margin:0;font-size:19px;line-height:1.55;font-family:var(--font-heading)}
+.icon-copy{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin-left:4px;padding:0;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text-muted);cursor:pointer;vertical-align:middle}
+.icon-copy .o-icon{width:14px;height:14px}
+.icon-copy:hover,.icon-copy:focus-visible{border-color:var(--border-control);color:var(--link)}
+.icon-copy.copied{color:#0f6b3a;border-color:#b9e3c8}
 .vp-intro{margin:0 0 14px}
 .vp-list{list-style:none;margin:0;padding:0;counter-reset:vp;display:grid;gap:10px}
 .vp-list li{counter-increment:vp;display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:start;padding:12px 16px;border:1px solid var(--border);border-radius:10px;background:var(--surface)}

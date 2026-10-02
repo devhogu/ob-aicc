@@ -259,6 +259,29 @@
  "about_page": {
   "blocks": [
    {
+    "id": "mission",
+    "title": {
+     "en": "Mission"
+    },
+    "text": {
+     "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve our customers, to set the standard by which the Bank adopts it, and to keep every use of it accountable to people, so that the Bank serves its customers better, works with greater confidence, and leads with care."
+    },
+    "links": [
+     {
+      "label": {
+       "en": "Values and principles"
+      },
+      "to": "about/values-and-principles"
+     },
+     {
+      "label": {
+       "en": "AI Competence Center Charter"
+      },
+      "to": "about/aicc-charter"
+     }
+    ]
+   },
+   {
     "id": "what",
     "title": {
      "en": "What AICC is"
@@ -287,7 +310,7 @@
      "en": "Purpose"
     },
     "text": {
-     "en": "The mission of AICC is to enable the Bank to adopt AI as a governed capability that delivers measured value. The adoption improves the quality, speed, and consistency of the operations and services of the Bank, and serves its mission to improve people's lives with digital products and services. The direction is clear: from governed foundations, through assistants and embedded AI, to bounded agents under human oversight, with accountability for every Solution with a named individual."
+     "en": "AICC exists to enable the Bank to adopt AI as a governed capability that delivers measured value. The adoption improves the quality, speed, and consistency of the operations and services of the Bank, and serves its mission to improve people's lives with digital products and services. The direction is clear: from governed foundations, through assistants and embedded AI, to bounded agents under human oversight, with accountability for every Solution with a named individual."
     },
     "links": [
      {
@@ -298,7 +321,7 @@
      },
      {
       "label": {
-       "en": "AICC Charter"
+       "en": "AI Competence Center Charter"
       },
       "to": "about/aicc-charter"
      }
@@ -421,7 +444,7 @@
  },
  "values_page": {
   "intro": {
-   "en": "The values and the principles of AICC are stated once, in the documents named below. This page gathers them. Each group states what it applies to."
+   "en": "The values and principles of AICC follow the values of the Bank and the Statement of Intent on the adoption of artificial intelligence. They state what AICC stands for, how it decides, and how it delivers. AICC holds itself to them first, and asks the same of every Solution it proposes to the Bank."
   },
   "groups": [
    {
@@ -430,7 +453,7 @@
      "en": "Values"
     },
     "applies": {
-     "en": "All adoption of AI in the Bank, and all delivery by AICC."
+     "en": "Three values guide every decision of AICC: integrity, prudence, and respect for people. They are the values on which the Bank adopts AI, and AICC is their first keeper. Where speed and value compete with them, the values prevail."
     },
     "source": [
      "statement-of-intent",
@@ -443,7 +466,7 @@
      "en": "Principles of adoption"
     },
     "applies": {
-     "en": "The decision to adopt, extend, or discontinue the use of AI in the Bank."
+     "en": "AICC adopts AI where it earns its place. These principles decide where AI is introduced, where it is extended, and where it is withdrawn, so that the Bank invests in what works and learns from what does not."
     },
     "source": [
      "statement-of-intent",
@@ -456,7 +479,7 @@
      "en": "Principles of application"
     },
     "applies": {
-     "en": "Every use of AI in the operations, products, and services of the Bank, whether or not AICC manages it."
+     "en": "Every use of AI in the Bank answers to these principles, whether AICC built it or not. They are the commitment the Bank makes to its customers, its employees, its regulators, and its auditors: accountable, fair, explainable, private, secure, overseen by people, and compliant."
     },
     "source": [
      "statement-of-intent",
@@ -469,7 +492,7 @@
      "en": "Principles of work"
     },
     "applies": {
-     "en": "How AICC operates and decides as a unit."
+     "en": "This is how AICC runs itself: close to the facts, quick to reverse, light on process, and measured by outcomes. AICC is the example of the way of working that it proposes to the Bank."
     },
     "source": [
      "operating-model",
@@ -482,13 +505,21 @@
      "en": "Principles of delivery"
     },
     "applies": {
-     "en": "How the Teams of AICC build, verify, release, and look after Solutions."
+     "en": "This is how the Teams of AICC build: visible, in small steps, value first, with quality and control built into the flow rather than added after it. Working Solutions and evidence count more than documents and opinion."
     },
     "source": [
      "solution-lifecycle-model",
      "2"
     ]
    }
-  ]
+  ],
+  "mission": {
+   "title": {
+    "en": "Mission"
+   },
+   "text": {
+    "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve our customers, to set the standard by which the Bank adopts it, and to keep every use of it accountable to people, so that the Bank serves its customers better, works with greater confidence, and leads with care."
+   }
+  }
  }
 }
