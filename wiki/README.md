@@ -7,6 +7,7 @@ The wiki holds lineage, research, open items, and an archive. It is explanatory 
 ## Pages
 
 - [Overview](overview.md) - what the portal is, who it serves, how it is built and published
+- [Portal scaffolding](../portal-scaffolding/README.md) - the structure of the charter site: sitemap, page outlines, page types, navigation, and reading routes
 
 ### Lineage and research
 

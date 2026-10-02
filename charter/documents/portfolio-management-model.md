@@ -2,8 +2,8 @@
 id: AICC-ORG-02-EN
 title: Portfolio Management Model
 status: active
-revision: 2.2
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -36,7 +36,7 @@ revised: 2026-10-02
 | Architecture and the MVP | Solution Engineer | Defines the architecture and the Solution Definition, and builds the MVP |
 | Compliance and risk | Control Function Contacts | Clear a business case that expects Risk Tier 2 or 3, before it is approved |
 
-In practice, a head of function, or a member of AICC, puts forward a need. The AICC Lead takes it in, scopes it with the Domain Owner, and writes the business case with them. The Control Function Contacts clear it when it expects Risk Tier 2 or 3, and the Domain Owner or the Executive Sponsor approves it. The AICC Lead ranks it and pulls it when there is capacity, and the Solution Engineer tries it as a probe. The Domain Owner accepts the outcome and confirms the benefit.
+In practice, a head of function, or a member of AICC, puts forward a need. The AICC Lead takes it in, scopes it with the Domain Owner, and writes the business case with them. The Control Function Contacts clear it when it expects Risk Tier 2 or 3, and the Domain Owner or the Executive Sponsor approves it. The AICC Lead ranks it and pulls it when the Limits on Work in Progress allow, and the Solution Engineer tries it as a probe. The Domain Owner accepts the outcome and confirms the benefit.
 
 ## 4. The portfolio loops
 
@@ -64,16 +64,16 @@ flowchart LR
 
 Figure 1: the strategic loop.
 
-In practice, the Executive Sponsor sets the Envelope of each Strategic Priority and the Guardrails. An Initiative that stays within one Domain and below a guardrail is approved by the Domain Owner, and any other by the Executive Sponsor. The Service Agreement commits the capacity of AICC, and it is not issued above the capacity available, so the work above it waits in the Portfolio Backlog. At the Outcome Report the Domain Owner confirms the benefit, and each quarter the benefit is set against the Envelope, which informs the next yearly decision.
+In practice, the Executive Sponsor sets the Envelope of each Strategic Priority and the Guardrails. An Initiative that stays within one Domain and below a guardrail is approved by the Domain Owner, and any other by the Executive Sponsor. A Service Agreement is not issued for an Initiative that the limit on the Active Initiatives does not allow, so the work above the limit waits in the Portfolio Backlog. At the Outcome Report the Domain Owner confirms the benefit, and each quarter the benefit is set against the Envelope, which informs the next yearly decision.
 
 ### The portfolio review loop
 
-4.3. The Executive Sponsor shall run the portfolio review loop each quarter, at the quarterly Steering. The plan confirms the Roadmap, the mix of Initiatives, and the capacity for the next Program Increment within the Envelopes. The check reads, for each Active Initiative, the leading indicators against the plan, the benefit that the Domain Owner confirms, the capacity used, and the quarterly risk check with the Control Function Contacts. The act continues, pivots, defers, or rejects each Initiative, adjusts the mix, and reports to the Board Committee. The loop takes the frame of the strategic loop, hands the mix down to the portfolio sync loop, where the AICC Lead sets the limit on the Active Initiatives within it, and returns the Quarterly Report to the strategic loop.
+4.3. The Executive Sponsor shall run the portfolio review loop each quarter, at the quarterly Steering. The plan confirms the Roadmap, the mix of Initiatives for the next Program Increment within the Envelopes. The check reads, for each Active Initiative, the leading indicators against the plan, the benefit that the Domain Owner confirms, and the quarterly risk check with the Control Function Contacts. The act continues, pivots, defers, or rejects each Initiative, adjusts the mix, and reports to the Board Committee. The loop takes the frame of the strategic loop, hands the mix down to the portfolio sync loop, where the AICC Lead sets the limit on the Active Initiatives within it, and returns the Quarterly Report to the strategic loop.
 
 ```mermaid
 flowchart LR
   IN(["From above<br/>Priorities, Envelopes, Guardrails"]):::iface --> P
-  P["Plan<br/>Roadmap, mix of Initiatives, capacity for the next PI"] --> D["Do<br/>Initiatives in MVP and implementation"] --> C["Check<br/>leading indicators, benefit confirmed, capacity used, risk check"] --> A["Act<br/>continue, pivot, defer, or reject; report to the Board Committee"] --> P
+  P["Plan<br/>Roadmap, mix of Initiatives for the next PI"] --> D["Do<br/>Initiatives in MVP and implementation"] --> C["Check<br/>leading indicators, benefit confirmed, risk check"] --> A["Act<br/>continue, pivot, defer, or reject; report to the Board Committee"] --> P
   EV(["From below<br/>Steering Summaries of the sync loop"]):::iface --> C
   A --> OUT(["To below<br/>the mix of Initiatives"]):::iface
   A --> UP(["To above<br/>Quarterly Report"]):::iface
@@ -86,12 +86,12 @@ In practice, the quarterly Steering takes each Active Initiative in turn. The AI
 
 ### The portfolio sync loop
 
-4.4. The Executive Sponsor shall run the portfolio sync loop each month, at the monthly Steering, and the AICC Lead prepares and runs it. The plan sets the agenda: the gate decisions that are due, the funnel, and the free capacity. The do takes the decisions at the gates, ranks the Initiatives, and takes the highest-ranked Initiative that fits into work. The check reads the flow: the Active Initiatives against the limit, the time in each step, the blockers, and a sample of the Decisions of the AICC Lead. The act re-ranks, adjusts the limit, and unblocks. The loop takes the mix of the portfolio review loop, within which the AICC Lead sets the limit, and returns the Steering Summary to it.
+4.4. The Executive Sponsor shall run the portfolio sync loop each month, at the monthly Steering, and the AICC Lead prepares and runs it. The plan sets the agenda: the gate decisions that are due, the funnel, and the places free under the limit. The do takes the decisions at the gates, ranks the Initiatives, and takes the highest-ranked Initiative that fits into work. The check reads the flow: the Active Initiatives against the limit, the time in each step, the blockers, and a sample of the Decisions of the AICC Lead. The act re-ranks, adjusts the limit, and unblocks. The loop takes the mix of the portfolio review loop, within which the AICC Lead sets the limit, and returns the Steering Summary to it.
 
 ```mermaid
 flowchart LR
   IN(["From above<br/>the mix of Initiatives"]):::iface --> P
-  P["Plan<br/>gate decisions due, funnel, free capacity"] --> D["Do<br/>decide at the gates, rank, take into work"] --> C["Check<br/>Active against the limit, time in each step, blockers, sample of decisions"] --> A["Act<br/>re-rank, adjust the limit, unblock"] --> P
+  P["Plan<br/>gate decisions due, funnel, places free under the limit"] --> D["Do<br/>decide at the gates, rank, take into work"] --> C["Check<br/>Active against the limit, time in each step, blockers, sample of decisions"] --> A["Act<br/>re-rank, adjust the limit, unblock"] --> P
   EV(["From below<br/>items at a gate, from the care loop"]):::iface --> P
   C --> UP(["To above<br/>Steering Summary"]):::iface
   classDef iface fill:#e8eefc,stroke:#5a6fa8,color:#111
@@ -99,7 +99,7 @@ flowchart LR
 
 Figure 3: the portfolio sync loop.
 
-In practice, the AICC Lead shows the free capacity and the number of Active Initiatives, and the approver of 6.3 takes the decisions that are due. The highest-ranked Initiative that fits is taken into work. An Initiative that ranks lower may be taken first for a stated reason, such as a date or a Dependency, and the reason is recorded. An Initiative that is done, pivoted, deferred, or rejected frees its place, and nothing is taken into work while the limit is reached.
+In practice, the AICC Lead shows the places free under the limit and the number of Active Initiatives, and the approver of 6.3 takes the decisions that are due. The highest-ranked Initiative that fits is taken into work. An Initiative that ranks lower may be taken first for a stated reason, such as a date or a Dependency, and the reason is recorded. An Initiative that is done, pivoted, deferred, or rejected frees its place, and nothing is taken into work while the limit is reached.
 
 ### The backlog care loop
 
@@ -119,7 +119,7 @@ In practice, a need that arrives is recorded in the funnel and triaged within th
 
 ## 5. The portfolio Kanban
 
-5.1. An Initiative moves through the portfolio Kanban of Figure 5. The Funnel is the intake of ideas, Reviewing is the scoping of a need, and Analyzing is the writing and the clearing of the business case. To pull an Initiative is to take it into work when capacity allows. The Portfolio Backlog is the ranked list of the Initiatives in the Kanban, and the funnel is its Proposed state.
+5.1. An Initiative moves through the portfolio Kanban of Figure 5. The Funnel is the intake of ideas, Reviewing is the scoping of a need, and Analyzing is the writing and the clearing of the business case. To pull an Initiative is to take it into work when the limit on the Active Initiatives allows. The Portfolio Backlog is the ranked list of the Initiatives in the Kanban, and the funnel is its Proposed state.
 
 ```mermaid
 flowchart LR
@@ -148,9 +148,9 @@ In practice, the Kanban is read from left to right, and each arrow is a decision
 | Kanban step | State and Stage | Entry | Exit criterion | Decided by | Record |
 | --- | --- | --- | --- | --- | --- |
 | Funnel | Proposed | A function, the discovery work, or AICC proposes an idea or a need | The problem, the strategic relevance, and the requester are stated | The AICC Lead takes it in, defers it, or rejects it | An entry in the Portfolio Backlog, with the requester and the problem |
-| Reviewing | Discovery: Scoping | Taken in | The need and the requirements are understood. It fits a Strategic Priority, has a client function with a Domain Owner (the Executive Sponsor for enabling work), fits the capacity (Business Model 7.2), and does not duplicate a Solution of the catalog | The AICC Lead, with the Domain Owner | The scope, in the Initiative Brief |
+| Reviewing | Discovery: Scoping | Taken in | The need and the requirements are understood. It fits a Strategic Priority, has a client function with a Domain Owner (the Executive Sponsor for enabling work), is permitted by the limit on the Active Initiatives (Business Model 7.2), and does not duplicate a Solution of the catalog | The AICC Lead, with the Domain Owner | The scope, in the Initiative Brief |
 | Analyzing | Discovery: Business case | Scoped | The Initiative Brief is complete in its six sections, meets the criteria of 6.2, and is cleared by the Control Function Contacts (6.4) | The approver of 6.3 approves, returns, defers, or rejects | The Initiative Brief, the clearances of the Control Function Contacts, and the Decision Record |
-| Portfolio Backlog | Approved | The business case is approved | The Initiative is ranked (6.5) and pulled when capacity allows | The AICC Lead pulls the highest-ranked Initiative that fits | The rank and the scores in the Portfolio Backlog |
+| Portfolio Backlog | Approved | The business case is approved | The Initiative is ranked (6.5) and pulled when the limit on the Active Initiatives allows | The AICC Lead pulls the highest-ranked Initiative that fits | The rank and the scores in the Portfolio Backlog |
 | MVP | Active: MVP | Pulled | The probe has tested the hypothesis against the leading indicators of the Initiative Brief | The approver of 6.3 decides to continue, pivot, defer, or reject | The Solution Definition, the result of the probe, and the Decision Log entry |
 | Implementation | Active: Implementation | Continue | The Capabilities are in the Program Backlog and the Solutions are delivered | The Domain Owner, or the Executive Sponsor for enabling work, accepts | The Capabilities in the Program Backlog, under the Initiative |
 | Done | Review, Accepted, Closed | The outcome is delivered | The outcome is reviewed against the leading indicators and accepted | The Domain Owner, or the Executive Sponsor for enabling work | The acceptance with who and when in the Portfolio Backlog, and the Outcome Report of an Engagement |
@@ -198,19 +198,19 @@ In practice, Waiting is a state, shown as a flag on the boards, of an Active Ini
 
 5.3. Discovery is research. It learns the need and the requirements, builds nothing, and shapes the Initiative Brief. The MVP is a probe. It is the smallest version of the first Solution that is tried, to see whether it works and satisfies the need.
 
-5.4. A limit on the Initiatives that are Active at one time applies, so that the portfolio stays within the capacity of the AICC Team. The AICC Lead sets the Limit on Work in Progress within the mix that the Executive Sponsor sets at the quarterly Steering (4.3), and reviews it at the monthly Steering.
+5.4. A limit on the Initiatives that are Active at one time applies, so that the work in progress of the portfolio stays low and its flow steady. The AICC Lead sets the Limit on Work in Progress within the mix that the Executive Sponsor sets at the quarterly Steering (4.3), and reviews it at the monthly Steering.
 
 ## 6. The business case
 
-6.1. Every Initiative shall be written in a one-page Initiative Brief, which is its lean business case: a hypothesis, the business outcomes with their leading indicators, the scope and the minimum viable product (MVP), the cost, capacity, and value, the risks and the expected Risk Tier, and the decision. The Initiative Brief Template gives the form. A figure of the Bank stays in its source system, and the brief points to it.
+6.1. Every Initiative shall be written in a one-page Initiative Brief, which is its lean business case: a hypothesis, the business outcomes with their leading indicators, the scope and the minimum viable product (MVP), the cost and value, the risks and the expected Risk Tier, and the decision. The Initiative Brief Template gives the form. A figure of the Bank stays in its source system, and the brief points to it.
 
-6.2. The business case meets the following criteria before it is approved. The criteria follow the five questions of the five case model for business cases, scaled to one page.
+6.2. The business case meets the following criteria before it is approved. The criteria answer five questions, scaled to one page.
 
 | Question | Criterion |
 | --- | --- |
 | Why is the change needed? | The Initiative fits a Strategic Priority, and the hypothesis states the value for a named function |
 | What is the best option? | The outcomes have leading indicators, with their source system, baseline, and target, and the MVP tests the hypothesis at the least cost |
-| Can it be afforded? | The capacity in days is within the capacity available, and the cost is within the Envelope of the Strategic Priority |
+| Can it be afforded? | The cost is within the Envelope of the Strategic Priority |
 | Can it be bought and delivered? | The dependencies and the providers are named, the expected Risk Tier is stated, and the Control Function Contacts have cleared it (6.4) |
 | Can it be run well? | The Domain Owner, or the Executive Sponsor for enabling work, is named and committed, and the acceptance on delivery is stated |
 
@@ -220,11 +220,11 @@ In practice, Waiting is a state, shown as a flag on the boards, of an Active Ini
 
 6.5. The Initiatives in the Portfolio Backlog are ranked by the weighted shortest job first (WSJF) method: the sum of the scores of value, urgency, and risk reduction or opportunity, each from 1 to 5, divided by the score of effort, from 1 to 5. The Domain Owner states the value, and the AICC Lead scores the other terms and ranks. The AICC Lead may depart from the rank for a stated reason, and records it.
 
-6.6. Funding goes to the Strategic Priorities and to the capacity of the teams, not to Initiatives one by one (AICC Charter 4). AICC supplies capacity and does not charge the functions. An Initiative is funded by the capacity that its Service Agreement commits, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of its Solutions.
+6.6. Funding goes to the Strategic Priorities and to the Teams, not to Initiatives one by one (AICC Charter 4). AICC does not charge the functions, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of its Solutions.
 
 ## 7. The MVP and the decision after it
 
-7.1. When the AICC Lead takes an Initiative from the Portfolio Backlog into work, the Solution Engineer shall define the architecture and the Solution Definition of its first Solution, and shall build the MVP with the Domain Expert within the capacity that the business case allows. The scope of the first Solution is narrow.
+7.1. When the AICC Lead takes an Initiative from the Portfolio Backlog into work, the Solution Engineer shall define the architecture and the Solution Definition of its first Solution, and shall build the MVP with the Domain Expert within the Limits on Work in Progress. The scope of the first Solution is narrow.
 
 7.2. At the end of the MVP the approver of 6.3 compares the result with the leading indicators of the Initiative Brief and decides to continue, to pivot, to defer, or to reject. To continue, the Capabilities of the Initiative are defined and entered in the Program Backlog under the Initiative. To pivot, the Initiative is closed as Pivoted, and a new Initiative with a full Initiative Brief is entered at the funnel, linked to it, and goes through the whole cycle again; what was learned and the results of the MVP are carried in the link. To defer, there is not yet sufficient reason to proceed: the Initiative is put on hold as Deferred, with the reason and the date to look at it again, and it returns to the funnel when it is taken up again. To reject, the value is not seen: the Initiative is Rejected and its lessons are kept. The decision is entered in the Decision Log and has a Decision Record.
 
@@ -250,7 +250,7 @@ flowchart TB
 
 Figure 7: the probe loop.
 
-In practice, the Initiative Brief holds, before the MVP, the hypothesis, the leading indicators with their source system, and the capacity that the probe may use. The Solution Engineer builds the smallest version that can test it, with the Domain Expert. At the end the approver reads the results against the indicators and decides. After a continue, the quarterly review asks the same question of each Active Initiative, and an Initiative whose indicators and confirmed benefit do not hold is deferred or rejected.
+In practice, the Initiative Brief holds, before the MVP, the hypothesis, the leading indicators with their source system, and the scope of the probe. The Solution Engineer builds the smallest version that can test it, with the Domain Expert. At the end the approver reads the results against the indicators and decides. After a continue, the quarterly review asks the same question of each Active Initiative, and an Initiative whose indicators and confirmed benefit do not hold is deferred or rejected.
 
 7.3. A Solution Definition is approved by the Domain Owner, and the AICC Lead assigns its Risk Tier (AI Policy 3). The Executive Sponsor decides on the release of a Risk Tier 3 Solution.
 
@@ -287,16 +287,4 @@ Figure 8: the levels of the work.
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 1.0 | 2026-10-01 | Created: the portfolio layer separated from the program execution layer; the portfolio Kanban, the business case and its criteria, the ranking, the MVP and the decision to persevere, and the levels of the work. | DR-2026-044 |
-| 1.1 | 2026-10-01 | Discovery is research and the MVP is a probe; after the MVP: continue, pivot, or reject; a pivot restarts the whole cycle at the funnel; the Control Functions clear the business case; the interim approval rule removed. | DR-2026-045 |
-| 1.2 | 2026-10-01 | Eight figures with their practical reading: the Roles across the flow, the Kanban, the gate, the states, the pull, the funding loop, the probe loop, and the levels; a Record column in the table of steps. | DR-2026-046 |
-| 1.3 | 2026-10-01 | Wording for an auditor: Strategic inputs; the names of the steps explained; informal verbs replaced. | none |
-| 1.4 | 2026-10-01 | Defer is an option beside reject at the decisions of the portfolio: the gates and after the MVP. | DR-2026-047 |
-| 1.5 | 2026-10-01 | The portfolio loops: the strategic, the portfolio review, the portfolio sync, and the backlog care loop, each a Plan, Do, Check, Act cycle with its forum, its decider, its interfaces, and its records; the figures of the Roles, the gate, the pull, and the funding are folded into the text. | DR-2026-047 |
-| 1.6 | 2026-10-01 | Iteration written in full; the approver of the business case decides after the MVP. | DR-2026-048 |
-| 1.7 | 2026-10-02 | Auditor evaluation end to end: the clearance is a Control Sign-Off; the decision after the MVP has a Decision Record; the yearly loop at the Steering that ends PIQ4; duplicate paragraphs removed. | DR-2026-052 |
-| 1.8 | 2026-10-02 | Review of the independent findings: lineage removed from clause 1.1 (it drew on Lean Portfolio Management of the Scaled Agile Framework, ISO 21504, and the Standard for Portfolio Management of the Project Management Institute); Waiting is a state shown as a flag; the limit on Active Initiatives is set within the mix of the Executive Sponsor; enabling work; a higher Risk Tier returns the business case for clearance; funding of the run; controls list. | DR-2026-055 |
-| 1.9 | 2026-10-02 | The controls that the model carries. | DR-2026-055 |
-| 2.0 | 2026-10-02 | The acceptance of the outcome of an Initiative is the business acceptance of the Domain Owner, or of the Executive Sponsor for enabling work, after the final acceptance of the Team. | DR-2026-056 |
-| 2.1 | 2026-10-02 | The yearly strategic loop runs at the yearly Steering, the monthly Steering of December held in the first two weeks, in place of the quarterly Steering that ends PIQ4; the input of PIQ3. | DR-2026-057 |
-| 2.2 | 2026-10-02 | No lineage or framework name in the model: the management of the portfolio is described in plain words in clause 1.1 and in the table of clause 3.1. | DR-2026-058 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

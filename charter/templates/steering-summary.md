@@ -2,8 +2,8 @@
 id: AICC-TPL-04-EN
 title: Steering Summary
 status: active
-revision: 2.6
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -13,7 +13,7 @@ revised: 2026-10-02
 
 | Field | Entry |
 | --- | --- |
-| Type | [monthly / quarterly / yearly] |
+| Type | [first / monthly / quarterly / yearly] |
 | Date and week | [date, for example 2026-PIQ4 I10W4] |
 | Chair | [name] |
 | Present, by Role and name | [list] |
@@ -33,16 +33,16 @@ The yearly Steering is the monthly Steering of December. In the month that holds
 | Deficiencies and findings | x |  | x |  |
 | Gate decisions due | x |  | x |  |
 | Active Initiatives against the limit | x |  | x |  |
-| Funnel and free capacity | x |  | x |  |
+| Funnel and places free under the limit | x |  | x |  |
 | Decision on each Active Initiative (continue, pivot, defer, or reject) |  | x |  |  |
 | Quarterly risk check, and review of each Risk Tier 3 Solution |  | x |  |  |
 | Access review |  | x |  |  |
 | Reconciliation of the AI Incidents with the incident management of the Bank |  | x |  |  |
 | Maturity Level |  | x |  |  |
-| Capacity, and completeness of the Outcome Reports |  | x |  |  |
+| Completeness of the Outcome Reports, and the Active Initiatives against the limit |  | x |  |  |
 | Review of the Adopted Solutions |  | x |  |  |
 | Confirmation of the PI Objectives and the Roadmap |  | x |  |  |
-| Mix of the Initiatives, and the capacity for the next Program Increment |  | x |  |  |
+| Mix of the Initiatives for the next Program Increment |  | x |  |  |
 | Approval of the Quarterly Report for the Board Committee |  | x |  |  |
 | Appointments in order |  |  | x |  |
 | The documents, and the AI Risk Appetite Statement |  |  | x |  |
@@ -81,4 +81,4 @@ The yearly Steering is the monthly Steering of December. In the month that holds
 
 ## 8. Check of the Engagements
 
-[The closed Engagements without an accepted Outcome Report, and the Service Agreements above the capacity available, or none.]
+[The closed Engagements without an accepted Outcome Report, and the Active Initiatives above the limit, or none.]

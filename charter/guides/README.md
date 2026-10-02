@@ -2,7 +2,7 @@
 
 The guides explain how AICC works, at the level of the charter: how each workflow is used, by whom, when, and what it leaves on record. They are static and governing: they describe the way of working that the documents require, and they state no rule of their own. Each chapter ends with the clauses of the documents that it explains. A guide uses Roles only and names no persons.
 
-The guides are written for the people who work with AICC: the functions, the Domain Owners, the Executive Sponsor, and AICC itself. Internal audit and HR may read them to see how the unit is run, and the reference of internal audit is the Unit governance guide 7, the Operating Model 8, and the Control Matrix. The live guidance on development and portfolio management, which changes with the work, is kept separately in Confluence and in the portfolio management set. It does not belong here.
+The guides are written for the people who work with AICC: the functions, the Domain Owners, the Executive Sponsor, and AICC itself. Internal audit and HR may read them to see how the unit is run, and the reference of internal audit is the Unit governance guide 7, the Operating Model 8, and the Control Matrix. The live guidance on how a Team plans and builds and on portfolio management, which changes with the work, is kept separately in Confluence and in the portfolio management set. It does not belong here.
 
 | Guide | Explains | For |
 | --- | --- | --- |

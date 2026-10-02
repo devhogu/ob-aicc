@@ -2,8 +2,8 @@
 id: AICC-TPL-09-EN
 title: Appointments Record
 status: active
-revision: 1.6
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -33,7 +33,7 @@ The heads and the Contacts named below the Roles are listed in the same way, eac
 
 ## Part B. The responsibilities
 
-The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead. The capacity available per Iteration is in the Teams Record.
+The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead.
 
 ## Part C. The appointment log
 

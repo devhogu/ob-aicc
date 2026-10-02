@@ -19,3 +19,6 @@ deploy/target/
 
 # Samba
 .smbdelete*
+
+# generated build cache
+portal/.cache/

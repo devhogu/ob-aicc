@@ -2,8 +2,8 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 4.6
-created: 2026-09-30
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -43,9 +43,9 @@ Open sections: [none, or the numbers and what is missing]
 
 [What is in and out of scope, any non-functional requirements, the minimum viable product that tests the hypothesis, and the Features and Solutions it may spawn.]
 
-## 4. Cost, capacity, and value
+## 4. Cost and value
 
-[The capacity in days for the minimum viable product, and the estimate for the full scope if it succeeds. The cost and the Investment Envelope as references to the financial planning of the Bank. The expected value and where it is tracked. AICC supplies the capacity and does not charge; the Domain pays the run, the licenses, and the provider costs from its Envelope (Portfolio Management Model 6.6, AICC Charter 4.1).]
+[The estimate for the full scope if the minimum viable product succeeds. The cost and the Investment Envelope as references to the financial planning of the Bank. The expected value and where it is tracked. AICC does not charge the functions; the Domain pays the run, the licenses, and the provider costs from its Envelope (Portfolio Management Model 6.6, AICC Charter 4.1).]
 
 ## 5. Risks, dependencies, and Risk Tier
 

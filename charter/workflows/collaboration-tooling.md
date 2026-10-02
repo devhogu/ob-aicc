@@ -34,14 +34,12 @@ The following table lists them.
 | Supporting knowledge folder | Technical guides, working templates, and knowledge material that are not records and not rules | AICC and partners | Service delivery |
 | Corporate share | The home of the Registry and of the Portfolio documents that the portals link to | AICC; internal audit, read only | Unit governance |
 | AICC portal | The charter and the governance with its flows, as a static portal. It links to the evidence records of the Registry on the corporate share | AICC, the Executive Sponsor, employees, and internal audit | Unit governance; AI risk and control |
-| Operating portal | A knowledge base of non-sensitive information: the services portfolio and the development efforts, the scenarios, and the proposals, so that the Bank learns about AI. It is static at first, updated when new content is available and not left stale, and later a CMS with a knowledge base | Internal consumers | Engagement; Service delivery |
+| Operating portal | A knowledge base of non-sensitive information: the services portfolio and the development efforts, the scenarios, and the proposals, so that the Bank learns about AI. It is static, and it is updated when new content is available and not left stale | Internal consumers | Engagement; Service delivery |
 | Resources of a Service | The product resources of a Service, kept by the Service and separate from AICC | The users of the Service | Service delivery (operation) |
-
-The link of each tool is entered in this list when the tool is deployed.
 
 ## 3. Where the rules are
 
-The charter prevails, and Confluence, the supporting folder, and the portals never override it. The rules on the content of the tools, on the keeper of each tool, and on the evidence are in the Operating Model 7.2 and 7.6: the tools hold the working state, and the Registry holds the evidence. The Registry and the Portfolio are promoted to the corporate share when they are ready, and the portals link to the documents there and do not embed them.
+The charter prevails, and Confluence, the supporting folder, and the portals never override it. The rules on the content of the tools, on the keeper of each tool, and on the evidence are in the Operating Model 7.2 and 7.6: the tools hold the working state, and the Registry holds the evidence. The Registry and the Portfolio are promoted to the corporate share (Operating Model 7.4), and the portals link to the documents there and do not embed them.
 
 ## 4. The cutover
 

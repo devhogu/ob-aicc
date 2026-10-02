@@ -2,16 +2,11 @@
 
 > This page describes the lineage of the first corpus, now archived. See [Simplification](simplification.md) for what replaced it.
 
-Where the operating model borrows from scaled agile practice, and how each construct is renamed in business terms.
-The charter documents use the business wording only and do not name the framework. This page keeps the lineage.
-Gathered 2026-09-29 from web search plus general knowledge of the framework. SAFe is a licensed framework, so the
-operating model reuses its principles, values, and constructs and does not copy it.
+Where the operating model borrows from scaled agile practice, and how each construct is renamed in business terms. The charter documents use the business wording only and do not name the framework. This page keeps the lineage. Gathered 2026-09-29 from web search plus general knowledge of the framework. SAFe is a licensed framework, so the operating model reuses its principles, values, and constructs and does not copy it.
 
 ## Lens
 
-SAFe organizes the enterprise in layers: portfolio (Lean Portfolio Management), large solution, program (Agile
-Release Train), and team, with technical agility (DevOps and continuous delivery) beneath. AICC applies the same
-layers to the adoption of AI, with business names.
+SAFe organizes the enterprise in layers: portfolio (Lean Portfolio Management), large solution, program (Agile Release Train), and team, with technical agility (DevOps and continuous delivery) beneath. AICC applies the same layers to the adoption of AI, with business names.
 
 ## Mapping
 
@@ -48,21 +43,15 @@ layers to the adoption of AI, with business names.
 
 ## Design choices that differ from the reference framework
 
-- **Flow-based teams on a shared cadence.** Teams pull work continuously with limits on work in progress instead of
-  fixed iterations. SAFe allows flow-based teams inside a program on the common cadence.
+- **Flow-based teams on a shared cadence.** Teams pull work continuously with limits on work in progress instead of fixed iterations. SAFe allows flow-based teams inside a program on the common cadence.
 - **Small scale.** One delivery program, not several trains. A solution train is deferred.
-- **Domain owner as product owner and business owner.** SAFe separates these roles. At AICC's size they coincide, and
-  the domain expert supplies the day-to-day domain knowledge.
-- **Independent control.** Control function contacts and their validation sit outside the delivery flow's authority.
-  This is a banking requirement and goes beyond the reference framework's "lean governance".
-- **Domain as function or product line.** SAFe recommends organizing around value streams that cross functions. A
-  stream that also crosses entities, such as KYC, lending, or payments, may need several domain owners acting
-  together. This is an open item.
+- **Domain owner as product owner and business owner.** SAFe separates these roles. At AICC's size they coincide, and the domain expert supplies the day-to-day domain knowledge.
+- **Independent control.** Control function contacts and their validation sit outside the delivery flow's authority. This is a banking requirement and goes beyond the reference framework's "lean governance".
+- **Domain as function or product line.** SAFe recommends organizing around value streams that cross functions. A stream that also crosses entities, such as KYC, lending, or payments, may need several domain owners acting together. This is an open item.
 
 ## Simplification applied (2026-09-30)
 
-The first version had ten principles, four work levels, eight stages, seven cadences, fifteen roles, and 51 RACI rows.
-It was thinned without removing any layer.
+The first version had ten principles, four work levels, eight stages, seven cadences, fifteen roles, and 51 RACI rows. It was thinned without removing any layer.
 
 | Layer | Before | After | Reason |
 | --- | --- | --- | --- |
@@ -74,20 +63,16 @@ It was thinned without removing any layer.
 | RACI rows | 51 | 43 | One decision per stage gate instead of one per activity |
 | Deferred to the evolution plan | | Initiative briefs and guardrail thresholds until set, the dependency board, value-stream alignment, a second delivery program, a solution train, separating combined roles | Activate when scale requires |
 
-Kept as they are: independence of the control functions and the separation rules, exactly one accountable role per
-row, the split between roles, positions, and named people, and the domain owner as product owner.
+Kept as they are: independence of the control functions and the separation rules, exactly one accountable role per row, the split between roles, positions, and named people, and the domain owner as product owner.
 
 ## Bank and fintech group flavor
 
-Added because the organization is a bank and a group of fintech and digital businesses, not a bank alone. The
-wording is our own drafting from that context. Nothing about specific group entities is stated in the charter.
+Added because the organization is a bank and a group of fintech and digital businesses, not a bank alone. The wording is our own drafting from that context. Nothing about specific group entities is stated in the charter.
 
 - Scope reaches the bank and the group's fintech and digital entities.
 - A domain is a business function or a product line, so a fintech product has a domain owner who is its product owner.
-- Each legal entity keeps its own regulator, accountability, control functions, and data. Control function contacts
-  are named per entity and regulatory regime. Data is shared between entities only under a group arrangement.
-- Product speed with bank-grade control: pilots can be controlled experiments with defined success measures, and
-  release speed follows the risk tier, so low-risk changes move fast.
+- Each legal entity keeps its own regulator, accountability, control functions, and data. Control function contacts are named per entity and regulatory regime. Data is shared between entities only under a group arrangement.
+- Product speed with bank-grade control: pilots can be controlled experiments with defined success measures, and release speed follows the risk tier, so low-risk changes move fast.
 - The shared platform serves several entities, which the data classification and risk tier policies must respect.
 
 ## Sources
@@ -105,8 +90,6 @@ wording is our own drafting from that context. Nothing about specific group enti
 
 ## Confidence and gaps
 
-- The framework's official pages were not read directly. The mapping rests on secondary summaries and on general
-  knowledge of the framework. The core values and principles listed here are from memory and should be checked against
-  the official framework before anyone quotes them.
+- The framework's official pages were not read directly. The mapping rests on secondary summaries and on general knowledge of the framework. The core values and principles listed here are from memory and should be checked against the official framework before anyone quotes them.
 - The wording of every AICC construct is our own.
 - No source was found on applying these constructs to the adoption of AI in a bank.

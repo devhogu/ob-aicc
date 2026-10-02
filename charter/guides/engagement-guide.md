@@ -18,7 +18,7 @@ This guide explains how AICC works with a function of the Bank. AICC acts as an 
 
 ## 3. How a function starts
 
-A head of function brings a need to the AICC Lead, in any form: a conversation, a message, or a ticket in Service Management. The AICC Lead is named in the Appointments Record. The AICC Lead enters the need in the Portfolio Backlog and takes it in when it fits a Strategic Priority, has a client function with a Domain Owner, and fits the capacity (Business Model 7.2). Otherwise it is deferred or rejected.
+A head of function brings a need to the AICC Lead, in any form: a conversation, a message, or a ticket in Service Management. The AICC Lead is named in the Appointments Record. The AICC Lead enters the need in the Portfolio Backlog and takes it in when it fits a Strategic Priority, has a client function with a Domain Owner, and the limit on the Active Initiatives permits it (Business Model 7.2). Otherwise it is deferred or rejected.
 
 ## 4. How an Engagement runs
 
@@ -26,7 +26,7 @@ Figure 1 shows the path of an Engagement from the first contact to the approval 
 
 ```mermaid
 flowchart LR
-  C["Contact<br/>a need from a function"] --> IN{"Intake<br/>fits a Strategic Priority,<br/>has a Domain Owner,<br/>fits the capacity?"}
+  C["Contact<br/>a need from a function"] --> IN{"Intake<br/>fits a Strategic Priority,<br/>has a Domain Owner,<br/>within the limit on<br/>Active Initiatives?"}
   IN -->|"no"| DR["Deferred or rejected"]
   IN -->|"yes"| ST["Study<br/>scope and business case<br/>Service Agreement issued"]
   ST --> CL{"Risk Tier 2 or 3<br/>expected?"}
@@ -74,13 +74,13 @@ The following table states each step, the person who acts, the time, and the rec
 
 ## 5. The commitment in practice
 
-The Service Agreement has two parts. The commitment states the phases, the support level, the scope and what is out of scope, the deliverables and their definition of done, the capacity per Iteration in days, the Assumptions, the check-in, and the end. The working agreement states who works on it and when, how AICC and the function communicate and decide, who is notified, how data is handled, how issues are escalated, and how progress is reported. AICC commits to the capacity and works toward the outcome on a best-effort basis, within the capacity and the capability that it has available, and the function commits to nothing. What AICC relies on from the function is written as an Assumption.
+The Service Agreement has two parts. The commitment states the phases, the support level, the scope and what is out of scope, the deliverables and their definition of done, the Assumptions, the check-in, and the end. The working agreement states who works on it and when, how AICC and the function communicate and decide, who is notified, how data is handled, how issues are escalated, and how progress is reported. AICC works toward the outcome on a best-effort basis, within the capability that it has available, and the function commits to nothing. What AICC relies on from the function is written as an Assumption.
 
 Figure 3 shows the Service Agreement as a loop that runs at each Iteration.
 
 ```mermaid
 flowchart LR
-  PL["Plan<br/>capacity per Iteration,<br/>scope as a backlog,<br/>Assumptions"] --> DO["Do<br/>AICC delivers within<br/>the capacity and the<br/>capability available"]
+  PL["Plan<br/>scope as a backlog,<br/>Assumptions"] --> DO["Do<br/>AICC delivers within<br/>the Limits on Work in<br/>Progress and the<br/>capability available"]
   DO --> CH["Check<br/>check-in at the Iteration<br/>with the Domain Owner<br/>and the Domain Expert"]
   CH --> DEC{"Result of the check-in"}
   DEC -->|"on track"| PL
@@ -124,9 +124,9 @@ Figure 4: support, incident, and change after delivery.
 | Situation | Treatment |
 | --- | --- |
 | An Assumption fails, for example the Domain Expert is not available | AICC re-plans the scope and the dates and notes the change in the Service Agreement; the item is Waiting |
-| The function wants a different scope | The backlog is reordered within the capacity at any time; a change beyond it is a new Engagement or an amendment |
+| The function wants a different scope | The backlog is reordered within the Limits on Work in Progress at any time; a change beyond it is a new Engagement or an amendment |
 | Either side wants to stop | The Engagement is ended or redirected at the end of an Iteration, and the Outcome Report records it |
-| The capacity is full | A new Service Agreement is not issued above the capacity; the item waits in the Portfolio Backlog |
+| The limit on the Active Initiatives is reached | A new Service Agreement is not issued above the limit; the item waits in the Portfolio Backlog |
 | A request or an incident arrives after delivery | It comes through Service Management; the response targets are targets and not guarantees |
 
 ## 8. Rule source

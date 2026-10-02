@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>Appointments Record · AICC</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='light'?'light':'dark';}catch(e){}</script>
+<link rel="stylesheet" href="../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../assets/charter.css">
+<link rel="alternate" hreflang="en" href="../../../en/library/appointments-record/">
+<script src="../../../assets/site.js" defer data-search="../../../assets/search-ru.json" data-t-none="Ни одна страница не соответствует запросу." data-t-light="Светлая тема" data-t-dark="Тёмная тема" data-t-copied="Скопировано" data-t-mail-body="Страница: {title}
+Номер: {ref}
+Адрес: {url}
+
+Вопрос или замечание:
+" data-t-dz-close="Закрыть"></script>
+</head>
+<body class="charter">
+<a class="o-skip" href="#main">К содержанию</a>
+<header class="o-header">
+  <a class="o-identity" href="../../"><img src="../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>Центр компетенций по искусственному интеллекту</span></a>
+  <span class="header-scope">Устав и управление</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Поиск по уставу</label><input id="q" type="search" autocomplete="off" placeholder="Поиск по уставу" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Язык"><a lang="en" hreflang="en" href="../../../en/library/appointments-record/">EN</a><a lang="ru" hreflang="ru" href="./" aria-current="true">RU</a></nav><button id="theme-switch" type="button">Светлая тема</button></div>
+</header>
+<div class="o-frame">
+  <aside class="o-nav"><details open><summary>Разделы сайта</summary><nav aria-label="Разделы"><a href="../../"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /> <path d="M15 5.764v15" /> <path d="M9 3.236v15" /> </svg> <span>Главная</span></a><a href="../../about/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg> <span>О центре AICC</span></a><a href="../../what-aicc-does/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path d="M16 3.128a4 4 0 0 1 0 7.744" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle cx="9" cy="7" r="4" /> </svg> <span>Что делает AICC</span></a><a href="../../how-aicc-works/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="8" x="3" y="3" rx="2" /> <path d="M7 11v4a2 2 0 0 0 2 2h4" /> <rect width="8" height="8" x="13" y="13" rx="2" /> </svg> <span>Как работает AICC</span></a><a href="../../organization/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M8 5h13" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="M3 10a2 2 0 0 0 2 2h3" /> <path d="M3 5v12a2 2 0 0 0 2 2h3" /> </svg> <span>Организация</span></a><a href="../../responsible-ai/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg> <span>Ответственный ИИ</span></a><a href="../../governance/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 3v18" /> <rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M21 9H3" /> <path d="M21 15H3" /> </svg> <span>Управление и надзор</span></a><a href="../" aria-current="true"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /> </svg> <span>Библиотека</span></a><div class="nav-sub"><a href="../initiative-brief/" data-tip="A need becomes an Initiative">Initiative Brief</a><a href="../service-agreement/" data-tip="The study of an Engagement starts">Service Agreement</a><a href="../solution-definition/" data-tip="A Solution is defined">Solution Definition</a><a href="../acceptance-checklist/" data-tip="AICC hands a ready Solution to a Domain for use at scale, before its release beyond the first users">Acceptance Checklist</a><a href="../control-sign-off/" data-tip="A Control Function Contact validates, clears a business case, stops, checks a provider, or grants an Exception">Control Sign-Off</a><a href="../decision-record/" data-tip="A Decision needs a record">Decision Record</a><a href="../steering-summary/" data-tip="Each Steering">Steering Summary</a><a href="../outcome-report/" data-tip="An Engagement ends">Outcome Report</a><a href="../ai-incident-review/" data-tip="After the post-incident review of an AI Incident (AI Policy 5.8)">AI Incident Review</a><a href="../registry-snapshot/" data-tip="The close of an Iteration and a PI, and at the cutover">Registry Snapshot</a><a href="../quarterly-report/" data-tip="Each quarter">Quarterly Report</a><a href="./" aria-current="page" data-tip="An appointment, acting designation, change, or relief">Appointments Record</a><a href="../proposal/" data-tip="A Solution is proposed for adoption at scale, and the yearly Proposal of the AI adoption strategy">Proposal</a></div><a href="../../reference/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /> </svg> <span>Справочник</span></a></nav></details>
+    <p class="o-caption">Базовая редакция 1.0 · 2 октября 2026</p></aside>
+  <main class="o-main" id="main" tabindex="-1">
+    <nav class="o-eyebrow crumbs" aria-label="Навигационная цепочка"><a href="../../">Главная</a> / <a href="../">Библиотека</a> / Appointments Record</nav>
+    <div class="o-reading"><div class="o-copy"><h1>Appointments Record</h1><p class="o-lead" lang="en">An appointment, acting designation, change, or relief</p><dl class="doc-facts"><div><dt>Идентификатор</dt><dd>AICC-TPL-09-EN</dd></div><div><dt>Редакция</dt><dd>1.0</dd></div><div><dt>Дата</dt><dd>2026-10-02</dd></div><div><dt>Статус</dt><dd>active</dd></div><div><dt>Владелец</dt><dd>Руководитель AICC</dd></div></dl><p class="o-callout lang-note" role="note">Текст этой страницы пока доступен только на английском языке. Русский перевод ещё не готов.</p><dl class="o-facts"><dt>Когда применяется</dt><dd lang="en">An appointment, acting designation, change, or relief</dd><dt>Где хранится</dt><dd lang="en"><code>registry/appointments.md</code></dd></dl><p class="tpl-tools"><button type="button" class="oc-button" data-copy="tpl-src">Скопировать шаблон</button></p><script type="text/markdown" id="tpl-src">```yaml
+id: AICC-TPL-09-EN
+title: Appointments Record
+status: active
+revision: 1.0
+created: 2026-10-02
+revised: 2026-10-02
+```
+
+# Appointments Record
+
+**Template.** The mapping of the Roles and responsibilities of the charter to real people, with the log of appointments. It is the living record that names the Holders, and the charter names Roles only. Part C is append-only. Parts A and B derive from it. The Registry Snapshot at each Iteration close keeps a dated extract. It holds the names and posts of the Holders, and their declarations, consents, and access, and no other personal data. Other records may name a person as the owner of an item, but the Holder of a Role is entered here.
+
+## Part A. The map
+
+| Role | Scope | Holder (name and post) | Deputy | Status | From | To | Appointed by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | [Appointed / Acting / Relieved] |  |  |  | DR-[yyyy]-[nnn] |
+
+The heads and the Contacts named below the Roles are listed in the same way, each with a Status and a decision reference.
+
+**Checkers.** The Checker of a Risk Tier 1 Solution, whom the AICC Lead names, and the engineer of the IT function or the Domain who checks until AICC has a second Solution Engineer (Operating Model 4.4(e)), are entered here. A Checker is a designation and not a Role.
+
+| Solution | Name | Named by | Date | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
+| --- | --- | --- | --- | --- |
+| SOL-[nnn] | [name and post] | [AICC Lead] | [date] | DR-[yyyy]-[nnn] |
+
+**Product owners.** While a Team has up to three people the AICC Lead is its product owner, and no entry is needed. When the AICC Lead names another person as the product owner of a Team (Solution Lifecycle Model 7.3), the person is entered here. A product owner is a designation and not a Role.
+
+| Team | Name | Named by | Date | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
+| --- | --- | --- | --- | --- |
+| [Team] | [name and post] | [AICC Lead] | [date] | DR-[yyyy]-[nnn] |
+
+## Part B. The responsibilities
+
+The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead.
+
+## Part C. The appointment log
+
+| Entry | Date entered | Event | Role | Person | Effective from and to | Decided by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| AP-[nnn] |  | [Appointed / Acting / Relieved / Changed / Deputy named / Confirmed / Left] |  |  |  |  | DR-[yyyy]-[nnn] |
+
+## Part D. Declarations and competence
+
+| Holder | Role accepted (date) | Conflict declaration (date, outcome) | Training required and completed | Line manager's consent and time allocation |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+## Part E. Tools and access
+
+| Role | Jira, Confluence, and Service Management group | Repository permission | Access granted or removed (date) | Last access review (date and reviewer) |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
+
+| Tool | Keeper (Role and name) | From | To |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
+## Delegations of the Executive Sponsor
+
+| Scope | Delegate | From | To | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
+| --- | --- | --- | --- | --- |
+|  |  |  |  | DR-[yyyy]-[nnn] |
+
+A delegation of more than two weeks is also entered in the Decision Log (Operating Model 4.7).
+</script><div class="o-doc" lang="en"><p><strong>Template.</strong> The mapping of the Roles and responsibilities of the charter to real people, with the log of appointments. It is the living record that names the Holders, and the charter names Roles only. Part C is append-only. Parts A and B derive from it. The Registry Snapshot at each Iteration close keeps a dated extract. It holds the names and posts of the Holders, and their declarations, consents, and access, and no other personal data. Other records may name a person as the owner of an item, but the Holder of a Role is entered here.</p>
+<h2 id="part-a-the-map">Part A. The map</h2>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Scope</th>
+<th>Holder (name and post)</th>
+<th>Deputy</th>
+<th>Status</th>
+<th>From</th>
+<th>To</th>
+<th>Appointed by</th>
+<th>Decision reference (DR-[yyyy]-[nnn], or the number and date of the order)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>[Appointed / Acting / Relieved]</td>
+<td></td>
+<td></td>
+<td></td>
+<td>DR-[yyyy]-[nnn]</td>
+</tr>
+</tbody>
+</table></div>
+<p>The heads and the Contacts named below the Roles are listed in the same way, each with a Status and a decision reference.</p>
+<p><strong>Checkers.</strong> The Checker of a Risk Tier 1 Solution, whom the AICC Lead names, and the engineer of the IT function or the Domain who checks until AICC has a second Solution Engineer (<a class="xref" href="../../organization/operating-model/roles/#c-4-4">Operating Model 4.4(e)</a>), are entered here. A Checker is a designation and not a Role.</p>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Solution</th>
+<th>Name</th>
+<th>Named by</th>
+<th>Date</th>
+<th>Decision reference (DR-[yyyy]-[nnn], or the number and date of the order)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SOL-[nnn]</td>
+<td>[name and post]</td>
+<td>[AICC Lead]</td>
+<td>[date]</td>
+<td>DR-[yyyy]-[nnn]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Product owners.</strong> While a Team has up to three people the AICC Lead is its product owner, and no entry is needed. When the AICC Lead names another person as the product owner of a Team (<a class="xref" href="../../how-aicc-works/solution-lifecycle-model/verification-release-and-acceptance/#c-7-3">Solution Lifecycle Model 7.3</a>), the person is entered here. A product owner is a designation and not a Role.</p>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Team</th>
+<th>Name</th>
+<th>Named by</th>
+<th>Date</th>
+<th>Decision reference (DR-[yyyy]-[nnn], or the number and date of the order)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Team]</td>
+<td>[name and post]</td>
+<td>[AICC Lead]</td>
+<td>[date]</td>
+<td>DR-[yyyy]-[nnn]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="part-b-the-responsibilities">Part B. The responsibilities</h2>
+<p>The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the <a class="xref" href="../../organization/operating-model/roles/#c-4-4">Operating Model 4.4</a> apply, and the combinations accepted while the Team is small, those of the <a class="xref" href="../../what-aicc-does/business-model/#c-7-5">Business Model 7.5</a> and the <a class="xref" href="../../how-aicc-works/solution-lifecycle-model/verification-release-and-acceptance/#c-7-3">Solution Lifecycle Model 7.3(d)</a>, are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead.</p>
+<h2 id="part-c-the-appointment-log">Part C. The appointment log</h2>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Entry</th>
+<th>Date entered</th>
+<th>Event</th>
+<th>Role</th>
+<th>Person</th>
+<th>Effective from and to</th>
+<th>Decided by</th>
+<th>Decision reference (DR-[yyyy]-[nnn], or the number and date of the order)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AP-[nnn]</td>
+<td></td>
+<td>[Appointed / Acting / Relieved / Changed / Deputy named / Confirmed / Left]</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>DR-[yyyy]-[nnn]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="part-d-declarations-and-competence">Part D. Declarations and competence</h2>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Holder</th>
+<th>Role accepted (date)</th>
+<th>Conflict declaration (date, outcome)</th>
+<th>Training required and completed</th>
+<th>Line manager's consent and time allocation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="part-e-tools-and-access">Part E. Tools and access</h2>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Jira, Confluence, and Service Management group</th>
+<th>Repository permission</th>
+<th>Access granted or removed (date)</th>
+<th>Last access review (date and reviewer)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Keeper (Role and name)</th>
+<th>From</th>
+<th>To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="delegations-of-the-executive-sponsor">Delegations of the Executive Sponsor</h2>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Delegate</th>
+<th>From</th>
+<th>To</th>
+<th>Decision reference (DR-[yyyy]-[nnn], or the number and date of the order)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>DR-[yyyy]-[nnn]</td>
+</tr>
+</tbody>
+</table></div>
+<p>A delegation of more than two weeks is also entered in the Decision Log (<a class="xref" href="../../organization/operating-model/roles/#c-4-7">Operating Model 4.7</a>).</p>
+</div><nav class="o-pn" aria-label="Назад / Далее"><a class="pn prev" href="../quarterly-report/" rel="prev"><span>Назад</span>Quarterly Report</a><a class="pn next" href="../proposal/" rel="next"><span>Далее</span>Proposal</a></nav></div><aside class="o-context" aria-label="На этой странице"><strong>На этой странице</strong><a class="lv2" href="#part-a-the-map">Part A. The map</a><a class="lv2" href="#part-b-the-responsibilities">Part B. The responsibilities</a><a class="lv2" href="#part-c-the-appointment-log">Part C. The appointment log</a><a class="lv2" href="#part-d-declarations-and-competence">Part D. Declarations and competence</a><a class="lv2" href="#part-e-tools-and-access">Part E. Tools and access</a><a class="lv2" href="#delegations-of-the-executive-sponsor">Delegations of the Executive Sponsor</a></aside></div>
+    <footer class="o-footer">
+      <span class="foot-text">Центр компетенций по искусственному интеллекту, O!Bank. Базовая редакция 1.0 от 2 октября 2026 года. Текущие записи AICC ведутся в Реестре, Jira, Confluence и Service Management. <a class="contact" href="mailto:talimbayev@obank.kg?subject=AICC%20portal%2C%20page%20HJYRE">Связаться с нами</a></span>
+      <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Отзыв о странице</span><span>ID: HJYRE</span></button>
+    </footer>
+  </main>
+</div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="AICC portal, page HJYRE" data-ref="HJYRE" data-page="Appointments Record">
+  <form method="dialog">
+    <h2 id="fb-t">Отзыв о странице</h2>
+    <p>Оставить отзыв о содержании этой страницы: <a data-mail href="mailto:talimbayev@obank.kg">отзыв</a>.</p>
+    <p>По всем вопросам о портале обращайтесь: <a data-mail href="mailto:talimbayev@obank.kg">Timur Alimbayev</a> (talimbayev@obank.kg), и называйте номер страницы.</p>
+    <p class="fb-id">Номер страницы: <code>HJYRE</code> <button type="button" class="fb-copy" data-copy-text="HJYRE">Копировать</button></p>
+    <div class="fb-actions"><button class="oc-button" value="close">Закрыть</button></div>
+  </form>
+</dialog>
+</body>
+</html>

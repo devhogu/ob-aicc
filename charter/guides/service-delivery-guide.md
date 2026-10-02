@@ -88,7 +88,7 @@ Figure 4: the routes out of the main stream.
 | --- | --- | --- | --- |
 | Taking an item in | AICC Lead | Proposed to Discovery | Portfolio Backlog |
 | Business case | Domain Owner; the Executive Sponsor above a guardrail, across Domains, or for enabling work; the Control Function Contacts clear it when Risk Tier 2 or 3 is expected | End of the discovery of an Initiative | Initiative Brief with the clearances; Decision Record |
-| Pull from the Portfolio Backlog | AICC Lead | When capacity allows and the active limit permits | Portfolio Backlog |
+| Pull from the Portfolio Backlog | AICC Lead | When the limit on the Active Initiatives permits | Portfolio Backlog |
 | Decision after the MVP | The approver of the business case | At the end of the MVP | Decision Log; Decision Record; Initiative Brief |
 | Solution Definition and Risk Tier | Domain Owner approves; the AICC Lead assigns the Risk Tier and tells the Domain Owner; for a Solution that the AICC Lead built, the Executive Sponsor approves and assigns | When the Solution is defined | Solution Definition |
 | Use of a Solution for a data class | Domain Owner; the AICC Lead for use in AICC; the Executive Sponsor for a Solution that the AICC Lead built | Before use | AI Registry |

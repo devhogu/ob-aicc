@@ -2,8 +2,8 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 6.5
-created: 2026-09-29
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -25,7 +25,7 @@ revised: 2026-10-02
 
 3.3. Capitalize a defined term and use it in one meaning. Do not use a term listed as "Not used".
 
-3.4. A defining document states what is and what is to be done. Lineage, references, and open questions belong in the wiki folder of the repository.
+3.4. A defining document states what is and what is to be done. It holds no provenance, no open question, and no reference to a file.
 
 3.5. A document refers to another by its title, not by a file path, and does not restate it. The Statement of Intent repeats a few definitions because it is read alone.
 
@@ -66,13 +66,13 @@ revised: 2026-10-02
 | Strategic Priority | A strategic theme of the Statement of Intent, set with the Board, with an Investment Envelope |  |
 | Investment Envelope | The funding allocated for a year to a Strategic Priority | budget line |
 | Investment Guardrails | The limits that decide what may be committed without the Executive Sponsor | thresholds |
-| Business Model | The document that states what AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | |
+| Business Model | The document that states what AICC is, whom it serves, what it offers, how it commits, and how it tracks value and flow | |
 | Engagement | An Initiative that has a client function. One Service Agreement is issued for each client function | project |
 | Phase | A part of an Engagement that its Service Agreement covers: a study, a proof, delivery, or support | |
-| Service Agreement | The working agreement in which AICC commits to an Engagement: a commitment and a working agreement, on a best-effort basis within the capacity and the capability of AICC. It is not a legal document | contract (alone), SOW |
+| Service Agreement | The working agreement in which AICC commits to an Engagement: a commitment and a working agreement, on a best-effort basis within the capability of AICC. It is not a legal document | contract (alone), SOW |
 | Assumption | A thing that AICC relies on from the function, stated in the Service Agreement, which is re-planned if it fails | |
 | Support level | What AICC provides after delivery: none, on demand, at agreed response targets, or run by AICC | SLA (alone) |
-| Outcome Report | The report at the end of an Engagement: what was delivered, with the evidence referenced, the capacity used, and who accepted it | final report |
+| Outcome Report | The report at the end of an Engagement: what was delivered, with the evidence referenced, and who accepted it | final report |
 | Stakeholder | A person who does not belong to AICC and is notified under a Service Agreement; the person has no Role and commits to nothing | |
 | Reusable asset | A method or playbook that an Engagement leaves in the Portfolio | |
 | Portfolio | The Initiatives of AICC and the Solutions that they deliver, taken together |  |
@@ -103,7 +103,7 @@ revised: 2026-10-02
 | Program Kanban | The board of the Capabilities and Features by state, with the classes of service as lanes and the Limits on Work in Progress |  |
 | Lane | A class of service of the Program Kanban: Urgent, High priority, or Normal | swimlane (alone) |
 | Team | The people who deliver together: a Solution Engineer with the Domain Expert, the Domain Owner, and the product owner | squad, pod |
-| Teams Record | The living Record of the Teams, their members, and the capacity available per Iteration | |
+| Teams Record | The living Record of the Teams and their members | |
 | Program Increment | One quarter of work, made of three Iterations; named PIQ1 to PIQ4 with the year. Short form: PI | release train |
 | Iteration | One calendar month of work of a Team, of four or five whole weeks, named I01 to I12, with a goal and an Iteration Backlog. The Calendar Record states the weeks of each Iteration | sprint |
 | Innovation and Planning week | The last week of the third Iteration of a Program Increment, or an earlier week that the Calendar Record places, for example to keep a year-end week free of events, for the PI Review and Demo, Inspect and Adapt, Innovation, PI Planning, and the quarterly Steering. Short form: IP week |  |
@@ -126,7 +126,7 @@ revised: 2026-10-02
 | Release | The decision, before a Solution is used beyond its first users, to make it available | go-live |
 | First users | The users that are named in the Solution Definition, and not the whole function. They use the Solution after its first deployment and before its release | |
 | Emergency change | A change to a Solution in production that cannot wait for the normal process of the change management of the Bank | |
-| Limit on Work in Progress | The most items allowed in a state, a lane, or a Domain at one time | WIP limit |
+| Limit on Work in Progress | The most items allowed in a state, a lane, or a Domain at one time | WIP limit, capacity |
 | Risk Tier | The class of a Solution by risk: 1 Low, 2 Medium, or 3 High | risk level |
 | AI Registry | The living Record of AICC, kept by the AICC Lead in the Registry, of each Solution, model, and agent, with owner, scope, data access, Risk Tier, and reassessment date. The AI Platform feeds it |  |
 | AI Incident | An event in which the use of AI causes or could cause harm, a breach of law or policy, or a loss of control |  |
@@ -209,42 +209,4 @@ revised: 2026-10-02
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 0.2 to 0.5 | 2026-09-30 | Drafted and revised. | none |
-| 1.0 | 2026-09-30 | Rewritten for the simplified corpus: about half the terms; Roles reduced to seven. | DR-2026-009 |
-| 1.1 | 2026-09-30 | Fixes from the independent check: Board, Holder, Portfolio, Check, Release, Milestone defined; internal audit; precedence. | DR-2026-010 |
-| 1.2 | 2026-09-30 | Second fixes: Release at the exit from Pilot; Check in general; Community of Practice. | DR-2026-011 |
-| 1.3 | 2026-09-30 | Steering is monthly and quarterly. | none |
-| 1.4 | 2026-09-30 | Acceptance fixes: Checker, Validation, Suspension and stop, Governed source defined; duty wording. | DR-2026-015 |
-| 1.5 | 2026-10-01 | Activated by the AICC Lead. | DR-2026-018 |
-| 1.6 | 2026-10-01 | Acceptance defined. | DR-2026-019 |
-| 2.0 | 2026-10-01 | Program Increment, Iteration, Program Backlog, IT Backlog, Program Kanban, Team, Event, PI Objective, Dependency, Calendar, and Dashboard defined. | DR-2026-020 |
-| 3.0 | 2026-10-01 | Iteration is a calendar month; Lane, Cadence, and blocked and gray days defined; PI Objective is intent and direction. | DR-2026-021 |
-| 3.1 | 2026-10-01 | Weekly Planning; the Cadence is the general flow without dates. | DR-2026-022 |
-| 3.2 | 2026-10-01 | Short forms PI, IT, and IP; event names use IT. | DR-2026-023 |
-| 3.3 | 2026-10-01 | The Program Backlog is also called the PI Backlog. | none |
-| 4.0 | 2026-10-01 | Solution replaces Use Case; Initiative, Epic, Feature, the offering types, Handoff, Proposal, Adoption, and the thirteen states defined; Stage is a phase inside discovery or active. | DR-2026-024 |
-| 4.1 | 2026-10-01 | Registry, Workflow, and the Stages defined; states clarified; stray cells removed. | DR-2026-025 |
-| 4.2 | 2026-10-01 | Business Model, Engagement, Service Agreement, Assumption, Support level, Outcome Report, Agreement Log, Stakeholder, and Reusable asset defined. | DR-2026-026 |
-| 4.3 | 2026-10-01 | Engagement is an Initiative with a client function; Phase and Adopted Solution defined; Handover replaces Handoff; the lane Urgent; Agreement Log removed. | DR-2026-027 |
-| 4.4 | 2026-10-01 | Evidence record, Working state, and Light mode defined; Record redefined. | DR-2026-028 |
-| 4.5 | 2026-10-01 | Steering Summary defined. | DR-2026-029 |
-| 4.6 | 2026-10-01 | AICC portal, Operating portal, and Service portal defined. | DR-2026-030 |
-| 4.7 | 2026-10-01 | Product owner defined. | DR-2026-031 |
-| 4.8 | 2026-10-01 | Decision Record, Appointments Record, Control Sign-Off, AI Incident Review, Registry Snapshot, Dependency Map, Roadmap, Template, Priorities Record, and Standards Record defined; Cancelled and Closed restated; Innovation is an Event. | DR-2026-034 |
-| 4.9 | 2026-10-01 | Control Sign-Off includes a stop. | DR-2026-034 |
-| 5.0 | 2026-10-01 | Group, Entity, and Participating Entity removed; Data Sharing Arrangement replaces Group Arrangement; Domain, Control Function Contact, and the Statement of appetite refer to the Bank. | DR-2026-036 |
-| 5.1 | 2026-10-01 | The Service Agreement is on a best-effort basis within the available capacity and capability. | DR-2026-037 |
-| 5.2 | 2026-10-01 | The Solution Engineer replaces the AICC Engineer. | DR-2026-038 |
-| 5.3 | 2026-10-01 | Severity of an AI Incident is set by the incident management of the Bank. | DR-2026-039 |
-| 5.4 | 2026-10-01 | Precedence lists the Solution Lifecycle Model; the states are moved by the Solution Lifecycle Model. | DR-2026-042 |
-| 5.5 | 2026-10-01 | Capability replaces Epic outside Jira; Lean Portfolio Management, Funnel, MVP, and Leading indicator defined; the MVP Stage; precedence lists the Portfolio Management Model. | DR-2026-044 |
-| 5.6 | 2026-10-01 | Rejected is a decision on the merits, including after the MVP; Cancelled is a withdrawal without one; Discovery is research and the MVP is a probe. | DR-2026-045 |
-| 5.7 | 2026-10-01 | Steering, Portfolio Kanban, Loop, and Stage aligned with the control loops and the portfolio loops; Iteration is never shortened. | DR-2026-048 |
-| 5.8 | 2026-10-02 | Acceptance criteria and Value hypothesis defined. | DR-2026-049 |
-| 5.9 | 2026-10-02 | First users and Emergency change defined; the clearance of a business case is a Control Sign-Off. | DR-2026-052 |
-| 6.0 | 2026-10-02 | Review of the independent findings: Acceptance Checklist, Risks and Issues Record, Control Matrix, Teams Record, IT function, Service Management, quarterly risk check, cutover, and Report to the Board Committee defined; Waiting is a state shown as a flag; Cancelled from Proposed; the IP week may be placed earlier by the Calendar Record; the AI Registry is a Record of AICC; AICC, Product owner, Roadmap, Quarterly Report, and Work Item aligned; Service portal and Community of Practice removed. | DR-2026-055 |
-| 6.1 | 2026-10-02 | Review week in the third Iteration. | DR-2026-055 |
-| 6.2 | 2026-10-02 | Acceptance at three levels: Product owner, Domain Owner, Acceptance, Acceptance criteria, Team, and Accepted aligned. | DR-2026-056 |
-| 6.3 | 2026-10-02 | Yearly Steering defined; Steering aligned. | DR-2026-057 |
-| 6.4 | 2026-10-02 | Lean Portfolio Management replaced by Portfolio management; the AICC portal is for AICC, the Executive Sponsor, employees, and internal audit; Environment of use defined. | DR-2026-058 |
-| 6.5 | 2026-10-02 | Business acceptor defined. | DR-2026-059 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

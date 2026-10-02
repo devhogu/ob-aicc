@@ -2,8 +2,8 @@
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 2.10
-created: 2026-09-30
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 

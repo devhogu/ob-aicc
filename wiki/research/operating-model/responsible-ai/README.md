@@ -2,9 +2,7 @@
 
 > Mechanisms named on this page refer to the first corpus (archived). The responsible-AI mapping still holds. See [Simplification](../simplification.md).
 
-How the values and the principles of application in the [statement of intent](../../../../charter/documents/statement-of-intent.md) line up with
-what banks, fintechs, standards bodies, and regulators publish. The charter carries no references. This page keeps the
-lineage. Gathered 2026-09-30.
+How the values and the principles of application in the [statement of intent](../../../../charter/documents/statement-of-intent.md) line up with what banks, fintechs, standards bodies, and regulators publish. The charter carries no references. This page keeps the lineage. Gathered 2026-09-30.
 
 ## Evidence pages
 
@@ -15,8 +13,7 @@ lineage. Gathered 2026-09-30.
 
 ## How the trust principles align
 
-Counts are from the evidence pages. They rest on the researchers' reading of principle names and, in places, on search
-summaries, so treat them as approximate.
+Counts are from the evidence pages. They rest on the researchers' reading of principle names and, in places, on search summaries, so treat them as approximate.
 
 | AICC trust principle | Banks naming it (of 11) | Frameworks (of 11) | Notes |
 | --- | --- | --- | --- |
@@ -31,12 +28,9 @@ summaries, so treat them as approximate.
 Not adopted as principles:
 
 - **Sustainability:** named by 5 of 11 banks, mostly European or Australian. Recorded as an open item.
-- **Skills and literacy:** named by 4 banks as a principle. UBS and Santander make training mandatory. It is a value (respect
-  for people) and a stage policy (trained domain expert before pilot).
+- **Skills and literacy:** named by 4 banks as a principle. UBS and Santander make training mandatory. It is a value (respect for people) and a stage policy (trained domain expert before pilot).
 
-Values: integrity, prudence, and respect for people are the values of AI adoption in the statement of intent. They are our
-own choice, because no group values were found (see [group context](../../soi/group-context.md)). Integrity and prudence map
-to "compliance by design" and to risk-tiered speed.
+Values: integrity, prudence, and respect for people are the values of AI adoption in the statement of intent. They are our own choice, because no group values were found (see [group context](../../soi/group-context.md)). Integrity and prudence map to "compliance by design" and to risk-tiered speed.
 
 ## Mechanisms the frameworks ask for, and where the operating model has them
 
@@ -64,22 +58,16 @@ to "compliance by design" and to risk-tiered speed.
 - NatWest: the only published right to contest an AI decision and get redress.
 - Santander: users must always know they are dealing with AI.
 - UBS: three principles only, with mandatory annual training.
-- Banks with no principles list (JPMorgan, Citi, Goldman, Barclays, Bank of America, Wells Fargo) rely on existing model
-  risk and enterprise risk structures. That is a legitimate alternative. We publish principles because AICC needs a
-  shared vocabulary across domains and entities.
+- Banks with no principles list (JPMorgan, Citi, Goldman, Barclays, Bank of America, Wells Fargo) rely on existing model risk and enterprise risk structures. That is a legitimate alternative. We publish principles because AICC needs a shared vocabulary across domains and entities.
 - No bank reviewed publishes a list of prohibited uses. Ours will, in the AI use policy.
-- Payments companies express trust as protocol design: scoped agent tokens, signed requests, spending caps, audit
-  trails. This matters for agentic payments in the group.
+- Payments companies express trust as protocol design: scoped agent tokens, signed requests, spending caps, audit trails. This matters for agentic payments in the group.
 
 ## What binds locally
 
-- Binding in Kyrgyzstan: the Digital Code, in force about February 2026. Its AI articles were not read. Existing NBKR
-  requirements on risk, outsourcing, IT, and information security apply by their general terms.
-- No NBKR rule on AI use by banks was found. The draft AI ethics regulation reported on 28 September 2026 does not
-  mention banks.
+- Binding in Kyrgyzstan: the Digital Code, in force about February 2026. Its AI articles were not read. Existing NBKR requirements on risk, outsourcing, IT, and information security apply by their general terms.
+- No NBKR rule on AI use by banks was found. The draft AI ethics regulation reported on 28 September 2026 does not mention banks.
 - Binding only if a group entity has a link: Kazakhstan's AI law (in force 18 January 2026) and the EU AI Act.
-- Voluntary: OECD, NIST, ISO 42001, FSB, MAS, and the other frameworks. They still matter through correspondent banks,
-  card schemes, vendors, and financing parties.
+- Voluntary: OECD, NIST, ISO 42001, FSB, MAS, and the other frameworks. They still matter through correspondent banks, card schemes, vendors, and financing parties.
 - The charter therefore says "applicable law" and does not name statutes.
 
 ## Confidence and gaps

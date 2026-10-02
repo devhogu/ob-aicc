@@ -2,8 +2,8 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 2.1
-created: 2026-09-29
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -41,7 +41,7 @@ revised: 2026-10-02
 
 3.1. The adoption of AI supports the mission of the Bank to improve people's lives with digital products and services.
 
-3.2. The adoption of AI contributes to the Strategic Pillars of the Bank, as set out below. [ The Bank confirms its Strategic Pillars; the rows below are those of the earlier text that apply to the Bank ]
+3.2. The adoption of AI contributes to the Strategic Pillars that the strategy of the Bank states, as set out below.
 
 | Strategic Pillar | Contribution of AI adoption |
 | --- | --- |
@@ -136,7 +136,7 @@ revised: 2026-10-02
 
 - **Objective.** To enable each Domain to use AI in support of its own processes.
 - **Scope.** Drafting, summarization, search, analysis, translation, and the automation of routine operations, in accordance with the priorities of each Domain.
-- **Intended outcome.** Released capacity for higher-value work and more consistent output.
+- **Intended outcome.** Time released for higher-value work and more consistent output.
 
 ### 9.5. Expertise at the point of work
 
@@ -153,7 +153,7 @@ revised: 2026-10-02
 ### 9.7. Information technology operations and service lifecycle
 
 - **Objective.** To apply AI to the daily operation of technology, separately from the development of software.
-- **Scope.** Incident detection and triage, root cause analysis, change and release risk, service desk, capacity and resilience, and security operations. Operational actions are taken under approval.
+- **Scope.** Incident detection and triage, root cause analysis, change and release risk, service desk, resource planning and resilience, and security operations. Operational actions are taken under approval.
 - **Intended outcome.** Greater stability, faster recovery, and reduced manual effort in the operation of systems.
 
 ### 9.8. Software engineering
@@ -170,7 +170,7 @@ revised: 2026-10-02
 
 10.3. **AI Platform.** A shared AI Platform shall serve the Bank, with data separated as its classification requires. The AI Platform is provided and operated outside AICC. AICC states the requirements that the use of AI places on it.
 
-10.4. **Funding.** Investment shall be allocated to Strategic Priorities and to the capacity of teams by means of Investment Envelopes. Investment Guardrails shall determine which Initiatives require the approval of the Executive Sponsor.
+10.4. **Funding.** Investment shall be allocated to Strategic Priorities and to the Teams by means of Investment Envelopes. Investment Guardrails shall determine which Initiatives require the approval of the Executive Sponsor.
 
 10.5. **Providers.** Providers of AI models and services shall be subject to due diligence, contractual terms, ongoing monitoring, and fallback and exit arrangements.
 
@@ -240,16 +240,4 @@ revised: 2026-10-02
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 0.5 | 2026-09-30 | Drafted. | none |
-| 0.6 | 2026-09-30 | Takes effect on activation, recorded in the change log. | none |
-| 0.7 | 2026-09-30 | Conformance fixes. | none |
-| 0.8 | 2026-09-30 | Bias testing and disclosure qualified by Risk Tier; Exceptions. | DR-2026-007 |
-| 0.9 | 2026-09-30 | References aligned to the simplified corpus: AI Policy, Risks and Issues Record, Executive Sponsor for the Investment Guardrails. | DR-2026-009 |
-| 1.0 | 2026-09-30 | Internal audit gives assurance only; the Board Committee is named by the Board; wording aligned. | DR-2026-010 |
-| 1.1 | 2026-09-30 | Acceptance fixes: appetite approval, communication, participation of Entities. | DR-2026-015 |
-| 1.2 | 2026-10-01 | Activated by the AICC Lead; takes effect on this date. | DR-2026-018 |
-| 1.3 | 2026-10-01 | Solution replaces Use Case. | DR-2026-024 |
-| 1.4 | 2026-10-01 | Guardrails decide the approval of the Executive Sponsor; the timing of the Maturity Levels is in the Priorities; the Board Committee report is quarterly. | DR-2026-031 |
-| 1.5 | 2026-10-01 | Cross-reference to section 10 corrected. | DR-2026-034 |
-| 2.0 | 2026-10-01 | The Statement is of the Bank: the Group, the Entities, and the Participating Entities are removed; Data Sharing Arrangement replaces Group Arrangement. | DR-2026-036 |
-| 2.1 | 2026-10-02 | Review of the independent findings: AICC described as the internal consulting and innovation lab; the Executive Sponsor names the AI Steering Committee and decides the appetite; the AI Registry is the Record of AICC that the AI Platform feeds; predictability read as a trend of the PI Objectives. | DR-2026-055 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

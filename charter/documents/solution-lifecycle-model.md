@@ -2,8 +2,8 @@
 id: AICC-ORG-03-EN
 title: Solution Lifecycle Model
 status: active
-revision: 3.2
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -23,7 +23,7 @@ revised: 2026-10-02
 
 2.2. AICC delivers on the following principles.
 
-(a) Make work visible, limit work in progress, and pull work when there is capacity.
+(a) Make work visible, limit work in progress, and pull work when the Limits on Work in Progress allow.
 
 (b) Deliver in small steps: probe with a minimum viable product, measure against the success Measures, then scale.
 
@@ -138,7 +138,7 @@ Figure 2: the flow of value.
 
 4.1. AICC keeps two backlogs at this level. The Program Backlog, also called the PI Backlog, holds the Capabilities and the Features, grouped under their Initiatives. The Iteration Backlog holds the Features that the Teams work on in the Iteration. Each is ranked by value and urgency relative to effort, scored 1 to 5 for value, urgency, risk reduction or opportunity, and effort. The AICC Lead ranks the Program Backlog, and the product owner states the value. The backlogs change continuously, because much of the work depends on people and events outside AICC. A Capability may run over several Program Increments. A Feature closes within its Program Increment, or is split: the part that is done is a Feature that goes to review, and the rest is a new Feature in the next Program Increment, and the original Feature is Pivoted and linked to both. The items of a Program Increment state intent and direction, and what is done in an Iteration is decided in that Iteration.
 
-4.2. Work flows as in Kanban. The Program Kanban shows the Capabilities and the Features by state, with the classes of service as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress apply to the states, the lanes, and each Domain. The Team pulls an approved item only when there is capacity, and a Feature is approved only when its Dependencies are known. At each Iteration Planning the Team selects the Features for the month from the Program Backlog into its Iteration Backlog, and the Weekly Review keeps them under control. An item that waits for a person or an event outside AICC is Waiting, and names its Dependency. The columns of the Program Kanban are the states: Backlog is Proposed and Discovery, Ready is Approved, Active is Active and Completed, Review is Review, and Done is Accepted and Closed. The Team board shows the Work Items of the Iteration.
+4.2. Work flows as in Kanban. The Program Kanban shows the Capabilities and the Features by state, with the classes of service as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress apply to the states, the lanes, and each Domain. The Team pulls an approved item only when the Limits on Work in Progress allow, and a Feature is approved only when its Dependencies are known. At each Iteration Planning the Team selects the Features for the month from the Program Backlog into its Iteration Backlog, and the Weekly Review keeps them under control. An item that waits for a person or an event outside AICC is Waiting, and names its Dependency. The columns of the Program Kanban are the states: Backlog is Proposed and Discovery, Ready is Approved, Active is Active and Completed, Review is Review, and Done is Accepted and Closed. The Team board shows the Work Items of the Iteration.
 
 The following table outlines the boards, their steps, their lanes, their limits, and the measures that are read from them.
 
@@ -188,7 +188,7 @@ The table is the form and holds no real data. A lane is one Feature, and a cell 
 | Proposed | Cancelled | It is withdrawn without a decision on the merits |
 | Discovery | Approved | The conditions of its level in section 5.2 are met, and its approver decides |
 | Discovery | Waiting, Deferred, Rejected, Pivoted, or Cancelled | A Dependency blocks it; it is put on hold; it is decided against; it is rerouted into a new item; or it is withdrawn without a decision on the merits |
-| Approved | Active | The Team pulls it, when there is capacity and its Dependencies are known. An Initiative becomes active when the AICC Lead pulls it into its MVP (Portfolio Management Model 5.2). A Solution becomes active when its first Capability or Feature is pulled |
+| Approved | Active | The Team pulls it, when the Limits on Work in Progress allow and its Dependencies are known. An Initiative becomes active when the AICC Lead pulls it into its MVP (Portfolio Management Model 5.2). A Solution becomes active when its first Capability or Feature is pulled |
 | Approved | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
 | Active | Completed | The work is finished |
 | Active | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
@@ -495,8 +495,8 @@ Figure 13: the loop of a change to a released Solution.
 | --- | --- | --- | --- |
 | Funnel | How long a need waits | The age of the oldest item; the items in the funnel | Weekly Review |
 | Reviewing, Analyzing | How long a business case takes to be decided | Time from a proposal to its approval; business cases returned | Monthly Steering |
-| Portfolio Backlog | Demand against capacity | Approved Initiatives waiting; days waiting; Active against the limit | Monthly Steering |
-| MVP | Whether the hypothesis holds | The leading indicators against the plan; the capacity used against the capacity allowed | End of the MVP; quarterly Steering |
+| Portfolio Backlog | Demand against the limit | Approved Initiatives waiting; days waiting; Active against the limit | Monthly Steering |
+| MVP | Whether the hypothesis holds | The leading indicators against the plan | End of the MVP; quarterly Steering |
 | Implementation, Done | Whether the value arrived | The benefit confirmed against the benefit claimed and against the Envelope | Quarterly Steering |
 | Explore, Design | Readiness for the next Iteration | The Features that are ready, in Iterations of work ahead | Backlog Refinement; Iteration Planning |
 | Develop | The flow of the work | Cycle time; work in progress and its age; Waiting items and days Waiting | Weekly Review |
@@ -543,19 +543,4 @@ Figure 13: the loop of a change to a released Solution.
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 1.0 | 2026-10-01 | Created from the Operating Model: the flow of work, the states and Stages, the cadence of the delivery loops, verification, release, acceptance, and the life cycle of a Solution. | DR-2026-040 |
-| 1.1 | 2026-10-01 | The Acceptance Checklist at the handover of a ready Solution to a Domain for use at scale; the Executive Sponsor signs for Risk Tier 3. | DR-2026-041 |
-| 1.2 | 2026-10-01 | Auditor review: change after release (7.3), review of live Solutions (7.4), retirement (7.5), production deployment, a stop is final (4.3), and clauses split. | DR-2026-042 |
-| 2.0 | 2026-10-02 | Restructured top to bottom as the method of the Teams: principles and values, the intake, the flow of value, the backlogs and the boards, the Program Board, the states, the cadence with the Program Increment, Iteration, and week loops, verification and release, the life cycle, and the records and controls. | DR-2026-049 |
-| 2.1 | 2026-10-02 | The levels of the work as a diagram by intent, backlog, and decider; the table of the boards with their columns, Stages, lanes, limits, and measures. | DR-2026-049 |
-| 2.2 | 2026-10-02 | The Program Board with its Milestones and a table of its form; the flow of the Program Board, the Dependencies, and the Milestones through a Program Increment. | DR-2026-049 |
-| 2.3 | 2026-10-02 | The staging workflow of the Feature, the Capability, and the Solution, with the conditions between the Stages. | DR-2026-049 |
-| 2.4 | 2026-10-02 | The wording of the Initiative, the Capability, and the Feature: the parts of the wording, the wording of each level, and an illustration. | DR-2026-049 |
-| 2.5 | 2026-10-02 | Life-cycle management with the life of a Solution by type, the deployment, the operating loop, the support, the change, and the retirement, each with its diagram. | DR-2026-050 |
-| 2.6 | 2026-10-02 | The measures: how each stage is measured, the definitions, and the service levels of a live Solution. | DR-2026-051 |
-| 2.7 | 2026-10-02 | Auditor evaluation end to end: the test of every Feature and the MVP, first users and the release record, deployment evidence, emergency change under the change management of the Bank, release separated from acceptance in Figure 8, the controls table, the measures aligned. | DR-2026-052 |
-| 2.8 | 2026-10-02 | Review of the independent findings: Waiting is a state shown as a flag; Cancelled from Proposed and from Review; the IP week and the Steering of its month; priority and the order of pulling; the signatories of the Acceptance Checklist by Risk Tier; the quarterly review of the Adopted Solutions; the controls list; measures in the illustration; change log dates aligned with the Decision Log. | DR-2026-055 |
-| 2.9 | 2026-10-02 | The release decider where the AICC Lead is the Domain Owner; the review week of the third Iteration; the controls the model carries. | DR-2026-055 |
-| 3.0 | 2026-10-02 | Acceptance at three levels: the product owner accepts Features and Capabilities, the AICC Lead gives the final acceptance of the Team before a Solution is deployed to its first users, and the Domain Owner, or the Executive Sponsor, accepts the Solution; the accepted limit for the AICC Lead; Figures 2 and 8, the states, the review of live Solutions, and the controls table aligned. | DR-2026-056 |
-| 3.1 | 2026-10-02 | The yearly Steering of December, held in the first two weeks, sets the frame of the next year; the exception to the single Steering of the IP-week month in December. | DR-2026-057 |
-| 3.2 | 2026-10-02 | The environment of use defined in 7.1; the deployment of a Feature to the environment of use, after the final acceptance of the Team for the first users and for a significant change, and under the change management of the Bank for production (8.3). | DR-2026-058 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

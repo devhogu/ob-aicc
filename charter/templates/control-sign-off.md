@@ -2,8 +2,8 @@
 id: AICC-TPL-03-EN
 title: Control Sign-Off
 status: active
-revision: 2.3
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 

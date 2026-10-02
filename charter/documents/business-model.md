@@ -2,8 +2,8 @@
 id: AICC-MND-03-EN
 title: Business Model
 status: active
-revision: 1.1
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -11,7 +11,7 @@ revised: 2026-10-02
 
 ## 1. Purpose and scope
 
-1.1. This document states what AICC is as a unit of the Bank, whom it serves, what it offers, how it commits to the functions that it serves, and how it tracks the value that it delivers and the capacity that it uses.
+1.1. This document states what AICC is as a unit of the Bank, whom it serves, what it offers, how it commits to the functions that it serves, and how it tracks the value that it delivers and the flow of its work.
 
 1.2. The Operating Model states how AICC is governed and controlled inside, the Portfolio Management Model states how Initiatives are decided, the Solution Lifecycle Model states how the work is delivered, the AI Policy states the rules for the use of AI, and the workflows show how the work flows. This document does not restate them.
 
@@ -43,31 +43,31 @@ revised: 2026-10-02
 
 ## 5. How AICC commits: the Service Agreement
 
-5.1. AICC shall commit to each Engagement in a Service Agreement. It is a working agreement and not a legal document, and it needs no signature chain. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. The AICC Lead issues it when the study starts, so that the study is covered, and amends it when the business case is approved to add the later phases.
+5.1. AICC shall commit to each Engagement in a Service Agreement. It is a working agreement and not a legal document, and it needs no signature chain. AICC acts under it on a best-effort basis, within the capability that it has available. The AICC Lead issues it when the study starts, so that the study is covered, and amends it when the business case is approved to add the later phases.
 
-5.2. The Service Agreement is a form of agile working agreement, and it follows the principles and the ways of working of agile delivery: collaboration with the function over the negotiation of terms; working outcomes over exhaustive documentation; response to change over adherence to a fixed plan; and delivery in short Iterations, with a check-in at the end of each. The scope is the intent and a backlog that is reordered within the capacity, and either side may end or redirect the Engagement at the end of an Iteration.
+5.2. The Service Agreement is a form of agile working agreement, and it follows the principles and the ways of working of agile delivery: collaboration with the function over the negotiation of terms; working outcomes over exhaustive documentation; response to change over adherence to a fixed plan; and delivery in short Iterations, with a check-in at the end of each. The scope is the intent and a backlog that is reordered within the Limits on Work in Progress, and either side may end or redirect the Engagement at the end of an Iteration.
 
-5.3. The content of the Service Agreement is settled between AICC and the function in the Service Agreement itself, on the form of its Template: the commitment of AICC and the working agreement with the function. These include the scope, the deliverables, the capacity, the outcome targets, the Assumptions, the support level, and the end of the Engagement.
+5.3. The content of the Service Agreement is settled between AICC and the function in the Service Agreement itself, on the form of its Template: the commitment of AICC and the working agreement with the function. These include the scope, the deliverables, the outcome targets, the Assumptions, the support level, and the end of the Engagement.
 
-5.4. AICC commits to the capacity that the Service Agreement states, and works toward its outcome on a best-effort basis, within the capacity and the capability that AICC has available. The function commits to nothing.
+5.4. AICC works toward the outcome that the Service Agreement states on a best-effort basis, within the capability that AICC has available. The scope is a backlog ordered by value within the Limits on Work in Progress. The function commits to nothing.
 
-5.5. An Engagement ends with an Outcome Report: what was delivered, with the evidence referenced, the capacity used, and who accepted it: the Domain Owner, or the Executive Sponsor for enabling work, after the final acceptance of the Team (Solution Lifecycle Model 7.3). The Portfolio Backlog shows, for each Engagement, its client function, its phases and support level, its Service Agreement, and its Outcome Report.
+5.5. An Engagement ends with an Outcome Report: what was delivered, with the evidence referenced, and who accepted it: the Domain Owner, or the Executive Sponsor for enabling work, after the final acceptance of the Team (Solution Lifecycle Model 7.3). The Portfolio Backlog shows, for each Engagement, its client function, its phases and support level, its Service Agreement, and its Outcome Report.
 
-## 6. Value and capacity
+## 6. Value and flow
 
-6.1. AICC tracks, for each Engagement, the capacity that it commits and uses, in days, and the benefit that the function claims and confirms. The money and the other figures of the Bank stay in the systems of the Bank, and the records point to them.
+6.1. AICC tracks, for each Engagement, the benefit that the function claims and confirms, and the lead time and cycle time of its work (Solution Lifecycle Model 10). The money and the other figures of the Bank stay in the systems of the Bank, and the records point to them.
 
-6.2. The Quarterly Report shows the capacity committed and used and the benefit confirmed for each Engagement. The Investment Envelopes fund the Strategic Priorities and the capacity of teams, as the Charter 4.1 states. AICC supplies capacity and does not charge the functions, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of a Solution.
+6.2. The Quarterly Report shows the benefit confirmed for each Engagement and the flow measures of AICC. The Investment Envelopes fund the Strategic Priorities and the Teams, as the Charter 4.1 states. AICC does not charge the functions, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of a Solution.
 
 ## 7. Controls on the commitment
 
-7.1. AICC shall not commit more capacity per Iteration than its people can deliver. The AICC Lead states the capacity available per Iteration in the Teams Record, adds up the capacity of the Service Agreements, and does not issue a Service Agreement that takes the sum above the capacity available. The work above it waits in the Portfolio Backlog.
+7.1. AICC shall not take in more Initiatives than its Limit on Work in Progress allows. The AICC Lead sets the limit on the Active Initiatives and shall not issue a Service Agreement for an Initiative that the limit does not allow. The work above the limit waits in the Portfolio Backlog.
 
-7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, or the Executive Sponsor for enabling work, and fits the capacity. Otherwise the item is deferred or rejected.
+7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, or the Executive Sponsor for enabling work, and the limit on the Active Initiatives permits it. Otherwise the item is deferred or rejected.
 
 7.3. The Domain Owner, or the Executive Sponsor for enabling work, confirms the benefit of an Engagement against the Initiative Brief, from the source that the Brief names.
 
-7.4. At each quarterly Steering the AICC Lead shows that every closed Engagement has an Outcome Report that the Domain Owner, or the Executive Sponsor for enabling work, accepted, and that the capacity of the Service Agreements is within the capacity available. The Steering Summary records it.
+7.4. At each quarterly Steering the AICC Lead shows that every closed Engagement has an Outcome Report that the Domain Owner, or the Executive Sponsor for enabling work, accepted, and that the Active Initiatives are within the limit. The Steering Summary records it.
 
 7.5. The AICC Lead issues the Service Agreement, delivers, and writes the Outcome Report, and the Domain Owner, or the Executive Sponsor for enabling work, accepts it. The Steering samples the Decisions of the AICC Lead each month. This is an accepted limit while the Team is small, and it is recorded in the Risks and Issues. The limit of the acceptance by the AICC Lead of the Features and of the Solution as the Team is in Solution Lifecycle Model 7.3(d).
 
@@ -79,14 +79,4 @@ revised: 2026-10-02
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 0.1 | 2026-10-01 | Drafted. | DR-2026-026 |
-| 0.2 | 2026-10-01 | Activated by the AICC Lead. | DR-2026-018 |
-| 0.3 | 2026-10-01 | An Engagement is an Initiative with a client function; the Service Agreement is issued when the study starts; Adopted Solutions; the Portfolio Backlog replaces the Agreement Log. | DR-2026-027 |
-| 0.4 | 2026-10-01 | Controls on the commitment: capacity ceiling, intake, benefit confirmer, completeness check, accepted limit, budget owner; support in Service Management. | DR-2026-031 |
-| 0.5 | 2026-10-01 | Other heads of function in place of business owners; capacity in the Teams Record; funding by the Charter 4.1; activation entered with the Templates. | DR-2026-034 |
-| 0.6 | 2026-10-01 | Support level and the content of the Service Agreement are settled in the Service Agreement; clause 4.2 reworded; clauses 5.2 to 5.4 reduced to the principles. | DR-2026-037 |
-| 0.7 | 2026-10-01 | The Service Agreement is stated as a form of agile working agreement that follows agile principles and ways of working; clauses 5.2 to 5.5 renumbered. | DR-2026-037 |
-| 0.8 | 2026-10-01 | The Service Agreement is a working agreement on a best-effort basis, within the available capacity and capability of AICC. | DR-2026-037 |
-| 0.9 | 2026-10-01 | The sources of the phases and of the life of the types; the rule sources. | DR-2026-048 |
-| 1.0 | 2026-10-02 | Review of the independent findings: AICC supplies capacity and the Domain pays the run, the licenses, and the provider costs; enabling work has the Executive Sponsor as client; the controls of this model. | DR-2026-055 |
-| 1.1 | 2026-10-02 | The Outcome Report is accepted by the Domain Owner, or by the Executive Sponsor for enabling work, after the final acceptance of the Team; the accepted limit refers to Solution Lifecycle Model 7.3(d). | DR-2026-056 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

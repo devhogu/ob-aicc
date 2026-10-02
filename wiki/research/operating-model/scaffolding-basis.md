@@ -2,8 +2,7 @@
 
 > This page describes the lineage of the first corpus, now archived. See [Simplification](simplification.md) for what replaced it.
 
-Where the forums, decision constructs, records, and templates of the charter folder come from. The charter documents carry
-no references. Gathered 2026-09-30.
+Where the forums, decision constructs, records, and templates of the charter folder come from. The charter documents carry no references. Gathered 2026-09-30.
 
 ## What comes from where
 

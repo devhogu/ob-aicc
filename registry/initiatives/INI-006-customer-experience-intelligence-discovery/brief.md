@@ -6,14 +6,14 @@
 | Title | Customer experience intelligence: discovery |
 | State and Stage | Discovery: Scoping |
 | Strategic Priority | PRI-1 Customer intelligence |
-| Domain Owner (represents the client function) | Commercial front office, retail functions, and commercial sales. [ The Domain Owner, named by the head of the function concerned ] |
-| Solutions expected | [ The Solutions, with their types, proposed at the end of the discovery ] |
+| Domain Owner (represents the client function) | Commercial front office, retail functions, and commercial sales. The Domain Owner is not yet named; a Steering action |
+| Solutions expected | The Solutions, with their types, are proposed at the end of the discovery |
 | Business acceptor | The head of each function, for the part of its function; the Executive Sponsor for the whole (section 6) |
-| Service Agreement | [ AGR-nnn: the Service Agreement of this Engagement, issued at the start of the study and amended at the approval of the business case (Business Model 5; RI-022) ] |
+| Service Agreement | Not issued (RI-004) |
 | Period | September to December 2026 |
 | Date of last change | 2026-10-02 |
 
-Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 4 (the capacity in days, and the Investment Envelope); 6 (the approver and the Service Agreement).
+Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 6 (the approver and the Service Agreement).
 
 ## 1. Hypothesis
 
@@ -25,11 +25,11 @@ Today customer experience information is spread across support requests, issues,
 
 | Business outcome | Leading indicator | Where the figures live | Date |
 | --- | --- | --- | --- |
-| A map of the sources of customer experience information | Sources mapped, with owner and data class | [ The source system of the function ] | 2026-12-31 |
-| The approach to consolidate and analyze them with AI, and a first view of the inefficiencies of the front office, from the sample where permitted | Themes identified in the sample | [ The source system of the function ] | 2026-12-31 |
-| A proposal for the next quarter, for decision at the quarterly Steering | Proposal delivered | [ The source system of the function ] | 2026-12-31 |
+| A map of the sources of customer experience information | Sources mapped, with owner and data class | | 2026-12-31 |
+| The approach to consolidate and analyze them with AI, and a first view of the inefficiencies of the front office, from the sample where permitted | Themes identified in the sample | | 2026-12-31 |
+| A proposal for the next quarter, for decision at the quarterly Steering | Proposal delivered | | 2026-12-31 |
 
-The baseline and the target of each indicator are figures of the Bank. They are kept in the source system of the function, and this brief points to them. [ The source system of the function that holds the figures, named with the Domain Owner by 2026-10-31, with the baseline and the target of each indicator ]
+The baseline and the target of each indicator are figures of the Bank. They are kept in the source system of the function, and this brief points to them.
 
 ## 3. Scope and the minimum viable product
 
@@ -48,19 +48,17 @@ Out of scope: Building a platform; any change to channels, processes, or custome
 
 Minimum viable product: The map of the sources and the approach tested on one small sample, where permitted.
 
-## 4. Cost, capacity, and value
+## 4. Cost and value
 
 Cost: the time of the AICC Lead. No other cost is stated.
 
-Capacity: [ The capacity in days per Iteration for the minimum viable product, within the capacity available (Business Model 7.1), and the estimate for the full scope ]
-
-Investment Envelope: [ The Investment Envelope of the Strategic Priority, by reference to the financial planning of the Bank, set with the Guardrails ]
+Investment Envelope: None; no Investment Envelope is set (Priorities Record).
 
 Value: tracked by the indicators of section 2, and confirmed by the Domain Owner at the Outcome Report (Business Model 7.3).
 
 ## 5. Risks, dependencies, and Risk Tier
 
-Risk: Customer data is involved. Data protection and information security check before the first deployment (RI-014).
+Risk: Customer data is involved. Data protection and information security check before the first deployment.
 
 Expected Risk Tier: Risk Tier 2 is expected for any Solution that follows.
 
@@ -70,13 +68,15 @@ Dependencies: DEP-004 (named Domain Owners and Domain Experts), DEP-008 (the map
 
 ## 6. Decision and acceptance
 
-The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
+The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-061).
 
-Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, with the date and the Decision Record ]
-
-Clearance of the Control Function Contacts: [ The Contacts named in section 5, with the date of each clearance, before the business case is approved ]
-
-Acceptance on delivery: The heads of the functions concerned: the commercial front office, retail, and commercial sales. Acceptance closes the item.
+| Decision | By | Date | Record |
+| --- | --- | --- | --- |
+| Approval of the business case | | | |
+| Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
+| Service Agreement issued | AICC Lead | | |
+| Decision after the MVP (Portfolio Management Model 7.2) | | | |
+| Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | The head of each function, for the part of its function; the Executive Sponsor for the whole | | |
 
 ## Amendments after approval
 
@@ -84,4 +84,4 @@ A change after the approval of the business case is entered here with its date a
 
 | Date | Section | Change | Decision Record |
 | --- | --- | --- | --- |
-|  |  |  | DR-[yyyy]-[nnn] |
+|  |  |  |  |

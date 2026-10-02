@@ -26,7 +26,7 @@ The contents list every file of the charter in the order of reading, with its li
 | 1 |  | [Executive Summary](executive-summary.md) | The whole model in seven sections, with the source of each statement |
 | 2 |  | **Documents** | The rules. The Document Catalog states their status and life cycle |
 | 2.1 | AICC-MND-02 | [AICC Charter](documents/aicc-charter.md) | Mission, authority, funding, risk appetite, offer, and measures of AICC |
-| 2.2 | AICC-MND-03 | [Business Model](documents/business-model.md) | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity |
+| 2.2 | AICC-MND-03 | [Business Model](documents/business-model.md) | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and flow |
 | 2.3 | AICC-ORG-01 | [Operating Model](documents/operating-model.md) | AICC as a unit of the Bank: Roles, Decisions, the five control loops, records, and controls |
 | 2.4 | AICC-ORG-02 | [Portfolio Management Model](documents/portfolio-management-model.md) | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP |
 | 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle, and the measures |

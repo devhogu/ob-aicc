@@ -2,8 +2,8 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: active
-revision: 2.9
-created: 2026-09-30
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -17,7 +17,7 @@ revised: 2026-10-02
 
 ## 2. Rules of use
 
-2.1. Employees shall use only Solutions that are approved for the data class and the purpose and recorded in the AI Registry. The Domain Owner approves the use of a Solution in the Domain, and is responsible for obtaining any approval that the rules of the Bank require. AICC provides the technical means and records the approval. The AICC Lead approves the use of a Solution in AICC, and the Executive Sponsor does for a Solution that the AICC Lead built (Operating Model 4.4). An employee shall complete the training that AICC sets for a Solution before first use, or use it first under supervision as training. The AICC Lead shall note in the AI Registry entry of the Solution when the training of its users is complete, without their names. The AICC Lead shall list the uses already in place in the AI Registry within 90 days of the activation of this policy. Such a use is tolerated until the Domain Owner has approved it or stopped it, and in any case for no longer than those 90 days.
+2.1. Employees shall use only Solutions that are approved for the data class and the purpose and recorded in the AI Registry. The Domain Owner approves the use of a Solution in the Domain, and is responsible for obtaining any approval that the rules of the Bank require. AICC provides the technical means and records the approval. The AICC Lead approves the use of a Solution in AICC, and the Executive Sponsor does for a Solution that the AICC Lead built (Operating Model 4.4). An employee shall complete the training that AICC sets for a Solution before first use, or use it first under supervision as training. The AICC Lead shall note in the AI Registry entry of the Solution when the training of its users is complete, without their names. The AICC Lead shall list the uses already in place on 2026-10-02 in the AI Registry by 2026-12-31. Such a use is tolerated until the Domain Owner has approved it or stopped it, and in any case not beyond 2026-12-31.
 
 2.2. The data classification rules of the Bank apply to AI. Data of a class shall not be sent to a model or a service that is not approved for that class. Data of a class for which no Solution is approved shall not be used with AI at any point, including discovery, until the Domain Owner has obtained the approvals that the rules of the Bank require.
 
@@ -68,7 +68,7 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 
 5.1. An AI Incident is an event in which the use of AI causes, or could cause, harm, a breach of law or policy, or a loss of control. It includes harm to a customer or an employee, a leak or misuse of data, an attack on or through an AI system, an action of an agent beyond its limits, a material failure of a Solution, and a near miss.
 
-5.2. An AI Incident is an incident of the Bank and is handled in the incident management of the Bank, in Service Management. That process owns the classification, the escalation, the communication, and the reporting to the authorities, and it meets the requirements that apply to the Bank for ICT-related incidents, for personal data breaches, and for the incidents of AI systems. AICC sets no severity scale and no time limit of its own.
+5.2. An AI Incident is an incident of the Bank and is handled in the incident management of the Bank, in Service Management. That process owns the classification, the escalation, the communication, and the reporting to the authorities, and it meets the requirements that apply to the Bank for ICT-related incidents, for personal data breaches, and for the incidents of AI systems. The compliance function of the Bank states which of those requirements apply to the Bank. AICC sets no severity scale and no time limit of its own.
 
 5.3. The IT function that operates a Solution is responsible for its operation and for the handling of its incidents. For a trial in AICC, and for a Service that AICC runs, the Solution Engineer acts as that function.
 
@@ -92,26 +92,4 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 0.1 | 2026-09-30 | Drafted: replaces the AI Use, Risk Tier, Third-Party AI, and AI Incident policies and the Exception rules; three Risk Tiers. | DR-2026-009 |
-| 0.2 | 2026-09-30 | Fixes from the independent check: tools approval and training, Risk Tier attributes and interim assignment, release, revalidation, providers, incident chain, Until a Contact is named. | DR-2026-010 |
-| 0.3 | 2026-09-30 | Second fixes from the independent check: Tier 1 data boundary, lighter Tier 2 validation, testing before the Pilot, acting Contacts, return to Discovery. | DR-2026-011 |
-| 0.4 | 2026-09-30 | The Executive Sponsor approves AI output published to investors, lenders, regulators, or the Board. | DR-2026-014 |
-| 0.5 | 2026-09-30 | Acceptance fixes: transition for existing uses, data before approval, Executive Sponsor approval recorded, Tier 3 credit wording, acting persons, incident chain, performers. | DR-2026-015 |
-| 0.6 | 2026-09-30 | The Domain Owner approves the use of a Solution for a data class and obtains the approvals that the rules of the Bank require. | DR-2026-016 |
-| 0.7 | 2026-09-30 | AICC assigns the Risk Tier and informs the Domain Owner; Control Function Contacts may raise it; the interim rule is no longer needed. | DR-2026-017 |
-| 0.8 | 2026-10-01 | Activated by the AICC Lead. | DR-2026-018 |
-| 0.9 | 2026-10-01 | Iteration Review replaces the Sync and Demo. | DR-2026-020 |
-| 1.0 | 2026-10-01 | Event names use the short forms IT and IP. | DR-2026-023 |
-| 1.1 | 2026-10-01 | Solution replaces Use Case; the Risk Tier is assigned when the Solution is defined; testing before the first deployment. | DR-2026-024 |
-| 1.2 | 2026-10-01 | The Risk Tier is confirmed at every validation; the AICC Lead leads the review of an AI Incident. | DR-2026-031 |
-| 1.3 | 2026-10-01 | The AICC Lead reassesses the Risk Tier and, with a Control Function Contact, may suspend; the open place for the channel of an AI Incident report. | DR-2026-034 |
-| 2.0 | 2026-10-01 | The policy applies to the Bank only; Entity references removed; Data Sharing Arrangement replaces Group Arrangement. | DR-2026-036 |
-| 2.1 | 2026-10-01 | The Solution Engineer replaces the AICC Engineer. | DR-2026-038 |
-| 2.2 | 2026-10-01 | AI Incidents are handled in the incident management of the Bank; the IT function operates, and the AICC Lead is a stakeholder; AICC sets no severity scale or time limit of its own. | DR-2026-039 |
-| 2.3 | 2026-10-01 | No change of rule; the Acceptance Checklist is recorded in the Solution Lifecycle Model. | DR-2026-041 |
-| 2.4 | 2026-10-01 | A Solution whose Risk Tier rises to 3 waits for the release of the Executive Sponsor. | DR-2026-042 |
-| 2.5 | 2026-10-01 | Iteration written in full. | DR-2026-048 |
-| 2.6 | 2026-10-02 | The monthly review of a Service across Domains is by the Executive Sponsor. | DR-2026-052 |
-| 2.7 | 2026-10-02 | Review of the independent findings: training noted in the AI Registry; the Executive Sponsor for a Solution that the AICC Lead built; a higher Risk Tier returns the business case for clearance; suspension entered in the Decision Log; clause 3.5 split; the notice to the Board Committee; the controls of this policy. | DR-2026-055 |
-| 2.8 | 2026-10-02 | Release by the Executive Sponsor where the AICC Lead is the Domain Owner; C-09 in the controls of this policy. | DR-2026-055 |
-| 2.9 | 2026-10-02 | An Exception states the date on which it expires, and the open Exceptions are reviewed monthly (Operating Model 6.7). | DR-2026-058 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

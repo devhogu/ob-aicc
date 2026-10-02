@@ -13,7 +13,7 @@ Kept here by hand until the cutover Decision, then held in Jira and Confluence. 
 | Kanban boards | [board.md](board.md) | The Portfolio Kanban by step and the Program Kanban by state, with lanes and Limits on Work in Progress |
 | Roadmap | [roadmap.md](roadmap.md) | The Roadmap by Program Increment, in three horizons, and the Milestones |
 | Calendar | [calendar.md](calendar.md) | Program Increments, Iterations, weeks, and the blocked and gray days |
-| Teams | [teams.md](teams.md) | The Teams, members, capacity, and the Hats |
+| Teams | [teams.md](teams.md) | The Teams, members, and the Hats |
 | Program Increment | [pi/](pi/2026-PIQ4/objectives.md) | For each: PI Objectives, monthly Iterations with their Iteration Backlogs and Weekly Review notes, and the IP week |
 | Program Board | [dependencies.md](dependencies.md) | The Capabilities and Features and the Milestones by Iteration, the Dependencies of each item, and its scope by month |
 | Dashboard | [dashboard.md](dashboard.md) | The state of the Program Increment, flow, Dependencies, risks, and Measures |
@@ -37,8 +37,9 @@ Closed and dated extracts, always kept here. The Operating Model 8 lists the con
 
 | Record | Where | Holds |
 | --- | --- | --- |
-| Decision Log | [decision-log.md](decision-log.md) | Decisions, one line each; the Decision Records are in [decisions/](decisions/) |
-| Initiatives | [initiatives/](initiatives/) | One folder for each: `INI-001-short-title/` with its brief, Service Agreements, Outcome Reports, Capabilities, and Features |
+| Decision Log | [decision-log.md](decision-log.md) | Decisions, one line each |
+| Decisions | [decisions/](decisions/) | The Decision Records, from DR-2026-060 |
+| Initiatives | [initiatives/](initiatives/) | One folder for each: `INI-nnn-short-title/` with its brief, Service Agreements, Outcome Reports, Capabilities, and Features |
 | Reports | [reports/](reports/) | Quarterly Reports, named `2026-PIQ4.md` |
 | Steering | [steering/](steering/) | The Steering Summaries |
 | Proposals | `proposals/` | The Proposals to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy. Created with the first one |
@@ -47,10 +48,9 @@ Closed and dated extracts, always kept here. The Operating Model 8 lists the con
 | AI Incident Reviews | `incident-reviews/` | The review of each AI Incident, named `AIR-001.md`. Created with the first one |
 | Registry Snapshots | `snapshots/` | The closed extract at the close of each Iteration and PI, named `SNP-2026-PIQ4-I10.md`. The first is due at the close of I10 |
 | Appointments | [appointments.md](appointments.md) | The Part C log of the Appointments Record is the evidence of every appointment, change, and relief |
-| Assessments | [assessments/](assessments/) | Earlier checks of the documents, kept for history |
 
 Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfolio), CAP-nnn Capability, FT-nnn Feature, DEP-nnn Dependency, MS-nnn Milestone, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn and PLT-nnn standards, AGR-nnn Service Agreement, OUT-nnn Outcome Report, SGN-nnn Control Sign-Off, AIR-nnn AI Incident Review, ACL-nnn Acceptance Checklist, SNP-yyyy-PIQn-Inn (Iteration close) or SNP-yyyy-PIQn (PI close) Registry Snapshot, PRP-nnn Proposal, AP-nnn appointment entry. A Service Agreement and an Outcome Report are files in the folder of their Initiative, named `AGR-001.md` and `OUT-001.md`.
 
 The Registry holds the nil statements that an auditor needs. The Risks and Issues states the AI Incidents and Exceptions to date, and the AI Registry states the uses listed to date.
 
-The Solutions that AICC defines and tries are in the Portfolio (`portfolio/`), and the cadence is in the charter workflows. Earlier versions of the Records are in `wiki/archive/records-v1/`.
+The Solutions that AICC defines and tries are in the Portfolio (`portfolio/`), and the cadence is in the charter workflows.

@@ -6,14 +6,14 @@
 | Title | Service landscape discovery |
 | State and Stage | Discovery: Scoping |
 | Strategic Priority | Enabling (all priorities) |
-| Domain Owner (represents the client function) | Enterprise architecture, with the function heads and service owners of the Bank. Domain Owner: the Enterprise architecture lead [ named by the Executive Sponsor ] |
-| Solutions expected | [ None expected: the Initiative ends in ranked candidates for the Backlog ] |
+| Domain Owner (represents the client function) | Enterprise architecture, with the function heads and service owners of the Bank. Domain Owner: the Enterprise architecture lead, not yet named; a Steering action |
+| Solutions expected | None: the Initiative ends in ranked candidates for the Backlog |
 | Business acceptor | Executive Sponsor, because it is enabling work across all functions (section 6) |
-| Service Agreement | [ AGR-nnn: the Service Agreement of this Engagement, issued at the start of the study and amended at the approval of the business case (Business Model 5; RI-022) ] |
+| Service Agreement | Not issued (RI-004) |
 | Period | September to December 2026 |
 | Date of last change | 2026-10-02 |
 
-Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 4 (the capacity in days, and the Investment Envelope); 6 (the approver and the Service Agreement).
+Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 6 (the approver and the Service Agreement).
 
 ## 1. Hypothesis
 
@@ -25,11 +25,11 @@ Today the knowledge of the services of the Bank is spread across the functions. 
 
 | Business outcome | Leading indicator | Where the figures live | Date |
 | --- | --- | --- | --- |
-| The landscape portal, covering the functions and services visited and reviewed by their owners | Functions and services mapped; share reviewed by their owners | [ The source system of the function ] | 2026-12-31 |
-| A list of where AI is used today | AI uses found | [ The source system of the function ] | 2026-12-31 |
-| A ranked list of candidates for AI adoption | Candidates ranked | [ The source system of the function ] | 2026-12-31 |
+| The landscape portal, covering the functions and services visited and reviewed by their owners | Functions and services mapped; share reviewed by their owners | | 2026-12-31 |
+| A list of where AI is used today | AI uses found | | 2026-12-31 |
+| A ranked list of candidates for AI adoption | Candidates ranked | | 2026-12-31 |
 
-The baseline and the target of each indicator are figures of the Bank. They are kept in the source system of the function, and this brief points to them. [ The source system of the function that holds the figures, named with the Domain Owner by 2026-10-31, with the baseline and the target of each indicator ]
+The baseline and the target of each indicator are figures of the Bank. They are kept in the source system of the function, and this brief points to them.
 
 ## 3. Scope and the minimum viable product
 
@@ -48,19 +48,17 @@ Out of scope: Any change to services, processes, systems, or architecture. The m
 
 Minimum viable product: The first functions and services mapped and reviewed by their owners, and the portal that shows them.
 
-## 4. Cost, capacity, and value
+## 4. Cost and value
 
 Cost: the time of the AICC Lead. No other cost is stated.
 
-Capacity: [ The capacity in days per Iteration for the minimum viable product, within the capacity available (Business Model 7.1), and the estimate for the full scope ]
-
-Investment Envelope: [ The Investment Envelope of the Strategic Priority, by reference to the financial planning of the Bank, set with the Guardrails ]
+Investment Envelope: None; no Investment Envelope is set (Priorities Record).
 
 Value: tracked by the indicators of section 2, and confirmed by the Domain Owner at the Outcome Report (Business Model 7.3).
 
 ## 5. Risks, dependencies, and Risk Tier
 
-Risk: No Solution is built, so no Risk Tier applies. The portal shows internal information, so its access is confirmed with information security (RI-018).
+Risk: No Solution is built, so no Risk Tier applies. The portal shows internal information, so its access is confirmed with information security.
 
 Expected Risk Tier: None.
 
@@ -70,13 +68,15 @@ Dependencies: DEP-001 (time and knowledge of the function heads and service owne
 
 ## 6. Decision and acceptance
 
-The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
+The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-061).
 
-Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, with the date and the Decision Record ]
-
-Clearance of the Control Function Contacts: [ The Contacts named in section 5, with the date of each clearance, before the business case is approved ]
-
-Acceptance on delivery: Executive Sponsor, because it is enabling work across all functions. Acceptance closes the item.
+| Decision | By | Date | Record |
+| --- | --- | --- | --- |
+| Approval of the business case | | | |
+| Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
+| Service Agreement issued | AICC Lead | | |
+| Decision after the MVP (Portfolio Management Model 7.2) | | | |
+| Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | Executive Sponsor, because it is enabling work across all functions | | |
 
 ## Amendments after approval
 
@@ -84,4 +84,4 @@ A change after the approval of the business case is entered here with its date a
 
 | Date | Section | Change | Decision Record |
 | --- | --- | --- | --- |
-|  |  |  | DR-[yyyy]-[nnn] |
+|  |  |  |  |

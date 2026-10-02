@@ -2,14 +2,14 @@
 id: AICC-TPL-07-EN
 title: Outcome Report
 status: active
-revision: 1.3
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
 # Outcome Report
 
-**Template.** Written by the AICC Lead at the end of an Engagement, or of a phase that the Service Agreement states. It is the closing deliverable: what was delivered, with the evidence referenced, the capacity used, and who accepted it. It carries no figures of the Bank, no data, and no code. Start with the executive summary, and keep it short.
+**Template.** Written by the AICC Lead at the end of an Engagement, or of a phase that the Service Agreement states. It is the closing deliverable: what was delivered, with the evidence referenced, and who accepted it. It carries no figures of the Bank, no data, and no code. Start with the executive summary, and keep it short.
 
 | Field | Entry |
 | --- | --- |
@@ -34,9 +34,9 @@ revised: 2026-10-02
 
 [The outcome against the targets of the Initiative Brief, by reference to where the figures live. The benefit that the function claims and confirms, and who confirms it, by reference.]
 
-## 4. Capacity
+## 4. Lead time and cycle time
 
-[The capacity committed and the capacity used, in days.]
+[The lead time and the cycle time of the Engagement (Solution Lifecycle Model 10), by reference to where they are measured.]
 
 ## 5. Evidence and decisions
 

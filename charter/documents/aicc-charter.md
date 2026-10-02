@@ -2,8 +2,8 @@
 id: AICC-MND-02-EN
 title: AICC Charter
 status: active
-revision: 2.2
-created: 2026-09-30
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -27,7 +27,7 @@ revised: 2026-10-02
 
 ## 4. Funding
 
-4.1. The Executive Sponsor shall set each year an Investment Envelope for each Strategic Priority and Investment Guardrails. Funding goes to Strategic Priorities and to the capacity of teams. The Domain Owners fund the Solutions of their Domains from the Envelope, within the Guardrails. AICC supplies capacity and does not charge for it, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of a Solution. The Executive Sponsor owns the budget of AICC itself.
+4.1. The Executive Sponsor shall set each year an Investment Envelope for each Strategic Priority and Investment Guardrails. Funding goes to Strategic Priorities and to the Teams. The Domain Owners fund the Solutions of their Domains from the Envelope, within the Guardrails. AICC does not charge the functions, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of a Solution. The Executive Sponsor owns the budget of AICC itself.
 
 4.2. The Investment Guardrails shall state the amount that may be committed without the Executive Sponsor, and the Initiatives that need the approval of the Executive Sponsor. Every Initiative has an Initiative Brief. The Priorities Record points to them, and the figures are kept in the financial planning of the Bank.
 
@@ -39,7 +39,7 @@ revised: 2026-10-02
 
 5.3. The Bank does not accept AI that takes a decision without review in a regulated process, or an agent that acts on systems or funds, without validation by the Control Functions and the release decision of the Executive Sponsor.
 
-5.4. The Executive Sponsor decides this Statement. The AICC Lead owns it, shall review it each year, and activates a change on that decision. The Board Committee notes it in its first report. A risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
+5.4. The Executive Sponsor decides this Statement. The AICC Lead owns it, shall review it each year, and activates a change on that decision. The Board Committee notes it in its report. A risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
 
 ## 6. What AICC offers
 
@@ -61,22 +61,4 @@ revised: 2026-10-02
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 0.1 | 2026-09-30 | Drafted. | none |
-| 0.2 | 2026-09-30 | Written in full: authority, funding, risk appetite, services, measures; replaces the Funding Model, Metrics, Service Catalog, Evolution Plan, and Enablement Plan. | DR-2026-003, DR-2026-009 |
-| 0.3 | 2026-09-30 | Fixes from the independent check: Board reporting, commitments of the Statement of Intent, appetite, training, Group Arrangement. | DR-2026-010 |
-| 0.4 | 2026-09-30 | Second fixes: approval of commitments until Guardrails are set; risk beyond appetite with a Board Committee report. | DR-2026-011 |
-| 0.5 | 2026-09-30 | The Quarterly Report goes to the quarterly Steering. | none |
-| 0.6 | 2026-09-30 | Acceptance fixes: Domain Owners fund Use Cases; appetite noted by the Board Committee; report before the Board Committee is named. | DR-2026-015 |
-| 0.7 | 2026-10-01 | Activated by the AICC Lead; the AICC Lead owns the risk appetite statement. | DR-2026-018 |
-| 0.8 | 2026-10-01 | Events renamed to the Iteration and Program Increment events. | DR-2026-020 |
-| 0.9 | 2026-10-01 | Event names use the short forms IT and IP. | DR-2026-023 |
-| 1.0 | 2026-10-01 | The Priorities Record points to the figures of the Guardrails and Envelopes and holds none. | none |
-| 1.1 | 2026-10-01 | Event and item names follow the new hierarchy; Solution replaces Use Case. | DR-2026-024 |
-| 1.2 | 2026-10-01 | Event names corrected; every Initiative has a brief, and the guardrail decides the Executive Sponsor approval. | DR-2026-025 |
-| 1.3 | 2026-10-01 | What AICC offers moves to the Business Model; AICC works as an internal consulting unit. | DR-2026-026 |
-| 1.4 | 2026-10-01 | The mandate and its decision reference are entered in the Appointments Record. | DR-2026-027 |
-| 1.5 | 2026-10-01 | The mission points to the Business Model; the Executive Sponsor owns the budget of AICC; measures aligned. | DR-2026-031 |
-| 1.6 | 2026-10-01 | Clause 5.2 reworded to state the levels of accepted risk; no change of meaning. | none |
-| 2.0 | 2026-10-01 | The Charter is of the Bank: the Group and the Entities are removed; Data Sharing Arrangement replaces Group Arrangement; clauses 5 and 6 reworded. | DR-2026-036 |
-| 2.1 | 2026-10-01 | The Board Committee is told of an AI Incident that the incident management of the Bank classifies as major. | DR-2026-048 |
-| 2.2 | 2026-10-02 | Review of the independent findings: the Executive Sponsor decides the risk appetite and the AICC Lead activates the change; the Board names the Executive Sponsor; AICC supplies capacity and the Domain pays the run, the licenses, and the provider costs; the report to the Board Committee is the Quarterly Report as issued; the Data Sharing Arrangement has a Decision Record; terms in full; the controls of this Charter. | DR-2026-055 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

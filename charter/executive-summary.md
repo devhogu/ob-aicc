@@ -12,7 +12,7 @@ The clients of AICC are the functions of the Bank. A function is the client of a
 
 ## 3. Commitment
 
-AICC commits to each Engagement in a Service Agreement, which states the outcome and the capacity. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. An Outcome Report ends the Engagement, and the Domain Owner, or the Executive Sponsor for enabling work, accepts it. Source: Business Model 5.
+AICC commits to each Engagement in a Service Agreement, which states the outcome. AICC acts under it on a best-effort basis, within the capability that it has available. An Outcome Report ends the Engagement, and the Domain Owner, or the Executive Sponsor for enabling work, accepts it. Source: Business Model 5.
 
 ## 4. Flow of work
 

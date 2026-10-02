@@ -2,8 +2,8 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: active
-revision: 2.7
-created: 2026-09-30
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -33,15 +33,17 @@ revised: 2026-10-02
 
 [Time from proposal to approval and from approval to acceptance; work in progress; Measures of the Maturity Level, against baseline; the number of Domains and employees using approved Solutions.]
 
-## 4. Capacity and benefit of the Engagements
+## 4. Benefit and flow of the Engagements
 
-| Engagement | Capacity committed and used, in days | Benefit claimed | Benefit confirmed by the Business acceptor | Outcome Report |
+| Engagement | Lead time and cycle time | Benefit claimed | Benefit confirmed by the Business acceptor | Outcome Report |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
-[The cost of AICC, by reference to the financial planning of the Bank. The capacity of the Service Agreements against the capacity available; the detail of each Engagement is in its Outcome Report.]
+[The cost of AICC, by reference to the financial planning of the Bank. The flow measures (lead time, cycle time, throughput, and the Active Initiatives against the limit); the detail of each Engagement is in its Outcome Report.]
 
 ## 5. Benefits against the Investment Envelope
+
+[Where no Envelope is set, state: none set.]
 
 | Strategic Priority | Envelope | Benefit realized | Notes |
 | --- | --- | --- | --- |

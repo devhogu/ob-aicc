@@ -2,8 +2,8 @@
 id: AICC-TPL-10-EN
 title: AI Incident Review
 status: active
-revision: 1.3
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 

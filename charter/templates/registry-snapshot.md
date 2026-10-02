@@ -2,8 +2,8 @@
 id: AICC-TPL-11-EN
 title: Registry Snapshot
 status: active
-revision: 1.4
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 

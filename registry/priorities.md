@@ -1,20 +1,20 @@
 # Priorities
 
-The Strategic Priorities come from the Statement of Intent. The Executive Sponsor sets the Investment Envelope and the target Maturity Level for each, and the Investment Guardrails, each year. This Record holds no figures of the Bank. Where a decision needs a figure, the Record names the figure that is to be used and the source where it lives, and the figure itself is kept in that source.
+The Strategic Priorities come from the Statement of Intent, and they were set on 2026-09-02 at the first Steering (`steering/2026-09-02-first.md`; DR-2026-061). Each year, at the yearly Steering, the Executive Sponsor sets the Investment Envelope and the target Maturity Level for each Strategic Priority, and the Investment Guardrails, for the next year (Operating Model 6.5); the next is the yearly Steering of December 2026. This Record holds no figures of the Bank. Where a decision needs a figure, the Record names the figure that is to be used and the source where it lives, and the figure itself is kept in that source.
 
 | Identifier | Strategic Priority | Domain Owners | Investment Envelope: which figure, and its source | Maturity Level reached | Target | Target date |
 | --- | --- | --- | --- | --- | --- | --- |
-| PRI-1 | Customer intelligence | Commercial front office, retail functions, commercial sales | | | | |
-| PRI-2 | Business intelligence | FP&A (Ademi Moldogazieva) | | | | |
-| PRI-3 | Adoption within Domains | Compliance, HR, legal, finance, accounting | | | | |
-| PRI-4 | Expertise at the point of work | Legal, HR, commercial functions, retail credit | | | | |
-| PRI-5 | AI in banking operations and systems | Retail credit | | | | |
-| PRI-6 | Information technology operations and service lifecycle | | | | | |
-| PRI-7 | Software engineering | | | | | |
+| PRI-1 | Customer intelligence | Commercial front office, retail functions, commercial sales | None |  |  |  |
+| PRI-2 | Business intelligence | FP&A (Ademi Moldogazieva) | None |  |  |  |
+| PRI-3 | Adoption within Domains | Compliance, HR, legal, finance, accounting | None |  |  |  |
+| PRI-4 | Expertise at the point of work | Legal, HR, commercial functions, retail credit | None |  |  |  |
+| PRI-5 | AI in banking operations and systems | Retail credit | None |  |  |  |
+| PRI-6 | Information technology operations and service lifecycle |  | None |  |  |  |
+| PRI-7 | Software engineering |  | None |  |  |  |
 
 ## Measures of the Maturity Levels
 
-Seeded from the Statement of Intent. The Executive Sponsor sets the targets each year. The owner and the source are required before a Measure is reported. The baseline and the target are figures of the Bank, so they live in the source named here, and this Record points to them.
+From the Statement of Intent. The Executive Sponsor sets the targets each year. The owner and the source are required before a Measure is reported. The baseline and the target are figures of the Bank, so they live in the source named here, and this Record points to them.
 
 | Measure | Maturity Level | Baseline and target: which figures | Owner | Source |
 | --- | --- | --- | --- | --- |
@@ -28,7 +28,9 @@ Seeded from the Statement of Intent. The Executive Sponsor sets the targets each
 
 ## Investment Guardrails
 
+No Investment Envelope and no Investment Guardrail are set; no proposal for a budget has been made to the management. No Initiative asks for an investment, so none exceeds a Guardrail: an Initiative within one Domain is approved by the Domain Owner, and any other by the Executive Sponsor (Portfolio Management Model 6.3).
+
 | Guardrail | Value |
 | --- | --- |
-| Amount that may be committed without the Executive Sponsor | [ The amount, set by the Executive Sponsor each year and kept in the financial planning of the Bank; this Record names the source ] |
-| Amount above which an Initiative needs the approval of the Executive Sponsor, as does an Initiative that spans Domains | [ The amount above which an Initiative needs the approval of the Executive Sponsor; same source as above ] |
+| Amount that may be committed without the Executive Sponsor | None |
+| Amount above which an Initiative needs the approval of the Executive Sponsor, as does an Initiative that spans Domains | None |

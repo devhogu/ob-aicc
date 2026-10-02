@@ -1,25 +1,7 @@
 <!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Центр компетенций по ИИ</title>
-<script>
-/* Servers such as Caddy handle_path answer /aicc (no trailing slash) with this page, which would make the
-   relative links below resolve at the server root. Add the slash first, then choose the language. */
-try{var p=location.pathname;
-if(!/\/$|\.html$/.test(p)){location.replace(p+'/'+location.search+location.hash)}
-else{var l=localStorage.getItem('aicc-lang');location.replace((l==='en'?'en':'ru')+'/index.html')}}catch(e){}
-</script>
-<noscript><meta http-equiv="refresh" content="0; url=ru/index.html"></noscript>
-<link rel="stylesheet" href="assets/aicc.css">
-
-</head>
-<body>
-<div class="oc-gateway">
- <img src="assets/ui-comps/logos/obank-on-dark.svg" alt="O!Bank" class="gateway-logo" width="126" height="48">
- <h1>Центр компетенций по ИИ</h1>
- <p><a class="oc-button oc-button--primary" href="ru/index.html" lang="ru">Продолжить на русском</a> <a class="oc-button" href="en/index.html" lang="en">English</a></p>
-</div>
-</body>
-</html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light"><meta http-equiv="refresh" content="0; url=en/">
+<title>AI Competence Center</title>
+<link rel="stylesheet" href="assets/ui/fonts.css"><link rel="stylesheet" href="assets/ui/tokens.css"><link rel="stylesheet" href="assets/ui/workspace.css"><link rel="stylesheet" href="assets/charter.css">
+</head><body class="charter"><main class="o-main gateway" id="main"><img src="assets/ui/assets/logos/o-mark.svg" width="48" height="54" alt="">
+<h1>AI Competence Center</h1><ul><li><a lang="en" hreflang="en" href="en/">English</a></li><li><a lang="ru" hreflang="ru" href="ru/">Русский</a></li></ul></main></body></html>

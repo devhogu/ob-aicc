@@ -8,7 +8,7 @@ The year calendar of AICC: the Program Increments, the Iterations, the weeks, an
 2. A Program Increment is a quarter: I01 to I03 are PIQ1, I04 to I06 PIQ2, I07 to I09 PIQ3, and I10 to I12 PIQ4. It is a bundle of three Iterations and has no boundary of its own.
 3. A week is named with its year, Program Increment, Iteration, and week, for example 2026-PIQ4 I10W1. The Iteration number tells the month, and the week number the week of that month.
 4. The IP week is the last week of the third Iteration of a Program Increment. If more than two of its working days are blocked or gray, it is the week before. The last week of a five-week I12 is the year-end week and has no events, so the IP week of PIQ4 is the week before it.
-5. A blocked day is an official non-working day or an expected one. A gray day is a working day on which people are likely to be out in some way, such as the eve of a holiday or a bridge day. A short day is a working day that ends early. Blocked and gray days are listed in section 4. The official calendar of the Kyrgyz Republic prevails, and the list is revised when it changes. Days marked Expected are not yet confirmed.
+5. A blocked day is an official non-working day or an expected one. A gray day is a working day on which people are likely to be out in some way, such as the eve of a holiday or a bridge day. A short day is a working day that ends early. Blocked and gray days are listed in section 4. The official calendar of the Kyrgyz Republic prevails, and the list is revised when it changes. A day marked Expected is an expected observance that the official calendar has not confirmed.
 6. Nothing that needs people outside AICC is planned for a blocked or gray day. An event that falls on one moves to the working day before it, and never after.
 
 ## 2. Program Increments and Iterations
@@ -120,44 +120,44 @@ The year calendar of AICC: the Program Increments, the Iterations, the weeks, an
 | 2026-12-29 | Tue | Gray | Year-end period | common practice |
 | 2026-12-30 | Wed | Gray | Year-end period | common practice |
 | 2026-12-31 | Thu | Short | Pre-holiday short day | Ministry of Labor calendar 2026, reported |
-| 2027-01-01 | Fri | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January); confirm |
-| 2027-01-02 | Sat | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January); confirm |
-| 2027-01-03 | Sun | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January); confirm |
-| 2027-01-04 | Mon | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January); confirm |
-| 2027-01-05 | Tue | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January); confirm |
-| 2027-01-06 | Wed | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January); confirm |
-| 2027-01-07 | Thu | Expected | Orthodox Christmas | pattern of 2026 (1-6 January, 7 January); confirm |
-| 2027-01-08 | Fri | Gray | Bridge after the holidays; in 2026 the holidays were extended | common practice |
-| 2027-01-27 | Wed | Gray | Election Day, listed by one source | one source; confirm |
+| 2027-01-01 | Fri | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January) |
+| 2027-01-02 | Sat | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January) |
+| 2027-01-03 | Sun | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January) |
+| 2027-01-04 | Mon | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January) |
+| 2027-01-05 | Tue | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January) |
+| 2027-01-06 | Wed | Expected | New Year holidays and Orthodox Christmas | pattern of 2026 (1-6 January, 7 January) |
+| 2027-01-07 | Thu | Expected | Orthodox Christmas | pattern of 2026 (1-6 January, 7 January) |
+| 2027-01-08 | Fri | Gray | Bridge after the holidays | common practice |
+| 2027-01-27 | Wed | Gray | Election Day, listed by one source | one source |
 | 2027-02-22 | Mon | Gray | Bridge before 23 February | common practice |
-| 2027-02-23 | Tue | Short | Defender of the Fatherland Day, short day | Ministry of Labor calendar 2026 pattern; confirm |
+| 2027-02-23 | Tue | Short | Defender of the Fatherland Day, short day | Ministry of Labor calendar 2026 pattern |
 | 2027-03-08 | Mon | Official | International Women's Day | Labor Code |
-| 2027-03-09 | Tue | Expected | Orozo Ait, lunar; 9 or 10 March | lunar calendar; confirm |
-| 2027-03-10 | Wed | Expected | Orozo Ait, lunar; 9 or 10 March | lunar calendar; confirm |
+| 2027-03-09 | Tue | Expected | Orozo Ait, lunar; 9 or 10 March | lunar calendar |
+| 2027-03-10 | Wed | Expected | Orozo Ait, lunar; 9 or 10 March | lunar calendar |
 | 2027-03-11 | Thu | Gray | After Orozo Ait | common practice |
 | 2027-03-19 | Fri | Gray | Before Nooruz | common practice |
-| 2027-03-22 | Mon | Expected | Nooruz (21 March is a Sunday), observed on Monday | confirm |
+| 2027-03-22 | Mon | Expected | Nooruz (21 March is a Sunday), observed on Monday | - |
 | 2027-04-06 | Tue | Gray | Before 7 April | common practice |
-| 2027-04-07 | Wed | Short | April People's Revolution Day, short day | Ministry of Labor calendar 2026 pattern; confirm |
-| 2027-04-30 | Fri | Short | Pre-holiday short day | Ministry of Labor calendar 2026 pattern; confirm |
-| 2027-05-03 | Mon | Expected | May holidays | pattern of 2026 (1-8 May); confirm |
+| 2027-04-07 | Wed | Short | April People's Revolution Day, short day | Ministry of Labor calendar 2026 pattern |
+| 2027-04-30 | Fri | Short | Pre-holiday short day | Ministry of Labor calendar 2026 pattern |
+| 2027-05-03 | Mon | Expected | May holidays | pattern of 2026 (1-8 May) |
 | 2027-05-04 | Tue | Gray | May holidays bridge | common practice |
 | 2027-05-05 | Wed | Official | Constitution Day | Labor Code |
 | 2027-05-06 | Thu | Gray | May holidays bridge | common practice |
 | 2027-05-07 | Fri | Gray | May holidays bridge | common practice |
-| 2027-05-10 | Mon | Expected | Victory Day, observed on Monday | confirm |
+| 2027-05-10 | Mon | Expected | Victory Day, observed on Monday | - |
 | 2027-05-14 | Fri | Gray | Before Kurman Ait | common practice |
-| 2027-05-17 | Mon | Expected | Kurman Ait, lunar; 16 or 17 May | lunar calendar; confirm |
+| 2027-05-17 | Mon | Expected | Kurman Ait, lunar; 16 or 17 May | lunar calendar |
 | 2027-05-18 | Tue | Gray | After Kurman Ait | common practice |
 | 2027-08-30 | Mon | Gray | Bridge before Independence Day | common practice |
 | 2027-08-31 | Tue | Official | Independence Day | Labor Code |
-| 2027-11-08 | Mon | Expected | Days of History and Commemoration of Ancestors, observed on Monday | confirm |
+| 2027-11-08 | Mon | Expected | Days of History and Commemoration of Ancestors, observed on Monday | - |
 | 2027-12-24 | Fri | Gray | Eve of year-end | common practice |
 | 2027-12-27 | Mon | Gray | Year-end period | common practice |
 | 2027-12-28 | Tue | Gray | Year-end period | common practice |
 | 2027-12-29 | Wed | Gray | Year-end period | common practice |
 | 2027-12-30 | Thu | Gray | Year-end period | common practice |
-| 2027-12-31 | Fri | Short | Pre-holiday short day | pattern of 2026; confirm |
+| 2027-12-31 | Fri | Short | Pre-holiday short day | pattern of 2026 |
 
 ## 5. Events of the IP weeks
 
@@ -176,5 +176,3 @@ While light mode applies, Inspect and Adapt is held inside the PI Review and Dem
 5.2. The last week of I12 (2026-12-28 to 2027-01-03, and 2027-12-27 to 2028-01-02) is the year-end week and holds no events. The IP week of PIQ4 holds the Iteration Review and Demo of I12.
 
 5.3. In the month that holds an IP week (March 2027, June 2027, and September 2027) there is no separate monthly Steering: the quarterly Steering that ends the IP week is also that month's Steering and carries the monthly control loop (Operating Model 6.7). December is the exception: the monthly Steering of December is the yearly Steering, held in I12W2 (the week of 2026-12-07 and the week of 2027-12-06), and it runs the direction loop and the strategic loop for the next year with the control loop of the month (Operating Model 6.5). The quarterly Steering that ends the IP week of PIQ4 (December 2026 and December 2027) then carries only the assurance loop and the portfolio review.
-
-[ The day of the monthly Steering, of the yearly Steering, and of the one session of the Weekly Planning and the Weekly Review in light mode, set when the calendars of the Executive Sponsor are known. The events held in I10 are entered as they are held ]

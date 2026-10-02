@@ -1,8 +1,6 @@
 # Statement of intent: basis for the strategic priorities and the maturity roadmap
 
-Where the priorities and the maturity roadmap in the [statement of intent](../../../charter/documents/statement-of-intent.md) come
-from. The charter carries no references. Gathered 2026-09-30, on top of the earlier
-[industry research](industry-research.md) and the [function pages](functions/README.md).
+Where the priorities and the maturity roadmap in the [statement of intent](../../../charter/documents/statement-of-intent.md) come from. The charter carries no references. Gathered 2026-09-30, on top of the earlier [industry research](industry-research.md) and the [function pages](functions/README.md).
 
 ## Priorities
 
@@ -16,8 +14,7 @@ from. The charter carries no references. Gathered 2026-09-30, on top of the earl
 | 6 IT operations and service lifecycle | Common AIOps use cases: root cause analysis, predictive monitoring, incident management, and service desk copilots. Legacy integration is a stated obstacle ([Dynatrace](https://www.dynatrace.com/platform/aiops/), [tBlocks](https://tblocks.com/articles/aiops-use-cases-examples/), [HEAL Software](https://healsoftware.ai/blog/aiops-use-cases-for-it-operations.html)). Banking systems and security detail is in the [IT and banking systems page](functions/it-and-banking-systems.md) | No named bank case found. Cited outcomes come from vendors or from a telecom. Treated as emerging |
 | 7 Software engineering | Bank-reported productivity gains and agents in the [industry research](industry-research.md) and the [IT and banking systems page](functions/it-and-banking-systems.md) | Self-reported |
 
-Order: customer and business intelligence first, as decided. Then the functions and knowledge that support daily work,
-then embedding in banking flows, then technology operations and engineering.
+Order: customer and business intelligence first, as decided. Then the functions and knowledge that support daily work, then embedding in banking flows, then technology operations and engineering.
 
 ## Maturity roadmap
 
@@ -33,7 +30,6 @@ then embedding in banking flows, then technology operations and engineering.
 ## Confidence and gaps
 
 - Most sources are vendor writing. Where they gave figures, the figures were left out.
-- No named bank case was found for AIOps, payment exceptions, or reconciliation. The priorities on operations and IT operations
-  rest on design patterns and vendor material.
+- No named bank case was found for AIOps, payment exceptions, or reconciliation. The priorities on operations and IT operations rest on design patterns and vendor material.
 - The maturity models are general. Only one banking-specific mapping was found, and it is a practitioner's blog.
 - The priority order, level names, and per-level measures are our own judgement.

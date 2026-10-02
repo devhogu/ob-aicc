@@ -14,7 +14,7 @@ Figures 1 to 3 show the lifecycle, with the exits. The Service Agreement is issu
 
 ```mermaid
 flowchart LR
-  C["Contact<br/>a need from a function"] --> IN["Gate: intake<br/>AICC Lead<br/>strategic fit, Domain Owner,<br/>capacity"]
+  C["Contact<br/>a need from a function"] --> IN["Gate: intake<br/>AICC Lead<br/>strategic fit, Domain Owner,<br/>limit on Active Initiatives"]
   IN -->|"taken in"| ST["Study<br/>scope and business case<br/>Service Agreement issued"]
   IN -->|"not taken in"| DR["Deferred or rejected"]
   ST --> AP["Gate: approval of the<br/>business case<br/>Contacts clear Tier 2 or 3"]
@@ -59,16 +59,16 @@ The following table states each step, with its consulting counterpart and where 
 
 | Step | Consulting counterpart | What happens | Decision or record | In the service delivery workflow |
 | --- | --- | --- | --- | --- |
-| Contact | Lead | A function raises a need, or AICC finds one in its exploration | The item is taken in, deferred, or rejected; no Service Agreement is issued above the capacity available (Business Model 7.1) | Funnel: Proposed |
+| Contact | Lead | A function raises a need, or AICC finds one in its exploration | The item is taken in, deferred, or rejected; no Service Agreement is issued above the limit on the Active Initiatives (Business Model 7.1) | Funnel: Proposed |
 | Study | Diagnostic and proposal | AICC scopes the need with the function and writes the business case | The Initiative Brief; the business case is approved. A Risk Tier assigned that is higher than the one cleared returns the business case to the Control Function Contacts (Portfolio Management Model 6.4; see [AI risk and control](ai-risk-control.md)) | Reviewing (Scoping) and Analyzing (Business case, cleared by the Control Function Contacts when Risk Tier 2 or 3 is expected) |
-| Service Agreement | Commitment | AICC states what it commits to: the phases, the support level, the capacity, the outcome. It is issued when the study starts and amended when the business case is approved | The Service Agreement, issued by the AICC Lead; the function is notified | Reviewing (issued at the start of the study), Portfolio Backlog (amended at the approval) |
+| Service Agreement | Commitment | AICC states what it commits to: the phases, the support level, the outcome. It is issued when the study starts and amended when the business case is approved | The Service Agreement, issued by the AICC Lead; the function is notified | Reviewing (issued at the start of the study), Portfolio Backlog (amended at the approval) |
 | Delivery | Delivery of the engagement | AICC proves the first Solution as a probe (the MVP), and after the decision to continue, builds and releases it with the function | The decision after the MVP; check or validation; the final acceptance of the Team; the acceptance of the Domain Owner; release | MVP, the decision, and Implementation; then Review |
-| Outcome Report | Closing deliverable | AICC reports what was delivered, with the evidence referenced, the capacity used, and who accepted it | The Outcome Report; the acceptance of the Domain Owner, or of the Executive Sponsor for enabling work | Done: Accepted, Closed |
+| Outcome Report | Closing deliverable | AICC reports what was delivered, with the evidence referenced, and who accepted it | The Outcome Report; the acceptance of the Domain Owner, or of the Executive Sponsor for enabling work | Done: Accepted, Closed |
 | Support | Managed service | AICC supports the Solution at the level that the agreement states | Support records; AI Incidents in the incident management of the Bank | Operate, Support |
 
 ## 3. The Service Agreement through the Engagement
 
-The Service Agreement is the commitment. It is a working agreement and not a legal document, issued and amended as the Business Model 5 states. It is checked in at each Iteration, and each change is noted in its changes table when the scope is redirected, a Dependency fails, or the capacity changes. The Outcome Report ends it.
+The Service Agreement is the commitment. It is a working agreement and not a legal document, issued and amended as the Business Model 5 states. It is checked in at each Iteration, and each change is noted in its changes table when the scope is redirected or a Dependency fails. The Outcome Report ends it.
 
 The function commits to nothing (Business Model 5.4). What AICC relies on from the function is written as an Assumption, and a failed Assumption re-plans the scope and the dates.
 
@@ -83,9 +83,9 @@ What AICC provides after delivery is chosen for each Engagement. The Solution ty
 | At agreed response targets | Supports to targets that the agreement states | Service |
 | Run by AICC | Runs the Solution for its whole life, with its run cost and sunset rule | Service |
 
-## 5. Value, capacity, and knowledge
+## 5. Value, flow, and knowledge
 
-Each Engagement records the capacity committed in the agreement and the capacity used in the Outcome Report, in days, and the benefit that the function claims and confirms. The Quarterly Report shows them for each Engagement. The figures of the Bank stay in the systems of the Bank, and the records point to them. AICC supplies capacity and does not charge the functions; the Domain pays the run, the licenses, and the provider costs from its Envelope (AICC Charter 4.1). Every Engagement also leaves its lessons and its reusable assets in the Portfolio, so that the next one starts further on. The Proposals that AICC makes from what it proves feed the AI adoption strategy of the Bank, which the Bank decides.
+Each Engagement records the benefit that the function claims and confirms, and the lead time and cycle time of its work (Solution Lifecycle Model 10). The Quarterly Report shows them for each Engagement. The figures of the Bank stay in the systems of the Bank, and the records point to them. AICC does not charge the functions; the Domain pays the run, the licenses, and the provider costs from its Envelope (AICC Charter 4.1). Every Engagement also leaves its lessons and its reusable assets in the Portfolio, so that the next one starts further on. The Proposals that AICC makes from what it proves feed the AI adoption strategy of the Bank, which the Bank decides.
 
 ## 6. Where it runs
 

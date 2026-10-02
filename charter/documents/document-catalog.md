@@ -2,8 +2,8 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 3.7
-created: 2026-09-30
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -25,7 +25,7 @@ revised: 2026-10-02
 
 ## 3. Metadata, status, revision, and change log
 
-3.1. Each document shall begin with a block of six fields: id, title, status, revision, created, and revised. It shall end with a change log: one row for each change, with the revision, the date, the change, and the Decision Log entry or "none".
+3.1. Each document shall begin with a block of six fields: id, title, status, revision, created, and revised. It shall end with a change log: one row for each change, starting at the baseline, with the revision, the date, the change, and the Decision Log entry or "none". The revision of the document is that of the last row.
 
 3.2. The status is draft, active, or deprecated. A draft is being written. An active document is in force. A deprecated document is kept for history.
 
@@ -35,7 +35,7 @@ revised: 2026-10-02
 
 4.1. The AICC Lead activates every document and Template by setting its status to active, recording the date in the change log (for a Template, in the Decision Log entry, because a Template has no change log), and entering the Decision in the Decision Log. The activation of a document binds the Bank. Where a change concerns the AI Risk Appetite Statement, the Executive Sponsor decides it and the AICC Lead activates the change on that decision.
 
-4.2. Until the first publication of the charter, a change of meaning may take a decimal revision. After it, a change that alters the meaning of an active document takes the next whole revision number, and is activated in the same way. A correction that does not change the meaning needs only a change log row. The AICC Lead tells those concerned of an activation or a change that affects them.
+4.2. A change that alters the meaning of an active document takes the next whole revision number, and is activated in the same way. A correction that does not change the meaning needs only a change log row. The AICC Lead tells those concerned of an activation or a change that affects them.
 
 ## 5. The documents
 
@@ -45,7 +45,7 @@ revised: 2026-10-02
 | --- | --- | --- | --- |
 | AICC-MND-01 | Statement of Intent on the Adoption of Artificial Intelligence | The intent, values, principles, and strategy of the Bank for AI | EN |
 | AICC-MND-02 | AICC Charter | Mission, authority, funding, risk appetite, offer, and measures of AICC | EN |
-| AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | EN |
+| AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and flow | EN |
 | AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the five control loops, Records, and controls | EN |
 | AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP | EN |
 | AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle, and the measures | EN |
@@ -70,14 +70,14 @@ revised: 2026-10-02
 | 5 | AICC-TPL-03 Control Sign-Off | The decision of a Control Function Contact: a validation, a clearance of a business case, a stop, a provider check, or an Exception |
 | 6 | AICC-TPL-08 Decision Record | A Decision of the Executive Sponsor that is hard to reverse, a Decision that the Operating Model 8 names as evidenced by a Decision Record, such as a Data Sharing Arrangement, an Exception of the AICC Lead, and an approval of output, and the cutover |
 | 7 | AICC-TPL-04 Steering Summary | Each Steering, monthly, quarterly, or yearly: attendance, advice, Decisions, and actions |
-| 8 | AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, the capacity, and the acceptance |
+| 8 | AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, and the acceptance |
 | 9 | AICC-TPL-10 AI Incident Review | The review of each AI Incident |
 | 10 | AICC-TPL-11 Registry Snapshot | The closed extract of the working state at the close of each Iteration and PI, and at the cutover |
 | 11 | AICC-TPL-05 Quarterly Report | The Quarterly Report, and the report to the Board Committee |
 | 12 | AICC-TPL-09 Appointments Record | The Roles mapped to people, the appointment log, the declarations, and the access |
 | 13 | AICC-TPL-12 Proposal | A Proposal to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy |
 
-The identifiers keep the order of creation, and the table is in the order of use. The index of the Templates carries the same order and the place where each Record is kept.
+The table is in the order of use, and the identifiers do not follow that order. The index of the Templates carries the same order and the place where each Record is kept.
 
 ## 7. Checks
 
@@ -91,7 +91,7 @@ The identifiers keep the order of creation, and the table is in the order of use
 | 4 | Does it agree with every document that is higher in precedence? |
 | 5 | Is every Role, Record, and Template that it names defined? |
 | 6 | Does each requirement have one Role that must meet it? |
-| 7 | Is it free of open questions, lineage, and references to files, except in its change log? |
+| 7 | Is it free of open questions, provenance, and references to files, except in its change log? |
 | 8 | Does every table other than a change log have an introducing clause, and does every link work? |
 | 9 | Is it within the size limit, and does it say nothing that another document says? |
 | 10 | Can a person do what it asks today, with the people and the tools that exist? |
@@ -104,27 +104,4 @@ The identifiers keep the order of creation, and the table is in the order of use
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 0.1 to 0.8 | 2026-09-30 | Drafted and revised. | none |
-| 1.0 | 2026-09-30 | Rewritten for the simplified corpus of six documents and five Templates; ten checks replace the Corpus Assessment; the Artifact Standards are folded into the Operating Model. | DR-2026-009 |
-| 1.1 | 2026-09-30 | Fixes from the independent check: Status and Revision columns removed, TPL category, check cadence and checker, activation announced. | DR-2026-010 |
-| 2.0 | 2026-09-30 | Second fixes: activation and announcement; checks apply where required; change logs exempt from the table rule. | DR-2026-011 |
-| 2.1 | 2026-09-30 | Acceptance fixes: activation order and revision, Templates, change to an active document, participation of Entities, readiness gate, size limit. | DR-2026-015 |
-| 2.2 | 2026-10-01 | Activation by the AICC Lead; the Executive Sponsor and the independent check removed from activation. | DR-2026-018 |
-| 2.3 | 2026-10-01 | Notes Template used for the Iteration and Program Increment events. | DR-2026-020 |
-| 2.4 | 2026-10-01 | Event names use the short forms IT and IP. | DR-2026-023 |
-| 2.5 | 2026-10-01 | Content rule: no bank figures, function documents, data, or code in the documents and Records. | none |
-| 2.6 | 2026-10-01 | Solution Definition replaces the Use Case Card. | DR-2026-024 |
-| 2.7 | 2026-10-01 | The workflows, templates, and guides are part of the charter and state no rule. | DR-2026-025 |
-| 2.8 | 2026-10-01 | The Business Model is added. | DR-2026-026 |
-| 2.9 | 2026-10-01 | Service Agreement and Outcome Report Templates; the Initiative Brief for every Initiative. | DR-2026-026 |
-| 2.10 | 2026-10-01 | The twelve evidence Templates: Decision Record, Appointments Record, AI Incident Review, Registry Snapshot, Proposal added; Notes became the Steering Summary; listed in the order of use. | DR-2026-029 |
-| 2.11 | 2026-10-01 | Templates are activated; decimal revisions until first publication; Decision Record triggers aligned. | DR-2026-034 |
-| 2.12 | 2026-10-01 | Activation of a Template is recorded in the Decision Log. | DR-2026-034 |
-| 3.0 | 2026-10-01 | The documents bind the Bank only: Entities and Group Arrangement removed. | DR-2026-036 |
-| 3.1 | 2026-10-01 | The Solution Lifecycle Model is added as the eighth document; the Operating Model is the governance and control model of the unit. | DR-2026-040 |
-| 3.2 | 2026-10-01 | The Acceptance Checklist Template. | DR-2026-041 |
-| 3.3 | 2026-10-01 | The Portfolio Management Model is added as the ninth document; the limit is nine. | DR-2026-044 |
-| 3.4 | 2026-10-01 | Descriptions of the Operating Model and the Portfolio Management Model; Iteration written in full. | DR-2026-048 |
-| 3.5 | 2026-10-02 | Description of the Solution Lifecycle Model. | DR-2026-049 |
-| 3.6 | 2026-10-02 | Review of the independent findings: the Executive Sponsor decides the appetite and the AICC Lead activates; Decision Record triggers aligned with the Operating Model 8; the clearance of a business case in the Control Sign-Off; lineage removed from the table of Templates; the measures in the description of the Solution Lifecycle Model; the control of the checks. | DR-2026-055 |
-| 3.7 | 2026-10-02 | The yearly check of the documents is in time for the yearly Steering of December; the Steering Summary is also kept for a yearly Steering. | DR-2026-057 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

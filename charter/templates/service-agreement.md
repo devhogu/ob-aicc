@@ -2,14 +2,14 @@
 id: AICC-TPL-06-EN
 title: Service Agreement
 status: active
-revision: 1.6
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
 # Service Agreement
 
-**Template.** Copy for each Engagement. The AICC Lead issues it, and the Domain Owner and the stakeholders are notified. It is a form of agile working agreement and not a legal document, and it needs no signature chain. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. It carries no figures of the Bank, no data, and no code. Keep it to one page. It is reviewed at each Iteration, and each change is noted at the end.
+**Template.** Copy for each Engagement. The AICC Lead issues it, and the Domain Owner and the stakeholders are notified. It is a form of agile working agreement and not a legal document, and it needs no signature chain. AICC acts under it on a best-effort basis, within the capability that it has available. It carries no figures of the Bank, no data, and no code. Keep it to one page. It is reviewed at each Iteration, and each change is noted at the end.
 
 ## Part A. The commitment
 
@@ -22,19 +22,17 @@ revised: 2026-10-02
 | Phases covered | [study / proof / delivery / support] |
 | Support level | [none / on demand / at agreed response targets / run by AICC]. Requests and incidents come to the queue of AICC in Service Management; response targets are targets and not guarantees |
 | Service levels (for a Service) | [targets per class of service, Solution Lifecycle Model 10.4] |
-| Funding | AICC supplies the capacity; the Domain pays the run, the licenses, and the provider costs |
+| Funding | AICC does not charge; the Domain pays the run, the licenses, and the provider costs |
 | Issued by the AICC Lead on | [date] |
 | Notified | [Domain Owner, other heads of function, stakeholders] |
 
-**Scope and outcome targets.** [As in the Initiative Brief of the Initiative; state here only what the Brief does not, or what has changed. The scope is the intent and a backlog, which may be reordered or changed within the capacity at any time.] **Out of scope.** [What is excluded.]
+**Scope and outcome targets.** [As in the Initiative Brief of the Initiative; state here only what the Brief does not, or what has changed. The scope is the intent and a backlog, which may be reordered or changed within the Limits on Work in Progress at any time.] **Out of scope.** [What is excluded.]
 
 **Deliverables and definition of done.**
 
 | Deliverable | Definition of done |
 | --- | --- |
 |  |  |
-
-**Capacity per Iteration.** [Days per Iteration for AICC.]
 
 **Assumptions.** [What AICC relies on from the function, such as the expert, the access, and the data. If one fails, AICC re-plans the scope and the dates.]
 

@@ -2,8 +2,7 @@
 
 > This page describes the lineage of the first corpus, now archived. See [Simplification](simplification.md) for what replaced it.
 
-Where the elements of [charter/documents/operating-model.md](../../../charter/documents/operating-model.md) come from. The charter
-documents carry no references. This page keeps the lineage. Gathered 2026-09-29 from web search.
+Where the elements of [charter/documents/operating-model.md](../../../charter/documents/operating-model.md) come from. The charter documents carry no references. This page keeps the lineage. Gathered 2026-09-29 from web search.
 
 ## What comes from where
 
@@ -44,12 +43,8 @@ Centralized              Hub-and-spoke                 Federated
 ```
 
 - **Centralized:** strong control and cost efficiency, but a bottleneck. Common at low maturity.
-- **Hub-and-spoke:** the hub sets standards, governance, and shared infrastructure. Domain specialists deliver and
-  are accountable for results. Most large enterprises settle here.
-- **Federated:** governance of data privacy, model quality, compliance, and risk stays central, but execution and
-  prioritization sit in the domains, each with its own teams and backlog. It gives domains the most freedom, and
-  risks inconsistent tools and standards unless the central policy layer is strong. One banking-focused source
-  recommends this variant for banks because it combines domain flexibility with central control.
+- **Hub-and-spoke:** the hub sets standards, governance, and shared infrastructure. Domain specialists deliver and are accountable for results. Most large enterprises settle here.
+- **Federated:** governance of data privacy, model quality, compliance, and risk stays central, but execution and prioritization sit in the domains, each with its own teams and backlog. It gives domains the most freedom, and risks inconsistent tools and standards unless the central policy layer is strong. One banking-focused source recommends this variant for banks because it combines domain flexibility with central control.
 
 | | Hub-and-spoke | Federated |
 | --- | --- | --- |
@@ -77,9 +72,7 @@ Centralized              Hub-and-spoke                 Federated
 
 ## Confidence and gaps
 
-- The PMI primary texts (PMBOK 7, Agile Practice Guide) were not read. The PMO and value delivery office points come
-  from commentary and PMI web pages.
+- The PMI primary texts (PMBOK 7, Agile Practice Guide) were not read. The PMO and value delivery office points come from commentary and PMI web pages.
 - Most AI center-of-excellence sources are vendor or consultancy writing.
-- A vendor summary cites IBM research that centralized or hub-and-spoke models return more than decentralized ones.
-  It was not checked against the original, so it is not relied on.
+- A vendor summary cites IBM research that centralized or hub-and-spoke models return more than decentralized ones. It was not checked against the original, so it is not relied on.
 - No regulator guidance on the operating model of an AI unit in a bank was searched.

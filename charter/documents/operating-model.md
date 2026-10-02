@@ -2,8 +2,8 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 11.2
-created: 2026-09-29
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 
@@ -81,7 +81,7 @@ revised: 2026-10-02
 
 4.7. Each Holder shall name a deputy in the Appointments Record, who acts during an absence. The Executive Sponsor may delegate a decision in writing, for a stated scope and period, except a decision under 5.4 and 5.7, and the delegation is entered in the Appointments Record. A delegation of more than two weeks is also entered in the Decision Log.
 
-4.8. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference.
+4.8. An Appointment missing on 2026-10-02 shall be made by 2026-12-01, and the Executive Sponsor names acting Holders meanwhile. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference.
 
 ## 5. Decisions
 
@@ -273,7 +273,7 @@ In practice, an AI Incident is handled in the incident management of the Bank, w
 | C-08 | Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
 | C-09 | Approval of the business case, and the decision after the MVP | Portfolio Management Model 6.3, 6.4, 7.2; Charter 4.2; AI Policy 3.2 | Domain Owner; Executive Sponsor above a guardrail, across Domains, or for enabling work; the Control Function Contacts clear it | When the Initiative is approved, at the end of its MVP, and when a Risk Tier assigned is higher than the one cleared | Initiative Brief, complete in its six sections, with the clearances; Decision Record; Decision Log entry | Initiative Brief; Control Sign-Off; Decision Record |
 | C-10 | Outcome Report, acceptance, and confirmation of the benefit | Solution Lifecycle Model 7.3; Business Model 5.5, 7.3 | AICC Lead issues the Outcome Report; the product owner accepts a Feature and a Capability; the AICC Lead gives the final acceptance of the Team; the Domain Owner, or the Executive Sponsor, accepts the Solution, the Initiative, and the Outcome Report; Domain Owner confirms the benefit | At each acceptance, and at the end of the Engagement | Note of the acceptance in the backlog; the release block of the Solution Definition; Outcome Report | Outcome Report |
-| C-11 | Capacity used and benefit confirmed | Business Model 6 | AICC Lead | Quarterly | Quarterly Report | Quarterly Report |
+| C-11 | Benefit confirmed | Business Model 6 | AICC Lead | Quarterly | Quarterly Report | Quarterly Report |
 | C-12 | Risk Tier assignment | AI Policy 3.2 | AICC Lead; the Executive Sponsor for a Solution that the AICC Lead built | When the Solution is defined | Solution Definition; AI Registry entry, with who assigned it and when | Solution Definition |
 | C-13 | Check or validation before the first deployment | AI Policy 3.3; Solution Lifecycle Model 7.1 | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment | AI Registry entry for the check; Control Sign-Off for the validation | Control Sign-Off |
 | C-14 | Release | Solution Lifecycle Model 7.1, 7.4 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | The release block of the Solution Definition; the Acceptance Checklist where the Solution is handed to a Domain; Decision Record for Risk Tier 3 | Solution Definition; Acceptance Checklist |
@@ -285,7 +285,7 @@ In practice, an AI Incident is handled in the incident management of the Bank, w
 | C-20 | A Proposal to adopt a Solution at scale, the yearly Proposal of the AI adoption strategy, and the quarterly review of the Adopted Solutions | Solution Lifecycle Model 8.2; 6.5 | AICC Lead prepares and reviews; the owners and the Executive Sponsor decide on a Proposal of a Solution; the Executive Sponsor presents the yearly Proposal and the Bank decides on it | When a Solution is ready to be adopted; yearly at the yearly Steering; quarterly for the Adopted Solutions | Proposal; Decision Record; Quarterly Report | Proposal; Quarterly Report |
 | C-21 | Output published to investors, lenders, regulators, or the Board | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record |
 | C-22 | Separation of duties and independence | 4.4 | Executive Sponsor | At each release and each appointment | Appointments; the Acceptance Checklist or the release block | Appointments Record |
-| C-23 | Capacity ceiling and intake of Engagements | Business Model 7.1, 7.2 | AICC Lead | When a Service Agreement is issued | Service Agreement; Portfolio Backlog | Service Agreement |
+| C-23 | Intake of Engagements and the limit on work in progress | Business Model 7.1, 7.2 | AICC Lead | When an Initiative is taken in or pulled, and when a Service Agreement is issued | Service Agreement; Portfolio Backlog | Service Agreement |
 | C-24 | Completeness of the Outcome Reports | Business Model 7.4 | Executive Sponsor | Quarterly | Steering Summary | Steering Summary |
 | C-25 | Access of internal audit | 7.5 | AICC Lead | Always | The Registry | Not needed |
 | C-26 | Access review of the Registry, the tools, and production | 7.6; Solution Lifecycle Model 7.1 | AICC Lead; the keeper of each tool; the access process of the Bank for production | Quarterly | Steering Summary | Steering Summary |
@@ -335,53 +335,4 @@ Figure 8: the status of a control in the Control Matrix.
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 0.8 to 1.1 | 2026-09-30 | Drafted and revised. | none |
-| 2.0 | 2026-09-30 | Rewritten: seven Roles, three meetings, three Decision levels, one Decision Log. Replaces the Roles and Responsibilities, Decision Rights, Governance Forums, Decision Management, Portfolio Management, Registers, Reporting, Service Catalog, and Artifact Standards. | DR-2026-009 |
-| 2.1 | 2026-09-30 | Steering is monthly. | none |
-| 2.2 | 2026-09-30 | The AI Steering Committee is formed of the heads who are named. | none |
-| 2.3 | 2026-09-30 | Fixes from the independent check: separation and release, Risk Tier 3 release, Stages, interim checker, internal audit, deputy, yearly review, Records retention. | DR-2026-010 |
-| 3.0 | 2026-09-30 | Second fixes from the independent check: release at the Pilot exit, acting Holders, Stage conditions, return to Discovery, checker wording. | DR-2026-011 |
-| 3.1 | 2026-09-30 | Steering is monthly for tactical matters and quarterly for strategic matters. | none |
-| 3.2 | 2026-09-30 | Acceptance fixes: Appointments transition, decisions of the AICC Lead and the Executive Sponsor, meetings with those named, Maturity Level confirmed, done for an Initiative. | DR-2026-015 |
-| 3.3 | 2026-09-30 | The Domain Owner approves the use of a Solution in the Domain for a data class. | DR-2026-016 |
-| 3.4 | 2026-09-30 | The AICC Lead assigns the Risk Tier and tells the Domain Owner. | DR-2026-017 |
-| 3.5 | 2026-10-01 | Activated by the AICC Lead; activation of documents no longer goes to the Executive Sponsor. | DR-2026-018 |
-| 3.6 | 2026-10-01 | Acceptance by the product owner closes a Backlog item. | DR-2026-019 |
-| 4.0 | 2026-10-01 | Program Increments, Iterations, Program Backlog, Iteration Backlog, Program Kanban, Roadmap, Dependency Map, Dashboard, and the events of each loop with their intent. | DR-2026-020 |
-| 5.0 | 2026-10-01 | Iterations are calendar months of four or five weeks; Kanban lanes; weekly review; Program Increment items state intent and direction; Cadence Record. | DR-2026-021 |
-| 5.1 | 2026-10-01 | Weekly Planning added; the Cadence Record is the general flow without dates. | DR-2026-022 |
-| 5.2 | 2026-10-01 | Event names use the short forms IT and IP. | DR-2026-023 |
-| 5.3 | 2026-10-01 | The Priorities Record holds references to figures, not figures. | none |
-| 5.4 | 2026-10-01 | Refers to the workflows of the charter. | none |
-| 6.0 | 2026-10-01 | Initiatives, Solutions, Epics, and Features; the Portfolio, Program, and IT Backlogs; thirteen states with Stages inside discovery and active; offering types Service, Product, and Experiment; Adoption oversight; the live state in Jira and Confluence. | DR-2026-024 |
-| 6.1 | 2026-10-01 | One transition table for the states; deciders for Epics, Features, and each exit; Solution lifecycle; validation attaches to the Solution; Experiment and Adoption rules; source of truth. | DR-2026-025 |
-| 6.2 | 2026-10-01 | Engagements run on the Service Agreement of the Business Model; principle (h); the Agreement Log. | DR-2026-026 |
-| 6.3 | 2026-10-01 | An Engagement is an Initiative with a client function; phases mapped; appointment and delegation entries; Adopted Solution; the Agreement Log removed. | DR-2026-027 |
-| 7.0 | 2026-10-01 | The evidence model: working state, living records, and evidence records; the cutover Decision; integrity and retention; the Controls section; light mode. | DR-2026-028 |
-| 7.1 | 2026-10-01 | The Templates of the controls exist; the Steering Summary replaces Notes. | DR-2026-029 |
-| 7.2 | 2026-10-01 | The collaboration tooling is listed in the charter; the Registry is promoted to the corporate share. | DR-2026-030 |
-| 8.0 | 2026-10-01 | The events listed with the Cadence holding their intent; moves of events; terms of the AI Steering Committee; the Initiative that spans Domains; active for Initiatives and Solutions; the Adopted Solution record; commercial controls. | DR-2026-031 |
-| 8.1 | 2026-10-01 | Closed from Active for a retired Solution; Rejected and Cancelled stated; Checker named by the AICC Lead; moved events that meet; controls table completed; light mode clarified. | DR-2026-034 |
-| 8.2 | 2026-10-01 | Rules on the content of the tools, the keeper of each tool (moved from the collaboration tooling workflow). | DR-2026-034 |
-| 8.3 | 2026-10-01 | Personal data of the Appointments Record; Decision Record trigger; Solution Definitions evidenced by the Snapshot; Cancelled except Completed; the Appointments Record named in 7.6. | DR-2026-034 |
-| 8.4 | 2026-10-01 | An Initiative is approved only when its Initiative Brief is complete in its six sections. | DR-2026-034 |
-| 8.5 | 2026-10-01 | Each control has a reference, and the Control Matrix keeps its test and status. | DR-2026-035 |
-| 9.0 | 2026-10-01 | The Group, Entities, and Participating Entities are removed: Control Function Contacts are named for the Bank, and sharing outside the Bank is a Data Sharing Arrangement. | DR-2026-036 |
-| 9.1 | 2026-10-01 | Reference to the Outcome Report in the Business Model corrected. | DR-2026-037 |
-| 9.2 | 2026-10-01 | Reference to the Outcome Report in the Business Model corrected. | DR-2026-037 |
-| 9.3 | 2026-10-01 | The Role of the AICC Engineer is replaced by the Solution Engineer, who owns a Solution end to end and is appointed from the people whom the functions assign. | DR-2026-038 |
-| 9.4 | 2026-10-01 | AI Incidents are owned by the incident management of the Bank; the AICC Lead is a stakeholder. | DR-2026-039 |
-| 9.5 | 2026-10-01 | AICC is described as a joint team. | none |
-| 10.0 | 2026-10-01 | The Operating Model is the governance and control model of AICC as a unit. The flow of work, the states and Stages, the cadence of the delivery loops, verification, release, acceptance, and the life cycle moved to the Solution Lifecycle Model. A control loop section is added; records and controls are sections 7 and 8. | DR-2026-040 |
-| 10.1 | 2026-10-01 | Acceptance Checklist as evidence of the release. | DR-2026-041 |
-| 10.2 | 2026-10-01 | A Decision goes to a higher level when it accepts a risk beyond the appetite, not for any risk accepted within it. | DR-2026-041 |
-| 10.3 | 2026-10-01 | Auditor review: the AICC Lead may not accept or release a Solution that the AICC Lead built; 4.6 split into 4.6 to 4.8; a stop is final; the Steering sample and the quarterly risk check defined; record integrity and access review; deficiencies (8.2); controls tightened and C-26 to C-32 added. | DR-2026-042 |
-| 10.4 | 2026-10-01 | Six figures: the movement of a Decision, the horizons, the handling of an event, the life of a Risks and Issues item, the cycle of a control, and the status of a control; clause 1.4 and clause 8.3. | DR-2026-043 |
-| 10.5 | 2026-10-01 | The Portfolio Management Model separates the portfolio layer; the business case is approved under it. | DR-2026-044 |
-| 10.6 | 2026-10-01 | The Control Function Contacts clear a business case that expects Risk Tier 2 or 3; C-09 names the clearance. | DR-2026-045 |
-| 10.7 | 2026-10-01 | Citations of the Portfolio Management Model follow its new numbering. | DR-2026-047 |
-| 10.8 | 2026-10-01 | The five control loops (section 6); Iteration written in full; citations follow the new numbering. | DR-2026-048 |
-| 10.9 | 2026-10-02 | Auditor evaluation end to end: 4.4(d) clarified; the yearly loops at the Steering that ends PIQ4; C-09, C-10, C-26, and C-30 widened; the retirement of a Service across Domains. | DR-2026-052 |
-| 11.0 | 2026-10-02 | Review of the independent findings: the decision ladder, the Executive Sponsor decides the appetite and names the AI Steering Committee, priority and limits, controls extended for the Board Committee notice, suspension and stop, training, the Tier 3 review, the yearly Proposal, and the Adopted Solutions; five statuses of a control; the cutover; the AI Registry as a Record of AICC. | DR-2026-055 |
-| 11.1 | 2026-10-02 | Acceptance at three levels: the AICC Lead acts as the product owner of the Team and gives the final acceptance of the Team; the Domain Owner, or the Executive Sponsor, gives the business acceptance; 4.4(d) amended; C-10 widened. | DR-2026-056 |
-| 11.2 | 2026-10-02 | The yearly direction loop runs at the yearly Steering, the monthly Steering of December held in the first two weeks, in place of the quarterly Steering that ends PIQ4; the exception to the single Steering of the IP-week month; the input of PIQ3. | DR-2026-057 |
+| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |

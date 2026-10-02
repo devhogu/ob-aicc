@@ -1,5 +1,0 @@
-/* Faces used by the AICC portal: Golos Text (body, OFL) and TT Travels Text (headings, group font). */
-@font-face{font-family:'Golos Text';src:url('./golos-text/GolosText-variable.woff2') format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
-@font-face{font-family:'TT Travels Text';src:url('./tt-travels-text/tt-travels-text-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'TT Travels Text';src:url('./tt-travels-text/tt-travels-text-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'TT Travels Text';src:url('./tt-travels-text/tt-travels-text-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}

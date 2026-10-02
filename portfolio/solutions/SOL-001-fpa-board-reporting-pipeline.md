@@ -1,6 +1,6 @@
 # Solution Definition: SOL-001 FP&A Board reporting pipeline
 
-Draft. The Solution Engineer completes it in the MVP of INI-004, once the business case is approved and cleared (Portfolio Management Model 7.1). The AICC Lead builds the Solution, so the Executive Sponsor also approves the Solution Definition (Operating Model 4.4).
+State: Proposed. The Solution Engineer completes the Definition in the MVP of INI-004, once the business case is approved and cleared (Portfolio Management Model 7.1). The AICC Lead builds the Solution, so the Executive Sponsor also approves the Solution Definition (Operating Model 4.4).
 
 | Field | Entry |
 | --- | --- |
@@ -8,13 +8,13 @@ Draft. The Solution Engineer completes it in the MVP of INI-004, once the busine
 | Title | FP&A Board reporting pipeline |
 | State and Stage | Proposed |
 | Initiative | INI-004 FP&A: Board reporting of financial metrics |
-| Type | [ Service or Product, set when the Solution is defined ] |
-| Approved by the Domain Owner on | [ The date, when the Solution Definition is approved ] |
+| Type | |
+| Approved by the Domain Owner on | |
 | Time-box | Not applicable: the type is not an Experiment |
-| Receiver | [ The owner who will run or adopt it after delivery, named when the Solution is defined ] |
+| Receiver | |
 | Domain, Domain Owner | FP&A, the head of the FP&A function |
-| Domain Expert, Solution Engineer | [ the Domain Expert, named by the Domain Owner ]; the AICC Lead |
-| Date of last change | 2026-10-01 |
+| Domain Expert, Solution Engineer | -; the AICC Lead |
+| Date of last change | 2026-10-02 |
 
 ## 1. The need and the outcome
 
@@ -22,7 +22,7 @@ An agentic pipeline that collects the financial metrics from their governed sour
 
 ## 2. Scope and capabilities
 
-To be defined with the Domain Owner: the standard set of metrics, the monthly and quarterly editions, the Board portal, and the pipeline. Excluded: other investor communications, changes to the methods of FP&A or to accounting systems.
+The scope covers the standard set of metrics, the monthly and quarterly editions, the Board portal, and the pipeline. Excluded: other investor communications, changes to the methods of FP&A or to accounting systems.
 
 ## 3. Architecture and data
 
@@ -34,15 +34,9 @@ Risk Tier 2 is expected. The AICC Lead builds the Solution, so the Executive Spo
 
 ## 5. Acceptance criteria
 
-[ The criteria for the acceptance of the Solution, stated with the Domain Owner. The benefit, its measures, and where the figures live are in the Initiative Brief INI-004 ]
-
 ## 6. Check or validation, and release
 
-[ Risk Tier 2 is expected: the Control Sign-Off of the validation by reference, and the AI Registry entry. The final acceptance of the Team by the AICC Lead before the first deployment to the first users, with the date. The business acceptance by the Domain Owner, with the date. The release beyond the first users: the decision of the Domain Owner, with the date. None of these exists yet ]
-
 ## 7. Life after delivery
-
-[ The run cost source and the sunset rule for a Service, or the consumer and the version for a Product, set with the type ]
 
 ## 8. Scores and next step
 

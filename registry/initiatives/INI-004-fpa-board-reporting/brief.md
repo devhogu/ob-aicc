@@ -7,13 +7,13 @@
 | State and Stage | Discovery: Scoping |
 | Strategic Priority | PRI-2 Business intelligence |
 | Domain Owner (represents the client function) | FP&A analytics function. Domain Owner: Ademi Moldogazieva, head of the FP&A function |
-| Solutions expected | SOL-001 FP&A Board reporting pipeline [ its type is set when the Solution is defined ] |
+| Solutions expected | SOL-001 FP&A Board reporting pipeline; its type is set when the Solution is defined |
 | Business acceptor | Ademi Moldogazieva, head of the FP&A function (section 6) |
-| Service Agreement | [ AGR-nnn: the Service Agreement of this Engagement, issued at the start of the study and amended at the approval of the business case (Business Model 5; RI-022) ] |
+| Service Agreement | Not issued (RI-004) |
 | Period | September to December 2026 |
 | Date of last change | 2026-10-02 |
 
-Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 4 (the capacity in days, and the Investment Envelope); 6 (the approver and the Service Agreement).
+Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 6 (the approver and the Service Agreement).
 
 ## 1. Hypothesis
 
@@ -25,12 +25,12 @@ Today FP&A already produces reports with AI. The reporting is not consistent fro
 
 | Business outcome | Leading indicator | Where the figures live | Date |
 | --- | --- | --- | --- |
-| The Board portal, live with the first monthly edition | Editions issued on time | [ The source system of the function ] | 2026-12-31 |
-| The pipeline, having run one monthly cycle | Share of figures traceable to a governed source; manual steps removed; hours per cycle | [ The source system of the function ] | 2026-12-31 |
-| The definitions of the metrics, agreed with FP&A, and the quarterly edition, designed | Metrics defined and agreed | [ The source system of the function ] | 2026-12-31 |
-| The approval of the Executive Sponsor for each edition, in place | Editions issued with the approval of the Executive Sponsor | [ The source system of the function ] | 2026-12-31 |
+| The Board portal, live with the first monthly edition | Editions issued on time | | 2026-12-31 |
+| The pipeline, having run one monthly cycle | Share of figures traceable to a governed source; manual steps removed; hours per cycle | | 2026-12-31 |
+| The definitions of the metrics, agreed with FP&A, and the quarterly edition, designed | Metrics defined and agreed | | 2026-12-31 |
+| The approval of the Executive Sponsor for each edition, in place | Editions issued with the approval of the Executive Sponsor | | 2026-12-31 |
 
-The baseline and the target of each indicator are figures of the Bank. They are kept in the source system of the function, and this brief points to them. [ The source system of the function that holds the figures, named with the Domain Owner by 2026-10-31, with the baseline and the target of each indicator ]
+The baseline and the target of each indicator are figures of the Bank. They are kept in the source system of the function, and this brief points to them.
 
 ## 3. Scope and the minimum viable product
 
@@ -49,13 +49,11 @@ Out of scope: Investor communications beyond the financial metrics; changes to t
 
 Minimum viable product: The monthly edition, issued through the Board portal by the pipeline for one cycle.
 
-## 4. Cost, capacity, and value
+## 4. Cost and value
 
 Cost: the time of the AICC Lead. No other cost is stated.
 
-Capacity: [ The capacity in days per Iteration for the minimum viable product, within the capacity available (Business Model 7.1), and the estimate for the full scope ]
-
-Investment Envelope: [ The Investment Envelope of the Strategic Priority, by reference to the financial planning of the Bank, set with the Guardrails ]
+Investment Envelope: None; no Investment Envelope is set (Priorities Record).
 
 Value: tracked by the indicators of section 2, and confirmed by the Domain Owner at the Outcome Report (Business Model 7.3).
 
@@ -71,13 +69,15 @@ Dependencies: DEP-004 (a named Domain Expert), DEP-006 (the time of FP&A, the da
 
 ## 6. Decision and acceptance
 
-The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-013).
+The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-061).
 
-Business case: [ The approver of the business case: the Domain Owner, or the Executive Sponsor above a guardrail or across Domains, with the date and the Decision Record ]
-
-Clearance of the Control Function Contacts: [ The Contacts named in section 5, with the date of each clearance, before the business case is approved ]
-
-Acceptance on delivery: Ademi Moldogazieva, head of the FP&A function. Acceptance closes the item.
+| Decision | By | Date | Record |
+| --- | --- | --- | --- |
+| Approval of the business case | | | |
+| Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
+| Service Agreement issued | AICC Lead | | |
+| Decision after the MVP (Portfolio Management Model 7.2) | | | |
+| Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | Ademi Moldogazieva, head of the FP&A function | | |
 
 ## Amendments after approval
 
@@ -85,4 +85,4 @@ A change after the approval of the business case is entered here with its date a
 
 | Date | Section | Change | Decision Record |
 | --- | --- | --- | --- |
-|  |  |  | DR-[yyyy]-[nnn] |
+|  |  |  |  |

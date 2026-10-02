@@ -2,8 +2,8 @@
 id: AICC-TPL-12-EN
 title: Proposal
 status: active
-revision: 1.1
-created: 2026-10-01
+revision: 1.0
+created: 2026-10-02
 revised: 2026-10-02
 ```
 

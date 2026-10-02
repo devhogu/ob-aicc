@@ -1,7 +1,6 @@
 # Group context: vision, mission, and strategy
 
-The higher-level goals that the [AI adoption statement of intent](../../../charter/documents/statement-of-intent.md) aligns to.
-Gathered 2026-09-30 from the group's public site. Values were looked for and not found.
+The higher-level goals that the [AI adoption statement of intent](../../../charter/documents/statement-of-intent.md) aligns to. Gathered 2026-09-30 from the group's public site. Values were looked for and not found.
 
 ## What ALGA Group publishes
 
@@ -15,8 +14,7 @@ Gathered 2026-09-30 from the group's public site. Values were looked for and not
 
 ## Six strategic pillars
 
-From the group's [strategy overview](https://algagroup.com/strategy-overview): "six core pillars to drive financial and
-digital inclusion."
+From the group's [strategy overview](https://algagroup.com/strategy-overview): "six core pillars to drive financial and digital inclusion."
 
 | Pillar | Stated content |
 | --- | --- |
@@ -29,21 +27,16 @@ digital inclusion."
 
 ## O!Bank
 
-- Formerly Halyk Bank Kyrgyzstan. Renamed O!Bank in 2024 and part of the O! ecosystem. Banking products are offered in the
-  My O! app. The bank's stated tagline is "Simple and fast solutions for your finance management."
-  [Rebrand notice](https://obank.kg/en/news/halyk-bank-kyrgyzstan-to-rebrand-as-o-bank-3)
+- Formerly Halyk Bank Kyrgyzstan. Renamed O!Bank in 2024 and part of the O! ecosystem. Banking products are offered in the My O! app. The bank's stated tagline is "Simple and fast solutions for your finance management." [Rebrand notice](https://obank.kg/en/news/halyk-bank-kyrgyzstan-to-rebrand-as-o-bank-3)
 - No formal mission, vision, values, or strategy document for O!Bank was found.
 
 ## Use in the statement of intent
 
-The statement maps AI adoption to the six pillars and does not restate them as its own. The group's pillars, mission,
-and vision are the higher-level goals. AI values in the statement are proposed and should be replaced or confirmed if
-the group or the bank publishes its own.
+The statement maps AI adoption to the six pillars and does not restate them as its own. The group's pillars, mission, and vision are the higher-level goals. AI values in the statement are proposed and should be replaced or confirmed if the group or the bank publishes its own.
 
 ## Confidence and gaps
 
 - Read at source through page fetches, which summarize the text. Wording in quotation marks is as summarized.
 - The Responsibility and Investor Relations pages were not read. They may hold values, a code of conduct, or an ESG policy.
 - The bank's annual report, the bank's own site "About the bank" section, and any Russian-language pages were not read.
-- Nothing here is confirmed with the group. Ask the group's strategy or investor relations team for the current
-  strategy, values, and code of conduct.
+- Nothing here is confirmed with the group. Ask the group's strategy or investor relations team for the current strategy, values, and code of conduct.

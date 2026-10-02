@@ -117,7 +117,7 @@ An AI Incident is handled in the incident management of the Bank, and the AICC L
 
 | Situation | What happens |
 | --- | --- |
-| A Control Function Contact raises the Risk Tier of a Solution in use | The higher Risk Tier applies, the AICC Lead updates the AI Registry, the checks that the change touches are made again, and a Solution whose Risk Tier is now 3 is not used beyond its first users until the Executive Sponsor releases it (AI Policy 3.2, 3.4) |
+| A Control Function Contact raises the Risk Tier of a Solution in use | The higher Risk Tier applies, the AICC Lead updates the AI Registry, the checks that the change touches are made again, and a Solution whose Risk Tier becomes 3 is not used beyond its first users until the Executive Sponsor releases it (AI Policy 3.2, 3.4) |
 | A provider changes its terms or its model | The provider is checked again (AI Policy 4.1), and the AICC Lead decides whether the change needs a new check or validation and enters the decision in the Decision Log (Solution Lifecycle Model 8.6) |
 | A Domain wants to use a class of data for which no Solution is approved | The data is not used with AI at any point, including discovery, until the Domain Owner has obtained the approvals that the rules of the Bank require (AI Policy 2.2) |
 | The AICC Lead built the Solution | The AICC Lead does not check, validate, or release it; the Executive Sponsor approves its Solution Definition, assigns its Risk Tier, approves its use for a data class; the Executive Sponsor also gives the business acceptance and the release where the AICC Lead is the Domain Owner, and otherwise the Domain Owner does (Operating Model 4.4(d), 4.6) |
