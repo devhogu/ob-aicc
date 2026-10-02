@@ -2,7 +2,7 @@
 id: AICC-TPL-04-EN
 title: Steering Summary
 status: active
-revision: 2.1
+revision: 2.2
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -13,8 +13,8 @@ revised: 2026-10-01
 
 | Field | Entry |
 | --- | --- |
-| Type | [monthly / quarterly] |
-| Date and week | [date, for example 2026-PIQ4 IT10W4] |
+| Type | [monthly / quarterly / first quarterly of the year] |
+| Date and week | [date, for example 2026-PIQ4 I10W4] |
 | Chair | [name] |
 | Present, by Role and name | [list] |
 | Absent, by Role and name | [list; the rule for absence applies] |
@@ -22,7 +22,7 @@ revised: 2026-10-01
 
 ## 1. Matters considered
 
-[Progress, risks, blockers, and acceptances, one line each.]
+[Progress, risks, blockers, and acceptances, one line each. For a portfolio: the gate decisions that were due, the funnel, the free capacity, and the Active Initiatives against the limit. At the quarterly Steering: the review of each Active Initiative (continue, pivot, defer, or reject), the quarterly risk check, the result of the access review, and the reconciliation of the AI Incidents with the incident management of the Bank. At the first quarterly Steering of the year: the Strategic Priorities, the Envelopes, the Guardrails, and the review of the documents.]
 
 ## 2. Advice given
 
@@ -38,7 +38,7 @@ revised: 2026-10-01
 
 ## 4. Risks, Exceptions, and AI Incidents reviewed
 
-[RI identifiers.]
+[RI identifiers, including the deficiencies and the findings that remain open and the Exceptions that are about to expire.]
 
 ## 5. Conflicts declared
 

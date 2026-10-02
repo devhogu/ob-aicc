@@ -2,7 +2,7 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 10.7
+revision: 10.8
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -53,7 +53,7 @@ revised: 2026-10-01
 | --- | --- | --- |
 | Executive Sponsor | Holds the mandate and the funding; appoints the AICC Lead; approves and issues the report to the Board Committee | The Strategic Priorities, the Investment Envelopes, and the Investment Guardrails; the release of a Risk Tier 3 Solution; any risk beyond the AI Risk Appetite Statement; the retirement of an Initiative; the approval of AI output published outside AICC; the acceptance of an item that spans Domains or is enabling work of AICC; the naming of acting Contacts |
 | AICC Lead | Leads AICC as its lead engineer and architect; is accountable for this Operating Model and for every document and Record of AICC; prepares the Quarterly Report; presents to the AI Steering Committee | Taking an item into discovery; the issue of a Service Agreement; the approval of Capabilities; the approval of the use of a Solution in AICC for a data class; the Risk Tier, which the AICC Lead tells to the Domain Owner; the suspension of a Solution; standards, architecture, and Templates; questions between Domains; the activation of every document; an Exception to a requirement set by AICC |
-| Solution Engineer | Owns a Solution end to end: designs it, decides its architecture, builds it, deploys it, and runs it with the Domains; keeps the work visible; coaches Domain Experts; checks the work of others | How a Solution is designed and built; the approval of Features at IT Planning; the order in which the team pulls work within the agreed priorities |
+| Solution Engineer | Owns a Solution end to end: designs it, decides its architecture, builds it, deploys it, and runs it with the Domains; keeps the work visible; coaches Domain Experts; checks the work of others | How a Solution is designed and built; the approval of Features at Iteration Planning; the order in which the team pulls work within the agreed priorities |
 | Domain Owner | Owns the results of AI adoption in the Domain and acts as product owner of its Solutions; names the Domain Expert | Whether the Domain takes part in an Initiative; funding of the Solutions of the Domain; the approval of the use of a Solution in the Domain for a data class, and the approvals that the rules of the Bank require; the acceptance of an item of the Domain; the release of a Risk Tier 1 or 2 Solution, after the check or the validation; the retirement of a Solution |
 | Domain Expert | Explains the routine work; works with the Solution Engineer; tries the Solution in real work; then scales adoption and trains colleagues | Nothing on funding, acceptance, or control |
 | Control Function Contact | Advises on requirements; may raise the Risk Tier within its remit, and the Contact of model risk alone may lower it; clears a business case that expects Risk Tier 2 or 3; validates Solutions; may suspend or stop a Solution | The clearance of a business case, validation, raising the Risk Tier, a suspension, a stop, and an Exception to a control requirement, each within the remit of the Control Function |
@@ -81,7 +81,7 @@ revised: 2026-10-01
 
 4.7. Each Holder shall name a deputy in the Appointments Record, who acts during an absence. The Executive Sponsor may delegate a decision in writing, for a stated scope and period, except a decision under 5.4 and 5.7, and the delegation is entered in the Appointments Record. A delegation of more than two weeks is also entered in the Decision Log.
 
-4.8. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile, except for a Control Function Contact, for whom the AI Policy 7 applies. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference.
+4.8. An Appointment missing at the activation of this Operating Model shall be made within 60 days, and the Executive Sponsor names acting Holders meanwhile. Every appointment, acting designation, change, and relief shall be entered in the Appointments Record within five working days, with its date and its decision reference.
 
 ## 5. Decisions
 
@@ -132,75 +132,119 @@ Figure 1: the movement of a Decision.
 
 5.7. A person with a conflict of interest on a Decision shall declare it and shall not decide. The next level decides.
 
-## 6. The control loop
+## 6. The control loops
 
-6.1. The control loop of AICC runs on four horizons and on events. Each horizon takes the result of the one below it and sets the direction of the one above it. The following table states them.
+6.1. The control of AICC as a unit runs on five loops. Each is a Plan, Do, Check, Act cycle with its own cadence and forum. A loop takes its frame from the loop above it, and returns its evidence to it. The loops run on the events of the Cadence and add no meeting. The portfolio loops of the Portfolio Management Model 4 run on the same events and govern the Initiatives; these loops govern the unit. The following table states them.
 
-| Horizon | Event | What is set or reviewed | Decided by | Record |
+| Loop | Cadence and forum | Decider | Controls it carries | Records |
 | --- | --- | --- | --- | --- |
-| Yearly | The first quarterly Steering of the year | The Strategic Priorities, the Investment Envelopes, the Investment Guardrails, the yearly Proposal of the AI adoption strategy, and the review of the documents and of the AI Risk Appetite Statement | Executive Sponsor; the AICC Lead owns the documents | Decision Records; Priorities |
-| Quarterly | The quarterly Steering | The results of the Program Increment, the quarterly risk check with the Control Function Contacts, the Maturity Level, the Roadmap, and the report to the Board Committee | Executive Sponsor | Quarterly Report; Registry Snapshot; Steering Summary |
-| Monthly | The monthly Steering | Progress, risks, and blockers, the acceptances, and a sample of the Decisions of the AICC Lead | Executive Sponsor; the product owner for an acceptance | Steering Summary; Decision Log |
-| Weekly | The Weekly Review | The flow, the Limits on Work in Progress, and the Dependencies, as the Solution Lifecycle Model states | AICC Lead | Dashboard |
-| On an event | Not scheduled | An AI Incident, an Exception, a stop, a risk beyond the appetite, a change of provider or regulation, a material change in the use of AI, a finding of an audit or a supervisor, or a change of a Holder | As this Operating Model states | Decision Record; Risks and Issues; Appointments |
+| Direction | Yearly, at the first quarterly Steering of the year | Executive Sponsor; the AICC Lead owns the documents | C-01, C-03, C-04 | Decision Records, Appointments |
+| Assurance | Quarterly, at the quarterly Steering | Executive Sponsor | C-06, C-07, C-11, C-16, C-24, C-26, C-27, C-28 | Quarterly Report, Registry Snapshot |
+| Control | Monthly, at the monthly Steering | Executive Sponsor; the product owner for an acceptance | C-05, C-17, C-29, C-32 | Steering Summary, Decision Log |
+| Operating | Weekly, at the Weekly Review | AICC Lead | None; the Dashboard is a working record | Dashboard |
+| Event | When an event happens | As this Operating Model states | C-16, C-17, C-19, C-30, C-31, C-32 | Risks and Issues, Decision Record |
 
-Figure 2 shows the horizons: direction flows down from the yearly horizon to the weekly one, and evidence flows up.
+### Meetings and bodies
 
-```mermaid
-flowchart TB
-  Y["Yearly<br/>priorities, funding, appetite, documents"]
-  Q["Quarterly<br/>results, risk check, Maturity Level, Board report"]
-  M["Monthly<br/>progress, risks, sample of decisions"]
-  W["Weekly<br/>flow, limits, Dependencies"]
-  E["On an event<br/>incident, exception, stop, finding, change"]
-  Y -->|direction| Q -->|direction| M -->|direction| W
-  W -.->|evidence| M -.->|evidence| Q -.->|evidence| Y
-  E -.-> M
-  E -.-> Q
-```
+6.2. A meeting runs with those who are named. While the AI Steering Committee is not formed, the Executive Sponsor decides alone. A record of an event is kept only for the Decisions and the actions, in the Steering Summary for a Steering, and otherwise in the work items and the Decision Log.
 
-Figure 2: the control loop by horizon.
+6.3. The members of the AI Steering Committee (4.5) are named in the Appointments Record. Its advice, and any dissent, is recorded in the Steering Summary. A head may be represented by a named deputy. If no head of a function attends, the Executive Sponsor may still decide, and the Steering Summary records the absence.
 
-6.2. The Steering shall meet monthly and quarterly. The monthly Steering shall review progress, risks, and blockers, the acceptances, and a sample of the Decisions of the AICC Lead, of at least three Decisions chosen by the Executive Sponsor. The quarterly Steering shall review the results of the Program Increment, take the quarterly risk check, confirm the Maturity Level and the Roadmap that the PI Planning proposes, and receive the Quarterly Report, from which the report to the Board Committee is prepared. The quarterly risk check reviews the open Risks and Issues, the open Exceptions, the Risk Tier reassessments that are due, and the reliance on providers and on the Platform Owner. The Control Function Contacts shall take part in it.
+6.4. The Executive Sponsor may take a time-critical Decision between meetings after asking the heads of the risk and compliance functions and recording the answers.
 
-6.3. The first quarterly Steering of the year also sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails, considers the yearly Proposal of the AI adoption strategy, and reviews the Statement of Intent, the AICC Charter, this Operating Model, the Solution Lifecycle Model, the AI Policy, and the AI Risk Appetite Statement. The Executive Sponsor calls an extra review on a material change in the use of AI, in a principal provider, or in regulation, or after an audit or supervisory finding.
+### The direction loop
 
-6.4. A meeting runs with those who are named. While the AI Steering Committee is not formed, the Executive Sponsor decides alone. A record of an event is kept only for the Decisions and the actions, in the Steering Summary for a Steering, and otherwise in the work items and the Decision Log.
-
-6.5. The members of the AI Steering Committee (4.5) are named in the Appointments Record. Its advice, and any dissent, is recorded in the Steering Summary. A head may be represented by a named deputy. If no head of a function attends, the Executive Sponsor may still decide, and the Steering Summary records the absence.
-
-6.6. The Executive Sponsor may take a time-critical Decision between meetings after asking the heads of the risk and compliance functions and recording the answers.
-
-6.7. Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The Control Functions stand beside it, independent of AICC. Internal audit gives independent assurance over the Portfolio and over AICC.
-
-6.8. An event in the last row of the table in 6.1 is handled in the section that governs it: a stop and a risk beyond the appetite under 5.4, a change of a Holder under 4.6, and an AI Incident and an Exception under the AI Policy. Each leaves the record that the table names.
-
-Figure 3 shows where each event is handled and how it returns to the Steering.
+6.5. The Executive Sponsor shall run the direction loop once a year, at the first quarterly Steering of the year. The plan confirms that the appointments are in order and sets the AI Risk Appetite Statement and the policy. The check reviews the Statement of Intent, the AICC Charter, this Operating Model, the Portfolio Management Model, the Solution Lifecycle Model, the AI Policy, and the AI Risk Appetite Statement, with the findings of the audits and the supervisors of the year. The act activates the changes and renews or adjusts the appointments and the appetite. The Executive Sponsor calls an extra review on a material change in the use of AI, in a principal provider, or in regulation, or after an audit or supervisory finding. The loop sets the documents, the Roles, and the appetite in force for the assurance loop. The Strategic Priorities, the Envelopes, and the Guardrails are set at the same Steering, in the strategic loop of the Portfolio Management Model.
 
 ```mermaid
-flowchart TB
-  EV["Event"] --> W{"Which event?"}
-  W -->|AI Incident| I["Incident management of the Bank<br/>IT function operates, AICC Lead is a stakeholder"]
-  W -->|Exception| X["Control Function, or AICC Lead for its own requirement"]
-  W -->|Stop or suspension| P["Control Function Contact, or AICC Lead"]
-  W -->|Risk beyond appetite| A["Executive Sponsor, with a report to the Board Committee"]
-  W -->|Change of provider, regulation, or Holder| H["Extra review, or Appointments Record"]
-  I --> L["Recorded: ticket, Risks and Issues, Review"]
-  X --> L
-  P --> L
-  A --> L
-  H --> L
-  L --> M["Monthly Steering reviews until closed"]
-  M --> Y["Lessons into Standards, AI Policy, and the yearly review"]
+flowchart LR
+  IN(["From above<br/>Board, Board Committee, supervisors, audits"]):::iface --> P
+  P["Plan<br/>appointments in order, appetite and policy set"] --> D["Do<br/>the unit works under the documents"] --> C["Check<br/>review of the documents and the appetite, findings of the year"] --> A["Act<br/>activate changes, renew or adjust"] --> P
+  EV(["From below<br/>Quarterly Reports of the assurance loop"]):::iface --> C
+  A --> OUT(["To below<br/>documents, Roles, and appetite in force"]):::iface
+  classDef iface fill:#e8eefc,stroke:#5a6fa8,color:#111
 ```
 
-Figure 3: the handling of an event.
+Figure 2: the direction loop.
+
+In practice, the AICC Lead checks the documents and brings the changes and the findings of the year to the first quarterly Steering. The Executive Sponsor decides, and each activation and each decision on the appetite is entered in the Decision Log.
+
+### The assurance loop
+
+6.6. The Executive Sponsor shall run the assurance loop each quarter, at the quarterly Steering. The plan collects the evidence: the Registry Snapshot, the Control Matrix, and the Risks and Issues. The check is the quarterly risk check, which reviews the open Risks and Issues, the open Exceptions, the Risk Tier reassessments that are due, and the reliance on providers and on the Platform Owner. It also takes the access review of the Registry and the tools (7.6), reconciles the AI Incidents with the incident management of the Bank, and confirms the Maturity Level and the results of the Program Increment. The Control Function Contacts shall take part in it. The act decides the corrective actions, accepts or refuses a risk beyond the appetite, and issues the Quarterly Report, from which the report to the Board Committee is prepared. The loop takes the documents and the appetite of the direction loop, hands the actions down to the control loop, and returns the Quarterly Report to the direction loop and to the Board Committee.
+
+```mermaid
+flowchart LR
+  IN(["From above<br/>documents, Roles, and appetite in force"]):::iface --> P
+  P["Plan<br/>collect the Snapshot, the Control Matrix, Risks and Issues"] --> D["Do<br/>the controls operate and leave evidence"] --> C["Check<br/>quarterly risk check, access review, reconciliation of incidents, Maturity Level"] --> A["Act<br/>corrective actions, risk beyond appetite, Quarterly Report"] --> P
+  EV(["From below<br/>Steering Summaries of the control loop"]):::iface --> C
+  A --> OUT(["To below<br/>corrective actions"]):::iface
+  A --> UP(["To above<br/>report to the Board Committee"]):::iface
+  classDef iface fill:#e8eefc,stroke:#5a6fa8,color:#111
+```
+
+Figure 3: the assurance loop.
+
+In practice, the AICC Lead brings the Quarterly Report and the Control Matrix to the quarterly Steering. The Control Function Contacts give their view within their remits, and the Executive Sponsor decides the actions. A risk beyond the appetite is accepted only with a report to the Board Committee.
+
+### The control loop of the month
+
+6.7. The Executive Sponsor shall run the control loop each month, at the monthly Steering, and the AICC Lead prepares it. The plan sets the agenda: progress, risks, blockers, the acceptances, and the sample. The check reviews a sample of at least three Decisions of the AICC Lead, chosen by the Executive Sponsor, the open Exceptions until they expire, the review of the live Solutions at the Iteration Review and Demo, and the deficiencies and the findings until they are closed (8.2). The act closes or escalates each item and records the Decisions and the actions in the Steering Summary. The loop takes the corrective actions of the assurance loop, and returns the Steering Summary to it.
+
+```mermaid
+flowchart LR
+  IN(["From above<br/>corrective actions of the assurance loop"]):::iface --> P
+  P["Plan<br/>agenda: progress, risks, blockers, acceptances, the sample"] --> D["Do<br/>review and decide"] --> C["Check<br/>sample of the Lead's Decisions, open Exceptions, deficiencies and findings"] --> A["Act<br/>close or escalate, Steering Summary"] --> P
+  EV(["From below<br/>Dashboard and open items of the operating loop"]):::iface --> P
+  C --> UP(["To above<br/>Steering Summary"]):::iface
+  classDef iface fill:#e8eefc,stroke:#5a6fa8,color:#111
+```
+
+Figure 4: the control loop of the month.
+
+In practice, the Executive Sponsor picks the Decisions to read from the Decision Log and reads the facts behind each. An Exception that has expired, and a deficiency that is overdue, are decided at once. The Steering Summary is the evidence.
+
+### The operating loop of the week
+
+6.8. The AICC Lead shall run the operating loop each week, at the Weekly Review, which is one session with the Weekly Planning in light mode. The plan reads the flow, the Limits on Work in Progress, and the Dependencies. The check is the Weekly Review of the Dashboard and of the boards. The act adjusts the work, updates the Registry, and raises to the monthly Steering what cannot be settled. The care of the Portfolio Backlog is in the Portfolio Management Model 4.5, and the flow of the work is in the Solution Lifecycle Model.
+
+```mermaid
+flowchart LR
+  IN(["From above<br/>Steering Summary, limits, priorities"]):::iface --> P
+  P["Plan<br/>flow, limits, Dependencies"] --> D["Do<br/>the Teams work"] --> C["Check<br/>Weekly Review of the Dashboard and the boards"] --> A["Act<br/>adjust, update the Registry, raise what cannot be settled"] --> P
+  A --> UP(["To above<br/>Dashboard and open items"]):::iface
+  classDef iface fill:#e8eefc,stroke:#5a6fa8,color:#111
+```
+
+Figure 5: the operating loop of the week.
+
+In practice, the AICC Lead keeps the Dashboard and the boards current, and an item that waits on someone outside AICC names its Dependency.
+
+### The event loop
+
+6.9. An event that is not on the calendar shall enter the Risks and Issues Record with an owner and a due date, and it runs the same cycle until it is closed. The events are an AI Incident and an Exception (the AI Policy), a stop or a suspension and a risk beyond the appetite (5.4), a change of provider or regulation, a finding of an audit or a supervisor (8.2), and a change of a Holder (4.6 to 4.8). The plan gives the item its owner and its due date. The do handles it where the section that governs it says. The check is the monthly Steering, which reviews it until it is closed. The act closes it, or escalates it, and the lessons go into the Standards, the AI Policy, and the yearly review. Anyone may raise an event, and the owner may be in any Role.
+
+```mermaid
+flowchart LR
+  IN(["Raised by<br/>anyone: incident, exception, stop, finding, change"]):::iface --> P
+  P["Plan<br/>owner, due date, action"] --> D["Do<br/>handled where the governing section says"] --> C["Check<br/>monthly Steering review until closed"] --> A["Act<br/>close or escalate"] --> P
+  A --> OUT(["To above<br/>lessons into the Standards, the AI Policy, and the yearly review"]):::iface
+  classDef iface fill:#e8eefc,stroke:#5a6fa8,color:#111
+```
+
+Figure 6: the event loop.
+
+In practice, an AI Incident is handled in the incident management of the Bank, with the AICC Lead as a stakeholder, and the record in the Risks and Issues points to its ticket. An Exception is decided by the Control Function concerned, and a stop is final.
+
+### Reporting
+
+6.10. Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The Control Functions stand beside it, independent of AICC. Internal audit gives independent assurance over the Portfolio and over AICC.
 
 ## 7. Records and evidence
 
 7.1. The live state of the work is the working state: the backlogs, the boards, the Roadmap, the Calendar, the Dependency Map, the Dashboard, the Teams, and the Program Increment folder. 
 
-7.2. The evidence records shall always be kept in the Registry. An evidence record is a closed and dated extract, taken when an event happens, such as a portfolio Decision, an approval, a sign-off, an acceptance, an high-impact incident, or an appointment. It states what happened, who decided or acted, on which facts, and where the live item is.  Jira, Confluence, and Service Management are not an evidence store.
+7.2. The evidence records shall always be kept in the Registry. An evidence record is a closed and dated extract, taken when an event happens, such as a portfolio Decision, an approval, a sign-off, an acceptance, a high-impact incident, or an appointment. It states what happened, who decided or acted, on which facts, and where the live item is.  Jira, Confluence, and Service Management are not an evidence store.
 
 7.3. The Registry also keeps living records that are current by nature: the Priorities, the Standards, the Risks and Issues, the AI Registry, and the Appointments. The Solution Definitions are living records in the Portfolio, and each Registry Snapshot records their state, Risk Tier, and release, which makes the Snapshot their evidence. The README of the Registry lists all the Records by class.
 
@@ -222,8 +266,8 @@ Figure 3: the handling of an event.
 | C-02 | Priorities, funding, and guardrails | Charter 4 | Executive Sponsor | Yearly, and on change | Priorities; Decision Record | Decision Record |
 | C-03 | The yearly review of the risk appetite and the policy | Charter 5.4 | AICC Lead | Yearly, and on an extra review | Decision Record | Decision Record |
 | C-04 | Review of the documents | Document Catalog 7 | AICC Lead | Yearly, and when the meaning changes | Decision Record of the check | Decision Record |
-| C-05 | Monthly review of progress, risks, and blockers, with a sample of the AICC Lead's Decisions | 6.2 | Executive Sponsor | Monthly | Steering Summary | Steering Summary |
-| C-06 | Results, risk check, and Maturity Level | 6.2; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot |
+| C-05 | Monthly review of progress, risks, and blockers, with a sample of the AICC Lead's Decisions | 6.7 | Executive Sponsor | Monthly | Steering Summary | Steering Summary |
+| C-06 | Results, risk check, and Maturity Level | 6.6; Charter 7 | Executive Sponsor | Quarterly | Quarterly Report; Registry Snapshot | Quarterly Report; Registry Snapshot |
 | C-07 | Report to the Board Committee | Charter 7.2 | AICC Lead prepares; Executive Sponsor approves and issues | Quarterly | Quarterly Report, with its issuance block | Quarterly Report |
 | C-08 | Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
 | C-09 | Approval of the business case | Portfolio Management Model 6.3, 6.4; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail or across Domains; the Control Function Contacts clear it | When the Initiative is approved | Initiative Brief, complete in its six sections, with the clearances; Decision Record | Initiative Brief |
@@ -246,31 +290,14 @@ Figure 3: the handling of an event.
 | C-26 | Access review of the Registry and the tools | 7.6 | AICC Lead; the keeper of each tool | Quarterly | Steering Summary | Steering Summary |
 | C-27 | Acceptance of a risk beyond the appetite | Charter 5.4; 5.4 | Executive Sponsor | When it arises | Decision Record; the report to the Board Committee | Decision Record |
 | C-28 | Reassessment of the Risk Tier and expiry of a validation | AI Policy 3.3, 3.4 | AICC Lead | On a change, and by the date in the AI Registry | AI Registry; Control Sign-Off | Control Sign-Off |
-| C-29 | Review of live Solutions | AI Policy 3.5; Solution Lifecycle Model 7.4 | Domain Owner | Each IT Review and Demo | Solution Definition | Solution Definition |
+| C-29 | Review of live Solutions | AI Policy 3.5; Solution Lifecycle Model 7.4 | Domain Owner | Each Iteration Review and Demo | Solution Definition | Solution Definition |
 | C-30 | Change to a released Solution | Solution Lifecycle Model 7.3 | AICC Lead decides; Domain Owner, or Executive Sponsor for Risk Tier 3, releases | When a change is made | The Feature with its change ticket; Solution Definition; Decision Log for an emergency change | Solution Definition |
 | C-31 | Retirement of a Solution | Solution Lifecycle Model 7.5 | Domain Owner; Executive Sponsor for a Service across Domains | When a Solution is retired | Solution Definition; AI Registry | Solution Definition |
 | C-32 | Deficiencies and findings | 8.2 | AICC Lead; Executive Sponsor reviews | When found, and monthly until closed | Risks and Issues; Steering Summary | Steering Summary |
 
 8.2. A control that did not operate, and each finding of an audit or a supervisor, shall be entered in the Risks and Issues Record with an owner and a due date, and the monthly Steering shall review it until it is closed.
 
-Figure 4 shows the states of an item of the Risks and Issues Record. An AI Incident, an Exception, a finding, a risk, and an issue follow the same states.
-
-```mermaid
-stateDiagram-v2
-  [*] --> Raised
-  Raised --> Owned: owner and due date
-  Owned --> Handled: contained or decided
-  Handled --> Reviewed: reviewed at the monthly Steering
-  Reviewed --> Closed: closed
-  Reviewed --> Owned: not resolved
-  Owned --> Expired: Exception reaches its expiry
-  Expired --> [*]
-  Closed --> [*]
-```
-
-Figure 4: the life of an item of the Risks and Issues Record.
-
-8.3. Each control follows the cycle of Figure 5: a trigger, a decision at the level that this Operating Model names, a record, and a review. The Control Matrix gives each control one of four statuses, which Figure 6 shows: Operating, Open, No occurrence yet, or Not yet due.
+8.3. Each control follows the cycle of Figure 7: a trigger, a decision at the level that this Operating Model names, a record, and a review. The Control Matrix gives each control one of four statuses, which Figure 8 shows: Operating, Open, No occurrence yet, or Not yet due.
 
 ```mermaid
 flowchart LR
@@ -285,7 +312,7 @@ flowchart LR
   K --> T
 ```
 
-Figure 5: the cycle of a control.
+Figure 7: the cycle of a control.
 
 ```mermaid
 stateDiagram-v2
@@ -301,7 +328,7 @@ stateDiagram-v2
   Deficiency --> Operating: closed in Risks and Issues
 ```
 
-Figure 6: the status of a control in the Control Matrix.
+Figure 8: the status of a control in the Control Matrix.
 
 ## Change log
 
@@ -352,3 +379,4 @@ Figure 6: the status of a control in the Control Matrix.
 | 10.5 | 2026-10-01 | The Portfolio Management Model separates the portfolio layer; the business case is approved under it. | DR-2026-044 |
 | 10.6 | 2026-10-01 | The Control Function Contacts clear a business case that expects Risk Tier 2 or 3; C-09 names the clearance. | DR-2026-045 |
 | 10.7 | 2026-10-01 | Citations of the Portfolio Management Model follow its new numbering. | DR-2026-047 |
+| 10.8 | 2026-10-01 | The five control loops (section 6); Iteration written in full; citations follow the new numbering. | DR-2026-048 |

@@ -1,10 +1,10 @@
 # IP week: 2026-PIQ4
 
-The results of the events of the last week of the Program Increment (2026-PIQ4 IT12W4, 21 to 25 December 2026).
+The results of the events of the last week of the Program Increment (2026-PIQ4 I12W4, 21 to 25 December 2026).
 
 ## PI Review and Demo
 
-What the Program Increment delivered, the business value achieved against the PI Objectives (objectives.md), the acceptances, and the quarterly risk check. The AICC Lead writes the Quarterly Report from it (reports/).
+What the Program Increment delivered, the business value achieved against the PI Objectives (objectives.md) and the acceptances. The AICC Lead writes the Quarterly Report from it (reports/).
 
 ## Inspect and Adapt
 
@@ -16,4 +16,4 @@ The intent and direction, the Roadmap, and the Dependencies agreed for the next 
 
 ## Quarterly Steering
 
-The Decisions of the Executive Sponsor: priorities, funding, and the Maturity Level reached (decision-log.md).
+The Decisions of the Executive Sponsor: the decision on each Active Initiative (continue, pivot, defer, or reject), the quarterly risk check, the corrective actions, the Maturity Level reached, and the report to the Board Committee (decision-log.md). As the first Steering of the year it also sets the Strategic Priorities, the Envelopes, and the Guardrails.

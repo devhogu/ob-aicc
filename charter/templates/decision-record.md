@@ -2,7 +2,7 @@
 id: AICC-TPL-08-EN
 title: Decision Record
 status: active
-revision: 1.2
+revision: 1.3
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -16,7 +16,7 @@ revised: 2026-10-01
 | Identifier | DR-[yyyy]-[nnn] |
 | Title | [verb and subject] |
 | Date | [date] |
-| Type | [Decision / activation / appointment / delegation / Data Sharing Arrangement / Exception / approval of output / cutover] |
+| Type | [Decision / activation / appointment / delegation / Data Sharing Arrangement / Exception / approval of output / cutover / business case approval / decision after the MVP] |
 | Level | [AICC Lead / Executive Sponsor / Domain Owner] |
 | Decided by | [Role and name] |
 | Status | [Decided / Superseded / Revoked] |

@@ -4,7 +4,7 @@
 | --- | --- |
 | Identifier | INI-001 |
 | Title | Charter corpus readiness |
-| State and Stage | Active: Implementation |
+| State and Stage | Active: Implementation, in development mode |
 | Strategic Priority | None: enabling work of AICC |
 | Domain Owner (represents the client function) | AICC Lead, for the work of AICC itself (Operating Model 4.6) |
 | Solutions expected | None: enabling work, with Capabilities under the Initiative and no Solution |
@@ -21,7 +21,7 @@
 | 3. Scope and the minimum viable product | Scoping | Complete |
 | 4. Cost, capacity, and value | Business case | Complete |
 | 5. Risks, dependencies, and Risk Tier | Business case | Complete |
-| 6. Decision and acceptance | Business case | Open: the approval of the Executive Sponsor |
+| 6. Decision and acceptance | Business case | Open: approved at the baseline of the charter |
 
 ## 1. Hypothesis
 
@@ -61,7 +61,7 @@ Dependencies: an independent person to check the documents [ named by the Execut
 
 ## 6. Decision and acceptance
 
-Business case: [ Approved by the Executive Sponsor, as the client of enabling work, with the date and the Decision Record ]
+Business case: the charter is in development mode, and the work runs under the AICC Lead. The Executive Sponsor, as the client of enabling work, approves the business case when the charter is baselined [ with the date and the Decision Record ].
 
 Acceptance on delivery: the Executive Sponsor, because it is enabling work of AICC. Acceptance closes the item.
 

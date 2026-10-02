@@ -2,7 +2,7 @@
 id: AICC-MND-02-EN
 title: AICC Charter
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -53,7 +53,7 @@ revised: 2026-10-01
 
 7.1. AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, and the value scored for the PI Objectives, the number of Domains and employees using approved Solutions, and the number of AI Incidents and control breaches. The Measures of the Maturity Levels are in the Statement of Intent, and their targets are set by the Executive Sponsor each year.
 
-7.2. The AICC Lead shall report each quarter in the Quarterly Report, which goes to the next quarterly Steering. The AICC Lead prepares the report to the Board Committee from it each quarter, and the Executive Sponsor approves and issues it. Each figure in it traces to a Record or a governed source, with its date. The Executive Sponsor tells the Board Committee of a High Severity AI Incident and of any risk accepted beyond the AI Risk Appetite Statement without waiting for the next report. Internal audit provides independent assurance.
+7.2. The AICC Lead shall report each quarter in the Quarterly Report, which goes to the next quarterly Steering. The AICC Lead prepares the report to the Board Committee from it each quarter, and the Executive Sponsor approves and issues it. Each figure in it traces to a Record or a governed source, with its date. The Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major and of any risk accepted beyond the AI Risk Appetite Statement without waiting for the next report. Internal audit provides independent assurance.
 
 ## Change log
 
@@ -76,3 +76,4 @@ revised: 2026-10-01
 | 1.5 | 2026-10-01 | The mission points to the Business Model; the Executive Sponsor owns the budget of AICC; measures aligned. | DR-2026-031 |
 | 1.6 | 2026-10-01 | Clause 5.2 reworded to state the levels of accepted risk; no change of meaning. | none |
 | 2.0 | 2026-10-01 | The Charter is of the Bank: the Group and the Entities are removed; Data Sharing Arrangement replaces Group Arrangement; clauses 5 and 6 reworded. | DR-2026-036 |
+| 2.1 | 2026-10-01 | The Board Committee is told of an AI Incident that the incident management of the Bank classifies as major. | DR-2026-048 |

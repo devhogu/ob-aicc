@@ -1,6 +1,6 @@
 # Appointments
 
-This is the Appointments Record, in the form of the Appointments Record Template. It maps the Roles of the charter to real people. It is the only Record that names the Holders of the Roles, and it holds their names and posts, and their declarations, consents, and access, and no other personal data. Part C is append-only. One person may hold several Roles; each is in its own row. The names live here and not in the charter. A bracketed comment states what is expected in an open place.
+This is the Appointments Record, in the form of the Appointments Record Template. It maps the Roles of the charter to real people. It is the Record that names the Holders of the Roles, and it holds their names and posts, and their declarations, consents, and access, and no other personal data. Part C is append-only. One person may hold several Roles; each is in its own row. The names live here and not in the charter. A bracketed comment states what is expected in an open place.
 
 ## Part A. The map
 
@@ -15,7 +15,7 @@ This is the Appointments Record, in the form of the Appointments Record Template
 | Domain Expert | Each Domain | [ The practitioner the Domain Owner names to work with the Team ] | | | | | Domain Owner | |
 | Checker | Each Risk Tier 1 Solution | [ A person who did not build the Solution, named for each Solution ] | | | | | AICC Lead | |
 
-The heads of the functions of the AI Steering Committee are named when the Committee convenes. Until then the Executive Sponsor decides alone (Operating Model 6.4).
+The heads of the functions of the AI Steering Committee are named when the Committee convenes. Until then the Executive Sponsor decides alone (Operating Model 6.2).
 
 | Function | Holder | Deputy | Status | From | To | Decision Record |
 | --- | --- | --- | --- | --- | --- | --- |

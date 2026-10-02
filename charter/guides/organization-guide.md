@@ -14,10 +14,10 @@ AICC is an internal consulting and innovation lab. It reports to the Executive S
 | --- | --- | --- | --- | --- | --- |
 | Executive Sponsor | Holds the mandate and the funding | Appoints the AICC Lead; sets the Strategic Priorities, the Envelopes, and the Guardrails; approves published output; reports to the Board Committee | Priorities, funding, the release of a Risk Tier 3 Solution, risks beyond appetite, the retirement of an Initiative | The line of the Bank | Executive management |
 | AICC Lead | Leads AICC as lead engineer and architect | Owns every document and Record; takes items in; issues Service Agreements and Outcome Reports; assigns and reassesses the Risk Tier; sets the training; leads the AI Incident review; prepares the Quarterly Report, with the concentration on one provider | Intake, standards, Templates, Capabilities, activation of documents, the approval of the use of a Solution in AICC for a data class | The Executive Sponsor | Engineering and architecture, delivery, and governance |
-| Solution Engineer | Owns a Solution end to end with the Domains | Designs the architecture, builds, deploys, and runs a Solution, checks the work of others, coaches Domain Experts, and keeps work visible | How a Solution is designed and built; the approval of Features at IT Planning | The AICC Lead for AICC; otherwise the own line | Engineering |
-| Domain Owner | Owns the results of AI adoption in a Domain | Names the Domain Expert; approves the business case and the Solution Definition; approves the data classes; releases; accepts; confirms the benefit; owns oversight in operation, disclosure, and contestability, and reviews monitoring and provider notices at each IT Review and Demo | Participation, funding, release for Risk Tier 1 and 2, acceptance | The line of the Domain | Business ownership |
+| Solution Engineer | Owns a Solution end to end with the Domains | Designs the architecture, builds, deploys, and runs a Solution, checks the work of others, coaches Domain Experts, and keeps work visible | How a Solution is designed and built; the approval of Features at Iteration Planning | The AICC Lead for AICC; otherwise the own line | Engineering |
+| Domain Owner | Owns the results of AI adoption in a Domain | Names the Domain Expert; approves the business case within a Domain and below a guardrail, and the Solution Definition; approves the data classes; releases; accepts; confirms the benefit; owns oversight in operation, disclosure, and contestability, and reviews monitoring and provider notices at each Iteration Review and Demo | Participation, funding, release for Risk Tier 1 and 2, acceptance | The line of the Domain | Business ownership |
 | Domain Expert | Early adopter and partner in a Domain | Explains the routine work, tries the Solution, scales adoption | None on funding, acceptance, or control | The line of the Domain | The routine work of the Domain |
-| Control Function Contact | Advises, validates, and may stop | Raises the Risk Tier within the remit; validates; decides Exceptions | Validation, a stop, and an Exception within the remit | The Control Function | The remit of the function |
+| Control Function Contact | Advises, validates, and may stop | Raises the Risk Tier within the remit; clears a business case that expects Risk Tier 2 or 3; validates; decides Exceptions | The clearance of a business case, validation, a stop, and an Exception within the remit | The Control Function | The remit of the function |
 | Platform Owner | Provides and operates the AI Platform | Meets the requirements in the Standards; keeps the evidence | The design of the platform within the requirements | The technology line | Platform engineering |
 
 One person may hold several Roles, within the rules of separation. A Hat, such as keeper of a backlog or facilitator of the events, is a duty that the team takes for a time and is not a Role.
@@ -33,14 +33,17 @@ R means responsible, A accountable, C consulted, and I informed. Each activity h
 | Own and review the AI Risk Appetite Statement | C | C | A | | | | C | |
 | Activate and change the documents | I | | A | | | | | |
 | Take an item into discovery | | | A | | C | | | |
-| Approve the business case, below a guardrail and within a Domain | I | | R | | A | C | C | |
-| Approve the business case, above a guardrail or across Domains | A | C | R | | C | | | |
+| Approve the business case, below a guardrail and within a Domain; the Control Function Contacts clear it when Risk Tier 2 or 3 is expected | I | | R | | A | C | R | |
+| Approve the business case, above a guardrail or across Domains; the Control Function Contacts clear it when Risk Tier 2 or 3 is expected | A | C | R | | C | | R | |
+| Rank the Initiatives, and take one into its MVP | | C | A | | C | | | |
+| Decide after the MVP, within a Domain and below a guardrail | I | | R | R | A | C | | |
+| Decide after the MVP, above a guardrail or across Domains | A | C | R | R | C | | | |
 | Issue the Service Agreement | | | A | R | C | | | |
-| Define the Solution, and approve its Solution Definition | | | R | C | A | C | C | |
+| Define the Solution, and approve its Solution Definition | | | C | R | A | C | C | |
 | Assign the Risk Tier | | | A | | I | | C | |
 | Approve the use of a Solution in a Domain for a data class | | | R | R | A | | C | |
 | Approve a Capability | | | A | | C | | | |
-| Approve a Feature at IT Planning | | | C | A | C | C | | |
+| Approve a Feature at Iteration Planning | | | C | A | C | C | | |
 | Check a Risk Tier 1 Solution, by the Checker | | | A | | | | | |
 | Validate a Risk Tier 2 or 3 Solution | | | C | C | I | | A | |
 | Release a Solution, Risk Tier 1 or 2 | | | C | R | A | | C | |
@@ -84,7 +87,7 @@ The rules of separation apply to every appointment: nobody validates or checks w
 
 ## 7. Records and evidence
 
-The charter holds the rules, and Jira and Confluence run the live work. The Registry holds the evidence records as closed and dated extracts, taken when an event happens and at the close of each IT and PI. Jira, Confluence, and Service Management are not an evidence store. The Registry is kept in a repository with a protected main branch, its history is not rewritten, and each Record is kept for the period that the Bank requires for its type. Personal data in the Registry is limited to the names and the posts of Holders. The Operating Model 8 lists the controls and the record that evidences each.
+The charter holds the rules, and Jira and Confluence run the live work. The Registry holds the evidence records as closed and dated extracts, taken when an event happens and at the close of each Iteration and PI. Jira, Confluence, and Service Management are not an evidence store. The Registry is kept in a repository with a protected main branch, its history is not rewritten, and each Record is kept for the period that the Bank requires for its type. Personal data in the Registry is limited to the names and the posts of Holders. The Operating Model 8 lists the controls and the record that evidences each.
 
 ## 8. Audit and HR reference
 
@@ -107,11 +110,11 @@ The expectations below are general practice of internal audit and HR in a bank, 
 | Vendor and provider records | AI Policy 4 | Control Sign-Off of the provider check | None |
 | AI inventory | AI Policy 2.1, 3 | AI Registry | [ The AI Registry holds every known AI use with its Risk Tier once the AICC Lead has listed them; HR and audit see the list when it is complete ] |
 | Segregation of duties | Operating Model 4.4 | The Appointments Record | [ Accepted limits are in Part B of the Appointments Record, each with its compensating control; any other combination that a small team needs is listed there too ] |
-| Access to the tools, and its review | Operating Model 7.5 | The Appointments Record, Part E | None |
+| Access to the tools, and its review | Operating Model 7.6 | The Appointments Record, Part E | None |
 | Audit access and follow-up | Operating Model 7.5 | Findings in Risks and Issues | [ The named contact of internal audit, entered in the Appointments Record ] |
 | Retention and integrity | Operating Model 7.4 | The Registry itself | [ The retention period of each type of Record, as the record retention rules of the Bank require ] |
 | Role-based objectives tied to appraisal | None | None | [ HR decides whether the Roles carry objectives tied to appraisal, and how ] |
 
 ## 9. Rule source
 
-Charter 3 to 7; Business Model 3 and 7; Operating Model 2, 4, 5, 6, 7, 8; AI Policy 2 to 7; Document Catalog; the Unit governance workflow.
+Charter 3 to 7; Business Model 3 and 7; Operating Model 2, 4, 5, 6, 7, 8; AI Policy 2 to 6; Document Catalog; the Unit governance workflow.

@@ -9,7 +9,7 @@ revised: 2026-10-01
 
 # Service Agreement
 
-**Template.** Copy for each Engagement. The AICC Lead issues it, and the Domain Owner and the stakeholders are notified. It is a form of agile working agreement and not a legal document, and it needs no signature chain. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. It carries no figures of the Bank, no data, and no code. Keep it to one page. It is reviewed at each IT, and each change is noted at the end.
+**Template.** Copy for each Engagement. The AICC Lead issues it, and the Domain Owner and the stakeholders are notified. It is a form of agile working agreement and not a legal document, and it needs no signature chain. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. It carries no figures of the Bank, no data, and no code. Keep it to one page. It is reviewed at each Iteration, and each change is noted at the end.
 
 ## Part A. The commitment
 
@@ -32,11 +32,11 @@ revised: 2026-10-01
 | --- | --- |
 |  |  |
 
-**Capacity per IT.** [Days per IT for AICC.]
+**Capacity per Iteration.** [Days per Iteration for AICC.]
 
 **Assumptions.** [What AICC relies on from the function, such as the expert, the access, and the data. If one fails, AICC re-plans the scope and the dates.]
 
-**Check-in and end.** [The check-in at each IT. Either side may end or redirect the Engagement at the end of an IT. The end is the Outcome Report, or the sunset rule for a Service.]
+**Check-in and end.** [The check-in at each Iteration. Either side may end or redirect the Engagement at the end of an Iteration. The end is the Outcome Report, or the sunset rule for a Service.]
 
 ## Part B. The working agreement
 
@@ -51,6 +51,6 @@ revised: 2026-10-01
 
 ## Changes
 
-| Date | IT | Change | Why |
+| Date | Iteration | Change | Why |
 | --- | --- | --- | --- |
 |  |  |  |  |

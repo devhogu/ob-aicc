@@ -1,8 +1,6 @@
 # AICC
 
-The AI Competence Center of O!Bank Kyrgyzstan. This repository is the source of truth for its governance, its records, and its
-portal. Its content holds no figures of the Bank, no data, no documents of the functions, and no code. It is private, and its
-content is promoted to the portal and to the corporate folder when it is ready.
+The AI Competence Center of O!Bank Kyrgyzstan. This repository is the source of truth for its governance, its records, and its portal. Its content holds no figures of the Bank, no data, no documents of the functions, and no code. It is private, and its content is promoted to the portal and to the corporate folder when it is ready.
 
 | Folder | Holds | Promoted to |
 | --- | --- | --- |

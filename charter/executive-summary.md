@@ -16,7 +16,7 @@ AICC commits to each Engagement in a Service Agreement, which states the outcome
 
 ## 4. Flow of work
 
-A business need becomes an Initiative with a business case. An Initiative delivers Solutions, and a Solution is delivered through monthly Iterations and quarterly Program Increments. Product owner accepts the delivered outcome. Source: Portfolio Management Model; Solution Lifecycle Model 3 to 7.
+A business need enters the funnel and becomes an Initiative with a business case, which the Control Function Contacts clear when a higher Risk Tier is expected. The approved Initiative waits in the ranked Portfolio Backlog, and when it is taken into work its first Solution is tried as a minimum viable product. The approver then decides to continue, pivot, defer, or reject. An Initiative that continues delivers Solutions through Capabilities and Features in monthly Iterations and quarterly Program Increments, and the product owner accepts the delivered outcome. Source: Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 7.
 
 ## 5. Decisions and authority
 
@@ -24,7 +24,7 @@ The person who does the work decides on the facts. A decision goes to the AICC L
 
 ## 6. Risk and control
 
-Three Risk Tiers set the checks that a Solution passes before it reaches users. The Executive Sponsor holds the Steering monthly and quarterly, and reports each quarter to the Board Committee. Internal audit has read access to the records and gives assurance only. The controls that can be tested are listed in the Operating Model 8 and kept in the Control Matrix. Source: AI Policy 3; Operating Model 6 and 8; AICC Charter 7.
+Three Risk Tiers set the checks that a Solution passes before it reaches users. The Executive Sponsor holds the Steering monthly and quarterly, runs the control and the portfolio on loops of Plan, Do, Check, and Act, and reports each quarter to the Board Committee. Internal audit has read access to the records and gives assurance only. The controls that can be tested are listed in the Operating Model 8 and kept in the Control Matrix. Source: AI Policy 3; Operating Model 6 and 8; AICC Charter 7.
 
 ## 7. Records
 

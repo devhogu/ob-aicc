@@ -41,6 +41,8 @@ The baseline and the target of each indicator are figures of the Bank. They are 
 
 ## 3. Scope and the minimum viable product
 
+The steps below are the plan of the MVP. They start when the business case is approved and cleared and the Initiative is taken from the Portfolio Backlog into work (Portfolio Management Model 5).
+
 AICC does the following.
 
 1. Agree with enterprise architecture a common way to describe a service, in layers: commercial portfolio, services, processes, organization, applications and data, and infrastructure.
@@ -58,7 +60,7 @@ Minimum viable product: The first functions and services mapped and reviewed by 
 
 Cost: the time of the AICC Lead. No other cost is stated.
 
-Capacity: [ The capacity in days per IT for the minimum viable product, within the capacity available (Business Model 7.1), and the estimate for the full scope ]
+Capacity: [ The capacity in days per Iteration for the minimum viable product, within the capacity available (Business Model 7.1), and the estimate for the full scope ]
 
 Investment Envelope: [ The Investment Envelope of the Strategic Priority, by reference to the financial planning of the Bank, set with the Guardrails ]
 

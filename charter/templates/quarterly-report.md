@@ -2,7 +2,7 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: active
-revision: 2.4
+revision: 2.5
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -46,13 +46,13 @@ revised: 2026-10-01
 
 ## 6. Portfolio and Adopted Solutions
 
-[The Solutions by type and state, the Initiatives by state, and the Adopted Solutions that others deliver, with what works.]
+[The Solutions by type and state, the Initiatives by step of the portfolio Kanban, and the Adopted Solutions that others deliver, with what works. For each Active Initiative: its leading indicators against the plan, the benefit that the Domain Owner confirms, and the decision of the quarter (continue, pivot, defer, or reject).]
 
 ## 7. Risks, AI Incidents, and Exceptions
 
 [From the Risks and Issues Record: open items by Severity, and the AI Incidents and Exceptions of the quarter.]
 
-[Position against the AI Risk Appetite Statement and any risk accepted beyond it. Concentration of the Bank on one provider.]
+[Position against the AI Risk Appetite Statement and any risk accepted beyond it. Concentration of the Bank on one provider and reliance on the Platform Owner. The Risk Tier reassessments that are due, the result of the access review, and the reconciliation of the AI Incidents with the incident management of the Bank.]
 
 ## 8. Decisions needed
 

@@ -2,7 +2,7 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: active
-revision: 2.4
+revision: 2.5
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -54,7 +54,7 @@ revised: 2026-10-01
 
 3.4. A change that raises the Risk Tier, or that the check or the validation named as requiring a new check, returns the Solution to discovery for the checks that the change touches. A validation states the date until which it is valid and the changes that require a new one. Use continues unless the AICC Lead or a Control Function Contact suspends it, except that a Solution whose Risk Tier rises to 3 shall not be used beyond its first users until the Executive Sponsor releases it.
 
-3.5. The Solution Engineer shall meet the requirements for the design of human oversight, testing, and logging. The Domain Owner shall meet those for oversight in operation, disclosure, and contestability. The Platform Owner shall provide logging and monitoring. The Control Function Contacts check them at validation. The AICC Lead reassesses the Risk Tier, the Domain Owner reviews monitoring and provider notices at each IT Review and Demo, and the AICC Lead sets the training and notes the owners of knowledge sources in the AI Registry. For Risk Tier 2 and 3 the validation replaces the check. A condition of a validation may state what the Solution shall not be used for.
+3.5. The Solution Engineer shall meet the requirements for the design of human oversight, testing, and logging. The Domain Owner shall meet those for oversight in operation, disclosure, and contestability. The Platform Owner shall provide logging and monitoring. The Control Function Contacts check them at validation. The AICC Lead reassesses the Risk Tier, the Domain Owner reviews monitoring and provider notices at each Iteration Review and Demo, and the AICC Lead sets the training and notes the owners of knowledge sources in the AI Registry. For Risk Tier 2 and 3 the validation replaces the check. A condition of a validation may state what the Solution shall not be used for.
 
 ## 4. AI from providers
 
@@ -108,3 +108,4 @@ revised: 2026-10-01
 | 2.2 | 2026-10-01 | AI Incidents are handled in the incident management of the Bank; the IT function operates, and the AICC Lead is a stakeholder; AICC sets no severity scale or time limit of its own. | DR-2026-039 |
 | 2.3 | 2026-10-01 | No change of rule; the Acceptance Checklist is recorded in the Solution Lifecycle Model. | DR-2026-041 |
 | 2.4 | 2026-10-01 | A Solution whose Risk Tier rises to 3 waits for the release of the Executive Sponsor. | DR-2026-042 |
+| 2.5 | 2026-10-01 | Iteration written in full. | DR-2026-048 |

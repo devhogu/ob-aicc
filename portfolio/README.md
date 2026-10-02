@@ -7,4 +7,4 @@ The Portfolio lists and defines the Solutions that AICC delivers or oversees for
 | [solutions/](solutions/SOL-001-fpa-board-reporting-pipeline.md) | One Solution Definition for each Solution, from the Solution Definition Template, with its type (Service, Product, or Experiment), its receiver, and its state |
 | adopted-solutions/ | One entry for each Adopted Solution: a Solution that others deliver, which AICC oversees. Created with the first one |
 
-The catalog follows the states and Stages of the Operating Model. A Solution Definition is created when a Solution is proposed and is kept current by the AICC Lead.
+The catalog follows the states and Stages of the Solution Lifecycle Model 4 and of the Portfolio Management Model 5. A Solution Definition is created in the MVP of an Initiative by the Solution Engineer, and is kept current by the Solution Engineer and the AICC Lead.

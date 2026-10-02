@@ -2,30 +2,32 @@
 id: AICC-TPL-11-EN
 title: Registry Snapshot
 status: active
-revision: 1.2
+revision: 1.3
 created: 2026-10-01
 revised: 2026-10-01
 ```
 
 # Registry Snapshot
 
-**Template.** Taken by the AICC Lead at the close of each IT and each PI, and at the cutover, because Jira and Confluence are not an evidence store. It is a closed and dated extract of the working state. It carries no figures of the Bank, no data, and no code.
+**Template.** Taken by the AICC Lead at the close of each Iteration and each PI, and at the cutover, because Jira and Confluence are not an evidence store. It is a closed and dated extract of the working state. It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |
-| Identifier | SNP-[yyyy]-[PIQn]-[ITnn], or SNP-[yyyy]-[PIQn] for a PI close |
+| Identifier | SNP-[yyyy]-[PIQn]-[Inn], or SNP-[yyyy]-[PIQn] for a PI close |
 | Date | [date] |
-| Scope | [IT close / PI close / cutover, with the IT or PI] |
+| Scope | [Iteration close / PI close / cutover, with the Iteration or PI] |
 | Source | [the Jira query or the Registry file, with the version] |
 | Taken by | [name] |
 
 ## 1. State of the work
 
-| Level | Proposed | Discovery | Approved | Active | Review | Closed | Other |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Initiatives |  |  |  |  |  |  |  |
-| Capabilities |  |  |  |  |  |  |  |
-| Features |  |  |  |  |  |  |  |
+| Level | Proposed | Discovery | Approved | Active | Review | Closed | Deferred | Rejected | Other |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Initiatives |  |  |  |  |  |  |  |  |  |
+| Capabilities |  |  |  |  |  |  |  |  |  |
+| Features |  |  |  |  |  |  |  |  |  |
+
+For an Initiative the Discovery column is split into Reviewing and Analyzing in the notes, and the Active column into MVP and Implementation.
 
 ## 2. Changes since the last Snapshot
 
@@ -47,10 +49,10 @@ revised: 2026-10-01
 
 [For each Engagement: the client function, the Service Agreement, the Outcome Report if any, and the state.]
 
-## 4. Reconciliation
+## 6. Reconciliation
 
 [That the counts agree with the last Snapshot and the changes above.]
 
-## 5. Files exported
+## 7. Files exported
 
 [The backlogs, the boards, the Dependencies, and the Dashboard measures exported with this Snapshot, with their names.]

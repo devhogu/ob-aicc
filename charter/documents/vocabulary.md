@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 5.6
+revision: 5.7
 created: 2026-09-29
 revised: 2026-10-01
 ```
@@ -51,7 +51,7 @@ revised: 2026-10-01
 | AICC Lead | The Role of the lead engineer and architect of AICC, accountable for its way of working |  |
 | Solution Engineer | The Role of the person who owns a Solution end to end: designs it, decides its architecture, builds it, deploys it, and runs it with the Domain. The AICC Lead, or a person whom a function assigns to AICC, holds it | AI engineer, AI developer, AICC Engineer, forward deployed engineer |
 | AI Steering Committee | The heads of the business, technology, risk, and compliance functions, who advise the Executive Sponsor | SteerCo |
-| Steering | The meeting of the Executive Sponsor and the AI Steering Committee: monthly for tactical matters and quarterly for strategic matters |  |
+| Steering | The meeting of the Executive Sponsor and the AI Steering Committee. The monthly Steering carries the control loop and the portfolio sync, the quarterly Steering carries the assurance loop and the portfolio review, and the first quarterly Steering of the year carries the direction loop and the strategic loop |  |
 | Domain | A business function or a product line of the Bank | business unit, business line |
 | Product owner | The person who accepts a delivered outcome: the Domain Owner for an item of a Domain, and the Executive Sponsor for an item that spans Domains or is enabling work | |
 | Domain Owner | The Role that owns the results of AI adoption in a Domain and is the product owner of its Solutions | business owner |
@@ -89,8 +89,8 @@ revised: 2026-10-01
 | Work Item | A task of a Team within a Feature | ticket |
 | Portfolio Backlog | The ranked list of Initiatives |  |
 | Program Backlog | The ranked list of Capabilities and Features. Also called the PI Backlog | backlog (alone) |
-| IT Backlog | The Features that the Teams work on in one IT, tracked on the Program Kanban with priority lanes | sprint backlog |
-| Portfolio Kanban | The board of the Initiatives by state, from the funnel to done |  |
+| Iteration Backlog | The Features that the Teams work on in one Iteration, tracked on the Program Kanban with priority lanes | sprint backlog |
+| Portfolio Kanban | The board of the Initiatives by step: Funnel, Reviewing, Analyzing, Portfolio Backlog, MVP, Implementation, and Done, with Deferred, Rejected, and Pivoted off the flow |  |
 | Lean Portfolio Management (LPM) | The management of the portfolio on lean principles: the initiatives are tied to the strategy, the priorities are funded by an envelope and guardrails and not project by project, and decisions are taken in small steps on evidence. Its model is the Portfolio Management Model | |
 | Funnel | The Proposed state of an Initiative: an idea or a need not yet taken in | |
 | Minimum viable product (MVP) | A probe: the smallest version of the first Solution that is tried, to see whether it works and satisfies the need, and that tests the hypothesis of an Initiative against its leading indicators | |
@@ -99,10 +99,10 @@ revised: 2026-10-01
 | Lane | A class of service of the Program Kanban: Urgent, High priority, or Normal | swimlane (alone) |
 | Team | The people who deliver together: a Solution Engineer with the Domain Expert and the Domain Owner, who is the product owner | squad, pod |
 | Program Increment | One quarter of work, made of three Iterations; named PIQ1 to PIQ4 with the year. Short form: PI | release train |
-| Iteration | One calendar month of work of a Team, of four or five whole weeks, named IT01 to IT12, with a goal and an IT Backlog. A week belongs to the month that contains its Thursday. Short form: IT | sprint |
+| Iteration | One calendar month of work of a Team, of four or five whole weeks, named I01 to I12, with a goal and an Iteration Backlog. A week belongs to the month that contains its Thursday | sprint |
 | Innovation and Planning week | The last week of the third Iteration of a Program Increment, or the week before when it is blocked or gray, for the PI Review and Demo, Inspect and Adapt, PI Planning, the quarterly Steering, and innovation. Short form: IP week |  |
 | PI Objective | The intent and direction of the Teams for a Program Increment, with the business value scored by the Domain Owner. It is not a commitment of scope | goal, OKR |
-| Dependency | A need of one item from another item, Team, function, or person, by a stated IT |  |
+| Dependency | A need of one item from another item, Team, function, or person, by a stated Iteration |  |
 | Calendar | The Record of the Program Increments, the Iterations, the weeks, and the blocked and gray days |  |
 | Cadence | The workflow of the general flow of the events by week, without dates; the template of the dated calendar of events |  |
 | Blocked day, gray day | A blocked day is an official or expected non-working day. A gray day is a working day on which people are likely to be out. Events move to the working day before them |  |
@@ -110,7 +110,7 @@ revised: 2026-10-01
 | Operating portal | The portal of non-sensitive information on the services portfolio and the development efforts, for the internal consumers of AICC | |
 | Service portal | The portal of a Service, as a product resource separate from AICC | |
 | Dashboard | The Record of the state of the Program Increment, the flow, the Dependencies at risk, the risks, and the Measures |  |
-| Stage | A phase of the work inside the discovery or the active state of an item, specific to its level | gate |
+| Stage | A phase of the work inside the discovery or the active state of an item, specific to its level. A gate is the decision at the end of a step of the portfolio Kanban | |
 | Check | The review of work by a person other than the one who built or wrote it | peer review |
 | Checker | The person who performs a Check; for a Risk Tier 1 Solution, named in the Appointments Record |  |
 | Validation | The review by the Control Function Contacts that a Solution meets the requirements of its Risk Tier |  |
@@ -118,7 +118,7 @@ revised: 2026-10-01
 | Governed source | A source with a named owner and a review date |  |
 | Acceptance | The decision of the product owner that a delivered outcome meets its acceptance criteria; it is recorded with who and when | sign-off (of work) |
 | Release | The decision, before a Solution is used beyond its first users, to make it available | go-live |
-| Community of Practice | The sharing of practice among Domain Experts and engineers, held within the IT Review and Demo | guild |
+| Community of Practice | The sharing of practice among Domain Experts and engineers, held within the Iteration Review and Demo | guild |
 | Limit on Work in Progress | The most items allowed in a state, a lane, or a Domain at one time | WIP limit |
 | Risk Tier | The class of a Solution by risk: 1 Low, 2 Medium, or 3 High | risk level |
 | AI Registry | The Record of each Solution, model, and agent, with owner, scope, data access, Risk Tier, and reassessment date |  |
@@ -135,7 +135,7 @@ revised: 2026-10-01
 | Appointments Record | The living Record in the Registry that maps the Roles to real people, with the log of appointments, the declarations, and the access | assignment map |
 | Control Sign-Off | The evidence record of the decision of a Control Function Contact: a validation, a stop, an Exception, or a provider check | |
 | AI Incident Review | The evidence record of the review of one AI Incident | |
-| Registry Snapshot | The evidence record that closes an IT or a PI: the state of the working state at that date | |
+| Registry Snapshot | The evidence record that closes an Iteration or a PI: the state of the working state at that date | |
 | Dependency Map | The Record of what each item of a Program Increment needs from other items, Teams, functions, and persons | |
 | Roadmap | The Record of the three months: the current PI as intent and direction, the next as planned, the rest indicative, with its Milestones | |
 | Template | A form for a Record that needs one; it has a status and a revision, and a copy of it carries no metadata block | |
@@ -147,10 +147,10 @@ revised: 2026-10-01
 | Evidence record | A closed and dated extract in the Registry of an event: a Decision, an approval, a sign-off, an acceptance, an incident, or an appointment | |
 | Working state | The live state of the work: the backlogs, boards, Roadmap, Calendar, Dependency Map, Dashboard, Teams, and Program Increment folder. It moves to Jira and Confluence at the cutover | |
 | Light mode | The way AICC runs while the AICC Team has up to three people, with fewer events and a smaller set of states | |
-| Loop | A cycle that starts with planning and ends with review: the day, the week, the IT, and the PI | |
-| Review week | The last week of an IT | |
-| Short forms | PI is Program Increment, IT is Iteration, and IP is the Innovation and Planning week. PIQ1 to PIQ4 name the PIs of a year, IT01 to IT12 its ITs, and W1 to W5 the weeks of an IT |  |
-| Event | A meeting of a loop, with a stated intent: Daily Stand-up, Weekly Planning, Weekly Review, Backlog Refinement, IT Planning, IT Review and Demo, IT Retrospective, PI Review and Demo, Inspect and Adapt, PI Planning, Innovation, and Steering |  |
+| Loop | A cycle that starts with planning and ends with review: the day, the week, the Iteration, and the PI. The control loops of the Operating Model and the portfolio loops of the Portfolio Management Model are loops of Plan, Do, Check, and Act, which run on the events of these cycles | |
+| Review week | The last week of an Iteration | |
+| Short forms | PI is Program Increment, and IP is the Innovation and Planning week. PIQ1 to PIQ4 name the PIs of a year, I01 to I12 its Iterations, and W1 to W5 the weeks of an Iteration. Iteration is never shortened to IT, because IT means information technology |  |
+| Event | A meeting of a loop, with a stated intent: Daily Stand-up, Weekly Planning, Weekly Review, Backlog Refinement, Iteration Planning, Iteration Review and Demo, Iteration Retrospective, PI Review and Demo, Inspect and Adapt, PI Planning, Innovation, and Steering |  |
 | Steering Summary | The evidence record of one Steering: attendance, advice, Decisions, and actions | minutes |
 | Quarterly Report | The report of the AICC Lead at the PI Review on the Portfolio, benefits, risks, and Maturity Levels |  |
 | Finding | A deviation found by a check of the documents, by an audit, or by a supervisor |  |
@@ -225,3 +225,4 @@ revised: 2026-10-01
 | 5.4 | 2026-10-01 | Precedence lists the Solution Lifecycle Model; the states are moved by the Solution Lifecycle Model. | DR-2026-042 |
 | 5.5 | 2026-10-01 | Capability replaces Epic outside Jira; Lean Portfolio Management, Funnel, MVP, and Leading indicator defined; the MVP Stage; precedence lists the Portfolio Management Model. | DR-2026-044 |
 | 5.6 | 2026-10-01 | Rejected is a decision on the merits, including after the MVP; Cancelled is a withdrawal without one; Discovery is research and the MVP is a probe. | DR-2026-045 |
+| 5.7 | 2026-10-01 | Steering, Portfolio Kanban, Loop, and Stage aligned with the control loops and the portfolio loops; Iteration is never shortened. | DR-2026-048 |

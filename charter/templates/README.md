@@ -13,7 +13,7 @@ The forms of the records that AICC produces. A Template gives the form of a Reco
 | 7 | Steering Summary | [steering-summary.md](steering-summary.md) | Each Steering | `registry/steering/` |
 | 8 | Outcome Report | [outcome-report.md](outcome-report.md) | An Engagement ends | `registry/initiatives/` |
 | 9 | AI Incident Review | [ai-incident-review.md](ai-incident-review.md) | After an AI Incident is contained | `registry/incident-reviews/` |
-| 10 | Registry Snapshot | [registry-snapshot.md](registry-snapshot.md) | The close of an IT and a PI | `registry/snapshots/` |
+| 10 | Registry Snapshot | [registry-snapshot.md](registry-snapshot.md) | The close of an Iteration and a PI | `registry/snapshots/` |
 | 11 | Quarterly Report | [quarterly-report.md](quarterly-report.md) | Each quarter | `registry/reports/` |
 | 12 | Appointments Record | [appointments-record.md](appointments-record.md) | An appointment, acting designation, change, or relief | `registry/appointments.md` |
 | 13 | Proposal | [proposal.md](proposal.md) | A Solution is proposed for adoption at scale | `registry/proposals/` |

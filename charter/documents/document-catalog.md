@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 3.3
+revision: 3.4
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -46,8 +46,8 @@ revised: 2026-10-01
 | AICC-MND-01 | Statement of Intent on the Adoption of Artificial Intelligence | The intent, values, principles, and strategy of the Bank for AI | EN |
 | AICC-MND-02 | AICC Charter | Mission, authority, funding, risk appetite, offer, and measures of AICC | EN |
 | AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | EN |
-| AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the control loop, Records, and controls | EN |
-| AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, and stop: the strategic themes, the portfolio Kanban, the business case, and the MVP | EN |
+| AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the five control loops, Records, and controls | EN |
+| AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP | EN |
 | AICC-ORG-03 | Solution Lifecycle Model | How the work moves from the Program Backlog to the retirement of a Solution: levels and backlogs, states, cadence, verification, release, acceptance, and life-cycle management | EN |
 | AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN |
 | AICC-REF-01 | Vocabulary and Style | Terms and style | EN |
@@ -72,7 +72,7 @@ revised: 2026-10-01
 | 7 | AICC-TPL-04 Steering Summary | Each Steering, monthly or quarterly: attendance, advice, Decisions, and actions |
 | 8 | AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, the capacity, and the acceptance |
 | 9 | AICC-TPL-10 AI Incident Review | The review of each AI Incident |
-| 10 | AICC-TPL-11 Registry Snapshot | The closed extract of the working state at the close of each IT and PI, and at the cutover |
+| 10 | AICC-TPL-11 Registry Snapshot | The closed extract of the working state at the close of each Iteration and PI, and at the cutover |
 | 11 | AICC-TPL-05 Quarterly Report | The Quarterly Report, and the report to the Board Committee |
 | 12 | AICC-TPL-09 Appointments Record | The Roles mapped to people, the appointment log, the declarations, and the access |
 | 13 | AICC-TPL-12 Proposal | A Proposal to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy |
@@ -122,3 +122,4 @@ The identifiers keep the order of creation, and the table is in the order of use
 | 3.1 | 2026-10-01 | The Solution Lifecycle Model is added as the eighth document; the Operating Model is the governance and control model of the unit. | DR-2026-040 |
 | 3.2 | 2026-10-01 | The Acceptance Checklist Template. | DR-2026-041 |
 | 3.3 | 2026-10-01 | The Portfolio Management Model is added as the ninth document; the limit is nine. | DR-2026-044 |
+| 3.4 | 2026-10-01 | Descriptions of the Operating Model and the Portfolio Management Model; Iteration written in full. | DR-2026-048 |

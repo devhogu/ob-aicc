@@ -23,7 +23,7 @@ The Control Matrix keeps the state of every control of the Operating Model 8, by
 | C-06 | Results, risk check, and Maturity Level | None | Quarterly Report (`reports/`); Registry Snapshot (`snapshots/`) | Not yet due: first at the close of 2026-PIQ4 |
 | C-07 | Report to the Board Committee | None | Quarterly Report with its issuance block (`reports/`) | Not yet due; the Board Committee is not named (RI-010) |
 | C-08 | Service Agreement for an Engagement | None | Service Agreement (`initiatives/INI-nnn/`); Portfolio Backlog | Open: not issued for INI-002, 003, 004, 006, 007, 008 (RI-022) |
-| C-09 | Approval of the business case | None | Initiative Brief complete in its six sections, with the clearances of the Control Function Contacts; Decision Record | Not yet due: all Initiatives are in Scoping |
+| C-09 | Approval of the business case | None | Initiative Brief complete in its six sections, with the clearances of the Control Function Contacts; Decision Record | Not yet due: INI-001, the build of the charter, is in development mode and is approved when the charter is baselined; the other Initiatives are in Scoping |
 | C-10 | Outcome Report, acceptance, and confirmation of the benefit | None | Outcome Report (`initiatives/INI-nnn/`) | Not yet due |
 | C-11 | Capacity used and benefit confirmed | None | Quarterly Report section 4 | Not yet due |
 | C-12 | Risk Tier assignment | None | Solution Definition (`portfolio/solutions/`); AI Registry | Not yet due: SOL-001 is Proposed |
@@ -58,7 +58,7 @@ The Control Matrix keeps the state of every control of the Operating Model 8, by
 | Control Sign-Offs | `sign-offs/` | 0 |
 | AI Incident Reviews | `incident-reviews/` | 0 |
 | Exceptions | `risks-and-issues.md` | 0 |
-| Registry Snapshots | `snapshots/` | 0; the first is due at the close of IT10 |
+| Registry Snapshots | `snapshots/` | 0; the first is due at the close of I10 |
 | Service Agreements | `initiatives/` | 0 |
 | Outcome Reports | `initiatives/` | 0 |
 | Appointments | `appointments.md` Part C | 0 entries |

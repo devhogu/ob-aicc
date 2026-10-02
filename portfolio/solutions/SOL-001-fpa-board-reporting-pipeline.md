@@ -1,5 +1,7 @@
 # Solution Definition: SOL-001 FP&A Board reporting pipeline
 
+Draft. The Solution Engineer completes it in the MVP of INI-004, once the business case is approved and cleared (Portfolio Management Model 7.1).
+
 | Field | Entry |
 | --- | --- |
 | Identifier | SOL-001 |

@@ -1,6 +1,6 @@
 # Dependency Map
 
-For each item of the Program Increment: its intent, what it needs from other items, Teams, functions, and persons (most of it is outside AICC), and its scope by month. The scope by month is decided at IT Planning and changes with the Dependencies. It is reviewed in the Weekly Review. Status of a Dependency: Open, Met, or At risk.
+For each item of the Program Increment: its intent, what it needs from other items, Teams, functions, and persons (most of it is outside AICC), and its scope by month. The scope by month is decided at Iteration Planning and changes with the Dependencies. It is reviewed in the Weekly Review. Status of a Dependency: Open, Met, or At risk.
 
 ## 1. Dependencies
 
@@ -19,13 +19,13 @@ For each item of the Program Increment: its intent, what it needs from other ite
 | DEP-011 | INI-007 Retail credit | Access to mortgage rejection data and its data class; the controls | Retail credit; data protection; model risk (RI-014) | before any analysis | Open |
 | DEP-012 | INI-008 Knowledge bases | The list of functions and the knowledge they hold | INI-002 | when the first base is chosen | Open |
 | DEP-013 | INI-008 Knowledge bases | Source documents with an owner and a review date | The function that owns each base | for each base | Open |
-| DEP-014 | Any Risk Tier 2 or 3 Solution | Validation by the Control Function Contacts | Control Functions (RI-008, RI-014) | before the first deployment | At risk |
+| DEP-014 | Any Initiative that expects Risk Tier 2 or 3, and its Solution | The clearance of the business case, and the validation by the Control Function Contacts | Control Functions (RI-008, RI-014) | before the business case is approved, and before the first deployment | At risk |
 
 ## 2. Scope of each item by month
 
-The scope of the PIQ4 items for each Iteration. It is set at IT Planning, and is intent until then.
+The scope of the PIQ4 items for each Iteration. It is set at Iteration Planning, and is intent until then.
 
-| Item | 2026 IT10 (Oct) | 2026 IT11 (Nov) | 2026 IT12 (Dec) |
+| Item | 2026 I10 (Oct) | 2026 I11 (Nov) | 2026 I12 (Dec) |
 | --- | --- | --- | --- |
 | INI-002 Service landscape | | | |
 | INI-006 Customer experience discovery | | | |

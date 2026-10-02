@@ -2,7 +2,7 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 4.1
+revision: 4.2
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -62,7 +62,7 @@ The brief has these six sections from the day it is created, and no section is r
 
 ## 6. Decision and acceptance
 
-[Go, no-go, or return, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail or across Domains. For an Initiative that expects Risk Tier 2 or 3, the clearance of the Control Function Contacts concerned, with their names and dates. The Service Agreement issued (AGR-nnn). On delivery: accepted, returned, or cancelled by the product owner, with the date. Acceptance closes the item.]
+[Approve, return, defer, or reject, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail or across Domains. For an Initiative that expects Risk Tier 2 or 3, the clearance of the Control Function Contacts concerned, with their names and dates. The Service Agreement issued (AGR-nnn). After the MVP: continue, pivot, defer, or reject, by whom, and the date, with the Decision Record. On delivery: accepted, returned, or rejected by the product owner, with the date. Acceptance closes the item.]
 
 ## Amendments after approval
 

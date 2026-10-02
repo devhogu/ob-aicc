@@ -4,20 +4,23 @@
 
 This workflow shows how AICC is directed, reported, and controlled as a unit of the Bank, and who does what in sequence. It answers the question "how does your unit operate?". The loops, the states, and the controls are drawn in the Operating Model, and this workflow does not draw them again. It adds the sequences between the Roles, which show the flow in time.
 
-The rules are in the Operating Model, the AICC Charter, and the AI Policy. This workflow shows the flow and the intent, and states no rule of its own.
+The rules are in the Operating Model, the Portfolio Management Model, the Solution Lifecycle Model, the AICC Charter, and the AI Policy. This workflow shows the flow and the intent, and states no rule of its own.
 
 ## 2. Where each loop is drawn
 
-The control of the unit runs as four loops that apply one control cycle. The following table says where each loop and each state machine is drawn.
+The control of the unit runs as five loops that apply one control cycle, and the portfolio runs as four loops on the same events. The following table says where each loop and each state machine is drawn.
 
 | Loop | What it answers | Where it is drawn | Controls it carries |
 | --- | --- | --- | --- |
-| The cycle of a control | Trigger, decision, record, review, and correction | Operating Model, Figure 5 | Every control |
-| Direction, by horizon | Who sets direction, and who sees the results, and when | Operating Model, Figure 2 | C-02 to C-07, C-11, C-24 |
+| The cycle of a control | Trigger, decision, record, review, and correction | Operating Model, Figure 7 | Every control |
 | Decision | Who decides, and how a Decision is logged and sampled | Operating Model, Figure 1 | C-01, C-05, C-08, C-09, C-14, C-27 |
-| Event | What happens when something goes wrong or changes | Operating Model, Figure 3 | C-16, C-17, C-19, C-30, C-32 |
-| Evidence and assurance | How an auditor sees that the controls operate | Operating Model 7 and the Control Matrix | C-25, C-26, C-29 and the Control Matrix |
-| The life of a Risks and Issues item, and of a control status | The states of each | Operating Model, Figures 4 and 6 | C-32 and the Control Matrix |
+| Direction, yearly | Who sets the appetite and the policy, and reviews the documents | Operating Model, Figure 2 | C-01, C-03, C-04 |
+| Assurance, quarterly | How the Steering sees that the controls operate, and what it reports | Operating Model, Figure 3 | C-06, C-07, C-11, C-16, C-24, C-26, C-27, C-28 |
+| Control, monthly | How the Steering reviews the sample, the Exceptions, and the deficiencies | Operating Model, Figure 4 | C-05, C-17, C-29, C-32 |
+| Operating, weekly | How the AICC Lead keeps the flow under control | Operating Model, Figure 5 | None; the Dashboard is a working record |
+| Event | What happens when something goes wrong or changes | Operating Model, Figure 6 | C-16, C-17, C-19, C-30, C-31, C-32 |
+| The status of a control | Operating, Open, No occurrence yet, or Not yet due | Operating Model, Figure 8 | The Control Matrix |
+| The portfolio loops | Strategic, portfolio review, portfolio sync, and backlog care | Portfolio Management Model, Figures 1 to 4 | C-02, C-08, C-09, C-20, C-23 |
 
 ## 3. A month and a quarter in sequence
 
@@ -33,7 +36,7 @@ sequenceDiagram
   participant R as Registry
   T->>L: Weekly Review: flow, limits, Dependencies
   L->>R: Dashboard kept current
-  T->>L: IT Review and Demo: results and acceptances
+  T->>L: Iteration Review and Demo: results and acceptances
   L->>ES: Monthly Steering: progress, risks, blockers
   ES->>L: Samples the Decisions of the AICC Lead
   ES-->>R: Steering Summary
@@ -55,7 +58,7 @@ The incident is owned by the incident management of the Bank, and the AICC Lead 
 sequenceDiagram
   participant U as Anyone aware
   participant IM as Incident management of the Bank
-  participant IT as IT function that operates the Solution
+  participant OPS as IT function that operates the Solution
   participant L as AICC Lead
   participant CF as Control Function Contacts
   participant ES as Executive Sponsor
@@ -63,8 +66,8 @@ sequenceDiagram
   participant R as Registry
   U->>IM: Reports the incident and says that AI is involved
   IM->>L: Notifies the AICC Lead
-  IM->>IT: Handles and contains
-  L->>IT: Advises on the AI aspects, may bring the Solution Engineers
+  IM->>OPS: Handles and contains
+  L->>OPS: Advises on the AI aspects, may bring the Solution Engineers
   L->>CF: Informs
   CF->>CF: Compliance decides on the regulator, data protection on the persons
   opt Classified as major

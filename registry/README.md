@@ -10,11 +10,11 @@ Kept here by hand until the cutover Decision, then held in Jira and Confluence. 
 | --- | --- | --- |
 | Portfolio Backlog | [portfolio-backlog.md](portfolio-backlog.md) | The ranked Initiatives, and for each Engagement its client function, phases, support level, Service Agreement, and Outcome Report |
 | Program Backlog | [program-backlog.md](program-backlog.md) | The ranked Capabilities and Features |
-| Kanban boards | [board.md](board.md) | The Portfolio Kanban and the Program Kanban, by state, with lanes and Limits on Work in Progress |
+| Kanban boards | [board.md](board.md) | The Portfolio Kanban by step and the Program Kanban by state, with lanes and Limits on Work in Progress |
 | Roadmap | [roadmap.md](roadmap.md) | The three-month Roadmap by Program Increment, and the Milestones |
 | Calendar | [calendar.md](calendar.md) | Program Increments, Iterations, weeks, and the blocked and gray days |
 | Teams | [teams.md](teams.md) | The Teams, members, capacity, and the Hats |
-| Program Increment | [pi/](pi/2026-PIQ4/objectives.md) | For each: PI Objectives, monthly Iterations with their IT Backlogs and Weekly Review notes, and the IP week |
+| Program Increment | [pi/](pi/2026-PIQ4/objectives.md) | For each: PI Objectives, monthly Iterations with their Iteration Backlogs and Weekly Review notes, and the IP week |
 | Dependency Map | [dependencies.md](dependencies.md) | Dependencies of each item, and its scope by month |
 | Dashboard | [dashboard.md](dashboard.md) | The state of the Program Increment, flow, Dependencies, risks, and Measures |
 
@@ -45,7 +45,7 @@ Closed and dated extracts, always kept here. The Operating Model 8 lists the con
 | Acceptance Checklists | `checklists/` | The Acceptance Checklist of each Solution at its first deployment and its release, named `ACL-001.md`. Created with the first one |
 | Control Sign-Offs | `sign-offs/` | The decisions of the Control Function Contacts, named `SGN-001.md`. Created with the first one |
 | AI Incident Reviews | `incident-reviews/` | The review of each AI Incident, named `AIR-001.md`. Created with the first one |
-| Registry Snapshots | `snapshots/` | The closed extract at the close of each IT and PI, named `SNP-2026-PIQ4-IT10.md`. The first is due at the close of IT10 |
+| Registry Snapshots | `snapshots/` | The closed extract at the close of each Iteration and PI, named `SNP-2026-PIQ4-I10.md`. The first is due at the close of I10 |
 | Appointments | [appointments.md](appointments.md) | The Part C log of the Appointments Record is the evidence of every appointment, change, and relief |
 | Assessments | [assessments/](assessments/) | Earlier checks of the documents, kept for history |
 

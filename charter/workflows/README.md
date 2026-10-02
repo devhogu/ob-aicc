@@ -5,8 +5,8 @@ The loops and flows of AICC, as intent and control flow, not as activity detail.
 | Workflow | Intent | SAFe equivalent |
 | --- | --- | --- |
 | [Engagement](engagement.md) | The top-level workflow between AICC and the rest of the Bank: how AICC works as an internal consulting unit, from the first contact to the follow-on, with its Service Agreement, Outcome Report, and support levels | The engagement of a client, with the statement of work and the closing deliverable |
-| [Portfolio and service delivery](service-delivery.md) | The value stream from a business need to a retired solution: scoping, business case, service definition, features, backlog, execution, deployment, operation, and life cycle | The portfolio Kanban, the execution of a Program Increment, and the continuous delivery pipeline |
-| [Cadence](cadence.md) | The events of the loops by week, IT, and PI, without dates | The cadence of iterations and Program Increments |
+| [Portfolio and service delivery](service-delivery.md) | The value stream from a business need to a retired solution: the portfolio Kanban (funnel, review, analysis, backlog, MVP, and the decision after it), the Capabilities and Features, execution, deployment, operation, and life cycle | The portfolio Kanban, the execution of a Program Increment, and the continuous delivery pipeline |
+| [Cadence](cadence.md) | The events of the loops by week, Iteration, and PI, without dates | The cadence of iterations and Program Increments |
 | [Collaboration tooling](collaboration-tooling.md) | The tools and the portals that AICC uses, for what, and in which workflows | The tooling around the program |
 | [Unit governance](unit-governance.md) | The control of AICC as a unit in sequence: a month and a quarter, an AI Incident, the reporting chain, and the life of a document. The loops themselves are drawn in the Operating Model | Lean governance and the portfolio funding and control |
 

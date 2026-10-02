@@ -17,7 +17,7 @@ revised: 2026-10-01
 | Engagement and Service Agreement | [title, AGR-nnn] |
 | Function, Domain Owner | [function, name] |
 | Initiative and Solutions | [INI-nnn, SOL-nnn] |
-| Period | [from IT, to IT] |
+| Period | [from Iteration, to Iteration] |
 | Issued on | [date] |
 
 ## 1. Executive summary
@@ -48,4 +48,4 @@ revised: 2026-10-01
 
 ## 7. Acceptance and what follows
 
-[Accepted, returned, or cancelled, by the product owner, with the date. The support level that applies from now. The follow-on, if any, with its Proposal.]
+[Accepted, returned, or rejected, by the product owner, with the date. The support level that applies from now. The follow-on, if any, with its Proposal.]

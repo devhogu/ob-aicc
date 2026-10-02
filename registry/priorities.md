@@ -31,4 +31,4 @@ Seeded from the Statement of Intent. The Executive Sponsor sets the targets each
 | Guardrail | Value |
 | --- | --- |
 | Amount that may be committed without the Executive Sponsor | [ The amount, set by the Executive Sponsor each year and kept in the financial planning of the Bank; this Record names the source ] |
-| Amount above which an Initiative needs an Initiative Brief and the approval of the Executive Sponsor | [ The amount above which an Initiative needs the approval of the Executive Sponsor; same source as above ] |
+| Amount above which an Initiative needs the approval of the Executive Sponsor, as does an Initiative that spans Domains | [ The amount above which an Initiative needs the approval of the Executive Sponsor; same source as above ] |

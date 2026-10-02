@@ -2,7 +2,7 @@
 id: AICC-MND-03-EN
 title: Business Model
 status: active
-revision: 0.8
+revision: 0.9
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -13,7 +13,7 @@ revised: 2026-10-01
 
 1.1. This document states what AICC is as a unit of the Bank, whom it serves, what it offers, how it commits to the functions that it serves, and how it tracks the value that it delivers and the capacity that it uses.
 
-1.2. The Operating Model states how AICC works inside, the AI Policy states the rules for the use of AI, and the workflows show how the work flows. This document does not restate them.
+1.2. The Operating Model states how AICC is governed and controlled inside, the Portfolio Management Model states how Initiatives are decided, the Solution Lifecycle Model states how the work is delivered, the AI Policy states the rules for the use of AI, and the workflows show how the work flows. This document does not restate them.
 
 ## 2. What AICC is
 
@@ -33,11 +33,11 @@ revised: 2026-10-01
 
 ## 4. What AICC offers
 
-4.1. An Engagement covers the phases that its Service Agreement states. A phase is a part of the Engagement, and the Operating Model maps the phases to the states and the Stages of the items: a study, which is the exploration, the scoping, and the business case; a proof, which is the trial of a Solution with its Outcome Report and Proposal; delivery, which is the build and the release of a Solution; and support after delivery.
+4.1. An Engagement covers the phases that its Service Agreement states. A phase is a part of the Engagement, and the Solution Lifecycle Model maps the phases to the states and the Stages of the items: a study, which is the exploration, the scoping, and the business case; a proof, which is the trial of a Solution with its Outcome Report and Proposal; delivery, which is the build and the release of a Solution; and support after delivery.
 
 4.2. The support level of an Engagement is agreed between AICC and the function and is stated in its Service Agreement. AICC also runs a service of its own as a Service, and states its run cost and its sunset rule in its business case. The support of a Service is managed in Service Management: requests and incidents come to the queue of AICC. The response targets are set in the Service Agreement, and they are targets and not guarantees.
 
-4.3. What an Engagement delivers is a Solution of one type: an Experiment, which is a proof that ends in a Proposal; a Product, which is a version for one consumer that AICC supports as agreed; or a Service, which AICC runs. The Operating Model states the life of each type.
+4.3. What an Engagement delivers is a Solution of one type: an Experiment, which is a proof that ends in a Proposal; a Product, which is a version for one consumer that AICC supports as agreed; or a Service, which AICC runs. The Solution Lifecycle Model states the life of each type.
 
 4.4. AICC also trains employees and coaches Domain Experts, and keeps the lessons and the reusable assets of its Engagements, such as methods and playbooks, in the Portfolio.
 
@@ -45,7 +45,7 @@ revised: 2026-10-01
 
 5.1. AICC shall commit to each Engagement in a Service Agreement. It is a working agreement and not a legal document, and it needs no signature chain. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. The AICC Lead issues it when the study starts, so that the study is covered, and amends it when the business case is approved to add the later phases.
 
-5.2. The Service Agreement is a form of agile working agreement, and it follows the principles and the ways of working of agile delivery: collaboration with the function over the negotiation of terms; working outcomes over exhaustive documentation; response to change over adherence to a fixed plan; and delivery in short Iterations, with a check-in at the end of each. The scope is the intent and a backlog that is reordered within the capacity, and either side may end or redirect the Engagement at the end of an IT.
+5.2. The Service Agreement is a form of agile working agreement, and it follows the principles and the ways of working of agile delivery: collaboration with the function over the negotiation of terms; working outcomes over exhaustive documentation; response to change over adherence to a fixed plan; and delivery in short Iterations, with a check-in at the end of each. The scope is the intent and a backlog that is reordered within the capacity, and either side may end or redirect the Engagement at the end of an Iteration.
 
 5.3. The content of the Service Agreement is settled between AICC and the function in the Service Agreement itself, on the form of its Template: the commitment of AICC and the working agreement with the function. These include the scope, the deliverables, the capacity, the outcome targets, the Assumptions, the support level, and the end of the Engagement.
 
@@ -61,7 +61,7 @@ revised: 2026-10-01
 
 ## 7. Controls on the commitment
 
-7.1. AICC shall not commit more capacity per IT than its people can deliver. The AICC Lead states the capacity available per IT in the Teams Record, adds up the capacity of the Service Agreements, and does not issue a Service Agreement that takes the sum above the capacity available. The work above it waits in the Portfolio Backlog.
+7.1. AICC shall not commit more capacity per Iteration than its people can deliver. The AICC Lead states the capacity available per Iteration in the Teams Record, adds up the capacity of the Service Agreements, and does not issue a Service Agreement that takes the sum above the capacity available. The work above it waits in the Portfolio Backlog.
 
 7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, and fits the capacity. Otherwise the item is deferred or rejected.
 
@@ -85,3 +85,4 @@ revised: 2026-10-01
 | 0.6 | 2026-10-01 | Support level and the content of the Service Agreement are settled in the Service Agreement; clause 4.2 reworded; clauses 5.2 to 5.4 reduced to the principles. | DR-2026-037 |
 | 0.7 | 2026-10-01 | The Service Agreement is stated as a form of agile working agreement that follows agile principles and ways of working; clauses 5.2 to 5.5 renumbered. | DR-2026-037 |
 | 0.8 | 2026-10-01 | The Service Agreement is a working agreement on a best-effort basis, within the available capacity and capability of AICC. | DR-2026-037 |
+| 0.9 | 2026-10-01 | The sources of the phases and of the life of the types; the rule sources. | DR-2026-048 |

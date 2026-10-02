@@ -2,7 +2,7 @@
 id: AICC-ORG-02-EN
 title: Portfolio Management Model
 status: active
-revision: 1.5
+revision: 1.6
 created: 2026-10-01
 revised: 2026-10-01
 ```
@@ -82,7 +82,7 @@ flowchart LR
 
 Figure 2: the portfolio review loop.
 
-In practice, the quarterly Steering takes each Active Initiative in turn. The AICC Lead shows its leading indicators against the plan, the Domain Owner confirms the benefit, and the Executive Sponsor decides whether it continues, pivots, is deferred, or is rejected. The decision is entered in the Decision Log, and the Quarterly Report records the result.
+In practice, the quarterly Steering takes each Active Initiative in turn. The AICC Lead shows its leading indicators against the plan, the Domain Owner confirms the benefit, and the approver of 6.3 decides whether it continues, pivots, is deferred, or is rejected: the Domain Owner within one Domain and below a guardrail, and the Executive Sponsor otherwise. The decision is entered in the Decision Log, and the Quarterly Report records the result.
 
 ### The portfolio sync loop
 
@@ -99,7 +99,7 @@ flowchart LR
 
 Figure 3: the portfolio sync loop.
 
-In practice, the AICC Lead shows the free capacity and the number of Active Initiatives, and the Executive Sponsor takes the decisions that are due. The highest-ranked Initiative that fits is taken into work. An Initiative that ranks lower may be taken first for a stated reason, such as a date or a Dependency, and the reason is recorded. An Initiative that is done, pivoted, deferred, or rejected frees its place, and nothing is taken into work while the limit is reached.
+In practice, the AICC Lead shows the free capacity and the number of Active Initiatives, and the approver of 6.3 takes the decisions that are due. The highest-ranked Initiative that fits is taken into work. An Initiative that ranks lower may be taken first for a stated reason, such as a date or a Dependency, and the reason is recorded. An Initiative that is done, pivoted, deferred, or rejected frees its place, and nothing is taken into work while the limit is reached.
 
 ### The backlog care loop
 
@@ -297,3 +297,4 @@ Figure 8: the levels of the work.
 | 1.3 | 2026-10-01 | Wording for an auditor: Strategic inputs; the names of the steps explained; informal verbs replaced. | none |
 | 1.4 | 2026-10-01 | Defer is an option beside reject at the decisions of the portfolio: the gates and after the MVP. | DR-2026-047 |
 | 1.5 | 2026-10-01 | The portfolio loops: the strategic, the portfolio review, the portfolio sync, and the backlog care loop, each a Plan, Do, Check, Act cycle with its forum, its decider, its interfaces, and its records; the figures of the Roles, the gate, the pull, and the funding are folded into the text. | DR-2026-047 |
+| 1.6 | 2026-10-01 | Iteration written in full; the approver of the business case decides after the MVP. | DR-2026-048 |

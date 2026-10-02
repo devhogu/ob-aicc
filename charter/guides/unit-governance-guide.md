@@ -8,19 +8,21 @@ This guide explains how AICC is directed, reported, and controlled as an organiz
 
 AICC acts under the mandate of the Executive Sponsor, and the Charter states its limits: it does not own the AI Platform, it does not own the results of a Domain, it does not set the rules of a Control Function, it does not validate its own work, and it does not decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function. The appointment of the AICC Lead and the decision reference of the mandate are entered in the Appointments Record. The Executive Sponsor may delegate a decision in writing, for a scope and a period, and each delegation is entered there.
 
-## 3. The yearly, quarterly, monthly, and weekly loops
+## 3. The loops
 
-| Loop | What is set or reviewed | By whom | Record |
-| --- | --- | --- | --- |
-| Yearly, at the first quarterly Steering | The Strategic Priorities, the Investment Envelopes and Guardrails, the documents, the AI Risk Appetite Statement, and the yearly Proposal of the strategy | Executive Sponsor; the AICC Lead owns the documents | Decision Records; Priorities |
-| Quarterly | The results of the PI, the risk check with the Control Function Contacts, the Maturity Level, and the report to the Board Committee | Executive Sponsor | Quarterly Report; Registry Snapshot; Steering Summary |
-| Monthly | Progress, risks, and blockers, and a sample of the Decisions of the AICC Lead | Executive Sponsor | Steering Summary |
-| Weekly | The flow and the Dependencies | AICC Lead | The working state |
-| On an event | An AI Incident, an Exception, a stop, a risk beyond appetite, a change of provider or regulation, or a change of Holder | As the Operating Model states | Decision Record; Risks and Issues; Appointments |
+The control of the unit runs as five loops of the Operating Model 6, and the portfolio runs as four loops of the Portfolio Management Model 4. They run on the same events and add no meeting.
+
+| Loop | Cadence and event | What is set or reviewed | By whom | Record |
+| --- | --- | --- | --- | --- |
+| Direction, and strategic | Yearly, at the first quarterly Steering | The documents, the AI Risk Appetite Statement, and the appointments; the Strategic Priorities, the Envelopes, and the Guardrails; the yearly Proposal of the strategy | Executive Sponsor; the AICC Lead owns the documents | Decision Records; Priorities |
+| Assurance, and portfolio review | Quarterly, at the quarterly Steering | The quarterly risk check with the Control Function Contacts, the access review, the Maturity Level, the report to the Board Committee; the decision on each Active Initiative | Executive Sponsor | Quarterly Report; Registry Snapshot; Steering Summary |
+| Control, and portfolio sync | Monthly, at the monthly Steering | Progress, risks, and blockers; the sample of the Decisions of the AICC Lead; the open Exceptions and the deficiencies; the gate decisions that are due, and the Active Initiatives against the limit | Executive Sponsor | Steering Summary; Decision Log |
+| Operating, and backlog care | Weekly, at the Weekly Review | The flow, the Dependencies, the funnel, and the rank | AICC Lead | Dashboard; the working state |
+| Event | When it happens | An AI Incident, an Exception, a stop, a risk beyond appetite, a change of provider or regulation, a finding, or a change of Holder | As the Operating Model states | Decision Record; Risks and Issues; Appointments |
 
 ## 4. How a decision moves
 
-The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain or reaches outside the Bank, cannot be reversed without significant cost, exceeds a guardrail or changes a Strategic Priority, or accepts a risk or concerns a Risk Tier 3 Solution. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in the Decision Log, and a Decision of the Executive Sponsor that is hard to reverse also has a Decision Record.
+The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain or reaches outside the Bank, cannot be reversed without significant cost, exceeds a guardrail or changes a Strategic Priority, or accepts a risk beyond the appetite or concerns a Risk Tier 3 Solution. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in the Decision Log, and a Decision of the Executive Sponsor that is hard to reverse also has a Decision Record.
 
 ## 5. Reporting and assurance
 
@@ -44,7 +46,7 @@ The Operating Model 8 lists each control with its rule, owner, timing, and evide
 | C-06 | Results, risk check, and Maturity Level | The Executive Sponsor sees results and risk each quarter | Detective | Read the Report and the Snapshot of the quarter |
 | C-07 | Report to the Board Committee | The Board Committee is informed | Detective | Read the issuance block: approver, date, recipient |
 | C-08 | Service Agreement for an Engagement | The commitment to a function is written before the work | Preventive | Compare the Agreement with the Initiative and its dates |
-| C-09 | Approval of the business case | An Initiative is funded only on a complete case that the Control Functions have cleared | Preventive | Read the Completeness table, the clearances of the Control Function Contacts, and the Decision Record |
+| C-09 | Approval of the business case | An Initiative is funded only on a complete case, and one that expects Risk Tier 2 or 3 is cleared by the Control Functions | Preventive | Read the Completeness table, the clearances of the Control Function Contacts, and the Decision Record |
 | C-10 | Outcome Report, acceptance, and confirmation of the benefit | The outcome is reported, accepted by its owner, and the benefit is confirmed by the function, not by AICC | Detective | Read the Report, the acceptance with who and when, and the confirmation with its source |
 | C-11 | Capacity used and benefit confirmed | AICC does not overcommit and claims only confirmed benefit | Detective | Compare capacity used with the Agreements and the benefit with the Outcome Report |
 | C-12 | Risk Tier assignment | Every Solution has a Tier that sets its checks | Preventive | Read the Tier, who assigned it, and when |
@@ -64,7 +66,7 @@ The Operating Model 8 lists each control with its rule, owner, timing, and evide
 | C-26 | Access review of the Registry and the tools | Access follows the Roles | Preventive | Read the result of the quarterly comparison with the Appointments Record |
 | C-27 | Acceptance of a risk beyond the appetite | Only the Executive Sponsor accepts a risk beyond the appetite, and the Board Committee is told | Preventive | Read the Decision Record and the report to the Board Committee |
 | C-28 | Reassessment of the Risk Tier and expiry of a validation | A Solution is not used on a validation that has expired or on a stale Risk Tier | Preventive | Compare the dates in the AI Registry with the dates of the reassessment and the validation |
-| C-29 | Review of live Solutions | Live Solutions are monitored by their owners | Detective | Read the note of the review in the Solution Definition at each IT Review and Demo |
+| C-29 | Review of live Solutions | Live Solutions are monitored by their owners | Detective | Read the note of the review in the Solution Definition at each Iteration Review and Demo |
 | C-30 | Change to a released Solution | A change is decided, tested, and released by the right owner | Preventive | Take a change: read the decision on a new check, the change ticket, the test result, and the release |
 | C-31 | Retirement of a Solution | A retired Solution leaves no access, data, or registry entry behind | Preventive | Read the approval, and compare access, data, and the AI Registry entry with the retirement |
 | C-32 | Deficiencies and findings | A failed control or a finding is followed up to closure | Detective | Take a finding: read its owner, its due date, and the monthly review |
@@ -82,4 +84,4 @@ The Operating Model 8 lists each control with its rule, owner, timing, and evide
 
 ## 9. Rule source
 
-Charter 3 to 7; Operating Model 4 to 8; AI Policy 5 to 7; Document Catalog 3, 4, 7; the Unit governance workflow.
+Charter 3 to 7; Operating Model 4 to 8; Portfolio Management Model 4 and 6; AI Policy 5 and 6; Document Catalog 3, 4, 7; the Unit governance workflow.
