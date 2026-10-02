@@ -58,4 +58,4 @@ A Solution has one type, and the type sets its life. A Service is run by AICC fo
 
 ## 8. Rule source
 
-Operating Model 4.2, 4.4, 5; Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 7; AI Policy 2 and 3; the Service delivery workflow.
+Operating Model 4.2, 4.4, 5; Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 9; AI Policy 2 and 3; the Service delivery workflow.

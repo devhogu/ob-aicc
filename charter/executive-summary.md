@@ -16,7 +16,7 @@ AICC commits to each Engagement in a Service Agreement, which states the outcome
 
 ## 4. Flow of work
 
-A business need enters the funnel and becomes an Initiative with a business case, which the Control Function Contacts clear when a higher Risk Tier is expected. The approved Initiative waits in the ranked Portfolio Backlog, and when it is taken into work its first Solution is tried as a minimum viable product. The approver then decides to continue, pivot, defer, or reject. An Initiative that continues delivers Solutions through Capabilities and Features in monthly Iterations and quarterly Program Increments, and the product owner accepts the delivered outcome. Source: Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 7.
+A business need enters the funnel and becomes an Initiative with a business case, which the Control Function Contacts clear when a higher Risk Tier is expected. The approved Initiative waits in the ranked Portfolio Backlog, and when it is taken into work its first Solution is tried as a minimum viable product. The approver then decides to continue, pivot, defer, or reject. An Initiative that continues delivers Solutions through Capabilities and Features in monthly Iterations and quarterly Program Increments, and the product owner accepts the delivered outcome. Source: Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 9.
 
 ## 5. Decisions and authority
 

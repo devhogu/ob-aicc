@@ -9,7 +9,7 @@ revised: 2026-10-01
 
 # Acceptance Checklist
 
-**Template.** One checklist for each Solution when AICC hands it to a Domain as ready for use at scale, before its release beyond the first users. It is not used during development or trials, where the check and the validation of the Solution Lifecycle Model 6.1 apply. The AICC Lead completes it, each party answers and signs its items within its remit, and the Domain Owner receives it signed and signs the acceptance of the package. It is an evidence record and adds no approval of its own: the decisions are those of the parties under the AI Policy. It carries no figures of the Bank, no data, and no code.
+**Template.** One checklist for each Solution when AICC hands it to a Domain as ready for use at scale, before its release beyond the first users. It is not used during development or trials, where the check and the validation of the Solution Lifecycle Model 7.1 apply. The AICC Lead completes it, each party answers and signs its items within its remit, and the Domain Owner receives it signed and signs the acceptance of the package. It is an evidence record and adds no approval of its own: the decisions are those of the parties under the AI Policy. It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |

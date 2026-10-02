@@ -29,7 +29,7 @@ The contents list every file of the charter in the order of reading, with its li
 | 2.2 | AICC-MND-03 | [Business Model](documents/business-model.md) | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity |
 | 2.3 | AICC-ORG-01 | [Operating Model](documents/operating-model.md) | AICC as a unit of the Bank: Roles, Decisions, the five control loops, records, and controls |
 | 2.4 | AICC-ORG-02 | [Portfolio Management Model](documents/portfolio-management-model.md) | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP |
-| 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How the work moves from the Program Backlog to the retirement of a Solution: levels and backlogs, states, cadence, verification, release, acceptance, and life-cycle management |
+| 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, and the life cycle |
 | 2.6 | AICC-POL-01 | [AI Policy](documents/ai-policy.md) | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions |
 | 2.7 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined terms and style |
 | 2.8 | AICC-MND-01 | [Statement of Intent on the Adoption of Artificial Intelligence](documents/statement-of-intent.md) | The intent, values, principles, and strategy of the Bank for AI |

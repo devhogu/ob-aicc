@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 3.4
+revision: 3.5
 created: 2026-09-30
 revised: 2026-10-01
 ```
@@ -48,7 +48,7 @@ revised: 2026-10-01
 | AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | EN |
 | AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the five control loops, Records, and controls | EN |
 | AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP | EN |
-| AICC-ORG-03 | Solution Lifecycle Model | How the work moves from the Program Backlog to the retirement of a Solution: levels and backlogs, states, cadence, verification, release, acceptance, and life-cycle management | EN |
+| AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, and the life cycle | EN |
 | AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN |
 | AICC-REF-01 | Vocabulary and Style | Terms and style | EN |
 | AICC-REF-02 | Document Catalog | This Catalog | EN |
@@ -123,3 +123,4 @@ The identifiers keep the order of creation, and the table is in the order of use
 | 3.2 | 2026-10-01 | The Acceptance Checklist Template. | DR-2026-041 |
 | 3.3 | 2026-10-01 | The Portfolio Management Model is added as the ninth document; the limit is nine. | DR-2026-044 |
 | 3.4 | 2026-10-01 | Descriptions of the Operating Model and the Portfolio Management Model; Iteration written in full. | DR-2026-048 |
+| 3.5 | 2026-10-01 | Description of the Solution Lifecycle Model. | DR-2026-049 |

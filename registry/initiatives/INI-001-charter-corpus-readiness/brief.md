@@ -8,7 +8,7 @@
 | Strategic Priority | None: enabling work of AICC |
 | Domain Owner (represents the client function) | AICC Lead, for the work of AICC itself (Operating Model 4.6) |
 | Solutions expected | None: enabling work, with Capabilities under the Initiative and no Solution |
-| Service Agreement | Not applicable: enabling work, with the Executive Sponsor as client (Solution Lifecycle Model 3.1) |
+| Service Agreement | Not applicable: enabling work, with the Executive Sponsor as client (Solution Lifecycle Model 3.2) |
 | Period | September to December 2026 |
 | Date of last change | 2026-10-01 |
 

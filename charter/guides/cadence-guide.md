@@ -40,4 +40,4 @@ A month starts with Iteration Planning, in which the Team selects the Features f
 
 ## 7. Rule source
 
-Solution Lifecycle Model 5; Operating Model 6; Portfolio Management Model 4; the Cadence workflow; the Calendar.
+Solution Lifecycle Model 6; Operating Model 6; Portfolio Management Model 4; the Cadence workflow; the Calendar.

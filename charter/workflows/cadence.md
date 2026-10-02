@@ -132,19 +132,19 @@ Each loop has a control, and each control is an event that already exists. The f
 | Control | Event | What it controls | Record kept current |
 | --- | --- | --- | --- |
 | Progress and blockers | Daily Stand-up | The work of the day | The Iteration Backlog |
-| Flow and Dependencies | Weekly Review | The Program Kanban, the Limits on Work in Progress, the Dependencies | The Program Kanban, the Dependency Map, the Dashboard |
+| Flow and Dependencies | Weekly Review | The Program Kanban, the Limits on Work in Progress, the Dependencies | The Program Kanban, the Program Board, the Dashboard |
 | Acceptance | Iteration Review and Demo | What is done, as the product owner sees it | The Program Backlog |
 | Way of working | Iteration Retrospective | How the Team works | The next Iteration Backlog |
 | Portfolio sync and control | Steering, monthly | The gate decisions that are due, the funnel and the free capacity, the Active Initiatives against the limit, progress, risks, and blockers, a sample of the Decisions of the AICC Lead, the open Exceptions, and the deficiencies | The Decision Log, the Steering Summary, the Portfolio Backlog, the Risks and Issues |
 | Value | PI Review and Demo | The value achieved against the PI Objectives, and the data for the Quarterly Report | The PI Objectives, the Quarterly Report |
 | Improvement | Inspect and Adapt | The main problems of the PI | The Program Backlog |
-| Intent and direction | PI Planning | What the next PI aims at | The Roadmap, the Dependency Map |
+| Intent and direction | PI Planning | What the next PI aims at | The Roadmap, the Program Board |
 | Portfolio review and assurance | Steering, quarterly | The decision for each Active Initiative to continue, pivot, defer, or reject, the quarterly risk check with the Control Function Contacts, the Maturity Level, and the report to the Board Committee | The Decision Log, the Quarterly Report, the Registry Snapshot |
 | Strategy and direction | Steering, first quarterly of the year | The Strategic Priorities, the Envelopes, the Guardrails, the documents, and the appetite | The Priorities, the Decision Records |
 
 ## 7. Rules
 
-The rules for events that move or are missed, and for the Weekly Review, are in the Solution Lifecycle Model 5.2. Nothing in the Cadence is approved by anyone.
+The rules for events that move or are missed, and for the Weekly Review, are in the Solution Lifecycle Model 6.5. Nothing in the Cadence is approved by anyone.
 
 ## 8. The dated calendar of events
 
@@ -152,7 +152,7 @@ The dated calendar of events is built from this flow for a rolling two quarters:
 
 ## 9. Light mode
 
-While the Team has up to three people, the Solution Lifecycle Model 5.3 applies. The following table shows which events remain.
+While the Team has up to three people, the Solution Lifecycle Model 6.6 applies. The following table shows which events remain.
 
 | Event | In light mode |
 | --- | --- |
@@ -177,15 +177,15 @@ The short forms PI and IP, the names PIQ1 to PIQ4, I01 to I12, and W1 to W5, and
 | Event | Loop | Where in the flow | Takes in | Gives | Intent |
 | --- | --- | --- | --- | --- | --- |
 | Daily Stand-up | Day | Each working day | The Iteration Backlog | Blockers raised | Share progress, and clear blockers |
-| Weekly Planning | Week | Monday | The Iteration Backlog, the Dependency Map | The focus of the week | Set the focus of the week, and check the Dependencies |
-| Weekly Review | Week | Friday | The Program Kanban, the Portfolio Backlog and the funnel, the Dependency Map, the Iteration Backlog | A reordered Program Backlog, a current Dashboard, the items that reach a gate, notes on what changed | Keep control of the flow, and keep the plan close to what is really happening |
+| Weekly Planning | Week | Monday | The Iteration Backlog, the Program Board | The focus of the week | Set the focus of the week, and check the Dependencies |
+| Weekly Review | Week | Friday | The Program Kanban, the Portfolio Backlog and the funnel, the Program Board, the Iteration Backlog | A reordered Program Backlog, a current Dashboard, the items that reach a gate, notes on what changed | Keep control of the flow, and keep the plan close to what is really happening |
 | Backlog Refinement | Iteration | Within the Weekly Planning and the Weekly Review | The Program Backlog | Items ready to be selected | Keep the next items ready, so planning is quick |
-| Iteration Planning | Iteration | W1, Monday | The Program Backlog, the Roadmap, the Dependency Map | The Iteration Backlog and the Iteration goal | Select the work of the month for the intent set at the PI Planning |
+| Iteration Planning | Iteration | W1, Monday | The Program Backlog, the Roadmap, the Program Board | The Iteration Backlog and the Iteration goal | Select the work of the month for the intent set at the PI Planning |
 | Iteration Review and Demo | Iteration | Review week | The Iteration Backlog, the working Solutions | Acceptances, returned items, feedback | Show what works to the product owners, and take acceptance |
 | Iteration Retrospective | Iteration | Review week, after the Iteration Review and Demo | The month of work | Improvements for the next Iteration | Improve the way of working |
 | Steering, monthly | Iteration | Review week, on a day fixed with the outside calendars | The Dashboard, the Portfolio Backlog, the risks, the Iteration Review and Demo | Decisions of the Executive Sponsor on the gates that are due, the sample, and the open items; the Steering Summary | Review the portfolio and the control of the unit, and decide |
 | PI Review and Demo | PI | IP week, Monday | The Iterations of the PI, the PI Objectives | The value scored, and the data for the Quarterly Report | Show what the PI delivered, and score its value |
 | Inspect and Adapt | PI | IP week, Tuesday | The results and the flow of the PI | Improvements in the Program Backlog | Solve the main problems of the PI |
 | Innovation | PI | IP week, Wednesday | Free time | New ideas and learning | Time to learn, explore, and recover |
-| PI Planning | PI | IP week, Thursday | The Program Backlog, the Quarterly Report, the Dependency Map | The PI Objectives, the proposed Roadmap, the Dependencies | Set the intent and direction of the next PI |
+| PI Planning | PI | IP week, Thursday | The Program Backlog, the Quarterly Report, the Program Board | The PI Objectives, the proposed Roadmap, the Dependencies | Set the intent and direction of the next PI |
 | Steering, quarterly | PI | IP week, Friday | The Quarterly Report, the PI Objectives | Decisions on each Active Initiative, the quarterly risk check, the Maturity Level, and the report to the Board Committee; in the first Steering of the year, also the Priorities, the Envelopes, and the Guardrails | Assess the past quarter, and decide |

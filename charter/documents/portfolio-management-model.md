@@ -143,7 +143,7 @@ Figure 5: the portfolio Kanban of an Initiative.
 
 In practice, the Kanban is read from left to right, and each arrow is a decision. The Initiative stays at a step until its exit criterion is met, and it may leave the flow by a rejection, a deferral, or a pivot.
 
-5.2. The following table states each step. The states and the moves are those of the Solution Lifecycle Model 4.1, which is the only source of the moves. A Rejected Initiative is a business decision that the value is not seen, and a Cancelled one is withdrawn without a decision on the merits, such as an error or no longer required.
+5.2. The following table states each step. The states and the moves are those of the Solution Lifecycle Model 5.1, which is the only source of the moves. A Rejected Initiative is a business decision that the value is not seen, and a Cancelled one is withdrawn without a decision on the merits, such as an error or no longer required.
 
 | Kanban step | State and Stage | Entry | Exit criterion | Decided by | Record |
 | --- | --- | --- | --- | --- | --- |

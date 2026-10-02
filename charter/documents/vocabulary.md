@@ -2,9 +2,9 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 5.7
+revision: 5.8
 created: 2026-09-29
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Vocabulary and Style
@@ -95,6 +95,8 @@ revised: 2026-10-01
 | Funnel | The Proposed state of an Initiative: an idea or a need not yet taken in | |
 | Minimum viable product (MVP) | A probe: the smallest version of the first Solution that is tried, to see whether it works and satisfies the need, and that tests the hypothesis of an Initiative against its leading indicators | |
 | Leading indicator | A measure that shows early whether the hypothesis of an Initiative holds | |
+| Acceptance criteria | The conditions on which a product owner accepts an item, written as Given a situation, when an action is taken, then a result that can be observed | |
+| Value hypothesis | The benefit that an Initiative, a Capability, or a Feature is believed to bring, which the work tests | |
 | Program Kanban | The board of the Capabilities and Features by state, with the classes of service as lanes and the Limits on Work in Progress |  |
 | Lane | A class of service of the Program Kanban: Urgent, High priority, or Normal | swimlane (alone) |
 | Team | The people who deliver together: a Solution Engineer with the Domain Expert and the Domain Owner, who is the product owner | squad, pod |
@@ -136,7 +138,7 @@ revised: 2026-10-01
 | Control Sign-Off | The evidence record of the decision of a Control Function Contact: a validation, a stop, an Exception, or a provider check | |
 | AI Incident Review | The evidence record of the review of one AI Incident | |
 | Registry Snapshot | The evidence record that closes an Iteration or a PI: the state of the working state at that date | |
-| Dependency Map | The Record of what each item of a Program Increment needs from other items, Teams, functions, and persons | |
+| Program Board | The board of the dependencies of a Program Increment: for each Capability and Feature, the Iteration in which it is planned and what it needs from other items, Teams, functions, and persons | dependency map |
 | Roadmap | The Record of the three months: the current PI as intent and direction, the next as planned, the rest indicative, with its Milestones | |
 | Template | A form for a Record that needs one; it has a status and a revision, and a copy of it carries no metadata block | |
 | Priorities Record | The living Record of the Strategic Priorities, with references to the Investment Envelopes, Guardrails, and Measures | |
@@ -145,7 +147,7 @@ revised: 2026-10-01
 | Workflow | The description of a loop or a flow of AICC as intent and control flow, in the charter; it states no rule | |
 | Record | A file in the Registry, as distinct from a document of the charter: working state, a living record, or an evidence record | register |
 | Evidence record | A closed and dated extract in the Registry of an event: a Decision, an approval, a sign-off, an acceptance, an incident, or an appointment | |
-| Working state | The live state of the work: the backlogs, boards, Roadmap, Calendar, Dependency Map, Dashboard, Teams, and Program Increment folder. It moves to Jira and Confluence at the cutover | |
+| Working state | The live state of the work: the backlogs, boards, Roadmap, Calendar, Program Board, Dashboard, Teams, and Program Increment folder. It moves to Jira and Confluence at the cutover | |
 | Light mode | The way AICC runs while the AICC Team has up to three people, with fewer events and a smaller set of states | |
 | Loop | A cycle that starts with planning and ends with review: the day, the week, the Iteration, and the PI. The control loops of the Operating Model and the portfolio loops of the Portfolio Management Model are loops of Plan, Do, Check, and Act, which run on the events of these cycles | |
 | Review week | The last week of an Iteration | |
@@ -226,3 +228,4 @@ revised: 2026-10-01
 | 5.5 | 2026-10-01 | Capability replaces Epic outside Jira; Lean Portfolio Management, Funnel, MVP, and Leading indicator defined; the MVP Stage; precedence lists the Portfolio Management Model. | DR-2026-044 |
 | 5.6 | 2026-10-01 | Rejected is a decision on the merits, including after the MVP; Cancelled is a withdrawal without one; Discovery is research and the MVP is a probe. | DR-2026-045 |
 | 5.7 | 2026-10-01 | Steering, Portfolio Kanban, Loop, and Stage aligned with the control loops and the portfolio loops; Iteration is never shortened. | DR-2026-048 |
+| 5.8 | 2026-10-01 | Acceptance criteria and Value hypothesis defined. | DR-2026-049 |

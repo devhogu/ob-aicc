@@ -57,4 +57,4 @@ The Service Agreement has two parts. The commitment states the phases, the suppo
 
 ## 8. Rule source
 
-Business Model 2 to 7; Portfolio Management Model 5 to 7; Solution Lifecycle Model 6.3, 7.1; AI Policy 5; the Engagement workflow.
+Business Model 2 to 7; Portfolio Management Model 5 to 7; Solution Lifecycle Model 7.3, 8.1; AI Policy 5; the Engagement workflow.

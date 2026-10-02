@@ -38,7 +38,7 @@ Figure 1: the levels of the work.
 
 Every item of every level has one of thirteen states, defined in the Vocabulary. A Stage is a phase of the work inside the discovery state or the active state.
 
-Figure 2 shows how an item moves between the states. It follows the transition table of the Solution Lifecycle Model 4.1, which is the only source of the moves. Waiting returns to the state the item came from.
+Figure 2 shows how an item moves between the states. It follows the transition table of the Solution Lifecycle Model 5.1, which is the only source of the moves. Waiting returns to the state the item came from.
 
 ```mermaid
 stateDiagram-v2
@@ -96,7 +96,7 @@ The portfolio flow takes a need through the portfolio Kanban of the Portfolio Ma
 | Portfolio Backlog | Initiative, Approved | Rank the approved Initiatives and take the highest-ranked one that fits into work | AICC Lead | The rank in the Portfolio Backlog |
 | MVP | Initiative, Active: MVP | Define the architecture and the Solution Definition of the first Solution, and try it as a probe against the leading indicators | Solution Engineer with the Domain Expert; the Domain Owner approves the Solution Definition | The Solution Definition in the Portfolio and the AI Registry entry; the result of the probe |
 | Decision after the MVP | Initiative, Active | Continue, pivot, defer, or reject | The approver of the business case | The Decision Log entry |
-| Implementation | Initiative, Active: Implementation | Define the Capabilities and break them into Features, each with acceptance criteria and Dependencies | AICC Lead with the Domain Owner | Capabilities and Features in the Program Backlog, under the Initiative; the Dependency Map |
+| Implementation | Initiative, Active: Implementation | Define the Capabilities and break them into Features, each with acceptance criteria and Dependencies | AICC Lead with the Domain Owner | Capabilities and Features in the Program Backlog, under the Initiative; the Program Board |
 | Done | Initiative, Review, Accepted, Closed | Review the outcome against the leading indicators and accept it | Product owner | The acceptance with who and when |
 
 ## 5. The execution in the Program Increment
@@ -160,7 +160,7 @@ AICC oversees the Adopted Solutions that others deliver, in the Portfolio, with 
 
 ## 8. Decisions along the stream
 
-Who decides what along the stream is in the Operating Model 4.2 and 5.3, in the Solution Lifecycle Model 4 to 7, and in the AI Policy 2 and 3. This workflow states no decider of its own.
+Who decides what along the stream is in the Operating Model 4.2 and 5.3, in the Solution Lifecycle Model 3 to 9, and in the AI Policy 2 and 3. This workflow states no decider of its own.
 
 ## 9. Where it runs
 
@@ -179,7 +179,7 @@ From the cutover of the working state (Operating Model 7.1) the stream runs in J
 | Initiative, Capability, Feature, Work Item | Initiative above Epic, a Capability as an Epic, a Feature issue type, and a sub-task. The Initiative level needs the edition of Jira that has it | The Initiative Brief; the Program Backlog at the close of the PI |
 | The Stage and the exact business state of an item | Fields on the issue, where the five statuses are not enough to tell proposed, discovery, and deferred apart | The state and Stage in the snapshot |
 | A Solution | A Confluence page for its Solution Definition, and a label or component on its Capabilities (Epics) | The Solution Definition in the Portfolio |
-| Waiting on a Dependency | A link between items and a flag on the issue | The Dependency Map at the close of the PI |
+| Waiting on a Dependency | A link between items and a flag on the issue | The Program Board at the close of the PI |
 | Lanes | The priority of the issue: Urgent, High, Normal | Not kept |
 | Iteration and PI | A Jira sprint for each Iteration, and a field for the PI | The Calendar |
 | Solution definitions, notes, forms, and reports | Confluence pages and page templates | The Solution Definition, the decisions, the Control Sign-Offs, the incident records, and the Quarterly Report |

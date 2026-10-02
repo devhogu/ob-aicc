@@ -15,7 +15,7 @@ Kept here by hand until the cutover Decision, then held in Jira and Confluence. 
 | Calendar | [calendar.md](calendar.md) | Program Increments, Iterations, weeks, and the blocked and gray days |
 | Teams | [teams.md](teams.md) | The Teams, members, capacity, and the Hats |
 | Program Increment | [pi/](pi/2026-PIQ4/objectives.md) | For each: PI Objectives, monthly Iterations with their Iteration Backlogs and Weekly Review notes, and the IP week |
-| Dependency Map | [dependencies.md](dependencies.md) | Dependencies of each item, and its scope by month |
+| Program Board | [dependencies.md](dependencies.md) | Dependencies of each item, and its scope by month |
 | Dashboard | [dashboard.md](dashboard.md) | The state of the Program Increment, flow, Dependencies, risks, and Measures |
 
 ## Living records

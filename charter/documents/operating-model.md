@@ -242,7 +242,7 @@ In practice, an AI Incident is handled in the incident management of the Bank, w
 
 ## 7. Records and evidence
 
-7.1. The live state of the work is the working state: the backlogs, the boards, the Roadmap, the Calendar, the Dependency Map, the Dashboard, the Teams, and the Program Increment folder. 
+7.1. The live state of the work is the working state: the backlogs, the boards, the Roadmap, the Calendar, the Program Board, the Dashboard, the Teams, and the Program Increment folder. 
 
 7.2. The evidence records shall always be kept in the Registry. An evidence record is a closed and dated extract, taken when an event happens, such as a portfolio Decision, an approval, a sign-off, an acceptance, a high-impact incident, or an appointment. It states what happened, who decided or acted, on which facts, and where the live item is.  Jira, Confluence, and Service Management are not an evidence store.
 
@@ -271,17 +271,17 @@ In practice, an AI Incident is handled in the incident management of the Bank, w
 | C-07 | Report to the Board Committee | Charter 7.2 | AICC Lead prepares; Executive Sponsor approves and issues | Quarterly | Quarterly Report, with its issuance block | Quarterly Report |
 | C-08 | Service Agreement for an Engagement | Business Model 5 | AICC Lead | When the study starts, and amended at approval | Service Agreement; Portfolio Backlog | Service Agreement |
 | C-09 | Approval of the business case | Portfolio Management Model 6.3, 6.4; Charter 4.2 | Domain Owner; Executive Sponsor above a guardrail or across Domains; the Control Function Contacts clear it | When the Initiative is approved | Initiative Brief, complete in its six sections, with the clearances; Decision Record | Initiative Brief |
-| C-10 | Outcome Report, acceptance, and confirmation of the benefit | Solution Lifecycle Model 6.3; Business Model 5.5, 7.3 | AICC Lead issues; product owner accepts; Domain Owner confirms the benefit | At the end of the Engagement | Outcome Report | Outcome Report |
+| C-10 | Outcome Report, acceptance, and confirmation of the benefit | Solution Lifecycle Model 7.3; Business Model 5.5, 7.3 | AICC Lead issues; product owner accepts; Domain Owner confirms the benefit | At the end of the Engagement | Outcome Report | Outcome Report |
 | C-11 | Capacity used and benefit confirmed | Business Model 6 | AICC Lead | Quarterly | Quarterly Report | Quarterly Report |
 | C-12 | Risk Tier assignment | AI Policy 3.2 | AICC Lead | When the Solution is defined | Solution Definition; AI Registry entry, with who assigned it and when | Solution Definition |
-| C-13 | Check or validation before the first deployment | AI Policy 3.3; Solution Lifecycle Model 6.1 | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment | AI Registry entry for the check; Control Sign-Off for the validation | Control Sign-Off |
-| C-14 | Release | Solution Lifecycle Model 6.1 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | The release block of the Solution Definition; the Acceptance Checklist where the Solution is handed to a Domain; Decision Record for Risk Tier 3 | Solution Definition; Acceptance Checklist |
+| C-13 | Check or validation before the first deployment | AI Policy 3.3; Solution Lifecycle Model 7.1 | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment | AI Registry entry for the check; Control Sign-Off for the validation | Control Sign-Off |
+| C-14 | Release | Solution Lifecycle Model 7.1 | Domain Owner; Executive Sponsor for Risk Tier 3 | Before use beyond the first users | The release block of the Solution Definition; the Acceptance Checklist where the Solution is handed to a Domain; Decision Record for Risk Tier 3 | Solution Definition; Acceptance Checklist |
 | C-15 | Approval of the use of a Solution for a data class | AI Policy 2.1 | Domain Owner; the AICC Lead for use in AICC | Before use | AI Registry, with who approved it and when | Not needed |
 | C-16 | An AI Incident | AI Policy 5 | AICC Lead for the record and the review; the IT function that operates the Solution for the handling | When it happens, and reconciled with the incident management of the Bank each quarter | The ticket in Service Management, by reference; Risks and Issues; AI Incident Review | AI Incident Review |
 | C-17 | An Exception | AI Policy 6 | The Control Function concerned; the AICC Lead for a requirement set by AICC alone | When requested, and open Exceptions reviewed monthly until they expire | Control Sign-Off, or Decision Record for the AICC Lead; Risks and Issues | Control Sign-Off; Decision Record |
 | C-18 | Check of a provider | AI Policy 4.1 | The Control Function Contacts of information security, data protection, and legal | Before use, and at each reassessment | Control Sign-Off | Control Sign-Off |
 | C-19 | Sharing of data or decisions outside the Bank | Charter 3.3 | The Executive Sponsor | Before the sharing | Decision Record | Decision Record |
-| C-20 | A Proposal to adopt a Solution at scale | Solution Lifecycle Model 7.2 | AICC Lead prepares; the owners and the Executive Sponsor decide | When a Solution is ready to be adopted | Proposal; Decision Record | Proposal |
+| C-20 | A Proposal to adopt a Solution at scale | Solution Lifecycle Model 8.2 | AICC Lead prepares; the owners and the Executive Sponsor decide | When a Solution is ready to be adopted | Proposal; Decision Record | Proposal |
 | C-21 | Output published to the Board or investors | AI Policy 2.4 | Executive Sponsor | Each issue | Decision Record of the approval | Decision Record |
 | C-22 | Separation of duties and independence | 4.4 | Executive Sponsor | At each release and each appointment | Appointments; the Acceptance Checklist or the release block | Appointments Record |
 | C-23 | Capacity ceiling and intake of Engagements | Business Model 7.1, 7.2 | AICC Lead | When a Service Agreement is issued | Service Agreement; Portfolio Backlog | Service Agreement |
@@ -290,9 +290,9 @@ In practice, an AI Incident is handled in the incident management of the Bank, w
 | C-26 | Access review of the Registry and the tools | 7.6 | AICC Lead; the keeper of each tool | Quarterly | Steering Summary | Steering Summary |
 | C-27 | Acceptance of a risk beyond the appetite | Charter 5.4; 5.4 | Executive Sponsor | When it arises | Decision Record; the report to the Board Committee | Decision Record |
 | C-28 | Reassessment of the Risk Tier and expiry of a validation | AI Policy 3.3, 3.4 | AICC Lead | On a change, and by the date in the AI Registry | AI Registry; Control Sign-Off | Control Sign-Off |
-| C-29 | Review of live Solutions | AI Policy 3.5; Solution Lifecycle Model 7.4 | Domain Owner | Each Iteration Review and Demo | Solution Definition | Solution Definition |
-| C-30 | Change to a released Solution | Solution Lifecycle Model 7.3 | AICC Lead decides; Domain Owner, or Executive Sponsor for Risk Tier 3, releases | When a change is made | The Feature with its change ticket; Solution Definition; Decision Log for an emergency change | Solution Definition |
-| C-31 | Retirement of a Solution | Solution Lifecycle Model 7.5 | Domain Owner; Executive Sponsor for a Service across Domains | When a Solution is retired | Solution Definition; AI Registry | Solution Definition |
+| C-29 | Review of live Solutions | AI Policy 3.5; Solution Lifecycle Model 8.4 | Domain Owner | Each Iteration Review and Demo | Solution Definition | Solution Definition |
+| C-30 | Change to a released Solution | Solution Lifecycle Model 8.3 | AICC Lead decides; Domain Owner, or Executive Sponsor for Risk Tier 3, releases | When a change is made | The Feature with its change ticket; Solution Definition; Decision Log for an emergency change | Solution Definition |
+| C-31 | Retirement of a Solution | Solution Lifecycle Model 8.5 | Domain Owner; Executive Sponsor for a Service across Domains | When a Solution is retired | Solution Definition; AI Registry | Solution Definition |
 | C-32 | Deficiencies and findings | 8.2 | AICC Lead; Executive Sponsor reviews | When found, and monthly until closed | Risks and Issues; Steering Summary | Steering Summary |
 
 8.2. A control that did not operate, and each finding of an audit or a supervisor, shall be entered in the Risks and Issues Record with an owner and a due date, and the monthly Steering shall review it until it is closed.
