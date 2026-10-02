@@ -6,7 +6,7 @@
     "ru": "О центре AICC"
    },
    "intro": {
-    "en": "AICC is the internal consulting and innovation lab of the Bank for the adoption of artificial intelligence. This page is the summary of AICC: what it is, its goal, its strategy, its approach, its authority, and its safeguards. Each part points to the page that holds the detail."
+    "en": "AICC is the internal consulting and innovation lab of the Bank for the adoption of artificial intelligence. It explores and proves the use of AI with the functions of the Bank, delivers measured outcomes, and sets the way in which the Bank adopts AI at scale, with accountability that stays with people."
    },
    "icon": "file-text"
   },
@@ -16,7 +16,7 @@
     "ru": "Что делает AICC"
    },
    "intro": {
-    "en": "This section describes the services that AICC offers to the functions of the Bank, the Solutions that it delivers, and the way a function engages AICC.",
+    "en": "AICC serves the functions of the Bank. A function brings a need, AICC commits to an Engagement, delivers a Solution with its evidence, and supports it at the agreed level. The Business Model states the offer, and the Engagement workflow shows how a function works with AICC.",
     "ru": "Раздел описывает услуги, которые AICC предоставляет функциям Банка, решения, которые он создаёт, и порядок обращения функции в AICC."
    },
    "icon": "users"
@@ -27,7 +27,7 @@
     "ru": "Как работает AICC"
    },
    "intro": {
-    "en": "This section states the method of AICC: how Initiatives are taken in and decided, how Solutions are delivered, released, and operated, how the work is paced, and how it is measured. The workflows show the flow, and the guides explain it.",
+    "en": "AICC works by one method: Initiatives are taken in and decided in the Portfolio, Solutions are delivered, released, and operated through the Solution Lifecycle, and the work runs on a common cadence and is measured. The workflows show the flow, and the guides explain it.",
     "ru": "Раздел излагает метод AICC: как принимаются и решаются инициативы, как создаются, выпускаются и эксплуатируются решения, как организован ритм работы и как она измеряется. Процессы показывают ход работы, руководства поясняют его."
    },
    "icon": "workflow"
@@ -38,7 +38,7 @@
     "ru": "Организация"
    },
    "intro": {
-    "en": "This section states the Roles of AICC, the levels at which decisions are taken, and the bodies that advise and decide. The people who hold the Roles are named in the Appointments Record of the Registry, and the charter names Roles only.",
+    "en": "AICC is a joint team, led by the AICC Lead and formed of the people whom the functions of the Bank assign to it. Seven Roles carry the work, decisions are taken at defined levels, and the Steering and the Board Committee advise and oversee. The charter names Roles; the persons who hold them are recorded in the Appointments Record of the Registry.",
     "ru": "Раздел излагает роли AICC, уровни принятия решений и органы, которые консультируют и решают. Лица, исполняющие роли, названы в Журнале назначений Реестра; устав называет только роли."
    },
    "icon": "list-tree"
@@ -49,7 +49,7 @@
     "ru": "Ответственный ИИ"
    },
    "intro": {
-    "en": "This section states the rules for the use of AI at the Bank: the Risk Tiers, the checks and validations before use, the review of providers, the handling of AI Incidents, and the Exceptions. It links to the AI Risk Appetite Statement and to the gates of delivery.",
+    "en": "The Bank uses AI under rules that are proportionate to risk. Each Solution has a Risk Tier, is checked or validated before use, and is overseen by people who can stop it. The AI Policy states the rules, the Risk Tiers, the review of providers, the handling of AI Incidents, and the Exceptions, within the AI Risk Appetite Statement of the Bank.",
     "ru": "Раздел излагает правила использования ИИ в Банке: уровни риска, проверки и валидацию перед использованием, оценку поставщиков, обработку инцидентов ИИ и исключения. В нём есть ссылки на Заявление о риск-аппетите ИИ и на контрольные точки поставки."
    },
    "icon": "shield-check"
@@ -60,7 +60,7 @@
     "ru": "Управление и надзор"
    },
    "intro": {
-    "en": "This section states how AICC is controlled, reported, and assured: the control loops, the records and the evidence, the catalogue of controls, and the reporting to the Board Committee. The status of each control at a date is kept in the Control Matrix of the Registry.",
+    "en": "AICC is controlled, reported, and assured through five control loops, a catalogue of thirty-two controls, and the records that evidence them. The AICC Lead reports each quarter, the Executive Sponsor issues the report to the Board Committee, and internal audit gives independent assurance. The status of each control at a date is kept in the Control Matrix of the Registry.",
     "ru": "Раздел излагает, как осуществляются контроль, отчётность и обеспечение уверенности в AICC: контуры контроля, записи и свидетельства, каталог контролей и отчётность перед комитетом совета. Статус каждого контроля на дату ведётся в Матрице контролей Реестра."
    },
    "icon": "table-properties"
@@ -71,7 +71,7 @@
     "ru": "Библиотека"
    },
    "intro": {
-    "en": "This section holds the thirteen templates, the forms of the records that AICC produces. A template gives the form, and the rules for the record are in the documents.",
+    "en": "The thirteen templates are the forms of the records that AICC produces, from the Initiative Brief to the Quarterly Report. A template gives the form; the rules for the record are in the documents.",
     "ru": "Раздел содержит тринадцать шаблонов: формы записей, которые ведёт AICC. Шаблон задаёт форму, а правила ведения записи изложены в документах."
    },
    "icon": "copy"
@@ -82,7 +82,7 @@
     "ru": "Справочник"
    },
    "intro": {
-    "en": "This section holds the Vocabulary, the Document Catalog, the change history of the documents, and the page that states where each record is kept.",
+    "en": "The Vocabulary defines the terms of the charter, the Document Catalog lists its documents, the change history records their revisions, and Records and systems states where each record is kept.",
     "ru": "Раздел содержит Словарь, Каталог документов, историю изменений документов и страницу, которая указывает, где хранится каждая запись."
    },
    "icon": "link"
@@ -284,10 +284,10 @@
    {
     "id": "goal",
     "title": {
-     "en": "The goal"
+     "en": "Purpose"
     },
     "text": {
-     "en": "The mission of AICC is to enable the Bank to adopt AI as a governed capability that delivers measured value. The adoption improves the quality, speed, and consistency of the operations and services of the Bank, and supports its mission to improve people's lives with digital products and services. Accountability for every Solution stays with a named individual, and controls stay proportionate to risk."
+     "en": "The mission of AICC is to enable the Bank to adopt AI as a governed capability that delivers measured value. The adoption improves the quality, speed, and consistency of the operations and services of the Bank, and serves its mission to improve people's lives with digital products and services. The direction is clear: from governed foundations, through assistants and embedded AI, to bounded agents under human oversight, with accountability for every Solution with a named individual."
     },
     "links": [
      {
@@ -307,10 +307,10 @@
    {
     "id": "strategy",
     "title": {
-     "en": "The strategy"
+     "en": "Strategy"
     },
     "text": {
-     "en": "The Bank pursues seven Strategic Priorities, in order, and advances each through five Maturity Levels. A Maturity Level is reached for a Strategic Priority when its Measures are met."
+     "en": "The Bank pursues seven Strategic Priorities, from customer intelligence to software engineering, each resting on a governed foundation of people, data, and a shared AI Platform. Each Strategic Priority advances at its own pace through five Maturity Levels, and a level is reached when its Measures are met."
     },
     "priorities": true,
     "links": [
@@ -331,10 +331,10 @@
    {
     "id": "approach",
     "title": {
-     "en": "The approach"
+     "en": "Approach"
     },
     "text": {
-     "en": "A function brings a need to AICC. AICC takes it in as an Initiative, tries it first as a minimum viable product, measures it against defined success Measures, and extends it only on that evidence. The work runs on a common cadence, is made visible, and is limited in progress. Before a Solution reaches its users, it is checked or validated by a person other than its builder, accepted by the Team, and accepted by the Domain Owner who asked for it."
+     "en": "A function brings a need to AICC. AICC takes it in as an Initiative, probes it first as a minimum viable product, measures it against defined success Measures, and extends it only on that evidence. The work is visible, limited in progress, and paced by a common cadence. Before a Solution reaches its users, it is checked or validated by a person other than its builder, accepted by the Team, and accepted by the Domain Owner who asked for it. AICC applies this way of working to itself and is the example of what it proposes to the Bank."
     },
     "links": [
      {
@@ -416,7 +416,7 @@
    }
   ],
   "deeper": {
-   "en": "Go deeper"
+   "en": "Read further"
   }
  },
  "values_page": {

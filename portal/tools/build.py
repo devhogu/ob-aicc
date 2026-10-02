@@ -643,6 +643,8 @@ def desc_of(site, p):
         'reference/change-history': 'The revision history of the documents',
         'reference/records-and-systems': 'Where each record is kept, and which control it evidences',
         'organization/roles': 'The seven Roles and their pages',
+        'privacy': 'What this site does, and does not do, with information about the persons who use it',
+        'terms-of-use': 'The conditions under which this site is made available, and the standing of its pages',
     }
     return fixed.get(p['id'], '')
 
@@ -741,6 +743,9 @@ def layout(site, p, lang, main_html, outline):
                 if q['id'] in nested:
                     sub.append(link(nested[q['id']], 'sub2'))
             nav.append('<div class="nav-sub">%s</div>' % ''.join(sub))
+    legal = sorted([x for x in site.pages if x['type'] == 'legal'], key=lambda x: x['order'])
+    if legal:
+        nav.append('<div class="nav-legal">%s</div>' % ''.join('<a href="%s"%s>%s</a>' % (site.rel(url, site.url(q, lang)), ' aria-current="page"' if q['id'] == p['id'] else '', esc(q['title'])) for q in legal))
     crumbs = ['<a href="%s">%s</a>' % (home, esc(m['home']))]
     if p.get('section'):
         sp = site.by_id[p['section'] + '/index']
@@ -751,8 +756,8 @@ def layout(site, p, lang, main_html, outline):
     bc = '<nav class="o-eyebrow crumbs" aria-label="%s">%s</nav>' % (esc(m['breadcrumb']), ' / '.join(crumbs))
     nx = next_page(site, p)
     if nx:
-        bc = '<div class="crumbbar">%s<a class="crumb-next" href="%s" rel="next"><span>%s:</span> <strong>%s</strong> &rsaquo;</a></div>' % (
-            bc, site.rel(url, site.url(nx, lang)), esc(m['next']), esc(flow_label(site, nx, lang)))
+        bc = '<div class="crumbbar%s">%s<a class="crumb-next" href="%s" rel="next"><span>%s:</span> <strong>%s</strong> &rsaquo;</a></div>' % (
+            ' has-ctx' if outline else '', bc, site.rel(url, site.url(nx, lang)), esc(m['next']), esc(flow_label(site, nx, lang)))
     ctx = ''
     if outline:
         links = ''.join('<a class="lv%d" href="#%s">%s</a>' % (lv, i, esc(t)) for lv, i, t in outline)
@@ -760,6 +765,7 @@ def layout(site, p, lang, main_html, outline):
     reading = '<div class="o-reading"><div class="o-copy">%s</div>%s</div>' % (main_html, ctx) if ctx else '<div class="o-wide">%s</div>' % main_html
     ref = p.get('ref', '')
     subject = m['fb_subject'].replace('{ref}', ref)
+    foot_legal = ''.join(' <a class="contact" href="%s">%s</a>' % (site.rel(url, site.url(q, lang)), esc(q['title'])) for q in legal)
     title = (p['title'] if p['id'] != 'index' else site.auth['home']['title'][lang]) + ' · ' + m['site_short']
     return f'''<!doctype html>
 <html lang="{lang}" data-theme="light">
@@ -791,7 +797,7 @@ def layout(site, p, lang, main_html, outline):
     {bc}
     {reading}
     <footer class="o-footer">
-      <span class="foot-text">{esc(m['footer'])} <a class="contact" href="mailto:{CONTACT['email']}?subject={quote(subject)}">{esc(m['contact_us'])}</a></span>
+      <span class="foot-text">{esc(m['footer'])} <a class="contact" href="mailto:{CONTACT['email']}?subject={quote(subject)}">{esc(m['contact_us'])}</a>{foot_legal}</span>
       <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>{esc(m['pagefb'])}</span><span>ID: {esc(ref)}</span></button>
     </footer>
   </main>
@@ -873,6 +879,7 @@ def flow_pages(site):
         for sec in site.sections:
             flow.append(site.by_id[sec['id'] + '/index'])
             flow += sorted([x for x in site.pages if x.get('section') == sec['id'] and x['type'] not in ('section', 'control', 'role')], key=lambda x: (x['order'], x['id']))
+        flow += sorted([x for x in site.pages if x['type'] == 'legal'], key=lambda x: x['order'])
         site._flow = flow
     return site._flow
 
@@ -903,10 +910,13 @@ def flow_label(site, q, lang):
 
 
 def prev_next(site, p, lang):
-    if not p.get('section') or p['type'] in ('section', 'control', 'role', 'home'):
+    if p['type'] in ('section', 'control', 'role', 'home') or not (p.get('section') or p['type'] == 'legal'):
         return ''
-    sib = [x for x in site.pages if x.get('section') == p['section'] and x['type'] not in ('section', 'control', 'role')]
-    sib.sort(key=lambda x: (x['order'], x['id']))
+    if p['type'] == 'legal':
+        sib = [x for x in flow_pages(site) if x['type'] != 'home']
+    else:
+        sib = [x for x in site.pages if x.get('section') == p['section'] and x['type'] not in ('section', 'control', 'role')]
+        sib.sort(key=lambda x: (x['order'], x['id']))
     i = [x['id'] for x in sib].index(p['id']) if p['id'] in [x['id'] for x in sib] else -1
     if i < 0:
         return ''
@@ -914,7 +924,7 @@ def prev_next(site, p, lang):
     m = site.msg[lang]
     out = []
     if i > 0:
-        out.append('<a class="pn prev" href="%s" rel="prev"><span>%s</span>%s</a>' % (site.rel(url, site.url(sib[i - 1], lang)), esc(m['previous']), esc(disp(sib[i - 1]['title']))))
+        out.append('<a class="pn prev" href="%s" rel="prev"><span>%s</span>%s</a>' % (site.rel(url, site.url(sib[i - 1], lang)), esc(m['previous']), esc(flow_label(site, sib[i - 1], lang))))
     nx = next_page(site, p)
     if nx:
         out.append('<a class="pn next" href="%s" rel="next"><span>%s</span>%s</a>' % (site.rel(url, site.url(nx, lang)), esc(m['next']), esc(flow_label(site, nx, lang))))
@@ -981,7 +991,7 @@ def weight(p):
 def page_meta(site, p, lang):
     m = site.msg[lang]
     kinds = {'document': 'kind_document', 'catalogue': 'kind_document', 'workflow': 'kind_workflow', 'guide': 'kind_guide', 'template': 'kind_template',
-             'outline': 'kind_page', 'reference': 'kind_reference', 'records': 'kind_reference', 'index': 'kind_page'}
+             'outline': 'kind_page', 'reference': 'kind_reference', 'records': 'kind_reference', 'index': 'kind_page', 'legal': 'kind_page'}
     k = m.get(kinds.get(p['type'], 'kind_page'), '')
     bits = [k]
     if p.get('source_sections') and p.get('document'):

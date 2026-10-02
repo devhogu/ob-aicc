@@ -53,7 +53,8 @@ for f in sorted(glob.glob(os.path.join(root, 'charter', '**', '*.md'), recursive
 
 def outline_file(p):
     if p['id'] == 'index': return 'pages/index.md'
-    sec = p['section']
+    sec = p.get('section')
+    if not sec: return 'pages/%s.md' % p['id']
     if p['id'].endswith('/index'): return 'pages/%s/index.md' % sec
     return 'pages/%s/%s.md' % (sec, p['id'].split('/', 1)[1].replace('/', '--'))
 

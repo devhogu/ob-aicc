@@ -112,6 +112,14 @@ add(id='about/charter-outline', section='about', order=7, type='outline', slug='
              'Reading routes (reading-routes.md)',
              'Control of the charter: status, revision, and change (from the charter README)'])
 
+# Legal pages of the portal, authored in portal/content, last in the left navigation and linked from the footer
+add(id='privacy', section=None, order=90, type='legal', slug='/privacy/', title='Privacy', source=['portal/content/privacy.md'], production='authored',
+    outline=['What the site collects: no cookies, no analytics, one theme preference in browser storage, the gateway session, server logs',
+             'Feedback and contact by email', 'Persons named on the site: Roles, not persons', 'Questions and revision'])
+add(id='terms-of-use', section=None, order=91, type='legal', slug='/terms-of-use/', title='Terms of use', source=['portal/content/terms-of-use.md'], production='authored',
+    outline=['Scope and access', 'Information of the Bank and ownership', 'Standing of the pages: the document prevails, the live records are elsewhere, no right arises from a page',
+             'Use of the site', 'Changes and contact'])
+
 # What AICC does
 add(id='what-aicc-does/business-model', section='what-aicc-does', order=1, type='document', slug='/what-aicc-does/business-model/',
     title=h1('charter/documents/business-model.md'), source=['charter/documents/business-model.md'], words=1381)
@@ -249,8 +257,8 @@ TYPE_ELEMENTS = {
 
 def fname(p):
     sec = p['section'] or ''
-    if p['id'] == 'index':
-        return os.path.join('pages', 'index.md')
+    if p['id'] == 'index' or not sec:
+        return os.path.join('pages', p['id'] + '.md')
     return os.path.join('pages', sec, p['id'].split('/', 1)[1].replace('/', '--') + '.md') if not p['id'].endswith('/index') else os.path.join('pages', sec, 'index.md')
 
 

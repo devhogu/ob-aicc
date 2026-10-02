@@ -193,3 +193,9 @@ dialog.fb .fb-body .oc-button{flex:none}
 .vp-list li::before{content:counter(vp);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--surface-subtle);border:1px solid var(--border-control);font-weight:600;font-size:16px;color:var(--text)}
 .vp-list li strong{font-weight:600}
 .vp-source{margin:10px 0 0;font-size:13px;color:var(--text-muted)}
+
+/* legal pages at the end of the navigation */
+.nav-legal{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:2px}
+.nav-legal a{min-height:34px;padding:6px 12px;font-size:13px;color:var(--text-muted)}
+.crumbbar.has-ctx{display:grid;grid-template-columns:minmax(0,1fr) var(--context-width);gap:32px;justify-content:stretch}
+.crumbbar.has-ctx .crumb-next{max-width:100%;justify-self:start}

@@ -338,6 +338,41 @@
    ]
   },
   {
+   "id": "privacy",
+   "order": 90,
+   "type": "legal",
+   "slug": "/privacy/",
+   "title": "Privacy",
+   "source": [
+    "portal/content/privacy.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "What the site collects: no cookies, no analytics, one theme preference in browser storage, the gateway session, server logs",
+    "Feedback and contact by email",
+    "Persons named on the site: Roles, not persons",
+    "Questions and revision"
+   ]
+  },
+  {
+   "id": "terms-of-use",
+   "order": 91,
+   "type": "legal",
+   "slug": "/terms-of-use/",
+   "title": "Terms of use",
+   "source": [
+    "portal/content/terms-of-use.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Scope and access",
+    "Information of the Bank and ownership",
+    "Standing of the pages: the document prevails, the live records are elsewhere, no right arises from a page",
+    "Use of the site",
+    "Changes and contact"
+   ]
+  },
+  {
    "id": "what-aicc-does/business-model",
    "section": "what-aicc-does",
    "order": 1,

@@ -5,6 +5,8 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Section | Page | Address | Type | Source | Sections | Words | Production |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Home | Home | / | home | executive-summary.md | all |  | authored |
+| Home | Privacy | /privacy/ | legal | portal/content/privacy.md | all |  | authored |
+| Home | Terms of use | /terms-of-use/ | legal | portal/content/terms-of-use.md | all |  | authored |
 | About AICC | About AICC | /about/ | section | none | none |  | authored, with a generated list |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence | /about/statement-of-intent/ | document | documents/statement-of-intent.md | 1, 2, 3, 4, 5, 6, 7, 8 | 1319 | generated |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Strategic Priorities | /about/statement-of-intent/strategic-priorities/ | document | documents/statement-of-intent.md | 9 | 549 | generated |
