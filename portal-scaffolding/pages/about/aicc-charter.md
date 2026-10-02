@@ -2,7 +2,7 @@
 id: about/aicc-charter
 title: AICC Charter
 section: about
-order: 5
+order: 6
 type: document
 slug: /about/aicc-charter/
 source: charter/documents/aicc-charter.md

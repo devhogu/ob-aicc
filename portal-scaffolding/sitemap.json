@@ -288,9 +288,26 @@
    "production": "generated"
   },
   {
-   "id": "about/aicc-charter",
+   "id": "about/strategy",
    "section": "about",
    "order": 5,
+   "type": "outline",
+   "slug": "/about/strategy/",
+   "title": "Strategy",
+   "source": [],
+   "production": "authored, with tables generated from the Statement of Intent",
+   "outline": [
+    "The strategy of the Bank: its mission and the four Strategic Pillars, and the contribution of AI to each (Statement of Intent 3)",
+    "The AI adoption strategy: the seven Strategic Priorities (Statement of Intent 9) and the areas of application (8)",
+    "The strategy across the aspects of AICC: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures",
+    "The road: the Maturity Roadmap and its measures (Statement of Intent 11)",
+    "How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, AICC Charter 7)"
+   ]
+  },
+  {
+   "id": "about/aicc-charter",
+   "section": "about",
+   "order": 6,
    "type": "document",
    "slug": "/about/aicc-charter/",
    "title": "AICC Charter",
@@ -303,7 +320,7 @@
   {
    "id": "about/values-and-principles",
    "section": "about",
-   "order": 6,
+   "order": 7,
    "type": "outline",
    "slug": "/about/values-and-principles/",
    "title": "Values and principles",
@@ -319,7 +336,7 @@
   {
    "id": "about/charter-outline",
    "section": "about",
-   "order": 7,
+   "order": 8,
    "type": "outline",
    "slug": "/about/charter-outline/",
    "title": "Explore AICC",

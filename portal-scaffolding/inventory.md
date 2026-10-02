@@ -12,6 +12,7 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Strategic Priorities | /about/statement-of-intent/strategic-priorities/ | document | documents/statement-of-intent.md | 9 | 549 | generated |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Capability and maturity roadmap | /about/statement-of-intent/capability-and-maturity-roadmap/ | document | documents/statement-of-intent.md | 10, 11 | 1051 | generated |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Performance and commitments | /about/statement-of-intent/performance-and-commitments/ | document | documents/statement-of-intent.md | 12, 13 | 223 | generated |
+| About AICC | Strategy | /about/strategy/ | outline | none | none |  | authored, with tables generated from the Statement of Intent |
 | About AICC | AICC Charter | /about/aicc-charter/ | document | documents/aicc-charter.md | all | 900 | generated |
 | About AICC | Values and principles | /about/values-and-principles/ | outline | none | none |  | generated from the documents, with an authored statement of what each group applies to |
 | About AICC | Explore AICC | /about/charter-outline/ | outline | README.md; executive-summary.md; guides/README.md | all |  | generated, with an authored introduction |

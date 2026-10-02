@@ -2,7 +2,7 @@
 id: about/values-and-principles
 title: Values and principles
 section: about
-order: 6
+order: 7
 type: outline
 slug: /about/values-and-principles/
 production: generated from the documents, with an authored statement of what each group applies to

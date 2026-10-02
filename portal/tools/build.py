@@ -651,6 +651,7 @@ def desc_of(site, p):
         return site.roles['om'].get(p['title'], {}).get('Does', '')
     fixed = {
         'about/charter-outline': 'How the charter is organized on this site, where each part is, and where to start',
+        'about/strategy': 'The strategy of the Bank, the Strategic Priorities, the strategic choices across every aspect of AICC, and the road of Maturity Levels',
         'about/values-and-principles': 'The values and the principles of adoption, application, work, and delivery, and what each applies to',
         'reference/vocabulary': 'The defined terms of the charter and its style',
         'reference/change-history': 'The revision history of the documents',
@@ -666,7 +667,7 @@ def render_pages(site):
     diagrams = []
     for p in site.pages:
         t = p['type']
-        if p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'reference/records-and-systems', 'organization/roles', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
+        if p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'about/strategy', 'reference/records-and-systems', 'organization/roles', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
             continue
         if not p.get('source'):
             continue
@@ -1237,6 +1238,65 @@ def values_page(site, p, lang):
     return layout(site, p, lang, main, outline)
 
 
+def soi_priorities(soi):
+    lines = soi.split('\n')
+    pri = []
+    for i, l in enumerate(lines):
+        mm = re.match(r'### (9\.\d+)\. (.*)', l)
+        if mm:
+            row = {'n': len(pri) + 1, 'num': mm.group(1), 't': mm.group(2)}
+            for l2 in lines[i + 1:i + 5]:
+                m2 = re.match(r'- \*\*(Objective|Scope|Intended outcome)\.\*\* (.*)', l2)
+                if m2:
+                    row[m2.group(1)] = m2.group(2).strip()
+            pri.append(row)
+    return pri
+
+
+def strategy_page(site, p, lang):
+    a = site.auth['strategy_page']
+    m = site.msg[lang]
+    url = site.url(p, lang)
+    ctx = {'url': url, 'lang': lang, 'source': 'charter/documents/statement-of-intent.md'}
+    soi = read('charter/documents/statement-of-intent.md')
+    sp = site.by_id['about/statement-of-intent/strategic-priorities']
+    sp_url = site.rel(url, site.url(sp, lang))
+    rp = site.by_id['about/statement-of-intent/capability-and-maturity-roadmap']
+    rp_url = site.rel(url, site.url(rp, lang))
+    soi_url = site.rel(url, site.url(site.by_id['about/statement-of-intent'], lang))
+
+    def table(label, head, rows, cls=''):
+        return '<div class="o-table-wrap%s" role="region" tabindex="0" aria-label="%s"><table lang="en"><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (
+            (' ' + cls) if cls else '', esc(label), ''.join('<th>%s</th>' % esc(h) for h in head), rows)
+    out, outline = [], []
+
+    def section(hid, title, lead, body, lead_html=False):
+        outline.append((2, hid, title))
+        out.append('<section aria-labelledby="%s"><h2 id="%s">%s</h2>%s%s</section>' % (hid, hid, esc(title), ('<p>%s</p>' % (lead if lead_html else esc(lead))) if lead else '', body))
+        site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': p['title'], 'h': title, 'x': plain(lead)[:360]})
+    # 1. the strategy of the Bank
+    pillars = parse_table(soi, '| Strategic Pillar |')
+    carried = a['pillars_carried']
+    rows = ''.join('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % (esc(r['Strategic Pillar']), esc(r['Contribution of AI adoption']), esc(carried.get(r['Strategic Pillar'], ''))) for r in pillars)
+    section('st-bank', a['bank_title'][lang], a['bank_lead'][lang], table(a['bank_title'][lang], [m['st_pillar'], m['st_contribution'], m['st_carried']], rows) + '<p class="vp-source">%s: <a href="%s#s-3">Statement of Intent 3</a></p>' % (esc(m['vp_source']), soi_url))
+    # 2. the Strategic Priorities
+    pri = soi_priorities(soi)
+    rows = ''.join('<tr><td>%d</td><td><a href="%s#c-%s"><strong>%s</strong></a></td><td>%s</td><td>%s</td></tr>' % (
+        r['n'], sp_url, r['num'].replace('.', '-'), esc(r['t']), esc(r.get('Objective', '')), esc(r.get('Intended outcome', ''))) for r in pri)
+    section('st-priorities', a['priorities_title'][lang], a['priorities_lead'][lang], table(a['priorities_title'][lang], ['#', m['strategic_priority'], m['objective'], m['intended_outcome']], rows) + '<p class="vp-source">%s: <a href="%s">Statement of Intent 9</a>; <a href="%s#s-8">Statement of Intent 8</a></p>' % (esc(m['vp_source']), sp_url, soi_url))
+    # 3. the aspects
+    rows = ''.join('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td><td>%s</td></tr>' % (esc(r['aspect']), esc(r['choice']), esc(r['decides']), site.link_xrefs(esc(r['read']), ctx)) for r in a['aspects'])
+    section('st-aspects', a['aspects_title'][lang], a['aspects_lead'][lang], table(a['aspects_title'][lang], [m['st_aspect'], m['st_choice'], m['st_decides'], m['st_read']], rows, 'st-wide'))
+    # 4. the road
+    lv = parse_table(soi, '| Maturity Level | Name | Capability')
+    rows = ''.join('<tr><td>%s</td><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % (esc(r['Maturity Level']), esc(r['Name']), esc(r['Capability']), esc(r['Use of AI'])) for r in lv)
+    section('st-road', a['road_title'][lang], a['road_lead'][lang], table(a['road_title'][lang], [m['level'], m['name'], m['capability'], m['st_use']], rows) + '<p class="vp-source">%s: <a href="%s">Statement of Intent 11</a>; %s: <a href="%s#c-11-3">Statement of Intent 11.3</a></p>' % (esc(m['vp_source']), rp_url, esc(m['st_measures']), rp_url))
+    # 5. how it is kept
+    section('st-kept', a['kept_title'][lang], site.link_xrefs(esc(a['kept'][lang]), ctx), '', lead_html=True)
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(p['title']), esc(a['intro'][lang]), lang_note(site, lang), ''.join(out)) + prev_next(site, p, lang) + read_further(site, p, lang)
+    return layout(site, p, lang, main, outline)
+
+
 def explore_page(site, p, lang):
     a = site.auth['explore_page']
     m = site.msg[lang]
@@ -1463,6 +1523,8 @@ def build_page(site, p, lang):
         return values_page(site, p, lang)
     if p['id'] == 'about/charter-outline':
         return explore_page(site, p, lang)
+    if p['id'] == 'about/strategy':
+        return strategy_page(site, p, lang)
     if p['id'] == 'reference/change-history':
         return change_history(site, p, lang)
     if p['id'] == 'reference/records-and-systems':

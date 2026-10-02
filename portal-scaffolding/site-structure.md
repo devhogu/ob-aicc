@@ -46,7 +46,8 @@ flowchart LR
   H --> L
   H --> X
   A --> A1["Statement of Intent: 4 pages"]
-  A --> A2["AICC Charter"]
+  A --> A2["Strategy"]
+  A --> A2b["AICC Charter"]
   A --> A3["Values and principles"]
   A --> A4["Explore AICC"]
   W --> W1["Business Model"]

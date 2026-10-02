@@ -96,15 +96,21 @@ split_doc('about', 'statement-of-intent', 'charter/documents/statement-of-intent
     ('capability-and-maturity-roadmap', 'Capability and maturity roadmap', [10, 11]),
     ('performance-and-commitments', 'Performance and commitments', [12, 13]),
 ], 0)
-add(id='about/aicc-charter', section='about', order=5, type='document', slug='/about/aicc-charter/', title=h1('charter/documents/aicc-charter.md'),
+add(id='about/strategy', section='about', order=5, type='outline', slug='/about/strategy/', title='Strategy', source=[], production='authored, with tables generated from the Statement of Intent',
+    outline=['The strategy of the Bank: its mission and the four Strategic Pillars, and the contribution of AI to each (Statement of Intent 3)',
+             'The AI adoption strategy: the seven Strategic Priorities (Statement of Intent 9) and the areas of application (8)',
+             'The strategy across the aspects of AICC: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures',
+             'The road: the Maturity Roadmap and its measures (Statement of Intent 11)',
+             'How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, AICC Charter 7)'])
+add(id='about/aicc-charter', section='about', order=6, type='document', slug='/about/aicc-charter/', title=h1('charter/documents/aicc-charter.md'),
     source=['charter/documents/aicc-charter.md'], words=900)
-add(id='about/values-and-principles', section='about', order=6, type='outline', slug='/about/values-and-principles/', title='Values and principles', source=[],
+add(id='about/values-and-principles', section='about', order=7, type='outline', slug='/about/values-and-principles/', title='Values and principles', source=[],
     production='generated from the documents, with an authored statement of what each group applies to',
     outline=['Values: integrity, prudence, and respect for people (Statement of Intent 4)',
              'Principles of adoption (Statement of Intent 5) and of application (Statement of Intent 6)',
              'Principles of work (Operating Model 3) and of delivery (Solution Lifecycle Model 2)',
              'Each group states what it applies to, and links to its clause'])
-add(id='about/charter-outline', section='about', order=7, type='outline', slug='/about/charter-outline/', title='Explore AICC',
+add(id='about/charter-outline', section='about', order=8, type='outline', slug='/about/charter-outline/', title='Explore AICC',
     source=['charter/README.md', 'charter/executive-summary.md', 'charter/guides/README.md'], production='generated, with an authored introduction',
     outline=['Introduction: how the manual is organized and how the pages relate (authored)',
              'The document hierarchy and the contents table (from the charter README)',

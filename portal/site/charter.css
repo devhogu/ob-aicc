@@ -240,3 +240,5 @@ dialog.fb .fb-body .oc-button{flex:none}
 .o-header{position:sticky;top:0;z-index:50}
 .o-nav{position:sticky;top:var(--header-height);align-self:start;max-height:calc(100vh - var(--header-height));overflow:auto}
 .o-context{top:calc(var(--header-height) + 20px)}
+.st-wide table{min-width:720px}
+.st-wide td,.st-wide th{font-size:14px;vertical-align:top}

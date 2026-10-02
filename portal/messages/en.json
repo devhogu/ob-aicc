@@ -107,5 +107,15 @@
  "x_part": "Part",
  "x_answers": "Answers",
  "x_where": "On this site",
+ "st_pillar": "Strategic Pillar",
+ "st_contribution": "Contribution of AI adoption",
+ "st_carried": "Carried by",
+ "st_scope": "Scope",
+ "st_aspect": "Aspect",
+ "st_choice": "Strategic choice",
+ "st_decides": "Decided by",
+ "st_read": "Read",
+ "st_use": "Use of AI",
+ "st_measures": "Measures",
  "fb_id": "Page ID"
 }

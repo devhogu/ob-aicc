@@ -339,6 +339,12 @@
     "links": [
      {
       "label": {
+       "en": "Strategy"
+      },
+      "to": "about/strategy"
+     },
+     {
+      "label": {
        "en": "Strategic Priorities"
       },
       "to": "about/statement-of-intent/strategic-priorities"
@@ -604,6 +610,121 @@
   },
   "control": {
    "en": "Every page of this site is generated from the documents of the charter at the baseline revision stated in the footer; where a page and a document differ, the document prevails. The Document Catalog states the status, the revision, and the life cycle of each document and template, and the AICC Lead activates them. Each document carries its change history, shown at the end of its page. The controls that can be tested are listed in the Operating Model, section 8, and the evidence of each is held in the Registry."
+  }
+ },
+ "strategy_page": {
+  "intro": {
+   "en": "The strategy of AICC is the strategy of the Bank applied to artificial intelligence. It starts from the mission and the Strategic Pillars of the Bank, is stated as seven Strategic Priorities, is carried through the way AICC invests, engages, delivers, and governs, and is measured along a road of five Maturity Levels. This page brings the strands together in one place; each points to the document that governs it."
+  },
+  "bank_title": {
+   "en": "The strategy of the Bank"
+  },
+  "bank_lead": {
+   "en": "The mission of the Bank is to improve people's lives with digital products and services. Its strategy rests on four Strategic Pillars. The adoption of AI serves each of them, as the Statement of Intent states, and the Strategic Priorities below are the themes through which it does so."
+  },
+  "pillars_carried": {
+   "Innovative leadership": "Expertise at the point of work; Software engineering; Customer intelligence",
+   "Financial inclusion": "Customer intelligence; AI in banking operations and systems",
+   "Shareholder value and dividends": "Business intelligence; Adoption within Domains; Information technology operations and service lifecycle",
+   "ESG goals": "The Principles of Application and the AI Policy, across every priority"
+  },
+  "priorities_title": {
+   "en": "The AI adoption strategy: the Strategic Priorities"
+  },
+  "priorities_lead": {
+   "en": "The Bank pursues seven Strategic Priorities, stated in order, each resting on a governed foundation of people, data, and a shared AI Platform. They are the strategic themes of the Portfolio: the Executive Sponsor sets them with the Board, each with an Investment Envelope, and every Initiative that AICC takes in fits one of them."
+  },
+  "aspects_title": {
+   "en": "The strategy across the aspects of AICC"
+  },
+  "aspects_lead": {
+   "en": "One strategy runs through every aspect of how AICC works. The table states, for each aspect, the strategic choice that the charter makes, who decides it, and where it is written."
+  },
+  "aspects": [
+   {
+    "aspect": "Commercial model",
+    "choice": "AICC is an internal consulting and innovation lab, not a cost center that charges its clients. It does not charge the functions; the Domain pays from its Investment Envelope for the run, the licenses, and the provider costs of a Solution, and the Executive Sponsor owns the budget of AICC itself. Value is tracked as the benefit that the function confirms and the flow of the work.",
+    "decides": "Executive Sponsor; Domain Owners for the Solutions of their Domains",
+    "read": "Business Model 2 and 6; AICC Charter 4"
+   },
+   {
+    "aspect": "Investment",
+    "choice": "Investment goes to Strategic Priorities and to the Teams through Investment Envelopes, one for each priority, set each year. Investment Guardrails state what may be committed without the Executive Sponsor and which Initiatives need the approval of the Executive Sponsor. Benefits are reported against the Envelope of each priority.",
+    "decides": "Executive Sponsor, at the yearly Steering",
+    "read": "AICC Charter 4; Statement of Intent 10 and 12"
+   },
+   {
+    "aspect": "Portfolio",
+    "choice": "Business initiatives are taken in, funded, continued, deferred, or rejected on evidence. The Portfolio runs on four loops, from the strategic loop of the year to the backlog care of the week, through a portfolio Kanban with a limit on the Active Initiatives. Every Initiative has a business case and is first probed as an MVP before the decision to continue.",
+    "decides": "Executive Sponsor for the frame and the mix; AICC Lead for the flow",
+    "read": "Portfolio Management Model 2, 4, and 5"
+   },
+   {
+    "aspect": "Adoption",
+    "choice": "AICC proves the use of AI with the functions and proposes what the Bank should adopt at scale; the Bank decides on the Proposals and the Domains execute. Each Domain applies the shared principles and standards within its own regulation, appoints Domain Experts, and uses AI in its own processes with governed knowledge. Shared AI Platform components, knowledge, and standards take precedence over individual Solutions.",
+    "decides": "The Bank on each Proposal; the Domain Owners within their Domains",
+    "read": "Business Model 2; Statement of Intent 5, 7, and 10"
+   },
+   {
+    "aspect": "Engagement",
+    "choice": "A function brings a need, AICC commits to an Engagement in a Service Agreement on a best-effort basis within the capability it has, delivers an outcome with its evidence, and supports it at the agreed level. Either side may end or redirect the Engagement at the end of an Iteration.",
+    "decides": "AICC Lead issues the commitment; the Domain Owner accepts the outcome",
+    "read": "Business Model 3 to 5"
+   },
+   {
+    "aspect": "Delivery",
+    "choice": "Deliver in small steps: probe with an MVP, measure against the success Measures, then scale. Work is visible, limited in progress, and paced by Program Increments and Iterations on fixed dates. Quality and control are built into the flow: the check or validation and the controls of the AI Policy are steps of delivery, not a stage after it.",
+    "decides": "AICC Lead and the Teams",
+    "read": "Solution Lifecycle Model 2, 3, and 6"
+   },
+   {
+    "aspect": "Solutions",
+    "choice": "Every Solution has one of three types that sets its life: a Service that AICC runs for its whole life, a Product built for one consumer and supported on demand, or an Experiment that ends in a Proposal. AICC also oversees and reports on the Adopted Solutions that others deliver.",
+    "decides": "Domain Owner approves the Solution Definition; AICC Lead assigns the Risk Tier",
+    "read": "Solution Lifecycle Model 8; Portfolio Management Model 8"
+   },
+   {
+    "aspect": "Platform and data",
+    "choice": "One shared AI Platform serves the Bank, provided and operated outside AICC, with data separated as its classification requires. Data is classified, and the classification decides which data may reach which models and where they run. Knowledge sources have named owners and review cycles, and AI answers from approved, current, cited sources.",
+    "decides": "Platform Owner for the Platform; AICC states the requirements",
+    "read": "Statement of Intent 5, 10, and 11.2"
+   },
+   {
+    "aspect": "People and skills",
+    "choice": "AI augments the work of employees. Employees are trained by role before they use AI, each Domain appoints Domain Experts who enable adoption in that Domain, and AICC maintains training, templates, and communities of practice.",
+    "decides": "Domain Owners for their Domains; AICC Lead for the training",
+    "read": "Statement of Intent 5 and 10"
+   },
+   {
+    "aspect": "Providers",
+    "choice": "Providers of AI models and services are subject to due diligence, contractual terms, ongoing monitoring, and fallback and exit arrangements. The Bank is answerable for AI that it procures as for AI that it develops.",
+    "decides": "Control Function Contacts and the Executive Sponsor, as the AI Policy states",
+    "read": "Statement of Intent 6 and 10; AI Policy 4"
+   },
+   {
+    "aspect": "Risk",
+    "choice": "The Bank accepts risk from AI where the benefit is measured and the controls are proportionate to the Risk Tier, and it does not accept a breach of law or regulation. Each Solution carries a Risk Tier that sets its review, validation, human oversight, and speed of release. The Control Functions stay independent and may stop a Solution.",
+    "decides": "Executive Sponsor decides the appetite; AICC Lead owns it; Control Functions validate",
+    "read": "AICC Charter 5; AI Policy 2 and 3"
+   },
+   {
+    "aspect": "Measures and reporting",
+    "choice": "AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, the value scored for the PI Objectives, the Domains and employees using approved Solutions, and the AI Incidents and control breaches. Progress on the road is measured by the Measures of each Maturity Level. The AICC Lead reports each quarter, and the Executive Sponsor issues the report to the Board Committee.",
+    "decides": "Executive Sponsor sets the targets each year",
+    "read": "AICC Charter 7; Statement of Intent 11.3 and 12"
+   }
+  ],
+  "road_title": {
+   "en": "The road: the Maturity Roadmap"
+  },
+  "road_lead": {
+   "en": "The Bank advances the adoption of AI through five Maturity Levels. Each Strategic Priority advances at its own pace, and a level is reached for a priority when its Measures are met. The timing and the scope of advancement are set by the Executive Sponsor in the Priorities, not in the charter."
+  },
+  "kept_title": {
+   "en": "How the strategy is set and kept"
+  },
+  "kept": {
+   "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, decides on each Active Initiative, and issues the Quarterly Report to the Board Committee (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state."
   }
  }
 }
