@@ -3,12 +3,30 @@
 
 Edit the definitions, run `python3 portal-scaffolding/make_pages.py`, and then `python3 portal-scaffolding/check.py`.
 """
-import json, os, re
+import json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCAF = os.path.join(ROOT, 'portal-scaffolding')
 
+# Two layouts are defined. The layout in use, adopted on 2026-10-02, presents AICC as a consulting organization with a Services section
+# and a Knowledge base. The previous layout (`--previous`, written to previous/) is the first structure of the site, kept for the record.
+NEXT = '--previous' not in sys.argv
+OUT = SCAF if NEXT else os.path.join(SCAF, 'previous')
+S_SERVICES = 'services' if NEXT else 'what-aicc-does'
+S_PORTFOLIO = 'portfolio' if NEXT else 'how-aicc-works'
+S_DELIVERY = 'delivery' if NEXT else 'how-aicc-works'
+
 SECTIONS = [
+    ('about', 'About AICC', 'The intent, the strategy, the mandate, the values, and the place of AICC in the Bank; what we do and how we work in one page each.'),
+    ('responsible-ai', 'Responsible AI', 'The rules for the use of AI, the Risk Tiers, and the gates before use.'),
+    ('services', 'Services', 'The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do.'),
+    ('portfolio', 'Portfolio', 'How AICC decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP.'),
+    ('delivery', 'Delivery', 'How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution.'),
+    ('governance', 'Governance and oversight', 'The control loops, the records, the controls, and the way AICC is reported and assured.'),
+    ('organization', 'Organization', 'The Roles, the decision levels, and the bodies of AICC.'),
+    ('knowledge-base', 'Knowledge base', 'The templates, the guides, the acts and compliance, and the publications of AICC.'),
+    ('reference', 'Reference', 'The Vocabulary, the Document Catalog, the change history, the systems that hold the records, the industry body of knowledge, and the regulators and acts.'),
+] if NEXT else [
     ('about', 'About AICC', 'The intent, the purpose, the mandate, and the place of AICC in the Bank.'),
     ('what-aicc-does', 'What AICC does', 'The services that AICC offers, how a function engages AICC, and the Solutions that AICC delivers.'),
     ('how-aicc-works', 'How AICC works', 'The method: how Initiatives are taken in, decided, delivered, paced, and measured.'),
@@ -18,6 +36,7 @@ SECTIONS = [
     ('library', 'Library', 'The templates, the forms of the records that AICC produces.'),
     ('reference', 'Reference', 'The Vocabulary, the Document Catalog, the change history, and the systems that hold the records.'),
 ]
+S_LIBRARY = 'knowledge-base' if NEXT else 'library'
 
 
 def read(path):
@@ -65,7 +84,7 @@ add(id='index', section=None, order=0, type='home', slug='/', title='Home', sour
              'Footer: baseline revision, date, owner, link to Records and systems'])
 
 for sid, label, line in SECTIONS:
-    src = ['charter/workflows/README.md'] if sid == 'how-aicc-works' else (['charter/templates/README.md'] if sid == 'library' else [])
+    src = ['charter/workflows/README.md'] if sid in ('how-aicc-works', 'delivery') else (['charter/templates/README.md'] if sid in ('library', 'knowledge-base') else [])
     add(id=f'{sid}/index', section=sid, order=0, type='section', slug=f'/{sid}/', title=label, source=src,
         production='authored, with a generated list',
         outline=[f'Introduction of three to five lines: {line}',
@@ -104,13 +123,22 @@ add(id='about/strategy', section='about', order=5, type='outline', slug='/about/
              'How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, AICC Charter 7)'])
 add(id='about/aicc-charter', section='about', order=6, type='document', slug='/about/aicc-charter/', title=h1('charter/documents/aicc-charter.md'),
     source=['charter/documents/aicc-charter.md'], words=900)
-add(id='about/values-and-principles', section='about', order=7, type='outline', slug='/about/values-and-principles/', title='Values and principles', source=[],
+if NEXT:
+    add(id='about/what-we-do', section='about', order=7, type='outline', slug='/about/what-we-do/', title='What we do', source=['portal/content/about/what-we-do.md'], production='authored',
+        outline=['One page: AICC as the internal consulting and innovation lab of the Bank; research and consulting across strategy, programs, solutions, and ways of working',
+                 'The service lines in one line each, with a link to the Services section',
+                 'What AICC is not: no AI Platform, no business results of a Domain, no Control Function rules, no validation of its own work, no delivery at scale (AICC Charter 3.2)'])
+    add(id='about/how-we-work', section='about', order=8, type='outline', slug='/about/how-we-work/', title='How we work', source=['portal/content/about/how-we-work.md'], production='authored',
+        outline=['One page: the engagement model (a need, a study, a Service Agreement, delivery, an Outcome Report, support)',
+                 'The method in brief: Portfolio decides, Delivery builds in small steps on a cadence, quality and control in the flow',
+                 'Links to the Portfolio and Delivery sections and to the Engagement workflow and guide'])
+add(id='about/values-and-principles', section='about', order=9 if NEXT else 7, type='outline', slug='/about/values-and-principles/', title='Values and principles', source=[],
     production='generated from the documents, with an authored statement of what each group applies to',
     outline=['Values: integrity, prudence, and respect for people (Statement of Intent 4)',
              'Principles of adoption (Statement of Intent 5) and of application (Statement of Intent 6)',
              'Principles of work (Operating Model 3) and of delivery (Solution Lifecycle Model 2)',
              'Each group states what it applies to, and links to its clause'])
-add(id='about/charter-outline', section='about', order=8, type='outline', slug='/about/charter-outline/', title='Explore AICC',
+add(id='about/charter-outline', section='about', order=10 if NEXT else 8, type='outline', slug='/about/charter-outline/', title='Explore AICC',
     source=['charter/README.md', 'charter/executive-summary.md', 'charter/guides/README.md'], production='generated, with an authored introduction',
     outline=['Introduction: how the manual is organized and how the pages relate (authored)',
              'The document hierarchy and the contents table (from the charter README)',
@@ -126,23 +154,47 @@ add(id='terms-of-use', section=None, order=91, type='legal', slug='/terms-of-use
     outline=['Scope and access', 'Information of the Bank and ownership', 'Standing of the pages: the document prevails, the live records are elsewhere, no right arises from a page',
              'Use of the site', 'Changes and contact'])
 
-# What AICC does
-add(id='what-aicc-does/business-model', section='what-aicc-does', order=1, type='document', slug='/what-aicc-does/business-model/',
+# What AICC does (current) / Services (next)
+S = S_SERVICES
+if NEXT:
+    # The service lines, one page each, authored for the site from the Business Model, the Solution Lifecycle Model, and the Statement of Intent.
+    # Each page: what it is, what the client receives, the typical shape, what it leads to, the templates, who decides, the governing clauses.
+    LINES = [
+        ('advisory', 'Advisory', 'AI strategy and roadmap for a Domain, use-case discovery and the business case (the study), maturity and readiness assessment, provider assessment, Risk Tier advice', 'Business Model 4.1; Portfolio Management Model 6; AI Policy 4'),
+        ('proof-and-prototyping', 'Proof and prototyping', 'Experiments, proofs of concept, MVPs, and trials of platforms and concepts; each ends in an Outcome Report and a Proposal', 'Business Model 4.1 and 4.3; Portfolio Management Model 7; Solution Lifecycle Model 8'),
+        ('solution-delivery', 'Solution delivery', 'Products built for one function: knowledge bases, assistants, and the automation of routine work; handed over and supported on demand', 'Business Model 4.3; Solution Lifecycle Model 3, 7, and 8'),
+        ('ai-services', 'AI services run by AICC', 'The portals, engines, and backends that AICC operates as Services, with Service Management support and response targets; the live list is the catalog', 'Business Model 4.2; Solution Lifecycle Model 8.1'),
+        ('enablement', 'Enablement', 'Training by role, coaching of Domain Experts, communities of practice, playbooks and reusable assets', 'Business Model 4.4; Statement of Intent 10.1'),
+        ('oversight-of-adopted-solutions', 'Oversight of Adopted Solutions', 'AICC oversees and reports on the Solutions that others deliver', 'Business Model 2.3; Solution Lifecycle Model 8'),
+        ('research-and-partnering', 'Research and partnering', 'Trends and methods, partnerships with other organizations and with providers. DECISION 2: not in the charter today; needs a clause in Business Model 4, or stays a sentence in the lead of the Services page', 'to be added to Business Model 4'),
+    ]
+    for i, (slug, title, line, rule) in enumerate(LINES, 1):
+        add(id=f'services/{slug}', section='services', order=i, type='service', slug=f'/services/{slug}/', title=title, source=[f'portal/content/services/{slug}.md'], production='authored',
+            outline=[line, 'What the client receives, the typical shape, and what it leads to', 'The templates used, and who decides', 'Rule source: ' + rule])
+    add(id='services/how-to-engage', section='services', order=8, type='outline', slug='/services/how-to-engage/', title='How to engage', source=['portal/content/services/how-to-engage.md'], production='authored, with the Engagement workflow',
+        outline=['The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)',
+                 'The function commits to nothing; AICC works on a best-effort basis within its capability', 'Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)',
+                 'What AICC does not do (AICC Charter 3.2)', 'Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report'])
+    add(id='services/catalog', section='services', order=9, type='catalog', slug='/services/catalog/', title='Service catalog',
+        source=['portfolio/README.md'], production='generated from portfolio/solutions at each build, dated',
+        outline=['DECISION 1: dynamic content on the site. One row for each Solution of the Portfolio: name, type (Service, Product, Experiment), state, receiver, support level, Solution Definition',
+                 'Filter by type and state', 'The date of the build and a statement that the Portfolio prevails'])
+add(id=f'{S}/business-model', section=S, order=10 if NEXT else 1, type='document', slug=f'/{S}/business-model/',
     title=h1('charter/documents/business-model.md'), source=['charter/documents/business-model.md'], words=1381)
-add(id='what-aicc-does/engagement-workflow', section='what-aicc-does', order=2, type='workflow', slug='/what-aicc-does/engagement-workflow/',
-    title=h1('charter/workflows/engagement.md'), source=['charter/workflows/engagement.md'], companion='what-aicc-does/engagement-guide')
-add(id='what-aicc-does/engagement-guide', section='what-aicc-does', order=3, type='guide', slug='/what-aicc-does/engagement-guide/',
-    title=h1('charter/guides/engagement-guide.md'), source=['charter/guides/engagement-guide.md'], companion='what-aicc-does/engagement-workflow')
+add(id=f'{S}/engagement-workflow', section=S, order=11 if NEXT else 2, type='workflow', slug=f'/{S}/engagement-workflow/',
+    title=h1('charter/workflows/engagement.md'), source=['charter/workflows/engagement.md'], companion=f'{S}/engagement-guide')
+add(id=f'{S}/engagement-guide', section=S, order=12 if NEXT else 3, type='guide', slug=f'/{S}/engagement-guide/',
+    title=h1('charter/guides/engagement-guide.md'), source=['charter/guides/engagement-guide.md'], companion=f'{S}/engagement-workflow')
 
-# How AICC works
-split_doc('how-aicc-works', 'portfolio-management-model', 'charter/documents/portfolio-management-model.md', [
+# How AICC works (current) / Portfolio and Delivery (next)
+split_doc(S_PORTFOLIO, 'portfolio-management-model', 'charter/documents/portfolio-management-model.md', [
     ('', 'Foundations', [1, 2, 3]),
     ('the-portfolio-loops', 'The portfolio loops', [4]),
     ('the-portfolio-kanban', 'The portfolio Kanban', [5]),
     ('the-business-case-and-the-mvp', 'The business case and the MVP', [6, 7]),
     ('levels-review-and-records', 'Levels, review, measures, and records', [8, 9]),
 ], 0)
-split_doc('how-aicc-works', 'solution-lifecycle-model', 'charter/documents/solution-lifecycle-model.md', [
+split_doc(S_DELIVERY, 'solution-lifecycle-model', 'charter/documents/solution-lifecycle-model.md', [
     ('', 'Foundations', [1, 2]),
     ('the-flow-of-value', 'The flow of value', [3]),
     ('backlogs-and-boards', 'Backlogs and boards', [4]),
@@ -151,15 +203,15 @@ split_doc('how-aicc-works', 'solution-lifecycle-model', 'charter/documents/solut
     ('verification-release-and-acceptance', 'Verification, release, and acceptance', [7]),
     ('life-cycle-management', 'Life-cycle management', [8]),
 ], 10)
-add(id='how-aicc-works/service-delivery-workflow', section='how-aicc-works', order=21, type='workflow', slug='/how-aicc-works/service-delivery-workflow/',
-    title=h1('charter/workflows/service-delivery.md'), source=['charter/workflows/service-delivery.md'], companion='how-aicc-works/service-delivery-guide')
-add(id='how-aicc-works/service-delivery-guide', section='how-aicc-works', order=22, type='guide', slug='/how-aicc-works/service-delivery-guide/',
-    title=h1('charter/guides/service-delivery-guide.md'), source=['charter/guides/service-delivery-guide.md'], companion='how-aicc-works/service-delivery-workflow')
-add(id='how-aicc-works/cadence-workflow', section='how-aicc-works', order=23, type='workflow', slug='/how-aicc-works/cadence-workflow/',
-    title=h1('charter/workflows/cadence.md'), source=['charter/workflows/cadence.md'], companion='how-aicc-works/cadence-guide')
-add(id='how-aicc-works/cadence-guide', section='how-aicc-works', order=24, type='guide', slug='/how-aicc-works/cadence-guide/',
-    title=h1('charter/guides/cadence-guide.md'), source=['charter/guides/cadence-guide.md'], companion='how-aicc-works/cadence-workflow')
-add(id='how-aicc-works/collaboration-tooling-workflow', section='how-aicc-works', order=25, type='workflow', slug='/how-aicc-works/collaboration-tooling-workflow/',
+add(id=f'{S_DELIVERY}/service-delivery-workflow', section=S_DELIVERY, order=21, type='workflow', slug=f'/{S_DELIVERY}/service-delivery-workflow/',
+    title=h1('charter/workflows/service-delivery.md'), source=['charter/workflows/service-delivery.md'], companion=f'{S_DELIVERY}/service-delivery-guide')
+add(id=f'{S_DELIVERY}/service-delivery-guide', section=S_DELIVERY, order=22, type='guide', slug=f'/{S_DELIVERY}/service-delivery-guide/',
+    title=h1('charter/guides/service-delivery-guide.md'), source=['charter/guides/service-delivery-guide.md'], companion=f'{S_DELIVERY}/service-delivery-workflow')
+add(id=f'{S_DELIVERY}/cadence-workflow', section=S_DELIVERY, order=23, type='workflow', slug=f'/{S_DELIVERY}/cadence-workflow/',
+    title=h1('charter/workflows/cadence.md'), source=['charter/workflows/cadence.md'], companion=f'{S_DELIVERY}/cadence-guide')
+add(id=f'{S_DELIVERY}/cadence-guide', section=S_DELIVERY, order=24, type='guide', slug=f'/{S_DELIVERY}/cadence-guide/',
+    title=h1('charter/guides/cadence-guide.md'), source=['charter/guides/cadence-guide.md'], companion=f'{S_DELIVERY}/cadence-workflow')
+add(id=f'{S_DELIVERY}/collaboration-tooling-workflow', section=S_DELIVERY, order=25, type='workflow', slug=f'/{S_DELIVERY}/collaboration-tooling-workflow/',
     title=h1('charter/workflows/collaboration-tooling.md'), source=['charter/workflows/collaboration-tooling.md'])
 
 # Organization
@@ -212,12 +264,31 @@ add(id='governance/unit-governance-workflow', section='governance', order=5, typ
 add(id='governance/unit-governance-guide', section='governance', order=6, type='guide', slug='/governance/unit-governance-guide/',
     title=h1('charter/guides/unit-governance-guide.md'), source=['charter/guides/unit-governance-guide.md'], companion='governance/unit-governance-workflow')
 
-# Library
+# Library (current) / Knowledge base (next)
 TEMPLATES = ['initiative-brief', 'service-agreement', 'solution-definition', 'acceptance-checklist', 'control-sign-off', 'decision-record',
              'steering-summary', 'outcome-report', 'ai-incident-review', 'registry-snapshot', 'quarterly-report', 'appointments-record', 'proposal']
 for i, f in enumerate(TEMPLATES, 1):
-    add(id=f'library/{f}', section='library', order=i, type='template', slug=f'/library/{f}/', title=h1(f'charter/templates/{f}.md'),
+    add(id=f'{S_LIBRARY}/{f}', section=S_LIBRARY, order=i, type='template', slug=f'/{S_LIBRARY}/{f}/', title=h1(f'charter/templates/{f}.md'),
         source=[f'charter/templates/{f}.md'])
+if NEXT:
+    add(id='knowledge-base/guides', section='knowledge-base', order=20, type='index', slug='/knowledge-base/guides/', title='Guides', source=['charter/guides/README.md'],
+        production='generated from the sitemap',
+        outline=['The five guides with one line each, linking to their canonical pages beside their workflows (the guide stays in one place; this is a list)'])
+    add(id='knowledge-base/acts-and-compliance', section='knowledge-base', order=21, type='outline', slug='/knowledge-base/acts-and-compliance/', title='Acts and compliance', source=['portal/content/knowledge-base/acts-and-compliance.md'],
+        production='authored; curated by the AICC Lead with the Control Function Contacts',
+        outline=['DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution',
+                 'For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it', 'Links to the Reference page Regulators and acts for the bodies and the texts'])
+    add(id='knowledge-base/publications', section='knowledge-base', order=22, type='outline', slug='/knowledge-base/publications/', title='Publications', source=['portal/content/knowledge-base/publications.md'],
+        production='authored; a list kept by the AICC Lead',
+        outline=['DECISION 5: new content. The publications of AICC for the Bank: Proposals made available, method notes, lessons, and playbooks from the Engagements (Business Model 4.4)',
+                 'For each: title, date, audience, where it is kept'])
+    add(id='reference/industry-body-of-knowledge', section='reference', order=5, type='outline', slug='/reference/industry-body-of-knowledge/', title='Industry body of knowledge', source=['portal/content/reference/industry-body-of-knowledge.md'],
+        production='authored; a curated list',
+        outline=['DECISION 5: new content. The external frameworks and standards that the charter draws on or is measured against: AI risk management frameworks, AI management system standards, agile and portfolio frameworks, with one line each and where the charter uses them'])
+    add(id='reference/regulators-and-acts', section='reference', order=6, type='outline', slug='/reference/regulators-and-acts/', title='Regulators and acts', source=['portal/content/reference/regulators-and-acts.md'],
+        production='authored; curated with the Control Function Contacts',
+        outline=['DECISION 5: new content. The regulators and the acts that apply to the Bank in the use of AI and data, by jurisdiction: the body, the act, the subject, the link to the text',
+                 'The split with Acts and compliance: this page lists the bodies and the texts; that page states what each requires and how AICC complies'])
 
 # Reference
 add(id='reference/vocabulary', section='reference', order=1, type='reference', slug='/reference/vocabulary/', title=h1('charter/documents/vocabulary.md'),
@@ -244,12 +315,15 @@ pages_json = []
 for p in PAGES:
     d = {k: v for k, v in p.items() if v is not None}
     pages_json.append(d)
+os.makedirs(OUT, exist_ok=True)
 json.dump({'status': 'scaffold', 'baseline': '1.0', 'baseline_date': '2026-10-02', 'source_language': 'en',
            'sections': [{'id': a, 'order': i, 'label': b, 'summary': c} for i, (a, b, c) in enumerate(SECTIONS, 1)],
-           'pages': pages_json}, open(os.path.join(SCAF, 'sitemap.json'), 'w'), indent=1, ensure_ascii=False)
+           'layout': 'next' if NEXT else 'current',
+           'pages': pages_json}, open(os.path.join(OUT, 'sitemap.json'), 'w'), indent=1, ensure_ascii=False)
 
 import shutil
-shutil.rmtree(os.path.join(SCAF, 'pages'), ignore_errors=True)
+os.makedirs(OUT, exist_ok=True)
+shutil.rmtree(os.path.join(OUT, 'pages'), ignore_errors=True)
 TYPE_ELEMENTS = {
     'document': ['Header: title, purpose, revision, date, owner', 'The parts of the document, with the current part marked (for a split document)', 'Outline of the page (the headings below)',
                  'Clauses with permanent links and a cited-by line', 'Related pages', 'Change history (from the change-log table)', 'Previous and next'],
@@ -269,7 +343,7 @@ def fname(p):
 
 
 for p in PAGES:
-    path = os.path.join(SCAF, fname(p))
+    path = os.path.join(OUT, fname(p))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     fm = ['---', f"id: {p['id']}", f"title: {p['title']}", f"section: {p['section'] or 'home'}", f"order: {p['order']}", f"type: {p['type']}", f"slug: {p['slug']}"]
     if p.get('source'):
@@ -303,7 +377,7 @@ for p in PAGES:
         for o in p['outline']:
             body.append(f'- {o}')
     elif p['type'] in TYPE_ELEMENTS:
-        body.append('Elements: ' + '; '.join(TYPE_ELEMENTS[p['type']]) + '.')
+        body.append('Elements: ' + '; '.join(TYPE_ELEMENTS.get(p['type'], TYPE_ELEMENTS['outline'] if 'outline' in TYPE_ELEMENTS else [])) + '.')
         if p['type'] in ('workflow', 'guide') and p['source']:
             body += ['', 'Headings of the source:', '']
             for line in read(p['source'][0]).splitlines():
@@ -320,5 +394,14 @@ for p in sorted(PAGES, key=lambda x: (SEC_ORDER.get(x['section'], 0), x['order']
     src = '; '.join(s.replace('charter/', '') for s in p.get('source', [])) or 'none'
     nums = ', '.join(str(x) for x in p.get('source_sections', [])) or 'all' if p.get('source') else 'none'
     rows.append(f"| {labels.get(p['section'], 'Home')} | {p['title']} | {p['slug']} | {p['type']} | {src} | {nums} | {p.get('words', '')} | {p['production']} |")
-open(os.path.join(SCAF, 'inventory.md'), 'w').write('\n'.join(rows) + '\n')
+open(os.path.join(OUT, 'inventory.md'), 'w').write('\n'.join(rows) + '\n')
+if NEXT:
+    # the reading routes of the next layout: the same routes with the identifiers of the new sections
+    rr = read('portal-scaffolding/reading-routes.md')
+    rr = rr.replace('`library/', '`knowledge-base/')
+    for a, b in (('what-aicc-does/', 'services/'), ('how-aicc-works/portfolio-management-model', 'portfolio/portfolio-management-model'), ('how-aicc-works/', 'delivery/'), ('`library/', '`knowledge-base/')):
+        rr = rr.replace(a, b)
+    open(os.path.join(OUT, 'reading-routes.md'), 'w').write(rr)
+else:
+    pass
 print(len(PAGES), 'pages')

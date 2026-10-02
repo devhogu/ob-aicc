@@ -195,3 +195,79 @@ The charter text is complete. The site needs only the following short authored i
 4. Whether the Records and systems page names the systems by name and address, which depends on where Jira and Confluence are installed.
 5. Whether the five-line summaries are authored or taken from the purpose clause.
 6. The language of the first release: the charter text is in English.
+
+## 10. The structure in use: AICC as a consulting organization (adopted 2026-10-02)
+
+The site was first built on the sitemap of section 3. After the About section was settled, the review of What AICC does found that the offer of AICC is not visible in one place: the services sat scattered in the Business Model 4, the Solution Lifecycle Model 8, the Engagement guide, and the Statement of Intent 10, and the navigation read as an index of documents and not as the site of a services organization. The following structure replaced it on 2026-10-02 and is the one the site is built from. `make_pages.py` writes it; `make_pages.py --previous` writes the first structure to `previous/` for the record. The new pages are authored in `portal/content/` as first editions for review.
+
+### 10.1. The model
+
+AICC presents itself as the internal consulting and innovation lab of the Bank: a research and consulting organization across strategy, programs, solutions, and ways of working, and a small delivery unit that proves and builds and relies on the platform teams and IT to scale. The pattern follows how consulting houses and internal AI centers present themselves: the service lines in one place, the method apart from the offer, the products that the unit runs as a catalog, a visible front door, enablement, and governance.
+
+### 10.2. The sections
+
+| Order | Section | Address | Holds | Change |
+| --- | --- | --- | --- | --- |
+| 1 | About AICC | /about/ | Statement of Intent (four pages), Strategy, Charter, What we do, How we work, Values and principles, Explore AICC | two one-page summaries move in |
+| 2 | Responsible AI | /responsible-ai/ | AI Policy, AI risk and control workflow | moves up, before the offer |
+| 3 | Services | /services/ | The service lines (seven pages), How to engage, the Service catalog, Business Model, Engagement workflow and guide | new; replaces What AICC does |
+| 4 | Portfolio | /portfolio/ | Portfolio Management Model (five pages) | split out of How AICC works |
+| 5 | Delivery | /delivery/ | Solution Lifecycle Model (seven pages), Service delivery workflow and guide, Cadence workflow and guide, Collaboration tooling workflow | the rest of How AICC works |
+| 6 | Governance and oversight | /governance/ | as in section 3 | moves down, under Delivery |
+| 7 | Organization | /organization/ | as in section 3 | moves down; see decision 4 |
+| 8 | Knowledge base | /knowledge-base/ | The 13 templates, the list of the guides, Acts and compliance, Publications | replaces Library; three pages added |
+| 9 | Reference | /reference/ | Vocabulary, Document Catalog, change history, Records and systems, Industry body of knowledge, Regulators and acts | two pages added |
+
+```mermaid
+flowchart LR
+  H["AICC"] --> A["About AICC"]
+  H --> R["Responsible AI"]
+  H --> S["Services"]
+  H --> P["Portfolio"]
+  H --> D["Delivery"]
+  H --> G["Governance and oversight"]
+  H --> O["Organization"]
+  H --> K["Knowledge base"]
+  H --> X["Reference"]
+  A --> A1["Statement of Intent · Strategy · Charter"]
+  A --> A2["What we do · How we work"]
+  A --> A3["Values and principles · Explore AICC"]
+  S --> S1["Service lines: Advisory · Proof and prototyping · Solution delivery · AI services run by AICC · Enablement · Oversight of Adopted Solutions · Research and partnering"]
+  S --> S2["How to engage · Service catalog"]
+  S --> S3["Business Model · Engagement workflow and guide"]
+  P --> P1["Portfolio Management Model: 5 pages"]
+  D --> D1["Solution Lifecycle Model: 7 pages"]
+  D --> D2["Service delivery · Cadence · Collaboration tooling"]
+  K --> K1["Templates · Guides · Acts and compliance · Publications"]
+  X --> X1["Vocabulary · Document Catalog · Change history · Records and systems · Industry body of knowledge · Regulators and acts"]
+```
+
+The order places what AICC stands for and the rules of use first, the offer and the method next, the control of the unit after the method, and the knowledge last.
+
+### 10.3. The Services section page
+
+The section page is the core of the refactoring, and it is authored for the site. It has five parts.
+
+1. The lead: AICC as the internal consulting and innovation lab of the Bank; what it researches, advises on, proves, builds, runs, and teaches; and that it relies on the platform teams and IT to scale.
+2. The service lines as cards, each opening a one-page description: what it is, what the client receives, the typical shape, what it leads to, the templates used, who decides, and the governing clauses. The lines are Advisory; Proof and prototyping; Solution delivery; AI services run by AICC; Enablement; Oversight of Adopted Solutions; Research and partnering.
+3. How to engage: the front door in six steps (contact, study, Service Agreement, delivery, Outcome Report, support), the statement that the function commits to nothing and that AICC works on a best-effort basis within its capability, and the links to the Engagement workflow and guide and to the Initiative Brief, the Service Agreement, and the Outcome Report.
+4. Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type that each gives (Engagement guide 6).
+5. What AICC does not do: the limits of the AICC Charter 3.2, stated plainly, with the note that AICC does not deliver at scale.
+
+The text of the service lines synthesizes the Business Model 4, the Solution Lifecycle Model 8, and the Statement of Intent 10, and every card links the governing clause. It restates no rule.
+
+### 10.4. The two one-pagers of About AICC
+
+What we do and How we work are summaries of one page each: the first states the offer in one line per service line and what AICC is not; the second states the engagement model and the method in brief, and links to Services, Portfolio, and Delivery. They replace the role that the section pages What AICC does and How AICC works play today.
+
+### 10.5. Decisions taken at the build, open for review
+
+1. **The Service catalog on the site.** Built: `services/catalog` is generated from `portfolio/solutions/*.md` at each build and dated (identifier, title, type, state, Initiative, Domain, receiver). It is the one page of dynamic content on the site, and it states that the Portfolio prevails.
+2. **Research and partnering as a service line.** Built as a page that states on its face that the line is stated on the site and not yet in the Business Model, and that it becomes a commitment when the Business Model states it. A clause for the Business Model 4 is proposed.
+3. **The names** Services, Portfolio, Delivery are used.
+4. **Organization.** The order given for the navigation did not name it. It stays a section after Governance and oversight in this record; the alternative is to fold it into Governance and oversight as "Governance and organization", since both draw on the Operating Model.
+5. **The new knowledge pages.** Acts and compliance, Publications, Industry body of knowledge, and Regulators and acts hold content that the charter does not state. They are authored for the site and curated: the acts and the regulators with the Control Function Contacts, the publications and the body of knowledge by the AICC Lead. The split between the two acts pages: Reference lists the bodies and the texts; the Knowledge base states what each requires and how AICC complies. Each page starts as a curated list and grows with use.
+
+### 10.6. Effect on the build
+
+The identifiers and addresses under `what-aicc-does/`, `how-aicc-works/`, and `library/` changed to `services/`, `portfolio/`, `delivery/`, and `knowledge-base/`. The build holds them in `portal/content/authored.json` (routes, the map of the home page, the links of the About page, the section introductions), in `portal/tools/build.py`, and in the sitemap. The published addresses changed, so the publication of this structure is a new baseline of the site, not a correction. The authored pages are first editions: the service lines synthesize the charter; Acts and compliance, Regulators and acts, and the Industry body of knowledge are curated lists to be verified with the Control Function Contacts; Publications starts with the charter and two empty tables.

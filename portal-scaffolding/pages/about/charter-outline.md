@@ -2,7 +2,7 @@
 id: about/charter-outline
 title: Explore AICC
 section: about
-order: 8
+order: 10
 type: outline
 slug: /about/charter-outline/
 source: charter/README.md; charter/executive-summary.md; charter/guides/README.md

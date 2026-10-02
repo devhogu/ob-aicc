@@ -10,28 +10,6 @@
    },
    "icon": "file-text"
   },
-  "what-aicc-does": {
-   "label": {
-    "en": "What AICC does",
-    "ru": "Что делает AICC"
-   },
-   "intro": {
-    "en": "AICC serves the functions of the Bank. A function brings a need, AICC commits to an Engagement, delivers a Solution with its evidence, and supports it at the agreed level. The Business Model states the offer, and the Engagement workflow shows how a function works with AICC.",
-    "ru": "Раздел описывает услуги, которые AICC предоставляет функциям Банка, решения, которые он создаёт, и порядок обращения функции в AICC."
-   },
-   "icon": "users"
-  },
-  "how-aicc-works": {
-   "label": {
-    "en": "How AICC works",
-    "ru": "Как работает AICC"
-   },
-   "intro": {
-    "en": "AICC works by one method: Initiatives are taken in and decided in the Portfolio, Solutions are delivered, released, and operated through the Solution Lifecycle, and the work runs on a common cadence and is measured. The workflows show the flow, and the guides explain it.",
-    "ru": "Раздел излагает метод AICC: как принимаются и решаются инициативы, как создаются, выпускаются и эксплуатируются решения, как организован ритм работы и как она измеряется. Процессы показывают ход работы, руководства поясняют его."
-   },
-   "icon": "workflow"
-  },
   "organization": {
    "label": {
     "en": "Organization",
@@ -65,17 +43,6 @@
    },
    "icon": "table-properties"
   },
-  "library": {
-   "label": {
-    "en": "Library",
-    "ru": "Библиотека"
-   },
-   "intro": {
-    "en": "The thirteen templates are the forms of the records that AICC produces, from the Initiative Brief to the Quarterly Report. A template gives the form; the rules for the record are in the documents.",
-    "ru": "Раздел содержит тринадцать шаблонов: формы записей, которые ведёт AICC. Шаблон задаёт форму, а правила ведения записи изложены в документах."
-   },
-   "icon": "copy"
-  },
   "reference": {
    "label": {
     "en": "Reference",
@@ -86,6 +53,46 @@
     "ru": "Раздел содержит Словарь, Каталог документов, историю изменений документов и страницу, которая указывает, где хранится каждая запись."
    },
    "icon": "link"
+  },
+  "services": {
+   "label": {
+    "en": "Services",
+    "ru": "Услуги"
+   },
+   "intro": {
+    "en": "AICC serves the functions of the Bank as an internal consulting and innovation lab. It advises, proves, builds, runs what is worth running, enables, and oversees, and it commits to each Engagement in a Service Agreement. The service lines below state what a function can ask for, how an Engagement runs, and what AICC does not do."
+   },
+   "icon": "users"
+  },
+  "portfolio": {
+   "label": {
+    "en": "Portfolio",
+    "ru": "Портфель"
+   },
+   "intro": {
+    "en": "The Portfolio decides what AICC works on. Business initiatives are taken in, funded, continued, deferred, or rejected on evidence, through four loops from the strategic loop of the year to the backlog care of the week, a portfolio Kanban with a limit on the Active Initiatives, a business case for every Initiative, and an MVP before the decision to continue."
+   },
+   "icon": "git-branch"
+  },
+  "delivery": {
+   "label": {
+    "en": "Delivery",
+    "ru": "Поставка"
+   },
+   "intro": {
+    "en": "AICC delivers in small steps on a common cadence: the Capabilities and Features of an Initiative are built in Iterations of one month within Program Increments of one quarter, the work is visible and limited in progress, and a Solution is checked or validated, accepted by the Team, and accepted by its Domain Owner before it reaches its users and for the rest of its life."
+   },
+   "icon": "workflow"
+  },
+  "knowledge-base": {
+   "label": {
+    "en": "Knowledge base",
+    "ru": "База знаний"
+   },
+   "intro": {
+    "en": "The working knowledge of AICC: the thirteen templates that give the form of every record, the guides that explain the workflows, the acts and policies that the use of AI answers to and how AICC complies, and the publications of AICC for the Bank."
+   },
+   "icon": "layers"
   }
  },
  "home": {
@@ -106,12 +113,12 @@
     {
      "title": "What AICC does",
      "text": "Explores, trials, and proves the use of AI with the functions, and proposes what the Bank should adopt at scale.",
-     "to": "what-aicc-does/business-model"
+     "to": "services/"
     },
     {
      "title": "How AICC works",
      "text": "Takes in Initiatives, decides on them, delivers Solutions, and measures the flow.",
-     "to": "how-aicc-works/"
+     "to": "delivery/"
     },
     {
      "title": "How AICC is safeguarded",
@@ -123,12 +130,12 @@
     {
      "title": "Что делает AICC",
      "text": "Исследует, пробует и доказывает применение ИИ вместе с функциями и предлагает, что Банку внедрять в масштабе.",
-     "to": "what-aicc-does/business-model"
+     "to": "services/"
     },
     {
      "title": "Как работает AICC",
      "text": "Принимает инициативы, принимает по ним решения, создаёт решения и измеряет поток работы.",
-     "to": "how-aicc-works/"
+     "to": "delivery/"
     },
     {
      "title": "Как обеспечена безопасность",
@@ -154,11 +161,11 @@
     "ru": "Понять, что такое AICC и как связаны его страницы"
    },
    "pages": [
-    "about/statement-of-intent",
-    "about/aicc-charter",
+    "about/index",
+    "about/what-we-do",
+    "about/how-we-work",
+    "services/index",
     "about/values-and-principles",
-    "what-aicc-does/business-model",
-    "about/charter-outline",
     "reference/vocabulary"
    ]
   },
@@ -201,10 +208,11 @@
     "ru": "Понять, как потребность становится инициативой и решением и что решает функция"
    },
    "pages": [
-    "what-aicc-does/business-model",
-    "what-aicc-does/engagement-workflow",
-    "how-aicc-works/portfolio-management-model/the-business-case-and-the-mvp",
-    "library/initiative-brief",
+    "services/index",
+    "services/how-to-engage",
+    "services/business-model",
+    "portfolio/portfolio-management-model/the-business-case-and-the-mvp",
+    "knowledge-base/initiative-brief",
     "responsible-ai/ai-policy"
    ]
   },
@@ -223,12 +231,12 @@
     "ru": "Изучить метод поставки и используемые формы"
    },
    "pages": [
-    "how-aicc-works/solution-lifecycle-model/the-flow-of-value",
-    "how-aicc-works/service-delivery-workflow",
-    "how-aicc-works/service-delivery-guide",
-    "how-aicc-works/solution-lifecycle-model/verification-release-and-acceptance",
-    "how-aicc-works/cadence-workflow",
-    "library/index"
+    "delivery/solution-lifecycle-model/the-flow-of-value",
+    "delivery/service-delivery-workflow",
+    "delivery/service-delivery-guide",
+    "delivery/solution-lifecycle-model/verification-release-and-acceptance",
+    "delivery/cadence-workflow",
+    "knowledge-base/index"
    ]
   },
   {
@@ -292,15 +300,15 @@
     "links": [
      {
       "label": {
-       "en": "Business Model"
+       "en": "Services"
       },
-      "to": "what-aicc-does/business-model"
+      "to": "services/index"
      },
      {
       "label": {
-       "en": "What AICC does"
+       "en": "Business Model"
       },
-      "to": "what-aicc-does/index"
+      "to": "services/business-model"
      }
     ]
    },
@@ -368,15 +376,21 @@
     "links": [
      {
       "label": {
-       "en": "How AICC works"
+       "en": "How to engage"
       },
-      "to": "how-aicc-works/index"
+      "to": "services/how-to-engage"
      },
      {
       "label": {
-       "en": "Engagement workflow"
+       "en": "Portfolio"
       },
-      "to": "what-aicc-does/engagement-workflow"
+      "to": "portfolio/index"
+     },
+     {
+      "label": {
+       "en": "Delivery"
+      },
+      "to": "delivery/index"
      }
     ]
    },
@@ -547,7 +561,7 @@
      "en": "What are the rules?"
     },
     "where": {
-     "en": "About AICC, What AICC does, How AICC works, Organization, Responsible AI, and Governance and oversight, each document in the section of its subject; long documents are split into parts"
+     "en": "About AICC, Responsible AI, Services, Portfolio, Delivery, Governance and oversight, and Organization, each document in the section of its subject; long documents are split into parts"
     }
    },
    {
@@ -558,7 +572,7 @@
      "en": "How does the work flow, and on which events?"
     },
     "where": {
-     "en": "Beside the documents that they illustrate, in What AICC does, How AICC works, Responsible AI, and Governance and oversight"
+     "en": "Beside the documents that they illustrate, in Responsible AI, Services, Delivery, and Governance and oversight"
     }
    },
    {
@@ -580,7 +594,7 @@
      "en": "What is the form of each record?"
     },
     "where": {
-     "en": "Library"
+     "en": "Knowledge base, with the guides, the acts and compliance, and the publications"
     }
    },
    {
@@ -725,6 +739,83 @@
   },
   "kept": {
    "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, decides on each Active Initiative, and issues the Quarterly Report to the Board Committee (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state."
+  }
+ },
+ "services_page": {
+  "lines_title": {
+   "en": "Service lines"
+  },
+  "engage_title": {
+   "en": "How to engage"
+  },
+  "engage_lead": {
+   "en": "A function brings a need. The Engagement follows six steps, each with a record and a decision the function can see; AICC commits in a Service Agreement on a best-effort basis, and the function commits to nothing."
+  },
+  "steps": [
+   {
+    "t": "Contact",
+    "d": "A head of function raises a need, in any form"
+   },
+   {
+    "t": "Study",
+    "d": "The need is scoped and the business case written and cleared"
+   },
+   {
+    "t": "Service Agreement",
+    "d": "AICC states what it commits to and the support level"
+   },
+   {
+    "t": "Delivery",
+    "d": "MVP first, then build, verify, and deploy to the first users"
+   },
+   {
+    "t": "Outcome Report",
+    "d": "The outcome with its evidence, accepted by the Domain Owner"
+   },
+   {
+    "t": "Support",
+    "d": "At the agreed level, with a check-in at each Iteration"
+   }
+  ],
+  "levels_title": {
+   "en": "Service levels"
+  },
+  "levels": [
+   [
+    "None",
+    "Hands the Solution over, with the Outcome Report",
+    "Experiment, or a Product handed over"
+   ],
+   [
+    "On demand",
+    "Answers requests and issues new versions when asked",
+    "Product"
+   ],
+   [
+    "At agreed response targets",
+    "Supports to the targets that the Service Agreement states",
+    "Service"
+   ],
+   [
+    "Run by AICC",
+    "Runs the Solution for its whole life, with its run cost and its sunset rule",
+    "Service"
+   ]
+  ],
+  "not_title": {
+   "en": "What AICC does not do"
+  },
+  "not": {
+   "en": "AICC does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work. It does not deliver at scale: it proves and builds, and it relies on the platform teams and the IT functions of the Bank to run what the Bank adopts (AICC Charter 3.2)."
+  },
+  "docs_title": {
+   "en": "The documents behind the services"
+  },
+  "catalog_title": {
+   "en": "Service catalog"
+  },
+  "catalog_lead": {
+   "en": "The Solutions of AICC, drawn from the Portfolio at each build of this site: what AICC runs, what it has delivered, and what it is proving. The Portfolio prevails over this list."
   }
  }
 }

@@ -11,7 +11,8 @@ Status: scaffold, for review. The site is a static knowledge base and the depart
 | [site-structure.md](site-structure.md) | The narrative: the kind of site, the sitemap, the navigation model, the page types, the wireframes, the authored items, and the open points |
 | [content-fit.md](content-fit.md) | The evaluation of the first scaffold against the size and shape of the charter, and the reasons for the placement that this scaffold adopts |
 | [inventory.md](inventory.md) | The table of all pages: section, address, type, source, sections of the source, words, and production |
-| [sitemap.json](sitemap.json) | The sitemap in machine-readable form: the sections and the 73 pages |
+| [sitemap.json](sitemap.json) | The sitemap in machine-readable form: the nine sections and the 93 pages of the structure the site is built from (adopted 2026-10-02; site-structure.md section 10) |
+| previous/ | The first structure of the site, written by `make_pages.py --previous` when needed for the record; not kept in the repository |
 | [pages/](pages/) | One outline file for each page, in a folder for each section |
 | [reading-routes.md](reading-routes.md) | The five reading routes, as sequences of page identifiers |
 | [voice.md](voice.md) | The voice and the labelling rules of the site, provisional until the style guidelines are issued |
@@ -22,14 +23,16 @@ Status: scaffold, for review. The site is a static knowledge base and the depart
 
 | Order | Section | Address | Holds |
 | --- | --- | --- | --- |
-| 1 | About AICC | /about/ | Statement of Intent (four pages), AICC Charter, the charter in outline, where AICC is stated |
-| 2 | What AICC does | /what-aicc-does/ | Business Model, Engagement workflow and guide |
-| 3 | How AICC works | /how-aicc-works/ | Portfolio Management Model (five pages), Solution Lifecycle Model (seven pages), Service delivery and Cadence workflows and guides, Collaboration tooling workflow |
-| 4 | Organization | /organization/ | Operating Model foundations, Roles, Decisions, the Organization guide, and the seven Role pages |
-| 5 | Responsible AI | /responsible-ai/ | AI Policy, AI risk and control workflow |
+| 1 | About AICC | /about/ | Statement of Intent (four pages), Strategy, Charter, What we do, How we work, Values and principles, Explore AICC |
+| 2 | Responsible AI | /responsible-ai/ | AI Policy, AI risk and control workflow |
+| 3 | Services | /services/ | The seven service lines, How to engage, the Service catalog, Business Model, Engagement workflow and guide |
+| 4 | Portfolio | /portfolio/ | Portfolio Management Model (five pages) |
+| 5 | Delivery | /delivery/ | Solution Lifecycle Model (seven pages), Service delivery and Cadence workflows and guides, Collaboration tooling workflow |
 | 6 | Governance and oversight | /governance/ | The control loops, records and evidence, controls and the control catalogue, the records, controls, and measures of delivery, Unit governance workflow and guide |
-| 7 | Library | /library/ | The 13 templates |
-| 8 | Reference | /reference/ | Vocabulary, Document Catalog, change history, Records and systems |
+| 7 | Organization | /organization/ | Operating Model foundations, Roles, Decisions, the Organization guide, and the seven Role pages |
+| 8 | Knowledge base | /knowledge-base/ | The 13 templates, Guides, Acts and compliance, Publications |
+| 9 | Reference | /reference/ | Vocabulary, Document Catalog, change history, Records and systems, Industry body of knowledge, Regulators and acts |
+| – | Privacy, Terms of use | /privacy/, /terms-of-use/ | The legal pages of the portal, last in the navigation and in the footer |
 
 ## The outline file of a page
 
@@ -66,6 +69,8 @@ The body of the file holds the source, the sections of the source with their siz
 ## Use
 
 ```sh
-python3 portal-scaffolding/make_pages.py
+python3 portal-scaffolding/make_pages.py            # the structure in use, to sitemap.json, inventory.md, pages/, reading-routes.md
 python3 portal-scaffolding/check.py
+python3 portal-scaffolding/make_pages.py --previous # the first structure of the site, to previous/
+python3 portal-scaffolding/check.py --previous
 ```

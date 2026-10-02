@@ -8,6 +8,8 @@ import glob, json, os, re, sys
 
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 scaf = os.path.join(root, 'portal-scaffolding')
+if '--previous' in sys.argv:
+    scaf = os.path.join(scaf, 'previous')      # the first layout of the site, written by make_pages.py --previous
 sm = json.load(open(os.path.join(scaf, 'sitemap.json')))
 errors, warnings = [], []
 

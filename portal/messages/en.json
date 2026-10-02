@@ -117,5 +117,17 @@
  "st_read": "Read",
  "st_use": "Use of AI",
  "st_measures": "Measures",
+ "kind_service": "Service line",
+ "kind_catalog": "Catalog",
+ "cat_id": "Identifier",
+ "cat_title": "Solution",
+ "cat_type": "Type",
+ "cat_state": "State",
+ "cat_initiative": "Initiative",
+ "cat_domain": "Domain",
+ "cat_receiver": "Receiver",
+ "cat_asof": "Drawn from the Portfolio on",
+ "grp_templates": "Templates",
+ "grp_knowledge": "Acts, compliance, and publications",
  "fb_id": "Page ID"
 }

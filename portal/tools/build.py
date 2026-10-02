@@ -9,6 +9,7 @@ Usage: python3 portal/tools/build.py [--no-diagrams]
 """
 import argparse
 import concurrent.futures
+import glob
 import hashlib
 import html
 import json
@@ -41,7 +42,7 @@ def unc(base_url, rel=''):
     path = base_url.split('://', 1)[1] + rel
     return '\\\\' + path.replace('/', '\\').rstrip('\\')
 CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
-PREFIX = {'about': 'ABT', 'what-aicc-does': 'WHT', 'how-aicc-works': 'HOW', 'organization': 'ORG', 'responsible-ai': 'RAI', 'governance': 'GOV', 'library': 'LIB', 'reference': 'REF'}
+PREFIX = {'about': 'ABT', 'responsible-ai': 'RAI', 'services': 'SRV', 'portfolio': 'PFL', 'delivery': 'DLV', 'governance': 'GOV', 'organization': 'ORG', 'knowledge-base': 'KNB', 'reference': 'REF'}
 LANGS = ['en', 'ru']
 DEFAULT_LANG = 'en'
 BASELINE = {'revision': '1.0', 'date': '2026-10-02'}
@@ -332,8 +333,8 @@ class Site:
                     self.section_page.setdefault((p['source'][0], n), p)
             if p['id'] in ('reference/change-history', 'reference/records-and-systems', 'organization/roles'):
                 continue
-            if p['type'] in ('document', 'workflow', 'guide', 'template', 'catalogue', 'reference') and p.get('source') and not p.get('source_sections'):
-                self.file_page[p['source'][0]] = p
+            if p['type'] in ('document', 'workflow', 'guide', 'template', 'catalogue', 'reference', 'outline', 'service', 'legal') and p.get('source') and not p.get('source_sections'):
+                self.file_page.setdefault(p['source'][0], p)
             if p['id'] == 'about/charter-outline':
                 self.file_page['charter/README.md'] = p
         # first part of split docs for file links
@@ -526,6 +527,13 @@ def tr(site, lang, key):
     return site.msg[lang].get(key, site.msg['en'].get(key, key))
 
 
+def lead_of(path):
+    """The first paragraph of an authored page, after its title: its description on cards and in the navigation."""
+    body = read(path).split('\n## ', 1)[0]
+    paras = [x.strip() for x in re.sub(r'^# .*$', '', body, flags=re.M).split('\n\n') if x.strip()]
+    return re.sub(r'\s+', ' ', paras[0]) if paras else ''
+
+
 def h1_of(path):
     for l in read(path).splitlines():
         if l.startswith('# '):
@@ -649,8 +657,12 @@ def desc_of(site, p):
         return site.tpl_desc[src]['used']
     if p['type'] == 'role':
         return site.roles['om'].get(p['title'], {}).get('Does', '')
+    if src and src.startswith('portal/content/') and p['type'] != 'legal':
+        return lead_of(src)
     fixed = {
         'about/charter-outline': 'How the charter is organized on this site, where each part is, and where to start',
+        'services/catalog': 'The Solutions of AICC, drawn from the Portfolio at each build: what AICC runs, what it has delivered, and what it is proving',
+        'knowledge-base/guides': 'The five guides in one place: who does what, when, and what is left on record, each beside its workflow',
         'about/strategy': 'The strategy of the Bank, the Strategic Priorities, the strategic choices across every aspect of AICC, and the road of Maturity Levels',
         'about/values-and-principles': 'The values and the principles of adoption, application, work, and delivery, and what each applies to',
         'reference/vocabulary': 'The defined terms of the charter and its style',
@@ -667,7 +679,7 @@ def render_pages(site):
     diagrams = []
     for p in site.pages:
         t = p['type']
-        if p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'about/strategy', 'reference/records-and-systems', 'organization/roles', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
+        if p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'about/strategy', 'reference/records-and-systems', 'organization/roles', 'services/catalog', 'knowledge-base/guides', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
             continue
         if not p.get('source'):
             continue
@@ -754,6 +766,8 @@ def layout(site, p, lang, main_html, outline):
                                                       ' data-tip="%s"' % esc(tip[:200]) if tip else '', esc(nav_title(site, q)))
             for q in items:
                 if q['type'] == 'guide' and q.get('companion') in ids:
+                    continue
+                if q['type'] == 'template':
                     continue
                 sub.append(link(q))
                 if q['id'] in nested:
@@ -990,7 +1004,7 @@ def content_page(site, p, lang):
         body = link_terms(site, body, ctx)
     body = substitute(site, body, lang)
     desc = desc_of(site, p)
-    lead = '<p class="o-lead" lang="en">%s</p>' % esc(desc) if desc and p['type'] != 'catalogue' else ''
+    lead = '<p class="o-lead" lang="en">%s</p>' % esc(desc) if desc and p['type'] != 'catalogue' and not b['src'].startswith('portal/content/') else ''
     h1 = p['title'] if p['title'] in SHORT else disp(p['title'])
     head = '<h1>%s</h1>%s%s%s%s%s' % (esc(PAGE_TITLE.get(h1, h1)), lead, facts_html(site, p, lang, b['fm']), companion_html(site, p, lang), parts_html(site, p, lang), lang_note(site, lang))
     extra = ''
@@ -1016,7 +1030,7 @@ def content_page(site, p, lang):
 
 def weight(p):
     """The weight of a page on its section page: a document leads, a workflow supports it, a guide supports a workflow."""
-    if p['type'] in ('document', 'catalogue') or p['id'] in ('reference/vocabulary',):
+    if p['type'] in ('document', 'catalogue', 'service') or p['id'] in ('reference/vocabulary',):
         return 'primary'
     if p['type'] == 'guide':
         return 'support'
@@ -1026,7 +1040,7 @@ def weight(p):
 def page_meta(site, p, lang):
     m = site.msg[lang]
     kinds = {'document': 'kind_document', 'catalogue': 'kind_document', 'workflow': 'kind_workflow', 'guide': 'kind_guide', 'template': 'kind_template',
-             'outline': 'kind_page', 'reference': 'kind_reference', 'records': 'kind_reference', 'index': 'kind_page', 'legal': 'kind_page'}
+             'outline': 'kind_page', 'reference': 'kind_reference', 'records': 'kind_reference', 'index': 'kind_page', 'legal': 'kind_page', 'service': 'kind_service', 'catalog': 'kind_catalog'}
     k = m.get(kinds.get(p['type'], 'kind_page'), '')
     bits = [k]
     if p.get('source_sections') and p.get('document'):
@@ -1103,16 +1117,89 @@ def section_page(site, p, lang):
     sec = site.auth['sections'][sid]
     url = site.url(p, lang)
     m = site.msg[lang]
-    if sid == 'library':
+    if sid == 'services':
+        return services_page(site, p, lang)
+    if sid == 'knowledge-base':
         out = []
         for q in sorted([x for x in site.pages if x['type'] == 'template'], key=lambda x: x['order']):
             tp = site.tpl_desc.get(q['source'][0], {})
-            out.append('<li class="o-card linked card--secondary" data-tip="%s"><p class="card-kicker">%s</p><h3><a href="%s">%s</a></h3><p class="card-desc" lang="en">%s</p></li>' % (
-                esc(tp.get('kept', '').strip('`')), esc(m['kind_template']), site.rel(url, site.url(q, lang)), esc(q['title']), esc(tp.get('used', ''))))
-        cards = '<ul class="o-grid card-list cards-secondary">%s</ul>' % ''.join(out)
+            out.append('<li class="o-card linked card--compact" data-tip="%s" data-tip-title="%s"><p class="card-kicker">%s</p><h3><a href="%s">%s</a></h3><p class="card-desc" lang="en">%s</p></li>' % (
+                esc(tp.get('used', '')), esc(q['title']), esc(m['kind_template']), site.rel(url, site.url(q, lang)), esc(q['title']), esc(tp.get('kept', '').strip('`'))))
+        others = [x for x in nav_groups(site, sid) if x['type'] != 'template']
+        cards = '<h2>%s</h2><ul class="o-grid card-list cards-compact">%s</ul><h2>%s</h2><ul class="o-grid card-list cards-primary">%s</ul>' % (
+            esc(m['grp_templates']), ''.join(out), esc(m['grp_knowledge']), ''.join(card(site, q, lang, url, 'card--primary') for q in others))
     else:
         cards = cards_for(site, sid, lang, url)
     main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(sec['label'][lang]), esc(sec['intro'][lang]), cards, prev_next(site, p, lang))
+    return layout(site, p, lang, main, [])
+
+
+def services_page(site, p, lang):
+    a = site.auth['services_page']
+    sec = site.auth['sections']['services']
+    m = site.msg[lang]
+    url = site.url(p, lang)
+    items = nav_groups(site, 'services')
+    lines = [q for q in items if q['type'] == 'service']
+    docs = [q for q in items if q['type'] in ('document', 'workflow')]
+    guides = {x['companion']: x for x in items if x['type'] == 'guide' and x.get('companion')}
+    engage = site.by_id['services/how-to-engage']
+    catalog = site.by_id['services/catalog']
+    out = ['<h1>%s</h1><p class="o-lead">%s</p>' % (esc(sec['label'][lang]), esc(sec['intro'][lang]))]
+    out.append('<section aria-labelledby="sv-lines"><h2 id="sv-lines">%s</h2><ul class="o-grid card-list cards-primary">%s</ul></section>' % (
+        esc(a['lines_title'][lang]), ''.join(card(site, q, lang, url, 'card--primary') for q in lines)))
+    steps = ''.join('<li><span class="lv-n">%d</span><strong>%s</strong><span>%s</span></li>' % (i, esc(st['t']), esc(st['d'])) for i, st in enumerate(a['steps'], 1))
+    levels = ''.join('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % tuple(esc(x) for x in row) for row in a['levels'])
+    out.append('<section aria-labelledby="sv-engage"><h2 id="sv-engage">%s</h2><p>%s</p><ol class="levels steps">%s</ol><p><a href="%s">%s</a></p></section>' % (
+        esc(a['engage_title'][lang]), esc(a['engage_lead'][lang]), steps, site.rel(url, site.url(engage, lang)), esc(m['card_open'] + ': ' + engage['title'])))
+    out.append('<section aria-labelledby="sv-levels"><h2 id="sv-levels">%s</h2><div class="o-table-wrap about-table" role="region" tabindex="0" aria-label="%s"><table lang="en"><thead><tr><th>%s</th><th>%s</th><th>%s</th></tr></thead><tbody>%s</tbody></table></div></section>' % (
+        esc(a['levels_title'][lang]), esc(a['levels_title'][lang]), 'Support level', 'What AICC does', 'Solution type', levels))
+    out.append('<section aria-labelledby="sv-not"><h2 id="sv-not">%s</h2><p class="o-callout">%s</p></section>' % (esc(a['not_title'][lang]), site.link_xrefs(esc(a['not'][lang]), {'url': url, 'lang': lang, 'source': 'charter/documents/business-model.md'})))
+    out.append('<section aria-labelledby="sv-catalog"><h2 id="sv-catalog">%s</h2><p>%s</p><ul class="o-grid card-list cards-compact">%s</ul></section>' % (
+        esc(a['catalog_title'][lang]), esc(a['catalog_lead'][lang]), card(site, catalog, lang, url, 'card--compact')))
+    dcards = []
+    for q in docs:
+        extra = ''
+        g = guides.get(q['id'])
+        if g:
+            extra = '<p class="card-guide"><a href="%s">%s</a></p>' % (site.rel(url, site.url(g, lang)), esc(m['kind_guide'] + ': ' + re.sub(r'^Guide:\s*', '', g['title'])))
+        dcards.append(card(site, q, lang, url, 'card--secondary', extra))
+    out.append('<section aria-labelledby="sv-docs"><h2 id="sv-docs">%s</h2><ul class="o-grid card-list cards-secondary">%s</ul></section>' % (esc(a['docs_title'][lang]), ''.join(dcards)))
+    outline = [(2, 'sv-lines', a['lines_title'][lang]), (2, 'sv-engage', a['engage_title'][lang]), (2, 'sv-levels', a['levels_title'][lang]), (2, 'sv-not', a['not_title'][lang]), (2, 'sv-catalog', a['catalog_title'][lang]), (2, 'sv-docs', a['docs_title'][lang])]
+    for hid, t, x in ((('sv-engage', a['engage_title'][lang], a['engage_lead'][lang])), ('sv-not', a['not_title'][lang], a['not'][lang])):
+        site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': sec['label'][lang], 'h': t, 'x': x[:360]})
+    return layout(site, p, lang, ''.join(out) + prev_next(site, p, lang), outline)
+
+
+def catalog_page(site, p, lang):
+    """The Service catalog: one row for each Solution Definition of the Portfolio, read at build time."""
+    a = site.auth['services_page']
+    m = site.msg[lang]
+    url = site.url(p, lang)
+    rows = []
+    for f in sorted(glob.glob(os.path.join(ROOT, 'portfolio', 'solutions', '*.md'))):
+        text = open(f, encoding='utf-8').read()
+        fields = {r['Field']: r['Entry'] for r in parse_table(text, '| Field | Entry') or []}
+        title = re.sub(r'^Solution Definition:\s*', '', h1_of(os.path.relpath(f, ROOT)))
+        rows.append('<tr><td>%s</td><td lang="en"><strong>%s</strong></td><td>%s</td><td>%s</td><td lang="en">%s</td><td lang="en">%s</td><td lang="en">%s</td></tr>' % (
+            esc(fields.get('Identifier', '')), esc(fields.get('Title') or title), esc(fields.get('Type', '') or '&ndash;'), esc(fields.get('State and Stage', '')),
+            esc(fields.get('Initiative', '')), esc(fields.get('Domain, Domain Owner', '').split(',')[0]), esc(fields.get('Receiver', '') or '&ndash;')))
+    table = ('<div class="o-table-wrap st-wide" role="region" tabindex="0" aria-label="%s"><table><thead><tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr></thead><tbody>%s</tbody></table></div>'
+             '<p class="o-caption">%s %s. %s</p>') % (
+        esc(p['title']), esc(m['cat_id']), esc(m['cat_title']), esc(m['cat_type']), esc(m['cat_state']), esc(m['cat_initiative']), esc(m['cat_domain']), esc(m['cat_receiver']), ''.join(rows),
+        esc(m['cat_asof']), esc(BASELINE['date']), esc(a['catalog_lead'][lang].split('. ')[-1]))
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(p['title']), esc(a['catalog_lead'][lang]), lang_note(site, lang), table) + prev_next(site, p, lang) + read_further(site, p, lang)
+    return layout(site, p, lang, main, [])
+
+
+def guides_index(site, p, lang):
+    url = site.url(p, lang)
+    m = site.msg[lang]
+    gs = sorted([x for x in site.pages if x['type'] == 'guide'], key=lambda x: (x['section'], x['order']))
+    lis = ''.join('<li><a href="%s">%s</a><span lang="en"> &mdash; %s</span> <span class="x-kind">· %s</span></li>' % (
+        site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(desc_of(site, q)), esc(site.auth['sections'][q['section']]['label'][lang])) for q in gs)
+    intro = 'The guides explain the workflows and the organization for the people who use them: who does what, when, and what is left on record. Each guide sits beside its subject; this page lists them in one place.'
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s<ul class="support-list">%s</ul>' % (esc(p['title']), esc(intro), lang_note(site, lang), lis) + prev_next(site, p, lang) + read_further(site, p, lang)
     return layout(site, p, lang, main, [])
 
 
@@ -1321,9 +1408,10 @@ def explore_page(site, p, lang):
         sec = site.auth['sections'][sdef['id']]
         sp = site.by_id[sdef['id'] + '/index']
         items = nav_groups(site, sdef['id'])
-        if sdef['id'] == 'library':
+        if sdef['id'] == 'knowledge-base':
             tpls = sorted([x for x in site.pages if x['type'] == 'template'], key=lambda x: x['order'])
             lis = '<li>%s</li>' % ', '.join('<a href="%s">%s</a>' % (site.rel(url, site.url(q, lang)), esc(q['title'])) for q in tpls)
+            lis += ''.join('<li><a href="%s">%s</a><span lang="en"> &mdash; %s</span></li>' % (site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(desc_of(site, q))) for q in items if q['type'] != 'template')
         else:
             lis = ''.join('<li><a href="%s">%s</a><span class="x-kind"> · %s</span><span lang="en"> &mdash; %s</span></li>' % (
                 site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(page_meta(site, q, lang).split(' · ')[0]), esc(section_desc(site, q))) for q in items)
@@ -1525,6 +1613,10 @@ def build_page(site, p, lang):
         return explore_page(site, p, lang)
     if p['id'] == 'about/strategy':
         return strategy_page(site, p, lang)
+    if p['id'] == 'services/catalog':
+        return catalog_page(site, p, lang)
+    if p['id'] == 'knowledge-base/guides':
+        return guides_index(site, p, lang)
     if p['id'] == 'reference/change-history':
         return change_history(site, p, lang)
     if p['id'] == 'reference/records-and-systems':

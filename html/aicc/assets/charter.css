@@ -242,3 +242,7 @@ dialog.fb .fb-body .oc-button{flex:none}
 .o-context{top:calc(var(--header-height) + 20px)}
 .st-wide table{min-width:720px}
 .st-wide td,.st-wide th{font-size:14px;vertical-align:top}
+.levels.steps{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:12px 0}
+.levels.steps li{padding:10px 12px;font-size:13px}
+.levels.steps li strong{font-size:14px}
+@media(max-width:1250px){.levels.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}

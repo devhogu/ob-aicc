@@ -8,31 +8,31 @@
    "id": "about",
    "order": 1,
    "label": "About AICC",
-   "summary": "The intent, the purpose, the mandate, and the place of AICC in the Bank."
-  },
-  {
-   "id": "what-aicc-does",
-   "order": 2,
-   "label": "What AICC does",
-   "summary": "The services that AICC offers, how a function engages AICC, and the Solutions that AICC delivers."
-  },
-  {
-   "id": "how-aicc-works",
-   "order": 3,
-   "label": "How AICC works",
-   "summary": "The method: how Initiatives are taken in, decided, delivered, paced, and measured."
-  },
-  {
-   "id": "organization",
-   "order": 4,
-   "label": "Organization",
-   "summary": "The Roles, the decision levels, and the bodies of AICC."
+   "summary": "The intent, the strategy, the mandate, the values, and the place of AICC in the Bank; what we do and how we work in one page each."
   },
   {
    "id": "responsible-ai",
-   "order": 5,
+   "order": 2,
    "label": "Responsible AI",
    "summary": "The rules for the use of AI, the Risk Tiers, and the gates before use."
+  },
+  {
+   "id": "services",
+   "order": 3,
+   "label": "Services",
+   "summary": "The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do."
+  },
+  {
+   "id": "portfolio",
+   "order": 4,
+   "label": "Portfolio",
+   "summary": "How AICC decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP."
+  },
+  {
+   "id": "delivery",
+   "order": 5,
+   "label": "Delivery",
+   "summary": "How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution."
   },
   {
    "id": "governance",
@@ -41,18 +41,25 @@
    "summary": "The control loops, the records, the controls, and the way AICC is reported and assured."
   },
   {
-   "id": "library",
+   "id": "organization",
    "order": 7,
-   "label": "Library",
-   "summary": "The templates, the forms of the records that AICC produces."
+   "label": "Organization",
+   "summary": "The Roles, the decision levels, and the bodies of AICC."
+  },
+  {
+   "id": "knowledge-base",
+   "order": 8,
+   "label": "Knowledge base",
+   "summary": "The templates, the guides, the acts and compliance, and the publications of AICC."
   },
   {
    "id": "reference",
-   "order": 8,
+   "order": 9,
    "label": "Reference",
-   "summary": "The Vocabulary, the Document Catalog, the change history, and the systems that hold the records."
+   "summary": "The Vocabulary, the Document Catalog, the change history, the systems that hold the records, the industry body of knowledge, and the regulators and acts."
   }
  ],
+ "layout": "next",
  "pages": [
   {
    "id": "index",
@@ -84,57 +91,7 @@
    "source": [],
    "production": "authored, with a generated list",
    "outline": [
-    "Introduction of three to five lines: The intent, the purpose, the mandate, and the place of AICC in the Bank.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
-  },
-  {
-   "id": "what-aicc-does/index",
-   "section": "what-aicc-does",
-   "order": 0,
-   "type": "section",
-   "slug": "/what-aicc-does/",
-   "title": "What AICC does",
-   "source": [],
-   "production": "authored, with a generated list",
-   "outline": [
-    "Introduction of three to five lines: The services that AICC offers, how a function engages AICC, and the Solutions that AICC delivers.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
-  },
-  {
-   "id": "how-aicc-works/index",
-   "section": "how-aicc-works",
-   "order": 0,
-   "type": "section",
-   "slug": "/how-aicc-works/",
-   "title": "How AICC works",
-   "source": [
-    "charter/workflows/README.md"
-   ],
-   "production": "authored, with a generated list",
-   "outline": [
-    "Introduction of three to five lines: The method: how Initiatives are taken in, decided, delivered, paced, and measured.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
-  },
-  {
-   "id": "organization/index",
-   "section": "organization",
-   "order": 0,
-   "type": "section",
-   "slug": "/organization/",
-   "title": "Organization",
-   "source": [],
-   "production": "authored, with a generated list",
-   "outline": [
-    "Introduction of three to five lines: The Roles, the decision levels, and the bodies of AICC.",
+    "Introduction of three to five lines: The intent, the strategy, the mandate, the values, and the place of AICC in the Bank; what we do and how we work in one page each.",
     "Statement of what the section does not hold and where it is kept",
     "The pages of the section with one line each (generated)",
     "Related sections"
@@ -157,6 +114,56 @@
    ]
   },
   {
+   "id": "services/index",
+   "section": "services",
+   "order": 0,
+   "type": "section",
+   "slug": "/services/",
+   "title": "Services",
+   "source": [],
+   "production": "authored, with a generated list",
+   "outline": [
+    "Introduction of three to five lines: The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do.",
+    "Statement of what the section does not hold and where it is kept",
+    "The pages of the section with one line each (generated)",
+    "Related sections"
+   ]
+  },
+  {
+   "id": "portfolio/index",
+   "section": "portfolio",
+   "order": 0,
+   "type": "section",
+   "slug": "/portfolio/",
+   "title": "Portfolio",
+   "source": [],
+   "production": "authored, with a generated list",
+   "outline": [
+    "Introduction of three to five lines: How AICC decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP.",
+    "Statement of what the section does not hold and where it is kept",
+    "The pages of the section with one line each (generated)",
+    "Related sections"
+   ]
+  },
+  {
+   "id": "delivery/index",
+   "section": "delivery",
+   "order": 0,
+   "type": "section",
+   "slug": "/delivery/",
+   "title": "Delivery",
+   "source": [
+    "charter/workflows/README.md"
+   ],
+   "production": "authored, with a generated list",
+   "outline": [
+    "Introduction of three to five lines: How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution.",
+    "Statement of what the section does not hold and where it is kept",
+    "The pages of the section with one line each (generated)",
+    "Related sections"
+   ]
+  },
+  {
    "id": "governance/index",
    "section": "governance",
    "order": 0,
@@ -173,18 +180,34 @@
    ]
   },
   {
-   "id": "library/index",
-   "section": "library",
+   "id": "organization/index",
+   "section": "organization",
    "order": 0,
    "type": "section",
-   "slug": "/library/",
-   "title": "Library",
+   "slug": "/organization/",
+   "title": "Organization",
+   "source": [],
+   "production": "authored, with a generated list",
+   "outline": [
+    "Introduction of three to five lines: The Roles, the decision levels, and the bodies of AICC.",
+    "Statement of what the section does not hold and where it is kept",
+    "The pages of the section with one line each (generated)",
+    "Related sections"
+   ]
+  },
+  {
+   "id": "knowledge-base/index",
+   "section": "knowledge-base",
+   "order": 0,
+   "type": "section",
+   "slug": "/knowledge-base/",
+   "title": "Knowledge base",
    "source": [
     "charter/templates/README.md"
    ],
    "production": "authored, with a generated list",
    "outline": [
-    "Introduction of three to five lines: The templates, the forms of the records that AICC produces.",
+    "Introduction of three to five lines: The templates, the guides, the acts and compliance, and the publications of AICC.",
     "Statement of what the section does not hold and where it is kept",
     "The pages of the section with one line each (generated)",
     "Related sections"
@@ -200,7 +223,7 @@
    "source": [],
    "production": "authored, with a generated list",
    "outline": [
-    "Introduction of three to five lines: The Vocabulary, the Document Catalog, the change history, and the systems that hold the records.",
+    "Introduction of three to five lines: The Vocabulary, the Document Catalog, the change history, the systems that hold the records, the industry body of knowledge, and the regulators and acts.",
     "Statement of what the section does not hold and where it is kept",
     "The pages of the section with one line each (generated)",
     "Related sections"
@@ -318,9 +341,43 @@
    "production": "generated"
   },
   {
-   "id": "about/values-and-principles",
+   "id": "about/what-we-do",
    "section": "about",
    "order": 7,
+   "type": "outline",
+   "slug": "/about/what-we-do/",
+   "title": "What we do",
+   "source": [
+    "portal/content/about/what-we-do.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "One page: AICC as the internal consulting and innovation lab of the Bank; research and consulting across strategy, programs, solutions, and ways of working",
+    "The service lines in one line each, with a link to the Services section",
+    "What AICC is not: no AI Platform, no business results of a Domain, no Control Function rules, no validation of its own work, no delivery at scale (AICC Charter 3.2)"
+   ]
+  },
+  {
+   "id": "about/how-we-work",
+   "section": "about",
+   "order": 8,
+   "type": "outline",
+   "slug": "/about/how-we-work/",
+   "title": "How we work",
+   "source": [
+    "portal/content/about/how-we-work.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "One page: the engagement model (a need, a study, a Service Agreement, delivery, an Outcome Report, support)",
+    "The method in brief: Portfolio decides, Delivery builds in small steps on a cadence, quality and control in the flow",
+    "Links to the Portfolio and Delivery sections and to the Engagement workflow and guide"
+   ]
+  },
+  {
+   "id": "about/values-and-principles",
+   "section": "about",
+   "order": 9,
    "type": "outline",
    "slug": "/about/values-and-principles/",
    "title": "Values and principles",
@@ -336,7 +393,7 @@
   {
    "id": "about/charter-outline",
    "section": "about",
-   "order": 8,
+   "order": 10,
    "type": "outline",
    "slug": "/about/charter-outline/",
    "title": "Explore AICC",
@@ -390,11 +447,173 @@
    ]
   },
   {
-   "id": "what-aicc-does/business-model",
-   "section": "what-aicc-does",
+   "id": "services/advisory",
+   "section": "services",
    "order": 1,
+   "type": "service",
+   "slug": "/services/advisory/",
+   "title": "Advisory",
+   "source": [
+    "portal/content/services/advisory.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "AI strategy and roadmap for a Domain, use-case discovery and the business case (the study), maturity and readiness assessment, provider assessment, Risk Tier advice",
+    "What the client receives, the typical shape, and what it leads to",
+    "The templates used, and who decides",
+    "Rule source: Business Model 4.1; Portfolio Management Model 6; AI Policy 4"
+   ]
+  },
+  {
+   "id": "services/proof-and-prototyping",
+   "section": "services",
+   "order": 2,
+   "type": "service",
+   "slug": "/services/proof-and-prototyping/",
+   "title": "Proof and prototyping",
+   "source": [
+    "portal/content/services/proof-and-prototyping.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Experiments, proofs of concept, MVPs, and trials of platforms and concepts; each ends in an Outcome Report and a Proposal",
+    "What the client receives, the typical shape, and what it leads to",
+    "The templates used, and who decides",
+    "Rule source: Business Model 4.1 and 4.3; Portfolio Management Model 7; Solution Lifecycle Model 8"
+   ]
+  },
+  {
+   "id": "services/solution-delivery",
+   "section": "services",
+   "order": 3,
+   "type": "service",
+   "slug": "/services/solution-delivery/",
+   "title": "Solution delivery",
+   "source": [
+    "portal/content/services/solution-delivery.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Products built for one function: knowledge bases, assistants, and the automation of routine work; handed over and supported on demand",
+    "What the client receives, the typical shape, and what it leads to",
+    "The templates used, and who decides",
+    "Rule source: Business Model 4.3; Solution Lifecycle Model 3, 7, and 8"
+   ]
+  },
+  {
+   "id": "services/ai-services",
+   "section": "services",
+   "order": 4,
+   "type": "service",
+   "slug": "/services/ai-services/",
+   "title": "AI services run by AICC",
+   "source": [
+    "portal/content/services/ai-services.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "The portals, engines, and backends that AICC operates as Services, with Service Management support and response targets; the live list is the catalog",
+    "What the client receives, the typical shape, and what it leads to",
+    "The templates used, and who decides",
+    "Rule source: Business Model 4.2; Solution Lifecycle Model 8.1"
+   ]
+  },
+  {
+   "id": "services/enablement",
+   "section": "services",
+   "order": 5,
+   "type": "service",
+   "slug": "/services/enablement/",
+   "title": "Enablement",
+   "source": [
+    "portal/content/services/enablement.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Training by role, coaching of Domain Experts, communities of practice, playbooks and reusable assets",
+    "What the client receives, the typical shape, and what it leads to",
+    "The templates used, and who decides",
+    "Rule source: Business Model 4.4; Statement of Intent 10.1"
+   ]
+  },
+  {
+   "id": "services/oversight-of-adopted-solutions",
+   "section": "services",
+   "order": 6,
+   "type": "service",
+   "slug": "/services/oversight-of-adopted-solutions/",
+   "title": "Oversight of Adopted Solutions",
+   "source": [
+    "portal/content/services/oversight-of-adopted-solutions.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "AICC oversees and reports on the Solutions that others deliver",
+    "What the client receives, the typical shape, and what it leads to",
+    "The templates used, and who decides",
+    "Rule source: Business Model 2.3; Solution Lifecycle Model 8"
+   ]
+  },
+  {
+   "id": "services/research-and-partnering",
+   "section": "services",
+   "order": 7,
+   "type": "service",
+   "slug": "/services/research-and-partnering/",
+   "title": "Research and partnering",
+   "source": [
+    "portal/content/services/research-and-partnering.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Trends and methods, partnerships with other organizations and with providers. DECISION 2: not in the charter today; needs a clause in Business Model 4, or stays a sentence in the lead of the Services page",
+    "What the client receives, the typical shape, and what it leads to",
+    "The templates used, and who decides",
+    "Rule source: to be added to Business Model 4"
+   ]
+  },
+  {
+   "id": "services/how-to-engage",
+   "section": "services",
+   "order": 8,
+   "type": "outline",
+   "slug": "/services/how-to-engage/",
+   "title": "How to engage",
+   "source": [
+    "portal/content/services/how-to-engage.md"
+   ],
+   "production": "authored, with the Engagement workflow",
+   "outline": [
+    "The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)",
+    "The function commits to nothing; AICC works on a best-effort basis within its capability",
+    "Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)",
+    "What AICC does not do (AICC Charter 3.2)",
+    "Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report"
+   ]
+  },
+  {
+   "id": "services/catalog",
+   "section": "services",
+   "order": 9,
+   "type": "catalog",
+   "slug": "/services/catalog/",
+   "title": "Service catalog",
+   "source": [
+    "portfolio/README.md"
+   ],
+   "production": "generated from portfolio/solutions at each build, dated",
+   "outline": [
+    "DECISION 1: dynamic content on the site. One row for each Solution of the Portfolio: name, type (Service, Product, Experiment), state, receiver, support level, Solution Definition",
+    "Filter by type and state",
+    "The date of the build and a statement that the Portfolio prevails"
+   ]
+  },
+  {
+   "id": "services/business-model",
+   "section": "services",
+   "order": 10,
    "type": "document",
-   "slug": "/what-aicc-does/business-model/",
+   "slug": "/services/business-model/",
    "title": "Business Model",
    "source": [
     "charter/documents/business-model.md"
@@ -403,37 +622,37 @@
    "production": "generated"
   },
   {
-   "id": "what-aicc-does/engagement-workflow",
-   "section": "what-aicc-does",
-   "order": 2,
+   "id": "services/engagement-workflow",
+   "section": "services",
+   "order": 11,
    "type": "workflow",
-   "slug": "/what-aicc-does/engagement-workflow/",
+   "slug": "/services/engagement-workflow/",
    "title": "Engagement workflow",
    "source": [
     "charter/workflows/engagement.md"
    ],
-   "companion": "what-aicc-does/engagement-guide",
+   "companion": "services/engagement-guide",
    "production": "generated"
   },
   {
-   "id": "what-aicc-does/engagement-guide",
-   "section": "what-aicc-does",
-   "order": 3,
+   "id": "services/engagement-guide",
+   "section": "services",
+   "order": 12,
    "type": "guide",
-   "slug": "/what-aicc-does/engagement-guide/",
+   "slug": "/services/engagement-guide/",
    "title": "Guide: Engagement",
    "source": [
     "charter/guides/engagement-guide.md"
    ],
-   "companion": "what-aicc-does/engagement-workflow",
+   "companion": "services/engagement-workflow",
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/portfolio-management-model",
-   "section": "how-aicc-works",
+   "id": "portfolio/portfolio-management-model",
+   "section": "portfolio",
    "order": 1,
    "type": "document",
-   "slug": "/how-aicc-works/portfolio-management-model/",
+   "slug": "/portfolio/portfolio-management-model/",
    "title": "Portfolio Management Model",
    "source": [
     "charter/documents/portfolio-management-model.md"
@@ -449,11 +668,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/portfolio-management-model/the-portfolio-loops",
-   "section": "how-aicc-works",
+   "id": "portfolio/portfolio-management-model/the-portfolio-loops",
+   "section": "portfolio",
    "order": 2,
    "type": "document",
-   "slug": "/how-aicc-works/portfolio-management-model/the-portfolio-loops/",
+   "slug": "/portfolio/portfolio-management-model/the-portfolio-loops/",
    "title": "Portfolio Management Model: The portfolio loops",
    "source": [
     "charter/documents/portfolio-management-model.md"
@@ -467,11 +686,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/portfolio-management-model/the-portfolio-kanban",
-   "section": "how-aicc-works",
+   "id": "portfolio/portfolio-management-model/the-portfolio-kanban",
+   "section": "portfolio",
    "order": 3,
    "type": "document",
-   "slug": "/how-aicc-works/portfolio-management-model/the-portfolio-kanban/",
+   "slug": "/portfolio/portfolio-management-model/the-portfolio-kanban/",
    "title": "Portfolio Management Model: The portfolio Kanban",
    "source": [
     "charter/documents/portfolio-management-model.md"
@@ -485,11 +704,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/portfolio-management-model/the-business-case-and-the-mvp",
-   "section": "how-aicc-works",
+   "id": "portfolio/portfolio-management-model/the-business-case-and-the-mvp",
+   "section": "portfolio",
    "order": 4,
    "type": "document",
-   "slug": "/how-aicc-works/portfolio-management-model/the-business-case-and-the-mvp/",
+   "slug": "/portfolio/portfolio-management-model/the-business-case-and-the-mvp/",
    "title": "Portfolio Management Model: The business case and the MVP",
    "source": [
     "charter/documents/portfolio-management-model.md"
@@ -504,11 +723,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/portfolio-management-model/levels-review-and-records",
-   "section": "how-aicc-works",
+   "id": "portfolio/portfolio-management-model/levels-review-and-records",
+   "section": "portfolio",
    "order": 5,
    "type": "document",
-   "slug": "/how-aicc-works/portfolio-management-model/levels-review-and-records/",
+   "slug": "/portfolio/portfolio-management-model/levels-review-and-records/",
    "title": "Portfolio Management Model: Levels, review, measures, and records",
    "source": [
     "charter/documents/portfolio-management-model.md"
@@ -523,11 +742,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/solution-lifecycle-model",
-   "section": "how-aicc-works",
+   "id": "delivery/solution-lifecycle-model",
+   "section": "delivery",
    "order": 11,
    "type": "document",
-   "slug": "/how-aicc-works/solution-lifecycle-model/",
+   "slug": "/delivery/solution-lifecycle-model/",
    "title": "Solution Lifecycle Model",
    "source": [
     "charter/documents/solution-lifecycle-model.md"
@@ -542,11 +761,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/solution-lifecycle-model/the-flow-of-value",
-   "section": "how-aicc-works",
+   "id": "delivery/solution-lifecycle-model/the-flow-of-value",
+   "section": "delivery",
    "order": 12,
    "type": "document",
-   "slug": "/how-aicc-works/solution-lifecycle-model/the-flow-of-value/",
+   "slug": "/delivery/solution-lifecycle-model/the-flow-of-value/",
    "title": "Solution Lifecycle Model: The flow of value",
    "source": [
     "charter/documents/solution-lifecycle-model.md"
@@ -560,11 +779,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/solution-lifecycle-model/backlogs-and-boards",
-   "section": "how-aicc-works",
+   "id": "delivery/solution-lifecycle-model/backlogs-and-boards",
+   "section": "delivery",
    "order": 13,
    "type": "document",
-   "slug": "/how-aicc-works/solution-lifecycle-model/backlogs-and-boards/",
+   "slug": "/delivery/solution-lifecycle-model/backlogs-and-boards/",
    "title": "Solution Lifecycle Model: Backlogs and boards",
    "source": [
     "charter/documents/solution-lifecycle-model.md"
@@ -578,11 +797,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/solution-lifecycle-model/states-and-stages",
-   "section": "how-aicc-works",
+   "id": "delivery/solution-lifecycle-model/states-and-stages",
+   "section": "delivery",
    "order": 14,
    "type": "document",
-   "slug": "/how-aicc-works/solution-lifecycle-model/states-and-stages/",
+   "slug": "/delivery/solution-lifecycle-model/states-and-stages/",
    "title": "Solution Lifecycle Model: States and Stages",
    "source": [
     "charter/documents/solution-lifecycle-model.md"
@@ -596,11 +815,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/solution-lifecycle-model/the-cadence",
-   "section": "how-aicc-works",
+   "id": "delivery/solution-lifecycle-model/the-cadence",
+   "section": "delivery",
    "order": 15,
    "type": "document",
-   "slug": "/how-aicc-works/solution-lifecycle-model/the-cadence/",
+   "slug": "/delivery/solution-lifecycle-model/the-cadence/",
    "title": "Solution Lifecycle Model: The cadence",
    "source": [
     "charter/documents/solution-lifecycle-model.md"
@@ -614,11 +833,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/solution-lifecycle-model/verification-release-and-acceptance",
-   "section": "how-aicc-works",
+   "id": "delivery/solution-lifecycle-model/verification-release-and-acceptance",
+   "section": "delivery",
    "order": 16,
    "type": "document",
-   "slug": "/how-aicc-works/solution-lifecycle-model/verification-release-and-acceptance/",
+   "slug": "/delivery/solution-lifecycle-model/verification-release-and-acceptance/",
    "title": "Solution Lifecycle Model: Verification, release, and acceptance",
    "source": [
     "charter/documents/solution-lifecycle-model.md"
@@ -632,11 +851,11 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/solution-lifecycle-model/life-cycle-management",
-   "section": "how-aicc-works",
+   "id": "delivery/solution-lifecycle-model/life-cycle-management",
+   "section": "delivery",
    "order": 17,
    "type": "document",
-   "slug": "/how-aicc-works/solution-lifecycle-model/life-cycle-management/",
+   "slug": "/delivery/solution-lifecycle-model/life-cycle-management/",
    "title": "Solution Lifecycle Model: Life-cycle management",
    "source": [
     "charter/documents/solution-lifecycle-model.md"
@@ -650,63 +869,63 @@
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/service-delivery-workflow",
-   "section": "how-aicc-works",
+   "id": "delivery/service-delivery-workflow",
+   "section": "delivery",
    "order": 21,
    "type": "workflow",
-   "slug": "/how-aicc-works/service-delivery-workflow/",
+   "slug": "/delivery/service-delivery-workflow/",
    "title": "Portfolio and service delivery workflow",
    "source": [
     "charter/workflows/service-delivery.md"
    ],
-   "companion": "how-aicc-works/service-delivery-guide",
+   "companion": "delivery/service-delivery-guide",
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/service-delivery-guide",
-   "section": "how-aicc-works",
+   "id": "delivery/service-delivery-guide",
+   "section": "delivery",
    "order": 22,
    "type": "guide",
-   "slug": "/how-aicc-works/service-delivery-guide/",
+   "slug": "/delivery/service-delivery-guide/",
    "title": "Guide: Service delivery",
    "source": [
     "charter/guides/service-delivery-guide.md"
    ],
-   "companion": "how-aicc-works/service-delivery-workflow",
+   "companion": "delivery/service-delivery-workflow",
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/cadence-workflow",
-   "section": "how-aicc-works",
+   "id": "delivery/cadence-workflow",
+   "section": "delivery",
    "order": 23,
    "type": "workflow",
-   "slug": "/how-aicc-works/cadence-workflow/",
+   "slug": "/delivery/cadence-workflow/",
    "title": "Cadence",
    "source": [
     "charter/workflows/cadence.md"
    ],
-   "companion": "how-aicc-works/cadence-guide",
+   "companion": "delivery/cadence-guide",
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/cadence-guide",
-   "section": "how-aicc-works",
+   "id": "delivery/cadence-guide",
+   "section": "delivery",
    "order": 24,
    "type": "guide",
-   "slug": "/how-aicc-works/cadence-guide/",
+   "slug": "/delivery/cadence-guide/",
    "title": "Guide: Cadence",
    "source": [
     "charter/guides/cadence-guide.md"
    ],
-   "companion": "how-aicc-works/cadence-workflow",
+   "companion": "delivery/cadence-workflow",
    "production": "generated"
   },
   {
-   "id": "how-aicc-works/collaboration-tooling-workflow",
-   "section": "how-aicc-works",
+   "id": "delivery/collaboration-tooling-workflow",
+   "section": "delivery",
    "order": 25,
    "type": "workflow",
-   "slug": "/how-aicc-works/collaboration-tooling-workflow/",
+   "slug": "/delivery/collaboration-tooling-workflow/",
    "title": "Collaboration tooling",
    "source": [
     "charter/workflows/collaboration-tooling.md"
@@ -1069,11 +1288,11 @@
    "production": "generated"
   },
   {
-   "id": "library/initiative-brief",
-   "section": "library",
+   "id": "knowledge-base/initiative-brief",
+   "section": "knowledge-base",
    "order": 1,
    "type": "template",
-   "slug": "/library/initiative-brief/",
+   "slug": "/knowledge-base/initiative-brief/",
    "title": "Initiative Brief",
    "source": [
     "charter/templates/initiative-brief.md"
@@ -1081,11 +1300,11 @@
    "production": "generated"
   },
   {
-   "id": "library/service-agreement",
-   "section": "library",
+   "id": "knowledge-base/service-agreement",
+   "section": "knowledge-base",
    "order": 2,
    "type": "template",
-   "slug": "/library/service-agreement/",
+   "slug": "/knowledge-base/service-agreement/",
    "title": "Service Agreement",
    "source": [
     "charter/templates/service-agreement.md"
@@ -1093,11 +1312,11 @@
    "production": "generated"
   },
   {
-   "id": "library/solution-definition",
-   "section": "library",
+   "id": "knowledge-base/solution-definition",
+   "section": "knowledge-base",
    "order": 3,
    "type": "template",
-   "slug": "/library/solution-definition/",
+   "slug": "/knowledge-base/solution-definition/",
    "title": "Solution Definition",
    "source": [
     "charter/templates/solution-definition.md"
@@ -1105,11 +1324,11 @@
    "production": "generated"
   },
   {
-   "id": "library/acceptance-checklist",
-   "section": "library",
+   "id": "knowledge-base/acceptance-checklist",
+   "section": "knowledge-base",
    "order": 4,
    "type": "template",
-   "slug": "/library/acceptance-checklist/",
+   "slug": "/knowledge-base/acceptance-checklist/",
    "title": "Acceptance Checklist",
    "source": [
     "charter/templates/acceptance-checklist.md"
@@ -1117,11 +1336,11 @@
    "production": "generated"
   },
   {
-   "id": "library/control-sign-off",
-   "section": "library",
+   "id": "knowledge-base/control-sign-off",
+   "section": "knowledge-base",
    "order": 5,
    "type": "template",
-   "slug": "/library/control-sign-off/",
+   "slug": "/knowledge-base/control-sign-off/",
    "title": "Control Sign-Off",
    "source": [
     "charter/templates/control-sign-off.md"
@@ -1129,11 +1348,11 @@
    "production": "generated"
   },
   {
-   "id": "library/decision-record",
-   "section": "library",
+   "id": "knowledge-base/decision-record",
+   "section": "knowledge-base",
    "order": 6,
    "type": "template",
-   "slug": "/library/decision-record/",
+   "slug": "/knowledge-base/decision-record/",
    "title": "Decision Record",
    "source": [
     "charter/templates/decision-record.md"
@@ -1141,11 +1360,11 @@
    "production": "generated"
   },
   {
-   "id": "library/steering-summary",
-   "section": "library",
+   "id": "knowledge-base/steering-summary",
+   "section": "knowledge-base",
    "order": 7,
    "type": "template",
-   "slug": "/library/steering-summary/",
+   "slug": "/knowledge-base/steering-summary/",
    "title": "Steering Summary",
    "source": [
     "charter/templates/steering-summary.md"
@@ -1153,11 +1372,11 @@
    "production": "generated"
   },
   {
-   "id": "library/outcome-report",
-   "section": "library",
+   "id": "knowledge-base/outcome-report",
+   "section": "knowledge-base",
    "order": 8,
    "type": "template",
-   "slug": "/library/outcome-report/",
+   "slug": "/knowledge-base/outcome-report/",
    "title": "Outcome Report",
    "source": [
     "charter/templates/outcome-report.md"
@@ -1165,11 +1384,11 @@
    "production": "generated"
   },
   {
-   "id": "library/ai-incident-review",
-   "section": "library",
+   "id": "knowledge-base/ai-incident-review",
+   "section": "knowledge-base",
    "order": 9,
    "type": "template",
-   "slug": "/library/ai-incident-review/",
+   "slug": "/knowledge-base/ai-incident-review/",
    "title": "AI Incident Review",
    "source": [
     "charter/templates/ai-incident-review.md"
@@ -1177,11 +1396,11 @@
    "production": "generated"
   },
   {
-   "id": "library/registry-snapshot",
-   "section": "library",
+   "id": "knowledge-base/registry-snapshot",
+   "section": "knowledge-base",
    "order": 10,
    "type": "template",
-   "slug": "/library/registry-snapshot/",
+   "slug": "/knowledge-base/registry-snapshot/",
    "title": "Registry Snapshot",
    "source": [
     "charter/templates/registry-snapshot.md"
@@ -1189,11 +1408,11 @@
    "production": "generated"
   },
   {
-   "id": "library/quarterly-report",
-   "section": "library",
+   "id": "knowledge-base/quarterly-report",
+   "section": "knowledge-base",
    "order": 11,
    "type": "template",
-   "slug": "/library/quarterly-report/",
+   "slug": "/knowledge-base/quarterly-report/",
    "title": "Quarterly Report",
    "source": [
     "charter/templates/quarterly-report.md"
@@ -1201,11 +1420,11 @@
    "production": "generated"
   },
   {
-   "id": "library/appointments-record",
-   "section": "library",
+   "id": "knowledge-base/appointments-record",
+   "section": "knowledge-base",
    "order": 12,
    "type": "template",
-   "slug": "/library/appointments-record/",
+   "slug": "/knowledge-base/appointments-record/",
    "title": "Appointments Record",
    "source": [
     "charter/templates/appointments-record.md"
@@ -1213,16 +1432,95 @@
    "production": "generated"
   },
   {
-   "id": "library/proposal",
-   "section": "library",
+   "id": "knowledge-base/proposal",
+   "section": "knowledge-base",
    "order": 13,
    "type": "template",
-   "slug": "/library/proposal/",
+   "slug": "/knowledge-base/proposal/",
    "title": "Proposal",
    "source": [
     "charter/templates/proposal.md"
    ],
    "production": "generated"
+  },
+  {
+   "id": "knowledge-base/guides",
+   "section": "knowledge-base",
+   "order": 20,
+   "type": "index",
+   "slug": "/knowledge-base/guides/",
+   "title": "Guides",
+   "source": [
+    "charter/guides/README.md"
+   ],
+   "production": "generated from the sitemap",
+   "outline": [
+    "The five guides with one line each, linking to their canonical pages beside their workflows (the guide stays in one place; this is a list)"
+   ]
+  },
+  {
+   "id": "knowledge-base/acts-and-compliance",
+   "section": "knowledge-base",
+   "order": 21,
+   "type": "outline",
+   "slug": "/knowledge-base/acts-and-compliance/",
+   "title": "Acts and compliance",
+   "source": [
+    "portal/content/knowledge-base/acts-and-compliance.md"
+   ],
+   "production": "authored; curated by the AICC Lead with the Control Function Contacts",
+   "outline": [
+    "DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution",
+    "For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it",
+    "Links to the Reference page Regulators and acts for the bodies and the texts"
+   ]
+  },
+  {
+   "id": "knowledge-base/publications",
+   "section": "knowledge-base",
+   "order": 22,
+   "type": "outline",
+   "slug": "/knowledge-base/publications/",
+   "title": "Publications",
+   "source": [
+    "portal/content/knowledge-base/publications.md"
+   ],
+   "production": "authored; a list kept by the AICC Lead",
+   "outline": [
+    "DECISION 5: new content. The publications of AICC for the Bank: Proposals made available, method notes, lessons, and playbooks from the Engagements (Business Model 4.4)",
+    "For each: title, date, audience, where it is kept"
+   ]
+  },
+  {
+   "id": "reference/industry-body-of-knowledge",
+   "section": "reference",
+   "order": 5,
+   "type": "outline",
+   "slug": "/reference/industry-body-of-knowledge/",
+   "title": "Industry body of knowledge",
+   "source": [
+    "portal/content/reference/industry-body-of-knowledge.md"
+   ],
+   "production": "authored; a curated list",
+   "outline": [
+    "DECISION 5: new content. The external frameworks and standards that the charter draws on or is measured against: AI risk management frameworks, AI management system standards, agile and portfolio frameworks, with one line each and where the charter uses them"
+   ]
+  },
+  {
+   "id": "reference/regulators-and-acts",
+   "section": "reference",
+   "order": 6,
+   "type": "outline",
+   "slug": "/reference/regulators-and-acts/",
+   "title": "Regulators and acts",
+   "source": [
+    "portal/content/reference/regulators-and-acts.md"
+   ],
+   "production": "authored; curated with the Control Function Contacts",
+   "outline": [
+    "DECISION 5: new content. The regulators and the acts that apply to the Bank in the use of AI and data, by jurisdiction: the body, the act, the subject, the link to the text",
+    "The split with Acts and compliance: this page lists the bodies and the texts; that page states what each requires and how AICC complies"
+   ]
   },
   {
    "id": "reference/vocabulary",
