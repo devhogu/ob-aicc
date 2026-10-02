@@ -96,5 +96,10 @@
  "vp_applies": "Applies to",
  "vp_source": "Source",
  "maturity_levels": "Maturity Levels",
+ "strategic_priority": "Strategic Priority",
+ "objective": "Objective",
+ "intended_outcome": "Intended outcome",
+ "name": "Name",
+ "capability": "Capability",
  "fb_id": "Page ID"
 }

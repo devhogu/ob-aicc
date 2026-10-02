@@ -1205,13 +1205,19 @@ def about_page(site, p, lang):
             for i, l in enumerate(lines):
                 mm = re.match(r'### (9\.\d+)\. (.*)', l)
                 if mm:
-                    obj = next((l2.replace('- **Objective.**', '').strip() for l2 in lines[i + 1:i + 4] if l2.startswith('- **Objective.**')), '')
-                    pri.append((mm.group(1), mm.group(2), obj))
+                    row = {'n': len(pri) + 1, 't': mm.group(2)}
+                    for l2 in lines[i + 1:i + 5]:
+                        m2 = re.match(r'- \*\*(Objective|Scope|Intended outcome)\.\*\* (.*)', l2)
+                        if m2:
+                            row[m2.group(1)] = m2.group(2).strip()
+                    pri.append(row)
             lv = parse_table(soi, '| Maturity Level | Name | Capability')
-            pcards = ''.join('<li class="o-card linked card--secondary" data-tip="%s"><p class="o-tag">PRI-%d</p><h3><a href="%s#c-%s">%s</a></h3><p class="card-desc" lang="en">%s</p></li>' % (
-                esc(o), k + 1, sp_url, n.replace('.', '-'), esc(t), esc(o)) for k, (n, t, o) in enumerate(pri))
-            lcards = ''.join('<li class="level"><span class="lv-n">%s %s</span><strong lang="en">%s</strong></li>' % (esc(m['level']), esc(r['Maturity Level']), esc(r['Name'])) for r in lv)
-            extra = '<ul class="o-grid card-list pri-grid about-pri-grid" lang="en">%s</ul><p class="about-levels-t"><strong>%s</strong></p><ol class="levels about-levels">%s</ol>' % (pcards, esc(m['maturity_levels']), lcards)
+            prows = ''.join('<tr><td>%d</td><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % (r['n'], esc(r['t']), esc(r.get('Objective', '')), esc(r.get('Intended outcome', ''))) for r in pri)
+            lrows = ''.join('<tr><td>%s</td><td><strong>%s</strong></td><td>%s</td></tr>' % (esc(r['Maturity Level']), esc(r['Name']), esc(r['Capability'])) for r in lv)
+            extra = ('<div class="o-table-wrap about-table" role="region" tabindex="0" aria-label="%s"><table lang="en"><thead><tr><th>#</th><th>%s</th><th>%s</th><th>%s</th></tr></thead><tbody>%s</tbody></table></div>'
+                     '<div class="o-table-wrap about-table" role="region" tabindex="0" aria-label="%s"><table lang="en"><thead><tr><th>%s</th><th>%s</th><th>%s</th></tr></thead><tbody>%s</tbody></table></div>') % (
+                esc(m['strategic_priorities']), esc(m['strategic_priority']), esc(m['objective']), esc(m['intended_outcome']), prows,
+                esc(m['maturity_levels']), esc(m['level']), esc(m['name']), esc(m['capability']), lrows)
         links = []
         for l in b['links']:
             q = site.by_id.get(l['to']) or site.by_id.get(l['to'] + '/index')

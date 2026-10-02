@@ -174,16 +174,10 @@ dialog.fb .fb-body .oc-button{flex:none}
 .about-block h2{margin:0;font-size:18px}
 .about-block p{margin:0 0 10px}
 .about-links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px}
-.about-pri-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:6px 0 14px}
-.about-pri-grid .o-card{padding:12px 14px}
-.about-pri-grid h3{font-size:15px;margin:6px 0 4px}
-.about-pri-grid .card-desc{font-size:13px;margin:0}
-.about-pri-grid .o-tag{font-size:12px;padding:2px 6px}
-.about-levels-t{margin:0 0 6px;font-size:14px}
-.about-levels{margin:0 0 14px;gap:8px;grid-template-columns:repeat(5,minmax(0,1fr))}
-.about-levels li{padding:10px 12px;font-size:13px}
-.about-levels li strong{font-size:14px}
-@media(max-width:1250px){.about-levels{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.about-table{margin:6px 0 14px}
+.about-table table{min-width:0;font-size:14px}
+.about-table th,.about-table td{padding:9px 10px}
+.crumbbar.has-ctx .crumb-next{padding-left:21px}
 .about-deeper{margin-top:28px}
 @media(max-width:800px){.about-block{grid-template-columns:1fr}}
 /* Values and principles: numbered, standing out */
