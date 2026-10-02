@@ -177,7 +177,13 @@ dialog.fb .fb-body .oc-button{flex:none}
 .about-table{margin:6px 0 14px}
 .about-table table{min-width:0;font-size:14px}
 .about-table th,.about-table td{padding:9px 10px}
-.crumbbar.has-ctx .crumb-next{padding-left:21px}
+.card--compact{padding:12px 14px;background:var(--surface)}
+.card--compact h3{font-size:15px;margin:2px 0 4px}
+.card--compact .card-kicker{font-size:11px;margin:0 0 2px}
+.card--compact .card-desc{font-size:13px;color:var(--text-muted)}
+.cards-compact{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:12px 0 0}
+.about-deeper{margin-top:28px}
+.about-block+.o-pn{margin-top:28px}
 .about-deeper{margin-top:28px}
 @media(max-width:800px){.about-block{grid-template-columns:1fr}}
 /* Values and principles: numbered, standing out */
@@ -195,5 +201,3 @@ dialog.fb .fb-body .oc-button{flex:none}
 /* legal pages at the end of the navigation */
 .nav-legal{margin-top:14px;padding-top:12px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:2px}
 .nav-legal a{min-height:34px;padding:6px 12px;font-size:13px;color:var(--text-muted)}
-.crumbbar.has-ctx{display:grid;grid-template-columns:minmax(0,1fr) var(--context-width);gap:32px;justify-content:stretch}
-.crumbbar.has-ctx .crumb-next{max-width:100%;justify-self:start}

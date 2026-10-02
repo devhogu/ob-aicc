@@ -902,6 +902,8 @@ def next_page(site, p):
 
 
 def flow_label(site, q, lang):
+    if q['type'] == 'home':
+        return site.msg[lang]['home']
     if q['type'] == 'section':
         return site.auth['sections'][q['section']]['label'][lang]
     if q['type'] == 'control':
@@ -910,10 +912,10 @@ def flow_label(site, q, lang):
 
 
 def prev_next(site, p, lang):
-    if p['type'] in ('section', 'control', 'role', 'home') or not (p.get('section') or p['type'] == 'legal'):
+    if p['type'] in ('control', 'role', 'home') or not (p.get('section') or p['type'] == 'legal'):
         return ''
-    if p['type'] == 'legal':
-        sib = [x for x in flow_pages(site) if x['type'] != 'home']
+    if p['type'] in ('legal', 'section'):
+        sib = list(flow_pages(site))
     else:
         sib = [x for x in site.pages if x.get('section') == p['section'] and x['type'] not in ('section', 'control', 'role')]
         sib.sort(key=lambda x: (x['order'], x['id']))
@@ -1066,7 +1068,7 @@ def section_page(site, p, lang):
         cards = '<ul class="o-grid card-list cards-secondary">%s</ul>' % ''.join(out)
     else:
         cards = cards_for(site, sid, lang, url)
-    main = '<h1>%s</h1><p class="o-lead">%s</p>%s' % (esc(sec['label'][lang]), esc(sec['intro'][lang]), cards)
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(sec['label'][lang]), esc(sec['intro'][lang]), cards, prev_next(site, p, lang))
     return layout(site, p, lang, main, [])
 
 
@@ -1225,9 +1227,9 @@ def about_page(site, p, lang):
         blocks.append('<section class="about-block" aria-labelledby="a-%s"><h2 id="a-%s">%s</h2><div><p>%s</p>%s<p class="about-links">%s</p></div></section>' % (
             b['id'], b['id'], esc(b['title'][lang]), esc(b['text'][lang]), extra, ' '.join(links)))
         site.extra_search.setdefault(lang, []).append({'u': url + '#a-' + b['id'], 't': sec['label'][lang], 'h': b['title'][lang], 'x': b['text'][lang][:360]})
-    deeper = ''.join(card(site, q, lang, url, 'card--primary') for q in nav_groups(site, 'about'))
-    main = '<h1>%s</h1><p class="o-lead">%s</p>%s<h2 class="about-deeper" id="a-further">%s</h2><ul class="o-grid card-list cards-primary">%s</ul>' % (
-        esc(sec['label'][lang]), esc(sec['intro'][lang]), ''.join(blocks), esc(a['deeper'][lang]), deeper)
+    deeper = ''.join(card(site, q, lang, url, 'card--compact') for q in nav_groups(site, 'about'))
+    main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s<h2 class="about-deeper" id="a-further">%s</h2><ul class="o-grid card-list cards-compact">%s</ul>' % (
+        esc(sec['label'][lang]), esc(sec['intro'][lang]), ''.join(blocks), prev_next(site, p, lang), esc(a['deeper'][lang]), deeper)
     outline = [(2, 'a-' + b['id'], b['title'][lang]) for b in a['blocks']] + [(2, 'a-further', a['deeper'][lang])]
     return layout(site, p, lang, main, outline)
 
