@@ -1,0 +1,1417 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стратегические инициативы и трансформация</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Stylesheet load order: tokens → components → theme → layout (concern) -->
+<link rel="stylesheet" href="../assets/styles/tokens.css">
+<link rel="stylesheet" href="../assets/styles/components.css">
+<link rel="stylesheet" href="../assets/styles/theme.css">
+<link rel="stylesheet" href="../assets/styles/layouts/concern.css">
+</head>
+
+<body class="page--concern">
+
+<!-- Skip to main content (keyboard / screen-reader users) -->
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Стратегические инициативы и трансформация</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Стратегические инициативы и трансформация</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Стратегические инициативы &amp; Трансформация — уровень, на котором совет директоров и правление управляют повесткой изменений банка: целенаправленными решениями, которые меняют суть института — через внешний рост (M&amp;A, партнёрства, экосистемные сделки) и внутреннюю трансформацию (программы, инновации, ESG-обязательства). В отличие от операционного состояния, этот уровень определяется скоростью принятия решений и риском исполнения: сделки закрываются в узких окнах, программы потребляют капитал в значительных объёмах, а регуляторные обязательства носят публичный характер. <strong>Возможность для ИИ — сократить время между стратегическим сигналом и аналитикой уровня правления</strong> — от идентификации цели и due diligence до отслеживания трансформации и ESG-раскрытия, переходя от недельных циклов к часам.</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-external-growth:checked ~ .problems-tab-bar label[for="problems-tab-external-growth"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-external-growth:checked ~ .problems-panel[data-tab="external-growth"] {
+    display: block;
+  }
+  
+  #problems-tab-internal-transformation:checked ~ .problems-tab-bar label[for="problems-tab-internal-transformation"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-internal-transformation:checked ~ .problems-panel[data-tab="internal-transformation"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-external-growth"
+    value="external-growth"
+    checked
+    aria-label="Внешний рост"
+  >
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-internal-transformation"
+    value="internal-transformation"
+    
+    aria-label="Внутренняя трансформация"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-external-growth"
+      role="tab"
+      aria-controls="problems-panel-external-growth"
+    >Внешний рост</label>
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-internal-transformation"
+      role="tab"
+      aria-controls="problems-panel-internal-transformation"
+    >Внутренняя трансформация</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-external-growth"
+    data-tab="external-growth"
+    role="tabpanel"
+    aria-labelledby="problems-tab-external-growth"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Скрининг целей поглощения, конкурентная разведка и оценка партнёров готовятся эпизодически стратегическими командами на основе фрагментированных рыночных данных, сделочных баз и аналитических отчётов. У руководителей нет непрерывного взгляда на внешний набор возможностей — какие цели движутся, какие партнёрства созревают, какие экосистемы набирают масштаб — между официальными обзорами.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Дью-дилидженс M&amp;A, структурирование партнёрств и позиционирование в экосистемах зависят от немногочисленных специализированных команд, синтезирующих данные юридического, финансового и операционного направлений. Генеральные директора и директора по стратегии не могут оперативно протестировать структуры сделок, условия партнёрств или экономику платформ без назначения многонедельных аналитических проектов.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Синтез данных из виртуального дата-рума, подготовка регуляторных заявок, меморандумы для одобрения советом директоров и пакеты коммуникации с инвесторами по внешним транзакциям поглощают непропорционально много времени старших аналитиков и юристов. Структурированный, документоёмкий характер процессов M&amp;A и партнёрств делает их сильными кандидатами для сквозной автоматизации.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Выбор момента транзакции — конкурентная переменная: банки, непрерывно отбирающие цели, синтезирующие дью-дилидженс быстрее и закрывающие партнёрства с более коротким циклом, получают доступ к сделкам, которые конкуренты упускают. Скорость сделок при поддержке ИИ и постоянная конкурентная разведка создают структурное преимущество в поиске источников финансирования, недостижимое при точечном анализе.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-internal-transformation"
+    data-tab="internal-transformation"
+    role="tabpanel"
+    aria-labelledby="problems-tab-internal-transformation"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Статус программ трансформации, эффективность инновационного портфеля и прогресс ESG-метрик отражаются через периодические управленческие пакеты, формируемые офисами программ, финансовым блоком и командой по устойчивому развитию. Исполнительные комитеты лишены оперативной видимости в части соблюдения контрольных точек, траекторий реализации выгод и отклонения ESG-целей между отчётными циклами.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Дизайн программ, экспериментирование по гипотезам и ESG-планирование сценариев требуют кросс-функционального синтеза, который сдерживается ограниченной группой директоров программ и руководителей стратегических направлений. Руководители не могут оперативно смоделировать чувствительность реализации выгод, исходы стадийных шлюзов инноваций или компромиссы ESG-обязательств без привлечения аналитиков на несколько недель.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Отчётность о статусе программ, материалы руководящих комитетов, стадийные шлюзовые обзоры, документы раскрытия ESG-информации и сводки по инновационному портфелю поглощают значительное время PMO и команды по устойчивому развитию на сбор и подготовку материалов. Повторяющаяся структура каждого отчётного цикла делает их готовыми кандидатами для автоматизации.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Банки, непрерывно отслеживающие реализацию выгод от трансформации, могут перераспределять финансирование программ раньше, быстрее масштабировать успешные инновации и выполнять ESG-обязательства с меньшими затратами на устранение отклонений. Портфельная видимость при поддержке ИИ формирует адаптивное преимущество исполнения — перенаправление капитала до накопления задержек.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" aria-label="Обзор раздела">
+
+    <div class="bp-grid">
+
+      
+      
+      <div class="top-band" role="region" aria-label="Стратегический уровень">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Внешний рост</div>
+    <h2 class="card__title card__title--lg">M&amp;A <span class="card__count" aria-label="18 scenarios">(18)</span></h2>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Целевой объект и дью-дилидженс</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="ma/index.html#target-screening">Скрининг целей <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="ma/index.html#due-diligence">Дью-дилидженс <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="ma/index.html#valuation-deal-structuring">Оценка и структурирование сделки <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Интеграционная реализация</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="ma/index.html#integration-planning">Планирование интеграции <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="ma/index.html#synergy-capture">Захват синергий <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="ma/index.html#post-merger-reporting">Постслиянная отчётность <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="ma/index.html" tabindex="0" aria-label="M&amp;A"></a>
+  
+</article>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Внутренняя трансформация</div>
+    <h2 class="card__title card__title--lg">Крупные программы трансформации <span class="card__count" aria-label="18 scenarios">(18)</span></h2>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Программное планирование</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="major-transformation-programs/index.html#program-design">Дизайн программы <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="major-transformation-programs/index.html#business-case-funding">Бизнес-кейс и финансирование <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="major-transformation-programs/index.html#steering-governance">Стеринговое управление <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Реализация поставки</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="major-transformation-programs/index.html#milestone-dependency-tracking">Отслеживание вех и зависимостей <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="major-transformation-programs/index.html#benefit-realization">Реализация выгод <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="major-transformation-programs/index.html#change-management">Управление изменениями <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="major-transformation-programs/index.html" tabindex="0" aria-label="Крупные программы трансформации"></a>
+  
+</article>
+        
+      </div>
+      
+
+      
+      
+      
+      
+      <div class="main-row" role="region" aria-label="Цепочка создания стоимости и возможности">
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+<article class="card card--flow">
+  <div class="card__head">
+    <div class="card__eyebrow">Циклы изменений</div>
+    <h2 class="card__title card__title--lg">Циклы изменений <span class="card__count" aria-label="17 scenarios">(17)</span></h2>
+  </div>
+  <div class="card__body">
+    <div class="flow-sections">
+      
+      <div class="flow-section">
+        <div class="flow-section__label">Внешний рост</div>
+        <ul class="flow-list" aria-label="Внешний рост">
+          
+          <li class="flow-item">
+            
+            <a href="change-cycles/index.html#ma-deal-cycle" class="flow-item__name card-link">Цикл M&amp;A <span class="card-link__count">(4)</span></a>
+            
+          </li>
+          
+          <li class="flow-item">
+            
+            <a href="change-cycles/index.html#partnership-lifecycle" class="flow-item__name card-link">Жизненный цикл партнёрства <span class="card-link__count">(3)</span></a>
+            
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="flow-section">
+        <div class="flow-section__label">Внутренняя трансформация</div>
+        <ul class="flow-list" aria-label="Внутренняя трансформация">
+          
+          <li class="flow-item">
+            
+            <a href="change-cycles/index.html#program-governance-cycle" class="flow-item__name card-link">Цикл управления программой <span class="card-link__count">(3)</span></a>
+            
+          </li>
+          
+          <li class="flow-item">
+            
+            <a href="change-cycles/index.html#innovation-stage-gate-cycle" class="flow-item__name card-link">Цикл стейдж-гейт инноваций <span class="card-link__count">(3)</span></a>
+            
+          </li>
+          
+          <li class="flow-item">
+            
+            <a href="change-cycles/index.html#esg-reporting-cycle" class="flow-item__name card-link">Цикл ESG-отчётности <span class="card-link__count">(4)</span></a>
+            
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  
+  <a class="card__click-target" href="change-cycles/index.html" tabindex="0" aria-label="Циклы изменений"></a>
+  
+</article>
+        
+
+        
+        <div class="right-col">
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Внешний рост</div>
+    <h3 class="card__title">Стратегические партнёрства <span class="card__count" aria-label="15 scenarios">(15)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Привлечение партнёров</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="strategic-partnerships/index.html#partner-identification">Идентификация партнёров <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="strategic-partnerships/index.html#deal-structuring-negotiation">Структурирование сделки и переговоры <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="strategic-partnerships/index.html#regulatory-compliance-review">Регуляторная и compliance-проверка <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Эффективность партнёров</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="strategic-partnerships/index.html#kpi-value-tracking">Отслеживание КПЭ и ценности <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="strategic-partnerships/index.html#renewal-exit-assessment">Оценка продления или выхода <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="strategic-partnerships/index.html" tabindex="0" aria-label="Стратегические партнёрства"></a>
+  
+</article>
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Внешний рост</div>
+    <h3 class="card__title">Экосистемная и платформенная стратегия <span class="card__count" aria-label="18 scenarios">(18)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Позиционирование в экосистеме</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="ecosystem-platform-strategy/index.html#ecosystem-mapping">Картирование экосистемы <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="ecosystem-platform-strategy/index.html#platform-role-positioning">Платформенная роль и позиционирование <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="ecosystem-platform-strategy/index.html#network-economics">Сетевая экономика <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Монетизация платформы</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="ecosystem-platform-strategy/index.html#api-open-banking-integration">API и интеграция открытого банкинга <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="ecosystem-platform-strategy/index.html#revenue-margin-model">Модель доходов и маржинальности <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="ecosystem-platform-strategy/index.html#partner-ecosystem-governance">Управление экосистемой партнёров <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="ecosystem-platform-strategy/index.html" tabindex="0" aria-label="Экосистемная и платформенная стратегия"></a>
+  
+</article>
+          
+        </div>
+        
+
+      </div>
+      
+
+      
+      
+      <div class="below-band" role="region" aria-label="Цепочка создания стоимости и возможности">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Внутренняя трансформация</div>
+    <h3 class="card__title">Инновационный портфель <span class="card__count" aria-label="18 scenarios">(18)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Экспериментирование с воронкой</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="innovation-portfolio/index.html#idea-sourcing-stage-gate">Поиск идей и стейдж-гейт <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="innovation-portfolio/index.html#mvp-design-hypothesis-testing">Дизайн MVP и тестирование гипотез <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="innovation-portfolio/index.html#experiment-analytics">Аналитика экспериментов <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Индустриализация и масштабирование</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="innovation-portfolio/index.html#scaling-decision">Решение о масштабировании <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="innovation-portfolio/index.html#portfolio-rebalancing">Ребалансировка портфеля <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="innovation-portfolio/index.html#innovation-pl">P&amp;L инноваций <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="innovation-portfolio/index.html" tabindex="0" aria-label="Инновационный портфель"></a>
+  
+</article>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Внутренняя трансформация</div>
+    <h3 class="card__title">ESG-обязательства <span class="card__count" aria-label="18 scenarios">(18)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Раскрытие обязательств</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="esg-commitments/index.html#tcfd-issb-disclosure">Раскрытие по TCFD/ISSB <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="esg-commitments/index.html#scope-1-2-3-reporting">Отчётность по Scope 1/2/3 <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="esg-commitments/index.html#sustainability-targets">Цели в области устойчивого развития <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Отслеживание операционализации</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="esg-commitments/index.html#transition-planning">Планирование перехода <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="esg-commitments/index.html#esg-kpi-monitoring">Мониторинг ESG-КПЭ <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="esg-commitments/index.html#regulatory-esg-filings">Регуляторная ESG-отчётность <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="esg-commitments/index.html" tabindex="0" aria-label="ESG-обязательства"></a>
+  
+</article>
+        
+      </div>
+      
+
+    </div>
+
+  </main>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+  <div class="scenarios-header-row">
+    <div class="scenarios-eyebrow">Сценарии</div>
+    <h2 class="scenarios-heading">Сценарии</h2>
+  </div>
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-initiatives/initiative-business-case-standardisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Стандартизация бизнес-кейсов инициатив</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Бизнес-кейсы, представленные руководителями бизнес-единиц для ежегодного портфеля инициатив правления, приводятся к единой схеме до рецензирования. Агент выявляет смещение допущений в кейсах — стоимость капитала, влияние на RWA, горизонты NPV, зависимости последовательности — и указывает на несоответствия для проверки командой по стратегии и офисом финансового директора. Команда по стратегии сосредоточивается на логике приоритизации; агент нормализует.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Правление рассматривает 30–50 бизнес-кейсов инициатив в каждом годовом цикле. Кейсы поступают от руководителей бизнес-единиц в несогласованных форматах с расходящимися ставками дисконтирования, допущениями по RWA и горизонтами NPV. Команда по стратегии и офис финансового директора тратят недели на сверку перед формированием портфельного взгляда.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент загружает представленные бизнес-кейсы и приводит каждый к единой схеме, применяя согласованные допущения по стоимости капитала, влиянию на RWA и горизонту NPV. Он выявляет смещение допущений между кейсами и указывает на несоответствия до рассмотрения правлением. Команда по стратегии рецензирует нормализованный портфельный взгляд и применяет логику приоритизации; агент нормализует и согласует.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Правление получает портфель нормализованных бизнес-кейсов с согласованными допущениями и выявленными несоответствиями, обеспечивая принятие решений о приоритизации на основе сопоставимых данных.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент нормализует ≥90% представленных бизнес-кейсов для ≥2 последовательных годовых циклов планирования в течение 18 месяцев с даты запуска; нормализованные кейсы охватывают все стандартные измерения схемы (стоимость капитала, влияние на RWA, горизонт NPV, зависимости последовательности).</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% нормализованных кейсов приняты командой по стратегии и офисом финансового директора без ручной корректировки схемы; точность сигналов о смещении допущений подтверждена в ≥90% рассмотренных кейсов.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Срок сверки бизнес-кейсов сокращён с 3–5 недель ручных усилий команды по стратегии и офиса финансового директора до ≤1 недели портфельного рецензирования.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-initiatives/transformation-programme-pmo-digest">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сводка PMO по трансформационной программе</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Статусные отчёты по направлениям крупных трансформационных программ синтезируются в сводку для Steering Committee по каждому отчётному периоду. Агент фиксирует отклонения контрольных точек от базового плана, выявляет межнаправленческие риски зависимостей и обеспечивает нарративную преемственность между циклами. PMO проверяет и уточняет сводку.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Крупные программы — цифровая трансформация, замена ключевых систем, миграция в облако, регуляторное устранение нарушений — генерируют от 20 до 100 статусных отчётов по направлениям за каждый двухнедельный или месячный цикл. PMO собирает, редактирует и направляет их в Steering Committee и исполнительный комитет; межнаправленческие риски зависимостей выявляются вручную и непоследовательно.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент синтезирует статусные отчёты по направлениям в единую сводку для Steering Committee, сопоставляет прогресс с базовыми контрольными точками и выявляет риски зависимостей в разрезе направлений. Нарративная преемственность между отчётными циклами поддерживается без ручной переориентации. PMO проверяет синтезированную сводку и уточняет её перед представлением.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Steering Committee и исполнительный комитет получают структурированную сводку по программе в каждом цикле — с отражением отклонений, рисков зависимостей и отступлений от базового плана — с тем чтобы усилия PMO концентрировались на разборе исключений, а не на сборе данных.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует готовую к передаче в Steering Committee сводку в не менее 90% отчётных циклов по активным крупным программам в течение 12 месяцев с момента запуска; сводка охватывает все активные направления каждой программы в периметре.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Не менее 80% сводок, сформированных агентом, принято PMO без структурной переработки; точность пометок об отклонениях и рисках зависимостей подтверждена в не менее 85% циклов, проверенных руководителями программ.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время подготовки сводки PMO за цикл сокращается с 3–5 дней сбора и редактирования до не более 4 часов проверки и уточнения силами PMO.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-initiatives/stage-gate-decision-pack-assembly">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка пакета для принятия решений на стейдж-гейте</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Пакеты для принятия решений на стейдж-гейтах для рассмотрения на ExCo или Steerco собираются из трекера программы, фактических данных бюджета, журнала рисков и источников отслеживания выгод. Агент объединяет текущий прогресс, фактические данные бюджета в сравнении с планом, ключевые риски, статус зависимостей и статус бизнес-кейса по выгодам в структурированный пакет с формулировкой рекомендации для решения на воротах.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Каждый обзор ворот — как правило, 4–6 на программу — требует пакета для принятия решений, который руководитель программы и партнёр по финансам собирают из трекера программы, фактических данных бюджета, журнала рисков и отслеживания выгод. Сборка ведётся вручную к каждым воротам; несоответствия между разделами бюджета, рисков и выгод попадают в материалы ExCo или Steerco.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент собирает пакет для принятия решений на стейдж-гейте, извлекая из исходных систем текущий прогресс программы, фактические данные бюджета в сравнении с планом, ключевые риски, статус зависимостей и статус бизнес-кейса по выгодам. Формулирует рекомендацию «продолжать/не продолжать», «пересмотреть базовый план» или «изменить содержание» для решения ExCo или Steerco. Руководитель программы и партнёр по финансам проверяют собранный пакет и применяют суждение в отношении формулировок рекомендаций.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">ExCo и Steerco получают последовательно структурированный пакет для принятия решений на стейдж-гейте к каждому обзору ворот — с объединёнными данными о прогрессе, бюджете, рисках, зависимостях и статусе выгод, а также сформулированной рекомендацией — что позволяет принимать решения «продолжать/не продолжать» на основе согласованного межфункционального представления.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент собирает пакет для принятия решений на стейдж-гейте для ≥90% обзоров ворот по программам в периметре в течение 12 месяцев с момента запуска; пакеты охватывают все необходимые аспекты (прогресс, бюджет, риски, зависимости, бизнес-кейс по выгодам) по каждым воротам.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% собранных пакетов приняты руководителем программы и партнёром по финансам без структурной переработки; согласованность данных между функциями подтверждена как точная в ≥85% пакетов, рассмотренных ExCo или Steerco.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время сборки пакета для принятия решений на стейдж-гейте сокращено с 5–10 дней ручных усилий руководителя программы и партнёра по финансам до ≤2 дней проверки и уточнения рекомендаций.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-initiatives/regulatory-change-impact-assessment">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Оценка влияния регуляторных изменений</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Разбирает новый регуляторный текст на применимые положения и даты вступления в силу, сканирует применимость по всем направлениям бизнеса, оценивает влияние на доходы и затраты, разрабатывает план реализации с ответственными и сроками, сопоставляет с аналогичными предыдущими регуляторными требованиями.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Когда новое или изменённое регуляторное требование вступает в силу, директор по комплаенсу и генеральный советник тратят 3–4 недели на анализ 50–200 страниц плотного регуляторного текста, опрос каждого бизнес-направления на предмет применимости, подготовку оценок влияния и доведение комплексной оценки до ExCo — по 30–50 часов каждый плюс ещё 50 часов по бизнес-линиям на каждое изменение. Межпрограммные последствия упускаются при разрозненном сканировании применимости, оценки влияния на доходы/затраты требуют специального анализа, а планы реализации разрабатываются разрозненно.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>ExCo получает полную картину за несколько дней вместо недель фрагментированного анализа. Шесть компонентов:
+
+    Разбор регуляторного акта — структурированное извлечение применимых положений + дат вступления в силу
+
+    Сканирование применимости — межпрограммное выявление затрагиваемых продуктов/процессов
+
+    Оценка влияния — количественная оценка последствий для доходов, затрат и систем
+
+    Разработка плана реализации — действия, ответственные, сроки, зависимости
+
+    Межпрограммная координация — выявление стратегических взаимодействий
+
+    Ссылка на аналогичные прошлые регуляторные требования — схожие прошлые нормы и опыт их исполнения</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Регуляторные изменения разбираются на применимые положения, сканируется применимость по всем направлениям бизнеса, количественно оценивается влияние, разрабатывается план реализации с ответственными и сроками — всё это передаётся на ExCo в течение нескольких дней с момента вступления регуляторного акта в силу.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент обеспечивает оценку влияния регуляторных изменений для ≥90% существенных регуляторных изменений в течение 5 рабочих дней с момента публикации в пределах 12 месяцев с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% оценок применимости и планов реализации, подготовленных агентом, приняты директором по комплаенсу (CCO) и генеральным советником с объёмом доработки ≤20%; флаги межпрограммных взаимодействий подтверждены как точные в ≥75% случаев.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл оценки регуляторных изменений сокращён с 3–4 недель (80–100 совокупных человеко-часов) до ≤1 недели рассмотрения директором по комплаенсу, генеральным советником и бизнес-линиями.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-initiatives/supervisory-examination-response-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка ответов на результаты надзорных проверок</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Официальные ответы на надзорные предписания — MRA, MRIA, письма по Section 39, отчёты уполномоченного лица и аналогичные документы — формируются на основе текста предписания, истории предыдущих мер по устранению нарушений, актуальной позиции по средствам контроля и библиотеки политик. Агент проверяет согласованность ответов по разным предписаниям и выявляет пробелы в доказательной базе. ДКО и генеральный советник проводят проверку и вносят уточнения.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Надзорные предписания OCC, FRB, EBA, FCA, PRA, CFPB или аналогичных регуляторов требуют официального ответа в течение 30–90 дней. Подготовка каждого ответа занимает от 50 до 200 человеко-часов с участием CCO, главного юрисконсульта, руководителей бизнес-линий и внутреннего аудита; перекрёстная согласованность между предписаниями проверяется вручную, а пробелы в доказательной базе выявляются на поздних стадиях цикла подготовки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент формирует проект надзорного ответа на основе текста предписания, истории устранения нарушений, актуального состояния контрольных процедур и библиотеки политик. Он проверяет согласованность между предписаниями в периметре и фиксирует пробелы в доказательной базе до передачи на проверку CCO и главному юрисконсульту. CCO и главный юрисконсульт дорабатывают проект и применяют регуляторное суждение в части тональности, формулировки принимаемых обязательств и решений об эскалации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">CCO и главный юрисконсульт получают полный проект надзорного ответа — с проверкой согласованности между предписаниями и пометками о пробелах в доказательной базе — в течение первой недели после открытия срока ответа, сохраняя 3–11 недель для регуляторных суждений и доработки.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует первоначальный проект ответа не менее чем по 90% надзорных предписаний, требующих официальной реакции, в течение 12 месяцев с момента запуска; проекты охватывают все предписания в периметре и содержат ссылки на актуальное состояние контрольных процедур и историю устранения нарушений.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Не менее 75% текста, сформированного агентом, сохраняется в итоговом направленном ответе; точность перекрёстных ссылок на нарушения подтверждена в не менее 90% ответов, проверенных CCO и главным юрисконсультом.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время подготовки первоначального проекта ответа сокращается с 4–6 недель кросс-функционального согласования до не более 5 рабочих дней работы агента; оставшееся время до истечения срока ответа используется CCO и главным юрисконсультом для доработки.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-initiatives/earnings-call-qa-prep">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка Q&amp;A для звонка с результатами</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">На основе паттернов предыдущих звонков, актуальных исследований и квартальных отчётов аналогов прогнозируются наиболее вероятные вопросы аналитиков; формируются рамочные ответы с актуальными данными; отслеживаются предзвонковые изменения в настроениях; выявляются нестандартные темы за пределами стандартного перечня для целевой подготовки.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>К каждому квартальному звонку с результатами команда по связям с инвесторами и руководитель аппарата тратят 15–25 часов на синтез материалов аналитиков и составление прогнозного документа Q&amp;A, после чего проводят 4–6-часовой брифинг генерального и финансового директоров — при этом команда, как правило, предвосхищает лишь 8 из 12 реальных вопросов аналитиков, сталкивается с 2–4 ответами «вернусь к вам» за звонок и обнаруживает предзвонковые изменения в настроениях только постфактум.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Генеральный и финансовый директора тратят ~90 минут на брифинг вместо 4 часов при более широком охвате вероятных вопросов. Шесть компонентов: прогнозирование вопросов, составление рамочных ответов, синтез аналитических материалов, выявление изменений в настроениях, прогнозирование нестандартных вопросов и отработка ключевых тезисов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Повысить охват Q&amp;A звонка с результатами до ≥10 из 12 ожидаемых вопросов аналитиков за звонок.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Брифинг используется генеральным директором и финансовым директором на ≥3 последовательных квартальных звонках.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% рамочных ответов Q&amp;A, подготовленных агентом, оценены командой по связям с инвесторами как пригодные без существенной доработки.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время подготовки брифинга по связям с инвесторами сокращено с 15–25 часов до &lt;4 часов редакционной работы.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-initiatives/regulatory-remediation-programme-tracking">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг программы регуляторного устранения нарушений</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">По многолетним программам регуляторного устранения нарушений поддерживается единая непрерывная позиция — охватывающая статус контрольных точек, прогресс рабочих потоков и соответствие регуляторным представлениям. Агент фиксирует срыв контрольных точек в привязке к регуляторным последствиям, готовит обновления статуса для регулятора и сигнализирует о готовности к закрытию по каждому элементу устранения. Руководство программой сосредотачивается на диалоге с регулятором.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Сложность"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Многолетние программы устранения нарушений — устранение нарушений по ПОД/ФТ, внедрение Consumer Duty, перестройка IRB-моделей, крупные портфели MRA/MRIA — реализуются 18–48 месяцев, охватывая сотни контрольных точек и десятки рабочих потоков. Отчётность по программе фрагментирована между трекером программы, регуляторным представлением и внутренним Steerco; эти источники расходятся, а согласование перед каждой точкой взаимодействия с регулятором поглощает ресурсы управления программой.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент ведёт единую непрерывную позицию по устранению нарушений, согласованную между трекером программы, регуляторным представлением и внутренним Steerco. Фиксирует срыв контрольных точек с явной привязкой к регуляторным последствиям, готовит обновления статуса для регулятора из текущей позиции и сигнализирует о готовности к закрытию по критериям приёмки каждого элемента устранения. Руководство программой рассматривает подготовленные агентом обновления и применяет надзорное суждение в отношении формулировок обязательств и эскалаций. Авторы редактируют; агент поддерживает непрерывную позицию.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Единая непрерывная позиция по устранению нарушений поддерживается в согласованном состоянии между трекером программы, представлением на Steerco и регуляторным представлением — обеспечивая руководству программой актуальный общий вид и сокращая усилия на согласование к каждой точке взаимодействия с регулятором.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент ведёт непрерывную позицию по устранению нарушений для ≥90% активных программ устранения в периметре в течение 18 месяцев с момента запуска; позиция обновляется в течение 72 часов с момента существенных изменений контрольных точек; проекты обновлений статуса для регулятора подготовлены для ≥100% запланированных точек взаимодействия с регулятором.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% обновлений статуса для регулятора, подготовленных агентом, приняты руководством программой без структурной переработки; флаги срыва контрольных точек с привязкой к регуляторным последствиям подтверждены как точные в ≥85% случаев, рассмотренных руководителями программ.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Затраты времени на согласование к каждой точке взаимодействия с регулятором сокращены с 2–4 недель ручных усилий по управлению программой — между трекером, Steerco и представлениями регулятору — до ≤3 дней проверки руководством программой и уточнения формулировок обязательств.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-initiatives/ma-target-screening-due-diligence-synthesis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">M&amp;A: скрининг целей и синтез результатов due diligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Результаты проверки благонадёжности (due diligence) по направлениям M&amp;A-сделки — финансы, качество кредитного портфеля, операционное соответствие, регуляторный статус и затраты на интеграцию — синтезируются в единую аналитическую записку по сделке для авторов материалов инвестиционного комитета. Агент представляет сводное видение затрат и рисков интеграции, ссылается на сопоставимые прошлые сделки из истории банка и выявляет противоречия между кредитными, операционными, регуляторными и финансовыми оценками. Авторы материалов инвестиционного комитета редактируют; агент синтезирует.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Сложность"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Сделки по приобретению портфельных активов, сетей отделений, поглощению финтех-компаний и продаже непрофильных активов генерируют 50–200 страниц материалов due diligence от офиса финансового директора, стратегического блока, главного юрисконсульта, риск-подразделения и руководителей бизнес-единиц. Синтез в связный материал инвестиционного комитета занимает 4–8 недель на каждую активную сделку; противоречия между оценками направлений — в особенности между кредитными, операционными и финансовыми оценками — выявляются с запозданием или не выявляются вовсе до рецензирования инвестиционным комитетом.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент синтезирует результаты due diligence по направлениям в единую аналитическую записку по сделке, структурированную для рецензирования инвестиционным комитетом. Представляется сводное видение затрат и рисков интеграции, ссылки на сопоставимые прошлые сделки из истории транзакций банка, выявляются противоречия между кредитным портфелем, операционными, регуляторными и финансовыми оценками. Авторы материалов инвестиционного комитета редактируют синтезированную записку и применяют транзакционное суждение по вопросам оценки риска и ценовых допущений.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Авторы материалов инвестиционного комитета получают синтезированную аналитическую записку по сделке — со сводным видением затрат и рисков интеграции, ссылками на сопоставимые сделки и выявленными межнаправленческими противоречиями — в качестве основной отправной точки по каждой активной сделке, сокращая период от завершения due diligence до подачи материалов в инвестиционный комитет.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент предоставляет синтезированную аналитическую записку по сделке для ≥90% активных оцениваемых сделок в течение 18 месяцев с момента запуска; записки охватывают все направления due diligence (финансы, кредит, операции, регуляторика, затраты на интеграцию) по каждой сделке в периметре.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% синтезированной агентом аналитической записки по сделке сохраняется в итоговом материале инвестиционного комитета; флаги о межнаправленческих противоречиях подтверждены как точные в ≥85% сделок, проверенных офисом финансового директора и главным юрисконсультом.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Продолжительность синтеза due diligence сокращается с 4–8 недель межфункционального ручного синтеза до ≤2 недель от завершения направлений due diligence до синтезированной аналитической записки, готовой для инвестиционного комитета.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+  
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 id: AICC-ORG-02-EN
 title: Portfolio Management Model
 status: active
-revision: 2.1
+revision: 2.2
 created: 2026-10-01
 revised: 2026-10-02
 ```
@@ -11,7 +11,7 @@ revised: 2026-10-02
 
 ## 1. Purpose and scope
 
-1.1. This Portfolio Management Model states how AICC decides which business initiatives to take in, fund, continue, defer, or reject. It is the Lean Portfolio Management (LPM) of AICC, which is the management of a portfolio on lean principles: the Initiatives are tied to the strategy, the priorities are funded by an envelope within guardrails and not Initiative by Initiative, and decisions are taken in small steps on evidence.
+1.1. This Portfolio Management Model states how AICC decides which business initiatives to take in, fund, continue, defer, or reject. It is the management of the portfolio of AICC, in which the Initiatives are tied to the strategy, the priorities are funded by an envelope within guardrails and not Initiative by Initiative, and decisions are taken in small steps on evidence.
 
 1.2. It covers new services and new initiatives, and major changes to them. A new feature of an existing service is not an Initiative: it enters the Program Backlog and is handled by the Solution Lifecycle Model.
 
@@ -25,9 +25,9 @@ revised: 2026-10-02
 
 ## 3. Roles and bodies
 
-3.1. The Roles of the Operating Model take the following parts in portfolio management. The first column gives the part that the Role takes in Lean Portfolio Management.
+3.1. The Roles of the Operating Model take the following parts in portfolio management. The first column gives the part that the Role takes in portfolio management.
 
-| Part in LPM | Role | What it does in the portfolio |
+| Part in portfolio management | Role | What it does in the portfolio |
 | --- | --- | --- |
 | Portfolio leadership | Executive Sponsor | Sets the Strategic Priorities, the Envelopes, the Guardrails, and the mix of Initiatives; approves an Initiative above a guardrail, across Domains, or for enabling work; decides to continue, pivot, defer, or reject for those |
 | Portfolio advice | AI Steering Committee | Advises the Executive Sponsor on the Portfolio and on conflicts between Domains |
@@ -299,3 +299,4 @@ Figure 8: the levels of the work.
 | 1.9 | 2026-10-02 | The controls that the model carries. | DR-2026-055 |
 | 2.0 | 2026-10-02 | The acceptance of the outcome of an Initiative is the business acceptance of the Domain Owner, or of the Executive Sponsor for enabling work, after the final acceptance of the Team. | DR-2026-056 |
 | 2.1 | 2026-10-02 | The yearly strategic loop runs at the yearly Steering, the monthly Steering of December held in the first two weeks, in place of the quarterly Steering that ends PIQ4; the input of PIQ3. | DR-2026-057 |
+| 2.2 | 2026-10-02 | No lineage or framework name in the model: the management of the portfolio is described in plain words in clause 1.1 and in the table of clause 3.1. | DR-2026-058 |

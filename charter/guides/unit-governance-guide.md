@@ -81,7 +81,7 @@ flowchart LR
   Q1 -->|"no"| Q2["Does a condition of<br/>Operating Model 5.2 apply?"]
   Q2 -->|"no"| TMD["The person who does the work<br/>decides on the facts<br/>noted in the work item"]
   Q2 -->|"yes"| LV["The AICC Lead, or the Executive Sponsor<br/>at the level that Operating Model 5.3 names"]
-  LV --> LOG["Decision Log, one line<br/>and a Decision Record when hard<br/>to reverse or named in section 8"]
+  LV --> LOG["Decision Log, one line<br/>and a Decision Record when it is a hard-to-reverse<br/>Decision of the Executive Sponsor or is named in section 8"]
   LOG --> REV["Reviewed in the monthly sample<br/>and at the date to revisit"]
   classDef gate fill:#e8eefc,stroke:#5a6fa8,color:#111
   class Q1,Q2 gate

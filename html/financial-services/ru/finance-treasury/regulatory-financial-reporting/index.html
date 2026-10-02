@@ -1,0 +1,1106 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регуляторная финансовая отчётность</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Finance &amp; Treasury</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Регуляторная финансовая отчётность</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Регуляторная финансовая отчётность</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Регуляторная финансовая отчётность — обязательство банка по представлению точных, полных и своевременных финансовых данных пруденциальным надзорным органам: НБКР, НБК/АРФР, ЦБР, а на международном уровне — EBA в рамках COREP и FINREP. Формы охватывают достаточность капитала (Компонент 1 Базеля III/IV), кредитный риск, рыночный риск, операционный риск и финансовую отчётность на основе МСФО в ежемесячном, квартальном и годовом циклах. Ошибки в регуляторных формах влекут надзорную проверку, а в ряде юрисдикций — принудительные меры. <strong>Возможность ИИ — автоматизированная проверка качества данных и подготовка нарративных разъяснений: снижение ручных трудозатрат в каждом цикле подачи и высвобождение времени регуляторных команд для работы над суждениями, а не сборкой данных.</strong></p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-basel-corep-finrep:checked ~ .problems-tab-bar label[for="problems-tab-basel-corep-finrep"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-basel-corep-finrep:checked ~ .problems-panel[data-tab="basel-corep-finrep"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-basel-corep-finrep"
+    value="basel-corep-finrep"
+    checked
+    aria-label="Базель, COREP, FINREP"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-basel-corep-finrep"
+      role="tab"
+      aria-controls="problems-panel-basel-corep-finrep"
+    >Базель, COREP, FINREP</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-basel-corep-finrep"
+    data-tab="basel-corep-finrep"
+    role="tabpanel"
+    aria-labelledby="problems-tab-basel-corep-finrep"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Отчётность COREP по достаточности капитала содержит сотни ячеек данных с встроенными правилами валидации EBA и требованиями к межшаблонной согласованности. Команды регуляторной отчётности выявляют ошибки качества данных через запуск пакета валидации EBA XBRL — процесс, фиксирующий ошибки на позднем этапе цикла представления и сжимающий окно для устранения до регуляторного дедлайна.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Менеджеры регуляторной отчётности тратят значительное время на трансляцию между регуляторной моделью данных (шаблонами COREP/FINREP) и внутренними финансовыми данными банка — маппинг счетов главной книги на ячейки шаблонов, выверку с управленческой отчётностью и документирование происхождения данных. Нагрузка по поддержке маппинга растёт с каждым регуляторным обновлением и каждым изменением внутренних систем.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Пояснительные записки, комментарии к движениям и управленческий нарратив, сопровождающие представления COREP и FINREP, подготавливаются вручную в каждом цикле на основе количественных данных шаблонов и представлений за предыдущие периоды. Каждый нарративный раздел структурно предсказуем — регуляторный формат предписан, — а входные данные берутся из известного набора финансовых данных.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Банки, создающие автоматизацию регуляторной отчётности — верифицированные потоки данных, предзаполнение шаблонов и генерацию нарратива, — формируют возможность, масштабируемую без пропорционального роста численности персонала по мере повышения регуляторных требований. НБКР, НБК/АРФР, ЦБ РФ и EBA каждый за последние пять лет увеличили гранулярность и частоту отчётности; тренд продолжается.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Подразделы">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="corep-finrep-validation">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Проверка качества данных COREP и FINREP</h2>
+    
+    <p class="l3-section__intent">Подачи COREP и FINREP регуляторам, применяющим стандарты EBA, содержат сотни ячеек данных со встроенными правилами валидации: арифметические проверки внутри шаблонов, требования по согласованности между шаблонами и сравнения с регуляторными пороговыми значениями. Каждая форма должна пройти полный пакет XBRL-валидации EBA до представления. Ошибки качества данных, выявленные в конце цикла, требуют экстренного устранения с риском несоблюдения срока подачи.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/corep-finrep-validation/corep-finrep-movement-commentary">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Комментарий к движениям COREP и FINREP</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует изменения за период по материальным ячейкам шаблонов COREP и FINREP, выявляет пять наибольших изменений по абсолютной величине и составляет атрибутивный комментарий по каждому из них — позволяя команде регуляторной отчётности включить предварительно согласованное нарративное приложение в пакет подачи.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Отчёты COREP и FINREP сопровождаются управленческим комментарием по материальным движениям, составляемым командой регуляторной отчётности после завершения валидации. Цикл составления начинается после валидации данных, что сжимает оставшееся окно подачи и формирует нарратив, носящий реактивный, а не аналитический характер.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает данные COREP и FINREP за текущий и предыдущий периоды сразу после завершения цикла валидации. Он выявляет пять ячеек шаблона с наибольшим абсолютным изменением за период, сопоставляет каждое изменение с соответствующими данными ГК и системы рисков для определения драйвера и составляет абзац комментария по каждому изменению в формате дома регуляторной команды. Команда проверяет каждый абзац на точность и соответствие регуляторному тону перед включением в пакет подачи.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/corep-finrep-validation/corep-finrep-submission-readiness-check">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка готовности к подаче COREP и FINREP</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">За день до срока подачи COREP или FINREP агент выполняет финальную проверку готовности к подаче — подтверждает заполненность всех шаблонов, прохождение набора XBRL-валидации, наличие управленческого комментария и согласованность сравнения с предыдущим периодом — и представляет руководителю направления регуляторной отчётности сертификат готовности.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Проблемы с подачей COREP и FINREP в последний момент — отсутствующие разделы шаблона, сбои XBRL-валидации вследствие поздней корректировки данных или комментарий, ссылающийся на предыдущий черновик, а не на итоговые данные, — выявляются руководителем регуляторной отчётности в ходе ручной проверки по чек-листу перед подачей. Чек-лист выполняется непоследовательно в условиях временного давления, а проблемы в день подачи могут потребовать экстренного устранения в узком окне до наступления срока.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент выполняет структурированную проверку готовности к подаче за день до срока: подтверждает полноту заполнения шаблонов, повторно запускает набор XBRL-валидации в отношении итогового файла данных, проверяет наличие управленческого комментария и корректную ссылку на отчётный период, а также согласованность сравнительных показателей с предыдущей утверждённой подачей. Результаты представляются руководителю регуляторной отчётности в виде сертификата готовности со статусом «пройдено/не пройдено» по каждой проверке. По каждой непройденной проверке указывается конкретная проблема и ответственная команда для устранения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/corep-finrep-validation/corep-finrep-data-quality-check">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Валидация качества данных COREP / FINREP</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент валидирует данные шаблонов COREP и FINREP в соответствии с правилами валидации EBA, требованиями перекрёстной согласованности шаблонов и ориентирами предыдущего квартала, формируя приоритизированный отчёт об исключениях до наступления срока подачи.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Отчёты COREP и FINREP содержат сотни ячеек данных со встроенными правилами валидации EBA и требованиями перекрёстной согласованности шаблонов. Нарушения качества данных, выявленные на поздних этапах цикла, сужают окно устранения замечаний до наступления срока подачи и создают риск регуляторного контроля.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент загружает заполненные шаблоны COREP и FINREP, выполняет все установленные правила XBRL-валидации EBA, проверяет перекрёстную согласованность шаблонов и сопоставляет изменение каждой материальной ячейки с предыдущим кварталом с ранжированным по существенности перечнем исключений. Финансовая служба получает структурированный отчёт о качестве данных с приоритизированными позициями для устранения с достаточным временем до наступления срока подачи.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Данные шаблонов COREP и FINREP валидируются в соответствии с правилами валидации EBA, требованиями перекрёстной согласованности шаблонов и ориентирами предыдущего квартала до наступления срока подачи, а приоритизированный отчёт об исключениях направляется Финансовой службе с достаточным временем для устранения замечаний.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Валидация качества данных, подготовленная агентом, применяется в ≥100% квартальных циклов подачи COREP/FINREP в течение первого года.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥90% отчётов об исключениях валидации приводят к устранению Финансовой службой всех выявленных позиций до подачи; частота надзорных запросов по качеству данных после подачи снижается на ≥40% относительно базового показателя до внедрения.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Приоритизированный отчёт об исключениях доступен в течение 1 рабочего дня после заполнения шаблона, по сравнению с 2–4 днями ручной валидации в прежнем процессе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="local-prudential-returns">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Пруденциальные формы НБКР / НБК / ЦБР</h2>
+    
+    <p class="l3-section__intent">Местные пруденциальные формы — серия форм НБКР 700, таблицы достаточности капитала НБК/АРФР и серия форм ЦБР 0409300 — представляются ежемесячно, ежеквартально и ежегодно в соответствующий национальный регуляторный орган. Каждая форма требует извлечения данных из главной книги и систем управления рисками, сопоставления с предписанным форматом шаблона и нарративного пояснения существенных изменений. Точность форм проверяется в ходе инспекционных проверок на местах.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/local-prudential-returns/prudential-return-movement-insights">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Аналитика движений пруденциальной отчётности</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сопоставляет текущую пруденциальную отчётность с предыдущей подачей и выявляет пять наибольших изменений на уровне ячеек, атрибутируя каждое его движению в ГК или системе рисков — предоставляя команде регуляторной отчётности предварительно составленное нарративное пояснение по каждому материальному движению до наступления срока сдачи нарратива.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>НБКР, НБК/АРДФМ и ЦБ РФ требуют нарративного пояснения материальных движений в пруденциальной отчётности. Команда регуляторной отчётности выявляет материальные движения вручную после заполнения шаблона и составляет пояснительный нарратив в условиях давления срока подачи без систематической перекрёстной ссылки на исходный драйвер в ГК или системах рисков.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает заполненный шаблон текущего периода и предыдущую утверждённую подачу. Он выявляет пять наибольших изменений на уровне ячеек по абсолютной величине, сопоставляет каждое с соответствующим счётом ГК или драйвером системы рисков и составляет атрибутивное пояснение в регуляторном стиле дома для каждого движения. Команда регуляторной отчётности проверяет каждое пояснение на точность и соответствие регуляторному тону, подтверждает атрибуцию драйвера и включает утверждённые пояснения в нарратив подачи. Черновик доступен сразу после валидации шаблона текущего периода.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/local-prudential-returns/prudential-return-submission-calendar">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Календарь подачи пруденциальной отчётности</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент ведёт сводный календарь подачи по всем пруденциальным формам НБКР, НБК/АРДФМ и ЦБ РФ — со сроками подачи, внутренними датами готовности данных и контрольными точками согласования — и направляет руководителю регуляторной отчётности еженедельный отчёт о статусе подготовки на протяжении каждого цикла подачи.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Календари подачи НБКР, НБК/АРДФМ и ЦБ РФ охватывают ежемесячные, квартальные и годовые циклы по нескольким сериям форм. Команда регуляторной отчётности отслеживает сроки подачи в ручном календаре, не интегрированном с внутренними контрольными точками готовности данных или графиком закрытия ГК, что периодически создаёт неожиданные ситуации приближения срока, когда выясняется, что дата готовности данных для квартальной формы конфликтует с окном закрытия ГК.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент ведёт структурированный календарь подачи, объединяющий регуляторный срок каждой формы, необходимую внутреннюю контрольную точку готовности данных, зависимость от даты закрытия ГК и график контрольных точек согласования. Еженедельно он направляет руководителю регуляторной отчётности отчёт о статусе подготовки — с формами, срок по которым наступает в течение следующих 30 дней, текущим статусом готовности данных по каждой из них и любой контрольной точкой, отстающей от графика. Предупреждения о приближении срока направляются, когда контрольная точка готовности данных запаздывает относительно срока подачи. Руководитель регуляторной отчётности подтверждает календарь в начале каждого квартала.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/local-prudential-returns/prudential-return-data-extraction-validation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Извлечение и валидация данных пруденциальной отчётности</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент извлекает данные из ГК и систем рисков в установленные форматы шаблонов НБКР Форма 700, НБК/АРДФМ по достаточности капитала или ЦБ РФ 0409300, применяет регуляторные правила маппинга банка и валидирует извлечённые данные в соответствии с внутришаблонной арифметикой и проверками перекрёстной согласованности между шаблонами до проверки командой регуляторной отчётности.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Подготовка пруденциальной отчётности требует извлечения данных из ГК и систем рисков и маппинга на установленные форматы регуляторных шаблонов — ручной процесс, повторяющийся в каждом ежемесячном, квартальном и годовом цикле и составляющий основную часть производственного времени команды регуляторной отчётности. Ошибки маппинга данных выявляются через проверки валидации, выполняемые командой после извлечения, что добавляет цикл устранения замечаний к и без того сжатым срокам подачи.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает выгрузки данных из ГК и систем рисков и применяет регуляторные правила маппинга банка для соответствующей формы отчётности. Он заполняет установленные ячейки шаблона, выполняет встроенные проверки внутришаблонной арифметики и валидации перекрёстной согласованности между шаблонами, а также представляет заполненный шаблон и структурированный перечень исключений команде регуляторной отчётности. Команда проверяет исключения, исправляет ошибки в исходных данных на уровне ГК или системы рисков и подтверждает итоговый шаблон перед подачей. Агент повторно выполняет валидацию после каждого цикла корректировки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="regulatory-narrative">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Нарративные пояснения к регуляторным подачам</h2>
+    
+    <p class="l3-section__intent">COREP, FINREP и местные пруденциальные формы требуют пояснительного нарратива наряду с количественными шаблонами: управленческие комментарии к существенным изменениям, примечания об изменениях методологии и пояснения по статьям, превысившим пороги существенного движения, установленные надзорным органом. Качество и согласованность нарративов по циклам подачи влияют на отношения с НБКР, НБК/АРФР и ЦБР.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/regulatory-narrative/regulatory-narrative-consistency-tracking">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Отслеживание согласованности регуляторного нарратива</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сопоставляет нарратив текущего регуляторного отчёта с ранее утверждёнными подачами для выявления заявлений, противоречащих или существенно отходящих от установленной позиции, — что позволяет команде регуляторной отчётности устранить потенциальные проблемы согласованности до подачи.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Нарративы регуляторных подач проверяются на качество в рамках текущей подачи, однако систематически не сопоставляются с предыдущими подачами на предмет согласованности. Заявления, противоречащие пояснению за предыдущий период — описание методологии, конфликтующее с нарративом ВПОДК прошлого года, или пояснение по порогу, расходящееся с предыдущим комментарием в COREP, — выявляются регулятором в ходе проверки, а не банком до подачи.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает черновой нарратив текущей подачи и утверждённые нарративы четырёх предшествующих циклов подачи. Он выявляет фрагменты текущего черновика, в которых заявленная методология, пороговое значение или пояснение расходятся с соответствующим фрагментом предыдущей подачи, и представляет каждое расхождение команде регуляторной отчётности вместе с текстом за предыдущий период. Команда проверяет каждое расхождение и подтверждает, отражает ли оно намеренное изменение методологии — которое должно быть явно раскрыто — или непреднамеренную несогласованность, требующую корректировки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/regulatory-narrative/regulatory-narrative-movement-threshold-flags">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Контроль охвата нарративом движений, превышающих регуляторный порог</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент выявляет каждую ячейку шаблона, превышающую установленный регулятором порог объяснения движения за текущий период представления, подтверждает наличие пояснительного нарратива по каждой такой ячейке и маркирует движения, превышающие порог, которые не отражены в проекте нарратива.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>НБКР, НБК/АРФДМ и ЦБ РФ устанавливают пороги объяснения движений: ячейки, в которых изменение за период превышает заданный процент или абсолютный показатель, требуют пояснительного нарратива в составе комментария к представлению. Выявление всех движений, превышающих порог, и подтверждение их нарративного охвата выполняются вручную командой регуляторной отчётности; в условиях давления сроков представления часть таких позиций может остаться без объяснения — что выявляется в ходе валидационной проверки регулятора, а не до подачи.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает данные шаблона за текущий период и опубликованные регулятором пороги объяснения движений. Он выявляет каждую ячейку, в которой межпериодное движение превышает порог, и сопоставляет каждую из них с проектом нарратива для подтверждения наличия объяснения. Ячейки с превышением порога без нарративного охвата представляются команде в виде перечня расхождений с указанием суммы движения, порога и ссылки на соответствующую строку шаблона. Команда формирует объяснения по каждой непокрытой позиции до подачи отчётности.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/regulatory-narrative/regulatory-narrative-investor-disclosure-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка нарратива регуляторных отчётов и раскрытий для инвесторов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент составляет нарративные разделы, сопровождающие пруденциальные формы НБКР, НБК/АРДФМ и ЦБ РФ, а также полный текст раскрытий банка для инвесторов — квартальных пресс-релизов о финансовых результатах, годового MD&amp;A и писем инвесторам — на основе закрытых финансовых данных и предыдущих подач.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Сложность"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Местная пруденциальная отчётность требует пояснительных комментариев — разъяснений движений, примечаний по разовым статьям и обоснований отклонений. Годовые и квартальные раскрытия для инвесторов предполагают подготовку от 40 до 120 страниц MD&amp;A и комментариев к финансовым результатам. Оба процесса используют одни и те же исходные данные, но выполняются разными командами с непоследовательным качеством результатов; межпериодная согласованность и полнота раскрытий проверяются вручную.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает количественные данные за текущий период, предыдущие представления, пороги движений, определённые в надзорных руководствах, и предыдущие раскрытия для инвесторов в качестве ориентиров стиля. Для регуляторной отчётности агент составляет пояснительный нарратив в предписанном надзорном формате. Для раскрытий инвесторам агент формирует текст MD&amp;A и релиза о прибылях с проверкой межпериодной согласованности, анализом соответствия раскрытий применимым МСФО (IFRS) и требованиям законодательства о ценных бумагах, а также маркировкой прогнозных суждений. Финансовый отдел и IR проверяют результат и применяют профессиональное суждение в отношении тональности и характера обязательств.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Нарративные разделы к пруденциальной отчётности НБКР, НБК/АРФДМ и ЦБ РФ, а также раскрытия для инвесторов — квартальные релизы о прибылях, годовые MD&amp;A и письма инвесторам — формируются на основе закрытых финансовых данных и предыдущих представлений с верификацией межпериодной согласованности и маркировкой прогнозных суждений.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент используется для составления нарратива регуляторных отчётов и разделов раскрытий для инвесторов не менее чем в 4 квартальных и 1 годовом отчётном цикле в течение первого года.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% разделов, составленных агентом, принимаются Финансовой службой и IR без существенной структурной переработки; проверка соответствия требованиям МСФО и законодательства о ценных бумагах подтверждает наличие обязательных элементов раскрытия в ≥97% проверяемых раскрытий.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Полный проект регуляторной нарративной части и раскрытий для инвесторов доступен для проверки финансовым отделом и IR в течение 5 рабочих дней после закрытия данных, в сравнении с 2–3 неделями ручной подготовки в прежнем процессе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="investor-disclosure">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Публичное раскрытие информации и официальная отчётность</h2>
+    
+    <p class="l3-section__intent">Годовая финансовая отчётность по МСФО, квартальные сообщения о финансовых результатах и письма инвесторам — публичное раскрытие финансовой информации банка: в ряде юрисдикций подаётся регулятору, во всех — публикуется для инвесторов. Каждый документ требует межпериодной согласованности, числовой выверки по разделам и проверки соответствия раскрытия требованиям применимых МСФО и законодательства о ценных бумагах.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/investor-disclosure/investor-disclosure-numerical-consistency">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка числовой согласованности раскрытий для инвесторов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">До публикации годовой финансовой отчётности по МСФО или квартального пресс-релиза о финансовых результатах агент проверяет числовую согласованность всех разделов документа — перекрёстную проверку таблиц, согласование показателей, встречающихся в нескольких разделах, и подтверждение сравнительных данных за предыдущие периоды с ранее опубликованными документами.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Годовая финансовая отчётность по МСФО и квартальные пресс-релизы о финансовых результатах содержат сотни числовых показателей, которые должны быть согласованы между разделами — итоги баланса, согласующиеся по основным формам отчётности, коэффициенты, соответствующие своим компонентам числителя и знаменателя, и сравнительные данные, совпадающие с раскрытием за предыдущий период. Ручная проверка согласованности командой по раскрытиям выявляет большинство ошибок, однако выполняется в условиях временного давления перед публикацией и рассматривает каждый документ как самостоятельную проверку без систематической перекрёстной сверки с предыдущими публикациями.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает черновик финансовой отчётности или пресс-релиза и применяет структурированную проверку согласованности: перекрёстно проверяет все табличные итоги, верифицирует совпадение показателей, встречающихся в нескольких разделах, пересчитывает все заявленные коэффициенты из их раскрытых компонентов и сопоставляет все сравнительные показатели с предыдущей утверждённой публикацией. Исключения — несоответствия, ошибки округления и необъяснённые отличия от предыдущих публикаций — представляются команде по раскрытиям в пронумерованном перечне исключений до публикации. Команда подтверждает каждое исключение как намеренное или инициирует корректировку.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/investor-disclosure/earnings-release-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка пресс-релиза о финансовых результатах</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент составляет квартальный пресс-релиз о финансовых результатах на основе закрытой управленческой отчётности, показателей капитала и ликвидности, а также трёх последних утверждённых релизов в качестве стилистических ориентиров — предоставляя CFO и команде по работе с инвесторами (IR) полный черновик в день закрытия отчётности с атрибуцией всех материальных движений.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Квартальные пресс-релизы о финансовых результатах составляются офисом CFO и командой IR из нескольких источников, причём цикл составления начинается после финализации всех исходных документов. Процесс занимает от трёх до пяти дней, и ранние черновики, направляемые на проверку, нередко требуют структурных доработок по мере формирования позиции CFO — что дополнительно удлиняет цикл и создаёт риск контроля версий в большой группе рецензентов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает закрытую управленческую отчётность, отчёты о капитале и ликвидности, а также три последних утверждённых пресс-релиза в качестве стилистических и структурных ориентиров. Он формирует черновик, охватывающий стандартные разделы релиза — ключевые финансовые показатели, результативность сегментов, капитал и ликвидность, прогнозы и финансовые таблицы — с атрибутивным комментарием по каждому материальному движению. CFO и команда IR получают черновик в день закрытия отчётности, проверяют его на предмет стратегического позиционирования и форвардных прогнозов, вносят правки; агент формирует доработанный черновик по результатам каждого раунда правок. Проверка согласованности выполняется в отношении итогового черновика перед публикацией.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/investor-disclosure/ifrs-disclosure-compliance-review">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка соответствия раскрытий по МСФО</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент проверяет черновик годовой финансовой отчётности по МСФО на соответствие применимым требованиям к раскрытию — МСФО (IFRS) 7, МСФО (IFRS) 9, МСФО (IFRS) 13 и МСФО (IAS) 1 — и формирует перечень пробелов в соответствии, выявляя обязательные раскрытия, отсутствующие или неполные в черновике.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Годовая финансовая отчётность по МСФО содержит обширные требования к раскрытию в соответствии с МСФО (IFRS) 7 (финансовые инструменты), МСФО (IFRS) 9 (обесценение), МСФО (IFRS) 13 (справедливая стоимость) и МСФО (IAS) 1 (представление). Проверка соответствия раскрытий проводится вручную внешними аудиторами и отделом технического учёта банка, причём пробелы выявляются в ходе аудиторской проверки, а не до передачи черновика на аудит. Выявление пробелов на поздних этапах удлиняет аудиторские сроки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает черновик финансовой отчётности по МСФО и структурированный чек-лист раскрытий, сформированный на основе применимых стандартов МСФО. Он сопоставляет каждый обязательный элемент раскрытия с соответствующим разделом черновика, выявляет отсутствующие или неполные элементы и формирует пронумерованный перечень пробелов в соответствии с указанием ссылки на МСФО, требования к раскрытию и места в черновике, где ожидается раскрытие. Отдел технического учёта проверяет перечень пробелов до передачи черновика аудиторам, что снижает количество аудиторских запросов о полноте раскрытий.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

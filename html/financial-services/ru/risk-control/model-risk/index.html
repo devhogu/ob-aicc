@@ -1,0 +1,1177 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Модельный риск</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Risk &amp; Control</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Модельный риск</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Модельный риск</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Модельный риск — потенциал негативных последствий от решений, основанных на моделях, которые некорректны или применяются ненадлежащим образом. По SR 11-7 (ФРС/OCC) и аналогичным Руководящим принципам ЕБА каждая используемая модель должна быть включена в реестр, верифицирована независимой функцией и непрерывно отслеживаться по показателям производительности. Реестр моделей охватывает кредитный риск (PD, LGD, EAD, этапирование по МСФО (IFRS) 9), рыночный риск (VaR, «греки»), стресс-тестирование ликвидности, мониторинг транзакций AML, скоринг мошенничества и всё в большей мере модели машинного обучения. <strong>Возможность ИИ — автоматизировать управленческую нагрузку</strong> — сверку реестра, синтез выводов валидации и мониторинг производительности — позволяя функции модельного риска охватывать больше моделей за цикл при неизменной численности персонала.</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-model-lifecycle-validation:checked ~ .problems-tab-bar label[for="problems-tab-model-lifecycle-validation"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-model-lifecycle-validation:checked ~ .problems-panel[data-tab="model-lifecycle-validation"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-model-lifecycle-validation"
+    value="model-lifecycle-validation"
+    checked
+    aria-label="Валидация и жизненный цикл моделей"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-model-lifecycle-validation"
+      role="tab"
+      aria-controls="problems-panel-model-lifecycle-validation"
+    >Валидация и жизненный цикл моделей</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-model-lifecycle-validation"
+    data-tab="model-lifecycle-validation"
+    role="tabpanel"
+    aria-labelledby="problems-tab-model-lifecycle-validation"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Замечания по валидации моделей по всему портфелю поступают последовательно — один отчёт о валидации на модель — и Комитет по риску моделей рассматривает каждый из них индивидуально. Системные слабости, видимые только в агрегате — единый пробел в документации по розничным PD-моделям, общая проблема прослеживаемости данных в моделях стадирования МСФО (IFRS) 9, повторяющееся замечание по концептуальной обоснованности в моделях машинного обучения — выявляются только тогда, когда валидатор замечает паттерн в нескольких отчётах.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Ведение реестра моделей — сверка реестра с производственными развёртываниями для выявления теневых моделей и устаревших записей о валидации — требует от аналитиков перекрёстного обращения к реестру с записями о технологических развёртываниях, репозиториями кода команды по обработке данных и реестрами контрактов с поставщиками. Упражнение выявляет пробелы; их устранение требует от команды риска моделей инициирования рабочих процессов валидации и устранения в исходных бизнес-подразделениях.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Пакеты материалов для Комитета по риску моделей — статус реестра, конвейер валидации, распределение серьёзности замечаний и ежегодное покрытие валидации — формируются вручную из выгрузок системы управления риском моделей в каждом цикле. Формат унифицирован; данные структурированы.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Функция управления риском моделей с систематическим сверкой реестра и синтезом замечаний на уровне портфеля способна продемонстрировать соответствие SR 11-7 надзорным органам с доказательной базой, выходящей за рамки отдельного отчёта о валидации модели. Зрелость корпоративного управления портфелем всё активнее оценивается в ходе регуляторных проверок риска моделей; пробелы — в особенности теневые модели и просроченные валидации — влекут капитальные последствия и риск принудительных мер.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Подразделы">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="model-inventory-governance">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Реестр и управление моделями</h2>
+    
+    <p class="l3-section__intent">Реестр моделей — главный регистр всех моделей, применяемых в рабочей эксплуатации: назначение модели, владелец, дата разработки, статус валидации, решение об одобрении и план мониторинга. SR 11-7 требует, чтобы реестр был исчерпывающим и актуальным; регуляторы ожидают возможности проследить от бизнес-решения до информирующих его моделей и от каждой модели — до её истории валидации. Теневые модели — инструменты в электронных таблицах и результаты поставщиков, функционирующие как модели, но не зарегистрированные, — наиболее распространённый пробел реестра, выявляемый в ходе надзорных проверок модельного риска. Поддержание актуального и точного реестра требует систематической сверки с технологическими и вендорными записями.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/model-inventory-documentation-completeness">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка полноты реестра моделей и документации</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сверяет реестр моделей со стандартом документации политики MRM, фиксирует пробелы по каждой модели и формирует отчёт о полноте документации для главного директора по риску моделей.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Полнота документации моделей — документация по разработке, отчёты о валидации, документы об утверждении и планы текущего мониторинга — проверяется вручную в соответствии со стандартом политики MRM.
+
+При наличии 80–200 моделей в типовом реестре банка аудит полноты является периодическим мероприятием и не выявляет промежуточные пробелы, возникающие между циклами проверок.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает реестр моделей и связанные репозитории документации, применяет схему политики MRM как контрольный список полноты, фиксирует отсутствующие или устаревшие документы по каждой модели и формирует отчёт о полноте, ранжированный по регуляторному приоритету.
+
+Главный директор по риску моделей рассматривает пробелы и назначает ответственных за их устранение.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Главный директор по риску моделей управляет полнотой документации моделей на основе сформированного агентом отчёта — с применением стандарта политики MRM ко всему реестру — вместо периодического ручного аудита.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Проверка полноты агентом охватывает 100% записей реестра моделей не реже одного раза в квартал в течение 6 месяцев с момента запуска; схема политики MRM применяется как контрольный список полноты в каждом прогоне с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% пробелов в документации, выявленных агентом, подтверждены как реальные главным директором по риску моделей при проверке; доля пробелов между ежегодными проверками снижена на ≥50% по сравнению с прежним периодическим аудитом.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Полный отчёт о полноте реестра предоставляется в течение 3 рабочих дней с момента среза данных реестра, что позволяет начать устранение пробелов в том же отчётном месяце, а не ждать ежегодной проверки.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/model-inventory-annual-attestation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Поддержка ежегодной аттестации реестра моделей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент предварительно заполняет годовую форму аттестации реестра моделей для каждого владельца модели — обобщая текущий статус, историю валидации, план мониторинга и открытые замечания — снижая время заполнения и повышая долю ответов по аттестации.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежегодная аттестация реестра моделей требует от каждого владельца подтверждения и актуализации сведений о своей модели.
+
+Низкий уровень ответов и неполные заявки — распространённая проблема; функция управления риском моделей тратит значительное время на напоминания владельцам и урегулирование неполных аттестаций до завершения сертификации реестра.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает актуальные записи реестра по каждой модели и предварительно заполняет форму аттестации с указанием текущего статуса, даты валидации, ссылки на план мониторинга и числа открытых замечаний.
+
+Владельцы моделей получают предварительно заполненную форму, требующую только подтверждения или корректировки, а не пустой шаблон, что снижает трудоёмкость заполнения.
+
+Главный директор по риску моделей проверяет исключения перед сертификацией.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/shadow-model-identification">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сканирование для выявления теневых моделей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сканирует системы бизнес-подразделений и общие диски на наличие электронных таблиц и выгрузок поставщиков, отвечающих определению модели по SR 11-7, выявляет позиции, не зарегистрированные в реестре моделей, и передаёт список кандидатов-теневых моделей главному директору по риску моделей.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Теневые модели — электронные таблицы и выгрузки поставщиков, функционирующие как модели, но не зарегистрированные в реестре, — являются наиболее распространённым пробелом реестра, выявляемым в ходе регуляторных проверок риска моделей.
+
+Их выявление требует систематического сканирования систем бизнес-подразделений; существующий подход основан на самостоятельном уведомлении со стороны подразделений, что систематически занижает численность теневых моделей.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент сканирует метаданные общих дисков бизнес-подразделений и выгрузок финансовых систем, применяет критерии определения модели по SR 11-7 для выявления файлов, выполняющих функции количественных инструментов с результатами, используемыми в бизнес-решениях, и сопоставляет каждый кандидат с зарегистрированным реестром моделей.
+
+Главный директор по риску моделей рассматривает список кандидатов и инициирует включение в реестр подтверждённых теневых моделей.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="model-performance-monitoring">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Мониторинг производительности моделей</h2>
+    
+    <p class="l3-section__intent">Текущий мониторинг отслеживает производительность каждой модели между циклами валидации — измеряя дискриминирующую способность (Gini, KS, AUC для классификационных моделей), откалиброванность (прогнозируемые в сравнении с фактическими уровнями дефолтов, ECL в сравнении с реализованными потерями) и стабильность (PSI, CSI для сдвигов распределения входных данных). SR 11-7 требует документированных планов мониторинга для каждой модели с определёнными триггерами эскалации при снижении производительности ниже допустимых пороговых значений. Ухудшение производительности сверх порога существенности активирует внеплановую валидацию. Для моделей кредитного риска ухудшение производительности совпадает с поворотными точками макроэкономического цикла — именно тогда, когда результаты модели наиболее значимы для планирования капитала и резервов.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-performance-monitoring/model-performance-monthly-dashboard">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Ежемесячная панель мониторинга эффективности моделей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует ежемесячную панель мониторинга эффективности моделей на основе отчётов, представленных владельцами, применяя единообразный расчёт показателей и сигнализируя о моделях, нарушивших установленные пороговые значения, для главного директора по риску моделей.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>SR 11-7 требует документированного мониторинга эффективности для каждой модели.
+
+Владельцы моделей представляют результаты мониторинга в различных форматах; функция управления риском моделей должна стандартизировать показатели, рассчитать сводные индикаторы и выявить нарушения порогов до каждого заседания Комитета по риску моделей — трудоёмкая ручная консолидация по 80–200 моделям.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ежемесячные отчёты о мониторинге от владельцев моделей, стандартизирует показатели эффективности по классу модели (Gini/KS — для кредитных, RMSE — для непрерывных, число исключений по бэктестингу — для рыночного риска), сигнализирует о нарушениях порогов и формирует панель в стандартном формате комитета.
+
+Главный директор по риску моделей проверяет выявленные модели до рассылки пакета материалов комитета.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-performance-monitoring/model-performance-deterioration-alert">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Оповещение об ухудшении качества модели</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает тенденции показателей эффективности модельного портфеля между ежемесячными отчётными циклами, сигнализируя о моделях, динамика которых указывает на предстоящее нарушение порогового значения до его отражения в очередном плановом отчёте.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ухудшение качества выявляется в ежемесячном цикле мониторинга.
+
+Модель, стабильно деградирующая в течение трёх месяцев, может превысить пороговое значение лишь на четвёртом месяце; функция управления риском моделей не получает сигнала о нарастающем ухудшении в промежуточных отчётных окнах.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает временные ряды показателей эффективности по всему портфелю, применяет анализ трендов для выявления моделей с деградирующей динамикой и сигнализирует о моделях, которые по прогнозу превысят пороговые значения эффективности в течение 90 дней.
+
+Главный директор по риску моделей получает предупреждение о тренде между ежемесячными циклами, что позволяет проактивно планировать валидацию.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-performance-monitoring/model-performance-vs-macro-correlation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ зависимости эффективности моделей от макроэкономических факторов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сопоставляет показатели эффективности кредитных моделей с индикаторами макроэкономического цикла для выявления моделей, калибровка которых, вероятно, ухудшится при текущем макроэкономическом прогнозе, и информирует о расстановке приоритетов в графике валидации.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ухудшение эффективности моделей кредитного риска коррелирует со сменой макроэкономического цикла, однако расстановка приоритетов при валидации функцией управления риском моделей не учитывает макросигналы системно.
+
+Модель, откалиброванная в условиях благоприятной кредитной среды, может сегодня показывать приемлемые результаты, тогда как макросреда вокруг неё ухудшается; команда валидации обнаруживает рассогласование лишь при превышении показателем порогового значения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает макроиндикаторы — рост ВВП, кредитные спреды, уровень безработицы — наряду с ежемесячными показателями эффективности моделей PD, LGD и ECL, рассчитывает историческую корреляцию между макроциклом и эффективностью модели и сигнализирует о моделях, эффективность которых исторически коррелирует с текущей макродинамикой.
+
+Главный директор по риску моделей использует результаты для приоритизации валидации макрочувствительных моделей.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="model-validation">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Валидация моделей</h2>
+    
+    <p class="l3-section__intent">Валидация моделей — совокупность процессов и мероприятий, направленных на проверку того, что модели функционируют в соответствии с ожиданиями и пригодны для целевого применения. По SR 11-7 валидация должна проводиться функцией, независимой от разработки модели, и охватывать проверку концептуальной обоснованности, анализ результатов и текущий мониторинг. Руководящие принципы ЕБА по модельному риску устанавливают аналогичные требования для банков, регулируемых в ЕС. По итогам валидации составляются официальные отчёты с выводами, классифицированными по степени серьёзности; существенные выводы должны быть устранены до одобрения модели к расширенному применению. Объём моделей, требующих ежегодной или двухгодичной валидации, нередко превышает возможности валидационной функции.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-validation/model-development-spec-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Составление спецификации разработки модели</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент составляет спецификацию разработки модели — обоснование концептуальной состоятельности, прослеживаемость данных, рассмотренные альтернативы методологии и дизайн бэктеста — на основе рабочих заметок разработчика модели и результатов исследования данных.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Спецификации разработки моделей составляются количественными аналитиками после завершения работ по разработке, при этом качество документации непостоянно в рамках команды.
+
+Валидаторы нередко возвращают спецификации для дополнительного обоснования концептуальной состоятельности или детализации прослеживаемости данных, увеличивая цикл валидации и откладывая внедрение модели.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает рабочие заметки разработчика, результаты разведочного анализа и документацию по набору данных, и составляет спецификацию разработки по стандартному шаблону банка — аргументация концептуальной состоятельности, прослеживаемость данных, альтернативные методологии, сравнение с эталоном и дизайн бэктеста.
+
+Разработчик проверяет черновик и заполняет разделы с экспертными суждениями перед представлением на валидацию модели.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Разработчики моделей представляют спецификации разработки, составленные агентом на основе рабочих заметок и результатов исследования данных — охватывающие концептуальную состоятельность, прослеживаемость данных, альтернативы методологии и дизайн бэктеста — для экспертной проверки, а не готовят документацию после завершения разработки.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент применяется для составления спецификаций разработки моделей для ≥70% новых моделей и заявок на существенные изменения моделей в течение 12 месяцев с момента запуска; все стандартные разделы шаблона производятся агентом в каждом прогоне с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% подготовленных агентом спецификаций приняты службой валидации моделей без возврата на первом этапе для дополнительной документации; продолжительность цикла валидации сокращена на ≥20% для моделей с агентной документацией по сравнению с аналогами, документируемыми вручную.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Черновик спецификации разработки предоставляется в течение 2 рабочих дней с момента представления рабочих заметок разработчика, при прежнем подходе ручная документация после разработки занимала ≥1 недели.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-validation/model-validation-finding-synthesis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Синтез замечаний по результатам валидации моделей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент считывает завершённые отчёты о валидации за календарный год, кластеризует замечания по категории и первопричине и выявляет системные слабые места в практиках разработки моделей банка для ежегодного обзора риска моделей главным директором по риску моделей.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Замечания по итогам валидации документируются в отдельных отчётах, которые Комитет по риску моделей рассматривает по каждой модели.
+
+Системные слабые места — типичные пробелы в документации моделей конкретной команды или повторяющиеся концептуальные сложности определённого класса моделей — видны в совокупности, но не в рамках цикла рассмотрения отдельных отчётов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает все отчёты о валидации, завершённые за год, извлекает категории замечаний и первопричины, кластеризует их по семейству моделей и команде разработчиков, и выявляет системные паттерны.
+
+Главный директор по риску моделей использует результаты анализа при ежегодном обзоре программы управления риском моделей и при планировании целевого обучения разработчиков.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-validation/validation-pipeline-capacity-planning">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Планирование мощностей конвейера валидации</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент прогнозирует потребность конвейера валидации на следующие 12 месяцев — на основе плановых дат ревалидации, новых заявок на модели и изменений моделей — и сопоставляет её с доступными валидационными ресурсами, сигнализируя о дефиците мощностей главному директору по риску моделей.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Управление конвейером валидации осуществляется руководством функции риска моделей на основе годового графика валидации.
+
+Новые заявки на модели и внецикловые ревалидации отслеживаются по отдельности; совокупная потребность конвейера относительно доступной численности валидаторов не прогнозируется систематически, что приводит к неожиданным дефицитам мощностей в течение года.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает график плановых ревалидаций, конвейер новых заявок на модели от команд разработчиков и уведомления о запланированных изменениях моделей.
+
+Он прогнозирует ежемесячную потребность в валидации относительно текущих ресурсов валидаторов, определяет месяцы, в которые потребность превышает мощность, и предоставляет 12-месячный план мощностей главному директору по риску моделей для планирования ресурсов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="model-risk-reporting">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Отчётность по модельному риску</h2>
+    
+    <p class="l3-section__intent">Отчётность по модельному риску предоставляет Комитету по модельному риску, комитету совета директоров по рискам и надзорным органам периодическую картину среды модельного риска. Отчёт охватывает статус реестра, конвейер валидации, распределение выводов по степени серьёзности, результаты текущего мониторинга и ключевые метрики модельного риска (доля моделей с актуальной валидацией, доля с истёкшим мониторингом, количество существенных выводов по категориям). По SR 11-7 и Руководящим принципам ЕБА модельный риск должен рассматриваться как самостоятельный тип риска с формальным управлением и отчётностью. Регуляторы ожидают свидетельств управления модельным риском на уровне портфеля — а не только записей об одобрении отдельных моделей.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-risk-reporting/model-risk-appetite-metric-watch">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг метрик аппетита к риску моделей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент ежемесячно отслеживает метрики аппетита банка к риску моделей — долю моделей с актуальной валидацией, долю с истёкшим мониторингом, количество существенных замечаний — и оповещает главного директора по риску моделей при приближении любой метрики к пороговому значению аппетита.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Метрики аппетита к риску моделей представляются Комитету по риску моделей ежеквартально.
+
+Метрика, приближающаяся к пороговому значению в межкомитетный период, не сигнализируется до подготовки следующего квартального пакета, что ограничивает возможности функции по принятию превентивных мер.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент ежемесячно считывает реестр моделей, конвейер валидации и статус мониторинга, рассчитывает метрики аппетита к риску и формирует автоматическое оповещение при приближении любой метрики к пороговому значению аппетита на 10 процентных пунктов.
+
+Главный директор по риску моделей получает оповещение с перечнем моделей, требующих приоритизации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-risk-reporting/model-risk-portfolio-reporting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Портфельная отчётность по риску моделей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент кластеризует результаты валидации и показатели эффективности по портфелю моделей, выявляет системные паттерны и скоррелированные ухудшения, и формирует пакет материалов Комитета по риску моделей.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Результаты валидации поступают последовательно по каждой модели; Комитет по риску моделей рассматривает их по отдельности, и системные слабые места, видимые в агрегированном виде — пробелы в документации, общие проблемы прослеживаемости данных, повторяющиеся концептуальные сложности с ML-моделями — выявляются лишь тогда, когда валидатор замечает паттерн.
+
+Мониторинг эффективности на уровне модели подготавливается отдельными владельцами в разных форматах; скоррелированное ухудшение по нескольким моделям не становится видимым, пока каждый отчёт не будет проверен отдельно.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает завершённые отчёты о валидации и данные об эффективности по всему активному портфелю, стандартизирует показатели по классу модели, кластеризует замечания по категории и семейству моделей, выявляет системные паттерны и скоррелированные ухудшения.
+
+Он формирует пакет Комитета по риску моделей, охватывающий охват портфеля, статус конвейера валидации, распределение серьёзности замечаний и результаты мониторинга.
+
+Главный директор по риску моделей проверяет и добавляет перспективную оценку перед рассылкой.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Комитет по риску моделей рассматривает сформированный агентом портфельный пакет — с результатами валидации, кластеризованными по категориям, выявленными скоррелированными ухудшениями и обозначенными системными паттернами — наряду с решениями об одобрении отдельных моделей.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент применяется для формирования портфельного пакета Комитета по риску моделей по меньшей мере на 4 последовательных квартальных заседаниях в течение 18 месяцев с момента запуска; кластеризация замечаний и выявление скоррелированных ухудшений применяются к 100% активного конвейера валидации в каждом прогоне.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% системных паттернов, выявленных агентом, признаны требующими реагирования главным директором по риску моделей; скоррелированные паттерны ухудшения, определённые агентом, ведут к созданию ≥1 тематического потока устранения недостатков за годовой цикл.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сборка пакета Комитета по риску моделей завершается в течение 2 рабочих дней с момента получения последнего квартального отчёта о валидации, при прежнем подходе ручная агрегация и форматирование занимали ≥5 аналитических человеко-дней.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-risk-reporting/model-risk-regulatory-reporting-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Регуляторный отчётный пакет по риску моделей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует регуляторный пакет отчётности по риску моделей в соответствии с SR 11-7 и требованиями EBA для процедуры надзорного рассмотрения — охват реестра, конвейер валидации, существенные замечания и статус мониторинга — из системы управления риском моделей для проверки и направления главным директором по риску моделей.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Регуляторная отчётность по риску моделей требует сборки метрик реестра, статуса конвейера валидации и количества существенных замечаний в установленном формате.
+
+Сборка охватывает систему управления риском моделей, архив отчётов о валидации и документы мониторинга; ручная компиляция по этим источникам поглощает ресурсы функции отчётности по риску моделей перед каждым регуляторным циклом представления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает реестр моделей, конвейер валидации и записи о статусе мониторинга.
+
+Он рассчитывает установленные метрики — долю моделей с актуальной валидацией, долю в мониторинге, количество существенных замечаний по степени серьёзности — и формирует пакет надзорной отчётности в требуемом формате.
+
+Главный директор по риску моделей проверяет и направляет.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1123 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Управление ликвидностью</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Finance &amp; Treasury</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Управление ликвидностью</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Управление ликвидностью</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Управление ликвидностью — дисциплина поддержания достаточных ликвидных активов и диверсифицированного фондирования для выполнения обязательств как в обычных, так и в стрессовых условиях. Казначей ежедневно отслеживает коэффициенты LCR и NSFR относительно регуляторных минимумов НБКР, НБК/АРФР и ЦБР, управляет портфелем HQLA и обеспечивает функционирование Плана экстренного финансирования. <strong>Возможность ИИ — непрерывный мониторинг ликвидности: автоматизация ежедневного отчётного цикла, ускорение анализа стрессовых сценариев и выявление медленно нарастающих тенденций состава до нарушения регуляторных порогов.</strong></p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-cash-liquidity-position:checked ~ .problems-tab-bar label[for="problems-tab-cash-liquidity-position"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-cash-liquidity-position:checked ~ .problems-panel[data-tab="cash-liquidity-position"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-cash-liquidity-position"
+    value="cash-liquidity-position"
+    checked
+    aria-label="Ликвидная позиция"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-cash-liquidity-position"
+      role="tab"
+      aria-controls="problems-panel-cash-liquidity-position"
+    >Ликвидная позиция</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-cash-liquidity-position"
+    data-tab="cash-liquidity-position"
+    role="tabpanel"
+    aria-labelledby="problems-tab-cash-liquidity-position"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Медленно нарастающие тенденции в составе фондирования — миграция срочных депозитов в депозиты до востребования, ускорение бета депозитов или рост концентрации оптового фондирования — выявляются в квартальном цикле обновления стресс-сценариев, а не по мере их развития. Ежедневный взгляд казначея охватывает соблюдение нормативных показателей, но не траекторию факторов, формирующих эти показатели.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Когда HQLA существенно изменяется за ночь — вследствие операций репо, изменения концентрации депозитов или погашения оптового фондирования — атрибуция движения его источнику требует от операционной команды казначейства перекрёстной сверки систем казначейства, фондирования и управления денежными средствами вручную. Ответ поступает после утреннего совещания, а не до него.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Ежедневный отчёт о ликвидности — включая LCR, NSFR, состав HQLA, потоки депозитов и сроки погашения фондирования — собирается каждое утро операционной командой казначейства из системных выгрузок. Сборка занимает два-три часа до открытия окна проверки казначеем. Структура отчёта предписана, входные данные известны.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Банки с непрерывной видимостью состава депозитов и сроков фондирования могут оптимизировать доходность портфеля HQLA и стоимость фондирования в рамках регуляторных буферов в режиме реального времени. Переоценка депозитов до наступления срока погашения, оппортунистическое удлинение сроков оптового фондирования и ребалансировка HQLA между классами активов — каждая из этих операций требует актуального взгляда на позицию для точного исполнения.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Подразделы">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="daily-lcr-nsfr">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Ежедневный мониторинг LCR и NSFR</h2>
+    
+    <p class="l3-section__intent">Ежедневное соблюдение нормативов LCR и NSFR — основное регуляторное обязательство казначея, поддерживаемое относительно минимумов НБКР, НБК/АРФР и ЦБР и внутренних управленческих порогов. Ежедневный отчёт охватывает уровни коэффициентов, состав HQLA, факторы притоков и оттоков, а также атрибуцию движения за ночь, которую казначей изучает до открытия рынков.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/daily-lcr-nsfr/daily-lcr-nsfr-monitoring">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Ежедневный мониторинг и комментарий по LCR / NSFR</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует ежедневный комментарий по LCR и NSFR для казначея — атрибуцию изменений коэффициентов, примечание о составе HQLA, регуляторную буферную позицию и описательный раздел в формате ALCO — из ночных системных потоков данных.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежедневный отчёт по ликвидности, охватывающий LCR, NSFR, состав HQLA и ночные изменения коэффициентов, формируется операционным казначейством из нескольких систем каждое утро. Цикл сборки и составления откладывает окно принятия решений казначеем по операциям фондирования и инвестирования текущего дня.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ночные потоки данных по LCR и NSFR, атрибутирует изменения коэффициентов к движениям входящих потоков, исходящих потоков и HQLA и формирует ежедневный отчёт и сопровождающий описательный раздел в формате ALCO в соответствии с принятой в банке структурой. Классификация HQLA по правилам регуляторной приемлемости LCR и NSFR применяется автоматически для выявления потребностей в ребалансировке; отчёт доступен на момент открытия торгов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Ежедневный отчёт по LCR и NSFR — с атрибуцией изменений коэффициентов, составом HQLA, регуляторной буферной позицией и описательным разделом в формате ALCO — доступен казначею на момент открытия торгов каждого рабочего дня из ночных потоков данных.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Ежедневный отчёт по ликвидности, подготовленный агентом, доставляется на момент открытия торгов не менее 220 торговых дней в первый год; описательный раздел в формате ALCO включается в каждый ежедневный выпуск.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Не менее 90% ежедневных отчётов принимаются казначеем как достоверные без ручного пересчёта; показатели коэффициентов сходятся с формальным ежемесячным отчётом по ликвидности в 98% и более проверяемых периодов.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Ежедневный отчёт по ликвидности доступен на момент открытия торгов, тогда как при предыдущем ручном формировании он был готов через 1–2 часа после открытия.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/daily-lcr-nsfr/lcr-nsfr-driver-trend-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ трендов ключевых факторов LCR и NSFR</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует историю изменений LCR и NSFR за скользящие двадцать торговых дней для выявления структурных трендов в компонентах входящих потоков, исходящих потоков и HQLA — разграничивая сезонные паттерны и устойчивое ухудшение прежде, чем тренд преодолеет управленческий порог.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежедневный отчёт по ликвидности охватывает ночное движение, но не контекстуализирует его относительно скользящего тренда. Устойчивое внутримесячное ухудшение по конкретной категории оттоков — например, отток розничных депозитов или выборка корпоративных кредитных линий — отражается в ежедневном отчёте лишь как последовательность отдельных движений, которые казначей должен агрегировать вручную для определения структурного направления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент ведёт скользящую двадцатидневную историю по каждому компоненту LCR и NSFR. Он применяет декомпозицию тренда для разграничения сезонных и структурных движений и выводит любой компонент, по которому двадцатидневная динамика демонстрирует устойчивое ухудшение относительно аналогичного предшествующего периода. Анализ трендов добавляется к ежедневному отчёту в качестве дополнительного раздела каждое утро и предоставляется казначею и ликвидационному деску ALCO. Тренды, пересекающие пороговые значения, формируют упреждающее предупреждение до наступления ежемесячного цикла ALCO.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/daily-lcr-nsfr/lcr-buffer-optimisation-signal">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сигнал оптимизации буфера LCR</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует состав портфеля HQLA и актуальный расчёт LCR для выявления возможностей ребалансировки активов 1-го и 2-го уровней, сохраняющей регуляторный коэффициент и одновременно повышающей доходность портфеля в рамках требований к приемлемости НБКР, НБК/АРФРМ или ЦБ РФ.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Портфель HQLA управляется в целях соблюдения LCR, однако состав между резервами центрального банка 1-го уровня, государственными ценными бумагами 1-го уровня и активами 2-го уровня систематически не оптимизируется по доходности в рамках регуляторной базы. Избыточное размещение в резервах центрального банка сверх минимального обязательного буфера снижает доходность без дополнительного регуляторного эффекта; анализ для выявления возможностей ребалансировки требует ручного сопоставления текущего состава HQLA с расчётом LCR.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает текущий состав портфеля HQLA, входные данные ежедневного расчёта LCR, а также расписание регуляторной приемлемости и дисконтов для соответствующей юрисдикции. Он вычисляет минимальный необходимый остаток 1-го уровня для текущей базы оттоков, определяет избыток резервов центрального банка сверх этого минимума и формирует сигнал ребалансировки — объём избыточных резервов, приемлемые государственные ценные бумаги, способные их заменить в рамках 1-го уровня, и расчётный прирост доходности. Казначей рассматривает сигнал и принимает решение о реинвестировании; агент обновляет анализ каждый день сохранения избытка.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="contingency-funding-plan">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">План экстренного финансирования (CFP)</h2>
+    
+    <p class="l3-section__intent">План экстренного финансирования — документированный регламент банка по управлению ликвидностью в условиях стресса: последовательность резервных мер, доступных казначею от реализации HQLA до экстренных кредитных линий, с расчётными сроками исполнения и ликвидационной стоимостью по каждому действию. НБКР, НБК/АРФР и ЦБР требуют поддерживать план экстренного финансирования, подвергать его стресс-тестированию и предоставлять по запросу надзорного органа.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/contingency-funding-plan/cfp-annual-review-narrative">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Ежегодный описательный обзор плана экстренного фондирования</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент готовит проект ежегодного описательного обзора плана экстренного фондирования (CFP) для НБКР, НБК/АРФРМ или ЦБ РФ — с охватом изменений в реестре мероприятий, пересмотренных оценок стрессовых оттоков, результатов тестовых учений и подтверждения системы управления — на основе актуальных данных казначейства и предыдущего представления как образца стиля.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежегодный описательный обзор CFP является регуляторно обязательным документом, подготавливаемым казначейством с подписанием CFO и CRO. Составление опирается на результаты тестовых учений, актуальный реестр мероприятий и предыдущее представление для структурного соответствия. Процесс занимает одну-две недели рабочего времени казначейства и ежегодно рассматривается как самостоятельная задача по составлению документа без переиспользования структуры прошлого года.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает актуальный реестр мероприятий CFP с изменениями относительно предыдущего года, результаты последнего тестового учения по CFP, текущие оценки стрессовых оттоков и утверждённый описательный обзор CFP прошлого года как образец стиля. Он формирует полный проект, охватывающий установленные разделы — система управления, реестр мероприятий, стрессовые оценки, результаты тестирования и подтверждение — и помечает каждое изменение относительно предыдущего представления для явного раскрытия информации. Казначейство рецензирует и редактирует; агент обеспечивает цикл составления и контроль версий.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/contingency-funding-plan/cfp-stress-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Стресс-анализ плана экстренного фондирования</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент проводит стресс-тесты ликвидности применительно к актуальным данным о позициях и формирует описательный раздел CFP — горизонт выживаемости, триггерные условия и реестр резервных мероприятий — для рассмотрения ALCO и регуляторного ревью.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Анализ ликвидности в рамках стресс-сценариев для плана экстренного фондирования проводится ежеквартально — и внепланово после рыночного события — путём перекрёстного анализа стрессовой модели, реестра HQLA, данных о концентрации фондирования и задокументированного перечня резервных мероприятий. Каждый производственный цикл выполняется вручную, и результаты актуальны лишь на момент формирования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает модель стресс-тестирования ликвидности, текущий реестр HQLA, профиль погашения фондирования и перечень резервных мероприятий. Он проводит установленные стресс-сценарии, вычисляет горизонты выживаемости по каждому сценарию, определяет допущения, формирующие наиболее неблагоприятные результаты, и формирует описательные разделы CFP. ALCO рассматривает подготовленный анализ до одобрения представления; агент запускается повторно по требованию после существенного рыночного события.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Стресс-анализ плана экстренного фондирования — горизонт выживаемости, триггерные условия и реестр резервных мероприятий — формируется на основе актуальных данных о позициях для каждого установленного сценария и доступен для рассмотрения ALCO и регуляторного ревью по запросу, в том числе после существенных рыночных событий.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Стресс-анализ CFP, подготовленный агентом, применяется не менее чем в 4 запланированных квартальных обзорах и по всем внеплановым запросам, инициированным существенными рыночными событиями, в первый год.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Не менее 85% описательных разделов стресс-анализа CFP утверждаются казначеем без существенных правок в расчёт горизонта выживаемости; результаты сценариев сходятся с моделью стресс-тестирования ликвидности в пределах ±2% при периодической валидации.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Описательный раздел CFP доступен для рассмотрения ALCO в течение 2 рабочих дней после запуска стресс-теста, тогда как ранее ручная подготовка занимала 1–2 недели.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/contingency-funding-plan/cfp-stress-action-sequencing">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Последовательность стрессовых мероприятий плана экстренного фондирования</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент моделирует последовательность исполнения и совокупную ликвидную ценность резервных мероприятий CFP в рамках каждого стресс-сценария — реализация HQLA, привлечение средств по репо-линиям, экстренные заимствования у центрального банка — и определяет минимальный набор мероприятий, необходимый для покрытия прогнозируемых оттоков в каждом стрессовом горизонте.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>CFP содержит перечень резервных мероприятий с оценочными показателями ликвидности и временными рамками исполнения, но не моделирует оптимальную последовательность этих мероприятий в конкретных стресс-сценариях. ALCO и казначей оценивают адекватность CFP при ежегодном обзоре на основе статичной оценки стрессовых оттоков без динамического представления о том, какие последовательности мероприятий исполнимы в условиях рыночного стресса.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает реестр мероприятий CFP с оценочными показателями ликвидности и временными рамками исполнения, а также посуточные прогнозы оттоков по стресс-сценариям из действующего ВПОДЛ. Он моделирует последовательность исполнения для каждого стресс-сценария, применяя дисконты и временны́е ограничения к каждому мероприятию, и вычисляет совокупное покрытие ликвидностью на каждый день стрессового горизонта. По каждому сценарию определяются минимальные наборы мероприятий, обеспечивающих покрытие прогнозируемых оттоков. ALCO рассматривает анализ последовательности на ежегодном стресс-тесте CFP.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="investment-portfolio">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Портфель HQLA и управление инвестициями</h2>
+    
+    <p class="l3-section__intent">Портфель HQLA содержит ценные бумаги и резервы центрального банка, составляющие буфер ликвидных активов банка согласно требованиям LCR и NSFR. Состав портфеля — между активами уровня 1 (резервы центрального банка, государственные ценные бумаги) и активами уровня 2 — определяет как качество буфера ликвидности, так и доходность избыточной ликвидности банка. Инвестиционные решения требуют сопоставления доходности портфеля, дюрации, рыночных ставок и регуляторной приемлемости.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/investment-portfolio/hqla-portfolio-yield-duration-dashboard">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Дашборд доходности и дюрации портфеля HQLA</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует ежедневный дашборд по портфелю HQLA, охватывающий текущую доходность, дюрацию и спред к бенчмарку в разрезе класса активов и регуляторного уровня, и отмечает позиции, по которым дрейф дюрации или расширение кредитного спреда вывело портфель за пределы утверждённого инвестиционного мандата.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Портфель HQLA контролируется на соответствие требованиям приемлемости LCR и NSFR, однако не отслеживается систематически по параметрам доходности и дюрации инвестиционного мандата. Дрейф дюрации от погашающихся инструментов и движения спреда по справедливой стоимости отражаются в портфельной системе, но не выносятся в ежедневный управленческий обзор, связывающий состав портфеля как с регуляторной приемлемостью, так и с соответствием мандату.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает файл портфельных позиций и актуальные рыночные потоки данных. Он вычисляет текущую средневзвешенную доходность, дюрацию и спред к бенчмарку по классам активов 1-го и 2-го уровней, применяет параметры инвестиционного мандата банка и отмечает любую позицию или совокупную экспозицию, выходящую за пределы диапазона мандата. Дашборд доступен казначею каждое утро наряду с ежедневным отчётом по LCR. Нарушения мандата формируют немедленное предупреждение для проверки устранения; казначей подтверждает или эскалирует каждую отметку.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/investment-portfolio/hqla-reinvestment-decision-support">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Аналитическая поддержка решений о реинвестировании HQLA</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">При погашении инструмента HQLA или открытии окна реинвестирования агент представляет казначею ранжированный набор приемлемых инструментов для замены — государственные облигации, инструменты центрального банка и квалифицированные ценные бумаги 2-го уровня — оценённых по доходности, LCR-дисконту, соответствию дюрации и регуляторной приемлемости в соответствии с требованиями НБКР, НБК/АРФРМ или ЦБ РФ.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Решения о реинвестировании HQLA принимаются казначеем на основе ручного просмотра доступных инструментов с учётом расписания регуляторной приемлемости и текущего разрыва в портфеле. Анализ занимает от двух до четырёх часов на каждое решение и осуществляется без единой системы оценки, одновременно взвешивающей доходность, стоимость дисконта и соответствие дюрации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает параметры погашающегося инструмента, текущий состав портфеля и расписание регуляторной приемлемости и дисконтов для соответствующей юрисдикции. Он проверяет весь доступный в данный день рынок приемлемых инструментов и оценивает каждый по доходности к погашению, доходности с учётом LCR-дисконта, соответствию дюрации целевому портфелю и регуляторному уровню. Ранжированный шортлист и обоснование оценки представляются казначею для принятия решения о реинвестировании. Казначей выбирает инструмент; агент не совершает никаких сделок.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/investment-portfolio/hqla-stress-scenario-adequacy-check">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка достаточности HQLA в стресс-сценариях</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент применяет допущения о стрессовых оттоках из LCR и ВПОДЛ банка к текущему портфелю HQLA — с учётом регуляторных дисконтов и ограничений на исполнение продаж — и оценивает достаточность портфеля для обеспечения ликвидного покрытия на каждом стрессовом горизонте без нарушения NSFR или лимитов концентрации.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Размер портфеля HQLA определяется ежедневно из расчёта минимального LCR, однако не оценивается регулярно относительно многонедельных стрессовых горизонтов ВПОДЛ. Портфель, проходящий LCR в первый день, может оказаться недостаточным через 10 или 20 дней, если его состав опирается на активы 2-го уровня, подверженные ежедневным ограничениям объёма продаж или рыночным дисконтам в условиях стресса.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает текущий состав портфеля, посуточные профили стрессовых оттоков ВПОДЛ на горизонтах 30 и 90 дней, а также регуляторные дисконты и ежедневные лимиты объёма продаж, применимые к каждому классу активов. Он вычисляет прогнозную чистую ликвидную позицию на каждый день по каждому стресс-сценарию, определяет день и сценарий, при которых чистая позиция впервые приближается к нулю или пересекает его, и формирует отчёт об адекватности портфеля для казначея и комитета по рискам ALCO. Результаты служат основой для следующего квартального обзора состава портфеля.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="funding-strategy">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Стратегия фондирования и оптовый фандинг</h2>
+    
+    <p class="l3-section__intent">Стратегия фондирования охватывает структуру банка в части розничных депозитов, корпоративных депозитов, оптового срочного фондирования и кредитных линий центрального банка, а также решения о ценообразовании, сроках и диверсификации, минимизирующие стоимость фондирования в рамках лимитов LCR, NSFR и концентрации. Казначей ежеквартально представляет ALCO служебную записку по стратегии фондирования с рекомендациями по ценообразованию депозитов, оптовым выпускам и использованию резервных кредитных линий.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/funding-strategy/deposit-concentration-risk-insight">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ риска концентрации депозитного портфеля</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает розничную и корпоративную депозитную книгу на предмет концентрации на одного контрагента, отраслевой и географической концентрации относительно утверждённых банком лимитов концентрации фондирования и выявляет формирующиеся концентрации до того, как они достигнут порога, отчитываемого перед ALCO.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Анализ концентрации депозитов является компонентом ежеквартального меморандума по стратегии фондирования, однако не отслеживается непрерывно между циклами ALCO. Единый крупный корпоративный депозит, доля которого в базе фондирования достигает существенного значения, или географическая концентрация на рынке с кредитным стрессом могут оставаться невидимыми для казначея вплоть до составления квартального меморандума.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает текущий реестр депозитов на уровне отдельного контрагента, отрасли и географии и вычисляет коэффициенты концентрации относительно утверждённых банком лимитов. Он формирует еженедельный дашборд концентрации для казначея, определяя двадцать крупнейших депозиторов по остатку, пять наиболее значимых отраслевых концентраций и любое движение остатка, приблизившее показатель концентрации в пределах 10% от утверждённого лимита. Предупреждения о близости к лимиту выдаются немедленно при его пересечении. ALCO рассматривает анализ концентрации на каждой квартальной сессии по стратегии фондирования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/funding-strategy/wholesale-funding-maturity-ladder">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">График погашения оптового фондирования</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует форвардный график погашения оптового фондирования — по инструменту, контрагенту и срочному бакету — из актуальных данных реестра фондирования, определяет концентрации рефинансирования в бакетах 90 дней и 12 месяцев и представляет график казначею до каждого обсуждения стратегии фондирования на ALCO.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Профиль погашения оптового фондирования формируется из реестра фондирования для каждого цикла ALCO — процесс, требующий извлечения данных по срочным депозитам, репо-соглашениям, среднесрочным облигациям и покрытым облигациям. Концентрации рефинансирования в краткосрочных срочных бакетах — когда несколько инструментов погашаются в одном двухнедельном окне — выявляются в ходе сборки, а не как упреждающий сигнал, формирующий превентивные действия.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает реестр фондирования по всем категориям оптовых инструментов и строит ежедневный график погашения по бакетам 7 дней, 30 дней, 90 дней, 180 дней и 12 месяцев. Он определяет окна, в которых концентрация рефинансирования в любом 14-дневном периоде превышает установленный порог относительно буфера HQLA, и еженедельно представляет казначею график и отметки о концентрациях. ALCO рассматривает график на квартальной сессии по стратегии фондирования; казначей использует еженедельные данные для планирования сроков превентивного выпуска инструментов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/funding-strategy/funding-strategy-scenario-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сценарный анализ стратегии фондирования</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент моделирует стоимость и влияние на регуляторные коэффициенты альтернативных вариантов структуры фондирования применительно к актуальному кассовому прогнозу и рыночным условиям, ранжируя варианты для комитета по фондированию казначейства.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Сценарный анализ структуры фондирования подготавливается аналитиками казначейства накануне еженедельного решения комитета по фондированию. Окно для анализа ограничено циклом ручного обновления данных и расчёта коэффициентов, что сужает диапазон сценариев, которые комитет может рассмотреть в отведённое время.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает актуальный кассовый прогноз, рыночные ставки, данные о переоценке депозитов и регуляторный буфер и формирует ранжированное сравнение вариантов структуры фондирования — стоимость, влияние на LCR, влияние на NSFR, риск концентрации и профиль погашения — для комитета по фондированию. Казначейство рассматривает и выбирает; диапазон сценариев расширяется без увеличения окна принятия решений.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">До каждого еженедельного решения комитет по фондированию казначейства рассматривает ранжированное сравнение альтернативных вариантов структуры фондирования — с охватом стоимости, влияния на LCR, влияния на NSFR, риска концентрации и профиля погашения — сформированное на основе актуального кассового прогноза, рыночных ставок и регуляторного буфера.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Сравнительный анализ сценариев стратегии фондирования, подготовленный агентом, применяется не менее чем на 40 из 52 еженедельных заседаний комитета по фондированию в первый год.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Не менее 80% решений комитета по фондированию ссылаются на сравнительный анализ сценариев агента как основной аналитический ввод; расчёты коэффициентов сходятся с выходными данными системы управления казначейством в пределах ±0,5 процентного пункта в 97% и более проверяемых недель.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сравнительный анализ вариантов структуры фондирования доступен для рассмотрения комитетом в течение 2 часов после обновления данных, тогда как при предыдущем процессе ручная подготовка аналитиком занимала 4–8 часов.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

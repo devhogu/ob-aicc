@@ -41,7 +41,7 @@ The control loops of the Operating Model 6 and the portfolio loops of the Portfo
 
 ## 4. The conduct of the month, the quarter, and the year
 
-Figure 2 shows the Steerings of a year, one row for each Program Increment in sequence. The month that holds the IP week has the quarterly Steering in place of the monthly one, and December has the yearly Steering in its first two weeks in addition to the quarterly 
+Figure 2 shows the Steerings of a year, one row for each Program Increment in sequence. The month that holds the IP week has the quarterly Steering in place of the monthly one, and December has the yearly Steering in its first two weeks in addition to the quarterly Steering of its IP week.
 
 ```mermaid
 flowchart TB
@@ -126,7 +126,7 @@ Figure 4: the IP week, and the treatment of an event on a day that is not availa
 | Situation | Treatment |
 | --- | --- |
 | An event falls on a blocked or gray day | It moves to the working day before, and never to a day after |
-| The IP week is blocked or gray | It is held in the week before |
+| The IP week is blocked or gray | The Calendar Record places the IP week (Solution Lifecycle Model 6.1) |
 | The year ends in the IP week | The Calendar Record may place the IP week earlier and keep the year-end week free of events |
 | An event is missed | It is not held later, and its intent is covered at the next event |
 | The Team has up to three people | Light mode applies: one weekly session, and fewer events |

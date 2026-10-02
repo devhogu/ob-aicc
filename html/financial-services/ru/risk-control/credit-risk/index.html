@@ -1,0 +1,1698 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кредитный риск</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Risk &amp; Control</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Кредитный риск</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Кредитный риск</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Кредитный риск — крупнейший потребитель регуляторного капитала банка: риск того, что заёмщик или контрагент не исполнит договорные обязательства, что приведёт к непредвиденным потерям, снижающим CET1. В рамках надзорных режимов НБКР, НБК/АРФРД и ЦБ РФ управление кредитным риском осуществляется через наборы моделей PD/LGD/EAD, резервирование ECL по МСФО (IFRS) 9, лимиты концентрации и управление наблюдательным списком. Базель III/IV задаёт капитальный пол; внутренние модели калибруются в этих рамках. <strong>Возможность ИИ — сократить цикл кредитного анализа</strong> — переходя от квартальных портфельных пакетов, собираемых вручную на протяжении недель, к еженедельному агентному анализу, который выявляет сигналы миграции, паттерны концентрации и риск наблюдательного списка в едином интегрированном представлении.</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-counterparty-exposure:checked ~ .problems-tab-bar label[for="problems-tab-counterparty-exposure"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-counterparty-exposure:checked ~ .problems-panel[data-tab="counterparty-exposure"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-counterparty-exposure"
+    value="counterparty-exposure"
+    checked
+    aria-label="Риск-экспозиция на контрагентов"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-counterparty-exposure"
+      role="tab"
+      aria-controls="problems-panel-counterparty-exposure"
+    >Риск-экспозиция на контрагентов</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-counterparty-exposure"
+    data-tab="counterparty-exposure"
+    role="tabpanel"
+    aria-labelledby="problems-tab-counterparty-exposure"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Аналитика миграции PD, ухудшения по стоп-листу и кредитного риска контрагентов формируется в рамках собственных отчётных циклов из разных риск- и кредитных систем. У CRO и директора по кредитным рискам отсутствует непрерывная картина динамики качества отдельных контрагентов относительно портфеля; проблемные кредиты стоп-листа появляются только на ежемесячном комитете по кредитным рискам — через несколько недель после того, как ранние предупредительные сигналы зафиксированы в данных.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Подготовка к кредитному обзору — формирование досье контрагента, сверка текущей финансовой отчётности с кредитным меморандумом и подготовка презентации для комитета — поглощает 60–80% времени риск-менеджера или кредитного аналитика до начала заседания. Аналитическая работа, ради которой созывается комитет, начинается только после завершения сборки материалов.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Отчёты по стоп-листу, пакеты материалов по кредитному портфелю для Комитета по рискам и нарративы резервирования по ОКУ (ECL) в соответствии с МСФО (IFRS) 9 формируются из выгрузок кредитной системы, управленческой отчётности и результатов моделей на ежемесячной или ежеквартальной основе. Каждый из них имеет установленный формат и известные источники данных; схема сборки воспроизводима и требует значительного объёма данных.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Постоянно инструментированная кредитная книга — еженедельные сигналы о миграции рейтингов, запас концентрации в режиме реального времени и эффективность когорт по срокам выдачи — обеспечивает директора по кредитным рискам опережающим сигналом, недостижимым при квартальных циклах проверки. Решения о развёртывании кредитного аппетита и ребалансировке портфеля можно принимать с учётом текущей позиции, а не прошломесячного отчёта.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Подразделы">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="counterparty-exposure-analytics">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Аналитика рисков контрагентов</h2>
+    
+    <p class="l3-section__intent">Агрегирование всех балансовых и внебалансовых рисков по единственному контрагенту или экономической группе — охватывающее ссуды, обязательства, деривативы и торговое финансирование — отчитываемое по лимитам концентрации на одно имя. По нормам НБКР и ЦБ РФ о крупных рисках и Базель III (ст. 395) экспозиция на одно имя свыше 10% капитала Tier 1 влечёт расширенные требования к отчётности. Аналитика кредитных рисков контрагентов консолидирует совокупную картину рисков по типам продуктов и юридических лиц, обеспечивая мониторинг лимитов и подготовку кредитных обзоров.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/counterparty-exposure-analytics/counterparty-exposure-breach-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Пакет расследования превышения лимита экспозиции на контрагента</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует пакет документов для расследования регуляторного нарушения при превышении экспозицией на одно имя порога 10% капитала первого уровня по Базелю III, включая полную разбивку экспозиции и структуру юридических лиц для подготовки ответа CRO.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Нарушение норматива крупного риска влечёт обязательное уведомление регулятора в соответствии с требованиями НБКР и ЦБР по крупным рискам.
+
+Формирование пакета уведомления — совокупная экспозиция в разрезе продуктов, схема взаимосвязей юридических лиц, хронология принятия позиций и план мероприятий руководства — требует данных из нескольких систем и поглощает значительный ресурс аналитиков в период до регуляторного дедлайна.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент выявляет факт превышения порога по ежедневному реестру экспозиций, извлекает полную разбивку по продуктам, формирует схему юридических лиц и генерирует пакет уведомления регулятора в установленном формате.
+
+CRO проверяет и утверждает пакет перед направлением.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/counterparty-exposure-analytics/counterparty-exposure-aggregation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Агрегирование экспозиции на контрагента</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент агрегирует балансовые и внебалансовые позиции по каждому контрагенту и экономической группе в разрезе кредитов, обязательств, производных инструментов и торгового финансирования, формируя отчёт об экспозиции на одно имя для мониторинга лимитов крупных рисков.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Агрегирование экспозиции на одно имя требует объединения данных систем управления кредитами, производными инструментами и торговым финансированием по идентификатору контрагента.
+
+Определение взаимосвязей между юридическими лицами — в частности, отнесение экспозиции на дочернюю компанию к экономической группе материнской структуры — выполняется вручную и сопряжено с ошибками, особенно для корпоративных групп, действующих в нескольких юрисдикциях.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает данные об экспозиции из систем управления кредитами, производными инструментами и торговым финансированием, применяет иерархию взаимосвязей юридических лиц банка для агрегирования до уровня экономической группы и формирует реестр экспозиций на одно имя с показателями использования лимитов и флагами превышения порогов крупных рисков.
+
+Офицер по кредитному риску проверяет маппинг юридических лиц по любым новым структурам контрагентов до публикации отчёта.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/counterparty-exposure-analytics/counterparty-exposure-trend-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ динамики экспозиции на контрагента</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает динамику концентрации на одно имя и по отраслям за скользящие 12 месяцев, выявляя контрагентов с ускоренным ростом экспозиции относительно свободного пространства до лимита для еженедельного обзора Главного кредитного директора.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Срезы использования лимитов показывают текущую позицию, но не темп её изменения.
+
+Контрагент, приближающийся к лимиту крупного риска за счёт последовательных выборок на протяжении нескольких месяцев, различим в трендовом представлении, но не в отчёте на конкретную дату; внимание кредитного подразделения, как правило, сосредоточено на текущих нарушениях, а не на траектории.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает 12-месячные реестры ежедневных экспозиций, рассчитывает тренд и динамику использования лимитов по каждому контрагенту и сектору, а также выявляет позиции, по которым траектория указывает на нарушение лимита в течение ближайших 90 дней.
+
+Директор по кредитным рискам получает еженедельный дайджест трендов одновременно со стандартным отчётом об использовании лимитов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="concentration-sector-risk">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Концентрация и отраслевой риск</h2>
+    
+    <p class="l3-section__intent">Риск концентрации — дополнительный риск потерь, возникающий, когда значительная часть портфеля подвержена воздействию единственного контрагента, группы, отрасли, географии или коррелированного кластера. По нормам НБКР о крупных рисках концентрация на одно имя свыше 25% капитала Tier 1 требует уведомления регулятора; отраслевые лимиты концентрации устанавливаются внутренне в рамках риск-аппетита. BCBS 239 требует агрегации данных о рисках, обеспечивающей мониторинг концентрации в режиме реального времени. Стандартные отчёты о концентрации охватывают ожидаемые измерения; коррелированные межмерные концентрации требуют специализированной аналитической работы.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/concentration-sector-risk/portfolio-concentration-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ концентрации портфеля</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует кредитный портфель на предмет паттернов концентрации по пяти измерениям — отраслевому, географическому, по отдельным наименованиям, залоговому и по коррелированным межотраслевым кластерам — и рассчитывает дистанцию до лимита по каждому.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Стандартные отчёты о концентрации охватывают отраслевое, географическое измерения и концентрацию по отдельным наименованиям.
+
+Коррелированные концентрации — пересечение географического и отраслевого измерений, кластеры цепочек поставок среди крупнейших заёмщиков, корреляция залогов между контрагентами — не видны в стандартных выгрузках и требуют специального анализа, заказываемого после того, как отраслевое событие уже произошло.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает весь кредитный портфель и отображает экспозиции по всем пяти измерениям концентрации, включая многомерные коррелированные паттерны.
+
+Он рассчитывает дистанцию до лимита по каждому измерению и моделирует воздействие концентрации при стресс-сценарии в секторе.
+
+Директор по кредитным рискам еженедельно получает отчёт о концентрации с флагами эскалации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Директор по кредитным рискам управляет риском кредитной концентрации на основе еженедельного агентского анализа по пяти измерениям — отраслевому, географическому, по отдельным наименованиям, залоговому и по коррелированным межотраслевым кластерам — с рассчитанной дистанцией до лимита и применёнными флагами эскалации.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Анализ концентрации агентом по всем пяти измерениям выполняется еженедельно в течение 6 месяцев с момента запуска; еженедельный отчёт передаётся Директору по кредитным рискам ≥45 последовательных недель в первый год.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% флагов эскалации признаны Директором по кредитным рискам существенными при проверке; паттерны коррелированной межотраслевой концентрации, выявленные агентом, процитированы в ≥1 обсуждении устранения на кредитном комитете в квартал.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Еженедельный анализ концентрации формируется в течение 1 рабочего дня после среза данных кредитного портфеля в сравнении с ≥1 неделей специального ручного анализа, заказываемого реактивно после отраслевых событий при прежнем подходе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/concentration-sector-risk/sector-stress-concentration-scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Стресс-сценарий отраслевой концентрации</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент моделирует заданный стрессовый сценарий для отрасли — обвал товарных цен, коррекция рынка недвижимости или понижение суверенного рейтинга — применительно к текущему профилю отраслевой концентрации портфеля и формирует оценку ожидаемых потерь для обсуждения на Кредитном комитете.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Стресс-анализ по отрасли инициируется в ответ на отраслевое событие в разовом порядке.
+
+Анализ требует совмещения актуальных данных об отраслевых позициях с историческими коэффициентами потерь или регуляторными стресс-параметрами — межсистемная операция, занимающая несколько дней аналитической работы и, как правило, завершаемая уже после проведения соответствующего заседания Кредитного комитета.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает актуальные отраслевые позиции, применяет заданный набор стресс-параметров — повышение PD, расширение LGD, допущения о корреляции — из банковской библиотеки стресс-тестирования, рассчитывает ожидаемые потери по отраслям и совокупное влияние на портфель, формируя выходные данные сценария для Кредитного комитета в течение одного рабочего дня с момента триггера.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/concentration-sector-risk/concentration-limit-calibration-review">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка калибровки лимитов концентрации</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сравнивает текущую концентрацию портфеля с допущениями калибровки отраслевых лимитов, выявляет лимиты, по которым изменилась риск-основа, использованная при калибровке, в связи с изменением макроэкономической или отраслевой конъюнктуры, и передаёт Директору по кредитным рискам сигнал о необходимости пересмотра лимита.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Отраслевые лимиты концентрации калибруются в ходе ежегодного пересмотра риск-аппетита.
+
+Изменения кредитных условий в секторе — повышение или понижение рейтинга сектора рейтинговыми агентствами, регуляторные изменения, влияющие на экономику сектора, — меняют риск-основу лимита, однако не отражаются до следующей ежегодной калибровки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает актуальные допущения калибровки отраслевых лимитов и сравнивает их с текущими кредитными условиями сектора на основе отчётов рейтинговых агентств, регуляторных указаний и макроэкономических данных.
+
+Он помечает лимиты, у которых основа калибровки существенно изменилась, и передаёт Директору по кредитным рискам сигнал о необходимости внепланового пересмотра лимита при наличии оснований.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="pd-lgd-ead-model-outputs">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Результаты моделей PD/LGD/EAD</h2>
+    
+    <p class="l3-section__intent">Три базовых параметрических оценки — вероятность дефолта (PD), уровень потерь в случае дефолта (LGD) и величина риска на момент дефолта (EAD) — формируемые моделями на основе подхода внутренних рейтингов (IRB) в рамках Компонента 1 Базель III. Результаты PD/LGD/EAD определяют регуляторный капитал (RWA), ECL по МСФО (IFRS) 9 и кредитное ценообразование. В рамках систем одобрения IRB-моделей НБКР и ЦБ РФ производительность моделей непрерывно отслеживается; существенное ухудшение влечёт рекалибровку и уведомление регулятора. Результаты моделей обновляются ежемесячно и используются командами по управлению капиталом, кредитным риском и финансовыми ресурсами.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/pd-lgd-ead-model-outputs/pd-lgd-ead-monthly-output-narrative">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Ежемесячный нарратив по выходным данным PD/LGD/EAD</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует ежемесячный нарратив по выходным данным PD/LGD/EAD — движение параметров по сегментам, влияние макроэкономической корректировки и отклонения относительно предыдущего месяца — на основе выходных данных IRB-модели для команд по кредитному риску и капиталу.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежемесячные выходные данные IRB-модели требуют нарративного пояснения движения параметров до того, как команды по капиталу и резервированию смогут использовать эти показатели.
+
+Подготовка нарратива предполагает перекрёстную сверку выходных данных модели, параметров макроэкономической корректировки и значений предыдущего месяца из разрозненных систем; аналитик выполняет сборку вручную до начала любого последующего применения данных.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ежемесячные выходные данные модели, параметры макроэкономической корректировки и значения предыдущего месяца.
+
+На их основе формируется стандартный нарратив: движение PD по сегментам, факторы LGD и EAD, эффект макроэкономической корректировки и флаги отклонений.
+
+Офицер по кредитному риску проверяет нарратив и направляет его командам по капиталу и финансам.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/pd-lgd-ead-model-outputs/irb-model-performance-signal">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг сигналов качества моделей IRB</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент ежемесячно контролирует распределение выходных данных моделей PD/LGD/EAD на предмет дрейфа калибровки, нарушений PSI и расхождений между фактическими и прогнозными значениями, направляя главному офицеру по риску моделей опережающий сигнал до инициирования внеплановой формальной валидации.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ухудшение качества модели выявляется в ходе плановой валидации, проводимой ежегодно или раз в два года в соответствии с требованиями SR 11-7.
+
+Дрейф калибровки, различимый в ежемесячных распределениях выходных данных, — расхождение прогнозируемых дефолтных ставок с реализованными значениями на уровне сегментов — не обнаруживается до следующей плановой проверки, что сужает окно для реагирования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ежемесячные распределения выходных данных PD/LGD/EAD, фактические данные о дефолтах и убытках, рассчитывает PSI для оценки стабильности входных данных, показатели Gini и KS для дискриминирующей способности, а также расхождение прогноза и факта по сегментам.
+
+Выявляются сегменты, выходящие за установленные границы качества; главному офицеру по риску моделей направляется ежемесячный мониторинговый сигнал.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/pd-lgd-ead-model-outputs/rwa-capital-attribution-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Атрибуционный пакет РВА и капитала</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует ежемесячный атрибуционный пакет по РВА — с декомпозицией движения РВА на факторы PD, LGD, EAD и структуры портфеля — для Комитета по капиталу и раздела ВПОДК об адекватности капитала.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Движение ежемесячных РВА должно быть объяснено Комитету по капиталу и задокументировано в нарративе ВПОДК.
+
+Атрибуция по факторам PD, LGD, EAD и структуры портфеля требует объединения выходных данных модели с данными об экспозиции портфеля; команда по капиталу выполняет декомпозицию вручную перед каждым заседанием комитета.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ежемесячные выходные данные IRB, данные об экспозиции и значение РВА предыдущего месяца.
+
+На их основе проводится декомпозиция движения РВА на факторные и структурные составляющие, формируется атрибуционная таблица для Комитета по капиталу и готовится раздел нарратива ВПОДК об адекватности капитала в части кредитного РВА.
+
+Команда по капиталу проверяет результаты и включает их в полный пакет ВПОДК.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="vintage-cohort-migration">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Когорты по периодам выдачи и миграция</h2>
+    
+    <p class="l3-section__intent">Анализ когорт по временным периодам выдачи отслеживает кредитную динамику ссуд, выданных в конкретный период, — сравнивая уровни дефолтов, потерь и паттерны миграции по когортам выдачи для оценки траектории кредитного качества в разрезе андеррайтинговых периодов. Миграционный анализ отслеживает переход экспозиций между рейтинговыми категориями или классификациями качества активов во времени. В совокупности они формируют перспективный сигнал кредитного качества, который точечные PD-оценки и соотношения обесценения на уровне стока не могут обеспечить в одиночку. Решения о распределении по этапам ECL согласно МСФО (IFRS) 9 зависят от триггеров значительного увеличения кредитного риска (SICR), формируемых на основе миграционного анализа.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/vintage-cohort-migration/migration-matrix-trend-watch">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг трендов матрицы миграций</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует скользящую матрицу миграций за 12 месяцев по рейтинговым градациям и классам активов, выявляя для CRO и Кредитного комитета ускоренные потоки понижения рейтинга.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Команда по кредитному риску отслеживает текущую миграцию в рамках ежемесячного портфельного пакета.
+
+Тренд в ставках миграции — постепенное ускорение перехода со стадии 1 на стадию 2 на протяжении нескольких кварталов — не виден напрямую из ежемесячных снимков миграции без анализа временных рядов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ежемесячные реестры миграций, строит скользящие матрицы миграций по градациям и классам активов, рассчитывает тренд каждой вероятности перехода и выявляет пары градаций, в которых вероятность понижения рейтинга превышает установленный порог ускорения.
+
+CRO и Кредитный комитет получают результаты мониторинга трендов вместе со стандартной матрицей миграций.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/vintage-cohort-migration/vintage-cohort-performance-report">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Отчёт об эффективности когорт по году выдачи</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует квартальные отчёты об эффективности ссудных когорт по году выдачи — ставки дефолта, ставки убытков и скорость досрочного погашения в разрезе года выдачи и сегмента, — позволяя директору по кредитным рискам сравнивать кредитное качество в разрезе периодов выдачи.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Сравнение эффективности по году выдачи требует построения когортных временных рядов из данных о кредитных транзакциях по нескольким периодам выдачи.
+
+Анализ проводится в разовом порядке при возникновении опасений относительно кредитного качества; систематический квартальный обзор между такими запросами не формируется.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает данные о выдаче и обслуживании кредитов, строит когортные временные ряды по году выдачи, сегменту и продукту и формирует квартальный отчёт по ставкам дефолта, убытков и миграционным траекториям.
+
+Директор по кредитным рискам использует результаты для выявления ухудшения качества по годам выдачи и определения сроков перекалибровки PD.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/vintage-cohort-migration/sicr-migration-trigger-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ триггеров миграции SICR</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент ежемесячно применяет критерии SICR МСФО (IFRS) 9 к кредитному портфелю, выявляет экспозиции со значительным ростом кредитного риска и формирует реестр стадийной миграции для команд по финансам и кредитному риску.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Классификация по стадии 2 согласно МСФО (IFRS) 9 требует выявления экспозиций, по которым кредитный риск существенно вырос с момента выдачи.
+
+Применение количественных тестов SICR — сравнение PD на протяжении срока действия, триггер DPD по резервному критерию, качественные критерии Override — в рамках крупного портфеля требует систематизированной выгрузки данных и применения правил, что при ручном выполнении чревато непоследовательностью.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает текущие оценки PD, эталонные PD на дату выдачи, данные о платёжном поведении и флаги качественных Override.
+
+На их основе применяются критерии SICR, формируется реестр стадийной миграции с указанием инициирующего критерия по каждой экспозиции, а также выявляются паттерны миграции на уровне совокупности для проверки финансовым контролёром до начала резервирования ECL.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="watchlist-early-warning">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Наблюдательный список и раннее предупреждение</h2>
+    
+    <p class="l3-section__intent">Система мониторинга портфеля, выявляющая кредиты с ранними сигналами ухудшения — напряжённость финансовых ковенантов, нарушения платёжного ритма, негативные отраслевые новости, снижение стоимости залогового обеспечения — до наступления дефолта. Ведение наблюдательного списка является регуляторным ожиданием в соответствии с Постановлением НБКР № 16 и руководящими принципами ЦБ РФ по кредитному риску; каждый кредит в наблюдательном списке требует усиленного плана мониторинга и периодического рассмотрения комитетом. Системы раннего предупреждения определяют условия срабатывания триггеров для включения в наблюдательный список и путь эскалации до категорий «специально упоминаемых» или «нестандартных» активов.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/watchlist-early-warning/watchlist-covenant-tracker">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Наименование кредита в листе наблюдения</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент считывает финансовую отчётность и материалы тестирования ковенантов по кредитам листа наблюдения, применяет тесты на соблюдение ковенантов и формирует реестр статуса ковенантов с флагами нарушений и расчётом резервного пространства по каждому кредиту до начала цикла проверки.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Мониторинг ковенантов по кредитам листа наблюдения требует от кредитного аналитика расчёта результатов тестов на основе финансовых материалов заёмщика и их сравнения с графиком ковенантов.
+
+При наличии нескольких ковенантов по кредиту и различных периодичностях представления отчётности ручное отслеживание статуса соблюдения по всему листу наблюдения создаёт риск пропуска выявленных нарушений.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает финансовые данные заёмщика и применяет расчёты тестов ковенантов в соответствии с условиями кредитного соглашения.
+
+Вычисляется статус соблюдения и резервное пространство по каждому ковенанту, выявляются нарушения и требуемые отказы, формируется реестр статуса ковенантов по всей совокупности листа наблюдения.
+
+Кредитный аналитик проверяет и передаёт подтверждённые нарушения на эскалацию в соответствии с кредитной политикой.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/watchlist-early-warning/watchlist-loan-review-prep">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Формирование досье по листу наблюдения</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует досье по каждому кредиту листа наблюдения — объединяя текущую финансовую отчётность, статус ковенантов, оценки залога и данные об экспозиции — в готовый для комитета пакет до начала каждого цикла проверки.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Подготовка каждого досье для проверки в рамках листа наблюдения занимает от двух до четырёх аналитических часов до заседания комитета.
+
+Текущая финансовая отчётность, статус нарушений ковенантов, оценки залога и протоколы предыдущих заседаний хранятся в разрозненных системах; аналитик собирает их вручную в каждом цикле.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает данные из систем управления кредитами, финансовых данных, трекера ковенантов и материалов комитета и автоматически формирует каждое досье в стандартном формате.
+
+Кредитный аналитик проверяет сформированный пакет, добавляет суждение о траектории заёмщика и одобряет для передачи на комитет.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Кредитный аналитик добавляет в досье по листу наблюдения, подготовленное агентом, — включающее текущую финансовую отчётность, статус ковенантов, оценки залога и предыдущие протоколы комитета, — собственное суждение о траектории заёмщика по каждому кредиту до начала каждого цикла проверки.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент применяется для автоматического формирования досье по листу наблюдения по ≥95% кредитов в каждом цикле проверки в течение 6 месяцев с даты запуска; все четыре компонента досье (финансовая отчётность, статус ковенантов, оценки залога, предыдущие протоколы) формируются из подключённых систем при каждом запуске.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% досье, сформированных агентом, приняты кредитными аналитиками как полные для рассмотрения на комитете без дополнительной ручной доработки; председатели комитета подтверждают достаточность ≥80% досье для обсуждения по итогам постзаседательных проверок качества.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Досье по листу наблюдения формируется в течение 30 минут после инициирования цикла.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/watchlist-early-warning/credit-early-warning-signal-enrichment">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Обогащение сигналов раннего предупреждения по кредитным рискам</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент непрерывно отслеживает внешние сигналы — новости, регуляторные данные, прокси-индикаторы платёжного поведения и отраслевые данные — и дополняет реестр раннего предупреждения по листу наблюдения флагами для проверки директором по кредитным рискам.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Формирование листа наблюдения основывается на периодических проверках менеджерами по работе с клиентами и триггерах нарушения ковенантов.
+
+Внешние сигналы — негативные публикации в СМИ, стресс в цепочках поставок, рейтинговые действия по отрасли — поступают в кредитную команду после того, как риск уже отразился в финансовых показателях заёмщика, сужая окно для реагирования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает новостные ленты, базы данных регуляторных реестров, отраслевые данные и прокси-индикаторы платёжного поведения, сопоставляет их с активным кредитным портфелем и выявляет заёмщиков с формирующимися кластерами сигналов.
+
+Директор по кредитным рискам получает ежедневный дайджест оповещений; отмеченные кредиты поступают на рассмотрение в лист наблюдения без ожидания следующего планового цикла менеджера.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Директор по кредитным рискам получает ежедневный дайджест оповещений по заёмщикам с формирующимися кластерами внешних сигналов, что позволяет начать работу с листом наблюдения до материализации риска в финансовой отчётности.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент осуществляет мониторинг внешних сигналов по ≥90% активного кредитного портфеля в разрезе контрагентов в течение 12 месяцев с даты запуска; ежедневный дайджест оповещений направляется директору по кредитным рискам в течение ≥200 рабочих дней в год после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% флагов листа наблюдения, сформированных агентом, признаны директором по кредитным рискам существенными при проверке; соотношение сигнал/шум поддерживается на уровне ≤20% ежедневно отмеченных кредитов, впоследствии оценённых как несущественные.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Оповещение о внешнем сигнале направляется директору по кредитным рискам в течение 24 часов с момента выявления сигнала.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/watchlist-early-warning/watchlist-migration-probability-scoring">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Скоринг вероятности миграции по листу наблюдения</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент рассчитывает вероятность миграции по каждому кредиту листа наблюдения — с учётом финансового тренда, резервного пространства по ковенантам, степени покрытия залогом и данных внешних сигналов, — позволяя директору по кредитным рискам расставлять приоритеты при проверке в рамках совокупности листа наблюдения.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Кредиты листа наблюдения проверяются по стандартному циклу без систематической приоритизации на основе вероятности перехода в дефолт.
+
+При наличии 30–80 кредитов в листе наблюдения единая периодичность проверки недостаточно обеспечивает ресурсами кредиты с высокой вероятностью миграции и избыточно — стабильные позиции.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает данные финансового тренда, расчёты резервного пространства по ковенантам, коэффициенты покрытия залогом и кластеры внешних сигналов по каждому кредиту листа наблюдения.
+
+На их основе рассчитывается вероятность миграции с использованием системы индикаторов раннего предупреждения банка; директор по кредитным рискам получает ранжированный лист наблюдения для дифференцированной интенсивности проверки по полосам вероятности миграции.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="ecl-ifrs9-provisions">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">ECL и резервы по МСФО (IFRS) 9</h2>
+    
+    <p class="l3-section__intent">Ожидаемые кредитные убытки (ECL) по МСФО (IFRS) 9 — это взвешенная по вероятности перспективная оценка кредитных потерь, распределённая по этапам в зависимости от ухудшения кредитного качества: Этап 1 (ECL за 12 месяцев), Этап 2 (ECL за весь срок по кредитам со значительным ростом кредитного риска) и Этап 3 (ECL за весь срок по кредитно-обесцененным позициям). Расчёт ECL объединяет PD, LGD, EAD и перспективные поправочные факторы макроэкономических сценариев по когортам выдачи и сегментам портфеля. В соответствии с методическими рекомендациями НБКР и ЦБ РФ по применению МСФО (IFRS) 9 расчёт ECL выполняется ежеквартально; остаток резервов отражается в отчётности перед регулятором и раскрывается в финансовой отчётности.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/ecl-provision-narrative">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Нарратив по резервам ECL</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует квартальный нарратив по резервам МСФО (IFRS) 9 ECL — движение по стадиям, обоснование макроэкономической корректировки и отклонения относительно предыдущего квартала — для проверки финансовым контролёром и CRO.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Квартальный нарратив по МСФО (IFRS) 9 ECL требует от команд по кредитному риску и финансов перекрёстной сверки выходных данных модели, параметров макроэкономической корректировки и предыдущих раскрытий до начала подготовки документа.
+
+Пояснения к движению по стадиям, допущения макроэкономической корректировки и анализ отклонений необходимо согласовывать между разрозненными системами, в которых хранятся данные ECL, PD/LGD/EAD и стадийности.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает актуальные выходные данные модели ECL, данные о движении по стадиям, параметры макроэкономической корректировки и раскрытия предыдущего квартала.
+
+На их основе формируется нарратив по резервам в установленном формате — пояснения к движению по стадиям, обоснование макроэкономической корректировки и анализ отклонений — готовый к проверке и утверждению финансовым контролёром и CRO.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Финансовый контролёр и CRO изучают квартальный нарратив по резервам МСФО (IFRS) 9 ECL, подготовленный агентом, — с движением по стадиям, обоснованием макроэкономической корректировки и анализом отклонений относительно предыдущего квартала — составленный из выходных данных модели в установленном формате.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент применяется для подготовки нарратива по резервам ECL в течение ≥4 последовательных кварталов в рамках 18 месяцев с даты запуска; все предусмотренные разделы нарратива (движение по стадиям, макроэкономическая корректировка, анализ отклонений) формируются из данных модели при каждом запуске.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% нарративов по ECL, подготовленных агентом, приняты финансовым контролёром и CRO с незначительными редакционными правками; количество ошибок межсистемной сверки данных о движении по стадиям сокращено до ≤3% позиций в рамках проверки качества.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Проект нарратива по резервам ECL представляется в течение 2 рабочих дней после фиксации квартальных выходных данных модели.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/macro-overlay-calibration-support">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Поддержка калибровки макроэкономической корректировки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент считывает текущие макроэкономические прогнозы из утверждённых банком сценариев и исторические записи о калибровке корректировок, после чего формирует структурированный документ с исходными данными для калибровки в рамках квартального пересмотра макроэкономической корректировки командами по кредитному риску и финансам.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Калибровка макроэкономической корректировки МСФО (IFRS) 9 требует от команды по кредитному риску оценки того, в достаточной ли мере ECL, рассчитанный моделью, отражает макроэкономические перспективы, и применения экспертных суждений там, где это не так.
+
+Документ для обсуждения калибровки готовит аналитик по кредитному риску на основе нескольких источников макроэкономических данных и истории корректировок; подготовительный этап отнимает ресурсы до начала содержательного обсуждения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает утверждённые банком макроэкономические сценарии, предыдущие решения по корректировке и их обоснование, а также текущие выходные данные модели ECL.
+
+На их основе формируется структурированный документ с исходными данными для калибровки — текущие параметры макросценария, сравнение с предыдущими допущениями корректировки, чувствительность ECL к изменению сценария и ключевые вопросы для экспертной оценки — для квартального заседания по пересмотру корректировки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/ecl-staging-distribution-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ распределения по стадиям ECL</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает ежеквартальное движение в распределении по стадиям 1/2/3 в разрезе портфелей, выявляет тренды на уровне сегментов, не соответствующие макроэкономической среде, и направляет директору по кредитным рискам анализ распределения до начала квартальной проверки ECL.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Движение в распределении по стадиям отражается в квартальном нарративе МСФО (IFRS) 9, однако не анализируется на предмет согласованности с макроэкономическими и портфельными сигналами.
+
+Снижение объёма портфеля стадии 2 в условиях ухудшения макроэкономической конъюнктуры или накопление концентрации в стадии 2 по отдельному сегменту может свидетельствовать о необходимости перекалибровки критериев SICR — сигнал, не различимый только из сводного нарратива.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает квартальные данные о распределении по стадиям в разрезе сегментов и продуктов, рассчитывает тренды движения и сопоставляет их с макроэкономическими индикаторами и сигналами кредитного качества портфеля.
+
+Выявленные паттерны распределения, несовместимые с макроэкономической средой, передаются директору по кредитным рискам до начала квартальной проверки модели ECL и корректировок.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

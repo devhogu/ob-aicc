@@ -1,0 +1,1423 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact center</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Customer &amp; Channels</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Contact center</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Contact center</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">The contact center is the highest-volume assisted channel in the bank and carries the most complex regulatory obligations — consumer protection rules under NBKR Resolution No. 47/4, CBR Ordinance No. 59-I, and NBK consumer rights legislation require documented complaint handling, regulated disclosure at the point of service, and defined SLA obligations per transaction category. The contact center is also the point where digital channel failures surface: customers who cannot complete a task in digital call an agent. <strong>The opportunity for GenAI is to instrument every inbound interaction</strong> — routing calls more accurately, assisting agents in real time, automating quality assurance across 100% of calls, and optimising workforce schedules from demand forecasts — compressing average handle time, improving first-call resolution, and reducing the compliance exposure of manual QA sampling.
+</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-inbound-servicing:checked ~ .problems-tab-bar label[for="problems-tab-inbound-servicing"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-inbound-servicing:checked ~ .problems-panel[data-tab="inbound-servicing"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-inbound-servicing"
+    value="inbound-servicing"
+    checked
+    aria-label="Inbound servicing"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-inbound-servicing"
+      role="tab"
+      aria-controls="problems-panel-inbound-servicing"
+    >Inbound servicing</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-inbound-servicing"
+    data-tab="inbound-servicing"
+    role="tabpanel"
+    aria-labelledby="problems-tab-inbound-servicing"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">IVR containment rate, first-call resolution, and average handle time are tracked in aggregate across the contact center. The team lacks a step-level view of where the IVR loses customers to agent transfer and which knowledge gaps are driving handle time above standard. Root-cause analysis is episodic and based on sampled call listening rather than systematic coverage.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Contact center agents handle a broad range of queries from product knowledge refreshed infrequently and a knowledge base that requires manual search during live calls. The time agents spend searching reference materials while customers wait on hold is a direct driver of handle time and a constraint on first-call resolution.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Complaint triage and classification, QA scoring, and workforce scheduling are each performed manually on a sample or periodic basis. The structured, data-driven nature of each task — complaints arrive with classifiable attributes; calls generate scoreable transcripts; scheduling uses known demand forecasts — makes all three candidates for agent-driven automation.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">A contact center operating with GenAI-backed agent assist, real-time routing, and 100% call QA coverage creates a compounding performance loop: higher first-call resolution reduces repeat contacts, lower handle time increases capacity within the same headcount, and continuous QA coverage surfaces coaching priorities that improve agent performance faster than sampled review allows.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Sub-concerns">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="inbound-call-routing-ivr">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Inbound call routing &amp; IVR</h2>
+    
+    <p class="l3-section__intent">The automated front-end of the contact center — the IVR system that routes callers to the appropriate agent skill group or self-serves the call without agent involvement. IVR design is a regulated function in retail banking: NBKR and CBR consumer protection frameworks require that customers can reach a human agent within a defined number of IVR steps and within a defined wait time. Containment rate — the proportion of calls resolved in the IVR without agent transfer — is the primary cost driver; each percentage point of containment improvement reduces agent headcount requirement proportionally.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/inbound-call-routing-ivr/ivr-script-update-automation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">IVR Script Update Automation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent drafts IVR script updates for approved routing changes and new self-service tasks from the change specification, ready for the IVR operations team to review, test, and deploy.
+The draft covers menu prompt language, routing logic description, and the self-service task confirmation message, consistent with the bank&#39;s IVR style guide and regulatory consumer protection wording standards.
+No script change is released without IVR team review and test confirmation.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Each approved IVR routing change or new self-service task addition requires a script update: revised menu prompts, updated routing logic documentation, and new task confirmation messages.
+Script drafting from change specifications is a manual step that delays implementation of containment improvements identified in the monthly routing analysis.
+Under NBKR and CBR consumer protection frameworks, IVR menu language must meet defined standards for clarity and complaint-rights disclosure; manual drafting with variable author interpretation creates inconsistent compliance quality across updates.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the approved routing change or self-service task specification and generates menu prompt language, routing logic documentation, and task confirmation messages consistent with the bank&#39;s IVR style guide and regulatory language requirements.
+The IVR operations team reviews the draft, tests in the staging environment, and confirms before release; the compliance team spot-checks regulatory disclosure language before deployment.
+Script preparation time and the gap between change approval and deployment are tracked against the pre-deployment manual baseline.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/inbound-call-routing-ivr/ivr-containment-routing-optimisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">IVR Containment &amp; Routing Optimisation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses IVR session paths to identify containment failures — where customers exit to agent — and quantifies the routing changes and self-service task enablement that would improve containment rate.
+The analysis clusters failure points by menu node, call reason, and customer segment to distinguish navigational complexity from genuinely unserviceable task types.
+The Head of Contact Center reviews a monthly ranked improvement backlog with estimated containment recovery value per change.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>IVR containment rate is tracked in aggregate; the contact center operations team cannot identify which menu paths fail to contain customers without discrete analytical effort per failure mode.
+Failure attribution between navigational complexity and unserviceable task types requires manual session log review that is not performed at operational cadence.
+Each percentage point of containment below target represents a direct headcount cost in the agent population.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads IVR session logs, mapping each session path from entry to exit — containment or agent transfer — and clusters failure points by menu node, call reason, and customer segment.
+It estimates the containment recovery value of each routing adjustment or self-service task addition, producing a ranked improvement backlog.
+The Head of Contact Center reviews the monthly output and directs the IVR configuration backlog from an evidence-based priority list.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">A monthly ranked improvement backlog — with containment recovery value estimated per routing change or self-service task addition, and failure points clustered by menu node, call reason, and segment — is available to the Head of Contact Center for IVR configuration prioritisation.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent delivers the IVR containment analysis and ranked backlog for ≥95% of scheduled monthly cycles for ≥12 consecutive months post go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of ranked improvement items confirmed as actionable by the Head of Contact Center on monthly review; IVR containment rate tracked as primary outcome metric.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>IVR containment failure attribution cycle reduced from ad hoc per-failure-mode manual session log review to monthly automated clustering and backlog delivery within 48 hours of period close.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/inbound-call-routing-ivr/ivr-caller-experience-intelligence">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">IVR Caller Experience Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses IVR session recordings and post-call survey data to identify caller experience friction points — menu hesitation, incorrect option selection and correction, repeat entry, and complaint-related calls — and assembles the evidence for the IVR design team.
+The output surfaces behavioural signals not visible in routing analytics, such as callers who navigate correctly but indicate confusion through repeated key presses or extended decision time.
+The IVR design team uses the brief to complement containment analytics with qualitative experience evidence in configuration improvement decisions.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>IVR configuration improvement is directed primarily from quantitative containment and routing analytics; the customer experience quality of menu navigation — whether callers are confident in their route, confused by menu language, or making unforced errors — is not measured systematically.
+Experience friction that does not result in agent transfer is invisible to the current analytics model; callers who eventually self-serve but do so with difficulty are counted as containment successes.
+Behavioural signals from session recordings — hesitation time, key-correction frequency, repeat navigation — contain experience intelligence that quantitative metrics do not capture.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent analyses IVR session data for behavioural friction signals — menu hesitation duration, key-correction frequency, repeat option selection, and session abandonment before task completion — and correlates these with post-call survey sentiment where available.
+The quarterly caller experience brief ranks menu nodes by friction intensity and identifies the prompt language or option structure most associated with navigation errors.
+The IVR design team reviews the brief alongside the containment analytics output, using both evidence sets in configuration decisions; friction score improvement after redesign is tracked as the primary qualitative outcome metric.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="contact-center-quality-assurance">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Contact center quality assurance</h2>
+    
+    <p class="l3-section__intent">The monitoring and scoring of agent interactions against a defined QA rubric — compliance disclosure adherence, tone and empathy, resolution accuracy, and escalation procedure. Under NBKR and CBR consumer protection frameworks, documented QA coverage is a supervisory expectation; regulators assess whether the bank has adequate internal controls over the quality of customer-facing interactions. Manual listening covers 1-3% of call volume in most contact centers — insufficient for systematic compliance monitoring. QA findings drive agent coaching, script updates, and performance management.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/contact-center-quality-assurance/qa-coaching-brief-generation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">QA Coaching Brief Generation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates a structured coaching brief for each agent scheduled for QA review, drawn from the agent&#39;s scored call sample — identifying the specific interactions and rubric dimensions for discussion, and drafting improvement prompts aligned to the underperformance pattern.
+The QA manager reviews the brief before the coaching session; the brief replaces the manual session-preparation step.
+Coaching session preparation time and post-coaching QA score improvement rate are the primary metrics.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>QA managers prepare for individual coaching sessions by manually reviewing scored call samples, identifying the interactions that best illustrate the agent&#39;s performance pattern, and constructing a discussion agenda.
+Preparation for a single coaching session can take 30-60 minutes when built from sampled call records; QA team capacity constrains the number of agents who can receive a structured coaching session per cycle.
+The session quality depends on the QA manager&#39;s time investment; compressed preparation produces generic feedback that does not address the agent&#39;s specific performance pattern.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the agent&#39;s QA score record for the period — call samples, rubric dimension scores, and trend against prior periods — and generates a coaching brief with the three to five interactions recommended for review, the rubric dimensions driving underperformance, and structured improvement prompts.
+The QA manager reviews the brief, makes any adjustments, and conducts the session; post-coaching QA score trajectory is tracked per agent.
+Coaching session preparation time and the proportion of coached agents showing QA score improvement within two cycles are the primary outcome metrics.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/contact-center-quality-assurance/contact-center-qa-intelligence">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Contact Center QA Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent scores 100% of inbound calls against the bank&#39;s QA rubric — compliance disclosure adherence, resolution accuracy, tone calibration, and escalation procedure — and produces a weekly performance brief decomposed by agent, team, and call category.
+The brief identifies the agents and call types with the lowest QA scores, ranked by coaching priority, and surfaces the specific rubric dimensions driving underperformance.
+The contact center QA manager reviews and directs the coaching cycle from an evidence-based priority list rather than from a sampled subset.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Manual QA listening covers 1-3% of call volume, providing a statistically insufficient basis for systematic compliance monitoring or individual agent performance assessment.
+Under NBKR and CBR consumer protection frameworks, documented QA coverage is a supervisory expectation; 1-3% sampling does not constitute systematic internal control.
+The coaching cycle is directed by QA team capacity rather than by a current-state performance signal; agents with consistent disclosure misses may not be reviewed for weeks between manual sampling cycles.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent processes call recordings against the bank&#39;s QA rubric, scoring each interaction on compliance disclosure adherence, resolution accuracy, tone, and escalation procedure adherence.
+The weekly brief presents scores by agent and team, ranked by coaching priority, with the specific rubric dimensions driving underperformance highlighted for each low-scoring agent.
+The QA manager reviews the brief and directs coaching sessions to the highest-priority agents; QA coverage rate and disclosure adherence rate across 100% of calls are tracked as primary compliance outcomes.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/contact-center-quality-assurance/qa-script-gap-detection">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">QA Script &amp; Disclosure Gap Detection</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses QA-scored call transcripts to identify the product or regulatory disclosure categories with the highest miss rates across the agent population, and surfaces gaps in the current scripts and call guides that explain systematic underperformance.
+The output is a quarterly script improvement brief for the contact center operations and compliance teams, ranking disclosure gap categories by miss rate and associating each gap with a specific script element or call guide deficiency.
+The script improvement brief reduces the coaching burden by addressing root causes at the script level rather than remediating individual agents.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>QA coaching addresses individual agent performance; the underlying scripts and call guides that agents follow are reviewed on a scheduled basis rather than from a current-state miss rate signal.
+When a regulatory disclosure is consistently missed across multiple agents, the root cause is often a script gap or ambiguous call guide instruction rather than individual agent error; individual coaching does not resolve a systemic script deficiency.
+Under NBKR and CBR consumer protection frameworks, disclosure miss rates across the population represent a systemic control weakness; script-level remediation is the appropriate response, not agent-level coaching alone.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads QA-scored call transcripts and aggregates miss rates by disclosure category across the agent population, computing the frequency of each miss type and identifying the call guide instruction or script element associated with each category.
+The quarterly brief ranks disclosure gap categories by miss rate and identifies the specific script or call guide element requiring revision for each high-miss category.
+The compliance and contact center operations teams review the brief and revise scripts before the next QA cycle; population-level miss rate reduction after script revision is the primary outcome metric.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="agent-assist-guided-resolution">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Agent assist &amp; guided resolution</h2>
+    
+    <p class="l3-section__intent">The in-call support layer for contact center agents — knowledge base articles, product terms, procedural guidance, and regulatory disclosure checklists — that agents access during live interactions. Under CBR and NBKR consumer protection frameworks, agents must provide accurate disclosures on product terms, fees, and complaint rights during the service call. Failure to disclose is a supervisory risk. Average handle time is the primary contact center cost KPI; knowledge search during live calls is the dominant driver of handle time above target.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/agent-assist-guided-resolution/agent-assist-effectiveness-intelligence">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Agent Assist Effectiveness Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses assist-log acceptance rates, knowledge-base miss events, and post-call QA outcomes to produce a weekly accuracy and coverage brief for the contact center operations manager.
+The brief identifies knowledge-base gaps — query categories where agents override or reject assist recommendations — and ranks them by volume for the knowledge management team.
+The contact center operations manager reviews and directs knowledge-base remediation from the evidence-ranked backlog.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Real-time assist quality is monitored through periodic QA sampling; systematic drift in assist accuracy — emerging from product term updates, regulation changes, or new complaint categories — is not detected until it shows up in QA scores.
+Knowledge-base gaps generate agent overrides and hold transfers at operational cadence but are not aggregated into a prioritised remediation backlog between knowledge management review cycles.
+The absence of a continuous assist effectiveness brief means the knowledge management team directs remediation effort from scheduled review rather than from current override signal.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads assist log records — recommendation surfaced, agent action (accept / override / dismiss), and post-call QA outcome where available — and computes acceptance rates by query category, flagging categories with declining acceptance as potential accuracy drift signals.
+It identifies knowledge-base miss events — queries where no recommendation was surfaced — and ranks them by volume for remediation prioritisation.
+The weekly brief is reviewed by the contact center operations manager; knowledge management remediates the ranked backlog before the next quality review cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/agent-assist-guided-resolution/post-call-documentation-automation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Post-Call Documentation Automation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates a structured call summary and CRM update from the call transcript immediately after each interaction, ready for agent review and confirmation before submission.
+The summary covers call reason, resolution status, regulatory disclosures delivered, and any follow-up actions, in the format required by the bank&#39;s CRM and compliance documentation standards.
+Agent after-call work time is the primary operational metric; compliance disclosure documentation completeness is the primary regulatory metric.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>After-call work — summarising the interaction, updating CRM records, and documenting regulatory disclosures delivered — is the primary driver of agent time outside active call handling.
+Under NBKR and CBR consumer protection frameworks, accurate post-call documentation of disclosures and complaint flags is a supervisory obligation; documentation quality degrades under high call volume as agents compress after-call work to meet availability targets.
+After-call work time consumes a material share of total agent paid hours and is structurally resistant to reduction under the manual documentation model.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the call transcript and generates a structured summary covering call reason, outcome, regulatory disclosures confirmed, and follow-up actions, pre-populated in the bank&#39;s CRM format.
+The handling agent reviews and confirms before the record is committed; any additions or corrections are captured in the audit trail.
+After-call work time per interaction and disclosure documentation completeness rate are tracked against pre-deployment baselines as primary outcome metrics.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/agent-assist-guided-resolution/agent-real-time-knowledge-assist">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Agent Real-Time Knowledge Assist</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent listens to inbound calls and surfaces the relevant policy, product term, or procedural guidance to the handling agent in real time, reducing average handle time and compliance disclosure misses.
+The guidance appears in the agent desktop without requiring manual knowledge-base search, eliminating hold transfers for complex queries.
+Quality assurance reviews assist logs for accuracy drift on a defined cadence.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Contact center agents handle queries on product terms, regulatory disclosures, and fee structures from memory and infrequently updated reference materials; complex queries require placing customers on hold to search the knowledge base, inflating AHT.
+Mandatory consumer protection disclosures required under NBKR and CBR frameworks are delivered from memory under call-volume pressure, creating compliance exposure.
+New hire ramp-up on product and policy knowledge is slow under the current search-and-recall model.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent processes the live call transcript and surfaces the most relevant knowledge-base article, product term, or regulatory disclosure checklist in the agent desktop without requiring manual search.
+The agent reads the guidance and resolves the query without a hold transfer, reducing AHT and ensuring mandatory disclosures are presented in full.
+Quality assurance reviews assist logs periodically to detect accuracy drift and flag knowledge-base gaps for remediation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Accurate policy, product-term, and regulatory-disclosure guidance is available to the handling agent in the agent desktop on every inbound call — eliminating hold transfers for knowledge queries and reducing compliance disclosure misses.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent surfaces a knowledge-assist recommendation for ≥90% of inbound calls in which a policy, product-term, or regulatory-disclosure query is detected, across ≥12 consecutive weeks post go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of assist recommendations accepted by handling agents without manual override, as confirmed by QA review of sampled assist logs.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Average handle time for knowledge-query call types reduced from the pre-deployment baseline by ≥15% within 6 months of go-live.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="workforce-management">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Workforce management</h2>
+    
+    <p class="l3-section__intent">The planning, scheduling, and real-time management of contact center agent capacity against call volume forecasts — the primary cost management lever for the contact center. Workforce management covers interval-level demand forecasting, shift scheduling against skill-group requirements, intraday reforecast and adjustment, and adherence monitoring. Under CBR and NBKR consumer protection standards, defined service levels — maximum wait time, answer rate targets — must be maintained through staffing adequacy. Schedule efficiency is measured as the ratio of productive agent time to total paid hours.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/workforce-management/contact-center-demand-forecast-intelligence">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Contact Center Demand Forecast Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent forecasts inbound call volume at 30-minute interval resolution for the next 14 days by skill group, incorporating payroll calendar events, product rate changes, system maintenance windows, and prior-year seasonal patterns.
+The forecast brief identifies periods where current schedules will miss the service level target and quantifies the staffing adjustment required to close the gap.
+The workforce management team reviews the brief and adjusts schedules before the impacted intervals are locked for the next planning cycle.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Contact center demand forecasts are generated from rolling average call volumes with manual adjustments for known events; interval-level demand variability from payroll cycles, product changes, and seasonal peaks is not systematically captured at the granularity required for shift-level scheduling.
+Under CBR and NBKR consumer protection standards, defined service levels — maximum wait time and answer rate targets — must be maintained through staffing adequacy; schedules built on rolling averages routinely generate under-staffed and over-staffed intervals that are only visible in retrospect.
+The workforce management team cannot see which future intervals are at service-level risk without commissioning discrete forecast work per planning cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads historical call volume at 30-minute interval resolution by skill group, calendar inputs, and known event triggers, and generates a 14-day interval-level demand forecast with a confidence range per interval.
+It compares the forecast against current schedules and identifies intervals where scheduled agent capacity is below the service-level requirement, quantifying the staffing adjustment needed.
+The workforce management team reviews the brief and adjusts schedules before the planning cycle locks; service-level adherence rate and the proportion of intervals within staff target are the primary outcome metrics.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/workforce-management/intraday-staffing-reforecast">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Intraday Staffing Reforecast</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors intraday call arrival against the forecast and, when actual volume deviates materially from the planned level, generates a reforecast for the remaining intervals and recommends the staffing adjustment — voluntary overtime, shift extension, or controlled diversion — for supervisor review and release.
+The supervisor confirms the adjustment; the agent records the decision and outcome for schedule accuracy improvement in future cycles.
+Service-level adherence during high-deviation days and reforecast response time are the primary outcome metrics.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Intraday demand deviations from forecast — a product outage driving call surge, or a quiet Friday with lower-than-forecast volume — require the contact center supervisor to manually assess the deviation, determine whether it warrants a staffing adjustment, and identify the available response options.
+Manual intraday reforecast and adjustment takes 15-30 minutes per deviation event; in a high-volume deviation, service-level degradation accumulates during the assessment window.
+The cost of intraday staffing errors — under-staffing generating service-level breach, over-staffing generating idle paid hours — is material across the year but individual events are not systematically captured for forecast model improvement.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent monitors actual call arrival at 15-minute intervals against the interval forecast, detects material deviations above a defined threshold, and generates a reforecast for the remaining shift with a recommended staffing adjustment and the available response options.
+The supervisor reviews and confirms the adjustment within a defined response window; the outcome is recorded for schedule accuracy diagnostics.
+Service-level adherence on deviation days and the time from deviation detection to supervisor confirmation are tracked against the pre-deployment manual baseline.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/workforce-management/schedule-efficiency-optimisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Schedule Efficiency Optimisation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent optimises the weekly agent schedule across skill groups by minimising idle paid hours while maintaining service-level compliance at each interval, within the constraints of contracted shift patterns and agent availability preferences.
+The optimised schedule is presented to the workforce management team for review and release; the team retains authority to override any assignment before publication.
+Schedule efficiency — the ratio of productive agent time to total paid hours — and service-level adherence are the dual outcome metrics tracked against the prior manual-schedule baseline.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Contact center schedules are built manually from demand forecasts and agent availability; the optimisation is limited by the number of schedule permutations a workforce management planner can evaluate within the planning cycle.
+Idle paid hours — scheduled agents without sufficient call volume to fill their shift — are a direct cost that manual scheduling cannot minimise effectively across a large skill-group matrix.
+The workforce management team cannot systematically trade off idle hour cost against service-level risk across hundreds of agents and 30-minute intervals without automated optimisation support.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the interval demand forecast, agent availability and contracted shift patterns, and skill group assignments, and generates an optimised weekly schedule minimising idle paid hours subject to the service-level constraint at each interval.
+The optimised schedule is presented to the workforce management team; any assignment can be overridden before publication.
+Schedule efficiency ratio and service-level adherence are tracked weekly against the prior manual-schedule baseline; efficiency gains are quantified in paid-hours terms for management reporting.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="complaint-escalation-handling">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Complaint &amp; escalation handling</h2>
+    
+    <p class="l3-section__intent">The triage, classification, investigation, and resolution of customer complaints received through the contact center. Under NBKR Resolution No. 47/4 and CBR Ordinance No. 59-I, banks must acknowledge complaints within defined timelines, classify by product and regulatory category, and maintain a full audit trail from receipt to resolution. Regulatory reporting on complaint volumes and resolution rates is a periodic supervisory obligation. Manual triage introduces classification inconsistency and SLA risk when complaint volumes spike.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/complaint-escalation-handling/complaint-response-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Complaint Response Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent drafts the formal complaint response for handler review from the case investigation record, covering the finding, regulatory obligations met, and resolution outcome in the tone and structure required by NBKR and CBR consumer protection standards.
+The handler reviews, edits, and releases; no response is dispatched without confirmation.
+Response drafting time and first-attempt acceptance rate by handlers are the primary efficiency metrics.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Complaint handlers draft formal response letters after completing investigation, drawing on the case record to construct a compliant response under NBKR and CBR consumer protection language requirements.
+Drafting from case notes is a time-intensive step that varies in quality across handlers; regulatory tone and disclosure requirements are not consistently applied, creating rework and supervisory risk.
+Under NBKR Resolution No. 47/4 and CBR Ordinance No. 59-I, response quality and completeness are subject to supervisory scrutiny; inconsistent drafting quality is a reviewable control weakness.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the investigation record — case classification, root cause finding, resolution outcome, and applicable regulatory disclosure requirements — and generates a formal response draft in the bank&#39;s approved template.
+The handler reviews, edits, and releases; edits are logged and used to identify template improvement opportunities on a quarterly review cycle.
+Average response drafting time and first-attempt acceptance rate — the proportion of drafts confirmed without substantive revision — are tracked against the pre-deployment baseline.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/complaint-escalation-handling/complaint-triage-classification">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Complaint Triage &amp; Classification</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent classifies inbound complaints by product, theme, and regulatory obligation, assigns severity and SLA band, and drafts the initial root-cause assessment for complaints handler review.
+Classification covers all intake channels — phone, email, digital submission, and branch — in a consistent format that supports regulatory reporting at period end.
+The complaints handler reviews, edits, and confirms triage before the case progresses.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Inbound complaints arriving via multiple channels are manually triaged by the complaints team; classification by product type, regulatory reporting category, and SLA band is inconsistent across handlers.
+Under NBKR Resolution No. 47/4 and CBR Ordinance No. 59-I, SLA compliance and audit trail completeness are supervisory obligations; manual triage creates SLA breach risk when complaint volumes spike.
+Cross-channel complaint patterns that warrant systemic investigation are not visible at triage cadence under the current manual model.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads complaint content from each intake channel — transcribed calls, email text, and digital submissions — and classifies by product, theme, and regulatory reporting obligation.
+It assigns severity and SLA band, drafts a root-cause assessment from the complaint narrative, and flags cases with regulatory escalation triggers for senior review.
+Regulatory reporting extracts are generated from the classified complaint database at period end, with an unbroken audit trail from intake to resolution.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Every inbound complaint from all intake channels is classified by product, theme, regulatory obligation, severity, and SLA band — with a draft root-cause assessment attached — at intake, maintaining SLA compliance and audit trail completeness under NBKR and CBR obligations.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent classifies ≥98% of inbound complaints at intake across all channels for ≥48 consecutive weeks post go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of triage classifications confirmed without material amendment by the complaints handler before case progression; SLA breach rate tracked as primary compliance metric.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Triage classification time per complaint reduced from 15–30 minutes of manual handler review and categorisation to ≤5 minutes of agent-assisted handler confirmation.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-channels/contact-center/complaint-escalation-handling/channel-complaint-pattern-intelligence">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Complaint Pattern Intelligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses classified complaint records to surface emerging product, process, and channel failure patterns at weekly cadence, providing the Head of Complaints with a current-state pattern brief before the patterns are visible in monthly regulatory reports.
+The brief ranks complaint themes by volume trend, flags themes with accelerating growth, and identifies the product and process root causes most associated with each pattern.
+The Head of Complaints and product owners review the brief and determine whether systemic investigation or process remediation is warranted.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Complaint classification data exists in the case management system, but cross-case pattern analysis is performed during the monthly regulatory reporting cycle rather than on the week&#39;s complaint intake.
+Emerging product failures or process defects that generate complaint spikes are identified from the monthly report — by which time the pattern has been accumulating for weeks.
+Under NBKR Resolution No. 47/4 and CBR Ordinance No. 59-I, systemic complaint patterns require investigation and remediation documentation; early identification reduces the regulatory exposure window and the scale of remediation required.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the classified complaint database and computes theme volumes on a rolling 7-day window, comparing each theme&#39;s current rate against the prior four-week baseline to identify accelerating patterns.
+For themes showing material acceleration, it retrieves the case records and identifies the most common product and process root causes from the classification fields.
+The Head of Complaints reviews the weekly brief and determines which patterns warrant systemic investigation; time from pattern emergence to investigation initiation is the primary outcome metric.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">GenAI-enabled Banking and Financial Services Framework · v11i</footer>
+
+</div>
+
+</body>
+</html>

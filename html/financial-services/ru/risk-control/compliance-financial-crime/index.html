@@ -1,0 +1,1653 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Комплаенс и финансовые преступления</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Risk &amp; Control</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Комплаенс и финансовые преступления</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Комплаенс и финансовые преступления</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Комплаенс и финансовые преступления — наиболее широкое регуляторное обязательство в банковской сфере, охватывающее ПОД/ФТ по стандартам FATF и имплементирующим нормативным актам НБКР/НБК-АРФРД/ЦБ РФ, проверку санкций, KYC/CDD, риск недобросовестного поведения, защиту потребителей и полный цикл лицензирования и проверок. Функция работает под постоянным надзорным контролем: нарушения ПОД/ФТ влекут уголовную ответственность для руководителей; результаты надзорных проверок приводят к надбавкам к капиталу и публичным принудительным мерам. <strong>Возможность ИИ — сократить человеко-часы, затрачиваемые на сортировку уведомлений, подготовку SAR и обеспечение проверок</strong> — высокообъёмные структурированные задачи, которые в настоящее время поглощают специализированные комплаенс-ресурсы, способные быть направлены на выявление новых рисков и калибровку политики.</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-aml-sanctions-financial-crime:checked ~ .problems-tab-bar label[for="problems-tab-aml-sanctions-financial-crime"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-aml-sanctions-financial-crime:checked ~ .problems-panel[data-tab="aml-sanctions-financial-crime"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-aml-sanctions-financial-crime"
+    value="aml-sanctions-financial-crime"
+    checked
+    aria-label="AML, санкции и финансовые преступления"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-aml-sanctions-financial-crime"
+      role="tab"
+      aria-controls="problems-panel-aml-sanctions-financial-crime"
+    >AML, санкции и финансовые преступления</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-aml-sanctions-financial-crime"
+    data-tab="aml-sanctions-financial-crime"
+    role="tabpanel"
+    aria-labelledby="problems-tab-aml-sanctions-financial-crime"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Системы мониторинга транзакций генерируют от 50 до 2 000 алертов в день, из которых 90–98% в итоге квалифицируются как ложные срабатывания. Выявление паттернов в массиве алертов — обнаружение сетей мулов, межправиловая корреляция по AML, мошенничеству и аномалиям сессий — требует от следователей ручного сопоставления нескольких системных представлений. Анализ коренных причин ложных срабатываний — определение того, какие параметры правил или профили клиентов обусловливают непропорционально высокий объём ложных сигналов, — выполняется в ходе периодических ручных проверок, а не в режиме непрерывного мониторинга.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">AML-следователи, открывая каждый алерт, тратят 15–25 минут на сбор контекста из 4–5 систем — KYC, хранилище транзакций, предшествующие алерты, скрининг на санкции, неблагоприятные СМИ — прежде чем вынести решение о диспозиции. Эти накладные расходы на сбор данных являются основным узким местом; само решение занимает две-три минуты при наличии полного контекста.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Подготовка SAR, формирование пакетов расследования и подготовка ответов на запросы регуляторных проверок следуют установленным форматам и опираются на известные источники данных — данные KYC, история транзакций, результаты предыдущих алертов, шаблоны регуляторных форм. Каждый из этих процессов характеризуется высоким объёмом, структурированностью и срочностью; в совокупности они поглощают большую часть рабочего времени комплаенс-команды среднего банка.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">AML-функция с поддержкой агента при сортировке алертов и подготовке SAR способна обрабатывать более высокие объёмы алертов без пропорционального роста численности персонала — преимущество, приобретающее существенное значение по мере роста объёмов транзакций и ужесточения регуляторных ожиданий по охвату алертов. Ресурсы, высвобожденные за счёт автоматизации, могут быть направлены на разработку типологий, настройку правил и анализ новых схем финансовых преступлений.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Подразделы">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="aml-transaction-monitoring">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">AML-мониторинг транзакций</h2>
+    
+    <p class="l3-section__intent">Мониторинг транзакций — автоматизированный надзор за операциями клиентов по критериям на основе правил и поведенческих типологий для выявления отмывания денег и финансирования терроризма. Согласно Рекомендации FATF 10 и имплементирующим нормативным актам НБКР/ЦБ РФ по ПОД/ФТ, банки обязаны применять риск-ориентированный мониторинг транзакций, охватывающий все типы операций. Мониторинговые системы формируют очереди уведомлений, которые AML-специалисты обязаны разбирать в пределах определённых SLA; пиковые объёмы уведомлений приходятся на периоды высокой транзакционной активности. Соотношение истинно положительных срабатываний к общему числу уведомлений — точность уведомлений — определяет трудозатраты на одно подтверждённое подозрительное действие.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/aml-transaction-monitoring/aml-alert-volume-trend-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ объёма и динамики алертов AML</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает объём алертов, показатели вынесения решений и коэффициенты истинных срабатываний по правилам и клиентским сегментам на еженедельной основе, выявляя тенденции эффективности правил для менеджера программы AML.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Эффективность программы мониторинга AML — объёмы алертов, коэффициенты истинных срабатываний и соблюдение SLA аналитиками — анализируется в периодических обзорах программы, а не на непрерывной основе.
+
+Правило, формирующее всё больший объём ложных срабатываний на протяжении четырёх недель, выявляется в ежемесячном обзоре, а не по мере развития сигнала.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает данные системы управления алертами, вычисляет еженедельные показатели объёма и вынесения решений по правилам и клиентским сегментам и отслеживает динамику коэффициента истинных срабатываний и соблюдения SLA в скользящем восьминедельном окне.
+
+Менеджер программы AML получает еженедельный дайджест показателей, обеспечивающий оперативную настройку правил до следующего формального обзора программы.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/aml-transaction-monitoring/aml-investigation-pack-fp-analytics">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Досье AML-расследования и аналитика ложных срабатываний</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент автоматически формирует досье по расследованию при открытии AML-алерта и ежемесячно проводит анализ первопричин ложных срабатываний для систематической настройки правил.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Каждый AML-алерт, требующий эскалации, нуждается в полном досье расследования — данных KYC, деталях транзакций, связях со смежными счетами, предыдущих алертах, результатах санкционной проверки и негативных публикациях — до того как руководитель сможет провести проверку.
+
+Доля ложных срабатываний в 90–98% поглощает производительность аналитиков, однако настройка правил ограничена отсутствием систематического анализа паттернов ложных срабатываний по всей совокупности алертов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент автоматически формирует досье расследования в момент открытия алерта из всех подключённых систем, предоставляя руководителю полный пакет документов в точке проверки.
+
+Ежемесячно агент кластеризует алерты за 12 месяцев по контексту транзакций, профилю клиента и параметрам правил для выявления конкретных комбинаций, генерирующих непропорционально высокий объём ложных срабатываний.
+
+Команды AML и модельного риска используют результаты кластеризации для калибровки параметров правил.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Руководители AML-подразделения получают полное досье расследования в момент открытия алерта, а комплаенс-команда применяет систематический ежемесячный анализ первопричин ложных срабатываний для калибровки параметров правил и снижения нагрузки на аналитиков.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент используется для автоматического формирования досье расследования по ≥95% AML-алертов, требующих проверки руководителем, в течение 12 месяцев с момента запуска; ежемесячный анализ кластеризации ложных срабатываний выполняется ≥10 последовательных месяцев в первый год.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% автоматически сформированных досье расследования приняты руководителями как полные без ручного дополнения; ≥70% ежемесячных результатов кластеризации ложных срабатываний использованы командами AML и модельного риска для перекалибровки правил.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время формирования досье расследования по одному алерту сокращено с ручной сборки (≥30 минут) до ≤2 минут в момент открытия алерта; ежемесячный цикл анализа ложных срабатываний завершается в течение 5 рабочих дней после закрытия месяца.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/aml-transaction-monitoring/aml-typology-library-update">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Обновление библиотеки типологий ПОД/ФТ</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент читает рекомендации FinCEN, типологические отчёты FATF и отраслевые руководства по AML, извлекает новые паттерны транзакций и признаки риска, а также формирует структурированное обновление библиотеки типологий для команд модельного риска AML и финансовой преступности для проверки правил.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Правила мониторинга транзакций по AML калибруются на основе библиотеки типологий, отражающей методы отмывания денег на момент внедрения правил.
+
+Новые типологии, публикуемые FATF, FinCEN, Росфинмониторингом и КФМ, анализируются командой финансовой преступности по мере наличия ресурсов; обновления правил запаздывают относительно выхода новых паттернов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент отслеживает типологические отчёты FATF, рекомендации FinCEN, указания Росфинмониторинга и публикации FS-ISAC по финансовым преступлениям.
+
+Он извлекает описания новых паттернов транзакций и индикаторы риска, сопоставляет каждый с существующей библиотекой правил и помечает правила, не охватывающие данный паттерн.
+
+Команда модельного риска AML получает ежеквартальный отчёт об обновлении типологий с анализом пробелов в покрытии.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="regulatory-licensing-filings">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Регуляторное лицензирование и отчётность</h2>
+    
+    <p class="l3-section__intent">Регуляторные лицензионные и отчётные обязательства охватывают лицензии денежных переводчиков, банковские лицензии, продуктовые заявки и периодические регуляторные представления — каждое с юрисдикционными сроками, требованиями к капиталу и обеспечению и требованиями к форме. Для американских финтех-компаний 45–50 государственных лицензий денежных переводчиков имеют собственный цикл подачи, минимальный капитал, требования к поручительству и график проверок. Отчётные обязательства ЦБ РФ и НБКР охватывают отчёты о достаточности капитала, отчёты о ликвидности, статистические отчёты по ПОД/ФТ и раскрытие информации в сфере защиты потребителей — каждое в пределах установленных ежемесячных, квартальных или годовых циклов.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-licensing-filings/regulatory-filing-calendar-tracker">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Календарь и трекер регуляторной отчётности</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент ведёт сводный календарь регуляторной отчётности по всем юрисдикциям, отслеживает статус подачи документов в разрезе каждого срока и еженедельно представляет CCO отчёт о состоянии выполнения.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Обязательства по регуляторной отчётности охватывают НБКР, ЦБ РФ и множество юрисдикций лицензирования операторов денежных переводов, каждая из которых имеет отдельные ежемесячные, квартальные и годовые сроки.
+
+Комплаенс-команда отслеживает выполнение отчётности в таблице с ручным обновлением; пропущенный срок выявляется только при проверке календаря, а не в момент возникновения риска его нарушения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает календарь регуляторной отчётности, отслеживает подтверждения о подаче документов в разрезе каждого срока, за три недели до дедлайна сигнализирует о рисках его нарушения и еженедельно представляет CCO статусный отчёт по всем открытым, под риском нарушения и завершённым подачам.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-licensing-filings/license-renewal-pack-assembly">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Формирование пакета продления лицензии</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует пакет продления лицензии из актуальной финансовой отчётности, сертификатов капитала и поручительских облигаций, а также шаблонов заверений должностных лиц, сокращая время подготовки по каждой юрисдикции для продления лицензий операторов денежных переводов штата.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Продление лицензии оператора денежных переводов штата требует сбора актуальной финансовой отчётности, документации по поручительским облигациям и капиталу, заверений должностных лиц и заполнения форм для каждой юрисдикции.
+
+Для банка с 40–50 действующими лицензиями штата процесс подготовки поглощает несколько недель работы комплаенс-команды в каждый сезон продления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает расписание требований по продлению, актуальную финансовую отчётность, реестр поручительских облигаций и базу данных заверений должностных лиц.
+
+Он предварительно заполняет формы продления актуальными данными, формирует пакет сопроводительной документации по каждой юрисдикции и помечает пункты, требующие ручного заверения или нотариального удостоверения.
+
+Комплаенс-офицер проверяет каждый пакет и подаёт документы.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-licensing-filings/regulatory-filing-gap-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ пробелов и обязательств регуляторной отчётности</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент читает новые регуляторные руководства и обновления по юрисдикциям, выявляет обязательства по отчётности, ещё не включённые в комплаенс-календарь, и представляет CCO анализ пробелов для обновления календаря.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Обязательства по регуляторной отчётности меняются с выходом новых надзорных указаний, одобрением продуктов и изменениями юрисдикционного законодательства.
+
+Новые обязательства выявляются путём ручного мониторинга регуляторных публикаций; систематического процесса сопоставления новых регуляторных документов с действующим комплаенс-календарём для выявления пробелов не существует.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент отслеживает потоки регуляторных публикаций НБКР, ЦБ РФ и регуляторов в сфере денежных переводов штатов США, извлекает новые обязательства по отчётности, сопоставляет каждое с действующим комплаенс-календарём и выявляет обязательства, не учтённые в нём.
+
+CCO получает ежеквартальный анализ пробелов с указанием каждого нового обязательства и проектом записи в календарь для проверки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="sar-case-management">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">SAR и управление делами</h2>
+    
+    <p class="l3-section__intent">Сообщение о подозрительных операциях (SAR) — обязательное направление в орган финансовой разведки (FinCEN в США, Росфинмониторинг в России, КФМ в Казахстане) по результатам AML-расследования, выявившего признаки подозрительной деятельности. По стандартам FATF и имплементирующим нормативным актам SAR должны подаваться в течение 30 дней с момента обнаружения подозрительной деятельности; нарушение сроков или ненадлежащее качество сообщений влечёт надзорные санкции. Качество изложения в SAR — точность структуры «кто/что/когда/где/зачем/как» — непосредственно влияет на возможность органа финансовой разведки действовать по сообщению и на надзорный статус банка.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sar-case-management/sar-drafting-support">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Поддержка составления SAR</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует нарратив SAR из материалов расследования в регуляторном формате, с межрасследовательскими ссылками и перекрёстными ссылками на предыдущие SAR, для проверки и подачи BSA-офицером.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Составление SAR является значительной накладной нагрузкой на составителя и рецензента-BSA-офицера для каждого дела, выполняемой в условиях жёстких регуляторных сроков.
+
+Качество нарратива варьируется в зависимости от составителя; перекрёстные ссылки на предыдущие SAR и межрасследовательские ссылки выполняются непоследовательно в разных сотрудниках команды.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает материалы расследования и формирует нарратив SAR в установленном регуляторном формате — охватывая вопросы кто, что, когда, где и как в отношении подозрительной операции — с проверкой согласованности между SAR, перекрёстными ссылками на предыдущие SAR и заполненными флагами соответствия.
+
+BSA-офицер проверяет и подаёт документы.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">BSA-офицер проверяет и подаёт нарратив SAR — в установленном регуляторном формате с межрасследовательскими ссылками и перекрёстными ссылками на предыдущие SAR — составленный агентом из материалов расследования в условиях жёстких регуляторных сроков подачи.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент используется для формирования черновиков нарратива SAR по ≥90% расследований, подпадающих под требование SAR, в течение 12 месяцев с момента запуска; проверки согласованности между SAR и перекрёстные ссылки на предыдущие SAR применяются в каждом черновике с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% нарративов SAR, подготовленных агентом, приняты BSA-офицерами лишь с незначительными правками до подачи; полнота регуляторной подачи (кто/что/когда/где/как полностью заполнены) подтверждена на уровне ≥98% по результатам проверки качества.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Черновик нарратива SAR формируется в течение 4 часов после подачи материалов расследования, сокращая фазу составления и расширяя время проверки BSA-офицером в пределах регуляторного окна подачи.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sar-case-management/sar-filing-deadline-tracker">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Трекер срока подачи SAR</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает все открытые расследования SAR в разрезе 30-дневного регуляторного срока подачи, эскалирует дела, приближающиеся к дедлайну без завершённого нарратива, и формирует ежедневную очередь дел BSA-офицера с ранжированием по близости срока.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Расследования SAR, ведущиеся несколькими аналитиками, отслеживаются в системе управления делами, однако BSA-офицер не получает автоматического оповещения, когда дело приближается к 30-дневному регуляторному сроку без завершённой подачи.
+
+Просроченные подачи выявляются в ходе проверки качества после подачи, а не предотвращаются заблаговременно.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает реестр открытых дел, вычисляет оставшееся количество дней для каждого дела относительно даты открытия расследования, эскалирует дела, где до срока осталось менее пяти дней без поданного нарратива, и формирует ежедневную очередь BSA-офицера с ранжированием по близости срока.
+
+BSA-офицер использует очередь для направления ресурсов аналитиков на критичные по срокам дела.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sar-case-management/sar-quality-and-pattern-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ качества нарративов и паттернов SAR</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент проверяет поданные нарративы SAR на полноту по схеме «кто/что/когда/где/как», выявляет повторяющиеся пробелы в качестве в разрезе аналитиков и типов операций, и ежеквартально представляет BSA-офицеру анализ качества.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Качество нарратива SAR оценивается в ходе индивидуальных проверок BSA-офицером перед подачей.
+
+Повторяющиеся пробелы в качестве — неполные описания операций, отсутствующая идентификация субъекта, непоследовательная формулировка признаков риска — прослеживаются по всей совокупности поданных документов, однако систематически не отслеживаются, поэтому обратная связь носит реактивный характер по отдельным подачам, а не основана на паттернах.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает совокупность поданных SAR за скользящий 90-дневный период, применяет схему полноты «кто/что/когда/где/как», вычисляет показатели качества по разделам нарратива и выявляет повторяющиеся дефекты по аналитикам и типам операций.
+
+BSA-офицер получает ежеквартальный анализ качества для использования в целевом обучении и калибровке программы качества.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="conduct-complaints">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Недобросовестное поведение и жалобы</h2>
+    
+    <p class="l3-section__intent">Риск недобросовестного поведения — риск того, что действия банка или конструкция продуктов приведут к несправедливым результатам для клиентов, порождая регуляторное вмешательство в рамках норм защиты потребителей (правила НБКР, Указание ЦБ РФ № 3241-У, принципы FCA PRIN, нормативные акты CFPB). Данные о жалобах клиентов — основной сигнал для оценки риска недобросовестного поведения; анализ тематики жалоб позволяет выявлять системные сбои продуктов или процессов до их выхода на уровень регуляторного внимания. Аналитика первопричин жалоб формирует основу для доработки продуктов, переобучения персонала и совершенствования раскрытий. По CRD IV и FCA SYSC ответственность за управление риском недобросовестного поведения возлагается на уровень совета директоров с документированными путями эскалации.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/conduct-complaints/complaint-regulatory-escalation-tracker">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Трекер регуляторной эскалации жалоб</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает жалобы, соответствующие порогам регуляторной эскалации — жалобы, подлежащие отчётности FCA/CFPB, подачи в реестр жалоб НБКР — и формирует запись об эскалации и пакет подачи регулятору для проверки комплаенс-офицером.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Жалобы, отвечающие критериям регуляторной эскалации, должны быть выявлены из очереди обращений и направлены регулятору в установленные сроки.
+
+Идентификация порога и подготовка подачи выполняются вручную по каждой жалобе; в периоды высокой нагрузки возрастает риск пропуска срока эскалации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает ежедневную очередь жалоб, применяет юрисдикционно-специфические критерии эскалации, помечает жалобы, достигшие порога, и формирует пакет подачи в требуемом формате.
+
+Комплаенс-офицер проверяет и направляет документы в регуляторные сроки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/conduct-complaints/complaint-theme-root-cause-analytics">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Тематический анализ жалоб и первопричин</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент классифицирует жалобы по детализированным темам, кластеризует по первопричинам и маркирует сигналы риска поведения для директора по комплаенсу.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Команды по работе с жалобами распределяют входящие обращения по широким категориям и обрабатывают каждое в отдельности.
+
+Повторяющиеся темы, общие первопричины по различным типам жалоб и сигналы риска поведения становятся видны лишь при периодических проверках, а не по мере их возникновения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент обрабатывает жалобы через тематическую классификацию, кластеризует по первопричинам в разрезе категорий и оценивает каждый кластер по силе сигнала риска поведения.
+
+Директор по комплаенсу получает ежемесячный пакет по темам и первопричинам с сигналами, ранжированными по степени серьёзности.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Директор по комплаенсу получает ежемесячную тематическую классификацию жалоб с кластерами первопричин и рейтингом сигналов риска поведения на постоянной основе.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Классификация жалоб агентом и кластеризация первопричин охватывают 100% входящих жалоб в течение 6 месяцев с момента запуска; ежемесячный пакет передаётся директору по комплаенсу ≥10 последовательных месяцев в первый год.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% кластеров сигналов риска поведения, выявленных агентом, признаны существенными директором по комплаенсу при проверке; доля ошибочной классификации по тематической таксономии ≤5% по результатам ежеквартальной проверки комплаенс-командой.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Ежемесячный тематический пакет формируется в течение 3 рабочих дней после закрытия месяца в сравнении с ≥2 неделями ручной проверки жалоб при прежнем подходе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/conduct-complaints/conduct-risk-product-review-signal">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сигнал обзора продукта по риску поведения</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сопоставляет кластеры тем жалоб с данными на уровне продукта — структурами комиссий, документацией раскрытия и показателями эффективности каналов продаж — для выявления причины на уровне продукта или процесса для ежеквартального обзора риска поведения директора по комплаенсу.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Тематический анализ жалоб выявляет предмет обращений, но не первопричину на уровне продукта.
+
+Связать кластер жалоб с конкретным недостатком раскрытия, ошибкой в расчёте комиссий или практикой канала продаж требуется дополнительное объединение данных, выполняемое вручную после того, как тема приобретает достаточный масштаб для расследования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает кластеры тем жалоб, сопоставляет каждый кластер со структурами комиссий по продуктам, версиями документации раскрытия и данными об эффективности каналов продаж.
+
+Он определяет наиболее вероятную причину на уровне продукта или процесса для каждого кластера и представляет корреляционный анализ директору по комплаенсу до ежеквартального обзора риска поведения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="sanctions-pep-screening">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Санкционная проверка и PEP</h2>
+    
+    <p class="l3-section__intent">Санкционная проверка сопоставляет клиентов, операции и контрагентов со списками санкций — SDN OFAC, списками Совета Безопасности ООН, Консолидированным списком ЕС, а также внутренними списками НБКР и ЦБ РФ — и реестрами публичных должностных лиц (PEP). По Рекомендации FATF 6 и отечественным регламентам по соблюдению санкций, проверка охватывает этап онбординга, периодический пересмотр и мониторинг транзакций в режиме реального времени. Алгоритмы сопоставления имён генерируют ложные срабатывания; каждое потенциальное совпадение требует расследования и вынесения решения. Обновления санкционных списков — после регуляторных дополнений — должны применяться в установленные сроки.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sanctions-pep-screening/sanctions-hit-investigation-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Пакет расследования по санкционному совпадению</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует пакет расследования по каждому совпадению в санкционной проверке — профиль клиента, контекст транзакции, анализ совпадения по имени и шаблон обоснования решения — для проверки комплаенс-офицером.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Каждое потенциальное совпадение при санкционной проверке требует от комплаенс-офицера расследования — изучения профиля клиента, контекста транзакции и конкретной причины совпадения — до вынесения решения о том, является ли оно истинным или ложным.
+
+Формирование контекста расследования является накладными расходами на каждое совпадение и достигает пика при обновлениях санкционных списков, когда объём резко возрастает.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент формирует пакет расследования по каждому совпадению: профиль KYC клиента, контекст последних транзакций, конкретное поле совпадения и уровень достоверности, история предыдущих решений по данному клиенту и шаблон обоснования решения.
+
+Комплаенс-офицер выносит решение, располагая полным контекстом с самого начала.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Комплаенс-офицеры выносят решение по совпадению в санкционной проверке с полным пакетом расследования — профилем KYC, контекстом транзакции, анализом совпадения, историей предыдущих решений и шаблоном обоснования — сформированным агентом в момент проверки совпадения.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент используется для формирования пакетов расследования по ≥95% потенциальных совпадений при санкционной проверке в течение 6 месяцев с момента запуска; все шесть компонентов пакета расследования заполняются в каждом запуске с момента ввода в эксплуатацию.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% пакетов, сформированных агентом, приняты комплаенс-офицерами как полные без необходимости дополнительных ручных проверок; полнота пакетов подтверждена на уровне ≥95% по результатам ежеквартальных проверок качества.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Пакет расследования доступен комплаенс-офицеру в течение 5 минут с момента назначения совпадения в сравнении с ≥20 минутами ручной сборки по каждому совпадению при прежнем подходе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sanctions-pep-screening/sanctions-list-update-impact-assessment">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Оценка воздействия обновлений санкционных списков</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент читает новые обновления санкционных списков OFAC, ЕС, ООН и отечественных регуляторов, выявляет вновь внесённые имена в активной книге клиентов и контрагентов и передаёт офицеру санкционного комплаенса оценку воздействия в пределах окна внедрения.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Обновления санкционных списков должны быть отражены в системах проверки в установленные сроки.
+
+Оценка воздействия — какие активные клиенты или контрагенты совпадают с новыми добавлениями — выполняется вручную или опирается на пакетный прогон системы проверки, который может не выполняться до следующего рабочего дня.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает новое обновление санкционного списка, извлекает добавленные имена и организации и применяет логику сопоставления имён к активным реестрам клиентов и контрагентов.
+
+Он формирует оценку воздействия в день обновления, помечая потенциальные совпадения для расследования и принятия мер офицером санкционного комплаенса до пакетного прогона системы.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sanctions-pep-screening/pep-periodic-review-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Пакет периодической проверки PEP</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует пакет углублённой проверки надлежащей осмотрительности (EDD) для клиентов-PEP по установленному графику периодической проверки — актуальный статус в реестре PEP, анализ транзакционного поведения, негативные публикации и результаты предыдущих проверок — для комплаенс-офицера.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Клиенты-PEP требуют углублённой проверки надлежащей осмотрительности в установленном цикле периодической проверки.
+
+Формирование пакета проверки — актуальный статус в реестре PEP, транзакционное поведение, негативные публикации и краткое изложение предыдущей проверки — по каждому клиенту до даты проверки является ручной подготовительной задачей для комплаенс-аналитика.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает график периодической проверки PEP, извлекает для каждого клиента актуальную классификацию в реестре, транзакционное поведение за 12 месяцев, результаты мониторинга негативных публикаций и документацию по предыдущей проверке.
+
+Он формирует пакет проверки для каждого клиента, включённого в цикл, и представляет его комплаенс-офицеру для оценки по результатам проверки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="regulatory-examination-management">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Управление регуляторными проверками</h2>
+    
+    <p class="l3-section__intent">Надзорные проверки — проводимые НБКР, НБК/АРФРД, ЦБ РФ, FCA, OCC, ФРС или FDIC в зависимости от юрисдикции — следуют определённым циклам с запросами документов, презентациями для руководства и выдачей заключений. Для банка среднего размера один цикл проверки требует 80–150 часов работы CCO и главного юридического советника и 200–400 часов — в разбивке по бизнес-линиям. Качество подготовки к проверке — скорость ответа на запросы документов, охват ожидаемых приоритетных областей, отслеживание ранее принятых обязательств — непосредственно влияет на её результаты и надзорные рейтинги. В рамках системы CAMELS или аналогичной надзорной методологии снижение рейтинга по компоненту «менеджмент» ведёт к ужесточению требований к капиталу и снижению регуляторной гибкости.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-examination-management/regulatory-examination-readiness">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка к регуляторной проверке</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает статус выполнения запросов документов при проверке, заблаговременно формирует ответы из институциональных записей, выявляет ожидаемые приоритеты проверяющего и поддерживает корпус внутренних политик для ответов на запросы сотрудников в течение всего цикла проверки.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Запрос документов проверяющего из 100–200 пунктов требует значительных ресурсов CCO и функциональных подразделений в течение нескольких недель на каждый цикл проверки.
+
+Ожидаемые приоритеты проверяющего определяются на основе институциональной памяти; предыдущие обязательства по итогам проверок отслеживаются вручную; сотрудники комплаенса тратят существенное время на поиск и проверку ответов на запросы, при этом точность варьируется в зависимости от опыта.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент отслеживает выполнение запросов документов, сопоставляет институциональные записи с каждым запросом, прогнозирует приоритетные области проверяющего по результатам предыдущих проверок и актуальным регуляторным указаниям, а также разрабатывает шаблоны ответов.
+
+RAG-корпус внутренних политик и ключевых регуляторных текстов отвечает на запросы сотрудников с указанием источников; спорные случаи передаются на рассмотрение главному юридическому советнику.
+
+CCO еженедельно проверяет статус и направляет ресурсы для устранения пробелов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">CCO управляет циклом проверки с агентским отслеживанием запросов документов, предварительно сформированными институциональными ответами и RAG-корпусом внутренних политик, обеспечивающим разрешение запросов сотрудников с указанием источников в течение всего окна проверки.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Система подготовки к проверке на базе агента активно используется не менее чем в 1 полном цикле проверки НБКР/НБК/АРРФР в течение 18 месяцев с момента запуска; RAG-корпус охватывает ≥90% актуальных внутренних политик и ключевых регуляторных текстов с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% предварительно сформированных агентом документальных ответов приняты CCO как полные без существенного дополнения; точность разрешения запросов сотрудников подтверждена на уровне ≥85% по результатам проверки качества цитируемых ответов.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл подготовки ответов на запросы документов сокращён на ≥40% в общем времени в сравнении с предыдущим циклом проверки, измеряемом с момента запроса проверяющего до ответа, одобренного CCO.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-examination-management/examination-document-request-response">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Формирование ответа на запрос документов при проверке</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент читает каждый пункт списка запроса документов от проверяющего, извлекает соответствующий документ из репозитория институциональных записей и формирует пакет подачи для проверки директора по комплаенсу (CCO), сокращая цикл ручного поиска по каждому пункту.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Запрос документов при регуляторной проверке, как правило, содержит 80–150 пунктов, охватывающих политики, процедуры, образцы транзакций, протоколы комитетов и доказательства ранее проведённых устранений.
+
+Комплаенс-команда назначает каждый пункт ответственному по направлению бизнеса, который самостоятельно находит и передаёт документ; процесс поиска и сборки может занимать три-четыре недели и требует значительных кросс-функциональных ресурсов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает список запросов документов, сопоставляет каждый пункт с институциональным репозиторием документов с использованием семантического поиска и извлекает актуальную версию.
+
+Он формирует пакет подачи по каждому пункту запроса с указанием источников, помечает пункты, по которым соответствующий документ не найден, и представляет собранный пакет CCO для проверки перед передачей проверяющему.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-examination-management/examination-findings-pattern-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ паттернов результатов регуляторных проверок</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент кластеризует результаты проверок за несколько циклов по первопричине, направлению бизнеса и регуляторной базе, выявляя системные паттерны, которые CCO может устранить превентивно до следующей проверки.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Результаты проверок документируются по каждой проверке и прорабатываются индивидуально.
+
+Системные паттерны — одна и та же первопричина, генерирующая замечания в трёх последовательных проверках, или замечания, сосредоточенные в конкретном направлении бизнеса по определённой регуляторной базе, — видны только при кросс-проверочном анализе, который не производится на регулярной основе.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает архив замечаний по проверкам за скользящий пятилетний период, применяет кластеризацию первопричин по описаниям замечаний, сопоставляет каждый кластер с направлением бизнеса и регуляторной базой, выявляя системные паттерны с повторяющейся частотой.
+
+CCO получает анализ перед каждым новым циклом проверки, что позволяет целенаправленно устранять подтверждённые системные слабости до начала проверки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

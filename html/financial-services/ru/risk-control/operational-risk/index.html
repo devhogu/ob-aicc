@@ -1,0 +1,1177 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Операционный риск</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Risk &amp; Control</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Операционный риск</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Операционный риск</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Операционный риск — риск потерь вследствие неадекватных или сбойных внутренних процессов, действий персонала, систем или внешних событий; наиболее широкая категория в таксономии Базель III, охватывающая сбои процессов, мошенничество, правовой риск и потери, связанные с недобросовестным поведением. В рамках надзорных режимов НБКР и ЦБ РФ капитал под операционный риск формируется по стандартизированному подходу или подходу продвинутых измерений; DORA добавляет регуляторный уровень устойчивости для ИКТ-риска. RCSA и KRI операционализируют риск-аппетит. <strong>Возможность ИИ — выявлять межсистемные паттерны</strong> — убытки, «почти-промахи», сигналы KRI и показатели деятельности третьих сторон, — которые ручной мониторинг упускает между квартальными заседаниями комитетов.</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-loss-events-kris:checked ~ .problems-tab-bar label[for="problems-tab-loss-events-kris"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-loss-events-kris:checked ~ .problems-panel[data-tab="loss-events-kris"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-loss-events-kris"
+    value="loss-events-kris"
+    checked
+    aria-label="События потерь и KRI"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-loss-events-kris"
+      role="tab"
+      aria-controls="problems-panel-loss-events-kris"
+    >События потерь и KRI</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-loss-events-kris"
+    data-tab="loss-events-kris"
+    role="tabpanel"
+    aria-labelledby="problems-tab-loss-events-kris"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Операционные риск-события фиксируются в системе отслеживания ИТ-инцидентов, реестрах операционных рисков, тикетах service desk и уведомлениях поставщиков — каждый в своей системе с собственной таксономией. Директор по операционным рискам ежеквартально вручную синтезирует паттерны из этих источников; межсистемные кластеры — группа дефектов, связанных с развёртыванием, или концентрация банкоматного мошенничества в определённом регионе — как правило, выявляются через три–шесть месяцев после появления в данных.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Проведение RCSA — оценка исходного риска и эффективности контролей по всем бизнес-процессам — сдерживается дефицитом специалистов по операционным рискам, которые ведут каждое подразделение через процесс оценки. При наличии 30–50 бизнес-единиц, каждая из которых нуждается в ежегодной RCSA, функция хронически недообеспечена ресурсами относительно плана оценок.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Квартальный пакет для Комитета по операционным рискам — сводка убыточных событий, дашборд KRI, статус RCSA и реестр возникающих рисков — собирается из множества выгрузок систем и сопровождается вручную подготовленными комментариями в каждом цикле. Исходные данные структурированы и повторяются; формат нарратива согласован.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Функция операционного риска с непрерывным обнаружением паттернов событий переводит банк от реактивного фиксирования убытков к опережающей идентификации сигналов риска. Раннее выявление паттерна отказа — до возникновения существенного убыточного события — позволяет принять контрольные меры с кратно меньшими затратами по сравнению с устранением последствий.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Подразделы">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="loss-events-near-misses">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Убытки и «почти-промахи»</h2>
+    
+    <p class="l3-section__intent">Операционные убытки — реализованные потери от сбоев операционного риска — регистрируются в системе управления операционным риском с указанием типа события, бизнес-линии, суммы и первопричины. «Почти-промахи» — события, которые могли привести к убыткам, но не привели, — равно информативны для управления рисками, однако регистрируются менее систематично. По требованиям Базель III (подход продвинутых измерений) и Руководящим принципам ЕБА по операционному риску внутренние данные о потерях должны соответствовать минимальным стандартам качества и охватывать не менее пяти лет истории. Данные о потерях, агрегированные по портфелю, являются основным входным параметром продвинутого моделирования капитала; тематические паттерны в недавних событиях формируют основу для обновления RCSA.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/loss-events-near-misses/operational-loss-event-data-quality">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка качества данных по событиям операционных убытков</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент проверяет вновь введённые события убытков по стандартам качества данных Базель II — полнота, привязка к направлению деятельности, классификация типа события и фиксация возмещений — и возвращает офицеру по операционному риску метку качества до принятия события в базу данных AMA.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Модели капитала на основе усовершенствованного подхода к измерению (AMA) требуют данных о событиях убытков, отвечающих минимальным стандартам качества по дате, сумме, направлению деятельности, типу события и фиксации возмещений.
+
+Проблемы качества в представленных событиях убытков выявляются при ежеквартальной проверке качества данных, а не в момент ввода, что требует ретроспективных корректировок, занимающих значительное время и способных повлиять на расчёты капитала.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает вновь представленные записи о событиях убытков и применяет схему качества данных Базель II — все обязательные поля заполнены, направление деятельности привязано к регуляторной таксономии, классификация типа события соответствует описанию, валовой убыток и возмещение зафиксированы отдельно.
+
+Он возвращает метку качества с конкретными замечаниями на уровне поля офицеру по операционному риску для исправления до принятия.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/loss-events-near-misses/operational-loss-event-pattern-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ паттернов событий операционных убытков</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент кластеризует события убытков и «почти события» по первопричине, направлению деятельности и категории событий Базель II, выявляя системные паттерны для Комитета по операционному риску.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Операционные потери и инциденты типа «почти произошло» фиксируются в системе управления операционным риском по отдельности.
+Паттерны по совокупности событий — общий сбой процесса в трёх бизнес-линиях или кластер инцидентов, предшествующих существенному убытку, — становятся видны лишь при ручном просмотре аналитиком всей выборки накануне квартального комитета.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает реестр операционных потерь и инцидентов типа «почти произошло», группирует записи по коренной причине, бизнес-линии и категории событий по Базелю II и применяет выявление паттернов в разрезе времени и бизнес-единиц.
+Комитет по операционному риску получает ежемесячный дайджест паттернов с маркерами системного риска в дополнение к журналу отдельных событий.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Комитет по операционному риску получает ежемесячный дайджест паттернов — с кластеризацией событий убытков и «почти событий» по первопричине, направлению деятельности и категории событий Базель II — что позволяет принимать меры по системным сигналам риска в промежутке между формальными квартальными проверками.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Анализ паттернов агентом выполняется по всему реестру событий убытков и «почти событий» ежемесячно в течение 6 месяцев с момента запуска; ежемесячный дайджест предоставляется Комитету по операционному риску в течение ≥10 последовательных месяцев в первом году.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% системных сигналов риска, выявленных агентом, признаны существенными Комитетом по операционному риску; кластеры первопричин, определённые агентом, влекут за собой ≥2 корректирующих действия за годовой цикл.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Ежемесячный дайджест паттернов формируется в течение 3 рабочих дней с момента среза данных конца месяца, при прежнем подходе ручной предкомитетный анализ занимал ≥2 недель.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/loss-events-near-misses/near-miss-capture-programme-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ программы фиксации «почти событий»</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует реестр «почти событий» относительно совокупности событий убытков для оценки адекватности программы фиксации «почти событий», выявляя категории операционного риска и бизнес-подразделения с нетипичным уровнем «почти событий» относительно их истории убытков.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Уровень отчётности по «почти событиям» существенно варьируется в разрезе бизнес-подразделений и категорий риска.
+
+Подразделения с высокой частотой событий убытков, но низким уровнем отчётности по «почти событиям», свидетельствуют о культуре занижения показателей; функция операционного риска не может отличить подлинно низкую среду «почти событий» от нежелания отчитываться без систематического перекрёстного сопоставления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает реестр «почти событий» и базу данных событий убытков, рассчитывает соотношение «почти событий» к убыткам по бизнес-подразделению и категории событий Базель II, и выявляет подразделения с нетипичным уровнем «почти событий» относительно их совокупности убытков.
+
+Функция операционного риска получает анализ для целевого улучшения культуры отчётности по «почти событиям».</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="third-party-tprm">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Третьи стороны и TPRM</h2>
+    
+    <p class="l3-section__intent">TPRM охватывает управление и непрерывный мониторинг рисков, возникающих от вендоров, партнёров по аутсорсингу и ИКТ-провайдеров, включая цепочки суб-аутсорсинга и внутригрупповые зависимости. Статья 28 DORA обязывает регулируемые организации вести реестр всех ИКТ-провайдеров третьих сторон с определёнными информационными требованиями по каждому вендору; Постановление НБКР № 12 устанавливает аналогичные требования для аутсорсинга. Идентификация критических вендоров, должная осмотрительность в отношении договоров, непрерывный мониторинг производительности и планирование выхода — основные дисциплины TPRM. При 50–300 ИКТ-провайдерах поддержание актуального и точного реестра является существенной операционной задачей.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/third-party-tprm/tprm-exit-plan-currency-check">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка актуальности планов выхода TPRM</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент проверяет документацию планов выхода по критически важным ИКТ-вендорам на соответствие актуальным условиям договора и профилю операционных зависимостей, отмечает планы, в которых задокументированный подход к выходу не соответствует текущей среде, и передаёт результаты проверки руководителю TPRM.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>DORA требует наличия задокументированных планов выхода по критически важным ИКТ-провайдерам.
+Планы выхода составляются при заключении договора и могут не отражать изменения в операционных зависимостях — новые интеграции, расширение периметра, изменение рынка альтернативных провайдеров, — влияющие на реализуемость задокументированного подхода к выходу.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает документы планов выхода по критически важным ИКТ-вендорам, сопоставляет задокументированные шаги выхода с актуальными условиями договора, периметром услуг и перечнем интеграций, а также отмечает планы выхода, в которых задокументированный подход не соответствует действующей операционной модели.
+Руководитель TPRM получает отчёт по результатам проверки с указанием конкретных разделов плана, требующих обновления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/third-party-tprm/dora-third-party-register-extraction">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Извлечение реестра третьих сторон в рамках DORA</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент извлекает структурированные поля, предусмотренные DORA, из договоров с ИКТ-поставщиками и заполняет реестр третьих сторон со ссылками на источники, заменяя ручное чтение договора по каждому провайдеру.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>DORA требует записи реестра по каждому ИКТ-провайдеру, охватывающей периметр услуг, типы данных, цепочку суб-аутсорсинга, места обработки данных, условия выхода и SLA.
+Каждая запись предполагает чтение договора объёмом 20–100 страниц; при 50–300 провайдерах ручное извлечение в рамках цикла обновления реестра представляет собой существенную операционную нагрузку для TPRM.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ИКТ-договоры и извлекает поля, предусмотренные DORA, с помощью схема-ориентированного извлечения документов, предоставляя ссылки для каждого извлечённого поля.
+Риск-команда проверяет записи, извлечённые агентом, и уточняет неоднозначные поля, сокращая трудозатраты по каждому вендору с нескольких часов до целевой проверки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Команда TPRM ведёт реестр ИКТ-третьих сторон по DORA с помощью структурированных полей, извлечённых агентом со ссылками на исходные договоры, заменяя ручное чтение документов по каждому вендору.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Записи реестра, извлечённые агентом, используются для ≥80% ИКТ-провайдеров в следующем цикле обновления реестра в течение 18 месяцев после запуска; все поля, предусмотренные DORA, извлекаются по каждому вендору с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% полей реестра, извлечённых агентом, принимаются риск-командой без правок после целевой проверки; точность цитирования (соответствие извлечённого поля указанному пункту договора) подтверждается на уровне ≥90% при контроле качества.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Извлечение данных реестра по каждому вендору завершается в течение 30 минут после загрузки договора, тогда как при прежнем подходе ручное чтение занимало не менее 3 часов; общая продолжительность цикла обновления реестра сокращается на ≥60%.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/third-party-tprm/ict-vendor-performance-monitoring">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг результативности ИКТ-вендоров</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент агрегирует данные о выполнении SLA, записи об инцидентах и сигналы о финансовом состоянии критически важных ИКТ-вендоров и формирует ежемесячный дашборд риска поставщиков для руководителя TPRM и CRO.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Результативность критически важных ИКТ-вендоров отслеживается через отчёты по SLA, подаваемые самими вендорами и проверяемые менеджерами по работе с поставщиками.
+Сигналы, охватывающие несколько вендоров, — ситуация, когда у поставщика одновременно снижается выполнение SLA и ухудшается финансовое состояние, — не видны в рамках поповендорного цикла проверки; риск выявляется реактивно, когда инцидент с вендором инициирует проверку.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает данные о выполнении SLA, записи об инцидентах и показатели финансового состояния вендоров — кредитные рейтинги, платёжное поведение, публичную финансовую отчётность — для всех критически важных ИКТ-вендоров.
+Он рассчитывает сводный риск-балл по каждому вендору на основе показателей результативности и финансового состояния, выявляет вендоров с ухудшающимися совокупными профилями и ежемесячно направляет дашборд руководителю TPRM и CRO.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="rcsa-kri-monitoring">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">RCSA и мониторинг KRI</h2>
+    
+    <p class="l3-section__intent">RCSA — структурированная система, в рамках которой каждое бизнес-подразделение выявляет ключевые операционные риски, оценивает присущую им степень серьёзности и эффективность действующих контролей. KRI — количественные показатели, сигнализирующие об изменениях в операционной риск-среде: уровни ошибок в транзакциях, время простоя систем, текучесть персонала, частота отказов контролей — отслеживаемые по пороговым значениям, определённым в риск-аппетите. Руководящие принципы НБКР и ЦБ РФ по операционному риску требуют документированных процессов RCSA и систем KRI. Цикл RCSA, как правило, выполняется ежегодно; отчётность по KRI направляется ежемесячно в комитет по операционному риску.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/rcsa-kri-monitoring/kri-threshold-breach-alert">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Оповещение и пакет материалов о нарушении порога KRI</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает значения KRI относительно жёлтых и красных пороговых уровней в каждом отчётном цикле, формирует пакет оповещения о нарушении порога с указанием значения KRI, тренда, связанной записи риска RCSA и ссылки на протокол реагирования, а затем направляет его офицеру по операционному риску и руководителю соответствующего бизнес-подразделения.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Нарушение порогового значения KRI обязывает офицера по операционному риску провести расследование коренной причины и запустить установленный протокол реагирования.
+Пакет материалов для расследования — текущее значение KRI и тренд, связанная запись риска RCSA и протокол реагирования — формируется вручную в момент нарушения, что откладывает начало реагирования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ежемесячные отчётные данные по KRI, сравнивает каждый индикатор с его жёлтым и красным пороговыми значениями и формирует пакет оповещения для каждого нарушенного индикатора.
+Офицер по операционному риску и руководитель бизнес-подразделения получают пакет с триггерным значением, шестимесячным трендом, связанной записью RCSA и ссылкой на протокол реагирования в момент нарушения порога.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/rcsa-kri-monitoring/rcsa-facilitation-support">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Поддержка проведения RCSA</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент готовит рабочие материалы RCSA на уровне бизнес-подразделений — предварительно заполненные реестры рисков, перечень контролей и тренды KRI за предыдущий период, — позволяя офицерам по операционному риску проводить больше сессий RCSA за цикл.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Проведение RCSA требует от офицеров по операционному риску подготовки перечней рисков и контролей для каждого бизнес-подразделения до начала оценочной сессии.
+При 30–50 бизнес-подразделениях за цикл сбор данных из предыдущих RCSA, результатов аудита и данных об операционных потерях потребляет значительную часть ресурсов функции ещё до начала фасилитации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает записи предыдущих RCSA, недавние операционные потери, результаты аудита и тренды KRI для каждого бизнес-подразделения и формирует предварительно заполненный рабочий документ RCSA.
+Офицер по операционному риску использует его в качестве отправной точки фасилитируемой сессии, сокращая время подготовки и увеличивая охват сессий за цикл.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Офицеры по операционному риску проводят больше сессий RCSA за цикл, используя предварительно заполненные рабочие материалы, сформированные агентом, — включающие записи предыдущего RCSA, перечень контролей и тренды KRI, — для каждого бизнес-подразделения.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Рабочие материалы RCSA, сформированные агентом, используются в качестве отправной точки для ≥70% фасилитируемых сессий бизнес-подразделений в рамках следующего полного годового цикла RCSA в течение 18 месяцев после запуска; все три источника данных (предыдущий RCSA, операционные потери, результаты аудита, тренды KRI) интегрированы по каждому бизнес-подразделению с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% рабочих документов, сформированных агентом, получают оценку «полезно» или выше от офицеров-фасилитаторов по риску; количество сессий RCSA на одного офицера по операционному риску за цикл увеличивается не менее чем на 20% по сравнению с показателем, ограниченным временем подготовки.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Предварительно заполненный рабочий документ RCSA предоставляется в течение 2 рабочих дней после подтверждения периметра бизнес-подразделения, тогда как при прежнем подходе ручная подготовка занимала не менее 1 недели.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/rcsa-kri-monitoring/kri-rcsa-alignment-review">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка соответствия KRI и RCSA</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сопоставляет реестр KRI с реестром рисков RCSA для выявления рисков без мониторингового KRI и KRI без привязки к RCSA, после чего передаёт анализ пробелов в покрытии комитету по операционному риску.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Риски RCSA и KRI ведутся в раздельных реестрах и согласуются вручную в рамках годового цикла RCSA.
+Риски, добавленные в RCSA между годовыми циклами, могут не иметь соответствующих KRI; KRI, настроенные для устаревших рисков, могут более не соответствовать актуальным записям RCSA.
+Расхождение накапливается между годовыми циклами проверки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает актуальный реестр рисков RCSA и реестр KRI, выполняет сопоставление по категории риска и описанию, а также выявляет риски RCSA без покрывающего KRI и KRI без соответствующего риска RCSA.
+Комитет по операционному риску получает анализ пробелов в покрытии в составе квартального пакета материалов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="business-continuity-dr">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Непрерывность бизнеса и DR</h2>
+    
+    <p class="l3-section__intent">Управление непрерывностью бизнеса (BCM) и аварийное восстановление (DR) определяют способность банка поддерживать критические бизнес-функции и восстанавливать ИТ-системы после сбоя. По Статье 11 DORA и руководящим принципам НБКР по операционной устойчивости банки обязаны поддерживать протестированные BCM- и DR-планы, определять целевые показатели времени восстановления (RTO) и точки восстановления (RPO) для критических систем и тестировать их по заданным сценариям не реже одного раза в год. Документация о разборе инцидентов — с фиксацией первопричины, сроков восстановления и извлечённых уроков — является регуляторным ожиданием после любого крупного сбоя. BCP и DR-планы требуют ежегодного обновления с учётом изменений в операционной среде.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/business-continuity-dr/post-incident-review-bcp-update">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Разбор инцидента и обновление BCP</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует документацию по разбору инцидента на основе журналов восстановления и записей коммуникаций, и выявляет разделы BCP, требующие обновления, исходя из первопричины инцидента и сроков восстановления.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Документация по разбору инцидента — первопричина, хронология восстановления, извлечённые уроки — должна подготавливаться после каждого крупного операционного сбоя.
+
+Сборка на основе системных журналов, коммуникаций об инциденте и документов о восстановлении требует значительных усилий в момент, когда команда одновременно управляет устранением последствий.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает хронологию инцидента из систем мониторинга, журналов восстановления и записей коммуникаций.
+
+Он формирует документ по разбору инцидента в регуляторном формате — нарратив о первопричине, хронология восстановления в привязке к RTO/RPO и извлечённые уроки — и выявляет разделы BCP, затронутые первопричиной.
+
+Команда BCM проверяет и визирует перед направлением.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Команда BCM представляет документацию по разбору инцидента в регуляторном формате — с описанием первопричины, хронологией восстановления в соответствии с RTO/RPO, извлечёнными уроками и метками обновления BCP — сформированную агентом на основе журналов восстановления и записей коммуникаций.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент применяется для подготовки документации по разбору инцидента по ≥90% крупных операционных сбоев в течение 12 месяцев с момента запуска; метки обновления BCP применяются автоматически к каждому разбору с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% документов по разбору инцидента, подготовленных агентом, приняты командой BCM без структурной доработки до направления; разделы BCP, выявленные агентом как требующие обновления, подтверждены в ≥75% случаев при проверке.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Черновик разбора инцидента предоставляется в течение 2 рабочих дней с момента закрытия инцидента, при прежнем подходе ручная сборка занимала ≥1 недели.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/business-continuity-dr/bcp-annual-refresh-support">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Поддержка ежегодного обновления BCP</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент считывает актуальные документы BCP и сопоставляет их с текущей операционной средой — изменениями систем, организационной структуры, поставщиков — сигнализируя о разделах, требующих обновления до ежегодного пересмотра команды BCM.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежегодное обновление BCP требует от команды BCM проверки каждого раздела плана на актуальность.
+
+При наличии 10–30 документов BCP, охватывающих критически важные бизнес-функции, выявление разделов, затронутых изменениями систем, организационной структуры или зависимостей от третьих сторон, поглощает ресурсы цикла команды BCM до начала содержательной проверки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает актуальные документы BCP, сопоставляет процедуры восстановления и списки контактов с текущим реестром систем, организационной схемой и реестром поставщиков, и выявляет разделы, требующие обновления плана в связи с изменениями операционной среды.
+
+Команда BCM сосредотачивает проверку на выявленных разделах, а не проводит построчный анализ неизменённого содержания.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/operational-risk/business-continuity-dr/rto-rpo-test-results-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ результатов тестирования RTO/RPO</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует результаты тестирования RTO и RPO по всем критически важным системам за скользящие 24 месяца истории тестирования, выявляет системы с ухудшающимися показателями восстановления и предоставляет анализ руководителю BCM и CISO для приоритизации устранения недостатков.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Результаты тестирования RTO и RPO документируются по каждому учению и рассматриваются в итоговом отчёте.
+
+Динамика показателей восстановления по нескольким циклам тестирования — система стабильно достигает RTO, но со временем с нарастающей задержкой — не видна при рассмотрении результатов каждого учения по отдельности.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает результаты тестирования RTO и RPO за 24 месяца по каждой системе, рассчитывает тренд времени восстановления и долю достижения целевых показателей, и выявляет системы с ухудшающимися показателями или расширяющимся разрывом между фактическим и целевым значением.
+
+Руководитель BCM и CISO получают анализ для включения в дорожную карту устранения недостатков программы DR.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

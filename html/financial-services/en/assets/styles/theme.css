@@ -1,0 +1,39 @@
+/* @urn:           urn:financial-services:style:theme@1.0.0 */
+/* @version:       1.0.0 */
+/* @kind:          style */
+/* @description:   Financial Services brand token overrides — V11i palette (deeper navy brush, vivid green peer, deep navy GenAI label, slate eyebrow, cream flow brush). */
+/* @engine_compat: ">=1.0.0" */
+/* @last_modified: 2026-05-01 */
+
+/* ================================================================
+   THEME LAYER — Financial Services (V11i palette)
+   Overrides tokens.css :root values that differ from the neutral
+   base. Only the tokens that deviate from neutral defaults are
+   listed here. To reskin for a peer framework, swap this file.
+   ================================================================ */
+
+:root {
+
+  /* --- GenAI-enabled label — deep navy ---------------------- */
+  --genai-label:  #0a5483;
+
+  /* --- Eyebrow — slate-600 ---------------------------------- */
+  --ink-eyebrow:  #4a5568;
+
+  /* --- Brush: title (card title) — vivid blue --------------- */
+  --brush-title-start:  rgba(30, 90, 205, 0.32);
+  --brush-title-mid:    rgba(30, 90, 205, 0.12);
+
+  /* --- Brush: peer cards — vivid green ---------------------- */
+  --brush-peer-start:   rgba(85, 140, 75, 0.32);
+  --brush-peer-mid:     rgba(85, 140, 75, 0.12);
+
+  /* --- Brush: flow item names — amber / cream --------------- */
+  --brush-flow-start:   rgba(234, 179, 8, 0.34);
+  --brush-flow-mid:     rgba(234, 179, 8, 0.16);
+
+  /* --- Brush: section labels — gray ------------------------- */
+  --brush-label-start:  rgba(138, 142, 152, 0.12);
+  --brush-label-mid:    rgba(138, 142, 152, 0.04);
+
+}

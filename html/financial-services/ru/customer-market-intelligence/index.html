@@ -1,0 +1,1295 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Клиентская и рыночная аналитика</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Stylesheet load order: tokens → components → theme → layout (concern) -->
+<link rel="stylesheet" href="../assets/styles/tokens.css">
+<link rel="stylesheet" href="../assets/styles/components.css">
+<link rel="stylesheet" href="../assets/styles/theme.css">
+<link rel="stylesheet" href="../assets/styles/layouts/concern.css">
+</head>
+
+<body class="page--concern">
+
+<!-- Skip to main content (keyboard / screen-reader users) -->
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Клиентская и рыночная аналитика</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Клиентская и рыночная аналитика</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Аналитический блок «Клиентская и рыночная аналитика» формирует понимание банком собственной клиентской базы, конкурентного положения и состояния бренда. Он охватывает экономику сегментов, динамику удержания, долгосрочную ценность клиента, долю кошелька, долю рынка и репутационные сигналы — внешний аспект, на котором строятся стратегические и коммерческие решения. <strong>ИИ сокращает цикл от первичного сигнала до готового инсайта</strong>: агрегирует голос клиента в масштабе, выявляет паттерны когорт с риском оттока клиентов до наступления атрибуции и синтезирует конкурентную аналитику из публичных источников в готовые к решению нарративы для высшего руководства.</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-customer-insights:checked ~ .problems-tab-bar label[for="problems-tab-customer-insights"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-customer-insights:checked ~ .problems-panel[data-tab="customer-insights"] {
+    display: block;
+  }
+  
+  #problems-tab-market-position:checked ~ .problems-tab-bar label[for="problems-tab-market-position"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-market-position:checked ~ .problems-panel[data-tab="market-position"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-customer-insights"
+    value="customer-insights"
+    checked
+    aria-label="Клиентская аналитика"
+  >
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-market-position"
+    value="market-position"
+    
+    aria-label="Позиция на рынке"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-customer-insights"
+      role="tab"
+      aria-controls="problems-panel-customer-insights"
+    >Клиентская аналитика</label>
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-market-position"
+      role="tab"
+      aria-controls="problems-panel-market-position"
+    >Позиция на рынке</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-customer-insights"
+    data-tab="customer-insights"
+    role="tabpanel"
+    aria-labelledby="problems-tab-customer-insights"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">insights</th>
+          <td class="problems-statement">Показатели эффективности сегментов, когорты удержания, факторы оттока клиентов, долгосрочная ценность клиента и доля кошелька ведутся в разрозненных командных дашбордах. Коммерческие руководители лишены консолидированного представления об экономике клиентской базы — о динамике сегментов, деградирующих когортах и нереализованном потенциале доли кошелька.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">enablement</th>
+          <td class="problems-statement">Проверка новой гипотезы сегментации, моделирование CLV при альтернативных допущениях по удержанию или оценка потенциала роста доли кошелька в сегменте требуют привлечения нескольких аналитиков на несколько дней. Владельцы продуктов и сегментов не могут самостоятельно получить ответ на коммерческий вопрос в течение одного рабочего дня.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">automation</th>
+          <td class="problems-statement">Ежемесячные тематические отчёты по NPS и CSAT, пакеты аналитики когорт удержания, описания первопричин оттока клиентов и дашборды доли кошелька формируются вручную в каждом цикле. Повторяющаяся структура и входные данные из пайплайна делают эти материалы сильными кандидатами для сквозной автоматизированной подготовки.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">new-opps</th>
+          <td class="problems-statement">Непрерывная аналитика экономики сегментов и динамики удержания позволяет банку выявлять возможности для кросс-продаж и расширения доли кошелька за несколько недель до квартального цикла анализа. Когорты, наращивающие долю кошелька у конкурентов, фиксируются как приоритетные цели до закрытия окна возможностей.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-market-position"
+    data-tab="market-position"
+    role="tabpanel"
+    aria-labelledby="problems-tab-market-position"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">insights</th>
+          <td class="problems-statement">Рыночная доля, конкурентное ценообразование, продуктовые манипуляции конкурентов и репутационные сигналы бренда отслеживаются через разрозненные источники — периодические опросы, мониторинг прессы и аналитические отчёты. Руководству недоступна актуальная, интегрированная картина позиции банка на основных рынках и динамики восприятия бренда.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">enablement</th>
+          <td class="problems-statement">Анализ конкурентного позиционирования и оценка репутационного состояния бренда заказываются как многонедельные исследовательские проекты. Руководители стратегии и маркетинга не могут оперативно проверить гипотезы позиционирования или оценить репутационные риски планируемого продуктового или ценового манёвра.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">automation</th>
+          <td class="problems-statement">Квартальные брифинги по конкурентной разведке, отчёты по тональности бренда и комментарии к рыночной доле для материалов совета директоров формируются вручную. Паттерн агрегирования по фиксированным источникам делает эти материалы кандидатами для автоматизированной подготовки с последующим редакционным согласованием.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">new-opps</th>
+          <td class="problems-statement">Непрерывный мониторинг репутации бренда и конкурентной позиции позволяет банку действовать в отношении формирующихся рыночных ниш и репутационных уязвимостей прежде, чем они привлекут публичное внимание или внимание регуляторов. Банк, первым считывающий сигналы, занимает позицию для первого хода.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" aria-label="Обзор раздела">
+
+    <div class="bp-grid">
+
+      
+      
+      <div class="top-band" role="region" aria-label="Стратегический уровень">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Клиентская аналитика</div>
+    <h2 class="card__title card__title--lg">Сегментация клиентов <span class="card__count" aria-label="18 scenarios">(18)</span></h2>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Модели сегментации</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="customer-segmentation/index.html#behavioural-segmentation">Поведенческая сегментация <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="customer-segmentation/index.html#value-based-segmentation">Ценностная сегментация <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="customer-segmentation/index.html#needs-based-segmentation">Сегментация на основе потребностей <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="customer-segmentation/index.html#risk-tier-segmentation">Сегментация по рисковым ярусам <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Операционализация сегментации</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="customer-segmentation/index.html#segment-to-product-mapping">Сопоставление сегментов с продуктами <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="customer-segmentation/index.html#segment-migration-tracking">Отслеживание миграции по сегментам <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="customer-segmentation/index.html" tabindex="0" aria-label="Сегментация клиентов"></a>
+  
+</article>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Позиция на рынке</div>
+    <h2 class="card__title card__title--lg">Доля рынка и конкурентное позиционирование <span class="card__count" aria-label="15 scenarios">(15)</span></h2>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Измерение рыночной позиции</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="market-share-positioning/index.html#market-share-by-product">Доля рынка по продуктам <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="market-share-positioning/index.html#market-share-by-segment">Доля рынка по сегментам <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="market-share-positioning/index.html#geographic-market-share">Географическая доля рынка <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Конкурентная разведка</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="market-share-positioning/index.html#peer-product-benchmarking">Продуктовый бенчмаркинг с аналогами <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="market-share-positioning/index.html#competitor-strategic-moves">Стратегические действия конкурентов <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="market-share-positioning/index.html" tabindex="0" aria-label="Доля рынка и конкурентное позиционирование"></a>
+  
+</article>
+        
+      </div>
+      
+
+      
+      
+      
+      
+      <div class="main-row" role="region" aria-label="Цепочка создания стоимости и возможности">
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+<article class="card card--flow">
+  <div class="card__head">
+    <div class="card__eyebrow">Аналитические циклы</div>
+    <h2 class="card__title card__title--lg">Аналитические циклы <span class="card__count" aria-label="17 scenarios">(17)</span></h2>
+  </div>
+  <div class="card__body">
+    <div class="flow-sections">
+      
+      <div class="flow-section">
+        <div class="flow-section__label">Клиентская аналитика</div>
+        <ul class="flow-list" aria-label="Клиентская аналитика">
+          
+          <li class="flow-item">
+            
+            <a href="intelligence-cycles/index.html#segmentation-refresh-cycle" class="flow-item__name card-link">Цикл обновления сегментации <span class="card-link__count">(4)</span></a>
+            
+          </li>
+          
+          <li class="flow-item">
+            
+            <a href="intelligence-cycles/index.html#retention-review-cycle" class="flow-item__name card-link">Цикл обзора удержания <span class="card-link__count">(5)</span></a>
+            
+          </li>
+          
+        </ul>
+      </div>
+      
+      <div class="flow-section">
+        <div class="flow-section__label">Позиция на рынке</div>
+        <ul class="flow-list" aria-label="Позиция на рынке">
+          
+          <li class="flow-item">
+            
+            <a href="intelligence-cycles/index.html#competitive-intelligence-cycle" class="flow-item__name card-link">Цикл конкурентной разведки <span class="card-link__count">(4)</span></a>
+            
+          </li>
+          
+          <li class="flow-item">
+            
+            <a href="intelligence-cycles/index.html#brand-sentiment-cycle" class="flow-item__name card-link">Цикл тональности бренда <span class="card-link__count">(4)</span></a>
+            
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  
+  <a class="card__click-target" href="intelligence-cycles/index.html" tabindex="0" aria-label="Аналитические циклы"></a>
+  
+</article>
+        
+
+        
+        <div class="right-col">
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Клиентская аналитика</div>
+    <h3 class="card__title">Голос клиента <span class="card__count" aria-label="15 scenarios">(15)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Сигналы обратной связи</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="voice-of-customer/index.html#nps-csat-surveys">Опросы NPS и CSAT <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="voice-of-customer/index.html#complaint-data">Данные по жалобам <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="voice-of-customer/index.html#app-store-reviews">Отзывы в магазинах приложений <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Синтез и принятие мер</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="voice-of-customer/index.html#theme-extraction">Извлечение тем <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="voice-of-customer/index.html#feedback-to-priority-translation">Трансляция обратной связи в приоритеты <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="voice-of-customer/index.html" tabindex="0" aria-label="Голос клиента"></a>
+  
+</article>
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Клиентская аналитика</div>
+    <h3 class="card__title">Удержание и отток клиентов <span class="card__count" aria-label="15 scenarios">(15)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Сигналы раннего предупреждения</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="retention-churn/index.html#churn-cohort-analysis">Когортный анализ оттока <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="retention-churn/index.html#at-risk-customer-identification">Идентификация клиентов группы риска <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="retention-churn/index.html#contact-pattern-indicators">Индикаторы паттернов обращений <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Разработка корректирующих мер</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="retention-churn/index.html#save-program-design">Дизайн сохранительных программ <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="retention-churn/index.html#intervention-efficacy-tracking">Отслеживание эффективности интервенций <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="retention-churn/index.html" tabindex="0" aria-label="Удержание и отток клиентов"></a>
+  
+</article>
+          
+        </div>
+        
+
+      </div>
+      
+
+      
+      
+      <div class="below-band" role="region" aria-label="Цепочка создания стоимости и возможности">
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Клиентская аналитика</div>
+    <h3 class="card__title">Долгосрочная ценность клиента <span class="card__count" aria-label="15 scenarios">(15)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Измерение CLV</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="customer-lifetime-value/index.html#cac-ltv-payback">CAC / LTV / срок окупаемости <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="customer-lifetime-value/index.html#cohort-level-clv">CLV на уровне когорты <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="customer-lifetime-value/index.html#clv-by-segment">CLV по сегментам <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Решения на основе CLV</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="customer-lifetime-value/index.html#acquisition-channel-prioritisation">Приоритизация каналов привлечения <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="customer-lifetime-value/index.html#retention-spend-allocation">Распределение бюджета на удержание <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="customer-lifetime-value/index.html" tabindex="0" aria-label="Долгосрочная ценность клиента"></a>
+  
+</article>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Клиентская аналитика</div>
+    <h3 class="card__title">Доля кошелька <span class="card__count" aria-label="12 scenarios">(12)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Измерение доли рынка</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="wallet-share/index.html#primary-bank-relationship-share">Доля первичных банковских отношений <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="wallet-share/index.html#product-penetration-depth">Глубина продуктового проникновения <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="wallet-share/index.html#competitor-held-share-estimation">Оценка доли, удерживаемой конкурентами <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Рост доли рынка</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="wallet-share/index.html#cross-sell-opportunity-identification">Идентификация возможностей кросс-продаж <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="wallet-share/index.html" tabindex="0" aria-label="Доля кошелька"></a>
+  
+</article>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="card">
+  <div class="card__head">
+    <div class="card__eyebrow">Позиция на рынке</div>
+    <h3 class="card__title">Бренд и репутация <span class="card__count" aria-label="15 scenarios">(15)</span></h3>
+  </div>
+  <div class="card__body">
+    
+    
+    <div class="sub-groups sub-groups--row">
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Мониторинг репутации бренда</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="brand-reputation/index.html#net-promoter-brand-equity-tracking">Мониторинг NPS и капитала бренда <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="brand-reputation/index.html#social-media-sentiment">Тональность в социальных сетях и СМИ <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="brand-reputation/index.html#conduct-complaint-signals">Жалобные сигналы о поведении <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+      <div class="sub-group">
+        <div class="sub-group__label">Защита и укрепление репутации</div>
+        <div class="sub-group__items">
+          
+          <a class="card-link" href="brand-reputation/index.html#reputational-risk-early-warning">Раннее предупреждение о репутационном риске <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          
+          <a class="card-link" href="brand-reputation/index.html#crisis-communication-readiness">Готовность к кризисным коммуникациям <span class="card-link__count">(3)</span></a>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <a class="card__click-target" href="brand-reputation/index.html" tabindex="0" aria-label="Бренд и репутация"></a>
+  
+</article>
+        
+      </div>
+      
+
+    </div>
+
+  </main>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+  <div class="scenarios-header-row">
+    <div class="scenarios-eyebrow">Сценарии</div>
+    <h2 class="scenarios-heading">Сценарии</h2>
+  </div>
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/customer-commercial-metrics-digest">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Дайджест клиентских и коммерческих метрик</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Клиентские и коммерческие KPI — NPS, темп привлечения, уровень оттока, эффективность сегментов, структура каналов, реализация ценообразования и проникновение продуктов — агрегируются еженедельно в ориентированный на принятие решений дайджест для директора по клиентскому опыту, директора по маркетингу, руководителя розничного бизнеса и их команд. Агент выявляет аномалии относительно тренда, связывает коррелирующие метрики с гипотезами о первопричинах и формирует очередь решений.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Еженедельный коммерческий дашборд формируется вручную аналитическими командами из выгрузок BI-систем. Аномалии видны лишь тем, кто целенаправленно анализирует данные; сопутствующие метрики не связаны между собой; пункты для решений теряются в объёме информации. Директор по клиентскому направлению и руководитель розничного блока тратят начало каждой недели на восстановление контекста перед совещанием по коммерческому обзору.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент агрегирует клиентские и коммерческие KPI из исходных систем, выявляет аномалии относительно скользящего тренда, связывает сопутствующие метрики с гипотезами о первопричинах и формирует очередь решений для обзора клиентским и коммерческим руководством. Коммерческое руководство реагирует на выявленные сигналы; агент агрегирует данные и обнаруживает отклонения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Директор по клиентскому направлению и коммерческое руководство получают еженедельный дайджест клиентских и коммерческих метрик с выделенными аномалиями, связанными сопутствующими показателями и сформированной очередью решений — что позволяет сосредоточить совещание по коммерческому обзору на принятии решений.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент доставляет дайджест клиентских и коммерческих метрик для ≥90% еженедельных коммерческих обзорных циклов на протяжении ≥12 последовательных недель в течение 6 месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% отмеченных аномалий подтверждены как требующие действий директором по клиентскому опыту или руководителем розничного бизнеса; гипотезы о первопричинах подтверждены как достоверные по направлению в ≥80% случаев, проверенных коммерческим руководством.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время подготовки коммерческой отчётности и восстановления контекста в рамках цикла сокращено с 2–3 дней ручной выгрузки BI, сборки данных и подготовки предсовещательного брифинга до ≤2 часов на изучение дайджеста для руководства.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/customer-contact-root-cause-intelligence">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Аналитика первопричин клиентских обращений</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Классифицирует каждое клиентское обращение по каналам в детализированные категории первопричин, выявляет предотвратимые обращения и клиентов с повторными обращениями, предоставляет управленческий дашборд с прозрачными инвестиционными приоритетами.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Банк ежедневно фиксирует сотни клиентских обращений по телефону, электронной почте, в чате, отделениях и мобильном приложении, однако присваивает им укрупнённые, канально-специфичные категории, не отражающие реальную причину обращения. Руководство не может ответить на вопросы, определяющие приоритеты: какие обращения предотвратимы, какие клиенты обращаются повторно, какие продукты генерируют непропорционально большой объём.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Система ИИ обрабатывает каждое взаимодействие и формирует управленческий дашборд — превращая тысячи кейсов в управленческую аналитику. Пакетная аналитика по историческим данным выявляет кластеры предотвратимых обращений и клиентов с повторными обращениями.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Основные драйверы предотвратимых обращений еженедельно предоставляются руководству операционного блока и продуктовых направлений.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Дашборд первопричин изучается руководителями операционного блока и продуктовых направлений в ≥3 последовательных ежемесячных цикла.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% выявленных кластеров предотвратимых обращений подтверждены как требующие действий руководством операционного блока.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл анализа первопричин сокращён с периодической ручной выборки до еженедельного автоматического формирования отчётности.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/voice-of-customer-nps-verbatim-synthesis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Голос клиента / синтез вербатимов NPS</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Вербатимы NPS и свободный текст опросов, собранные по цифровым, отделенческим, контакт-центровым и клиентским каналам, классифицируются по устойчивой тематической таксономии в каждом цикле. Агент выявляет формирующиеся темы, связывает объём тем с операционными изменениями и формирует дашборд клиентского опыта для руководителя по клиентскому опыту, продуктовых и канальных владельцев.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Банки собирают тысячи вербатимов NPS и свободного текста опросов в месяц. Тематическое кодирование выполняется вручную — силами офшорных команд или внутренних аналитиков клиентского опыта — с ежемесячным обновлением тематики, непоследовательной межкодировочной классификацией и отсутствием систематической связи между объёмом тем и операционными изменениями, такими как выпуск продуктов, изменение тарифов или сбои каналов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент классифицирует вербатимы по устойчивой тематической таксономии, выявляет формирующиеся темы, ещё не вошедшие в таксономию, и связывает сдвиги в объёме тем с операционными изменениями периода. Результат — дашборд клиентского опыта для руководителя по клиентскому опыту, продуктовых и канальных владельцев. Аналитики клиентского опыта проверяют обнаружения формирующихся тем и принимают решение об обновлении таксономии; классификацию и обнаружение выполняет агент.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Руководитель по клиентскому опыту, продуктовые и канальные владельцы получают стабильно классифицированный дашборд клиентского опыта в каждом цикле — с выявленными формирующимися темами и объёмом тем, привязанным к операционным изменениям, — что обеспечивает реагирование на сигналы клиентского опыта в том же цикле, в котором они возникают.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент классифицирует вербатимы и предоставляет дашборд клиентского опыта для ≥90% ежемесячных циклов проверки клиентского опыта в течение ≥6 последовательных месяцев в рамках 9 месяцев после ввода в эксплуатацию; классификация охватывает все активные каналы (цифровой, отделение, контакт-центр, клиентский).</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Межцикловая согласованность тематической классификации ≥90% по устойчивым темам таксономии; формирующиеся темы подтверждены руководителем по клиентскому опыту как действительно новые в ≥80% случаев; связь с операционными изменениями подтверждена как направленно точная в ≥80% отмеченных случаев.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл тематического анализа клиентского опыта сокращён с ежемесячного ручного кодирования с лагом 3–4 недели до еженедельной агентской классификации с лагом ≤48 часов от сбора вербатима до доступности дашборда.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/peer-bank-competitive-intelligence">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Конкурентная разведка по банкам-аналогам</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Поддерживается непрерывное видение конкурентной разведки по банкам-аналогам: звонки по результатам финансовой отчётности, документы Pillar 3 и регуляторные Filing, публикуемые тарифные доски по депозитам и кредитам, изменения сети отделений и банкоматов, анонсированные запуски продуктов. Агент синтезирует звонки по результатам отчётности аналогов в сопоставимый нарративный формат, отслеживает ценовые изменения по тарифным доскам аналогов, сигнализирует об изменениях в регуляторных Filing и выявляет сигналы об изменениях сети присутствия и запусках продуктов. Стратегическая и ценовая команды действуют на основе выявленных сигналов; агент поддерживает непрерывное видение.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Конкурентная разведка разрознена между командами стратегии, казначейства, продукта и ценообразования. Еженедельные ценовые опросы ведутся в таблицах. Синтез квартальной отчётности аналогов отнимает 15–25 часов аналитика в квартал. Изменения в документах Pillar 3, Call Report, FFIEC и EBA отслеживаются непоследовательно; сигналы об изменениях сети присутствия и запусках продуктов появляются эпизодически.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент поддерживает непрерывное видение конкурентной разведки по банкам-аналогам: ежеквартально синтезирует звонки по результатам отчётности аналогов в сопоставимый нарративный формат, отслеживает изменения тарифных досок по депозитам и кредитам на еженедельной основе, сигнализирует о существенных изменениях в регуляторных Filing аналогов и выявляет сигналы об изменениях сети присутствия и запусках продуктов по мере их появления. Стратегическая и ценовая команды действуют на основе выявленных сигналов; агент поддерживает непрерывное видение.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Стратегическая и ценовая команды располагают непрерывно актуализируемым видением конкурентной разведки по банкам-аналогам — с синтезом результатов отчётности, ценовыми изменениями, изменениями в регуляторных Filing, сигналами об изменениях сети присутствия и продуктах — взамен разрозненного ведения таблиц и эпизодического аналитического синтеза.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент предоставляет синтез отчётности аналога в течение 5 рабочих дней после квартального публичного выступления каждого аналога для ≥90% аналогов в охватываемой группе; еженедельный мониторинг тарифных досок поддерживается ≥12 последовательных недель в течение 6 месяцев с даты запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% синтезов отчётности аналогов приняты стратегической командой без существенных правок; флаги о ценовых изменениях подтверждены как достоверные по опубликованным тарифным доскам в ≥95% проверенных случаев.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Трудозатраты на квартальный синтез отчётности аналогов сокращены с 15–25 часов аналитика до ≤2 часов проверки стратегической командой на охватываемую группу аналогов; цикл еженедельного ценового мониторинга сокращён с ручного ведения таблицы до ≤1 часа проверки ценовой командой.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/repeat-contact-poor-outcome-correlation-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ корреляции повторных обращений и негативных исходов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Связывает клиентские обращения по всем каналам в цепочки проблем по теме и временной близости, измеряет итоговые исходы по каждой цепочке — закрытие счёта, эскалация, жалоба — и количественно оценивает стоимость обработки, относимую на паттерны повторных обращений.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Когда проблема клиента не решена полностью при первом обращении, он обращается повторно — нередко через разные каналы под разными идентификаторами тикетов — однако цепочка повторных обращений остаётся невидимой для банка, поскольку связь существует в клиентском опыте, а не в данных. Команды клиентского опыта и операций не видят, какие паттерны повторных обращений завершаются закрытием счёта или официальной жалобой.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Берётся 12 месяцев клиентских взаимодействий по всем каналам. ИИ связывает обращения по клиенту, теме и временной близости, выявляя цепочки, которые представляют собой одну проблему, некачественно обработанную несколько раз. Объединяет классификацию на уровне каждого обращения, связывание клиентского пути на уровне клиента и корреляцию с исходами для выявления ведущих паттернов повторных обращений, обусловливающих закрытие счетов и официальные жалобы.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Выявить ведущие паттерны повторных обращений, обусловливающие закрытие счетов и официальные жалобы.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Анализ повторных обращений внедрён по ≥2 каналам; ежемесячно рассматривается операционным руководством.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% паттернов высокорисковых цепочек подтверждены как системные владельцами каналов при проверке.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Выявление паттернов повторных обращений переведено с квартального ретроспективного анализа на ежемесячный автоматизированный выпуск.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/customer-health-score-synthesis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Показатель здоровья клиента и приоритизация удержания</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент синтезирует поведенческие, продуктовые и сервисные сигналы в непрерывный показатель здоровья клиента, формируя приоритизированный рейтинг портфеля для удержания по степени срочности.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Сложность"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Приоритизация удержания зависит от оценки клиентского менеджера по своей книге. Клиенты с наибольшим риском оттока клиентов не всегда получают максимальное внимание; высокоценные клиенты на начальной стадии ухода могут оставаться без контакта вплоть до подтверждения их ухода.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает транзакционную активность, глубину продуктового взаимодействия, давность сервисных обращений и динамику остатков для каждого клиента и формирует показатель здоровья, обновляемый еженедельно. Клиентские менеджеры и команда по удержанию используют ранжированный результат для приоритизации контактов; клиенты наивысшего риска с высокой ценностью получают выход на связь в пределах окна принятия решения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Каждый клиент в управляемом портфеле имеет еженедельно обновляемый показатель здоровья, синтезированный из поведенческих, продуктовых и сервисных сигналов, обеспечивая клиентским менеджерам и команде по удержанию непрерывно обновляемую основу для приоритизации контактов.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Показатель здоровья агента охватывает всю управляемую клиентскую базу и обновляется еженедельно в течение ≥48 последовательных недель в пределах 12 месяцев с момента запуска; клиентские менеджеры подтверждают использование ранжированного результата для ≥80% решений о контакте по удержанию.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Уровень оттока клиентов среди клиентов, получивших проактивный контакт по удержанию, инициированный на основе оценки, как минимум на 25% ниже предшествующего реактивного базового уровня; прогностическая точность показателя здоровья (AUC ≥0,72) подтверждена на удержанной когорте за 6 месяцев.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Первый контакт по удержанию с клиентами наивысшего риска с высокой ценностью сдвинут с момента получения уведомления об уходе на ≥6 недель до подтверждённого оттока клиентов для ≥80% верхнего дециля по рейтингу риска.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+  
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

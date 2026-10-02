@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPOM Control Plane Map</title>
+  <link rel="stylesheet" href="../../assets/styles/tokens.css">
+  <link rel="stylesheet" href="../../assets/styles/components.css">
+  <link rel="stylesheet" href="prototype.css">
+</head>
+<body>
+  <main class="prototype-shell">
+    <nav class="prototype-nav" aria-label="Prototype views">
+      <a href="../../index.html">STS Framework</a>
+      <a href="index.html">Prototype Lab</a>
+      <a aria-current="page" href="01-control-plane.html">Control Plane</a>
+      <a href="02-service-lifecycle.html">Portfolio Lifecycle</a>
+      <a href="03-portfolio-operating-model.html">Operating Model</a>
+    </nav>
+
+    <header class="prototype-hero">
+      <div>
+        <p class="eyebrow">View 01</p>
+        <h1>SPOM as a portfolio control plane</h1>
+        <p>The control plane does not run the services itself. It exposes the front door, stores the portfolio state, applies policies, schedules investment, and runs controller loops across Managed Services.</p>
+      </div>
+      <aside class="prototype-note">
+        <strong>Visual metaphor</strong>
+        <p>SPOM behaves like a control plane. Managed Services behave like managed resources. Actual platform services remain the runtime capability.</p>
+      </aside>
+    </header>
+
+    <section class="workbench">
+      <div class="visual-stage">
+        <div class="control-plane">
+          <svg class="connector-svg" viewBox="0 0 1200 760" aria-hidden="true">
+            <path d="M230 190 C400 110, 760 110, 955 190" />
+            <path d="M230 330 C390 420, 780 420, 955 330" />
+            <path d="M600 265 C610 390, 610 480, 600 610" />
+            <line x1="210" y1="550" x2="990" y2="550" />
+          </svg>
+          <div class="plane-title">
+            <h2>SPOM control plane</h2>
+            <span>portfolio-level governance and orchestration</span>
+          </div>
+
+          <div class="plane-grid">
+            <div class="plane-column">
+              <button class="node-button" data-node="front-door" aria-pressed="true">
+                <strong>Service front door</strong>
+                <small>intake, request, demand, registration</small>
+              </button>
+              <button class="node-button" data-node="admission">
+                <strong>Admission policy</strong>
+                <small>minimum standard to become shared</small>
+              </button>
+              <button class="node-button" data-node="assurance">
+                <strong>Assurance gate</strong>
+                <small>risk, evidence, audit, exceptions</small>
+              </button>
+            </div>
+
+            <div class="state-store">
+              <button class="node-button" data-node="state-store">
+                <strong>Portfolio state store</strong>
+                <small>catalog, ownership, lifecycle, health, cost, risk, maturity</small>
+              </button>
+              <button class="node-button" data-node="api">
+                <strong>SPOM API</strong>
+                <small>one common interface into the shared-services portfolio</small>
+              </button>
+            </div>
+
+            <div class="plane-column">
+              <button class="node-button" data-node="scheduler">
+                <strong>Portfolio scheduler</strong>
+                <small>priority, capacity, funding, roadmap</small>
+              </button>
+              <button class="node-button" data-node="controllers">
+                <strong>Controller loops</strong>
+                <small>control drift and trigger improvement</small>
+              </button>
+              <button class="node-button" data-node="signals">
+                <strong>Health signals</strong>
+                <small>SLOs, incidents, adoption, usage, economics</small>
+              </button>
+            </div>
+          </div>
+
+          <div class="msm-zone">
+            <h3>Managed Services inside the portfolio</h3>
+            <div class="msm-packages">
+              <button class="node-button msm-package" data-node="msm-ci">
+                <strong>CI/CD Platform Managed Service</strong>
+                <small>standard delivery capability</small>
+              </button>
+              <button class="node-button msm-package" data-node="msm-db">
+                <strong>Database Platform Managed Service</strong>
+                <small>managed data runtime</small>
+              </button>
+              <button class="node-button msm-package" data-node="msm-obs">
+                <strong>Observability Managed Service</strong>
+                <small>logs, metrics, traces</small>
+              </button>
+              <button class="node-button msm-package" data-node="msm-id">
+                <strong>Identity Integration Managed Service</strong>
+                <small>access and federation service</small>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="detail-panel" aria-live="polite">
+        <p class="eyebrow" id="detail-kicker">Control element</p>
+        <h2 id="detail-title">Service front door</h2>
+        <p id="detail-body">The service front door is where demand enters SPOM: new shared-service candidates, requests, subscriptions, changes, exceptions, and consumer needs.</p>
+        <dl>
+          <div>
+            <dt>Control-plane role</dt>
+            <dd id="detail-role">Receives and normalizes demand.</dd>
+          </div>
+          <div>
+            <dt>SPOM behavior</dt>
+            <dd id="detail-behavior">Routes work to admission, catalog, scheduling, governance, or service operations.</dd>
+          </div>
+          <div>
+            <dt>Managed Service relation</dt>
+            <dd id="detail-msm">Every Managed Service should expose its consumer-facing entry points through this layer.</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    const details = {
+      "front-door": ["Control element", "Service front door", "The service front door is where demand enters SPOM: new shared-service candidates, requests, subscriptions, changes, exceptions, and consumer needs.", "Receives and normalizes demand.", "Routes work to admission, catalog, scheduling, governance, or service operations.", "Every Managed Service should expose its consumer-facing entry points through this layer."],
+      "admission": ["Policy element", "Admission policy", "Admission defines what a service must satisfy before it can be treated as shared: owner, catalog entry, support path, service levels, controls, and lifecycle state.", "Prevents unmanaged services from being labeled shared.", "Checks readiness and records exceptions when a service is not fully mature.", "A Managed Service is the package assessed by the admission policy."],
+      "assurance": ["Governance element", "Assurance gate", "Assurance verifies that risk, audit, continuity, security, evidence, and ownership concerns are visible and reviewable.", "Makes control evidence part of the operating model.", "Turns reviews, findings, and exceptions into traceable portfolio actions.", "Each Managed Service carries the evidence and control profile for one service."],
+      "state-store": ["State element", "Portfolio state store", "The state store is the source of truth for what shared services exist, who owns them, what state they are in, and how healthy they are.", "Maintains the observed state of the portfolio.", "Stores service metadata, lifecycle, health, economics, risk, maturity, and dependencies.", "Each Managed Service contributes one structured service record."],
+      "api": ["Interface element", "SPOM API", "The SPOM API is the conceptual uniform interface into the portfolio: catalog browsing, lifecycle changes, policy checks, reporting, and governance workflows.", "Makes the portfolio addressable through common operations.", "Separates consumers from individual team-specific process variation.", "Managed Services become addressable resources through this interface."],
+      "scheduler": ["Decision element", "Portfolio scheduler", "The scheduler translates demand, risk, capacity, and strategy into sequencing: what to fund, onboard, improve, or retire next.", "Allocates attention and investment.", "Balances business demand, technical risk, capacity, and service maturity.", "Managed Services are scheduled for onboarding, maturity uplift, or retirement."],
+      "controllers": ["Loop element", "Controller loops", "Controller loops compare desired portfolio standards with observed service reality, then trigger corrective actions.", "Controls drift.", "Creates actions for owners, governance forums, platform teams, or improvement backlogs.", "Each Managed Service is continuously checked against portfolio expectations."],
+      "signals": ["Telemetry element", "Health signals", "Health signals tell SPOM whether services are fit for purpose: reliability, incidents, adoption, demand, cost, risk, maturity, and consumer experience.", "Feeds observed state.", "Turns operational facts into portfolio decisions.", "Each Managed Service publishes health signals in a common shape."],
+      "msm-ci": ["Managed Service", "CI/CD Platform Managed Service", "A standardized package for delivery pipelines, templates, runners, release paths, support, controls, and service levels.", "Managed resource in the portfolio.", "Receives standards and reports health back to SPOM.", "The actual CI/CD tooling remains the runtime service."],
+      "msm-db": ["Managed Service", "Database Platform Managed Service", "A standardized package for managed database offerings, provisioning, backups, patching, capacity, support, and controls.", "Managed resource in the portfolio.", "Receives funding, risk, and maturity decisions from SPOM.", "The actual database platform remains the runtime service."],
+      "msm-obs": ["Managed Service", "Observability Managed Service", "A standardized package for logs, metrics, traces, alerting, dashboards, retention, support, and service ownership.", "Managed resource in the portfolio.", "Publishes adoption and reliability signals to SPOM.", "The actual observability stack remains the runtime service."],
+      "msm-id": ["Managed Service", "Identity Integration Managed Service", "A standardized package for federation, access patterns, request paths, controls, and operational support.", "Managed resource in the portfolio.", "Carries control evidence and exception states.", "The actual identity integrations remain the runtime service."]
+    };
+
+    document.querySelectorAll("[data-node]").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll("[data-node]").forEach((item) => item.setAttribute("aria-pressed", "false"));
+        button.setAttribute("aria-pressed", "true");
+        const item = details[button.dataset.node];
+        document.getElementById("detail-kicker").textContent = item[0];
+        document.getElementById("detail-title").textContent = item[1];
+        document.getElementById("detail-body").textContent = item[2];
+        document.getElementById("detail-role").textContent = item[3];
+        document.getElementById("detail-behavior").textContent = item[4];
+        document.getElementById("detail-msm").textContent = item[5];
+      });
+    });
+  </script>
+</body>
+</html>

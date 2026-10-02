@@ -1,0 +1,1151 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Model risk</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Risk &amp; Control</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Model risk</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Model risk</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Model risk is the potential for adverse consequences from decisions based on models that are incorrect or misused. Under SR 11-7 (Fed/OCC) and equivalent EBA guidelines, every model in use must be inventoried, validated by an independent function, and monitored for performance on a continuous basis. The model inventory spans credit risk (PD, LGD, EAD, IFRS 9 staging), market risk (VaR, Greeks), liquidity stress, AML transaction monitoring, fraud scoring, and increasingly, machine learning models. <strong>The GenAI opportunity is to automate the governance overhead</strong> — inventory reconciliation, validation finding synthesis, and performance monitoring — while enabling the model risk function to cover more models per cycle with the same headcount.
+</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-model-lifecycle-validation:checked ~ .problems-tab-bar label[for="problems-tab-model-lifecycle-validation"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-model-lifecycle-validation:checked ~ .problems-panel[data-tab="model-lifecycle-validation"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-model-lifecycle-validation"
+    value="model-lifecycle-validation"
+    checked
+    aria-label="Model lifecycle validation"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-model-lifecycle-validation"
+      role="tab"
+      aria-controls="problems-panel-model-lifecycle-validation"
+    >Model lifecycle validation</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-model-lifecycle-validation"
+    data-tab="model-lifecycle-validation"
+    role="tabpanel"
+    aria-labelledby="problems-tab-model-lifecycle-validation"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Model validation findings across the portfolio arrive sequentially — one validation report per model — and the Model Risk Committee reviews each individually. Systemic weaknesses visible only in aggregate — a consistent documentation gap across retail PD models, a shared data lineage issue in IFRS 9 staging models, a recurring conceptual soundness challenge in machine learning models — surface only when a validator notices the pattern across several reports.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Model inventory maintenance — reconciling the inventory register against production deployments to identify shadow models and stale validation records — requires analysts to cross-reference the model inventory against technology deployment records, data science code repositories, and vendor contract registers. The exercise reveals gaps; addressing them requires the model risk team to initiate validation and remediation workflows across the originating business units.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Model risk committee packs — inventory status, validation pipeline, finding severity distribution, and annual validation coverage — are assembled manually from model risk management system exports each cycle. The format is consistent; the data is structured.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">A model risk function with systematic inventory reconciliation and portfolio-level finding synthesis can demonstrate SR 11-7 compliance to supervisors with evidence that goes beyond the individual model validation report. That portfolio governance maturity is increasingly assessed in regulatory model risk reviews; gaps — particularly shadow models and lapsed validations — carry capital implications and enforcement risk.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Sub-concerns">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="model-inventory-governance">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Model inventory &amp; governance</h2>
+    
+    <p class="l3-section__intent">The model inventory is the master register of every model in production use — covering the model&#39;s purpose, owner, development date, validation status, approval decision, and monitoring plan. SR 11-7 requires the inventory to be comprehensive and current; regulators expect to be able to walk from a business decision to the models informing it and from each model to its validation history. Shadow models — spreadsheet tools and vendor outputs that function as models but are not registered — are the most common inventory gap identified in regulatory model risk reviews. Maintaining a current, accurate inventory requires systematic reconciliation against technology and vendor records.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/model-inventory-documentation-completeness">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Inventory &amp; Documentation Completeness Check</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent scans the model inventory against the MRM policy documentation standard, flags gaps per model, and generates the completeness report for the Chief Model Risk Officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Model documentation completeness — development documentation, validation reports, approval records, and ongoing monitoring plans — is reviewed manually against the MRM policy standard.
+With 80–200 models in a typical bank&#39;s inventory, the completeness audit is a periodic exercise that misses interim gaps between review cycles.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the model inventory and associated documentation repositories, applies the MRM policy schema as a completeness checklist, flags missing or stale documents per model, and produces a completeness report ranked by regulatory priority.
+The Chief Model Risk Officer reviews gaps and assigns owners for remediation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The Chief Model Risk Officer manages model documentation completeness from an agent-generated completeness report — applying the MRM policy standard across the full inventory — rather than a periodic manual audit.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent completeness check run across 100% of model inventory entries at least quarterly within 6 months of go-live; MRM policy schema applied as the completeness checklist in every run from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of agent-flagged documentation gaps confirmed as genuine by the Chief Model Risk Officer on review; interim documentation gap rate between annual reviews reduced by ≥50% versus the prior periodic audit approach.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Full inventory completeness report delivered within 3 business days of inventory data cut, enabling gap remediation to begin within the same reporting month rather than at annual review.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/model-inventory-annual-attestation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Inventory Annual Attestation Support</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent pre-populates the annual model inventory attestation form for each model owner — summarising current status, validation history, monitoring plan, and outstanding findings — reducing the per-owner completion time and improving attestation response rates.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Annual model inventory attestation requires each model owner to confirm and update their model&#39;s details.
+Low response rates and incomplete submissions are common; the model risk function spends significant time chasing owners and reconciling incomplete attestations before the inventory certification is complete.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads current inventory records for each model, pre-populates the attestation form with the current status, validation date, monitoring plan citation, and open finding count.
+Model owners receive a pre-populated form requiring only confirmation or update rather than a blank template, reducing the completion burden.
+The Chief Model Risk Officer reviews exceptions before certification.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/shadow-model-identification">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Shadow Model Identification Scan</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent scans business unit systems and shared drives for spreadsheet tools and vendor outputs that meet the SR 11-7 model definition, identifies items not registered in the model inventory, and delivers a shadow model candidates list to the Chief Model Risk Officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Shadow models — spreadsheet tools and vendor outputs that function as models but are not registered in the inventory — are the most common inventory gap identified in regulatory model risk reviews.
+Identifying these requires systematic scanning of business unit systems; the current approach relies on business units self-reporting, which systematically underestimates the shadow model population.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent scans metadata from business unit shared drives and finance system exports, applies the SR 11-7 model definition criteria to identify files that function as quantitative tools producing outputs used in business decisions, and cross-references each candidate against the registered model inventory.
+The Chief Model Risk Officer reviews the candidate list and initiates inventory onboarding for confirmed shadow models.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="model-performance-monitoring">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Model performance monitoring</h2>
+    
+    <p class="l3-section__intent">Ongoing monitoring tracks each model&#39;s performance between validation cycles — measuring discrimination (Gini, KS, AUC for classification models), calibration (predicted vs actual default rates, ECL vs realized losses), and stability (PSI, CSI for input distribution shifts). SR 11-7 requires documented monitoring plans for every model, with defined escalation triggers when performance falls below acceptable bands. Performance deterioration that crosses a materiality threshold triggers an out-of-cycle validation. For credit risk models, performance deterioration coincides with macroeconomic cycle turns — precisely the moment when the model&#39;s outputs are most consequential for capital and provision planning.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-performance-monitoring/model-performance-monthly-dashboard">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Performance Monthly Dashboard</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the monthly model performance dashboard from owner-submitted monitoring reports, applying consistent metric computation and flagging models that breach defined performance thresholds for the Chief Model Risk Officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>SR 11-7 requires documented performance monitoring for every model.
+Model owners submit monitoring outputs in varying formats; the model risk function must standardise metrics, compute aggregate performance indicators, and identify threshold breaches before each monthly Model Risk Committee cycle — a manual consolidation task across 80-200 models.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads monthly monitoring submissions from model owners, standardises performance metrics by model class (Gini/KS for credit, RMSE for continuous, backtesting exception counts for market risk), flags threshold breaches, and assembles the dashboard in the committee&#39;s standard format.
+The Chief Model Risk Officer reviews flagged models before the committee pack is distributed.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-performance-monitoring/model-performance-deterioration-alert">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Performance Deterioration Alert</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors performance metric trends across the model portfolio between monthly reporting cycles, flagging models where trajectory indicates an imminent threshold breach before it is surfaced in the next scheduled report.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Performance deterioration is identified at the monthly monitoring cycle.
+A model declining steadily across three months may cross the threshold only in the fourth month; the model risk function has no signal of the developing deterioration during the intervening reporting windows.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads performance metric time series across the portfolio, applies trend analysis to identify models on a deteriorating trajectory, and flags models projected to breach performance thresholds within 90 days.
+The Chief Model Risk Officer receives the trend alert between monthly cycles, enabling proactive validation scheduling.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-performance-monitoring/model-performance-vs-macro-correlation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Performance vs Macro Correlation Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent cross-references credit model performance metrics with macroeconomic cycle indicators to identify models whose calibration is likely to deteriorate under the current macro outlook, informing the validation prioritisation schedule.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Credit risk model performance deterioration correlates with macroeconomic cycle turns, but the model risk function&#39;s validation prioritisation does not systematically factor in macro signals.
+A model calibrated in a benign credit environment may perform adequately today while the macro environment deteriorating around it; the validation team discovers the misalignment when the performance metric breaches its threshold.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads macro indicators — GDP growth, credit spreads, unemployment — alongside monthly model performance metrics for PD, LGD, and ECL models, computes the historical correlation between macro cycle and model performance, and flags models whose performance is historically correlated with the current macro trajectory.
+The Chief Model Risk Officer uses the output to front-load validation of macro-sensitive models.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="model-validation">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Model validation</h2>
+    
+    <p class="l3-section__intent">Model validation is the set of processes and activities intended to verify that models perform as expected and are appropriate for their intended use. Under SR 11-7, validation must be conducted by a function independent of model development and must include conceptual soundness review, outcome analysis, and ongoing monitoring. EBA model risk guidelines impose equivalent requirements for EU-regulated banks. Validation engagements produce formal reports with findings classified by severity; material findings must be remediated before the model can be approved for expanded use. The volume of models requiring annual or biennial validation often exceeds the capacity of the validation function.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-validation/model-development-spec-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Development Specification Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent drafts the model development specification — conceptual soundness rationale, data lineage, methodology alternatives considered, and back-test design — from the modeller&#39;s working notes and data exploration outputs.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Model development specifications are drafted by quantitative analysts after the development work is complete, with documentation quality that is inconsistent across the team.
+Validators frequently return specifications for additional conceptual soundness explanation or data lineage detail, extending the validation cycle and delaying model deployment.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the modeller&#39;s working notes, exploratory analysis outputs, and dataset documentation, and drafts the development specification in the bank&#39;s standard template — conceptual soundness argument, data lineage, methodology alternatives, benchmark comparison, and back-test design.
+The modeller reviews and fills expert judgement sections before submission to model validation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Modellers submit development specifications drafted by the agent from working notes and data exploration outputs — covering conceptual soundness, data lineage, methodology alternatives, and back-test design — for expert review rather than producing documentation after development is complete.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to draft model development specifications for ≥70% of new model and material model change submissions within 12 months of go-live; all standard template sections produced by the agent in every run from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of agent-drafted specifications accepted by Model Validation without a first-pass return for additional documentation; validation cycle length reduced by ≥20% for agent-documented models versus manually documented peers.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Development specification draft delivered within 2 business days of modeller working note submission, versus ≥1 week of post-development manual documentation under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-validation/model-validation-finding-synthesis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Validation Finding Synthesis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reads completed validation reports across a calendar year, clusters findings by category and root cause, and identifies systemic weaknesses in the bank&#39;s model development practices for the Chief Model Risk Officer&#39;s annual model risk review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Validation findings are documented in individual reports reviewed by the Model Risk Committee on a model-by-model basis.
+Systemic weaknesses — documentation shortfalls common to models built by a specific team, or recurring conceptual soundness challenges in a model class — are visible in aggregate but not in the individual report review cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads all validation reports completed in the year, extracts finding categories and root causes, clusters them by model family and development team, and identifies systemic patterns.
+The Chief Model Risk Officer uses the analysis in the annual model risk programme review and in targeted developer training planning.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-validation/validation-pipeline-capacity-planning">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Validation Pipeline Capacity Planning</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent projects the validation pipeline demand for the next 12 months — based on scheduled revalidation dates, new model submissions, and model changes — and compares it against available validation capacity, flagging capacity gaps for the Chief Model Risk Officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Validation pipeline management is performed by the model risk leadership team using the annual validation schedule.
+New model submissions and out-of-cycle revalidations are tracked individually; the aggregate pipeline demand against available validator headcount is not projected systematically, creating capacity surprises within the year.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the scheduled revalidation calendar, new model submission pipeline from development teams, and planned model change notifications.
+It projects monthly validation demand against current validator capacity, identifies months where demand exceeds capacity, and delivers the 12-month capacity plan to the Chief Model Risk Officer for resource planning.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="model-risk-reporting">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Model risk reporting</h2>
+    
+    <p class="l3-section__intent">Model risk reporting delivers the periodic view of the model risk environment to the Model Risk Committee, board risk committee, and regulatory supervisors. The report covers inventory status, validation pipeline, finding severity distribution, ongoing monitoring outcomes, and key model risk metrics (proportion of models with current validation, proportion with lapsed monitoring, material finding count by category). Under SR 11-7 and EBA guidelines, model risk must be treated as a distinct risk type with formal governance and reporting. Supervisors expect to see evidence of portfolio-level model risk management — not merely individual model approval records.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-risk-reporting/model-risk-appetite-metric-watch">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Risk Appetite Metric Watch</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors the bank&#39;s model risk appetite metrics — proportion of models with current validation, proportion with lapsed monitoring, material finding count — on a monthly basis and alerts the Chief Model Risk Officer when any metric approaches its appetite threshold.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Model risk appetite metrics are reported to the Model Risk Committee on a quarterly basis.
+A metric approaching its appetite threshold during the inter-committee period is not signalled until the next quarterly pack is prepared, limiting the function&#39;s ability to take preventive action.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the model inventory, validation pipeline, and monitoring status monthly, computes the risk appetite metrics, and delivers an automated alert when any metric is within 10 percentage points of its appetite threshold.
+The Chief Model Risk Officer receives the alert with the contributing models listed for prioritisation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-risk-reporting/model-risk-portfolio-reporting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Risk Portfolio Reporting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent clusters validation findings and performance metrics across the model portfolio, identifies systemic patterns and correlated deterioration, and assembles the Model Risk Committee pack.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Validation findings arrive sequentially per model; the Model Risk Committee reviews each individually, and systemic weaknesses visible in aggregate — documentation gaps, shared data lineage issues, recurring ML conceptual soundness challenges — surface only when a validator notices the pattern.
+Per-model performance monitoring is produced by individual owners in varying formats; correlated deterioration across models is not visible until each report is reviewed separately.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads completed validation reports and performance data across the active portfolio, standardizes metrics by model class, clusters findings by category and model family, and identifies systemic patterns and correlated deterioration.
+It assembles the Model Risk Committee pack covering portfolio coverage, validation pipeline status, finding severity distribution, and monitoring outcomes.
+The Chief Model Risk Officer reviews and adds forward judgement before distribution.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The Model Risk Committee reviews an agent-assembled portfolio pack — with validation findings clustered by category, correlated performance deterioration identified, and systemic patterns flagged — alongside individual model approval decisions.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to assemble the Model Risk Committee portfolio pack for ≥4 consecutive quarterly meetings within 18 months of go-live; finding clustering and correlated deterioration detection applied to 100% of the active validation pipeline in every run.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of systemic patterns identified by the agent rated as actionable by the Chief Model Risk Officer; correlated deterioration patterns identified by the agent lead to ≥1 thematic remediation workstream per annual cycle.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Model Risk Committee pack assembly completed within 2 business days of final quarterly validation report receipt, versus ≥5 analyst-days of manual aggregation and formatting under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/model-risk-reporting/model-risk-regulatory-reporting-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Model Risk Regulatory Reporting Pack</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the SR 11-7 and EBA model risk reporting pack for the supervisory review process — inventory coverage, validation pipeline, material findings, and monitoring status — from the model risk management system for the Chief Model Risk Officer&#39;s review and submission.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Supervisory model risk reporting requires assembling inventory metrics, validation pipeline status, and material finding counts in the prescribed format.
+The assembly draws on the model risk management system, validation report archive, and monitoring records; manual compilation across these sources consumes the model risk reporting function&#39;s time before each supervisory submission cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the model inventory, validation pipeline, and monitoring status records.
+It computes the prescribed metrics — proportion of models with current validation, proportion in monitoring, material finding count by severity — and assembles the supervisory reporting pack in the required format.
+The Chief Model Risk Officer reviews and submits.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">GenAI-enabled Banking and Financial Services Framework · v11i</footer>
+
+</div>
+
+</body>
+</html>

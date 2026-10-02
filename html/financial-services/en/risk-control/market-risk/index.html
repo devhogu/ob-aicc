@@ -1,0 +1,1130 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market risk</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Risk &amp; Control</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Market risk</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Market risk</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Market risk is the risk of loss from adverse movements in interest rates, foreign exchange rates, equity prices, and commodity prices — arising in the trading book and, for banks with structural positions, in the banking book through interest rate risk in the banking book (IRRBB). Under NBKR and CBR supervisory frameworks, market risk capital is held under Basel III standardised or Internal Models Approach (IMA) rules; daily VaR and stressed VaR reporting are core regulatory obligations. <strong>The GenAI opportunity is to eliminate the manual assembly burden</strong> — daily VaR narratives, P&L attribution, backtesting documentation, and limit utilization reports — so the market risk team's time is directed at interpretation and response rather than production.
+</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-var-sensitivity:checked ~ .problems-tab-bar label[for="problems-tab-var-sensitivity"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-var-sensitivity:checked ~ .problems-panel[data-tab="var-sensitivity"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-var-sensitivity"
+    value="var-sensitivity"
+    checked
+    aria-label="Var sensitivity"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-var-sensitivity"
+      role="tab"
+      aria-controls="problems-panel-var-sensitivity"
+    >Var sensitivity</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-var-sensitivity"
+    data-tab="var-sensitivity"
+    role="tabpanel"
+    aria-labelledby="problems-tab-var-sensitivity"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Daily VaR and sensitivity metrics are produced from the risk system, but anomaly detection — identifying an overnight VaR spike or a factor move that is statistically significant relative to trailing distributions — depends on the analyst on duty noticing the movement. Near-limit breaches and emerging concentration in a risk factor go unreported between the daily report and the next committee cycle.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Stress test re-runs — which require ad-hoc sensitivity analysis under specific market scenarios — are bottlenecked on the market risk team&#39;s modelling capacity. The CRO and ALCO cannot ask &#39;what if the KZT depreciates 15%&#39; and receive an immediate answer; each scenario request requires a modelling sprint.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">The daily VaR narrative and weekly market risk committee pack are assembled manually from risk system outputs — factor decomposition, limit utilization, backtesting exception counts — each cycle. The narrative format is consistent; the source data is structured.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Continuous limit utilization monitoring across all risk factor and desk limits gives the Head of Treasury a near-real-time view of available risk budget. Desks operating well within limits can be signalled to increase exposure; desks approaching limits receive early-warning before a breach occurs. The signal is currently available only in the weekly committee pack.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Sub-concerns">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="var-expected-shortfall">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">VaR &amp; expected shortfall</h2>
+    
+    <p class="l3-section__intent">Value-at-Risk (VaR) and Expected Shortfall (ES) are the primary statistical measures of potential market loss at a given confidence level and horizon. Under Basel III IMA, regulated banks compute daily 99th-percentile VaR and 97.5th-percentile ES across the trading book; backtesting against actual P&amp;L is a regulatory requirement with defined exception thresholds. VaR by risk factor and desk provides the granular view used in limit monitoring; aggregate ES provides the board-level capital adequacy signal.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-expected-shortfall-narrative">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">VaR &amp; Expected Shortfall Narrative</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent drafts the daily VaR and expected shortfall commentary — decomposing drivers by desk, risk factor, and portfolio — for the Market Risk Committee pack.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Daily VaR and ES figures are produced by the risk engine, but the driver commentary — which desks, risk factors, or position changes drove the move — is assembled manually.
+The commentary step adds analyst hours to a same-day reporting cycle under which timeliness is a supervisory expectation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the risk engine decomposition, maps VaR and ES movements to desk contributions and factor sensitivities, and drafts the narrative commentary in the committee&#39;s standard format.
+The market risk analyst reviews, adds judgement on unusual patterns, and releases the pack.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The market risk analyst reviews and releases the daily VaR and expected shortfall commentary — decomposing movements by desk, risk factor, and portfolio in the committee&#39;s standard format — drafted by the agent from the risk engine decomposition.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to draft daily VaR and ES narrative commentary on ≥200 business days per year within 6 months of go-live; desk contribution and factor sensitivity decomposition included in every draft from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of agent-drafted commentaries released by the market risk analyst with only minor additions before committee distribution; driver attribution accuracy confirmed at ≥95% on monthly quality checks.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Daily VaR and ES commentary draft available within 30 minutes of risk engine output publication, versus ≥90 minutes of manual assembly under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-model-backtesting-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">VaR Model Backtesting Pack</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent maintains the rolling 250-day backtesting record, generates the monthly backtesting report in Basel III traffic-light format, and drafts any required supervisory notification when the exception threshold is crossed.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The Basel III backtesting framework requires a rolling 250-day actual P&amp;L vs VaR comparison maintained in a format that identifies the traffic-light zone and supports immediate supervisory notification.
+The monthly backtesting report is assembled manually from the daily comparison records; supervisory notification drafts are prepared from scratch when exception counts breach the threshold.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent maintains the rolling daily P&amp;L vs VaR comparison, computes the exception count in the 250-day window, applies the traffic-light classification, generates the monthly report, and drafts the supervisory notification where the amber or red threshold is crossed.
+The Market Risk Officer reviews and submits.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/stressed-var-scenario-narrative">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Stressed VaR Scenario Narrative</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent drafts the stressed VaR scenario selection rationale and comparative narrative — justifying the chosen stress period, comparing stressed VaR to current VaR by risk factor, and mapping capital implications — for the Market Risk Committee quarterly pack.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Stressed VaR requires selecting a one-year stress period relevant to the bank&#39;s current portfolio.
+Justifying the stress period selection, comparing the stressed and current VaR by risk factor, and explaining capital implications requires a narrative that is drafted manually each quarter, consuming the market risk team&#39;s time before the committee pack is finalised.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the current portfolio risk-factor profile, historical stress period performance data, and prior stressed VaR narratives.
+It evaluates the stress period&#39;s relevance to the current portfolio and drafts the selection rationale and comparative narrative in the committee&#39;s standard format.
+The market risk team reviews and approves before submission.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="pl-attribution-backtesting">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">P&amp;L attribution &amp; backtesting</h2>
+    
+    <p class="l3-section__intent">P&amp;L attribution explains the daily profit or loss of each trading desk in terms of changes in underlying risk factors — decomposing performance into rate, FX, spread, and volatility drivers. Backtesting compares actual P&amp;L against the VaR estimate to test model accuracy; under Basel III IMA, five or more exceptions in 250 trading days trigger a regulatory capital add-on and supervisory review (the &#39;traffic light&#39; framework). Both attribution and backtesting documentation are regulatory requirements and must be produced daily. Reconciling attributed P&amp;L to the official finance P&amp;L adds a further data-quality step to each cycle.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/backtesting-exception-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Backtesting Exception Documentation Pack</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates the regulatory backtesting exception documentation when actual P&amp;L exceeds the VaR estimate, pre-populating the root-cause template and Basel III traffic-light status for the Market Risk Committee and supervisor.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Each VaR backtesting exception requires a documented root-cause analysis filed with the Market Risk Committee and, where the exception count triggers the Basel III traffic-light threshold, with the supervisor.
+Assembling the documentation — exception count in the rolling 250-day window, root-cause classification, and supervisor notification draft — is performed manually after the exception is identified.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent detects exceptions from the daily P&amp;L vs VaR comparison, updates the rolling 250-day exception counter, classifies the root cause from the P&amp;L attribution data, and generates the exception documentation pack including supervisor notification draft if the traffic-light threshold is crossed.
+The Market Risk Officer reviews and files.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/pl-attribution-daily-narrative">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">P&amp;L Attribution Daily Narrative</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates the daily P&amp;L attribution narrative — decomposing desk P&amp;L into rate, FX, spread, and volatility drivers — and reconciles attributed P&amp;L to the official finance P&amp;L for the Market Risk Committee.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Daily P&amp;L attribution requires the market risk team to decompose desk performance into risk-factor contributions and reconcile to the official finance P&amp;L.
+Both steps are performed manually; the reconciliation adds an additional data-quality check before the committee pack can be finalised.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the risk system factor sensitivities and daily market data moves, computes risk-factor P&amp;L attributions by desk, maps to the official finance P&amp;L, and flags reconciliation breaks above threshold.
+The market risk analyst reviews breaks and releases the narrative for the committee pack.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/pl-attribution-pattern-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">P&amp;L Attribution Pattern Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses rolling 90-day P&amp;L attribution patterns to identify systematic model misspecification — risk factors consistently over- or under-attributed — and delivers a quarterly signal to the market risk model validation team.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Daily P&amp;L attribution is reviewed for the current day but not analysed for systematic patterns across the quarter.
+Recurring attribution misses — a specific risk factor consistently under-attributed on one desk — indicate model misspecification that should trigger validation review but are not visible without time-series aggregation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads 90 days of P&amp;L attribution records, computes residual attribution error by risk factor and desk, identifies factors with systematic directional bias, and delivers a quarterly signal report to the market risk validation function for investigation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="sensitivity-greeks-monitoring">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Sensitivity &amp; Greeks monitoring</h2>
+    
+    <p class="l3-section__intent">Sensitivity analysis quantifies the change in portfolio value for a unit movement in a risk factor — interest rate delta, FX gamma, equity vega — enabling the market risk team to monitor the portfolio&#39;s directional and convexity exposure to each factor. Greeks monitoring for options-containing books tracks delta, gamma, vega, theta, and rho at desk and aggregate level. Limit frameworks for sensitivities are set alongside VaR limits; a sensitivity near-breach in a specific factor signals concentrated risk-factor exposure before it translates into a VaR breach.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/greeks-daily-position-report">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Greeks Daily Position Report</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent compiles the daily Greeks and sensitivity position report — delta, gamma, vega, theta, rho by desk and risk factor — against defined sensitivity limits for the Market Risk Committee morning pack.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Options-containing desks require daily reporting of delta, gamma, vega, theta, and rho positions relative to sensitivity limits.
+Compiling these from the risk system into the committee&#39;s standard tabular format and flagging near-limit positions is performed manually each morning, adding a production step to a same-day reporting cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the overnight Greeks output from the risk system, applies the limit framework per desk and risk factor, computes utilisation percentages, and generates the daily sensitivity report with near-limit flags.
+The market risk analyst reviews the output before the morning pack is distributed.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/sensitivity-limit-breach-escalation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Sensitivity Limit Breach Escalation Pack</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates the escalation pack when a desk crosses a sensitivity limit — pulling the position detail, breach history, and a pre-drafted trader notification — within the escalation window required by the limits policy.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>A sensitivity limit breach triggers an escalation sequence: the desk head is notified, the Market Risk Officer documents the breach, and a management action is agreed.
+Assembling the escalation documentation — position detail, limit comparison, breach history, and notification draft — delays the start of the escalation window.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent detects the breach from the daily position report, retrieves the desk position detail, breach count in the rolling period, and prior breach documentation, and generates the escalation pack including the trader notification draft.
+The Market Risk Officer reviews and sends within the policy window.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/sensitivity-risk-factor-concentration">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Sensitivity Risk-Factor Concentration Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses aggregate sensitivity positions across all desks to identify concentrated risk-factor exposures — where multiple desks hold correlated directional positions — for the CRO&#39;s weekly risk review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Desk-level sensitivity limits control individual desk exposures, but correlated directional positions across multiple desks in the same risk factor — interest rate delta concentrated in rates and credit desks simultaneously — represent an aggregate exposure that desk-level monitoring does not capture.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads all desk sensitivity positions, aggregates by risk factor, computes directional correlation across desks, and identifies risk factors where aggregate exposure across multiple desks warrants the CRO&#39;s attention beyond individual desk limit status.
+The CRO receives a weekly risk-factor concentration view alongside the standard desk-level report.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="market-risk-limits-utilization">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Market risk limits utilization</h2>
+    
+    <p class="l3-section__intent">The market risk limits framework sets position constraints at desk, product, and aggregate trading-book level — covering VaR, sensitivity, stop-loss, and concentration limits. Monitoring compliance with the limits framework is a daily obligation; breaches must be escalated within defined timeframes and reported to supervisors. Limit utilization reporting for the Market Risk Committee is typically produced weekly, with breaches and near-misses documented separately. Under BCBS 239 risk data aggregation standards, the bank must be able to produce consolidated limit utilization data across the trading book on demand.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/market-risk-limits-utilization-report">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Market Risk Limits Utilization Report</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent compiles the weekly market risk limits utilization report across all desks and limit types, highlighting near-breaches and breach documentation for the Market Risk Committee.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The weekly limits utilization report spans VaR, sensitivity, stop-loss, and concentration limits across all desks.
+Assembling utilization percentages, flagging near-limit positions, and documenting actual breaches with escalation history consumes analyst time before the committee pack is ready.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads daily limit utilization feeds across all limit types and desks, computes weekly utilization summaries, flags near-limit positions above the committee threshold, and generates breach documentation where applicable.
+The Market Risk Committee receives the assembled pack the day before the meeting.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The Market Risk Committee receives the weekly limits utilization report — spanning VaR, sensitivity, stop-loss, and concentration limits across all desks — assembled by the agent with near-breach flags and breach documentation current as of the day before the meeting.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to compile the weekly market risk limits utilization report for ≥48 consecutive weeks within 12 months of go-live; all limit types (VaR, sensitivity, stop-loss, concentration) covered across all desks from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of agent-compiled reports accepted by the Market Risk Committee secretary without manual supplementation; breach documentation completeness confirmed at ≥95% of confirmed breach events on quarterly quality review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Full limits utilization pack available to the committee secretary by close of business the day before the weekly meeting, versus same-day manual assembly that compressed committee review time.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/market-risk-limit-breach-pattern-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Market Risk Limit Breach Pattern Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses rolling 12-month limit breach history by desk, limit type, and market condition, identifying structural limit calibration issues and presenting a signal to the Market Risk Committee for limit review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Individual limit breaches are documented and escalated per event.
+Patterns in breach history — a specific desk breaching the same limit type under a defined market condition, or repeated near-breaches that suggest a limit set below normal operating requirements — require time-series analysis not produced routinely by the weekly utilisation report.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads 12 months of limit utilisation and breach records, computes breach frequency and near-breach distribution by desk and limit type, cross-references against market conditions at the time of each breach, and identifies structural patterns.
+The Market Risk Committee receives the quarterly breach pattern analysis alongside the standard utilisation report.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/limits-framework-calibration-review">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Limits Framework Calibration Review Support</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses the relationship between current limits and the bank&#39;s risk appetite, comparing utilisation distributions and capital consumption to identify limits that appear miscalibrated relative to the bank&#39;s capital allocation and strategy, as input for the annual limits review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The annual limits review is informed by the prior year&#39;s utilisation experience but does not systematically compare limits against capital allocation or business strategy.
+Limits set in a prior year&#39;s market environment may be too restrictive or too permissive relative to the current strategy and capital position.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the full year&#39;s limit utilisation distributions by desk and limit type, the current capital allocation by desk, and the annual business plan.
+It identifies limits with very low median utilisation relative to risk appetite capacity and limits where frequent near-breaches suggest under-calibration, and assembles the analysis document for the annual limits review.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">GenAI-enabled Banking and Financial Services Framework · v11i</footer>
+
+</div>
+
+</body>
+</html>

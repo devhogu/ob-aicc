@@ -2,7 +2,7 @@
 id: AICC-ORG-03-EN
 title: Solution Lifecycle Model
 status: active
-revision: 3.1
+revision: 3.2
 created: 2026-10-01
 revised: 2026-10-02
 ```
@@ -331,7 +331,7 @@ flowchart LR
 
 Figure 8: verification, deployment, the three levels of acceptance, and release.
 
-7.1. Every Feature, and the MVP of an Initiative, shall be tested by a person other than its builder in an environment that is not production before it is deployed, and the result is referenced in the Feature. The check for Risk Tier 1 and the validation by the Control Function Contacts for Risk Tier 2 and 3 attach to the Solution. They are taken in Verify of the first Feature that reaches real users or data, they cover the later Features unless a change requires a new one, which the AICC Lead shall decide and enter, with the reason, in the Solution Definition, and no deployment to real users or data comes before them.
+7.1. Every Feature, and the MVP of an Initiative, shall be tested by a person other than its builder in an environment that is not production before it is deployed, and the result is referenced in the Feature. The environment of use is the environment in which a Feature runs for its users: an environment that is not production until the Solution is deployed to its first users, and production afterwards. The check for Risk Tier 1 and the validation by the Control Function Contacts for Risk Tier 2 and 3 attach to the Solution. They are taken in Verify of the first Feature that reaches real users or data, they cover the later Features unless a change requires a new one, which the AICC Lead shall decide and enter, with the reason, in the Solution Definition, and no deployment to real users or data comes before them.
 
 A deployment to production is made under 8.3, and the access of a Solution Engineer to production is granted through the access process of the Bank. The first users are the users whom the Domain Owner names in the Solution Definition for the judgment of the Solution (7.3), and they shall be trained before use (AI Policy 2.1). The Team's final acceptance (7.3) comes before the first deployment of a Solution to its first users and before the deployment of each significant change (8.6). The release of a Solution beyond its first users is decided by the Domain Owner for Risk Tier 1 and 2 (the Executive Sponsor where the AICC Lead is the Domain Owner, Operating Model 4.4(d)), and by the Executive Sponsor for Risk Tier 3, after the check or the validation and the acceptance of the Solution (7.3), and is recorded in the release block of the Solution Definition. The Acceptance Checklist (7.4) is the record of every release beyond the first users, for a Service and a Product as for any Solution that AICC hands to a Domain.
 
@@ -393,7 +393,7 @@ Figure 9: the life of a Solution by type.
 
 ### Deployment
 
-8.3. A Feature is deployed after its check or validation (7.1). A deployment to production follows the change management of the Bank. The Solution Engineer shall raise the change in it, enter the change ticket and the test result in the Feature, and deploy through the access process of the Bank. For the first deployment of a Solution the key of the change ticket and the reference of the test are also entered in the release block of the Solution Definition. The Platform Owner provides the logging and the monitoring (AI Policy 3.5). If a deployment fails or does harm, it is rolled back as the change management of the Bank requires, and the event is handled as an incident. A deployment to production makes the Feature available to its first users, after the Team's final acceptance where 7.3(b) requires it, and the release beyond them is decided under 7.4. Figure 10 shows the flow.
+8.3. A Feature is deployed to the environment of use after its test and its check or validation (7.1). The deployment of the Solution to its first users, and of each significant change (8.6), follows the final acceptance of the Team (7.3(b)). A deployment to production follows the change management of the Bank. The Solution Engineer shall raise the change in it, enter the change ticket and the test result in the Feature, and deploy through the access process of the Bank. For the first deployment of a Solution the key of the change ticket and the reference of the test are also entered in the release block of the Solution Definition. The Platform Owner provides the logging and the monitoring (AI Policy 3.5). If a deployment fails or does harm, it is rolled back as the change management of the Bank requires, and the event is handled as an incident. The deployment of the Solution to its first users is its first deployment to production and makes the Feature available to them, and the release beyond them is decided under 7.4. Figure 10 shows the flow.
 
 ```mermaid
 flowchart LR
@@ -558,3 +558,4 @@ Figure 13: the loop of a change to a released Solution.
 | 2.9 | 2026-10-02 | The release decider where the AICC Lead is the Domain Owner; the review week of the third Iteration; the controls the model carries. | DR-2026-055 |
 | 3.0 | 2026-10-02 | Acceptance at three levels: the product owner accepts Features and Capabilities, the AICC Lead gives the final acceptance of the Team before a Solution is deployed to its first users, and the Domain Owner, or the Executive Sponsor, accepts the Solution; the accepted limit for the AICC Lead; Figures 2 and 8, the states, the review of live Solutions, and the controls table aligned. | DR-2026-056 |
 | 3.1 | 2026-10-02 | The yearly Steering of December, held in the first two weeks, sets the frame of the next year; the exception to the single Steering of the IP-week month in December. | DR-2026-057 |
+| 3.2 | 2026-10-02 | The environment of use defined in 7.1; the deployment of a Feature to the environment of use, after the final acceptance of the Team for the first users and for a significant change, and under the change management of the Bank for production (8.3). | DR-2026-058 |

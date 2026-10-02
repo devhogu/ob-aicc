@@ -15,7 +15,7 @@ revised: 2026-10-02
 
 1.2. It applies to AICC and to the Domains and Control Functions of the Bank that work with AICC.
 
-1.3. The Portfolio Management Model states how the Initiatives are taken in, funded, and stopped, and the Solution Lifecycle Model states how the work moves from the Program Backlog to the retirement of a Solution and how it is paced. They work within this Operating Model, and this Operating Model prevails. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, and the unit governance. They state no rule of their own.
+1.3. The Portfolio Management Model states how the Initiatives are taken in, funded, and stopped, and the Solution Lifecycle Model states how the work moves from the Program Backlog to the retirement of a Solution and how it is paced. They work within this Operating Model, and this Operating Model prevails. The workflows of the charter show how the loops run: the engagement, the portfolio and service delivery, the cadence, the collaboration tooling, the unit governance, and the AI risk and control. They state no rule of their own.
 
 1.4. A figure in this Operating Model illustrates a clause and states no rule of its own. Where a figure and a clause differ, the clause prevails.
 

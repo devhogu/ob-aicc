@@ -11,7 +11,7 @@ Figure 1 shows the levels of the work, the person who approves each level, and w
 ```mermaid
 flowchart TB
   SP["Strategic Priority<br/>approved by the Executive Sponsor<br/>kept in the Priorities"]
-  INI["Initiative<br/>approved by the Domain Owner, or by the Executive Sponsor<br/>above a guardrail or across Domains<br/>kept in the Portfolio Backlog"]
+  INI["Initiative<br/>approved by the Domain Owner, or by the Executive Sponsor<br/>above a guardrail, across Domains, or for enabling work<br/>kept in the Portfolio Backlog"]
   CAP["Capability<br/>approved by the AICC Lead<br/>kept in the Program Backlog"]
   FT["Feature<br/>approved by the Team at Iteration Planning<br/>closed within one PI<br/>kept in the Program Backlog, then the Iteration Backlog"]
   SOL["Solution<br/>Solution Definition approved by the Domain Owner<br/>by the Executive Sponsor where the AICC Lead built it<br/>kept in the Portfolio"]
@@ -27,7 +27,7 @@ Figure 1: the levels of the work and their owners.
 | Level | What it is | Owner who approves it | Kept in |
 | --- | --- | --- | --- |
 | Strategic Priority | A theme set with the Board | Executive Sponsor | Priorities |
-| Initiative | A business program that delivers Solutions | Domain Owner; the Executive Sponsor above a guardrail or across Domains | Portfolio Backlog |
+| Initiative | A business program that delivers Solutions | Domain Owner; the Executive Sponsor above a guardrail, across Domains, or for enabling work | Portfolio Backlog |
 | Solution | A solution or service, with a type, a Risk Tier, and a Receiver | Domain Owner approves its Solution Definition | The Portfolio |
 | Capability | A capability of a Solution | AICC Lead | Program Backlog |
 | Feature | A deliverable of a Capability, closed within one PI | The Team at Iteration Planning | Program Backlog, then Iteration Backlog |
@@ -56,13 +56,14 @@ Figure 3 shows the stream from the delivery to the close.
 ```mermaid
 flowchart LR
   DV["Delivery<br/>Capabilities<br/>and Features"] --> G4["Gate: check<br/>or validation<br/>Checker, or Control<br/>Function Contacts"]
-  G4 --> G5["Gate: business<br/>acceptance<br/>Domain Owner as<br/>the requester"]
-  G5 --> G6["Gate: release<br/>beyond the first users<br/>Domain Owner, or<br/>Executive Sponsor<br/>for Risk Tier 3"]
+  G4 --> G4B["Gate: final<br/>acceptance of the Team<br/>AICC Lead, before the<br/>first users"]
+  G4B --> G5["Gate: business<br/>acceptance<br/>Domain Owner as<br/>the requester"]
+  G5 --> G6["Gate: release<br/>beyond the first users<br/>Domain Owner, or Executive<br/>Sponsor where the AICC Lead<br/>is the Domain Owner, or<br/>for Risk Tier 3"]
   G6 --> LV["Live Solution<br/>operated, reviewed,<br/>changed"]
   LV --> G7["Gate: retirement<br/>Domain Owner, or<br/>Executive Sponsor for<br/>a Service across Domains"]
   G7 --> CL(["Closed"])
   classDef gate fill:#e8eefc,stroke:#5a6fa8,color:#111
-  class G4,G5,G6,G7 gate
+  class G4,G4B,G5,G6,G7 gate
 ```
 
 Figure 3: the stream from the delivery to the close.
@@ -74,7 +75,7 @@ flowchart LR
   IT["An item that does not<br/>continue on the main stream"] --> Q{"Why?"}
   Q -->|"waits for a person or an event<br/>outside AICC"| WT["Waiting<br/>the Dependency is named<br/>it returns to the state it came from"]
   Q -->|"there is not yet sufficient reason<br/>to proceed"| DF["Deferred<br/>the reason and the date<br/>to look at it again"]
-  Q -->|"what was learned calls<br/>for a different item"| PV["Pivoted<br/>a new Initiative at the funnel<br/>linked to the first"]
+  Q -->|"what was learned calls<br/>for a different item"| PV["Pivoted<br/>a new item linked to the first<br/>an Initiative: a new Initiative<br/>at the funnel"]
   Q -->|"the value is not seen"| RJ["Rejected<br/>a decision on the merits<br/>the lessons are kept"]
   Q -->|"error, mistake, duplicate,<br/>or a stop by a Control Function"| CN["Cancelled<br/>without a decision on the merits"]
 ```
@@ -86,7 +87,7 @@ Figure 4: the routes out of the main stream.
 | Decision | Decided by | When | Record |
 | --- | --- | --- | --- |
 | Taking an item in | AICC Lead | Proposed to Discovery | Portfolio Backlog |
-| Business case | Domain Owner; the Executive Sponsor above a guardrail or across Domains; the Control Function Contacts clear it when Risk Tier 2 or 3 is expected | End of the discovery of an Initiative | Initiative Brief with the clearances; Decision Record |
+| Business case | Domain Owner; the Executive Sponsor above a guardrail, across Domains, or for enabling work; the Control Function Contacts clear it when Risk Tier 2 or 3 is expected | End of the discovery of an Initiative | Initiative Brief with the clearances; Decision Record |
 | Pull from the Portfolio Backlog | AICC Lead | When capacity allows and the active limit permits | Portfolio Backlog |
 | Decision after the MVP | The approver of the business case | At the end of the MVP | Decision Log; Decision Record; Initiative Brief |
 | Solution Definition and Risk Tier | Domain Owner approves; the AICC Lead assigns the Risk Tier and tells the Domain Owner; for a Solution that the AICC Lead built, the Executive Sponsor approves and assigns | When the Solution is defined | Solution Definition |
@@ -99,19 +100,19 @@ Figure 4: the routes out of the main stream.
 | Production deployment, and change to a released Solution | The change management of the Bank approves; the AICC Lead decides whether a new check or validation is needed | At each production deployment and each change | The change ticket and test reference in the Feature; Solution Definition; Decision Log for a new-check decision |
 | Retirement of a Solution | Domain Owner; the Executive Sponsor for a Service across Domains | Before the Solution is Closed as retired | Solution Definition; AI Registry |
 
-Figure 5 shows who accepts, checks, and releases a Solution, and in which order.
+Figure 5 shows who accepts, checks, and releases a Solution, and in which order: the check or validation is in place before the final acceptance of the Team, which confirms it.
 
 ```mermaid
 flowchart LR
-  FA["Feature accepted<br/>product owner, the AICC Lead<br/>in light mode<br/>Iteration Review and Demo"] --> TF["Final acceptance<br/>of the Team<br/>AICC Lead"]
-  TF --> CV["Check or validation<br/>Checker, or Control Function Contacts<br/>a person other than the builder"]
-  CV --> DP["Deployed to the first users<br/>change management of the Bank"]
+  FA["Feature accepted<br/>product owner, the AICC Lead<br/>in light mode<br/>Iteration Review and Demo"] --> CV["Check or validation in place<br/>Checker, or Control Function Contacts<br/>a person other than the builder"]
+  CV --> TF["Final acceptance<br/>of the Team<br/>AICC Lead<br/>confirms the check or validation<br/>is in place"]
+  TF --> DP["Deployed to the first users<br/>change management of the Bank"]
   DP --> BA["Gate: business acceptance<br/>Domain Owner as the requester<br/>if returned, back to delivery"]
-  BA --> RL["Gate: release beyond the first users<br/>Domain Owner, or Executive Sponsor<br/>for Risk Tier 3<br/>Acceptance Checklist signed<br/>an item not met stops the release"]
+  BA --> RL["Gate: release beyond the first users<br/>Domain Owner, or Executive Sponsor<br/>for Risk Tier 3, or where the AICC Lead<br/>is the Domain Owner<br/>Acceptance Checklist signed<br/>an item not met stops the release"]
   RL --> LV["Live Solution"]
   NT["The AICC Lead does not check, validate,<br/>give the business acceptance, or release<br/>a Solution that the AICC Lead built"] -.-> BA
   classDef gate fill:#e8eefc,stroke:#5a6fa8,color:#111
-  class BA,RL gate
+  class TF,BA,RL gate
 ```
 
 Figure 5: the acceptances, the check, and the release.

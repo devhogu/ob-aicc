@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Managed Service Portfolio Lifecycle</title>
+  <link rel="stylesheet" href="../../assets/styles/tokens.css">
+  <link rel="stylesheet" href="../../assets/styles/components.css">
+  <link rel="stylesheet" href="prototype.css">
+</head>
+<body>
+  <main class="prototype-shell">
+    <nav class="prototype-nav" aria-label="Prototype views">
+      <a href="../../index.html">STS Framework</a>
+      <a href="index.html">Prototype Lab</a>
+      <a href="01-control-plane.html">Control Plane</a>
+      <a aria-current="page" href="02-service-lifecycle.html">Portfolio Lifecycle</a>
+      <a href="03-portfolio-operating-model.html">Operating Model</a>
+    </nav>
+
+    <header class="prototype-hero prototype-hero--wide">
+      <div>
+        <p class="eyebrow">Portfolio Lifecycle</p>
+        <h1>Managed Service Portfolio Lifecycle</h1>
+        <p>Service Portfolio and Operating Model governs the full lifecycle of each Managed Shared Service from onboarding to decommissioning, managing requirements, adoption, service health, maintenance, improvement, transition, and migration control.</p>
+      </div>
+    </header>
+
+    <section class="visual-stage lcm-stage">
+      <div class="state-context">
+        <section class="state-summary" aria-live="polite">
+          <p class="eyebrow" id="state-kicker">Lifecycle state</p>
+          <h2 id="state-title">Candidate</h2>
+          <p id="state-body">A service may be useful to more than one consumer, but it is not yet accepted as a shared portfolio service.</p>
+        </section>
+
+        <div class="transition-grid" aria-label="State transition cards">
+          <div class="transition-card">
+            <span>Input</span>
+            <strong id="state-input">Demand signal</strong>
+            <p id="state-input-body">A team, business unit, risk finding, or platform need suggests a capability should become shared.</p>
+          </div>
+          <div class="transition-card">
+            <span>Requirements</span>
+            <strong id="state-requirements">Decision evidence</strong>
+            <p id="state-requirements-body">Reuse potential, owner candidate, consumer need, risk, and strategic fit are understood enough to decide.</p>
+          </div>
+          <div class="transition-card">
+            <span>Transition</span>
+            <strong id="state-transition">Candidate to Admitted</strong>
+            <p id="state-transition-body">Move forward when Service Portfolio accepts the service into the shared-services portfolio path.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div>
+        <div class="lcm-machine" aria-label="Managed Service lifecycle states">
+          <div class="lcm-group lcm-group--onboarding"><span>Onboarding</span></div>
+          <div class="lcm-group lcm-group--service"><span>In service</span></div>
+          <div class="lcm-group lcm-group--transition"><span>Transition</span></div>
+
+          <button class="node-button lcm-state lcm-state--onboarding" data-state="candidate" aria-pressed="true">
+            <span>01</span>
+            <strong>Candidate</strong>
+            <small>Potential shared service</small>
+          </button>
+          <button class="node-button lcm-state lcm-state--onboarding" data-state="admitted">
+            <span>02</span>
+            <strong>Admitted</strong>
+            <small>Accepted into portfolio path</small>
+          </button>
+          <button class="node-button lcm-state lcm-state--onboarding" data-state="catalogued">
+            <span>03</span>
+            <strong>Catalogued</strong>
+            <small>Discoverable and requestable</small>
+          </button>
+          <button class="node-button lcm-state lcm-state--service" data-state="active">
+            <span>04</span>
+            <strong>Active</strong>
+            <small>Consumed and operated</small>
+          </button>
+          <button class="node-button lcm-state lcm-state--service" data-state="improving">
+            <span>05</span>
+            <strong>Improving</strong>
+            <small>Maturity uplift loop</small>
+          </button>
+          <button class="node-button lcm-state lcm-state--transition" data-state="transition-planned">
+            <span>06</span>
+            <strong>Transition Planned</strong>
+            <small>Replacement path agreed</small>
+          </button>
+          <button class="node-button lcm-state lcm-state--transition" data-state="migrating">
+            <span>07</span>
+            <strong>Migrating</strong>
+            <small>Consumers moving</small>
+          </button>
+        </div>
+      </div>
+
+      <section class="state-control-panel">
+        <div class="plane-title">
+          <h2>Control flow: <span id="control-flow-stage">Candidate</span></h2>
+        </div>
+        <div class="state-control-flow" aria-label="State-specific control flow">
+          <button class="control-step" data-control="required" aria-pressed="true">
+            <span>01</span>
+            <strong>Required State</strong>
+            <p id="control-required">Enough information exists to decide whether this should become a shared service.</p>
+          </button>
+          <button class="control-step" data-control="assessment">
+            <span>02</span>
+            <strong>Assessment</strong>
+            <p id="control-assessment">Capture candidate record, identify owner, collect demand, and run initial admission conversation.</p>
+          </button>
+          <button class="control-step" data-control="validation">
+            <span>03</span>
+            <strong>Validation</strong>
+            <p id="control-validation">Evidence shows whether the service has real reuse demand and a credible owner.</p>
+          </button>
+          <button class="control-step" data-control="decision">
+            <span>04</span>
+            <strong>Decision</strong>
+            <p id="control-decision">Reject, defer, incubate, or move the Managed Service into Admitted state.</p>
+          </button>
+        </div>
+      </section>
+
+      <section class="portfolio-lenses" aria-label="Portfolio dimensions linked to lifecycle state">
+        <div class="plane-title lens-title">
+          <h2>Portfolio Assessment: <span id="lens-state-label">Candidate</span> : <span id="lens-control-label">Required State</span></h2>
+        </div>
+
+        <div class="lens-matrix">
+          <table aria-label="Managed Service readout across portfolio lenses">
+            <thead>
+              <tr>
+                <th>Portfolio lens</th>
+                <th>Concern</th>
+                <th>Criteria</th>
+                <th>Evidence</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="dimension-readout-rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const states = {
+      candidate: {
+        title: "Candidate",
+        body: "A service may be useful to more than one consumer, but it is not yet accepted as a shared portfolio service.",
+        input: ["Demand signal", "A team, business unit, risk finding, or platform need suggests a capability should become shared."],
+        requirements: ["Decision evidence", "Reuse potential, owner candidate, consumer need, risk, and strategic fit are understood enough to decide."],
+        transition: ["Candidate to Admitted", "Move forward when Service Portfolio accepts the service into the shared-services portfolio path."],
+        control: [
+          "Enough information exists to decide whether this should become a shared service.",
+          "Collect candidate record, identify owner, check demand, and run initial admission conversation.",
+          "Evidence shows whether the service has real reuse demand and a credible owner.",
+          "Reject, defer, incubate, or move the Managed Service into Admitted state."
+        ]
+      },
+      admitted: {
+        title: "Admitted",
+        body: "The service is accepted into the shared-services path and must now satisfy Managed Service contract expectations.",
+        input: ["Accepted candidate", "Service Portfolio agrees the service should be shaped as a managed shared service."],
+        requirements: ["Managed Service contract", "Named owner, service purpose, catalog draft, support route, lifecycle state, initial controls, and onboarding backlog."],
+        transition: ["Admitted to Catalogued", "Move forward when the service can be presented to consumers with enough clarity and control."],
+        control: [
+          "A minimal Managed Service contract exists and gaps are visible.",
+          "Create service definition, assign owner, draft catalog entry, and define support/provisioning path.",
+          "Check whether the service can be understood, requested, supported, and governed at minimum level.",
+          "Approve catalog publication, hold for missing basics, or record exception."
+        ]
+      },
+      catalogued: {
+        title: "Catalogued",
+        body: "The service is discoverable and understandable through a common catalog entry.",
+        input: ["Minimum service package", "The service has enough structure to be shown in the shared-services catalog."],
+        requirements: ["Consumer readiness", "Clear offer, request path, support path, service level expectation, known owner, and consumer-facing documentation."],
+        transition: ["Catalogued to Active", "Move forward when real consumers can request and use the service through the defined paths."],
+        control: [
+          "Consumers can discover, understand, request, and get support for the service.",
+          "Publish service entry, test request path, validate support routing, and onboard first consumers.",
+          "Check request success, consumer feedback, support clarity, and catalog accuracy.",
+          "Activate, fix consumer experience gaps, or pause publication."
+        ]
+      },
+      active: {
+        title: "Active",
+        body: "The service is being consumed and operated as a shared service.",
+        input: ["Live consumption", "Consumers use the service and Service Portfolio receives operating signals."],
+        requirements: ["Operational health", "SLOs, support model, incident path, change path, dependency visibility, risk posture, and usage/cost signals."],
+        transition: ["Active to Improving", "Move into improvement when drift, demand, risk, reliability, cost, or maturity gaps need focused action."],
+        control: [
+          "The service meets expected reliability, support, control, cost, and consumer-experience levels.",
+          "Operate, support, monitor, handle incidents, manage changes, and collect health signals.",
+          "Check SLOs, incidents, demand, capacity, cost, risk, controls, and satisfaction.",
+          "Keep active, open improvement, change service level, or trigger retirement review."
+        ]
+      },
+      improving: {
+        title: "Improving",
+        body: "The service is active but requires maturity, automation, reliability, cost, control, or experience uplift.",
+        input: ["Improvement trigger", "Observed drift or strategic demand shows the service needs uplift."],
+        requirements: ["Improvement target", "Clear gap, owner, priority, success measure, funding or capacity path, and assurance expectation."],
+        transition: ["Improving to Active", "Return to Active when the improvement target is delivered and evidence confirms the new state."],
+        control: [
+          "A specific maturity, reliability, automation, control, or cost target is defined.",
+          "Prioritize work, fund if needed, deliver improvement, and update service package.",
+          "Check measurable change, residual risk, owner acceptance, and consumer impact.",
+          "Close improvement, continue next increment, escalate, or re-baseline desired state."
+        ]
+      },
+      "transition-planned": {
+        title: "Transition Planned",
+        body: "The service is still active, but Service Portfolio has decided it must be replaced, consolidated, materially upgraded, or exited through a controlled transition.",
+        input: ["Transition trigger", "A replacement, consolidation, major version change, unacceptable risk, or strategy shift requires a controlled movement away from the current service state."],
+        requirements: ["Transition plan", "Target service, consumer impact, dependency map, migration path, risk treatment, support window, and ownership are clear."],
+        transition: ["Transition Planned to Migrating", "Move forward when consumers, dependencies, risk, and target state are ready for execution."],
+        control: [
+          "The service has a clear target state and a controlled transition plan.",
+          "Assess target service readiness, impacted consumers, dependencies, data, controls, support window, and rollback needs.",
+          "Validate that migration is feasible and that risk is accepted or mitigated.",
+          "Approve migration start, defer, revise target, or return to Active/Improving."
+        ]
+      },
+      migrating: {
+        title: "Migrating",
+        body: "Consumers and dependencies are being moved to the target service, version, or replacement capability.",
+        input: ["Approved transition plan", "Service Portfolio has approved migration and the service owner is executing the movement."],
+        requirements: ["Migration control", "Consumer migration, dependency closure, residual risk, data retention, communications, and final evidence are actively tracked."],
+        transition: ["Migrating to Closed or Successor Active", "Close when consumers are moved, obligations are met, and the portfolio record points to the new service state."],
+        control: [
+          "Migration can proceed without unmanaged consumer, risk, data, or dependency impact.",
+          "Move consumers, monitor issues, update catalog, manage exceptions, and collect closure evidence.",
+          "Validate migrated consumers, residual dependencies, risk closure, and support handover.",
+          "Close old Managed Service, extend migration window, rollback, or activate successor Managed Service."
+        ]
+      }
+    };
+
+    const dimensionDetails = {
+      catalog: {
+        title: "Catalog and adoption",
+        body: "This lens asks whether shared services are discoverable, understandable, requestable, adopted, and useful to consumers.",
+        question: "Can consumers find and use the service through a standard entry point?",
+        signals: "catalog status, request types, active consumers, adoption trend, service offer maturity",
+        action: "Improve service offer, request path, consumer documentation, or onboarding workflow."
+      },
+      governance: {
+        title: "Governance and ownership",
+        body: "This lens asks whether accountability, decision rights, standards, and exceptions are clear for each Managed Service.",
+        question: "Who owns the service, who can approve changes, and who accepts risk?",
+        signals: "owner, accountable team, decision forum, exception register, lifecycle decision history",
+        action: "Clarify ownership, map decision rights, or escalate unresolved accountability."
+      },
+      reliability: {
+        title: "Operations and reliability",
+        body: "This lens asks whether the service is supportable, observable, resilient, and fit for its criticality.",
+        question: "Is the service healthy enough for the business processes that depend on it?",
+        signals: "SLOs, incidents, problems, alerts, runbooks, support queues, dependency health",
+        action: "Open reliability improvement, adjust service level, or fix support and observability gaps."
+      },
+      assurance: {
+        title: "Risk and assurance",
+        body: "This lens asks whether controls, risks, evidence, security, continuity, and audit expectations are visible and current.",
+        question: "Can the bank evidence that the shared service is controlled?",
+        signals: "risk rating, control coverage, evidence freshness, findings, exceptions, continuity state",
+        action: "Create evidence task, resolve exception, update control mapping, or trigger review."
+      },
+      economics: {
+        title: "Economics and roadmap",
+        body: "This lens asks whether the service has visible cost, value, funding, capacity, and investment logic.",
+        question: "Is the service worth sustaining, improving, consolidating, or decommissioning?",
+        signals: "cost drivers, usage, demand, roadmap priority, funding source, value evidence",
+        action: "Prioritize investment, rationalize demand, define unit economics, or plan transition."
+      }
+    };
+
+    const dimensionOrder = ["catalog", "governance", "reliability", "assurance", "economics"];
+
+    const stateReadouts = {
+      candidate: {
+        catalog: "Potential consumers and reuse pattern are visible enough to evaluate.",
+        governance: "Owner candidate, sponsor, and admission decision route are known.",
+        reliability: "Support expectations and likely criticality are roughly understood.",
+        assurance: "Initial control, data, continuity, and compliance concerns are screened.",
+        economics: "Value hypothesis, duplication reduction, and effort scale are visible."
+      },
+      admitted: {
+        catalog: "Draft service offer, request path, consumer scope, and onboarding backlog exist.",
+        governance: "Accountable owner, decision rights, exceptions, and minimum contract gaps are visible.",
+        reliability: "Support route, operational obligations, dependencies, and readiness gaps are known.",
+        assurance: "Minimum controls, risk classification, evidence needs, and exceptions are identified.",
+        economics: "Funding path, capacity demand, initial cost drivers, and roadmap priority are understood."
+      },
+      catalogued: {
+        catalog: "Published offer explains discovery, request path, documentation, and consumer guidance.",
+        governance: "Catalog ownership, approval route, standards, and accepted exceptions are visible.",
+        reliability: "Support path, service level expectation, escalation, and run readiness are clear.",
+        assurance: "Control mapping and evidence expectations are visible to assurance owners.",
+        economics: "Demand queue, funding assumptions, priority, and capacity forecast are visible."
+      },
+      active: {
+        catalog: "Adoption, request throughput, active consumers, and onboarding friction are monitored.",
+        governance: "Accountability, decision history, exceptions, and lifecycle governance are current.",
+        reliability: "SLOs, incidents, problems, alerts, support queue, and dependency health are tracked.",
+        assurance: "Controls, evidence freshness, findings, exceptions, and continuity state are current.",
+        economics: "Usage, cost drivers, value evidence, capacity, and roadmap investment are visible."
+      },
+      improving: {
+        catalog: "Consumer friction, request quality, documentation gaps, or adoption constraints are being improved.",
+        governance: "Improvement owner, priority decision, funding, and capacity accountability are explicit.",
+        reliability: "Reliability, support, automation, observability, or recovery gap is under uplift.",
+        assurance: "Control or risk gap has target evidence, acceptance path, and closure expectation.",
+        economics: "Investment case, expected value, priority, and measurable benefit are defined."
+      },
+      "transition-planned": {
+        catalog: "Consumer communication, target offer, request routing, and transition notice are prepared.",
+        governance: "Transition decision, current and target ownership, exception route, and approval path are known.",
+        reliability: "Target readiness, support window, rollback, and dependency readiness are assessed.",
+        assurance: "Risk acceptance, data, control, audit, continuity, and closure requirements are clear.",
+        economics: "Migration cost, temporary run-cost overlap, rationalization benefit, and priority are understood."
+      },
+      migrating: {
+        catalog: "Consumer movement, updated catalog routing, pending migrations, and exceptions are tracked.",
+        governance: "Migration owner, target owner, decision log, and closure approvals are current.",
+        reliability: "Migration incidents, support readiness, handover, and rollback monitoring are active.",
+        assurance: "Closure evidence, residual risk, retained data, and remaining obligations are tracked.",
+        economics: "Migration burn, cost takeout, successor funding, and residual spend are visible."
+      }
+    };
+
+    const controlStepDetails = {
+      required: {
+        label: "Required State",
+        focus: (key) => stateReadouts[currentStateKey][key],
+        evidence: (key, item) => item.signals,
+        action: (key, item) => item.action
+      },
+      assessment: {
+        label: "Assessment",
+        focus: (key, item) => `Collect and inspect the ${item.title.toLowerCase()} evidence needed for ${states[currentStateKey].title}.`,
+        evidence: (key, item) => item.signals,
+        action: (key, item) => item.action
+      },
+      validation: {
+        label: "Validation",
+        focus: (key) => `Validate that this readout is evidenced, current, and owner-accepted: ${stateReadouts[currentStateKey][key]}`,
+        evidence: (key, item) => `Check freshness, completeness, ownership, and consistency of: ${item.signals}`,
+        action: (key, item) => item.action
+      },
+      decision: {
+        label: "Decision",
+        focus: (key, item) => `Use the ${item.title.toLowerCase()} readout to decide whether this lifecycle stage can move forward, hold, improve, or escalate.`,
+        evidence: (key) => stateReadouts[currentStateKey][key],
+        action: (key, item) => item.action
+      }
+    };
+
+    let currentStateKey = "candidate";
+    let currentControlKey = "required";
+
+    function renderDimensionReadout() {
+      const control = controlStepDetails[currentControlKey];
+      document.getElementById("lens-state-label").textContent = states[currentStateKey].title;
+      document.getElementById("lens-control-label").textContent = control.label;
+      document.getElementById("control-flow-stage").textContent = states[currentStateKey].title;
+      document.getElementById("dimension-readout-rows").innerHTML = dimensionOrder.map((key) => {
+        const item = dimensionDetails[key];
+        return `
+          <tr>
+            <td><strong>${item.title}</strong></td>
+            <td>${item.question}</td>
+            <td>${control.focus(key, item)}</td>
+            <td>${control.evidence(key, item)}</td>
+            <td>${control.action(key, item)}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    function setControl(key) {
+      currentControlKey = key;
+      document.querySelectorAll("[data-control]").forEach((item) => {
+        item.setAttribute("aria-pressed", item.dataset.control === key ? "true" : "false");
+      });
+      renderDimensionReadout();
+    }
+
+    function setState(key) {
+      const state = states[key];
+      currentStateKey = key;
+      document.querySelectorAll("[data-state]").forEach((item) => {
+        item.setAttribute("aria-pressed", item.dataset.state === key ? "true" : "false");
+      });
+      document.getElementById("state-title").textContent = state.title;
+      document.getElementById("state-body").textContent = state.body;
+      document.getElementById("state-input").textContent = state.input[0];
+      document.getElementById("state-input-body").textContent = state.input[1];
+      document.getElementById("state-requirements").textContent = state.requirements[0];
+      document.getElementById("state-requirements-body").textContent = state.requirements[1];
+      document.getElementById("state-transition").textContent = state.transition[0];
+      document.getElementById("state-transition-body").textContent = state.transition[1];
+      document.getElementById("control-required").textContent = state.control[0];
+      document.getElementById("control-assessment").textContent = state.control[1];
+      document.getElementById("control-validation").textContent = state.control[2];
+      document.getElementById("control-decision").textContent = state.control[3];
+      renderDimensionReadout();
+    }
+
+    document.querySelectorAll("[data-state]").forEach((button) => {
+      button.addEventListener("click", () => setState(button.dataset.state));
+    });
+
+    document.querySelectorAll("[data-control]").forEach((button) => {
+      button.addEventListener("click", () => setControl(button.dataset.control));
+    });
+
+    setState("candidate");
+  </script>
+</body>
+</html>

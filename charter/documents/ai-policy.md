@@ -2,7 +2,7 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: active
-revision: 2.8
+revision: 2.9
 created: 2026-09-30
 revised: 2026-10-02
 ```
@@ -84,7 +84,7 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 
 ## 6. Exceptions
 
-6.1. A departure from this policy is an Exception. It is decided by the Control Function Contact for the remit concerned, is limited in time, and shall be entered in the Risks and Issues Record. A departure from a requirement set by AICC alone is decided by the AICC Lead. An Exception is not a bypass of a control.
+6.1. A departure from this policy is an Exception. It is decided by the Control Function Contact for the remit concerned, is limited in time, shall state the date on which it expires, and shall be entered in the Risks and Issues Record. The Executive Sponsor reviews the open Exceptions each month, and an Exception that has expired is decided at once (Operating Model 6.7). A departure from a requirement set by AICC alone is decided by the AICC Lead. An Exception is not a bypass of a control.
 
 6.2. The controls of this policy are C-06, C-09, C-12, C-13, C-15, C-16, C-17, C-18, C-21, C-28, and C-29 of the Operating Model 8.
 
@@ -114,3 +114,4 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 | 2.6 | 2026-10-02 | The monthly review of a Service across Domains is by the Executive Sponsor. | DR-2026-052 |
 | 2.7 | 2026-10-02 | Review of the independent findings: training noted in the AI Registry; the Executive Sponsor for a Solution that the AICC Lead built; a higher Risk Tier returns the business case for clearance; suspension entered in the Decision Log; clause 3.5 split; the notice to the Board Committee; the controls of this policy. | DR-2026-055 |
 | 2.8 | 2026-10-02 | Release by the Executive Sponsor where the AICC Lead is the Domain Owner; C-09 in the controls of this policy. | DR-2026-055 |
+| 2.9 | 2026-10-02 | An Exception states the date on which it expires, and the open Exceptions are reviewed monthly (Operating Model 6.7). | DR-2026-058 |

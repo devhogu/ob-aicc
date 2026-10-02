@@ -46,12 +46,12 @@ Figure 2 shows the path from the approval of the business case to the close.
 flowchart LR
   MV["MVP<br/>a probe against the<br/>leading indicators"] --> DM{"Decision after the MVP"}
   DM -->|"pivot, defer, reject"| DR["Pivoted, deferred,<br/>or rejected"]
-  DM -->|"continue"| DL["Delivery<br/>build and verify"]
+  DM -->|"continue"| DL["Delivery<br/>build, test, check<br/>or validation"]
   DL --> TF["Final acceptance<br/>of the Team<br/>AICC Lead"]
   TF --> FU["Deployed to the<br/>first users"]
   FU --> BA{"Acceptance of the<br/>Domain Owner<br/>as the requester"}
   BA -->|"returned"| DL
-  BA -->|"accepted"| OR["Outcome Report<br/>and release decision"]
+  BA -->|"accepted"| OR["Outcome Report;<br/>the release beyond the first<br/>users is a separate decision"]
   OR --> SP["Support at the<br/>agreed level"]
   SP --> CK{"Check-in at<br/>each Iteration"}
   CK -->|"follow-on"| NX["A new need<br/>at Contact"]
@@ -65,12 +65,12 @@ The following table states each step, the person who acts, the time, and the rec
 | Step | What happens | Who | When | Record left |
 | --- | --- | --- | --- | --- |
 | Contact | A function raises a need, or AICC finds one | Anyone; the AICC Lead takes it in | Any time | An entry in the Portfolio Backlog |
-| Study | The need is scoped, and the business case is written and cleared by the Control Function Contacts when Risk Tier 2 or 3 is expected | AICC Lead with the Domain Owner | The first Iteration of the Engagement | The Initiative Brief with the clearances |
+| Study | The need is scoped, and the business case is written and cleared by the Control Function Contacts when Risk Tier 2 or 3 is expected | AICC Lead with the Domain Owner | When the study starts | The Initiative Brief with the clearances |
 | Service Agreement | AICC states what it commits to | AICC Lead; the function is notified | Issued when the study starts, and amended when the business case is approved | The Service Agreement |
 | Delivery | The first Solution is tried as a probe (the MVP), and after the decision to continue it is built, verified, and deployed to the first users | Solution Engineer with the Domain Expert; the AICC Lead gives the final acceptance of the Team | In the Iterations of the Program Increment | The Solution Definition, the decision after the MVP, the Control Sign-Off, and the release block |
 | Outcome Report | The outcome is reported, and the Domain Owner, or the Executive Sponsor for enabling work, accepts it | AICC Lead issues; the Domain Owner accepts | At the end of the Engagement | The Outcome Report |
 | Support | The Solution is supported at the agreed level | Solution Engineer | After delivery | Service Management records, and the AI Incident Review |
-| Follow-on | A new need, or the end | The Domain Owner and the AICC Lead | At each Iteration check-in | A new entry, or the close |
+| Follow-on | A new need, or the end | The AICC Lead, with the Domain Owner | At each Iteration check-in | A new entry, or the close |
 
 ## 5. The commitment in practice
 

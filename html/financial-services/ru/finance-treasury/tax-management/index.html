@@ -1,0 +1,1123 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Управление налогами</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Finance &amp; Treasury</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Управление налогами</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Управление налогами</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Управление налогами охватывает текущую и отложенную налоговую позицию банка по МСФО, подачу деклараций по налогу на прибыль организаций в национальные налоговые органы Казахстана, России и иных юрисдикций присутствия, документирование по трансфертному ценообразованию для внутригрупповых операций, соблюдение требований по НДС и косвенным налогам, а также исполнение обязательств по FATCA/CRS. Группа налогового управления подотчётна CFO и работает в соответствии с налоговым законодательством каждой юрисдикции, принятыми на местном уровне обязательствами Плана действий ОЭСР по BEPS и международными механизмами обмена информацией. <strong>Возможность ИИ — автоматизация комплаенс-документации: выверка эффективной налоговой ставки, локальные файлы по трансфертному ценообразованию и проверка качества данных FATCA/CRS, — снижение зависимости от внешних консультантов для стандартной документации и высвобождение времени группы для работы над позициями, требующими экспертного суждения.</strong></p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-tax-position-filings:checked ~ .problems-tab-bar label[for="problems-tab-tax-position-filings"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-tax-position-filings:checked ~ .problems-panel[data-tab="tax-position-filings"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-tax-position-filings"
+    value="tax-position-filings"
+    checked
+    aria-label="Налоговая позиция и отчётность"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-tax-position-filings"
+      role="tab"
+      aria-controls="problems-panel-tax-position-filings"
+    >Налоговая позиция и отчётность</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-tax-position-filings"
+    data-tab="tax-position-filings"
+    role="tabpanel"
+    aria-labelledby="problems-tab-tax-position-filings"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Выверка эффективной налоговой ставки (ЭНС) — сопоставление фактического налогового бремени с бременем, которое возникло бы при применении установленной законом ставки к доналоговой прибыли, — выявляет движения отложенных налогов, постоянные разницы и юрисдикционные позиции, влияющие на отчёт о прибылях и убытках. Выверка проводится ежеквартально и рассматривается комитетом по аудиту, однако факторы, обусловившие изменение ЭНС, нередко не определяются до момента сборки выверки, что оставляет недостаточно времени для проверки раскрытия информации.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Налоговые команды банков с операциями в нескольких юрисдикциях управляют декларациями по налогу на прибыль организаций в рамках нескольких различных налоговых режимов — каждый со своим налоговым календарём, правилами вычета и форматом представления. Календарь соответствия насыщен: ежеквартальные авансовые платежи, годовые дедлайны подачи деклараций и внеплановые запросы по трансфертному ценообразованию от местных налоговых органов поступают одновременно с циклом финансового закрытия.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Налоговые декларации по налогу на прибыль организаций для каждой юрисдикции готовятся вручную на основе оборотно-сальдовой ведомости по МСФО (IFRS) 9, скорректированной с учётом местных правил налогового вычета, и представляются в формате, специфичном для юрисдикции. Расчёты отложенных налогов выполняются отдельно от проводок налогового резерва и выверяются с балансом в каждом периоде. Объём механических вычислений значителен и воспроизводим.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Корпоративная налоговая функция с автоматизированной выверкой ЭНС и расчётом налогового резерва способна быстрее реагировать на запросы налоговых органов и закрывать налоговые позиции раньше в рамках аудиторского цикла. Более быстрое налоговое урегулирование снижает требования к резервированию по неопределённым налоговым позициям в соответствии с КРМФО (IFRIC) 23, оказывая прямое воздействие на баланс.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Подразделы">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="etr-reconciliation">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Выверка эффективной налоговой ставки</h2>
+    
+    <p class="l3-section__intent">Ежеквартальная выверка эффективной налоговой ставки (ЭНС) объясняет расхождение между установленной законом ставкой налога и ставкой, фактически отражённой в отчёте о прибылях и убытках: декомпозиция разницы на постоянные разницы, движения по отложенному налогу, налоговые кредиты и юрисдикционные статьи. Это обязательное раскрытие по МСФО, ежеквартально проверяемое внешним аудитором и комитетом по аудиту, и основной инструмент оценки того, соответствует ли налоговая нагрузка предыдущим периодам и ожиданиям.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/etr-reconciliation/etr-trend-and-driver-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ тренда и факторов ETR</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует эффективную налоговую ставку банка за последние восемь кварталов — декомпозируя ETR на компоненты постоянных разниц, отложенного налога и юрисдикционный компонент — и выявляет факторы волатильности ETR для оценки качества прибыли финансовым директором и комитетом по аудиту.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Квартальная сверка ETR отражает ETR и его компоненты за текущий период, но не помещает их в контекст ретроспективного тренда. Члены комитета по аудиту и инвесторы оценивают волатильность ETR как индикатор качества прибыли, однако аналитическое обоснование факторов квартального изменения ETR формируется неструктурированно — не как полноправный компонент результатов сверки ETR.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает результаты сверки ETR за последние восемь кварталов. Он строит декомпозицию временного ряда — отслеживая компоненты постоянных разниц, движения отложенного налога, налоговых льгот и юрисдикционный компонент ETR в каждом периоде — и выявляет факторы, определившие квартальное изменение ETR. Анализ представляется совместно со сверкой ETR за текущий период в качестве трендового приложения для комитета по аудиту и финансового директора. Налоговый блок группы проверяет декомпозицию до её включения в материалы комитета по аудиту.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/etr-reconciliation/effective-tax-rate-reconciliation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сверка эффективной налоговой ставки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент рассчитывает квартальную сверку ETR на основе данных отчёта о прибылях и убытках и налогового резерва, декомпозирует движение ставки относительно предыдущего периода и законодательной ставки, а также выявляет статьи, требующие отдельного раскрытия в соответствии с МСФО (IFRS).</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Квартальная сверка ETR требует от Налогового блока группы перекрёстной сверки доналоговой прибыли по юрисдикциям, текущих и отложенных налоговых проводок, а также постоянных и временных разниц в каждом цикле. Статьи раскрытия, требующие прямого упоминания в примечаниях к МСФО (IFRS), выявляются с опозданием, если сверка проверяется только после заседания комитета по аудиту.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает консолидированный отчёт о прибылях и убытках по юрисдикциям, проводки по текущему и отложенному налоговому резерву, а также расписание законодательных ставок по юрисдикциям. Он рассчитывает сверку ETR, декомпозирует движение ставки относительно предыдущего квартала и законодательной ставки, маркирует статьи, требующие обособленного налогового раскрытия по МСФО (IFRS), и передаёт пакет сверки в Налоговый блок группы для проверки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Квартальная сверка ETR — с декомпозицией относительно предыдущего периода и законодательной ставки по юрисдикциям и маркировкой статей обособленного раскрытия по МСФО (IFRS) — формируется на основе данных отчёта о прибылях и убытках и налогового резерва по итогам каждого квартального закрытия.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Сверка ETR, подготовленная агентом, используется в ≥4 квартальных циклах закрытия в течение первого года; все существенные юрисдикции охвачены в каждой сверке.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥90% результатов сверки ETR приняты Налоговым блоком группы без существенных пересмотров; статьи обособленного налогового раскрытия, выявленные агентом, подтверждены как требующие раскрытия в ≥85% случаев по итогам проверки комитетом по аудиту.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сверка ETR доступна для проверки Налоговым блоком группы в течение 2 рабочих дней после закрытия квартального отчёта о прибылях и убытках, в сравнении с 5–7 днями ручной консолидации по юрисдикциям в прежнем процессе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/etr-reconciliation/deferred-tax-asset-recoverability-review">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Оценка возмещаемости отложенных налоговых активов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент ежеквартально оценивает возмещаемость отложенных налоговых активов (ОНА) на основе утверждённого трёхлетнего прогноза прибыли, применяет установленный МСФО (IFRS) критерий вероятности и подготавливает меморандум о возмещаемости ОНА для проверки финансовым директором и внешним аудитором.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Отложенные налоговые активы признаются только при наличии вероятности получения достаточной налогооблагаемой прибыли для их использования. Ежеквартально Налоговый блок группы обязан оценивать возмещаемость ОНА на основе перспективного прогноза прибыли и документировать оценку для внешнего аудитора. Документация готовится вручную и проверяется аудитором как значимая область аудита в каждом отчётном цикле; запросы по методологии оценки вероятности формируют аудиторскую переписку в условиях жёстких сроков.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает текущий остаток ОНА по категориям, утверждённый трёхлетний прогноз прибыли от FP&amp;A и допущения по налоговым ставкам по каждой юрисдикции. Он применяет фреймворк критерия вероятности МСФО (IFRS), оценивая, какие категории ОНА покрываются горизонтом прогноза, а какие основаны на прогнозируемом восстановлении временных разниц, и формирует структурированный меморандум о возмещаемости по каждой категории ОНА с указанием подтверждающих данных о прибыли и вывода в соответствии с МСФО (IFRS). Налоговый блок группы проверяет и подтверждает методологию; аудитор получает меморандум в начале квартального цикла существенной проверки.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="transfer-pricing-documentation">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Документация локального файла по трансфертному ценообразованию</h2>
+    
+    <p class="l3-section__intent">Локальные файлы по Действию 13 Плана BEPS ОЭСР документируют каждую существенную внутригрупповую операцию для соответствующего налогового органа: описание организации, анализ контролируемой сделки, сопоставимые данные по принципу «вытянутой руки» и выводы о соответствии ценообразования. Законодательство Казахстана и России о трансфертном ценообразовании требует ведения локальных файлов по операциям, превышающим установленные пороги, с предоставлением документации по запросу налогового органа в фиксированные сроки.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/transfer-pricing-documentation/transfer-pricing-threshold-monitoring">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг порогов по трансфертному ценообразованию</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает объёмы внутригрупповых операций относительно законодательных порогов документирования в Казахстане, России и других операционных юрисдикциях и уведомляет Группу по налогообложению при приближении или пересечении категорией сделок порога, влекущего обязанность составления местного файла, — позволяя подготовить документацию до окончания финансового года.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Обязанность составления местного файла по трансфертному ценообразованию возникает при превышении объёма внутригрупповых операций законодательных порогов, установленных налоговым органом каждой юрисдикции. Группа по налогообложению отслеживает эти пороги вручную по годовому расписанию внутрикорпоративных операций. Сделки, приближающиеся к порогу в течение года, выявляются при ежегодном пересмотре, а не в момент, когда обязанность по документированию становится вероятной, — что не оставляет достаточно времени для тщательной подготовки местного файла до закрытия финансового года.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает реестр внутрикорпоративных операций и законодательные пороги документирования по каждой юрисдикции. Он отслеживает накопленный объём внутригрупповых операций по каждой категории контролируемых сделок на квартальной основе и направляет уведомление Группе по налогообложению при достижении категорией 75% применимого порога. Уведомление содержит текущий объём, порог, расчётный квартал пересечения порога при текущих темпах и применимые требования к документированию. Группа по налогообложению использует уведомление для инициирования предварительного планирования местного файла до закрытия финансового года.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/transfer-pricing-documentation/transfer-pricing-arm-length-benchmarking">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ сопоставимости по принципу «вытянутой руки» в трансфертном ценообразовании</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует анализ сопоставимости по каждой существенной категории контролируемых сделок — выявляя сопоставимые операции или компании, рассчитывая межквартильные диапазоны и подтверждая соответствие ценообразования банка принципу «вытянутой руки» — для включения в местный файл в соответствии с планом действий ОЭСР BEPS 13.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Анализ сопоставимости по каждой категории контролируемых сделок в местном файле по трансфертному ценообразованию проводится Группой по налогообложению при поддержке внешних консультантов с использованием баз данных сопоставимых операций. Анализ выполняется как самостоятельное упражнение ежегодно, без опоры на результаты предыдущего года; гонорары внешних консультантов за поиск сопоставимых сделок и анализ составляют значительную долю расходов на соблюдение требований по трансфертному ценообразованию.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает анализ сопоставимости предыдущего года по каждой категории сделок и актуальные данные о ценообразовании контролируемых сделок текущего года. Он формирует обновлённый анализ — обновляя базу сопоставимых по категориям, где их надёжность снизилась, рассчитывая обновлённые межквартильные диапазоны и подтверждая соответствие текущего ценообразования банка принципу «вытянутой руки». Сделки, выходящие за пределы диапазона, маркируются для проверки Группой по налогообложению и возможной корректировки ценообразования. Результаты форматируются для прямого включения в документацию местного файла; технические выводы предоставляет Группа по налогообложению.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/transfer-pricing-documentation/transfer-pricing-documentation-assistant">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка местного файла по трансфертному ценообразованию</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент готовит ежегодный местный файл по трансфертному ценообразованию для каждого подотчётного юридического лица на основе данных о внутригрупповых операциях, анализа сопоставимости и документации предыдущего года, сокращая зависимость от внешних консультантов при стандартной документации.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Сложность"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Требования плана действий ОЭСР BEPS 13 и местного законодательства о трансфертном ценообразовании в Казахстане и России обязывают составлять ежегодную документацию местного файла для каждого юридического лица, объём внутригрупповых операций которого превышает установленный порог. Подготовка документации преимущественно передаётся внешним консультантам по значительной стоимости за каждое юридическое лицо; Группа по налогообложению управляет процессом и проверяет проекты.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает данные о внутригрупповых операциях по каждому юридическому лицу, утверждённую политику внутрикорпоративного ценообразования, базы данных сопоставимых сделок при наличии лицензии, а также местный файл предыдущего года. Он формирует структуру местного файла — описание юридического лица, анализ контролируемых сделок, нарратив по сопоставимости и выводы — в формате, требуемом местным налоговым органом. Группа по налогообложению проверяет и согласовывает; привлечение внешних консультантов ограничивается сложными или нестандартными сделками.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Ежегодный местный файл по трансфертному ценообразованию для каждого подотчётного юридического лица — охватывающий описание юридического лица, анализ контролируемых сделок, нарратив по сопоставимости и выводы в формате, требуемом местным налоговым органом — формируется на основе данных о внутригрупповых операциях и документации предыдущего года, сокращая зависимость от внешних консультантов при стандартной документации.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент используется для подготовки содержания местного файла по ≥80% подотчётных юридических лиц в рамках ≥1 ежегодного цикла по трансфертному ценообразованию в течение первого года.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% разделов местного файла, подготовленных агентом, принимаются Группой по налогообложению без существенной переработки; привлечение внешних консультантов ограничивается сложными или нестандартными сделками, составляющими ≤20% подотчётных юридических лиц ко второму году.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Проект местного файла для стандартных юридических лиц доступен Группе по налогообложению для проверки в течение 3 недель после закрытия данных по внутригрупповым операциям — по сравнению с 6–10 неделями подготовки внешними консультантами в прежнем процессе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="rating-agency-tax">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Налоговая позиция в раскрытии информации для инвесторов и рейтинговых агентств</h2>
+    
+    <p class="l3-section__intent">Инвесторы и рейтинговые агентства оценивают налоговую позицию банка в рамках анализа качества прибыли: изучают волатильность ЭНС, неопределённые налоговые позиции по КРМФО (IFRIC) 23 и величину активов по отложенному налогу относительно капитала. Нарратив по налогам в сообщениях о финансовых результатах, годовых отчётах и презентациях для рейтинговых агентств требует технической точности и доступного изложения сложных налоговых позиций.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/rating-agency-tax/tax-narrative-for-rating-agency-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Налоговый нарратив для пакета рейтингового агентства</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент готовит налоговый раздел ежегодной презентации для рейтингового агентства — охватывая динамику ETR, качество активов по отложенному налогу (DTA), резервы по неопределённым налоговым позициям (IFRIC 23) и концентрацию по налоговым юрисдикциям — на основе налоговых данных текущего года и предшествующей переписки с рейтинговым агентством.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Презентации для рейтинговых агентств включают налоговый раздел, освещающий ETR, качество DTA и неопределённые налоговые позиции. Раздел готовится Группой по налогообложению и офисом CFO на основе годовых налоговых данных и презентации предыдущего года как стилистической опоры. Цикл подготовки начинается после компоновки всех финансовых разделов, сокращая окно рецензирования раздела, на который обращают значительное аналитическое внимание рейтинговые агентства.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает сверку ETR текущего года, баланс DTA с оценкой возмещаемости, реестр неопределённых налоговых резервов по IFRIC 23 и налоговый раздел презентации для рейтингового агентства предыдущего года. Он готовит налоговый раздел, охватывающий динамику ETR с факторным анализом, качество и возмещаемость DTA, сводку позиции по IFRIC 23 и концентрацию по юрисдикциям. Группа по налогообложению проверяет проект на техническую точность; офис CFO добавляет контекстуальную подачу для аудитории рейтингового агентства. Проект готов для включения в презентационный пакет одновременно с финансовыми разделами.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/rating-agency-tax/tax-position-earnings-quality-insights">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Оценка качества прибыли на основе налоговой позиции</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует ежеквартальный сводный анализ качества прибыли в части налоговой позиции — оценивая устойчивость ETR, траекторию использования DTA и достаточность резерва по IFRIC 23 относительно прогноза прибыли банка — в формате для анализа качества прибыли CFO и аудиторского комитета.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Рейтинговые агентства и инвесторы оценивают налоговую позицию банка в рамках анализа качества прибыли, однако внутренний процесс квартального закрытия банка не формирует систематической оценки качества прибыли с точки зрения налоговой позиции. Анализ волатильности ETR, темп использования DTA и достаточность резерва по IFRIC 23 рассматриваются раздельно в рамках сверки ETR и оценки DTA, а не сводятся в единую оценку качества прибыли.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает квартальную сверку ETR, баланс DTA с использованием за предыдущий квартал, реестр неопределённых резервов по IFRIC 23 и утверждённый прогноз прибыли. Он формирует структурированный анализ качества прибыли, отвечающий на три вопроса: является ли текущий ETR устойчивым с учётом структуры постоянных разниц и отложенных статей; соответствует ли темп использования DTA прогнозу прибыли; является ли резерв по IFRIC 23 направленно достаточным с учётом открытых запросов налоговых органов. Группа по налогообложению проверяет аналитику до включения в пакет CFO и аудиторского комитета.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/rating-agency-tax/tax-disclosure-peer-benchmarking">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сравнительный анализ налоговых раскрытий относительно аналогов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сопоставляет раскрытые банком показатели ETR, соотношение DTA к капиталу и уровень резерва по IFRIC 23 с аналогичными данными банков-аналогов из последних годовых отчётов, формируя аналитический сравнительный обзор для Группы по налогообложению и IR с оценкой позиционирования раскрытий банка.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Инвесторы и рейтинговые агентства сопоставляют налоговую позицию банка с показателями аналогов. Группа по налогообложению и IR проводят этот анализ неформально, изучая годовые отчёты конкурентов без структурированного сравнения ключевых налоговых метрик. При отсутствии систематического сравнительного обзора существенные отклонения налоговых показателей банка от диапазона аналогов — способные привлечь внимание рейтинговых аналитиков или вызвать вопросы инвесторов — не выявляются до встречи с рейтинговым агентством или инвесторского звонка.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает текущие раскрытые банком показатели ETR, баланс DTA в процентах от капитала первого уровня и уровень неопределённых резервов по IFRIC 23. Он извлекает аналогичные данные из последних годовых отчётов определённой группы банков-аналогов и рассчитывает диапазон значений по каждому показателю. Сравнительный обзор представляет позицию банка относительно диапазона аналогов: показатели, выходящие за его пределы, маркируются для обсуждения в Группе по налогообложению и IR. Группа по налогообложению и офис CFO используют обзор при подготовке ответов на ожидаемые вопросы рейтинговых аналитиков и инвесторов о налоговой позиции банка.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="fatca-crs-reporting">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Соблюдение требований по FATCA / CRS</h2>
+    
+    <p class="l3-section__intent">Ежегодная отчётность по FATCA (Закон США о соблюдении налогового законодательства по зарубежным счетам) и CRS (Единый стандарт отчётности ОЭСР) обязывает банк идентифицировать подотчётных владельцев счетов, верифицировать их налоговое резидентство и классификацию, а также представлять данные о счетах в формате XML местному налоговому органу для последующего обмена с юрисдикциями-партнёрами. Казахстан и Россия являются подписантами CRS; обязательства по FATCA распространяются на любой банк, имеющий клиентов с американскими связями или корреспондентские отношения.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/fatca-crs-reporting/fatca-crs-xml-submission-validation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Валидация XML-файлов FATCA и CRS перед подачей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">До подачи ежегодных XML-файлов FATCA и CRS в местный налоговый орган агент проверяет структуру файла, соответствие формата TIN, полноту балансов счетов и соответствие отчётной базе — формируя отчёт о предварительной валидации для согласования Группой по налогообложению.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>XML-файлы FATCA и CRS формируются в системе отчётности банка и направляются в местный налоговый орган без предварительной комплексной проверки. Ошибки в представленных файлах — некорректный XML, отсутствующие TIN по отчётным счетам, расхождение остатков с авторитетным источником — выявляются обрабатывающей системой налогового органа после подачи и требуют повторной подачи исправленных файлов под регуляторным контролем.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает сгенерированный XML-файл и сверяет его со схемой XML FATCA и CRS, а также с авторитетной базой отчётных счетов банка. Он проверяет соответствие XML-схеме, корректность формата TIN по юрисдикциям, согласованность остатков счетов с финансовой системой и полноту базы по ожидаемому количеству отчётных счетов. Отчёт о предварительной валидации представляет результат каждой проверки в формате «пройдено / не пройдено», позволяя ответственным владельцам данных устранить выявленные несоответствия до подачи. Группа по налогообложению согласовывает отчёт о валидации до отправки файла в налоговый орган.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/fatca-crs-reporting/fatca-crs-reporting-quality-check">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Контроль качества отчётности по FATCA / CRS</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент проверяет состав счетов, подлежащих отчётности по FATCA и CRS, их классификацию и данные XML-отчёта на соответствие схемным правилам и контрольным показателям предыдущего года до открытия ежегодного окна представления.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежегодные представления по FATCA и CRS требуют от банка валидации классификации счетов, полноты процедур надлежащей проверки и соответствия XML-схеме по тысячам отчётных счетов. Проблемы качества данных, выявленные после подачи, влекут подачу уточнённых деклараций и усиленный надзор со стороны регулятора.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает выгрузку клиентской базы, документацию по надлежащей проверке и решения о классификации. Он сверяет каждую запись с правилами классификации FATCA/CRS, проверяет соответствие XML-схеме и сопоставляет отчётную базу с данными предыдущего года с ранжированием отклонений по существенности. Налоговые операции получают структурированный отчёт об исключениях с рекомендациями по устранению до закрытия окна подачи отчётности.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Состав счетов, подлежащих отчётности по FATCA и CRS, их классификация и данные XML-отчёта проверяются на соответствие схемным правилам и контрольным показателям предыдущего года до открытия ежегодного окна представления; служба налоговых операций получает структурированный отчёт об исключениях с руководством по их устранению.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Валидация качества FATCA/CRS, подготовленная агентом, применяется в ≥100% ежегодных циклов представления в течение первого года; охвачены все существенные классификации счетов и требования XML-схемы.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥90% выявленных позиций исключений устранено службой налоговых операций до закрытия окна представления; частота уточнённых деклараций после подачи, обусловленных ошибками классификации или схемы, снижена на ≥50% относительно базового показателя до внедрения.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Отчёт об исключениях по FATCA/CRS доступен службе налоговых операций в течение 5 рабочих дней после выгрузки состава счетов, в сравнении с 2–3 неделями ручной проверки в прежнем процессе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/tax-management/fatca-crs-reporting/fatca-crs-account-classification-review">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка классификации счетов по FATCA и CRS</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует единообразие классификации счетов, подлежащих отчётности по FATCA и CRS, — выявляя счета, по которым классификация налогового резидентства, типа юридического лица или статуса отчётности не соответствует сведениям в системе клиентских данных либо руководству ОЭСР по CRS.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Классификация счетов по FATCA и CRS присваивается при открытии счёта и обновляется в ходе периодических проверок. Ошибки классификации — счета, отнесённые к категории неотчётных при наличии американских признаков в клиентских данных, или счета юридических лиц, где классификация бенефициарного владельца противоречит документации KYC, — накапливаются между циклами проверок и создают регуляторные риски при ежегодном представлении отчётности.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает файл классификации FATCA/CRS и соответствующие записи клиентских данных — идентификационные налоговые номера, задекларированные страны налогового резидентства, организационно-правовую форму юридического лица и сведения о бенефициарных владельцах. Он применяет правила согласованности в соответствии с межправительственным соглашением FATCA и стандартом CRS ОЭСР, маркирует счета с несоответствием классификации клиентским данным или без возможности подтвердить её наличием заполненного самостоятельного подтверждения, и формирует ранжированный перечень исключений для проверки Налоговым блоком группы и службой комплаенса. Команды устраняют каждое исключение до подготовки ежегодного XML-представления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+</body>
+</html>

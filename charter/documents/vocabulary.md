@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 6.3
+revision: 6.4
 created: 2026-09-29
 revised: 2026-10-02
 ```
@@ -94,7 +94,7 @@ revised: 2026-10-02
 | Program Backlog | The ranked list of Capabilities and Features. Also called the PI Backlog | backlog (alone) |
 | Iteration Backlog | The Features that the Teams work on in one Iteration, tracked on the Program Kanban with priority lanes | sprint backlog |
 | Portfolio Kanban | The board of the Initiatives by step: Funnel, Reviewing, Analyzing, Portfolio Backlog, MVP, Implementation, and Done, with Deferred, Rejected, and Pivoted off the flow |  |
-| Lean Portfolio Management (LPM) | The management of the portfolio on lean principles: the Initiatives are tied to the strategy, the priorities are funded by an envelope and guardrails and not Initiative by Initiative, and decisions are taken in small steps on evidence. Its model is the Portfolio Management Model | |
+| Portfolio management | The management of the portfolio: the Initiatives are tied to the strategy, the priorities are funded by an envelope and guardrails and not Initiative by Initiative, and decisions are taken in small steps on evidence. Its model is the Portfolio Management Model | |
 | Funnel | The Proposed state of an Initiative: an idea or a need not yet taken in | |
 | Minimum viable product (MVP) | A probe: the smallest version of the first Solution that is tried, to see whether it works and satisfies the need, and that tests the hypothesis of an Initiative against its leading indicators | |
 | Leading indicator | A measure that shows early whether the hypothesis of an Initiative holds | |
@@ -112,10 +112,11 @@ revised: 2026-10-02
 | Calendar | The Record of the Program Increments, the Iterations, the weeks, and the blocked and gray days |  |
 | Cadence | The workflow of the general flow of the events by week, without dates; the template of the dated calendar of events |  |
 | Blocked day, gray day | A blocked day is an official or expected non-working day. A gray day is a working day on which people are likely to be out. Events move to the working day before them |  |
-| AICC portal | The portal of the charter and the governance, for auditors, which links to the evidence records of the Registry | |
+| AICC portal | The portal of the charter and the governance, for AICC, the Executive Sponsor, employees, and internal audit, which links to the evidence records of the Registry | |
 | Operating portal | The portal of non-sensitive information on the services portfolio and the development efforts, for the internal consumers of AICC | |
 | Dashboard | The Record of the state of the Program Increment, the flow, the Dependencies at risk, the risks, and the Measures |  |
 | Stage | A phase of the work inside the discovery or the active state of an item, specific to its level. A gate is the decision at the end of a step of the portfolio Kanban | |
+| Environment of use | The environment in which a Feature runs for its users: an environment that is not production until the Solution is deployed to its first users, and production afterwards | |
 | Check | The review of work by a person other than the one who built or wrote it | peer review |
 | Checker | The person who performs a Check; for a Risk Tier 1 Solution, named in the Appointments Record |  |
 | Validation | The review by the Control Function Contacts that a Solution meets the requirements of its Risk Tier |  |
@@ -244,3 +245,4 @@ revised: 2026-10-02
 | 6.1 | 2026-10-02 | Review week in the third Iteration. | DR-2026-055 |
 | 6.2 | 2026-10-02 | Acceptance at three levels: Product owner, Domain Owner, Acceptance, Acceptance criteria, Team, and Accepted aligned. | DR-2026-056 |
 | 6.3 | 2026-10-02 | Yearly Steering defined; Steering aligned. | DR-2026-057 |
+| 6.4 | 2026-10-02 | Lean Portfolio Management replaced by Portfolio management; the AICC portal is for AICC, the Executive Sponsor, employees, and internal audit; Environment of use defined. | DR-2026-058 |
