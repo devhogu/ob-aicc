@@ -103,5 +103,6 @@
  "capability": "Capability",
  "source_file": "Source",
  "read_further": "Read further",
+ "copy_path": "Copy path",
  "fb_id": "Page ID"
 }

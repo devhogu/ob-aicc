@@ -29,8 +29,17 @@ CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v3')
 NPX = os.environ.get('MMDC_NPX', os.path.expanduser('~/.npm/_npx/668c188756b835f3/node_modules'))
 CHROME = os.environ.get('MMDC_CHROME', os.path.expanduser('~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'))
 FONT_FILE = os.path.join(PORTAL, 'ui', 'assets', 'fonts', 'golos-text', 'GolosText-variable.woff2')
-# where the charter is published; the link behind the source file in the facts of a document. Set when the charter is published to the corporate folder.
-CHARTER_BASE = '//charter/'
+# where the charter and the Registry are published, on the corporate folder; a full copy of charter/ and registry/ of this repository.
+# The link opens the share where the browser allows it, and the UNC path is offered for copying.
+SHARE_HOST = '10.128.20.244'
+CHARTER_BASE = 'smb://%s/aicc/governance/charter/' % SHARE_HOST
+REGISTRY_BASE = 'smb://%s/aicc/governance/registry/' % SHARE_HOST
+
+
+def unc(base_url, rel=''):
+    """The UNC form of a share address, for copying on Windows: \\\\host\\share\\path."""
+    path = base_url.split('://', 1)[1] + rel
+    return '\\\\' + path.replace('/', '\\').rstrip('\\')
 CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
 PREFIX = {'about': 'ABT', 'what-aicc-does': 'WHT', 'how-aicc-works': 'HOW', 'organization': 'ORG', 'responsible-ai': 'RAI', 'governance': 'GOV', 'library': 'LIB', 'reference': 'REF'}
 LANGS = ['en', 'ru']
@@ -858,7 +867,9 @@ def facts_html(site, p, lang, fm):
         items.append((m['owner'], esc(m['owner_value'])))
         src = (p.get('source') or [''])[0]
         if src.startswith('charter/'):
-            items.append((m['source_file'], '<a class="src" href="%s%s">%s</a>' % (CHARTER_BASE, src[len('charter/'):], esc(os.path.basename(src)))))
+            rel_path = src[len('charter/'):]
+            items.append((m['source_file'], '<a class="src" href="%s%s" title="%s">%s</a> <button type="button" class="fb-copy" data-copy-text="%s">%s</button>' % (
+                CHARTER_BASE, rel_path, esc(unc(CHARTER_BASE, rel_path)), esc(os.path.basename(src)), esc(unc(CHARTER_BASE, rel_path)), esc(m['copy_path']))))
     if not items:
         return ''
     return '<dl class="doc-facts">%s</dl>' % ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v if k in (m['status'], m['owner'], m['source_file']) else esc(v)) for k, v in items)
@@ -1294,10 +1305,11 @@ def records_page(site, p, lang):
         ctl = ', '.join('<a href="%s">%s</a>' % (site.rel(url, '/%s/governance/controls/%s/' % (lang, r.lower())), r) for r in sorted(set(controls)))
         rows.append('<tr><td><a href="%s">%s</a></td><td lang="en">%s</td><td lang="en"><code>%s</code></td><td>%s</td></tr>' % (
             site.rel(url, site.url(page, lang)), esc(d['name']), esc(d['used']), esc(d['kept'].strip('`')), ctl or '&ndash;'))
-    systems = [('Registry', 'Decisions, appointments, controls, backlogs, roadmap, calendar, and other evidence records, as closed and dated extracts'),
+    systems = [('Registry', 'Decisions, appointments, controls, backlogs, roadmap, calendar, and other evidence records, as closed and dated extracts. Kept on the corporate folder: <a href="%s" title="%s">%s</a> <button type="button" class="fb-copy" data-copy-text="%s">%s</button>' % (
+                    REGISTRY_BASE, esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(m['copy_path']))),
                ('Jira and Confluence', 'The working state of the Program Backlog, boards, and Work Items, and the working documents, from the cutover of the working state'),
                ('Service Management', 'Requests and incidents, including AI Incidents')]
-    srows = ''.join('<tr><th scope="row">%s</th><td lang="en">%s</td></tr>' % (esc(a), esc(b)) for a, b in systems)
+    srows = ''.join('<tr><th scope="row">%s</th><td lang="en">%s</td></tr>' % (esc(a), b if a == 'Registry' else esc(b)) for a, b in systems)
     intro = {'en': 'This site is static. It states the rules and the forms of AICC and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
              'ru': 'Этот сайт статичен. Он излагает правила и формы AICC и не содержит текущих записей. В таблице перечислены записи по их шаблонам с указанием места хранения и контролей, которые они подтверждают.'}[lang]
     main = '<h1>%s</h1><p class="o-lead">%s</p><h2>Systems</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Systems"><table><tbody>%s</tbody></table></div><h2>Records</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Records"><table><thead><tr><th>Template</th><th>%s</th><th>%s</th><th>Controls</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
