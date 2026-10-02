@@ -7,7 +7,7 @@
 | Capability | CAP-001 Charter readiness |
 | Initiative | INI-001 |
 | State | Deferred |
-| Product owner | Executive Sponsor |
+| Business acceptor | Executive Sponsor |
 | Date of last change | 2026-10-01 |
 
 ## The work

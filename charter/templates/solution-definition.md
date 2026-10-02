@@ -2,14 +2,14 @@
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 2.6
+revision: 2.9
 created: 2026-09-30
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Solution Definition
 
-**Template.** Copy for each Solution when it is defined. The Solution Engineer and the Domain Expert complete it, the AICC Lead assigns the Risk Tier, and the Domain Owner approves it. It describes the Solution: its scope, methods, and architecture. It carries no figures of the Bank, no data, and no code. Keep it to one page.
+**Template.** Copy for each Solution when it is defined. The Solution Engineer and the Domain Expert complete it, the AICC Lead assigns the Risk Tier, and the Domain Owner approves it. For a Solution that the AICC Lead built, the Executive Sponsor approves the Definition and assigns the Risk Tier. It describes the Solution: its scope, methods, and architecture. It carries no figures of the Bank, no data, and no code. Keep it short, in one form.
 
 | Field | Entry |
 | --- | --- |
@@ -19,7 +19,7 @@ revised: 2026-10-01
 | Initiative | [INI-nnn] |
 | Type | [Service / Product / Experiment] |
 | Receiver | [who runs or adopts it after delivery; for an Experiment, "none yet, to be asked" is allowed] |
-| Approved by the Domain Owner on | [date] |
+| Approved by the Domain Owner on | [date; for a Solution that the AICC Lead built, by the Executive Sponsor] |
 | Time-box | [for an Experiment: the number of Iterations] |
 | Domain, Domain Owner | [names] |
 | Domain Expert, Solution Engineer | [names] |
@@ -39,19 +39,41 @@ revised: 2026-10-01
 
 ## 4. Risk Tier
 
-[Tier 1, 2, or 3, with the reasons, assigned by the AICC Lead on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies.]
+[Tier 1, 2, or 3, with the reasons, assigned by the AICC Lead, or by the Executive Sponsor for a Solution that the AICC Lead built, on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies. A Tier higher than the one cleared in the business case returns the case to the Control Function Contacts. For Tier 2 and 3: the confirmation of the Control Function Contact of compliance that the applicable law is met, with the date.]
 
 ## 5. Acceptance criteria
 
-[The criteria for the acceptance of the Solution. The benefit and the outcome targets are in the Initiative Brief.]
+[The criteria for the acceptance of the Solution, on which the AICC Lead gives the final acceptance of the Team and the Domain Owner judges it. The benefit and the outcome targets are in the Initiative Brief.]
 
-## 6. Check or validation, and release
+## 6. Check or validation, and release block
 
-[The check of a Risk Tier 1 Solution, with the Checker and the date, noted in the AI Registry; or the Control Sign-Off of the validation, by reference. The AI Registry entry, by reference. The release beyond the first users: the decision, who decided, and the date.]
+[The check of a Risk Tier 1 Solution, with the Checker and the date, noted in the AI Registry; or the Control Sign-Off of the validation, by reference. The AI Registry entry, by reference.]
+
+**Release block.**
+
+| Item | Entry |
+| --- | --- |
+| First users | [named; trained before use] |
+| Check or validation | [reference] |
+| Team final acceptance, before the first deployment to the first users | [who, date] |
+| First deployment | [key of the change ticket; reference of the test] |
+| Business acceptance by the Domain Owner, or the Executive Sponsor | [decision: accepted, returned, or rejected; who; date] |
+| Release decision beyond the first users | [decision, who decided, date] |
+| Acceptance Checklist | [reference] |
 
 ## 7. Life after delivery
 
 [For a Service: the run cost source and the sunset rule. For a Product: the consumer and the version. For an Experiment: the time-box in Iterations, and the receiver of the proposal.]
+
+**Review of the live Solution.** [The note of the Domain Owner, or of the Executive Sponsor for a Service across Domains, at each Iteration Review and Demo on the monitoring, incidents, use, and notices of the providers.]
+
+**Changes and new-check decisions.** [Each significant change, and the decision of the AICC Lead on whether it requires a new check or validation, with the reason and the date.]
+
+**Backup and recovery.** [Those of the AI Platform and of the Bank that apply, by reference.]
+
+**Retirement.** [Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]
+
+**Adopted Solution.** [Marked as adopted: yes or no; the Receiver as owner; date of the last quarterly review.]
 
 ## 8. Scores and next step
 

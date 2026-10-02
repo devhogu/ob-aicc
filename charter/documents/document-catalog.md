@@ -2,9 +2,9 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 3.5
+revision: 3.7
 created: 2026-09-30
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Document Catalog
@@ -33,7 +33,7 @@ revised: 2026-10-01
 
 ## 4. Activation
 
-4.1. The AICC Lead activates every document and Template by setting its status to active, recording the date in the change log (for a Template, in the Decision Log entry, because a Template has no change log), and entering the Decision in the Decision Log. The activation of a document binds the Bank.
+4.1. The AICC Lead activates every document and Template by setting its status to active, recording the date in the change log (for a Template, in the Decision Log entry, because a Template has no change log), and entering the Decision in the Decision Log. The activation of a document binds the Bank. Where a change concerns the AI Risk Appetite Statement, the Executive Sponsor decides it and the AICC Lead activates the change on that decision.
 
 4.2. Until the first publication of the charter, a change of meaning may take a decimal revision. After it, a change that alters the meaning of an active document takes the next whole revision number, and is activated in the same way. A correction that does not change the meaning needs only a change log row. The AICC Lead tells those concerned of an activation or a change that affects them.
 
@@ -48,7 +48,7 @@ revised: 2026-10-01
 | AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity | EN |
 | AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the five control loops, Records, and controls | EN |
 | AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP | EN |
-| AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, and the life cycle | EN |
+| AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle, and the measures | EN |
 | AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN |
 | AICC-REF-01 | Vocabulary and Style | Terms and style | EN |
 | AICC-REF-02 | Document Catalog | This Catalog | EN |
@@ -63,13 +63,13 @@ revised: 2026-10-01
 
 | Order of use | Template | Used for |
 | --- | --- | --- |
-| 1 | AICC-TPL-02 Initiative Brief | Each Initiative: its business case, as the lean business case of SAFe |
+| 1 | AICC-TPL-02 Initiative Brief | Each Initiative: its lean business case |
 | 2 | AICC-TPL-06 Service Agreement | Each Engagement: the commitment and the working agreement |
 | 3 | AICC-TPL-01 Solution Definition | Each Solution: its type, Receiver, scope, capabilities, architecture, Risk Tier, and acceptance criteria |
 | 4 | AICC-TPL-13 Acceptance Checklist | Each Solution handed to a Domain as ready for use at scale: the signed answers of the Domain, the Control Functions, and the IT function |
-| 5 | AICC-TPL-03 Control Sign-Off | The decision of a Control Function Contact: a validation, a stop, a provider check, or an Exception |
-| 6 | AICC-TPL-08 Decision Record | A Decision of the Executive Sponsor that is hard to reverse, a Decision that the Operating Model 8 names as evidenced by a Decision Record, an activation, an appointment, a delegation, a Data Sharing Arrangement, an Exception of the AICC Lead, an approval of output, and the cutover |
-| 7 | AICC-TPL-04 Steering Summary | Each Steering, monthly or quarterly: attendance, advice, Decisions, and actions |
+| 5 | AICC-TPL-03 Control Sign-Off | The decision of a Control Function Contact: a validation, a clearance of a business case, a stop, a provider check, or an Exception |
+| 6 | AICC-TPL-08 Decision Record | A Decision of the Executive Sponsor that is hard to reverse, a Decision that the Operating Model 8 names as evidenced by a Decision Record, such as a Data Sharing Arrangement, an Exception of the AICC Lead, and an approval of output, and the cutover |
+| 7 | AICC-TPL-04 Steering Summary | Each Steering, monthly, quarterly, or yearly: attendance, advice, Decisions, and actions |
 | 8 | AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, the capacity, and the acceptance |
 | 9 | AICC-TPL-10 AI Incident Review | The review of each AI Incident |
 | 10 | AICC-TPL-11 Registry Snapshot | The closed extract of the working state at the close of each Iteration and PI, and at the cutover |
@@ -77,11 +77,11 @@ revised: 2026-10-01
 | 12 | AICC-TPL-09 Appointments Record | The Roles mapped to people, the appointment log, the declarations, and the access |
 | 13 | AICC-TPL-12 Proposal | A Proposal to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy |
 
-The identifiers keep the order of creation, and the table is in the order of use. The folder of the Templates holds a README with the same order and the place where each Record is kept.
+The identifiers keep the order of creation, and the table is in the order of use. The index of the Templates carries the same order and the place where each Record is kept.
 
 ## 7. Checks
 
-7.1. The AICC Lead checks each document before its activation, and the documents together once a year. A second person may also check, when the AICC Lead or the Executive Sponsor asks. The check asks the following ten questions. A failure shall be entered as a Finding in the Risks and Issues Record with a Severity.
+7.1. The AICC Lead checks each document before its activation, and the documents together once a year, in time for the yearly Steering of December, which reviews them (Operating Model 6.5). A second person may also check, when the AICC Lead or the Executive Sponsor asks. The check asks the following ten questions. A failure shall be entered as a Finding in the Risks and Issues Record with a Severity.
 
 | Number | Question |
 | --- | --- |
@@ -97,6 +97,8 @@ The identifiers keep the order of creation, and the table is in the order of use
 | 10 | Can a person do what it asks today, with the people and the tools that exist? |
 
 7.2. A document is ready to activate when the AICC Lead is satisfied with the answers. Missing Appointments are tracked in the Risks and Issues Record and do not block activation.
+
+7.3. The check of 7.1 is the control C-04 of the Operating Model 8.
 
 ## Change log
 
@@ -123,4 +125,6 @@ The identifiers keep the order of creation, and the table is in the order of use
 | 3.2 | 2026-10-01 | The Acceptance Checklist Template. | DR-2026-041 |
 | 3.3 | 2026-10-01 | The Portfolio Management Model is added as the ninth document; the limit is nine. | DR-2026-044 |
 | 3.4 | 2026-10-01 | Descriptions of the Operating Model and the Portfolio Management Model; Iteration written in full. | DR-2026-048 |
-| 3.5 | 2026-10-01 | Description of the Solution Lifecycle Model. | DR-2026-049 |
+| 3.5 | 2026-10-02 | Description of the Solution Lifecycle Model. | DR-2026-049 |
+| 3.6 | 2026-10-02 | Review of the independent findings: the Executive Sponsor decides the appetite and the AICC Lead activates; Decision Record triggers aligned with the Operating Model 8; the clearance of a business case in the Control Sign-Off; lineage removed from the table of Templates; the measures in the description of the Solution Lifecycle Model; the control of the checks. | DR-2026-055 |
+| 3.7 | 2026-10-02 | The yearly check of the documents is in time for the yearly Steering of December; the Steering Summary is also kept for a yearly Steering. | DR-2026-057 |

@@ -2,9 +2,9 @@
 id: AICC-MND-03-EN
 title: Business Model
 status: active
-revision: 0.9
+revision: 1.1
 created: 2026-10-01
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Business Model
@@ -27,7 +27,7 @@ revised: 2026-10-01
 
 ## 3. Whom AICC serves
 
-3.1. An Engagement is an Initiative that has a client function. One Service Agreement is issued for each client function of an Initiative, and the client of an Initiative that is enabling work of AICC is the Executive Sponsor. The Domain Owner represents the function. A Domain Expert of the function is the partner who works with AICC. The other heads of function and the stakeholders who do not belong to AICC are notified. 
+3.1. An Engagement is an Initiative that has a client function. One Service Agreement is issued for each client function of an Initiative, and the client of an Initiative that is enabling work of AICC is the Executive Sponsor. The Domain Owner represents the function. A Domain Expert of the function is the partner who works with AICC. The other heads of function and the stakeholders who do not belong to AICC are notified.
 
 3.2. The AICC team is the AICC Lead, the people who are assigned to AICC and are not administratively owned by it, and the partners from the functions.
 
@@ -51,27 +51,29 @@ revised: 2026-10-01
 
 5.4. AICC commits to the capacity that the Service Agreement states, and works toward its outcome on a best-effort basis, within the capacity and the capability that AICC has available. The function commits to nothing.
 
-5.5. An Engagement ends with an Outcome Report: what was delivered, with the evidence referenced, the capacity used, and who accepted it. The Portfolio Backlog shows, for each Engagement, its client function, its phases and support level, its Service Agreement, and its Outcome Report.
+5.5. An Engagement ends with an Outcome Report: what was delivered, with the evidence referenced, the capacity used, and who accepted it: the Domain Owner, or the Executive Sponsor for enabling work, after the final acceptance of the Team (Solution Lifecycle Model 7.3). The Portfolio Backlog shows, for each Engagement, its client function, its phases and support level, its Service Agreement, and its Outcome Report.
 
 ## 6. Value and capacity
 
 6.1. AICC tracks, for each Engagement, the capacity that it commits and uses, in days, and the benefit that the function claims and confirms. The money and the other figures of the Bank stay in the systems of the Bank, and the records point to them.
 
-6.2. The Quarterly Report shows the capacity committed and used and the benefit confirmed for each Engagement. The Investment Envelopes fund the Strategic Priorities and the capacity of teams, as the Charter 4.1 states, and AICC does not charge the functions.
+6.2. The Quarterly Report shows the capacity committed and used and the benefit confirmed for each Engagement. The Investment Envelopes fund the Strategic Priorities and the capacity of teams, as the Charter 4.1 states. AICC supplies capacity and does not charge the functions, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of a Solution.
 
 ## 7. Controls on the commitment
 
 7.1. AICC shall not commit more capacity per Iteration than its people can deliver. The AICC Lead states the capacity available per Iteration in the Teams Record, adds up the capacity of the Service Agreements, and does not issue a Service Agreement that takes the sum above the capacity available. The work above it waits in the Portfolio Backlog.
 
-7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, and fits the capacity. Otherwise the item is deferred or rejected.
+7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, or the Executive Sponsor for enabling work, and fits the capacity. Otherwise the item is deferred or rejected.
 
-7.3. The Domain Owner confirms the benefit of an Engagement against the Initiative Brief, from the source that the Brief names.
+7.3. The Domain Owner, or the Executive Sponsor for enabling work, confirms the benefit of an Engagement against the Initiative Brief, from the source that the Brief names.
 
-7.4. At each quarterly Steering the AICC Lead shows that every closed Engagement has an Outcome Report that its product owner accepted, and that the capacity of the Service Agreements is within the capacity available. The Steering Summary records it.
+7.4. At each quarterly Steering the AICC Lead shows that every closed Engagement has an Outcome Report that the Domain Owner, or the Executive Sponsor for enabling work, accepted, and that the capacity of the Service Agreements is within the capacity available. The Steering Summary records it.
 
-7.5. The AICC Lead issues the Service Agreement, delivers, and writes the Outcome Report, and the product owner accepts it. The Steering samples the Decisions of the AICC Lead each month. This is an accepted limit while the Team is small, and it is recorded in the Risks and Issues.
+7.5. The AICC Lead issues the Service Agreement, delivers, and writes the Outcome Report, and the Domain Owner, or the Executive Sponsor for enabling work, accepts it. The Steering samples the Decisions of the AICC Lead each month. This is an accepted limit while the Team is small, and it is recorded in the Risks and Issues. The limit of the acceptance by the AICC Lead of the Features and of the Solution as the Team is in Solution Lifecycle Model 7.3(d).
 
 7.6. The Executive Sponsor owns the budget of AICC itself. The Quarterly Report points to the cost of AICC in the financial planning of the Bank, and holds no figure of it.
+
+7.7. The controls of this model are C-08, C-10, C-11, C-23, and C-24 of the Operating Model 8.
 
 ## Change log
 
@@ -86,3 +88,5 @@ revised: 2026-10-01
 | 0.7 | 2026-10-01 | The Service Agreement is stated as a form of agile working agreement that follows agile principles and ways of working; clauses 5.2 to 5.5 renumbered. | DR-2026-037 |
 | 0.8 | 2026-10-01 | The Service Agreement is a working agreement on a best-effort basis, within the available capacity and capability of AICC. | DR-2026-037 |
 | 0.9 | 2026-10-01 | The sources of the phases and of the life of the types; the rule sources. | DR-2026-048 |
+| 1.0 | 2026-10-02 | Review of the independent findings: AICC supplies capacity and the Domain pays the run, the licenses, and the provider costs; enabling work has the Executive Sponsor as client; the controls of this model. | DR-2026-055 |
+| 1.1 | 2026-10-02 | The Outcome Report is accepted by the Domain Owner, or by the Executive Sponsor for enabling work, after the final acceptance of the Team; the accepted limit refers to Solution Lifecycle Model 7.3(d). | DR-2026-056 |

@@ -19,7 +19,7 @@ flowchart LR
   R -->|links| AP["AICC portal: charter and governance, static, for auditors"]
   P["Portfolio: Solution catalog"] --> OP["Operating portal: services and progress, for consumers"]
   J -.->|progress, periodically| OP
-  OP -->|links| SP["Service portals: the product resources of each Service"]
+  OP -->|links| SP["Resources of a Service: kept by the Service, separate from AICC"]
 ```
 
 Figure 1: the collaboration tooling.
@@ -29,13 +29,13 @@ The following table lists them.
 | Tool or portal | Used for | Audience | Workflows | Link |
 | --- | --- | --- | --- | --- |
 | Jira project | Tracking the portfolio and the program: Initiatives, Capabilities (as Epics), and Features on a Kanban, with simple statuses and minimal fields. It is for business and project management, and it holds no code and no data | AICC, partners, and stakeholders | Service delivery; Cadence; Engagement | [ The link of the tool, entered when it is deployed ] |
-| Service Management | The Bank's IT tool for requests, support, and onboarding. AICC joins it, so that requests of every kind come through the common service portal, from a new need to support, and AICC hosts its own services and support team in it | The whole Bank | Engagement (the contact and the support); Service delivery (operation and support); AI Incident handling | [ The link of the tool, entered when it is deployed ] |
+| Service Management | The Bank's IT tool for requests, support, and onboarding. AICC joins it, so that requests of every kind come through one common entry, from a new need to support, and AICC hosts its own services and support team in it | The whole Bank | Engagement (the contact and the support); Service delivery (operation and support); AI Incident handling | [ The link of the tool, entered when it is deployed ] |
 | Confluence | Collaboration: the technical guidance and the ways of working in Jira, the architecture repository of the Solutions and Services, the dashboards of the progress of the PI and the Iteration, and the backlogs by reference to Jira. It is living content with minimal governance | AICC and stakeholders | Service delivery; Cadence; Engagement (drafts of the Service Agreement and the Outcome Report) | [ The link of the tool, entered when it is deployed ] |
 | Supporting knowledge folder | Technical guides, working templates, and knowledge material that are not records and not rules | AICC and partners | Service delivery | [ The link of the tool, entered when it is deployed ] |
 | Corporate share | The home of the Registry and of the Portfolio documents that the portals link to | AICC; auditors with access | Unit governance | [ The link of the tool, entered when it is deployed ] |
 | AICC portal | The charter and the governance with its flows, as a static portal. It links to the evidence records of the Registry on the corporate share | Auditors, the Executive Sponsor, and employees | Unit governance | [ The link of the tool, entered when it is deployed ] |
 | Operating portal | A knowledge base of non-sensitive information: the services portfolio and the development efforts, the scenarios, and the proposals, so that the Bank learns about AI. It is static at first, updated when new content is available and not left stale, and later a CMS with a knowledge-base backend for retrieval and chat | Internal consumers | Engagement; Service delivery | [ The link of the tool, entered when it is deployed ] |
-| Service portals | The product resources of a Service, separate from AICC | The users of the Service | Service delivery (operation) | [ The link of the tool, entered when it is deployed ] |
+| Resources of a Service | The product resources of a Service, kept by the Service and separate from AICC | The users of the Service | Service delivery (operation) | [ The link of the tool, entered when it is deployed ] |
 
 ## 3. Where the rules are
 

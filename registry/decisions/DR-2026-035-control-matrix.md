@@ -15,3 +15,5 @@ The controls table in the Operating Model 10 gives the rule, the owner, and the 
 ## Revisit
 
 When internal audit has reviewed the Matrix.
+
+*Note of 2026-10-02: the citations above are stale. The controls are in the Operating Model 8, not 10, and there are 32 of them, C-01 to C-32 (DR-2026-042), not C-01 to C-26. The record is otherwise as it was decided.*

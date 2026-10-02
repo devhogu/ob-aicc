@@ -2,18 +2,18 @@
 id: AICC-TPL-04-EN
 title: Steering Summary
 status: active
-revision: 2.2
+revision: 2.5
 created: 2026-10-01
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Steering Summary
 
-**Template.** Written by the AICC Lead for each Steering, monthly or quarterly, and approved by the chair. It is an evidence record: it states what was considered and decided, and it copies no discussion. It carries no figures of the Bank, no data, and no code. The notes of the other events stay in Confluence, or in the work items.
+**Template.** Written by the AICC Lead for each Steering, monthly, quarterly, or yearly. It is an evidence record: it states what was considered and decided, and it copies no discussion. It carries no figures of the Bank, no data, and no code. The notes of the other events stay in Confluence, or in the work items.
 
 | Field | Entry |
 | --- | --- |
-| Type | [monthly / quarterly / first quarterly of the year] |
+| Type | [monthly / quarterly / yearly] |
 | Date and week | [date, for example 2026-PIQ4 I10W4] |
 | Chair | [name] |
 | Present, by Role and name | [list] |
@@ -22,7 +22,7 @@ revised: 2026-10-01
 
 ## 1. Matters considered
 
-[Progress, risks, blockers, and acceptances, one line each. For a portfolio: the gate decisions that were due, the funnel, the free capacity, and the Active Initiatives against the limit. At the quarterly Steering: the review of each Active Initiative (continue, pivot, defer, or reject), the quarterly risk check, the result of the access review, and the reconciliation of the AI Incidents with the incident management of the Bank. At the first quarterly Steering of the year: the Strategic Priorities, the Envelopes, the Guardrails, and the review of the documents.]
+[Progress, risks, blockers, and acceptances, one line each. For a portfolio: the gate decisions that were due, the funnel, the free capacity, and the Active Initiatives against the limit. At the quarterly Steering: the review of each Active Initiative (continue, pivot, defer, or reject), the quarterly risk check, the result of the access review, the reconciliation of the AI Incidents with the incident management of the Bank, the Maturity Level, the confirmation of the Roadmap and of the PI Objectives, and the capacity for the next PI. At the monthly Steering: the review of the live Solutions at the Iteration Review and Demo, the sample of the Decisions of the AICC Lead, and the open Exceptions. In the month that holds the IP week the quarterly Steering is also that month's Steering, and its summary carries both lists, except in December. At the yearly Steering, which is the monthly Steering of December held in the first two weeks, the summary carries the monthly list and in addition: the Strategic Priorities, the Envelopes, the Guardrails, and the review of the documents.]
 
 ## 2. Advice given
 
@@ -56,6 +56,4 @@ revised: 2026-10-01
 
 ## 8. Quarterly check of the Engagements
 
-[At the quarterly Steering: that every closed Engagement has an Outcome Report that its product owner accepted, and that the capacity of the Service Agreements is within the capacity available.]
-
-Approved by the chair on [date].
+[At the quarterly Steering: that every closed Engagement has an Outcome Report that the Domain Owner, or the Executive Sponsor for enabling work, accepted, and that the capacity of the Service Agreements is within the capacity available.]

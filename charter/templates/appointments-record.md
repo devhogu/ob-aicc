@@ -2,9 +2,9 @@
 id: AICC-TPL-09-EN
 title: Appointments Record
 status: active
-revision: 1.3
+revision: 1.5
 created: 2026-10-01
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Appointments Record
@@ -19,9 +19,21 @@ revised: 2026-10-01
 
 The heads and the Contacts named below the Roles are listed in the same way, each with a Status and a Decision Record.
 
+**Checkers.** The Checker of a Risk Tier 1 Solution, whom the AICC Lead names, and the engineer of the IT function or the Domain who checks until AICC has a second Solution Engineer (Operating Model 4.4(e)), are entered here. A Checker is a designation and not a Role.
+
+| Solution | Name | Named by | Date | Decision Record |
+| --- | --- | --- | --- | --- |
+| SOL-[nnn] | [name and post] | [AICC Lead] | [date] | DR-[yyyy]-[nnn] |
+
+**Product owners.** While a Team has up to three people the AICC Lead is its product owner, and no entry is needed. When the AICC Lead names another person as the product owner of a Team (Solution Lifecycle Model 7.3), the person is entered here. A product owner is a designation and not a Role.
+
+| Team | Name | Named by | Date | Decision Record |
+| --- | --- | --- | --- | --- |
+| [Team] | [name and post] | [AICC Lead] | [date] | DR-[yyyy]-[nnn] |
+
 ## Part B. The responsibilities
 
-The RACI of the charter by activity, with one accountable Role for each activity, is in the charter. The Holders in Part A resolve each Role to a person. A Role combination that the rules of separation forbid is listed here as an accepted limit, with its compensating control. The capacity available per Iteration is in the Teams Record.
+The RACI of the charter by activity, with one accountable Role for each activity, is in the charter. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead. The capacity available per Iteration is in the Teams Record.
 
 ## Part C. The appointment log
 

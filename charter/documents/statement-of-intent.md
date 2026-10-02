@@ -2,9 +2,9 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-09-29
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Statement of Intent on the Adoption of Artificial Intelligence
@@ -94,13 +94,13 @@ revised: 2026-10-01
 
 7.3. The model risk, compliance, information security, data protection, and legal functions remain independent. They validate the use of AI and may stop it. Internal audit remains independent and gives assurance only. No person validates their own work.
 
-7.4. AICC is the governance framework and program office for the adoption of AI across the Bank. It manages the Portfolio of Initiatives, provides a delivery capability, and coordinates the Domains. Execution is carried out by the Domains.
+7.4. AICC is the internal consulting and innovation lab of the Bank for the adoption of AI across the Bank. It manages the Portfolio of Initiatives, provides a delivery capability, and coordinates the Domains. Execution is carried out by the Domains.
 
-7.5. The AI Steering Committee, composed of the heads of the business, technology, risk, and compliance functions, advises the Executive Sponsor on the Portfolio and on conflicts between Domains.
+7.5. The AI Steering Committee, composed of the heads of the business, technology, risk, and compliance functions whom the Executive Sponsor names, advises the Executive Sponsor on the Portfolio and on conflicts between Domains.
 
 7.6. The Board oversees AI through the Board Committee, the committee that the Board names for the purpose.
 
-7.7. The Bank shall maintain a statement of its appetite for AI risk, owned by the AICC Lead and noted by the Board Committee, against which the use of AI is assessed.
+7.7. The Bank shall maintain a statement of its appetite for AI risk, decided by the Executive Sponsor, owned by the AICC Lead, and noted by the Board Committee, against which the use of AI is assessed.
 
 7.8. Each Solution is assigned a Risk Tier. The Risk Tier determines the review, validation, human oversight, and speed of release that apply to it.
 
@@ -164,7 +164,7 @@ revised: 2026-10-01
 
 ## 10. Capability and enablers
 
-10.1. **People and skills.** Employees shall receive training by role before they use AI. Each Domain shall appoint Domain Experts who promote and enable adoption in that Domain. AICC shall maintain training, templates, and Communities of Practice.
+10.1. **People and skills.** Employees shall receive training by role before they use AI. Each Domain shall appoint Domain Experts who promote and enable adoption in that Domain. AICC shall maintain training, templates, and communities of practice.
 
 10.2. **Data and knowledge.** Data shall be classified, and the classification shall determine which data may reach which models and services and where they may run. Knowledge sources shall have named owners and review cycles.
 
@@ -197,21 +197,21 @@ revised: 2026-10-01
 | Model gateway: a single controlled access point to models, with routing, cost control, and data protection policy | Basic | Established | Established | Established | Established |
 | Knowledge layer: governed retrieval over the Bank's knowledge | | First knowledge bases | Priority processes | Shared by all assistants | Shared by all agents |
 | Tool gateway: permissioned access from AI to systems and interfaces | | | Read access to selected systems | Governed access across systems | Scoped action rights for agents |
-| AI Registry: each Solution, model, and agent, with owner, scope, data access, and Risk Tier | List of known AI uses | List with Risk Tiers | Registry | Registry across Domains | Agent registry with limits |
+| AI Registry: the Record of AICC of each Solution, model, and agent, with owner, scope, data access, and Risk Tier, which the AI Platform feeds | List of known AI uses | List with Risk Tiers | Registry | Registry across Domains | Agent registry with limits |
 | Platform Guardrails: enforced permissions, limits, and checks | Policies activated | Policies applied | Checks at the Stages of an item | Enforced in the AI Platform | Deterministic checks before actions |
 | Human oversight: approval points for high-stakes actions | By policy | By policy | Within operational flows | Standard across the AI Platform | On channels that agents cannot influence |
 | Observability and evaluation: audit trail, evaluation, monitoring, and lineage | Manual | Basic logs | Evaluation before release | Continuous monitoring | Continuous evaluation of agents |
 
 ### 11.3. Measures by Maturity Level
 
-11.3.1. Each Maturity Level is evidenced by the Measures below. Targets are set by the Executive Sponsor each year.
+11.3.1. Each Maturity Level is evidenced by the Measures below. Targets are set by the Executive Sponsor each year, except that the predictability of delivery is read as a trend and has no target.
 
 | Level | Measures |
 | --- | --- |
 | 1 Foundation | AI Policy activated. Control Function Contacts appointed. Each known AI use recorded in the AI Registry and assigned a Risk Tier. Baselines established for the Measures of Maturity Levels 2 to 5 |
 | 2 Controlled adoption | Share of employees with access to an approved assistant and trained in its use. Share of priority processes with an owned and current knowledge source. Use of approved tools relative to unapproved tools. First pilots reported against defined success Measures |
 | 3 Embedded | Number of processes and systems with AI embedded under human decision, and share of their cases handled with AI support. Change in time and errors against baseline in those processes. Rates of human override and correction. Incidents and control breaches per Solution. Customer intelligence: share of customers with a current, risk-based KYC view, and journey problems identified and resolved. Business intelligence: reporting cycle time and forecast accuracy against baseline. Technology operations: incident detection and recovery times against baseline |
-| 4 Scaled | Share of Solutions recorded in the AI Registry, assigned a Risk Tier, validated, and monitored on the AI Platform. Reuse of AI Platform components across Domains. Benefits realized against the Investment Envelope. Predictability of delivery against quarterly Objectives. Audit and regulatory findings relating to AI |
+| 4 Scaled | Share of Solutions recorded in the AI Registry, assigned a Risk Tier, validated, and monitored on the AI Platform. Reuse of AI Platform components across Domains. Benefits realized against the Investment Envelope. Predictability of delivery, read as the trend of the PI Objectives achieved. Audit and regulatory findings relating to AI |
 | 5 Agentic | Share of eligible tasks handled by agents within their limits. Agent actions stopped or reversed by persons or by Platform Guardrails. Loss, error, and complaint rates against the human baseline. Evaluation coverage of agents in operation. Time to detect and contain an agent incident |
 
 ## 12. Performance assessment and reporting
@@ -234,7 +234,7 @@ revised: 2026-10-01
 
 13.4. This Statement shall be documented and communicated to all employees, and made available to regulators, investors, and customers as the Executive Sponsor decides.
 
-13.5. This Statement takes effect on the date of its activation, as recorded in its change log. Amendments are activated by the same authority, the AICC Lead. Its activation binds the Bank.
+13.5. This Statement takes effect on the date of its activation, as recorded in its change log. Amendments are activated by the same authority, the AICC Lead, and a change to the statement of appetite on the decision of the Executive Sponsor. Its activation binds the Bank.
 
 ## Change log
 
@@ -252,3 +252,4 @@ revised: 2026-10-01
 | 1.4 | 2026-10-01 | Guardrails decide the approval of the Executive Sponsor; the timing of the Maturity Levels is in the Priorities; the Board Committee report is quarterly. | DR-2026-031 |
 | 1.5 | 2026-10-01 | Cross-reference to section 10 corrected. | DR-2026-034 |
 | 2.0 | 2026-10-01 | The Statement is of the Bank: the Group, the Entities, and the Participating Entities are removed; Data Sharing Arrangement replaces Group Arrangement. | DR-2026-036 |
+| 2.1 | 2026-10-02 | Review of the independent findings: AICC described as the internal consulting and innovation lab; the Executive Sponsor names the AI Steering Committee and decides the appetite; the AI Registry is the Record of AICC that the AI Platform feeds; predictability read as a trend of the PI Objectives. | DR-2026-055 |

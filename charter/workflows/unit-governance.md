@@ -13,14 +13,14 @@ The control of the unit runs as five loops that apply one control cycle, and the
 | Loop | What it answers | Where it is drawn | Controls it carries |
 | --- | --- | --- | --- |
 | The cycle of a control | Trigger, decision, record, review, and correction | Operating Model, Figure 7 | Every control |
-| Decision | Who decides, and how a Decision is logged and sampled | Operating Model, Figure 1 | C-01, C-05, C-08, C-09, C-14, C-27 |
-| Direction, yearly | Who sets the appetite and the policy, and reviews the documents | Operating Model, Figure 2 | C-01, C-03, C-04 |
-| Assurance, quarterly | How the Steering sees that the controls operate, and what it reports | Operating Model, Figure 3 | C-06, C-07, C-11, C-16, C-24, C-26, C-27, C-28 |
+| Decision | Who decides, and how a Decision is logged and sampled | Operating Model, Figure 1 | Not assigned to a loop in the Operating Model |
+| Direction, yearly | Who sets the appetite and the policy, reviews the documents, and presents the yearly Proposal, at the yearly Steering | Operating Model, Figure 2 | C-01, C-02, C-03, C-04, C-20 |
+| Assurance, quarterly | How the Steering sees that the controls operate, and what it reports | Operating Model, Figure 3 | C-06, C-07, C-11, C-16, C-20, C-24, C-26, C-27, C-28 |
 | Control, monthly | How the Steering reviews the sample, the Exceptions, and the deficiencies | Operating Model, Figure 4 | C-05, C-17, C-29, C-32 |
 | Operating, weekly | How the AICC Lead keeps the flow under control | Operating Model, Figure 5 | None; the Dashboard is a working record |
-| Event | What happens when something goes wrong or changes | Operating Model, Figure 6 | C-16, C-17, C-19, C-30, C-31, C-32 |
-| The status of a control | Operating, Open, No occurrence yet, or Not yet due | Operating Model, Figure 8 | The Control Matrix |
-| The portfolio loops | Strategic, portfolio review, portfolio sync, and backlog care | Portfolio Management Model, Figures 1 to 4 | C-02, C-08, C-09, C-20, C-23 |
+| Event | What happens when something goes wrong or changes | Operating Model, Figure 6 | C-01, C-16, C-17, C-19, C-27, C-30, C-31, C-32 |
+| The status of a control | Operating, Open, Deficiency, No occurrence yet, or Not yet due | Operating Model, Figure 8 | The Control Matrix |
+| The portfolio loops | Strategic, portfolio review, portfolio sync, and backlog care | Portfolio Management Model, Figures 1 to 4 | C-02, C-08, C-09, C-23, C-24 |
 
 ## 3. A month and a quarter in sequence
 

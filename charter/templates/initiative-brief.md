@@ -2,14 +2,14 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 4.2
+revision: 4.5
 created: 2026-09-30
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Initiative Brief
 
-**Template.** The business case of an Initiative, in the form of the lean business case of SAFe. Copy for each Initiative. The Domain Owner and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in Jira and Confluence. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One to two pages.
+**Template.** The business case of an Initiative, in lean form. Copy for each Initiative. The Domain Owner and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in Jira and Confluence. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One to two pages.
 
 | Field | Entry |
 | --- | --- |
@@ -62,7 +62,7 @@ The brief has these six sections from the day it is created, and no section is r
 
 ## 6. Decision and acceptance
 
-[Approve, return, defer, or reject, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail or across Domains. For an Initiative that expects Risk Tier 2 or 3, the clearance of the Control Function Contacts concerned, with their names and dates. The Service Agreement issued (AGR-nnn). After the MVP: continue, pivot, defer, or reject, by whom, and the date, with the Decision Record. On delivery: accepted, returned, or rejected by the product owner, with the date. Acceptance closes the item.]
+[Approve, return, defer, or reject, by whom, and the date, with the Decision Record. The approver is the Domain Owner, or the Executive Sponsor above a guardrail, across Domains, or for enabling work. For an Initiative that expects Risk Tier 2 or 3, the clearance of the Control Function Contacts concerned, recorded with the Control Sign-Off reference, their names, and the dates. A Risk Tier assigned later that is higher than the one cleared returns the business case for a new clearance. The Service Agreement issued (AGR-nnn). After the MVP: continue, pivot, defer, or reject, by whom, and the date, with the Decision Record. On delivery: accepted, returned, or rejected by the Domain Owner, or by the Executive Sponsor for enabling work, with the date. Acceptance closes the item.]
 
 ## Amendments after approval
 

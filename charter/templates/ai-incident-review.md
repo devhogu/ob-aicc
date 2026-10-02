@@ -2,9 +2,9 @@
 id: AICC-TPL-10-EN
 title: AI Incident Review
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-01
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # AI Incident Review
@@ -29,7 +29,7 @@ revised: 2026-10-01
 | --- | --- | --- | --- |
 | Regulator | Control Function Contact of compliance, in the time that the incident management of the Bank sets |  |  |
 | Persons whose data is affected | Control Function Contact of data protection |  |  |
-| Provider | AICC Lead |  |  |
+| Provider | As the contract requires |  |  |
 
 ## 3. Cause, actions, and lessons
 
@@ -38,3 +38,9 @@ revised: 2026-10-01
 |  |  |  |
 
 [The cause, and the lessons for the Standards and the AI Policy.]
+
+**Controls that failed.** [The controls of the Operating Model 8 that did not operate, each entered in the Risks and Issues Record.]
+
+**Risk Tier reassessed.** [Date and result.]
+
+**Suspension.** [Whether the Solution was suspended, by whom, when, and when it was lifted, with the Decision Log reference.]

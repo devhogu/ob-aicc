@@ -28,7 +28,7 @@ A head of function brings a need to the AICC Lead, in any form: a conversation, 
 | Study | The need is scoped and the business case written, and cleared by the Control Function Contacts when Risk Tier 2 or 3 is expected | AICC Lead with the Domain Owner | The first Iteration of the Engagement | The Initiative Brief with the clearances |
 | Service Agreement | AICC states what it commits to | AICC Lead; the function is notified | Issued when the study starts, amended when the business case is approved | The Service Agreement |
 | Delivery | The first Solution is tried as a probe (the MVP), and after the decision to continue it is built and released | Solution Engineer with the Domain Expert | In the Iterations of the PI | The Solution Definition, the decision after the MVP, the Control Sign-Off, and the release |
-| Outcome Report | The outcome is reported and accepted | AICC Lead; the product owner accepts | At the end of the Engagement | The Outcome Report |
+| Outcome Report | The outcome is reported and accepted | AICC Lead; the Domain Owner, or the Executive Sponsor for enabling work, accepts | At the end of the Engagement | The Outcome Report |
 | Support | The Solution is supported at the agreed level | Solution Engineer | After delivery | Service Management records, and the AI Incident Review |
 | Follow-on | A new need, or the end | The Domain Owner and the AICC Lead | At each Iteration check-in | A new entry, or the close |
 

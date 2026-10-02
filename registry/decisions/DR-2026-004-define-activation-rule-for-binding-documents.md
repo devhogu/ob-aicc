@@ -8,7 +8,7 @@
 | --- | --- |
 | Identifier | DR-2026-004 |
 | Title | Define the activation rule for documents that bind persons outside AICC |
-| Status | Decided |
+| Status | Superseded by DR-2026-018 (2026-10-01) |
 | Decision Category | Standards |
 | Date | 2026-09-30 |
 | Decider | AICC Lead |
@@ -56,4 +56,6 @@ None.
 | --- | --- |
 | Review date | 2026-12-31 |
 | Supersedes | none |
-| Superseded by | none |
+| Superseded by | DR-2026-018 |
+
+*Note of 2026-10-02: Superseded by DR-2026-018 on 2026-10-01. The AICC Lead activates every document and Template, and the Executive Sponsor no longer activates documents. The text above is kept as it was decided.*

@@ -1,6 +1,6 @@
 # Solution Definition: SOL-001 FP&A Board reporting pipeline
 
-Draft. The Solution Engineer completes it in the MVP of INI-004, once the business case is approved and cleared (Portfolio Management Model 7.1).
+Draft. The Solution Engineer completes it in the MVP of INI-004, once the business case is approved and cleared (Portfolio Management Model 7.1). The AICC Lead builds the Solution, so the Executive Sponsor also approves the Solution Definition (Operating Model 4.4).
 
 | Field | Entry |
 | --- | --- |
@@ -30,7 +30,7 @@ Financial data, not personal data, from sources with an owner and a review date.
 
 ## 4. Risk Tier
 
-Risk Tier 2 is expected. The AICC Lead assigns it when the Solution is defined and tells the Domain Owner. A Control Function Contact may raise it.
+Risk Tier 2 is expected. The AICC Lead builds the Solution, so the Executive Sponsor assigns the Risk Tier when the Solution is defined and approves its use for a data class (Operating Model 4.4), and the AICC Lead tells the Domain Owner. A Control Function Contact may raise it.
 
 ## 5. Acceptance criteria
 
@@ -38,7 +38,7 @@ Risk Tier 2 is expected. The AICC Lead assigns it when the Solution is defined a
 
 ## 6. Check or validation, and release
 
-[ Risk Tier 2 is expected: the Control Sign-Off of the validation by reference, and the AI Registry entry. The release beyond the first users: the decision of the Domain Owner, with the date. None of these exists yet ]
+[ Risk Tier 2 is expected: the Control Sign-Off of the validation by reference, and the AI Registry entry. The final acceptance of the Team by the AICC Lead before the first deployment to the first users, with the date. The business acceptance by the Domain Owner, with the date. The release beyond the first users: the decision of the Domain Owner, with the date. None of these exists yet ]
 
 ## 7. Life after delivery
 

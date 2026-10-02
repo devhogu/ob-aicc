@@ -19,7 +19,7 @@ The charter has four parts. The table also shows the Registry and the Portfolio,
 
 ## 3. Contents
 
-The contents list every file of the charter in the order of reading, with its link and its content. 
+The contents list every file of the charter in the order of reading, with its link and its content.
 
 | No. | Id | Item | Content |
 | --- | --- | --- | --- |
@@ -29,7 +29,7 @@ The contents list every file of the charter in the order of reading, with its li
 | 2.2 | AICC-MND-03 | [Business Model](documents/business-model.md) | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and capacity |
 | 2.3 | AICC-ORG-01 | [Operating Model](documents/operating-model.md) | AICC as a unit of the Bank: Roles, Decisions, the five control loops, records, and controls |
 | 2.4 | AICC-ORG-02 | [Portfolio Management Model](documents/portfolio-management-model.md) | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP |
-| 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, and the life cycle |
+| 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle, and the measures |
 | 2.6 | AICC-POL-01 | [AI Policy](documents/ai-policy.md) | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions |
 | 2.7 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined terms and style |
 | 2.8 | AICC-MND-01 | [Statement of Intent on the Adoption of Artificial Intelligence](documents/statement-of-intent.md) | The intent, values, principles, and strategy of the Bank for AI |
@@ -75,10 +75,10 @@ A reader with a specific purpose follows the route in the following table.
 | A head of function who brings a need | [Business Model](documents/business-model.md); [Portfolio Management Model](documents/portfolio-management-model.md); [Engagement guide](guides/engagement-guide.md); [Engagement workflow](workflows/engagement.md); the Initiative Brief and Service Agreement Templates | How AICC engages a function, what it commits to, and what the function receives |
 | A new member of AICC | [Operating Model](documents/operating-model.md); [Portfolio Management Model](documents/portfolio-management-model.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md); [AI Policy](documents/ai-policy.md); [Organization guide](guides/organization-guide.md); [Cadence guide](guides/cadence-guide.md) | The Roles, the rules, the first week of a Holder, and the rhythm of the events |
 | The Executive Sponsor or the Board Committee | [AICC Charter](documents/aicc-charter.md); [Unit governance guide](guides/unit-governance-guide.md), sections 3 and 5; the Quarterly Report Template | The mandate, the funding, the risk appetite, the reporting chain, and what is reported |
-| A Control Function Contact | [AI Policy](documents/ai-policy.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md), section 6; [Operating Model](documents/operating-model.md), section 8; the Control Sign-Off Template | The Risk Tiers, the checks, the validation, and the right to stop |
+| A Control Function Contact | [AI Policy](documents/ai-policy.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md), sections 7 and 8; [Operating Model](documents/operating-model.md), section 8; the Control Sign-Off Template | The Risk Tiers, the checks, the validation, and the right to stop |
 | Internal audit | [Operating Model](documents/operating-model.md), sections 6 to 8; the [Control Matrix](../registry/control-matrix.md); [Unit governance guide](guides/unit-governance-guide.md); [Organization guide](guides/organization-guide.md), section 8; the [Registry](../registry/README.md) | Each control with its rule, owner, timing, and evidence record, and the records themselves |
 | Human resources | [Organization guide](guides/organization-guide.md); [Operating Model](documents/operating-model.md), sections 4 and 5; the Appointments Record Template | The Roles, the profiles, the RACI, and the people records |
 
 ## 5. Control of the charter
 
-The Document Catalog states the status, the revision, and the life cycle of each document and Template, and the AICC Lead activates them. The documents and the Templates carry a change log. The workflows and the guides are changed with the history of the repository. The Operating Model 8 lists the controls that can be tested, and the Registry holds the evidence of each.
+The Document Catalog states the status, the revision, and the life cycle of each document and Template, and the AICC Lead activates them. The documents carry a change log, and a Template carries a revision only. The workflows and the guides are changed with the history of the repository. The Operating Model 8 lists the controls that can be tested, and the Registry holds the evidence of each.

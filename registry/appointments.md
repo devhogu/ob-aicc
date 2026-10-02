@@ -6,7 +6,7 @@ This is the Appointments Record, in the form of the Appointments Record Template
 
 | Role | Scope | Holder (name and post) | Deputy | Status | From | To | Appointed by | Decision Record |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Executive Sponsor | The Bank | Simen Munter, Chief Executive Officer of the Bank | [ A deputy named by the Executive Sponsor ] | Appointed | [ The date of the mandate ] | | The Bank | [ The decision or order of the mandate of AICC: its number, date, and issuer ] |
+| Executive Sponsor | The Bank | Simen Munter, Chief Executive Officer of the Bank | [ A deputy named by the Executive Sponsor ] | Appointed | [ The date of the mandate ] | | The Board (AICC Charter 3.1) | [ The decision or order of the mandate of AICC: its number, date, and issuer ] |
 | AICC Lead | AICC | Timur Alimbayev, head of AICC | [ A deputy named by the AICC Lead ] | Appointed | [ The date of the appointment ] | | Executive Sponsor | [ The decision or order of the appointment: its number, date, and issuer ] |
 | Solution Engineer | AICC | Timur Alimbayev, head of AICC | [ A deputy named by the AICC Lead ] | Appointed | [ The date of the appointment ] | | [ The Executive Sponsor, because the AICC Lead may not appoint their own person to a Role (Operating Model 4.6, 5.7) ] | [ The decision reference ] |
 | Platform Owner | The AI Platform | [ The person who owns the platform AICC runs on, named when a platform is in use ] | | | | | Head of technology | |
@@ -14,8 +14,9 @@ This is the Appointments Record, in the form of the Appointments Record Template
 | Domain Owner | Other Domains | [ The head of the function that owns the Domain, named at the start of an Engagement ] | | | | | The head of the Domain | |
 | Domain Expert | Each Domain | [ The practitioner the Domain Owner names to work with the Team ] | | | | | Domain Owner | |
 | Checker | Each Risk Tier 1 Solution | [ A person who did not build the Solution, named for each Solution ] | | | | | AICC Lead | |
+| Product owner (a designation, not a Role) | Each Team | The AICC Lead, while the Team has up to three people (Solution Lifecycle Model 7.3); [ another person, if the AICC Lead names one ] | | | | | AICC Lead | |
 
-The heads of the functions of the AI Steering Committee are named when the Committee convenes. Until then the Executive Sponsor decides alone (Operating Model 6.2).
+The Executive Sponsor names the members of the AI Steering Committee (Operating Model 4.6), the heads of the functions, when the Committee convenes. Until then the Executive Sponsor decides alone (Operating Model 6.2).
 
 | Function | Holder | Deputy | Status | From | To | Decision Record |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -46,7 +47,8 @@ The RACI of the charter is in the Organization guide. Role combinations that the
 
 | Accepted limit | Risks and Issues | Compensating control |
 | --- | --- | --- |
-| The AICC Lead issues the Service Agreement, delivers, and writes the Outcome Report | RI-023 | The product owner accepts, and the Steering samples the Decisions of the AICC Lead each month |
+| The AICC Lead issues the Service Agreement, delivers, and writes the Outcome Report | RI-023 | The Domain Owner, or the Executive Sponsor for enabling work, accepts the Outcome Report, and the Steering samples the Decisions of the AICC Lead each month |
+| The AICC Lead accepts the Features and the Capabilities, and gives the final acceptance of the Team, for a Solution that the AICC Lead built | RI-033 | The test by a person other than the builder, the check or the validation by another person, the acceptance of the Domain Owner, the release decision, and the monthly sample of the Decisions of the AICC Lead by the Executive Sponsor |
 | [ Another combination, if one is accepted: the Roles, the reason, and the compensating control ] | | |
 
 ## Part C. The appointment log

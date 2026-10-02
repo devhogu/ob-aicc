@@ -2,9 +2,9 @@
 id: AICC-MND-02-EN
 title: AICC Charter
 status: active
-revision: 2.1
+revision: 2.2
 created: 2026-09-30
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # AICC Charter
@@ -19,15 +19,15 @@ revised: 2026-10-01
 
 ## 3. Authority and limits
 
-3.1. AICC acts under the mandate of the Executive Sponsor, whose appointment of the AICC Lead and whose decision reference are entered in the Appointments Record. AICC may decide the matters that the Operating Model gives to the AICC Lead and the Competence Center team. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent (SOI) that are for AICC, and the Executive Sponsor for its annual review and its communication.
+3.1. AICC acts under the mandate of the Executive Sponsor, whom the Board names, and whose appointment of the AICC Lead and whose decision reference are entered in the Appointments Record. AICC may decide the matters that the Operating Model gives to the AICC Lead and the AICC Team. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent that are for AICC, and the Executive Sponsor for its annual review and its communication.
 
 3.2. AICC shall not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, validate its own work, or decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function.
 
-3.3. Data and decisions stay within the Bank unless a Data Sharing Arrangement permits sharing outside it. A Data Sharing Arrangement is decided by the Executive Sponsor after consulting the Control Function Contacts of data protection, legal, compliance, and information security, and is recorded in the Decision Log. It states the parties, the data, the legal basis, the controls, and the end date.
+3.3. Data and decisions stay within the Bank unless a Data Sharing Arrangement permits sharing outside it. A Data Sharing Arrangement is decided by the Executive Sponsor after consulting the Control Function Contacts of data protection, legal, compliance, and information security, and is recorded in a Decision Record and entered in the Decision Log. It states the parties, the data, the legal basis, the controls, and the end date.
 
 ## 4. Funding
 
-4.1. The Executive Sponsor shall set each year an Investment Envelope for each Strategic Priority and Investment Guardrails. Funding goes to Strategic Priorities and to the capacity of teams. The Domain Owners fund the Solutions of their Domains from the Envelope, within the Guardrails. The Executive Sponsor owns the budget of AICC itself.
+4.1. The Executive Sponsor shall set each year an Investment Envelope for each Strategic Priority and Investment Guardrails. Funding goes to Strategic Priorities and to the capacity of teams. The Domain Owners fund the Solutions of their Domains from the Envelope, within the Guardrails. AICC supplies capacity and does not charge for it, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of a Solution. The Executive Sponsor owns the budget of AICC itself.
 
 4.2. The Investment Guardrails shall state the amount that may be committed without the Executive Sponsor, and the Initiatives that need the approval of the Executive Sponsor. Every Initiative has an Initiative Brief. The Priorities Record points to them, and the figures are kept in the financial planning of the Bank.
 
@@ -39,21 +39,23 @@ revised: 2026-10-01
 
 5.3. The Bank does not accept AI that takes a decision without review in a regulated process, or an agent that acts on systems or funds, without validation by the Control Functions and the release decision of the Executive Sponsor.
 
-5.4. The AICC Lead owns this Statement and shall review it each year, and the Board Committee notes it in its first report. A risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
+5.4. The Executive Sponsor decides this Statement. The AICC Lead owns it, shall review it each year, and activates a change on that decision. The Board Committee notes it in its first report. A risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
 
 ## 6. What AICC offers
 
 6.1. The Business Model states what AICC offers, whom it serves, and how it commits.
 
-6.2. The functions of the Bank are the clients of AICC. A function submits a request to AICC to explore a need, to define a solution, and to propose the AI solution that fits it. 
+6.2. The functions of the Bank are the clients of AICC. A function submits a request to AICC to explore a need, to define a solution, and to propose the AI solution that fits it.
 
 6.3. For an engagement that is approved and prioritized, AICC provides its service.
 
 ## 7. What AICC measures and reports
 
-7.1. AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, and the value scored for the PI Objectives, the number of Domains and employees using approved Solutions, and the number of AI Incidents and control breaches. The Measures of the Maturity Levels are in the Statement of Intent, and their targets are set by the Executive Sponsor each year.
+7.1. AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, and the value scored for the PI Objectives, the number of Domains and employees using approved Solutions, and the number of AI Incidents and control breaches. The Measures of the Maturity Levels are in the Statement of Intent, and their targets are set by the Executive Sponsor each year, except that the predictability of delivery is read as a trend and has no target.
 
-7.2. The AICC Lead shall report each quarter in the Quarterly Report, which goes to the next quarterly Steering. The AICC Lead prepares the report to the Board Committee from it each quarter, and the Executive Sponsor approves and issues it. Each figure in it traces to a Record or a governed source, with its date. The Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major and of any risk accepted beyond the AI Risk Appetite Statement without waiting for the next report. Internal audit provides independent assurance.
+7.2. The AICC Lead shall report each quarter in the Quarterly Report, which goes to the next quarterly Steering. The Executive Sponsor approves the Quarterly Report and issues it to the Board Committee each quarter as the report to the Board Committee. Each figure in it traces to a Record or a governed source, with its date. The Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major and of any risk accepted beyond the AI Risk Appetite Statement without waiting for the next report. Internal audit provides independent assurance.
+
+7.3. The controls of this Charter are C-01, C-02, C-03, C-06, C-07, C-09, C-16, C-19, and C-27 of the Operating Model 8.
 
 ## Change log
 
@@ -77,3 +79,4 @@ revised: 2026-10-01
 | 1.6 | 2026-10-01 | Clause 5.2 reworded to state the levels of accepted risk; no change of meaning. | none |
 | 2.0 | 2026-10-01 | The Charter is of the Bank: the Group and the Entities are removed; Data Sharing Arrangement replaces Group Arrangement; clauses 5 and 6 reworded. | DR-2026-036 |
 | 2.1 | 2026-10-01 | The Board Committee is told of an AI Incident that the incident management of the Bank classifies as major. | DR-2026-048 |
+| 2.2 | 2026-10-02 | Review of the independent findings: the Executive Sponsor decides the risk appetite and the AICC Lead activates the change; the Board names the Executive Sponsor; AICC supplies capacity and the Domain pays the run, the licenses, and the provider costs; the report to the Board Committee is the Quarterly Report as issued; the Data Sharing Arrangement has a Decision Record; terms in full; the controls of this Charter. | DR-2026-055 |

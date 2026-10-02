@@ -1,6 +1,6 @@
 # Executive Summary
 
-This summary describes the AI Competence Center (AICC) of the Bank in one page. 
+This summary describes the AI Competence Center (AICC) of the Bank in one page.
 
 ## 1. Purpose
 
@@ -12,11 +12,11 @@ The clients of AICC are the functions of the Bank. A function is the client of a
 
 ## 3. Commitment
 
-AICC commits to each Engagement in a Service Agreement, which states the outcome and the capacity. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. An Outcome Report ends the Engagement, and the product owner accepts it. Source: Business Model 5.
+AICC commits to each Engagement in a Service Agreement, which states the outcome and the capacity. AICC acts under it on a best-effort basis, within the capacity and the capability that it has available. An Outcome Report ends the Engagement, and the Domain Owner, or the Executive Sponsor for enabling work, accepts it. Source: Business Model 5.
 
 ## 4. Flow of work
 
-A business need enters the funnel and becomes an Initiative with a business case, which the Control Function Contacts clear when a higher Risk Tier is expected. The approved Initiative waits in the ranked Portfolio Backlog, and when it is taken into work its first Solution is tried as a minimum viable product. The approver then decides to continue, pivot, defer, or reject. An Initiative that continues delivers Solutions through Capabilities and Features in monthly Iterations and quarterly Program Increments, and the product owner accepts the delivered outcome. Source: Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 9.
+A business need enters the funnel and becomes an Initiative with a business case, which the Control Function Contacts clear when a higher Risk Tier is expected. The approved Initiative waits in the ranked Portfolio Backlog, and when it is taken into work its first Solution is tried as a minimum viable product. The approver then decides to continue, pivot, defer, or reject. An Initiative that continues delivers Solutions through Capabilities and Features in monthly Iterations and quarterly Program Increments, the product owner accepts the Features, the AICC Lead gives the final acceptance of the Team, and the Domain Owner accepts the delivered outcome. Source: Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 10.
 
 ## 5. Decisions and authority
 
@@ -24,8 +24,8 @@ The person who does the work decides on the facts. A decision goes to the AICC L
 
 ## 6. Risk and control
 
-Three Risk Tiers set the checks that a Solution passes before it reaches users. The Executive Sponsor holds the Steering monthly and quarterly, runs the control and the portfolio on loops of Plan, Do, Check, and Act, and reports each quarter to the Board Committee. Internal audit has read access to the records and gives assurance only. The controls that can be tested are listed in the Operating Model 8 and kept in the Control Matrix. Source: AI Policy 3; Operating Model 6 and 8; AICC Charter 7.
+Three Risk Tiers set the checks that a Solution passes before it reaches users. The Executive Sponsor holds the Steering monthly and quarterly, and the monthly Steering of December is the yearly Steering for the next year. The unit is controlled on five loops of Plan, Do, Check, and Act: direction yearly, assurance quarterly, control monthly, operating weekly, and event when it happens. The portfolio runs on four loops: strategic, portfolio review, portfolio sync, and backlog care. The Executive Sponsor reports each quarter to the Board Committee. Internal audit has read access to the records and gives assurance only. The controls that can be tested are listed in the Operating Model 8 and kept in the Control Matrix. Source: AI Policy 3; Operating Model 6 and 8; AICC Charter 7.
 
 ## 7. Records
 
-The charter states the rules. Jira and Confluence run the live work. The Registry holds the records and the evidence for audit, and the Portfolio holds the catalog of Solutions. Source: Operating Model 7.
+The charter states the rules. Jira and Confluence run the live work from the cutover, and until then the Registry holds it. The Registry holds the records and the evidence for audit, and the Portfolio holds the catalog of Solutions. Source: Operating Model 7.

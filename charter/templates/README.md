@@ -8,7 +8,7 @@ The forms of the records that AICC produces. A Template gives the form of a Reco
 | 2 | Service Agreement | [service-agreement.md](service-agreement.md) | The study of an Engagement starts | `registry/initiatives/` |
 | 3 | Solution Definition | [solution-definition.md](solution-definition.md) | A Solution is defined | `portfolio/solutions/` |
 | 4 | Acceptance Checklist | [acceptance-checklist.md](acceptance-checklist.md) | AICC hands a ready Solution to a Domain for use at scale, before its release beyond the first users | `registry/checklists/` |
-| 5 | Control Sign-Off | [control-sign-off.md](control-sign-off.md) | A Control Function Contact validates, stops, checks a provider, or grants an Exception | `registry/sign-offs/` |
+| 5 | Control Sign-Off | [control-sign-off.md](control-sign-off.md) | A Control Function Contact validates, clears a business case, stops, checks a provider, or grants an Exception | `registry/sign-offs/` |
 | 6 | Decision Record | [decision-record.md](decision-record.md) | A Decision needs a record | `registry/decisions/` |
 | 7 | Steering Summary | [steering-summary.md](steering-summary.md) | Each Steering | `registry/steering/` |
 | 8 | Outcome Report | [outcome-report.md](outcome-report.md) | An Engagement ends | `registry/initiatives/` |

@@ -22,7 +22,7 @@ An Iteration is one calendar month. It is four or five whole weeks, and its last
 | --- | --- |
 | W1 | Monday: Iteration Planning, in place of the Weekly Planning |
 | Middle weeks (W2 and W3 in a four-week Iteration; W2 to W4 in a five-week one) | Backlog Refinement, within the Weekly Planning and the Weekly Review |
-| Last week (W4 or W5): the review week | Iteration Review and Demo, then Iteration Retrospective; the monthly Steering, on a day set when the outside calendars are known, during the week |
+| Last week (W4 or W5): the review week | Iteration Review and Demo, with the review of the live Solutions, then Iteration Retrospective; the monthly Steering, on a day set when the outside calendars are known, during the week |
 
 ## 3. Every PI
 
@@ -53,9 +53,11 @@ The last week of the third Iteration. It holds the events of the PI, in this ord
 | Thursday | PI Planning |
 | Friday | Quarterly Steering, then the Weekly Review that closes the PI |
 
+In the month that holds the IP week there is no separate monthly Steering: the quarterly Steering of the Friday is also that month's Steering and carries the control loop of the month (Solution Lifecycle Model 6.7). The exception is December: the monthly Steering of December is held in the first two weeks as the yearly Steering, for the next year, and the quarterly Steering of the IP week carries only the assurance loop and the portfolio review. The Calendar may place the IP week earlier and keep a year-end week free of events (Solution Lifecycle Model 6.1), so that the order of the days above holds in the week where the Calendar places it.
+
 ## 5. The loops
 
-The cadence has two levels of loops, the PI loop and the Iteration loops inside it, and inside every Iteration the weekly loop. Each loop starts with planning and ends with review, and each review feeds the planning of the next loop. On the events of these loops the control loops of the Operating Model 6 and the portfolio loops of the Portfolio Management Model 4 also run: the Weekly Review carries the operating loop and the backlog care loop, the monthly Steering carries the control loop and the portfolio sync, the quarterly Steering carries the assurance loop and the portfolio review, and the first quarterly Steering of the year carries the direction loop and the strategic loop.
+The cadence has two levels of loops, the PI loop and the Iteration loops inside it, and inside every Iteration the weekly loop. Each loop starts with planning and ends with review, and each review feeds the planning of the next loop. On the events of these loops the control loops of the Operating Model 6 and the portfolio loops of the Portfolio Management Model 4 also run: the Weekly Review carries the operating loop and the backlog care loop, the monthly Steering carries the control loop and the portfolio sync, the quarterly Steering carries the assurance loop and the portfolio review, and the yearly Steering, which is the monthly Steering of December held in the first two weeks, carries in addition the direction loop and the strategic loop.
 
 Figure 1 shows the PI loop with the three Iteration loops inside it. The last week of the third Iteration is the IP week, in which the PI ends and the next one is planned.
 
@@ -133,14 +135,14 @@ Each loop has a control, and each control is an event that already exists. The f
 | --- | --- | --- | --- |
 | Progress and blockers | Daily Stand-up | The work of the day | The Iteration Backlog |
 | Flow and Dependencies | Weekly Review | The Program Kanban, the Limits on Work in Progress, the Dependencies | The Program Kanban, the Program Board, the Dashboard |
-| Acceptance | Iteration Review and Demo | What is done, as the product owner sees it | The Program Backlog |
+| Acceptance and review of live Solutions | Iteration Review and Demo | What is done, as the product owner sees it, with the acceptance of the Features and the Capabilities, and the review by the Domain Owner of each live Solution: the monitoring, the incidents, the use, and the notices of the providers (Solution Lifecycle Model 8.4; C-29) | The Program Backlog, and the Solution Definition of the live Solution |
 | Way of working | Iteration Retrospective | How the Team works | The next Iteration Backlog |
 | Portfolio sync and control | Steering, monthly | The gate decisions that are due, the funnel and the free capacity, the Active Initiatives against the limit, progress, risks, and blockers, a sample of the Decisions of the AICC Lead, the open Exceptions, and the deficiencies | The Decision Log, the Steering Summary, the Portfolio Backlog, the Risks and Issues |
 | Value | PI Review and Demo | The value achieved against the PI Objectives, and the data for the Quarterly Report | The PI Objectives, the Quarterly Report |
 | Improvement | Inspect and Adapt | The main problems of the PI | The Program Backlog |
 | Intent and direction | PI Planning | What the next PI aims at | The Roadmap, the Program Board |
-| Portfolio review and assurance | Steering, quarterly | The decision for each Active Initiative to continue, pivot, defer, or reject, the quarterly risk check with the Control Function Contacts, the Maturity Level, and the report to the Board Committee | The Decision Log, the Quarterly Report, the Registry Snapshot |
-| Strategy and direction | Steering, first quarterly of the year | The Strategic Priorities, the Envelopes, the Guardrails, the documents, and the appetite | The Priorities, the Decision Records |
+| Portfolio review and assurance | Steering, quarterly | The decision for each Active Initiative to continue, pivot, defer, or reject, the quarterly risk check with the Control Function Contacts, the access review, the reconciliation of the AI Incidents with the incident management of the Bank, the Maturity Level, the confirmation of the PI Objectives and of the Roadmap, and the report to the Board Committee | The Decision Log, the Quarterly Report, the Registry Snapshot |
+| Strategy and direction | Steering, yearly (the monthly Steering of December, in its first two weeks) | The Strategic Priorities, the Envelopes, the Guardrails, the documents, and the appetite, for the next year | The Priorities, the Decision Records |
 
 ## 7. Rules
 
@@ -160,11 +162,11 @@ While the Team has up to three people, the Solution Lifecycle Model 6.6 applies.
 | Weekly Planning and Weekly Review | One session each week |
 | Backlog Refinement | Optional, within the weekly session |
 | Iteration Planning | Held |
-| Iteration Review and Demo | Held, with the Iteration Retrospective and the monthly Steering inside it |
+| Iteration Review and Demo | Held, with the Iteration Retrospective and the monthly Steering inside it, and the review of the live Solutions |
 | PI Review and Demo | Held, with Inspect and Adapt inside it |
 | Innovation | Optional |
 | PI Planning | Held |
-| Steering, quarterly | Held |
+| Steering, quarterly | Held; in the month that holds the IP week it is also that month's Steering, except in December |
 
 ## 10. Vocabulary of the cadence
 
@@ -181,11 +183,11 @@ The short forms PI and IP, the names PIQ1 to PIQ4, I01 to I12, and W1 to W5, and
 | Weekly Review | Week | Friday | The Program Kanban, the Portfolio Backlog and the funnel, the Program Board, the Iteration Backlog | A reordered Program Backlog, a current Dashboard, the items that reach a gate, notes on what changed | Keep control of the flow, and keep the plan close to what is really happening |
 | Backlog Refinement | Iteration | Within the Weekly Planning and the Weekly Review | The Program Backlog | Items ready to be selected | Keep the next items ready, so planning is quick |
 | Iteration Planning | Iteration | W1, Monday | The Program Backlog, the Roadmap, the Program Board | The Iteration Backlog and the Iteration goal | Select the work of the month for the intent set at the PI Planning |
-| Iteration Review and Demo | Iteration | Review week | The Iteration Backlog, the working Solutions | Acceptances, returned items, feedback | Show what works to the product owners, and take acceptance |
+| Iteration Review and Demo | Iteration | Review week | The Iteration Backlog, the working Solutions, the monitoring and the incidents of the live Solutions | Acceptances, returned items, feedback, the note of the review of each live Solution | Show what works to the product owner, take the acceptance of the Features and the Capabilities, and review the live Solutions with their Domain Owners |
 | Iteration Retrospective | Iteration | Review week, after the Iteration Review and Demo | The month of work | Improvements for the next Iteration | Improve the way of working |
-| Steering, monthly | Iteration | Review week, on a day fixed with the outside calendars | The Dashboard, the Portfolio Backlog, the risks, the Iteration Review and Demo | Decisions of the Executive Sponsor on the gates that are due, the sample, and the open items; the Steering Summary | Review the portfolio and the control of the unit, and decide |
+| Steering, monthly | Iteration | Review week, on a day fixed with the outside calendars; not separate in the month that holds the IP week, except in December, when it is held in the first two weeks as the yearly Steering | The Dashboard, the Portfolio Backlog, the risks, the Iteration Review and Demo; at the yearly Steering, the Quarterly Report of PIQ3 and the findings of the year to that date | Decisions of the Executive Sponsor on the gates that are due, the sample, and the open items; at the yearly Steering, also the Strategic Priorities, the Envelopes, the Guardrails, the documents, and the appetite; the Steering Summary | Review the portfolio and the control of the unit, and decide |
 | PI Review and Demo | PI | IP week, Monday | The Iterations of the PI, the PI Objectives | The value scored, and the data for the Quarterly Report | Show what the PI delivered, and score its value |
 | Inspect and Adapt | PI | IP week, Tuesday | The results and the flow of the PI | Improvements in the Program Backlog | Solve the main problems of the PI |
 | Innovation | PI | IP week, Wednesday | Free time | New ideas and learning | Time to learn, explore, and recover |
-| PI Planning | PI | IP week, Thursday | The Program Backlog, the Quarterly Report, the Program Board | The PI Objectives, the proposed Roadmap, the Dependencies | Set the intent and direction of the next PI |
-| Steering, quarterly | PI | IP week, Friday | The Quarterly Report, the PI Objectives | Decisions on each Active Initiative, the quarterly risk check, the Maturity Level, and the report to the Board Committee; in the first Steering of the year, also the Priorities, the Envelopes, and the Guardrails | Assess the past quarter, and decide |
+| PI Planning | PI | IP week, Thursday | The Program Backlog, the draft Quarterly Report, the Program Board | The PI Objectives, the proposed Roadmap, the Dependencies | Set the intent and direction of the next PI |
+| Steering, quarterly | PI | IP week, Friday | The Quarterly Report, the PI Objectives | Decisions on each Active Initiative, the quarterly risk check, the access review, the reconciliation of the AI Incidents, the Maturity Level, the confirmation of the PI Objectives and the Roadmap, and the report to the Board Committee; the Steering that ends PIQ4 sets no Priority, Envelope, or Guardrail, because the yearly Steering has set them | Assess the past quarter, and decide |

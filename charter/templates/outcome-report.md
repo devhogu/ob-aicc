@@ -2,9 +2,9 @@
 id: AICC-TPL-07-EN
 title: Outcome Report
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-01
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Outcome Report
@@ -48,4 +48,4 @@ revised: 2026-10-01
 
 ## 7. Acceptance and what follows
 
-[Accepted, returned, or rejected, by the product owner, with the date. The support level that applies from now. The follow-on, if any, with its Proposal.]
+[The final acceptance of the Team by the AICC Lead, with the date. Accepted, returned, or rejected, by the Domain Owner, or by the Executive Sponsor for enabling work, with the date. The support level that applies from now. The follow-on, if any, with its Proposal.]

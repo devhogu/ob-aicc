@@ -16,7 +16,7 @@ This guide explains how an item moves through AICC, from a business need to a re
 
 ## 3. The life of an item
 
-An Initiative moves through the portfolio Kanban of the Portfolio Management Model 5: the funnel, Reviewing, Analyzing, the Portfolio Backlog, the MVP, the decision after the MVP, Implementation, and Done. Every item is in one of thirteen states. It starts as Proposed, is clarified in Discovery, is Approved when its conditions are met, is Active while it is worked, and goes through Review to Accepted and Closed. Waiting, Deferred, Pivoted, Rejected, and Cancelled cover the other routes. The person who approves an item at its level also defers, rejects, cancels, or pivots it. Rejected is a decision on the merits, because the value is not seen. Cancelled is a withdrawal without such a decision, such as an error or a duplicate. While the Team has up to three people, light mode uses a smaller set of states, with Waiting as a flag and Accepted and Closed as one step.
+An Initiative moves through the portfolio Kanban of the Portfolio Management Model 5: the funnel, Reviewing, Analyzing, the Portfolio Backlog, the MVP, the decision after the MVP, Implementation, and Done. Every item is in one of thirteen states. It starts as Proposed, is clarified in Discovery, is Approved when its conditions are met, is Active while it is worked, and goes through Review to Accepted and Closed. Waiting, Deferred, Pivoted, Rejected, and Cancelled cover the other routes. The person who approves an item at its level also defers, rejects, cancels, or pivots it. Rejected is a decision on the merits, because the value is not seen. Cancelled is a withdrawal without such a decision, such as an error or a duplicate. While the Team has up to three people, light mode uses a smaller set of states, with Waiting still a state, shown as a flag, and Accepted and Closed as one step.
 
 ## 4. The decisions along the stream, and who takes each
 
@@ -25,22 +25,27 @@ An Initiative moves through the portfolio Kanban of the Portfolio Management Mod
 | Taking an item in | AICC Lead | Proposed to Discovery | Portfolio Backlog |
 | Business case | Domain Owner; the Executive Sponsor above a guardrail or across Domains; the Control Function Contacts clear it when Risk Tier 2 or 3 is expected | End of the discovery of an Initiative | Initiative Brief with the clearances; Decision Record |
 | Pull from the Portfolio Backlog | AICC Lead | When capacity allows and the active limit permits | Portfolio Backlog |
-| Decision after the MVP | The approver of the business case | At the end of the MVP | Decision Log; Initiative Brief |
-| Solution Definition and Risk Tier | Domain Owner approves; the AICC Lead assigns the Risk Tier and tells the Domain Owner | When the Solution is defined | Solution Definition |
-| Use of a Solution for a data class | Domain Owner | Before use | AI Registry |
+| Decision after the MVP | The approver of the business case | At the end of the MVP | Decision Log; Decision Record; Initiative Brief |
+| Solution Definition and Risk Tier | Domain Owner approves; the AICC Lead assigns the Risk Tier and tells the Domain Owner; for a Solution that the AICC Lead built, the Executive Sponsor approves and assigns | When the Solution is defined | Solution Definition |
+| Use of a Solution for a data class | Domain Owner; the AICC Lead for use in AICC (C-15); the Executive Sponsor for a Solution that the AICC Lead built | Before use | AI Registry |
 | Check or validation | The Checker for Risk Tier 1; the Control Function Contacts for Risk Tier 2 and 3 | Before the first deployment to real users or data | The AI Registry entry for the check; the Control Sign-Off for the validation |
-| Release | Domain Owner; the Executive Sponsor for Risk Tier 3 | Before use beyond the first users | Solution Definition; Decision Record |
-| Acceptance | The product owner | At the Iteration Review and Demo | Outcome Report, or the Registry Snapshot |
+| Release | Domain Owner, or the Executive Sponsor where the AICC Lead is the Domain Owner; the Executive Sponsor for Risk Tier 3 | Before use beyond the first users | The release block of the Solution Definition; the Acceptance Checklist; Decision Record for Risk Tier 3 |
+| Acceptance of a Feature or a Capability | The product owner | At the Iteration Review and Demo | A note in the backlog of the level |
+| Final acceptance of the Team | The AICC Lead | Before the first deployment of a Solution to its first users, and of a significant change | The release block of the Solution Definition |
+| Business acceptance of a Solution | The Domain Owner; the Executive Sponsor for an item across Domains, enabling work, or an Experiment with no Domain | When the Solution works for its first users, before its release | The release block of the Solution Definition, and the Outcome Report for an Engagement |
+| Production deployment, and change to a released Solution | The change management of the Bank approves; the AICC Lead decides whether a new check or validation is needed (C-30) | At each production deployment and each change | The change ticket and test reference in the Feature; Solution Definition; Decision Log for a new-check decision |
+| Retirement of a Solution | Domain Owner; the Executive Sponsor for a Service across Domains (C-31) | Before the Solution is Closed as retired | Solution Definition; AI Registry |
 
 ## 5. After delivery: the three types
 
-A Solution has one type, and the type sets its life. A Service is run by AICC for its whole life, with a business case that states the run cost and a sunset. A Product is a version built for one consumer, supported on demand or at agreed targets, and revised through the Portfolio Backlog. An Experiment is a time-boxed trial that ends in a Proposal, and the Handover to its Receiver is complete when the Receiver accepts it. AICC also oversees and reports on the Adopted Solutions that others deliver.
+A Solution has one type, and the type sets its life. A Service is run by AICC for its whole life, with a business case that states the run cost and a sunset, and it is supported at the agreed response targets. A Product is a version built for one consumer, supported on demand, and revised through the Portfolio Backlog. An Experiment is a time-boxed trial that ends in a Proposal, and the Handover to its Receiver is complete when the Receiver accepts it. AICC also oversees and reports on the Adopted Solutions that others deliver.
 
 ## 6. Situations
 
 | Situation | What happens |
 | --- | --- |
 | A change raises the Risk Tier | The Solution returns to Discovery for the checks that the change touches |
+| The Risk Tier assigned is higher than the one cleared in the business case | The business case returns to the Control Function Contacts for a new clearance |
 | A Feature cannot close within its PI | It is split: the part done goes to review, the rest is a new Feature in the next PI, and the original is Pivoted |
 | A Dependency outside AICC blocks the work | The item is Waiting, with the Dependency named |
 | A Control Function stops a Solution | The Solution is Cancelled, and nobody overrides the stop |
@@ -58,4 +63,4 @@ A Solution has one type, and the type sets its life. A Service is run by AICC fo
 
 ## 8. Rule source
 
-Operating Model 4.2, 4.4, 5; Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 9; AI Policy 2 and 3; the Service delivery workflow.
+Operating Model 4.2, 4.4, 5; Portfolio Management Model 4 to 8; Solution Lifecycle Model 3 to 10; AI Policy 2 and 3; the Service delivery workflow.

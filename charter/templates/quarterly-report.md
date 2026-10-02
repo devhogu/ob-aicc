@@ -2,9 +2,9 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: active
-revision: 2.5
+revision: 2.6
 created: 2026-09-30
-revised: 2026-10-01
+revised: 2026-10-02
 ```
 
 # Quarterly Report
@@ -28,7 +28,7 @@ revised: 2026-10-01
 
 ## 3. Flow and Measures
 
-[Time from proposal to approval and from approval to acceptance; work in progress; Measures of the Maturity Level, against baseline.]
+[Time from proposal to approval and from approval to acceptance; work in progress; Measures of the Maturity Level, against baseline; the number of Domains and employees using approved Solutions.]
 
 ## 4. Capacity and benefit of the Engagements
 
@@ -48,9 +48,9 @@ revised: 2026-10-01
 
 [The Solutions by type and state, the Initiatives by step of the portfolio Kanban, and the Adopted Solutions that others deliver, with what works. For each Active Initiative: its leading indicators against the plan, the benefit that the Domain Owner confirms, and the decision of the quarter (continue, pivot, defer, or reject).]
 
-## 7. Risks, AI Incidents, and Exceptions
+## 7. Risks, AI Incidents, control breaches, and Exceptions
 
-[From the Risks and Issues Record: open items by Severity, and the AI Incidents and Exceptions of the quarter.]
+[From the Risks and Issues Record: open items by Severity, and the AI Incidents, the control breaches, and the Exceptions of the quarter.]
 
 [Position against the AI Risk Appetite Statement and any risk accepted beyond it. Concentration of the Bank on one provider and reliance on the Platform Owner. The Risk Tier reassessments that are due, the result of the access review, and the reconciliation of the AI Incidents with the incident management of the Bank.]
 

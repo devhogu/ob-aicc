@@ -10,12 +10,13 @@ The rules are in the Business Model, the Operating Model, the Portfolio Manageme
 
 An Engagement passes through six steps. Each step ends in a decision or a record, and the function is kept informed throughout.
 
-Figure 1 shows the lifecycle. The Service Agreement is issued at the contact and the study, and amended at the approval.
+Figure 1 shows the lifecycle. The Service Agreement is issued when the study starts and amended when the business case is approved.
 
 ```mermaid
 flowchart LR
-  A["Contact: a need from a function"] --> B["Study: scope, business case"]
-  B --> C["Service Agreement: the commitment"]
+  A["Contact: a need from a function"] --> SA["Service Agreement: issued when the study starts"]
+  SA --> B["Study: scope, business case"]
+  B --> C["Service Agreement amended at the approval: the commitment"]
   C --> D["Delivery: proof, build, release"]
   D --> E["Outcome Report: closing and acceptance"]
   E --> F["Support at the agreed level"]
@@ -31,11 +32,11 @@ The following table states each step, with its consulting counterpart and where 
 
 | Step | Consulting counterpart | What happens | Decision or record | In the service delivery workflow |
 | --- | --- | --- | --- | --- |
-| Contact | Lead | A function raises a need, or AICC finds one in its exploration | The item is taken in, or dropped | Funnel: Proposed |
+| Contact | Lead | A function raises a need, or AICC finds one in its exploration | The item is taken in, deferred, or rejected | Funnel: Proposed |
 | Study | Diagnostic and proposal | AICC scopes the need with the function and writes the business case | The Initiative Brief; the business case is approved | Reviewing (Scoping) and Analyzing (Business case, cleared by the Control Function Contacts when Risk Tier 2 or 3 is expected) |
-| Service Agreement | Statement of work | AICC states what it commits to: the phases, the support level, the capacity, the outcome. It is issued when the study starts and amended when the business case is approved | The Service Agreement, issued by the AICC Lead; the function is notified | Portfolio Backlog: the Initiative is approved and ranked |
-| Delivery | Delivery of the engagement | AICC proves the first Solution as a probe (the MVP), and after the decision to continue, builds and releases it with the function | The decision after the MVP; check or validation; release; acceptance | MVP, the decision, and Implementation; then Review |
-| Outcome Report | Closing deliverable | AICC reports what was delivered, with the evidence referenced, the capacity used, and who accepted it | The Outcome Report; the acceptance | Done: Accepted, Closed |
+| Service Agreement | Commitment | AICC states what it commits to: the phases, the support level, the capacity, the outcome. It is issued when the study starts and amended when the business case is approved | The Service Agreement, issued by the AICC Lead; the function is notified | Portfolio Backlog: the Initiative is approved and ranked |
+| Delivery | Delivery of the engagement | AICC proves the first Solution as a probe (the MVP), and after the decision to continue, builds and releases it with the function | The decision after the MVP; check or validation; the final acceptance of the Team; the acceptance of the Domain Owner; release | MVP, the decision, and Implementation; then Review |
+| Outcome Report | Closing deliverable | AICC reports what was delivered, with the evidence referenced, the capacity used, and who accepted it | The Outcome Report; the acceptance of the Domain Owner, or of the Executive Sponsor for enabling work | Done: Accepted, Closed |
 | Support | Managed service | AICC supports the Solution at the level that the agreement states | Support records; AI Incidents in the incident management of the Bank | Operate, Support |
 
 ## 3. The Service Agreement through the Engagement
@@ -52,7 +53,7 @@ What AICC provides after delivery is chosen for each Engagement. The Solution ty
 | --- | --- | --- |
 | None | Hands the Solution over, with the Outcome Report | Experiment, or a Product handed over |
 | On demand | Answers requests and issues new versions when asked | Product |
-| At agreed response targets | Supports to targets that the agreement states | Product |
+| At agreed response targets | Supports to targets that the agreement states | Service |
 | Run by AICC | Runs the Solution for its whole life, with its run cost and sunset rule | Service |
 
 ## 5. Value, capacity, and knowledge

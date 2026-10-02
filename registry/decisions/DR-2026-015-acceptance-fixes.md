@@ -18,3 +18,5 @@ Date: 2026-09-30. Decided by the AICC Lead. Basis: portfolio/assessments/2026-09
 ## Revisit
 
 2026-12-31.
+
+*Note of 2026-10-02: the activation and appetite parts (decisions 1 and 5) are superseded by DR-2026-018 (2026-10-01), and the appetite is decided by the Executive Sponsor since DR-2026-055. The other decisions stand.*
