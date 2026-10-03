@@ -2,7 +2,7 @@
 id: governance/delivery-records-controls-and-measures
 title: Solution Lifecycle Model: Records, controls, and measures
 section: governance
-order: 4
+order: 14
 type: document
 slug: /governance/delivery-records-controls-and-measures/
 source: charter/documents/solution-lifecycle-model.md

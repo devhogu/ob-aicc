@@ -2,7 +2,7 @@
 id: governance/records-and-evidence
 title: Operating Model: Records and evidence
 section: governance
-order: 2
+order: 12
 type: document
 slug: /governance/records-and-evidence/
 source: charter/documents/operating-model.md

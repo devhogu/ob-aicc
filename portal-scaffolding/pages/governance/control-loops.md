@@ -2,7 +2,7 @@
 id: governance/control-loops
 title: Operating Model: The control loops
 section: governance
-order: 1
+order: 11
 type: document
 slug: /governance/control-loops/
 source: charter/documents/operating-model.md

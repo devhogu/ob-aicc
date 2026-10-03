@@ -1,21 +1,25 @@
 ---
 id: governance/index
-title: Governance and oversight
+title: Governance
 section: governance
 order: 0
 type: section
 slug: /governance/
-production: authored, with a generated list
+source: portal/content/governance/overview.md
+part: 1 of 7
+series: governance-course
+production: authored; the first part of the course, explanatory, the Operating Model is the rule
 status: scaffold
 ---
 
-# Governance and oversight
+# Governance
 
 Page type: section. Address: /governance/
 
+## Source
+
+- portal/content/governance/overview.md
+
 ## Outline
 
-- Introduction of three to five lines: The control loops, the records, the controls, and the way AICC is reported and assured.
-- Statement of what the section does not hold and where it is kept
-- The pages of the section with one line each (generated)
-- Related sections
+- What governance is; one picture; what it is for; the practice of internal control and assurance it follows

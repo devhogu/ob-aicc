@@ -2,7 +2,7 @@
 id: governance/controls
 title: Operating Model: Controls and the control catalogue
 section: governance
-order: 3
+order: 13
 type: catalogue
 slug: /governance/controls/
 source: charter/documents/operating-model.md

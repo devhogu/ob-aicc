@@ -22,7 +22,7 @@ SECTIONS = [
     ('services', 'Services', 'The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do.'),
     ('portfolio', 'Portfolio', 'How AICC decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP.'),
     ('delivery', 'Delivery', 'How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution.'),
-    ('governance', 'Governance and oversight', 'The control loops, the records, the controls, and the way AICC is reported and assured.'),
+    ('governance', 'Governance', 'How AICC is directed, controlled, reported, and assured as a unit: decision rights, the control loops, the Steerings, the controls, the records and evidence, the measures.'),
     ('organization', 'Organization', 'The Roles, the decision levels, and the bodies of AICC.'),
     ('knowledge-base', 'Knowledge base', 'The templates, the guides, the acts and compliance, and the publications of AICC.'),
     ('reference', 'Reference', 'The Vocabulary, the Document Catalog, the change history, the systems that hold the records, the industry body of knowledge, and the regulators and acts.'),
@@ -414,7 +414,7 @@ else:
 
 # Governance
 split_doc('governance', 'operating-model-governance', 'charter/documents/operating-model.md', [], 0) if False else None
-for slug, title, nums, order in [('control-loops', 'The control loops', [6], 1), ('records-and-evidence', 'Records and evidence', [7], 2), ('controls', 'Controls and the control catalogue', [8], 3)]:
+for slug, title, nums, order in [('control-loops', 'The control loops', [6], 11 if NEXT else 1), ('records-and-evidence', 'Records and evidence', [7], 12 if NEXT else 2), ('controls', 'Controls and the control catalogue', [8], 13 if NEXT else 3)]:
     secs = sections_of('charter/documents/operating-model.md')
     add(id=f'governance/{slug}', section='governance', order=order, type='catalogue' if slug == 'controls' else 'document',
         slug=f'/governance/{slug}/', title='Operating Model: ' + title, source=['charter/documents/operating-model.md'], source_sections=nums,
@@ -423,7 +423,7 @@ for slug, title, nums, order in [('control-loops', 'The control loops', [6], 1),
                   'One page for each of the 32 controls at /governance/controls/c-nn/: rule clause, owner, timing, evidence record, template, objective, type, how it is tested (Unit governance guide 7), and where it is cited',
                   'A statement that the status of each control is kept in the Control Matrix of the Registry'] if slug == 'controls' else None))
 secs = sections_of('charter/documents/solution-lifecycle-model.md')
-add(id='governance/delivery-records-controls-and-measures', section='governance', order=4, type='document',
+add(id='governance/delivery-records-controls-and-measures', section='governance', order=14 if NEXT else 4, type='document',
     slug='/governance/delivery-records-controls-and-measures/', title='Solution Lifecycle Model: Records, controls, and measures',
     source=['charter/documents/solution-lifecycle-model.md'], source_sections=[9, 10], document='solution-lifecycle-model', part='7 of 7 (governance view)',
     words=secs[9][1] + secs[10][1])
@@ -431,11 +431,29 @@ if NEXT:
     split_doc('governance', 'unit-governance-workflow', 'charter/workflows/unit-governance.md', [
         ('', 'Intent, the loops on the Steerings, and how a decision escalates', [1, 2, 3]),
         ('events-and-sequences', 'Events, the sequences, the reporting chain, the life of a document, and where it runs', [4, 5, 6, 7, 8, 9]),
-    ], 5, type_='workflow', series='set-unit-governance', series_title='Unit governance', tabs=['Loops and decisions', 'Events and sequences'], part_total=4)
+    ], 15, type_='workflow', series='set-unit-governance', series_title='Unit governance', tabs=['Loops and decisions', 'Events and sequences'], part_total=4)
     split_doc('governance', 'unit-governance-guide', 'charter/guides/unit-governance-guide.md', [
         ('', 'Purpose, mandate, the loops, how a decision moves, reporting, and the evidence', [1, 2, 3, 4, 5, 6]),
         ('the-controls', 'The controls and how to test them, and the rule source', [7, 8]),
-    ], 7, type_='guide', series='set-unit-governance', series_title='Unit governance', tabs=['Guide: governance', 'Guide: the controls'], part_offset=2, part_total=4)
+    ], 17, type_='guide', series='set-unit-governance', series_title='Unit governance', tabs=['Guide: governance', 'Guide: the controls'], part_offset=2, part_total=4)
+    GCOURSE = [
+        ('overview', 'Governance', 'Overview', 'What governance is; one picture; what it is for; the practice of internal control and assurance it follows'),
+        ('decisions-and-escalation', 'Decisions and escalation', 'Decisions', 'The four levels; when a decision rises; the Control Functions decide within their remit; disagreement, conflict, record'),
+        ('the-control-loops', 'The control loops', 'Control loops', 'The five loops; drawn; the events the event loop catches; one cadence, three readings'),
+        ('the-steerings-and-the-bodies', 'The Steerings and the bodies', 'Steerings and bodies', 'The bodies; what each Steering carries for governance; the reporting chain'),
+        ('controls-and-the-catalogue', 'Controls and the control catalogue', 'Controls', 'What a control is; the catalogue by loop; the life of a control; deficiencies and findings'),
+        ('records-evidence-and-assurance', 'Records, evidence, and assurance', 'Records and evidence', 'Three kinds of record; what makes a record evidence; how the Registry is kept; the three lines; what an auditor finds'),
+        ('measures-and-reporting', 'Measures and reporting', 'Measures', 'The measures of governance; what each loop reads; the Quarterly Report; the Measures of the Maturity Levels'),
+    ]
+    for i, (slug, title, tab, line) in enumerate(GCOURSE, 1):
+        if i == 1:
+            sp = next(x for x in PAGES if x['id'] == 'governance/index')
+            sp.update(source=[f'portal/content/governance/{slug}.md'], production='authored; the first part of the course, explanatory, the Operating Model is the rule', outline=[line],
+                      series='governance-course', series_title='Governance', part=f'{i} of {len(GCOURSE)}', tab=tab)
+            continue
+        add(id=f'governance/{slug}', section='governance', order=i, type='outline', slug=f'/governance/{slug}/', title=title,
+            source=[f'portal/content/governance/{slug}.md'], production='authored; explanatory, the Operating Model is the rule', outline=[line],
+            series='governance-course', series_title='Governance', part=f'{i} of {len(GCOURSE)}', tab=tab)
 else:
     add(id='governance/unit-governance-workflow', section='governance', order=5, type='workflow', slug='/governance/unit-governance-workflow/',
         title=h1('charter/workflows/unit-governance.md'), source=['charter/workflows/unit-governance.md'], companion='governance/unit-governance-guide')

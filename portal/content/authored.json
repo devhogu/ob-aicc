@@ -33,11 +33,11 @@
   },
   "governance": {
    "label": {
-    "en": "Governance and oversight",
-    "ru": "Управление и надзор"
+    "en": "Governance",
+    "ru": "Управление"
    },
    "intro": {
-    "en": "AICC is controlled, reported, and assured through five control loops, a catalogue of thirty-two controls, and the records that evidence them. The AICC Lead reports each quarter, the Executive Sponsor issues the report to the Board Committee, and internal audit gives independent assurance. The status of each control at a date is kept in the Control Matrix of the Registry.",
+    "en": "Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank. This section is a short course in seven parts, read in order or by tab, followed by the rule: the control loops, the records and evidence, and the control catalogue of the Operating Model, the records and controls of delivery, and the Unit governance workflow and guide.",
     "ru": "Раздел излагает, как осуществляются контроль, отчётность и обеспечение уверенности в AICC: контуры контроля, записи и свидетельства, каталог контролей и отчётность перед комитетом совета. Статус каждого контроля на дату ведётся в Матрице контролей Реестра."
    },
    "icon": "table-properties"

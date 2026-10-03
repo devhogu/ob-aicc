@@ -2,7 +2,7 @@
 id: governance/unit-governance-workflow/events-and-sequences
 title: Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs
 section: governance
-order: 7
+order: 17
 type: workflow
 slug: /governance/unit-governance-workflow/events-and-sequences/
 source: charter/workflows/unit-governance.md

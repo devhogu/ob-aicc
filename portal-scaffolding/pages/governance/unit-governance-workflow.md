@@ -2,7 +2,7 @@
 id: governance/unit-governance-workflow
 title: Unit governance workflow
 section: governance
-order: 6
+order: 16
 type: workflow
 slug: /governance/unit-governance-workflow/
 source: charter/workflows/unit-governance.md

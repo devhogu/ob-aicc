@@ -37,8 +37,8 @@
   {
    "id": "governance",
    "order": 6,
-   "label": "Governance and oversight",
-   "summary": "The control loops, the records, the controls, and the way AICC is reported and assured."
+   "label": "Governance",
+   "summary": "How AICC is directed, controlled, reported, and assured as a unit: decision rights, the control loops, the Steerings, the controls, the records and evidence, the measures."
   },
   {
    "id": "organization",
@@ -182,15 +182,18 @@
    "order": 0,
    "type": "section",
    "slug": "/governance/",
-   "title": "Governance and oversight",
-   "source": [],
-   "production": "authored, with a generated list",
+   "title": "Governance",
+   "source": [
+    "portal/content/governance/overview.md"
+   ],
+   "production": "authored; the first part of the course, explanatory, the Operating Model is the rule",
    "outline": [
-    "Introduction of three to five lines: The control loops, the records, the controls, and the way AICC is reported and assured.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
+    "What governance is; one picture; what it is for; the practice of internal control and assurance it follows"
+   ],
+   "series": "governance-course",
+   "series_title": "Governance",
+   "part": "1 of 7",
+   "tab": "Overview"
   },
   {
    "id": "organization/index",
@@ -2344,7 +2347,7 @@
   {
    "id": "governance/control-loops",
    "section": "governance",
-   "order": 1,
+   "order": 11,
    "type": "document",
    "slug": "/governance/control-loops/",
    "title": "Operating Model: The control loops",
@@ -2362,7 +2365,7 @@
   {
    "id": "governance/records-and-evidence",
    "section": "governance",
-   "order": 2,
+   "order": 12,
    "type": "document",
    "slug": "/governance/records-and-evidence/",
    "title": "Operating Model: Records and evidence",
@@ -2380,7 +2383,7 @@
   {
    "id": "governance/controls",
    "section": "governance",
-   "order": 3,
+   "order": 13,
    "type": "catalogue",
    "slug": "/governance/controls/",
    "title": "Operating Model: Controls and the control catalogue",
@@ -2403,7 +2406,7 @@
   {
    "id": "governance/delivery-records-controls-and-measures",
    "section": "governance",
-   "order": 4,
+   "order": 14,
    "type": "document",
    "slug": "/governance/delivery-records-controls-and-measures/",
    "title": "Solution Lifecycle Model: Records, controls, and measures",
@@ -2422,7 +2425,7 @@
   {
    "id": "governance/unit-governance-workflow",
    "section": "governance",
-   "order": 6,
+   "order": 16,
    "type": "workflow",
    "slug": "/governance/unit-governance-workflow/",
    "title": "Unit governance workflow",
@@ -2445,7 +2448,7 @@
   {
    "id": "governance/unit-governance-workflow/events-and-sequences",
    "section": "governance",
-   "order": 7,
+   "order": 17,
    "type": "workflow",
    "slug": "/governance/unit-governance-workflow/events-and-sequences/",
    "title": "Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs",
@@ -2471,7 +2474,7 @@
   {
    "id": "governance/unit-governance-guide",
    "section": "governance",
-   "order": 8,
+   "order": 18,
    "type": "guide",
    "slug": "/governance/unit-governance-guide/",
    "title": "Guide: Unit governance",
@@ -2497,7 +2500,7 @@
   {
    "id": "governance/unit-governance-guide/the-controls",
    "section": "governance",
-   "order": 9,
+   "order": 19,
    "type": "guide",
    "slug": "/governance/unit-governance-guide/the-controls/",
    "title": "Guide: Unit governance: The controls and how to test them, and the rule source",
@@ -2515,6 +2518,120 @@
    "series_title": "Unit governance",
    "tab": "Guide: the controls",
    "production": "generated"
+  },
+  {
+   "id": "governance/decisions-and-escalation",
+   "section": "governance",
+   "order": 2,
+   "type": "outline",
+   "slug": "/governance/decisions-and-escalation/",
+   "title": "Decisions and escalation",
+   "source": [
+    "portal/content/governance/decisions-and-escalation.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "The four levels; when a decision rises; the Control Functions decide within their remit; disagreement, conflict, record"
+   ],
+   "series": "governance-course",
+   "series_title": "Governance",
+   "part": "2 of 7",
+   "tab": "Decisions"
+  },
+  {
+   "id": "governance/the-control-loops",
+   "section": "governance",
+   "order": 3,
+   "type": "outline",
+   "slug": "/governance/the-control-loops/",
+   "title": "The control loops",
+   "source": [
+    "portal/content/governance/the-control-loops.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "The five loops; drawn; the events the event loop catches; one cadence, three readings"
+   ],
+   "series": "governance-course",
+   "series_title": "Governance",
+   "part": "3 of 7",
+   "tab": "Control loops"
+  },
+  {
+   "id": "governance/the-steerings-and-the-bodies",
+   "section": "governance",
+   "order": 4,
+   "type": "outline",
+   "slug": "/governance/the-steerings-and-the-bodies/",
+   "title": "The Steerings and the bodies",
+   "source": [
+    "portal/content/governance/the-steerings-and-the-bodies.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "The bodies; what each Steering carries for governance; the reporting chain"
+   ],
+   "series": "governance-course",
+   "series_title": "Governance",
+   "part": "4 of 7",
+   "tab": "Steerings and bodies"
+  },
+  {
+   "id": "governance/controls-and-the-catalogue",
+   "section": "governance",
+   "order": 5,
+   "type": "outline",
+   "slug": "/governance/controls-and-the-catalogue/",
+   "title": "Controls and the control catalogue",
+   "source": [
+    "portal/content/governance/controls-and-the-catalogue.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "What a control is; the catalogue by loop; the life of a control; deficiencies and findings"
+   ],
+   "series": "governance-course",
+   "series_title": "Governance",
+   "part": "5 of 7",
+   "tab": "Controls"
+  },
+  {
+   "id": "governance/records-evidence-and-assurance",
+   "section": "governance",
+   "order": 6,
+   "type": "outline",
+   "slug": "/governance/records-evidence-and-assurance/",
+   "title": "Records, evidence, and assurance",
+   "source": [
+    "portal/content/governance/records-evidence-and-assurance.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "Three kinds of record; what makes a record evidence; how the Registry is kept; the three lines; what an auditor finds"
+   ],
+   "series": "governance-course",
+   "series_title": "Governance",
+   "part": "6 of 7",
+   "tab": "Records and evidence"
+  },
+  {
+   "id": "governance/measures-and-reporting",
+   "section": "governance",
+   "order": 7,
+   "type": "outline",
+   "slug": "/governance/measures-and-reporting/",
+   "title": "Measures and reporting",
+   "source": [
+    "portal/content/governance/measures-and-reporting.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "The measures of governance; what each loop reads; the Quarterly Report; the Measures of the Maturity Levels"
+   ],
+   "series": "governance-course",
+   "series_title": "Governance",
+   "part": "7 of 7",
+   "tab": "Measures"
   },
   {
    "id": "knowledge-base/initiative-brief",

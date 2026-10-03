@@ -2,7 +2,7 @@
 id: governance/unit-governance-guide
 title: Guide: Unit governance
 section: governance
-order: 8
+order: 18
 type: guide
 slug: /governance/unit-governance-guide/
 source: charter/guides/unit-governance-guide.md

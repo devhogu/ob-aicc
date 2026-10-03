@@ -2,7 +2,7 @@
 id: governance/unit-governance-guide/the-controls
 title: Guide: Unit governance: The controls and how to test them, and the rule source
 section: governance
-order: 9
+order: 19
 type: guide
 slug: /governance/unit-governance-guide/the-controls/
 source: charter/guides/unit-governance-guide.md

@@ -101,15 +101,21 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Delivery | The life of a Service | /delivery/life-of-a-service/ | outline | portal/content/delivery/life-of-a-service.md | all |  | authored; proposed for Solution Lifecycle Model 8; draws on STS |
 | Delivery | Service operations | /delivery/service-operations/ | outline | portal/content/delivery/service-operations.md | all |  | authored; the run-book template of a Service; draws on STS |
 | Delivery | Delivery measures: definitions and formulas | /delivery/measures-definitions-and-formulas/ | outline | portal/content/delivery/measures-definitions-and-formulas.md | all |  | authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 |
-| Governance and oversight | Governance and oversight | /governance/ | section | none | none |  | authored, with a generated list |
-| Governance and oversight | Operating Model: The control loops | /governance/control-loops/ | document | documents/operating-model.md | 6 | 1999 | generated |
-| Governance and oversight | Operating Model: Records and evidence | /governance/records-and-evidence/ | document | documents/operating-model.md | 7 | 517 | generated |
-| Governance and oversight | Operating Model: Controls and the control catalogue | /governance/controls/ | catalogue | documents/operating-model.md | 8 | 1926 | generated |
-| Governance and oversight | Solution Lifecycle Model: Records, controls, and measures | /governance/delivery-records-controls-and-measures/ | document | documents/solution-lifecycle-model.md | 9, 10 | 1400 | generated |
-| Governance and oversight | Unit governance workflow | /governance/unit-governance-workflow/ | workflow | workflows/unit-governance.md | 1, 2, 3 | 866 | generated |
-| Governance and oversight | Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs | /governance/unit-governance-workflow/events-and-sequences/ | workflow | workflows/unit-governance.md | 4, 5, 6, 7, 8, 9 | 1015 | generated |
-| Governance and oversight | Guide: Unit governance | /governance/unit-governance-guide/ | guide | guides/unit-governance-guide.md | 1, 2, 3, 4, 5, 6 | 1247 | generated |
-| Governance and oversight | Guide: Unit governance: The controls and how to test them, and the rule source | /governance/unit-governance-guide/the-controls/ | guide | guides/unit-governance-guide.md | 7, 8 | 1704 | generated |
+| Governance | Governance | /governance/ | section | portal/content/governance/overview.md | all |  | authored; the first part of the course, explanatory, the Operating Model is the rule |
+| Governance | Decisions and escalation | /governance/decisions-and-escalation/ | outline | portal/content/governance/decisions-and-escalation.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Governance | The control loops | /governance/the-control-loops/ | outline | portal/content/governance/the-control-loops.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Governance | The Steerings and the bodies | /governance/the-steerings-and-the-bodies/ | outline | portal/content/governance/the-steerings-and-the-bodies.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Governance | Controls and the control catalogue | /governance/controls-and-the-catalogue/ | outline | portal/content/governance/controls-and-the-catalogue.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Governance | Records, evidence, and assurance | /governance/records-evidence-and-assurance/ | outline | portal/content/governance/records-evidence-and-assurance.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Governance | Measures and reporting | /governance/measures-and-reporting/ | outline | portal/content/governance/measures-and-reporting.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Governance | Operating Model: The control loops | /governance/control-loops/ | document | documents/operating-model.md | 6 | 1999 | generated |
+| Governance | Operating Model: Records and evidence | /governance/records-and-evidence/ | document | documents/operating-model.md | 7 | 517 | generated |
+| Governance | Operating Model: Controls and the control catalogue | /governance/controls/ | catalogue | documents/operating-model.md | 8 | 1926 | generated |
+| Governance | Solution Lifecycle Model: Records, controls, and measures | /governance/delivery-records-controls-and-measures/ | document | documents/solution-lifecycle-model.md | 9, 10 | 1400 | generated |
+| Governance | Unit governance workflow | /governance/unit-governance-workflow/ | workflow | workflows/unit-governance.md | 1, 2, 3 | 866 | generated |
+| Governance | Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs | /governance/unit-governance-workflow/events-and-sequences/ | workflow | workflows/unit-governance.md | 4, 5, 6, 7, 8, 9 | 1015 | generated |
+| Governance | Guide: Unit governance | /governance/unit-governance-guide/ | guide | guides/unit-governance-guide.md | 1, 2, 3, 4, 5, 6 | 1247 | generated |
+| Governance | Guide: Unit governance: The controls and how to test them, and the rule source | /governance/unit-governance-guide/the-controls/ | guide | guides/unit-governance-guide.md | 7, 8 | 1704 | generated |
 | Organization | Organization | /organization/ | section | none | none |  | authored, with a generated list |
 | Organization | Operating Model | /organization/operating-model/ | document | documents/operating-model.md | 1, 2, 3 | 377 | generated |
 | Organization | Operating Model: Roles | /organization/operating-model/roles/ | document | documents/operating-model.md | 4 | 1516 | generated |
