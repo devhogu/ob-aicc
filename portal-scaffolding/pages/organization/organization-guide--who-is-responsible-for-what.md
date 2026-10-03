@@ -10,7 +10,8 @@ source_sections: 4
 document: organization-guide
 part: 2 of 3
 words: 1417
-series: set-organization-guide
+series: set-operating-model
+series_order: 3
 production: generated
 status: scaffold
 ---

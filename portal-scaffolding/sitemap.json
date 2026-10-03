@@ -1907,6 +1907,10 @@
    "document": "operating-model",
    "part": "1 of 3",
    "words": 377,
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "Foundations",
+   "series_order": 1,
    "production": "generated"
   },
   {
@@ -1925,6 +1929,10 @@
    "document": "operating-model",
    "part": "2 of 3",
    "words": 1516,
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "Roles",
+   "series_order": 1,
    "production": "generated"
   },
   {
@@ -1943,6 +1951,10 @@
    "document": "operating-model",
    "part": "3 of 3",
    "words": 742,
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "Decisions",
+   "series_order": 1,
    "production": "generated"
   },
   {
@@ -1963,9 +1975,10 @@
    "document": "organization-guide",
    "part": "1 of 3",
    "words": 830,
-   "series": "set-organization-guide",
-   "series_title": "Guide: Organization",
-   "tab": "Roles and profiles",
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "Guide: Roles and profiles",
+   "series_order": 3,
    "production": "generated"
   },
   {
@@ -1984,9 +1997,10 @@
    "document": "organization-guide",
    "part": "2 of 3",
    "words": 1417,
-   "series": "set-organization-guide",
-   "series_title": "Guide: Organization",
-   "tab": "Who is responsible for what",
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "Guide: Who is responsible",
+   "series_order": 3,
    "production": "generated"
   },
   {
@@ -2008,9 +2022,10 @@
    "document": "organization-guide",
    "part": "3 of 3",
    "words": 941,
-   "series": "set-organization-guide",
-   "series_title": "Guide: Organization",
-   "tab": "Bodies, people, and records",
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "Guide: Bodies and people",
+   "series_order": 3,
    "production": "generated"
   },
   {
@@ -2458,6 +2473,10 @@
    "document": "operating-model",
    "part": "governance view",
    "words": 1999,
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "The control loops",
+   "series_order": 2,
    "production": "generated"
   },
   {
@@ -2476,6 +2495,10 @@
    "document": "operating-model",
    "part": "governance view",
    "words": 517,
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "Records and evidence",
+   "series_order": 2,
    "production": "generated"
   },
   {
@@ -2494,6 +2517,10 @@
    "document": "operating-model",
    "part": "governance view",
    "words": 1926,
+   "series": "set-operating-model",
+   "series_title": "Operating Model",
+   "tab": "Controls and the control catalogue",
+   "series_order": 2,
    "outline": [
     "The controls table of Operating Model 8 as a filterable list: reference, title, loop, owner, timing, type",
     "One page for each of the 32 controls at /governance/controls/c-nn/: rule clause, owner, timing, evidence record, template, objective, type, how it is tested (Unit governance guide 7), and where it is cited",

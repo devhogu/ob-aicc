@@ -10,6 +10,8 @@ source_sections: 5
 document: operating-model
 part: 3 of 3
 words: 742
+series: set-operating-model
+series_order: 1
 production: generated
 status: scaffold
 ---

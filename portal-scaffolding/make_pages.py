@@ -349,13 +349,13 @@ split_doc('organization', 'operating-model', 'charter/documents/operating-model.
     ('', 'Foundations', [1, 2, 3]),
     ('roles', 'Roles', [4]),
     ('decisions', 'Decisions', [5]),
-], 10 if NEXT else 0)
+], 10 if NEXT else 0, **({'series': 'set-operating-model', 'series_title': 'Operating Model', 'tabs': ['Foundations', 'Roles', 'Decisions'], 'series_order': 1} if NEXT else {}))
 if NEXT:
     split_doc('organization', 'organization-guide', 'charter/guides/organization-guide.md', [
         ('', 'Purpose, the place of AICC, and the Roles and their profiles', [1, 2, 3]),
         ('who-is-responsible-for-what', 'Who is responsible for what', [4]),
         ('bodies-people-and-records', 'The governing bodies, the people records, the evidence, and the rule source', [5, 6, 7, 8]),
-    ], 14, type_='guide', series='set-organization-guide', series_title='Guide: Organization', tabs=['Roles and profiles', 'Who is responsible for what', 'Bodies, people, and records'])
+    ], 14, type_='guide', series='set-operating-model', series_title='Operating Model', tabs=['Guide: Roles and profiles', 'Guide: Who is responsible', 'Guide: Bodies and people'], series_order=3)
     OCOURSE = [
         ('overview', 'Organization', 'Overview', 'A joint team by Roles; one picture; what the organization is for; the practice it follows'),
         ('the-place-of-aicc-in-the-bank', 'The place of AICC in the Bank', 'Place in the Bank', 'Mandate and reporting line; what AICC is; what it is not; whom it works with'),
@@ -436,6 +436,7 @@ for slug, title, nums, order in [('control-loops', 'The control loops', [6], 11 
     add(id=f'governance/{slug}', section='governance', order=order, type='catalogue' if slug == 'controls' else 'document',
         slug=f'/governance/{slug}/', title='Operating Model: ' + title, source=['charter/documents/operating-model.md'], source_sections=nums,
         document='operating-model', part='governance view', words=sum(secs[x][1] for x in nums),
+        **({'series': 'set-operating-model', 'series_title': 'Operating Model', 'tab': title, 'series_order': 2} if NEXT else {}),
         outline=(['The controls table of Operating Model 8 as a filterable list: reference, title, loop, owner, timing, type',
                   'One page for each of the 32 controls at /governance/controls/c-nn/: rule clause, owner, timing, evidence record, template, objective, type, how it is tested (Unit governance guide 7), and where it is cited',
                   'A statement that the status of each control is kept in the Control Matrix of the Registry'] if slug == 'controls' else None))
@@ -585,6 +586,8 @@ for p in PAGES:
         fm.append(f"region: {p['region']}")
     if p.get('series'):
         fm.append(f"series: {p['series']}")
+    if p.get('series_order'):
+        fm.append(f"series_order: {p['series_order']}")
     if p.get('parent'):
         fm.append(f"parent: {p['parent']}")
     fm.append(f"production: {p['production']}")

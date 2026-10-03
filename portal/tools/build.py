@@ -929,7 +929,7 @@ def facts_html(site, p, lang, fm):
 def series_pages(site, p):
     if not p.get('series'):
         return []
-    return sorted([x for x in site.pages if x.get('series') == p['series']], key=lambda x: (x['order'], x['id']))
+    return sorted([x for x in site.pages if x.get('series') == p['series']], key=lambda x: (x.get('series_order', 0), x['order'], x['id']))
 
 
 def parts_html(site, p, lang):

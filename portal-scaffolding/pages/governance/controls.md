@@ -10,6 +10,8 @@ source_sections: 8
 document: operating-model
 part: governance view
 words: 1926
+series: set-operating-model
+series_order: 2
 production: generated
 status: scaffold
 ---
