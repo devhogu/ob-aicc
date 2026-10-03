@@ -25,7 +25,7 @@ The forums of governance are few: the Steering, held monthly and carrying more a
 
 2.1. The same Steerings carry the portfolio loops, stated in the Portfolio course, and take the results of the Iteration Review and Demo and the PI Review and Demo, stated in the Delivery course. In the month that holds the IP week the quarterly Steering is also that month's Steering; in December the yearly Steering is held in the first two weeks and the quarterly Steering of the IP week carries only the assurance loop and the portfolio review. The Cadence guide draws the Steerings of a year.
 
-## 3. The reporting chain## 3. The reporting chain
+## 3. The reporting chain
 
 3.1. Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The AICC Lead reports each quarter in the Quarterly Report; the Executive Sponsor approves it and issues it to the Board Committee as the report to the Board. Each figure in it traces to a Record or a governed source with its date. The Executive Sponsor tells the Board Committee of an AI Incident the incident management of the Bank classifies as major, and of any risk accepted beyond the AI Risk Appetite Statement, without waiting for the next report. The Control Functions stand beside the chain, independent; internal audit stands above it.
 
