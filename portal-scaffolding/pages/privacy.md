@@ -6,7 +6,7 @@ order: 90
 type: legal
 slug: /privacy/
 source: portal/content/privacy.md
-production: authored
+production: authored; aligned with the Operating Model 7 and the collaboration tooling workflow
 status: scaffold
 ---
 
@@ -20,7 +20,8 @@ Page type: legal. Address: /privacy/
 
 ## Outline
 
-- What the site collects: no cookies, no analytics, one theme preference in browser storage, the gateway session, server logs
+- What the site collects: no cookies, no analytics, search in the browser, one theme preference in browser storage, the gateway session, server logs, the repository
 - Feedback and contact by email
-- Persons named on the site: Roles, not persons
+- Links from the site: the corporate share only, no external links
+- Persons named on the site: Roles, not persons; no data of the Bank
 - Questions and revision

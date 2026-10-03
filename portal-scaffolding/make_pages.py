@@ -152,12 +152,12 @@ add(id='about/charter-outline', section='about', order=10 if NEXT else 8, type='
              'Control of the charter: status, revision, and change (from the charter README)'])
 
 # Legal pages of the portal, authored in portal/content, last in the left navigation and linked from the footer
-add(id='privacy', section=None, order=90, type='legal', slug='/privacy/', title='Privacy', source=['portal/content/privacy.md'], production='authored',
-    outline=['What the site collects: no cookies, no analytics, one theme preference in browser storage, the gateway session, server logs',
-             'Feedback and contact by email', 'Persons named on the site: Roles, not persons', 'Questions and revision'])
-add(id='terms-of-use', section=None, order=91, type='legal', slug='/terms-of-use/', title='Terms of use', source=['portal/content/terms-of-use.md'], production='authored',
-    outline=['Scope and access', 'Information of the Bank and ownership', 'Standing of the pages: the document prevails, the live records are elsewhere, no right arises from a page',
-             'Use of the site', 'Changes and contact'])
+add(id='privacy', section=None, order=90, type='legal', slug='/privacy/', title='Privacy', source=['portal/content/privacy.md'], production='authored; aligned with the Operating Model 7 and the collaboration tooling workflow',
+    outline=['What the site collects: no cookies, no analytics, search in the browser, one theme preference in browser storage, the gateway session, server logs, the repository',
+             'Feedback and contact by email', 'Links from the site: the corporate share only, no external links', 'Persons named on the site: Roles, not persons; no data of the Bank', 'Questions and revision'])
+add(id='terms-of-use', section=None, order=91, type='legal', slug='/terms-of-use/', title='Terms of use', source=['portal/content/terms-of-use.md'], production='authored; aligned with the Operating Model 7, the AI Policy 2, and the collaboration tooling workflow',
+    outline=['Scope and access', 'Information of the Bank and ownership', 'Standing of the pages: generated and authored, the document prevails, the regulatory pages are orientation, the live records are elsewhere, no right arises from a page',
+             'Use of the site, the external sources, and AI tools under the AI Policy', 'How the site is kept: the AICC Lead, the life cycle of the charter, the yearly review, the access review', 'Changes and contact'])
 
 # What AICC does (current) / Services (next)
 S = S_SERVICES
