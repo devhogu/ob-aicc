@@ -819,8 +819,9 @@ def layout(site, p, lang, main_html, outline):
                     sub.append(link(nested[q['id']], 'sub2'))
             nav.append('<div class="nav-sub">%s</div>' % ''.join(sub))
     legal = sorted([x for x in site.pages if x['type'] == 'legal'], key=lambda x: x['order'])
+    nav_legal = ''
     if legal:
-        nav.append('<div class="nav-legal">%s</div>' % ''.join('<a href="%s"%s>%s</a>' % (site.rel(url, site.url(q, lang)), ' aria-current="page"' if q['id'] == p['id'] else '', esc(q['title'])) for q in legal))
+        nav_legal = '<div class="nav-legal">%s</div>' % ''.join('<a href="%s"%s>%s</a>' % (site.rel(url, site.url(q, lang)), ' aria-current="page"' if q['id'] == p['id'] else '', esc(q['title'])) for q in legal)
     crumbs = ['<a href="%s">%s</a>' % (home, esc(m['home']))]
     if p.get('section'):
         sp = site.by_id[p['section'] + '/index']
@@ -867,7 +868,7 @@ def layout(site, p, lang, main_html, outline):
 </header>
 <div class="o-frame">
   <aside class="o-nav"><details open><summary>{esc(m['nav_summary'])}</summary><nav aria-label="{esc(m['nav_label'])}">{''.join(nav)}</nav></details>
-    <p class="o-caption">{esc(m['baseline'])}</p></aside>
+    <div class="nav-foot">{nav_legal}<p class="o-caption">{esc(m['baseline'])}</p></div></aside>
   <main class="o-main" id="main" tabindex="-1">
     {bc}
     {reading}
