@@ -9,7 +9,7 @@ source: charter/documents/portfolio-management-model.md
 source_sections: 6, 7
 document: portfolio-management-model
 part: 4 of 5
-words: 984
+words: 1265
 production: generated
 status: scaffold
 ---
@@ -24,8 +24,8 @@ Page type: document. Address: /portfolio/portfolio-management-model/the-business
 
 ## Sections of the source
 
-- 6. The business case (515 words)
-- 7. The MVP and the decision after it (469 words)
+- 6. The business case (614 words)
+- 7. The MVP and the decision after it (651 words)
 
 ## Outline
 

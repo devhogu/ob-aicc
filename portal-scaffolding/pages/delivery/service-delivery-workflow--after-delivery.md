@@ -9,7 +9,7 @@ source: charter/workflows/service-delivery.md
 source_sections: 6, 7, 8, 9
 document: service-delivery-workflow
 part: 4 of 6
-words: 1034
+words: 1703
 series: set-service-delivery
 production: generated
 status: scaffold
@@ -25,7 +25,7 @@ Page type: workflow. Address: /delivery/service-delivery-workflow/after-delivery
 
 ## Sections of the source
 
-- 6. After delivery: three types of Solution (724 words)
+- 6. After delivery: three types of Solution (1393 words)
 - 7. Oversight of the Adopted Solutions (124 words)
 - 8. Decisions along the stream (27 words)
 - 9. Where it runs (159 words)

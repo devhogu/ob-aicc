@@ -2,7 +2,7 @@
 id: knowledge-base/registry-snapshot
 title: Registry Snapshot
 section: knowledge-base
-order: 30
+order: 31
 type: template
 slug: /knowledge-base/registry-snapshot/
 source: charter/templates/registry-snapshot.md

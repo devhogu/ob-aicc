@@ -9,7 +9,7 @@ source: charter/documents/operating-model.md
 source_sections: 6
 document: operating-model
 part: governance view
-words: 1999
+words: 2839
 series: set-operating-model
 series_order: 2
 production: generated
@@ -26,7 +26,7 @@ Page type: document. Address: /governance/control-loops/
 
 ## Sections of the source
 
-- 6. The control loops (1999 words)
+- 6. The control loops (2839 words)
 
 ## Outline
 

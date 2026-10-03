@@ -2,9 +2,9 @@
 id: AICC-TPL-07-EN
 title: Outcome Report
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Outcome Report
@@ -42,9 +42,11 @@ revised: 2026-10-02
 
 [The check or validation (Control Sign-Off), the release, the Decision Records, and the Assumptions that failed, each by reference.]
 
-## 6. Lessons and reusable assets
+## 6. Lessons and Packages
 
-[What worked and what did not, and the methods or playbooks left in the Portfolio.]
+[What worked and what did not, and the lessons kept in the Portfolio.]
+
+Package left: [PKG-nnn, with its Package Definition; or none]
 
 ## 7. Acceptance and what follows
 

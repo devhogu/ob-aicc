@@ -21,19 +21,19 @@ flowchart TB
   DI <-->|"frame down: appetite, Priorities, Guardrails<br/>evidence up: Quarterly Report"| AS
   AS <-->|"frame down: corrective actions<br/>evidence up: Steering Summary"| CO
   CO <-->|"frame down: Steering Summary, limits, priorities<br/>evidence up: Dashboard, Dependencies"| OP
-  EV["Event loop, when it happens<br/>an AI Incident, an Exception, a stop, a risk beyond appetite,<br/>a change of provider or regulation, a finding, a change of Holder"]
+  EV["Event loop, when it happens<br/>an AI Incident, an Exception, a stop, a risk beyond appetite,<br/>a change of provider or regulation, a finding, a change of Holder,<br/>and the controls that a step of the work triggers"]
   EV -.->|"entered in Risks and Issues<br/>or a Decision Record, then reviewed"| CO
 ```
 
 Figure 1: the control loops, their deciders, and the frame and the evidence between them.
 
-The Steerings are not three meetings: the quarterly Steering carries the monthly core and adds to it, and the yearly Steering is the monthly Steering of December and adds to it. The following table states what each Steering carries (Operating Model 6.5 to 6.7; Portfolio Management Model 4.2 to 4.4).
+The Steerings are not three meetings: the quarterly Steering carries the monthly core and adds to it, and the yearly Steering is the monthly Steering of December and adds to it. Each Steering reviews the controls of the loops it carries (Operating Model 6.1). The following table states what each Steering carries (Operating Model 6.5 to 6.7 and 6.11; Portfolio Management Model 4.2 to 4.4).
 
 | Steering | Loops it carries | What it carries |
 | --- | --- | --- |
-| Monthly | Control, and portfolio sync | The core: progress, risks, and blockers; a sample of the Decisions of the AICC Lead; the acceptances and the review of the live Solutions; the open Exceptions and the deficiencies; the gate decisions that are due; the Active Initiatives against the limit; the portfolio sync |
-| Quarterly | Assurance, and portfolio review, in addition to the monthly core | The decision on each Active Initiative; the quarterly risk check and the review of each Risk Tier 3 Solution; the access review; the reconciliation of the AI Incidents with the incident management of the Bank; the Maturity Level; the report to the Board Committee; the Active Initiatives against the limit and the completeness of the Outcome Reports; the review of the Adopted Solutions; the confirmation of the PI Objectives and the Roadmap |
-| Yearly, in December | Direction, and strategic, in addition to the monthly core | The appointments in order; the documents and the AI Risk Appetite Statement; the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails; the yearly Proposal of the AI adoption strategy, which the Executive Sponsor presents and the Bank decides; the Quarterly Report of PIQ3 as its input |
+| Monthly | Control, and portfolio sync; the controls of the operating loop and the event loop | The core: progress, risks, and blockers; a sample of the Decisions of the AICC Lead and the share found in order; the events of the month and the controls that they triggered; the acceptances and the review of the live Solutions; the open Exceptions and the deficiencies; the gate decisions that are due; the Active Initiatives against the limit; the portfolio sync; the governance measures read monthly; the Registry Snapshot of the Iteration |
+| Quarterly | Assurance, and portfolio review, in addition to the monthly core | The decision on each Active Initiative; the quarterly risk check and the review of each Risk Tier 3 Solution; the access review; the reconciliation of the AI Incidents with the incident management of the Bank; the status of each control in the Control Matrix and the governance measures read quarterly; the Maturity Level of each Strategic Priority; the report to the Board Committee; the Active Initiatives against the limit and the completeness of the Outcome Reports; the review of the Adopted Solutions; the confirmation of the PI Objectives and the Roadmap |
+| Yearly, in December | Direction, and strategic, in addition to the monthly core | The appointments in order; the documents and the AI Risk Appetite Statement; the targets of the Measures of the Maturity Levels for the next year; the governance measures read yearly; the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails; the yearly Proposal of the AI adoption strategy, which the Executive Sponsor presents and the Bank decides; the Quarterly Report of PIQ3 as its input |
 
 In the month that holds the IP week (March, June, and September), the quarterly Steering is also that month's Steering, and no separate monthly Steering is held. In December, the monthly Steering is held in the first two weeks as the yearly Steering, and the quarterly Steering of the IP week carries only the assurance loop and the portfolio review.
 
@@ -68,7 +68,8 @@ An event that is not on the calendar enters the Risks and Issues Record with an 
 | A risk beyond the appetite | The Executive Sponsor decides, with a Decision Record, and the Board Committee is told without waiting for the next report | Operating Model 5.4; Charter 7.2 |
 | A change of provider or regulation | The provider is checked again, and the AICC Lead decides whether the change needs a new check or validation; the Executive Sponsor may call an extra review of the documents and the appetite | AI Policy 4.1; Solution Lifecycle Model 8.6; Operating Model 6.5 |
 | A finding or a deficiency | It is entered in the Risks and Issues Record with an owner and a due date, and the monthly Steering reviews it until it is closed | Operating Model 8.2 |
-| A change of Holder | The appointment, the change, or the relief is entered in the Appointments Record with its date and its decision reference | Operating Model 4.8 |
+| A change of Holder | The AICC Lead enters the appointment, the change, or the relief in the Appointments Record with its date and its decision reference; the new Holder accepts the Role, names a deputy, receives the access, and completes the training; the access of the previous Holder is removed | Operating Model 4.8, 4.9 |
+| A step of the work that triggers a control | A Service Agreement, a business case, a Risk Tier, a check or a validation, a release, a use for a data class, a provider check, a deployment or a change, a sharing of data, a published output, or a retirement leaves its own evidence record; it enters the Risks and Issues Record only when the control is Open or in Deficiency, and the monthly Steering reviews it among the events of the month | Operating Model 6.9, 8.5 |
 
 ## 5. A month, a quarter, and a year in sequence
 
@@ -87,18 +88,19 @@ sequenceDiagram
   T->>L: Weekly Review: flow, limits, Dependencies
   L->>R: Dashboard kept current
   T->>L: Iteration Review and Demo: results and acceptances
-  L->>ES: Monthly Steering: progress, risks, blockers
+  L->>ES: Monthly Steering: progress, risks, blockers, events of the month
   ES->>L: Samples the Decisions of the AICC Lead
   L->>R: Steering Summary recorded
+  L->>R: Registry Snapshot at the Iteration close
   Note over T,R: Each quarter
   L->>CF: Quarterly risk check
   CF-->>ES: View within their remit
   L->>ES: Quarterly Report
   ES->>BC: Report approved and issued
-  L->>R: Registry Snapshot
+  L->>R: Registry Snapshot at the PI close
   Note over T,R: Each year, at the yearly Steering in December
   L->>ES: Documents checked, findings of the year
-  ES->>L: Appetite decided, appointments in order
+  ES->>L: Appetite decided, appointments in order, Maturity targets set
   L->>R: Changes to the documents activated
   ES->>L: Priorities, Envelopes, Guardrails set
   ES->>BK: Yearly Proposal of the AI adoption strategy presented
@@ -143,13 +145,14 @@ Figure 4: an AI Incident in sequence.
 
 ## 7. The reporting chain
 
-Reporting flows from the Teams up to the Board Committee, and the Control Functions stand beside it, independent of AICC (Operating Model 6.10). Figure 5 shows the chain.
+Reporting flows from the Teams up to the Board Committee, and the Control Functions stand beside it, independent of AICC. Internal audit stands outside the chain (Operating Model 2.4, 6.3, 6.10). Figure 5 shows the chain and who sits at the Steering.
 
 ```mermaid
 flowchart LR
-  T["Teams"] --> L["AICC Lead"] --> S["Steering: Executive Sponsor and the AI Steering Committee"] --> B["Board Committee"]
-  CF["Control Functions: validate, may stop"] -.->|"independent of AICC"| L
+  T["Teams"] --> L["AICC Lead"] --> S["Steering: the Executive Sponsor chairs; the AICC Lead prepares and attends;<br/>the Domain Owners concerned and the Control Function Contacts attend;<br/>the AI Steering Committee advises"] --> B["Board Committee"]
+  CF["Control Functions: set the rules of their remit, clear, validate, decide Exceptions, may stop"] -.->|"independent of AICC"| L
   CF -.->|"report on their remit"| S
+  IA["Internal audit: independent assurance"] -.->|"outside the chain"| S
 ```
 
 Figure 5: the reporting chain.

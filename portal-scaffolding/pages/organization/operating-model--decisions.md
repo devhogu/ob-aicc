@@ -9,7 +9,7 @@ source: charter/documents/operating-model.md
 source_sections: 5
 document: operating-model
 part: 3 of 3
-words: 742
+words: 785
 series: set-operating-model
 series_order: 1
 production: generated
@@ -26,7 +26,7 @@ Page type: document. Address: /organization/operating-model/decisions/
 
 ## Sections of the source
 
-- 5. Decisions (742 words)
+- 5. Decisions (785 words)
 
 ## Outline
 

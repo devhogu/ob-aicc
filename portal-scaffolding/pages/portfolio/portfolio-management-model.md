@@ -9,7 +9,7 @@ source: charter/documents/portfolio-management-model.md
 source_sections: 1, 2, 3
 document: portfolio-management-model
 part: 1 of 5
-words: 597
+words: 737
 production: generated
 status: scaffold
 ---
@@ -25,8 +25,8 @@ Page type: document. Address: /portfolio/portfolio-management-model/
 ## Sections of the source
 
 - 1. Purpose and scope (151 words)
-- 2. Strategic inputs (95 words)
-- 3. Roles and bodies (351 words)
+- 2. Strategic inputs (97 words)
+- 3. Roles and bodies (489 words)
 
 ## Outline
 

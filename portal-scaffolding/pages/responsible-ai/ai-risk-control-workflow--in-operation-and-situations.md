@@ -9,7 +9,7 @@ source: charter/workflows/ai-risk-control.md
 source_sections: 4, 5, 6, 7, 8, 9
 document: ai-risk-control-workflow
 part: 2 of 2
-words: 1056
+words: 1267
 series: set-ai-risk-control
 production: generated
 status: scaffold
@@ -25,11 +25,11 @@ Page type: workflow. Address: /responsible-ai/ai-risk-control-workflow/in-operat
 
 ## Sections of the source
 
-- 4. In operation (281 words)
+- 4. In operation (345 words)
 - 5. Exception, suspension, and stop (218 words)
 - 6. Single decisions of the Executive Sponsor (157 words)
 - 7. An AI Incident (65 words)
-- 8. Situations (280 words)
+- 8. Situations (427 words)
 - 9. Where it runs (55 words)
 
 ## Outline

@@ -9,7 +9,7 @@ source: charter/guides/organization-guide.md
 source_sections: 4
 document: organization-guide
 part: 2 of 3
-words: 1417
+words: 2029
 series: set-operating-model
 series_order: 3
 production: generated
@@ -26,7 +26,7 @@ Page type: guide. Address: /organization/organization-guide/who-is-responsible-f
 
 ## Sections of the source
 
-- 4. Who is responsible for what (1417 words)
+- 4. Who is responsible for what (2029 words)
 
 ## Outline
 
@@ -40,5 +40,6 @@ Headings of the source:
 - 4. Who is responsible for what
 - 5. The governing bodies
 - 6. People: appointments, changes, and leavers
-- 7. Records and evidence
-- 8. Rule source
+- 7. How the organization grows
+- 8. Records and evidence
+- 9. Rule source

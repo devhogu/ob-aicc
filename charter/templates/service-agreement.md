@@ -2,9 +2,9 @@
 id: AICC-TPL-06-EN
 title: Service Agreement
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Service Agreement
@@ -19,6 +19,8 @@ revised: 2026-10-02
 | Engagement | [title] |
 | Function, Domain Owner | [function, name; for enabling work the Executive Sponsor is the client] |
 | Initiative | [INI-nnn] |
+| Service category and mode | [service category of the Business Model 4; Initiative, or Standing Initiative carrying run-rate work] |
+| Package to be left | [PKG-nnn or none] |
 | Phases covered | [study / proof / delivery / support] |
 | Support level | [none / on demand / at agreed response targets / run by AICC]. Requests and incidents come to the queue of AICC in Service Management; response targets are targets and not guarantees |
 | Service levels (for a Service) | [targets per class of service, Solution Lifecycle Model 10.4] |

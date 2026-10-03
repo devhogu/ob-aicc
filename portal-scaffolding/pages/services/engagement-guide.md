@@ -34,4 +34,5 @@ Headings of the source:
 - 5. The commitment in practice
 - 6. After delivery
 - 7. Situations
-- 8. Rule source
+- 8. What AICC does not do
+- 9. Rule source

@@ -9,7 +9,7 @@ source: charter/documents/solution-lifecycle-model.md
 source_sections: 7
 document: solution-lifecycle-model
 part: 6 of 7
-words: 1255
+words: 1340
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/verification-re
 
 ## Sections of the source
 
-- 7. Verification, release, and acceptance (1255 words)
+- 7. Verification, release, and acceptance (1340 words)
 
 ## Outline
 

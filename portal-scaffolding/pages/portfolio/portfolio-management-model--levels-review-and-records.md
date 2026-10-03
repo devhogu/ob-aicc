@@ -9,7 +9,7 @@ source: charter/documents/portfolio-management-model.md
 source_sections: 8, 9
 document: portfolio-management-model
 part: 5 of 5
-words: 353
+words: 1090
 production: generated
 status: scaffold
 ---
@@ -24,8 +24,8 @@ Page type: document. Address: /portfolio/portfolio-management-model/levels-revie
 
 ## Sections of the source
 
-- 8. Initiative, Capability, and Feature (164 words)
-- 9. Review, measures, and records (189 words)
+- 8. Initiative, Capability, and Feature (195 words)
+- 9. Review, measures, and records (895 words)
 
 ## Outline
 

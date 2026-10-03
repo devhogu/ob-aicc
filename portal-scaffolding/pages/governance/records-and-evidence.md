@@ -9,7 +9,7 @@ source: charter/documents/operating-model.md
 source_sections: 7
 document: operating-model
 part: governance view
-words: 517
+words: 710
 series: set-operating-model
 series_order: 2
 production: generated
@@ -26,7 +26,7 @@ Page type: document. Address: /governance/records-and-evidence/
 
 ## Sections of the source
 
-- 7. Records and evidence (517 words)
+- 7. Records and evidence (710 words)
 
 ## Outline
 

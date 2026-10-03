@@ -9,7 +9,7 @@ source: charter/guides/service-delivery-guide.md
 source_sections: 1, 2, 3, 4
 document: service-delivery-guide
 part: 5 of 6
-words: 1563
+words: 1694
 series: set-service-delivery
 production: generated
 status: scaffold
@@ -28,7 +28,7 @@ Page type: guide. Address: /delivery/service-delivery-guide/
 - 1. Purpose and when it applies (118 words)
 - 2. The levels and who owns them (267 words)
 - 3. The life of an item (484 words)
-- 4. The decisions along the stream, and who takes each (694 words)
+- 4. The decisions along the stream, and who takes each (825 words)
 
 ## Outline
 

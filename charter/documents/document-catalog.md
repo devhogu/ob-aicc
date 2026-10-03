@@ -2,9 +2,9 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 1.0
+revision: 2.0
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Document Catalog
@@ -45,10 +45,10 @@ revised: 2026-10-02
 | --- | --- | --- | --- |
 | AICC-MND-01 | Statement of Intent on the Adoption of Artificial Intelligence | The intent, values, principles, and strategy of the Bank for AI | EN |
 | AICC-MND-02 | AICC Charter | Mission, authority, funding, risk appetite, offer, and measures of AICC | EN |
-| AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and flow | EN |
-| AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the five control loops, Records, and controls | EN |
+| AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers in its service areas, how it takes in work in its two modes, how it commits, and how it tracks value and flow | EN |
+| AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the five control loops, Records, controls, and the governance measures | EN |
 | AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP | EN |
-| AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle, and the measures | EN |
+| AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle with the service steps and the Lab, and the measures | EN |
 | AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN |
 | AICC-REF-01 | Vocabulary and Style | Terms and style | EN |
 | AICC-REF-02 | Document Catalog | This Catalog | EN |
@@ -56,6 +56,8 @@ revised: 2026-10-02
 5.2. A new document is added only when no existing document can hold its content. The documents together number no more than nine, and no document is longer than about 80 clauses. A translation states the revision of the source that it translates.
 
 5.3. The workflows and the guides of the charter are changed like software, with their history in the repository, and are not activated. A Template is activated as 4.1 states. They state no rule of their own: the rules are in the documents.
+
+5.4. The pages that the AICC portal adds to explain the charter, such as the courses, the learning paths, the knowledge base, the references, and the service catalog, state no rule, and each states its edition. The AICC Lead shall keep them, with the Control Function Contacts of compliance and legal for a page on law, and shall remove a page that no longer serves a reader. A page in another language states the revision of the source that it explains. A page that states the form of a catalog, a Measure, or a Package gives the form only, and each instance is in the Registry or the Portfolio.
 
 ## 6. Templates
 
@@ -71,11 +73,12 @@ revised: 2026-10-02
 | 6 | AICC-TPL-08 Decision Record | A Decision of the Executive Sponsor that is hard to reverse, a Decision that the Operating Model 8 names as evidenced by a Decision Record, such as a Data Sharing Arrangement, an Exception of the AICC Lead, and an approval of output, and the cutover |
 | 7 | AICC-TPL-04 Steering Summary | Each Steering, monthly, quarterly, or yearly: attendance, advice, Decisions, and actions |
 | 8 | AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, and the acceptance |
-| 9 | AICC-TPL-10 AI Incident Review | The review of each AI Incident |
-| 10 | AICC-TPL-11 Registry Snapshot | The closed extract of the working state at the close of each Iteration and PI, and at the cutover |
-| 11 | AICC-TPL-05 Quarterly Report | The Quarterly Report, and the report to the Board Committee |
-| 12 | AICC-TPL-09 Appointments Record | The Roles mapped to people, the appointment log, the declarations, and the access |
-| 13 | AICC-TPL-12 Proposal | A Proposal to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy |
+| 9 | AICC-TPL-14 Package Definition | Each Package: its kind, owner, status, what a function needs to re-deploy it, and the Risk Tier of its uses |
+| 10 | AICC-TPL-10 AI Incident Review | The review of each AI Incident |
+| 11 | AICC-TPL-11 Registry Snapshot | The closed extract of the working state at the close of each Iteration and PI, and at the cutover |
+| 12 | AICC-TPL-05 Quarterly Report | The Quarterly Report, and the report to the Board Committee |
+| 13 | AICC-TPL-09 Appointments Record | The Roles mapped to people, the appointment log, the declarations, and the access |
+| 14 | AICC-TPL-12 Proposal | A Proposal to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy |
 
 The table is in the order of use, and the identifiers do not follow that order. The index of the Templates carries the same order and the place where each Record is kept.
 
@@ -105,3 +108,4 @@ The table is in the order of use, and the identifiers do not follow that order. 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
+| 2.0 | 2026-10-03 | Added the Package Definition AICC-TPL-14 to the Templates, the rules for the pages that the AICC portal adds to explain the charter, and the service areas, the modes, the governance measures, the service steps, and the Lab to the purposes of the documents. | DR-2026-062 |

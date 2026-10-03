@@ -2,9 +2,9 @@
 id: AICC-MND-03-EN
 title: Business Model
 status: active
-revision: 1.0
+revision: 2.0
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Business Model
@@ -25,11 +25,13 @@ revised: 2026-10-02
 
 2.4. AICC enforces its own protocol and is the example of the way of working that it proposes to the Bank.
 
+2.5. AICC proves and builds, and it does not operate a Solution at the scale of the Bank. A Solution that the Bank adopts at scale is handed to its Receiver, and a Service that AICC runs is run for its consumers until its Handover to an IT function of the Bank or its retirement (Solution Lifecycle Model 8).
+
 ## 3. Whom AICC serves
 
 3.1. An Engagement is an Initiative that has a client function. One Service Agreement is issued for each client function of an Initiative, and the client of an Initiative that is enabling work of AICC is the Executive Sponsor. The Domain Owner represents the function. A Domain Expert of the function is the partner who works with AICC. The other heads of function and the stakeholders who do not belong to AICC are notified.
 
-3.2. The AICC team is the AICC Lead, the people who are assigned to AICC and are not administratively owned by it, and the partners from the functions.
+3.2. The AICC team is the AICC Lead, the people who are assigned to AICC, and the partners from the functions.
 
 ## 4. What AICC offers
 
@@ -39,7 +41,39 @@ revised: 2026-10-02
 
 4.3. What an Engagement delivers is a Solution of one type: an Experiment, which is a proof that ends in a Proposal; a Product, which is a version for one consumer that AICC supports as agreed; or a Service, which AICC runs. The Solution Lifecycle Model states the life of each type.
 
-4.4. AICC also trains employees and coaches Domain Experts, and keeps the lessons and the reusable assets of its Engagements, such as methods and playbooks, in the Portfolio.
+4.4. AICC trains employees by role (Statement of Intent 10), coaches Domain Experts and employees at the workplace, builds skill libraries for a line of work, runs communities of practice, and publishes its lessons. The AICC Lead shall keep in the Portfolio the lessons of each Engagement and, where one results, the Package that it leaves, described in a Package Definition. The catalog of AICC has two parts: the Solutions, each with its Solution Definition, and the Packages, each with its Package Definition.
+
+4.5. AICC provides its services in four service areas, each a posture of AICC toward the work, and each service area groups service categories, each a kind of service that a function asks for. The following table states each service area, its service categories, the coverage of each, and the mode in which its work is taken in (4.7).
+
+| Service area | Service category | Coverage | Mode |
+| --- | --- | --- | --- |
+| Advise and formulate | Strategy and governance | The strategy, charter, operating and governance model, portal, and repository of a function or an Initiative, drafted with AI | Initiative |
+| Advise and formulate | Normatives and processes | Policies, procedures, internal regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for a function | Both |
+| Advise and formulate | Research and exploration | The regulatory and technology watch with its digests, trials in the Lab, and partnering with organizations and providers | Both |
+| Advise and formulate | Business cases and scenarios | The discovery of needs, scenarios with their problem, Solution, and leading indicators, the audit of readiness and of sources, and the business case on which the Portfolio decides | Both |
+| Build and run | Knowledge services | The documents of a function, and the documents of the state and the regulators that it works with, as a governed knowledge base that it can query | Both |
+| Build and run | Workplace automation | Routing, forms, reports, consolidation, documents from templates, and case assistance, done with AI and reviewed by a person | Both |
+| Build and run | Analytics and decision support | Pipelines, views, and analyses that prepare the factual base for decisions, traced to governed sources | Both |
+| Build and run | Content management | Public, investor, and management material generated from governed sources and templates, and the templates, editions, versions, and languages behind it | Both |
+| Build and run | Platforms | The shared engines and environments that AICC builds, the requirements of AICC on the AI Platform, and the Handover of an engine to an IT function of the Bank | Initiative |
+| Enablement | Training and knowledge sharing | Training by role, coaching at the workplace, skill libraries, communities of practice, and publications | Run-rate |
+| Enablement | Adoption and lifecycle management | The support of the Domain Experts and of the adoption plan of each Domain; the Handover, support, revision, and retirement of Solutions; the operation of a Service | Both |
+| Assurance | Policies, controls, criteria | The rules of use within the AI Policy, the mapping of the controls, and the acceptance and evaluation criteria of a Solution, stated before the build | Run-rate |
+| Assurance | Assessments and evaluations | Solutions and providers evaluated against the cases of the function before use, and the readiness of a function assessed | Run-rate |
+| Assurance | Risk tiering | The Risk Tier of a Solution proposed, recorded in the AI Registry, explained, and reassessed when the use changes (AI Policy 3) | Run-rate |
+| Assurance | Oversight | The Adopted Solutions, the review of the Solutions in use, the AI Incidents, and the changes, followed in the Registry and reported in the Quarterly Report | Run-rate |
+
+4.6. A service category states a direction of service and is not a commitment. AICC commits only in a Service Agreement (5.1).
+
+4.7. AICC takes in work under one of two modes: run-rate work or an Initiative. Run-rate work is a small, repeatable request of a function that is done within one Iteration, and any other work is an Initiative. Both modes leave the records that the Solution Lifecycle Model and the AI Policy require of the work, and the mode sets the depth of the study and the number of gates, not the standard of the work.
+
+4.8. Run-rate work is a Feature under the Standing Initiative of its service area. The AICC Lead shall take it in at the Weekly Review, within the Limits on Work in Progress, once the Domain Owner has approved the use for its data class (AI Policy 2). It is supported on demand only. It needs no Initiative Brief, no Service Agreement, and no Outcome Report of its own, and its Feature records the work. A request that cannot be done within one Iteration is taken in as an Initiative (7.2).
+
+4.9. Each service area has one Standing Initiative: an Initiative of enabling work that carries the run-rate work of the service area. The Executive Sponsor approves its Initiative Brief and reviews it at each quarterly Steering. A Standing Initiative does not count against the limit on the Active Initiatives (7.1).
+
+4.10. AICC may draft, for a function, its strategy, charter, operating and governance model, and normative documents and processes. The function owns their substance, and AICC decides none of it.
+
+4.11. AICC keeps a regulatory and technology watch, sends digests of change to the functions concerned, and tries what matters as an Experiment. The watch is run-rate work under the Standing Initiative of the service area Advise and formulate, within the share of each Iteration that the Executive Sponsor sets for enabling work in the mix of Initiatives.
 
 ## 5. How AICC commits: the Service Agreement
 
@@ -51,19 +85,19 @@ revised: 2026-10-02
 
 5.4. AICC works toward the outcome that the Service Agreement states on a best-effort basis, within the capability that AICC has available. The scope is a backlog ordered by value within the Limits on Work in Progress. The function commits to nothing.
 
-5.5. An Engagement ends with an Outcome Report: what was delivered, with the evidence referenced, and who accepted it: the Domain Owner, or the Executive Sponsor for enabling work, after the final acceptance of the Team (Solution Lifecycle Model 7.3). The Portfolio Backlog shows, for each Engagement, its client function, its phases and support level, its Service Agreement, and its Outcome Report.
+5.5. An Engagement ends with an Outcome Report: what was delivered, with the evidence referenced, and who accepted it: the Domain Owner, or the Executive Sponsor for enabling work, after the final acceptance of the Team (Solution Lifecycle Model 7.3). The Portfolio Backlog shows, for each Engagement, its client function, its service category and mode, its phases and support level, its Service Agreement, and its Outcome Report.
 
 ## 6. Value and flow
 
 6.1. AICC tracks, for each Engagement, the benefit that the function claims and confirms, and the lead time and cycle time of its work (Solution Lifecycle Model 10). The money and the other figures of the Bank stay in the systems of the Bank, and the records point to them.
 
-6.2. The Quarterly Report shows the benefit confirmed for each Engagement and the flow measures of AICC. The Investment Envelopes fund the Strategic Priorities and the Teams, as the Charter 4.1 states. AICC does not charge the functions, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of a Solution.
+6.2. The Quarterly Report shows the benefit confirmed for each Engagement, read against the benefit claimed for each Strategic Priority as a trend, and the flow measures of AICC. The Investment Envelopes fund the Strategic Priorities and the Teams, as the Charter 4.1 states. AICC does not charge the functions, and the Domain pays from its Envelope for the run, the licenses, and the provider costs of a Solution.
 
 ## 7. Controls on the commitment
 
 7.1. AICC shall not take in more Initiatives than its Limit on Work in Progress allows. The AICC Lead sets the limit on the Active Initiatives and shall not issue a Service Agreement for an Initiative that the limit does not allow. The work above the limit waits in the Portfolio Backlog.
 
-7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, or the Executive Sponsor for enabling work, and the limit on the Active Initiatives permits it. Otherwise the item is deferred or rejected.
+7.2. AICC takes in an Engagement when it fits a Strategic Priority, has a client function with a Domain Owner, or the Executive Sponsor for enabling work, and the limit on the Active Initiatives permits it. Otherwise the item is deferred or rejected. At intake the AICC Lead shall record the problem, the size, the expected Risk Tier, the service category, and the mode of each need, and shall check whether a Package or a Solution of the catalog already answers it (4.4). The service category proposes the mode, and the AICC Lead confirms it; run-rate work is then taken in as 4.8 states.
 
 7.3. The Domain Owner, or the Executive Sponsor for enabling work, confirms the benefit of an Engagement against the Initiative Brief, from the source that the Brief names.
 
@@ -80,3 +114,4 @@ revised: 2026-10-02
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
+| 2.0 | 2026-10-03 | Added the four service areas and fifteen service categories, the two modes of run-rate work and an Initiative with the Standing Initiatives, the Package and the two-part catalog, the intake record and catalog check, drafting for a function, the regulatory and technology watch, and the limit that AICC does not operate a Solution at the scale of the Bank. | DR-2026-062 |

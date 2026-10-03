@@ -2,9 +2,9 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Initiative Brief
@@ -17,6 +17,9 @@ revised: 2026-10-02
 | Title | [title] |
 | State and Stage | [state, and Stage if in discovery or active] |
 | Strategic Priority | [PRI-n] |
+| Service area and category | [service area and service category of the Business Model 4] |
+| Kind of work | [business / enabling / risk and compliance] |
+| Standing Initiative | [yes / no] |
 | Domain Owner (represents the client function) | [name; several for an Initiative that spans Domains] |
 | Pivot of | [INI-nnn, when the Initiative is a pivot of another] |
 | Solutions expected | [the Solutions it should deliver, with their types] |
@@ -37,7 +40,7 @@ Open sections: [none, or the numbers and what is missing]
 | --- | --- | --- | --- |
 |  |  | [the source system of the function] |  |
 
-[The baseline and the target of each indicator are figures of the Bank: they stay in the source system, and the brief points to them.]
+[Two to four leading indicators, each measuring a change in the business and not an activity, each with its baseline and its target. The baseline and the target are figures of the Bank: they stay in the source system, and the brief points to them.]
 
 ## 3. Scope and the minimum viable product
 

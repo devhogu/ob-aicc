@@ -9,7 +9,7 @@ source: charter/guides/unit-governance-guide.md
 source_sections: 7, 8
 document: unit-governance-guide
 part: 4 of 4
-words: 1704
+words: 1897
 series: set-unit-governance
 production: generated
 status: scaffold
@@ -25,8 +25,8 @@ Page type: guide. Address: /governance/unit-governance-guide/the-controls/
 
 ## Sections of the source
 
-- 7. The controls and how to test them (1661 words)
-- 8. Rule source (43 words)
+- 7. The controls and how to test them (1852 words)
+- 8. Rule source (45 words)
 
 ## Outline
 

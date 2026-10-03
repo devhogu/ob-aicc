@@ -132,7 +132,7 @@ The execution takes the approved Features and builds them, on the loops of the C
 | Set the intent | PI Planning | Choose the Capabilities and Features that the PI aims at, with their Dependencies | The Teams and the Domain Owners | The PI Objectives; the Program Board; the proposed Roadmap, confirmed at the quarterly Steering |
 | Select the Features | Iteration Planning | Select the Features for the month into the Iteration Backlog | The Team with the product owner | The Iteration Backlog |
 | Develop | Weekly loops | Build the minimum solution with the function | Solution Engineer with the Domain Expert | Working increments |
-| Verify | Before every deployment | Test every Feature, and the MVP, by a person other than the builder outside production, with the result referenced in the Feature (Solution Lifecycle Model 7.1); and the check for Risk Tier 1, or the validation by the Control Function Contacts for Risk Tier 2 and 3, before the first deployment to real users or data | A person other than the builder; the Checker; the Control Function Contacts | The test result in the Feature; the check, or the Control Sign-Off |
+| Verify | Before every deployment | Integrate the work as it goes, and test every Feature, and the MVP, by a person other than the builder outside production, with the result referenced in the Feature; a failed test returns to its builder the same day (Solution Lifecycle Model 7.1); and the check for Risk Tier 1, or the validation by the Control Function Contacts for Risk Tier 2 and 3 with its security test against attacks on AI (Solution Lifecycle Model 7.2), before the first deployment to real users or data | A person other than the builder; the Checker; the Control Function Contacts | The test result in the Feature; the check, or the Control Sign-Off |
 | Deploy | Weekly loops | A Feature is deployed to the environment of use after its test and check. The deployment of the Solution to its first users, and of each significant change, follows the final acceptance of the Team. A deployment to production follows the change management of the Bank: raise the change, enter the change ticket and the test result in the Feature, and use the access process of the Bank (Solution Lifecycle Model 8.3). The first users are trained before use (Solution Lifecycle Model 7.1, AI Policy 2.1) | Solution Engineer; the change management of the Bank approves; the Platform Owner for the platform | A deployed Feature, with its change ticket and test result |
 | Demonstrate and accept | Iteration Review and Demo | Show what works, and take the acceptance of each Feature and each Capability (Solution Lifecycle Model 7.3(a)) | Product owner (the AICC Lead while the Team has up to three people) | The acceptance, with who and when |
 | Give the final acceptance of the Team | Before the first deployment of a Solution to its first users, and of a significant change | Confirm that the Solution meets the acceptance criteria of its Solution Definition, that its tests are referenced, and that its check or validation is in place (Solution Lifecycle Model 7.3(b)) | AICC Lead | The final acceptance of the Team in the release block of the Solution Definition, with who and when |
@@ -140,7 +140,7 @@ The execution takes the approved Features and builds them, on the loops of the C
 | Release | Before use beyond the first users | Decide that the Solution goes beyond its first users, with the Acceptance Checklist signed where AICC hands the Solution to a Domain (Solution Lifecycle Model 7.1, 7.4) | Domain Owner (the Executive Sponsor where the AICC Lead is the Domain Owner); Executive Sponsor for Risk Tier 3 | The release block of the Solution Definition, and the Acceptance Checklist |
 | Control the flow | Weekly Review | Keep the boards, the Limits, and the Dependencies under control | AICC Lead | The Dashboard |
 
-The AICC Lead does not check, validate, release, or give the business acceptance of a Solution that the AICC Lead built (Operating Model 4.4(d)).
+The AICC Lead does not check, validate, release, or give the business acceptance of a Solution that the AICC Lead built (Operating Model 4.4(d)). The builder does not test, check, or validate, the requester who accepts is not from AICC, and the person who releases owns the results (Solution Lifecycle Model 7.5).
 
 Figure 6 shows the order in which a Feature and a Solution are accepted, checked, and released.
 
@@ -160,11 +160,36 @@ flowchart LR
 
 Figure 6: the acceptance, the check, the deployment, and the release.
 
+The work runs on three loops, exploration, build, and release, and the evidence returns on four feedback loops: the demonstration, the retrospective with Inspect and Adapt, the live review, and the measures (Solution Lifecycle Model 6.9). Figure 7 shows them.
+
+```mermaid
+flowchart LR
+  subgraph EXP["Exploration"]
+    direction TB
+    E1["Explore"] --> E2["Design"] --> E3(["Ready Feature"])
+  end
+  subgraph BLD["Build"]
+    direction TB
+    B1["Develop"] --> B2["Integrate as it goes"] --> B3["Test by another person"]
+    B3 -.->|"failed: back to the builder the same day"| B1
+  end
+  subgraph REL["Release"]
+    direction TB
+    R1["Deploy"] --> R2["Accept"] --> R3["Release beyond the first users"]
+  end
+  EXP --> BLD --> REL
+  REL -.->|"demonstration"| EXP
+  REL -.->|"live review: the four signals"| EXP
+  BLD -.->|"retrospective, Inspect and Adapt, measures"| BLD
+```
+
+Figure 7: the three loops of the work and the feedback loops.
+
 ## 6. After delivery: three types of Solution
 
 The offering type of a Solution, set in its definition, decides its life after delivery and who owns it. The Receiver is named in the Solution Definition before the Solution is approved.
 
-Figure 7 shows the three lives.
+Figure 8 shows the three lives.
 
 ```mermaid
 flowchart LR
@@ -175,6 +200,7 @@ flowchart LR
     direction LR
     S1["Operate"] --> S2["Evolve"] --> S3["Retire"]
     S2 -.new Capabilities and Features.-> S1
+    S2 -->|"to be run at scale"| S4["Handover to an IT function of the Bank"]
   end
   subgraph PR["Product: built for one consumer"]
     direction LR
@@ -189,19 +215,35 @@ flowchart LR
   end
 ```
 
-Figure 7: the life of a Solution by type.
+Figure 8: the life of a Solution by type.
 
 | Type | Owner after delivery | Life | End |
 | --- | --- | --- | --- |
-| Service | AICC, with a business case that states the run cost and a sunset rule | Operate, Evolve, Retire | Retired or cancelled |
-| Product | The consumer owns the version; AICC supports on demand | Handover, Support, Revise, Retire for the consumer; a Product with many consumers or recurring requests becomes a Service through a business case | Retired for the consumer |
+| Service | AICC, with a business case that states the run cost and a sunset rule | Operate, Evolve, Retire, through the service steps (Solution Lifecycle Model 8.8) | Retired, handed over to an IT function of the Bank, or cancelled |
+| Product | The consumer owns the version; AICC supports on demand | Handover, Support, Revise, Retire for the consumer; a Product or a Package with a second consumer gives rise to a Service (Solution Lifecycle Model 8.12) | Retired for the consumer |
 | Experiment | None yet; the Executive Sponsor accepts it where it has no Domain, and otherwise the Domain Owner (Solution Lifecycle Model 8.1) | Trial, Proposal, Handover when a Receiver accepts it | Handed off, closed with its lessons without a Receiver, a Proposal, or rejected |
 
-Operation and support answer the requests of the users and the incidents. AICC reassesses the Risk Tier on a change, each year for Risk Tier 2, and each six months for Risk Tier 3 (AI Policy 3.3). The following table points to the clauses that govern the life of a live Solution, and Figure 8 shows how the steps follow each other.
+### The Experiment in the Lab
+
+An Experiment runs in the Lab under the rules of the Solution Lifecycle Model 8.13, and its work follows six steps. They are steps of the work inside its Stages and are not states. The following table shows them.
+
+| Step | Stage | Intent | Who | Output |
+| --- | --- | --- | --- | --- |
+| Define | Definition (discovery) | State the hypothesis, the leading indicators, the benchmark, and the time-box in the Solution Definition | Solution Engineer with the Domain Expert; the Domain Owner, or the Executive Sponsor where there is no Domain, approves | The Solution Definition and the AI Registry entry |
+| Establish | Trial | Set up the Lab environment, with access by role and logging; check a cloud or external environment as a provider | Solution Engineer; the Control Function Contacts check a provider | The environment record in the Solution Definition; the Control Sign-Off of a provider check |
+| Prepare data | Trial | Take read-only extracts under the classification of the Bank, each with its owner; minimize personal data and assess it with the Control Function Contact of data protection | Solution Engineer with the owner of each source | The data extracts in the Solution Definition |
+| Build | Trial | Build the Solution with its guardrails for grounding, drift, and bias, and its evaluation set | Solution Engineer | The working trial; the evaluation set |
+| Evaluate | Trial | Compare the result with the benchmark of the current way and its cost, confirm that the data was correct, and take the check or the validation where it applies (Solution Lifecycle Model 7.1) | Solution Engineer; the Checker or the Control Function Contacts | The results against the leading indicators and the benchmark |
+| Decide | Proposal | At the close of the time-box, review the Experiment: it is accepted with its lessons and closed, a Proposal is made, or it is rejected (Solution Lifecycle Model 8.1) | The Domain Owner, or the Executive Sponsor where there is no Domain | The decision; the Proposal where one is made; the Outcome Report for an Engagement |
+
+### The life of a live Solution
+
+Operation and support answer the requests of the users and the incidents. AICC reassesses the Risk Tier on a change, each year for Risk Tier 2, and each six months for Risk Tier 3 (AI Policy 3.3). The following table points to the clauses that govern the life of a live Solution, and Figure 9 shows how the steps follow each other.
 
 | Step | Intent | Who | Output | Where the rule is |
 | --- | --- | --- | --- | --- |
-| Operate and support | Run the Solution, answer the requests and the incidents, and review the live Solution at each Iteration Review and Demo | The IT function that operates it; the Domain Owner reviews, and the Executive Sponsor for a Service across Domains | The ticket in Service Management; the note of the review in the Solution Definition | Solution Lifecycle Model 8.4, 8.5 |
+| Operate and support | Run the Solution, triage and answer the requests by class of service, handle the incidents, take repeats into problem management, and review the four signals of the live Solution at each Iteration Review and Demo | The IT function that operates it, the Solution Engineer for a Service that AICC runs; the Solution Engineer triages and the AICC Lead decides a class in doubt; the Domain Owner reviews, and the Executive Sponsor for a Service across Domains | The ticket in Service Management; the note of the review in the Solution Definition | Solution Lifecycle Model 8.4, 8.5, 8.10 |
+| Transition of a Service | Decide, on the reading of the four signals at the quarterly Steering, whether a Service is handed over to an IT function of the Bank or retired | The Domain Owner, or the Executive Sponsor for a Service across Domains; the Receiver accepts the Handover | The Decision Log entry; the Proposal; the Solution Definition | Solution Lifecycle Model 8.11 |
 | Change | Handle a change to a released Solution as a Feature, and decide whether a significant change needs a new check or validation. An emergency change follows the emergency procedure of the change management of the Bank: the AICC Lead authorizes it, and the Executive Sponsor reviews it within five working days | The Solution Engineer; the change management of the Bank approves; the AICC Lead decides on a new check and authorizes an emergency change | The Feature with its change ticket; the Decision Log entry | Solution Lifecycle Model 8.6 |
 | Retire | Remove the access, handle the data, and mark the AI Registry entry before the Solution is closed | The Solution Engineer; the Domain Owner or the Executive Sponsor approves | The approval and the dates in the Solution Definition | Solution Lifecycle Model 8.7 |
 | Measures | Read the flow, the quality, and the health of the operation to control and to improve, and not to rank people | The AICC Lead, with the Team | The Dashboard | Solution Lifecycle Model 10 |
@@ -215,6 +257,8 @@ flowchart LR
   EM["Emergency change<br/>authorized by the AICC Lead"] -.-> C
   RV -->|"no longer worth running"| X["Retire"]
   X --> Z(["Closed"])
+  RV -->|"a Service to be run at scale"| HO["Handover to an IT function<br/>of the Bank, on a Proposal"]
+  HO --> Z
   O -.->|"measured"| M["Measures on the Dashboard"]
   O --> SP["Support<br/>Service Management"]
   SP -->|"request or question"| H["Triaged by class of service<br/>handled and closed"]
@@ -222,7 +266,32 @@ flowchart LR
   SP -->|"new feature"| PB["Program Backlog<br/>a Feature"]
 ```
 
-Figure 8: the life of a live Solution.
+Figure 9: the life of a live Solution.
+
+A Service passes through the service steps of the Solution Lifecycle Model 8.8, which detail its Operate, Evolve, and Retire in Figure 8 and stay inside the Active state. Figure 10 shows them.
+
+```mermaid
+flowchart LR
+  subgraph OP["Operate"]
+    direction LR
+    A["Admitted<br/>catalog entry, Service Agreement,<br/>queue in Service Management"] --> C["Catalogued<br/>first request served<br/>within target"] --> I["In service<br/>the four signals read<br/>at each Iteration Review and Demo"]
+  end
+  subgraph EV["Evolve"]
+    direction LR
+    M["Improving<br/>a change as a Feature"]
+    T["Transition planned<br/>decided on the quarterly reading"]
+  end
+  subgraph RT["Retire"]
+    direction LR
+    G["Migrating<br/>users and run moved"] --> H(["Handed over or Retired"])
+  end
+  I -->|"a change is needed"| M
+  M -->|"change accepted"| I
+  I -->|"the reading calls for a transition"| T
+  T -->|"Handover to an IT function,<br/>or retirement"| G
+```
+
+Figure 10: the service steps of a Service.
 
 ## 7. Oversight of the Adopted Solutions
 

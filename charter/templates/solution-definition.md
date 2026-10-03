@@ -2,9 +2,9 @@
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Solution Definition
@@ -66,11 +66,48 @@ revised: 2026-10-02
 
 [For a Service: the run cost source and the sunset rule. For a Product: the consumer and the version. For an Experiment: the time-box in Iterations, and the receiver of the proposal.]
 
-**Review of the live Solution.** [The note at each Iteration Review and Demo on the monitoring, incidents, use, and notices of the providers.]
+**Conditions of use.** [What the Solution shall not be used for. The licenses of its open components, with their terms. The alert levels of its monitoring.]
 
-| Date of the Iteration Review and Demo | Reviewed by | Note |
-| --- | --- | --- |
-| [date] | [Domain Owner, or the Executive Sponsor for a Service across Domains] |  |
+**Experiment.** [For an Experiment only (Solution Lifecycle Model 8.13).]
+
+| Item | Entry |
+| --- | --- |
+| Hypothesis and leading indicators | [hypothesis; each indicator with its source, baseline, and target] |
+| Environment record | [the Lab environment used, its access by role, and its logging; for a cloud or external environment, the Control Sign-Off of the provider check] |
+| Data extracts | [each extract: source, owner, class under the classification of the Bank, read-only, date; personal data minimized and assessed with the Control Function Contact of data protection on [date]] |
+| Evaluation set | [reference, and how it grows with use] |
+| Benchmark | [the current way and its cost, against which the result is compared] |
+
+**Service.** [For a Service only (Solution Lifecycle Model 8.8 to 8.12).]
+
+| Item | Entry |
+| --- | --- |
+| Service step | [Admitted / Catalogued / In service / Improving / Transition planned / Migrating / Handed over or Retired], since [date] |
+| Catalog entry | [reference in the Portfolio] |
+| Service Agreement | [reference] |
+| Response targets by class | [Urgent: [target]; High priority: [target]; Normal: [target]; or "the default of Solution Lifecycle Model 8.5"] |
+| Queue in Service Management | [name; opened on [date]] |
+| Known errors | [reference] |
+| User guide | [reference] |
+| Handover to a Receiver | [the IT function of the Bank as Receiver; Proposal reference; transition decided by [who] on [date], Decision Log reference; Handover accepted on [date]] |
+
+**Practices checklist (light mode).** [While AICC runs in light mode, for a Service: each practice of Solution Lifecycle Model 8.10 with how it is met, or "not applicable" with the reason.]
+
+| Practice | How it is met |
+| --- | --- |
+| Request and incident handling | [the queue; the weekly session] |
+| Problem management | [repeats taken as Features; references] |
+| Change enablement | [the change management of the Bank] |
+| Knowledge | [known errors and user guide, by reference] |
+| Service levels | [against the Service Agreement] |
+| Run cost | [source; against the business case] |
+| Supplier fallback and exit | [for each supplier] |
+
+**Review of the live Solution.** [The note at each Iteration Review and Demo on the four signals and the notices of the providers (Solution Lifecycle Model 8.4).]
+
+| Date of the Iteration Review and Demo | Reviewed by | Service levels | Incidents, including AI Incidents and repeats | Use | Cost | Notices of the providers | Note |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| [date] | [Domain Owner, or the Executive Sponsor for a Service across Domains] |  |  |  |  |  |  |
 
 **Changes and new-check decisions.** [Each significant change, and the decision of the AICC Lead on whether it requires a new check or validation, with the reason, the date, and its Decision Log reference.]
 
@@ -80,7 +117,7 @@ revised: 2026-10-02
 
 **Backup and recovery.** [Those of the AI Platform and of the Bank that apply, by reference.]
 
-**Retirement or end.** [Handover accepted by the Receiver on [date] (Solution Lifecycle Model 8.1). Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]
+**Retirement or end.** [Handover accepted by the Receiver on [date] (Solution Lifecycle Model 8.1, 8.11). Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]
 
 **Adopted Solution.** [Marked as adopted: yes or no; the Receiver as owner.]
 

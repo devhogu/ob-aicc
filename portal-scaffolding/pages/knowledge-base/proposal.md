@@ -2,7 +2,7 @@
 id: knowledge-base/proposal
 title: Proposal
 section: knowledge-base
-order: 33
+order: 34
 type: template
 slug: /knowledge-base/proposal/
 source: charter/templates/proposal.md

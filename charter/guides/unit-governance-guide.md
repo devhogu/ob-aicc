@@ -50,9 +50,9 @@ flowchart TB
   CO["Control loop, monthly<br/>monthly Steering<br/>decides: Executive Sponsor"]
   OP["Operating loop, weekly<br/>Weekly Review<br/>decides: AICC Lead<br/>record: the Dashboard"]
   DI <-->|"frame down: appetite, Priorities, Guardrails<br/>evidence up: Quarterly Report"| AS
-  AS <-->|"frame down: results, risk check, Maturity Level<br/>evidence up: Steering Summary"| CO
-  CO <-->|"frame down: sample, deficiencies, gate decisions<br/>evidence up: Dashboard, Dependencies"| OP
-  EV["Event loop, when it happens<br/>an AI Incident, an Exception, a stop, a risk beyond appetite,<br/>a finding, a change of Holder"]
+  AS <-->|"frame down: corrective actions<br/>evidence up: Steering Summary"| CO
+  CO <-->|"frame down: Steering Summary, limits, priorities<br/>evidence up: Dashboard, Dependencies"| OP
+  EV["Event loop, when it happens<br/>an AI Incident, an Exception, a stop, a risk beyond appetite,<br/>a change of provider or regulation, a finding, a change of Holder,<br/>and the controls that a step of the work triggers"]
   EV -.->|"entered in Risks and Issues<br/>or a Decision Record, then reviewed"| CO
 ```
 
@@ -62,15 +62,27 @@ The following table states each loop, its event, what is set or reviewed, who de
 
 | Loop | Cadence and event | What is set or reviewed | By whom | Record |
 | --- | --- | --- | --- | --- |
-| Direction, and strategic | Yearly, at the yearly Steering (the monthly Steering of December, in its first two weeks), for the next year | The documents, the AI Risk Appetite Statement, and the appointments; the Strategic Priorities, the Envelopes, and the Guardrails; the yearly Proposal of the strategy | Executive Sponsor; the AICC Lead owns the documents | Decision Records; Priorities |
-| Assurance, and portfolio review | Quarterly, at the quarterly Steering | The quarterly risk check with the Control Function Contacts, the access review, the Maturity Level, the report to the Board Committee; the decision on each Active Initiative | Executive Sponsor | Quarterly Report; Registry Snapshot; Steering Summary |
-| Control, and portfolio sync | Monthly, at the monthly Steering | Progress, risks, and blockers; the sample of the Decisions of the AICC Lead; the review of the live Solutions; the open Exceptions and the deficiencies; the gate decisions that are due, and the Active Initiatives against the limit | Executive Sponsor | Steering Summary; Decision Log |
+| Direction, and strategic | Yearly, at the yearly Steering (the monthly Steering of December, in its first two weeks), for the next year | In the direction loop, the documents, the AI Risk Appetite Statement and the policy, the appointments, and the targets of the Measures of the Maturity Levels; in the strategic loop, the Strategic Priorities, the Envelopes, and the Guardrails; the yearly Proposal of the strategy | Executive Sponsor; the AICC Lead owns the documents | Decision Records; Priorities |
+| Assurance, and portfolio review | Quarterly, at the quarterly Steering | The quarterly risk check with the Control Function Contacts, the access review, the status of each control and the governance measures, the Maturity Level of each Strategic Priority, the report to the Board Committee; the decision on each Active Initiative | Executive Sponsor | Quarterly Report; Registry Snapshot; Steering Summary |
+| Control, and portfolio sync | Monthly, at the monthly Steering | Progress, risks, and blockers; the sample of the Decisions of the AICC Lead and the share found in order; the events of the month; the review of the live Solutions; the open Exceptions and the deficiencies; the gate decisions that are due, and the Active Initiatives against the limit | Executive Sponsor | Steering Summary; Decision Log |
 | Operating, and backlog care | Weekly, at the Weekly Review | The flow, the Dependencies, the funnel, and the rank | AICC Lead | Dashboard; the working state |
-| Event | When it happens | An AI Incident, an Exception, a stop, a risk beyond appetite, a change of provider or regulation, a finding, or a change of Holder | As the Operating Model states | Decision Record; Risks and Issues; Appointments |
+| Event | When it happens | An AI Incident, an Exception, a stop, a risk beyond appetite, a change of provider or regulation, a finding, or a change of Holder; and the controls that a step of the work triggers | As the Operating Model states | Decision Record; Risks and Issues; Appointments; the evidence record of each control |
+
+Every control is carried by at least one loop and is reviewed at the Steering of that loop; the controls of the operating loop and the event loop are reviewed at the monthly Steering (Operating Model 6.1). Governance adds no meeting and keeps no Record beyond those of the work. The following table gives the catalog of the controls by loop.
+
+| Loop | Controls | What they cover |
+| --- | --- | --- |
+| Direction | C-01, C-03, C-04, C-20, C-22; C-02 in the strategic loop at the same Steering | The mandate and the appointments; the Priorities, the funding, and the Guardrails; the appetite and the policy; the documents; the yearly Proposal of the strategy; the separation of duties |
+| Assurance | C-06, C-07, C-11, C-16, C-20, C-24, C-25, C-26, C-27, C-28 | The results and the risk check; the report to the Board Committee; the benefit confirmed; the reconciliation of the AI Incidents; the Adopted Solutions; the completeness of the Outcome Reports; the access of internal audit and the access review; the risks beyond appetite; the reassessments and validations due |
+| Control | C-05, C-17, C-29, C-32 | The monthly review and the sample; the open Exceptions and suspensions; the review of the live Solutions; the deficiencies and findings |
+| Operating | C-23 | The intake and the limit on work in progress |
+| Event | C-01, C-08, C-09, C-10, C-12, C-13, C-14, C-15, C-16, C-17, C-18, C-19, C-21, C-22, C-27, C-28, C-30, C-31, C-32 | Each step of an Engagement and of a Solution: the Service Agreement, the business case, the acceptances, the Risk Tier, the check or validation, the release, the use for a data class, the provider, the sharing of data, the published output, the deployment and the change, the retirement; and the unplanned events: an appointment, an AI Incident, an Exception, a suspension or a stop, a risk beyond appetite, a reassessment on a change, a finding |
+
+AICC also measures its own control by ten governance measures, read at the Steerings, from the share of the controls Operating to the share of the documents reviewed within the year (Operating Model 6.11). The quarterly Steering confirms the Maturity Level of each Strategic Priority, and the yearly Steering sets the targets of the Measures of the Maturity Levels for the next year (Operating Model 6.5, 6.6).
 
 ## 4. How a decision moves
 
-The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain, reaches outside the Bank, or sets a standard for others; cannot be reversed without significant cost; exceeds a guardrail or changes a Strategic Priority; or accepts a risk beyond the appetite or concerns a Risk Tier 3 Solution. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in the Decision Log, and a Decision of the Executive Sponsor that is hard to reverse, and a Decision that the Operating Model 8 names as evidenced by a Decision Record, also has a Decision Record (Operating Model 5.6).
+The person who does the work decides on the facts. A decision goes to the AICC Lead, or to the Executive Sponsor, only when it affects another Domain, reaches outside the Bank, or sets a standard for others; cannot be reversed without significant cost or harm; exceeds a guardrail or changes a Strategic Priority; or accepts a risk beyond the appetite or concerns a Risk Tier 3 Solution. A Control Function decides within its remit, and nobody overrides it. A decision at the level of the AICC Lead or above is entered in the Decision Log, and a Decision of the Executive Sponsor that is hard to reverse, and a Decision that the Operating Model 8 names as evidenced by a Decision Record, also has a Decision Record (Operating Model 5.6).
 
 Figure 3 shows how the level of a decision is chosen and what it leaves on record.
 
@@ -91,15 +103,27 @@ Figure 3: the choice of the level of a decision, and its record.
 
 ## 5. Reporting and assurance
 
-Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The Control Functions stand beside it, independent of AICC. Internal audit gives assurance only, and has read access to the Registry and, read only, to Jira, Confluence, and Service Management. The Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major, as it requires, and of any risk accepted beyond the appetite, without waiting for the next report.
+Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The Executive Sponsor chairs the Steering; the AICC Lead prepares it and attends; the Domain Owners concerned and the Control Function Contacts attend; and the AI Steering Committee advises (Operating Model 6.3). The Control Functions stand beside the chain, independent of AICC. Internal audit stands outside it and gives assurance only, and has read access to the Registry and, read only, to Jira, Confluence, and Service Management. The Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major, as it requires, and of any risk accepted beyond the appetite, without waiting for the next report.
+
+AICC works within the three lines of the Bank (Operating Model 2.4). AICC and the Domains own the risks of their work. The Control Functions set the rules of their remit, clear, validate, decide Exceptions, and may stop. Internal audit gives independent assurance.
 
 ## 6. Where the evidence is
 
-The working state is in the Registry until the cutover and then in Jira and Confluence (Operating Model 7.1). The evidence records are always in the Registry as closed and dated extracts. The Operating Model 8 lists each control with its evidence record, and the index of the Registry lists the Records by class. The AICC portal links to the evidence records on the corporate share. The Document Catalog states how a document is activated, changed, and checked.
+The working state is in the Registry until the cutover and then in Jira and Confluence (Operating Model 7.1). The evidence records are always in the Registry as closed and dated extracts, and a Registry Snapshot closes each Iteration and each PI, and the cutover (Operating Model 7.3). The Operating Model 8 lists each control with its evidence record, and the index of the Registry lists the Records by class. The AICC portal links to the evidence records on the corporate share. The Document Catalog states how a document is activated, changed, and checked.
 
 ## 7. The controls and how to test them
 
-This section is the reference of internal audit, and the rest of the guide can be read without it. The Operating Model 8 lists each control with its rule, owner, timing, and evidence record. The table below gives, for each control, its objective, its type, and how it is tested. Type is Directive (sets a rule or a direction), Preventive (stops an error before it happens), or Detective (finds an error after it happens). The test and the status of each control at a date are in the Control Matrix in the Registry.
+This section is the reference of internal audit, and the rest of the guide can be read without it. The Operating Model 8 lists each control with its rule, owner, timing, evidence record, Template, and type. The table below gives, for each control, its objective, its type, and how it is tested. Type is Directive (sets a rule or a direction), Preventive (stops an error before it happens), or Detective (finds an error after it happens). The test and the status of each control at a date are in the Control Matrix in the Registry. Each control is traceable by its reference to its rule, to its evidence record, to its status in the Control Matrix, and to the Steering Summary that reviewed it (Operating Model 8.6).
+
+The status of a control has one of the following meanings (Operating Model 8.5). A deficiency is governance working: the control found the gap, and the gap is followed to closure.
+
+| Status | Meaning |
+| --- | --- |
+| Operating | The control operated when it was due or triggered, and its evidence record is in the Registry |
+| Open | The control is due, and its evidence is missing or incomplete; it has an item in the Risks and Issues Record with an owner and a due date |
+| Deficiency | The control did not operate, or its evidence shows a failure, or it was Open and was not corrected by its due date |
+| No occurrence yet | The event that triggers the control has not happened, and a nil statement says so |
+| Not yet due | The first date of the control has not come |
 
 | Ref | Control | Objective | Type | How to test |
 | --- | --- | --- | --- | --- |
@@ -138,4 +162,4 @@ This section is the reference of internal audit, and the rest of the guide can b
 
 ## 8. Rule source
 
-Charter 3 to 7; Business Model 5 to 7; Operating Model 4 to 8; Portfolio Management Model 4 and 6; Solution Lifecycle Model 7 to 9; AI Policy 2 to 6; Document Catalog 3, 4, 7; the Unit governance workflow.
+Charter 3 to 7; Business Model 5 to 7; Operating Model 2 and 4 to 8; Portfolio Management Model 4 and 6; Solution Lifecycle Model 7 to 9; AI Policy 2 to 6; Document Catalog 3, 4, 7; the Unit governance workflow.

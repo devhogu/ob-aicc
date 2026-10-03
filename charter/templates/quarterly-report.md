@@ -2,9 +2,9 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Quarterly Report
@@ -31,7 +31,19 @@ revised: 2026-10-02
 
 ## 3. Flow and Measures
 
-[Time from proposal to approval and from approval to acceptance; work in progress; Measures of the Maturity Level, against baseline; the number of Domains and employees using approved Solutions.]
+[Time from proposal to approval and from approval to acceptance; work in progress; Measures of the Maturity Level, against baseline and the targets of the year; the number of Domains and employees using approved Solutions.]
+
+[The predictability of delivery, read as a trend over the last Program Increments, with no target (Charter 7.1).]
+
+| Program Increment | Predictability | Trend |
+| --- | --- | --- |
+|  |  |  |
+
+[The Maturity Level of each Strategic Priority, as the quarterly Steering confirms it (Operating Model 6.6).]
+
+| Strategic Priority | Maturity Level at the last quarter | Maturity Level confirmed | Measures against their targets |
+| --- | --- | --- | --- |
+|  |  |  |  |
 
 ## 4. Benefit and flow of the Engagements
 
@@ -59,11 +71,34 @@ revised: 2026-10-02
 
 [Review of each Risk Tier 3 Solution (AI Policy 3.3), with the result and the date.]
 
-[Control Matrix status, by reference to the Matrix.]
+[Control Matrix status, by reference to the Matrix: the number of controls in each status.]
+
+[The deficiencies and the Findings that are open, each with its age.]
+
+| RI identifier | Deficiency or Finding | Control or source | Owner | Due date | Age in days |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
 
 [Position against the AI Risk Appetite Statement and any risk accepted beyond it. Concentration of the Bank on one provider and reliance on the Platform Owner. The Risk Tier reassessments that are due, the result of the access review, and the reconciliation of the AI Incidents with the incident management of the Bank.]
 
-## 8. Decisions needed
+## 8. Governance measures
+
+[The governance measures of the Operating Model 6.11, as read at the quarterly Steering, and at the yearly Steering for the measures read yearly.]
+
+| Measure | Reading | Previous reading | Target rule | Met |
+| --- | --- | --- | --- | --- |
+| Control status |  |  |  |  |
+| Deficiencies and findings past due |  |  |  |  |
+| Exceptions |  |  |  |  |
+| Decision sample |  |  |  |  |
+| Risk Tier reassessments |  |  |  |  |
+| AI Incidents and control breaches |  |  |  |  |
+| Risks accepted beyond appetite |  |  |  |  |
+| Access review |  |  |  |  |
+| Appointments |  |  |  |  |
+| Documents reviewed |  |  |  |  |
+
+## 9. Decisions needed
 
 [Decisions for the Executive Sponsor, with the recommendation and the facts.]
 

@@ -11,7 +11,7 @@ This guide explains the rhythm of AICC: which events are held, what each is for,
 | Day | Daily Stand-up | Progress and blockers | None; a blocker is entered in the work item |
 | Week | Weekly Planning, Weekly Review | The flow, the Limits on Work in Progress, the Dependencies, and the care of the funnel and the Portfolio Backlog | The current boards and the Dashboard |
 | Iteration | Iteration Planning, Iteration Review and Demo, Iteration Retrospective, and the monthly Steering | The work of the month; the acceptance of the Features and the Capabilities by the product owner; the review of each live Solution by its Domain Owner; the gate decisions that are due; the sample of the Decisions of the AICC Lead; the open deficiencies | The Steering Summary; the note of each acceptance in the backlog; the note of each review in the Solution Definition; the Registry Snapshot at the Iteration close |
-| Program Increment | PI Review and Demo, Inspect and Adapt, PI Planning, and the quarterly Steering | The value of the quarter; the decision on each Active Initiative; the quarterly risk check, the access review, and the reconciliation of the AI Incidents; the confirmation of the PI Objectives and the Roadmap | The Quarterly Report; the Registry Snapshot at the PI close; the Steering Summary |
+| Program Increment | PI Review and Demo, Inspect and Adapt, PI Planning, and the quarterly Steering | The value of the quarter; the decision on each Active Initiative; the four signals of each Service; the quarterly risk check, the access review, and the reconciliation of the AI Incidents; the confirmation of the PI Objectives and the Roadmap | The Quarterly Report; the Registry Snapshot at the PI close; the Steering Summary |
 | Year | The yearly Steering, which is the monthly Steering of December | The direction for the next year: the documents, the AI Risk Appetite Statement, the appointments, the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails | The Decision Records; the Appointments Record; the Priorities |
 
 ## 3. The loops on the beats
@@ -95,8 +95,9 @@ Figure 3: the flow of the month.
 - Inspect and Adapt solves the main problems of the quarter.
 - Innovation gives time to learn.
 - The PI Planning sets the intent and the direction of the next PI.
-- The quarterly Steering decides on each Active Initiative, takes the quarterly risk check, confirms the Maturity Level, and confirms the PI Objectives and the Roadmap.
-- The AICC Lead writes the Quarterly Report, and the Executive Sponsor approves and issues the report to the Board Committee.
+- The AICC Lead drafts the Quarterly Report from the data of the PI Review and Demo and brings it to the quarterly Steering.
+- The quarterly Steering takes the Quarterly Report and the four signals of each Service, decides on each Active Initiative and on the transition of a Service that the reading calls for, takes the quarterly risk check, confirms the Maturity Level, and confirms the PI Objectives and the Roadmap.
+- The Executive Sponsor approves the Quarterly Report at the quarterly Steering and issues it to the Board Committee.
 - In the month that holds the IP week, the quarterly Steering is also the Steering of that month, and no separate monthly Steering is held, except in December.
 
 Figure 4 shows the flow of the IP week and the treatment of a day that is not available.
@@ -106,9 +107,11 @@ flowchart LR
   PR["PI Review and Demo<br/>what the quarter delivered,<br/>value scored"] --> IA["Inspect and Adapt<br/>the main problems"]
   IA --> IN["Innovation<br/>optional, dropped first<br/>when days are lost"]
   IN --> PP["PI Planning<br/>PI Objectives, Program Board,<br/>proposed Roadmap"]
-  PP --> QS["Quarterly Steering<br/>decision on each Active Initiative,<br/>risk check, Maturity Level,<br/>PI Objectives and Roadmap confirmed"]
+  PR -.->|"data"| QR["Quarterly Report<br/>drafted by the AICC Lead"]
+  QR --> QS
+  PP --> QS["Quarterly Steering<br/>decision on each Active Initiative,<br/>risk check, Maturity Level,<br/>PI Objectives and Roadmap confirmed,<br/>Quarterly Report approved"]
   QS --> WR["Closing<br/>Weekly Review"]
-  WR --> QR["Quarterly Report<br/>issued to the<br/>Board Committee"]
+  QS --> BC["Report to the<br/>Board Committee<br/>issued"]
   RULE["An event on a blocked or gray day<br/>moves to the working day before,<br/>never after"] -.-> PR
 ```
 

@@ -15,7 +15,7 @@ The charter has four parts. The table also shows the Registry and the Portfolio,
 | Guides | [guides/](guides/README.md) | Who does what, when, and what is left on record? |
 | Templates | [templates/](templates/README.md) | What is the form of each record? |
 | Registry | [registry/](../registry/README.md) | What is the state of the work, and what is the evidence? |
-| Portfolio | [portfolio/](../portfolio/README.md) | Which Solutions exist, and in what state? |
+| Portfolio | [portfolio/](../portfolio/README.md) | Which Solutions and Packages exist, and in what state? |
 
 ## 3. Contents
 
@@ -26,10 +26,10 @@ The contents list every file of the charter in the order of reading, with its li
 | 1 |  | [Executive Summary](executive-summary.md) | The whole model in seven sections, with the source of each statement |
 | 2 |  | **Documents** | The rules. The Document Catalog states their status and life cycle |
 | 2.1 | AICC-MND-02 | [AICC Charter](documents/aicc-charter.md) | Mission, authority, funding, risk appetite, offer, and measures of AICC |
-| 2.2 | AICC-MND-03 | [Business Model](documents/business-model.md) | What AICC is, whom it serves, what it offers, how it commits, and how it tracks value and flow |
-| 2.3 | AICC-ORG-01 | [Operating Model](documents/operating-model.md) | AICC as a unit of the Bank: Roles, Decisions, the five control loops, records, and controls |
+| 2.2 | AICC-MND-03 | [Business Model](documents/business-model.md) | What AICC is, whom it serves, what it offers in its service areas, how it takes in work in its two modes, how it commits, and how it tracks value and flow |
+| 2.3 | AICC-ORG-01 | [Operating Model](documents/operating-model.md) | AICC as a unit of the Bank: Roles, Decisions, the five control loops, records, controls, and the governance measures |
 | 2.4 | AICC-ORG-02 | [Portfolio Management Model](documents/portfolio-management-model.md) | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP |
-| 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle, and the measures |
+| 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle with the service steps and the Lab, and the measures |
 | 2.6 | AICC-POL-01 | [AI Policy](documents/ai-policy.md) | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions |
 | 2.7 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined terms and style |
 | 2.8 | AICC-MND-01 | [Statement of Intent on the Adoption of Artificial Intelligence](documents/statement-of-intent.md) | The intent, values, principles, and strategy of the Bank for AI |
@@ -56,14 +56,15 @@ The contents list every file of the charter in the order of reading, with its li
 | 5.6 |  | [Decision Record](templates/decision-record.md) | A Decision with its facts, options, and effect |
 | 5.7 |  | [Steering Summary](templates/steering-summary.md) | The record of one Steering |
 | 5.8 |  | [Outcome Report](templates/outcome-report.md) | The end of an Engagement |
-| 5.9 |  | [AI Incident Review](templates/ai-incident-review.md) | The review of one AI Incident |
-| 5.10 |  | [Registry Snapshot](templates/registry-snapshot.md) | The closed extract at the close of an Iteration or Program Increment |
-| 5.11 |  | [Quarterly Report](templates/quarterly-report.md) | The quarterly report and the report to the Board Committee |
-| 5.12 |  | [Appointments Record](templates/appointments-record.md) | The Roles mapped to Holders, with the appointment log |
-| 5.13 |  | [Proposal](templates/proposal.md) | A Proposal to adopt a Solution at scale |
+| 5.9 |  | [Package Definition](templates/package-definition.md) | The definition of a Package that an Engagement leaves |
+| 5.10 |  | [AI Incident Review](templates/ai-incident-review.md) | The review of one AI Incident |
+| 5.11 |  | [Registry Snapshot](templates/registry-snapshot.md) | The closed extract at the close of an Iteration or Program Increment |
+| 5.12 |  | [Quarterly Report](templates/quarterly-report.md) | The quarterly report and the report to the Board Committee |
+| 5.13 |  | [Appointments Record](templates/appointments-record.md) | The Roles mapped to Holders, with the appointment log |
+| 5.14 |  | [Proposal](templates/proposal.md) | A Proposal to adopt a Solution at scale |
 | 6 |  | **Records outside the charter** | |
 | 6.1 |  | [Registry](../registry/README.md) | The working state, the living records, and the evidence records, including the [Control Matrix](../registry/control-matrix.md) |
-| 6.2 |  | [Portfolio](../portfolio/README.md) | The catalog of Solutions |
+| 6.2 |  | [Portfolio](../portfolio/README.md) | The catalog of Solutions and Packages |
 
 ## 4. How to read the charter
 

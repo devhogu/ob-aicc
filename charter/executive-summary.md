@@ -8,7 +8,7 @@ AICC is the internal consulting and innovation unit of the Bank for artificial i
 
 ## 2. Clients and offer
 
-The clients of AICC are the functions of the Bank. A function is the client of an Engagement, its Domain Owner represents it, and a Domain Expert of the function works with AICC. AICC offers studies, proofs, delivery, and support, at a support level chosen for each Engagement, and it delivers Solutions of three types: an Experiment that ends in a Proposal, a Product built for one consumer, and a Service that AICC runs. Source: Business Model 3 and 4.
+The clients of AICC are the functions of the Bank. A function is the client of an Engagement, its Domain Owner represents it, and a Domain Expert of the function works with AICC. AICC offers its services in four service areas: Advise and formulate, Build and run, Enablement, and Assurance. It takes in work in two modes: run-rate work, a small request done within one Iteration under the Standing Initiative of its service area, or an Initiative. It offers studies, proofs, delivery, and support, at a support level chosen for each Engagement, and it delivers Solutions of three types: an Experiment that ends in a Proposal, a Product built for one consumer, and a Service that AICC runs. An Engagement leaves, where one results, a Package that the next function can re-deploy. Source: Business Model 3 and 4.
 
 ## 3. Commitment
 
@@ -28,4 +28,4 @@ Three Risk Tiers set the checks that a Solution passes before it reaches users. 
 
 ## 7. Records
 
-The charter states the rules. Jira and Confluence run the live work from the cutover, and until then the Registry holds it. The Registry holds the records and the evidence for audit, and the Portfolio holds the catalog of Solutions. Source: Operating Model 7.
+The charter states the rules. Jira and Confluence run the live work from the cutover, and until then the Registry holds it. The Registry holds the records and the evidence for audit, and the Portfolio holds the catalog of Solutions and Packages. Source: Operating Model 7.

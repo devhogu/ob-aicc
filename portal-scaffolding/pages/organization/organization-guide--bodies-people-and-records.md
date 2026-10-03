@@ -1,22 +1,22 @@
 ---
 id: organization/organization-guide/bodies-people-and-records
-title: Guide: Organization: The governing bodies, the people records, the evidence, and the rule source
+title: Guide: Organization: The governing bodies, the people records, the growth of the organization, the evidence, and the rule source
 section: organization
 order: 17
 type: guide
 slug: /organization/organization-guide/bodies-people-and-records/
 source: charter/guides/organization-guide.md
-source_sections: 5, 6, 7, 8
+source_sections: 5, 6, 7, 8, 9
 document: organization-guide
 part: 3 of 3
-words: 941
+words: 1736
 series: set-operating-model
 series_order: 3
 production: generated
 status: scaffold
 ---
 
-# Guide: Organization: The governing bodies, the people records, the evidence, and the rule source
+# Guide: Organization: The governing bodies, the people records, the growth of the organization, the evidence, and the rule source
 
 Page type: guide. Address: /organization/organization-guide/bodies-people-and-records/
 
@@ -26,10 +26,11 @@ Page type: guide. Address: /organization/organization-guide/bodies-people-and-re
 
 ## Sections of the source
 
-- 5. The governing bodies (155 words)
-- 6. People: appointments, changes, and leavers (629 words)
-- 7. Records and evidence (126 words)
-- 8. Rule source (31 words)
+- 5. The governing bodies (398 words)
+- 6. People: appointments, changes, and leavers (957 words)
+- 7. How the organization grows (210 words)
+- 8. Records and evidence (133 words)
+- 9. Rule source (38 words)
 
 ## Outline
 
@@ -43,5 +44,6 @@ Headings of the source:
 - 4. Who is responsible for what
 - 5. The governing bodies
 - 6. People: appointments, changes, and leavers
-- 7. Records and evidence
-- 8. Rule source
+- 7. How the organization grows
+- 8. Records and evidence
+- 9. Rule source

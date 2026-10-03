@@ -9,7 +9,7 @@ source: charter/documents/portfolio-management-model.md
 source_sections: 5
 document: portfolio-management-model
 part: 3 of 5
-words: 1074
+words: 1327
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /portfolio/portfolio-management-model/the-portfoli
 
 ## Sections of the source
 
-- 5. The portfolio Kanban (1074 words)
+- 5. The portfolio Kanban (1327 words)
 
 ## Outline
 

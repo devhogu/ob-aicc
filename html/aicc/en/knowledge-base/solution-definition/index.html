@@ -31,13 +31,13 @@ Question or comment:
     <div class="nav-foot"><div class="nav-legal"><a href="../../privacy/">Privacy</a><a href="../../terms-of-use/">Terms of use</a></div><p class="o-caption">v1.0 · 2 October 2026</p></div></aside>
   <main class="o-main" id="main" tabindex="-1">
     <div class="crumbbar has-ctx"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../">AICC</a> / <a href="../">Knowledge base</a> / Solution Definition</nav><a class="crumb-next" href="../acceptance-checklist/" rel="next"><span>Next:</span> <strong>Acceptance Checklist</strong> &rsaquo;</a></div></div>
-    <div class="o-reading"><div class="o-copy"><h1>Solution Definition</h1><p class="o-lead" lang="en">A Solution is defined</p><dl class="doc-facts"><div><dt>Identifier</dt><dd>AICC-TPL-01-EN</dd></div><div><dt>Revision</dt><dd>1.0</dd></div><div><dt>Date</dt><dd>2026-10-02</dd></div><div><dt>Status</dt><dd><span class="status status-active">active</span></dd></div><div><dt>Owner</dt><dd>AICC Lead</dd></div><div><dt>Source</dt><dd><a class="src" href="smb://10.128.20.244/aicc/governance/charter/templates/solution-definition.md" title="\\10.128.20.244\aicc\governance\charter\templates\solution-definition.md">solution-definition.md</a> <button type="button" class="icon-copy" data-copy-text="\\10.128.20.244\aicc\governance\charter\templates\solution-definition.md" aria-label="Copy path" title="Copy path"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /> </svg> </button></dd></div></dl><dl class="o-facts"><dt>Used when</dt><dd lang="en">A Solution is defined</dd><dt>Kept in</dt><dd lang="en"><code>portfolio/solutions/</code></dd></dl><p class="tpl-tools"><button type="button" class="oc-button" data-copy="tpl-src">Copy the template</button></p><script type="text/markdown" id="tpl-src">```yaml
+    <div class="o-reading"><div class="o-copy"><h1>Solution Definition</h1><p class="o-lead" lang="en">A Solution is defined</p><dl class="doc-facts"><div><dt>Identifier</dt><dd>AICC-TPL-01-EN</dd></div><div><dt>Revision</dt><dd>1.1</dd></div><div><dt>Date</dt><dd>2026-10-03</dd></div><div><dt>Status</dt><dd><span class="status status-active">active</span></dd></div><div><dt>Owner</dt><dd>AICC Lead</dd></div><div><dt>Source</dt><dd><a class="src" href="smb://10.128.20.244/aicc/governance/charter/templates/solution-definition.md" title="\\10.128.20.244\aicc\governance\charter\templates\solution-definition.md">solution-definition.md</a> <button type="button" class="icon-copy" data-copy-text="\\10.128.20.244\aicc\governance\charter\templates\solution-definition.md" aria-label="Copy path" title="Copy path"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /> </svg> </button></dd></div></dl><dl class="o-facts"><dt>Used when</dt><dd lang="en">A Solution is defined</dd><dt>Kept in</dt><dd lang="en"><code>portfolio/solutions/</code></dd></dl><p class="tpl-tools"><button type="button" class="oc-button" data-copy="tpl-src">Copy the template</button></p><script type="text/markdown" id="tpl-src">```yaml
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Solution Definition
@@ -99,11 +99,48 @@ revised: 2026-10-02
 
 [For a Service: the run cost source and the sunset rule. For a Product: the consumer and the version. For an Experiment: the time-box in Iterations, and the receiver of the proposal.]
 
-**Review of the live Solution.** [The note at each Iteration Review and Demo on the monitoring, incidents, use, and notices of the providers.]
+**Conditions of use.** [What the Solution shall not be used for. The licenses of its open components, with their terms. The alert levels of its monitoring.]
 
-| Date of the Iteration Review and Demo | Reviewed by | Note |
-| --- | --- | --- |
-| [date] | [Domain Owner, or the Executive Sponsor for a Service across Domains] |  |
+**Experiment.** [For an Experiment only (Solution Lifecycle Model 8.13).]
+
+| Item | Entry |
+| --- | --- |
+| Hypothesis and leading indicators | [hypothesis; each indicator with its source, baseline, and target] |
+| Environment record | [the Lab environment used, its access by role, and its logging; for a cloud or external environment, the Control Sign-Off of the provider check] |
+| Data extracts | [each extract: source, owner, class under the classification of the Bank, read-only, date; personal data minimized and assessed with the Control Function Contact of data protection on [date]] |
+| Evaluation set | [reference, and how it grows with use] |
+| Benchmark | [the current way and its cost, against which the result is compared] |
+
+**Service.** [For a Service only (Solution Lifecycle Model 8.8 to 8.12).]
+
+| Item | Entry |
+| --- | --- |
+| Service step | [Admitted / Catalogued / In service / Improving / Transition planned / Migrating / Handed over or Retired], since [date] |
+| Catalog entry | [reference in the Portfolio] |
+| Service Agreement | [reference] |
+| Response targets by class | [Urgent: [target]; High priority: [target]; Normal: [target]; or "the default of Solution Lifecycle Model 8.5"] |
+| Queue in Service Management | [name; opened on [date]] |
+| Known errors | [reference] |
+| User guide | [reference] |
+| Handover to a Receiver | [the IT function of the Bank as Receiver; Proposal reference; transition decided by [who] on [date], Decision Log reference; Handover accepted on [date]] |
+
+**Practices checklist (light mode).** [While AICC runs in light mode, for a Service: each practice of Solution Lifecycle Model 8.10 with how it is met, or "not applicable" with the reason.]
+
+| Practice | How it is met |
+| --- | --- |
+| Request and incident handling | [the queue; the weekly session] |
+| Problem management | [repeats taken as Features; references] |
+| Change enablement | [the change management of the Bank] |
+| Knowledge | [known errors and user guide, by reference] |
+| Service levels | [against the Service Agreement] |
+| Run cost | [source; against the business case] |
+| Supplier fallback and exit | [for each supplier] |
+
+**Review of the live Solution.** [The note at each Iteration Review and Demo on the four signals and the notices of the providers (Solution Lifecycle Model 8.4).]
+
+| Date of the Iteration Review and Demo | Reviewed by | Service levels | Incidents, including AI Incidents and repeats | Use | Cost | Notices of the providers | Note |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| [date] | [Domain Owner, or the Executive Sponsor for a Service across Domains] |  |  |  |  |  |  |
 
 **Changes and new-check decisions.** [Each significant change, and the decision of the AICC Lead on whether it requires a new check or validation, with the reason, the date, and its Decision Log reference.]
 
@@ -113,7 +150,7 @@ revised: 2026-10-02
 
 **Backup and recovery.** [Those of the AI Platform and of the Bank that apply, by reference.]
 
-**Retirement or end.** [Handover accepted by the Receiver on [date] (Solution Lifecycle Model 8.1). Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]
+**Retirement or end.** [Handover accepted by the Receiver on [date] (Solution Lifecycle Model 8.1, 8.11). Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]
 
 **Adopted Solution.** [Marked as adopted: yes or no; the Receiver as owner.]
 
@@ -232,12 +269,131 @@ revised: 2026-10-02
 </table></div>
 <h2 id="s-7">7. Life after delivery</h2>
 <p>[For a Service: the run cost source and the sunset rule. For a Product: the consumer and the version. For an Experiment: the time-box in Iterations, and the receiver of the proposal.]</p>
-<p><strong>Review of the live Solution.</strong> [The note at each Iteration Review and Demo on the monitoring, incidents, use, and notices of the providers.]</p>
+<p><strong>Conditions of use.</strong> [What the Solution shall not be used for. The licenses of its open components, with their terms. The alert levels of its monitoring.]</p>
+<p><strong>Experiment.</strong> [For an Experiment only (<a class="xref" href="../../delivery/solution-lifecycle-model/life-cycle-management/#c-8-13">Solution Lifecycle Model 8.13</a>).]</p>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Entry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hypothesis and leading indicators</td>
+<td>[hypothesis; each indicator with its source, baseline, and target]</td>
+</tr>
+<tr>
+<td>Environment record</td>
+<td>[the Lab environment used, its access by role, and its logging; for a cloud or external environment, the Control Sign-Off of the provider check]</td>
+</tr>
+<tr>
+<td>Data extracts</td>
+<td>[each extract: source, owner, class under the classification of the Bank, read-only, date; personal data minimized and assessed with the Control Function Contact of data protection on [date]]</td>
+</tr>
+<tr>
+<td>Evaluation set</td>
+<td>[reference, and how it grows with use]</td>
+</tr>
+<tr>
+<td>Benchmark</td>
+<td>[the current way and its cost, against which the result is compared]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Service.</strong> [For a Service only (<a class="xref" href="../../delivery/solution-lifecycle-model/life-cycle-management/#c-8-8">Solution Lifecycle Model 8.8</a> to 8.12).]</p>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Entry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service step</td>
+<td>[Admitted / Catalogued / In service / Improving / Transition planned / Migrating / Handed over or Retired], since [date]</td>
+</tr>
+<tr>
+<td>Catalog entry</td>
+<td>[reference in the Portfolio]</td>
+</tr>
+<tr>
+<td>Service Agreement</td>
+<td>[reference]</td>
+</tr>
+<tr>
+<td>Response targets by class</td>
+<td>[Urgent: [target]; High priority: [target]; Normal: [target]; or &quot;the default of <a class="xref" href="../../delivery/solution-lifecycle-model/life-cycle-management/#c-8-5">Solution Lifecycle Model 8.5</a>&quot;]</td>
+</tr>
+<tr>
+<td>Queue in Service Management</td>
+<td>[name; opened on [date]]</td>
+</tr>
+<tr>
+<td>Known errors</td>
+<td>[reference]</td>
+</tr>
+<tr>
+<td>User guide</td>
+<td>[reference]</td>
+</tr>
+<tr>
+<td>Handover to a Receiver</td>
+<td>[the IT function of the Bank as Receiver; Proposal reference; transition decided by [who] on [date], Decision Log reference; Handover accepted on [date]]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Practices checklist (light mode).</strong> [While AICC runs in light mode, for a Service: each practice of <a class="xref" href="../../delivery/solution-lifecycle-model/life-cycle-management/#c-8-10">Solution Lifecycle Model 8.10</a> with how it is met, or &quot;not applicable&quot; with the reason.]</p>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>How it is met</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Request and incident handling</td>
+<td>[the queue; the weekly session]</td>
+</tr>
+<tr>
+<td>Problem management</td>
+<td>[repeats taken as Features; references]</td>
+</tr>
+<tr>
+<td>Change enablement</td>
+<td>[the change management of the Bank]</td>
+</tr>
+<tr>
+<td>Knowledge</td>
+<td>[known errors and user guide, by reference]</td>
+</tr>
+<tr>
+<td>Service levels</td>
+<td>[against the Service Agreement]</td>
+</tr>
+<tr>
+<td>Run cost</td>
+<td>[source; against the business case]</td>
+</tr>
+<tr>
+<td>Supplier fallback and exit</td>
+<td>[for each supplier]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Review of the live Solution.</strong> [The note at each Iteration Review and Demo on the four signals and the notices of the providers (<a class="xref" href="../../delivery/solution-lifecycle-model/life-cycle-management/#c-8-4">Solution Lifecycle Model 8.4</a>).]</p>
 <div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
 <thead>
 <tr>
 <th>Date of the Iteration Review and Demo</th>
 <th>Reviewed by</th>
+<th>Service levels</th>
+<th>Incidents, including AI Incidents and repeats</th>
+<th>Use</th>
+<th>Cost</th>
+<th>Notices of the providers</th>
 <th>Note</th>
 </tr>
 </thead>
@@ -246,6 +402,11 @@ revised: 2026-10-02
 <td>[date]</td>
 <td>[Domain Owner, or the Executive Sponsor for a Service across Domains]</td>
 <td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table></div>
@@ -253,7 +414,7 @@ revised: 2026-10-02
 <p><strong>Significant change.</strong> [Team final acceptance and release of a significant change: by whom and on [date] (<a class="xref" href="../../delivery/solution-lifecycle-model/verification-release-and-acceptance/#c-7-3">Solution Lifecycle Model 7.3(b)</a>, 8.6).]</p>
 <p><strong>Emergency change.</strong> [Authorized by [the AICC Lead] on [date], reviewed by the Executive Sponsor within five working days, Decision Log reference; for Risk Tier 3 the Control Function Contacts told (<a class="xref" href="../../delivery/solution-lifecycle-model/life-cycle-management/#c-8-6">Solution Lifecycle Model 8.6</a>).]</p>
 <p><strong>Backup and recovery.</strong> [Those of the AI Platform and of the Bank that apply, by reference.]</p>
-<p><strong>Retirement or end.</strong> [Handover accepted by the Receiver on [date] (<a class="xref" href="../../delivery/solution-lifecycle-model/life-cycle-management/#c-8-1">Solution Lifecycle Model 8.1</a>). Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]</p>
+<p><strong>Retirement or end.</strong> [Handover accepted by the Receiver on [date] (<a class="xref" href="../../delivery/solution-lifecycle-model/life-cycle-management/#c-8-1">Solution Lifecycle Model 8.1</a>, 8.11). Approval, by whom and when; date the access was removed; how the data and the logs were handled; AI Registry entry marked retired. Also for a Cancelled Solution that had real users or data.]</p>
 <p><strong>Adopted Solution.</strong> [Marked as adopted: yes or no; the Receiver as owner.]</p>
 <h2 id="s-8">8. Next step</h2>
 <p>[The next step, who, and when.]</p>

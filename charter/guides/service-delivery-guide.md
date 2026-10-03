@@ -99,6 +99,9 @@ Figure 4: the routes out of the main stream.
 | Release | Domain Owner, or the Executive Sponsor where the AICC Lead is the Domain Owner; the Executive Sponsor for Risk Tier 3 | Before use beyond the first users | The release block of the Solution Definition; the Acceptance Checklist; Decision Record for Risk Tier 3 |
 | Production deployment, and change to a released Solution | The change management of the Bank approves; the AICC Lead decides whether a new check or validation is needed | At each production deployment and each change | The change ticket and test reference in the Feature; Solution Definition; Decision Log for a new-check decision |
 | Retirement of a Solution | Domain Owner; the Executive Sponsor for a Service across Domains | Before the Solution is Closed as retired | Solution Definition; AI Registry |
+| Transition of a Service: Handover to an IT function of the Bank, or retirement | Domain Owner; the Executive Sponsor for a Service across Domains; the Receiver accepts the Handover | On the reading of the four signals at the quarterly Steering | Decision Log; Proposal; Solution Definition |
+| Outcome of an Experiment: accepted with its lessons and closed, a Proposal, or rejected | Domain Owner; the Executive Sponsor for an Experiment with no Domain | At the close of its time-box | Solution Definition; the Proposal where one is made; Outcome Report for an Engagement |
+| Class of service of a request | The Solution Engineer triages; the AICC Lead decides a class in doubt | When the request arrives | The ticket in Service Management |
 
 Figure 5 shows who accepts, checks, and releases a Solution, and in which order: the check or validation is in place before the final acceptance of the Team, which confirms it.
 
@@ -119,11 +122,11 @@ Figure 5: the acceptances, the check, and the release.
 
 ## 5. After delivery: the three types
 
-A Solution has one type, and the type sets its life. A Service is run by AICC for its whole life, with a business case that states the run cost and a sunset, and it is supported at the agreed response targets. A Product is a version built for one consumer, supported on demand, and revised through the Portfolio Backlog. An Experiment is a time-boxed trial that ends in a Proposal, and the Handover to its Receiver is complete when the Receiver accepts it. AICC also oversees and reports on the Adopted Solutions that others deliver.
+A Solution has one type, and the type sets its life. A Service is run by AICC for its whole life, or until it is handed over to an IT function of the Bank, with a business case that states the run cost and a sunset rule, and it is supported at the agreed response targets. Its four signals, service levels, incidents, use, and cost, are read at each Iteration Review and Demo and at the quarterly Steering. A Product is a version built for one consumer, supported on demand, and revised through the Portfolio Backlog. An Experiment is a time-boxed trial that ends in a Proposal, and the Handover to its Receiver is complete when the Receiver accepts it. AICC also oversees and reports on the Adopted Solutions that others deliver.
 
 | Type | Owner after delivery | Stages after delivery | End |
 | --- | --- | --- | --- |
-| Service | AICC | Operate, Evolve, Retire | Retired, or cancelled |
+| Service | AICC | Operate, Evolve, Retire, through the service steps | Retired, handed over to an IT function of the Bank, or cancelled |
 | Product | The consumer owns the version; AICC supports on demand | Handover, Support, Revise, Retire for the consumer | Retired for the consumer |
 | Experiment | None yet | Trial, Proposal, Handover | Handed off, closed with its lessons, or rejected |
 
@@ -138,6 +141,9 @@ A Solution has one type, and the type sets its life. A Service is run by AICC fo
 | A Control Function stops a Solution | The Solution is Cancelled, and nobody overrides the stop |
 | An Experiment reaches the end of its time-box | It goes to review: accepted with its lessons, a Proposal, or rejected |
 | The MVP of an Initiative ends | The approver continues, pivots, defers, or rejects it. A pivot is a new Initiative at the funnel, linked to the first |
+| A Service should run at scale | The Service goes to Transition planned. A Proposal names an IT function of the Bank as Receiver, the Domain Owner, or the Executive Sponsor across Domains, decides on the reading of the four signals at the quarterly Steering, and the Service is Closed as handed off when the Receiver accepts the Handover; AICC then oversees it as an Adopted Solution (Solution Lifecycle Model 8.8, 8.11) |
+| An Experiment proves its case | At the close of its time-box it goes to review, and a Proposal is made for a Receiver to adopt it at scale. A Solution keeps one offering type: a Service that follows is a new Solution with its own business case (Solution Lifecycle Model 8.1, 8.12) |
+| Incidents or requests repeat | The repeat is flagged in the ticket, or in the AI Incident Review for an AI Incident, and problem management takes the cause as a Feature in the Program Backlog (Solution Lifecycle Model 8.10) |
 
 ## 7. Rule source
 

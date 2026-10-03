@@ -1034,7 +1034,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "1 of 5",
-   "words": 597,
+   "words": 737,
    "production": "generated"
   },
   {
@@ -1052,7 +1052,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "2 of 5",
-   "words": 1309,
+   "words": 1702,
    "production": "generated"
   },
   {
@@ -1070,7 +1070,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "3 of 5",
-   "words": 1074,
+   "words": 1327,
    "production": "generated"
   },
   {
@@ -1089,7 +1089,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "4 of 5",
-   "words": 984,
+   "words": 1265,
    "production": "generated"
   },
   {
@@ -1108,7 +1108,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "5 of 5",
-   "words": 353,
+   "words": 1090,
    "production": "generated"
   },
   {
@@ -1127,7 +1127,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "1 of 7",
-   "words": 414,
+   "words": 424,
    "production": "generated"
   },
   {
@@ -1145,7 +1145,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "2 of 7",
-   "words": 1358,
+   "words": 1374,
    "production": "generated"
   },
   {
@@ -1163,7 +1163,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "3 of 7",
-   "words": 1051,
+   "words": 1288,
    "production": "generated"
   },
   {
@@ -1199,7 +1199,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "5 of 7",
-   "words": 1325,
+   "words": 1810,
    "production": "generated"
   },
   {
@@ -1217,7 +1217,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "6 of 7",
-   "words": 1255,
+   "words": 1340,
    "production": "generated"
   },
   {
@@ -1235,7 +1235,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "7 of 7",
-   "words": 1805,
+   "words": 2871,
    "production": "generated"
   },
   {
@@ -1297,7 +1297,7 @@
    ],
    "document": "service-delivery-workflow",
    "part": "3 of 6",
-   "words": 797,
+   "words": 983,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Execution",
@@ -1321,7 +1321,7 @@
    ],
    "document": "service-delivery-workflow",
    "part": "4 of 6",
-   "words": 1034,
+   "words": 1703,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "After delivery",
@@ -1345,7 +1345,7 @@
    ],
    "document": "service-delivery-guide",
    "part": "5 of 6",
-   "words": 1563,
+   "words": 1694,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Guide: flow and decisions",
@@ -1368,7 +1368,7 @@
    ],
    "document": "service-delivery-guide",
    "part": "6 of 6",
-   "words": 397,
+   "words": 616,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Guide: after delivery",
@@ -1434,7 +1434,7 @@
    ],
    "document": "cadence-workflow",
    "part": "3 of 5",
-   "words": 971,
+   "words": 1230,
    "series": "set-cadence",
    "series_title": "Cadence",
    "tab": "What each event carries",
@@ -1458,7 +1458,7 @@
    ],
    "document": "cadence-workflow",
    "part": "4 of 5",
-   "words": 285,
+   "words": 303,
    "series": "set-cadence",
    "series_title": "Cadence",
    "tab": "Rules and calendar",
@@ -1484,7 +1484,7 @@
    ],
    "document": "cadence-guide",
    "part": "5 of 5",
-   "words": 1450,
+   "words": 1513,
    "series": "set-cadence",
    "series_title": "Cadence",
    "tab": "Guide: Cadence",
@@ -1914,7 +1914,7 @@
    ],
    "document": "operating-model",
    "part": "1 of 3",
-   "words": 377,
+   "words": 418,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Foundations",
@@ -1936,7 +1936,7 @@
    ],
    "document": "operating-model",
    "part": "2 of 3",
-   "words": 1516,
+   "words": 1744,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Roles",
@@ -1958,7 +1958,7 @@
    ],
    "document": "operating-model",
    "part": "3 of 3",
-   "words": 742,
+   "words": 785,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Decisions",
@@ -1982,7 +1982,7 @@
    ],
    "document": "organization-guide",
    "part": "1 of 3",
-   "words": 830,
+   "words": 897,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Guide: Roles and profiles",
@@ -2004,7 +2004,7 @@
    ],
    "document": "organization-guide",
    "part": "2 of 3",
-   "words": 1417,
+   "words": 2029,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Guide: Who is responsible",
@@ -2017,7 +2017,7 @@
    "order": 17,
    "type": "guide",
    "slug": "/organization/organization-guide/bodies-people-and-records/",
-   "title": "Guide: Organization: The governing bodies, the people records, the evidence, and the rule source",
+   "title": "Guide: Organization: The governing bodies, the people records, the growth of the organization, the evidence, and the rule source",
    "source": [
     "charter/guides/organization-guide.md"
    ],
@@ -2025,11 +2025,12 @@
     5,
     6,
     7,
-    8
+    8,
+    9
    ],
    "document": "organization-guide",
    "part": "3 of 3",
-   "words": 941,
+   "words": 1736,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Guide: Bodies and people",
@@ -2459,7 +2460,7 @@
    ],
    "document": "ai-risk-control-workflow",
    "part": "2 of 2",
-   "words": 1056,
+   "words": 1267,
    "series": "set-ai-risk-control",
    "series_title": "AI risk and control workflow",
    "tab": "In operation and situations",
@@ -2480,7 +2481,7 @@
    ],
    "document": "operating-model",
    "part": "governance view",
-   "words": 1999,
+   "words": 2839,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "The control loops",
@@ -2502,7 +2503,7 @@
    ],
    "document": "operating-model",
    "part": "governance view",
-   "words": 517,
+   "words": 710,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Records and evidence",
@@ -2524,7 +2525,7 @@
    ],
    "document": "operating-model",
    "part": "governance view",
-   "words": 1926,
+   "words": 2378,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Controls and the control catalogue",
@@ -2552,7 +2553,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "7 of 7 (governance view)",
-   "words": 1400,
+   "words": 2163,
    "production": "generated"
   },
   {
@@ -2572,7 +2573,7 @@
    ],
    "document": "unit-governance-workflow",
    "part": "1 of 4",
-   "words": 866,
+   "words": 965,
    "series": "set-unit-governance",
    "series_title": "Unit governance",
    "tab": "Loops and decisions",
@@ -2598,7 +2599,7 @@
    ],
    "document": "unit-governance-workflow",
    "part": "2 of 4",
-   "words": 1015,
+   "words": 1197,
    "series": "set-unit-governance",
    "series_title": "Unit governance",
    "tab": "Events and sequences",
@@ -2624,7 +2625,7 @@
    ],
    "document": "unit-governance-guide",
    "part": "3 of 4",
-   "words": 1247,
+   "words": 1816,
    "series": "set-unit-governance",
    "series_title": "Unit governance",
    "tab": "Guide: governance",
@@ -2646,7 +2647,7 @@
    ],
    "document": "unit-governance-guide",
    "part": "4 of 4",
-   "words": 1704,
+   "words": 1897,
    "series": "set-unit-governance",
    "series_title": "Unit governance",
    "tab": "Guide: the controls",
@@ -2863,9 +2864,21 @@
    "production": "generated"
   },
   {
-   "id": "knowledge-base/ai-incident-review",
+   "id": "knowledge-base/package-definition",
    "section": "knowledge-base",
    "order": 29,
+   "type": "template",
+   "slug": "/knowledge-base/package-definition/",
+   "title": "Package Definition",
+   "source": [
+    "charter/templates/package-definition.md"
+   ],
+   "production": "generated"
+  },
+  {
+   "id": "knowledge-base/ai-incident-review",
+   "section": "knowledge-base",
+   "order": 30,
    "type": "template",
    "slug": "/knowledge-base/ai-incident-review/",
    "title": "AI Incident Review",
@@ -2877,7 +2890,7 @@
   {
    "id": "knowledge-base/registry-snapshot",
    "section": "knowledge-base",
-   "order": 30,
+   "order": 31,
    "type": "template",
    "slug": "/knowledge-base/registry-snapshot/",
    "title": "Registry Snapshot",
@@ -2889,7 +2902,7 @@
   {
    "id": "knowledge-base/quarterly-report",
    "section": "knowledge-base",
-   "order": 31,
+   "order": 32,
    "type": "template",
    "slug": "/knowledge-base/quarterly-report/",
    "title": "Quarterly Report",
@@ -2901,7 +2914,7 @@
   {
    "id": "knowledge-base/appointments-record",
    "section": "knowledge-base",
-   "order": 32,
+   "order": 33,
    "type": "template",
    "slug": "/knowledge-base/appointments-record/",
    "title": "Appointments Record",
@@ -2913,7 +2926,7 @@
   {
    "id": "knowledge-base/proposal",
    "section": "knowledge-base",
-   "order": 33,
+   "order": 34,
    "type": "template",
    "slug": "/knowledge-base/proposal/",
    "title": "Proposal",
@@ -3037,23 +3050,6 @@
     "DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution",
     "For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it",
     "Links to the Reference page Regulators and acts for the bodies and the texts"
-   ]
-  },
-  {
-   "id": "knowledge-base/package-definition",
-   "section": "knowledge-base",
-   "order": 40,
-   "type": "template",
-   "slug": "/knowledge-base/package-definition/",
-   "title": "Package Definition (draft template)",
-   "source": [
-    "portal/content/knowledge-base/package-definition.md"
-   ],
-   "production": "authored; proposed as the fourteenth template of the charter",
-   "outline": [
-    "When it is used",
-    "The form",
-    "The sections"
    ]
   },
   {

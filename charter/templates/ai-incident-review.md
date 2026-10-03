@@ -2,9 +2,9 @@
 id: AICC-TPL-10-EN
 title: AI Incident Review
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # AI Incident Review
@@ -22,6 +22,8 @@ revised: 2026-10-02
 | Reviewed | [date] |
 | Notified | [regulator / persons / provider, by whom, date] |
 | Notice of a major incident to the Executive Sponsor and the Board Committee | [date, Decision Log reference] (AI Policy 5.7) |
+| Repeat | [yes, of AIR-[nnn] or the ticket [key], with the same cause / no] |
+| Problem-management Feature | [the Feature in the Program Backlog that removes the cause, where the incident repeats (Solution Lifecycle Model 8.10), or none] |
 
 ## 1. What happened
 

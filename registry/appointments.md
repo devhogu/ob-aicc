@@ -89,7 +89,10 @@ The RACI of the charter is in the Organization guide. Role combinations that the
 | --- | --- | --- | --- |
 | Jira, Confluence, Service Management | | | |
 | The Registry repository | AICC Lead | | |
-| The portals | | | |
+| The operating portal | | | |
+| The AICC portal | | | |
+| The portal tooling | | | |
+| The mailbox of AICC | | | |
 
 ## Delegations of the Executive Sponsor
 

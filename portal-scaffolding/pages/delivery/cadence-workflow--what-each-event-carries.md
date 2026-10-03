@@ -9,7 +9,7 @@ source: charter/workflows/cadence.md
 source_sections: 6
 document: cadence-workflow
 part: 3 of 5
-words: 971
+words: 1230
 series: set-cadence
 production: generated
 status: scaffold
@@ -25,7 +25,7 @@ Page type: workflow. Address: /delivery/cadence-workflow/what-each-event-carries
 
 ## Sections of the source
 
-- 6. What each event carries (971 words)
+- 6. What each event carries (1230 words)
 
 ## Outline
 

@@ -2,9 +2,9 @@
 id: AICC-TPL-09-EN
 title: Appointments Record
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Appointments Record
@@ -13,9 +13,9 @@ revised: 2026-10-02
 
 ## Part A. The map
 
-| Role | Scope | Holder (name and post) | Deputy | Status | From | To | Appointed by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  | [Appointed / Acting / Relieved] |  |  |  | DR-[yyyy]-[nnn] |
+| Role | Scope | Holder (name and post) | Deputy | Status | From | To | Due by | Appointed by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | [Appointed / Acting / Relieved / Vacant] |  |  | [for a vacant or acting Role, the date by which the appointment is due (Operating Model 4.8)] |  | DR-[yyyy]-[nnn] |
 
 The heads and the Contacts named below the Roles are listed in the same way, each with a Status and a decision reference.
 
@@ -33,25 +33,31 @@ The heads and the Contacts named below the Roles are listed in the same way, eac
 
 ## Part B. The responsibilities
 
-The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead.
+The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead. Each accepted limit is also tracked in the Risks and Issues Record, by its RI identifier.
+
+| Accepted limit | Holder | Rule | Compensating controls | Risks and Issues entry | Reviewed (date) |
+| --- | --- | --- | --- | --- | --- |
+|  |  | [Business Model 7.5 / Solution Lifecycle Model 7.3(d)] |  | RI-[nnn] |  |
 
 ## Part C. The appointment log
 
-| Entry | Date entered | Event | Role | Person | Effective from and to | Decided by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| AP-[nnn] |  | [Appointed / Acting / Relieved / Changed / Deputy named / Confirmed / Left] |  |  |  |  | DR-[yyyy]-[nnn] |
+| Entry | Date entered | Entered by | Event | Role | Person | Effective from and to | Decided by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| AP-[nnn] |  | [AICC Lead, or the named deputy] | [Appointed / Acting / Relieved / Changed / Deputy named / Confirmed / Left] |  |  |  |  | DR-[yyyy]-[nnn] |
 
 ## Part D. Declarations and competence
 
-| Holder | Role accepted (date) | Conflict declaration (date, outcome) | Training required and completed | Line manager's consent and time allocation |
-| --- | --- | --- | --- | --- |
-|  |  |  |  |  |
+| Holder | Role accepted (date) | Conflict declaration (date, outcome) | Documents read (date) | Training required and completed | Line manager's consent and time allocation |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
 
 ## Part E. Tools and access
 
 | Role | Jira, Confluence, and Service Management group | Repository permission | Access granted or removed (date) | Last access review (date and reviewer) |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
+
+The keepers of the Registry, of each tool, of the AICC portal, of its tooling, and of the mailbox of AICC are entered here (Operating Model 7.6, 7.8).
 
 | Tool | Keeper (Role and name) | From | To |
 | --- | --- | --- | --- |

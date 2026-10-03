@@ -1,6 +1,6 @@
 # Templates
 
-The forms of the records that AICC produces. A Template gives the form of a Record in the Registry or the Portfolio, and its rules are in the documents. The Document Catalog 6 lists them. Copy a Template from its title and omit the metadata block (Document Catalog 6.1). The Templates are in the order of use: an Initiative starts at the first and an Engagement ends at the eighth. The Appointments Record, the Registry Snapshot, the Quarterly Report, and the Proposal are used on their own cycle.
+The forms of the records that AICC produces. A Template gives the form of a Record in the Registry or the Portfolio, and its rules are in the documents. The Document Catalog 6 lists them. Copy a Template from its title and omit the metadata block (Document Catalog 6.1). The Templates are in the order of use: an Initiative starts at the first and an Engagement ends at the eighth. The Package Definition is opened when a service category foresees a Package or an Engagement leaves one, and is kept current while the Package is available. The Appointments Record, the Registry Snapshot, the Quarterly Report, and the Proposal are used on their own cycle.
 
 | Order | Id | Template | File | Used when | Kept in |
 | --- | --- | --- | --- | --- | --- |
@@ -12,11 +12,12 @@ The forms of the records that AICC produces. A Template gives the form of a Reco
 | 6 | AICC-TPL-08 | Decision Record | [decision-record.md](decision-record.md) | A Decision needs a record | `registry/decisions/` |
 | 7 | AICC-TPL-04 | Steering Summary | [steering-summary.md](steering-summary.md) | Each Steering | `registry/steering/` |
 | 8 | AICC-TPL-07 | Outcome Report | [outcome-report.md](outcome-report.md) | An Engagement ends | `registry/initiatives/` |
-| 9 | AICC-TPL-10 | AI Incident Review | [ai-incident-review.md](ai-incident-review.md) | After the post-incident review of an AI Incident (AI Policy 5.8) | `registry/incident-reviews/` |
-| 10 | AICC-TPL-11 | Registry Snapshot | [registry-snapshot.md](registry-snapshot.md) | The close of an Iteration and a PI, and at the cutover | `registry/snapshots/` |
-| 11 | AICC-TPL-05 | Quarterly Report | [quarterly-report.md](quarterly-report.md) | Each quarter | `registry/reports/` |
-| 12 | AICC-TPL-09 | Appointments Record | [appointments-record.md](appointments-record.md) | An appointment, acting designation, change, or relief | `registry/appointments.md` |
-| 13 | AICC-TPL-12 | Proposal | [proposal.md](proposal.md) | A Solution is proposed for adoption at scale, and the yearly Proposal of the AI adoption strategy | `registry/proposals/` |
+| 9 | AICC-TPL-14 | Package Definition | [package-definition.md](package-definition.md) | A service category foresees a Package, or an Engagement leaves one | `portfolio/packages/` |
+| 10 | AICC-TPL-10 | AI Incident Review | [ai-incident-review.md](ai-incident-review.md) | After the post-incident review of an AI Incident (AI Policy 5.8) | `registry/incident-reviews/` |
+| 11 | AICC-TPL-11 | Registry Snapshot | [registry-snapshot.md](registry-snapshot.md) | The close of an Iteration and a PI, and at the cutover | `registry/snapshots/` |
+| 12 | AICC-TPL-05 | Quarterly Report | [quarterly-report.md](quarterly-report.md) | Each quarter | `registry/reports/` |
+| 13 | AICC-TPL-09 | Appointments Record | [appointments-record.md](appointments-record.md) | An appointment, acting designation, change, or relief | `registry/appointments.md` |
+| 14 | AICC-TPL-12 | Proposal | [proposal.md](proposal.md) | A Solution is proposed for adoption at scale, and the yearly Proposal of the AI adoption strategy | `registry/proposals/` |
 
 A Capability has no Template. It is a line in the Program Backlog. A Feature that needs more than a line in the Program Backlog has a short file in the folder of its Initiative, in the form of the Solution Lifecycle Model 3.3:
 

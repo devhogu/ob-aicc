@@ -1,6 +1,6 @@
 # Templates and forms
 
-A template gives the form of a record that AICC produces; its rules are in the documents. There are thirteen, used along the life of an Engagement and on the cycle of the unit, and a fourteenth is proposed. This page says which form is used when, who fills it and who signs it, and where the record is kept; each form has its own page with a copy button.
+A template gives the form of a record that AICC produces; its rules are in the documents. There are fourteen, used along the life of an Engagement and on the cycle of the unit. This page says which form is used when, who fills it and who signs it, and where the record is kept; each form has its own page with a copy button.
 
 ## 1. Which form when
 
@@ -25,6 +25,7 @@ A template gives the form of a record that AICC produces; its rules are in the d
 | Form | Used when | Filled by | Signed or approved by | Kept in |
 | --- | --- | --- | --- | --- |
 | [Outcome Report](page:knowledge-base/outcome-report) | An Engagement ends | The AICC Lead | The Domain Owner accepts, or the Executive Sponsor for enabling work | The Registry, with the Initiative |
+| [Package Definition](page:knowledge-base/package-definition) | A Package is planned, produced, changed, or withdrawn | The AICC Lead | The owner of the Package | The Portfolio, packages |
 | [Proposal](page:knowledge-base/proposal) | A Solution is proposed for adoption at scale; the yearly Proposal of the AI adoption strategy | The AICC Lead | The owners and the Executive Sponsor decide on a Solution; the Bank on the strategy | The Registry, proposals |
 
 ### The cycle of the unit: governance and oversight
@@ -36,12 +37,6 @@ A template gives the form of a record that AICC produces; its rules are in the d
 | [Registry Snapshot](page:knowledge-base/registry-snapshot) | The close of an Iteration and of a Program Increment, and at the cutover | The AICC Lead | None; it is the evidence of the living records at a date | The Registry, snapshots |
 | [AI Incident Review](page:knowledge-base/ai-incident-review) | After the post-incident review of an AI Incident | The AICC Lead with the function and the Control Function Contacts | The Control Function Contacts concerned | The Registry, incident reviews |
 | [Appointments Record](page:knowledge-base/appointments-record) | An appointment, acting designation, change, or relief; the Holders, deputies, assigned persons, training, and access | The AICC Lead | The appointer of each Role | The Registry, appointments |
-
-### Proposed
-
-| Form | Used when | Status |
-| --- | --- | --- |
-| [Package Definition](page:knowledge-base/package-definition) | A reusable package is planned, produced, or available | A draft on this site, proposed as the fourteenth template; adopted by a decision record |
 
 ## 2. How a form is used
 

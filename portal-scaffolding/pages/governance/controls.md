@@ -9,7 +9,7 @@ source: charter/documents/operating-model.md
 source_sections: 8
 document: operating-model
 part: governance view
-words: 1926
+words: 2378
 series: set-operating-model
 series_order: 2
 production: generated
@@ -26,7 +26,7 @@ Page type: catalogue. Address: /governance/controls/
 
 ## Sections of the source
 
-- 8. Controls (1926 words)
+- 8. Controls (2378 words)
 
 ## Outline
 

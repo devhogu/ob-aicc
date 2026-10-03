@@ -2,9 +2,9 @@
 id: AICC-TPL-13-EN
 title: Acceptance Checklist
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-03
 ```
 
 # Acceptance Checklist
@@ -19,6 +19,7 @@ revised: 2026-10-02
 | Risk Tier | [1 / 2 / 3] |
 | Prerequisites | Team final acceptance on [date] by the AICC Lead; business acceptance on [date] by the Business acceptor |
 | Completed by the AICC Lead on | [date] |
+| Items not met | [count] |
 
 | Party | Item | Result | Name, signature, and date |
 | --- | --- | --- | --- |

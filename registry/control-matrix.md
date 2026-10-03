@@ -4,13 +4,15 @@ The Control Matrix keeps the state of every control of the Operating Model 8, by
 
 ## 1. Status
 
+The statuses have the meanings of the Operating Model 8.5, and the gap is stated in the entry.
+
 | Status | Meaning |
 | --- | --- |
-| Operating | The control has operated, and the latest evidence is cited |
-| Open | The control is due or in force, and its evidence is missing or incomplete; the gap is stated, and the Risks and Issues Record holds an item for it |
-| Deficiency | An Open control that is not corrected; it is entered as a Deficiency in the Risks and Issues Record, and reviewed monthly until it is closed |
+| Operating | The control operated when it was due or triggered, and its evidence record is in the Registry and cited here |
+| Open | The control is due, and its evidence is missing or incomplete; the gap is stated, and the Risks and Issues Record holds an item for it with an owner and a due date |
+| Deficiency | The control did not operate, or its evidence shows a failure, or it was Open and was not corrected by its due date; it is entered as a deficiency in the Risks and Issues Record, and reviewed monthly until it is closed |
 | No occurrence yet | The event that triggers the control has not happened; a nil statement says so |
-| Not yet due | The control is periodic, and its first occurrence has not been reached |
+| Not yet due | The first date of the control has not come |
 
 ## 2. The state of the controls
 

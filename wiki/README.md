@@ -11,6 +11,7 @@ The wiki holds lineage, research, open items, and an archive. It is explanatory 
 
 ### Lineage and research
 
+- [Site-to-corpus alignment](research/alignment/README.md) - the gap between what the portal states and what the charter and the Registry carry, in five strands, reduced to twelve decisions (2026-10-03)
 - [Service ideas, work in progress](research/services/service-ideas.md) - the running collection of service ideas for the nine service lines and the catalog of packages, with source, line, mode, and status
 - [Findings from the four concept portals](research/services/portal-findings.md) - the Financial Services framework, Cloud LAB, STS, and CSR read for services, constructs, and Portfolio candidates
 

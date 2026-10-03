@@ -354,7 +354,7 @@ if NEXT:
     split_doc('organization', 'organization-guide', 'charter/guides/organization-guide.md', [
         ('', 'Purpose, the place of AICC, and the Roles and their profiles', [1, 2, 3]),
         ('who-is-responsible-for-what', 'Who is responsible for what', [4]),
-        ('bodies-people-and-records', 'The governing bodies, the people records, the evidence, and the rule source', [5, 6, 7, 8]),
+        ('bodies-people-and-records', 'The governing bodies, the people records, the growth of the organization, the evidence, and the rule source', [5, 6, 7, 8, 9]),
     ], 14, type_='guide', series='set-operating-model', series_title='Operating Model', tabs=['Guide: Roles and profiles', 'Guide: Who is responsible', 'Guide: Bodies and people'], series_order=3)
     OCOURSE = [
         ('overview', 'Organization', 'Overview', 'A joint team by Roles; one picture; what the organization is for; the practice it follows'),
@@ -480,7 +480,7 @@ else:
 
 # Library (current) / Knowledge base (next)
 TEMPLATES = ['initiative-brief', 'service-agreement', 'solution-definition', 'acceptance-checklist', 'control-sign-off', 'decision-record',
-             'steering-summary', 'outcome-report', 'ai-incident-review', 'registry-snapshot', 'quarterly-report', 'appointments-record', 'proposal']
+             'steering-summary', 'outcome-report', 'package-definition', 'ai-incident-review', 'registry-snapshot', 'quarterly-report', 'appointments-record', 'proposal']
 for i, f in enumerate(TEMPLATES, 1):
     add(id=f'{S_LIBRARY}/{f}', section=S_LIBRARY, order=(20 + i) if NEXT else i, type='template', slug=f'/{S_LIBRARY}/{f}/', title=h1(f'charter/templates/{f}.md'),
         source=[f'charter/templates/{f}.md'])
@@ -511,9 +511,6 @@ if NEXT:
         production='authored; curated by the AICC Lead with the Control Function Contacts',
         outline=['DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution',
                  'For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it', 'Links to the Reference page Regulators and acts for the bodies and the texts'])
-    add(id='knowledge-base/package-definition', section='knowledge-base', order=40, type='template', slug='/knowledge-base/package-definition/', title='Package Definition (draft template)',
-        source=['portal/content/knowledge-base/package-definition.md'], production='authored; proposed as the fourteenth template of the charter',
-        outline=['When it is used', 'The form', 'The sections'])
     # The Reference as tabs: the overview, then the four outward shelves; the charter's own references follow in the navigation.
     sp = next(x for x in PAGES if x['id'] == 'reference/index')
     sp.update(source=['portal/content/reference/overview.md'], production='authored; the overview of the Reference', outline=['How to navigate the Reference, drawn; how to take an external source; using external resources safely; the categories'],

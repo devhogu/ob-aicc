@@ -79,6 +79,7 @@ A Solution in use stays under control through the review and the triggers in the
 | A significant change: of model, provider, data class, degree of autonomy, or any attribute of the Risk Tier | The decision on a new check or validation is entered in the Decision Log, and the change is released as the gates state (Solution Lifecycle Model 8.6) | The AICC Lead decides on the new check; the Domain Owner, or the Executive Sponsor for Risk Tier 3, releases |
 | A change that raises the Risk Tier, or that the check or the validation named as requiring a new one | The Solution returns to Discovery for the checks that the change touches (AI Policy 3.4) | The AICC Lead reassesses the Risk Tier (AI Policy 3.5) |
 | The Risk Tier rises to 3 | The Solution is not used beyond its first users until the Executive Sponsor releases it (AI Policy 3.4) | The Executive Sponsor |
+| An alert level of the monitoring is crossed, or defects are found in operation after the check or the validation | The Domain Owner reviews the Solution, and defects after the check or the validation lead to a reassessment of the Risk Tier, which returns the Solution to Figure 1 (AI Policy 3.7) | The Domain Owner reviews; the AICC Lead reassesses |
 | The date in the AI Registry for a reassessment or a validation arrives | The Risk Tier is reassessed, and the Solution is validated again where the validation has expired (AI Policy 3.3, 3.4) | The AICC Lead reassesses; the Control Function Contacts validate |
 
 ## 5. Exception, suspension, and stop
@@ -122,6 +123,8 @@ An AI Incident is handled in the incident management of the Bank, and the AICC L
 | A Domain wants to use a class of data for which no Solution is approved | The data is not used with AI at any point, including discovery, until the Domain Owner has obtained the approvals that the rules of the Bank require (AI Policy 2.2) |
 | The AICC Lead built the Solution | The AICC Lead does not check, validate, or release it; the Executive Sponsor approves its Solution Definition, assigns its Risk Tier, approves its use for a data class; the Executive Sponsor also gives the business acceptance and the release where the AICC Lead is the Domain Owner, and otherwise the Domain Owner does (Operating Model 4.4(d), 4.6) |
 | A Risk Tier 1 Solution turns out to be in a category that the law treats as high risk | The Solution is at least Risk Tier 2, and the Control Function Contacts validate it in place of the check (AI Policy 3.2, 3.5) |
+| An unapproved use of AI is reported, by the AI Platform, by information security, or by a person | The AICC Lead lists the use in the AI Registry and proposes to the Domain Owner an approved Solution that serves the need, or the stop of the use; a use in place on 2026-10-02 is tolerated until the Domain Owner approves it or stops it, and not beyond 2026-12-31 (AI Policy 2.1, 2.7) |
+| An Experiment needs data or an external environment | The Experiment runs in the Lab on read-only extracts, each with the owner of its source named, and writes nothing back to the source; it uses only data of a class approved for it (AI Policy 2.2), and an external environment is checked as a provider before it holds data of the Bank (AI Policy 4.1, 4.4; Solution Lifecycle Model 8) |
 
 ## 9. Where it runs
 
