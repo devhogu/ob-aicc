@@ -27,16 +27,71 @@ flowchart LR
 
 Figure 1: the four loops, the frame going down and the evidence coming up.
 
-## 3. The Portfolio as a control loop
+## 3. Each loop drawn
 
-3.1. The loops are the Portfolio's half of the control loops of the Operating Model: the strategic loop is also the direction loop of the unit, the portfolio review is also the assurance loop, the portfolio sync is also the control loop, and the backlog care is also the operating loop. They run on the same Steerings and the same Weekly Review, with the same Decision Log and the same Registry Snapshot. This is what makes the Portfolio governable by a small unit: one cadence, one set of forums, one set of records, read for two purposes.
+3.1. Each loop is a plan, do, check, act cycle. Figures 2 to 5 draw them in the same form: what comes in from above, the four steps, and what goes down and up.
 
-3.2. The governance it carries is continuous and light. The business case and its clearances are the control at the start; the gates and the Decision Log are the control through the flow; the quarterly review with its risk check and its confirmed benefit is the control on continuation; the Quarterly Report to the Board Committee is the control on the whole. Nothing waits for an annual review to be stopped, and nothing is started on a committee's say-so without a case and a probe.
+```mermaid
+flowchart LR
+  IN(["From above:<br/>strategy of the Bank,<br/>priorities of the Domains"]) --> P["Plan<br/>Priorities, Envelopes,<br/>Guardrails for the year"]
+  P --> D["Do<br/>the Portfolio runs<br/>within them"]
+  D --> C["Check<br/>benefit against each Envelope,<br/>results of each priority,<br/>documents and appetite"]
+  C --> A["Act<br/>renew or adjust<br/>the frame"]
+  A --> P
+  EV(["From below:<br/>Quarterly Reports"]) -.-> C
+  A --> OUT(["To below:<br/>the frame for<br/>the review loop"])
+```
 
-## 4. The forums
+Figure 2: the strategic loop, yearly, at the yearly Steering.
 
-4.1. The monthly Steering is the working body of the Portfolio: the gate decisions due, the funnel, the places free under the limit, and a sample of the decisions taken since the last one. The quarterly Steering is the review body: each Active Initiative in turn, the AICC Lead showing its indicators, the Domain Owner confirming its benefit, the approver deciding, and the result entered in the Quarterly Report that the Executive Sponsor issues to the Board Committee. The yearly Steering, the December one, is the strategy body. The AI Steering Committee, the heads of the business, technology, risk, and compliance functions the Executive Sponsor names, advises at each and decides nothing.
+```mermaid
+flowchart LR
+  IN(["From above:<br/>Priorities, Envelopes,<br/>Guardrails"]) --> P["Plan<br/>Roadmap and mix of<br/>Initiatives for the next<br/>Program Increment"]
+  P --> D["Do<br/>Initiatives in MVP<br/>and Implementation"]
+  D --> C["Check<br/>indicators against plan,<br/>benefit confirmed,<br/>quarterly risk check"]
+  C --> A["Act<br/>continue, pivot, defer,<br/>or reject; adjust the mix;<br/>report to the Board Committee"]
+  A --> P
+  EV(["From below:<br/>Steering Summaries"]) -.-> C
+  A --> OUT(["To below: the mix<br/>To above: Quarterly Report"])
+```
 
-## 5. Rule source
+Figure 3: the portfolio review loop, quarterly, at the quarterly Steering.
+
+```mermaid
+flowchart LR
+  IN(["From above:<br/>the mix of Initiatives"]) --> P["Plan<br/>gate decisions due, the funnel,<br/>places free under the limit"]
+  P --> D["Do<br/>decide at the gates, rank,<br/>pull into work"]
+  D --> C["Check<br/>Active against the limit,<br/>time in each step, blockers,<br/>sample of decisions"]
+  C --> A["Act<br/>re-rank, adjust the limit,<br/>unblock"]
+  A --> P
+  EV(["From below:<br/>items at a gate"]) -.-> P
+  C --> OUT(["To above:<br/>Steering Summary"])
+```
+
+Figure 4: the portfolio sync loop, monthly, at the monthly Steering, run by the AICC Lead.
+
+```mermaid
+flowchart LR
+  IN(["From above:<br/>rank rules,<br/>gate decisions"]) --> P["Plan<br/>triage the funnel"]
+  P --> D["Do<br/>scope needs, write business<br/>cases, obtain clearances"]
+  D --> C["Check<br/>the flow and the blockers<br/>at the Weekly Review"]
+  C --> A["Act<br/>update the rank; raise items<br/>at a gate to the monthly Steering"]
+  A --> P
+  A --> OUT(["To above:<br/>items at a gate,<br/>Dashboard"])
+```
+
+Figure 5: the backlog care loop, weekly, at the Weekly Review, run by the AICC Lead.
+
+## 4. The Portfolio as a control loop
+
+4.1. The loops are the Portfolio's half of the control loops of the Operating Model: the strategic loop is also the direction loop of the unit, the portfolio review is also the assurance loop, the portfolio sync is also the control loop, and the backlog care is also the operating loop. They run on the same Steerings and the same Weekly Review, with the same Decision Log and the same Registry Snapshot. This is what makes the Portfolio governable by a small unit: one cadence, one set of forums, one set of records, read for two purposes.
+
+4.2. The governance it carries is continuous and light. The business case and its clearances are the control at the start; the gates and the Decision Log are the control through the flow; the quarterly review with its risk check and its confirmed benefit is the control on continuation; the Quarterly Report to the Board Committee is the control on the whole. Nothing waits for an annual review to be stopped, and nothing is started on a committee's say-so without a case and a probe.
+
+## 5. The forums
+
+5.1. The monthly Steering is the working body of the Portfolio: the gate decisions due, the funnel, the places free under the limit, and a sample of the decisions taken since the last one. The quarterly Steering is the review body: each Active Initiative in turn, the AICC Lead showing its indicators, the Domain Owner confirming its benefit, the approver deciding, and the result entered in the Quarterly Report that the Executive Sponsor issues to the Board Committee. The yearly Steering, the December one, is the strategy body. The AI Steering Committee, the heads of the business, technology, risk, and compliance functions the Executive Sponsor names, advises at each and decides nothing.
+
+## 6. Rule source
 
 Portfolio Management Model 4; Operating Model 6; Solution Lifecycle Model 6; the Unit governance and Cadence workflows and guides.

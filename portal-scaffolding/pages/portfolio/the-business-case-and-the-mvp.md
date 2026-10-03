@@ -6,7 +6,7 @@ order: 5
 type: outline
 slug: /portfolio/the-business-case-and-the-mvp/
 source: portal/content/portfolio/the-business-case-and-the-mvp.md
-part: 5 of 7
+part: 5 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
 status: scaffold

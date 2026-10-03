@@ -6,7 +6,7 @@ order: 2
 type: outline
 slug: /portfolio/strategy-and-investment/
 source: portal/content/portfolio/strategy-and-investment.md
-part: 2 of 7
+part: 2 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
 status: scaffold

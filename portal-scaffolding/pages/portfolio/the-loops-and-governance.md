@@ -6,7 +6,7 @@ order: 6
 type: outline
 slug: /portfolio/the-loops-and-governance/
 source: portal/content/portfolio/the-loops-and-governance.md
-part: 6 of 7
+part: 6 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
 status: scaffold

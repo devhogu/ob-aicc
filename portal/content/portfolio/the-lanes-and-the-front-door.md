@@ -13,23 +13,42 @@ Every service of AICC enters through the same front door and the same Portfolio.
 
 ## 2. The categories by lane
 
-| Area | Category | Run-rate | Program |
-| --- | --- | --- | --- |
-| Advise and formulate | Strategy and governance | Service-management set-up for a function's services | A charter pack and a portal; a strategy paper; a governance package |
-| Advise and formulate | Normatives and processes | A document, a runbook, a review of a set, a process drawing | A corpus rewritten |
-| Advise and formulate | Research and exploration | A digest, a watch item | A trial in the Lab |
-| Advise and formulate | Business cases and scenarios | A scenario, a readiness and source audit | A roadmap for a Domain; the study of every program |
-| Build and run | Knowledge services | A source set added to an existing base | A new knowledge base |
-| Build and run | Workplace automation | An automation in the catalog | A set of automations for a process |
-| Build and run | Analytics and decision support | A view, a consolidation, an analysis pack | A pipeline that feeds a recurring report of the Bank |
-| Build and run | Content management | A template or an edition change | An engine for a document family |
-| Build and run | Platforms | A requirements statement to the AI Platform | A platform of AICC; a hand-over to a platform team |
-| Enablement | Training and knowledge sharing | Training, a clinic, a skill library | A training program for a Domain |
-| Enablement | Adoption and lifecycle management | A hand-over, a support arrangement, a review, a retirement | An adoption program for a Domain |
-| Assurance | Policies, controls, criteria | Rules of use, a control map, acceptance criteria | A control framework for the AI uses of a Domain |
-| Assurance | Assessments and evaluations | An evaluation, a provider assessment, a readiness assessment | An evaluation program for a family of tools |
-| Assurance | Risk tiering | A tiering, a registry entry, a reassessment | An inventory and tiering of the AI uses of a Domain |
-| Assurance | Oversight | An Adopted Solution recorded, a review followed, an incident reviewed | A reconciliation of the register for the Bank |
+2.1. The table states, for each area and category, what flows in the run-rate lane and what is a program. The entries are short; the category pages carry the detail.
+
+### Advise and formulate
+
+| Category | Run-rate | Program |
+| --- | --- | --- |
+| Strategy and governance | Service-management set-up for a function's services | A charter pack and a portal; a strategy paper; a governance package |
+| Normatives and processes | A document, a runbook, a review of a set, a process drawing | A corpus rewritten |
+| Research and exploration | A digest, a watch item | A trial in the Lab |
+| Business cases and scenarios | A scenario, a readiness and source audit | A roadmap for a Domain; the study of every program |
+
+### Build and run
+
+| Category | Run-rate | Program |
+| --- | --- | --- |
+| Knowledge services | A source set added to an existing base | A new knowledge base |
+| Workplace automation | An automation in the catalog | A set of automations for a process |
+| Analytics and decision support | A view, a consolidation, an analysis pack | A pipeline that feeds a recurring report of the Bank |
+| Content management | A template or an edition change | An engine for a document family |
+| Platforms | A requirements statement to the AI Platform | A platform of AICC; a hand-over to a platform team |
+
+### Enablement
+
+| Category | Run-rate | Program |
+| --- | --- | --- |
+| Training and knowledge sharing | Training, a clinic, a skill library | A training program for a Domain |
+| Adoption and lifecycle management | A hand-over, a support arrangement, a review, a retirement | An adoption program for a Domain |
+
+### Assurance
+
+| Category | Run-rate | Program |
+| --- | --- | --- |
+| Policies, controls, criteria | Rules of use, a control map, acceptance criteria | A control framework for the AI uses of a Domain |
+| Assessments and evaluations | An evaluation, a provider assessment, a readiness assessment | An evaluation program for a family of tools |
+| Risk tiering | A tiering, a registry entry, a reassessment | An inventory and tiering of the AI uses of a Domain |
+| Oversight | An Adopted Solution recorded, a review followed, an incident reviewed | A reconciliation of the register for the Bank |
 
 ## 3. Screening at the front door
 

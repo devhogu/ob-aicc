@@ -264,7 +264,8 @@ if NEXT:
         ('the-lanes-and-the-front-door', 'The lanes and the front door', 'Lanes', 'Run-rate and program; the categories by lane; screening at the front door; the Portfolio at a glance'),
         ('the-business-case-and-the-mvp', 'The business case and the MVP', 'Business case and MVP', 'The one-page Initiative Brief and its five questions; the clearance of the Control Functions; the ranking; the MVP and the decision after it'),
         ('the-loops-and-governance', 'The loops and the governance', 'Loops and governance', 'The four loops; how they nest; the Portfolio as a control loop; the forums'),
-        ('roles-measures-and-records', 'Roles, measures, and records', 'Roles and records', 'The roles in the Portfolio; the measures of flow and return; the records; the Portfolio at a glance'),
+        ('measures-and-tracking', 'Measures and tracking', 'Measures', 'Objectives and key results applied to an Initiative: the hypothesis, the leading indicators, the MVP as the first test, the Capabilities as the means, the confirmed benefit; the flow measures of lean practice; what each loop reads; how it is tracked'),
+        ('roles-and-records', 'Roles and records', 'Roles and records', 'The roles in the Portfolio; the records; the Portfolio at a glance'),
     ]
     for i, (slug, title, tab, line) in enumerate(PCOURSE, 1):
         if i == 1:
@@ -284,6 +285,12 @@ if NEXT:
     add(id='delivery/service-operations', section='delivery', order=20, type='outline', slug='/delivery/service-operations/', title='Service operations',
         source=['portal/content/delivery/service-operations.md'], production='authored; the run-book template of a Service; draws on STS',
         outline=['The practices: request, incident, problem, change, knowledge, service level, financial, supplier', 'The classes of service', 'The health of a Service', 'Sizing for a small unit'])
+
+if NEXT:
+    add(id='portfolio/measures-definitions-and-formulas', section='portfolio', order=9, type='outline', slug='/portfolio/measures-definitions-and-formulas/', title='Portfolio measures: definitions and formulas',
+        source=['portal/content/portfolio/measures-definitions-and-formulas.md'], production='authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 and Charter 7',
+        outline=['Conventions', 'Flow measures with formulas: WIP, throughput, lead time, cycle time, Little\'s law, flow efficiency, aging, load, distribution, gate returns, predictability',
+                 'Outcome measures of an Initiative: key results, adoption, acceptance, cycle, benefit claimed, confirmed, realization', 'Portfolio economics as a profit and loss view per priority', 'Control and quality measures', 'How the measures are kept'])
 
 # Organization
 split_doc('organization', 'operating-model', 'charter/documents/operating-model.md', [

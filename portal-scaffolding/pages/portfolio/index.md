@@ -6,7 +6,7 @@ order: 0
 type: section
 slug: /portfolio/
 source: portal/content/portfolio/overview.md
-part: 1 of 7
+part: 1 of 8
 series: portfolio-course
 production: authored; the first part of the course, explanatory, the Portfolio Management Model is the rule
 status: scaffold

@@ -28,16 +28,47 @@ Two devices carry the commercial judgment of the Portfolio: the one-page busines
 
 ## 4. The MVP and the decision after it
 
-4.1. When an Initiative is pulled into work, the Solution Engineer defines the architecture and the Solution Definition of its first Solution and builds the MVP with the Domain Expert, within the Limits on Work in Progress. The scope of the first Solution is narrow by rule. At the end of the MVP, the approver of the business case compares the result with the leading indicators of the brief and decides.
+4.1. The MVP has two sides that run together. The business side belongs to the approver of the business case and the Domain Owner: they own the hypothesis, the leading indicators, and the judgment at the end. The development side belongs to the Solution Engineer with the Domain Expert: they define the architecture and the Solution Definition of the first Solution and build the smallest version that can test the hypothesis, within the Limits on Work in Progress, with the scope narrow by rule. The two sides meet at each Iteration Review and Demo and at the decision. Figure 1 draws them.
 
-| Decision | What it means | What follows |
+```mermaid
+flowchart TB
+  subgraph BUS["Business side: the approver and the Domain Owner"]
+    direction LR
+    B1["Hypothesis and<br/>leading indicators<br/>in the Initiative Brief"] --> B2["Approval of the<br/>business case<br/>Domain Owner, or<br/>Executive Sponsor"]
+    B2 --> B3["Review at each<br/>Iteration Review<br/>and Demo"]
+    B3 --> B4["Reads the result<br/>against the indicators"]
+  end
+  subgraph DEV["Development side: the Solution Engineer with the Domain Expert"]
+    direction LR
+    D1["Pulled into work<br/>when the limit allows"] --> D2["Architecture and<br/>Solution Definition<br/>of the first Solution"]
+    D2 --> D3["Build the smallest<br/>version that tests<br/>the hypothesis"]
+    D3 --> D4["Check or validation<br/>before real users;<br/>measure; demo"]
+  end
+  subgraph DEC["The decision after the MVP, by the approver of the business case"]
+    direction TB
+    G["Gate: decision<br/>after the MVP<br/>the result against<br/>the leading indicators"] --> C["Continue<br/>the hypothesis holds<br/>Capabilities to the<br/>Program Backlog"]
+    G --> P["Pivot<br/>a different Initiative<br/>a new brief at the funnel,<br/>linked, with the results"]
+    G --> F["Defer<br/>not yet sufficient reason<br/>on hold with a reason<br/>and a date"]
+    G --> R["Reject<br/>the value is not seen<br/>closed, the lessons kept"]
+  end
+  BUS ~~~ DEV
+  DEV ~~~ DEC
+```
+
+Figure 1: the MVP, its business side and its development side, and the four routes after it.
+
+4.2. At the end of the MVP the approver of the business case compares the result with the leading indicators of the brief and takes one of four decisions.
+
+| Decision | When | What follows |
 | --- | --- | --- |
-| Continue | The hypothesis holds | The Capabilities of the Initiative are defined and entered in the Program Backlog, and the Initiative goes to Implementation |
-| Pivot | What was learned calls for a different Initiative | The Initiative is closed as Pivoted; a new one with a full brief enters the funnel, linked to it, carrying the results of the MVP |
-| Defer | There is not yet sufficient reason to proceed | The Initiative is on hold with the reason and the date to look again, and returns to the funnel when taken up |
-| Reject | The value is not seen | The Initiative is Rejected and its lessons are kept |
+| Continue | The hypothesis holds: the indicators move as the brief said, the Domain Owner sees the value | The Capabilities of the Initiative are defined and entered in the Program Backlog under the Initiative, and the Initiative goes to Implementation; the quarterly review keeps asking the same question |
+| Pivot | What was learned calls for a different Initiative: the need is real, the approach or the scope was wrong | The Initiative is closed as Pivoted; a new Initiative with a full brief enters the funnel, linked to the first, carrying the results of the MVP, and goes through the whole cycle again |
+| Defer | There is not yet sufficient reason to proceed: the timing, a dependency, a priority higher elsewhere | The Initiative is on hold as Deferred, with the reason and the date to look again, and returns to the funnel when it is taken up |
+| Reject | The value is not seen: the indicators did not move, or the cost or the risk outweighs the benefit | The Initiative is Rejected and its lessons are kept in the Portfolio Backlog; the capacity is released to the next ranked Initiative |
 
-4.2. The decision is entered in the Decision Log with a Decision Record. After a continue, the quarterly review asks the same question of each Active Initiative on its indicators and its confirmed benefit, and an Initiative whose indicators do not hold is deferred or rejected. The MVP is therefore not a one-time gate but the first of a series: the Portfolio keeps asking whether the money should keep flowing.
+4.3. The decision is entered in the Decision Log with a Decision Record, and the result of the probe stays with the Solution Definition. After a continue, the quarterly review asks the same question of each Active Initiative on its indicators and its confirmed benefit, and an Initiative whose indicators do not hold is deferred or rejected. The MVP is therefore not a one-time gate but the first of a series: the Portfolio keeps asking whether the money should keep flowing.
+
+4.4. Two rules keep the probe honest. The scope of the first Solution is narrow by rule, so that the MVP tests the hypothesis and does not become the delivery by another name. And the check or validation before any real user applies to the MVP as to any Solution, in proportion to its Risk Tier, so that a probe never reaches people or data without a person other than its builder having looked at it.
 
 ## 5. Rule source
 

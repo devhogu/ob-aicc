@@ -153,7 +153,7 @@
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
-   "part": "1 of 7",
+   "part": "1 of 8",
    "tab": "Overview"
   },
   {
@@ -1302,7 +1302,7 @@
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
-   "part": "2 of 7",
+   "part": "2 of 8",
    "tab": "Strategy and investment"
   },
   {
@@ -1321,7 +1321,7 @@
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
-   "part": "3 of 7",
+   "part": "3 of 8",
    "tab": "The flow"
   },
   {
@@ -1340,7 +1340,7 @@
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
-   "part": "4 of 7",
+   "part": "4 of 8",
    "tab": "Lanes"
   },
   {
@@ -1359,7 +1359,7 @@
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
-   "part": "5 of 7",
+   "part": "5 of 8",
    "tab": "Business case and MVP"
   },
   {
@@ -1378,26 +1378,45 @@
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
-   "part": "6 of 7",
+   "part": "6 of 8",
    "tab": "Loops and governance"
   },
   {
-   "id": "portfolio/roles-measures-and-records",
+   "id": "portfolio/measures-and-tracking",
    "section": "portfolio",
    "order": 7,
    "type": "outline",
-   "slug": "/portfolio/roles-measures-and-records/",
-   "title": "Roles, measures, and records",
+   "slug": "/portfolio/measures-and-tracking/",
+   "title": "Measures and tracking",
    "source": [
-    "portal/content/portfolio/roles-measures-and-records.md"
+    "portal/content/portfolio/measures-and-tracking.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
-    "The roles in the Portfolio; the measures of flow and return; the records; the Portfolio at a glance"
+    "Objectives and key results applied to an Initiative: the hypothesis, the leading indicators, the MVP as the first test, the Capabilities as the means, the confirmed benefit; the flow measures of lean practice; what each loop reads; how it is tracked"
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
-   "part": "7 of 7",
+   "part": "7 of 8",
+   "tab": "Measures"
+  },
+  {
+   "id": "portfolio/roles-and-records",
+   "section": "portfolio",
+   "order": 8,
+   "type": "outline",
+   "slug": "/portfolio/roles-and-records/",
+   "title": "Roles and records",
+   "source": [
+    "portal/content/portfolio/roles-and-records.md"
+   ],
+   "production": "authored; explanatory, the Portfolio Management Model is the rule",
+   "outline": [
+    "The roles in the Portfolio; the records; the Portfolio at a glance"
+   ],
+   "series": "portfolio-course",
+   "series_title": "The Portfolio",
+   "part": "8 of 8",
    "tab": "Roles and records"
   },
   {
@@ -1449,6 +1468,26 @@
     "The classes of service",
     "The health of a Service",
     "Sizing for a small unit"
+   ]
+  },
+  {
+   "id": "portfolio/measures-definitions-and-formulas",
+   "section": "portfolio",
+   "order": 9,
+   "type": "outline",
+   "slug": "/portfolio/measures-definitions-and-formulas/",
+   "title": "Portfolio measures: definitions and formulas",
+   "source": [
+    "portal/content/portfolio/measures-definitions-and-formulas.md"
+   ],
+   "production": "authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 and Charter 7",
+   "outline": [
+    "Conventions",
+    "Flow measures with formulas: WIP, throughput, lead time, cycle time, Little's law, flow efficiency, aging, load, distribution, gate returns, predictability",
+    "Outcome measures of an Initiative: key results, adoption, acceptance, cycle, benefit claimed, confirmed, realization",
+    "Portfolio economics as a profit and loss view per priority",
+    "Control and quality measures",
+    "How the measures are kept"
    ]
   },
   {

@@ -1,6 +1,6 @@
 # The Portfolio
 
-The Portfolio is where the Bank decides what AICC works on. It is two things at once: a commercial decision body, which takes in business needs, funds them against the Strategic Priorities, and continues, pivots, defers, or rejects them on evidence; and a control loop, which runs on a fixed cadence, keeps the work in progress low, and returns what it learns to the strategy that framed it. This course explains how it works, in seven parts; the Portfolio Management Model is the rule and prevails.
+The Portfolio is where the Bank decides what AICC works on. It is two things at once: a commercial decision body, which takes in business needs, funds them against the Strategic Priorities, and continues, pivots, defers, or rejects them on evidence; and a control loop, which runs on a fixed cadence, keeps the work in progress low, and returns what it learns to the strategy that framed it. This course explains how it works, in eight parts; the Portfolio Management Model is the rule and prevails.
 
 ## 1. One picture
 
@@ -43,4 +43,4 @@ Figure 1: the Portfolio end to end.
 
 ## 4. How to read this course
 
-4.1. Part 2 states the frame: the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails, and who decides what. Part 3 follows an Initiative through the portfolio Kanban. Part 4 states the two lanes and the front door. Part 5 opens the business case and the MVP. Part 6 states the four loops and the governance. Part 7 states the roles, the measures, and the records. The Portfolio Management Model follows as the rule.
+4.1. Part 2 states the frame: the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails, and who decides what. Part 3 follows an Initiative through the portfolio Kanban. Part 4 states the two lanes and the front door. Part 5 opens the business case and the MVP. Part 6 states the four loops and the governance. Part 7 states how the Portfolio is measured and tracked: objectives and key results for each Initiative, the flow measures of lean practice, and what each loop reads. Part 8 states the roles and the records. The Portfolio Management Model follows as the rule.

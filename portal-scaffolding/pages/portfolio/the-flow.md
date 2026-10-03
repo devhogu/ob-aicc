@@ -6,7 +6,7 @@ order: 3
 type: outline
 slug: /portfolio/the-flow/
 source: portal/content/portfolio/the-flow.md
-part: 3 of 7
+part: 3 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
 status: scaffold

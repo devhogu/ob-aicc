@@ -4,6 +4,37 @@ An Initiative is a business program that delivers one or more Solutions, and its
 
 ## 1. The seven steps
 
+1.1. Figure 1 draws the portfolio Kanban: the seven steps, the gate at each, and the routes out of the flow.
+
+```mermaid
+flowchart TB
+  subgraph ROW1["The way in: from the funnel to the Portfolio Backlog"]
+    direction LR
+    FU["Funnel<br/>Proposed<br/>a need is stated"] --> G1["Gate: intake<br/>AICC Lead<br/>take in, defer,<br/>or reject"]
+    G1 --> RV["Reviewing<br/>Discovery: scoping<br/>with the Domain Owner"]
+    RV --> G2["Gate: scoped<br/>fits a priority, has an<br/>owner, within the limit,<br/>no duplicate"]
+    G2 --> AN["Analyzing<br/>Discovery: business case<br/>Initiative Brief, clearance<br/>of the Control Functions"]
+    AN --> G3["Gate: approval<br/>Domain Owner, or<br/>Executive Sponsor<br/>advance, return,<br/>defer, reject"]
+    G3 --> PB["Portfolio Backlog<br/>Approved, ranked by<br/>weighted shortest job first"]
+  end
+  subgraph ROW2["The way through: from the pull to Done"]
+    direction LR
+    G4["Gate: pull<br/>AICC Lead, when the<br/>limit on the Active<br/>Initiatives allows"] --> MV["MVP<br/>Active: the probe<br/>the first Solution,<br/>narrow by rule"]
+    MV --> G5["Gate: decision<br/>after the MVP<br/>continue, pivot,<br/>defer, reject"]
+    G5 --> IM["Implementation<br/>Active: Capabilities and<br/>Features in the<br/>Program Backlog"]
+    IM --> G6["Gate: acceptance<br/>Domain Owner, or<br/>Executive Sponsor"]
+    G6 --> DN["Done<br/>Review, Accepted, Closed<br/>benefit confirmed,<br/>Outcome Report"]
+  end
+  subgraph ROW3["The routes out, at any gate"]
+    direction LR
+    DF["Deferred<br/>a reason and a date<br/>to look again; back<br/>to the funnel"] ~~~ RJ["Rejected<br/>the value is not seen;<br/>the lessons kept"] ~~~ PV["Pivoted<br/>after the MVP: a new<br/>Initiative at the funnel,<br/>linked to the first"] ~~~ CN["Cancelled<br/>withdrawn without a<br/>decision on the merits"]
+  end
+  ROW1 ~~~ ROW2
+  ROW2 ~~~ ROW3
+```
+
+Figure 1: the portfolio Kanban, with its gates and the routes out.
+
 | Step | What happens | Exit criterion, in short | Decided by | Record |
 | --- | --- | --- | --- | --- |
 | Funnel | A function, the discovery work, or AICC proposes an idea or a need | The problem, the strategic relevance, and the requester are stated | AICC Lead takes it in, defers it, or rejects it | An entry in the Portfolio Backlog |

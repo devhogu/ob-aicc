@@ -6,7 +6,7 @@ order: 4
 type: outline
 slug: /portfolio/the-lanes-and-the-front-door/
 source: portal/content/portfolio/the-lanes-and-the-front-door.md
-part: 4 of 7
+part: 4 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
 status: scaffold
