@@ -333,7 +333,7 @@ class Site:
                     self.section_page.setdefault((p['source'][0], n), p)
             if p['id'] in ('reference/change-history', 'reference/records-and-systems', 'organization/roles'):
                 continue
-            if p['type'] in ('document', 'workflow', 'guide', 'template', 'catalogue', 'reference', 'outline', 'service', 'legal') and p.get('source') and not p.get('source_sections'):
+            if p['type'] in ('document', 'workflow', 'guide', 'template', 'catalogue', 'reference', 'outline', 'service', 'legal', 'regulation') and p.get('source') and not p.get('source_sections'):
                 self.file_page.setdefault(p['source'][0], p)
             if p['id'] == 'about/charter-outline':
                 self.file_page['charter/README.md'] = p
@@ -766,7 +766,7 @@ def layout(site, p, lang, main_html, outline):
             for q in items:
                 if q['type'] == 'guide' and q.get('companion') in ids:
                     continue
-                if q['type'] == 'template':
+                if q['type'] in ('template', 'regulation'):
                     continue
                 sub.append(link(q))
                 if q['id'] in nested:
@@ -988,6 +988,10 @@ def read_further(site, p, lang):
     m = site.msg[lang]
     mine = {x['id'] for x in doc_parts(site, p)} | {p['id']}
     items = [q for q in nav_groups(site, p['section']) if q['id'] not in mine and not (q.get('document') and q['source'][0] == (p.get('source') or [''])[0])]
+    if p['type'] == 'regulation':
+        items = [q for q in items if q['type'] == 'regulation' and q.get('region') == p.get('region')] or [q for q in items if q['id'] == 'reference/regulators-and-acts']
+    else:
+        items = [q for q in items if q['type'] != 'regulation']
     if not items:
         return ''
     if len(items) > 6:
@@ -1046,7 +1050,7 @@ def weight(p):
 def page_meta(site, p, lang):
     m = site.msg[lang]
     kinds = {'document': 'kind_document', 'catalogue': 'kind_document', 'workflow': 'kind_workflow', 'guide': 'kind_guide', 'template': 'kind_template',
-             'outline': 'kind_page', 'reference': 'kind_reference', 'records': 'kind_reference', 'index': 'kind_page', 'legal': 'kind_page', 'service': 'kind_service', 'catalog': 'kind_catalog'}
+             'outline': 'kind_page', 'reference': 'kind_reference', 'records': 'kind_reference', 'index': 'kind_page', 'legal': 'kind_page', 'service': 'kind_service', 'catalog': 'kind_catalog', 'regulation': 'kind_reference'}
     k = m.get(kinds.get(p['type'], 'kind_page'), '')
     bits = [k]
     if p.get('source_sections') and p.get('document'):
@@ -1125,6 +1129,29 @@ def section_page(site, p, lang):
     m = site.msg[lang]
     if sid == 'services':
         return services_page(site, p, lang)
+    if sid == 'responsible-ai':
+        items = nav_groups(site, sid)
+        course = [q for q in items if q['type'] == 'outline']
+        rules = [q for q in items if q['type'] != 'outline']
+        cards = '<h2>%s</h2><ol class="levels steps course-steps">%s</ol><ul class="o-grid card-list cards-secondary">%s</ul><h2>%s</h2><ul class="o-grid card-list cards-primary">%s</ul>' % (
+            esc(m['grp_course']), ''.join('<li><span class="lv-n">%d</span><strong><a href="%s">%s</a></strong></li>' % (i, site.rel(url, site.url(q, lang)), esc(q['title'])) for i, q in enumerate(course, 1)),
+            ''.join(card(site, q, lang, url, 'card--secondary') for q in course), esc(m['grp_rules']), ''.join(card(site, q, lang, url, 'card--primary') for q in rules))
+        main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(sec['label'][lang]), esc(sec['intro'][lang]), cards, prev_next(site, p, lang))
+        return layout(site, p, lang, main, [])
+    if sid == 'reference':
+        items = nav_groups(site, sid)
+        main_items = [q for q in items if q['type'] != 'regulation']
+        regs = [q for q in items if q['type'] == 'regulation']
+        groups = []
+        for region in ('Kyrgyz Republic', 'Kazakhstan', 'Russian Federation', 'European Union', 'United States', 'Global'):
+            rs = [q for q in regs if q.get('region') == region]
+            if rs:
+                groups.append('<li><strong>%s:</strong> %s</li>' % (esc(region), ', '.join('<a href="%s">%s</a>' % (site.rel(url, site.url(q, lang)), esc(q['title'])) for q in rs)))
+        cards = '<ul class="o-grid card-list cards-primary">%s</ul><h2>%s</h2><p>%s</p><ul class="support-list reg-list">%s</ul>' % (
+            ''.join(card(site, q, lang, url, 'card--primary' if q['type'] in ('reference', 'document') else 'card--secondary') for q in main_items),
+            esc(m['grp_regulations']), esc(m['grp_regulations_lead']), ''.join(groups))
+        main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(sec['label'][lang]), esc(sec['intro'][lang]), cards, prev_next(site, p, lang))
+        return layout(site, p, lang, main, [])
     if sid == 'knowledge-base':
         out = []
         for q in sorted([x for x in site.pages if x['type'] == 'template'], key=lambda x: x['order']):
@@ -1404,7 +1431,7 @@ def explore_page(site, p, lang):
             lis += ''.join('<li><a href="%s">%s</a><span lang="en"> &mdash; %s</span></li>' % (site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(desc_of(site, q))) for q in items if q['type'] != 'template')
         else:
             lis = ''.join('<li><a href="%s">%s</a><span class="x-kind"> · %s</span><span lang="en"> &mdash; %s</span></li>' % (
-                site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(page_meta(site, q, lang).split(' · ')[0]), esc(section_desc(site, q))) for q in items)
+                site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(page_meta(site, q, lang).split(' · ')[0]), esc(section_desc(site, q))) for q in items if q['type'] != 'regulation')
         hid = 'x-' + sdef['id']
         secs.append('<section class="x-sec" aria-labelledby="%s"><h3 id="%s"><a href="%s">%s</a></h3><p>%s</p><ul class="support-list">%s</ul></section>' % (
             hid, hid, site.rel(url, site.url(sp, lang)), esc(sec['label'][lang]), esc(sec['intro'][lang].split('. ')[0].rstrip('.') + '.'), lis))

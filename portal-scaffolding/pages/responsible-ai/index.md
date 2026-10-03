@@ -15,7 +15,7 @@ Page type: section. Address: /responsible-ai/
 
 ## Outline
 
-- Introduction of three to five lines: The rules for the use of AI, the Risk Tiers, and the gates before use.
+- Introduction of three to five lines: A short course on AI today, its opportunities, its risks, and what responsible use means; and the rules of the Bank: the AI Policy, the Risk Tiers, and the gates before use.
 - Statement of what the section does not hold and where it is kept
 - The pages of the section with one line each (generated)
 - Related sections

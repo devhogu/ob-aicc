@@ -6,7 +6,7 @@ order: 6
 type: outline
 slug: /reference/regulators-and-acts/
 source: portal/content/reference/regulators-and-acts.md
-production: authored; curated with the Control Function Contacts
+production: authored; the index of the regulation pages, curated with the Control Function Contacts
 status: scaffold
 ---
 
@@ -20,5 +20,5 @@ Page type: outline. Address: /reference/regulators-and-acts/
 
 ## Outline
 
-- DECISION 5: new content. The regulators and the acts that apply to the Bank in the use of AI and data, by jurisdiction: the body, the act, the subject, the link to the text
-- The split with Acts and compliance: this page lists the bodies and the texts; that page states what each requires and how AICC complies
+- The regulators, acts, standards, and frameworks the Bank is aware of, by jurisdiction, with a page for each
+- The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how AICC complies

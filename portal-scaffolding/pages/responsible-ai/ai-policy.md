@@ -2,7 +2,7 @@
 id: responsible-ai/ai-policy
 title: AI Policy
 section: responsible-ai
-order: 1
+order: 11
 type: document
 slug: /responsible-ai/ai-policy/
 source: charter/documents/ai-policy.md

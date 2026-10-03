@@ -250,3 +250,5 @@ dialog.fb .fb-body .oc-button{flex:none}
 .sv-family h3{margin:0 0 4px;font-size:18px}
 .sv-family p{margin:0 0 8px;color:var(--text-muted)}
 .sv-family .card-list{margin-top:8px}
+.course-steps li strong a{text-decoration:none;color:var(--text)}
+.course-steps li strong a:hover{color:var(--link);text-decoration:underline}

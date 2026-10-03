@@ -6,16 +6,16 @@ This is the first edition, a placeholder for review. The entries are to be verif
 
 ## 1. How to read this page
 
-1.1. Each row names the instrument, the body that oversees it, what it requires of a use of AI in plain words, and where the charter answers it. The Reference page Regulators and acts lists the bodies and the texts themselves, by jurisdiction.
+1.1. Each row names the instrument, the body that oversees it, what it requires of a use of AI in plain words, and where the charter answers it. The Reference page [Regulators and acts](../reference/regulators-and-acts.md) lists the bodies and the instruments by jurisdiction, with a page for each, including the global, European, and regional ones that do not bind the Bank but shape what is expected of it.
 
 ## 2. Acts and regulations that apply to the Bank
 
 | Instrument | Overseen by | What it requires of a use of AI | Where the charter answers it |
 | --- | --- | --- | --- |
-| Law of the Kyrgyz Republic on Personal Information | The authorized body for personal data of the Kyrgyz Republic | Personal data is processed on a lawful basis, for a stated purpose, with the consent or the legal ground required, kept and protected within the rules, and not transferred outside the Bank without a ground | AI Policy 2 (rules of use, data classes); AICC Charter 3.3 (Data Sharing Arrangement); Statement of Intent 6.4 |
-| Banking legislation and the regulations of the National Bank of the Kyrgyz Republic on information security, outsourcing, and operational risk | National Bank of the Kyrgyz Republic | A system that carries a banking process is secured, its providers are assessed, incidents are reported, and decisions in regulated processes remain with qualified persons | AI Policy 3 (Risk Tiers), 4 (providers), 5 (AI Incidents); AICC Charter 5.3; Statement of Intent 9.6 |
-| Legislation on the protection of consumer rights in financial services | National Bank of the Kyrgyz Republic | A customer is treated fairly, is informed, can reach a person, and can contest a decision | Statement of Intent 6.2, 6.3, and 6.6; AI Policy 3 |
-| Anti-money-laundering and counter-terrorist-financing legislation | The financial intelligence body and the National Bank of the Kyrgyz Republic | Know-your-customer and monitoring processes keep their controls and their audit trail when AI assists them | Statement of Intent 9.2; AI Policy 3; Operating Model 8 |
+| [Law of the Kyrgyz Republic on Personal Information](../reference/regulations/kg-personal-information-law.md) | The authorized body for personal data of the Kyrgyz Republic | Personal data is processed on a lawful basis, for a stated purpose, with the consent or the legal ground required, kept and protected within the rules, and not transferred outside the Bank without a ground | AI Policy 2 (rules of use, data classes); AICC Charter 3.3 (Data Sharing Arrangement); Statement of Intent 6.4 |
+| [Banking legislation and the regulations of the National Bank of the Kyrgyz Republic](../reference/regulations/nbkr.md) on information security, outsourcing, and operational risk | National Bank of the Kyrgyz Republic | A system that carries a banking process is secured, its providers are assessed, incidents are reported, and decisions in regulated processes remain with qualified persons | AI Policy 3 (Risk Tiers), 4 (providers), 5 (AI Incidents); AICC Charter 5.3; Statement of Intent 9.6 |
+| Legislation on the protection of consumer rights in financial services | [National Bank of the Kyrgyz Republic](../reference/regulations/nbkr.md) | A customer is treated fairly, is informed, can reach a person, and can contest a decision | Statement of Intent 6.2, 6.3, and 6.6; AI Policy 3 |
+| [Anti-money-laundering and counter-terrorist-financing legislation](../reference/regulations/kg-aml-body.md) | The financial intelligence body and the National Bank of the Kyrgyz Republic | Know-your-customer and monitoring processes keep their controls and their audit trail when AI assists them | Statement of Intent 9.2; AI Policy 3; Operating Model 8 |
 | Requirements of the jurisdictions of the shareholders and the partners of the Bank, where they reach the Bank | As each jurisdiction provides | To be completed with the legal function | Statement of Intent 13.1 |
 
 ## 3. Policies of the Bank that apply

@@ -18,7 +18,7 @@ S_DELIVERY = 'delivery' if NEXT else 'how-aicc-works'
 
 SECTIONS = [
     ('about', 'About AICC', 'The intent, the strategy, the mandate, the values, and the place of AICC in the Bank; what we do and how we work in one page each.'),
-    ('responsible-ai', 'Responsible AI', 'The rules for the use of AI, the Risk Tiers, and the gates before use.'),
+    ('responsible-ai', 'Responsible AI', 'A short course on AI today, its opportunities, its risks, and what responsible use means; and the rules of the Bank: the AI Policy, the Risk Tiers, and the gates before use.'),
     ('services', 'Services', 'The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do.'),
     ('portfolio', 'Portfolio', 'How AICC decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP.'),
     ('delivery', 'Delivery', 'How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution.'),
@@ -275,9 +275,23 @@ for i, (slug, name) in enumerate(zip(ROLES, RNAMES), 1):
                  'The clauses that name the Role (cited by)'])
 
 # Responsible AI
-add(id='responsible-ai/ai-policy', section='responsible-ai', order=1, type='document', slug='/responsible-ai/ai-policy/',
+if NEXT:
+    # A short course on AI for the reader of the Bank, authored for the site; the AI Policy stays the rule.
+    COURSE = [
+        ('understanding-ai-today', 'Understanding AI today', 'From rules to machine learning to generative AI to agents: how each is built, what it is good at, how it fails, who is accountable, with banking examples'),
+        ('opportunities', 'The opportunities', 'What changed, where the value appears in a bank, what the evidence says, where the Bank looks first'),
+        ('ai-in-fintech-and-digital-banking', 'AI in fintech and digital banking', 'The fintech landscape, where it uses AI and the risk beside each, what is particular to a digital bank in the region, what the financial supervisors watch, what the Bank takes from it'),
+        ('risks-and-challenges', 'The risks and challenges', 'The risks machine learning always carried, the risks generative AI added, the risks agents compound, and the challenges that are not about the technology'),
+        ('what-responsible-ai-means', 'What responsible AI means', 'Where the principles come from (OECD, UNESCO, NIST, ISO/IEC 42001, the EU AI Act, the Council of Europe), the seven principles converged, the practices across the life cycle, the misunderstandings'),
+        ('how-the-bank-applies-it', 'How the Bank applies it', 'The risk appetite, the Risk Tiers, the rules of use, the gates before use, providers, incidents, exceptions, who does what, in plain terms; the AI Policy prevails'),
+        ('ai-terms-explained', 'AI terms explained', 'The vocabulary of the technology in plain terms: kinds of system, how they are built and used, how they fail, how they are governed'),
+    ]
+    for i, (slug, title, line) in enumerate(COURSE, 1):
+        add(id=f'responsible-ai/{slug}', section='responsible-ai', order=i, type='outline', slug=f'/responsible-ai/{slug}/', title=title,
+            source=[f'portal/content/responsible-ai/{slug}.md'], production='authored; explanatory, the AI Policy is the rule', outline=[line])
+add(id='responsible-ai/ai-policy', section='responsible-ai', order=11 if NEXT else 1, type='document', slug='/responsible-ai/ai-policy/',
     title=h1('charter/documents/ai-policy.md'), source=['charter/documents/ai-policy.md'], words=2155)
-add(id='responsible-ai/ai-risk-control-workflow', section='responsible-ai', order=2, type='workflow', slug='/responsible-ai/ai-risk-control-workflow/',
+add(id='responsible-ai/ai-risk-control-workflow', section='responsible-ai', order=12 if NEXT else 2, type='workflow', slug='/responsible-ai/ai-risk-control-workflow/',
     title=h1('charter/workflows/ai-risk-control.md'), source=['charter/workflows/ai-risk-control.md'])
 
 # Governance
@@ -325,9 +339,14 @@ if NEXT:
         production='authored; a curated list',
         outline=['DECISION 5: new content. The external frameworks and standards that the charter draws on or is measured against: AI risk management frameworks, AI management system standards, agile and portfolio frameworks, with one line each and where the charter uses them'])
     add(id='reference/regulators-and-acts', section='reference', order=6, type='outline', slug='/reference/regulators-and-acts/', title='Regulators and acts', source=['portal/content/reference/regulators-and-acts.md'],
-        production='authored; curated with the Control Function Contacts',
-        outline=['DECISION 5: new content. The regulators and the acts that apply to the Bank in the use of AI and data, by jurisdiction: the body, the act, the subject, the link to the text',
-                 'The split with Acts and compliance: this page lists the bodies and the texts; that page states what each requires and how AICC complies'])
+        production='authored; the index of the regulation pages, curated with the Control Function Contacts',
+        outline=['The regulators, acts, standards, and frameworks the Bank is aware of, by jurisdiction, with a page for each',
+                 'The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how AICC complies'])
+    REGS = [["oecd-ai-principles", "OECD Principles on Artificial Intelligence", "Global", "Intergovernmental principles"], ["unesco-recommendation-ethics-ai", "UNESCO Recommendation on the Ethics of Artificial Intelligence", "Global", "Normative instrument of an international organization"], ["council-of-europe-ai-convention", "Council of Europe Framework Convention on Artificial Intelligence", "Global", "International treaty"], ["g7-hiroshima-ai-process", "G7 Hiroshima AI Process", "Global", "Voluntary international commitments"], ["iso-iec-ai-standards", "ISO/IEC standards on AI: 42001, 23894, 22989", "Global", "International standards"], ["nist-ai-rmf", "NIST AI Risk Management Framework", "United States", "Voluntary framework"], ["owasp-top-10-llm", "OWASP Top 10 for Large Language Model Applications", "Global", "Community security standard"], ["financial-standard-setters-on-ai", "The financial standard-setters on AI: FSB, BCBS, BIS", "Global", "Reports and principles of the standard-setters of finance"], ["eu-ai-act", "EU Artificial Intelligence Act", "European Union", "Regulation of the European Union"], ["eu-gdpr", "EU General Data Protection Regulation", "European Union", "Regulation of the European Union"], ["eu-dora", "EU Digital Operational Resilience Act and the guidance of the European Banking Authority", "European Union", "Regulation of the European Union and supervisory guidance"], ["us-model-risk-and-consumer-guidance", "United States supervisory guidance on model risk and on AI in credit", "United States", "Supervisory guidance of the federal banking and consumer agencies"], ["us-federal-and-state-ai-policy", "United States federal and state AI policy", "United States", "Executive policy and state legislation"], ["ru-personal-data-law", "Russian Federation: the Federal Law on Personal Data (152-FZ)", "Russian Federation", "Federal law"], ["ru-national-ai-strategy", "Russian Federation: the National Strategy for the Development of AI and the experimental legal regimes", "Russian Federation", "Presidential decree and federal laws"], ["bank-of-russia-on-ai", "Bank of Russia on artificial intelligence in the financial market", "Russian Federation", "Reports and guidance of a central bank and financial supervisor"], ["ru-ai-code-of-ethics", "Russian Federation: the Code of Ethics in the Field of AI", "Russian Federation", "Voluntary industry code"], ["kz-law-on-ai", "Kazakhstan: the Law on Artificial Intelligence and the national concept for AI", "Kazakhstan", "Law of the Republic of Kazakhstan and government concept"], ["kz-personal-data-law", "Kazakhstan: the Law on Personal Data and Their Protection", "Kazakhstan", "Law of the Republic of Kazakhstan"], ["kz-financial-regulators", "Kazakhstan: the National Bank and the Agency for Regulation and Development of the Financial Market", "Kazakhstan", "Central bank and financial supervisor"], ["aifc", "Astana International Financial Centre", "Kazakhstan", "Financial centre with its own regulatory framework"], ["nbkr", "National Bank of the Kyrgyz Republic", "Kyrgyz Republic", "Central bank and banking supervisor"], ["kg-personal-information-law", "Kyrgyz Republic: the Law on Personal Information and the authorized body for personal data", "Kyrgyz Republic", "Law of the Kyrgyz Republic and its authorized body"], ["kg-digital-development", "Kyrgyz Republic: the ministry responsible for digital development and the acts on digitalization", "Kyrgyz Republic", "Ministry and the acts and programs of digital development"], ["kg-aml-body", "Kyrgyz Republic: the financial intelligence body and the legislation against money laundering and the financing of terrorism", "Kyrgyz Republic", "Law and its authorized body"]]
+    for i, (slug, title, region, kind) in enumerate(REGS, 1):
+        add(id=f'reference/regulations/{slug}', section='reference', order=20 + i, type='regulation', slug=f'/reference/regulations/{slug}/', title=title,
+            source=[f'portal/content/reference/regulations/{slug}.md'], production='authored; orientation only, no provision quoted; verified with the Control Function Contacts', region=region,
+            outline=['Identity: kind, issuer, jurisdiction, status', 'What it sets; whom it reaches; relevance to the Bank; how the charter relates to it; related pages'])
 
 # Reference
 add(id='reference/vocabulary', section='reference', order=1, type='reference', slug='/reference/vocabulary/', title=h1('charter/documents/vocabulary.md'),
@@ -399,6 +418,8 @@ for p in PAGES:
         fm.append(f"companion: {p['companion']}")
     if p.get('area'):
         fm.append(f"area: {p['area']}")
+    if p.get('region'):
+        fm.append(f"region: {p['region']}")
     fm.append(f"production: {p['production']}")
     fm += ['status: scaffold', '---']
     body = fm + ['', f"# {p['title']}", '', f"Page type: {p['type']}. Address: {p['slug']}", '']

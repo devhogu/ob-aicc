@@ -2,7 +2,7 @@
 id: responsible-ai/ai-risk-control-workflow
 title: AI risk and control workflow
 section: responsible-ai
-order: 2
+order: 12
 type: workflow
 slug: /responsible-ai/ai-risk-control-workflow/
 source: charter/workflows/ai-risk-control.md
