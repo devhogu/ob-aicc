@@ -2,7 +2,7 @@
 
 The Knowledge base is the working knowledge of AICC: what to read first, which form to use when, how each step is done, what has been learned, and what the rules require of a use of AI at the Bank. It is organized by the question a reader brings, and the artifacts, the templates, the guides, the playbooks, sit behind the questions. Nothing here is a rule; the documents of the charter are the rule, and the live records are in the Registry.
 
-## 1. The shelves
+## 1. How to navigate the Knowledge base
 
 ```mermaid
 flowchart LR

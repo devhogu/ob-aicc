@@ -487,7 +487,7 @@ for i, f in enumerate(TEMPLATES, 1):
 if NEXT:
     # The Knowledge base as a course of six parts; the section page is the overview. The template pages follow.
     KCOURSE = [
-        ('overview', 'Knowledge base', 'Overview', 'The five shelves, drawn; if you need, go to; how the Knowledge base is kept'),
+        ('overview', 'Knowledge base', 'Overview', 'How to navigate the Knowledge base, drawn; if you need, go to; how the Knowledge base is kept'),
         ('learning-paths', 'Learning paths', 'Learning paths', 'Reading orders by role on the courses of the site: everyone, a head of function or Domain Owner, a Solution Engineer, a Domain Expert, the Executive Sponsor, a Control Function Contact, internal audit, human resources'),
         ('templates-and-forms', 'Templates and forms', 'Templates and forms', 'Which form when, along the life of an Engagement and the cycle of the unit: used when, filled by, signed by, kept in; how a form is used'),
         ('guides', 'Guides', 'Guides', 'The five guides by the question each answers, beside their subjects; the guides and the courses'),

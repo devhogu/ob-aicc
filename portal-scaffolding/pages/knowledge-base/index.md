@@ -24,4 +24,4 @@ Page type: section. Address: /knowledge-base/
 
 ## Outline
 
-- The five shelves, drawn; if you need, go to; how the Knowledge base is kept
+- How to navigate the Knowledge base, drawn; if you need, go to; how the Knowledge base is kept
