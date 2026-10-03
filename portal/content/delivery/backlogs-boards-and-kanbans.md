@@ -6,15 +6,15 @@ The work of delivery is visible in two backlogs and four boards, and it flows as
 
 1.1. The Program Backlog holds the Capabilities and the Features under their Initiatives, ranked by value and urgency relative to effort; the AICC Lead ranks it, the Domain Owners state the value. The Iteration Backlog holds the Features of the month, selected at Iteration Planning. The Portfolio Backlog of the Initiatives sits above both, in the Portfolio course.
 
-1.2. A Feature is ready to be pulled when it is approved, its acceptance criteria are written, and its Dependencies are known. That is its definition of ready. It is done when it is verified, deployed to its environment of use, and accepted by the product owner against its criteria. That is its definition of done. Backlog Refinement, held within the weekly events, keeps one to two Iterations of ready Features ahead of the Team.
+1.2. A Feature is ready to be pulled when it is approved, its acceptance criteria are written, and its Dependencies are known, with any open one named. That is its definition of ready. It is completed when it is deployed, and it is done when it is tested by a person other than its builder, deployed with its change ticket and test reference entered, and accepted by the product owner against its criteria; only then does it enter the Done column. That is its definition of done (Solution Lifecycle Model 4.5, 5.2). Backlog Refinement, held within the weekly events, keeps one to two Iterations of ready Features ahead of the Team.
 
 ## 2. The boards
 
 | Board | Shows | Columns | Lanes | Limit on Work in Progress | Read at |
 | --- | --- | --- | --- | --- | --- |
-| Portfolio Kanban | Initiatives | Funnel, Reviewing, Analyzing, Portfolio Backlog, MVP, Implementation, Done | None | The Active Initiatives, set by the AICC Lead | Monthly Steering |
-| Program Kanban | Capabilities and Features | Backlog, Ready, Active, Review, Done; Waiting as a flag with its Dependency | Classes of service: Urgent, High priority, Normal | Per state, per lane, and per Domain, set by the Team | Weekly Review |
-| Team board | The Work Items of the Iteration | Backlog, Ready, Active, Review, Done | None | Per person, set by the Team | Daily Stand-up |
+| Portfolio Kanban | Initiatives | Funnel, Reviewing, Analyzing, Portfolio Backlog, MVP, Implementation, Done | None | The Active Initiatives, set by the AICC Lead | Weekly Review; monthly Steering |
+| Program Kanban | Capabilities and Features | Backlog, Ready, Active, Review, Done; Waiting as a flag with its Dependency | Classes of service: Urgent, High priority, Normal | Per state, per lane, and per Domain, set by the Team | Weekly Review; Iteration Review and Demo |
+| Team board | The Work Items of the Iteration | Backlog, Ready, Active, Review, Done | None | Per person, set by the Team | Daily Stand-up; Weekly Review |
 | Program Board | The Capabilities and Features of the Program Increment by Iteration, their state, their Dependencies, and the Milestones of the Roadmap | One column per Iteration and the IP week | One lane per Feature | None; the Dependencies at risk are raised | PI Planning; Weekly Review; monthly Steering |
 
 ## 3. How a Kanban limits the work

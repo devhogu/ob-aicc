@@ -33,7 +33,7 @@ Figure 1: the organization of AICC.
 
 ## 3. The industry practice it follows
 
-3.1. The model follows the common practice of a small internal unit in a regulated organization: a sponsor who holds the mandate and the budget; a lead accountable for the method and the records; delivery people assigned from the functions with the consent of their line; business owners in the functions who state the value and accept the result; independent control functions in the second line; a platform run outside the unit; and roles defined by responsibility with a record of who holds them, deputies, and conflicts declared. The responsibility matrix of the Organization guide is the usual form.
+3.1. The model follows the common practice of a small internal unit in a regulated organization: an executive who holds the mandate and the budget; a lead accountable for the method and the records; delivery people assigned from the functions with the consent of their line; business owners in the functions who state the value and accept the result; independent control functions beside the unit; a platform run outside the unit; and roles defined by responsibility with a record of who holds them, deputies, and conflicts declared. The responsibility matrix of the Organization guide is the usual form.
 
 ## 4. How to read this course
 

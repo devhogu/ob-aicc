@@ -25,19 +25,19 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 4. How it runs
 
-4.1. Run-rate work goes through the front door and is done in one Iteration: a procedure, a runbook, a review of a set. A rewrite of a whole corpus is a program with a study first. The function names an owner for each document and reviews each draft; the Control Function concerned reviews a document that touches its remit.
+4.1. Run-rate work goes through the front door and is done in one Iteration: a procedure, a runbook, a review of a set. A rewrite of a whole corpus is an Initiative with a study first. The function names an owner for each document and reviews each draft; the Control Function concerned reviews a document that touches its remit.
 
 ## 5. What it leads to
 
 5.1. A function whose documents say one thing in one voice, map to its processes, and can be found and maintained; and a process set that its people and its auditors can follow.
 
-## 6. The reusable package
+## 6. The Package
 
 6.1. The style and the templates of the normative documents of the Bank, the drafting and consistency assistants, the process-drawing kit, and the glossary; re-used for every function.
 
-## 7. Run-rate or program
+## 7. Run-rate work or an Initiative
 
-7.1. Run-rate for single documents and runbooks; a program for a corpus.
+7.1. Run-rate work for single documents and runbooks; an Initiative for a corpus.
 
 ## 8. Who decides
 
@@ -45,4 +45,4 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 9. Rule source
 
-Business Model 4; Statement of Intent 9.4 and 9.5. A clause for this category is proposed for the Business Model 4.
+Business Model 4.5 and 4.10; Statement of Intent 9.4 and 9.5.

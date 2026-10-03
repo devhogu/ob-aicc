@@ -21,23 +21,23 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 3. What the function receives
 
-3.1. For the function: its AI uses in one view, with their tiers, their reviews, their incidents, and their changes, and a place in the Quarterly Report. For the Bank: one register of every AI use under one set of rules, reported to the Board Committee.
+3.1. For the function: its AI uses in one view, with their tiers, their reviews, their incidents, and their changes, and a place in the Quarterly Report. For the Bank: one AI Registry of every AI use under one set of rules, reported to the Board Committee.
 
 ## 4. How it runs
 
-4.1. Run-rate: an Adopted Solution enters the Portfolio when a function declares it or when a Receiver accepts the Handover of an Experiment; the AICC Lead assigns its tier; AICC follows its review, its incidents, and its changes through the Registry; the Steering reads the whole each month and each quarter.
+4.1. Run-rate work: an Adopted Solution enters the Portfolio when a function declares it or when a Receiver accepts the Handover of an Experiment; the AICC Lead records its Risk Tier when it is known; AICC follows its review, its incidents, and its changes through the Registry; the AICC Lead reviews the Adopted Solutions at each quarterly Steering, and the Quarterly Report records the review (Solution Lifecycle Model 8.2).
 
 ## 5. What it leads to
 
 5.1. A Portfolio that shows the whole use of AI in the Bank, and a Board Committee that sees it each quarter with its benefits, its incidents, and its risks beyond appetite.
 
-## 6. The reusable package
+## 6. The Package
 
-6.1. The register, the live review note, the AI Incident Review template, and the Quarterly Report template.
+6.1. The AI Registry, the note of the live review, the AI Incident Review template, and the Quarterly Report template.
 
-## 7. Run-rate or program
+## 7. Run-rate work or an Initiative
 
-7.1. Run-rate.
+7.1. Run-rate work.
 
 ## 8. Who decides
 

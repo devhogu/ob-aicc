@@ -23,7 +23,7 @@ Page type: service. Address: /services/training-and-knowledge-sharing/
 
 ## Outline
 
-- Area: Enablement. Training by role, coaching at the desk, skill libraries, communities of practice, playbooks and publications
+- Area: Enablement. Training by role, coaching at the workplace, skill libraries, communities of practice, playbooks and publications
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: Business Model 4.4; Statement of Intent 10.1

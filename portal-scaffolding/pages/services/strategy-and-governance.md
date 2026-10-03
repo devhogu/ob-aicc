@@ -23,7 +23,7 @@ Page type: service. Address: /services/strategy-and-governance/
 
 ## Outline
 
-- Area: Advise and formulate. Strategy, charter, operating and governance model, portal and repository for a unit or a program, developed with AI, as AICC did for itself
+- Area: Advise and formulate. Strategy, charter, operating and governance model, portal and repository of a function or an Initiative, drafted with AI, as AICC did for itself
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
-- Rule source: Business Model 2.4 and 4 (clause proposed)
+- The Package; run-rate work or an Initiative; who decides
+- Rule source: Business Model 2.4, 4.5, and 4.10

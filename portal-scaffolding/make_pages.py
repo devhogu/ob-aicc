@@ -165,30 +165,30 @@ if NEXT:
     # The service lines, one page each, authored for the site from the Business Model, the Solution Lifecycle Model, and the Statement of Intent.
     # Each page: what it is, what the client receives, the typical shape, what it leads to, the templates, who decides, the governing clauses.
     # The service categories, in four areas. Each category page is authored for the site: what it is, examples, what the function receives,
-    # how it runs, what it leads to, the reusable package, run-rate or program, who decides, rule source.
+    # how it runs, what it leads to, the Package, run-rate work or an Initiative, who decides, rule source.
     AREAS = [
         ('advise', 'Advise and formulate', [
-            ('strategy-and-governance', 'Strategy and governance', 'Strategy, charter, operating and governance model, portal and repository for a unit or a program, developed with AI, as AICC did for itself', 'Business Model 2.4 and 4 (clause proposed)'),
-            ('normatives-and-processes', 'Normatives and processes', 'Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for any function', 'Business Model 4 (clause proposed)'),
-            ('research-and-exploration', 'Research and exploration', 'Regulatory and technology watch with digests, trials in the Lab, partnering with organizations and providers', 'Business Model 2.3, 2.4; Statement of Intent 10.5 (clause proposed)'),
-            ('business-cases-and-scenarios', 'Business cases and scenarios', 'Use-case discovery, scenarios with problem, solution, and measures, readiness and source audit, the business case the Portfolio decides on', 'Business Model 3, 4.1; Portfolio Management Model 5, 6'),
+            ('strategy-and-governance', 'Strategy and governance', 'Strategy, charter, operating and governance model, portal and repository of a function or an Initiative, drafted with AI, as AICC did for itself', 'Business Model 2.4, 4.5, and 4.10'),
+            ('normatives-and-processes', 'Normatives and processes', 'Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for a function', 'Business Model 4.5 and 4.10'),
+            ('research-and-exploration', 'Research and exploration', 'Regulatory and technology watch with digests, trials in the Lab, partnering with organizations and providers', 'Business Model 2.3, 4.5, 4.11; Statement of Intent 10.5'),
+            ('business-cases-and-scenarios', 'Business cases and scenarios', 'The discovery of needs, scenarios with their problem, Solution, and leading indicators, the audit of readiness and of sources, and the business case the Portfolio decides on', 'Business Model 3, 4.1; Portfolio Management Model 5, 6'),
         ]),
         ('build', 'Build and run', [
             ('knowledge-services', 'Knowledge services', 'The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask', 'Statement of Intent 5.3, 9.5, 10.2; AI Policy 2, 3'),
-            ('workplace-automation', 'Workplace automation', 'Routing, forms, reports, consolidation, documents from templates, and case assistance, done by assistants under human validation', 'Statement of Intent 9.4; AI Policy 2, 3'),
+            ('workplace-automation', 'Workplace automation', 'Routing, forms, reports, consolidation, documents from templates, and case assistance, done with AI and reviewed by a person', 'Statement of Intent 9.4; AI Policy 2, 3'),
             ('analytics-and-decision-support', 'Analytics and decision support', 'Pipelines, dashboards, analyses, and research tooling that prepare the factual base for decisions, with lineage to governed sources', 'Statement of Intent 9.3, 10.2; Business Model 6'),
             ('content-management', 'Content management', 'Public, investor, and management material generated from governed data and templates, and the templates, editions, versions, and languages behind it', 'Statement of Intent 9.3; Operating Model 4.2'),
-            ('platforms', 'Platforms', 'The shared engines and environments of AICC, the requirements on the AI Platform of the Bank, and the hand-over of a platform to the teams that run at scale', 'AICC Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8'),
+            ('platforms', 'Platforms', 'The shared engines and environments that AICC builds, the requirements of AICC on the AI Platform, and the Handover of an engine to an IT function of the Bank', 'AICC Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8'),
         ]),
         ('enablement', 'Enablement', [
-            ('training-and-knowledge-sharing', 'Training and knowledge sharing', 'Training by role, coaching at the desk, skill libraries, communities of practice, playbooks and publications', 'Business Model 4.4; Statement of Intent 10.1'),
-            ('adoption-and-lifecycle-management', 'Adoption and lifecycle management', 'Domain Experts and adoption plans per Domain; hand-over, support, revision, and retirement of Solutions; the life and operation of a Service', 'Statement of Intent 10.1; Solution Lifecycle Model 8; Business Model 4.2'),
+            ('training-and-knowledge-sharing', 'Training and knowledge sharing', 'Training by role, coaching at the workplace, skill libraries, communities of practice, playbooks and publications', 'Business Model 4.4; Statement of Intent 10.1'),
+            ('adoption-and-lifecycle-management', 'Adoption and lifecycle management', 'Domain Experts and adoption plans per Domain; the Handover, support, revision, and retirement of Solutions; the life and operation of a Service', 'Statement of Intent 10.1; Solution Lifecycle Model 8; Business Model 4.2'),
         ]),
         ('assurance', 'Assurance', [
             ('policies-controls-criteria', 'Policies, controls, criteria', 'Rules of use within the AI Policy, control maps, acceptance and evaluation criteria, guardrails, stated before the build', 'AI Policy 2, 3; Operating Model 8; Solution Lifecycle Model 7'),
-            ('assessments-and-evaluations', 'Assessments and evaluations', 'Tools, providers, and Solutions evaluated against the cases of the function and the rules before use; readiness and benchmarks', 'AI Policy 3, 4; Solution Lifecycle Model 7'),
+            ('assessments-and-evaluations', 'Assessments and evaluations', 'Solutions and providers evaluated against the cases of the function before use, and the readiness of a function assessed; the check of a provider stays with the Control Function Contacts (AI Policy 4.1)', 'AI Policy 3, 4; Solution Lifecycle Model 7'),
             ('risk-tiering', 'Risk tiering', 'The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes', 'AI Policy 3; Operating Model 4.4; AICC Charter 5'),
-            ('oversight', 'Oversight', 'Adopted Solutions, live reviews, AI Incidents, and changes followed through the Registry and reported to the Steering and the Board Committee', 'Business Model 2.3; AI Policy 5; AICC Charter 7'),
+            ('oversight', 'Oversight', 'Adopted Solutions, the review of the Solutions in use, AI Incidents, and changes followed through the Registry and reported in the Quarterly Report', 'Business Model 2.3; AI Policy 5; AICC Charter 7'),
         ]),
     ]
     # The section page is the overview of the areas (part 1 of the series 'service-areas'); one page per area follows (parts 2 to 5).
@@ -210,16 +210,16 @@ if NEXT:
             i += 1
             add(id=f'services/{slug}', section='services', order=i, type='service', slug=f'/services/{slug}/', title=title, source=[f'portal/content/services/{slug}.md'], production='authored',
                 area=aid, parent=f'services/{AREA_SLUG[aid]}', series=f'service-categories-{aid}', series_title=aname, tab=title,
-                outline=[f'Area: {aname}. ' + line, 'What the function receives, how it runs, and what it leads to', 'The reusable package; run-rate or program; who decides', 'Rule source: ' + rule])
+                outline=[f'Area: {aname}. ' + line, 'What the function receives, how it runs, and what it leads to', 'The Package; run-rate work or an Initiative; who decides', 'Rule source: ' + rule])
     add(id='services/how-to-engage', section='services', order=21, type='outline', slug='/services/how-to-engage/', title='How to engage', source=['portal/content/services/how-to-engage.md'], production='authored, with the Engagement workflow',
         series='how-to-engage', series_title='How to engage', part='1 of 3', tab='How to engage',
         outline=['The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)',
-                 'The function commits to nothing; AICC works on a best-effort basis within its capability', 'Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)',
+                 'The function commits to nothing; AICC works on a best-effort basis within its capability', 'Support levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)',
                  'What AICC does not do (AICC Charter 3.2)', 'Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report'])
     add(id='services/catalog', section='services', order=24, type='outline', slug='/services/catalog/', title='Service catalog',
         source=['portal/content/services/catalog-form.md'], production='authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal',
         series='service-catalog', series_title='Service catalog', part='1 of 2', tab='The form of the catalog',
-        outline=['The two kinds of entry: Solution and package', 'The fields of each; the states of an entry', 'One illustration of each kind'])
+        outline=['The two kinds of entry: Solution and Package', 'The fields of each; the states of an entry', 'One illustration of each kind'])
     add(id='services/service-model', section='services', order=25, type='outline', slug='/services/service-model/', title='The service model', source=['portal/content/services/service-model.md'], production='authored',
         series='service-catalog', series_title='Service catalog', part='2 of 2', tab='The service model',
         outline=['The composition of a service: area and category, mode, client, Solution type, support level, Risk Tier, owner, package, records', 'The life of a service; the operation of a service; the records; the catalog'])
@@ -288,10 +288,10 @@ if NEXT:
         ('overview', 'The Portfolio', 'Overview', 'What the Portfolio is: a commercial decision body and a control loop; one picture end to end; the principles; the lean portfolio management practice it follows'),
         ('strategy-and-investment', 'Strategy and investment', 'Strategy and investment', 'The Strategic Priorities, the Investment Envelopes, the Investment Guardrails; who decides what; how the frame is renewed'),
         ('the-flow', 'The flow: the portfolio Kanban', 'The flow', 'The seven steps with exit criteria, deciders, and records; the four outcomes at a gate; discovery and the MVP; the limit on the Active Initiatives; the states'),
-        ('the-lanes-and-the-front-door', 'The lanes and the front door', 'Lanes', 'Run-rate and program; the categories by lane; screening at the front door; the Portfolio at a glance'),
+        ('the-lanes-and-the-front-door', 'The modes and the front door', 'Modes', 'Run-rate work and the Initiative; the categories by mode; screening at the front door; the Portfolio at a glance'),
         ('the-business-case-and-the-mvp', 'The business case and the MVP', 'Business case and MVP', 'The one-page Initiative Brief and its five questions; the clearance of the Control Functions; the ranking; the MVP and the decision after it'),
         ('the-loops-and-governance', 'The loops and the governance', 'Loops and governance', 'The four loops; how they nest; the Portfolio as a control loop; the forums'),
-        ('measures-and-tracking', 'Measures and tracking', 'Measures', 'Objectives and key results applied to an Initiative: the hypothesis, the leading indicators, the MVP as the first test, the Capabilities as the means, the confirmed benefit; the flow measures of lean practice; what each loop reads; how it is tracked'),
+        ('measures-and-tracking', 'Measures and tracking', 'Measures', 'The outcome of an Initiative: the hypothesis, the leading indicators, the MVP as the first test, the Capabilities as the means, the confirmed benefit; the flow measures of lean practice; what each loop reads; how it is tracked'),
         ('roles-and-records', 'Roles and records', 'Roles and records', 'The roles in the Portfolio; the records; the Portfolio at a glance'),
     ]
     for i, (slug, title, tab, line) in enumerate(PCOURSE, 1):
@@ -337,12 +337,12 @@ if NEXT:
             source=[f'portal/content/delivery/{slug}.md'], production='authored; explanatory, the Solution Lifecycle Model is the rule', outline=[line],
             series='delivery-course', series_title='Delivery', part=f'{i} of {len(DCOURSE)}', tab=tab)
     add(id='delivery/measures-definitions-and-formulas', section='delivery', order=50, type='outline', slug='/delivery/measures-definitions-and-formulas/', title='Delivery measures: definitions and formulas',
-        source=['portal/content/delivery/measures-definitions-and-formulas.md'], production='authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10',
+        source=['portal/content/delivery/measures-definitions-and-formulas.md'], production='authored; the reference of the measures of the Solution Lifecycle Model 10.3, with their formulas',
         outline=['Conventions', 'Flow measures', 'Quality measures', 'Service measures of a live Solution', 'Value and predictability', 'How the measures are kept'])
     add(id='portfolio/measures-definitions-and-formulas', section='portfolio', order=20, type='outline', slug='/portfolio/measures-definitions-and-formulas/', title='Portfolio measures: definitions and formulas',
-        source=['portal/content/portfolio/measures-definitions-and-formulas.md'], production='authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 and Charter 7',
-        outline=['Conventions', 'Flow measures with formulas: WIP, throughput, lead time, cycle time, Little\'s law, flow efficiency, aging, load, distribution, gate returns, predictability',
-                 'Outcome measures of an Initiative: key results, adoption, acceptance, cycle, benefit claimed, confirmed, realization', 'Portfolio economics as a profit and loss view per priority', 'Control and quality measures', 'How the measures are kept'])
+        source=['portal/content/portfolio/measures-definitions-and-formulas.md'], production='authored; the reference of the measures of the Portfolio Management Model 9.2, with their formulas, and the measures of lean practice as explanation',
+        outline=['Conventions', 'Flow measures with formulas: work in progress, throughput, lead time, cycle time, Little\'s law, flow efficiency, aging, load, distribution, gate returns, predictability',
+                 'Outcome measures of an Initiative: leading indicators, adoption, acceptance, cycle, benefit claimed, confirmed, confirmed against claimed', 'Portfolio economics as a profit and loss view per priority', 'Control and quality measures', 'How the measures are kept'])
 
 # Organization
 split_doc('organization', 'operating-model', 'charter/documents/operating-model.md', [
@@ -431,7 +431,7 @@ else:
 
 # Governance
 split_doc('governance', 'operating-model-governance', 'charter/documents/operating-model.md', [], 0) if False else None
-for slug, title, nums, order in [('control-loops', 'The control loops', [6], 11 if NEXT else 1), ('records-and-evidence', 'Records and evidence', [7], 12 if NEXT else 2), ('controls', 'Controls and the control catalogue', [8], 13 if NEXT else 3)]:
+for slug, title, nums, order in [('control-loops', 'The control loops', [6], 11 if NEXT else 1), ('records-and-evidence', 'Records and evidence', [7], 12 if NEXT else 2), ('controls', 'Controls and the control catalog', [8], 13 if NEXT else 3)]:
     secs = sections_of('charter/documents/operating-model.md')
     add(id=f'governance/{slug}', section='governance', order=order, type='catalogue' if slug == 'controls' else 'document',
         slug=f'/governance/{slug}/', title='Operating Model: ' + title, source=['charter/documents/operating-model.md'], source_sections=nums,
@@ -459,7 +459,7 @@ if NEXT:
         ('decisions-and-escalation', 'Decisions and escalation', 'Decisions', 'The four levels; when a decision rises; the Control Functions decide within their remit; disagreement, conflict, record'),
         ('the-control-loops', 'The control loops', 'Control loops', 'The five loops; drawn; the events the event loop catches; one cadence, three readings'),
         ('the-steerings-and-the-bodies', 'The Steerings and the bodies', 'Steerings and bodies', 'The bodies; what each Steering carries for governance; the reporting chain'),
-        ('controls-and-the-catalogue', 'Controls and the control catalogue', 'Controls', 'What a control is; the catalogue by loop; the life of a control; deficiencies and findings'),
+        ('controls-and-the-catalogue', 'Controls and the control catalog', 'Controls', 'What a control is; the catalog by loop; the life of a control; deficiencies and findings'),
         ('records-evidence-and-assurance', 'Records, evidence, and assurance', 'Records and evidence', 'Three kinds of record; what makes a record evidence; how the Registry is kept; the three lines; what an auditor finds'),
         ('measures-and-reporting', 'Measures and reporting', 'Measures', 'The measures of governance; what each loop reads; the Quarterly Report; the Measures of the Maturity Levels'),
     ]

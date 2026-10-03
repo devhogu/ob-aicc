@@ -30,13 +30,13 @@ The following are examples that illustrate the category, not a list of commitmen
 
 5.1. Better-founded and faster decisions, consistent figures across the function, and reporting cycles that shrink.
 
-## 6. The reusable package
+## 6. The Package
 
 6.1. The ETL and dashboard patterns and the source connectors, re-used across functions.
 
-## 7. Run-rate or program
+## 7. Run-rate work or an Initiative
 
-7.1. Run-rate for a view or a consolidation; a program for a pipeline that feeds a recurring report of the Bank.
+7.1. Run-rate work for a view or a consolidation; an Initiative for a pipeline that feeds a recurring report of the Bank.
 
 ## 8. Who decides
 

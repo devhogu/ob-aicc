@@ -578,10 +578,10 @@
    "series_title": "Advise and formulate",
    "tab": "Strategy and governance",
    "outline": [
-    "Area: Advise and formulate. Strategy, charter, operating and governance model, portal and repository for a unit or a program, developed with AI, as AICC did for itself",
+    "Area: Advise and formulate. Strategy, charter, operating and governance model, portal and repository of a function or an Initiative, drafted with AI, as AICC did for itself",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
-    "Rule source: Business Model 2.4 and 4 (clause proposed)"
+    "The Package; run-rate work or an Initiative; who decides",
+    "Rule source: Business Model 2.4, 4.5, and 4.10"
    ]
   },
   {
@@ -601,10 +601,10 @@
    "series_title": "Advise and formulate",
    "tab": "Normatives and processes",
    "outline": [
-    "Area: Advise and formulate. Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for any function",
+    "Area: Advise and formulate. Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for a function",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
-    "Rule source: Business Model 4 (clause proposed)"
+    "The Package; run-rate work or an Initiative; who decides",
+    "Rule source: Business Model 4.5 and 4.10"
    ]
   },
   {
@@ -626,8 +626,8 @@
    "outline": [
     "Area: Advise and formulate. Regulatory and technology watch with digests, trials in the Lab, partnering with organizations and providers",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
-    "Rule source: Business Model 2.3, 2.4; Statement of Intent 10.5 (clause proposed)"
+    "The Package; run-rate work or an Initiative; who decides",
+    "Rule source: Business Model 2.3, 4.5, 4.11; Statement of Intent 10.5"
    ]
   },
   {
@@ -647,9 +647,9 @@
    "series_title": "Advise and formulate",
    "tab": "Business cases and scenarios",
    "outline": [
-    "Area: Advise and formulate. Use-case discovery, scenarios with problem, solution, and measures, readiness and source audit, the business case the Portfolio decides on",
+    "Area: Advise and formulate. The discovery of needs, scenarios with their problem, Solution, and leading indicators, the audit of readiness and of sources, and the business case the Portfolio decides on",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Business Model 3, 4.1; Portfolio Management Model 5, 6"
    ]
   },
@@ -672,7 +672,7 @@
    "outline": [
     "Area: Build and run. The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Statement of Intent 5.3, 9.5, 10.2; AI Policy 2, 3"
    ]
   },
@@ -693,9 +693,9 @@
    "series_title": "Build and run",
    "tab": "Workplace automation",
    "outline": [
-    "Area: Build and run. Routing, forms, reports, consolidation, documents from templates, and case assistance, done by assistants under human validation",
+    "Area: Build and run. Routing, forms, reports, consolidation, documents from templates, and case assistance, done with AI and reviewed by a person",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Statement of Intent 9.4; AI Policy 2, 3"
    ]
   },
@@ -718,7 +718,7 @@
    "outline": [
     "Area: Build and run. Pipelines, dashboards, analyses, and research tooling that prepare the factual base for decisions, with lineage to governed sources",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Statement of Intent 9.3, 10.2; Business Model 6"
    ]
   },
@@ -741,7 +741,7 @@
    "outline": [
     "Area: Build and run. Public, investor, and management material generated from governed data and templates, and the templates, editions, versions, and languages behind it",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Statement of Intent 9.3; Operating Model 4.2"
    ]
   },
@@ -762,9 +762,9 @@
    "series_title": "Build and run",
    "tab": "Platforms",
    "outline": [
-    "Area: Build and run. The shared engines and environments of AICC, the requirements on the AI Platform of the Bank, and the hand-over of a platform to the teams that run at scale",
+    "Area: Build and run. The shared engines and environments that AICC builds, the requirements of AICC on the AI Platform, and the Handover of an engine to an IT function of the Bank",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: AICC Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8"
    ]
   },
@@ -785,9 +785,9 @@
    "series_title": "Enablement",
    "tab": "Training and knowledge sharing",
    "outline": [
-    "Area: Enablement. Training by role, coaching at the desk, skill libraries, communities of practice, playbooks and publications",
+    "Area: Enablement. Training by role, coaching at the workplace, skill libraries, communities of practice, playbooks and publications",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Business Model 4.4; Statement of Intent 10.1"
    ]
   },
@@ -808,9 +808,9 @@
    "series_title": "Enablement",
    "tab": "Adoption and lifecycle management",
    "outline": [
-    "Area: Enablement. Domain Experts and adoption plans per Domain; hand-over, support, revision, and retirement of Solutions; the life and operation of a Service",
+    "Area: Enablement. Domain Experts and adoption plans per Domain; the Handover, support, revision, and retirement of Solutions; the life and operation of a Service",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Statement of Intent 10.1; Solution Lifecycle Model 8; Business Model 4.2"
    ]
   },
@@ -833,7 +833,7 @@
    "outline": [
     "Area: Assurance. Rules of use within the AI Policy, control maps, acceptance and evaluation criteria, guardrails, stated before the build",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: AI Policy 2, 3; Operating Model 8; Solution Lifecycle Model 7"
    ]
   },
@@ -854,9 +854,9 @@
    "series_title": "Assurance",
    "tab": "Assessments and evaluations",
    "outline": [
-    "Area: Assurance. Tools, providers, and Solutions evaluated against the cases of the function and the rules before use; readiness and benchmarks",
+    "Area: Assurance. Solutions and providers evaluated against the cases of the function before use, and the readiness of a function assessed; the check of a provider stays with the Control Function Contacts (AI Policy 4.1)",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: AI Policy 3, 4; Solution Lifecycle Model 7"
    ]
   },
@@ -879,7 +879,7 @@
    "outline": [
     "Area: Assurance. The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: AI Policy 3; Operating Model 4.4; AICC Charter 5"
    ]
   },
@@ -900,9 +900,9 @@
    "series_title": "Assurance",
    "tab": "Oversight",
    "outline": [
-    "Area: Assurance. Adopted Solutions, live reviews, AI Incidents, and changes followed through the Registry and reported to the Steering and the Board Committee",
+    "Area: Assurance. Adopted Solutions, the review of the Solutions in use, AI Incidents, and changes followed through the Registry and reported in the Quarterly Report",
     "What the function receives, how it runs, and what it leads to",
-    "The reusable package; run-rate or program; who decides",
+    "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Business Model 2.3; AI Policy 5; AICC Charter 7"
    ]
   },
@@ -924,7 +924,7 @@
    "outline": [
     "The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)",
     "The function commits to nothing; AICC works on a best-effort basis within its capability",
-    "Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)",
+    "Support levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)",
     "What AICC does not do (AICC Charter 3.2)",
     "Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report"
    ]
@@ -945,7 +945,7 @@
    "part": "1 of 2",
    "tab": "The form of the catalog",
    "outline": [
-    "The two kinds of entry: Solution and package",
+    "The two kinds of entry: Solution and Package",
     "The fields of each; the states of an entry",
     "One illustration of each kind"
    ]
@@ -1546,18 +1546,18 @@
    "order": 4,
    "type": "outline",
    "slug": "/portfolio/the-lanes-and-the-front-door/",
-   "title": "The lanes and the front door",
+   "title": "The modes and the front door",
    "source": [
     "portal/content/portfolio/the-lanes-and-the-front-door.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
-    "Run-rate and program; the categories by lane; screening at the front door; the Portfolio at a glance"
+    "Run-rate work and the Initiative; the categories by mode; screening at the front door; the Portfolio at a glance"
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
    "part": "4 of 8",
-   "tab": "Lanes"
+   "tab": "Modes"
   },
   {
    "id": "portfolio/the-business-case-and-the-mvp",
@@ -1609,7 +1609,7 @@
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
-    "Objectives and key results applied to an Initiative: the hypothesis, the leading indicators, the MVP as the first test, the Capabilities as the means, the confirmed benefit; the flow measures of lean practice; what each loop reads; how it is tracked"
+    "The outcome of an Initiative: the hypothesis, the leading indicators, the MVP as the first test, the Capabilities as the means, the confirmed benefit; the flow measures of lean practice; what each loop reads; how it is tracked"
    ],
    "series": "portfolio-course",
    "series_title": "The Portfolio",
@@ -1867,7 +1867,7 @@
    "source": [
     "portal/content/delivery/measures-definitions-and-formulas.md"
    ],
-   "production": "authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10",
+   "production": "authored; the reference of the measures of the Solution Lifecycle Model 10.3, with their formulas",
    "outline": [
     "Conventions",
     "Flow measures",
@@ -1887,11 +1887,11 @@
    "source": [
     "portal/content/portfolio/measures-definitions-and-formulas.md"
    ],
-   "production": "authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 and Charter 7",
+   "production": "authored; the reference of the measures of the Portfolio Management Model 9.2, with their formulas, and the measures of lean practice as explanation",
    "outline": [
     "Conventions",
-    "Flow measures with formulas: WIP, throughput, lead time, cycle time, Little's law, flow efficiency, aging, load, distribution, gate returns, predictability",
-    "Outcome measures of an Initiative: key results, adoption, acceptance, cycle, benefit claimed, confirmed, realization",
+    "Flow measures with formulas: work in progress, throughput, lead time, cycle time, Little's law, flow efficiency, aging, load, distribution, gate returns, predictability",
+    "Outcome measures of an Initiative: leading indicators, adoption, acceptance, cycle, benefit claimed, confirmed, confirmed against claimed",
     "Portfolio economics as a profit and loss view per priority",
     "Control and quality measures",
     "How the measures are kept"
@@ -2516,7 +2516,7 @@
    "order": 13,
    "type": "catalogue",
    "slug": "/governance/controls/",
-   "title": "Operating Model: Controls and the control catalogue",
+   "title": "Operating Model: Controls and the control catalog",
    "source": [
     "charter/documents/operating-model.md"
    ],
@@ -2528,7 +2528,7 @@
    "words": 2378,
    "series": "set-operating-model",
    "series_title": "Operating Model",
-   "tab": "Controls and the control catalogue",
+   "tab": "Controls and the control catalog",
    "series_order": 2,
    "outline": [
     "The controls table of Operating Model 8 as a filterable list: reference, title, loop, owner, timing, type",
@@ -2716,13 +2716,13 @@
    "order": 5,
    "type": "outline",
    "slug": "/governance/controls-and-the-catalogue/",
-   "title": "Controls and the control catalogue",
+   "title": "Controls and the control catalog",
    "source": [
     "portal/content/governance/controls-and-the-catalogue.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
-    "What a control is; the catalogue by loop; the life of a control; deficiencies and findings"
+    "What a control is; the catalog by loop; the life of a control; deficiencies and findings"
    ],
    "series": "governance-course",
    "series_title": "Governance",

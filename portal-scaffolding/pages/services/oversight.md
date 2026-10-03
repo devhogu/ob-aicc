@@ -23,7 +23,7 @@ Page type: service. Address: /services/oversight/
 
 ## Outline
 
-- Area: Assurance. Adopted Solutions, live reviews, AI Incidents, and changes followed through the Registry and reported to the Steering and the Board Committee
+- Area: Assurance. Adopted Solutions, the review of the Solutions in use, AI Incidents, and changes followed through the Registry and reported in the Quarterly Report
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: Business Model 2.3; AI Policy 5; AICC Charter 7

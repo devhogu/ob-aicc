@@ -6,8 +6,8 @@ Delivery does not end at release. A Solution is delivered when its first deploym
 
 | Type | Owner after delivery | Stages after delivery | End |
 | --- | --- | --- | --- |
-| Service | AICC, for the whole life, with a business case that states the run cost and a sunset rule; the Domain Owner accepts and reviews it, the Executive Sponsor for a Service across Domains | Operate, Evolve, Retire; new features come as Capabilities and Features | Retired, or cancelled |
-| Product | The consumer owns the version delivered; AICC supports it on demand | Handover, Support, Revise through the Portfolio Backlog, Retire for that consumer; a Product with many consumers or recurring requests becomes a Service through a business case | Retired for that consumer |
+| Service | AICC, for the whole life, with a business case that states the run cost and a sunset rule; the Domain Owner accepts and reviews it, the Executive Sponsor for a Service across Domains | Operate, Evolve, Retire, refined by the service steps; new features come as Capabilities and Features | Retired, handed over to an IT function of the Bank, or cancelled |
+| Product | The consumer owns the version delivered; AICC supports it on demand | Handover, Support, Revise through the Portfolio Backlog, Retire for that consumer; a Product with a second consumer or recurring requests gives rise to a Service, a new Solution with its own business case | Retired for that consumer |
 | Experiment | None yet: time-boxed to a stated number of Iterations, ending in a Proposal; accepted by the Executive Sponsor when it has no Domain | Trial, Proposal, Handover | Accepted with its lessons and closed, a Proposal made, or rejected; when a Receiver accepts the Handover, closed and overseen as an Adopted Solution |
 
 1.1. The phases of an Engagement map onto the life: the study is the discovery of the Initiative, the proof is the Experiment or the first Features of the Solution, delivery is the active state of the Capabilities and Features, and support is the life of the Solution after delivery.
@@ -29,13 +29,13 @@ flowchart LR
 
 Figure 1: the loop of a change to a released Solution.
 
-## 3. Retirement and hand-over
+## 3. Retirement and Handover
 
-3.1. Before a Solution is Closed as retired, access and credentials are removed, data and logs are kept or deleted under the retention rules of the Bank, the AI Registry entry is marked retired, and the Domain Owner approves. A Service the Bank should run at scale is not scaled by AICC: it is handed to a platform team or an IT function with a Proposal and the acceptance of the receiving team.
+3.1. Before a Solution is Closed as retired, access and credentials are removed, data and logs are kept or deleted under the retention rules of the Bank, the AI Registry entry is marked retired, and the Domain Owner, or the Executive Sponsor for a Service across Domains, approves. A Service the Bank should run at scale is not scaled by AICC: it is handed over to an IT function of the Bank on a Proposal that names the Receiver, and it is Closed as handed off when the Receiver accepts the Handover (Solution Lifecycle Model 8.11).
 
 ## 4. Where the detail is
 
-4.1. Three pages of this section state the life after release in depth: The life of a Service, the seven states a Service passes through with the question, the signals, the action, and the gate of each; Service operations, the practices of request, incident, problem, change, knowledge, service level, financial, and supplier management sized to a small unit, with the classes of service and the health signals; and The Experiment workflow, the six stages and the rules of the Lab in which an Experiment runs. The Solution Lifecycle Model 8 is the rule for all three.
+4.1. Three pages of this section state the life after release in depth: The life of a Service, the seven service steps a Service passes through with the question, the signals, the action, and the gate of each; Service operations, the practices of request, incident, problem, change, knowledge, service levels, run cost, and suppliers sized to a small unit, with the classes of service and the four signals; and The Experiment workflow, the six steps of the Trial and the rules of the Lab in which an Experiment runs. The Solution Lifecycle Model 8 is the rule for all three.
 
 ## 5. Rule source
 

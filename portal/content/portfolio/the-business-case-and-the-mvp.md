@@ -11,7 +11,7 @@ Two devices carry the commercial judgment of the Portfolio: the one-page busines
 | Question | What the brief must show |
 | --- | --- |
 | Why is the change needed? | It fits a Strategic Priority, and the hypothesis states the value for a named function |
-| What is the best option? | The outcomes have leading indicators with their source system, baseline, and target, and the MVP tests the hypothesis at the least cost |
+| What is the best option? | The outcomes have two to four leading indicators with their source system, baseline, and target, and the MVP tests the hypothesis at the least cost |
 | Can it be afforded? | The cost is within the Envelope of the Strategic Priority |
 | Can it be bought and delivered? | The dependencies and the providers are named, the expected Risk Tier is stated, and the Control Function Contacts have cleared it |
 | Can it be run well? | The Domain Owner, or the Executive Sponsor for enabling work, is named and committed, and the acceptance on delivery is stated |
@@ -64,11 +64,11 @@ Figure 1: the MVP, its business side and its development side, and the four rout
 | Continue | The hypothesis holds: the indicators move as the brief said, the Domain Owner sees the value | The Capabilities of the Initiative are defined and entered in the Program Backlog under the Initiative, and the Initiative goes to Implementation; the quarterly review keeps asking the same question |
 | Pivot | What was learned calls for a different Initiative: the need is real, the approach or the scope was wrong | The Initiative is closed as Pivoted; a new Initiative with a full brief enters the funnel, linked to the first, carrying the results of the MVP, and goes through the whole cycle again |
 | Defer | There is not yet sufficient reason to proceed: the timing, a dependency, a priority higher elsewhere | The Initiative is on hold as Deferred, with the reason and the date to look again, and returns to the funnel when it is taken up |
-| Reject | The value is not seen: the indicators did not move, or the cost or the risk outweighs the benefit | The Initiative is Rejected and its lessons are kept in the Portfolio Backlog; the capacity is released to the next ranked Initiative |
+| Reject | The value is not seen: the indicators did not move, or the cost or the risk outweighs the benefit | The Initiative is Rejected and its lessons are kept in the Portfolio Backlog; its place under the limit on the Active Initiatives goes to the next ranked Initiative |
 
 4.3. The decision is entered in the Decision Log with a Decision Record, and the result of the probe stays with the Solution Definition. After a continue, the quarterly review asks the same question of each Active Initiative on its indicators and its confirmed benefit, and an Initiative whose indicators do not hold is deferred or rejected. The MVP is therefore not a one-time gate but the first of a series: the Portfolio keeps asking whether the money should keep flowing.
 
-4.4. Two rules keep the probe honest. The scope of the first Solution is narrow by rule, so that the MVP tests the hypothesis and does not become the delivery by another name. And the check or validation before any real user applies to the MVP as to any Solution, in proportion to its Risk Tier, so that a probe never reaches people or data without a person other than its builder having looked at it.
+4.4. Two rules keep the probe honest. The scope of the first Solution is narrow by rule, so that the MVP tests the hypothesis and does not become the delivery by another name. And the check or validation before any real user applies to the MVP as to any Solution, in proportion to its Risk Tier, so that a probe never reaches real users without a check by a person other than its builder, or a validation by the Control Function Contacts.
 
 ## 5. Rule source
 

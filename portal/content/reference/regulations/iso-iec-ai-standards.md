@@ -25,7 +25,7 @@ The international standards that give AI governance the form that organizations 
 
 ## 5. How the charter relates to it
 
-5.1. The control loops, the control catalogue, the records and evidence of the Operating Model, and the AI Policy are built so that they can be read against ISO/IEC 42001; the Risk Tiers answer the risk management guidance; the Vocabulary of the charter is consistent with the terminology standard.
+5.1. The control loops, the control catalog, the records and evidence of the Operating Model, and the AI Policy are built so that they can be read against ISO/IEC 42001; the Risk Tiers answer the risk management guidance; the Vocabulary of the charter is consistent with the terminology standard.
 
 ## 6. Related pages
 

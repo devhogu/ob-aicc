@@ -21,23 +21,23 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 3. What the function receives
 
-3.1. An engine with its templates, its sources, its approval step, and its output channel; the data trail of each edition; the template and version register of the family; and the operating notes for the function that runs it.
+3.1. An engine with its templates, its sources, its approval step, and its output channel; the data trail of each edition; the record of the templates and versions of the family; and the operating notes for the function that runs it.
 
 ## 4. How it runs
 
-4.1. A program: the study maps the editions, the sources, and the approvals; the MVP produces the first edition in parallel with the current process and measures the difference; the function then runs it with the support of AICC, or AICC runs it as a Service. A template added to an existing engine is run-rate.
+4.1. An Initiative: the study maps the editions, the sources, and the approvals; the MVP produces the first edition in parallel with the current process and measures the difference; the function then runs it with the support of AICC, or AICC runs it as a Service. A template added to an existing engine is run-rate work.
 
 ## 5. What it leads to
 
 5.1. Faster and more consistent editions, fewer manual steps, and a traceable base for every figure and statement that leaves the function.
 
-## 6. The reusable package
+## 6. The Package
 
 6.1. The template and rendering engine and the collection and pre-fill pattern, re-used for each new document family.
 
-## 7. Run-rate or program
+## 7. Run-rate work or an Initiative
 
-7.1. A program for an engine; run-rate for a template or an edition change.
+7.1. An Initiative for an engine; run-rate work for a template or an edition change.
 
 ## 8. Who decides
 

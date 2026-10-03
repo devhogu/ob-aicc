@@ -8,7 +8,7 @@
 
 | Source | What it is | Its core |
 | --- | --- | --- |
-| [OECD Principles on Artificial Intelligence (2019, revised 2024)](../reference/regulations/oecd-ai-principles.md) | The first intergovernmental standard, adopted by the member and adhering countries and taken up by the G20 | Inclusive growth and well-being; human-centred values and fairness; transparency and explainability; robustness, security, and safety; accountability |
+| [OECD Principles on Artificial Intelligence (2019, revised 2024)](../reference/regulations/oecd-ai-principles.md) | The first intergovernmental standard, adopted by the member and adhering countries and taken up by the G20 | Inclusive growth and well-being; human-centered values and fairness; transparency and explainability; robustness, security, and safety; accountability |
 | [UNESCO Recommendation on the Ethics of AI (2021)](../reference/regulations/unesco-recommendation-ethics-ai.md) | The global normative instrument, adopted by the member states, among them the Kyrgyz Republic | Human rights and dignity, environment, diversity, peaceful societies; proportionality, safety, fairness, privacy, human oversight, transparency, accountability |
 | [NIST AI Risk Management Framework (2023) and its Generative AI Profile (2024)](../reference/regulations/nist-ai-rmf.md) | The reference framework of the United States, voluntary and used worldwide | Seven characteristics of trustworthy AI: valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy-enhanced; fair with harmful bias managed. Four functions: govern, map, measure, manage |
 | [ISO/IEC 42001 (2023)](../reference/regulations/iso-iec-ai-standards.md) | The international standard for an AI management system, certifiable | Policy, roles, risk assessment, impact assessment, controls across the life cycle, monitoring, and improvement, in the form of the management-system standards banks already know |
@@ -27,9 +27,9 @@
 | Fairness | AI treats customers and employees fairly, does not discriminate on protected grounds, and is tested for bias before release and monitored in use | Bias testing of credit and customer-facing models; monitoring of outcomes by group |
 | Transparency and explainability | People know when they interact with AI; decisions can be explained to those affected, to regulators, and to auditors in terms they can act on | Disclosure to customers; reason codes for decisions; documentation of each model |
 | Privacy and data protection | AI uses only the data it needs, keeps it within the rules of classification and residency, and protects it | Data classification deciding which data reaches which model; provider contracts; minimization |
-| Security and robustness | AI is tested, evaluated, and monitored; it is protected against the attacks specific to it; critical services have fallback and exit arrangements | Evaluation sets; injection defenses; monitoring; provider exit plans |
-| Human oversight and contestability | People oversee AI in proportion to its risk, can stop or override it, and those affected can reach a person and contest a decision | Human validation sized to the Risk Tier; a stop right for the Control Functions; a path to a person for the customer |
-| Lawfulness and proportionate control | AI complies with law, regulation, and policy before release; controls are proportionate to the risk and are not bypassed; exceptions are decided by the competent function, recorded, and limited in time | Risk Tiers; gates before use; an exception process; audit evidence |
+| Security and reliability | AI is tested, evaluated, and monitored; it is protected against the attacks specific to it; critical services have fallback and exit arrangements | Evaluation sets; injection defenses; monitoring; provider exit plans |
+| Human oversight and contestability | People oversee AI in proportion to its risk, can stop or override it, and those affected can reach a person and contest a decision | Human review sized to the Risk Tier; a stop right for the Control Functions; a path to a person for the customer |
+| Compliance and proportionate control | AI complies with law, regulation, and policy before release; controls are proportionate to the risk and are not bypassed; an Exception is decided by the Control Function concerned, recorded, and limited in time | Risk Tiers; gates before use; an exception process; audit evidence |
 
 2.2. The Bank's Statement of Intent states these seven as its Principles of Application: accountability, fairness, transparency and explainability, privacy and data protection, security and reliability, human oversight and contestability, and compliance and proportionate control. They are not a local invention; they are the international consensus, adopted as the Bank's own.
 
@@ -40,13 +40,13 @@
 | Stage | Practice | The question it answers |
 | --- | --- | --- |
 | Before anything | Governance: a policy, roles, decision rights, and an inventory of every use | Who decides, and do we know what we have? |
-| At the start of a use | Risk classification: the tier of the use from what it affects, whom it can harm, its autonomy, and its data | How much control does this use need? |
+| At the start of a use | Risk classification: the tier of the use from its data, its influence on a decision, whether it reaches a customer, and its autonomy | How much control does this use need? |
 | | Impact assessment, for the higher tiers: the effect on the people concerned, the rights at stake, the alternatives | Should we do this at all, and how? |
 | While building | Data governance: classification, ownership, quality, lineage, minimization | Is the data fit, lawful, and traceable? |
 | | Evaluation and testing: accuracy, robustness, bias, security, on the cases of the function, with the failure modes recorded | Does it work, and how does it fail? |
 | | Documentation: what the system is, what it is for, how it was tested, where it should not be used | Can someone else understand and audit it? |
-| Before release | Independent check or validation: someone other than the builder | Has it been judged by a person without a stake? |
-| | Human oversight design: who validates, who can stop, what is logged, what is reversible | Is a person in or on the loop where the risk requires? |
+| Before release | Independent check or validation: a person other than the builder, and the Control Functions for the higher tiers | Has it been judged by a person without a stake? |
+| | Human oversight design: who reviews, who can stop, what is logged, what is reversible | Is a person in or on the loop where the risk requires? |
 | In use | Monitoring: performance, drift, overrides, incidents, cost | Is it still working, and still safe? |
 | | Incident management: detection, containment, review, lessons | What happens when it fails? |
 | | Transparency to users and customers: disclosure, explanations, a path to a person | Do the people affected know and have recourse? |
@@ -63,7 +63,7 @@
 
 4.3. **It is not a one-time approval.** A use is monitored for its life, because the world and the model both change.
 
-4.4. **It is not the job of a single function.** The owner of the use is accountable; the Control Functions validate and may stop; the technology functions secure; audit assures; AICC sets the standard and keeps the register. Responsibility is distributed and named.
+4.4. **It is not the job of a single function.** The owner of the use is accountable; the Control Functions validate and may stop; the technology functions secure; audit assures; AICC sets the practice within the standards of the Bank and keeps the AI Registry. Responsibility is distributed and named.
 
 ## 5. How this becomes the Bank's rules
 

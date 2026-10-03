@@ -18,8 +18,8 @@ The method is written for a Team of a few people and does not change when the Te
 
 ## 3. The shape as it scales
 
-3.1. At every size the shape is the same: a sponsor with the mandate, a lead accountable for the method and the records, Teams of Solution Engineers with Domain Experts, Domain Owners who own the results, the Control Functions beside, the Platform Owner outside, and the Steering as the one forum. Growth adds Holders and Teams; it does not add layers, meetings, or records. What AICC does not do at any size is scale the operation of a Solution itself: a Solution the Bank should run at scale is handed to a platform team or an IT function.
+3.1. At every size the shape is the same: the Executive Sponsor with the mandate, a lead accountable for the method and the records, Teams of Solution Engineers with Domain Experts, Domain Owners who own the results, the Control Functions beside, the Platform Owner outside, and the Steering as the one forum. Growth adds Holders and Teams; it does not add layers, meetings, or records. What AICC does not do at any size is scale the operation of a Solution itself: a Solution the Bank adopts at scale is handed to its Receiver, and a Service that AICC runs is handed over to an IT function of the Bank when the Bank should run it at scale (Business Model 2.5).
 
 ## 4. Rule source
 
-Operating Model 3, 4.4, and 4.6; Solution Lifecycle Model 3.5 and 6.6; AI Competence Center Charter 3.2; Statement of Intent 10.1.
+Operating Model 3, 4.4, and 4.6; Solution Lifecycle Model 3.5 and 6.6; AICC Charter 3.2; Business Model 2.5; Statement of Intent 10.1.

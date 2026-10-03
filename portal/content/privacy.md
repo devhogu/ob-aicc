@@ -2,7 +2,7 @@
 
 ## 1. Scope
 
-1.1. This statement describes what this site, the charter portal of the AI Competence Center ("AICC") of the Bank, does with information about the persons who use it. It applies to every page of the site, in both languages.
+1.1. This statement describes what this site, the portal of the AI Competence Center ("AICC") of the Bank, called the AICC portal, does with information about the persons who use it. It applies to every page of the site, in both languages.
 
 1.2. The policies of the Bank on personal data, information security, the classification of information, and the acceptable use of its systems apply to the use of this site and prevail over this statement. The site is one of the tools and portals of AICC listed in the collaboration tooling workflow of the charter, and the rules of the Operating Model on the content of the tools apply to it.
 
@@ -30,7 +30,7 @@
 
 5.1. The documents and the pages on this site name Roles, not persons. The persons who hold the Roles are recorded in the Appointments Record of the Registry, which is not part of this site. The contact address of the site is a work mailbox of the Bank.
 
-5.2. The site holds no figure of the Bank, no data of the Bank, no customer or employee data, and no code of the Bank, as the Operating Model requires of the tools and portals of AICC.
+5.2. The site holds no figure of the Bank, no data of the Bank, no customer or employee data, and no code of the Bank, as the Operating Model 7.8 requires of the AICC portal.
 
 ## 6. Questions and concerns
 

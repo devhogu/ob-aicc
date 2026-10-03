@@ -16,24 +16,24 @@ A Role is held by a person named in the Appointments Record, with a decision ref
 | Platform Owner | The head of technology | The AICC Lead |
 | Members of the AI Steering Committee | The Executive Sponsor, naming the heads of the functions | The AICC Lead |
 
-1.1. An appointer does not appoint themselves to a Role; the next level appoints. For the work of AICC itself the AICC Lead is the Domain Owner, and the Executive Sponsor then gives the business acceptance and the release.
+1.1. An appointer does not appoint themselves to a Role; the next level appoints. For the work of AICC itself the AICC Lead is the Domain Owner, and the Executive Sponsor then gives the business acceptance and the release, and, for a Solution the AICC Lead built, approves its Solution Definition, assigns its Risk Tier, and approves its use for a data class.
 
 ## 2. Joining, changing, leaving
 
 | Event | What happens | Record |
 | --- | --- | --- |
 | An appointment | The person accepts the Role, declares any conflict of interest, and is entered with the decision reference within five working days; names a deputy; receives access to the tools for the Role; reads the charter and completes the training the Role needs | Appointments Record |
-| A deputy or an acting Holder | Each Holder names a deputy who acts during an absence; a person acts in a vacant Role, marked as acting; the Executive Sponsor delegates in writing for a stated scope and period, and a delegation of more than two weeks is also in the Decision Log | Appointments Record; Decision Log |
+| A deputy or an acting Holder | Each Holder names a deputy who acts during an absence; a person acts in a vacant Role, marked as acting; the Executive Sponsor may delegate a decision in writing for a stated scope and period, except a decision under the Operating Model 5.4 and 5.7, and the delegation is entered in the Appointments Record, and also in the Decision Log when it is for more than two weeks | Appointments Record; Decision Log |
 | An assigned person | Works for AICC while staying in their own line, with the consent of the line manager and a stated time allocation | Appointments Record |
 | A change or a relief | The Holder changes or is relieved; the previous Holder is recorded; the tool access is removed | Appointments Record |
 | Competence and training | The training that the Role needs is completed and recorded; the AICC Lead sets it | Appointments Record |
-| Access to the tools | Access to the tracker, the wiki, Service Management, and the repository follows the Role and is reviewed each quarter | Appointments Record; the access review |
+| Access to the tools | Access to Jira, Confluence, Service Management, and the repository follows the Role and is reviewed each quarter | Appointments Record; the access review |
 
 2.1. Every appointment, acting designation, change, and relief is entered within five working days with its date and its decision reference. Personal data in the Registry is limited to the names and the posts of the Holders and the declarations, consents, and access of the Appointments Record.
 
 ## 3. The state at the baseline
 
-3.1. The unit was organized on 2 September 2026 with its appointments, and the first Steering was held on that date. An appointment missing at the baseline is made by 1 December 2026, and the Executive Sponsor names acting Holders meanwhile; the missing appointments are recorded as an accepted limit in the Risks and Issues. The live state is in the Appointments Record of the Registry, not on this site.
+3.1. The unit was organized on 2 September 2026 with its appointments, and the first Steering was held on that date. An appointment missing on 2 October 2026 is made by 1 December 2026, and the Executive Sponsor names acting Holders meanwhile; the missing appointments are recorded as an Issue in the Risks and Issues. The live state is in the Appointments Record of the Registry, not on this site.
 
 ## 4. Rule source
 

@@ -1,13 +1,13 @@
 # MITRE ATLAS and the AI Incident Database
 
-Two knowledge bases a bank that uses AI should know. ATLAS catalogues the techniques adversaries use against AI systems, in the matrix form security teams know from MITRE's attack framework, with case studies. The AI Incident Database collects the public record of harms and failures of AI systems, so that others can learn before they repeat them.
+Two knowledge bases a bank that uses AI should know. ATLAS catalogs the techniques adversaries use against AI systems, in the matrix form security teams know from MITRE's attack framework, with case studies. The AI Incident Database collects the public record of harms and failures of AI systems, so that others can learn before they repeat them.
 
 ## 1. Identity
 
 | Item | Entry |
 | --- | --- |
 | Kind | Security knowledge base; public incident database |
-| Who | MITRE, a not-for-profit operator of research centres, for ATLAS; the Responsible AI Collaborative, with the Partnership on AI, for the AI Incident Database |
+| Who | MITRE, a not-for-profit operator of research centers, for ATLAS; the Responsible AI Collaborative, with the Partnership on AI, for the AI Incident Database |
 | Access | Free |
 
 ## 2. What it publishes
@@ -20,7 +20,7 @@ Two knowledge bases a bank that uses AI should know. ATLAS catalogues the techni
 
 ## 4. How to take it, and for what
 
-4.1. For threat modelling before a build and for the security test, use ATLAS with the OWASP list: which techniques apply to this Solution, which mitigations are in place. For the Lab's guardrails and for the AI Incident Review, read the database's incidents in finance and in customer service, and ask whether the same failure could happen here. Information security and the Checker use ATLAS; the AICC Lead uses the database in the quarterly risk check.
+4.1. For threat modeling before a build and for the security test, use ATLAS with the OWASP list: which techniques apply to this Solution, which mitigations are in place. For the Lab's guardrails and for the AI Incident Review, read the database's incidents in finance and in customer service, and ask whether the same failure could happen here. Information security and the Checker use ATLAS; the AICC Lead uses the database in the quarterly risk check.
 
 ## 5. Cautions
 

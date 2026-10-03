@@ -25,5 +25,5 @@ Page type: service. Address: /services/knowledge-services/
 
 - Area: Build and run. The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: Statement of Intent 5.3, 9.5, 10.2; AI Policy 2, 3

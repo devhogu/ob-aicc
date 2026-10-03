@@ -6,7 +6,7 @@
     "ru": "О центре AICC"
    },
    "intro": {
-    "en": "AICC is the internal consulting and innovation lab of the Bank for the adoption of artificial intelligence. It explores and proves the use of AI with the functions of the Bank, delivers measured outcomes, and sets the way in which the Bank adopts AI at scale, with accountability that stays with people."
+    "en": "AICC is the internal consulting and innovation lab of the Bank for the adoption of artificial intelligence. It explores and proves the use of AI with the functions of the Bank, delivers measured outcomes, and sets the practice by which the Bank adopts AI, within the standards that the Bank sets, with accountability that stays with people."
    },
    "icon": "file-text",
    "line": {
@@ -45,7 +45,7 @@
     "ru": "Управление"
    },
    "intro": {
-    "en": "Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank. This section is a short course in seven parts, read in order or by tab, followed by the rule: the control loops, the records and evidence, and the control catalogue of the Operating Model, the records and controls of delivery, and the Unit governance workflow and guide.",
+    "en": "Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank. This section is a short course in seven parts, read in order or by tab, followed by the rule: the control loops, the records and evidence, and the control catalog of the Operating Model, the records and controls of delivery, and the Unit governance workflow and guide.",
     "ru": "Раздел излагает, как осуществляются контроль, отчётность и обеспечение уверенности в AICC: контуры контроля, записи и свидетельства, каталог контролей и отчётность перед комитетом совета. Статус каждого контроля на дату ведётся в Матрице контролей Реестра."
    },
    "icon": "table-properties",
@@ -130,7 +130,7 @@
    "ru": "Центр компетенций по искусственному интеллекту"
   },
   "lead": {
-   "en": "We are the Bank's own Artificial Intelligence Lab: a Center of Competence and Solution Hub that proves what AI can do for the people who serve our customers, sets the standard by which the Bank adopts it, and keeps every use of it accountable to people.",
+   "en": "We are the Bank's own Artificial Intelligence Lab: a Center of Competence and Solution Hub that proves what AI can do for the people who serve our customers, sets the practice by which the Bank adopts it within the standards that the Bank sets, and keeps every use of it accountable to people.",
    "ru": "Мы — собственная лаборатория Банка по искусственному интеллекту: небольшая команда, которая доказывает, что ИИ может сделать для людей, обслуживающих наших клиентов, задаёт стандарт, по которому Банк внедряет его, и держит каждое применение подотчётным людям. Этот сайт — место, где Банк узнаёт, кто мы, что мы предлагаем и как работаем."
   },
   "cta": [
@@ -178,8 +178,8 @@
      "ru": "Наш путь"
     },
     "text": {
-     "en": "Prove before investing, build in small steps on a steady rhythm, keep people in charge of every decision, and show the evidence.",
-     "ru": "Доказывать до инвестиций, строить малыми шагами в ровном ритме, оставлять решения за людьми и показывать свидетельства."
+     "en": "Prove with an MVP before we scale, build in small steps on a steady rhythm, keep people in charge of what AI decides, and show the evidence.",
+     "ru": "Доказывать на MVP, прежде чем масштабировать, строить малыми шагами в ровном ритме, оставлять за людьми то, что решает ИИ, и показывать свидетельства."
     },
     "to": "about/how-we-work",
     "link": {
@@ -193,8 +193,8 @@
      "ru": "Наше обещание"
     },
     "text": {
-     "en": "A function brings a need; we commit in writing, deliver with evidence, support what we build, and leave something the next function can reuse.",
-     "ru": "Функция приносит потребность; мы берём обязательство письменно, поставляем с подтверждением, поддерживаем созданное и оставляем то, что сможет повторно использовать следующая функция."
+     "en": "A function brings a need; we commit in writing, deliver with evidence, support what we build, at the agreed level, and leave something the next function can reuse.",
+     "ru": "Функция приносит потребность; мы берём обязательство письменно, поставляем с подтверждением, поддерживаем созданное на согласованном уровне и оставляем то, что сможет повторно использовать следующая функция."
     },
     "to": "services/how-to-engage",
     "link": {
@@ -351,7 +351,7 @@
      "en": "Mission"
     },
     "text": {
-     "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve our customers, to set the standard by which the Bank adopts it, and to keep every use of it accountable to people, so that the Bank serves its customers better, works with greater confidence, and leads with care."
+     "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve the customers of the Bank, to set the practice by which the Bank adopts it within the standards that the Bank sets, and to keep every use of it accountable to people."
     },
     "links": [
      {
@@ -362,7 +362,7 @@
      },
      {
       "label": {
-       "en": "AI Competence Center Charter"
+       "en": "AICC Charter"
       },
       "to": "about/aicc-charter"
      }
@@ -408,7 +408,7 @@
      },
      {
       "label": {
-       "en": "AI Competence Center Charter"
+       "en": "AICC Charter"
       },
       "to": "about/aicc-charter"
      }
@@ -420,7 +420,7 @@
      "en": "Strategy"
     },
     "text": {
-     "en": "The Bank pursues seven Strategic Priorities, from customer intelligence to software engineering, each resting on a governed foundation of people, data, and a shared AI Platform. Each Strategic Priority advances at its own pace through five Maturity Levels, and a level is reached when its Measures are met."
+     "en": "The Bank pursues seven Strategic Priorities, from customer intelligence to software engineering, each resting on a governed foundation of people, data, and a shared AI Platform. Each Strategic Priority advances at its own pace through five Maturity Levels, and a level is reached when its Measures are met. AICC shapes the AI adoption strategy within them as Proposals on which the Bank decides."
     },
     "priorities": true,
     "links": [
@@ -450,7 +450,7 @@
      "en": "Approach"
     },
     "text": {
-     "en": "A function brings a need to AICC. AICC takes it in as an Initiative, probes it first as a minimum viable product, measures it against defined success Measures, and extends it only on that evidence. The work is visible, limited in progress, and paced by a common cadence. Before a Solution reaches its users, it is checked or validated by a person other than its builder, accepted by the Team, and accepted by the Domain Owner who asked for it. AICC applies this way of working to itself and is the example of what it proposes to the Bank."
+     "en": "A function brings a need to AICC. AICC takes it in as run-rate work or as an Initiative, probes an Initiative first as a minimum viable product, measures it against defined success Measures, and extends it only on that evidence. The work is visible, limited in progress, and paced by a common cadence. Before a Solution reaches its users, it is checked by a person other than its builder, or validated by the Control Function Contacts, in proportion to its Risk Tier; then it is accepted by the product owner, the AICC Lead, and the Domain Owner who asked for it. AICC applies this way of working to itself and is the example of what it proposes to the Bank."
     },
     "links": [
      {
@@ -479,7 +479,7 @@
      "en": "Authority and limits"
     },
     "text": {
-     "en": "AICC acts under the mandate of the Executive Sponsor, whom the Board names. It does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work. The Control Functions stay independent and may stop a Solution, and internal audit gives assurance only. The AICC Lead reports each quarter, and the Board oversees AI through the Board Committee."
+     "en": "AICC acts under the mandate of the Executive Sponsor, whom the Board names. It does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work, and it is not a Control Function or a platform team of the Bank and does not operate a Solution at the scale of the Bank. It reports to the Executive Sponsor, and through the Executive Sponsor to the Board Committee. The Control Functions stay independent and may stop a Solution, and internal audit gives assurance only. The AICC Lead reports each quarter, and the Board oversees AI through the Board Committee."
     },
     "links": [
      {
@@ -617,7 +617,7 @@
     "en": "Mission"
    },
    "text": {
-    "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve our customers, to set the standard by which the Bank adopts it, and to keep every use of it accountable to people, so that the Bank serves its customers better, works with greater confidence, and leads with care."
+    "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve the customers of the Bank, to set the practice by which the Bank adopts it within the standards that the Bank sets, and to keep every use of it accountable to people."
    }
   }
  },
@@ -684,7 +684,7 @@
      "en": "What is the state of the work, and what is the evidence? Which Solutions exist, and in what state?"
     },
     "where": {
-     "en": "Outside this site, on the corporate folder; the page Records and systems states where each record is kept"
+     "en": "Outside this site, on the corporate share; the page Records and systems states where each record is kept"
     },
     "to": "reference/records-and-systems"
    }
@@ -702,12 +702,12 @@
    "en": "How the charter is kept"
   },
   "control": {
-   "en": "Every page of this site is generated from the documents of the charter at the baseline revision stated in the footer; where a page and a document differ, the document prevails. The Document Catalog states the status, the revision, and the life cycle of each document and template, and the AICC Lead activates them. Each document carries its change history, shown at the end of its page. The controls that can be tested are listed in the Operating Model, section 8, and the evidence of each is held in the Registry."
+   "en": "The pages of the documents, the workflows, the guides, and the templates are generated from the charter at the baseline revision stated in the footer; the pages that explain them are written for the site, state no rule, and each states its edition (Document Catalog 5.4). Where a page and a document differ, the document prevails. The Document Catalog states the status, the revision, and the life cycle of each document and template, and the AICC Lead activates them. Each document carries its change history, shown at the end of its page. The controls that can be tested are listed in the Operating Model, section 8, and the evidence of each is held in the Registry."
   }
  },
  "strategy_page": {
   "intro": {
-   "en": "The strategy of AICC is the strategy of the Bank applied to artificial intelligence. It starts from the mission and the Strategic Pillars of the Bank, is stated as seven Strategic Priorities, is carried through the way AICC invests, engages, delivers, and governs, and is measured along a road of five Maturity Levels. This page brings the strands together in one place; each points to the document that governs it."
+   "en": "The AI adoption strategy of the Bank is shaped by AICC from what it proves, as a series of Proposals on which the Bank decides (Business Model 2.3). It starts from the mission and the Strategic Pillars of the Bank and from the seven Strategic Priorities that the Bank sets, is carried through the way AICC invests, engages, delivers, and governs, and is measured along a road of five Maturity Levels. This page brings the strands together in one place; each points to the document that governs it."
   },
   "bank_title": {
    "en": "The strategy of the Bank"
@@ -722,10 +722,10 @@
    "ESG goals": "The Principles of Application and the AI Policy, across every priority"
   },
   "priorities_title": {
-   "en": "The AI adoption strategy: the Strategic Priorities"
+   "en": "The Strategic Priorities of the Bank"
   },
   "priorities_lead": {
-   "en": "The Bank pursues seven Strategic Priorities, stated in order, each resting on a governed foundation of people, data, and a shared AI Platform. They are the strategic themes of the Portfolio: the Executive Sponsor sets them with the Board, each with an Investment Envelope, and every Initiative that AICC takes in fits one of them."
+   "en": "The Bank pursues seven Strategic Priorities, stated in order, each resting on a governed foundation of people, data, and a shared AI Platform. They are the strategic themes of the Portfolio: the Executive Sponsor sets them with the Board, each with an Investment Envelope, and every Initiative that AICC takes in fits one of them. The Priorities are the Bank's; AICC shapes the AI adoption strategy within them as Proposals (Business Model 2.3; Statement of Intent 9)."
   },
   "aspects_title": {
    "en": "The strategy across the aspects of AICC"
@@ -790,8 +790,8 @@
    },
    {
     "aspect": "Providers",
-    "choice": "Providers of AI models and services are subject to due diligence, contractual terms, ongoing monitoring, and fallback and exit arrangements. The Bank is answerable for AI that it procures as for AI that it develops.",
-    "decides": "Control Function Contacts and the Executive Sponsor, as the AI Policy states",
+    "choice": "Providers of AI models and services are checked before use by the Control Function Contacts of information security, data protection, and legal, or by the Contact of information security alone for a Risk Tier 1 Solution or a provider already checked, and again at each reassessment and on a change of terms or model, with contractual terms and fallback and exit arrangements. The Bank is answerable for AI that it procures as for AI that it develops.",
+    "decides": "The Control Function Contacts, as the AI Policy 4.1 states",
     "read": "Statement of Intent 6 and 10; AI Policy 4"
    },
    {
@@ -817,7 +817,7 @@
    "en": "How the strategy is set and kept"
   },
   "kept": {
-   "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, decides on each Active Initiative, and issues the Quarterly Report to the Board Committee (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state."
+   "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2); at the same Steering the Executive Sponsor presents the yearly Proposal of the AI adoption strategy that the AICC Lead prepares, and the Bank decides on it (Operating Model 6.5). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, the approver of each Active Initiative decides on it, and the Executive Sponsor issues the Quarterly Report to the Board Committee (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state."
   }
  },
  "services_page": {
@@ -837,11 +837,11 @@
    },
    {
     "t": "Study",
-    "d": "The need is scoped and the business case written and cleared"
+    "d": "The need is scoped and the business case written and cleared; the Service Agreement is issued when the study starts"
    },
    {
     "t": "Service Agreement",
-    "d": "AICC states what it commits to and the support level"
+    "d": "AICC states what it commits to and the support level; amended when the business case is approved"
    },
    {
     "t": "Delivery",
@@ -857,7 +857,7 @@
    }
   ],
   "levels_title": {
-   "en": "Service levels"
+   "en": "Support levels"
   },
   "levels": [
    [
@@ -885,19 +885,19 @@
    "en": "What AICC does not do"
   },
   "not": {
-   "en": "AICC does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work. It does not deliver at scale: it proves and builds, and it relies on the platform teams and the IT functions of the Bank to run what the Bank adopts (AICC Charter 3.2)."
+   "en": "AICC does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work. It is not a Control Function and not a platform team of the Bank, and it does not operate a Solution at the scale of the Bank: it proves and builds, and a Solution that the Bank adopts at scale is handed to its Receiver (AICC Charter 3.2; Business Model 2.5)."
   },
   "docs_title": {
    "en": "The documents behind the services"
   },
   "lines_lead": {
-   "en": "Fifteen categories in four areas. A category is a direction along which AICC provides services, with examples on its page; what AICC commits to is stated in the Service Agreement of each Engagement. Run-rate work is asked for through the front door and done in days to one Iteration; a program starts with a study and a business case."
+   "en": "Fifteen categories in four areas. A category is a direction along which AICC provides services, with examples on its page; what AICC commits to is stated in the Service Agreement of each Engagement. Run-rate work is a small, repeatable request asked for through the front door and done within one Iteration; an Initiative starts with a study and a business case."
   },
   "model_title": {
    "en": "The service model and the catalog"
   },
   "model_lead": {
-   "en": "Every service of AICC follows one model: its composition, its life, its operation, and its records. The catalog has a defined form for a Solution and for a package. This site states the model and the form; the live catalog is an instance kept in the Portfolio and presented in the live portal of AICC."
+   "en": "Every service of AICC follows one model: its composition, its life, its operation, and its records. The catalog has a defined form for a Solution and for a Package. This site states the model and the form; the live catalog is an instance kept in the Portfolio."
   },
   "areas": [
    {
@@ -906,7 +906,7 @@
      "en": "Advise and formulate"
     },
     "text": {
-     "en": "The strategy, governance, and process office of the Bank for AI: the direction and the mandate of a unit, its normative documents and processes, the watch on the field, and the business cases and scenarios that the Portfolio decides on."
+     "en": "The strategy, governance, and process work that AICC drafts with AI for a function, which owns the substance: the direction and the mandate of a unit and its normative documents and processes; with them the watch on the field, and the business cases and scenarios that the Portfolio decides on."
     }
    },
    {
@@ -915,7 +915,7 @@
      "en": "Build and run"
     },
     "text": {
-     "en": "The solutions and the platforms: knowledge a function can ask, routine work done by assistants under human validation, the factual base for decisions, the content a function publishes, and the shared engines and environments behind them."
+     "en": "The solutions and the platforms: knowledge a function can ask, routine work done with AI and reviewed by a person, the factual base for decisions, the content a function publishes, and the shared engines and environments behind them."
     }
    },
    {
@@ -933,7 +933,7 @@
      "en": "Assurance"
     },
     "text": {
-     "en": "The compliance of every use of AI: the rules, controls, and criteria stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported to the Steering and the Board Committee."
+     "en": "The rules, controls, and criteria of each use of AI stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported in the Quarterly Report to the Steering and the Board Committee; the Control Functions keep their own remit."
     }
    }
   ]

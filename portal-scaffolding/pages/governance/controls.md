@@ -1,6 +1,6 @@
 ---
 id: governance/controls
-title: Operating Model: Controls and the control catalogue
+title: Operating Model: Controls and the control catalog
 section: governance
 order: 13
 type: catalogue
@@ -16,7 +16,7 @@ production: generated
 status: scaffold
 ---
 
-# Operating Model: Controls and the control catalogue
+# Operating Model: Controls and the control catalog
 
 Page type: catalogue. Address: /governance/controls/
 

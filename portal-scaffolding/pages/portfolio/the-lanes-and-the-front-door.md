@@ -1,6 +1,6 @@
 ---
 id: portfolio/the-lanes-and-the-front-door
-title: The lanes and the front door
+title: The modes and the front door
 section: portfolio
 order: 4
 type: outline
@@ -12,7 +12,7 @@ production: authored; explanatory, the Portfolio Management Model is the rule
 status: scaffold
 ---
 
-# The lanes and the front door
+# The modes and the front door
 
 Page type: outline. Address: /portfolio/the-lanes-and-the-front-door/
 
@@ -22,4 +22,4 @@ Page type: outline. Address: /portfolio/the-lanes-and-the-front-door/
 
 ## Outline
 
-- Run-rate and program; the categories by lane; screening at the front door; the Portfolio at a glance
+- Run-rate work and the Initiative; the categories by mode; screening at the front door; the Portfolio at a glance

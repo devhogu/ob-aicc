@@ -22,4 +22,4 @@ Page type: outline. Address: /portfolio/measures-and-tracking/
 
 ## Outline
 
-- Objectives and key results applied to an Initiative: the hypothesis, the leading indicators, the MVP as the first test, the Capabilities as the means, the confirmed benefit; the flow measures of lean practice; what each loop reads; how it is tracked
+- The outcome of an Initiative: the hypothesis, the leading indicators, the MVP as the first test, the Capabilities as the means, the confirmed benefit; the flow measures of lean practice; what each loop reads; how it is tracked

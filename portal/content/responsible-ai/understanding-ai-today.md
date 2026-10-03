@@ -35,7 +35,7 @@ Artificial intelligence is not one thing. It is a family of techniques that let 
 | Banking examples | Payment limits, eligibility checks | Scorecards, fraud models, forecasts | Knowledge assistants, document drafting, case summaries | Case resolution, report assembly, operations runbooks |
 | Fintech examples | Transaction limits and velocity rules | Real-time fraud scoring, thin-file credit scoring, liveness and document checks | Chat-first service, onboarding assistance, dispute drafting | End-to-end case resolution under limited authority, reconciliation of partner interfaces |
 
-4.1. What is the same across the family: accountability stays with a named person, the quality of the data decides the quality of the result, and a model is validated by someone other than its builder. What is new with generative AI and agents: the general model that must be given its context, the probabilistic output that must be checked, the natural-language interface that opens new attacks, and the autonomy that must be bounded.
+4.1. What is the same across the family: accountability stays with a named person, the quality of the data decides the quality of the result, and a model is checked or validated by someone other than its builder. What is new with generative AI and agents: the general model that must be given its context, the probabilistic output that must be checked, the natural-language interface that opens new attacks, and the autonomy that must be bounded.
 
 ## 5. Where the Bank stands
 

@@ -8,8 +8,8 @@ A Decision is taken by the person who does the work, on the facts, at the moment
 | --- | --- | --- |
 | Team | The Solution Engineer with the Domain Expert and the Domain Owner; the product owner for the acceptance of a Feature or a Capability | Design, build, the order of pulling work within the ranking, the acceptance of a Feature or a Capability |
 | Domain Owner | The Domain Owner | The business case and the decision after the MVP within one Domain and below a guardrail; a Solution Definition; the acceptance of a Solution; its retirement |
-| AICC Lead | The AICC Lead | Taking an item into discovery, deferring or rejecting it at triage; pulling an Initiative and the limit on the Active Initiatives; the rank of the backlogs; the final acceptance of the Team; the Risk Tier; whether a change needs a new check |
-| Executive Sponsor | The Executive Sponsor, after asking the AI Steering Committee | The Strategic Priorities, the funding, the mix of Initiatives; a business case above a guardrail or across Domains and the decision after its MVP; the release of a Risk Tier 3 Solution; a risk beyond appetite; the appointments |
+| AICC Lead | The AICC Lead | Taking an item into discovery, deferring or rejecting it at triage; pulling an Initiative and the limit on the Active Initiatives; the rank of the backlogs; the final acceptance of the Team; the Risk Tier; whether a change needs a new check; standards, Templates, and questions between Domains |
+| Executive Sponsor | The Executive Sponsor, after asking the AI Steering Committee | The Strategic Priorities, the funding, the mix of Initiatives; a business case above a guardrail or across Domains and the decision after its MVP; the release of a Risk Tier 3 Solution; a risk beyond appetite; the retirement of a Service across Domains |
 
 ## 2. When a decision rises
 
@@ -29,11 +29,11 @@ Figure 1: the movement of a Decision.
 
 ## 3. The Control Functions decide within their remit
 
-3.1. A Control Function decides within its remit, and its validation or its stop is final for that remit; nobody overrides it. A disagreement goes to the head of that Control Function; the Executive Sponsor may raise it with executive management and does not set a validation or a stop aside. A risk beyond the AI Risk Appetite Statement may be accepted only by the Executive Sponsor, with a report to the Board Committee. The person who suspended a Solution lifts the suspension when the facts allow. This is the second line of the Bank at work inside the unit's own decisions.
+3.1. A Control Function decides within its remit, and its validation or its stop is final for that remit; nobody overrides it. A disagreement goes to the head of that Control Function; the Executive Sponsor may raise it with executive management and does not set a validation or a stop aside. A risk beyond the AI Risk Appetite Statement may be accepted only by the Executive Sponsor, with a report to the Board Committee. The person who suspended a Solution lifts the suspension when the facts allow. These are the Control Functions of the Bank at work inside the unit's own decisions.
 
 ## 4. Disagreement, conflict, and record
 
-4.1. Where the people concerned do not agree, the person who holds the decision decides after hearing them, and the others support the Decision; a dissent may be noted in the Decision Log. A person with a conflict of interest declares it and does not decide; the next level decides. A Decision at the AICC Lead level or above, and any Decision that others will need to find later, is entered in the Decision Log as one line: the date, the Decision, the facts, who decided, and when to revisit. A Decision of the Executive Sponsor that is hard to reverse, and the decisions the control catalogue names, also have a Decision Record. A Decision of the Team is noted in the work item.
+4.1. Where the people concerned do not agree, the person who holds the decision decides after hearing them, and the others support the Decision; a dissent may be noted in the Decision Log. A person with a conflict of interest declares it and does not decide; the next level decides. A Decision at the AICC Lead level or above, and any Decision that others will need to find later, is entered in the Decision Log as one line: the date, the Decision, the facts, who decided, and when to revisit. A Decision of the Executive Sponsor that is hard to reverse, and the Decisions that the Operating Model 8 names as evidenced by a Decision Record, also have one. A Decision of the Team is noted in the work item.
 
 ## 5. Why it is built this way
 

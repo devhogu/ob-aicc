@@ -9,7 +9,7 @@ The bodies that set the standards national banking supervisors implement have pu
 | Kind | Reports and principles of the standard-setters of finance |
 | Issued or overseen by | Financial Stability Board; Basel Committee on Banking Supervision; Bank for International Settlements and its Innovation Hub |
 | Jurisdiction | Global |
-| Status | Reports on AI in finance and on the digitalisation of finance, 2017 onward and renewed in 2024; implemented through national supervisors |
+| Status | Reports on AI in finance and on the digitalization of finance, 2017 onward and renewed in 2024; implemented through national supervisors |
 
 ## 2. What it sets
 

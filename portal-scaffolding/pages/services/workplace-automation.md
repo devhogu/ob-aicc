@@ -23,7 +23,7 @@ Page type: service. Address: /services/workplace-automation/
 
 ## Outline
 
-- Area: Build and run. Routing, forms, reports, consolidation, documents from templates, and case assistance, done by assistants under human validation
+- Area: Build and run. Routing, forms, reports, consolidation, documents from templates, and case assistance, done with AI and reviewed by a person
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: Statement of Intent 9.4; AI Policy 2, 3

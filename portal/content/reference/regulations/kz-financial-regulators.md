@@ -21,7 +21,7 @@ The monetary authority and the financial supervisor of Kazakhstan. The agency re
 
 ## 4. Relevance to the Bank
 
-4.1. The supervisory practice of the neighbouring market with the most developed fintech sector in the region; a reference for what the supervisor of the Bank may adopt.
+4.1. The supervisory practice of the neighboring market with the most developed fintech sector in the region; a reference for what the supervisor of the Bank may adopt.
 
 ## 5. How the charter relates to it
 

@@ -21,7 +21,7 @@ The first dedicated law on AI in the region, preceded by a national concept for 
 
 ## 4. Relevance to the Bank
 
-4.1. A neighbouring jurisdiction with a dedicated AI law and a risk-based classification, and a model for what the Kyrgyz Republic may adopt. A partner or a service of the Bank that operates in Kazakhstan falls under it.
+4.1. A neighboring jurisdiction with a dedicated AI law and a risk-based classification, and a model for what the Kyrgyz Republic may adopt. A partner or a service of the Bank that operates in Kazakhstan falls under it.
 
 ## 5. How the charter relates to it
 

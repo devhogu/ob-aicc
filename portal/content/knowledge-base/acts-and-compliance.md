@@ -2,7 +2,7 @@
 
 The use of AI at the Bank answers to law, to regulation, and to the policies of the Bank. This page states, for each act or policy that applies, what it requires of a Solution and where the AI Policy and the controls of AICC answer it. It is a working reference kept with the Control Function Contacts; it states no rule of its own, and the acts and the policies prevail.
 
-This is the first edition, a placeholder for review. The entries are to be verified and completed with the Control Function Contacts of compliance, legal, data protection, and information security.
+This is the first edition, a placeholder for review. The entries are to be verified and completed with the Control Function Contacts of compliance, legal, data protection, and information security. Which laws, regulations, and external standards apply is confirmed by the Contacts of compliance and of legal, each within its remit, and the AICC Lead records each confirmation in the Standards Record (AI Policy 1.3).
 
 ## 1. How to read this page
 
@@ -24,10 +24,10 @@ This is the first edition, a placeholder for review. The entries are to be verif
 | --- | --- | --- |
 | Information security policy | Access control, classification, logging, and provider assessment for every system that AI uses or that uses AI | AI Policy 2 and 4; Operating Model 8 |
 | Data classification and data protection policy | The classification decides which data may reach which model and where it runs | Statement of Intent 10.2; AI Policy 2 |
-| Model risk management, where the Bank has it | A model is validated by a person other than its builder, documented, and monitored | AI Policy 3; Solution Lifecycle Model 7; Statement of Intent 7.3 |
+| Model risk management, where the Bank has it | A model is checked or validated by people other than its builder, documented, and monitored; in the charter, a Risk Tier 2 or 3 Solution is validated by the Control Function Contacts, including the Contact of model risk | AI Policy 3; Solution Lifecycle Model 7; Statement of Intent 7.3 |
 | Change management | Every production deployment and change goes through the change management of the Bank | Solution Lifecycle Model 7 and 8 |
 | Procurement and third-party policy | Due diligence, contractual terms, monitoring, and exit for providers | AI Policy 4; Statement of Intent 10.5 |
 
 ## 4. How AICC keeps compliance
 
-4.1. Every Solution carries a Risk Tier that sets its review, validation, human oversight, and speed of release. A control requirement is not bypassed; an Exception is decided by the Control Function concerned, recorded in the Risks and Issues Record, and limited in time. The Control Functions stay independent and may stop a Solution. The controls that can be tested are listed in the Operating Model 8, and the evidence of each is held in the Registry.
+4.1. Every Solution carries a Risk Tier that sets its review, validation, human oversight, and speed of release. A control requirement is not bypassed; an Exception is decided by the Control Function concerned, states the date on which it expires, is recorded in the Risks and Issues Record, and is reviewed by the Executive Sponsor each month. The Control Functions stay independent and may stop a Solution. The controls that can be tested are listed in the Operating Model 8, and the evidence of each is held in the Registry.

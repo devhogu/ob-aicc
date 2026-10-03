@@ -23,7 +23,7 @@ Page type: service. Address: /services/assessments-and-evaluations/
 
 ## Outline
 
-- Area: Assurance. Tools, providers, and Solutions evaluated against the cases of the function and the rules before use; readiness and benchmarks
+- Area: Assurance. Solutions and providers evaluated against the cases of the function before use, and the readiness of a function assessed; the check of a provider stays with the Control Function Contacts (AI Policy 4.1)
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: AI Policy 3, 4; Solution Lifecycle Model 7

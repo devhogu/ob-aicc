@@ -33,9 +33,9 @@ Figure 1: the Portfolio end to end.
 
 ## 2. What the Portfolio is for
 
-2.1. A bank has more good ideas for AI than people to deliver them, and more risk in each than its size suggests. The Portfolio exists to choose: to put a small unit's capacity where the strategy says the value is, to try before investing, to stop what does not work, and to show the Board where the money went and what came back. It is the mechanism by which the Statement of Intent becomes a ranked list of work, and by which the results of the work change the next year's frame.
+2.1. A bank has more good ideas for AI than people to deliver them, and more risk in each than its size suggests. The Portfolio exists to choose: to put the work of a small unit where the strategy says the value is, to probe with an MVP before scaling, to stop what does not work, and to show the Board where the money went and what came back. It is the mechanism by which the Statement of Intent becomes a ranked list of work, and by which the results of the work change the next year's frame.
 
-2.2. Three principles follow from the Portfolio Management Model. Funding goes to Strategic Priorities and to the Teams, not to projects one by one, so that a decision to start is a decision about priority and capacity, not a budget negotiation. Every Initiative is a hypothesis with a business case and is probed as an MVP before the decision to continue, so that the Bank invests in what works and learns from what does not. And the number of Active Initiatives is limited, so that the flow stays steady and the few things in progress finish.
+2.2. Three principles follow from the Portfolio Management Model. Funding goes to Strategic Priorities and to the Teams, not to Initiatives one by one, so that a decision to start is a decision about priority and the room under the limit, not a negotiation over funds. Every Initiative is a hypothesis with a business case and is probed as an MVP before the decision to continue, so that the Bank invests in what works and learns from what does not. And the number of Active Initiatives is limited, so that the flow stays steady and the few things in progress finish.
 
 ## 3. The industry practice it follows
 
@@ -43,4 +43,4 @@ Figure 1: the Portfolio end to end.
 
 ## 4. How to read this course
 
-4.1. Part 2 states the frame: the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails, and who decides what. Part 3 follows an Initiative through the portfolio Kanban. Part 4 states the two lanes and the front door. Part 5 opens the business case and the MVP. Part 6 states the four loops and the governance. Part 7 states how the Portfolio is measured and tracked: objectives and key results for each Initiative, the flow measures of lean practice, and what each loop reads. Part 8 states the roles and the records. The Portfolio Management Model follows as the rule.
+4.1. Part 2 states the frame: the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails, and who decides what. Part 3 follows an Initiative through the portfolio Kanban. Part 4 states the two modes and the front door. Part 5 opens the business case and the MVP. Part 6 states the four loops and the governance. Part 7 states how the Portfolio is measured and tracked: the hypothesis and the leading indicators of each Initiative, the flow measures of lean practice, and what each loop reads. Part 8 states the roles and the records. The Portfolio Management Model follows as the rule.

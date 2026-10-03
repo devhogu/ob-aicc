@@ -39,4 +39,4 @@ What AICC learns it writes down and makes available to the Bank: the documents o
 
 ## 5. Packages
 
-5.1. The reusable packages that the Engagements leave, with their status, are kept in the Portfolio and their form is stated on the page Service catalog: the form. The packages available at the baseline are the charter method and templates, the governance catalogue, and the portal generator.
+5.1. The Packages that the Engagements leave, each with its Package Definition and its status, are kept in the Portfolio, and their form is stated on the page Service catalog: the form. The Packages available at the baseline are the charter method and templates, the governance catalog, and the portal generator.

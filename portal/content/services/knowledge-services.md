@@ -30,13 +30,13 @@ The following are examples that illustrate the category, not a list of commitmen
 
 5.1. Expertise at the point of work: consistent and compliant answers, faster proficiency of new staff, and institutional knowledge that stays when people move. It is the foundation that later agents stand on.
 
-## 6. The reusable package
+## 6. The Package
 
 6.1. The knowledge-base kit: ingestion, source governance, retrieval, citation, and evaluation; re-deployed for each function with its own corpus.
 
-## 7. Run-rate or program
+## 7. Run-rate work or an Initiative
 
-7.1. A program for a new knowledge base; run-rate for adding a source set to an existing one.
+7.1. An Initiative for a new knowledge base; run-rate work for adding a source set to an existing one.
 
 ## 8. Who decides
 

@@ -1,6 +1,6 @@
 # Hugging Face: open models, datasets, and documentation
 
-The repository where open models and datasets are published, with their documentation, their licences, and their model cards, and the company's own documentation and course on using them. For a Solution Engineer it is where an open model is found and assessed; for everyone else it is where the field's openness is visible.
+The repository where open models and datasets are published, with their documentation, their licenses, and their model cards, and the company's own documentation and course on using them. For a Solution Engineer it is where an open model is found and assessed; for everyone else it is where the field's openness is visible.
 
 ## 1. Identity
 
@@ -12,7 +12,7 @@ The repository where open models and datasets are published, with their document
 
 ## 2. What it publishes
 
-2.1. The hub of models and datasets with their cards, licences, and evaluations; the documentation of the libraries most of the open ecosystem uses; a free course on language models and their tools; open leaderboards that compare models; and the company's blog on methods and releases.
+2.1. The hub of models and datasets with their cards, licenses, and evaluations; the documentation of the libraries most of the open ecosystem uses; a free course on language models and their tools; open leaderboards that compare models; and the company's blog on methods and releases.
 
 ## 3. Why it matters to the Bank
 
@@ -20,11 +20,11 @@ The repository where open models and datasets are published, with their document
 
 ## 4. How to take it, and for what
 
-4.1. For an evaluation of open models, read the model cards and the leaderboards, then test the candidates in the Lab on the Bank's own evaluation set. For the method, use the documentation and the course. For the provider assessment of an open model, the licence, the training data statement, and the known limitations in the card are the starting evidence.
+4.1. For an evaluation of open models, read the model cards and the leaderboards, then test the candidates in the Lab on the Bank's own evaluation set. For the method, use the documentation and the course. For the provider assessment of an open model, the license, the training data statement, and the known limitations in the card are the starting evidence.
 
 ## 5. Cautions
 
-5.1. Most content is contributed by the community; a model card is the author's statement and is verified before it is relied on. A licence is read before use. An open model that processes data of the Bank is a provider in the sense of the AI Policy, wherever it runs, and passes the provider check and the security test. Nothing of the Bank is uploaded to the hub.
+5.1. Most content is contributed by the community; a model card is the author's statement and is verified before it is relied on. A license is read before use. An open model that processes data of the Bank is a provider in the sense of the AI Policy, wherever it runs, and passes the provider check and the security test. Nothing of the Bank is uploaded to the hub.
 
 ## 6. Related pages
 

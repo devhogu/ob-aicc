@@ -25,5 +25,5 @@ Page type: service. Address: /services/analytics-and-decision-support/
 
 - Area: Build and run. Pipelines, dashboards, analyses, and research tooling that prepare the factual base for decisions, with lineage to governed sources
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: Statement of Intent 9.3, 10.2; Business Model 6

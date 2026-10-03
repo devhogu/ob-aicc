@@ -30,7 +30,7 @@ The vocabulary of the field, in plain terms, for the reader of this course. The 
 | Evaluation, evaluation set | Measuring how well a model or an application performs on a set of cases with known good answers; the set is built with the people who know the work |
 | Benchmark | A standard evaluation used to compare models; useful for choosing, not sufficient for approving a use |
 | Guardrails | The rules, filters, and limits placed around a model: what it may answer, what it may not, what it may do |
-| Human in the loop, human on the loop | A person validates each output before it takes effect; or a person oversees the system and can intervene and stop it |
+| Human in the loop, human on the loop | A person reviews each output before it takes effect; or a person oversees the system and can intervene and stop it |
 | Model gateway | A single controlled access point to models, with routing, cost control, logging, and data protection policy |
 | Tool gateway | Permissioned access from an AI system to systems and services, with limits per tool |
 
@@ -54,12 +54,12 @@ The vocabulary of the field, in plain terms, for the reader of this course. The 
 | Term | Meaning |
 | --- | --- |
 | Responsible AI, trustworthy AI | The principles and practices by which an organization remains answerable for its use of AI; see What responsible AI means |
-| Risk Tier | The Bank's classification of a use of AI by what it affects, whom it can harm, its autonomy, and its data, which sets the controls that apply; the term of the AI Policy |
+| Risk Tier | The Bank's classification of a use of AI by the class of its data, the influence of the AI on a decision, whether the output reaches or affects a customer, and its degree of autonomy, the highest of which sets the controls that apply; the term of the AI Policy 3.1 |
 | Risk-based approach | Controls proportionate to risk; the principle of the [EU AI Act](../reference/regulations/eu-ai-act.md), the [NIST framework](../reference/regulations/nist-ai-rmf.md), and the Bank's Risk Tiers |
 | High-risk AI | In the [EU AI Act](../reference/regulations/eu-ai-act.md), the uses it lists, among them credit scoring of natural persons, which carry the full set of duties |
-| AI Registry | The Bank's record of each Solution, model, and agent, with owner, scope, data access, and Risk Tier; the term of the Statement of Intent |
+| AI Registry | The record of each Solution, model, and agent of the Bank, with owner, scope, data access, and Risk Tier, kept by the AICC Lead; the term of the Statement of Intent |
 | Model risk management | The discipline of validating, documenting, and monitoring models, with a named owner; the banking practice that AI governance extends |
-| Validation, independent validation | The judgment of a model or a Solution by a person who did not build it, before use and periodically |
+| Validation, independent validation | In the charter, the review of a Risk Tier 2 or 3 Solution by the Control Function Contacts before use and until the date it expires; the review of a Risk Tier 1 Solution by a person other than its builder is a check. In model risk management, the judgment of a model by people who did not build it |
 | Explainability | The ability to state why a system produced an output in terms the person affected, the regulator, or the auditor can act on |
 | Transparency | Telling people that they interact with AI and how it is used |
 | Impact assessment | An assessment, before a higher-risk use, of its effect on the people concerned and the rights at stake |

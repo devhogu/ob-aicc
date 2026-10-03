@@ -1,6 +1,6 @@
 # Research and insight
 
-The sources whose work shapes how banks think about AI: the international financial institutions and standard-setters, the policy observatories, the academic centres, the consulting houses, and the fintech press. This page lists the ones worth a bank's attention, says what each publishes and how to take it, and gives a page to the most influential. The list is the first edition, kept by the AICC Lead; access is free unless marked.
+The sources whose work shapes how banks think about AI: the international financial institutions and standard-setters, the policy observatories, the academic centers, the consulting houses, and the fintech press. This page lists the ones worth a bank's attention, says what each publishes and how to take it, and gives a page to the most influential. The list is the first edition, kept by the AICC Lead; access is free unless marked.
 
 ## 1. How to read this shelf
 
@@ -16,12 +16,12 @@ The sources whose work shapes how banks think about AI: the international financ
 | [OECD.AI Policy Observatory](regulations/oecd-ai-principles.md) | The live database of national AI policies, incidents, and metrics, and the OECD's AI work | The reference map of what governments do, including the region's | For the policy landscape and the definitions | Free |
 | [World Economic Forum](resources/world-economic-forum.md) | Reports and toolkits on AI governance and on the future of financial services, from its AI Governance Alliance and its financial services platform | Where industry, regulators, and civil society state shared positions; readable by a Board | For Board-level framing and cross-industry positions | Free |
 
-## 3. The academic and independent centres
+## 3. The academic and independent centers
 
 | Source | Publishes | Why it matters to the Bank | How to take it | Access |
 | --- | --- | --- | --- | --- |
 | [Stanford Institute for Human-Centered AI, the AI Index](resources/stanford-hai-ai-index.md) | The yearly AI Index with the data of the field: research, models, cost, adoption, policy, public opinion | The reference for a figure about AI; neutral and sourced | For any number cited in a paper of the Bank | Free |
-| Alan Turing Institute | Research programmes on finance and economics, AI ethics, and safe AI, with the UK public sector and regulators | Applied, regulator-facing work on fairness, explainability, and AI in finance | For method on fairness and explainability | Free |
+| Alan Turing Institute | Research programs on finance and economics, AI ethics, and safe AI, with the UK public sector and regulators | Applied, regulator-facing work on fairness, explainability, and AI in finance | For method on fairness and explainability | Free |
 | MIT Sloan Management Review and MIT Technology Review | Articles on AI in management and on the technology itself | Well-edited, accessible, often early | For orientation on a new topic; some articles are paywalled | Partly paid |
 
 ## 4. The consulting houses

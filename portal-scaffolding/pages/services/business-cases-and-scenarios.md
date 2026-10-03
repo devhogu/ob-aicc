@@ -23,7 +23,7 @@ Page type: service. Address: /services/business-cases-and-scenarios/
 
 ## Outline
 
-- Area: Advise and formulate. Use-case discovery, scenarios with problem, solution, and measures, readiness and source audit, the business case the Portfolio decides on
+- Area: Advise and formulate. The discovery of needs, scenarios with their problem, Solution, and leading indicators, the audit of readiness and of sources, and the business case the Portfolio decides on
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: Business Model 3, 4.1; Portfolio Management Model 5, 6

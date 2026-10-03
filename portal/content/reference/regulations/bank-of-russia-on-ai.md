@@ -21,7 +21,7 @@ The view of the central bank and financial supervisor of the Russian Federation 
 
 ## 4. Relevance to the Bank
 
-4.1. The supervisory practice of the largest neighbouring market, and a likely influence on the supervisors of the region.
+4.1. The supervisory practice of the largest neighboring market, and a likely influence on the supervisors of the region.
 
 ## 5. How the charter relates to it
 

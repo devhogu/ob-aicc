@@ -13,7 +13,7 @@ flowchart TB
   end
   subgraph ROW2["What was learned, what the rules require, quick answers"]
     direction LR
-    P["Playbooks and lessons<br/>what AICC has published, proposed, and learned, and the packages it can re-deploy"] ~~~ A["Acts and compliance<br/>what the acts and policies require of a use of AI at the Bank, and where the charter answers it"] ~~~ F["Questions people ask<br/>short answers grounded in the charter, each naming its clause"]
+    P["Playbooks and lessons<br/>what AICC has published, proposed, and learned, and the Packages it can re-deploy"] ~~~ A["Acts and compliance<br/>what the acts and policies require of a use of AI at the Bank, and where the charter answers it"] ~~~ F["Questions people ask<br/>short answers grounded in the charter, each naming its clause"]
   end
   Q --> ROW1
   ROW1 ~~~ ROW2
@@ -28,7 +28,7 @@ Figure 1: the shelves of the Knowledge base.
 | To learn what AICC is and how it works, in the right order for your role | Learning paths |
 | The form for a business case, a commitment, a decision, an acceptance, a report | Templates and forms |
 | To know how an Engagement, a delivery step, an event, or a control is done, and what it leaves on record | Guides |
-| What AICC has published, proposed, and learned, and the packages it can re-deploy | Playbooks and lessons |
+| What AICC has published, proposed, and learned, and the Packages it can re-deploy | Playbooks and lessons |
 | What an act or a policy of the Bank requires when AI is used, and where the charter answers it | Acts and compliance |
 | A quick answer to a common question | Questions people ask |
 | The meaning of a term | The Vocabulary, in Reference |
@@ -36,4 +36,4 @@ Figure 1: the shelves of the Knowledge base.
 
 ## 3. How the Knowledge base is kept
 
-3.1. The templates are part of the charter and change by its life cycle. The guides sit beside their workflows and are maintained with them. The learning paths, the playbooks, the acts page, and the questions are authored for the site and kept by the AICC Lead, with the Control Function Contacts for the acts; each states its edition. A page that nobody uses for two quarters is removed.
+3.1. The templates are part of the charter, and each is activated, with each change to it, by an entry in the Decision Log (Document Catalog 4.1). The guides sit beside their workflows and are maintained with them. The learning paths, the playbooks, the acts page, and the questions are authored for the site, state no rule, and are kept by the AICC Lead, with the Control Function Contacts of compliance and legal for the acts; each states its edition, and a page that no longer serves a reader is removed (Document Catalog 5.4).

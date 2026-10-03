@@ -316,7 +316,7 @@ Figure 8: the levels of the work.
 | Flow distribution | The share of the Active Initiatives by Strategic Priority and by kind of work (4.6) | Portfolio Backlog | Quarterly Steering | Within the mix that the Executive Sponsor sets |
 | Gate returns | The Initiatives returned at a gate, as a share of those presented at it | Decision Log | Monthly Steering | A trend, with no target |
 | Limit adherence | The days in the period on which the Active Initiatives exceeded the limit | Portfolio Backlog | Monthly Steering | Zero |
-| Decision sample | The sampled Decisions of the AICC Lead that are found in order, as a share of those sampled | Decision Log; Steering Summary | Monthly Steering | Set by the Steering once a baseline exists |
+| Decision sample | The sampled Decisions of the AICC Lead that are found in order, as a share of those sampled | Decision Log; Steering Summary | Monthly Steering | All found in order (Operating Model 6) |
 | Benefit confirmed against claimed | The benefit that the Domain Owner confirms against the benefit that the Initiative Brief claims, by reference to the figures in their source | Initiative Brief; Outcome Report | Quarterly Steering; yearly Steering | A trend by Strategic Priority, read against the Envelope |
 | PI predictability | As the Solution Lifecycle Model defines it | PI Objectives | PI Review and Demo; quarterly Steering | A trend, with no target |
 

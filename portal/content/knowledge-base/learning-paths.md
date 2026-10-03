@@ -57,7 +57,7 @@ A learning path is a reading order for a role: what to read, in which sequence, 
 | --- | --- | --- |
 | 1 | [How the Bank applies it](page:responsible-ai/how-the-bank-applies-it) and the [AI Policy](page:responsible-ai/ai-policy) | Know the Risk Tiers, the gates, the providers, the incidents, and the Exceptions |
 | 2 | The [AI risk and control workflow](page:responsible-ai/ai-risk-control-workflow) | Know where your clearance, your validation, and your stop sit in the flow |
-| 3 | [Decisions and escalation](page:governance/decisions-and-escalation) and [Controls and the control catalogue](page:governance/controls-and-the-catalogue) | Know your remit, its finality, and the controls you sign |
+| 3 | [Decisions and escalation](page:governance/decisions-and-escalation) and [Controls and the control catalog](page:governance/controls-and-the-catalogue) | Know your remit, its finality, and the controls you sign |
 | 4 | [Acts and compliance](page:knowledge-base/acts-and-compliance) and the [Regulators and acts](page:reference/regulators-and-acts) | Confirm what applies and keep the pages current |
 | 5 | The [Control Sign-Off](page:knowledge-base/control-sign-off) and the [Acceptance Checklist](page:knowledge-base/acceptance-checklist) | Record a clearance, a validation, or a stop |
 
@@ -66,7 +66,7 @@ A learning path is a reading order for a role: what to read, in which sequence, 
 | Step | Read | So that you can |
 | --- | --- | --- |
 | 1 | [Governance](page:governance/index), the course, with [Records, evidence, and assurance](page:governance/records-evidence-and-assurance) | Know the loops, the controls, and where the evidence is |
-| 2 | The [control catalogue](page:governance/controls) and the [Unit governance](page:governance/unit-governance-workflow) set, with the guide on how each control is tested | Test a control by its reference |
+| 2 | The [control catalog](page:governance/controls) and the [Unit governance](page:governance/unit-governance-workflow) set, with the guide on how each control is tested | Test a control by its reference |
 | 3 | [Records and systems](page:reference/records-and-systems) and the [Change history](page:reference/change-history) | Find each record and the revision of each document |
 | 4 | [The Roles](page:organization/the-roles) and [People and appointments](page:organization/people-and-appointments) | Check the separations and the appointments |
 

@@ -9,7 +9,7 @@ Delivery runs on a fixed rhythm. A Program Increment is one quarter; it holds th
 | Program Increment (PI) | One quarter | Three Iterations; the IP week in the last week of the third | PIQ1 to PIQ4 of a year |
 | Iteration | One calendar month of four or five whole weeks | The weeks; the review week last, except where the IP week takes its place | I01 to I12 |
 | IP week | The last week of the third Iteration | PI Review and Demo, Inspect and Adapt, Innovation, PI Planning, the quarterly Steering | The IP week of PIQn |
-| Week | Monday to Friday | Weekly Planning on Monday, the work, Weekly Review on Friday | W1 to W5 of an Iteration |
+| Week | Monday to Sunday | Weekly Planning on Monday, the work, Weekly Review on Friday, in a clean calendar | W1 to W5 of an Iteration |
 | Day | A working day | The Daily Stand-up and the work | |
 
 1.1. The Calendar Record may place the IP week earlier and keep a year-end week free of events. An event that falls on a blocked or gray day moves to the working day before it, never after; when moved events meet, the larger keeps the day. Innovation is optional and is dropped first when days are lost. An event that is missed is not held later; its intent is covered at the next event.

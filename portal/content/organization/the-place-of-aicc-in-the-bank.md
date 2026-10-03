@@ -12,7 +12,7 @@ AICC is an internal consulting and innovation lab of the Bank, mandated by the E
 
 ## 3. What AICC is not
 
-3.1. AICC does not own or operate the AI Platform, which the Platform Owner provides and operates outside AICC to the requirements AICC states. It does not own the business results of a Domain, which stay with the Domain Owner. It does not set the rules of a Control Function, and it is not one: the Control Functions are independent of it and keep their own accountability for their remit. It does not validate its own work. It does not decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function. And it has no administrative line over the people assigned to it or over the partners from the functions.
+3.1. AICC does not own or operate the AI Platform, which the Platform Owner provides and operates outside AICC to the requirements AICC states. It does not own the business results of a Domain, which stay with the Domain Owner. It is not a platform team of the Bank, and it does not operate a Solution at the scale of the Bank. It does not set the rules of a Control Function, and it is not one: the Control Functions are independent of it and keep their own accountability for their remit. It does not validate its own work. It does not decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function. And it has no administrative line over the people assigned to it or over the partners from the functions.
 
 ## 4. Whom it works with
 
@@ -28,4 +28,4 @@ AICC is an internal consulting and innovation lab of the Bank, mandated by the E
 
 ## 5. Rule source
 
-AI Competence Center Charter 3; Business Model 2; Operating Model 2 and 6.10; Statement of Intent 7.3 to 7.6; the Organization guide 2.
+AICC Charter 3; Business Model 2; Operating Model 2 and 6.10; Statement of Intent 7.3 to 7.6; the Organization guide 2.

@@ -8,7 +8,7 @@ The forums of governance are few: the Steering, held monthly and carrying more a
 | --- | --- | --- | --- |
 | The Steering | The Executive Sponsor, the AICC Lead, the Domain Owners concerned, the Control Function Contacts, the AI Steering Committee advising | The working, review, and strategy body of the unit, monthly, quarterly, yearly | The Executive Sponsor decides; the Domain Owner for the acceptance of a Solution |
 | AI Steering Committee | The heads of the business, technology, risk, and compliance functions whom the Executive Sponsor names, in the Appointments Record | Advises the Executive Sponsor on the Portfolio and on conflicts between Domains; its advice and any dissent recorded in the Steering Summary | Nothing; while it is not formed, the Executive Sponsor decides alone |
-| Board Committee | The committee the Board names for the purpose | Oversees AI through the Quarterly Report; is told at once of a major AI Incident and of a risk accepted beyond appetite | Oversight |
+| Board Committee | The committee the Board names for the purpose | Oversees AI through the Quarterly Report; is told of a major AI Incident and of a risk accepted beyond appetite without waiting for the next report | Oversight |
 | The Control Functions | Model risk, compliance, information security, data protection, legal, through their Contacts | Independent of AICC: set the rules of their remit, clear, validate, may stop, decide Exceptions | Within their remit, finally |
 | Internal audit | The internal audit function of the Bank | Independent assurance over the Portfolio and over AICC; read access to the Registry and the tools | Assurance only |
 | The Weekly Review | The AICC Lead and the Team | The operating loop: flow, limits, Dependencies, the care of the funnel | The AICC Lead |
@@ -19,16 +19,16 @@ The forums of governance are few: the Steering, held monthly and carrying more a
 
 | Steering | When | Governance matters it carries | Leaves |
 | --- | --- | --- | --- |
-| Monthly | The review week of each Iteration | The control loop: the sample of Decisions of the AICC Lead, the open deficiencies, the expired Exceptions, the events of the month | Steering Summary; Decision Log entries; the Registry Snapshot at the Iteration close |
-| Quarterly | The IP week | The assurance loop: the quarterly risk check, the Control Matrix, the reassessments due, the access review, the incidents reconciled, the Maturity Level, the Quarterly Report | Quarterly Report issued to the Board Committee; Registry Snapshot at the PI close |
-| Yearly | The monthly Steering of December, in the first two weeks | The direction loop: the documents, the AI Risk Appetite Statement, the appointments, and the frame of the next year | Decision Records; Appointments Record; Priorities |
+| Monthly | The review week of each Iteration | The control loop: the sample of at least three Decisions of the AICC Lead, the deficiencies and findings until closed, the open Exceptions until they expire, the events of the month and the controls they triggered | Steering Summary; Decision Log entries; the Registry Snapshot at the Iteration close |
+| Quarterly | The IP week | The assurance loop: the quarterly risk check, the Control Matrix, the reassessments due, the access review, the incidents reconciled, the status of the controls and the governance measures, the Maturity Level, the Quarterly Report | Quarterly Report issued to the Board Committee; Registry Snapshot at the PI close |
+| Yearly | The monthly Steering of December, in the first two weeks | The direction loop: the documents, the AI Risk Appetite Statement, the appointments, and the targets of the Measures of the Maturity Levels; with the strategic loop, the frame of the next year | Decision Records; Appointments Record; Priorities |
 
 2.1. The same Steerings carry the portfolio loops, stated in the Portfolio course, and take the results of the Iteration Review and Demo and the PI Review and Demo, stated in the Delivery course. In the month that holds the IP week the quarterly Steering is also that month's Steering; in December the yearly Steering is held in the first two weeks and the quarterly Steering of the IP week carries only the assurance loop and the portfolio review. The Cadence guide draws the Steerings of a year.
 
 ## 3. The reporting chain
 
-3.1. Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The AICC Lead reports each quarter in the Quarterly Report; the Executive Sponsor approves it and issues it to the Board Committee as the report to the Board. Each figure in it traces to a Record or a governed source with its date. The Executive Sponsor tells the Board Committee of an AI Incident the incident management of the Bank classifies as major, and of any risk accepted beyond the AI Risk Appetite Statement, without waiting for the next report. The Control Functions stand beside the chain, independent; internal audit stands above it.
+3.1. Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee. The AICC Lead reports each quarter in the Quarterly Report; the Executive Sponsor approves it and issues it to the Board Committee as the report to the Board. Each figure in it traces to a Record or a governed source with its date. The Executive Sponsor tells the Board Committee of an AI Incident the incident management of the Bank classifies as major, and of any risk accepted beyond the AI Risk Appetite Statement, without waiting for the next report. The Control Functions stand beside the chain, independent; internal audit stands outside it and gives independent assurance.
 
 ## 4. Rule source
 
-Operating Model 4.5, 4.6, 6.2 to 6.4, 6.10; AI Competence Center Charter 7.2; Statement of Intent 7.5 and 7.6; the Unit governance workflow 4, 5, and 7.
+Operating Model 4.5, 4.6, 6.2 to 6.4, 6.10; AICC Charter 7.2; Statement of Intent 7.5 and 7.6; the Unit governance workflow 4, 5, and 7.

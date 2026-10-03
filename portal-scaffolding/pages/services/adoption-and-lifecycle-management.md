@@ -23,7 +23,7 @@ Page type: service. Address: /services/adoption-and-lifecycle-management/
 
 ## Outline
 
-- Area: Enablement. Domain Experts and adoption plans per Domain; hand-over, support, revision, and retirement of Solutions; the life and operation of a Service
+- Area: Enablement. Domain Experts and adoption plans per Domain; the Handover, support, revision, and retirement of Solutions; the life and operation of a Service
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: Statement of Intent 10.1; Solution Lifecycle Model 8; Business Model 4.2

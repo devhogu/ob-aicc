@@ -7,7 +7,7 @@ The institution whose research central banks and supervisors read, and whose Inn
 | Item | Entry |
 | --- | --- |
 | Kind | International financial institution; research and applied technology projects |
-| Who | The Bank for International Settlements, the bank of the central banks; its Monetary and Economic Department for research; its Innovation Hub with centres in several financial centres |
+| Who | The Bank for International Settlements, the bank of the central banks; its Monetary and Economic Department for research; its Innovation Hub with centers in several financial centers |
 | Access | Free; publications and project reports on its site |
 
 ## 2. What it publishes

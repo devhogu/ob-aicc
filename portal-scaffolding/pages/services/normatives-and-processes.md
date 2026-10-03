@@ -23,7 +23,7 @@ Page type: service. Address: /services/normatives-and-processes/
 
 ## Outline
 
-- Area: Advise and formulate. Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for any function
+- Area: Advise and formulate. Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for a function
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
-- Rule source: Business Model 4 (clause proposed)
+- The Package; run-rate work or an Initiative; who decides
+- Rule source: Business Model 4.5 and 4.10

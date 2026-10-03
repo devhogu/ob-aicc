@@ -6,7 +6,7 @@ order: 50
 type: outline
 slug: /delivery/measures-definitions-and-formulas/
 source: portal/content/delivery/measures-definitions-and-formulas.md
-production: authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10
+production: authored; the reference of the measures of the Solution Lifecycle Model 10.3, with their formulas
 status: scaffold
 ---
 

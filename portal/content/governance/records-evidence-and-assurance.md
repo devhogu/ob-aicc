@@ -10,7 +10,7 @@ Governance is only as good as what it can show. AICC keeps three kinds of record
 | Living records | Records that are current by nature and kept up to date | The Priorities, the Standards, the Risks and Issues, the AI Registry, the Appointments; the Solution Definitions in the Portfolio | The Registry; the Portfolio |
 | Evidence records | A closed and dated extract, taken when an event happens, stating what happened, who decided or acted, on which facts, and where the live item is | Decision Records, Control Sign-Offs, Acceptance Checklists, Outcome Reports, Steering Summaries, Quarterly Reports, AI Incident Reviews, Registry Snapshots | The Registry, always |
 
-1.1. Jira, Confluence, and Service Management are not an evidence store. The Registry Snapshot at the close of each Iteration and Program Increment records the state, the Risk Tier, and the release of every Solution, which makes the Snapshot the evidence of the living records.
+1.1. Jira, Confluence, and Service Management are not an evidence store. The Registry Snapshot at the close of each Iteration and Program Increment records the state, the Risk Tier, and the release of every Solution, which makes the Snapshot the evidence of the Solution Definitions.
 
 ## 2. What makes a record evidence
 
@@ -18,14 +18,14 @@ Governance is only as good as what it can show. AICC keeps three kinds of record
 
 ## 3. How the Registry is kept
 
-3.1. The Registry is a repository with a protected main branch and restricted visibility, and its history is not rewritten. Only the AICC Lead and the named deputy merge to the main branch. Whoever does the work keeps the Record, and the AICC Lead is accountable for all of them. Each Record is kept for the period the retention rules of the Bank require for its type. The Registry is promoted to the corporate folder, where this site links to its records; internal audit has read access to the Registry and, read only, to Jira, Confluence, and Service Management. Every tool has a keeper named, and the collaboration tooling workflow lists what each tool is used for.
+3.1. The Registry is a repository with a protected main branch and restricted visibility, and its history is not rewritten. Only the AICC Lead and the named deputy merge to the main branch. Whoever does the work keeps the Record, and the AICC Lead is accountable for all of them. Each Record is kept for the period the retention rules of the Bank require for its type. The closed records are promoted to the corporate share, where the AICC portal links to them; internal audit has read access to the Registry and, read only, to Jira, Confluence, and Service Management. Every tool has a keeper named in the Appointments Record, and the collaboration tooling workflow lists what each tool is used for.
 
 ## 4. The three lines, applied to the unit
 
 ```mermaid
 flowchart LR
-  L1["First line<br/>AICC and the Domains<br/>own the risks of their work:<br/>decide, control, record"] --> L2["Second line<br/>the Control Functions<br/>set the rules of their remit,<br/>clear, validate, may stop"]
-  L2 --> L3["Third line<br/>internal audit<br/>independent assurance over<br/>the Portfolio and AICC"]
+  L1["First line<br/>AICC and the Domains<br/>own the risks of their work:<br/>decide, control, record"] --> L2["Independent control<br/>the Control Functions<br/>set the rules of their remit,<br/>clear, validate, may stop"]
+  L2 --> L3["Independent assurance<br/>internal audit<br/>independent assurance over<br/>the Portfolio and AICC"]
   L1 -.->|"evidence in<br/>the Registry"| L3
   L3 -.->|"findings into<br/>Risks and Issues"| L1
   B(["Board Committee<br/>oversight through the<br/>Quarterly Report"]) -.-> L3
@@ -33,7 +33,7 @@ flowchart LR
 
 Figure 1: the three lines and the unit.
 
-4.1. AICC and the Domains are the first line: they own the risks of their work, decide, control, and record. The Control Functions are the second: independent of AICC, they set the rules of their remit, clear business cases, validate Solutions, decide Exceptions, and may stop; AICC is not a Control Function and does not validate its own work. Internal audit is the third: it gives independent assurance over the Portfolio and over AICC, with read access to everything, and its findings enter the Risks and Issues Record like any deficiency. The Board Committee oversees through the Quarterly Report.
+4.1. AICC and the Domains are the first line: they own the risks of their work, decide, control, and record. The Control Functions stand independent of AICC: they set the rules of their remit, clear business cases, validate Solutions, decide Exceptions, and may stop; AICC is not a Control Function and does not validate its own work. Internal audit gives independent assurance over the Portfolio and over AICC, with read access to everything, and its findings enter the Risks and Issues Record like any deficiency. The Board Committee oversees through the Quarterly Report.
 
 ## 5. What an auditor finds
 
@@ -41,4 +41,4 @@ Figure 1: the three lines and the unit.
 
 ## 6. Rule source
 
-Operating Model 6.10, 7, and 8.2; Statement of Intent 7.3 and 12.4; AI Competence Center Charter 7.2; the collaboration tooling workflow; the Unit governance guide 5 and 6.
+Operating Model 6.10, 7, and 8.2; Statement of Intent 7.3 and 12.4; AICC Charter 7.2; the collaboration tooling workflow; the Unit governance guide 5 and 6.

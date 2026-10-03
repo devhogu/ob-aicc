@@ -6,8 +6,6 @@ AICC watches the field so that the Bank does not have to: the models, the platfo
 
 1.1. The category covers a regulatory watch that digests the circulars and the acts of the bodies the Bank answers to; a technology watch on models, platforms, and methods; exploration of what matters in trials, as Experiments in the Lab; the maintenance of the Industry body of knowledge and the Regulators and acts pages of this site; and partnering with other organizations that adopt AI, with providers, and with the professional bodies of the field.
 
-1.2. This category is stated on this site and not yet in the Business Model. It is offered within the capability that AICC has, and it becomes a commitment when the Business Model states it.
-
 ## 2. Examples of what a function asks for
 
 The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
@@ -24,19 +22,19 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 4. How it runs
 
-4.1. Research runs as enabling work of AICC under an Initiative of enabling work, with the Executive Sponsor as its client, in a fixed share of the capacity of each Iteration. A trial runs as an Experiment in the Lab, with its time-box and its decision. Partnering follows the rules of the Bank for relations with third parties, and a provider passes the check of the AI Policy before use.
+4.1. The watch is run-rate work under the Standing Initiative of the service area Advise and formulate, with the Executive Sponsor as its client, within the share of each Iteration that the Executive Sponsor sets for enabling work in the mix of Initiatives (Business Model 4.11). A trial runs as an Experiment in the Lab, with its time-box and its decision. Partnering follows the rules of the Bank for relations with third parties, and a provider passes the check of the AI Policy before use.
 
 ## 5. What it leads to
 
 5.1. Proposals to the Bank, publications in the Knowledge base, and a Bank that knows what exists, what works, and what the rules require before it invests.
 
-## 6. The reusable package
+## 6. The Package
 
 6.1. The watch format and its digests, the trial write-up format, and the Reference pages.
 
-## 7. Run-rate or program
+## 7. Run-rate work or an Initiative
 
-7.1. Run-rate for the watch and the digests; a program for a trial.
+7.1. Run-rate work for the watch and the digests; an Initiative for a trial.
 
 ## 8. Who decides
 
@@ -44,4 +42,4 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 9. Rule source
 
-Business Model 2.3 and 2.4; Statement of Intent 10.5; AI Policy 4; Solution Lifecycle Model 7 and 8. A clause for this category is proposed for the Business Model 4.
+Business Model 2.3, 4.5, and 4.11; Statement of Intent 10.5; AI Policy 4; Solution Lifecycle Model 7 and 8.

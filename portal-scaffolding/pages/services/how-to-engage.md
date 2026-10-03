@@ -24,6 +24,6 @@ Page type: outline. Address: /services/how-to-engage/
 
 - The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)
 - The function commits to nothing; AICC works on a best-effort basis within its capability
-- Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)
+- Support levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)
 - What AICC does not do (AICC Charter 3.2)
 - Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report

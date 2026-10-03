@@ -22,6 +22,6 @@ Page type: outline. Address: /services/catalog/
 
 ## Outline
 
-- The two kinds of entry: Solution and package
+- The two kinds of entry: Solution and Package
 - The fields of each; the states of an entry
 - One illustration of each kind

@@ -25,11 +25,11 @@ Value flows from a strategic theme to a task on a board through a small number o
 
 ## 4. The Team
 
-4.1. A Team delivers the work: a Solution Engineer with the Domain Expert, the Domain Owner who owns the outcome, and the product owner who accepts during development, the AICC Lead while the Team has up to three people. The AICC Lead ranks; the Team pulls what it can finish and decides how it is built.
+4.1. A Team delivers the work: a Solution Engineer with the Domain Expert, the Domain Owner who owns the outcome and states the value of an item, and the product owner who accepts during development, the AICC Lead while the Team has up to three people. The AICC Lead ranks; the Team pulls what it can finish and decides how it is built.
 
 ## 5. The stream a Feature travels
 
-5.1. A Feature moves through five Stages: Explore, Design, Develop, Verify, and Deploy; a Capability through Analysis and Implementation. The stream is the Bank's form of the continuous delivery pipeline, with release a separate decision after it. Many small Features travelling it in a steady flow is what makes delivery continuous. The states and the Stages, and the conditions to move on, are in the Solution Lifecycle Model 5.
+5.1. A Feature moves through five Stages: Explore, Design, Develop, Verify, and Deploy; a Capability through Analysis and Implementation. The stream is the Bank's form of the continuous delivery pipeline, with release a separate decision after it. Many small Features traveling it in a steady flow is what makes delivery continuous. The states and the Stages, and the conditions to move on, are in the Solution Lifecycle Model 5.
 
 ## 6. Rule source
 

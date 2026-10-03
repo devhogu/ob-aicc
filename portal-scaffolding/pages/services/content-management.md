@@ -25,5 +25,5 @@ Page type: service. Address: /services/content-management/
 
 - Area: Build and run. Public, investor, and management material generated from governed data and templates, and the templates, editions, versions, and languages behind it
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
+- The Package; run-rate work or an Initiative; who decides
 - Rule source: Statement of Intent 9.3; Operating Model 4.2

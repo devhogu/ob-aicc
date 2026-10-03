@@ -21,7 +21,7 @@ The direction of the Russian Federation on AI: a national strategy with goals to
 
 ## 4. Relevance to the Bank
 
-4.1. A large neighbouring jurisdiction whose approach shapes the region and the providers in it. The regime of regulated experimentation is also a reference for how a sandbox and a Lab can be governed.
+4.1. A large neighboring jurisdiction whose approach shapes the region and the providers in it. The regime of regulated experimentation is also a reference for how a sandbox and a Lab can be governed.
 
 ## 5. How the charter relates to it
 

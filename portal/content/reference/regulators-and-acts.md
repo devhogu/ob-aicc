@@ -20,7 +20,7 @@ This is the first edition, a curated list for global awareness, to be verified w
 | [Kazakhstan: the Law on Artificial Intelligence and the national concept for AI](regulations/kz-law-on-ai.md) | Law of the Republic of Kazakhstan and government concept |
 | [Kazakhstan: the Law on Personal Data and Their Protection](regulations/kz-personal-data-law.md) | Law of the Republic of Kazakhstan |
 | [Kazakhstan: the National Bank and the Agency for Regulation and Development of the Financial Market](regulations/kz-financial-regulators.md) | Central bank and financial supervisor |
-| [Astana International Financial Centre](regulations/aifc.md) | Financial centre with its own regulatory framework |
+| [Astana International Financial Centre](regulations/aifc.md) | Financial center with its own regulatory framework |
 
 ## 3. Russian Federation
 

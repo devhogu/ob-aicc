@@ -25,5 +25,5 @@ Page type: service. Address: /services/research-and-exploration/
 
 - Area: Advise and formulate. Regulatory and technology watch with digests, trials in the Lab, partnering with organizations and providers
 - What the function receives, how it runs, and what it leads to
-- The reusable package; run-rate or program; who decides
-- Rule source: Business Model 2.3, 2.4; Statement of Intent 10.5 (clause proposed)
+- The Package; run-rate work or an Initiative; who decides
+- Rule source: Business Model 2.3, 4.5, 4.11; Statement of Intent 10.5
