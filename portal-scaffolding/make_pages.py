@@ -288,8 +288,15 @@ if NEXT:
     ]
     TABS = {'understanding-ai-today': 'AI today', 'opportunities': 'Opportunities', 'ai-in-fintech-and-digital-banking': 'Fintech', 'risks-and-challenges': 'Risks',
             'what-responsible-ai-means': 'Responsible AI', 'how-the-bank-applies-it': 'The Bank\'s rules', 'ai-terms-explained': 'Terms'}
+    # The seven parts form one series with tabs above the text, as the parts of a split document. The first part is the section page itself,
+    # so that Responsible AI opens on the course and not on an index; the other parts follow at their own addresses.
     for i, (slug, title, line) in enumerate(COURSE, 1):
-        # the seven parts form one series: tabs above the text, as the parts of a split document, and one entry in the navigation
+        if i == 1:
+            sp = next(x for x in PAGES if x['id'] == 'responsible-ai/index')
+            sp.update(source=[f'portal/content/responsible-ai/{slug}.md'], production='authored; the first part of the course, explanatory, the AI Policy is the rule',
+                      outline=[line, 'The tabs of the course above the text; the rules (AI Policy, AI risk and control workflow) below'],
+                      series='responsible-ai-course', series_title='A short course on AI', part=f'{i} of {len(COURSE)}', tab=TABS[slug])
+            continue
         add(id=f'responsible-ai/{slug}', section='responsible-ai', order=i, type='outline', slug=f'/responsible-ai/{slug}/', title=title,
             source=[f'portal/content/responsible-ai/{slug}.md'], production='authored; explanatory, the AI Policy is the rule', outline=[line],
             series='responsible-ai-course', series_title='A short course on AI', part=f'{i} of {len(COURSE)}', tab=TABS[slug])

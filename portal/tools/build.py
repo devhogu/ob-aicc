@@ -678,7 +678,9 @@ def render_pages(site):
     diagrams = []
     for p in site.pages:
         t = p['type']
-        if p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'about/strategy', 'reference/records-and-systems', 'organization/roles', 'knowledge-base/guides', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
+        if t == 'section' and p.get('series') and p.get('source'):
+            pass
+        elif p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'about/strategy', 'reference/records-and-systems', 'organization/roles', 'knowledge-base/guides', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
             continue
         if not p.get('source'):
             continue
@@ -773,6 +775,8 @@ def layout(site, p, lang, main_html, outline):
                 if q['type'] == 'guide' and q.get('companion') in ids:
                     continue
                 if q['type'] in ('template', 'regulation'):
+                    continue
+                if q.get('series') and q.get('series') == sp.get('series'):
                     continue
                 sub.append(link(q))
                 if q['id'] in nested:
@@ -1032,6 +1036,10 @@ def content_page(site, p, lang):
     desc = desc_of(site, p)
     lead = '<p class="o-lead" lang="en">%s</p>' % esc(desc) if desc and p['type'] != 'catalogue' and not b['src'].startswith('portal/content/') else ''
     h1 = p['title'] if p['title'] in SHORT else disp(p['title'])
+    if p['type'] == 'section' and p.get('series'):
+        sec = site.auth['sections'][p['section']]
+        h1 = sec['label'][lang]
+        lead = '<p class="o-lead">%s</p>' % esc(sec['intro'][lang])
     head = '<h1>%s</h1>%s%s%s%s%s' % (esc(PAGE_TITLE.get(h1, h1)), lead, facts_html(site, p, lang, b['fm']), companion_html(site, p, lang), parts_html(site, p, lang), lang_note(site, lang))
     extra = ''
     if p['type'] == 'catalogue':
@@ -1640,6 +1648,8 @@ def build_page(site, p, lang):
         return home_page(site, p, lang)
     if p['id'] == 'about/index':
         return about_page(site, p, lang)
+    if t == 'section' and p.get('series'):
+        return content_page(site, p, lang)
     if t == 'section':
         return section_page(site, p, lang)
     if p['id'] == 'about/values-and-principles':

@@ -104,14 +104,18 @@
    "type": "section",
    "slug": "/responsible-ai/",
    "title": "Responsible AI",
-   "source": [],
-   "production": "authored, with a generated list",
+   "source": [
+    "portal/content/responsible-ai/understanding-ai-today.md"
+   ],
+   "production": "authored; the first part of the course, explanatory, the AI Policy is the rule",
    "outline": [
-    "Introduction of three to five lines: A short course on AI today, its opportunities, its risks, and what responsible use means; and the rules of the Bank: the AI Policy, the Risk Tiers, and the gates before use.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
+    "From rules to machine learning to generative AI to agents: how each is built, what it is good at, how it fails, who is accountable, with banking examples",
+    "The tabs of the course above the text; the rules (AI Policy, AI risk and control workflow) below"
+   ],
+   "series": "responsible-ai-course",
+   "series_title": "A short course on AI",
+   "part": "1 of 7",
+   "tab": "AI today"
   },
   {
    "id": "services/index",
@@ -1401,25 +1405,6 @@
     "Where the Holder is recorded: the Appointments Record (Records and systems)",
     "The clauses that name the Role (cited by)"
    ]
-  },
-  {
-   "id": "responsible-ai/understanding-ai-today",
-   "section": "responsible-ai",
-   "order": 1,
-   "type": "outline",
-   "slug": "/responsible-ai/understanding-ai-today/",
-   "title": "Understanding AI today",
-   "source": [
-    "portal/content/responsible-ai/understanding-ai-today.md"
-   ],
-   "production": "authored; explanatory, the AI Policy is the rule",
-   "outline": [
-    "From rules to machine learning to generative AI to agents: how each is built, what it is good at, how it fails, who is accountable, with banking examples"
-   ],
-   "series": "responsible-ai-course",
-   "series_title": "A short course on AI",
-   "part": "1 of 7",
-   "tab": "AI today"
   },
   {
    "id": "responsible-ai/opportunities",

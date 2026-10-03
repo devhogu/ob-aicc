@@ -5,7 +5,10 @@ section: responsible-ai
 order: 0
 type: section
 slug: /responsible-ai/
-production: authored, with a generated list
+source: portal/content/responsible-ai/understanding-ai-today.md
+part: 1 of 7
+series: responsible-ai-course
+production: authored; the first part of the course, explanatory, the AI Policy is the rule
 status: scaffold
 ---
 
@@ -13,9 +16,11 @@ status: scaffold
 
 Page type: section. Address: /responsible-ai/
 
+## Source
+
+- portal/content/responsible-ai/understanding-ai-today.md
+
 ## Outline
 
-- Introduction of three to five lines: A short course on AI today, its opportunities, its risks, and what responsible use means; and the rules of the Bank: the AI Policy, the Risk Tiers, and the gates before use.
-- Statement of what the section does not hold and where it is kept
-- The pages of the section with one line each (generated)
-- Related sections
+- From rules to machine learning to generative AI to agents: how each is built, what it is good at, how it fails, who is accountable, with banking examples
+- The tabs of the course above the text; the rules (AI Policy, AI risk and control workflow) below

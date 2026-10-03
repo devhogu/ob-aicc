@@ -18,8 +18,7 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | About AICC | How we work | /about/how-we-work/ | outline | portal/content/about/how-we-work.md | all |  | authored |
 | About AICC | Values and principles | /about/values-and-principles/ | outline | none | none |  | generated from the documents, with an authored statement of what each group applies to |
 | About AICC | Explore AICC | /about/charter-outline/ | outline | README.md; executive-summary.md; guides/README.md | all |  | generated, with an authored introduction |
-| Responsible AI | Responsible AI | /responsible-ai/ | section | none | none |  | authored, with a generated list |
-| Responsible AI | Understanding AI today | /responsible-ai/understanding-ai-today/ | outline | portal/content/responsible-ai/understanding-ai-today.md | all |  | authored; explanatory, the AI Policy is the rule |
+| Responsible AI | Responsible AI | /responsible-ai/ | section | portal/content/responsible-ai/understanding-ai-today.md | all |  | authored; the first part of the course, explanatory, the AI Policy is the rule |
 | Responsible AI | The opportunities | /responsible-ai/opportunities/ | outline | portal/content/responsible-ai/opportunities.md | all |  | authored; explanatory, the AI Policy is the rule |
 | Responsible AI | AI in fintech and digital banking | /responsible-ai/ai-in-fintech-and-digital-banking/ | outline | portal/content/responsible-ai/ai-in-fintech-and-digital-banking.md | all |  | authored; explanatory, the AI Policy is the rule |
 | Responsible AI | The risks and challenges | /responsible-ai/risks-and-challenges/ | outline | portal/content/responsible-ai/risks-and-challenges.md | all |  | authored; explanatory, the AI Policy is the rule |
