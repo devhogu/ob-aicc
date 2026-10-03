@@ -2,7 +2,7 @@
 id: organization/roles
 title: The Roles
 section: organization
-order: 5
+order: 20
 type: index
 slug: /organization/roles/
 source: charter/documents/operating-model.md; charter/guides/organization-guide.md

@@ -349,17 +349,34 @@ split_doc('organization', 'operating-model', 'charter/documents/operating-model.
     ('', 'Foundations', [1, 2, 3]),
     ('roles', 'Roles', [4]),
     ('decisions', 'Decisions', [5]),
-], 0)
+], 10 if NEXT else 0)
 if NEXT:
     split_doc('organization', 'organization-guide', 'charter/guides/organization-guide.md', [
         ('', 'Purpose, the place of AICC, and the Roles and their profiles', [1, 2, 3]),
         ('who-is-responsible-for-what', 'Who is responsible for what', [4]),
         ('bodies-people-and-records', 'The governing bodies, the people records, the evidence, and the rule source', [5, 6, 7, 8]),
-    ], 4, type_='guide', series='set-organization-guide', series_title='Guide: Organization', tabs=['Roles and profiles', 'Who is responsible for what', 'Bodies, people, and records'])
+    ], 14, type_='guide', series='set-organization-guide', series_title='Guide: Organization', tabs=['Roles and profiles', 'Who is responsible for what', 'Bodies, people, and records'])
+    OCOURSE = [
+        ('overview', 'Organization', 'Overview', 'A joint team by Roles; one picture; what the organization is for; the practice it follows'),
+        ('the-place-of-aicc-in-the-bank', 'The place of AICC in the Bank', 'Place in the Bank', 'Mandate and reporting line; what AICC is; what it is not; whom it works with'),
+        ('the-roles', 'The Roles', 'Roles', 'The seven Roles in one line each; Hats; the rules of separation; the limits accepted while small'),
+        ('who-does-what', 'Who does what', 'Who does what', 'The responsibility pattern by family of activity; how to read it'),
+        ('people-and-appointments', 'People and appointments', 'Appointments', 'Who appoints whom; joining, changing, leaving; the state at the baseline'),
+        ('how-the-organization-grows', 'How the organization grows', 'Growth', 'Light mode; the steps out of it; the shape as it scales'),
+    ]
+    for i, (slug, title, tab, line) in enumerate(OCOURSE, 1):
+        if i == 1:
+            sp = next(x for x in PAGES if x['id'] == 'organization/index')
+            sp.update(source=[f'portal/content/organization/{slug}.md'], production='authored; the first part of the course, explanatory, the Operating Model is the rule', outline=[line],
+                      series='organization-course', series_title='Organization', part=f'{i} of {len(OCOURSE)}', tab=tab)
+            continue
+        add(id=f'organization/{slug}', section='organization', order=i, type='outline', slug=f'/organization/{slug}/', title=title,
+            source=[f'portal/content/organization/{slug}.md'], production='authored; explanatory, the Operating Model is the rule', outline=[line],
+            series='organization-course', series_title='Organization', part=f'{i} of {len(OCOURSE)}', tab=tab)
 else:
     add(id='organization/organization-guide', section='organization', order=4, type='guide', slug='/organization/organization-guide/',
         title=h1('charter/guides/organization-guide.md'), source=['charter/guides/organization-guide.md'])
-add(id='organization/roles', section='organization', order=5, type='index', slug='/organization/roles/', title='The Roles',
+add(id='organization/roles', section='organization', order=20 if NEXT else 5, type='index', slug='/organization/roles/', title='The Roles',
     source=['charter/documents/operating-model.md', 'charter/guides/organization-guide.md'], production='generated from tables',
     outline=['Introduction: a Role is named for its responsibility and not for a person (Vocabulary 3.6)',
              'The seven Roles, each with its purpose in one line (Operating Model 4.2)',
@@ -367,7 +384,7 @@ add(id='organization/roles', section='organization', order=5, type='index', slug
 ROLES = ['executive-sponsor', 'aicc-lead', 'solution-engineer', 'domain-owner', 'domain-expert', 'control-function-contact', 'platform-owner']
 RNAMES = ['Executive Sponsor', 'AICC Lead', 'Solution Engineer', 'Domain Owner', 'Domain Expert', 'Control Function Contact', 'Platform Owner']
 for i, (slug, name) in enumerate(zip(ROLES, RNAMES), 1):
-    add(id=f'organization/roles/{slug}', section='organization', order=10 + i, type='role', slug=f'/organization/roles/{slug}/', title=name,
+    add(id=f'organization/roles/{slug}', section='organization', order=(20 if NEXT else 10) + i, type='role', slug=f'/organization/roles/{slug}/', title=name,
         source=['charter/documents/operating-model.md', 'charter/guides/organization-guide.md'], production='generated from tables',
         outline=['Purpose, main responsibilities, authority, reporting line, and typical competence (Organization guide 3)',
                  'The decisions of the Role (Operating Model 4.2) and the Decision level (Operating Model 5.3)',

@@ -5,7 +5,10 @@ section: organization
 order: 0
 type: section
 slug: /organization/
-production: authored, with a generated list
+source: portal/content/organization/overview.md
+part: 1 of 6
+series: organization-course
+production: authored; the first part of the course, explanatory, the Operating Model is the rule
 status: scaffold
 ---
 
@@ -13,9 +16,10 @@ status: scaffold
 
 Page type: section. Address: /organization/
 
+## Source
+
+- portal/content/organization/overview.md
+
 ## Outline
 
-- Introduction of three to five lines: The Roles, the decision levels, and the bodies of AICC.
-- Statement of what the section does not hold and where it is kept
-- The pages of the section with one line each (generated)
-- Related sections
+- A joint team by Roles; one picture; what the organization is for; the practice it follows

@@ -2,7 +2,7 @@
 id: organization/roles/executive-sponsor
 title: Executive Sponsor
 section: organization
-order: 11
+order: 21
 type: role
 slug: /organization/roles/executive-sponsor/
 source: charter/documents/operating-model.md; charter/guides/organization-guide.md

@@ -2,7 +2,7 @@
 id: organization/organization-guide/bodies-people-and-records
 title: Guide: Organization: The governing bodies, the people records, the evidence, and the rule source
 section: organization
-order: 7
+order: 17
 type: guide
 slug: /organization/organization-guide/bodies-people-and-records/
 source: charter/guides/organization-guide.md

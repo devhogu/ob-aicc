@@ -2,7 +2,7 @@
 id: organization/roles/aicc-lead
 title: AICC Lead
 section: organization
-order: 12
+order: 22
 type: role
 slug: /organization/roles/aicc-lead/
 source: charter/documents/operating-model.md; charter/guides/organization-guide.md

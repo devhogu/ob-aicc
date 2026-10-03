@@ -2,7 +2,7 @@
 id: organization/roles/domain-expert
 title: Domain Expert
 section: organization
-order: 15
+order: 25
 type: role
 slug: /organization/roles/domain-expert/
 source: charter/documents/operating-model.md; charter/guides/organization-guide.md

@@ -2,7 +2,7 @@
 id: organization/organization-guide/who-is-responsible-for-what
 title: Guide: Organization: Who is responsible for what
 section: organization
-order: 6
+order: 16
 type: guide
 slug: /organization/organization-guide/who-is-responsible-for-what/
 source: charter/guides/organization-guide.md

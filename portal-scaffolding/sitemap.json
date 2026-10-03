@@ -202,14 +202,17 @@
    "type": "section",
    "slug": "/organization/",
    "title": "Organization",
-   "source": [],
-   "production": "authored, with a generated list",
+   "source": [
+    "portal/content/organization/overview.md"
+   ],
+   "production": "authored; the first part of the course, explanatory, the Operating Model is the rule",
    "outline": [
-    "Introduction of three to five lines: The Roles, the decision levels, and the bodies of AICC.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
+    "A joint team by Roles; one picture; what the organization is for; the practice it follows"
+   ],
+   "series": "organization-course",
+   "series_title": "Organization",
+   "part": "1 of 6",
+   "tab": "Overview"
   },
   {
    "id": "knowledge-base/index",
@@ -1889,7 +1892,7 @@
   {
    "id": "organization/operating-model",
    "section": "organization",
-   "order": 1,
+   "order": 11,
    "type": "document",
    "slug": "/organization/operating-model/",
    "title": "Operating Model",
@@ -1909,7 +1912,7 @@
   {
    "id": "organization/operating-model/roles",
    "section": "organization",
-   "order": 2,
+   "order": 12,
    "type": "document",
    "slug": "/organization/operating-model/roles/",
    "title": "Operating Model: Roles",
@@ -1927,7 +1930,7 @@
   {
    "id": "organization/operating-model/decisions",
    "section": "organization",
-   "order": 3,
+   "order": 13,
    "type": "document",
    "slug": "/organization/operating-model/decisions/",
    "title": "Operating Model: Decisions",
@@ -1945,7 +1948,7 @@
   {
    "id": "organization/organization-guide",
    "section": "organization",
-   "order": 5,
+   "order": 15,
    "type": "guide",
    "slug": "/organization/organization-guide/",
    "title": "Guide: Organization",
@@ -1968,7 +1971,7 @@
   {
    "id": "organization/organization-guide/who-is-responsible-for-what",
    "section": "organization",
-   "order": 6,
+   "order": 16,
    "type": "guide",
    "slug": "/organization/organization-guide/who-is-responsible-for-what/",
    "title": "Guide: Organization: Who is responsible for what",
@@ -1989,7 +1992,7 @@
   {
    "id": "organization/organization-guide/bodies-people-and-records",
    "section": "organization",
-   "order": 7,
+   "order": 17,
    "type": "guide",
    "slug": "/organization/organization-guide/bodies-people-and-records/",
    "title": "Guide: Organization: The governing bodies, the people records, the evidence, and the rule source",
@@ -2011,9 +2014,104 @@
    "production": "generated"
   },
   {
-   "id": "organization/roles",
+   "id": "organization/the-place-of-aicc-in-the-bank",
+   "section": "organization",
+   "order": 2,
+   "type": "outline",
+   "slug": "/organization/the-place-of-aicc-in-the-bank/",
+   "title": "The place of AICC in the Bank",
+   "source": [
+    "portal/content/organization/the-place-of-aicc-in-the-bank.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "Mandate and reporting line; what AICC is; what it is not; whom it works with"
+   ],
+   "series": "organization-course",
+   "series_title": "Organization",
+   "part": "2 of 6",
+   "tab": "Place in the Bank"
+  },
+  {
+   "id": "organization/the-roles",
+   "section": "organization",
+   "order": 3,
+   "type": "outline",
+   "slug": "/organization/the-roles/",
+   "title": "The Roles",
+   "source": [
+    "portal/content/organization/the-roles.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "The seven Roles in one line each; Hats; the rules of separation; the limits accepted while small"
+   ],
+   "series": "organization-course",
+   "series_title": "Organization",
+   "part": "3 of 6",
+   "tab": "Roles"
+  },
+  {
+   "id": "organization/who-does-what",
+   "section": "organization",
+   "order": 4,
+   "type": "outline",
+   "slug": "/organization/who-does-what/",
+   "title": "Who does what",
+   "source": [
+    "portal/content/organization/who-does-what.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "The responsibility pattern by family of activity; how to read it"
+   ],
+   "series": "organization-course",
+   "series_title": "Organization",
+   "part": "4 of 6",
+   "tab": "Who does what"
+  },
+  {
+   "id": "organization/people-and-appointments",
    "section": "organization",
    "order": 5,
+   "type": "outline",
+   "slug": "/organization/people-and-appointments/",
+   "title": "People and appointments",
+   "source": [
+    "portal/content/organization/people-and-appointments.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "Who appoints whom; joining, changing, leaving; the state at the baseline"
+   ],
+   "series": "organization-course",
+   "series_title": "Organization",
+   "part": "5 of 6",
+   "tab": "Appointments"
+  },
+  {
+   "id": "organization/how-the-organization-grows",
+   "section": "organization",
+   "order": 6,
+   "type": "outline",
+   "slug": "/organization/how-the-organization-grows/",
+   "title": "How the organization grows",
+   "source": [
+    "portal/content/organization/how-the-organization-grows.md"
+   ],
+   "production": "authored; explanatory, the Operating Model is the rule",
+   "outline": [
+    "Light mode; the steps out of it; the shape as it scales"
+   ],
+   "series": "organization-course",
+   "series_title": "Organization",
+   "part": "6 of 6",
+   "tab": "Growth"
+  },
+  {
+   "id": "organization/roles",
+   "section": "organization",
+   "order": 20,
    "type": "index",
    "slug": "/organization/roles/",
    "title": "The Roles",
@@ -2031,7 +2129,7 @@
   {
    "id": "organization/roles/executive-sponsor",
    "section": "organization",
-   "order": 11,
+   "order": 21,
    "type": "role",
    "slug": "/organization/roles/executive-sponsor/",
    "title": "Executive Sponsor",
@@ -2051,7 +2149,7 @@
   {
    "id": "organization/roles/aicc-lead",
    "section": "organization",
-   "order": 12,
+   "order": 22,
    "type": "role",
    "slug": "/organization/roles/aicc-lead/",
    "title": "AICC Lead",
@@ -2071,7 +2169,7 @@
   {
    "id": "organization/roles/solution-engineer",
    "section": "organization",
-   "order": 13,
+   "order": 23,
    "type": "role",
    "slug": "/organization/roles/solution-engineer/",
    "title": "Solution Engineer",
@@ -2091,7 +2189,7 @@
   {
    "id": "organization/roles/domain-owner",
    "section": "organization",
-   "order": 14,
+   "order": 24,
    "type": "role",
    "slug": "/organization/roles/domain-owner/",
    "title": "Domain Owner",
@@ -2111,7 +2209,7 @@
   {
    "id": "organization/roles/domain-expert",
    "section": "organization",
-   "order": 15,
+   "order": 25,
    "type": "role",
    "slug": "/organization/roles/domain-expert/",
    "title": "Domain Expert",
@@ -2131,7 +2229,7 @@
   {
    "id": "organization/roles/control-function-contact",
    "section": "organization",
-   "order": 16,
+   "order": 26,
    "type": "role",
    "slug": "/organization/roles/control-function-contact/",
    "title": "Control Function Contact",
@@ -2151,7 +2249,7 @@
   {
    "id": "organization/roles/platform-owner",
    "section": "organization",
-   "order": 17,
+   "order": 27,
    "type": "role",
    "slug": "/organization/roles/platform-owner/",
    "title": "Platform Owner",

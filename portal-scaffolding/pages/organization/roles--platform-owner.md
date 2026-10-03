@@ -2,7 +2,7 @@
 id: organization/roles/platform-owner
 title: Platform Owner
 section: organization
-order: 17
+order: 27
 type: role
 slug: /organization/roles/platform-owner/
 source: charter/documents/operating-model.md; charter/guides/organization-guide.md

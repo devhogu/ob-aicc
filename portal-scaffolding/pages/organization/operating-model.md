@@ -2,7 +2,7 @@
 id: organization/operating-model
 title: Operating Model
 section: organization
-order: 1
+order: 11
 type: document
 slug: /organization/operating-model/
 source: charter/documents/operating-model.md

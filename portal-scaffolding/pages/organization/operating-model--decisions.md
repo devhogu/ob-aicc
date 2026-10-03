@@ -2,7 +2,7 @@
 id: organization/operating-model/decisions
 title: Operating Model: Decisions
 section: organization
-order: 3
+order: 13
 type: document
 slug: /organization/operating-model/decisions/
 source: charter/documents/operating-model.md

@@ -2,7 +2,7 @@
 id: organization/roles/control-function-contact
 title: Control Function Contact
 section: organization
-order: 16
+order: 26
 type: role
 slug: /organization/roles/control-function-contact/
 source: charter/documents/operating-model.md; charter/guides/organization-guide.md

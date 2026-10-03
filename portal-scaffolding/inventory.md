@@ -116,14 +116,19 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Governance | Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs | /governance/unit-governance-workflow/events-and-sequences/ | workflow | workflows/unit-governance.md | 4, 5, 6, 7, 8, 9 | 1015 | generated |
 | Governance | Guide: Unit governance | /governance/unit-governance-guide/ | guide | guides/unit-governance-guide.md | 1, 2, 3, 4, 5, 6 | 1247 | generated |
 | Governance | Guide: Unit governance: The controls and how to test them, and the rule source | /governance/unit-governance-guide/the-controls/ | guide | guides/unit-governance-guide.md | 7, 8 | 1704 | generated |
-| Organization | Organization | /organization/ | section | none | none |  | authored, with a generated list |
+| Organization | Organization | /organization/ | section | portal/content/organization/overview.md | all |  | authored; the first part of the course, explanatory, the Operating Model is the rule |
+| Organization | The place of AICC in the Bank | /organization/the-place-of-aicc-in-the-bank/ | outline | portal/content/organization/the-place-of-aicc-in-the-bank.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Organization | The Roles | /organization/the-roles/ | outline | portal/content/organization/the-roles.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Organization | Who does what | /organization/who-does-what/ | outline | portal/content/organization/who-does-what.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Organization | People and appointments | /organization/people-and-appointments/ | outline | portal/content/organization/people-and-appointments.md | all |  | authored; explanatory, the Operating Model is the rule |
+| Organization | How the organization grows | /organization/how-the-organization-grows/ | outline | portal/content/organization/how-the-organization-grows.md | all |  | authored; explanatory, the Operating Model is the rule |
 | Organization | Operating Model | /organization/operating-model/ | document | documents/operating-model.md | 1, 2, 3 | 377 | generated |
 | Organization | Operating Model: Roles | /organization/operating-model/roles/ | document | documents/operating-model.md | 4 | 1516 | generated |
 | Organization | Operating Model: Decisions | /organization/operating-model/decisions/ | document | documents/operating-model.md | 5 | 742 | generated |
 | Organization | Guide: Organization | /organization/organization-guide/ | guide | guides/organization-guide.md | 1, 2, 3 | 830 | generated |
-| Organization | The Roles | /organization/roles/ | index | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | Guide: Organization: Who is responsible for what | /organization/organization-guide/who-is-responsible-for-what/ | guide | guides/organization-guide.md | 4 | 1417 | generated |
 | Organization | Guide: Organization: The governing bodies, the people records, the evidence, and the rule source | /organization/organization-guide/bodies-people-and-records/ | guide | guides/organization-guide.md | 5, 6, 7, 8 | 941 | generated |
+| Organization | The Roles | /organization/roles/ | index | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | Executive Sponsor | /organization/roles/executive-sponsor/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | AICC Lead | /organization/roles/aicc-lead/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | Solution Engineer | /organization/roles/solution-engineer/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |

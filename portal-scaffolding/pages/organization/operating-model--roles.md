@@ -2,7 +2,7 @@
 id: organization/operating-model/roles
 title: Operating Model: Roles
 section: organization
-order: 2
+order: 12
 type: document
 slug: /organization/operating-model/roles/
 source: charter/documents/operating-model.md

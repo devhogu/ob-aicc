@@ -2,7 +2,7 @@
 id: organization/roles/domain-owner
 title: Domain Owner
 section: organization
-order: 14
+order: 24
 type: role
 slug: /organization/roles/domain-owner/
 source: charter/documents/operating-model.md; charter/guides/organization-guide.md

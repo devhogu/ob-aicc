@@ -2,7 +2,7 @@
 id: organization/organization-guide
 title: Guide: Organization
 section: organization
-order: 5
+order: 15
 type: guide
 slug: /organization/organization-guide/
 source: charter/guides/organization-guide.md

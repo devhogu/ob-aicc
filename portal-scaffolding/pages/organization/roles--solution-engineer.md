@@ -2,7 +2,7 @@
 id: organization/roles/solution-engineer
 title: Solution Engineer
 section: organization
-order: 13
+order: 23
 type: role
 slug: /organization/roles/solution-engineer/
 source: charter/documents/operating-model.md; charter/guides/organization-guide.md
