@@ -1265,13 +1265,21 @@ def home_page(site, p, lang):
         sp2 = site.by_id[s['id'] + '/index']
         line = sec.get('line', {}).get(lang) or sec.get('line', {}).get('en') or sec['intro'][lang].split('. ')[0].rstrip('.') + '.'
         scards += '<li class="o-card linked card--compact" data-tip="%s" data-tip-title="%s">%s<h3><a href="%s">%s</a></h3><p class="card-desc">%s</p></li>' % (esc(sec['intro'][lang].split('. ')[0]), esc(sec['label'][lang]), icon(sec['icon']), site.rel(url, site.url(sp2, lang)), esc(sec['label'][lang]), esc(line))
-    ctas = ''.join('<a class="home-cta%s" href="%s">%s</a>' % (' primary' if i == 0 else '', site.rel(url, site.url(site.by_id[c['to']], lang)), esc(c['label'][lang])) for i, c in enumerate(a['cta']))
-    stand = ''.join('<li><h3>%s</h3><p>%s</p><a href="%s">%s &rsaquo;</a></li>' % (esc(st['title'][lang]), esc(st['text'][lang]), site.rel(url, site.url(site.by_id[st['to']], lang)), esc(st['link'][lang])) for st in a['stand'])
-    chips = ''.join('<li><a href="%s#c-%s">%s</a></li>' % (sp_url, num.replace('.', '-'), esc(t)) for k, (num, t, o) in enumerate(pri))
+    def tip_of(pid):
+        q = site.by_id.get(pid) or site.by_id.get(pid + '/index')
+        if q is None:
+            return ''
+        if q['type'] == 'section' or q['id'].endswith('/index'):
+            sec = site.auth['sections'].get(q.get('section') or '', {})
+            return (sec.get('line', {}).get(lang) or sec.get('line', {}).get('en') or desc_of(site, q))
+        return desc_of(site, q)
+    ctas = ''.join('<a class="home-cta%s" href="%s" data-tip="%s">%s</a>' % (' primary' if i == 0 else '', site.rel(url, site.url(site.by_id[c['to']] if c['to'] in site.by_id else site.by_id[c['to'] + '/index'], lang)), esc(tip_of(c['to'])), esc(c['label'][lang])) for i, c in enumerate(a['cta']))
+    stand = ''.join('<li class="linked" data-tip="%s" data-tip-title="%s"><h3>%s</h3><p>%s</p><a href="%s">%s &rsaquo;</a></li>' % (esc(tip_of(st['to'])), esc(st['link'][lang]), esc(st['title'][lang]), esc(st['text'][lang]), site.rel(url, site.url(site.by_id[st['to']], lang)), esc(st['link'][lang])) for st in a['stand'])
+    chips = ''.join('<li><a href="%s#c-%s" data-tip="%s" data-tip-title="%s">%s</a></li>' % (sp_url, num.replace('.', '-'), esc(o), esc('%s %d' % (m['strategic_priority'], k + 1)), esc(t)) for k, (num, t, o) in enumerate(pri))
     lp = site.by_id['knowledge-base/learning-paths']
     main = f'''<section class="home-hero"><p class="o-eyebrow">{esc(a['eyebrow'][lang])}</p><h1>{esc(a['title'][lang])}</h1><p class="o-lead home-lead">{esc(a['lead'][lang])}</p><p class="home-ctas">{ctas}</p></section>
 <section aria-label="{esc(m['home'])}"><ul class="home-stand">{stand}</ul></section>
-<section aria-labelledby="h-pri" class="home-pri"><h2 id="h-pri">{esc(m['strategic_priorities'])}</h2><p class="home-pri-lead">{esc(a['priorities_lead'][lang])}</p><ol class="home-chips">{chips}</ol><p class="home-more"><a href="{sp_url}">{esc(m['strategic_priorities'])} &rsaquo;</a> <a href="{rp_url}">{esc(m['maturity_roadmap'])} &rsaquo;</a> <a href="{site.rel(url, site.url(site.by_id['about/strategy'], lang))}">{esc(site.by_id['about/strategy']['title'])} &rsaquo;</a></p></section>
+<section aria-labelledby="h-pri" class="home-pri"><h2 id="h-pri">{esc(m['strategic_priorities'])}</h2><p class="home-pri-lead">{esc(a['priorities_lead'][lang])}</p><ol class="home-chips">{chips}</ol></section>
 <section aria-labelledby="h-sec"><h2 id="h-sec">{esc(a['sections_title'][lang])}</h2><ul class="o-grid card-list cards-compact home-sections">{scards}</ul></section>
 <section class="home-newhere"><p>{esc(a['newhere'][lang])} <a href="{site.rel(url, site.url(lp, lang))}">{esc(a['newhere_link'][lang])} &rsaquo;</a></p></section>'''
     return layout(site, p, lang, main, [])
