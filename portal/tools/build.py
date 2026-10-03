@@ -765,8 +765,15 @@ def doc_parts(site, p):
                   key=lambda x: (x['section'] != p['section'], x['order'], x['id']))
 
 
+def asset_version(name):
+    """A short content hash of a site asset, appended to its address so that a browser fetches a changed file instead of a cached one."""
+    path = os.path.join(PORTAL, 'site', name)
+    return hashlib.sha1(open(path, 'rb').read()).hexdigest()[:8]
+
+
 def layout(site, p, lang, main_html, outline):
     m = site.msg[lang]
+    vcss, vjs = asset_version('charter.css'), asset_version('site.js')
     url = site.url(p, lang)
     A = site.assets(url)
     home = site.rel(url, '/%s/' % lang)
@@ -846,9 +853,9 @@ def layout(site, p, lang, main_html, outline):
 <link rel="stylesheet" href="{A}/ui/tokens.css">
 <link rel="stylesheet" href="{A}/ui/primitives.css">
 <link rel="stylesheet" href="{A}/ui/workspace.css">
-<link rel="stylesheet" href="{A}/charter.css">
+<link rel="stylesheet" href="{A}/charter.css?v={vcss}">
 <link rel="alternate" hreflang="{other}" href="{site.rel(url, site.url(p, other))}">
-<script src="{A}/site.js" defer data-search="{A}/search-{lang}.json" data-t-none="{esc(m['search_none'])}" data-t-light="{esc(m['theme_to_light'])}" data-t-dark="{esc(m['theme_to_dark'])}" data-t-copied="{esc(m['copied'])}" data-t-mail-body="{esc(m['fb_mail_body'])}" data-t-dz-close="{esc(m['dz_close'])}"></script>
+<script src="{A}/site.js?v={vjs}" defer data-search="{A}/search-{lang}.json" data-t-none="{esc(m['search_none'])}" data-t-light="{esc(m['theme_to_light'])}" data-t-dark="{esc(m['theme_to_dark'])}" data-t-copied="{esc(m['copied'])}" data-t-mail-body="{esc(m['fb_mail_body'])}" data-t-dz-close="{esc(m['dz_close'])}"></script>
 </head>
 <body class="charter">
 <a class="o-skip" href="#main">{esc(m['skip'])}</a>

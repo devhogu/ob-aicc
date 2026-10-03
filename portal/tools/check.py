@@ -105,6 +105,7 @@ for path, (p, text) in parsed.items():
         if h.startswith(('mailto:', 'javascript:')):
             continue
         target, frag = urldefrag(h)
+        target = target.split('?', 1)[0]
         if target.startswith(('http:', 'https:')):
             continue
         if target.startswith('smb://'):
