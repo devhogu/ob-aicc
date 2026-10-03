@@ -2,10 +2,15 @@
 id: responsible-ai/ai-risk-control-workflow
 title: AI risk and control workflow
 section: responsible-ai
-order: 12
+order: 13
 type: workflow
 slug: /responsible-ai/ai-risk-control-workflow/
 source: charter/workflows/ai-risk-control.md
+source_sections: 1, 2, 3
+document: ai-risk-control-workflow
+part: 1 of 2
+words: 1082
+series: set-ai-risk-control
 production: generated
 status: scaffold
 ---
@@ -17,6 +22,12 @@ Page type: workflow. Address: /responsible-ai/ai-risk-control-workflow/
 ## Source
 
 - charter/workflows/ai-risk-control.md
+
+## Sections of the source
+
+- 1. Intent and scope (139 words)
+- 2. The Risk Tier (365 words)
+- 3. The gates before first use (578 words)
 
 ## Outline
 

@@ -2,11 +2,15 @@
 id: delivery/cadence-workflow
 title: Cadence
 section: delivery
-order: 33
+order: 37
 type: workflow
 slug: /delivery/cadence-workflow/
 source: charter/workflows/cadence.md
-companion: delivery/cadence-guide
+source_sections: 1, 2, 3, 4
+document: cadence-workflow
+part: 1 of 5
+words: 810
+series: set-cadence
 production: generated
 status: scaffold
 ---
@@ -18,6 +22,13 @@ Page type: workflow. Address: /delivery/cadence-workflow/
 ## Source
 
 - charter/workflows/cadence.md
+
+## Sections of the source
+
+- 1. Every week (63 words)
+- 2. Every Iteration (183 words)
+- 3. Every PI (330 words)
+- 4. The IP week (234 words)
 
 ## Outline
 

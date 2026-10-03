@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Guide: Unit governance: The controls and how to test them, and the rule source · AICC</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../../assets/charter.css">
+<link rel="alternate" hreflang="ru" href="../../../../ru/governance/unit-governance-guide/the-controls/">
+<script src="../../../../assets/site.js" defer data-search="../../../../assets/search-en.json" data-t-none="No page matches the query." data-t-light="Light theme" data-t-dark="Dark theme" data-t-copied="Copied" data-t-mail-body="Page: {title}
+Reference: {ref}
+Address: {url}
+
+Question or comment:
+" data-t-dz-close="Close"></script>
+</head>
+<body class="charter">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>AI Competence Center</span></a>
+  <span class="header-scope">Charter and governance</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search the charter</label><input id="q" type="search" autocomplete="off" placeholder="Search the charter" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Language"><a lang="en" hreflang="en" href="./" aria-current="true">EN</a><a lang="ru" hreflang="ru" href="../../../../ru/governance/unit-governance-guide/the-controls/">RU</a></nav><button id="theme-switch" type="button">Dark theme</button></div>
+</header>
+<div class="o-frame">
+  <aside class="o-nav"><details open><summary>Sections of the site</summary><nav aria-label="Sections"><a href="../../../"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" /> <path d="M15 5.764v15" /> <path d="M9 3.236v15" /> </svg> <span>AICC</span></a><a href="../../../about/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg> <span>About AICC</span></a><a href="../../../responsible-ai/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /> </svg> <span>Responsible AI</span></a><a href="../../../services/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path d="M16 3.128a4 4 0 0 1 0 7.744" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle cx="9" cy="7" r="4" /> </svg> <span>Services</span></a><a href="../../../portfolio/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 6a9 9 0 0 0-9 9V3" /> <circle cx="18" cy="6" r="3" /> <circle cx="6" cy="18" r="3" /> </svg> <span>Portfolio</span></a><a href="../../../delivery/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="8" height="8" x="3" y="3" rx="2" /> <path d="M7 11v4a2 2 0 0 0 2 2h4" /> <rect width="8" height="8" x="13" y="13" rx="2" /> </svg> <span>Delivery</span></a><a href="../../" aria-current="true"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M15 3v18" /> <rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M21 9H3" /> <path d="M21 15H3" /> </svg> <span>Governance and oversight</span></a><div class="nav-sub"><a href="../../control-loops/" data-tip="The control loops">Operating Model</a><a href="../../delivery-records-controls-and-measures/" data-tip="Records and controls; Measures">Solution Lifecycle Model: Records, controls, and measures</a><a href="../../unit-governance-workflow/" aria-current="page" data-tip="The control of AICC as a unit: the loops on the Steerings and what each Steering carries, how a decision escalates, the events, a month, a quarter, and a year in sequence, an AI Incident, the reportin">Unit governance</a></div><a href="../../../organization/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M8 5h13" /> <path d="M13 12h8" /> <path d="M13 19h8" /> <path d="M3 10a2 2 0 0 0 2 2h3" /> <path d="M3 5v12a2 2 0 0 0 2 2h3" /> </svg> <span>Organization</span></a><a href="../../../knowledge-base/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /> </svg> <span>Knowledge base</span></a><a href="../../../reference/"><svg class="o-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /> </svg> <span>Reference</span></a><div class="nav-legal"><a href="../../../privacy/">Privacy</a><a href="../../../terms-of-use/">Terms of use</a></div></nav></details>
+    <p class="o-caption">Baseline revision 1.0 · 2 October 2026</p></aside>
+  <main class="o-main" id="main" tabindex="-1">
+    <div class="crumbbar has-ctx"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Breadcrumb"><a href="../../../">AICC</a> / <a href="../../">Governance and oversight</a> / Guide: Unit governance: The controls and how to test them, and the rule source</nav><a class="crumb-next" href="../../../organization/" rel="next"><span>Next:</span> <strong>Organization</strong> &rsaquo;</a></div></div>
+    <div class="o-reading"><div class="o-copy"><h1>Guide: Unit governance: The controls and how to test them, and the rule source</h1><p class="o-lead" lang="en">How the unit is directed, reported, and controlled</p><nav class="o-tabs parts" aria-label="Parts of this document or course"><a href="../../unit-governance-workflow/">Loops and decisions</a><a href="../../unit-governance-workflow/events-and-sequences/">Events and sequences</a><a href="../">Guide: governance</a><a href="./" aria-current="page">Guide: the controls</a></nav><div class="o-doc" lang="en"><h2 id="s-7">7. The controls and how to test them</h2>
+<p>This section is the reference of internal audit, and the rest of the guide can be read without it. The <a class="xref" href="../../controls/#s-8">Operating Model 8</a> lists each control with its rule, owner, timing, and evidence record. The table below gives, for each control, its objective, its type, and how it is tested. Type is Directive (sets a rule or a direction), Preventive (stops an error before it happens), or Detective (finds an error after it happens). The test and the status of each control at a date are in the <a class="term" href="../../../reference/vocabulary/#t-control-matrix" data-tip="The living Record in the Registry that keeps the test and the status of each control of the Operating Model 8 by its reference" data-tip-title="Control Matrix">Control Matrix</a> in the <a class="term" href="../../../reference/vocabulary/#t-registry" data-tip="The folder of the Records of AICC: the process records of the work, the decisions, the proposals, and the governance records" data-tip-title="Registry">Registry</a>.</p>
+<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Control</th>
+<th>Objective</th>
+<th>Type</th>
+<th>How to test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-01</td>
+<td>The mandate of the Executive Sponsor, the appointment of the AICC Lead, and the naming of the AI Steering Committee</td>
+<td>AICC acts only under a documented authority, and the Board and the Executive Sponsor name those who hold the Roles above AICC</td>
+<td>Directive</td>
+<td>Compare the decision reference with the mandate and the appointment order; read the naming of the Executive Sponsor and of the members of the AI Steering Committee</td>
+</tr>
+<tr>
+<td>C-02</td>
+<td>Priorities, funding, and guardrails</td>
+<td>Funding and commitments stay within a limit that the Executive Sponsor sets</td>
+<td>Directive</td>
+<td>Read the Priorities against the Guardrails and the Decision Records of the year</td>
+</tr>
+<tr>
+<td>C-03</td>
+<td>The yearly review of the risk appetite and the policy</td>
+<td>The use of AI stays within the appetite that the Executive Sponsor decides</td>
+<td>Directive</td>
+<td>Read the Statement, the decision of the Executive Sponsor, and the Decision Record of the review</td>
+</tr>
+<tr>
+<td>C-04</td>
+<td>Review of the documents</td>
+<td>The documents stay consistent and in force</td>
+<td>Detective</td>
+<td>Read the report of the check and the Decision Record that closes its findings</td>
+</tr>
+<tr>
+<td>C-05</td>
+<td>Monthly review of progress, risks, and blockers, with a sample of the AICC Lead's Decisions</td>
+<td>A single person's decisions are reviewed by another</td>
+<td>Detective</td>
+<td>Read the Summary of each month and the sample it records</td>
+</tr>
+<tr>
+<td>C-06</td>
+<td>Results, risk check with the review of each Risk Tier 3 Solution, and Maturity Level</td>
+<td>The Executive Sponsor sees results and risk each quarter, including each Risk Tier 3 Solution</td>
+<td>Detective</td>
+<td>Read the Report, with the review of each Risk Tier 3 Solution, and the Snapshot of the quarter</td>
+</tr>
+<tr>
+<td>C-07</td>
+<td>Report to the Board Committee</td>
+<td>The Board Committee is informed by the report that the Executive Sponsor approved</td>
+<td>Detective</td>
+<td>Read the issuance block: approver, date, recipient</td>
+</tr>
+<tr>
+<td>C-08</td>
+<td>Service Agreement for an Engagement</td>
+<td>The commitment to a function is written before the work</td>
+<td>Preventive</td>
+<td>Compare the Agreement with the Initiative and its dates</td>
+</tr>
+<tr>
+<td>C-09</td>
+<td>Approval of the business case, and the decision after the MVP</td>
+<td>An Initiative is funded only on a complete case, one that expects Risk Tier 2 or 3 is cleared by the Control Functions, a higher Risk Tier assigned later is cleared again, and the MVP is followed by a decision</td>
+<td>Preventive</td>
+<td>Read the open sections line and the decision table of the Brief, the clearances of the Control Function Contacts, the Decision Record, and the decision at the end of the MVP</td>
+</tr>
+<tr>
+<td>C-10</td>
+<td>Outcome Report, acceptance, and confirmation of the benefit</td>
+<td>A Feature and a Capability are accepted by the product owner, a Solution by the Team and then by its Domain Owner, the outcome is reported, and the benefit is confirmed by the function, not by AICC</td>
+<td>Detective</td>
+<td>Read the acceptance notes in the backlog, the final acceptance of the Team and the business acceptance in the release block, and the Report, each with who and when, and the confirmation with its source</td>
+</tr>
+<tr>
+<td>C-11</td>
+<td>Benefit confirmed</td>
+<td>AICC claims only confirmed benefit</td>
+<td>Detective</td>
+<td>Compare the benefit claimed with the benefit confirmed in the Outcome Report</td>
+</tr>
+<tr>
+<td>C-12</td>
+<td>Risk Tier assignment</td>
+<td>Every Solution has a Tier that sets its checks, and a Solution that the AICC Lead built has it assigned by the Executive Sponsor</td>
+<td>Preventive</td>
+<td>Read the Tier, who assigned it, and when</td>
+</tr>
+<tr>
+<td>C-13</td>
+<td>Check or validation before the first deployment</td>
+<td>Nothing reaches real users or data unchecked</td>
+<td>Preventive</td>
+<td>Compare the date of the check with the first deployment</td>
+</tr>
+<tr>
+<td>C-14</td>
+<td>Release</td>
+<td>Use beyond the first users is decided by the right owner</td>
+<td>Preventive</td>
+<td>Compare the release with the check and the Tier; read the release block and, where AICC hands the Solution to a Domain, the Acceptance Checklist</td>
+</tr>
+<tr>
+<td>C-15</td>
+<td>Approval of the use of a Solution for a data class, and training before first use</td>
+<td>Data is used only where its owner approved, and users are trained before first use</td>
+<td>Preventive</td>
+<td>Read the approval, who gave it, and when, and the note of the completion of the training</td>
+</tr>
+<tr>
+<td>C-16</td>
+<td>An AI Incident, and the notice of a major one to the Board Committee</td>
+<td>Incidents are handled in the incident management of the Bank, with AICC taking part, and reviewed, and the Board Committee is told of a major one without delay</td>
+<td>Detective</td>
+<td>Read the nil statement; for an Incident, the ticket in Service Management and the AI Incident Review; read the quarterly reconciliation with the incident management of the Bank and the notice of a major one to the Board Committee</td>
+</tr>
+<tr>
+<td>C-17</td>
+<td>An Exception, a suspension, and a stop</td>
+<td>A departure from a requirement is decided, limited, and recorded, and a suspension and a stop are recorded</td>
+<td>Preventive</td>
+<td>Read the nil statement; for an Exception, its expiry and its monthly review; for a suspension, the Decision Log entry for it and for its lifting; for a stop, the Control Sign-Off</td>
+</tr>
+<tr>
+<td>C-18</td>
+<td>Check of a provider</td>
+<td>A provider is checked for data, terms, and exit before use</td>
+<td>Preventive</td>
+<td>Compare the date of the check with the first use of the provider</td>
+</tr>
+<tr>
+<td>C-19</td>
+<td>Sharing of data or decisions outside the Bank</td>
+<td>Data and decisions stay within the Bank unless permitted</td>
+<td>Preventive</td>
+<td>Read the Data Sharing Arrangement and its Decision Record</td>
+</tr>
+<tr>
+<td>C-20</td>
+<td>A Proposal to adopt a Solution at scale, the yearly Proposal of the AI adoption strategy, and the quarterly review of the Adopted Solutions</td>
+<td>Adoption of a Solution is decided by its owners, the yearly strategy by the Bank, and the Adopted Solutions are reviewed each quarter</td>
+<td>Directive</td>
+<td>Read the Proposal and the decision, the yearly Proposal, and the review of the Adopted Solutions in the Quarterly Report</td>
+</tr>
+<tr>
+<td>C-21</td>
+<td>Output published to investors, lenders, regulators, or the Board</td>
+<td>Published output is approved before it is issued</td>
+<td>Preventive</td>
+<td>Read the approval for each edition</td>
+</tr>
+<tr>
+<td>C-22</td>
+<td>Separation of duties and independence</td>
+<td>No person checks, releases, or gives the business acceptance of their own work</td>
+<td>Preventive</td>
+<td>At a release, compare the builder, the Checker, and the releaser; compare the Holders of the Roles with the rules of separation and the accepted limits</td>
+</tr>
+<tr>
+<td>C-23</td>
+<td>Intake of Engagements and the limit on work in progress</td>
+<td>AICC takes in no more than the limit on work in progress allows</td>
+<td>Preventive</td>
+<td>Compare the Active Initiatives and the Service Agreements issued with the limit on the Active Initiatives</td>
+</tr>
+<tr>
+<td>C-24</td>
+<td>Completeness of the Outcome Reports</td>
+<td>Closed Engagements are reported</td>
+<td>Detective</td>
+<td>Read section 8 of the Summary</td>
+</tr>
+<tr>
+<td>C-25</td>
+<td>Access of internal audit</td>
+<td>Internal audit can see the records</td>
+<td>Directive</td>
+<td>Test read access to the Registry, and read-only access to Jira, Confluence, and Service Management</td>
+</tr>
+<tr>
+<td>C-26</td>
+<td>Access review of the Registry, the tools, and production</td>
+<td>Access follows the Roles, and the access of Solution Engineers to production is reviewed</td>
+<td>Preventive</td>
+<td>Read the result of the quarterly comparison with the Appointments Record and the access review of the Bank for production</td>
+</tr>
+<tr>
+<td>C-27</td>
+<td>Acceptance of a risk beyond the appetite</td>
+<td>Only the Executive Sponsor accepts a risk beyond the appetite, and the Board Committee is told</td>
+<td>Preventive</td>
+<td>Read the Decision Record and the report to the Board Committee</td>
+</tr>
+<tr>
+<td>C-28</td>
+<td>Reassessment of the Risk Tier and expiry of a validation</td>
+<td>A Solution is not used on a validation that has expired or on a stale Risk Tier</td>
+<td>Preventive</td>
+<td>Compare the dates in the AI Registry with the dates of the reassessment and the validation</td>
+</tr>
+<tr>
+<td>C-29</td>
+<td>Review of live Solutions</td>
+<td>Live Solutions are monitored by their owners</td>
+<td>Detective</td>
+<td>Read the note of the review in the Solution Definition at each Iteration Review and Demo</td>
+</tr>
+<tr>
+<td>C-30</td>
+<td>Deployment to production, and change to a released Solution</td>
+<td>A deployment and a change are approved by the change management of the Bank, decided, tested, and released by the right owner</td>
+<td>Preventive</td>
+<td>Take a deployment and a change: read the decision on a new check, the change ticket, the test result, and the release</td>
+</tr>
+<tr>
+<td>C-31</td>
+<td>Retirement of a Solution</td>
+<td>A retired Solution leaves no access, data, or registry entry behind</td>
+<td>Preventive</td>
+<td>Read the approval, and compare access, data, and the AI Registry entry with the retirement</td>
+</tr>
+<tr>
+<td>C-32</td>
+<td>Deficiencies and findings</td>
+<td>A failed control or a finding is followed up to closure</td>
+<td>Detective</td>
+<td>Take a finding: read its owner, its due date, and the monthly review</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="s-8">8. Rule source</h2>
+<p><a class="xref" href="../../../about/aicc-charter/#s-3">Charter 3</a> to 7; <a class="xref" href="../../../services/business-model/#s-5">Business Model 5</a> to 7; <a class="xref" href="../../../organization/operating-model/roles/#s-4">Operating Model 4</a> to 8; <a class="xref" href="../../../portfolio/portfolio-management-model/the-portfolio-loops/#s-4">Portfolio Management Model 4</a> and 6; <a class="xref" href="../../../delivery/solution-lifecycle-model/verification-release-and-acceptance/#s-7">Solution Lifecycle Model 7</a> to 9; <a class="xref" href="../../../responsible-ai/ai-policy/#s-2">AI Policy 2</a> to 6; <a class="xref" href="../../../reference/document-catalog/#s-3">Document Catalog 3</a>, 4, 7; the Unit governance workflow.</p>
+</div><nav class="o-pn" aria-label="Previous / Next"><a class="pn prev" href="../" rel="prev"><span>Previous</span>Guide: Unit governance</a><a class="pn next" href="../../../organization/" rel="next"><span>Next</span>Organization</a></nav><h2 class="about-deeper">Read further</h2><ul class="o-grid card-list cards-compact"><li class="o-card linked card--compact" data-tip="The control loops; Records and evidence; Controls" data-tip-title="Operating Model · AICC-ORG-01-EN"><p class="card-kicker">Document · 6 parts</p><h3><a href="../../control-loops/">Operating Model</a></h3><p class="card-desc" lang="en">The control loops; Records and evidence; Controls</p></li><li class="o-card linked card--compact" data-tip="Records and controls; Measures" data-tip-title="Solution Lifecycle Model: Records, controls, and measures · AICC-ORG-03-EN"><p class="card-kicker">Document · 8 parts</p><h3><a href="../../delivery-records-controls-and-measures/">Solution Lifecycle Model: Records, controls, and measures</a></h3><p class="card-desc" lang="en">Records and controls; Measures</p></li></ul></div><aside class="o-context" aria-label="On this page"><strong>On this page</strong><a class="lv2" href="#s-7">7. The controls and how to test them</a><a class="lv2" href="#s-8">8. Rule source</a></aside></div>
+    <footer class="o-footer">
+      <span class="foot-text">AI Competence Center, O!Bank. Baseline revision 1.0, 2 October 2026. The live records of AICC are kept in the Registry, Jira, Confluence, and Service Management. <a class="contact" href="mailto:talimbayev@obank.kg?subject=AICC%20Portal%20%5BAV4R0%5D%20page%20feedback">Contact us</a> <a class="contact" href="../../../privacy/">Privacy</a> <a class="contact" href="../../../terms-of-use/">Terms of use</a></span>
+      <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: AV4R0</span></button>
+    </footer>
+  </main>
+</div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="AICC Portal [AV4R0] page feedback" data-ref="AV4R0" data-page="Guide: Unit governance: The controls and how to test them, and the rule source">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: AV4R0</code><button type="button" class="fb-copy" data-copy-text="AV4R0">Copy</button></div>
+    <div class="fb-body"><p>Provide feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>
+  </form>
+</dialog>
+</body>
+</html>

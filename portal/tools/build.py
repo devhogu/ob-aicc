@@ -48,7 +48,7 @@ DEFAULT_LANG = 'en'
 BASELINE = {'revision': '1.0', 'date': '2026-10-02'}
 
 FONTS = os.path.join(ROOT, 'portal', '.tools', 'pw-syslibs')
-SHORT = {'Statement of Intent on the Adoption of Artificial Intelligence': 'Statement of Intent', 'Vocabulary and Style': 'Vocabulary'}
+SHORT = {'Statement of Intent on the Adoption of Artificial Intelligence': 'Statement of Intent', 'Vocabulary and Style': 'Vocabulary', 'Portfolio and service delivery workflow': 'Service delivery workflow'}
 NAV_SHORT = {'AICC Charter': 'Charter', 'Portfolio measures: definitions and formulas': 'Portfolio measures', 'Delivery measures: definitions and formulas': 'Delivery measures',
              'Portfolio and service delivery workflow': 'Service delivery workflow'}      # shorter in the left navigation
 PAGE_TITLE = {'AICC Charter': 'AI Competence Center Charter'}      # fuller as the page title
@@ -755,7 +755,7 @@ def nav_title(site, p):
 def doc_parts(site, p):
     if not p.get('document'):
         return []
-    return sorted([x for x in site.pages if x.get('document') == p['document'] and x['source'][0] == p['source'][0] and x['type'] in ('document', 'catalogue')],
+    return sorted([x for x in site.pages if x.get('document') == p['document'] and x['source'][0] == p['source'][0] and x['type'] in ('document', 'catalogue', 'workflow', 'guide')],
                   key=lambda x: (x['section'] != p['section'], x['order'], x['id']))
 
 
@@ -818,7 +818,7 @@ def layout(site, p, lang, main_html, outline):
     bc = '<nav class="o-eyebrow crumbs" aria-label="%s">%s</nav>' % (esc(m['breadcrumb']), ' / '.join(crumbs))
     nx = next_page(site, p)
     if nx:
-        bc = '<div class="crumbbar%s">%s<a class="crumb-next" href="%s" rel="next"><span>%s:</span> <strong>%s</strong> &rsaquo;</a></div>' % (
+        bc = '<div class="crumbbar%s"><div class="crumbline">%s<a class="crumb-next" href="%s" rel="next"><span>%s:</span> <strong>%s</strong> &rsaquo;</a></div></div>' % (
             ' has-ctx' if outline else '', bc, site.rel(url, site.url(nx, lang)), esc(m['next']), esc(flow_label(site, nx, lang)))
     ctx = ''
     if outline:
@@ -933,7 +933,7 @@ def series_pages(site, p):
 
 
 def parts_html(site, p, lang):
-    parts = doc_parts(site, p) or series_pages(site, p)
+    parts = series_pages(site, p) or doc_parts(site, p)
     if len(parts) < 2:
         return ''
     url = site.url(p, lang)
@@ -1010,7 +1010,7 @@ def prev_next(site, p, lang):
 
 def companion_html(site, p, lang):
     c = p.get('companion')
-    if not c or c not in site.by_id:
+    if not c or c not in site.by_id or p.get('series'):
         return ''
     q = site.by_id[c]
     key = 'companion_guide' if q['type'] == 'guide' else 'companion_workflow'

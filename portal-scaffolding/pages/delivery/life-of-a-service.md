@@ -2,7 +2,7 @@
 id: delivery/life-of-a-service
 title: The life of a Service
 section: delivery
-order: 42
+order: 43
 type: outline
 slug: /delivery/life-of-a-service/
 source: portal/content/delivery/life-of-a-service.md

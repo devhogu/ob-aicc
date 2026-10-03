@@ -1234,52 +1234,252 @@
    "source": [
     "charter/workflows/service-delivery.md"
    ],
-   "companion": "delivery/service-delivery-guide",
+   "source_sections": [
+    1,
+    2,
+    3
+   ],
+   "document": "service-delivery-workflow",
+   "part": "1 of 6",
+   "words": 867,
+   "series": "set-service-delivery",
+   "series_title": "Service delivery",
+   "tab": "Intent and levels",
+   "production": "generated"
+  },
+  {
+   "id": "delivery/service-delivery-workflow/the-portfolio-flow",
+   "section": "delivery",
+   "order": 32,
+   "type": "workflow",
+   "slug": "/delivery/service-delivery-workflow/the-portfolio-flow/",
+   "title": "Portfolio and service delivery workflow: The portfolio flow",
+   "source": [
+    "charter/workflows/service-delivery.md"
+   ],
+   "source_sections": [
+    4
+   ],
+   "document": "service-delivery-workflow",
+   "part": "2 of 6",
+   "words": 686,
+   "series": "set-service-delivery",
+   "series_title": "Service delivery",
+   "tab": "Portfolio flow",
+   "production": "generated"
+  },
+  {
+   "id": "delivery/service-delivery-workflow/the-execution",
+   "section": "delivery",
+   "order": 33,
+   "type": "workflow",
+   "slug": "/delivery/service-delivery-workflow/the-execution/",
+   "title": "Portfolio and service delivery workflow: The execution in the Program Increment",
+   "source": [
+    "charter/workflows/service-delivery.md"
+   ],
+   "source_sections": [
+    5
+   ],
+   "document": "service-delivery-workflow",
+   "part": "3 of 6",
+   "words": 797,
+   "series": "set-service-delivery",
+   "series_title": "Service delivery",
+   "tab": "Execution",
+   "production": "generated"
+  },
+  {
+   "id": "delivery/service-delivery-workflow/after-delivery",
+   "section": "delivery",
+   "order": 34,
+   "type": "workflow",
+   "slug": "/delivery/service-delivery-workflow/after-delivery/",
+   "title": "Portfolio and service delivery workflow: After delivery, oversight, decisions, and where it runs",
+   "source": [
+    "charter/workflows/service-delivery.md"
+   ],
+   "source_sections": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "document": "service-delivery-workflow",
+   "part": "4 of 6",
+   "words": 1034,
+   "series": "set-service-delivery",
+   "series_title": "Service delivery",
+   "tab": "After delivery",
    "production": "generated"
   },
   {
    "id": "delivery/service-delivery-guide",
    "section": "delivery",
-   "order": 32,
+   "order": 35,
    "type": "guide",
    "slug": "/delivery/service-delivery-guide/",
    "title": "Guide: Service delivery",
    "source": [
     "charter/guides/service-delivery-guide.md"
    ],
-   "companion": "delivery/service-delivery-workflow",
+   "source_sections": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "document": "service-delivery-guide",
+   "part": "5 of 6",
+   "words": 1563,
+   "series": "set-service-delivery",
+   "series_title": "Service delivery",
+   "tab": "Guide: flow and decisions",
+   "production": "generated"
+  },
+  {
+   "id": "delivery/service-delivery-guide/after-delivery",
+   "section": "delivery",
+   "order": 36,
+   "type": "guide",
+   "slug": "/delivery/service-delivery-guide/after-delivery/",
+   "title": "Guide: Service delivery: After delivery, situations, and rule source",
+   "source": [
+    "charter/guides/service-delivery-guide.md"
+   ],
+   "source_sections": [
+    5,
+    6,
+    7
+   ],
+   "document": "service-delivery-guide",
+   "part": "6 of 6",
+   "words": 397,
+   "series": "set-service-delivery",
+   "series_title": "Service delivery",
+   "tab": "Guide: after delivery",
    "production": "generated"
   },
   {
    "id": "delivery/cadence-workflow",
    "section": "delivery",
-   "order": 33,
+   "order": 37,
    "type": "workflow",
    "slug": "/delivery/cadence-workflow/",
    "title": "Cadence",
    "source": [
     "charter/workflows/cadence.md"
    ],
-   "companion": "delivery/cadence-guide",
+   "source_sections": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "document": "cadence-workflow",
+   "part": "1 of 5",
+   "words": 810,
+   "series": "set-cadence",
+   "series_title": "Cadence",
+   "tab": "Week to PI",
+   "production": "generated"
+  },
+  {
+   "id": "delivery/cadence-workflow/the-loops",
+   "section": "delivery",
+   "order": 38,
+   "type": "workflow",
+   "slug": "/delivery/cadence-workflow/the-loops/",
+   "title": "Cadence: The loops",
+   "source": [
+    "charter/workflows/cadence.md"
+   ],
+   "source_sections": [
+    5
+   ],
+   "document": "cadence-workflow",
+   "part": "2 of 5",
+   "words": 698,
+   "series": "set-cadence",
+   "series_title": "Cadence",
+   "tab": "Loops",
+   "production": "generated"
+  },
+  {
+   "id": "delivery/cadence-workflow/what-each-event-carries",
+   "section": "delivery",
+   "order": 39,
+   "type": "workflow",
+   "slug": "/delivery/cadence-workflow/what-each-event-carries/",
+   "title": "Cadence: What each event carries",
+   "source": [
+    "charter/workflows/cadence.md"
+   ],
+   "source_sections": [
+    6
+   ],
+   "document": "cadence-workflow",
+   "part": "3 of 5",
+   "words": 971,
+   "series": "set-cadence",
+   "series_title": "Cadence",
+   "tab": "What each event carries",
+   "production": "generated"
+  },
+  {
+   "id": "delivery/cadence-workflow/rules-calendar-and-light-mode",
+   "section": "delivery",
+   "order": 40,
+   "type": "workflow",
+   "slug": "/delivery/cadence-workflow/rules-calendar-and-light-mode/",
+   "title": "Cadence: Rules, the dated calendar, light mode, and vocabulary",
+   "source": [
+    "charter/workflows/cadence.md"
+   ],
+   "source_sections": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "document": "cadence-workflow",
+   "part": "4 of 5",
+   "words": 285,
+   "series": "set-cadence",
+   "series_title": "Cadence",
+   "tab": "Rules and calendar",
    "production": "generated"
   },
   {
    "id": "delivery/cadence-guide",
    "section": "delivery",
-   "order": 34,
+   "order": 41,
    "type": "guide",
    "slug": "/delivery/cadence-guide/",
    "title": "Guide: Cadence",
    "source": [
     "charter/guides/cadence-guide.md"
    ],
-   "companion": "delivery/cadence-workflow",
+   "source_sections": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "document": "cadence-guide",
+   "part": "5 of 5",
+   "words": 1450,
+   "series": "set-cadence",
+   "series_title": "Cadence",
+   "tab": "Guide: Cadence",
    "production": "generated"
   },
   {
    "id": "delivery/collaboration-tooling-workflow",
    "section": "delivery",
-   "order": 35,
+   "order": 41,
    "type": "workflow",
    "slug": "/delivery/collaboration-tooling-workflow/",
    "title": "Collaboration tooling",
@@ -1424,7 +1624,7 @@
   {
    "id": "delivery/experiment-workflow",
    "section": "delivery",
-   "order": 41,
+   "order": 42,
    "type": "outline",
    "slug": "/delivery/experiment-workflow/",
    "title": "The Experiment workflow: the Lab",
@@ -1440,7 +1640,7 @@
   {
    "id": "delivery/life-of-a-service",
    "section": "delivery",
-   "order": 42,
+   "order": 43,
    "type": "outline",
    "slug": "/delivery/life-of-a-service/",
    "title": "The life of a Service",
@@ -1457,7 +1657,7 @@
   {
    "id": "delivery/service-operations",
    "section": "delivery",
-   "order": 43,
+   "order": 44,
    "type": "outline",
    "slug": "/delivery/service-operations/",
    "title": "Service operations",
@@ -1742,13 +1942,69 @@
   {
    "id": "organization/organization-guide",
    "section": "organization",
-   "order": 4,
+   "order": 5,
    "type": "guide",
    "slug": "/organization/organization-guide/",
    "title": "Guide: Organization",
    "source": [
     "charter/guides/organization-guide.md"
    ],
+   "source_sections": [
+    1,
+    2,
+    3
+   ],
+   "document": "organization-guide",
+   "part": "1 of 3",
+   "words": 830,
+   "series": "set-organization-guide",
+   "series_title": "Guide: Organization",
+   "tab": "Roles and profiles",
+   "production": "generated"
+  },
+  {
+   "id": "organization/organization-guide/who-is-responsible-for-what",
+   "section": "organization",
+   "order": 6,
+   "type": "guide",
+   "slug": "/organization/organization-guide/who-is-responsible-for-what/",
+   "title": "Guide: Organization: Who is responsible for what",
+   "source": [
+    "charter/guides/organization-guide.md"
+   ],
+   "source_sections": [
+    4
+   ],
+   "document": "organization-guide",
+   "part": "2 of 3",
+   "words": 1417,
+   "series": "set-organization-guide",
+   "series_title": "Guide: Organization",
+   "tab": "Who is responsible for what",
+   "production": "generated"
+  },
+  {
+   "id": "organization/organization-guide/bodies-people-and-records",
+   "section": "organization",
+   "order": 7,
+   "type": "guide",
+   "slug": "/organization/organization-guide/bodies-people-and-records/",
+   "title": "Guide: Organization: The governing bodies, the people records, the evidence, and the rule source",
+   "source": [
+    "charter/guides/organization-guide.md"
+   ],
+   "source_sections": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "document": "organization-guide",
+   "part": "3 of 3",
+   "words": 941,
+   "series": "set-organization-guide",
+   "series_title": "Guide: Organization",
+   "tab": "Bodies, people, and records",
    "production": "generated"
   },
   {
@@ -2039,13 +2295,50 @@
   {
    "id": "responsible-ai/ai-risk-control-workflow",
    "section": "responsible-ai",
-   "order": 12,
+   "order": 13,
    "type": "workflow",
    "slug": "/responsible-ai/ai-risk-control-workflow/",
    "title": "AI risk and control workflow",
    "source": [
     "charter/workflows/ai-risk-control.md"
    ],
+   "source_sections": [
+    1,
+    2,
+    3
+   ],
+   "document": "ai-risk-control-workflow",
+   "part": "1 of 2",
+   "words": 1082,
+   "series": "set-ai-risk-control",
+   "series_title": "AI risk and control workflow",
+   "tab": "Risk Tier and gates",
+   "production": "generated"
+  },
+  {
+   "id": "responsible-ai/ai-risk-control-workflow/in-operation-and-situations",
+   "section": "responsible-ai",
+   "order": 14,
+   "type": "workflow",
+   "slug": "/responsible-ai/ai-risk-control-workflow/in-operation-and-situations/",
+   "title": "AI risk and control workflow: In operation, exceptions, single decisions, an AI Incident, situations, and where it runs",
+   "source": [
+    "charter/workflows/ai-risk-control.md"
+   ],
+   "source_sections": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "document": "ai-risk-control-workflow",
+   "part": "2 of 2",
+   "words": 1056,
+   "series": "set-ai-risk-control",
+   "series_title": "AI risk and control workflow",
+   "tab": "In operation and situations",
    "production": "generated"
   },
   {
@@ -2129,27 +2422,98 @@
   {
    "id": "governance/unit-governance-workflow",
    "section": "governance",
-   "order": 5,
+   "order": 6,
    "type": "workflow",
    "slug": "/governance/unit-governance-workflow/",
    "title": "Unit governance workflow",
    "source": [
     "charter/workflows/unit-governance.md"
    ],
-   "companion": "governance/unit-governance-guide",
+   "source_sections": [
+    1,
+    2,
+    3
+   ],
+   "document": "unit-governance-workflow",
+   "part": "1 of 4",
+   "words": 866,
+   "series": "set-unit-governance",
+   "series_title": "Unit governance",
+   "tab": "Loops and decisions",
+   "production": "generated"
+  },
+  {
+   "id": "governance/unit-governance-workflow/events-and-sequences",
+   "section": "governance",
+   "order": 7,
+   "type": "workflow",
+   "slug": "/governance/unit-governance-workflow/events-and-sequences/",
+   "title": "Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs",
+   "source": [
+    "charter/workflows/unit-governance.md"
+   ],
+   "source_sections": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "document": "unit-governance-workflow",
+   "part": "2 of 4",
+   "words": 1015,
+   "series": "set-unit-governance",
+   "series_title": "Unit governance",
+   "tab": "Events and sequences",
    "production": "generated"
   },
   {
    "id": "governance/unit-governance-guide",
    "section": "governance",
-   "order": 6,
+   "order": 8,
    "type": "guide",
    "slug": "/governance/unit-governance-guide/",
    "title": "Guide: Unit governance",
    "source": [
     "charter/guides/unit-governance-guide.md"
    ],
-   "companion": "governance/unit-governance-workflow",
+   "source_sections": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "document": "unit-governance-guide",
+   "part": "3 of 4",
+   "words": 1247,
+   "series": "set-unit-governance",
+   "series_title": "Unit governance",
+   "tab": "Guide: governance",
+   "production": "generated"
+  },
+  {
+   "id": "governance/unit-governance-guide/the-controls",
+   "section": "governance",
+   "order": 9,
+   "type": "guide",
+   "slug": "/governance/unit-governance-guide/the-controls/",
+   "title": "Guide: Unit governance: The controls and how to test them, and the rule source",
+   "source": [
+    "charter/guides/unit-governance-guide.md"
+   ],
+   "source_sections": [
+    7,
+    8
+   ],
+   "document": "unit-governance-guide",
+   "part": "4 of 4",
+   "words": 1704,
+   "series": "set-unit-governance",
+   "series_title": "Unit governance",
+   "tab": "Guide: the controls",
    "production": "generated"
   },
   {

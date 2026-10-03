@@ -26,7 +26,8 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Responsible AI | How the Bank applies it | /responsible-ai/how-the-bank-applies-it/ | outline | portal/content/responsible-ai/how-the-bank-applies-it.md | all |  | authored; explanatory, the AI Policy is the rule |
 | Responsible AI | AI terms explained | /responsible-ai/ai-terms-explained/ | outline | portal/content/responsible-ai/ai-terms-explained.md | all |  | authored; explanatory, the AI Policy is the rule |
 | Responsible AI | AI Policy | /responsible-ai/ai-policy/ | document | documents/ai-policy.md | all | 2155 | generated |
-| Responsible AI | AI risk and control workflow | /responsible-ai/ai-risk-control-workflow/ | workflow | workflows/ai-risk-control.md | all |  | generated |
+| Responsible AI | AI risk and control workflow | /responsible-ai/ai-risk-control-workflow/ | workflow | workflows/ai-risk-control.md | 1, 2, 3 | 1082 | generated |
+| Responsible AI | AI risk and control workflow: In operation, exceptions, single decisions, an AI Incident, situations, and where it runs | /responsible-ai/ai-risk-control-workflow/in-operation-and-situations/ | workflow | workflows/ai-risk-control.md | 4, 5, 6, 7, 8, 9 | 1056 | generated |
 | Services | Services | /services/ | section | portal/content/services/areas/overview.md | all |  | authored; the overview of the areas, the first part of the series |
 | Services | Advise and formulate | /services/advise-and-formulate/ | outline | portal/content/services/areas/advise-and-formulate.md | all |  | authored; generated table of the categories of the area |
 | Services | Build and run | /services/build-and-run/ | outline | portal/content/services/areas/build-and-run.md | all |  | authored; generated table of the categories of the area |
@@ -84,10 +85,17 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Delivery | Solution Lifecycle Model: The cadence | /delivery/solution-lifecycle-model/the-cadence/ | document | documents/solution-lifecycle-model.md | 6 | 1325 | generated |
 | Delivery | Solution Lifecycle Model: Verification, release, and acceptance | /delivery/solution-lifecycle-model/verification-release-and-acceptance/ | document | documents/solution-lifecycle-model.md | 7 | 1255 | generated |
 | Delivery | Solution Lifecycle Model: Life-cycle management | /delivery/solution-lifecycle-model/life-cycle-management/ | document | documents/solution-lifecycle-model.md | 8 | 1805 | generated |
-| Delivery | Portfolio and service delivery workflow | /delivery/service-delivery-workflow/ | workflow | workflows/service-delivery.md | all |  | generated |
-| Delivery | Guide: Service delivery | /delivery/service-delivery-guide/ | guide | guides/service-delivery-guide.md | all |  | generated |
-| Delivery | Cadence | /delivery/cadence-workflow/ | workflow | workflows/cadence.md | all |  | generated |
-| Delivery | Guide: Cadence | /delivery/cadence-guide/ | guide | guides/cadence-guide.md | all |  | generated |
+| Delivery | Portfolio and service delivery workflow | /delivery/service-delivery-workflow/ | workflow | workflows/service-delivery.md | 1, 2, 3 | 867 | generated |
+| Delivery | Portfolio and service delivery workflow: The portfolio flow | /delivery/service-delivery-workflow/the-portfolio-flow/ | workflow | workflows/service-delivery.md | 4 | 686 | generated |
+| Delivery | Portfolio and service delivery workflow: The execution in the Program Increment | /delivery/service-delivery-workflow/the-execution/ | workflow | workflows/service-delivery.md | 5 | 797 | generated |
+| Delivery | Portfolio and service delivery workflow: After delivery, oversight, decisions, and where it runs | /delivery/service-delivery-workflow/after-delivery/ | workflow | workflows/service-delivery.md | 6, 7, 8, 9 | 1034 | generated |
+| Delivery | Guide: Service delivery | /delivery/service-delivery-guide/ | guide | guides/service-delivery-guide.md | 1, 2, 3, 4 | 1563 | generated |
+| Delivery | Guide: Service delivery: After delivery, situations, and rule source | /delivery/service-delivery-guide/after-delivery/ | guide | guides/service-delivery-guide.md | 5, 6, 7 | 397 | generated |
+| Delivery | Cadence | /delivery/cadence-workflow/ | workflow | workflows/cadence.md | 1, 2, 3, 4 | 810 | generated |
+| Delivery | Cadence: The loops | /delivery/cadence-workflow/the-loops/ | workflow | workflows/cadence.md | 5 | 698 | generated |
+| Delivery | Cadence: What each event carries | /delivery/cadence-workflow/what-each-event-carries/ | workflow | workflows/cadence.md | 6 | 971 | generated |
+| Delivery | Cadence: Rules, the dated calendar, light mode, and vocabulary | /delivery/cadence-workflow/rules-calendar-and-light-mode/ | workflow | workflows/cadence.md | 7, 8, 9, 10 | 285 | generated |
+| Delivery | Guide: Cadence | /delivery/cadence-guide/ | guide | guides/cadence-guide.md | 1, 2, 3, 4, 5, 6 | 1450 | generated |
 | Delivery | Collaboration tooling | /delivery/collaboration-tooling-workflow/ | workflow | workflows/collaboration-tooling.md | all |  | generated |
 | Delivery | The Experiment workflow: the Lab | /delivery/experiment-workflow/ | outline | portal/content/delivery/experiment-workflow.md | all |  | authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB |
 | Delivery | The life of a Service | /delivery/life-of-a-service/ | outline | portal/content/delivery/life-of-a-service.md | all |  | authored; proposed for Solution Lifecycle Model 8; draws on STS |
@@ -98,14 +106,18 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Governance and oversight | Operating Model: Records and evidence | /governance/records-and-evidence/ | document | documents/operating-model.md | 7 | 517 | generated |
 | Governance and oversight | Operating Model: Controls and the control catalogue | /governance/controls/ | catalogue | documents/operating-model.md | 8 | 1926 | generated |
 | Governance and oversight | Solution Lifecycle Model: Records, controls, and measures | /governance/delivery-records-controls-and-measures/ | document | documents/solution-lifecycle-model.md | 9, 10 | 1400 | generated |
-| Governance and oversight | Unit governance workflow | /governance/unit-governance-workflow/ | workflow | workflows/unit-governance.md | all |  | generated |
-| Governance and oversight | Guide: Unit governance | /governance/unit-governance-guide/ | guide | guides/unit-governance-guide.md | all |  | generated |
+| Governance and oversight | Unit governance workflow | /governance/unit-governance-workflow/ | workflow | workflows/unit-governance.md | 1, 2, 3 | 866 | generated |
+| Governance and oversight | Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs | /governance/unit-governance-workflow/events-and-sequences/ | workflow | workflows/unit-governance.md | 4, 5, 6, 7, 8, 9 | 1015 | generated |
+| Governance and oversight | Guide: Unit governance | /governance/unit-governance-guide/ | guide | guides/unit-governance-guide.md | 1, 2, 3, 4, 5, 6 | 1247 | generated |
+| Governance and oversight | Guide: Unit governance: The controls and how to test them, and the rule source | /governance/unit-governance-guide/the-controls/ | guide | guides/unit-governance-guide.md | 7, 8 | 1704 | generated |
 | Organization | Organization | /organization/ | section | none | none |  | authored, with a generated list |
 | Organization | Operating Model | /organization/operating-model/ | document | documents/operating-model.md | 1, 2, 3 | 377 | generated |
 | Organization | Operating Model: Roles | /organization/operating-model/roles/ | document | documents/operating-model.md | 4 | 1516 | generated |
 | Organization | Operating Model: Decisions | /organization/operating-model/decisions/ | document | documents/operating-model.md | 5 | 742 | generated |
-| Organization | Guide: Organization | /organization/organization-guide/ | guide | guides/organization-guide.md | all |  | generated |
+| Organization | Guide: Organization | /organization/organization-guide/ | guide | guides/organization-guide.md | 1, 2, 3 | 830 | generated |
 | Organization | The Roles | /organization/roles/ | index | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
+| Organization | Guide: Organization: Who is responsible for what | /organization/organization-guide/who-is-responsible-for-what/ | guide | guides/organization-guide.md | 4 | 1417 | generated |
+| Organization | Guide: Organization: The governing bodies, the people records, the evidence, and the rule source | /organization/organization-guide/bodies-people-and-records/ | guide | guides/organization-guide.md | 5, 6, 7, 8 | 941 | generated |
 | Organization | Executive Sponsor | /organization/roles/executive-sponsor/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | AICC Lead | /organization/roles/aicc-lead/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | Solution Engineer | /organization/roles/solution-engineer/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |

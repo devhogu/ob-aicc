@@ -2,11 +2,15 @@
 id: governance/unit-governance-workflow
 title: Unit governance workflow
 section: governance
-order: 5
+order: 6
 type: workflow
 slug: /governance/unit-governance-workflow/
 source: charter/workflows/unit-governance.md
-companion: governance/unit-governance-guide
+source_sections: 1, 2, 3
+document: unit-governance-workflow
+part: 1 of 4
+words: 866
+series: set-unit-governance
 production: generated
 status: scaffold
 ---
@@ -18,6 +22,12 @@ Page type: workflow. Address: /governance/unit-governance-workflow/
 ## Source
 
 - charter/workflows/unit-governance.md
+
+## Sections of the source
+
+- 1. Intent and scope (148 words)
+- 2. The loops on the Steerings (572 words)
+- 3. How a decision escalates (146 words)
 
 ## Outline
 

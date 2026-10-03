@@ -164,18 +164,16 @@ dialog.fb code{background:var(--surface-subtle);color:var(--text);padding:1px 6p
 dialog.fb .fb-body{display:flex;align-items:flex-end;gap:16px}
 dialog.fb .fb-body p{flex:1 1 auto;margin:0}
 dialog.fb .fb-body .oc-button{flex:none}
-/* breadcrumb line with the next page at the right */
-.crumbbar{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 10px}
-.crumbbar .crumbs{margin:0;min-width:0}
-.crumb-next{flex:0 1 auto;min-width:0;max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;line-height:inherit;color:var(--text-muted);text-decoration:none}
+/* breadcrumb line with the next page at the right; with an outline, the line spans only the reading column */
+.crumbbar{margin:0 0 10px}
+.crumbbar.has-ctx{display:grid;grid-template-columns:minmax(0,1fr) var(--context-width);gap:32px}
+.crumbline{display:flex;justify-content:space-between;align-items:baseline;gap:16px;min-width:0}
+.crumbline .crumbs{margin:0;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.crumb-next{flex:0 1 auto;min-width:0;max-width:50%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;line-height:inherit;color:var(--text-muted);text-decoration:none}
 .crumb-next strong{font-weight:400;color:var(--text-muted);text-decoration:underline;text-underline-offset:3px}
 .crumb-next:hover strong{color:var(--link)}
-/* with an outline, the line spans only the reading column, so the Next link ends before the separator of the outline */
-.crumbbar.has-ctx{display:grid;grid-template-columns:minmax(0,1fr) var(--context-width);gap:32px}
-.crumbbar.has-ctx .crumbs{grid-column:1;grid-row:1;justify-self:start}
-.crumbbar.has-ctx .crumb-next{grid-column:1;grid-row:1;justify-self:end}
 @media(max-width:1250px){.crumbbar.has-ctx{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:650px){.crumbbar{flex-direction:column;gap:4px}.crumb-next{max-width:100%}}
+@media(max-width:650px){.crumbline{flex-direction:column;gap:4px}.crumb-next{max-width:100%}.crumbline .crumbs{white-space:normal}}
 @media print{.crumb-next{display:none}}
 /* About AICC: the summary */
 .about-block{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 32px;padding:20px 0;border-top:1px solid var(--border)}

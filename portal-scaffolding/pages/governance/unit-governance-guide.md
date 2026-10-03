@@ -2,11 +2,15 @@
 id: governance/unit-governance-guide
 title: Guide: Unit governance
 section: governance
-order: 6
+order: 8
 type: guide
 slug: /governance/unit-governance-guide/
 source: charter/guides/unit-governance-guide.md
-companion: governance/unit-governance-workflow
+source_sections: 1, 2, 3, 4, 5, 6
+document: unit-governance-guide
+part: 3 of 4
+words: 1247
+series: set-unit-governance
 production: generated
 status: scaffold
 ---
@@ -18,6 +22,15 @@ Page type: guide. Address: /governance/unit-governance-guide/
 ## Source
 
 - charter/guides/unit-governance-guide.md
+
+## Sections of the source
+
+- 1. Purpose and when it applies (77 words)
+- 2. The mandate, the authority, and independence (261 words)
+- 3. The loops (465 words)
+- 4. How a decision moves (272 words)
+- 5. Reporting and assurance (89 words)
+- 6. Where the evidence is (83 words)
 
 ## Outline
 

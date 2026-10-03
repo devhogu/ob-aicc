@@ -11,7 +11,7 @@ Status: scaffold, for review. The site is a static knowledge base and the depart
 | [site-structure.md](site-structure.md) | The narrative: the kind of site, the sitemap, the navigation model, the page types, the wireframes, the authored items, and the open points |
 | [content-fit.md](content-fit.md) | The evaluation of the first scaffold against the size and shape of the charter, and the reasons for the placement that this scaffold adopts |
 | [inventory.md](inventory.md) | The table of all pages: section, address, type, source, sections of the source, words, and production |
-| [sitemap.json](sitemap.json) | The sitemap in machine-readable form: the nine sections and the 160 pages of the structure the site is built from (adopted 2026-10-02; site-structure.md section 10) |
+| [sitemap.json](sitemap.json) | The sitemap in machine-readable form: the nine sections and the 172 pages of the structure the site is built from (adopted 2026-10-02; site-structure.md section 10) |
 | previous/ | The first structure of the site, written by `make_pages.py --previous` when needed for the record; not kept in the repository |
 | [pages/](pages/) | One outline file for each page, in a folder for each section |
 | [reading-routes.md](reading-routes.md) | The five reading routes, as sequences of page identifiers |

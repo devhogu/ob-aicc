@@ -6,7 +6,11 @@ order: 31
 type: workflow
 slug: /delivery/service-delivery-workflow/
 source: charter/workflows/service-delivery.md
-companion: delivery/service-delivery-guide
+source_sections: 1, 2, 3
+document: service-delivery-workflow
+part: 1 of 6
+words: 867
+series: set-service-delivery
 production: generated
 status: scaffold
 ---
@@ -18,6 +22,12 @@ Page type: workflow. Address: /delivery/service-delivery-workflow/
 ## Source
 
 - charter/workflows/service-delivery.md
+
+## Sections of the source
+
+- 1. Intent and scope (214 words)
+- 2. The levels (285 words)
+- 3. The states (368 words)
 
 ## Outline
 

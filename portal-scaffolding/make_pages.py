@@ -93,19 +93,24 @@ for sid, label, line in SECTIONS:
                  'Related sections'])
 
 
-def split_doc(sid, base, src, parts, start_order):
-    """parts: list of (slug or '', title, [section numbers], production-note)."""
+def split_doc(sid, base, src, parts, start_order, type_='document', series=None, series_title=None, tabs=None, part_offset=0, part_total=None, **extra):
+    """parts: list of (slug or '', title, [section numbers], production-note). A workflow or a guide is split the same way as a document;
+    with a series, the parts are shown as tabs and the series may join a workflow and its guide under one navigation entry."""
     secs = sections_of(src)
     doc = h1(src)
-    n = len(parts)
+    n = part_total or len(parts)
     for i, (slug, title, nums, *rest) in enumerate(parts, 1):
         words = sum(secs[x][1] for x in nums)
         full = f'/{sid}/{base}/' + (slug + '/' if slug else '')
         pid = f'{sid}/{base}' + (f'/{slug}' if slug else '')
-        add(id=pid, section=sid, order=start_order + i, type='document', slug=full,
+        kw = dict(rest[0]) if rest else {}
+        if series:
+            kw.update(series=series, series_title=series_title or doc, tab=(tabs[i - 1] if tabs else title))
+        kw.update(extra)
+        add(id=pid, section=sid, order=start_order + i, type=type_, slug=full,
             title=doc if i == 1 and not slug else f'{doc}: {title}', source=[src], source_sections=nums,
-            document=base, part=f'{i} of {n}', words=words,
-            outline=None, **(rest[0] if rest else {}))
+            document=base, part=f'{part_offset + i} of {n}', words=words,
+            outline=None, **kw)
 
 
 # About
@@ -244,15 +249,37 @@ split_doc(S_DELIVERY, 'solution-lifecycle-model', 'charter/documents/solution-li
     ('verification-release-and-acceptance', 'Verification, release, and acceptance', [7]),
     ('life-cycle-management', 'Life-cycle management', [8]),
 ], 20 if NEXT else 10)
-add(id=f'{S_DELIVERY}/service-delivery-workflow', section=S_DELIVERY, order=31 if NEXT else 21, type='workflow', slug=f'/{S_DELIVERY}/service-delivery-workflow/',
-    title=h1('charter/workflows/service-delivery.md'), source=['charter/workflows/service-delivery.md'], companion=f'{S_DELIVERY}/service-delivery-guide')
-add(id=f'{S_DELIVERY}/service-delivery-guide', section=S_DELIVERY, order=32 if NEXT else 22, type='guide', slug=f'/{S_DELIVERY}/service-delivery-guide/',
-    title=h1('charter/guides/service-delivery-guide.md'), source=['charter/guides/service-delivery-guide.md'], companion=f'{S_DELIVERY}/service-delivery-workflow')
-add(id=f'{S_DELIVERY}/cadence-workflow', section=S_DELIVERY, order=33 if NEXT else 23, type='workflow', slug=f'/{S_DELIVERY}/cadence-workflow/',
-    title=h1('charter/workflows/cadence.md'), source=['charter/workflows/cadence.md'], companion=f'{S_DELIVERY}/cadence-guide')
-add(id=f'{S_DELIVERY}/cadence-guide', section=S_DELIVERY, order=34 if NEXT else 24, type='guide', slug=f'/{S_DELIVERY}/cadence-guide/',
-    title=h1('charter/guides/cadence-guide.md'), source=['charter/guides/cadence-guide.md'], companion=f'{S_DELIVERY}/cadence-workflow')
-add(id=f'{S_DELIVERY}/collaboration-tooling-workflow', section=S_DELIVERY, order=35 if NEXT else 25, type='workflow', slug=f'/{S_DELIVERY}/collaboration-tooling-workflow/',
+if NEXT:
+    # A workflow and its guide form one series: the heavy ones split at their sections, the parts shown as tabs, one entry in the navigation.
+    split_doc('delivery', 'service-delivery-workflow', 'charter/workflows/service-delivery.md', [
+        ('', 'Intent, levels, and states', [1, 2, 3]),
+        ('the-portfolio-flow', 'The portfolio flow', [4]),
+        ('the-execution', 'The execution in the Program Increment', [5]),
+        ('after-delivery', 'After delivery, oversight, decisions, and where it runs', [6, 7, 8, 9]),
+    ], 30, type_='workflow', series='set-service-delivery', series_title='Service delivery', tabs=['Intent and levels', 'Portfolio flow', 'Execution', 'After delivery'], part_total=6)
+    split_doc('delivery', 'service-delivery-guide', 'charter/guides/service-delivery-guide.md', [
+        ('', 'Purpose, levels, life, and decisions', [1, 2, 3, 4]),
+        ('after-delivery', 'After delivery, situations, and rule source', [5, 6, 7]),
+    ], 34, type_='guide', series='set-service-delivery', series_title='Service delivery', tabs=['Guide: flow and decisions', 'Guide: after delivery'], part_offset=4, part_total=6)
+    split_doc('delivery', 'cadence-workflow', 'charter/workflows/cadence.md', [
+        ('', 'Week, Iteration, Program Increment, and the IP week', [1, 2, 3, 4]),
+        ('the-loops', 'The loops', [5]),
+        ('what-each-event-carries', 'What each event carries', [6]),
+        ('rules-calendar-and-light-mode', 'Rules, the dated calendar, light mode, and vocabulary', [7, 8, 9, 10]),
+    ], 36, type_='workflow', series='set-cadence', series_title='Cadence', tabs=['Week to PI', 'Loops', 'What each event carries', 'Rules and calendar'], part_total=5)
+    split_doc('delivery', 'cadence-guide', 'charter/guides/cadence-guide.md', [
+        ('', 'The guide', [1, 2, 3, 4, 5, 6]),
+    ], 40, type_='guide', series='set-cadence', series_title='Cadence', tabs=['Guide: Cadence'], part_offset=4, part_total=5)
+else:
+    add(id=f'{S_DELIVERY}/service-delivery-workflow', section=S_DELIVERY, order=21, type='workflow', slug=f'/{S_DELIVERY}/service-delivery-workflow/',
+        title=h1('charter/workflows/service-delivery.md'), source=['charter/workflows/service-delivery.md'], companion=f'{S_DELIVERY}/service-delivery-guide')
+    add(id=f'{S_DELIVERY}/service-delivery-guide', section=S_DELIVERY, order=22, type='guide', slug=f'/{S_DELIVERY}/service-delivery-guide/',
+        title=h1('charter/guides/service-delivery-guide.md'), source=['charter/guides/service-delivery-guide.md'], companion=f'{S_DELIVERY}/service-delivery-workflow')
+    add(id=f'{S_DELIVERY}/cadence-workflow', section=S_DELIVERY, order=23, type='workflow', slug=f'/{S_DELIVERY}/cadence-workflow/',
+        title=h1('charter/workflows/cadence.md'), source=['charter/workflows/cadence.md'], companion=f'{S_DELIVERY}/cadence-guide')
+    add(id=f'{S_DELIVERY}/cadence-guide', section=S_DELIVERY, order=24, type='guide', slug=f'/{S_DELIVERY}/cadence-guide/',
+        title=h1('charter/guides/cadence-guide.md'), source=['charter/guides/cadence-guide.md'], companion=f'{S_DELIVERY}/cadence-workflow')
+add(id=f'{S_DELIVERY}/collaboration-tooling-workflow', section=S_DELIVERY, order=41 if NEXT else 25, type='workflow', slug=f'/{S_DELIVERY}/collaboration-tooling-workflow/',
     title=h1('charter/workflows/collaboration-tooling.md'), source=['charter/workflows/collaboration-tooling.md'])
 
 if NEXT:
@@ -276,13 +303,13 @@ if NEXT:
         add(id=f'portfolio/{slug}', section='portfolio', order=i, type='outline', slug=f'/portfolio/{slug}/', title=title,
             source=[f'portal/content/portfolio/{slug}.md'], production='authored; explanatory, the Portfolio Management Model is the rule', outline=[line],
             series='portfolio-course', series_title='The Portfolio', part=f'{i} of {len(PCOURSE)}', tab=tab)
-    add(id='delivery/experiment-workflow', section='delivery', order=41, type='outline', slug='/delivery/experiment-workflow/', title='The Experiment workflow: the Lab',
+    add(id='delivery/experiment-workflow', section='delivery', order=42, type='outline', slug='/delivery/experiment-workflow/', title='The Experiment workflow: the Lab',
         source=['portal/content/delivery/experiment-workflow.md'], production='authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB',
         outline=['Six stages: define, establish, prepare data, build, validate, decide, with concerns and records', 'The rules of the Lab: decision rights, data, time-box, guardrails scorecard'])
-    add(id='delivery/life-of-a-service', section='delivery', order=42, type='outline', slug='/delivery/life-of-a-service/', title='The life of a Service',
+    add(id='delivery/life-of-a-service', section='delivery', order=43, type='outline', slug='/delivery/life-of-a-service/', title='The life of a Service',
         source=['portal/content/delivery/life-of-a-service.md'], production='authored; proposed for Solution Lifecycle Model 8; draws on STS',
         outline=['Seven states with question, signals, action, gate', 'The reviews', 'The hand-over to scale'])
-    add(id='delivery/service-operations', section='delivery', order=43, type='outline', slug='/delivery/service-operations/', title='Service operations',
+    add(id='delivery/service-operations', section='delivery', order=44, type='outline', slug='/delivery/service-operations/', title='Service operations',
         source=['portal/content/delivery/service-operations.md'], production='authored; the run-book template of a Service; draws on STS',
         outline=['The practices: request, incident, problem, change, knowledge, service level, financial, supplier', 'The classes of service', 'The health of a Service', 'Sizing for a small unit'])
 
@@ -323,8 +350,15 @@ split_doc('organization', 'operating-model', 'charter/documents/operating-model.
     ('roles', 'Roles', [4]),
     ('decisions', 'Decisions', [5]),
 ], 0)
-add(id='organization/organization-guide', section='organization', order=4, type='guide', slug='/organization/organization-guide/',
-    title=h1('charter/guides/organization-guide.md'), source=['charter/guides/organization-guide.md'])
+if NEXT:
+    split_doc('organization', 'organization-guide', 'charter/guides/organization-guide.md', [
+        ('', 'Purpose, the place of AICC, and the Roles and their profiles', [1, 2, 3]),
+        ('who-is-responsible-for-what', 'Who is responsible for what', [4]),
+        ('bodies-people-and-records', 'The governing bodies, the people records, the evidence, and the rule source', [5, 6, 7, 8]),
+    ], 4, type_='guide', series='set-organization-guide', series_title='Guide: Organization', tabs=['Roles and profiles', 'Who is responsible for what', 'Bodies, people, and records'])
+else:
+    add(id='organization/organization-guide', section='organization', order=4, type='guide', slug='/organization/organization-guide/',
+        title=h1('charter/guides/organization-guide.md'), source=['charter/guides/organization-guide.md'])
 add(id='organization/roles', section='organization', order=5, type='index', slug='/organization/roles/', title='The Roles',
     source=['charter/documents/operating-model.md', 'charter/guides/organization-guide.md'], production='generated from tables',
     outline=['Introduction: a Role is named for its responsibility and not for a person (Vocabulary 3.6)',
@@ -369,8 +403,14 @@ if NEXT:
             series='responsible-ai-course', series_title='A short course on AI', part=f'{i} of {len(COURSE)}', tab=TABS[slug])
 add(id='responsible-ai/ai-policy', section='responsible-ai', order=11 if NEXT else 1, type='document', slug='/responsible-ai/ai-policy/',
     title=h1('charter/documents/ai-policy.md'), source=['charter/documents/ai-policy.md'], words=2155)
-add(id='responsible-ai/ai-risk-control-workflow', section='responsible-ai', order=12 if NEXT else 2, type='workflow', slug='/responsible-ai/ai-risk-control-workflow/',
-    title=h1('charter/workflows/ai-risk-control.md'), source=['charter/workflows/ai-risk-control.md'])
+if NEXT:
+    split_doc('responsible-ai', 'ai-risk-control-workflow', 'charter/workflows/ai-risk-control.md', [
+        ('', 'Intent, the Risk Tier, and the gates before first use', [1, 2, 3]),
+        ('in-operation-and-situations', 'In operation, exceptions, single decisions, an AI Incident, situations, and where it runs', [4, 5, 6, 7, 8, 9]),
+    ], 12, type_='workflow', series='set-ai-risk-control', series_title='AI risk and control workflow', tabs=['Risk Tier and gates', 'In operation and situations'])
+else:
+    add(id='responsible-ai/ai-risk-control-workflow', section='responsible-ai', order=2, type='workflow', slug='/responsible-ai/ai-risk-control-workflow/',
+        title=h1('charter/workflows/ai-risk-control.md'), source=['charter/workflows/ai-risk-control.md'])
 
 # Governance
 split_doc('governance', 'operating-model-governance', 'charter/documents/operating-model.md', [], 0) if False else None
@@ -387,10 +427,20 @@ add(id='governance/delivery-records-controls-and-measures', section='governance'
     slug='/governance/delivery-records-controls-and-measures/', title='Solution Lifecycle Model: Records, controls, and measures',
     source=['charter/documents/solution-lifecycle-model.md'], source_sections=[9, 10], document='solution-lifecycle-model', part='7 of 7 (governance view)',
     words=secs[9][1] + secs[10][1])
-add(id='governance/unit-governance-workflow', section='governance', order=5, type='workflow', slug='/governance/unit-governance-workflow/',
-    title=h1('charter/workflows/unit-governance.md'), source=['charter/workflows/unit-governance.md'], companion='governance/unit-governance-guide')
-add(id='governance/unit-governance-guide', section='governance', order=6, type='guide', slug='/governance/unit-governance-guide/',
-    title=h1('charter/guides/unit-governance-guide.md'), source=['charter/guides/unit-governance-guide.md'], companion='governance/unit-governance-workflow')
+if NEXT:
+    split_doc('governance', 'unit-governance-workflow', 'charter/workflows/unit-governance.md', [
+        ('', 'Intent, the loops on the Steerings, and how a decision escalates', [1, 2, 3]),
+        ('events-and-sequences', 'Events, the sequences, the reporting chain, the life of a document, and where it runs', [4, 5, 6, 7, 8, 9]),
+    ], 5, type_='workflow', series='set-unit-governance', series_title='Unit governance', tabs=['Loops and decisions', 'Events and sequences'], part_total=4)
+    split_doc('governance', 'unit-governance-guide', 'charter/guides/unit-governance-guide.md', [
+        ('', 'Purpose, mandate, the loops, how a decision moves, reporting, and the evidence', [1, 2, 3, 4, 5, 6]),
+        ('the-controls', 'The controls and how to test them, and the rule source', [7, 8]),
+    ], 7, type_='guide', series='set-unit-governance', series_title='Unit governance', tabs=['Guide: governance', 'Guide: the controls'], part_offset=2, part_total=4)
+else:
+    add(id='governance/unit-governance-workflow', section='governance', order=5, type='workflow', slug='/governance/unit-governance-workflow/',
+        title=h1('charter/workflows/unit-governance.md'), source=['charter/workflows/unit-governance.md'], companion='governance/unit-governance-guide')
+    add(id='governance/unit-governance-guide', section='governance', order=6, type='guide', slug='/governance/unit-governance-guide/',
+        title=h1('charter/guides/unit-governance-guide.md'), source=['charter/guides/unit-governance-guide.md'], companion='governance/unit-governance-workflow')
 
 # Library (current) / Knowledge base (next)
 TEMPLATES = ['initiative-brief', 'service-agreement', 'solution-definition', 'acceptance-checklist', 'control-sign-off', 'decision-record',

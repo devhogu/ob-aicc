@@ -2,7 +2,7 @@
 id: delivery/collaboration-tooling-workflow
 title: Collaboration tooling
 section: delivery
-order: 35
+order: 41
 type: workflow
 slug: /delivery/collaboration-tooling-workflow/
 source: charter/workflows/collaboration-tooling.md
