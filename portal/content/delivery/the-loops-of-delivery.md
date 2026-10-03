@@ -103,7 +103,7 @@ Figure 5: the feedback loops.
 
 ## 4. Why loops rather than a plan
 
-4.1. A plan assumes that what was known at the start stays true; a loop assumes that it will not, and arranges to find out early. Each loop above has a fixed moment at which the evidence is read and the next step decided, so that a wrong hypothesis costs an Iteration and not a year, a failing build costs a day and not a release, and a drifting Solution costs a review and not an incident. The cadence is what makes the loops cheap: nobody has to call a meeting to learn.
+4.1. A plan assumes that what was known at the start stays true; a loop arranges to find out early that it did not. A wrong hypothesis costs an Iteration, a failing build a day, a drifting Solution a review. The cadence is what makes the loops cheap.
 
 ## 5. Rule source
 

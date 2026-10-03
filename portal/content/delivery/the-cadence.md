@@ -39,9 +39,7 @@ Figure 1: a Program Increment in sequence.
 
 ## 3. Why a fixed cadence
 
-3.1. A fixed cadence does three things that a plan cannot. It synchronizes: everyone knows when the next planning, demo, and review fall, so the functions, the Control Functions, and the Steering can plan their part without being asked each time. It bounds the batch: an Iteration can hold only so much, so the work is cut into pieces that finish, and a Feature closes within one Program Increment by rule. And it makes learning regular: every month ends with a demonstration and a retrospective, every quarter with a review and an improvement, so that the method corrects itself on a schedule rather than after a failure.
-
-3.2. The cadence is fixed; the content is not. The PI Objectives state what the quarter aims at and are scored for the value they delivered, but they are not a promise of scope, and the Iteration Backlog is selected month by month from a ranked backlog that changes. That is the distinction between planning on a cadence and committing to a plan.
+3.1. A fixed cadence synchronizes everyone without a meeting to arrange it, bounds the batch so that work is cut into pieces that finish, and makes learning regular: every month ends with a demonstration and a retrospective, every quarter with a review and an improvement. The cadence is fixed; the content is not: the PI Objectives are intent, scored afterwards, and the Iteration Backlog is selected month by month from a backlog that changes.
 
 ## 4. Light mode
 
@@ -49,7 +47,7 @@ Figure 1: a Program Increment in sequence.
 
 ## 5. The cadence and the control of the unit
 
-5.1. The loops of delivery run on the same events as the control loops of the Operating Model and the portfolio loops, and add no meeting. The Weekly Review is also the operating loop and the backlog care loop; the monthly Steering takes the results of the Iteration Review and Demo; the quarterly Steering takes the results of the PI Review and Demo; the yearly Steering is the monthly Steering of December. One calendar serves delivery, the Portfolio, and the governance of the unit.
+5.1. The loops of delivery, the portfolio loops, and the control loops of the unit run on the same events and add no meeting: one calendar serves all three. The Cadence workflow and guide state the events by week, Iteration, and Program Increment, with the days and the exceptions.
 
 ## 6. Rule source
 

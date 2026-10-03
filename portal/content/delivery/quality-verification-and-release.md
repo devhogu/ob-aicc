@@ -26,30 +26,16 @@ flowchart TB
 
 Figure 1: the gates of quality, acceptance, and release.
 
-## 2. Testing by another person
+## 2. The gates, in brief
 
-2.1. Every Feature, and the MVP of an Initiative, is tested by a person other than its builder, in an environment that is not production, before it is deployed, and the result is referenced in the Feature. The rule is the oldest control of software engineering and it is kept without exception: the builder's own tests are necessary and are not sufficient. A failure returns the Feature to the builder; the first-time pass rate is read at the Weekly Review as the measure of whether quality is built in.
+2.1. Every Feature, and the MVP, is tested by a person other than its builder, in an environment that is not production, before it is deployed; the result is referenced in the Feature. The check for Risk Tier 1 and the validation by the Control Function Contacts for Risk Tier 2 and 3 attach to the Solution and are taken at the first Feature that reaches real users or data; for Risk Tier 2 and 3 the validation includes a security test against the attacks specific to AI. AICC does not validate its own work.
 
-## 3. The check or validation by Risk Tier
+2.2. Acceptance is given at three levels, each against written criteria and noted with who and when: the product owner accepts each Feature and Capability at the Iteration Review and Demo; the AICC Lead gives the final acceptance of the Team before a Solution is put in front of its first users and before each significant change; the requester, the Domain Owner, judges the working Solution deployed to its first users. Three questions, each asked by the person entitled to answer it: does the Feature do what we wrote; is the Solution safe and complete enough to put in front of people; does it solve the problem the function brought.
 
-3.1. The check for Risk Tier 1 and the validation by the Control Function Contacts for Risk Tier 2 and 3 attach to the Solution, not to each Feature, and they are taken in the Verify step of the first Feature that reaches real users or data. For Risk Tier 2 and 3 the validation replaces the check and includes a security test against the attacks specific to AI; the Control Function Contacts take part when the Solution is defined and in its validation, and they rely on the evidence, the logs, and the traces that the Platform Owner keeps. A validation states the date until which it is valid and the changes that require a new one. AICC does not validate its own work.
+2.3. Deployment and release are different acts. A Feature is deployed to its environment of use after its test and its check or validation, through the change management of the Bank. Release beyond the first users is a separate decision, by the Domain Owner for Risk Tier 1 and 2 and by the Executive Sponsor for Risk Tier 3 or where the AICC Lead built it, taken when the Acceptance Checklist is signed by each party within its remit; an item not met stops the release. Features flow at the pace of the Team; the Bank switches value on at the pace of its judgment.
 
-## 4. The three acceptances
+2.4. Behind the gates stand the practices that make them pass: criteria written before the work, small Features, integration as the work goes, a definition of done that includes the test, the deployment, and the record, and the measures of quality read at the Weekly Review and the Iteration Review and Demo. A failing measure is a problem for Inspect and Adapt, not a reason to add a gate. The Solution Lifecycle Model 7 states the gates in full, with the limit accepted while the Team is small and its compensating controls; the Service delivery guide states who decides at each.
 
-4.1. Acceptance closes an item, and it is given at three levels, each against the acceptance criteria and each noted with who and when. During development, the product owner accepts each Feature and each Capability at the Iteration Review and Demo: accept, return with what is missing, or reject when the outcome is not wanted. Before a Solution is provided to the Domain Owner for judgment, the AICC Lead gives the final acceptance of the Team: the criteria of the Solution Definition met, the tests referenced, the check or validation in place, recorded in the release block. Then the requester, the Domain Owner for a Solution of a Domain, judges the working Solution deployed to its first users and accepts, returns, or rejects it; for an Engagement, this is also the acceptance of the Outcome Report.
-
-4.2. Three acceptances are not bureaucracy; they are three different questions. Does the Feature do what we wrote? Is the Solution safe and complete enough to put in front of people? Does it solve the problem the function brought? Each is asked by the person entitled to answer it. While the Team is small, the AICC Lead may give the first two for a Solution the AICC Lead built, never the third, and never the check, the validation, or the release; the limit is recorded, and the compensating controls are the test by another person, the check or validation by another, the Domain Owner's acceptance, the release decision, and the monthly sample of the AICC Lead's decisions.
-
-## 5. Deployment and release
-
-5.1. Deployment and release are different acts. A Feature is deployed to its environment of use after its test and its check or validation; a deployment to production follows the change management of the Bank, with the change ticket and the test result entered in the Feature, and access granted through the access process of the Bank. The first users are named by the Domain Owner in the Solution Definition and trained before use. Release beyond the first users is a separate decision, by the Domain Owner for Risk Tier 1 and 2 and by the Executive Sponsor for Risk Tier 3 or where the AICC Lead is the Domain Owner, taken when the Acceptance Checklist is signed: each party, the Domain Owner, the Solution Engineer, the AICC Lead, the Checker, the Control Functions concerned, and the IT function that operates the Solution with the Platform Owner, confirms the items within its remit, and an item not met stops the release.
-
-5.2. The separation is what lets delivery be continuous and release be deliberate. Features flow to their environment of use at the pace of the Team; the Bank switches value on at the pace of its judgment.
-
-## 6. Built-in quality beyond the gates
-
-6.1. The gates are the visible part. Behind them stand the practices that make them pass: acceptance criteria written before the work; small Features that close within an Iteration; integration as the work goes, so that the test is of the whole; a definition of done that includes the test, the deployment, and the record; and the measures of quality, first-time pass, defects found after the check, change failure rate, read at the Weekly Review and the Iteration Review and Demo. A failing measure is a problem for Inspect and Adapt, not a reason to add a gate.
-
-## 7. Rule source
+## 3. Rule source
 
 Solution Lifecycle Model 7 and 8.3; AI Policy 3; Operating Model 4.4; the Acceptance Checklist and Control Sign-Off templates; the Service delivery workflow and guide.

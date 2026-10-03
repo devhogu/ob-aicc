@@ -26,7 +26,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 PORTAL = os.path.join(ROOT, 'portal')
 OUT = os.path.join(ROOT, 'html', 'aicc')
 SITEMAP = os.path.join(ROOT, 'portal-scaffolding', 'sitemap.json')
-CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v3')
+CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v4')
 NPX = os.environ.get('MMDC_NPX', os.path.expanduser('~/.npm/_npx/668c188756b835f3/node_modules'))
 CHROME = os.environ.get('MMDC_CHROME', os.path.expanduser('~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'))
 FONT_FILE = os.path.join(PORTAL, 'ui', 'assets', 'fonts', 'golos-text', 'GolosText-variable.woff2')
@@ -49,7 +49,8 @@ BASELINE = {'revision': '1.0', 'date': '2026-10-02'}
 
 FONTS = os.path.join(ROOT, 'portal', '.tools', 'pw-syslibs')
 SHORT = {'Statement of Intent on the Adoption of Artificial Intelligence': 'Statement of Intent', 'Vocabulary and Style': 'Vocabulary'}
-NAV_SHORT = {'AICC Charter': 'Charter', 'Portfolio measures: definitions and formulas': 'Portfolio measures', 'Delivery measures: definitions and formulas': 'Delivery measures'}      # shorter in the left navigation
+NAV_SHORT = {'AICC Charter': 'Charter', 'Portfolio measures: definitions and formulas': 'Portfolio measures', 'Delivery measures: definitions and formulas': 'Delivery measures',
+             'Portfolio and service delivery workflow': 'Service delivery workflow'}      # shorter in the left navigation
 PAGE_TITLE = {'AICC Charter': 'AI Competence Center Charter'}      # fuller as the page title
 
 
@@ -254,10 +255,32 @@ class Renderer:
 
 # ---------------------------------------------------------------- mermaid
 
+def wrap_label(text, width=24):
+    """Break the lines of a node label at word boundaries, so that no line is wider than the box the renderer draws for it."""
+    out = []
+    for seg in text.split('<br/>'):
+        words, line = seg.split(' '), ''
+        for w in words:
+            if line and len(line) + 1 + len(w) > width:
+                out.append(line)
+                line = w
+            else:
+                line = (line + ' ' + w).strip()
+        out.append(line)
+    return '<br/>'.join(out)
+
+
 def prep_mermaid(code):
-    """Give the diagrams their shapes: a gate is a hexagon, and the classes are styled by the theme, not by the source."""
+    """Give the diagrams their shapes: a gate is a hexagon, and the classes are styled by the theme, not by the source; wrap long label lines."""
     if not code.lstrip().startswith(('flowchart', 'graph')):
         return code
+    lines = []
+    for l in code.split('\n'):
+        if l.lstrip().startswith('subgraph '):
+            lines.append(l)
+            continue
+        lines.append(re.sub(r'"([^"]*)"', lambda m: '"%s"' % wrap_label(m.group(1)), l))
+    code = '\n'.join(lines)
     ids = []
 
     def gate(m):

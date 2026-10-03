@@ -13,15 +13,15 @@ Delivery is measured to control the flow and to improve it, not to rank people. 
 
 ## 2. The flow of the work
 
-2.1. Flow is measured on the Program Kanban, per Feature. Work in progress and its age say how much is open and for how long; cycle time says how long the work takes once started; lead time says how long the function waits from approval to acceptance; throughput says how many Features are accepted per Iteration; Waiting time says how much of the wait is outside AICC. The five move together: when work in progress is held and blockers removed, cycle time falls, throughput rises, and lead time follows. They are read as distributions and trends, and the Team sets the targets with the product owner once it has a baseline.
+2.1. Flow is read on the Program Kanban per Feature: work in progress and its age, cycle time, lead time, throughput, and Waiting time. They move together: hold work in progress and remove blockers, and cycle time falls, throughput rises, lead time follows. They are read as distributions and trends.
 
 ## 3. The quality of what is built
 
-3.1. Quality is measured at the gates. The first-time pass rate at the test and at the acceptance says whether quality is built in or inspected in. Defects found in operation after the check say what the check missed. The change failure rate, deployments and changes rolled back or causing an incident, says whether deployment is safe. Items of the Acceptance Checklist not met at release say whether the Solution was ready. A falling first-time pass or a rising change failure rate is a problem for the Retrospective and Inspect and Adapt, not a reason for another gate.
+3.1. Quality is read at the gates: first-time pass at the test and the acceptance, defects found after the check, the change failure rate, and the items of the Acceptance Checklist not met at release. A falling pass rate is a problem for the Retrospective, not a reason for another gate.
 
 ## 4. The health of what is live
 
-4.1. A live Solution is read at each Iteration Review and Demo on its availability against the agreed service time, its incidents by severity and the repeat incidents, its time to restore, its requests handled within the target of their class, and, for AI, the rate at which people override or correct its output against the baseline. The four signals of the life of a Service, service levels, incidents, adoption, and cost, are read from the same measures. A Solution whose signals fall is reviewed for a change, a re-check, or its sunset.
+4.1. A live Solution is read at each Iteration Review and Demo on availability, incidents and repeats, time to restore, requests within target, and, for AI, the override and correction rate against the baseline: the four signals of service levels, incidents, adoption, and cost. A Solution whose signals fall is reviewed for a change, a re-check, or its sunset.
 
 ## 5. The value that arrived
 
@@ -29,7 +29,7 @@ Delivery is measured to control the flow and to improve it, not to rank people. 
 
 ## 6. How it is tracked
 
-6.1. The measures are read from three places and no other is added: the boards, from which flow is read live; the Dashboard, which the AICC Lead keeps current at the Weekly Review and the monthly Steering reads; and the records of the events, the acceptances in the backlogs, the live review notes in the Solution Definitions, the PI Objectives with their scores, and the Registry Snapshot at the close of each Iteration and Program Increment. A figure of the Bank stays in its source system, and the records point to it. The live portal of AICC will present the measures; this site states what they are.
+6.1. The measures are read from the boards, the Dashboard, and the records of the events, and from nowhere else; a figure of the Bank stays in its source. The page Delivery measures states each measure with its definition, its formula, its source, and its target rule; the live portal of AICC will present them.
 
 ## 7. Rule source
 

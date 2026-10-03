@@ -17,21 +17,19 @@ Value flows from a strategic theme to a task on a board through a small number o
 
 ## 2. The contract of each level
 
-2.1. Each level is a short contract in the language of the business. An Initiative and a Capability are worded as a hypothesis the work tests: for whom, the need, the proposal, the value hypothesis, the difference it makes, the leading indicator. A Feature adds the scope and the acceptance criteria, written as Given a situation, When an action, Then an observable result, so that the person who builds, the person who tests, and the person who accepts agree in advance on what done means. The contract is the definition of done of the level; nothing is accepted against a criterion that was not written before the work.
+2.1. Each level is a short contract in the language of the business: a hypothesis for an Initiative and a Capability; a benefit hypothesis with acceptance criteria, written as Given, When, Then, for a Feature. The contract is written before the work, and nothing is accepted against a criterion that was not. The Solution Lifecycle Model 3.3 gives the form and an illustration.
 
 ## 3. How work enters
 
-3.1. Work enters the program in three ways. The Capabilities of an Initiative enter the Program Backlog after the decision to continue at the end of its MVP. A change or a new feature of a released Solution is raised by its Domain Owner or its product owner and enters under the Capability of that Solution. Enabling work of AICC enters under an Initiative of enabling work. Every item is ranked in the Program Backlog before a Team takes it, by value and urgency relative to effort, and a Feature is approved only when its Dependencies are known.
+3.1. Work enters in three ways: the Capabilities of an Initiative after the decision to continue at its MVP; a change or a new feature of a released Solution, under its Capability; and enabling work of AICC, under its own Initiative. Every item is ranked before a Team takes it.
 
 ## 4. The Team
 
-4.1. A Team delivers the work: a Solution Engineer with the Domain Expert of the function, the Domain Owner who owns the outcome, and the product owner who accepts the Features during development. While the Team has up to three people, the AICC Lead is the product owner; later the AICC Lead may name another person in the Appointments Record. AICC has the AICC Team, and a Domain may have its own Team working the same method. The AICC Lead ranks the Program Backlog; the Team pulls the Features it can finish in the Iteration and decides how the work is built.
+4.1. A Team delivers the work: a Solution Engineer with the Domain Expert, the Domain Owner who owns the outcome, and the product owner who accepts during development, the AICC Lead while the Team has up to three people. The AICC Lead ranks; the Team pulls what it can finish and decides how it is built.
 
 ## 5. The stream a Feature travels
 
-5.1. A Feature moves through five Stages inside its Active state: Explore, the need and the options; Design, the Feature with its acceptance criteria and its Dependencies; Develop, the build within the Iteration and the limits; Verify, the test by a person other than the builder in an environment that is not production, and the check or validation of the Solution by its Risk Tier at the first Feature that reaches real users; and Deploy, through the change management of the Bank to the environment of use. A Capability has two Stages, Analysis and Implementation. The Stages are held in a field of the tracker, the state in its status, and the conditions to move on are the conditions of the staging workflow of the model.
-
-5.2. The stream is the Bank's form of the continuous delivery pipeline: exploration before integration, integration before deployment, and deployment before release, with release a separate decision. Each Feature travels the whole stream; what makes delivery continuous is not that the stream is short, but that many small Features travel it in a steady flow.
+5.1. A Feature moves through five Stages: Explore, Design, Develop, Verify, and Deploy; a Capability through Analysis and Implementation. The stream is the Bank's form of the continuous delivery pipeline, with release a separate decision after it. Many small Features travelling it in a steady flow is what makes delivery continuous. The states and the Stages, and the conditions to move on, are in the Solution Lifecycle Model 5.
 
 ## 6. Rule source
 

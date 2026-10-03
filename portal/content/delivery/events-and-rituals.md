@@ -22,14 +22,10 @@ Each level of the cadence has its events, and each event has one purpose, named 
 
 2.1. Delivery does not report to a committee of its own; it reports through the Steerings that govern the unit and the Portfolio. The monthly Steering, in the review week, takes the results of the Iteration Review and Demo: the acceptances, the live reviews, the gate decisions due, a sample of the decisions of the AICC Lead, and the deficiencies. The quarterly Steering, in the IP week after PI Planning, takes the results of the PI Review and Demo: the value scored, the risk check, the Maturity Level, the decision on each Active Initiative, and the confirmation of the PI Objectives and the Roadmap; the AICC Lead then writes the Quarterly Report and the Executive Sponsor issues it to the Board Committee.
 
-## 3. The rituals that make the events work
+## 3. The habits behind the events
 
-3.1. Four habits carry the events. The demonstration is of working software, not of slides: a Feature is accepted when the product owner sees it work against its criteria. The plan of a quarter is written as objectives with a business value, scored afterwards, so that the quarter is judged on what it delivered and not on what it listed. The retrospective and Inspect and Adapt end with an improvement that enters the backlog as work, so that improvement competes for capacity like everything else and is therefore real. And the events are time-boxed and held on their day, or on the working day before; an event that slips is an event that will slip again.
+3.1. Four habits carry the events: the demonstration is of working software against written criteria; the plan of a quarter is objectives with a business value, scored afterwards; the retrospective and Inspect and Adapt end with an improvement that enters the backlog as work; and the events are held on their day or the working day before. The Cadence guide states the IP week in order and the treatment of a day that is not available.
 
-## 4. The IP week in order
-
-4.1. The IP week runs: the PI Review and Demo, which shows the quarter; Inspect and Adapt, which solves its problems; Innovation, if the days allow; PI Planning, which sets the next quarter; the quarterly Steering, which decides and confirms; the closing Weekly Review; and the Quarterly Report, issued to the Board Committee. In the month that holds the IP week the quarterly Steering is also the Steering of that month, except in December, when the yearly Steering is held in the first two weeks.
-
-## 5. Rule source
+## 4. Rule source
 
 Solution Lifecycle Model 6.2 to 6.7 and 7.3; Operating Model 6; the Cadence workflow and guide.

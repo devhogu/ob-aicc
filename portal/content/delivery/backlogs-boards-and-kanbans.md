@@ -4,7 +4,7 @@ The work of delivery is visible in two backlogs and four boards, and it flows as
 
 ## 1. The two backlogs
 
-1.1. The Program Backlog, also called the PI Backlog, holds the Capabilities and the Features, grouped under their Initiatives, ranked by value and urgency relative to effort, each term scored from 1 to 5 together with risk reduction or opportunity, and effort. The AICC Lead ranks it, with the Domain Owners stating the value. The Iteration Backlog holds the Features the Teams work on in the Iteration, selected at Iteration Planning. The Portfolio Backlog of the Initiatives sits above both and is the subject of the Portfolio course.
+1.1. The Program Backlog holds the Capabilities and the Features under their Initiatives, ranked by value and urgency relative to effort; the AICC Lead ranks it, the Domain Owners state the value. The Iteration Backlog holds the Features of the month, selected at Iteration Planning. The Portfolio Backlog of the Initiatives sits above both, in the Portfolio course.
 
 1.2. A Feature is ready to be pulled when it is approved, its acceptance criteria are written, and its Dependencies are known. That is its definition of ready. It is done when it is verified, deployed to its environment of use, and accepted by the product owner against its criteria. That is its definition of done. Backlog Refinement, held within the weekly events, keeps one to two Iterations of ready Features ahead of the Team.
 
@@ -19,17 +19,11 @@ The work of delivery is visible in two backlogs and four boards, and it flows as
 
 ## 3. How a Kanban limits the work
 
-3.1. A limit on work in progress is a number on a column, a lane, or a Domain: no more than so many items may be in that state at once. When the limit is reached, the Team finishes before it starts, and a new item is pulled only when a place is free. The limit is set by the Team for the Program Kanban and reviewed at the Weekly Review; it is set by the AICC Lead for the Active Initiatives within the mix of the Executive Sponsor. The classes of service are lanes with their own limits: Urgent, a Service down or wrong output reaching people; High priority, a consumer blocked with a date; Normal, everything else. An item Waiting on a Dependency outside AICC keeps its place and its flag, so that waiting is seen and counted rather than hidden.
-
-3.2. The effect of the limits is the point of the method: the fewer items in progress, the shorter the time each takes, and the sooner the function sees a result. Lead time, work in progress, and throughput move together, as the Measures part explains.
+3.1. A limit on work in progress is a number on a column, a lane, or a Domain: when it is reached, the Team finishes before it starts. The Team sets the limits of the Program Kanban; the AICC Lead sets the limit on the Active Initiatives. The classes of service, Urgent, High priority, Normal, are lanes with their own limits, and a Waiting item keeps its place and its flag so that waiting is counted, not hidden. The fewer items in progress, the sooner each is done; the Measures part explains why.
 
 ## 4. The Program Board
 
-4.1. The Program Board is the board of the dependencies of a Program Increment. For each Capability and Feature it shows the Iteration in which it is planned, its state, and what it needs from other items, Teams, functions, and persons; it shows the Milestones of the Roadmap at the Iteration in which they fall. The AICC Lead builds it with the Teams at PI Planning and keeps it current at the Weekly Review. A Dependency has a date by which it is needed and a status, Met, Open, or At risk; an At risk Dependency is raised to the monthly Steering. The board is the one place where a quarter can be seen as a whole, and it is what makes a plan of intent honest: a Feature whose Dependency is Open cannot be promised.
-
-| Feature | Capability | Iteration 1 | Iteration 2 | Iteration 3 | IP week | Depends on | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| The form of a lane | The Capability it serves | The Stage planned or reached | | | | The item, Team, function, or person, and the date needed | Met, Open, At risk |
+4.1. The Program Board is the board of the dependencies of a Program Increment: each Feature by the Iteration it is planned in, its state, what it needs from whom and by when, and the Milestones of the Roadmap. Built at PI Planning, kept current at the Weekly Review; an At risk Dependency is raised to the monthly Steering. It is the one place where a quarter is seen as a whole, and what makes a plan of intent honest. The Solution Lifecycle Model 4.3 gives its form.
 
 ## 5. The Roadmap and the Dashboard
 
