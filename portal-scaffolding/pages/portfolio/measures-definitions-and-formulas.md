@@ -2,7 +2,7 @@
 id: portfolio/measures-definitions-and-formulas
 title: Portfolio measures: definitions and formulas
 section: portfolio
-order: 9
+order: 20
 type: outline
 slug: /portfolio/measures-definitions-and-formulas/
 source: portal/content/portfolio/measures-definitions-and-formulas.md

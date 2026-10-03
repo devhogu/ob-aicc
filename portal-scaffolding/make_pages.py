@@ -287,7 +287,7 @@ if NEXT:
         outline=['The practices: request, incident, problem, change, knowledge, service level, financial, supplier', 'The classes of service', 'The health of a Service', 'Sizing for a small unit'])
 
 if NEXT:
-    add(id='portfolio/measures-definitions-and-formulas', section='portfolio', order=9, type='outline', slug='/portfolio/measures-definitions-and-formulas/', title='Portfolio measures: definitions and formulas',
+    add(id='portfolio/measures-definitions-and-formulas', section='portfolio', order=20, type='outline', slug='/portfolio/measures-definitions-and-formulas/', title='Portfolio measures: definitions and formulas',
         source=['portal/content/portfolio/measures-definitions-and-formulas.md'], production='authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 and Charter 7',
         outline=['Conventions', 'Flow measures with formulas: WIP, throughput, lead time, cycle time, Little\'s law, flow efficiency, aging, load, distribution, gate returns, predictability',
                  'Outcome measures of an Initiative: key results, adoption, acceptance, cycle, benefit claimed, confirmed, realization', 'Portfolio economics as a profit and loss view per priority', 'Control and quality measures', 'How the measures are kept'])
