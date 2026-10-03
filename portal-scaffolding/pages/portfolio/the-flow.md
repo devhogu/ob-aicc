@@ -5,7 +5,7 @@ section: portfolio
 order: 3
 type: outline
 slug: /portfolio/the-flow/
-source: portal/content/portfolio/the-flow.md
+source: portal/content/en/portfolio/the-flow.md
 part: 3 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /portfolio/the-flow/
 
 ## Source
 
-- portal/content/portfolio/the-flow.md
+- portal/content/en/portfolio/the-flow.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: home
 order: 91
 type: legal
 slug: /terms-of-use/
-source: portal/content/terms-of-use.md
+source: portal/content/en/terms-of-use.md
 production: authored; aligned with the Operating Model 7, the AI Policy 2, and the collaboration tooling workflow
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: legal. Address: /terms-of-use/
 
 ## Source
 
-- portal/content/terms-of-use.md
+- portal/content/en/terms-of-use.md
 
 ## Outline
 

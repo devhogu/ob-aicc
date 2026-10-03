@@ -5,7 +5,7 @@ section: delivery
 order: 32
 type: workflow
 slug: /delivery/service-delivery-workflow/the-portfolio-flow/
-source: charter/workflows/service-delivery.md
+source: charter/en/workflows/service-delivery.md
 source_sections: 4
 document: service-delivery-workflow
 part: 2 of 6
@@ -21,7 +21,7 @@ Page type: workflow. Address: /delivery/service-delivery-workflow/the-portfolio-
 
 ## Source
 
-- charter/workflows/service-delivery.md
+- charter/en/workflows/service-delivery.md
 
 ## Sections of the source
 

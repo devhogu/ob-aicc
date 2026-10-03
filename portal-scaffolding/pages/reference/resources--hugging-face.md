@@ -5,7 +5,7 @@ section: reference
 order: 67
 type: regulation
 slug: /reference/resources/hugging-face/
-source: portal/content/reference/resources/hugging-face.md
+source: portal/content/en/reference/resources/hugging-face.md
 region: Learning and open resources
 production: authored; orientation only; a listing is not an endorsement
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/resources/hugging-face/
 
 ## Source
 
-- portal/content/reference/resources/hugging-face.md
+- portal/content/en/reference/resources/hugging-face.md
 
 ## Outline
 

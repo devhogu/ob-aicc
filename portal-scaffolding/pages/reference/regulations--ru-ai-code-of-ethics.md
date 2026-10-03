@@ -5,7 +5,7 @@ section: reference
 order: 38
 type: regulation
 slug: /reference/regulations/ru-ai-code-of-ethics/
-source: portal/content/reference/regulations/ru-ai-code-of-ethics.md
+source: portal/content/en/reference/regulations/ru-ai-code-of-ethics.md
 region: Russian Federation
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/ru-ai-code-of-ethics/
 
 ## Source
 
-- portal/content/reference/regulations/ru-ai-code-of-ethics.md
+- portal/content/en/reference/regulations/ru-ai-code-of-ethics.md
 
 ## Outline
 

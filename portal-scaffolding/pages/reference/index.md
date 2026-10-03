@@ -5,7 +5,7 @@ section: reference
 order: 0
 type: section
 slug: /reference/
-source: portal/content/reference/overview.md
+source: portal/content/en/reference/overview.md
 part: 1 of 5
 series: reference-course
 production: authored; the overview of the Reference
@@ -18,7 +18,7 @@ Page type: section. Address: /reference/
 
 ## Source
 
-- portal/content/reference/overview.md
+- portal/content/en/reference/overview.md
 
 ## Outline
 

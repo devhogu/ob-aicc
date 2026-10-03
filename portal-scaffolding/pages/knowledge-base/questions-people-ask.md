@@ -5,7 +5,7 @@ section: knowledge-base
 order: 7
 type: outline
 slug: /knowledge-base/questions-people-ask/
-source: portal/content/knowledge-base/questions-people-ask.md
+source: portal/content/en/knowledge-base/questions-people-ask.md
 part: 7 of 7
 series: knowledge-base-course
 production: authored
@@ -18,7 +18,7 @@ Page type: outline. Address: /knowledge-base/questions-people-ask/
 
 ## Source
 
-- portal/content/knowledge-base/questions-people-ask.md
+- portal/content/en/knowledge-base/questions-people-ask.md
 
 ## Outline
 

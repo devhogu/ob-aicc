@@ -5,7 +5,7 @@ section: reference
 order: 12
 type: document
 slug: /reference/document-catalog/
-source: charter/documents/document-catalog.md
+source: charter/en/documents/document-catalog.md
 words: 1519
 production: generated
 status: scaffold
@@ -17,7 +17,7 @@ Page type: document. Address: /reference/document-catalog/
 
 ## Source
 
-- charter/documents/document-catalog.md
+- charter/en/documents/document-catalog.md
 
 ## Outline
 

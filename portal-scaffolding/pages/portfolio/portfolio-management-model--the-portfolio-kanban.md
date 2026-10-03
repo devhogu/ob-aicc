@@ -5,7 +5,7 @@ section: portfolio
 order: 13
 type: document
 slug: /portfolio/portfolio-management-model/the-portfolio-kanban/
-source: charter/documents/portfolio-management-model.md
+source: charter/en/documents/portfolio-management-model.md
 source_sections: 5
 document: portfolio-management-model
 part: 3 of 5
@@ -20,7 +20,7 @@ Page type: document. Address: /portfolio/portfolio-management-model/the-portfoli
 
 ## Source
 
-- charter/documents/portfolio-management-model.md
+- charter/en/documents/portfolio-management-model.md
 
 ## Sections of the source
 

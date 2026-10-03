@@ -5,7 +5,7 @@ section: delivery
 order: 41
 type: workflow
 slug: /delivery/collaboration-tooling-workflow/
-source: charter/workflows/collaboration-tooling.md
+source: charter/en/workflows/collaboration-tooling.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: workflow. Address: /delivery/collaboration-tooling-workflow/
 
 ## Source
 
-- charter/workflows/collaboration-tooling.md
+- charter/en/workflows/collaboration-tooling.md
 
 ## Outline
 

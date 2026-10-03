@@ -5,7 +5,7 @@ section: about
 order: 10
 type: outline
 slug: /about/charter-outline/
-source: charter/README.md; charter/executive-summary.md; charter/guides/README.md
+source: charter/en/README.md; charter/en/executive-summary.md; charter/en/guides/README.md
 production: generated, with an authored introduction
 status: scaffold
 ---
@@ -16,9 +16,9 @@ Page type: outline. Address: /about/charter-outline/
 
 ## Source
 
-- charter/README.md
-- charter/executive-summary.md
-- charter/guides/README.md
+- charter/en/README.md
+- charter/en/executive-summary.md
+- charter/en/guides/README.md
 
 ## Outline
 

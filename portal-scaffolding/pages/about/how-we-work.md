@@ -5,7 +5,7 @@ section: about
 order: 8
 type: outline
 slug: /about/how-we-work/
-source: portal/content/about/how-we-work.md
+source: portal/content/en/about/how-we-work.md
 production: authored
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: outline. Address: /about/how-we-work/
 
 ## Source
 
-- portal/content/about/how-we-work.md
+- portal/content/en/about/how-we-work.md
 
 ## Outline
 

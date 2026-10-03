@@ -5,7 +5,7 @@ section: reference
 order: 28
 type: regulation
 slug: /reference/regulations/owasp-top-10-llm/
-source: portal/content/reference/regulations/owasp-top-10-llm.md
+source: portal/content/en/reference/regulations/owasp-top-10-llm.md
 region: Global
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/owasp-top-10-llm/
 
 ## Source
 
-- portal/content/reference/regulations/owasp-top-10-llm.md
+- portal/content/en/reference/regulations/owasp-top-10-llm.md
 
 ## Outline
 

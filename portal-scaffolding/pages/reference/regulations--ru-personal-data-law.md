@@ -5,7 +5,7 @@ section: reference
 order: 35
 type: regulation
 slug: /reference/regulations/ru-personal-data-law/
-source: portal/content/reference/regulations/ru-personal-data-law.md
+source: portal/content/en/reference/regulations/ru-personal-data-law.md
 region: Russian Federation
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/ru-personal-data-law/
 
 ## Source
 
-- portal/content/reference/regulations/ru-personal-data-law.md
+- portal/content/en/reference/regulations/ru-personal-data-law.md
 
 ## Outline
 

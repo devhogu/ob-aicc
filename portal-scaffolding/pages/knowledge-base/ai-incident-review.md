@@ -5,7 +5,7 @@ section: knowledge-base
 order: 30
 type: template
 slug: /knowledge-base/ai-incident-review/
-source: charter/templates/ai-incident-review.md
+source: charter/en/templates/ai-incident-review.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/ai-incident-review/
 
 ## Source
 
-- charter/templates/ai-incident-review.md
+- charter/en/templates/ai-incident-review.md
 
 ## Outline
 

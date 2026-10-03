@@ -5,7 +5,7 @@ section: governance
 order: 5
 type: outline
 slug: /governance/controls-and-the-catalogue/
-source: portal/content/governance/controls-and-the-catalogue.md
+source: portal/content/en/governance/controls-and-the-catalogue.md
 part: 5 of 7
 series: governance-course
 production: authored; explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /governance/controls-and-the-catalogue/
 
 ## Source
 
-- portal/content/governance/controls-and-the-catalogue.md
+- portal/content/en/governance/controls-and-the-catalogue.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: knowledge-base
 order: 25
 type: template
 slug: /knowledge-base/control-sign-off/
-source: charter/templates/control-sign-off.md
+source: charter/en/templates/control-sign-off.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/control-sign-off/
 
 ## Source
 
-- charter/templates/control-sign-off.md
+- charter/en/templates/control-sign-off.md
 
 ## Outline
 

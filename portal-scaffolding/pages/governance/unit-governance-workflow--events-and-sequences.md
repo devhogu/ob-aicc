@@ -5,7 +5,7 @@ section: governance
 order: 17
 type: workflow
 slug: /governance/unit-governance-workflow/events-and-sequences/
-source: charter/workflows/unit-governance.md
+source: charter/en/workflows/unit-governance.md
 source_sections: 4, 5, 6, 7, 8, 9
 document: unit-governance-workflow
 part: 2 of 4
@@ -21,7 +21,7 @@ Page type: workflow. Address: /governance/unit-governance-workflow/events-and-se
 
 ## Source
 
-- charter/workflows/unit-governance.md
+- charter/en/workflows/unit-governance.md
 
 ## Sections of the source
 

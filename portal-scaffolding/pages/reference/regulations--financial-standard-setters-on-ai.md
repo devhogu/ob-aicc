@@ -5,7 +5,7 @@ section: reference
 order: 29
 type: regulation
 slug: /reference/regulations/financial-standard-setters-on-ai/
-source: portal/content/reference/regulations/financial-standard-setters-on-ai.md
+source: portal/content/en/reference/regulations/financial-standard-setters-on-ai.md
 region: Global
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/financial-standard-setter
 
 ## Source
 
-- portal/content/reference/regulations/financial-standard-setters-on-ai.md
+- portal/content/en/reference/regulations/financial-standard-setters-on-ai.md
 
 ## Outline
 

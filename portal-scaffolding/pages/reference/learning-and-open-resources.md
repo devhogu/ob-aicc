@@ -5,7 +5,7 @@ section: reference
 order: 4
 type: outline
 slug: /reference/learning-and-open-resources/
-source: portal/content/reference/learning-and-open-resources.md
+source: portal/content/en/reference/learning-and-open-resources.md
 part: 5 of 5
 series: reference-course
 production: authored; a curated list
@@ -18,7 +18,7 @@ Page type: outline. Address: /reference/learning-and-open-resources/
 
 ## Source
 
-- portal/content/reference/learning-and-open-resources.md
+- portal/content/en/reference/learning-and-open-resources.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: organization
 order: 16
 type: guide
 slug: /organization/organization-guide/who-is-responsible-for-what/
-source: charter/guides/organization-guide.md
+source: charter/en/guides/organization-guide.md
 source_sections: 4
 document: organization-guide
 part: 2 of 3
@@ -22,7 +22,7 @@ Page type: guide. Address: /organization/organization-guide/who-is-responsible-f
 
 ## Source
 
-- charter/guides/organization-guide.md
+- charter/en/guides/organization-guide.md
 
 ## Sections of the source
 

@@ -5,7 +5,7 @@ section: delivery
 order: 42
 type: outline
 slug: /delivery/experiment-workflow/
-source: portal/content/delivery/experiment-workflow.md
+source: portal/content/en/delivery/experiment-workflow.md
 production: authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: outline. Address: /delivery/experiment-workflow/
 
 ## Source
 
-- portal/content/delivery/experiment-workflow.md
+- portal/content/en/delivery/experiment-workflow.md
 
 ## Outline
 

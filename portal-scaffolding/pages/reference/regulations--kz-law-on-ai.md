@@ -5,7 +5,7 @@ section: reference
 order: 39
 type: regulation
 slug: /reference/regulations/kz-law-on-ai/
-source: portal/content/reference/regulations/kz-law-on-ai.md
+source: portal/content/en/reference/regulations/kz-law-on-ai.md
 region: Kazakhstan
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/kz-law-on-ai/
 
 ## Source
 
-- portal/content/reference/regulations/kz-law-on-ai.md
+- portal/content/en/reference/regulations/kz-law-on-ai.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: delivery
 order: 35
 type: guide
 slug: /delivery/service-delivery-guide/
-source: charter/guides/service-delivery-guide.md
+source: charter/en/guides/service-delivery-guide.md
 source_sections: 1, 2, 3, 4
 document: service-delivery-guide
 part: 5 of 6
@@ -21,7 +21,7 @@ Page type: guide. Address: /delivery/service-delivery-guide/
 
 ## Source
 
-- charter/guides/service-delivery-guide.md
+- charter/en/guides/service-delivery-guide.md
 
 ## Sections of the source
 

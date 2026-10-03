@@ -5,7 +5,7 @@ section: reference
 order: 63
 type: regulation
 slug: /reference/resources/world-economic-forum/
-source: portal/content/reference/resources/world-economic-forum.md
+source: portal/content/en/reference/resources/world-economic-forum.md
 region: Research and insight
 production: authored; orientation only; a listing is not an endorsement
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/resources/world-economic-forum/
 
 ## Source
 
-- portal/content/reference/resources/world-economic-forum.md
+- portal/content/en/reference/resources/world-economic-forum.md
 
 ## Outline
 

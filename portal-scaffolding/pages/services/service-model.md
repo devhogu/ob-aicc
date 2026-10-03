@@ -5,7 +5,7 @@ section: services
 order: 25
 type: outline
 slug: /services/service-model/
-source: portal/content/services/service-model.md
+source: portal/content/en/services/service-model.md
 part: 2 of 2
 series: service-catalog
 production: authored
@@ -18,7 +18,7 @@ Page type: outline. Address: /services/service-model/
 
 ## Source
 
-- portal/content/services/service-model.md
+- portal/content/en/services/service-model.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: reference
 order: 23
 type: regulation
 slug: /reference/regulations/unesco-recommendation-ethics-ai/
-source: portal/content/reference/regulations/unesco-recommendation-ethics-ai.md
+source: portal/content/en/reference/regulations/unesco-recommendation-ethics-ai.md
 region: Global
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/unesco-recommendation-eth
 
 ## Source
 
-- portal/content/reference/regulations/unesco-recommendation-ethics-ai.md
+- portal/content/en/reference/regulations/unesco-recommendation-ethics-ai.md
 
 ## Outline
 

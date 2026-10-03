@@ -5,10 +5,10 @@ section: services
 order: 24
 type: outline
 slug: /services/catalog/
-source: portal/content/services/catalog-form.md
+source: portal/content/en/services/catalog-form.md
 part: 1 of 2
 series: service-catalog
-production: authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal
+production: authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/en/solutions, portfolio/en/packages.md) for the live portal
 status: scaffold
 ---
 
@@ -18,7 +18,7 @@ Page type: outline. Address: /services/catalog/
 
 ## Source
 
-- portal/content/services/catalog-form.md
+- portal/content/en/services/catalog-form.md
 
 ## Outline
 

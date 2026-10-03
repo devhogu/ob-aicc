@@ -5,7 +5,7 @@ section: portfolio
 order: 15
 type: document
 slug: /portfolio/portfolio-management-model/levels-review-and-records/
-source: charter/documents/portfolio-management-model.md
+source: charter/en/documents/portfolio-management-model.md
 source_sections: 8, 9
 document: portfolio-management-model
 part: 5 of 5
@@ -20,7 +20,7 @@ Page type: document. Address: /portfolio/portfolio-management-model/levels-revie
 
 ## Source
 
-- charter/documents/portfolio-management-model.md
+- charter/en/documents/portfolio-management-model.md
 
 ## Sections of the source
 

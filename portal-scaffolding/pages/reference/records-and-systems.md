@@ -5,7 +5,7 @@ section: reference
 order: 14
 type: records
 slug: /reference/records-and-systems/
-source: charter/documents/operating-model.md; charter/documents/document-catalog.md; charter/templates/README.md; registry/README.md
+source: charter/en/documents/operating-model.md; charter/en/documents/document-catalog.md; charter/en/templates/README.md; registry/en/README.md
 production: authored from sources
 status: scaffold
 ---
@@ -16,10 +16,10 @@ Page type: records. Address: /reference/records-and-systems/
 
 ## Source
 
-- charter/documents/operating-model.md
-- charter/documents/document-catalog.md
-- charter/templates/README.md
-- registry/README.md
+- charter/en/documents/operating-model.md
+- charter/en/documents/document-catalog.md
+- charter/en/templates/README.md
+- registry/en/README.md
 
 ## Outline
 

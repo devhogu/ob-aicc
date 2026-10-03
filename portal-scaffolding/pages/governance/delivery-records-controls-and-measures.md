@@ -5,7 +5,7 @@ section: governance
 order: 14
 type: document
 slug: /governance/delivery-records-controls-and-measures/
-source: charter/documents/solution-lifecycle-model.md
+source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 9, 10
 document: solution-lifecycle-model
 part: 7 of 7 (governance view)
@@ -20,7 +20,7 @@ Page type: document. Address: /governance/delivery-records-controls-and-measures
 
 ## Source
 
-- charter/documents/solution-lifecycle-model.md
+- charter/en/documents/solution-lifecycle-model.md
 
 ## Sections of the source
 

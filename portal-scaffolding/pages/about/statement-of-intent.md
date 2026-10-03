@@ -5,7 +5,7 @@ section: about
 order: 1
 type: document
 slug: /about/statement-of-intent/
-source: charter/documents/statement-of-intent.md
+source: charter/en/documents/statement-of-intent.md
 source_sections: 1, 2, 3, 4, 5, 6, 7, 8
 document: statement-of-intent
 part: 1 of 4
@@ -20,7 +20,7 @@ Page type: document. Address: /about/statement-of-intent/
 
 ## Source
 
-- charter/documents/statement-of-intent.md
+- charter/en/documents/statement-of-intent.md
 
 ## Sections of the source
 

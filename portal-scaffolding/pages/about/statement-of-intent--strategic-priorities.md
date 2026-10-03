@@ -5,7 +5,7 @@ section: about
 order: 2
 type: document
 slug: /about/statement-of-intent/strategic-priorities/
-source: charter/documents/statement-of-intent.md
+source: charter/en/documents/statement-of-intent.md
 source_sections: 9
 document: statement-of-intent
 part: 2 of 4
@@ -20,7 +20,7 @@ Page type: document. Address: /about/statement-of-intent/strategic-priorities/
 
 ## Source
 
-- charter/documents/statement-of-intent.md
+- charter/en/documents/statement-of-intent.md
 
 ## Sections of the source
 

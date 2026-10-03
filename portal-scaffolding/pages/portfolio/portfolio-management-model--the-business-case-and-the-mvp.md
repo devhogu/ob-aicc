@@ -5,7 +5,7 @@ section: portfolio
 order: 14
 type: document
 slug: /portfolio/portfolio-management-model/the-business-case-and-the-mvp/
-source: charter/documents/portfolio-management-model.md
+source: charter/en/documents/portfolio-management-model.md
 source_sections: 6, 7
 document: portfolio-management-model
 part: 4 of 5
@@ -20,7 +20,7 @@ Page type: document. Address: /portfolio/portfolio-management-model/the-business
 
 ## Source
 
-- charter/documents/portfolio-management-model.md
+- charter/en/documents/portfolio-management-model.md
 
 ## Sections of the source
 

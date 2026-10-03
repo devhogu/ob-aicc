@@ -5,7 +5,7 @@ section: responsible-ai
 order: 11
 type: document
 slug: /responsible-ai/ai-policy/
-source: charter/documents/ai-policy.md
+source: charter/en/documents/ai-policy.md
 words: 2155
 production: generated
 status: scaffold
@@ -17,7 +17,7 @@ Page type: document. Address: /responsible-ai/ai-policy/
 
 ## Source
 
-- charter/documents/ai-policy.md
+- charter/en/documents/ai-policy.md
 
 ## Outline
 

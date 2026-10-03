@@ -5,7 +5,7 @@ section: services
 order: 23
 type: guide
 slug: /services/engagement-guide/
-source: charter/guides/engagement-guide.md
+source: charter/en/guides/engagement-guide.md
 part: 3 of 3
 companion: services/engagement-workflow
 series: how-to-engage
@@ -19,7 +19,7 @@ Page type: guide. Address: /services/engagement-guide/
 
 ## Source
 
-- charter/guides/engagement-guide.md
+- charter/en/guides/engagement-guide.md
 
 ## Outline
 

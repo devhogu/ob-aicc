@@ -5,7 +5,7 @@ section: knowledge-base
 order: 29
 type: template
 slug: /knowledge-base/package-definition/
-source: charter/templates/package-definition.md
+source: charter/en/templates/package-definition.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/package-definition/
 
 ## Source
 
-- charter/templates/package-definition.md
+- charter/en/templates/package-definition.md
 
 ## Outline
 

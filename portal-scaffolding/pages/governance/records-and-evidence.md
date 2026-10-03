@@ -5,7 +5,7 @@ section: governance
 order: 12
 type: document
 slug: /governance/records-and-evidence/
-source: charter/documents/operating-model.md
+source: charter/en/documents/operating-model.md
 source_sections: 7
 document: operating-model
 part: governance view
@@ -22,7 +22,7 @@ Page type: document. Address: /governance/records-and-evidence/
 
 ## Source
 
-- charter/documents/operating-model.md
+- charter/en/documents/operating-model.md
 
 ## Sections of the source
 

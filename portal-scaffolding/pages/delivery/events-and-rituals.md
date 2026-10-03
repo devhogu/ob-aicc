@@ -5,7 +5,7 @@ section: delivery
 order: 5
 type: outline
 slug: /delivery/events-and-rituals/
-source: portal/content/delivery/events-and-rituals.md
+source: portal/content/en/delivery/events-and-rituals.md
 part: 5 of 10
 series: delivery-course
 production: authored; explanatory, the Solution Lifecycle Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /delivery/events-and-rituals/
 
 ## Source
 
-- portal/content/delivery/events-and-rituals.md
+- portal/content/en/delivery/events-and-rituals.md
 
 ## Outline
 

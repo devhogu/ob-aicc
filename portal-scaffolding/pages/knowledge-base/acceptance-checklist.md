@@ -5,7 +5,7 @@ section: knowledge-base
 order: 24
 type: template
 slug: /knowledge-base/acceptance-checklist/
-source: charter/templates/acceptance-checklist.md
+source: charter/en/templates/acceptance-checklist.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/acceptance-checklist/
 
 ## Source
 
-- charter/templates/acceptance-checklist.md
+- charter/en/templates/acceptance-checklist.md
 
 ## Outline
 

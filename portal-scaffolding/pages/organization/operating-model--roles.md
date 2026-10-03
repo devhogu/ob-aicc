@@ -5,7 +5,7 @@ section: organization
 order: 12
 type: document
 slug: /organization/operating-model/roles/
-source: charter/documents/operating-model.md
+source: charter/en/documents/operating-model.md
 source_sections: 4
 document: operating-model
 part: 2 of 3
@@ -22,7 +22,7 @@ Page type: document. Address: /organization/operating-model/roles/
 
 ## Source
 
-- charter/documents/operating-model.md
+- charter/en/documents/operating-model.md
 
 ## Sections of the source
 

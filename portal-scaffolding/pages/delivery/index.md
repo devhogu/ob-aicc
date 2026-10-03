@@ -5,7 +5,7 @@ section: delivery
 order: 0
 type: section
 slug: /delivery/
-source: portal/content/delivery/overview.md; charter/workflows/README.md
+source: portal/content/en/delivery/overview.md; charter/en/workflows/README.md
 part: 1 of 10
 series: delivery-course
 production: authored; the first part of the course, explanatory, the Solution Lifecycle Model is the rule
@@ -18,8 +18,8 @@ Page type: section. Address: /delivery/
 
 ## Source
 
-- portal/content/delivery/overview.md
-- charter/workflows/README.md
+- portal/content/en/delivery/overview.md
+- charter/en/workflows/README.md
 
 ## Outline
 

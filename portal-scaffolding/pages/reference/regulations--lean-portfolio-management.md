@@ -5,7 +5,7 @@ section: reference
 order: 21
 type: regulation
 slug: /reference/regulations/lean-portfolio-management/
-source: portal/content/reference/regulations/lean-portfolio-management.md
+source: portal/content/en/reference/regulations/lean-portfolio-management.md
 region: Global
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/lean-portfolio-management
 
 ## Source
 
-- portal/content/reference/regulations/lean-portfolio-management.md
+- portal/content/en/reference/regulations/lean-portfolio-management.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: services
 order: 5
 type: service
 slug: /services/strategy-and-governance/
-source: portal/content/services/strategy-and-governance.md
+source: portal/content/en/services/strategy-and-governance.md
 area: advise
 series: service-categories-advise
 parent: services/advise-and-formulate
@@ -19,7 +19,7 @@ Page type: service. Address: /services/strategy-and-governance/
 
 ## Source
 
-- portal/content/services/strategy-and-governance.md
+- portal/content/en/services/strategy-and-governance.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: services
 order: 18
 type: service
 slug: /services/risk-tiering/
-source: portal/content/services/risk-tiering.md
+source: portal/content/en/services/risk-tiering.md
 area: assurance
 series: service-categories-assurance
 parent: services/assurance
@@ -19,7 +19,7 @@ Page type: service. Address: /services/risk-tiering/
 
 ## Source
 
-- portal/content/services/risk-tiering.md
+- portal/content/en/services/risk-tiering.md
 
 ## Outline
 

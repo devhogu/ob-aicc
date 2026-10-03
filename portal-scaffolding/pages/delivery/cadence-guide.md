@@ -5,7 +5,7 @@ section: delivery
 order: 41
 type: guide
 slug: /delivery/cadence-guide/
-source: charter/guides/cadence-guide.md
+source: charter/en/guides/cadence-guide.md
 source_sections: 1, 2, 3, 4, 5, 6
 document: cadence-guide
 part: 5 of 5
@@ -21,7 +21,7 @@ Page type: guide. Address: /delivery/cadence-guide/
 
 ## Source
 
-- charter/guides/cadence-guide.md
+- charter/en/guides/cadence-guide.md
 
 ## Sections of the source
 

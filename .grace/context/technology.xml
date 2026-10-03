@@ -1,8 +1,8 @@
 <GraceTechnology graceVersion="4.0">
   <Language>HTML, CSS, and JavaScript; final stack choices are open</Language>
   <Runtime>Static files served by any web host; no server-side runtime. Build and checks are Python 3 scripts under portal/tools. Publishing uses the Rust tool aicc-deploy under deploy/, built offline with the installed cargo toolchain.</Runtime>
-  <Framework>Undecided; a static-site generator versus hand-authored pages is an open decision for the first specification.</Framework>
-  <TestingStack>To be defined; expected to cover HTML validity, link integrity, accessibility, and rendered-output checks. GRACE lint runs on .grace state.</TestingStack>
+  <Framework>Custom Python static builder using markdown-it-py and Mermaid CLI. Language-specific source trees feed one stable sitemap and independent en/ru rendering; shared authored chrome remains in JSON.</Framework>
+  <TestingStack>Python unittest language-source and renderer fixtures; canonical-source hash and translation validation; static link, anchor, asset and language checks; deterministic rebuild. The deploy tool verifies its published manifest against the served site.</TestingStack>
   <Observability>None for this source repository; the published site's hosting analytics are a deployment decision.</Observability>
   <OperationalConstraints>
     <Constraint>Use existing host tools; do not require credentials or model inference for build and check.</Constraint>

@@ -5,7 +5,7 @@ section: knowledge-base
 order: 28
 type: template
 slug: /knowledge-base/outcome-report/
-source: charter/templates/outcome-report.md
+source: charter/en/templates/outcome-report.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/outcome-report/
 
 ## Source
 
-- charter/templates/outcome-report.md
+- charter/en/templates/outcome-report.md
 
 ## Outline
 

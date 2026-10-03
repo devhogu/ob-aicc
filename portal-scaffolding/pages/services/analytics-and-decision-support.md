@@ -5,7 +5,7 @@ section: services
 order: 11
 type: service
 slug: /services/analytics-and-decision-support/
-source: portal/content/services/analytics-and-decision-support.md
+source: portal/content/en/services/analytics-and-decision-support.md
 area: build
 series: service-categories-build
 parent: services/build-and-run
@@ -19,7 +19,7 @@ Page type: service. Address: /services/analytics-and-decision-support/
 
 ## Source
 
-- portal/content/services/analytics-and-decision-support.md
+- portal/content/en/services/analytics-and-decision-support.md
 
 ## Outline
 

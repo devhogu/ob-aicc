@@ -5,7 +5,7 @@ section: responsible-ai
 order: 7
 type: outline
 slug: /responsible-ai/ai-terms-explained/
-source: portal/content/responsible-ai/ai-terms-explained.md
+source: portal/content/en/responsible-ai/ai-terms-explained.md
 part: 7 of 7
 series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /responsible-ai/ai-terms-explained/
 
 ## Source
 
-- portal/content/responsible-ai/ai-terms-explained.md
+- portal/content/en/responsible-ai/ai-terms-explained.md
 
 ## Outline
 

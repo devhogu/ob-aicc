@@ -5,7 +5,7 @@ section: portfolio
 order: 11
 type: document
 slug: /portfolio/portfolio-management-model/
-source: charter/documents/portfolio-management-model.md
+source: charter/en/documents/portfolio-management-model.md
 source_sections: 1, 2, 3
 document: portfolio-management-model
 part: 1 of 5
@@ -20,7 +20,7 @@ Page type: document. Address: /portfolio/portfolio-management-model/
 
 ## Source
 
-- charter/documents/portfolio-management-model.md
+- charter/en/documents/portfolio-management-model.md
 
 ## Sections of the source
 

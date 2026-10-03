@@ -5,7 +5,7 @@ section: organization
 order: 6
 type: outline
 slug: /organization/how-the-organization-grows/
-source: portal/content/organization/how-the-organization-grows.md
+source: portal/content/en/organization/how-the-organization-grows.md
 part: 6 of 6
 series: organization-course
 production: authored; explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /organization/how-the-organization-grows/
 
 ## Source
 
-- portal/content/organization/how-the-organization-grows.md
+- portal/content/en/organization/how-the-organization-grows.md
 
 ## Outline
 

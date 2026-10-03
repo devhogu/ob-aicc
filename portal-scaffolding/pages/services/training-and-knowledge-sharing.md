@@ -5,7 +5,7 @@ section: services
 order: 14
 type: service
 slug: /services/training-and-knowledge-sharing/
-source: portal/content/services/training-and-knowledge-sharing.md
+source: portal/content/en/services/training-and-knowledge-sharing.md
 area: enablement
 series: service-categories-enablement
 parent: services/enablement
@@ -19,7 +19,7 @@ Page type: service. Address: /services/training-and-knowledge-sharing/
 
 ## Source
 
-- portal/content/services/training-and-knowledge-sharing.md
+- portal/content/en/services/training-and-knowledge-sharing.md
 
 ## Outline
 

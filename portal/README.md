@@ -6,28 +6,53 @@ Editable home for the AICC charter site: the interface kit, the page chrome, the
 
 | Input | Holds |
 | --- | --- |
-| `../charter/**/*.md` | The authoritative content of each document, workflow, guide, and template |
+| `../charter/{en,ru}/**/*.md` | The authoritative content of each document, workflow, guide, and template |
 | `../portal-scaffolding/sitemap.json` | The structure: sections, pages, addresses, and which sections of a document each page holds |
 | `ui/` | The O! UI/UX kit: tokens, fonts, workspace CSS, the O! mark, and icons (copied from `../obank-uiux/site`) |
 | `site/charter.css`, `site/site.js` | The additions of the charter site: layout, diagrams, theme switch, search, control filter, template copy |
 | `messages/en.json`, `messages/ru.json` | The interface text in English and Russian |
 | `content/authored.json` | The authored chrome: section introductions, home text, reading routes (English and Russian) |
-| `content/**/*.md` | English explanatory pages, courses, service descriptions, and references; governing rules come from the charter |
+| `content/{en,ru}/**/*.md` | Explanatory pages, courses, service descriptions, and references; governing rules come from the charter |
 
-The build converts the Markdown with clause anchors, links each cross-reference such as Operating Model 6.6 to its clause, draws each Mermaid diagram to SVG in a light and a dark variant, wraps the tables, and writes `html/aicc/{en,ru}/`. The Russian pages carry the Russian interface and the English text, labelled as English, until a Russian text exists. The language switch is at the top right of every page and leads to the same page in the other language. The theme is light by default and can be switched to dark.
+The build converts the Markdown with clause anchors, links each cross-reference such as Operating Model 6.6 to its clause, draws each Mermaid diagram to SVG in a light and a dark variant, wraps the tables, and writes `html/aicc/{en,ru}/`. The build selects reviewed Russian source files when available. Missing or draft translations show the English source with an explicit language notice. A reviewed translation whose source has changed fails validation until it is reconciled. The language switch is at the top right of every page and leads to the same page in the other language. The theme is light by default and can be switched to dark.
 
 ## Build and check
 
 ```sh
 python3 portal/tools/build.py            # regenerate html/aicc/ (the first run draws the diagrams, which takes about a minute; later runs use portal/.cache)
+python3 portal/tools/check_sources.py    # pinned English sources and all Russian translation metadata
+python3 -m unittest discover -s portal/tests  # language selection through the real renderer
 python3 portal/tools/check.py            # links, anchors, language parity, one h1 per page, no request to another host
 ```
 
-The diagrams are drawn with Mermaid CLI and the headless browser of this host. The paths are set in `tools/build.py` and can be overridden with `MMDC_NPX`, `MMDC_CHROME`, and `MMDC_LIBS`. `tools/browser_check.py` and `tools/setup_browser*.sh` are the earlier browser checks of the first portal slice and need updating for the new pages.
+The diagrams are drawn with Mermaid CLI and the headless browser of this host. The paths are set in `tools/build.py` and can be overridden with `MMDC_NPX`, `MMDC_CHROME`, and `MMDC_LIBS`. `tools/browser_check.py` and `tools/setup_browser*.sh` are the earlier browser checks of the first portal slice. Language selection is covered by `tests/test_localization.py`; the static check covers the current full page set.
+
+## Language sources
+
+The canonical source trees are `charter/en/`, `registry/en/`, `portfolio/en/`, and `portal/content/en/`. Their `ru/` siblings mirror the filenames and folders. The root READMEs are navigation; Russian workspace READMEs and `.gitkeep` files are scaffolding, not translated documents. Shared UI strings remain in `messages/{en,ru}.json`, and authored bilingual chrome remains in `content/authored.json`.
+
+English is authoritative. A Russian record is a reviewed language view of the same record: its identity, dates, decisions, statuses, and quantities remain aligned. Only canonical records are edited for business changes; their translations are reconciled afterward. Translating a record never grants an approval or creates a second decision history. The build validates record identifiers and ISO dates; semantic equivalence of translated statuses and wording is part of the translation review.
+
+A translation retains the original six metadata fields when the source has them, changes only the identifier's language suffix, and adds the following fields in the opening YAML fence:
+
+```yaml
+source: charter/en/documents/business-model.md
+source_revision: 2.1
+source_sha256: <SHA-256 of the exact English file bytes>
+translation_status: draft
+```
+
+`source_revision` is required for a versioned source. Every translation, including explanatory Markdown without a document identifier, records `source`, `source_sha256`, and `translation_status`. Obtain the digest with `sha256sum` on the English file. Set `translation_status: reviewed` only after the translation is reviewed for the professional terminology, normative force, references, and factual equivalence. Drafts remain out of the published body. A stale reviewed source fails the build instead of silently serving an outdated translation.
+
+Preserve filenames, numbered headings, clause numbers, and table row/column order. Table headings and text may be translated; the generator keeps canonical column identities. Ordinary Markdown links use the matching relative language tree. `page:` references use stable sitemap page IDs, which are language independent. Cross-references recognize English document aliases and the titles of reviewed Russian documents; explicit Markdown links remain available for other wording. Mermaid labels may be translated while node IDs and edges stay the same.
+
+The build renders each language independently, including clause links, search, diagrams, metadata, and template copy text. Generated control and role views use translated sources once all their contributing documents are reviewed; until then the whole generated view remains marked English. The approved English source edition remains 2.2. The language migration updates paths and structural references, while all nine governing documents remain byte-identical to the approved baseline.
+
+The complete generated `html/aicc/` tree is promoted to the existing deployment repository. Registry and Portfolio translations do not add live records to the public portal; the current publication scope stays unchanged.
 
 ## English source for translation
 
-The approved English source baseline is **2.2, 3 October 2026**, established by [DR-2026-063](../registry/decisions/DR-2026-063-approved-english-baseline.md). This is the edition of the source set, not the revision of every document. The Business Model, Portfolio Management Model, Solution Lifecycle Model, and Vocabulary carry correction revision 2.1. The other four revised governing documents remain at 2.0, the Statement of Intent at 1.0, the nine previously amended templates at 1.1, and the other templates at 1.0.
+The approved English source baseline is **2.2, 3 October 2026**, established by [DR-2026-063](../registry/en/decisions/DR-2026-063-approved-english-baseline.md). This is the edition of the source set, not the revision of every document. The Business Model, Portfolio Management Model, Solution Lifecycle Model, and Vocabulary carry correction revision 2.1. The other four revised governing documents remain at 2.0, the Statement of Intent at 1.0, the nine previously amended templates at 1.1, and the other templates at 1.0.
 
 `translation-source.json` identifies the English source files and their SHA-256 hashes, including the corpus, Registry, Portfolio, explanatory pages, English interface messages, English fields of the authored content, and page routing. It records the exact source set prepared for translation. Its entries for documents and templates include their identifiers, revisions, and statuses. A later source edit requires reconciliation of the affected translation against that changed source; the manifest is not updated merely because a translation is added.
 

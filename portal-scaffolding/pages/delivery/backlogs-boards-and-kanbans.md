@@ -5,7 +5,7 @@ section: delivery
 order: 3
 type: outline
 slug: /delivery/backlogs-boards-and-kanbans/
-source: portal/content/delivery/backlogs-boards-and-kanbans.md
+source: portal/content/en/delivery/backlogs-boards-and-kanbans.md
 part: 3 of 10
 series: delivery-course
 production: authored; explanatory, the Solution Lifecycle Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /delivery/backlogs-boards-and-kanbans/
 
 ## Source
 
-- portal/content/delivery/backlogs-boards-and-kanbans.md
+- portal/content/en/delivery/backlogs-boards-and-kanbans.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: delivery
 order: 21
 type: document
 slug: /delivery/solution-lifecycle-model/
-source: charter/documents/solution-lifecycle-model.md
+source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 1, 2
 document: solution-lifecycle-model
 part: 1 of 7
@@ -20,7 +20,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/
 
 ## Source
 
-- charter/documents/solution-lifecycle-model.md
+- charter/en/documents/solution-lifecycle-model.md
 
 ## Sections of the source
 

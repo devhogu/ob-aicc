@@ -5,7 +5,7 @@ section: governance
 order: 6
 type: outline
 slug: /governance/records-evidence-and-assurance/
-source: portal/content/governance/records-evidence-and-assurance.md
+source: portal/content/en/governance/records-evidence-and-assurance.md
 part: 6 of 7
 series: governance-course
 production: authored; explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /governance/records-evidence-and-assurance/
 
 ## Source
 
-- portal/content/governance/records-evidence-and-assurance.md
+- portal/content/en/governance/records-evidence-and-assurance.md
 
 ## Outline
 

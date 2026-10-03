@@ -5,7 +5,7 @@ section: services
 order: 17
 type: service
 slug: /services/assessments-and-evaluations/
-source: portal/content/services/assessments-and-evaluations.md
+source: portal/content/en/services/assessments-and-evaluations.md
 area: assurance
 series: service-categories-assurance
 parent: services/assurance
@@ -19,7 +19,7 @@ Page type: service. Address: /services/assessments-and-evaluations/
 
 ## Source
 
-- portal/content/services/assessments-and-evaluations.md
+- portal/content/en/services/assessments-and-evaluations.md
 
 ## Outline
 

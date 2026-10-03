@@ -5,7 +5,7 @@ section: reference
 order: 41
 type: regulation
 slug: /reference/regulations/kz-financial-regulators/
-source: portal/content/reference/regulations/kz-financial-regulators.md
+source: portal/content/en/reference/regulations/kz-financial-regulators.md
 region: Kazakhstan
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/kz-financial-regulators/
 
 ## Source
 
-- portal/content/reference/regulations/kz-financial-regulators.md
+- portal/content/en/reference/regulations/kz-financial-regulators.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: delivery
 order: 9
 type: outline
 slug: /delivery/measures-and-tracking/
-source: portal/content/delivery/measures-and-tracking.md
+source: portal/content/en/delivery/measures-and-tracking.md
 part: 9 of 10
 series: delivery-course
 production: authored; explanatory, the Solution Lifecycle Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /delivery/measures-and-tracking/
 
 ## Source
 
-- portal/content/delivery/measures-and-tracking.md
+- portal/content/en/delivery/measures-and-tracking.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: portfolio
 order: 6
 type: outline
 slug: /portfolio/the-loops-and-governance/
-source: portal/content/portfolio/the-loops-and-governance.md
+source: portal/content/en/portfolio/the-loops-and-governance.md
 part: 6 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /portfolio/the-loops-and-governance/
 
 ## Source
 
-- portal/content/portfolio/the-loops-and-governance.md
+- portal/content/en/portfolio/the-loops-and-governance.md
 
 ## Outline
 

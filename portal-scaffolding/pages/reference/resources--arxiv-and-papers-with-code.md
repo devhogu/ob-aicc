@@ -5,7 +5,7 @@ section: reference
 order: 68
 type: regulation
 slug: /reference/resources/arxiv-and-papers-with-code/
-source: portal/content/reference/resources/arxiv-and-papers-with-code.md
+source: portal/content/en/reference/resources/arxiv-and-papers-with-code.md
 region: Learning and open resources
 production: authored; orientation only; a listing is not an endorsement
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/resources/arxiv-and-papers-with-code/
 
 ## Source
 
-- portal/content/reference/resources/arxiv-and-papers-with-code.md
+- portal/content/en/reference/resources/arxiv-and-papers-with-code.md
 
 ## Outline
 

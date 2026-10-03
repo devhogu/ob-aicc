@@ -5,7 +5,7 @@ section: reference
 order: 30
 type: regulation
 slug: /reference/regulations/eu-ai-act/
-source: portal/content/reference/regulations/eu-ai-act.md
+source: portal/content/en/reference/regulations/eu-ai-act.md
 region: European Union
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/eu-ai-act/
 
 ## Source
 
-- portal/content/reference/regulations/eu-ai-act.md
+- portal/content/en/reference/regulations/eu-ai-act.md
 
 ## Outline
 

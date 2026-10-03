@@ -5,7 +5,7 @@ section: organization
 order: 2
 type: outline
 slug: /organization/the-place-of-aicc-in-the-bank/
-source: portal/content/organization/the-place-of-aicc-in-the-bank.md
+source: portal/content/en/organization/the-place-of-aicc-in-the-bank.md
 part: 2 of 6
 series: organization-course
 production: authored; explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /organization/the-place-of-aicc-in-the-bank/
 
 ## Source
 
-- portal/content/organization/the-place-of-aicc-in-the-bank.md
+- portal/content/en/organization/the-place-of-aicc-in-the-bank.md
 
 ## Outline
 

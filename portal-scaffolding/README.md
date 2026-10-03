@@ -58,7 +58,7 @@ The body of the file holds the source, the sections of the source with their siz
 
 ## Rules of the scaffolding
 
-1. Every file under `charter/` supplies the content of at least one page. Every section of a split document, and every workflow, guide, and template, has exactly one canonical page. `check.py` verifies it.
+1. Every file under `charter/en/` supplies the content of at least one page. Every section of a split document, and every workflow, guide, and template, has exactly one canonical page. `check.py` verifies it.
 2. A document of more than 3,000 words is presented as pages of 600 to 1,800 words, cut at its top-level sections. Short sections are grouped, no section is divided, and the clause numbers and the permanent links do not change. A document of 3,000 words or fewer stays on one page.
 3. The sitemap assigns each page to a section of the site, so that one document can serve more than one section without a second copy. A page that shows a document for another section is a view of the canonical page and holds no second text.
 4. A guide sits beside its subject and names its workflow as its companion. The templates are cross-cutting forms and sit in the Library.
@@ -74,3 +74,5 @@ python3 portal-scaffolding/check.py
 python3 portal-scaffolding/make_pages.py --previous # the first structure of the site, to previous/
 python3 portal-scaffolding/check.py --previous
 ```
+
+The sitemap records canonical English source paths. The builder resolves corresponding reviewed files from the Russian source trees while retaining page IDs and URLs. See [language sources](../portal/README.md#language-sources).

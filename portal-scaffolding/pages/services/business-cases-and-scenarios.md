@@ -5,7 +5,7 @@ section: services
 order: 8
 type: service
 slug: /services/business-cases-and-scenarios/
-source: portal/content/services/business-cases-and-scenarios.md
+source: portal/content/en/services/business-cases-and-scenarios.md
 area: advise
 series: service-categories-advise
 parent: services/advise-and-formulate
@@ -19,7 +19,7 @@ Page type: service. Address: /services/business-cases-and-scenarios/
 
 ## Source
 
-- portal/content/services/business-cases-and-scenarios.md
+- portal/content/en/services/business-cases-and-scenarios.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: portfolio
 order: 0
 type: section
 slug: /portfolio/
-source: portal/content/portfolio/overview.md
+source: portal/content/en/portfolio/overview.md
 part: 1 of 8
 series: portfolio-course
 production: authored; the first part of the course, explanatory, the Portfolio Management Model is the rule
@@ -18,7 +18,7 @@ Page type: section. Address: /portfolio/
 
 ## Source
 
-- portal/content/portfolio/overview.md
+- portal/content/en/portfolio/overview.md
 
 ## Outline
 

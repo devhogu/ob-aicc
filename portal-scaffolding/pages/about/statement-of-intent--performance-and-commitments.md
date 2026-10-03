@@ -5,7 +5,7 @@ section: about
 order: 4
 type: document
 slug: /about/statement-of-intent/performance-and-commitments/
-source: charter/documents/statement-of-intent.md
+source: charter/en/documents/statement-of-intent.md
 source_sections: 12, 13
 document: statement-of-intent
 part: 4 of 4
@@ -20,7 +20,7 @@ Page type: document. Address: /about/statement-of-intent/performance-and-commitm
 
 ## Source
 
-- charter/documents/statement-of-intent.md
+- charter/en/documents/statement-of-intent.md
 
 ## Sections of the source
 

@@ -5,7 +5,7 @@ section: responsible-ai
 order: 13
 type: workflow
 slug: /responsible-ai/ai-risk-control-workflow/
-source: charter/workflows/ai-risk-control.md
+source: charter/en/workflows/ai-risk-control.md
 source_sections: 1, 2, 3
 document: ai-risk-control-workflow
 part: 1 of 2
@@ -21,7 +21,7 @@ Page type: workflow. Address: /responsible-ai/ai-risk-control-workflow/
 
 ## Source
 
-- charter/workflows/ai-risk-control.md
+- charter/en/workflows/ai-risk-control.md
 
 ## Sections of the source
 

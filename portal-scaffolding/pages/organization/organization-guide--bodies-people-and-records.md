@@ -5,7 +5,7 @@ section: organization
 order: 17
 type: guide
 slug: /organization/organization-guide/bodies-people-and-records/
-source: charter/guides/organization-guide.md
+source: charter/en/guides/organization-guide.md
 source_sections: 5, 6, 7, 8, 9
 document: organization-guide
 part: 3 of 3
@@ -22,7 +22,7 @@ Page type: guide. Address: /organization/organization-guide/bodies-people-and-re
 
 ## Source
 
-- charter/guides/organization-guide.md
+- charter/en/guides/organization-guide.md
 
 ## Sections of the source
 

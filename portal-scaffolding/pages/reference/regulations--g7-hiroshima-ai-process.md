@@ -5,7 +5,7 @@ section: reference
 order: 25
 type: regulation
 slug: /reference/regulations/g7-hiroshima-ai-process/
-source: portal/content/reference/regulations/g7-hiroshima-ai-process.md
+source: portal/content/en/reference/regulations/g7-hiroshima-ai-process.md
 region: Global
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/g7-hiroshima-ai-process/
 
 ## Source
 
-- portal/content/reference/regulations/g7-hiroshima-ai-process.md
+- portal/content/en/reference/regulations/g7-hiroshima-ai-process.md
 
 ## Outline
 

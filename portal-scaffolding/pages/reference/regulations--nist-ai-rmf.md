@@ -5,7 +5,7 @@ section: reference
 order: 27
 type: regulation
 slug: /reference/regulations/nist-ai-rmf/
-source: portal/content/reference/regulations/nist-ai-rmf.md
+source: portal/content/en/reference/regulations/nist-ai-rmf.md
 region: United States
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/nist-ai-rmf/
 
 ## Source
 
-- portal/content/reference/regulations/nist-ai-rmf.md
+- portal/content/en/reference/regulations/nist-ai-rmf.md
 
 ## Outline
 

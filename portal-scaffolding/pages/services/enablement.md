@@ -5,7 +5,7 @@ section: services
 order: 3
 type: outline
 slug: /services/enablement/
-source: portal/content/services/areas/enablement.md
+source: portal/content/en/services/areas/enablement.md
 part: 4 of 5
 series: service-areas
 production: authored; generated table of the categories of the area
@@ -18,7 +18,7 @@ Page type: outline. Address: /services/enablement/
 
 ## Source
 
-- portal/content/services/areas/enablement.md
+- portal/content/en/services/areas/enablement.md
 
 ## Outline
 

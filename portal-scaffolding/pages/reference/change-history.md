@@ -5,7 +5,7 @@ section: reference
 order: 13
 type: reference
 slug: /reference/change-history/
-source: charter/documents/document-catalog.md
+source: charter/en/documents/document-catalog.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: reference. Address: /reference/change-history/
 
 ## Source
 
-- charter/documents/document-catalog.md
+- charter/en/documents/document-catalog.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: delivery
 order: 6
 type: outline
 slug: /delivery/the-loops-of-delivery/
-source: portal/content/delivery/the-loops-of-delivery.md
+source: portal/content/en/delivery/the-loops-of-delivery.md
 part: 6 of 10
 series: delivery-course
 production: authored; explanatory, the Solution Lifecycle Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /delivery/the-loops-of-delivery/
 
 ## Source
 
-- portal/content/delivery/the-loops-of-delivery.md
+- portal/content/en/delivery/the-loops-of-delivery.md
 
 ## Outline
 

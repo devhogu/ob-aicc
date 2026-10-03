@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the AICC charter site (html/aicc) from the charter Markdown.
 
-Source of the content: charter/**/*.md. Source of the structure: portal-scaffolding/sitemap.json.
+Source of the content: charter/en/**/*.md. Source of the structure: portal-scaffolding/sitemap.json.
 Source of the chrome: portal/ui (the O! UI/UX kit), portal/site, portal/messages, portal/content.
 Output: html/aicc/{index.html, en/, ru/, assets/}. The output is generated and is never edited by hand.
 
@@ -21,6 +21,7 @@ import sys
 from urllib.parse import quote
 
 from markdown_it import MarkdownIt
+from localization import Sources, canonical_path, front_matter, validate_translations
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PORTAL = os.path.join(ROOT, 'portal')
@@ -30,7 +31,7 @@ CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v6')
 NPX = os.environ.get('MMDC_NPX', os.path.expanduser('~/.npm/_npx/668c188756b835f3/node_modules'))
 CHROME = os.environ.get('MMDC_CHROME', os.path.expanduser('~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'))
 FONT_FILE = os.path.join(PORTAL, 'ui', 'assets', 'fonts', 'golos-text', 'GolosText-variable.woff2')
-# where the charter and the Registry are published, on the corporate folder; a full copy of charter/ and registry/ of this repository.
+# where the charter and the Registry are published, on the corporate folder; a full copy of charter/en/ and registry/en/ of this repository.
 # The link opens the share where the browser allows it, and the UNC path is offered for copying.
 SHARE_HOST = '10.128.20.244'
 CHARTER_BASE = 'smb://%s/aicc/governance/charter/' % SHARE_HOST
@@ -74,7 +75,7 @@ DOC_NAMES = {
     'Vocabulary': 'vocabulary',
 }
 XREF = re.compile(r'\b(Statement of Intent|AICC Charter|Charter|Business Model|Operating Model|Portfolio Management Model|Solution Lifecycle Model|AI Policy|Document Catalog|Catalog|Vocabulary)\s+(\d+(?:\.\d+)*)((?:\([a-z]\))?)')
-LOCALXREF = re.compile(r'\b(sections?|clause)\s+(\d+(?:\.\d+)*)')
+LOCALXREF = re.compile(r'\b(sections?|clause|раздел(?:а|е|ы|ов)?|пункт(?:а|е|ы|ов)?)\s+(\d+(?:\.\d+)*)', re.I)
 CLAUSE = re.compile(r'^(\d+(?:\.\d+)+)\.\s')
 
 
@@ -119,7 +120,7 @@ def split_sections(text):
         end = marks[k + 1] if k + 1 < len(marks) else len(lines)
         block = '\n'.join(lines[i:end])
         title = lines[i][3:].strip()
-        if title.startswith('Change log'):
+        if title in ('Change log', 'Журнал изменений', 'История изменений'):
             change = block
             continue
         m = re.match(r'(\d+)\.\s+(.*)', title)
@@ -127,19 +128,8 @@ def split_sections(text):
     return pre, secs, change
 
 
-def front_matter(pre):
-    m = re.search(r'```yaml\n(.*?)```', pre, re.S)
-    out = {}
-    if m:
-        for line in m.group(1).splitlines():
-            if ':' in line:
-                k, v = line.split(':', 1)
-                out[k.strip()] = v.strip()
-    return out
-
-
 def slug(s):
-    s = re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')
+    s = re.sub(r'[^\w]+', '-', s.lower(), flags=re.UNICODE).strip('-')
     return s or 'x'
 
 
@@ -336,8 +326,11 @@ def render_diagrams(diagrams, enabled):
 # ---------------------------------------------------------------- site model
 
 class Site:
-    def __init__(self, args):
+    def __init__(self, args, language='en'):
         self.args = args
+        self.language = language
+        self.sources = Sources(ROOT, language)
+        self.english_sources = Sources(ROOT, 'en')
         sm = jload(SITEMAP)
         self.sections = sm['sections']
         self.pages = sm['pages']
@@ -359,7 +352,7 @@ class Site:
             if p['type'] in ('document', 'workflow', 'guide', 'template', 'catalogue', 'reference', 'outline', 'service', 'legal', 'regulation') and p.get('source') and not p.get('source_sections'):
                 self.file_page.setdefault(p['source'][0], p)
             if p['id'] == 'about/charter-outline':
-                self.file_page['charter/README.md'] = p
+                self.file_page['charter/en/README.md'] = p
         # first part of split docs for file links
         for p in self.pages:
             if p.get('source_sections') and p['source'][0] not in self.file_page and p.get('part', '').startswith('1 of'):
@@ -374,6 +367,30 @@ class Site:
         self.tables = {}
         self.catalog = {}
         self.load_catalogs()
+        for p in self.pages:
+            p['english_title'] = p['title']
+            p['content_language'] = 'en'
+            if p.get('source') and p['type'] not in ('role', 'home', 'control', 'catalogue'):
+                selected = self.sources.resolve(p['source'][0])
+                p['content_language'] = selected.language
+                if selected.language != 'en':
+                    title = h1_of(selected.path)
+                    if p.get('source_sections'):
+                        _, sections, _ = split_sections(selected.text)
+                        title += ': ' + '; '.join(t for n, t, _ in sections if n in p['source_sections'])
+                    p['title'] = title or p['title']
+
+        self.doc_names = dict(DOC_NAMES)
+        for name in set(DOC_NAMES.values()):
+            source = self.sources.resolve('charter/en/documents/%s.md' % name)
+            if source.language != 'en':
+                self.doc_names[h1_of(source.path)] = name
+        names = '|'.join(re.escape(name) for name in sorted(self.doc_names, key=len, reverse=True))
+        self.xref = re.compile(r'\b(' + names + r')\s+(\d+(?:\.\d+)*)((?:\([a-z]\))?)')
+
+    def combined_sources(self, paths):
+        # Generated views require all their source fragments in the same language.
+        return self.sources if all(self.sources.resolve(p).language == self.language for p in paths) else self.english_sources
 
     def _fill_untranslated(self, o):
         if isinstance(o, dict):
@@ -389,26 +406,26 @@ class Site:
     # ----- catalogs of descriptions
     def load_catalogs(self):
         desc = {}
-        for r in parse_table(read('charter/documents/document-catalog.md'), '| Identifier | Title | Purpose'):
+        for r in self.sources.table('charter/en/documents/document-catalog.md', '| Identifier | Title | Purpose', ('Title',)):
             desc[r['Title']] = r['Purpose']
         self.doc_desc = desc
         wf = {}
-        for l in read('charter/workflows/README.md').splitlines():
+        for l in self.sources.text('charter/en/workflows/README.md').splitlines():
             m = re.match(r'\| \[[^\]]*\]\(([a-z\-]+)\.md\) \| (.*?) \| (.*?) \|', l)
             if m:
-                wf['charter/workflows/%s.md' % m.group(1)] = (m.group(2), m.group(3))
+                wf['charter/en/workflows/%s.md' % m.group(1)] = (m.group(2), m.group(3))
         self.wf_desc = wf
         gd = {}
-        for l in read('charter/guides/README.md').splitlines():
+        for l in self.sources.text('charter/en/guides/README.md').splitlines():
             m = re.match(r'\| \[[^\]]*\]\(([a-z\-]+)\.md\) \| (.*?) \| (.*?) \|', l)
             if m:
-                gd['charter/guides/%s.md' % m.group(1)] = (m.group(2), m.group(3))
+                gd['charter/en/guides/%s.md' % m.group(1)] = (m.group(2), m.group(3))
         self.gd_desc = gd
         tp = {}
-        for l in read('charter/templates/README.md').splitlines():
-            m = re.match(r'\| (\d+) \| (.*?) \| \[[^\]]*\]\(([a-z\-]+)\.md\) \| (.*?) \| (.*?) \|', l)
+        for r in self.sources.table('charter/en/templates/README.md', '| Order | Id | Template | File', ('Template', 'File')):
+            m = re.search(r'\]\(([a-z\-]+)\.md\)', r['File'])
             if m:
-                tp['charter/templates/%s.md' % m.group(3)] = {'order': int(m.group(1)), 'name': m.group(2), 'used': m.group(4), 'kept': m.group(5)}
+                tp['charter/en/templates/%s.md' % m.group(1)] = {'order': int(r['Order']), 'name': r['_localized_Template'], 'canonical_name': r['Template'], 'used': r['Used when'], 'kept': r['Kept in']}
         self.tpl_desc = tp
 
     # ----- urls
@@ -448,7 +465,7 @@ class Site:
         path, frag = (href.split('#', 1) + [''])[:2]
         base = os.path.dirname(ctx['source'])
         target = os.path.normpath(os.path.join(base, path)).replace('\\', '/')
-        page = self.file_page.get(target)
+        page = self.file_page.get(canonical_path(target))
         if page is None:
             return '@@NOLINK@@'
         u = self.url(page, ctx['lang'])
@@ -483,7 +500,7 @@ class Site:
 
     def _target(self, docstem, num, ctx):
         sec = int(num.split('.')[0])
-        key = 'charter/documents/%s.md' % docstem
+        key = 'charter/en/documents/%s.md' % docstem
         page = self.section_page.get((key, sec))
         if page is None:
             page = self.file_page.get(key)
@@ -502,14 +519,14 @@ class Site:
 
     def _xref_text(self, text, ctx, stem_here):
         def sub(m):
-            href = self._target(DOC_NAMES[m.group(1)], m.group(2), ctx)
+            href = self._target(self.doc_names[m.group(1)], m.group(2), ctx)
             if not href:
                 return m.group(0)
             return '<a class="xref" href="%s">%s</a>' % (href, m.group(0))
-        text = XREF.sub(sub, text)
+        text = self.xref.sub(sub, text)
 
         def sub2(m):
-            if not stem_here or not stem_here in DOC_NAMES.values():
+            if not stem_here or not stem_here in self.doc_names.values():
                 return m.group(0)
             href = self._target(stem_here, m.group(2), ctx)
             if not href:
@@ -527,7 +544,8 @@ def icon(name):
     if name not in ICONS:
         p = os.path.join(PORTAL, 'ui', 'assets', 'icons', 'ui-%s.svg' % name)
         if os.path.exists(p):
-            s = open(p, encoding='utf-8').read()
+            with open(p, encoding='utf-8') as handle:
+                s = handle.read()
             s = re.sub(r'\s+', ' ', s)
             s = s.replace('<svg ', '<svg class="o-icon" aria-hidden="true" focusable="false" ', 1)
             ICONS[name] = s
@@ -536,8 +554,8 @@ def icon(name):
     return ICONS[name]
 
 
-def source_text(p):
-    text = read(p['source'][0])
+def source_text(p, source=None):
+    text = source.text if source else read(p['source'][0])
     pre, secs, change = split_sections(text)
     if p.get('source_sections'):
         keep = [b for n, t, b in secs if n in p['source_sections']]
@@ -558,7 +576,7 @@ def tr(site, lang, key):
 
 def lead_of(path):
     """The first paragraph of an authored page, after its title: its description on cards and in the navigation."""
-    body = read(path).split('\n## ', 1)[0]
+    body = re.sub(r'^```yaml\n.*?```\s*', '', read(path), count=1, flags=re.S).split('\n## ', 1)[0]
     paras = [x.strip() for x in re.sub(r'^# .*$', '', body, flags=re.M).split('\n\n') if x.strip()]
     return re.sub(r'\s+', ' ', paras[0]) if paras else ''
 
@@ -572,26 +590,37 @@ def h1_of(path):
 
 def add_generated_pages(site):
     """Control pages, one for each control of Operating Model 8, are added to the page set."""
-    om = read('charter/documents/operating-model.md')
-    guide = read('charter/guides/unit-governance-guide.md')
-    rows = parse_table(om, '| Ref | Control | Rule | Owner')
-    grows = {r['Ref']: r for r in parse_table(guide, '| Ref | Control | Objective | Type')}
+    om_path = 'charter/en/documents/operating-model.md'
+    guide_path = 'charter/en/guides/unit-governance-guide.md'
+    control_sources = site.combined_sources([om_path, guide_path])
+    site.control_language = control_sources.resolve(om_path).language
+    rows = control_sources.table(om_path, '| Ref | Control | Rule | Owner', ('Ref', 'Template'))
+    grows = {r['Ref']: r for r in control_sources.table(guide_path, '| Ref | Control | Objective | Type', ('Ref',))}
     site.controls = []
     for r in rows:
         g = grows.get(r['Ref'], {})
         c = {'ref': r['Ref'], 'title': r['Control'], 'rule': r['Rule'], 'owner': r['Owner'], 'when': r['When'],
-             'evidence': r['Evidence record'], 'template': r['Template'], 'objective': g.get('Objective', ''),
+             'evidence': r['Evidence record'], 'template': r['_localized_Template'], 'canonical_template': r['Template'], 'objective': g.get('Objective', ''),
              'type': g.get('Type', ''), 'test': g.get('How to test', '')}
         site.controls.append(c)
         pid = 'governance/controls/' + r['Ref'].lower()
         site.pages.append({'id': pid, 'section': 'governance', 'order': 200 + len(site.controls), 'type': 'control', 'slug': '/governance/controls/%s/' % r['Ref'].lower(),
-                           'title': '%s %s' % (r['Ref'], r['Control']), 'source': ['charter/documents/operating-model.md', 'charter/guides/unit-governance-guide.md'],
+                           'title': '%s %s' % (r['Ref'], r['Control']), 'source': ['charter/en/documents/operating-model.md', 'charter/en/guides/unit-governance-guide.md'],
                            'production': 'generated', 'control': c})
     site.by_id = {p['id']: p for p in site.pages}
-    og = read('charter/guides/organization-guide.md')
-    site.roles = {'om': {r['Role']: r for r in parse_table(om, '| Role | Does | Decides')},
-                  'prof': {r['Role']: r for r in parse_table(og, '| Role | Purpose | Main responsibilities')},
-                  'raci': parse_table(og, '| Activity | SP |')}
+    og_path = 'charter/en/guides/organization-guide.md'
+    role_sources = site.combined_sources([om_path, og_path])
+    site.role_language = role_sources.resolve(om_path).language
+    site.roles = {'om': {r['Role']: r for r in role_sources.table(om_path, '| Role | Does | Decides', ('Role',))},
+                  'prof': {r['Role']: r for r in role_sources.table(og_path, '| Role | Purpose | Main responsibilities', ('Role',))},
+                  'raci': role_sources.table(og_path, '| Activity | SP |')}
+    for p in site.pages:
+        if p['type'] == 'role':
+            original = p.get('english_title', p['title'])
+            p['title'] = site.roles['om'].get(original, {}).get('_localized_Role', original)
+            p['content_language'] = site.role_language
+        elif p['type'] == 'control':
+            p['content_language'] = site.control_language
 
 
 def short_id(key, taken, length=5):
@@ -619,7 +648,7 @@ def assign_refs(site):
 
 
 def load_terms(site):
-    rows = parse_table(read('charter/documents/vocabulary.md'), '| Term | Meaning')
+    rows = site.sources.table('charter/en/documents/vocabulary.md', '| Term | Meaning')
     terms = {}
     for r in rows:
         t = r['Term'].strip()
@@ -665,6 +694,21 @@ def link_terms(site, html_text, ctx, limit=40):
     return ''.join(out)
 
 
+def description_language(site, p):
+    source = (p.get('source') or [''])[0]
+    if p['type'] == 'role':
+        return site.role_language
+    catalog = {'workflow': 'workflows', 'guide': 'guides', 'template': 'templates'}.get(p['type'])
+    if catalog:
+        return site.sources.resolve('charter/en/%s/README.md' % catalog).language
+    if p['type'] == 'document' and (not p.get('source_sections') or p.get('part', '').startswith('1 of')):
+        if site.doc_desc.get(h1_of(source)):
+            return site.sources.resolve('charter/en/documents/document-catalog.md').language
+    if source and (p.get('source_sections') or source.startswith('portal/content/')):
+        return site.sources.resolve(source).language
+    return 'en'
+
+
 def desc_of(site, p):
     src = (p.get('source') or [None])[0]
     if p['type'] == 'document':
@@ -673,10 +717,10 @@ def desc_of(site, p):
             if d:
                 return d
         if p.get('source_sections'):
-            pre, ss, ch = split_sections(read(src))
+            pre, ss, ch = split_sections(site.sources.text(src))
             return '; '.join(t for n, t, b in ss if n in p['source_sections'])
     if p['type'] == 'catalogue' and p.get('source_sections'):
-        pre, ss, ch = split_sections(read(src))
+        pre, ss, ch = split_sections(site.sources.text(src))
         return '; '.join(t for n, t, b in ss if n in p['source_sections'])
     if p['type'] == 'workflow' and src in site.wf_desc:
         return site.wf_desc[src][0]
@@ -685,9 +729,9 @@ def desc_of(site, p):
     if p['type'] == 'template' and src in site.tpl_desc:
         return site.tpl_desc[src]['used']
     if p['type'] == 'role':
-        return site.roles['om'].get(p['title'], {}).get('Does', '')
-    if src and src.startswith('portal/content/') and p['type'] != 'legal':
-        return lead_of(src)
+        return site.roles['om'].get(p.get('english_title', p['title']), {}).get('Does', '')
+    if src and src.startswith('portal/content/en/') and p['type'] != 'legal':
+        return lead_of(site.sources.resolve(src).path)
     fixed = {
         'about/charter-outline': 'How the charter is organized on this site, where each part is, and where to start',
         'knowledge-base/guides': 'The five guides in one place: who does what, when, and what is left on record, each beside its workflow',
@@ -714,18 +758,20 @@ def render_pages(site):
         if not p.get('source'):
             continue
         if p['id'] == 'about/charter-outline':
-            body = re.sub(r'^# .*$', '', read('charter/README.md'), count=1, flags=re.M).strip()
+            body = re.sub(r'^# .*$', '', read('charter/en/README.md'), count=1, flags=re.M).strip()
             fm, change, raw = {}, '', body
-            src = 'charter/README.md'
+            src = 'charter/en/README.md'
         elif t == 'catalogue':
-            body, fm, change, raw = source_text({'source': ['charter/documents/operating-model.md'], 'source_sections': p['source_sections'], 'part': 'x'})
+            body, fm, change, raw = source_text({'source': ['charter/en/documents/operating-model.md'], 'source_sections': p['source_sections'], 'part': 'x'}, site.combined_sources(['charter/en/documents/operating-model.md', 'charter/en/guides/unit-governance-guide.md']).resolve('charter/en/documents/operating-model.md'))
             src = p['source'][0]
         else:
-            body, fm, change, raw = source_text(p)
+            body, fm, change, raw = source_text(p, site.sources.resolve(p['source'][0]))
             src = p['source'][0]
-        p_ctx = {'source': src, 'lang': 'en', 'url': site.url(p, 'en')}
+        selected = (site.combined_sources(['charter/en/documents/operating-model.md', 'charter/en/guides/unit-governance-guide.md']) if t == 'catalogue' else site.sources).resolve(src)
+        p['content_language'] = selected.language
+        p_ctx = {'source': selected.path, 'lang': site.language, 'url': site.url(p, site.language)}
         h, outline, chunks, anchors, dg = site.md.render(body, p_ctx)
-        site.bodies[p['id']] = {'html': h, 'outline': outline, 'chunks': chunks, 'anchors': anchors, 'fm': fm, 'change': change, 'raw': raw, 'src': src}
+        site.bodies[p['id']] = {'html': h, 'outline': outline, 'chunks': chunks, 'anchors': anchors, 'fm': fm, 'change': change, 'raw': raw, 'src': selected.path, 'language': selected.language}
         diagrams.extend(dg)
     return diagrams
 
@@ -768,7 +814,8 @@ def doc_parts(site, p):
 def asset_version(name):
     """A short content hash of a site asset, appended to its address so that a browser fetches a changed file instead of a cached one."""
     path = os.path.join(PORTAL, 'site', name)
-    return hashlib.sha1(open(path, 'rb').read()).hexdigest()[:8]
+    with open(path, 'rb') as handle:
+        return hashlib.sha1(handle.read()).hexdigest()[:8]
 
 
 def layout(site, p, lang, main_html, outline):
@@ -923,6 +970,8 @@ def facts_html(site, p, lang, fm):
         items.append((m['identifier'], fm['id']))
     if fm.get('revision'):
         items.append((m['revision'], fm['revision']))
+    if fm.get('source_revision'):
+        items.append((m['source_revision'], fm['source_revision']))
     if fm.get('revised'):
         items.append((m['revised'], fm['revised']))
     if fm.get('status'):
@@ -930,9 +979,9 @@ def facts_html(site, p, lang, fm):
         items.append((m['status'], '<span class="status status-%s">%s</span>' % (esc(re.sub(r'[^a-z]+', '-', st)), esc(fm['status']))))
     if items:
         items.append((m['owner'], esc(m['owner_value'])))
-        src = (p.get('source') or [''])[0]
-        if src.startswith('charter/'):
-            rel_path = src[len('charter/'):]
+        src = site.bodies.get(p['id'], {}).get('src', (p.get('source') or [''])[0])
+        if src.startswith(('charter/en/', 'charter/ru/')):
+            rel_path = src[len('charter/') :]
             items.append((m['source_file'], '<a class="src" href="%s%s" title="%s">%s</a> <button type="button" class="icon-copy" data-copy-text="%s" aria-label="%s" title="%s">%s</button>' % (
                 CHARTER_BASE, rel_path, esc(unc(CHARTER_BASE, rel_path)), esc(os.path.basename(src)), esc(unc(CHARTER_BASE, rel_path)), esc(m['copy_path']), esc(m['copy_path']), icon('copy'))))
     if not items:
@@ -1031,8 +1080,8 @@ def companion_html(site, p, lang):
     return '<p class="companion"><a href="%s">%s: %s</a></p>' % (site.rel(site.url(p, lang), site.url(q, lang)), esc(tr(site, lang, key)), esc(re.sub(r'^Guide:\s*', '', q['title'])))
 
 
-def lang_note(site, lang):
-    if lang == 'en':
+def lang_note(site, lang, content_language='en'):
+    if lang == content_language:
         return ''
     return '<p class="o-callout lang-note" role="note">%s</p>' % esc(tr(site, lang, 'translation_missing'))
 
@@ -1073,7 +1122,7 @@ def content_page(site, p, lang):
         body = link_terms(site, body, ctx)
     body = substitute(site, body, lang)
     desc = desc_of(site, p)
-    lead = '<p class="o-lead" lang="en">%s</p>' % esc(desc) if desc and p['type'] != 'catalogue' and not b['src'].startswith('portal/content/') else ''
+    lead = '<p class="o-lead" lang="%s">%s</p>' % (description_language(site, p), esc(desc)) if desc and p['type'] != 'catalogue' and not b['src'].startswith('portal/content/') else ''
     h1 = p['title'] if p['title'] in SHORT else disp(p['title'])
     if p['type'] == 'section' and p.get('series'):
         sec = site.auth['sections'][p['section']]
@@ -1083,7 +1132,7 @@ def content_page(site, p, lang):
     if p.get('parent') and p['parent'] in site.by_id:
         par = site.by_id[p['parent']]
         eyebrow = '<p class="o-eyebrow parent"><a href="%s">%s</a> · %s</p>' % (site.rel(ctx['url'], site.url(par, lang)), esc(par['title']), esc(page_meta(site, p, lang)))
-    head = eyebrow + '<h1>%s</h1>%s%s%s%s%s' % (esc(PAGE_TITLE.get(h1, h1)), lead, facts_html(site, p, lang, b['fm']), companion_html(site, p, lang), parts_html(site, p, lang), lang_note(site, lang))
+    head = eyebrow + '<h1>%s</h1>%s%s%s%s%s' % (esc(PAGE_TITLE.get(h1, h1)), lead, facts_html(site, p, lang, b['fm']), companion_html(site, p, lang), parts_html(site, p, lang), lang_note(site, lang, b['language']))
     extra = ''
     if p['type'] == 'catalogue':
         extra = controls_catalogue(site, p, lang)
@@ -1093,15 +1142,15 @@ def content_page(site, p, lang):
         # the template page starts with the "when used" line from the README
         tp = site.tpl_desc.get(p['source'][0])
         if tp:
-            extra = ('<dl class="o-facts"><dt>%s</dt><dd lang="en">%s</dd><dt>%s</dt><dd lang="en"><code>%s</code></dd></dl>' % (esc(tr(site, lang, 'used_when')), esc(tp['used']), esc(tr(site, lang, 'kept_in')), esc(tp['kept'].strip('`')))) + extra
+            extra = ('<dl class="o-facts"><dt>%s</dt><dd lang="en">%s</dd><dt>%s</dt><dd lang="en"><code>%s</code></dd></dl>' % (esc(tr(site, lang, 'used_when')), esc(tp['used']), esc(tr(site, lang, 'kept_in')), esc(tp['kept'].strip('`')))).replace('lang="en"', 'lang="%s"' % description_language(site, p)) + extra
     change = ''
     if b['change']:
         ch = site.md.md.render(re.sub(r'^## .*$', '', b['change'], count=1, flags=re.M).strip())
         ch = ch.replace('<table>', '<div class="o-table-wrap" role="region" tabindex="0" aria-label="Table"><table>').replace('</table>', '</table></div>')
         change = '<details class="oc-disclosure change"><summary>%s</summary><div>%s</div></details>' % (esc(tr(site, lang, 'change_history')), ch)
-    main = '%s%s<div class="o-doc" lang="en">%s</div>%s%s%s' % (head, extra if p['type'] == 'template' else '', body, change, prev_next(site, p, lang), read_further(site, p, lang))
+    main = '%s%s<div class="o-doc" lang="%s">%s</div>%s%s%s' % (head, extra if p['type'] == 'template' else '', b['language'], body, change, prev_next(site, p, lang), read_further(site, p, lang))
     if p['type'] == 'catalogue':
-        main = '%s<div class="o-doc" lang="en">%s%s</div>%s%s' % (head, extra, body, prev_next(site, p, lang), read_further(site, p, lang))
+        main = '%s<div class="o-doc" lang="%s">%s%s</div>%s%s' % (head, b['language'], extra, body, prev_next(site, p, lang), read_further(site, p, lang))
     return layout(site, p, lang, main, b['outline'])
 
 
@@ -1137,7 +1186,7 @@ def section_desc(site, q):
         same = [x for x in site.pages if x.get('document') == q['document'] and x['source'][0] == q['source'][0] and x['section'] == q['section']]
         first = [x for x in site.pages if x.get('document') == q['document'] and x['source'][0] == q['source'][0] and x.get('part', '').startswith('1 of')]
         if first and first[0]['section'] != q['section']:
-            pre, ss, ch = split_sections(read(q['source'][0]))
+            pre, ss, ch = split_sections(site.sources.text(q['source'][0]))
             nums = sorted({n for x in same for n in x['source_sections']})
             names = [t for n, t, bb in ss if n in nums]
             if names:
@@ -1148,7 +1197,7 @@ def section_desc(site, q):
 def doc_id(site, q):
     """The identifier of the document behind a page, from its front matter, or ''."""
     src = (q.get('source') or [''])[0]
-    if not src.startswith('charter/documents/'):
+    if not canonical_path(src).startswith('charter/en/documents/'):
         return ''
     fm = site.bodies.get(q['id'], {}).get('fm') or front_matter(read(src))
     return fm.get('id', '')
@@ -1160,8 +1209,8 @@ def card(site, q, lang, url, cls, extra=''):
     did = doc_id(site, q)
     title = q['title'] if q.get('series') else nav_title(site, q)
     tip_title = title + (' · ' + did if did else '')
-    return ('<li class="o-card linked %s" data-tip="%s" data-tip-title="%s"><p class="card-kicker">%s</p><h3><a href="%s">%s</a></h3><p class="card-desc" lang="en">%s</p>%s</li>' % (
-        cls, esc(d), esc(tip_title), esc(meta), site.rel(url, site.url(q, lang)), esc(title), esc(d), extra))
+    return ('<li class="o-card linked %s" data-tip="%s" data-tip-title="%s"><p class="card-kicker">%s</p><h3><a href="%s">%s</a></h3><p class="card-desc" lang="%s">%s</p>%s</li>' % (
+        cls, esc(d), esc(tip_title), esc(meta), site.rel(url, site.url(q, lang)), esc(title), description_language(site, q), esc(d), extra))
 
 
 def cards_for(site, section, lang, from_url):
@@ -1240,23 +1289,13 @@ def home_page(site, p, lang):
     a = site.auth['home']
     url = site.url(p, lang)
     m = site.msg[lang]
-    soi = read('charter/documents/statement-of-intent.md')
-    pri = []
-    lines = soi.split('\n')
-    for i, l in enumerate(lines):
-        mm = re.match(r'### (9\.\d+)\. (.*)', l)
-        if mm:
-            obj = ''
-            for l2 in lines[i + 1:i + 4]:
-                if l2.startswith('- **Objective.**'):
-                    obj = l2.replace('- **Objective.**', '').strip()
-                    break
-            pri.append((mm.group(1), mm.group(2), obj))
+    soi = site.sources.text('charter/en/documents/statement-of-intent.md')
+    pri = [(r['num'], r['t'], r.get('Objective', '')) for r in soi_priorities(soi)]
     sp = site.by_id['about/statement-of-intent/strategic-priorities']
     sp_url = site.rel(url, site.url(sp, lang))
     pcards = ''.join('<li class="o-card linked card--secondary" data-tip="%s"><p class="o-tag">%s</p><h3><a href="%s#c-%s">%s</a></h3><p class="card-desc" lang="en">%s</p></li>' % (
         esc(o), 'PRI-%d' % (k + 1), sp_url, num.replace('.', '-'), esc(t), esc(o)) for k, (num, t, o) in enumerate(pri))
-    levels = parse_table(soi, '| Maturity Level | Name | Capability')
+    levels = site.sources.table('charter/en/documents/statement-of-intent.md', '| Maturity Level | Name | Capability')
     rp = site.by_id['about/statement-of-intent/capability-and-maturity-roadmap']
     rp_url = site.rel(url, site.url(rp, lang))
     lcards = ''.join('<li class="level"><span class="lv-n">%s %s</span><strong lang="en">%s</strong><span lang="en">%s</span></li>' % (esc(m['level']), esc(r['Maturity Level']), esc(r['Name']), esc(r['Capability'])) for r in levels)
@@ -1283,6 +1322,8 @@ def home_page(site, p, lang):
 <section aria-labelledby="h-pri" class="home-pri"><h2 id="h-pri">{esc(m['strategic_priorities'])}</h2><p class="home-pri-lead">{esc(a['priorities_lead'][lang])}</p><ol class="home-chips">{chips}</ol></section>
 <section aria-labelledby="h-sec"><h2 id="h-sec">{esc(a['sections_title'][lang])}</h2><ul class="o-grid card-list cards-compact home-sections">{scards}</ul></section>
 <section class="home-newhere"><p>{esc(a['newhere'][lang])} <a href="{site.rel(url, site.url(lp, lang))}">{esc(a['newhere_link'][lang])} &rsaquo;</a></p></section>'''
+    source_language = site.sources.resolve('charter/en/documents/statement-of-intent.md').language
+    main = main.replace('lang="en"', 'lang="%s"' % source_language)
     return layout(site, p, lang, main, [])
 
 
@@ -1290,9 +1331,9 @@ def plain_md(t):
     return re.sub(r'\*\*([^*]+)\*\*', r'\1', re.sub(r'\[([^\]]*)\]\([^)]*\)', r'\1', t))
 
 
-def vp_items(doc, num):
+def vp_items(doc, num, sources):
     """The items of one group of values or principles, read from the clauses of the document: (lead, text) pairs, and an introduction where the clause has one."""
-    pre, ss, ch = split_sections(read('charter/documents/%s.md' % doc))
+    pre, ss, ch = split_sections(sources.text('charter/en/documents/%s.md' % doc))
     body = [b for n, t, b in ss if str(n) == num][0]
     items, intro = [], ''
     for l in body.split('\n'):
@@ -1308,7 +1349,7 @@ def vp_items(doc, num):
         if mm:
             for sent in re.split(r'(?<=\.) ', mm.group(1)):
                 lead = re.match(r'(Integrity|Prudence|Respect for people)', sent)
-                items.append((lead.group(1), sent[len(lead.group(1)):].lstrip()))
+                items.append((lead.group(1), sent[len(lead.group(1)):].lstrip()) if lead else ('', sent))
             continue
         mm = re.match(r'^2\.1\. (.*)$', l) if doc == 'solution-lifecycle-model' else None
         if mm:
@@ -1323,11 +1364,11 @@ def values_page(site, p, lang):
     a = site.auth['values_page']
     m = site.msg[lang]
     url = site.url(p, lang)
-    ctx = {'url': url, 'lang': lang, 'source': 'charter/documents/statement-of-intent.md'}
+    ctx = {'url': url, 'lang': lang, 'source': 'charter/en/documents/statement-of-intent.md'}
     out, outline = [], []
     for g in a['groups']:
         doc, num = g['source']
-        items, intro = vp_items(doc, num)
+        items, intro = vp_items(doc, num, site.sources)
         lis = []
         for lead, text in items:
             if g['id'] == 'values':
@@ -1345,7 +1386,8 @@ def values_page(site, p, lang):
         block = ('<section class="vp-group" aria-labelledby="%s"><h2 id="%s">%s</h2><p class="vp-applies">%s</p>%s<ol class="vp-list">%s</ol>'
                  '<p class="vp-source">%s: <a href="%s" lang="en">%s %s</a></p></section>') % (
             hid, hid, esc(title), esc(g['applies'][lang]), intro_html, link_terms(site, ''.join(lis), ctx), esc(m['vp_source']), href, VP_DOC_NAMES[doc], num)
-        out.append(block)
+        source_language = site.sources.resolve('charter/en/documents/%s.md' % doc).language
+        out.append(block.replace('lang="en"', 'lang="%s"' % source_language))
         site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': p['title'], 'h': title, 'x': (g['applies'][lang] + ' ' + ' '.join((l + ' ' + t) for l, t in items))[:360]})
     ms = a['mission']
     mission = '<section class="vp-mission" aria-labelledby="g-mission"><h2 id="g-mission">%s</h2><p>%s</p></section>' % (esc(ms['title'][lang]), esc(ms['text'][lang]))
@@ -1362,10 +1404,9 @@ def soi_priorities(soi):
         mm = re.match(r'### (9\.\d+)\. (.*)', l)
         if mm:
             row = {'n': len(pri) + 1, 'num': mm.group(1), 't': mm.group(2)}
-            for l2 in lines[i + 1:i + 5]:
-                m2 = re.match(r'- \*\*(Objective|Scope|Intended outcome)\.\*\* (.*)', l2)
-                if m2:
-                    row[m2.group(1)] = m2.group(2).strip()
+            values = [match.group(1).strip() for line in lines[i + 1:i + 5]
+                      if (match := re.match(r'- \*\*.+?\.\*\* (.*)', line))]
+            row.update(zip(('Objective', 'Scope', 'Intended outcome'), values))
             pri.append(row)
     return pri
 
@@ -1374,8 +1415,8 @@ def strategy_page(site, p, lang):
     a = site.auth['strategy_page']
     m = site.msg[lang]
     url = site.url(p, lang)
-    ctx = {'url': url, 'lang': lang, 'source': 'charter/documents/statement-of-intent.md'}
-    soi = read('charter/documents/statement-of-intent.md')
+    ctx = {'url': url, 'lang': lang, 'source': 'charter/en/documents/statement-of-intent.md'}
+    soi = site.sources.text('charter/en/documents/statement-of-intent.md')
     sp = site.by_id['about/statement-of-intent/strategic-priorities']
     sp_url = site.rel(url, site.url(sp, lang))
     rp = site.by_id['about/statement-of-intent/capability-and-maturity-roadmap']
@@ -1392,9 +1433,9 @@ def strategy_page(site, p, lang):
         out.append('<section aria-labelledby="%s"><h2 id="%s">%s</h2>%s%s</section>' % (hid, hid, esc(title), ('<p>%s</p>' % (lead if lead_html else esc(lead))) if lead else '', body))
         site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': p['title'], 'h': title, 'x': plain(lead)[:360]})
     # 1. the strategy of the Bank
-    pillars = parse_table(soi, '| Strategic Pillar |')
+    pillars = site.sources.table('charter/en/documents/statement-of-intent.md', '| Strategic Pillar |', ('Strategic Pillar',))
     carried = a['pillars_carried']
-    rows = ''.join('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % (esc(r['Strategic Pillar']), esc(r['Contribution of AI adoption']), esc(carried.get(r['Strategic Pillar'], ''))) for r in pillars)
+    rows = ''.join('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % (esc(r.get('_localized_Strategic Pillar', r['Strategic Pillar'])), esc(r['Contribution of AI adoption']), esc(carried.get(r['Strategic Pillar'], ''))) for r in pillars)
     section('st-bank', a['bank_title'][lang], a['bank_lead'][lang], table(a['bank_title'][lang], [m['st_pillar'], m['st_contribution'], m['st_carried']], rows) + '<p class="vp-source">%s: <a href="%s#s-3">Statement of Intent 3</a></p>' % (esc(m['vp_source']), soi_url))
     # 2. the Strategic Priorities
     pri = soi_priorities(soi)
@@ -1403,14 +1444,17 @@ def strategy_page(site, p, lang):
     section('st-priorities', a['priorities_title'][lang], a['priorities_lead'][lang], table(a['priorities_title'][lang], ['#', m['strategic_priority'], m['objective'], m['intended_outcome']], rows) + '<p class="vp-source">%s: <a href="%s">Statement of Intent 9</a>; <a href="%s#s-8">Statement of Intent 8</a></p>' % (esc(m['vp_source']), sp_url, soi_url))
     # 3. the aspects
     rows = ''.join('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td><td>%s</td></tr>' % (esc(r['aspect']), esc(r['choice']), esc(r['decides']), site.link_xrefs(esc(r['read']), ctx)) for r in a['aspects'])
-    section('st-aspects', a['aspects_title'][lang], a['aspects_lead'][lang], table(a['aspects_title'][lang], [m['st_aspect'], m['st_choice'], m['st_decides'], m['st_read']], rows, 'st-wide'))
+    section('st-aspects', a['aspects_title'][lang], a['aspects_lead'][lang], table(a['aspects_title'][lang], [m['st_aspect'], m['st_choice'], m['st_decides'], m['st_read']], rows, 'st-wide').replace('<table lang="en">', '<table lang="__ASPECT_LANG__">'))
     # 4. the road
-    lv = parse_table(soi, '| Maturity Level | Name | Capability')
+    lv = site.sources.table('charter/en/documents/statement-of-intent.md', '| Maturity Level | Name | Capability')
     rows = ''.join('<tr><td>%s</td><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % (esc(r['Maturity Level']), esc(r['Name']), esc(r['Capability']), esc(r['Use of AI'])) for r in lv)
     section('st-road', a['road_title'][lang], a['road_lead'][lang], table(a['road_title'][lang], [m['level'], m['name'], m['capability'], m['st_use']], rows) + '<p class="vp-source">%s: <a href="%s">Statement of Intent 11</a>; %s: <a href="%s#c-11-3">Statement of Intent 11.3</a></p>' % (esc(m['vp_source']), rp_url, esc(m['st_measures']), rp_url))
     # 5. how it is kept
     section('st-kept', a['kept_title'][lang], site.link_xrefs(esc(a['kept'][lang]), ctx), '', lead_html=True)
     main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(p['title']), esc(a['intro'][lang]), lang_note(site, lang), ''.join(out)) + prev_next(site, p, lang) + read_further(site, p, lang)
+    source_language = site.sources.resolve('charter/en/documents/statement-of-intent.md').language
+    main = main.replace('lang="en"', 'lang="%s"' % source_language)
+    main = main.replace('__ASPECT_LANG__', 'en')
     return layout(site, p, lang, main, outline)
 
 
@@ -1418,7 +1462,7 @@ def explore_page(site, p, lang):
     a = site.auth['explore_page']
     m = site.msg[lang]
     url = site.url(p, lang)
-    ctx = {'url': url, 'lang': lang, 'source': 'charter/documents/operating-model.md'}
+    ctx = {'url': url, 'lang': lang, 'source': 'charter/en/documents/operating-model.md'}
     outline = []
     out = []
     # the four parts
@@ -1475,25 +1519,15 @@ def about_page(site, p, lang):
     sec = site.auth['sections']['about']
     m = site.msg[lang]
     url = site.url(p, lang)
-    soi = read('charter/documents/statement-of-intent.md')
+    soi = site.sources.text('charter/en/documents/statement-of-intent.md')
     sp = site.by_id['about/statement-of-intent/strategic-priorities']
     sp_url = site.rel(url, site.url(sp, lang))
     blocks = []
     for b in a['blocks']:
         extra = ''
         if b.get('priorities'):
-            lines = soi.split('\n')
-            pri = []
-            for i, l in enumerate(lines):
-                mm = re.match(r'### (9\.\d+)\. (.*)', l)
-                if mm:
-                    row = {'n': len(pri) + 1, 't': mm.group(2)}
-                    for l2 in lines[i + 1:i + 5]:
-                        m2 = re.match(r'- \*\*(Objective|Scope|Intended outcome)\.\*\* (.*)', l2)
-                        if m2:
-                            row[m2.group(1)] = m2.group(2).strip()
-                    pri.append(row)
-            lv = parse_table(soi, '| Maturity Level | Name | Capability')
+            pri = soi_priorities(soi)
+            lv = site.sources.table('charter/en/documents/statement-of-intent.md', '| Maturity Level | Name | Capability')
             prows = ''.join('<tr><td>%d</td><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % (r['n'], esc(r['t']), esc(r.get('Objective', '')), esc(r.get('Intended outcome', ''))) for r in pri)
             lrows = ''.join('<tr><td>%s</td><td><strong>%s</strong></td><td>%s</td></tr>' % (esc(r['Maturity Level']), esc(r['Name']), esc(r['Capability'])) for r in lv)
             extra = ('<div class="o-table-wrap about-table" role="region" tabindex="0" aria-label="%s"><table lang="en"><thead><tr><th>#</th><th>%s</th><th>%s</th><th>%s</th></tr></thead><tbody>%s</tbody></table></div>'
@@ -1511,20 +1545,21 @@ def about_page(site, p, lang):
     main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s<h2 class="about-deeper" id="a-further">%s</h2><ul class="o-grid card-list cards-compact">%s</ul>' % (
         esc(sec['label'][lang]), esc(sec['intro'][lang]), ''.join(blocks), prev_next(site, p, lang), esc(a['deeper'][lang]), deeper)
     outline = [(2, 'a-' + b['id'], b['title'][lang]) for b in a['blocks']] + [(2, 'a-further', a['deeper'][lang])]
+    source_language = site.sources.resolve('charter/en/documents/statement-of-intent.md').language
+    main = main.replace('lang="en"', 'lang="%s"' % source_language)
     return layout(site, p, lang, main, outline)
 
 
 def change_history(site, p, lang):
     rows = []
     for key in ['statement-of-intent', 'aicc-charter', 'business-model', 'operating-model', 'portfolio-management-model', 'solution-lifecycle-model', 'ai-policy', 'vocabulary', 'document-catalog']:
-        path = 'charter/documents/%s.md' % key
-        pre, secs, change = split_sections(read(path))
-        fm = front_matter(pre)
-        tbl = parse_table(change, '| Revision | Date | Change | Decision')
+        path = 'charter/en/documents/%s.md' % key
+        selected = site.sources.resolve(path)
+        tbl = site.sources.table(path, '| Revision | Date | Change | Decision')
         page = site.file_page[path]
         for r in tbl:
-            rows.append('<tr><td><a href="%s">%s</a></td><td>%s</td><td>%s</td><td lang="en">%s</td><td>%s</td></tr>' % (
-                site.rel(site.url(p, lang), site.url(page, lang)), esc(h1_of(path)), esc(r['Revision']), esc(r['Date']), esc(r['Change']), esc(r['Decision'])))
+            rows.append('<tr><td><a href="%s">%s</a></td><td>%s</td><td>%s</td><td lang="%s">%s</td><td>%s</td></tr>' % (
+                site.rel(site.url(p, lang), site.url(page, lang)), esc(h1_of(selected.path)), esc(r['Revision']), esc(r['Date']), selected.language, esc(r['Change']), esc(r['Decision'])))
     m = site.msg[lang]
     main = '<h1>%s</h1><div class="o-table-wrap" role="region" tabindex="0" aria-label="%s"><table><thead><tr><th>Document</th><th>%s</th><th>%s</th><th>Change</th><th>Decision</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
         esc(p['title']), esc(p['title']), esc(m['revision']), esc(m['revised']), ''.join(rows), prev_next(site, p, lang))
@@ -1536,18 +1571,20 @@ def records_page(site, p, lang):
     url = site.url(p, lang)
     by_tpl = {}
     for c in site.controls:
-        t = re.sub(r'\s+', ' ', c['template']).strip()
+        t = re.sub(r'\s+', ' ', c['canonical_template']).strip()
         by_tpl.setdefault(t, []).append(c['ref'])
     rows = []
     for src, d in sorted(site.tpl_desc.items(), key=lambda kv: kv[1]['order']):
         page = site.file_page.get(src)
         controls = []
         for t, refs in by_tpl.items():
-            if t and (t.lower() in d['name'].lower() or d['name'].lower() in t.lower()):
+            if t and (t.lower() in d['canonical_name'].lower() or d['canonical_name'].lower() in t.lower()):
                 controls += refs
         ctl = ', '.join('<a href="%s">%s</a>' % (site.rel(url, '/%s/governance/controls/%s/' % (lang, r.lower())), r) for r in sorted(set(controls)))
         rows.append('<tr><td><a href="%s">%s</a></td><td lang="en">%s</td><td lang="en"><code>%s</code></td><td>%s</td></tr>' % (
             site.rel(url, site.url(page, lang)), esc(d['name']), esc(d['used']), esc(d['kept'].strip('`')), ctl or '&ndash;'))
+    template_language = site.sources.resolve('charter/en/templates/README.md').language
+    rows = [row.replace('lang="en"', 'lang="%s"' % template_language) for row in rows]
     systems = [('Registry', 'Decisions, appointments, controls, backlogs, roadmap, calendar, and other evidence records, as closed and dated extracts. Kept on the corporate folder: <a href="%s" title="%s">%s</a> <button type="button" class="icon-copy" data-copy-text="%s" aria-label="%s" title="%s">%s</button>' % (
                     REGISTRY_BASE, esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(m['copy_path']), esc(m['copy_path']), icon('copy'))),
                ('Jira and Confluence', 'The working state of the Program Backlog, boards, and Work Items, and the working documents, from the cutover of the working state'),
@@ -1575,7 +1612,7 @@ def controls_catalogue(site, p, lang):
             '<div class="o-table-wrap" role="region" tabindex="0" aria-label="%s"><table id="ctl"><thead><tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr></thead><tbody>%s</tbody></table></div>'
             '<p class="o-caption">%s</p></section>') % (
         esc(p['title']), esc(m['controls_filter']), esc(m['controls_type']), esc(m['controls_all']), opts, esc(p['title']),
-        esc(m['control_ref']), esc(m['control_title']), esc(m['control_owner']), esc(m['control_when']), esc(m['control_type']), ''.join(rows), esc(m['control_status_note']))
+        esc(m['control_ref']), esc(m['control_title']), esc(m['control_owner']), esc(m['control_when']), esc(m['control_type']), ''.join(rows).replace('lang="en"', 'lang="%s"' % site.control_language), esc(m['control_status_note']))
 
 
 def control_page(site, p, lang):
@@ -1585,7 +1622,7 @@ def control_page(site, p, lang):
     parent = site.by_id['governance/controls']
     facts = [('control_rule', c['rule']), ('control_owner', c['owner']), ('control_when', c['when']), ('control_evidence', c['evidence']), ('control_template', c['template']),
              ('control_objective', c['objective']), ('control_type', c['type']), ('control_test', c['test'])]
-    dl = ''.join('<dt>%s</dt><dd lang="en">%s</dd>' % (esc(m[k]), site.link_xrefs(esc(v), {'source': 'charter/documents/operating-model.md', 'lang': lang, 'url': url})) for k, v in facts if v)
+    dl = ''.join('<dt>%s</dt><dd lang="en">%s</dd>' % (esc(m[k]), site.link_xrefs(esc(v), {'source': 'charter/en/documents/operating-model.md', 'lang': lang, 'url': url})) for k, v in facts if v)
     idx = [x['ref'] for x in site.controls].index(c['ref'])
     pn = []
     if idx > 0:
@@ -1595,23 +1632,23 @@ def control_page(site, p, lang):
         q = site.controls[idx + 1]
         pn.append('<a class="pn next" href="%s"><span>%s</span>%s</a>' % (site.rel(url, '/%s/governance/controls/%s/' % (lang, q['ref'].lower())), esc(m['next']), esc(q['ref'])))
     main = '<h1 lang="en">%s</h1><p class="o-lead" lang="en">%s</p>%s<dl class="o-facts control-facts">%s</dl><p class="o-caption">%s</p><p><a href="%s">%s</a></p><nav class="o-pn">%s</nav>' % (
-        esc(c['ref'] + ' ' + c['title']), esc(c['objective']), lang_note(site, lang), dl, esc(m['control_status_note']), site.rel(url, site.url(parent, lang)), esc(parent['title']), ''.join(pn))
-    return layout(site, p, lang, main, [])
+        esc(c['ref'] + ' ' + c['title']), esc(c['objective']), lang_note(site, lang, site.control_language if p['type'] == 'control' else site.role_language), dl, esc(m['control_status_note']), site.rel(url, site.url(parent, lang)), esc(parent['title']), ''.join(pn))
+    return layout(site, p, lang, main.replace('lang="en"', 'lang="%s"' % (site.control_language if p['type'] == 'control' else site.role_language)), [])
 
 
 def roles_index(site, p, lang):
     url = site.url(p, lang)
     out = []
     for q in sorted([x for x in site.pages if x['type'] == 'role'], key=lambda x: x['order']):
-        d = site.roles['om'].get(q['title'], {}).get('Does', '')
+        d = site.roles['om'].get(q.get('english_title', q['title']), {}).get('Does', '')
         out.append('<li class="o-card linked card--secondary" data-tip="%s"><h3><a href="%s">%s</a></h3><p class="card-desc" lang="en">%s</p></li>' % (esc(q.get('ref', '')), site.rel(url, site.url(q, lang)), esc(q['title']), esc(d)))
-    main = '<h1>%s</h1><ul class="o-grid card-list">%s</ul>%s' % (esc(p['title']), ''.join(out), lang_note(site, lang))
-    return layout(site, p, lang, main, [])
+    main = '<h1>%s</h1><ul class="o-grid card-list">%s</ul>%s' % (esc(p['title']), ''.join(out), lang_note(site, lang, site.control_language if p['type'] == 'control' else site.role_language))
+    return layout(site, p, lang, main.replace('lang="en"', 'lang="%s"' % (site.control_language if p['type'] == 'control' else site.role_language)), [])
 
 
 def role_page(site, p, lang):
     m = site.msg[lang]
-    name = p['title']
+    name = p.get('english_title', p['title'])
     om = site.roles['om'].get(name, {})
     prof = site.roles['prof'].get(name, {})
     cols = {'Executive Sponsor': 'SP', 'AICC Lead': 'AL', 'Solution Engineer': 'SE', 'Domain Owner': 'DO', 'Domain Expert': 'DE', 'Control Function Contact': 'CFC', 'Platform Owner': 'PO'}
@@ -1620,13 +1657,13 @@ def role_page(site, p, lang):
     dl = ''
     for k, v in (('Purpose', prof.get('Purpose')), ('Main responsibilities', prof.get('Main responsibilities')), ('Authority', prof.get('Authority')), ('Reports in', prof.get('Reports in')), ('Typical competence', prof.get('Typical competence'))):
         if v:
-            dl += '<dt>%s</dt><dd lang="en">%s</dd>' % (esc(k), esc(v))
+            dl += '<dt>%s</dt><dd lang="en">%s</dd>' % (esc(prof.get('_labels', {}).get(k, k)), esc(v))
     rows = ''.join('<tr><td lang="en">%s</td><td>%s</td></tr>' % (esc(a), esc(r)) for a, r in raci)
-    om_page = site.section_page[('charter/documents/operating-model.md', 4)]
+    om_page = site.section_page[('charter/en/documents/operating-model.md', 4)]
     main = '<h1>%s</h1><p class="o-lead" lang="en">%s</p>%s<h2>%s</h2><dl class="o-facts">%s</dl><h2>%s</h2><p lang="en">%s</p><h2>%s</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="RACI"><table><thead><tr><th>Activity</th><th>R / A / C / I</th></tr></thead><tbody>%s</tbody></table></div><p><a href="%s#c-4-2">Operating Model 4.2</a></p>' % (
-        esc(name), esc(om.get('Does', '')), lang_note(site, lang), esc(m['role_profile']), dl, esc(m['role_decides']), esc(om.get('Decides', '')), esc(m['role_raci']), rows,
+        esc(p['title']), esc(om.get('Does', '')), lang_note(site, lang, site.control_language if p['type'] == 'control' else site.role_language), esc(m['role_profile']), dl, esc(m['role_decides']), esc(om.get('Decides', '')), esc(m['role_raci']), rows,
         site.rel(site.url(p, lang), site.url(om_page, lang)))
-    return layout(site, p, lang, main, [])
+    return layout(site, p, lang, main.replace('lang="en"', 'lang="%s"' % (site.control_language if p['type'] == 'control' else site.role_language)), [])
 
 
 def build_page(site, p, lang):
@@ -1677,7 +1714,7 @@ def search_index(site, lang):
             c = p['control']
             out.append({'u': u, 't': p['title'], 'h': c['ref'], 'x': ' '.join([c['objective'], c['rule'], c['owner'], c['test']])[:360]})
         if p['type'] == 'role':
-            out.append({'u': u, 't': p['title'], 'h': p['title'], 'x': site.roles['om'].get(p['title'], {}).get('Does', '')[:360]})
+            out.append({'u': u, 't': p['title'], 'h': p['title'], 'x': site.roles['om'].get(p.get('english_title', p['title']), {}).get('Does', '')[:360]})
         if p['type'] == 'section':
             sec = site.auth['sections'][p['section']]
             out.append({'u': u, 't': sec['label'][lang], 'h': sec['label'][lang], 'x': sec['intro'][lang]})
@@ -1721,16 +1758,22 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--no-diagrams', action='store_true')
     args = ap.parse_args()
-    site = Site(args)
-    add_generated_pages(site)
-    assign_refs(site)
-    load_terms(site)
-    diagrams = render_pages(site)
-    site.diagram_code = {k: c for k, c in diagrams}
-    site.svgs = render_diagrams(diagrams, not args.no_diagrams)
-    missing = [k for k, v in site.svgs.items() if not v]
-    if missing:
-        print('warning: %d diagram(s) not rendered' % len(missing), file=sys.stderr)
+    validate_translations(ROOT)
+    sites = {language: Site(args, language) for language in LANGS}
+    diagrams = []
+    for site in sites.values():
+        add_generated_pages(site)
+        assign_refs(site)
+        load_terms(site)
+        diagrams.extend(render_pages(site))
+    diagram_code = dict(diagrams)
+    svgs = render_diagrams(list(diagram_code.items()), not args.no_diagrams)
+    for site in sites.values():
+        site.diagram_code = diagram_code
+        site.svgs = svgs
+    missing = [k for k, v in svgs.items() if not v]
+    if missing and not args.no_diagrams:
+        raise RuntimeError('%d diagram(s) not rendered' % len(missing))
     # clean output
     for d in LANGS + ['assets']:
         shutil.rmtree(os.path.join(OUT, d), ignore_errors=True)
@@ -1738,6 +1781,7 @@ def main():
     copy_assets()
     count = 0
     for lang in LANGS:
+        site = sites[lang]
         for p in sorted(site.pages, key=lambda x: x['id']):
             page = build_page(site, p, lang)
             page = page.replace('@@NOLINK@@', '#')

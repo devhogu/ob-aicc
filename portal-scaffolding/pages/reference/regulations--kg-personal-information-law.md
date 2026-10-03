@@ -5,7 +5,7 @@ section: reference
 order: 44
 type: regulation
 slug: /reference/regulations/kg-personal-information-law/
-source: portal/content/reference/regulations/kg-personal-information-law.md
+source: portal/content/en/reference/regulations/kg-personal-information-law.md
 region: Kyrgyz Republic
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/kg-personal-information-l
 
 ## Source
 
-- portal/content/reference/regulations/kg-personal-information-law.md
+- portal/content/en/reference/regulations/kg-personal-information-law.md
 
 ## Outline
 

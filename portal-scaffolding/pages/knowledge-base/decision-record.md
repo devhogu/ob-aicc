@@ -5,7 +5,7 @@ section: knowledge-base
 order: 26
 type: template
 slug: /knowledge-base/decision-record/
-source: charter/templates/decision-record.md
+source: charter/en/templates/decision-record.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/decision-record/
 
 ## Source
 
-- charter/templates/decision-record.md
+- charter/en/templates/decision-record.md
 
 ## Outline
 

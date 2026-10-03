@@ -5,7 +5,7 @@ section: responsible-ai
 order: 0
 type: section
 slug: /responsible-ai/
-source: portal/content/responsible-ai/understanding-ai-today.md
+source: portal/content/en/responsible-ai/understanding-ai-today.md
 part: 1 of 7
 series: responsible-ai-course
 production: authored; the first part of the course, explanatory, the AI Policy is the rule
@@ -18,7 +18,7 @@ Page type: section. Address: /responsible-ai/
 
 ## Source
 
-- portal/content/responsible-ai/understanding-ai-today.md
+- portal/content/en/responsible-ai/understanding-ai-today.md
 
 ## Outline
 

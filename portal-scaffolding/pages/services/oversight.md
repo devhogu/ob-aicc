@@ -5,7 +5,7 @@ section: services
 order: 19
 type: service
 slug: /services/oversight/
-source: portal/content/services/oversight.md
+source: portal/content/en/services/oversight.md
 area: assurance
 series: service-categories-assurance
 parent: services/assurance
@@ -19,7 +19,7 @@ Page type: service. Address: /services/oversight/
 
 ## Source
 
-- portal/content/services/oversight.md
+- portal/content/en/services/oversight.md
 
 ## Outline
 

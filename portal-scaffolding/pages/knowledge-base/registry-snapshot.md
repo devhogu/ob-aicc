@@ -5,7 +5,7 @@ section: knowledge-base
 order: 31
 type: template
 slug: /knowledge-base/registry-snapshot/
-source: charter/templates/registry-snapshot.md
+source: charter/en/templates/registry-snapshot.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/registry-snapshot/
 
 ## Source
 
-- charter/templates/registry-snapshot.md
+- charter/en/templates/registry-snapshot.md
 
 ## Outline
 

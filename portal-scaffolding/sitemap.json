@@ -68,7 +68,7 @@
    "slug": "/",
    "title": "Home",
    "source": [
-    "charter/executive-summary.md"
+    "charter/en/executive-summary.md"
    ],
    "production": "authored",
    "outline": [
@@ -105,7 +105,7 @@
    "slug": "/responsible-ai/",
    "title": "Responsible AI",
    "source": [
-    "portal/content/responsible-ai/understanding-ai-today.md"
+    "portal/content/en/responsible-ai/understanding-ai-today.md"
    ],
    "production": "authored; the first part of the course, explanatory, the AI Policy is the rule",
    "outline": [
@@ -125,7 +125,7 @@
    "slug": "/services/",
    "title": "Services",
    "source": [
-    "portal/content/services/areas/overview.md"
+    "portal/content/en/services/areas/overview.md"
    ],
    "production": "authored; the overview of the areas, the first part of the series",
    "outline": [
@@ -145,7 +145,7 @@
    "slug": "/portfolio/",
    "title": "Portfolio",
    "source": [
-    "portal/content/portfolio/overview.md"
+    "portal/content/en/portfolio/overview.md"
    ],
    "production": "authored; the first part of the course, explanatory, the Portfolio Management Model is the rule",
    "outline": [
@@ -164,8 +164,8 @@
    "slug": "/delivery/",
    "title": "Delivery",
    "source": [
-    "portal/content/delivery/overview.md",
-    "charter/workflows/README.md"
+    "portal/content/en/delivery/overview.md",
+    "charter/en/workflows/README.md"
    ],
    "production": "authored; the first part of the course, explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -184,7 +184,7 @@
    "slug": "/governance/",
    "title": "Governance",
    "source": [
-    "portal/content/governance/overview.md"
+    "portal/content/en/governance/overview.md"
    ],
    "production": "authored; the first part of the course, explanatory, the Operating Model is the rule",
    "outline": [
@@ -203,7 +203,7 @@
    "slug": "/organization/",
    "title": "Organization",
    "source": [
-    "portal/content/organization/overview.md"
+    "portal/content/en/organization/overview.md"
    ],
    "production": "authored; the first part of the course, explanatory, the Operating Model is the rule",
    "outline": [
@@ -222,9 +222,9 @@
    "slug": "/knowledge-base/",
    "title": "Knowledge base",
    "source": [
-    "portal/content/knowledge-base/overview.md",
-    "charter/templates/README.md",
-    "charter/guides/README.md"
+    "portal/content/en/knowledge-base/overview.md",
+    "charter/en/templates/README.md",
+    "charter/en/guides/README.md"
    ],
    "production": "authored; the overview of the Knowledge base",
    "outline": [
@@ -243,7 +243,7 @@
    "slug": "/reference/",
    "title": "Reference",
    "source": [
-    "portal/content/reference/overview.md"
+    "portal/content/en/reference/overview.md"
    ],
    "production": "authored; the overview of the Reference",
    "outline": [
@@ -262,7 +262,7 @@
    "slug": "/about/statement-of-intent/",
    "title": "Statement of Intent on the Adoption of Artificial Intelligence",
    "source": [
-    "charter/documents/statement-of-intent.md"
+    "charter/en/documents/statement-of-intent.md"
    ],
    "source_sections": [
     1,
@@ -287,7 +287,7 @@
    "slug": "/about/statement-of-intent/strategic-priorities/",
    "title": "Statement of Intent on the Adoption of Artificial Intelligence: Strategic Priorities",
    "source": [
-    "charter/documents/statement-of-intent.md"
+    "charter/en/documents/statement-of-intent.md"
    ],
    "source_sections": [
     9
@@ -305,7 +305,7 @@
    "slug": "/about/statement-of-intent/capability-and-maturity-roadmap/",
    "title": "Statement of Intent on the Adoption of Artificial Intelligence: Capability and maturity roadmap",
    "source": [
-    "charter/documents/statement-of-intent.md"
+    "charter/en/documents/statement-of-intent.md"
    ],
    "source_sections": [
     10,
@@ -324,7 +324,7 @@
    "slug": "/about/statement-of-intent/performance-and-commitments/",
    "title": "Statement of Intent on the Adoption of Artificial Intelligence: Performance and commitments",
    "source": [
-    "charter/documents/statement-of-intent.md"
+    "charter/en/documents/statement-of-intent.md"
    ],
    "source_sections": [
     12,
@@ -360,7 +360,7 @@
    "slug": "/about/aicc-charter/",
    "title": "AICC Charter",
    "source": [
-    "charter/documents/aicc-charter.md"
+    "charter/en/documents/aicc-charter.md"
    ],
    "words": 900,
    "production": "generated"
@@ -373,7 +373,7 @@
    "slug": "/about/what-we-do/",
    "title": "What we do",
    "source": [
-    "portal/content/about/what-we-do.md"
+    "portal/content/en/about/what-we-do.md"
    ],
    "production": "authored",
    "outline": [
@@ -390,7 +390,7 @@
    "slug": "/about/how-we-work/",
    "title": "How we work",
    "source": [
-    "portal/content/about/how-we-work.md"
+    "portal/content/en/about/how-we-work.md"
    ],
    "production": "authored",
    "outline": [
@@ -423,9 +423,9 @@
    "slug": "/about/charter-outline/",
    "title": "Explore AICC",
    "source": [
-    "charter/README.md",
-    "charter/executive-summary.md",
-    "charter/guides/README.md"
+    "charter/en/README.md",
+    "charter/en/executive-summary.md",
+    "charter/en/guides/README.md"
    ],
    "production": "generated, with an authored introduction",
    "outline": [
@@ -443,7 +443,7 @@
    "slug": "/privacy/",
    "title": "Privacy",
    "source": [
-    "portal/content/privacy.md"
+    "portal/content/en/privacy.md"
    ],
    "production": "authored; aligned with the Operating Model 7 and the collaboration tooling workflow",
    "outline": [
@@ -461,7 +461,7 @@
    "slug": "/terms-of-use/",
    "title": "Terms of use",
    "source": [
-    "portal/content/terms-of-use.md"
+    "portal/content/en/terms-of-use.md"
    ],
    "production": "authored; aligned with the Operating Model 7, the AI Policy 2, and the collaboration tooling workflow",
    "outline": [
@@ -481,7 +481,7 @@
    "slug": "/services/advise-and-formulate/",
    "title": "Advise and formulate",
    "source": [
-    "portal/content/services/areas/advise-and-formulate.md"
+    "portal/content/en/services/areas/advise-and-formulate.md"
    ],
    "production": "authored; generated table of the categories of the area",
    "series": "service-areas",
@@ -503,7 +503,7 @@
    "slug": "/services/build-and-run/",
    "title": "Build and run",
    "source": [
-    "portal/content/services/areas/build-and-run.md"
+    "portal/content/en/services/areas/build-and-run.md"
    ],
    "production": "authored; generated table of the categories of the area",
    "series": "service-areas",
@@ -525,7 +525,7 @@
    "slug": "/services/enablement/",
    "title": "Enablement",
    "source": [
-    "portal/content/services/areas/enablement.md"
+    "portal/content/en/services/areas/enablement.md"
    ],
    "production": "authored; generated table of the categories of the area",
    "series": "service-areas",
@@ -547,7 +547,7 @@
    "slug": "/services/assurance/",
    "title": "Assurance",
    "source": [
-    "portal/content/services/areas/assurance.md"
+    "portal/content/en/services/areas/assurance.md"
    ],
    "production": "authored; generated table of the categories of the area",
    "series": "service-areas",
@@ -569,7 +569,7 @@
    "slug": "/services/strategy-and-governance/",
    "title": "Strategy and governance",
    "source": [
-    "portal/content/services/strategy-and-governance.md"
+    "portal/content/en/services/strategy-and-governance.md"
    ],
    "production": "authored",
    "area": "advise",
@@ -592,7 +592,7 @@
    "slug": "/services/normatives-and-processes/",
    "title": "Normatives and processes",
    "source": [
-    "portal/content/services/normatives-and-processes.md"
+    "portal/content/en/services/normatives-and-processes.md"
    ],
    "production": "authored",
    "area": "advise",
@@ -615,7 +615,7 @@
    "slug": "/services/research-and-exploration/",
    "title": "Research and exploration",
    "source": [
-    "portal/content/services/research-and-exploration.md"
+    "portal/content/en/services/research-and-exploration.md"
    ],
    "production": "authored",
    "area": "advise",
@@ -638,7 +638,7 @@
    "slug": "/services/business-cases-and-scenarios/",
    "title": "Business cases and scenarios",
    "source": [
-    "portal/content/services/business-cases-and-scenarios.md"
+    "portal/content/en/services/business-cases-and-scenarios.md"
    ],
    "production": "authored",
    "area": "advise",
@@ -661,7 +661,7 @@
    "slug": "/services/knowledge-services/",
    "title": "Knowledge services",
    "source": [
-    "portal/content/services/knowledge-services.md"
+    "portal/content/en/services/knowledge-services.md"
    ],
    "production": "authored",
    "area": "build",
@@ -684,7 +684,7 @@
    "slug": "/services/workplace-automation/",
    "title": "Workplace automation",
    "source": [
-    "portal/content/services/workplace-automation.md"
+    "portal/content/en/services/workplace-automation.md"
    ],
    "production": "authored",
    "area": "build",
@@ -707,7 +707,7 @@
    "slug": "/services/analytics-and-decision-support/",
    "title": "Analytics and decision support",
    "source": [
-    "portal/content/services/analytics-and-decision-support.md"
+    "portal/content/en/services/analytics-and-decision-support.md"
    ],
    "production": "authored",
    "area": "build",
@@ -730,7 +730,7 @@
    "slug": "/services/content-management/",
    "title": "Content management",
    "source": [
-    "portal/content/services/content-management.md"
+    "portal/content/en/services/content-management.md"
    ],
    "production": "authored",
    "area": "build",
@@ -753,7 +753,7 @@
    "slug": "/services/platforms/",
    "title": "Platforms",
    "source": [
-    "portal/content/services/platforms.md"
+    "portal/content/en/services/platforms.md"
    ],
    "production": "authored",
    "area": "build",
@@ -776,7 +776,7 @@
    "slug": "/services/training-and-knowledge-sharing/",
    "title": "Training and knowledge sharing",
    "source": [
-    "portal/content/services/training-and-knowledge-sharing.md"
+    "portal/content/en/services/training-and-knowledge-sharing.md"
    ],
    "production": "authored",
    "area": "enablement",
@@ -799,7 +799,7 @@
    "slug": "/services/adoption-and-lifecycle-management/",
    "title": "Adoption and lifecycle management",
    "source": [
-    "portal/content/services/adoption-and-lifecycle-management.md"
+    "portal/content/en/services/adoption-and-lifecycle-management.md"
    ],
    "production": "authored",
    "area": "enablement",
@@ -822,7 +822,7 @@
    "slug": "/services/policies-controls-criteria/",
    "title": "Policies, controls, criteria",
    "source": [
-    "portal/content/services/policies-controls-criteria.md"
+    "portal/content/en/services/policies-controls-criteria.md"
    ],
    "production": "authored",
    "area": "assurance",
@@ -845,7 +845,7 @@
    "slug": "/services/assessments-and-evaluations/",
    "title": "Assessments and evaluations",
    "source": [
-    "portal/content/services/assessments-and-evaluations.md"
+    "portal/content/en/services/assessments-and-evaluations.md"
    ],
    "production": "authored",
    "area": "assurance",
@@ -868,7 +868,7 @@
    "slug": "/services/risk-tiering/",
    "title": "Risk tiering",
    "source": [
-    "portal/content/services/risk-tiering.md"
+    "portal/content/en/services/risk-tiering.md"
    ],
    "production": "authored",
    "area": "assurance",
@@ -891,7 +891,7 @@
    "slug": "/services/oversight/",
    "title": "Oversight",
    "source": [
-    "portal/content/services/oversight.md"
+    "portal/content/en/services/oversight.md"
    ],
    "production": "authored",
    "area": "assurance",
@@ -914,7 +914,7 @@
    "slug": "/services/how-to-engage/",
    "title": "How to engage",
    "source": [
-    "portal/content/services/how-to-engage.md"
+    "portal/content/en/services/how-to-engage.md"
    ],
    "production": "authored, with the Engagement workflow",
    "series": "how-to-engage",
@@ -937,7 +937,7 @@
    "slug": "/services/catalog/",
    "title": "Service catalog",
    "source": [
-    "portal/content/services/catalog-form.md"
+    "portal/content/en/services/catalog-form.md"
    ],
    "production": "authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal",
    "series": "service-catalog",
@@ -958,7 +958,7 @@
    "slug": "/services/service-model/",
    "title": "The service model",
    "source": [
-    "portal/content/services/service-model.md"
+    "portal/content/en/services/service-model.md"
    ],
    "production": "authored",
    "series": "service-catalog",
@@ -978,7 +978,7 @@
    "slug": "/services/business-model/",
    "title": "Business Model",
    "source": [
-    "charter/documents/business-model.md"
+    "charter/en/documents/business-model.md"
    ],
    "words": 1381,
    "production": "generated"
@@ -991,7 +991,7 @@
    "slug": "/services/engagement-workflow/",
    "title": "Engagement workflow",
    "source": [
-    "charter/workflows/engagement.md"
+    "charter/en/workflows/engagement.md"
    ],
    "companion": "services/engagement-guide",
    "series": "how-to-engage",
@@ -1008,7 +1008,7 @@
    "slug": "/services/engagement-guide/",
    "title": "Guide: Engagement",
    "source": [
-    "charter/guides/engagement-guide.md"
+    "charter/en/guides/engagement-guide.md"
    ],
    "companion": "services/engagement-workflow",
    "series": "how-to-engage",
@@ -1025,7 +1025,7 @@
    "slug": "/portfolio/portfolio-management-model/",
    "title": "Portfolio Management Model",
    "source": [
-    "charter/documents/portfolio-management-model.md"
+    "charter/en/documents/portfolio-management-model.md"
    ],
    "source_sections": [
     1,
@@ -1045,7 +1045,7 @@
    "slug": "/portfolio/portfolio-management-model/the-portfolio-loops/",
    "title": "Portfolio Management Model: The portfolio loops",
    "source": [
-    "charter/documents/portfolio-management-model.md"
+    "charter/en/documents/portfolio-management-model.md"
    ],
    "source_sections": [
     4
@@ -1063,7 +1063,7 @@
    "slug": "/portfolio/portfolio-management-model/the-portfolio-kanban/",
    "title": "Portfolio Management Model: The portfolio Kanban",
    "source": [
-    "charter/documents/portfolio-management-model.md"
+    "charter/en/documents/portfolio-management-model.md"
    ],
    "source_sections": [
     5
@@ -1081,7 +1081,7 @@
    "slug": "/portfolio/portfolio-management-model/the-business-case-and-the-mvp/",
    "title": "Portfolio Management Model: The business case and the MVP",
    "source": [
-    "charter/documents/portfolio-management-model.md"
+    "charter/en/documents/portfolio-management-model.md"
    ],
    "source_sections": [
     6,
@@ -1100,7 +1100,7 @@
    "slug": "/portfolio/portfolio-management-model/levels-review-and-records/",
    "title": "Portfolio Management Model: Levels, review, measures, and records",
    "source": [
-    "charter/documents/portfolio-management-model.md"
+    "charter/en/documents/portfolio-management-model.md"
    ],
    "source_sections": [
     8,
@@ -1119,7 +1119,7 @@
    "slug": "/delivery/solution-lifecycle-model/",
    "title": "Solution Lifecycle Model",
    "source": [
-    "charter/documents/solution-lifecycle-model.md"
+    "charter/en/documents/solution-lifecycle-model.md"
    ],
    "source_sections": [
     1,
@@ -1138,7 +1138,7 @@
    "slug": "/delivery/solution-lifecycle-model/the-flow-of-value/",
    "title": "Solution Lifecycle Model: The flow of value",
    "source": [
-    "charter/documents/solution-lifecycle-model.md"
+    "charter/en/documents/solution-lifecycle-model.md"
    ],
    "source_sections": [
     3
@@ -1156,7 +1156,7 @@
    "slug": "/delivery/solution-lifecycle-model/backlogs-and-boards/",
    "title": "Solution Lifecycle Model: Backlogs and boards",
    "source": [
-    "charter/documents/solution-lifecycle-model.md"
+    "charter/en/documents/solution-lifecycle-model.md"
    ],
    "source_sections": [
     4
@@ -1174,7 +1174,7 @@
    "slug": "/delivery/solution-lifecycle-model/states-and-stages/",
    "title": "Solution Lifecycle Model: States and Stages",
    "source": [
-    "charter/documents/solution-lifecycle-model.md"
+    "charter/en/documents/solution-lifecycle-model.md"
    ],
    "source_sections": [
     5
@@ -1192,7 +1192,7 @@
    "slug": "/delivery/solution-lifecycle-model/the-cadence/",
    "title": "Solution Lifecycle Model: The cadence",
    "source": [
-    "charter/documents/solution-lifecycle-model.md"
+    "charter/en/documents/solution-lifecycle-model.md"
    ],
    "source_sections": [
     6
@@ -1210,7 +1210,7 @@
    "slug": "/delivery/solution-lifecycle-model/verification-release-and-acceptance/",
    "title": "Solution Lifecycle Model: Verification, release, and acceptance",
    "source": [
-    "charter/documents/solution-lifecycle-model.md"
+    "charter/en/documents/solution-lifecycle-model.md"
    ],
    "source_sections": [
     7
@@ -1228,7 +1228,7 @@
    "slug": "/delivery/solution-lifecycle-model/life-cycle-management/",
    "title": "Solution Lifecycle Model: Life-cycle management",
    "source": [
-    "charter/documents/solution-lifecycle-model.md"
+    "charter/en/documents/solution-lifecycle-model.md"
    ],
    "source_sections": [
     8
@@ -1246,7 +1246,7 @@
    "slug": "/delivery/service-delivery-workflow/",
    "title": "Portfolio and service delivery workflow",
    "source": [
-    "charter/workflows/service-delivery.md"
+    "charter/en/workflows/service-delivery.md"
    ],
    "source_sections": [
     1,
@@ -1269,7 +1269,7 @@
    "slug": "/delivery/service-delivery-workflow/the-portfolio-flow/",
    "title": "Portfolio and service delivery workflow: The portfolio flow",
    "source": [
-    "charter/workflows/service-delivery.md"
+    "charter/en/workflows/service-delivery.md"
    ],
    "source_sections": [
     4
@@ -1290,7 +1290,7 @@
    "slug": "/delivery/service-delivery-workflow/the-execution/",
    "title": "Portfolio and service delivery workflow: The execution in the Program Increment",
    "source": [
-    "charter/workflows/service-delivery.md"
+    "charter/en/workflows/service-delivery.md"
    ],
    "source_sections": [
     5
@@ -1311,7 +1311,7 @@
    "slug": "/delivery/service-delivery-workflow/after-delivery/",
    "title": "Portfolio and service delivery workflow: After delivery, oversight, decisions, and where it runs",
    "source": [
-    "charter/workflows/service-delivery.md"
+    "charter/en/workflows/service-delivery.md"
    ],
    "source_sections": [
     6,
@@ -1335,7 +1335,7 @@
    "slug": "/delivery/service-delivery-guide/",
    "title": "Guide: Service delivery",
    "source": [
-    "charter/guides/service-delivery-guide.md"
+    "charter/en/guides/service-delivery-guide.md"
    ],
    "source_sections": [
     1,
@@ -1359,7 +1359,7 @@
    "slug": "/delivery/service-delivery-guide/after-delivery/",
    "title": "Guide: Service delivery: After delivery, situations, and rule source",
    "source": [
-    "charter/guides/service-delivery-guide.md"
+    "charter/en/guides/service-delivery-guide.md"
    ],
    "source_sections": [
     5,
@@ -1382,7 +1382,7 @@
    "slug": "/delivery/cadence-workflow/",
    "title": "Cadence",
    "source": [
-    "charter/workflows/cadence.md"
+    "charter/en/workflows/cadence.md"
    ],
    "source_sections": [
     1,
@@ -1406,7 +1406,7 @@
    "slug": "/delivery/cadence-workflow/the-loops/",
    "title": "Cadence: The loops",
    "source": [
-    "charter/workflows/cadence.md"
+    "charter/en/workflows/cadence.md"
    ],
    "source_sections": [
     5
@@ -1427,7 +1427,7 @@
    "slug": "/delivery/cadence-workflow/what-each-event-carries/",
    "title": "Cadence: What each event carries",
    "source": [
-    "charter/workflows/cadence.md"
+    "charter/en/workflows/cadence.md"
    ],
    "source_sections": [
     6
@@ -1448,7 +1448,7 @@
    "slug": "/delivery/cadence-workflow/rules-calendar-and-light-mode/",
    "title": "Cadence: Rules, the dated calendar, light mode, and vocabulary",
    "source": [
-    "charter/workflows/cadence.md"
+    "charter/en/workflows/cadence.md"
    ],
    "source_sections": [
     7,
@@ -1472,7 +1472,7 @@
    "slug": "/delivery/cadence-guide/",
    "title": "Guide: Cadence",
    "source": [
-    "charter/guides/cadence-guide.md"
+    "charter/en/guides/cadence-guide.md"
    ],
    "source_sections": [
     1,
@@ -1498,7 +1498,7 @@
    "slug": "/delivery/collaboration-tooling-workflow/",
    "title": "Collaboration tooling",
    "source": [
-    "charter/workflows/collaboration-tooling.md"
+    "charter/en/workflows/collaboration-tooling.md"
    ],
    "production": "generated"
   },
@@ -1510,7 +1510,7 @@
    "slug": "/portfolio/strategy-and-investment/",
    "title": "Strategy and investment",
    "source": [
-    "portal/content/portfolio/strategy-and-investment.md"
+    "portal/content/en/portfolio/strategy-and-investment.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
@@ -1529,7 +1529,7 @@
    "slug": "/portfolio/the-flow/",
    "title": "The flow: the portfolio Kanban",
    "source": [
-    "portal/content/portfolio/the-flow.md"
+    "portal/content/en/portfolio/the-flow.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
@@ -1548,7 +1548,7 @@
    "slug": "/portfolio/the-lanes-and-the-front-door/",
    "title": "The modes and the front door",
    "source": [
-    "portal/content/portfolio/the-lanes-and-the-front-door.md"
+    "portal/content/en/portfolio/the-lanes-and-the-front-door.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
@@ -1567,7 +1567,7 @@
    "slug": "/portfolio/the-business-case-and-the-mvp/",
    "title": "The business case and the MVP",
    "source": [
-    "portal/content/portfolio/the-business-case-and-the-mvp.md"
+    "portal/content/en/portfolio/the-business-case-and-the-mvp.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
@@ -1586,7 +1586,7 @@
    "slug": "/portfolio/the-loops-and-governance/",
    "title": "The loops and the governance",
    "source": [
-    "portal/content/portfolio/the-loops-and-governance.md"
+    "portal/content/en/portfolio/the-loops-and-governance.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
@@ -1605,7 +1605,7 @@
    "slug": "/portfolio/measures-and-tracking/",
    "title": "Measures and tracking",
    "source": [
-    "portal/content/portfolio/measures-and-tracking.md"
+    "portal/content/en/portfolio/measures-and-tracking.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
@@ -1624,7 +1624,7 @@
    "slug": "/portfolio/roles-and-records/",
    "title": "Roles and records",
    "source": [
-    "portal/content/portfolio/roles-and-records.md"
+    "portal/content/en/portfolio/roles-and-records.md"
    ],
    "production": "authored; explanatory, the Portfolio Management Model is the rule",
    "outline": [
@@ -1643,7 +1643,7 @@
    "slug": "/delivery/experiment-workflow/",
    "title": "The Experiment workflow: the Lab",
    "source": [
-    "portal/content/delivery/experiment-workflow.md"
+    "portal/content/en/delivery/experiment-workflow.md"
    ],
    "production": "authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB",
    "outline": [
@@ -1659,7 +1659,7 @@
    "slug": "/delivery/life-of-a-service/",
    "title": "The life of a Service",
    "source": [
-    "portal/content/delivery/life-of-a-service.md"
+    "portal/content/en/delivery/life-of-a-service.md"
    ],
    "production": "authored; proposed for Solution Lifecycle Model 8; draws on STS",
    "outline": [
@@ -1676,7 +1676,7 @@
    "slug": "/delivery/service-operations/",
    "title": "Service operations",
    "source": [
-    "portal/content/delivery/service-operations.md"
+    "portal/content/en/delivery/service-operations.md"
    ],
    "production": "authored; the run-book template of a Service; draws on STS",
    "outline": [
@@ -1694,7 +1694,7 @@
    "slug": "/delivery/the-flow-of-value/",
    "title": "The flow of value",
    "source": [
-    "portal/content/delivery/the-flow-of-value.md"
+    "portal/content/en/delivery/the-flow-of-value.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1713,7 +1713,7 @@
    "slug": "/delivery/backlogs-boards-and-kanbans/",
    "title": "Backlogs, boards, and Kanbans",
    "source": [
-    "portal/content/delivery/backlogs-boards-and-kanbans.md"
+    "portal/content/en/delivery/backlogs-boards-and-kanbans.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1732,7 +1732,7 @@
    "slug": "/delivery/the-cadence/",
    "title": "The cadence: Program Increments and Iterations",
    "source": [
-    "portal/content/delivery/the-cadence.md"
+    "portal/content/en/delivery/the-cadence.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1751,7 +1751,7 @@
    "slug": "/delivery/events-and-rituals/",
    "title": "Events and rituals",
    "source": [
-    "portal/content/delivery/events-and-rituals.md"
+    "portal/content/en/delivery/events-and-rituals.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1770,7 +1770,7 @@
    "slug": "/delivery/the-loops-of-delivery/",
    "title": "The loops of delivery",
    "source": [
-    "portal/content/delivery/the-loops-of-delivery.md"
+    "portal/content/en/delivery/the-loops-of-delivery.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1789,7 +1789,7 @@
    "slug": "/delivery/quality-verification-and-release/",
    "title": "Quality, verification, and release",
    "source": [
-    "portal/content/delivery/quality-verification-and-release.md"
+    "portal/content/en/delivery/quality-verification-and-release.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1808,7 +1808,7 @@
    "slug": "/delivery/life-cycle-management/",
    "title": "Life-cycle management",
    "source": [
-    "portal/content/delivery/life-cycle-management.md"
+    "portal/content/en/delivery/life-cycle-management.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1827,7 +1827,7 @@
    "slug": "/delivery/measures-and-tracking/",
    "title": "Measures and tracking",
    "source": [
-    "portal/content/delivery/measures-and-tracking.md"
+    "portal/content/en/delivery/measures-and-tracking.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1846,7 +1846,7 @@
    "slug": "/delivery/roles-and-records/",
    "title": "Roles and records",
    "source": [
-    "portal/content/delivery/roles-and-records.md"
+    "portal/content/en/delivery/roles-and-records.md"
    ],
    "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
@@ -1865,7 +1865,7 @@
    "slug": "/delivery/measures-definitions-and-formulas/",
    "title": "Delivery measures: definitions and formulas",
    "source": [
-    "portal/content/delivery/measures-definitions-and-formulas.md"
+    "portal/content/en/delivery/measures-definitions-and-formulas.md"
    ],
    "production": "authored; the reference of the measures of the Solution Lifecycle Model 10.3, with their formulas",
    "outline": [
@@ -1885,7 +1885,7 @@
    "slug": "/portfolio/measures-definitions-and-formulas/",
    "title": "Portfolio measures: definitions and formulas",
    "source": [
-    "portal/content/portfolio/measures-definitions-and-formulas.md"
+    "portal/content/en/portfolio/measures-definitions-and-formulas.md"
    ],
    "production": "authored; the reference of the measures of the Portfolio Management Model 9.2, with their formulas, and the measures of lean practice as explanation",
    "outline": [
@@ -1905,7 +1905,7 @@
    "slug": "/organization/operating-model/",
    "title": "Operating Model",
    "source": [
-    "charter/documents/operating-model.md"
+    "charter/en/documents/operating-model.md"
    ],
    "source_sections": [
     1,
@@ -1929,7 +1929,7 @@
    "slug": "/organization/operating-model/roles/",
    "title": "Operating Model: Roles",
    "source": [
-    "charter/documents/operating-model.md"
+    "charter/en/documents/operating-model.md"
    ],
    "source_sections": [
     4
@@ -1951,7 +1951,7 @@
    "slug": "/organization/operating-model/decisions/",
    "title": "Operating Model: Decisions",
    "source": [
-    "charter/documents/operating-model.md"
+    "charter/en/documents/operating-model.md"
    ],
    "source_sections": [
     5
@@ -1973,7 +1973,7 @@
    "slug": "/organization/organization-guide/",
    "title": "Guide: Organization",
    "source": [
-    "charter/guides/organization-guide.md"
+    "charter/en/guides/organization-guide.md"
    ],
    "source_sections": [
     1,
@@ -1997,7 +1997,7 @@
    "slug": "/organization/organization-guide/who-is-responsible-for-what/",
    "title": "Guide: Organization: Who is responsible for what",
    "source": [
-    "charter/guides/organization-guide.md"
+    "charter/en/guides/organization-guide.md"
    ],
    "source_sections": [
     4
@@ -2019,7 +2019,7 @@
    "slug": "/organization/organization-guide/bodies-people-and-records/",
    "title": "Guide: Organization: The governing bodies, the people records, the growth of the organization, the evidence, and the rule source",
    "source": [
-    "charter/guides/organization-guide.md"
+    "charter/en/guides/organization-guide.md"
    ],
    "source_sections": [
     5,
@@ -2045,7 +2045,7 @@
    "slug": "/organization/the-place-of-aicc-in-the-bank/",
    "title": "The place of AICC in the Bank",
    "source": [
-    "portal/content/organization/the-place-of-aicc-in-the-bank.md"
+    "portal/content/en/organization/the-place-of-aicc-in-the-bank.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2064,7 +2064,7 @@
    "slug": "/organization/the-roles/",
    "title": "The Roles",
    "source": [
-    "portal/content/organization/the-roles.md"
+    "portal/content/en/organization/the-roles.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2083,7 +2083,7 @@
    "slug": "/organization/who-does-what/",
    "title": "Who does what",
    "source": [
-    "portal/content/organization/who-does-what.md"
+    "portal/content/en/organization/who-does-what.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2102,7 +2102,7 @@
    "slug": "/organization/people-and-appointments/",
    "title": "People and appointments",
    "source": [
-    "portal/content/organization/people-and-appointments.md"
+    "portal/content/en/organization/people-and-appointments.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2121,7 +2121,7 @@
    "slug": "/organization/how-the-organization-grows/",
    "title": "How the organization grows",
    "source": [
-    "portal/content/organization/how-the-organization-grows.md"
+    "portal/content/en/organization/how-the-organization-grows.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2140,8 +2140,8 @@
    "slug": "/organization/roles/",
    "title": "The Roles",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/guides/organization-guide.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/guides/organization-guide.md"
    ],
    "production": "generated from tables",
    "outline": [
@@ -2158,8 +2158,8 @@
    "slug": "/organization/roles/executive-sponsor/",
    "title": "Executive Sponsor",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/guides/organization-guide.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/guides/organization-guide.md"
    ],
    "production": "generated from tables",
    "outline": [
@@ -2178,8 +2178,8 @@
    "slug": "/organization/roles/aicc-lead/",
    "title": "AICC Lead",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/guides/organization-guide.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/guides/organization-guide.md"
    ],
    "production": "generated from tables",
    "outline": [
@@ -2198,8 +2198,8 @@
    "slug": "/organization/roles/solution-engineer/",
    "title": "Solution Engineer",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/guides/organization-guide.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/guides/organization-guide.md"
    ],
    "production": "generated from tables",
    "outline": [
@@ -2218,8 +2218,8 @@
    "slug": "/organization/roles/domain-owner/",
    "title": "Domain Owner",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/guides/organization-guide.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/guides/organization-guide.md"
    ],
    "production": "generated from tables",
    "outline": [
@@ -2238,8 +2238,8 @@
    "slug": "/organization/roles/domain-expert/",
    "title": "Domain Expert",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/guides/organization-guide.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/guides/organization-guide.md"
    ],
    "production": "generated from tables",
    "outline": [
@@ -2258,8 +2258,8 @@
    "slug": "/organization/roles/control-function-contact/",
    "title": "Control Function Contact",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/guides/organization-guide.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/guides/organization-guide.md"
    ],
    "production": "generated from tables",
    "outline": [
@@ -2278,8 +2278,8 @@
    "slug": "/organization/roles/platform-owner/",
    "title": "Platform Owner",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/guides/organization-guide.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/guides/organization-guide.md"
    ],
    "production": "generated from tables",
    "outline": [
@@ -2298,7 +2298,7 @@
    "slug": "/responsible-ai/opportunities/",
    "title": "The opportunities",
    "source": [
-    "portal/content/responsible-ai/opportunities.md"
+    "portal/content/en/responsible-ai/opportunities.md"
    ],
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
@@ -2317,7 +2317,7 @@
    "slug": "/responsible-ai/ai-in-fintech-and-digital-banking/",
    "title": "AI in fintech and digital banking",
    "source": [
-    "portal/content/responsible-ai/ai-in-fintech-and-digital-banking.md"
+    "portal/content/en/responsible-ai/ai-in-fintech-and-digital-banking.md"
    ],
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
@@ -2336,7 +2336,7 @@
    "slug": "/responsible-ai/risks-and-challenges/",
    "title": "The risks and challenges",
    "source": [
-    "portal/content/responsible-ai/risks-and-challenges.md"
+    "portal/content/en/responsible-ai/risks-and-challenges.md"
    ],
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
@@ -2355,7 +2355,7 @@
    "slug": "/responsible-ai/what-responsible-ai-means/",
    "title": "What responsible AI means",
    "source": [
-    "portal/content/responsible-ai/what-responsible-ai-means.md"
+    "portal/content/en/responsible-ai/what-responsible-ai-means.md"
    ],
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
@@ -2374,7 +2374,7 @@
    "slug": "/responsible-ai/how-the-bank-applies-it/",
    "title": "How the Bank applies it",
    "source": [
-    "portal/content/responsible-ai/how-the-bank-applies-it.md"
+    "portal/content/en/responsible-ai/how-the-bank-applies-it.md"
    ],
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
@@ -2393,7 +2393,7 @@
    "slug": "/responsible-ai/ai-terms-explained/",
    "title": "AI terms explained",
    "source": [
-    "portal/content/responsible-ai/ai-terms-explained.md"
+    "portal/content/en/responsible-ai/ai-terms-explained.md"
    ],
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
@@ -2412,7 +2412,7 @@
    "slug": "/responsible-ai/ai-policy/",
    "title": "AI Policy",
    "source": [
-    "charter/documents/ai-policy.md"
+    "charter/en/documents/ai-policy.md"
    ],
    "words": 2155,
    "production": "generated"
@@ -2425,7 +2425,7 @@
    "slug": "/responsible-ai/ai-risk-control-workflow/",
    "title": "AI risk and control workflow",
    "source": [
-    "charter/workflows/ai-risk-control.md"
+    "charter/en/workflows/ai-risk-control.md"
    ],
    "source_sections": [
     1,
@@ -2448,7 +2448,7 @@
    "slug": "/responsible-ai/ai-risk-control-workflow/in-operation-and-situations/",
    "title": "AI risk and control workflow: In operation, exceptions, single decisions, an AI Incident, situations, and where it runs",
    "source": [
-    "charter/workflows/ai-risk-control.md"
+    "charter/en/workflows/ai-risk-control.md"
    ],
    "source_sections": [
     4,
@@ -2474,7 +2474,7 @@
    "slug": "/governance/control-loops/",
    "title": "Operating Model: The control loops",
    "source": [
-    "charter/documents/operating-model.md"
+    "charter/en/documents/operating-model.md"
    ],
    "source_sections": [
     6
@@ -2496,7 +2496,7 @@
    "slug": "/governance/records-and-evidence/",
    "title": "Operating Model: Records and evidence",
    "source": [
-    "charter/documents/operating-model.md"
+    "charter/en/documents/operating-model.md"
    ],
    "source_sections": [
     7
@@ -2518,7 +2518,7 @@
    "slug": "/governance/controls/",
    "title": "Operating Model: Controls and the control catalog",
    "source": [
-    "charter/documents/operating-model.md"
+    "charter/en/documents/operating-model.md"
    ],
    "source_sections": [
     8
@@ -2545,7 +2545,7 @@
    "slug": "/governance/delivery-records-controls-and-measures/",
    "title": "Solution Lifecycle Model: Records, controls, and measures",
    "source": [
-    "charter/documents/solution-lifecycle-model.md"
+    "charter/en/documents/solution-lifecycle-model.md"
    ],
    "source_sections": [
     9,
@@ -2564,7 +2564,7 @@
    "slug": "/governance/unit-governance-workflow/",
    "title": "Unit governance workflow",
    "source": [
-    "charter/workflows/unit-governance.md"
+    "charter/en/workflows/unit-governance.md"
    ],
    "source_sections": [
     1,
@@ -2587,7 +2587,7 @@
    "slug": "/governance/unit-governance-workflow/events-and-sequences/",
    "title": "Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs",
    "source": [
-    "charter/workflows/unit-governance.md"
+    "charter/en/workflows/unit-governance.md"
    ],
    "source_sections": [
     4,
@@ -2613,7 +2613,7 @@
    "slug": "/governance/unit-governance-guide/",
    "title": "Guide: Unit governance",
    "source": [
-    "charter/guides/unit-governance-guide.md"
+    "charter/en/guides/unit-governance-guide.md"
    ],
    "source_sections": [
     1,
@@ -2639,7 +2639,7 @@
    "slug": "/governance/unit-governance-guide/the-controls/",
    "title": "Guide: Unit governance: The controls and how to test them, and the rule source",
    "source": [
-    "charter/guides/unit-governance-guide.md"
+    "charter/en/guides/unit-governance-guide.md"
    ],
    "source_sections": [
     7,
@@ -2661,7 +2661,7 @@
    "slug": "/governance/decisions-and-escalation/",
    "title": "Decisions and escalation",
    "source": [
-    "portal/content/governance/decisions-and-escalation.md"
+    "portal/content/en/governance/decisions-and-escalation.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2680,7 +2680,7 @@
    "slug": "/governance/the-control-loops/",
    "title": "The control loops",
    "source": [
-    "portal/content/governance/the-control-loops.md"
+    "portal/content/en/governance/the-control-loops.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2699,7 +2699,7 @@
    "slug": "/governance/the-steerings-and-the-bodies/",
    "title": "The Steerings and the bodies",
    "source": [
-    "portal/content/governance/the-steerings-and-the-bodies.md"
+    "portal/content/en/governance/the-steerings-and-the-bodies.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2718,7 +2718,7 @@
    "slug": "/governance/controls-and-the-catalogue/",
    "title": "Controls and the control catalog",
    "source": [
-    "portal/content/governance/controls-and-the-catalogue.md"
+    "portal/content/en/governance/controls-and-the-catalogue.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2737,7 +2737,7 @@
    "slug": "/governance/records-evidence-and-assurance/",
    "title": "Records, evidence, and assurance",
    "source": [
-    "portal/content/governance/records-evidence-and-assurance.md"
+    "portal/content/en/governance/records-evidence-and-assurance.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2756,7 +2756,7 @@
    "slug": "/governance/measures-and-reporting/",
    "title": "Measures and reporting",
    "source": [
-    "portal/content/governance/measures-and-reporting.md"
+    "portal/content/en/governance/measures-and-reporting.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
@@ -2775,7 +2775,7 @@
    "slug": "/knowledge-base/initiative-brief/",
    "title": "Initiative Brief",
    "source": [
-    "charter/templates/initiative-brief.md"
+    "charter/en/templates/initiative-brief.md"
    ],
    "production": "generated"
   },
@@ -2787,7 +2787,7 @@
    "slug": "/knowledge-base/service-agreement/",
    "title": "Service Agreement",
    "source": [
-    "charter/templates/service-agreement.md"
+    "charter/en/templates/service-agreement.md"
    ],
    "production": "generated"
   },
@@ -2799,7 +2799,7 @@
    "slug": "/knowledge-base/solution-definition/",
    "title": "Solution Definition",
    "source": [
-    "charter/templates/solution-definition.md"
+    "charter/en/templates/solution-definition.md"
    ],
    "production": "generated"
   },
@@ -2811,7 +2811,7 @@
    "slug": "/knowledge-base/acceptance-checklist/",
    "title": "Acceptance Checklist",
    "source": [
-    "charter/templates/acceptance-checklist.md"
+    "charter/en/templates/acceptance-checklist.md"
    ],
    "production": "generated"
   },
@@ -2823,7 +2823,7 @@
    "slug": "/knowledge-base/control-sign-off/",
    "title": "Control Sign-Off",
    "source": [
-    "charter/templates/control-sign-off.md"
+    "charter/en/templates/control-sign-off.md"
    ],
    "production": "generated"
   },
@@ -2835,7 +2835,7 @@
    "slug": "/knowledge-base/decision-record/",
    "title": "Decision Record",
    "source": [
-    "charter/templates/decision-record.md"
+    "charter/en/templates/decision-record.md"
    ],
    "production": "generated"
   },
@@ -2847,7 +2847,7 @@
    "slug": "/knowledge-base/steering-summary/",
    "title": "Steering Summary",
    "source": [
-    "charter/templates/steering-summary.md"
+    "charter/en/templates/steering-summary.md"
    ],
    "production": "generated"
   },
@@ -2859,7 +2859,7 @@
    "slug": "/knowledge-base/outcome-report/",
    "title": "Outcome Report",
    "source": [
-    "charter/templates/outcome-report.md"
+    "charter/en/templates/outcome-report.md"
    ],
    "production": "generated"
   },
@@ -2871,7 +2871,7 @@
    "slug": "/knowledge-base/package-definition/",
    "title": "Package Definition",
    "source": [
-    "charter/templates/package-definition.md"
+    "charter/en/templates/package-definition.md"
    ],
    "production": "generated"
   },
@@ -2883,7 +2883,7 @@
    "slug": "/knowledge-base/ai-incident-review/",
    "title": "AI Incident Review",
    "source": [
-    "charter/templates/ai-incident-review.md"
+    "charter/en/templates/ai-incident-review.md"
    ],
    "production": "generated"
   },
@@ -2895,7 +2895,7 @@
    "slug": "/knowledge-base/registry-snapshot/",
    "title": "Registry Snapshot",
    "source": [
-    "charter/templates/registry-snapshot.md"
+    "charter/en/templates/registry-snapshot.md"
    ],
    "production": "generated"
   },
@@ -2907,7 +2907,7 @@
    "slug": "/knowledge-base/quarterly-report/",
    "title": "Quarterly Report",
    "source": [
-    "charter/templates/quarterly-report.md"
+    "charter/en/templates/quarterly-report.md"
    ],
    "production": "generated"
   },
@@ -2919,7 +2919,7 @@
    "slug": "/knowledge-base/appointments-record/",
    "title": "Appointments Record",
    "source": [
-    "charter/templates/appointments-record.md"
+    "charter/en/templates/appointments-record.md"
    ],
    "production": "generated"
   },
@@ -2931,7 +2931,7 @@
    "slug": "/knowledge-base/proposal/",
    "title": "Proposal",
    "source": [
-    "charter/templates/proposal.md"
+    "charter/en/templates/proposal.md"
    ],
    "production": "generated"
   },
@@ -2943,7 +2943,7 @@
    "slug": "/knowledge-base/learning-paths/",
    "title": "Learning paths",
    "source": [
-    "portal/content/knowledge-base/learning-paths.md"
+    "portal/content/en/knowledge-base/learning-paths.md"
    ],
    "production": "authored",
    "outline": [
@@ -2962,7 +2962,7 @@
    "slug": "/knowledge-base/templates-and-forms/",
    "title": "Templates and forms",
    "source": [
-    "portal/content/knowledge-base/templates-and-forms.md"
+    "portal/content/en/knowledge-base/templates-and-forms.md"
    ],
    "production": "authored",
    "outline": [
@@ -2981,8 +2981,8 @@
    "slug": "/knowledge-base/guides/",
    "title": "Guides",
    "source": [
-    "portal/content/knowledge-base/guides.md",
-    "charter/guides/README.md"
+    "portal/content/en/knowledge-base/guides.md",
+    "charter/en/guides/README.md"
    ],
    "production": "authored",
    "outline": [
@@ -3001,7 +3001,7 @@
    "slug": "/knowledge-base/playbooks-and-lessons/",
    "title": "Playbooks and lessons",
    "source": [
-    "portal/content/knowledge-base/playbooks-and-lessons.md"
+    "portal/content/en/knowledge-base/playbooks-and-lessons.md"
    ],
    "production": "authored",
    "outline": [
@@ -3020,7 +3020,7 @@
    "slug": "/knowledge-base/questions-people-ask/",
    "title": "Questions people ask",
    "source": [
-    "portal/content/knowledge-base/questions-people-ask.md"
+    "portal/content/en/knowledge-base/questions-people-ask.md"
    ],
    "production": "authored",
    "outline": [
@@ -3039,7 +3039,7 @@
    "slug": "/knowledge-base/acts-and-compliance/",
    "title": "Acts and compliance",
    "source": [
-    "portal/content/knowledge-base/acts-and-compliance.md"
+    "portal/content/en/knowledge-base/acts-and-compliance.md"
    ],
    "series": "knowledge-base-course",
    "series_title": "Knowledge base",
@@ -3060,7 +3060,7 @@
    "slug": "/reference/industry-body-of-knowledge/",
    "title": "Standards and frameworks",
    "source": [
-    "portal/content/reference/industry-body-of-knowledge.md"
+    "portal/content/en/reference/industry-body-of-knowledge.md"
    ],
    "production": "authored; a curated list",
    "series": "reference-course",
@@ -3080,7 +3080,7 @@
    "slug": "/reference/research-and-insight/",
    "title": "Research and insight",
    "source": [
-    "portal/content/reference/research-and-insight.md"
+    "portal/content/en/reference/research-and-insight.md"
    ],
    "production": "authored; a curated list",
    "series": "reference-course",
@@ -3101,7 +3101,7 @@
    "slug": "/reference/learning-and-open-resources/",
    "title": "Learning and open resources",
    "source": [
-    "portal/content/reference/learning-and-open-resources.md"
+    "portal/content/en/reference/learning-and-open-resources.md"
    ],
    "production": "authored; a curated list",
    "series": "reference-course",
@@ -3121,7 +3121,7 @@
    "slug": "/reference/regulators-and-acts/",
    "title": "Regulators and acts",
    "source": [
-    "portal/content/reference/regulators-and-acts.md"
+    "portal/content/en/reference/regulators-and-acts.md"
    ],
    "production": "authored; the index of the regulation pages, curated with the Control Function Contacts",
    "series": "reference-course",
@@ -3141,7 +3141,7 @@
    "slug": "/reference/regulations/lean-portfolio-management/",
    "title": "Lean portfolio management practice",
    "source": [
-    "portal/content/reference/regulations/lean-portfolio-management.md"
+    "portal/content/en/reference/regulations/lean-portfolio-management.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Global",
@@ -3158,7 +3158,7 @@
    "slug": "/reference/regulations/oecd-ai-principles/",
    "title": "OECD Principles on Artificial Intelligence",
    "source": [
-    "portal/content/reference/regulations/oecd-ai-principles.md"
+    "portal/content/en/reference/regulations/oecd-ai-principles.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Global",
@@ -3175,7 +3175,7 @@
    "slug": "/reference/regulations/unesco-recommendation-ethics-ai/",
    "title": "UNESCO Recommendation on the Ethics of Artificial Intelligence",
    "source": [
-    "portal/content/reference/regulations/unesco-recommendation-ethics-ai.md"
+    "portal/content/en/reference/regulations/unesco-recommendation-ethics-ai.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Global",
@@ -3192,7 +3192,7 @@
    "slug": "/reference/regulations/council-of-europe-ai-convention/",
    "title": "Council of Europe Framework Convention on Artificial Intelligence",
    "source": [
-    "portal/content/reference/regulations/council-of-europe-ai-convention.md"
+    "portal/content/en/reference/regulations/council-of-europe-ai-convention.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Global",
@@ -3209,7 +3209,7 @@
    "slug": "/reference/regulations/g7-hiroshima-ai-process/",
    "title": "G7 Hiroshima AI Process",
    "source": [
-    "portal/content/reference/regulations/g7-hiroshima-ai-process.md"
+    "portal/content/en/reference/regulations/g7-hiroshima-ai-process.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Global",
@@ -3226,7 +3226,7 @@
    "slug": "/reference/regulations/iso-iec-ai-standards/",
    "title": "ISO/IEC standards on AI: 42001, 23894, 22989",
    "source": [
-    "portal/content/reference/regulations/iso-iec-ai-standards.md"
+    "portal/content/en/reference/regulations/iso-iec-ai-standards.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Global",
@@ -3243,7 +3243,7 @@
    "slug": "/reference/regulations/nist-ai-rmf/",
    "title": "NIST AI Risk Management Framework",
    "source": [
-    "portal/content/reference/regulations/nist-ai-rmf.md"
+    "portal/content/en/reference/regulations/nist-ai-rmf.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "United States",
@@ -3260,7 +3260,7 @@
    "slug": "/reference/regulations/owasp-top-10-llm/",
    "title": "OWASP Top 10 for Large Language Model Applications",
    "source": [
-    "portal/content/reference/regulations/owasp-top-10-llm.md"
+    "portal/content/en/reference/regulations/owasp-top-10-llm.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Global",
@@ -3277,7 +3277,7 @@
    "slug": "/reference/regulations/financial-standard-setters-on-ai/",
    "title": "The financial standard-setters on AI: FSB, BCBS, BIS",
    "source": [
-    "portal/content/reference/regulations/financial-standard-setters-on-ai.md"
+    "portal/content/en/reference/regulations/financial-standard-setters-on-ai.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Global",
@@ -3294,7 +3294,7 @@
    "slug": "/reference/regulations/eu-ai-act/",
    "title": "EU Artificial Intelligence Act",
    "source": [
-    "portal/content/reference/regulations/eu-ai-act.md"
+    "portal/content/en/reference/regulations/eu-ai-act.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "European Union",
@@ -3311,7 +3311,7 @@
    "slug": "/reference/regulations/eu-gdpr/",
    "title": "EU General Data Protection Regulation",
    "source": [
-    "portal/content/reference/regulations/eu-gdpr.md"
+    "portal/content/en/reference/regulations/eu-gdpr.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "European Union",
@@ -3328,7 +3328,7 @@
    "slug": "/reference/regulations/eu-dora/",
    "title": "EU Digital Operational Resilience Act and the guidance of the European Banking Authority",
    "source": [
-    "portal/content/reference/regulations/eu-dora.md"
+    "portal/content/en/reference/regulations/eu-dora.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "European Union",
@@ -3345,7 +3345,7 @@
    "slug": "/reference/regulations/us-model-risk-and-consumer-guidance/",
    "title": "United States supervisory guidance on model risk and on AI in credit",
    "source": [
-    "portal/content/reference/regulations/us-model-risk-and-consumer-guidance.md"
+    "portal/content/en/reference/regulations/us-model-risk-and-consumer-guidance.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "United States",
@@ -3362,7 +3362,7 @@
    "slug": "/reference/regulations/us-federal-and-state-ai-policy/",
    "title": "United States federal and state AI policy",
    "source": [
-    "portal/content/reference/regulations/us-federal-and-state-ai-policy.md"
+    "portal/content/en/reference/regulations/us-federal-and-state-ai-policy.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "United States",
@@ -3379,7 +3379,7 @@
    "slug": "/reference/regulations/ru-personal-data-law/",
    "title": "Russian Federation: the Federal Law on Personal Data (152-FZ)",
    "source": [
-    "portal/content/reference/regulations/ru-personal-data-law.md"
+    "portal/content/en/reference/regulations/ru-personal-data-law.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Russian Federation",
@@ -3396,7 +3396,7 @@
    "slug": "/reference/regulations/ru-national-ai-strategy/",
    "title": "Russian Federation: the National Strategy for the Development of AI and the experimental legal regimes",
    "source": [
-    "portal/content/reference/regulations/ru-national-ai-strategy.md"
+    "portal/content/en/reference/regulations/ru-national-ai-strategy.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Russian Federation",
@@ -3413,7 +3413,7 @@
    "slug": "/reference/regulations/bank-of-russia-on-ai/",
    "title": "Bank of Russia on artificial intelligence in the financial market",
    "source": [
-    "portal/content/reference/regulations/bank-of-russia-on-ai.md"
+    "portal/content/en/reference/regulations/bank-of-russia-on-ai.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Russian Federation",
@@ -3430,7 +3430,7 @@
    "slug": "/reference/regulations/ru-ai-code-of-ethics/",
    "title": "Russian Federation: the Code of Ethics in the Field of AI",
    "source": [
-    "portal/content/reference/regulations/ru-ai-code-of-ethics.md"
+    "portal/content/en/reference/regulations/ru-ai-code-of-ethics.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Russian Federation",
@@ -3447,7 +3447,7 @@
    "slug": "/reference/regulations/kz-law-on-ai/",
    "title": "Kazakhstan: the Law on Artificial Intelligence and the national concept for AI",
    "source": [
-    "portal/content/reference/regulations/kz-law-on-ai.md"
+    "portal/content/en/reference/regulations/kz-law-on-ai.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Kazakhstan",
@@ -3464,7 +3464,7 @@
    "slug": "/reference/regulations/kz-personal-data-law/",
    "title": "Kazakhstan: the Law on Personal Data and Their Protection",
    "source": [
-    "portal/content/reference/regulations/kz-personal-data-law.md"
+    "portal/content/en/reference/regulations/kz-personal-data-law.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Kazakhstan",
@@ -3481,7 +3481,7 @@
    "slug": "/reference/regulations/kz-financial-regulators/",
    "title": "Kazakhstan: the National Bank and the Agency for Regulation and Development of the Financial Market",
    "source": [
-    "portal/content/reference/regulations/kz-financial-regulators.md"
+    "portal/content/en/reference/regulations/kz-financial-regulators.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Kazakhstan",
@@ -3498,7 +3498,7 @@
    "slug": "/reference/regulations/aifc/",
    "title": "Astana International Financial Centre",
    "source": [
-    "portal/content/reference/regulations/aifc.md"
+    "portal/content/en/reference/regulations/aifc.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Kazakhstan",
@@ -3515,7 +3515,7 @@
    "slug": "/reference/regulations/nbkr/",
    "title": "National Bank of the Kyrgyz Republic",
    "source": [
-    "portal/content/reference/regulations/nbkr.md"
+    "portal/content/en/reference/regulations/nbkr.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Kyrgyz Republic",
@@ -3532,7 +3532,7 @@
    "slug": "/reference/regulations/kg-personal-information-law/",
    "title": "Kyrgyz Republic: the Law on Personal Information and the authorized body for personal data",
    "source": [
-    "portal/content/reference/regulations/kg-personal-information-law.md"
+    "portal/content/en/reference/regulations/kg-personal-information-law.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Kyrgyz Republic",
@@ -3549,7 +3549,7 @@
    "slug": "/reference/regulations/kg-digital-development/",
    "title": "Kyrgyz Republic: the ministry responsible for digital development and the acts on digitalization",
    "source": [
-    "portal/content/reference/regulations/kg-digital-development.md"
+    "portal/content/en/reference/regulations/kg-digital-development.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Kyrgyz Republic",
@@ -3566,7 +3566,7 @@
    "slug": "/reference/regulations/kg-aml-body/",
    "title": "Kyrgyz Republic: the financial intelligence body and the legislation against money laundering and the financing of terrorism",
    "source": [
-    "portal/content/reference/regulations/kg-aml-body.md"
+    "portal/content/en/reference/regulations/kg-aml-body.md"
    ],
    "production": "authored; orientation only, no provision quoted; verified with the Control Function Contacts",
    "region": "Kyrgyz Republic",
@@ -3583,7 +3583,7 @@
    "slug": "/reference/resources/bis-innovation-hub/",
    "title": "Bank for International Settlements and its Innovation Hub",
    "source": [
-    "portal/content/reference/resources/bis-innovation-hub.md"
+    "portal/content/en/reference/resources/bis-innovation-hub.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Research and insight",
@@ -3600,7 +3600,7 @@
    "slug": "/reference/resources/imf-and-world-bank/",
    "title": "International Monetary Fund and the World Bank on fintech and AI",
    "source": [
-    "portal/content/reference/resources/imf-and-world-bank.md"
+    "portal/content/en/reference/resources/imf-and-world-bank.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Research and insight",
@@ -3617,7 +3617,7 @@
    "slug": "/reference/resources/world-economic-forum/",
    "title": "World Economic Forum on AI governance and financial services",
    "source": [
-    "portal/content/reference/resources/world-economic-forum.md"
+    "portal/content/en/reference/resources/world-economic-forum.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Research and insight",
@@ -3634,7 +3634,7 @@
    "slug": "/reference/resources/stanford-hai-ai-index/",
    "title": "Stanford Institute for Human-Centered AI: the AI Index",
    "source": [
-    "portal/content/reference/resources/stanford-hai-ai-index.md"
+    "portal/content/en/reference/resources/stanford-hai-ai-index.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Research and insight",
@@ -3651,7 +3651,7 @@
    "slug": "/reference/resources/mckinsey-and-quantumblack/",
    "title": "McKinsey, the McKinsey Global Institute, and QuantumBlack",
    "source": [
-    "portal/content/reference/resources/mckinsey-and-quantumblack.md"
+    "portal/content/en/reference/resources/mckinsey-and-quantumblack.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Research and insight",
@@ -3668,7 +3668,7 @@
    "slug": "/reference/resources/deeplearning-ai/",
    "title": "DeepLearning.AI: the short courses and The Batch",
    "source": [
-    "portal/content/reference/resources/deeplearning-ai.md"
+    "portal/content/en/reference/resources/deeplearning-ai.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Learning and open resources",
@@ -3685,7 +3685,7 @@
    "slug": "/reference/resources/hugging-face/",
    "title": "Hugging Face: open models, datasets, and documentation",
    "source": [
-    "portal/content/reference/resources/hugging-face.md"
+    "portal/content/en/reference/resources/hugging-face.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Learning and open resources",
@@ -3702,7 +3702,7 @@
    "slug": "/reference/resources/arxiv-and-papers-with-code/",
    "title": "arXiv and Papers with Code",
    "source": [
-    "portal/content/reference/resources/arxiv-and-papers-with-code.md"
+    "portal/content/en/reference/resources/arxiv-and-papers-with-code.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Learning and open resources",
@@ -3719,7 +3719,7 @@
    "slug": "/reference/resources/mitre-atlas-and-ai-incident-database/",
    "title": "MITRE ATLAS and the AI Incident Database",
    "source": [
-    "portal/content/reference/resources/mitre-atlas-and-ai-incident-database.md"
+    "portal/content/en/reference/resources/mitre-atlas-and-ai-incident-database.md"
    ],
    "production": "authored; orientation only; a listing is not an endorsement",
    "region": "Learning and open resources",
@@ -3736,7 +3736,7 @@
    "slug": "/reference/vocabulary/",
    "title": "Vocabulary and Style",
    "source": [
-    "charter/documents/vocabulary.md"
+    "charter/en/documents/vocabulary.md"
    ],
    "words": 4674,
    "outline": [
@@ -3754,7 +3754,7 @@
    "slug": "/reference/document-catalog/",
    "title": "Document Catalog",
    "source": [
-    "charter/documents/document-catalog.md"
+    "charter/en/documents/document-catalog.md"
    ],
    "words": 1519,
    "production": "generated"
@@ -3767,7 +3767,7 @@
    "slug": "/reference/change-history/",
    "title": "Change history",
    "source": [
-    "charter/documents/document-catalog.md"
+    "charter/en/documents/document-catalog.md"
    ],
    "production": "generated",
    "outline": [
@@ -3784,10 +3784,10 @@
    "slug": "/reference/records-and-systems/",
    "title": "Records and systems",
    "source": [
-    "charter/documents/operating-model.md",
-    "charter/documents/document-catalog.md",
-    "charter/templates/README.md",
-    "registry/README.md"
+    "charter/en/documents/operating-model.md",
+    "charter/en/documents/document-catalog.md",
+    "charter/en/templates/README.md",
+    "registry/en/README.md"
    ],
    "production": "authored from sources",
    "outline": [

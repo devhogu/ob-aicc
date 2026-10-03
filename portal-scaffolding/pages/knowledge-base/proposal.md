@@ -5,7 +5,7 @@ section: knowledge-base
 order: 34
 type: template
 slug: /knowledge-base/proposal/
-source: charter/templates/proposal.md
+source: charter/en/templates/proposal.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/proposal/
 
 ## Source
 
-- charter/templates/proposal.md
+- charter/en/templates/proposal.md
 
 ## Outline
 

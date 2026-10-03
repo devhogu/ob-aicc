@@ -5,7 +5,7 @@ section: organization
 order: 4
 type: outline
 slug: /organization/who-does-what/
-source: portal/content/organization/who-does-what.md
+source: portal/content/en/organization/who-does-what.md
 part: 4 of 6
 series: organization-course
 production: authored; explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /organization/who-does-what/
 
 ## Source
 
-- portal/content/organization/who-does-what.md
+- portal/content/en/organization/who-does-what.md
 
 ## Outline
 

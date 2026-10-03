@@ -5,7 +5,7 @@ section: reference
 order: 69
 type: regulation
 slug: /reference/resources/mitre-atlas-and-ai-incident-database/
-source: portal/content/reference/resources/mitre-atlas-and-ai-incident-database.md
+source: portal/content/en/reference/resources/mitre-atlas-and-ai-incident-database.md
 region: Learning and open resources
 production: authored; orientation only; a listing is not an endorsement
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/resources/mitre-atlas-and-ai-incident
 
 ## Source
 
-- portal/content/reference/resources/mitre-atlas-and-ai-incident-database.md
+- portal/content/en/reference/resources/mitre-atlas-and-ai-incident-database.md
 
 ## Outline
 

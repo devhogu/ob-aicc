@@ -6,6 +6,7 @@
         <M-PORTAL-SOURCE />
         <M-PORTAL-PROJECTION />
         <M-AICC-DEPLOY />
+        <M-PORTAL-LOCALIZATION />
       </Owns>
     </GD-MAIN>
   </GraphDocuments>

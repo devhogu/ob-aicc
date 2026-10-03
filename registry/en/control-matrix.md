@@ -29,7 +29,7 @@ The statuses have the meanings of the Operating Model 8.5, and the gap is stated
 | C-09 | Approval of the business case, and the decision after the MVP | - | Initiative Brief complete in its six sections, with the clearances of the Control Function Contacts; Decision Record; Decision Log entry | No occurrence yet: no business case is submitted for approval |
 | C-10 | Outcome Report, acceptance, and confirmation of the benefit | - | Note of the acceptance in the backlog; the release block of the Solution Definition; Outcome Report (`initiatives/INI-nnn/`) | No occurrence yet: no Feature, Solution, or Engagement is accepted |
 | C-11 | Benefit confirmed | - | Quarterly Report section 4 | Not yet due: at the quarterly Steering of 2026-12-23 (IP week of 2026-PIQ4) |
-| C-12 | Risk Tier assignment | - | Solution Definition (`portfolio/solutions/`); AI Registry entry | No occurrence yet: SOL-001 is Proposed and no Solution is defined |
+| C-12 | Risk Tier assignment | - | Solution Definition (`portfolio/en/solutions/`); AI Registry entry | No occurrence yet: SOL-001 is Proposed and no Solution is defined |
 | C-13 | Check or validation before the first deployment | - | AI Registry entry for the check; Control Sign-Off (`sign-offs/`) | No occurrence yet |
 | C-14 | Release | - | Release block of the Solution Definition; Acceptance Checklist (`checklists/`); Decision Record | No occurrence yet |
 | C-15 | Approval of the use of a Solution for a data class, and training before first use | - | AI Registry, with who approved the use and when, and the completion of the training noted by the AICC Lead | Not yet due: the uses already in place are listed in the AI Registry within 90 days of the activation on 2026-10-02 (AI Policy 2.1), by 2026-12-31; no use is approved for a data class |
@@ -46,7 +46,7 @@ The statuses have the meanings of the Operating Model 8.5, and the gap is stated
 | C-26 | Access review of the Registry, the tools, and production | - | Steering Summary | Not yet due: at the quarterly Steering of 2026-12-23 (IP week of 2026-PIQ4) |
 | C-27 | Acceptance of a risk beyond the appetite | - | Decision Record (`decisions/`); the report to the Board Committee | No occurrence yet |
 | C-28 | Reassessment of the Risk Tier and expiry of a validation | - | AI Registry; Control Sign-Off (`sign-offs/`) | No occurrence yet: no date of a reassessment or a validation is in the AI Registry |
-| C-29 | Review of live Solutions | - | Solution Definition (`portfolio/solutions/`) | No occurrence yet: no Solution is live |
+| C-29 | Review of live Solutions | - | Solution Definition (`portfolio/en/solutions/`) | No occurrence yet: no Solution is live |
 | C-30 | Deployment to production, and change to a released Solution | - | The Feature with its change ticket and test reference; Solution Definition; Decision Log | No occurrence yet |
 | C-31 | Retirement of a Solution | - | Solution Definition; AI Registry | No occurrence yet |
 | C-32 | Deficiencies and findings | RI-004, reclassified 2026-10-03 | Risks and Issues; Steering Summary | Open: the C-08 deficiency is recorded with its owner; its remediation due date still needs to be set, and the monthly review is due at the I10 Steering |
@@ -57,7 +57,7 @@ The statuses have the meanings of the Operating Model 8.5, and the gap is stated
 | --- | --- | --- |
 | Decisions | `decision-log.md` | 4 entries (DR-2026-060 to DR-2026-063); read the status and any dated correction of each |
 | Initiatives | `portfolio-backlog.md` | 10: six in Discovery and four Approved Standing Initiatives (DR-2026-063) |
-| Solution Definitions | `portfolio/solutions/` | 1 (SOL-001, Proposed) |
+| Solution Definitions | `portfolio/en/solutions/` | 1 (SOL-001, Proposed) |
 | Steering Summaries | `steering/` | 1 (2026-09-02, first) |
 | Acceptance Checklists | `checklists/` | 0 |
 | Control Sign-Offs | `sign-offs/` | 0 |

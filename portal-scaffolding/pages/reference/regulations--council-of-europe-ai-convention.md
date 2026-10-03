@@ -5,7 +5,7 @@ section: reference
 order: 24
 type: regulation
 slug: /reference/regulations/council-of-europe-ai-convention/
-source: portal/content/reference/regulations/council-of-europe-ai-convention.md
+source: portal/content/en/reference/regulations/council-of-europe-ai-convention.md
 region: Global
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/council-of-europe-ai-conv
 
 ## Source
 
-- portal/content/reference/regulations/council-of-europe-ai-convention.md
+- portal/content/en/reference/regulations/council-of-europe-ai-convention.md
 
 ## Outline
 

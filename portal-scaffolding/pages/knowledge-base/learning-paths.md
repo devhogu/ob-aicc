@@ -5,7 +5,7 @@ section: knowledge-base
 order: 2
 type: outline
 slug: /knowledge-base/learning-paths/
-source: portal/content/knowledge-base/learning-paths.md
+source: portal/content/en/knowledge-base/learning-paths.md
 part: 2 of 7
 series: knowledge-base-course
 production: authored
@@ -18,7 +18,7 @@ Page type: outline. Address: /knowledge-base/learning-paths/
 
 ## Source
 
-- portal/content/knowledge-base/learning-paths.md
+- portal/content/en/knowledge-base/learning-paths.md
 
 ## Outline
 

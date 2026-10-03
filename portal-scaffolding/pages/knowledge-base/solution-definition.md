@@ -5,7 +5,7 @@ section: knowledge-base
 order: 23
 type: template
 slug: /knowledge-base/solution-definition/
-source: charter/templates/solution-definition.md
+source: charter/en/templates/solution-definition.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/solution-definition/
 
 ## Source
 
-- charter/templates/solution-definition.md
+- charter/en/templates/solution-definition.md
 
 ## Outline
 

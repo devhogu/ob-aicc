@@ -5,7 +5,7 @@ section: reference
 order: 34
 type: regulation
 slug: /reference/regulations/us-federal-and-state-ai-policy/
-source: portal/content/reference/regulations/us-federal-and-state-ai-policy.md
+source: portal/content/en/reference/regulations/us-federal-and-state-ai-policy.md
 region: United States
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/us-federal-and-state-ai-p
 
 ## Source
 
-- portal/content/reference/regulations/us-federal-and-state-ai-policy.md
+- portal/content/en/reference/regulations/us-federal-and-state-ai-policy.md
 
 ## Outline
 

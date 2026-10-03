@@ -5,7 +5,7 @@ section: knowledge-base
 order: 5
 type: outline
 slug: /knowledge-base/playbooks-and-lessons/
-source: portal/content/knowledge-base/playbooks-and-lessons.md
+source: portal/content/en/knowledge-base/playbooks-and-lessons.md
 part: 5 of 7
 series: knowledge-base-course
 production: authored
@@ -18,7 +18,7 @@ Page type: outline. Address: /knowledge-base/playbooks-and-lessons/
 
 ## Source
 
-- portal/content/knowledge-base/playbooks-and-lessons.md
+- portal/content/en/knowledge-base/playbooks-and-lessons.md
 
 ## Outline
 

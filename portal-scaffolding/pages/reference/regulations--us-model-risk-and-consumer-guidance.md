@@ -5,7 +5,7 @@ section: reference
 order: 33
 type: regulation
 slug: /reference/regulations/us-model-risk-and-consumer-guidance/
-source: portal/content/reference/regulations/us-model-risk-and-consumer-guidance.md
+source: portal/content/en/reference/regulations/us-model-risk-and-consumer-guidance.md
 region: United States
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/us-model-risk-and-consume
 
 ## Source
 
-- portal/content/reference/regulations/us-model-risk-and-consumer-guidance.md
+- portal/content/en/reference/regulations/us-model-risk-and-consumer-guidance.md
 
 ## Outline
 

@@ -1,0 +1,124 @@
+<GraceChangePlan graceVersion="4.0" status="applied">
+  <C-LANGUAGE-SCAFFOLDING>
+    <IntentSummary>Implement the owner-approved en/ru layout and language-aware source selection, verify, reconcile GRACE state, archive, commit/push, and publish without touching unrelated changes. Authorization: the owner approved this exact scaffolding and deployment in the current conversation.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist>
+        <Value>charter/documents/document-catalog.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>registry/decision-log.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portfolio/packages.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portal/content/delivery/overview.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portal/tools/build.py</Value>
+      </MustExist>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustExist>
+        <Value>charter/en/documents/document-catalog.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>registry/en/decision-log.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>registry/ru/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portfolio/en/packages.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portfolio/ru/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portal/content/en/delivery/overview.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portal/content/ru/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portal/tools/localization.py</Value>
+      </MustExist>
+      <MustVerify>
+        <Module>M-PORTAL-SOURCE</Module>
+      </MustVerify>
+      <MustVerify>
+        <Module>M-PORTAL-LOCALIZATION</Module>
+      </MustVerify>
+      <MustVerify>
+        <Module>M-PORTAL-PROJECTION</Module>
+      </MustVerify>
+      <MustPassCommand>
+        <Command>python3 -m unittest discover -s portal/tests</Command>
+      </MustPassCommand>
+      <MustPassCommand>
+        <Command>python3 portal-scaffolding/check.py</Command>
+      </MustPassCommand>
+      <MustPassCommand>
+        <Command>python3 portal/tools/check.py --idempotent</Command>
+      </MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors>
+        <M-PORTAL-SOURCE />
+        <M-PORTAL-LOCALIZATION />
+        <M-PORTAL-PROJECTION />
+      </GraphAnchors>
+      <VerificationAnchors>
+        <V-M-PORTAL-SOURCE />
+        <V-M-PORTAL-LOCALIZATION />
+        <V-M-PORTAL-PROJECTION />
+      </VerificationAnchors>
+      <ContextArtifact>technology.xml</ContextArtifact>
+      <ContextArtifact>ux-guidelines.xml</ContextArtifact>
+    </DurableScope>
+    <ObservedWriteScope>
+      <Glob>charter/**</Glob>
+      <Glob>registry/**</Glob>
+      <Glob>portfolio/**</Glob>
+      <Glob>portal/**</Glob>
+      <Glob>portal-scaffolding/**</Glob>
+      <Glob>html/aicc/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001>
+        <Title>Relocate canonical English sources and prepare Russian folders</Title>
+        <DependsOn />
+        <AcceptanceCriteria>
+          <Criterion>Paths and links move without changing approved meaning; source routing and metadata track the new locations.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 portal-scaffolding/check.py</Command>
+        </Verification>
+      </T-001>
+      <T-002>
+        <Title>Implement and test language source selection</Title>
+        <DependsOn>T-001</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>Reviewed translations, truthful fallback, language-specific links/search/metadata, and stale-source rejection work through the real renderer.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 -m unittest discover -s portal/tests</Command>
+        </Verification>
+      </T-002>
+      <T-003>
+        <Title>Verify and publish the scaffold</Title>
+        <DependsOn>T-002</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>Build is repeatable, checks pass, durable GRACE state is reconciled and archived, and the committed portal is pushed and verified on the existing host.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 portal/tools/build.py</Command>
+          <Command>python3 portal/tools/check.py --idempotent</Command>
+        </Verification>
+      </T-003>
+    </ImplementationPlan>
+  </C-LANGUAGE-SCAFFOLDING>
+</GraceChangePlan>

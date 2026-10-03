@@ -5,7 +5,7 @@ section: services
 order: 1
 type: outline
 slug: /services/advise-and-formulate/
-source: portal/content/services/areas/advise-and-formulate.md
+source: portal/content/en/services/areas/advise-and-formulate.md
 part: 2 of 5
 series: service-areas
 production: authored; generated table of the categories of the area
@@ -18,7 +18,7 @@ Page type: outline. Address: /services/advise-and-formulate/
 
 ## Source
 
-- portal/content/services/areas/advise-and-formulate.md
+- portal/content/en/services/areas/advise-and-formulate.md
 
 ## Outline
 

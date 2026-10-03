@@ -5,7 +5,7 @@ section: delivery
 order: 25
 type: document
 slug: /delivery/solution-lifecycle-model/the-cadence/
-source: charter/documents/solution-lifecycle-model.md
+source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 6
 document: solution-lifecycle-model
 part: 5 of 7
@@ -20,7 +20,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/the-cadence/
 
 ## Source
 
-- charter/documents/solution-lifecycle-model.md
+- charter/en/documents/solution-lifecycle-model.md
 
 ## Sections of the source
 

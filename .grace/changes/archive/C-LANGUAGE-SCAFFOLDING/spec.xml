@@ -1,0 +1,40 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-LANGUAGE-SCAFFOLDING>
+    <Summary>Deploy the approved language scaffolding: mirrored en and ru source roots with canonical English records, truthful translation fallback, and the existing bilingual static portal.</Summary>
+    <Problem>Source Markdown is monolingual and language-independent even though the portal already has en and ru routes. Moving files alone would break source links and would not select reviewed translations.</Problem>
+    <Goals>
+      <Goal>Move the existing charter, Registry, Portfolio, and explanatory Markdown into en roots and prepare matching ru folders.</Goal>
+      <Goal>Make the renderer select a reviewed language source, keep counterpart routes and stable clause anchors, and expose missing translations honestly.</Goal>
+      <Goal>Commit and push the verified source and generated output, publish through the existing deployment tool, and verify the served manifest.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>English source edition 2.2 and individual document revisions remain authoritative; preserve policy meaning and record facts.</Constraint>
+      <Constraint>One record identity and approval history across languages; Russian content records its English source revision and hash.</Constraint>
+      <Constraint>Keep shared UI messages and authored bilingual chrome; keep assets shared and the existing English default.</Constraint>
+      <Constraint>Preserve unrelated dirty workspace changes; publish from an isolated clean checkout if needed.</Constraint>
+      <Constraint>The current user instruction "lets deploy this scaffolding" approves the preceding proposed layout and authorizes this implementation, lifecycle completion, commits, pushes, and deployment after verification.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Translate the corpus or invent Russian policy wording.</NonGoal>
+      <NonGoal>Publish live Registry records or change decisions, approvals, policy, hosting, or access controls.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>All English source files have one canonical en location; ru folders contain scaffolding without English duplicates presented as translations.</Criterion>
+      <Criterion>Reviewed translations render on their language route with the correct text language, metadata, diagrams, search content, and counterpart links. Missing or draft translations fall back visibly to English; stale reviewed translations fail validation.</Criterion>
+      <Criterion>Source links, page routing, source manifest, and maintenance documentation resolve after relocation.</Criterion>
+      <Criterion>The real build and deterministic site checks pass; focused tests prove language selection and error behavior.</Criterion>
+      <Criterion>The deployed manifest matches the committed generated output, and unrelated workspace changes remain untouched.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-PORTAL-SOURCE />
+      <M-PORTAL-PROJECTION />
+      <M-AICC-DEPLOY />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal-scaffolding/check.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedEvidence>Language-source fixtures, preserved English content, resolved generated links and anchors, repeatable output, and the deployment tool served-manifest verification.</ExpectedEvidence>
+    </VerificationIntent>
+  </C-LANGUAGE-SCAFFOLDING>
+</GraceChangeSpec>

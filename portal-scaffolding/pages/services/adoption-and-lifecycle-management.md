@@ -5,7 +5,7 @@ section: services
 order: 15
 type: service
 slug: /services/adoption-and-lifecycle-management/
-source: portal/content/services/adoption-and-lifecycle-management.md
+source: portal/content/en/services/adoption-and-lifecycle-management.md
 area: enablement
 series: service-categories-enablement
 parent: services/enablement
@@ -19,7 +19,7 @@ Page type: service. Address: /services/adoption-and-lifecycle-management/
 
 ## Source
 
-- portal/content/services/adoption-and-lifecycle-management.md
+- portal/content/en/services/adoption-and-lifecycle-management.md
 
 ## Outline
 

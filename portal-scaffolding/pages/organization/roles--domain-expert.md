@@ -5,7 +5,7 @@ section: organization
 order: 25
 type: role
 slug: /organization/roles/domain-expert/
-source: charter/documents/operating-model.md; charter/guides/organization-guide.md
+source: charter/en/documents/operating-model.md; charter/en/guides/organization-guide.md
 production: generated from tables
 status: scaffold
 ---
@@ -16,8 +16,8 @@ Page type: role. Address: /organization/roles/domain-expert/
 
 ## Source
 
-- charter/documents/operating-model.md
-- charter/guides/organization-guide.md
+- charter/en/documents/operating-model.md
+- charter/en/guides/organization-guide.md
 
 ## Outline
 

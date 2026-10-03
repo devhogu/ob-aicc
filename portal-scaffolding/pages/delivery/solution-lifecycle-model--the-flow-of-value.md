@@ -5,7 +5,7 @@ section: delivery
 order: 22
 type: document
 slug: /delivery/solution-lifecycle-model/the-flow-of-value/
-source: charter/documents/solution-lifecycle-model.md
+source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 3
 document: solution-lifecycle-model
 part: 2 of 7
@@ -20,7 +20,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/the-flow-of-val
 
 ## Source
 
-- charter/documents/solution-lifecycle-model.md
+- charter/en/documents/solution-lifecycle-model.md
 
 ## Sections of the source
 

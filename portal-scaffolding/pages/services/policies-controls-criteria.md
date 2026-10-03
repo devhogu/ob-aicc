@@ -5,7 +5,7 @@ section: services
 order: 16
 type: service
 slug: /services/policies-controls-criteria/
-source: portal/content/services/policies-controls-criteria.md
+source: portal/content/en/services/policies-controls-criteria.md
 area: assurance
 series: service-categories-assurance
 parent: services/assurance
@@ -19,7 +19,7 @@ Page type: service. Address: /services/policies-controls-criteria/
 
 ## Source
 
-- portal/content/services/policies-controls-criteria.md
+- portal/content/en/services/policies-controls-criteria.md
 
 ## Outline
 

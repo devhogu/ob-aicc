@@ -5,7 +5,7 @@ section: portfolio
 order: 20
 type: outline
 slug: /portfolio/measures-definitions-and-formulas/
-source: portal/content/portfolio/measures-definitions-and-formulas.md
+source: portal/content/en/portfolio/measures-definitions-and-formulas.md
 production: authored; the reference of the measures of the Portfolio Management Model 9.2, with their formulas, and the measures of lean practice as explanation
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: outline. Address: /portfolio/measures-definitions-and-formulas/
 
 ## Source
 
-- portal/content/portfolio/measures-definitions-and-formulas.md
+- portal/content/en/portfolio/measures-definitions-and-formulas.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: portfolio
 order: 2
 type: outline
 slug: /portfolio/strategy-and-investment/
-source: portal/content/portfolio/strategy-and-investment.md
+source: portal/content/en/portfolio/strategy-and-investment.md
 part: 2 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /portfolio/strategy-and-investment/
 
 ## Source
 
-- portal/content/portfolio/strategy-and-investment.md
+- portal/content/en/portfolio/strategy-and-investment.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: knowledge-base
 order: 6
 type: outline
 slug: /knowledge-base/acts-and-compliance/
-source: portal/content/knowledge-base/acts-and-compliance.md
+source: portal/content/en/knowledge-base/acts-and-compliance.md
 part: 6 of 7
 series: knowledge-base-course
 production: authored; curated by the AICC Lead with the Control Function Contacts
@@ -18,7 +18,7 @@ Page type: outline. Address: /knowledge-base/acts-and-compliance/
 
 ## Source
 
-- portal/content/knowledge-base/acts-and-compliance.md
+- portal/content/en/knowledge-base/acts-and-compliance.md
 
 ## Outline
 

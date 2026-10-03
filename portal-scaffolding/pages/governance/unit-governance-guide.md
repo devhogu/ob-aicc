@@ -5,7 +5,7 @@ section: governance
 order: 18
 type: guide
 slug: /governance/unit-governance-guide/
-source: charter/guides/unit-governance-guide.md
+source: charter/en/guides/unit-governance-guide.md
 source_sections: 1, 2, 3, 4, 5, 6
 document: unit-governance-guide
 part: 3 of 4
@@ -21,7 +21,7 @@ Page type: guide. Address: /governance/unit-governance-guide/
 
 ## Source
 
-- charter/guides/unit-governance-guide.md
+- charter/en/guides/unit-governance-guide.md
 
 ## Sections of the source
 

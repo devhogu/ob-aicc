@@ -5,7 +5,7 @@ section: reference
 order: 43
 type: regulation
 slug: /reference/regulations/nbkr/
-source: portal/content/reference/regulations/nbkr.md
+source: portal/content/en/reference/regulations/nbkr.md
 region: Kyrgyz Republic
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/nbkr/
 
 ## Source
 
-- portal/content/reference/regulations/nbkr.md
+- portal/content/en/reference/regulations/nbkr.md
 
 ## Outline
 

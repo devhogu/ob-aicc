@@ -6,6 +6,7 @@
         <V-M-PORTAL-SOURCE />
         <V-M-PORTAL-PROJECTION />
         <V-M-AICC-DEPLOY />
+        <V-M-PORTAL-LOCALIZATION />
       </Owns>
     </VD-MAIN>
   </VerificationDocuments>

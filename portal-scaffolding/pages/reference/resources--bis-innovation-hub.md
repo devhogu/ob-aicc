@@ -5,7 +5,7 @@ section: reference
 order: 61
 type: regulation
 slug: /reference/resources/bis-innovation-hub/
-source: portal/content/reference/resources/bis-innovation-hub.md
+source: portal/content/en/reference/resources/bis-innovation-hub.md
 region: Research and insight
 production: authored; orientation only; a listing is not an endorsement
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/resources/bis-innovation-hub/
 
 ## Source
 
-- portal/content/reference/resources/bis-innovation-hub.md
+- portal/content/en/reference/resources/bis-innovation-hub.md
 
 ## Outline
 

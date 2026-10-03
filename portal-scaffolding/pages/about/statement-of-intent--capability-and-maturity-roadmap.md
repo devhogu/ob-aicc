@@ -5,7 +5,7 @@ section: about
 order: 3
 type: document
 slug: /about/statement-of-intent/capability-and-maturity-roadmap/
-source: charter/documents/statement-of-intent.md
+source: charter/en/documents/statement-of-intent.md
 source_sections: 10, 11
 document: statement-of-intent
 part: 3 of 4
@@ -20,7 +20,7 @@ Page type: document. Address: /about/statement-of-intent/capability-and-maturity
 
 ## Source
 
-- charter/documents/statement-of-intent.md
+- charter/en/documents/statement-of-intent.md
 
 ## Sections of the source
 

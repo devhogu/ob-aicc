@@ -5,7 +5,7 @@ section: delivery
 order: 39
 type: workflow
 slug: /delivery/cadence-workflow/what-each-event-carries/
-source: charter/workflows/cadence.md
+source: charter/en/workflows/cadence.md
 source_sections: 6
 document: cadence-workflow
 part: 3 of 5
@@ -21,7 +21,7 @@ Page type: workflow. Address: /delivery/cadence-workflow/what-each-event-carries
 
 ## Source
 
-- charter/workflows/cadence.md
+- charter/en/workflows/cadence.md
 
 ## Sections of the source
 

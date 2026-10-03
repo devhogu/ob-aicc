@@ -5,7 +5,7 @@ section: services
 order: 26
 type: document
 slug: /services/business-model/
-source: charter/documents/business-model.md
+source: charter/en/documents/business-model.md
 words: 1381
 production: generated
 status: scaffold
@@ -17,7 +17,7 @@ Page type: document. Address: /services/business-model/
 
 ## Source
 
-- charter/documents/business-model.md
+- charter/en/documents/business-model.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: reference
 order: 1
 type: outline
 slug: /reference/industry-body-of-knowledge/
-source: portal/content/reference/industry-body-of-knowledge.md
+source: portal/content/en/reference/industry-body-of-knowledge.md
 part: 2 of 5
 series: reference-course
 production: authored; a curated list
@@ -18,7 +18,7 @@ Page type: outline. Address: /reference/industry-body-of-knowledge/
 
 ## Source
 
-- portal/content/reference/industry-body-of-knowledge.md
+- portal/content/en/reference/industry-body-of-knowledge.md
 
 ## Outline
 

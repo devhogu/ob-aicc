@@ -5,7 +5,7 @@ section: governance
 order: 11
 type: document
 slug: /governance/control-loops/
-source: charter/documents/operating-model.md
+source: charter/en/documents/operating-model.md
 source_sections: 6
 document: operating-model
 part: governance view
@@ -22,7 +22,7 @@ Page type: document. Address: /governance/control-loops/
 
 ## Source
 
-- charter/documents/operating-model.md
+- charter/en/documents/operating-model.md
 
 ## Sections of the source
 

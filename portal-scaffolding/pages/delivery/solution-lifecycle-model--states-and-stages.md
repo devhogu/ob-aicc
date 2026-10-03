@@ -5,7 +5,7 @@ section: delivery
 order: 24
 type: document
 slug: /delivery/solution-lifecycle-model/states-and-stages/
-source: charter/documents/solution-lifecycle-model.md
+source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 5
 document: solution-lifecycle-model
 part: 4 of 7
@@ -20,7 +20,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/states-and-stag
 
 ## Source
 
-- charter/documents/solution-lifecycle-model.md
+- charter/en/documents/solution-lifecycle-model.md
 
 ## Sections of the source
 

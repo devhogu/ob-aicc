@@ -5,7 +5,7 @@ section: portfolio
 order: 7
 type: outline
 slug: /portfolio/measures-and-tracking/
-source: portal/content/portfolio/measures-and-tracking.md
+source: portal/content/en/portfolio/measures-and-tracking.md
 part: 7 of 8
 series: portfolio-course
 production: authored; explanatory, the Portfolio Management Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /portfolio/measures-and-tracking/
 
 ## Source
 
-- portal/content/portfolio/measures-and-tracking.md
+- portal/content/en/portfolio/measures-and-tracking.md
 
 ## Outline
 

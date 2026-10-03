@@ -5,7 +5,7 @@ section: organization
 order: 5
 type: outline
 slug: /organization/people-and-appointments/
-source: portal/content/organization/people-and-appointments.md
+source: portal/content/en/organization/people-and-appointments.md
 part: 5 of 6
 series: organization-course
 production: authored; explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /organization/people-and-appointments/
 
 ## Source
 
-- portal/content/organization/people-and-appointments.md
+- portal/content/en/organization/people-and-appointments.md
 
 ## Outline
 

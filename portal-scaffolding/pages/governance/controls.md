@@ -5,7 +5,7 @@ section: governance
 order: 13
 type: catalogue
 slug: /governance/controls/
-source: charter/documents/operating-model.md
+source: charter/en/documents/operating-model.md
 source_sections: 8
 document: operating-model
 part: governance view
@@ -22,7 +22,7 @@ Page type: catalogue. Address: /governance/controls/
 
 ## Source
 
-- charter/documents/operating-model.md
+- charter/en/documents/operating-model.md
 
 ## Sections of the source
 

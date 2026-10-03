@@ -5,7 +5,7 @@ section: reference
 order: 36
 type: regulation
 slug: /reference/regulations/ru-national-ai-strategy/
-source: portal/content/reference/regulations/ru-national-ai-strategy.md
+source: portal/content/en/reference/regulations/ru-national-ai-strategy.md
 region: Russian Federation
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/ru-national-ai-strategy/
 
 ## Source
 
-- portal/content/reference/regulations/ru-national-ai-strategy.md
+- portal/content/en/reference/regulations/ru-national-ai-strategy.md
 
 ## Outline
 

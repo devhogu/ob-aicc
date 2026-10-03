@@ -386,3 +386,9 @@ The owner approved establishment of the complete baseline after the reconciliati
 The charter has no open editorial or baseline approval action. All nine documents and fourteen Templates are active at their own revisions. The Registry and Portfolio retain actual execution states, including planned work and operational controls whose evidence has not been produced. The baseline approval is not used as evidence that those events occurred.
 
 The footer, translation guidance, and `portal/translation-source.json` identify edition 2.2. Translation preserves the settled rules, the formal terminology, and the factual status of each record.
+
+## 25. Language source scaffolding
+
+The approved language layout moves the canonical English corpus to `charter/en/`, `registry/en/`, `portfolio/en/`, and `portal/content/en/`, with matching Russian folders. English source edition 2.2 and document revisions remain unchanged. All nine governing documents retain their exact approved bytes; source paths and links elsewhere are reconciled to the new layout.
+
+The builder selects reviewed Russian sources using their canonical English path, source revision, and SHA-256 digest. Missing or draft translations remain marked English; stale reviewed translations fail validation. Page IDs, routes, clause numbers, and record identity remain shared. The renderer builds language-specific bodies, search, diagrams, and links. The existing complete bilingual HTML output is promoted through aicc-deploy; source Markdown and live records are not added to the deployment repository.

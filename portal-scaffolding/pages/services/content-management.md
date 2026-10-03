@@ -5,7 +5,7 @@ section: services
 order: 12
 type: service
 slug: /services/content-management/
-source: portal/content/services/content-management.md
+source: portal/content/en/services/content-management.md
 area: build
 series: service-categories-build
 parent: services/build-and-run
@@ -19,7 +19,7 @@ Page type: service. Address: /services/content-management/
 
 ## Source
 
-- portal/content/services/content-management.md
+- portal/content/en/services/content-management.md
 
 ## Outline
 

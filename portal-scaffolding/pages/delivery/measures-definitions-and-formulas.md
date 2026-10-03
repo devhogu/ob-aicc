@@ -5,7 +5,7 @@ section: delivery
 order: 50
 type: outline
 slug: /delivery/measures-definitions-and-formulas/
-source: portal/content/delivery/measures-definitions-and-formulas.md
+source: portal/content/en/delivery/measures-definitions-and-formulas.md
 production: authored; the reference of the measures of the Solution Lifecycle Model 10.3, with their formulas
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: outline. Address: /delivery/measures-definitions-and-formulas/
 
 ## Source
 
-- portal/content/delivery/measures-definitions-and-formulas.md
+- portal/content/en/delivery/measures-definitions-and-formulas.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: services
 order: 6
 type: service
 slug: /services/normatives-and-processes/
-source: portal/content/services/normatives-and-processes.md
+source: portal/content/en/services/normatives-and-processes.md
 area: advise
 series: service-categories-advise
 parent: services/advise-and-formulate
@@ -19,7 +19,7 @@ Page type: service. Address: /services/normatives-and-processes/
 
 ## Source
 
-- portal/content/services/normatives-and-processes.md
+- portal/content/en/services/normatives-and-processes.md
 
 ## Outline
 

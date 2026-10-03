@@ -5,7 +5,7 @@ section: delivery
 order: 40
 type: workflow
 slug: /delivery/cadence-workflow/rules-calendar-and-light-mode/
-source: charter/workflows/cadence.md
+source: charter/en/workflows/cadence.md
 source_sections: 7, 8, 9, 10
 document: cadence-workflow
 part: 4 of 5
@@ -21,7 +21,7 @@ Page type: workflow. Address: /delivery/cadence-workflow/rules-calendar-and-ligh
 
 ## Source
 
-- charter/workflows/cadence.md
+- charter/en/workflows/cadence.md
 
 ## Sections of the source
 

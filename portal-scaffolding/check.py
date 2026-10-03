@@ -49,7 +49,7 @@ for src, pages in by_source.items():
         errors.append('more than one canonical page for %s: %s' % (src, ', '.join(p['id'] for p in pages)))
 
 used = {s for p in sm['pages'] for s in p.get('source', [])}
-for f in sorted(glob.glob(os.path.join(root, 'charter', '**', '*.md'), recursive=True)):
+for f in sorted(glob.glob(os.path.join(root, 'charter', 'en', '**', '*.md'), recursive=True)):
     rel = os.path.relpath(f, root)
     if rel not in used: errors.append('charter file without a page: ' + rel)
 

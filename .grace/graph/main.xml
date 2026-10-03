@@ -1,11 +1,12 @@
 <GraceGraphDocument graceVersion="4.0">
   <GD-MAIN>
     <M-PORTAL-SOURCE>
-      <Summary>Editable AICC portal source: design tokens, copied O! UI kit and brand assets, per-field page content, interface messages, templates, and the build and check tools.</Summary>
+      <Summary>Editable bilingual AICC portal source: language-specific charter and explanatory Markdown, shared UI messages and authored chrome, source selection, and static build/check tools.</Summary>
       <Path>portal/tools/build.py</Path>
+      <M-PORTAL-LOCALIZATION />
     </M-PORTAL-SOURCE>
     <M-PORTAL-PROJECTION>
-      <Summary>Generated static site under html/aicc with Russian (primary) and English paths and shared assets. Never edited by hand.</Summary>
+      <Summary>Generated static site under html/aicc with English and Russian routes and shared assets. English is the default. Reviewed source translations are selected per language; missing translations are visibly English. Never edited by hand.</Summary>
       <Path>html/aicc/index.html</Path>
       <M-PORTAL-SOURCE />
     </M-PORTAL-PROJECTION>
@@ -14,5 +15,9 @@
       <Path>deploy/src/main.rs</Path>
       <M-PORTAL-PROJECTION />
     </M-AICC-DEPLOY>
+    <M-PORTAL-LOCALIZATION>
+      <Summary>Canonical English source identity, reviewed translation selection, source freshness, stable structure, record identity checks, and paired table extraction for generated views.</Summary>
+      <Path>portal/tools/localization.py</Path>
+    </M-PORTAL-LOCALIZATION>
   </GD-MAIN>
 </GraceGraphDocument>

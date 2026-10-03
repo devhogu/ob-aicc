@@ -23,9 +23,9 @@ Generates a portal from a charter pack: sections, documents in parts, clause anc
 
 ## 2. What it contains
 
-- [Portal source and build instructions](../../portal/README.md).
-- [Site map](../../portal-scaffolding/sitemap.json) and [page scaffolding](../../portal-scaffolding/README.md).
-- [Build tool](../../portal/tools/build.py) and [static checks](../../portal/tools/check.py).
+- [Portal source and build instructions](../../../portal/README.md).
+- [Site map](../../../portal-scaffolding/sitemap.json) and [page scaffolding](../../../portal-scaffolding/README.md).
+- [Build tool](../../../portal/tools/build.py) and [static checks](../../../portal/tools/check.py).
 - Interface messages, page content, local assets, and the O! UI kit under `portal/`. Source references describe the implementation; no code is embedded in this record.
 
 ## 3. How a function re-deploys it

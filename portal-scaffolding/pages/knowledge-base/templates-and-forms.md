@@ -5,7 +5,7 @@ section: knowledge-base
 order: 3
 type: outline
 slug: /knowledge-base/templates-and-forms/
-source: portal/content/knowledge-base/templates-and-forms.md
+source: portal/content/en/knowledge-base/templates-and-forms.md
 part: 3 of 7
 series: knowledge-base-course
 production: authored
@@ -18,7 +18,7 @@ Page type: outline. Address: /knowledge-base/templates-and-forms/
 
 ## Source
 
-- portal/content/knowledge-base/templates-and-forms.md
+- portal/content/en/knowledge-base/templates-and-forms.md
 
 ## Outline
 

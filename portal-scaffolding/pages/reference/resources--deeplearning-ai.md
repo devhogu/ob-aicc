@@ -5,7 +5,7 @@ section: reference
 order: 66
 type: regulation
 slug: /reference/resources/deeplearning-ai/
-source: portal/content/reference/resources/deeplearning-ai.md
+source: portal/content/en/reference/resources/deeplearning-ai.md
 region: Learning and open resources
 production: authored; orientation only; a listing is not an endorsement
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/resources/deeplearning-ai/
 
 ## Source
 
-- portal/content/reference/resources/deeplearning-ai.md
+- portal/content/en/reference/resources/deeplearning-ai.md
 
 ## Outline
 

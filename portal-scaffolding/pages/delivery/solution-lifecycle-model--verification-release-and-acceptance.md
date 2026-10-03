@@ -5,7 +5,7 @@ section: delivery
 order: 26
 type: document
 slug: /delivery/solution-lifecycle-model/verification-release-and-acceptance/
-source: charter/documents/solution-lifecycle-model.md
+source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 7
 document: solution-lifecycle-model
 part: 6 of 7
@@ -20,7 +20,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/verification-re
 
 ## Source
 
-- charter/documents/solution-lifecycle-model.md
+- charter/en/documents/solution-lifecycle-model.md
 
 ## Sections of the source
 

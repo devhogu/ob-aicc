@@ -5,7 +5,7 @@ section: knowledge-base
 order: 33
 type: template
 slug: /knowledge-base/appointments-record/
-source: charter/templates/appointments-record.md
+source: charter/en/templates/appointments-record.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/appointments-record/
 
 ## Source
 
-- charter/templates/appointments-record.md
+- charter/en/templates/appointments-record.md
 
 ## Outline
 

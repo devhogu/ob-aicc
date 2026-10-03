@@ -5,7 +5,7 @@ section: organization
 order: 3
 type: outline
 slug: /organization/the-roles/
-source: portal/content/organization/the-roles.md
+source: portal/content/en/organization/the-roles.md
 part: 3 of 6
 series: organization-course
 production: authored; explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /organization/the-roles/
 
 ## Source
 
-- portal/content/organization/the-roles.md
+- portal/content/en/organization/the-roles.md
 
 ## Outline
 

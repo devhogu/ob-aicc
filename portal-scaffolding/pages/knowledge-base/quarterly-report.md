@@ -5,7 +5,7 @@ section: knowledge-base
 order: 32
 type: template
 slug: /knowledge-base/quarterly-report/
-source: charter/templates/quarterly-report.md
+source: charter/en/templates/quarterly-report.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/quarterly-report/
 
 ## Source
 
-- charter/templates/quarterly-report.md
+- charter/en/templates/quarterly-report.md
 
 ## Outline
 

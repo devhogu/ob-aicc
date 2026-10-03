@@ -5,7 +5,7 @@ section: reference
 order: 42
 type: regulation
 slug: /reference/regulations/aifc/
-source: portal/content/reference/regulations/aifc.md
+source: portal/content/en/reference/regulations/aifc.md
 region: Kazakhstan
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/aifc/
 
 ## Source
 
-- portal/content/reference/regulations/aifc.md
+- portal/content/en/reference/regulations/aifc.md
 
 ## Outline
 

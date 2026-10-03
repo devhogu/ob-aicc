@@ -5,7 +5,7 @@ section: responsible-ai
 order: 2
 type: outline
 slug: /responsible-ai/opportunities/
-source: portal/content/responsible-ai/opportunities.md
+source: portal/content/en/responsible-ai/opportunities.md
 part: 2 of 7
 series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /responsible-ai/opportunities/
 
 ## Source
 
-- portal/content/responsible-ai/opportunities.md
+- portal/content/en/responsible-ai/opportunities.md
 
 ## Outline
 

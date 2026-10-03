@@ -5,7 +5,7 @@ section: governance
 order: 0
 type: section
 slug: /governance/
-source: portal/content/governance/overview.md
+source: portal/content/en/governance/overview.md
 part: 1 of 7
 series: governance-course
 production: authored; the first part of the course, explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: section. Address: /governance/
 
 ## Source
 
-- portal/content/governance/overview.md
+- portal/content/en/governance/overview.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: services
 order: 13
 type: service
 slug: /services/platforms/
-source: portal/content/services/platforms.md
+source: portal/content/en/services/platforms.md
 area: build
 series: service-categories-build
 parent: services/build-and-run
@@ -19,7 +19,7 @@ Page type: service. Address: /services/platforms/
 
 ## Source
 
-- portal/content/services/platforms.md
+- portal/content/en/services/platforms.md
 
 ## Outline
 

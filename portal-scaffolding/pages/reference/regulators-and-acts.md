@@ -5,7 +5,7 @@ section: reference
 order: 2
 type: outline
 slug: /reference/regulators-and-acts/
-source: portal/content/reference/regulators-and-acts.md
+source: portal/content/en/reference/regulators-and-acts.md
 part: 3 of 5
 series: reference-course
 production: authored; the index of the regulation pages, curated with the Control Function Contacts
@@ -18,7 +18,7 @@ Page type: outline. Address: /reference/regulators-and-acts/
 
 ## Source
 
-- portal/content/reference/regulators-and-acts.md
+- portal/content/en/reference/regulators-and-acts.md
 
 ## Outline
 

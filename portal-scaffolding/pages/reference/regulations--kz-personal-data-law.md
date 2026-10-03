@@ -5,7 +5,7 @@ section: reference
 order: 40
 type: regulation
 slug: /reference/regulations/kz-personal-data-law/
-source: portal/content/reference/regulations/kz-personal-data-law.md
+source: portal/content/en/reference/regulations/kz-personal-data-law.md
 region: Kazakhstan
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/kz-personal-data-law/
 
 ## Source
 
-- portal/content/reference/regulations/kz-personal-data-law.md
+- portal/content/en/reference/regulations/kz-personal-data-law.md
 
 ## Outline
 

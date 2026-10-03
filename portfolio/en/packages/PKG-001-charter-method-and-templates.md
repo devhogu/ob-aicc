@@ -23,10 +23,10 @@ The way a charter pack is written: one voice, one source, every rule once, flows
 
 ## 2. What it contains
 
-- [Vocabulary and Style](../../charter/documents/vocabulary.md): defined terms and the writing convention.
-- [Document Catalog](../../charter/documents/document-catalog.md): document identity, revision, activation, and review.
-- [Charter structure](../../charter/README.md): the worked document set, workflows, and guides.
-- [Record templates](../../charter/templates/README.md): blank forms for decisions and delivery evidence.
+- [Vocabulary and Style](../../../charter/en/documents/vocabulary.md): defined terms and the writing convention.
+- [Document Catalog](../../../charter/en/documents/document-catalog.md): document identity, revision, activation, and review.
+- [Charter structure](../../../charter/en/README.md): the worked document set, workflows, and guides.
+- [Record templates](../../../charter/en/templates/README.md): blank forms for decisions and delivery evidence.
 
 ## 3. How a function re-deploys it
 

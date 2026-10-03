@@ -5,7 +5,7 @@ section: home
 order: 90
 type: legal
 slug: /privacy/
-source: portal/content/privacy.md
+source: portal/content/en/privacy.md
 production: authored; aligned with the Operating Model 7 and the collaboration tooling workflow
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: legal. Address: /privacy/
 
 ## Source
 
-- portal/content/privacy.md
+- portal/content/en/privacy.md
 
 ## Outline
 

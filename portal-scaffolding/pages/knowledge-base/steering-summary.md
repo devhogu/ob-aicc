@@ -5,7 +5,7 @@ section: knowledge-base
 order: 27
 type: template
 slug: /knowledge-base/steering-summary/
-source: charter/templates/steering-summary.md
+source: charter/en/templates/steering-summary.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/steering-summary/
 
 ## Source
 
-- charter/templates/steering-summary.md
+- charter/en/templates/steering-summary.md
 
 ## Outline
 

@@ -5,7 +5,7 @@ section: organization
 order: 0
 type: section
 slug: /organization/
-source: portal/content/organization/overview.md
+source: portal/content/en/organization/overview.md
 part: 1 of 6
 series: organization-course
 production: authored; the first part of the course, explanatory, the Operating Model is the rule
@@ -18,7 +18,7 @@ Page type: section. Address: /organization/
 
 ## Source
 
-- portal/content/organization/overview.md
+- portal/content/en/organization/overview.md
 
 ## Outline
 

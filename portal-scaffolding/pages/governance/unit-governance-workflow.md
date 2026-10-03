@@ -5,7 +5,7 @@ section: governance
 order: 16
 type: workflow
 slug: /governance/unit-governance-workflow/
-source: charter/workflows/unit-governance.md
+source: charter/en/workflows/unit-governance.md
 source_sections: 1, 2, 3
 document: unit-governance-workflow
 part: 1 of 4
@@ -21,7 +21,7 @@ Page type: workflow. Address: /governance/unit-governance-workflow/
 
 ## Source
 
-- charter/workflows/unit-governance.md
+- charter/en/workflows/unit-governance.md
 
 ## Sections of the source
 

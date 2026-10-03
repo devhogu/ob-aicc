@@ -2,5 +2,5 @@
   <Applicability>applicable</Applicability>
   <Audience>O!Bank staff across business functions and AICC team members</Audience>
   <Guideline>Structure navigation to mirror the AICC's activities and responsibilities: strategy, statement of intent, roadmap, knowledge base, and process and lifecycle information.</Guideline>
-  <Guideline>Open decisions: interface languages (for example English, Russian, Kyrgyz), O!Bank brand and visual identity, and accessibility target. Record each in a specification before building.</Guideline>
+  <Guideline>English and Russian routes share page identity, clause numbering and navigation. English is the default. A missing or draft Russian translation shows marked English; a stale reviewed translation fails validation. The existing O!Bank UI kit and responsive layout are retained.</Guideline>
 </GraceUXGuidelines>

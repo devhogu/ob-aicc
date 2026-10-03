@@ -5,7 +5,7 @@ section: reference
 order: 45
 type: regulation
 slug: /reference/regulations/kg-digital-development/
-source: portal/content/reference/regulations/kg-digital-development.md
+source: portal/content/en/reference/regulations/kg-digital-development.md
 region: Kyrgyz Republic
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/kg-digital-development/
 
 ## Source
 
-- portal/content/reference/regulations/kg-digital-development.md
+- portal/content/en/reference/regulations/kg-digital-development.md
 
 ## Outline
 

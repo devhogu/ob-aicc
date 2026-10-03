@@ -5,7 +5,7 @@ section: delivery
 order: 23
 type: document
 slug: /delivery/solution-lifecycle-model/backlogs-and-boards/
-source: charter/documents/solution-lifecycle-model.md
+source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 4
 document: solution-lifecycle-model
 part: 3 of 7
@@ -20,7 +20,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/backlogs-and-bo
 
 ## Source
 
-- charter/documents/solution-lifecycle-model.md
+- charter/en/documents/solution-lifecycle-model.md
 
 ## Sections of the source
 

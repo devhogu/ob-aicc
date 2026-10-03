@@ -5,7 +5,7 @@ section: reference
 order: 62
 type: regulation
 slug: /reference/resources/imf-and-world-bank/
-source: portal/content/reference/resources/imf-and-world-bank.md
+source: portal/content/en/reference/resources/imf-and-world-bank.md
 region: Research and insight
 production: authored; orientation only; a listing is not an endorsement
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/resources/imf-and-world-bank/
 
 ## Source
 
-- portal/content/reference/resources/imf-and-world-bank.md
+- portal/content/en/reference/resources/imf-and-world-bank.md
 
 ## Outline
 

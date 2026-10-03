@@ -5,7 +5,7 @@ section: responsible-ai
 order: 3
 type: outline
 slug: /responsible-ai/ai-in-fintech-and-digital-banking/
-source: portal/content/responsible-ai/ai-in-fintech-and-digital-banking.md
+source: portal/content/en/responsible-ai/ai-in-fintech-and-digital-banking.md
 part: 3 of 7
 series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
@@ -18,7 +18,7 @@ Page type: outline. Address: /responsible-ai/ai-in-fintech-and-digital-banking/
 
 ## Source
 
-- portal/content/responsible-ai/ai-in-fintech-and-digital-banking.md
+- portal/content/en/responsible-ai/ai-in-fintech-and-digital-banking.md
 
 ## Outline
 

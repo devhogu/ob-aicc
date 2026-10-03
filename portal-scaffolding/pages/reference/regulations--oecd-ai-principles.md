@@ -5,7 +5,7 @@ section: reference
 order: 22
 type: regulation
 slug: /reference/regulations/oecd-ai-principles/
-source: portal/content/reference/regulations/oecd-ai-principles.md
+source: portal/content/en/reference/regulations/oecd-ai-principles.md
 region: Global
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/oecd-ai-principles/
 
 ## Source
 
-- portal/content/reference/regulations/oecd-ai-principles.md
+- portal/content/en/reference/regulations/oecd-ai-principles.md
 
 ## Outline
 

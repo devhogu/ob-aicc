@@ -5,7 +5,7 @@ section: services
 order: 0
 type: section
 slug: /services/
-source: portal/content/services/areas/overview.md
+source: portal/content/en/services/areas/overview.md
 part: 1 of 5
 series: service-areas
 production: authored; the overview of the areas, the first part of the series
@@ -18,7 +18,7 @@ Page type: section. Address: /services/
 
 ## Source
 
-- portal/content/services/areas/overview.md
+- portal/content/en/services/areas/overview.md
 
 ## Outline
 

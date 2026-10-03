@@ -17,7 +17,7 @@ A learning path is a reading order for a role: what to read, in which sequence, 
 | Step | Read | So that you can |
 | --- | --- | --- |
 | 1 | [How to engage](page:services/how-to-engage), with the Engagement workflow and guide | Bring a need, know the six steps, and know what you commit to and what AICC commits to |
-| 2 | [The Portfolio](page:portfolio/index), the course, parts 2 to 5 | Know how your business case is approved, ranked, probed, and continued |
+| 2 | [The Portfolio](page:portfolio/en/index), the course, parts 2 to 5 | Know how your business case is approved, ranked, probed, and continued |
 | 3 | [The Roles](page:organization/the-roles) and [Who does what](page:organization/who-does-what) | Know what you decide as Domain Owner, and what the Domain Expert does |
 | 4 | [How the Bank applies it](page:responsible-ai/how-the-bank-applies-it) | Know the Risk Tier your Solution will carry and what it requires of you |
 | 5 | The [Initiative Brief](page:knowledge-base/initiative-brief) and the [Service Agreement](page:knowledge-base/service-agreement) | Fill the two forms of the start |
@@ -47,7 +47,7 @@ A learning path is a reading order for a role: what to read, in which sequence, 
 | --- | --- | --- |
 | 1 | The [Statement of Intent](page:about/statement-of-intent) and the [Strategy](page:about/strategy) | Hold the frame: the priorities, the Envelopes, the Guardrails, the roadmap |
 | 2 | The [Charter](page:about/aicc-charter) | Know the mandate, the limits, the funding, the risk appetite, and what is reported |
-| 3 | [Strategy and investment](page:portfolio/strategy-and-investment) and [The loops and the governance](page:portfolio/the-loops-and-governance) | Run the yearly and the quarterly Steering of the Portfolio |
+| 3 | [Strategy and investment](page:portfolio/en/strategy-and-investment) and [The loops and the governance](page:portfolio/en/the-loops-and-governance) | Run the yearly and the quarterly Steering of the Portfolio |
 | 4 | [Governance](page:governance/index), the course | Run the control loops, read the Quarterly Report, and know what rises to you |
 | 5 | The [Quarterly Report](page:knowledge-base/quarterly-report) and the [Decision Record](page:knowledge-base/decision-record) | Approve and issue the report; record a decision |
 

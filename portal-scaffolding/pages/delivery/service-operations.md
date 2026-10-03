@@ -5,7 +5,7 @@ section: delivery
 order: 44
 type: outline
 slug: /delivery/service-operations/
-source: portal/content/delivery/service-operations.md
+source: portal/content/en/delivery/service-operations.md
 production: authored; the run-book template of a Service; draws on STS
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: outline. Address: /delivery/service-operations/
 
 ## Source
 
-- portal/content/delivery/service-operations.md
+- portal/content/en/delivery/service-operations.md
 
 ## Outline
 

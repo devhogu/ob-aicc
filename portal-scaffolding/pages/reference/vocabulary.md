@@ -5,7 +5,7 @@ section: reference
 order: 11
 type: reference
 slug: /reference/vocabulary/
-source: charter/documents/vocabulary.md
+source: charter/en/documents/vocabulary.md
 words: 4674
 production: generated
 status: scaffold
@@ -17,7 +17,7 @@ Page type: reference. Address: /reference/vocabulary/
 
 ## Source
 
-- charter/documents/vocabulary.md
+- charter/en/documents/vocabulary.md
 
 ## Outline
 

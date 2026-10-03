@@ -5,7 +5,7 @@ section: services
 order: 21
 type: outline
 slug: /services/how-to-engage/
-source: portal/content/services/how-to-engage.md
+source: portal/content/en/services/how-to-engage.md
 part: 1 of 3
 series: how-to-engage
 production: authored, with the Engagement workflow
@@ -18,7 +18,7 @@ Page type: outline. Address: /services/how-to-engage/
 
 ## Source
 
-- portal/content/services/how-to-engage.md
+- portal/content/en/services/how-to-engage.md
 
 ## Outline
 

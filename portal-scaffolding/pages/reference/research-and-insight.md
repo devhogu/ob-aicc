@@ -5,7 +5,7 @@ section: reference
 order: 3
 type: outline
 slug: /reference/research-and-insight/
-source: portal/content/reference/research-and-insight.md
+source: portal/content/en/reference/research-and-insight.md
 part: 4 of 5
 series: reference-course
 production: authored; a curated list
@@ -18,7 +18,7 @@ Page type: outline. Address: /reference/research-and-insight/
 
 ## Source
 
-- portal/content/reference/research-and-insight.md
+- portal/content/en/reference/research-and-insight.md
 
 ## Outline
 

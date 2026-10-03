@@ -23,10 +23,10 @@ The control loops, the catalog of controls, the records and evidence structure, 
 
 ## 2. What it contains
 
-- [Operating Model](../../charter/documents/operating-model.md), sections 6 to 8: control loops, records, and the 32 controls.
-- [Unit governance guide](../../charter/guides/unit-governance-guide.md): control objectives and tests.
-- [Registry structure](../../registry/README.md): the division between working state, living records, and evidence.
-- [Record templates](../../charter/templates/README.md): the forms to start new records.
+- [Operating Model](../../../charter/en/documents/operating-model.md), sections 6 to 8: control loops, records, and the 32 controls.
+- [Unit governance guide](../../../charter/en/guides/unit-governance-guide.md): control objectives and tests.
+- [Registry structure](../../../registry/en/README.md): the division between working state, living records, and evidence.
+- [Record templates](../../../charter/en/templates/README.md): the forms to start new records.
 
 ## 3. How a function re-deploys it
 

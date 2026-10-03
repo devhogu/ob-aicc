@@ -5,7 +5,7 @@ section: home
 order: 0
 type: home
 slug: /
-source: charter/executive-summary.md
+source: charter/en/executive-summary.md
 production: authored
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: home. Address: /
 
 ## Source
 
-- charter/executive-summary.md
+- charter/en/executive-summary.md
 
 ## Outline
 

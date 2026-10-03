@@ -5,7 +5,7 @@ section: services
 order: 2
 type: outline
 slug: /services/build-and-run/
-source: portal/content/services/areas/build-and-run.md
+source: portal/content/en/services/areas/build-and-run.md
 part: 3 of 5
 series: service-areas
 production: authored; generated table of the categories of the area
@@ -18,7 +18,7 @@ Page type: outline. Address: /services/build-and-run/
 
 ## Source
 
-- portal/content/services/areas/build-and-run.md
+- portal/content/en/services/areas/build-and-run.md
 
 ## Outline
 

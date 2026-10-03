@@ -5,7 +5,7 @@ section: services
 order: 9
 type: service
 slug: /services/knowledge-services/
-source: portal/content/services/knowledge-services.md
+source: portal/content/en/services/knowledge-services.md
 area: build
 series: service-categories-build
 parent: services/build-and-run
@@ -19,7 +19,7 @@ Page type: service. Address: /services/knowledge-services/
 
 ## Source
 
-- portal/content/services/knowledge-services.md
+- portal/content/en/services/knowledge-services.md
 
 ## Outline
 

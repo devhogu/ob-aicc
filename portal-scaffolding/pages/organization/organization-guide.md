@@ -5,7 +5,7 @@ section: organization
 order: 15
 type: guide
 slug: /organization/organization-guide/
-source: charter/guides/organization-guide.md
+source: charter/en/guides/organization-guide.md
 source_sections: 1, 2, 3
 document: organization-guide
 part: 1 of 3
@@ -22,7 +22,7 @@ Page type: guide. Address: /organization/organization-guide/
 
 ## Source
 
-- charter/guides/organization-guide.md
+- charter/en/guides/organization-guide.md
 
 ## Sections of the source
 

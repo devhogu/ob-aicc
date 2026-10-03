@@ -5,7 +5,7 @@ section: reference
 order: 31
 type: regulation
 slug: /reference/regulations/eu-gdpr/
-source: portal/content/reference/regulations/eu-gdpr.md
+source: portal/content/en/reference/regulations/eu-gdpr.md
 region: European Union
 production: authored; orientation only, no provision quoted; verified with the Control Function Contacts
 status: scaffold
@@ -17,7 +17,7 @@ Page type: regulation. Address: /reference/regulations/eu-gdpr/
 
 ## Source
 
-- portal/content/reference/regulations/eu-gdpr.md
+- portal/content/en/reference/regulations/eu-gdpr.md
 
 ## Outline
 

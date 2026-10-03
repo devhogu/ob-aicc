@@ -5,7 +5,7 @@ section: services
 order: 7
 type: service
 slug: /services/research-and-exploration/
-source: portal/content/services/research-and-exploration.md
+source: portal/content/en/services/research-and-exploration.md
 area: advise
 series: service-categories-advise
 parent: services/advise-and-formulate
@@ -19,7 +19,7 @@ Page type: service. Address: /services/research-and-exploration/
 
 ## Source
 
-- portal/content/services/research-and-exploration.md
+- portal/content/en/services/research-and-exploration.md
 
 ## Outline
 

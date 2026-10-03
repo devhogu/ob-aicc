@@ -5,7 +5,7 @@ section: knowledge-base
 order: 22
 type: template
 slug: /knowledge-base/service-agreement/
-source: charter/templates/service-agreement.md
+source: charter/en/templates/service-agreement.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/service-agreement/
 
 ## Source
 
-- charter/templates/service-agreement.md
+- charter/en/templates/service-agreement.md
 
 ## Outline
 

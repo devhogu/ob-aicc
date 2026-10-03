@@ -5,7 +5,7 @@ section: knowledge-base
 order: 21
 type: template
 slug: /knowledge-base/initiative-brief/
-source: charter/templates/initiative-brief.md
+source: charter/en/templates/initiative-brief.md
 production: generated
 status: scaffold
 ---
@@ -16,7 +16,7 @@ Page type: template. Address: /knowledge-base/initiative-brief/
 
 ## Source
 
-- charter/templates/initiative-brief.md
+- charter/en/templates/initiative-brief.md
 
 ## Outline
 
