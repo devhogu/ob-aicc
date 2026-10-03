@@ -3,7 +3,7 @@ id: knowledge-base/package-definition
 title: Package Definition (draft template)
 section: knowledge-base
 order: 40
-type: outline
+type: template
 slug: /knowledge-base/package-definition/
 source: portal/content/knowledge-base/package-definition.md
 production: authored; proposed as the fourteenth template of the charter
@@ -12,7 +12,7 @@ status: scaffold
 
 # Package Definition (draft template)
 
-Page type: outline. Address: /knowledge-base/package-definition/
+Page type: template. Address: /knowledge-base/package-definition/
 
 ## Source
 

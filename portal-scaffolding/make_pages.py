@@ -511,7 +511,7 @@ if NEXT:
         production='authored; curated by the AICC Lead with the Control Function Contacts',
         outline=['DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution',
                  'For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it', 'Links to the Reference page Regulators and acts for the bodies and the texts'])
-    add(id='knowledge-base/package-definition', section='knowledge-base', order=40, type='outline', slug='/knowledge-base/package-definition/', title='Package Definition (draft template)',
+    add(id='knowledge-base/package-definition', section='knowledge-base', order=40, type='template', slug='/knowledge-base/package-definition/', title='Package Definition (draft template)',
         source=['portal/content/knowledge-base/package-definition.md'], production='authored; proposed as the fourteenth template of the charter',
         outline=['When it is used', 'The form', 'The sections'])
     add(id='reference/industry-body-of-knowledge', section='reference', order=5, type='outline', slug='/reference/industry-body-of-knowledge/', title='Industry body of knowledge', source=['portal/content/reference/industry-body-of-knowledge.md'],

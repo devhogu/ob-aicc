@@ -3038,7 +3038,7 @@
    "id": "knowledge-base/package-definition",
    "section": "knowledge-base",
    "order": 40,
-   "type": "outline",
+   "type": "template",
    "slug": "/knowledge-base/package-definition/",
    "title": "Package Definition (draft template)",
    "source": [

@@ -156,7 +156,7 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Knowledge base | Quarterly Report | /knowledge-base/quarterly-report/ | template | templates/quarterly-report.md | all |  | generated |
 | Knowledge base | Appointments Record | /knowledge-base/appointments-record/ | template | templates/appointments-record.md | all |  | generated |
 | Knowledge base | Proposal | /knowledge-base/proposal/ | template | templates/proposal.md | all |  | generated |
-| Knowledge base | Package Definition (draft template) | /knowledge-base/package-definition/ | outline | portal/content/knowledge-base/package-definition.md | all |  | authored; proposed as the fourteenth template of the charter |
+| Knowledge base | Package Definition (draft template) | /knowledge-base/package-definition/ | template | portal/content/knowledge-base/package-definition.md | all |  | authored; proposed as the fourteenth template of the charter |
 | Reference | Reference | /reference/ | section | none | none |  | authored, with a generated list |
 | Reference | Vocabulary and Style | /reference/vocabulary/ | reference | documents/vocabulary.md | all | 4674 | generated |
 | Reference | Document Catalog | /reference/document-catalog/ | document | documents/document-catalog.md | all | 1519 | generated |
