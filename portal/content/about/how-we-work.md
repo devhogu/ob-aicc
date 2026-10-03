@@ -16,4 +16,4 @@ A function brings a need; AICC takes it in, studies it, commits to it, proves it
 
 ## 3. Where to read on
 
-3.1. The Services section states the service model and how to engage; the Portfolio section states how the lines enter the funnel and how Initiatives are decided; the Delivery section states how Solutions are built, how an Experiment runs, and how a Service lives and is operated; Governance and oversight states how the unit is controlled.
+3.1. The Services section states the service model and how to engage; the Portfolio section states how the categories enter the funnel and how Initiatives are decided; the Delivery section states how Solutions are built, how an Experiment runs, and how a Service lives and is operated; Governance and oversight states how the unit is controlled.

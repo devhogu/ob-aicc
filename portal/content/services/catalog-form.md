@@ -14,7 +14,7 @@ The catalog of AICC lists what AICC runs, has delivered, is proving, and can re-
 | --- | --- | --- |
 | Identifier | SOL-nnn, stable for the life of the Solution | Solution Definition |
 | Title | The name of the Solution | Solution Definition |
-| Service line | The line under which it was delivered | Service Agreement |
+| Category | The service category under which it was delivered | Service Agreement |
 | Type | Experiment, Product, or Service | Solution Definition |
 | State and Stage | The state of the Solution Lifecycle Model 5 and, after delivery, the Stage of its type | Solution Definition; the Portfolio |
 | Initiative | The Initiative that delivers it | Portfolio Backlog |
@@ -31,7 +31,7 @@ The catalog of AICC lists what AICC runs, has delivered, is proving, and can re-
 | Package | The name of the reusable asset |
 | What it does | In one or two lines |
 | Kind | Method, kit, engine, catalog, template set |
-| Service line | The line that produces and uses it |
+| Category | The service category that produces and uses it |
 | Status | Available, in preparation, planned |
 | Owner | The Solution Engineer or the AICC Lead who keeps it |
 | Used by | The functions and the Solutions that use it |
@@ -40,7 +40,7 @@ The catalog of AICC lists what AICC runs, has delivered, is proving, and can re-
 
 ## 4. The states of an entry
 
-4.1. A Solution entry follows the states and Stages of the Solution Lifecycle Model: from Proposed through Discovery, Approved, Active, Review, Accepted to Closed, and after delivery the Stages of its type. A package entry has three states: planned, when a line foresees it; in preparation, when an Engagement is producing it; available, when it has an owner, a description, and the notes to re-deploy it.
+4.1. A Solution entry follows the states and Stages of the Solution Lifecycle Model: from Proposed through Discovery, Approved, Active, Review, Accepted to Closed, and after delivery the Stages of its type. A package entry has three states: planned, when a category foresees it; in preparation, when an Engagement is producing it; available, when it has an owner, a description, and the notes to re-deploy it.
 
 ## 5. Illustrations
 
@@ -52,9 +52,9 @@ The catalog of AICC lists what AICC runs, has delivered, is proving, and can re-
 
 5.2. A package entry:
 
-| Package | What it does | Kind | Service line | Status | Used by |
+| Package | What it does | Kind | Category | Status | Used by |
 | --- | --- | --- | --- | --- | --- |
-| Portal generator | Generates a portal from a charter pack: sections, documents in parts, clause anchors, cross-references, defined terms, diagrams, search, two languages | Engine | Strategy and governance office | Available | AICC, for this site |
+| Portal generator | Generates a portal from a charter pack: sections, documents in parts, clause anchors, cross-references, defined terms, diagrams, search, two languages | Engine | Platforms; Strategy and governance | Available | AICC, for this site |
 
 ## 6. Rule source
 

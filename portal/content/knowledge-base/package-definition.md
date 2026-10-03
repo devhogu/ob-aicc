@@ -4,7 +4,7 @@ A draft template, proposed for the templates of the charter. A package is the re
 
 ## 1. When it is used
 
-1.1. A Package Definition is opened when a line foresees a package (state planned), is completed while an Engagement produces it (in preparation), and is kept current while the package is available. It is kept in the Portfolio beside the Solution Definitions, and the catalog of packages reads it.
+1.1. A Package Definition is opened when a category foresees a package (state planned), is completed while an Engagement produces it (in preparation), and is kept current while the package is available. It is kept in the Portfolio beside the Solution Definitions, and the catalog of packages reads it.
 
 ## 2. The form
 
@@ -13,7 +13,7 @@ A draft template, proposed for the templates of the charter. A package is the re
 | Identifier | PKG-nnn |
 | Package | The name |
 | Kind | Method, kit, engine, catalog, template set |
-| Service line | The line that produces and uses it |
+| Category | The service category that produces and uses it |
 | What it does | In one or two lines |
 | Status | Planned, in preparation, available |
 | Owner | The Solution Engineer or the AICC Lead who keeps it |

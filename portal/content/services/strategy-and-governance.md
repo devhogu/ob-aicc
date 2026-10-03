@@ -1,0 +1,48 @@
+# Strategy and governance
+
+What AICC built for itself it builds for any unit of the Bank: a strategy, a charter and mandate, an operating and governance model with its roles, decisions, control loops, and controls, and the portal and repository that publish them, developed with AI in weeks and maintained with it afterwards. AICC acts here as the strategy office and the governance office of the function, and the function keeps the ownership of what is decided.
+
+## 1. What it is
+
+1.1. The category covers the strategy paper of a function or a program, its charter and mandate, its operating model, its governance package with a control catalogue and a registry of records, and the portal and repository that hold the pack, as this site holds the charter of AICC. It covers the governance of a program as well as of a unit: the steering, the reporting chain, the decision rights.
+
+1.2. The method is the one AICC used on itself: the documents are written in one voice from a single source, every rule is stated once, the processes are drawn as flows and loops, the controls are testable, and the portal is generated from the documents so that it cannot drift from them. AICC drafts, structures, and builds; the head of function reviews, decides, and owns.
+
+## 2. Examples of what a function asks for
+
+The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+
+- A strategy paper for a function or a program, with its priorities and its measures
+- A charter and mandate for a unit, in the form of the AI Competence Center Charter
+- An operating and governance model: Roles, decisions, control loops, records, controls
+- A governance package for a program: steering, reporting chain, decision rights, records
+- A portal and repository generated from the pack, in English and Russian
+- Service-management set-up for the services a function runs: catalog entry, service levels, request and incident route
+
+## 3. What the function receives
+
+3.1. A charter pack in the style of the Bank, the registry structure for its live records, a control catalogue mapped to the loops of the unit, a portal generated from the pack, and the method and the tooling to keep it current. For a program: the strategy, the governance, and the reporting chain, ready for its first Steering.
+
+## 4. How it runs
+
+4.1. The Engagement starts with a study of two to three Iterations: the mandate, the line of work, the existing documents, and the bodies the function answers to. The pack is drafted with AI from that material and reviewed with the head of function in each Iteration; the portal is generated as the pack settles.
+
+## 5. What it leads to
+
+5.1. A function with a baselined charter and a working portal, able to show its auditors, its regulator, and its staff how it is mandated, governed, and operated, and a pack it maintains with the same method.
+
+## 6. The reusable package
+
+6.1. The charter method and its templates, the governance catalogue, and the portal generator, proven on AICC itself and re-deployed for each function. The second function takes days where the first took weeks.
+
+## 7. Run-rate or program
+
+7.1. A program: an Initiative with a business case and an MVP, which is the first part of the pack and the portal.
+
+## 8. Who decides
+
+8.1. The head of function owns the pack and decides its content; the Executive Sponsor approves the Initiative where it spans Domains. AICC decides nothing of the substance of the function.
+
+## 9. Rule source
+
+Business Model 2.4 and 4; Portfolio Management Model 6 and 7. A clause for this category is proposed for the Business Model 4.

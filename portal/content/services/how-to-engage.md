@@ -15,7 +15,7 @@ A function does not need a form, a budget line, or a project to start with AICC.
 
 ## 2. The phases of a service, and the three types of Solution
 
-2.1. Whatever the service line, an Engagement runs through the same phases: a study, which is the exploration, the scoping, and the business case; a proof, which is the trial of a Solution as an MVP or an Experiment, with its Outcome Report and Proposal; delivery, which is the build and the release; and support after delivery. A run-rate request may run only the study and the delivery, in days.
+2.1. Whatever the category, an Engagement runs through the same phases: a study, which is the exploration, the scoping, and the business case; a proof, which is the trial of a Solution as an MVP or an Experiment, with its Outcome Report and Proposal; delivery, which is the build and the release; and support after delivery. A run-rate request may run only the study and the delivery, in days.
 
 2.2. What an Engagement delivers is a Solution of one type: an Experiment, a time-boxed proof that ends in a Proposal; a Product, a version built for one function that AICC supports as agreed; or a Service, which AICC runs for its whole life with a run cost and a sunset rule. The Services in operation are in the Service catalog.
 

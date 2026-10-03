@@ -22,15 +22,21 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Responsible AI | AI Policy | /responsible-ai/ai-policy/ | document | documents/ai-policy.md | all | 2155 | generated |
 | Responsible AI | AI risk and control workflow | /responsible-ai/ai-risk-control-workflow/ | workflow | workflows/ai-risk-control.md | all |  | generated |
 | Services | Services | /services/ | section | none | none |  | authored, with a generated list |
-| Services | Strategy and governance office | /services/strategy-and-governance-office/ | service | portal/content/services/strategy-and-governance-office.md | all |  | authored |
-| Services | Normative documents and processes | /services/normative-documents-and-processes/ | service | portal/content/services/normative-documents-and-processes.md | all |  | authored |
+| Services | Strategy and governance | /services/strategy-and-governance/ | service | portal/content/services/strategy-and-governance.md | all |  | authored |
+| Services | Normatives and processes | /services/normatives-and-processes/ | service | portal/content/services/normatives-and-processes.md | all |  | authored |
+| Services | Research and exploration | /services/research-and-exploration/ | service | portal/content/services/research-and-exploration.md | all |  | authored |
+| Services | Business cases and scenarios | /services/business-cases-and-scenarios/ | service | portal/content/services/business-cases-and-scenarios.md | all |  | authored |
 | Services | Knowledge services | /services/knowledge-services/ | service | portal/content/services/knowledge-services.md | all |  | authored |
 | Services | Workplace automation | /services/workplace-automation/ | service | portal/content/services/workplace-automation.md | all |  | authored |
-| Services | Information and decision support | /services/information-and-decision-support/ | service | portal/content/services/information-and-decision-support.md | all |  | authored |
-| Services | Content and document engines | /services/content-and-document-engines/ | service | portal/content/services/content-and-document-engines.md | all |  | authored |
-| Services | Enablement at the workplace | /services/enablement-at-the-workplace/ | service | portal/content/services/enablement-at-the-workplace.md | all |  | authored |
-| Services | Assurance and governance support | /services/assurance-and-governance-support/ | service | portal/content/services/assurance-and-governance-support.md | all |  | authored |
-| Services | Watch, research, and partnering | /services/watch-research-and-partnering/ | service | portal/content/services/watch-research-and-partnering.md | all |  | authored |
+| Services | Analytics and decision support | /services/analytics-and-decision-support/ | service | portal/content/services/analytics-and-decision-support.md | all |  | authored |
+| Services | Content management | /services/content-management/ | service | portal/content/services/content-management.md | all |  | authored |
+| Services | Platforms | /services/platforms/ | service | portal/content/services/platforms.md | all |  | authored |
+| Services | Training and knowledge sharing | /services/training-and-knowledge-sharing/ | service | portal/content/services/training-and-knowledge-sharing.md | all |  | authored |
+| Services | Adoption and lifecycle management | /services/adoption-and-lifecycle-management/ | service | portal/content/services/adoption-and-lifecycle-management.md | all |  | authored |
+| Services | Policies, controls, criteria | /services/policies-controls-criteria/ | service | portal/content/services/policies-controls-criteria.md | all |  | authored |
+| Services | Assessments and evaluations | /services/assessments-and-evaluations/ | service | portal/content/services/assessments-and-evaluations.md | all |  | authored |
+| Services | Risk tiering | /services/risk-tiering/ | service | portal/content/services/risk-tiering.md | all |  | authored |
+| Services | Oversight | /services/oversight/ | service | portal/content/services/oversight.md | all |  | authored |
 | Services | The service model | /services/service-model/ | outline | portal/content/services/service-model.md | all |  | authored |
 | Services | How to engage | /services/how-to-engage/ | outline | portal/content/services/how-to-engage.md | all |  | authored, with the Engagement workflow |
 | Services | Service catalog: the form | /services/catalog/ | outline | portal/content/services/catalog-form.md | all |  | authored; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal |
@@ -43,7 +49,7 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Portfolio | Portfolio Management Model: The portfolio Kanban | /portfolio/portfolio-management-model/the-portfolio-kanban/ | document | documents/portfolio-management-model.md | 5 | 1074 | generated |
 | Portfolio | Portfolio Management Model: The business case and the MVP | /portfolio/portfolio-management-model/the-business-case-and-the-mvp/ | document | documents/portfolio-management-model.md | 6, 7 | 984 | generated |
 | Portfolio | Portfolio Management Model: Levels, review, measures, and records | /portfolio/portfolio-management-model/levels-review-and-records/ | document | documents/portfolio-management-model.md | 8, 9 | 353 | generated |
-| Portfolio | The service lines in the Portfolio | /portfolio/service-lines-in-the-portfolio/ | outline | portal/content/portfolio/service-lines-in-the-portfolio.md | all |  | authored; proposed for Portfolio Management Model 5 |
+| Portfolio | The service categories in the Portfolio | /portfolio/service-categories-in-the-portfolio/ | outline | portal/content/portfolio/service-categories-in-the-portfolio.md | all |  | authored; proposed for Portfolio Management Model 5 |
 | Delivery | Delivery | /delivery/ | section | workflows/README.md | all |  | authored, with a generated list |
 | Delivery | Solution Lifecycle Model | /delivery/solution-lifecycle-model/ | document | documents/solution-lifecycle-model.md | 1, 2 | 414 | generated |
 | Delivery | Solution Lifecycle Model: The flow of value | /delivery/solution-lifecycle-model/the-flow-of-value/ | document | documents/solution-lifecycle-model.md | 3 | 1358 | generated |

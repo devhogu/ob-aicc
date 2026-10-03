@@ -447,45 +447,85 @@
    ]
   },
   {
-   "id": "services/strategy-and-governance-office",
+   "id": "services/strategy-and-governance",
    "section": "services",
    "order": 1,
    "type": "service",
-   "slug": "/services/strategy-and-governance-office/",
-   "title": "Strategy and governance office",
+   "slug": "/services/strategy-and-governance/",
+   "title": "Strategy and governance",
    "source": [
-    "portal/content/services/strategy-and-governance-office.md"
+    "portal/content/services/strategy-and-governance.md"
    ],
    "production": "authored",
+   "area": "advise",
    "outline": [
-    "What AICC built for itself, built for any unit: strategy, charter, operating and governance model, process set, portal and repository, developed with AI; program",
+    "Area: Advise and formulate. Strategy, charter, operating and governance model, portal and repository for a unit or a program, developed with AI, as AICC did for itself",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
     "Rule source: Business Model 2.4 and 4 (clause proposed)"
    ]
   },
   {
-   "id": "services/normative-documents-and-processes",
+   "id": "services/normatives-and-processes",
    "section": "services",
    "order": 2,
    "type": "service",
-   "slug": "/services/normative-documents-and-processes/",
-   "title": "Normative documents and processes",
+   "slug": "/services/normatives-and-processes/",
+   "title": "Normatives and processes",
    "source": [
-    "portal/content/services/normative-documents-and-processes.md"
+    "portal/content/services/normatives-and-processes.md"
    ],
    "production": "authored",
+   "area": "advise",
    "outline": [
-    "Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for HR, legal, accounting, compliance, operations, and any function; run-rate and program",
+    "Area: Advise and formulate. Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for any function",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
     "Rule source: Business Model 4 (clause proposed)"
    ]
   },
   {
-   "id": "services/knowledge-services",
+   "id": "services/research-and-exploration",
    "section": "services",
    "order": 3,
+   "type": "service",
+   "slug": "/services/research-and-exploration/",
+   "title": "Research and exploration",
+   "source": [
+    "portal/content/services/research-and-exploration.md"
+   ],
+   "production": "authored",
+   "area": "advise",
+   "outline": [
+    "Area: Advise and formulate. Regulatory and technology watch with digests, trials in the Lab, partnering with organizations and providers",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Business Model 2.3, 2.4; Statement of Intent 10.5 (clause proposed)"
+   ]
+  },
+  {
+   "id": "services/business-cases-and-scenarios",
+   "section": "services",
+   "order": 4,
+   "type": "service",
+   "slug": "/services/business-cases-and-scenarios/",
+   "title": "Business cases and scenarios",
+   "source": [
+    "portal/content/services/business-cases-and-scenarios.md"
+   ],
+   "production": "authored",
+   "area": "advise",
+   "outline": [
+    "Area: Advise and formulate. Use-case discovery, scenarios with problem, solution, and measures, readiness and source audit, the business case the Portfolio decides on",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Business Model 3, 4.1; Portfolio Management Model 5, 6"
+   ]
+  },
+  {
+   "id": "services/knowledge-services",
+   "section": "services",
+   "order": 5,
    "type": "service",
    "slug": "/services/knowledge-services/",
    "title": "Knowledge services",
@@ -493,8 +533,9 @@
     "portal/content/services/knowledge-services.md"
    ],
    "production": "authored",
+   "area": "build",
    "outline": [
-    "The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask; program",
+    "Area: Build and run. The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
     "Rule source: Statement of Intent 5.3, 9.5, 10.2; AI Policy 2, 3"
@@ -503,7 +544,7 @@
   {
    "id": "services/workplace-automation",
    "section": "services",
-   "order": 4,
+   "order": 6,
    "type": "service",
    "slug": "/services/workplace-automation/",
    "title": "Workplace automation",
@@ -511,107 +552,189 @@
     "portal/content/services/workplace-automation.md"
    ],
    "production": "authored",
+   "area": "build",
    "outline": [
-    "Routing, forms, reports, consolidation, and documents from templates, done by assistants under human validation; run-rate; the catalog of automations",
+    "Area: Build and run. Routing, forms, reports, consolidation, documents from templates, and case assistance, done by assistants under human validation",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
     "Rule source: Statement of Intent 9.4; AI Policy 2, 3"
    ]
   },
   {
-   "id": "services/information-and-decision-support",
+   "id": "services/analytics-and-decision-support",
    "section": "services",
-   "order": 5,
+   "order": 7,
    "type": "service",
-   "slug": "/services/information-and-decision-support/",
-   "title": "Information and decision support",
+   "slug": "/services/analytics-and-decision-support/",
+   "title": "Analytics and decision support",
    "source": [
-    "portal/content/services/information-and-decision-support.md"
+    "portal/content/services/analytics-and-decision-support.md"
    ],
    "production": "authored",
+   "area": "build",
    "outline": [
-    "ETL and consolidation, dashboards, analytical and research tooling, the factual base for decisions; run-rate and program",
+    "Area: Build and run. Pipelines, dashboards, analyses, and research tooling that prepare the factual base for decisions, with lineage to governed sources",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
     "Rule source: Statement of Intent 9.3, 10.2; Business Model 6"
    ]
   },
   {
-   "id": "services/content-and-document-engines",
+   "id": "services/content-management",
    "section": "services",
-   "order": 6,
+   "order": 8,
    "type": "service",
-   "slug": "/services/content-and-document-engines/",
-   "title": "Content and document engines",
+   "slug": "/services/content-management/",
+   "title": "Content management",
    "source": [
-    "portal/content/services/content-and-document-engines.md"
+    "portal/content/services/content-management.md"
    ],
    "production": "authored",
+   "area": "build",
    "outline": [
-    "Public, investor, and management material generated from governed data and templates, pre-filled for people to finish; program",
+    "Area: Build and run. Public, investor, and management material generated from governed data and templates, and the templates, editions, versions, and languages behind it",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
     "Rule source: Statement of Intent 9.3; Operating Model 4.2"
    ]
   },
   {
-   "id": "services/enablement-at-the-workplace",
+   "id": "services/platforms",
    "section": "services",
-   "order": 7,
+   "order": 9,
    "type": "service",
-   "slug": "/services/enablement-at-the-workplace/",
-   "title": "Enablement at the workplace",
+   "slug": "/services/platforms/",
+   "title": "Platforms",
    "source": [
-    "portal/content/services/enablement-at-the-workplace.md"
+    "portal/content/services/platforms.md"
    ],
    "production": "authored",
+   "area": "build",
    "outline": [
-    "Training by role, coaching at the desk, Domain Experts, skill libraries, communities of practice; run-rate",
+    "Area: Build and run. The shared engines and environments of AICC, the requirements on the AI Platform of the Bank, and the hand-over of a platform to the teams that run at scale",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: AICC Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8"
+   ]
+  },
+  {
+   "id": "services/training-and-knowledge-sharing",
+   "section": "services",
+   "order": 10,
+   "type": "service",
+   "slug": "/services/training-and-knowledge-sharing/",
+   "title": "Training and knowledge sharing",
+   "source": [
+    "portal/content/services/training-and-knowledge-sharing.md"
+   ],
+   "production": "authored",
+   "area": "enablement",
+   "outline": [
+    "Area: Enablement. Training by role, coaching at the desk, skill libraries, communities of practice, playbooks and publications",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
     "Rule source: Business Model 4.4; Statement of Intent 10.1"
    ]
   },
   {
-   "id": "services/assurance-and-governance-support",
+   "id": "services/adoption-and-lifecycle-management",
    "section": "services",
-   "order": 8,
+   "order": 11,
    "type": "service",
-   "slug": "/services/assurance-and-governance-support/",
-   "title": "Assurance and governance support",
+   "slug": "/services/adoption-and-lifecycle-management/",
+   "title": "Adoption and lifecycle management",
    "source": [
-    "portal/content/services/assurance-and-governance-support.md"
+    "portal/content/services/adoption-and-lifecycle-management.md"
    ],
    "production": "authored",
+   "area": "enablement",
    "outline": [
-    "Risk Tier, AI Registry entry, provider assessment, evaluation before use, Acceptance Checklist, oversight of Adopted Solutions; run-rate",
+    "Area: Enablement. Domain Experts and adoption plans per Domain; hand-over, support, revision, and retirement of Solutions; the life and operation of a Service",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
-    "Rule source: AI Policy 2 to 4; Business Model 2.3"
+    "Rule source: Statement of Intent 10.1; Solution Lifecycle Model 8; Business Model 4.2"
    ]
   },
   {
-   "id": "services/watch-research-and-partnering",
+   "id": "services/policies-controls-criteria",
    "section": "services",
-   "order": 9,
+   "order": 12,
    "type": "service",
-   "slug": "/services/watch-research-and-partnering/",
-   "title": "Watch, research, and partnering",
+   "slug": "/services/policies-controls-criteria/",
+   "title": "Policies, controls, criteria",
    "source": [
-    "portal/content/services/watch-research-and-partnering.md"
+    "portal/content/services/policies-controls-criteria.md"
    ],
    "production": "authored",
+   "area": "assurance",
    "outline": [
-    "Regulatory and technology watch with digests, trials, relations with organizations and providers; run-rate and program. Not yet in the Business Model (clause proposed)",
+    "Area: Assurance. Rules of use within the AI Policy, control maps, acceptance and evaluation criteria, guardrails, stated before the build",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
-    "Rule source: Business Model 2.3, 2.4; Statement of Intent 10.5"
+    "Rule source: AI Policy 2, 3; Operating Model 8; Solution Lifecycle Model 7"
+   ]
+  },
+  {
+   "id": "services/assessments-and-evaluations",
+   "section": "services",
+   "order": 13,
+   "type": "service",
+   "slug": "/services/assessments-and-evaluations/",
+   "title": "Assessments and evaluations",
+   "source": [
+    "portal/content/services/assessments-and-evaluations.md"
+   ],
+   "production": "authored",
+   "area": "assurance",
+   "outline": [
+    "Area: Assurance. Tools, providers, and Solutions evaluated against the cases of the function and the rules before use; readiness and benchmarks",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: AI Policy 3, 4; Solution Lifecycle Model 7"
+   ]
+  },
+  {
+   "id": "services/risk-tiering",
+   "section": "services",
+   "order": 14,
+   "type": "service",
+   "slug": "/services/risk-tiering/",
+   "title": "Risk tiering",
+   "source": [
+    "portal/content/services/risk-tiering.md"
+   ],
+   "production": "authored",
+   "area": "assurance",
+   "outline": [
+    "Area: Assurance. The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: AI Policy 3; Operating Model 4.4; AICC Charter 5"
+   ]
+  },
+  {
+   "id": "services/oversight",
+   "section": "services",
+   "order": 15,
+   "type": "service",
+   "slug": "/services/oversight/",
+   "title": "Oversight",
+   "source": [
+    "portal/content/services/oversight.md"
+   ],
+   "production": "authored",
+   "area": "assurance",
+   "outline": [
+    "Area: Assurance. Adopted Solutions, live reviews, AI Incidents, and changes followed through the Registry and reported to the Steering and the Board Committee",
+    "What the function receives, how it runs, and what it leads to",
+    "The reusable package; run-rate or program; who decides",
+    "Rule source: Business Model 2.3; AI Policy 5; AICC Charter 7"
    ]
   },
   {
    "id": "services/service-model",
    "section": "services",
-   "order": 10,
+   "order": 20,
    "type": "outline",
    "slug": "/services/service-model/",
    "title": "The service model",
@@ -620,14 +743,14 @@
    ],
    "production": "authored",
    "outline": [
-    "The composition of a service: line, mode, client, Solution type, support level, Risk Tier, owner, package, records",
+    "The composition of a service: area and category, mode, client, Solution type, support level, Risk Tier, owner, package, records",
     "The life of a service; the operation of a service; the records; the catalog"
    ]
   },
   {
    "id": "services/how-to-engage",
    "section": "services",
-   "order": 11,
+   "order": 21,
    "type": "outline",
    "slug": "/services/how-to-engage/",
    "title": "How to engage",
@@ -646,7 +769,7 @@
   {
    "id": "services/catalog",
    "section": "services",
-   "order": 12,
+   "order": 22,
    "type": "outline",
    "slug": "/services/catalog/",
    "title": "Service catalog: the form",
@@ -663,7 +786,7 @@
   {
    "id": "services/business-model",
    "section": "services",
-   "order": 13,
+   "order": 23,
    "type": "document",
    "slug": "/services/business-model/",
    "title": "Business Model",
@@ -676,7 +799,7 @@
   {
    "id": "services/engagement-workflow",
    "section": "services",
-   "order": 14,
+   "order": 24,
    "type": "workflow",
    "slug": "/services/engagement-workflow/",
    "title": "Engagement workflow",
@@ -689,7 +812,7 @@
   {
    "id": "services/engagement-guide",
    "section": "services",
-   "order": 15,
+   "order": 25,
    "type": "guide",
    "slug": "/services/engagement-guide/",
    "title": "Guide: Engagement",
@@ -985,19 +1108,19 @@
    "production": "generated"
   },
   {
-   "id": "portfolio/service-lines-in-the-portfolio",
+   "id": "portfolio/service-categories-in-the-portfolio",
    "section": "portfolio",
    "order": 6,
    "type": "outline",
-   "slug": "/portfolio/service-lines-in-the-portfolio/",
-   "title": "The service lines in the Portfolio",
+   "slug": "/portfolio/service-categories-in-the-portfolio/",
+   "title": "The service categories in the Portfolio",
    "source": [
-    "portal/content/portfolio/service-lines-in-the-portfolio.md"
+    "portal/content/portfolio/service-categories-in-the-portfolio.md"
    ],
    "production": "authored; proposed for Portfolio Management Model 5",
    "outline": [
     "The two lanes: run-rate and program",
-    "The lines by lane",
+    "The categories by lane",
     "Screening at the front door: lens, size, Risk Tier, package",
     "The Portfolio at a glance: the four groups"
    ]

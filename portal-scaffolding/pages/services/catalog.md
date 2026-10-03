@@ -2,7 +2,7 @@
 id: services/catalog
 title: Service catalog: the form
 section: services
-order: 12
+order: 22
 type: outline
 slug: /services/catalog/
 source: portal/content/services/catalog-form.md

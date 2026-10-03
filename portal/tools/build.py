@@ -1152,9 +1152,10 @@ def services_page(site, p, lang):
     engage = site.by_id['services/how-to-engage']
     out = ['<h1>%s</h1><p class="o-lead">%s</p>' % (esc(sec['label'][lang]), esc(sec['intro'][lang]))]
     fams = []
-    for f in a['families']:
-        cards = ''.join(card(site, by_id['services/' + slug], lang, url, 'card--primary') for slug in f['lines'] if 'services/' + slug in by_id)
-        fams.append('<section class="sv-family" aria-labelledby="f-%s"><h3 id="f-%s">%s</h3><p>%s</p><ul class="o-grid card-list cards-primary">%s</ul></section>' % (f['id'], f['id'], esc(f['title'][lang]), esc(f['text'][lang]), cards))
+    for f in a['areas']:
+        cats = [q for q in items if q['type'] == 'service' and q.get('area') == f['id']]
+        cards = ''.join(card(site, q, lang, url, 'card--secondary') for q in cats)
+        fams.append('<section class="sv-family" aria-labelledby="f-%s"><h3 id="f-%s">%s</h3><p>%s</p><ul class="o-grid card-list cards-secondary">%s</ul></section>' % (f['id'], f['id'], esc(f['title'][lang]), esc(f['text'][lang]), cards))
     out.append('<section aria-labelledby="sv-lines"><h2 id="sv-lines">%s</h2><p>%s</p>%s</section>' % (esc(a['lines_title'][lang]), esc(a['lines_lead'][lang]), ''.join(fams)))
     steps = ''.join('<li><span class="lv-n">%d</span><strong>%s</strong><span>%s</span></li>' % (i, esc(st['t']), esc(st['d'])) for i, st in enumerate(a['steps'], 1))
     levels = ''.join('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % tuple(esc(x) for x in row) for row in a['levels'])
@@ -1174,7 +1175,7 @@ def services_page(site, p, lang):
             extra = '<p class="card-guide"><a href="%s">%s</a></p>' % (site.rel(url, site.url(g, lang)), esc(m['kind_guide'] + ': ' + re.sub(r'^Guide:\s*', '', g['title'])))
         dcards.append(card(site, q, lang, url, 'card--secondary', extra))
     out.append('<section aria-labelledby="sv-docs"><h2 id="sv-docs">%s</h2><ul class="o-grid card-list cards-secondary">%s</ul></section>' % (esc(a['docs_title'][lang]), ''.join(dcards)))
-    outline = [(2, 'sv-lines', a['lines_title'][lang])] + [(3, 'f-' + f['id'], f['title'][lang]) for f in a['families']] + [
+    outline = [(2, 'sv-lines', a['lines_title'][lang])] + [(3, 'f-' + f['id'], f['title'][lang]) for f in a['areas']] + [
         (2, 'sv-engage', a['engage_title'][lang]), (2, 'sv-levels', a['levels_title'][lang]), (2, 'sv-not', a['not_title'][lang]), (2, 'sv-model', a['model_title'][lang]), (2, 'sv-docs', a['docs_title'][lang])]
     for hid, t, x in (('sv-engage', a['engage_title'][lang], a['engage_lead'][lang]), ('sv-not', a['not_title'][lang], a['not'][lang]), ('sv-model', a['model_title'][lang], a['model_lead'][lang])):
         site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': sec['label'][lang], 'h': t, 'x': x[:360]})

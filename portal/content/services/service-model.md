@@ -1,15 +1,15 @@
 # The service model
 
-A service of AICC is not a promise in the air. It is composed of defined parts, it has a life with states and gates, it is operated under named practices, and it leaves records. This page states the model that every service of AICC follows, whatever its line. It is the template; the services in operation are its instances and are kept in the Portfolio.
+A service of AICC is not a promise in the air. It is composed of defined parts, it has a life with states and gates, it is operated under named practices, and it leaves records. This page states the model that every service of AICC follows, whatever its area and category. It is the template; the services in operation are its instances and are kept in the Portfolio.
 
 ## 1. The composition of a service
 
-1.1. Every service of AICC, run-rate or program, is described by the same fields.
+1.1. Every service of AICC, whatever its category and whether run-rate or program, is described by the same fields.
 
 | Field | Meaning | Where it is set |
 | --- | --- | --- |
-| Service line | One of the nine lines, which gives the family (advise and found; build and run; enable and assure) | The Services section |
-| Mode | Run-rate, done in days to one Iteration through the front door; or program, an Initiative with a business case and an MVP | The line, confirmed at intake |
+| Area and category | One of the fifteen categories in the four areas (advise and formulate; build and run; enablement; assurance) | The Services section |
+| Mode | Run-rate, done in days to one Iteration through the front door; or program, an Initiative with a business case and an MVP | The category, confirmed at intake |
 | Client | The function, represented by its Domain Owner; the Executive Sponsor for enabling work | Service Agreement |
 | Solution type | Experiment, Product, or Service, which sets the life after delivery | Solution Definition |
 | Support level | None, on demand, agreed response targets, or run by AICC | Service Agreement |

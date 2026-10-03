@@ -159,34 +159,53 @@ S = S_SERVICES
 if NEXT:
     # The service lines, one page each, authored for the site from the Business Model, the Solution Lifecycle Model, and the Statement of Intent.
     # Each page: what it is, what the client receives, the typical shape, what it leads to, the templates, who decides, the governing clauses.
-    LINES = [
-        ('strategy-and-governance-office', 'Strategy and governance office', 'What AICC built for itself, built for any unit: strategy, charter, operating and governance model, process set, portal and repository, developed with AI; program', 'Business Model 2.4 and 4 (clause proposed)'),
-        ('normative-documents-and-processes', 'Normative documents and processes', 'Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for HR, legal, accounting, compliance, operations, and any function; run-rate and program', 'Business Model 4 (clause proposed)'),
-        ('knowledge-services', 'Knowledge services', 'The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask; program', 'Statement of Intent 5.3, 9.5, 10.2; AI Policy 2, 3'),
-        ('workplace-automation', 'Workplace automation', 'Routing, forms, reports, consolidation, and documents from templates, done by assistants under human validation; run-rate; the catalog of automations', 'Statement of Intent 9.4; AI Policy 2, 3'),
-        ('information-and-decision-support', 'Information and decision support', 'ETL and consolidation, dashboards, analytical and research tooling, the factual base for decisions; run-rate and program', 'Statement of Intent 9.3, 10.2; Business Model 6'),
-        ('content-and-document-engines', 'Content and document engines', 'Public, investor, and management material generated from governed data and templates, pre-filled for people to finish; program', 'Statement of Intent 9.3; Operating Model 4.2'),
-        ('enablement-at-the-workplace', 'Enablement at the workplace', 'Training by role, coaching at the desk, Domain Experts, skill libraries, communities of practice; run-rate', 'Business Model 4.4; Statement of Intent 10.1'),
-        ('assurance-and-governance-support', 'Assurance and governance support', 'Risk Tier, AI Registry entry, provider assessment, evaluation before use, Acceptance Checklist, oversight of Adopted Solutions; run-rate', 'AI Policy 2 to 4; Business Model 2.3'),
-        ('watch-research-and-partnering', 'Watch, research, and partnering', 'Regulatory and technology watch with digests, trials, relations with organizations and providers; run-rate and program. Not yet in the Business Model (clause proposed)', 'Business Model 2.3, 2.4; Statement of Intent 10.5'),
+    # The service categories, in four areas. Each category page is authored for the site: what it is, examples, what the function receives,
+    # how it runs, what it leads to, the reusable package, run-rate or program, who decides, rule source.
+    AREAS = [
+        ('advise', 'Advise and formulate', [
+            ('strategy-and-governance', 'Strategy and governance', 'Strategy, charter, operating and governance model, portal and repository for a unit or a program, developed with AI, as AICC did for itself', 'Business Model 2.4 and 4 (clause proposed)'),
+            ('normatives-and-processes', 'Normatives and processes', 'Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for any function', 'Business Model 4 (clause proposed)'),
+            ('research-and-exploration', 'Research and exploration', 'Regulatory and technology watch with digests, trials in the Lab, partnering with organizations and providers', 'Business Model 2.3, 2.4; Statement of Intent 10.5 (clause proposed)'),
+            ('business-cases-and-scenarios', 'Business cases and scenarios', 'Use-case discovery, scenarios with problem, solution, and measures, readiness and source audit, the business case the Portfolio decides on', 'Business Model 3, 4.1; Portfolio Management Model 5, 6'),
+        ]),
+        ('build', 'Build and run', [
+            ('knowledge-services', 'Knowledge services', 'The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask', 'Statement of Intent 5.3, 9.5, 10.2; AI Policy 2, 3'),
+            ('workplace-automation', 'Workplace automation', 'Routing, forms, reports, consolidation, documents from templates, and case assistance, done by assistants under human validation', 'Statement of Intent 9.4; AI Policy 2, 3'),
+            ('analytics-and-decision-support', 'Analytics and decision support', 'Pipelines, dashboards, analyses, and research tooling that prepare the factual base for decisions, with lineage to governed sources', 'Statement of Intent 9.3, 10.2; Business Model 6'),
+            ('content-management', 'Content management', 'Public, investor, and management material generated from governed data and templates, and the templates, editions, versions, and languages behind it', 'Statement of Intent 9.3; Operating Model 4.2'),
+            ('platforms', 'Platforms', 'The shared engines and environments of AICC, the requirements on the AI Platform of the Bank, and the hand-over of a platform to the teams that run at scale', 'AICC Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8'),
+        ]),
+        ('enablement', 'Enablement', [
+            ('training-and-knowledge-sharing', 'Training and knowledge sharing', 'Training by role, coaching at the desk, skill libraries, communities of practice, playbooks and publications', 'Business Model 4.4; Statement of Intent 10.1'),
+            ('adoption-and-lifecycle-management', 'Adoption and lifecycle management', 'Domain Experts and adoption plans per Domain; hand-over, support, revision, and retirement of Solutions; the life and operation of a Service', 'Statement of Intent 10.1; Solution Lifecycle Model 8; Business Model 4.2'),
+        ]),
+        ('assurance', 'Assurance', [
+            ('policies-controls-criteria', 'Policies, controls, criteria', 'Rules of use within the AI Policy, control maps, acceptance and evaluation criteria, guardrails, stated before the build', 'AI Policy 2, 3; Operating Model 8; Solution Lifecycle Model 7'),
+            ('assessments-and-evaluations', 'Assessments and evaluations', 'Tools, providers, and Solutions evaluated against the cases of the function and the rules before use; readiness and benchmarks', 'AI Policy 3, 4; Solution Lifecycle Model 7'),
+            ('risk-tiering', 'Risk tiering', 'The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes', 'AI Policy 3; Operating Model 4.4; AICC Charter 5'),
+            ('oversight', 'Oversight', 'Adopted Solutions, live reviews, AI Incidents, and changes followed through the Registry and reported to the Steering and the Board Committee', 'Business Model 2.3; AI Policy 5; AICC Charter 7'),
+        ]),
     ]
-    for i, (slug, title, line, rule) in enumerate(LINES, 1):
-        add(id=f'services/{slug}', section='services', order=i, type='service', slug=f'/services/{slug}/', title=title, source=[f'portal/content/services/{slug}.md'], production='authored',
-            outline=[line, 'What the function receives, how it runs, and what it leads to', 'The reusable package; run-rate or program; who decides', 'Rule source: ' + rule])
-    add(id='services/service-model', section='services', order=10, type='outline', slug='/services/service-model/', title='The service model', source=['portal/content/services/service-model.md'], production='authored',
-        outline=['The composition of a service: line, mode, client, Solution type, support level, Risk Tier, owner, package, records', 'The life of a service; the operation of a service; the records; the catalog'])
-    add(id='services/how-to-engage', section='services', order=11, type='outline', slug='/services/how-to-engage/', title='How to engage', source=['portal/content/services/how-to-engage.md'], production='authored, with the Engagement workflow',
+    i = 0
+    for aid, aname, cats in AREAS:
+        for slug, title, line, rule in cats:
+            i += 1
+            add(id=f'services/{slug}', section='services', order=i, type='service', slug=f'/services/{slug}/', title=title, source=[f'portal/content/services/{slug}.md'], production='authored',
+                area=aid, outline=[f'Area: {aname}. ' + line, 'What the function receives, how it runs, and what it leads to', 'The reusable package; run-rate or program; who decides', 'Rule source: ' + rule])
+    add(id='services/service-model', section='services', order=20, type='outline', slug='/services/service-model/', title='The service model', source=['portal/content/services/service-model.md'], production='authored',
+        outline=['The composition of a service: area and category, mode, client, Solution type, support level, Risk Tier, owner, package, records', 'The life of a service; the operation of a service; the records; the catalog'])
+    add(id='services/how-to-engage', section='services', order=21, type='outline', slug='/services/how-to-engage/', title='How to engage', source=['portal/content/services/how-to-engage.md'], production='authored, with the Engagement workflow',
         outline=['The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)',
                  'The function commits to nothing; AICC works on a best-effort basis within its capability', 'Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)',
                  'What AICC does not do (AICC Charter 3.2)', 'Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report'])
-    add(id='services/catalog', section='services', order=12, type='outline', slug='/services/catalog/', title='Service catalog: the form',
+    add(id='services/catalog', section='services', order=22, type='outline', slug='/services/catalog/', title='Service catalog: the form',
         source=['portal/content/services/catalog-form.md'], production='authored; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal',
         outline=['The two kinds of entry: Solution and package', 'The fields of each; the states of an entry', 'One illustration of each kind'])
-add(id=f'{S}/business-model', section=S, order=13 if NEXT else 1, type='document', slug=f'/{S}/business-model/',
+add(id=f'{S}/business-model', section=S, order=23 if NEXT else 1, type='document', slug=f'/{S}/business-model/',
     title=h1('charter/documents/business-model.md'), source=['charter/documents/business-model.md'], words=1381)
-add(id=f'{S}/engagement-workflow', section=S, order=14 if NEXT else 2, type='workflow', slug=f'/{S}/engagement-workflow/',
+add(id=f'{S}/engagement-workflow', section=S, order=24 if NEXT else 2, type='workflow', slug=f'/{S}/engagement-workflow/',
     title=h1('charter/workflows/engagement.md'), source=['charter/workflows/engagement.md'], companion=f'{S}/engagement-guide')
-add(id=f'{S}/engagement-guide', section=S, order=15 if NEXT else 3, type='guide', slug=f'/{S}/engagement-guide/',
+add(id=f'{S}/engagement-guide', section=S, order=25 if NEXT else 3, type='guide', slug=f'/{S}/engagement-guide/',
     title=h1('charter/guides/engagement-guide.md'), source=['charter/guides/engagement-guide.md'], companion=f'{S}/engagement-workflow')
 
 # How AICC works (current) / Portfolio and Delivery (next)
@@ -218,9 +237,9 @@ add(id=f'{S_DELIVERY}/collaboration-tooling-workflow', section=S_DELIVERY, order
     title=h1('charter/workflows/collaboration-tooling.md'), source=['charter/workflows/collaboration-tooling.md'])
 
 if NEXT:
-    add(id='portfolio/service-lines-in-the-portfolio', section='portfolio', order=6, type='outline', slug='/portfolio/service-lines-in-the-portfolio/', title='The service lines in the Portfolio',
-        source=['portal/content/portfolio/service-lines-in-the-portfolio.md'], production='authored; proposed for Portfolio Management Model 5',
-        outline=['The two lanes: run-rate and program', 'The lines by lane', 'Screening at the front door: lens, size, Risk Tier, package', 'The Portfolio at a glance: the four groups'])
+    add(id='portfolio/service-categories-in-the-portfolio', section='portfolio', order=6, type='outline', slug='/portfolio/service-categories-in-the-portfolio/', title='The service categories in the Portfolio',
+        source=['portal/content/portfolio/service-categories-in-the-portfolio.md'], production='authored; proposed for Portfolio Management Model 5',
+        outline=['The two lanes: run-rate and program', 'The categories by lane', 'Screening at the front door: lens, size, Risk Tier, package', 'The Portfolio at a glance: the four groups'])
     add(id='delivery/experiment-workflow', section='delivery', order=18, type='outline', slug='/delivery/experiment-workflow/', title='The Experiment workflow: the Lab',
         source=['portal/content/delivery/experiment-workflow.md'], production='authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB',
         outline=['Six stages: define, establish, prepare data, build, validate, decide, with concerns and records', 'The rules of the Lab: decision rights, data, time-box, guardrails scorecard'])
@@ -378,6 +397,8 @@ for p in PAGES:
         fm.append(f"words: {p['words']}")
     if p.get('companion'):
         fm.append(f"companion: {p['companion']}")
+    if p.get('area'):
+        fm.append(f"area: {p['area']}")
     fm.append(f"production: {p['production']}")
     fm += ['status: scaffold', '---']
     body = fm + ['', f"# {p['title']}", '', f"Page type: {p['type']}. Address: {p['slug']}", '']

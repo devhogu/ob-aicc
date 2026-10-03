@@ -60,7 +60,7 @@
     "ru": "Услуги"
    },
    "intro": {
-    "en": "AICC serves the functions and units of the Bank as their internal consulting and innovation lab. Its services run along nine lines in three families: advise and found, build and run, enable and assure. Each line is a direction with examples; each Engagement follows one service model and leaves a reusable package. This section states the lines, how a function engages AICC, the service model, and the form of the catalog."
+    "en": "AICC serves the functions and units of the Bank as their internal consulting and innovation lab. Its services run along fifteen categories in four areas: advise and formulate, build and run, enablement, and assurance. Each category is a direction with examples; each Engagement follows one service model and leaves a reusable package. This section states the areas and categories, how a function engages AICC, the service model, and the form of the catalog."
    },
    "icon": "users"
   },
@@ -743,7 +743,7 @@
  },
  "services_page": {
   "lines_title": {
-   "en": "Service lines"
+   "en": "Areas and categories"
   },
   "engage_title": {
    "en": "How to engage"
@@ -812,22 +812,23 @@
    "en": "The documents behind the services"
   },
   "lines_lead": {
-   "en": "Nine lines in three families. A line is a direction along which AICC provides services, with examples on its page; what AICC commits to is stated in the Service Agreement of each Engagement. Run-rate lines are asked for through the front door and done in days to one Iteration; programs start with a study and a business case."
+   "en": "Fifteen categories in four areas. A category is a direction along which AICC provides services, with examples on its page; what AICC commits to is stated in the Service Agreement of each Engagement. Run-rate work is asked for through the front door and done in days to one Iteration; a program starts with a study and a business case."
   },
-  "families": [
+  "model_title": {
+   "en": "The service model and the catalog"
+  },
+  "model_lead": {
+   "en": "Every service of AICC follows one model: its composition, its life, its operation, and its records. The catalog has a defined form for a Solution and for a package. This site states the model and the form; the live catalog is an instance kept in the Portfolio and presented in the live portal of AICC."
+  },
+  "areas": [
    {
     "id": "advise",
     "title": {
-     "en": "Advise and found"
+     "en": "Advise and formulate"
     },
     "text": {
-     "en": "The strategy, governance, and process office of the Bank for AI: the direction, the documents, the processes, and the knowledge of the rules."
-    },
-    "lines": [
-     "strategy-and-governance-office",
-     "normative-documents-and-processes",
-     "watch-research-and-partnering"
-    ]
+     "en": "The strategy, governance, and process office of the Bank for AI: the direction and the mandate of a unit, its normative documents and processes, the watch on the field, and the business cases and scenarios that the Portfolio decides on."
+    }
    },
    {
     "id": "build",
@@ -835,34 +836,27 @@
      "en": "Build and run"
     },
     "text": {
-     "en": "The solutions: knowledge a function can ask, routine work done by assistants, facts prepared for decisions, and material generated for people to finish."
-    },
-    "lines": [
-     "knowledge-services",
-     "workplace-automation",
-     "information-and-decision-support",
-     "content-and-document-engines"
-    ]
+     "en": "The solutions and the platforms: knowledge a function can ask, routine work done by assistants under human validation, the factual base for decisions, the content a function publishes, and the shared engines and environments behind them."
+    }
    },
    {
-    "id": "enable",
+    "id": "enablement",
     "title": {
-     "en": "Enable and assure"
+     "en": "Enablement"
     },
     "text": {
-     "en": "The people and the compliance: each person able to use AI for their own work, and each use of AI kept within the rules."
+     "en": "The people and the adoption: each person trained and coached to use AI for their own work, each Domain carrying its adoption through its Domain Experts, and each Solution managed through its life after delivery."
+    }
+   },
+   {
+    "id": "assurance",
+    "title": {
+     "en": "Assurance"
     },
-    "lines": [
-     "enablement-at-the-workplace",
-     "assurance-and-governance-support"
-    ]
+    "text": {
+     "en": "The compliance of every use of AI: the rules, controls, and criteria stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported to the Steering and the Board Committee."
+    }
    }
-  ],
-  "model_title": {
-   "en": "The service model and the catalog"
-  },
-  "model_lead": {
-   "en": "Every service of AICC follows one model: its composition, its life, its operation, and its records. The catalog has a defined form for a Solution and for a package. This site states the model and the form; the live catalog is an instance kept in the Portfolio and presented in the live portal of AICC."
-  }
+  ]
  }
 }

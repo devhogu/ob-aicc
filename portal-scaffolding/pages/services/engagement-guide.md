@@ -2,7 +2,7 @@
 id: services/engagement-guide
 title: Guide: Engagement
 section: services
-order: 15
+order: 25
 type: guide
 slug: /services/engagement-guide/
 source: charter/guides/engagement-guide.md

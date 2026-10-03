@@ -1,0 +1,27 @@
+---
+id: services/policies-controls-criteria
+title: Policies, controls, criteria
+section: services
+order: 12
+type: service
+slug: /services/policies-controls-criteria/
+source: portal/content/services/policies-controls-criteria.md
+area: assurance
+production: authored
+status: scaffold
+---
+
+# Policies, controls, criteria
+
+Page type: service. Address: /services/policies-controls-criteria/
+
+## Source
+
+- portal/content/services/policies-controls-criteria.md
+
+## Outline
+
+- Area: Assurance. Rules of use within the AI Policy, control maps, acceptance and evaluation criteria, guardrails, stated before the build
+- What the function receives, how it runs, and what it leads to
+- The reusable package; run-rate or program; who decides
+- Rule source: AI Policy 2, 3; Operating Model 8; Solution Lifecycle Model 7
