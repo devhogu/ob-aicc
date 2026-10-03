@@ -5,13 +5,18 @@ The Knowledge base is the working knowledge of AICC: what to read first, which f
 ## 1. How to navigate the Knowledge base
 
 ```mermaid
-flowchart LR
-  Q(["A reader<br/>with a task"]) --> L["Learning paths<br/>where to start, by role"]
-  Q --> T["Templates and forms<br/>which form, when,<br/>who fills and signs"]
-  Q --> G["Guides<br/>how each step is done,<br/>by the question it answers"]
-  Q --> P["Playbooks and lessons<br/>what AICC has learned<br/>and published"]
-  Q --> A["Acts and compliance<br/>what the rules require<br/>of a use of AI here"]
-  Q --> F["Questions people ask<br/>short answers,<br/>grounded in the charter"]
+flowchart TB
+  Q(["A reader with a task comes to the Knowledge base with a question"])
+  subgraph ROW1["Start, forms, and how-tos"]
+    direction LR
+    L["Learning paths<br/>where to start and what to read, by role"] ~~~ T["Templates and forms<br/>which form is used when, who fills it, who signs it, where it is kept"] ~~~ G["Guides<br/>how each step is done and what it leaves on record, by the question it answers"]
+  end
+  subgraph ROW2["What was learned, what the rules require, quick answers"]
+    direction LR
+    P["Playbooks and lessons<br/>what AICC has published, proposed, and learned, and the packages it can re-deploy"] ~~~ A["Acts and compliance<br/>what the acts and policies require of a use of AI at the Bank, and where the charter answers it"] ~~~ F["Questions people ask<br/>short answers grounded in the charter, each naming its clause"]
+  end
+  Q --> ROW1
+  ROW1 ~~~ ROW2
 ```
 
 Figure 1: the shelves of the Knowledge base.

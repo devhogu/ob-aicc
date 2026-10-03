@@ -46,7 +46,7 @@ function themeCSS(c) {
     await page.evaluate((cfg) => mermaid.initialize(cfg), {
       startOnLoad: false, securityLevel: 'strict', theme: 'base', fontFamily: FONT, themeCSS: themeCSS(t.css),
       themeVariables: Object.assign({ fontFamily: FONT, fontSize: '14px' }, t.vars),
-      flowchart: { htmlLabels: true, useMaxWidth: true, padding: 10, nodeSpacing: 30, rankSpacing: 44, curve: 'basis', wrappingWidth: 170 },
+      flowchart: { htmlLabels: true, useMaxWidth: true, padding: 10, nodeSpacing: 30, rankSpacing: 44, curve: 'basis', wrappingWidth: 260 },
       sequence: { useMaxWidth: true, wrap: true, width: 170, mirrorActors: false }
     });
     for (const job of input.jobs) {

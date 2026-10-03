@@ -26,7 +26,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 PORTAL = os.path.join(ROOT, 'portal')
 OUT = os.path.join(ROOT, 'html', 'aicc')
 SITEMAP = os.path.join(ROOT, 'portal-scaffolding', 'sitemap.json')
-CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v4')
+CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v6')
 NPX = os.environ.get('MMDC_NPX', os.path.expanduser('~/.npm/_npx/668c188756b835f3/node_modules'))
 CHROME = os.environ.get('MMDC_CHROME', os.path.expanduser('~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'))
 FONT_FILE = os.path.join(PORTAL, 'ui', 'assets', 'fonts', 'golos-text', 'GolosText-variable.woff2')
@@ -255,7 +255,7 @@ class Renderer:
 
 # ---------------------------------------------------------------- mermaid
 
-def wrap_label(text, width=24):
+def wrap_label(text, width=42):
     """Break the lines of a node label at word boundaries, so that no line is wider than the box the renderer draws for it."""
     out = []
     for seg in text.split('<br/>'):
