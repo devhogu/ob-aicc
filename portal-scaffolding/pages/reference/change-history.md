@@ -2,7 +2,7 @@
 id: reference/change-history
 title: Change history
 section: reference
-order: 3
+order: 13
 type: reference
 slug: /reference/change-history/
 source: charter/documents/document-catalog.md

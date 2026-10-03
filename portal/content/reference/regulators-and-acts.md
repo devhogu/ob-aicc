@@ -1,6 +1,6 @@
 # Regulators and acts
 
-The Bank operates in the Kyrgyz Republic, within a region and a field where the rules for AI and data are set by many bodies. This page is the index of the regulators, the acts, the standards, and the frameworks that the Bank is aware of, by jurisdiction, with a page for each: who they are, what they set, whom they reach, why they matter to the Bank, and how the charter relates to them. The pages are for orientation; they quote no provision, and an entry here does not mean that the instrument binds the Bank. The Knowledge base page Acts and compliance states what the applicable ones require of a use of AI at the Bank.
+The Bank operates in the Kyrgyz Republic, within a region and a field where the rules for AI and data are set by many bodies. This page is the index of the regulators, the laws, and the policies that the Bank is aware of, by jurisdiction, with a page for each: who they are, what they set, whom they reach, why they matter to the Bank, and how the charter relates to them. The pages are for orientation; they quote no provision, and an entry here does not mean that the instrument binds the Bank. The Knowledge base page Acts and compliance states what the applicable ones require of a use of AI at the Bank; the standards, the frameworks, and the principles that are not law are on the page Standards and frameworks.
 
 This is the first edition, a curated list for global awareness, to be verified with the Control Function Contacts of compliance and legal.
 
@@ -43,19 +43,6 @@ This is the first edition, a curated list for global awareness, to be verified w
 
 | Body or instrument | Kind |
 | --- | --- |
-| [NIST AI Risk Management Framework](regulations/nist-ai-rmf.md) | Voluntary framework |
 | [United States supervisory guidance on model risk and on AI in credit](regulations/us-model-risk-and-consumer-guidance.md) | Supervisory guidance of the federal banking and consumer agencies |
 | [United States federal and state AI policy](regulations/us-federal-and-state-ai-policy.md) | Executive policy and state legislation |
-
-## 6. Global
-
-| Body or instrument | Kind |
-| --- | --- |
-| [OECD Principles on Artificial Intelligence](regulations/oecd-ai-principles.md) | Intergovernmental principles |
-| [UNESCO Recommendation on the Ethics of Artificial Intelligence](regulations/unesco-recommendation-ethics-ai.md) | Normative instrument of an international organization |
-| [Council of Europe Framework Convention on Artificial Intelligence](regulations/council-of-europe-ai-convention.md) | International treaty |
-| [G7 Hiroshima AI Process](regulations/g7-hiroshima-ai-process.md) | Voluntary international commitments |
-| [ISO/IEC standards on AI: 42001, 23894, 22989](regulations/iso-iec-ai-standards.md) | International standards |
-| [OWASP Top 10 for Large Language Model Applications](regulations/owasp-top-10-llm.md) | Community security standard |
-| [The financial standard-setters on AI: FSB, BCBS, BIS](regulations/financial-standard-setters-on-ai.md) | Reports and principles of the standard-setters of finance |
 

@@ -2,7 +2,7 @@
 id: reference/vocabulary
 title: Vocabulary and Style
 section: reference
-order: 1
+order: 11
 type: reference
 slug: /reference/vocabulary/
 source: charter/documents/vocabulary.md

@@ -5,7 +5,10 @@ section: reference
 order: 0
 type: section
 slug: /reference/
-production: authored, with a generated list
+source: portal/content/reference/overview.md
+part: 1 of 5
+series: reference-course
+production: authored; the overview of the Reference
 status: scaffold
 ---
 
@@ -13,9 +16,10 @@ status: scaffold
 
 Page type: section. Address: /reference/
 
+## Source
+
+- portal/content/reference/overview.md
+
 ## Outline
 
-- Introduction of three to five lines: The Vocabulary, the Document Catalog, the change history, the systems that hold the records, the industry body of knowledge, and the regulators and acts.
-- Statement of what the section does not hold and where it is kept
-- The pages of the section with one line each (generated)
-- Related sections
+- How to navigate the Reference, drawn; how to take an external source; using external resources safely; the categories

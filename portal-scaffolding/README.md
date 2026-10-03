@@ -11,7 +11,7 @@ Status: scaffold, for review. The site is a static knowledge base and the depart
 | [site-structure.md](site-structure.md) | The narrative: the kind of site, the sitemap, the navigation model, the page types, the wireframes, the authored items, and the open points |
 | [content-fit.md](content-fit.md) | The evaluation of the first scaffold against the size and shape of the charter, and the reasons for the placement that this scaffold adopts |
 | [inventory.md](inventory.md) | The table of all pages: section, address, type, source, sections of the source, words, and production |
-| [sitemap.json](sitemap.json) | The sitemap in machine-readable form: the nine sections and the 186 pages of the structure the site is built from (adopted 2026-10-02; site-structure.md section 10) |
+| [sitemap.json](sitemap.json) | The sitemap in machine-readable form: the nine sections and the 197 pages of the structure the site is built from (adopted 2026-10-02; site-structure.md section 10) |
 | previous/ | The first structure of the site, written by `make_pages.py --previous` when needed for the record; not kept in the repository |
 | [pages/](pages/) | One outline file for each page, in a folder for each section |
 | [reading-routes.md](reading-routes.md) | The five reading routes, as sequences of page identifiers |
@@ -31,7 +31,7 @@ Status: scaffold, for review. The site is a static knowledge base and the depart
 | 6 | Governance | /governance/ | A short course in seven parts (Governance, Decisions and escalation, The control loops, The Steerings and the bodies, Controls and the control catalogue, Records, evidence, and assurance, Measures and reporting), the control loops, records and evidence, controls and the control catalogue of the Operating Model, the records, controls, and measures of delivery, the Unit governance set (site-structure.md section 18) |
 | 7 | Organization | /organization/ | A short course in six parts (Organization, The place of AICC in the Bank, The Roles, Who does what, People and appointments, How the organization grows), Operating Model foundations, Roles, Decisions, the Organization guide in three tabs, the Roles index and the seven Role pages (site-structure.md section 19) |
 | 8 | Knowledge base | /knowledge-base/ | Seven tabs (Knowledge base, Learning paths, Templates and forms, Guides, Playbooks and lessons, Acts and compliance, Questions people ask), the 13 templates, Package Definition (draft template) (site-structure.md section 20) |
-| 9 | Reference | /reference/ | Vocabulary, Document Catalog, change history, Records and systems, Industry body of knowledge, Regulators and acts with twenty-five regulation pages by jurisdiction (site-structure.md section 14) |
+| 9 | Reference | /reference/ | Five tabs (Reference, Standards and frameworks, Regulators and acts, Research and insight, Learning and open resources), twenty-six regulation and standard pages, nine resource pages, Vocabulary, Document Catalog, Change history, Records and systems (site-structure.md sections 14 and 21) |
 | – | Privacy, Terms of use | /privacy/, /terms-of-use/ | The legal pages of the portal, last in the navigation and in the footer |
 
 ## The outline file of a page

@@ -47,7 +47,7 @@
     "ru": "Справочник"
    },
    "intro": {
-    "en": "The Vocabulary defines the terms of the charter, the Document Catalog lists its documents, the change history records their revisions, Records and systems states where each record is kept, the Industry body of knowledge lists the frameworks the charter draws on, and Regulators and acts positions the bodies and the instruments of AI and data regulation, global, European, and regional, with a page for each.",
+    "en": "The Reference points outward and inward: to the standards and frameworks the charter draws on, the regulators and acts by jurisdiction, the research that shapes AI in finance, and the open resources from which people learn, each with how to take it and for what; and to the Vocabulary, the Document Catalog, the change history, and the records of the charter. Read by tab; the charter's own references follow.",
     "ru": "Раздел содержит Словарь, Каталог документов, историю изменений документов и страницу, которая указывает, где хранится каждая запись."
    },
    "icon": "link"

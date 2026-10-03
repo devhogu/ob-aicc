@@ -2,10 +2,12 @@
 id: reference/regulators-and-acts
 title: Regulators and acts
 section: reference
-order: 6
+order: 2
 type: outline
 slug: /reference/regulators-and-acts/
 source: portal/content/reference/regulators-and-acts.md
+part: 3 of 5
+series: reference-course
 production: authored; the index of the regulation pages, curated with the Control Function Contacts
 status: scaffold
 ---

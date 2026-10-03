@@ -242,14 +242,17 @@
    "type": "section",
    "slug": "/reference/",
    "title": "Reference",
-   "source": [],
-   "production": "authored, with a generated list",
+   "source": [
+    "portal/content/reference/overview.md"
+   ],
+   "production": "authored; the overview of the Reference",
    "outline": [
-    "Introduction of three to five lines: The Vocabulary, the Document Catalog, the change history, the systems that hold the records, the industry body of knowledge, and the regulators and acts.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
+    "How to navigate the Reference, drawn; how to take an external source; using external resources safely; the categories"
+   ],
+   "series": "reference-course",
+   "series_title": "Reference",
+   "part": "1 of 5",
+   "tab": "Overview"
   },
   {
    "id": "about/statement-of-intent",
@@ -3054,22 +3057,68 @@
   {
    "id": "reference/industry-body-of-knowledge",
    "section": "reference",
-   "order": 5,
+   "order": 1,
    "type": "outline",
    "slug": "/reference/industry-body-of-knowledge/",
-   "title": "Industry body of knowledge",
+   "title": "Standards and frameworks",
    "source": [
     "portal/content/reference/industry-body-of-knowledge.md"
    ],
    "production": "authored; a curated list",
+   "series": "reference-course",
+   "series_title": "Reference",
+   "part": "2 of 5",
+   "tab": "Standards and frameworks",
    "outline": [
-    "DECISION 5: new content. The external frameworks and standards that the charter draws on or is measured against: AI risk management frameworks, AI management system standards, agile and portfolio frameworks, with one line each and where the charter uses them"
+    "How to take a principle, a standard, a framework, a practice",
+    "The principles governments agreed; the standards and frameworks for AI; the practice of the financial sector; the practice of management and delivery, each with where the charter uses it"
+   ]
+  },
+  {
+   "id": "reference/research-and-insight",
+   "section": "reference",
+   "order": 3,
+   "type": "outline",
+   "slug": "/reference/research-and-insight/",
+   "title": "Research and insight",
+   "source": [
+    "portal/content/reference/research-and-insight.md"
+   ],
+   "production": "authored; a curated list",
+   "series": "reference-course",
+   "series_title": "Reference",
+   "part": "4 of 5",
+   "tab": "Research and insight",
+   "outline": [
+    "How to read the shelf",
+    "The institutions and standard-setters; the academic and independent centres; the consulting houses; the fintech and banking press; for the region",
+    "Each with what it publishes, why it matters, how to take it, access"
+   ]
+  },
+  {
+   "id": "reference/learning-and-open-resources",
+   "section": "reference",
+   "order": 4,
+   "type": "outline",
+   "slug": "/reference/learning-and-open-resources/",
+   "title": "Learning and open resources",
+   "source": [
+    "portal/content/reference/learning-and-open-resources.md"
+   ],
+   "production": "authored; a curated list",
+   "series": "reference-course",
+   "series_title": "Reference",
+   "part": "5 of 5",
+   "tab": "Learning and open resources",
+   "outline": [
+    "Courses and structured learning; following the field; AI security, risk, and incidents; open tools, with care",
+    "Each with what it is, whom it suits, how to take it, access"
    ]
   },
   {
    "id": "reference/regulators-and-acts",
    "section": "reference",
-   "order": 6,
+   "order": 2,
    "type": "outline",
    "slug": "/reference/regulators-and-acts/",
    "title": "Regulators and acts",
@@ -3077,6 +3126,10 @@
     "portal/content/reference/regulators-and-acts.md"
    ],
    "production": "authored; the index of the regulation pages, curated with the Control Function Contacts",
+   "series": "reference-course",
+   "series_title": "Reference",
+   "part": "3 of 5",
+   "tab": "Regulators and acts",
    "outline": [
     "The regulators, acts, standards, and frameworks the Bank is aware of, by jurisdiction, with a page for each",
     "The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how AICC complies"
@@ -3525,9 +3578,162 @@
    ]
   },
   {
+   "id": "reference/resources/bis-innovation-hub",
+   "section": "reference",
+   "order": 61,
+   "type": "regulation",
+   "slug": "/reference/resources/bis-innovation-hub/",
+   "title": "Bank for International Settlements and its Innovation Hub",
+   "source": [
+    "portal/content/reference/resources/bis-innovation-hub.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Research and insight",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
+   "id": "reference/resources/imf-and-world-bank",
+   "section": "reference",
+   "order": 62,
+   "type": "regulation",
+   "slug": "/reference/resources/imf-and-world-bank/",
+   "title": "International Monetary Fund and the World Bank on fintech and AI",
+   "source": [
+    "portal/content/reference/resources/imf-and-world-bank.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Research and insight",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
+   "id": "reference/resources/world-economic-forum",
+   "section": "reference",
+   "order": 63,
+   "type": "regulation",
+   "slug": "/reference/resources/world-economic-forum/",
+   "title": "World Economic Forum on AI governance and financial services",
+   "source": [
+    "portal/content/reference/resources/world-economic-forum.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Research and insight",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
+   "id": "reference/resources/stanford-hai-ai-index",
+   "section": "reference",
+   "order": 64,
+   "type": "regulation",
+   "slug": "/reference/resources/stanford-hai-ai-index/",
+   "title": "Stanford Institute for Human-Centered AI: the AI Index",
+   "source": [
+    "portal/content/reference/resources/stanford-hai-ai-index.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Research and insight",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
+   "id": "reference/resources/mckinsey-and-quantumblack",
+   "section": "reference",
+   "order": 65,
+   "type": "regulation",
+   "slug": "/reference/resources/mckinsey-and-quantumblack/",
+   "title": "McKinsey, the McKinsey Global Institute, and QuantumBlack",
+   "source": [
+    "portal/content/reference/resources/mckinsey-and-quantumblack.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Research and insight",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
+   "id": "reference/resources/deeplearning-ai",
+   "section": "reference",
+   "order": 66,
+   "type": "regulation",
+   "slug": "/reference/resources/deeplearning-ai/",
+   "title": "DeepLearning.AI: the short courses and The Batch",
+   "source": [
+    "portal/content/reference/resources/deeplearning-ai.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Learning and open resources",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
+   "id": "reference/resources/hugging-face",
+   "section": "reference",
+   "order": 67,
+   "type": "regulation",
+   "slug": "/reference/resources/hugging-face/",
+   "title": "Hugging Face: open models, datasets, and documentation",
+   "source": [
+    "portal/content/reference/resources/hugging-face.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Learning and open resources",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
+   "id": "reference/resources/arxiv-and-papers-with-code",
+   "section": "reference",
+   "order": 68,
+   "type": "regulation",
+   "slug": "/reference/resources/arxiv-and-papers-with-code/",
+   "title": "arXiv and Papers with Code",
+   "source": [
+    "portal/content/reference/resources/arxiv-and-papers-with-code.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Learning and open resources",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
+   "id": "reference/resources/mitre-atlas-and-ai-incident-database",
+   "section": "reference",
+   "order": 69,
+   "type": "regulation",
+   "slug": "/reference/resources/mitre-atlas-and-ai-incident-database/",
+   "title": "MITRE ATLAS and the AI Incident Database",
+   "source": [
+    "portal/content/reference/resources/mitre-atlas-and-ai-incident-database.md"
+   ],
+   "production": "authored; orientation only; a listing is not an endorsement",
+   "region": "Learning and open resources",
+   "outline": [
+    "Identity: kind, who, access",
+    "What it publishes; why it matters to the Bank; how to take it, and for what; cautions; related pages"
+   ]
+  },
+  {
    "id": "reference/vocabulary",
    "section": "reference",
-   "order": 1,
+   "order": 11,
    "type": "reference",
    "slug": "/reference/vocabulary/",
    "title": "Vocabulary and Style",
@@ -3545,7 +3751,7 @@
   {
    "id": "reference/document-catalog",
    "section": "reference",
-   "order": 2,
+   "order": 12,
    "type": "document",
    "slug": "/reference/document-catalog/",
    "title": "Document Catalog",
@@ -3558,7 +3764,7 @@
   {
    "id": "reference/change-history",
    "section": "reference",
-   "order": 3,
+   "order": 13,
    "type": "reference",
    "slug": "/reference/change-history/",
    "title": "Change history",
@@ -3575,7 +3781,7 @@
   {
    "id": "reference/records-and-systems",
    "section": "reference",
-   "order": 4,
+   "order": 14,
    "type": "records",
    "slug": "/reference/records-and-systems/",
    "title": "Records and systems",
