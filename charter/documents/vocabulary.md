@@ -2,7 +2,7 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-02
 revised: 2026-10-03
 ```
@@ -120,9 +120,9 @@ revised: 2026-10-03
 | Proposal | A proposal to the Bank to adopt a Solution at scale, or a proposal of the AI adoption strategy, submitted for decision |  |
 | Adopted Solution | A Solution that others deliver, which AICC oversees and reports on |  |
 | Capability | A capability of a Solution, delivered by the Teams over one or more Program Increments, held in the Program Backlog, and grouped under its Initiative. It is an Epic in Jira only | epic (outside Jira) |
-| Feature | A deliverable of a Capability that closes within one Program Increment | story |
+| Feature | A deliverable of a Capability that closes within one Program Increment; run-rate work is a Feature directly under a Standing Initiative and is done within one Iteration | story |
 | Definition of ready | The conditions that a Feature meets before it is approved for work, as the Solution Lifecycle Model states them | |
-| Definition of done | The conditions that a Feature meets before it is completed, as the Solution Lifecycle Model states them | |
+| Definition of done | The conditions that a Feature meets before it enters the Done column, including acceptance by the product owner, as the Solution Lifecycle Model states them | |
 | Work Item | A task of a Team within a Feature | ticket (for a Work Item) |
 | Portfolio Backlog | The ranked list of Initiatives |  |
 | Program Backlog | The ranked list of Capabilities and Features. Also called the PI Backlog | backlog (alone) |
@@ -170,7 +170,7 @@ revised: 2026-10-03
 | Severity | The class of an AI Incident, as the incident management of the Bank sets it; or of a Risk, Issue, or Finding: Blocker, Major, or Minor | criticality |
 | Exception | A limited departure from a policy, decided by the Control Function concerned, or by the AICC Lead for a requirement set by AICC alone | waiver |
 | Deficiency | A control that did not operate as required and was not corrected, entered in the Risks and Issues Record with an owner and a due date until it is closed | |
-| Control status | One of the five statuses that the Control Matrix gives a control, as the Operating Model 8.3 states: Operating (evidenced as required), Open (evidence missing or late), Deficiency (not corrected), No occurrence yet (its trigger has not happened), or Not yet due (its first date has not come) | |
+| Control status | One of the five statuses of Operating Model 8.5: Operating (operated and evidenced as required), Open (due, with evidence missing or incomplete), Deficiency (did not operate, failed, or remained Open past its due date), No occurrence yet (its trigger has not happened), or Not yet due (its first date has not come) | |
 | Accepted limit | A combination of Roles or a gap that the rules of separation forbid, accepted while AICC is small, entered in the Risks and Issues Record with its compensating control | |
 | Risks and Issues Record | The living Record of the open risks, issues, Exceptions, deficiencies, and Findings, each with an owner and a due date | |
 | AI Risk Appetite Statement | The statement in the AICC Charter of the appetite of the Bank for AI risk, decided by the Executive Sponsor |  |
@@ -254,3 +254,4 @@ revised: 2026-10-03
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Defined the modes, run-rate work, the Standing Initiatives, the service areas and categories, the Package and the catalog, the Lab, the service steps and the four signals, the governance measures, the class of service, and the terms of AI and of control that were used without a definition; widened Steering, Measure, Roadmap, AICC portal, and Experiment; replaced Reusable asset by Package; added the style clauses on external terms and on the pages of the AICC portal. | DR-2026-062 |
+| 2.1 | 2026-10-03 | Aligned Feature, definition of done, and control status with the governing clauses and the corrected run-rate path. | none (correction under Document Catalog 4.2) |

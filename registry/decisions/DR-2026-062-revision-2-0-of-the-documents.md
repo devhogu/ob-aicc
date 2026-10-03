@@ -66,3 +66,30 @@ The ten questions of the Document Catalog 7.1, with the result of each, for each
 | 10 | Can a person do what it asks today, with the people and the tools that exist? | Met, once the Standing Initiatives are entered | Met | Met | Met, once the Standing Initiatives are entered | Met, except where the Control Function Contacts are not named (RI-005) | Met, except where the Control Function Contacts are not named (RI-005) | Met | Met | Met |
 
 The residuals of question 10 are the ones of the baseline, and the four Standing Initiatives of the Business Model 4.9, whose Initiative Briefs the Executive Sponsor approves and the AICC Lead enters in the Portfolio Backlog. The Document Catalog 7.2 states that a missing Appointment does not block an activation.
+
+## Dated confirmation and correction: 2026-10-03
+
+This entry supplements DR-2026-062 under Operating Model 7.4; the original entry above is retained.
+
+The AICC Lead confirmed reconciliation as the new baseline aligned with the site and instructed it to proceed on 2026-10-03. The instruction is recorded in the AICC-Claude project thread `thr_87vctwz64d`: “reconsile as new baseline and alingment with the site, go”. The activation status is therefore Decided; the earlier handoff request for confirmation is no longer outstanding. The published revision 2.0 baseline is identified by tag `baseline-2026-10-03-rev2`.
+
+The subsequent instruction to fix the defects and reconcile the English version authorizes the corrections recorded in the revision 2.1 change-log rows of the Business Model, the Portfolio Management Model, the Solution Lifecycle Model, and the Vocabulary. These corrections complete the existing run-rate route, correct the units and population of expected lead time, and align the defined terms. They add no approval of a Solution, provider, data class, or Standing Initiative. The other document and template revisions activated above are unchanged.
+
+The current source edition of the English portal is 2.1. It identifies a set of sources, not a common revision for every document. Each document and template retains its own revision and status. The exact English source files are identified in `portal/translation-source.json`.
+
+The following findings qualify the original check and record the reconciliation:
+
+| Finding | Correction or current position |
+| --- | --- |
+| Expected lead time mixed throughput per Iteration with a result in days and counted different item populations | SLM 10.3 and the portal definition use the same Feature population, observation period, and throughput per calendar day; a zero or unsuitable throughput produces no estimate |
+| Run-rate Features lacked an explicit delivery parent and admission path | The models, Vocabulary, workflow, guide, and backlogs identify the Standing Initiative as parent and the Weekly Review as admission, with the existing checks and acceptance retained |
+| C-08 was Open although the control had not operated | C-08 and RI-004 are recorded as a Deficiency; C-32 remains Open until its remediation due date is recorded |
+| The site edition was presented as the revision of all its documents | Source edition and individual document revisions are distinguished in the footer and provenance |
+| Package catalog entries lacked their Package Definitions | Twelve Definitions are linked from the catalog, with concrete source references for available material and explicit gaps for planned or in-preparation material |
+| Standing Initiatives were not entered | INI-009 to INI-012 are entered as Proposed, with Initiative Briefs awaiting Executive Sponsor approval, recorded in RI-008 and DEP-015 |
+
+Operational residuals remain: the Standing Initiative approvals and Team limits, the unissued Service Agreements and remediation due date of RI-004, the missing appointments of RI-005, and the unverified applicability of the instruments and Bank policies in RI-006. Reconciliation of the English source does not assert that these actions have been completed.
+
+## Subsequent baseline settlement: 2026-10-03
+
+DR-2026-063 establishes approved English source edition 2.2 and settles the four Standing Initiative approvals, initial measures, and capacity limits. RI-008 is Closed and DEP-015 is Met. The earlier descriptions of these matters above are retained as dated history; DR-2026-063 states their current disposition. The operational records continue to report the actual state of execution.

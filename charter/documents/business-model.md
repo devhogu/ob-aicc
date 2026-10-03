@@ -2,7 +2,7 @@
 id: AICC-MND-03-EN
 title: Business Model
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-02
 revised: 2026-10-03
 ```
@@ -67,7 +67,7 @@ revised: 2026-10-03
 
 4.7. AICC takes in work under one of two modes: run-rate work or an Initiative. Run-rate work is a small, repeatable request of a function that is done within one Iteration, and any other work is an Initiative. Both modes leave the records that the Solution Lifecycle Model and the AI Policy require of the work, and the mode sets the depth of the study and the number of gates, not the standard of the work.
 
-4.8. Run-rate work is a Feature under the Standing Initiative of its service area. The AICC Lead shall take it in at the Weekly Review, within the Limits on Work in Progress, once the Domain Owner has approved the use for its data class (AI Policy 2). It is supported on demand only. It needs no Initiative Brief, no Service Agreement, and no Outcome Report of its own, and its Feature records the work. A request that cannot be done within one Iteration is taken in as an Initiative (7.2).
+4.8. Run-rate work is a Feature directly under the Standing Initiative of its service area, whose Initiative Brief the Executive Sponsor has approved (4.9). The AICC Lead shall take it in at the Weekly Review, within the Limits on Work in Progress, once the Domain Owner has approved the use for its data class (AI Policy 2). It is supported on demand only. It needs no Initiative Brief, no Service Agreement, and no Outcome Report of its own, and its Feature records the work. A request that cannot be done within one Iteration is taken in as an Initiative (7.2).
 
 4.9. Each service area has one Standing Initiative: an Initiative of enabling work that carries the run-rate work of the service area. The Executive Sponsor approves its Initiative Brief and reviews it at each quarterly Steering. A Standing Initiative does not count against the limit on the Active Initiatives (7.1).
 
@@ -115,3 +115,4 @@ revised: 2026-10-03
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Added the four service areas and fifteen service categories, the two modes of run-rate work and an Initiative with the Standing Initiatives, the Package and the two-part catalog, the intake record and catalog check, drafting for a function, the regulatory and technology watch, and the limit that AICC does not operate a Solution at the scale of the Bank. | DR-2026-062 |
+| 2.1 | 2026-10-03 | Clarified the direct parent and the prerequisite approval of run-rate work, without changing the service offer or the authority of the Executive Sponsor. | none (correction under Document Catalog 4.2) |

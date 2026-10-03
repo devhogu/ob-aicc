@@ -1,0 +1,1232 @@
+{
+  "schema_version": 1,
+  "source_language": "en",
+  "source_edition": "2.2",
+  "reconciled_on": "2026-10-03",
+  "base_commit": "2d576478385a4c4542f4ea9cba702c1eedde5135",
+  "source_state": "Approved English source set. The hashes identify the baseline content; base_commit identifies the repository revision from which reconciliation started.",
+  "scope": "Charter corpus, Registry records, Portfolio records and definitions, portal explanatory content, English interface messages, English authored content, and page routing. Operational status is preserved; this manifest is not evidence of approval or publication.",
+  "hash_algorithm": "SHA-256",
+  "hash_bases": {
+    "file_bytes": "SHA-256 of the exact UTF-8 source file bytes.",
+    "english_projection": "Recursively replace every nonempty object whose keys are a subset of en, ru, ky with its en value; retain all other keys and list order. Serialize with JSON keys sorted, no spaces, Unicode unescaped, UTF-8, no trailing newline. SHA-256 that serialization."
+  },
+  "translation_rule": "Identify this source edition and each document source revision. Preserve identifiers with only the language suffix changed, normative force, defined terms, decision rights, dates, approval status, and recorded uncertainty. Reconcile later English edits explicitly; do not refresh this baseline merely because a translation is added.",
+  "files": [
+    {
+      "path": "charter/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b9cca5895f2e2ab1af2dd99d9b11f220c18e00cf9de4accca52670d2b1880563"
+    },
+    {
+      "path": "charter/documents/ai-policy.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b992f1f3834afeb2c5ccfd3a650cb51678aab6a26ee913bec66f871cccb8e551",
+      "document": {
+        "id": "AICC-POL-01-EN",
+        "status": "active",
+        "revision": "2.0",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/documents/aicc-charter.md",
+      "hash_basis": "file_bytes",
+      "sha256": "428571f19b63a701be94dd84ca5fb61c682aa3aebb16a7bb0bb1b9d400e44910",
+      "document": {
+        "id": "AICC-MND-02-EN",
+        "status": "active",
+        "revision": "2.0",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/documents/business-model.md",
+      "hash_basis": "file_bytes",
+      "sha256": "66002c72230f456c26f793c01b911470f136fb070d56c6bc6d3ab61efa390dcf",
+      "document": {
+        "id": "AICC-MND-03-EN",
+        "status": "active",
+        "revision": "2.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/documents/document-catalog.md",
+      "hash_basis": "file_bytes",
+      "sha256": "57defc4ca138e289c5c6f43d75e04c38e161a3bdfe35ff550a4d21f0c7a007e9",
+      "document": {
+        "id": "AICC-REF-02-EN",
+        "status": "active",
+        "revision": "2.0",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/documents/operating-model.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6d917ac2389d894780cf8bc119ed0588aaf65ce99d407f54fb22b323a6a3e72b",
+      "document": {
+        "id": "AICC-ORG-01-EN",
+        "status": "active",
+        "revision": "2.0",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/documents/portfolio-management-model.md",
+      "hash_basis": "file_bytes",
+      "sha256": "871ff0604fecefd149a0d7144639c054947369156e742dcb280894428a485b86",
+      "document": {
+        "id": "AICC-ORG-02-EN",
+        "status": "active",
+        "revision": "2.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/documents/solution-lifecycle-model.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bd3adc4f4d28c366ca1de7f3a085e71921f344cd75489a7ddd5ddf999ee9c939",
+      "document": {
+        "id": "AICC-ORG-03-EN",
+        "status": "active",
+        "revision": "2.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/documents/statement-of-intent.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e38885f64b839d9d6d323cdde84b1f1db812034f87de8726337be10d61f71e5c",
+      "document": {
+        "id": "AICC-MND-01-EN",
+        "status": "active",
+        "revision": "1.0",
+        "revised": "2026-10-02"
+      }
+    },
+    {
+      "path": "charter/documents/vocabulary.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bbb4cac3c317ecdf80f7fb8042a82d27ac12848292bbfd9dc40fb4174c86f732",
+      "document": {
+        "id": "AICC-REF-01-EN",
+        "status": "active",
+        "revision": "2.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/executive-summary.md",
+      "hash_basis": "file_bytes",
+      "sha256": "0f0b49db26d3f444f5c9abbbd5dc19d83c26b20156878f200e227873c5a2ca3d"
+    },
+    {
+      "path": "charter/guides/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c83fd960dcd96fcb64e3e2ae97af65990b9308dd897fedeb90f8002ba0abdb35"
+    },
+    {
+      "path": "charter/guides/cadence-guide.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6a90108f914c0e9847aca80a28495b1a8ed7b7e863f38324712978943b191555"
+    },
+    {
+      "path": "charter/guides/engagement-guide.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f163dcb4a595349f1b581dc3968f61eb15e9468b92c679a70ccb7af2c89cfcfe"
+    },
+    {
+      "path": "charter/guides/organization-guide.md",
+      "hash_basis": "file_bytes",
+      "sha256": "49fb66ae563ad9bfd77a208f3e173521a41366550321cd4386505bf9d73de34b"
+    },
+    {
+      "path": "charter/guides/service-delivery-guide.md",
+      "hash_basis": "file_bytes",
+      "sha256": "851e19d962a5817851c398d681a0c639f67868d35316dd093de99741b0b83b95"
+    },
+    {
+      "path": "charter/guides/unit-governance-guide.md",
+      "hash_basis": "file_bytes",
+      "sha256": "9d52943445a6b3e7c431ce8213bc2fb96aa98828b8114cda003f35119e1b0f7d"
+    },
+    {
+      "path": "charter/templates/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ae285d7a361a67b1c82786ce010fc88a23c5a3a378d1bd6e17647d7576006f63"
+    },
+    {
+      "path": "charter/templates/acceptance-checklist.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ccda3ed54fd1af8700c9950adb078f8fda62b2f0d0948b9490bb3ec08c3a36d2",
+      "document": {
+        "id": "AICC-TPL-13-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/ai-incident-review.md",
+      "hash_basis": "file_bytes",
+      "sha256": "165bc8adcc830b040bb6a6ed6ea3738a49f61807a473329c4577292000537306",
+      "document": {
+        "id": "AICC-TPL-10-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/appointments-record.md",
+      "hash_basis": "file_bytes",
+      "sha256": "0fce54ca2aad163d0a044d344646581a90371ff4e27f524c8886cde955d6c713",
+      "document": {
+        "id": "AICC-TPL-09-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/control-sign-off.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5cb84e3840f16fda8f14fe83c1f000155f0070edb4539b1c01114fbb01f14625",
+      "document": {
+        "id": "AICC-TPL-03-EN",
+        "status": "active",
+        "revision": "1.0",
+        "revised": "2026-10-02"
+      }
+    },
+    {
+      "path": "charter/templates/decision-record.md",
+      "hash_basis": "file_bytes",
+      "sha256": "89250cef42b2c52eb96bd66659a8fada80591d4c7b20b28a3955da0a4ace9e17",
+      "document": {
+        "id": "AICC-TPL-08-EN",
+        "status": "active",
+        "revision": "1.0",
+        "revised": "2026-10-02"
+      }
+    },
+    {
+      "path": "charter/templates/initiative-brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "9f36885e15d252f54fe8149e33b3c0133183577bf021a8ed9f2b2963250dbc49",
+      "document": {
+        "id": "AICC-TPL-02-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/outcome-report.md",
+      "hash_basis": "file_bytes",
+      "sha256": "160ed1cbaa1400c1bbdd9e157708109cad78c6c8b640d20bc5c15a45f69127cf",
+      "document": {
+        "id": "AICC-TPL-07-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/package-definition.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8bfee57f51634f79985f3b02f0fe52a7205d205e739f65b47c0d699691ff00c8",
+      "document": {
+        "id": "AICC-TPL-14-EN",
+        "status": "active",
+        "revision": "1.0",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/proposal.md",
+      "hash_basis": "file_bytes",
+      "sha256": "1d047f462e0671478781a243847be8fae074b66c57bb53ba9a75b01a0eee3cff",
+      "document": {
+        "id": "AICC-TPL-12-EN",
+        "status": "active",
+        "revision": "1.0",
+        "revised": "2026-10-02"
+      }
+    },
+    {
+      "path": "charter/templates/quarterly-report.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5900aa615587bc417c012c42bcb6f3b8fcd1dca318af9a06f2fe3a36209b8047",
+      "document": {
+        "id": "AICC-TPL-05-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/registry-snapshot.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b449d9ecaa6bece875e8f58fd3c2d46bd10d7fd282b03e789d5158ff9f875cec",
+      "document": {
+        "id": "AICC-TPL-11-EN",
+        "status": "active",
+        "revision": "1.0",
+        "revised": "2026-10-02"
+      }
+    },
+    {
+      "path": "charter/templates/service-agreement.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6cde2d1129e23fc3779cfd2a94e9c476160c2cb940685500ecdaca34df576900",
+      "document": {
+        "id": "AICC-TPL-06-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/solution-definition.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f30ee020e5b3d9d5a011170c3f200997b530dc4c9adb5b782c38e321c7e18459",
+      "document": {
+        "id": "AICC-TPL-01-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/templates/steering-summary.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a1d83f5cc07a236379303054ade10b1361e80fa0b70ec2480ad547513031e7fc",
+      "document": {
+        "id": "AICC-TPL-04-EN",
+        "status": "active",
+        "revision": "1.1",
+        "revised": "2026-10-03"
+      }
+    },
+    {
+      "path": "charter/workflows/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5824c2d421d0bd8307c2a8f11f53dfa002baec472a7af563592e3c3348ae59a2"
+    },
+    {
+      "path": "charter/workflows/ai-risk-control.md",
+      "hash_basis": "file_bytes",
+      "sha256": "05da8b653ab61f9ec56afdf0af3fb34677762010564a277bab29268918c8ef0e"
+    },
+    {
+      "path": "charter/workflows/cadence.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6d4478da4f37846e5c13985f1514730b141d29e46b785ac7a5cbe5ae3dbb1fdd"
+    },
+    {
+      "path": "charter/workflows/collaboration-tooling.md",
+      "hash_basis": "file_bytes",
+      "sha256": "00748bb5976d09bc2aeded1645b75b582e5129260acee5366177498f7ff15afe"
+    },
+    {
+      "path": "charter/workflows/engagement.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a1bc2432f1f35680741d717eeaaadc3f3833747f28ecd3ed1d21d78b5055bafd"
+    },
+    {
+      "path": "charter/workflows/service-delivery.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7bf2cc0940fa4681cb3390b34142a273a1649ad120639769ee0d8794d1fb1a49"
+    },
+    {
+      "path": "charter/workflows/unit-governance.md",
+      "hash_basis": "file_bytes",
+      "sha256": "2464e22016c0b75449e287bf7cd705cfe4a232dead6529ec2bc6df3eec8f715c"
+    },
+    {
+      "path": "portal/content/about/how-we-work.md",
+      "hash_basis": "file_bytes",
+      "sha256": "305ffdcca41ad9d48f5658795f88d3b531c93a7fbadca30893e440d49d78eced"
+    },
+    {
+      "path": "portal/content/about/what-we-do.md",
+      "hash_basis": "file_bytes",
+      "sha256": "1a5b33a39bf97df741796a5fb02aeff145094efc54a61f10e3cafc47549b1927"
+    },
+    {
+      "path": "portal/content/authored.json",
+      "hash_basis": "english_projection",
+      "sha256": "2349e3edf7b972b51020a3ac387b84b5308ce9b84a08cff9c3e4385d3cf8dde8"
+    },
+    {
+      "path": "portal/content/delivery/backlogs-boards-and-kanbans.md",
+      "hash_basis": "file_bytes",
+      "sha256": "45ebdf5f32c3014b194b3e9420a45ef44e9ca808693071f2b54d2212c57f0014"
+    },
+    {
+      "path": "portal/content/delivery/events-and-rituals.md",
+      "hash_basis": "file_bytes",
+      "sha256": "636c66473b3fb401b8bdca2a2366416b71759882822a8ac1859a7a59d9bb09ee"
+    },
+    {
+      "path": "portal/content/delivery/experiment-workflow.md",
+      "hash_basis": "file_bytes",
+      "sha256": "aec83e0ac4e59ed9aff77253e625c3f319c333c5fed9fa35aae2daf2461cd249"
+    },
+    {
+      "path": "portal/content/delivery/life-cycle-management.md",
+      "hash_basis": "file_bytes",
+      "sha256": "9ab9027f007035cb15ae485f9586ce2ce5a3cb9ce1e4d5ef1b403aae5007e2ba"
+    },
+    {
+      "path": "portal/content/delivery/life-of-a-service.md",
+      "hash_basis": "file_bytes",
+      "sha256": "cf26099ee3d553cbc33dbccd123b3c1d5e530ae87d827cbb4f87df40d29e3603"
+    },
+    {
+      "path": "portal/content/delivery/measures-and-tracking.md",
+      "hash_basis": "file_bytes",
+      "sha256": "827164ff389b58bbfeab3875ba30c4ef685ca7adbb9d12e85d5d8606f5c78ece"
+    },
+    {
+      "path": "portal/content/delivery/measures-definitions-and-formulas.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f4075ef637dd43722c99e1b8989e4acfa6163dbf7087f277449ccae2778007a6"
+    },
+    {
+      "path": "portal/content/delivery/overview.md",
+      "hash_basis": "file_bytes",
+      "sha256": "93149def7548b8ccc062e481c59f310e1d1f4b96eeb4e5cba676f454a775f59c"
+    },
+    {
+      "path": "portal/content/delivery/quality-verification-and-release.md",
+      "hash_basis": "file_bytes",
+      "sha256": "222e832ad4b7510b4d0bc95cceb2d7692d9f125581305d913abb08917b505cbf"
+    },
+    {
+      "path": "portal/content/delivery/roles-and-records.md",
+      "hash_basis": "file_bytes",
+      "sha256": "75e15d76246c50e01d7b31e5e4ec996a9615fff5657747c3a1fb25fc16b4cd08"
+    },
+    {
+      "path": "portal/content/delivery/service-operations.md",
+      "hash_basis": "file_bytes",
+      "sha256": "51e90dca2b4725f2f7f8b964b03204ce6c1d4dc166a2007eda6de8e56cb88489"
+    },
+    {
+      "path": "portal/content/delivery/the-cadence.md",
+      "hash_basis": "file_bytes",
+      "sha256": "be12b7619b998e136e562d0a7ab99dd368694e0a73f429f0d43e356903f714fa"
+    },
+    {
+      "path": "portal/content/delivery/the-flow-of-value.md",
+      "hash_basis": "file_bytes",
+      "sha256": "0f8e1eec6382a96a8f4dc2b1c90e2c2aaba3767bd3dca4d57fb00ec067a332ce"
+    },
+    {
+      "path": "portal/content/delivery/the-loops-of-delivery.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ef0a0264d97ce82a1e2080e60d56ae1c7692ec9d38f0caefc65f010ba947543e"
+    },
+    {
+      "path": "portal/content/governance/controls-and-the-catalogue.md",
+      "hash_basis": "file_bytes",
+      "sha256": "605afbb0948967c5a47c81ce263df11e69cc221cc4dab69dccd5ced8cf9392e6"
+    },
+    {
+      "path": "portal/content/governance/decisions-and-escalation.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c4f7899d1f599e3d8df96a012610931ea5ad3fdab45d247ac645ff1a7ed056d7"
+    },
+    {
+      "path": "portal/content/governance/measures-and-reporting.md",
+      "hash_basis": "file_bytes",
+      "sha256": "cb294bb7d29cc4c491ea0ca489b1ad34e6d0efed6fc082a7b84c0a9b9b2b8d8f"
+    },
+    {
+      "path": "portal/content/governance/overview.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ce1f6191dbd57f03a889fe3c970c3c6a2da0ba12115c5f7cab8fed58ce6a0773"
+    },
+    {
+      "path": "portal/content/governance/records-evidence-and-assurance.md",
+      "hash_basis": "file_bytes",
+      "sha256": "1f55a5a6e64fe9d9e866a505656eeb911940730db0c1d1e81afeb21448c2fc14"
+    },
+    {
+      "path": "portal/content/governance/the-control-loops.md",
+      "hash_basis": "file_bytes",
+      "sha256": "647eadb0eb61eded1d7336ff02fc2d8cfc7d25bef56c982c271c55d7903c0812"
+    },
+    {
+      "path": "portal/content/governance/the-steerings-and-the-bodies.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5605d11104f0ccb8fb05aacc30cd926be2cfce5b21c26b4cde6882cf03d2d0e3"
+    },
+    {
+      "path": "portal/content/knowledge-base/acts-and-compliance.md",
+      "hash_basis": "file_bytes",
+      "sha256": "646ba1cb10bb2665db2d37b294f08ce9b1a66fef5f5784cb885ab2c8be3cda9b"
+    },
+    {
+      "path": "portal/content/knowledge-base/guides.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8f8d76014b38a00b729b264b5c5a8eae2980109455c713bc32b0ea307b8b443b"
+    },
+    {
+      "path": "portal/content/knowledge-base/learning-paths.md",
+      "hash_basis": "file_bytes",
+      "sha256": "deeb7a9dd66c3ab16dc34cb97824cd705449d04e114c54a45bbd5de306aeafe6"
+    },
+    {
+      "path": "portal/content/knowledge-base/overview.md",
+      "hash_basis": "file_bytes",
+      "sha256": "3917b830492282a864e314758b2b7317eec049d3bff8c933ac2097400481e88b"
+    },
+    {
+      "path": "portal/content/knowledge-base/playbooks-and-lessons.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ba41f82f6934f9491ce11c5aff606683e953bfa087d5c170838bc404d3fad84b"
+    },
+    {
+      "path": "portal/content/knowledge-base/questions-people-ask.md",
+      "hash_basis": "file_bytes",
+      "sha256": "958060f23d3dfbf2f69995a0fda9dc5b1affabe0a9bf69f4732aa9ad6d7b8f0a"
+    },
+    {
+      "path": "portal/content/knowledge-base/templates-and-forms.md",
+      "hash_basis": "file_bytes",
+      "sha256": "51c7b601bd7053d8c7c78cb0352bea5b3cafb689c20371ae91af29751d313a5e"
+    },
+    {
+      "path": "portal/content/organization/how-the-organization-grows.md",
+      "hash_basis": "file_bytes",
+      "sha256": "424f977659c132f287fa3553316b2b82b5b8528c58776e3a5b0f32aaaf31e20e"
+    },
+    {
+      "path": "portal/content/organization/overview.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ed430153024a969ed920cf4aca21db4eb2c1be8b0446e17ee4ef0e82b5425683"
+    },
+    {
+      "path": "portal/content/organization/people-and-appointments.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5b2b9ffcf124c1b2a3d5472b5d2bbe4a3e11d22daf7a619765be33ac4ad2e364"
+    },
+    {
+      "path": "portal/content/organization/the-place-of-aicc-in-the-bank.md",
+      "hash_basis": "file_bytes",
+      "sha256": "54ba948bdb447f4bf8925386eb325ad73ad7f0269550c3088f3f49c1ad60daec"
+    },
+    {
+      "path": "portal/content/organization/the-roles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8269b07eafaf8a6ff613296678f6383a192ca15eff7bd1f5bdf74ee17db8d399"
+    },
+    {
+      "path": "portal/content/organization/who-does-what.md",
+      "hash_basis": "file_bytes",
+      "sha256": "2fdad32e1bddb0b7c221d02727fd54c934523a3a715d5f6a962aba35f408e0aa"
+    },
+    {
+      "path": "portal/content/portfolio/measures-and-tracking.md",
+      "hash_basis": "file_bytes",
+      "sha256": "018c33c19dfe645bfe8c701a0e57ea5db4f0d7838e007d12cd0efa68d4d133a8"
+    },
+    {
+      "path": "portal/content/portfolio/measures-definitions-and-formulas.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6bdc555321f0b39f94daa5ca127a27eef55e209d7258b00b069e4967da0c3626"
+    },
+    {
+      "path": "portal/content/portfolio/overview.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c4699ac73c42edfa71894c5f71e02fff043b28c090e18f0b3cf2b72f165d61c8"
+    },
+    {
+      "path": "portal/content/portfolio/roles-and-records.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7dac791b496a6e784bd367d7a71eda7fd877d6e3409b09a0953806a09a96d342"
+    },
+    {
+      "path": "portal/content/portfolio/strategy-and-investment.md",
+      "hash_basis": "file_bytes",
+      "sha256": "25a035f7d8310deaaf0e28ef9c143b8893456dbbae3aa8a6a5355647ddd59a62"
+    },
+    {
+      "path": "portal/content/portfolio/the-business-case-and-the-mvp.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7d66995c8e02238ac0228c1c94f3a0249ed5e7631fcb3609b0f5acff0f83325b"
+    },
+    {
+      "path": "portal/content/portfolio/the-flow.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a71f8df1cdc3b2b8419932799238a97e7f7f760fee2044917bc893fab8a1974d"
+    },
+    {
+      "path": "portal/content/portfolio/the-lanes-and-the-front-door.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c39327f4746161c56118fee0feaab0305d0d0a587e873bc394d14294b024a401"
+    },
+    {
+      "path": "portal/content/portfolio/the-loops-and-governance.md",
+      "hash_basis": "file_bytes",
+      "sha256": "be68c1c6f3d5c4fd4aadfdf780b3f34b2ba3f35d198bee6b78d5bb2d5a757ee3"
+    },
+    {
+      "path": "portal/content/privacy.md",
+      "hash_basis": "file_bytes",
+      "sha256": "31d176be5164784bafddd1969535d6f6fabf62b635ca2645592c6741c2f93dd8"
+    },
+    {
+      "path": "portal/content/reference/industry-body-of-knowledge.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ea53db52027c13659f23bc0a9b5ea6c99f4b3473aa9c3ff2c00bd7e7bc48b376"
+    },
+    {
+      "path": "portal/content/reference/learning-and-open-resources.md",
+      "hash_basis": "file_bytes",
+      "sha256": "76dc13a238be49ccd0e87b8e1d971fd73afa1d5d92ab2097478b6918c9419d6d"
+    },
+    {
+      "path": "portal/content/reference/overview.md",
+      "hash_basis": "file_bytes",
+      "sha256": "18959ce4244ff1717995f14ba499635b637bc96a8f9384d64e08940e36a20cd0"
+    },
+    {
+      "path": "portal/content/reference/regulations/aifc.md",
+      "hash_basis": "file_bytes",
+      "sha256": "28f12fe8f09c2c237c892e46f2b26ec9d0423d076641bb4c31103e42884964b7"
+    },
+    {
+      "path": "portal/content/reference/regulations/bank-of-russia-on-ai.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a5a8705ee24819d215ae26d46d327f4ac5b08d112ea505f754f0ca855f12ee00"
+    },
+    {
+      "path": "portal/content/reference/regulations/council-of-europe-ai-convention.md",
+      "hash_basis": "file_bytes",
+      "sha256": "89f9880e0729df90fd3c16c9ddde53e2bf02014417f184cc5eb9b257405e2821"
+    },
+    {
+      "path": "portal/content/reference/regulations/eu-ai-act.md",
+      "hash_basis": "file_bytes",
+      "sha256": "49f56113bde47b5e0dd0bf641034cebc12701aea9c290a16e7697bf0f4c71a31"
+    },
+    {
+      "path": "portal/content/reference/regulations/eu-dora.md",
+      "hash_basis": "file_bytes",
+      "sha256": "1e8ec39f19ea93663304b24ec1f2da27eaca883b1406f9981e71e4c2285e4007"
+    },
+    {
+      "path": "portal/content/reference/regulations/eu-gdpr.md",
+      "hash_basis": "file_bytes",
+      "sha256": "34d178d4dc119b94aff5c6ac89adc6739f9da3698eedfa520e777fe6fcbb20d4"
+    },
+    {
+      "path": "portal/content/reference/regulations/financial-standard-setters-on-ai.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7161526b09c916262435cef6a2c4c730f6c7a14f91c052f5475a99fed8c143dc"
+    },
+    {
+      "path": "portal/content/reference/regulations/g7-hiroshima-ai-process.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ee50ec69200fc93c63fc0f11933e2b208063d02c83e3bb3a50323f147e0ee38b"
+    },
+    {
+      "path": "portal/content/reference/regulations/iso-iec-ai-standards.md",
+      "hash_basis": "file_bytes",
+      "sha256": "2a7e48bb58cebf8eb86787e82a12418a568fe29b0fd1fa37e77fd27a8224df03"
+    },
+    {
+      "path": "portal/content/reference/regulations/kg-aml-body.md",
+      "hash_basis": "file_bytes",
+      "sha256": "4eab1de3ed801bb8a2b1a366ab5f19a1cd5d29785e932430ec36495c3df40464"
+    },
+    {
+      "path": "portal/content/reference/regulations/kg-digital-development.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7edf3ede9b465558c3ceb4138435ae39631e003664391fd30923aafe060d6918"
+    },
+    {
+      "path": "portal/content/reference/regulations/kg-personal-information-law.md",
+      "hash_basis": "file_bytes",
+      "sha256": "90b8e09ffc2d87d97bbab15379ef437d8dccea0ab1ac39b00e45966efbde40e8"
+    },
+    {
+      "path": "portal/content/reference/regulations/kz-financial-regulators.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7f7ceac72f53a3c51ea34221709d6a3491f1dfb92d67822c4346a35f3811984e"
+    },
+    {
+      "path": "portal/content/reference/regulations/kz-law-on-ai.md",
+      "hash_basis": "file_bytes",
+      "sha256": "4748cb78b3546f8452853b52548c765298c3aefcb16edb13b0d0eeafddcc08d8"
+    },
+    {
+      "path": "portal/content/reference/regulations/kz-personal-data-law.md",
+      "hash_basis": "file_bytes",
+      "sha256": "336867b357a4b00ac8eb6c76a079f178e0e0fd04bc6f75141b7dd2e0a84cbc8e"
+    },
+    {
+      "path": "portal/content/reference/regulations/lean-portfolio-management.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a066a482808eea281d28e23087bbc3baa27e04450373c1223111b2a357a7ccb1"
+    },
+    {
+      "path": "portal/content/reference/regulations/nbkr.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ae05baa2a16510a4875429ca95a4077c6e6fcccc208b169c8ba95daebae17d0a"
+    },
+    {
+      "path": "portal/content/reference/regulations/nist-ai-rmf.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e9d5ce6834bbae168e7edecf709886fab0f22226e738f66804d62540c91b9101"
+    },
+    {
+      "path": "portal/content/reference/regulations/oecd-ai-principles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5a20f9c37d5fc661dd4f697acdddef4d79516167c49b11d87841927debcdea59"
+    },
+    {
+      "path": "portal/content/reference/regulations/owasp-top-10-llm.md",
+      "hash_basis": "file_bytes",
+      "sha256": "d9fa6c0af981a7d4dbfa630759174c0a28a385dd676e6857b7ca4f7d508adcaa"
+    },
+    {
+      "path": "portal/content/reference/regulations/ru-ai-code-of-ethics.md",
+      "hash_basis": "file_bytes",
+      "sha256": "0edf0c4c23680392c15803fe35c8db04d8b2a1a71335d1c5516ee7213a29161f"
+    },
+    {
+      "path": "portal/content/reference/regulations/ru-national-ai-strategy.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c5951863d478a4500eff1c3699a41ddfff49690b6b73272fed321f68d18054bd"
+    },
+    {
+      "path": "portal/content/reference/regulations/ru-personal-data-law.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a06e7c68488d2d7410336badd01ffb3ed007d40ff836dfdd61a0490db91be454"
+    },
+    {
+      "path": "portal/content/reference/regulations/unesco-recommendation-ethics-ai.md",
+      "hash_basis": "file_bytes",
+      "sha256": "204a6e9bf24d195959587d0fdcf74d0f57ccbbfdb26b14b4a814c4ff6c9cd9c6"
+    },
+    {
+      "path": "portal/content/reference/regulations/us-federal-and-state-ai-policy.md",
+      "hash_basis": "file_bytes",
+      "sha256": "618f9c3fdb5cbbdbf8fd081e107525156b25250ba1b8ae2e3305ee97cbe78876"
+    },
+    {
+      "path": "portal/content/reference/regulations/us-model-risk-and-consumer-guidance.md",
+      "hash_basis": "file_bytes",
+      "sha256": "cdbe944c1bcf1a5062d95def172765d67bedb16e67856595f18691b84f7b97b2"
+    },
+    {
+      "path": "portal/content/reference/regulators-and-acts.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f4d1c302dbf4f92f48c2a623208a12cac795a28bc1a527079aeb559a96018248"
+    },
+    {
+      "path": "portal/content/reference/research-and-insight.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a54f2c9af1fd9708f40c4ebed33630e8b2877b1cc00d9ddf79a070e24d8174dd"
+    },
+    {
+      "path": "portal/content/reference/resources/arxiv-and-papers-with-code.md",
+      "hash_basis": "file_bytes",
+      "sha256": "daaeb51b5a6f4dda4ee51d4452061b598656461954519f5a0a8317ff2cc2b07b"
+    },
+    {
+      "path": "portal/content/reference/resources/bis-innovation-hub.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a53756ce795eefb58885cbf09a9fdfab69a2f438b41a0cdd417f65bcc64862e7"
+    },
+    {
+      "path": "portal/content/reference/resources/deeplearning-ai.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8650c0466d18d51ddb06d55dff54a77a3acc043837ac886ac734e7aff370bd71"
+    },
+    {
+      "path": "portal/content/reference/resources/hugging-face.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5421dfc75c4804452eab5bd2a67c8c9bbd698e56632a703926dd7653caa6fd7a"
+    },
+    {
+      "path": "portal/content/reference/resources/imf-and-world-bank.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f2c93357fc33e3d8727e47e3b174674081b635ef3a424af89a47fb67c88fdda7"
+    },
+    {
+      "path": "portal/content/reference/resources/mckinsey-and-quantumblack.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b475e0c99acbde52e643bb618b1f5ae6d84a22f8e68e2ba87824a2958fe4b3e4"
+    },
+    {
+      "path": "portal/content/reference/resources/mitre-atlas-and-ai-incident-database.md",
+      "hash_basis": "file_bytes",
+      "sha256": "20b054f0b82b0986a12b3f43a6aba13d29e9bec09d02dfb5c07651e2a5905ffc"
+    },
+    {
+      "path": "portal/content/reference/resources/stanford-hai-ai-index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "0745589e3806a228534cb5f5c8746ff83e0949dd99adcea311454e3e0f01f561"
+    },
+    {
+      "path": "portal/content/reference/resources/world-economic-forum.md",
+      "hash_basis": "file_bytes",
+      "sha256": "fd88529e5340d0b20ed55f3b3fd88524cd29536d816439b13c3c349e6471ee2f"
+    },
+    {
+      "path": "portal/content/responsible-ai/ai-in-fintech-and-digital-banking.md",
+      "hash_basis": "file_bytes",
+      "sha256": "600f9f7e2097211e9c89b2be9ce23e22f130731f3dc2f4a8a460dec4c4ecaf66"
+    },
+    {
+      "path": "portal/content/responsible-ai/ai-terms-explained.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b41fef6431e78107afa14c6759e3e1f4be4fc0d06d1b33da37bbc3150a82702e"
+    },
+    {
+      "path": "portal/content/responsible-ai/how-the-bank-applies-it.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f64482d1638004ccdddbdc9d5ff581425ebf376b802db3de01baeb154d591e64"
+    },
+    {
+      "path": "portal/content/responsible-ai/opportunities.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f85eb204facdf460d4b3b26f7111ccea87dcee7f274676be85bf342fbd39a403"
+    },
+    {
+      "path": "portal/content/responsible-ai/risks-and-challenges.md",
+      "hash_basis": "file_bytes",
+      "sha256": "49b237f8bae26da4b072d3529b7da9fc29ad1bd779211c29b5988e1e6f9f4c9e"
+    },
+    {
+      "path": "portal/content/responsible-ai/understanding-ai-today.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8ac23df84d53c3d400735d680396707d4a7a045dc3af73fcc770fa5a30011a9a"
+    },
+    {
+      "path": "portal/content/responsible-ai/what-responsible-ai-means.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7ef621756b36b1611309412943f3bb2b1b52cd375a8590c787b00a3354cdd403"
+    },
+    {
+      "path": "portal/content/services/adoption-and-lifecycle-management.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b45a1341684c42b8140cea9fba1a3b9bd861bf69a71df5b78b8a4afa7d9b4663"
+    },
+    {
+      "path": "portal/content/services/analytics-and-decision-support.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b723cd329afbb487a1fdef0729d25cbad3f70701de983139c92d5c29b5bc69eb"
+    },
+    {
+      "path": "portal/content/services/areas/advise-and-formulate.md",
+      "hash_basis": "file_bytes",
+      "sha256": "2682414618f97bc5722e3556fd6e8f6b315efbc58ae092806ad776b0dc0a3b53"
+    },
+    {
+      "path": "portal/content/services/areas/assurance.md",
+      "hash_basis": "file_bytes",
+      "sha256": "cfd33abc4f367821d389e2179c1fef6be4f3333438adebd951e5c9c74b38d688"
+    },
+    {
+      "path": "portal/content/services/areas/build-and-run.md",
+      "hash_basis": "file_bytes",
+      "sha256": "40ef845716b9ba221c7d4dc078cabf75169967fcd3b5a63c26bdc91fc40f936c"
+    },
+    {
+      "path": "portal/content/services/areas/enablement.md",
+      "hash_basis": "file_bytes",
+      "sha256": "4220ffc285f225808399abfab4df6431025276def7f427001a912fc765a0f981"
+    },
+    {
+      "path": "portal/content/services/areas/overview.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bcd6210b27ad51568f6c1c36deeff40ee33c7dd3667fbc6d9439ce73d76af051"
+    },
+    {
+      "path": "portal/content/services/assessments-and-evaluations.md",
+      "hash_basis": "file_bytes",
+      "sha256": "373a99449bfd76a091c806726ab59859b64109524a73e3f0f0c7ccad5e247051"
+    },
+    {
+      "path": "portal/content/services/business-cases-and-scenarios.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ebae27ef3f736a7e024f0c6044917c324759462acf7d0a4be8a3f1c7df2d96e5"
+    },
+    {
+      "path": "portal/content/services/catalog-form.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b1808507f2a49bed47157e86896f4ef5e42e20b80e9a6202e536b67b993debc3"
+    },
+    {
+      "path": "portal/content/services/content-management.md",
+      "hash_basis": "file_bytes",
+      "sha256": "eaf8e0a3ed35f56376dd0211b65a1a0f11e7bc2215db5f9e8bc5656c5a99a5aa"
+    },
+    {
+      "path": "portal/content/services/how-to-engage.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7e7e115d055743ace217340a294709528ff71b0682bd21c0cd8e255a5d89b6ad"
+    },
+    {
+      "path": "portal/content/services/knowledge-services.md",
+      "hash_basis": "file_bytes",
+      "sha256": "47aaa8ea8e77c933276f25a3a377ed7e1e59381e6444a68b2269a9016633c68c"
+    },
+    {
+      "path": "portal/content/services/normatives-and-processes.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7c63961243f1c40ceb492e60eb19fedba95eebf4c09754600a5363e61aca0eb6"
+    },
+    {
+      "path": "portal/content/services/oversight.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bdcb09f76b5117afd8a8bfe6961ff8d9a74dbfebec69ae005e9c723d7466112a"
+    },
+    {
+      "path": "portal/content/services/platforms.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c985e85d37ea5cfbfe779c29ad4f69d0756450167c9467a713625d89155dd4f2"
+    },
+    {
+      "path": "portal/content/services/policies-controls-criteria.md",
+      "hash_basis": "file_bytes",
+      "sha256": "281754261a60b1bd484cfc4beac2b0b1f073034ae411923bdea6cce3fd2d136a"
+    },
+    {
+      "path": "portal/content/services/research-and-exploration.md",
+      "hash_basis": "file_bytes",
+      "sha256": "336b2775ed7119bd7a5a55deebe0b50676360db3e957bcdd52f0962a09bfc999"
+    },
+    {
+      "path": "portal/content/services/risk-tiering.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7c8be828d4a15ee2628dd47851287e036410567ff75cc71673185ef9d6262658"
+    },
+    {
+      "path": "portal/content/services/service-model.md",
+      "hash_basis": "file_bytes",
+      "sha256": "382ed6ec8b757a1fe0902910679ae93e5c655bce09c08629d4bcd304967c0f84"
+    },
+    {
+      "path": "portal/content/services/strategy-and-governance.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ec70d66004545ba644c00810549f2486494b762627ac7e88de81926be4a47686"
+    },
+    {
+      "path": "portal/content/services/training-and-knowledge-sharing.md",
+      "hash_basis": "file_bytes",
+      "sha256": "71217846bd0bec95226854afafa4a545d3086edb1e2e697c02b3ba926f1a7a05"
+    },
+    {
+      "path": "portal/content/services/workplace-automation.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ce233a3cc92d1bbe088f6657f5bd1f3083f0d327a4455a88be3521d3347a5917"
+    },
+    {
+      "path": "portal/content/terms-of-use.md",
+      "hash_basis": "file_bytes",
+      "sha256": "366716ae8e1c2f8a18deeab8bc3f9aa195fea0704c427ae87bb308d8c8f5d8c8"
+    },
+    {
+      "path": "portal/messages/en.json",
+      "hash_basis": "file_bytes",
+      "sha256": "f5f7ba5d166f962f82d874684f4bdbb85f8d8bb893ad10cd7c8cf211cbf92b98"
+    },
+    {
+      "path": "portal-scaffolding/sitemap.json",
+      "hash_basis": "file_bytes",
+      "sha256": "e7a76c224c675e96464b8124fd5bacb02a53babfd653befe1845612b7f2ee1ed"
+    },
+    {
+      "path": "portfolio/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e0fc98309d2fd157c86dee26717b96e19c6fc2ee2c0aff7d61800b3aeea2e750"
+    },
+    {
+      "path": "portfolio/packages/PKG-001-charter-method-and-templates.md",
+      "hash_basis": "file_bytes",
+      "sha256": "95b215b80edb6ce357b82765c38d44c593796e7cb992e62f8fe5c0ea15c14c57"
+    },
+    {
+      "path": "portfolio/packages/PKG-002-governance-catalog.md",
+      "hash_basis": "file_bytes",
+      "sha256": "409dd24082c6d17835071329f54f79505f7085ad716cb62150b17ff3abfe3076"
+    },
+    {
+      "path": "portfolio/packages/PKG-003-portal-generator.md",
+      "hash_basis": "file_bytes",
+      "sha256": "04b4db2f1eecc4ef879422dd0c564cb0f08a8acddfe3b1c62a58befa16402721"
+    },
+    {
+      "path": "portfolio/packages/PKG-004-normative-drafting-and-consistency-assistants.md",
+      "hash_basis": "file_bytes",
+      "sha256": "9cd580255ff0012f25eef7e931ee3476e3e84f85b5ce2739b1981d671f6e7e3e"
+    },
+    {
+      "path": "portfolio/packages/PKG-005-process-drawing-kit.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a3f717f4ce0f6294a6c250fd3092c6114d321c8a9f4a1c7d58626cafeb1a115a"
+    },
+    {
+      "path": "portfolio/packages/PKG-006-knowledge-base-kit.md",
+      "hash_basis": "file_bytes",
+      "sha256": "0d81ce15f0cb075b77b69c707165be29160cf168335da642eeee240dafd167c6"
+    },
+    {
+      "path": "portfolio/packages/PKG-007-catalog-of-automations.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ba0472e69bbf40bd9cafc08c33450a9c430036db02d17ddab46ccb8ae569bf6a"
+    },
+    {
+      "path": "portfolio/packages/PKG-008-etl-and-dashboard-patterns.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a4f081700ed197965f3ef20a45c4c955309d3fd68cfebb87b152ad868da16724"
+    },
+    {
+      "path": "portfolio/packages/PKG-009-template-and-rendering-engine.md",
+      "hash_basis": "file_bytes",
+      "sha256": "fc9e37a81a8bce756e9cf242cbbcffca391beaa79558c4b654eb739616b6c399"
+    },
+    {
+      "path": "portfolio/packages/PKG-010-training-paths-and-skill-libraries.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7dfa497fea39c0dab9c130a3f867e8250f6606834bdfd9613d5ff2bad452a210"
+    },
+    {
+      "path": "portfolio/packages/PKG-011-evaluation-harness-and-assessment-checklists.md",
+      "hash_basis": "file_bytes",
+      "sha256": "d25ea5dee88bd784b72064fb73e029980ec0c9317af6203a51fe91b408a7fe6d"
+    },
+    {
+      "path": "portfolio/packages/PKG-012-watch-and-digest-format.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f6744f4052ebc34db19742299a5565437055756de2ed27a9b9892660c0135060"
+    },
+    {
+      "path": "portfolio/packages.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5841dd701f77bc369ff5f4802ba5058fc0b19691de42093e27c83ea15fe81051"
+    },
+    {
+      "path": "portfolio/solutions/SOL-001-fpa-board-reporting-pipeline.md",
+      "hash_basis": "file_bytes",
+      "sha256": "97fc518fc5b2293797543a7fcfe7893348769c05aef8aef2b34a6165b0d0f5a9"
+    },
+    {
+      "path": "registry/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "82d8c21f5f3e1faca2753b90692e0b3b01720a9d6ae8b6da869d5588324f7abb"
+    },
+    {
+      "path": "registry/ai-registry.md",
+      "hash_basis": "file_bytes",
+      "sha256": "707029790a51eed30caa08febd2901f0a31449dfe3e69946881c8b22099d0bff"
+    },
+    {
+      "path": "registry/appointments.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5239522067613521bdbb2c06ecc56be3767faa7da6b3e31038f480c9cac9453f"
+    },
+    {
+      "path": "registry/board.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8d952b9a4dddddfc1e229b5bf53de2b72f90edadfb401541874f7a14fdb90850"
+    },
+    {
+      "path": "registry/calendar.md",
+      "hash_basis": "file_bytes",
+      "sha256": "869558928d7af672371d9389419840d58de7c682eb0569aa67538929bc77d1ce"
+    },
+    {
+      "path": "registry/control-matrix.md",
+      "hash_basis": "file_bytes",
+      "sha256": "93b7733f7390cdd710a500a32b98d6536edc828e6edd723973135f84290b6ae2"
+    },
+    {
+      "path": "registry/dashboard.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e308648f5e95f8420c50f68fccc70775337375b760a7b5fb8409cd8a895bdea7"
+    },
+    {
+      "path": "registry/decision-log.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c1c52d67510a5a55640be4d50c2c8d51404fcbc1ce695d2cf727cbac747d0159"
+    },
+    {
+      "path": "registry/decisions/DR-2026-060-baseline-of-the-charter-and-the-registry.md",
+      "hash_basis": "file_bytes",
+      "sha256": "cdd91229d28bee7bfa9eddd9026dcddfd92e6aa68b92cee47d04eed20f7964eb"
+    },
+    {
+      "path": "registry/decisions/DR-2026-061-the-first-steering.md",
+      "hash_basis": "file_bytes",
+      "sha256": "2031fdb157ce0ae2cde22e839c5be2c7b3cad0cd015e6b09b98793083263597c"
+    },
+    {
+      "path": "registry/decisions/DR-2026-062-revision-2-0-of-the-documents.md",
+      "hash_basis": "file_bytes",
+      "sha256": "67140fcb6da72722879dda5b04ac635d2bcc7026951ff87ab0500a655f70b507"
+    },
+    {
+      "path": "registry/decisions/DR-2026-063-approved-english-baseline.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8f2ffc3cd82b8a0da2f21a2a3903900da3d3cb3f48908054b607a055452e9612"
+    },
+    {
+      "path": "registry/decisions/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5cf08cdc0f172665ad2db1da993df4550eb96087a4b5349483715c96146487d2"
+    },
+    {
+      "path": "registry/dependencies.md",
+      "hash_basis": "file_bytes",
+      "sha256": "3614bdd175ee4eb89ee0d16a94bd321b18a88c7a282cfdd37702c0ff3bdf86a3"
+    },
+    {
+      "path": "registry/initiatives/INI-002-service-landscape-discovery/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b103ba498ef197394531b1296c4ca7e13134cfda4fd1e20b839b696abe78c5d7"
+    },
+    {
+      "path": "registry/initiatives/INI-003-ai-in-daily-work-of-functions/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7bbd8c56d0420772860903a6a6dd0c467d4c3b51f44f92535fa35756b8c88c11"
+    },
+    {
+      "path": "registry/initiatives/INI-004-fpa-board-reporting/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "dc50c4e5c234b504b34e0f399d1ce40437ff70c9af362cc8546c72321cc581d8"
+    },
+    {
+      "path": "registry/initiatives/INI-006-customer-experience-intelligence-discovery/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "000d31116abd24a2cd91b4df2592c20ff89ca5cd23096ed9dc89abb3f2fc98be"
+    },
+    {
+      "path": "registry/initiatives/INI-007-retail-credit-discovery/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "3d2f37818f5504de93f460b9e1b4c2fc9ac407366c457222fbd74d3b0c78dacd"
+    },
+    {
+      "path": "registry/initiatives/INI-008-knowledge-bases/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "88d6fde675c6a49a4dc6d76137bede833f247341540a3481bc1ff56613e6984f"
+    },
+    {
+      "path": "registry/initiatives/INI-009-standing-advise-and-formulate/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "1d90c59757eeb80ac6c0e1ba7f41cb0edba7fd5452f5f379f2ec06d22a3a652b"
+    },
+    {
+      "path": "registry/initiatives/INI-010-standing-build-and-run/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a9db6a8ec31ce8d3ea4240fc8d7ff72ef96d9ca4c23bda5e0915fa784ce1e765"
+    },
+    {
+      "path": "registry/initiatives/INI-011-standing-enablement/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e19c79e561462a44fe0ccc2efef96e7cada5bea34d2da2eda23018677ac8aa49"
+    },
+    {
+      "path": "registry/initiatives/INI-012-standing-assurance/brief.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f5291e606f464ed49e134e79b8225a20b868d940ae53c526d98ee32436f1dfc0"
+    },
+    {
+      "path": "registry/initiatives/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bc56def37ada41b16edb337a13df5f9b526cc839e07fef9b5fb753c1c43b8a7c"
+    },
+    {
+      "path": "registry/pi/2026-PIQ4/I10.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b5dee3b4d8b1c5b9e2d96c7f366e11ee32dd0a43474cc421231fed35bfc2660a"
+    },
+    {
+      "path": "registry/pi/2026-PIQ4/I11.md",
+      "hash_basis": "file_bytes",
+      "sha256": "de56fdfc14989f578ba07f0f148ba6692f681f2ca86e37f626dfa9fa483b66e2"
+    },
+    {
+      "path": "registry/pi/2026-PIQ4/I12.md",
+      "hash_basis": "file_bytes",
+      "sha256": "93d467b22e7a74d53270cfecf73102d65ef8cf19315d20bbb085ddc1e9aa74b4"
+    },
+    {
+      "path": "registry/pi/2026-PIQ4/ip-week.md",
+      "hash_basis": "file_bytes",
+      "sha256": "3672cce0cd7d0b529e47c6291b4274a2d7e963552a5f6b40305051363ca20a2f"
+    },
+    {
+      "path": "registry/pi/2026-PIQ4/iterations.md",
+      "hash_basis": "file_bytes",
+      "sha256": "babda95271e3a32806c1fe7bf13e09697cd3ed49844ca3430d7a061baf29ff4d"
+    },
+    {
+      "path": "registry/pi/2026-PIQ4/objectives.md",
+      "hash_basis": "file_bytes",
+      "sha256": "eede145f32a420905aec0c2fdbe81ce9610b1bbaf9a50967da1ba75088070913"
+    },
+    {
+      "path": "registry/portfolio-backlog.md",
+      "hash_basis": "file_bytes",
+      "sha256": "be434d3d7e485ac6ddf733911320e4ce27f354382111ab40d9ab6de772cf54d8"
+    },
+    {
+      "path": "registry/priorities.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7bfc8d6f6e540f0b83656e821de5dd0510fc7d667be136916dd873cdfb694138"
+    },
+    {
+      "path": "registry/program-backlog.md",
+      "hash_basis": "file_bytes",
+      "sha256": "2a341fdbddcf82fd7773b3e9b63aa11f41b4d0a0a047801d799ec8943ae3aa64"
+    },
+    {
+      "path": "registry/reports/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5c2ed8841768e0cc44f98b6609f01f0b7ef31ff6eefd0cf94ff9723aa223c6bb"
+    },
+    {
+      "path": "registry/risks-and-issues.md",
+      "hash_basis": "file_bytes",
+      "sha256": "4b2b1835976300a7077454f0fcad3d05de194c8672185dfe6d8bcc8edf7e17c2"
+    },
+    {
+      "path": "registry/roadmap.md",
+      "hash_basis": "file_bytes",
+      "sha256": "829229f3b5ac5045d12a9584145322dacb20e74f97d8b93f2fad663036a3053f"
+    },
+    {
+      "path": "registry/standards.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b2833e470ea6ca0ba5213553040645ae44ae285fe22d2bc4d52336faad97a3c8"
+    },
+    {
+      "path": "registry/steering/2026-09-02-first.md",
+      "hash_basis": "file_bytes",
+      "sha256": "68116369538c22228d02b0a8dc8a9a13a8a5ae65320e4695917bbe38ff38d64b"
+    },
+    {
+      "path": "registry/steering/README.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5e7476719829367ca3a0ec1d79020e879265eac97cc5cc967b287c67fdf137fa"
+    },
+    {
+      "path": "registry/teams.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8fcc507c0653294e5c595965d5ce67607d7c142e67c7f7a7af30c8b6824d9633"
+    }
+  ],
+  "baseline_tag": "baseline-2026-10-03-en-v2.2",
+  "approval_record": "registry/decisions/DR-2026-063-approved-english-baseline.md"
+}

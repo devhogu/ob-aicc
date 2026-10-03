@@ -1,6 +1,6 @@
 # Dashboard
 
-The state of the Program Increment at a glance. The AICC Lead updates it at each Weekly Review, from the Records named in each section. Last updated: 2026-10-02.
+The state of the Program Increment at a glance. The AICC Lead updates it at each Weekly Review, from the Records named in each section. Last updated: 2026-10-03. The approved English baseline and Standing Initiative establishment are recorded in DR-2026-063; this Dashboard records the resulting state and counts.
 
 ## 1. Program Increment
 
@@ -26,12 +26,12 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 
 | Portfolio Kanban: Initiatives | Funnel | Reviewing | Analyzing | Portfolio Backlog | MVP | Implementation | Done |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Limit | not set | not set | not set |  | not set | not set |  |
+| Limit | No cap | No cap | No cap | No cap | 1 shared Active | 1 shared Active | No cap |
 | Items | 0 | 6 | 0 | 0 | 0 | 0 | 0 |
 
 | Program Kanban: Capabilities and Features | Backlog | Ready | Active | Review | Done | Waiting (flag, in any column) |
 | --- | --- | --- | --- | --- | --- | --- |
-| Limit | not set | not set | not set | not set | not set |  |
+| Limit | No cap | 2 Features; 1 Capability | 1 Feature; 1 Capability shared with Review | Shares Active limit | No cap | Retains its place |
 | Items | 0 | 0 | 0 | 0 | 0 | 0 |
 
 | Flow Measure | Value |
@@ -53,6 +53,8 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 | Change failure rate, and repeat incidents of live Solutions |  |
 | Benefit confirmed against the claimed benefit and the Envelope |  |
 
+Four Standing Initiatives (INI-009 to INI-012) are Approved under DR-2026-063 and tracked separately from the ordinary portfolio Kanban. Their measures and shared capacity limits are adopted; RI-008 is Closed and DEP-015 is Met. No run-rate Feature has been admitted under them, so none is Active.
+
 ## 4. Roadmap
 
 Source: roadmap.md.
@@ -67,16 +69,16 @@ Source: dependencies.md.
 
 | Dependencies | Open | Met | At risk |
 | --- | --- | --- | --- |
-| 14 | 14 | 0 | 0 |
+| 15 | 14 | 1 | 0 |
 
 ## 6. Risks and issues
 
-Source: risks-and-issues.md. Three items are accepted limits, and two are open Issues.
+Source: risks-and-issues.md. Three risks are accepted limits; two Issues, one Risk, and one Deficiency are Open. RI-008 is Closed by the baseline establishment approval. C-08 is in Deficiency (RI-004), and C-32 is Open because its remediation due date has not been recorded.
 
 | Severity | Open or accepted |
 | --- | --- |
 | Blocker | 0 |
-| Major | 5 |
+| Major | 7 |
 | Minor | 0 |
 
 ## 7. Measures of the Maturity Level

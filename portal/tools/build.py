@@ -45,7 +45,7 @@ CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
 PREFIX = {'about': 'ABT', 'responsible-ai': 'RAI', 'services': 'SRV', 'portfolio': 'PFL', 'delivery': 'DLV', 'governance': 'GOV', 'organization': 'ORG', 'knowledge-base': 'KNB', 'reference': 'REF'}
 LANGS = ['en', 'ru']
 DEFAULT_LANG = 'en'
-BASELINE = {'revision': '1.0', 'date': '2026-10-02'}
+BASELINE = {'revision': '2.2', 'date': '2026-10-03'}  # English source edition; documents retain their own revisions.
 
 FONTS = os.path.join(ROOT, 'portal', '.tools', 'pw-syslibs')
 SHORT = {'Statement of Intent on the Adoption of Artificial Intelligence': 'Statement of Intent', 'Vocabulary and Style': 'Vocabulary', 'Portfolio and service delivery workflow': 'Service delivery workflow'}

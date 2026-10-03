@@ -702,7 +702,7 @@
    "en": "How the charter is kept"
   },
   "control": {
-   "en": "The pages of the documents, the workflows, the guides, and the templates are generated from the charter at the baseline revision stated in the footer; the pages that explain them are written for the site, state no rule, and each states its edition (Document Catalog 5.4). Where a page and a document differ, the document prevails. The Document Catalog states the status, the revision, and the life cycle of each document and template, and the AICC Lead activates them. Each document carries its change history, shown at the end of its page. The controls that can be tested are listed in the Operating Model, section 8, and the evidence of each is held in the Registry."
+   "en": "The footer identifies the English source edition of this site. Each document and template shows its own identifier, status, revision, and revised date; the edition number does not replace those revisions. Document, workflow, guide, and template pages are generated from the charter. Explanatory pages are written for the site, state no rule, and belong to the source edition in the footer (Document Catalog 5.4). A translation identifies that source edition and the revision of each document it translates. Where a page and a document differ, the document prevails. The Document Catalog states the status, the revision, and the life cycle of each document and template, and the AICC Lead activates them. Each document carries its change history, shown at the end of its page. The controls that can be tested are listed in the Operating Model, section 8, and the evidence of each is held in the Registry."
   }
  },
  "strategy_page": {

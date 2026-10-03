@@ -6,6 +6,8 @@ The course states what the Portfolio measures and why. This page states the meas
 
 1.1. A measure has a definition, a source, a place where it is read, and a target that is set once there is a baseline. A figure of the Bank stays in its source system, and the record points to it. Time is counted in calendar days unless stated; a Program Increment is one quarter; an Iteration is one month. Measures of flow are read as distributions and trends, not as single numbers: the median and the eighty-fifth percentile say more than the mean. No measure is used to rank people.
 
+Standing Initiatives are shown separately from the ordinary portfolio Kanban and are excluded from its flow measures. Their run-rate Features are counted in the delivery measures (Portfolio Management Model 9.2).
+
 ## 2. Flow measures
 
 | Measure | Definition | Formula | Source | Read at | Target rule |

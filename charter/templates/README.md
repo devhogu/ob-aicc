@@ -24,10 +24,15 @@ A Capability has no Template. It is a line in the Program Backlog. A Feature tha
 | Field | Entry |
 | --- | --- |
 | Identifier | FT-[nnn] |
-| Capability | [the Capability that the Feature delivers] |
+| Parent | [the Capability that the Feature delivers, or the Standing Initiative for run-rate work] |
+| Client function and Domain Owner | [the requesting function and its accountable owner] |
+| Data-use approval reference | [the approval for the purpose and data class where AI is used] |
+| Approved by, and date | [the Team at Iteration Planning, or the AICC Lead at the Weekly Review for run-rate work] |
 | Feature | For [the user], [the Feature]. We believe that it will [benefit] |
 | Acceptance criteria | Given [situation], when [action], then [result that can be observed] |
 | Dependencies | [on other items, functions, or persons] |
 | Test reference | [reference of the test by a person other than the builder, Solution Lifecycle Model 7.1] |
-| Change ticket key | [key of the change in the change management of the Bank, Solution Lifecycle Model 8.3] |
+| Delivered result | [reference to the deployed result, document, training, or other deliverable] |
+| Change ticket key | [for a production deployment: key of the change in the change management of the Bank, Solution Lifecycle Model 8.3] |
 | Accepted by, and date | [the product owner, and the date, Solution Lifecycle Model 7.3(a)] |
+| Other terminal exit, and date | [the state and date, if the Feature leaves the flow without acceptance] |

@@ -4,7 +4,7 @@ Delivery is how an approved idea becomes a working Solution in the hands of a fu
 
 ## 1. One picture
 
-1.1. Figure 1 shows delivery end to end: the stream a Feature travels, from the Capability that the Portfolio approved to a Solution in use, and the loops that run around it.
+1.1. Figure 1 shows the delivery of a Solution end to end: from the Capability that the Portfolio approved to a Solution in use, and the loops that run around it.
 
 ```mermaid
 flowchart TB
@@ -28,6 +28,8 @@ flowchart TB
 ```
 
 Figure 1: delivery end to end, the stream and the loops.
+
+1.2. Run-rate work follows the route in Solution Lifecycle Model 3.1 and 5.2: a Feature sits directly under an approved Standing Initiative and is admitted at the Weekly Review within the current Iteration's limits. It records its client, acceptance criteria, Dependencies, delivery, and product-owner acceptance. A document or training result has delivery and acceptance evidence; Solution, validation, release, and production-change gates apply when the work includes a Solution or production deployment.
 
 ## 2. What delivery is for
 

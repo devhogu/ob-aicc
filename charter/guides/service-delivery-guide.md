@@ -13,11 +13,12 @@ flowchart TB
   SP["Strategic Priority<br/>approved by the Executive Sponsor<br/>kept in the Priorities"]
   INI["Initiative<br/>approved by the Domain Owner, or by the Executive Sponsor<br/>above a guardrail, across Domains, or for enabling work<br/>kept in the Portfolio Backlog"]
   CAP["Capability<br/>approved by the AICC Lead<br/>kept in the Program Backlog"]
-  FT["Feature<br/>approved by the Team at Iteration Planning<br/>closed within one PI<br/>kept in the Program Backlog, then the Iteration Backlog"]
+  FT["Feature<br/>Team approval at Iteration Planning; run-rate approval at Weekly Review<br/>closed within one PI; run-rate within one Iteration<br/>kept in the Program Backlog, then the Iteration Backlog"]
   SOL["Solution<br/>Solution Definition approved by the Domain Owner<br/>by the Executive Sponsor where the AICC Lead built it<br/>kept in the Portfolio"]
   SP --> INI
   INI --> CAP
   CAP --> FT
+  INI -->|run-rate work: AICC Lead at Weekly Review| FT
   INI -.->|"delivers"| SOL
   CAP -.->|"builds"| SOL
 ```
@@ -30,7 +31,7 @@ Figure 1: the levels of the work and their owners.
 | Initiative | A business program that delivers Solutions | Domain Owner; the Executive Sponsor above a guardrail, across Domains, or for enabling work | Portfolio Backlog |
 | Solution | A solution or service, with a type, a Risk Tier, and a Receiver | Domain Owner approves its Solution Definition | The Portfolio |
 | Capability | A capability of a Solution | AICC Lead | Program Backlog |
-| Feature | A deliverable of a Capability, closed within one PI | The Team at Iteration Planning | Program Backlog, then Iteration Backlog |
+| Feature | A deliverable of a Capability, closed within one PI; run-rate work sits directly under its Standing Initiative and is done within one Iteration | The Team at Iteration Planning; the AICC Lead at the Weekly Review for run-rate work | Program Backlog, then Iteration Backlog |
 
 ## 3. The life of an item
 

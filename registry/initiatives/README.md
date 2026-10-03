@@ -10,3 +10,7 @@ One folder for each Initiative, named with the identifier INI-nnn and a short ti
 | INI-006 Customer experience intelligence: discovery | [INI-006-customer-experience-intelligence-discovery/](INI-006-customer-experience-intelligence-discovery/brief.md) | PRI-1 Customer intelligence |
 | INI-007 Retail credit: credit lines, loans, and mortgages | [INI-007-retail-credit-discovery/](INI-007-retail-credit-discovery/brief.md) | PRI-5 AI in banking operations and systems; PRI-4 Expertise at the point of work |
 | INI-008 Knowledge bases across functions | [INI-008-knowledge-bases/](INI-008-knowledge-bases/brief.md) | PRI-4 Expertise at the point of work |
+| INI-009 Standing Initiative: Advise and formulate (Approved; DR-2026-063) | [INI-009-standing-advise-and-formulate/](INI-009-standing-advise-and-formulate/brief.md) | Enabling (all priorities) |
+| INI-010 Standing Initiative: Build and run (Approved; DR-2026-063) | [INI-010-standing-build-and-run/](INI-010-standing-build-and-run/brief.md) | Enabling (all priorities) |
+| INI-011 Standing Initiative: Enablement (Approved; DR-2026-063) | [INI-011-standing-enablement/](INI-011-standing-enablement/brief.md) | Enabling (all priorities) |
+| INI-012 Standing Initiative: Assurance (Approved; DR-2026-063) | [INI-012-standing-assurance/](INI-012-standing-assurance/brief.md) | Enabling (all priorities) |

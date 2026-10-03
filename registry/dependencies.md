@@ -6,7 +6,7 @@ The Program Board is the board of the dependencies of the Program Increment (Sol
 
 The following table shows each Capability and Feature of the Program Backlog by Iteration. A lane is one item, and a cell holds the state that the item has reached in that Iteration. A blank cell is not planned. The Initiatives in discovery have no Capabilities or Features yet, so they appear in sections 3 and 4 only.
 
-| Lane | Capability | State | 2026 I10 (Oct) | 2026 I11 (Nov) | 2026 I12 (Dec) | IP week | Depends on | Dependency status |
+| Lane | Parent: Capability or Standing Initiative | State | 2026 I10 (Oct) | 2026 I11 (Nov) | 2026 I12 (Dec) | IP week | Depends on | Dependency status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ## 2. Milestones
@@ -47,6 +47,7 @@ The following table places the Milestones of the Roadmap (roadmap.md) at the Ite
 | DEP-012 | INI-008 Knowledge bases | The list of functions and the knowledge they hold | INI-002 | when the first base is chosen | Open |
 | DEP-013 | INI-008 Knowledge bases | Source documents with an owner and a review date | The function that owns each base | for each base | Open |
 | DEP-014 | Any Initiative that expects Risk Tier 2 or 3, and its Solution | The clearance of the business case, and the validation by the Control Function Contacts | Control Functions | before the business case is approved, and before the first deployment | Open |
+| DEP-015 | INI-009, INI-010, INI-011, INI-012 | Baseline approval of the four Standing Initiative Briefs and initial shared capacity and Team limits, recorded in DR-2026-063 | Baseline owner approval; subsequent decisions follow Business Model 4.9 and Solution Lifecycle Model 4.2 | Met 2026-10-03 | Met |
 
 ## 4. Scope of each item by month
 

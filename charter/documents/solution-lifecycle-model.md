@@ -2,7 +2,7 @@
 id: AICC-ORG-03-EN
 title: Solution Lifecycle Model
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-02
 revised: 2026-10-03
 ```
@@ -41,7 +41,7 @@ revised: 2026-10-03
 
 ## 3. The flow of value
 
-3.1. Work enters the program in three ways. The Capabilities of an Initiative enter the Program Backlog after the decision to continue at the end of its MVP (Portfolio Management Model 7.2). A change or a new feature of a released Solution is raised by its Domain Owner or its product owner and enters the Program Backlog under the Capability of that Solution. Enabling work of AICC enters under an Initiative of enabling work. Every item is ranked in the Program Backlog before a Team takes it.
+3.1. Work enters the program through the Capabilities of an Initiative after the decision to continue at the end of its MVP (Portfolio Management Model 7.2), a change to a released Solution under its Capability, enabling work under its Initiative, or run-rate work directly under the Standing Initiative of its service area (Business Model 4.8). A change or a new feature of a released Solution is raised by its Domain Owner or its product owner. Every item is ranked in the Program Backlog before a Team takes it. Where run-rate work builds or changes an AI Solution, the Solution still has its Solution Definition, Risk Tier, approvals, and check or validation under sections 5 and 7 and the AI Policy. A run-rate Feature records its Standing Initiative, client function and Domain Owner, acceptance criteria, Dependencies, approval of use for the data class where AI is used, and admission decision with who and when. Its Standing Initiative must have an Initiative Brief approved by the Executive Sponsor before the Feature is approved.
 
 3.2. The work is structured in the levels of the following table. The Strategic Priority and the Initiative are managed by the Portfolio Management Model.
 
@@ -51,7 +51,7 @@ revised: 2026-10-03
 | Initiative | A business program: a long-term business service or product that delivers one or more Solutions. An Initiative that has a client function is an Engagement, with one Service Agreement for each client function; the client of enabling work is the Executive Sponsor | Portfolio Backlog |
 | Solution | A solution or service that an Initiative delivers for a Domain, with an offering type, a Risk Tier, and an AI Registry entry | The Portfolio, as a Solution Definition |
 | Capability | A capability of a Solution, delivered over one or more Program Increments | Program Backlog |
-| Feature | A deliverable of a Capability, which closes within one Program Increment and is delivered over one or more Iterations | Program Backlog, then Iteration Backlog |
+| Feature | A deliverable of a Capability, which closes within one Program Increment; run-rate work is a Feature directly under a Standing Initiative and is done within one Iteration | Program Backlog, then Iteration Backlog |
 | Work Item | A task of a Team within a Feature | The Team board |
 
 Figure 1 shows how the levels follow from one another, with the intent of each level, where it is kept, and who decides.
@@ -67,7 +67,7 @@ flowchart LR
   subgraph PROG["Program layer: decided with the product owner"]
     direction TB
     CAP["Capability (Epic in Jira)<br/>Intent: what the Solution can do<br/>Backlog: Program Backlog<br/>Decides: AICC Lead"]
-    FT["Feature<br/>Intent: a deliverable the user notices<br/>Backlog: Program, then Iteration<br/>Decides: the Team"]
+    FT["Feature<br/>Intent: a deliverable the user notices<br/>Backlog: Program, then Iteration<br/>Approves: Team at Planning;<br/>AICC Lead for run-rate admission"]
     CAP -->|broken into| FT
   end
   subgraph ITER["Iteration layer: decided by the Team"]
@@ -75,6 +75,7 @@ flowchart LR
     WI["Work Item<br/>Intent: a task of the Team<br/>Board: Team board"]
   end
   INI -->|after the decision to continue| CAP
+  INI -->|Standing Initiative: run-rate work| FT
   FT -->|broken into| WI
   INI -.->|delivers| SOL["Solution<br/>what the Domain uses"]
   CAP -.->|builds| SOL
@@ -115,7 +116,7 @@ An illustration of the wording follows. It shows the form and is not a record.
 flowchart LR
   IN(["From above<br/>an Initiative continues, or a change is raised"]):::iface --> PB["Program Backlog<br/>Capabilities and Features, ranked"]
   PB --> RF["Refinement<br/>Features ready, acceptance criteria stated"]
-  RF --> IB["Iteration Backlog<br/>selected at Iteration Planning"]
+  RF --> IB["Iteration Backlog<br/>selected at Iteration Planning;<br/>run-rate admitted at Weekly Review"]
   IB --> DV["Develop<br/>Work Items of the Team"]
   DV --> VF["Verify<br/>check or validation"]
   VF --> DP["Deploy<br/>to the environment of use"]
@@ -136,9 +137,9 @@ Figure 2: the flow of value.
 
 ## 4. Backlogs and boards
 
-4.1. AICC keeps two backlogs at this level. The Program Backlog, also called the PI Backlog, holds the Capabilities and the Features, grouped under their Initiatives. The Iteration Backlog holds the Features that the Teams work on in the Iteration. Each is ranked by value and urgency relative to effort, scored 1 to 5 for value, urgency, risk reduction or opportunity, and effort. The AICC Lead ranks the Program Backlog, the Domain Owner, or the Executive Sponsor for enabling work, states the business value of an item, and the product owner orders the Iteration Backlog. The backlogs change continuously, because much of the work depends on people and events outside AICC. A Capability may run over several Program Increments. A Feature closes within its Program Increment, or is split: the part that is done is a Feature that goes to review, and the rest is a new Feature in the next Program Increment, and the original Feature is Pivoted and linked to both. The items of a Program Increment state intent and direction, and what is done in an Iteration is decided in that Iteration.
+4.1. AICC keeps two backlogs at this level. The Program Backlog, also called the PI Backlog, holds the Capabilities and the Features, grouped under their Initiatives. Each Feature names its parent Capability or, for run-rate work, its Standing Initiative; it records its approval date and its acceptance or other terminal exit date for the flow measures of section 10. The Iteration Backlog holds the Features that the Teams work on in the Iteration. Each is ranked by value and urgency relative to effort, scored 1 to 5 for value, urgency, risk reduction or opportunity, and effort. The AICC Lead ranks the Program Backlog, the Domain Owner, or the Executive Sponsor for enabling work, states the business value of an item, and the product owner orders the Iteration Backlog. The backlogs change continuously, because much of the work depends on people and events outside AICC. A Capability may run over several Program Increments. A Feature closes within its Program Increment, or is split: the part that is done is a Feature that goes to review, and the rest is a new Feature in the next Program Increment, and the original Feature is Pivoted and linked to both. The items of a Program Increment state intent and direction, and what is done in an Iteration is decided in that Iteration.
 
-4.2. Work flows as in Kanban. The Program Kanban shows the Capabilities and the Features by state, with the classes of service as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress apply to the states, the lanes, and each Domain. The Team pulls an approved item only when the Limits on Work in Progress allow, and a Feature is approved only when its Dependencies are known. At each Iteration Planning the Team selects the Features for the month from the Program Backlog into its Iteration Backlog, and the Weekly Review keeps them under control. An item that waits for a person or an event outside AICC is Waiting, and names its Dependency. When a Limit on Work in Progress is reached, the Team finishes an item before it starts another. A Waiting item keeps its column and its flag, and its days Waiting are counted. The columns of the Program Kanban are the states: Backlog is Proposed and Discovery, Ready is Approved, Active is Active and Completed, Review is Review, and Done is Accepted and Closed. The Team board shows the Work Items of the Iteration.
+4.2. Work flows as in Kanban. The Program Kanban shows the Capabilities and the Features by state, with the classes of service as lanes: Urgent, High priority, and Normal. The Limits on Work in Progress apply to the states, the lanes, and each Domain. The Team pulls an approved item only when the Limits on Work in Progress allow, and a Feature is approved only when its Dependencies are known. At each Iteration Planning the Team selects the Features for the month from the Program Backlog into its Iteration Backlog. The Weekly Review keeps them under control and admits run-rate Features under 5.2, within the same Limits on Work in Progress. An item that waits for a person or an event outside AICC is Waiting, and names its Dependency. When a Limit on Work in Progress is reached, the Team finishes an item before it starts another. A Waiting item keeps its column and its flag, and its days Waiting are counted. The columns of the Program Kanban are the states: Backlog is Proposed and Discovery, Ready is Approved, Active is Active and Completed, Review is Review, and Done is Accepted and Closed. The Team board shows the Work Items of the Iteration.
 
 The following table outlines the boards, their steps, their lanes, their limits, the measures that are read from them, and the event at which each is read.
 
@@ -166,7 +167,7 @@ flowchart LR
 
 Figure 3: the Program Board through a Program Increment.
 
-| Lane: Feature | Capability | Iteration 1 | Iteration 2 | Iteration 3 | IP week | Depends on | Dependency status |
+| Lane: Feature | Parent: Capability or Standing Initiative | Iteration 1 | Iteration 2 | Iteration 3 | IP week | Depends on | Dependency status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Milestone | The Roadmap | [Milestone and date] | | [Milestone and date] | | | |
 | [Feature A] | [Capability X] | Active | Review | Done | | None | |
@@ -178,7 +179,7 @@ The table is the form and holds no real data. A lane is one Feature, and a cell 
 
 4.4. The Roadmap shows three horizons: the current Program Increment as intent and direction, the next as planned, and the period beyond as indicative, with its Milestones. The PI Planning proposes it, and the quarterly Steering confirms it (Portfolio Management Model 4.3). The Dashboard shows the state of the Program Increment, the flow of the Program Kanban, the Dependencies at risk, the risks, and the Measures. The AICC Lead keeps the Roadmap, the Program Board, and the Dashboard current, and they are Records.
 
-4.5. A Feature is ready when it is Approved under 5.2: its acceptance criteria are stated in the form of 3.3, and its Dependencies are known, with any open one named. A Feature is done when it is tested (7.1), deployed with its change ticket and test reference entered (8.3), and accepted by the product owner (7.3(a)), and only then does it enter the Done column. The Team shall keep, through the Backlog Refinement, one to two Iterations of ready Features ahead of its work.
+4.5. A Feature is ready when it is Approved under 5.2: its acceptance criteria are stated in the form of 3.3, and its Dependencies are known, with any open one named. A Feature is done when its result is tested by a person other than its builder, delivered to its user or environment of use, and accepted by the product owner (7.3(a)), and only then does it enter the Done column. A Feature that builds or changes a Solution meets the check or validation of 7.1, and a production deployment has its change ticket and test reference entered under 8.3. For work such as a document or training, the Feature references the delivered result and the evidence against its acceptance criteria. The Team shall keep, through the Backlog Refinement, one to two Iterations of ready Features ahead of its work.
 
 ## 5. States and Stages
 
@@ -191,7 +192,7 @@ The table is the form and holds no real data. A lane is one Feature, and a cell 
 | Proposed | Cancelled | It is withdrawn without a decision on the merits |
 | Discovery | Approved | The conditions of its level in section 5.2 are met, and its approver decides |
 | Discovery | Waiting, Deferred, Rejected, Pivoted, or Cancelled | A Dependency blocks it; it is put on hold; it is decided against; it is rerouted into a new item; or it is withdrawn without a decision on the merits |
-| Approved | Active | The Team pulls it, when the Limits on Work in Progress allow and its Dependencies are known. An Initiative becomes active when the AICC Lead pulls it into its MVP (Portfolio Management Model 5.2). A Solution becomes active when its first Capability or Feature is pulled |
+| Approved | Active | The Team pulls it, when the Limits on Work in Progress allow and its Dependencies are known. An Initiative becomes active when the AICC Lead pulls it into its MVP (Portfolio Management Model 5.2); a Standing Initiative becomes Active when its first approved run-rate Feature is pulled. A Solution becomes active when its first Capability or Feature is pulled |
 | Approved | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
 | Active | Completed | The work is finished |
 | Active | Waiting, Deferred, Pivoted, or Cancelled | As for Discovery |
@@ -213,7 +214,7 @@ The table is the form and holds no real data. A lane is one Feature, and a cell 
 | --- | --- | --- | --- | --- |
 | Solution | Definition | The Domain Owner approves the Solution Definition, with its type, Receiver, scope, capabilities, architecture, and data classes. The Risk Tier is assigned by the AICC Lead and told to the Domain Owner; the AI Registry entry is made; for Risk Tier 2 and 3, the Control Function Contact of compliance confirms the applicable law; an Experiment has its time-box and a Service its run cost and sunset; for a Solution that the AICC Lead built, the Executive Sponsor approves the Solution Definition and assigns the Risk Tier (Operating Model 4.4) | Delivery, then the Stages of its type in section 8.1 | It is delivered, as section 8.1 states |
 | Capability | Analysis: define the capability and break it into Features | The AICC Lead, with the Domain Owner consulted. Its Features are defined and ranked in the Program Backlog | Implementation | Its Features are closed |
-| Feature | Explore, Design | The Team, at Iteration Planning. Its acceptance criteria are stated, and its Dependencies are known, with any open one named | Develop, Verify, Deploy | It is deployed |
+| Feature | Explore, Design | The Team at Iteration Planning; for run-rate work, the AICC Lead at the Weekly Review under Business Model 4.8 and section 3.1. Its acceptance criteria are stated, and its Dependencies are known, with any open one named. A run-rate Feature is added to the current Iteration Backlog within its Limits on Work in Progress | Develop, Verify, Deploy | Its result is tested and delivered, with the check or validation where required. Product-owner acceptance follows in Review before it enters Done (4.5) |
 
 Figure 4 shows the staging workflow of each level, from left to right: the Stages in boxes, the conditions that must be met to move on in diamonds, and the returns. Each condition is a condition of the Stages table, and in the tracker it is a condition of the workflow, with the Stage held in a field and the state in the status.
 
@@ -221,9 +222,9 @@ Figure 4 shows the staging workflow of each level, from left to right: the Stage
 flowchart TB
   subgraph FEATURE["Feature"]
     direction LR
-    F0(["Proposed"]) --> F1["Explore"] --> F2["Design"] --> FC1{"Acceptance criteria stated, Dependencies known?"}
-    FC1 -->|yes| F3(["Approved"]) --> F4["Develop"] --> F5["Verify"] --> FC2{"Check or validation met?"}
-    FC2 -->|yes| F6["Deploy"] --> F7(["Completed"]) --> F8(["Review"]) --> FC3{"Criteria met?"}
+    F0(["Proposed"]) --> F1["Explore"] --> F2["Design"] --> FC1{"Criteria and Dependencies stated;<br/>approval under 5.2 given?"}
+    FC1 -->|yes| F3(["Approved"]) --> F4["Develop"] --> F5["Verify"] --> FC2{"Tests met;<br/>check or validation where required?"}
+    FC2 -->|yes| F6["Deploy or deliver result"] --> F7(["Completed"]) --> F8(["Review"]) --> FC3{"Product owner accepts<br/>against criteria?"}
     FC3 -->|yes| F9(["Accepted, then Closed"])
     FC3 -->|returned| F4
     FC3 -->|not wanted| F10(["Rejected"])
@@ -573,7 +574,7 @@ Figure 13: the loop of a change to a released Solution.
 | Measure | Definition | Target rule |
 | --- | --- | --- |
 | Lead time | Days from Approved to Accepted | Baseline |
-| Expected lead time | The work in progress divided by the throughput, in days | Read against the lead time; no target |
+| Expected lead time | The average number of approved Features not yet Accepted or otherwise closed, divided by the number of Features Accepted per calendar day over the same observation period. Count Features only, including those in Ready, Active, Completed, Review, or Waiting; retain a Feature returned or deferred after approval until it leaves the measured flow. The result is in calendar days | Read against the lead time; no target. Use only for a sufficiently stable flow with no material non-acceptance exits; report not available when throughput is zero or the observation period is insufficient |
 | Cycle time | Days from Active to Completed, or to Review in light mode | Baseline |
 | Flow efficiency | The days that an item is Active and not Waiting, divided by its lead time | Baseline |
 | Throughput | The Features accepted in an Iteration | Trend; no target |
@@ -587,7 +588,7 @@ Figure 13: the loop of a change to a released Solution.
 | Time from verified to released | Days from the check or the validation of a Solution to its release beyond the first users | Baseline |
 | Acceptance Checklist items not met | The items marked Not met in the Acceptance Checklists of the period | Each one stops the release (7.4) |
 | Time from Completed to Accepted | Days from Completed to Accepted | Within the Iteration |
-| Features accepted against selected | The Features accepted by the product owner in an Iteration, divided by the Features selected at its Iteration Planning | A steady gap shows over-selection and is raised at the Iteration Retrospective |
+| Features accepted against selected | The Features selected at Iteration Planning and accepted by the product owner within that Iteration, divided by all Features selected at that Planning. Features admitted later, including run-rate work, are shown separately as admitted and accepted counts | A steady gap shows over-selection and is raised at the Iteration Retrospective |
 | PI predictability | The business value achieved divided by the business value planned, summed over the PI Objectives of the Program Increment, as scored under 6.2 | Read as a band over the Program Increments, with no target, as the PI Objectives are not a promise (2.2) |
 | Dependency timeliness | The share of the Dependencies that are Met by the date on which they are needed | Baseline |
 | Deployment frequency | The deployments to production in an Iteration | Trend; no target |
@@ -624,3 +625,4 @@ Figure 13: the loop of a change to a released Solution.
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Added the definitions of ready and done, the Program Board on the boards, the participants of the events with the work and feedback loops, the separations, the service steps with the four signals and the Handover of a Service to an IT function of the Bank, the service operations practices and the default meaning of the classes of service, the rules of the Lab, and the measures with their target rules and governance; the Domain Owner states the business value of an item. | DR-2026-062 |
+| 2.1 | 2026-10-03 | Corrected the units and population of expected lead time; completed the run-rate approval, parent, record, and delivery path; distinguished the Planning selection from later admissions in the acceptance measure. | none (correction under Document Catalog 4.2) |

@@ -2,7 +2,7 @@
 id: AICC-ORG-02-EN
 title: Portfolio Management Model
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-02
 revised: 2026-10-03
 ```
@@ -208,7 +208,7 @@ In practice, Waiting is a state, shown as a flag on the boards, of an Active Ini
 
 5.4. A limit on the Initiatives that are Active at one time applies, so that the work in progress of the portfolio stays low and its flow steady. The standing Initiatives that the Business Model defines are not counted against it. The AICC Lead sets the Limit on Work in Progress within the mix that the Executive Sponsor sets at the quarterly Steering (4.6), and reviews it at the monthly Steering.
 
-5.5. The AICC Lead shall screen each need at intake, in this order: the problem that it answers, its size, its likely Risk Tier, and whether a Package or a Solution of the catalog already answers it (2.2). A need that is run-rate work, as the Business Model defines it, enters the Program Backlog as a Feature under the standing Initiative of its service area and does not pass the gates of the portfolio Kanban. Every other need enters the Funnel as an Initiative, and passes Reviewing only on the criteria of the Business Model 7.2.
+5.5. The AICC Lead shall screen each need at intake, in this order: the problem that it answers, its size, its likely Risk Tier, and whether a Package or a Solution of the catalog already answers it (2.2). A need that is run-rate work, as the Business Model defines it, enters the Program Backlog as a Feature directly under the Standing Initiative of its service area and does not pass the gates of the portfolio Kanban. The Executive Sponsor approves the Initiative Brief of the Standing Initiative under Business Model 4.9; the Standing Initiative does not require an MVP of its own. Its run-rate Features follow the approval and acceptance rules of Solution Lifecycle Model 3.1, 5.2, and 7.3. Every other need enters the Funnel as an Initiative, and passes Reviewing only on the criteria of the Business Model 7.2.
 
 ## 6. The business case
 
@@ -279,13 +279,14 @@ In practice, the Initiative Brief holds, before the MVP, the hypothesis, the lea
 
 ## 8. Initiative, Capability, and Feature
 
-8.1. An Initiative delivers one or more Solutions through Capabilities, and a Capability is delivered through Features. Figure 8 shows the levels. Investment and priority are set at the level of the Initiative, and the Program Backlog groups the Capabilities under their Initiatives.
+8.1. An Initiative delivers one or more Solutions through Capabilities, and a Capability is delivered through Features. Run-rate Features sit directly under their Standing Initiative (5.5). Figure 8 shows the levels. Investment and priority are set at the level of the Initiative, and the Program Backlog groups the Capabilities under their Initiatives.
 
 ```mermaid
 flowchart TB
   SP["Strategic Priority<br/>Investment Envelope"] --> INI["Initiative<br/>business case, Portfolio Backlog"]
   INI --> CAP["Capability<br/>Epic in Jira, Program Backlog"]
   CAP --> FT["Feature<br/>closes within one Program Increment"]
+  INI -->|Standing Initiative: run-rate work within one Iteration| FT
   INI -.delivers.-> SOL["Solution<br/>offering type, Risk Tier, Receiver"]
   CAP -.builds.-> SOL
 ```
@@ -300,7 +301,7 @@ Figure 8: the levels of the work.
 
 9.1. The portfolio loops of section 4 review the funnel, the Portfolio Backlog, and the Active Initiatives each month, and confirm each quarter, for each Active Initiative, whether it continues, pivots, is deferred, or is rejected, on its leading indicators against the plan and the benefit that the Domain Owner confirms.
 
-9.2. AICC measures the flow and the benefit of the Portfolio with the measures of the following table, which carry those of the AICC Charter 7 for the Portfolio. The AICC Lead shall show them on the Dashboard and in the Quarterly Report.
+9.2. AICC measures the flow and the benefit of the Portfolio with the measures of the following table, which carry those of the AICC Charter 7 for the Portfolio. The AICC Lead shall show them on the Dashboard and in the Quarterly Report. The flow measures of the portfolio Kanban count ordinary Initiatives and exclude Standing Initiatives, which are shown separately. Run-rate Features are counted in the delivery measures of the Solution Lifecycle Model.
 
 | Measure | Definition | Source | Read at | Target rule |
 | --- | --- | --- | --- | --- |
@@ -334,3 +335,4 @@ Figure 8: the levels of the work.
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Adds the intake of run-rate work and Initiatives, the gates and cancellation, the separation of duties, the mix of Initiatives and the four controls, the rules of leading indicators and of the MVP decision, and the table of Portfolio measures with their governance and records. | DR-2026-062 |
+| 2.1 | 2026-10-03 | Clarified the Standing Initiative approval and its direct run-rate Features, with no MVP of its own. | none (correction under Document Catalog 4.2) |

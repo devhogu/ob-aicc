@@ -19,6 +19,7 @@ flowchart TB
   T["Strategic Priority: a strategic theme set with the Board"] --> I["Initiative: a business program, long-term, held in the Portfolio Backlog"]
   I -->|after the decision to continue| E["Capability: a capability, runs over one or more PIs, held in the Program Backlog"]
   E -->|broken into| F["Feature: closes within one PI, worked in the Iteration Backlog"]
+  I -->|Standing Initiative: run-rate Feature within one Iteration| F
   F -->|broken into| W["Work Item: a task of the Team"]
   I -.->|delivers| S["Solution: a solution or service, with a type, a Risk Tier, and a Receiver"]
   E -.->|builds| S
@@ -26,7 +27,7 @@ flowchart TB
 
 Figure 1: the levels of the work.
 
-The Solution is not a step in the chain: an Initiative delivers it and its Capabilities build it. Enabling work of AICC has a Capability that builds no Solution.
+The Solution is not a step in the chain: an Initiative delivers it and its Capabilities build it. Enabling work may have a Capability that builds no Solution. Run-rate work is a Feature directly under its Standing Initiative, without a Capability. Once the Standing Initiative Brief is approved, the AICC Lead admits the Feature at the Weekly Review, with its client, data-use approval where AI is used, acceptance criteria, and Dependencies recorded. The Feature enters the current Iteration Backlog within its limits, and the product owner accepts its result (Solution Lifecycle Model 3.1, 5.2, and 7.3).
 
 | Level | Backlog or board | Horizon | Closes |
 | --- | --- | --- | --- |
@@ -131,6 +132,7 @@ The execution takes the approved Features and builds them, on the loops of the C
 | --- | --- | --- | --- | --- |
 | Set the intent | PI Planning | Choose the Capabilities and Features that the PI aims at, with their Dependencies | The Teams and the Domain Owners | The PI Objectives; the Program Board; the proposed Roadmap, confirmed at the quarterly Steering |
 | Select the Features | Iteration Planning | Select the Features for the month into the Iteration Backlog | The Team with the product owner | The Iteration Backlog |
+| Admit run-rate work | Weekly Review | Admit a Feature directly under an approved Standing Initiative into the current Iteration Backlog, within its Limits on Work in Progress (Solution Lifecycle Model 3.1, 5.2) | AICC Lead | The Feature, its admission decision, client, acceptance criteria, and Dependencies |
 | Develop | Weekly loops | Build the minimum solution with the function | Solution Engineer with the Domain Expert | Working increments |
 | Verify | Before every deployment | Integrate the work as it goes, and test every Feature, and the MVP, by a person other than the builder outside production, with the result referenced in the Feature; a failed test returns to its builder the same day (Solution Lifecycle Model 7.1); and the check for Risk Tier 1, or the validation by the Control Function Contacts for Risk Tier 2 and 3 with its security test against attacks on AI (Solution Lifecycle Model 7.2), before the first deployment to real users or data | A person other than the builder; the Checker; the Control Function Contacts | The test result in the Feature; the check, or the Control Sign-Off |
 | Deploy | Weekly loops | A Feature is deployed to the environment of use after its test and check. The deployment of the Solution to its first users, and of each significant change, follows the final acceptance of the Team. A deployment to production follows the change management of the Bank: raise the change, enter the change ticket and the test result in the Feature, and use the access process of the Bank (Solution Lifecycle Model 8.3). The first users are trained before use (Solution Lifecycle Model 7.1, AI Policy 2.1) | Solution Engineer; the change management of the Bank approves; the Platform Owner for the platform | A deployed Feature, with its change ticket and test result |
@@ -141,6 +143,8 @@ The execution takes the approved Features and builds them, on the loops of the C
 | Control the flow | Weekly Review | Keep the boards, the Limits, and the Dependencies under control | AICC Lead | The Dashboard |
 
 The AICC Lead does not check, validate, release, or give the business acceptance of a Solution that the AICC Lead built (Operating Model 4.4(d)). The builder does not test, check, or validate, the requester who accepts is not from AICC, and the person who releases owns the results (Solution Lifecycle Model 7.5).
+
+A Feature whose result is a document, training, or another non-deployed deliverable records the delivered result and the evidence against its acceptance criteria. The product owner accepts it under Solution Lifecycle Model 4.5 and 7.3(a). Solution and production-deployment gates apply when the work includes a Solution or a production deployment.
 
 Figure 6 shows the order in which a Feature and a Solution are accepted, checked, and released.
 

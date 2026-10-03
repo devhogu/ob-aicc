@@ -54,3 +54,5 @@ Identifiers: PRI-n priority, INI-nnn Initiative, SOL-nnn Solution (in the Portfo
 The Registry holds the nil statements that an auditor needs. The Risks and Issues states the AI Incidents and Exceptions to date, and the AI Registry states the uses listed to date.
 
 The Solutions that AICC defines and tries are in the Portfolio (`portfolio/`), and the cadence is in the charter workflows.
+
+The charter baseline and the four Standing Initiatives are approved under [DR-2026-063](decisions/DR-2026-063-approved-english-baseline.md). The Registry continues to show actual work and evidence after that baseline; an operational action is kept here until performed, and is not an unresolved charter provision.

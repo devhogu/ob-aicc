@@ -10,10 +10,10 @@ Value flows from a strategic theme to a task on a board through a small number o
 | Initiative | A business program that delivers one or more Solutions; an Engagement when it has a client function | A hypothesis, in the Initiative Brief | Portfolio Backlog | Domain Owner, or Executive Sponsor |
 | Solution | A solution or service that an Initiative delivers for a Domain, with a type, a Risk Tier, and an AI Registry entry | A Solution Definition, with its acceptance criteria | The Portfolio | Domain Owner approves; AICC Lead assigns the Risk Tier |
 | Capability | A capability of a Solution, delivered over one or more Program Increments | A hypothesis | Program Backlog | AICC Lead, with the Domain Owner consulted |
-| Feature | A deliverable of a Capability, closed within one Program Increment, delivered over one or more Iterations | A benefit hypothesis with acceptance criteria in the form Given, When, Then | Program Backlog, then Iteration Backlog | The Team at Iteration Planning; the product owner accepts |
+| Feature | A deliverable of a Capability, closed within one Program Increment; run-rate work sits directly under its Standing Initiative and is done within one Iteration | A benefit hypothesis with acceptance criteria in the form Given, When, Then | Program Backlog, then Iteration Backlog | The Team at Iteration Planning; for run-rate work, the AICC Lead at the Weekly Review. The product owner accepts |
 | Work Item | A task of a Team within a Feature | A task | The Team board | The Team |
 
-1.1. The Portfolio Management Model manages the first two levels; the Solution Lifecycle Model begins where the Capabilities of an Initiative enter the Program Backlog. In the tracker, an Initiative sits above the Epic, a Capability is an Epic, a Feature is an issue type, and a Work Item is a sub-task; the word Epic is used in the tracker only.
+1.1. The Portfolio Management Model manages the first two levels; the Solution Lifecycle Model governs Capabilities and Features in the Program Backlog, including run-rate Features directly under a Standing Initiative. In the tracker, an Initiative sits above the Epic, a Capability is an Epic, a Feature is an issue type, and a Work Item is a sub-task; the word Epic is used in the tracker only.
 
 ## 2. The contract of each level
 
@@ -21,7 +21,7 @@ Value flows from a strategic theme to a task on a board through a small number o
 
 ## 3. How work enters
 
-3.1. Work enters in three ways: the Capabilities of an Initiative after the decision to continue at its MVP; a change or a new feature of a released Solution, under its Capability; and enabling work of AICC, under its own Initiative. Every item is ranked before a Team takes it.
+3.1. Work enters as the Capabilities of an Initiative after its MVP, a change to a released Solution under its Capability, enabling work under its Initiative, or a run-rate Feature directly under its Standing Initiative. Run-rate work requires the approved Standing Initiative Brief and the Feature record of its client, acceptance criteria, Dependencies, data-use approval where AI is used, and admission decision. It is admitted at the Weekly Review into the current Iteration Backlog within its limits (Solution Lifecycle Model 3.1 and 5.2). Every item is ranked before a Team takes it.
 
 ## 4. The Team
 
