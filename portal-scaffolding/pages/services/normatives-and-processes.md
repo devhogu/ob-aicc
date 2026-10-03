@@ -2,11 +2,13 @@
 id: services/normatives-and-processes
 title: Normatives and processes
 section: services
-order: 2
+order: 6
 type: service
 slug: /services/normatives-and-processes/
 source: portal/content/services/normatives-and-processes.md
 area: advise
+series: service-categories-advise
+parent: services/advise-and-formulate
 production: authored
 status: scaffold
 ---

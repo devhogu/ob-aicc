@@ -2,11 +2,13 @@
 id: services/business-cases-and-scenarios
 title: Business cases and scenarios
 section: services
-order: 4
+order: 8
 type: service
 slug: /services/business-cases-and-scenarios/
 source: portal/content/services/business-cases-and-scenarios.md
 area: advise
+series: service-categories-advise
+parent: services/advise-and-formulate
 production: authored
 status: scaffold
 ---

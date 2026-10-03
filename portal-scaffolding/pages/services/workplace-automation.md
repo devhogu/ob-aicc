@@ -2,11 +2,13 @@
 id: services/workplace-automation
 title: Workplace automation
 section: services
-order: 6
+order: 10
 type: service
 slug: /services/workplace-automation/
 source: portal/content/services/workplace-automation.md
 area: build
+series: service-categories-build
+parent: services/build-and-run
 production: authored
 status: scaffold
 ---

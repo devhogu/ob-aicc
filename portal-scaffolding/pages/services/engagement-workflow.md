@@ -2,11 +2,13 @@
 id: services/engagement-workflow
 title: Engagement workflow
 section: services
-order: 24
+order: 22
 type: workflow
 slug: /services/engagement-workflow/
 source: charter/workflows/engagement.md
+part: 2 of 3
 companion: services/engagement-guide
+series: how-to-engage
 production: generated
 status: scaffold
 ---

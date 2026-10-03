@@ -6,6 +6,8 @@ order: 21
 type: outline
 slug: /services/how-to-engage/
 source: portal/content/services/how-to-engage.md
+part: 1 of 3
+series: how-to-engage
 production: authored, with the Engagement workflow
 status: scaffold
 ---

@@ -2,11 +2,13 @@
 id: services/engagement-guide
 title: Guide: Engagement
 section: services
-order: 25
+order: 23
 type: guide
 slug: /services/engagement-guide/
 source: charter/guides/engagement-guide.md
+part: 3 of 3
 companion: services/engagement-workflow
+series: how-to-engage
 production: generated
 status: scaffold
 ---

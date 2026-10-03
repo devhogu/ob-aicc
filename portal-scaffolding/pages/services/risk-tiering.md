@@ -2,11 +2,13 @@
 id: services/risk-tiering
 title: Risk tiering
 section: services
-order: 14
+order: 18
 type: service
 slug: /services/risk-tiering/
 source: portal/content/services/risk-tiering.md
 area: assurance
+series: service-categories-assurance
+parent: services/assurance
 production: authored
 status: scaffold
 ---

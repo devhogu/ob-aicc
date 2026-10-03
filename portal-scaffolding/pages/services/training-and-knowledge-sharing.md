@@ -2,11 +2,13 @@
 id: services/training-and-knowledge-sharing
 title: Training and knowledge sharing
 section: services
-order: 10
+order: 14
 type: service
 slug: /services/training-and-knowledge-sharing/
 source: portal/content/services/training-and-knowledge-sharing.md
 area: enablement
+series: service-categories-enablement
+parent: services/enablement
 production: authored
 status: scaffold
 ---

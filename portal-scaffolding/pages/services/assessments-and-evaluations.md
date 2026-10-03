@@ -2,11 +2,13 @@
 id: services/assessments-and-evaluations
 title: Assessments and evaluations
 section: services
-order: 13
+order: 17
 type: service
 slug: /services/assessments-and-evaluations/
 source: portal/content/services/assessments-and-evaluations.md
 area: assurance
+series: service-categories-assurance
+parent: services/assurance
 production: authored
 status: scaffold
 ---

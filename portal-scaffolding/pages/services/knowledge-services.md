@@ -2,11 +2,13 @@
 id: services/knowledge-services
 title: Knowledge services
 section: services
-order: 5
+order: 9
 type: service
 slug: /services/knowledge-services/
 source: portal/content/services/knowledge-services.md
 area: build
+series: service-categories-build
+parent: services/build-and-run
 production: authored
 status: scaffold
 ---

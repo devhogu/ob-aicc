@@ -124,14 +124,18 @@
    "type": "section",
    "slug": "/services/",
    "title": "Services",
-   "source": [],
-   "production": "authored, with a generated list",
+   "source": [
+    "portal/content/services/areas/overview.md"
+   ],
+   "production": "authored; the overview of the areas, the first part of the series",
    "outline": [
-    "Introduction of three to five lines: The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
+    "The four areas, each with its posture and its categories in one line",
+    "From the areas to an Engagement: How to engage, the catalog, the Business Model"
+   ],
+   "series": "service-areas",
+   "series_title": "Service areas",
+   "part": "1 of 5",
+   "tab": "Overview"
   },
   {
    "id": "portfolio/index",
@@ -451,9 +455,97 @@
    ]
   },
   {
-   "id": "services/strategy-and-governance",
+   "id": "services/advise-and-formulate",
    "section": "services",
    "order": 1,
+   "type": "outline",
+   "slug": "/services/advise-and-formulate/",
+   "title": "Advise and formulate",
+   "source": [
+    "portal/content/services/areas/advise-and-formulate.md"
+   ],
+   "production": "authored; generated table of the categories of the area",
+   "series": "service-areas",
+   "series_title": "Service areas",
+   "part": "2 of 5",
+   "tab": "Advise and formulate",
+   "outline": [
+    "The posture of the area",
+    "The categories of the area: coverage and mode",
+    "How a function engages the area",
+    "What the area leaves behind"
+   ]
+  },
+  {
+   "id": "services/build-and-run",
+   "section": "services",
+   "order": 2,
+   "type": "outline",
+   "slug": "/services/build-and-run/",
+   "title": "Build and run",
+   "source": [
+    "portal/content/services/areas/build-and-run.md"
+   ],
+   "production": "authored; generated table of the categories of the area",
+   "series": "service-areas",
+   "series_title": "Service areas",
+   "part": "3 of 5",
+   "tab": "Build and run",
+   "outline": [
+    "The posture of the area",
+    "The categories of the area: coverage and mode",
+    "How a function engages the area",
+    "What the area leaves behind"
+   ]
+  },
+  {
+   "id": "services/enablement",
+   "section": "services",
+   "order": 3,
+   "type": "outline",
+   "slug": "/services/enablement/",
+   "title": "Enablement",
+   "source": [
+    "portal/content/services/areas/enablement.md"
+   ],
+   "production": "authored; generated table of the categories of the area",
+   "series": "service-areas",
+   "series_title": "Service areas",
+   "part": "4 of 5",
+   "tab": "Enablement",
+   "outline": [
+    "The posture of the area",
+    "The categories of the area: coverage and mode",
+    "How a function engages the area",
+    "What the area leaves behind"
+   ]
+  },
+  {
+   "id": "services/assurance",
+   "section": "services",
+   "order": 4,
+   "type": "outline",
+   "slug": "/services/assurance/",
+   "title": "Assurance",
+   "source": [
+    "portal/content/services/areas/assurance.md"
+   ],
+   "production": "authored; generated table of the categories of the area",
+   "series": "service-areas",
+   "series_title": "Service areas",
+   "part": "5 of 5",
+   "tab": "Assurance",
+   "outline": [
+    "The posture of the area",
+    "The categories of the area: coverage and mode",
+    "How a function engages the area",
+    "What the area leaves behind"
+   ]
+  },
+  {
+   "id": "services/strategy-and-governance",
+   "section": "services",
+   "order": 5,
    "type": "service",
    "slug": "/services/strategy-and-governance/",
    "title": "Strategy and governance",
@@ -462,6 +554,10 @@
    ],
    "production": "authored",
    "area": "advise",
+   "parent": "services/advise-and-formulate",
+   "series": "service-categories-advise",
+   "series_title": "Advise and formulate",
+   "tab": "Strategy and governance",
    "outline": [
     "Area: Advise and formulate. Strategy, charter, operating and governance model, portal and repository for a unit or a program, developed with AI, as AICC did for itself",
     "What the function receives, how it runs, and what it leads to",
@@ -472,7 +568,7 @@
   {
    "id": "services/normatives-and-processes",
    "section": "services",
-   "order": 2,
+   "order": 6,
    "type": "service",
    "slug": "/services/normatives-and-processes/",
    "title": "Normatives and processes",
@@ -481,6 +577,10 @@
    ],
    "production": "authored",
    "area": "advise",
+   "parent": "services/advise-and-formulate",
+   "series": "service-categories-advise",
+   "series_title": "Advise and formulate",
+   "tab": "Normatives and processes",
    "outline": [
     "Area: Advise and formulate. Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for any function",
     "What the function receives, how it runs, and what it leads to",
@@ -491,7 +591,7 @@
   {
    "id": "services/research-and-exploration",
    "section": "services",
-   "order": 3,
+   "order": 7,
    "type": "service",
    "slug": "/services/research-and-exploration/",
    "title": "Research and exploration",
@@ -500,6 +600,10 @@
    ],
    "production": "authored",
    "area": "advise",
+   "parent": "services/advise-and-formulate",
+   "series": "service-categories-advise",
+   "series_title": "Advise and formulate",
+   "tab": "Research and exploration",
    "outline": [
     "Area: Advise and formulate. Regulatory and technology watch with digests, trials in the Lab, partnering with organizations and providers",
     "What the function receives, how it runs, and what it leads to",
@@ -510,7 +614,7 @@
   {
    "id": "services/business-cases-and-scenarios",
    "section": "services",
-   "order": 4,
+   "order": 8,
    "type": "service",
    "slug": "/services/business-cases-and-scenarios/",
    "title": "Business cases and scenarios",
@@ -519,6 +623,10 @@
    ],
    "production": "authored",
    "area": "advise",
+   "parent": "services/advise-and-formulate",
+   "series": "service-categories-advise",
+   "series_title": "Advise and formulate",
+   "tab": "Business cases and scenarios",
    "outline": [
     "Area: Advise and formulate. Use-case discovery, scenarios with problem, solution, and measures, readiness and source audit, the business case the Portfolio decides on",
     "What the function receives, how it runs, and what it leads to",
@@ -529,7 +637,7 @@
   {
    "id": "services/knowledge-services",
    "section": "services",
-   "order": 5,
+   "order": 9,
    "type": "service",
    "slug": "/services/knowledge-services/",
    "title": "Knowledge services",
@@ -538,6 +646,10 @@
    ],
    "production": "authored",
    "area": "build",
+   "parent": "services/build-and-run",
+   "series": "service-categories-build",
+   "series_title": "Build and run",
+   "tab": "Knowledge services",
    "outline": [
     "Area: Build and run. The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask",
     "What the function receives, how it runs, and what it leads to",
@@ -548,7 +660,7 @@
   {
    "id": "services/workplace-automation",
    "section": "services",
-   "order": 6,
+   "order": 10,
    "type": "service",
    "slug": "/services/workplace-automation/",
    "title": "Workplace automation",
@@ -557,6 +669,10 @@
    ],
    "production": "authored",
    "area": "build",
+   "parent": "services/build-and-run",
+   "series": "service-categories-build",
+   "series_title": "Build and run",
+   "tab": "Workplace automation",
    "outline": [
     "Area: Build and run. Routing, forms, reports, consolidation, documents from templates, and case assistance, done by assistants under human validation",
     "What the function receives, how it runs, and what it leads to",
@@ -567,7 +683,7 @@
   {
    "id": "services/analytics-and-decision-support",
    "section": "services",
-   "order": 7,
+   "order": 11,
    "type": "service",
    "slug": "/services/analytics-and-decision-support/",
    "title": "Analytics and decision support",
@@ -576,6 +692,10 @@
    ],
    "production": "authored",
    "area": "build",
+   "parent": "services/build-and-run",
+   "series": "service-categories-build",
+   "series_title": "Build and run",
+   "tab": "Analytics and decision support",
    "outline": [
     "Area: Build and run. Pipelines, dashboards, analyses, and research tooling that prepare the factual base for decisions, with lineage to governed sources",
     "What the function receives, how it runs, and what it leads to",
@@ -586,7 +706,7 @@
   {
    "id": "services/content-management",
    "section": "services",
-   "order": 8,
+   "order": 12,
    "type": "service",
    "slug": "/services/content-management/",
    "title": "Content management",
@@ -595,6 +715,10 @@
    ],
    "production": "authored",
    "area": "build",
+   "parent": "services/build-and-run",
+   "series": "service-categories-build",
+   "series_title": "Build and run",
+   "tab": "Content management",
    "outline": [
     "Area: Build and run. Public, investor, and management material generated from governed data and templates, and the templates, editions, versions, and languages behind it",
     "What the function receives, how it runs, and what it leads to",
@@ -605,7 +729,7 @@
   {
    "id": "services/platforms",
    "section": "services",
-   "order": 9,
+   "order": 13,
    "type": "service",
    "slug": "/services/platforms/",
    "title": "Platforms",
@@ -614,6 +738,10 @@
    ],
    "production": "authored",
    "area": "build",
+   "parent": "services/build-and-run",
+   "series": "service-categories-build",
+   "series_title": "Build and run",
+   "tab": "Platforms",
    "outline": [
     "Area: Build and run. The shared engines and environments of AICC, the requirements on the AI Platform of the Bank, and the hand-over of a platform to the teams that run at scale",
     "What the function receives, how it runs, and what it leads to",
@@ -624,7 +752,7 @@
   {
    "id": "services/training-and-knowledge-sharing",
    "section": "services",
-   "order": 10,
+   "order": 14,
    "type": "service",
    "slug": "/services/training-and-knowledge-sharing/",
    "title": "Training and knowledge sharing",
@@ -633,6 +761,10 @@
    ],
    "production": "authored",
    "area": "enablement",
+   "parent": "services/enablement",
+   "series": "service-categories-enablement",
+   "series_title": "Enablement",
+   "tab": "Training and knowledge sharing",
    "outline": [
     "Area: Enablement. Training by role, coaching at the desk, skill libraries, communities of practice, playbooks and publications",
     "What the function receives, how it runs, and what it leads to",
@@ -643,7 +775,7 @@
   {
    "id": "services/adoption-and-lifecycle-management",
    "section": "services",
-   "order": 11,
+   "order": 15,
    "type": "service",
    "slug": "/services/adoption-and-lifecycle-management/",
    "title": "Adoption and lifecycle management",
@@ -652,6 +784,10 @@
    ],
    "production": "authored",
    "area": "enablement",
+   "parent": "services/enablement",
+   "series": "service-categories-enablement",
+   "series_title": "Enablement",
+   "tab": "Adoption and lifecycle management",
    "outline": [
     "Area: Enablement. Domain Experts and adoption plans per Domain; hand-over, support, revision, and retirement of Solutions; the life and operation of a Service",
     "What the function receives, how it runs, and what it leads to",
@@ -662,7 +798,7 @@
   {
    "id": "services/policies-controls-criteria",
    "section": "services",
-   "order": 12,
+   "order": 16,
    "type": "service",
    "slug": "/services/policies-controls-criteria/",
    "title": "Policies, controls, criteria",
@@ -671,6 +807,10 @@
    ],
    "production": "authored",
    "area": "assurance",
+   "parent": "services/assurance",
+   "series": "service-categories-assurance",
+   "series_title": "Assurance",
+   "tab": "Policies, controls, criteria",
    "outline": [
     "Area: Assurance. Rules of use within the AI Policy, control maps, acceptance and evaluation criteria, guardrails, stated before the build",
     "What the function receives, how it runs, and what it leads to",
@@ -681,7 +821,7 @@
   {
    "id": "services/assessments-and-evaluations",
    "section": "services",
-   "order": 13,
+   "order": 17,
    "type": "service",
    "slug": "/services/assessments-and-evaluations/",
    "title": "Assessments and evaluations",
@@ -690,6 +830,10 @@
    ],
    "production": "authored",
    "area": "assurance",
+   "parent": "services/assurance",
+   "series": "service-categories-assurance",
+   "series_title": "Assurance",
+   "tab": "Assessments and evaluations",
    "outline": [
     "Area: Assurance. Tools, providers, and Solutions evaluated against the cases of the function and the rules before use; readiness and benchmarks",
     "What the function receives, how it runs, and what it leads to",
@@ -700,7 +844,7 @@
   {
    "id": "services/risk-tiering",
    "section": "services",
-   "order": 14,
+   "order": 18,
    "type": "service",
    "slug": "/services/risk-tiering/",
    "title": "Risk tiering",
@@ -709,6 +853,10 @@
    ],
    "production": "authored",
    "area": "assurance",
+   "parent": "services/assurance",
+   "series": "service-categories-assurance",
+   "series_title": "Assurance",
+   "tab": "Risk tiering",
    "outline": [
     "Area: Assurance. The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes",
     "What the function receives, how it runs, and what it leads to",
@@ -719,7 +867,7 @@
   {
    "id": "services/oversight",
    "section": "services",
-   "order": 15,
+   "order": 19,
    "type": "service",
    "slug": "/services/oversight/",
    "title": "Oversight",
@@ -728,27 +876,15 @@
    ],
    "production": "authored",
    "area": "assurance",
+   "parent": "services/assurance",
+   "series": "service-categories-assurance",
+   "series_title": "Assurance",
+   "tab": "Oversight",
    "outline": [
     "Area: Assurance. Adopted Solutions, live reviews, AI Incidents, and changes followed through the Registry and reported to the Steering and the Board Committee",
     "What the function receives, how it runs, and what it leads to",
     "The reusable package; run-rate or program; who decides",
     "Rule source: Business Model 2.3; AI Policy 5; AICC Charter 7"
-   ]
-  },
-  {
-   "id": "services/service-model",
-   "section": "services",
-   "order": 20,
-   "type": "outline",
-   "slug": "/services/service-model/",
-   "title": "The service model",
-   "source": [
-    "portal/content/services/service-model.md"
-   ],
-   "production": "authored",
-   "outline": [
-    "The composition of a service: area and category, mode, client, Solution type, support level, Risk Tier, owner, package, records",
-    "The life of a service; the operation of a service; the records; the catalog"
    ]
   },
   {
@@ -762,6 +898,10 @@
     "portal/content/services/how-to-engage.md"
    ],
    "production": "authored, with the Engagement workflow",
+   "series": "how-to-engage",
+   "series_title": "How to engage",
+   "part": "1 of 3",
+   "tab": "How to engage",
    "outline": [
     "The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)",
     "The function commits to nothing; AICC works on a best-effort basis within its capability",
@@ -773,14 +913,18 @@
   {
    "id": "services/catalog",
    "section": "services",
-   "order": 22,
+   "order": 24,
    "type": "outline",
    "slug": "/services/catalog/",
-   "title": "Service catalog: the form",
+   "title": "Service catalog",
    "source": [
     "portal/content/services/catalog-form.md"
    ],
-   "production": "authored; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal",
+   "production": "authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal",
+   "series": "service-catalog",
+   "series_title": "Service catalog",
+   "part": "1 of 2",
+   "tab": "The form of the catalog",
    "outline": [
     "The two kinds of entry: Solution and package",
     "The fields of each; the states of an entry",
@@ -788,9 +932,29 @@
    ]
   },
   {
+   "id": "services/service-model",
+   "section": "services",
+   "order": 25,
+   "type": "outline",
+   "slug": "/services/service-model/",
+   "title": "The service model",
+   "source": [
+    "portal/content/services/service-model.md"
+   ],
+   "production": "authored",
+   "series": "service-catalog",
+   "series_title": "Service catalog",
+   "part": "2 of 2",
+   "tab": "The service model",
+   "outline": [
+    "The composition of a service: area and category, mode, client, Solution type, support level, Risk Tier, owner, package, records",
+    "The life of a service; the operation of a service; the records; the catalog"
+   ]
+  },
+  {
    "id": "services/business-model",
    "section": "services",
-   "order": 23,
+   "order": 26,
    "type": "document",
    "slug": "/services/business-model/",
    "title": "Business Model",
@@ -803,7 +967,7 @@
   {
    "id": "services/engagement-workflow",
    "section": "services",
-   "order": 24,
+   "order": 22,
    "type": "workflow",
    "slug": "/services/engagement-workflow/",
    "title": "Engagement workflow",
@@ -811,12 +975,16 @@
     "charter/workflows/engagement.md"
    ],
    "companion": "services/engagement-guide",
+   "series": "how-to-engage",
+   "series_title": "How to engage",
+   "part": "2 of 3",
+   "tab": "Engagement workflow",
    "production": "generated"
   },
   {
    "id": "services/engagement-guide",
    "section": "services",
-   "order": 25,
+   "order": 23,
    "type": "guide",
    "slug": "/services/engagement-guide/",
    "title": "Guide: Engagement",
@@ -824,6 +992,10 @@
     "charter/guides/engagement-guide.md"
    ],
    "companion": "services/engagement-workflow",
+   "series": "how-to-engage",
+   "series_title": "How to engage",
+   "part": "3 of 3",
+   "tab": "Guide: Engagement",
    "production": "generated"
   },
   {

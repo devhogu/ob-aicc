@@ -2,11 +2,13 @@
 id: services/strategy-and-governance
 title: Strategy and governance
 section: services
-order: 1
+order: 5
 type: service
 slug: /services/strategy-and-governance/
 source: portal/content/services/strategy-and-governance.md
 area: advise
+series: service-categories-advise
+parent: services/advise-and-formulate
 production: authored
 status: scaffold
 ---

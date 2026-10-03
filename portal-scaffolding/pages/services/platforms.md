@@ -2,11 +2,13 @@
 id: services/platforms
 title: Platforms
 section: services
-order: 9
+order: 13
 type: service
 slug: /services/platforms/
 source: portal/content/services/platforms.md
 area: build
+series: service-categories-build
+parent: services/build-and-run
 production: authored
 status: scaffold
 ---

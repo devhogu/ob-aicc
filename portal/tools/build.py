@@ -774,7 +774,7 @@ def layout(site, p, lang, main_html, outline):
             for q in items:
                 if q['type'] == 'guide' and q.get('companion') in ids:
                     continue
-                if q['type'] in ('template', 'regulation'):
+                if q['type'] in ('template', 'regulation', 'service'):
                     continue
                 if q.get('series') and q.get('series') == sp.get('series'):
                     continue
@@ -1040,7 +1040,11 @@ def content_page(site, p, lang):
         sec = site.auth['sections'][p['section']]
         h1 = sec['label'][lang]
         lead = '<p class="o-lead">%s</p>' % esc(sec['intro'][lang])
-    head = '<h1>%s</h1>%s%s%s%s%s' % (esc(PAGE_TITLE.get(h1, h1)), lead, facts_html(site, p, lang, b['fm']), companion_html(site, p, lang), parts_html(site, p, lang), lang_note(site, lang))
+    eyebrow = ''
+    if p.get('parent') and p['parent'] in site.by_id:
+        par = site.by_id[p['parent']]
+        eyebrow = '<p class="o-eyebrow parent"><a href="%s">%s</a> · %s</p>' % (site.rel(ctx['url'], site.url(par, lang)), esc(par['title']), esc(page_meta(site, p, lang)))
+    head = eyebrow + '<h1>%s</h1>%s%s%s%s%s' % (esc(PAGE_TITLE.get(h1, h1)), lead, facts_html(site, p, lang, b['fm']), companion_html(site, p, lang), parts_html(site, p, lang), lang_note(site, lang))
     extra = ''
     if p['type'] == 'catalogue':
         extra = controls_catalogue(site, p, lang)
@@ -1153,8 +1157,6 @@ def section_page(site, p, lang):
     sec = site.auth['sections'][sid]
     url = site.url(p, lang)
     m = site.msg[lang]
-    if sid == 'services':
-        return services_page(site, p, lang)
     if sid == 'responsible-ai':
         items = nav_groups(site, sid)
         course = sorted([q for q in site.pages if q.get('section') == sid and q.get('series')], key=lambda x: x['order'])
@@ -1191,48 +1193,6 @@ def section_page(site, p, lang):
         cards = cards_for(site, sid, lang, url)
     main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(sec['label'][lang]), esc(sec['intro'][lang]), cards, prev_next(site, p, lang))
     return layout(site, p, lang, main, [])
-
-
-def services_page(site, p, lang):
-    a = site.auth['services_page']
-    sec = site.auth['sections']['services']
-    m = site.msg[lang]
-    url = site.url(p, lang)
-    items = nav_groups(site, 'services')
-    by_id = {q['id']: q for q in items}
-    docs = [q for q in items if q['type'] in ('document', 'workflow')]
-    guides = {x['companion']: x for x in items if x['type'] == 'guide' and x.get('companion')}
-    engage = site.by_id['services/how-to-engage']
-    out = ['<h1>%s</h1><p class="o-lead">%s</p>' % (esc(sec['label'][lang]), esc(sec['intro'][lang]))]
-    fams = []
-    for f in a['areas']:
-        cats = [q for q in items if q['type'] == 'service' and q.get('area') == f['id']]
-        cards = ''.join(card(site, q, lang, url, 'card--secondary') for q in cats)
-        fams.append('<section class="sv-family" aria-labelledby="f-%s"><h3 id="f-%s">%s</h3><p>%s</p><ul class="o-grid card-list cards-secondary">%s</ul></section>' % (f['id'], f['id'], esc(f['title'][lang]), esc(f['text'][lang]), cards))
-    out.append('<section aria-labelledby="sv-lines"><h2 id="sv-lines">%s</h2><p>%s</p>%s</section>' % (esc(a['lines_title'][lang]), esc(a['lines_lead'][lang]), ''.join(fams)))
-    steps = ''.join('<li><span class="lv-n">%d</span><strong>%s</strong><span>%s</span></li>' % (i, esc(st['t']), esc(st['d'])) for i, st in enumerate(a['steps'], 1))
-    levels = ''.join('<tr><td><strong>%s</strong></td><td>%s</td><td>%s</td></tr>' % tuple(esc(x) for x in row) for row in a['levels'])
-    out.append('<section aria-labelledby="sv-engage"><h2 id="sv-engage">%s</h2><p>%s</p><ol class="levels steps">%s</ol><p><a href="%s">%s</a></p></section>' % (
-        esc(a['engage_title'][lang]), esc(a['engage_lead'][lang]), steps, site.rel(url, site.url(engage, lang)), esc(m['card_open'] + ': ' + engage['title'])))
-    out.append('<section aria-labelledby="sv-levels"><h2 id="sv-levels">%s</h2><div class="o-table-wrap about-table" role="region" tabindex="0" aria-label="%s"><table lang="en"><thead><tr><th>%s</th><th>%s</th><th>%s</th></tr></thead><tbody>%s</tbody></table></div></section>' % (
-        esc(a['levels_title'][lang]), esc(a['levels_title'][lang]), 'Support level', 'What AICC does', 'Solution type', levels))
-    out.append('<section aria-labelledby="sv-not"><h2 id="sv-not">%s</h2><p class="o-callout">%s</p></section>' % (esc(a['not_title'][lang]), site.link_xrefs(esc(a['not'][lang]), {'url': url, 'lang': lang, 'source': 'charter/documents/business-model.md'})))
-    fw = [by_id[x] for x in ('services/service-model', 'services/catalog') if x in by_id]
-    out.append('<section aria-labelledby="sv-model"><h2 id="sv-model">%s</h2><p>%s</p><ul class="o-grid card-list cards-secondary">%s</ul></section>' % (
-        esc(a['model_title'][lang]), esc(a['model_lead'][lang]), ''.join(card(site, q, lang, url, 'card--secondary') for q in fw)))
-    dcards = []
-    for q in docs:
-        extra = ''
-        g = guides.get(q['id'])
-        if g:
-            extra = '<p class="card-guide"><a href="%s">%s</a></p>' % (site.rel(url, site.url(g, lang)), esc(m['kind_guide'] + ': ' + re.sub(r'^Guide:\s*', '', g['title'])))
-        dcards.append(card(site, q, lang, url, 'card--secondary', extra))
-    out.append('<section aria-labelledby="sv-docs"><h2 id="sv-docs">%s</h2><ul class="o-grid card-list cards-secondary">%s</ul></section>' % (esc(a['docs_title'][lang]), ''.join(dcards)))
-    outline = [(2, 'sv-lines', a['lines_title'][lang])] + [(3, 'f-' + f['id'], f['title'][lang]) for f in a['areas']] + [
-        (2, 'sv-engage', a['engage_title'][lang]), (2, 'sv-levels', a['levels_title'][lang]), (2, 'sv-not', a['not_title'][lang]), (2, 'sv-model', a['model_title'][lang]), (2, 'sv-docs', a['docs_title'][lang])]
-    for hid, t, x in (('sv-engage', a['engage_title'][lang], a['engage_lead'][lang]), ('sv-not', a['not_title'][lang], a['not'][lang]), ('sv-model', a['model_title'][lang], a['model_lead'][lang])):
-        site.extra_search.setdefault(lang, []).append({'u': url + '#' + hid, 't': sec['label'][lang], 'h': t, 'x': x[:360]})
-    return layout(site, p, lang, ''.join(out) + prev_next(site, p, lang), outline)
 
 
 def guides_index(site, p, lang):

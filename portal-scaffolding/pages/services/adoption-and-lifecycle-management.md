@@ -2,11 +2,13 @@
 id: services/adoption-and-lifecycle-management
 title: Adoption and lifecycle management
 section: services
-order: 11
+order: 15
 type: service
 slug: /services/adoption-and-lifecycle-management/
 source: portal/content/services/adoption-and-lifecycle-management.md
 area: enablement
+series: service-categories-enablement
+parent: services/enablement
 production: authored
 status: scaffold
 ---

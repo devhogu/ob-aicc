@@ -2,11 +2,13 @@
 id: services/analytics-and-decision-support
 title: Analytics and decision support
 section: services
-order: 7
+order: 11
 type: service
 slug: /services/analytics-and-decision-support/
 source: portal/content/services/analytics-and-decision-support.md
 area: build
+series: service-categories-build
+parent: services/build-and-run
 production: authored
 status: scaffold
 ---

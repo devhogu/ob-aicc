@@ -27,7 +27,11 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Responsible AI | AI terms explained | /responsible-ai/ai-terms-explained/ | outline | portal/content/responsible-ai/ai-terms-explained.md | all |  | authored; explanatory, the AI Policy is the rule |
 | Responsible AI | AI Policy | /responsible-ai/ai-policy/ | document | documents/ai-policy.md | all | 2155 | generated |
 | Responsible AI | AI risk and control workflow | /responsible-ai/ai-risk-control-workflow/ | workflow | workflows/ai-risk-control.md | all |  | generated |
-| Services | Services | /services/ | section | none | none |  | authored, with a generated list |
+| Services | Services | /services/ | section | portal/content/services/areas/overview.md | all |  | authored; the overview of the areas, the first part of the series |
+| Services | Advise and formulate | /services/advise-and-formulate/ | outline | portal/content/services/areas/advise-and-formulate.md | all |  | authored; generated table of the categories of the area |
+| Services | Build and run | /services/build-and-run/ | outline | portal/content/services/areas/build-and-run.md | all |  | authored; generated table of the categories of the area |
+| Services | Enablement | /services/enablement/ | outline | portal/content/services/areas/enablement.md | all |  | authored; generated table of the categories of the area |
+| Services | Assurance | /services/assurance/ | outline | portal/content/services/areas/assurance.md | all |  | authored; generated table of the categories of the area |
 | Services | Strategy and governance | /services/strategy-and-governance/ | service | portal/content/services/strategy-and-governance.md | all |  | authored |
 | Services | Normatives and processes | /services/normatives-and-processes/ | service | portal/content/services/normatives-and-processes.md | all |  | authored |
 | Services | Research and exploration | /services/research-and-exploration/ | service | portal/content/services/research-and-exploration.md | all |  | authored |
@@ -43,12 +47,12 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Services | Assessments and evaluations | /services/assessments-and-evaluations/ | service | portal/content/services/assessments-and-evaluations.md | all |  | authored |
 | Services | Risk tiering | /services/risk-tiering/ | service | portal/content/services/risk-tiering.md | all |  | authored |
 | Services | Oversight | /services/oversight/ | service | portal/content/services/oversight.md | all |  | authored |
-| Services | The service model | /services/service-model/ | outline | portal/content/services/service-model.md | all |  | authored |
 | Services | How to engage | /services/how-to-engage/ | outline | portal/content/services/how-to-engage.md | all |  | authored, with the Engagement workflow |
-| Services | Service catalog: the form | /services/catalog/ | outline | portal/content/services/catalog-form.md | all |  | authored; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal |
-| Services | Business Model | /services/business-model/ | document | documents/business-model.md | all | 1381 | generated |
 | Services | Engagement workflow | /services/engagement-workflow/ | workflow | workflows/engagement.md | all |  | generated |
 | Services | Guide: Engagement | /services/engagement-guide/ | guide | guides/engagement-guide.md | all |  | generated |
+| Services | Service catalog | /services/catalog/ | outline | portal/content/services/catalog-form.md | all |  | authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal |
+| Services | The service model | /services/service-model/ | outline | portal/content/services/service-model.md | all |  | authored |
+| Services | Business Model | /services/business-model/ | document | documents/business-model.md | all | 1381 | generated |
 | Portfolio | Portfolio | /portfolio/ | section | none | none |  | authored, with a generated list |
 | Portfolio | Portfolio Management Model | /portfolio/portfolio-management-model/ | document | documents/portfolio-management-model.md | 1, 2, 3 | 597 | generated |
 | Portfolio | Portfolio Management Model: The portfolio loops | /portfolio/portfolio-management-model/the-portfolio-loops/ | document | documents/portfolio-management-model.md | 4 | 1309 | generated |

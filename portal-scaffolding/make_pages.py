@@ -186,27 +186,46 @@ if NEXT:
             ('oversight', 'Oversight', 'Adopted Solutions, live reviews, AI Incidents, and changes followed through the Registry and reported to the Steering and the Board Committee', 'Business Model 2.3; AI Policy 5; AICC Charter 7'),
         ]),
     ]
-    i = 0
+    # The section page is the overview of the areas (part 1 of the series 'service-areas'); one page per area follows (parts 2 to 5).
+    # The categories of an area form a series of their own, with tabs among them, and are reached from the area page, not from the navigation.
+    AREA_SLUG = {'advise': 'advise-and-formulate', 'build': 'build-and-run', 'enablement': 'enablement', 'assurance': 'assurance'}
+    AREA_TAB = {'advise': 'Advise and formulate', 'build': 'Build and run', 'enablement': 'Enablement', 'assurance': 'Assurance'}
+    sp = next(x for x in PAGES if x['id'] == 'services/index')
+    sp.update(source=['portal/content/services/areas/overview.md'], production='authored; the overview of the areas, the first part of the series',
+              outline=['The four areas, each with its posture and its categories in one line', 'From the areas to an Engagement: How to engage, the catalog, the Business Model'],
+              series='service-areas', series_title='Service areas', part='1 of 5', tab='Overview')
+    for k, (aid, aname, cats) in enumerate(AREAS, 1):
+        add(id=f'services/{AREA_SLUG[aid]}', section='services', order=k, type='outline', slug=f'/services/{AREA_SLUG[aid]}/', title=aname,
+            source=[f'portal/content/services/areas/{AREA_SLUG[aid]}.md'], production='authored; generated table of the categories of the area',
+            series='service-areas', series_title='Service areas', part=f'{k + 1} of 5', tab=AREA_TAB[aid],
+            outline=['The posture of the area', 'The categories of the area: coverage and mode', 'How a function engages the area', 'What the area leaves behind'])
+    i = 4
     for aid, aname, cats in AREAS:
         for slug, title, line, rule in cats:
             i += 1
             add(id=f'services/{slug}', section='services', order=i, type='service', slug=f'/services/{slug}/', title=title, source=[f'portal/content/services/{slug}.md'], production='authored',
-                area=aid, outline=[f'Area: {aname}. ' + line, 'What the function receives, how it runs, and what it leads to', 'The reusable package; run-rate or program; who decides', 'Rule source: ' + rule])
-    add(id='services/service-model', section='services', order=20, type='outline', slug='/services/service-model/', title='The service model', source=['portal/content/services/service-model.md'], production='authored',
-        outline=['The composition of a service: area and category, mode, client, Solution type, support level, Risk Tier, owner, package, records', 'The life of a service; the operation of a service; the records; the catalog'])
+                area=aid, parent=f'services/{AREA_SLUG[aid]}', series=f'service-categories-{aid}', series_title=aname, tab=title,
+                outline=[f'Area: {aname}. ' + line, 'What the function receives, how it runs, and what it leads to', 'The reusable package; run-rate or program; who decides', 'Rule source: ' + rule])
     add(id='services/how-to-engage', section='services', order=21, type='outline', slug='/services/how-to-engage/', title='How to engage', source=['portal/content/services/how-to-engage.md'], production='authored, with the Engagement workflow',
+        series='how-to-engage', series_title='How to engage', part='1 of 3', tab='How to engage',
         outline=['The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)',
                  'The function commits to nothing; AICC works on a best-effort basis within its capability', 'Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)',
                  'What AICC does not do (AICC Charter 3.2)', 'Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report'])
-    add(id='services/catalog', section='services', order=22, type='outline', slug='/services/catalog/', title='Service catalog: the form',
-        source=['portal/content/services/catalog-form.md'], production='authored; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal',
+    add(id='services/catalog', section='services', order=24, type='outline', slug='/services/catalog/', title='Service catalog',
+        source=['portal/content/services/catalog-form.md'], production='authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal',
+        series='service-catalog', series_title='Service catalog', part='1 of 2', tab='The form of the catalog',
         outline=['The two kinds of entry: Solution and package', 'The fields of each; the states of an entry', 'One illustration of each kind'])
-add(id=f'{S}/business-model', section=S, order=23 if NEXT else 1, type='document', slug=f'/{S}/business-model/',
+    add(id='services/service-model', section='services', order=25, type='outline', slug='/services/service-model/', title='The service model', source=['portal/content/services/service-model.md'], production='authored',
+        series='service-catalog', series_title='Service catalog', part='2 of 2', tab='The service model',
+        outline=['The composition of a service: area and category, mode, client, Solution type, support level, Risk Tier, owner, package, records', 'The life of a service; the operation of a service; the records; the catalog'])
+add(id=f'{S}/business-model', section=S, order=26 if NEXT else 1, type='document', slug=f'/{S}/business-model/',
     title=h1('charter/documents/business-model.md'), source=['charter/documents/business-model.md'], words=1381)
-add(id=f'{S}/engagement-workflow', section=S, order=24 if NEXT else 2, type='workflow', slug=f'/{S}/engagement-workflow/',
-    title=h1('charter/workflows/engagement.md'), source=['charter/workflows/engagement.md'], companion=f'{S}/engagement-guide')
-add(id=f'{S}/engagement-guide', section=S, order=25 if NEXT else 3, type='guide', slug=f'/{S}/engagement-guide/',
-    title=h1('charter/guides/engagement-guide.md'), source=['charter/guides/engagement-guide.md'], companion=f'{S}/engagement-workflow')
+add(id=f'{S}/engagement-workflow', section=S, order=22 if NEXT else 2, type='workflow', slug=f'/{S}/engagement-workflow/',
+    title=h1('charter/workflows/engagement.md'), source=['charter/workflows/engagement.md'], companion=f'{S}/engagement-guide',
+    **({'series': 'how-to-engage', 'series_title': 'How to engage', 'part': '2 of 3', 'tab': 'Engagement workflow'} if NEXT else {}))
+add(id=f'{S}/engagement-guide', section=S, order=23 if NEXT else 3, type='guide', slug=f'/{S}/engagement-guide/',
+    title=h1('charter/guides/engagement-guide.md'), source=['charter/guides/engagement-guide.md'], companion=f'{S}/engagement-workflow',
+    **({'series': 'how-to-engage', 'series_title': 'How to engage', 'part': '3 of 3', 'tab': 'Guide: Engagement'} if NEXT else {}))
 
 # How AICC works (current) / Portfolio and Delivery (next)
 split_doc(S_PORTFOLIO, 'portfolio-management-model', 'charter/documents/portfolio-management-model.md', [
@@ -433,6 +452,8 @@ for p in PAGES:
         fm.append(f"region: {p['region']}")
     if p.get('series'):
         fm.append(f"series: {p['series']}")
+    if p.get('parent'):
+        fm.append(f"parent: {p['parent']}")
     fm.append(f"production: {p['production']}")
     fm += ['status: scaffold', '---']
     body = fm + ['', f"# {p['title']}", '', f"Page type: {p['type']}. Address: {p['slug']}", '']

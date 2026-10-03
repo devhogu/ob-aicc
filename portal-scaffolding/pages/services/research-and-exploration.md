@@ -2,11 +2,13 @@
 id: services/research-and-exploration
 title: Research and exploration
 section: services
-order: 3
+order: 7
 type: service
 slug: /services/research-and-exploration/
 source: portal/content/services/research-and-exploration.md
 area: advise
+series: service-categories-advise
+parent: services/advise-and-formulate
 production: authored
 status: scaffold
 ---

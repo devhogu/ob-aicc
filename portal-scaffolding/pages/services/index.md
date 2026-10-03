@@ -5,7 +5,10 @@ section: services
 order: 0
 type: section
 slug: /services/
-production: authored, with a generated list
+source: portal/content/services/areas/overview.md
+part: 1 of 5
+series: service-areas
+production: authored; the overview of the areas, the first part of the series
 status: scaffold
 ---
 
@@ -13,9 +16,11 @@ status: scaffold
 
 Page type: section. Address: /services/
 
+## Source
+
+- portal/content/services/areas/overview.md
+
 ## Outline
 
-- Introduction of three to five lines: The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do.
-- Statement of what the section does not hold and where it is kept
-- The pages of the section with one line each (generated)
-- Related sections
+- The four areas, each with its posture and its categories in one line
+- From the areas to an Engagement: How to engage, the catalog, the Business Model

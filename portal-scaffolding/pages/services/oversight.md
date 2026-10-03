@@ -2,11 +2,13 @@
 id: services/oversight
 title: Oversight
 section: services
-order: 15
+order: 19
 type: service
 slug: /services/oversight/
 source: portal/content/services/oversight.md
 area: assurance
+series: service-categories-assurance
+parent: services/assurance
 production: authored
 status: scaffold
 ---

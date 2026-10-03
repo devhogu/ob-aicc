@@ -2,7 +2,7 @@
 id: services/business-model
 title: Business Model
 section: services
-order: 23
+order: 26
 type: document
 slug: /services/business-model/
 source: charter/documents/business-model.md

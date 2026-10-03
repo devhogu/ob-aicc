@@ -2,11 +2,13 @@
 id: services/policies-controls-criteria
 title: Policies, controls, criteria
 section: services
-order: 12
+order: 16
 type: service
 slug: /services/policies-controls-criteria/
 source: portal/content/services/policies-controls-criteria.md
 area: assurance
+series: service-categories-assurance
+parent: services/assurance
 production: authored
 status: scaffold
 ---

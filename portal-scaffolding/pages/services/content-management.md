@@ -2,11 +2,13 @@
 id: services/content-management
 title: Content management
 section: services
-order: 8
+order: 12
 type: service
 slug: /services/content-management/
 source: portal/content/services/content-management.md
 area: build
+series: service-categories-build
+parent: services/build-and-run
 production: authored
 status: scaffold
 ---

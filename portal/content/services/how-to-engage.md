@@ -21,11 +21,11 @@ A function does not need a form, a budget line, or a project to start with AICC.
 
 ## 3. The commitment
 
-2.1. AICC commits in a Service Agreement. It is a working agreement and not a legal document, and it needs no signature chain. AICC works toward the outcome on a best-effort basis, within the capability that it has available. The function commits to nothing; what AICC relies on from the function is written as an Assumption.
+3.1. AICC commits in a Service Agreement. It is a working agreement and not a legal document, and it needs no signature chain. AICC works toward the outcome on a best-effort basis, within the capability that it has available. The function commits to nothing; what AICC relies on from the function is written as an Assumption.
 
-2.2. The scope is an intent and a backlog ordered by value within the Limits on Work in Progress. Either side may end or redirect the Engagement at the end of an Iteration.
+3.2. The scope is an intent and a backlog ordered by value within the Limits on Work in Progress. Either side may end or redirect the Engagement at the end of an Iteration.
 
-2.3. AICC does not charge the functions. The Domain pays from its Investment Envelope for the run, the licenses, and the provider costs of a Solution.
+3.3. AICC does not charge the functions. The Domain pays from its Investment Envelope for the run, the licenses, and the provider costs of a Solution.
 
 ## 4. Service levels
 
@@ -38,9 +38,9 @@ A function does not need a form, a budget line, or a project to start with AICC.
 
 ## 5. What AICC does not do
 
-4.1. AICC does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, validate its own work, or decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function.
+5.1. AICC does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, validate its own work, or decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function.
 
-4.2. AICC does not deliver at scale. It proves and builds, and it relies on the platform teams and the IT functions of the Bank to run what the Bank adopts.
+5.2. AICC does not deliver at scale. It proves and builds, and it relies on the platform teams and the IT functions of the Bank to run what the Bank adopts.
 
 ## 6. Rule source
 
