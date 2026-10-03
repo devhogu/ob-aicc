@@ -130,7 +130,7 @@
    "ru": "Центр компетенций по искусственному интеллекту"
   },
   "lead": {
-   "en": "We are the Bank's own Artificial Intelligence Lab: a Center of Competence and Solution Hub that proves what AI can do for the people who serve our customers, sets the standard by which the Bank adopts it, and keeps every use of it accountable to people. Your AI journey begins here!",
+   "en": "We are the Bank's own Artificial Intelligence Lab: a Center of Competence and Solution Hub that proves what AI can do for the people who serve our customers, sets the standard by which the Bank adopts it, and keeps every use of it accountable to people.",
    "ru": "Мы — собственная лаборатория Банка по искусственному интеллекту: небольшая команда, которая доказывает, что ИИ может сделать для людей, обслуживающих наших клиентов, задаёт стандарт, по которому Банк внедряет его, и держит каждое применение подотчётным людям. Этот сайт — место, где Банк узнаёт, кто мы, что мы предлагаем и как работаем."
   },
   "cta": [
@@ -218,6 +218,10 @@
   "newhere_link": {
    "en": "Learning paths",
    "ru": "Учебные маршруты"
+  },
+  "tagline": {
+   "en": "Your AI journey begins here!",
+   "ru": "Ваш путь в ИИ начинается здесь!"
   }
  },
  "routes": [

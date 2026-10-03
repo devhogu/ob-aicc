@@ -1277,7 +1277,7 @@ def home_page(site, p, lang):
     stand = ''.join('<li class="linked" data-tip="%s" data-tip-title="%s"><h3>%s</h3><p>%s</p><a href="%s">%s &rsaquo;</a></li>' % (esc(tip_of(st['to'])), esc(st['link'][lang]), esc(st['title'][lang]), esc(st['text'][lang]), site.rel(url, site.url(site.by_id[st['to']], lang)), esc(st['link'][lang])) for st in a['stand'])
     chips = ''.join('<li><a href="%s#c-%s" data-tip="%s" data-tip-title="%s">%s</a></li>' % (sp_url, num.replace('.', '-'), esc(o), esc('%s %d' % (m['strategic_priority'], k + 1)), esc(t)) for k, (num, t, o) in enumerate(pri))
     lp = site.by_id['knowledge-base/learning-paths']
-    main = f'''<section class="home-hero"><p class="o-eyebrow">{esc(a['eyebrow'][lang])}</p><h1>{esc(a['title'][lang])}</h1><p class="o-lead home-lead">{esc(a['lead'][lang])}</p><p class="home-ctas">{ctas}</p></section>
+    main = f'''<section class="home-hero"><p class="o-eyebrow">{esc(a['eyebrow'][lang])}</p><h1>{esc(a['title'][lang])}</h1><p class="o-lead home-lead">{esc(a['lead'][lang])}</p><p class="home-tagline">{esc(a['tagline'][lang])}</p><p class="home-ctas">{ctas}</p></section>
 <section aria-label="{esc(m['home'])}"><ul class="home-stand">{stand}</ul></section>
 <section aria-labelledby="h-pri" class="home-pri"><h2 id="h-pri">{esc(m['strategic_priorities'])}</h2><p class="home-pri-lead">{esc(a['priorities_lead'][lang])}</p><ol class="home-chips">{chips}</ol></section>
 <section aria-labelledby="h-sec"><h2 id="h-sec">{esc(a['sections_title'][lang])}</h2><ul class="o-grid card-list cards-compact home-sections">{scards}</ul></section>
