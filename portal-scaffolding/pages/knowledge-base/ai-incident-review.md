@@ -2,7 +2,7 @@
 id: knowledge-base/ai-incident-review
 title: AI Incident Review
 section: knowledge-base
-order: 9
+order: 29
 type: template
 slug: /knowledge-base/ai-incident-review/
 source: charter/templates/ai-incident-review.md

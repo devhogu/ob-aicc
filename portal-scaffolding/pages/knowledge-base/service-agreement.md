@@ -2,7 +2,7 @@
 id: knowledge-base/service-agreement
 title: Service Agreement
 section: knowledge-base
-order: 2
+order: 22
 type: template
 slug: /knowledge-base/service-agreement/
 source: charter/templates/service-agreement.md

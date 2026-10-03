@@ -222,15 +222,18 @@
    "slug": "/knowledge-base/",
    "title": "Knowledge base",
    "source": [
-    "charter/templates/README.md"
+    "portal/content/knowledge-base/overview.md",
+    "charter/templates/README.md",
+    "charter/guides/README.md"
    ],
-   "production": "authored, with a generated list",
+   "production": "authored; the overview of the Knowledge base",
    "outline": [
-    "Introduction of three to five lines: The templates, the guides, the acts and compliance, and the publications of AICC.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
+    "The five shelves, drawn; if you need, go to; how the Knowledge base is kept"
+   ],
+   "series": "knowledge-base-course",
+   "series_title": "Knowledge base",
+   "part": "1 of 7",
+   "tab": "Overview"
   },
   {
    "id": "reference/index",
@@ -2761,7 +2764,7 @@
   {
    "id": "knowledge-base/initiative-brief",
    "section": "knowledge-base",
-   "order": 1,
+   "order": 21,
    "type": "template",
    "slug": "/knowledge-base/initiative-brief/",
    "title": "Initiative Brief",
@@ -2773,7 +2776,7 @@
   {
    "id": "knowledge-base/service-agreement",
    "section": "knowledge-base",
-   "order": 2,
+   "order": 22,
    "type": "template",
    "slug": "/knowledge-base/service-agreement/",
    "title": "Service Agreement",
@@ -2785,7 +2788,7 @@
   {
    "id": "knowledge-base/solution-definition",
    "section": "knowledge-base",
-   "order": 3,
+   "order": 23,
    "type": "template",
    "slug": "/knowledge-base/solution-definition/",
    "title": "Solution Definition",
@@ -2797,7 +2800,7 @@
   {
    "id": "knowledge-base/acceptance-checklist",
    "section": "knowledge-base",
-   "order": 4,
+   "order": 24,
    "type": "template",
    "slug": "/knowledge-base/acceptance-checklist/",
    "title": "Acceptance Checklist",
@@ -2809,7 +2812,7 @@
   {
    "id": "knowledge-base/control-sign-off",
    "section": "knowledge-base",
-   "order": 5,
+   "order": 25,
    "type": "template",
    "slug": "/knowledge-base/control-sign-off/",
    "title": "Control Sign-Off",
@@ -2821,7 +2824,7 @@
   {
    "id": "knowledge-base/decision-record",
    "section": "knowledge-base",
-   "order": 6,
+   "order": 26,
    "type": "template",
    "slug": "/knowledge-base/decision-record/",
    "title": "Decision Record",
@@ -2833,7 +2836,7 @@
   {
    "id": "knowledge-base/steering-summary",
    "section": "knowledge-base",
-   "order": 7,
+   "order": 27,
    "type": "template",
    "slug": "/knowledge-base/steering-summary/",
    "title": "Steering Summary",
@@ -2845,7 +2848,7 @@
   {
    "id": "knowledge-base/outcome-report",
    "section": "knowledge-base",
-   "order": 8,
+   "order": 28,
    "type": "template",
    "slug": "/knowledge-base/outcome-report/",
    "title": "Outcome Report",
@@ -2857,7 +2860,7 @@
   {
    "id": "knowledge-base/ai-incident-review",
    "section": "knowledge-base",
-   "order": 9,
+   "order": 29,
    "type": "template",
    "slug": "/knowledge-base/ai-incident-review/",
    "title": "AI Incident Review",
@@ -2869,7 +2872,7 @@
   {
    "id": "knowledge-base/registry-snapshot",
    "section": "knowledge-base",
-   "order": 10,
+   "order": 30,
    "type": "template",
    "slug": "/knowledge-base/registry-snapshot/",
    "title": "Registry Snapshot",
@@ -2881,7 +2884,7 @@
   {
    "id": "knowledge-base/quarterly-report",
    "section": "knowledge-base",
-   "order": 11,
+   "order": 31,
    "type": "template",
    "slug": "/knowledge-base/quarterly-report/",
    "title": "Quarterly Report",
@@ -2893,7 +2896,7 @@
   {
    "id": "knowledge-base/appointments-record",
    "section": "knowledge-base",
-   "order": 12,
+   "order": 32,
    "type": "template",
    "slug": "/knowledge-base/appointments-record/",
    "title": "Appointments Record",
@@ -2905,7 +2908,7 @@
   {
    "id": "knowledge-base/proposal",
    "section": "knowledge-base",
-   "order": 13,
+   "order": 33,
    "type": "template",
    "slug": "/knowledge-base/proposal/",
    "title": "Proposal",
@@ -2915,30 +2918,115 @@
    "production": "generated"
   },
   {
+   "id": "knowledge-base/learning-paths",
+   "section": "knowledge-base",
+   "order": 2,
+   "type": "outline",
+   "slug": "/knowledge-base/learning-paths/",
+   "title": "Learning paths",
+   "source": [
+    "portal/content/knowledge-base/learning-paths.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Reading orders by role on the courses of the site: everyone, a head of function or Domain Owner, a Solution Engineer, a Domain Expert, the Executive Sponsor, a Control Function Contact, internal audit, human resources"
+   ],
+   "series": "knowledge-base-course",
+   "series_title": "Knowledge base",
+   "part": "2 of 7",
+   "tab": "Learning paths"
+  },
+  {
+   "id": "knowledge-base/templates-and-forms",
+   "section": "knowledge-base",
+   "order": 3,
+   "type": "outline",
+   "slug": "/knowledge-base/templates-and-forms/",
+   "title": "Templates and forms",
+   "source": [
+    "portal/content/knowledge-base/templates-and-forms.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Which form when, along the life of an Engagement and the cycle of the unit: used when, filled by, signed by, kept in; how a form is used"
+   ],
+   "series": "knowledge-base-course",
+   "series_title": "Knowledge base",
+   "part": "3 of 7",
+   "tab": "Templates and forms"
+  },
+  {
    "id": "knowledge-base/guides",
    "section": "knowledge-base",
-   "order": 20,
-   "type": "index",
+   "order": 4,
+   "type": "outline",
    "slug": "/knowledge-base/guides/",
    "title": "Guides",
    "source": [
+    "portal/content/knowledge-base/guides.md",
     "charter/guides/README.md"
    ],
-   "production": "generated from the sitemap",
+   "production": "authored",
    "outline": [
-    "The five guides with one line each, linking to their canonical pages beside their workflows (the guide stays in one place; this is a list)"
-   ]
+    "The five guides by the question each answers, beside their subjects; the guides and the courses"
+   ],
+   "series": "knowledge-base-course",
+   "series_title": "Knowledge base",
+   "part": "4 of 7",
+   "tab": "Guides"
+  },
+  {
+   "id": "knowledge-base/playbooks-and-lessons",
+   "section": "knowledge-base",
+   "order": 5,
+   "type": "outline",
+   "slug": "/knowledge-base/playbooks-and-lessons/",
+   "title": "Playbooks and lessons",
+   "source": [
+    "portal/content/knowledge-base/playbooks-and-lessons.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "The charter as published; the Proposals; the playbooks and method notes; the lessons; the packages"
+   ],
+   "series": "knowledge-base-course",
+   "series_title": "Knowledge base",
+   "part": "5 of 7",
+   "tab": "Playbooks and lessons"
+  },
+  {
+   "id": "knowledge-base/questions-people-ask",
+   "section": "knowledge-base",
+   "order": 7,
+   "type": "outline",
+   "slug": "/knowledge-base/questions-people-ask/",
+   "title": "Questions people ask",
+   "source": [
+    "portal/content/knowledge-base/questions-people-ask.md"
+   ],
+   "production": "authored",
+   "outline": [
+    "Short answers grounded in the charter: using AI at work, starting with AICC, risk and approval, the unit"
+   ],
+   "series": "knowledge-base-course",
+   "series_title": "Knowledge base",
+   "part": "7 of 7",
+   "tab": "Questions"
   },
   {
    "id": "knowledge-base/acts-and-compliance",
    "section": "knowledge-base",
-   "order": 21,
+   "order": 6,
    "type": "outline",
    "slug": "/knowledge-base/acts-and-compliance/",
    "title": "Acts and compliance",
    "source": [
     "portal/content/knowledge-base/acts-and-compliance.md"
    ],
+   "series": "knowledge-base-course",
+   "series_title": "Knowledge base",
+   "part": "6 of 7",
+   "tab": "Acts and compliance",
    "production": "authored; curated by the AICC Lead with the Control Function Contacts",
    "outline": [
     "DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution",
@@ -2949,7 +3037,7 @@
   {
    "id": "knowledge-base/package-definition",
    "section": "knowledge-base",
-   "order": 19,
+   "order": 40,
    "type": "outline",
    "slug": "/knowledge-base/package-definition/",
    "title": "Package Definition (draft template)",
@@ -2961,22 +3049,6 @@
     "When it is used",
     "The form",
     "The sections"
-   ]
-  },
-  {
-   "id": "knowledge-base/publications",
-   "section": "knowledge-base",
-   "order": 22,
-   "type": "outline",
-   "slug": "/knowledge-base/publications/",
-   "title": "Publications",
-   "source": [
-    "portal/content/knowledge-base/publications.md"
-   ],
-   "production": "authored; a list kept by the AICC Lead",
-   "outline": [
-    "DECISION 5: new content. The publications of AICC for the Bank: Proposals made available, method notes, lessons, and playbooks from the Engagements (Business Model 4.4)",
-    "For each: title, date, audience, where it is kept"
    ]
   },
   {

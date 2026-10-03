@@ -136,7 +136,13 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Organization | Domain Expert | /organization/roles/domain-expert/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | Control Function Contact | /organization/roles/control-function-contact/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | Platform Owner | /organization/roles/platform-owner/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
-| Knowledge base | Knowledge base | /knowledge-base/ | section | templates/README.md | all |  | authored, with a generated list |
+| Knowledge base | Knowledge base | /knowledge-base/ | section | portal/content/knowledge-base/overview.md; templates/README.md; guides/README.md | all |  | authored; the overview of the Knowledge base |
+| Knowledge base | Learning paths | /knowledge-base/learning-paths/ | outline | portal/content/knowledge-base/learning-paths.md | all |  | authored |
+| Knowledge base | Templates and forms | /knowledge-base/templates-and-forms/ | outline | portal/content/knowledge-base/templates-and-forms.md | all |  | authored |
+| Knowledge base | Guides | /knowledge-base/guides/ | outline | portal/content/knowledge-base/guides.md; guides/README.md | all |  | authored |
+| Knowledge base | Playbooks and lessons | /knowledge-base/playbooks-and-lessons/ | outline | portal/content/knowledge-base/playbooks-and-lessons.md | all |  | authored |
+| Knowledge base | Acts and compliance | /knowledge-base/acts-and-compliance/ | outline | portal/content/knowledge-base/acts-and-compliance.md | all |  | authored; curated by the AICC Lead with the Control Function Contacts |
+| Knowledge base | Questions people ask | /knowledge-base/questions-people-ask/ | outline | portal/content/knowledge-base/questions-people-ask.md | all |  | authored |
 | Knowledge base | Initiative Brief | /knowledge-base/initiative-brief/ | template | templates/initiative-brief.md | all |  | generated |
 | Knowledge base | Service Agreement | /knowledge-base/service-agreement/ | template | templates/service-agreement.md | all |  | generated |
 | Knowledge base | Solution Definition | /knowledge-base/solution-definition/ | template | templates/solution-definition.md | all |  | generated |
@@ -151,9 +157,6 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Knowledge base | Appointments Record | /knowledge-base/appointments-record/ | template | templates/appointments-record.md | all |  | generated |
 | Knowledge base | Proposal | /knowledge-base/proposal/ | template | templates/proposal.md | all |  | generated |
 | Knowledge base | Package Definition (draft template) | /knowledge-base/package-definition/ | outline | portal/content/knowledge-base/package-definition.md | all |  | authored; proposed as the fourteenth template of the charter |
-| Knowledge base | Guides | /knowledge-base/guides/ | index | guides/README.md | all |  | generated from the sitemap |
-| Knowledge base | Acts and compliance | /knowledge-base/acts-and-compliance/ | outline | portal/content/knowledge-base/acts-and-compliance.md | all |  | authored; curated by the AICC Lead with the Control Function Contacts |
-| Knowledge base | Publications | /knowledge-base/publications/ | outline | portal/content/knowledge-base/publications.md | all |  | authored; a list kept by the AICC Lead |
 | Reference | Reference | /reference/ | section | none | none |  | authored, with a generated list |
 | Reference | Vocabulary and Style | /reference/vocabulary/ | reference | documents/vocabulary.md | all | 4674 | generated |
 | Reference | Document Catalog | /reference/document-catalog/ | document | documents/document-catalog.md | all | 1519 | generated |

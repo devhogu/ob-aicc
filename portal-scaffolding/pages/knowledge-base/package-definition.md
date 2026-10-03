@@ -2,7 +2,7 @@
 id: knowledge-base/package-definition
 title: Package Definition (draft template)
 section: knowledge-base
-order: 19
+order: 40
 type: outline
 slug: /knowledge-base/package-definition/
 source: portal/content/knowledge-base/package-definition.md

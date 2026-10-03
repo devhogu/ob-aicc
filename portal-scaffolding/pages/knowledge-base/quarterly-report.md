@@ -2,7 +2,7 @@
 id: knowledge-base/quarterly-report
 title: Quarterly Report
 section: knowledge-base
-order: 11
+order: 31
 type: template
 slug: /knowledge-base/quarterly-report/
 source: charter/templates/quarterly-report.md

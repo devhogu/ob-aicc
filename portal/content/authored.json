@@ -88,7 +88,7 @@
     "ru": "База знаний"
    },
    "intro": {
-    "en": "The working knowledge of AICC: the thirteen templates that give the form of every record, the guides that explain the workflows, the acts and policies that the use of AI answers to and how AICC complies, and the publications of AICC for the Bank."
+    "en": "The working knowledge of AICC, organized by the question a reader brings: where to start by role, which form to use when, how each step is done, what has been learned, what the rules require of a use of AI, and the answers to common questions. Read by tab; the thirteen templates follow with their forms."
    },
    "icon": "layers"
   }
@@ -234,7 +234,7 @@
     "delivery/service-delivery-guide",
     "delivery/solution-lifecycle-model/verification-release-and-acceptance",
     "delivery/cadence-workflow",
-    "knowledge-base/index"
+    "knowledge-base/templates-and-forms"
    ]
   },
   {

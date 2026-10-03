@@ -2,7 +2,7 @@
 id: knowledge-base/acceptance-checklist
 title: Acceptance Checklist
 section: knowledge-base
-order: 4
+order: 24
 type: template
 slug: /knowledge-base/acceptance-checklist/
 source: charter/templates/acceptance-checklist.md

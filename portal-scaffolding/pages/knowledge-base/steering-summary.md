@@ -2,7 +2,7 @@
 id: knowledge-base/steering-summary
 title: Steering Summary
 section: knowledge-base
-order: 7
+order: 27
 type: template
 slug: /knowledge-base/steering-summary/
 source: charter/templates/steering-summary.md

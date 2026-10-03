@@ -2,10 +2,12 @@
 id: knowledge-base/acts-and-compliance
 title: Acts and compliance
 section: knowledge-base
-order: 21
+order: 6
 type: outline
 slug: /knowledge-base/acts-and-compliance/
 source: portal/content/knowledge-base/acts-and-compliance.md
+part: 6 of 7
+series: knowledge-base-course
 production: authored; curated by the AICC Lead with the Control Function Contacts
 status: scaffold
 ---

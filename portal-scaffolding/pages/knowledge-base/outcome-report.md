@@ -2,7 +2,7 @@
 id: knowledge-base/outcome-report
 title: Outcome Report
 section: knowledge-base
-order: 8
+order: 28
 type: template
 slug: /knowledge-base/outcome-report/
 source: charter/templates/outcome-report.md

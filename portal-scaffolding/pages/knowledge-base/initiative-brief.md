@@ -2,7 +2,7 @@
 id: knowledge-base/initiative-brief
 title: Initiative Brief
 section: knowledge-base
-order: 1
+order: 21
 type: template
 slug: /knowledge-base/initiative-brief/
 source: charter/templates/initiative-brief.md

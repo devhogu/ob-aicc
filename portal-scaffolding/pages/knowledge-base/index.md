@@ -5,8 +5,10 @@ section: knowledge-base
 order: 0
 type: section
 slug: /knowledge-base/
-source: charter/templates/README.md
-production: authored, with a generated list
+source: portal/content/knowledge-base/overview.md; charter/templates/README.md; charter/guides/README.md
+part: 1 of 7
+series: knowledge-base-course
+production: authored; the overview of the Knowledge base
 status: scaffold
 ---
 
@@ -16,11 +18,10 @@ Page type: section. Address: /knowledge-base/
 
 ## Source
 
+- portal/content/knowledge-base/overview.md
 - charter/templates/README.md
+- charter/guides/README.md
 
 ## Outline
 
-- Introduction of three to five lines: The templates, the guides, the acts and compliance, and the publications of AICC.
-- Statement of what the section does not hold and where it is kept
-- The pages of the section with one line each (generated)
-- Related sections
+- The five shelves, drawn; if you need, go to; how the Knowledge base is kept

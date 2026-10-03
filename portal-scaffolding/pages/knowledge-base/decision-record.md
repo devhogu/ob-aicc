@@ -2,7 +2,7 @@
 id: knowledge-base/decision-record
 title: Decision Record
 section: knowledge-base
-order: 6
+order: 26
 type: template
 slug: /knowledge-base/decision-record/
 source: charter/templates/decision-record.md

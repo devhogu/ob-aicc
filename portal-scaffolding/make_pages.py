@@ -482,23 +482,38 @@ else:
 TEMPLATES = ['initiative-brief', 'service-agreement', 'solution-definition', 'acceptance-checklist', 'control-sign-off', 'decision-record',
              'steering-summary', 'outcome-report', 'ai-incident-review', 'registry-snapshot', 'quarterly-report', 'appointments-record', 'proposal']
 for i, f in enumerate(TEMPLATES, 1):
-    add(id=f'{S_LIBRARY}/{f}', section=S_LIBRARY, order=i, type='template', slug=f'/{S_LIBRARY}/{f}/', title=h1(f'charter/templates/{f}.md'),
+    add(id=f'{S_LIBRARY}/{f}', section=S_LIBRARY, order=(20 + i) if NEXT else i, type='template', slug=f'/{S_LIBRARY}/{f}/', title=h1(f'charter/templates/{f}.md'),
         source=[f'charter/templates/{f}.md'])
 if NEXT:
-    add(id='knowledge-base/guides', section='knowledge-base', order=20, type='index', slug='/knowledge-base/guides/', title='Guides', source=['charter/guides/README.md'],
-        production='generated from the sitemap',
-        outline=['The five guides with one line each, linking to their canonical pages beside their workflows (the guide stays in one place; this is a list)'])
-    add(id='knowledge-base/acts-and-compliance', section='knowledge-base', order=21, type='outline', slug='/knowledge-base/acts-and-compliance/', title='Acts and compliance', source=['portal/content/knowledge-base/acts-and-compliance.md'],
+    # The Knowledge base as a course of six parts; the section page is the overview. The template pages follow.
+    KCOURSE = [
+        ('overview', 'Knowledge base', 'Overview', 'The five shelves, drawn; if you need, go to; how the Knowledge base is kept'),
+        ('learning-paths', 'Learning paths', 'Learning paths', 'Reading orders by role on the courses of the site: everyone, a head of function or Domain Owner, a Solution Engineer, a Domain Expert, the Executive Sponsor, a Control Function Contact, internal audit, human resources'),
+        ('templates-and-forms', 'Templates and forms', 'Templates and forms', 'Which form when, along the life of an Engagement and the cycle of the unit: used when, filled by, signed by, kept in; how a form is used'),
+        ('guides', 'Guides', 'Guides', 'The five guides by the question each answers, beside their subjects; the guides and the courses'),
+        ('playbooks-and-lessons', 'Playbooks and lessons', 'Playbooks and lessons', 'The charter as published; the Proposals; the playbooks and method notes; the lessons; the packages'),
+        ('acts-and-compliance', 'Acts and compliance', 'Acts and compliance', 'What the applicable acts and policies require of a use of AI at the Bank, and where the charter answers it'),
+        ('questions-people-ask', 'Questions people ask', 'Questions', 'Short answers grounded in the charter: using AI at work, starting with AICC, risk and approval, the unit'),
+    ]
+    for i, (slug, title, tab, line) in enumerate(KCOURSE, 1):
+        if i == 1:
+            sp = next(x for x in PAGES if x['id'] == 'knowledge-base/index')
+            sp.update(source=[f'portal/content/knowledge-base/{slug}.md', 'charter/templates/README.md', 'charter/guides/README.md'], production='authored; the overview of the Knowledge base', outline=[line],
+                      series='knowledge-base-course', series_title='Knowledge base', part=f'{i} of {len(KCOURSE)}', tab=tab)
+            continue
+        if slug == 'acts-and-compliance':
+            continue    # added below with its own definition
+        add(id=f'knowledge-base/{slug}', section='knowledge-base', order=i, type='outline', slug=f'/knowledge-base/{slug}/', title=title,
+            source=[f'portal/content/knowledge-base/{slug}.md'] + (['charter/guides/README.md'] if slug == 'guides' else []), production='authored', outline=[line],
+            series='knowledge-base-course', series_title='Knowledge base', part=f'{i} of {len(KCOURSE)}', tab=tab)
+    add(id='knowledge-base/acts-and-compliance', section='knowledge-base', order=6, type='outline', slug='/knowledge-base/acts-and-compliance/', title='Acts and compliance', source=['portal/content/knowledge-base/acts-and-compliance.md'],
+        series='knowledge-base-course', series_title='Knowledge base', part='6 of 7', tab='Acts and compliance',
         production='authored; curated by the AICC Lead with the Control Function Contacts',
         outline=['DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution',
                  'For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it', 'Links to the Reference page Regulators and acts for the bodies and the texts'])
-    add(id='knowledge-base/package-definition', section='knowledge-base', order=19, type='outline', slug='/knowledge-base/package-definition/', title='Package Definition (draft template)',
+    add(id='knowledge-base/package-definition', section='knowledge-base', order=40, type='outline', slug='/knowledge-base/package-definition/', title='Package Definition (draft template)',
         source=['portal/content/knowledge-base/package-definition.md'], production='authored; proposed as the fourteenth template of the charter',
         outline=['When it is used', 'The form', 'The sections'])
-    add(id='knowledge-base/publications', section='knowledge-base', order=22, type='outline', slug='/knowledge-base/publications/', title='Publications', source=['portal/content/knowledge-base/publications.md'],
-        production='authored; a list kept by the AICC Lead',
-        outline=['DECISION 5: new content. The publications of AICC for the Bank: Proposals made available, method notes, lessons, and playbooks from the Engagements (Business Model 4.4)',
-                 'For each: title, date, audience, where it is kept'])
     add(id='reference/industry-body-of-knowledge', section='reference', order=5, type='outline', slug='/reference/industry-body-of-knowledge/', title='Industry body of knowledge', source=['portal/content/reference/industry-body-of-knowledge.md'],
         production='authored; a curated list',
         outline=['DECISION 5: new content. The external frameworks and standards that the charter draws on or is measured against: AI risk management frameworks, AI management system standards, agile and portfolio frameworks, with one line each and where the charter uses them'])

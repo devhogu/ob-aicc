@@ -437,6 +437,12 @@ class Site:
 
     # ----- link mapping from markdown files
     def map_link(self, href, ctx):
+        if href and href.startswith('page:'):
+            pid, frag = (href[5:].split('#', 1) + [''])[:2]
+            page = self.by_id.get(pid) or self.by_id.get(pid + '/index')
+            if page is None:
+                return '@@NOLINK@@'
+            return self.rel(ctx['url'], self.url(page, ctx['lang']) + ('#' + frag if frag else ''))
         if not href or href.startswith('#') or re.match(r'^[a-z]+:', href):
             return href
         path, frag = (href.split('#', 1) + [''])[:2]
@@ -703,7 +709,7 @@ def render_pages(site):
         t = p['type']
         if t == 'section' and p.get('series') and p.get('source'):
             pass
-        elif p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'about/strategy', 'reference/records-and-systems', 'organization/roles', 'knowledge-base/guides', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
+        elif p['id'] in ('reference/change-history', 'about/values-and-principles', 'about/charter-outline', 'about/strategy', 'reference/records-and-systems', 'organization/roles', 'index') or t in ('section', 'home', 'role', 'control', 'index', 'records'):
             continue
         if not p.get('source'):
             continue
@@ -1033,8 +1039,10 @@ def read_further(site, p, lang):
     items = [q for q in nav_groups(site, p['section']) if q['id'] not in mine and not (q.get('document') and q['source'][0] == (p.get('source') or [''])[0])]
     if p['type'] == 'regulation':
         items = [q for q in items if q['type'] == 'regulation' and q.get('region') == p.get('region')] or [q for q in items if q['id'] == 'reference/regulators-and-acts']
+    elif p['type'] == 'template':
+        items = [q for q in items if q['id'] == 'knowledge-base/templates-and-forms'] + [q for q in items if q['type'] == 'template'][:5]
     else:
-        items = [q for q in items if q['type'] != 'regulation']
+        items = [q for q in items if q['type'] not in ('regulation', 'template')]
     if not items:
         return ''
     if len(items) > 6:
@@ -1203,15 +1211,6 @@ def section_page(site, p, lang):
             esc(m['grp_regulations']), esc(m['grp_regulations_lead']), ''.join(groups))
         main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(sec['label'][lang]), esc(sec['intro'][lang]), cards, prev_next(site, p, lang))
         return layout(site, p, lang, main, [])
-    if sid == 'knowledge-base':
-        out = []
-        for q in sorted([x for x in site.pages if x['type'] == 'template'], key=lambda x: x['order']):
-            tp = site.tpl_desc.get(q['source'][0], {})
-            out.append('<li class="o-card linked card--compact" data-tip="%s" data-tip-title="%s"><p class="card-kicker">%s</p><h3><a href="%s">%s</a></h3><p class="card-desc" lang="en">%s</p></li>' % (
-                esc(tp.get('used', '')), esc(q['title']), esc(m['kind_template']), site.rel(url, site.url(q, lang)), esc(q['title']), esc(tp.get('kept', '').strip('`'))))
-        others = [x for x in nav_groups(site, sid) if x['type'] != 'template']
-        cards = '<h2>%s</h2><ul class="o-grid card-list cards-compact">%s</ul><h2>%s</h2><ul class="o-grid card-list cards-primary">%s</ul>' % (
-            esc(m['grp_templates']), ''.join(out), esc(m['grp_knowledge']), ''.join(card(site, q, lang, url, 'card--primary') for q in others))
     else:
         cards = cards_for(site, sid, lang, url)
     main = '<h1>%s</h1><p class="o-lead">%s</p>%s%s' % (esc(sec['label'][lang]), esc(sec['intro'][lang]), cards, prev_next(site, p, lang))
@@ -1436,8 +1435,8 @@ def explore_page(site, p, lang):
         items = nav_groups(site, sdef['id'])
         if sdef['id'] == 'knowledge-base':
             tpls = sorted([x for x in site.pages if x['type'] == 'template'], key=lambda x: x['order'])
-            lis = '<li>%s</li>' % ', '.join('<a href="%s">%s</a>' % (site.rel(url, site.url(q, lang)), esc(q['title'])) for q in tpls)
-            lis += ''.join('<li><a href="%s">%s</a><span lang="en"> &mdash; %s</span></li>' % (site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(desc_of(site, q))) for q in items if q['type'] != 'template')
+            lis = ''.join('<li><a href="%s">%s</a><span lang="en"> &mdash; %s</span></li>' % (site.rel(url, site.url(q, lang)), esc(q['title']), esc(desc_of(site, q))) for q in items if q['type'] != 'template' and q.get('series'))
+            lis += '<li>%s: %s</li>' % (esc(m['grp_templates']), ', '.join('<a href="%s">%s</a>' % (site.rel(url, site.url(q, lang)), esc(q['title'])) for q in tpls))
         else:
             lis = ''.join('<li><a href="%s">%s</a><span class="x-kind"> · %s</span><span lang="en"> &mdash; %s</span></li>' % (
                 site.rel(url, site.url(q, lang)), esc(nav_title(site, q)), esc(page_meta(site, q, lang).split(' · ')[0]), esc(section_desc(site, q))) for q in items if q['type'] != 'regulation')
@@ -1641,8 +1640,6 @@ def build_page(site, p, lang):
         return explore_page(site, p, lang)
     if p['id'] == 'about/strategy':
         return strategy_page(site, p, lang)
-    if p['id'] == 'knowledge-base/guides':
-        return guides_index(site, p, lang)
     if p['id'] == 'reference/change-history':
         return change_history(site, p, lang)
     if p['id'] == 'reference/records-and-systems':

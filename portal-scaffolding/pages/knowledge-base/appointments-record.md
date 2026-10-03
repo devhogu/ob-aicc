@@ -2,7 +2,7 @@
 id: knowledge-base/appointments-record
 title: Appointments Record
 section: knowledge-base
-order: 12
+order: 32
 type: template
 slug: /knowledge-base/appointments-record/
 source: charter/templates/appointments-record.md

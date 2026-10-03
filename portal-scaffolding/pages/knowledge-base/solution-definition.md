@@ -2,7 +2,7 @@
 id: knowledge-base/solution-definition
 title: Solution Definition
 section: knowledge-base
-order: 3
+order: 23
 type: template
 slug: /knowledge-base/solution-definition/
 source: charter/templates/solution-definition.md

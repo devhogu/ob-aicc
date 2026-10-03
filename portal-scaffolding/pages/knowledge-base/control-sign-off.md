@@ -2,7 +2,7 @@
 id: knowledge-base/control-sign-off
 title: Control Sign-Off
 section: knowledge-base
-order: 5
+order: 25
 type: template
 slug: /knowledge-base/control-sign-off/
 source: charter/templates/control-sign-off.md
