@@ -6,6 +6,8 @@ order: 2
 type: outline
 slug: /responsible-ai/opportunities/
 source: portal/content/responsible-ai/opportunities.md
+part: 2 of 7
+series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
 status: scaffold
 ---

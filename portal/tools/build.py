@@ -709,11 +709,17 @@ def nav_groups(site, section):
             if p['source'][0] in seen:
                 continue
             seen.add(p['source'][0])
+        if p.get('series'):
+            if p['series'] in seen:
+                continue
+            seen.add(p['series'])
         items.append(p)
     return items
 
 
 def nav_title(site, p):
+    if p.get('series'):
+        return p.get('series_title') or p['title']
     if p.get('source_sections') and p.get('document') and p['id'] != 'governance/delivery-records-controls-and-measures':
         t = disp(h1_of(p['source'][0])) if p['type'] != 'catalogue' else disp(p['title'])
     else:
@@ -755,7 +761,7 @@ def layout(site, p, lang, main_html, outline):
 
             def link(q, cls=''):
                 qh = site.rel(url, site.url(q, lang))
-                active = q['id'] == p['id'] or (q.get('document') and q.get('document') == p.get('document') and q['source'][0] == (p.get('source') or [''])[0])
+                active = q['id'] == p['id'] or (q.get('document') and q.get('document') == p.get('document') and q['source'][0] == (p.get('source') or [''])[0]) or (q.get('series') and q.get('series') == p.get('series'))
                 if q['id'] == 'organization/roles' and p['type'] == 'role':
                     active = True
                 if q['id'] == 'governance/controls' and p['type'] == 'control':
@@ -893,13 +899,23 @@ def facts_html(site, p, lang, fm):
     return '<dl class="doc-facts">%s</dl>' % ''.join('<div><dt>%s</dt><dd>%s</dd></div>' % (esc(k), v if k in (m['status'], m['owner'], m['source_file']) else esc(v)) for k, v in items)
 
 
+def series_pages(site, p):
+    if not p.get('series'):
+        return []
+    return sorted([x for x in site.pages if x.get('series') == p['series']], key=lambda x: (x['order'], x['id']))
+
+
 def parts_html(site, p, lang):
-    parts = doc_parts(site, p)
+    parts = doc_parts(site, p) or series_pages(site, p)
     if len(parts) < 2:
         return ''
     url = site.url(p, lang)
     links = []
     for q in parts:
+        if q.get('series'):
+            cur = ' aria-current="page"' if q['id'] == p['id'] else ''
+            links.append('<a href="%s"%s>%s</a>' % (site.rel(url, site.url(q, lang)), cur, esc(q.get('tab') or q['title'])))
+            continue
         label = q['title'].split(': ', 1)[1] if ': ' in q['title'] else ('Foundations' if q.get('part', '').startswith('1 of') else q['title'])
         if q['type'] == 'catalogue' or q['section'] != p['section']:
             pass
@@ -986,7 +1002,7 @@ def read_further(site, p, lang):
         return ''
     url = site.url(p, lang)
     m = site.msg[lang]
-    mine = {x['id'] for x in doc_parts(site, p)} | {p['id']}
+    mine = {x['id'] for x in doc_parts(site, p)} | {x['id'] for x in series_pages(site, p)} | {p['id']}
     items = [q for q in nav_groups(site, p['section']) if q['id'] not in mine and not (q.get('document') and q['source'][0] == (p.get('source') or [''])[0])]
     if p['type'] == 'regulation':
         items = [q for q in items if q['type'] == 'regulation' and q.get('region') == p.get('region')] or [q for q in items if q['id'] == 'reference/regulators-and-acts']
@@ -1057,6 +1073,8 @@ def page_meta(site, p, lang):
         n = len([x for x in site.pages if x.get('document') == p['document'] and x['source'][0] == p['source'][0]])
         if n > 1:
             bits.append('%d %s' % (n, m['kind_parts']))
+    elif p.get('series'):
+        bits.append('%d %s' % (len(series_pages(site, p)), m['kind_parts']))
     elif p.get('words'):
         bits.append('%s %s' % (format(p['words'], ','), m['kind_words']))
     return ' · '.join(b for b in bits if b)
@@ -1089,7 +1107,7 @@ def card(site, q, lang, url, cls, extra=''):
     d = section_desc(site, q)
     meta = page_meta(site, q, lang)
     did = doc_id(site, q)
-    title = nav_title(site, q)
+    title = q['title'] if q.get('series') else nav_title(site, q)
     tip_title = title + (' · ' + did if did else '')
     return ('<li class="o-card linked %s" data-tip="%s" data-tip-title="%s"><p class="card-kicker">%s</p><h3><a href="%s">%s</a></h3><p class="card-desc" lang="en">%s</p>%s</li>' % (
         cls, esc(d), esc(tip_title), esc(meta), site.rel(url, site.url(q, lang)), esc(title), esc(d), extra))
@@ -1131,8 +1149,8 @@ def section_page(site, p, lang):
         return services_page(site, p, lang)
     if sid == 'responsible-ai':
         items = nav_groups(site, sid)
-        course = [q for q in items if q['type'] == 'outline']
-        rules = [q for q in items if q['type'] != 'outline']
+        course = sorted([q for q in site.pages if q.get('section') == sid and q.get('series')], key=lambda x: x['order'])
+        rules = [q for q in items if not q.get('series')]
         cards = '<h2>%s</h2><ol class="levels steps course-steps">%s</ol><ul class="o-grid card-list cards-secondary">%s</ul><h2>%s</h2><ul class="o-grid card-list cards-primary">%s</ul>' % (
             esc(m['grp_course']), ''.join('<li><span class="lv-n">%d</span><strong><a href="%s">%s</a></strong></li>' % (i, site.rel(url, site.url(q, lang)), esc(q['title'])) for i, q in enumerate(course, 1)),
             ''.join(card(site, q, lang, url, 'card--secondary') for q in course), esc(m['grp_rules']), ''.join(card(site, q, lang, url, 'card--primary') for q in rules))

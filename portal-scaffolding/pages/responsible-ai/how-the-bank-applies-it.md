@@ -6,6 +6,8 @@ order: 6
 type: outline
 slug: /responsible-ai/how-the-bank-applies-it/
 source: portal/content/responsible-ai/how-the-bank-applies-it.md
+part: 6 of 7
+series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
 status: scaffold
 ---

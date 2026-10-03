@@ -6,6 +6,8 @@ order: 5
 type: outline
 slug: /responsible-ai/what-responsible-ai-means/
 source: portal/content/responsible-ai/what-responsible-ai-means.md
+part: 5 of 7
+series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
 status: scaffold
 ---

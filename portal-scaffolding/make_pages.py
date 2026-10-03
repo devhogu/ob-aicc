@@ -286,9 +286,13 @@ if NEXT:
         ('how-the-bank-applies-it', 'How the Bank applies it', 'The risk appetite, the Risk Tiers, the rules of use, the gates before use, providers, incidents, exceptions, who does what, in plain terms; the AI Policy prevails'),
         ('ai-terms-explained', 'AI terms explained', 'The vocabulary of the technology in plain terms: kinds of system, how they are built and used, how they fail, how they are governed'),
     ]
+    TABS = {'understanding-ai-today': 'AI today', 'opportunities': 'Opportunities', 'ai-in-fintech-and-digital-banking': 'Fintech', 'risks-and-challenges': 'Risks',
+            'what-responsible-ai-means': 'Responsible AI', 'how-the-bank-applies-it': 'The Bank\'s rules', 'ai-terms-explained': 'Terms'}
     for i, (slug, title, line) in enumerate(COURSE, 1):
+        # the seven parts form one series: tabs above the text, as the parts of a split document, and one entry in the navigation
         add(id=f'responsible-ai/{slug}', section='responsible-ai', order=i, type='outline', slug=f'/responsible-ai/{slug}/', title=title,
-            source=[f'portal/content/responsible-ai/{slug}.md'], production='authored; explanatory, the AI Policy is the rule', outline=[line])
+            source=[f'portal/content/responsible-ai/{slug}.md'], production='authored; explanatory, the AI Policy is the rule', outline=[line],
+            series='responsible-ai-course', series_title='A short course on AI', part=f'{i} of {len(COURSE)}', tab=TABS[slug])
 add(id='responsible-ai/ai-policy', section='responsible-ai', order=11 if NEXT else 1, type='document', slug='/responsible-ai/ai-policy/',
     title=h1('charter/documents/ai-policy.md'), source=['charter/documents/ai-policy.md'], words=2155)
 add(id='responsible-ai/ai-risk-control-workflow', section='responsible-ai', order=12 if NEXT else 2, type='workflow', slug='/responsible-ai/ai-risk-control-workflow/',
@@ -420,6 +424,8 @@ for p in PAGES:
         fm.append(f"area: {p['area']}")
     if p.get('region'):
         fm.append(f"region: {p['region']}")
+    if p.get('series'):
+        fm.append(f"series: {p['series']}")
     fm.append(f"production: {p['production']}")
     fm += ['status: scaffold', '---']
     body = fm + ['', f"# {p['title']}", '', f"Page type: {p['type']}. Address: {p['slug']}", '']

@@ -6,6 +6,8 @@ order: 3
 type: outline
 slug: /responsible-ai/ai-in-fintech-and-digital-banking/
 source: portal/content/responsible-ai/ai-in-fintech-and-digital-banking.md
+part: 3 of 7
+series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
 status: scaffold
 ---

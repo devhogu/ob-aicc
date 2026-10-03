@@ -1415,7 +1415,11 @@
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
     "From rules to machine learning to generative AI to agents: how each is built, what it is good at, how it fails, who is accountable, with banking examples"
-   ]
+   ],
+   "series": "responsible-ai-course",
+   "series_title": "A short course on AI",
+   "part": "1 of 7",
+   "tab": "AI today"
   },
   {
    "id": "responsible-ai/opportunities",
@@ -1430,7 +1434,11 @@
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
     "What changed, where the value appears in a bank, what the evidence says, where the Bank looks first"
-   ]
+   ],
+   "series": "responsible-ai-course",
+   "series_title": "A short course on AI",
+   "part": "2 of 7",
+   "tab": "Opportunities"
   },
   {
    "id": "responsible-ai/ai-in-fintech-and-digital-banking",
@@ -1445,7 +1453,11 @@
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
     "The fintech landscape, where it uses AI and the risk beside each, what is particular to a digital bank in the region, what the financial supervisors watch, what the Bank takes from it"
-   ]
+   ],
+   "series": "responsible-ai-course",
+   "series_title": "A short course on AI",
+   "part": "3 of 7",
+   "tab": "Fintech"
   },
   {
    "id": "responsible-ai/risks-and-challenges",
@@ -1460,7 +1472,11 @@
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
     "The risks machine learning always carried, the risks generative AI added, the risks agents compound, and the challenges that are not about the technology"
-   ]
+   ],
+   "series": "responsible-ai-course",
+   "series_title": "A short course on AI",
+   "part": "4 of 7",
+   "tab": "Risks"
   },
   {
    "id": "responsible-ai/what-responsible-ai-means",
@@ -1475,7 +1491,11 @@
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
     "Where the principles come from (OECD, UNESCO, NIST, ISO/IEC 42001, the EU AI Act, the Council of Europe), the seven principles converged, the practices across the life cycle, the misunderstandings"
-   ]
+   ],
+   "series": "responsible-ai-course",
+   "series_title": "A short course on AI",
+   "part": "5 of 7",
+   "tab": "Responsible AI"
   },
   {
    "id": "responsible-ai/how-the-bank-applies-it",
@@ -1490,7 +1510,11 @@
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
     "The risk appetite, the Risk Tiers, the rules of use, the gates before use, providers, incidents, exceptions, who does what, in plain terms; the AI Policy prevails"
-   ]
+   ],
+   "series": "responsible-ai-course",
+   "series_title": "A short course on AI",
+   "part": "6 of 7",
+   "tab": "The Bank's rules"
   },
   {
    "id": "responsible-ai/ai-terms-explained",
@@ -1505,7 +1529,11 @@
    "production": "authored; explanatory, the AI Policy is the rule",
    "outline": [
     "The vocabulary of the technology in plain terms: kinds of system, how they are built and used, how they fail, how they are governed"
-   ]
+   ],
+   "series": "responsible-ai-course",
+   "series_title": "A short course on AI",
+   "part": "7 of 7",
+   "tab": "Terms"
   },
   {
    "id": "responsible-ai/ai-policy",

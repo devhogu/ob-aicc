@@ -6,6 +6,8 @@ order: 4
 type: outline
 slug: /responsible-ai/risks-and-challenges/
 source: portal/content/responsible-ai/risks-and-challenges.md
+part: 4 of 7
+series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
 status: scaffold
 ---

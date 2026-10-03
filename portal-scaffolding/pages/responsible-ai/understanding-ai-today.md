@@ -6,6 +6,8 @@ order: 1
 type: outline
 slug: /responsible-ai/understanding-ai-today/
 source: portal/content/responsible-ai/understanding-ai-today.md
+part: 1 of 7
+series: responsible-ai-course
 production: authored; explanatory, the AI Policy is the rule
 status: scaffold
 ---
