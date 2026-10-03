@@ -2,7 +2,7 @@
 id: reference/regulations/ru-national-ai-strategy
 title: Russian Federation: the National Strategy for the Development of AI and the experimental legal regimes
 section: reference
-order: 35
+order: 36
 type: regulation
 slug: /reference/regulations/ru-national-ai-strategy/
 source: portal/content/reference/regulations/ru-national-ai-strategy.md

@@ -2,7 +2,7 @@
 id: reference/regulations/eu-ai-act
 title: EU Artificial Intelligence Act
 section: reference
-order: 29
+order: 30
 type: regulation
 slug: /reference/regulations/eu-ai-act/
 source: portal/content/reference/regulations/eu-ai-act.md

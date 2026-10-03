@@ -2,7 +2,7 @@
 id: reference/regulations/g7-hiroshima-ai-process
 title: G7 Hiroshima AI Process
 section: reference
-order: 24
+order: 25
 type: regulation
 slug: /reference/regulations/g7-hiroshima-ai-process/
 source: portal/content/reference/regulations/g7-hiroshima-ai-process.md

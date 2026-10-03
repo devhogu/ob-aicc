@@ -2,7 +2,7 @@
 id: portfolio/portfolio-management-model/the-business-case-and-the-mvp
 title: Portfolio Management Model: The business case and the MVP
 section: portfolio
-order: 4
+order: 14
 type: document
 slug: /portfolio/portfolio-management-model/the-business-case-and-the-mvp/
 source: charter/documents/portfolio-management-model.md

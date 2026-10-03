@@ -5,7 +5,10 @@ section: portfolio
 order: 0
 type: section
 slug: /portfolio/
-production: authored, with a generated list
+source: portal/content/portfolio/overview.md
+part: 1 of 7
+series: portfolio-course
+production: authored; the first part of the course, explanatory, the Portfolio Management Model is the rule
 status: scaffold
 ---
 
@@ -13,9 +16,10 @@ status: scaffold
 
 Page type: section. Address: /portfolio/
 
+## Source
+
+- portal/content/portfolio/overview.md
+
 ## Outline
 
-- Introduction of three to five lines: How AICC decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP.
-- Statement of what the section does not hold and where it is kept
-- The pages of the section with one line each (generated)
-- Related sections
+- What the Portfolio is: a commercial decision body and a control loop; one picture end to end; the principles; the lean portfolio management practice it follows

@@ -2,7 +2,7 @@
 id: reference/regulations/nist-ai-rmf
 title: NIST AI Risk Management Framework
 section: reference
-order: 26
+order: 27
 type: regulation
 slug: /reference/regulations/nist-ai-rmf/
 source: portal/content/reference/regulations/nist-ai-rmf.md

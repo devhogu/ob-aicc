@@ -2,7 +2,7 @@
 id: reference/regulations/owasp-top-10-llm
 title: OWASP Top 10 for Large Language Model Applications
 section: reference
-order: 27
+order: 28
 type: regulation
 slug: /reference/regulations/owasp-top-10-llm/
 source: portal/content/reference/regulations/owasp-top-10-llm.md

@@ -2,7 +2,7 @@
 id: reference/regulations/unesco-recommendation-ethics-ai
 title: UNESCO Recommendation on the Ethics of Artificial Intelligence
 section: reference
-order: 22
+order: 23
 type: regulation
 slug: /reference/regulations/unesco-recommendation-ethics-ai/
 source: portal/content/reference/regulations/unesco-recommendation-ethics-ai.md

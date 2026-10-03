@@ -2,7 +2,7 @@
 id: reference/regulations/aifc
 title: Astana International Financial Centre
 section: reference
-order: 41
+order: 42
 type: regulation
 slug: /reference/regulations/aifc/
 source: portal/content/reference/regulations/aifc.md

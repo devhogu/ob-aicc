@@ -2,7 +2,7 @@
 id: portfolio/portfolio-management-model/levels-review-and-records
 title: Portfolio Management Model: Levels, review, measures, and records
 section: portfolio
-order: 5
+order: 15
 type: document
 slug: /portfolio/portfolio-management-model/levels-review-and-records/
 source: charter/documents/portfolio-management-model.md

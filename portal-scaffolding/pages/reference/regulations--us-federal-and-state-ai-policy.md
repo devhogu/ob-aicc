@@ -2,7 +2,7 @@
 id: reference/regulations/us-federal-and-state-ai-policy
 title: United States federal and state AI policy
 section: reference
-order: 33
+order: 34
 type: regulation
 slug: /reference/regulations/us-federal-and-state-ai-policy/
 source: portal/content/reference/regulations/us-federal-and-state-ai-policy.md

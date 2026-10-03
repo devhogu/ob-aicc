@@ -1,6 +1,6 @@
-# The service categories in the Portfolio
+# The lanes and the front door
 
-Every service of AICC enters through the same front door and the same Portfolio. What differs is the lane: run-rate work is small and repeatable and flows in days; a program is an Initiative with a business case and an MVP and flows through the portfolio loops. This page states how the fifteen categories map to the two lanes, how an item is screened, and what the Portfolio shows at a glance.
+Every service of AICC enters through the same front door and the same Portfolio. What differs is the lane: run-rate work is small and repeatable and flows in days; a program is an Initiative with a business case and an MVP and flows through the portfolio Kanban and its loops. This part states the two lanes, how the fifteen service categories map to them, how an item is screened at the front door, and what the Portfolio shows at a glance.
 
 ## 1. The two lanes
 

@@ -2,7 +2,7 @@
 id: reference/regulations/ru-ai-code-of-ethics
 title: Russian Federation: the Code of Ethics in the Field of AI
 section: reference
-order: 37
+order: 38
 type: regulation
 slug: /reference/regulations/ru-ai-code-of-ethics/
 source: portal/content/reference/regulations/ru-ai-code-of-ethics.md

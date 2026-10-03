@@ -2,7 +2,7 @@
 id: reference/regulations/kz-financial-regulators
 title: Kazakhstan: the National Bank and the Agency for Regulation and Development of the Financial Market
 section: reference
-order: 40
+order: 41
 type: regulation
 slug: /reference/regulations/kz-financial-regulators/
 source: portal/content/reference/regulations/kz-financial-regulators.md

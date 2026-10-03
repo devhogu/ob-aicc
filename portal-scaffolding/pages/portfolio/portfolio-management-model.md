@@ -2,7 +2,7 @@
 id: portfolio/portfolio-management-model
 title: Portfolio Management Model
 section: portfolio
-order: 1
+order: 11
 type: document
 slug: /portfolio/portfolio-management-model/
 source: charter/documents/portfolio-management-model.md

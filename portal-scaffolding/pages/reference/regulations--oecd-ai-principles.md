@@ -2,7 +2,7 @@
 id: reference/regulations/oecd-ai-principles
 title: OECD Principles on Artificial Intelligence
 section: reference
-order: 21
+order: 22
 type: regulation
 slug: /reference/regulations/oecd-ai-principles/
 source: portal/content/reference/regulations/oecd-ai-principles.md

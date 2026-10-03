@@ -2,7 +2,7 @@
 id: reference/regulations/financial-standard-setters-on-ai
 title: The financial standard-setters on AI: FSB, BCBS, BIS
 section: reference
-order: 28
+order: 29
 type: regulation
 slug: /reference/regulations/financial-standard-setters-on-ai/
 source: portal/content/reference/regulations/financial-standard-setters-on-ai.md

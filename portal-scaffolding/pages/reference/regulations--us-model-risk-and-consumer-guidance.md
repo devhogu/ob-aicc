@@ -2,7 +2,7 @@
 id: reference/regulations/us-model-risk-and-consumer-guidance
 title: United States supervisory guidance on model risk and on AI in credit
 section: reference
-order: 32
+order: 33
 type: regulation
 slug: /reference/regulations/us-model-risk-and-consumer-guidance/
 source: portal/content/reference/regulations/us-model-risk-and-consumer-guidance.md

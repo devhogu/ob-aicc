@@ -2,7 +2,7 @@
 id: reference/regulations/kz-law-on-ai
 title: Kazakhstan: the Law on Artificial Intelligence and the national concept for AI
 section: reference
-order: 38
+order: 39
 type: regulation
 slug: /reference/regulations/kz-law-on-ai/
 source: portal/content/reference/regulations/kz-law-on-ai.md

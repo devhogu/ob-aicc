@@ -2,7 +2,7 @@
 id: reference/regulations/kg-personal-information-law
 title: Kyrgyz Republic: the Law on Personal Information and the authorized body for personal data
 section: reference
-order: 43
+order: 44
 type: regulation
 slug: /reference/regulations/kg-personal-information-law/
 source: portal/content/reference/regulations/kg-personal-information-law.md

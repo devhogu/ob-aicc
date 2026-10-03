@@ -2,7 +2,7 @@
 id: reference/regulations/eu-gdpr
 title: EU General Data Protection Regulation
 section: reference
-order: 30
+order: 31
 type: regulation
 slug: /reference/regulations/eu-gdpr/
 source: portal/content/reference/regulations/eu-gdpr.md

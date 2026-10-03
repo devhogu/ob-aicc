@@ -2,7 +2,7 @@
 id: portfolio/portfolio-management-model/the-portfolio-kanban
 title: Portfolio Management Model: The portfolio Kanban
 section: portfolio
-order: 3
+order: 13
 type: document
 slug: /portfolio/portfolio-management-model/the-portfolio-kanban/
 source: charter/documents/portfolio-management-model.md

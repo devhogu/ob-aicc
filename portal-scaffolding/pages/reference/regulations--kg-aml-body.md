@@ -2,7 +2,7 @@
 id: reference/regulations/kg-aml-body
 title: Kyrgyz Republic: the financial intelligence body and the legislation against money laundering and the financing of terrorism
 section: reference
-order: 45
+order: 46
 type: regulation
 slug: /reference/regulations/kg-aml-body/
 source: portal/content/reference/regulations/kg-aml-body.md

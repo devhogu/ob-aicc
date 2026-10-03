@@ -2,7 +2,7 @@
 id: reference/regulations/nbkr
 title: National Bank of the Kyrgyz Republic
 section: reference
-order: 42
+order: 43
 type: regulation
 slug: /reference/regulations/nbkr/
 source: portal/content/reference/regulations/nbkr.md

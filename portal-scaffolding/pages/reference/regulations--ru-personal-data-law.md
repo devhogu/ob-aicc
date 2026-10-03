@@ -2,7 +2,7 @@
 id: reference/regulations/ru-personal-data-law
 title: Russian Federation: the Federal Law on Personal Data (152-FZ)
 section: reference
-order: 34
+order: 35
 type: regulation
 slug: /reference/regulations/ru-personal-data-law/
 source: portal/content/reference/regulations/ru-personal-data-law.md

@@ -2,7 +2,7 @@
 id: portfolio/portfolio-management-model/the-portfolio-loops
 title: Portfolio Management Model: The portfolio loops
 section: portfolio
-order: 2
+order: 12
 type: document
 slug: /portfolio/portfolio-management-model/the-portfolio-loops/
 source: charter/documents/portfolio-management-model.md

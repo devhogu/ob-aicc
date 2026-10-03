@@ -2,7 +2,7 @@
 id: reference/regulations/iso-iec-ai-standards
 title: ISO/IEC standards on AI: 42001, 23894, 22989
 section: reference
-order: 25
+order: 26
 type: regulation
 slug: /reference/regulations/iso-iec-ai-standards/
 source: portal/content/reference/regulations/iso-iec-ai-standards.md

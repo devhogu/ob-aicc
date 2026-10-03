@@ -2,7 +2,7 @@
 id: reference/regulations/kg-digital-development
 title: Kyrgyz Republic: the ministry responsible for digital development and the acts on digitalization
 section: reference
-order: 44
+order: 45
 type: regulation
 slug: /reference/regulations/kg-digital-development/
 source: portal/content/reference/regulations/kg-digital-development.md

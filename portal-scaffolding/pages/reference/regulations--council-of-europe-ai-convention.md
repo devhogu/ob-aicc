@@ -2,7 +2,7 @@
 id: reference/regulations/council-of-europe-ai-convention
 title: Council of Europe Framework Convention on Artificial Intelligence
 section: reference
-order: 23
+order: 24
 type: regulation
 slug: /reference/regulations/council-of-europe-ai-convention/
 source: portal/content/reference/regulations/council-of-europe-ai-convention.md

@@ -2,7 +2,7 @@
 id: reference/regulations/kz-personal-data-law
 title: Kazakhstan: the Law on Personal Data and Their Protection
 section: reference
-order: 39
+order: 40
 type: regulation
 slug: /reference/regulations/kz-personal-data-law/
 source: portal/content/reference/regulations/kz-personal-data-law.md

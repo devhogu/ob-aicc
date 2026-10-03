@@ -2,7 +2,7 @@
 id: reference/regulations/eu-dora
 title: EU Digital Operational Resilience Act and the guidance of the European Banking Authority
 section: reference
-order: 31
+order: 32
 type: regulation
 slug: /reference/regulations/eu-dora/
 source: portal/content/reference/regulations/eu-dora.md

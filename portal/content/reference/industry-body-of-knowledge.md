@@ -29,6 +29,6 @@ This is the first edition, a curated list for orientation. It is kept by the AIC
 | Source | What it is | Where the charter uses it |
 | --- | --- | --- |
 | The common body of agile and lean practice | Delivery in short Iterations with review, work made visible and limited in progress, pull, and continuous improvement | The principles of delivery (Solution Lifecycle Model 2); the cadence (Solution Lifecycle Model 6); the Service Agreement as a working agreement (Business Model 5) |
-| Portfolio management practice | Strategic themes, investment envelopes and guardrails, a portfolio Kanban, and the business case with a minimum viable product | The Portfolio Management Model |
+| [Lean portfolio management practice](regulations/lean-portfolio-management.md), codified in the Lean Portfolio Management competency of the Scaled Agile Framework | Strategic themes, investment envelopes and guardrails, a portfolio Kanban with limits on work in progress, a lean business case with a minimum viable product, weighted shortest job first, continuous governance | The Portfolio Management Model, in the Bank's own terms |
 | IT service management practice | Requests, incidents, changes, and service levels handled through a service desk | The support of a Service (Business Model 4.2); Service Management (Records and systems) |
 | Internal control and assurance practice | Control objectives, owners, evidence, and independent assurance | The controls and the control catalogue (Operating Model 8); the Unit governance guide |
