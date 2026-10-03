@@ -2,7 +2,7 @@
 id: delivery/service-operations
 title: Service operations
 section: delivery
-order: 20
+order: 43
 type: outline
 slug: /delivery/service-operations/
 source: portal/content/delivery/service-operations.md

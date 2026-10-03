@@ -2,7 +2,7 @@
 id: delivery/solution-lifecycle-model/states-and-stages
 title: Solution Lifecycle Model: States and Stages
 section: delivery
-order: 14
+order: 24
 type: document
 slug: /delivery/solution-lifecycle-model/states-and-stages/
 source: charter/documents/solution-lifecycle-model.md

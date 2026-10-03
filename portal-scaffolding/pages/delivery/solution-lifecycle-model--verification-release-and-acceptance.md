@@ -2,7 +2,7 @@
 id: delivery/solution-lifecycle-model/verification-release-and-acceptance
 title: Solution Lifecycle Model: Verification, release, and acceptance
 section: delivery
-order: 16
+order: 26
 type: document
 slug: /delivery/solution-lifecycle-model/verification-release-and-acceptance/
 source: charter/documents/solution-lifecycle-model.md

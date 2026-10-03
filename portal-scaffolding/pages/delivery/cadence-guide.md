@@ -2,7 +2,7 @@
 id: delivery/cadence-guide
 title: Guide: Cadence
 section: delivery
-order: 24
+order: 34
 type: guide
 slug: /delivery/cadence-guide/
 source: charter/guides/cadence-guide.md

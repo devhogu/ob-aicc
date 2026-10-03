@@ -2,7 +2,7 @@
 id: delivery/cadence-workflow
 title: Cadence
 section: delivery
-order: 23
+order: 33
 type: workflow
 slug: /delivery/cadence-workflow/
 source: charter/workflows/cadence.md

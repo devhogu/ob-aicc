@@ -243,16 +243,16 @@ split_doc(S_DELIVERY, 'solution-lifecycle-model', 'charter/documents/solution-li
     ('the-cadence', 'The cadence', [6]),
     ('verification-release-and-acceptance', 'Verification, release, and acceptance', [7]),
     ('life-cycle-management', 'Life-cycle management', [8]),
-], 10)
-add(id=f'{S_DELIVERY}/service-delivery-workflow', section=S_DELIVERY, order=21, type='workflow', slug=f'/{S_DELIVERY}/service-delivery-workflow/',
+], 20 if NEXT else 10)
+add(id=f'{S_DELIVERY}/service-delivery-workflow', section=S_DELIVERY, order=31 if NEXT else 21, type='workflow', slug=f'/{S_DELIVERY}/service-delivery-workflow/',
     title=h1('charter/workflows/service-delivery.md'), source=['charter/workflows/service-delivery.md'], companion=f'{S_DELIVERY}/service-delivery-guide')
-add(id=f'{S_DELIVERY}/service-delivery-guide', section=S_DELIVERY, order=22, type='guide', slug=f'/{S_DELIVERY}/service-delivery-guide/',
+add(id=f'{S_DELIVERY}/service-delivery-guide', section=S_DELIVERY, order=32 if NEXT else 22, type='guide', slug=f'/{S_DELIVERY}/service-delivery-guide/',
     title=h1('charter/guides/service-delivery-guide.md'), source=['charter/guides/service-delivery-guide.md'], companion=f'{S_DELIVERY}/service-delivery-workflow')
-add(id=f'{S_DELIVERY}/cadence-workflow', section=S_DELIVERY, order=23, type='workflow', slug=f'/{S_DELIVERY}/cadence-workflow/',
+add(id=f'{S_DELIVERY}/cadence-workflow', section=S_DELIVERY, order=33 if NEXT else 23, type='workflow', slug=f'/{S_DELIVERY}/cadence-workflow/',
     title=h1('charter/workflows/cadence.md'), source=['charter/workflows/cadence.md'], companion=f'{S_DELIVERY}/cadence-guide')
-add(id=f'{S_DELIVERY}/cadence-guide', section=S_DELIVERY, order=24, type='guide', slug=f'/{S_DELIVERY}/cadence-guide/',
+add(id=f'{S_DELIVERY}/cadence-guide', section=S_DELIVERY, order=34 if NEXT else 24, type='guide', slug=f'/{S_DELIVERY}/cadence-guide/',
     title=h1('charter/guides/cadence-guide.md'), source=['charter/guides/cadence-guide.md'], companion=f'{S_DELIVERY}/cadence-workflow')
-add(id=f'{S_DELIVERY}/collaboration-tooling-workflow', section=S_DELIVERY, order=25, type='workflow', slug=f'/{S_DELIVERY}/collaboration-tooling-workflow/',
+add(id=f'{S_DELIVERY}/collaboration-tooling-workflow', section=S_DELIVERY, order=35 if NEXT else 25, type='workflow', slug=f'/{S_DELIVERY}/collaboration-tooling-workflow/',
     title=h1('charter/workflows/collaboration-tooling.md'), source=['charter/workflows/collaboration-tooling.md'])
 
 if NEXT:
@@ -276,17 +276,42 @@ if NEXT:
         add(id=f'portfolio/{slug}', section='portfolio', order=i, type='outline', slug=f'/portfolio/{slug}/', title=title,
             source=[f'portal/content/portfolio/{slug}.md'], production='authored; explanatory, the Portfolio Management Model is the rule', outline=[line],
             series='portfolio-course', series_title='The Portfolio', part=f'{i} of {len(PCOURSE)}', tab=tab)
-    add(id='delivery/experiment-workflow', section='delivery', order=18, type='outline', slug='/delivery/experiment-workflow/', title='The Experiment workflow: the Lab',
+    add(id='delivery/experiment-workflow', section='delivery', order=41, type='outline', slug='/delivery/experiment-workflow/', title='The Experiment workflow: the Lab',
         source=['portal/content/delivery/experiment-workflow.md'], production='authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB',
         outline=['Six stages: define, establish, prepare data, build, validate, decide, with concerns and records', 'The rules of the Lab: decision rights, data, time-box, guardrails scorecard'])
-    add(id='delivery/life-of-a-service', section='delivery', order=19, type='outline', slug='/delivery/life-of-a-service/', title='The life of a Service',
+    add(id='delivery/life-of-a-service', section='delivery', order=42, type='outline', slug='/delivery/life-of-a-service/', title='The life of a Service',
         source=['portal/content/delivery/life-of-a-service.md'], production='authored; proposed for Solution Lifecycle Model 8; draws on STS',
         outline=['Seven states with question, signals, action, gate', 'The reviews', 'The hand-over to scale'])
-    add(id='delivery/service-operations', section='delivery', order=20, type='outline', slug='/delivery/service-operations/', title='Service operations',
+    add(id='delivery/service-operations', section='delivery', order=43, type='outline', slug='/delivery/service-operations/', title='Service operations',
         source=['portal/content/delivery/service-operations.md'], production='authored; the run-book template of a Service; draws on STS',
         outline=['The practices: request, incident, problem, change, knowledge, service level, financial, supplier', 'The classes of service', 'The health of a Service', 'Sizing for a small unit'])
 
 if NEXT:
+    # The Delivery course: the section page is part 1; the Solution Lifecycle Model follows as the rule.
+    DCOURSE = [
+        ('overview', 'Delivery', 'Overview', 'What delivery is; one picture, the stream and the loops; the principles; the lean-agile practice of delivering at scale it follows'),
+        ('the-flow-of-value', 'The flow of value', 'Flow of value', 'The levels of the work and their contracts; how work enters; the Team; the Stages a Feature travels'),
+        ('backlogs-boards-and-kanbans', 'Backlogs, boards, and Kanbans', 'Backlogs and boards', 'The two backlogs; definition of ready and done; the four boards; how a Kanban limits the work; the Program Board; the Roadmap and the Dashboard'),
+        ('the-cadence', 'The cadence: Program Increments and Iterations', 'Cadence', 'The units of the cadence; a quarter in sequence; why a fixed cadence; light mode; the cadence and the control of the unit'),
+        ('events-and-rituals', 'Events and rituals', 'Events', 'Every event by level with purpose, who, input, output, record; the Steerings as interfaces; the rituals; the IP week in order'),
+        ('the-loops-of-delivery', 'The loops of delivery', 'Loops', 'The control loop at each level, drawn; the exploration, build, and release loops; the feedback loops; why loops rather than a plan'),
+        ('quality-verification-and-release', 'Quality, verification, and release', 'Quality and release', 'The gates in order, drawn; the test by another; the check or validation by Risk Tier; the three acceptances; deployment and release; built-in quality'),
+        ('life-cycle-management', 'Life-cycle management', 'Life cycle', 'The three types; the operating loop; support; change; retirement; Adopted Solutions'),
+        ('measures-and-tracking', 'Measures and tracking', 'Measures', 'What each loop reads; the flow of the work; the quality of what is built; the health of what is live; the value that arrived; how it is tracked'),
+        ('roles-and-records', 'Roles and records', 'Roles and records', 'The roles in delivery and their separations; the records; where each step is controlled'),
+    ]
+    for i, (slug, title, tab, line) in enumerate(DCOURSE, 1):
+        if i == 1:
+            sp = next(x for x in PAGES if x['id'] == 'delivery/index')
+            sp.update(source=[f'portal/content/delivery/{slug}.md', 'charter/workflows/README.md'], production='authored; the first part of the course, explanatory, the Solution Lifecycle Model is the rule', outline=[line],
+                      series='delivery-course', series_title='Delivery', part=f'{i} of {len(DCOURSE)}', tab=tab)
+            continue
+        add(id=f'delivery/{slug}', section='delivery', order=i, type='outline', slug=f'/delivery/{slug}/', title=title,
+            source=[f'portal/content/delivery/{slug}.md'], production='authored; explanatory, the Solution Lifecycle Model is the rule', outline=[line],
+            series='delivery-course', series_title='Delivery', part=f'{i} of {len(DCOURSE)}', tab=tab)
+    add(id='delivery/measures-definitions-and-formulas', section='delivery', order=50, type='outline', slug='/delivery/measures-definitions-and-formulas/', title='Delivery measures: definitions and formulas',
+        source=['portal/content/delivery/measures-definitions-and-formulas.md'], production='authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10',
+        outline=['Conventions', 'Flow measures', 'Quality measures', 'Service measures of a live Solution', 'Value and predictability', 'How the measures are kept'])
     add(id='portfolio/measures-definitions-and-formulas', section='portfolio', order=20, type='outline', slug='/portfolio/measures-definitions-and-formulas/', title='Portfolio measures: definitions and formulas',
         source=['portal/content/portfolio/measures-definitions-and-formulas.md'], production='authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 and Charter 7',
         outline=['Conventions', 'Flow measures with formulas: WIP, throughput, lead time, cycle time, Little\'s law, flow efficiency, aging, load, distribution, gate returns, predictability',

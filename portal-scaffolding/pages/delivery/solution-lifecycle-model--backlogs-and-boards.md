@@ -2,7 +2,7 @@
 id: delivery/solution-lifecycle-model/backlogs-and-boards
 title: Solution Lifecycle Model: Backlogs and boards
 section: delivery
-order: 13
+order: 23
 type: document
 slug: /delivery/solution-lifecycle-model/backlogs-and-boards/
 source: charter/documents/solution-lifecycle-model.md

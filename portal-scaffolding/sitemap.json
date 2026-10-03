@@ -164,15 +164,17 @@
    "slug": "/delivery/",
    "title": "Delivery",
    "source": [
+    "portal/content/delivery/overview.md",
     "charter/workflows/README.md"
    ],
-   "production": "authored, with a generated list",
+   "production": "authored; the first part of the course, explanatory, the Solution Lifecycle Model is the rule",
    "outline": [
-    "Introduction of three to five lines: How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution.",
-    "Statement of what the section does not hold and where it is kept",
-    "The pages of the section with one line each (generated)",
-    "Related sections"
-   ]
+    "What delivery is; one picture, the stream and the loops; the principles; the lean-agile practice of delivering at scale it follows"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "1 of 10",
+   "tab": "Overview"
   },
   {
    "id": "governance/index",
@@ -1098,7 +1100,7 @@
   {
    "id": "delivery/solution-lifecycle-model",
    "section": "delivery",
-   "order": 11,
+   "order": 21,
    "type": "document",
    "slug": "/delivery/solution-lifecycle-model/",
    "title": "Solution Lifecycle Model",
@@ -1117,7 +1119,7 @@
   {
    "id": "delivery/solution-lifecycle-model/the-flow-of-value",
    "section": "delivery",
-   "order": 12,
+   "order": 22,
    "type": "document",
    "slug": "/delivery/solution-lifecycle-model/the-flow-of-value/",
    "title": "Solution Lifecycle Model: The flow of value",
@@ -1135,7 +1137,7 @@
   {
    "id": "delivery/solution-lifecycle-model/backlogs-and-boards",
    "section": "delivery",
-   "order": 13,
+   "order": 23,
    "type": "document",
    "slug": "/delivery/solution-lifecycle-model/backlogs-and-boards/",
    "title": "Solution Lifecycle Model: Backlogs and boards",
@@ -1153,7 +1155,7 @@
   {
    "id": "delivery/solution-lifecycle-model/states-and-stages",
    "section": "delivery",
-   "order": 14,
+   "order": 24,
    "type": "document",
    "slug": "/delivery/solution-lifecycle-model/states-and-stages/",
    "title": "Solution Lifecycle Model: States and Stages",
@@ -1171,7 +1173,7 @@
   {
    "id": "delivery/solution-lifecycle-model/the-cadence",
    "section": "delivery",
-   "order": 15,
+   "order": 25,
    "type": "document",
    "slug": "/delivery/solution-lifecycle-model/the-cadence/",
    "title": "Solution Lifecycle Model: The cadence",
@@ -1189,7 +1191,7 @@
   {
    "id": "delivery/solution-lifecycle-model/verification-release-and-acceptance",
    "section": "delivery",
-   "order": 16,
+   "order": 26,
    "type": "document",
    "slug": "/delivery/solution-lifecycle-model/verification-release-and-acceptance/",
    "title": "Solution Lifecycle Model: Verification, release, and acceptance",
@@ -1207,7 +1209,7 @@
   {
    "id": "delivery/solution-lifecycle-model/life-cycle-management",
    "section": "delivery",
-   "order": 17,
+   "order": 27,
    "type": "document",
    "slug": "/delivery/solution-lifecycle-model/life-cycle-management/",
    "title": "Solution Lifecycle Model: Life-cycle management",
@@ -1225,7 +1227,7 @@
   {
    "id": "delivery/service-delivery-workflow",
    "section": "delivery",
-   "order": 21,
+   "order": 31,
    "type": "workflow",
    "slug": "/delivery/service-delivery-workflow/",
    "title": "Portfolio and service delivery workflow",
@@ -1238,7 +1240,7 @@
   {
    "id": "delivery/service-delivery-guide",
    "section": "delivery",
-   "order": 22,
+   "order": 32,
    "type": "guide",
    "slug": "/delivery/service-delivery-guide/",
    "title": "Guide: Service delivery",
@@ -1251,7 +1253,7 @@
   {
    "id": "delivery/cadence-workflow",
    "section": "delivery",
-   "order": 23,
+   "order": 33,
    "type": "workflow",
    "slug": "/delivery/cadence-workflow/",
    "title": "Cadence",
@@ -1264,7 +1266,7 @@
   {
    "id": "delivery/cadence-guide",
    "section": "delivery",
-   "order": 24,
+   "order": 34,
    "type": "guide",
    "slug": "/delivery/cadence-guide/",
    "title": "Guide: Cadence",
@@ -1277,7 +1279,7 @@
   {
    "id": "delivery/collaboration-tooling-workflow",
    "section": "delivery",
-   "order": 25,
+   "order": 35,
    "type": "workflow",
    "slug": "/delivery/collaboration-tooling-workflow/",
    "title": "Collaboration tooling",
@@ -1422,7 +1424,7 @@
   {
    "id": "delivery/experiment-workflow",
    "section": "delivery",
-   "order": 18,
+   "order": 41,
    "type": "outline",
    "slug": "/delivery/experiment-workflow/",
    "title": "The Experiment workflow: the Lab",
@@ -1438,7 +1440,7 @@
   {
    "id": "delivery/life-of-a-service",
    "section": "delivery",
-   "order": 19,
+   "order": 42,
    "type": "outline",
    "slug": "/delivery/life-of-a-service/",
    "title": "The life of a Service",
@@ -1455,7 +1457,7 @@
   {
    "id": "delivery/service-operations",
    "section": "delivery",
-   "order": 20,
+   "order": 43,
    "type": "outline",
    "slug": "/delivery/service-operations/",
    "title": "Service operations",
@@ -1468,6 +1470,197 @@
     "The classes of service",
     "The health of a Service",
     "Sizing for a small unit"
+   ]
+  },
+  {
+   "id": "delivery/the-flow-of-value",
+   "section": "delivery",
+   "order": 2,
+   "type": "outline",
+   "slug": "/delivery/the-flow-of-value/",
+   "title": "The flow of value",
+   "source": [
+    "portal/content/delivery/the-flow-of-value.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "The levels of the work and their contracts; how work enters; the Team; the Stages a Feature travels"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "2 of 10",
+   "tab": "Flow of value"
+  },
+  {
+   "id": "delivery/backlogs-boards-and-kanbans",
+   "section": "delivery",
+   "order": 3,
+   "type": "outline",
+   "slug": "/delivery/backlogs-boards-and-kanbans/",
+   "title": "Backlogs, boards, and Kanbans",
+   "source": [
+    "portal/content/delivery/backlogs-boards-and-kanbans.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "The two backlogs; definition of ready and done; the four boards; how a Kanban limits the work; the Program Board; the Roadmap and the Dashboard"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "3 of 10",
+   "tab": "Backlogs and boards"
+  },
+  {
+   "id": "delivery/the-cadence",
+   "section": "delivery",
+   "order": 4,
+   "type": "outline",
+   "slug": "/delivery/the-cadence/",
+   "title": "The cadence: Program Increments and Iterations",
+   "source": [
+    "portal/content/delivery/the-cadence.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "The units of the cadence; a quarter in sequence; why a fixed cadence; light mode; the cadence and the control of the unit"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "4 of 10",
+   "tab": "Cadence"
+  },
+  {
+   "id": "delivery/events-and-rituals",
+   "section": "delivery",
+   "order": 5,
+   "type": "outline",
+   "slug": "/delivery/events-and-rituals/",
+   "title": "Events and rituals",
+   "source": [
+    "portal/content/delivery/events-and-rituals.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "Every event by level with purpose, who, input, output, record; the Steerings as interfaces; the rituals; the IP week in order"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "5 of 10",
+   "tab": "Events"
+  },
+  {
+   "id": "delivery/the-loops-of-delivery",
+   "section": "delivery",
+   "order": 6,
+   "type": "outline",
+   "slug": "/delivery/the-loops-of-delivery/",
+   "title": "The loops of delivery",
+   "source": [
+    "portal/content/delivery/the-loops-of-delivery.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "The control loop at each level, drawn; the exploration, build, and release loops; the feedback loops; why loops rather than a plan"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "6 of 10",
+   "tab": "Loops"
+  },
+  {
+   "id": "delivery/quality-verification-and-release",
+   "section": "delivery",
+   "order": 7,
+   "type": "outline",
+   "slug": "/delivery/quality-verification-and-release/",
+   "title": "Quality, verification, and release",
+   "source": [
+    "portal/content/delivery/quality-verification-and-release.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "The gates in order, drawn; the test by another; the check or validation by Risk Tier; the three acceptances; deployment and release; built-in quality"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "7 of 10",
+   "tab": "Quality and release"
+  },
+  {
+   "id": "delivery/life-cycle-management",
+   "section": "delivery",
+   "order": 8,
+   "type": "outline",
+   "slug": "/delivery/life-cycle-management/",
+   "title": "Life-cycle management",
+   "source": [
+    "portal/content/delivery/life-cycle-management.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "The three types; the operating loop; support; change; retirement; Adopted Solutions"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "8 of 10",
+   "tab": "Life cycle"
+  },
+  {
+   "id": "delivery/measures-and-tracking",
+   "section": "delivery",
+   "order": 9,
+   "type": "outline",
+   "slug": "/delivery/measures-and-tracking/",
+   "title": "Measures and tracking",
+   "source": [
+    "portal/content/delivery/measures-and-tracking.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "What each loop reads; the flow of the work; the quality of what is built; the health of what is live; the value that arrived; how it is tracked"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "9 of 10",
+   "tab": "Measures"
+  },
+  {
+   "id": "delivery/roles-and-records",
+   "section": "delivery",
+   "order": 10,
+   "type": "outline",
+   "slug": "/delivery/roles-and-records/",
+   "title": "Roles and records",
+   "source": [
+    "portal/content/delivery/roles-and-records.md"
+   ],
+   "production": "authored; explanatory, the Solution Lifecycle Model is the rule",
+   "outline": [
+    "The roles in delivery and their separations; the records; where each step is controlled"
+   ],
+   "series": "delivery-course",
+   "series_title": "Delivery",
+   "part": "10 of 10",
+   "tab": "Roles and records"
+  },
+  {
+   "id": "delivery/measures-definitions-and-formulas",
+   "section": "delivery",
+   "order": 50,
+   "type": "outline",
+   "slug": "/delivery/measures-definitions-and-formulas/",
+   "title": "Delivery measures: definitions and formulas",
+   "source": [
+    "portal/content/delivery/measures-definitions-and-formulas.md"
+   ],
+   "production": "authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10",
+   "outline": [
+    "Conventions",
+    "Flow measures",
+    "Quality measures",
+    "Service measures of a live Solution",
+    "Value and predictability",
+    "How the measures are kept"
    ]
   },
   {

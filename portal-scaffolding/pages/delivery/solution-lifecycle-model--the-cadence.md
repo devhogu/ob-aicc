@@ -2,7 +2,7 @@
 id: delivery/solution-lifecycle-model/the-cadence
 title: Solution Lifecycle Model: The cadence
 section: delivery
-order: 15
+order: 25
 type: document
 slug: /delivery/solution-lifecycle-model/the-cadence/
 source: charter/documents/solution-lifecycle-model.md

@@ -2,7 +2,7 @@
 id: delivery/experiment-workflow
 title: The Experiment workflow: the Lab
 section: delivery
-order: 18
+order: 41
 type: outline
 slug: /delivery/experiment-workflow/
 source: portal/content/delivery/experiment-workflow.md

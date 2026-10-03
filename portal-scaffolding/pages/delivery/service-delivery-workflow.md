@@ -2,7 +2,7 @@
 id: delivery/service-delivery-workflow
 title: Portfolio and service delivery workflow
 section: delivery
-order: 21
+order: 31
 type: workflow
 slug: /delivery/service-delivery-workflow/
 source: charter/workflows/service-delivery.md

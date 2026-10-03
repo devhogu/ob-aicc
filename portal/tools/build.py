@@ -49,7 +49,7 @@ BASELINE = {'revision': '1.0', 'date': '2026-10-02'}
 
 FONTS = os.path.join(ROOT, 'portal', '.tools', 'pw-syslibs')
 SHORT = {'Statement of Intent on the Adoption of Artificial Intelligence': 'Statement of Intent', 'Vocabulary and Style': 'Vocabulary'}
-NAV_SHORT = {'AICC Charter': 'Charter', 'Portfolio measures: definitions and formulas': 'Portfolio measures'}      # shorter in the left navigation
+NAV_SHORT = {'AICC Charter': 'Charter', 'Portfolio measures: definitions and formulas': 'Portfolio measures', 'Delivery measures: definitions and formulas': 'Delivery measures'}      # shorter in the left navigation
 PAGE_TITLE = {'AICC Charter': 'AI Competence Center Charter'}      # fuller as the page title
 
 

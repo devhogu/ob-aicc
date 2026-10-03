@@ -5,8 +5,10 @@ section: delivery
 order: 0
 type: section
 slug: /delivery/
-source: charter/workflows/README.md
-production: authored, with a generated list
+source: portal/content/delivery/overview.md; charter/workflows/README.md
+part: 1 of 10
+series: delivery-course
+production: authored; the first part of the course, explanatory, the Solution Lifecycle Model is the rule
 status: scaffold
 ---
 
@@ -16,11 +18,9 @@ Page type: section. Address: /delivery/
 
 ## Source
 
+- portal/content/delivery/overview.md
 - charter/workflows/README.md
 
 ## Outline
 
-- Introduction of three to five lines: How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution.
-- Statement of what the section does not hold and where it is kept
-- The pages of the section with one line each (generated)
-- Related sections
+- What delivery is; one picture, the stream and the loops; the principles; the lean-agile practice of delivering at scale it follows

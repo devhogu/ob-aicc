@@ -2,7 +2,7 @@
 id: delivery/service-delivery-guide
 title: Guide: Service delivery
 section: delivery
-order: 22
+order: 32
 type: guide
 slug: /delivery/service-delivery-guide/
 source: charter/guides/service-delivery-guide.md

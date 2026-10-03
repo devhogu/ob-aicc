@@ -2,7 +2,7 @@
 id: delivery/solution-lifecycle-model/life-cycle-management
 title: Solution Lifecycle Model: Life-cycle management
 section: delivery
-order: 17
+order: 27
 type: document
 slug: /delivery/solution-lifecycle-model/life-cycle-management/
 source: charter/documents/solution-lifecycle-model.md

@@ -2,7 +2,7 @@
 id: delivery/solution-lifecycle-model/the-flow-of-value
 title: Solution Lifecycle Model: The flow of value
 section: delivery
-order: 12
+order: 22
 type: document
 slug: /delivery/solution-lifecycle-model/the-flow-of-value/
 source: charter/documents/solution-lifecycle-model.md

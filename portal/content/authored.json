@@ -79,7 +79,7 @@
     "ru": "Поставка"
    },
    "intro": {
-    "en": "AICC delivers in small steps on a common cadence: the Capabilities and Features of an Initiative are built in Iterations of one month within Program Increments of one quarter, the work is visible and limited in progress, and a Solution is checked or validated, accepted by the Team, and accepted by its Domain Owner before it reaches its users. An Experiment runs in the Lab and ends in a decision; a Service lives through seven states after release and is operated under named practices."
+    "en": "Delivery is how an approved idea becomes a working Solution in the hands of a function, and how that Solution is kept, changed, and retired: in small steps, on a fixed cadence, with the work visible and limited and quality built into the flow. This section is a short course in ten parts, read in order or by tab, followed by the rule, the Solution Lifecycle Model, and by the workflows, the guides, and the pages of the life of a Service."
    },
    "icon": "workflow"
   },

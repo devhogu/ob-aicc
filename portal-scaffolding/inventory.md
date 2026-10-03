@@ -67,7 +67,16 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Portfolio | Portfolio Management Model: The business case and the MVP | /portfolio/portfolio-management-model/the-business-case-and-the-mvp/ | document | documents/portfolio-management-model.md | 6, 7 | 984 | generated |
 | Portfolio | Portfolio Management Model: Levels, review, measures, and records | /portfolio/portfolio-management-model/levels-review-and-records/ | document | documents/portfolio-management-model.md | 8, 9 | 353 | generated |
 | Portfolio | Portfolio measures: definitions and formulas | /portfolio/measures-definitions-and-formulas/ | outline | portal/content/portfolio/measures-definitions-and-formulas.md | all |  | authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 and Charter 7 |
-| Delivery | Delivery | /delivery/ | section | workflows/README.md | all |  | authored, with a generated list |
+| Delivery | Delivery | /delivery/ | section | portal/content/delivery/overview.md; workflows/README.md | all |  | authored; the first part of the course, explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | The flow of value | /delivery/the-flow-of-value/ | outline | portal/content/delivery/the-flow-of-value.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | Backlogs, boards, and Kanbans | /delivery/backlogs-boards-and-kanbans/ | outline | portal/content/delivery/backlogs-boards-and-kanbans.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | The cadence: Program Increments and Iterations | /delivery/the-cadence/ | outline | portal/content/delivery/the-cadence.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | Events and rituals | /delivery/events-and-rituals/ | outline | portal/content/delivery/events-and-rituals.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | The loops of delivery | /delivery/the-loops-of-delivery/ | outline | portal/content/delivery/the-loops-of-delivery.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | Quality, verification, and release | /delivery/quality-verification-and-release/ | outline | portal/content/delivery/quality-verification-and-release.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | Life-cycle management | /delivery/life-cycle-management/ | outline | portal/content/delivery/life-cycle-management.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | Measures and tracking | /delivery/measures-and-tracking/ | outline | portal/content/delivery/measures-and-tracking.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
+| Delivery | Roles and records | /delivery/roles-and-records/ | outline | portal/content/delivery/roles-and-records.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
 | Delivery | Solution Lifecycle Model | /delivery/solution-lifecycle-model/ | document | documents/solution-lifecycle-model.md | 1, 2 | 414 | generated |
 | Delivery | Solution Lifecycle Model: The flow of value | /delivery/solution-lifecycle-model/the-flow-of-value/ | document | documents/solution-lifecycle-model.md | 3 | 1358 | generated |
 | Delivery | Solution Lifecycle Model: Backlogs and boards | /delivery/solution-lifecycle-model/backlogs-and-boards/ | document | documents/solution-lifecycle-model.md | 4 | 1051 | generated |
@@ -75,14 +84,15 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Delivery | Solution Lifecycle Model: The cadence | /delivery/solution-lifecycle-model/the-cadence/ | document | documents/solution-lifecycle-model.md | 6 | 1325 | generated |
 | Delivery | Solution Lifecycle Model: Verification, release, and acceptance | /delivery/solution-lifecycle-model/verification-release-and-acceptance/ | document | documents/solution-lifecycle-model.md | 7 | 1255 | generated |
 | Delivery | Solution Lifecycle Model: Life-cycle management | /delivery/solution-lifecycle-model/life-cycle-management/ | document | documents/solution-lifecycle-model.md | 8 | 1805 | generated |
-| Delivery | The Experiment workflow: the Lab | /delivery/experiment-workflow/ | outline | portal/content/delivery/experiment-workflow.md | all |  | authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB |
-| Delivery | The life of a Service | /delivery/life-of-a-service/ | outline | portal/content/delivery/life-of-a-service.md | all |  | authored; proposed for Solution Lifecycle Model 8; draws on STS |
-| Delivery | Service operations | /delivery/service-operations/ | outline | portal/content/delivery/service-operations.md | all |  | authored; the run-book template of a Service; draws on STS |
 | Delivery | Portfolio and service delivery workflow | /delivery/service-delivery-workflow/ | workflow | workflows/service-delivery.md | all |  | generated |
 | Delivery | Guide: Service delivery | /delivery/service-delivery-guide/ | guide | guides/service-delivery-guide.md | all |  | generated |
 | Delivery | Cadence | /delivery/cadence-workflow/ | workflow | workflows/cadence.md | all |  | generated |
 | Delivery | Guide: Cadence | /delivery/cadence-guide/ | guide | guides/cadence-guide.md | all |  | generated |
 | Delivery | Collaboration tooling | /delivery/collaboration-tooling-workflow/ | workflow | workflows/collaboration-tooling.md | all |  | generated |
+| Delivery | The Experiment workflow: the Lab | /delivery/experiment-workflow/ | outline | portal/content/delivery/experiment-workflow.md | all |  | authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB |
+| Delivery | The life of a Service | /delivery/life-of-a-service/ | outline | portal/content/delivery/life-of-a-service.md | all |  | authored; proposed for Solution Lifecycle Model 8; draws on STS |
+| Delivery | Service operations | /delivery/service-operations/ | outline | portal/content/delivery/service-operations.md | all |  | authored; the run-book template of a Service; draws on STS |
+| Delivery | Delivery measures: definitions and formulas | /delivery/measures-definitions-and-formulas/ | outline | portal/content/delivery/measures-definitions-and-formulas.md | all |  | authored; the reference of the measures; the proposed ones marked, for Solution Lifecycle Model 10 |
 | Governance and oversight | Governance and oversight | /governance/ | section | none | none |  | authored, with a generated list |
 | Governance and oversight | Operating Model: The control loops | /governance/control-loops/ | document | documents/operating-model.md | 6 | 1999 | generated |
 | Governance and oversight | Operating Model: Records and evidence | /governance/records-and-evidence/ | document | documents/operating-model.md | 7 | 517 | generated |
