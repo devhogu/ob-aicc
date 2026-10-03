@@ -389,6 +389,10 @@ The footer, translation guidance, and `portal/translation-source.json` identify 
 
 ## 25. Language source scaffolding
 
-The approved language layout moves the canonical English corpus to `charter/en/`, `registry/en/`, `portfolio/en/`, and `portal/content/en/`, with matching Russian folders. English source edition 2.2 and document revisions remain unchanged. All nine governing documents retain their exact approved bytes; source paths and links elsewhere are reconciled to the new layout.
+The approved language layout moves the English-language corpus to `charter/en/`, `registry/en/`, `portfolio/en/`, and `portal/content/en/`, with matching Russian folders. English source edition 2.2 and document revisions remain unchanged. All nine governing documents retain their exact approved bytes; source paths and links elsewhere are reconciled to the new layout.
 
-The builder selects reviewed Russian sources using their canonical English path, source revision, and SHA-256 digest. Missing or draft translations remain marked English; stale reviewed translations fail validation. Page IDs, routes, clause numbers, and record identity remain shared. The renderer builds language-specific bodies, search, diagrams, and links. The existing complete bilingual HTML output is promoted through aicc-deploy; source Markdown and live records are not added to the deployment repository.
+The builder selects reviewed Russian sources using the corresponding English comparison path, source revision, and SHA-256 digest. Missing or draft translations remain marked English; stale reviewed translations fail validation. Page IDs, routes, clause numbers, and record identity remain shared. The renderer builds language-specific bodies, search, diagrams, and links. The existing complete bilingual HTML output is promoted through aicc-deploy; source Markdown and live records are not added to the deployment repository.
+
+## 26. Language-neutral wording (2026-10-03)
+
+No language is designated authoritative. Corpus guidance and site labels no longer describe English as the original or prescribe that changes must originate in English. The footer identifies corpus edition 2.2, and the Document Catalog records the availability wording correction as revision 2.1. Existing language-availability notices remain factual. English paths and hashes remain comparison references in the current build; reconciliation may correct either language against the recorded decisions and change history.

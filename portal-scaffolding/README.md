@@ -75,4 +75,4 @@ python3 portal-scaffolding/make_pages.py --previous # the first structure of the
 python3 portal-scaffolding/check.py --previous
 ```
 
-The sitemap records canonical English source paths. The builder resolves corresponding reviewed files from the Russian source trees while retaining page IDs and URLs. See [language sources](../portal/README.md#language-sources).
+The sitemap records English file paths for build-time source lookup. The builder resolves corresponding reviewed files from the Russian source trees while retaining page IDs and URLs. See [language sources](../portal/README.md#language-sources).

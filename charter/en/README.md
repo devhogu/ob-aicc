@@ -4,7 +4,7 @@
 
 The charter is the body of knowledge of the AI Competence Center (AICC) of the Bank. It states how the unit is mandated, governed, and operated, and it is the source of truth for what AICC is, what it produces, and how it keeps its records. This README is the index of the charter and the guide to reading it.
 
-The approved English source baseline is edition 2.2 of 3 October 2026, recorded in [DR-2026-063](../../registry/en/decisions/DR-2026-063-approved-english-baseline.md). All nine documents and fourteen Templates are active, and the charter review has no open editorial or baseline approval item. Each document retains its own revision. Operational states and evidence are maintained in the Registry and the Portfolio.
+The approved corpus baseline is edition 2.2 of 3 October 2026, recorded in [DR-2026-063](../../registry/en/decisions/DR-2026-063-approved-english-baseline.md). All nine documents and fourteen Templates are active, and the charter review has no open editorial or baseline approval item. Each document retains its own revision. Operational states and evidence are maintained in the Registry and the Portfolio.
 
 ## 2. Structure
 

@@ -4,19 +4,19 @@
   "source_edition": "2.2",
   "reconciled_on": "2026-10-03",
   "base_commit": "2d576478385a4c4542f4ea9cba702c1eedde5135",
-  "source_state": "Approved English source edition 2.2 in the en/ru layout. baseline_tag identifies the approved pre-migration source. Each entry retains its baseline path/hash where the layout or source interface changed; sha256 identifies the current source file. The nine governing documents are byte-identical to the approved baseline.",
+  "source_state": "Approved corpus baseline 2.2, initially prepared in English, with the en/ru layout and the language-neutral wording correction recorded in Document Catalog revision 2.1. No language is designated authoritative. baseline_tag and baseline path/hash fields identify the original approved files; current hashes and document metadata identify the corrected files.",
   "scope": "Charter corpus, Registry records, Portfolio records and definitions, portal explanatory content, English interface messages, English authored content, and page routing. Operational status is preserved; this manifest is not evidence of approval or publication.",
   "hash_algorithm": "SHA-256",
   "hash_bases": {
     "file_bytes": "SHA-256 of the exact UTF-8 source file bytes.",
     "english_projection": "Recursively replace every nonempty object whose keys are a subset of en, ru, ky with its en value; retain all other keys and list order. Serialize with JSON keys sorted, no spaces, Unicode unescaped, UTF-8, no trailing newline. SHA-256 that serialization."
   },
-  "translation_rule": "Identify this source edition and each document source revision. Preserve identifiers with only the language suffix changed, normative force, defined terms, decision rights, dates, approval status, and recorded uncertainty. Reconcile later English edits explicitly; do not refresh this baseline merely because a translation is added.",
+  "translation_rule": "Record the comparison edition and each referenced document revision. Preserve identifiers with only the language suffix changed, normative force, defined terms, decision rights, dates, approval status, and recorded uncertainty. Reconcile changes in either language against recorded decisions and change history, without automatic language precedence. Do not refresh this baseline merely because a translation is added.",
   "files": [
     {
       "path": "charter/en/README.md",
       "hash_basis": "file_bytes",
-      "sha256": "e2e614e30b4b9c61d25210e2c5a4d3f7df1662027a9a590e78f9f4255f004bba",
+      "sha256": "c3e0b761e37411d5b3e0845440c82107127a16487be130551ee993469e07f594",
       "baseline_path": "charter/README.md",
       "baseline_sha256": "b9cca5895f2e2ab1af2dd99d9b11f220c18e00cf9de4accca52670d2b1880563"
     },
@@ -62,11 +62,11 @@
     {
       "path": "charter/en/documents/document-catalog.md",
       "hash_basis": "file_bytes",
-      "sha256": "57defc4ca138e289c5c6f43d75e04c38e161a3bdfe35ff550a4d21f0c7a007e9",
+      "sha256": "5337ba1b94145c39ebba70afba83de8c5e2c9264b6a7ad193bbd7b90f89da473",
       "document": {
         "id": "AICC-REF-02-EN",
         "status": "active",
-        "revision": "2.0",
+        "revision": "2.1",
         "revised": "2026-10-03"
       },
       "baseline_path": "charter/documents/document-catalog.md",
@@ -441,7 +441,9 @@
     {
       "path": "portal/content/authored.json",
       "hash_basis": "english_projection",
-      "sha256": "2349e3edf7b972b51020a3ac387b84b5308ce9b84a08cff9c3e4385d3cf8dde8"
+      "sha256": "c782268bfd801917dfd5a32d050655dfeb75b37465a56f7d804885695d4b26b8",
+      "baseline_sha256": "2349e3edf7b972b51020a3ac387b84b5308ce9b84a08cff9c3e4385d3cf8dde8",
+      "baseline_path": "portal/content/authored.json"
     },
     {
       "path": "portal/content/en/delivery/backlogs-boards-and-kanbans.md",
@@ -1251,7 +1253,7 @@
     {
       "path": "portal/messages/en.json",
       "hash_basis": "file_bytes",
-      "sha256": "db1e470b9d45ea9e61ed6ead220640bbcd63656d42b4ba10908c822af8d14083",
+      "sha256": "6eede6a1ea8c70c36acf8a173ec260ccbe89f3d965907e5c1a334b68b429bc95",
       "baseline_path": "portal/messages/en.json",
       "baseline_sha256": "f5f7ba5d166f962f82d874684f4bdbb85f8d8bb893ad10cd7c8cf211cbf92b98"
     },
@@ -1447,7 +1449,7 @@
     {
       "path": "registry/en/decisions/DR-2026-063-approved-english-baseline.md",
       "hash_basis": "file_bytes",
-      "sha256": "8f2ffc3cd82b8a0da2f21a2a3903900da3d3cb3f48908054b607a055452e9612",
+      "sha256": "e1aa0247a0ef7996c2ec2e881ff733a1ec1f6001072e4a4608b823155c07f1fe",
       "baseline_path": "registry/decisions/DR-2026-063-approved-english-baseline.md",
       "baseline_sha256": "8f2ffc3cd82b8a0da2f21a2a3903900da3d3cb3f48908054b607a055452e9612"
     },
@@ -1658,5 +1660,7 @@
   "baseline_tag": "baseline-2026-10-03-en-v2.2",
   "approval_record": "registry/en/decisions/DR-2026-063-approved-english-baseline.md",
   "source_layout": "en-ru",
-  "layout_change": "C-LANGUAGE-SCAFFOLDING"
+  "layout_change": "C-LANGUAGE-SCAFFOLDING",
+  "authoritative_language": null,
+  "wording_change": "C-LANGUAGE-NEUTRAL-WORDING"
 }

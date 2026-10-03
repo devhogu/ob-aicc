@@ -1,6 +1,6 @@
 # Portfolio languages
 
-- [English](en/README.md): canonical source and approved records.
-- [Russian](ru/README.md): translation workspace; the same identities and recorded facts.
+- [English](en/README.md): documents and records in English.
+- [Russian](ru/README.md): Russian-language workspace; the same identities and recorded facts.
 
-The approved English source edition is 2.2. Language folders do not create separate document authority or record histories.
+The approved corpus baseline is edition 2.2. No language is designated authoritative. Language folders share document identities and record histories.

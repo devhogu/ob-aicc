@@ -16,7 +16,7 @@
       <M-PORTAL-PROJECTION />
     </M-AICC-DEPLOY>
     <M-PORTAL-LOCALIZATION>
-      <Summary>Canonical English source identity, reviewed translation selection, source freshness, stable structure, record identity checks, and paired table extraction for generated views.</Summary>
+      <Summary>Language source identity and comparison, reviewed translation selection, source freshness, stable structure, record identity checks, and paired table extraction for generated views. English lookup paths do not establish language precedence.</Summary>
       <Path>portal/tools/localization.py</Path>
     </M-PORTAL-LOCALIZATION>
   </GD-MAIN>

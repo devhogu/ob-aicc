@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-02
 revised: 2026-10-03
 ```
@@ -39,7 +39,7 @@ revised: 2026-10-03
 
 ## 5. The documents
 
-5.1. The following table lists the documents. The status and revision of each are in its own metadata block. EN is the source language.
+5.1. The following table lists the documents. The status and revision of each are in its own metadata block. The Languages column records the available language versions.
 
 | Identifier | Title | Purpose | Languages |
 | --- | --- | --- | --- |
@@ -109,3 +109,4 @@ The table is in the order of use, and the identifiers do not follow that order. 
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Added the Package Definition AICC-TPL-14 to the Templates, the rules for the pages that the AICC portal adds to explain the charter, and the service areas, the modes, the governance measures, the service steps, and the Lab to the purposes of the documents. | DR-2026-062 |
+| 2.1 | 2026-10-03 | Clarified that the Languages column records availability; removed the fixed source-language designation. | none |

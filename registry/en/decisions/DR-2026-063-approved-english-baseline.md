@@ -64,3 +64,7 @@ The approval is recorded here and indexed in the Decision Log. It closes the ear
 | Package descriptions | All twelve Definitions are present and linked; catalog statuses describe actual availability |
 | Standing Initiative establishment | Approved by this decision, with complete Briefs, initial measures, and shared capacity limits |
 | Translation source | Approved English edition 2.2, with file hashes and individual document metadata |
+
+## Language clarification, 2026-10-03
+
+The baseline owner's subsequent instruction removes the designation of English as authoritative. English identifies the language in which the initial baseline was prepared; approval of that baseline does not establish language precedence. Changes may originate in either language. Differences are reconciled against the recorded decisions and change history to establish which version has drifted. This clarification does not reopen the baseline approval or change the operational decisions above.

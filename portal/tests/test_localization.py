@@ -150,7 +150,7 @@ class PortalRendering(unittest.TestCase):
                 doc_page = ru.by_id['services/business-model']
                 doc_html = build.build_page(ru, doc_page, 'ru')
                 self.assertIn('AICC-MND-03-RU', doc_html)
-                self.assertIn('Версия английского оригинала', doc_html)
+                self.assertIn('Версия исходного документа', doc_html)
                 self.assertIn('charter/ru/documents/business-model.md', doc_html)
                 control_html = build.build_page(ru, ru.by_id['governance/controls/c-04'], 'ru')
                 self.assertIn('Проверка документов', control_html)

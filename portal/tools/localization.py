@@ -1,4 +1,4 @@
-"""Canonical English sources and reviewed language views of the same content."""
+"""Language source comparison and reviewed views of the same content."""
 # START_MODULE_CONTRACT
 # PURPOSE: Select a reviewed translation or an explicitly identified English fallback.
 # SCOPE: Source identity, freshness, structural validation, and paired table extraction.
@@ -162,7 +162,7 @@ def validate_translations(root):
             if not (root / canonical).is_file():
                 if path == root / area / 'ru' / 'README.md':
                     continue  # translation-workspace introduction, not corpus content
-                raise ValueError(f'{relative}: no canonical English source')
+                raise ValueError(f'{relative}: no English comparison file')
             selected = sources.resolve(canonical)
             counts['reviewed' if selected.language == 'ru' else 'draft'] += 1
     return counts

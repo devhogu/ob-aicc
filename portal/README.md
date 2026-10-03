@@ -6,7 +6,7 @@ Editable home for the AICC charter site: the interface kit, the page chrome, the
 
 | Input | Holds |
 | --- | --- |
-| `../charter/{en,ru}/**/*.md` | The authoritative content of each document, workflow, guide, and template |
+| `../charter/{en,ru}/**/*.md` | The content of each document, workflow, guide, and template |
 | `../portal-scaffolding/sitemap.json` | The structure: sections, pages, addresses, and which sections of a document each page holds |
 | `ui/` | The O! UI/UX kit: tokens, fonts, workspace CSS, the O! mark, and icons (copied from `../obank-uiux/site`) |
 | `site/charter.css`, `site/site.js` | The additions of the charter site: layout, diagrams, theme switch, search, control filter, template copy |
@@ -29,9 +29,11 @@ The diagrams are drawn with Mermaid CLI and the headless browser of this host. T
 
 ## Language sources
 
-The canonical source trees are `charter/en/`, `registry/en/`, `portfolio/en/`, and `portal/content/en/`. Their `ru/` siblings mirror the filenames and folders. The root READMEs are navigation; Russian workspace READMEs and `.gitkeep` files are scaffolding, not translated documents. Shared UI strings remain in `messages/{en,ru}.json`, and authored bilingual chrome remains in `content/authored.json`.
+The language source trees are `charter/{en,ru}/`, `registry/{en,ru}/`, `portfolio/{en,ru}/`, and `portal/content/{en,ru}/`. Matching language versions use the same filenames and folders. The root READMEs are navigation; Russian workspace READMEs and `.gitkeep` files are scaffolding, not translated documents. Shared UI strings remain in `messages/{en,ru}.json`, and authored bilingual chrome remains in `content/authored.json`.
 
-English is authoritative. A Russian record is a reviewed language view of the same record: its identity, dates, decisions, statuses, and quantities remain aligned. Only canonical records are edited for business changes; their translations are reconciled afterward. Translating a record never grants an approval or creates a second decision history. The build validates record identifiers and ISO dates; semantic equivalence of translated statuses and wording is part of the translation review.
+No language is designated authoritative. Language versions share record identities, dates, decisions, statuses, and quantities. Changes may originate in either language. Divergence is reconciled against approved decisions and change history to establish which version has drifted; language alone does not determine which wording is retained. Translating a record never grants an approval or creates a second decision history. The build validates record identifiers and ISO dates; semantic equivalence of translated statuses and wording is part of the translation review.
+
+The current build uses English paths and hashes as comparison references for the initial Russian translation. This technical arrangement does not establish language precedence. A mismatch requires reconciliation of both versions; the comparison reference may need correction.
 
 A translation retains the original six metadata fields when the source has them, changes only the identifier's language suffix, and adds the following fields in the opening YAML fence:
 
@@ -46,15 +48,15 @@ translation_status: draft
 
 Preserve filenames, numbered headings, clause numbers, and table row/column order. Table headings and text may be translated; the generator keeps canonical column identities. Ordinary Markdown links use the matching relative language tree. `page:` references use stable sitemap page IDs, which are language independent. Cross-references recognize English document aliases and the titles of reviewed Russian documents; explicit Markdown links remain available for other wording. Mermaid labels may be translated while node IDs and edges stay the same.
 
-The build renders each language independently, including clause links, search, diagrams, metadata, and template copy text. Generated control and role views use translated sources once all their contributing documents are reviewed; until then the whole generated view remains marked English. The approved English source edition remains 2.2. The language migration updates paths and structural references, while all nine governing documents remain byte-identical to the approved baseline.
+The build renders each language independently, including clause links, search, diagrams, metadata, and template copy text. Generated control and role views use translated sources once all their contributing documents are reviewed; until then the whole generated view remains marked English. The corpus baseline remains edition 2.2. The language migration preserved the nine governing documents; the subsequent wording correction is recorded as Document Catalog revision 2.1.
 
 The complete generated `html/aicc/` tree is promoted to the existing deployment repository. Registry and Portfolio translations do not add live records to the public portal; the current publication scope stays unchanged.
 
-## English source for translation
+## Baseline for translation
 
-The approved English source baseline is **2.2, 3 October 2026**, established by [DR-2026-063](../registry/en/decisions/DR-2026-063-approved-english-baseline.md). This is the edition of the source set, not the revision of every document. The Business Model, Portfolio Management Model, Solution Lifecycle Model, and Vocabulary carry correction revision 2.1. The other four revised governing documents remain at 2.0, the Statement of Intent at 1.0, the nine previously amended templates at 1.1, and the other templates at 1.0.
+The approved corpus baseline is **2.2, 3 October 2026**, initially prepared in English, established by [DR-2026-063](../registry/en/decisions/DR-2026-063-approved-english-baseline.md). This is the edition of the source set, not the revision of every document. The Business Model, Portfolio Management Model, Solution Lifecycle Model, Vocabulary, and Document Catalog carry correction revision 2.1. The other three revised governing documents remain at 2.0, the Statement of Intent at 1.0, the nine previously amended templates at 1.1, and the other templates at 1.0.
 
-`translation-source.json` identifies the English source files and their SHA-256 hashes, including the corpus, Registry, Portfolio, explanatory pages, English interface messages, English fields of the authored content, and page routing. It records the exact source set prepared for translation. Its entries for documents and templates include their identifiers, revisions, and statuses. A later source edit requires reconciliation of the affected translation against that changed source; the manifest is not updated merely because a translation is added.
+`translation-source.json` identifies the English source files and their SHA-256 hashes, including the corpus, Registry, Portfolio, explanatory pages, English interface messages, English fields of the authored content, and page routing. It records the exact source set prepared for translation. Its entries for documents and templates include their identifiers, revisions, and statuses. A later edit requires reconciliation of the affected language versions against recorded decisions and change history; this manifest does not give English precedence and is not updated merely because a translation is added.
 
 The charter review is settled, and all four Standing Initiative Briefs are Approved with no open sections. Their initial measures and shared capacity limits are recorded in the Briefs and the Registry boards. Operational states in the Registry and the Portfolio describe execution; they do not reopen the approved charter baseline.
 
