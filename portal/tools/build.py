@@ -1252,32 +1252,22 @@ def home_page(site, p, lang):
     rp = site.by_id['about/statement-of-intent/capability-and-maturity-roadmap']
     rp_url = site.rel(url, site.url(rp, lang))
     lcards = ''.join('<li class="level"><span class="lv-n">%s %s</span><strong lang="en">%s</strong><span lang="en">%s</span></li>' % (esc(m['level']), esc(r['Maturity Level']), esc(r['Name']), esc(r['Capability'])) for r in levels)
-    mapc = ''
-    for k, item in enumerate(a['map'][lang]):
-        to = item['to']
-        target = site.by_id.get(to) or site.by_id.get(to.rstrip('/') + '/index')
-        href = site.rel(url, site.url(target, lang)) if target else '#'
-        mapc += '<li class="o-card linked card--primary" data-tip="%s"><h3><a href="%s">%s</a></h3><p class="card-desc">%s</p></li>' % (esc(item['text']), href, esc(item['title']), esc(item['text']))
-        if k < 2:
-            mapc += '<li class="map-arrow" aria-hidden="true">&rarr;</li>'
     scards = ''
     for s in site.sections:
         sec = site.auth['sections'][s['id']]
         sp2 = site.by_id[s['id'] + '/index']
-        scards += '<li class="o-card linked card--secondary" data-tip="%s">%s<h3><a href="%s">%s</a></h3><p class="card-desc">%s</p></li>' % (esc(sec['intro'][lang]), icon(sec['icon']), site.rel(url, site.url(sp2, lang)), esc(sec['label'][lang]), esc(sec['intro'][lang].split('. ')[0].rstrip('.') + '.'))
-    routes = ''
-    for r in site.auth['routes']:
-        links = []
-        for pid in r['pages']:
-            q = site.by_id.get(pid) or site.by_id.get(pid + '/index')
-            links.append('<li><a href="%s">%s</a></li>' % (site.rel(url, site.url(q, lang)), esc(disp(q['title']))))
-        routes += '<li class="o-card route"><h3>%s</h3><p class="route-reader">%s</p><p>%s</p><ol>%s</ol></li>' % (esc(r['title'][lang]), esc(r['reader'][lang]), esc(r['purpose'][lang]), ''.join(links))
-    main = f'''<section class="home-hero"><p class="o-eyebrow">{esc(a['eyebrow'][lang])}</p><h1>{esc(a['title'][lang])}</h1><p class="o-lead">{esc(a['lead'][lang])}</p></section>
-<section aria-labelledby="h-map"><h2 id="h-map">{esc(m['map_title'])}</h2><ul class="o-grid map-grid">{mapc}</ul></section>
-<section aria-labelledby="h-pri"><h2 id="h-pri">{esc(m['strategic_priorities'])}</h2><ul class="o-grid card-list pri-grid">{pcards}</ul><p><a href="{sp_url}">{esc(m['card_open'])}: {esc(m['strategic_priorities'])}</a></p></section>
-<section aria-labelledby="h-road"><h2 id="h-road">{esc(m['maturity_roadmap'])}</h2><ol class="levels">{lcards}</ol><p><a href="{rp_url}">{esc(m['card_open'])}: {esc(m['maturity_roadmap'])}</a></p></section>
-<section aria-labelledby="h-sec"><h2 id="h-sec">{esc(m['nav_label'])}</h2><ul class="o-grid card-list">{scards}</ul></section>
-<section aria-labelledby="h-routes"><h2 id="h-routes">{esc(m['reading_routes'])}</h2><ul class="o-grid card-list routes">{routes}</ul></section>'''
+        line = sec.get('line', {}).get(lang) or sec.get('line', {}).get('en') or sec['intro'][lang].split('. ')[0].rstrip('.') + '.'
+        scards += '<li class="o-card linked card--compact" data-tip="%s" data-tip-title="%s">%s<h3><a href="%s">%s</a></h3><p class="card-desc">%s</p></li>' % (esc(sec['intro'][lang].split('. ')[0]), esc(sec['label'][lang]), icon(sec['icon']), site.rel(url, site.url(sp2, lang)), esc(sec['label'][lang]), esc(line))
+    ctas = ''.join('<a class="home-cta%s" href="%s">%s</a>' % (' primary' if i == 0 else '', site.rel(url, site.url(site.by_id[c['to']], lang)), esc(c['label'][lang])) for i, c in enumerate(a['cta']))
+    stand = ''.join('<li><h3>%s</h3><p>%s</p><a href="%s">%s &rsaquo;</a></li>' % (esc(st['title'][lang]), esc(st['text'][lang]), site.rel(url, site.url(site.by_id[st['to']], lang)), esc(st['link'][lang])) for st in a['stand'])
+    chips = ''.join('<li><a href="%s#c-%s">%s</a></li>' % (sp_url, num.replace('.', '-'), esc(t)) for k, (num, t, o) in enumerate(pri))
+    strip = ''.join('<li><span class="lv-n">%s</span><strong lang="en">%s</strong></li>' % (esc(r['Maturity Level']), esc(r['Name'])) for r in levels)
+    lp = site.by_id['knowledge-base/learning-paths']
+    main = f'''<section class="home-hero"><p class="o-eyebrow">{esc(a['eyebrow'][lang])}</p><h1>{esc(a['title'][lang])}</h1><p class="o-lead home-lead">{esc(a['lead'][lang])}</p><p class="home-ctas">{ctas}</p></section>
+<section aria-label="{esc(m['home'])}"><ul class="home-stand">{stand}</ul></section>
+<section aria-labelledby="h-pri" class="home-pri"><h2 id="h-pri">{esc(m['strategic_priorities'])}</h2><p class="home-pri-lead">{esc(a['priorities_lead'][lang])}</p><ol class="home-chips">{chips}</ol><ol class="home-levels" aria-label="{esc(m['maturity_roadmap'])}">{strip}</ol><p class="home-more"><a href="{sp_url}">{esc(m['strategic_priorities'])} &rsaquo;</a> <a href="{rp_url}">{esc(m['maturity_roadmap'])} &rsaquo;</a> <a href="{site.rel(url, site.url(site.by_id['about/strategy'], lang))}">{esc(site.by_id['about/strategy']['title'])} &rsaquo;</a></p></section>
+<section aria-labelledby="h-sec"><h2 id="h-sec">{esc(a['sections_title'][lang])}</h2><ul class="o-grid card-list cards-compact home-sections">{scards}</ul></section>
+<section class="home-newhere"><p>{esc(a['newhere'][lang])} <a href="{site.rel(url, site.url(lp, lang))}">{esc(a['newhere_link'][lang])} &rsaquo;</a></p></section>'''
     return layout(site, p, lang, main, [])
 
 

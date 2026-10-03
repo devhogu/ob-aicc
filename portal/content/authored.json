@@ -8,7 +8,10 @@
    "intro": {
     "en": "AICC is the internal consulting and innovation lab of the Bank for the adoption of artificial intelligence. It explores and proves the use of AI with the functions of the Bank, delivers measured outcomes, and sets the way in which the Bank adopts AI at scale, with accountability that stays with people."
    },
-   "icon": "file-text"
+   "icon": "file-text",
+   "line": {
+    "en": "Who we are: intent, strategy, charter, values."
+   }
   },
   "organization": {
    "label": {
@@ -18,7 +21,10 @@
    "intro": {
     "en": "AICC is a joint team, led by the AICC Lead and formed of the people whom the functions of the Bank assign to it, organized by Roles and not by persons. This section is a short course in six parts, read in order or by tab, followed by the rule, the Operating Model with its Roles and Decisions, the Organization guide, and the pages of the seven Roles."
    },
-   "icon": "list-tree"
+   "icon": "list-tree",
+   "line": {
+    "en": "The Roles, who decides what, how people join."
+   }
   },
   "responsible-ai": {
    "label": {
@@ -28,7 +34,10 @@
    "intro": {
     "en": "The Bank uses AI under rules that are proportionate to risk, and it asks its people to understand the technology they use. This section is a short course in seven parts, read in order or by tab, followed by the rules: the AI Policy and the AI risk and control workflow. The course explains; the rules prevail."
    },
-   "icon": "shield-check"
+   "icon": "shield-check",
+   "line": {
+    "en": "A short course on AI today, its risks, and the rules of the Bank."
+   }
   },
   "governance": {
    "label": {
@@ -39,7 +48,10 @@
     "en": "Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank. This section is a short course in seven parts, read in order or by tab, followed by the rule: the control loops, the records and evidence, and the control catalogue of the Operating Model, the records and controls of delivery, and the Unit governance workflow and guide.",
     "ru": "Раздел излагает, как осуществляются контроль, отчётность и обеспечение уверенности в AICC: контуры контроля, записи и свидетельства, каталог контролей и отчётность перед комитетом совета. Статус каждого контроля на дату ведётся в Матрице контролей Реестра."
    },
-   "icon": "table-properties"
+   "icon": "table-properties",
+   "line": {
+    "en": "How the unit is directed, controlled, and assured."
+   }
   },
   "reference": {
    "label": {
@@ -50,7 +62,10 @@
     "en": "The Reference points outward and inward: to the standards and frameworks the charter draws on, the regulators and acts by jurisdiction, the research that shapes AI in finance, and the open resources from which people learn, each with how to take it and for what; and to the Vocabulary, the Document Catalog, the change history, and the records of the charter. Read by tab; the charter's own references follow.",
     "ru": "Раздел содержит Словарь, Каталог документов, историю изменений документов и страницу, которая указывает, где хранится каждая запись."
    },
-   "icon": "link"
+   "icon": "link",
+   "line": {
+    "en": "Standards, regulators, research, and open resources."
+   }
   },
   "services": {
    "label": {
@@ -60,7 +75,10 @@
    "intro": {
     "en": "AICC serves the functions and units of the Bank as their internal consulting and innovation lab. Its services run along fifteen categories in four areas, read here by tab; How to engage states the steps and the commitment; the Service catalog states the form of an entry and the service model; the Business Model is the document that states the offer and prevails."
    },
-   "icon": "users"
+   "icon": "users",
+   "line": {
+    "en": "What a function can ask AICC for, and how to engage."
+   }
   },
   "portfolio": {
    "label": {
@@ -70,7 +88,10 @@
    "intro": {
     "en": "The Portfolio is where the Bank decides what AICC works on: a commercial decision body and a control loop in one. This section is a short course in eight parts, read in order or by tab, followed by the rule, the Portfolio Management Model."
    },
-   "icon": "git-branch"
+   "icon": "git-branch",
+   "line": {
+    "en": "How the Bank decides what AICC works on."
+   }
   },
   "delivery": {
    "label": {
@@ -80,7 +101,10 @@
    "intro": {
     "en": "Delivery is how an approved idea becomes a working Solution in the hands of a function, and how that Solution is kept, changed, and retired: in small steps, on a fixed cadence, with the work visible and limited and quality built into the flow. This section is a short course in ten parts, read in order or by tab, followed by the rule, the Solution Lifecycle Model, and by the workflows, the guides, and the pages of the life of a Service."
    },
-   "icon": "workflow"
+   "icon": "workflow",
+   "line": {
+    "en": "How an idea becomes a working Solution, and how it is kept."
+   }
   },
   "knowledge-base": {
    "label": {
@@ -90,57 +114,110 @@
    "intro": {
     "en": "The working knowledge of AICC, organized by the question a reader brings: where to start by role, which form to use when, how each step is done, what has been learned, what the rules require of a use of AI, and the answers to common questions. Read by tab; the thirteen templates follow with their forms."
    },
-   "icon": "layers"
+   "icon": "layers",
+   "line": {
+    "en": "Learning paths, forms, guides, playbooks, and answers."
+   }
   }
  },
  "home": {
   "eyebrow": {
-   "en": "Charter and governance of the unit",
-   "ru": "Устав и управление подразделением"
+   "en": "O!Bank · AI Competence Center",
+   "ru": "O!Bank · Центр компетенций по искусственному интеллекту"
   },
   "title": {
-   "en": "AI Competence Center",
+   "en": "Welcome to the AI Competence Center",
    "ru": "Центр компетенций по искусственному интеллекту"
   },
   "lead": {
-   "en": "The mission of AICC is to enable the Bank to adopt AI as a governed capability that delivers measured value. This site is the charter of AICC: its intent, its method, its organization, and its controls.",
-   "ru": "Миссия AICC состоит в том, чтобы позволить Банку использовать ИИ как управляемую возможность, которая приносит измеримую ценность. Этот сайт является уставом AICC: его намерения, метод, организация и контроли."
+   "en": "We are the Bank's own lab for artificial intelligence: a small team that proves what AI can do for the people who serve our customers, sets the standard by which the Bank adopts it, and keeps every use of it accountable to people. This site is where the Bank learns what we are, what we offer, and how we work.",
+   "ru": "Мы — собственная лаборатория Банка по искусственному интеллекту: небольшая команда, которая доказывает, что ИИ может сделать для людей, обслуживающих наших клиентов, задаёт стандарт, по которому Банк внедряет его, и держит каждое применение подотчётным людям. Этот сайт — место, где Банк узнаёт, кто мы, что мы предлагаем и как работаем."
   },
-  "map": {
-   "en": [
-    {
-     "title": "What AICC does",
-     "text": "Explores, trials, and proves the use of AI with the functions, and proposes what the Bank should adopt at scale.",
-     "to": "services/"
+  "cta": [
+   {
+    "label": {
+     "en": "Start with who we are",
+     "ru": "Начать с того, кто мы"
     },
-    {
-     "title": "How AICC works",
-     "text": "Takes in Initiatives, decides on them, delivers Solutions, and measures the flow.",
-     "to": "delivery/"
+    "to": "about/index"
+   },
+   {
+    "label": {
+     "en": "See what we offer",
+     "ru": "Посмотреть, что мы предлагаем"
     },
-    {
-     "title": "How AICC is safeguarded",
-     "text": "Sets the rules of use, assigns Risk Tiers, controls and reports.",
-     "to": "governance/"
+    "to": "services/index"
+   },
+   {
+    "label": {
+     "en": "Learn about AI, in an hour",
+     "ru": "Узнать об ИИ за час"
+    },
+    "to": "responsible-ai/index"
+   }
+  ],
+  "stand": [
+   {
+    "title": {
+     "en": "Our intent",
+     "ru": "Наше намерение"
+    },
+    "text": {
+     "en": "Artificial intelligence as a trusted, everyday capability of the Bank, adopted on shared values and measured value, with people deciding.",
+     "ru": "Искусственный интеллект как надёжная повседневная возможность Банка, внедряемая на общих ценностях и измеримой ценности, при решающей роли людей."
+    },
+    "to": "about/statement-of-intent",
+    "link": {
+     "en": "The Statement of Intent",
+     "ru": "Заявление о намерениях"
     }
-   ],
-   "ru": [
-    {
-     "title": "Что делает AICC",
-     "text": "Исследует, пробует и доказывает применение ИИ вместе с функциями и предлагает, что Банку внедрять в масштабе.",
-     "to": "services/"
+   },
+   {
+    "title": {
+     "en": "Our way",
+     "ru": "Наш путь"
     },
-    {
-     "title": "Как работает AICC",
-     "text": "Принимает инициативы, принимает по ним решения, создаёт решения и измеряет поток работы.",
-     "to": "delivery/"
+    "text": {
+     "en": "Prove before investing, build in small steps on a steady rhythm, keep people in charge of every decision, and show the evidence.",
+     "ru": "Доказывать до инвестиций, строить малыми шагами в ровном ритме, оставлять решения за людьми и показывать свидетельства."
     },
-    {
-     "title": "Как обеспечена безопасность",
-     "text": "Устанавливает правила использования, назначает уровни риска, контролирует и отчитывается.",
-     "to": "governance/"
+    "to": "about/how-we-work",
+    "link": {
+     "en": "How we work",
+     "ru": "Как мы работаем"
     }
-   ]
+   },
+   {
+    "title": {
+     "en": "Our promise",
+     "ru": "Наше обещание"
+    },
+    "text": {
+     "en": "A function brings a need; we commit in writing, deliver with evidence, support what we build, and leave something the next function can reuse.",
+     "ru": "Функция приносит потребность; мы берём обязательство письменно, поставляем с подтверждением, поддерживаем созданное и оставляем то, что сможет повторно использовать следующая функция."
+    },
+    "to": "services/how-to-engage",
+    "link": {
+     "en": "How to engage",
+     "ru": "Как обратиться"
+    }
+   }
+  ],
+  "priorities_lead": {
+   "en": "Seven Strategic Priorities, in order, each advancing through five Maturity Levels at its own pace.",
+   "ru": "Семь стратегических приоритетов по порядку, каждый проходит пять уровней зрелости в своём темпе."
+  },
+  "sections_title": {
+   "en": "Find your way",
+   "ru": "Найти свой путь"
+  },
+  "newhere": {
+   "en": "New to AICC, or to AI? Take the short course in Responsible AI, or follow the learning path for your role.",
+   "ru": "Впервые в AICC или в теме ИИ? Пройдите краткий курс в разделе «Ответственный ИИ» или следуйте учебному маршруту для своей роли."
+  },
+  "newhere_link": {
+   "en": "Learning paths",
+   "ru": "Учебные маршруты"
   }
  },
  "routes": [
