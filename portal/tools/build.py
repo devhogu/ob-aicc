@@ -748,7 +748,12 @@ def load_terms(site):
         if len(t) >= 3 and mean:
             terms[t] = mean if len(mean) <= 300 else mean[:297].rsplit(' ', 1)[0] + '...'
     site.terms = terms
-    site.term_re = re.compile(r'(?<![\w-])(' + '|'.join(re.escape(t) for t in sorted(terms, key=len, reverse=True)) + r')(?![\w-])')
+    # Russian terms are written in lowercase in running text; the table cell starts with a capital.
+    def alt(t):
+        if re.match(r'[А-ЯЁ][а-яё]', t):
+            return '[%s%s]' % (t[0], t[0].lower()) + re.escape(t[1:])
+        return re.escape(t)
+    site.term_re = re.compile(r'(?<![\w-])(' + '|'.join(alt(t) for t in sorted(terms, key=len, reverse=True)) + r')(?![\w-])')
 
 
 def link_terms(site, html_text, ctx, limit=40):
@@ -777,10 +782,11 @@ def link_terms(site, html_text, ctx, limit=40):
 
         def sub(m):
             t = m.group(1)
-            if t in seen or len(seen) >= limit:
+            key = t if t in site.terms else t[:1].upper() + t[1:]
+            if key in seen or len(seen) >= limit:
                 return t
-            seen.add(t)
-            return '<a class="term" href="%s#t-%s" data-tip="%s" data-tip-title="%s">%s</a>' % (base, slug(t), esc(site.terms[t]), esc(t), t)
+            seen.add(key)
+            return '<a class="term" href="%s#t-%s" data-tip="%s" data-tip-title="%s">%s</a>' % (base, slug(key), esc(site.terms[key]), esc(key), t)
         out.append(site.term_re.sub(sub, part))
     return ''.join(out)
 
@@ -1700,13 +1706,13 @@ def records_page(site, p, lang):
                ('Service Management', 'Requests and incidents, including AI Incidents')]
     if lang == 'ru':
         systems = [
-            ('Реестр', 'Решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие записи в виде закрытых и датированных выписок. Хранятся в корпоративной папке: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
-            ('Jira и Confluence', 'Рабочее состояние Бэклога программы, досок и Рабочих задач, а также рабочие документы — с момента переноса текущего состояния работы'),
-            ('Service Management', 'Запросы и инциденты, включая Инциденты AI'),
+            ('Реестр', 'Управленческие решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие записи в виде неизменяемых датированных выгрузок. Хранятся на корпоративном сетевом ресурсе: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
+            ('Jira и Confluence', 'Рабочее состояние бэклога программы, досок и рабочих элементов, а также рабочие документы — с момента перехода рабочего состояния в эти системы'),
+            ('Service Management', 'Запросы и инциденты, в том числе инциденты AI'),
         ]
     srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i == 0 else esc(b)) for i, (a, b) in enumerate(systems))
     intro = {'en': 'This site is static. It states the rules and the forms of AICC and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
-             'ru': 'Этот сайт статичен. Он излагает правила и формы AICC и не содержит текущих записей. В таблице перечислены записи по их шаблонам с указанием места хранения и контролей, которые они подтверждают.'}[lang]
+             'ru': 'Портал статичен: он излагает правила и формы AICC и не содержит текущих записей. В таблице записи перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
     main = '<h1>%s</h1><p class="o-lead">%s</p><h2>Systems</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Systems"><table><tbody>%s</tbody></table></div><h2>Records</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Records"><table><thead><tr><th>Template</th><th>%s</th><th>%s</th><th>Controls</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
         esc(p['title']), esc(intro), srows, esc(m['used_when']), esc(m['kept_in']), ''.join(rows), prev_next(site, p, lang))
     if lang == 'ru':
