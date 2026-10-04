@@ -86,10 +86,12 @@ def scan():
     report = {}
     for path, raw in sources().items():
         text = prose(raw)
-        low = text.lower()
         rej = {}
         for f in forms:
-            n = low.count(f['form'].lower())
+            # Whole words; the first letter may differ in case only at a sentence start.
+            form = f['form']
+            first = '[%s%s]' % (form[0].upper(), form[0].lower()) if form[:1].isalpha() else re.escape(form[:1])
+            n = len(re.findall(r'(?<![\w-])' + first + re.escape(form[1:]) + r'(?![\w-])', text))
             if n:
                 rej['%s | %s' % (f['section'], f['form'])] = n
         latin = re.findall(r'(?<![\w@/.-])[a-z][a-z-]{3,}(?: [a-z][a-z-]{3,})*', text)
