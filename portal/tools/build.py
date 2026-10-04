@@ -1833,7 +1833,8 @@ def search_index(site, lang):
                 for row in site.sources.table(p['source'][0], '| Universal term | Meaning',
                                               occurrence=occurrence):
                     label = row['Universal term']
-                    local_name = row.get('Russian-language term')
+                    # The Russian edition is searched by the form its corpus writes.
+                    local_name = row.get('Accepted form') or row.get('Russian-language term')
                     if local_name and local_name != label:
                         label += ' — ' + local_name
                     out.append({'u': u + '#' + section, 't': p['title'], 'h': label,

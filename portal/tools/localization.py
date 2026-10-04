@@ -8,9 +8,10 @@
 # START_MODULE_MAP
 # LANGUAGES - supported source language codes
 # ROOTS - language-specific source areas
-# TERMINOLOGY_REFERENCE - reference with the additional Russian-language name column
+# TERMINOLOGY_REFERENCE - reference whose Russian edition adds the Russian name and the accepted form
 # UNIVERSAL_TERM_COLUMNS - shared reference column identities
 # RUSSIAN_TERM_COLUMNS - declared Russian reference column order
+# RUSSIAN_TERM_KEYS - English identities of the Russian reference columns
 # front_matter - read the corpus's flat YAML metadata fence
 # canonical_path - map a language source path to its English identity
 # Source - selected text with its real language and canonical identity
@@ -26,7 +27,9 @@ LANGUAGES = ('en', 'ru')
 ROOTS = ('charter', 'registry', 'portfolio', 'portal/content')
 TERMINOLOGY_REFERENCE = 'charter/en/shared-technology-terminology.md'
 UNIVERSAL_TERM_COLUMNS = ['Universal term', 'Meaning', 'Application']
-RUSSIAN_TERM_COLUMNS = ['Универсальный термин', 'Русскоязычный термин', 'Значение', 'Применение']
+RUSSIAN_TERM_COLUMNS = ['EN', 'RU', 'Принятая форма', 'Определение']
+# Keys of the Russian terminology columns: the definition carries the English meaning and application.
+RUSSIAN_TERM_KEYS = ['Universal term', 'Russian-language term', 'Accepted form', 'Meaning']
 
 
 def front_matter(text):
@@ -156,8 +159,9 @@ class Sources:
 
         Canonical key columns keep stable lookup identities (e.g. Role). Display
         translations are available under _localized_<key> without changing callers.
-        Occurrence selects among tables with the same header. The terminology
-        reference exposes its additional local-name cell as Russian-language term.
+        Occurrence selects among tables with the same header. The Russian terminology
+        reference exposes its local name as Russian-language term and its accepted form
+        as Accepted form; its definition is the Meaning and it has no separate Application.
         """
         canonical = canonical_path(path)
         original = (self.root / canonical).read_text(encoding='utf-8')
@@ -171,7 +175,7 @@ class Sources:
                     continue
                 keys = table[0]
                 if source.language == 'ru' and _is_terminology_table(canonical, table):
-                    keys = [keys[0], 'Russian-language term', *keys[1:]]
+                    keys = RUSSIAN_TERM_KEYS
                 result = []
                 for en_row, row in zip(table[2:], selected_tables[index][2:]):
                     record = dict(zip(keys, row))
@@ -197,6 +201,8 @@ def validate_translations(root):
             if not (root / canonical).is_file():
                 if path == root / area / 'ru' / 'README.md':
                     continue  # translation-workspace introduction, not corpus content
+                if front_matter(path.read_text(encoding='utf-8')).get('edition') == 'ru-only':
+                    continue  # a document of the Russian corpus only, such as the translation map
                 raise ValueError(f'{relative}: no English comparison file')
             selected = sources.resolve(canonical)
             counts['reviewed' if selected.language == 'ru' else 'draft'] += 1

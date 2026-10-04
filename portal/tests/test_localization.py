@@ -102,12 +102,12 @@ class SourceSelection(unittest.TestCase):
               '| business case | Investment justification | Fixed form. |\n\n'
               '| Universal term | Meaning | Application |\n| --- | --- | --- |\n'
               '| workflow | Flow of work | Fixed form. |\n')
-        ru = ('| Универсальный термин | Русскоязычный термин | Значение | Применение |\n'
+        ru = ('| EN | RU | Принятая форма | Определение |\n'
               '| --- | --- | --- | --- |\n'
-              '| business case | бизнес-кейс | Обоснование инвестиции | Фиксированное наименование. |\n\n'
-              '| Универсальный термин | Русскоязычный термин | Значение | Применение |\n'
+              '| business case | бизнес-обоснование | бизнес-кейс | Обоснование инвестиции |\n\n'
+              '| EN | RU | Принятая форма | Определение |\n'
               '| --- | --- | --- | --- |\n'
-              '| workflow | рабочий процесс | Поток работы | Фиксированное наименование. |\n')
+              '| workflow | рабочий процесс | Workflow | Поток работы |\n')
         (self.root / path).write_text(en)
         target = self.root / path.replace('/en/', '/ru/')
         target.write_text(translation(path, en, ru))
@@ -115,19 +115,21 @@ class SourceSelection(unittest.TestCase):
         first = sources.table(path, '| Universal term | Meaning')[0]
         second = sources.table(path, '| Universal term | Meaning', occurrence=1)[0]
         self.assertEqual(first['Universal term'], 'business case')
-        self.assertEqual(first['Russian-language term'], 'бизнес-кейс')
+        self.assertEqual(first['Russian-language term'], 'бизнес-обоснование')
+        self.assertEqual(first['Accepted form'], 'бизнес-кейс')
         self.assertEqual(first['Meaning'], 'Обоснование инвестиции')
-        self.assertEqual(first['Application'], 'Фиксированное наименование.')
-        self.assertEqual(first['_labels']['Russian-language term'], 'Русскоязычный термин')
+        self.assertNotIn('Application', first)
+        self.assertEqual(first['_labels']['Russian-language term'], 'RU')
+        self.assertEqual(first['_labels']['Accepted form'], 'Принятая форма')
         self.assertEqual(second['Universal term'], 'workflow')
         self.assertEqual(second['Meaning'], 'Поток работы')
         self.assertNotIn('Russian-language term', Sources(self.root, 'en').table(path, '| Universal term')[0])
         malformed = [
-            ru.replace('Русскоязычный термин | Значение', 'Значение | Русскоязычный термин'),
-            ru.replace('| бизнес-кейс |', '| |'),
+            ru.replace('| RU | Принятая форма |', '| Принятая форма | RU |'),
+            ru.replace('| бизнес-обоснование |', '| |'),
             ru.replace('| business case |', '| business plan |'),
             ru.replace('| Поток работы |', '| Поток работы | лишняя графа |'),
-            ru.replace('| workflow | рабочий процесс | Поток работы | Фиксированное наименование. |\n', ''),
+            ru.replace('| workflow | рабочий процесс | Workflow | Поток работы |\n', ''),
         ]
         for body in malformed:
             with self.subTest(body=body):
@@ -427,10 +429,10 @@ class RussianCorpusProjection(unittest.TestCase):
                 self.assertEqual(html.count('<th>Universal term</th>'), 4)
                 self.assertNotIn('Russian-language term</th>', html)
             else:
-                self.assertEqual(html.count('<th>Универсальный термин</th>'), 4)
-                self.assertEqual(html.count('<th>Русскоязычный термин</th>'), 4)
-                self.assertIn('<th>Значение</th>', html)
-                self.assertIn('<th>Применение</th>', html)
+                self.assertEqual(html.count('<th>EN</th>'), 4)
+                self.assertEqual(html.count('<th>RU</th>'), 4)
+                self.assertEqual(html.count('<th>Принятая форма</th>'), 4)
+                self.assertIn('<th>Определение</th>', html)
             entries = [row for row in build.search_index(site, language)
                        if '/reference/shared-terminology/' in row['u']]
             for term, section in [('KPI', 's-3'), ('workflow', 's-4'), ('WSJF', 's-4'),
