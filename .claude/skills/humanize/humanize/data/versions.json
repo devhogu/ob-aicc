@@ -1,0 +1,105 @@
+{
+  "package": "1.10.4",
+  "components": {
+    "tool": "1.10.4",
+    "skill": "1.10.0",
+    "worker-agent": "1.3.0",
+    "lexicon": "1.6.0",
+    "rules": "1.10.3",
+    "vale": "3.24.0",
+    "vale-style-Microsoft": "0.15.1",
+    "vale-style-write-good": "0.4.1"
+  },
+  "vale": {
+    "release": "https://github.com/errata-ai/vale/releases/download/v{version}/{asset}",
+    "checksums": "vale_{version}_checksums.txt",
+    "assets": {
+      "darwin-arm64": "vale_{version}_macOS_arm64.tar.gz",
+      "darwin-x86_64": "vale_{version}_macOS_64-bit.tar.gz",
+      "linux-x86_64": "vale_{version}_Linux_64-bit.tar.gz",
+      "linux-aarch64": "vale_{version}_Linux_arm64.tar.gz",
+      "linux-arm64": "vale_{version}_Linux_arm64.tar.gz"
+    },
+    "styles": {
+      "Microsoft": "https://github.com/vale-cli/Microsoft/releases/download/v0.15.1/Microsoft.zip",
+      "write-good": "https://github.com/vale-cli/write-good/releases/download/v0.4.1/write-good.zip"
+    }
+  },
+  "requires": {
+    "python": "3.9"
+  },
+  "dependencies": {
+    "python": {
+      "need": "required",
+      "version": ">=3.9",
+      "notes": "standard library only; no pip packages",
+      "found_by": [
+        "$HUMANIZE_PYTHON",
+        "python3",
+        "python3.14 ... python3.9",
+        "/opt/homebrew/bin/python3",
+        "/usr/local/bin/python3",
+        "/usr/bin/python3"
+      ]
+    },
+    "git": {
+      "need": "recommended",
+      "notes": "folder scans skip gitignored files and doctor checks .gitignore; without git both are skipped"
+    },
+    "vale": {
+      "need": "recommended",
+      "version": "3.24.0",
+      "notes": "pinned release, SHA-256 verified on download; every other check runs without it",
+      "found_by": [
+        "$HUMANIZE_VALE_BIN",
+        "<repo>/.runtime/humanize/tools/vale",
+        "the binary recorded at deploy (.runtime/humanize/state.json)",
+        "PATH",
+        "/opt/homebrew/bin, /usr/local/bin, /usr/bin, ~/.local/bin"
+      ],
+      "platforms": [
+        "darwin-arm64",
+        "darwin-x86_64",
+        "linux-aarch64",
+        "linux-arm64",
+        "linux-x86_64"
+      ]
+    },
+    "vale-styles": {
+      "need": "with vale",
+      "styles": {
+        "Microsoft": "0.15.1",
+        "write-good": "0.4.1"
+      },
+      "notes": "synced into <repo>/.vale/styles by deploy, which also removes style folders that are no longer pinned"
+    },
+    "claude-code": {
+      "need": "for Claude Code workers",
+      "worker": "humanize-editor agent, model opus, effort high",
+      "notes": "loads skills and agents at session start; start a new session after deploy"
+    },
+    "codex-cli": {
+      "need": "for Codex workers",
+      "worker": "latest Sol model, model_reasoning_effort high",
+      "found_by": [
+        "$HUMANIZE_CODEX_BIN",
+        "PATH",
+        "/opt/homebrew/bin, /usr/local/bin, ~/.local/bin, ~/.npm-global/bin"
+      ],
+      "model_list": "$CODEX_HOME/models_cache.json (default ~/.codex), written once Codex has run",
+      "notes": "on Linux hosts that restrict unprivileged user namespaces (Ubuntu 24.04+ default), Codex's bubblewrap sandbox cannot start; allow bwrap in AppArmor or set sandbox_mode = \"danger-full-access\" in $CODEX_HOME/config.toml. doctor warns when this applies"
+    },
+    "network": {
+      "need": "at deploy only",
+      "notes": "Vale download and style sync; runs need no network (workers use their own provider)"
+    }
+  },
+  "environment": {
+    "HUMANIZE_PYTHON": "Python 3.9+ to use for the launcher and deploy.sh",
+    "HUMANIZE_VALE_BIN": "Vale binary to use",
+    "HUMANIZE_CODEX_BIN": "codex CLI to use for Codex workers",
+    "CODEX_HOME": "Codex home (model list); default ~/.codex",
+    "XDG_CACHE_HOME": "base for the optional user-level Vale config (humanize setup --user); default ~/.cache",
+    "PYTHONUTF8": "set to 1 by the launcher; the tool also switches to UTF-8 itself under a non-UTF-8 locale"
+  }
+}

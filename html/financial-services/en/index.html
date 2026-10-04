@@ -8,27 +8,35 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GenAI-enabled Banking and Financial Services Framework</title>
+<link rel="preload" href="../assets/o-uiux/assets/fonts/golos-text/GolosText-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/o-uiux/assets/fonts/tt-norms-pro/tt-norms-pro-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/o-uiux/assets/fonts/tt-norms-pro/tt-norms-pro-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/o-uiux/fonts.css">
+<link rel="stylesheet" href="../assets/o-uiux/tokens.css">
 
-<!-- Preconnect for Google Fonts to reduce latency -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Stylesheet load order: tokens → components → theme → layout -->
 <link rel="stylesheet" href="assets/styles/tokens.css">
 <link rel="stylesheet" href="assets/styles/components.css">
 <link rel="stylesheet" href="assets/styles/theme.css">
 <link rel="stylesheet" href="assets/styles/layouts/service.css">
+<link rel="stylesheet" href="../assets/o-uiux/finance.css">
 </head>
 
-<body>
+<body class="finance-portal">
 
 <!-- Skip to main content (keyboard / screen-reader users) -->
 <a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="finance-shell-header"><nav class="finance-shell-nav" aria-label="Finance portal">
+  <a class="finance-identity" href="index.html"><img src="../assets/o-uiux/o-mark.svg" width="32" height="36" alt=""><span>Financial Services</span></a>
+  <span class="finance-scope">Conceptual framework</span>
+  <div class="finance-shell-links"><a href="index.html">Overview</a><a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a></div>
+</nav></div>
 
 <div class="page">
 
@@ -68,7 +76,7 @@
 
 <nav class="breadcrumb" aria-label="Cross-package navigation">
   <span class="breadcrumb__item">
-    <a class="breadcrumb__link" href="../ru/index.html">Russian</a>
+    <a class="breadcrumb__link" href="../ru/index.html" hreflang="ru" lang="en">Russian</a>
   </span>
 </nav>
 

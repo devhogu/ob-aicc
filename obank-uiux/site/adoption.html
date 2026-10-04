@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Adoption · O! UI/UX</title>
+  <script>
+    (() => {const p=new URLSearchParams(location.search);let theme=p.get('theme');if(!['dark','light'].includes(theme)){try{theme=localStorage.getItem('o-uiux-theme');}catch{}}document.documentElement.dataset.theme=theme==='light'?'light':'dark';})();
+  </script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="primitives.css">
+  <link rel="stylesheet" href="workspace.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="o-skip" href="#main" data-ru="К содержанию" data-en="Skip to content">К содержанию</a>
+  <header class="o-header">
+    <a class="o-identity" href="index.html"><img src="assets/logos/o-mark.svg" width="34" height="38" alt="O!"><span>UI/UX Guide</span></a>
+    <div class="o-search" role="search">
+      <label for="guide-search" class="o-sr-only" data-ru="Поиск по руководству" data-en="Search the guide">Поиск по руководству</label>
+      <input id="guide-search" type="search" autocomplete="off" aria-controls="search-results">
+      <div id="search-results" class="o-search-results" hidden></div>
+    </div>
+    <div class="o-tools">
+      <label for="language" class="o-sr-only" data-ru="Язык" data-en="Language">Язык</label>
+      <select id="language"><option value="ru">RU</option><option value="en">EN</option></select>
+      <button id="theme" type="button">Светлая тема</button>
+    </div>
+  </header>
+  <div class="o-frame">
+    <aside class="o-nav">
+      <details open>
+        <summary data-ru="Разделы руководства" data-en="Guide sections">Разделы руководства</summary>
+        <nav aria-label="UI/UX"><a href="index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" />
+  <path d="M15 5.764v15" />
+  <path d="M9 3.236v15" />
+</svg>
+<span data-ru="Начало" data-en="Start here">Начало</span></a><a href="foundations.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span data-ru="Бренд и стиль" data-en="Brand and style">Бренд и стиль</span></a><a href="layout.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="M9 3v18" />
+</svg>
+<span data-ru="Макет и навигация" data-en="Layout and navigation">Макет и навигация</span></a><a href="components.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3v18" />
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="M21 9H3" />
+  <path d="M21 15H3" />
+</svg>
+<span data-ru="Компоненты" data-en="Components">Компоненты</span></a><a href="patterns.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span data-ru="Сценарии и примеры" data-en="Patterns and examples">Сценарии и примеры</span></a><a href="cloud-lab.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 6a9 9 0 0 0-9 9V3" />
+  <circle cx="18" cy="6" r="3" />
+  <circle cx="6" cy="18" r="3" />
+</svg>
+<span data-ru="Карта Cloud LAB" data-en="Cloud LAB map">Карта Cloud LAB</span></a><a href="assets.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" />
+</svg>
+<span data-ru="Ресурсы" data-en="Assets">Ресурсы</span></a><a href="adoption.html" aria-current="page"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg>
+<span data-ru="Как использовать" data-en="Adoption">Как использовать</span></a></nav>
+      </details>
+      <p class="o-caption">O! Internal Workspace<br>v0.1.1 · 02.10.2026</p>
+    </aside>
+    <main class="o-main" id="main" tabindex="-1">
+      <p class="o-eyebrow" data-ru="Правила и пояснения · текст на английском" data-en="Guidelines and explanation · English source text">Правила и пояснения · текст на английском</p><div class="o-reading"><article class="o-copy o-guide-copy" lang="en"><h1>Adopt the shared O! portal style</h1>
+<p>Use this guide when creating or materially restyling an internal O! portal, page layout, navigation, component or UI example. It applies across service, knowledge, document and management portals. For content-only edits, preserve the established design and read only the relevant pattern if presentation changes.</p>
+<h2>Read and reuse</h2>
+<ol>
+<li>Read <a href="foundations.html">foundations</a> and <a href="layout.html">layout</a>, then the relevant <a href="components.html">component rules</a> and <a href="patterns.html">functional pattern</a>. For a stage-by-concern map or flow-first workspace, read the <a href="cloud-lab.html">Cloud LAB pattern</a>.</li>
+<li>Use the generated <code>tokens.css</code>, <code>workspace.css</code>, <code>primitives.css</code>, <code>fonts.css</code> and selected <code>assets/</code> from <code>obank-uiux/site/</code>. Build them from <code>obank-uiux/design-system/</code>; the curated assets live in <code>obank-uiux/ui-comps/</code> and base tokens in <code>obank-uiux/tokens/tokens.json</code>.</li>
+<li>Start with the closest working example. Preserve central content, supporting navigation, readable labels and existing keyboard behaviour. Replace fictional data through the consuming application's content model.</li>
+<li>Implement only controls that have a real action. Keep business uncertainty, runtime errors and empty search results distinguishable. Role labels do not imply authorization or actual assignments.</li>
+<li>Check the changed page in light/dark, Russian/English or explicit untranslated-content fallback, desktop and narrow widths. Exercise the relevant keyboard path, empty/error states, real navigation and data interaction. Report what was actually verified and any limitation.</li>
+</ol>
+<h2>Shared decisions and authority</h2>
+<p>The versioned internal-workspace preset owns the common palette/layout values; shared CSS owns the common shell/components; original asset homes own fonts, logos and icons. Modify that source when a reusable design change is needed. A portal may add domain-specific visualizations and content, using these roles and patterns. Explain any necessary deviation beside the component rather than silently creating another theme.</p>
+<p>This is the working shared portal standard, not a corporate approval system. It adds no permission ceremony and grants no authority to deploy, publish, contact people or change enterprise facts. Existing user authorization and repository instructions still govern the work.</p>
+<p>For another repository, copy the versioned generated kit and these instructions into its shared UI home and provide a conditional entry link there. In AICC, the repository README links this kit for new UI and material restyling. The generated root <code>AGENTS.md</code> is owned by dev-pipe and is not edited by this package. Do not claim another application has adopted the style merely because the guide exists.</p>
+<h2>Completion evidence</h2>
+<p>A useful delivery identifies the pattern used, the source of common assets/tokens, the actual functional path checked and the remaining design/content limits. Screenshots alone do not prove keyboard, responsive or data behaviour. Check source and generated output together so that the next build reproduces the result.</p>
+</article><nav class="o-context" id="page-contents" aria-label="On this page" lang="en"><strong>On this page</strong></nav></div>
+      <footer class="o-footer"><span data-ru="Рабочий стандарт внутренних порталов" data-en="Working internal portal standard">Рабочий стандарт внутренних порталов</span> · v0.1.1 · <a href="adoption.html" data-ru="Как использовать" data-en="How to adopt">Как использовать</a> · <a href="o-uiux-kit.zip" download data-ru="Скачать комплект" data-en="Download kit">Скачать комплект</a></footer>
+    </main>
+  </div>
+  <noscript><p class="o-callout">Guidelines remain readable. Search, theme controls and interactive examples require JavaScript.</p></noscript>
+</body>
+</html>

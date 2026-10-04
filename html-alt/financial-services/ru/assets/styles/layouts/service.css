@@ -1,0 +1,100 @@
+/* @urn:           urn:financial-services:style:layout-service@1.0.0 */
+/* @version:       1.1.0 */
+/* @kind:          style */
+/* @description:   Service page layout — integrated project entry, top_band, main_row, capabilities_row, data, and peers. */
+/* @engine_compat: ">=1.0.0" */
+/* @last_modified: 2026-07-29 */
+
+/* ================================================================
+   PAGE-LAYOUT LAYER — service (bp) page
+   Grid arrangement for the service root page. Fork for l1/l2.
+   ================================================================ */
+
+/* ─── Main grid wrapper ─── */
+.project-entry {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--rule-soft);
+  border-left: 4px solid var(--genai-label);
+  border-radius: var(--radius-md);
+  color: var(--ink-primary);
+  background: var(--paper-soft);
+  text-decoration: none;
+  transition: border-color 140ms ease, background-color 140ms ease, transform 140ms ease;
+}
+
+.project-entry:hover {
+  border-color: var(--genai-label);
+  color: var(--ink-primary);
+  background: var(--paper);
+  transform: translateY(-1px);
+}
+
+.project-entry:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--genai-label) 30%, transparent);
+  outline-offset: 3px;
+}
+
+.project-entry__label {
+  color: var(--genai-label);
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.project-entry__body { display: grid; gap: .15rem; min-width: 0; }
+.project-entry__title { font-family: var(--font-serif); font-size: var(--text-flow); line-height: 1.2; }
+.project-entry__description { color: var(--ink-secondary); font-size: var(--text-body); line-height: 1.45; }
+.project-entry__action { color: var(--genai-label); font-size: var(--text-body); font-weight: 700; white-space: nowrap; }
+
+.bp-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ─── Top band: 2-column strategic layer ─── */
+.top-band {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+/* ─── Main row: flow card (left) + right column (right) ─── */
+.main-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+/* ─── Right column: stacked cards ─── */
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ─── Capabilities row: 2-column ─── */
+.cap-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+/* ─── Peer row: 2-column ─── */
+.peer-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+@media (max-width: 760px) {
+  .project-entry { grid-template-columns: 1fr; gap: var(--space-2); }
+  .project-entry__action { margin-top: var(--space-1); }
+}

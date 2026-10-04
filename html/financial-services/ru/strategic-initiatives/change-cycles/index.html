@@ -8,14 +8,16 @@
 
 
 <!DOCTYPE html>
-<html lang="ru">
+<html data-theme="light" lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Циклы изменений</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="../../../assets/o-uiux/assets/fonts/golos-text/GolosText-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/o-uiux/assets/fonts/tt-norms-pro/tt-norms-pro-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/o-uiux/assets/fonts/tt-norms-pro/tt-norms-pro-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/o-uiux/fonts.css">
+<link rel="stylesheet" href="../../../assets/o-uiux/tokens.css">
 
 
 <link rel="stylesheet" href="../../assets/styles/tokens.css">
@@ -24,12 +26,19 @@
 <link rel="stylesheet" href="../../assets/styles/layouts/service.css">
 <link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
 <link rel="stylesheet" href="../../assets/styles/layouts/flow-set.css">
+<link rel="stylesheet" href="../../../assets/o-uiux/finance.css">
+<script defer src="../../../assets/o-uiux/finance.js"></script>
 </head>
 
 
-<body class="page--flow-set">
+<body class="page--flow-set finance-portal">
 
 <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+<div class="finance-shell-header"><nav class="finance-shell-nav" aria-label="Портал финансовых услуг">
+  <a class="finance-identity" href="../../index.html"><img src="../../../assets/o-uiux/o-mark.svg" width="32" height="36" alt=""><span>Финансовые услуги</span></a>
+  <span class="finance-scope">Концептуальная модель</span>
+  <div class="finance-shell-links"><a href="../../index.html">Обзор</a><a href="../../../en/strategic-initiatives/change-cycles/index.html" hreflang="en" lang="en">English</a></div>
+</nav></div>
 
 <div class="page">
 
@@ -49,7 +58,7 @@
   <span class="breadcrumb__item">
     
     
-    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    <a class="breadcrumb__link" href="../../index.html">Финансовые услуги</a>
     
   </span>
   
@@ -58,7 +67,7 @@
     <span class="breadcrumb__sep" aria-hidden="true">/</span>
     
     
-    <a class="breadcrumb__link" href="../index.html">Strategic Initiatives &amp; Transformation</a>
+    <a class="breadcrumb__link" href="../index.html">Стратегические инициативы и трансформация</a>
     
   </span>
   

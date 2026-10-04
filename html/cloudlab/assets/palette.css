@@ -1,0 +1,65 @@
+/* O! internal workspace roles applied to the Cloud LAB source vocabulary. */
+:root {
+  --paper: var(--surface);
+  --ink-primary: var(--text);
+  --ink-secondary: var(--text-muted);
+  --ink-tertiary: #68616d;
+  --ink-accent: var(--link);
+  --genai-label: var(--link);
+  --border: #dcd6de;
+
+  --brush-title-start: rgb(240 4 127 / 17%);
+  --brush-title-mid: rgb(240 4 127 / 5%);
+  --radius-brush: var(--radius-control);
+  --radius-label: var(--radius-control);
+
+  --font-serif: var(--font-heading);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-body);
+  --cl-serif: var(--font-heading);
+  --cl-sans: var(--font-body);
+  --cl-mono: var(--font-body);
+
+  --cl-brass-1: #9c225b;
+  --cl-brass-2: #79265f;
+  --cl-teal-3: #663066;
+  --cl-teal-4: #543967;
+  --cl-teal-5: #394967;
+  --cl-teal-6: #29516a;
+
+  --cl-gov: #9c225b;
+  --cl-risk: #b14450;
+  --cl-ops: #427660;
+  --cl-dat: #336f82;
+  --cl-obs: #675281;
+
+  --cl-paper-rule: var(--border);
+  --cl-card-bg: var(--surface);
+  --cl-card-border: var(--border);
+  --cl-lane-label-bg: var(--surface-subtle);
+  --cl-lane-body-bg: #faf8f9;
+  --cl-cell-tint-alt: #f4f0f3;
+  --cl-row-rule: var(--border);
+  --cl-cat-text: var(--text-muted);
+  --cl-ink: var(--text);
+  --cl-ink-faint: var(--text-muted);
+  --cl-text-muted: var(--text-muted);
+}
+
+:root[data-theme="dark"] {
+  --ink-tertiary: var(--text-muted);
+  --border: #464149;
+  --brush-title-start: rgb(240 4 127 / 23%);
+  --brush-title-mid: rgb(240 4 127 / 7%);
+  --cl-gov: #ff91c2;
+  --cl-risk: #ffaca4;
+  --cl-ops: #8ad3a9;
+  --cl-dat: #8fc9db;
+  --cl-obs: #c5aff3;
+  --cl-lane-body-bg: #211e22;
+  --cl-cell-tint-alt: #242126;
+}
+
+.cl-system--human .cl-emblem g { stroke: var(--cl-gov); }
+.cl-system--human .cl-emblem circle { fill: var(--cl-gov); }
+.cl-system--agent .cl-emblem g { stroke: var(--cl-dat); fill: var(--cl-dat); }

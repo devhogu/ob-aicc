@@ -22,3 +22,8 @@ deploy/target/
 
 # generated build cache
 portal/.cache/
+
+# >>> humanize (managed) >>>
+.runtime/
+.vale/styles/
+# <<< humanize (managed) <<<

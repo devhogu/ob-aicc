@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Brand and style · O! UI/UX</title>
+  <script>
+    (() => {const p=new URLSearchParams(location.search);let theme=p.get('theme');if(!['dark','light'].includes(theme)){try{theme=localStorage.getItem('o-uiux-theme');}catch{}}document.documentElement.dataset.theme=theme==='light'?'light':'dark';})();
+  </script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="primitives.css">
+  <link rel="stylesheet" href="workspace.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="o-skip" href="#main" data-ru="К содержанию" data-en="Skip to content">К содержанию</a>
+  <header class="o-header">
+    <a class="o-identity" href="index.html"><img src="assets/logos/o-mark.svg" width="34" height="38" alt="O!"><span>UI/UX Guide</span></a>
+    <div class="o-search" role="search">
+      <label for="guide-search" class="o-sr-only" data-ru="Поиск по руководству" data-en="Search the guide">Поиск по руководству</label>
+      <input id="guide-search" type="search" autocomplete="off" aria-controls="search-results">
+      <div id="search-results" class="o-search-results" hidden></div>
+    </div>
+    <div class="o-tools">
+      <label for="language" class="o-sr-only" data-ru="Язык" data-en="Language">Язык</label>
+      <select id="language"><option value="ru">RU</option><option value="en">EN</option></select>
+      <button id="theme" type="button">Светлая тема</button>
+    </div>
+  </header>
+  <div class="o-frame">
+    <aside class="o-nav">
+      <details open>
+        <summary data-ru="Разделы руководства" data-en="Guide sections">Разделы руководства</summary>
+        <nav aria-label="UI/UX"><a href="index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" />
+  <path d="M15 5.764v15" />
+  <path d="M9 3.236v15" />
+</svg>
+<span data-ru="Начало" data-en="Start here">Начало</span></a><a href="foundations.html" aria-current="page"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span data-ru="Бренд и стиль" data-en="Brand and style">Бренд и стиль</span></a><a href="layout.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="M9 3v18" />
+</svg>
+<span data-ru="Макет и навигация" data-en="Layout and navigation">Макет и навигация</span></a><a href="components.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3v18" />
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="M21 9H3" />
+  <path d="M21 15H3" />
+</svg>
+<span data-ru="Компоненты" data-en="Components">Компоненты</span></a><a href="patterns.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span data-ru="Сценарии и примеры" data-en="Patterns and examples">Сценарии и примеры</span></a><a href="cloud-lab.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 6a9 9 0 0 0-9 9V3" />
+  <circle cx="18" cy="6" r="3" />
+  <circle cx="6" cy="18" r="3" />
+</svg>
+<span data-ru="Карта Cloud LAB" data-en="Cloud LAB map">Карта Cloud LAB</span></a><a href="assets.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" />
+</svg>
+<span data-ru="Ресурсы" data-en="Assets">Ресурсы</span></a><a href="adoption.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg>
+<span data-ru="Как использовать" data-en="Adoption">Как использовать</span></a></nav>
+      </details>
+      <p class="o-caption">O! Internal Workspace<br>v0.1.1 · 02.10.2026</p>
+    </aside>
+    <main class="o-main" id="main" tabindex="-1">
+      <p class="o-eyebrow" data-ru="Правила и пояснения · текст на английском" data-en="Guidelines and explanation · English source text">Правила и пояснения · текст на английском</p><div class="o-reading"><article class="o-copy o-guide-copy" lang="en"><h1>Brand and visual foundations</h1>
+<h2>Identity</h2>
+<p>Use the original O! mark with a readable portal name. Preserve its geometry, proportions and speech tail. Provider/application logos identify their subjects beside names; they do not change the portal's theme or establish ownership. Use a suitable original variant or a neutral brand plate when a logo needs a contrasting background.</p>
+<p>The supplied internal examples support a burgundy-to-near-black header and restrained magenta emphasis. Large magenta/cyan waves belong on a cover or a small outer edge. Keep working surfaces opaque and quiet.</p>
+<h2>Colour roles</h2>
+<p>The shared tokens define semantic roles. Use <code>--text</code>, <code>--surface</code>, <code>--action</code>, <code>--link</code>, <code>--border-control</code> and <code>--focus</code> instead of per-page literal colours. Light/dark surfaces are two presentations of one application.</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand magenta</td>
+<td>Identity, selection marker and restrained emphasis</td>
+</tr>
+<tr>
+<td>Action / on-action</td>
+<td>Main actionable control and its text</td>
+</tr>
+<tr>
+<td>Surface / surface-subtle</td>
+<td>Main content and supporting groups</td>
+</tr>
+<tr>
+<td>Surface-selected</td>
+<td>Selected item, paired with a bar, underline or explicit state</td>
+</tr>
+<tr>
+<td>Text / text-muted</td>
+<td>Primary and secondary reading hierarchy</td>
+</tr>
+<tr>
+<td>Border / border-control</td>
+<td>Quiet dividers / necessary control boundaries</td>
+</tr>
+<tr>
+<td>Focus</td>
+<td>Visible keyboard location, independent of selection</td>
+</tr>
+<tr>
+<td>Success / warning / error / info</td>
+<td>Explicit feedback meanings with words and icons</td>
+</tr>
+<tr>
+<td>Cyan</td>
+<td>Optional decorative edge; no implied operational meaning</td>
+</tr>
+</tbody>
+</table>
+<p>Brand magenta against white is not our normal small-text action pairing. The inherited accessible action/link variants are used instead. Every chart or status must remain understandable without colour alone. Unknown and proposed are textual qualifications, not automatically amber or green scores.</p>
+<h2>Typography</h2>
+<p><strong>TT Norms Pro:</strong> headings, weights 500 and 700. <strong>Golos Text:</strong> body, UI, tables and forms, weights 400–700. Keep the same font pair across all portals. Source files come from the existing curated asset kit; screenshot font identity was not inferred.</p>
+<table>
+<thead>
+<tr>
+<th>Use</th>
+<th>Default size / line height</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Page title</td>
+<td>28–32 / 36–40px</td>
+</tr>
+<tr>
+<td>Section</td>
+<td>22–24 / 30–32px</td>
+</tr>
+<tr>
+<td>Subheading</td>
+<td>18 / 26px</td>
+</tr>
+<tr>
+<td>Reading text</td>
+<td>16 / 24px</td>
+</tr>
+<tr>
+<td>Navigation, table and essential metadata</td>
+<td>14 / 20px</td>
+</tr>
+<tr>
+<td>Short auxiliary label</td>
+<td>12 / 16px</td>
+</tr>
+</tbody>
+</table>
+<p>Use sentence case, normal tracking, real heading levels and tabular numerals for measures. Keep important qualifications at least 14px. Russian/English wording may differ in length; stable IDs and layout semantics do not. Reading width is about 68 characters; diagrams/tables may use the whole canvas.</p>
+<h2>Icons and assets</h2>
+<p>Use the supplied Lucide outline family: 24px view box and 2px stroke. Display at 20–24px for controls. Inline SVG can inherit <code>currentColor</code>; an external image cannot. Pair unfamiliar icons with words. Icon-only controls require accessible names. Do not mix unrelated icon styles in one toolbar.</p>
+<p>O! and provider assets are contextual identities. Golos and Lucide retain their licence files. TT Norms Pro is authorized for these internal portals under the existing practitioner guidance; retain the internal-use restriction with any shared kit.</p>
+<h2>Space, corners and density</h2>
+<p>Use 4, 8, 12, 16, 24, 32 and 48px spacing steps. Controls use 8px corners; outer workspace surfaces 16–20px. Prefer section spacing and dividers to nested cards. Shadows identify floating menus/dialogs, not every content block.</p>
+<p>Default control height is 44px. Comfortable lists use approximately 48–56px rows; compact desktop tables can use 36–40px rows while preserving readable text and suitable targets. Density changes spacing, not information or qualifications.</p>
+<h2>Live palette and type</h2><div class="o-grid"><div class="o-card"><div class="o-swatch" style="background:var(--brand)"></div><code>--brand</code></div><div class="o-card"><div class="o-swatch" style="background:var(--surface)"></div><code>--surface</code></div><div class="o-card"><div class="o-swatch" style="background:var(--surface-subtle)"></div><code>--surface-subtle</code></div><div class="o-card"><div class="o-swatch" style="background:var(--text)"></div><code>--text</code></div><div class="o-card"><div class="o-swatch" style="background:var(--text-muted)"></div><code>--text-muted</code></div><div class="o-card"><div class="o-swatch" style="background:var(--action)"></div><code>--action</code></div></div><div class="o-card"><h3 style="font-size:28px">TT Norms Pro · Сервисы и возможности</h3><p style="font-size:18px">Golos Text · Понятная информация, ясные связи.<br>Readable information, clear relationships. 0123456789</p></div></article><nav class="o-context" id="page-contents" aria-label="On this page" lang="en"><strong>On this page</strong></nav></div>
+      <footer class="o-footer"><span data-ru="Рабочий стандарт внутренних порталов" data-en="Working internal portal standard">Рабочий стандарт внутренних порталов</span> · v0.1.1 · <a href="adoption.html" data-ru="Как использовать" data-en="How to adopt">Как использовать</a> · <a href="o-uiux-kit.zip" download data-ru="Скачать комплект" data-en="Download kit">Скачать комплект</a></footer>
+    </main>
+  </div>
+  <noscript><p class="o-callout">Guidelines remain readable. Search, theme controls and interactive examples require JavaScript.</p></noscript>
+</body>
+</html>

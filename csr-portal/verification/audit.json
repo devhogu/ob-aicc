@@ -1,0 +1,10 @@
+{
+  "documents": 18,
+  "source_anchor_links": 268,
+  "unique_anchor_targets": 198,
+  "desktop_navigation_clicks": 198,
+  "mobile_navigation_clicks": 18,
+  "diagram_open_close_cycles": 68,
+  "mobile_diagram_cycles": 68,
+  "failures": []
+}

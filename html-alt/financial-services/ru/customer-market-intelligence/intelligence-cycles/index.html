@@ -1,0 +1,2195 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Аналитические циклы</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/service.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/flow-set.css">
+</head>
+
+
+<body class="page--flow-set">
+
+<a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Customer &amp; Market Intelligence</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Аналитические циклы</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Аналитические циклы</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Набор аналитических и разведывательных циклов, обеспечивающих понимание клиентской базы и рынка — от обновления сегментации до обзора удержания, конкурентной аналитики и мониторинга тональности бренда.</p>
+  
+</header>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <main id="main-content" class="flow-categories" aria-label="Категории потоков">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="flow-category" id="customer-insights">
+
+  <h2 class="flow-category__title">Клиентская аналитика</h2>
+
+  
+  <div class="flow-category__table">
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="segmentation-refresh-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Цикл обновления сегментации</h3>
+    </div>
+    <p class="flow-detail__intent">Периодический пересмотр и обновление модели сегментации клиентов — выборка текущего поведения, повторный запуск аналитической модели, валидация стабильности сегментов, получение одобрения от органа управления и развёртывание обновлённых назначений по сегментам в маркетинговые и продуктовые системы. Якорный показатель цикла — время от формирования выборки данных до ввода в эксплуатацию.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">Цикл обновления сегментации поддерживает актуальность модели сегментации клиентов банка — классификации клиентов на поведенческие, ценностные или потребностно-ориентированные группы, управляющей продуктовым таргетингом, дизайном кампаний, приоритизацией инвестиций в удержание и ценовыми решениями. ИИ сжимает этапы валидации и подготовки к одобрению — формируя нарратив стабильности сегментов, выделяя наиболее значимые изменения границ и подготавливая управленческий пакет для одобрения — так что команда Data Science концентрируется на калибровке модели, а не на документировании.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Паттерны миграции между сегментами и поведенческие сдвиги, сигнализирующие об устаревании модели сегментации, становятся видны только на границе ежегодного или квартального цикла обновления. Непрерывный мониторинг стабильности распределения по сегментам — выявление поведенческого дрейфа когорт до достижения формального триггера обновления — отсутствует в стандартном операционном цикле разведки.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Калибровка модели сегментации — какие переменные обеспечивают дифференциацию сегментов, каково оптимальное количество сегментов, формирует ли модель коммерчески применимые границы — оценивается неформально командой по науке о данных при каждом обновлении. Структурированное сравнение моделей (альтернативные подходы к сегментации, различные наборы переменных, разное количество кластеров) редко проводится между основными циклами обновления.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Документация по оценке стабильности сегментов, подготовка пакетов для согласования с органами управления и передача обновлённых определений сегментов командам-потребителям — это структурированные, повторяющиеся задачи с последовательным форматом в каждом цикле. Каждая из них подходит для подготовки с участием агента при последующей проверке командами по науке о данных и управлению рисками.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Ретроспективные выводы по обновлению сегментов — какие сегменты оказались нестабильными, какие изменения границ впоследствии были отменены, какие переменные модели дрейфовали — не фиксируются в структурированном виде для улучшения дизайна модели следующего цикла. Банк воссоздаёт один и тот же аналитический фреймворк при каждом обновлении, не накапливая институциональные знания в области моделирования.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Этапы потока">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="sample"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Выборка</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="analyze"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Анализ</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="validate"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Валидация</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="approve"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Утверждение</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="deploy"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Развёртывание</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-governance-pack-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка пакета документов для согласования сегментации</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует пакет документов для согласования обновлённой сегментационной модели — нарратив о стабильности сегментов, сводку изменений границ и документацию, готовую для рассмотрения комитетом — на основе аналитических выходных материалов команды data science. Команда data science рецензирует и направляет пакет; трудозатраты на его подготовку исключаются.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Пакеты управленческой документации для обновлений модели сегментации формируются вручную командой Data Science и проходят последовательное согласование в комитетах по кредитному риску, маркетингу и управлению данными. Цикл одобрения добавляет четыре-шесть недель между валидацией модели и её промышленным развёртыванием, в течение которых маркетинговые и продуктовые команды работают на устаревших сегментных присвоениях.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает выходные данные модели сегментации текущего цикла, присвоения предыдущего цикла и шаблон пакета управленческой документации, затем формирует нарратив устойчивости, комментарии к изменениям границ и материалы для подачи в комитет. Команда Data Science проверяет черновик и передаёт его на согласование, концентрируя усилия на калибровке модели, а не на подготовке документации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Пакет управленческой документации, готовый к рассмотрению комитетом, — включающий нарратив устойчивости сегментов, сводку изменений границ и сопроводительные материалы — формируется на основе аналитических результатов команды Data Science и доступен для проверки командой в течение 48 часов.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует черновик пакета управленческой документации для ≥90% циклов обновления сегментации, требующих одобрения комитета, с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% пакетов управленческой документации, подготовленных агентом, приняты руководителем команды Data Science для передачи на комитет с минимальными правками или без них.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время подготовки пакета управленческой документации сокращено с 3–5 дней ручной сборки документов до ≤48 часов при поддержке агента на этапе проверки и подачи.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-cycle-retrospective">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Ретроспективный анализ цикла сегментации</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует структурированный ретроспективный анализ после каждого цикла обновления сегментации — фиксируя нестабильные сегменты, впоследствии отменённые изменения границ и переменные модели, подвергшиеся смещению — как накапливаемую базу знаний для дизайна последующих циклов.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ретроспективные выводы цикла обновления сегментации не фиксируются в структурированной форме, способной улучшить модели последующих циклов. Команда data science воссоздаёт один и тот же аналитический фреймворк при каждом обновлении без обращения к инсайтам предыдущих циклов; граничные решения, оказавшиеся коммерчески несостоятельными, повторяются.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует сегментные присвоения предыдущего цикла, выходные данные модели текущего цикла и коммерческую эффективность после внедрения, после чего формирует структурированный ретроспективный анализ с идентификацией паттернов стабильности, отменённых изменений границ и смещения переменных. Ретроспективный анализ добавляется в базу знаний по сегментации и используется в брифинге по дизайну модели следующего цикла.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Структурированный ретроспективный анализ после каждого цикла обновления сегментации — фиксирующий выводы о нестабильности сегментов, отменённые изменения границ и переменные модели, подвергшиеся смещению — доступен как накапливаемая база знаний для дизайна последующих циклов.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует структурированный ретроспективный анализ в ≥95% завершённых циклов обновления сегментации в течение 30 дней с момента закрытия цикла.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% ретроспективных выводов признаны руководителем команды data science непосредственно применимыми к решениям по дизайну следующего цикла.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл подготовки ретроспективного анализа сокращён с разрозненных постцикловых усилий по документированию до структурированной автоматизированной подготовки, завершаемой в течение 5 дней с момента закрытия цикла.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segment-stability-continuous-monitor">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Непрерывный мониторинг стабильности сегментов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент мониторит стабильность сегментных присвоений в непрерывном режиме между плановыми циклами обновления, выявляя поведенческое смещение когорт до достижения порогового значения для планового обновления. Руководители сегментов получают оповещение при превышении установленного порога существенности при движении границ сегментов.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Паттерны миграции между сегментами, сигнализирующие об устаревании сегментационной модели, становятся видимы лишь на границе квартального или годового цикла обновления. Клиенты, демонстрирующие существенные поведенческие сдвиги — переход высокоценных клиентов в более низкую категорию, рост среднего сегмента — идентифицируются ретроспективно, после того как коммерческое окно для вмешательства закрылось.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент еженедельно анализирует транзакционные, продуктовые и цифровые поведенческие данные, пересчитывает вероятность сегментного присвоения для каждого клиента и выявляет когорты, где движение границ превышает пороговое значение стабильности. Команда data science получает оповещение о смещении с профилем затронутой когорты и рекомендацией о целесообразности внепланового обновления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Стабильность сегментных присвоений мониторится непрерывно между плановыми циклами обновления: при превышении определённого порога существенности в движении границ сегментов руководители сегментов получают оповещение, позволяющее принять меры до наступления порогового события планового обновления.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент мониторит стабильность сегментов и оценивает пороговые значения существенности в непрерывном режиме с момента запуска: ≥98% запланированных ежедневных циклов оценки завершены на протяжении ≥48 последовательных недель.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% оповещений о движении границ сегментов признаны руководителями сегментов требующими пересмотра при получении.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл обнаружения смещения сегментов сокращён с планового цикла обновления (ежеквартально или ежегодно) до непрерывного мониторинга с задержкой оповещения ≤24 часа от пересечения порогового значения до уведомления руководителя сегмента.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-model-calibration-sandbox">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сэндбокс калибровки модели сегментации</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует структурированные сравнения альтернативных подходов к сегментации — по различным наборам переменных, числу кластеров и определениям границ, — позволяя команде Data Science оценить более широкое пространство моделей до фиксации варианта для текущего цикла обновления. Результатом становится задокументированный сравнительный протокол вместо неформальных суждений при калибровке.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Калибровка модели сегментации оценивается неформально при каждом обновлении; структурированное сравнение альтернативных подходов между крупными циклами проводится редко. Команда Data Science применяет один и тот же набор переменных и число кластеров до тех пор, пока существенная коммерческая проблема не инициирует пересмотр, — потенциальные улучшения в детализации модели остаются неисследованными.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент запускает параметризованные варианты модели на текущей выборке данных — варьируя состав переменных, число кластеров и чувствительность границ — и формирует сравнительную таблицу с оценкой по устойчивости, коммерческой различимости и распределению размеров сегментов. Команда Data Science проверяет ранжированные альтернативы и выбирает модель для валидации; сравнительный протокол служит управленческой документацией.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Структурированные сравнения альтернативных подходов к сегментации — по наборам переменных, числу кластеров и определениям границ — предоставляются команде Data Science до фиксации модели цикла обновления, расширяя пространство оцениваемых вариантов без увеличения нагрузки на аналитиков.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует структурированное многовариантное сравнение для ≥90% циклов обновления сегментации, требующих калибровки модели, с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% сравнительных материалов оценены руководителем команды Data Science как существенно расширяющие пространство рассматриваемых моделей.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл генерации сценариев калибровки модели сокращён с 2–3 недель ручной аналитической работы по каждой модели до ≤3 дней параллельного формирования сравнений при поддержке агента.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="retention-review-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Цикл обзора удержания</h3>
+    </div>
+    <p class="flow-detail__intent">Повторяющийся цикл обнаружения риска оттока клиентов, диагностики первопричин, разработки и исполнения интервенций удержания, отслеживания результатов и фиксации знаний. Якорный показатель цикла — время от обнаружения сигнала группы риска до исполнения интервенции.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">Цикл обзора удержания определяет, как банк идентифицирует клиентов с существенным риском оттока клиентов, диагностирует поведенческие и продуктовые драйверы этого риска, разрабатывает и запускает интервенции удержания, отслеживает их эффективность и обновляет модели удержания и сценарии реагирования по результатам. ИИ сжимает последовательность обнаружения и вовлечения — формируя профили когорт группы риска, составляя брифы для интервенций и генерируя варианты контента кампаний — так что команда по удержанию действует на основе сигналов в течение дней, а не недель.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Риск оттока клиентов накапливается в данных о поведении клиентов в промежутках между ежемесячными расчётными циклами. Непрерывный мониторинг индивидуальных сигналов вовлечённости клиентов — движение средств, частота транзакций, взаимодействие с продуктами — позволил бы банку реагировать на риск оттока до того, как когорта сформирует окончательное решение. Такой подход в непрерывном режиме не является стандартом для розничных операций на рынках СНГ.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Калибровка предложений по удержанию — какие предложения обеспечивают наибольшую долю сохранённых клиентов для тех или иных профилей риска — управляется на основе качественного опыта кампаний, а не структурированного A/B-тестирования в масштабе. Банк не может систематически оптимизировать набор предложений, поскольку атрибуция результатов при одновременно проводимых кампаниях не отслеживается с требуемой детализацией.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Профилирование когорт под риском, подготовка брифингов по удержанию, разработка вариантов контента кампаний и подготовка отчётов об отслеживании результатов — это структурированные, повторяющиеся задачи с последовательной схемой в каждом цикле. Каждая из них подходит для подготовки с участием агента, при этом экспертная оценка команды удержания концентрируется на разработке мер воздействия и решениях об эскалации.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Результаты мер по удержанию и паттерны факторов оттока клиентов накапливаются из цикла в цикл, но не организованы в институциональную базу знаний, улучшающую проектирование следующих циклов. Понимание банком динамики оттока своих клиентов воссоздаётся неформально тем аналитиком, который ведёт текущий цикл, а не на основе накопленных записей о динамике удержания.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Этапы потока">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="detect"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Выявление</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="diagnose"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Диагностика</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="engage"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Вовлечение</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="track"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Отслеживание</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="learn"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Обучение</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-cohort-profiling-brief">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Брифинг по профилированию когорты удержания</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует профили когорт риска и брифинги по вмешательствам для удержания в каждом цикле на основе выходных данных модели оттока клиентов и диагностических перекрёстных данных. Команда по удержанию рецензирует брифинг и направляет разработку вмешательств; трудозатраты на формирование профилей и подготовку брифингов исключаются.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Профилирование когорты риска требует от аналитической команды по удержанию перекрёстного сопоставления скоринговых баллов склонности к оттоку клиентов с данными о жалобах, изменениями в продуктовом портфеле, журналами взаимодействия с отделениями и ответами NPS. Диагностика носит качественный характер, непоследовательно документируется от цикла к циклу и поглощает аналитические ресурсы, которые должны концентрироваться на разработке вмешательств.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент обрабатывает пакетные скоринговые баллы склонности к оттоку клиентов и перекрёстно сопоставляет каждого клиента группы риска с историей жалоб, продуктов и взаимодействий, после чего формирует когортный профиль с ключевыми факторами оттока и рекомендуемыми типами вмешательств по подкогортам. Команда по удержанию рецензирует брифинг в начале каждого цикла и разрабатывает вмешательство на основе диагностики, подготовленной агентом.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Профили когорт риска и брифинги по вмешательствам для удержания — сформированные на основе выходных данных модели оттока клиентов и диагностических перекрёстных данных — доступны команде по удержанию в начале каждого цикла; трудозатраты на формирование профилей и подготовку брифингов исключаются.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует брифинги по профилированию когорт в ≥95% кластеров риска, выявленных в каждом скоринговом цикле, на протяжении ≥48 последовательных циклов после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% когортных брифингов признаны достаточными для разработки вмешательств без дополнительного ручного профилирования руководителем направления удержания.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл подготовки когортного брифинга сокращён с 3–5 дней ручного формирования когорт и написания нарратива до ≤24 часов автоматизированной подготовки.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/real-time-churn-signal-detection">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Выявление сигналов оттока клиентов в режиме реального времени</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент мониторит сигналы вовлечённости отдельных клиентов в непрерывном режиме — движение остатков, частоту транзакций, продуктовое взаимодействие и цифровую активность — выявляя острые индикаторы оттока клиентов между ежемесячными скоринговыми расчётами. Команда по удержанию получает оповещение по клиентам, пересёкшим порог высокого риска, с достаточным временны́м лагом для принятия мер.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Выявление когорты риска зависит от ежемесячного пакетного скоринга. Клиенты, демонстрирующие острые сигналы оттока — резкий отток остатков, инициирование закрытия счёта, цифровое отключение — не идентифицируются до следующего скорингового расчёта; окно вмешательства закрывается прежде, чем банк осознаёт риск.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент в непрерывном режиме мониторит транзакционные, балансовые потоки и данные цифровой активности, применяет таксономию сигналов оттока клиентов банка на уровне отдельного клиента и формирует оповещение при пересечении клиентом порога высокого риска в режиме реального времени. Команда по удержанию получает оповещение с предварительным профилем факторов и рекомендуемым приоритетом контакта в пределах окна вмешательства.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Острые сигналы оттока клиентов — выявленные из непрерывного мониторинга движения остатков, частоты транзакций, продуктового взаимодействия и цифровой активности — инициируют оповещение команды по удержанию по клиентам, пересёкшим порог высокого риска между ежемесячными скоринговыми расчётами.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент мониторит сигналы вовлечённости в непрерывном режиме и формирует оповещения в ≥95% случаев пересечения клиентами определённого порога острого оттока клиентов в течение 24 часов с момента обнаружения сигнала на протяжении ≥48 последовательных недель.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% оповещений об остром оттоке клиентов признаны руководителем направления удержания требующими вмешательства по итогам еженедельной проверки; показатель удержания среди оповещённых клиентов, получивших вмешательство, отслеживается в сравнении с базовым уровнем группы риска без оповещения.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл выявления острого оттока клиентов сокращён с ежемесячного пакетного скоринга до непрерывного мониторинга с задержкой оповещения ≤24 часа от сигнала до уведомления команды по удержанию.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-offer-ab-optimisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">A/B-оптимизация предложений по удержанию</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает результаты вмешательств по удержанию на уровне типа предложения и профиля когорты в рамках одновременных кампаний и формирует ранжированную матрицу эффективности предложений, которую команда по удержанию использует для калибровки набора предложений в каждом цикле. Атрибуция ведётся на уровне отдельного клиента для разграничения эффектов пересекающихся кампаний.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Калибровка предложений по удержанию управляется на основе качественного опыта кампаний, а не структурированного A/B-тестирования в масштабе. Атрибуция результатов по одновременным кампаниям не отслеживается с требуемой детализацией; банк не может определить, какой тип предложения обеспечивает наибольший показатель сохранения клиентов для того или иного профиля риска.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует данные об откликах кампании и соответствующие контрольные группы на уровне отдельного клиента, применяет атрибуцию по типу предложения и профилю когорты и формирует ранжированную матрицу эффективности, охватывающую показатель сохранения клиентов, устойчивость на 90 и 180 дней и влияние на доходы. Команда по удержанию использует матрицу для корректировки критериев выбора предложений для следующего цикла, при этом агент обновляет матрицу после закрытия каждой кампании.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Ранжированная матрица эффективности предложений — отслеживающая результаты вмешательств по удержанию на уровне типа предложения и профиля когорты в рамках одновременных кампаний с индивидуальной атрибуцией — доступна команде по удержанию для калибровки набора предложений в каждом цикле.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует матрицу эффективности предложений в ≥95% запланированных ежемесячных циклов проверки на протяжении ≥12 последовательных месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% рейтингов эффективности предложений признаны руководителем направления удержания правильными по направлению в ходе ежемесячной проверки; решения по калибровке набора предложений документируются и отслеживаются по отношению к последующим показателям сохранения клиентов.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл анализа эффективности предложений сокращён с ежеквартальной ручной агрегации результатов A/B-тестирования до ежемесячной автоматизированной подготовки матрицы в течение 48 часов с момента закрытия периода.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intervention-personalisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Персонализация вмешательств по удержанию</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует индивидуальные рекомендации по коммуникации и предложениям для удержания на основе диагностики когорты, позволяя команде CRM осуществлять персонализированный охват в масштабе. Рекомендация откалибрована под конкретный фактор оттока клиентов, выявленный для данного клиента.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Вмешательства по удержанию разрабатываются на уровне когорты из ограниченного перечня предварительно утверждённых типов предложений. Персонализация на уровне отдельного клиента — адаптация предложения и коммуникации под конкретный фактор риска данного клиента — операционно неосуществима при ручном дизайне кампаний; единообразные когортные предложения плохо соответствуют индивидуальным ситуациям.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует диагностику факторов оттока клиентов на уровне каждого клиента из когортного брифинга, соотносит каждый фактор с библиотекой утверждённых предложений и шаблонов коммуникаций для удержания и формирует индивидуальную рекомендацию, охватывающую тип предложения, предпочтительный канал и формат сообщения. Команда CRM рецензирует рекомендации для сегмента наибольшей ценности и проводит кампанию на основе контента, подготовленного агентом.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Индивидуальные рекомендации по коммуникации и предложениям для удержания — откалиброванные под конкретный фактор оттока клиентов, выявленный для каждого клиента — доступны команде CRM для персонализированного охвата в масштабе.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует персонализированную рекомендацию по удержанию для ≥90% клиентов в приоритизированной очереди вмешательств группы риска в каждом еженедельном цикле на протяжении ≥48 последовательных недель.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Показатель сохранения клиентов, получивших персонализированные предложения по рекомендации агента, ≥15% выше базового уровня предыдущего единообразного когортного предложения в 12-месячном сравнении когорт.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл подготовки индивидуальной коммуникации и предложений по удержанию сокращён с 2–3 дней ручной сегментации CRM и создания текстов до ≤4 часов автоматизированной генерации рекомендаций и проверки командой CRM.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intelligence-knowledge-base">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">База знаний по удержанию клиентов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент агрегирует результаты вмешательств по удержанию, паттерны факторов оттока клиентов и записи об обновлениях модели по циклам в структурированную базу знаний, позволяя команде по удержанию выстраивать каждый последующий цикл на основе накапливаемой доказательной базы.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Результаты вмешательств по удержанию накапливаются в кампанийных системах, однако не возвращаются в модель оттока клиентов или сборник практик удержания в структурированном виде. Понимание банком динамики оттока клиентов воссоздаётся в неформальном порядке аналитиком, ведущим текущий цикл; институциональная аналитика удержания не накапливается со временем.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует результаты вмешательств завершённых циклов, журналы обновлений модели и диагностику факторов оттока клиентов, структурирует выводы в запрашиваемую базу знаний по удержанию и актуализирует релевантные паттерны предыдущих циклов в начале брифинга по дизайну каждого нового цикла. Команда по удержанию обращается к предыдущей доказательной базе при выборе порогов обнаружения и наборов предложений, при этом агент указывает на аналогичные предыдущие ситуации и их результаты.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Результаты вмешательств по удержанию, паттерны факторов оттока клиентов и записи об обновлениях модели агрегированы по циклам в структурированную базу знаний, позволяя команде по удержанию калибровать каждый последующий цикл на основе накапливаемой доказательной базы.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент индексирует результаты циклов удержания и выводы по факторам оттока клиентов в ≥95% завершённых циклов удержания в течение 14 дней с момента закрытия цикла, непрерывно с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% запросов к базе знаний признаны непосредственно применимыми к дизайну текущего цикла руководителем направления удержания.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время поиска доказательной базы по предыдущим циклам удержания сокращено с 1–2 дней ручного поиска по отчётам и воспроизведения по памяти аналитика до ≤1 часа структурированного запроса к базе знаний.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="flow-category" id="market-position">
+
+  <h2 class="flow-category__title">Позиция на рынке</h2>
+
+  
+  <div class="flow-category__table">
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="competitive-intelligence-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Цикл конкурентной разведки</h3>
+    </div>
+    <p class="flow-detail__intent">Повторяющийся цикл сканирования конкурентных сигналов, аналитического синтеза, подготовки брифингов для руководства и отслеживания стратегических действий поимённых конкурентов. Якорный показатель цикла — время от появления сигнала до готового к принятию решений брифинга.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">Цикл конкурентной разведки формирует регулярную картину конкурентного ландшафта, используемую стратегическим и коммерческим руководством для калибровки продуктовых, ценовых и позиционных решений. ИИ обеспечивает практически непрерывный мониторинг конкурентной среды за счёт автоматической агрегации сигналов из публичных источников и генерации структурированных конкурентных сводок на еженедельной или событийно-триггерной основе.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Конкурентная среда оценивается в границах квартального цикла брифингов. Изменения рыночной доли, запуски продуктов конкурентами и ценовые манипуляции, происходящие между брифинговыми циклами, накапливаются без структурированного механизма ранней эскалации. Коммерческие решения, принимаемые между брифинговыми циклами, принимаются без актуального конкурентного контекста.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Охват конкурентной разведки — за какими конкурентами наблюдать, каким сигналам отдавать приоритет, какие аналитические фреймворки применять — устанавливается стратегической командой на основе текущих приоритетов руководства. Систематическая оптимизация охвата (обеспечение пропорционального покрытия высокосигнальных источников с учётом их конкурентной значимости) не проводится; пробелы в источниках и охвате накапливаются со временем.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Агрегирование сигналов, подготовка сводок по конкретным конкурентам, выявление межконкурентных тем и формирование вариантов брифингов для разных аудиторий — это структурированные, повторяющиеся производственные задачи. Каждая из них воспроизводит последовательную структуру в каждом цикле; переменная составляющая — это содержание сигналов текущего цикла. Они являются сильными кандидатами для подготовки с участием агента и последующей редакционной проверкой стратегической команды.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Брифинги по конкурентной разведке из предыдущих циклов вместе с последующими коммерческими результатами оценённых конкурентных манипуляций формируют накопленную базу доказательств для калибровки значимости конкурентных сигналов. Эта ретроспективная база не организована систематически для повышения точности конкурентного анализа следующего цикла.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Этапы потока">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="scan"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Сканирование</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="analyze"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Анализ</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="synthesize"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Синтез</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="brief"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Брифинг</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="track"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Отслеживание</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-signal-continuous-scan">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Непрерывный мониторинг конкурентных сигналов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент мониторит определённую совокупность источников по конкурентам в непрерывном режиме — регуляторные порталы, продуктовые страницы, прессу и сигналы рекрутинга — и формирует структурированные записи о конкурентных событиях по каждому существенному сигналу, выявленному между плановыми циклами брифинга. Аналитики стратегического направления рецензируют и эскалируют; ручной периодический мониторинг исключается.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Сканирование конкурентных сигналов проводится аналитиками стратегического направления вручную по периодическому расписанию на основе отобранного перечня источников. Сигналы, возникающие между сессиями сканирования, упускаются или выявляются с опозданием; конкурентные действия в менее отслеживаемых каналах — регуляторные рабочие группы, анонсы партнёрств финтех-компаний — систематически недопредставлены в синтезе разведывательных данных.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент в непрерывном режиме мониторит определённый перечень источников, фиксирует конкурентные события по таксономии сигналов и формирует структурированную запись о событии с указанием конкурента, типа события и предварительной оценки значимости. Стратегическая команда ежедневно рецензирует очередь событий, эскалирует существенные сигналы и передаёт подтверждённые события в синтез следующего брифинга.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Структурированные записи о конкурентных событиях из непрерывного мониторинга регуляторных порталов, продуктовых страниц, прессы и сигналов рекрутинга доступны команде конкурентной разведки на следующий рабочий день после обнаружения сигнала.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент мониторит полный определённый перечень источников по конкурентам и формирует структурированные записи о событиях в ≥98% запланированных ежедневных циклов сканирования с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% структурированных записей о конкурентных событиях признаны существенными и корректно категоризированными командой конкурентной разведки по результатам еженедельной выборочной проверки.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл обнаружения конкурентных сигналов и формирования записей сокращён с еженедельных ручных проходов мониторинга до ежедневного автоматизированного сканирования с созданием записей о событиях в день обнаружения.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-brief-audience-variants">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Варианты конкурентного брифинга по аудиториям</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует калиброванные по аудитории варианты аналитического брифинга о конкурентах — стратегическое позиционирование для Правления, карточку сравнения продуктовых характеристик для руководителей продуктового направления и бенчмарк ценообразования для коммерческих руководителей — на основе единого синтезированного входного материала. Команда стратегии рецензирует каждый вариант; трудозатраты на адаптацию под аудитории исключаются.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Конкурентные брифинги формируются в едином формате для всей аудитории руководства. Руководители продуктового направления нуждаются в сравнительных характеристиках конкурентов на уровне продуктовых функций; коммерческие руководители — в бенчмарках ценообразования и предложений; Правление — в динамике стратегического позиционирования. Индивидуальная адаптация под аудитории выполняется вручную и с непостоянным качеством в рамках стандартного цикла брифинга.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует синтез стратегической команды и применяет шаблоны брифингов, специфичные для каждой аудитории: формат таблицы характеристик для руководителей продуктового направления, сетка ценообразования для коммерческих руководителей и формат стратегического нарратива для Правления — формируя три откалиброванных варианта брифинга из единого аналитического входного материала. Каждый вариант рецензируется и распространяется стратегической командой в рамках стандартного цикла брифинга.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Калиброванные по аудитории варианты конкурентного брифинга — стратегическое позиционирование для Правления, карточка сравнения продуктовых характеристик для руководителей продуктового направления и бенчмарк ценообразования для коммерческих руководителей — доступны по итогам каждого цикла конкурентного брифинга без отдельной ручной подготовки для каждой аудитории.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует все три варианта по аудиториям в ≥90% циклов конкурентного брифинга на протяжении ≥12 последовательных месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% вариантов по аудиториям признаны надлежащим образом откалиброванными соответствующим руководителем аудитории без необходимости существенной доработки.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время подготовки вариантов по аудиториям сокращено с 1–2 дней ручной индивидуальной адаптации для каждой аудитории до ≤2 часов автоматической генерации и проверки за цикл.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-coverage-gap-audit">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Аудит пробелов в охвате конкурентной разведки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент проводит аудит охвата источников конкурентного мониторинга в сопоставлении с определённым перечнем конкурентов и таксономией сигналов, выявляя неотслеживаемые источники и дисбалансы в охвате до формирования слепых зон. Стратегическая команда получает ежеквартальный отчёт о пробелах в охвате с приоритизированными рекомендациями по добавлению источников.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Периметр конкурентной разведки и охват источников определяются стратегической командой исходя из текущих приоритетов менеджмента. Пробелы накапливаются со временем — неотслеживаемые Telegram-каналы, платформы агрегации жалоб, региональные новостные источники — и обнаруживаются лишь тогда, когда существенный сигнал поступает через неотслеживаемый канал постфактум.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент сопоставляет активный перечень источников мониторинга с полным составом конкурентов и эталонной таксономией источников, оценивает каждую комбинацию «конкурент–источник» по расчётной плотности сигнала относительно текущего охвата и формирует ранжированный перечень пробелов с рекомендациями по добавлению источников. Стратегическая команда ежеквартально рецензирует отчёт и обновляет конфигурацию мониторинга.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Аудит охвата источников конкурентного мониторинга в сопоставлении с определённым перечнем конкурентов и таксономией сигналов — с выявлением неотслеживаемых источников и дисбалансов в охвате — проводится до закрытия каждого цикла конкурентного брифинга.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент завершает аудит пробелов в охвате в ≥90% запланированных циклов конкурентного брифинга с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% выявленных пробелов в охвате признаны существенными руководителем конкурентной разведки, что повлекло добавление источников или явные решения об их исключении.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл аудита охвата сокращён с периодической ручной проверки источников до автоматизированного аудита, завершаемого в течение 4 часов с момента запуска цикла брифинга.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-intelligence-evidence-base">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Доказательная база конкурентной разведки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент ведёт ретроспективную доказательную базу, связывающую предыдущие оценки конкурентной ситуации с последующими рыночными результатами — запуски продуктов конкурентов с наблюдаемыми сдвигами в доле рынка, ценовые изменения с влиянием на маржу — калибруя суждения стратегической команды о значимости сигналов от цикла к циклу.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Брифинги конкурентной разведки за предыдущие циклы и последующие коммерческие результаты оцениваемых конкурентных действий не систематизированы. Банк не может ретроспективно определить, какие конкурентные сигналы предсказывали существенные результаты; калибровка значимости сигналов остаётся неформальным суждением команды и не улучшается со временем.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует предыдущие выходные материалы конкурентной разведки и связывает каждое оцениваемое конкурентное событие с последующими наблюдаемыми результатами — данными о доле рынка, тенденциями принятия продуктов, ценовыми объявлениями — отслеживая точность оценок значимости во времени. Стратегическая команда рецензирует запись атрибуции результатов перед каждым крупным циклом брифинга для рекалибровки критериев взвешивания сигналов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Ретроспективная доказательная база, связывающая предыдущие оценки конкурентной ситуации с последующими рыночными результатами — запуски конкурентов с наблюдаемыми сдвигами в доле рынка, ценовые изменения с влиянием на маржу — ведётся в непрерывном режиме и доступна для каждого нового цикла конкурентного анализа.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент индексирует результаты оценок конкурентных событий в ≥90% случаев в течение 30 дней с момента наступления наблюдаемого рыночного результата.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% запросов к доказательной базе признаны стратегической командой непосредственно применимыми к текущей калибровке оценки конкурентной ситуации.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время поиска предшествующих конкурентных результатов для новых аналитических задач сокращено с 1–2 дней ручного поиска по архивам до ≤1 часа структурированного запроса к доказательной базе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="brand-sentiment-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Цикл тональности бренда</h3>
+    </div>
+    <p class="flow-detail__intent">Повторяющийся цикл прослушивания сигналов бренда и репутации, агрегации, аналитического синтеза, оповещения и координации реагирования. Якорный показатель цикла — время от появления репутационного сигнала до осведомлённости руководства и принятия ответных мер.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">Цикл тональности бренда определяет, как банк мониторит своё положение в части бренда и репутации по всем публичным каналам — социальным сетям, прессе, комментариям регуляторов, платформам жалоб клиентов и маркетинговым исследованиям. ИИ обеспечивает непрерывное агрегирование брендовых сигналов — мониторинг заданной совокупности источников и генерацию структурированных оповещений о существенных сдвигах тональности — так что банк реагирует на угрозы бренду в течение часов, а не на следующем еженедельном или ежемесячном цикле отчётности.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Бренд-сигналы накапливаются в каналах мониторинга в промежутках между отчётными циклами. Существенные изменения тональности, зарождающиеся в социальных сетях или Telegram-каналах и перерастающие в комментарии прессы или регуляторов, проходят начальные стадии без осведомлённости руководства. Мониторинг бренд-сигналов в непрерывном режиме позволил бы банку реагировать на этапе раннего предупреждения, а не после эскалации.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Охват источников мониторинга бренда — какие каналы отслеживать, с какой периодичностью, при каком пороге соотношения сигнала и шума — определяется текущей конфигурацией инструментов мониторинга и рутинными практиками аналитиков. Пробелы в охвате (неотслеживаемые Telegram-каналы, платформы-агрегаторы жалоб, региональные новостные источники) накапливаются без систематического аудита; банк обнаруживает пробелы в источниках только тогда, когда существенный сигнал поступает через неотслеживаемый канал.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Агрегирование сигналов, категоризация, оценка тональности, подготовка сводок трендов и генерация оповещений — это структурированные, повторяющиеся задачи с чёткими критериями. Каждая из них подходит для обработки с участием агента, что сокращает интервал от сигнала до осведомлённости руководства с нескольких дней до нескольких часов.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Тренды тональности бренда и их корреляция с downstream-показателями — темпами привлечения клиентов, объёмом жалоб, динамикой депозитов — не анализируются систематически для построения прогностической модели влияния бренда на коммерческие результаты. Функция бренда отслеживает тональность как самоцель, а не как опережающий индикатор коммерческих и репутационных результатов.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Этапы потока">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="listen"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Мониторинг</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="aggregate"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Агрегация</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="analyze"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Анализ</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="alert"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Оповещение</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="respond"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Реагирование</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-signal-continuous-aggregation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Непрерывная агрегация бренд-сигналов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент мониторит определённую совокупность источников бренд-сигналов в непрерывном режиме — прессу, социальные сети, Telegram-каналы, платформы жалоб и регуляторные комментарии — и формирует структурированный ежедневный дайджест сигналов с категоризацией по тематике и тональности. Команда бренд-аналитики рецензирует дайджест; ручная агрегация по разрозненным источникам исключается.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Агрегация бренд-сигналов охватывает источники в различных форматах — коммерческие инструменты медиамониторинга, ручной просмотр социальных сетей и неформальное отслеживание Telegram — и опирается на ручную категоризацию аналитиками. Охват источников неполный; согласованность категоризации деградирует от периода к периоду, что снижает надёжность трендового анализа.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент в непрерывном режиме обрабатывает полный перечень определённых источников, применяет единую таксономию тематики и тональности и формирует структурированный ежедневный дайджест с указанием источника и объёмных счётчиков по тематике. Команда бренд-аналитики рецензирует аномалии и корректирует тематические присвоения; трендовый анализ проводится на основе согласованной, поддерживаемой агентом категоризации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Структурированный ежедневный дайджест бренд-сигналов, охватывающий прессу, социальные сети, Telegram-каналы, платформы жалоб и регуляторные комментарии, формируется на основе непрерывного мониторинга источников и доступен руководству направления коммуникаций — ручные усилия по сбору сигналов исключаются.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует структурированный ежедневный дайджест бренд-сигналов в ≥98% запланированных календарных дней с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% ежедневных дайджестов признаны содержательно полными и хорошо структурированными руководителем направления коммуникаций по результатам еженедельной выборочной проверки.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл сбора бренд-сигналов и формирования дайджеста сокращён с 2–3 часов ручного мониторинга и агрегации до ≤15 минут проверки командой по коммуникациям.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-materiality-alert-calibration">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Калибровка оповещений о существенности бренда</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сопоставляет поток бренд-сигналов с определёнными порогами существенности — всплеск объёма, скорость ухудшения сентимента и концентрация новой темы — и формирует управленческое оповещение при пересечении любого порога. Конфигурация порогов ежеквартально пересматривается командой бренда на основе данных о точности предыдущих оповещений.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Пороги эскалации для управления брендовыми рисками носят неформальный характер; аналитики инициируют эскалацию, когда отдельные сигналы привлекают внимание, а не когда агрегированный паттерн пересекает определённый уровень существенности. Существенные брендовые риски доходят до руководства с опозданием; несущественные сигналы избыточно эскалируются. Калибровка эскалации со временем не улучшается.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент применяет определённые пороги существенности к непрерывному потоку бренд-сигналов — всплеск объёма выше скользящей базовой линии, ухудшение сентимента выше определённой скорости или достижение новой темой определённой доли в общем объёме сигналов — и формирует структурированное управленческое оповещение при пересечении порога. Команда бренда ежеквартально проверяет точность оповещений и пересматривает пороговые параметры на основе данных о предыдущих ложноположительных срабатываниях и пропущенных эскалациях.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Управленческие оповещения формируются автоматически при пересечении объёмом бренд-сигналов, скоростью ухудшения сентимента или концентрацией новой темы определённых порогов существенности — предоставляя команде по связям с общественностью структурированное уведомление до эскалации.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент отслеживает входные бренд-сигналы и оценивает пороговые условия в ≥99% запланированных ежедневных циклов мониторинга с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% оповещений о существенности подтверждены как требующие управленческой коммуникации руководителем по связям с общественностью при проверке.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время от нарушения порога до доставки управленческого оповещения сокращено с 24–48 часов ручного мониторинга до ≤2 часов автоматического обнаружения и формирования оповещения.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-response-protocol-assistant">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Помощник по протоколу реагирования бренда</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент определяет применимую категорию протокола реагирования исходя из содержания бренд-оповещения, предоставляет предопределённый путь эскалации и полномочия на утверждение, а также формирует первоначальный вариант коммуникации-отклика для проверки командой бренда. Координация реагирования выстраивается с начала инцидента, а не в условиях временного давления.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Координация реагирования на репутационные риски охватывает подразделения коммуникаций, маркетинга, юридической службы и операционного блока без закреплённого протокола, определяющего маршрут эскалации, полномочия согласования и сроки реагирования по категориям риска. Координация в условиях временно́го давления ведёт к непоследовательному качеству ответов; команды воссоздают процесс заново при каждом инциденте.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует содержание бренд-сигнала, классифицирует категорию риска по таксономии протокола реагирования и формирует структурированный брифинг: применимый маршрут эскалации, орган согласования, сроки и черновик первичной коммуникации. Команда по коммуникациям рецензирует и дорабатывает черновик; классификация по протоколу исключает координационные издержки на определение состава участников.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Первоначальный вариант коммуникации-отклика — с идентифицированной категорией протокола, путём эскалации и полномочиями на утверждение — доступен команде по связям с общественностью в течение нескольких минут после бренд-оповещения, обеспечивая рабочий процесс проверки-и-утверждения вместо составления в условиях давления.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует соответствующий протоколу вариант отклика для ≥90% бренд-оповещений, классифицированных выше определённого порога критичности, в течение 30 минут после получения оповещения.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% вариантов коммуникации-отклика, сформированных агентом, утверждены руководителем по связям с общественностью с незначительными правками или без них.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время подготовки первоначального варианта отклика сокращено с 2–4 часов ручного изучения протокола и составления до ≤30 минут проверки с поддержкой агента и согласования.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-commercial-impact-model">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Модель коммерческого влияния бренда</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент сопоставляет тренды бренд-сентимента с нижестоящими коммерческими показателями — темпом привлечения клиентов, потоком депозитов, динамикой NPS и объёмом жалоб — для построения предиктивной модели влияния бренда на коммерческую эффективность. Руководство маркетинга и стратегии использует модель для количественной оценки коммерческого обоснования инвестиций в бренд.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Тренды бренд-сентимента и их корреляция с нижестоящими коммерческими результатами не анализируются систематически. Функция бренда отслеживает сентимент как самоцель, а не как опережающий индикатор коммерческой эффективности; коммерческое обоснование инвестиций в защиту бренда не поддаётся количественной оценке на основе существующих данных.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует многопериодные оценки бренд-сентимента совместно с рядами коммерческих KPI — объёмом привлечения, притоком депозитов, баллами NPS и объёмом жалоб — и выявляет отношения опережающего индикатора со статистическими доверительными интервалами. Руководство маркетинга и стратегии использует модель для установки пороговых значений здоровья бренда с коммерческими последствиями и для количественной оценки ожидаемого коммерческого влияния устойчивого ухудшения сентимента.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Предиктивная модель, связывающая тренды бренд-сентимента с нижестоящими коммерческими показателями — темпом привлечения клиентов, потоком депозитов, динамикой NPS и объёмом жалоб — поддерживается на постоянной основе, предоставляя директору по клиентскому опыту количественное представление о существенности бренда.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент обновляет модель корреляции бренда и коммерческих показателей в ≥90% запланированных циклов обновления на протяжении ≥12 последовательных месяцев.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% прогнозов влияния бренда на коммерческие результаты оценены как направленно точные директором по маркетингу и руководителем маркетинга по наблюдаемым результатам при ежеквартальной проверке.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл моделирования существенности бренда сокращён с ежеквартального заказного анализа до ежемесячного автоматического обновления.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">Фреймворк GenAI-банкинга и финансовых услуг · v11i</footer>
+
+</div>
+
+
+<div class="modal" id="stageModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" type="button" aria-label="Закрыть">×</button>
+    <div class="modal__content"></div>
+  </div>
+</div>
+
+
+<script>
+(function () {
+  // Per-flow stage map, embedded by the composer at render time.
+  // Keyed by flow URN → list of stage objects.
+  const FLOW_STAGES = {"urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle": [{"slug": "sample", "label": "Выборка", "title": "Извлечение и подготовка аналитической выборки данных", "intent": "Извлекает выборку транзакционных, продуктовых и демографических данных клиентов из базовых банковских систем и CRM для запуска модели сегментации. Этап, формирующий аналитическую основу для всей работы в рамках цикла.", "problem": "Извлечение выборки требует координации между командами разработки данных и Data Science в рамках систем с различными циклами обновления — базовых банковских данных, журналов событий мобильного банка и записей контактов CRM. Проблемы качества выборки (отсутствие истории транзакций для недавно привлечённых клиентов, устаревшие демографические записи) выявляются лишь после завершения выгрузки, требуя частичного повторного извлечения, что задерживает этап анализа."}, {"slug": "analyze", "label": "Анализ", "title": "Запуск модели сегментации и оценка устойчивости сегментов", "intent": "Запускает модель сегментации на текущей выборке данных, оценивает устойчивость границ сегментов относительно предыдущего цикла и выявляет когорты клиентов, существенно мигрировавшие между сегментами. Аналитическое ядро цикла обновления.", "problem": "Оценка устойчивости сегментов требует сравнения присвоений текущего и предыдущего циклов на уровне отдельного клиента с последующей агрегацией для выявления потоков чистой миграции. Это сравнение выполняется вручную командой Data Science; отсутствие стандартной метрики устойчивости означает, что разные аналитики применяют разные пороги для определения существенного изменения границ сегментов, формируя несогласованные управленческие входные данные от цикла к циклу."}, {"slug": "validate", "label": "Валидация", "title": "Валидация определений сегментов бизнес-стейкхолдерами", "intent": "Представляет обновлённые определения сегментов и оценку их устойчивости коммерческим стейкхолдерам — руководителям продуктов, маркетинга и сегментов — для проверки на соответствие бизнес-логике. Этап, подтверждающий операционную ценность аналитически полученных сегментов до управленческого утверждения.", "problem": "Проверка на соответствие бизнес-логике проводится в формате воркшопа, где стейкхолдеры изучают профили сегментов и таблицы миграции. Сессия поглощает два-три дня рабочего времени старшего коммерческого состава за цикл и нередко выявляет разногласия по определениям границ сегментов, вынуждая команду Data Science запускать дополнительные вариации модели — что продлевает этап валидации на одну-две недели."}, {"slug": "approve", "label": "Утверждение", "title": "Управленческое утверждение обновлённой модели сегментации", "intent": "Получает официальное управленческое одобрение обновлённой модели сегментации от комитетов по кредитному риску, маркетингу и управлению данными. Контрольная точка одобрения гарантирует соответствие модели стандартам качества данных, справедливости и объяснимости до промышленного развёртывания.", "problem": "Пакеты управленческой документации для обновлений модели формируются вручную командой Data Science и проходят последовательное согласование в нескольких комитетах. Цикл одобрения добавляет четыре-шесть недель между валидацией модели и её промышленным развёртыванием; в этот период маркетинговые и продуктовые команды работают на устаревших сегментных присвоениях, снижая релевантность кампаний."}, {"slug": "deploy", "label": "Развёртывание", "title": "Развёртывание обновлённых сегментных присвоений в производственных системах", "intent": "Загружает утверждённые сегментные присвоения в системы маркетинговой автоматизации, CRM и продуктовой доступности; обновляет таблицы сопоставления сегментов и продуктов; распределяет актуализированные определения сегментов всем командам-потребителям. Этап, обеспечивающий операционную эффективность результатов цикла обновления.", "problem": "Развёртывание сегментных присвоений требует скоординированных обновлений в нескольких системах с различными окнами выгрузки и требованиями к управлению изменениями. Ошибки развёртывания — несовпадение идентификаторов клиентов между аналитической выгрузкой и производственной CRM или сбои загрузки в системах маркетинговой автоматизации — обнаруживаются после развёртывания и требуют процедур отката и повторного запуска."}], "urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle": [{"slug": "detect", "label": "Выявление", "title": "Выявление когорт риска по поведенческим сигналам", "intent": "Выявляет клиентов с поведенческими паттернами, ассоциированными с риском оттока, — снижением частоты транзакций, сокращением продуктового портфеля, перетоком остатков в другие банки, снижением цифровой активности или ростом жалоб. Этап, открывающий цикл удержания и определяющий группу риска текущего периода.", "problem": "Выявление когорты риска производится ежемесячным пакетным скорингом по модели склонности к оттоку клиентов. Ежемесячная периодичность означает, что клиенты с острыми сигналами оттока — внезапным исходящим движением остатков, инициацией закрытия счёта — не попадают в выборку до следующего скоринга; мониторинг сигналов оттока в режиме реального времени не является стандартной практикой в розничных банках большинства рынков СНГ."}, {"slug": "diagnose", "label": "Диагностика", "title": "Диагностика первопричин по когорте и продуктовому драйверу", "intent": "Диагностирует основные факторы риска оттока выявленной когорты — продуктовые, ценовые, обусловленные качеством обслуживания, офертой конкурента или жизненным событием — с детализацией, достаточной для разработки целевых мер удержания. Этап, переводящий список клиентов группы риска в actionable-брифинг по удержанию.", "problem": "Диагностика первопричин оттока для каждой когорты требует перекрёстного анализа скоринга склонности к оттоку с данными о жалобах, изменениях продуктового портфеля, взаимодействиях в отделениях и контакт-центре, а также с результатами NPS-опросов. Этот кросс-источниковый анализ выполняется вручную командой аналитики удержания для каждой когорты; диагностика носит качественный характер и документируется непоследовательно от цикла к циклу."}, {"slug": "engage", "label": "Вовлечение", "title": "Разработка и исполнение мер по удержанию", "intent": "Разрабатывает и исполняет меры по удержанию — выбор канала, конструирование оферты, последовательность контактов и персонализацию — для когорты клиентов группы риска. Этап, на котором диагностический брифинг трансформируется в клиентски ориентированную активность.", "problem": "Разработка мер по удержанию ведётся командой CRM и кампаний на основе ограниченного свода предварительно согласованных типов удержанческих офферт. Персонализация на уровне отдельного клиента — адаптация оферты и коммуникации к конкретному драйверу риска данного клиента — операционно неосуществима при ручном дизайне кампаний; банк направляет единообразные когортные предложения, слабо соответствующие индивидуальным ситуациям клиентов."}, {"slug": "track", "label": "Отслеживание", "title": "Отслеживание результатов вмешательств и измерение оттока когорты", "intent": "Измеряет результаты вмешательств по удержанию — соотношение охваченных и неохваченных клиентов, показатель успешного удержания по типам офферт, остаточный отток в обработанной когорте и выручку от сохранённых клиентов. Этап, устанавливающий эффективность цикла вмешательств.", "problem": "Результаты вмешательств по удержанию отслеживаются через отчёты кампаний, фиксирующие показатели контакта и немедленного принятия оферты. Долгосрочные результаты удержания — сохранял ли удержанный клиент активность на горизонте 90 и 180 дней — систематически не отслеживаются; банк не может определить, обеспечивают ли меры по удержанию долгосрочное сохранение отношений или лишь краткосрочную отсрочку оттока."}, {"slug": "learn", "label": "Обучение", "title": "Обновление модели и доработка свода практик по результатам вмешательств", "intent": "Обновляет модель склонности к оттоку и свод практик удержания на основе результатов вмешательств текущего цикла — какие сигналы предсказывали реальный отток, какие типы офферт обеспечивали устойчивое удержание, какие характеристики когорты прогнозировали успех вмешательства. Этап, повышающий качество выявления и вмешательств в следующем цикле.", "problem": "Обновления модели удержания происходят нечасто — как правило, ежегодно, совместно с циклом обновления сегментации, — а не после каждого цикла удержания. Данные о результатах вмешательств накапливаются в системах управления кампаниями, но не возвращаются в модель оттока и свод практик удержания в структурированном виде; банк не накапливает аналитический потенциал удержания цикл за циклом."}], "urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle": [{"slug": "scan", "label": "Сканирование", "title": "Сканирование конкурентных сигналов из публичных и сетевых источников", "intent": "Собирает конкурентные сигналы из регуляторных раскрытий, опубликованной финансовой отчётности, прессы и социальных сетей, анонсов продуктов, паттернов найма и данных управленческих сетей по заданному кругу конкурентов. Этап, определяющий сырую базу разведывательных данных для последующего синтеза.", "problem": "Сканирование сигналов ведётся стратегическими аналитиками через ручной мониторинг кураторского списка источников — регуляторных порталов, новостных агрегаторов, сайтов конкурентов и LinkedIn. Мониторинг носит периодический характер; сигналы, возникающие между сессиями сканирования, пропускаются или выявляются с опозданием. Ширина охвата источников ограничена временем аналитиков — действия конкурентов в менее отслеживаемых каналах (регуляторные рабочие группы, анонсы партнёрств финтех-компаний) оказываются недопредставленными в синтезе."}, {"slug": "analyze", "label": "Анализ", "title": "Аналитическая оценка действий конкурентов и их последствий", "intent": "Оценивает значимость собранных сигналов — какие действия конкурентов носят стратегический характер, какие тактический, какие свидетельствуют о смещении позиционирования, ценообразования или инвестиций в компетенции — и определяет их коммерческие и стратегические последствия для банка. Этап, преобразующий сырые данные в верифицированные аналитические выводы.", "problem": "Конкурентный анализ проводится небольшой стратегической командой, аналитическая пропускная способность которой ограничивает глубину оценки по всему конкурентному полю. Команда применяет единые аналитические фреймворки к конкурентам первого эшелона, тогда как конкуренты второго эшелона и финтех-компании рассматриваются лишь реактивно — когда конкретный шаг привлекает внимание руководства. Оценка носит качественный характер и практически не документируется в перерывах между формальными циклами брифинга."}, {"slug": "synthesize", "label": "Синтез", "title": "Кросс-конкурентный синтез и стратегические последствия", "intent": "Синтезирует верифицированные выводы по конкурентам в единую картину конкурентного ландшафта — сдвиги относительного позиционирования, зарождающиеся конкурентные темы и совокупные стратегические последствия для продуктовых, ценовых и рыночных приоритетов банка. Этап, переводящий оценки отдельных конкурентов в портфельное конкурентное видение.", "problem": "Кросс-конкурентный синтез требует от стратегической команды одновременного удержания в рабочей памяти оценок нескольких конкурентов и выявления сквозных тем и последствий для относительного позиционирования. Синтез формируется раз в квартал к формальному циклу брифинга; в межцикловые периоды механизма обновления кросс-конкурентной картины по мере поступления новых сигналов не существует."}, {"slug": "brief", "label": "Брифинг", "title": "Подготовка и передача конкурентного разведочного брифинга", "intent": "Подготавливает и передаёт конкурентный разведочный брифинг стратегическому, коммерческому и продуктовому руководству — в формате, адаптированном для каждой аудитории (сводка для исполнительного комитета, конкурентная карточка для руководителя продукта, коммерческий брифинг для регионального подразделения). Этап, на котором разведывательные данные становятся управленческим ресурсом.", "problem": "Конкурентные брифинги формируются в едином формате для всей руководящей аудитории без учёта различных потребностей: руководителям продуктов требуется сравнение функциональных возможностей, коммерческим лидерам — ценовые и офертные бенчмарки, исполнительному комитету — оценка стратегических позиционных сдвигов. Адаптация под конкретную аудиторию производится вручную и не реализуется системно в рамках стандартного цикла брифинга."}, {"slug": "track", "label": "Отслеживание", "title": "Непрерывный мониторинг приоритетных стратегических тем конкурентов", "intent": "Ведёт структурированный мониторинг поименованных стратегических тем, выявленных в предшествующих циклах брифинга, — запуски продуктов конкурентами, ценовые изменения, выход на рынок или уход с него, анонсы партнёрств — в период между формальными циклами. Этап, обеспечивающий эскалацию существенных событий на триггерной основе без ожидания следующего цикла.", "problem": "В межцикловые периоды структурированного механизма отслеживания прогресса по выявленным стратегическим темам не существует. Значимые действия конкурентов — крупный запуск продукта, пересмотр ценообразования, регуляторная заявка — выявляются по неформальным каналам и эскалируются непоследовательно. Функция отслеживания реализуется через осведомлённость руководства, а не через систематический механизм мониторинга."}], "urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle": [{"slug": "listen", "label": "Мониторинг", "title": "Мониторинг бренд-сигналов по каналам и источникам", "intent": "Ведёт мониторинг заданной вселенной источников на предмет бренд- и репутационных сигналов — упоминаний в социальных сетях, публикаций в СМИ, регуляторных комментариев, активности на платформах жалоб и данных маркетинговых исследований. Этап, определяющий сырой поток сигналов, доступный для агрегации и анализа.", "problem": "Мониторинг бренда осуществляется с помощью коммерческого инструмента медиамониторинга, ручного просмотра социальных сетей и периодических опросов удовлетворённости клиентов. Коммерческий инструмент охватывает прессу и основные социальные сети; мониторинг Telegram-каналов, агрегаторов жалоб и надзорных выводов регулятора ведётся неформально. Охват сигналов остаётся неполным и непоследовательным по каналам."}, {"slug": "aggregate", "label": "Агрегация", "title": "Агрегация и категоризация бренд-сигналов по теме и тональности", "intent": "Агрегирует собранные сигналы в структурированный датасет, категоризированный по теме (жалоба на продукт, инцидент обслуживания, реакция на маркетинговую кампанию, регуляторный комментарий, сравнение с конкурентами) и тональности. Этап, преобразующий необработанный поток сигналов в структурированный аналитический источник.", "problem": "Агрегация сигналов из каналов с различными форматами данных требует ручной категоризации от команды бренд-аналитики. Согласованность категоризации — применение единой тематической таксономии к разным типам сигналов — зависит от суждения конкретного аналитика; тематические и тональные категории дрейфуют между отчётными периодами, делая трендовый анализ ненадёжным."}, {"slug": "analyze", "label": "Анализ", "title": "Трендовый анализ и оценка репутационного риска", "intent": "Анализирует агрегированные сигналы на предмет существенных трендов — динамики тональности, концентрации зарождающихся тем, сравнения бренда с конкурентами и паттернов опережающих индикаторов, предшествующих значимым репутационным событиям. Этап, устанавливающий, соответствует ли текущая картина бренд-сигналов штатному режиму или свидетельствует о формирующемся риске.", "problem": "Трендовый анализ выполняется командой по работе с брендом вручную на основе агрегированного датасета сигналов. Анализ сосредоточен на объёме и тональности сигналов текущего периода, а не на опережающих индикаторах, предшествующих репутационным эскалациям; аналитические возможности банка носят реактивный, а не предиктивный характер."}, {"slug": "alert", "label": "Оповещение", "title": "Оповещение руководства о существенных сдвигах тональности", "intent": "Формирует оповещения для маркетинга, коммуникаций и высшего руководства о существенных сдвигах тональности — значительных всплесках объёма, быстром ухудшении сентимента или зарождающихся темах с потенциалом репутационной эскалации — вне стандартного цикла отчётности. Этап, обеспечивающий осведомлённость руководства о бренд-рисках на основе событийных триггеров.", "problem": "Порог оповещения для эскалации к руководству определён неформально. На практике аналитики инициируют эскалацию, когда отдельные сигналы привлекают их внимание, а не когда совокупная картина сигналов пересекает заданный порог существенности. Результат — непоследовательная эскалация: часть существенных бренд-рисков поступает к руководству с задержкой, тогда как другие эскалируются по единичным сигналам, оказывающимся несущественными в совокупности."}, {"slug": "respond", "label": "Реагирование", "title": "Координация реагирования и исполнение коммуникационных мер", "intent": "Координирует ответные меры банка на выявленные бренд-риски — коммуникационную стратегию, клиентские сообщения, взаимодействие с прессой, работу с регулятором и корректировку кампаний — и отслеживает влияние принятых мер на последующие данные бренд-сигналов. Этап, замыкающий цикл между обнаружением сигнала и институциональной реакцией.", "problem": "Координация ответных мер охватывает несколько команд — коммуникации, маркетинг, юридическую службу, операционный блок и нередко офис генерального директора — при отсутствии регламента реагирования, определяющего путь эскалации, полномочия на согласование и сроки ответа по каждой категории риска. Координация в условиях временного давления приводит к непоследовательному качеству ответных мер; эффективность реагирования не отслеживается систематически относительно последующих данных бренд-сигналов."}]};
+
+  const STAGE_LABELS = {
+    problem: "\u0420\u0435\u0448\u0430\u0435\u043c\u0430\u044f \u0437\u0430\u0434\u0430\u0447\u0430",
+  };
+
+  const modalEl   = document.getElementById('stageModal');
+  const contentEl = modalEl.querySelector('.modal__content');
+  const closeBtn  = modalEl.querySelector('.modal__close');
+
+  function openModal()  { modalEl.classList.add('is-open');    modalEl.setAttribute('aria-hidden', 'false'); }
+  function closeModal() { modalEl.classList.remove('is-open'); modalEl.setAttribute('aria-hidden', 'true');  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modalEl.addEventListener('click', (e) => { if (e.target === modalEl) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalEl.classList.contains('is-open')) closeModal();
+  });
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => (
+      {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+    ));
+  }
+
+  // Auto-open the <details> for a flow when arrived via #fragment
+  // (e.g. linked from L1 page flow-card or top-page value-streams card —
+  // clicking an individual flow name navigates here with #<flow-slug>).
+  function openDetailsFromHash() {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target && target.tagName === 'DETAILS') {
+      target.open = true;
+      // Defer scroll so the layout reflows after open.
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+  }
+  openDetailsFromHash();
+  window.addEventListener('hashchange', openDetailsFromHash);
+
+  document.querySelectorAll('.flow-stages__stage').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const stageSlug = btn.dataset.stage;
+      const flowUrn   = btn.dataset.flowId;
+      const stages    = FLOW_STAGES[flowUrn] || [];
+      const stage     = stages.find((s) => s.slug === stageSlug) || {};
+      contentEl.innerHTML = `
+        <div class="modal__eyebrow">${escapeHtml(stage.label || stageSlug)}</div>
+        <h3 class="modal__title">${escapeHtml(stage.title || stage.label || stageSlug)}</h3>
+        ${stage.intent  ? `<p class="modal__intent">${escapeHtml(stage.intent)}</p>` : ''}
+        ${stage.problem ? `
+          <div class="modal__problem">
+            <div class="modal__problem-label">${escapeHtml(STAGE_LABELS.problem)}</div>
+            <p>${escapeHtml(stage.problem)}</p>
+          </div>` : ''}
+      `;
+      openModal();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

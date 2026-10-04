@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "humanize"
+version = "1.10.4"
+description = "Deterministic pre/post assessment for line-editing AI-drafted prose (no model calls)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT (vendored rule sets: see THIRD_PARTY.md)" }
+
+[project.scripts]
+humanize = "humanize.cli:main"
+
+[tool.setuptools]
+packages = ["humanize"]
+
+[tool.setuptools.package-data]
+humanize = ["data/*.json", "data/*.ini", "data/rules/*.md", "data/selftest/*.md", "data/providers/*.md", "data/agents/**/*", "data/vendor/**/*"]

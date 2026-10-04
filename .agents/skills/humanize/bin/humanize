@@ -1,0 +1,30 @@
+#!/bin/sh
+# humanize launcher: runs the tool from this folder with no installation. Works on macOS and Linux, from any working
+# directory, through symlinks, and in minimal shells (agent sandboxes, cron, non-login shells).
+#   HUMANIZE_PYTHON  use this Python (3.9+) instead of searching for one
+set -eu
+
+# Locate this script, following symlinks (no readlink -f: not on older macOS).
+SELF=$0
+while [ -h "$SELF" ]; do
+  LINK=$(ls -l "$SELF" | sed 's/.* -> //')
+  case $LINK in /*) SELF=$LINK ;; *) SELF=$(dirname -- "$SELF")/$LINK ;; esac
+done
+DIR=$(CDPATH= cd -- "$(dirname -- "$SELF")/.." && pwd -P)
+
+# Find Python 3.9+: $HUMANIZE_PYTHON, python3, versioned names, then common install locations.
+ok() { "$1" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 9) else 1)' >/dev/null 2>&1; }
+PY=${HUMANIZE_PYTHON:-}
+if [ -n "$PY" ]; then
+  ok "$PY" || { echo "humanize: HUMANIZE_PYTHON=$PY is not Python 3.9+" >&2; exit 1; }
+else
+  for c in python3 python3.14 python3.13 python3.12 python3.11 python3.10 python3.9 \
+           /opt/homebrew/bin/python3 /usr/local/bin/python3 /usr/bin/python3; do
+    if command -v "$c" >/dev/null 2>&1 && ok "$c"; then PY=$(command -v "$c"); break; fi
+  done
+  [ -n "$PY" ] || { echo "humanize: Python 3.9+ not found; install it or set HUMANIZE_PYTHON" >&2; exit 1; }
+fi
+
+# UTF-8 regardless of locale (C/POSIX locales on Linux servers), no bytecode caches anywhere.
+export PYTHONUTF8=1 PYTHONDONTWRITEBYTECODE=1
+PYTHONPATH="$DIR${PYTHONPATH:+:$PYTHONPATH}" exec "$PY" -m humanize "$@"

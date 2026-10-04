@@ -129,3 +129,11 @@ handoffs, or when setting up repository workflows, read the installed
 [development workflow guide](.claude/skills/grace-execute/references/development-workflows.md).
 It routes scenarios and supplies an optional BB starter. Small tasks stay
 direct; creating or running orchestration needs applicable explicit authority.
+
+<!-- humanize:begin v1.10.4 (managed by humanize deploy; edit outside this block) -->
+## Humanize
+
+To humanize, de-AI, or line-edit prose (one file, several, or a folder), use the `humanize` skill (`/humanize`). It runs the local tool `.claude/skills/humanize/bin/humanize` (not on PATH; call it by this path), which never calls a model: each document is edited by a fresh `humanize-editor` sub-agent (latest Opus, effort high), gated, and reported under `.runtime/humanize/<YYYYMMDDHHMMSS>/`. Folders default to Markdown files. Sources are never modified. Do not edit files under `.claude/skills/humanize/`; verify with `.claude/skills/humanize/bin/humanize doctor .` and update by deploying a newer package.
+
+When you write or edit Markdown, never hard-wrap prose to a line width: keep each paragraph and each list item on one line, so no sentence is split across lines. Breaks between paragraphs, headings, list items, and table rows stay as they are. To find wrapped files, run `.claude/skills/humanize/bin/humanize tidy --check <files or folders>`; to rejoin them, use `--write` (the rendered Markdown does not change).
+<!-- humanize:end -->

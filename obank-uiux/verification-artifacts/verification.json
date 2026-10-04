@@ -1,0 +1,14 @@
+{
+  "layout_cases": 180,
+  "accessibility_cases": 30,
+  "interactions": [
+    "Catalogue filtering, selected-record identity, no matches and reset",
+    "Profile keyboard tabs, supporting contents and central reading space",
+    "Flow keyboard selection and text equivalent",
+    "Form error recovery, retained input, escaped preview, confirm, Escape and focus return",
+    "Comparison aspect and activity type selection",
+    "Global search, language/theme and collapsed mobile navigation",
+    "Asset search, original asset download and implementation kit download"
+  ],
+  "failures": []
+}

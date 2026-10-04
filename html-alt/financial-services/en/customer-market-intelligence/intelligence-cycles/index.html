@@ -1,0 +1,2195 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intelligence Cycles</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/service.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/flow-set.css">
+</head>
+
+
+<body class="page--flow-set">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Customer &amp; Market Intelligence</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Intelligence Cycles</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Intelligence Cycles</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">The analytics and intelligence cycle set that anchors customer and market understanding — from segmentation refresh through retention review, competitive intelligence, and brand sentiment monitoring.</p>
+  
+</header>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <main id="main-content" class="flow-categories" aria-label="Flow categories">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="flow-category" id="customer-insights">
+
+  <h2 class="flow-category__title">Customer insights</h2>
+
+  
+  <div class="flow-category__table">
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="segmentation-refresh-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Segmentation refresh cycle</h3>
+    </div>
+    <p class="flow-detail__intent">Periodic review and update of the customer segmentation model — sampling current behaviour, re-running the analytical model, validating segment stability, obtaining governance approval, and deploying updated segment assignments to marketing and product systems. The cycle anchor is elapsed time from data sample to live deployment.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">The segmentation refresh cycle maintains the currency of the bank&#39;s customer segmentation model — the classification of customers into behavioural, value-based, or needs-based groups that drives product targeting, campaign design, retention investment prioritization, and pricing decisions. GenAI compresses the validation and approval preparation stages — drafting the segment-stability narrative, highlighting the most significant boundary changes, and preparing the governance pack for approval — so the data science team concentrates on model calibration rather than documentation.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Flow lens problems">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Segment migration patterns and behavioural shifts that signal a segmentation model becoming stale are visible only at the annual or quarterly refresh cycle boundary. Continuous monitoring of segment assignment stability — detecting cohort behavioural drift before it reaches the formal refresh trigger — is absent from the standard intelligence operating cycle.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Segmentation model calibration — which variables drive segment differentiation, what the optimal number of segments is, whether the model produces commercially actionable boundaries — is assessed informally by the data science team at each refresh. Structured model comparison (alternative segmentation approaches, different variable sets, different cluster counts) is rarely conducted between major refresh cycles.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Segment stability assessment documentation, governance approval pack production, and segment-definition communication to consuming teams are structured, recurring tasks that follow a consistent format each cycle. Each is amenable to agent-assisted drafting with data science and governance review.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Segment refresh retrospective findings — which segments proved unstable, which boundary changes were later reversed, which model variables drifted — are not captured in a structured form that improves the design of the next cycle&#39;s model. The bank reconstructs the same analytical framework each refresh cycle without compounding its modelling institutional knowledge.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Flow stages">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="sample"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Sample</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="analyze"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Analyze</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="validate"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Validate</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="approve"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Approve</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="deploy"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
+  >
+    <span class="flow-stages__stage-label">Deploy</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Scenarios">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-governance-pack-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Segmentation Governance Pack Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent drafts the governance approval pack for the updated segmentation model — segment-stability narrative, boundary-change summary, and committee-ready documentation — from the data science team&#39;s analytical outputs. The data science team reviews and submits; drafting effort is eliminated.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Governance approval packs for segmentation model updates are authored manually by the data science team and reviewed sequentially across credit risk, marketing, and data governance committees. The approval cycle adds four to six weeks between validated model and live deployment, during which marketing and product teams operate on outdated segment assignments.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the current-cycle segmentation model outputs, prior-cycle assignments, and governance pack template, then drafts the stability narrative, boundary-change commentary, and committee submission. The data science team reviews the draft and submits for approval, concentrating effort on model calibration rather than documentation production.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">A committee-ready segmentation governance approval pack — covering segment-stability narrative, boundary-change summary, and supporting documentation — is drafted from the data science team&#39;s analytical outputs and available for team review within 48 hours.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces a draft governance pack for ≥90% of segmentation refresh cycles requiring committee approval from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of agent-drafted governance packs accepted by the data science lead for committee submission with minor amendment or none.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Governance pack drafting time reduced from 3–5 days of manual document assembly to ≤48 hours of agent-assisted review and submission.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-cycle-retrospective">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Segmentation Cycle Retrospective</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent produces a structured retrospective after each segmentation refresh cycle — capturing which segments proved unstable, which boundary changes were later reversed, and which model variables drifted — as a compounding knowledge record for subsequent cycle design.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Segmentation refresh retrospective findings are not captured in a structured form that improves subsequent cycle models. The data science team reconstructs the same analytical framework each refresh without reference to prior-cycle insights; boundary decisions that proved commercially invalid are repeated.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads prior-cycle segment assignments, current-cycle model outputs, and post-deployment commercial performance data, then produces a structured retrospective identifying stability patterns, reversed boundary changes, and variable drift. The retrospective is appended to the segmentation knowledge base and referenced in the next cycle&#39;s model design brief.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">A structured retrospective after each segmentation refresh cycle — capturing segment instability findings, reversed boundary changes, and drifted model variables — is available as a compounding knowledge record for subsequent cycle design.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces a structured retrospective for ≥95% of completed segmentation refresh cycles within 30 days of cycle close.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of retrospective findings rated as directly applicable to the next cycle&#39;s design decisions by the data science team lead.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Retrospective production cycle reduced from ad hoc post-cycle documentation effort to structured automated assembly completed within 5 days of cycle close.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segment-stability-continuous-monitor">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Segment Stability Continuous Monitor</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors segment assignment stability on a continuous cadence between formal refresh cycles, detecting cohort behavioural drift before it reaches the formal refresh trigger. Segment heads receive an alert when boundary movement crosses a defined materiality threshold.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Segment migration patterns that signal a stale segmentation model are visible only at the quarterly or annual refresh cycle boundary. Customers exhibiting material behavioural shifts — high-value downgraders, emerging mid-tier — are identified retrospectively, after the commercial window for intervention has passed.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads transaction, product-holding, and digital engagement feeds weekly, recalculates segment assignment likelihood per customer, and detects cohorts where boundary movement exceeds the stability threshold. The data science team receives a drift alert with the affected cohort profile and a recommended trigger assessment for an off-cycle refresh.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Segment assignment stability is monitored continuously between formal refresh cycles, with an alert to segment heads when boundary movement crosses the defined materiality threshold — enabling intervention before the formal refresh trigger.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent monitors segment stability and evaluates materiality thresholds continuously from go-live, with ≥98% of scheduled daily evaluation cycles completed for ≥48 consecutive weeks.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of boundary movement alerts confirmed as warranting segment review by the segment head on receipt.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Segment drift detection cycle reduced from formal refresh cadence (quarterly or annually) to continuous monitoring with ≤24-hour alert latency from threshold crossing to segment head notification.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-model-calibration-sandbox">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Segmentation Model Calibration Sandbox</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates structured comparisons across alternative segmentation approaches — different variable sets, cluster counts, and boundary definitions — so the data science team evaluates a wider model space before committing to the refresh-cycle model. The assessment replaces informal calibration judgment with a documented comparison record.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Segmentation model calibration is assessed informally at each refresh; structured comparison across alternative approaches is rarely conducted between major cycles. The data science team applies the same variable set and cluster count unless a material commercial concern prompts a review, leaving potential improvements in model granularity unexplored.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent runs parameterised model variants against the current data sample — varying variable inclusion, cluster count, and boundary sensitivity — and produces a comparison table scored on stability, commercial discriminability, and segment size distribution. The data science team reviews the ranked alternatives and selects the model for validation, with the comparison record serving as governance documentation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Structured comparisons across alternative segmentation approaches — covering different variable sets, cluster counts, and boundary definitions — are available to the data science team before the refresh-cycle model commitment, expanding the evaluated model space without increasing analyst workload.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent generates a structured multi-approach comparison for ≥90% of segmentation refresh cycles requiring model calibration from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of comparison outputs rated as materially expanding the model evaluation space by the data science lead on review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Model calibration scenario generation cycle reduced from 2–3 weeks of manual model-by-model analytical work to ≤3 days of agent-assisted parallel comparison production.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="retention-review-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Retention review cycle</h3>
+    </div>
+    <p class="flow-detail__intent">Recurring cycle of churn risk detection, root-cause diagnosis, retention intervention design and execution, outcome tracking, and learning capture. The cycle anchor is elapsed time from at-risk signal detection to intervention execution.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">The retention review cycle governs how the bank identifies customers at material churn risk, diagnoses the behavioural and product drivers of that risk, designs and deploys retention interventions, tracks their effectiveness, and updates its retention models and playbooks from outcomes. GenAI compresses the detect-to-engage sequence — generating at-risk cohort profiles, drafting intervention briefs, and producing campaign content variants — so the retention team acts on signals within days rather than weeks.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Flow lens problems">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Churn risk accumulates in customer behaviour data between monthly scoring runs. Continuous monitoring of individual customer engagement signals — balance flows, transaction frequency, product interaction — would enable the bank to act on retention risk before the cohort has consolidated its decision. This continuous-form posture is not standard in CIS retail operations.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Retention offer calibration — which offers produce the highest save rate for which risk profiles — is managed through qualitative campaign experience rather than structured A/B testing at scale. The bank cannot systematically optimize its offer mix because outcome attribution across simultaneous campaigns is not tracked at the required granularity.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">At-risk cohort profiling, retention brief preparation, campaign content variant drafting, and outcome tracking report production are structured, recurring tasks that follow a consistent pattern each cycle. Each is amenable to agent-assisted production, with retention team judgment concentrated on intervention design and escalation decisions.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Retention intervention outcomes and churn driver patterns accumulate across cycles but are not organized into an institutional knowledge base that improves subsequent cycle design. The bank&#39;s understanding of its customers&#39; churn dynamics is rebuilt informally by whichever analyst leads the current cycle rather than from a compounding retention intelligence record.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Flow stages">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="detect"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Detect</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="diagnose"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Diagnose</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="engage"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Engage</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="track"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Track</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="learn"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
+  >
+    <span class="flow-stages__stage-label">Learn</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Scenarios">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-cohort-profiling-brief">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Retention Cohort Profiling Brief</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates at-risk cohort profiles and retention intervention briefs each cycle from churn model outputs and diagnostic cross-reference data. The retention team reviews the brief and directs intervention design; profile assembly and brief production effort is eliminated.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>At-risk cohort profiling requires the retention analytics team to cross-reference churn-propensity scores with complaint data, product-holding changes, branch interaction logs, and NPS responses. The diagnostic is qualitative, inconsistently documented across cycles, and absorbs analyst capacity that should concentrate on intervention design.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the batch churn-propensity scores and cross-references each at-risk customer against complaint, product, and interaction histories, then generates a cohort profile summarising the top churn drivers and recommended intervention types by sub-cohort. The retention team reviews the brief at the start of each cycle and designs the intervention from the agent-produced diagnostic.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">At-risk cohort profiles and retention intervention briefs — generated from churn model outputs and diagnostic cross-reference data — are available to the retention team at the start of each cycle, with profile assembly and brief production effort eliminated.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces cohort profiling briefs for ≥95% of at-risk clusters identified in each scoring cycle for ≥48 consecutive cycles post go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of cohort briefs confirmed as sufficient for intervention design without supplementary manual profiling by the retention team lead.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Cohort brief preparation cycle reduced from 3–5 days of manual cohort assembly and narrative drafting to ≤24 hours of automated production.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/real-time-churn-signal-detection">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Real-Time Churn Signal Detection</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors individual customer engagement signals on a continuous cadence — balance flows, transaction frequency, product interaction, and digital engagement — detecting acute churn indicators between monthly scoring runs. The retention team receives an alert for customers crossing the high-risk threshold with sufficient lead time to act.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>At-risk cohort detection depends on a monthly batch scoring run. Customers who exhibit acute churn signals — sudden balance outflow, account deactivation initiation, digital disengagement — are not identified until the next scoring run; the intervention window closes before the bank is aware of the risk.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent monitors transaction, balance, and digital-engagement feeds continuously, applies the bank&#39;s churn-signal taxonomy at the individual customer level, and generates an alert when a customer crosses the real-time high-risk threshold. The retention team receives the alert with a preliminary driver profile and recommended contact priority, acting within the intervention window rather than after it.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Acute churn signals — detected from continuous monitoring of balance flows, transaction frequency, product interaction, and digital engagement — trigger a retention team alert for customers crossing the high-risk threshold between monthly scoring runs.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent monitors engagement signals continuously and generates alerts for ≥95% of customers crossing the defined acute churn threshold within 24 hours of signal detection, across ≥48 consecutive weeks.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of acute churn alerts confirmed as requiring retention intervention by the retention team lead on weekly review; churn rate among alerted customers who receive intervention tracked against the non-alerted at-risk baseline.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Acute churn detection cycle reduced from monthly batch scoring to continuous monitoring with ≤24-hour alert latency from signal to retention team notification.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-offer-ab-optimisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Retention Offer A/B Optimisation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent tracks retention intervention outcomes at the offer-type and cohort-profile level across simultaneous campaigns, producing a ranked offer-effectiveness matrix that the retention team uses to calibrate its offer mix each cycle. Attribution is maintained at the individual customer level to separate overlapping campaign effects.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Retention offer calibration is managed through qualitative campaign experience rather than structured A/B testing at scale. Outcome attribution across simultaneous campaigns is not tracked at the required granularity; the bank cannot determine which offer type produces the highest save rate for which customer risk profile.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads campaign response data and matched control groups at the individual customer level, applies offer-type and cohort-profile attribution, and produces a ranked effectiveness matrix covering save rate, durability at 90 and 180 days, and revenue impact. The retention team uses the matrix to adjust offer selection criteria for the following cycle, with the agent updating the matrix after each campaign closes.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">A ranked offer-effectiveness matrix — tracking retention intervention outcomes at offer-type and cohort-profile level across simultaneous campaigns with individual-level attribution — is available to the retention team for offer mix calibration each cycle.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces the offer-effectiveness matrix for ≥95% of scheduled monthly review cycles for ≥12 consecutive months post go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of offer-effectiveness rankings confirmed as directionally accurate by the retention lead on monthly review; offer mix calibration decisions documented and tracked against subsequent save rate outcomes.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Offer effectiveness analysis cycle reduced from quarterly manual A/B result aggregation to monthly automated matrix production within 48 hours of period close.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intervention-personalisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Retention Intervention Personalisation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates individual-level retention communication and offer recommendations from the cohort diagnostic, enabling the CRM team to execute personalised outreach at scale. The recommendation is calibrated to the specific churn driver identified for that customer rather than a uniform cohort offer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Retention interventions are designed at the cohort level from a limited playbook of pre-approved offer types. Personalisation at the individual customer level — tailoring the offer and communication to the specific driver of that customer&#39;s risk — is not operationally feasible with manual campaign design; uniform cohort offers are poorly matched to individual situations.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the per-customer churn driver diagnosis from the cohort profiling brief, maps each driver to the approved retention offer and communication template library, and generates an individual-level recommendation covering offer type, channel preference, and message framing. The CRM team reviews the recommendations for the highest-value segment and executes the campaign from the agent-prepared content.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Individual-level retention communication and offer recommendations — calibrated to the specific churn driver identified for each customer rather than a uniform cohort offer — are available to the CRM team for personalised outreach execution at scale.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent generates a personalised retention recommendation for ≥90% of customers in the prioritised at-risk intervention queue on each weekly cycle for ≥48 consecutive weeks.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Save rate for customers receiving personalised agent-recommended offers ≥15% higher than the prior uniform-cohort-offer baseline on a 12-month cohort comparison.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Individual retention communication and offer preparation cycle reduced from 2–3 days of manual CRM segmentation and copywriting to ≤4 hours of automated recommendation generation and CRM team review.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intelligence-knowledge-base">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Retention Intelligence Knowledge Base</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent aggregates retention intervention outcomes, churn driver patterns, and model update records across cycles into a structured knowledge base, enabling the retention team to design each subsequent cycle from a compounding evidence record rather than from individual analyst memory.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Retention intervention outcomes accumulate in campaign systems but are not fed back into the churn model or retention playbook in a structured form. The bank&#39;s understanding of its customers&#39; churn dynamics is rebuilt informally by whichever analyst leads the current cycle; institutional retention intelligence does not compound over time.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads closed-cycle intervention outcomes, model update logs, and churn driver diagnoses, structures the findings into a queryable retention knowledge base, and surfaces relevant prior-cycle patterns at the start of each new cycle&#39;s design brief. The retention team references prior evidence when selecting detection thresholds and offer mixes, with the agent flagging analogous prior situations and their outcomes.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Retention intervention outcomes, churn driver patterns, and model update records are aggregated across cycles into a structured knowledge base, enabling the retention team to calibrate each subsequent cycle from a compounding evidence record.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent indexes retention cycle outcomes and churn driver findings for ≥95% of closed retention cycles within 14 days of cycle close, continuously from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of knowledge base retrievals rated as directly applicable to current cycle design by the retention team lead.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Prior-cycle retention evidence retrieval reduced from 1–2 days of manual report search and analyst recall to ≤1 hour of structured knowledge base query.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="flow-category" id="market-position">
+
+  <h2 class="flow-category__title">Market position</h2>
+
+  
+  <div class="flow-category__table">
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="competitive-intelligence-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Competitive intelligence cycle</h3>
+    </div>
+    <p class="flow-detail__intent">Recurring cycle of competitive signal scanning, analytical synthesis, leadership briefing production, and tracking of strategic moves by named competitors. The cycle anchor is elapsed time from signal emergence to decision-ready brief.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">The competitive intelligence cycle produces the recurring view of the competitive landscape that strategy and commercial leadership use to calibrate product, pricing, and positioning decisions. GenAI enables near-continuous competitive monitoring by aggregating signals from public sources automatically and generating structured competitive summaries on a weekly or event-triggered cadence.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Flow lens problems">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">The competitive landscape is assessed at quarterly briefing cycle boundaries. Market-share shifts, competitor product launches, and pricing moves that occur between briefing cycles accumulate without a structured early-escalation mechanism. Commercial decisions made between briefing cycles are made without current competitive context.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Competitive intelligence scope — which competitors to monitor, which signals to prioritize, which analytical frameworks to apply — is set by the strategy team based on current management priorities. Systematic coverage optimization (ensuring high-signal sources are covered proportionally to their competitive significance) is not performed; source and coverage gaps accumulate over time.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Signal aggregation, competitor-specific summary production, cross-competitor theme extraction, and briefing-format variants for different audiences are all structured, recurring production tasks. Each follows a consistent structure across cycles; the variable is the current-cycle signal content. These are strong candidates for agent-assisted production with strategy team editorial review.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Competitive intelligence briefs from prior cycles, together with the subsequent commercial outcomes of the competitive moves that were assessed, represent a cumulative evidence base for calibrating competitive signal significance. This retrospective evidence is not systematically organized to improve the accuracy of the next cycle&#39;s competitive assessment.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Flow stages">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="scan"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Scan</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="analyze"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Analyze</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="synthesize"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Synthesize</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="brief"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Brief</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="track"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
+  >
+    <span class="flow-stages__stage-label">Track</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Scenarios">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-signal-continuous-scan">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Competitive Signal Continuous Scan</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors the defined competitor source universe on a continuous cadence — regulatory portals, product pages, press, and recruitment signals — and generates structured competitor-event entries for each material signal detected between formal briefing cycles. Strategy analysts review and escalate; manual periodic scanning is eliminated.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Competitive signal scanning is conducted manually by strategy analysts on a periodic schedule against a curated source list. Signals emerging between scanning sessions are missed or identified late; competitor moves in lower-monitored channels — regulatory working groups, fintech partnership announcements — are systematically under-represented in the intelligence synthesis.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent monitors the defined source list continuously, detects competitor events against a defined signal taxonomy, and generates a structured event entry with competitor, event type, and preliminary significance assessment. The strategy team reviews the event queue daily, escalates material signals, and feeds confirmed events into the next briefing synthesis.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Structured competitor-event entries from continuous monitoring of regulatory portals, product pages, press, and recruitment signals are available to the competitive intelligence team on the next business day after signal detection.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent monitors the full defined competitor source universe and produces structured event entries for ≥98% of scheduled daily scanning cycles from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of structured competitor-event entries confirmed as material and accurately categorised by the competitive intelligence team on weekly sampling review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Competitor signal detection and entry production cycle reduced from weekly manual monitoring passes to daily automated scan with same-day event entry.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-brief-audience-variants">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Competitive Brief Audience Variants</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates audience-calibrated variants of the competitive intelligence brief — ExCo strategic positioning summary, product head feature comparison card, and commercial lead pricing benchmark — from a single synthesis input. The strategy team reviews each variant; customisation effort is eliminated.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Competitive intelligence briefs are produced in a uniform format for the full leadership audience. Product heads require feature-level competitor comparisons; commercial leads require pricing and offer benchmarks; ExCo requires strategic positioning shifts. Audience-specific customisation is manual and inconsistently produced within the standard briefing cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the strategy team&#39;s synthesis and applies audience-specific brief templates — feature-table format for product heads, pricing grid for commercial leads, and strategic-narrative format for ExCo — generating three calibrated brief variants from a single analytical input. Each variant is reviewed and distributed by the strategy team within the standard briefing cadence.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Audience-calibrated competitive intelligence brief variants — ExCo strategic positioning summary, product head feature comparison card, and commercial lead pricing benchmark — are available from each competitive brief cycle without separate manual derivation per audience.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent generates all three audience variants for ≥90% of competitive intelligence brief cycles for ≥12 consecutive months post go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of audience-variant outputs rated as appropriately calibrated by the respective audience head without requiring material rework.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Audience variant production time reduced from 1–2 days of separate manual tailoring per audience to ≤2 hours of automated generation and review per cycle.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-coverage-gap-audit">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Competitive Coverage Gap Audit</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent audits the competitive monitoring source coverage against the defined competitor set and signal taxonomy, identifying unmonitored sources and coverage imbalances before they produce blind spots. The strategy team receives a quarterly coverage gap report with prioritised source additions.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Competitive intelligence scope and source coverage are set by the strategy team based on current management priorities. Gaps accumulate over time — unmonitored Telegram channels, complaint aggregator platforms, regional news sources — and are discovered only when a material signal surfaces through an unmonitored channel after the fact.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent maps the active monitoring source list against the full competitor set and a reference source taxonomy, scores each competitor-source combination on estimated signal density versus current coverage, and produces a ranked gap list with recommended source additions. The strategy team reviews the report quarterly and updates the monitoring configuration.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">An audit of competitive monitoring source coverage against the defined competitor set and signal taxonomy — identifying unmonitored sources and coverage imbalances — is available before each competitive briefing cycle closes.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent completes a coverage gap audit for ≥90% of scheduled competitive briefing cycles from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of identified coverage gaps confirmed as material by the competitive intelligence lead, resulting in source additions or explicit exclusion decisions.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Coverage audit cycle reduced from periodic manual source review to automated audit completed within 4 hours of each brief cycle trigger.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-intelligence-evidence-base">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Competitive Intelligence Evidence Base</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent maintains a retrospective evidence base linking prior competitive assessments to subsequent market outcomes — competitor product launches to observed share shifts, pricing moves to margin impact — calibrating the strategy team&#39;s signal-significance judgments across cycles.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Competitive intelligence briefs from prior cycles and the subsequent commercial outcomes of the competitive moves assessed are not systematically organized. The bank cannot determine retrospectively which competitive signals predicted material outcomes; signal-significance calibration remains an informal team judgment that does not improve over time.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads prior competitive intelligence outputs and links each assessed competitor event to subsequent observable outcomes — market-share data, product adoption trends, pricing announcements — tracking the accuracy of significance assessments over time. The strategy team reviews the outcome-attribution record before each major briefing cycle to recalibrate its signal-weighting criteria.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">A retrospective evidence base linking prior competitive assessments to subsequent market outcomes — competitor launches to observed share shifts, pricing moves to margin impact — is maintained continuously, available to each new competitive assessment cycle.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent indexes competitive assessment outcomes for ≥90% of assessed competitor events within 30 days of observable market outcome availability.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of evidence base retrievals rated as directly applicable to current competitive assessment calibration by the strategy team.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Prior competitive outcome retrieval for new assessment work reduced from 1–2 days of manual record search to ≤1 hour of structured evidence base query.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="brand-sentiment-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Brand sentiment cycle</h3>
+    </div>
+    <p class="flow-detail__intent">Recurring cycle of brand and reputation signal listening, aggregation, analytical synthesis, alerting, and response coordination. The cycle anchor is elapsed time from reputation signal emergence to management awareness and response.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">The brand sentiment cycle governs how the bank monitors and responds to its brand and reputation standing across public channels — social media, press, regulatory commentary, customer complaint platforms, and market research. GenAI enables continuous brand signal aggregation — monitoring the defined source universe and generating structured alerts for material sentiment shifts — so the bank responds to brand threats within hours rather than at the next weekly or monthly reporting cycle.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Flow lens problems">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Brand signals accumulate across monitoring channels between reporting cycles. Significant sentiment shifts that begin in social media or Telegram channels and escalate to press or regulatory commentary progress through their early stages without management awareness. A continuous-form brand signal posture would enable the bank to respond at the early-warning phase rather than after the escalation.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Brand monitoring source coverage — which channels to monitor, with what frequency, at what signal-to-noise threshold — is set by the current monitoring tool configuration and analyst routine. Coverage gaps (unmonitored Telegram channels, complaint aggregator platforms, regional news sources) accumulate without a systematic coverage audit; the bank discovers source gaps when a material signal surfaces through an unmonitored channel.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Signal aggregation, categorization, sentiment scoring, trend summary production, and alert generation are all structured, recurring tasks with defined criteria. Each is amenable to agent-assisted processing that compresses the signal-to-management-awareness interval from days to hours.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Brand sentiment trends and their correlation with downstream outcomes — customer acquisition rate, complaint volume, deposit flow — are not analyzed systematically to build a predictive model of brand impact on commercial performance. The brand function tracks sentiment as an end in itself rather than as a leading indicator of commercial and reputational outcomes.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Flow stages">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="listen"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Listen</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="aggregate"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Aggregate</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="analyze"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Analyze</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="alert"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Alert</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="respond"
+    data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
+  >
+    <span class="flow-stages__stage-label">Respond</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Scenarios">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-signal-continuous-aggregation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Brand Signal Continuous Aggregation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors the defined brand signal source universe on a continuous cadence — press, social media, Telegram channels, complaint platforms, and regulatory commentary — and produces a structured daily signal feed categorised by theme and sentiment. The brand analytics team reviews the feed; manual aggregation across disparate sources is eliminated.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Brand signal aggregation spans sources with different formats — commercial media monitoring tools, manual social media review, and informal Telegram tracking — and relies on manual analyst categorisation. Coverage is incomplete; categorisation consistency degrades across reporting periods, making trend analysis unreliable.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the full defined source list on a continuous cadence, applies a unified theme and sentiment taxonomy, and generates a structured daily signal feed with source attribution and volume counts by theme. The brand analytics team reviews anomalies and updates theme assignments; trend analysis is performed against a consistent, agent-maintained categorisation rather than manually recoded data.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">A structured daily brand signal digest covering press, social media, Telegram channels, complaint platforms, and regulatory commentary is available to communications leadership from continuous source monitoring — eliminating manual signal collection effort.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces the structured daily brand signal digest for ≥98% of scheduled calendar days from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of daily digests rated as materially complete and well-structured by the communications lead on weekly sampling review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Daily brand signal collection and digest assembly cycle reduced from 2–3 hours of manual monitoring and aggregation to ≤15 minutes of communications team review.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-materiality-alert-calibration">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Brand Materiality Alert Calibration</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors the brand signal feed against defined materiality thresholds — volume spike, sentiment deterioration rate, and emerging theme concentration — and generates a management alert when any threshold is crossed. The threshold configuration is reviewed quarterly by the brand team against prior alert accuracy data.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Management escalation thresholds for brand risk are informal; analysts escalate when individual signals attract attention rather than when the aggregate pattern crosses a defined materiality level. Material brand risks reach management late; non-material signals are over-escalated. Escalation calibration does not improve over time.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent applies defined materiality thresholds to the continuous brand signal feed — volume spike above rolling baseline, sentiment deterioration above a defined rate, or emerging theme reaching a defined share of total signal volume — and generates a structured management alert on threshold crossing. The brand team reviews alert accuracy quarterly and recalibrates threshold parameters based on prior false-positive and missed-escalation data.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Management alerts are generated automatically when brand signal volume, sentiment deterioration rate, or emerging theme concentration crosses defined materiality thresholds — giving the communications team structured notice before escalation.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent monitors brand signal inputs and evaluates threshold conditions for ≥99% of scheduled daily monitoring cycles from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of materiality alerts confirmed as warranting management communication by the Head of Communications on review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Time from threshold breach to management alert delivery reduced from 24–48 hours of manual monitoring to ≤2 hours of automated detection and alert generation.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-response-protocol-assistant">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Brand Response Protocol Assistant</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent identifies the applicable response protocol category from the brand alert content, surfaces the pre-defined escalation path and approval authority, and drafts a first-version response communication for the brand team&#39;s review. Response coordination is structured from the start of the incident rather than assembled under time pressure.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Brand risk response coordination involves communications, marketing, legal, and operations without a defined protocol specifying escalation path, approval authority, and response timeline by risk category. Coordination under time pressure produces inconsistent response quality; teams reconstruct the process for each incident.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the brand alert content, classifies the risk category against the response protocol taxonomy, and generates a structured response brief: applicable escalation path, approval authority, timeline, and a draft first-version communication. The communications team reviews and refines the draft; the protocol classification eliminates the coordination overhead of determining who needs to be involved.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">A first-version response communication draft — with applicable protocol category, escalation path, and approval authority identified — is available to the communications team within minutes of a brand alert, enabling review-and-approve rather than draft-under-pressure workflows.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent generates a protocol-matched response draft for ≥90% of brand alerts classified above defined severity threshold within 30 minutes of alert receipt.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of agent-drafted response communications approved by the Head of Communications with minor amendment or none.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Initial response draft preparation time reduced from 2–4 hours of manual protocol review and drafting to ≤30 minutes of agent-assisted review and sign-off.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-commercial-impact-model">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Brand Commercial Impact Model</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent correlates brand sentiment trends against downstream commercial indicators — customer acquisition rate, deposit flow, NPS trajectory, and complaint volume — to build a predictive model of brand impact on commercial performance. Marketing and strategy leadership use the model to quantify the commercial case for brand investment.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Brand sentiment trends and their correlation with downstream commercial outcomes are not analyzed systematically. The brand function tracks sentiment as an end in itself rather than as a leading indicator of commercial performance; the commercial case for brand protection investment cannot be quantified from existing data.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads multi-period brand sentiment scores alongside commercial KPI series — acquisition volume, deposit inflow, NPS scores, and complaint volume — and identifies leading-indicator relationships with statistical confidence ranges. Marketing and strategy leadership use the model to set brand health thresholds with commercial consequence and to quantify the expected commercial impact of sustained sentiment deterioration.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">A predictive model linking brand sentiment trends to downstream commercial indicators — customer acquisition rate, deposit flow, NPS trajectory, and complaint volume — is maintained on a continuous basis, giving the CCO a quantified view of brand materiality.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent refreshes the brand-commercial correlation model for ≥90% of scheduled update cycles for ≥12 consecutive months.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of brand-to-commercial impact projections rated as directionally accurate by CCO and Head of Marketing against observed outcomes on quarterly review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Brand materiality modelling cycle reduced from quarterly commissioned analysis to monthly automated refresh.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">GenAI-enabled Banking and Financial Services Framework · v11i</footer>
+
+</div>
+
+
+<div class="modal" id="stageModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" type="button" aria-label="Close">×</button>
+    <div class="modal__content"></div>
+  </div>
+</div>
+
+
+<script>
+(function () {
+  // Per-flow stage map, embedded by the composer at render time.
+  // Keyed by flow URN → list of stage objects.
+  const FLOW_STAGES = {"urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle": [{"slug": "sample", "label": "Sample", "title": "Extract and prepare the analytical data sample", "intent": "Extracts the customer transaction, product holding, and demographic data sample from the core banking and CRM systems for the segmentation model run. The stage that establishes the data foundation for all analytical work in the cycle.", "problem": "Sample extraction requires coordination between the data engineering and data science teams across systems with different refresh cadences — core banking data, mobile banking event logs, and CRM contact records. Sample quality issues (missing transaction history for recently onboarded customers, stale demographic records) are identified only after the extract is complete, requiring partial re-extraction that delays the analysis stage."}, {"slug": "analyze", "label": "Analyze", "title": "Run segmentation model and assess segment stability", "intent": "Runs the segmentation model against the current data sample, assesses the stability of segment boundaries relative to the prior cycle, and identifies customer cohorts that have migrated materially between segments. The analytical core of the refresh cycle.", "problem": "Segment stability assessment requires comparison of current-cycle assignments to prior-cycle assignments at the individual customer level, then aggregation to identify net migration flows. This comparison is performed manually by the data science team; the absence of a standard stability metric means different analysts apply different thresholds for material segment boundary change, producing inconsistent governance inputs across refresh cycles."}, {"slug": "validate", "label": "Validate", "title": "Business stakeholder validation of segment definitions", "intent": "Presents the updated segment definitions and stability assessment to commercial stakeholders — product, marketing, and segment heads — for business-sense validation. The stage that confirms the analytically derived segments are operationally useful before governance approval.", "problem": "Business-sense validation is conducted as a workshop session where stakeholders review segment profiles and migration tables. The session absorbs two to three days of senior commercial time per cycle and frequently surfaces disagreements about segment boundary definitions that require the data science team to run additional model variations — extending the validation stage by one to two weeks."}, {"slug": "approve", "label": "Approve", "title": "Governance approval of updated segment model", "intent": "Obtains formal governance approval of the updated segmentation model from the credit risk, marketing, and data governance committees as required. The approval gate ensures the model meets data quality, fairness, and explainability standards before live deployment.", "problem": "Governance approval packs for model updates are authored manually by the data science team and reviewed sequentially across multiple committees. The approval cycle adds four to six weeks between validated model and live deployment; during this window, the marketing and product teams are operating on an outdated segment assignment, reducing campaign relevance."}, {"slug": "deploy", "label": "Deploy", "title": "Deploy updated segment assignments to production systems", "intent": "Loads the approved segment assignments into the marketing automation, CRM, and product eligibility systems; updates the segment-to-product mapping tables; and distributes the updated segment definitions to all consuming teams. The stage that makes the refresh cycle's output operationally effective.", "problem": "Segment assignment deployment involves coordinated updates across multiple systems with different deployment windows and change-management requirements. Deployment errors — mismatched customer IDs between the analytical data extract and the production CRM, or failed loads in downstream marketing automation — are identified after deployment and require rollback and re-run procedures."}], "urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle": [{"slug": "detect", "label": "Detect", "title": "Detect at-risk cohorts from behavioural signals", "intent": "Identifies customers exhibiting behavioural patterns associated with churn risk — declining transaction frequency, product holding reduction, balance migration to other institutions, reduced digital engagement, or increased complaint activity. The stage that opens the retention cycle and determines the at-risk population for the current period.", "problem": "At-risk cohort detection is performed through a monthly batch scoring run against the churn propensity model. The monthly cadence means that customers who exhibit acute churn signals — sudden balance outflow, account deactivation initiation — are not identified until the next scoring run; real-time churn signal detection is not standard practice in most CIS-market retail banking operations."}, {"slug": "diagnose", "label": "Diagnose", "title": "Root-cause diagnosis by cohort and product driver", "intent": "Diagnoses the principal drivers of churn risk for the identified cohort — product, pricing, service experience, competitor offer, or life-event trigger — at a level of specificity that enables targeted intervention design. The stage that translates a list of at-risk customers into an actionable retention brief.", "problem": "Root-cause diagnosis for churn cohorts requires cross-referencing the churn-propensity scores with complaint data, product-holding changes, branch and contact center interaction logs, and NPS survey responses. This cross-source analysis is performed manually by the retention analytics team for each cohort; the diagnostic is qualitative and inconsistently documented across cycles."}, {"slug": "engage", "label": "Engage", "title": "Retention intervention design and execution", "intent": "Designs and executes the retention intervention — channel selection, offer design, contact sequencing, and personalisation — for the at-risk cohort. The stage where the diagnostic brief becomes customer-facing activity.", "problem": "Retention intervention design is conducted by the CRM and campaign team from a limited playbook of pre-approved retention offer types. Personalisation at the individual customer level — tailoring the offer and the communication to the specific driver of that customer's risk — is not operationally feasible with manual campaign design; the bank sends uniform cohort offers that are poorly matched to individual customer situations."}, {"slug": "track", "label": "Track", "title": "Intervention outcome tracking and cohort attrition measurement", "intent": "Measures the outcome of the retention intervention — contacted versus uncontacted split, save rate by offer type, residual attrition in the treated cohort, and revenue impact of saves. The stage that determines whether the intervention cycle was effective.", "problem": "Retention intervention outcomes are tracked through campaign response reports that measure contact rate and immediate offer acceptance. Longer-term retention outcomes — whether the saved customer remained active at ninety and one-hundred-and-eighty days — are not systematically tracked; the bank cannot determine whether its retention interventions produce durable relationship saves or short-term deferrals."}, {"slug": "learn", "label": "Learn", "title": "Model update and playbook refinement from outcomes", "intent": "Updates the churn propensity model and retention playbook from the current cycle's intervention outcomes — which signals predicted genuine churn, which offer types produced durable saves, which cohort characteristics predicted intervention success. The stage that improves the next cycle's detection and intervention quality.", "problem": "Retention model updates occur infrequently — typically annually alongside the segmentation refresh — rather than after each retention cycle. Intervention outcome data accumulates in campaign systems but is not fed back into the churn model or the retention playbook in a structured form; the bank does not compound its retention intelligence cycle over cycle."}], "urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle": [{"slug": "scan", "label": "Scan", "title": "Scan competitive signals from public and network sources", "intent": "Collects competitive signals from regulatory filings, published financial results, press and social media, product announcements, recruitment patterns, and management network intelligence for the defined competitor set. The stage that determines the raw intelligence available for synthesis.", "problem": "Signal scanning is conducted by strategy analysts using manual monitoring of a curated source list — regulatory portals, news aggregators, competitor websites, and LinkedIn. The monitoring is periodic; signals that emerge between scanning sessions are missed or identified late. Source breadth is limited by analyst time, meaning competitor moves in less-monitored channels (regulatory working groups, fintech partnership announcements) are under-represented in the synthesis."}, {"slug": "analyze", "label": "Analyze", "title": "Analytical assessment of competitor moves and implications", "intent": "Assesses the significance of collected signals — which competitor moves are strategic, which are tactical, which imply shifts in competitor positioning, pricing, or capability investment — and estimates their commercial and strategic implications for the bank. The stage that transforms raw intelligence into assessed findings.", "problem": "Competitive analysis is conducted by a small strategy team whose analytical bandwidth limits the depth of assessment across the full competitor set. The team applies consistent analytical frameworks to tier-1 competitors but covers tier-2 and fintech competitors only reactively when a specific move attracts management attention. The assessment is qualitative and largely undocumented between formal briefing cycles."}, {"slug": "synthesize", "label": "Synthesize", "title": "Cross-competitor synthesis and strategic implications", "intent": "Synthesizes assessed findings across competitors into a coherent competitive-landscape picture — relative positioning shifts, emerging competitive themes, and the aggregate strategic implications for the bank's product, pricing, and market priorities. The stage that moves from individual competitor assessments to a portfolio-level competitive view.", "problem": "Cross-competitor synthesis requires the strategy team to hold multiple competitor assessments in working memory simultaneously and identify the cross-cutting themes and relative positioning implications. The synthesis is produced once per quarter for the formal briefing cycle; between cycles, no mechanism exists to update the cross-competitor picture as new signals arrive."}, {"slug": "brief", "label": "Brief", "title": "Competitive intelligence brief production and delivery", "intent": "Produces and delivers the competitive intelligence brief to strategy, commercial, and product leadership — in the appropriate format for each audience (ExCo summary, product head competitive card, regional commercial brief). The stage where intelligence becomes leadership input.", "problem": "Competitive intelligence briefs are produced in a uniform format for the full leadership audience, without calibration for the different competitive intelligence needs of product heads (feature-level comparisons), commercial leads (pricing and offer benchmarks), and ExCo (strategic positioning shifts). Audience-specific customization is manual and not systematically produced within the standard briefing cycle."}, {"slug": "track", "label": "Track", "title": "Ongoing tracking of priority competitor strategic themes", "intent": "Maintains a structured watch on named strategic themes identified in prior briefing cycles — competitor product launches, pricing moves, market entry or exit, and partnership announcements — between formal briefing cycles. The stage that ensures material developments are escalated on an event-triggered basis rather than waiting for the next cycle.", "problem": "Between formal briefing cycles, there is no structured mechanism for tracking whether identified strategic themes have progressed. Significant competitor moves — a major product launch, a pricing restructuring, a regulatory application — are identified through informal channels and escalated inconsistently. The tracking function is performed through management awareness rather than a systematic watch mechanism."}], "urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle": [{"slug": "listen", "label": "Listen", "title": "Monitor brand signals across channels and sources", "intent": "Monitors the defined source universe for brand and reputation signals — social media mentions, press coverage, regulatory commentary, complaint platform activity, and market research inputs. The stage that determines the raw signal flow available for aggregation and analysis.", "problem": "Brand monitoring is conducted through a combination of a commercial media monitoring tool, manual social media review, and periodic customer satisfaction surveys. The commercial tool covers press and mainstream social media; Telegram channel monitoring, complaint aggregator platforms, and regulator-published supervisory findings are tracked informally. Signal coverage is therefore incomplete and inconsistent across channels."}, {"slug": "aggregate", "label": "Aggregate", "title": "Aggregate and categorize brand signals by theme and sentiment", "intent": "Aggregates collected signals into a structured dataset categorized by theme (product complaint, service incident, brand campaign response, regulatory comment, peer comparison) and sentiment polarity. The stage that transforms a raw signal feed into a structured analytics input.", "problem": "Signal aggregation across channels with different data formats requires manual categorization by the brand analytics team. Categorization consistency — applying the same theme taxonomy across different signal types — relies on individual analyst judgment; theme and sentiment categories drift across reporting periods, making trend analysis unreliable."}, {"slug": "analyze", "label": "Analyze", "title": "Trend analysis and reputational risk assessment", "intent": "Analyzes aggregated signals for material trends — sentiment trajectory, emerging theme concentrations, competitor brand comparison, and leading-indicator patterns that precede significant reputational events. The stage that assesses whether the current brand signal picture represents business-as-usual or an emerging risk.", "problem": "Trend analysis is performed manually by the brand team from the aggregated signal dataset. The analysis is focused on current-period signal volume and sentiment rather than on leading indicators that precede reputational escalations; the bank's analytical capability is reactive rather than predictive."}, {"slug": "alert", "label": "Alert", "title": "Alert management to material sentiment shifts", "intent": "Generates alerts to marketing, communications, and senior management for material sentiment shifts — significant volume spikes, rapid sentiment deterioration, or emerging themes with reputational escalation potential — outside the normal reporting cycle. The stage that ensures management awareness of brand risks on an event-triggered basis.", "problem": "The alert threshold for management escalation is defined informally. In practice, analysts escalate when individual signals attract their attention rather than when the aggregate signal pattern crosses a defined materiality threshold. The result is inconsistent escalation — some material brand risks reach management attention late; others are escalated on individual signals that prove non-material in aggregate."}, {"slug": "respond", "label": "Respond", "title": "Response coordination and communications execution", "intent": "Coordinates the bank's response to identified brand risks — communications strategy, customer messaging, press engagement, regulatory interaction, and campaign adjustment — and tracks the impact of the response on subsequent brand signal data. The stage that closes the loop between signal detection and institutional action.", "problem": "Response coordination involves multiple teams — communications, marketing, legal, operations, and sometimes the CEO office — without a defined response protocol that specifies escalation path, approval authority, and response timeline by risk category. Coordination under time pressure produces inconsistent response quality; response effectiveness is not systematically tracked against subsequent brand signal data."}]};
+
+  const STAGE_LABELS = {
+    problem: "Problem to solve",
+  };
+
+  const modalEl   = document.getElementById('stageModal');
+  const contentEl = modalEl.querySelector('.modal__content');
+  const closeBtn  = modalEl.querySelector('.modal__close');
+
+  function openModal()  { modalEl.classList.add('is-open');    modalEl.setAttribute('aria-hidden', 'false'); }
+  function closeModal() { modalEl.classList.remove('is-open'); modalEl.setAttribute('aria-hidden', 'true');  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modalEl.addEventListener('click', (e) => { if (e.target === modalEl) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalEl.classList.contains('is-open')) closeModal();
+  });
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => (
+      {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+    ));
+  }
+
+  // Auto-open the <details> for a flow when arrived via #fragment
+  // (e.g. linked from L1 page flow-card or top-page value-streams card —
+  // clicking an individual flow name navigates here with #<flow-slug>).
+  function openDetailsFromHash() {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target && target.tagName === 'DETAILS') {
+      target.open = true;
+      // Defer scroll so the layout reflows after open.
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+  }
+  openDetailsFromHash();
+  window.addEventListener('hashchange', openDetailsFromHash);
+
+  document.querySelectorAll('.flow-stages__stage').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const stageSlug = btn.dataset.stage;
+      const flowUrn   = btn.dataset.flowId;
+      const stages    = FLOW_STAGES[flowUrn] || [];
+      const stage     = stages.find((s) => s.slug === stageSlug) || {};
+      contentEl.innerHTML = `
+        <div class="modal__eyebrow">${escapeHtml(stage.label || stageSlug)}</div>
+        <h3 class="modal__title">${escapeHtml(stage.title || stage.label || stageSlug)}</h3>
+        ${stage.intent  ? `<p class="modal__intent">${escapeHtml(stage.intent)}</p>` : ''}
+        ${stage.problem ? `
+          <div class="modal__problem">
+            <div class="modal__problem-label">${escapeHtml(STAGE_LABELS.problem)}</div>
+            <p>${escapeHtml(stage.problem)}</p>
+          </div>` : ''}
+      `;
+      openModal();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

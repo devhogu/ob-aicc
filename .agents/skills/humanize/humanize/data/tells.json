@@ -1,0 +1,1087 @@
+{
+  "version": "1.6.0",
+  "categories": {
+    "phrase": {
+      "action": "delete the phrase; keep the sentence's content",
+      "fail_standard": true,
+      "fail_protected": true
+    },
+    "filler": {
+      "action": "shorten to the plain form",
+      "fail_standard": true,
+      "fail_protected": true
+    },
+    "hedge_stack": {
+      "action": "collapse to one hedge of the same strength",
+      "fail_standard": true,
+      "fail_protected": true
+    },
+    "vocab": {
+      "action": "replace with a plain word of the same meaning",
+      "fail_standard": true,
+      "fail_protected": false
+    },
+    "hollow": {
+      "action": "keep in place, marked in [brackets]",
+      "fail_standard": true,
+      "fail_protected": false
+    },
+    "comparison": {
+      "action": "rewrite as a plain comparison at full strength",
+      "fail_standard": true,
+      "fail_protected": false
+    },
+    "outcome": {
+      "action": "state the outcome plainly",
+      "fail_standard": true,
+      "fail_protected": false
+    },
+    "magnitude": {
+      "action": "keep, and add a Note asking for the figure",
+      "fail_standard": false,
+      "fail_protected": false
+    },
+    "candor": {
+      "action": "delete unless it marks a real contrast",
+      "fail_standard": false,
+      "fail_protected": false
+    },
+    "cliche": {
+      "action": "rewrite in plain words; keep the claim it makes",
+      "fail_standard": true,
+      "fail_protected": false
+    }
+  },
+  "sources": {
+    "hp-tells": "humanize-pro references/ai-tells.md",
+    "hp-channels": "humanize-pro references/channels.md",
+    "hp-skill": "humanize-pro instructions.md (Universal pass)",
+    "hw-dict": "humanize-writing references/ai-patterns-dictionary.md",
+    "unslop": "unslop instructions.md (Rules: Drop)",
+    "regression": "humanize regression entries: phrasings seen surviving earlier edits",
+    "humanize": "humanize rules (fidelity.md word-kind table)",
+    "humanize-runs": "Added from humanize worker tool feedback (run reports), reviewed by the maintainer"
+  },
+  "terms": [
+    {
+      "t": "it is important to note that",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "it's important to note that",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "it is important to note",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "it's important to note",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "it is worth noting",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "it's worth noting",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "it is worth mentioning",
+      "c": "phrase",
+      "src": "unslop"
+    },
+    {
+      "t": "it's worth mentioning",
+      "c": "phrase",
+      "src": "unslop"
+    },
+    {
+      "t": "it should be noted",
+      "c": "phrase",
+      "src": "unslop"
+    },
+    {
+      "t": "it should also be noted",
+      "c": "phrase",
+      "src": "unslop"
+    },
+    {
+      "t": "generally speaking",
+      "c": "phrase",
+      "src": "unslop"
+    },
+    {
+      "t": "in essence",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "at its core",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "simply put",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "the truth is",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "here's the thing",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "here's what you need to know",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "let's dive in",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "let's break it down",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "when it comes to",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "in the world of",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "in today's",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "great question",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "certainly",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "absolutely",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "of course",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "fundamentally",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "moreover",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "furthermore",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "additionally",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "consequently",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "notably",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "importantly",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "that said",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "ultimately",
+      "c": "phrase",
+      "start": true,
+      "src": "hp-tells"
+    },
+    {
+      "t": "in conclusion",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "in summary",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "i hope this helps",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "let me know if you have any questions",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "feel free to reach out",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "the future looks bright",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "only time will tell",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "one thing is clear",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "at the end of the day",
+      "c": "phrase",
+      "src": "hp-tells"
+    },
+    {
+      "t": "i wanted to reach out",
+      "c": "phrase",
+      "src": "hp-channels"
+    },
+    {
+      "t": "just wanted to flag",
+      "c": "phrase",
+      "src": "hp-channels"
+    },
+    {
+      "t": "hope this email finds you well",
+      "c": "phrase",
+      "src": "hp-channels"
+    },
+    {
+      "t": "just circling back",
+      "c": "phrase",
+      "src": "hp-channels"
+    },
+    {
+      "t": "let me know if this resonates",
+      "c": "phrase",
+      "src": "hp-channels"
+    },
+    {
+      "t": "in order to",
+      "c": "filler",
+      "plain": [
+        "to"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "due to the fact that",
+      "c": "filler",
+      "plain": [
+        "because"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "may potentially",
+      "c": "hedge_stack",
+      "plain": [
+        "may"
+      ],
+      "src": "hp-skill"
+    },
+    {
+      "t": "could potentially",
+      "c": "hedge_stack",
+      "plain": [
+        "could"
+      ],
+      "src": "hp-skill"
+    },
+    {
+      "t": "might potentially",
+      "c": "hedge_stack",
+      "plain": [
+        "might"
+      ],
+      "src": "hp-skill"
+    },
+    {
+      "t": "could possibly",
+      "c": "hedge_stack",
+      "plain": [
+        "could"
+      ],
+      "src": "humanize"
+    },
+    {
+      "t": "might possibly",
+      "c": "hedge_stack",
+      "plain": [
+        "might"
+      ],
+      "src": "humanize"
+    },
+    {
+      "t": "may possibly",
+      "c": "hedge_stack",
+      "plain": [
+        "may"
+      ],
+      "src": "humanize"
+    },
+    {
+      "t": "delve",
+      "c": "vocab",
+      "plain": [
+        "look at",
+        "dig into"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "dive into",
+      "c": "vocab",
+      "plain": [
+        "look at"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "tapestry",
+      "c": "vocab",
+      "plain": [
+        "mix"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "landscape",
+      "c": "vocab",
+      "plain": [
+        "market",
+        "field"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "realm",
+      "c": "vocab",
+      "plain": [
+        "area"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "journey",
+      "c": "vocab",
+      "plain": [
+        "work",
+        "process"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "testament",
+      "c": "vocab",
+      "plain": [
+        "proof",
+        "sign"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "pivotal",
+      "c": "vocab",
+      "plain": [
+        "important",
+        "key"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "paramount",
+      "c": "vocab",
+      "plain": [
+        "most important"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "robust",
+      "c": "vocab",
+      "plain": [
+        "strong",
+        "solid"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "holistic",
+      "c": "vocab",
+      "plain": [
+        "whole",
+        "complete"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "multifaceted",
+      "c": "vocab",
+      "plain": [
+        "complex"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "nuanced",
+      "c": "vocab",
+      "plain": [
+        "subtle",
+        "complex"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "myriad",
+      "c": "vocab",
+      "plain": [
+        "many"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "plethora",
+      "c": "vocab",
+      "plain": [
+        "many"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "leverage",
+      "c": "vocab",
+      "plain": [
+        "use"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "utilize",
+      "c": "vocab",
+      "plain": [
+        "use"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "facilitate",
+      "c": "vocab",
+      "plain": [
+        "help",
+        "make easier"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "foster",
+      "c": "vocab",
+      "plain": [
+        "encourage",
+        "support"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "harness",
+      "c": "vocab",
+      "plain": [
+        "use"
+      ],
+      "src": "hp-tells",
+      "pattern": "\\bharness(?:es|ed|ing)?(?=\\s+(?:the|its|our|their|your|this|these|that|every|AI|data)\\b)",
+      "note": "verb sense only ('harness the power'); the noun (test harness, agent harness) is a term of art"
+    },
+    {
+      "t": "underscore",
+      "c": "vocab",
+      "plain": [
+        "show"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "showcase",
+      "c": "vocab",
+      "plain": [
+        "show"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "embark",
+      "c": "vocab",
+      "plain": [
+        "start"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "meticulous",
+      "c": "vocab",
+      "plain": [
+        "careful",
+        "thorough"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "invaluable",
+      "c": "vocab",
+      "plain": [
+        "very useful"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "unwavering",
+      "c": "vocab",
+      "plain": [
+        "steady"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "ever-evolving",
+      "c": "vocab",
+      "plain": [
+        "changing"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "fast-paced",
+      "c": "vocab",
+      "plain": [
+        "fast"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "spearhead",
+      "c": "vocab",
+      "plain": [
+        "lead"
+      ],
+      "src": "hw-dict"
+    },
+    {
+      "t": "bolster",
+      "c": "vocab",
+      "plain": [
+        "support",
+        "strengthen"
+      ],
+      "src": "hw-dict"
+    },
+    {
+      "t": "garner",
+      "c": "vocab",
+      "plain": [
+        "get",
+        "earn"
+      ],
+      "src": "hw-dict"
+    },
+    {
+      "t": "interplay",
+      "c": "vocab",
+      "plain": [
+        "relationship"
+      ],
+      "src": "hw-dict"
+    },
+    {
+      "t": "streamline",
+      "c": "vocab",
+      "plain": [
+        "simplify"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "crucial",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "important",
+        "key"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "vital",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "important"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "essential",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "needed",
+        "required"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "comprehensive",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "complete",
+        "full"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "intricate",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "complicated"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "navigate",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "handle",
+        "deal with"
+      ],
+      "src": "hp-tells",
+      "pattern": "\\bnavigat(?:e|es|ed|ing)\\b(?!\\s+(?:to|back|away)\\b)",
+      "note": "figurative sense only; 'navigate to' a page or folder is literal"
+    },
+    {
+      "t": "highlight",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "show (verb)",
+        "key points (noun)"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "cultivate",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "build",
+        "grow"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "resonate",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "connect",
+        "land"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "amplify",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "increase"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "dynamic",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "changing",
+        "active"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "vibrant",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "lively"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "profound",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "deep",
+        "large"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "compelling",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "convincing"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "enhance",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "improve"
+      ],
+      "src": "hw-dict"
+    },
+    {
+      "t": "illuminate",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "explain",
+        "show"
+      ],
+      "src": "hw-dict"
+    },
+    {
+      "t": "enduring",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "lasting"
+      ],
+      "src": "hw-dict"
+    },
+    {
+      "t": "ensure",
+      "c": "vocab",
+      "s": "low",
+      "plain": [
+        "make sure"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "serves as",
+      "c": "vocab",
+      "plain": [
+        "is"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "stands as",
+      "c": "vocab",
+      "plain": [
+        "is"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "boasts",
+      "c": "vocab",
+      "plain": [
+        "has"
+      ],
+      "src": "hp-tells"
+    },
+    {
+      "t": "seamless",
+      "c": "hollow",
+      "src": "hp-tells"
+    },
+    {
+      "t": "groundbreaking",
+      "c": "hollow",
+      "src": "hp-tells"
+    },
+    {
+      "t": "revolutionary",
+      "c": "hollow",
+      "src": "hp-tells"
+    },
+    {
+      "t": "transformative",
+      "c": "hollow",
+      "src": "hp-tells"
+    },
+    {
+      "t": "game-changing",
+      "c": "hollow",
+      "src": "hp-tells"
+    },
+    {
+      "t": "game-changer",
+      "c": "hollow",
+      "src": "hw-dict"
+    },
+    {
+      "t": "innovative",
+      "c": "hollow",
+      "src": "hw-dict"
+    },
+    {
+      "t": "remarkable",
+      "c": "hollow",
+      "src": "hp-tells"
+    },
+    {
+      "t": "captivating",
+      "c": "hollow",
+      "src": "hp-tells"
+    },
+    {
+      "t": "first-rate",
+      "c": "hollow",
+      "src": "humanize"
+    },
+    {
+      "t": "successfully",
+      "c": "hollow",
+      "src": "humanize"
+    },
+    {
+      "t": "meaningful",
+      "c": "hollow",
+      "src": "humanize"
+    },
+    {
+      "t": "genuine",
+      "c": "hollow",
+      "src": "humanize"
+    },
+    {
+      "t": "renowned",
+      "c": "hollow",
+      "src": "humanize"
+    },
+    {
+      "t": "best-in-class",
+      "c": "comparison",
+      "src": "hp-tells"
+    },
+    {
+      "t": "unparalleled",
+      "c": "comparison",
+      "src": "hp-tells"
+    },
+    {
+      "t": "cutting-edge",
+      "c": "comparison",
+      "src": "hp-tells"
+    },
+    {
+      "t": "state-of-the-art",
+      "c": "comparison",
+      "src": "hp-tells"
+    },
+    {
+      "t": "next-generation",
+      "c": "comparison",
+      "src": "hp-tells"
+    },
+    {
+      "t": "world-class",
+      "c": "comparison",
+      "src": "humanize"
+    },
+    {
+      "t": "unmatched",
+      "c": "comparison",
+      "src": "humanize"
+    },
+    {
+      "t": "unrivaled",
+      "c": "comparison",
+      "src": "humanize"
+    },
+    {
+      "t": "second to none",
+      "c": "comparison",
+      "src": "humanize"
+    },
+    {
+      "t": "empower",
+      "c": "outcome",
+      "src": "hp-tells"
+    },
+    {
+      "t": "unlock",
+      "c": "outcome",
+      "src": "hp-tells"
+    },
+    {
+      "t": "elevate",
+      "c": "outcome",
+      "src": "hp-tells"
+    },
+    {
+      "t": "supercharge",
+      "c": "outcome",
+      "src": "hp-channels"
+    },
+    {
+      "t": "take to the next level",
+      "c": "outcome",
+      "src": "humanize"
+    },
+    {
+      "t": "significant",
+      "c": "magnitude",
+      "src": "hp-channels"
+    },
+    {
+      "t": "substantial",
+      "c": "magnitude",
+      "src": "hp-channels"
+    },
+    {
+      "t": "actually",
+      "c": "candor",
+      "src": "hp-skill"
+    },
+    {
+      "t": "really",
+      "c": "candor",
+      "src": "hp-skill"
+    },
+    {
+      "t": "genuinely",
+      "c": "candor",
+      "src": "hp-skill"
+    },
+    {
+      "t": "truly",
+      "c": "candor",
+      "src": "hp-skill"
+    },
+    {
+      "t": "honestly",
+      "c": "candor",
+      "src": "hp-tells"
+    },
+    {
+      "t": "proven track record",
+      "c": "cliche",
+      "src": "regression"
+    },
+    {
+      "t": "best in its class",
+      "c": "cliche",
+      "src": "regression"
+    },
+    {
+      "t": "new levels of",
+      "c": "cliche",
+      "src": "regression"
+    },
+    {
+      "t": "next level",
+      "c": "cliche",
+      "src": "regression"
+    },
+    {
+      "t": "move the needle",
+      "c": "cliche",
+      "src": "regression"
+    },
+    {
+      "t": "low-hanging fruit",
+      "c": "cliche",
+      "src": "regression"
+    },
+    {
+      "t": "synergy",
+      "c": "cliche",
+      "src": "regression"
+    },
+    {
+      "t": "tirelessly",
+      "c": "hollow",
+      "s": "high",
+      "src": "humanize-runs"
+    },
+    {
+      "t": "relentlessly",
+      "c": "hollow",
+      "s": "high",
+      "src": "humanize-runs"
+    }
+  ]
+}

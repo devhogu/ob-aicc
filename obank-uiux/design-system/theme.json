@@ -1,0 +1,43 @@
+{
+  "version": "0.1.1",
+  "name": "O! Internal Workspace",
+  "standing": "Working shared portal standard, AICC copy updated 2 October 2026",
+  "global": {
+    "shell-header-start": "#460020",
+    "shell-header-end": "#111014",
+    "shell-header-text": "#FFFFFF",
+    "shell-header-muted": "#D5C9D0",
+    "shell-accent-secondary": "#15AEC0",
+    "sidebar-width": "14rem",
+    "context-width": "13rem",
+    "header-height": "4rem",
+    "shell-control-bg": "#241C23",
+    "shell-input-bg": "#1B141A",
+    "shell-control-border": "#9A8996",
+    "shell-focus": "#8AB4FF"
+  },
+  "themes": {
+    "light": {
+      "canvas": "#F4F4F6",
+      "surface": "#FFFFFF",
+      "surface-subtle": "#F2EEF1",
+      "surface-selected": "#FCE8F2",
+      "text": "#202025",
+      "text-muted": "#625D67",
+      "border": "#DCD6DE",
+      "border-control": "#817885",
+      "shell-navigation": "#F1EDF0"
+    },
+    "dark": {
+      "canvas": "#101012",
+      "surface": "#18181B",
+      "surface-subtle": "#242126",
+      "surface-selected": "#3D2231",
+      "text": "#F5F5F7",
+      "text-muted": "#B9B3BC",
+      "border": "#464149",
+      "border-control": "#918995",
+      "shell-navigation": "#21191F"
+    }
+  }
+}

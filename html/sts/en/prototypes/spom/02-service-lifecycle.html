@@ -7,16 +7,20 @@
   <link rel="stylesheet" href="../../assets/styles/tokens.css">
   <link rel="stylesheet" href="../../assets/styles/components.css">
   <link rel="stylesheet" href="prototype.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("obank-sts-theme")==="light"?"light":"dark"}catch{document.documentElement.dataset.theme="dark"}</script>
+<link rel="stylesheet" href="../../assets/o-uiux/fonts.css">
+<link rel="stylesheet" href="../../assets/o-uiux/tokens.css">
+<link rel="stylesheet" href="../../assets/o-uiux/workspace.css">
+<link rel="stylesheet" href="../../assets/o-uiux/sts.css">
 </head>
-<body>
-  <main class="prototype-shell">
-    <nav class="prototype-nav" aria-label="Prototype views">
-      <a href="../../index.html">STS Framework</a>
-      <a href="index.html">Prototype Lab</a>
-      <a href="01-control-plane.html">Control Plane</a>
-      <a aria-current="page" href="02-service-lifecycle.html">Portfolio Lifecycle</a>
-      <a href="03-portfolio-operating-model.html">Operating Model</a>
-    </nav>
+<body class="sts-portal">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header"><a class="o-identity" href="../../index.html"><img src="../../assets/o-uiux/o-mark.svg" width="34" height="38" alt=""><span>Shared Technology Services</span></a>
+  <span class="sts-header-scope">O! workspace · conceptual explorer</span><div class="o-tools"><button id="theme-switch" type="button">Light theme</button></div></header>
+<div class="o-frame"><aside class="o-nav"><details><summary>STS sections</summary><nav aria-label="STS sections"><span class="sts-nav-group">Models and reference</span><a href="../../index.html">Overview</a><a href="../../operating-model/index.html">Operating model</a><a href="../../managed-service-model/index.html">Managed service</a><a href="../../reference/index.html">Industry reference</a><span class="sts-nav-group">Explore the concept</span><a href="index.html">Prototype lab</a><a href="01-control-plane.html">Control plane</a><a href="02-service-lifecycle.html" aria-current="page">Portfolio lifecycle</a><a href="03-portfolio-operating-model.html">Portfolio view</a></nav></details>
+  <p class="o-caption">Framework, lifecycle and practice references</p></aside>
+  <main id="main" class="o-main prototype-shell">
+
 
     <header class="prototype-hero prototype-hero--wide">
       <div>
@@ -26,7 +30,8 @@
       </div>
     </header>
 
-    <section class="visual-stage lcm-stage">
+    <p class="sts-scroll-hint">Swipe or scroll within the diagram to explore its full width.</p>
+<section role="region" tabindex="0" aria-label="Scrollable STS diagram" class="visual-stage lcm-stage">
       <div class="state-context">
         <section class="state-summary" aria-live="polite">
           <p class="eyebrow" id="state-kicker">Lifecycle state</p>
@@ -60,37 +65,37 @@
           <div class="lcm-group lcm-group--service"><span>In service</span></div>
           <div class="lcm-group lcm-group--transition"><span>Transition</span></div>
 
-          <button class="node-button lcm-state lcm-state--onboarding" data-state="candidate" aria-pressed="true">
+          <button class="node-button lcm-state lcm-state--onboarding" data-state="candidate" aria-pressed="true" id="state-candidate">
             <span>01</span>
             <strong>Candidate</strong>
             <small>Potential shared service</small>
           </button>
-          <button class="node-button lcm-state lcm-state--onboarding" data-state="admitted">
+          <button class="node-button lcm-state lcm-state--onboarding" data-state="admitted" id="state-admitted">
             <span>02</span>
             <strong>Admitted</strong>
             <small>Accepted into portfolio path</small>
           </button>
-          <button class="node-button lcm-state lcm-state--onboarding" data-state="catalogued">
+          <button class="node-button lcm-state lcm-state--onboarding" data-state="catalogued" id="state-catalogued">
             <span>03</span>
             <strong>Catalogued</strong>
             <small>Discoverable and requestable</small>
           </button>
-          <button class="node-button lcm-state lcm-state--service" data-state="active">
+          <button class="node-button lcm-state lcm-state--service" data-state="active" id="state-active">
             <span>04</span>
             <strong>Active</strong>
             <small>Consumed and operated</small>
           </button>
-          <button class="node-button lcm-state lcm-state--service" data-state="improving">
+          <button class="node-button lcm-state lcm-state--service" data-state="improving" id="state-improving">
             <span>05</span>
             <strong>Improving</strong>
             <small>Maturity uplift loop</small>
           </button>
-          <button class="node-button lcm-state lcm-state--transition" data-state="transition-planned">
+          <button class="node-button lcm-state lcm-state--transition" data-state="transition-planned" id="state-transition-planned">
             <span>06</span>
             <strong>Transition Planned</strong>
             <small>Replacement path agreed</small>
           </button>
-          <button class="node-button lcm-state lcm-state--transition" data-state="migrating">
+          <button class="node-button lcm-state lcm-state--transition" data-state="migrating" id="state-migrating">
             <span>07</span>
             <strong>Migrating</strong>
             <small>Consumers moving</small>
@@ -147,7 +152,8 @@
         </div>
       </section>
     </section>
-  </main>
+  <footer class="sts-footer">Conceptual STS framework and reference views. This presentation does not establish a current O!Bank service inventory or operating assignment.</footer></main>
+</div>
 
   <script>
     const states = {
@@ -424,5 +430,6 @@
 
     setState("candidate");
   </script>
+<script src="../../assets/o-uiux/sts.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Layout and navigation · O! UI/UX</title>
+  <script>
+    (() => {const p=new URLSearchParams(location.search);let theme=p.get('theme');if(!['dark','light'].includes(theme)){try{theme=localStorage.getItem('o-uiux-theme');}catch{}}document.documentElement.dataset.theme=theme==='light'?'light':'dark';})();
+  </script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="primitives.css">
+  <link rel="stylesheet" href="workspace.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="o-skip" href="#main" data-ru="К содержанию" data-en="Skip to content">К содержанию</a>
+  <header class="o-header">
+    <a class="o-identity" href="index.html"><img src="assets/logos/o-mark.svg" width="34" height="38" alt="O!"><span>UI/UX Guide</span></a>
+    <div class="o-search" role="search">
+      <label for="guide-search" class="o-sr-only" data-ru="Поиск по руководству" data-en="Search the guide">Поиск по руководству</label>
+      <input id="guide-search" type="search" autocomplete="off" aria-controls="search-results">
+      <div id="search-results" class="o-search-results" hidden></div>
+    </div>
+    <div class="o-tools">
+      <label for="language" class="o-sr-only" data-ru="Язык" data-en="Language">Язык</label>
+      <select id="language"><option value="ru">RU</option><option value="en">EN</option></select>
+      <button id="theme" type="button">Светлая тема</button>
+    </div>
+  </header>
+  <div class="o-frame">
+    <aside class="o-nav">
+      <details open>
+        <summary data-ru="Разделы руководства" data-en="Guide sections">Разделы руководства</summary>
+        <nav aria-label="UI/UX"><a href="index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z" />
+  <path d="M15 5.764v15" />
+  <path d="M9 3.236v15" />
+</svg>
+<span data-ru="Начало" data-en="Start here">Начало</span></a><a href="foundations.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span data-ru="Бренд и стиль" data-en="Brand and style">Бренд и стиль</span></a><a href="layout.html" aria-current="page"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="M9 3v18" />
+</svg>
+<span data-ru="Макет и навигация" data-en="Layout and navigation">Макет и навигация</span></a><a href="components.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 3v18" />
+  <rect width="18" height="18" x="3" y="3" rx="2" />
+  <path d="M21 9H3" />
+  <path d="M21 15H3" />
+</svg>
+<span data-ru="Компоненты" data-en="Components">Компоненты</span></a><a href="patterns.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span data-ru="Сценарии и примеры" data-en="Patterns and examples">Сценарии и примеры</span></a><a href="cloud-lab.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M15 6a9 9 0 0 0-9 9V3" />
+  <circle cx="18" cy="6" r="3" />
+  <circle cx="6" cy="18" r="3" />
+</svg>
+<span data-ru="Карта Cloud LAB" data-en="Cloud LAB map">Карта Cloud LAB</span></a><a href="assets.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 15V3" />
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+  <path d="m7 10 5 5 5-5" />
+</svg>
+<span data-ru="Ресурсы" data-en="Assets">Ресурсы</span></a><a href="adoption.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+  <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg>
+<span data-ru="Как использовать" data-en="Adoption">Как использовать</span></a></nav>
+      </details>
+      <p class="o-caption">O! Internal Workspace<br>v0.1.1 · 02.10.2026</p>
+    </aside>
+    <main class="o-main" id="main" tabindex="-1">
+      <p class="o-eyebrow" data-ru="Правила и пояснения · текст на английском" data-en="Guidelines and explanation · English source text">Правила и пояснения · текст на английском</p><div class="o-reading"><article class="o-copy o-guide-copy" lang="en"><h1>Workspace layout and navigation</h1>
+<h2>Common shell</h2>
+<p>A 56–64px header carries identity and global context. Keep it to one level unless an actual second level of global context requires more. Show only actions the portal implements. Keep global scope, page view and local filters distinguishable.</p>
+<p>Left navigation is normally 200–232px with icons and text labels. It provides stable primary sections. Use one selected item with a tinted surface and a marker. Nested groups can disclose inside the same column. A second permanent application rail is justified only by multiple real workspaces.</p>
+<p>The central surface owns the selected subject. Right context is usually 200–240px and contains a page outline or relevant links. Collapse it before squeezing a diagram or comparison. A service/document profile must not become a narrow side panel beside a large navigation map.</p>
+<h2>Page anatomy</h2>
+<ol>
+<li>Breadcrumb or scope context.</li>
+<li>Clear title and short purpose; important status/qualification nearby.</li>
+<li>Relevant page actions.</li>
+<li>Horizontal views or tabs, where the same subject has alternate content.</li>
+<li>Central reading/working content with optional right context.</li>
+</ol>
+<p>Reserve stable space for the initial layout. Font/data loading should not move a small central panel into a large one after paint. Load fonts locally with <code>font-display: swap</code>; keep sensible fallbacks and avoid vertical centring of the whole working region.</p>
+<h2>Navigation versus tabs</h2>
+<p>Use links for navigation to another page or URL-addressable view. Show <code>aria-current=&quot;page&quot;</code> on the active link. Use tabs for alternate panels within one page: tablist, tab, tabpanel, selected state, arrow/Home/End keyboard movement and one active tab stop. A visual underline alone does not implement tab semantics.</p>
+<p>Provide a skip link before the header. A language change should retain the same subject, view, filters and selection when they remain meaningful; update the document language and label any untranslated-content fallback. Keep global scope, view/lens selection and local filtering as distinct controls. A scope change must not silently imply a different legal or provider boundary.</p>
+<p>Keep selection when changing view where the subject remains meaningful. Browser history should return to the previous page and context. Label back/close actions by what they return to. Do not turn every card surface into a competing click target; use a clear main link and separate secondary controls.</p>
+<h2>Context and responsive behaviour</h2>
+<table>
+<thead>
+<tr>
+<th>Available width</th>
+<th>Adaptation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wide desktop</td>
+<td>Left navigation, central content and optional right context</td>
+</tr>
+<tr>
+<td>Medium desktop</td>
+<td>Collapse right context; preserve useful central width</td>
+</tr>
+<tr>
+<td>Tablet/narrow</td>
+<td>Collapse primary navigation into a labelled disclosure</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>One reading column, stacked tools, 16px gutters; allow nav links to wrap</td>
+</tr>
+</tbody>
+</table>
+<p>A table/diagram may scroll inside its labelled region when genuinely two-dimensional. The whole page must not overflow sideways. Support 320px layouts and text zoom. Keep keyboard focus visible; sticky headers must not cover anchored headings or focused controls.</p>
+<h2>Supporting material</h2>
+<p>A right-hand contents list should not repeat the entire profile. A details disclosure can hold secondary explanation. A dialog is for a focused decision or short task and returns focus to its trigger. A drawer is useful for supplementary inspection only when the main task remains legible. Prefer a normal page for a long record or form.</p>
+</article><nav class="o-context" id="page-contents" aria-label="On this page" lang="en"><strong>On this page</strong></nav></div>
+      <footer class="o-footer"><span data-ru="Рабочий стандарт внутренних порталов" data-en="Working internal portal standard">Рабочий стандарт внутренних порталов</span> · v0.1.1 · <a href="adoption.html" data-ru="Как использовать" data-en="How to adopt">Как использовать</a> · <a href="o-uiux-kit.zip" download data-ru="Скачать комплект" data-en="Download kit">Скачать комплект</a></footer>
+    </main>
+  </div>
+  <noscript><p class="o-callout">Guidelines remain readable. Search, theme controls and interactive examples require JavaScript.</p></noscript>
+</body>
+</html>

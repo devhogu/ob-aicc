@@ -1,0 +1,12 @@
+{
+  "pages": 8,
+  "layout_cases": 64,
+  "interactions": [
+    "Overview state selection follows the same state into the lifecycle prototype",
+    "Map focus restores navigation; theme persists across pages",
+    "Industry reference tabs switch by keyboard",
+    "Control-plane and lifecycle inspectors respond to selection",
+    "Mobile navigation opens as a labelled disclosure"
+  ],
+  "failures": []
+}

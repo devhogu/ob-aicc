@@ -1,0 +1,1090 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accounting &amp; financial close</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Finance &amp; Treasury</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Accounting &amp; financial close</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Accounting & financial close</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Accounting and financial close is the month-end and quarter-end discipline that produces the bank's authoritative financial record — from journal posting and accruals through consolidation, reconciliation, and the trial balance that feeds management reporting and external filings. The close cycle is governed by a fixed task calendar, a hierarchy of approvals, and IFRS-based accounting standards as adopted under the regulatory frameworks of NBKR, NBK/ARDFM, and CBR. Close quality determines the accuracy of every downstream report: management accounts, regulatory returns, and statutory financial statements all start from the same ledger. <strong>The GenAI opportunity is automating the mechanical elements of the close cycle — status monitoring, exception identification, reconciliation matching, and narrative drafting — so Controllers focus on judgment and audit-readiness.</strong>
+</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-period-end-close:checked ~ .problems-tab-bar label[for="problems-tab-period-end-close"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-period-end-close:checked ~ .problems-panel[data-tab="period-end-close"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-period-end-close"
+    value="period-end-close"
+    checked
+    aria-label="Period end close"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-period-end-close"
+      role="tab"
+      aria-controls="problems-panel-period-end-close"
+    >Period end close</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-period-end-close"
+    data-tab="period-end-close"
+    role="tabpanel"
+    aria-labelledby="problems-tab-period-end-close"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Close progress — task completion by owner, outstanding approvals, and items at risk of missing the publication deadline — is tracked in shared spreadsheets updated manually by individual team members. The Controller assembles an end-of-day status update each close day by chasing owners by phone and email rather than reading from a live tracking system.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Close analysts spend a significant share of close-week time on mechanical data assembly — pulling system exports, reformatting tables, and populating templates — before any analytical judgment is applied. The tools available to a typical Controller team were designed for data capture, not for exception-surfacing or anomaly detection during the close.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">The close task calendar, approval workflow, reminder escalations, and end-of-day status reporting are all manual coordination activities that follow a predictable pattern each cycle. The task structure is known; the coordination overhead is the constraint. Each month-end cycle consumes an estimated 20–40 coordination hours above the core accounting work.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Banks that close faster — and with higher first-time accuracy — have more time between close completion and the external filing deadline for management review, audit committee discussion, and disclosure quality checking. A compressed close cycle is also a competitive signal: investors and rating agencies note consistent on-time, accurate filings.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Sub-concerns">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="close-task-management">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Close task management</h2>
+    
+    <p class="l3-section__intent">Month-end and quarter-end close involves 80–150 discrete tasks — journal postings, accrual approvals, sub-ledger locks, and system sign-offs — coordinated across Controllers, segment Finance teams, and shared service centers within a fixed publication window. The Controller tracks task completion, escalates delays, and produces end-of-day status reports for the CFO throughout the close period.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/close-task-management/close-critical-path-monitoring">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Close Critical Path Monitoring</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent identifies the close task dependencies that constitute the critical path to the publication deadline, monitors completion status of critical-path tasks in real time, and alerts the Controller when a delay on a critical-path task threatens the publication window before the impact propagates to downstream tasks.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The close task calendar records individual task status but does not model the dependency chain that determines which tasks constitute the critical path to publication. Controllers identify critical-path delays when a downstream task reports it is waiting on an upstream output — by which point the available recovery time has already compressed.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the close task calendar with declared dependencies and the current completion status of each task. It constructs the dependency network, identifies the critical path from current status to the publication deadline, and monitors critical-path task completion in real time. When a critical-path task falls behind schedule, the agent issues an alert to the Controller with the downstream cascade impact — which subsequent tasks are affected, by how long the publication window is compressed, and which team owns each affected task. The Controller reviews and determines the recovery action.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/close-task-management/close-exception-escalation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Close Exception Escalation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors the daily end-of-close-day status report for tasks that remain open beyond their scheduled completion time, drafts escalation messages to the relevant team lead with the task context and downstream impact, and updates the Controller&#39;s status log automatically.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>End-of-day close status reports identify open tasks but require the Controller to manually compose escalation messages to each responsible team lead — an activity that repeats each evening throughout the close period and consumes Controller capacity that should be applied to judgment-intensive oversight rather than communication logistics.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the current close task status against the scheduled completion calendar each evening. For each task that is open beyond its scheduled time, it drafts an escalation message to the responsible team lead, including the task description, the hours overdue, and the downstream tasks that depend on the output. The Controller reviews the drafts and releases them for dispatch; no escalation is sent without Controller review. The agent also updates the status log entry for each affected task with the escalation timestamp and reason.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/close-task-management/month-end-close-management">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Month-End Close Management</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors month-end close task completion, surfaces a prioritised exception report of overdue items, runs GL-to-sub-ledger reconciliation matching, and drafts the close narrative for CFO review on the first day of reporting.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Month-end close involves 80–150 discrete tasks coordinated across Controllers, segment finance, and shared service centres within a fixed publication window. Tracking task completion, escalating delays, and reconciling GL balances to sub-ledger each consume significant Controller time during the close period; the close narrative is drafted after data is finalised, compressing the CFO&#39;s review window.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent monitors the close task log and issues automated reminders to owners of items approaching their deadline, generates a real-time status report for the Controller, and runs GL-to-sub-ledger matching with unmatched items classified by materiality and age. On close completion, it drafts the close narrative from the finalised P&amp;L and prior-period narrative as a style anchor. Controller reviews task exceptions; CFO edits the narrative draft before distribution.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Month-end close task completion is monitored continuously, GL-to-sub-ledger reconciliation matching is automated with unmatched items classified by materiality, and the close narrative is available for CFO review on the first day of the reporting window.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent-assisted close management used for ≥10 of 12 monthly close cycles in year 1; all material close tasks, GL-to-sub-ledger pairs, and narrative sections covered.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of close narratives accepted by the CFO without material structural amendment; GL-to-sub-ledger unmatched item classification accuracy ≥90% on Controllers review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Close narrative available on day 1 of the reporting window; Controller time on close coordination reduced by ≥30% vs. pre-deployment baseline.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="gl-sub-ledger-reconciliations">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">GL-to-sub-ledger reconciliations</h2>
+    
+    <p class="l3-section__intent">GL-to-sub-ledger reconciliation matches every general ledger balance to the underlying sub-ledger that supports it — loan sub-ledger to loan GL accounts, deposit sub-ledger to deposit GL accounts, fixed asset register to the balance sheet. Unexplained breaks indicate a posting error, system interface failure, or accounting judgment issue. NBKR, NBK/ARDFM, and CBR expect the GL to be fully reconciled before regulatory returns are submitted.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/gl-sub-ledger-reconciliations/gl-reconciliation-break-triage">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">GL Reconciliation Break Triage</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">When GL-to-sub-ledger breaks are identified in the close cycle, agent classifies each break by probable cause — timing difference, interface failure, posting error, or accounting judgment item — and routes each to the relevant resolution owner, reducing the manual triage time that precedes remediation.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>GL-to-sub-ledger breaks surface at multiple points in the close cycle and are triaged manually by the Controllers team. Identifying whether a break reflects a known timing difference, a system interface failure, or a posting error requires the Controller to query the sub-ledger, the interface log, and the journal history for each item — a process that takes 30–60 minutes per break and serialises the remediation queue.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the current reconciliation output, the interface error log, the pending journal queue, and the known timing difference register. For each break it applies a classification logic — matching breaks against known timing patterns, interface error codes, and pending journals — and assigns each item to a classification category and resolution owner. The Controller reviews the triage output and confirms the classification before owners are notified. Items that cannot be classified are escalated to the Controller with the relevant system data attached.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/gl-sub-ledger-reconciliations/gl-reconciliation-pattern-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">GL Reconciliation Pattern Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses the rolling twelve-month history of GL-to-sub-ledger breaks by account, system interface, and break type to identify recurring patterns — accounts or interfaces that produce a disproportionate share of breaks — and surface root-cause candidates for the Controller&#39;s quarterly reconciliation quality review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>GL reconciliation breaks are resolved individually each close cycle without a systematic analysis of recurring patterns. Accounts or interfaces that produce the same type of break repeatedly indicate a systemic issue — an interface configuration problem, a flawed accounting rule, or a posting convention inconsistency — that persists because each individual break is resolved without the root cause being identified at the system level.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent maintains a rolling twelve-month registry of GL reconciliation breaks by account, interface, and break type. Each close cycle it appends the new break data and runs a frequency and clustering analysis to identify accounts and interfaces that appear in the break registry consistently. The analysis is presented to the Controller at the quarterly reconciliation quality review — showing the top ten recurring break sources, estimated cumulative Controller time consumed per source, and candidate root-cause hypotheses for each. The Controller determines which root causes to investigate for permanent remediation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/gl-sub-ledger-reconciliations/pre-submission-gl-completeness-check">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Pre-Submission GL Completeness Check</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Before regulatory returns are submitted, agent verifies that the GL is fully reconciled to all material sub-ledgers — loan, deposit, fixed asset, and investment — and produces a reconciliation completeness certificate for the Controller&#39;s sign-off, meeting NBKR, NBK/ARDFM, and CBR expectations.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>NBKR, NBK/ARDFM, and CBR require the GL to be fully reconciled before regulatory returns are submitted. The reconciliation completeness check is performed manually by the Controllers team across multiple sub-ledger systems, and the sign-off is documented in a spreadsheet tracker. Missed or incorrectly closed items are identified during external audit or regulatory inspection rather than before submission.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the reconciliation status from each sub-ledger reconciliation system — loan, deposit, fixed asset, and investment — and checks that every material GL account has a matched and signed-off reconciliation. It produces a completeness matrix showing the reconciliation status of each account group against each sub-ledger, flagging unreconciled or open items with the break amount and responsible owner. The Controller reviews the matrix and signs off the completeness certificate before any regulatory return is submitted. The certificate is retained as evidence for external audit and regulatory inspection.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="close-narrative">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Close narrative &amp; management commentary</h2>
+    
+    <p class="l3-section__intent">The close narrative — a 3–5 page CFO commentary on the month&#39;s financial results — synthesizes P&amp;L performance, variance attribution, one-time items, and capital and liquidity highlights for the executive committee and board. It is the first interpretive document produced from the close and sets the tone for the management discussion that follows in ALCO and segment reviews.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/close-narrative/close-narrative-consistency-check">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Close Narrative Cross-Document Consistency</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Before the close narrative is distributed, agent cross-references every numerical figure in the draft against the authoritative source documents — management accounts, capital report, and liquidity report — and flags any inconsistency for CFO review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The close narrative is drafted from multiple source documents and reviewed manually before distribution to the executive committee. Numerical inconsistencies between the narrative and the underlying reports — a NIM figure in the commentary that differs from the management accounts by a rounding error, or a capital ratio that does not match the formal capital report — are identified by the reader rather than by a systematic pre-distribution check.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the draft close narrative and the authoritative source documents. It extracts every numerical figure in the narrative, maps it to the corresponding source document entry, and checks for consistency across all figures. Discrepancies — including rounding differences, period mismatches, and figures that cannot be traced to a source — are presented to the CFO in a structured exception list before distribution. The CFO confirms each exception as intentional or directs a correction.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/close-narrative/close-narrative-peer-benchmarking">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Close Narrative Peer Benchmarking Context</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent augments the CFO&#39;s draft close narrative with a peer context section — comparing the bank&#39;s reported NIM, cost-to-income ratio, and provision charge to the most recently published figures from peer institutions — to support the board&#39;s and investors&#39; relative performance assessment.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The close narrative presents the bank&#39;s performance in absolute terms and against budget. Board members and investor relations staff add peer context manually, drawing on published peer results from their own reading. The peer context section is produced inconsistently — present in some months, absent in others — and without a systematic check that the peer figures used are the most recently available.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the draft close narrative, identifies the key performance metrics reported — NIM, cost-to-income ratio, credit cost rate, and return on equity — and cross-references each against the most recently published equivalent figures from a defined peer set. It produces a peer context addendum for inclusion in the close narrative, noting the period covered by each peer figure and flagging any peer whose most recent publication is more than two quarters old. The CFO reviews the addendum and confirms the peer set and period before distribution.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/close-narrative/close-narrative-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Close Narrative Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent drafts the CFO monthly close narrative — P&amp;L performance summary, variance attribution, one-time item schedule, and capital and liquidity highlights — from closed management accounts and prior narrative submissions as style anchors, available for CFO review on the day reporting completes.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The close narrative is drafted by the CFO&#39;s team from management accounts, the variance attribution pack, and the capital and liquidity reports — each arriving at different points in the close calendar. The drafting cycle begins only once all source documents are available, and the narrative is typically completed two to three days after the last source document is received, extending the executive committee&#39;s information wait.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the closed management accounts, the variance attribution output, the capital and liquidity position reports, and the three most recent approved close narratives as style anchors. It generates a full draft covering the CFO&#39;s standard commentary structure — consolidated P&amp;L performance, segment commentary, variance attribution, one-time items, capital and liquidity highlights, and outlook framing — and formats it in the house template. The CFO reviews the draft and applies forward judgment and tone; the agent handles the assembly and initial drafting cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="lending-default-close">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Provisions &amp; IFRS 9 close entries</h2>
+    
+    <p class="l3-section__intent">IFRS 9 impairment provisioning requires the bank to compute expected credit loss across the full loan portfolio each close cycle — running the ECL model, booking the provision journal, and producing the stage migration analysis for disclosure. The quarter-end process feeds both the management P&amp;L and the IFRS statutory financial statements, with external audit substantive testing focused on staging decisions and model inputs.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/lending-default-close/ecl-model-run-validation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">ECL Model Run Validation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">After the IFRS 9 ECL model run completes each close cycle, agent validates the model output for completeness, sign coherence, and period-on-period movement reasonableness — flagging anomalies that warrant Controller review before the provision journal is booked.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The ECL model produces hundreds of output cells across portfolio segments and IFRS 9 stages. Anomalies in the model run — negative provisions, implausible stage migration ratios, or segment totals that do not reconcile to the portfolio aggregate — are identified through manual review by the Credit Modeling team and Controllers. The review takes one to two days and can delay the provision journal booking, compressing the remaining close window.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the ECL model output file as soon as the model run completes. It applies a structured validation — checking for non-negative provisions at the segment level, reconciling segment totals to the portfolio aggregate, testing period-on-period ECL movement against defined reasonableness bounds by segment, and checking that each portfolio segment has been processed and has a non-null stage distribution. Anomalies are presented to the Controllers team and Credit Modeling in a structured exception list with the relevant model output rows attached. The team confirms each exception before the provision journal is released.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/lending-default-close/provision-journal-audit-trail">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Provision Journal Audit Trail</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates a fully traced audit trail from the ECL model inputs through the provision calculation to the booked GL journal entries, structured for external auditor review and formatted to address the auditor&#39;s standard substantive testing questions for IFRS 9 close.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>External auditors substantively test the IFRS 9 provision each quarter by tracing from GL journal entries back through the ECL model to the underlying data. Assembling the trace for each auditor request requires Controllers and Credit Modeling to retrieve and cross-reference data from the ECL model system, the journal posting system, and the provision register. Each auditor query takes one to two days to respond to, and the queries accumulate across the close period.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the ECL model input data snapshot, the model output, and the GL journal entries for the provision booking. It constructs a structured audit trail document — mapping each GL provision entry to the corresponding ECL model output cell, the input data used in the calculation, and the model methodology reference. The document is formatted to address the auditor&#39;s standard substantive testing questions for IFRS 9 close and is available at the start of the audit window. Controllers review the audit trail for accuracy before it is shared with the auditors.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/accounting-financial-close/lending-default-close/stage-migration-analysis-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Stage Migration Analysis Drafting</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent produces the IFRS 9 stage migration analysis — showing flows between Stage 1, Stage 2, and Stage 3 by portfolio segment with driver attribution — from the ECL model output, providing the first quantified view of portfolio credit quality movement each close cycle.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The stage migration analysis required for IFRS 9 disclosure and external audit review is assembled manually from the ECL model output by the Credit Modeling and Finance teams. The analysis requires mapping each borrower&#39;s stage movement to a driver category — significant increase in credit risk, cure, write-off — and aggregating across the portfolio. Assembly takes two to three days and is one of the last close items completed, leaving the CFO without a credit quality movement view until late in the cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the ECL model output with borrower-level stage assignments for the current and prior period. It constructs the stage migration matrix — flows between Stage 1, Stage 2, and Stage 3 by portfolio segment — and attributes each migration category to its primary driver from the model&#39;s input data. The migration analysis is available to Controllers and Credit Modeling on the day the ECL model run is validated. The teams review and add narrative commentary for the disclosure; the agent handles the structured migration table and quantitative driver attribution.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">GenAI-enabled Banking and Financial Services Framework · v11i</footer>
+
+</div>
+
+</body>
+</html>

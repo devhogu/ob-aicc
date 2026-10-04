@@ -6,11 +6,6 @@
 /* @last_modified: 2026-05-02 */
 /* v4 GenAI token additions: --genai-soft, --genai-line, --genai-text, --genai-accent for scenario card OKR styling */
 
-/* Google Fonts — Latin + Cyrillic + Latin-ext subsets so EN, RU and KZ
-   content all render in the same family (no system-font fallback for
-   Russian/Cyrillic in the RU package). The `subset` parameter on the
-   Google Fonts URL pins the character ranges fetched. */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap&subset=latin,latin-ext,cyrillic,cyrillic-ext');
 
 /* ================================================================
    TOKEN LAYER

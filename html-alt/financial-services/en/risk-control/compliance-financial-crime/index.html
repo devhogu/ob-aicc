@@ -1,0 +1,1615 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliance &amp; financial crime</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+</head>
+
+
+<body class="page--concern page--concern-l2">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">service.eyebrow</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Risk &amp; Control</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Compliance &amp; financial crime</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header" role="banner">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Compliance & financial crime</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Compliance and financial crime is the broadest regulatory obligation in banking — spanning AML/CFT under FATF standards and NBKR/NBK-ARDFM/CBR implementing regulations, sanctions screening, KYC/CDD, conduct risk, consumer protection, and the full licensing and examination cycle. The function operates under constant supervisory scrutiny: AML compliance failures carry criminal liability for executives; regulatory examination findings trigger capital add-ons and public enforcement actions. <strong>The GenAI opportunity is to reduce the analyst hours consumed by alert triage, SAR drafting, and examination preparation</strong> — the high-volume, structured tasks that currently absorb specialist compliance capacity that would otherwise be directed at emerging risk detection and policy calibration.
+</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-aml-sanctions-financial-crime:checked ~ .problems-tab-bar label[for="problems-tab-aml-sanctions-financial-crime"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-aml-sanctions-financial-crime:checked ~ .problems-panel[data-tab="aml-sanctions-financial-crime"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-aml-sanctions-financial-crime"
+    value="aml-sanctions-financial-crime"
+    checked
+    aria-label="Aml sanctions financial crime"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-aml-sanctions-financial-crime"
+      role="tab"
+      aria-controls="problems-panel-aml-sanctions-financial-crime"
+    >Aml sanctions financial crime</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-aml-sanctions-financial-crime"
+    data-tab="aml-sanctions-financial-crime"
+    role="tabpanel"
+    aria-labelledby="problems-tab-aml-sanctions-financial-crime"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Transaction monitoring systems generate 50-2,000 alerts per day, with 90-98% ultimately dismissed as false positives. Pattern detection across alerts — mule network detection, cross-rule correlation across AML, fraud, and session anomaly — requires the investigator to connect multiple system views manually. False-positive root-cause analysis — identifying which rule parameters or customer profiles drive disproportionate FP volume — is done through periodic manual review rather than continuous monitoring.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">AML investigators opening each alert spend 15-25 minutes assembling context from 4-5 systems — KYC, transaction warehouse, prior alerts, sanctions screening, adverse media — before they can make a disposition decision. That assembly overhead is the primary bottleneck; the actual disposition decision takes two to three minutes once the context is present.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">SAR drafting, investigation pack assembly, and regulatory examination response preparation each follow defined formats and draw from known data sources — KYC records, transaction history, prior alert outcomes, regulatory filing templates. Each is high-volume, structured, and time-sensitive; collectively they consume the majority of a mid-size compliance team&#39;s capacity.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">An AML function with agent-assisted alert triage and SAR drafting can handle higher alert volumes without proportional headcount growth — a capability that becomes material as transaction volumes grow and regulatory expectations for alert coverage increase. The capacity released by automation can be directed at typology development, rule tuning, and emerging financial crime pattern analysis.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <main id="main-content" class="l3-sections" aria-label="Sub-concerns">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="aml-transaction-monitoring">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">AML transaction monitoring</h2>
+    
+    <p class="l3-section__intent">Transaction monitoring is the automated surveillance of customer transactions against rule-based and behavioural typologies to detect money laundering and terrorist financing activity. Under FATF Recommendation 10 and NBKR/CBR AML implementing regulations, banks must implement risk-based transaction monitoring covering all transaction types. Monitoring systems generate alert queues that AML investigators must disposition within defined SLA windows; alert volumes peak in periods of high transaction activity. The ratio of true positives to total alerts — the alert precision rate — determines the analyst hours required per confirmed suspicious activity.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/aml-transaction-monitoring/aml-alert-volume-trend-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">AML Alert Volume &amp; Trend Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent tracks alert volume, disposition rates, and true-positive ratios by rule and customer segment on a weekly basis, surfacing rule performance trends for the AML programme manager.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>AML monitoring programme performance — alert volumes, true-positive rates, and analyst SLA adherence — is reviewed in periodic programme reviews rather than on a rolling basis.
+A rule generating increasing false-positive volume over four weeks is identified in the monthly review rather than as the signal develops.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads alert management system data, computes weekly volume and disposition metrics by rule and customer segment, and tracks trend in true-positive ratio and SLA adherence over a rolling eight-week window.
+The AML programme manager receives a weekly performance digest, enabling responsive rule tuning before the next formal programme review.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/aml-transaction-monitoring/aml-investigation-pack-fp-analytics">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">AML Investigation Pack &amp; False-Positive Analytics</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent auto-assembles the investigation pack when an AML alert is opened, and produces a periodic false-positive root-cause analysis to enable systematic rule tuning.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Each AML alert requiring escalation needs a full investigation pack — KYC records, transaction detail, related-account links, prior alerts, sanctions results, and adverse media — before a supervisor can review.
+Alert false-positive rates of 90–98% consume analyst capacity, but rule tuning is constrained by the absence of systematic FP pattern analysis across the alert population.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent auto-assembles the investigation pack at alert-open time from all connected systems, so the supervisor receives a complete dossier at the point of review.
+On a monthly cadence, agent clusters 12 months of closed alerts by transaction context, customer profile, and rule parameter to identify the specific combinations driving disproportionate false-positive volume.
+The AML and model risk teams use the clustering output to calibrate rule parameters.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">AML supervisors receive a complete investigation dossier at alert-open time, and the compliance team applies a systematic monthly false-positive root-cause analysis to calibrate rule parameters and reduce unnecessary analyst burden.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to auto-assemble investigation packs for ≥95% of AML alerts requiring supervisor review within 12 months of go-live; monthly FP clustering analysis run for ≥10 consecutive months in year 1.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of auto-assembled investigation packs accepted by supervisors as complete without manual supplementation; ≥70% of monthly FP clustering outputs actioned by the AML and model risk teams for rule recalibration.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Per-alert investigation pack assembly time reduced from manual assembly (≥30 minutes) to ≤2 minutes at alert open; monthly FP analysis cycle completed within 5 business days of month-end close.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/aml-transaction-monitoring/aml-typology-library-update">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">AML Typology Library Update</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reads FinCEN advisories, FATF typology reports, and sector-specific AML guidance, extracts new transaction patterns and red flags, and delivers a structured typology update to the AML model risk and financial crime teams for rule review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>AML transaction monitoring rules are calibrated against a typology library that reflects money laundering techniques at the time of rule implementation.
+New typologies published by FATF, FinCEN, Rosfinmonitoring, and KFM are reviewed by the financial crime team when capacity permits; rule updates lag the publication of new patterns.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent monitors FATF typology reports, FinCEN advisories, Rosfinmonitoring guidance, and FS-ISAC financial crime publications.
+It extracts new transaction pattern descriptions and risk indicators, maps each to the existing rule library, and flags rules that do not cover the pattern.
+The AML model risk team receives a quarterly typology update report with a coverage gap analysis.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="regulatory-licensing-filings">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Regulatory licensing &amp; filings</h2>
+    
+    <p class="l3-section__intent">Regulatory licensing and filing obligations span money transmitter licenses, banking licenses, product filings, and periodic regulatory submissions — each with jurisdiction-specific deadlines, capital and bond requirements, and form requirements. For US-based fintechs, 45-50 state money transmitter licenses each carry their own filing cadence, capital minimum, surety bond requirement, and examination schedule. CBR and NBKR filing obligations cover capital adequacy submissions, liquidity reports, AML statistical filings, and consumer protection disclosures — each on defined monthly, quarterly, or annual cycles.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-licensing-filings/regulatory-filing-calendar-tracker">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regulatory Filing Calendar &amp; Tracker</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent maintains the consolidated regulatory filing calendar across all jurisdictions, tracks submission status against each deadline, and delivers a weekly completion status report to the CCO.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Regulatory filing obligations span NBKR, CBR, and multiple state money transmitter licensing jurisdictions, each with distinct monthly, quarterly, and annual deadlines.
+The compliance team tracks filing completion in a manually updated spreadsheet; a missed deadline is identified only when the calendar is reviewed rather than when the risk of missing it first emerges.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the regulatory filing calendar, monitors submission confirmation receipts against each deadline, flags filings at risk of missing the deadline three weeks in advance, and delivers a weekly status report to the CCO covering all open, at-risk, and completed filings.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-licensing-filings/license-renewal-pack-assembly">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">License Renewal Pack Assembly</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the license renewal submission pack from current financial statements, capital and surety bond certificates, and officer certification templates, reducing the per-jurisdiction preparation time for state money transmitter renewals.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>State money transmitter license renewals require assembling current financial statements, surety bond and capital documentation, officer certifications, and jurisdiction-specific form completions.
+For a bank with 40-50 active state licenses, the preparation cycle consumes weeks of compliance team effort each renewal season.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the renewal requirements schedule, current financial statements, surety bond registry, and officer certification database.
+It pre-populates renewal forms with current data, assembles the supporting documentation pack per jurisdiction, and flags items requiring manual certification or notarisation.
+The compliance officer reviews each pack and files.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-licensing-filings/regulatory-filing-gap-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regulatory Filing Gap &amp; Obligation Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reads new regulatory guidance and jurisdiction updates, identifies filing obligations not yet captured in the compliance calendar, and delivers a gap analysis to the CCO for calendar update.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Regulatory filing obligations evolve with new supervisory guidance, product approvals, and jurisdictional law changes.
+New obligations are identified through manual monitoring of regulatory publications; there is no systematic process to cross-reference new regulatory output against the existing filing calendar to detect gaps.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent monitors regulatory publication feeds from NBKR, CBR, and US state money transmitter regulators, extracts new filing obligations, cross-references each against the current compliance calendar, and identifies obligations not yet tracked.
+The CCO receives a quarterly gap analysis with each new obligation flagged and a draft calendar entry for review.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="sar-case-management">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">SAR &amp; case management</h2>
+    
+    <p class="l3-section__intent">A Suspicious Activity Report (SAR) is the mandatory filing with the financial intelligence unit — FinCEN in the US, Rosfinmonitoring in Russia, KFM in Kazakhstan — when an AML investigation produces evidence of suspicious activity. Under FATF and domestic implementing regulations, SARs must be filed within 30 days of detecting suspicious activity; late or deficient filings carry supervisory penalties. SAR narrative quality — precision of the who/what/when/where/why/how framework — directly influences the financial intelligence unit&#39;s ability to act on the report and the bank&#39;s supervisory standing.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sar-case-management/sar-drafting-support">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">SAR Drafting Support</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates the SAR narrative from investigation notes in regulatory format, with cross-investigation links and prior-SAR cross-reference, for BSA officer review and filing.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>SAR drafting is a material per-case overhead for the drafter and BSA reviewer, executed under hard regulatory deadlines.
+Narrative quality varies by drafter; prior-SAR cross-reference and cross-investigation linking are performed inconsistently across the team.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads investigation notes and produces the SAR narrative in the prescribed regulatory format — covering the who, what, when, where, and how of the suspicious activity — with cross-SAR consistency, prior-SAR cross-reference, and compliance flags populated.
+The BSA officer reviews and files.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The BSA officer reviews and files a SAR narrative — in prescribed regulatory format with cross-investigation links and prior-SAR cross-reference — drafted by the agent from investigation notes under hard filing deadlines.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to generate SAR narrative drafts for ≥90% of SAR-eligible investigations within 12 months of go-live; cross-SAR consistency checks and prior-SAR cross-reference applied in every draft from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of agent-drafted SAR narratives accepted by BSA officers with only minor amendment before filing; regulatory filing completeness (who/what/when/where/how all populated) confirmed at ≥98% on quality audit.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>SAR narrative draft delivered within 4 hours of investigation note submission, compressing the drafting phase and expanding BSA officer review time within the regulatory filing window.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sar-case-management/sar-filing-deadline-tracker">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">SAR Filing Deadline Tracker</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent tracks all open SAR investigations against the 30-day regulatory filing deadline, escalates cases approaching the deadline without a completed narrative, and generates the BSA officer&#39;s daily case queue with deadline proximity ranking.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>SAR investigations in progress across multiple analysts are tracked in the case management system but the BSA officer has no automated escalation when a case is approaching the 30-day regulatory deadline without a completed filing.
+Late filings are identified in the post-filing quality review rather than prevented.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the open case register, computes days-remaining for each case against the investigation-open date, escalates cases where fewer than five days remain without a filed narrative, and generates the BSA officer&#39;s daily queue ranked by deadline proximity.
+The BSA officer uses the queue to direct analyst capacity to time-critical cases.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sar-case-management/sar-quality-and-pattern-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">SAR Quality &amp; Narrative Pattern Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reviews filed SAR narratives for completeness against the who/what/when/where/how framework, identifies recurring quality gaps by analyst and activity type, and delivers a quarterly quality analysis to the BSA officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>SAR narrative quality is assessed in individual BSA officer reviews before filing.
+Recurring quality gaps — incomplete activity descriptions, missing subject identification, inconsistent red flag articulation — are visible across the filing population but not tracked systematically, so coaching is reactive to individual filings rather than pattern-based.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the rolling 90-day filed SAR population, applies the who/what/when/where/how completeness schema, computes quality scores by narrative section, and identifies recurring deficiency patterns by analyst and activity type.
+The BSA officer receives a quarterly quality analysis for use in targeted training and quality-programme calibration.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="conduct-complaints">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Conduct &amp; complaints</h2>
+    
+    <p class="l3-section__intent">Conduct risk is the risk that the bank&#39;s actions or product design produce unfair customer outcomes — generating regulatory intervention under consumer protection frameworks (NBKR consumer protection rules, CBR Ordinance No. 3241-U, FCA PRIN principles, CFPB regulations). Customer complaint data is the primary signal for conduct risk; complaint theme analysis identifies systematic product or process failures before they reach regulatory attention. Complaint root-cause analytics drive product remediation, staff retraining, and disclosure improvement. Under CRD IV and FCA SYSC, conduct risk governance is a board-level responsibility with documented escalation paths.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/conduct-complaints/complaint-regulatory-escalation-tracker">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Complaint Regulatory Escalation Tracker</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent tracks complaints that meet regulatory escalation thresholds — FCA/CFPB reportable complaints, NBKR complaint registry submissions — and generates the escalation record and regulator submission pack for the compliance officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Complaints meeting regulatory escalation criteria must be identified from the complaint queue and submitted to the regulator within defined timeframes.
+The threshold identification and submission preparation is performed manually per complaint; during high-volume periods the risk of a missed escalation deadline increases.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the daily complaint queue, applies the jurisdiction-specific escalation criteria, flags complaints meeting the threshold, and generates the submission pack in the required format.
+The compliance officer reviews and files within the regulatory window.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/conduct-complaints/complaint-theme-root-cause-analytics">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Complaint Theme &amp; Root-Cause Analytics</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent classifies complaints into granular themes, clusters by root cause, and tags conduct-risk signals for the Head of Compliance.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Complaint teams categorize incoming complaints into broad buckets and handle each individually.
+Recurring themes, shared root causes across complaint types, and conduct-risk signals are visible only in periodic reviews rather than as they develop.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent processes complaints through thematic classification, clusters by root cause across category boundaries, and tags each cluster for conduct-risk signal strength.
+The Head of Compliance receives a monthly theme and root-cause pack with signals ranked by severity.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The Head of Compliance receives a monthly thematic classification of complaints with root-cause clusters and conduct-risk signal rankings, on a continuous basis rather than in periodic manual reviews.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent complaint classification and root-cause clustering running on 100% of incoming complaints within 6 months of go-live; monthly pack delivered to Head of Compliance for ≥10 consecutive months in year 1.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of agent-identified conduct-risk signal clusters rated as material by the Head of Compliance; ≤5% misclassification rate on thematic taxonomy validated by quarterly compliance team review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Monthly thematic pack produced within 3 business days of month-end, versus ≥2 weeks of manual complaint review under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/conduct-complaints/conduct-risk-product-review-signal">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Conduct Risk Product Review Signal</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent correlates complaint theme clusters with product-level data — fee structures, disclosure documentation, and sales channel performance — to identify the product or process root cause for the Head of Compliance&#39;s quarterly conduct risk review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Complaint theme analysis identifies the topic of complaints but not the product-level root cause.
+Connecting a complaint cluster to a specific disclosure inadequacy, fee calculation error, or sales channel practice requires additional data joins that are performed manually when a theme becomes large enough to warrant investigation.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads complaint theme clusters, cross-references each cluster with product fee structures, disclosure documentation versions, and sales channel performance data.
+It identifies the most probable product or process root cause per cluster and presents the correlation analysis to the Head of Compliance ahead of the quarterly conduct risk review.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="sanctions-pep-screening">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Sanctions &amp; PEP screening</h2>
+    
+    <p class="l3-section__intent">Sanctions screening matches customers, transactions, and counterparties against sanctions lists — OFAC SDN, UN Security Council lists, EU Consolidated List, and domestic NBKR and CBR lists — and politically exposed person (PEP) registers. Under FATF Recommendation 6 and domestic sanctions-compliance regulations, screening must cover onboarding, periodic review, and real-time transaction screening. Screening generates false positives from name-matching algorithms; each potential match requires investigation and disposition. Screening list updates — following regulatory additions — must be implemented within defined timeframes.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sanctions-pep-screening/sanctions-hit-investigation-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Sanctions Hit Investigation Pack</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the investigation package for each sanctions screening match — customer profile, transaction context, name-match analysis, and disposition rationale template — for the compliance officer to review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Each sanctions screening potential match requires the compliance officer to investigate the hit — reviewing customer profile, transaction context, and the specific match reason — before disposition as true or false positive.
+Investigation context assembly is a per-hit overhead that peaks during sanctions list updates when volume spikes.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent assembles the per-hit investigation package: customer KYC profile, recent transaction context, the specific match field and confidence score, prior disposition history for this customer, and a disposition rationale template.
+The compliance officer completes disposition with the full context available from the outset.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Compliance officers complete sanctions screening match disposition with the full investigation package — KYC profile, transaction context, match analysis, prior disposition history, and rationale template — assembled by the agent at the point of hit review.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to assemble investigation packages for ≥95% of sanctions screening potential matches within 6 months of go-live; all six investigation package components populated in every run from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of agent-assembled packages accepted by compliance officers as complete without requiring supplemental manual lookups; package completeness confirmed at ≥95% on quarterly quality audits.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Investigation package available to the compliance officer within 5 minutes of hit assignment, versus ≥20 minutes of manual assembly per hit under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sanctions-pep-screening/sanctions-list-update-impact-assessment">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Sanctions List Update Impact Assessment</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reads new sanctions list updates from OFAC, EU, UN, and domestic regulators, identifies newly added names against the active customer and counterparty book, and delivers an impact assessment to the sanctions compliance officer within the implementation window.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Sanctions list updates must be reflected in screening systems within defined timeframes.
+The impact assessment — which active customers or counterparties match the new additions — is performed manually or relies on the screening system batch run, which may not execute until the following business day.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the new sanctions list update, extracts added names and entities, and applies name-matching logic against the active customer and counterparty registers.
+It delivers a same-day impact assessment flagging potential matches for the sanctions compliance officer to investigate and action before the system batch run.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/sanctions-pep-screening/pep-periodic-review-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">PEP Periodic Review Pack</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the enhanced due diligence review pack for PEP customers on the periodic review schedule — current PEP registry status, transaction behaviour analysis, adverse media, and prior review findings — for the compliance officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>PEP customers require enhanced due diligence on a defined periodic review cycle.
+Assembling the review pack — current PEP registry status, transaction behaviour, adverse media, and prior review summary — for each customer ahead of the review date is a manual preparation task for the compliance analyst.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the PEP periodic review schedule, retrieves each customer&#39;s current registry classification, 12-month transaction behaviour, adverse media results, and prior review documentation.
+It assembles the review pack for each customer due in the cycle and presents it to the compliance officer for the review assessment.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="regulatory-examination-management">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Regulatory examination management</h2>
+    
+    <p class="l3-section__intent">Regulatory examinations — conducted by NBKR, NBK/ARDFM, CBR, FCA, OCC, Fed, or FDIC depending on jurisdiction — follow defined cycles with document request lists, management presentations, and findings issuance. For a mid-size bank, an examination cycle consumes 80-150 CCO and General Counsel hours plus 200-400 hours across business lines. The quality of examination preparation — document request response speed, anticipated focus area coverage, prior-commitment tracking — directly influences examination outcomes and supervisory ratings. Under the CAMELS or equivalent supervisory framework, a management rating downgrade affects capital requirements and regulatory flexibility.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-examination-management/regulatory-examination-readiness">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Regulatory Examination Readiness</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent tracks examination document request status, pre-assembles responses from institutional records, surfaces anticipated examiner focus areas, and maintains an internal policy corpus for staff queries throughout the examination cycle.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>A 100–200 item examiner document request consumes significant CCO and cross-business hours over several weeks per examination cycle.
+Anticipated examiner focus areas are informed by institutional memory; prior-examination commitments are tracked manually; compliance staff spend material time per query on search-and-verify with accuracy varying by experience.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent tracks document request completion, cross-references institutional records against each request, anticipates examiner focus areas from prior examination findings and recent regulatory guidance, and drafts response templates.
+A RAG corpus of internal policies and key regulatory texts answers staff queries with cited sources; ambiguous cases defer to General Counsel.
+The CCO reviews weekly status and directs resources to gaps.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The CCO manages the examination cycle with agent-maintained document request tracking, pre-assembled institutional responses, and a RAG corpus of internal policies that resolves staff queries with cited sources throughout the examination window.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent examination readiness system in active use for ≥1 full NBKR/NBK/ARDFM examination cycle within 18 months of go-live; RAG corpus covering ≥90% of current internal policies and key regulatory texts from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of agent pre-assembled document responses accepted by the CCO as complete without major supplementation; staff query resolution accuracy confirmed at ≥85% on quality audit of cited responses.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Document request response preparation cycle reduced by ≥40% in total elapsed days versus the prior examination cycle, as measured by time from examiner request to CCO-approved response.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-examination-management/examination-document-request-response">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Examination Document Request Response Assembly</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reads each item on the examiner document request list, retrieves the matching document from the institutional records repository, and assembles the submission package for the CCO&#39;s review, reducing the per-item manual retrieval cycle.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>A regulatory examination document request typically contains 80-150 items spanning policies, procedures, transaction samples, committee minutes, and prior remediation evidence.
+The compliance team assigns each item to a business line owner, who locates and returns the document; the retrieval and assembly process can span three to four weeks and consumes significant cross-business capacity.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the document request list, matches each item against the institutional document repository using semantic search, and retrieves the most current version.
+It assembles the submission package per request item with source citations, flags items where no matching document is found, and presents the assembled package to the CCO for review before transmission to the examiner.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/compliance-financial-crime/regulatory-examination-management/examination-findings-pattern-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Examination Findings Pattern Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent clusters examination findings across multiple examination cycles by root cause, business line, and regulatory framework, identifying systemic patterns that the CCO can address proactively before the next examination.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Examination findings are documented per examination and responded to individually.
+Systemic patterns — the same root cause generating findings across three successive examinations, or findings concentrated in a specific business line under a particular regulatory framework — are visible only in a cross-examination analysis that is not routinely produced.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the examination finding archive across the rolling five-year period, applies root-cause clustering across finding descriptions, maps each cluster to business line and regulatory framework, and identifies systemic patterns with repeat incidence.
+The CCO receives the analysis before each new examination cycle, enabling targeted pre-examination remediation of demonstrated systemic weaknesses.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </main>
+
+  
+  
+
+
+
+
+
+
+
+<footer class="page-footer" role="contentinfo">GenAI-enabled Banking and Financial Services Framework · v11i</footer>
+
+</div>
+
+</body>
+</html>

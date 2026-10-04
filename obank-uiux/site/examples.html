@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Examples · O! UI/UX</title>
+  <script>
+    (() => {const p=new URLSearchParams(location.search);let theme=p.get('theme');if(!['dark','light'].includes(theme)){try{theme=localStorage.getItem('o-uiux-theme');}catch{}}document.documentElement.dataset.theme=theme==='light'?'light':'dark';})();
+  </script>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="primitives.css">
+  <link rel="stylesheet" href="workspace.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="o-skip" href="#main" data-ru="К содержанию" data-en="Skip to content">К содержанию</a>
+  <header class="o-header">
+    <a class="o-identity" href="index.html"><img src="assets/logos/o-mark.svg" width="34" height="38" alt="O!"><span>UI/UX Guide</span></a>
+    <div class="o-search" role="search">
+      <label for="guide-search" class="o-sr-only" data-ru="Поиск по руководству" data-en="Search the guide">Поиск по руководству</label>
+      <input id="guide-search" type="search" autocomplete="off" aria-controls="search-results">
+      <div id="search-results" class="o-search-results" hidden></div>
+    </div>
+    <div class="o-tools">
+      <label for="language" class="o-sr-only" data-ru="Язык" data-en="Language">Язык</label>
+      <select id="language"><option value="ru">RU</option><option value="en">EN</option></select>
+      <button id="theme" type="button">Светлая тема</button>
+    </div>
+  </header>
+  <div class="o-frame">
+    <aside class="o-nav">
+      <details open>
+        <summary data-ru="Разделы руководства" data-en="Guide sections">Разделы руководства</summary>
+        <nav aria-label="UI/UX"><a href="patterns.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m12 19-7-7 7-7" />
+  <path d="M19 12H5" />
+</svg>
+<span data-ru="Все примеры" data-en="All examples">Все примеры</span></a><div id="demo-navigation"></div></nav>
+      </details>
+      <p class="o-caption">O! Internal Workspace<br>v0.1.1 · 02.10.2026</p>
+    </aside>
+    <main class="o-main" id="main" tabindex="-1">
+      <p class="o-eyebrow" data-ru="Сценарий · интерактивный пример" data-en="Pattern · interactive example">Сценарий · интерактивный пример</p><h1 id="demo-title">Пример</h1><div id="demo-note"></div><div id="mockup"></div>
+      <footer class="o-footer"><span data-ru="Рабочий стандарт внутренних порталов" data-en="Working internal portal standard">Рабочий стандарт внутренних порталов</span> · v0.1.1 · <a href="adoption.html" data-ru="Как использовать" data-en="How to adopt">Как использовать</a> · <a href="o-uiux-kit.zip" download data-ru="Скачать комплект" data-en="Download kit">Скачать комплект</a></footer>
+    </main>
+  </div>
+  <noscript><p class="o-callout">Guidelines remain readable. Search, theme controls and interactive examples require JavaScript.</p></noscript>
+</body>
+</html>
