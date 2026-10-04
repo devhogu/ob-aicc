@@ -442,7 +442,7 @@ class Site:
         names = '|'.join(re.escape(name) for name in sorted(self.doc_names, key=len, reverse=True))
         self.xref = re.compile(r'\b(' + names + r')(?:\s*,\s*(?:раздел(?:ы|а|е|ов)?|пункт(?:ы|а|е|ов)?)\s+|\s+)(\d+(?:\.\d+)*)((?:\([a-z]\))?)')
         # Russian order puts the number first: «пункт 4.4 Операционной модели», «раздел 4 Бизнес-модели».
-        self.xref_rev = re.compile(r'(?<![\w-])(?:раздел(?:ы|а|е|у|ом|ов)?|пункт(?:ы|а|е|у|ом|ов)?|[Пп]\.|[Рр]азд\.)\s+(\d+(?:\.\d+)*)((?:\([a-z]\))?)\s+(' + names + r')(?![\w-])')
+        self.xref_rev = re.compile(r'(?<![\w-])(?:раздел(?:ы|а|е|у|ом|ов)?|пункт(?:ы|а|е|у|ом|ов)?|[Пп]п?\.|[Рр]азд\.)\s+(\d+(?:\.\d+)*)((?:\([a-z]\))?)(?:(?:,\s*|\s+и\s+)\d+(?:\.\d+)*(?:\([a-z]\))?)*\s+(' + names + r')(?![\w-])')
 
     def combined_sources(self, paths):
         # Generated views require all their source fragments in the same language.
