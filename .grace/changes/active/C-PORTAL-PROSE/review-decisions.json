@@ -1,0 +1,1242 @@
+{
+  "run": "20261004151241",
+  "authority": "Full-site humanize review and selective adoption requested by user; charter is read-only",
+  "documents": {
+    "portal/content/en/about/what-we-do.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "help with cases",
+          "source": "case assistance"
+        },
+        {
+          "draft": "adopted Solutions",
+          "source": "Adopted Solutions"
+        }
+      ],
+      "reason": "Accept clearer sentences and possessives; retain professional wording and the defined Adopted Solutions category.",
+      "notes": [
+        "Named service areas and validation boundary preserved; original numbering is valid."
+      ],
+      "paired_review": "Read full Russian counterpart; accepted sentence and possessive edits preserve existing meaning. Normalize the defined Russian Adopted Solution category capitalization in the oversight cell.",
+      "ru_restorations": [
+        {
+          "draft": "за внедрёнными Решениями",
+          "replacement": "за Внедрёнными решениями"
+        }
+      ]
+    },
+    "portal/content/en/responsible-ai/opportunities.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "# Opportunities\n",
+          "source": "# The opportunities\n"
+        },
+        {
+          "draft": "Help with coding",
+          "source": "Coding assistance"
+        }
+      ],
+      "reason": "Accept clearer explanations and sentence divisions; preserve the existing page title and professional IT term.",
+      "notes": [
+        "Evidence gaps in claims remain content-grounding matters, not new wording authority.",
+        "Statement of Intent 2.2 is already linked by the renderer.",
+        "Actor resolved: Russian counterpart says employees; HEAD source says agent/agents, and the uncommitted terminology sweep introduced AI. Restore the existing human actor, not a new technical agent or authority."
+      ],
+      "grounded_corrections": [
+        {
+          "draft": "Real-time knowledge support for the AI agent",
+          "replacement": "Real-time knowledge support for customer service representatives"
+        },
+        {
+          "draft": "AI agents freed for difficult cases",
+          "replacement": "customer service representatives freed for difficult cases"
+        }
+      ],
+      "paired_review": "Read full Russian counterpart; wording edits preserve meaning. The English customer-service actor requires the recorded correction to match the existing Russian meaning."
+    },
+    "portal/content/en/reference/research-and-insight.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "For an overview of policy and the definitions",
+          "source": "For the policy landscape and the definitions"
+        },
+        {
+          "draft": "For a view of the vendor market, when procured",
+          "source": "For a vendor landscape, when procured"
+        },
+        {
+          "draft": "it tells you what is happening",
+          "source": "it tells what is happening"
+        }
+      ],
+      "reason": "Accept clearer possessives and access wording; retain precise professional landscape terminology and the impersonal register.",
+      "notes": [
+        "Three kinds introduces four categories: editorial count correction to resolve before adoption.",
+        "Broad source assessments and most-cited claim lack an identified basis; no factual rewrite authorized by style review."
+      ],
+      "paired_review": "Read full Russian counterpart; accepted edits preserve source meaning. The same three-versus-four category count error occurs in both versions.",
+      "grounded_corrections": [
+        {
+          "draft": "Three kinds of source",
+          "replacement": "Four kinds of source"
+        }
+      ],
+      "ru_restorations": [
+        {
+          "draft": "три типа источников",
+          "replacement": "четыре типа источников"
+        }
+      ]
+    },
+    "portal/content/en/about/how-we-work.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected procedural descriptions and commitments; worker output is byte-identical.",
+      "notes": [
+        "Is read on four signals is awkward but the tool proposed no permitted replacement."
+      ]
+    },
+    "portal/content/en/delivery/backlogs-boards-and-kanbans.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance and delivery descriptions; output is byte-identical to source.",
+      "notes": [
+        "Plan of intent honest is unclear but the worker proposed no permitted replacement."
+      ]
+    },
+    "portal/content/en/delivery/events-and-rituals.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance and delivery descriptions; output is byte-identical to source.",
+      "notes": [
+        "Pay down what the quarter left is vague; no source-grounded replacement proposed."
+      ]
+    },
+    "portal/content/en/delivery/experiment-workflow.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected ordered Trial procedure, approval authority and data safeguards; output is byte-identical.",
+      "notes": [
+        "Offering type is established in the governing corpus; do not invent a new meaning from the standalone-reader note."
+      ]
+    },
+    "portal/content/en/delivery/life-cycle-management.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected lifecycle rules, release checks and retirement/Handover ordering; byte-identical output.",
+      "notes": [
+        "Significant change is a governed category with criteria, not an unsupported magnitude claim.",
+        "Elliptical Service ownership and re-check wording require source-context interpretation; no replacement proposed."
+      ]
+    },
+    "portal/content/en/delivery/life-of-a-service.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service steps, transition gates, decision authority and closure/Handover conditions; byte-identical output.",
+      "notes": [
+        "Service steps versus states and Adopted Solution oversight preserved.",
+        "Significant change criteria exist in the governing lifecycle model; source-specific reference clarification is separate from this wording proposal."
+      ]
+    },
+    "portal/content/en/delivery/measures-and-tracking.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected measurement rules, review responses and source restrictions; byte-identical output.",
+      "notes": [
+        "Worker flags falling rate and signals fall across measures with different favorable directions; retain as a substantive clarification finding.",
+        "Causal performance claim requires evidence review rather than a stylistic replacement."
+      ]
+    },
+    "portal/content/en/delivery/measures-definitions-and-formulas.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected formulas, measurement boundaries, target rules and authority; byte-identical output.",
+      "notes": [
+        "Cycle-time light-mode endpoint wording needs checking against the governing model before any correction.",
+        "High/low thresholds cannot be invented.",
+        "Function refers to a Bank business function in this context; do not treat ordinary contextual terminology as an automatic defect."
+      ]
+    },
+    "portal/content/en/delivery/overview.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected procedural and governance content; reviewed output is byte-identical to source.",
+      "notes": [
+        "No substantive anomalies identified; no proposed edit."
+      ]
+    },
+    "portal/content/en/delivery/quality-verification-and-release.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected procedural and governance content; reviewed output is byte-identical to source.",
+      "notes": [
+        "Significant change criteria are already defined in the charter.",
+        "Diagram says real users while prose says real users or data; record as a separate grounding question, not an approved wording change."
+      ]
+    },
+    "portal/content/en/delivery/roles-and-records.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected procedural and governance content; reviewed output is byte-identical to source.",
+      "notes": [
+        "The one limit and may stop are compressed references to governed boundaries; no new authority or scope should be inferred."
+      ]
+    },
+    "portal/content/en/delivery/service-operations.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service or scheduling rules; reviewed output is byte-identical to source.",
+      "notes": [
+        "Targets versus guarantees and response periods preserved.",
+        "Fragment in service-health introduction and service-steps wording noted; no permitted replacement proposed."
+      ]
+    },
+    "portal/content/en/delivery/the-cadence.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service or scheduling rules; reviewed output is byte-identical to source.",
+      "notes": [
+        "Calendar-month versus whole-week convention and larger-event shorthand require the governing cadence context; no new scheduling rule inferred."
+      ]
+    },
+    "portal/content/en/delivery/the-flow-of-value.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected acceptance, admission, ranking, ownership and Stage rules; byte-identical output.",
+      "notes": [
+        "Product-owner/AICC Lead comma construction is compressed; the governing small-team authority remains unchanged."
+      ]
+    },
+    "portal/content/en/delivery/the-loops-of-delivery.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected delivery, testing and release-authority procedures; byte-identical output.",
+      "notes": [
+        "Figure 4 feedback destination and prose differ; diagram topology is outside this wording pass.",
+        "Cadence cost and industry-attribution claims need source evidence rather than stylistic strengthening."
+      ]
+    },
+    "portal/content/en/governance/controls-and-the-catalogue.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected control-status, review and remediation rules; byte-identical output.",
+      "notes": [
+        "Overdue deficiency is decided at once is unclear, but the worker proposed no grounded replacement or named decision authority."
+      ]
+    },
+    "portal/content/en/governance/decisions-and-escalation.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected escalation conditions, final authority, conflict restrictions and records; byte-identical output.",
+      "notes": [
+        "Next level is literal decision hierarchy, not a promotional cliché.",
+        "Diagram reversibility shorthand and escalation threshold need governing-context review; no new threshold or diagram edit adopted."
+      ]
+    },
+    "portal/content/en/governance/measures-and-reporting.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected control targets, review requirements and report authority; byte-identical output.",
+      "notes": [
+        "Acceptances and live reviews is compressed but may be clear from the referenced governance documents; no proposed replacement."
+      ]
+    },
+    "portal/content/en/governance/overview.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance rules, precedence and control/evidence authority; byte-identical output.",
+      "notes": [
+        "No confirmed source inconsistency or proposed permitted wording edit."
+      ]
+    },
+    "portal/content/en/governance/records-evidence-and-assurance.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance rules, precedence and control/evidence authority; byte-identical output.",
+      "notes": [
+        "No confirmed source inconsistency or proposed permitted wording edit."
+      ]
+    },
+    "portal/content/en/governance/the-control-loops.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance decisions, duties and conditions; byte-identical output.",
+      "notes": [
+        "Appointments in order and share found in order are compressed governance expressions; no permitted replacement proposed."
+      ]
+    },
+    "portal/content/en/governance/the-steerings-and-the-bodies.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance decisions, duties and conditions; byte-identical output.",
+      "notes": [
+        "Only Decisions/actions recordkeeping wording may be narrower than attendance/advice requirements; record for separate grounding review.",
+        "IP and PI are distinct defined abbreviations and are correctly retained."
+      ]
+    },
+    "portal/content/en/knowledge-base/acts-and-compliance.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected descriptions of legal/policy requirements and control authority; byte-identical output.",
+      "notes": [
+        "Unverified applicability and legal-function work remain explicitly unverified; this wording pass cannot create approval.",
+        "Authorized Exceptions and an unapproved bypass are distinct concepts; no legal interpretation or rule change adopted."
+      ]
+    },
+    "portal/content/en/knowledge-base/guides.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "Who has which responsibilities",
+          "source": "Who is responsible for what"
+        }
+      ],
+      "reason": "Accept sentence divisions, grammatical corrections and clearer record wording; retain the existing direct responsibility question. Headings, destinations and governing-document precedence are unchanged.",
+      "paired_review": "Read the full Russian counterpart. It already expresses the revised English meaning and can retain its wording; update the comparison hash after adoption.",
+      "notes": [
+        "Calendar and appointment wording is clearer in the Russian version; do not infer new scheduling or appointment rules."
+      ]
+    },
+    "portal/content/en/knowledge-base/learning-paths.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "A learning path gives a role a reading order:",
+          "source": "A learning path is a reading order for a role:"
+        },
+        {
+          "draft": "| Step | Read | You can |",
+          "source": "| Step | Read | So that you can |"
+        }
+      ],
+      "reason": "Accept clearer grammatical constructions, reading outcomes and escalation wording; retain the original opening definition and learning-purpose column label. All defined names and section headings survive.",
+      "paired_review": "Read the full Russian counterpart. It already expresses these reading outcomes and escalation meaning; retain its wording and refresh comparison hash after adoption.",
+      "notes": [
+        "Only gate failures concern preserved headings containing defined roles. Do not relaunch: three attempts documented the same conflict; lowercasing those names would violate project terminology. Record as a reviewed false positive, not a tool pass.",
+        "Ambiguous adoption/finality/separations shorthand and unsupported one-hour course duration were not substantively rewritten."
+      ]
+    },
+    "portal/content/en/knowledge-base/overview.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance or policy explanation; reviewed output is byte-identical.",
+      "notes": [
+        "Awkward introductory grouping noted; no claim or governance rewrite proposed. Navigate is precise for knowledge navigation."
+      ]
+    },
+    "portal/content/en/knowledge-base/playbooks-and-lessons.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance or policy explanation; reviewed output is byte-identical.",
+      "notes": [
+        "Courses is the established explanatory course format; do not treat the naming as a new content defect. Baseline date and package documentation status remain unchanged."
+      ]
+    },
+    "portal/content/en/knowledge-base/questions-people-ask.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance or policy explanation; reviewed output is byte-identical.",
+      "notes": [
+        "FAQ first-person voice is appropriate. Assurance terminology and three separate acceptances retained."
+      ]
+    },
+    "portal/content/en/knowledge-base/templates-and-forms.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected approval and recordkeeping explanation; output is byte-identical.",
+      "notes": [
+        "Guardrail and stop wording retains the existing boundary; no new approval or stopping authority inferred."
+      ]
+    },
+    "portal/content/en/organization/how-the-organization-grows.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected operating rules, role transitions and Handover boundaries; output is byte-identical.",
+      "notes": [
+        "Acceptance limits and Handover criteria require governing context; no new thresholds inferred. Light mode capitalization varies at the opening but carries the same established meaning."
+      ]
+    },
+    "portal/content/en/organization/overview.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected organizational authority and separation rules; output is byte-identical.",
+      "notes": [
+        "Validate describes a defined assurance responsibility and must not become check. Industry-practice assertions lack citations in the snapshot; no factual strengthening adopted."
+      ]
+    },
+    "portal/content/en/organization/people-and-appointments.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected appointment authority, delegation, access and date conditions; output is byte-identical.",
+      "notes": [
+        "Next level describes authority hierarchy. Checker appointment cell combines engineer qualifications with authority; record for a separate grounding check, not a stylistic reassignment."
+      ]
+    },
+    "portal/content/en/organization/the-place-of-aicc-in-the-bank.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected mandate, organizational accountability and control boundaries; output is byte-identical.",
+      "notes": [
+        "Appointment/decision-reference syntax and Steering shorthand are compressed; any clarification must follow governing context. Validate remains a precise governance term."
+      ]
+    },
+    "portal/content/en/organization/the-roles.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected role authority and separation rules; output is byte-identical.",
+      "notes": [
+        "The reported acceptance ambiguity is resolved by Vocabulary Acceptance and Operating Model 4.4(d): Feature/Capability and final Team acceptance are distinct from business acceptance. Existing role combinations preserve that distinction."
+      ]
+    },
+    "portal/content/en/organization/who-does-what.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected responsibility assignments, acceptance authority and separation rules; output is byte-identical.",
+      "notes": [
+        "Along the life and accepted limits are compressed phrasing; no permitted rewrite proposed. Role assignments and conditions preserved."
+      ]
+    },
+    "portal/content/en/portfolio/measures-and-tracking.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected measurement, approval and tracking-system boundaries; output is byte-identical.",
+      "notes": [
+        "In brief could mean concise presentation or the Initiative Brief; no interpretation inserted. Objective/key-result mapping and tracking restrictions retained."
+      ]
+    },
+    "portal/content/en/portfolio/measures-definitions-and-formulas.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected formulas, measurement limits and governance authority; output is byte-identical.",
+      "notes": [
+        "Qualitative very low/high and perfect-plan diagnostic claims need a substantive evidence review; no invented thresholds or causes. Envelope utilization remains a measure name."
+      ]
+    },
+    "portal/content/en/portfolio/overview.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "with Control Functions clearances",
+          "source": "with the clearances of the Control Functions"
+        }
+      ],
+      "reason": "Accept clearer introductory sentences, capacity wording and backlog maintenance; retain the grammatical expression of Control Functions clearances. Funding boundaries, hypotheses, MVP requirement and Active Initiatives limit survive.",
+      "paired_review": "Read the complete Russian counterpart including diagram. The accepted changes preserve its current meaning; retain Russian wording and refresh the comparison hash.",
+      "notes": [
+        "General claims about idea volume and relative risk remain at their original strength; no supporting evidence invented."
+      ]
+    },
+    "portal/content/en/portfolio/roles-and-records.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected governance authority, approval boundaries and separation rules; output is byte-identical.",
+      "notes": [
+        "May stop omits an object and lens is metaphorical; retain the governing scope rather than inventing a replacement."
+      ]
+    },
+    "portal/content/en/portfolio/strategy-and-investment.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected investment approvals, limits and governance renewal; output is byte-identical.",
+      "notes": [
+        "Read the source and Portfolio Management Model. The final must in 3.2 is elliptical after may act alone; awkward, but not authority to invent a new Sponsor action.",
+        "Section 4 groups acceptance with benefit confirmation and does not explicitly repeat the no-Domain Experiment exception in 3.1. Keep as a substantive table-grounding finding, not a stylistic correction."
+      ]
+    },
+    "portal/content/en/portfolio/the-business-case-and-the-mvp.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected business-case approval, clearance, ranking and release boundaries; output is byte-identical.",
+      "notes": [
+        "A figure of the Bank is compressed source-system wording; no unsupported interpretation added. MVP and sufficient reason are substantive terms."
+      ]
+    },
+    "portal/content/en/portfolio/the-flow.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected Portfolio gates, decision authority, lifecycle outcomes and Active Initiatives limits; output is byte-identical.",
+      "notes": [
+        "Single most important control is a comparative claim without evidence in the snapshot; no new support or altered claim introduced."
+      ]
+    },
+    "portal/content/en/portfolio/the-lanes-and-the-front-door.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected ordered procedures and governance authority; output is byte-identical.",
+      "notes": [
+        "Named service areas, intake order, screening questions and Catalog duplication boundaries preserved."
+      ]
+    },
+    "portal/content/en/portfolio/the-loops-and-governance.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected ordered procedures and governance authority; output is byte-identical.",
+      "notes": [
+        "Probe is not expanded into an invented technical definition. Five Mermaid blocks and all loop authorities retained."
+      ]
+    },
+    "portal/content/en/reference/industry-body-of-knowledge.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Accept clearer introductory, descriptive and table wording while preserving source names, distinctions and linked provisions.",
+      "paired_review": "Read the complete Russian counterpart. The stylistic changes preserve its meaning. Both pages still claim avoidance of external vocabulary, which conflicts with the current shared terminology rule; make the paired grounded correction below.",
+      "grounded_corrections": [
+        {
+          "draft": "The charter adopts these sources in its own terms without using their vocabulary",
+          "replacement": "The charter draws on these sources using the terminology established in the corpus"
+        }
+      ],
+      "ru_restorations": [
+        {
+          "draft": "Корпус использует их в собственных терминах без заимствования специальной терминологии",
+          "replacement": "Корпус опирается на эти источники и использует установленную в нём терминологию"
+        }
+      ],
+      "notes": [
+        "Terminology correction is grounded in Vocabulary and Style 3.8–3.9 and Shared Business and Technology Terminology 1.1–1.5; neither Charter document is changed.",
+        "Preserve source names and minimum viable product. No new claim about legal force, certification or source applicability is introduced.",
+        "Missing Markdown links do not prove missing rendered references; the renderer resolves plain document references."
+      ]
+    },
+    "portal/content/en/reference/learning-and-open-resources.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected Bank data restrictions, provider entry, licensing and supply-chain conditions; output is byte-identical.",
+      "notes": [
+        "Crash course identifies the Google course and evaluate is a precise activity. One-hour weekly time claim is unsupported in the snapshot; no new estimate supplied."
+      ]
+    },
+    "portal/content/en/reference/overview.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected source authority, information security, registration, procurement and provider checks; output is byte-identical.",
+      "notes": [
+        "Navigate is literal navigation wording. The field moves each quarter and two-year-old articles are history are unsupported categorical claims in the snapshot; no new evidence or altered restrictions introduced.",
+        "Mixed formal safeguards and informal metaphors remain a style limitation under document-level protected mode."
+      ]
+    },
+    "portal/content/en/reference/regulations/aifc.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Accept sentence divisions, possessives and the missing article before bounded trial. Institutional name, authority boundaries and claims are unchanged.",
+      "paired_review": "Read the full Russian counterpart; it already uses the same sentence divisions and meaning. Retain its wording and refresh the source comparison hash.",
+      "notes": [
+        "Gate failed three times solely on the preserved proper-name title. No retry: changing the official name to satisfy sentence case would violate the brief. Record as a reviewed false positive, not a tool pass.",
+        "The generic instrument footer and assertions about regional influence and sandbox inspiration remain substantive sourcing questions; no legal or factual interpretation is invented."
+      ]
+    },
+    "portal/content/en/reference/regulations/bank-of-russia-on-ai.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Accept sentence divisions, grammatical theme list and clearer possessives. Retain soft law, model risk, explainability and likely; no regulatory claim or authority is strengthened.",
+      "paired_review": "Read the complete Russian counterpart; it already expresses the same preference, uncertainty, themes and authority boundary. Retain wording and refresh comparison hash.",
+      "notes": [
+        "Largest neighboring market and influence claims remain unsupported in the source; no factual validation is implied by the style pass.",
+        "Specific reports and plural reports versus singular instrument footer need separate source-grounding work."
+      ]
+    },
+    "portal/content/en/reference/regulations/council-of-europe-ai-convention.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Reject the only proposed edit, ensure to make sure: the original is precise, conventional formal wording for the described treaty commitment. The passing gate does not make the casual substitution preferable.",
+      "notes": [
+        "Preserve the complete instrument name and all applicability qualifications. Supporting evidence for first-treaty and national-law direction claims remains a source-grounding question."
+      ]
+    },
+    "portal/content/en/reference/regulations/eu-ai-act.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Reject comprehensive law to full law: comprehensive describes breadth, whereas full is vague and does not improve the formal legal summary. Retain the entire source.",
+      "notes": [
+        "Worker properly retained ensure and the instrument title. The 2026 amendment and phased dates are source-verification questions; no legal timeline or applicability change is made.",
+        "Vale incorrectly reads 26 am inside 2026 amendment as a time expression."
+      ]
+    },
+    "portal/content/en/reference/regulations/eu-dora.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected regulatory applicability and policy expectations; output is byte-identical.",
+      "notes": [
+        "Retain named instrument and institutional title. Regional influence, assessment and clearest-statement claims require evidence if substantively reviewed; this pass makes no new regulatory claim."
+      ]
+    },
+    "portal/content/en/reference/regulations/eu-gdpr.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected legal rights, applicability and policy relationships; output is byte-identical.",
+      "notes": [
+        "Similarly significant effects is a legal expression, not a magnitude claim requiring a number. Preserve comply with and the instrument name.",
+        "Providers are built to comply is an unclear compliance claim; choosing products or systems as its object would introduce an unverified interpretation."
+      ]
+    },
+    "portal/content/en/reference/regulations/financial-standard-setters-on-ai.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "national banking supervisors apply",
+          "source": "national banking supervisors implement"
+        },
+        {
+          "draft": "the best guide to what the Bank's supervisor will ask in time",
+          "source": "the best indication of what the Bank's supervisor will ask in time"
+        }
+      ],
+      "reason": "Accept grammatical theme descriptions, possessives and sentence divisions. Preserve implementation as the supervisory activity and indication as an evidential description.",
+      "paired_review": "Read the complete Russian counterpart; its wording already describes implementation, reports as indicators, the same risk themes and authority boundaries. Retain it and refresh the comparison hash.",
+      "notes": [
+        "Predictions about supervisory expectations, best-indication and relative cost claims remain at their existing strength; no new evidence or regulatory interpretation is supplied."
+      ]
+    },
+    "portal/content/en/reference/regulations/g7-hiroshima-ai-process.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Accept complete introductory sentences, clearer referents and sentence divisions. Preserve prioritization, voluntary scope, provider assessment and all named commitments.",
+      "paired_review": "Read the complete Russian counterpart. The adopted English edits preserve its existing meaning; retain its wording and refresh comparison hash.",
+      "notes": [
+        "Three gate failures concern only the preserved official title. No retry: lowercasing the name would violate the brief; record a reviewed false positive rather than claiming a tool pass."
+      ]
+    },
+    "portal/content/en/reference/regulations/iso-iec-ai-standards.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Accept a complete introductory sentence, possessives and clearer comparison wording. Voluntary adoption, certification distinction and standards references remain unchanged.",
+      "paired_review": "Read the complete Russian counterpart. It already expresses comparison against ISO/IEC 42001 and the same management-system relationships; retain wording and refresh comparison hash.",
+      "notes": [
+        "Most likely yardstick remains an existing unsupported comparative judgment; no new certification, compliance or applicability claim added."
+      ]
+    },
+    "portal/content/en/reference/regulations/kg-aml-body.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected legal controls and charter validation/human-decision boundaries; output is byte-identical.",
+      "notes": [
+        "Monitor is a precise professional activity. Missing precise law/body identifiers are source-grounding issues, not a stylistic reason to invent official names."
+      ]
+    },
+    "portal/content/en/reference/regulations/kg-digital-development.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected compliance expectations, adoption conditions and charter commitment; output is byte-identical.",
+      "notes": [
+        "Unnamed ministry, acts and programs need source identifiers if substantively updated. Singular instrument footer and keeps the watch are imprecise; no invented official name, actor or responsibility."
+      ]
+    },
+    "portal/content/en/reference/regulations/kg-personal-information-law.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected legal processing permissions and charter responsibilities; output is byte-identical.",
+      "notes": [
+        "Answer the law is not automatically equivalent to comply with the law; replacing it could strengthen the claim. Precise law version and amendment references require separate source verification."
+      ]
+    },
+    "portal/content/en/reference/regulations/kz-financial-regulators.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Accept complete opening sentence, possessives and requirements for. Preserve institutional names, regulatory terms and the uncertainty in may adopt.",
+      "paired_review": "Read the complete Russian counterpart; all selected English edits preserve its existing scope and uncertainty. Retain wording and refresh comparison hash.",
+      "notes": [
+        "Three gate failures concern only the preserved institutional title. No retry: the brief requires its exact form; record as a reviewed false positive, not a tool pass.",
+        "Regional superlative and generic instrument footer remain source-grounding questions; no new factual or legal claim is added."
+      ]
+    },
+    "portal/content/en/reference/regulations/kz-law-on-ai.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected legal duties, jurisdiction and applicability; output is byte-identical.",
+      "notes": [
+        "Keep instrument names, dates and may adopt qualifiers. Specific source citations and applicability review are substantive matters; no new legal interpretation is introduced."
+      ]
+    },
+    "portal/content/en/reference/regulations/kz-personal-data-law.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected legal applicability and charter relationships; output is byte-identical.",
+      "notes": [
+        "Location/resident and reach phrasing would require a legal scope interpretation. No new processing actor or applicability statement introduced."
+      ]
+    },
+    "portal/content/en/reference/regulations/lean-portfolio-management.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Humanize retained the page, but independently flagged the obsolete terminology exclusion. Apply only the grounded reconciliation to the current Vocabulary and shared terminology reference; no Charter rule changes.",
+      "paired_review": "Read both complete source pages. Correct the shared terminology statement in both editions, restore the Russian footer to the practice/Portfolio Management Model boundary already present in English, and repair masculine agreement around business case.",
+      "grounded_corrections": [
+        {
+          "draft": "The Portfolio Management Model states the model in the Bank's own terms and names none of the framework's vocabulary, by design.",
+          "replacement": "The Portfolio Management Model states the model using the terminology established in the corpus."
+        }
+      ],
+      "ru_restorations": [
+        {
+          "draft": "Модель управления портфелем излагает подход в собственных терминах Банка и намеренно не использует терминологию этой методологической системы.",
+          "replacement": "Модель управления портфелем излагает подход с использованием терминологии, установленной в корпусе."
+        },
+        {
+          "draft": "краткий business case, проверяемое минимально жизнеспособным продуктом",
+          "replacement": "краткий business case, проверяемый с помощью минимально жизнеспособного продукта"
+        },
+        {
+          "draft": "Эта страница предназначена для ознакомления. Она обобщает содержание документа и не цитирует его положения; текст документа имеет приоритет, а Представители контрольных функций комплаенса и юридической функции подтверждают применимость к Банку.",
+          "replacement": "Эта страница предназначена для ознакомления. Она описывает практику в общих чертах; для Банка приоритет имеет Модель управления портфелем."
+        }
+      ],
+      "notes": [
+        "Terminology correction grounded in Vocabulary and Style 3.8–3.9 and Shared Terminology 1.1–1.5. Native Kanban, MVP, business case and WSJF are accepted in the current corpus.",
+        "Footer correction removes an inappropriate translated legal-instrument formulation and restores the existing English practice boundary. This does not give English language precedence; the governing Portfolio Management Model establishes the same boundary in both editions.",
+        "Best-known codification is unchanged and remains a source-assessment claim."
+      ]
+    },
+    "portal/content/en/reference/regulations/nbkr.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected regulatory applicability and charter governance boundaries; output is byte-identical.",
+      "notes": [
+        "National Bank of the Kyrgyz Republic is a proper name. Forecast of future supervisory expectations and singular instrument footer require source-grounding work; no regulatory scope or certainty change is made."
+      ]
+    },
+    "portal/content/en/reference/regulations/nist-ai-rmf.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "The framework is the most practical of the frameworks: it provides a vocabulary for risks, a structure for the work, and a checklist of actions for generative AI.",
+          "source": "It is the most practical of the frameworks: a vocabulary for the risks, a structure for the work, and a checklist of actions for generative AI."
+        }
+      ],
+      "reason": "Accept clearer introductory sentences, referents and possessives; reject the more repetitive comparison sentence. Preserve privacy-enhanced, voluntary status and certification distinction.",
+      "paired_review": "Read the full Russian counterpart. The selected edits preserve its existing risk characteristics, framework relationships and authority boundary; retain wording and refresh comparison hash.",
+      "notes": [
+        "Three gate failures concern only the preserved official title. No retry: lowering the framework name would violate the brief; record the reviewed false positive.",
+        "Most-practical assessment and the compressed AI Policy gates attachment remain source-context questions; no new assurance or applicability claim is introduced."
+      ]
+    },
+    "portal/content/en/reference/regulations/oecd-ai-principles.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "The sole foster to support substitution offers no clear improvement here. Foster is conventional policy wording about encouraging trustworthy AI; retain the original instead of applying a generic word replacement.",
+      "notes": [
+        "Preserve title, should statements and authority boundary. Definition-adoption and shortest-statement comparisons remain unverified source claims; no new interpretation added."
+      ]
+    },
+    "portal/content/en/reference/regulations/owasp-top-10-llm.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected security testing and charter Risk Tier requirements; output is byte-identical.",
+      "notes": [
+        "Preserve the named OWASP title and security obligations. Introductory fragments remain because the tool proposes no permitted protected-mode rewrite."
+      ]
+    },
+    "portal/content/en/reference/regulations/ru-ai-code-of-ethics.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected commitments, applicability or charter safeguards; output is byte-identical.",
+      "notes": [
+        "Human-centered/humanistic and safety/security express distinct concepts; no term is discarded. Consistency and source-reference claims remain as stated."
+      ]
+    },
+    "portal/content/en/reference/regulations/ru-national-ai-strategy.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected commitments, applicability or charter safeguards; output is byte-identical.",
+      "notes": [
+        "Time-box, read-only data and final decision boundaries preserved. Regional-influence and instrument-date claims are not independently verified by this style pass."
+      ]
+    },
+    "portal/content/en/reference/regulations/ru-personal-data-law.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected legal requirements, applicability and charter rules; output is byte-identical.",
+      "notes": [
+        "Preserve 152-FZ and the named law. Resolving wherever they are would select a legal interpretation; no territorial scope is invented. Requirement and information technology are valid professional wording."
+      ]
+    },
+    "portal/content/en/reference/regulations/unesco-recommendation-ethics-ai.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected policy reach, charter requirements and authority; output is byte-identical.",
+      "notes": [
+        "Implement and requirement are precise here, and the complete instrument title must survive. Adherence and most-likely-to-cite claims retain their source strength without a new factual endorsement."
+      ]
+    },
+    "portal/content/en/reference/regulations/us-federal-and-state-ai-policy.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected legal-policy summary, applicability and charter principles; output is byte-identical.",
+      "notes": [
+        "Several states is not replaced with an invented quantity or list. Exact instruments, dates and categorical applicability require source verification; the singular instrument footer remains a documented pattern."
+      ]
+    },
+    "portal/content/en/reference/regulations/us-model-risk-and-consumer-guidance.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected regulatory duties and charter validation boundaries; output is byte-identical.",
+      "notes": [
+        "Validate remains a precise activity. Broad applicability, historical-origin and all-supervisor claims require source evidence if reviewed substantively; no stronger legal claim or new instrument reference added."
+      ]
+    },
+    "portal/content/en/reference/regulators-and-acts.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Accept clearer introduction, explicit applicable-instrument referent and sentence divisions. Preserve orientation status, non-binding inclusion and verification wording.",
+      "paired_review": "Read the complete Russian counterpart. It preserves the same awareness/applicability distinction and verification status; retain wording and refresh comparison hash.",
+      "notes": [
+        "Page and instrument titles, jurisdiction headings and every table/link remain unchanged. No unverified reference becomes approved through this edit."
+      ]
+    },
+    "portal/content/en/reference/resources/arxiv-and-papers-with-code.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected Bank information-handling restrictions caused whole-page retention; output is byte-identical.",
+      "notes": [
+        "Keep arXiv and Papers with Code names and subject category. Daily firehose and keeps the watch remain awkward formal prose because the tool protects the entire document.",
+        "Code/leaderboard claim does not replace evaluation on Bank cases; no stronger evidence assertion added."
+      ]
+    },
+    "portal/content/en/reference/resources/bis-innovation-hub.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected information-use or training conditions; output is byte-identical.",
+      "notes": [
+        "Most credible and inevitable supervisory-influence claims need evidence if substantively reviewed. Exact BIS and Innovation Hub names retained. Whole-page protection leaves the opening fragment untouched."
+      ]
+    },
+    "portal/content/en/reference/resources/deeplearning-ai.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected information-use or training conditions; output is byte-identical.",
+      "notes": [
+        "DeepLearning.AI and The Batch names retained, as is evaluate. Most-practical, one-newsletter, exact-technique and afternoon-duration claims remain source-assessment questions."
+      ]
+    },
+    "portal/content/en/reference/resources/hugging-face.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected evaluation sequence, licensing, provider-check, security and upload requirements; output is byte-identical.",
+      "notes": [
+        "Hugging Face capitalization and model-card terminology preserved. Ecosystem-adoption assertion needs evidence; model-card/assessment phrasing remains compressed. Whole-page protection leaves the introductory fragment unchanged."
+      ]
+    },
+    "portal/content/en/reference/resources/imf-and-world-bank.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected citation instructions and external-resource rule; output is byte-identical.",
+      "notes": [
+        "Technical assistance and advise are precise professional wording; institutional names preserved. Regional-policy influence needs source support if substantively reviewed. Opening fragment remains under whole-document protection."
+      ]
+    },
+    "portal/content/en/reference/resources/mckinsey-and-quantumblack.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected research-use instructions and Bank information boundary; output is byte-identical.",
+      "notes": [
+        "Preserve McKinsey, McKinsey Global Institute and QuantumBlack names. Most-cited, executive-vocabulary influence and respondent/client claims lack evidence in the snapshot; Index and institutions are compressed references."
+      ]
+    },
+    "portal/content/en/reference/resources/mitre-atlas-and-ai-incident-database.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected security authorization, incident-evidence qualification and information-use restriction; output is byte-identical.",
+      "notes": [
+        "Resource names and authorization/evidence limits preserved. Awkward constructions remain outside the tool permitted edits in protected mode."
+      ]
+    },
+    "portal/content/en/reference/resources/stanford-hai-ai-index.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Reject the sole comprehensive to complete substitution. Broad coverage does not imply exhaustive completeness; the proposed word strengthens an already comparative claim.",
+      "notes": [
+        "The one-source claim and report-versus-number phrasing remain source issues. Preserve institutional name, mostly and in aggregate."
+      ]
+    },
+    "portal/content/en/reference/resources/world-economic-forum.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected Bank information-use boundary; output is byte-identical.",
+      "notes": [
+        "Named framework and its claimed consistency with Bank principles need source grounding if substantively reviewed; no framework identity or equivalence invented."
+      ]
+    },
+    "portal/content/en/responsible-ai/ai-in-fintech-and-digital-banking.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "fintech sector",
+          "source": "fintech landscape"
+        }
+      ],
+      "reason": "Reject the landscape-to-sector substitution as unnecessary professional-term simplification. Correct three human-service actor references accidentally converted to AI agents in the terminology sweep. Genuine technical AI-agent references remain.",
+      "paired_review": "Read the full Russian counterpart and compared both language files with HEAD. Russian 1.2 already says employee; 3.1 already describes an employee Assistant. Restore the human channel in Russian 3.1 and the three corresponding English referents.",
+      "grounded_corrections": [
+        {
+          "draft": "sit beside the AI agent",
+          "replacement": "sit beside the customer service representative"
+        },
+        {
+          "draft": "the AI agents, so the assistant that helps the AI agent",
+          "replacement": "bank representatives, so the assistant that helps staff"
+        }
+      ],
+      "ru_restorations": [
+        {
+          "draft": "приложение, контактный центр и AI agents",
+          "replacement": "приложение, контактный центр и представителей банка"
+        }
+      ],
+      "notes": [
+        "HEAD uses agent/agents for the human channel in 1.2 and 3.1, while Russian explicitly describes employee assistance. The uncommitted naming sweep inserted AI and changed the actor. This is a correction of terminology drift, not a newly invented deployment or authority.",
+        "Keep customer-facing AI agents and agents acting on funds in 5.1 as the genuine technical category.",
+        "Opening first-at-scale, universal regulator-restoration, sensitive-data and legal-history claims remain substantive source questions."
+      ]
+    },
+    "portal/content/en/responsible-ai/ai-terms-explained.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected defined terms, policy rules or approval procedures; output is byte-identical.",
+      "notes": [
+        "Defined glossary and significant-change boundary preserved. Missing explicit Markdown links do not imply missing rendered document links."
+      ]
+    },
+    "portal/content/en/responsible-ai/how-the-bank-applies-it.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected defined terms, policy rules or approval procedures; output is byte-identical.",
+      "notes": [
+        "Risk limits, mandatory controls, release authority, approval order and Exceptions preserved. Expired Exception disposition is compressed wording; no new decision maker or outcome is invented."
+      ]
+    },
+    "portal/content/en/responsible-ai/risks-and-challenges.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected safety controls and Bank policy rules; output is byte-identical.",
+      "notes": [
+        "Preserve usually, AI-agent terms, release/validation boundaries and named Act. Channels it cannot influence needs governing context, not an invented safeguard. General failure-rate and nontechnical-outcome claims remain source-assessment questions."
+      ]
+    },
+    "portal/content/en/responsible-ai/understanding-ai-today.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Humanize retained the page. Apply only two grounded consistency corrections: restore the human customer-service role and remove the all-four-already-used implication that contradicts the same paragraph and the staged Charter roadmap.",
+      "paired_review": "Read the complete Russian counterpart and checked the Statement of Intent maturity table. Russian 2.1 already identifies a customer-service employee; retain it. Change only the Russian 5.1 opening to describe coverage of the four categories rather than their simultaneous current use.",
+      "grounded_corrections": [
+        {
+          "draft": "the customer service AI agent",
+          "replacement": "the customer service representative"
+        },
+        {
+          "draft": "5.1. The Bank uses all four.",
+          "replacement": "5.1. The Bank's approach covers all four."
+        }
+      ],
+      "ru_restorations": [
+        {
+          "draft": "5.1. Банк использует все четыре подхода.",
+          "replacement": "5.1. Подход Банка охватывает все четыре категории."
+        }
+      ],
+      "notes": [
+        "HEAD 2.1 names a customer service agent among lawyer/accountant/engineer; current Russian names an employee. The terminology sweep inserted AI incorrectly.",
+        "Statement of Intent places AI agents at maturity Level 5 and introduces coding AI agents later; the existing page 5.1 also says AI agents come later. The revised opening preserves scope without asserting current deployment of all four.",
+        "Usually-right and largest-productivity claims remain source-assessment questions. Genuine technical AI-agent references and controls are preserved."
+      ]
+    },
+    "portal/content/en/responsible-ai/what-responsible-ai-means.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected safety controls, release conditions and policy duties; output is byte-identical.",
+      "notes": [
+        "Privacy-enhanced is a term of art and comprehensive describes breadth, so both remain. Fairly expresses fair treatment, not vague degree.",
+        "Pre-use versus in-use timing should be interpreted against governing control requirements; no new timing rule introduced. Causal/superlative and legal-date claims are not independently validated by the style pass."
+      ]
+    },
+    "portal/content/en/services/adoption-and-lifecycle-management.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected lifecycle procedures and decision authority; output is byte-identical.",
+      "notes": [
+        "Package, Handover and Backlog names retained. Four signals and Portfolio-versus-Program Backlog revision wording require governing context; no process or routing change invented."
+      ]
+    },
+    "portal/content/en/services/analytics-and-decision-support.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected publication approval, work classification and decision authority; output is byte-identical.",
+      "notes": [
+        "Package remains capitalized. One Iteration and approval referents are compressed wording; no duration, scope or approver is invented.",
+        "Service benefit wording is retained at its existing strength; no achieved performance, measurement or guarantee is added."
+      ]
+    },
+    "portal/content/en/services/areas/advise-and-formulate.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service boundary, screening procedure and confirmation authority; output is byte-identical.",
+      "notes": [
+        "Named service area and one-Iteration limit preserved. Watch on the field is compressed; days-versus-weeks reuse claim needs evidence if assessed substantively."
+      ]
+    },
+    "portal/content/en/services/areas/assurance.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service commitments, control responsibilities and engagement procedure; output is byte-identical.",
+      "notes": [
+        "Control Function Contacts, Adopted Solutions, work modes and Package condition preserved. Mode-proposal actor and opening catalogue fragment need context; no new actor inferred."
+      ]
+    },
+    "portal/content/en/services/areas/build-and-run.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service commitments, control responsibilities and engagement procedure; output is byte-identical.",
+      "notes": [
+        "Case assistance is precise professional wording. Knowledge base it can ask and service-category mode proposal are compressed descriptions; no service or approval scope change."
+      ]
+    },
+    "portal/content/en/services/areas/enablement.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service commitments, intake boundaries and confirmation procedure; output is byte-identical.",
+      "notes": [
+        "Domain Experts, Run-rate work and Package Definition retained. Reuse timing remains the original stated comparison; no additional promise or evidence invented."
+      ]
+    },
+    "portal/content/en/services/areas/overview.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service commitments, governing precedence or assessment authority; output is byte-identical.",
+      "notes": [
+        "Service-area names, case assistance and Control Function boundaries preserved. Catalogue fragments and compressed knowledge-service wording are not automatically factual defects."
+      ]
+    },
+    "portal/content/en/services/assessments-and-evaluations.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service commitments, governing precedence or assessment authority; output is byte-identical.",
+      "notes": [
+        "Evaluation harness is a precise technical noun; harness to use would be wrong. Validation independence, Risk Tiers and stop authority preserved."
+      ]
+    },
+    "portal/content/en/services/business-cases-and-scenarios.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "Humanize retained the page but found a confirmed scope mismatch. Qualify the study Service Agreement by Engagement so Run-rate work is not assigned a record the corpus expressly excludes.",
+      "paired_review": "Read both full pages and Business Model 3.1, 4.7–4.8 and 5.1 with the functional vocabulary. Apply the same Engagement qualification in Russian and fix grammatical agreement left by replacing the former translated business-case expression with the fixed term.",
+      "grounded_corrections": [
+        {
+          "draft": "A head of function brings the need; the AICC Lead takes it in and issues a Service Agreement that covers the study.",
+          "replacement": "A head of function brings the need; the AICC Lead takes it in. For an Engagement, the AICC Lead issues a Service Agreement that covers the study."
+        }
+      ],
+      "ru_restorations": [
+        {
+          "draft": "Руководитель функции обращается с потребностью; Руководитель AICC принимает её и выпускает Соглашение о взаимодействии, охватывающее изучение.",
+          "replacement": "Руководитель функции обращается с потребностью; Руководитель AICC принимает её. Для Взаимодействия с заказчиком Руководитель AICC выпускает Соглашение о взаимодействии, охватывающее изучение."
+        },
+        {
+          "draft": "ожидаемой Категорией риска, согласованное Представителями",
+          "replacement": "ожидаемой Категорией риска, согласованный Представителями"
+        }
+      ],
+      "notes": [
+        "Business Model 4.8 and Vocabulary Run-rate work explicitly exclude a Service Agreement of its own; Business Model 3.1 and 5.1 require it for an Engagement. The page correction changes no governing rule or approval authority.",
+        "Study duration, work classification, expected Risk Tier and approvers remain exactly as before."
+      ]
+    },
+    "portal/content/en/services/catalog-form.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected Catalog fields, lifecycle states and availability conditions; output is byte-identical.",
+      "notes": [
+        "Function refers to a Bank business function in this service context; the cross-function reuse meaning does not require a newly invented actor.",
+        "Reuse timing is retained as stated; no measured result or guarantee is added."
+      ]
+    },
+    "portal/content/en/services/content-management.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected publication approval, operational sequence and decision authority; output is byte-identical.",
+      "notes": [
+        "Rendering engines, pre-fill, data classes and Package retained. MVP measures and expected service benefits stay at the stated scope without invented metrics or guarantees."
+      ]
+    },
+    "portal/content/en/services/how-to-engage.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected Engagement procedure, commitments, costs and authority boundaries; output is byte-identical.",
+      "notes": [
+        "Final acceptance of the Team has the established meaning in Vocabulary Acceptance and Operating Model 4.4(d); it is distinct from business acceptance. No new acceptance authority or scope is inferred."
+      ]
+    },
+    "portal/content/en/services/knowledge-services.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected service commitments, operational handover, work classification and decision authority; output is byte-identical.",
+      "notes": [
+        "Contact center agent correctly names a human role; later AI agents are the technical category. Proficiency and Package retained.",
+        "Study of one Iteration is compressed duration/scope wording; expected benefits are preserved without inventing measured results or a guarantee."
+      ]
+    },
+    "portal/content/en/services/normatives-and-processes.md": {
+      "decision": "adopt_selected",
+      "restorations": [],
+      "reason": "The unchanged humanize candidate flags an ambiguous two-language example naming three languages. Clarify the English example to match the existing Russian wording, which explicitly means a choice of two.",
+      "paired_review": "Read both full pages. The Russian example already specifies a bilingual set with a choice from the three languages. Keep it; the English clarification changes neither the service scope nor a commitment.",
+      "grounded_corrections": [
+        {
+          "draft": "A bilingual set across Kyrgyz, Russian, and English",
+          "replacement": "A bilingual set using two of the following languages: Kyrgyz, Russian, and English"
+        }
+      ],
+      "notes": [
+        "No new language coverage or three-language commitment is introduced.",
+        "Front door is the established intake expression, rendered in Russian as the single entry point; no new procedure is invented."
+      ]
+    },
+    "portal/content/en/services/oversight.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected ownership, lifecycle conditions and decision rights; candidate is byte-identical.",
+      "notes": [
+        "Preserve validation, Package and Initiative as functional corpus terminology."
+      ]
+    },
+    "portal/content/en/services/platforms.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected charter boundaries, lifecycle conditions and decision authority; candidate is byte-identical.",
+      "notes": [
+        "Evaluation harness is a technical noun, not an inflated substitute for use.",
+        "The four signals reference is a possible navigation improvement; no new content or signals are invented in this wording pass."
+      ]
+    },
+    "portal/content/en/services/policies-controls-criteria.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected policy authority and Control Function responsibilities; candidate is byte-identical.",
+      "notes": [
+        "Preserve must, may stop, validation and defined names. The report establishes no broken reference or changed governing rule."
+      ]
+    },
+    "portal/content/en/services/research-and-exploration.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected operating rules and decision authority; candidate is byte-identical.",
+      "notes": [
+        "Advise and formulate is a service-area name; is run-rate work states a category, not a passive action.",
+        "Quarterly industry change and with confidence are pre-existing explanatory claims. The wording tool supplies no evidence to establish or rewrite them; no new assurance or cadence is introduced.",
+        "Reference-page names already resolve through the site renderer; lowercase descriptive references need not become defined names."
+      ]
+    },
+    "portal/content/en/services/risk-tiering.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected policy requirements, assessment timing and escalation boundaries; candidate is byte-identical.",
+      "notes": [
+        "Preserve Risk Tier assignment authority, before-first-use timing and defined names. Passive statements must not acquire invented actors."
+      ]
+    },
+    "portal/content/en/services/service-model.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected common service fields, lifecycle gates, accountability and recordkeeping; candidate is byte-identical.",
+      "notes": [
+        "Advise and formulate is a service-area name. Preserve lifecycle names and authority.",
+        "Clause 2.2 has a compressed antecedent; the wording review does not establish a different lifecycle rule and does not invent one."
+      ]
+    },
+    "portal/content/en/services/strategy-and-governance.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "1.2. AICC uses the method it used on itself: it writes the documents in one voice from a single source, states every rule once, and draws the processes as flows and loops. The controls are testable, and AICC generates the portal from the documents so that it cannot drift from them. AICC drafts, structures, and builds; the head of function reviews, decides, and owns.",
+          "source": "1.2. The method is the one AICC used on itself: the documents are written in one voice from a single source, every rule is stated once, the processes are drawn as flows and loops, the controls are testable, and the portal is generated from the documents so that it cannot drift from them. AICC drafts, structures, and builds; the head of function reviews, decides, and owns."
+        },
+        {
+          "draft": "These examples illustrate the category; they are not commitments. The Service Agreement for each Engagement states what AICC commits to.",
+          "source": "The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement."
+        },
+        {
+          "draft": "4.1. The Engagement starts with a study lasting two to three Iterations, covering the mandate, the line of work, the existing documents, and the bodies the function answers to. AICC drafts the pack with AI from that material and reviews it with the head of function in each Iteration. AICC generates the portal as the pack settles.",
+          "source": "4.1. The Engagement starts with a study of two to three Iterations: the mandate, the line of work, the existing documents, and the bodies the function answers to. The pack is drafted with AI from that material and reviewed with the head of function in each Iteration; the portal is generated as the pack settles."
+        }
+      ],
+      "reason": "Adopt clearer introductory sentences, possessives and parallel lists. Preserve the original method, commitment disclaimer and operating sequence paragraphs.",
+      "paired_review": "Read both full pages. Existing Russian prose already splits the introduction and expresses the same scope, outputs and ownership. No body changes are needed.",
+      "notes": [
+        "All three gate runs fail only on the unchanged defined-name heading The Package. No retry: preserving the required name reproduces the same false failure.",
+        "The worker selected standard mode despite normative paragraphs. Restoring those paragraphs avoids unnecessary changes to the description of rule authorship, review and commitments.",
+        "Weeks versus days and proven-on-AICC claims are preserved as source claims, not independently validated results. No new supporting evidence is invented."
+      ]
+    },
+    "portal/content/en/services/training-and-knowledge-sharing.md": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "These examples illustrate the category and are not a list of commitments. AICC states its commitments in the Service Agreement of each Engagement.",
+          "source": "The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement."
+        }
+      ],
+      "reason": "Adopt more natural workplace wording, possessives and parallel lists; keep the shared service-category commitment wording. Actors, training timing, work classification and measures remain unchanged.",
+      "paired_review": "Read both full pages. Existing Russian text carries the same training-before-use requirement, one-Iteration library creation, ownership, schedule and knowledge-sharing benefit. No Russian body changes are needed.",
+      "notes": [
+        "No retry after three heading-only failures: Package and Initiative are required defined names and the headings must remain unchanged.",
+        "Section 2 states where commitments of an Engagement are recorded; it does not require Run-rate work to have its own Service Agreement. Preserve the category classification and the corpus rule in Business Model 4.8.",
+        "Starts further ahead remains the existing qualitative benefit, without an invented performance guarantee.",
+        "The standard-mode choice differs from other similar service descriptions; acceptance follows full semantic review, not the mode label."
+      ]
+    },
+    "portal/content/en/services/workplace-automation.md": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "Protected human review, excluded autonomous actions, delivery sequence and approval responsibilities; candidate is byte-identical.",
+      "notes": [
+        "Case assistance is an established service expression; several preserves scope without inventing a count.",
+        "Expected benefits are existing descriptions, not newly measured or guaranteed outcomes. No substantive inconsistency was confirmed."
+      ]
+    },
+    ".runtime/site-wording-inputs/authored-en.json": {
+      "decision": "adopt_selected",
+      "accepted_fields": [],
+      "restorations": [],
+      "reason": "Reject the sole worker change from AI journey to work with AI: the invitation covers orientation and learning as well as work. Correct only the Russian homepage standards clause, whose actor conflicts with both the current English lead and the Charter.",
+      "paired_review": "Read the homepage English and Russian lead, invitation and tagline, then AICC Charter 2.1–2.2 and authority limits in both languages. Both Charter versions assign standards to the Bank and adoption practice to AICC. Preserve the existing EN copy and paired tagline.",
+      "ru_json_restorations": [
+        {
+          "path": "home/lead/ru",
+          "draft": "задаёт стандарт, по которому Банк внедряет его, и держит каждое применение подотчётным людям",
+          "replacement": "формирует практику его внедрения в пределах установленных Банком стандартов и сохраняет ответственность людей за каждое его применение"
+        }
+      ],
+      "notes": [
+        "This is a controller-grounded Russian reconciliation; no humanize proposal is adopted from this JSON input.",
+        "The whole-file protected mode prevented review edits to otherwise free introductory text.",
+        "No new rules, authority or Charter revisions are introduced; the correction reuses the Russian Charter mission wording."
+      ]
+    },
+    "portal/messages/en.json": {
+      "decision": "adopt_selected",
+      "restorations": [
+        {
+          "draft": "This page is available in English only. The Russian translation is not available yet.",
+          "source": "The text of this page is available in English only. The Russian translation is not available yet."
+        }
+      ],
+      "reason": "Adopt five small clarity and grammar edits to footer, control status, feedback text and reference introduction. Preserve the fallback message: only the content, not the whole localized interface, may be English.",
+      "paired_review": "Compared all six proposed values against their Russian counterparts. The five accepted edits preserve the existing meanings and require no Russian body changes. All keys, labels, dates, versions and placeholders remain unchanged.",
+      "notes": [
+        "The feedback reference helps identify the subject; the existing reaching-content metaphor is retained rather than inventing an unverified routing behavior.",
+        "O!Bank is a proper name. The formal date and How it is tested label need no stylistic replacement."
+      ]
+    },
+    ".runtime/site-wording-inputs/navigation-en.json": {
+      "decision": "retain",
+      "restorations": [],
+      "reason": "All titles, labels and tabs are already preserved. The nine changed section summaries belong to generated scaffolding and are not the rendered section introductions; changing this intermediate file would not improve the portal and would be overwritten by make_pages.py.",
+      "notes": [
+        "Inspected make_pages.py SECTIONS and sitemap generation, plus build.py section_page, home and search construction. The rendered introductions come from bilingual authored.json, which was separately reviewed.",
+        "The proposed AICC’s templates, guides, acts and compliance also risks implying ownership of external acts. Retain the original wording rather than adopt every grammatical compression.",
+        "No source code or navigation structure changes are required for this wording task."
+      ]
+    }
+  },
+  "grounded_followups": {}
+}

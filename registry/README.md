@@ -1,7 +1,7 @@
 # Реестр / Registry
 
-- [English](en/README.md): 41 files in English.
-- [Русский](ru/README.md): переведены и проверены все 41 файлов.
+- [English](en/README.md): 42 files in English.
+- [Русский](ru/README.md): переведены и проверены все 42 файлов.
 
 The approved corpus baseline is edition 2.2. Language versions share document identities and record histories; differences are reconciled against the recorded decisions and current sources.
 

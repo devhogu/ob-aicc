@@ -1,6 +1,6 @@
 # ISO/IEC standards on AI: 42001, 23894, 22989
 
-The international standards that give AI governance the form that organizations already know from quality, security, and service management: a management system with policy, roles, risk assessment, controls, monitoring, and improvement, together with guidance on AI risk management and the vocabulary of the field.
+These international standards give AI governance a form familiar to organizations from quality, security, and service management: a management system with policy, roles, risk assessment, controls, monitoring, and improvement, together with guidance on AI risk management and the vocabulary of the field.
 
 ## 1. Identity
 
@@ -13,7 +13,7 @@ The international standards that give AI governance the form that organizations 
 
 ## 2. What it sets
 
-2.1. ISO/IEC 42001 states the requirements for an AI management system: context and leadership, planning with risk and impact assessment, support, operation across the AI life cycle, performance evaluation, and improvement, with an annex of controls. ISO/IEC 23894 gives guidance on integrating AI risk management into the processes of the organization, built on the general risk management standard. ISO/IEC 22989 defines the concepts and the terminology.
+2.1. ISO/IEC 42001 states the requirements for an AI management system: context and leadership, planning with risk and impact assessment, support, operation across the AI life cycle, performance evaluation, and improvement, with an annex of controls. ISO/IEC 23894 gives guidance on integrating AI risk management into the organization's processes, built on the general risk management standard. ISO/IEC 22989 defines the concepts and terminology.
 
 ## 3. Whom it reaches
 
@@ -25,7 +25,7 @@ The international standards that give AI governance the form that organizations 
 
 ## 5. How the charter relates to it
 
-5.1. The control loops, the control catalog, the records and evidence of the Operating Model, and the AI Policy are built so that they can be read against ISO/IEC 42001; the Risk Tiers answer the risk management guidance; the Vocabulary of the charter is consistent with the terminology standard.
+5.1. The control loops, the control catalog, the records and evidence of the Operating Model, and the AI Policy are built to allow comparison with ISO/IEC 42001; the Risk Tiers address the risk management guidance; the Vocabulary of the charter is consistent with the terminology standard.
 
 ## 6. Related pages
 

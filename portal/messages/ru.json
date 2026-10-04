@@ -1,5 +1,5 @@
 {
-  "site_name": "Центр компетенций по искусственному интеллекту",
+  "site_name": "Центр компетенций по AI",
   "site_short": "AICC",
   "header_scope": "Документы и управление",
   "skip": "К содержанию",
@@ -17,7 +17,7 @@
   "parts_label": "Части документа",
   "previous": "Назад",
   "next": "Далее",
-  "companion_workflow": "Связанная схема процесса",
+  "companion_workflow": "Связанная Workflow",
   "companion_guide": "Связанное руководство",
   "revision": "Версия",
   "revised": "Дата",
@@ -33,7 +33,7 @@
   "permalink": "Ссылка на пункт",
   "translation_missing": "Текст этой страницы пока доступен только на английском языке. Русский перевод ещё не готов.",
   "translation_lang_note": "Текст на английском",
-  "footer": "Центр компетенций по искусственному интеллекту, O!Bank. Редакция комплекта документов 2.2 от 3 октября 2026 года. Для каждого документа указаны его версия и статус. Текущие записи AICC ведутся в Реестре, Jira, Confluence и Service Management.",
+  "footer": "Центр компетенций по AI, O!Bank. Редакция комплекта документов 2.2 от 3 октября 2026 года. Для каждого документа указаны его версия и статус. Текущие записи AICC ведутся в Реестре, Jira, Confluence и Service Management.",
   "baseline": "Комплект документов v2.2 · 3 октября 2026",
   "view_all": "Все страницы раздела",
   "card_open": "Открыть",
@@ -83,7 +83,7 @@
   "fb_close": "Закрыть",
   "fb_mail_body": "Страница: {title}\nНомер: {ref}\nАдрес: {url}\n\nВопрос или замечание:\n",
   "kind_document": "Документ",
-  "kind_workflow": "Схема процесса",
+  "kind_workflow": "Workflow",
   "kind_guide": "Руководство",
   "kind_template": "Шаблон",
   "kind_page": "Страница",
@@ -91,7 +91,7 @@
   "kind_parts": "частей",
   "kind_words": "слов",
   "grp_documents": "Документы",
-  "grp_workflows": "Схемы процессов",
+  "grp_workflows": "Workflows",
   "grp_guides": "Руководства",
   "dz_expand": "Развернуть диаграмму",
   "dz_close": "Закрыть",
@@ -117,14 +117,14 @@
   "name": "Наименование",
   "capability": "Возможность",
   "st_pillar": "Стратегическое направление",
-  "st_contribution": "Вклад внедрения ИИ",
+  "st_contribution": "Вклад внедрения AI",
   "st_carried": "Реализуется через",
   "st_scope": "Область применения",
   "st_aspect": "Аспект",
   "st_choice": "Стратегический выбор",
   "st_decides": "Кто принимает решение",
   "st_read": "Документ",
-  "st_use": "Применение ИИ",
+  "st_use": "Применение AI",
   "st_measures": "Показатели",
   "foundations": "Основные положения",
   "roles_title": "Роли",
@@ -132,7 +132,7 @@
   "part_titles": {
     "organization/organization-guide/bodies-people-and-records": "Органы, люди и записи",
     "governance/unit-governance-workflow/events-and-sequences": "События и последовательности",
-    "services/engagement-workflow": "Рабочий процесс",
+    "services/engagement-workflow": "Workflow",
     "services/engagement-guide": "Руководство",
     "delivery/service-delivery-workflow/the-portfolio-flow": "Поток портфеля",
     "delivery/service-delivery-workflow/the-execution": "Выполнение в PI",
@@ -170,7 +170,8 @@
     "about/values-and-principles": "Ценности и принципы",
     "about/charter-outline": "Обзор корпуса нормативных документов",
     "reference/change-history": "История изменений",
-    "reference/records-and-systems": "Записи и системы"
+    "reference/records-and-systems": "Записи и системы",
+    "reference/shared-terminology": "Общая деловая и технологическая терминология"
   },
   "page_descriptions": {
     "about/strategy": "Стратегия Банка, Стратегические приоритеты, стратегические решения по всем аспектам деятельности AICC и последовательность Уровней зрелости",
@@ -179,7 +180,8 @@
     "reference/change-history": "История редакций документов",
     "reference/records-and-systems": "Где хранится каждая запись и выполнение какой контрольной процедуры она подтверждает",
     "privacy": "Как этот сайт обращается с информацией о своих пользователях",
-    "terms-of-use": "Условия предоставления сайта и статус его страниц"
+    "terms-of-use": "Условия предоставления сайта и статус его страниц",
+    "reference/shared-terminology": "Общие деловые и технологические наименования, определения и применение в AICC"
   },
   "regions": {
     "Kyrgyz Republic": "Кыргызская Республика",
@@ -190,7 +192,7 @@
     "Global": "Международные документы"
   },
   "series_titles": {
-    "responsible-ai-course": "Краткий курс об ИИ",
+    "responsible-ai-course": "Краткий курс об AI",
     "service-areas": "Направления услуг",
     "portfolio-course": "Портфель",
     "delivery-course": "Поставка",
@@ -207,7 +209,7 @@
     "set-service-delivery": "Поставка услуг",
     "set-cadence": "Ритм работы",
     "set-operating-model": "Операционная модель",
-    "set-ai-risk-control": "Схема процесса управления рисками ИИ и контроля",
+    "set-ai-risk-control": "Workflow управления рисками AI и контроля",
     "set-unit-governance": "Управление подразделением"
   }
 }

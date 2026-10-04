@@ -12,7 +12,7 @@ The architecture standards of AICC, the requirements that the use of AI places o
 | ARC-004 | Where a person decides, the Solution records the contribution of the AI and the decision of the person. | Every Solution used in a decision process | 2026-10-02 |
 | ARC-005 | A Solution that reads untrusted content, such as mail, documents from outside the Bank, or web pages, has only the permissions that its task needs, filters its input and its output, and puts a person before any action that it proposes. | Every Solution that reads untrusted content | 2026-10-03 |
 | ARC-006 | The license of each open component, model, and dataset of a Solution is recorded in its Solution Definition, and the security test covers these components. | Every Solution that uses an open component, model, or dataset | 2026-10-03 |
-| ARC-007 | An agent has only the functions, permissions, and autonomy that its task needs, within its Risk Tier and as the AI Registry records; its actions are logged; and a person can stop it on a channel that the agent cannot influence. | Every agent | 2026-10-03 |
+| ARC-007 | An AI agent has only the functions, permissions, and autonomy that its task needs, within its Risk Tier and as the AI Registry records; its actions are logged; and a person can stop it on a channel that the AI agent cannot influence. | Every AI agent | 2026-10-03 |
 | ARC-008 | The monitoring of a Solution has alert levels for performance, drift, the human override and correction rate, incidents, and cost, each with who watches it, and an alert level that is crossed triggers a review. | Every Solution in use | 2026-10-03 |
 
 ## Requirements on the AI Platform

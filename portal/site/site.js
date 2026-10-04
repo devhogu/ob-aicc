@@ -43,6 +43,8 @@
           var inH = h.indexOf(w) >= 0, inX = x.indexOf(w) >= 0;
           if (!inH && !inX) ok = false; else s += (inH ? 3 : 0) + (inX ? 1 : 0);
         });
+        // An exact heading match should remain visible among broad page matches.
+        if (tokens(e.h).join(' ') === q.join(' ')) s += 4;
         if (ok) scored.push([s, e]);
       });
       scored.sort(function (a, b) { return b[0] - a[0]; });

@@ -8,6 +8,9 @@
 # START_MODULE_MAP
 # LANGUAGES - supported source language codes
 # ROOTS - language-specific source areas
+# TERMINOLOGY_REFERENCE - reference with the additional Russian-language name column
+# UNIVERSAL_TERM_COLUMNS - shared reference column identities
+# RUSSIAN_TERM_COLUMNS - declared Russian reference column order
 # front_matter - read the corpus's flat YAML metadata fence
 # canonical_path - map a language source path to its English identity
 # Source - selected text with its real language and canonical identity
@@ -21,6 +24,9 @@ from pathlib import Path
 
 LANGUAGES = ('en', 'ru')
 ROOTS = ('charter', 'registry', 'portfolio', 'portal/content')
+TERMINOLOGY_REFERENCE = 'charter/en/shared-technology-terminology.md'
+UNIVERSAL_TERM_COLUMNS = ['Universal term', 'Meaning', 'Application']
+RUSSIAN_TERM_COLUMNS = ['Универсальный термин', 'Русскоязычный термин', 'Значение', 'Применение']
 
 
 def front_matter(text):
@@ -52,6 +58,29 @@ def _tables(text):
             tables.append(current)
             current = []
     return tables
+
+
+def _is_terminology_table(canonical, table):
+    return canonical == TERMINOLOGY_REFERENCE and table[0] == UNIVERSAL_TERM_COLUMNS
+
+
+def _validate_tables(canonical, original, translated, path):
+    """Keep table parity, allowing the reference's declared local-name column."""
+    error = f'{path}: table structure differs from the English source'
+    if len(original) != len(translated):
+        raise ValueError(error)
+    for en_table, ru_table in zip(original, translated):
+        if _is_terminology_table(canonical, en_table):
+            if (ru_table[0] != RUSSIAN_TERM_COLUMNS
+                    or len(en_table) != len(ru_table)
+                    or any(len(row) != 3 for row in en_table)
+                    or any(len(row) != 4 for row in ru_table)):
+                raise ValueError(error)
+            # Universal names identify the same concepts, even when local names differ.
+            if any(en[0] != ru[0] or not ru[1] for en, ru in zip(en_table[2:], ru_table[2:])):
+                raise ValueError(error + ': universal identity or local name is missing')
+        elif [len(row) for row in en_table] != [len(row) for row in ru_table]:
+            raise ValueError(error)
 
 
 @dataclass(frozen=True)
@@ -108,9 +137,7 @@ class Sources:
                     if re.findall(pattern, text, re.M) != re.findall(pattern, translated_text, re.M):
                         raise ValueError(f'{translated}: numbered sections or clauses differ from the English source')
                 original_tables, translated_tables = _tables(text), _tables(translated_text)
-                shapes = lambda tables: [[len(row) for row in table] for table in tables]
-                if shapes(original_tables) != shapes(translated_tables):
-                    raise ValueError(f'{translated}: table structure differs from the English source')
+                _validate_tables(canonical, original_tables, translated_tables, translated)
                 # Record identities and dated facts stay shared across translated views.
                 if canonical.startswith(('registry/en/', 'portfolio/en/')):
                     pattern = r'\b(?:[A-Z]{2,5}-\d[\w-]*|\d{4}-\d{2}-\d{2})\b'
@@ -124,11 +151,13 @@ class Sources:
     def text(self, path):
         return self.resolve(path).text
 
-    def table(self, path, header_start, canonical_keys=()):
+    def table(self, path, header_start, canonical_keys=(), *, occurrence=0):
         """Use English column identities and table position, with translated cell text.
 
         Canonical key columns keep stable lookup identities (e.g. Role). Display
         translations are available under _localized_<key> without changing callers.
+        Occurrence selects among tables with the same header. The terminology
+        reference exposes its additional local-name cell as Russian-language term.
         """
         canonical = canonical_path(path)
         original = (self.root / canonical).read_text(encoding='utf-8')
@@ -137,10 +166,16 @@ class Sources:
         headers = [x.strip() for x in header_start.strip().strip('|').split('|')]
         for index, table in enumerate(english_tables):
             if table[0][:len(headers)] == headers:
+                if occurrence:
+                    occurrence -= 1
+                    continue
+                keys = table[0]
+                if source.language == 'ru' and _is_terminology_table(canonical, table):
+                    keys = [keys[0], 'Russian-language term', *keys[1:]]
                 result = []
                 for en_row, row in zip(table[2:], selected_tables[index][2:]):
-                    record = dict(zip(table[0], row))
-                    record['_labels'] = dict(zip(table[0], selected_tables[index][0]))
+                    record = dict(zip(keys, row))
+                    record['_labels'] = dict(zip(keys, selected_tables[index][0]))
                     original_record = dict(zip(table[0], en_row))
                     for key in canonical_keys:
                         record['_localized_' + key] = record[key]

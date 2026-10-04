@@ -1,6 +1,6 @@
 # The risks and challenges
 
-Every capability of generative AI has a failure mode attached to it, and most of the failure modes are new to the people who have to manage them. This page sets them out in plain terms, in three groups: the risks that machine learning always carried, the risks that generative AI added, and the risks that agents compound. It ends with the challenges that are not about the technology at all, which are the ones that decide most outcomes.
+Every capability of generative AI has a failure mode attached to it, and most of the failure modes are new to the people who have to manage them. This page sets them out in plain terms, in three groups: the risks that machine learning always carried, the risks that generative AI added, and the risks that AI agents compound. It ends with the challenges that are not about the technology at all, which are the ones that decide most outcomes.
 
 ## 1. The risks that were always there
 
@@ -28,9 +28,9 @@ Every capability of generative AI has a failure mode attached to it, and most of
 
 2.7. **Cost and concentration.** The models are expensive to run and are supplied by few providers. Unbounded use produces unbounded bills; dependence on one provider produces a single point of failure. Cost limits, fallback arrangements, and exit plans are part of the design, not of the aftermath.
 
-## 3. The risks that agents compound
+## 3. The risks that AI agents compound
 
-3.1. An agent turns a wrong sentence into a wrong action. The industry names three root causes of harm: excessive functionality, when the agent can do more than its task needs; excessive permissions, when it can reach more than its task needs; and excessive autonomy, when it acts without the confirmation its risk requires. Errors cascade when one agent's output is another's input. The Bank's position follows from this: an agent acts within limits and permissions set by its Risk Tier, on channels it cannot influence, with a person able to stop it, with its actions logged, and it is not released to act on systems or funds in a regulated process without validation by the Control Functions and the decision of the Executive Sponsor.
+3.1. An AI agent turns a wrong sentence into a wrong action. The industry names three root causes of harm: excessive functionality, when the AI agent can do more than its task needs; excessive permissions, when it can reach more than its task needs; and excessive autonomy, when it acts without the confirmation its risk requires. Errors cascade when one AI agent's output is another's input. The Bank's position follows from this: an AI agent acts within limits and permissions set by its Risk Tier, on channels it cannot influence, with a person able to stop it, with its actions logged, and it is not released to act on systems or funds in a regulated process without validation by the Control Functions and the decision of the Executive Sponsor.
 
 ## 4. The challenges that are not about the technology
 

@@ -2,9 +2,9 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-04
 ```
 
 # AI Policy
@@ -43,7 +43,7 @@ revised: 2026-10-03
 | --- | --- | --- |
 | 1 | Low | Personal productivity on data that is public or unclassified under the rules of the Bank; no customer data; no influence on a decision; the user reviews the output |
 | 2 | Medium | Internal, confidential, personal, or customer data; output that informs work or a decision, or reaches a customer under human review |
-| 3 | High | AI that decides or acts without review in a regulated process; an agent with rights over systems or funds; a decision on credit or insurance for a natural person that the AI takes without review |
+| 3 | High | AI that decides or acts without review in a regulated process; an AI agent with rights over systems or funds; a decision on credit or insurance for a natural person that the AI takes without review |
 
 3.2. The AICC Lead shall assign the Risk Tier when the Solution is defined, using the attributes in 3.1, and shall inform the Domain Owner of the Risk Tier assigned. The Executive Sponsor assigns it for a Solution that the AICC Lead built (Operating Model 4.4). A Risk Tier assigned that is higher than the one that the business case expected or that the Control Function Contacts cleared returns the business case to them for clearance (Portfolio Management Model 6.4). The Contact of any Control Function may raise it within its remit, and only the Contact of model risk may lower it. A Solution in a category that the law applicable to the Bank treats as high risk is at least Risk Tier 2. The person who checks a Risk Tier 1 Solution, and the Control Function Contacts at the validation of a Risk Tier 2 or 3 Solution, confirm the Risk Tier and ask whether the Solution is in such a category.
 
@@ -66,7 +66,7 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 
 3.5. The Solution Engineer shall meet the requirements for the design of human oversight, testing, and logging. The Domain Owner shall meet those for oversight in operation, disclosure, and contestability. The Platform Owner shall provide logging and monitoring. The Control Function Contacts check them at validation. The AICC Lead reassesses the Risk Tier. The Domain Owner, or the Executive Sponsor for a Service across Domains, reviews monitoring and provider notices at each Iteration Review and Demo. The AICC Lead sets the training and notes the owners of knowledge sources in the AI Registry. For Risk Tier 2 and 3 the validation replaces the check. A condition of a validation may state what the Solution shall not be used for.
 
-3.6. The Solution Engineer shall give an agent only the functions, permissions, and autonomy that its task needs, within what its Risk Tier allows and as the AI Registry records, shall have its actions logged, and shall provide a way for a person to stop it on a channel that the agent cannot influence.
+3.6. The Solution Engineer shall give an AI agent only the functions, permissions, and autonomy that its task needs, within what its Risk Tier allows and as the AI Registry records, shall have its actions logged, and shall provide a way for a person to stop it on a channel that the AI agent cannot influence.
 
 3.7. The Solution Engineer shall state in the Solution Definition what the Solution is for, how it was tested, and what it shall not be used for; the alert levels of its monitoring and who watches them; and, where it relies on a provider, its cost limits and its fallback. The monitoring covers performance, drift, the human override and correction rate, incidents, and cost, and an alert level that is crossed triggers a review by the Domain Owner. The AICC Lead reassesses the Risk Tier when defects are found in operation after the check or the validation.
 
@@ -82,7 +82,7 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 
 ## 5. AI Incidents
 
-5.1. An AI Incident is an event in which the use of AI causes, or could cause, harm, a breach of law or policy, or a loss of control. It includes harm to a customer or an employee, a leak or misuse of data, an attack on or through an AI system, an action of an agent beyond its limits, a material failure of a Solution, and a near miss.
+5.1. An AI Incident is an event in which the use of AI causes, or could cause, harm, a breach of law or policy, or a loss of control. It includes harm to a customer or an employee, a leak or misuse of data, an attack on or through an AI system, an action of an AI agent beyond its limits, a material failure of a Solution, and a near miss.
 
 5.2. An AI Incident is an incident of the Bank and is handled in the incident management of the Bank, in Service Management. That process owns the classification, the escalation, the communication, and the reporting to the authorities, and it meets the requirements that apply to the Bank for ICT-related incidents, for personal data breaches, and for the incidents of AI systems. The Control Function Contacts of compliance and of legal confirm which of those requirements apply to the Bank (1.3). AICC sets no severity scale and no time limit of its own.
 
@@ -109,4 +109,5 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
-| 2.0 | 2026-10-03 | Adds the confirmation of the laws and standards that apply and the policies of the Bank that apply, accountability for AI output, the bar on entering data into unapproved external services, the handling of unapproved use, the rules for agents, documentation, monitoring, and provider training, open models and licenses, and the lessons of an AI Incident. | DR-2026-062 |
+| 2.0 | 2026-10-03 | Adds the confirmation of the laws and standards that apply and the policies of the Bank that apply, accountability for AI output, the bar on entering data into unapproved external services, the handling of unapproved use, the rules for AI agents, documentation, monitoring, and provider training, open models and licenses, and the lessons of an AI Incident. | DR-2026-062 |
+| 2.1 | 2026-10-04 | Applied fixed international AI agent naming consistently; functional meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |

@@ -1,6 +1,6 @@
 # NIST AI Risk Management Framework
 
-The reference framework of the United States for managing the risks of AI, voluntary, non-sector-specific, and used far beyond the United States. It names the characteristics of trustworthy AI and organizes the work of managing AI risk into four functions, and its generative profile names the risks that generative AI adds or amplifies.
+This United States reference framework for managing AI risks is voluntary, non-sector-specific, and used far beyond the United States. It names the characteristics of trustworthy AI and organizes AI risk management into four functions. Its generative profile names the risks that generative AI adds or amplifies.
 
 ## 1. Identity
 
@@ -17,15 +17,15 @@ The reference framework of the United States for managing the risks of AI, volun
 
 ## 3. Whom it reaches
 
-3.1. Any organization that chooses to use it. It is not certifiable; organizations that seek certification pair it with ISO/IEC 42001.
+3.1. Any organization that chooses to use it. The framework is not certifiable; organizations seeking certification pair it with ISO/IEC 42001.
 
 ## 4. Relevance to the Bank
 
-4.1. It is the most practical of the frameworks: a vocabulary for the risks, a structure for the work, and a checklist of actions for generative AI. It is the source the Bank draws on when it explains its Risk Tiers and its gates.
+4.1. It is the most practical of the frameworks: a vocabulary for the risks, a structure for the work, and a checklist of actions for generative AI. The Bank draws on it to explain its Risk Tiers and gates.
 
 ## 5. How the charter relates to it
 
-5.1. The Risk Tiers and the gates before use of the AI Policy, the AI Incident review, and the measures of the Maturity Levels are consistent with the functions and the characteristics of the framework; the generative risks of the Responsible AI course follow its profile.
+5.1. The Risk Tiers and the gates before use of the AI Policy, the AI Incident review, and the measures of the Maturity Levels are consistent with the framework’s functions and characteristics; the generative risks in the Responsible AI course follow its profile.
 
 ## 6. Related pages
 

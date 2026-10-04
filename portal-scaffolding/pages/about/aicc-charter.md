@@ -4,7 +4,7 @@ title: AICC Charter
 section: about
 order: 6
 type: document
-slug: /about/aicc-charter/en/
+slug: /about/aicc-charter/
 source: charter/en/documents/aicc-charter.md
 words: 900
 production: generated
@@ -13,7 +13,7 @@ status: scaffold
 
 # AICC Charter
 
-Page type: document. Address: /about/aicc-charter/en/
+Page type: document. Address: /about/aicc-charter/
 
 ## Source
 

@@ -2,7 +2,7 @@
 id: reference/document-catalog
 title: Document Catalog
 section: reference
-order: 12
+order: 13
 type: document
 slug: /reference/document-catalog/
 source: charter/en/documents/document-catalog.md

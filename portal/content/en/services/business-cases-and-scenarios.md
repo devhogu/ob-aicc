@@ -24,7 +24,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 4. How it runs
 
-4.1. A head of function brings the need; the AICC Lead takes it in and issues a Service Agreement that covers the study. The study runs in one Iteration for a single scenario and in two to three for a Domain, with the Domain Owner and a Domain Expert. The business case goes to the approver; an approved Initiative goes on to its MVP.
+4.1. A head of function brings the need; the AICC Lead takes it in. For an Engagement, the AICC Lead issues a Service Agreement that covers the study. The study runs in one Iteration for a single scenario and in two to three for a Domain, with the Domain Owner and a Domain Expert. The business case goes to the approver; an approved Initiative goes on to its MVP.
 
 ## 5. What it leads to
 

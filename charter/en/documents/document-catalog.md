@@ -2,9 +2,9 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 2.5
+revision: 3.3
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-04
 ```
 
 # Document Catalog
@@ -50,7 +50,7 @@ revised: 2026-10-03
 | AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP | EN, RU |
 | AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle with the service steps and the Lab, and the measures | EN, RU |
 | AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN, RU |
-| AICC-REF-01 | Vocabulary and Style | Terms and style | EN, RU |
+| AICC-REF-01 | Vocabulary and Style | Defined meanings, interpretation and document style | EN, RU |
 | AICC-REF-02 | Document Catalog | This Catalog | EN, RU |
 
 5.2. A new document is added only when no existing document can hold its content. The documents together number no more than nine, and no document is longer than about 80 clauses. A translation states the revision of the source that it translates.
@@ -58,6 +58,8 @@ revised: 2026-10-03
 5.3. The workflows and the guides of the charter are changed like software, with their history in the repository, and are not activated. A Template is activated as 4.1 states. They state no rule of their own: the rules are in the documents.
 
 5.4. The pages that the AICC portal adds to explain the charter, such as the courses, the learning paths, the knowledge base, the references, and the service catalog, state no rule, and each states its edition. The AICC Lead shall keep them, with the Control Function Contacts of compliance and legal for a page on law, and shall remove a page that no longer serves a reader. A page in another language states the revision of the source that it explains. A page that states the form of a catalog, a Measure, or a Package gives the form only, and each instance is in the Registry or the Portfolio.
+
+5.5. Shared Business and Technology Terminology is a companion reference kept with the charter and explained on the portal. It records shared names, aliases, definitions and their application in separate language editions. Each edition contains definitions and application in its own language; corresponding entries retain equivalent meanings and shared names. It is maintained through repository history and is not an additional governing document. Vocabulary and Style states the naming rule; the companion states no operational requirement of its own.
 
 ## 6. Templates
 
@@ -89,7 +91,7 @@ The table is in the order of use, and the identifiers do not follow that order. 
 | Number | Question |
 | --- | --- |
 | 1 | Does the document have its metadata block, and does its change log end on its revision? |
-| 2 | Does it use the defined terms, and none of the terms that the Vocabulary marks as not used? |
+| 2 | Does it use established industry terms and defined AICC concepts accurately, preserving their meanings and the distinctions stated in the Vocabulary? |
 | 3 | Are its clauses numbered, with "shall" for each obligation? |
 | 4 | Does it agree with every document that is higher in precedence? |
 | 5 | Is every Role, Record, and Template that it names defined? |
@@ -114,3 +116,7 @@ The table is in the order of use, and the identifiers do not follow that order. 
 | 2.3 | 2026-10-03 | Recorded the Russian versions of the Statement of Intent and AICC Charter; document rules are unchanged. | none |
 | 2.4 | 2026-10-03 | Recorded the Russian versions of Business Model and Operating Model; document rules are unchanged. | none |
 | 2.5 | 2026-10-03 | Recorded the Russian versions of Portfolio Management Model, Solution Lifecycle Model and AI Policy; all nine governing documents are available in both languages, with document rules unchanged. | none |
+| 3.0 | 2026-10-04 | Aligned the terminology check with the accepted industry-first naming rule and recorded the shared terminology companion and its place beside the nine governing documents. | DR-2026-064 |
+| 3.1 | 2026-10-04 | Recorded separate English and Russian editions of the shared terminology reference, each with definitions and application in its own language. | none (correction under Document Catalog 4.2) |
+| 3.2 | 2026-10-04 | Clarified the governing vocabulary's function: defined meanings, interpretation and document style. | none (correction under Document Catalog 4.2) |
+| 3.3 | 2026-10-04 | Recorded consistent application of the shared terminology in the corpus and portal; no document authority or operating requirement changed. | none (correction under Document Catalog 4.2) |

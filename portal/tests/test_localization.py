@@ -96,6 +96,50 @@ class SourceSelection(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'record identifiers or dates'):
             Sources(self.root, 'ru').resolve(path)
 
+    def test_local_terminology_names_keep_definitions_and_repeated_tables_aligned(self):
+        path = 'charter/en/shared-technology-terminology.md'
+        en = ('| Universal term | Meaning | Application |\n| --- | --- | --- |\n'
+              '| business case | Investment justification | Fixed form. |\n\n'
+              '| Universal term | Meaning | Application |\n| --- | --- | --- |\n'
+              '| workflow | Flow of work | Fixed form. |\n')
+        ru = ('| Универсальный термин | Русскоязычный термин | Значение | Применение |\n'
+              '| --- | --- | --- | --- |\n'
+              '| business case | бизнес-кейс | Обоснование инвестиции | Фиксированное наименование. |\n\n'
+              '| Универсальный термин | Русскоязычный термин | Значение | Применение |\n'
+              '| --- | --- | --- | --- |\n'
+              '| workflow | рабочий процесс | Поток работы | Фиксированное наименование. |\n')
+        (self.root / path).write_text(en)
+        target = self.root / path.replace('/en/', '/ru/')
+        target.write_text(translation(path, en, ru))
+        sources = Sources(self.root, 'ru')
+        first = sources.table(path, '| Universal term | Meaning')[0]
+        second = sources.table(path, '| Universal term | Meaning', occurrence=1)[0]
+        self.assertEqual(first['Universal term'], 'business case')
+        self.assertEqual(first['Russian-language term'], 'бизнес-кейс')
+        self.assertEqual(first['Meaning'], 'Обоснование инвестиции')
+        self.assertEqual(first['Application'], 'Фиксированное наименование.')
+        self.assertEqual(first['_labels']['Russian-language term'], 'Русскоязычный термин')
+        self.assertEqual(second['Universal term'], 'workflow')
+        self.assertEqual(second['Meaning'], 'Поток работы')
+        self.assertNotIn('Russian-language term', Sources(self.root, 'en').table(path, '| Universal term')[0])
+        malformed = [
+            ru.replace('Русскоязычный термин | Значение', 'Значение | Русскоязычный термин'),
+            ru.replace('| бизнес-кейс |', '| |'),
+            ru.replace('| business case |', '| business plan |'),
+            ru.replace('| Поток работы |', '| Поток работы | лишняя графа |'),
+            ru.replace('| workflow | рабочий процесс | Поток работы | Фиксированное наименование. |\n', ''),
+        ]
+        for body in malformed:
+            with self.subTest(body=body):
+                target.write_text(translation(path, en, body))
+                with self.assertRaisesRegex(ValueError, 'table structure'):
+                    Sources(self.root, 'ru').resolve(path)
+        # The extra column is not a general exemption for arbitrary documents.
+        (self.root / self.path).write_text(en)
+        self.ru.write_text(translation(self.path, en, ru))
+        with self.assertRaisesRegex(ValueError, 'table structure'):
+            self.select()
+
 
 class PortalRendering(unittest.TestCase):
     def test_reviewed_text_links_search_diagrams_and_missing_fallback(self):
@@ -193,9 +237,32 @@ class PortalRendering(unittest.TestCase):
 
 
 class RussianCorpusProjection(unittest.TestCase):
+    def test_business_case_search_distinguishes_the_concept_from_the_stage(self):
+        for language, concept, stage in (
+            ('en', 'justification for an investment', 'Preparing and approving'),
+            ('ru', 'Обоснование инвестиции', 'Подготовка и одобрение'),
+        ):
+            with self.subTest(language=language):
+                site = build.Site(argparse.Namespace(no_diagrams=True), language)
+                build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+                page = site.by_id['reference/vocabulary']
+                rendered = build.build_page(site, page, language)
+                hits = [row for row in build.search_index(site, language)
+                        if '/reference/vocabulary/#' in row['u']
+                        and row['h'].lower().startswith('business case')]
+                self.assertEqual(len(hits), 2)
+                self.assertEqual(len({row['u'] for row in hits}), 2)
+                self.assertEqual(len({row['h'] for row in hits}), 2)
+                for meaning in (concept, stage):
+                    hit = next(row for row in hits if meaning in row['x'])
+                    anchor = hit['u'].split('#')[1]
+                    self.assertEqual(rendered.count('id="' + anchor + '"'), 1)
+                    target = re.search(r'<tr id="' + re.escape(anchor) + r'">(.*?)</tr>', rendered, re.S)
+                    self.assertIn(meaning, target.group(1))
+
     def test_page_titles_feedback_tables_and_card_ids_follow_the_selected_language(self):
         for language, home_title, about_title, table_label, suffix in (
-            ('ru', 'Центр компетенций по искусственному интеллекту', 'О центре AICC', 'Таблица', 'RU'),
+            ('ru', 'Центр компетенций по AI', 'О центре AICC', 'Таблица', 'RU'),
             ('en', 'Welcome to the AI Competence Center', 'About AICC', 'Table', 'EN'),
         ):
             with self.subTest(language=language):
@@ -251,13 +318,13 @@ class RussianCorpusProjection(unittest.TestCase):
         site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
         build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
         statement = site.by_id['about/statement-of-intent']
-        self.assertEqual(statement['title'], 'Заявление о намерениях по внедрению искусственного интеллекта')
+        self.assertEqual(statement['title'], 'Заявление о намерениях по внедрению AI')
         self.assertEqual(build.nav_title(site, statement), 'Заявление о намерениях')
         values = build.build_page(site, site.by_id['about/values-and-principles'], 'ru')
-        self.assertIn('Миссия AICC — сделать искусственный интеллект', values)
+        self.assertIn('Миссия AICC — сделать AI', values)
         self.assertIn('<strong>Добросовестность</strong>', values)
         self.assertIn('Положение об AICC 2.1</a>', values)
-        self.assertIn('Заявление о намерениях по внедрению искусственного интеллекта 4</a>', values)
+        self.assertIn('Заявление о намерениях по внедрению AI 4</a>', values)
         self.assertIn('lang="ru"', values.split('id="g-work"', 1)[1].split('</section>', 1)[0])
         # Delivery principles follow the reviewed lifecycle model.
         self.assertIn('lang="ru"', values.split('id="g-delivery"', 1)[1].split('</section>', 1)[0])
@@ -326,7 +393,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('Распределение ответственности', tabs)
         self.assertNotIn('Who is responsible for what', tabs)
         self.assertEqual(site.by_id['governance/unit-governance-workflow/events-and-sequences']['title'],
-                         'Рабочий процесс: Управление подразделением: События и последовательности')
+                         'Workflow: Управление подразделением: События и последовательности')
         rendered = build.build_page(site, guide, 'ru')
         self.assertIn('<p class="o-lead" lang="ru">Роли, профили, RACI и кадровые записи</p>', rendered)
 
@@ -341,8 +408,50 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('id="t-степень-серьёзности"', html)
         self.assertIn('AICC-REF-01-RU', html)
         self.assertIn('<div class="o-doc" lang="ru">', html)
-        self.assertIn('<p class="o-lead" lang="ru">Термины и стиль</p>', html)
+        self.assertIn('<p class="o-lead" lang="ru">Определения, толкование и стиль документов</p>', html)
         self.assertNotIn('class="o-callout lang-note"', html)
+
+    def test_shared_terminology_table_entries_remain_searchable(self):
+        for language in ('en', 'ru'):
+            site = build.Site(argparse.Namespace(no_diagrams=True), language)
+            build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+            page = site.by_id['reference/shared-terminology']
+            html = build.build_page(site, page, language)
+            self.assertEqual(site.bodies[page['id']]['language'], language)
+            self.assertEqual(site.bodies[page['id']]['src'],
+                             f'charter/{language}/shared-technology-terminology.md')
+            self.assertNotIn('class="o-callout lang-note"', html)
+            self.assertNotIn('Russian explanation', html)
+            if language == 'en':
+                self.assertNotRegex(site.bodies[page['id']]['raw'], '[А-Яа-яЁё]')
+                self.assertEqual(html.count('<th>Universal term</th>'), 4)
+                self.assertNotIn('Russian-language term</th>', html)
+            else:
+                self.assertEqual(html.count('<th>Универсальный термин</th>'), 4)
+                self.assertEqual(html.count('<th>Русскоязычный термин</th>'), 4)
+                self.assertIn('<th>Значение</th>', html)
+                self.assertIn('<th>Применение</th>', html)
+            entries = [row for row in build.search_index(site, language)
+                       if '/reference/shared-terminology/' in row['u']]
+            for term, section in [('KPI', 's-3'), ('workflow', 's-4'), ('WSJF', 's-4'),
+                                  ('Finite State Machine / FSM', 's-5'), ('tool gateway', 's-5'),
+                                  ('Amazon CloudWatch / CloudWatch', 's-6')]:
+                with self.subTest(language=language, term=term):
+                    hits = [entry for entry in entries if entry['h'] == term
+                            or entry['h'].startswith(term + ' — ')]
+                    self.assertEqual(len(hits), 1)
+                    self.assertEqual(hits[0]['u'], f'/{language}/reference/shared-terminology/#{section}')
+                    self.assertIn(f'id="{section}"', html)
+                    self.assertIn(term, html)
+                    self.assertTrue(hits[0]['x'])
+                    if term == 'Finite State Machine / FSM':
+                        self.assertIn('Конечный автомат' if language == 'ru' else 'A behavioral model',
+                                      hits[0]['x'])
+            if language == 'ru':
+                hits = [e for e in entries if e['h'] == 'business case — бизнес-кейс']
+                self.assertEqual(len(hits), 1)
+                self.assertTrue(hits[0]['u'].endswith('#s-3'))
+                self.assertIn('Обоснование инвестиции', hits[0]['x'])
 
     def test_translated_template_can_be_copied_and_outline_identifies_its_language(self):
         site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
@@ -361,7 +470,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertNotIn('<span lang="en"> &mdash; ', outline)
         self.assertNotIn('class="o-callout lang-note"', outline)
         tabs = build.parts_html(site, site.by_id['services/engagement-workflow'], 'ru')
-        self.assertIn('>Рабочий процесс</a>', tabs)
+        self.assertIn('>Workflow</a>', tabs)
         self.assertIn('>Руководство</a>', tabs)
         self.assertNotIn('Engagement workflow', tabs)
         en = build.Site(argparse.Namespace(no_diagrams=True), 'en')

@@ -13,7 +13,7 @@ Value flows from a strategic theme to a task on a board through a small number o
 | Feature | A deliverable of a Capability, closed within one Program Increment; run-rate work sits directly under its Standing Initiative and is done within one Iteration | A benefit hypothesis with acceptance criteria in the form Given, When, Then | Program Backlog, then Iteration Backlog | The Team at Iteration Planning; for run-rate work, the AICC Lead at the Weekly Review. The product owner accepts |
 | Work Item | A task of a Team within a Feature | A task | The Team board | The Team |
 
-1.1. The Portfolio Management Model manages the first two levels; the Solution Lifecycle Model governs Capabilities and Features in the Program Backlog, including run-rate Features directly under a Standing Initiative. In the tracker, an Initiative sits above the Epic, a Capability is an Epic, a Feature is an issue type, and a Work Item is a sub-task; the word Epic is used in the tracker only.
+1.1. The Portfolio Management Model manages the first two levels; the Solution Lifecycle Model governs Capabilities and Features in the Program Backlog, including run-rate Features directly under a Standing Initiative. In Jira, an Initiative sits above the Epic, a Capability is an Epic, a Feature is an issue type, and a Work Item is a sub-task. Epic identifies the Jira item to which a Capability maps; use in another framework is explained in that context and does not change this mapping.
 
 ## 2. The contract of each level
 

@@ -1,10 +1,10 @@
 # Strategy and governance
 
-What AICC built for itself it builds for any unit of the Bank: a strategy, a charter and mandate, an operating and governance model with its roles, decisions, control loops, and controls, and the portal and repository that publish them, developed with AI in weeks and maintained with it afterwards. AICC drafts them for the function, and the function owns their substance; AICC decides none of it (Business Model 4.10).
+AICC builds for any unit of the Bank what it built for itself: a strategy, a charter and mandate, an operating and governance model with its roles, decisions, control loops, and controls, and the portal and repository that publish them. AICC develops these with AI in weeks and maintains them with it afterward. AICC drafts them for the function, and the function owns their substance; AICC decides none of it (Business Model 4.10).
 
 ## 1. What it is
 
-1.1. The category covers the strategy paper of a function or an Initiative, its charter and mandate, its operating model, its governance package with a control catalog and a registry of records, and the portal and repository that hold the pack, as this site holds the charter of AICC. It covers the governance of an Initiative as well as of a unit: the steering, the reporting chain, the decision rights.
+1.1. The category covers a function's or an Initiative's strategy paper, charter and mandate, operating model, governance package with a control catalog and a registry of records, and the portal and repository that hold the pack, as this site holds the charter of AICC. It covers governance for both an Initiative and a unit: the steering, the reporting chain, and the decision rights.
 
 1.2. The method is the one AICC used on itself: the documents are written in one voice from a single source, every rule is stated once, the processes are drawn as flows and loops, the controls are testable, and the portal is generated from the documents so that it cannot drift from them. AICC drafts, structures, and builds; the head of function reviews, decides, and owns.
 
@@ -21,7 +21,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 3. What the function receives
 
-3.1. A charter pack in the style of the Bank, the registry structure for its live records, a control catalog mapped to the loops of the unit, a portal generated from the pack, and the method and the tooling to keep it current. For an Initiative: the strategy, the governance, and the reporting chain, ready for its first Steering.
+3.1. A charter pack in the style of the Bank, the registry structure for its live records, a control catalog mapped to the unit's loops, a portal generated from the pack, and the method and tooling to keep it current. For an Initiative: the strategy, governance, and reporting chain, ready for its first Steering.
 
 ## 4. How it runs
 
@@ -29,7 +29,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 5. What it leads to
 
-5.1. A function with a baselined charter and a working portal, able to show its auditors, its regulator, and its staff how it is mandated, governed, and operated, and a pack it maintains with the same method.
+5.1. A function with a baselined charter and a working portal, able to show its auditors, regulator, and staff how it is mandated, governed, and operated, and a pack it maintains with the same method.
 
 ## 6. The Package
 

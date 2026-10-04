@@ -939,7 +939,7 @@
    "source": [
     "portal/content/en/services/catalog-form.md"
    ],
-   "production": "authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/solutions, portfolio/packages.md) for the live portal",
+   "production": "authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/en/solutions, portfolio/en/packages.md) for the live portal",
    "series": "service-catalog",
    "series_title": "Service catalog",
    "part": "1 of 2",
@@ -1070,7 +1070,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "3 of 5",
-   "words": 1327,
+   "words": 1371,
    "production": "generated"
   },
   {
@@ -1108,7 +1108,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "5 of 5",
-   "words": 1090,
+   "words": 1158,
    "production": "generated"
   },
   {
@@ -1145,7 +1145,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "2 of 7",
-   "words": 1374,
+   "words": 1481,
    "production": "generated"
   },
   {
@@ -1163,7 +1163,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "3 of 7",
-   "words": 1288,
+   "words": 1393,
    "production": "generated"
   },
   {
@@ -1181,7 +1181,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "4 of 7",
-   "words": 1163,
+   "words": 1239,
    "production": "generated"
   },
   {
@@ -1255,7 +1255,7 @@
    ],
    "document": "service-delivery-workflow",
    "part": "1 of 6",
-   "words": 867,
+   "words": 943,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Intent and levels",
@@ -1297,7 +1297,7 @@
    ],
    "document": "service-delivery-workflow",
    "part": "3 of 6",
-   "words": 983,
+   "words": 1082,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Execution",
@@ -1345,7 +1345,7 @@
    ],
    "document": "service-delivery-guide",
    "part": "5 of 6",
-   "words": 1694,
+   "words": 1734,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Guide: flow and decisions",
@@ -2553,7 +2553,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "7 of 7 (governance view)",
-   "words": 2163,
+   "words": 2255,
    "production": "generated"
   },
   {
@@ -3747,9 +3747,26 @@
    "production": "generated"
   },
   {
-   "id": "reference/document-catalog",
+   "id": "reference/shared-terminology",
    "section": "reference",
    "order": 12,
+   "type": "reference",
+   "slug": "/reference/shared-terminology/",
+   "title": "Shared Business and Technology Terminology",
+   "source": [
+    "charter/en/shared-technology-terminology.md"
+   ],
+   "outline": [
+    "Business, delivery, technology and proper names in a common explanatory format",
+    "Definitions and application in the language of each edition",
+    "Terminology conventions and maintenance"
+   ],
+   "production": "generated"
+  },
+  {
+   "id": "reference/document-catalog",
+   "section": "reference",
+   "order": 13,
    "type": "document",
    "slug": "/reference/document-catalog/",
    "title": "Document Catalog",
@@ -3762,7 +3779,7 @@
   {
    "id": "reference/change-history",
    "section": "reference",
-   "order": 13,
+   "order": 14,
    "type": "reference",
    "slug": "/reference/change-history/",
    "title": "Change history",
@@ -3779,7 +3796,7 @@
   {
    "id": "reference/records-and-systems",
    "section": "reference",
-   "order": 14,
+   "order": 15,
    "type": "records",
    "slug": "/reference/records-and-systems/",
    "title": "Records and systems",

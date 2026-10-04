@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/knowledge-base/learning-paths.md
-source_sha256: 82150aeb797d5e07fd3b1da14fedc3ee07869aa847f3ab8860c65f1087a8fc66
+source_sha256: 653dc7d18d2b1dbb58c69a91c97ba70f117b913a54868cfb49a2fbfdbec4842f
 translation_status: reviewed
 ```
 
@@ -13,7 +13,7 @@ translation_status: reviewed
 | Шаг | Читать | Чтобы уметь |
 | --- | --- | --- |
 | 1 | [Об AICC](page:about/index), включая [Чем мы занимаемся](page:about/what-we-do) и [Как мы работаем](page:about/how-we-work) | Объяснить, что такое AICC, его миссию, ценности и порядок Взаимодействия с заказчиком |
-| 2 | Курс [Ответственный ИИ](page:responsible-ai/index) | Объяснить, что представляет собой ИИ сегодня, в чём его ценность и риски и каковы правила использования в Банке |
+| 2 | Курс [Ответственный AI](page:responsible-ai/index) | Объяснить, что представляет собой AI сегодня, в чём его ценность и риски и каковы правила использования в Банке |
 | 3 | Направления [Услуг](page:services/index) | Назвать запросы, с которыми функция может обратиться к AICC |
 | 4 | [Частые вопросы](page:knowledge-base/questions-people-ask) | Самостоятельно отвечать на распространённые вопросы |
 | 5 | [Терминология и стиль](page:reference/vocabulary) — держать под рукой | Использовать термины корпуса в установленных значениях |
@@ -22,10 +22,10 @@ translation_status: reviewed
 
 | Шаг | Читать | Чтобы уметь |
 | --- | --- | --- |
-| 1 | [Как взаимодействовать с AICC](page:services/how-to-engage), Схему процесса и руководство по Взаимодействию с заказчиком | Обратиться с потребностью, знать шесть шагов и обязательства сторон |
-| 2 | Части 2–5 курса [Портфель](page:portfolio/en/index) | Знать, как экономическое обоснование одобряется, ранжируется, проверяется на практике и получает продолжение |
+| 1 | [Как взаимодействовать с AICC](page:services/how-to-engage), Workflow и руководство по Взаимодействию с заказчиком | Обратиться с потребностью, знать шесть шагов и обязательства сторон |
+| 2 | Части 2–5 курса [Портфель](page:portfolio/en/index) | Знать, как business case одобряется, ранжируется, проверяется на практике и получает продолжение |
 | 3 | [Роли](page:organization/the-roles) и [Кто что делает](page:organization/who-does-what) | Знать полномочия Владельца Домена и действия Эксперта Домена |
-| 4 | [Как Банк применяет ИИ](page:responsible-ai/how-the-bank-applies-it) | Знать Категорию риска своего Решения и связанные с ней требования |
+| 4 | [Как Банк применяет AI](page:responsible-ai/how-the-bank-applies-it) | Знать Категорию риска своего Решения и связанные с ней требования |
 | 5 | [Паспорт инициативы](page:knowledge-base/initiative-brief) и [Соглашение о взаимодействии](page:knowledge-base/service-agreement) | Заполнить две начальные формы |
 
 ## 3. Инженеру решений или участнику Команды
@@ -34,8 +34,8 @@ translation_status: reviewed
 | --- | --- | --- |
 | 1 | Все части курса [Поставка](page:delivery/index) | Работать с ритмом, досками, контрольными точками и циклами |
 | 2 | [Модель жизненного цикла решений](page:delivery/solution-lifecycle-model) — правила | Знать состояния, Стадии и условия переходов |
-| 3 | Схемы процессов [Поставка услуг](page:delivery/service-delivery-workflow) и [Ритм работы](page:delivery/cadence-workflow) с руководствами | Знать записи каждого шага и мероприятия |
-| 4 | [Схема процесса Эксперимента](page:delivery/experiment-workflow), [Жизненный цикл Сервиса](page:delivery/life-of-a-service), [Эксплуатация Сервисов](page:delivery/service-operations) | Проводить испытание в Лабораторной среде и эксплуатировать Сервис после Выпуска |
+| 3 | workflows [Поставка услуг](page:delivery/service-delivery-workflow) и [Ритм работы](page:delivery/cadence-workflow) с руководствами | Знать записи каждого шага и мероприятия |
+| 4 | [Workflow Эксперимента](page:delivery/experiment-workflow), [Жизненный цикл Сервиса](page:delivery/life-of-a-service), [Эксплуатация Сервисов](page:delivery/service-operations) | Проводить испытание в Лабораторной среде и эксплуатировать Сервис после Выпуска |
 | 5 | [Описание решения](page:knowledge-base/solution-definition), [Контрольный лист приёмки](page:knowledge-base/acceptance-checklist) и [Показатели поставки](page:delivery/measures-definitions-and-formulas) | Вести запись Решения и понимать Показатели |
 
 ## 4. Эксперту Домена
@@ -47,7 +47,7 @@ translation_status: reviewed
 | 3 | [Качество, Проверка и Выпуск](page:delivery/quality-verification-and-release) | Знать порядок Приёмки и своё участие в Оценочном наборе и работе с Первыми пользователями |
 | 4 | [Обучение и обмен знаниями](page:services/training-and-knowledge-sharing) | Знать обучение и сопровождение AICC, библиотеку навыков своего направления работы |
 
-## 5. Куратору AICC и Управляющему комитету по ИИ
+## 5. Куратору AICC и Управляющему комитету по AI
 
 | Шаг | Читать | Чтобы уметь |
 | --- | --- | --- |
@@ -61,8 +61,8 @@ translation_status: reviewed
 
 | Шаг | Читать | Чтобы уметь |
 | --- | --- | --- |
-| 1 | [Как Банк применяет ИИ](page:responsible-ai/how-the-bank-applies-it) и [Политику применения искусственного интеллекта](page:responsible-ai/ai-policy) | Знать Категории риска, контрольные точки, Поставщиков, инциденты и Исключения |
-| 2 | [Схему процесса управления рисками ИИ и контроля](page:responsible-ai/ai-risk-control-workflow) | Знать место своего согласования, Валидации и остановки в процессе |
+| 1 | [Как Банк применяет AI](page:responsible-ai/how-the-bank-applies-it) и [Политику применения AI](page:responsible-ai/ai-policy) | Знать Категории риска, контрольные точки, Поставщиков, инциденты и Исключения |
+| 2 | [Workflow управления рисками AI и контроля](page:responsible-ai/ai-risk-control-workflow) | Знать место своего согласования, Валидации и остановки в процессе |
 | 3 | [Решения и Эскалация](page:governance/decisions-and-escalation) и [Контрольные процедуры и их каталог](page:governance/controls-and-the-catalogue) | Знать свои полномочия, окончательность решений и подтверждаемые вами контрольные процедуры |
 | 4 | [Нормативные акты и соблюдение требований](page:knowledge-base/acts-and-compliance) и [Регуляторы и нормативные акты](page:reference/regulators-and-acts) | Подтверждать применимость и поддерживать актуальность страниц |
 | 5 | [Заключение контрольной функции](page:knowledge-base/control-sign-off) и [Контрольный лист приёмки](page:knowledge-base/acceptance-checklist) | Фиксировать согласование, Валидацию или остановку |

@@ -25,7 +25,7 @@ The body of practice that treats a portfolio as a flow to be managed rather than
 
 ## 5. How the charter relates to it
 
-5.1. The strategic loop with its Envelopes and Guardrails is the first dimension; the portfolio sync and the backlog care with the Kanban are the second; the portfolio review with the clearances and the measures is the third. The Portfolio Management Model states the model in the Bank's own terms and names none of the framework's vocabulary, by design.
+5.1. The strategic loop with its Envelopes and Guardrails is the first dimension; the portfolio sync and the backlog care with the Kanban are the second; the portfolio review with the clearances and the measures is the third. The Portfolio Management Model states the model using the terminology established in the corpus.
 
 ## 6. Related pages
 

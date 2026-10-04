@@ -6,7 +6,7 @@ Free, reputable places to learn AI and to follow the field, from an introductory
 
 | Resource | What it is | Suits | How to take it | Access |
 | --- | --- | --- | --- | --- |
-| [DeepLearning.AI short courses and The Batch](resources/deeplearning-ai.md) | Short, practical courses on generative AI, prompting, retrieval, agents, and evaluation, by the people who built the tools; a weekly newsletter on the field | Anyone who will build or evaluate a Solution; the newsletter for everyone | Start with the generative AI and prompting courses; the courses on evaluation and agents for Solution Engineers | Free courses; registration |
+| [DeepLearning.AI short courses and The Batch](resources/deeplearning-ai.md) | Short, practical courses on generative AI, prompting, retrieval, AI agents, and evaluation, by the people who built the tools; a weekly newsletter on the field | Anyone who will build or evaluate a Solution; the newsletter for everyone | Start with the generative AI and prompting courses; the courses on evaluation and AI agents for Solution Engineers | Free courses; registration |
 | Google's machine learning crash course and AI guides | A free introduction to machine learning, and Google's guides on prompting, responsible AI, and its principles | A first course in machine learning for a non-specialist | For the fundamentals before the generative material | Free |
 | Microsoft Learn, AI and responsible AI paths | Structured learning paths on AI fundamentals, generative AI, and Microsoft's responsible AI standard and tools | A reader in a Microsoft-based function; the responsible AI standard as a worked example of one | For fundamentals and for one vendor's governance practice | Free |
 | fast.ai | A practical deep-learning course, code first | An engineer who wants to understand models by building them | For depth after the fundamentals | Free |
@@ -27,7 +27,7 @@ Free, reputable places to learn AI and to follow the field, from an introductory
 
 | Resource | What it is | Suits | How to take it | Access |
 | --- | --- | --- | --- | --- |
-| [OWASP GenAI Security Project](regulations/owasp-top-10-llm.md) | The Top 10 for language-model applications, with guides on agents, red teaming, and governance | Solution Engineers, information security, the Checker | For the security test of a Solution and for the guardrails | Free |
+| [OWASP GenAI Security Project](regulations/owasp-top-10-llm.md) | The Top 10 for language-model applications, with guides on AI agents, red teaming, and governance | Solution Engineers, information security, the Checker | For the security test of a Solution and for the guardrails | Free |
 | [MITRE ATLAS and the AI Incident Database](resources/mitre-atlas-and-ai-incident-database.md) | The knowledge base of adversarial techniques against AI systems, in the form of MITRE's attack matrices; and the public database of AI incidents and harms | Information security; the AI Incident review; the Lab | For threat modeling before a build, and for lessons from others' incidents | Free |
 | [NIST AI RMF Playbook and the Generative AI Profile](regulations/nist-ai-rmf.md) | The actions suggested for each outcome of the framework | The AICC Lead and the Control Function Contacts | For a checklist when designing the controls of a use | Free |
 | Partnership on AI | Resources on responsible practice, including on synthetic media and on incident reporting | A reader shaping the Bank's practice | For practice notes from a multi-stakeholder body | Free |

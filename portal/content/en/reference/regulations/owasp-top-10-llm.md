@@ -21,7 +21,7 @@ The security community's list of the ten most important risks of applications bu
 
 ## 4. Relevance to the Bank
 
-4.1. It names the attacks that are new with generative AI and that a bank's security function must learn to test for, above all injection, leakage, and excessive agency in agents.
+4.1. It names the attacks that are new with generative AI and that a bank's security function must learn to test for, above all injection, leakage, and excessive agency in AI agents.
 
 ## 5. How the charter relates to it
 

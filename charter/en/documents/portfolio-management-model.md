@@ -2,9 +2,9 @@
 id: AICC-ORG-02-EN
 title: Portfolio Management Model
 status: active
-revision: 2.1
+revision: 2.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-04
 ```
 
 # Portfolio Management Model
@@ -295,7 +295,7 @@ Figure 8: the levels of the work.
 
 8.2. The AICC Lead approves a Capability, with the Domain Owner consulted, and shall approve only a Capability that states the leading indicator of its Initiative that it serves. The Capability is accepted against that indicator as well as against its acceptance criteria. A Capability of enabling work may sit directly under an Initiative, without a Solution, and enabling work that builds no AI Solution has no Risk Tier.
 
-8.3. In Jira an Initiative sits above the Epic, a Capability is an Epic, a Feature is an issue type, and a Work Item is a sub-task. The word Epic is used in Jira only.
+8.3. In Jira an Initiative sits above the Epic, a Capability is an Epic, a Feature is an issue type, and a Work Item is a sub-task. Epic names the Jira item to which a Capability maps; use of the word in another framework is explained in that context and does not change this mapping.
 
 ## 9. Review, measures, and records
 
@@ -336,3 +336,4 @@ Figure 8: the levels of the work.
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Adds the intake of run-rate work and Initiatives, the gates and cancellation, the separation of duties, the mix of Initiatives and the four controls, the rules of leading indicators and of the MVP decision, and the table of Portfolio measures with their governance and records. | DR-2026-062 |
 | 2.1 | 2026-10-03 | Clarified the Standing Initiative approval and its direct run-rate Features, with no MVP of its own. | none (correction under Document Catalog 4.2) |
+| 2.2 | 2026-10-04 | Clarified Epic as a Jira mapping without prohibiting its use for the corresponding concept in another framework; the AICC work hierarchy is unchanged. | DR-2026-064 |

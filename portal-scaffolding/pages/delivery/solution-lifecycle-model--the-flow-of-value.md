@@ -9,7 +9,7 @@ source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 3
 document: solution-lifecycle-model
 part: 2 of 7
-words: 1374
+words: 1481
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/the-flow-of-val
 
 ## Sections of the source
 
-- 3. The flow of value (1374 words)
+- 3. The flow of value (1481 words)
 
 ## Outline
 

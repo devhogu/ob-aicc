@@ -1,8 +1,8 @@
 # Regulators and acts
 
-The Bank operates in the Kyrgyz Republic, within a region and a field where the rules for AI and data are set by many bodies. This page is the index of the regulators, the laws, and the policies that the Bank is aware of, by jurisdiction, with a page for each: who they are, what they set, whom they reach, why they matter to the Bank, and how the charter relates to them. The pages are for orientation; they quote no provision, and an entry here does not mean that the instrument binds the Bank. The Knowledge base page Acts and compliance states what the applicable ones require of a use of AI at the Bank; the standards, the frameworks, and the principles that are not law are on the page Standards and frameworks.
+The Bank operates in the Kyrgyz Republic, within a region and a field where many bodies set rules for AI and data. This page indexes the regulators, laws, and policies that the Bank is aware of, by jurisdiction. Each has a page describing who they are, what they set, whom they reach, why they matter to the Bank, and how the charter relates to them. The pages are for orientation; they quote no provision, and an entry here does not mean that the instrument binds the Bank. The Knowledge base page Acts and compliance states what the applicable instruments require for AI use at the Bank; standards, frameworks, and principles that are not law are on the page Standards and frameworks.
 
-This is the first edition, a curated list for global awareness, to be verified with the Control Function Contacts of compliance and legal.
+This first edition is a curated list for global awareness, to be verified with the Control Function Contacts of compliance and legal.
 
 ## 1. Kyrgyz Republic
 

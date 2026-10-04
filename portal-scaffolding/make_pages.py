@@ -126,7 +126,7 @@ add(id='about/strategy', section='about', order=5, type='outline', slug='/about/
              'The strategy across the aspects of AICC: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures',
              'The road: the Maturity Roadmap and its measures (Statement of Intent 11)',
              'How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, AICC Charter 7)'])
-add(id='about/aicc-charter', section='about', order=6, type='document', slug='/about/aicc-charter/en/', title=h1('charter/en/documents/aicc-charter.md'),
+add(id='about/aicc-charter', section='about', order=6, type='document', slug='/about/aicc-charter/', title=h1('charter/en/documents/aicc-charter.md'),
     source=['charter/en/documents/aicc-charter.md'], words=900)
 if NEXT:
     add(id='about/what-we-do', section='about', order=7, type='outline', slug='/about/what-we-do/', title='What we do', source=['portal/content/en/about/what-we-do.md'], production='authored',
@@ -543,14 +543,18 @@ if NEXT:
 add(id='reference/vocabulary', section='reference', order=11 if NEXT else 1, type='reference', slug='/reference/vocabulary/', title=h1('charter/en/documents/vocabulary.md'),
     source=['charter/en/documents/vocabulary.md'], words=4674,
     outline=['Purpose, precedence, and style (Vocabulary 1 to 3)', 'The defined terms as an index by letter and as a table', 'For each term: the pages where it is used (generated)'])
-add(id='reference/document-catalog', section='reference', order=12 if NEXT else 2, type='document', slug='/reference/document-catalog/', title=h1('charter/en/documents/document-catalog.md'),
+if NEXT:
+    add(id='reference/shared-terminology', section='reference', order=12, type='reference', slug='/reference/shared-terminology/', title=h1('charter/en/shared-technology-terminology.md'),
+        source=['charter/en/shared-technology-terminology.md'],
+        outline=['Business, delivery, technology and proper names in a common explanatory format', 'Definitions and application in the language of each edition', 'Terminology conventions and maintenance'])
+add(id='reference/document-catalog', section='reference', order=13 if NEXT else 2, type='document', slug='/reference/document-catalog/', title=h1('charter/en/documents/document-catalog.md'),
     source=['charter/en/documents/document-catalog.md'], words=1519)
-add(id='reference/change-history', section='reference', order=13 if NEXT else 3, type='reference', slug='/reference/change-history/', title='Change history',
+add(id='reference/change-history', section='reference', order=14 if NEXT else 3, type='reference', slug='/reference/change-history/', title='Change history',
     source=['charter/en/documents/document-catalog.md'], production='generated',
     outline=['Introduction: the baseline and how a change is recorded (Document Catalog 3, 4)',
              'For each document: revision, date, change, decision reference (from its change-log table)',
              'A link from each row to the document page'])
-add(id='reference/records-and-systems', section='reference', order=14 if NEXT else 4, type='records', slug='/reference/records-and-systems/', title='Records and systems',
+add(id='reference/records-and-systems', section='reference', order=15 if NEXT else 4, type='records', slug='/reference/records-and-systems/', title='Records and systems',
     source=['charter/en/documents/operating-model.md', 'charter/en/documents/document-catalog.md', 'charter/en/templates/README.md', 'registry/en/README.md'],
     production='authored from sources',
     outline=['Introduction: the manual is static; the live records are kept in other systems',

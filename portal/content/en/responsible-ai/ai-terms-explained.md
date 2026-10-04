@@ -12,8 +12,8 @@ The vocabulary of the field, in plain terms, for the reader of this course. The 
 | Large language model (LLM) | A model trained on very large bodies of text to predict the next token; the basis of generative AI for language |
 | Generative AI | AI that produces content, text, images, code, audio, rather than only a prediction or a class |
 | Foundation model, general-purpose model | A large model trained for general capability and adapted to many tasks; the EU AI Act calls it a general-purpose AI model |
-| Agent, agentic AI | A system in which a model plans and acts toward a goal with tools: it reads, calls services, fills forms, runs code, and chains steps |
-| Assistant, copilot | An AI application that helps a person with a task, proposing and drafting, with the person deciding |
+| AI agent, agentic AI | A system in which a model plans and acts toward a goal with tools: it reads, calls services, fills forms, runs code, and chains steps |
+| Assistant, copilot | An application that helps a person with answers, suggestions or drafts. In the charter, an Assistant takes no action beyond its output; a system that acts through tools is an AI agent. |
 
 ## 2. How they are built and used
 
@@ -27,7 +27,7 @@ The vocabulary of the field, in plain terms, for the reader of this course. The 
 | Retrieval-augmented generation (RAG) | Giving the model the relevant passages of approved documents at the moment of the question, so that it answers from them and cites them, instead of from its memory |
 | Embedding, vector store | A numeric representation of text that lets a system find the passages most relevant to a question; the store that holds them |
 | Grounding | Tying the model's answers to approved sources, so that they can be checked |
-| Evaluation, evaluation set | Measuring how well a model or an application performs on a set of cases with known good answers; the set is built with the people who know the work |
+| Evaluation, evaluation set | Assessment of a model or application against cases with expected results. The charter Evaluation set is agreed with the Domain and used to test a Solution or model before use and after each significant change. |
 | Benchmark | A standard evaluation used to compare models; useful for choosing, not sufficient for approving a use |
 | Guardrails | The rules, filters, and limits placed around a model: what it may answer, what it may not, what it may do |
 | Human in the loop, human on the loop | A person reviews each output before it takes effect; or a person oversees the system and can intervene and stop it |
@@ -45,7 +45,7 @@ The vocabulary of the field, in plain terms, for the reader of this course. The 
 | Data leakage | Data reaching a place it should not: a provider's training set, another user's answer, a log |
 | Jailbreak | Input crafted to make a model ignore its guardrails |
 | Data poisoning | Corrupting the data a model learns from, or the documents it retrieves, to change its behavior |
-| Excessive agency | An agent with more functionality, permissions, or autonomy than its task needs |
+| Excessive agency | An AI agent with more functionality, permissions, or autonomy than its task needs |
 | Over-reliance | People accepting outputs without checking because the system is usually right |
 | Model collapse | Degradation of models trained increasingly on machine-generated content |
 
@@ -57,7 +57,7 @@ The vocabulary of the field, in plain terms, for the reader of this course. The 
 | Risk Tier | The Bank's classification of a use of AI by the class of its data, the influence of the AI on a decision, whether the output reaches or affects a customer, and its degree of autonomy, the highest of which sets the controls that apply; the term of the AI Policy 3.1 |
 | Risk-based approach | Controls proportionate to risk; the principle of the [EU AI Act](../reference/regulations/eu-ai-act.md), the [NIST framework](../reference/regulations/nist-ai-rmf.md), and the Bank's Risk Tiers |
 | High-risk AI | In the [EU AI Act](../reference/regulations/eu-ai-act.md), the uses it lists, among them credit scoring of natural persons, which carry the full set of duties |
-| AI Registry | The record of each Solution, model, and agent of the Bank, with owner, scope, data access, and Risk Tier, kept by the AICC Lead; the term of the Statement of Intent |
+| AI Registry | The record of each Solution, model, and AI agent of the Bank, with owner, scope, data access, and Risk Tier, kept by the AICC Lead; the term of the Statement of Intent |
 | Model risk management | The discipline of validating, documenting, and monitoring models, with a named owner; the banking practice that AI governance extends |
 | Validation, independent validation | In the charter, the review of a Risk Tier 2 or 3 Solution by the Control Function Contacts before use and until the date it expires; the review of a Risk Tier 1 Solution by a person other than its builder is a check. In model risk management, the judgment of a model by people who did not build it |
 | Explainability | The ability to state why a system produced an output in terms the person affected, the regulator, or the auditor can act on |

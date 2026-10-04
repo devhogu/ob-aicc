@@ -1,7 +1,7 @@
 # Нормативные документы / Charter
 
-- [English](en/README.md): 39 files in English.
-- [Русский](ru/README.md): переведены и проверены все 39 файлов.
+- [English](en/README.md): 40 files, including the new [Shared Business and Technology Terminology](en/shared-technology-terminology.md) companion reference.
+- [Русский](ru/README.md): 40 файлов, включая [Общую деловую и технологическую терминологию](ru/shared-technology-terminology.md). Определения и сведения о применении приведены на русском языке.
 
 The approved corpus baseline is edition 2.2. Language versions share document identities and record histories; differences are reconciled against the recorded decisions and current sources.
 

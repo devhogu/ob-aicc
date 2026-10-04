@@ -2,9 +2,9 @@
 id: AICC-MND-02-EN
 title: AICC Charter
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-04
 ```
 
 # AICC Charter
@@ -39,7 +39,7 @@ revised: 2026-10-03
 
 5.2. The Bank does not accept a breach of law or regulation. It accepts only a low level of risk of harm to customers and of loss or misuse of confidential or personal data. It accepts a moderate level of risk of error in internal productivity uses where a person reviews the output.
 
-5.3. The Bank does not accept AI that takes a decision without review in a regulated process, or an agent that acts on systems or funds, without validation by the Control Functions and the release decision of the Executive Sponsor.
+5.3. The Bank does not accept AI that takes a decision without review in a regulated process, or an AI agent that acts on systems or funds, without validation by the Control Functions and the release decision of the Executive Sponsor.
 
 5.4. The Executive Sponsor decides this Statement. The AICC Lead owns it, shall review it each year, and activates a change on that decision. The Board Committee notes it in its report. A risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
 
@@ -69,3 +69,4 @@ revised: 2026-10-03
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Stated the mission of AICC and kept the former mission as its purpose, added the reporting line, the absence of an administrative line, and the limits that AICC is not a platform team or a Control Function and does not operate a Solution at the scale of the Bank, the four service areas and two modes of the offer, and the minimum content of the Quarterly Report. | DR-2026-062 |
+| 2.1 | 2026-10-04 | Applied fixed international AI agent naming consistently; functional meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |

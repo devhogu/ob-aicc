@@ -9,7 +9,7 @@ source: charter/en/workflows/service-delivery.md
 source_sections: 5
 document: service-delivery-workflow
 part: 3 of 6
-words: 983
+words: 1082
 series: set-service-delivery
 production: generated
 status: scaffold
@@ -25,7 +25,7 @@ Page type: workflow. Address: /delivery/service-delivery-workflow/the-execution/
 
 ## Sections of the source
 
-- 5. The execution in the Program Increment (983 words)
+- 5. The execution in the Program Increment (1082 words)
 
 ## Outline
 

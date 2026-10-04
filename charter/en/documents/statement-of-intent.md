@@ -2,9 +2,9 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-04
 ```
 
 # Statement of Intent on the Adoption of Artificial Intelligence
@@ -159,7 +159,7 @@ revised: 2026-10-02
 ### 9.8. Software engineering
 
 - **Objective.** To apply AI throughout the software engineering lifecycle.
-- **Scope.** Coding assistance, code review, testing, and the analysis and documentation of legacy code. Coding agents are introduced later under review controls.
+- **Scope.** Coding assistance, code review, testing, and the analysis and documentation of legacy code. Coding AI agents are introduced later under review controls.
 - **Intended outcome.** Faster and safer delivery of the Bank's own Solutions.
 
 ## 10. Capability and enablers
@@ -186,7 +186,7 @@ revised: 2026-10-02
 | 2 | Controlled adoption | Employees have secure access to AI, and knowledge capture begins | Approved assistants for employees, first knowledge bases, and first governed pilots in the priorities |
 | 3 | Embedded | AI operates within selected processes and systems, under human decision | AI proposes and prepares in operations, in customer and business intelligence, and in technology operations, with persons deciding |
 | 4 | Scaled | One governed AI Platform is reused across Domains | AI is standard practice in every Strategic Priority, on shared gateways, the AI Registry, and Platform Guardrails, with data separated by classification |
-| 5 | Agentic | Bounded tasks are delegated to agents under continuous evaluation | Agents act within limits and permissions set by Risk Tier, with human oversight on channels that the agent cannot influence |
+| 5 | Agentic | Bounded tasks are delegated to AI agents under continuous evaluation | AI agents act within limits and permissions set by Risk Tier, with human oversight on channels that the AI agent cannot influence |
 
 ### 11.2. AI Platform capability by level
 
@@ -195,12 +195,12 @@ revised: 2026-10-02
 | Capability | Level 1 | Level 2 | Level 3 | Level 4 | Level 5 |
 | --- | --- | --- | --- | --- | --- |
 | Model gateway: a single controlled access point to models, with routing, cost control, and data protection policy | Basic | Established | Established | Established | Established |
-| Knowledge layer: governed retrieval over the Bank's knowledge | | First knowledge bases | Priority processes | Shared by all assistants | Shared by all agents |
-| Tool gateway: permissioned access from AI to systems and interfaces | | | Read access to selected systems | Governed access across systems | Scoped action rights for agents |
-| AI Registry: the Record of AICC of each Solution, model, and agent, with owner, scope, data access, and Risk Tier, which the AI Platform feeds | List of known AI uses | List with Risk Tiers | Registry | Registry across Domains | Agent registry with limits |
+| Knowledge layer: governed retrieval over the Bank's knowledge | | First knowledge bases | Priority processes | Shared by all assistants | Shared by all AI agents |
+| Tool gateway: permissioned access from AI to systems and interfaces | | | Read access to selected systems | Governed access across systems | Scoped action rights for AI agents |
+| AI Registry: the Record of AICC of each Solution, model, and AI agent, with owner, scope, data access, and Risk Tier, which the AI Platform feeds | List of known AI uses | List with Risk Tiers | Registry | Registry across Domains | AI agent registry with limits |
 | Platform Guardrails: enforced permissions, limits, and checks | Policies activated | Policies applied | Checks at the Stages of an item | Enforced in the AI Platform | Deterministic checks before actions |
-| Human oversight: approval points for high-stakes actions | By policy | By policy | Within operational flows | Standard across the AI Platform | On channels that agents cannot influence |
-| Observability and evaluation: audit trail, evaluation, monitoring, and lineage | Manual | Basic logs | Evaluation before release | Continuous monitoring | Continuous evaluation of agents |
+| Human oversight: approval points for high-stakes actions | By policy | By policy | Within operational flows | Standard across the AI Platform | On channels that AI agents cannot influence |
+| Observability and evaluation: audit trail, evaluation, monitoring, and lineage | Manual | Basic logs | Evaluation before release | Continuous monitoring | Continuous evaluation of AI agents |
 
 ### 11.3. Measures by Maturity Level
 
@@ -212,7 +212,7 @@ revised: 2026-10-02
 | 2 Controlled adoption | Share of employees with access to an approved assistant and trained in its use. Share of priority processes with an owned and current knowledge source. Use of approved tools relative to unapproved tools. First pilots reported against defined success Measures |
 | 3 Embedded | Number of processes and systems with AI embedded under human decision, and share of their cases handled with AI support. Change in time and errors against baseline in those processes. Rates of human override and correction. Incidents and control breaches per Solution. Customer intelligence: share of customers with a current, risk-based KYC view, and journey problems identified and resolved. Business intelligence: reporting cycle time and forecast accuracy against baseline. Technology operations: incident detection and recovery times against baseline |
 | 4 Scaled | Share of Solutions recorded in the AI Registry, assigned a Risk Tier, validated, and monitored on the AI Platform. Reuse of AI Platform components across Domains. Benefits realized against the Investment Envelope. Predictability of delivery, read as the trend of the PI Objectives achieved. Audit and regulatory findings relating to AI |
-| 5 Agentic | Share of eligible tasks handled by agents within their limits. Agent actions stopped or reversed by persons or by Platform Guardrails. Loss, error, and complaint rates against the human baseline. Evaluation coverage of agents in operation. Time to detect and contain an agent incident |
+| 5 Agentic | Share of eligible tasks handled by AI agents within their limits. AI agent actions stopped or reversed by persons or by Platform Guardrails. Loss, error, and complaint rates against the human baseline. Evaluation coverage of AI agents in operation. Time to detect and contain an AI agent incident |
 
 ## 12. Performance assessment and reporting
 
@@ -241,3 +241,4 @@ revised: 2026-10-02
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
+| 1.1 | 2026-10-04 | Applied fixed international AI agent naming consistently; functional meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |

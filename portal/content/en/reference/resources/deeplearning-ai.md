@@ -1,6 +1,6 @@
 # DeepLearning.AI: the short courses and The Batch
 
-The most practical free entry into generative AI for people who will build or evaluate a Solution: short courses of an hour or two on prompting, retrieval, agents, evaluation, and the tools behind them, taught with the companies that make the tools; and The Batch, a weekly newsletter that explains the week's developments in plain terms.
+The most practical free entry into generative AI for people who will build or evaluate a Solution: short courses of an hour or two on prompting, retrieval, AI agents, evaluation, and the tools behind them, taught with the companies that make the tools; and The Batch, a weekly newsletter that explains the week's developments in plain terms.
 
 ## 1. Identity
 
@@ -12,15 +12,15 @@ The most practical free entry into generative AI for people who will build or ev
 
 ## 2. What it publishes
 
-2.1. Short courses on prompting for developers, building systems with language models, retrieval over documents, evaluating and debugging applications, agents and tool use, fine-tuning, and the libraries and services of the field; longer specializations on machine learning and deep learning; and The Batch, with an editorial by its founder and a digest of research and news.
+2.1. Short courses on prompting for developers, building systems with language models, retrieval over documents, evaluating and debugging applications, AI agents and tool use, fine-tuning, and the libraries and services of the field; longer specializations on machine learning and deep learning; and The Batch, with an editorial by its founder and a digest of research and news.
 
 ## 3. Why it matters to the Bank
 
-3.1. The short courses teach exactly the techniques AICC uses in its Solutions, grounding, evaluation, bounded agents, in a form a Domain Expert or a Solution Engineer can take in an afternoon. The Batch is the one newsletter a non-specialist can follow and stay current.
+3.1. The short courses teach exactly the techniques AICC uses in its Solutions, grounding, evaluation, bounded AI agents, in a form a Domain Expert or a Solution Engineer can take in an afternoon. The Batch is the one newsletter a non-specialist can follow and stay current.
 
 ## 4. How to take it, and for what
 
-4.1. For a Solution Engineer: the courses on building systems, retrieval, evaluation, and agents, before building the first knowledge service or automation. For a Domain Expert or a function's analyst: the prompting course and the one on evaluation, to take part in the evaluation set. For everyone: The Batch, weekly. The AICC Lead names the courses in the training path of each role.
+4.1. For a Solution Engineer: the courses on building systems, retrieval, evaluation, and AI agents, before building the first knowledge service or automation. For a Domain Expert or a function's analyst: the prompting course and the one on evaluation, to take part in the evaluation set. For everyone: The Batch, weekly. The AICC Lead names the courses in the training path of each role.
 
 ## 5. Cautions
 

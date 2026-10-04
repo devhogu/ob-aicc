@@ -2,7 +2,7 @@
 id: reference/records-and-systems
 title: Records and systems
 section: reference
-order: 14
+order: 15
 type: records
 slug: /reference/records-and-systems/
 source: charter/en/documents/operating-model.md; charter/en/documents/document-catalog.md; charter/en/templates/README.md; registry/en/README.md

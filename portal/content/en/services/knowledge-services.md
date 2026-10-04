@@ -28,7 +28,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 5. What it leads to
 
-5.1. Expertise at the point of work: consistent and compliant answers, faster proficiency of new staff, and institutional knowledge that stays when people move. It is the foundation that later agents stand on.
+5.1. Expertise at the point of work: consistent and compliant answers, faster proficiency of new staff, and institutional knowledge that stays when people move. It is the foundation that later AI agents stand on.
 
 ## 6. The Package
 

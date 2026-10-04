@@ -27,7 +27,7 @@ Current by nature, and always kept here.
 | Priorities | [priorities.md](priorities.md) | Strategic Priorities, and references to the Investment Envelopes, Guardrails, and Measures |
 | Standards | [standards.md](standards.md) | Architecture standards and Platform requirements |
 | Risks and Issues | [risks-and-issues.md](risks-and-issues.md) | Risks, issues, AI Incidents, Exceptions, Findings |
-| AI Registry | [ai-registry.md](ai-registry.md) | Each Solution, model, and agent; a Record of AICC kept by the AICC Lead, which the AI Platform feeds when it can |
+| AI Registry | [ai-registry.md](ai-registry.md) | Each Solution, model, and AI agent; a Record of AICC kept by the AICC Lead, which the AI Platform feeds when it can |
 | Control Matrix | [control-matrix.md](control-matrix.md) | Each control of the Operating Model 8 with its latest evidence and its status, and the populations for sampling; the objective, type, and test of each control are in the Unit governance guide |
 | Appointments | [appointments.md](appointments.md) | The Appointments Record: the map of the Roles to the Holders, the appointment log, the declarations, the access, and the delegations of the Executive Sponsor |
 

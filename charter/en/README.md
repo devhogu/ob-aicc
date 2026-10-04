@@ -33,7 +33,7 @@ The contents list every file of the charter in the order of reading, with its li
 | 2.4 | AICC-ORG-02 | [Portfolio Management Model](documents/portfolio-management-model.md) | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP |
 | 2.5 | AICC-ORG-03 | [Solution Lifecycle Model](documents/solution-lifecycle-model.md) | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle with the service steps and the Lab, and the measures |
 | 2.6 | AICC-POL-01 | [AI Policy](documents/ai-policy.md) | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions |
-| 2.7 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined terms and style |
+| 2.7 | AICC-REF-01 | [Vocabulary and Style](documents/vocabulary.md) | Defined meanings, interpretation and document style |
 | 2.8 | AICC-MND-01 | [Statement of Intent on the Adoption of Artificial Intelligence](documents/statement-of-intent.md) | The intent, values, principles, and strategy of the Bank for AI |
 | 2.9 | AICC-REF-02 | [Document Catalog](documents/document-catalog.md) | The list of the documents and Templates, their life cycle, and their activation |
 | 3 |  | **[Workflows](workflows/README.md)** | How the work flows, and on which events |
@@ -67,6 +67,7 @@ The contents list every file of the charter in the order of reading, with its li
 | 6 |  | **Records outside the charter** | |
 | 6.1 |  | [Registry](../../registry/en/README.md) | The working state, the living records, and the evidence records, including the [Control Matrix](../../registry/en/control-matrix.md) |
 | 6.2 |  | [Portfolio](../../portfolio/en/README.md) | The catalog of Solutions and Packages |
+| 7 |  | [Shared Business and Technology Terminology](shared-technology-terminology.md) | Shared business and technology names, definitions, application and protected product aliases; each language edition provides its own definitions and usage text |
 
 ## 4. How to read the charter
 

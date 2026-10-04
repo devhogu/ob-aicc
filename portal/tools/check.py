@@ -2,7 +2,7 @@
 """Static checks of the generated site html/aicc.
 
 Checks: every internal link and anchor resolves; both languages have the same pages; every page has a language switch to the same page,
-a skip link, one h1, and a lang attribute; no request to another host; every referenced asset exists; every diagram is inlined (no placeholder);
+a skip link, one h1, and a lang attribute; no resource load from another host (source citations are allowed); every referenced asset exists; every diagram is inlined (no placeholder);
 the search indexes exist. Exit code 1 on any error.
 """
 import hashlib
@@ -59,7 +59,7 @@ class P(HTMLParser):
                 self.langsw += 1
         if tag in ('link',) and 'href' in a:
             self.srcs.append(a['href'])
-        if tag in ('script', 'img') and 'src' in a:
+        if 'src' in a:
             self.srcs.append(a['src'])
         if tag == 'h1':
             self.h1 += 1
@@ -96,7 +96,7 @@ for lang, ps in all_pages.items():
             errors.append('%s: language switch missing' % path)
         if '@@' in text:
             errors.append('%s: unresolved placeholder' % path)
-        if re.search(r'(?:src|href)="https?://', text):
+        if any(re.match(r'^(?:https?:)?//', src, re.IGNORECASE) for src in p.srcs):
             errors.append('%s: request to another host' % path)
 
 for path, (p, text) in parsed.items():
@@ -106,7 +106,7 @@ for path, (p, text) in parsed.items():
             continue
         target, frag = urldefrag(h)
         target = target.split('?', 1)[0]
-        if target.startswith(('http:', 'https:')):
+        if re.match(r'^(?:https?:)?//', target, re.IGNORECASE):
             continue
         if target.startswith('smb://'):
             continue    # the corporate folder that holds the charter and the Registry

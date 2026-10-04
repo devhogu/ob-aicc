@@ -50,7 +50,7 @@ BASELINE = {'revision': '2.2', 'date': '2026-10-03'}  # English source edition; 
 
 FONTS = os.path.join(ROOT, 'portal', '.tools', 'pw-syslibs')
 SHORT = {'Statement of Intent on the Adoption of Artificial Intelligence': 'Statement of Intent', 'Vocabulary and Style': 'Vocabulary', 'Portfolio and service delivery workflow': 'Service delivery workflow'}
-SHORT['Заявление о намерениях по внедрению искусственного интеллекта'] = 'Заявление о намерениях'
+SHORT['Заявление о намерениях по внедрению AI'] = 'Заявление о намерениях'
 NAV_SHORT = {'AICC Charter': 'Charter', 'Portfolio measures: definitions and formulas': 'Portfolio measures', 'Delivery measures: definitions and formulas': 'Delivery measures',
              'Portfolio and service delivery workflow': 'Service delivery workflow'}      # shorter in the left navigation
 PAGE_TITLE = {'AICC Charter': 'AI Competence Center Charter'}      # fuller as the page title
@@ -712,6 +712,21 @@ def assign_refs(site):
         q['ref'] = short_id(q['id'], taken)
 
 
+def vocabulary_entries(site, source):
+    """Keep concept, state and stage search targets distinct when names coincide."""
+    entries, seen = [], set()
+    for header, key in (('| Term | Meaning', 'Term'), ('| State | Meaning', 'State'), ('| Stage | Level', 'Stage')):
+        for row in site.sources.table(source, header):
+            label = row[key]
+            anchor = 't-' + slug(label)
+            if anchor in seen:
+                anchor = 't-' + key.lower() + '-' + slug(label)
+                label += ' (' + row['_labels'][key] + ')'
+            seen.add(anchor)
+            entries.append({'anchor': anchor, 'label': label, 'meaning': row['Meaning']})
+    return entries
+
+
 def load_terms(site):
     rows = site.sources.table('charter/en/documents/vocabulary.md', '| Term | Meaning')
     terms = {}
@@ -1187,7 +1202,8 @@ def content_page(site, p, lang):
     ctx = {'source': b['src'], 'lang': lang, 'url': site.url(p, lang)}
     body = site.link_xrefs(b['html'], ctx)
     if p['id'] == 'reference/vocabulary':
-        body = re.sub(r'<tr>\n<td>(.*?)</td>', lambda mm: '<tr id="t-%s"><td>%s</td>' % (slug(html.unescape(mm.group(1))), mm.group(1)), body)
+        entries = iter(vocabulary_entries(site, p['source'][0]))
+        body = re.sub(r'<tr>\n<td>(.*?)</td>', lambda mm: '<tr id="%s"><td>%s</td>' % (next(entries)['anchor'], mm.group(1)), body)
     elif p['type'] not in ('template',):
         body = link_terms(site, body, ctx)
     body = substitute(site, body, lang)
@@ -1675,7 +1691,7 @@ def records_page(site, p, lang):
         systems = [
             ('Реестр', 'Решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие записи в виде закрытых и датированных выписок. Хранятся в корпоративной папке: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
             ('Jira и Confluence', 'Рабочее состояние Бэклога программы, досок и Рабочих задач, а также рабочие документы — с момента переноса текущего состояния работы'),
-            ('Service Management', 'Запросы и инциденты, включая Инциденты ИИ'),
+            ('Service Management', 'Запросы и инциденты, включая Инциденты AI'),
         ]
     srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i == 0 else esc(b)) for i, (a, b) in enumerate(systems))
     intro = {'en': 'This site is static. It states the rules and the forms of AICC and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
@@ -1809,10 +1825,19 @@ def search_index(site, lang):
                 out.append({'u': u + '#' + c['anchor'], 't': p['title'], 'h': c['heading'], 'x': txt[:360]})
         if p['id'] == 'reference/vocabulary':
             # A section excerpt cannot index the definitions near the end of a long table.
-            for header, key in (('| Term | Meaning', 'Term'), ('| State | Meaning', 'State'), ('| Stage | Level', 'Stage')):
-                for row in site.sources.table(p['source'][0], header):
-                    label = row[key]
-                    out.append({'u': u + '#t-' + slug(label), 't': p['title'], 'h': label, 'x': row['Meaning'][:360]})
+            for entry in vocabulary_entries(site, p['source'][0]):
+                out.append({'u': u + '#' + entry['anchor'], 't': p['title'], 'h': entry['label'], 'x': entry['meaning'][:360]})
+        if p['id'] == 'reference/shared-terminology':
+            # Grouped tables need a search entry for every term, including late rows.
+            for occurrence, section in enumerate(('s-3', 's-4', 's-5', 's-6')):
+                for row in site.sources.table(p['source'][0], '| Universal term | Meaning',
+                                              occurrence=occurrence):
+                    label = row['Universal term']
+                    local_name = row.get('Russian-language term')
+                    if local_name and local_name != label:
+                        label += ' — ' + local_name
+                    out.append({'u': u + '#' + section, 't': p['title'], 'h': label,
+                                'x': row['Meaning'][:360]})
         if p['type'] == 'control':
             c = p['control']
             out.append({'u': u, 't': p['title'], 'h': c['ref'], 'x': ' '.join([c['objective'], c['rule'], c['owner'], c['test']])[:360]})

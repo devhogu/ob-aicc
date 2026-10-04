@@ -29,7 +29,7 @@ The measures are those of the Operating Model 6.11. The AICC Lead owns each, rea
 
 ## 4. The Measures of the Maturity Levels
 
-4.1. Above the measures of governance stand the Measures of the Maturity Levels of the Statement of Intent, by which a Strategic Priority advances: at level one the AI Policy activated, the Control Function Contacts appointed, each known AI use recorded and tiered, and the baselines established; and from level two on, the shares of employees trained and with access, the processes with AI embedded and their change against baseline, the benefits against the Envelope, the predictability of delivery, the audit and regulatory findings, and, for agents, the actions stopped or reversed and the evaluation coverage. The quarterly Steering confirms the Maturity Level of each priority on them; the yearly Steering sets the targets.
+4.1. Above the measures of governance stand the Measures of the Maturity Levels of the Statement of Intent, by which a Strategic Priority advances: at level one the AI Policy activated, the Control Function Contacts appointed, each known AI use recorded and tiered, and the baselines established; and from level two on, the shares of employees trained and with access, the processes with AI embedded and their change against baseline, the benefits against the Envelope, the predictability of delivery, the audit and regulatory findings, and, for AI agents, the actions stopped or reversed and the evaluation coverage. The quarterly Steering confirms the Maturity Level of each priority on them; the yearly Steering sets the targets.
 
 ## 5. Rule source
 

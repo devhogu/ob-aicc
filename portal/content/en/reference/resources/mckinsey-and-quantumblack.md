@@ -12,7 +12,7 @@ The most-cited source on the adoption and the value of AI in business: a yearly 
 
 ## 2. What it publishes
 
-2.1. The yearly state-of-AI survey of adoption, use cases, value, and risk practices; the Global Institute's reports on the economic potential of AI and generative AI, with estimates by function; banking practice pieces on AI in operations, risk, and customer service; QuantumBlack's technical and organizational pieces on scaling AI, on agents, and on responsible AI; and case material.
+2.1. The yearly state-of-AI survey of adoption, use cases, value, and risk practices; the Global Institute's reports on the economic potential of AI and generative AI, with estimates by function; banking practice pieces on AI in operations, risk, and customer service; QuantumBlack's technical and organizational pieces on scaling AI, on AI agents, and on responsible AI; and case material.
 
 ## 3. Why it matters to the Bank
 

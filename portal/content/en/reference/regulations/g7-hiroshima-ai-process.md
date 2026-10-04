@@ -1,6 +1,6 @@
 # G7 Hiroshima AI Process
 
-The initiative of the Group of Seven on advanced AI. It produced guiding principles and a voluntary code of conduct for the organizations that develop the most capable models, on safety testing, transparency, incident reporting, and the responsible release of those models.
+The Group of Seven initiative on advanced AI produced guiding principles and a voluntary code of conduct for organizations developing the most capable models. These cover safety testing, transparency, incident reporting, and the responsible release of those models.
 
 ## 1. Identity
 
@@ -17,11 +17,11 @@ The initiative of the Group of Seven on advanced AI. It produced guiding princip
 
 ## 3. Whom it reaches
 
-3.1. The developers that adhere, which include the major providers of foundation models. It binds no user of those models.
+3.1. Developers that adhere to the process, including the major providers of foundation models. It binds no user of those models.
 
 ## 4. Relevance to the Bank
 
-4.1. The Bank buys its models from providers; what those providers commit to under this process shapes the transparency and the safety information the Bank can expect from them, and it informs the provider assessment.
+4.1. The Bank buys its models from providers. Their commitments under this process shape the transparency and safety information the Bank can expect from them and inform the provider assessment.
 
 ## 5. How the charter relates to it
 
@@ -32,4 +32,4 @@ The initiative of the Group of Seven on advanced AI. It produced guiding princip
 - [Assessments and evaluations, in Services](../../services/assessments-and-evaluations.md)
 - [Industry body of knowledge](../industry-body-of-knowledge.md)
 
-This page is for orientation. It summarizes the instrument in general terms and quotes no provision; the text of the instrument prevails, and the Control Function Contacts of compliance and legal confirm what applies to the Bank.
+This page is for orientation. It summarizes the instrument in general terms and quotes no provision. The text of the instrument prevails, and the Control Function Contacts of compliance and legal confirm what applies to the Bank.

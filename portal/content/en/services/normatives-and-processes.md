@@ -15,7 +15,7 @@ The following are examples that illustrate the category, not a list of commitmen
 - A policy, a procedure, a regulation, an instruction, or a runbook drafted from the facts the function gives
 - A corpus rewritten for one voice, with a consistency and conflict report
 - A process mapped and drawn from the documents and artifacts of the function, with the records each step leaves, and the automation points marked
-- A bilingual set across Kyrgyz, Russian, and English
+- A bilingual set using two of the following languages: Kyrgyz, Russian, and English
 - A glossary of the function maintained with its documents
 - Minutes, decision records, and actions drafted from a meeting for approval, where the function keeps a normative record of its decisions
 

@@ -1,0 +1,279 @@
+{
+  "change": "C-PORTAL-PROSE",
+  "date": "2026-10-04",
+  "humanize_run": "20261004151241",
+  "tasks_completed": [
+    "T-001",
+    "T-002",
+    "T-003",
+    "T-004"
+  ],
+  "reviewed_inputs": 118,
+  "humanize_gate": {
+    "pass": 111,
+    "failed": 7,
+    "failure_reason": "Required proper and defined names in unchanged headings; no retry justified after repeated identical results."
+  },
+  "selected_sources": [
+    {
+      "path": "portal/content/en/about/what-we-do.md",
+      "before_sha256": "1a5b33a39bf97df741796a5fb02aeff145094efc54a61f10e3cafc47549b1927",
+      "after_sha256": "d068bc9ba54177deaa675976b3b8c8d709b546fbea4b514c4dc06c4942cc5530"
+    },
+    {
+      "path": "portal/content/ru/about/what-we-do.md",
+      "before_sha256": "ac690f4fd24d03cfb7caf293615923c491e7ad2d3243f933368023ab12e8136e",
+      "after_sha256": "2c218e122bb201b21585917cf3c041175a20bcdb7cc6f66e395b9bbadf97e6ba"
+    },
+    {
+      "path": "portal/content/en/responsible-ai/opportunities.md",
+      "before_sha256": "538967dc2dbc3fa1e3de06e263e031628a0c40fbc87ae009bd24b4239caa34a0",
+      "after_sha256": "a3912afaea9ac2b40777a8ae6221f8f872f47d6a77203c6f0f3517b84d8c8b35"
+    },
+    {
+      "path": "portal/content/ru/responsible-ai/opportunities.md",
+      "before_sha256": "6f1d5cd2c5831cf1e19fff43a471008027dbb5e39082cec6217e47061c91f0ab",
+      "after_sha256": "997a5a5569ba49cbcdd8ab627116886a7ff7d3dad05fc14d5883376e2d0bb295"
+    },
+    {
+      "path": "portal/content/en/reference/research-and-insight.md",
+      "before_sha256": "a54f2c9af1fd9708f40c4ebed33630e8b2877b1cc00d9ddf79a070e24d8174dd",
+      "after_sha256": "eb323c68e7a51262aefdf3a81bc98721b536c5f060334976f2b3492530e8d79f"
+    },
+    {
+      "path": "portal/content/ru/reference/research-and-insight.md",
+      "before_sha256": "b60de97b2c96075b52d7bb3dfa682557918d31d890740adbe546ceaed77e6c6a",
+      "after_sha256": "015924240ad4bba95008b1d70f7ca33eb28790a6a8dbd208c771fe6645253cd3"
+    },
+    {
+      "path": "portal/content/en/knowledge-base/guides.md",
+      "before_sha256": "8f8d76014b38a00b729b264b5c5a8eae2980109455c713bc32b0ea307b8b443b",
+      "after_sha256": "1f33c5bdb28ae7e4612b384526454f08738240bdb40978fdb8525ed2405e877f"
+    },
+    {
+      "path": "portal/content/ru/knowledge-base/guides.md",
+      "before_sha256": "269a98c483078462177f269bfb7390914e6def65eb251323019ab68d0c861241",
+      "after_sha256": "0a27988bf52f245e01ec98202018a728e98ce89d2f32727557afc72bcf9e2344"
+    },
+    {
+      "path": "portal/content/en/knowledge-base/learning-paths.md",
+      "before_sha256": "82150aeb797d5e07fd3b1da14fedc3ee07869aa847f3ab8860c65f1087a8fc66",
+      "after_sha256": "653dc7d18d2b1dbb58c69a91c97ba70f117b913a54868cfb49a2fbfdbec4842f"
+    },
+    {
+      "path": "portal/content/ru/knowledge-base/learning-paths.md",
+      "before_sha256": "366d7038276670b17ec5119169b9f8489fae0ec7b51c38d6d87a5150bebf69a2",
+      "after_sha256": "f19423d102978132684e37988da1dfae72a38a112fd2ef87a42f1f48de5d94cb"
+    },
+    {
+      "path": "portal/content/en/portfolio/overview.md",
+      "before_sha256": "c4699ac73c42edfa71894c5f71e02fff043b28c090e18f0b3cf2b72f165d61c8",
+      "after_sha256": "e44e61cbe7afdc549f12bac6ab4f034a7d0d1d462299aa40a2cd7a8c97bb9437"
+    },
+    {
+      "path": "portal/content/ru/portfolio/overview.md",
+      "before_sha256": "c6a9797e2fd389b48e92e00d46b9c753584eb5b433918fa8dfb8631cbf2a17fb",
+      "after_sha256": "dab4643b586f75626cd3a53ed8adb3cd65b532a90c8b8a8a91186d4c7902b9ff"
+    },
+    {
+      "path": "portal/content/en/reference/industry-body-of-knowledge.md",
+      "before_sha256": "ea53db52027c13659f23bc0a9b5ea6c99f4b3473aa9c3ff2c00bd7e7bc48b376",
+      "after_sha256": "4bffc02ee7ef44b0c8465f19731fb614a2c743962c6ffa4b71c1b4e1b5d638b5"
+    },
+    {
+      "path": "portal/content/ru/reference/industry-body-of-knowledge.md",
+      "before_sha256": "bc5a9e40e73f206f9e05f8154d5297166db5d589d015d0acd69a5821a876ce5e",
+      "after_sha256": "66a848dfd63878ab6426cbe028af09b13bb245d0f63fea35b13db59fdf69ddac"
+    },
+    {
+      "path": "portal/content/en/reference/regulations/aifc.md",
+      "before_sha256": "28f12fe8f09c2c237c892e46f2b26ec9d0423d076641bb4c31103e42884964b7",
+      "after_sha256": "cf30cd6df19c49d7bf69b07b01d455a3853161b7b8178532e0127a69089bdf63"
+    },
+    {
+      "path": "portal/content/ru/reference/regulations/aifc.md",
+      "before_sha256": "bd7660a9e9b5beac26b64006d82ec99a7666ddad950150c11f129e88b188897d",
+      "after_sha256": "3c2901b948641ae5b6c69612a08eb51bbcca57df0b387ab2e32b30217c4990d6"
+    },
+    {
+      "path": "portal/content/en/reference/regulations/bank-of-russia-on-ai.md",
+      "before_sha256": "a5a8705ee24819d215ae26d46d327f4ac5b08d112ea505f754f0ca855f12ee00",
+      "after_sha256": "e02dd96d3ce3dbb271e60f6ed328b1d304cd92b897330b67c0d71461a00b6899"
+    },
+    {
+      "path": "portal/content/ru/reference/regulations/bank-of-russia-on-ai.md",
+      "before_sha256": "71de00b30bc7d52df0707d26a36fbe6641be1014cb8986acfdb3a9ddb397481c",
+      "after_sha256": "a70499fd2ca2f92fc2ed86b5dc9afcef59f3dc281eaefd331dbe10eccd5f0a57"
+    },
+    {
+      "path": "portal/content/en/reference/regulations/financial-standard-setters-on-ai.md",
+      "before_sha256": "7161526b09c916262435cef6a2c4c730f6c7a14f91c052f5475a99fed8c143dc",
+      "after_sha256": "15849dea9de714b6e7c113698ac8a487124ac2d78a4c000a03575e8657b1f223"
+    },
+    {
+      "path": "portal/content/ru/reference/regulations/financial-standard-setters-on-ai.md",
+      "before_sha256": "f7fd6a09c5f5cdc31b4958cdbd4f93b3142ecc41091f41766cd29df64299fe56",
+      "after_sha256": "80683093842069a4243a60853a49ddbeb39f287fddc3a6f37bad157c061798ad"
+    },
+    {
+      "path": "portal/content/en/reference/regulations/g7-hiroshima-ai-process.md",
+      "before_sha256": "ee50ec69200fc93c63fc0f11933e2b208063d02c83e3bb3a50323f147e0ee38b",
+      "after_sha256": "5671ad6147bc007bf9ecd887a447df1431c078af2be3793d0cbe875bc613deda"
+    },
+    {
+      "path": "portal/content/ru/reference/regulations/g7-hiroshima-ai-process.md",
+      "before_sha256": "1cb2d98cb50334fe382e292015f9decec0d3322cec7f507fec8dd109371ad4da",
+      "after_sha256": "f90d0d069a69c29ab6d3c96e811086a901d0a5dc22992342f7f018bd00f844d5"
+    },
+    {
+      "path": "portal/content/en/reference/regulations/iso-iec-ai-standards.md",
+      "before_sha256": "2a7e48bb58cebf8eb86787e82a12418a568fe29b0fd1fa37e77fd27a8224df03",
+      "after_sha256": "392f4e2e47fd64681b41264ced5d3552a745d43926b1c41b1ecd1f94cafadb09"
+    },
+    {
+      "path": "portal/content/ru/reference/regulations/iso-iec-ai-standards.md",
+      "before_sha256": "9b853e41ff4df5a69dbc4ef30520ebb6c5efd2080138dc134978b755b78b8868",
+      "after_sha256": "39b8794b70e09167eda9c524a8cb7d0af19c1e68609af106a382390c88dd5ce1"
+    },
+    {
+      "path": "portal/content/en/reference/regulations/kz-financial-regulators.md",
+      "before_sha256": "7f7ceac72f53a3c51ea34221709d6a3491f1dfb92d67822c4346a35f3811984e",
+      "after_sha256": "9c26a2186ee468f740d8b0685a71aeecd0defab785ef1f9d3aa6ba62db17a9da"
+    },
+    {
+      "path": "portal/content/ru/reference/regulations/kz-financial-regulators.md",
+      "before_sha256": "7be08f7b74f71d31ca5a47b2c4d16922c4157236f1f0f1f408522047ecdc4173",
+      "after_sha256": "ccd2bf132f7c6515a6d060d89cc5d69f68e7f21e6fd9c4b1111273d273f05b4a"
+    },
+    {
+      "path": "portal/content/en/reference/regulations/lean-portfolio-management.md",
+      "before_sha256": "a066a482808eea281d28e23087bbc3baa27e04450373c1223111b2a357a7ccb1",
+      "after_sha256": "7b19b0ac651e6cf41e9dfe6659dd8c7067bdec0c56ec17b18892f43eb1af11e2"
+    },
+    {
+      "path": "portal/content/ru/reference/regulations/lean-portfolio-management.md",
+      "before_sha256": "01efccf96b9a1f6f093e031f179d546623eeb2bed2e6cba1cc0637a06db68249",
+      "after_sha256": "2d051540ea8e7e7ca96b7b5adbe06eeb6a0516765d1e4f0db9134fec5aa0e166"
+    },
+    {
+      "path": "portal/content/en/reference/regulations/nist-ai-rmf.md",
+      "before_sha256": "e9d5ce6834bbae168e7edecf709886fab0f22226e738f66804d62540c91b9101",
+      "after_sha256": "fd2185b89362607b640e91b21e8da6bdab9a357784d5cc15f42b80eb00aa8744"
+    },
+    {
+      "path": "portal/content/ru/reference/regulations/nist-ai-rmf.md",
+      "before_sha256": "b3b60f137a0a5b30c14f8155189ec06ff1befcb185d394aca01dafb9fd8de16b",
+      "after_sha256": "6bc6f44bdd1bc975bb6176535e844029595f029547d3d7aed691199124088405"
+    },
+    {
+      "path": "portal/content/en/reference/regulators-and-acts.md",
+      "before_sha256": "f4d1c302dbf4f92f48c2a623208a12cac795a28bc1a527079aeb559a96018248",
+      "after_sha256": "53226ab686341709d58c00ee4bf3d245760e9038e4d7425c2e38fb17104767eb"
+    },
+    {
+      "path": "portal/content/ru/reference/regulators-and-acts.md",
+      "before_sha256": "b1c3ac1809b8699e253fac325b89823a1a26f7a5a2de49f7d3aa0d077686329a",
+      "after_sha256": "ec7838c9d4d61b2ee043f7207709ed5281e3e4ccc827e00d9c8a328ad6c50dc0"
+    },
+    {
+      "path": "portal/content/en/responsible-ai/ai-in-fintech-and-digital-banking.md",
+      "before_sha256": "62c8611ec86d754ec316bd6622262bf90a4a69139ce2dae6edbafdc2d9e80c3f",
+      "after_sha256": "e21df3ea27c4f8ac059e502bdb0a61930689d4abb3bd6733d37948a877d9864c"
+    },
+    {
+      "path": "portal/content/ru/responsible-ai/ai-in-fintech-and-digital-banking.md",
+      "before_sha256": "06065a685acff5a6d4275a26ee2d798f6168818f907d7ef93bc54acde0a7ae1c",
+      "after_sha256": "7594fc74fdbf09bd808ce7dc0125fdc23717bb5ce4fe31dd29a50c70ce6e455c"
+    },
+    {
+      "path": "portal/content/en/responsible-ai/understanding-ai-today.md",
+      "before_sha256": "23a2936dc4987fd9754f4a98f49382268edc5e5e648814516af27bcef20a20b2",
+      "after_sha256": "6947e30b1aa584b9f4e7aa2ad39b867d637ddcf01b89eb6658c5c84e4f3ec16f"
+    },
+    {
+      "path": "portal/content/ru/responsible-ai/understanding-ai-today.md",
+      "before_sha256": "0593be4e3fd903e660f042e17e30649ac1498b96cb6fbd4414a5e40d365f89c2",
+      "after_sha256": "ed174292a35c20f01cfbba085b2d430c36521c610443783bf920b086b2abce46"
+    },
+    {
+      "path": "portal/content/en/services/business-cases-and-scenarios.md",
+      "before_sha256": "ebae27ef3f736a7e024f0c6044917c324759462acf7d0a4be8a3f1c7df2d96e5",
+      "after_sha256": "38d5daef0855ec31fec1293c8d2df3d5c8bef5ddc7485b80cf39d1f0d6f2d67d"
+    },
+    {
+      "path": "portal/content/ru/services/business-cases-and-scenarios.md",
+      "before_sha256": "2eb9b0d881f209f5c24661b3745c91ffee8363ffec1586ba92c6389cc3c2666f",
+      "after_sha256": "e71ee4cd4abe621eec35629934d547655bd25ef21e6e2c0df4c9275966822f69"
+    },
+    {
+      "path": "portal/content/en/services/normatives-and-processes.md",
+      "before_sha256": "7c63961243f1c40ceb492e60eb19fedba95eebf4c09754600a5363e61aca0eb6",
+      "after_sha256": "8f03d25da39e6508cf6147c731e0d10826d5f58fe864c25793333d32a539d1f9"
+    },
+    {
+      "path": "portal/content/ru/services/normatives-and-processes.md",
+      "before_sha256": "408c6409cd41984d951c0c58b40c65c1f1ef4bdc24109ad88eadb9dbc5fe9a04",
+      "after_sha256": "5e2b89ea026b66d0172a02b3d539d570468f6b4d8a47301c3729abd18d789cfd"
+    },
+    {
+      "path": "portal/content/en/services/strategy-and-governance.md",
+      "before_sha256": "ec70d66004545ba644c00810549f2486494b762627ac7e88de81926be4a47686",
+      "after_sha256": "5df3fcf0e832d0b8d04f50c4895a3d124bbeeb4006933cfcb90cdb316c8d458f"
+    },
+    {
+      "path": "portal/content/ru/services/strategy-and-governance.md",
+      "before_sha256": "8dad2549d4ea38becbd5b235f5b8cadded4a082c898446f01dcfe901e546ebb0",
+      "after_sha256": "a852c654582c8d21a6bab0482c355a536d12adb585457ac54a5e7f96d14a5e5e"
+    },
+    {
+      "path": "portal/content/en/services/training-and-knowledge-sharing.md",
+      "before_sha256": "71217846bd0bec95226854afafa4a545d3086edb1e2e697c02b3ba926f1a7a05",
+      "after_sha256": "2a895e259f6dfda8044f2296a249f0fcc81f4dd4c15b39ae7a6092074ac9d91d"
+    },
+    {
+      "path": "portal/content/ru/services/training-and-knowledge-sharing.md",
+      "before_sha256": "23c499242c96cf9f9149ea659a1e7dad8c5354d0046de98fd65027f1b16d2826",
+      "after_sha256": "412494b4562efec86842f20962515b1044383fe9931b94911b19f01a83783962"
+    },
+    {
+      "path": "portal/content/authored.json",
+      "before_sha256": "8f6c40516f9f2ad9aebf974e295973dd775c413ae742896aca07eb4cf4a1e84e",
+      "after_sha256": "6895555f5d5c6f24abb4efd677ed92b5d5ead137563ab226806822679345baba"
+    },
+    {
+      "path": "portal/messages/en.json",
+      "before_sha256": "6f68d1c09ac630b22c178d85cc664f11ec95c5c47f246b710b6223b582fe43e0",
+      "after_sha256": "88be15e38b6cb5e8e724720e344f2a641e5b80cc60277a68c74a41db3a331b17"
+    },
+    {
+      "path": "portal/translation-source.json",
+      "before_sha256": "5449246eeebb7608a0429ecdce5364eebf315b73057708b906fa2eb61b7d2da1",
+      "after_sha256": "ab815c43bf22a940ce5cb0fda67c327627a1cc886184db13aed42a692b92ae31"
+    }
+  ],
+  "protected_files_verified": 223,
+  "checks": {
+    "source_hashes": 217,
+    "reviewed_russian_translations": 214,
+    "tests_passed": 22,
+    "scaffolding": "passed",
+    "generated_pages": 460,
+    "diagrams_rendered": 196,
+    "repeatable_files": 477,
+    "grace_errors": 0,
+    "grace_existing_warnings": 6,
+    "browser_checks_passed": 104,
+    "browser_javascript_errors": 0
+  },
+  "report": "/devops/obank/aicc/.runtime/humanize/20261004151241/adoption-summary.md",
+  "full_report": "/devops/obank/aicc/.runtime/humanize/20261004151241/20261004151241.report.md",
+  "final_verification": "/devops/obank/aicc/.runtime/humanize/20261004151241/final-verification.log",
+  "browser_evidence": "/devops/obank/aicc/.runtime/humanize/20261004151241/browser-review.json",
+  "scope_notes": [
+    "Corpus sources are byte-identical to the start baseline.",
+    "Only current translation comparison hashes changed; historical baselines are unchanged.",
+    "Original worker proposals are preserved separately from selected edits.",
+    "First browser sweep overlapped regeneration; complete sequential rerun passed.",
+    "No lifecycle apply/archive, commit, push or deployment performed."
+  ]
+}

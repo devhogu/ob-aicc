@@ -1,6 +1,6 @@
 # Kazakhstan: the National Bank and the Agency for Regulation and Development of the Financial Market
 
-The monetary authority and the financial supervisor of Kazakhstan. The agency regulates banks and other financial organizations, including their use of technology, data, and third parties, and has developed its approach to digital financial services and to the use of data and AI by the sector.
+These are Kazakhstan's monetary authority and financial supervisor. The agency regulates banks and other financial organizations, including their use of technology, data, and third parties, and has developed its approach to digital financial services and the sector's use of data and AI.
 
 ## 1. Identity
 
@@ -13,7 +13,7 @@ The monetary authority and the financial supervisor of Kazakhstan. The agency re
 
 ## 2. What it sets
 
-2.1. Prudential and conduct regulation of banks and financial organizations; requirements on information security, outsourcing, and the protection of consumers of financial services; the supervisory approach to digital services and to models and data.
+2.1. Prudential and conduct regulation of banks and financial organizations; requirements for information security, outsourcing, and the protection of consumers of financial services; the supervisory approach to digital services, models, and data.
 
 ## 3. Whom it reaches
 
@@ -21,7 +21,7 @@ The monetary authority and the financial supervisor of Kazakhstan. The agency re
 
 ## 4. Relevance to the Bank
 
-4.1. The supervisory practice of the neighboring market with the most developed fintech sector in the region; a reference for what the supervisor of the Bank may adopt.
+4.1. Supervisory practice in the neighboring market with the region's most developed fintech sector; a reference for what the Bank's supervisor may adopt.
 
 ## 5. How the charter relates to it
 
