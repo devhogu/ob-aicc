@@ -130,6 +130,9 @@ class PortalRendering(unittest.TestCase):
             templates = (root / templates_path).read_text()
             templates_target = root / 'charter/ru/templates/README.md'; templates_target.parent.mkdir(parents=True)
             templates_target.write_text(translation(templates_path, templates, templates.replace('Decision Record', 'Запись о решении')))
+            catalog_path = 'charter/en/documents/document-catalog.md'
+            catalog = (root / catalog_path).read_text()
+            (root / 'charter/ru/documents/document-catalog.md').write_text(translation(catalog_path, catalog, catalog.replace('Operating Model', 'Операционная модель').replace('Document Catalog', 'Каталог документов')))
             with patch.object(build, 'ROOT', str(root)):
                 ru = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
                 build.add_generated_pages(ru); build.assign_refs(ru); build.load_terms(ru)
@@ -151,6 +154,7 @@ class PortalRendering(unittest.TestCase):
                 doc_html = build.build_page(ru, doc_page, 'ru')
                 self.assertIn('AICC-MND-03-RU', doc_html)
                 self.assertIn('Версия исходного документа', doc_html)
+                self.assertIn('>Действующий</span>', doc_html)
                 self.assertIn('charter/ru/documents/business-model.md', doc_html)
                 control_html = build.build_page(ru, ru.by_id['governance/controls/c-04'], 'ru')
                 self.assertIn('Проверка документов', control_html)
@@ -169,15 +173,213 @@ class PortalRendering(unittest.TestCase):
                 self.assertIn('/governance/controls/c-04/', decision_row)
                 context = {'source': 'charter/ru/documents/business-model.md', 'lang': 'ru', 'url': '/ru/services/business-model/'}
                 self.assertIn('class="xref"', ru.link_xrefs('Бизнес-модель 4.8', context))
+                self.assertIn('class="xref"', ru.link_xrefs('Операционной модели 8.5', context))
+                self.assertIn('#c-5-4', ru.link_xrefs('Каталоге документов 5.4', context))
+                reference = ru.link_xrefs('Операционная модель, раздел 4', context)
+                self.assertIn('href="../../organization/operating-model/roles/#s-4"', reference)
+                self.assertIn('>Операционная модель, раздел 4</a>', reference)
+                self.assertEqual(reference.count('<a '), 1)
+                self.assertIn('#c-5-4', ru.link_xrefs('Каталог документов, пункт 5.4', context))
                 fallback_page = ru.by_id['reference/vocabulary']
                 fallback = build.build_page(ru, fallback_page, 'ru')
                 self.assertIn('class="o-callout lang-note"', fallback)
                 self.assertIn('<div class="o-doc" lang="en">', fallback)
                 self.assertIn('AICC-REF-01-EN', fallback)
+                self.assertEqual(build.doc_id(ru, ru.by_id['organization/roles']), 'AICC-ORG-01-EN')
                 en = build.Site(argparse.Namespace(no_diagrams=True), 'en')
                 build.add_generated_pages(en); build.assign_refs(en); build.load_terms(en); build.render_pages(en)
                 self.assertNotIn('Проверка русской поставки', en.bodies['delivery/index']['html'])
                 self.assertEqual(en.by_id['delivery/index']['ref'], ru.by_id['delivery/index']['ref'])
+
+
+class RussianCorpusProjection(unittest.TestCase):
+    def test_page_titles_feedback_tables_and_card_ids_follow_the_selected_language(self):
+        for language, home_title, about_title, table_label, suffix in (
+            ('ru', 'Центр компетенций по искусственному интеллекту', 'О центре AICC', 'Таблица', 'RU'),
+            ('en', 'Welcome to the AI Competence Center', 'About AICC', 'Table', 'EN'),
+        ):
+            with self.subTest(language=language):
+                site = build.Site(argparse.Namespace(no_diagrams=True), language)
+                build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+                for page_id, title in [('index', home_title), ('about/index', about_title)]:
+                    rendered = build.build_page(site, site.by_id[page_id], language)
+                    self.assertEqual(re.search(r'<title>(.*?)</title>', rendered)[1], title + ' · AICC')
+                    self.assertEqual(re.search(r'data-page="([^"]*)"', rendered)[1], title)
+                hits = [e for e in build.search_index(site, language) if e['u'] == '/' + language + '/']
+                self.assertEqual([e['t'] for e in hits], [home_title])
+                catalog = build.build_page(site, site.by_id['reference/document-catalog'], language)
+                for fragment in (catalog.split('<div class="o-doc"', 1)[1].split('<details', 1)[0],
+                                 catalog.split('<details class="oc-disclosure change">', 1)[1]):
+                    self.assertIn('aria-label="' + table_label + '"', fragment)
+                    if language == 'ru':
+                        self.assertNotIn('aria-label="Table"', fragment)
+                for page_id, identifier in [('organization/roles', 'AICC-ORG-01-'),
+                                            ('reference/records-and-systems', 'AICC-ORG-01-'),
+                                            ('reference/change-history', 'AICC-REF-02-')]:
+                    card = build.card(site, site.by_id[page_id], language, '/' + language + '/', '')
+                    self.assertIn(identifier + suffix, card)
+
+    def test_diagram_accessibility_is_localized_without_changing_ids_or_cached_svg(self):
+        site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
+        for kind, label in [('flowchart-v2', 'Блок-схема'), ('stateDiagram', 'Диаграмма состояний'),
+                            ('sequence', 'Диаграмма последовательности')]:
+            with self.subTest(kind=kind):
+                svg = '<svg aria-roledescription="' + kind + '"><g id="Active"><text>В работе</text></g></svg>'
+                site.svgs = {'abcdef123456': {'light': svg, 'dark': svg}}
+                placeholder = '@@MM:abcdef123456:Рисунок 1@@'
+                rendered = build.substitute(site, placeholder, 'ru')
+                self.assertEqual(rendered.count('aria-roledescription="' + label + '"'), 2)
+                self.assertEqual(rendered.count('id="Active"'), 2)
+                self.assertEqual(site.svgs['abcdef123456']['light'], svg)
+                english = build.substitute(site, placeholder, 'en')
+                self.assertEqual(english.count('aria-roledescription="' + kind + '"'), 2)
+
+    def test_reader_can_find_generated_reference_pages_by_their_titles(self):
+        for language, records_title, history_title in (
+            ('ru', 'Записи и системы', 'История изменений'),
+            ('en', 'Records and systems', 'Change history'),
+        ):
+            with self.subTest(language=language):
+                site = build.Site(argparse.Namespace(no_diagrams=True), language)
+                build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+                index = build.search_index(site, language)
+                for title, route in ((records_title, 'records-and-systems'), (history_title, 'change-history')):
+                    hits = [entry for entry in index if entry['h'] == title]
+                    self.assertEqual([entry['u'] for entry in hits], ['/' + language + '/reference/' + route + '/'])
+
+    def test_mandate_projections_follow_the_selected_corpus(self):
+        site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
+        build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+        statement = site.by_id['about/statement-of-intent']
+        self.assertEqual(statement['title'], 'Заявление о намерениях по внедрению искусственного интеллекта')
+        self.assertEqual(build.nav_title(site, statement), 'Заявление о намерениях')
+        values = build.build_page(site, site.by_id['about/values-and-principles'], 'ru')
+        self.assertIn('Миссия AICC — сделать искусственный интеллект', values)
+        self.assertIn('<strong>Добросовестность</strong>', values)
+        self.assertIn('Положение об AICC 2.1</a>', values)
+        self.assertIn('Заявление о намерениях по внедрению искусственного интеллекта 4</a>', values)
+        self.assertIn('lang="ru"', values.split('id="g-work"', 1)[1].split('</section>', 1)[0])
+        # Delivery principles follow the reviewed lifecycle model.
+        self.assertIn('lang="ru"', values.split('id="g-delivery"', 1)[1].split('</section>', 1)[0])
+        self.assertNotIn('class="o-callout lang-note"', values)
+        for page_id in ('index', 'about/index', 'about/strategy'):
+            html = build.build_page(site, site.by_id[page_id], 'ru')
+            self.assertIn('Клиентская аналитика', html)
+            self.assertIn('Разработка программного обеспечения', html)
+        charter = build.build_page(site, site.by_id['about/aicc-charter'], 'ru')
+        self.assertIn('AICC-MND-02-RU', charter)
+        self.assertNotIn('class="o-callout lang-note"', charter)
+        strategy = build.build_page(site, site.by_id['about/strategy'], 'ru')
+        self.assertIn('<td lang="ru">Экспертные знания на месте выполнения работы;', strategy)
+        self.assertNotIn('class="o-callout lang-note"', strategy)
+        self.assertNotIn('&#x27;en&#x27;:', strategy)
+        english = build.Site(argparse.Namespace(no_diagrams=True), 'en')
+        build.add_generated_pages(english); build.assign_refs(english); build.load_terms(english); build.render_pages(english)
+        english_strategy = build.build_page(english, english.by_id['about/strategy'], 'en')
+        self.assertIn('<td lang="en">Expertise at the point of work;', english_strategy)
+        self.assertNotIn('Экспертные знания на месте выполнения работы;', english_strategy)
+
+    def test_russian_operating_diagrams_and_control_profiles_follow_the_corpus(self):
+        site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
+        build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site)
+        diagrams = build.render_pages(site)
+        site.diagram_code = dict(diagrams)
+        site.svgs = {key: {'light': '<svg></svg>', 'dark': '<svg></svg>'} for key, _ in diagrams}
+        decisions = build.build_page(site, site.by_id['organization/operating-model/decisions'], 'ru')
+        self.assertIn('aria-label="Рисунок 1: движение Управленческого решения."', decisions)
+        self.assertIn('<figcaption>Рисунок 1: движение Управленческого решения.</figcaption>', decisions)
+        controls = build.build_page(site, site.by_id['governance/controls'], 'ru')
+        self.assertIn('AICC-ORG-01-RU', controls)
+        self.assertIn('Операционная модель: Контрольные процедуры', controls)
+        self.assertNotIn('class="o-callout lang-note"', controls)
+        self.assertIn('<table id="ctl" lang="ru">', controls)
+        tabs = build.parts_html(site, site.by_id['governance/controls'], 'ru')
+        self.assertIn('Основные положения', tabs)
+        self.assertIn('Циклы управления', tabs)
+        self.assertIn('Записи и подтверждающие материалы', tabs)
+        self.assertEqual(build.nav_title(site, site.by_id['governance/control-loops']), 'Операционная модель')
+        profile = build.build_page(site, site.by_id['governance/controls/c-04'], 'ru')
+        self.assertNotIn('class="o-callout lang-note"', profile)
+        self.assertIn('Документы сохраняют согласованность и действующий статус', profile)
+        self.assertIn('Проверить отчёт о проверке', profile)
+        # Multi-source indexes retain their own identity when one input is translated.
+        self.assertEqual(site.by_id['organization/roles']['title'], 'Роли')
+        self.assertEqual(site.by_id['reference/records-and-systems']['title'], 'Записи и системы')
+        records = build.build_page(site, site.by_id['reference/records-and-systems'], 'ru')
+        self.assertIn('<h2>Системы</h2>', records)
+        self.assertIn('<th>Контрольные процедуры</th>', records)
+        self.assertNotIn('Decisions, appointments, controls, backlogs', records)
+
+    def test_russian_role_and_guide_pages_keep_their_responsibilities_and_navigation(self):
+        site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
+        build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+        role = build.build_page(site, site.by_id['organization/roles/aicc-lead'], 'ru')
+        self.assertIn('<h1>Руководитель AICC</h1>', role)
+        self.assertIn('Руководит AICC как ведущий инженер и архитектор', role)
+        self.assertIn('<th>Деятельность</th>', role)
+        self.assertIn('Операционная модель 4.2</a>', role)
+        self.assertIn('Назначить Категорию риска и сообщить её Владельцу Домена', role)
+        self.assertNotIn('class="o-callout lang-note"', role)
+        self.assertNotIn('<dd lang="en">', role)
+        guide = site.by_id['organization/organization-guide']
+        tabs = build.parts_html(site, guide, 'ru')
+        self.assertIn('Распределение ответственности', tabs)
+        self.assertNotIn('Who is responsible for what', tabs)
+        self.assertEqual(site.by_id['governance/unit-governance-workflow/events-and-sequences']['title'],
+                         'Рабочий процесс: Управление подразделением: События и последовательности')
+        rendered = build.build_page(site, guide, 'ru')
+        self.assertIn('<p class="o-lead" lang="ru">Роли, профили, RACI и кадровые записи</p>', rendered)
+
+    def test_reader_can_find_a_late_glossary_term_and_open_its_definition(self):
+        site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
+        build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+        page = site.by_id['reference/vocabulary']
+        html = build.build_page(site, page, 'ru')
+        hits = [row for row in build.search_index(site, 'ru') if row['h'] == 'Степень серьёзности']
+        self.assertEqual(len(hits), 1)
+        self.assertEqual(hits[0]['u'], '/ru/reference/vocabulary/#t-степень-серьёзности')
+        self.assertIn('id="t-степень-серьёзности"', html)
+        self.assertIn('AICC-REF-01-RU', html)
+        self.assertIn('<div class="o-doc" lang="ru">', html)
+        self.assertIn('<p class="o-lead" lang="ru">Термины и стиль</p>', html)
+        self.assertNotIn('class="o-callout lang-note"', html)
+
+    def test_translated_template_can_be_copied_and_outline_identifies_its_language(self):
+        site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
+        build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+        template = build.build_page(site, site.by_id['knowledge-base/acceptance-checklist'], 'ru')
+        copied = re.search(r'<script type="text/markdown" id="tpl-src">(.*?)</script>', template, re.S)[1]
+        self.assertTrue(copied.startswith('# Контрольный лист приёмки'))
+        self.assertIn('Пункт «Не выполнено» останавливает Выпуск', copied)
+        self.assertNotIn('```yaml', copied)
+        self.assertIn('AICC-TPL-13-RU', template)
+        self.assertNotIn('class="o-callout lang-note"', template)
+        outline = build.build_page(site, site.by_id['about/charter-outline'], 'ru')
+        description = 'Мероприятия циклов по неделям, Итерациям и PI, без дат'
+        self.assertIn('<span lang="ru"> &mdash; ' + description, outline)
+        # All authored explanations now come from reviewed Russian sources.
+        self.assertNotIn('<span lang="en"> &mdash; ', outline)
+        self.assertNotIn('class="o-callout lang-note"', outline)
+        tabs = build.parts_html(site, site.by_id['services/engagement-workflow'], 'ru')
+        self.assertIn('>Рабочий процесс</a>', tabs)
+        self.assertIn('>Руководство</a>', tabs)
+        self.assertNotIn('Engagement workflow', tabs)
+        en = build.Site(argparse.Namespace(no_diagrams=True), 'en')
+        build.add_generated_pages(en); build.assign_refs(en); build.load_terms(en); build.render_pages(en)
+        original = build.build_page(en, en.by_id['knowledge-base/acceptance-checklist'], 'en')
+        original_copy = re.search(r'<script type="text/markdown" id="tpl-src">(.*?)</script>', original, re.S)[1]
+        self.assertTrue(original_copy.startswith('# Acceptance Checklist'))
+        self.assertNotIn('```yaml', original_copy)
+
+    def test_reader_can_find_a_template_without_section_headings(self):
+        for language, title in [('ru', 'Заключение контрольной функции'), ('en', 'Control Sign-Off')]:
+            site = build.Site(argparse.Namespace(no_diagrams=True), language)
+            build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
+            hits = [row for row in build.search_index(site, language)
+                    if row['u'] == '/' + language + '/knowledge-base/control-sign-off/']
+            self.assertEqual(len(hits), 1, language)
+            self.assertEqual(hits[0]['t'], title)
+            self.assertTrue(hits[0]['x'])
 
 
 if __name__ == '__main__':

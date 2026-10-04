@@ -134,5 +134,12 @@
  "grp_regulations": "Regulators, acts, standards, and frameworks",
  "grp_regulations_lead": "One page for each body or instrument the Bank is aware of, by jurisdiction: what it is, what it sets, whom it reaches, why it matters to the Bank, and how the charter relates to it. The index is the page Regulators and acts.",
  "fb_id": "Page ID",
- "source_revision": "Source revision"
+ "source_revision": "Source revision",
+ "status_active": "active",
+ "status_draft": "draft",
+ "status_deprecated": "deprecated",
+ "translation_partial": "Some content on this page is still available in English. Translated sections appear in the selected language.",
+ "foundations": "Foundations",
+ "roles_title": "The Roles",
+ "roles_description": "The seven Roles and their pages"
 }

@@ -2,7 +2,7 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 2.1
+revision: 2.5
 created: 2026-10-02
 revised: 2026-10-03
 ```
@@ -43,15 +43,15 @@ revised: 2026-10-03
 
 | Identifier | Title | Purpose | Languages |
 | --- | --- | --- | --- |
-| AICC-MND-01 | Statement of Intent on the Adoption of Artificial Intelligence | The intent, values, principles, and strategy of the Bank for AI | EN |
-| AICC-MND-02 | AICC Charter | Mission, authority, funding, risk appetite, offer, and measures of AICC | EN |
-| AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers in its service areas, how it takes in work in its two modes, how it commits, and how it tracks value and flow | EN |
-| AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the five control loops, Records, controls, and the governance measures | EN |
-| AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP | EN |
-| AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle with the service steps and the Lab, and the measures | EN |
-| AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN |
-| AICC-REF-01 | Vocabulary and Style | Terms and style | EN |
-| AICC-REF-02 | Document Catalog | This Catalog | EN |
+| AICC-MND-01 | Statement of Intent on the Adoption of Artificial Intelligence | The intent, values, principles, and strategy of the Bank for AI | EN, RU |
+| AICC-MND-02 | AICC Charter | Mission, authority, funding, risk appetite, offer, and measures of AICC | EN, RU |
+| AICC-MND-03 | Business Model | What AICC is, whom it serves, what it offers in its service areas, how it takes in work in its two modes, how it commits, and how it tracks value and flow | EN, RU |
+| AICC-ORG-01 | Operating Model | AICC as a unit of the Bank: Roles, Decisions, the five control loops, Records, controls, and the governance measures | EN, RU |
+| AICC-ORG-02 | Portfolio Management Model | How AICC decides which business initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the four portfolio loops, the portfolio Kanban, the business case, and the MVP | EN, RU |
+| AICC-ORG-03 | Solution Lifecycle Model | How AICC delivers: the principles, the flow of value, the backlogs and the Program Board, the states, the cadence and its loops, verification and release, the life cycle with the service steps and the Lab, and the measures | EN, RU |
+| AICC-POL-01 | AI Policy | Rules of use, Risk Tiers, providers, AI Incidents, and Exceptions | EN, RU |
+| AICC-REF-01 | Vocabulary and Style | Terms and style | EN, RU |
+| AICC-REF-02 | Document Catalog | This Catalog | EN, RU |
 
 5.2. A new document is added only when no existing document can hold its content. The documents together number no more than nine, and no document is longer than about 80 clauses. A translation states the revision of the source that it translates.
 
@@ -110,3 +110,7 @@ The table is in the order of use, and the identifiers do not follow that order. 
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Added the Package Definition AICC-TPL-14 to the Templates, the rules for the pages that the AICC portal adds to explain the charter, and the service areas, the modes, the governance measures, the service steps, and the Lab to the purposes of the documents. | DR-2026-062 |
 | 2.1 | 2026-10-03 | Clarified that the Languages column records availability; removed the fixed source-language designation. | none |
+| 2.2 | 2026-10-03 | Recorded the Russian versions of Vocabulary and Style and Document Catalog; document rules are unchanged. | none |
+| 2.3 | 2026-10-03 | Recorded the Russian versions of the Statement of Intent and AICC Charter; document rules are unchanged. | none |
+| 2.4 | 2026-10-03 | Recorded the Russian versions of Business Model and Operating Model; document rules are unchanged. | none |
+| 2.5 | 2026-10-03 | Recorded the Russian versions of Portfolio Management Model, Solution Lifecycle Model and AI Policy; all nine governing documents are available in both languages, with document rules unchanged. | none |

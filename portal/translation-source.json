@@ -4,7 +4,7 @@
   "source_edition": "2.2",
   "reconciled_on": "2026-10-03",
   "base_commit": "2d576478385a4c4542f4ea9cba702c1eedde5135",
-  "source_state": "Approved corpus baseline 2.2, initially prepared in English, with the en/ru layout and the language-neutral wording correction recorded in Document Catalog revision 2.1. No language is designated authoritative. baseline_tag and baseline path/hash fields identify the original approved files; current hashes and document metadata identify the corrected files.",
+  "source_state": "Approved corpus baseline 2.2, initially prepared in English, with the en/ru layout and the language-neutral wording correction recorded in Document Catalog revision 2.1; revisions 2.2 through 2.5 record Russian availability of all nine governing documents. No language is designated authoritative. baseline_tag and baseline path/hash fields identify the original approved files; current hashes and document metadata identify the corrected files.",
   "scope": "Charter corpus, Registry records, Portfolio records and definitions, portal explanatory content, English interface messages, English authored content, and page routing. Operational status is preserved; this manifest is not evidence of approval or publication.",
   "hash_algorithm": "SHA-256",
   "hash_bases": {
@@ -62,11 +62,11 @@
     {
       "path": "charter/en/documents/document-catalog.md",
       "hash_basis": "file_bytes",
-      "sha256": "5337ba1b94145c39ebba70afba83de8c5e2c9264b6a7ad193bbd7b90f89da473",
+      "sha256": "09f11f69f55872e66299dd1efedc05ed7050af75c0353097d6ab5b573951a37e",
       "document": {
         "id": "AICC-REF-02-EN",
         "status": "active",
-        "revision": "2.1",
+        "revision": "2.5",
         "revised": "2026-10-03"
       },
       "baseline_path": "charter/documents/document-catalog.md",
@@ -1253,7 +1253,7 @@
     {
       "path": "portal/messages/en.json",
       "hash_basis": "file_bytes",
-      "sha256": "6eede6a1ea8c70c36acf8a173ec260ccbe89f3d965907e5c1a334b68b429bc95",
+      "sha256": "6f68d1c09ac630b22c178d85cc664f11ec95c5c47f246b710b6223b582fe43e0",
       "baseline_path": "portal/messages/en.json",
       "baseline_sha256": "f5f7ba5d166f962f82d874684f4bdbb85f8d8bb893ad10cd7c8cf211cbf92b98"
     },
@@ -1662,5 +1662,6 @@
   "source_layout": "en-ru",
   "layout_change": "C-LANGUAGE-SCAFFOLDING",
   "authoritative_language": null,
-  "wording_change": "C-LANGUAGE-NEUTRAL-WORDING"
+  "wording_change": "C-LANGUAGE-NEUTRAL-WORDING",
+  "translation_change": "C-RU-CORPUS-PORTAL"
 }

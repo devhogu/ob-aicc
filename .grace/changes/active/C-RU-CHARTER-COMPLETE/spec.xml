@@ -1,0 +1,35 @@
+<GraceChangeSpec graceVersion="4.0" status="approved">
+  <C-RU-CHARTER-COMPLETE>
+    <Summary>Complete the remaining 25 Russian charter files and their corpus-derived portal views under the owner’s proceed following the exact remaining-work inventory.</Summary>
+    <Goals>
+      <Goal>Provide complete formal Russian translations of the three remaining guides, five workflows, fourteen templates and their index, executive summary and charter reading map.</Goal>
+      <Goal>Keep the full 39-file charter corpus aligned in terminology, rules, records, diagrams and portal projection.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>The owner explicitly authorized continuing after the inventory of all 25 remaining charter files; use the established sequential translation and review process.</Constraint>
+      <Constraint>Preserve governing meaning and operational facts, stable routes and record identities; protect unrelated portals and existing work.</Constraint>
+      <Constraint>Correct directly exposed localization defects at the existing renderer. Keep registry and authored explanatory site content distinct from charter completion.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Translate registry, portfolio records or independently authored site explanations in this change; change policy or claim human review.</NonGoal>
+      <NonGoal>Commit, push or deploy this translation batch.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>All 39 charter counterparts are complete and reviewed against their current source with correct hashes, identifiers, numbered sections and table structure.</Criterion>
+      <Criterion>Translations preserve all decision rights, conditions, limits, time periods, form fields and diagram connections; neither language has automatic precedence.</Criterion>
+      <Criterion>Corpus-derived portal pages use the Russian sources with working references, titles, search and language counterparts; source, unit, scaffolding, deterministic build and representative browser checks pass.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-PORTAL-SOURCE />
+      <M-PORTAL-LOCALIZATION />
+      <M-PORTAL-PROJECTION />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 portal/tools/check_sources.py</ExpectedCommand>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal-scaffolding/check.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedEvidence>Semantic comparison, RACI and table alignment, complete diagrams and actual Russian profile rendering.</ExpectedEvidence>
+    </VerificationIntent>
+  </C-RU-CHARTER-COMPLETE>
+</GraceChangeSpec>

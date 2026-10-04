@@ -1,0 +1,33 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-RU-CORPUS-PORTAL>
+    <Summary>Continue the owner-authorized Russian translation across Registry, Portfolio and all authored portal content, using the completed charter as the governing terminology and meaning baseline.</Summary>
+    <Goals>
+      <Goal>Complete matching Russian translations of all 41 Registry records, 15 Portfolio files, 117 portal Markdown pages and remaining authored JSON strings.</Goal>
+      <Goal>Reconcile terminology against all 39 reviewed charter files and render the Russian site from the selected Russian sources.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Authority: the owner explicitly requested continuing registry, charter and portal/content including authored.json, then added portfolio. Reuse the established sequential translation, semantic review and verification process.</Constraint>
+      <Constraint>Preserve identifiers, dates, quantities, evidence, operational statuses, uncertainty, external-source links and decision rights. Neither language is authoritative by default.</Constraint>
+      <Constraint>Protect unrelated work and the approved English comparison sources; translate existing statements without inventing legal or operational updates.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Change policies or recorded decisions, claim human approval of translations, publish additional operational records, commit, push or deploy.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>All requested content has complete Russian counterparts with accurate source metadata and equivalent meaning, including shared authored strings.</Criterion>
+      <Criterion>Existing charter translations remain valid; generated Russian pages, titles, diagrams, search and navigation follow translated content, with any Portfolio-derived facts preserved.</Criterion>
+      <Criterion>Source checks, established tests, scaffolding checks, deterministic rebuild and representative browser inspection pass.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-PORTAL-SOURCE />
+      <M-PORTAL-LOCALIZATION />
+      <M-PORTAL-PROJECTION />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 portal/tools/check_sources.py</ExpectedCommand>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal-scaffolding/check.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+    </VerificationIntent>
+  </C-RU-CORPUS-PORTAL>
+</GraceChangeSpec>

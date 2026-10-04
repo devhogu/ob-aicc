@@ -31,9 +31,11 @@
   }
   function tokens(s) { return s.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean); }
   function run() {
-    var q = tokens(input.value);
-    if (!q.length) { results.hidden = true; return; }
+    if (!tokens(input.value).length) { results.hidden = true; return; }
     load(function () {
+      // Loading may finish after the reader changes or clears the query.
+      var q = tokens(input.value);
+      if (!q.length) { results.hidden = true; return; }
       var scored = [];
       index.forEach(function (e) {
         var h = (e.h + ' ' + e.t).toLowerCase(), x = e.x.toLowerCase(), s = 0, ok = true;

@@ -1,6 +1,8 @@
-# Registry languages
+# Реестр / Registry
 
-- [English](en/README.md): documents and records in English.
-- [Russian](ru/README.md): Russian-language workspace; the same identities and recorded facts.
+- [English](en/README.md): 41 files in English.
+- [Русский](ru/README.md): переведены и проверены все 41 файлов.
 
-The approved corpus baseline is edition 2.2. No language is designated authoritative. Language folders share document identities and record histories.
+The approved corpus baseline is edition 2.2. Language versions share document identities and record histories; differences are reconciled against the recorded decisions and current sources.
+
+Утверждённая базовая редакция корпуса — 2.2. Языковые версии сохраняют общие идентификаторы документов и историю записей; расхождения сверяются с зафиксированными решениями и актуальными источниками.
