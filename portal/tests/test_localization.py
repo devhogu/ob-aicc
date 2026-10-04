@@ -226,6 +226,12 @@ class PortalRendering(unittest.TestCase):
                 self.assertIn('>Операционная модель, раздел 4</a>', reference)
                 self.assertEqual(reference.count('<a '), 1)
                 self.assertIn('#c-5-4', ru.link_xrefs('Каталог документов, пункт 5.4', context))
+                reverse = ru.link_xrefs('в соответствии с разделом 4 Операционной модели', context)
+                self.assertIn('href="../../organization/operating-model/roles/#s-4"', reverse)
+                self.assertIn('>разделом 4 Операционной модели</a>', reverse)
+                self.assertEqual(reverse.count('<a '), 1)
+                self.assertIn('#c-5-4', ru.link_xrefs('(п. 5.4 Каталога документов)', context))
+                self.assertIn('#c-5-4', ru.link_xrefs('согласно пункту 5.4 Каталога документов', context))
                 fallback_page = ru.by_id['reference/vocabulary']
                 fallback = build.build_page(ru, fallback_page, 'ru')
                 self.assertIn('class="o-callout lang-note"', fallback)

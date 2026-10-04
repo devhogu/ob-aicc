@@ -441,6 +441,8 @@ class Site:
                         self.doc_names.update((alias, name) for alias in russian_reference_names(title))
         names = '|'.join(re.escape(name) for name in sorted(self.doc_names, key=len, reverse=True))
         self.xref = re.compile(r'\b(' + names + r')(?:\s*,\s*(?:раздел(?:ы|а|е|ов)?|пункт(?:ы|а|е|ов)?)\s+|\s+)(\d+(?:\.\d+)*)((?:\([a-z]\))?)')
+        # Russian order puts the number first: «пункт 4.4 Операционной модели», «раздел 4 Бизнес-модели».
+        self.xref_rev = re.compile(r'(?<![\w-])(?:раздел(?:ы|а|е|у|ом|ов)?|пункт(?:ы|а|е|у|ом|ов)?|п\.)\s+(\d+(?:\.\d+)*)((?:\([a-z]\))?)\s+(' + names + r')(?![\w-])')
 
     def combined_sources(self, paths):
         # Generated views require all their source fragments in the same language.
@@ -587,12 +589,21 @@ class Site:
         # Resolve local references only outside complete document references.
         # Otherwise «Операционная модель, раздел 4» could link «раздел 4»
         # to the current document and nest that link inside the document link.
+        def sub_rev(m):
+            href = self._target(self.doc_names[m.group(3)], m.group(1), ctx)
+            if not href:
+                return m.group(0)
+            return '<a class="xref" href="%s">%s</a>' % (href, m.group(0))
+        matches = [(m.start(), m.end(), sub, m) for m in self.xref.finditer(text)]
+        matches += [(m.start(), m.end(), sub_rev, m) for m in getattr(self, 'xref_rev', re.compile(r'(?!)')).finditer(text)]
         out = []
         end = 0
-        for match in self.xref.finditer(text):
-            out.append(LOCALXREF.sub(sub2, text[end:match.start()]))
-            out.append(sub(match))
-            end = match.end()
+        for start, stop, fn, match in sorted(matches, key=lambda x: (x[0], -x[1])):
+            if start < end:
+                continue
+            out.append(LOCALXREF.sub(sub2, text[end:start]))
+            out.append(fn(match))
+            end = stop
         out.append(LOCALXREF.sub(sub2, text[end:]))
         return ''.join(out)
 
