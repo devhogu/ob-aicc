@@ -36,6 +36,6 @@ translation_status: reviewed
 
 - [Обучение и открытые ресурсы](page:reference/learning-and-open-resources)
 - [Исследования и изучение возможностей в разделе «Услуги»](page:services/research-and-exploration)
-- [Оценка и проверки в разделе «Услуги»](page:services/assessments-and-evaluations)
+- [Оценка и экспертиза в разделе «Услуги»](page:services/assessments-and-evaluations)
 
 Эта страница носит ознакомительный характер. Включение ресурса в перечень не означает его одобрения. Действуют правила Банка об использовании его систем и информации; никакие материалы Банка во внешние ресурсы не вводятся.
