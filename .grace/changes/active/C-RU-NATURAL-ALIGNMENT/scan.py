@@ -67,7 +67,11 @@ def rejected_forms():
 
 def defined_stems():
     stems = set()
-    body = VOCAB.read_text(encoding='utf-8').split('## 4.')[1].split('## Журнал')[0]
+    # The baseline Vocabulary still writes terms with capitals; it fixes the term list for every scan.
+    import subprocess
+    text = subprocess.run(['git', 'show', 'ae1889f8:charter/ru/documents/vocabulary.md'], cwd=ROOT,
+                          capture_output=True, text=True).stdout or VOCAB.read_text(encoding='utf-8')
+    body = text.split('## 4.')[1].split('## Журнал')[0]
     for line in body.splitlines():
         if line.startswith('| ') and not line.startswith('| ---') and not line.startswith('| Термин'):
             for word in line.split('|')[1].strip().split():
