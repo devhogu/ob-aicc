@@ -427,7 +427,7 @@
     {
       "path": "charter/en/shared-technology-terminology.md",
       "hash_basis": "file_bytes",
-      "sha256": "8362501c96f14414d1cec8034f51441c6042ce5845796e50febb687a31920d22"
+      "sha256": "0a002c50f961b0cb62bd1ec93d54448e4e5c5de72b95e631d6f7eaec36b5cf70"
     },
     {
       "path": "portal/content/en/about/how-we-work.md",
@@ -1265,7 +1265,7 @@
     {
       "path": "portal-scaffolding/sitemap.json",
       "hash_basis": "file_bytes",
-      "sha256": "2747b68f636dad7146c22791a9088843cc17dbccb4c70e9177a53e5729022875",
+      "sha256": "96f59d075acb07064f8b041f250d9335dc3bb5a3474489123f8dcfaf8c092c83",
       "baseline_path": "portal-scaffolding/sitemap.json",
       "baseline_sha256": "e7a76c224c675e96464b8124fd5bacb02a53babfd653befe1845612b7f2ee1ed"
     },
