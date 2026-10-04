@@ -9,7 +9,7 @@ source: charter/en/documents/statement-of-intent.md
 source_sections: 10, 11
 document: statement-of-intent
 part: 3 of 4
-words: 1051
+words: 1064
 production: generated
 status: scaffold
 ---
@@ -25,7 +25,7 @@ Page type: document. Address: /about/statement-of-intent/capability-and-maturity
 ## Sections of the source
 
 - 10. Capability and enablers (196 words)
-- 11. Maturity Roadmap (855 words)
+- 11. Maturity Roadmap (868 words)
 
 ## Outline
 
