@@ -34,11 +34,11 @@ The principles of responsible AI become the Bank's rules in the AI Policy and in
 
 ## 6. When something goes wrong
 
-6.1. An AI Incident is an event in which the use of AI causes, or could cause, harm, a breach of law or policy, or a loss of control. It includes harm to a customer or an employee, a leak or misuse of data, an attack on or through an AI system, an action of an AI agent beyond its limits, a material failure of a Solution, and a near miss. It is handled under the incident management of the Bank, with the AICC Lead as a stakeholder, and it is reviewed afterwards in an AI Incident Review: what happened, why, what was done, and what changes. The reviews are reconciled each quarter, a major incident is reported to the Board Committee without waiting for the next report, and the lessons go into the controls and the training.
+6.1. An AI Incident is an event in which the use of AI causes, or could cause, harm, a breach of law or policy, or a loss of control. It includes harm to a customer or an employee, a leak or misuse of data, an attack on or through an AI system, an action of an AI agent beyond its limits, a material failure of a Solution, and a near miss. It is handled under the incident management of the Bank, with the AICC Lead as a stakeholder, and it is reviewed afterwards in an AI Incident Review: what happened, why, what was done, and what changes. The reviews are reconciled each quarter, the Executive Sponsor tells the Board Committee of a major incident without waiting for any report, and the lessons go into the controls and the training.
 
 ## 7. Exceptions
 
-7.1. A control requirement is not bypassed. A departure from the AI Policy is an Exception: it is decided by the Control Function Contact for the remit concerned, or by the AICC Lead for a requirement that AICC alone set; it is limited in time and states the date on which it expires; and it is entered in the Risks and Issues Record. The Executive Sponsor reviews the open Exceptions each month, and an Exception that has expired is decided at once. A risk beyond the AI Risk Appetite Statement is not an Exception: only the Executive Sponsor may accept it, with a report to the Board Committee.
+7.1. A control requirement is not bypassed. A departure from the AI Policy is an Exception: it is decided by the Control Function Contact for the remit concerned, or by the AICC Lead for a requirement that AICC alone set; it is limited in time and states the date on which it expires; and it is entered in the Risks and Issues Record. The Executive Sponsor reviews the open Exceptions each month, and an Exception that has expired is decided at once. A risk beyond the AI Risk Appetite Statement is not an Exception: only the Executive Sponsor may accept it, and tells the Board Committee of it without waiting for any report.
 
 ## 8. Who does what
 
@@ -48,7 +48,7 @@ The principles of responsible AI become the Bank's rules in the AI Policy and in
 | The Domain Owner | Owns the results of the Solutions of the Domain, approves the use for a data class, accepts and releases, reviews each live Solution |
 | The AICC Lead | Assigns the Risk Tier, keeps the AI Registry, sets the training, oversees the Portfolio, reports to the Executive Sponsor each quarter |
 | The Control Function Contacts | Clear business cases of Risk Tier 2 and 3, check providers, validate, decide Exceptions in their remit, and may stop |
-| The Executive Sponsor | Decides the risk appetite, releases Risk Tier 3 Solutions, accepts a risk beyond appetite and tells the Board Committee of it, may bring the Quarterly Report and Proposals to the Board Committee or the Board |
+| The Executive Sponsor | Decides the risk appetite, releases Risk Tier 3 Solutions, accepts a risk beyond appetite, tells the Board Committee of it and of each major incident, and may bring the Quarterly Report and Proposals to the Board Committee or the Board |
 | Internal audit | Gives independent assurance over the Portfolio and over AICC |
 | The Board Committee | Oversees AI for the Board, receives the reports and Proposals that the Executive Sponsor brings, and is told of major incidents and risks beyond appetite |
 

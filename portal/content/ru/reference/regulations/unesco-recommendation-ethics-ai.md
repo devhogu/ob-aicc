@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/reference/regulations/unesco-recommendation-ethics-ai.md
-source_sha256: 204a6e9bf24d195959587d0fdcf74d0f57ccbbfdb26b14b4a814c4ff6c9cd9c6
+source_sha256: a56338cdd412f5585983b383b848427b48438929b9a5634f07266cd2957a22ef
 translation_status: reviewed
 ```
 

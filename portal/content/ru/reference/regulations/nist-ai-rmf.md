@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/reference/regulations/nist-ai-rmf.md
-source_sha256: fd2185b89362607b640e91b21e8da6bdab9a357784d5cc15f42b80eb00aa8744
+source_sha256: 9a4b8f6343fde48d35e2ab057c6b1b04e05ed73733e2ee08d643b55bc227d181
 translation_status: reviewed
 ```
 

@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/reference/regulations/g7-hiroshima-ai-process.md
-source_sha256: 5671ad6147bc007bf9ecd887a447df1431c078af2be3793d0cbe875bc613deda
+source_sha256: 39d6f8c8200c4bd6ac79ba6b7688144d157cfcb5c1b54cdcb7fd77a62849243f
 translation_status: reviewed
 ```
 

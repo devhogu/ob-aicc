@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/reference/regulations/oecd-ai-principles.md
-source_sha256: 5a20f9c37d5fc661dd4f697acdddef4d79516167c49b11d87841927debcdea59
+source_sha256: d5995951340eb10f56648650f6b682ade69814c629576ae2704a477a32c1bfdc
 translation_status: reviewed
 ```
 

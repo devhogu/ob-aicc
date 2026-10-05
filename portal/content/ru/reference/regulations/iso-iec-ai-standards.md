@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/reference/regulations/iso-iec-ai-standards.md
-source_sha256: 392f4e2e47fd64681b41264ced5d3552a745d43926b1c41b1ecd1f94cafadb09
+source_sha256: a553f7c5f5d5ff663a815e7f45c1f03df6ae7ba6c9532301ae9308e2260b32b1
 translation_status: reviewed
 ```
 
@@ -35,7 +35,7 @@ translation_status: reviewed
 
 ## 6. Связанные страницы
 
-- Управление и надзор
+- [Управление](../../governance/overview.md)
 - [Стандарты и методологии](../industry-body-of-knowledge.md)
 
 Эта страница носит ознакомительный характер. В ней в общих чертах изложено содержание документа без цитирования его положений. Приоритет имеет текст самого документа; требования, применимые к Банку, определяют представители контрольных функций по комплаенсу и правовым вопросам.

@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/reference/regulations/us-model-risk-and-consumer-guidance.md
-source_sha256: cdbe944c1bcf1a5062d95def172765d67bedb16e67856595f18691b84f7b97b2
+source_sha256: c0bee81b911035a89515157215e9d01f48ca22bcc25952c9625eb37ada2d188d
 translation_status: reviewed
 ```
 
