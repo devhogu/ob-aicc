@@ -1423,7 +1423,8 @@ def home_page(site, p, lang):
             return (sec.get('line', {}).get(lang) or sec.get('line', {}).get('en') or desc_of(site, q))
         return desc_of(site, q)
     ctas = ''.join('<a class="home-cta%s" href="%s" data-tip="%s">%s</a>' % (' primary' if i == 0 else '', site.rel(url, site.url(site.by_id[c['to']] if c['to'] in site.by_id else site.by_id[c['to'] + '/index'], lang)), esc(tip_of(c['to'])), esc(c['label'][lang])) for i, c in enumerate(a['cta']))
-    stand = ''.join('<li class="linked" data-tip="%s" data-tip-title="%s"><h3>%s</h3><p>%s</p><a href="%s">%s &rsaquo;</a></li>' % (esc(tip_of(st['to'])), esc(st['link'][lang]), esc(st['title'][lang]), esc(st['text'][lang]), site.rel(url, site.url(site.by_id[st['to']], lang)), esc(st['link'][lang])) for st in a['stand'])
+    # A card may carry its own short tip; otherwise the tip is the description of the linked page.
+    stand = ''.join('<li class="linked" data-tip="%s" data-tip-title="%s"><h3>%s</h3><p>%s</p><a href="%s">%s &rsaquo;</a></li>' % (esc(st.get('tip', {}).get(lang) or tip_of(st['to'])), esc(st['link'][lang]), esc(st['title'][lang]), esc(st['text'][lang]), site.rel(url, site.url(site.by_id[st['to']], lang)), esc(st['link'][lang])) for st in a['stand'])
     chips = ''.join('<li><a href="%s#c-%s" data-tip="%s" data-tip-title="%s">%s</a></li>' % (sp_url, num.replace('.', '-'), esc(o), esc('%s %d' % (m['strategic_priority'], k + 1)), esc(t)) for k, (num, t, o) in enumerate(pri))
     lp = site.by_id['knowledge-base/learning-paths']
     main = f'''<section class="home-hero"><p class="o-eyebrow">{esc(a['eyebrow'][lang])}</p><h1>{esc(a['title'][lang])}</h1><p class="o-lead home-lead">{esc(a['lead'][lang])}</p><p class="home-tagline">{esc(a['tagline'][lang])}</p><p class="home-ctas">{ctas}</p></section>
