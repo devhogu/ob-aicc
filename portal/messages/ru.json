@@ -211,5 +211,8 @@
     "set-operating-model": "Операционная модель",
     "set-ai-risk-control": "Workflow «Риски и контроль AI»",
     "set-unit-governance": "Управление подразделением"
+  },
+  "nav_short": {
+    "governance/delivery-records-controls-and-measures": "Записи и показатели решений"
   }
 }

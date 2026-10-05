@@ -141,5 +141,8 @@
  "translation_partial": "Some content on this page is still available in English. Translated sections appear in the selected language.",
  "foundations": "Foundations",
  "roles_title": "The Roles",
- "roles_description": "The seven Roles and their pages"
+ "roles_description": "The seven Roles and their pages",
+ "nav_short": {
+  "governance/delivery-records-controls-and-measures": "Solution records and measures"
+ }
 }

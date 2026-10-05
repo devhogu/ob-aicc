@@ -909,6 +909,10 @@ def nav_groups(site, section):
 
 
 def nav_title(site, p):
+    # A page may carry a shorter name for the left navigation, per language.
+    short = site.msg[site.language].get('nav_short', {}).get(p['id'])
+    if short:
+        return short
     if p.get('series'):
         return p.get('series_title') or p['title']
     if p.get('source_sections') and p.get('document') and p['id'] != 'governance/delivery-records-controls-and-measures':
