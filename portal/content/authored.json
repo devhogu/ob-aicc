@@ -132,7 +132,7 @@
       "icon": "layers",
       "line": {
         "en": "Learning paths, forms, guides, playbooks, and answers.",
-        "ru": "Учебные траектории, формы, руководства, практические рекомендации и ответы."
+        "ru": "Маршруты обучения, формы, руководства, практики и ответы."
       }
     }
   },
@@ -238,11 +238,11 @@
     },
     "newhere": {
       "en": "New to AICC, or to AI? Take the short course in Responsible AI, or follow the learning path for your role.",
-      "ru": "Впервые знакомитесь с AICC или с AI? Пройдите краткий курс в разделе «Ответственное применение AI» или воспользуйтесь учебной траекторией для своей роли."
+      "ru": "Впервые знакомитесь с AICC или с AI? Пройдите краткий курс в разделе «Ответственное применение AI» или воспользуйтесь маршрутом обучения для своей роли."
     },
     "newhere_link": {
       "en": "Learning paths",
-      "ru": "Учебные траектории"
+      "ru": "Маршруты обучения"
     },
     "tagline": {
       "en": "Your AI journey begins here!",
