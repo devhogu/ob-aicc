@@ -52,7 +52,7 @@
       },
       "intro": {
         "en": "Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank. This section is a short course in seven parts, read in order or by tab, followed by the rule: the control loops, the records and evidence, and the control catalog of the Operating Model, the records and controls of delivery, and the Unit governance workflow and guide.",
-        "ru": "Управление — это то, как AICC как подразделение Банка получает направление работы, как его контролируют, как он отчитывается и как проводится независимая оценка его деятельности. Раздел содержит краткий курс из семи частей, который можно читать по порядку или по вкладкам. За ним следуют правила: контрольные циклы, записи и подтверждающие материалы и каталог контрольных процедур Операционной модели, записи и контрольные процедуры поставки, а также workflow и руководство «Управление подразделением»."
+        "ru": "Управление — это то, как AICC как подразделение Банка получает направление работы, как его контролируют, как он отчитывается и как проводится независимая оценка его деятельности. Раздел содержит краткий курс из семи частей, который можно читать по порядку или по вкладкам. За ним следуют правила: контрольные циклы, записи и подтверждающие материалы и каталог контрольных процедур Операционной модели, записи и контрольные процедуры разработки и внедрения, а также workflow и руководство «Управление подразделением»."
       },
       "icon": "table-properties",
       "line": {
@@ -112,7 +112,7 @@
       },
       "intro": {
         "en": "Delivery is how an approved idea becomes a working Solution in the hands of a function, and how that Solution is kept, changed, and retired: in small steps, on a fixed cadence, with the work visible and limited and quality built into the flow. This section is a short course in ten parts, read in order or by tab, followed by the rule, the Solution Lifecycle Model, and by the workflows, the guides, and the pages of the life of a Service.",
-        "ru": "Поставка — это путь, по которому одобренная идея становится работающим решением в распоряжении подразделения, и порядок, в котором это решение сопровождается, изменяется и выводится из эксплуатации: небольшими шагами, в установленном ритме, с визуализацией работы, ограничением её объёма и качеством, встроенным в процесс. Раздел содержит краткий курс из десяти частей, который можно читать по порядку или по вкладкам. За ним следуют нормативный документ — Модель жизненного цикла решений, — workflow, руководства и страницы о жизненном цикле сервиса."
+        "ru": "Разработка и внедрение — это путь, по которому одобренная идея становится работающим решением в распоряжении подразделения, и порядок, в котором это решение сопровождается, изменяется и выводится из эксплуатации: небольшими шагами, в установленном ритме, с визуализацией работы, ограничением её объёма и качеством, встроенным в процесс. Раздел содержит краткий курс из десяти частей, который можно читать по порядку или по вкладкам. За ним следуют нормативный документ — Модель жизненного цикла решений, — workflow, руководства и страницы о жизненном цикле сервиса."
       },
       "icon": "workflow",
       "line": {
@@ -332,7 +332,7 @@
       },
       "purpose": {
         "en": "To learn the method of delivery and the forms that it uses",
-        "ru": "Изучить метод поставки и используемые в нём формы"
+        "ru": "Изучить метод разработки и внедрения и используемые в нём формы"
       },
       "pages": [
         "delivery/solution-lifecycle-model/the-flow-of-value",
@@ -514,7 +514,7 @@
           {
             "label": {
               "en": "Delivery",
-              "ru": "Поставка"
+              "ru": "Разработка и внедрение"
             },
             "to": "delivery/index"
           }
@@ -582,7 +582,7 @@
         },
         "text": {
           "en": "Three values guide the work: integrity, prudence, and respect for people. The principles of adoption, application, work, and delivery follow from them.",
-          "ru": "Работу AICC определяют три ценности: добросовестность, осмотрительность и уважение к людям. Из них следуют принципы внедрения, применения, работы и поставки."
+          "ru": "Работу AICC определяют три ценности: добросовестность, осмотрительность и уважение к людям. Из них следуют принципы внедрения AI, применения, работы, а также разработки и внедрения решений."
         },
         "links": [
           {
@@ -670,7 +670,7 @@
         "id": "delivery",
         "title": {
           "en": "Principles of delivery",
-          "ru": "Принципы поставки"
+          "ru": "Принципы разработки и внедрения"
         },
         "applies": {
           "en": "This is how the Teams of AICC build: visible, in small steps, value first, with quality and control built into the flow rather than added after it. Working Solutions and evidence count more than documents and opinion.",
@@ -941,11 +941,11 @@
       {
         "aspect": {
           "en": "Delivery",
-          "ru": "Поставка"
+          "ru": "Разработка и внедрение"
         },
         "choice": {
           "en": "Deliver in small steps: probe with an MVP, measure against the success Measures, then scale. Work is visible, limited in progress, and paced by Program Increments and Iterations on fixed dates. Quality and control are built into the flow: the check or validation and the controls of the AI Policy are steps of delivery, not a stage after it.",
-          "ru": "Работа идёт короткими шагами: идею сначала проверяют на минимально жизнеспособном продукте (MVP), результат измеряют по показателям успеха и только потом масштабируют. Всё видно на доске, объём незавершённой работы ограничен, ритм задают программные инкременты (PI) и итерации с фиксированными датами. Качество и контроль встроены в поставку: проверка или валидация и контрольные процедуры Политики применения AI — её шаги, а не отдельная стадия после неё."
+          "ru": "Работа идёт короткими шагами: идею сначала проверяют на минимально жизнеспособном продукте (MVP), результат измеряют по показателям успеха и только потом масштабируют. Всё видно на доске, объём незавершённой работы ограничен, ритм задают программные инкременты (PI) и итерации с фиксированными датами. Качество и контроль встроены в разработку и внедрение: проверка или валидация и контрольные процедуры Политики применения AI — часть этой работы, а не отдельная стадия после неё."
         },
         "decides": {
           "en": "AICC Lead and the Teams",
@@ -1129,7 +1129,7 @@
       {
         "t": {
           "en": "Delivery",
-          "ru": "Поставка"
+          "ru": "Разработка"
         },
         "d": {
           "en": "MVP first, then build, verify, and deploy to the first users",

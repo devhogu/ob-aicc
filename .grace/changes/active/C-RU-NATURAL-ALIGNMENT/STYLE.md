@@ -59,7 +59,7 @@ not required (pre-production tuning); do not add Registry records.
 - «подразделение» for a function of the Bank (client function → «подразделение-заказчик»); keep the AICC
   terms «контрольная функция», «IT-функция».
 - **workflow** stays Latin, lowercase in running text, indeclinable, masculine agreement: «workflow
-  «Взаимодействие с заказчиком»», «каждый workflow», «в workflow «Ритм работы»»; part heading «Workflows».
+  «Взаимодействие с заказчиком»», «каждый workflow», «в workflow «Расписание работы»»; part heading «Workflows».
 - **value stream** stays Latin, lowercase, indeclinable, masculine; at its first use in each document or
   page explain it once: «value stream (сквозная последовательность действий, в ходе которой потребность
   превращается в ценный для клиента результат)».
@@ -99,7 +99,7 @@ Backlog бэклог итерации · Portfolio Kanban канбан-доск�
 stream value stream · Program Kanban канбан-доска программы · Class of service класс
 обслуживания · Lane дорожка · Team команда · Teams Record запись о командах · Program Increment программный
 инкремент (PI) · Iteration итерация · Innovation and Planning week неделя инноваций и планирования (неделя
-IP) · PI Objective цель PI · Dependency зависимость · Calendar календарь · Cadence ритм работы · Blocked day
+IP) · PI Objective цель PI · Dependency зависимость · Calendar календарь · Cadence расписание работы (not «ритм работы»; descriptive «в едином ритме» stays) · Blocked day
 нерабочий день · gray day день ограниченной доступности · AICC portal портал AICC · Operating portal
 операционный портал · Corporate share корпоративный сетевой ресурс · Dashboard панель показателей · Stage
 стадия · Environment of use среда использования · Check проверка · Checker проверяющий · Validation
@@ -122,12 +122,12 @@ Workflow workflow · Record запись · Living record актуализиру
 Loop цикл · Review week неделя обзора · Short forms сокращения · Event мероприятие · Steering Summary итоги
 управляющего совещания · Quarterly Report квартальный отчёт · Report to the Board Committee отчёт Комитету
 Совета директоров · quarterly risk check ежеквартальная проверка рисков · Finding выявленное отклонение ·
-Activation введение в действие · State состояние.
+Activation введение в действие · State состояние · Delivery (activity; portal section) разработка и внедрение · Service delivery оказание услуг · Delivery (stage of a Solution; phase of an Engagement) разработка · after delivery после внедрения · Delivery measures показатели разработки и внедрения (never «поставка», which means a supply by a Provider).
 
 States (quoted when named, lowercase in running text per the map): «Предложено», «Проработка», «Одобрено»,
 «В работе», «Ожидание», «Отложено», «Выполнено», «На рассмотрении», «Принято», «Закрыто»,
 «Перенаправлено», «Отклонено», «Отменено». Stages: «Определение объёма», «Бизнес-кейс», «MVP»,
-«Реализация», «Определение», «Поставка», «Анализ», «Исследование», «Проектирование», «Разработка»,
+«Реализация», «Определение», «Разработка» (Delivery, stage of a Solution), «Анализ», «Исследование», «Проектирование», «Разработка» (Develop, stage of a Feature),
 «Проверка», «Развёртывание», «Эксплуатация», «Развитие», «Вывод из эксплуатации», «Передача»,
 «Поддержка», «Пересмотр», «Испытание», «Предложение».
 

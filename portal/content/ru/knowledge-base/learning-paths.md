@@ -32,11 +32,11 @@ translation_status: reviewed
 
 | Шаг | Материалы | Результат |
 | --- | --- | --- |
-| 1 | Курс [Поставка](page:delivery/index), все части | Работать с ритмом, досками, контрольными точками и циклами |
+| 1 | Курс [Разработка и внедрение](page:delivery/index), все части | Работать с расписанием, досками, контрольными точками и циклами |
 | 2 | [Модель жизненного цикла решений](page:delivery/solution-lifecycle-model) — правила | Понимать состояния, стадии и условия перехода между ними |
-| 3 | Workflow [Поставка услуг](page:delivery/service-delivery-workflow) и [Ритм работы](page:delivery/cadence-workflow) с руководствами к ним | Понимать, какая запись остаётся по каждому шагу и мероприятию |
+| 3 | Workflow [Оказание услуг](page:delivery/service-delivery-workflow) и [Расписание работы](page:delivery/cadence-workflow) с руководствами к ним | Понимать, какая запись остаётся по каждому шагу и мероприятию |
 | 4 | [Workflow эксперимента](page:delivery/experiment-workflow), [Жизненный цикл сервиса](page:delivery/life-of-a-service), [Эксплуатация сервисов](page:delivery/service-operations) | Проверять гипотезу в лабораторной среде и эксплуатировать сервис после выпуска |
-| 5 | [Описание решения](page:knowledge-base/solution-definition), [Контрольный лист приёмки](page:knowledge-base/acceptance-checklist) и [Показатели поставки](page:delivery/measures-definitions-and-formulas) | Вести запись о решении и понимать показатели |
+| 5 | [Описание решения](page:knowledge-base/solution-definition), [Контрольный лист приёмки](page:knowledge-base/acceptance-checklist) и [Показатели разработки и внедрения](page:delivery/measures-definitions-and-formulas) | Вести запись о решении и понимать показатели |
 
 ## 4. Для эксперта направления
 
