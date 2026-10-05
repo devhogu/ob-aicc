@@ -9,7 +9,7 @@ source: charter/en/documents/portfolio-management-model.md
 source_sections: 4
 document: portfolio-management-model
 part: 2 of 5
-words: 1702
+words: 1712
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /portfolio/portfolio-management-model/the-portfoli
 
 ## Sections of the source
 
-- 4. The portfolio loops (1702 words)
+- 4. The portfolio loops (1712 words)
 
 ## Outline
 

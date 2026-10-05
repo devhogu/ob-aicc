@@ -9,7 +9,7 @@ source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 4
 document: solution-lifecycle-model
 part: 3 of 7
-words: 1393
+words: 1398
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/backlogs-and-bo
 
 ## Sections of the source
 
-- 4. Backlogs and boards (1393 words)
+- 4. Backlogs and boards (1398 words)
 
 ## Outline
 

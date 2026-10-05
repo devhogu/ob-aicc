@@ -8,10 +8,10 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Home | Privacy | /privacy/ | legal | portal/content/en/privacy.md | all |  | authored; aligned with the Operating Model 7 and the collaboration tooling workflow |
 | Home | Terms of use | /terms-of-use/ | legal | portal/content/en/terms-of-use.md | all |  | authored; aligned with the Operating Model 7, the AI Policy 2, and the collaboration tooling workflow |
 | About AICC | About AICC | /about/ | section | none | none |  | authored, with a generated list |
-| About AICC | Statement of Intent on the Adoption of Artificial Intelligence | /about/statement-of-intent/ | document | documents/statement-of-intent.md | 1, 2, 3, 4, 5, 6, 7, 8 | 1319 | generated |
-| About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Strategic Priorities | /about/statement-of-intent/strategic-priorities/ | document | documents/statement-of-intent.md | 9 | 550 | generated |
+| About AICC | Statement of Intent on the Adoption of Artificial Intelligence | /about/statement-of-intent/ | document | documents/statement-of-intent.md | 1, 2, 3, 4, 5, 6, 7, 8 | 1321 | generated |
+| About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Strategic Priorities | /about/statement-of-intent/strategic-priorities/ | document | documents/statement-of-intent.md | 9 | 579 | generated |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Capability and maturity roadmap | /about/statement-of-intent/capability-and-maturity-roadmap/ | document | documents/statement-of-intent.md | 10, 11 | 1064 | generated |
-| About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Performance and commitments | /about/statement-of-intent/performance-and-commitments/ | document | documents/statement-of-intent.md | 12, 13 | 223 | generated |
+| About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Performance and commitments | /about/statement-of-intent/performance-and-commitments/ | document | documents/statement-of-intent.md | 12, 13 | 235 | generated |
 | About AICC | Strategy | /about/strategy/ | outline | none | none |  | authored, with tables generated from the Statement of Intent |
 | About AICC | AICC Charter | /about/aicc-charter/ | document | documents/aicc-charter.md | all | 900 | generated |
 | About AICC | What we do | /about/what-we-do/ | outline | portal/content/en/about/what-we-do.md | all |  | authored |
@@ -62,8 +62,8 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Portfolio | The loops and the governance | /portfolio/the-loops-and-governance/ | outline | portal/content/en/portfolio/the-loops-and-governance.md | all |  | authored; explanatory, the Portfolio Management Model is the rule |
 | Portfolio | Measures and tracking | /portfolio/measures-and-tracking/ | outline | portal/content/en/portfolio/measures-and-tracking.md | all |  | authored; explanatory, the Portfolio Management Model is the rule |
 | Portfolio | Roles and records | /portfolio/roles-and-records/ | outline | portal/content/en/portfolio/roles-and-records.md | all |  | authored; explanatory, the Portfolio Management Model is the rule |
-| Portfolio | Portfolio Management Model | /portfolio/portfolio-management-model/ | document | documents/portfolio-management-model.md | 1, 2, 3 | 737 | generated |
-| Portfolio | Portfolio Management Model: The portfolio loops | /portfolio/portfolio-management-model/the-portfolio-loops/ | document | documents/portfolio-management-model.md | 4 | 1702 | generated |
+| Portfolio | Portfolio Management Model | /portfolio/portfolio-management-model/ | document | documents/portfolio-management-model.md | 1, 2, 3 | 746 | generated |
+| Portfolio | Portfolio Management Model: The portfolio loops | /portfolio/portfolio-management-model/the-portfolio-loops/ | document | documents/portfolio-management-model.md | 4 | 1712 | generated |
 | Portfolio | Portfolio Management Model: The portfolio Kanban | /portfolio/portfolio-management-model/the-portfolio-kanban/ | document | documents/portfolio-management-model.md | 5 | 1371 | generated |
 | Portfolio | Portfolio Management Model: The business case and the MVP | /portfolio/portfolio-management-model/the-business-case-and-the-mvp/ | document | documents/portfolio-management-model.md | 6, 7 | 1265 | generated |
 | Portfolio | Portfolio Management Model: Levels, review, measures, and records | /portfolio/portfolio-management-model/levels-review-and-records/ | document | documents/portfolio-management-model.md | 8, 9 | 1158 | generated |
@@ -80,12 +80,12 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Delivery | Roles and records | /delivery/roles-and-records/ | outline | portal/content/en/delivery/roles-and-records.md | all |  | authored; explanatory, the Solution Lifecycle Model is the rule |
 | Delivery | Solution Lifecycle Model | /delivery/solution-lifecycle-model/ | document | documents/solution-lifecycle-model.md | 1, 2 | 424 | generated |
 | Delivery | Solution Lifecycle Model: The flow of value | /delivery/solution-lifecycle-model/the-flow-of-value/ | document | documents/solution-lifecycle-model.md | 3 | 1481 | generated |
-| Delivery | Solution Lifecycle Model: Backlogs and boards | /delivery/solution-lifecycle-model/backlogs-and-boards/ | document | documents/solution-lifecycle-model.md | 4 | 1393 | generated |
+| Delivery | Solution Lifecycle Model: Backlogs and boards | /delivery/solution-lifecycle-model/backlogs-and-boards/ | document | documents/solution-lifecycle-model.md | 4 | 1398 | generated |
 | Delivery | Solution Lifecycle Model: States and Stages | /delivery/solution-lifecycle-model/states-and-stages/ | document | documents/solution-lifecycle-model.md | 5 | 1239 | generated |
-| Delivery | Solution Lifecycle Model: The cadence | /delivery/solution-lifecycle-model/the-cadence/ | document | documents/solution-lifecycle-model.md | 6 | 1810 | generated |
+| Delivery | Solution Lifecycle Model: The cadence | /delivery/solution-lifecycle-model/the-cadence/ | document | documents/solution-lifecycle-model.md | 6 | 1807 | generated |
 | Delivery | Solution Lifecycle Model: Verification, release, and acceptance | /delivery/solution-lifecycle-model/verification-release-and-acceptance/ | document | documents/solution-lifecycle-model.md | 7 | 1340 | generated |
 | Delivery | Solution Lifecycle Model: Life-cycle management | /delivery/solution-lifecycle-model/life-cycle-management/ | document | documents/solution-lifecycle-model.md | 8 | 2871 | generated |
-| Delivery | Portfolio and service delivery workflow | /delivery/service-delivery-workflow/ | workflow | workflows/service-delivery.md | 1, 2, 3 | 943 | generated |
+| Delivery | Portfolio and service delivery workflow | /delivery/service-delivery-workflow/ | workflow | workflows/service-delivery.md | 1, 2, 3 | 946 | generated |
 | Delivery | Portfolio and service delivery workflow: The portfolio flow | /delivery/service-delivery-workflow/the-portfolio-flow/ | workflow | workflows/service-delivery.md | 4 | 686 | generated |
 | Delivery | Portfolio and service delivery workflow: The execution in the Program Increment | /delivery/service-delivery-workflow/the-execution/ | workflow | workflows/service-delivery.md | 5 | 1082 | generated |
 | Delivery | Portfolio and service delivery workflow: After delivery, oversight, decisions, and where it runs | /delivery/service-delivery-workflow/after-delivery/ | workflow | workflows/service-delivery.md | 6, 7, 8, 9 | 1703 | generated |
@@ -93,9 +93,9 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Delivery | Guide: Service delivery: After delivery, situations, and rule source | /delivery/service-delivery-guide/after-delivery/ | guide | guides/service-delivery-guide.md | 5, 6, 7 | 616 | generated |
 | Delivery | Cadence | /delivery/cadence-workflow/ | workflow | workflows/cadence.md | 1, 2, 3, 4 | 810 | generated |
 | Delivery | Cadence: The loops | /delivery/cadence-workflow/the-loops/ | workflow | workflows/cadence.md | 5 | 698 | generated |
-| Delivery | Cadence: What each event carries | /delivery/cadence-workflow/what-each-event-carries/ | workflow | workflows/cadence.md | 6 | 1230 | generated |
+| Delivery | Cadence: What each event carries | /delivery/cadence-workflow/what-each-event-carries/ | workflow | workflows/cadence.md | 6 | 1244 | generated |
 | Delivery | Cadence: Rules, the dated calendar, light mode, and vocabulary | /delivery/cadence-workflow/rules-calendar-and-light-mode/ | workflow | workflows/cadence.md | 7, 8, 9, 10 | 303 | generated |
-| Delivery | Guide: Cadence | /delivery/cadence-guide/ | guide | guides/cadence-guide.md | 1, 2, 3, 4, 5, 6 | 1513 | generated |
+| Delivery | Guide: Cadence | /delivery/cadence-guide/ | guide | guides/cadence-guide.md | 1, 2, 3, 4, 5, 6 | 1551 | generated |
 | Delivery | Collaboration tooling | /delivery/collaboration-tooling-workflow/ | workflow | workflows/collaboration-tooling.md | all |  | generated |
 | Delivery | The Experiment workflow: the Lab | /delivery/experiment-workflow/ | outline | portal/content/en/delivery/experiment-workflow.md | all |  | authored; proposed for Solution Lifecycle Model 7; draws on Cloud LAB |
 | Delivery | The life of a Service | /delivery/life-of-a-service/ | outline | portal/content/en/delivery/life-of-a-service.md | all |  | authored; proposed for Solution Lifecycle Model 8; draws on STS |
@@ -108,14 +108,14 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Governance | Controls and the control catalog | /governance/controls-and-the-catalogue/ | outline | portal/content/en/governance/controls-and-the-catalogue.md | all |  | authored; explanatory, the Operating Model is the rule |
 | Governance | Records, evidence, and assurance | /governance/records-evidence-and-assurance/ | outline | portal/content/en/governance/records-evidence-and-assurance.md | all |  | authored; explanatory, the Operating Model is the rule |
 | Governance | Measures and reporting | /governance/measures-and-reporting/ | outline | portal/content/en/governance/measures-and-reporting.md | all |  | authored; explanatory, the Operating Model is the rule |
-| Governance | Operating Model: The control loops | /governance/control-loops/ | document | documents/operating-model.md | 6 | 2839 | generated |
-| Governance | Operating Model: Records and evidence | /governance/records-and-evidence/ | document | documents/operating-model.md | 7 | 710 | generated |
-| Governance | Operating Model: Controls and the control catalog | /governance/controls/ | catalogue | documents/operating-model.md | 8 | 2378 | generated |
+| Governance | Operating Model: The control loops | /governance/control-loops/ | document | documents/operating-model.md | 6 | 2906 | generated |
+| Governance | Operating Model: Records and evidence | /governance/records-and-evidence/ | document | documents/operating-model.md | 7 | 716 | generated |
+| Governance | Operating Model: Controls and the control catalog | /governance/controls/ | catalogue | documents/operating-model.md | 8 | 2397 | generated |
 | Governance | Solution Lifecycle Model: Records, controls, and measures | /governance/delivery-records-controls-and-measures/ | document | documents/solution-lifecycle-model.md | 9, 10 | 2255 | generated |
-| Governance | Unit governance workflow | /governance/unit-governance-workflow/ | workflow | workflows/unit-governance.md | 1, 2, 3 | 965 | generated |
-| Governance | Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs | /governance/unit-governance-workflow/events-and-sequences/ | workflow | workflows/unit-governance.md | 4, 5, 6, 7, 8, 9 | 1197 | generated |
-| Governance | Guide: Unit governance | /governance/unit-governance-guide/ | guide | guides/unit-governance-guide.md | 1, 2, 3, 4, 5, 6 | 1816 | generated |
-| Governance | Guide: Unit governance: The controls and how to test them, and the rule source | /governance/unit-governance-guide/the-controls/ | guide | guides/unit-governance-guide.md | 7, 8 | 1897 | generated |
+| Governance | Unit governance workflow | /governance/unit-governance-workflow/ | workflow | workflows/unit-governance.md | 1, 2, 3 | 979 | generated |
+| Governance | Unit governance workflow: Events, the sequences, the reporting chain, the life of a document, and where it runs | /governance/unit-governance-workflow/events-and-sequences/ | workflow | workflows/unit-governance.md | 4, 5, 6, 7, 8, 9 | 1268 | generated |
+| Governance | Guide: Unit governance | /governance/unit-governance-guide/ | guide | guides/unit-governance-guide.md | 1, 2, 3, 4, 5, 6 | 1910 | generated |
+| Governance | Guide: Unit governance: The controls and how to test them, and the rule source | /governance/unit-governance-guide/the-controls/ | guide | guides/unit-governance-guide.md | 7, 8 | 1944 | generated |
 | Organization | Organization | /organization/ | section | portal/content/en/organization/overview.md | all |  | authored; the first part of the course, explanatory, the Operating Model is the rule |
 | Organization | The place of AICC in the Bank | /organization/the-place-of-aicc-in-the-bank/ | outline | portal/content/en/organization/the-place-of-aicc-in-the-bank.md | all |  | authored; explanatory, the Operating Model is the rule |
 | Organization | The Roles | /organization/the-roles/ | outline | portal/content/en/organization/the-roles.md | all |  | authored; explanatory, the Operating Model is the rule |
@@ -123,11 +123,11 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Organization | People and appointments | /organization/people-and-appointments/ | outline | portal/content/en/organization/people-and-appointments.md | all |  | authored; explanatory, the Operating Model is the rule |
 | Organization | How the organization grows | /organization/how-the-organization-grows/ | outline | portal/content/en/organization/how-the-organization-grows.md | all |  | authored; explanatory, the Operating Model is the rule |
 | Organization | Operating Model | /organization/operating-model/ | document | documents/operating-model.md | 1, 2, 3 | 418 | generated |
-| Organization | Operating Model: Roles | /organization/operating-model/roles/ | document | documents/operating-model.md | 4 | 1744 | generated |
-| Organization | Operating Model: Decisions | /organization/operating-model/decisions/ | document | documents/operating-model.md | 5 | 785 | generated |
-| Organization | Guide: Organization | /organization/organization-guide/ | guide | guides/organization-guide.md | 1, 2, 3 | 897 | generated |
-| Organization | Guide: Organization: Who is responsible for what | /organization/organization-guide/who-is-responsible-for-what/ | guide | guides/organization-guide.md | 4 | 2029 | generated |
-| Organization | Guide: Organization: The governing bodies, the people records, the growth of the organization, the evidence, and the rule source | /organization/organization-guide/bodies-people-and-records/ | guide | guides/organization-guide.md | 5, 6, 7, 8, 9 | 1736 | generated |
+| Organization | Operating Model: Roles | /organization/operating-model/roles/ | document | documents/operating-model.md | 4 | 1769 | generated |
+| Organization | Operating Model: Decisions | /organization/operating-model/decisions/ | document | documents/operating-model.md | 5 | 793 | generated |
+| Organization | Guide: Organization | /organization/organization-guide/ | guide | guides/organization-guide.md | 1, 2, 3 | 931 | generated |
+| Organization | Guide: Organization: Who is responsible for what | /organization/organization-guide/who-is-responsible-for-what/ | guide | guides/organization-guide.md | 4 | 2038 | generated |
+| Organization | Guide: Organization: The governing bodies, the people records, the growth of the organization, the evidence, and the rule source | /organization/organization-guide/bodies-people-and-records/ | guide | guides/organization-guide.md | 5, 6, 7, 8, 9 | 1759 | generated |
 | Organization | The Roles | /organization/roles/ | index | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | Executive Sponsor | /organization/roles/executive-sponsor/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |
 | Organization | AICC Lead | /organization/roles/aicc-lead/ | role | documents/operating-model.md; guides/organization-guide.md | all |  | generated from tables |

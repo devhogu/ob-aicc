@@ -9,7 +9,7 @@ source: charter/en/guides/organization-guide.md
 source_sections: 5, 6, 7, 8, 9
 document: organization-guide
 part: 3 of 3
-words: 1736
+words: 1759
 series: set-operating-model
 series_order: 3
 production: generated
@@ -26,7 +26,7 @@ Page type: guide. Address: /organization/organization-guide/bodies-people-and-re
 
 ## Sections of the source
 
-- 5. The governing bodies (398 words)
+- 5. The governing bodies (421 words)
 - 6. People: appointments, changes, and leavers (957 words)
 - 7. How the organization grows (210 words)
 - 8. Records and evidence (133 words)

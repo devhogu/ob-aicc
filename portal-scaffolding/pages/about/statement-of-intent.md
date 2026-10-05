@@ -9,7 +9,7 @@ source: charter/en/documents/statement-of-intent.md
 source_sections: 1, 2, 3, 4, 5, 6, 7, 8
 document: statement-of-intent
 part: 1 of 4
-words: 1319
+words: 1321
 production: generated
 status: scaffold
 ---
@@ -29,7 +29,7 @@ Page type: document. Address: /about/statement-of-intent/
 - 3. Alignment with the strategy of the Bank (163 words)
 - 4. Values (57 words)
 - 5. Principles of adoption (137 words)
-- 6. Principles of Application (282 words)
+- 6. Principles of Application (284 words)
 - 7. Governance and accountability (249 words)
 - 8. Areas of application (156 words)
 

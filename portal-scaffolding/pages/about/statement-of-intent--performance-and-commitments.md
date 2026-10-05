@@ -9,7 +9,7 @@ source: charter/en/documents/statement-of-intent.md
 source_sections: 12, 13
 document: statement-of-intent
 part: 4 of 4
-words: 223
+words: 235
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /about/statement-of-intent/performance-and-commitm
 
 ## Sections of the source
 
-- 12. Performance assessment and reporting (73 words)
+- 12. Performance assessment and reporting (85 words)
 - 13. Commitments, review, and activation (150 words)
 
 ## Outline

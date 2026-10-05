@@ -9,7 +9,7 @@ source: charter/en/documents/statement-of-intent.md
 source_sections: 9
 document: statement-of-intent
 part: 2 of 4
-words: 550
+words: 579
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /about/statement-of-intent/strategic-priorities/
 
 ## Sections of the source
 
-- 9. Strategic Priorities (550 words)
+- 9. Strategic Priorities (579 words)
 
 ## Outline
 

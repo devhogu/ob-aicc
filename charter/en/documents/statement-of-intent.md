@@ -2,9 +2,9 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-04
+revised: 2026-10-05
 ```
 
 # Statement of Intent on the Adoption of Artificial Intelligence
@@ -118,7 +118,7 @@ revised: 2026-10-04
 
 ## 9. Strategic Priorities
 
-9.1. The Bank has seven Strategic Priorities, stated in order. Each rests on the governed foundation set out in section 10.
+9.1. The Strategic Priorities of the Bank for the adoption of AI are stated below in order. They are the priorities of the strategy of the Bank to which AI contributes most, and they do not limit that strategy. Each rests on the governed foundation set out in section 10.
 
 ### 9.2. Customer intelligence
 
@@ -242,3 +242,4 @@ revised: 2026-10-04
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 1.1 | 2026-10-04 | Applied fixed international AI agent naming consistently; functional meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
+| 1.2 | 2026-10-05 | Clarified in 9.1 that the Strategic Priorities are those of the Bank for the adoption of AI and do not limit the strategy of the Bank; meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |

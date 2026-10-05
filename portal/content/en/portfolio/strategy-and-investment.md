@@ -4,7 +4,7 @@ The Portfolio starts from a frame that is set once a year: the Strategic Priorit
 
 ## 1. The Strategic Priorities
 
-1.1. The Strategic Priorities are the strategic themes of the Portfolio. The Executive Sponsor sets them with the Board, each with an Investment Envelope, from the strategy of the Bank and the priorities that the Domain Owners put forward, and the Statement of Intent states the seven in force at the baseline, from customer intelligence to software engineering. An Initiative is taken in only if it fits a Strategic Priority; the priorities are the first filter of the funnel and the first line of the business case.
+1.1. The Strategic Priorities are the strategic themes of the Portfolio. The Executive Sponsor sets them with the Board, each with an Investment Envelope, from the strategy of the Bank and the priorities that the Domain Owners put forward, and the Statement of Intent states those in force for AI, from customer intelligence to software engineering. An Initiative is taken in only if it fits a Strategic Priority; the priorities are the first filter of the funnel and the first line of the business case.
 
 ## 2. The Investment Envelopes
 
