@@ -891,7 +891,7 @@
         },
         "choice": {
           "en": "Business initiatives are taken in, funded, continued, deferred, or rejected on evidence. The Portfolio runs on four loops, from the strategic loop of the year to the backlog care of the week, through a portfolio Kanban with a limit on the Active Initiatives. Every Initiative has a business case and is first probed as an MVP before the decision to continue.",
-          "ru": "Какие бизнес-инициативы брать в работу, финансировать, продолжать, откладывать или отклонять, решается на основе фактов. Портфелем управляют в четырёх циклах — от ежегодного стратегического до еженедельного ведения бэклога — через канбан-доску портфеля с лимитом инициатив в работе. У каждой инициативы есть бизнес-кейс, и прежде чем решить, продолжать ли её, идею проверяют на минимально жизнеспособном продукте (MVP)."
+          "ru": "Какие бизнес-инициативы брать в работу, финансировать, продолжать, откладывать или отклонять, решается на основе фактов. Портфелем управляют в четырёх циклах — от ежегодного стратегического до еженедельного ведения бэклога — через канбан портфеля с лимитом инициатив в работе. У каждой инициативы есть бизнес-кейс, и прежде чем решить, продолжать ли её, идею проверяют на минимально жизнеспособном продукте (MVP)."
         },
         "decides": {
           "en": "Executive Sponsor for the frame and the mix; AICC Lead for the flow",

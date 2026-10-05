@@ -93,10 +93,10 @@ step шаг обслуживания · Four signals четыре сигнала
 Proposal предложение · Adopted Solution внедрённое решение · Capability Capability · Feature Feature ·
 Definition of ready критерии готовности к работе (DoR) · Definition of done критерии завершённости (DoD) ·
 Work Item задача · Portfolio Backlog бэклог портфеля · Program Backlog бэклог программы · Iteration
-Backlog бэклог итерации · Portfolio Kanban канбан-доска портфеля · Portfolio management управление
+Backlog бэклог итерации · Portfolio Kanban канбан портфеля · Portfolio management управление
 портфелем · Funnel воронка · MVP минимально жизнеспособный продукт (MVP), далее MVP · Leading indicator
 опережающий индикатор · Acceptance criteria критерии приёмки · Value hypothesis гипотеза ценности · Value
-stream value stream · Program Kanban канбан-доска программы · Class of service класс
+stream value stream · Program Kanban канбан программы · Class of service класс
 обслуживания · Lane дорожка · Team команда · Teams Record запись о командах · Program Increment программный
 инкремент (PI) · Iteration итерация · Innovation and Planning week неделя инноваций и планирования (неделя
 IP) · PI Objective цель PI · Dependency зависимость · Calendar календарь · Cadence расписание работы (not «ритм работы»; descriptive «в едином ритме» stays) · Blocked day
