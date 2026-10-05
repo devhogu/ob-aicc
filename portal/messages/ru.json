@@ -17,7 +17,7 @@
   "parts_label": "Части документа или курса",
   "previous": "Назад",
   "next": "Далее",
-  "companion_workflow": "Связанный рабочий процесс",
+  "companion_workflow": "Связанный workflow",
   "companion_guide": "Связанное руководство",
   "revision": "Версия",
   "revised": "Дата",
@@ -83,7 +83,7 @@
   "fb_close": "Закрыть",
   "fb_mail_body": "Страница: {title}\nНомер: {ref}\nАдрес: {url}\n\nВопрос или замечание:\n",
   "kind_document": "Документ",
-  "kind_workflow": "Рабочий процесс",
+  "kind_workflow": "Workflow",
   "kind_guide": "Руководство",
   "kind_template": "Шаблон",
   "kind_page": "Страница",
@@ -91,7 +91,7 @@
   "kind_parts": "частей",
   "kind_words": "слов",
   "grp_documents": "Документы",
-  "grp_workflows": "Рабочие процессы",
+  "grp_workflows": "Workflows",
   "grp_guides": "Вспомогательные руководства",
   "dz_expand": "Развернуть диаграмму",
   "dz_close": "Закрыть",
@@ -132,7 +132,7 @@
   "part_titles": {
     "organization/organization-guide/bodies-people-and-records": "Органы, люди и записи",
     "governance/unit-governance-workflow/events-and-sequences": "События и последовательности",
-    "services/engagement-workflow": "Рабочий процесс",
+    "services/engagement-workflow": "Workflow",
     "services/engagement-guide": "Руководство",
     "delivery/service-delivery-workflow/the-portfolio-flow": "Поток портфеля",
     "delivery/service-delivery-workflow/the-execution": "Выполнение в PI",
@@ -155,7 +155,7 @@
   "cat_title": "Решение",
   "cat_type": "Тип",
   "cat_state": "Состояние",
-  "cat_initiative": "Initiative",
+  "cat_initiative": "Инициатива",
   "cat_domain": "Домен",
   "cat_receiver": "Получатель",
   "cat_asof": "Сведения из портфеля по состоянию на",
@@ -209,7 +209,7 @@
     "set-service-delivery": "Поставка услуг",
     "set-cadence": "Ритм работы",
     "set-operating-model": "Операционная модель",
-    "set-ai-risk-control": "Рабочий процесс управления рисками AI и контроля",
+    "set-ai-risk-control": "Workflow «Риски и контроль AI»",
     "set-unit-governance": "Управление подразделением"
   }
 }

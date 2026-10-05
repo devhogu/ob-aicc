@@ -1676,7 +1676,7 @@ def change_history(site, p, lang):
     main = '<h1>%s</h1><div class="o-table-wrap" role="region" tabindex="0" aria-label="%s"><table><thead><tr><th>Document</th><th>%s</th><th>%s</th><th>Change</th><th>Decision</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
         esc(p['title']), esc(p['title']), esc(m['revision']), esc(m['revised']), ''.join(rows), prev_next(site, p, lang))
     if lang == 'ru':
-        for en, ru in [('Document', 'Документ'), ('Change', 'Изменение'), ('Decision', 'Решение')]:
+        for en, ru in [('Document', 'Документ'), ('Change', 'Изменение'), ('Decision', 'Управленческое решение')]:
             main = main.replace('<th>' + en + '</th>', '<th>' + ru + '</th>')
     return layout(site, p, lang, main, [])
 
@@ -1707,7 +1707,7 @@ def records_page(site, p, lang):
     if lang == 'ru':
         systems = [
             ('Реестр', 'Управленческие решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие записи в виде неизменяемых датированных выгрузок. Хранятся на корпоративном сетевом ресурсе: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
-            ('Jira и Confluence', 'Рабочее состояние бэклога программы, досок и рабочих элементов, а также рабочие документы — с момента перехода рабочего состояния в эти системы'),
+            ('Jira и Confluence', 'Рабочее состояние бэклога программы, досок и задач, а также рабочие документы — с момента перехода рабочего состояния в эти системы'),
             ('Service Management', 'Запросы и инциденты, в том числе инциденты AI'),
         ]
     srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i == 0 else esc(b)) for i, (a, b) in enumerate(systems))
