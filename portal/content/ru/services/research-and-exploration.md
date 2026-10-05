@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/services/research-and-exploration.md
-source_sha256: 336b2775ed7119bd7a5a55deebe0b50676360db3e957bcdd52f0962a09bfc999
+source_sha256: b204bf1be96f3912e53ae365b92b7abe22052c99c31a79291b3879393c7131b3
 translation_status: reviewed
 ```
 

@@ -29,4 +29,4 @@ The Business Model states that the support of a Service is managed in Service Ma
 
 ## 5. Rule source
 
-Business Model 4.2; Solution Lifecycle Model 6, 7, and 8, with the practices in 8.10; AI Policy 4 and 5; Operating Model 7 and 8. The practices draw on the IT service management practice recorded in the Industry body of knowledge.
+Business Model 4.2; Solution Lifecycle Model 6, 7, and 8, with the practices in 8.10; AI Policy 4 and 5; Operating Model 7 and 8. The practices draw on the IT service management practice recorded in Standards and frameworks.

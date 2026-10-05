@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/governance/overview.md
-source_sha256: 3ac87a43879614594088bee0c75d3bfde23d4df71e6e9758d6074656db214d21
+source_sha256: 0dc2d1a54f14f2a247506a8b568489f1b30b58027814f434ef7b672264d6f752
 translation_status: reviewed
 ```
 

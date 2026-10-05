@@ -39,7 +39,7 @@ Figure 1: delivery end to end, the stream and the loops.
 
 ## 3. The industry practice it follows
 
-3.1. The method is the lean-agile practice of delivering at scale, adapted to a small unit in a bank: work in levels worded as hypotheses with acceptance criteria; a fixed cadence that synchronizes planning, delivery, and review; Kanbans with limits; a board of dependencies; a pipeline from exploration to release on demand, with deployment and release separated; quality built in; events that plan, demonstrate, and improve; flow measured rather than effort. The practice is recorded in the [Industry body of knowledge](../reference/industry-body-of-knowledge.md).
+3.1. The method is the lean-agile practice of delivering at scale, adapted to a small unit in a bank: work in levels worded as hypotheses with acceptance criteria; a fixed cadence that synchronizes planning, delivery, and review; Kanbans with limits; a board of dependencies; a pipeline from exploration to release on demand, with deployment and release separated; quality built in; events that plan, demonstrate, and improve; flow measured rather than effort. The practice is recorded in the [Standards and frameworks](../reference/industry-body-of-knowledge.md).
 
 3.2. Where the Bank's model differs from the common form, it is because of scale and regulation: one Team rather than many, a month-long Iteration rather than two weeks, an Innovation and Planning week that also hosts the quarterly Steering, light mode while the Team has up to three people, and the check or validation by a person other than the builder, in proportion to the Risk Tier, written into the Verify step.
 

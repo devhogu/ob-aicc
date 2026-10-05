@@ -404,7 +404,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('Распределение ответственности', tabs)
         self.assertNotIn('Who is responsible for what', tabs)
         self.assertEqual(site.by_id['governance/unit-governance-workflow/events-and-sequences']['title'],
-                         'Рабочий процесс «Управление подразделением»: События и последовательности')
+                         'Workflow «Управление подразделением»: События и последовательности')
         rendered = build.build_page(site, guide, 'ru')
         self.assertIn('<p class="o-lead" lang="ru">Роли, профили, матрица RACI и кадровые записи</p>', rendered)
 
@@ -481,7 +481,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertNotIn('<span lang="en"> &mdash; ', outline)
         self.assertNotIn('class="o-callout lang-note"', outline)
         tabs = build.parts_html(site, site.by_id['services/engagement-workflow'], 'ru')
-        self.assertIn('>Рабочий процесс</a>', tabs)
+        self.assertIn('>Workflow</a>', tabs)
         self.assertIn('>Руководство</a>', tabs)
         self.assertNotIn('Engagement workflow', tabs)
         en = build.Site(argparse.Namespace(no_diagrams=True), 'en')

@@ -4,7 +4,7 @@ The method is written for a Team of a few people and does not change when the Te
 
 ## 1. Light mode
 
-1.1. While the AICC Team has up to three people, AICC runs in light mode: the AICC Lead is the product owner of the Team; the Weekly Planning and the Weekly Review are one session; the Iteration Retrospective and the monthly Steering are held in the Iteration Review and Demo, and Inspect and Adapt in the PI Review and Demo; the Daily Stand-up, Backlog Refinement, and Innovation are optional; Work Items are not tracked in the charter; a smaller set of states is used; and the check by a person other than the builder is done by an engineer of the IT function or the Domain whom the AICC Lead names. Everything else stays as stated.
+1.1. While the AICC Team has up to three people, AICC runs in light mode: the AICC Lead is the product owner of the Team; the Weekly Planning and the Weekly Review are one session; the Iteration Retrospective and the monthly Steering are held in the Iteration Review and Demo, and Inspect and Adapt in the PI Review and Demo; the Daily Stand-up, Backlog Refinement, and Innovation are optional; Work Items are not tracked; a smaller set of states is used; and the check by a person other than the builder is done by an engineer of the IT function or the Domain whom the AICC Lead names. Everything else stays as stated.
 
 ## 2. The steps out of light mode
 
