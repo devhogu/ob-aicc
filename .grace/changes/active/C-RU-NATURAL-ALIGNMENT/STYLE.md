@@ -117,7 +117,7 @@ Decision Record протокол решения · Appointments Record реес�
 контрольный лист приёмки · AI Incident Review разбор инцидента AI · Registry Snapshot снимок папки ·
 Program Board борд программы · Team board борд команды · board борд, борды (masculine; never «доска»; Portfolio / Program Kanban stay «канбан»; dashboard stays «дашборд» / «панель показателей») · Roadmap дорожная карта · Template шаблон · Priorities Record список
 приоритетов · Standards Record реестр стандартов · Control Matrix матрица контроля · Registry папка AICC (кратко: папка; «реестр» означает только Living record) ·
-Workflow workflow · Record учётная запись (обычная «запись в журнале», «запись каталога» сохраняется) · Living record реестр · Evidence record
+Workflow workflow · Record рабочий документ, рабочие документы (masculine; never «учётная запись», which means a user account and stays only in that sense: «учётные записи пользователей»; with governing documents: «нормативные и рабочие документы»; with Evidence record: «рабочие и подтверждающие документы»; обычная «запись в журнале», «запись каталога» сохраняется) · Living record реестр · Evidence record
 подтверждающий документ · Working state рабочее состояние · cutover переход · Light mode облегчённый режим ·
 Loop цикл · Review week неделя обзора · Short forms сокращения · Event мероприятие · Steering Summary итоги
 управляющего совещания · Quarterly Report квартальный отчёт · Report to the Board Committee отчёт Комитету

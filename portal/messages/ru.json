@@ -130,7 +130,7 @@
   "roles_title": "Роли",
   "roles_description": "Семь ролей и их страницы",
   "part_titles": {
-    "organization/organization-guide/bodies-people-and-records": "Органы, люди и учётные записи",
+    "organization/organization-guide/bodies-people-and-records": "Органы, люди и рабочие документы",
     "governance/unit-governance-workflow/events-and-sequences": "События и последовательности",
     "services/engagement-workflow": "Workflow",
     "services/engagement-guide": "Руководство",
@@ -178,7 +178,7 @@
     "about/values-and-principles": "Ценности и принципы внедрения AI, применения, работы, а также разработки и внедрения решений и то, на что распространяется каждый из них",
     "about/charter-outline": "Как корпус документов устроен на портале, где искать каждую его часть и с чего начать",
     "reference/change-history": "История версий документов",
-    "reference/records-and-systems": "Где хранится каждая учётная запись и какую контрольную процедуру она подтверждает",
+    "reference/records-and-systems": "Где хранится каждый рабочий документ и какую контрольную процедуру он подтверждает",
     "privacy": "Что портал делает и чего не делает с информацией о своих пользователях",
     "terms-of-use": "Условия, на которых предоставляется портал, и статус его страниц",
     "reference/shared-terminology": "Общие деловые и технологические наименования, их определения и применение в AICC"
@@ -213,6 +213,6 @@
     "set-unit-governance": "Контроль работы подразделения"
   },
   "nav_short": {
-    "governance/delivery-records-controls-and-measures": "Учёт и показатели решений"
+    "governance/delivery-records-controls-and-measures": "Документы и показатели решений"
   }
 }

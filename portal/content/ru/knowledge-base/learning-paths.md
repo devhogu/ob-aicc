@@ -34,7 +34,7 @@ translation_status: reviewed
 | --- | --- | --- |
 | 1 | Курс [Разработка и внедрение](page:delivery/index), все части | Ориентироваться в рабочем цикле, бордах, контрольных точках и циклах разработки и внедрения |
 | 2 | [Модель жизненного цикла решений](page:delivery/solution-lifecycle-model) — правила | Понимать состояния, стадии и условия перехода между ними |
-| 3 | Workflow [Оказание услуг](page:delivery/service-delivery-workflow) и [Рабочий цикл](page:delivery/cadence-workflow) с руководствами к ним | Понимать, какая учётная запись остаётся по каждому шагу и мероприятию |
+| 3 | Workflow [Оказание услуг](page:delivery/service-delivery-workflow) и [Рабочий цикл](page:delivery/cadence-workflow) с руководствами к ним | Понимать, какой рабочий документ остаётся по каждому шагу и мероприятию |
 | 4 | [Workflow эксперимента](page:delivery/experiment-workflow), [Жизненный цикл сервиса](page:delivery/life-of-a-service), [Эксплуатация сервисов](page:delivery/service-operations) | Проверять гипотезу в лабораторной среде и эксплуатировать сервис после выпуска |
 | 5 | [Описание решения](page:knowledge-base/solution-definition), [Контрольный лист приёмки](page:knowledge-base/acceptance-checklist) и [Показатели разработки и внедрения](page:delivery/measures-definitions-and-formulas) | Вести протокол решения и понимать показатели |
 
@@ -71,9 +71,9 @@ translation_status: reviewed
 
 | Шаг | Материалы | Результат |
 | --- | --- | --- |
-| 1 | Курс [Управление](page:governance/index) и страница [Учётные записи, подтверждающие документы и независимая оценка](page:governance/records-evidence-and-assurance) | Понимать циклы и контрольные процедуры и знать, где найти подтверждающие материалы |
+| 1 | Курс [Управление](page:governance/index) и страница [Рабочие и подтверждающие документы, независимая оценка](page:governance/records-evidence-and-assurance) | Понимать циклы и контрольные процедуры и знать, где найти подтверждающие материалы |
 | 2 | [Каталог контрольных процедур](page:governance/controls) и комплект материалов [Контроль работы подразделения](page:governance/unit-governance-workflow) с руководством, в котором описано тестирование каждой контрольной процедуры | Тестировать контрольную процедуру по её идентификатору |
-| 3 | [Учётная система](page:reference/records-and-systems) и [История изменений](page:reference/change-history) | Находить каждую учётную запись и версию каждого документа |
+| 3 | [Учётная система](page:reference/records-and-systems) и [История изменений](page:reference/change-history) | Находить каждый рабочий документ и версию каждого нормативного документа |
 | 4 | [Роли](page:organization/the-roles) и [Работники и назначения](page:organization/people-and-appointments) | Сверять разграничение обязанностей и назначения |
 
 ## 8. Для кадровой функции
