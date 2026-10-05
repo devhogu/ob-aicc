@@ -18,7 +18,7 @@
     "organization": {
       "label": {
         "en": "Organization",
-        "ru": "Организация"
+        "ru": "Структура и роли"
       },
       "intro": {
         "en": "AICC is a joint team, led by the AICC Lead and formed of the people whom the functions of the Bank assign to it, organized by Roles and not by persons. This section is a short course in six parts, read in order or by tab, followed by the rule, the Operating Model with its Roles and Decisions, the Organization guide, and the pages of the seven Roles.",
@@ -48,7 +48,7 @@
     "governance": {
       "label": {
         "en": "Governance",
-        "ru": "Управление"
+        "ru": "Контроль и подотчётность"
       },
       "intro": {
         "en": "Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank. This section is a short course in seven parts, read in order or by tab, followed by the rule: the control loops, the records and evidence, and the control catalog of the Operating Model, the records and controls of delivery, and the Unit governance workflow and guide.",
@@ -93,7 +93,7 @@
     "portfolio": {
       "label": {
         "en": "Portfolio",
-        "ru": "Портфель"
+        "ru": "Портфолио"
       },
       "intro": {
         "en": "The Portfolio is where the Bank decides what AICC works on: a commercial decision body and a control loop in one. This section is a short course in eight parts, read in order or by tab, followed by the rule, the Portfolio Management Model.",
@@ -108,7 +108,7 @@
     "delivery": {
       "label": {
         "en": "Delivery",
-        "ru": "Поставка"
+        "ru": "Разработка и внедрение"
       },
       "intro": {
         "en": "Delivery is how an approved idea becomes a working Solution in the hands of a function, and how that Solution is kept, changed, and retired: in small steps, on a fixed cadence, with the work visible and limited and quality built into the flow. This section is a short course in ten parts, read in order or by tab, followed by the rule, the Solution Lifecycle Model, and by the workflows, the guides, and the pages of the life of a Service.",
@@ -718,7 +718,7 @@
         },
         "where": {
           "en": "About AICC, Responsible AI, Services, Portfolio, Delivery, Governance, and Organization, each document in the section of its subject; long documents are split into parts",
-          "ru": "Разделы «О центре AICC», «Ответственное применение AI», «Услуги», «Портфель», «Поставка», «Управление» и «Организация»: каждый документ размещён в разделе своей темы; объёмные документы разделены на части"
+          "ru": "Разделы «О центре AICC», «Ответственное применение AI», «Услуги», «Портфолио», «Разработка и внедрение», «Контроль и подотчётность» и «Структура и роли»: каждый документ размещён в разделе своей темы; объёмные документы разделены на части"
         }
       },
       {
@@ -732,7 +732,7 @@
         },
         "where": {
           "en": "Beside the documents that they illustrate, in Responsible AI, Services, Delivery, and Governance",
-          "ru": "Рядом с документами, которые они поясняют, в разделах «Ответственное применение AI», «Услуги», «Поставка» и «Управление»"
+          "ru": "Рядом с документами, которые они поясняют, в разделах «Ответственное применение AI», «Услуги», «Разработка и внедрение» и «Контроль и подотчётность»"
         }
       },
       {

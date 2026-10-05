@@ -1136,7 +1136,7 @@ def flow_pages(site):
         for sec in site.sections:
             flow.append(site.by_id[sec['id'] + '/index'])
             flow += sorted([x for x in site.pages if x.get('section') == sec['id'] and x['type'] not in ('section', 'control', 'role')], key=lambda x: (x['order'], x['id']))
-        flow += sorted([x for x in site.pages if x['type'] == 'legal'], key=lambda x: x['order'])
+        # Legal pages stand outside the reading flow: nothing leads into them or back from them.
         site._flow = flow
     return site._flow
 
