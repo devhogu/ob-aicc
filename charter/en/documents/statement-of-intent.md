@@ -72,7 +72,7 @@ revised: 2026-10-04
 
 ## 6. Principles of Application
 
-6.1. **Accountability.** A named individual is accountable for each Solution, its outcomes, and its risks. AI does not hold accountability. The Bank is answerable for AI that it procures to the same extent as for AI that it develops. The Board oversees AI through regular reporting.
+6.1. **Accountability.** A named individual is accountable for each Solution, its outcomes, and its risks. AI does not hold accountability. The Bank is answerable for AI that it procures to the same extent as for AI that it develops. The Board oversees AI through the Board Committee (7.6).
 
 6.2. **Fairness.** AI treats customers and employees fairly and in the interest of the customer. It is tested for bias before release and monitored in use, to the extent that the AI Policy requires for the Risk Tier of the Solution.
 
@@ -218,7 +218,7 @@ revised: 2026-10-04
 
 12.1. Progress shall be assessed against the Measures in section 11.3 and against the baselines established at Maturity Level 1.
 
-12.2. AICC shall report progress, benefits, and risks to the AI Steering Committee each quarter, and to the Board Committee each quarter.
+12.2. AICC shall report progress, benefits, and risks to the Executive Sponsor each quarter, at the quarterly Steering, where the AI Steering Committee advises. The Executive Sponsor may bring them to the Board Committee.
 
 12.3. Benefits shall be reported against the Investment Envelope of each Strategic Priority.
 

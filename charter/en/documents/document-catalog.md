@@ -55,7 +55,7 @@ revised: 2026-10-04
 
 5.2. A new document is added only when no existing document can hold its content. The documents together number no more than nine, and no document is longer than about 80 clauses. A translation states the revision of the source that it translates.
 
-5.3. The workflows and the guides of the charter are changed like software, with their history in the repository, and are not activated. A Template is activated as 4.1 states. They state no rule of their own: the rules are in the documents.
+5.3. The workflows and the guides of the charter are changed like software, with their history in the repository, and are not activated. A Template is activated as 4.1 states. The workflows, the guides, and the Templates state no rule of their own: the rules are in the documents.
 
 5.4. The pages that the AICC portal adds to explain the charter, such as the courses, the learning paths, the knowledge base, the references, and the service catalog, state no rule, and each states its edition. The AICC Lead shall keep them, with the Control Function Contacts of compliance and legal for a page on law, and shall remove a page that no longer serves a reader. A page in another language states the revision of the source that it explains. A page that states the form of a catalog, a Measure, or a Package gives the form only, and each instance is in the Registry or the Portfolio.
 
