@@ -2,9 +2,9 @@
 id: AICC-POL-01-EN
 title: AI Policy
 status: active
-revision: 2.1
+revision: 2.2
 created: 2026-10-02
-revised: 2026-10-04
+revised: 2026-10-05
 ```
 
 # AI Policy
@@ -100,7 +100,7 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 
 ## 6. Exceptions
 
-6.1. A departure from this policy is an Exception. It is decided by the Control Function Contact for the remit concerned, is limited in time, shall state the date on which it expires, and shall be entered in the Risks and Issues Record. The Executive Sponsor reviews the open Exceptions each month, and an Exception that has expired is decided at once (Operating Model 6.7). A departure from a requirement set by AICC alone is decided by the AICC Lead. An Exception is not a bypass of a control.
+6.1. A departure from this policy is an Exception. An Exception is permitted only in exceptional cases. It is decided by the Control Function Contact for the remit concerned, is limited in time, shall state the date on which it expires, and shall be entered in the Risks and Issues Record. The Executive Sponsor reviews the open Exceptions each month, and an Exception that has expired is decided at once (Operating Model 6.7). A departure from a requirement set by AICC alone is decided by the AICC Lead. An Exception is not a bypass of a control.
 
 6.2. The controls of this policy are C-06, C-09, C-12, C-13, C-15, C-16, C-17, C-18, C-21, C-28, and C-29 of the Operating Model 8.
 
@@ -111,3 +111,4 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Adds the confirmation of the laws and standards that apply and the policies of the Bank that apply, accountability for AI output, the bar on entering data into unapproved external services, the handling of unapproved use, the rules for AI agents, documentation, monitoring, and provider training, open models and licenses, and the lessons of an AI Incident. | DR-2026-062 |
 | 2.1 | 2026-10-04 | Applied fixed international AI agent naming consistently; functional meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
+| 2.2 | 2026-10-05 | Stated in 6.1 that an Exception is permitted only in exceptional cases. | none (correction under Document Catalog 4.2) |

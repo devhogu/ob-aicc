@@ -52,7 +52,7 @@
       },
       "intro": {
         "en": "Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank. This section is a short course in seven parts, read in order or by tab, followed by the rule: the control loops, the records and evidence, and the control catalog of the Operating Model, the records and controls of delivery, and the Unit governance workflow and guide.",
-        "ru": "Управление — это то, как AICC как подразделение Банка получает направление работы, как его контролируют, как он отчитывается и как проводится независимая оценка его деятельности. Раздел содержит краткий курс из семи частей, который можно читать по порядку или по вкладкам. За ним следуют правила: контрольные циклы, учётные записи и подтверждающие документы и каталог контрольных процедур Операционной модели, учётные записи и контрольные процедуры разработки и внедрения, а также workflow и руководство «Управление подразделением»."
+        "ru": "Управление — это то, как AICC как подразделение Банка получает направление работы, как его контролируют, как он отчитывается и как проводится независимая оценка его деятельности. Раздел содержит краткий курс из семи частей, который можно читать по порядку или по вкладкам. За ним следуют правила: контрольные циклы, учётные записи и подтверждающие документы и каталог контрольных процедур Операционной модели, учётные записи и контрольные процедуры разработки и внедрения, а также workflow и руководство «Контроль работы подразделения»."
       },
       "icon": "table-properties",
       "line": {
@@ -188,6 +188,7 @@
           "ru": "Заявление о намерениях"
         },
         "tip": {
+          "en": "The Bank's document on AI: why the Bank adopts AI, the values and principles it follows, and the priorities it sets.",
           "ru": "Документ Банка об AI: зачем Банк внедряет искусственный интеллект, каким ценностям и принципам следует и какие приоритеты ставит."
         }
       },
@@ -206,6 +207,7 @@
           "ru": "Как мы работаем"
         },
         "tip": {
+          "en": "The path of a task from the request to support: how AICC takes a request in, tests the idea, builds the solution and supports it, and who decides at each step.",
           "ru": "Путь задачи от обращения до поддержки: как AICC принимает запрос, проверяет идею, создаёт решение и сопровождает его — и кто принимает решения на каждом шаге."
         }
       },
@@ -224,6 +226,7 @@
           "ru": "Порядок взаимодействия"
         },
         "tip": {
+          "en": "To start, it is enough to come with a task: no form, no budget, no ready plan. Six steps from the first conversation to support.",
           "ru": "Чтобы начать, достаточно прийти с задачей — без форм, бюджета и готового плана. Шесть шагов от первого разговора до поддержки."
         }
       }
@@ -494,7 +497,7 @@
         },
         "text": {
           "en": "A function brings a need to AICC. AICC takes it in as run-rate work or as an Initiative, probes an Initiative first as a minimum viable product, measures it against defined success Measures, and extends it only on that evidence. The work is visible, limited in progress, and paced by a common cadence. Before a Solution reaches its users, it is checked by a person other than its builder, or validated by the Control Function Contacts, in proportion to its Risk Tier; then it is accepted by the product owner, the AICC Lead, and the Domain Owner who asked for it. AICC applies this way of working to itself and is the example of what it proposes to the Bank.",
-          "ru": "Подразделение приходит в AICC с задачей. AICC берёт её в работу в одном из двух режимов: как текущую работу или как инициативу. Инициативу сначала проверяют на минимально жизнеспособном продукте (MVP) и масштабируют, только если заранее заданные показатели успеха подтвердились. Вся работа видна на доске, объём незавершённой работы ограничен, а команда движется в едином ритме. Прежде чем решение попадёт к пользователям, его проверяет сотрудник, не участвовавший в разработке, а при более высокой категории риска — представители контрольных функций. Затем решение принимают владелец продукта, руководитель AICC и заказчик — владелец направления. Этот подход AICC применяет и к себе, показывая Банку на собственном примере, как он работает."
+          "ru": "Подразделение приходит в AICC с задачей. AICC берёт её в работу в одном из двух режимов: как текущую работу или как инициативу. Инициативу сначала проверяют на минимально жизнеспособном продукте (MVP) и масштабируют, только если заранее заданные показатели успеха подтвердились. Вся работа видна на борде, объём незавершённой работы ограничен, а команда движется в едином ритме. Прежде чем решение попадёт к пользователям, его проверяет сотрудник, не участвовавший в разработке, а при более высокой категории риска — представители контрольных функций. Затем решение принимают владелец продукта, руководитель AICC и заказчик — владелец направления. Этот подход AICC применяет и к себе, показывая Банку на собственном примере, как он работает."
         },
         "links": [
           {
@@ -674,7 +677,7 @@
         },
         "applies": {
           "en": "This is how the Teams of AICC build: visible, in small steps, value first, with quality and control built into the flow rather than added after it. Working Solutions and evidence count more than documents and opinion.",
-          "ru": "Так команды AICC создают решения: работа видна на доске, идёт короткими шагами, ценность — на первом месте, а качество и контроль встроены в процесс, а не добавляются в конце. Работающие решения и факты весят больше документов и мнений."
+          "ru": "Так команды AICC создают решения: работа видна на борде, идёт короткими шагами, ценность — на первом месте, а качество и контроль встроены в процесс, а не добавляются в конце. Работающие решения и факты весят больше документов и мнений."
         },
         "source": [
           "solution-lifecycle-model",
@@ -945,7 +948,7 @@
         },
         "choice": {
           "en": "Deliver in small steps: probe with an MVP, measure against the success Measures, then scale. Work is visible, limited in progress, and paced by Program Increments and Iterations on fixed dates. Quality and control are built into the flow: the check or validation and the controls of the AI Policy are steps of delivery, not a stage after it.",
-          "ru": "Работа идёт короткими шагами: идею сначала проверяют на минимально жизнеспособном продукте (MVP), результат измеряют по показателям успеха и только потом масштабируют. Всё видно на доске, объём незавершённой работы ограничен, ритм задают программные инкременты (PI) и итерации с фиксированными датами. Качество и контроль встроены в разработку и внедрение: проверка или валидация и контрольные процедуры Политики применения AI — часть этой работы, а не отдельная стадия после неё."
+          "ru": "Работа идёт короткими шагами: идею сначала проверяют на минимально жизнеспособном продукте (MVP), результат измеряют по показателям успеха и только потом масштабируют. Всё видно на борде, объём незавершённой работы ограничен, ритм задают программные инкременты (PI) и итерации с фиксированными датами. Качество и контроль встроены в разработку и внедрение: проверка или валидация и контрольные процедуры Политики применения AI — часть этой работы, а не отдельная стадия после неё."
         },
         "decides": {
           "en": "AICC Lead and the Teams",

@@ -4,7 +4,7 @@ source_sha256: 1e52c0516390ce6582a876bea74bb2541361fba32636c83ceb7e58191298e7a2
 translation_status: reviewed
 ```
 
-# Workflow «Управление подразделением»
+# Workflow «Контроль работы подразделения»
 
 ## 1. Назначение и область применения
 

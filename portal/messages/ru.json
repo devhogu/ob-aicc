@@ -134,15 +134,15 @@
     "governance/unit-governance-workflow/events-and-sequences": "События и последовательности",
     "services/engagement-workflow": "Workflow",
     "services/engagement-guide": "Руководство",
-    "delivery/service-delivery-workflow/the-portfolio-flow": "Путь инициативы",
+    "delivery/service-delivery-workflow/the-portfolio-flow": "Воркфлоу портфеля",
     "delivery/service-delivery-workflow/the-execution": "Разработка в PI",
-    "delivery/service-delivery-workflow/after-delivery": "После внедрения",
-    "delivery/service-delivery-guide": "Руководство: шаги и решения",
-    "delivery/service-delivery-guide/after-delivery": "Руководство: после внедрения",
+    "delivery/service-delivery-workflow/after-delivery": "Пост-внедрение",
+    "delivery/service-delivery-guide": "Руководство: воркфлоу и решения",
+    "delivery/service-delivery-guide/after-delivery": "Руководство: пост-внедрение",
     "delivery/cadence-workflow/rules-calendar-and-light-mode": "Правила и календарь",
-    "delivery/cadence-guide": "Руководство: расписание работы",
+    "delivery/cadence-guide": "Руководство: рабочий цикл",
     "responsible-ai/ai-risk-control-workflow/in-operation-and-situations": "Эксплуатация и особые случаи",
-    "governance/unit-governance-guide": "Руководство: управление",
+    "governance/unit-governance-guide": "Руководство: контроль работы",
     "governance/unit-governance-guide/the-controls": "Контрольные процедуры"
   },
   "fb_subject": "Портал AICC [{ref}]: отзыв о странице",
@@ -207,10 +207,10 @@
     "how-to-engage": "Порядок взаимодействия с AICC",
     "service-catalog": "Каталог услуг",
     "set-service-delivery": "Оказание услуг",
-    "set-cadence": "Расписание работы",
+    "set-cadence": "Рабочий цикл",
     "set-operating-model": "Операционная модель",
     "set-ai-risk-control": "Workflow «Риски и контроль AI»",
-    "set-unit-governance": "Управление подразделением"
+    "set-unit-governance": "Контроль работы подразделения"
   },
   "nav_short": {
     "governance/delivery-records-controls-and-measures": "Учёт и показатели решений"

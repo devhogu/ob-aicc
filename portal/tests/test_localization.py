@@ -404,7 +404,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('Распределение ответственности', tabs)
         self.assertNotIn('Who is responsible for what', tabs)
         self.assertEqual(site.by_id['governance/unit-governance-workflow/events-and-sequences']['title'],
-                         'Workflow «Управление подразделением»: События и последовательности')
+                         'Workflow «Контроль работы подразделения»: События и последовательности')
         rendered = build.build_page(site, guide, 'ru')
         self.assertIn('<p class="o-lead" lang="ru">Роли, профили, матрица RACI и кадровый учёт</p>', rendered)
 

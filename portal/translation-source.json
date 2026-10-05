@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source_language": "en",
   "source_edition": "2.2",
-  "reconciled_on": "2026-10-04",
+  "reconciled_on": "2026-10-05",
   "base_commit": "2d576478385a4c4542f4ea9cba702c1eedde5135",
   "source_state": "Approved corpus baseline 2.2, initially prepared in English, with paired language versions of all nine governing documents. No language is designated authoritative. baseline_tag and baseline path/hash fields identify the original approved files; current hashes and document metadata identify the reconciled files. DR-2026-064 records the industry-terminology reconciliation. Vocabulary and Style and Document Catalog are now revision 3.3; Portfolio Management Model is revision 2.2. Shared Business and Technology Terminology edition 1.5 has separate English and Russian corpus files, each containing definitions and application in its own language. Each portal route and search index uses its own language edition. The historical baseline hashes remain unchanged. This comparison state does not claim live publication. Fixed international names applied across both language sources and portal content; shared reference edition 1.5 and governing Vocabulary/Document Catalog revision 3.3. Russian explanatory names and permitted variants retained.",
   "scope": "Charter corpus, Registry records, Portfolio records and definitions, portal explanatory content, English interface messages, English authored content, and page routing. Operational status is preserved; this manifest is not evidence of approval or publication.",
@@ -23,7 +23,7 @@
     {
       "path": "charter/en/documents/ai-policy.md",
       "hash_basis": "file_bytes",
-      "sha256": "6b925ac1ce7ffaf812f0e892532791e143468cc3d0c46f23a7d9da5fac8c621d",
+      "sha256": "e040f9530781e3f7baa14989088828d0407d4882e1f5fe23ad726b67d0465334",
       "document": {
         "id": "AICC-POL-01-EN",
         "status": "active",
@@ -114,7 +114,7 @@
     {
       "path": "charter/en/documents/statement-of-intent.md",
       "hash_basis": "file_bytes",
-      "sha256": "3d782509de003653ecd0c5ed27884849e87106ea9c597a373e940093e13f6b9b",
+      "sha256": "28ea685681dab3e602f29c9295d5b818c690a72727b87e268658db1264570132",
       "document": {
         "id": "AICC-MND-01-EN",
         "status": "active",
@@ -127,7 +127,7 @@
     {
       "path": "charter/en/documents/vocabulary.md",
       "hash_basis": "file_bytes",
-      "sha256": "b6e86cbbf9b17d58633c6f29a1b746344d11c91e6dcdde180ed840529c89d2b3",
+      "sha256": "0ea86f9430b96ca9413fb3afd29725d3253b9bbed7e97de19ca2ba1a302c92b8",
       "document": {
         "id": "AICC-REF-01-EN",
         "status": "active",
@@ -446,7 +446,7 @@
     {
       "path": "portal/content/authored.json",
       "hash_basis": "english_projection",
-      "sha256": "439e9988378362442247b831e16cd05d485ed1972c793b925461e6be426e1206",
+      "sha256": "15e985655aad8dd64de095e183554fa7643fd27e2b14c97032ead95e43d6308c",
       "baseline_sha256": "2349e3edf7b972b51020a3ac387b84b5308ce9b84a08cff9c3e4385d3cf8dde8",
       "baseline_path": "portal/content/authored.json"
     },
@@ -719,7 +719,7 @@
     {
       "path": "portal/content/en/portfolio/strategy-and-investment.md",
       "hash_basis": "file_bytes",
-      "sha256": "25a035f7d8310deaaf0e28ef9c143b8893456dbbae3aa8a6a5355647ddd59a62",
+      "sha256": "2895fb8854926126c2603d0b8d5927f9874be6fb132eada32e0de304e95d5e41",
       "baseline_path": "portal/content/portfolio/strategy-and-investment.md",
       "baseline_sha256": "25a035f7d8310deaaf0e28ef9c143b8893456dbbae3aa8a6a5355647ddd59a62"
     },
@@ -1062,7 +1062,7 @@
     {
       "path": "portal/content/en/responsible-ai/opportunities.md",
       "hash_basis": "file_bytes",
-      "sha256": "5d42c26ebef45f62c6f1f875e6d2ebff093cd607ef55518b2c97ff25408060e5",
+      "sha256": "2ae05d976ee7184e896fea92c43cfd88a64a9b1b670d0ddfe88e8e2b2041204b",
       "baseline_path": "portal/content/responsible-ai/opportunities.md",
       "baseline_sha256": "f85eb204facdf460d4b3b26f7111ccea87dcee7f274676be85bf342fbd39a403"
     },
@@ -1258,14 +1258,14 @@
     {
       "path": "portal/messages/en.json",
       "hash_basis": "file_bytes",
-      "sha256": "88be15e38b6cb5e8e724720e344f2a641e5b80cc60277a68c74a41db3a331b17",
+      "sha256": "79ccda97937f697b2b7ad5762674d16ee384cb7f43b6b6275d86e35e8b067a46",
       "baseline_path": "portal/messages/en.json",
       "baseline_sha256": "f5f7ba5d166f962f82d874684f4bdbb85f8d8bb893ad10cd7c8cf211cbf92b98"
     },
     {
       "path": "portal-scaffolding/sitemap.json",
       "hash_basis": "file_bytes",
-      "sha256": "96f59d075acb07064f8b041f250d9335dc3bb5a3474489123f8dcfaf8c092c83",
+      "sha256": "8be2d6fb1cf8c7cb844ffbb303488cad6a1cbfa0b0effdffe0dcb2f49ebf1ef0",
       "baseline_path": "portal-scaffolding/sitemap.json",
       "baseline_sha256": "e7a76c224c675e96464b8124fd5bacb02a53babfd653befe1845612b7f2ee1ed"
     },

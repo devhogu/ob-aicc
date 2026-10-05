@@ -1,6 +1,6 @@
 # Russian rewrite: style sheet for C-RU-NATURAL-ALIGNMENT
 
-Revised 5 October 2026: Initiative is Russian again, Work Item is «задача», workflow and value stream stay Latin.
+Revised 5 October 2026: Initiative is Russian again, Work Item is «задача», workflow and value stream stay Latin; board is «борд», Cadence is «рабочий цикл», after delivery is «пост-внедрение», the continuous delivery pipeline is «непрерывная разработка и внедрение», Unit governance is «Контроль работы подразделения».
 
 Binding for every worker. Owner decisions of 4 October 2026 override older wording in the corpus, the
 terminology reference and the translation map where they differ. Approvals and decision records are
@@ -59,7 +59,7 @@ not required (pre-production tuning); do not add Registry records.
 - «подразделение» for a function of the Bank (client function → «подразделение-заказчик»); keep the AICC
   terms «контрольная функция», «IT-функция».
 - **workflow** stays Latin, lowercase in running text, indeclinable, masculine agreement: «workflow
-  «Взаимодействие с заказчиком»», «каждый workflow», «в workflow «Расписание работы»»; part heading «Workflows».
+  «Взаимодействие с заказчиком»», «каждый workflow», «в workflow «Рабочий цикл»»; part heading «Workflows».
 - **value stream** stays Latin, lowercase, indeclinable, masculine; at its first use in each document or
   page explain it once: «value stream (сквозная последовательность действий, в ходе которой потребность
   превращается в ценный для клиента результат)».
@@ -99,7 +99,7 @@ Backlog бэклог итерации · Portfolio Kanban канбан порт�
 stream value stream · Program Kanban канбан программы · Class of service класс
 обслуживания · Lane дорожка · Team команда · Teams Record состав команд · Program Increment программный
 инкремент (PI) · Iteration итерация · Innovation and Planning week неделя инноваций и планирования (неделя
-IP) · PI Objective цель PI · Dependency зависимость · Calendar календарь (not «запись о календаре») · Cadence расписание работы (not «ритм работы»; descriptive «в едином ритме» stays) · Blocked day
+IP) · PI Objective цель PI · Dependency зависимость · Calendar календарь (not «запись о календаре») · Cadence рабочий цикл (masculine; not «расписание работы», «ритм работы»; descriptive «в едином ритме» stays; bare «цикл» is Loop — where both meet in one sentence, rephrase so they cannot be confused) · Blocked day
 нерабочий день · gray day день ограниченной доступности · AICC portal портал AICC · Operating portal
 операционный портал · Corporate share корпоративный сетевой ресурс · Dashboard панель показателей · Stage
 стадия · Environment of use среда использования · Check проверка · Checker проверяющий · Validation
@@ -115,14 +115,14 @@ Metric метрика · KPI KPI · Governance measures показатели у�
 Decision Record протокол решения · Appointments Record реестр назначений · Control Sign-Off заключение
 контрольной функции · Business acceptor представитель заказчика по приёмке · Acceptance Checklist
 контрольный лист приёмки · AI Incident Review разбор инцидента AI · Registry Snapshot снимок папки ·
-Program Board доска программы · Roadmap дорожная карта · Template шаблон · Priorities Record список
+Program Board борд программы · Team board борд команды · board борд, борды (masculine; never «доска»; Portfolio / Program Kanban stay «канбан»; dashboard stays «дашборд» / «панель показателей») · Roadmap дорожная карта · Template шаблон · Priorities Record список
 приоритетов · Standards Record реестр стандартов · Control Matrix матрица контроля · Registry папка AICC (кратко: папка; «реестр» означает только Living record) ·
 Workflow workflow · Record учётная запись (обычная «запись в журнале», «запись каталога» сохраняется) · Living record реестр · Evidence record
 подтверждающий документ · Working state рабочее состояние · cutover переход · Light mode облегчённый режим ·
 Loop цикл · Review week неделя обзора · Short forms сокращения · Event мероприятие · Steering Summary итоги
 управляющего совещания · Quarterly Report квартальный отчёт · Report to the Board Committee отчёт Комитету
 Совета директоров · quarterly risk check ежеквартальная проверка рисков · Finding выявленное отклонение ·
-Activation введение в действие · State состояние · Delivery (activity; portal section) разработка и внедрение · Service delivery оказание услуг · Delivery (stage of a Solution; phase of an Engagement) разработка · after delivery после внедрения · Delivery measures показатели разработки и внедрения (never «поставка», which means a supply by a Provider).
+Activation введение в действие · State состояние · Delivery (activity; portal section) разработка и внедрение · Service delivery оказание услуг · Delivery (stage of a Solution; phase of an Engagement) разработка · after delivery (the stage; titles, tabs, headings, table headers) пост-внедрение: «Пост-внедрение», «на этапе пост-внедрения», «в пост-внедрении» (plain «после внедрения» only as an ordinary time reference) · Continuous delivery pipeline непрерывная разработка и внедрение (short form after first mention: «поток НРВ»; never «конвейер», «доставка») · Unit governance (workflow, guide, set) Контроль работы подразделения: «workflow «Контроль работы подразделения»», «Руководство по контролю работы подразделения» (ordinary «управление» stays elsewhere) · Delivery measures показатели разработки и внедрения (never «поставка», which means a supply by a Provider).
 
 States (quoted when named, lowercase in running text per the map): «Предложено», «Проработка», «Одобрено»,
 «В работе», «Ожидание», «Отложено», «Выполнено», «На рассмотрении», «Принято», «Закрыто»,
