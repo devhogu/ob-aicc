@@ -7,12 +7,12 @@
       },
       "intro": {
         "en": "AICC is the internal consulting and innovation lab of the Bank for the adoption of artificial intelligence. It explores and proves the use of AI with the functions of the Bank, delivers measured outcomes, and sets the practice by which the Bank adopts AI, within the standards that the Bank sets, with accountability that stays with people.",
-        "ru": "AICC — внутренняя консультационная и инновационная лаборатория Банка по внедрению искусственного интеллекта. Вместе с подразделениями Банка AICC исследует и подтверждает применимость AI, обеспечивает измеримые результаты и формирует практику внедрения AI в Банке — в пределах установленных Банком стандартов и при сохранении ответственности за людьми."
+        "ru": "AICC — внутренняя консультационная и инновационная лаборатория Банка по внедрению искусственного интеллекта. Вместе с подразделениями Банка AICC исследует и доказывает пользу AI, добивается измеримых результатов и выстраивает практику внедрения AI в рамках стандартов Банка. Ответственность при этом остаётся за людьми."
       },
       "icon": "file-text",
       "line": {
         "en": "Who we are: intent, strategy, charter, values.",
-        "ru": "О нас: намерения, стратегия, положение, ценности."
+        "ru": "Кто мы: намерения, стратегия, положение, ценности."
       }
     },
     "organization": {
@@ -277,7 +277,7 @@
       "id": "executive",
       "title": {
         "en": "Executive",
-        "ru": "Руководство"
+        "ru": "Высшее руководство"
       },
       "reader": {
         "en": "The Executive Sponsor and the Board Committee",
@@ -309,7 +309,7 @@
       },
       "purpose": {
         "en": "To learn how a need becomes an Initiative and a Solution, and what the function decides",
-        "ru": "Узнать, как потребность становится инициативой и решением и что решает подразделение"
+        "ru": "Узнать, как задача подразделения становится инициативой и решением и что решает само подразделение"
       },
       "pages": [
         "services/index",
@@ -355,7 +355,7 @@
       },
       "purpose": {
         "en": "To read the rules, the controls, and the evidence, and to find where each record is kept",
-        "ru": "Ознакомиться с правилами, контрольными процедурами и подтверждающими материалами и найти, где хранится каждая запись"
+        "ru": "Изучить правила, контрольные процедуры и подтверждения их выполнения и узнать, где хранится каждая запись"
       },
       "pages": [
         "about/aicc-charter",
@@ -378,7 +378,7 @@
         },
         "text": {
           "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve the customers of the Bank, to set the practice by which the Bank adopts it within the standards that the Bank sets, and to keep every use of it accountable to people.",
-          "ru": "Сделать AI надёжным повседневным инструментом Банка: подтверждать его ценность вместе с подразделениями, которые обслуживают клиентов Банка, формировать практику его внедрения в пределах установленных Банком стандартов и обеспечивать, чтобы за каждый случай применения AI отвечали люди."
+          "ru": "Сделать AI надёжным повседневным инструментом Банка: доказывать его пользу вместе с подразделениями, которые обслуживают клиентов, выстраивать практику его внедрения в рамках стандартов Банка и следить, чтобы за каждым применением AI стоял ответственный человек."
         },
         "links": [
           {
@@ -401,11 +401,11 @@
         "id": "what",
         "title": {
           "en": "What AICC is",
-          "ru": "Роль AICC"
+          "ru": "Что такое AICC"
         },
         "text": {
           "en": "AICC is an internal consulting and innovation lab of the Bank. It explores, trials, and proves the use of AI with the functions, delivers the outcome, and proposes what the Bank should adopt at scale. It works as a consulting unit does: it engages with a function on a defined scope, delivers an outcome with its evidence, and keeps its commitments and its records in order.",
-          "ru": "AICC — внутренняя консультационная и инновационная лаборатория Банка. Вместе с подразделениями AICC исследует, испытывает и подтверждает применимость AI, обеспечивает результат и предлагает, что Банку целесообразно внедрить в масштабе Банка. AICC работает как консультационное подразделение: взаимодействует с подразделением в согласованных границах работ, передаёт результат с подтверждающими материалами и поддерживает свои обязательства и записи в порядке."
+          "ru": "AICC — внутренняя консультационная и инновационная лаборатория Банка. Вместе с подразделениями AICC исследует, испытывает и доказывает, где AI приносит пользу, доводит работу до результата и предлагает, что стоит внедрить во всём Банке. Работа AICC устроена как у консультантов: он договаривается с подразделением о границах работы, сдаёт результат с подтверждением и держит в порядке свои обязательства и записи."
         },
         "links": [
           {
@@ -432,7 +432,7 @@
         },
         "text": {
           "en": "AICC exists to enable the Bank to adopt AI as a governed capability that delivers measured value. The adoption improves the quality, speed, and consistency of the operations and services of the Bank, and serves its mission to improve people's lives with digital products and services. The direction is clear: from governed foundations, through assistants and embedded AI, to bounded AI agents under human oversight, with accountability for every Solution with a named individual.",
-          "ru": "AICC создан для того, чтобы Банк мог внедрять AI как управляемый инструмент, который создаёт измеримую ценность. Внедрение повышает качество, скорость и единообразие операций и услуг Банка и способствует реализации его миссии — улучшать жизнь людей с помощью цифровых продуктов и услуг. Направление определено: от управляемой основы — через ассистентов и встроенный AI — к AI-агентам с ограниченными полномочиями под контролем со стороны человека; за каждое решение отвечает конкретное назначенное лицо."
+          "ru": "AICC создан для того, чтобы Банк внедрял AI как управляемый инструмент с измеримой пользой. Внедрение AI повышает качество, скорость и единообразие операций и услуг Банка и помогает ему выполнять свою миссию — улучшать жизнь людей с помощью цифровых продуктов и услуг. Путь понятен: от управляемой основы — через ассистентов и AI, встроенный в процессы, — к AI-агентам с ограниченными полномочиями под контролем со стороны человека. За каждое решение отвечает конкретный работник, назначенный ответственным."
         },
         "links": [
           {
@@ -528,7 +528,7 @@
         },
         "text": {
           "en": "AICC acts under the mandate of the Executive Sponsor, whom the Board names. It does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work, and it is not a Control Function or a platform team of the Bank and does not operate a Solution at the scale of the Bank. It reports to the Executive Sponsor, who may bring its reports, findings, strategy, and Proposals to the Board Committee or the Board. The Control Functions stay independent and may stop a Solution, and internal audit gives assurance only. The AICC Lead reports to the Executive Sponsor each quarter. The Board oversees AI through the Board Committee, which the Executive Sponsor tells at once of a major AI Incident and of a risk accepted beyond the AI Risk Appetite Statement.",
-          "ru": "AICC действует на основании мандата куратора AICC, которого назначает Совет директоров. AICC не владеет платформой AI и не эксплуатирует её, не отвечает за бизнес-результаты направления, не устанавливает правила контрольной функции и не проводит валидацию собственной работы; AICC не является контрольной функцией или платформенной командой Банка и не эксплуатирует решения в масштабе Банка. AICC подотчётен куратору AICC, который вправе выносить отчёты, выводы, стратегию и предложения AICC на рассмотрение Комитета Совета директоров или Совета директоров. Контрольные функции сохраняют независимость и вправе остановить применение решения; внутренний аудит проводит только независимую оценку. Руководитель AICC ежеквартально отчитывается перед куратором AICC. Совет директоров осуществляет надзор за применением AI через Комитет Совета директоров, которому куратор AICC незамедлительно сообщает о крупном инциденте AI и о риске, принятом сверх Заявления о риск-аппетите в отношении AI."
+          "ru": "AICC действует по мандату куратора AICC, которого назначает Совет директоров. AICC не владеет платформой AI и не эксплуатирует её, не отвечает за бизнес-результаты направлений, не пишет правила вместо контрольных функций и не проводит валидацию собственной работы. AICC — не контрольная функция и не платформенная команда Банка, и решения в масштабе всего Банка он не эксплуатирует. AICC подотчётен куратору AICC: руководитель AICC каждый квартал отчитывается перед ним. Куратор AICC вправе вынести отчёты, выводы, стратегию и предложения AICC на рассмотрение Комитета Совета директоров или Совета директоров. Контрольные функции независимы и вправе остановить применение решения, а внутренний аудит только даёт независимую оценку. Совет директоров осуществляет надзор за применением AI через Комитет Совета директоров. О крупном инциденте AI и о риске, принятом сверх Заявления о риск-аппетите в отношении AI, куратор AICC сообщает Комитету незамедлительно."
         },
         "links": [
           {
@@ -555,7 +555,7 @@
         },
         "text": {
           "en": "Each Solution is assigned a Risk Tier, which sets the review, validation, human oversight, and speed of release that apply to it. The Bank accepts risk from AI where the benefit is measured and the controls are proportionate, and it does not accept a breach of law or regulation.",
-          "ru": "Каждому решению присваивается категория риска, от которой зависят порядок рассмотрения, валидация, контроль со стороны человека и скорость выпуска. Банк готов принимать риск применения AI, если польза измерена, а меры контроля соразмерны, и не допускает нарушения законодательства или требований регулирования."
+          "ru": "Каждому решению присваивается категория риска. От неё зависят порядок рассмотрения, валидация, контроль со стороны человека и скорость выпуска. Банк готов принимать риски AI, если польза измерена, а меры контроля соразмерны риску. Нарушение законодательства и требований регулятора недопустимо."
         },
         "links": [
           {
@@ -582,7 +582,7 @@
         },
         "text": {
           "en": "Three values guide the work: integrity, prudence, and respect for people. The principles of adoption, application, work, and delivery follow from them.",
-          "ru": "Работой руководят три ценности: добросовестность, осмотрительность и уважение к людям. Из них вытекают принципы внедрения, применения, работы и поставки."
+          "ru": "Работу AICC определяют три ценности: добросовестность, осмотрительность и уважение к людям. Из них следуют принципы внедрения, применения, работы и поставки."
         },
         "links": [
           {
@@ -603,7 +603,7 @@
   "values_page": {
     "intro": {
       "en": "The values and principles of AICC follow the values of the Bank and the Statement of Intent on the adoption of artificial intelligence. They state what AICC stands for, how it decides, and how it delivers. AICC holds itself to them first, and asks the same of every Solution it proposes to the Bank.",
-      "ru": "Ценности и принципы AICC основаны на ценностях Банка и Заявлении о намерениях по внедрению AI. Они определяют, на чём стоит AICC, как он принимает решения и как создаёт результаты. AICC прежде всего соблюдает их сам и предъявляет те же требования к каждому решению, которое предлагает Банку."
+      "ru": "Ценности и принципы AICC вытекают из ценностей Банка и Заявления о намерениях по внедрению AI. Они говорят о том, за что выступает AICC, как он делает выбор и как доводит работу до результата. AICC в первую очередь следует им сам и требует того же от каждого решения, которое предлагает Банку."
     },
     "groups": [
       {
@@ -614,7 +614,7 @@
         },
         "applies": {
           "en": "Three values guide every decision of AICC: integrity, prudence, and respect for people. They are the values on which the Bank adopts AI, and AICC is their first keeper. Where speed and value compete with them, the values prevail.",
-          "ru": "Каждым управленческим решением AICC руководят три ценности: добросовестность, осмотрительность и уважение к людям. На этих ценностях Банк строит внедрение AI, и AICC первым обеспечивает их соблюдение. Если скорость или выгода вступают с ними в противоречие, приоритет имеют ценности."
+          "ru": "Три ценности стоят за каждым управленческим решением AICC: добросовестность, осмотрительность и уважение к людям. На них Банк строит внедрение AI, а AICC — их первый хранитель. Если скорость или выгода вступают с ними в противоречие, приоритет за ценностями."
         },
         "source": [
           "statement-of-intent",
@@ -629,7 +629,7 @@
         },
         "applies": {
           "en": "AICC adopts AI where it earns its place. These principles decide where AI is introduced, where it is extended, and where it is withdrawn, so that the Bank invests in what works and learns from what does not.",
-          "ru": "AICC внедряет AI там, где он оправдывает своё место. Эти принципы определяют, где AI вводится, где его применение расширяется и где прекращается, чтобы Банк инвестировал в то, что работает, и учился на том, что не сработало."
+          "ru": "AICC внедряет AI там, где он себя оправдывает. Эти принципы определяют, где AI вводить, где расширять его применение и где сворачивать, чтобы Банк вкладывал в то, что работает, и учился на том, что не сработало."
         },
         "source": [
           "statement-of-intent",
@@ -644,7 +644,7 @@
         },
         "applies": {
           "en": "Every use of AI in the Bank answers to these principles, whether AICC built it or not. They are the commitment the Bank makes to its customers, its employees, its regulators, and its auditors: accountable, fair, explainable, private, secure, overseen by people, and compliant.",
-          "ru": "Этим принципам подчиняется каждый случай применения AI в Банке независимо от того, создан ли он AICC. Они выражают обязательство Банка перед клиентами, работниками, надзорными органами и аудиторами: подотчётность, справедливость, объяснимость, конфиденциальность, безопасность, контроль со стороны человека и соответствие требованиям."
+          "ru": "Эти принципы распространяются на любое применение AI в Банке, независимо от того, создавал ли его AICC. В них — обязательство Банка перед клиентами, работниками, надзорными органами и аудиторами: подотчётность, справедливость, объяснимость, конфиденциальность, безопасность, контроль со стороны человека и соответствие требованиям."
         },
         "source": [
           "statement-of-intent",
@@ -659,7 +659,7 @@
         },
         "applies": {
           "en": "This is how AICC runs itself: close to the facts, quick to reverse, light on process, and measured by outcomes. AICC is the example of the way of working that it proposes to the Bank.",
-          "ru": "Так AICC организует собственную работу: опирается на факты, готов быстро пересматривать управленческие решения, обходится минимумом процедур и оценивается по результатам. AICC сам является примером подхода к работе, который предлагает Банку."
+          "ru": "Так AICC организует собственную работу: опирается на факты, готов быстро пересматривать управленческие решения, обходится минимумом процедур и оценивается по результатам. AICC сам служит примером того подхода к работе, который предлагает Банку."
         },
         "source": [
           "operating-model",
@@ -674,7 +674,7 @@
         },
         "applies": {
           "en": "This is how the Teams of AICC build: visible, in small steps, value first, with quality and control built into the flow rather than added after it. Working Solutions and evidence count more than documents and opinion.",
-          "ru": "Так команды AICC создают решения: работа визуализирована, ведётся небольшими шагами, на первом месте ценность, а качество и контроль встраиваются в процесс, а не добавляются после него. Работающие решения и фактические данные значат больше, чем документы и мнения."
+          "ru": "Так команды AICC создают решения: работа видна на доске, идёт короткими шагами, ценность — на первом месте, а качество и контроль встроены в процесс, а не добавляются в конце. Работающие решения и факты весят больше документов и мнений."
         },
         "source": [
           "solution-lifecycle-model",
@@ -689,14 +689,14 @@
       },
       "text": {
         "en": "To make artificial intelligence a trusted, everyday capability of the Bank: to prove its value with the functions that serve the customers of the Bank, to set the practice by which the Bank adopts it within the standards that the Bank sets, and to keep every use of it accountable to people.",
-        "ru": "Сделать AI надёжным повседневным инструментом Банка: подтверждать его ценность вместе с подразделениями, которые обслуживают клиентов Банка, формировать практику его внедрения в пределах установленных Банком стандартов и обеспечивать, чтобы за каждый случай применения AI отвечали люди."
+        "ru": "Сделать AI надёжным повседневным инструментом Банка: доказывать его пользу вместе с подразделениями, которые обслуживают клиентов, выстраивать практику его внедрения в рамках стандартов Банка и следить, чтобы за каждым применением AI стоял ответственный человек."
       }
     }
   },
   "explore_page": {
     "intro": {
       "en": "The charter is the body of knowledge of the AI Competence Center. It states how the unit is mandated, governed, and operated, and it is the source of truth for what AICC is, what it produces, and how it keeps its records. This page shows how the charter is organized on this site and where to start.",
-      "ru": "Корпус нормативных документов — свод знаний Центра компетенций по AI. Он устанавливает мандат подразделения, порядок управления им и порядок его работы и является единственным достоверным источником сведений о том, что такое AICC, что он создаёт и как ведёт записи. На этой странице показано, как корпус представлен на портале и с чего начать."
+      "ru": "Корпус нормативных документов — это свод знаний Центра компетенций по AI. Он определяет мандат подразделения, порядок управления им и порядок его работы. Это единственный достоверный источник сведений о том, что такое AICC, что он создаёт и как ведёт записи. Здесь показано, как корпус устроен на портале и с чего начать чтение."
     },
     "parts_title": {
       "en": "The charter in four parts",
@@ -704,7 +704,7 @@
     },
     "parts_lead": {
       "en": "The charter has four kinds of content. Each answers one question, and each has its place on this site. The Registry and the Portfolio hold the records of the work; they are outside the charter and are not on this site.",
-      "ru": "Корпус содержит материалы четырёх видов. Каждый вид отвечает на один вопрос и имеет своё место на портале. Записи о работе содержатся в реестре и портфеле; они не входят в корпус и на портале не публикуются."
+      "ru": "В корпусе материалы четырёх видов. Каждый отвечает на свой вопрос и имеет своё место на портале. Записи о работе хранятся в реестре и портфеле: они не входят в корпус и на портале не публикуются."
     },
     "parts": [
       {
@@ -746,7 +746,7 @@
         },
         "where": {
           "en": "Beside their workflows, as companion guides",
-          "ru": "Рядом со своими workflow, как связанные руководства"
+          "ru": "Рядом со своими workflow, как сопутствующие руководства"
         }
       },
       {
@@ -789,21 +789,21 @@
     },
     "routes_lead": {
       "en": "A reader who is new to AICC reads About AICC, then What AICC does, and keeps the Vocabulary at hand. A reader with a purpose follows one of the routes below.",
-      "ru": "Читателю, который впервые знакомится с AICC, следует прочитать раздел «О центре AICC», затем страницу «Чем мы занимаемся», держа под рукой документ «Терминология и стиль». Читатель с конкретной целью может воспользоваться одним из маршрутов ниже."
+      "ru": "Если вы только знакомитесь с AICC, начните с раздела «О центре AICC», затем прочитайте страницу «Чем мы занимаемся», а документ «Терминология и стиль» держите под рукой. Если у вас конкретная цель, выберите один из маршрутов ниже."
     },
     "control_title": {
       "en": "How the charter is kept",
-      "ru": "Порядок ведения корпуса"
+      "ru": "Как ведётся корпус"
     },
     "control": {
       "en": "The footer identifies the corpus edition of this site. Each document and template shows its own identifier, status, revision, and revised date; the edition number does not replace those revisions. Document, workflow, guide, and template pages are generated from the charter. Explanatory pages are written for the site, state no rule, and belong to the source edition in the footer (Document Catalog 5.4). A translation identifies that source edition and the revision of each document it translates. Where a page and a document differ, the document prevails. The Document Catalog states the status, the revision, and the life cycle of each document and template, and the AICC Lead activates them. Each document carries its change history, shown at the end of its page. The controls that can be tested are listed in the Operating Model, section 8, and the evidence of each is held in the Registry.",
-      "ru": "В нижней части портала указана версия корпуса, к которой относится портал. Для каждого документа и шаблона указаны собственные идентификатор, статус, версия и дата пересмотра; номер версии корпуса эти версии не заменяет. Страницы документов, workflow, руководств и шаблонов формируются из корпуса. Пояснительные страницы пишутся для портала, не устанавливают правил и относятся к версии источников, указанной в нижней части портала (п. 5.4 Каталога документов). Перевод указывает эту версию источников и версию каждого переводимого документа. При расхождении страницы и документа приоритет имеет документ. Статус, версию и жизненный цикл каждого документа и шаблона устанавливает Каталог документов, а вводит их в действие руководитель AICC. Каждый документ содержит журнал изменений, который показан в конце его страницы. Контрольные процедуры, поддающиеся тестированию, перечислены в разделе 8 Операционной модели, а подтверждающие материалы по каждой из них хранятся в реестре."
+      "ru": "Внизу каждой страницы указана версия корпуса, к которой относится портал. У каждого документа и шаблона есть свои идентификатор, статус, версия и дата пересмотра; номер версии корпуса их не заменяет. Страницы документов, workflow, руководств и шаблонов формируются из корпуса. Пояснительные страницы пишутся для портала, правил не устанавливают и относятся к версии источников, указанной внизу страницы (п. 5.4 Каталога документов). Перевод указывает эту версию источников и версию каждого переведённого документа. Если страница расходится с документом, действует документ. Статус, версию и жизненный цикл каждого документа и шаблона устанавливает Каталог документов, а вводит их в действие руководитель AICC. У каждого документа есть журнал изменений — он приведён в конце страницы документа. Контрольные процедуры, которые можно протестировать, перечислены в разделе 8 Операционной модели, а подтверждения их выполнения хранятся в реестре."
     }
   },
   "strategy_page": {
     "intro": {
       "en": "The AI adoption strategy of the Bank is shaped by AICC from what it proves, as a series of Proposals on which the Bank decides (Business Model 2.3). It starts from the mission and the Strategic Pillars of the Bank and from the top Strategic Priorities of the Bank for AI, is carried through the way AICC invests, engages, delivers, and governs, and is measured along a road of five Maturity Levels. This page brings the strands together in one place; each points to the document that governs it.",
-      "ru": "Стратегию внедрения AI в Банке формирует AICC на основе подтверждённых результатов — в виде последовательности предложений, по которым решает Банк (п. 2.3 Бизнес-модели). Стратегия исходит из миссии и стратегических направлений Банка и из ключевых стратегических приоритетов Банка в области AI, реализуется через то, как AICC инвестирует, взаимодействует с заказчиками, создаёт решения и управляет своей работой, и измеряется продвижением по пяти уровням зрелости. На этой странице все составляющие стратегии собраны вместе; для каждой указан документ, который её устанавливает."
+      "ru": "AICC формирует стратегию внедрения AI из того, что уже доказано на практике: это ряд предложений, по которым решения принимает Банк (п. 2.3 Бизнес-модели). Стратегия исходит из миссии Банка, его стратегических направлений и ключевых стратегических приоритетов Банка в области AI. Она реализуется через то, как AICC распределяет инвестиции, взаимодействует с заказчиками, создаёт решения и организует управление, а продвижение измеряется пятью уровнями зрелости. Здесь все составляющие стратегии собраны на одной странице, и для каждой указан документ, который её устанавливает."
     },
     "bank_title": {
       "en": "The strategy of the Bank",
@@ -811,7 +811,7 @@
     },
     "bank_lead": {
       "en": "The mission of the Bank is to improve people's lives with digital products and services. Its strategy rests on four Strategic Pillars. The adoption of AI serves each of them, as the Statement of Intent states, and the Strategic Priorities below are the themes through which it does so.",
-      "ru": "Миссия Банка — улучшать жизнь людей с помощью цифровых продуктов и услуг. Стратегия Банка опирается на четыре стратегических направления. Внедрение AI способствует реализации каждого из них, как указано в Заявлении о намерениях по внедрению AI, а приведённые ниже стратегические приоритеты — это темы, через которые это происходит."
+      "ru": "Миссия Банка — улучшать жизнь людей с помощью цифровых продуктов и услуг. Стратегия Банка опирается на четыре стратегических направления. Внедрение AI вносит вклад в каждое из них, как сказано в Заявлении о намерениях по внедрению AI. Через какие темы это происходит, показывают стратегические приоритеты ниже."
     },
     "pillars_carried": {
       "Innovative leadership": {
@@ -833,19 +833,19 @@
     },
     "priorities_title": {
       "en": "The Strategic Priorities of the Bank",
-      "ru": "Стратегические приоритеты Банка"
+      "ru": "Стратегические приоритеты Банка в области AI"
     },
     "priorities_lead": {
       "en": "The top Strategic Priorities of the Bank for AI are stated in order, each resting on a governed foundation of people, data, and a shared AI Platform. They are the strategic themes of the Portfolio: the Executive Sponsor sets them with the Board, each with an Investment Envelope, and every Initiative that AICC takes in fits one of them. The Priorities are the Bank's; AICC shapes the AI adoption strategy within them as Proposals (Business Model 2.3; Statement of Intent 9).",
-      "ru": "Ключевые стратегические приоритеты Банка в области AI перечислены по порядку; каждый опирается на управляемую основу из людей, данных и общей платформы AI. Это стратегические темы портфеля: куратор AICC определяет их по согласованию с Советом директоров, для каждой устанавливается инвестиционный бюджет, и каждая инициатива, которую AICC принимает в работу, относится к одной из них. Приоритеты принадлежат Банку; в их пределах AICC формирует стратегию внедрения AI в виде предложений (п. 2.3 Бизнес-модели; раздел 9 Заявления о намерениях по внедрению AI)."
+      "ru": "Ключевые стратегические приоритеты Банка в области AI приведены в порядке очерёдности. Каждый опирается на управляемую основу: людей, данные и общую платформу AI. Это стратегические темы портфеля. Куратор AICC определяет их по согласованию с Советом директоров и устанавливает для каждой инвестиционный бюджет, а любая инициатива, которую AICC берёт в работу, относится к одной из них. Приоритеты определяет Банк, а AICC в их рамках готовит предложения по стратегии внедрения AI (п. 2.3 Бизнес-модели; раздел 9 Заявления о намерениях по внедрению AI)."
     },
     "aspects_title": {
       "en": "The strategy across the aspects of AICC",
-      "ru": "Стратегия по направлениям деятельности AICC"
+      "ru": "Стратегия по аспектам работы AICC"
     },
     "aspects_lead": {
       "en": "One strategy runs through every aspect of how AICC works. The table states, for each aspect, the strategic choice that the charter makes, who decides it, and where it is written.",
-      "ru": "Единая стратегия проходит через все стороны работы AICC. Для каждой из них в таблице указаны стратегический выбор, закреплённый в корпусе, кто его утверждает и где он установлен."
+      "ru": "Одна стратегия охватывает все стороны работы AICC. В таблице для каждой из них указаны стратегический выбор, закреплённый в корпусе, кто принимает решение и в каком документе это записано."
     },
     "aspects": [
       {
@@ -855,7 +855,7 @@
         },
         "choice": {
           "en": "AICC is an internal consulting and innovation lab, not a cost center that charges its clients. It does not charge the functions; the Domain pays from its Investment Envelope for the run, the licenses, and the provider costs of a Solution, and the Executive Sponsor owns the budget of AICC itself. Value is tracked as the benefit that the function confirms and the flow of the work.",
-          "ru": "AICC — внутренняя консультационная и инновационная лаборатория, а не центр затрат, выставляющий счета своим заказчикам. AICC не взимает плату с подразделений; расходы на эксплуатацию, лицензии и услуги поставщиков решения направление несёт за счёт своего инвестиционного бюджета, а бюджетом самого AICC распоряжается куратор AICC. Ценность отслеживается как выгода, подтверждённая подразделением, и как поток работ."
+          "ru": "AICC — внутренняя консультационная и инновационная лаборатория, а не центр затрат, который выставляет счета заказчикам. Подразделения ничего не платят AICC. Эксплуатацию решения, лицензии и услуги поставщиков направление оплачивает за счёт своего инвестиционного бюджета, а бюджетом самого AICC распоряжается куратор AICC. Ценность измеряется выгодой, которую подтверждает подразделение, и потоком работ."
         },
         "decides": {
           "en": "Executive Sponsor; Domain Owners for the Solutions of their Domains",
@@ -873,7 +873,7 @@
         },
         "choice": {
           "en": "Investment goes to Strategic Priorities and to the Teams through Investment Envelopes, one for each priority, set each year. Investment Guardrails state what may be committed without the Executive Sponsor and which Initiatives need the approval of the Executive Sponsor. Benefits are reported against the Envelope of each priority.",
-          "ru": "Инвестиции направляются на стратегические приоритеты и в команды через инвестиционные бюджеты — по одному на каждый приоритет, устанавливаемые ежегодно. Инвестиционные ограничения определяют, какие обязательства могут быть приняты без решения куратора AICC и каким инициативам требуется одобрение куратора AICC. Выгоды отражаются в отчётности в сопоставлении с бюджетом каждого приоритета."
+          "ru": "Инвестиции распределяются между стратегическими приоритетами и командами через инвестиционные бюджеты: на каждый приоритет — свой бюджет, который устанавливается раз в год. Инвестиционные ограничения определяют, какие обязательства можно принять без решения куратора AICC и каким инициативам нужно его одобрение. Выгоды отражаются в отчётности в сравнении с бюджетом каждого приоритета."
         },
         "decides": {
           "en": "Executive Sponsor, at the yearly Steering",
@@ -891,7 +891,7 @@
         },
         "choice": {
           "en": "Business initiatives are taken in, funded, continued, deferred, or rejected on evidence. The Portfolio runs on four loops, from the strategic loop of the year to the backlog care of the week, through a portfolio Kanban with a limit on the Active Initiatives. Every Initiative has a business case and is first probed as an MVP before the decision to continue.",
-          "ru": "Бизнес-инициативы принимаются к рассмотрению, финансируются, продолжаются, откладываются или отклоняются на основе фактических данных. Портфель работает в четырёх циклах — от ежегодного стратегического цикла до еженедельного ведения бэклога — через канбан-доску портфеля с лимитом инициатив в работе. У каждой инициативы есть бизнес-кейс, и прежде чем будет решено продолжать работу, она проверяется на MVP."
+          "ru": "Какие бизнес-инициативы брать в работу, финансировать, продолжать, откладывать или отклонять, решается на основе фактов. Портфелем управляют в четырёх циклах — от ежегодного стратегического до еженедельного ведения бэклога — через канбан-доску портфеля с лимитом инициатив в работе. У каждой инициативы есть бизнес-кейс, и прежде чем решить, продолжать ли её, идею проверяют на пилоте."
         },
         "decides": {
           "en": "Executive Sponsor for the frame and the mix; AICC Lead for the flow",
@@ -909,7 +909,7 @@
         },
         "choice": {
           "en": "AICC proves the use of AI with the functions and proposes what the Bank should adopt at scale; the Bank decides on the Proposals and the Domains execute. Each Domain applies the shared principles and standards within its own regulation, appoints Domain Experts, and uses AI in its own processes with governed knowledge. Shared AI Platform components, knowledge, and standards take precedence over individual Solutions.",
-          "ru": "AICC вместе с подразделениями подтверждает применимость AI и предлагает, что Банку целесообразно внедрить в масштабе Банка; Банк решает по предложениям, а направления их реализуют. Каждое направление применяет общие принципы и стандарты с учётом применимого к нему регулирования, назначает экспертов направления и применяет AI в своих процессах, опираясь на управляемую базу знаний. Общие компоненты платформы AI, знания и стандарты имеют приоритет перед отдельными решениями."
+          "ru": "AICC вместе с подразделениями доказывает пользу AI и предлагает, что стоит внедрить во всём Банке. Решения по предложениям принимает Банк, а выполняют их направления. Каждое направление применяет общие принципы и стандарты с учётом своего регулирования, назначает экспертов направления и использует AI в своих процессах с опорой на управляемую базу знаний. Общие компоненты платформы AI, знания и стандарты имеют приоритет перед отдельными решениями."
         },
         "decides": {
           "en": "The Bank on each Proposal; the Domain Owners within their Domains",
@@ -927,7 +927,7 @@
         },
         "choice": {
           "en": "A function brings a need, AICC commits to an Engagement in a Service Agreement on a best-effort basis within the capability it has, delivers an outcome with its evidence, and supports it at the agreed level. Either side may end or redirect the Engagement at the end of an Iteration.",
-          "ru": "Подразделение приходит с потребностью; AICC принимает обязательства по взаимодействию с заказчиком в соглашении о взаимодействии и исполняет их с приложением усилий в разумных пределах, исходя из имеющихся ресурсов, передаёт результат с подтверждающими материалами и поддерживает его на согласованном уровне. Любая сторона вправе завершить взаимодействие или изменить его направление по окончании итерации."
+          "ru": "Подразделение приходит с задачей. AICC фиксирует свои обязательства в соглашении о взаимодействии и выполняет их в меру имеющихся возможностей, сдаёт результат с подтверждением и поддерживает его на согласованном уровне. Любая сторона вправе завершить или перенаправить взаимодействие в конце итерации."
         },
         "decides": {
           "en": "AICC Lead issues the commitment; the Domain Owner accepts the outcome",
@@ -945,7 +945,7 @@
         },
         "choice": {
           "en": "Deliver in small steps: probe with an MVP, measure against the success Measures, then scale. Work is visible, limited in progress, and paced by Program Increments and Iterations on fixed dates. Quality and control are built into the flow: the check or validation and the controls of the AI Policy are steps of delivery, not a stage after it.",
-          "ru": "Работа ведётся небольшими шагами: гипотеза проверяется на MVP, результат измеряется по показателям успеха, и только затем решение масштабируется. Работа визуализирована, объём незавершённой работы ограничен, а ритм задают программные инкременты (PI) и итерации с фиксированными датами. Качество и контроль встроены в процесс: проверка или валидация и контрольные процедуры Политики применения AI — это шаги поставки, а не отдельная стадия после неё."
+          "ru": "Работа идёт короткими шагами: идею сначала проверяют на пилоте, результат измеряют по показателям успеха и только потом масштабируют. Всё видно на доске, объём незавершённой работы ограничен, ритм задают программные инкременты (PI) и итерации с фиксированными датами. Качество и контроль встроены в поставку: проверка или валидация и контрольные процедуры Политики применения AI — её шаги, а не отдельная стадия после неё."
         },
         "decides": {
           "en": "AICC Lead and the Teams",
@@ -963,7 +963,7 @@
         },
         "choice": {
           "en": "Every Solution has one of three types that sets its life: a Service that AICC runs for its whole life, a Product built for one consumer and supported on demand, or an Experiment that ends in a Proposal. AICC also oversees and reports on the Adopted Solutions that others deliver.",
-          "ru": "Каждое решение относится к одному из трёх типов, который определяет его жизненный цикл: сервис, который AICC эксплуатирует на протяжении всего жизненного цикла; продукт, созданный для одного потребителя и поддерживаемый по запросу; эксперимент, который завершается предложением. AICC также контролирует внедрённые решения, которые создают другие участники, и отчитывается о них."
+          "ru": "Каждое решение относится к одному из трёх типов, и от типа зависит его дальнейшая судьба: сервис AICC эксплуатирует весь срок его жизни; продукт создаётся для одного потребителя и поддерживается по запросу; эксперимент завершается предложением. Кроме того, AICC контролирует внедрённые решения, созданные другими, и отчитывается о них."
         },
         "decides": {
           "en": "Domain Owner approves the Solution Definition; AICC Lead assigns the Risk Tier",
@@ -981,7 +981,7 @@
         },
         "choice": {
           "en": "One shared AI Platform serves the Bank, provided and operated outside AICC, with data separated as its classification requires. Data is classified, and the classification decides which data may reach which models and where they run. Knowledge sources have named owners and review cycles, and AI answers from approved, current, cited sources.",
-          "ru": "Банк обслуживает единая общая платформа AI, которую предоставляют и эксплуатируют вне AICC; данные на ней хранятся раздельно в соответствии с их классификацией. Данные классифицируются, и от класса зависит, какие данные могут передаваться каким моделям и где эти модели работают. У источников знаний есть назначенные ответственные и установленная периодичность пересмотра, а AI отвечает по утверждённым актуальным источникам со ссылками на них."
+          "ru": "У Банка одна общая платформа AI. Её предоставляют и эксплуатируют вне AICC, а данные на ней разделены в соответствии с классификацией. От класса данных зависит, какие данные можно передавать каким моделям и где эти модели работают. У источников знаний есть назначенные владельцы и сроки пересмотра, а ответы AI опираются на утверждённые актуальные источники со ссылками на них."
         },
         "decides": {
           "en": "Platform Owner for the Platform; AICC states the requirements",
@@ -999,7 +999,7 @@
         },
         "choice": {
           "en": "AI augments the work of employees. Employees are trained by role before they use AI, each Domain appoints Domain Experts who enable adoption in that Domain, and AICC maintains training, templates, and communities of practice.",
-          "ru": "AI помогает работникам в их работе. До начала применения AI работники проходят обучение по ролям; каждое направление назначает экспертов направления, которые содействуют внедрению в нём, а AICC поддерживает обучение, шаблоны и профессиональные сообщества."
+          "ru": "AI расширяет возможности работников. Прежде чем пользоваться AI, работники проходят обучение по своей роли. Каждое направление назначает экспертов направления, которые помогают внедрять AI у себя, а AICC поддерживает программы обучения, шаблоны и профессиональные сообщества."
         },
         "decides": {
           "en": "Domain Owners for their Domains; AICC Lead for the training",
@@ -1017,7 +1017,7 @@
         },
         "choice": {
           "en": "Providers of AI models and services are checked before use by the Control Function Contacts of information security, data protection, and legal, or by the Contact of information security alone for a Risk Tier 1 Solution or a provider already checked, and again at each reassessment and on a change of terms or model, with contractual terms and fallback and exit arrangements. The Bank is answerable for AI that it procures as for AI that it develops.",
-          "ru": "Поставщиков моделей и сервисов AI до начала использования проверяют представители контрольных функций по информационной безопасности, защите данных и правовым вопросам, а для решения категории риска 1 или уже проверенного поставщика — только представитель контрольной функции по информационной безопасности. Проверка повторяется при каждой повторной оценке и при изменении условий или модели и охватывает договорные условия, резервный вариант и порядок выхода. Банк отвечает за приобретаемый AI так же, как за AI, который разрабатывает сам."
+          "ru": "До начала работы поставщиков моделей и сервисов AI проверяют представители контрольных функций по информационной безопасности, защите данных и правовым вопросам. Для решения категории риска 1 или уже проверенного поставщика достаточно представителя по информационной безопасности. Проверку поставщика повторяют при каждой повторной оценке, а также при смене условий или модели; она охватывает договорные условия, резервный вариант и порядок выхода. Банк отвечает за купленный AI так же, как за созданный своими силами."
         },
         "decides": {
           "en": "The Control Function Contacts, as the AI Policy 4.1 states",
@@ -1035,7 +1035,7 @@
         },
         "choice": {
           "en": "The Bank accepts risk from AI where the benefit is measured and the controls are proportionate to the Risk Tier, and it does not accept a breach of law or regulation. Each Solution carries a Risk Tier that sets its review, validation, human oversight, and speed of release. The Control Functions stay independent and may stop a Solution.",
-          "ru": "Банк готов принимать риск применения AI, если польза измерена, а меры контроля соразмерны категории риска, и не допускает нарушения законодательства или требований регулирования. Каждому решению присвоена категория риска, от которой зависят порядок рассмотрения, валидация, контроль со стороны человека и скорость выпуска. Контрольные функции сохраняют независимость и вправе остановить применение решения."
+          "ru": "Банк готов принимать риски AI, если польза измерена, а меры контроля соразмерны категории риска. Нарушение законодательства и требований регулятора недопустимо. От категории риска решения зависят порядок рассмотрения, валидация, контроль со стороны человека и скорость выпуска. Контрольные функции независимы и вправе остановить применение решения."
         },
         "decides": {
           "en": "Executive Sponsor decides the appetite; AICC Lead owns it; Control Functions validate",
@@ -1053,7 +1053,7 @@
         },
         "choice": {
           "en": "AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, the value scored for the PI Objectives, the Domains and employees using approved Solutions, and the AI Incidents and control breaches. Progress on the road is measured by the Measures of each Maturity Level. The AICC Lead reports to the Executive Sponsor each quarter, and the Executive Sponsor may bring the report to the Board Committee or the Board.",
-          "ru": "AICC измеряет реализованные выгоды в сопоставлении с инвестиционным бюджетом, время от предложения до одобрения и от одобрения до приёмки, бизнес-ценность, оценённую по целям PI, число направлений и работников, использующих одобренные решения, а также инциденты AI и нарушения контрольных процедур. Продвижение по пути развития измеряется показателями каждого уровня зрелости. Руководитель AICC ежеквартально отчитывается перед куратором AICC, а куратор AICC вправе вынести отчёт на рассмотрение Комитета Совета директоров или Совета директоров."
+          "ru": "AICC измеряет: полученные выгоды в сравнении с инвестиционным бюджетом; время от предложения до одобрения и от одобрения до приёмки; бизнес-ценность по целям PI; число направлений и работников, которые пользуются одобренными решениями; инциденты AI и нарушения контрольных процедур. Продвижение по дорожной карте измеряется показателями каждого уровня зрелости. Руководитель AICC каждый квартал отчитывается перед куратором AICC, а куратор AICC вправе вынести отчёт на рассмотрение Комитета Совета директоров или Совета директоров."
         },
         "decides": {
           "en": "Executive Sponsor sets the targets each year",
@@ -1071,15 +1071,15 @@
     },
     "road_lead": {
       "en": "The Bank advances the adoption of AI through five Maturity Levels. Each Strategic Priority advances at its own pace, and a level is reached for a priority when its Measures are met. The timing and the scope of advancement are set by the Executive Sponsor in the Priorities, not in the charter.",
-      "ru": "Банк развивает применение AI, проходя пять уровней зрелости. Каждый стратегический приоритет продвигается в своём темпе; уровень считается достигнутым для приоритета, когда выполнены его показатели. Сроки и объём продвижения определяет куратор AICC в записи о приоритетах, а не корпус."
+      "ru": "Банк проходит в применении AI пять уровней зрелости. Каждый стратегический приоритет движется в своём темпе: уровень для приоритета достигнут, когда выполнены показатели этого уровня. Сроки и масштаб продвижения задаёт куратор AICC в записи о приоритетах, а не корпус документов."
     },
     "kept_title": {
       "en": "How the strategy is set and kept",
-      "ru": "Порядок установления и поддержания стратегии"
+      "ru": "Как стратегию устанавливают и поддерживают"
     },
     "kept": {
       "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2); at the same Steering the Executive Sponsor presents the yearly Proposal of the AI adoption strategy that the AICC Lead prepares, and the Bank decides on it (Operating Model 6.5). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, the approver of each Active Initiative decides on it, and the Executive Sponsor approves the Quarterly Report and may bring it to the Board Committee or the Board (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state.",
-      "ru": "Стратегия устанавливается раз в год и поддерживается ежеквартально. На ежегодном управляющем совещании в первые две недели декабря куратор AICC на основе стратегии Банка и приоритетов направлений определяет стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения, рассматривает выгоды в сопоставлении с каждым бюджетом и результаты по каждому приоритету, пересматривает документы и Заявление о риск-аппетите в отношении AI (п. 4.2 Модели управления портфелем). На том же совещании куратор AICC представляет ежегодное предложение по стратегии внедрения AI, подготовленное руководителем AICC, и по нему решает Банк (п. 6.5 Операционной модели). На ежеквартальном управляющем совещании куратор AICC подтверждает дорожную карту и структуру инициатив в пределах бюджетов, по каждой инициативе в работе решает лицо, которое её одобрило, а куратор AICC утверждает квартальный отчёт и вправе вынести его на рассмотрение Комитета Совета директоров или Совета директоров (п. 4.3 Модели управления портфелем; п. 7.2 Положения об AICC). Заявление о намерениях по внедрению AI пересматривается не реже одного раза в год, а также при существенном изменении в применении AI, в составе основных поставщиков или в регулировании (п. 13.3 Заявления о намерениях по внедрению AI). Действующие стратегические приоритеты и их бюджеты фиксируются в записи о приоритетах в реестре; портал излагает стратегию, а реестр отражает её текущее состояние."
+      "ru": "Стратегию устанавливают раз в год и каждый квартал поддерживают в актуальном состоянии. На ежегодном управляющем совещании, в первые две недели декабря, куратор AICC исходя из стратегии Банка и приоритетов направлений определяет стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения. Там же он сопоставляет выгоды с каждым бюджетом и результаты с каждым приоритетом, пересматривает документы и Заявление о риск-аппетите в отношении AI (п. 4.2 Модели управления портфелем). На том же совещании куратор AICC представляет ежегодное предложение по стратегии внедрения AI, которое готовит руководитель AICC, и Банк принимает по нему решение (п. 6.5 Операционной модели). На ежеквартальном управляющем совещании куратор AICC подтверждает дорожную карту и структуру инициатив в пределах бюджетов, по каждой инициативе в работе решает тот, кто её одобрил, а куратор AICC утверждает квартальный отчёт и вправе вынести его на рассмотрение Комитета Совета директоров или Совета директоров (п. 4.3 Модели управления портфелем; п. 7.2 Положения об AICC). Заявление о намерениях по внедрению AI пересматривается не реже раза в год, а также при существенных изменениях в применении AI, у основного поставщика AI или в регулировании (п. 13.3 Заявления о намерениях по внедрению AI). Действующие стратегические приоритеты и их бюджеты ведутся в записи о приоритетах в реестре: портал излагает стратегию, а реестр показывает её текущее состояние."
     }
   },
   "services_page": {

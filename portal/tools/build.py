@@ -1270,6 +1270,17 @@ def weight(p):
     return 'secondary'
 
 
+def parts_label(n, lang, m):
+    # Russian needs the plural form that agrees with the number: 1 часть, 2-4 части, 5+ частей.
+    if lang == 'ru':
+        if n % 10 == 1 and n % 100 != 11:
+            return 'часть'
+        if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
+            return 'части'
+        return 'частей'
+    return m['kind_parts']
+
+
 def page_meta(site, p, lang):
     m = site.msg[lang]
     kinds = {'document': 'kind_document', 'catalogue': 'kind_document', 'workflow': 'kind_workflow', 'guide': 'kind_guide', 'template': 'kind_template',
@@ -1279,9 +1290,9 @@ def page_meta(site, p, lang):
     if p.get('source_sections') and p.get('document'):
         n = len([x for x in site.pages if x.get('document') == p['document'] and x['source'][0] == p['source'][0]])
         if n > 1:
-            bits.append('%d %s' % (n, m['kind_parts']))
+            bits.append('%d %s' % (n, parts_label(n, lang, m)))
     elif p.get('series'):
-        bits.append('%d %s' % (len(series_pages(site, p)), m['kind_parts']))
+        bits.append('%d %s' % (len(series_pages(site, p)), parts_label(len(series_pages(site, p)), lang, m)))
     elif p.get('words'):
         bits.append('%s %s' % (format(p['words'], ','), m['kind_words']))
     return ' · '.join(b for b in bits if b)
