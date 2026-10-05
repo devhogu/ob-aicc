@@ -156,7 +156,7 @@
   "cat_type": "Тип",
   "cat_state": "Состояние",
   "cat_initiative": "Инициатива",
-  "cat_domain": "Домен",
+  "cat_domain": "Направление",
   "cat_receiver": "Получатель",
   "cat_asof": "Сведения из портфеля по состоянию на",
   "grp_templates": "Шаблоны",

@@ -33,7 +33,7 @@
     "responsible-ai": {
       "label": {
         "en": "Responsible AI",
-        "ru": "Ответственный AI"
+        "ru": "Ответственное применение AI"
       },
       "intro": {
         "en": "The Bank uses AI under rules that are proportionate to risk, and it asks its people to understand the technology they use. This section is a short course in seven parts, read in order or by tab, followed by the rules: the AI Policy and the AI risk and control workflow. The course explains; the rules prevail.",
@@ -42,7 +42,7 @@
       "icon": "shield-check",
       "line": {
         "en": "A short course on AI today, its risks, and the rules of the Bank.",
-        "ru": "Краткий курс об AI сегодня, связанных с ним рисках и правилах Банка."
+        "ru": "Краткий курс: AI сегодня, его риски и правила Банка."
       }
     },
     "governance": {
@@ -238,7 +238,7 @@
     },
     "newhere": {
       "en": "New to AICC, or to AI? Take the short course in Responsible AI, or follow the learning path for your role.",
-      "ru": "Впервые знакомитесь с AICC или с AI? Пройдите краткий курс в разделе «Ответственный AI» или воспользуйтесь учебной траекторией для своей роли."
+      "ru": "Впервые знакомитесь с AICC или с AI? Пройдите краткий курс в разделе «Ответственное применение AI» или воспользуйтесь учебной траекторией для своей роли."
     },
     "newhere_link": {
       "en": "Learning paths",
@@ -568,7 +568,7 @@
           {
             "label": {
               "en": "Responsible AI",
-              "ru": "Ответственный AI"
+              "ru": "Ответственное применение AI"
             },
             "to": "responsible-ai/index"
           }
@@ -718,7 +718,7 @@
         },
         "where": {
           "en": "About AICC, Responsible AI, Services, Portfolio, Delivery, Governance, and Organization, each document in the section of its subject; long documents are split into parts",
-          "ru": "Разделы «О центре AICC», «Ответственный AI», «Услуги», «Портфель», «Поставка», «Управление» и «Организация»: каждый документ размещён в разделе своей темы; объёмные документы разделены на части"
+          "ru": "Разделы «О центре AICC», «Ответственное применение AI», «Услуги», «Портфель», «Поставка», «Управление» и «Организация»: каждый документ размещён в разделе своей темы; объёмные документы разделены на части"
         }
       },
       {
@@ -732,7 +732,7 @@
         },
         "where": {
           "en": "Beside the documents that they illustrate, in Responsible AI, Services, Delivery, and Governance",
-          "ru": "Рядом с документами, которые они поясняют, в разделах «Ответственный AI», «Услуги», «Поставка» и «Управление»"
+          "ru": "Рядом с документами, которые они поясняют, в разделах «Ответственное применение AI», «Услуги», «Поставка» и «Управление»"
         }
       },
       {

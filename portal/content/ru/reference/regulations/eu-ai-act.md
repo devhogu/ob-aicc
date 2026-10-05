@@ -35,7 +35,7 @@ translation_status: reviewed
 
 ## 6. Связанные страницы
 
-- [Что означает ответственный AI — курс «Ответственный AI»](../../responsible-ai/what-responsible-ai-means.md)
+- [Что означает ответственное применение AI — курс «Ответственное применение AI»](../../responsible-ai/what-responsible-ai-means.md)
 - [AI в финансовых технологиях и цифровом банкинге](../../responsible-ai/ai-in-fintech-and-digital-banking.md)
 - [Нормативные акты и соблюдение требований](../../knowledge-base/acts-and-compliance.md)
 
