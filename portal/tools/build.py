@@ -21,6 +21,7 @@ import sys
 from urllib.parse import quote
 
 from markdown_it import MarkdownIt
+import workspace
 from localization import Sources, canonical_path, front_matter, validate_translations
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -943,11 +944,6 @@ def layout(site, p, lang, main_html, outline):
     A = site.assets(url)
     home = site.rel(url, '/%s/' % lang)
     other = [l for l in LANGS if l != lang][0]
-    sw = []
-    for l in LANGS:
-        href = site.rel(url, site.url(p, l))
-        cur = ' aria-current="true"' if l == lang else ''
-        sw.append('<a lang="%s" hreflang="%s" href="%s"%s>%s</a>' % (l, l, href, cur, l.upper()))
     nav = ['<a href="%s"%s>%s<span>%s</span></a>' % (home, ' aria-current="page"' if p['id'] == 'index' else '', icon('map'), esc(m['home']))]
     for s in site.sections:
         sec = site.auth['sections'][s['id']]
@@ -955,7 +951,7 @@ def layout(site, p, lang, main_html, outline):
         href = site.rel(url, site.url(sp, lang))
         here = p.get('section') == s['id']
         cur = ' aria-current="page"' if p['id'] == sp['id'] else (' aria-current="true"' if here else '')
-        nav.append('<a href="%s"%s>%s<span>%s</span></a>' % (href, cur, icon(sec['icon']), esc(sec['label'][lang])))
+        nav.append('<a href="%s"%s>%s<span>%s</span></a>' % (href, cur, icon(sec['icon']), esc({'portfolio': {'en': 'Portfolio management', 'ru': 'Управление портфелем'}, 'delivery': {'en': 'Delivery model', 'ru': 'Модель реализации'}}.get(s['id'], {}).get(lang, sec['label'][lang]))))
         if here:
             sub = []
             items = nav_groups(site, s['id'])
@@ -1020,20 +1016,15 @@ def layout(site, p, lang, main_html, outline):
 <link rel="stylesheet" href="{A}/ui/primitives.css">
 <link rel="stylesheet" href="{A}/ui/workspace.css">
 <link rel="stylesheet" href="{A}/charter.css?v={vcss}">
+<link rel="stylesheet" href="{workspace.asset(url, 'neighbours.css')}">
 <link rel="alternate" hreflang="{other}" href="{site.rel(url, site.url(p, other))}">
 <script src="{A}/site.js?v={vjs}" defer data-search="{A}/search-{lang}.json" data-t-none="{esc(m['search_none'])}" data-t-light="{esc(m['theme_to_light'])}" data-t-dark="{esc(m['theme_to_dark'])}" data-t-copied="{esc(m['copied'])}" data-t-mail-body="{esc(m['fb_mail_body'])}" data-t-dz-close="{esc(m['dz_close'])}"></script>
 </head>
-<body class="charter">
+<body class="charter" data-portal-section="aicc">
 <a class="o-skip" href="#main">{esc(m['skip'])}</a>
-<header class="o-header">
-  <a class="o-identity" href="{home}"><img src="{A}/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>{esc(m['site_name'])}</span></a>
-  <span class="header-scope">{esc(m['header_scope'])}</span>
-  <div class="o-search" role="search"><label class="o-sr-only" for="q">{esc(m['search_label'])}</label><input id="q" type="search" autocomplete="off" placeholder="{esc(m['search_placeholder'])}" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
-  <div class="o-tools"><nav class="lang-switch" aria-label="{esc(m['language_label'])}">{''.join(sw)}</nav><button id="theme-switch" type="button" class="theme-switch" aria-label="{esc(m['theme_to_dark'])}" title="{esc(m['theme_to_dark'])}"><span class="ts-moon">{icon('moon')}</span><span class="ts-sun">{icon('sun')}</span></button></div>
-</header>
+{workspace.header(url, lang, 'aicc', m)}
 <div class="o-frame">
-  <aside class="o-nav"><details open><summary>{esc(m['nav_summary'])}</summary><nav aria-label="{esc(m['nav_label'])}">{''.join(nav)}</nav></details>
-    <div class="nav-foot">{nav_legal}<p class="o-caption">{esc(m['baseline'])}</p></div></aside>
+  {workspace.navigation(url, lang, 'aicc', ''.join(nav), '<div class="nav-foot">' + nav_legal + '<p class="o-caption">' + esc(m['baseline']) + '</p></div>', m)}
   <main class="o-main" id="main" tabindex="-1">
     {bc}
     {reading}
@@ -1916,6 +1907,8 @@ def copy_assets():
     shutil.copy(os.path.join(PORTAL, 'ui', 'assets', 'FONT-USE.md'), os.path.join(dst, 'ui', 'assets', 'FONT-USE.md'))
     shutil.copy(os.path.join(PORTAL, 'site', 'charter.css'), os.path.join(dst, 'charter.css'))
     shutil.copy(os.path.join(PORTAL, 'site', 'site.js'), os.path.join(dst, 'site.js'))
+    for name in ('neighbours.css', 'discovery.css'):
+        shutil.copy(os.path.join(PORTAL, 'site', name), os.path.join(dst, name))
 
 
 def write(path, text):
@@ -1971,6 +1964,8 @@ def main():
             write(os.path.join(OUT, rel, 'index.html'), page)
             count += 1
         write(os.path.join(OUT, 'assets', 'search-%s.json' % lang), json.dumps(search_index(site, lang), ensure_ascii=False, separators=(',', ':')))
+    from neighbours import build_neighbours
+    count += build_neighbours(OUT)
     write(os.path.join(OUT, 'index.html'), gateway())
     print('built %d pages, %d diagrams (%d not rendered)' % (count, len(site.svgs), len(missing)))
 

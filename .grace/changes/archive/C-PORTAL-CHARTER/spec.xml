@@ -1,0 +1,66 @@
+<GraceChangeSpec graceVersion="4.0" status="superseded">
+  <C-PORTAL-CHARTER>
+    <Replacement>C-BASELINE-CLOSURE</Replacement>
+    <Summary>Publish the baseline charter (documents, workflows, guides, templates, vocabulary) through the existing AICC portal foundation as readable, navigable pages generated from the charter Markdown, with a Russian-first interface, a task-first home and start-here path, a clickable map of the unit, clause-level links, pre-rendered diagrams with text versions, and a visible baseline stamp on every page.</Summary>
+    <Problem>The portal holds only a home page and the statement of intent, hand-authored as JSON. The charter is about 90,000 words across nine documents, six workflows, five guides, and thirteen templates, written in Markdown with numbered clauses, tables, and Mermaid diagrams. Authoring it again as portal JSON would create a second model that drifts from the source, and the baseline needs to reach readers in an order and form that they can use: by task, by layer, with the diagrams readable and the baseline revision visible.</Problem>
+    <Goals>
+      <Goal>Generate portal pages for the charter directly from charter/*.md at build time, so charter/ stays the only authored source of the content and portal/ holds only the page chrome: home, start-here, the map, labels, and interface messages.</Goal>
+      <Goal>Give the portal an entry that serves readers by task first, with a short Start here path for each of five tasks (decide or approve, start an AI initiative, run my part of the process, check controls and evidence, join the team) and a role hint in the wording, never a role-only menu.</Goal>
+      <Goal>Provide one clickable map of the unit as the front door, linking the Statement of Intent, the Charter, the Business Model, the five control loops, the four portfolio loops, the lifecycle, the AI Policy, the workflows, and the Registry, with a text version of the map.</Goal>
+      <Goal>Order the content in layers: why and what (Statement of Intent, Charter, Business Model); how we operate (Operating Model, Portfolio Management Model, Solution Lifecycle Model, AI Policy); do it (workflows, guides, templates); reference (Vocabulary, Document Catalog, change history).</Goal>
+      <Goal>Give every clause a stable permanent link whose identifier is the same in Russian and English, show for each clause where it is cited, and link every defined term to the Vocabulary.</Goal>
+      <Goal>Render every Mermaid diagram at build time to inline SVG that is readable in the light and the dark theme, place it with a visible text version, and let a reader follow a diagram to the clause that it shows.</Goal>
+      <Goal>Show on every page the baseline revision, its date, the owner, and a link to the change history of the document, and print or save each page cleanly.</Goal>
+      <Goal>Offer search over the published pages in the page language.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>The site has an English and a Russian interface, with a language switch at the top right of every page that leads to the same page in the other language. The charter text is English only for now, so a Russian page shows the English text, labelled as English with a visible marker, and the default language is English until Russian text exists.</Constraint>
+      <Constraint>The charter and the Registry stay the single authored source. The portal stores no copy of a rule, and html/aicc/ is generated and never edited by hand.</Constraint>
+      <Constraint>Output is static HTML, CSS, and JavaScript with no server-side runtime and no external network request at page load, and the build uses only host tools without credentials or model inference.</Constraint>
+      <Constraint>Pages meet WCAG 2.2 AA, work at mobile and desktop widths, respect reduced motion, and never use colour as the only carrier of a status or a meaning.</Constraint>
+      <Constraint>The audience is bank employees behind the bank network, and the site stays behind its access policy. The charter holds no names and no data of the Bank, so the charter pages carry no personal data. Pages built from the Registry carry names and are outside this change.</Constraint>
+      <Constraint>The look is the O!Bank look of the portal foundation: its tokens, fonts, icons, and header, without a divergence in this change.</Constraint>
+      <Constraint>No push to the deployment repository happens in this change. Publishing is a separate, deliberate act with aicc-deploy.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Pages built from the Registry: the control matrix, the decision log, the appointments, the backlogs, the roadmap, and the calendar. They need a decision on audience and personal data first and follow in a later change.</NonGoal>
+      <NonGoal>The Russian translation of the charter text, and machine translation at build or at page load. The Russian text of the interface, the home, the start-here path, and the map is part of this change.</NonGoal>
+      <NonGoal>Kyrgyz, authentication, analytics, a content management system, and comments.</NonGoal>
+      <NonGoal>A change of the portal generator to another site framework, and changes to the deployment tool or to the hosting.</NonGoal>
+      <NonGoal>Any change to the content of the charter.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>The build regenerates html/aicc/ completely from portal/ and charter/ sources, and a second run produces no file differences.</Criterion>
+      <Criterion>Every document, workflow, guide, and template of the charter is a page at a stable address, in the Russian path with English text labelled as English, and in the English path, and the page set equals the charter file set.</Criterion>
+      <Criterion>Every numbered clause has a permanent link, and a cross-reference such as Operating Model 6.6 in the text links to that clause. The build fails when a cross-reference points to a clause that does not exist.</Criterion>
+      <Criterion>Every Mermaid diagram of the charter is rendered to SVG at build time, appears with a visible text version, and passes a contrast check in both themes. The build fails when a diagram does not render.</Criterion>
+      <Criterion>The home page offers the five task entries, the map, and the baseline stamp. Each Start here path lists three to six pages in reading order. The map links to every layer, and every node of the map has a text equivalent.</Criterion>
+      <Criterion>Every page shows the revision, the date, and the owner from the document front matter, the change history, previous and next links, and a language switch to the same page in the other language.</Criterion>
+      <Criterion>A defined term of the Vocabulary links to its entry, and the entry shows the pages where the term is used.</Criterion>
+      <Criterion>Search returns pages for a Russian and an English query from the published pages, without a request to another host.</Criterion>
+      <Criterion>A browser check at mobile and desktop widths in both themes shows no horizontal overflow of the page, the wide tables scrolling inside their own container, a visible focus state, a working skip link and menu, and correct language switching, with evidence recorded.</Criterion>
+      <Criterion>A task test with five readers from each of three groups (executive, function head, delivery or control function) shows that at least 80 percent of the tasks of the test plan end on the right page without help.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-PORTAL-SOURCE />
+      <M-PORTAL-PROJECTION />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 portal/tools/build.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>portal/.venv/bin/python portal/tools/browser_check.py</ExpectedCommand>
+      <ExpectedCommand>grace lint --path . --assertions current</ExpectedCommand>
+      <ExpectedEvidence>A clean and repeatable build log, with the counts of pages, clauses, cross-references, terms, and diagrams, and no unresolved reference.</ExpectedEvidence>
+      <ExpectedEvidence>A check report for page parity between the charter and the portal, language keys, links, assets, anchors, diagram rendering, and contrast in both themes.</ExpectedEvidence>
+      <ExpectedEvidence>Browser report and screenshots for both languages, both themes, and mobile and desktop widths.</ExpectedEvidence>
+      <ExpectedEvidence>The record of the task test with the readers, the tasks, the results, and the changes that followed.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The charter baseline of 2026-10-02 (revision 1.0) is the content that the portal projects, and a later revision is published by building again.</Assumption>
+      <Assumption>The Python library markdown-it-py that is installed on the host is enough to convert the controlled Markdown of the charter (headings, numbered clauses, tables, lists, links, emphasis, and Mermaid fences). If it is not enough, the plan states a small converter.</Assumption>
+      <Assumption>The headless browser that the portal already uses for its browser check can render the Mermaid diagrams to SVG at build time without network access.</Assumption>
+      <Assumption>The first publication may show the English charter text with Russian interface and labels until the Russian text is ready, as the portal foundation specifies. If Russian text must exist before the first publication, the order of the work changes, and the practitioner decides.</Assumption>
+      <Assumption>The portal stays behind its existing access policy until the practitioner decides on a wider audience.</Assumption>
+    </Assumptions>
+  </C-PORTAL-CHARTER>
+</GraceChangeSpec>

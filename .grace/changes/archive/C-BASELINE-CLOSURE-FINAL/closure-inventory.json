@@ -1,0 +1,213 @@
+{
+  "authority": "User on 2026-10-05: reconcile GRACE closures of pre-existing defects and cleanly commit, push and publish. This authorizes terminal lifecycle reconciliation and publication, preserving the approved corpus.",
+  "starting_commit": "1af57d869e0248d95e2bb0b4fbe1f51325f89294",
+  "changes": [
+    {
+      "change": "C-BOARD-REPORTING-CLARITY",
+      "disposition": "superseded",
+      "reason": "The paired reporting correction and mandatory escalations are recorded in the later terms-and-records report and commits beginning 01e0b4a9; subsequent approved wording refinements form the current comparison sources.",
+      "original_files": {
+        "notes/A1-core.md": "b9365a3e35a183734df16d46b928bd3df59687bfabc193c0a50167e9dd8df863",
+        "notes/A2-models.md": "8a29721a95165dfb5487ade06ec6a151e3b9c83bdf9dd9be2b9c98b2bccbe66c",
+        "notes/B-guides-workflows-templates.md": "87a4308a07aba207dce57cbe330b98ba2fd775fbf056703a2af98e745c706946",
+        "notes/C1-portal.md": "3c6c95dc159ef95a9707d464de9110cf8795f20e647897e7cf4dc9cf8c34191a",
+        "notes/C2-portal-chrome.md": "27c58cf97ef2120f42e4e1c3407db650c87f96b7a30892db99b9bcef4701385c",
+        "plan.xml": "b73a986f5e0c025c80607a838a8248da0460ed98e6e1693fad8f17aad29a0406",
+        "spec.xml": "5314a365235ebb291a0f3d0b61f727f86dc45643bce8b78ec89762caf8b127fc"
+      }
+    },
+    {
+      "change": "C-FUNCTIONAL-VOCABULARY",
+      "disposition": "superseded",
+      "reason": "The completed terminology review and verification remain in this bundle and commit e190bd2c; later language decisions replace intermediate headings, accepted forms and edition counts. Current source comparison and renderer checks govern the reconciled baseline.",
+      "original_files": {
+        "plan.xml": "2bedaea203d6e51664c621d7b9c3315785b179c0c1d24689c0a415c61c8a7633",
+        "review.md": "973204bbbaf3246a9597e23fd70f7c235c5325c8ae64a842f4b1a877f59126d6",
+        "spec.xml": "29f33eb959ef11181f9e1dcbc2a627d99062d03f873b0194a7887bfdb9e41666",
+        "verification.md": "1bdc4f412184c95cff889521a93c5c78a4b12ce2b394ab6a9d00a565a40dfe96"
+      }
+    },
+    {
+      "change": "C-INTERNATIONAL-TERMINOLOGY",
+      "disposition": "superseded",
+      "reason": "The completed terminology review and verification remain in this bundle and commit e190bd2c; later language decisions replace intermediate headings, accepted forms and edition counts. Current source comparison and renderer checks govern the reconciled baseline.",
+      "original_files": {
+        "plan.xml": "8e7652b5fe01d8913e529490795751317efef0bf1f06f883de39fe1bb127d475",
+        "review.md": "9fc5bbda93371cfd14f7bf57a5759b711bd4e7fa813a64898f99b57e620c3cdc",
+        "source-review.json": "4a4c514d69fdcfd9a293db8ea812aa321c4be3ada04e7eb6509e7ca03a92b43d",
+        "spec.xml": "528fd91c8f2da6d902f7c637fdad6b129980db2a1d764ad01f383deb7c1f9e79",
+        "verification.md": "64f46a727674272b7d6b255e1128990aff97ad288c4583672cc1a4d12d513591"
+      }
+    },
+    {
+      "change": "C-PORTABLE-PORTAL",
+      "disposition": "applied",
+      "reason": "Close as applied only after the current full export and direct-file browser gate pass.",
+      "original_files": {
+        "plan.xml": "a1314477b227628fef329e46d173f290df4a126dd6b5658e7981702f3571caa4",
+        "spec.xml": "07e21fa2b4f9b3fb8a84261036d1213c85f68735870a03bd170e3ef7d681a902",
+        "verification-evidence.json": "96992c5b51e7f89ff214e98956b2476cd41c4c9a57f39d555156436eb67e76cc"
+      }
+    },
+    {
+      "change": "C-PORTAL-CHARTER",
+      "disposition": "superseded",
+      "reason": "Unapproved initial design superseded by the implemented and published bilingual portal and five-section design. Its proposed reader study is not claimed as executed.",
+      "original_files": {
+        "design-context.xml": "09aa8bec387de3602e210bc22d52a138bfeab9876dbb5a8f160262aeb9ea7bf6",
+        "spec.xml": "151fb8198674a485cc1fdb08e71482490fb83d8d35d7a2f7e85cc481714d993e"
+      }
+    },
+    {
+      "change": "C-PORTAL-NEIGHBOURS",
+      "disposition": "applied",
+      "reason": "Close as applied only after the selected final gate passes for the completed five-section portal.",
+      "original_files": {
+        "design-context.xml": "59d92966f19675c6307476643e6c8c227b9783ebf9a982ff2fa1173980267377",
+        "plan.xml": "21860c0182ad8a23ad411c224a0b29489e0e1c65d614e88a284965ee4a05f12a",
+        "spec.xml": "ca565863cc141459ce5e7c426a17b9fd54c7db406ac23425c92fed2e65e2e825"
+      }
+    },
+    {
+      "change": "C-PORTAL-PROSE",
+      "disposition": "superseded",
+      "reason": "The selective humanize review is recorded in review-decisions.json and verification-evidence.json; later Board-reporting and Russian-alignment commits supersede its frozen corpus checksums.",
+      "original_files": {
+        "plan.xml": "0d249e5c131d129bdfd5df2acb0cf5de00178b9e3f45aea7fbd17babc030bbf3",
+        "protected-files.sha256": "c2463bdad335773fa260677a4c415cc8e44440b46b33e009e9b85999dfd23c94",
+        "review-decisions.json": "eccf8a777a2d9fe492f4bf78373b3576986c27c636637452b14195a004b0943c",
+        "spec.xml": "58caa4a4af17c4c9c7cf5a765fd708fcb78a3460b67f55a6baa3bf954207853e",
+        "verification-evidence.json": "766220ec5b5fe299dfb2e9dc4828a584a222fe3a109d3e55fd68a72fa9ac10e6"
+      }
+    },
+    {
+      "change": "C-RU-CHARTER-COMPLETE",
+      "disposition": "superseded",
+      "reason": "Completed translation increment is retained in the bilingual corpus and documented in portal/README.md and commit fc67054b; later natural-Russian and terminology revisions replace the intermediate wording and counts.",
+      "original_files": {
+        "plan.xml": "e776fe05207d8157d1a7296349a2bd0dfd03426d0cb142333547bf45a26f42a7",
+        "spec.xml": "25621cb4d40235763292044bfba586942fed87b355de115d116fc5343e53985c"
+      }
+    },
+    {
+      "change": "C-RU-FOUNDATION",
+      "disposition": "superseded",
+      "reason": "Completed translation increment is retained in the bilingual corpus and documented in portal/README.md and commit fc67054b; later natural-Russian and terminology revisions replace the intermediate wording and counts.",
+      "original_files": {
+        "plan.xml": "c0b1599fd3dd39a250da6d4dbada639085f0194ec35a2f2facec21bf69315c56",
+        "spec.xml": "044d9df7798ea23b240ccabbb06b77ca2354ec5059403253aa63f3f69602d8c2"
+      }
+    },
+    {
+      "change": "C-RU-GOVERNING",
+      "disposition": "superseded",
+      "reason": "Completed translation increment is retained in the bilingual corpus and documented in portal/README.md and commit fc67054b; later natural-Russian and terminology revisions replace the intermediate wording and counts.",
+      "original_files": {
+        "plan.xml": "2f3181e8ccb81f2050e52c1a054a7fedecf0ef08c0ee5a839206fa7c614d5a51",
+        "spec.xml": "9d2ecd562265abdd5858073964467b20dcb6e8d4b95ca474d84d3853d0c0149d"
+      }
+    },
+    {
+      "change": "C-RU-MANDATE",
+      "disposition": "superseded",
+      "reason": "Completed translation increment is retained in the bilingual corpus and documented in portal/README.md and commit fc67054b; later natural-Russian and terminology revisions replace the intermediate wording and counts.",
+      "original_files": {
+        "plan.xml": "cb9b24709c0d425bfe01f1c28e5b2a28b50b69392c74cee6372008d8314080e1",
+        "spec.xml": "500d3be2b4e312538c94873f64b208985a3c9e6deeba802b2b867ec2f315a22e"
+      }
+    },
+    {
+      "change": "C-RU-MODELS",
+      "disposition": "superseded",
+      "reason": "Completed translation increment is retained in the bilingual corpus and documented in portal/README.md and commit fc67054b; later natural-Russian and terminology revisions replace the intermediate wording and counts.",
+      "original_files": {
+        "plan.xml": "cb34e1359d4333d08c96e9048d3300fa591c4dbfe3de5ee8126129eeefb3f20d",
+        "spec.xml": "1bab3ab4e9070cb3c70fae5d0cead2848acf9e16d98a80ff05d4c0fbe3da85fd"
+      }
+    },
+    {
+      "change": "C-RU-NATURAL-ALIGNMENT",
+      "disposition": "superseded",
+      "reason": "The rewrite is documented in REPORT.md and per-file notes. Later Board-reporting, terminology and Registry edits supersede the protected-file baseline and intermediate term choices. T-007 has no command; preserve the original invalid plan verbatim as a non-operative audit attachment and replace its execution authority with this closure plan.",
+      "original_files": {
+        "REPORT.md": "da38fdabe19cba4a62124d2249d6046d8a07be2dbe48b9a10afd1686b10dc27b",
+        "STYLE.md": "388c780f1df5bdf99d4a175052af475104d56e2dfc89b3e9bc1f78a57cfe6a58",
+        "__pycache__/scan.cpython-314.pyc": "398d7351deeb0924403f6a122acf88f8ee29af31d125e14a5345226eb88d8f5e",
+        "after-scan.json": "0545ede4c6869b37a38b5f3a7a4991b9320126fa9946a956bb362cf9a8ad61dd",
+        "baseline-scan.json": "3c595de4c6736de278d1c454317a3a3387b11445a797fd4c2325fd70227207f2",
+        "check_one.py": "c297ad96be238662c996f61d203e6c1738ddc600bdeca9f84d0b9c6df0cd04b6",
+        "lowercase.py": "80dbf72daca9f7336ed778b471598cc08459f86f4036379e45e4b9d33a0891eb",
+        "notes/01-vocabulary-catalog.md": "2ed7628bc2b019561f4eb8f71a37e96269ead2418aa16ef822643aefd9d007ea",
+        "notes/02-terminology-map.md": "cb5263e9b2c0b7d411290241095e5a265a572b482e59d165a61b2fcaf70bfa0c",
+        "notes/03-operating-policy.md": "1a6dd14f8ca5350de8a46db5f5cab9a49b836dee886a7f6b1968a9ac24ce55b4",
+        "notes/04-lifecycle.md": "291fb5f3298882ca7aaa8042fac45b1744822796e3bfca597e00fe4cac0ab722",
+        "notes/05-portfolio-business.md": "21e0ac9a6a820d4faeff993d0219e55841901952225d58bba31e9a301c9176c4",
+        "notes/06-guides.md": "0feb93e2322ce8a76d25bd365a663ca97516e8ca1d4d50c75a5cef672cf917b0",
+        "notes/07-workflows.md": "b65c0b4a2af5048b786bd5f8b012490378de2372cb595e9244decf1273f4067d",
+        "notes/08-templates.md": "2d90a64204e2699c71d42001e78513438f08f74814da7c1444e0e128fdad7fd6",
+        "notes/09-portal-about-org-gov.md": "b2b16866189a7b2086006b32e73879d683fe8df2b165915d6d87b77de06fa506",
+        "notes/10-portal-delivery-kb.md": "07e1057cbaa056aeede035c7ecd9bf2393a8933d0768d990cac54f77b60455c8",
+        "notes/11-portal-portfolio-rai.md": "0b911789fde9a45c78c8e14437f5e7f0f91842926813a221b1a42426bf0b4875",
+        "notes/12-portal-reference.md": "dcee52c417f73aa7ea5316e49738f5928fe7b99d92fd272a7c0113f1566ecb88",
+        "notes/13-portal-services-chrome.md": "d16b5401b54bb5135c1f9ad71e8c85ccd050d5841584523c27759460e249523a",
+        "plan.xml": "b6416092a5de6ff6a49935271f039f4367e4d6b65db20092dbb337bed5d57659",
+        "protected-files.sha256": "40a3e22514a9af3044fc0be159f190c9381bda3aa90ce312f201da8f323172f4",
+        "scan.py": "d4b6336b7cf32fcc7738722fe44502f63be830daacab5dd3cc7b652b6c4a88ed",
+        "spec.xml": "bc77c2af2862b0696cc6db673bd256dcea5eafae50bfff3c890a95683617ae2a"
+      }
+    },
+    {
+      "change": "C-RU-ORG-GOVERNANCE",
+      "disposition": "superseded",
+      "reason": "Completed translation increment is retained in the bilingual corpus and documented in portal/README.md and commit fc67054b; later natural-Russian and terminology revisions replace the intermediate wording and counts.",
+      "original_files": {
+        "plan.xml": "7ce6efd6ed0c2460b647e973be55b3ba6bc1a62dae866764ac230ee1f727cd75",
+        "spec.xml": "4449be57d4fd4e71f5f901ce85f499d859605c3ac10d2e427b4100ae1dbe2f3f"
+      }
+    },
+    {
+      "change": "C-RU-TERMS-AND-RECORDS",
+      "disposition": "superseded",
+      "reason": "The report and commits ea4496e0 through 1af57d86 record the terms-and-records outcome; subsequent individual language decisions replace the intermediate accepted forms.",
+      "original_files": {
+        "REPORT.md": "a92f0e2ea766109b5ff31e2111db1cf251d2c42876233d8bcb92f72d1a4a84a6",
+        "notes/R1-registry.md": "c1d4bcbe715df336eacc529df2b494ecd707dba84d729ff1720a106e67e7213f",
+        "notes/R2-records-portfolio.md": "48729c5362e0f4b24ef38e1b84a4c5773e0c9a2aaa119ac7a50c80b018963dd7",
+        "plan.xml": "2c8e47855612182293e1d70190b816562fe4f80807adbfeea594e825c45f194a",
+        "spec.xml": "5070837ff6bc2727b216cf98c9e2485371407b641a53ed6c5eea4cd5dedeb78e"
+      }
+    },
+    {
+      "change": "C-SHARED-TERMINOLOGY",
+      "disposition": "superseded",
+      "reason": "The completed terminology review and verification remain in this bundle and commit e190bd2c; later language decisions replace intermediate headings, accepted forms and edition counts. Current source comparison and renderer checks govern the reconciled baseline.",
+      "original_files": {
+        "plan.xml": "15700d14e3de93bb8486744a87182d47a2a6a429c3e593492a42ea746a95028e",
+        "spec.xml": "dd0bc014761cec8258e8b5e3406e20d415d555e6efbe4aa63f4b7fcded872aa5",
+        "terminology-research.md": "518465a8e7b09f90c13ce09aa39870bd397a76599ab8e404deec92cc4bcb769a",
+        "verification.md": "0634417a15d7123c81abfb47e590fd84e0c791aa54f7b47bfc4f0bb0121616d1"
+      }
+    },
+    {
+      "change": "C-TERMINOLOGY-LANGUAGE-EDITIONS",
+      "disposition": "superseded",
+      "reason": "The completed terminology review and verification remain in this bundle and commit e190bd2c; later language decisions replace intermediate headings, accepted forms and edition counts. Current source comparison and renderer checks govern the reconciled baseline.",
+      "original_files": {
+        "plan.xml": "c3f90f1d945930254dd154012024d35126c992f5b3d045091ce2ea1bc075bb97",
+        "spec.xml": "211552cafd6024d7a36809ca2e36402b8bc08975ee908209005f2d8c7eeba850",
+        "verification.md": "5e0c5c024a672b3ded10c1bcaa263d8e84b54a5d585eade2e2cea8846a4658d1"
+      }
+    },
+    {
+      "change": "C-TERMINOLOGY-RUSSIAN-NAMES",
+      "disposition": "superseded",
+      "reason": "The completed terminology review and verification remain in this bundle and commit e190bd2c; later language decisions replace intermediate headings, accepted forms and edition counts. Current source comparison and renderer checks govern the reconciled baseline.",
+      "original_files": {
+        "plan.xml": "b8d3ad7516cb22fb84d1f6c8f0e9a80c89923f6897b082151b05ad7b194b34c2",
+        "research.md": "a4a1326ebc0d75fceeeee04039031d3f293935808ae8521a9d234c3e533eeae5",
+        "spec.xml": "71f0b85f0373b4570055ec8b8fd9217ef0c893ee640860670aca23fcb8588c09",
+        "verification.md": "4776916956b79d4e0ba824ca77a6e3d0f3e70173b23d21000599974526903bea"
+      }
+    }
+  ]
+}

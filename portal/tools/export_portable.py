@@ -162,12 +162,12 @@ def export(source, output):
     files = dict(original)
     files.pop('package-manifest.json', None)  # HTTP manifest describes a different output.
     indexes = {}
-    for lang in ('en', 'ru'):
-        entries = json.loads(files.pop(f'assets/search-{lang}.json'))
+    for index_path in sorted(p for p in original if p.startswith('assets/search-') and p.endswith('.json')):
+        entries = json.loads(files.pop(index_path))
         for entry in entries:
             entry['u'] = '/' + file_url(entry['u'], 'index.html', original)
-        indexes[lang] = entries
-        files[f'assets/search-{lang}.js'] = ('window.AICC_SEARCH_INDEX=' + json.dumps(entries, ensure_ascii=False, separators=(',', ':')) + ';\n').encode()
+        indexes[index_path] = entries
+        files[index_path[:-5] + '.js'] = ('window.AICC_SEARCH_INDEX=' + json.dumps(entries, ensure_ascii=False, separators=(',', ':')) + ';\n').encode()
     for path, data in list(files.items()):
         if not path.endswith('.html'):
             continue
@@ -176,11 +176,17 @@ def export(source, output):
             text = re.sub(r'<meta\b[^>]*http-equiv=["\']refresh["\'][^>]*>', '', text, flags=re.I)
         else:
             asset = posixpath.relpath('assets', posixpath.dirname(path))
-            text, count = re.subn(r'(<script\b[^>]*data-search="[^"]*search-(en|ru))\.json("[^>]*></script>)', r'\1.js\3', text)
+            selected_index = []
+            def bundle_index(match):
+                index_path = local_target(match[2], path)
+                if index_path not in indexes:
+                    raise ValueError(f'{path}: unknown search index {match[2]}')
+                selected_index.append(match[2][:-5] + '.js')
+                return match[1] + selected_index[-1] + match[3]
+            text, count = re.subn(r'(<script\b[^>]*data-search=")([^"]+\.json)("[^>]*></script>)', bundle_index, text)
             if count != 1:
                 raise ValueError(f'{path}: expected one portal script with a search index')
-            lang = path.split('/')[0]
-            extra = f'<script src="{asset}/search-{lang}.js"></script>\n<script src="{asset}/portable.js"></script>\n'
+            extra = f'<script src="{selected_index[0]}"></script>\n<script src="{asset}/portable.js"></script>\n'
             text = re.sub(r'(?=<script\b[^>]*data-search=)', lambda _: extra, text, count=1)
         files[path] = text.encode()
     files['aicc.html'] = files['index.html']
@@ -202,7 +208,8 @@ def export(source, output):
     source_hash = digest(original)
     if source_hash != digest(snapshot(source)):
         raise ValueError('Source changed during export; retry after the site build finishes')
-    files['README.txt'] = ('AICC portable portal\n\nOpen aicc.html in your browser. Keep the entire folder together.\nEN/RU navigation and search work without an HTTP server. External citations and corporate record links still need their normal access.\nThis folder is generated; request a fresh export to update its content.\n').encode()
+    files['README.txt'] = ('AICC portable portal\n\nOpen aicc.html in your browser. Keep the entire folder together.\nEN/RU navigation and search work without an HTTP server. External citations and corporate record links still need their normal access.\nThis folder is generated; request a fresh export to update its content. See HOW-TO.txt for regeneration instructions.\n').encode()
+    files['HOW-TO.txt'] = (ROOT / 'portal/PORTABLE-HOWTO.txt').read_bytes()
     manifest = {'kind': KIND, 'source_tree_sha256': source_hash, 'html_pages': count,
                 'files': {p: hashlib.sha256(data).hexdigest() for p, data in sorted(files.items())}}
     files[MARKER] = (json.dumps(manifest, indent=2) + '\n').encode()

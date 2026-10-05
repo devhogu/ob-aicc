@@ -1,0 +1,28 @@
+/* Discovery's retained geometry uses the shared AICC colours and local fonts. */
+.discovery-content{
+  --paper:var(--surface);--paper-soft:var(--surface-subtle);--paper-2:var(--surface-subtle);--paper-3:var(--surface-selected);--paper-deep:var(--surface-selected);--paper-warm:var(--warning-bg);--paper-blue-soft:var(--surface-selected);
+  --ink-primary:var(--text);--ink-body:var(--text);--ink-secondary:var(--text-muted);--ink-tertiary:var(--text-muted);--ink-eyebrow:var(--text-muted);--ink-accent:var(--link);--ink-accent-lt:var(--link);--ink-accent-deep:var(--link);--genai-label:var(--link);--ink-orange-deep:var(--warning);
+  --genai-soft:var(--warning-bg);--genai-line:var(--border-control);--genai-text:var(--warning);--genai-accent:var(--warning);
+  --border:var(--discovery-border);--border-hover:var(--border-control);--rule-soft:var(--discovery-border);--rule-warm:var(--discovery-border);--overlay-scrim:var(--overlay);--shadow-modal:var(--shadow-panel);
+  --brush-title-start:color-mix(in srgb,var(--brand) 22%,transparent);--brush-title-mid:color-mix(in srgb,var(--brand) 8%,transparent);--brush-peer-start:color-mix(in srgb,var(--shell-accent-secondary) 22%,transparent);--brush-peer-mid:color-mix(in srgb,var(--shell-accent-secondary) 8%,transparent);--brush-flow-start:color-mix(in srgb,var(--brand) 18%,transparent);--brush-flow-mid:color-mix(in srgb,var(--brand) 6%,transparent);--brush-orange-start:color-mix(in srgb,var(--warning) 20%,transparent);--brush-orange-mid:color-mix(in srgb,var(--warning) 7%,transparent);
+  --font-serif:var(--font-heading);--font-sans:var(--font-body);--font-mono:ui-monospace,SFMono-Regular,Consolas,monospace;
+  --text-body:.9375rem;--text-page-title:clamp(1.8rem,3vw,2.65rem);
+}
+:root[data-theme=light]{--discovery-border:#dcd6de}
+:root[data-theme=dark]{--discovery-border:#3c3840}
+.discovery-content>.page{padding:0;max-width:none}
+.discovery-content h1,.discovery-content h2,.discovery-content h3{font-family:var(--font-heading)}
+.discovery-content{font-family:var(--font-body);line-height:1.55;padding-bottom:30px;min-width:0}
+.discovery-content .card__body p{margin:0}
+.discovery-content .modal p{margin:0 0 12px}
+.discovery-content .modal{z-index:200}
+.discovery-content .modal__panel{max-height:calc(100dvh - 32px)}
+.discovery-notice{color:var(--text-muted);font-size:13px;line-height:1.5;border-left:3px solid var(--brand);padding:8px 12px;background:var(--surface-subtle);margin-bottom:24px;max-width:100ch}
+.finance-tab-focus{outline:3px solid var(--focus);outline-offset:-3px}
+.discovery-content :target{scroll-margin-top:20px}
+.discovery-content .scenario-card:target{outline:2px solid var(--brand);outline-offset:3px}
+.discovery-content .scenario-card__intent{overflow-wrap:anywhere}
+.discovery-workspace .o-header,.discovery-workspace .o-nav{font-family:var(--font-body)}
+.discovery-workspace .o-header{border-bottom:2px solid var(--brand)}
+@media(max-width:768px){.discovery-content .top-band,.discovery-content .main-row,.discovery-content .below-band,.discovery-content .cap-row,.discovery-content .peer-row{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:380px){.discovery-content .page-header__title{overflow-wrap:anywhere}}

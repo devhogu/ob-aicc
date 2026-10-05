@@ -1,5 +1,25 @@
 <GraceVerificationDocument graceVersion="4.0">
   <VD-MAIN>
+    <V-M-PORTABLE-EXPORT>
+      <M-PORTABLE-EXPORT />
+      <TestFiles><File>portal/tests/test_portable.py</File><File>portal/tools/check_portable_browser.py</File></TestFiles>
+      <Command>python3 -m unittest discover -s portal/tests</Command>
+      <Command>python3 portal/tools/export_portable.py</Command>
+      <Command>portal/.venv/bin/python portal/tools/check_portable_browser.py</Command>
+      <Scenario kind="success">Export preserves source files and visible content, uses explicit file and anchor destinations, is repeatable and refuses to overwrite an unowned folder. The relocated package opens every page under file URLs and supports both-language search, language switches, theme carry-over, embedded fonts, diagram zoom and manual copying without external resource requests. Each section bundles its own search index; the neighbour browser check exercises cross-section navigation and Discovery search in a disposable export.</Scenario>
+      <Scenario kind="failure">A local Chromium pass does not establish corporate Windows SMB access, browser policy or file associations. External references still need their usual access. The export only contains the last generated website state.</Scenario>
+      <TraceAssertion>Commands exit zero. The browser report records the package manifest hash and direct-file evidence in .runtime/portable/browser-report.json.</TraceAssertion>
+    </V-M-PORTABLE-EXPORT>
+    <V-M-PORTAL-NEIGHBOURS>
+      <M-PORTAL-NEIGHBOURS />
+      <TestFiles><File>portal/tests/test_neighbours.py</File><File>portal/tools/check_neighbours.py</File><File>portal/tools/check_neighbours_browser.py</File></TestFiles>
+      <Command>python3 -m unittest discover -s portal/tests</Command>
+      <Command>python3 portal/tools/check_neighbours.py</Command>
+      <Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py</Command>
+      <Scenario kind="success">The generated site exposes five navigation groups, section-local search and body links, equivalent language routes and separate statuses. Discovery retains 76 pages and 1,101 scenario cards per language with unchanged scenario text and identifiers. Chromium covers every new page at desktop and mobile widths in both themes, disclosures, tabs, flow dialogs, keyboard focus, section switching, language counterparts and search fragments. Existing AICC search, diagram zoom and template copying remain functional. A disposable file package resolves all pages and supports section-scoped search and navigation.</Scenario>
+      <Scenario kind="failure">These checks do not validate the banking assumptions or illustrative measures in the retained Discovery material, establish project approval, or prove corporate SMB browser policy. Do not run the browser sweep while rebuilding the generated output.</Scenario>
+      <TraceAssertion>All commands exit zero. Browser evidence is recorded in .runtime/portal-neighbours/browser-report.json. The full-site link and repeat-build checks remain owned by V-M-PORTAL-SOURCE and V-M-PORTAL-PROJECTION.</TraceAssertion>
+    </V-M-PORTAL-NEIGHBOURS>
     <V-M-PORTAL-SOURCE>
       <M-PORTAL-SOURCE />
       <TestFiles>

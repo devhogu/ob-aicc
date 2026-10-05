@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0.0",
+  "tool": "grace-lint",
+  "generatedAt": "2026-10-05T14:29:36.307Z",
+  "root": "/devops/obank/aicc",
+  "profile": "standard",
+  "assertionMode": "final",
+  "changeId": "C-PORTAL-NEIGHBOURS",
+  "commandsEnabled": true,
+  "filesChecked": 113,
+  "governedFiles": 21,
+  "xmlFilesChecked": 59,
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/legacy/build.py",
+      "line": 2,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/legacy/check.py",
+      "line": 2,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/legacy/tokens.py",
+      "line": 1,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/tools/browser_check.py",
+      "line": 2,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-map-mismatch",
+      "file": "/devops/obank/aicc/portal/tools/browser_check.py",
+      "line": 9,
+      "message": "MODULE_MAP EXPORTS mismatch. Missing: Prefixed; extra: none.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/tools/check_portable_browser.py",
+      "line": 2,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/tools/export_portable.py",
+      "line": 2,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/tools/localization.py",
+      "line": 2,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/tools/neighbours.py",
+      "line": 1,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "analysis.heuristic-confidence",
+      "file": "/devops/obank/aicc/portal/tools/workspace.py",
+      "line": 1,
+      "message": "python analysis is heuristic and cannot prove exact MODULE_MAP parity.",
+      "title": "Export Surface Analysis Warning",
+      "explanation": "The language adapter could not prove the exact export surface or detected a shape that weakens precise linting.",
+      "remediation": [
+        "Prefer clearer export declarations or explicit ROLE/MAP_MODE overrides when necessary.",
+        "Treat heuristic or wildcard-export warnings as cues to simplify or document the file surface."
+      ]
+    }
+  ],
+  "summary": {
+    "issues": 10,
+    "errors": 0,
+    "warnings": 10
+  },
+  "commands": [
+    {
+      "index": 1,
+      "command": "python3 portal/tools/check_sources.py",
+      "exitCode": 0,
+      "durationMs": 278,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-9d0a0eda/runs/2026-10-05T14-29-36_C-PORTAL-NEIGHBOURS/1-python3-portal-tools-check-sources-py.log"
+    },
+    {
+      "index": 2,
+      "command": "python3 portal/tools/check_sources.py",
+      "exitCode": 0,
+      "durationMs": 284,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-9d0a0eda/runs/2026-10-05T14-29-36_C-PORTAL-NEIGHBOURS/2-python3-portal-tools-check-sources-py.log"
+    },
+    {
+      "index": 3,
+      "command": "python3 -m unittest discover -s portal/tests",
+      "exitCode": 0,
+      "durationMs": 15596,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-9d0a0eda/runs/2026-10-05T14-29-36_C-PORTAL-NEIGHBOURS/3-python3-m-unittest-discover-s-portal-tes.log"
+    },
+    {
+      "index": 4,
+      "command": "python3 portal/tools/check.py --idempotent",
+      "exitCode": 0,
+      "durationMs": 12370,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-9d0a0eda/runs/2026-10-05T14-29-36_C-PORTAL-NEIGHBOURS/4-python3-portal-tools-check-py-idempotent.log"
+    },
+    {
+      "index": 5,
+      "command": "python3 portal/tools/check_neighbours.py",
+      "exitCode": 0,
+      "durationMs": 6818,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-9d0a0eda/runs/2026-10-05T14-29-36_C-PORTAL-NEIGHBOURS/5-python3-portal-tools-check-neighbours-py.log"
+    },
+    {
+      "index": 6,
+      "command": "portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py",
+      "exitCode": 0,
+      "durationMs": 128928,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-9d0a0eda/runs/2026-10-05T14-29-36_C-PORTAL-NEIGHBOURS/6-portal-tools-with-browser-env-sh-portal.log"
+    }
+  ]
+}

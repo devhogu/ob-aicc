@@ -26,6 +26,18 @@
   var navd = document.querySelector('.o-nav details');
   if (navd && window.matchMedia('(max-width: 1100px)').matches) navd.removeAttribute('open');
 
+  // A search result may point into a collapsed scenario or document disclosure.
+  function revealFragment() {
+    var target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) { return; }
+    if (!target) return;
+    for (var node = target; node; node = node.parentElement) {
+      if (node.tagName === 'DETAILS') node.open = true;
+    }
+  }
+  revealFragment();
+  window.addEventListener('hashchange', revealFragment);
+
   // search
   var input = document.getElementById('q');
   var results = document.getElementById('results');

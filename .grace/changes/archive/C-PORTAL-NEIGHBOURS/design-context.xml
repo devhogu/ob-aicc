@@ -1,0 +1,41 @@
+<GraceChangeDesignContext graceVersion="4.0">
+  <Change>C-PORTAL-NEIGHBOURS</Change>
+  <NormativeStatus>non-normative</NormativeStatus>
+  <Rationale>
+    <Observation>The user selected five neighbouring sections with independent lifecycles and explicitly rejected content integration and references from charter documents. Shared presentation and navigation provide the common roof.</Observation>
+    <Observation>At source commit 1af57d869e0248d95e2bb0b4fbe1f51325f89294, AICC is built by portal/tools/build.py into html/aicc. Its existing /en/portfolio/ and /en/delivery/ routes present governance and delivery models. They are not the new live registers requested by the user.</Observation>
+    <Observation>finance-portal/build.py skins html-alt/financial-services into html/financial-services using the O!Bank design assets. Both editions have 76 pages and 1,101 scenario cards. The framework already has local breadcrumbs, spatial grids, tabs, disclosures and flow dialogs worth retaining.</Observation>
+    <Observation>The current finance header is a separate shell and forces a light theme. AICC supplies the established language controls, theme behaviour, sidebar, search conventions and fonts. A shared shell therefore requires more than adding links to the existing standalone sites.</Observation>
+    <Observation>csr-portal/build.py uses html-alt/intelligent-customer-service-resolution as the retained bilingual proposal source. html/cloudlab/index.html presents a concept with informal governance and provider assumptions; it cannot be adopted as an operating Lab merely by changing its visual style.</Observation>
+    <Observation>The current AICC build removes and recreates its language and asset directories. portal/tools/check.py --idempotent invokes that build, and aicc-deploy checks this output before publication. Adding neighbour pages only after the normal build would lose them on a subsequent build or fail the deployment freshness gate.</Observation>
+    <Observation>Existing uncommitted portable-export work is protected. The pre-design GRACE current-baseline check reports the pre-existing empty T-007 verification command in C-RU-NATURAL-ALIGNMENT/plan.xml and eight analysis warnings; no source implementation has begun.</Observation>
+    <Recommendation>Use five prominent groups in the left navigation, with the active group expanded and the other groups collapsed. Within AICC retain its current subsection navigation. Within Discovery show the overview and its nine main areas; detailed navigation remains local to the content.</Recommendation>
+    <Recommendation>Reserve ample content width for Discovery. Sidebar collapse and responsive reflow should preserve the existing maps and grids instead of turning them into a document stack on desktop.</Recommendation>
+    <Recommendation>Keep existing AICC routes. Add /{language}/discovery/, /{language}/initiatives/, /{language}/projects/ and /{language}/lab/ below the existing published root. These proposed route names avoid collisions with AICC's governance pages; they do not establish cross-section content relationships.</Recommendation>
+    <Recommendation>Use Discovery Catalog, Portfolio, Delivery Pipeline and CloudLab as the English navigation labels. Suggested Russian labels are Каталог возможностей, Портфель инициатив, Проекты and CloudLab. Keep AICC as the shared section identity.</Recommendation>
+    <Recommendation>Discovery's own overview explains that entries describe opportunities for assessment and that indicative measures require local validation. Preserve missing values as missing; the scaffold does not manufacture targets or Bank approvals.</Recommendation>
+    <Recommendation>Keep scenario content at one maintained source and adapt the existing finance renderer. Add a small shared shell and section configuration used by the existing AICC builder and neighbour renderers. The complete-site build composes their outputs within its own lifecycle; each section renderer owns only its output subtree.</Recommendation>
+    <Recommendation>Keep separate section content inventories and search indexes. Share only presentation assets, language and theme preferences, and navigation. A content update in one section should not change another section's document revision, approval state or search content.</Recommendation>
+    <Recommendation>The initial CSR definition should state the proposed service-resolution outcome, selected journey options, scope boundaries, expected evidence and proposal status in its own words. Keep the complete source proposal available for the later dedicated Delivery Pipeline adoption; do not bulk-import its full operating model in this first slice.</Recommendation>
+    <Recommendation>CloudLab's first landing page describes the purpose, bounded experiment approach and future content areas. Detailed workflow, guidance, policies and infrastructure are developed when that neighbour becomes the active task.</Recommendation>
+  </Rationale>
+  <Alternatives>
+    <Alternative>The earlier assessment proposed linked scenario, initiative, solution and charter records. The user has selected independent content boundaries, so that integration is outside this design.</Alternative>
+    <Alternative>A set of external links to the current standalone outputs leaves inconsistent navigation and theme behaviour and falls outside the existing published package. It does not provide the requested common portal experience.</Alternative>
+    <Alternative>Moving all existing AICC content beneath a new /aicc/ route introduces unnecessary address changes. The navigation hierarchy can express the AICC boundary while preserving its current routes.</Alternative>
+    <Alternative>A new combined home page is not necessary to provide the five neighbours. The existing AICC home can remain the default entry while every page offers the shared navigation.</Alternative>
+  </Alternatives>
+  <DeferredDecisions>
+    <Decision>The final Russian labels and minor navigation wording can be reviewed with the scaffold; they do not change content ownership or lifecycle.</Decision>
+    <Decision>Full CSR presentation, detailed CloudLab material and the first selected Portfolio initiative belong to subsequent work on those sections.</Decision>
+    <Decision>Live publication and regeneration of the portable corporate-share package remain deliberate later actions.</Decision>
+  </DeferredDecisions>
+  <Scenarios>
+    <Scenario>A reader opens an existing AICC policy bookmark. The document and its clause links still work. The common navigation makes Discovery Catalog available without placing any reference to it in the policy body.</Scenario>
+    <Scenario>A reader opens Discovery Catalog, browses the existing banking map, expands a scenario and opens a cycle-stage dialog. The page retains the financial framework's layout inside the shared shell.</Scenario>
+    <Scenario>A reader switches a detailed Discovery page from English to Russian and changes the theme, then opens Portfolio. The matching language and theme persist, and Portfolio states that no initiatives have been selected.</Scenario>
+    <Scenario>A reader opens Delivery Pipeline and sees one CSR project proposal. Its presence does not populate Portfolio or imply funding, approval, implementation or production use.</Scenario>
+    <Scenario>An author updates Discovery scenario content. The next complete-site build includes it while the charter's contents and revision remain unchanged.</Scenario>
+    <Scenario>A reader searches inside Discovery. Results stay inside Discovery and do not expose charter definitions or imply a relationship to live projects.</Scenario>
+  </Scenarios>
+</GraceChangeDesignContext>

@@ -5,8 +5,10 @@
       <Owns>
         <M-PORTAL-SOURCE />
         <M-PORTAL-PROJECTION />
+        <M-PORTAL-NEIGHBOURS />
         <M-AICC-DEPLOY />
         <M-PORTAL-LOCALIZATION />
+        <M-PORTABLE-EXPORT />
       </Owns>
     </GD-MAIN>
   </GraphDocuments>

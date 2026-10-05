@@ -1,0 +1,1781 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Credit risk · Discovery Catalog</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../../assets/charter.css?v=a6c78f6d">
+<link rel="stylesheet" href="../../../../assets/neighbours.css?v=4fa0caee">
+
+<link rel="alternate" hreflang="ru" href="../../../../ru/discovery/risk-control/credit-risk/">
+<script src="../../../../assets/site.js?v=f6e0927c" defer data-search="../../../../assets/search-discovery-en.json" data-t-none="No page matches the query." data-t-light="Light theme" data-t-dark="Dark theme" data-t-dz-close="Close"></script>
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=0d85a6e2">
+<script defer src="../../../../assets/discovery.js"></script>
+</head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>AI Competence Center</span></a>
+  <span class="header-scope">Discovery Catalog</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search this section</label><input id="q" type="search" autocomplete="off" placeholder="Search this section" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Language"><a lang="en" hreflang="en" href="./" aria-current="true">EN</a><a lang="ru" hreflang="ru" href="../../../../ru/discovery/risk-control/credit-risk/">RU</a></nav><button id="theme-switch" type="button" class="theme-switch" aria-label="Dark theme" title="Dark theme"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Sections of the site</summary><nav class="portal-sections" aria-label="Sections"><div class="portal-nav-group">
+<a class="portal-section-link" data-section="aicc" href="../../../"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 10h.01" />
+  <path d="M12 14h.01" />
+  <path d="M12 6h.01" />
+  <path d="M16 10h.01" />
+  <path d="M16 14h.01" />
+  <path d="M16 6h.01" />
+  <path d="M8 10h.01" />
+  <path d="M8 14h.01" />
+  <path d="M8 6h.01" />
+  <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+  <rect x="4" y="2" width="16" height="20" rx="2" />
+</svg>
+<span>AICC</span></a></div><div class="portal-nav-group is-current">
+<a class="portal-section-link" data-section="discovery" href="../../" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+<span>Discovery Catalog</span></a><div class="portal-local-nav"><a href="../../">Overview</a><a href="../../strategic-portfolio/">Strategic Banking Portfolio</a><a href="../../strategic-initiatives/">Strategic Initiatives &amp; Transformation</a><a href="../../value-streams/">Operational Value Streams</a><a href="../../customer-market-intelligence/">Customer &amp; Market Intelligence</a><a href="../../customer-channels/">Customer &amp; Channels</a><a href="../">Risk &amp; Control</a><a href="../../shared-banking-capabilities/">Shared Banking Capabilities</a><a href="../../finance-treasury/">Finance &amp; Treasury</a><a href="../../banking-data-analytics/">Banking Data &amp; Analytics</a></div></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="initiatives" href="../../../initiatives/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span>Portfolio</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="projects" href="../../../projects/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span>Delivery Pipeline</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="lab" href="../../../lab/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+<span>CloudLab</span></a></div></nav></details></aside>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-notice">Discovery material. Scenarios and measures are indicative and require validation for the intended use; they do not establish delivery commitments or approved Bank requirements.</div><div class="discovery-content">
+
+
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Risk &amp; Control</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Credit risk</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Credit risk</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Credit risk is the bank's largest regulatory capital consumer — the risk that a borrower or counterparty fails to meet contractual obligations, generating an unexpected loss that erodes CET1. Under NBKR, NBK/ARDFM, and CBR supervisory frameworks, credit risk is governed through PD/LGD/EAD model suites, IFRS 9 ECL provisioning, concentration limits, and watchlist management. Basel III/IV sets the capital floor; internal models calibrate within that constraint. <strong>The GenAI opportunity is to compress the credit-review cycle</strong> — from quarterly portfolio packs assembled manually over weeks to weekly agent-generated analysis that surfaces migration signals, concentration patterns, and watchlist risk in a single integrated view.
+</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-counterparty-exposure:checked ~ .problems-tab-bar label[for="problems-tab-counterparty-exposure"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-counterparty-exposure:checked ~ .problems-panel[data-tab="counterparty-exposure"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-counterparty-exposure"
+    value="counterparty-exposure"
+    checked
+    aria-label="Counterparty exposure"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-counterparty-exposure"
+      role="tab"
+      aria-controls="problems-panel-counterparty-exposure"
+    >Counterparty exposure</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-counterparty-exposure"
+    data-tab="counterparty-exposure"
+    role="tabpanel"
+    aria-labelledby="problems-tab-counterparty-exposure"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">PD migration, watchlist deterioration, and counterparty exposure analytics are each produced within their own reporting cycle from separate risk and credit systems. The CRO and Chief Credit Officer lack a continuous view of how individual counterparty quality is moving relative to the portfolio; emerging watchlist credits surface only at the monthly credit review committee, weeks after early-warning signals appeared in the data.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Credit review preparation — assembling the counterparty dossier, reconciling current financials against the credit approval memo, and preparing the committee presentation — absorbs 60-80% of a relationship manager&#39;s or credit analyst&#39;s pre-meeting time. The analytical work the committee is convened to perform starts only after the assembly is complete.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Watchlist reports, credit portfolio packs for the Risk Committee, and IFRS 9 ECL provision narratives are assembled from credit system exports, management accounts, and model outputs on a monthly or quarterly cycle. Each has a defined format and known source data; the assembly is repeatable and data-intensive.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">A continuously instrumented credit book — weekly migration signals, real-time concentration headroom, and vintage performance by origination cohort — gives the Chief Credit Officer a forward signal that quarterly review cycles cannot provide. Credit appetite deployment decisions and portfolio rebalancing moves can be timed against current position rather than last month&#39;s report.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="counterparty-exposure-analytics">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Counterparty exposure analytics</h2>
+    
+    <p class="l3-section__intent">The aggregation of all on- and off-balance-sheet exposure to a single counterparty or economic group — covering loans, commitments, derivatives, and trade finance — reported against single-name concentration limits. Under NBKR and CBR large-exposure rules and Basel III Art. 395, single-name exposure above 10% of Tier 1 capital triggers enhanced reporting obligations. Counterparty exposure analytics consolidate the total exposure picture across product types and entities, enabling limit monitoring and credit review preparation.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/counterparty-exposure-analytics/counterparty-exposure-breach-pack" id="scenario-counterparty-exposure-breach-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Counterparty Exposure Breach Investigation Pack</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the regulatory breach investigation pack when a single-name exposure crosses the Basel III 10% Tier 1 threshold, pulling the full exposure breakdown and entity structure for the CRO response.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>A large-exposure breach triggers a mandatory supervisory notification under NBKR and CBR large-exposure rules.
+Assembling the notification pack — total exposure by product, entity relationship map, origination timeline, and management action — draws on multiple systems and consumes analyst hours in the window before the regulatory deadline.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent detects the threshold breach from the daily exposure register, retrieves the full product-level breakdown, maps the entity structure, and generates the supervisory notification pack in the prescribed format.
+The CRO reviews and approves before submission.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/counterparty-exposure-analytics/counterparty-exposure-aggregation" id="scenario-counterparty-exposure-aggregation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Counterparty Exposure Aggregation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent aggregates on- and off-balance-sheet exposure to each counterparty and economic group across loans, commitments, derivatives, and trade finance, producing a single-name exposure report for large-exposure limit monitoring.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Single-name exposure aggregation requires joining loan management, derivatives, and trade finance systems by counterparty.
+Entity-relationship mapping — identifying where a subsidiary exposure should roll up to the parent economic group — is performed manually and is error-prone, particularly for multi-jurisdiction corporate groups.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads exposure data from loan management, derivatives, and trade finance systems, applies the bank&#39;s entity-relationship hierarchy to aggregate to economic group level, and produces the single-name exposure register with limit utilisation and large-exposure threshold flags.
+The credit risk officer reviews entity mapping for any new counterparty structures before releasing the report.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/counterparty-exposure-analytics/counterparty-exposure-trend-analysis" id="scenario-counterparty-exposure-trend-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Counterparty Exposure Trend Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent tracks single-name and sector concentration trends over rolling 12 months, identifying counterparties with accelerating exposure growth relative to limit headroom for the Chief Credit Officer&#39;s weekly review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Limit utilisation snapshots show the current position but not the rate of change.
+A counterparty approaching its large-exposure limit through incremental draws over several months is visible in a trend view but not in a point-in-time report; the credit team&#39;s attention is typically directed to current breaches rather than trajectory.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads 12 months of daily exposure registers, computes utilisation trend and velocity for each counterparty and sector, and flags names where the trajectory points to a limit breach within the next 90 days.
+The Chief Credit Officer receives a weekly trend digest alongside the standard limit utilisation report.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="concentration-sector-risk">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Concentration &amp; sector risk</h2>
+    
+    <p class="l3-section__intent">Concentration risk is the incremental loss risk arising when a significant portion of the portfolio is exposed to a single counterparty, group, industry, geography, or correlated cluster. Under NBKR large-exposure regulations, single-name concentration above 25% of Tier 1 capital requires supervisory notification; sector concentration limits are set internally in the Risk Appetite Statement. BCBS 239 requires risk data aggregation that supports real-time concentration monitoring. Standard concentration reports cover the expected dimensions; correlated cross-dimensional concentrations require dedicated analytical work.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/concentration-sector-risk/portfolio-concentration-analysis" id="scenario-portfolio-concentration-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Portfolio Concentration Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent scans the credit portfolio for concentration patterns across five dimensions — industry, geography, single-name, collateral, and correlated cross-sector clusters — and maps distance-to-limit for each.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Standard concentration reports cover industry, geography, and single-name dimensions.
+Correlated concentrations — geographic-sector overlap, supply-chain clusters across top borrowers, collateral correlation across counterparties — are not visible in standard outputs and require bespoke analysis commissioned after a sector event has already developed.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the full loan portfolio and maps exposures across all five concentration dimensions, including multi-dimensional correlated patterns.
+It computes distance-to-limit for each dimension and models concentration impact under a sector stress scenario.
+The Chief Credit Officer receives a weekly concentration watch with escalation flags.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The Chief Credit Officer manages credit concentration risk from a weekly agent-generated analysis across five dimensions — industry, geography, single-name, collateral, and correlated cross-sector clusters — with distance-to-limit computed and escalation flags applied.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent concentration analysis covering all five dimensions run on a weekly basis within 6 months of go-live; weekly watch delivered to the Chief Credit Officer for ≥45 consecutive weeks in year 1.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of escalation flags rated as material by the Chief Credit Officer on review; correlated cross-sector concentration patterns identified by the agent cited in ≥1 credit committee remediation discussion per quarter.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Weekly concentration analysis delivered within 1 business day of loan portfolio data cut, versus ≥1 week of bespoke manual analysis commissioned reactively after sector events under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/concentration-sector-risk/sector-stress-concentration-scenario" id="scenario-sector-stress-concentration-scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Sector Stress Concentration Scenario</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent models a defined sector stress scenario — commodity price collapse, real estate correction, or sovereign downgrade — against the current portfolio concentration profile, producing an expected loss estimate for the Credit Committee stress discussion.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Ad hoc sector stress scenario analysis is commissioned following a sector event.
+The analysis requires combining current sector exposure data with historical loss rates or supervisory stress parameters, a cross-system exercise that takes several days of analyst effort and is typically completed after the relevant Credit Committee meeting.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads current sector exposure, applies the defined stress parameter set — PD uplift, LGD widening, correlation assumption — from the bank&#39;s stress testing library, computes expected loss by sector and total portfolio impact, and produces the scenario output for the Credit Committee within one business day of trigger.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/concentration-sector-risk/concentration-limit-calibration-review" id="scenario-concentration-limit-calibration-review">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Concentration Limit Calibration Review</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent compares current portfolio concentration against sector limit calibration assumptions, identifies limits where the current macro or sector outlook has changed the risk basis used at calibration, and delivers a limit review signal to the Chief Credit Officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Sector concentration limits are calibrated at the annual risk appetite review.
+Changes in sector credit conditions — a sector upgrade or downgrade by rating agencies, a regulatory change affecting sector economics — alter the risk basis underlying the limit but are not reflected until the next annual calibration.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the current sector limit calibration assumptions and compares them with current sector credit conditions from rating agency reports, regulatory guidance, and macroeconomic data.
+It flags limits where the calibration basis has materially changed and delivers a review signal to the Chief Credit Officer for out-of-cycle limit adjustment where warranted.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="pd-lgd-ead-model-outputs">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">PD/LGD/EAD model outputs</h2>
+    
+    <p class="l3-section__intent">The three core parameter estimates — probability of default (PD), loss given default (LGD), and exposure at default (EAD) — produced by Internal Ratings-Based (IRB) models under Basel III Pillar 1. PD/LGD/EAD outputs drive regulatory capital (RWA), IFRS 9 ECL, and credit pricing. Under NBKR and CBR IRB approval frameworks, model performance is monitored continuously; material deterioration triggers recalibration and supervisory notification. The model outputs are regenerated each month and consumed by capital, credit risk, and finance teams.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/pd-lgd-ead-model-outputs/pd-lgd-ead-monthly-output-narrative" id="scenario-pd-lgd-ead-monthly-output-narrative">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">PD/LGD/EAD Monthly Output Narrative</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates the monthly PD/LGD/EAD output narrative — parameter movements by segment, macro overlay impact, and variance to prior month — from the IRB model run for the credit risk and capital teams.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Monthly IRB model output requires a narrative explaining parameter movements before the capital and provisioning teams can act on the numbers.
+Drafting the narrative requires cross-referencing model outputs, macro overlay inputs, and prior-month values held in separate systems; the analyst assembles manually before any downstream use begins.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the monthly model run outputs, macro overlay parameters, and prior-month values.
+It generates the standard narrative covering PD movement by segment, LGD and EAD drivers, macro overlay effect, and variance flags.
+The credit risk officer reviews and releases to capital and finance teams.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/pd-lgd-ead-model-outputs/irb-model-performance-signal" id="scenario-irb-model-performance-signal">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">IRB Model Performance Signal Watch</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors PD/LGD/EAD model output distributions each month for calibration drift, PSI breaches, and actual-vs-predicted divergence, delivering an early-warning signal to the Chief Model Risk Officer before a formal out-of-cycle validation is triggered.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Model performance deterioration is detected in the scheduled validation cycle, which runs annually or biennially per SR 11-7 requirements.
+Calibration drift visible in the monthly output distributions — predicted default rates diverging from realised rates at segment level — is not surfaced until the next scheduled review, narrowing the response window.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads monthly PD/LGD/EAD output distributions and realised default and loss data, computes PSI for input stability, Gini and KS for discrimination, and predicted-vs-actual divergence by segment.
+It flags segments breaching defined performance bands and delivers a monthly performance signal watch to the Chief Model Risk Officer.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/pd-lgd-ead-model-outputs/rwa-capital-attribution-pack" id="scenario-rwa-capital-attribution-pack">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">RWA &amp; Capital Attribution Pack</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the monthly RWA attribution pack — decomposing RWA movement into PD, LGD, EAD, and portfolio mix drivers — for the Capital Committee and ICAAP capital adequacy narrative.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Monthly RWA movements must be explained to the Capital Committee and documented in the ICAAP narrative.
+Attribution across PD, LGD, EAD, and portfolio composition drivers requires combining model outputs with portfolio exposure data; the capital team assembles the decomposition manually before each committee cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads monthly IRB outputs, exposure data, and prior-month RWA.
+It decomposes RWA movement into parameter and mix drivers, produces the Capital Committee attribution table, and drafts the ICAAP capital adequacy narrative section covering credit risk RWA.
+The capital team reviews and integrates into the full ICAAP pack.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="vintage-cohort-migration">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Vintage cohort &amp; migration</h2>
+    
+    <p class="l3-section__intent">Vintage cohort analysis tracks the credit performance of loans originated in a given period — comparing default rates, loss rates, and migration patterns across origination cohorts to assess credit quality trajectory by underwriting vintage. Migration analysis tracks the flow of exposures between rating grades or asset-quality classifications over time. Together they provide the forward-looking credit quality signal that PD-point-in-time estimates and stock-level impairment ratios cannot deliver alone. IFRS 9 ECL staging decisions depend on significant-increase-in-credit-risk (SICR) triggers that are informed by migration analysis.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/vintage-cohort-migration/migration-matrix-trend-watch" id="scenario-migration-matrix-trend-watch">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Migration Matrix Trend Watch</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent produces a rolling 12-month migration matrix by rating grade and asset class, flagging accelerating downgrade flow for the CRO and Credit Committee.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The credit risk team monitors current-period migration as part of the monthly portfolio pack.
+Trend in migration rates — a gradual acceleration in Stage 1 to Stage 2 flow over several quarters — is not directly visible from month-to-month migration snapshots without time-series analysis.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads monthly migration registers, constructs rolling migration matrices by grade and asset class, computes trend in each transition probability, and flags grade pairs where the downgrade probability is accelerating beyond a defined threshold.
+The CRO and Credit Committee receive the trend watch alongside the standard migration matrix.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/vintage-cohort-migration/vintage-cohort-performance-report" id="scenario-vintage-cohort-performance-report">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Vintage Cohort Performance Report</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates quarterly vintage cohort performance reports — default rates, loss rates, and prepayment speeds by origination vintage and segment — enabling the Chief Credit Officer to compare credit quality across underwriting periods.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Vintage performance comparison requires constructing cohort time series from loan transaction data across multiple origination periods.
+The analysis is produced on an ad hoc basis when credit quality concerns arise; a systematic quarterly view is not available between those requests.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads loan origination and performance data, constructs cohort time series by vintage, segment, and product, and generates the quarterly report covering default rates, loss rates, and migration paths.
+The Chief Credit Officer uses the output to identify underwriting vintage deterioration and inform PD recalibration timing.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/vintage-cohort-migration/sicr-migration-trigger-analysis" id="scenario-sicr-migration-trigger-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">SICR Migration Trigger Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent applies the IFRS 9 SICR criteria to the loan portfolio each month, identifies exposures with significant increases in credit risk, and produces the staging migration register for the finance and credit risk teams.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>IFRS 9 Stage 2 classification requires identifying exposures where credit risk has increased significantly since origination.
+Applying SICR quantitative tests — lifetime PD comparison, backstop DPD trigger, qualitative override criteria — across a large portfolio requires systematic data extraction and rule application that is prone to inconsistency when performed manually.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads current PD estimates, origination PD benchmarks, payment behaviour data, and qualitative override flags.
+It applies the SICR criteria, generates the staging migration register with the triggering criterion per exposure, and flags population-level migration patterns for the finance controller&#39;s review before ECL provisioning.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="watchlist-early-warning">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Watchlist &amp; early-warning</h2>
+    
+    <p class="l3-section__intent">The portfolio monitoring framework that identifies credits showing early deterioration signals — financial covenant strain, payment irregularity, adverse sector news, collateral value decline — before default. Watchlist management is a regulatory expectation under NBKR Regulation No. 16 and CBR credit risk guidelines; each watchlisted credit requires an enhanced monitoring plan and periodic committee review. Early-warning indicator frameworks define the trigger conditions for watchlist entry and the escalation path to Special Mention or Substandard classification.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/watchlist-early-warning/watchlist-covenant-tracker" id="scenario-watchlist-covenant-tracker">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Watchlist Covenant Breach Tracker</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reads financial statements and covenant test submissions for watchlist credits, applies covenant compliance tests, and generates the covenant status register with breach flags and headroom calculations for each credit ahead of the review cycle.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Covenant compliance monitoring for watchlist credits requires the credit analyst to calculate test results from borrower financial submissions and compare against the covenant schedule.
+With multiple covenants per credit and submissions on varying cadences, tracking compliance status across the full watchlist manually introduces the risk of missed breach identification.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads borrower financial submissions and applies the covenant test calculations per the facility agreement terms.
+It computes compliance status and headroom for each covenant, flags breaches and waivers required, and generates the covenant status register across the full watchlist population.
+The credit analyst reviews and escalates confirmed breaches per the credit policy.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/watchlist-early-warning/watchlist-loan-review-prep" id="scenario-watchlist-loan-review-prep">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Watchlist Dossier Assembly</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the watchlist dossier per credit — combining current financials, covenant status, collateral valuations, and exposure data — into a committee-ready pack ahead of each review cycle.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Preparing each watchlist review dossier consumes two to four analyst hours before the committee meeting.
+Current financials, covenant breach status, collateral valuations, and prior meeting minutes reside in separate systems; the analyst assembles by hand each cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads loan management, financial data, covenant tracker, and committee records and auto-assembles each dossier in a standard format.
+The credit analyst reviews the generated pack, adds forward judgement on borrower trajectory, and clears it for committee.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The credit analyst adds forward judgement on borrower trajectory to an agent-assembled watchlist dossier — combining current financials, covenant status, collateral valuations, and prior committee minutes — for every credit ahead of each review cycle.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to auto-assemble watchlist dossiers for ≥95% of watchlist credits in each review cycle within 6 months of go-live; all four dossier components (financials, covenant status, collateral valuations, prior minutes) populated from connected systems in every run.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of agent-assembled dossiers accepted by credit analysts as complete for committee review without manual supplementation; committee chairs confirm ≥80% of dossiers as adequate for discussion in post-meeting quality reviews.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Watchlist dossier assembled within 30 minutes of cycle trigger, versus 2–4 hours of manual assembly per credit under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/watchlist-early-warning/credit-early-warning-signal-enrichment" id="scenario-credit-early-warning-signal-enrichment">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Credit Early-Warning Signal Enrichment</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent continuously monitors external signals — news, regulatory filings, payment-behaviour proxies, and sector data — and enriches the watchlist early-warning register with flags for review by the Chief Credit Officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Watchlist identification depends on periodic relationship manager reviews and covenant breach triggers.
+External signals — adverse media, supply-chain stress, sector rating actions — reach the credit team after the risk has materialised in the borrower&#39;s financials, narrowing the response window.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads news feeds, regulatory filings databases, sector data, and payment-behaviour proxies, cross-references against the active credit portfolio, and flags borrowers with emerging signal clusters.
+The Chief Credit Officer receives a daily alert digest; triggered credits enter watchlist review without waiting for the next scheduled manager cycle.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The Chief Credit Officer receives a daily alert digest of borrowers with emerging external signal clusters, enabling watchlist review to begin before risk materialises in financial statements.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent monitoring external signals across ≥90% of the active credit portfolio by counterparty within 12 months of go-live; daily alert digest delivered to the Chief Credit Officer for ≥200 business days per year once live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of agent-generated watchlist flags confirmed as material by the Chief Credit Officer on review; signal-to-noise ratio maintained with ≤20% of daily flagged credits subsequently assessed as immaterial.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>External signal alert delivered to the Chief Credit Officer within 24 hours of signal identification, versus a lag of days-to-weeks under the prior relationship manager review cycle.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/watchlist-early-warning/watchlist-migration-probability-scoring" id="scenario-watchlist-migration-probability-scoring">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Watchlist Migration Probability Scoring</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent computes a migration probability score for each watchlist credit — combining financial trend, covenant headroom, collateral coverage, and external signal data — enabling the Chief Credit Officer to prioritise review attention across the watchlist population.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Watchlist credits are reviewed on a standard cycle without systematic prioritisation of those with the highest probability of migration to default.
+With 30-80 credits on the watchlist at any time, uniform review cadence under-resources high-migration-risk credits and over-resources stable watchlist names.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads financial trend data, covenant headroom calculations, collateral coverage ratios, and external signal clusters for each watchlist credit.
+It computes a migration probability score using the bank&#39;s early-warning indicator framework and delivers a ranked watchlist to the Chief Credit Officer, enabling differentiated review intensity by migration probability band.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="ecl-ifrs9-provisions">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">ECL &amp; IFRS 9 provisions</h2>
+    
+    <p class="l3-section__intent">Expected Credit Loss (ECL) under IFRS 9 is the probability-weighted forward-looking estimate of credit losses, staged by credit quality deterioration — Stage 1 (12-month ECL), Stage 2 (lifetime ECL on SICR credits), and Stage 3 (lifetime ECL on credit-impaired exposures). The ECL calculation combines PD, LGD, EAD, and forward-looking macroeconomic adjustment factors across origination cohorts and portfolio segments. Under NBKR and CBR IFRS 9 implementation guidance, the ECL calculation is performed quarterly, with the provision balance reported to the supervisory authority and disclosed in financial statements.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/ecl-provision-narrative" id="scenario-ecl-provision-narrative">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">ECL Provision Narrative</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles the quarterly IFRS 9 ECL provision narrative — stage movements, macro overlay rationale, and variance to prior quarter — for finance and CRO review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The quarterly IFRS 9 ECL narrative requires the credit risk and finance teams to cross-reference model outputs, macro overlay inputs, and prior disclosures before drafting begins.
+Stage movement explanations, macro overlay assumptions, and variance analysis must be reconciled across separate systems, with ECL, PD/LGD/EAD, and staging data held in different repositories.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads current ECL model outputs, staging flow data, macro overlay assumptions, and prior quarter disclosures.
+It generates the provision narrative in the prescribed format — stage movement explanation, macro overlay rationale, and variance analysis — ready for the finance controller and CRO to review and sign off.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The finance controller and CRO review an agent-assembled quarterly IFRS 9 ECL provision narrative — with stage movements, macro overlay rationale, and prior-quarter variance analysis — drafted from model outputs in the prescribed format.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent used to draft the ECL provision narrative for ≥4 consecutive quarterly reporting cycles within 18 months of go-live; all prescribed narrative sections (stage movements, macro overlay, variance analysis) populated from model data in every run.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of agent-drafted ECL narratives accepted by the finance controller and CRO with only minor editorial amendment; cross-system reconciliation errors in stage movement data reduced to ≤3% of narrative items on quality review.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>ECL provision narrative draft delivered within 2 business days of quarterly model output lock, versus ≥1 week of manual cross-system assembly under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/macro-overlay-calibration-support" id="scenario-macro-overlay-calibration-support">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Macro Overlay Calibration Support</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reads current macroeconomic forecasts from the bank&#39;s approved scenarios and prior overlay calibration records, and produces a structured calibration input document for the credit risk and finance teams&#39; quarterly macro overlay review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>IFRS 9 macro overlay calibration requires the credit risk team to assess whether model-generated ECL adequately reflects the macroeconomic outlook, applying management judgement where it does not.
+The calibration discussion is prepared by the credit risk analyst drawing on multiple macro data sources and prior overlay history; the preparation step consumes capacity before the substantive discussion can begin.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the bank&#39;s approved macroeconomic scenarios, prior overlay decisions and their rationale, and current ECL model outputs.
+It produces a structured calibration input document — current macro scenario parameters, comparison to prior overlay assumptions, ECL sensitivity to scenario change, and key judgement questions — for the quarterly overlay review meeting.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/ecl-staging-distribution-analysis" id="scenario-ecl-staging-distribution-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">ECL Staging Distribution Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent tracks Stage 1/2/3 distribution movements across portfolios each quarter, identifies segment-level trends inconsistent with the macro environment, and delivers a distribution analysis to the Chief Credit Officer ahead of the quarterly ECL review.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Stage distribution movements are reported in the quarterly IFRS 9 narrative but not analysed for consistency with macro and portfolio signals.
+A Stage 2 stock declining in a deteriorating macro environment, or a Stage 2 concentration building in a specific segment, may indicate SICR criteria that require recalibration — a signal not visible in the summary narrative alone.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads quarterly staging distributions by segment and product, computes movement trends, and cross-references against macro indicators and portfolio credit quality signals.
+It flags distribution patterns inconsistent with the macro environment and delivers the analysis to the Chief Credit Officer ahead of the quarterly ECL model and overlay review.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <div class="okr-grid">
+        
+        
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+<footer class="o-footer">Discovery Catalog · O!Bank</footer></main></div>
+</body></html>

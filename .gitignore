@@ -23,6 +23,9 @@ deploy/target/
 # generated build cache
 portal/.cache/
 
+# On-demand portable portal; regenerate with portal/tools/export_portable.py
+portal/published/
+
 # >>> humanize (managed) >>>
 .runtime/
 .vale/styles/

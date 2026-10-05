@@ -1,0 +1,196 @@
+<GraceChangePlan graceVersion="4.0" status="superseded">
+  <C-RU-CHARTER-COMPLETE>
+    <Replacement>C-BASELINE-CLOSURE</Replacement>
+    <IntentSummary>Complete the owner-authorized Russian charter sequentially: translate remaining sources, compare meaning and structure, integrate the real portal views, and verify the result.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist>
+        <Value>charter/en/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/en/templates/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>portal/tools/localization.py</Value>
+      </MustExist>
+      <MustPassCommand>
+        <Command>python3 portal/tools/check_sources.py</Command>
+      </MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify>
+        <Module>M-PORTAL-SOURCE</Module>
+      </MustVerify>
+      <MustPassCommand>
+        <Command>python3 portal/tools/check_sources.py</Command>
+      </MustPassCommand>
+      <MustPassCommand>
+        <Command>python3 -m unittest discover -s portal/tests</Command>
+      </MustPassCommand>
+      <MustPassCommand>
+        <Command>python3 portal-scaffolding/check.py</Command>
+      </MustPassCommand>
+      <MustPassCommand>
+        <Command>python3 portal/tools/check.py --idempotent</Command>
+      </MustPassCommand>
+      <MustExist>
+        <Value>charter/ru/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/ai-policy.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/aicc-charter.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/business-model.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/document-catalog.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/operating-model.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/portfolio-management-model.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/solution-lifecycle-model.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/statement-of-intent.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/documents/vocabulary.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/executive-summary.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/guides/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/guides/cadence-guide.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/guides/engagement-guide.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/guides/organization-guide.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/guides/service-delivery-guide.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/guides/unit-governance-guide.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/acceptance-checklist.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/ai-incident-review.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/appointments-record.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/control-sign-off.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/decision-record.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/initiative-brief.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/outcome-report.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/package-definition.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/proposal.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/quarterly-report.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/registry-snapshot.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/service-agreement.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/solution-definition.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/templates/steering-summary.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/workflows/README.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/workflows/ai-risk-control.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/workflows/cadence.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/workflows/collaboration-tooling.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/workflows/engagement.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/workflows/service-delivery.md</Value>
+      </MustExist>
+      <MustExist>
+        <Value>charter/ru/workflows/unit-governance.md</Value>
+      </MustExist>
+    </TargetAssertions>
+    <DurableScope>
+      <None />
+    </DurableScope>
+    <ObservedWriteScope>
+      <Glob>charter/ru/**</Glob>
+      <Glob>portal/**</Glob>
+      <Glob>html/aicc/**</Glob>
+      <Glob>portal-scaffolding/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001>
+        <Title>Translate the remaining guides and workflows</Title>
+        <DependsOn />
+        <AcceptanceCriteria>
+          <Criterion>Eight complete translations preserve rules, roles, sequences and diagrams.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 portal/tools/check_sources.py</Command>
+        </Verification>
+      </T-001>
+      <T-002>
+        <Title>Translate templates and charter introductions</Title>
+        <DependsOn />
+        <AcceptanceCriteria>
+          <Criterion>All fifteen template files and two introductory files preserve form fields, record references and purpose.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 portal/tools/check_sources.py</Command>
+        </Verification>
+      </T-002>
+      <T-003>
+        <Title>Review the complete charter and verify its portal projection</Title>
+        <DependsOn>T-001, T-002</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>All 39 files are reviewed, rendered corpus pages use the Russian content, and translation scope documentation remains accurate.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 -m unittest discover -s portal/tests</Command>
+          <Command>python3 portal/tools/check.py --idempotent</Command>
+        </Verification>
+      </T-003>
+    </ImplementationPlan>
+  </C-RU-CHARTER-COMPLETE>
+</GraceChangePlan>

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "package_manifest_sha256": "829b75411377f0e9180390c81d91b06d30bc101aed7725a37c74a8dea205b673",
+  "protocol": "file:",
+  "pages": 626,
+  "relocated_with_spaces_and_cyrillic": true,
+  "checks": [
+    "entry point",
+    "all pages",
+    "EN/RU switch",
+    "theme across files with storage cleared",
+    "search without fetch",
+    "search result navigation",
+    "embedded fonts",
+    "diagram zoom",
+    "manual copy fallback",
+    "mobile layout"
+  ],
+  "external_requests": [],
+  "failed_requests": [],
+  "page_errors": [],
+  "limitation": "Windows SMB access and corporate browser policy require a workstation check."
+}

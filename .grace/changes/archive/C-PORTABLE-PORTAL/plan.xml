@@ -1,0 +1,14 @@
+<GraceChangePlan graceVersion="4.0" status="applied">
+  <C-PORTABLE-PORTAL>
+    <IntentSummary>Implement the user-approved on-demand folder export as a separate packaging step, then test the real exported files.</IntentSummary>
+    <BaselineAssertions><MustExist><Value>M-PORTAL-SOURCE</Value><Value>M-PORTAL-PROJECTION</Value></MustExist></BaselineAssertions>
+    <TargetAssertions><MustVerify><Module>M-PORTABLE-EXPORT</Module></MustVerify><MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand><MustPassCommand><Command>python3 portal/tools/export_portable.py</Command></MustPassCommand><MustPassCommand><Command>portal/.venv/bin/python portal/tools/check_portable_browser.py</Command></MustPassCommand></TargetAssertions>
+    <DurableScope><GraphAnchors><M-PORTABLE-EXPORT /></GraphAnchors><VerificationAnchors><V-M-PORTABLE-EXPORT /></VerificationAnchors><ContextArtifact>deployment.xml</ContextArtifact></DurableScope>
+    <ObservedWriteScope><File>portal/tools/export_portable.py</File><File>portal/tools/check_portable_browser.py</File><File>portal/site/site.js</File><File>portal/site/portable.js</File><File>portal/tests/test_portable.py</File><File>portal/PORTABLE.md</File><File>.gitignore</File><Glob>portal/published/**</Glob></ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001><Title>Export explicit file navigation and bundled search with portable interactions.</Title><DependsOn></DependsOn><AcceptanceCriteria><Criterion>Source HTML remains unchanged; the CLI writes a self-contained folder only when invoked.</Criterion></AcceptanceCriteria><Verification><Command>python3 -m unittest discover -s portal/tests</Command><Command>python3 portal/tools/export_portable.py</Command></Verification></T-001>
+      <T-002><Title>Exercise the exported package through file URLs and document its use.</Title><DependsOn>T-001</DependsOn><AcceptanceCriteria><Criterion>All pages open and representative search, language, theme, diagrams, font and copy interactions pass in Chromium; no HTTP resource requests occur.</Criterion></AcceptanceCriteria><Verification><Command>portal/.venv/bin/python portal/tools/check_portable_browser.py</Command></Verification></T-002>
+      <T-003><Title>Record the export module and verification in GRACE.</Title><DependsOn>T-002</DependsOn><AcceptanceCriteria><Criterion>Graph and verification route the portable export separately from HTTP publication.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/export_portable.py</Command></Verification></T-003>
+    </ImplementationPlan>
+  </C-PORTABLE-PORTAL>
+</GraceChangePlan>

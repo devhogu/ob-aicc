@@ -1,0 +1,61 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-PORTAL-NEIGHBOURS>
+    <Summary>Give the AICC portal five independent neighbouring sections in one shared O!Bank shell. Adopt the existing Financial Services portal as Discovery Catalog while preserving its layouts and scenario content; scaffold Portfolio, Delivery Pipeline and CloudLab for subsequent work.</Summary>
+    <Goals>
+      <Goal>Staff can move between AICC, Discovery Catalog, Portfolio, Delivery Pipeline and CloudLab through five prominent navigation groups available on every page.</Goal>
+      <Goal>Discovery Catalog contains the existing bilingual banking framework, its nine main areas, detailed scenario cards, value streams, cycles and interactive views, presented as discovery opportunities.</Goal>
+      <Goal>The sections share the current AICC branding, fonts, colours, controls, theme behaviour and navigation conventions while retaining layouts appropriate to their material.</Goal>
+      <Goal>Each section owns its content and lifecycle. The common shell provides navigation and presentation without creating content references, inherited document status or automated business relationships between neighbours.</Goal>
+      <Goal>Provide useful initial landing content for the three later sections: Portfolio guidance with an empty initiative register, Delivery Pipeline with the first CSR project definition marked as a proposal, and CloudLab with a concept and approach overview.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>The user's latest instruction selects independent neighbours under one roof. It supersedes the earlier proposed content linkage between the financial framework, charter records, CSR and Lab. Navigation between sections is allowed; their content shall not acquire cross-section references or integrations.</Constraint>
+      <Constraint>Do not alter charter, registry or portfolio corpus documents, approved records, existing initiative states or document decision rights. Existing AICC content and its internal references remain within AICC.</Constraint>
+      <Constraint>The new Portfolio register starts empty. Do not import the existing AICC initiative records or infer that a Discovery scenario has been selected. The CSR proposal is a Delivery Pipeline project definition and does not establish an approved or active delivery engagement.</Constraint>
+      <Constraint>Discovery content comes from the retained Financial Services source, not from a second editable copy of generated output. Preserve scenario identifiers, content, local navigation and interaction semantics. Change section identity and presentation; do not invent missing measures or claim that illustrative targets and regulatory references have been validated for the Bank.</Constraint>
+      <Constraint>Use the current AICC O!Bank design assets. Keep Discovery's wide spatial layouts, grids, tabs, disclosures and flow views; do not force its pages into the charter's document-reading layout. Scope section styles so they cannot change neighbouring sections.</Constraint>
+      <Constraint>Retain existing AICC public routes and anchors. The shared entry may continue to open the existing AICC home. The new live Portfolio and Delivery Pipeline have separate route namespaces from AICC's existing portfolio-management and delivery-model pages.</Constraint>
+      <Constraint>Provide equivalent English and Russian navigation and new landing content. Preserve both existing Discovery editions and counterpart page switching. No language is designated authoritative.</Constraint>
+      <Constraint>Search is scoped to the current section. Charter term linking, clause references, baseline stamps and document status must not be applied to neighbouring content. Section status remains truthful: discovery material, empty register, project proposal or Lab concept as applicable.</Constraint>
+      <Constraint>Generate one self-contained static website under the existing html/aicc publication root through the maintained build path. Rebuilding, checking freshness or preparing deployment must not remove the new sections. Retain compatibility with deliberate, on-demand portable export.</Constraint>
+      <Constraint>Preserve unrelated working-tree changes and existing active change bundles. The user approved this scaffold scope and authorised proceeding on 2026-10-05 with “ok, lets proceed”. This authorises its bounded local implementation and verification, not live publication.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Full adoption of the CSR delivery method or CloudLab operating procedures, policies, infrastructure or provider choices; these follow as separate content changes.</NonGoal>
+      <NonGoal>A substantive rewrite or verification of all financial scenario assumptions, targets and external regulatory statements.</NonGoal>
+      <NonGoal>Automatic promotion of scenarios into initiatives or projects, shared business records, cross-section recommendations, charter citations or links between neighbouring content bodies.</NonGoal>
+      <NonGoal>A new CMS, runtime backend, authentication model, platform service or enterprise-wide search.</NonGoal>
+      <NonGoal>Commit, push, website publication or regeneration of the corporate-share package as part of this scaffold design.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>All pages expose the five requested section names in the same order, clearly identify the active section, and offer working keyboard and mobile navigation. Local navigation belongs to the selected section.</Criterion>
+      <Criterion>Discovery retains the current 76 content pages per language and 1,101 unique scenario cards per language unless an observed source change is explicitly reconciled before implementation. Its relative page hierarchy, identifiers, tabs, disclosures, flow-stage dialogs and language counterparts remain usable.</Criterion>
+      <Criterion>Discovery uses the AICC header, logo, local fonts, colour and control conventions in light and dark themes. Desktop layouts retain their spatial relationships, and mobile pages reflow without page-level horizontal overflow or clipped controls.</Criterion>
+      <Criterion>Portfolio has a self-contained overview, concise selection guidance and an honest empty initiative register. Delivery Pipeline has a registry and one self-contained CSR project definition labelled as a proposal. CloudLab has a self-contained concept and approach landing page that does not imply an operational environment.</Criterion>
+      <Criterion>Existing AICC Portfolio and Delivery navigation can be labelled Portfolio management and Delivery model to distinguish them from the new top-level sections; their document content, URLs and internal references remain unchanged.</Criterion>
+      <Criterion>Only shared shell navigation connects section boundaries. AICC documents do not link to the new sections; the new content bodies do not cite or link to charter documents or neighbouring sections. Search results and document metadata respect their section boundary.</Criterion>
+      <Criterion>The maintained complete-site build is repeatable and includes every section. Static checks cover links, anchors, local assets and language parity across the assembled output, including the empty registers and project-definition page.</Criterion>
+      <Criterion>Browser evidence demonstrates movement among all five sections, section-local search, theme persistence, counterpart language switching, Discovery interactions and responsive layout. AICC's existing document, diagram and search behaviour remains functional.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-PORTAL-SOURCE />
+      <M-PORTAL-PROJECTION />
+      <M-PORTAL-LOCALIZATION />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 portal/tools/check_sources.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/build.py</ExpectedCommand>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedEvidence>Source-to-output inventories establish Discovery page, scenario and identity preservation. Relevant finance geometry, interaction, link and modal checks are adapted to the assembled portal rather than testing only the standalone predecessor.</ExpectedEvidence>
+      <ExpectedEvidence>Desktop and mobile browser checks in English and Russian, both themes, cover every section and representative Discovery overview, domain, concern, value-stream and cycle layouts.</ExpectedEvidence>
+      <ExpectedEvidence>Boundary checks distinguish global navigation links from body links and confirm section-scoped search, truthful status and absence of inherited charter metadata. Corpus files remain unchanged by this change.</ExpectedEvidence>
+      <ExpectedEvidence>A deliberate temporary portable export confirms that the assembled tree remains self-contained; it does not refresh portal/published or publish the website automatically.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>Only the shared scaffold and Discovery receive full adoption in this first slice. The other new sections receive the bounded landing material stated here, ready for later independent development.</Assumption>
+      <Assumption>The first project definition is Customer Intelligence-Enabled Service Resolution, using the existing CSR proposal as its content source without changing its approval state.</Assumption>
+      <Assumption>The five sections share a publication package and presentation assets; independent content lifecycle does not require separate infrastructure or independently deployed applications.</Assumption>
+    </Assumptions>
+  </C-PORTAL-NEIGHBOURS>
+</GraceChangeSpec>

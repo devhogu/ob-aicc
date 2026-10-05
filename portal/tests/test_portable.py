@@ -67,6 +67,20 @@ class PortableExport(unittest.TestCase):
         self.assertIn('missing anchor', result.stderr)
         self.assertEqual(before, self.tree(self.output))
 
+    def test_neighbour_search_keeps_its_own_index_after_export(self):
+        for lang in ('en', 'ru'):
+            path = self.source / lang / 'discovery/index.html'
+            path.parent.mkdir()
+            path.write_text(f'<html lang="{lang}"><script src="../../assets/site.js" defer data-search="../../assets/search-discovery-{lang}.json"></script><h1 id="payment">Payment discovery</h1></html>')
+            (self.source / f'assets/search-discovery-{lang}.json').write_text(json.dumps([{'u': f'/{lang}/discovery/#payment', 'h': 'Payment discovery', 't': 'Discovery', 'x': 'Scenario'}]))
+        result = self.run_export()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        page = (self.output / 'ru/discovery/index.html').read_text()
+        self.assertIn('src="../../assets/search-discovery-ru.js"', page)
+        self.assertIn('data-search="../../assets/search-discovery-ru.js"', page)
+        self.assertNotIn('src="../../assets/search-ru.js"', page)
+        self.assertIn('/ru/discovery/index.html#payment', (self.output / 'assets/search-discovery-ru.js').read_text())
+
     def test_refuses_to_replace_an_unowned_folder(self):
         self.output.mkdir()
         (self.output / 'notes.txt').write_text('Keep this')

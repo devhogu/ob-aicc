@@ -1,0 +1,1660 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Transaction data · Discovery Catalog</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../../assets/charter.css?v=a6c78f6d">
+<link rel="stylesheet" href="../../../../assets/neighbours.css?v=4fa0caee">
+
+<link rel="alternate" hreflang="ru" href="../../../../ru/discovery/banking-data-analytics/transaction-data/">
+<script src="../../../../assets/site.js?v=f6e0927c" defer data-search="../../../../assets/search-discovery-en.json" data-t-none="No page matches the query." data-t-light="Light theme" data-t-dark="Dark theme" data-t-dz-close="Close"></script>
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=0d85a6e2">
+<script defer src="../../../../assets/discovery.js"></script>
+</head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>AI Competence Center</span></a>
+  <span class="header-scope">Discovery Catalog</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search this section</label><input id="q" type="search" autocomplete="off" placeholder="Search this section" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Language"><a lang="en" hreflang="en" href="./" aria-current="true">EN</a><a lang="ru" hreflang="ru" href="../../../../ru/discovery/banking-data-analytics/transaction-data/">RU</a></nav><button id="theme-switch" type="button" class="theme-switch" aria-label="Dark theme" title="Dark theme"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Sections of the site</summary><nav class="portal-sections" aria-label="Sections"><div class="portal-nav-group">
+<a class="portal-section-link" data-section="aicc" href="../../../"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 10h.01" />
+  <path d="M12 14h.01" />
+  <path d="M12 6h.01" />
+  <path d="M16 10h.01" />
+  <path d="M16 14h.01" />
+  <path d="M16 6h.01" />
+  <path d="M8 10h.01" />
+  <path d="M8 14h.01" />
+  <path d="M8 6h.01" />
+  <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+  <rect x="4" y="2" width="16" height="20" rx="2" />
+</svg>
+<span>AICC</span></a></div><div class="portal-nav-group is-current">
+<a class="portal-section-link" data-section="discovery" href="../../" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+<span>Discovery Catalog</span></a><div class="portal-local-nav"><a href="../../">Overview</a><a href="../../strategic-portfolio/">Strategic Banking Portfolio</a><a href="../../strategic-initiatives/">Strategic Initiatives &amp; Transformation</a><a href="../../value-streams/">Operational Value Streams</a><a href="../../customer-market-intelligence/">Customer &amp; Market Intelligence</a><a href="../../customer-channels/">Customer &amp; Channels</a><a href="../../risk-control/">Risk &amp; Control</a><a href="../../shared-banking-capabilities/">Shared Banking Capabilities</a><a href="../../finance-treasury/">Finance &amp; Treasury</a><a href="../">Banking Data &amp; Analytics</a></div></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="initiatives" href="../../../initiatives/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span>Portfolio</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="projects" href="../../../projects/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span>Delivery Pipeline</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="lab" href="../../../lab/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+<span>CloudLab</span></a></div></nav></details></aside>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-notice">Discovery material. Scenarios and measures are indicative and require validation for the intended use; they do not establish delivery commitments or approved Bank requirements.</div><div class="discovery-content">
+
+
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Banking Data &amp; Analytics</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Transaction data</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Transaction data</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Transaction data is the bank's highest-volume, highest-velocity data domain — the continuous record of every payment, transfer, card purchase, trade, and account movement across the institution. Raw transaction records carry minimal semantic content; their analytical value is unlocked through enrichment — merchant category, counterparty identity, economic purpose, and customer-journey context — and through lineage tracking that enables reconciliation, audit, and AML pattern detection. Under NBKR and CBR AML/CFT transaction monitoring requirements, SWIFT message archiving standards, and BCBS 239 data aggregation principles, transaction data must be complete, timely, and traceable from source to downstream system. <strong>The GenAI opportunity is to automate transaction enrichment and categorisation at scale, compress reconciliation break investigation cycles, and surface behavioural patterns across the transaction stream</strong> — transforming raw payment records into an analytics-ready layer within hours of settlement.
+</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-payments-movement-data:checked ~ .problems-tab-bar label[for="problems-tab-payments-movement-data"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-payments-movement-data:checked ~ .problems-panel[data-tab="payments-movement-data"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-payments-movement-data"
+    value="payments-movement-data"
+    checked
+    aria-label="Payments movement data"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-payments-movement-data"
+      role="tab"
+      aria-controls="problems-panel-payments-movement-data"
+    >Payments movement data</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-payments-movement-data"
+    data-tab="payments-movement-data"
+    role="tabpanel"
+    aria-labelledby="problems-tab-payments-movement-data"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Transaction volumes, payment-rail utilisation, and settlement failure rates are each monitored within separate operations dashboards. Cross-rail patterns — a payment-rail capacity constraint correlating with a settlement-failure spike, or a transaction-value distribution shift indicating emerging merchant or counterparty behaviour — are identified only through bespoke analytical work commissioned after an event.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">AML transaction monitoring alert investigation requires analysts to retrieve the full transaction history of a flagged customer across all payment rails, enrich each transaction with merchant category and counterparty identity, and reconstruct the transaction network before assessing the alert. The data-retrieval and enrichment step precedes the substantive compliance judgment.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Transaction enrichment rule application, reconciliation break classification, and settlement exception reporting follow defined logic applied to structured transaction data on each settlement cycle. Each process is repeatable, rule-driven, and high-volume — candidates for continuous agent-driven execution with operations team review at the exception level.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">An enriched transaction stream — with merchant category, counterparty identity, and economic purpose attached to each record within hours of settlement — provides the substrate for customer-facing spending insights, AML pattern detection, credit underwriting behavioural signals, and merchant analytics. Peers operating with batch-enriched transaction data delivered at T+1 or later cannot offer the same depth of near-real-time analytics.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="payment-transfer-records">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Payment &amp; transfer records</h2>
+    
+    <p class="l3-section__intent">The complete record of every payment instruction and fund transfer processed by the bank — covering domestic and cross-border payments across KASE, SWIFT, MOEX, and card networks, interbank transfers, and internal account movements. Payment records are the primary source for AML transaction monitoring, sanctions screening, correspondent banking due diligence, and settlement reconciliation. Their completeness, timeliness, and traceability determine the bank&#39;s compliance posture under NBKR AML/CFT monitoring requirements and CBR Regulation No. 375-P on suspicious transaction reporting.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/payment-data-quality-self-service" id="scenario-payment-data-quality-self-service">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Payment Data Quality Self-Service</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent enables compliance and operations analysts to query the completeness and accuracy of payment records for a given date range, correspondent, or payment rail without submitting a data team request. The agent executes against approved read-only access to the payment records store; output is available within the same working session. AML and CFT compliance analysts in KZ and RU markets apply the capability directly to sanctions-screening gap assessments and correspondent banking due diligence reviews.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Compliance and AML analysts who need to assess payment record completeness for a specific correspondent or date range submit a data request and wait for the data team to produce a query result. The wait is disproportionate to the complexity of the underlying query and slows sanctions-screening gap assessments and correspondent banking due diligence reviews. Compliance decisions are delayed by a data access bottleneck rather than analytical complexity.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent accepts a natural-language query specifying a date range, payment rail, or correspondent bank and returns a completeness and accuracy assessment for the specified payment population — field coverage rates, missing mandatory fields, and records flagged for anomalous values. The compliance analyst uses the output to direct remediation or investigation without a data team handoff. Access is controlled through read-only permissions defined and maintained by the CDO.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Compliance and AML analysts query payment record completeness and accuracy for specified correspondents, date ranges, and payment rails within a single working session under CDO-governed read-only access, without a data team request.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent handles ≥ 150 compliance and AML self-service queries per month within 12 months of go-live; capability covers all active payment rails and correspondent relationships.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of query responses accepted by analysts as accurate without manual re-verification; field coverage rate calculations validated against payment records store in ≥ 90% of sampled queries.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Payment data completeness assessment time reduced from multi-day data team request cycles to ≤ 30 minutes per analyst query within a single working session.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/payment-data-completeness-monitoring" id="scenario-payment-data-completeness-monitoring">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Payment Data Completeness Monitoring</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors the completeness of payment record fields required for AML transaction monitoring, sanctions screening, and correspondent banking due diligence on each settlement cycle — flagging payments with missing originator details, absent beneficiary information, or incomplete SWIFT message fields before they are processed by the monitoring systems. The payments operations team receives a same-session exception list for field completion before compliance system consumption.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>AML transaction monitoring and sanctions screening rules rely on the completeness of originator and beneficiary fields in payment records — SWIFT field 50 (ordering customer), field 59 (beneficiary customer), and correspondent bank chain fields. Payments with missing or incomplete fields are processed by monitoring systems using partial data, degrading the accuracy of screening results and creating regulatory exposure under NBKR AML/CFT and CBR Regulation No. 375-P requirements. Completeness failures are identified in compliance system exception reports after processing rather than before consumption.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads each incoming payment instruction before it is consumed by the AML monitoring and sanctions screening systems, validates the required fields against the completeness rules for each payment type (SWIFT, domestic KASE, MOEX, card network), and flags incomplete records as same-session exceptions. The payments operations team receives the exception list with the missing field, the payment identifier, and the counterparty information available for manual completion. Payments that cannot be completed within the defined window are escalated to the compliance team for disposition.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">AML monitoring and sanctions screening systems receive complete, field-validated payment records, reducing screening accuracy failures from missing originator and beneficiary data.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent validates payment record completeness for ≥ 95% of settlement volume across SWIFT, KASE, and MOEX payment rails for ≥ 48 weeks within 12 months; completeness rules approved by compliance within 45 days of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 90% of flagged completeness exceptions confirmed as genuine missing-field failures by the payments operations team; AML monitoring system exception rate from missing fields reduced by ≥ 60% within 3 months of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Completeness validation completed before monitoring system consumption for ≥ 95% of payment volume; exception identification cycle shifted from post-processing compliance reports to pre-consumption same-session flags.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/correspondent-banking-due-diligence-data" id="scenario-correspondent-banking-due-diligence-data">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Correspondent Banking Due Diligence Data Package</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent assembles transaction flow data, correspondent bank utilisation analytics, and jurisdiction risk exposure for each correspondent banking relationship — supporting the annual correspondent due diligence review under NBKR AML/CFT and CBR Regulation No. 375-P. The compliance team uses the data package to assess correspondent risk, identify unusual transaction flow patterns, and update the correspondent risk classification. Agent handles the data assembly step; the compliance team applies judgment to the risk assessment.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Annual correspondent banking due diligence requires the compliance team to assemble transaction flow analytics — volume and value by currency, payment type, and originator jurisdiction — for each correspondent relationship over the review period. The data assembly requires extracting transaction records from the payments system and the SWIFT archive, aggregating by the required dimensions, and cross-referencing against the correspondent&#39;s risk profile. The assembly step consumes compliance analyst time and is inconsistent across relationships, creating variability in due diligence depth.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the payments system and SWIFT message archive for each correspondent relationship, aggregates transaction flow data by currency, payment type, originator jurisdiction, and beneficiary jurisdiction over the review period, and identifies unusual flow patterns — jurisdiction concentrations inconsistent with the correspondent&#39;s stated business profile, payment type distributions that deviate from prior-year patterns. It produces a structured due diligence data package: flow summary table, unusual pattern flags, jurisdiction risk heat map, and a comparison to the prior review period. The compliance team reviews the package, applies risk assessment judgment, and updates the correspondent risk classification.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The compliance team conducts correspondent banking due diligence reviews from a structured, data-grounded package for each relationship, with analyst capacity directed to risk assessment rather than data assembly.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent assembles due diligence packages for ≥ 90% of correspondent banking relationships in the annual review cycle for ≥ 2 consecutive review years within the first 18 months; SWIFT archive and payments system integrations active within 60 days of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of packages confirmed as complete by compliance analysts without additional manual data extraction; unusual flow flags confirmed as requiring investigation in ≥ 70% of cases.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Due diligence data assembly time reduced from 3-5 analyst days per relationship to ≤ 1 day of package review; annual review cycle completable within 6 weeks with existing compliance headcount.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="transaction-lineage-reconciliation">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Transaction lineage &amp; reconciliation</h2>
+    
+    <p class="l3-section__intent">The documented path from source payment instruction through each processing step — enrichment, routing, settlement, and ledger posting — that enables reconciliation, audit, and regulatory tracing. BCBS 239 Principle 3 requires transaction data to be traceable from source to aggregate report; AML investigation and sanctions compliance require the ability to reconstruct the full processing path for any transaction within a defined response window. Reconciliation operates on this lineage to match transaction records to ledger entries and identify breaks.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/reconciliation-break-investigation" id="scenario-reconciliation-break-investigation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">End-of-Day Reconciliation Narrative</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent produces the end-of-day reconciliation summary — break count by type, resolution status, and unresolved break narrative — for operations management review and daily reconciliation close sign-off. The quality and completeness of the narrative are consistent regardless of individual analyst effort at end of shift. Operations management reviews the agent-generated narrative and signs off on the daily close.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The end-of-day reconciliation narrative is drafted manually by the operations team from reconciliation system outputs each evening. Assembling break counts by type, resolution actions, and outstanding break descriptions from separate system outputs adds time to the reconciliation close process. The completeness and consistency of the narrative depend on individual analyst effort under operational shift-end pressure.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the reconciliation system output at end of day, classifies breaks by type and resolution status, and generates the operations management narrative: break count by type, resolved versus outstanding, escalated items with root cause, and carry-forward summary. Operations management reviews the agent-generated narrative and signs off on the daily reconciliation close. Escalated items are flagged for next-day follow-up with root-cause context attached.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Operations management reviews an agent-generated end-of-day reconciliation narrative — break count by type, resolution status, and unresolved break narrative — before daily close sign-off, with consistent quality regardless of individual analyst effort.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces the end-of-day reconciliation narrative for ≥ 95% of business days within 12 months of go-live; break classification by type and resolution status included in each output.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 90% of narratives accepted by operations management for daily close sign-off without material revision; break classification accuracy validated against reconciliation system outputs in ≥ 95% of outputs.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Reconciliation narrative available for operations management review within 30 minutes of system reconciliation run completion, reducing close-of-shift narrative assembly time.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/settlement-reconciliation-break-classification" id="scenario-settlement-reconciliation-break-classification">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Settlement Reconciliation Break Classification</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent classifies end-of-day settlement reconciliation breaks by root cause — timing difference, missing counterparty confirmation, system interface error, or genuine unmatched item — using transaction lineage data and the processing log. The settlement operations team receives a classified break list ranked by resolution urgency and approach, reducing the investigation time required for each break and enabling the team to focus manual effort on genuine unmatched items.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Settlement reconciliation breaks are investigated manually by the settlement operations team each day, joining the break list from the reconciliation system with the processing log to determine why each transaction did not match. Breaks arising from timing differences — a counterparty confirmation arriving after the reconciliation cut-off — require the same manual investigation step as breaks arising from system interface errors, which require IT escalation. The classification step is repetitive for high-volume break types but consumes investigation time that could be applied to complex or genuine unmatched items.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the EOD break list from the reconciliation system and the processing log for each unmatched item, classifies each break by applying lineage-based rules: timing difference (counterparty confirmation status), missing confirmation (no confirmation received from counterparty within the expected window), interface error (processing log shows a system-side failure), or genuine unmatched (no lineage trace supports a match). The classified break list ranks items by resolution approach — auto-clearable on next-day confirmation receipt, IT escalation required, or manual investigation required. Settlement operations direct investigation resources to the genuine unmatched and IT escalation tiers.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Settlement operations resolve reconciliation breaks more efficiently through a classified, prioritised break list, with auto-clearable breaks separated from items requiring manual investigation.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces classified break lists for ≥ 95% of EOD reconciliation cycles for ≥ 48 weeks within 12 months; processing log and reconciliation system integrations active from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of break classifications confirmed as accurate by the settlement operations team; manual investigation time per break cycle reduced by ≥ 40% within 3 months of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Break classification delivered within 30 minutes of EOD reconciliation output; investigation resource allocation shifted to genuine unmatched items from go-live.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/aml-transaction-tracing-support" id="scenario-aml-transaction-tracing-support">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">AML Transaction Tracing Support</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reconstructs the full processing path for a specified transaction or transaction set — from source payment instruction through enrichment, routing, settlement, and ledger posting — providing the AML investigations team with a complete evidence trail for STR preparation and regulatory enquiry responses. The agent assembles the lineage record from the processing log archive within the defined response window; the investigator reviews the trail and applies judgment to the STR narrative.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>AML investigations require the investigator to reconstruct the full processing path for suspect transactions — which systems handled the instruction, when each step occurred, whether any screening or enrichment flags were set, and how the transaction reached the ledger. The reconstruction is performed manually by querying the processing log archive, the AML monitoring system, and the ledger posting records sequentially. For complex transactions — cross-border SWIFT messages with correspondent chain hops — the reconstruction can take a full investigation day, compressing the time available for case analysis.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent accepts a transaction identifier or a set of transaction identifiers and queries the processing log archive, the enrichment pipeline output, the AML monitoring system records, and the ledger posting records to reconstruct the end-to-end processing path. The output is a structured lineage trail: each processing step with its timestamp, the system that handled it, any screening or enrichment flags set, and the final ledger posting. For SWIFT transactions, the correspondent chain is reconstructed from the message archive. The investigator uses the trail as the evidence base for the STR narrative and regulatory response, without performing the manual archive reconstruction.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">AML investigators receive a complete transaction lineage trail within hours of request, directing analyst capacity to case analysis and STR preparation rather than archive reconstruction.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent handles ≥ 85% of transaction lineage reconstruction requests from the AML investigations team within 12 months of go-live; processing log, enrichment, AML monitoring, and ledger sources integrated within 60 days of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 90% of lineage trails confirmed as complete by the AML investigator without additional manual archive queries; SWIFT correspondent chain reconstruction accuracy validated in ≥ 85% of tested cases.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Transaction lineage reconstruction time reduced from a full investigation day to ≤ 2 hours of agent assembly and investigator review; STR preparation cycle shortened by the elimination of the manual reconstruction step.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="transaction-enrichment-categorisation">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Transaction enrichment &amp; categorisation</h2>
+    
+    <p class="l3-section__intent">The process of adding semantic content to raw transaction records — attaching merchant category codes, counterparty identity, economic purpose classification, and customer-journey context to payment and transfer data. Enriched transactions are the analytical substrate for AML pattern detection, credit behaviour scoring, customer-facing spending insights, and merchant analytics. Enrichment rule sets require maintenance as merchant naming conventions and payment-reference formats evolve; NLP-based enrichment extends coverage beyond static rule sets.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/enrichment-rule-maintenance" id="scenario-enrichment-rule-maintenance">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Enrichment Rule Maintenance and Drift Detection</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent monitors the enrichment pipeline&#39;s classification performance on a weekly basis, detecting coverage drift — an increasing proportion of unclassified transactions — and accuracy drift — a shift in the distribution of manual classification corrections — that indicates the enrichment rule set or NLP model requires updating. The analytics team uses the drift report to prioritise rule maintenance and model retraining, maintaining enrichment quality as merchant naming conventions and payment reference formats evolve.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Transaction enrichment quality degrades silently as the payment landscape evolves. New merchants with names outside the trained vocabulary, payment reference format changes adopted by major domestic banks, and new economic purpose categories introduced by product changes create coverage gaps that grow incrementally. The degradation is visible in the unclassified transaction rate but that metric is not monitored systematically; the analytics team discovers quality drift when a downstream consumer — the AML team, the credit underwriting team — reports unusual results in enrichment-dependent analytics.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the weekly enrichment pipeline output, tracks the unclassified transaction rate by merchant category and payment rail, and monitors the distribution of manual classification corrections applied by the training data team. Coverage drift — an unclassified rate rising above trend — and accuracy drift — a correction distribution shifting toward new merchant types or reference patterns — are identified and quantified. The drift report specifies the merchant category and payment rail affected, the magnitude of drift, and a suggested retraining trigger. The analytics team uses the report to schedule rule maintenance sprints and NLP model retraining cycles.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Enrichment pipeline quality is maintained through continuous drift detection and structured maintenance cycles, preventing silent coverage and accuracy degradation between manual reviews.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces weekly enrichment quality reports for ≥ 48 weeks within 12 months; coverage and accuracy drift metrics validated against ground-truth sampling within 45 days of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of drift alerts confirmed as requiring rule maintenance or model retraining by the analytics team; enrichment coverage maintained at ≥ 90% throughout the first 12 months with drift-triggered maintenance.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Enrichment drift detection cycle shifted from reactive downstream quality complaint discovery to weekly proactive monitoring; rule maintenance and retraining cycles initiated within 2 weeks of drift threshold crossing.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/spending-category-insight-delivery" id="scenario-spending-category-insight-delivery">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Customer Spending Category Insight Delivery</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates a monthly spending category insight summary for the retail and SME banking teams — showing transaction volume and value distribution by enriched spending category for each customer segment, with trend comparisons against prior periods. The insight summary enables product, marketing, and credit teams to identify shifts in customer spending patterns for product development, campaign targeting, and credit model input, drawing directly from the enriched transaction layer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The enriched transaction layer is an analytics substrate for multiple downstream functions but its spending category distributions — how customers in each segment are actually spending — are not regularly surfaced to product, marketing, and credit teams as structured intelligence. Each team accesses the enriched transaction data independently through SQL queries or data requests; the resulting analyses are inconsistent in their time windows and segmentation approaches, making cross-team comparison unreliable. No shared monthly spending view is produced from the enrichment output.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the enriched transaction layer for the most recent month, aggregates transaction volume and value by spending category, payment rail, and customer segment, and produces a monthly spending category insight summary with time-series comparisons against the prior 12 months. It highlights the three largest category shifts per segment and flags categories where spending is diverging materially from the prior-year seasonal pattern. The retail and SME banking teams receive the summary as a shared baseline for product, marketing, and credit discussions.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Product, marketing, and credit teams share a common monthly spending category view derived from the enriched transaction layer, enabling consistent cross-team analysis of customer spending behaviour.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces monthly spending insight summaries for ≥ 12 consecutive months within the first year; all retail and SME customer segments covered from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 70% of product, marketing, and credit teams confirm using the monthly summary as a primary spending behaviour reference within 6 months; ad hoc spending data requests to the analytics team reduced by ≥ 40% within 6 months.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Monthly spending summary available ≤ 3 business days after month close; ad hoc cross-team spending analysis cycle replaced by shared monthly baseline from first production cycle.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/transaction-enrichment-pipeline" id="scenario-transaction-enrichment-pipeline">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Transaction Enrichment Pipeline</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent enriches raw transaction records at settlement with merchant category codes, counterparty identity, economic purpose classification, and customer-journey context — using NLP-based classification on transaction reference strings, merchant name normalisation, and counterparty identity resolution from the entity registry. The enriched transaction layer serves AML pattern detection, credit behaviour scoring, customer-facing spending insights, and merchant analytics as a shared analytics substrate.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Raw payment and settlement records carry minimal semantic content — transaction reference strings, payment amounts, and account numbers — that is sufficient for settlement processing but not for analytics. Enriching transaction records with merchant categories, counterparty identity, and economic purpose classification currently relies on static rule sets keyed to known merchant name strings and reference patterns. Coverage gaps emerge as merchants change naming conventions, new payment reference formats are adopted, and new merchant types enter the portfolio. AML and credit analytics functions that depend on enrichment quality are degraded by uncategorised transactions.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads each settlement transaction record, applies NLP classification to the merchant name and transaction reference string to infer merchant category and economic purpose, resolves the counterparty identity against the entity registry and existing customer golden records, and assigns a customer-journey context label where the transaction is part of a recognised product interaction sequence. Transactions classified with confidence below the defined threshold are queued for a secondary rule-based pass; transactions that fall below both thresholds are flagged for manual classification as training data. The enriched record is written to the analytics transaction layer within the defined latency window after settlement.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The analytics transaction layer carries enriched merchant category, counterparty identity, and economic purpose labels for ≥ 90% of settled transactions, providing a reliable substrate for AML, credit, and customer analytics.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent enrichment pipeline active for 100% of settlement volume across all payment rails for ≥ 48 weeks within 12 months; NLP model trained on ≥ 12 months of historical transaction data before go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 90% enrichment coverage rate confirmed in monthly sampling reviews; enrichment accuracy validated at ≥ 85% correct classification in quarterly ground-truth sampling within 6 months of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Enrichment latency: ≥ 95% of settled transactions enriched within 4 hours of settlement confirmation; enrichment coverage rate improved from static rule-set baseline to NLP-augmented target within 3 months of go-live.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="transaction-analytics-patterns">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Transaction analytics &amp; patterns</h2>
+    
+    <p class="l3-section__intent">Derived analytics from the enriched transaction stream — behavioural patterns, spending distributions, payment-flow networks, and anomaly detection — that serve AML, credit underwriting, product analytics, and customer intelligence. Transaction pattern analysis operates on the full transaction history across a customer or entity population; its depth and timeliness depend on the enrichment quality of the underlying transaction layer and the accessibility of the analytics environment to the teams that need to consume it.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/product-analytics-usage-dashboard" id="scenario-product-analytics-usage-dashboard">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Product Analytics Usage Dashboard</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent aggregates transaction pattern data by product type — deposit usage intensity, loan drawdown and repayment patterns, card spending category distribution, and digital channel engagement — and produces a monthly product analytics dashboard for the product management team. The dashboard provides the transaction-level evidence base for product performance assessment, feature prioritisation, and pricing review, replacing ad hoc data requests to the analytics team.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Product managers rely on periodic data requests to the analytics team for transaction-level product usage insights — how customers are using features, which transaction categories dominate card spending for a given segment, how loan drawdown patterns vary by product type. The data request turnaround extends the product review cycle; the analytics produced are point-in-time snapshots rather than a continuous view. Product decisions that require understanding of usage evolution over time require multiple sequential data requests.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the enriched transaction stream and aggregates by product type, customer segment, and time dimension — deposit usage frequency and balance bands, loan utilisation patterns and repayment behaviour, card spending by MCC category, and digital channel transaction share. It produces a monthly product analytics dashboard with time-series views for each product and segment. The product management team uses the dashboard as a self-service analytics resource for product performance review and feature development prioritisation, without requiring analytics team data requests for standard product usage questions.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Product management holds a continuous, transaction-grounded view of product usage patterns by segment, enabling evidence-based product decisions without analytics team data requests for standard usage questions.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces monthly product analytics dashboards for ≥ 12 consecutive months within the first year; all product types and active customer segments covered from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 70% reduction in standard product usage data requests to the analytics team within 6 months of go-live; product managers confirm dashboard sufficient for ≥ 80% of regular product performance questions.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Product usage analytics cycle shifted from ad hoc data request (days to weeks) to a monthly automated dashboard available ≤ 3 business days after month close.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/transaction-behaviour-profile" id="scenario-transaction-behaviour-profile">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Transaction Behaviour Profile</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent generates a transaction behaviour profile for a customer or segment — spending patterns, payment-rail preferences, and behavioural anomalies — structured for credit underwriting, AML, and product analytics use. For credit underwriting, the profile highlights income regularity, debt-service behaviour, and sector exposure. For AML, it flags network anomalies, structuring patterns, and high-risk merchant categories.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Transaction behaviour analysis for credit underwriting or AML investigation requires analysts to extract and aggregate transaction history across payment rails and merchant categories from the data warehouse. Analysts with direct SQL access spend hours on the extraction; those dependent on data team requests wait multiple days. The lag between analytical need and insight delays credit and compliance decisions that are time-sensitive.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the enriched transaction stream for the specified customer or segment, aggregates by spending category, payment rail, counterparty type, and time dimension, and produces a structured behaviour profile. Credit and AML use cases receive purpose-specific profile sections with relevant indicators highlighted. The analyst receives the profile as structured output ready for downstream credit, compliance, or product decision use.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Credit underwriting, AML, and product analytics functions receive structured transaction behaviour profiles — spending patterns, payment-rail preferences, and behavioural anomalies — assembled by agent from the enriched transaction stream for specified customers or segments.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces transaction behaviour profiles for ≥ 95% of requests from credit, AML, and product analytics users within 12 months of go-live; credit and AML purpose-specific sections included in each applicable profile.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of profiles accepted by analysts as suitable for direct use in credit, compliance, or product decisions without manual re-extraction; AML anomaly flag accuracy validated against investigation outcomes in ≥ 80% of sampled cases.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Profile assembly time reduced from hours of manual SQL extraction or multi-day data team request cycles to ≤ 30 minutes per profile within a single working session.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/aml-network-anomaly-detection" id="scenario-aml-network-anomaly-detection">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">AML Network Anomaly Detection</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses the payment network graph — the pattern of fund flows between bank customers, counterparties, and third-party entities — to detect network-level AML anomalies that are invisible at the individual transaction level: layering chains, rapid pass-through patterns, and structuring networks operating across multiple accounts. The AML investigations team receives a weekly network anomaly report with the flagged entity clusters and the network pattern evidence supporting the alert.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>AML transaction monitoring rules operate at the individual transaction or single-account level; they are designed to detect known typologies at the transaction level but are less effective against network-level patterns where the suspicious activity is distributed across multiple accounts and entities. Layering through a chain of accounts, structuring networks that operate through multiple individuals, and rapid-cycle pass-through patterns that reset at each hop are typologies that require network-level analysis. The AML investigations team identifies network patterns reactively — during investigations triggered by individual-account alerts — rather than proactively.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent constructs the payment flow network from the enriched transaction record, treating each payment as a directed edge between the originator and beneficiary entities. It applies network analysis algorithms to detect structuring patterns (multiple entities making just-below-threshold transactions to a common recipient), layering chains (funds cycling through multiple accounts within a defined time window), and rapid pass-through patterns (accounts receiving and disbursing the majority of received funds within 24 hours). Detected network clusters are ranked by the strength of the anomaly signal and the total value flowing through the cluster. The AML team receives the weekly network report with the supporting transaction evidence.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The AML investigations team holds a weekly view of network-level anomaly patterns in the payment flow graph, enabling proactive investigation of typologies not detectable at the individual transaction level.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces weekly network anomaly reports for ≥ 48 weeks within 12 months; enriched transaction graph covering all payment rails active from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 40% of flagged network clusters confirmed as warranting AML investigation by the investigations team; STR filing rate from network-analysis-triggered investigations ≥ 25% within 6 months of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Network anomaly detection cycle shifted from reactive investigation discovery to weekly proactive graph analysis; network-pattern STR filings initiated proactively rather than reactively within 6 months.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="card-merchant-data">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Card &amp; merchant data</h2>
+    
+    <p class="l3-section__intent">Transaction data specific to card-scheme processing — covering card authorisation and settlement records, chargeback events, merchant category code assignments, and merchant performance data for acquiring businesses. Card data is processed under Visa and Mastercard scheme rules; in KZ and RU markets, local card scheme data (KazPost, Mir) adds a parallel data stream with distinct format conventions. Card transaction data feeds fraud detection, dispute processing, and merchant analytics; its enrichment quality directly affects the accuracy of customer spending categorisation.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/chargeback-root-cause-analysis" id="scenario-chargeback-root-cause-analysis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Chargeback Root Cause Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses chargeback events by reason code, merchant category, card scheme, and channel to identify systematic root causes — merchant categories with elevated chargeback rates, processing errors driving non-fraud chargebacks, and scheme-specific dispute patterns — and produces a weekly root cause report for the card operations and merchant acquiring teams. The report supports the identification of operational and merchant-level issues driving chargeback costs before they breach scheme penalty thresholds.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Chargeback volumes are tracked in total and by reason code but the root cause analysis — identifying which merchant categories, processing steps, or card scheme interactions drive disproportionate chargeback rates — is performed manually for monthly management reporting. Merchant categories approaching Visa or Mastercard scheme chargeback penalty thresholds are identified at the monthly review, by which time the threshold may already be breached. Operational errors that could be corrected to reduce non-fraud chargebacks are not systematically identified.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads chargeback event records, classifies each event by reason code, merchant category code, card scheme (Visa, Mastercard, KazPost, Mir), and channel, and calculates chargeback rates by each dimension against the transaction base. Merchant categories with chargeback rates above defined thresholds and those trending toward scheme penalty levels are flagged. Non-fraud reason codes with elevated rates in specific merchant categories are highlighted as potential operational error sources. The card operations and merchant acquiring teams receive the weekly root cause report with priority ranking by cost exposure.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Card operations and merchant acquiring teams hold a weekly, root-cause-structured view of chargeback drivers, enabling operational corrections and merchant-level interventions before scheme penalty thresholds are breached.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces weekly chargeback root cause reports for ≥ 48 weeks within 12 months; all four card scheme data sources integrated from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of flagged merchant categories confirmed as requiring operational or merchant-level action by the card operations team; scheme penalty threshold breaches reduced to zero within 6 months of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Root cause analysis cycle shifted from monthly management reporting to a weekly structured report; scheme threshold breach identification lead time extended from monthly review to ≥ 3 weeks of forward warning.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/merchant-mcc-assignment-quality" id="scenario-merchant-mcc-assignment-quality">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Merchant MCC Assignment Quality Check</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent reviews merchant category code (MCC) assignments in the card acquiring portfolio against the merchant&#39;s actual business activity — using transaction descriptions, merchant name, and website category data — and identifies merchants whose MCC may be incorrectly assigned. Incorrect MCCs affect customer spending categorisation accuracy, AML transaction monitoring rule accuracy, and interchange fee classification. The card acquiring team uses the review report to correct MCC assignments through the scheme re-registration process.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Complexity"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>MCC assignments are made during merchant onboarding and reviewed only when a mis-classification is identified through a dispute or scheme audit. Merchants whose business activity has evolved since onboarding — an electronics retailer that has expanded into financial services, a travel agent now primarily selling insurance — carry stale MCCs that affect spending categorisation in customer-facing analytics, AML monitoring rule accuracy, and interchange fee billing. The scope of MCC mis-classifications in the acquirer portfolio is not systematically known.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads the acquiring merchant portfolio and cross-references each merchant&#39;s assigned MCC against the merchant&#39;s transaction description patterns, business name classification, and available website category data. Merchants where the MCC is inconsistent with the transaction description pattern — by statistical comparison to the distribution of transactions under the same MCC — are flagged as potential mis-classifications, ranked by transaction volume and AML rule impact. The card acquiring team reviews the flagged merchants and initiates the scheme MCC re-registration process for confirmed mis-classifications.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">MCC assignments in the acquiring portfolio reflect current merchant business activity, improving customer spending categorisation accuracy, AML monitoring rule precision, and interchange fee billing integrity.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces quarterly MCC assignment quality reports covering 100% of the active acquiring merchant portfolio for ≥ 4 consecutive quarters within the first year; transaction description and MCC consistency rules validated within 60 days of go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 70% of flagged merchants confirmed as mis-classified by the card acquiring team; MCC re-registration initiated for ≥ 90% of confirmed mis-classifications within 30 days of identification.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>MCC quality review cycle shifted from scheme-audit-triggered correction to quarterly proactive check; known MCC mis-classification rate in the acquiring portfolio reduced by ≥ 40% within 6 months.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/card-fraud-pattern-detection" id="scenario-card-fraud-pattern-detection">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Card Fraud Pattern Detection</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Agent analyses card authorisation and settlement records to detect fraud patterns — unusual merchant category sequences, geographic velocity anomalies, and authorisation-to-settlement timing outliers — across the card portfolio, generating a daily fraud signal report for the fraud operations team. The report distinguishes between card-present and card-not-present patterns and covers both Visa/Mastercard scheme data and local scheme data (KazPost, Mir). The fraud team uses the report to direct case investigation resources.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Card fraud detection operates through real-time transaction scoring at the point of authorisation; portfolio-level pattern analysis — identifying emerging fraud typologies across the card book rather than at individual card level — is performed episodically by fraud analysts using data warehouse queries. Emerging fraud patterns that are not captured in the real-time scoring model accumulate in the portfolio before they are detected at the analyst review cycle. Local card scheme data (KazPost, Mir) and international scheme data are analysed separately, limiting cross-scheme pattern detection.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>Agent reads card authorisation and settlement records across Visa, Mastercard, KazPost, and Mir scheme data, applies pattern detection across merchant category sequences, geographic velocity, and authorisation-to-settlement timing, and produces a daily fraud signal report. The report identifies emerging typologies — patterns present in a growing proportion of disputed transactions — and ranks them by portfolio-level loss exposure. Card-present and card-not-present patterns are reported separately. The fraud team uses the report to update the real-time scoring model&#39;s feature set and to direct case investigation resources to the highest-risk merchant categories.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">The fraud operations team receives a daily portfolio-level fraud pattern signal covering all card scheme data, enabling emerging typology detection before the pattern reaches material loss levels.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Agent produces daily fraud pattern reports for ≥ 48 weeks within 12 months; all four scheme data sources (Visa, Mastercard, KazPost, Mir) integrated from go-live.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 50% of flagged emerging patterns confirmed as genuine fraud typologies by the fraud operations team; real-time scoring model feature updates initiated for ≥ 80% of confirmed typologies within 2 weeks of pattern identification.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Fraud typology detection cycle shifted from episodic analyst review to a daily automated pattern signal; emerging typology detection lead time extended from weeks to ≤ 5 business days of sustained pattern presence.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+<footer class="o-footer">Discovery Catalog · O!Bank</footer></main></div>
+</body></html>

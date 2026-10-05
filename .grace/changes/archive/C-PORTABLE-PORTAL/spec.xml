@@ -1,0 +1,11 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-PORTABLE-PORTAL>
+    <Summary>Generate a portable bilingual HTML folder on demand for opening directly from a shared drive.</Summary>
+    <Goals><Goal>Staff open aicc.html and use the existing portal content, navigation, search and interactions without an HTTP server.</Goal></Goals>
+    <Constraints><Constraint>Authority: the user accepted the proposed folder edition and instructed “ok, lets test it out” with publication on demand only. This authorizes the bounded implementation and local verification described here and in the plan.</Constraint><Constraint>Preserve current content edits and the existing website output. Derive the folder edition from a stable snapshot of html/aicc; do not add a second content source or automatic publishing.</Constraint></Constraints>
+    <NonGoals><NonGoal>No website deployment, corporate-share upload, content rewriting or browser-policy changes.</NonGoal></NonGoals>
+    <AcceptanceCriteria><Criterion>One explicit export command produces portal/published/aicc.html, EN/RU pages and local assets with explicit file links and working search without fetch.</Criterion><Criterion>Portable navigation retains the selected theme, assets work under file URLs, and copy actions provide a usable fallback when the Clipboard API is unavailable.</Criterion><Criterion>Verify all exported links and anchors, content preservation, repeatable export and browser behavior using file URLs. Actual Windows SMB behavior remains a corporate-environment acceptance check.</Criterion></AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-SOURCE /><M-PORTABLE-EXPORT /></AffectedAreas>
+    <VerificationIntent><ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand><ExpectedCommand>python3 portal/tools/export_portable.py</ExpectedCommand><ExpectedCommand>portal/.venv/bin/python portal/tools/check_portable_browser.py</ExpectedCommand><ExpectedEvidence>Static link and content checks, CLI regression tests, and a direct-file browser report.</ExpectedEvidence></VerificationIntent>
+  </C-PORTABLE-PORTAL>
+</GraceChangeSpec>

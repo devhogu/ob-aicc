@@ -1,0 +1,48 @@
+{
+  "scope": "On-demand folder export from the generated portal; no automatic refresh or website deployment.",
+  "authority": "User approved the proposed portable edition and requested testing, with publication on demand only.",
+  "checks": {
+    "unit_tests": 25,
+    "export_static_validation": "passed",
+    "browser": {
+      "status": "passed",
+      "package_manifest_sha256": "4a35b7c20f5957cf49be5de7a1f612408d9a43d4bef67c43643537c4c63f8f11",
+      "protocol": "file:",
+      "pages": 462,
+      "relocated_with_spaces_and_cyrillic": true,
+      "checks": [
+        "entry point",
+        "all pages",
+        "EN/RU switch",
+        "theme across files with storage cleared",
+        "search without fetch",
+        "search result navigation",
+        "embedded fonts",
+        "diagram zoom",
+        "manual copy fallback",
+        "mobile layout"
+      ],
+      "external_requests": [],
+      "failed_requests": [],
+      "page_errors": [],
+      "limitation": "Windows SMB access and corporate browser policy require a workstation check."
+    },
+    "zip_integrity": "passed"
+  },
+  "code_review": "Scoped review of exporter, portable runtime, shared search opt-in, CLI tests and browser checks. Corrected root-file links; no remaining blocking implementation findings.",
+  "package": {
+    "folder": "portal/published",
+    "archive": ".runtime/portable/aicc-portable.zip",
+    "archive_bytes": 12727015,
+    "archive_sha256": "2753437a3c821284b74876582a3f87d1cef7ab09bc7ca7af8261515966eb529d"
+  },
+  "lifecycle": "Implementation and local verification complete; approved bundle retained active. Full GRACE final gate has unrelated existing translation-plan validation errors and concurrent corpus baseline changes. No old approved plans were changed.",
+  "concurrency": "An export during a concurrent website rebuild refused mixed input and retained the prior package. A subsequent export and browser pass succeeded.",
+  "remaining_environment_check": "Open the package from the Windows SMB share in the corporate browser.",
+  "documentation_update": {
+    "change": "Added HOW-TO.txt and its README pointer to the exporter and existing package.",
+    "previous_package_manifest_sha256": "4a35b7c20f5957cf49be5de7a1f612408d9a43d4bef67c43643537c4c63f8f11",
+    "browser_assets": "All HTML, JavaScript, CSS, fonts, images and search files retain their verified bytes.",
+    "export_regression_tests": 3
+  }
+}

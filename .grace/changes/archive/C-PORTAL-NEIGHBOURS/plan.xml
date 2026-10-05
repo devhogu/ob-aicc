@@ -1,0 +1,73 @@
+<GraceChangePlan graceVersion="4.0" status="applied">
+  <C-PORTAL-NEIGHBOURS>
+    <IntentSummary>Execute the scaffold scope approved by the user on 2026-10-05 (“ok, lets proceed”). Compose the five independent sections through the existing complete-site build, preserve the Financial Services corpus, verify the assembled site and temporary portable export, and reconcile the directly affected graph and verification. This plan records the routine implementation of that approved design; it adds no publication, commit or content-integration authority.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist><Value>M-PORTAL-SOURCE</Value><Value>M-PORTAL-PROJECTION</Value><Value>html-alt/financial-services/en/index.html</Value><Value>html-alt/financial-services/ru/index.html</Value><Value>portal/tools/export_portable.py</Value></MustExist>
+      <MustPassCommand><Command>python3 portal/tools/check_sources.py</Command></MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify><Module>M-PORTAL-NEIGHBOURS</Module></MustVerify>
+      <MustPassCommand><Command>python3 portal/tools/check_sources.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check.py --idempotent</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_neighbours.py</Command></MustPassCommand>
+      <MustPassCommand><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors><M-PORTAL-NEIGHBOURS /><M-PORTAL-SOURCE /><M-PORTAL-PROJECTION /></GraphAnchors>
+      <VerificationAnchors><V-M-PORTAL-NEIGHBOURS /><V-M-PORTAL-SOURCE /><V-M-PORTAL-PROJECTION /><V-M-PORTABLE-EXPORT /></VerificationAnchors>
+      <ContextArtifact>ux-guidelines.xml</ContextArtifact>
+      <ContextArtifact>deployment.xml</ContextArtifact>
+    </DurableScope>
+    <ObservedWriteScope>
+      <File>portal/tools/build.py</File>
+      <File>portal/tools/workspace.py</File>
+      <File>portal/tools/neighbours.py</File>
+      <File>portal/tools/check.py</File>
+      <File>portal/tools/check_neighbours.py</File>
+      <File>portal/tools/check_neighbours_browser.py</File>
+      <File>portal/tools/export_portable.py</File>
+      <File>portal/tests/test_neighbours.py</File>
+      <File>portal/tests/test_portable.py</File>
+      <File>portal/site/neighbours.css</File>
+      <File>portal/site/discovery.css</File>
+      <File>portal/site/site.js</File>
+      <File>portal/README.md</File>
+      <File>finance-portal/build.py</File>
+      <Glob>portal/sections/**</Glob>
+      <Glob>html/aicc/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001>
+        <Title>Share the AICC header and five-group navigation without changing document content.</Title>
+        <DependsOn></DependsOn>
+        <AcceptanceCriteria><Criterion>Existing AICC routes use the common shell, retain their local navigation and scoped search, and preserve document bodies and corpus files.</Criterion></AcceptanceCriteria>
+        <Verification><Command>python3 -m unittest discover -s portal/tests</Command></Verification>
+      </T-001>
+      <T-002>
+        <Title>Render Discovery and the three bounded neighbour sections in the complete-site build.</Title>
+        <DependsOn>T-001</DependsOn>
+        <AcceptanceCriteria><Criterion>Both Discovery editions preserve 76 pages and 1,101 scenarios; the new Portfolio is empty, CSR is a proposal, CloudLab is a concept, and section content remains isolated.</Criterion></AcceptanceCriteria>
+        <Verification><Command>python3 portal/tools/build.py</Command><Command>python3 portal/tools/check.py</Command><Command>python3 portal/tools/check_neighbours.py</Command></Verification>
+      </T-002>
+      <T-003>
+        <Title>Preserve section-scoped search in the deliberate portable export.</Title>
+        <DependsOn>T-002</DependsOn>
+        <AcceptanceCriteria><Criterion>Exported search uses the current section's bundled index and every relative section link resolves; a temporary export leaves portal/published unchanged.</Criterion></AcceptanceCriteria>
+        <Verification><Command>python3 -m unittest discover -s portal/tests</Command></Verification>
+      </T-003>
+      <T-004>
+        <Title>Verify responsive layouts, interaction paths, isolation and repeatable output.</Title>
+        <DependsOn>T-002, T-003</DependsOn>
+        <AcceptanceCriteria><Criterion>Browser evidence covers all Discovery pages and representative full interactions in both languages, responsive widths and themes, plus section switching, scoped search and a temporary file-URL export.</Criterion></AcceptanceCriteria>
+        <Verification><Command>python3 portal/tools/check.py --idempotent</Command><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py</Command></Verification>
+      </T-004>
+      <T-005>
+        <Title>Record the section ownership, checks and build instructions.</Title>
+        <DependsOn>T-004</DependsOn>
+        <AcceptanceCriteria><Criterion>Graph, verification and user-facing build documentation describe independent neighbours in one generated static package. Existing unrelated GRACE validation findings are reported separately.</Criterion></AcceptanceCriteria>
+        <Verification><Command>python3 portal/tools/check_sources.py</Command><Command>python3 portal/tools/check_neighbours.py</Command></Verification>
+      </T-005>
+    </ImplementationPlan>
+  </C-PORTAL-NEIGHBOURS>
+</GraceChangePlan>

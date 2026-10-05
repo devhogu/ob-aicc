@@ -1,0 +1,2559 @@
+<!doctype html>
+<html lang="ru" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Циклы управления данными · Каталог возможностей</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/service.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/flow-set.css">
+
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../../assets/charter.css?v=a6c78f6d">
+<link rel="stylesheet" href="../../../../assets/neighbours.css?v=4fa0caee">
+
+<link rel="alternate" hreflang="en" href="../../../../en/discovery/banking-data-analytics/data-cycles/">
+<script src="../../../../assets/site.js?v=f6e0927c" defer data-search="../../../../assets/search-discovery-ru.json" data-t-none="По запросу ничего не найдено." data-t-light="Дневной режим" data-t-dark="Ночной режим" data-t-dz-close="Закрыть"></script>
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=0d85a6e2">
+<script defer src="../../../../assets/discovery.js"></script>
+</head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
+<a class="o-skip" href="#main">К содержанию</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>Центр компетенций по AI</span></a>
+  <span class="header-scope">Каталог возможностей</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Поиск в разделе</label><input id="q" type="search" autocomplete="off" placeholder="Поиск в разделе" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Язык"><a lang="en" hreflang="en" href="../../../../en/discovery/banking-data-analytics/data-cycles/">EN</a><a lang="ru" hreflang="ru" href="./" aria-current="true">RU</a></nav><button id="theme-switch" type="button" class="theme-switch" aria-label="Ночной режим" title="Ночной режим"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Разделы сайта</summary><nav class="portal-sections" aria-label="Разделы"><div class="portal-nav-group">
+<a class="portal-section-link" data-section="aicc" href="../../../"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 10h.01" />
+  <path d="M12 14h.01" />
+  <path d="M12 6h.01" />
+  <path d="M16 10h.01" />
+  <path d="M16 14h.01" />
+  <path d="M16 6h.01" />
+  <path d="M8 10h.01" />
+  <path d="M8 14h.01" />
+  <path d="M8 6h.01" />
+  <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+  <rect x="4" y="2" width="16" height="20" rx="2" />
+</svg>
+<span>AICC</span></a></div><div class="portal-nav-group is-current">
+<a class="portal-section-link" data-section="discovery" href="../../" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+<span>Каталог возможностей</span></a><div class="portal-local-nav"><a href="../../">Обзор</a><a href="../../strategic-portfolio/">Стратегический банковский портфель</a><a href="../../strategic-initiatives/">Стратегические инициативы и трансформация</a><a href="../../value-streams/">Операционные потоки создания ценности</a><a href="../../customer-market-intelligence/">Клиентская и рыночная аналитика</a><a href="../../customer-channels/">Клиенты и каналы</a><a href="../../risk-control/">Риск и контроль</a><a href="../../shared-banking-capabilities/">Общебанковские возможности</a><a href="../../finance-treasury/">Финансы и казначейство</a><a href="../">Банковские данные и аналитика</a></div></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="initiatives" href="../../../initiatives/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span>Портфель инициатив</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="projects" href="../../../projects/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span>Проекты</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="lab" href="../../../lab/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+<span>CloudLab</span></a></div></nav></details></aside>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-notice">Материалы для исследования возможностей. Сценарии и показатели носят предварительный характер и требуют проверки для конкретного применения; они не устанавливают обязательств по реализации или утверждённых требований Банка.</div><div class="discovery-content">
+
+
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">Каталог возможностей</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Банковские данные и аналитика</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Циклы управления данными</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Циклы управления данными</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Повторяющиеся циклы управления данными — оценка качества данных (BCBS 239), представление регуляторных данных, стюардство над нормативно-справочными данными и аттестация происхождения и контролей.</p>
+  
+</header>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div id="main-content" class="flow-categories" aria-label="Категории потоков">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="flow-category" id="stewardship-quality">
+
+  <h2 class="flow-category__title">Качество управления активами</h2>
+
+  
+  <div class="flow-category__table">
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="data-quality-assessment-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Цикл оценки качества данных (BCBS 239)</h3>
+    </div>
+    <p class="flow-detail__intent">Ежемесячная оценка качества данных по ключевым элементам данных — профилирование, оценка, выявление проблем, устранение и повторная проверка, — в соответствии с Принципами 2 и 3 BCBS 239 (точность и целостность, полнота) и утверждёнными банком измерениями качества данных. Якорь цикла — период от оценки качества до подтверждённого устранения.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">Цикл оценки качества данных (BCBS 239) — основной механизм банка для измерения, управления и улучшения качества ключевых элементов данных (CDE), существенных для агрегирования рисков, регуляторной отчётности и принятия бизнес-решений. В соответствии с BCBS 239 (Принципы Базельского комитета по банковскому надзору об эффективном агрегировании риск-данных и риск-отчётности, январь 2013 г.) банки должны выстраивать архитектуру данных и систему качества, обеспечивающую точность, полноту, своевременность, согласованность и агрегируемость риск-данных по требованию. НБКР, НБК/АРРФР и ЦБР ссылаются на принципы BCBS 239 в своих надзорных ожиданиях для системно значимых банков.
+
+Цикл проходит ежемесячно для оценки качества CDE и ежеквартально для комплексной оценки по всем измерениям качества — полнота, точность, своевременность, согласованность, достоверность и уникальность — по всему операционному и риск-информационному хозяйству. Проблемы качества данных, выявленные в ходе цикла, поступают в конвейер устранения, которым управляют стюарды доменов данных совместно с ИТ и владельцами систем-источников.
+
+ИИ может ускорить цикл, автоматизируя профилирование данных по большим популяциям CDE, классифицируя проблемы качества из выходных данных профилирования и формируя планы устранения из структурированных записей о проблемах — позволяя команде по качеству данных обрабатывать больший реестр CDE за цикл без пропорционального роста численности персонала.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Оценки качества по измерениям CDE проводятся ежемесячно, но отслеживаются неформально между циклами. Директору по данным недоступно непрерывное представление о динамике качества данных — какие CDE улучшаются, какие стабильны, какие деградируют — и связь между трендами качества и влиянием на нижестоящую риск-отчётность не отображается регулярно.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Распределение ресурсов по устранению в рамках очереди проблем не оптимизируется системно с учётом влияния на нижестоящую регуляторную отчётность. Проблемы в менее видимых доменах данных, влияющие на агрегирование рисков по BCBS 239, могут деприворитизироваться относительно проблем в высокопрофильных бизнес-системах отчётности, создавая комплаенс-риск, который стандартный процесс приоритизации не обнаруживает.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Выполнение профилирования данных, расчёт оценок качества, классификация проблем из выходных данных профилирования и формирование планов устранения из структурированных записей о проблемах — структурированные, основанные на правилах задачи, применяемые к большим объёмам данных в каждом цикле. Проверки измерений качества BCBS 239 следуют предписанным определениям, поддающимся оценке с участием агента и проверкой стюарда.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Истории проблем качества данных — первопричины, действия по устранению и время до разрешения — хранятся в отдельных записях о проблемах, а не в структурированной базе знаний. Системные паттерны сбоев качества — одно и то же ETL-преобразование, стабильно производящее нулевые значения для категории CDE, — не обнаруживаются по истории проблем, что препятствует приоритизации проактивных инженерных исправлений.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Этапы потока">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="profile"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
+  >
+    <span class="flow-stages__stage-label">Профиль</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="score"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
+  >
+    <span class="flow-stages__stage-label">Оценка</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="issue"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
+  >
+    <span class="flow-stages__stage-label">Проблема</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="remediate"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
+  >
+    <span class="flow-stages__stage-label">Устранение</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="retest"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
+  >
+    <span class="flow-stages__stage-label">Повторное тестирование</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-profiling-and-scoring-automation" id="scenario-dq-profiling-and-scoring-automation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Автоматизация профилирования и скоринга CDE</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент выполняет ежемесячный прогон профилирования CDE и скоринг качественных измерений по всему инвентарю CDE, применяя определения качественных измерений BCBS 239 к каждому элементу и формируя оценённый вывод для проверки стюардами. Охват распространяется на полный утверждённый инвентарь CDE, а не только на подмножество, достижимое в рамках доступных мощностей инженерной команды за цикл. Команда по качеству данных проверяет оценённый вывод и утверждает результаты цикла.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Охват профилирования не полон в каждом цикле — примерно 60–70% выявленных CDE профилируются, — поскольку подключение новых источников данных к системе профилирования требует инженерных усилий, конкурирующих с другими приоритетами. Скоринг качественных измерений применяется доменными стюардами непоследовательно при отсутствии автоматизированного скоринга, снижая сопоставимость по доменам.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент ежемесячно применяет предварительно настроенные правила профилирования ко всем подключённым системам-источникам — проверки на нулевые значения, валидация диапазонов, ссылочная целостность, согласованность форматов и обнаружение дублей — и переводит выводы профилирования в оценки качественных измерений по утверждённым определениям BCBS 239. Оценённый вывод передаётся доменным стюардам для проверки в рамках цикла оценки. Пробелы в покрытии по неподключённым источникам маркируются отдельно для инженерной приоритизации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Ежемесячное профилирование CDE и скоринг качественных измерений охватывают 100% утверждённого инвентаря CDE, определения измерений BCBS 239 применяются единообразно по всем доменам, оценённый вывод предоставляется для проверки стюардами в рамках цикла оценки.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент выполняет полный ежемесячный прогон профилирования, охватывающий 100% подключённых CDE, ≥ 12 месяцев подряд; флаги пробелов покрытия для неподключённых источников передаются в очередь инженерной приоритизации каждый цикл.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 90% оценённых выводов приняты доменными стюардами без пересчёта; согласованность скоринга по измерениям BCBS 239 подтверждена как единообразная по доменам в ≥ 85% ежемесячных циклов.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Охват профилирования расширен примерно с 60–70% инвентаря CDE до 100% подключённых CDE без дополнительных инженерных ресурсов за цикл.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-plan-drafting" id="scenario-dq-remediation-plan-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка плана устранения проблем качества данных</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Для каждой приоритизированной проблемы качества данных агент формирует структурированный план устранения из записи о проблеме — гипотеза первопричины, рекомендуемое действие по устранению, ответственный ИТ-владелец и целевая дата повторного тестирования, — позволяя стюардам данных инициировать устранение без шага ручной подготовки. Стюард проверяет и подтверждает план до обращения в ИТ. Качество подготовки откалибровано в соответствии с системой устранения банка и классификацией первопричин BCBS 239.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Расследование первопричины проблем качества данных требует от команды по качеству данных трассировки проблемы через ETL-пайплайн до системы-источника; там, где документация линейки неполна, расследования могут занимать дни до выявления первопричины. Каждое расследование и план устранения составляются стюардом с нуля, потребляя время, которое можно было бы направить на более ответственную работу по качеству.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает запись о проблеме — затронутый CDE, сбой качественного измерения, вывод профилирования — и обходит доступную документацию линейки для формирования гипотезы первопричины и предварительно заполненного плана устранения, охватывающего рекомендуемое действие, ответственного ИТ-владельца, определённого из реестра владельцев CDE, и предложение по дате повторного тестирования. Стюард проверяет, при необходимости корректирует и передаёт план в ИТ. Там, где документации линейки недостаточно для автоматического обхода, агент маркирует пробел для расследования стюардом.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Стюарды данных инициируют устранение каждой приоритизированной проблемы качества на основе сформированного агентом плана, охватывающего гипотезу первопричины, рекомендуемое действие, ответственного ИТ-владельца и целевую дату повторного тестирования, откалиброванного в соответствии с системой классификации первопричин BCBS 239 банка.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует план устранения для ≥ 90% приоритизированных проблем в течение 1 рабочего дня после подтверждения проблемы; флаги пробелов в документации линейки происхождения подняты для ≥ 95% проблем, где документация линейки недостаточна для автоматического обхода.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 80% сформированных агентом планов подтверждены и переданы в ИТ стюардами без существенных поправок; гипотезы первопричины подтверждены по выводам ИТ в ≥ 75% закрытых проблем.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время стюарда на план устранения сокращено с ручного расследования и подготовки (как правило, от половины до полного рабочего дня) до ≤ 1 часа проверки и подтверждения на проблему.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-continuous-posture-monitor" id="scenario-dq-continuous-posture-monitor">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Монитор траектории качества CDE</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент на непрерывной основе отслеживает оценки качественных измерений CDE между плановыми ежемесячными оценками, сигнализируя CDO об ухудшающихся измерениях и их влиянии на рисковую отчётность до следующего цикла скоринга. Дашборд отслеживает траектории полноты, точности, своевременности и согласованности по домену CDE и маркирует CDE, качество которых стремится ниже порогового значения. CDO использует представление о траектории для направления упреждающего взаимодействия со стюардами.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Оценки качественных измерений формируются ежемесячно и отслеживаются неформально между циклами. CDO не имеет непрерывного представления о том, какие CDE деградируют, и не может связать тренды качества с влиянием на нижестоящую регуляторную отчётность без проведения ручной выгрузки данных. Деградация, начинающаяся между циклами, становится видимой только после следующего планового цикла скоринга.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает результаты профилирования и оценки качества по мере их формирования и поддерживает скользящую траекторию по каждому CDE и домену. Измерения, стремящиеся ниже порогового значения, инициируют оповещение с оценкой влияния на нижестоящее звено, определяющей, какие выходные данные агрегирования рисков BCBS 239 и регуляторные представления потребляют затронутый CDE. CDO проверяет дашборд траекторий еженедельно.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">CDO располагает непрерывным представлением о траектории качества по домену CDE между плановыми ежемесячными оценками, с ухудшающимися измерениями и их влиянием на выполнение требований BCBS 239, отображаемыми еженедельно.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент поддерживает непрерывный дашборд траекторий, охватывающий 100% зарегистрированных CDE; еженедельные оповещения о пересечении порогового значения выпускаются для ≥ 95% квалифицируемых случаев ухудшения в течение 12 месяцев с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 80% оповещений о пересечении порогового значения оценены CDO как требующие упреждающего взаимодействия со стюардами; оценки воздействия на выполнение требований BCBS 239 подтверждены командой рисковой отчётности как точные в ≥ 85% оповещений.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Деградация качества CDE выявляется в течение 7 дней после пересечения порогового значения, а не на следующем плановом ежемесячном цикле скоринга.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-impact-prioritisation" id="scenario-dq-remediation-impact-prioritisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Приоритизация устранения проблем качества данных по влиянию</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент оценивает каждую открытую проблему качества данных по её влиянию на нижестоящее звено — точность агрегирования рисков BCBS 239 и регуляторных представлений, — переупорядочивая бэклог устранения по регуляторной существенности, а не по видимости проблемы. Команда по качеству данных направляет ресурсы на устранение проблем с наибольшей комплаенс-экспозицией в первую очередь. CDO использует ранжированный бэклог для обоснования распределения ресурсов на устранение перед советом по управлению данными.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Распределение ресурсов на устранение по бэклогу проблем не систематически согласовано с влиянием на нижестоящую регуляторную отчётность. Проблемы в менее заметных доменах данных, затрагивающие агрегирование рисков BCBS 239, могут де-приоритизироваться относительно проблем в высококрупных системах бизнес-отчётности, накапливая комплаенс-экспозицию, которую стандартный процесс приоритизации не выявляет.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент сопоставляет каждую открытую проблему с нижестоящими отчётами, метриками риска и регуляторными представлениями, потребляющими затронутый CDE, оценивает влияние по регуляторной существенности и переупорядочивает очередь устранения соответствующим образом. Проблемы, затрагивающие CDE агрегирования рисков BCBS 239 и срочные регуляторные представления, выносятся в верхнюю часть очереди с кратким изложением комплаенс-экспозиции. Команда по качеству данных проверяет ранжированную очередь в начале каждого спринта по устранению.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Ресурсы команды по качеству данных на устранение направляются бэклогом, ранжированным по регуляторной существенности, с CDE агрегирования рисков BCBS 239 и срочными регуляторными представлениями в верхней части очереди каждого спринта.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент переупорядочивает очередь устранения по регуляторной существенности для ≥ 95% спринт-циклов в течение 12 месяцев с момента запуска; сопоставление влияния на нижестоящее звено охватывает 100% открытых проблем по каталогу данных.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% позиций с наивысшим рангом подтверждены командой по качеству данных как правильно приоритизированные в начале спринта; сводная информация о комплаенс-экспозиции принята без существенных правок для ≥ 80% флагов существенности BCBS 239.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Ранжирование очереди устранения доступно команде в начале каждого спринта, заменяя ручные проверки приоритизации в конце спринта.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-failure-pattern-knowledge-base" id="scenario-dq-failure-pattern-knowledge-base">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">База знаний паттернов сбоев качества данных</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует накопленную историю проблем по завершённым циклам устранения для выявления системных паттернов сбоев — повторяющихся первопричин, категорий ETL-преобразований, генерирующих непропорциональные сбои качества, систем-источников с устойчивыми пробелами в точности, — и представляет их в виде приоритизированной инженерной программы CDO и руководителю по разработке данных. Анализ паттернов переключает инвестиции с реактивного устранения в рамках отдельных циклов на проактивное повышение качества пайплайна. Выявление проводится ежеквартально по реестру закрытых проблем.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>История проблем качества данных хранится в отдельных записях о проблемах, а не в структурированной базе знаний. Системные паттерны — одно и то же ETL-преобразование, последовательно генерирующее нулевые значения для категории CDE, или конкретная система-источник, регулярно нарушающая стандарты своевременности, — не выявляются по истории проблем, а инженерные инвестиции в повышение качества пайплайна не опираются на накопленные свидетельства сбоев.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает реестр закрытых проблем по всем завершённым циклам устранения, кластеризует проблемы по категории первопричины, типу ETL-преобразования и системе-источнику и выявляет паттерны, где одна и та же первопричина встречается по нескольким CDE или циклам. Формируется ежеквартальный отчёт о паттернах, ранжирующий системные категории сбоев по совокупному влиянию на качество и рекомендующий инженерные меры по устранению с оценкой выигрыша по охвату CDE. CDO использует отчёт для формирования программы инвестиций в качество пайплайна наряду со стандартными усилиями по устранению в рамках отдельных циклов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">CDO направляет инвестиции в качество пайплайна на основе ежеквартального анализа паттернов по закрытым проблемам устранения, выявляя системные категории сбоев ETL и пробелы систем-источников, ранжированные по совокупному влиянию на качество.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует ежеквартальный отчёт о паттернах ≥ 4 квартала подряд в течение первых 12 месяцев; анализ охватывает 100% закрытых проблем в реестре устранения по всем доменам CDE.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 80% выявленных системных паттернов сбоев подтверждены CDO и руководителем по разработке данных как обоснованные инженерные приоритеты; программа повышения качества пайплайна инициирована в течение 30 дней после первого отчёта о паттернах.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл выявления системных паттернов по циклам сокращён с разовых ручных ретроспектив до структурированного ежеквартального отчёта, предоставляемого в течение 5 рабочих дней после закрытия квартала.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="master-reference-data-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Цикл стюардства над нормативно-справочными данными</h3>
+    </div>
+    <p class="flow-detail__intent">Ежеквартальный цикл управления нормативно-справочными данными — определение владельцев CDE, актуализация золотых записей, обновление справочных данных и валидация кросс-доменной согласованности. Якорь цикла — период от изменения определения данных до публикации проверенной золотой записи.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">Цикл стюардства над нормативно-справочными данными регулирует авторитетные записи банка по клиентам, контрагентам, продуктам, счетам, инструментам, а также справочные данные и таблицы кодов, классифицирующие транзакционные и риск-данные в масштабах предприятия. Управление нормативно-справочными данными — практика поддержания единой, точной и авторитетной записи по каждой критической сущности — является фундаментальным для агрегирования риск-данных по BCBS 239; без согласованных идентификаторов клиентов, контрагентов и инструментов агрегирование рисков по подсистемам даёт несогласованные картины экспозиций.
+
+Цикл проводится ежеквартально для комплексного обзора качества НСИ и управленческих решений — новые определения CDE, изменения владельцев, инициативы по дедупликации и обновление справочных данных — с ежемесячным мониторингом оценок качества золотых записей. Требования FATF к надлежащей проверке клиентов (CDD) и стандарты данных KYC НБКР/НБК/АРРФР предъявляют конкретные требования к точности и полноте клиентских НСИ, которые должен удовлетворять цикл стюардства.
+
+ИИ может поддержать цикл, автоматизируя выявление кандидатов на дедупликацию, обогащая неполные записи НСИ из доступных источников и формируя проекты решений по стюардству данных из структурированных управленческих входных данных.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Качество нормативно-справочных данных — полнота золотых записей, охват дедупликации, согласованность кросс-доменных идентификаторов — оценивается ежеквартально. Директор по данным лишён непрерывного представления о состоянии нормативного информационного хозяйства между плановыми циклами стюардства и не может оценить влияние накопившихся очередей дедупликации на точность нижестоящего агрегирования рисков.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Приоритизация проверки кандидатов на дедупликацию не выстраивается системно с учётом регуляторного и риск-влияния конкретных CDE нормативно-справочных данных. Высокообъёмные, малозначимые пары клиентских совпадений потребляют мощность проверки, которую лучше направить на CDE контрагентов и инструментов, влияющих на агрегирование рисков по BCBS 239.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Выявление кандидатов на дедупликацию с помощью статистического сопоставления, обновление справочных данных из авторитетных внешних источников, запросы для валидации кросс-доменной согласованности и документирование решений по стюардству данных — структурированные, высокообъёмные задачи, поддающиеся исполнению с участием агента при проверке стюарда.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Решения по управлению нормативно-справочными данными и их влияние на качество нижестоящих данных документируются в отдельных записях совещаний, а не в структурированной базе знаний по управлению. Повторяющиеся споры — одно и то же несоответствие кросс-доменных идентификаторов из-за того же ограничения интерфейса системы-источника — решаются с нуля каждый раз, а не через каталогизированный паттерн разрешения.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Этапы потока">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="define"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
+  >
+    <span class="flow-stages__stage-label">Определение</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="govern"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
+  >
+    <span class="flow-stages__stage-label">Управление</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="curate"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
+  >
+    <span class="flow-stages__stage-label">Сборка</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="validate"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
+  >
+    <span class="flow-stages__stage-label">Валидация</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="publish"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
+  >
+    <span class="flow-stages__stage-label">Публикация</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/golden-record-deduplication-assist" id="scenario-golden-record-deduplication-assist">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Помощник по дедупликации золотых записей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент применяет вероятностное сопоставление по вариантам имён, транслитерациям кириллица-латиница, налоговым идентификаторам и полям адресов для формирования оценённых кандидатов на дедупликацию для еженедельной проверки стюардом данных, сжимая время от ежеквартального решения по управлению данными до обоснованной очереди кандидатов. Стюард данных проверяет высококонфидентных кандидатов и разрешает пограничные случаи; золотая запись хаба MDM обновляется после утверждения стюардом. Кандидаты с меньшей уверенностью ставятся в очередь на экспертную проверку, а не объединяются автоматически.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Мастер-данные клиентов накапливают дублирующиеся и несогласованные записи в системах ядрового банкинга, CRM и KYC по мере подключения сущностей по различным каналам и продуктам. Кампании по дедупликации проводятся периодически, оставляя золотую запись устаревшей между циклами. Характеристики рынков СНГ — транслитерации кириллица-латиница, соглашения о псевдонимах и ограниченное покрытие налоговыми идентификаторами — увеличивают нагрузку по дедупликации сверх возможностей проверки стюардами в рамках стандартных мощностей кампанийного цикла.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент еженедельно читает записи сущностей из всех систем-источников и применяет вероятностное сопоставление по вариантам имён, транслитерациям, налоговым идентификаторам и полям адресов, формируя список кандидатов с оценкой уверенности. Высококонфидентные совпадения представляются стюарду в виде потока пакетного утверждения; пограничные случаи и совпадения с меньшей уверенностью ставятся в очередь на индивидуальную экспертную проверку. Золотая запись хаба MDM обновляется после утверждения стюардом, при этом решение о слиянии и оценка уверенности фиксируются в журнале управления данными.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Золотая запись хаба MDM для мастер-данных клиентов и сущностей поддерживается в производственном качестве на еженедельной основе через вероятностную дедупликацию с помощью агента, с пакетным утверждением высококонфидентных кандидатов стюардами и постановкой пограничных случаев в очередь на экспертную проверку.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует списки кандидатов на дедупликацию для ≥ 95% еженедельных циклов в течение 12 месяцев с момента запуска; сопоставление охватывает варианты имён, транслитерации кириллица-латиница, налоговые идентификаторы и поля адресов по всем системам-источникам.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 80% высококонфидентных пакетных кандидатов утверждены стюардами без индивидуальной экспертной проверки; точность золотой записи после слияния подтверждена на уровне ≥ 95% при ежеквартальных оценках качества данных.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл дедупликации переведён с периодических ежеквартальных кампаний на непрерывный еженедельный ритм; окно устаревания золотой записи сокращено с до 3 месяцев до ≤ 7 дней.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/governance-decision-documentation" id="scenario-governance-decision-documentation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Документирование решений по управлению мастер-данными</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует структурированные записи решений по управлению данными из материалов форумов по управлению данными — фиксируя периметр решения, обоснование, затронутые CDE, назначение ответственных и действия по реализации — и индексирует каждую запись в запрашиваемой базе знаний, доступной стюардам, ИТ и совету по управлению данными. Секретарь по управлению данными проверяет и утверждает каждую запись до её публикации. База знаний позволяет урегулировать повторяющиеся споры по ссылке на предыдущие решения, а не с нуля.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Решения по управлению мастер-данными и их влияние на качество данных нижестоящего звена документируются в отдельных протоколах заседаний, а не в структурированной базе знаний по управлению данными. Повторяющиеся межсистемные споры — одна и та же несоответствие идентификаторов, возникающее из-за одного и того же ограничения интерфейса системы-источника, — каждый раз урегулируются с нуля, поскольку предыдущие решения не извлекаются в пригодном виде. Стюарды и владельцы ИТ лишены справочного стандарта для спорных вопросов ответственности за CDE и ожиданий к качеству.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает протоколы заседаний форума по управлению данными и структурированные входные данные о решениях, извлекает каждое решение и формирует официальную запись — периметр, обоснование, затронутые CDE, назначение ответственных и требуемые действия ИТ по реализации. Записи индексируются по CDE, домену, типу решения и дате и публикуются в базе знаний по управлению данными. На каждом форуме агент извлекает соответствующие предыдущие решения по повторяющимся пунктам повестки и представляет их председателю до открытия заседания, снижая частоту повторного рассмотрения урегулированных вопросов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Решения форума по управлению данными фиксируются в структурированных, запрашиваемых записях, индексированных по CDE, домену и типу решения, что позволяет стюардам и ИТ урегулировать повторяющиеся споры по ссылке на предыдущие решения, а не с нуля.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует записи о решениях по управлению данными для ≥ 95% обоснованных решений форума в течение 2 рабочих дней после каждого заседания; поиск предыдущих решений развёрнут для ≥ 100% повторяющихся пунктов повестки форума по управлению данными.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% записей о решениях утверждены секретарём по управлению данными без существенных поправок; частота повторного рассмотрения урегулированных вопросов снижена на ≥ 50% год к году в соответствии с протоколами форумов по управлению данными.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Срок подготовки документации о решениях сокращён с протоколов по итогам заседания (как правило, 3–5 рабочих дней) до утверждённых записей, доступных в течение 2 рабочих дней; предыдущие решения представляются председателю до каждого заседания.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/master-data-estate-health-monitor" id="scenario-master-data-estate-health-monitor">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Монитор состояния массива мастер-данных</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент непрерывно отслеживает оценки качества золотых записей, показатели охвата дедупликацией и согласованность идентификаторов между доменами по всему массиву мастер-данных между ежеквартальными циклами стюардства, сигнализируя CDO о деградации и влиянии непогашенного бэклога. Монитор отслеживает CDE клиентов, контрагентов и инструментов по домену и количественно оценивает экспозицию агрегирования рисков BCBS 239 от бэклогов дедупликации и несоответствий идентификаторов в разных системах. CDO использует вывод для ежеквартальной отчётности перед советом по управлению данными.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Качество мастер-данных оценивается ежеквартально; между циклами пробелы накапливаются по мере роста бэклогов дедупликации и деградации согласованности идентификаторов между системами без систематического обнаружения. CDO не может количественно оценить влияние непогашенных бэклогов дедупликации на точность агрегирования рисков нижестоящего звена без проведения ручной оценки. Отчётность перед советом директоров по качеству данных опирается на ручную агрегацию из доменных входных данных без единой базы для скоринга.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент еженедельно считывает метрики качества золотых записей, показатели охвата дедупликацией и оценки согласованности идентификаторов между доменами из хаба MDM и производящих систем. Поддерживается непрерывный дашборд состояния мастер-данных по домену CDE с ретроспективными линиями трендов качества и оценкой бэклога дедупликации, выраженной как доля от общей популяции сущностей. Раздел по влиянию BCBS 239 количественно оценивает, как непогашенные бэклоги влияют на точность агрегирования экспозиции контрагентов и инструментов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">CDO отслеживает качество золотых записей, охват дедупликацией и согласованность идентификаторов между доменами на непрерывной еженедельной основе, при этом экспозиция агрегирования рисков BCBS 239 от непогашенных бэклогов количественно оценивается и ежеквартально отражается в отчётности перед советом по управлению данными.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент поддерживает непрерывный дашборд состояния мастер-данных, охватывающий домены CDE клиентов, контрагентов и инструментов, ≥ 48 недель в течение первых 12 месяцев; раздел по влиянию BCBS 239 включён в каждый ежеквартальный отчёт перед советом по управлению данными.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% оценок качества на дашборде подтверждены командой по управлению данными по выводам хаба MDM при ежеквартальной проверке; оценки влияния бэклога дедупликации BCBS 239 приняты командой рисковой отчётности как направленно точные в ≥ 80% кварталов.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл оценки состояния мастер-данных сокращён с ежеквартальной ручной агрегации до непрерывного еженедельного дашборда; подготовка отчётности для совета по управлению данными осуществляется на основе вывода дашборда в ≤ 1 рабочий день.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/deduplication-impact-prioritisation" id="scenario-deduplication-impact-prioritisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Приоритизация влияния кандидатов на дедупликацию</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент ранжирует очередь кандидатов на дедупликацию по влиянию на регуляторные и рисковые нижестоящие звенья затронутого типа сущности, направляя мощности проверки стюардов на CDE контрагентов и финансовых инструментов, влияющих на агрегирование рисков BCBS 239, прежде чем переходить к высокообъёмным парам совпадений розничных клиентов с меньшим влиянием. Ранжирование учитывает тип сущности, существенность экспозиции и зависимость потребляющих отчётов для формирования расписания проверки стюардами, согласованного с обязательствами по соответствию BCBS 239. Руководитель по управлению данными использует ранжированное расписание для распределения мощностей команды стюардов.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Приоритизация проверки кандидатов на дедупликацию не систематически согласована с регуляторным и рисковым влиянием конкретных CDE мастер-данных на нижестоящее звено. Высокообъёмные пары совпадений розничных клиентов потребляют мощности проверки, которые принесли бы большую комплаенс-ценность, если бы были направлены на CDE контрагентов и инструментов, существенные для агрегирования рисков BCBS 239. Бэклог по сборке накапливается по циклам без дифференциации по существенности сущностей.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает очередь кандидатов на дедупликацию и сопоставляет каждый тип сущности и пару кандидатов с зависимостями риска и регуляторных отчётов нижестоящего звена, взятыми из каталога данных. Каждая пара оценивается по существенности типа сущности — CDE контрагентов и инструментов, используемые в агрегировании BCBS 239, получают наибольший вес, — и формируется ранжированное расписание проверки стюардами. Высококонфидентные розничные пары выше установленного порога совпадения выделяются в поток пакетного утверждения, резервируя очередь для суждений по высокосущественным совпадениям с низкой уверенностью.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Мощности команды стюардов данных направляются на кандидатов на дедупликацию CDE контрагентов и инструментов с наибольшей существенностью агрегирования рисков BCBS 239, а высокообъёмные розничные пары управляются через отдельный поток пакетного утверждения.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует ранжированное расписание проверки стюардами для ≥ 95% еженедельных очередей кандидатов на дедупликацию в течение 12 месяцев с момента запуска; поток пакетного утверждения для высококонфидентных розничных пар активен с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% ранжирований приоритизации по существенности подтверждены руководителем по управлению данными как правильно упорядоченные; бэклог существенных CDE BCBS 239 разбирается темпом на ≥ 50% выше, чем базовый показатель до внедрения агента, в течение 12 месяцев.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Темп разбора очереди дедупликации CDE контрагентов и инструментов повышен с кампанийных ежеквартальных проверок до непрерывного еженедельного ритма стюардов.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/reference-data-change-impact-map" id="scenario-reference-data-change-impact-map">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Карта влияния изменений справочных данных</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Когда в цикле управления данными утверждается изменение справочных данных или таксономии — пересмотренный код продукта НБКР, обновлённая классификация сущностей FIBO, новое определение сектора ЦБР — агент трассирует влияние на нижестоящее звено по всем потребляющим системам и отчётам до публикации и формирует приоритизированный план распространения, ранжированный по срокам представления. Команда управления данными использует план для координации спринта по распространению до следующего цикла регуляторного представления. Каждая потребляющая система получает примечание о преобразовании данных, описывающее сопоставление от предыдущей к пересмотренной классификации.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Изменения таксономии справочных данных распространяются по системам непоследовательно, когда команда по управлению данными вручную выявляет затронутые нижестоящие активы. Потребляющие системы, подающие отчётность по устаревшим классификациям, продолжают это делать до индивидуального обновления, создавая окно комплаенс-экспозиции. Для циклов представления НБКР и ЦБР лаг распространения является риском регуляторной подачи, которым управляют реактивно, а не через оценку влияния до публикации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает утверждённое изменение справочных данных и запрашивает корпоративный каталог данных для всех нижестоящих активов, ссылающихся на затронутый код или классификацию. Формируется карта влияния по системам и отчётам с приоритетом обновления, ранжированным по срокам представления и регуляторной существенности. Для каждой потребляющей системы составляется примечание о преобразовании данных, охватывающее сопоставление на уровне полей от предыдущей к пересмотренной классификации. Команда по управлению данными использует карту влияния и примечания о преобразовании для планирования и последовательного выполнения спринта по распространению до следующего срока представления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">При утверждении изменения справочных данных или таксономии в цикле управления данными команда по управлению данными получает карту влияния по системам и отчётам с планом распространения, ранжированным по срокам представления до публикации, с примечанием о преобразовании данных для каждой потребляющей системы.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует карту влияния и примечания о преобразовании для ≥ 95% утверждённых изменений справочных данных в течение 12 месяцев с момента запуска; охват распространяется на все потребляющие системы в корпоративном каталоге данных.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% карт влияния приняты командой управления данными как полные и правильно приоритизированные без существенных дополнений; примечания о преобразовании подтверждены как точные на уровне полей в ≥ 90% потребляющих систем.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Карта влияния передаётся в течение 3 рабочих дней после утверждения по управлению данными, обеспечивая планирование спринта по распространению до следующего срока регуляторного представления для ≥ 90% утверждённых изменений.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="lineage-control-attestation-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Цикл аттестации происхождения данных и контролей</h3>
+    </div>
+    <p class="flow-detail__intent">Полугодовой цикл картирования происхождения данных и аттестации контролей — документирование сквозного пути от источника до поля регуляторного отчёта, тестирование контролей преобразований и аттестация точности происхождения для надзорного соответствия BCBS 239. Якорь цикла — период от изменения конвейера до обновлённой, заверенной документации о происхождении данных.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">Цикл аттестации происхождения данных и контролей документирует сквозное происхождение данных по каждому ключевому элементу данных — прослеживаемый путь от возникновения в системе-источнике через каждое ETL-преобразование, шаг агрегирования и системную границу до поля регуляторного отчёта или риск-метрики, где он потребляется. Принципы 6 (своевременность) и 7 (адаптируемость) BCBS 239 требуют, чтобы банки могли формировать точные агрегированные риск-данные по требованию; эффективная документация о происхождении данных — это то, что делает агрегирование по требованию возможным и поддающимся аудиту.
+
+Цикл проводится полугодово для полного обзора и аттестации происхождения. Между циклами документация о происхождении обновляется в режиме, инициируемом изменениями, — при изменении системы-источника, модификации конвейера или введении нового поля регуляторной отчётности. Шаг аттестации требует от команды по управлению данными и владельцев доменов подтверждения того, что задокументированное происхождение точно отражает конфигурацию производственного конвейера.
+
+ИИ может поддержать цикл, автоматически обходя метаданные конвейеров для формирования черновой документации о происхождении, сравнивая задокументированное происхождение с фактическими конфигурациями конвейеров для выявления незадокументированных изменений и формируя готовые к аттестации сводки о происхождении для проверки стюардами.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Актуальность документации о происхождении данных — сколько CDE имеют документацию о происхождении, соответствующую текущей производственной конфигурации, — не измеряется непрерывно. Директор по данным не может ответить на вопрос BCBS 239 о готовности к аудиту возможностей агрегирования риск-данных без проведения ручной оценки охвата.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Усилия по картированию происхождения распределяются по CDE, входящим в периметр текущего цикла аттестации, исходя из определения периметра предыдущего цикла. CDE, изменившие конфигурацию производственного конвейера между циклами аттестации, не проходят повторную аттестацию до следующего полного цикла, создавая окно незаверенного изменения происхождения, накапливающегося без систематического обнаружения.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Обход метаданных конвейера для обнаружения происхождения, документирование логики преобразований из анализа ETL-скриптов, сравнение контрольных сумм по границам конвейеров и формирование готовых к аттестации сводок о происхождении — структурированные технические задачи, следующие повторяемым паттернам, поддающимся исполнению с участием агента при проверке инженерами и командой управления.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Результаты предыдущих аттестаций — пробелы в происхождении, ошибки тестирования контролей и недостатки документации, выявленные в предыдущих циклах, — задокументированы в отчётах об аттестации, но не синтезированы в анализ паттернов, который приоритизировал бы системные улучшения качества конвейеров над устранением проблем отдельных циклов.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Этапы потока">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="map"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
+  >
+    <span class="flow-stages__stage-label">Сопоставление</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="document"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
+  >
+    <span class="flow-stages__stage-label">Документирование</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="test"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
+  >
+    <span class="flow-stages__stage-label">Тестирование контролей</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="attest"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
+  >
+    <span class="flow-stages__stage-label">Аттестация</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="renew"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
+  >
+    <span class="flow-stages__stage-label">Обновление</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/change-triggered-lineage-prioritisation" id="scenario-change-triggered-lineage-prioritisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Приоритизация обновлений линейки, инициированных изменениями</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент отслеживает производственный пайплайн развёртывания и маркирует каждый релиз, изменяющий путь линейки CDE, формируя приоритизированную очередь обновлений линейки, ранжированную по регуляторной существенности затронутых CDE. Команда управления данными обрабатывает запросы на обновление по мере их поступления, а не поглощает крупный бэклог незадокументированных изменений при каждой полугодовой аттестации. CDE с наивысшей существенностью BCBS 239 получают запросы на обновление линейки в том же спринт-цикле, что и изменение пайплайна, их затрагивающее.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Обновления линейки, инициированные изменениями, зависят от того, сообщит ли команда разработки данных о изменениях пайплайна функции управления данными. Процесс управления изменениями не обеспечивает последовательного инициирования требований к обновлению линейки; изменения пайплайна, влияющие на пути линейки CDE, внедряются без соответствующих обновлений документации, создавая нарастающее расхождение между задокументированной и производственной линейкой, которое полугодовой цикл аттестации должен поглощать в сжатом окне.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает примечания к релизам развёртывания и журналы изменений пайплайна из производственной системы управления изменениями и выявляет релизы, изменяющие ETL-преобразования, подключения к источникам данных или агрегационную логику для любого зарегистрированного CDE. Для каждого квалифицируемого изменения создаётся тикет на обновление линейки, ранжированный по регуляторной существенности CDE и назначенный ответственному стюарду домена данных. Функция управления данными располагает непрерывно обновляемой очередью, а не полугодовым бэклогом. Изменения существенных CDE BCBS 239 генерируют тикеты на обновление в том же спринт-цикле, что и развёртывание.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Каждое производственное развёртывание, изменяющее путь линейки CDE, генерирует тикет на обновление линейки в рамках того же спринт-цикла, ранжированный по регуляторной существенности затронутого CDE.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент отслеживает ≥ 95% производственных развёртываний в течение 12 месяцев с момента запуска; тикеты на обновление линейки подняты для ≥ 90% квалифицируемых развёртываний в течение 2 рабочих дней после релиза.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% созданных тикетов приняты стюардами доменов данных как правильно составленные и приоритизированные без реклассификации; тикеты по существенным CDE BCBS 239 закрыты в рамках того же спринт-цикла в ≥ 80% случаев.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Бэклог линейки по циклу аттестации от незадокументированных изменений пайплайна сокращён на ≥ 70% год к году в сравнении с объёмом предыдущей полугодовой аттестации.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-documentation-automation" id="scenario-lineage-documentation-automation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Автоматизация документирования линейки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент обходит производственные ETL-скрипты и метаданные пайплайна для формирования черновой документации линейки в доступной для бизнеса форме по каждому CDE — система-источник и поле, каждый шаг преобразования с описанием логики на понятном языке, промежуточные хранилища данных и потребляющие поля регуляторных отчётов, — для проверки и утверждения стюардом данных. Стюард проверяет черновик на точность и утверждает его для публикации в каталог данных. Цикл документирования линейки сжимается с недель до дней для каждого CDE в периметре.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Качество документации линейки ограничено конкурирующими требованиями к времени разработки данных. Документация, написанная под производственным давлением, использует технические описания, недоступные для понимания бизнес-стейкхолдерам или регуляторам; шаг перевода на понятный язык, как правило, откладывается на цикл аттестации и выполняется под давлением сроков. Метаданные пайплайна содержат информацию, необходимую для точной документации линейки, но не извлекаются автоматически в доступной для бизнеса форме.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает ETL-скрипты, файлы конфигурации преобразований и метаданные каталога данных для CDE в периметре и формирует структурированную запись линейки в доступной для бизнеса форме: система-источник и поле, каждый шаг преобразования с описанием применяемой логики на понятном языке, промежуточные промежуточные таблицы и поле регуляторного отчёта или метрика риска, где потребляется CDE. Технические термины переводятся с использованием утверждённого словаря данных. Стюард данных проверяет черновую запись линейки на точность и утверждает её для публикации в каталог данных.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Стюарды данных получают черновую документацию линейки в доступной для бизнеса форме, сформированную агентом по каждому CDE — от поля источника через каждый шаг преобразования до потребляющего поля регуляторного отчёта, — для проверки и утверждения перед публикацией в каталог данных.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует черновые записи линейки для ≥ 90% CDE, поставленных в очередь на документирование, в течение 12 месяцев с момента запуска; охват распространяется на все подключённые системы-источники и конфигурации ETL-пайплайна.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 80% черновых записей линейки утверждены стюардами данных без существенных поправок; точность перевода на понятный язык подтверждена по утверждённому словарю данных в ≥ 90% записей.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл документирования линейки по каждому CDE сокращён с недель ручного технического перевода до ≤ 3 рабочих дней от черновика агента до утверждения стюардом.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-pack-drafting" id="scenario-attestation-pack-drafting">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка пакета аттестации линейки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует готовое к аттестации резюме линейки по каждому CDE — путь источника, шаги преобразования на понятном языке, результаты контрольного тестирования и сравнение текущей документации с производственной конфигурацией, — позволяя владельцам доменов данных провести содержательную проверку аттестации, а не формальное подписание. Владелец домена данных изучает резюме и подтверждает его точность; агент не проводит аттестацию от имени владельца. Команда управления данными использует подписанные пакеты аттестации как доказательную базу при проверке BCBS 239 регулятором.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Аттестация владельцами доменов данных требует от них проверки документации линейки, которая зачастую технически сложна для восприятия. Владельцы доменов, не являющиеся специалистами по разработке данных, не могут содержательно подтвердить, что задокументированная логика преобразований соответствует производственной конфигурации, без шага перевода на понятный язык. В результате аттестация нередко становится формальностью, а не содержательным шагом обеспечения уверенности, снижая управленческую ценность цикла для целей надзора BCBS 239.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает текущую документацию линейки каждого CDE в периметре аттестации, переформатирует её в доступное для владельца домена резюме, охватывающее путь источника, ключевую логику преобразований на понятном языке, результаты контрольного тестирования текущего цикла и флаг для любых расхождений между задокументированной и производственной конфигурацией, выявленных монитором актуальности. Резюме передаётся владельцу домена в виде структурированного пакета аттестации. Владелец домена проверяет резюме, устраняет выявленные расхождения и подписывает запись об аттестации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Владельцы доменов данных проводят содержательные проверки аттестации BCBS 239, используя сформированные агентом пакеты аттестации, представляющие линейку CDE и результаты контрольного тестирования в доступной для бизнеса форме.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Сформированные агентом пакеты аттестации охватывают 100% CDE в периметре аттестации ≥ 2 последовательных полугодовых цикла в течение 12 месяцев с момента запуска; поставка завершена ≥ 5 рабочих дней до срока подписания аттестации.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% сформированных агентом пакетов приняты владельцами доменов без существенных поправок; флаги расхождений между задокументированной и производственной конфигурацией устранены владельцами доменов в ≥ 90% случаев до подписания.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время подготовки пакета аттестации по каждому CDE сокращено с дней ручной проверки документации до ≤ 2 часов проверки владельцем домена на CDE.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-currency-dashboard" id="scenario-lineage-currency-dashboard">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Дашборд актуальности документации линейки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент на непрерывной основе сравнивает задокументированные записи линейки в каталоге данных с текущими конфигурациями производственного пайплайна, количественно оценивая долю CDE с документацией линейки, точно отражающей производственное состояние. Дашборд актуальности даёт CDO сигнал о готовности к аудиту BCBS 239 в режиме реального времени без проведения ручной оценки. CDE с незадокументированными изменениями пайплайна ранжируются по регуляторной существенности для приоритизации бэклога документации.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Актуальность документации линейки — доля CDE с документацией, соответствующей текущей производственной конфигурации, — не измеряется непрерывно. CDO не может ответить на вопрос о готовности к аудиту BCBS 239 без проведения ручной оценки охвата, а незадокументированные изменения пайплайна накапливаются между циклами аттестации без систематического обнаружения.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает метаданные пайплайна из производственных конфигураций ETL и пайплайнов данных и сравнивает каждый сегмент пайплайна с текущей документацией линейки в каталоге данных. CDE, где производственная конфигурация отличается от задокументированной линейки, маркируются как устаревшие с указанием характера изменения и его влияния на нижестоящую регуляторную отчётность. Оценка актуальности — доля CDE с актуальной и точной документацией линейки — обновляется еженедельно и отображается на дашборде готовности BCBS 239.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">CDO располагает непрерывным сигналом о готовности к аудиту BCBS 239, выраженным как доля CDE с документацией линейки, точно отражающей текущую производственную конфигурацию пайплайна, обновляемой еженедельно и ранжированной по регуляторной существенности.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент обновляет оценку актуальности линейки на еженедельной основе, охватывая 100% затронутых CDE ≥ 48 недель в течение первых 12 месяцев; флаги устаревшей документации подняты для ≥ 95% квалифицируемых расхождений между пайплайном и документацией.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 90% флагов устаревшей документации подтверждены командой управления данными как реальные расхождения; оценка актуальности линейки подтверждена по выводам полугодовой аттестации для ≥ 95% CDE.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл оценки готовности к аудиту сокращён с заказной ручной оценки охвата (как правило, несколько недель) до автоматизированной еженедельной оценки, доступной в течение 1 рабочего дня после считывания метаданных пайплайна.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-findings-pattern-synthesis" id="scenario-attestation-findings-pattern-synthesis">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Синтез паттернов выводов аттестации</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент синтезирует выводы аттестации по циклам — пробелы в линейке, сбои контрольного тестирования, недостатки документации и незадокументированные изменения пайплайна — в анализ паттернов, ранжирующий системные недостатки качества пайплайна по частоте и существенности BCBS 239. CDO и руководитель по разработке данных используют анализ паттернов для формирования структурированной программы повышения качества пайплайна наряду со стандартными усилиями по устранению в рамках отдельных циклов. Анализ проводится после закрытия каждого полугодового цикла аттестации.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Предыдущие выводы аттестации документируются в отчётах об аттестации, но не синтезируются в кросс-цикловый анализ паттернов. Пробелы в линейке, повторяющиеся сбои контрольного тестирования и недостатки документации, выявленные в одном цикле, повторяются в следующем, поскольку рассматриваются как отдельные выводы, а не как симптомы системных недостатков качества пайплайна. Цикл аттестации формирует доказательства соответствия, но не генерирует проактивную программу инженерного совершенствования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает отчёты об аттестации за предыдущие циклы, классифицирует каждый вывод по типу — пробел в линейке, сбой контрольного тестирования, недостаток документации, незадокументированное изменение — и кластеризует выводы по затронутому сегменту пайплайна, ETL-системе и домену CDE. Формируется синтез паттернов, ранжирующий системные недостатки по частоте повторений и существенности BCBS 239, с рекомендуемой приоритизацией инженерного устранения. CDO представляет синтез паттернов руководителю по разработке данных по закрытии каждого цикла аттестации как основу для плана инвестиций в качество пайплайна.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">CDO и руководитель по разработке данных направляют инвестиции в качество пайплайна на основе кросс-цикловых синтезированных паттернов выводов аттестации, ранжированных по частоте повторений и существенности BCBS 239.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует синтез паттернов после ≥ 2 последовательных закрытий полугодового цикла аттестации в течение первых 12 месяцев, охватывая 100% классифицированных типов выводов по всем затронутым сегментам пайплайна и доменам CDE.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 80% ранжированных системных недостатков оценены CDO и руководителем по разработке данных как релевантные для принятия решений без существенной реклассификации; программа инженерного устранения инициирована в течение 30 дней после каждой поставки синтеза.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Синтез паттернов передаётся CDO в течение 5 рабочих дней после закрытия цикла аттестации, заменяя ручной межцикловой обзор выводов, который ранее не проводился.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="flow-category" id="submission-disclosure">
+
+  <h2 class="flow-category__title">Регуляторное представление и раскрытие информации</h2>
+
+  
+  <div class="flow-category__table">
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="flow-detail" id="regulatory-data-submission-cycle">
+
+  <summary class="flow-detail__summary">
+    <div class="flow-detail__title-col">
+      <h3 class="flow-detail__title">Цикл регуляторных представлений данных</h3>
+    </div>
+    <p class="flow-detail__intent">Ежемесячные и ежеквартальные регуляторные представления данных в НБКР, НБК/АРРФР и ЦБР — агрегирование данных, форматная валидация, представление, сверка после представления и разрешение надзорных запросов. В соответствии с требованиями BCBS 239 к агрегированию данных и стандартами регуляторных представлений СНГ.</p>
+  </summary>
+
+  <div class="flow-detail__body">
+
+    
+    <p class="flow-detail__intent-full">Цикл регуляторных представлений данных регулирует периодические представления банка в НБКР (Кыргызская Республика), НБК/АРРФМ (Казахстан) и ЦБР (Россия) — предписанные наборы данных, лежащие в основе пруденциального надзора, мониторинга финансовой стабильности и статистической отчётности. Каждый регулятор публикует собственные формы представлений, правила контроля и протоколы электронной подачи. Для банковских групп с операциями в нескольких юрисдикциях СНГ цикл представлений проходит параллельно в трёх регуляторных периметрах с различными календарями, форматами и определениями данных.
+
+Принцип 2 BCBS 239 (точность и целостность данных) требует, чтобы банк мог представлять регуляторам полные, точные и своевременные данные. Цикл представлений — операционное выражение соответствия BCBS 239: повторяющаяся проверка работоспособности архитектуры данных и системы качества. Запросы надзорных данных вне стандартного календаря представлений — внеплановые запросы в ходе надзорных расследований, проверок на месте или анализа финансовой стабильности — должны исполняться по требованию из той же инфраструктуры данных.
+
+ИИ может поддержать цикл, автоматизируя комментарии к валидации агрегирования данных, формируя пояснительные записки к исключениям представлений и составляя пакеты ответов на надзорные запросы из документации о происхождении данных и записей о качестве данных.</p>
+    
+
+    
+    <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
+      <table class="problems-table">
+        <tbody>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Analyze</th>
+            <td class="problems-statement">Результативность представлений — частота ошибок валидации, объёмы исключений, частота запросов по регуляторам — неформально отслеживается командой регуляторной отчётности, но не агрегируется в анализ трендов качества по представлениям и регуляторам. Директор по данным не может сформировать систему показателей соответствия BCBS 239 без ручного извлечения из записей представлений.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Optimize</th>
+            <td class="problems-statement">Разрешение исключений валидации выполняется последовательно командой отчётности относительно сроков каждого регулятора. Анализ паттернов по нескольким регуляторам — выявление проблем качества данных, стабильно генерирующих исключения у нескольких регуляторов, поскольку они берут начало в одной системе-источнике, — не применяется в рамках стандартного цикла представления.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Automate</th>
+            <td class="problems-statement">Комментарии к агрегированию регуляторных представлений, пояснительные записки к исключениям валидации, комментарии к расхождениям сверки после представления и черновики ответов на надзорные запросы — структурированные задачи написания с последовательными фреймворками. Обход происхождения данных BCBS 239 для конкретных CDE следует воспроизводимому пути от источника до представленного значения, поддающемуся генерации ответов с участием агента.</td>
+          </tr>
+          
+          <tr class="problems-row">
+            <th class="problems-lens" scope="row">Enrich</th>
+            <td class="problems-statement">Истории надзорных запросов по НБКР, НБК/АРРФР и ЦБР — какие точки данных оспаривались, какие объяснения принимались, какие методологические изменения запрашивались — накапливаются в отдельных файлах запросов, а не в консолидированной базе знаний. Каждый цикл запросов повторяет исследовательские и редакционные усилия, которые могли быть обеспечены ответами предыдущих циклов.</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+<nav class="flow-stages" aria-label="Этапы потока">
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="aggregate"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
+  >
+    <span class="flow-stages__stage-label">Агрегирование</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="validate"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
+  >
+    <span class="flow-stages__stage-label">Валидация</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="submit"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
+  >
+    <span class="flow-stages__stage-label">Представление</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="reconcile"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
+  >
+    <span class="flow-stages__stage-label">Сверка</span>
+    
+    <span class="flow-stages__arrow" aria-hidden="true">→</span>
+    
+  </button>
+  
+  <button
+    class="flow-stages__stage"
+    type="button"
+    data-stage="resolve"
+    data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
+  >
+    <span class="flow-stages__stage-label">Урегулирование запросов</span>
+    
+  </button>
+  
+</nav>
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="concern-scenarios" aria-label="Сценарии">
+
+  
+
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-commentary-automation" id="scenario-submission-commentary-automation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Автоматизация комментариев к регуляторным представлениям</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент составляет стандартные нарративные компоненты пакета регуляторного представления — комментарий к методологии агрегирования данных, пояснительные примечания к валидационным исключениям и комментарий к расхождениям при постпредставительной сверке — на основе структурированных входных данных и справочных текстов предыдущего периода. Команда регуляторной отчётности проверяет и утверждает каждый компонент до представления или ответа. Усилия по составлению черновиков по трём регуляторным периметрам сжаты с дней до часов за цикл.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Комментарии к агрегированию регуляторного представления, пояснительные примечания к валидационным исключениям и комментарии к расхождениям при постпредставительной сверке являются структурированными задачами по написанию, выполняемыми вручную каждый цикл. Для трёх регуляторных периметров с разными структурами форм и требованиями к комментариям усилия по составлению черновиков составляют существенную долю мощностей цикла команды регуляторной отчётности, сокращая время, доступное для расследования проблем качества данных.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает агрегированный набор данных для представления, отчёт о валидационных исключениях и комментарии предыдущего периода по каждому регулятору и формирует черновые нарративные компоненты, согласованные с предписанным форматом каждого регулятора и стандартными описаниями методологии банка. Пояснительные примечания к исключениям генерируются на основе метаданных исключений и имеющейся классификации первопричин. Команда регуляторной отчётности проверяет каждый черновик, применяет профессиональное суждение по исключениям, требующим методологического обоснования, и утверждает до представления или ответа.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Команда регуляторной отчётности проверяет и утверждает составленные агентом нарративные компоненты — комментарий к методологии агрегирования, пояснительные примечания к валидационным исключениям и комментарий к расхождениям при постпредставительной сверке — до каждого представления или надзорного ответа по всем трём регуляторным периметрам.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует черновые нарративные компоненты для ≥ 90% циклов представления по периметрам НБКР, НБК/АРФР и ЦБР в течение 12 месяцев с момента запуска; все предусмотренные разделы комментариев охвачены в каждом черновике.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% черновых компонентов приняты командой регуляторной отчётности без существенных методологических правок; пояснительные примечания к исключениям оценены как точные в ≥ 90% случаев руководителем команды.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Усилия по составлению комментариев за цикл представления сокращены с дней ручного написания по трём периметрам до ≤ 4 часов проверки и утверждения командой за цикл.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-response-assistant" id="scenario-supervisory-query-response-assistant">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Помощник по ответам на надзорные запросы</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">По каждому надзорному запросу от НБКР, НБК/АРФР или ЦБР агент обходит документацию линейки, повторно выполняет соответствующую агрегационную логику и извлекает предыдущие ответы на запросы по той же точке данных для формирования структурированного черновика пакета ответа для проверки аналитиком. Аналитик регуляторной отчётности проверяет черновик, применяет профессиональное суждение и подписывает до передачи регулятору. Усилия по извлечению и составлению черновика на запрос сжаты с дней до часов.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Надзорные запросы требуют от команды управления данными извлечения документации линейки, повторного выполнения агрегационной логики по конкретным точкам данных и составления пояснительных ответов в предпочтительном формате регулятора. Там, где документация линейки неполна или агрегационная логика изменилась с момента представления, ответы на запросы требуют дополнительного расследования, задерживающего надзорный диалог и потребляющего мощности команды регуляторной отчётности в окне подготовки следующего представления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает текст надзорного запроса, определяет CDE и точку данных представления, на которые он ссылается, и обходит запись линейки для восстановления пути от источника до представленного значения. Повторно выполняется соответствующая агрегационная логика для рассматриваемой точки данных и извлекаются предыдущие записи запросов-ответов по той же теме из базы знаний запросов. Черновой пакет ответа включает нарратив линейки, краткое изложение методологии агрегирования и любые релевантные предыдущие обоснования, структурированные в ожидаемом формате ответа регулятора для проверки и утверждения аналитиком.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">По каждому надзорному запросу от НБКР, НБК/АРФР или ЦБР аналитик регуляторной отчётности проверяет собранный агентом пакет ответа — нарратив линейки, краткое изложение методологии агрегирования и предыдущие релевантные обоснования — и подписывает до передачи регулятору.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент собирает пакет ответа для ≥ 90% надзорных запросов в течение 1 рабочего дня после получения запроса ≥ 12 месяцев после запуска; обход линейки, повторный запуск агрегирования и извлечение предыдущих запросов включены в каждый пакет.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% пакетов ответов приняты аналитиками как достаточная основа для подписания без дополнительного извлечения данных; точность нарратива линейки подтверждена проверкой управления данными в ≥ 90% пакетов.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Цикл извлечения и составления черновика по запросу сокращён с дней ручного расследования до ≤ 4 часов проверки и подписания аналитиком на запрос.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-quality-trend-scorecard" id="scenario-submission-quality-trend-scorecard">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Оценочная карта качества регуляторных представлений</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент агрегирует показатели частоты валидационных сбоев, объёмов исключений, расхождений при постпредставительной сверке и частоты надзорных запросов по представлениям НБКР, НБК/АРФР и ЦБР в скользящую оценочную карту качества для CDO. Оценочная карта отслеживает траекторию соответствия BCBS 239 по регулятору и типу формы представления. CDO использует оценочную карту как основную доказательную базу для отчётности перед советом по управлению данными и для направления инвестиций в качество данных на CDE, критичные для представлений.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Показатели представлений по НБКР, НБК/АРФР и ЦБР неформально отслеживаются командой регуляторной отчётности, но не агрегируются в анализ трендов качества по представлениям и регуляторам. CDO не может сформировать оценочную карту соответствия BCBS 239 без ручной выгрузки из записей представлений, а связь между исключениями при представлении и сбоями качества данных нижестоящего звена не отображается систематически.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает отчёты о валидационных исключениях, выводы постпредставительной сверки и журналы надзорных запросов из каждого цикла представления по всем трём регуляторным периметрам. Формируется ежемесячная оценочная карта качества, сегментированная по регулятору, форме представления и домену данных, с трендовыми метриками по объёму исключений, существенности расхождений при сверке и частоте запросов. Оценочная карта связывает каждую категорию исключений со сбоем качественного измерения CDE нижестоящего звена, его вызывающим, позволяя CDO направлять инвестиции в устранение к источнику.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">CDO располагает скользящей оценочной картой соответствия BCBS 239, отслеживающей частоту валидационных сбоев, объёмы исключений и частоту надзорных запросов по регулятору и типу формы по НБКР, НБК/АРФР и ЦБР, связанными со сбоями качественных измерений CDE нижестоящего звена.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует ежемесячную оценочную карту качества, охватывающую все три регуляторных периметра, ≥ 12 месяцев подряд; каждая оценочная карта содержит связь исключений с CDE для ≥ 90% категорий исключений.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 85% связей CDE с исключениями подтверждены командой по качеству данных как точные; оценочная карта используется как основная доказательная база для отчётности перед советом по управлению данными в ≥ 10 из 12 ежемесячных циклов.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Оценочная карта соответствия BCBS 239 формируется в течение 5 рабочих дней после закрытия каждого ежемесячного цикла, заменяя ручные упражнения по агрегированию, ранее занимавшие 2–3 недели за цикл.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/cross-supervisor-exception-pattern" id="scenario-cross-supervisor-exception-pattern">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ кросс-регуляторных паттернов исключений</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент анализирует журналы валидационных исключений по циклам представления НБКР, НБК/АРФР и ЦБР для выявления сбоев качества данных, генерирующих исключения в нескольких регуляторных периметрах из одной первопричины в системе-источнике. Анализ переориентирует усилия по устранению исключений с очереди по регулятору на кросс-регуляторную очередь первопричин, позволяя команде данных устранить одну проблему системы-источника, разрешающую исключения по всем трём периметрам одновременно. CDO использует вывод для направления усилий по устранению до представления.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Урегулирование валидационных исключений выполняется последовательно в соответствии со сроком каждого регулятора. Кросс-регуляторный анализ паттернов — выявление проблем качества данных, последовательно генерирующих исключения у нескольких регуляторов, поскольку они берут начало в одной системе-источнике, — не применяется в рамках стандартного цикла представления. Одна и та же первопричина расследуется и исправляется отдельно для формы каждого регулятора, умножая усилия по устранению без улучшения базового качества данных.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает журналы исключений из последних циклов представления по каждому регулятору и кластеризует исключения по CDE системы-источника и измерению качества данных, к которому они восходят. Выявляются первопричины систем-источников, генерирующие исключения по нескольким регуляторным периметрам, и ранжируются по агрегированному объёму исключений по всем трём регуляторам. Команда по качеству данных устраняет первопричины с наивысшим рангом до следующего срока представления, снижая общий объём исключений по всем периметрам посредством одного действия по устранению.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Команда данных устраняет исключения регуляторного представления из кросс-регуляторной очереди первопричин, направляя усилия по устранению на проблемы систем-источников, одновременно закрывающие исключения по НБКР, НБК/АРФР и ЦБР.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент формирует анализ кросс-регуляторных паттернов исключений до ≥ 90% сроков представления по всем трём регуляторным периметрам; охват распространяется на 100% категорий исключений в каждом цикле.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 80% выявленных общих первопричин подтверждены командой по качеству данных как точные; не менее одной кросс-периметровой первопричины урегулировано за цикл в ≥ 75% периодов представления.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Общий объём кросс-регуляторных исключений снижен на ≥ 20% год к году по мере систематического устранения общих первопричин; анализ паттернов передаётся ≥ 5 рабочих дней до каждого срока представления.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-knowledge-base" id="scenario-supervisory-query-knowledge-base">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">База знаний надзорных запросов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент консолидирует историю надзорных запросов по НБКР, НБК/АРФР и ЦБР в структурированную базу знаний, классифицируя каждый запрос по точке данных, типу вызова и подходу к урегулированию и представляя CDO и команде регуляторной отчётности повторяющиеся паттерны. База знаний используется для прогнозирования категорий запросов до представления, ускорения составления черновиков ответов по ссылке на предыдущие принятые обоснования и направления предпредставительного повышения качества данных в хронически оспариваемые точки данных. CDO использует анализ паттернов для отчётности по программе управления BCBS 239.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Истории надзорных запросов по трём регуляторным периметрам накапливаются в отдельных файлах запросов, а не в консолидированной базе знаний. Каждый цикл запросов повторно выполняет расследование и усилия по составлению черновиков, которые могли бы быть подсказаны ответами предыдущего цикла. Повторяющиеся вызовы по одним и тем же точкам данных — свидетельство системной проблемы качества данных или методологии — не выявляются как паттерн, поскольку записи запросов не агрегируются и не классифицируются.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент читает все исторические записи надзорных запросов и ответов по НБКР, НБК/АРФР и ЦБР, классифицирует каждый запрос по CDE, измерению качества данных, форме представления и типу урегулирования и формирует структурированную базу знаний, доступную команде регуляторной отчётности. База знаний представляет повторяющиеся паттерны запросов, ранжированные по частоте, и выявляет точки данных, оспаривавшиеся несколькими регуляторами. Предпредставительные брифинги для команды регуляторной отчётности включают основные повторяющиеся категории вызовов по каждому предстоящему сроку представления.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Команда регуляторной отчётности применяет консолидированную базу знаний надзорных запросов — классифицируя запросы по CDE, типу вызова и подходу к урегулированию по НБКР, НБК/АРФР и ЦБР — для прогнозирования повторяющихся категорий запросов и ускорения составления черновиков ответов.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Агент загружает и классифицирует ≥ 95% исторических записей надзорных запросов по всем трём периметрам к концу месяца 3; база знаний обновляется по каждому новому циклу запросов в течение 2 рабочих дней после закрытия ответа.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥ 80% повторяющихся паттернов запросов подтверждены командой регуляторной отчётности как релевантные для принятия решений; брифинги по категориям вызовов до представления используются в ≥ 90% предстоящих циклов подготовки к представлению в течение 12 месяцев.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Время составления черновика ответа на запрос сокращено на ≥ 40% для повторяющихся категорий вызовов в течение 12 месяцев, поскольку предыдущие принятые обоснования извлекаются из базы знаний до начала составления черновика.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+  
+
+</section>
+    
+    
+
+  </div>
+
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="modal" id="stageModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" type="button" aria-label="Закрыть">×</button>
+    <div class="modal__content"></div>
+  </div>
+</div>
+
+
+<script>
+(function () {
+  // Per-flow stage map, embedded by the composer at render time.
+  // Keyed by flow URN → list of stage objects.
+  const FLOW_STAGES = {"urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle": [{"slug": "profile", "label": "Профиль", "title": "Автоматизированное профилирование данных по инвентарю CDE", "intent": "Выполняет автоматизированные правила профилирования по инвентарю CDE — проверки на нулевые значения, валидацию диапазонов, ссылочную целостность, согласованность форматов и обнаружение дублей — формируя вывод профилирования, измеряющий каждое качественное измерение для каждого CDE на дату оценки. Количественная основа оценки качества BCBS 239.", "problem": "Прогоны профилирования данных выполняются в ежемесячном цикле по инвентарю CDE, охватывающему 8–15 систем-источников с различными методами доступа к данным и расписаниями. Охват профилирования неполон — в любом заданном цикле профилируется примерно 60–70% выявленных CDE, — поскольку инженерные усилия по подключению новых источников данных к системе профилирования не приоритизируются в конкуренции с другими требованиями по разработке данных."}, {"slug": "score", "label": "Оценка", "title": "Скоринг качественных измерений CDE и агрегированный индекс качества данных", "intent": "Переводит выводы профилирования в оценки качественных измерений для каждого CDE — коэффициент полноты, коэффициент прохождения по точности, коэффициент соответствия по своевременности — и агрегирует оценки в индекс качества данных по домену и по всему инвентарю CDE. Этап скоринга, преобразующий сырые метрики профилирования в управляемый показатель эффективности.", "problem": "Методологии скоринга качественных измерений определены в системе управления данными, но применяются непоследовательно разными доменными стюардами при отсутствии автоматизированного скоринга. Агрегированный индекс качества данных опирается на доменные представления, использующие локально интерпретируемые определения скоринга, а не централизованное автоматизированное измерение, снижая сопоставимость по доменам."}, {"slug": "issue", "label": "Проблема", "title": "Выявление, классификация и приоритизация проблем качества данных", "intent": "Выявляет проблемы качества данных по результатам скоринга — CDE, значения которых опустились ниже допустимых порогов качества, — классифицирует их по измерению, домену, критичности и влиянию на рисковую отчётность и регуляторные представления нижестоящего звена и приоритизирует для включения в пайплайн устранения. Этап триажа, управляющий распределением ресурсов на устранение.", "problem": "Приоритизация проблем качества требует от команды по качеству данных оценки влияния каждой проблемы на нижестоящее звено — какие рисковые отчёты, регуляторные представления или бизнес-решения потребляют затронутый CDE. Оценка влияния выполняется вручную командой стюардов с привлечением доменной экспертизы; процесс не масштабируется на большой инвентарь CDE и, как правило, приводит к завышенной приоритизации заметных проблем в ключевых системах отчётности."}, {"slug": "remediate", "label": "Устранение", "title": "Расследование первопричины и устранение на уровне системы-источника", "intent": "Расследует первопричину каждой приоритизированной проблемы качества данных — дефект системы-источника, ошибка ETL-преобразования, пробел в управлении данными или сбой вышестоящего процесса — и выполняет соответствующее действие по устранению совместно с ИТ или владельцами систем-источников. Операционный этап, устраняющий сбои качества у источника.", "problem": "Расследование первопричины проблем качества данных требует от команды по качеству данных трассировки проблемы от точки измерения CDE обратно через ETL-пайплайн до системы-источника. Документация линейки, необходимая для выполнения этой трассировки, поддерживается непоследовательно; расследования по проблемам в слабо задокументированных пайплайнах данных могут занимать дни до выявления первопричины."}, {"slug": "retest", "label": "Повторное тестирование", "title": "Постустранительная валидация качества и закрытие проблемы", "intent": "Повторно профилирует затронутый CDE после устранения для подтверждения того, что проблема качества решена, валидирует улучшение оценки относительно цели устранения и закрывает проблему в реестре качества данных с задокументированными свидетельствами. Этап обеспечения качества, закрывающий цикл оценки.", "problem": "Планирование повторного тестирования управляется вручную стюардами данных, которые должны согласовывать с ИТ сроки развёртывания систем, а затем повторно запускать профилирование для затронутого CDE. Повторные тесты нередко откладываются, поскольку координация планирования не отслеживается систематически, а проблемы остаются открытыми в реестре после запланированной даты разрешения без эскалации."}], "urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle": [{"slug": "define", "label": "Определение", "title": "Определение ответственности за CDE и установление стандартов мастер-данных", "intent": "Определяет и обновляет определения критических элементов данных — бизнес-определения, назначения ответственных за данные, стандарты качества и назначения авторитетного источника — для каждого домена мастер-данных. Базовый этап управления данными, устанавливающий, что такое золотая запись и кто ей владеет.", "problem": "Определения CDE хранятся в словаре данных, который обновляется нечасто и пересматривается только при возникновении проблем качества данных. Ответственность за CDE мастер-данных нередко оспаривается между командами продуктового менеджмента, операционного блока и финансов; без чёткого распределения ответственности за качество нельзя назначить ответственных, а действия по повышению качества лишены явного спонсора."}, {"slug": "govern", "label": "Управление", "title": "Решения по управлению мастер-данными — дедупликация, соблюдение стандартов и споры об ответственности", "intent": "Разрешает вопросы управления данными в отношении массива мастер-данных — дедупликацию записей клиентов и контрагентов, соблюдение стандартов данных в системах-источниках, урегулирование межсистемных споров об ответственности и утверждение новых определений CDE мастер-данных. Этап принятия решений.", "problem": "Решения по управлению мастер-данными требуют межфункционального консенсуса между бизнес-линиями, ИТ, риск-менеджментом, финансами и комплаенс — каждый из которых имеет долю интереса в авторитетном определении и качестве общих сущностей данных. Форумы по управлению данными проводятся нечасто, а решения откладываются, когда курирующий владелец данных не имеет достаточных полномочий для урегулирования межфункциональных споров."}, {"slug": "curate", "label": "Сборка", "title": "Сборка золотых записей — дедупликация, обогащение и стандартизация", "intent": "Применяет утверждённые решения по управлению данными к записям мастер-данных — выполняя дедупликацию для создания или слияния золотых записей, обогащая неполные записи из проверенных источников данных и приводя значения данных в соответствие с утверждёнными классификациями справочных данных. Операционный этап, реализующий решения по управлению данными на уровне данных.", "problem": "Сборка золотых записей для больших клиентских мастер-популяций — когда в ходе дедупликации выявляются десятки тысяч кандидатных совпадений — является полуавтоматическим процессом, требующим проверки человеком пар совпадений с меньшей уверенностью. Мощности для проверки кандидатных совпадений ограничены, создавая бэклог по сборке, накапливающийся по ежеквартальным циклам."}, {"slug": "validate", "label": "Валидация", "title": "Валидация согласованности собранных мастер-записей между доменами", "intent": "Валидирует согласованность собранных записей мастер-данных в потребляющих системах — идентификатор клиента, используемый системой кредитного риска, совпадает с идентификатором клиента в системе AML, коды продуктов в субкниге кредитов соответствуют мастеру продуктов, — подтверждая корректное распространение обновлений золотых записей. Этап обеспечения качества.", "problem": "Валидация согласованности между доменами требует запросов к нескольким системам и сравнения значений идентификаторов и атрибутов между ними. Там, где потребляющие системы имеют локальные копии мастер-данных, не синхронизируемые в реальном времени, обновления сборки в системе мастер-данных не отражаются в потребляющих системах до следующего цикла ETL — создавая окно межсистемной несогласованности, влияющее на нижестоящее агрегирование рисков."}, {"slug": "publish", "label": "Публикация", "title": "Публикация авторитетных золотых записей в потребляющие системы", "intent": "Публикует валидированные золотые записи в потребляющие системы через утверждённый механизм распределения данных — API, ETL-пайплайн или поток справочных данных — и обновляет каталог данных пересмотренными определениями CDE, ответственными и метриками качества. Заключительный этап, делающий собранные мастер-данные доступными для нижестоящих потребителей.", "problem": "Публикация золотых записей в потребляющие системы в большинстве банков следует паттерну пакетного ETL по еженедельному или ежемесячному расписанию, создавая лаг между решениями по управлению мастер-данными и их отражением в нижестоящей рисковой, регуляторной и бизнес-отчётности. Лаг публикации не отслеживается относительно SLA потребляющих систем нижестоящего звена, а решения по управлению данными, влияющие на срочную регуляторную отчётность, не приоритизируются для ускоренной публикации."}], "urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle": [{"slug": "map", "label": "Сопоставление", "title": "Сквозное сопоставление линейки от источника до точки потребления", "intent": "Отображает полный путь линейки для каждого CDE — от его возникновения в системе-источнике через каждое ETL-преобразование, агрегационную логику и хранилище данных до поля регуляторного отчёта или метрики риска, где он потребляется. Этап обнаружения, формирующий или обновляющий запись линейки.", "problem": "Сопоставление линейки требует от команды разработки данных обхода производственных конфигураций пайплайна — ETL-скриптов, логики преобразований, файлов сопоставления — и перевода их в документацию линейки на понятном языке. Конфигурации пайплайна часто изменяются в результате операционных релизов; задокументированная линейка отстаёт от производственной конфигурации на один или более циклов релизов, когда обновления не инициируются формальным процессом управления изменениями."}, {"slug": "document", "label": "Документирование", "title": "Документирование линейки в каталоге данных с логикой преобразований и бизнес-определениями", "intent": "Документирует каждый путь линейки в каталоге данных — система-источник и поле, каждый шаг преобразования с описанием логики на понятном языке, промежуточные хранилища данных и потребляющие поля отчётов — в формате, пригодном для аудита регуляторами НБКР/НБК/ЦБР и используемом потребителями данных. Этап документирования.", "problem": "Качество документации линейки ограничено конкурирующими требованиями к времени разработки данных. Документация, написанная под производственным давлением, использует технические описания, недоступные для понимания бизнес-стейкхолдерам или регуляторам; перевод на понятный язык, как правило, откладывается на цикл аттестации и выполняется под давлением сроков."}, {"slug": "test", "label": "Тестирование контролей", "title": "Тестирование контролей преобразований — проверки целостности данных на границах пайплайна", "intent": "Тестирует контроли целостности данных на каждой границе пайплайна — подтверждая, что количество записей, контрольные суммы и значения CDE точно сохраняются через каждый шаг преобразования от источника до потребления — и документирует результаты тестирования в качестве свидетельств для аттестации. Этап обеспечения уверенности.", "problem": "Тестирование контролей преобразований выполняется вручную командами разработки данных и обеспечения качества для подмножества критичных пайплайнов. Охват определяется мощностями команды, а не существенностью CDE; пайплайны, питающие CDE агрегирования рисков BCBS 239, тестируются только тогда, когда они находятся в пределах доступных мощностей команды для проверки."}, {"slug": "attest", "label": "Аттестация", "title": "Аттестация точности линейки владельцами доменов данных и командой управления данными", "intent": "Получает официальную аттестацию от владельцев доменов данных и функции управления данными о том, что задокументированная линейка точно отражает производственную конфигурацию пайплайна для каждого CDE — управленческое подтверждение, удовлетворяющее надзорным ожиданиям BCBS 239 и обеспечивающее основу для защиты при регуляторных проверках. Управленческий шлюз.", "problem": "Аттестация владельцами доменов данных требует от них проверки документации линейки, которая зачастую технически сложна для восприятия. Владельцы доменов, не являющиеся специалистами по разработке данных, не могут содержательно подтвердить, что задокументированная логика преобразований соответствует производственной конфигурации, без шага перевода на понятный язык. В результате аттестация нередко является формальностью, а не содержательным шагом обеспечения уверенности."}, {"slug": "renew", "label": "Обновление", "title": "Плановое обновление линейки по циклу и инициированные изменениями обновления между циклами", "intent": "Обновляет документацию линейки при инициировании полугодового цикла и обрабатывает обновления, инициированные изменениями, между циклами — актуализируя записи линейки при изменении систем-источников, модификации пайплайна или появлении новых требований регуляторной отчётности, влияющих на производственный путь линейки. Этап сопровождения, поддерживающий актуальность документации.", "problem": "Обновления линейки, инициированные изменениями, зависят от того, сообщит ли команда разработки данных о изменениях пайплайна функции управления данными. Процесс управления изменениями не обеспечивает последовательного инициирования требований к обновлению линейки; изменения пайплайна, влияющие на пути линейки CDE, внедряются без соответствующих обновлений документации, создавая нарастающее расхождение между задокументированной и производственной линейкой."}], "urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle": [{"slug": "aggregate", "label": "Агрегирование", "title": "Агрегирование регуляторных данных из систем-источников в соответствии со спецификациями представлений", "intent": "Агрегирует набор данных регуляторного представления из систем-источников — применяя предписанный регулятором периметр сущностей, определения репортинг-популяции, сопоставления словаря данных и агрегационную логику — и формирует кандидатный набор данных для представления. Этап сборки данных.", "problem": "Агрегирование регуляторных данных для форм каждого регулятора требует применения специфических для сущности и юрисдикции определений, отличающихся от определений внутренней управленческой отчётности банка. Сопоставление от внутренних определений данных к регуляторным определениям поддерживается вручную для каждого регулятора и типа формы; изменения требований к регуляторным данным от НБКР, НБК/АРФР или ЦБР требуют параллельных обновлений таблиц сопоставления, которые не всегда реализуются своевременно к следующему представлению."}, {"slug": "validate", "label": "Валидация", "title": "Валидация качества данных в соответствии с надзорными правилами и внутренними стандартами качества", "intent": "Применяет опубликованные регулятором правила валидации и внутренние стандарты качества данных банка к агрегированному набору данных для представления — выявляя ошибки формата, сбои внутренней согласованности и значения за пределами правдоподобных диапазонов — и формирует отчёт о валидационных исключениях для проверки до представления.", "problem": "Наборы правил регуляторной валидации публикуются каждым регулятором и периодически обновляются. НБКР, НБК/АРФР и ЦБР ведут собственные валидационные движки; поддержание предпредставительных валидационных инструментов банка в актуальном состоянии с последним набором правил каждого регулятора требует специализированных технических усилий по сопровождению, которые не всегда обеспечиваются пропорционально частоте обновлений."}, {"slug": "submit", "label": "Представление", "title": "Регуляторное представление данных через предписанный надзорный канал", "intent": "Упаковывает валидированный набор данных в требуемом регулятором формате — XBRL, XML, текст с разделителями или загрузка через портал — и представляет его через предписанный канал в срок регуляторного представления. Этап выполнения регуляторного обязательства.", "problem": "Требования к упаковке и каналу представления различаются по регуляторам и периодически обновляются технически. Сбои электронного портала, истечение срока действия цифровых подписей и несоответствия версий форматов являются повторяющимися операционными сбоями в день представления, которыми управляют реактивно, а не через проактивные проверки технической готовности до каждого срока."}, {"slug": "reconcile", "label": "Сверка", "title": "Постпредставительная сверка с управленческими данными и предыдущим периодом", "intent": "Сверяет представленные регуляторные данные с управленческими счетами, представлением предыдущего периода и параллельными представлениями другим регуляторам — подтверждая, что пруденциальная картина, представленная каждому регулятору, внутренне согласована и соответствует управленческой отчётности. Этап постпредставительного обеспечения уверенности.", "problem": "Постпредставительная сверка регуляторных представлений с управленческими счетами выявляет расхождения, берущие начало в специфических для регуляторов определениях данных, временны́х разницах или разницах периметра между регуляторным периметром и периметром управленческой отчётности. Повторяющиеся расхождения расследуются в каждом цикле, а не устраняются через постоянное сопоставление или согласование периметра."}, {"slug": "resolve", "label": "Урегулирование запросов", "title": "Управление надзорными запросами и выполнение внеплановых запросов на данные", "intent": "Управляет надзорными запросами, возникающими по представленным данным, — предоставляя свидетельства линейки, поясняя методологию и отвечая на вопросы о правдоподобности от НБКР/НБК/АРФР/ЦБР, — и выполняет внеплановые запросы надзорных органов на данные вне стандартного календаря представлений на основе требований BCBS 239. Этап непрерывного управления надзорными отношениями.", "problem": "Надзорные запросы требуют от команды управления данными извлечения документации линейки, повторного выполнения агрегационной логики по конкретным точкам данных и составления пояснительных ответов в предпочтительном формате регулятора. Там, где документация линейки неполна или агрегационная логика изменилась с момента представления, ответы на запросы требуют дополнительного расследования, задерживающего надзорный диалог."}]};
+
+  const STAGE_LABELS = {
+    problem: "\u0420\u0435\u0448\u0430\u0435\u043c\u0430\u044f \u0437\u0430\u0434\u0430\u0447\u0430",
+  };
+
+  const modalEl   = document.getElementById('stageModal');
+  const contentEl = modalEl.querySelector('.modal__content');
+  const closeBtn  = modalEl.querySelector('.modal__close');
+
+  function openModal()  { modalEl.classList.add('is-open');    modalEl.setAttribute('aria-hidden', 'false'); }
+  function closeModal() { modalEl.classList.remove('is-open'); modalEl.setAttribute('aria-hidden', 'true');  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modalEl.addEventListener('click', (e) => { if (e.target === modalEl) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalEl.classList.contains('is-open')) closeModal();
+  });
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (c) => (
+      {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+    ));
+  }
+
+  // Auto-open the <details> for a flow when arrived via #fragment
+  // (e.g. linked from L1 page flow-card or top-page value-streams card —
+  // clicking an individual flow name navigates here with #<flow-slug>).
+  function openDetailsFromHash() {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target && target.tagName === 'DETAILS') {
+      target.open = true;
+      // Defer scroll so the layout reflows after open.
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+  }
+  openDetailsFromHash();
+  window.addEventListener('hashchange', openDetailsFromHash);
+
+  document.querySelectorAll('.flow-stages__stage').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const stageSlug = btn.dataset.stage;
+      const flowUrn   = btn.dataset.flowId;
+      const stages    = FLOW_STAGES[flowUrn] || [];
+      const stage     = stages.find((s) => s.slug === stageSlug) || {};
+      contentEl.innerHTML = `
+        <div class="modal__eyebrow">${escapeHtml(stage.label || stageSlug)}</div>
+        <h3 class="modal__title">${escapeHtml(stage.title || stage.label || stageSlug)}</h3>
+        ${stage.intent  ? `<p class="modal__intent">${escapeHtml(stage.intent)}</p>` : ''}
+        ${stage.problem ? `
+          <div class="modal__problem">
+            <div class="modal__problem-label">${escapeHtml(STAGE_LABELS.problem)}</div>
+            <p>${escapeHtml(stage.problem)}</p>
+          </div>` : ''}
+      `;
+      openModal();
+    });
+  });
+})();
+</script>
+
+</div>
+<footer class="o-footer">Каталог возможностей · O!Bank</footer></main></div>
+</body></html>

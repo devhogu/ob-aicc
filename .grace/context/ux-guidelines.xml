@@ -2,5 +2,6 @@
   <Applicability>applicable</Applicability>
   <Audience>O!Bank staff across business functions and AICC team members</Audience>
   <Guideline>Structure navigation to mirror the AICC's activities and responsibilities: strategy, statement of intent, roadmap, knowledge base, and process and lifecycle information.</Guideline>
+  <Guideline>Present AICC, Discovery Catalog, Portfolio, Delivery Pipeline and CloudLab as five independent neighbours in a common O!Bank shell. Each section owns its body content, local navigation, search and lifecycle. Shared navigation is the only connection across section boundaries. Preserve Discovery's spatial layouts, tabs, disclosures and flow views while using the same local fonts, colours, themes and responsive controls. The new live Portfolio and Delivery Pipeline are distinct from AICC's portfolio-management and delivery-model documents.</Guideline>
   <Guideline>English and Russian routes share page identity, clause numbering and navigation. English is the default route; no language is designated authoritative. A missing or draft Russian translation shows marked English; a stale reviewed translation fails validation. The existing O!Bank UI kit and responsive layout are retained.</Guideline>
 </GraceUXGuidelines>

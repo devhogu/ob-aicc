@@ -67,6 +67,8 @@ async def check(source, report_dir):
             selected = await page.locator('html').get_attribute('data-theme')
             await page.evaluate('localStorage.clear()')
             await page.locator('nav.lang-switch a[lang="en"]').click()
+            # A file navigation can commit before its head scripts finish loading.
+            await page.wait_for_load_state('load')
             assert await page.locator('html').get_attribute('data-theme') == selected
             assert urlsplit(page.url).path.endswith('/en/index.html')
             for lang in ('en', 'ru'):

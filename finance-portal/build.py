@@ -20,9 +20,9 @@ LABELS = {
 }
 
 
-def localize_breadcrumb(content: str, page: Path, lang: str) -> str:
+def localize_breadcrumb(content: str, page: Path, lang: str, output_root: Path = OUTPUT) -> str:
     """Use the Russian section's own title for its child-page breadcrumb."""
-    relative = page.relative_to(OUTPUT / lang)
+    relative = page.relative_to(output_root / lang)
     if lang != "ru" or len(relative.parts) != 3:
         return content
     section = SOURCE / "ru" / relative.parts[0] / "index.html"
@@ -31,6 +31,12 @@ def localize_breadcrumb(content: str, page: Path, lang: str) -> str:
     if not section_title or len(re.findall(parent_link, content)) != 1:
         raise ValueError(f"Missing section title or parent breadcrumb: {page}")
     return re.sub(parent_link, lambda match: match.group(1) + section_title.group(1) + match.group(3), content, count=1)
+
+
+def discovery_source(relative: Path, lang: str) -> str:
+    """Read the retained edition with its established breadcrumb correction."""
+    source = SOURCE / lang / relative
+    return localize_breadcrumb(source.read_text(), source, lang, SOURCE)
 
 
 def rel(page: Path, target: Path) -> str:

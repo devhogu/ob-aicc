@@ -1,0 +1,1489 @@
+<!doctype html>
+<html lang="ru" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Обработка и расчёт транзакций · Каталог возможностей</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../../assets/charter.css?v=a6c78f6d">
+<link rel="stylesheet" href="../../../../assets/neighbours.css?v=4fa0caee">
+
+<link rel="alternate" hreflang="en" href="../../../../en/discovery/shared-banking-capabilities/transaction-processing/">
+<script src="../../../../assets/site.js?v=f6e0927c" defer data-search="../../../../assets/search-discovery-ru.json" data-t-none="По запросу ничего не найдено." data-t-light="Дневной режим" data-t-dark="Ночной режим" data-t-dz-close="Закрыть"></script>
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=0d85a6e2">
+<script defer src="../../../../assets/discovery.js"></script>
+</head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
+<a class="o-skip" href="#main">К содержанию</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>Центр компетенций по AI</span></a>
+  <span class="header-scope">Каталог возможностей</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Поиск в разделе</label><input id="q" type="search" autocomplete="off" placeholder="Поиск в разделе" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Язык"><a lang="en" hreflang="en" href="../../../../en/discovery/shared-banking-capabilities/transaction-processing/">EN</a><a lang="ru" hreflang="ru" href="./" aria-current="true">RU</a></nav><button id="theme-switch" type="button" class="theme-switch" aria-label="Ночной режим" title="Ночной режим"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Разделы сайта</summary><nav class="portal-sections" aria-label="Разделы"><div class="portal-nav-group">
+<a class="portal-section-link" data-section="aicc" href="../../../"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 10h.01" />
+  <path d="M12 14h.01" />
+  <path d="M12 6h.01" />
+  <path d="M16 10h.01" />
+  <path d="M16 14h.01" />
+  <path d="M16 6h.01" />
+  <path d="M8 10h.01" />
+  <path d="M8 14h.01" />
+  <path d="M8 6h.01" />
+  <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+  <rect x="4" y="2" width="16" height="20" rx="2" />
+</svg>
+<span>AICC</span></a></div><div class="portal-nav-group is-current">
+<a class="portal-section-link" data-section="discovery" href="../../" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+<span>Каталог возможностей</span></a><div class="portal-local-nav"><a href="../../">Обзор</a><a href="../../strategic-portfolio/">Стратегический банковский портфель</a><a href="../../strategic-initiatives/">Стратегические инициативы и трансформация</a><a href="../../value-streams/">Операционные потоки создания ценности</a><a href="../../customer-market-intelligence/">Клиентская и рыночная аналитика</a><a href="../../customer-channels/">Клиенты и каналы</a><a href="../../risk-control/">Риск и контроль</a><a href="../">Общебанковские возможности</a><a href="../../finance-treasury/">Финансы и казначейство</a><a href="../../banking-data-analytics/">Банковские данные и аналитика</a></div></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="initiatives" href="../../../initiatives/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span>Портфель инициатив</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="projects" href="../../../projects/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span>Проекты</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="lab" href="../../../lab/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+<span>CloudLab</span></a></div></nav></details></aside>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-notice">Материалы для исследования возможностей. Сценарии и показатели носят предварительный характер и требуют проверки для конкретного применения; они не устанавливают обязательств по реализации или утверждённых требований Банка.</div><div class="discovery-content">
+
+
+
+<div class="page">
+
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    
+
+
+
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  
+  <span class="breadcrumb__item">
+    
+    
+    <a class="breadcrumb__link" href="../../index.html">Каталог возможностей</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <a class="breadcrumb__link" href="../index.html">Общебанковские возможности</a>
+    
+  </span>
+  
+  <span class="breadcrumb__item">
+    
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    
+    
+    <span class="breadcrumb__current" aria-current="page">Обработка и расчёт транзакций</span>
+    
+  </span>
+  
+</nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      
+      <h1 class="page-header__title">Обработка и расчёт транзакций</h1>
+    </div>
+  </div>
+  
+  
+    <p class="page-header__intent">Обработка и расчёт транзакций — это операционный хребет банка: инфраструктура, посредством которой платёжные поручения валидируются, маршрутизируются, исполняются и проводятся по расчётным системам — через проводной перевод, ACH, карточные и внутренние переводные рельсы. Согласно нормам НБКР по платёжным системам, надзорным требованиям НБК/АРФМ и стандартам обмена сообщениями SWIFT, каждый рельс несёт установленные операционные и комплаенс-обязательства. Платёжные исключения, очереди расследований и разрывы при расчётной сверке создают существенную ежедневную операционную нагрузку на команды платёжных операций. <strong>Возможность для ИИ — сократить циклы разрешения исключений</strong> — классификация паттернов сбоев до их накопления, поддержка следователей структурированным контекстом кейса и автоматизация комментариев при сверке — чтобы платёжные операции трансформировались из реактивной функции управления исключениями в проактивную дисциплину управления мощностью.</p>
+  
+</header>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-payment-processing:checked ~ .problems-tab-bar label[for="problems-tab-payment-processing"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-payment-processing:checked ~ .problems-panel[data-tab="payment-processing"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Проблемы">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-payment-processing"
+    value="payment-processing"
+    checked
+    aria-label="Обработка платежей"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-payment-processing"
+      role="tab"
+      aria-controls="problems-panel-payment-processing"
+    >Обработка платежей</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-payment-processing"
+    data-tab="payment-processing"
+    role="tabpanel"
+    aria-labelledby="problems-tab-payment-processing"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Доля отклонённых платежей, распределение типов исключений, возраст очередей расследований и паттерны отклонений банков-партнёров отслеживаются в дашбордах платёжных операций, однако редко агрегируются в паттерновый разрез, на основании которого руководство могло бы действовать. Одна и та же категория исключений может составлять 80% дневного объёма на протяжении недель до выявления паттерна и инициирования устранения корневой причины.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Следователи по платёжным операциям обрабатывают 20–50 кейсов в день — каждый требует сбора контекста по платёжному поручению, коду причины отклонения от платёжной сети, истории клиента, предыдущим аналогичным кейсам и корреспонденции с банками-партнёрами. Ввод новых следователей в работу проходит медленно, поскольку знание паттернов, определяющее правильный следующий шаг для каждого типа кейса, сосредоточено в головах старших следователей, а не в доступной институциональной базе знаний.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Документация по решениям в рамках платёжных расследований — письма о закрытии, сводки расследований и корреспонденция с банками-партнёрами — ведётся по установленным форматам, различающимся по типу платежа и категории исключения. Подготовка этих структурированных документов на основе данных расследования — высокообъёмная, малосодержащая суждение задача, поглощающая мощность следователя по каждому делу.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Банки, снижающие долю платёжных исключений и сокращающие время разрешения расследований, работают с меньшими удельными затратами и более высоким уровнем удовлетворённости клиентов по сравнению с банками, обрабатывающими тот же объём исключений вручную. Систематическое выявление паттернов исключений открывает возможности для инвестиций в превентивные меры — изменения процессов, переговоры с банками-партнёрами, улучшение валидации инструкций — сокращающих саму совокупность исключений, а не просто ускоряющих их обработку.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
+  
+
+  
+  <div id="main-content" class="l3-sections" aria-label="Подразделы">
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="payment-exception-pattern-analytics">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Аналитика паттернов платёжных сбоев и исключений</h2>
+    
+    <p class="l3-section__intent">Классификация и кластеризация платёжных сбоев, отказов и исключений по всем рельсам — проводной перевод, ACH, карточные и внутренние переводные — с выявлением семейных паттернов, определяющих объём исключений, атрибуцией сбоев к внутренним, контрагентским или клиентским причинам и количественной оценкой стоимости каждого паттерна. Согласно требованиям НБКР к отчётности по платёжным системам, устойчивые семейства исключений должны расследоваться и устраняться. Текущая практика обрабатывает исключения по каждому кейсу без системной видимости паттернов.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payment-exception-pattern-analytics/straight-through-processing-gap-signal" id="scenario-straight-through-processing-gap-signal">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сигнал разрыва сквозной обработки (STP)</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Непрерывный мониторинг коэффициента STP (сквозной обработки) в разрезе платёжного рельса, контрагента и типа поручения — с выявлением платёжных совокупностей, где стоимость ручной обработки исключений наиболее высока относительно обработанного объёма, и сигнализацией о конкретных конфигурациях поручений или контрагентов, где коэффициент STP опустился ниже исторической базовой линии.
+
+Анализ поддерживает обсуждения операционной команды по оптимизации маршрутизации по каналам и контрагентам, а также программу повышения качества поручений продуктовой команды.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Коэффициенты STP отчитываются на агрегированном уровне по каждому платёжному рельсу; конкретные конфигурации контрагентов, шаблоны поручений и клиентские совокупности, формирующие коэффициенты STP ниже базовой линии внутри каждого рельса, систематически не выявляются из данных платёжной обработки.
+
+Без гранулярного анализа разрыва STP улучшения маршрутизации и качества поручений распределяются по всей платёжной совокупности, а не концентрируются на комбинациях контрагентов и поручений с наибольшей стоимостью исключений.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент отслеживает коэффициенты STP в разрезе платёжного рельса, контрагента и типа поручения на еженедельной основе, сигнализируя о конфигурациях контрагентов и поручений, где коэффициент STP снизился ниже базовой линии за 13 недель на существенный порог.
+
+Операционный менеджмент и продуктовая команда анализируют сигнал разрыва STP и направляют обсуждения по маршрутизации к контрагентам и улучшению качества поручений на выявленные конфигурации.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Снижение коэффициента STP ниже исторической базовой линии в разрезе платёжного рельса, контрагента и типа поручения выявляется в рамках еженедельного цикла мониторинга и направляется операционному менеджменту и продуктовому менеджменту для расследования.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Сигнал разрыва STP охватывает ≥90% объёма по платёжным рельсам в течение 6 месяцев с момента запуска; используется в ≥4 операционных совещаниях по маршрутизации в год.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Общий коэффициент STP улучшается на ≥5 процентных пунктов в течение 18 месяцев после улучшений маршрутизации и качества поручений, основанных на аналитике сигналов разрыва.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сигнал разрыва STP доступен каждый понедельник на основе данных обработки предшествующей недели, что позволяет операционным и продуктовым командам действовать в ту же неделю, что и обнаружение снижения.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payment-exception-pattern-analytics/payment-exception-pattern-analytics" id="scenario-payment-exception-pattern-analytics">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Аналитика шаблонов исключений по платежам</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент классифицирует и кластеризует исключения по платежам и чарджбэки по всем платёжным рельсам, атрибутирует группы сбоев к внутренним, контрагентским или клиентским причинам и формирует еженедельный дашборд шаблонов с приоритизированным перечнем исправлений для операционного менеджмента платёжного блока.
+
+Концентрация чарджбэков, мошеннические сигнатуры на уровне BIN и близость к порогам мониторинга платёжных сетей отражаются как постоянные аналитические выводы, а не накапливаются незамеченными до достижения уровней принудительных мер.
+
+Операционный менеджмент платёжного блока направляет процессные изменения, эскалации к банкам-партнёрам и улучшения валидации поручений на основе аналитического представления шаблонов.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Операционный менеджмент платёжного блока не имеет возможности видеть шаблонную картину по ежедневным объёмам исключений: какие группы сбоев формируют 80 процентов объёма, какова стоимость каждой группы в трудозатратах специалистов и клиентском влиянии, и являются ли сбои следствием внутренних процессов, банков-партнёров или клиентов.
+
+Концентрация чарджбэков, мошеннические сигнатуры на уровне BIN и близость к порогам мониторинга платёжных сетей остаются невидимыми до тех пор, пока накопление не достигает уровней принудительных мер, — на этом этапе устранение становится реактивным, и регуляторные последствия уже наступили.
+
+Отсутствие актуального представления шаблонов означает, что инвестиции операционного блока платёжных операций — в совершенствование процессов, эскалации к банкам-партнёрам и улучшение валидации поручений — направляются без ранжированной доказательной базы.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент обрабатывает каждое исключение по платежу и чарджбэк в пакетном режиме, классифицируя по типу сбоя, платёжному рельсу и атрибуции причины — внутренний процесс, банк-партнёр или поручение клиента, — а для чарджбэков — по мерчанту, BIN и близости к пороговым значениям сети.
+
+Агент кластеризует группы сбоев, количественно оценивает стоимость обработки на группу и формирует еженедельный дашборд шаблонов с приоритизированным перечнем исправлений.
+
+Операционный менеджмент платёжного блока использует ранжированное представление шаблонов для направления процессных изменений, эскалаций к банкам-партнёрам и улучшений валидации поручений; объём исключений на группу сбоев и стоимость обработки на исключение — основные показатели результата.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Исключения по платежам и чарджбэки по всем платёжным рельсам классифицируются, кластеризуются по группам сбоев и атрибутируются к внутренним, контрагентским или клиентским причинам на еженедельной основе; ранжированный перечень исправлений доступен операционному менеджменту платёжного блока до достижения порогов концентрации чарджбэков или мониторинга платёжных сетей.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Еженедельный дашборд шаблонов исключений по платежам, подготовленный агентом, используется в ≥48 из 52 недель первого года; все активные платёжные рельсы и типы чарджбэков охвачены в каждом цикле.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% позиций ранжированного перечня исправлений подтверждены операционным менеджментом платёжного блока как исполнимые при проверке; точность классификации групп сбоев — ≥85% по результатам периодического операционного аудита.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Еженедельный дашборд шаблонов с ранжированным перечнем исправлений доступен в течение 2 рабочих дней после закрытия измерительной недели — в сравнении с отсутствием систематического представления шаблонов в предыдущем процессе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payment-exception-pattern-analytics/payment-failure-root-cause-attribution" id="scenario-payment-failure-root-cause-attribution">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Атрибуция первопричин сбоев платежей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Атрибуция объёма сбоев и исключений по платежам к первопричинам — сбои обработки у контрагента, внутренние ошибки в поручениях, проблемы качества данных клиентов и изменения правил платёжных сетей — с количественной оценкой стоимости на исключение по каждой категории первопричин.
+
+Атрибуция информирует расстановку приоритетов для операционного менеджмента и продуктовой команды, концентрируя усилия на первопричинах с наибольшим эффектом от устранения.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Анализ шаблонов исключений по платежам идентифицирует группы исключений по симптому; первопричины, определяющие каждую группу, — внутренние процессные пробелы, поведение контрагента, качество клиентских данных или изменения правил платёжных сетей — требуют дополнительного слоя атрибуции для преобразования сигнала шаблона в исполнимую цель улучшения.
+
+Без атрибуции первопричин инициативы по сокращению исключений адресуют симптомы, а не причины, обеспечивая временное улучшение с последующим возобновлением при сохранении первопричины.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает кластеры шаблонов исключений и анализирует связанные данные платёжных поручений, коды причин сети и шаблоны поведения контрагентов, чтобы атрибутировать каждую группу исключений к её первичной первопричине.
+
+Операционный менеджмент и продуктовая команда анализируют отчёт по атрибуции первопричин и направляют инициативы по улучшению на конкретные внутренние, контрагентские или клиентские причины, формирующие наибольшую стоимость исключений.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Первопричины групп исключений по платежам атрибутируются на основе данных шаблонов и поручений на скользящей основе и доступны для таргетирования инициатив по улучшению.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Атрибуция первопричин используется в ≥4 циклах планирования операционных улучшений в год в течение 9 месяцев с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Объём исключений по ведущим категориям первопричин сокращается на ≥20% в течение 18 месяцев после инициатив по улучшению, основанных на анализе атрибуции.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Анализ атрибуции первопричин обновляется ежемесячно на основе данных об исключениях за предшествующие 30 дней, что обеспечивает направление инициатив по улучшению на актуальные распределения первопричин.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="nostro-reconciliation">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Сверка счётов ностро</h2>
+    
+    <p class="l3-section__intent">Ежедневное сопоставление внутренних позиций по счетам банка с выписками по счётам ностро в банках-корреспондентах — выявление расхождений по дате валютирования, валюте, контрагенту и ссылке на поручение. Согласно правилам НБКР и ЦБР по валютному контролю, неурегулированные позиции ностро должны расследоваться и разрешаться в установленные сроки. Для банков с несколькими корреспондентскими отношениями и мультивалютными потоками ежедневный цикл сверки генерирует устойчивые популяции расхождений, требующих времени следователей для объяснения и разрешения.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/nostro-reconciliation/nostro-position-intraday-monitoring" id="scenario-nostro-position-intraday-monitoring">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Внутридневной мониторинг позиций по ностро-счетам</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Внутридневной мониторинг позиций по ностро-счетам в сравнении с прогнозами внутреннего учёта банка — с выявлением развивающихся расхождений до цикла сверки на конец дня, чтобы позиции, приближающиеся к пороговому значению несверенного остатка, могли быть расследованы до закрытия.
+
+Раннее выявление развивающихся расхождений сокращает несверенный остаток на конец дня и трудозатраты специалистов, необходимые для разрешения срочных расхождений в рамках сроков валютного контроля НБКР.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Расхождения позиций по ностро-счетам, возникающие в течение дня, выявляются только в ходе цикла сверки на конец дня; расхождения, накапливающиеся на протяжении дня, поступают в команду сверки пакетом при закрытии, формируя концентрированную нагрузку по расследованию в условиях дедлайна НБКР и ЦБ РФ по разрешению.
+
+Внутридневная видимость развивающихся расхождений позволила бы операционной команде расследовать и разрешать срочные расхождения до накопления давления дедлайна на конец дня.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает внутридневные обновления позиций по ностро-счетам и сравнивает их с прогнозами внутреннего учёта банка, выявляя развивающиеся расхождения выше установленного порогового остатка для расследования в тот же день.
+
+Операционная команда проверяет очередь внутридневных сигналов и расследует развивающиеся расхождения до цикла сверки на конец дня, снижая концентрированную нагрузку при закрытии.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Внутридневные расхождения позиций по ностро-счетам, превышающие установленный порог, выявляются и направляются операционной команде для расследования в тот же день — до начала цикла сверки на конец дня.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Внутридневной мониторинг охватывает ≥90% позиций по ностро-счетам в течение 6 месяцев с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Объём несверенного остатка на конец дня сокращается на ≥20% в течение 12 месяцев; доля нарушений дедлайнов НБКР и ЦБ РФ по разрешению расхождений ностро снижается до уровня ниже 1%.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сигнал о внутридневном расхождении формируется в течение 30 минут с момента обнаружения отклонения позиции, что делает расследование в тот же день операционно возможным до закрытия.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/nostro-reconciliation/nostro-reconciliation-break-commentary" id="scenario-nostro-reconciliation-break-commentary">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Комментарий по расхождениям ностро-сверки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует ежедневный комментарий по расхождениям ностро-сверки — классифицируя каждую несверенную позицию по контрагенту, валюте и вероятной причине, и составляя проекты сообщений для банков-корреспондентов — на основе структурированных данных сверки.
+
+Комментарий формируется в установленном формате, используемом командой расчётов, с проектами сообщений для корреспондентов, подготовленными для утверждения и отправки старшим специалистом.
+
+Ежедневное производство комментария сосредотачивает усилия команды расчётов на экспертной оценке исключений, а не на сборе формата.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Команды расчётов формируют отчёт по расхождениям ностро-сверки вручную каждый день — объясняя каждую несверенную позицию по контрагенту, валюте и причине, и составляя сообщения для банков-корреспондентов.
+
+Формат комментария установлен, а базовые данные сверки структурированы; сборочная работа носит повторяющийся характер и потребляет ежедневную мощность команды, которая могла бы направляться на экспертную оценку исключений и управление отношениями с банками-корреспондентами.
+
+Для банков с несколькими корреспондентскими отношениями и мультивалютными потоками ежедневная совокупность расхождений создаёт устойчивую нагрузку на специалистов, которая масштабируется с объёмом транзакций, а не со сложностью.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает ежедневный результат сверки, классифицирует каждое расхождение по контрагенту, валюте, типу поручения и вероятной причине, и составляет комментарий по расхождениям в установленном формате.
+
+Агент формирует проекты сообщений для банков-корреспондентов по каждому неурегулированному расхождению, готовых к проверке и отправке старшим специалистом по расчётам.
+
+Время формирования ежедневного комментария и возраст неурегулированных расхождений — основные показатели результата; старшие специалисты по расчётам проверяют и отправляют сформированные сообщения, сохраняя полномочия в части коммуникаций с банками-корреспондентами.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Ежедневный комментарий по расхождениям ностро — классифицирующий каждую несверенную позицию по контрагенту, валюте и вероятной причине, с проектами сообщений для банков-корреспондентов, подготовленными для утверждения и отправки старшим специалистом, — формируется из структурированных данных сверки каждый рабочий день.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Комментарий по расхождениям ностро, подготовленный агентом, используется в ≥95% рабочих дней в первый год; охватываются все активные корреспондентские отношения и мультивалютные потоки.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% проектов сообщений для банков-корреспондентов, подготовленных агентом, принимаются старшими специалистами по расчётам без существенных правок до отправки; точность классификации причин подтверждена на уровне ≥90% по результатам периодического аудита сверки.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Ежедневный комментарий по расхождениям и сообщения для банков-корреспондентов доступны в течение 2 часов после выгрузки результатов сверки — в сравнении с 3–4 часами ручной сборки в день в предыдущем процессе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/nostro-reconciliation/nostro-break-pattern-analytics" id="scenario-nostro-break-pattern-analytics">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Аналитика шаблонов расхождений по ностро-счетам</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Анализ устойчивой совокупности расхождений по ностро-счетам — в разрезе валюты, банка-корреспондента, шаблона даты валютирования и типа поручения — для определения первопричин, генерирующих наибольший объём повторяющихся расхождений, и количественной оценки трудозатрат специалистов, приходящихся на каждую группу расхождений.
+
+Анализ информирует обсуждение операционной командой управления отношениями с корреспондентами и расстановку приоритетов для улучшения внутренней обработки поручений.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Сверка ностро-счетов формирует устойчивую совокупность расхождений, обрабатываемых в индивидуальном порядке; комбинации валюты, корреспондента и типа поручения, порождающие повторяющиеся группы расхождений, систематически не выявляются из истории сверки.
+
+Повторяющиеся группы расхождений, которые можно было бы устранить посредством единственного управленческого действия в отношениях с корреспондентом или внутреннего процессного улучшения, вместо этого решаются в индивидуальном порядке, потребляя трудозатраты специалистов на регулярной основе без устранения первопричины.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует закрытую совокупность расхождений по ностро-счетам — в разрезе валюты, корреспондента, шаблона отклонения даты валютирования и типа поручения — и формирует ранжированный отчёт по группам расхождений с указанием стоимости разрешения и частоты повторения для каждой группы, а также предполагаемой первопричины.
+
+Операционный менеджмент использует отчёт по группам расхождений для расстановки приоритетов в обсуждениях управления отношениями с банками-корреспондентами и в совершенствовании внутренней обработки, располагая доказательной базой по повторяемости и стоимости для обоснования дискуссии.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Повторяющиеся группы расхождений по ностро-счетам выявляются из истории сверки на скользящей основе и доступны для управления отношениями с банками-корреспондентами и расстановки приоритетов в совершенствовании обработки операций.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Аналитика шаблонов расхождений используется на ≥4 управленческих совещаниях операционного блока в год в течение 6 месяцев с момента запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Объём устойчивой совокупности расхождений сокращается на ≥20% в течение 18 месяцев после первого цикла устранения первопричин, основанного на аналитике; трудозатраты специалистов на повторяющиеся расхождения сокращаются пропорционально.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Отчёт по шаблонам расхождений обновляется ежемесячно на основе данных сверки за предшествующие 90 дней, что обеспечивает отражение актуального распределения расхождений в расстановке приоритетов улучшений.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="investigation-triage-support">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Триаж расследования и поддержка следующих шагов</h2>
+    
+    <p class="l3-section__intent">Формирование контекста в режиме реального времени и рекомендации по следующим шагам для следователей по платежам, работающих с очередями исключений. Каждое расследование требует от следователя прочитать платёжное поручение, декодировать код причины отказа сети, проверить историю клиента, получить аналогичные предыдущие кейсы и определить соответствующий следующий шаг — связаться с банком-корреспондентом, запросить дополнительную информацию у клиента, закрыть как ошибку клиента или эскалировать. Знание паттернов, определяющих решения о следующих шагах, является институциональным знанием старших следователей.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/investigation-triage-support/investigation-next-step-pattern-analytics" id="scenario-investigation-next-step-pattern-analytics">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Аналитика схем следующего шага расследования</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Анализ предыдущих решений о следующем шаге расследования — по коду основания платежа, типу контрагента и характеристикам случая — для выявления схем следующего шага, обеспечивающих наиболее быстрое урегулирование, и случаев, в которых текущий выбор следующего шага систематически приводит к дополнительным раундам расследования.
+
+Анализ совершенствует модель рекомендации следующего шага, опираясь на наблюдаемую эффективность урегулирования, а не только на прецеденты политики.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Рекомендации по следующему шагу расследований платежей основываются на знаниях схем, которыми владеют опытные следователи; взаимосвязь между выбором следующего шага и наблюдаемой эффективностью урегулирования не измеряется систематически по данным об исходах случаев.
+
+Случаи, в которых устоявшаяся схема следующего шага систематически порождает дополнительные раунды расследования — повторный контакт, запрос дополнительных сведений или взаимодействие с банком-корреспондентом, — представляют собой системную процессную неэффективность, которая не выявляется без анализа атрибуции исходов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует предыдущие случаи расследований — выбранный следующий шаг, последующие требуемые шаги и общее время урегулирования — по коду основания платежа, типу контрагента и характеристикам случая и формирует отчёт об эффективности следующего шага с выявлением схем принятия решений, обеспечивающих наиболее быстрые и наиболее медленные циклы урегулирования.
+
+Система поддержки триажа расследований включает данные об эффективности в рекомендации по следующему шагу, а операционный менеджмент использует отчёт для выявления последовательностей этапов процесса, требующих совершенствования процедур.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Схемы принятия решений о следующем шаге, приводящие к многораундовым циклам расследования, выявляются из данных об исходах случаев и используются для совершенствования рекомендаций по поддержке триажа расследований.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Аналитика схем следующего шага используется в ≥2 циклах совершенствования модели триажа расследований в течение первых 18 месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Среднее количество раундов расследования для типов случаев с наибольшим числом этапов снижается на ≥15% в течение 18 месяцев после совершенствования рекомендаций по триажу на основе результатов аналитики.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Аналитика схем обновляется ежеквартально по данным закрытых случаев, обеспечивая актуальность совершенствования рекомендаций по триажу на основе последнего опыта исходов расследований.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/investigation-triage-support/payment-investigation-triage" id="scenario-payment-investigation-triage">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Триаж расследований платежей</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Агент формирует контекст случая и рекомендацию по следующему шагу для каждого расследования платежа — платёжное поручение, анализ кода основания, история клиента и аналогичные предыдущие случаи — готовые к проверке следователем и принятию мер.
+
+Адаптация новых следователей к знаниям об институциональных схемах ускоряется, поскольку пакет контекста доступен при открытии случая, а не требует ручного поиска.
+
+Экспертное суждение следователя применяется к решению о следующем шаге и урегулированию случая, а не к сбору доказательной базы.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Специалисты по расследованию платежей тратят значительное время на каждое дело, собирая контекст по платёжному поручению, коду причины отказа в сети, истории клиента и аналогичным предыдущим делам — и лишь после этого принимают решение о следующем шаге.
+
+Новые специалисты медленно осваивают институциональное знание о шаблонах — понимание того, какие комбинации кодов причин указывают на тот или иной путь разрешения, — а опытные специалисты направляют свою экспертизу на сбор контекста, а не на суждения, которые несут наибольшую ценность по делу.
+
+Очереди исключений стареют в период задержек при сборе контекста, что влечёт последствия для сроков ответа банков-корреспондентов и обязательств по информированию клиентов.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>При открытии дела агент считывает платёжное поручение, декодирует код причины отказа в сети, извлекает аналогичные предыдущие дела и формирует структурированный аналитический вывод с рекомендованным следующим шагом.
+
+Специалист по расследованию проверяет контекстный пакет и рекомендованный следующий шаг, подтверждает рекомендацию и действует; время сбора контекста исключается из цикла обработки дела.
+
+Скорость адаптации новых специалистов и среднее время разрешения дела — основные показатели результата наряду с распределением возраста очереди.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Каждое дело по расследованию платежа открывается со структурированным контекстным пакетом — платёжное поручение, анализ кода причины отказа, история клиента и аналогичные предыдущие дела — а также с рекомендованным следующим шагом, готовым к проверке и исполнению специалистом по расследованию.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Пакеты контекста расследований, сформированные агентом, используются в ≥90% расследований платежей, открытых в течение 12 месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% рекомендованных следующих шагов проверены и приняты следователями без существенных изменений; время адаптации новых следователей к институциональным знаниям о схемах случаев снижено на ≥30% по сравнению с базовым показателем до внедрения.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Контекстный пакет по расследованию и рекомендованный следующий шаг доступны в течение 30 минут с момента открытия дела — в сравнении с 1–2 часами ручной сборки данных из нескольких систем на одно дело в предыдущем процессе.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/investigation-triage-support/payment-exception-queue-prioritisation" id="scenario-payment-exception-queue-prioritisation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Приоритизация очереди платёжных исключений</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Автоматическое ранжирование очереди платёжных исключений по приоритетам — упорядочивание случаев по стоимости под риском, близости регуляторного срока, риску контрагента и остатку SLA — чтобы следователи работали с наиболее рискованными исключениями до закрытия окна сроков.
+
+Ранжирование очереди обновляется непрерывно по мере поступления новых исключений и приближения существующих случаев к срокам урегулирования.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Очереди платёжных исключений, обрабатываемые в порядке поступления, уделяют внимание следователей случаям с низкой стоимостью или ранним сроком наравне с высокостоимостными или критичными по срокам случаями; высокостоимостные или требующие соблюдения регуляторных сроков исключения, поступающие в середине очереди, могут не достигнуть следователя до истечения срока.
+
+В соответствии с требованиями НБКР по отчётности платёжной системы устойчивые семейства исключений должны быть расследованы и урегулированы в предусмотренные сроки; нарушения сроков по высокостоимостным исключениям порождают регуляторные обязательства по отчётности и риск для отношений с банками-корреспондентами.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает каждое исключение в очереди и оценивает его по стоимости под риском, близости регуляторного срока, риску контрагента и остатку SLA, формируя непрерывно обновляемое ранжирование приоритетов для следственной команды.
+
+Следователи работают с приоритизированной очередью; обоснование ранжирования для каждого случая доступно в записи об исключении, а случаи с риском нарушения срока помечены для эскалации руководителю.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Очередь платёжных исключений приоритизируется по стоимости под риском и близости сроков на непрерывной основе, что обеспечивает работу следователей с наиболее рискованными случаями до закрытия окна урегулирования.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Приоритизированная очередь используется командой платёжных исключений для ≥90% ежедневного объёма исключений в течение 6 месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Частота нарушений сроков по высокостоимостным исключениям устранена в течение 9 месяцев; эффективность работы следователей по очереди — количество урегулированных случаев на следователя в день — улучшается на ≥10% по сравнению с очередью в порядке поступления до внедрения.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Ранжирование очереди обновляется в режиме реального времени по мере поступления новых исключений, что обеспечивает постоянное соответствие рабочей очереди следователя актуальному профилю сроков и рисков совокупности исключений.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+
+
+
+
+
+
+
+
+<section class="l3-section" id="case-dossier-builder-payments">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Инструмент формирования досье кейса</h2>
+    
+    <p class="l3-section__intent">Предварительно сформированный пакет контекста для сложных расследований платежей, случаев мошенничества и разбора претензий — извлечение KYC, истории недавних транзакций, предыдущих кейсов, жалоб и совпадений по внешним спискам наблюдения из нескольких систем в структурированную хронологическую шкалу до начала содержательной проверки аналитиком. Для AML-связанных платёжных расследований досье должно включать полную историю оповещений системы мониторинга транзакций и результаты санкционного скрининга. Формирование досье в настоящее время поглощает первые 30–180 минут каждого сложного кейса.</p>
+    
+  </header>
+
+  
+  
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/case-dossier-builder-payments/investigation-resolution-time-analytics" id="scenario-investigation-resolution-time-analytics">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Аналитика сроков завершения расследований</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Анализ сроков завершения расследований — по типу случая, следователю и показателю полноты досье — для выявления типов случаев и условий подготовки, обусловливающих наибольшую продолжительность циклов урегулирования и наиболее высокий риск нарушения сроков.
+
+Анализ обеспечивает операционному менеджменту планирование мощностей и выявляет улучшения качества досье, которые могут наиболее существенно сократить время урегулирования.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--S"
+      title="Сложность"
+    >S</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Срок завершения расследования существенно варьируется в зависимости от типа случая и качества досье, доступного на момент начала работы по случаю; взаимосвязь между полнотой досье и сроком урегулирования не измеряется систематически на основе данных об исходах случаев.
+
+Без аналитики сроков урегулирования на уровне типа случая и условия подготовки операционный менеджмент распределяет следственные мощности и усилия по совершенствованию досье без обоснования того, где наибольший потенциал сокращения времени.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент анализирует закрытые случаи расследований — срок урегулирования по типу случая, следователю и показателю полноты досье — и формирует отчёт об атрибуции сроков урегулирования с ранжированием типов случаев с наибольшей вариативностью и выявлением условий подготовки досье, коррелирующих с наибольшей скоростью урегулирования.
+
+Операционный менеджмент использует отчёт об атрибуции для приоритизации совершенствования шаблонов досье по типам случаев с наибольшей вариативностью и для калибровки распределения следственных мощностей по структуре случаев.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Срок завершения расследования атрибутируется типу случая и условию подготовки досье на скользящей основе и доступен для планирования мощностей операционного менеджмента и приоритизации совершенствования досье.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Аналитика сроков урегулирования используется в ≥4 проверках планирования мощностей операционного подразделения в год в течение 6 месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Среднее время урегулирования для типов случаев с наибольшей вариативностью снижается на ≥20% в течение 18 месяцев цикла совершенствования досье на основе результатов аналитики; частота нарушений сроков снижается на ≥15%.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Отчёт о сроках урегулирования обновляется ежемесячно по данным закрытых случаев, обеспечивая актуальность планирования мощностей на основе последних 30 дней результатов расследований.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/case-dossier-builder-payments/payment-investigation-dossier-assembly" id="scenario-payment-investigation-dossier-assembly">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Формирование досье по расследованию платежа</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Предварительно сформированный пакет контекста для сложных расследований платежей, случаев мошенничества и анализа споров — агрегирование профиля KYC, недавней истории транзакций, предыдущих случаев, жалоб и совпадений с внешними списками наблюдения из нескольких систем в структурированную хронологию до начала содержательной проверки аналитиком.
+
+Для расследований платежей, связанных с AML, досье включает полную историю оповещений системы мониторинга транзакций и результаты проверки санкций, что позволяет аналитику приступить к анализу без ручного поиска данных.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Сложные расследования платежей требуют от аналитика получения данных KYC, истории транзакций, предыдущих случаев, жалоб и совпадений со списками наблюдения из нескольких исходных систем до начала содержательной проверки; сборка досье, как правило, занимает от 30 до 180 минут на сложный случай.
+
+Время сборки досье, не используемое для содержательного анализа, сужает окно расследования и повышает вероятность превышения установленного срока урегулирования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент считывает триггер расследования — тип случая и идентификатор субъекта — и извлекает профиль KYC, недавнюю историю транзакций, предыдущие случаи, жалобы и совпадения с внешними списками наблюдения из подключённых исходных систем, собирая их в структурированное хронологическое досье со ссылками на источники.
+
+Аналитик получает предварительно сформированное досье и приступает к содержательной проверке без дополнительного поиска данных; структура досье соответствует установленному контрольному перечню расследования.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Досье по расследованию платежей формируются из исходных систем до начала содержательной проверки аналитиком, сокращая время подготовки случая к расследованию.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Предварительно сформированные досье охватывают ≥85% объёма сложных расследований платежей в течение 9 месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Среднее время подготовки случая снижено на ≥50% по сравнению с базовым показателем ручной сборки до внедрения; подтверждение аналитиками полноты досье — ≥90% при контрольных проверках качества.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Досье формируется в течение 30 минут после создания случая и доступно до первой сессии проверки аналитиком.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/case-dossier-builder-payments/fraud-dispute-pattern-signal" id="scenario-fraud-dispute-pattern-signal">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сигнал схем мошенничества и споров</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Анализ закрытых случаев мошенничества и оспариваемых транзакций — кластеризация по типу мошенничества, категории торговца, каналу транзакции и клиентскому сегменту — для выявления типов случаев с наибольшими затратами на расследование и повторяющихся типологий мошенничества, в отношении которых целесообразна корректировка правил или контрольных мер.
+
+Анализ выявляет конкретные схемы мошенничества и факторы споров, обусловливающие наибольшую долю объёма и затрат на расследование, для приоритизации операций по противодействию мошенничеству.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Сложность"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Объём случаев мошенничества и споров отражается на агрегированном уровне; конкретные комбинации типологий мошенничества, категорий торговцев и каналов, обусловливающих концентрацию затрат на расследование, не выявляются систематически из данных закрытых случаев.
+
+Без атрибуции схем операционные подразделения и продуктовые команды распределяют усилия по совершенствованию контрольных мер без обоснования того, какие комбинации типов мошенничества и каналов создают наибольшую нагрузку по объёму и затратам.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>Агент кластеризует закрытые случаи мошенничества и оспариваемые транзакции по типу мошенничества, категории торговца, каналу транзакции и клиентскому сегменту, атрибутирует затраты на расследование каждому кластеру и формирует ранжированный отчёт о схемах с указанием конкретных типологий и комбинаций каналов, обусловливающих концентрацию объёма и затрат.
+
+Руководство по операциям противодействия мошенничеству и продуктовая команда используют отчёт о схемах для приоритизации совершенствования контрольных мер и корректировки правил применительно к наиболее затратным схемам мошенничества.</p>
+    </div>
+    
+
+    
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      
+      <p class="okr-objective">Атрибуция схем случаев мошенничества и споров доступна на скользящей основе для приоритизации совершенствования контрольных мер операционными подразделениями и продуктовыми командами.</p>
+      
+      <div class="okr-grid">
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>Аналитика схем используется в ≥4 проверочных циклах операций по противодействию мошенничеству в год в течение 9 месяцев после запуска.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>Затраты на расследование одного случая мошенничества снижаются на ≥15% для кластеров с наибольшим рейтингом в течение 18 месяцев после совершенствования контрольных мер на основе результатов анализа.</p>
+        </div>
+        
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Отчёт о схемах обновляется ежемесячно по данным закрытых случаев за предшествующие 90 дней, обеспечивая актуальность решений по совершенствованию контрольных мер на основе последнего распределения типологий мошенничества.</p>
+        </div>
+        
+      </div>
+    </div>
+    
+
+  </div>
+</details>
+    
+  </div>
+  
+
+</section>
+    
+    
+
+  </div>
+
+  
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+<footer class="o-footer">Каталог возможностей · O!Bank</footer></main></div>
+</body></html>

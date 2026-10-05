@@ -1,6 +1,22 @@
 # AICC portal source
 
-Editable home for the AICC charter site: the interface kit, the page chrome, the messages, and the build tools. The generated site goes to `../html/aicc/` and is never edited by hand.
+Editable home for the AICC portal: the interface kit, page chrome, messages, neighbouring sections and build tools. The generated site goes to `../html/aicc/` and is never edited by hand.
+
+## Independent sections
+
+The portal has five neighbouring sections in one O!Bank shell. They share branding, navigation, language switching and themes. Each section owns its content, local navigation, search and lifecycle. Content bodies do not link across these boundaries, and charter terminology links or document status are not added to neighbouring content.
+
+| Section | Route within each language | Maintained content |
+| --- | --- | --- |
+| AICC | Existing routes | Charter and explanatory sources described below |
+| Discovery Catalog | `discovery/` | `../html-alt/financial-services/{en,ru}/`: 76 pages and 1,101 scenario cards per language, with retained layouts and interactions |
+| Portfolio | `initiatives/` | `sections/initiatives/{en,ru}/`: overview, selection guidance and an empty initiative register |
+| Delivery Pipeline | `projects/` | `sections/projects/{en,ru}/`: project register and the first Customer Intelligence–Enabled Service Resolution proposal |
+| CloudLab | `lab/` | `sections/lab/{en,ru}/`: concept, approach and experiment workflow |
+
+`sections/navigation.json` defines the five navigation groups; `sections/pages.json` defines the authored landing routes and their labels. `tools/workspace.py` renders the common shell, and `tools/neighbours.py` composes the independent content. Discovery applies the existing Financial Services breadcrumb correction and an AICC visual skin while preserving its source. Edit its retained source, not the generated Discovery pages. The new landing pages have paired English and Russian Markdown; they do not inherit the charter's document versioning or translation metadata.
+
+The live Portfolio starts empty and does not import records from the existing `../portfolio/` corpus. AICC's existing Portfolio and Delivery routes remain, with local navigation labels “Portfolio management” and “Delivery model”. The CSR entry remains a proposal, and CloudLab remains a concept.
 
 ## How the site is built
 
@@ -23,7 +39,12 @@ python3 portal/tools/build.py            # regenerate html/aicc/ (the first run 
 python3 portal/tools/check_sources.py    # pinned English sources and all Russian translation metadata
 python3 -m unittest discover -s portal/tests  # language selection through the real renderer
 python3 portal/tools/check.py            # links, anchors, language parity, one h1 per page, no external resource loads (citations allowed)
+python3 portal/tools/check_neighbours.py # section boundaries, scoped search and retained scenario content
+python3 portal/tools/check.py --idempotent # complete-site repeatability; run before the browser sweep
+portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py
 ```
+
+The complete-site build includes all five sections. Run the browser sweep after the build and freshness check finish; rebuilding concurrently removes files that the browser is reading. The sweep covers the new pages in both languages, desktop/mobile layouts, light/dark themes, retained interactions, section navigation, search and existing AICC controls. It also verifies a disposable direct-file export without refreshing `published/`. Its report is written to `.runtime/portal-neighbours/browser-report.json` at the repository root. Regeneration of the corporate-share package remains an explicit action; see [PORTABLE-HOWTO.txt](PORTABLE-HOWTO.txt).
 
 The diagrams are drawn with Mermaid CLI and the headless browser of this host. The paths are set in `tools/build.py` and can be overridden with `MMDC_NPX`, `MMDC_CHROME`, and `MMDC_LIBS`. `tools/browser_check.py` and `tools/setup_browser*.sh` are the earlier browser checks of the first portal slice. Language selection is covered by `tests/test_localization.py`; the static check covers the current full page set.
 
@@ -50,7 +71,7 @@ Preserve filenames, numbered headings, clause numbers, and table row/column orde
 
 The build renders each language independently, including clause links, search, diagrams, metadata, and template copy text. Generated control and role views use translated sources once all their contributing documents are reviewed; until then the whole generated view remains marked English. The corpus baseline remains edition 2.2. The language migration preserved the nine governing documents; the subsequent wording correction is recorded as Document Catalog revision 2.1, and Russian availability of the governing documents as revisions 2.2 through 2.5.
 
-The complete generated `html/aicc/` tree is promoted to the existing deployment repository. Registry and Portfolio translations do not add live records to the public portal; the current publication scope stays unchanged.
+The complete generated `html/aicc/` tree is promoted to the existing deployment repository when publication is requested. Registry and Portfolio corpus translations do not populate the independent live registers.
 
 ## Baseline for translation
 

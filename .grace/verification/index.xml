@@ -5,8 +5,10 @@
       <Owns>
         <V-M-PORTAL-SOURCE />
         <V-M-PORTAL-PROJECTION />
+        <V-M-PORTAL-NEIGHBOURS />
         <V-M-AICC-DEPLOY />
         <V-M-PORTAL-LOCALIZATION />
+        <V-M-PORTABLE-EXPORT />
       </Owns>
     </VD-MAIN>
   </VerificationDocuments>
