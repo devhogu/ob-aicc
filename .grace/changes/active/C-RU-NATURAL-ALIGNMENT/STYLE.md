@@ -1,5 +1,7 @@
 # Russian rewrite: style sheet for C-RU-NATURAL-ALIGNMENT
 
+Revised 5 October 2026: Initiative is Russian again, Work Item is «задача», workflow and value stream stay Latin.
+
 Binding for every worker. Owner decisions of 4 October 2026 override older wording in the corpus, the
 terminology reference and the translation map where they differ. Approvals and decision records are
 not required (pre-production tuning); do not add Registry records.
@@ -35,11 +37,13 @@ not required (pre-production tuning); do not add Registry records.
 - **итерация**, **программный инкремент (PI)** — Russian, lowercase; after first use in a document «PI»
   is allowed, and in compounds PI stays: цель PI, PI-планирование, предсказуемость PI, неделя IP.
 - Protected Latin work-item names, written with a capital letter, not translated, not declined:
-  **Initiative** (мн. ч. Initiatives, ж. р.), **Capability** (Capabilities, ж. р.), **Feature** (Features, ж. р.),
-  **Story** (Stories, ж. р.), **Task** (Tasks, ж. р.), **Spike** (Spikes, м. р.), **Bug** (Bugs, м. р.),
-  **Epic** (Epics, м. р.). Case is shown by the surrounding words: «по каждой Initiative», «лимит Initiatives
-  в работе», «Feature принята в разработку», «паспорт Initiative». Ordinary business initiatives in the
-  general sense stay Russian: «бизнес-инициативы».
+  **Capability** (мн. ч. Capabilities, ж. р.), **Feature** (Features, ж. р.), **Story** (Stories, ж. р.),
+  **Task** (Tasks, ж. р.), **Spike** (Spikes, м. р.), **Bug** (Bugs, м. р.), **Epic** (Epics, м. р.).
+  Case is shown by the surrounding words: «по каждой Feature», «Feature принята в разработку».
+- **Initiative is Russian** (owner decision of 5 October 2026): «инициатива», «паспорт инициативы»
+  (template title «Паспорт инициативы»), «постоянная инициатива», «структура инициатив», «инициативы в
+  работе». Ordinary business initiatives: «бизнес-инициативы».
+- **Work Item = «задача»** (generic work item in Jira or the backlog); the Jira type Task stays «Task».
 - Lowercase AICC terms (Vocabulary 3.3). Capitals only for: first word of a body's name (Совет директоров,
   Комитет Совета директоров, Правление Банка, Управляющий комитет по AI), «Банк», document titles
   (Положение об AICC, Бизнес-модель, Операционная модель, Модель управления портфелем, Модель жизненного
@@ -54,8 +58,11 @@ not required (pre-production tuning); do not add Registry records.
   «убедиться», or «проверка» with a complement («проверка выполнимости»).
 - «подразделение» for a function of the Bank (client function → «подразделение-заказчик»); keep the AICC
   terms «контрольная функция», «IT-функция».
-- value stream → **поток создания ценности**; Workflow (document part and document type) → **рабочий
-  процесс** («рабочий процесс «Взаимодействие с заказчиком»», part heading «Рабочие процессы»).
+- **workflow** stays Latin, lowercase in running text, indeclinable, masculine agreement: «workflow
+  «Взаимодействие с заказчиком»», «каждый workflow», «в workflow «Ритм работы»»; part heading «Workflows».
+- **value stream** stays Latin, lowercase, indeclinable, masculine; at its first use in each document or
+  page explain it once: «value stream (сквозная последовательность действий, в ходе которой потребность
+  превращается в ценный для клиента результат)».
 - business case → **бизнес-кейс** (declined, masculine). AI agent → **AI-агент**. WIP limit → **WIP-лимит**.
 
 ## 4. Term table (English → Russian form in running text)
@@ -73,23 +80,23 @@ AI agent AI-агент · Assistant ассистент · Provider постав�
 сигнальное значение · Lab лабораторная среда · IT function IT-функция · Platform team платформенная
 команда · Service Management система Service Management · Strategic Priority стратегический приоритет ·
 Strategic Pillar стратегическое направление · Investment Envelope инвестиционный бюджет · Investment
-Guardrails инвестиционные ограничения · Kind of work вид работ · Mix of Initiatives структура Initiatives ·
+Guardrails инвестиционные ограничения · Kind of work вид работ · Mix of Initiatives структура инициатив ·
 Service area направление услуг · Service category категория услуг · Mode режим · Run-rate work текущие
-работы · Standing Initiative постоянная Initiative · Enabling work обеспечивающие работы · Engagement
+работы · Standing Initiative постоянная инициатива · Enabling work обеспечивающие работы · Engagement
 взаимодействие с заказчиком · Phase фаза · Service Agreement соглашение о взаимодействии · Assumption
 допущение · Support level уровень поддержки · Outcome Report отчёт о результатах · Stakeholder
 заинтересованное лицо · Package пакет · Package Definition описание пакета · Catalog каталог · Portfolio
-портфель · Initiative Initiative · Initiative Brief паспорт Initiative · Business case бизнес-кейс ·
+портфель · Initiative инициатива · Initiative Brief паспорт инициативы · Business case бизнес-кейс ·
 Solution решение · Solution Definition описание решения · Service сервис (service offered = услуга) · Service
 step шаг обслуживания · Four signals четыре сигнала · Run cost эксплуатационные затраты · Sunset rule правило
 вывода из эксплуатации · Product продукт · Experiment эксперимент · Receiver получатель · Handover передача ·
 Proposal предложение · Adopted Solution внедрённое решение · Capability Capability · Feature Feature ·
 Definition of ready критерии готовности к работе (DoR) · Definition of done критерии завершённости (DoD) ·
-Work Item рабочий элемент · Portfolio Backlog бэклог портфеля · Program Backlog бэклог программы · Iteration
+Work Item задача · Portfolio Backlog бэклог портфеля · Program Backlog бэклог программы · Iteration
 Backlog бэклог итерации · Portfolio Kanban канбан-доска портфеля · Portfolio management управление
 портфелем · Funnel воронка · MVP минимально жизнеспособный продукт (MVP), далее MVP · Leading indicator
 опережающий индикатор · Acceptance criteria критерии приёмки · Value hypothesis гипотеза ценности · Value
-stream поток создания ценности · Program Kanban канбан-доска программы · Class of service класс
+stream value stream · Program Kanban канбан-доска программы · Class of service класс
 обслуживания · Lane дорожка · Team команда · Teams Record запись о командах · Program Increment программный
 инкремент (PI) · Iteration итерация · Innovation and Planning week неделя инноваций и планирования (неделя
 IP) · PI Objective цель PI · Dependency зависимость · Calendar календарь · Cadence ритм работы · Blocked day
@@ -110,7 +117,7 @@ Decision Record запись о решении · Appointments Record запис
 контрольный лист приёмки · AI Incident Review разбор инцидента AI · Registry Snapshot снимок реестра ·
 Program Board доска программы · Roadmap дорожная карта · Template шаблон · Priorities Record запись о
 приоритетах · Standards Record запись о стандартах · Control Matrix матрица контроля · Registry реестр ·
-Workflow рабочий процесс · Record запись · Living record актуализируемая запись · Evidence record
+Workflow workflow · Record запись · Living record актуализируемая запись · Evidence record
 подтверждающая запись · Working state рабочее состояние · cutover переход · Light mode облегчённый режим ·
 Loop цикл · Review week неделя обзора · Short forms сокращения · Event мероприятие · Steering Summary итоги
 управляющего совещания · Quarterly Report квартальный отчёт · Report to the Board Committee отчёт Комитету
