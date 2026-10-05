@@ -16,7 +16,7 @@ revised: 2026-10-02
 | Identifier | PRP-[nnn] |
 | Origin | [SOL-nnn, or the AI adoption strategy of the year] |
 | Date | [date] |
-| Decides | [the owners and the Executive Sponsor, or the Bank] |
+| Decides | [the Domain Owners concerned and the Executive Sponsor, or the Bank] |
 | Status | [Proposed / Decided / Superseded] |
 
 ## 1. What is proposed

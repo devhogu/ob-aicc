@@ -125,7 +125,7 @@ Figure 4: support, incident, and change after delivery.
 | Situation | Treatment |
 | --- | --- |
 | An Assumption fails, for example the Domain Expert is not available | AICC re-plans the scope and the dates and notes the change in the Service Agreement; the item is Waiting |
-| The function wants a different scope | The backlog is reordered within the Limits on Work in Progress at any time; a change beyond it is a new Engagement or an amendment |
+| The function wants a different scope | The backlog is reordered within the Limits on Work in Progress at any time; a change beyond the scope of the Service Agreement is a new Engagement or an amendment to the Service Agreement |
 | Either side wants to stop | The Engagement is ended or redirected at the end of an Iteration, and the Outcome Report records it |
 | The limit on the Active Initiatives is reached | A new Service Agreement is not issued above the limit; the item waits in the Portfolio Backlog |
 | A request or an incident arrives after delivery | It comes through Service Management; the response targets are targets and not guarantees |

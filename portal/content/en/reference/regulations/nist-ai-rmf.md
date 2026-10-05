@@ -31,6 +31,6 @@ This United States reference framework for managing AI risks is voluntary, non-s
 
 - [The risks and challenges, in the Responsible AI course](../../responsible-ai/risks-and-challenges.md)
 - [What responsible AI means](../../responsible-ai/what-responsible-ai-means.md)
-- [Industry body of knowledge](../industry-body-of-knowledge.md)
+- [Standards and frameworks](../industry-body-of-knowledge.md)
 
 This page is for orientation. It summarizes the instrument in general terms and quotes no provision; the text of the instrument prevails, and the Control Function Contacts of compliance and legal confirm what applies to the Bank.

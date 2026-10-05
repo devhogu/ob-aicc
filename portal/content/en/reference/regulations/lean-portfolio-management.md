@@ -30,6 +30,6 @@ The body of practice that treats a portfolio as a flow to be managed rather than
 ## 6. Related pages
 
 - [The Portfolio course](../../portfolio/overview.md)
-- [Industry body of knowledge](../industry-body-of-knowledge.md)
+- [Standards and frameworks](../industry-body-of-knowledge.md)
 
 This page is for orientation. It summarizes the practice in general terms; the Portfolio Management Model prevails for the Bank.

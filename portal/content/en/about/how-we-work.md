@@ -54,8 +54,8 @@ Figure 1: the flow of an Engagement, with its gates.
 
 ## 5. How the unit is controlled
 
-5.1. AICC is controlled through five control loops and a catalog of controls. The AICC Lead reports each quarter in the Quarterly Report, the Executive Sponsor issues it to the Board Committee, the Control Functions validate and may stop, and internal audit gives independent assurance.
+5.1. AICC is controlled through five control loops and a catalog of controls. AICC reports to the Executive Sponsor: the AICC Lead reports each quarter in the Quarterly Report, and the Executive Sponsor may bring it, or a Proposal at the scale of the Bank, to the Board Committee or the Board. The Control Functions validate and may stop, and internal audit gives independent assurance.
 
 ## 6. Where to read on
 
-6.1. The Services section states the service model and how to engage. The Portfolio section states how the categories enter the funnel and how Initiatives are decided. The Delivery section states how Solutions are built, how an Experiment runs, and how a Service lives and is operated. Governance and oversight states how the unit is controlled.
+6.1. The Services section states the service model and how to engage. The Portfolio section states how the categories enter the funnel and how Initiatives are decided. The Delivery section states how Solutions are built, how an Experiment runs, and how a Service lives and is operated. The Governance section states how the unit is controlled.

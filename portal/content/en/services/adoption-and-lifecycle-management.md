@@ -4,7 +4,7 @@ A Solution is not adopted when it is released; it is adopted when the function u
 
 ## 1. What it is
 
-1.1. The category covers the appointment and the coaching of the Domain Experts who carry adoption in their Domain; the adoption plan of a Domain, which Solutions its people take up, in which order, with what training and what measures; the life of a Solution after delivery by its type, the Handover of a Product, the support at the agreed level, the revision through the Portfolio Backlog, and the retirement; and the life of a Service through its service steps, with its service operations.
+1.1. The category covers the appointment and the coaching of the Domain Experts who carry adoption in their Domain; the adoption plan of a Domain, which Solutions its people take up, in which order, with what training and what measures; the life of a Solution after delivery by its type, the Handover of a Product, the support at the agreed level, the revision of a Product, whose new version comes through the Portfolio Backlog, the change of a Solution in use, and the retirement; and the life of a Service through its service steps, with its service operations.
 
 1.2. Adoption and lifecycle management are where the measures of the Statement of Intent are read: the Domains and employees using approved Solutions, the processes with AI embedded, the change in time and errors against the baseline.
 
@@ -25,7 +25,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 4. How it runs
 
-4.1. Run-rate work: the Domain Expert is coached in the Engagements and the communities of practice; the Handover and the support follow the Service Agreement; the live review of each Solution takes place at the Iteration Review and Demo; a revision enters the Program Backlog; a retirement is decided by the Domain Owner. The adoption of a Domain is an Initiative with a study first.
+4.1. Run-rate work: the Domain Expert is coached in the Engagements and the communities of practice; the Handover and the support follow the Service Agreement; the live review of each Solution takes place at the Iteration Review and Demo; a new version of a Product comes through the Portfolio Backlog, and a request for a new feature of a Solution in use enters the Program Backlog; a retirement is decided by the Domain Owner. The adoption of a Domain is an Initiative with a study first.
 
 ## 5. What it leads to
 

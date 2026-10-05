@@ -25,7 +25,7 @@ The view of the central bank and financial supervisor of the Russian Federation 
 
 ## 5. How the charter relates to it
 
-5.1. The AI Risk Appetite Statement, the Risk Tiers, and reporting to the Board Committee address the themes the Bank of Russia names.
+5.1. The AI Risk Appetite Statement, the Risk Tiers, and the escalations and reporting that the Executive Sponsor brings to the Board Committee address the themes the Bank of Russia names.
 
 ## 6. Related pages
 

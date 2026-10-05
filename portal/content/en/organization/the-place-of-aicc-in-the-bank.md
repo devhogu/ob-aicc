@@ -1,10 +1,10 @@
 # The place of AICC in the Bank
 
-AICC is an internal consulting and innovation lab of the Bank, mandated by the Executive Sponsor whom the Board names, reporting through the Executive Sponsor to the Board Committee, serving the functions of the Bank as its clients, and executing through the Domains. This part states where it sits, what it is, and what it is not.
+AICC is an internal consulting and innovation lab of the Bank, mandated by and reporting to the Executive Sponsor whom the Board names, serving the functions of the Bank as its clients, and executing through the Domains. This part states where it sits, what it is, and what it is not.
 
 ## 1. Mandate and reporting line
 
-1.1. AICC acts under the mandate of the Executive Sponsor, whom the Board names, and whose appointment of the AICC Lead and whose decision reference are entered in the Appointments Record. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent that are for AICC, and the Executive Sponsor for its annual review and its communication. Reporting runs from the Teams to the AICC Lead, to the Steering, and to the Board Committee.
+1.1. AICC acts under the mandate of the Executive Sponsor, whom the Board names, and whose appointment of the AICC Lead and whose decision reference are entered in the Appointments Record. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent that are for AICC, and the Executive Sponsor for its annual review and its communication. AICC reports to the Executive Sponsor: reporting runs from the Teams to the AICC Lead and to the Steering, which the Executive Sponsor chairs. The Executive Sponsor may bring the Quarterly Report, findings, the AI adoption strategy, or a Proposal at the scale of the Bank to the Board Committee or the Board, when the Executive Sponsor judges it useful or the Board asks; and tells the Board Committee of a major AI Incident and of a risk accepted beyond the AI Risk Appetite Statement without waiting for any report.
 
 ## 2. What AICC is
 
@@ -23,7 +23,7 @@ AICC is an internal consulting and innovation lab of the Bank, mandated by the E
 | The Control Functions | Beside, independent: clear, validate, decide Exceptions, may stop |
 | The Platform Owner and the IT functions | Provide and operate the AI Platform and the environments; run at scale what the Bank adopts |
 | The AI Steering Committee | Advises the Executive Sponsor on the Portfolio and on conflicts between Domains |
-| The Board Committee | Oversees AI for the Board through the Quarterly Report |
+| The Board Committee | Oversees AI for the Board; receives what the Executive Sponsor brings to it, and is told of a major AI Incident and of a risk accepted beyond appetite |
 | Internal audit | Independent assurance over the Portfolio and over AICC |
 
 ## 5. Rule source

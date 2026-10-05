@@ -518,7 +518,7 @@
           "ru": "Полномочия и ограничения"
         },
         "text": {
-          "en": "AICC acts under the mandate of the Executive Sponsor, whom the Board names. It does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work, and it is not a Control Function or a platform team of the Bank and does not operate a Solution at the scale of the Bank. It reports to the Executive Sponsor, and through the Executive Sponsor to the Board Committee. The Control Functions stay independent and may stop a Solution, and internal audit gives assurance only. The AICC Lead reports each quarter, and the Board oversees AI through the Board Committee.",
+          "en": "AICC acts under the mandate of the Executive Sponsor, whom the Board names. It does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work, and it is not a Control Function or a platform team of the Bank and does not operate a Solution at the scale of the Bank. It reports to the Executive Sponsor, who may bring its reports, findings, strategy, and Proposals to the Board Committee or the Board. The Control Functions stay independent and may stop a Solution, and internal audit gives assurance only. The AICC Lead reports to the Executive Sponsor each quarter. The Board oversees AI through the Board Committee, which the Executive Sponsor tells at once of a major AI Incident and of a risk accepted beyond the AI Risk Appetite Statement.",
           "ru": "AICC действует на основании мандата куратора AICC, которого назначает Совет директоров. AICC не владеет платформой AI и не эксплуатирует её, не отвечает за бизнес-результаты домена, не устанавливает правила контрольной функции и не проводит валидацию собственной работы; AICC не является контрольной функцией или платформенной командой Банка и не эксплуатирует решения в масштабе Банка. AICC подотчётен куратору AICC, а через него — Комитету Совета директоров. Контрольные функции сохраняют независимость и вправе остановить применение решения; внутренний аудит проводит только независимую оценку. Руководитель AICC отчитывается ежеквартально, а Совет директоров осуществляет контроль за применением AI через Комитет Совета директоров."
         },
         "links": [
@@ -531,7 +531,7 @@
           },
           {
             "label": {
-              "en": "Governance and oversight",
+              "en": "Governance",
               "ru": "Управление и контроль"
             },
             "to": "governance/index"
@@ -708,7 +708,7 @@
           "ru": "Каковы правила?"
         },
         "where": {
-          "en": "About AICC, Responsible AI, Services, Portfolio, Delivery, Governance and oversight, and Organization, each document in the section of its subject; long documents are split into parts",
+          "en": "About AICC, Responsible AI, Services, Portfolio, Delivery, Governance, and Organization, each document in the section of its subject; long documents are split into parts",
           "ru": "Разделы «О центре AICC», «Ответственный AI», «Услуги», «Портфель», «Поставка», «Управление» и «Организация»: каждый документ размещён в разделе своей темы; объёмные документы разделены на части"
         }
       },
@@ -722,7 +722,7 @@
           "ru": "Как движется работа и на каких мероприятиях?"
         },
         "where": {
-          "en": "Beside the documents that they illustrate, in Responsible AI, Services, Delivery, and Governance and oversight",
+          "en": "Beside the documents that they illustrate, in Responsible AI, Services, Delivery, and Governance",
           "ru": "Рядом с документами, которые они поясняют, в разделах «Ответственный AI», «Услуги», «Поставка» и «Управление»"
         }
       },
@@ -1043,7 +1043,7 @@
           "ru": "Показатели и отчётность"
         },
         "choice": {
-          "en": "AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, the value scored for the PI Objectives, the Domains and employees using approved Solutions, and the AI Incidents and control breaches. Progress on the road is measured by the Measures of each Maturity Level. The AICC Lead reports each quarter, and the Executive Sponsor issues the report to the Board Committee.",
+          "en": "AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, the value scored for the PI Objectives, the Domains and employees using approved Solutions, and the AI Incidents and control breaches. Progress on the road is measured by the Measures of each Maturity Level. The AICC Lead reports to the Executive Sponsor each quarter, and the Executive Sponsor may bring the report to the Board Committee or the Board.",
           "ru": "AICC измеряет реализованные выгоды в сопоставлении с инвестиционным бюджетом, время от предложения до одобрения и от одобрения до приёмки, бизнес-ценность, оценённую по целям PI, число доменов и работников, использующих одобренные решения, а также инциденты AI и нарушения контрольных процедур. Продвижение по пути развития измеряется показателями каждого уровня зрелости. Руководитель AICC отчитывается ежеквартально, а куратор AICC направляет отчёт Комитету Совета директоров."
         },
         "decides": {
@@ -1069,7 +1069,7 @@
       "ru": "Порядок установления и поддержания стратегии"
     },
     "kept": {
-      "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2); at the same Steering the Executive Sponsor presents the yearly Proposal of the AI adoption strategy that the AICC Lead prepares, and the Bank decides on it (Operating Model 6.5). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, the approver of each Active Initiative decides on it, and the Executive Sponsor issues the Quarterly Report to the Board Committee (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state.",
+      "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2); at the same Steering the Executive Sponsor presents the yearly Proposal of the AI adoption strategy that the AICC Lead prepares, and the Bank decides on it (Operating Model 6.5). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, the approver of each Active Initiative decides on it, and the Executive Sponsor approves the Quarterly Report and may bring it to the Board Committee or the Board (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state.",
       "ru": "Стратегия устанавливается раз в год и поддерживается ежеквартально. На ежегодном управляющем совещании в первые две недели декабря куратор AICC на основе стратегии Банка и приоритетов доменов определяет стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения, рассматривает выгоды в сопоставлении с каждым бюджетом и результаты по каждому приоритету, пересматривает документы и Заявление о риск-аппетите в отношении AI (п. 4.2 Модели управления портфелем). На том же совещании куратор AICC представляет ежегодное предложение по стратегии внедрения AI, подготовленное руководителем AICC, и по нему решает Банк (п. 6.5 Операционной модели). На ежеквартальном управляющем совещании куратор AICC подтверждает дорожную карту и структуру Initiatives в пределах бюджетов, по каждой Initiative в работе решает лицо, которое её одобрило, а куратор AICC направляет квартальный отчёт Комитету Совета директоров (п. 4.3 Модели управления портфелем; п. 7.2 Положения об AICC). Заявление о намерениях по внедрению AI пересматривается не реже одного раза в год, а также при существенном изменении в применении AI, в составе основных поставщиков или в регулировании (п. 13.3 Заявления о намерениях по внедрению AI). Действующие стратегические приоритеты и их бюджеты фиксируются в записи о приоритетах в реестре; портал излагает стратегию, а реестр отражает её текущее состояние."
     }
   },
@@ -1275,7 +1275,7 @@
           "ru": "Контроль и оценка"
         },
         "text": {
-          "en": "The rules, controls, and criteria of each use of AI stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported in the Quarterly Report to the Steering and the Board Committee; the Control Functions keep their own remit.",
+          "en": "The rules, controls, and criteria of each use of AI stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported to the Executive Sponsor at the Steering in the Quarterly Report, which the Executive Sponsor may bring to the Board Committee or the Board; the Control Functions keep their own remit.",
           "ru": "Правила, контрольные процедуры и критерии для каждого случая применения AI, установленные до начала разработки; оценки и тестирование до начала использования; категория риска каждого решения; контроль в целом, результаты которого отражаются в квартальном отчёте для управляющего совещания и Комитета Совета директоров. Контрольные функции сохраняют собственную компетенцию."
         }
       }

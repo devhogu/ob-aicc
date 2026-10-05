@@ -8,7 +8,7 @@ AICC is a joint team: led by the AICC Lead, formed of the people whom the functi
 flowchart TB
   subgraph TOP["Mandate and oversight"]
     direction LR
-    B(["The Board,<br/>through the<br/>Board Committee"]) --> ES["Executive Sponsor<br/>holds the mandate<br/>and the funding"]
+    B(["The Board,<br/>through the<br/>Board Committee;<br/>receives what the<br/>Sponsor brings"]) --> ES["Executive Sponsor<br/>holds the mandate<br/>and the funding;<br/>AICC reports to it"]
     ES --> AL["AICC Lead<br/>leads AICC; accountable<br/>for every document<br/>and Record"]
     SC(["AI Steering Committee<br/>heads of business, technology,<br/>risk, compliance; advises"]) -.-> ES
   end

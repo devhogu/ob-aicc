@@ -30,6 +30,6 @@ The global normative instrument on the ethics of AI, adopted by the member state
 ## 6. Related pages
 
 - [What responsible AI means, in the Responsible AI course](../../responsible-ai/what-responsible-ai-means.md)
-- [Industry body of knowledge](../industry-body-of-knowledge.md)
+- [Standards and frameworks](../industry-body-of-knowledge.md)
 
 This page is for orientation. It summarizes the instrument in general terms and quotes no provision; the text of the instrument prevails, and the Control Function Contacts of compliance and legal confirm what applies to the Bank.

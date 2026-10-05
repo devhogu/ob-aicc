@@ -17,7 +17,7 @@ revised: 2026-10-03
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  | [Appointed / Acting / Relieved / Vacant] |  |  | [for a vacant or acting Role, the date by which the appointment is due (Operating Model 4.8)] |  | DR-[yyyy]-[nnn] |
 
-The heads and the Contacts named below the Roles are listed in the same way, each with a Status and a decision reference.
+The members of the AI Steering Committee and the Control Function Contacts are listed in the same table, in the rows after the Roles, each with a Status and a decision reference.
 
 **Checkers.** The Checker of a Risk Tier 1 Solution, whom the AICC Lead names, and the engineer of the IT function or the Domain who checks until AICC has a second Solution Engineer (Operating Model 4.4(e)), are entered here. A Checker is a designation and not a Role.
 

@@ -25,7 +25,7 @@ The bodies that set the standards national banking supervisors implement have pu
 
 ## 5. How the charter relates to it
 
-5.1. The AI Risk Appetite Statement of the AI Competence Center Charter, the provider rules of the AI Policy, the quarterly risk check, and reporting to the Board Committee address the themes identified by the standard-setters.
+5.1. The AI Risk Appetite Statement of the AI Competence Center Charter, the provider rules of the AI Policy, the quarterly risk check, and the escalations and reporting that the Executive Sponsor brings to the Board Committee address the themes identified by the standard-setters.
 
 ## 6. Related pages
 

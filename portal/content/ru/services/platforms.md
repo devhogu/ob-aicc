@@ -44,7 +44,7 @@ translation_status: reviewed
 
 ## 7. Режим
 
-7.1. Initiative.
+7.1. Инициатива.
 
 ## 8. Полномочия по принятию решений
 

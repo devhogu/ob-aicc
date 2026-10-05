@@ -49,7 +49,7 @@ A learning path is a reading order for a role: what to read, in what sequence, a
 | 2 | The [Charter](page:about/aicc-charter) | Understand the mandate, limits, funding, risk appetite, and what is reported |
 | 3 | [Strategy and investment](page:portfolio/en/strategy-and-investment) and [The loops and the governance](page:portfolio/en/the-loops-and-governance) | Run the yearly and quarterly Steering of the Portfolio |
 | 4 | [Governance](page:governance/index), the course | Run the control loops, read the Quarterly Report, and know what is escalated to you |
-| 5 | The [Quarterly Report](page:knowledge-base/quarterly-report) and the [Decision Record](page:knowledge-base/decision-record) | Approve and issue the report; record a decision |
+| 5 | The [Quarterly Report](page:knowledge-base/quarterly-report) and the [Decision Record](page:knowledge-base/decision-record) | Approve the report and decide whether to bring it to the Board Committee or the Board; record a decision |
 
 ## 6. A Control Function Contact
 

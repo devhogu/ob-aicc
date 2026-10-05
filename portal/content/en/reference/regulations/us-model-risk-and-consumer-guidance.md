@@ -30,6 +30,6 @@ The reference practice for the management of model risk in banks, and the positi
 ## 6. Related pages
 
 - [Assessments and evaluations, in Services](../../services/assessments-and-evaluations.md)
-- [Industry body of knowledge](../industry-body-of-knowledge.md)
+- [Standards and frameworks](../industry-body-of-knowledge.md)
 
 This page is for orientation. It summarizes the instrument in general terms and quotes no provision; the text of the instrument prevails, and the Control Function Contacts of compliance and legal confirm what applies to the Bank.

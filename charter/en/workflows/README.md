@@ -9,7 +9,7 @@ The loops and flows of AICC, as intent and control flow, not as activity detail.
 | [AI risk and control](ai-risk-control.md) | How a Solution, a provider, and a use of AI pass the controls of the AI Policy, from the Risk Tier to the gates before use, the live review, and the Exception, suspension, and stop | You define, check, validate, release, or review a Solution, or you decide an Exception, a suspension, or a stop |
 | [Cadence](cadence.md) | The events of the loops by week, Iteration, and PI, without dates | You plan the week, the Iteration, or the quarter and want to know which event is held, and what it decides |
 | [Collaboration tooling](collaboration-tooling.md) | The tools and the portals that AICC uses, for what, and in which workflows | You need to know which tool holds what, and who keeps it |
-| [Unit governance](unit-governance.md) | The control of AICC as a unit: the loops on the Steerings and what each Steering carries, how a decision escalates, the events, a month, a quarter, and a year in sequence, an AI Incident, the reporting chain, and the life of a document | You prepare or attend a Steering, decide at a level, handle an event, or report to the Board Committee |
+| [Unit governance](unit-governance.md) | The control of AICC as a unit: the loops on the Steerings and what each Steering carries, how a decision escalates, the events, a month, a quarter, and a year in sequence, an AI Incident, the reporting chain, and the life of a document | You prepare or attend a Steering, decide at a level, handle an event, or bring a matter to the Board Committee |
 
 Figure 1 shows how the workflows relate.
 

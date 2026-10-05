@@ -6,7 +6,7 @@ The principles of responsible AI become the Bank's rules in the AI Policy and in
 
 1.1. The Bank accepts risk from the use of AI where the benefit is measured and the controls are proportionate to the risk. It does not accept a breach of law or regulation. It accepts only a low level of risk of harm to customers and of loss or misuse of confidential or personal data. It accepts a moderate level of risk of error in internal productivity uses where a person reviews the output. It does not accept AI that takes a decision without review in a regulated process, or an AI agent that acts on systems or funds, without validation by the Control Functions and the release decision of the Executive Sponsor.
 
-1.2. This is the AI Risk Appetite Statement of the AICC Charter. Every use of AI is assessed against it, and a risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
+1.2. This is the AI Risk Appetite Statement of the AICC Charter. Every use of AI is assessed against it, and a risk beyond it may be accepted only by the Executive Sponsor, who tells the Board Committee of it without waiting for any report.
 
 ## 2. The Risk Tiers
 
@@ -46,11 +46,11 @@ The principles of responsible AI become the Bank's rules in the AI Policy and in
 | --- | --- |
 | The person who uses AI | Uses approved Solutions within the rules, reviews the output, stays accountable for what they rely on or sign |
 | The Domain Owner | Owns the results of the Solutions of the Domain, approves the use for a data class, accepts and releases, reviews each live Solution |
-| The AICC Lead | Assigns the Risk Tier, keeps the AI Registry, sets the training, oversees the Portfolio, reports each quarter |
+| The AICC Lead | Assigns the Risk Tier, keeps the AI Registry, sets the training, oversees the Portfolio, reports to the Executive Sponsor each quarter |
 | The Control Function Contacts | Clear business cases of Risk Tier 2 and 3, check providers, validate, decide Exceptions in their remit, and may stop |
-| The Executive Sponsor | Decides the risk appetite, releases Risk Tier 3 Solutions, accepts a risk beyond appetite, issues the report to the Board Committee |
+| The Executive Sponsor | Decides the risk appetite, releases Risk Tier 3 Solutions, accepts a risk beyond appetite and tells the Board Committee of it, may bring the Quarterly Report and Proposals to the Board Committee or the Board |
 | Internal audit | Gives independent assurance over the Portfolio and over AICC |
-| The Board Committee | Oversees AI through the quarterly report and is told of major incidents and risks beyond appetite |
+| The Board Committee | Oversees AI for the Board, receives the reports and Proposals that the Executive Sponsor brings, and is told of major incidents and risks beyond appetite |
 
 ## 9. Where to read the rules
 

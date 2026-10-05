@@ -94,7 +94,7 @@ Where the AICC Lead is the Domain Owner, the Executive Sponsor releases a Soluti
 
 5.6. The AICC Lead or any Control Function Contact may suspend a Solution. The Control Function Contacts assess an AI Incident within their remits: compliance decides whether a regulator is notified, and data protection decides whether a person whose data is affected is notified, as the law requires and in the time that the incident management of the Bank sets. Providers are told as the contract requires.
 
-5.7. The AICC Lead informs the Executive Sponsor of an AI Incident that the incident management of the Bank classifies as major, and the Executive Sponsor tells the Board Committee as the incident management of the Bank requires, without waiting for the next report (AICC Charter 7.2).
+5.7. The AICC Lead informs the Executive Sponsor of an AI Incident that the incident management of the Bank classifies as major, and the Executive Sponsor tells the Board Committee as the incident management of the Bank requires, without waiting for any report (AICC Charter 7.2).
 
 5.8. The post-incident review of an AI Incident is held in the incident management of the Bank, in the time that it sets. The AICC Lead takes part, reassesses the Risk Tier of the Solution, and records what concerns AI in the AI Incident Review and in the Risks and Issues Record: the cause, the controls that failed, and the change to the Solution or to the Standards. The AICC Lead shall carry the lessons of the AI Incident into the Solution, the Standards, or the training that AICC sets.
 
