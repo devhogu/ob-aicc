@@ -738,6 +738,15 @@ def vocabulary_entries(site, source):
     return entries
 
 
+RU_COMMON_WORD_TERMS = {
+    'Термин', 'Банк', 'Роль', 'Направление', 'Модель', 'Режим', 'Фаза', 'Пакет', 'Каталог', 'Решение', 'Сервис',
+    'Продукт', 'Получатель', 'Передача', 'Предложение', 'Задача', 'Команда', 'Зависимость', 'Календарь', 'Стадия',
+    'Проверка', 'Проверяющий', 'Приёмка', 'Выпуск', 'Исключение', 'Показатель', 'Шаблон', 'Реестр', 'Запись',
+    'Переход', 'Цикл', 'Сокращения', 'Мероприятие', 'Состояние', 'Реализация', 'Определение', 'Поставка', 'Анализ',
+    'Версия',
+}
+
+
 def load_terms(site):
     rows = site.sources.table('charter/en/documents/vocabulary.md', '| Term | Meaning')
     terms = {}
@@ -747,6 +756,11 @@ def load_terms(site):
         mean = re.sub(r'[*`]', '', mean).strip()
         if len(t) >= 3 and mean:
             terms[t] = mean if len(mean) <= 300 else mean[:297].rsplit(' ', 1)[0] + '...'
+    if site.language == 'ru':
+        # In Russian these defined terms are also everyday words (решение, задача, направление работы, модель
+        # обслуживания); a tooltip on the first such word would often explain the wrong sense, so they are not linked.
+        for t in RU_COMMON_WORD_TERMS:
+            terms.pop(t, None)
     site.terms = terms
     # Russian terms are written in lowercase in running text; the table cell starts with a capital.
     def alt(t):

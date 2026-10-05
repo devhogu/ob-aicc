@@ -2,9 +2,9 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 3.3
+revision: 3.4
 created: 2026-10-02
-revised: 2026-10-04
+revised: 2026-10-05
 ```
 
 # Vocabulary and Style
@@ -84,7 +84,7 @@ revised: 2026-10-04
 | IT function | The function of the Bank that operates technology |  |
 | Platform team | A team of an IT function of the Bank that runs a platform at the scale of the Bank. AICC is not one |  |
 | Service Management | The service management system of the Bank, in which requests and incidents are handled |  |
-| Strategic Priority | A strategic theme of the Statement of Intent, set with the Board, with an Investment Envelope |  |
+| Strategic Priority | A top priority of the strategy of the Bank for the adoption of AI, stated in the Statement of Intent 9, set with the Board, with an Investment Envelope |  |
 | Strategic Pillar | A pillar of the strategy of the Bank to which the adoption of AI contributes, as the Statement of Intent 3.2 lists them; distinct from a Strategic Priority |  |
 | Investment Envelope | The funding allocated for a year to a Strategic Priority | A budget line may record the allocation; the Envelope defines funding for the Strategic Priority and is not an individual Initiative approval. |
 | Investment Guardrails | The limits that decide what may be committed without the Executive Sponsor | These thresholds concern investment commitments. Technical platform controls and operational Alert levels have separate purposes. |
@@ -270,3 +270,4 @@ revised: 2026-10-04
 | 3.1 | 2026-10-04 | Clarified that each language edition of the shared terminology reference contains definitions and application in its own language; meanings and fixed names remain aligned. | none (correction under Document Catalog 4.2) |
 | 3.2 | 2026-10-04 | Clarified functional interpretation and concept distinctions; reconciled acceptance, delegation and record definitions with governing clauses and aligned the language editions. No operating requirements or decision rights changed. | none (correction under Document Catalog 4.2) |
 | 3.3 | 2026-10-04 | Applied fixed international naming and clarified acceptance timing and the existing separation-of-duties exception; governing requirements and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
+| 3.4 | 2026-10-05 | Defined a Strategic Priority as a top priority of the strategy of the Bank for the adoption of AI, in line with the Statement of Intent 9.1; meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |

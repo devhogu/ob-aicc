@@ -27,6 +27,10 @@
   var index = null;
   function load(cb) {
     if (index) return cb();
+    if (Array.isArray(window.AICC_SEARCH_INDEX)) {
+      index = window.AICC_SEARCH_INDEX;
+      return cb();
+    }
     fetch(d.search).then(function (r) { return r.json(); }).then(function (j) { index = j; cb(); }).catch(function () { index = []; cb(); });
   }
   function tokens(s) { return s.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean); }
