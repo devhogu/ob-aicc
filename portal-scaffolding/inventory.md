@@ -8,7 +8,7 @@ Made by make_pages.py from the page definitions. Every part of the charter appea
 | Home | Privacy | /privacy/ | legal | portal/content/en/privacy.md | all |  | authored; aligned with the Operating Model 7 and the collaboration tooling workflow |
 | Home | Terms of use | /terms-of-use/ | legal | portal/content/en/terms-of-use.md | all |  | authored; aligned with the Operating Model 7, the AI Policy 2, and the collaboration tooling workflow |
 | About AICC | About AICC | /about/ | section | none | none |  | authored, with a generated list |
-| About AICC | Statement of Intent on the Adoption of Artificial Intelligence | /about/statement-of-intent/ | document | documents/statement-of-intent.md | 1, 2, 3, 4, 5, 6, 7, 8 | 1321 | generated |
+| About AICC | Statement of Intent on the Adoption of Artificial Intelligence | /about/statement-of-intent/ | document | documents/statement-of-intent.md | 1, 2, 3, 4, 5, 6, 7, 8 | 1334 | generated |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Strategic Priorities | /about/statement-of-intent/strategic-priorities/ | document | documents/statement-of-intent.md | 9 | 579 | generated |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Capability and maturity roadmap | /about/statement-of-intent/capability-and-maturity-roadmap/ | document | documents/statement-of-intent.md | 10, 11 | 1064 | generated |
 | About AICC | Statement of Intent on the Adoption of Artificial Intelligence: Performance and commitments | /about/statement-of-intent/performance-and-commitments/ | document | documents/statement-of-intent.md | 12, 13 | 235 | generated |

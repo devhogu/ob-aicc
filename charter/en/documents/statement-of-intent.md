@@ -2,7 +2,7 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 1.2
+revision: 1.3
 created: 2026-10-02
 revised: 2026-10-05
 ```
@@ -94,7 +94,7 @@ revised: 2026-10-05
 
 7.3. The model risk, compliance, information security, data protection, and legal functions remain independent. They validate the use of AI and may stop it. Internal audit remains independent and gives assurance only. No person validates their own work.
 
-7.4. AICC is the internal consulting and innovation lab of the Bank for the adoption of AI across the Bank. It manages the Portfolio of Initiatives, provides a delivery capability, and coordinates the Domains. Execution is carried out by the Domains.
+7.4. AICC is the internal consulting and innovation lab of the Bank for the adoption of AI across the Bank. It manages the Portfolio of Initiatives, provides a delivery capability within the Initiatives of the Domains, and coordinates the deployment and use of AI in the Domains. Execution is carried out by the Domains.
 
 7.5. The AI Steering Committee, composed of the heads of the business, technology, risk, and compliance functions whom the Executive Sponsor names, advises the Executive Sponsor on the Portfolio and on conflicts between Domains.
 
@@ -243,3 +243,4 @@ revised: 2026-10-05
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 1.1 | 2026-10-04 | Applied fixed international AI agent naming consistently; functional meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
 | 1.2 | 2026-10-05 | Clarified in 9.1 that the Strategic Priorities are those of the Bank for the adoption of AI and do not limit the strategy of the Bank; meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
+| 1.3 | 2026-10-05 | Clarified in 7.4 that AICC coordinates the deployment and use of AI in the Domains, not the Domains themselves; decision rights are unchanged. | none (correction under Document Catalog 4.2) |
