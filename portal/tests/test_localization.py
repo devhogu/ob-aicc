@@ -396,7 +396,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('Руководит AICC как ведущий инженер и архитектор', role)
         self.assertIn('<th>Деятельность</th>', role)
         self.assertIn('Операционная модель 4.2</a>', role)
-        self.assertIn('Присвоить категорию риска и сообщить её владельцу домена', role)
+        self.assertIn('Присвоить категорию риска и сообщить её владельцу направления', role)
         self.assertNotIn('class="o-callout lang-note"', role)
         self.assertNotIn('<dd lang="en">', role)
         guide = site.by_id['organization/organization-guide']

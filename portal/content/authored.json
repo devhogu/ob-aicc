@@ -305,7 +305,7 @@
       },
       "reader": {
         "en": "A head of function or a Domain Owner",
-        "ru": "Руководитель подразделения или владелец домена"
+        "ru": "Руководитель подразделения или владелец направления"
       },
       "purpose": {
         "en": "To learn how a need becomes an Initiative and a Solution, and what the function decides",
@@ -494,7 +494,7 @@
         },
         "text": {
           "en": "A function brings a need to AICC. AICC takes it in as run-rate work or as an Initiative, probes an Initiative first as a minimum viable product, measures it against defined success Measures, and extends it only on that evidence. The work is visible, limited in progress, and paced by a common cadence. Before a Solution reaches its users, it is checked by a person other than its builder, or validated by the Control Function Contacts, in proportion to its Risk Tier; then it is accepted by the product owner, the AICC Lead, and the Domain Owner who asked for it. AICC applies this way of working to itself and is the example of what it proposes to the Bank.",
-          "ru": "Подразделение обращается в AICC с потребностью. AICC принимает её в работу как текущие работы или как инициативу; инициатива сначала проверяется в виде минимально жизнеспособного продукта (MVP), оценивается по установленным показателям успеха и расширяется только на основе этих фактических данных. Работа визуализирована, объём незавершённой работы ограничен, а темп задаёт общий ритм работы. Прежде чем решение попадёт к пользователям, его проверяет лицо, не участвовавшее в разработке, или валидируют представители контрольных функций — соразмерно категории риска; затем решение принимают владелец продукта, руководитель AICC и владелец домена, который его заказал. AICC применяет этот подход к себе и сам является примером того, что предлагает Банку."
+          "ru": "Подразделение обращается в AICC с потребностью. AICC принимает её в работу как текущие работы или как инициативу; инициатива сначала проверяется в виде минимально жизнеспособного продукта (MVP), оценивается по установленным показателям успеха и расширяется только на основе этих фактических данных. Работа визуализирована, объём незавершённой работы ограничен, а темп задаёт общий ритм работы. Прежде чем решение попадёт к пользователям, его проверяет лицо, не участвовавшее в разработке, или валидируют представители контрольных функций — соразмерно категории риска; затем решение принимают владелец продукта, руководитель AICC и владелец направления, который его заказал. AICC применяет этот подход к себе и сам является примером того, что предлагает Банку."
         },
         "links": [
           {
@@ -528,7 +528,7 @@
         },
         "text": {
           "en": "AICC acts under the mandate of the Executive Sponsor, whom the Board names. It does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work, and it is not a Control Function or a platform team of the Bank and does not operate a Solution at the scale of the Bank. It reports to the Executive Sponsor, who may bring its reports, findings, strategy, and Proposals to the Board Committee or the Board. The Control Functions stay independent and may stop a Solution, and internal audit gives assurance only. The AICC Lead reports to the Executive Sponsor each quarter. The Board oversees AI through the Board Committee, which the Executive Sponsor tells at once of a major AI Incident and of a risk accepted beyond the AI Risk Appetite Statement.",
-          "ru": "AICC действует на основании мандата куратора AICC, которого назначает Совет директоров. AICC не владеет платформой AI и не эксплуатирует её, не отвечает за бизнес-результаты домена, не устанавливает правила контрольной функции и не проводит валидацию собственной работы; AICC не является контрольной функцией или платформенной командой Банка и не эксплуатирует решения в масштабе Банка. AICC подотчётен куратору AICC, который вправе выносить отчёты, выводы, стратегию и предложения AICC на рассмотрение Комитета Совета директоров или Совета директоров. Контрольные функции сохраняют независимость и вправе остановить применение решения; внутренний аудит проводит только независимую оценку. Руководитель AICC ежеквартально отчитывается перед куратором AICC. Совет директоров осуществляет надзор за применением AI через Комитет Совета директоров, которому куратор AICC незамедлительно сообщает о крупном инциденте AI и о риске, принятом сверх Заявления о риск-аппетите в отношении AI."
+          "ru": "AICC действует на основании мандата куратора AICC, которого назначает Совет директоров. AICC не владеет платформой AI и не эксплуатирует её, не отвечает за бизнес-результаты направления, не устанавливает правила контрольной функции и не проводит валидацию собственной работы; AICC не является контрольной функцией или платформенной командой Банка и не эксплуатирует решения в масштабе Банка. AICC подотчётен куратору AICC, который вправе выносить отчёты, выводы, стратегию и предложения AICC на рассмотрение Комитета Совета директоров или Совета директоров. Контрольные функции сохраняют независимость и вправе остановить применение решения; внутренний аудит проводит только независимую оценку. Руководитель AICC ежеквартально отчитывается перед куратором AICC. Совет директоров осуществляет надзор за применением AI через Комитет Совета директоров, которому куратор AICC незамедлительно сообщает о крупном инциденте AI и о риске, принятом сверх Заявления о риск-аппетите в отношении AI."
         },
         "links": [
           {
@@ -824,7 +824,7 @@
       },
       "Shareholder value and dividends": {
         "en": "Business intelligence; Adoption within Domains; Information technology operations and service lifecycle",
-        "ru": "Бизнес-аналитика; Внедрение в доменах; Эксплуатация информационных технологий и жизненный цикл IT-услуг"
+        "ru": "Бизнес-аналитика; AI в работе направлений Банка; Эксплуатация информационных технологий и жизненный цикл IT-услуг"
       },
       "ESG goals": {
         "en": "The Principles of Application and the AI Policy, across every priority",
@@ -855,11 +855,11 @@
         },
         "choice": {
           "en": "AICC is an internal consulting and innovation lab, not a cost center that charges its clients. It does not charge the functions; the Domain pays from its Investment Envelope for the run, the licenses, and the provider costs of a Solution, and the Executive Sponsor owns the budget of AICC itself. Value is tracked as the benefit that the function confirms and the flow of the work.",
-          "ru": "AICC — внутренняя консультационная и инновационная лаборатория, а не центр затрат, выставляющий счета своим заказчикам. AICC не взимает плату с подразделений; расходы на эксплуатацию, лицензии и услуги поставщиков решения домен несёт за счёт своего инвестиционного бюджета, а бюджетом самого AICC распоряжается куратор AICC. Ценность отслеживается как выгода, подтверждённая подразделением, и как поток работ."
+          "ru": "AICC — внутренняя консультационная и инновационная лаборатория, а не центр затрат, выставляющий счета своим заказчикам. AICC не взимает плату с подразделений; расходы на эксплуатацию, лицензии и услуги поставщиков решения направление несёт за счёт своего инвестиционного бюджета, а бюджетом самого AICC распоряжается куратор AICC. Ценность отслеживается как выгода, подтверждённая подразделением, и как поток работ."
         },
         "decides": {
           "en": "Executive Sponsor; Domain Owners for the Solutions of their Domains",
-          "ru": "Куратор AICC; владельцы доменов — по решениям своих доменов"
+          "ru": "Куратор AICC; владельцы направлений — по решениям своих направлений"
         },
         "read": {
           "en": "Business Model 2 and 6; AICC Charter 4",
@@ -909,11 +909,11 @@
         },
         "choice": {
           "en": "AICC proves the use of AI with the functions and proposes what the Bank should adopt at scale; the Bank decides on the Proposals and the Domains execute. Each Domain applies the shared principles and standards within its own regulation, appoints Domain Experts, and uses AI in its own processes with governed knowledge. Shared AI Platform components, knowledge, and standards take precedence over individual Solutions.",
-          "ru": "AICC вместе с подразделениями подтверждает применимость AI и предлагает, что Банку целесообразно внедрить в масштабе Банка; Банк решает по предложениям, а домены их реализуют. Каждый домен применяет общие принципы и стандарты с учётом применимого к нему регулирования, назначает экспертов домена и применяет AI в своих процессах, опираясь на управляемую базу знаний. Общие компоненты платформы AI, знания и стандарты имеют приоритет перед отдельными решениями."
+          "ru": "AICC вместе с подразделениями подтверждает применимость AI и предлагает, что Банку целесообразно внедрить в масштабе Банка; Банк решает по предложениям, а направления их реализуют. Каждое направление применяет общие принципы и стандарты с учётом применимого к нему регулирования, назначает экспертов направления и применяет AI в своих процессах, опираясь на управляемую базу знаний. Общие компоненты платформы AI, знания и стандарты имеют приоритет перед отдельными решениями."
         },
         "decides": {
           "en": "The Bank on each Proposal; the Domain Owners within their Domains",
-          "ru": "Банк — по каждому предложению; владельцы доменов — в пределах своих доменов"
+          "ru": "Банк — по каждому предложению; владельцы направлений — в пределах своих направлений"
         },
         "read": {
           "en": "Business Model 2; Statement of Intent 5, 7, and 10",
@@ -931,7 +931,7 @@
         },
         "decides": {
           "en": "AICC Lead issues the commitment; the Domain Owner accepts the outcome",
-          "ru": "Руководитель AICC оформляет обязательства; владелец домена принимает результат"
+          "ru": "Руководитель AICC оформляет обязательства; владелец направления принимает результат"
         },
         "read": {
           "en": "Business Model 3 to 5",
@@ -967,7 +967,7 @@
         },
         "decides": {
           "en": "Domain Owner approves the Solution Definition; AICC Lead assigns the Risk Tier",
-          "ru": "Владелец домена одобряет описание решения; руководитель AICC присваивает категорию риска"
+          "ru": "Владелец направления одобряет описание решения; руководитель AICC присваивает категорию риска"
         },
         "read": {
           "en": "Solution Lifecycle Model 8; Portfolio Management Model 8",
@@ -999,11 +999,11 @@
         },
         "choice": {
           "en": "AI augments the work of employees. Employees are trained by role before they use AI, each Domain appoints Domain Experts who enable adoption in that Domain, and AICC maintains training, templates, and communities of practice.",
-          "ru": "AI помогает работникам в их работе. До начала применения AI работники проходят обучение по ролям; каждый домен назначает экспертов домена, которые содействуют внедрению в нём, а AICC поддерживает обучение, шаблоны и профессиональные сообщества."
+          "ru": "AI помогает работникам в их работе. До начала применения AI работники проходят обучение по ролям; каждое направление назначает экспертов направления, которые содействуют внедрению в нём, а AICC поддерживает обучение, шаблоны и профессиональные сообщества."
         },
         "decides": {
           "en": "Domain Owners for their Domains; AICC Lead for the training",
-          "ru": "Владельцы доменов — по своим доменам; руководитель AICC — по обучению"
+          "ru": "Владельцы направлений — по своим направлениям; руководитель AICC — по обучению"
         },
         "read": {
           "en": "Statement of Intent 5 and 10",
@@ -1053,7 +1053,7 @@
         },
         "choice": {
           "en": "AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, the value scored for the PI Objectives, the Domains and employees using approved Solutions, and the AI Incidents and control breaches. Progress on the road is measured by the Measures of each Maturity Level. The AICC Lead reports to the Executive Sponsor each quarter, and the Executive Sponsor may bring the report to the Board Committee or the Board.",
-          "ru": "AICC измеряет реализованные выгоды в сопоставлении с инвестиционным бюджетом, время от предложения до одобрения и от одобрения до приёмки, бизнес-ценность, оценённую по целям PI, число доменов и работников, использующих одобренные решения, а также инциденты AI и нарушения контрольных процедур. Продвижение по пути развития измеряется показателями каждого уровня зрелости. Руководитель AICC ежеквартально отчитывается перед куратором AICC, а куратор AICC вправе вынести отчёт на рассмотрение Комитета Совета директоров или Совета директоров."
+          "ru": "AICC измеряет реализованные выгоды в сопоставлении с инвестиционным бюджетом, время от предложения до одобрения и от одобрения до приёмки, бизнес-ценность, оценённую по целям PI, число направлений и работников, использующих одобренные решения, а также инциденты AI и нарушения контрольных процедур. Продвижение по пути развития измеряется показателями каждого уровня зрелости. Руководитель AICC ежеквартально отчитывается перед куратором AICC, а куратор AICC вправе вынести отчёт на рассмотрение Комитета Совета директоров или Совета директоров."
         },
         "decides": {
           "en": "Executive Sponsor sets the targets each year",
@@ -1079,7 +1079,7 @@
     },
     "kept": {
       "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2); at the same Steering the Executive Sponsor presents the yearly Proposal of the AI adoption strategy that the AICC Lead prepares, and the Bank decides on it (Operating Model 6.5). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, the approver of each Active Initiative decides on it, and the Executive Sponsor approves the Quarterly Report and may bring it to the Board Committee or the Board (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state.",
-      "ru": "Стратегия устанавливается раз в год и поддерживается ежеквартально. На ежегодном управляющем совещании в первые две недели декабря куратор AICC на основе стратегии Банка и приоритетов доменов определяет стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения, рассматривает выгоды в сопоставлении с каждым бюджетом и результаты по каждому приоритету, пересматривает документы и Заявление о риск-аппетите в отношении AI (п. 4.2 Модели управления портфелем). На том же совещании куратор AICC представляет ежегодное предложение по стратегии внедрения AI, подготовленное руководителем AICC, и по нему решает Банк (п. 6.5 Операционной модели). На ежеквартальном управляющем совещании куратор AICC подтверждает дорожную карту и структуру инициатив в пределах бюджетов, по каждой инициативе в работе решает лицо, которое её одобрило, а куратор AICC утверждает квартальный отчёт и вправе вынести его на рассмотрение Комитета Совета директоров или Совета директоров (п. 4.3 Модели управления портфелем; п. 7.2 Положения об AICC). Заявление о намерениях по внедрению AI пересматривается не реже одного раза в год, а также при существенном изменении в применении AI, в составе основных поставщиков или в регулировании (п. 13.3 Заявления о намерениях по внедрению AI). Действующие стратегические приоритеты и их бюджеты фиксируются в записи о приоритетах в реестре; портал излагает стратегию, а реестр отражает её текущее состояние."
+      "ru": "Стратегия устанавливается раз в год и поддерживается ежеквартально. На ежегодном управляющем совещании в первые две недели декабря куратор AICC на основе стратегии Банка и приоритетов направлений определяет стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения, рассматривает выгоды в сопоставлении с каждым бюджетом и результаты по каждому приоритету, пересматривает документы и Заявление о риск-аппетите в отношении AI (п. 4.2 Модели управления портфелем). На том же совещании куратор AICC представляет ежегодное предложение по стратегии внедрения AI, подготовленное руководителем AICC, и по нему решает Банк (п. 6.5 Операционной модели). На ежеквартальном управляющем совещании куратор AICC подтверждает дорожную карту и структуру инициатив в пределах бюджетов, по каждой инициативе в работе решает лицо, которое её одобрило, а куратор AICC утверждает квартальный отчёт и вправе вынести его на рассмотрение Комитета Совета директоров или Совета директоров (п. 4.3 Модели управления портфелем; п. 7.2 Положения об AICC). Заявление о намерениях по внедрению AI пересматривается не реже одного раза в год, а также при существенном изменении в применении AI, в составе основных поставщиков или в регулировании (п. 13.3 Заявления о намерениях по внедрению AI). Действующие стратегические приоритеты и их бюджеты фиксируются в записи о приоритетах в реестре; портал излагает стратегию, а реестр отражает её текущее состояние."
     }
   },
   "services_page": {
@@ -1143,7 +1143,7 @@
         },
         "d": {
           "en": "The outcome with its evidence, accepted by the Domain Owner",
-          "ru": "Результат с подтверждающими материалами, принятый владельцем домена"
+          "ru": "Результат с подтверждающими материалами, принятый владельцем направления"
         }
       },
       {
@@ -1225,7 +1225,7 @@
     },
     "not": {
       "en": "AICC does not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, or validate its own work. It is not a Control Function and not a platform team of the Bank, and it does not operate a Solution at the scale of the Bank: it proves and builds, and a Solution that the Bank adopts at scale is handed to its Receiver (AICC Charter 3.2; Business Model 2.5).",
-      "ru": "AICC не владеет платформой AI и не эксплуатирует её, не отвечает за бизнес-результаты домена, не устанавливает правила контрольной функции и не проводит валидацию собственной работы. AICC не является контрольной функцией или платформенной командой Банка и не эксплуатирует решения в масштабе Банка: AICC подтверждает осуществимость и создаёт решения, а решение, которое Банк внедряет в масштабе Банка, передаётся получателю (п. 3.2 Положения об AICC; п. 2.5 Бизнес-модели)."
+      "ru": "AICC не владеет платформой AI и не эксплуатирует её, не отвечает за бизнес-результаты направления, не устанавливает правила контрольной функции и не проводит валидацию собственной работы. AICC не является контрольной функцией или платформенной командой Банка и не эксплуатирует решения в масштабе Банка: AICC подтверждает осуществимость и создаёт решения, а решение, которое Банк внедряет в масштабе Банка, передаётся получателю (п. 3.2 Положения об AICC; п. 2.5 Бизнес-модели)."
     },
     "docs_title": {
       "en": "The documents behind the services",
@@ -1274,7 +1274,7 @@
         },
         "text": {
           "en": "The people and the adoption: each person trained and coached to use AI for their own work, each Domain carrying its adoption through its Domain Experts, and each Solution managed through its life after delivery.",
-          "ru": "Люди и внедрение: каждого работника обучают и сопровождают в применении AI в собственной работе, каждый домен ведёт внедрение силами своих экспертов домена, а каждым решением управляют на протяжении всего жизненного цикла после его создания."
+          "ru": "Люди и внедрение: каждого работника обучают и сопровождают в применении AI в собственной работе, каждое направление ведёт внедрение силами своих экспертов направления, а каждым решением управляют на протяжении всего жизненного цикла после его создания."
         }
       },
       {

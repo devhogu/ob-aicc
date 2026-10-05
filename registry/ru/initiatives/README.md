@@ -11,7 +11,7 @@ translation_status: reviewed
 | Инициатива | Папка | Приоритет |
 | --- | --- | --- |
 | INI-002 Изучение ландшафта услуг | [INI-002-service-landscape-discovery/](INI-002-service-landscape-discovery/brief.md) | Обеспечивающие работы (все приоритеты) |
-| INI-003 AI в повседневной работе подразделений | [INI-003-ai-in-daily-work-of-functions/](INI-003-ai-in-daily-work-of-functions/brief.md) | PRI-3 Внедрение в доменах |
+| INI-003 AI в повседневной работе подразделений | [INI-003-ai-in-daily-work-of-functions/](INI-003-ai-in-daily-work-of-functions/brief.md) | PRI-3 AI в работе направлений Банка |
 | INI-004 FP&A: отчётность по финансовым показателям для Совета директоров | [INI-004-fpa-board-reporting/](INI-004-fpa-board-reporting/brief.md) | PRI-2 Бизнес-аналитика |
 | INI-006 Аналитика клиентского опыта: изучение | [INI-006-customer-experience-intelligence-discovery/](INI-006-customer-experience-intelligence-discovery/brief.md) | PRI-1 Клиентская аналитика |
 | INI-007 Розничное кредитование: кредитные линии, кредиты и ипотека | [INI-007-retail-credit-discovery/](INI-007-retail-credit-discovery/brief.md) | PRI-5 AI в банковских операциях и системах; PRI-4 Экспертные знания на рабочем месте |
