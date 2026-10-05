@@ -40,7 +40,7 @@ revised: 2026-10-03
 
 ## 4. Risk Tier
 
-[Tier 1, 2, or 3, with the reasons, assigned by the AICC Lead, or by the Executive Sponsor for a Solution that the AICC Lead built, on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies. (AI Policy 3.2; Portfolio Management Model 6.4). For Tier 2 and 3: the confirmation of the Control Function Contact of compliance that the applicable law is met, with the date.]
+[Tier 1, 2, or 3, with the reasons, assigned by the AICC Lead, or by the Executive Sponsor for a Solution that the AICC Lead built, on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies (AI Policy 3.2; Portfolio Management Model 6.4). For Tier 2 and 3: the confirmation of the Control Function Contact of compliance that the applicable law is met, with the date.]
 
 ## 5. Acceptance criteria
 

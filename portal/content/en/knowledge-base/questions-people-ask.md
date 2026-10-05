@@ -36,9 +36,9 @@ Short answers to the questions people bring, grounded in the charter; each answe
 
 **Can a Control Function stop a Solution?** Yes, within its remit, finally; nobody overrides a stop. Operating Model 5.4.
 
-**What happens when AI causes an incident?** It is handled in the incident management of the Bank with the AICC Lead as a stakeholder, reviewed afterwards in an AI Incident Review, and a major incident is reported to the Board Committee without waiting for the next report. AI Policy 5; AICC Charter 7.2.
+**What happens when AI causes an incident?** It is handled in the incident management of the Bank with the AICC Lead as a stakeholder, reviewed afterwards in an AI Incident Review, and the Executive Sponsor tells the Board Committee of a major incident without waiting for any report. AI Policy 5; AICC Charter 7.2.
 
-**Can an exception to a control be granted?** A departure from the AI Policy is an Exception, decided by the Control Function Contact for the remit concerned, or by the AICC Lead for a requirement that AICC alone set; it states the date on which it expires, is entered in the Risks and Issues Record, and is reviewed by the Executive Sponsor each month, and an expired Exception is decided at once. A risk beyond the AI Risk Appetite Statement is not an Exception: only the Executive Sponsor may accept it, with a report to the Board Committee. AI Policy 6.1; AICC Charter 5.4.
+**Can an exception to a control be granted?** A departure from the AI Policy is an Exception, decided by the Control Function Contact for the remit concerned, or by the AICC Lead for a requirement that AICC alone set; it states the date on which it expires, is entered in the Risks and Issues Record, and is reviewed by the Executive Sponsor each month, and an expired Exception is decided at once. A risk beyond the AI Risk Appetite Statement is not an Exception: only the Executive Sponsor may accept it, and tells the Board Committee of it without waiting for any report. AI Policy 6.1; AICC Charter 5.4.
 
 ## 4. The unit
 

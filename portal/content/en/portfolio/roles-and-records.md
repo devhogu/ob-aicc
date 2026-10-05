@@ -1,12 +1,12 @@
 # Roles and records
 
-The Portfolio is run by the Roles of the Operating Model, each taking a defined part, and it leaves records that let the Steering, the Board, and the auditor see every decision. This part states both, and what the Portfolio shows at a glance; the measures are the subject of the previous part.
+The Portfolio is run by the Roles of the Operating Model, each taking a defined part, and it leaves records that let the Steering and the auditor see every decision, and that the Executive Sponsor can show the Board Committee or the Board when bringing a matter to it. This part states both, and what the Portfolio shows at a glance; the measures are the subject of the previous part.
 
 ## 1. The roles in the Portfolio
 
 | Part in the Portfolio | Role | What it does |
 | --- | --- | --- |
-| Portfolio leadership | Executive Sponsor | Sets the Strategic Priorities, the Envelopes, the Guardrails, and the mix of Initiatives; approves an Initiative above a guardrail, across Domains, or for enabling work; decides after the MVP for those; issues the Quarterly Report to the Board Committee |
+| Portfolio leadership | Executive Sponsor | Sets the Strategic Priorities, the Envelopes, the Guardrails, and the mix of Initiatives; approves an Initiative above a guardrail, across Domains, or for enabling work; decides after the MVP for those; approves the Quarterly Report and decides whether to bring it to the Board Committee or the Board |
 | Portfolio advice | AI Steering Committee | Advises the Executive Sponsor on the Portfolio and on conflicts between Domains |
 | Client function | Domain Owner | Represents the client function; states the value; owns the business outcome; approves the business case within a Domain and below a guardrail; accepts the outcome and confirms the benefit |
 | Portfolio and product management | AICC Lead | Maintains the funnel and the Portfolio Backlog; writes the business case with the Domain Owner; ranks; sets the limit on the Active Initiatives within the mix; pulls into work; is accountable for the progress of an Initiative through the Kanban; prepares and runs the monthly Steering |
@@ -23,7 +23,7 @@ The Portfolio is run by the Roles of the Operating Model, each taking a defined 
 | Initiative Brief | The business case of each Initiative, with its clearances | The Registry |
 | Decision Log and Decision Records | Every gate decision, the decision after the MVP, deferrals, rejections, pivots, suspensions | The Registry |
 | Steering Summary | The record of each monthly and quarterly Steering | The Registry |
-| Quarterly Report | The result of the quarter: each Active Initiative, the benefit against the Envelope, the risks, issued to the Board Committee | The Registry |
+| Quarterly Report | The result of the quarter: each Active Initiative, the benefit against the Envelope, the risks, approved by the Executive Sponsor, who may bring it to the Board Committee or the Board | The Registry |
 | Registry Snapshot | The closed extract at the close of an Iteration and of a Program Increment | The Registry |
 | Priorities | The Strategic Priorities, the Envelopes, and the Guardrails in force | The Registry |
 | Solution Definition | The first Solution of an Initiative, defined in the MVP | The Portfolio |

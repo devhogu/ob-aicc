@@ -29,7 +29,7 @@ These international standards give AI governance a form familiar to organization
 
 ## 6. Related pages
 
-- Governance and oversight
-- [Industry body of knowledge](../industry-body-of-knowledge.md)
+- [Governance](../../governance/overview.md)
+- [Standards and frameworks](../industry-body-of-knowledge.md)
 
 This page is for orientation. It summarizes the instrument in general terms and quotes no provision; the text of the instrument prevails, and the Control Function Contacts of compliance and legal confirm what applies to the Bank.

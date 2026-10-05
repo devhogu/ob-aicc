@@ -21,7 +21,7 @@ revised: 2026-10-04
 
 ## 3. Authority and limits
 
-3.1. AICC acts under the mandate of the Executive Sponsor, whom the Board names, and whose appointment of the AICC Lead and whose decision reference are entered in the Appointments Record. AICC may decide the matters that the Operating Model gives to the AICC Lead and the AICC Team. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent that are for AICC, and the Executive Sponsor for its annual review and its communication. AICC reports to the Executive Sponsor, and through the Executive Sponsor to the Board Committee. AICC has no administrative line over the people assigned to it.
+3.1. AICC acts under the mandate of the Executive Sponsor, whom the Board names, and whose appointment of the AICC Lead and whose decision reference are entered in the Appointments Record. AICC may decide the matters that the Operating Model gives to the AICC Lead and the AICC Team. The AICC Lead is accountable for carrying out the commitments of the Statement of Intent that are for AICC, and the Executive Sponsor for its annual review and its communication. AICC reports to the Executive Sponsor. Through the Executive Sponsor, the Board Committee is informed of the matters that the Executive Sponsor brings to it and of the escalations of 7.2. AICC has no administrative line over the people assigned to it.
 
 3.2. AICC shall not own or operate the AI Platform, own the business results of a Domain, set the rules of a Control Function, validate its own work, or decide a matter that the regulation of the Bank reserves to the Board, to the management, or to a Control Function. AICC is not a Control Function (Operating Model 2) and not a platform team of the Bank, and it shall not operate a Solution at the scale of the Bank (Business Model 2).
 
@@ -41,7 +41,7 @@ revised: 2026-10-04
 
 5.3. The Bank does not accept AI that takes a decision without review in a regulated process, or an AI agent that acts on systems or funds, without validation by the Control Functions and the release decision of the Executive Sponsor.
 
-5.4. The Executive Sponsor decides this Statement. The AICC Lead owns it, shall review it each year, and activates a change on that decision. The Board Committee notes it in its report. A risk beyond it may be accepted only by the Executive Sponsor, with a report to the Board Committee.
+5.4. The Executive Sponsor decides this Statement. The AICC Lead owns it, shall review it each year, and activates a change on that decision. The Board Committee notes it and each change to it. A risk beyond it may be accepted only by the Executive Sponsor, who shall tell the Board Committee of it as 7.2 states.
 
 ## 6. What AICC offers
 
@@ -57,7 +57,7 @@ revised: 2026-10-04
 
 7.1. AICC measures benefits realized against the Investment Envelope, the time from proposal to approval and from approval to acceptance, and the value scored for the PI Objectives, the number of Domains and employees using approved Solutions, and the number of AI Incidents and control breaches. The Measures of the Maturity Levels are in the Statement of Intent, and their targets are set by the Executive Sponsor each year, except that the predictability of delivery is read as a trend and has no target.
 
-7.2. The AICC Lead shall report each quarter in the Quarterly Report, which goes to the next quarterly Steering. The Executive Sponsor approves the Quarterly Report and issues it to the Board Committee each quarter as the report to the Board Committee. Each figure in it traces to a Record or a governed source, with its date. The Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major and of any risk accepted beyond the AI Risk Appetite Statement without waiting for the next report. Internal audit provides independent assurance.
+7.2. The AICC Lead shall report each quarter in the Quarterly Report, which goes to the Executive Sponsor at the next quarterly Steering, where the AI Steering Committee advises. The Executive Sponsor approves the Quarterly Report. Each figure in it traces to a Record or a governed source, with its date. The Executive Sponsor may bring the Quarterly Report, findings, the AI adoption strategy, and a Proposal to adopt or change something at the scale of the Bank to the Board Committee or the Board, when the Executive Sponsor judges it useful or the Board asks; this is not a periodic duty. The Executive Sponsor shall tell the Board Committee of an AI Incident that the incident management of the Bank classifies as major and of each risk accepted beyond the AI Risk Appetite Statement, without waiting for any report. Internal audit provides independent assurance.
 
 7.3. The Quarterly Report is the only periodic report of AICC. The AICC Lead shall state in it at least each Active Initiative and the decision on it, the status of the controls and the open deficiencies, the risks accepted beyond the AI Risk Appetite Statement, the reliance on providers, the trend of PI predictability, and the Maturity Level of each Strategic Priority, each traced to a Record.
 

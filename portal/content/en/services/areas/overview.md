@@ -27,7 +27,7 @@ The people and the adoption: each person trained and coached to use AI for their
 - [Adoption and lifecycle management](../adoption-and-lifecycle-management.md): Domain Experts and adoption plans per Domain; the Handover, support, revision, and retirement of Solutions; the life and operation of a Service
 ## 4. Assurance
 
-The rules, controls, and criteria of each use of AI stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported in the Quarterly Report to the Steering and the Board Committee; the Control Functions keep their own remit.
+The rules, controls, and criteria of each use of AI stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported in the Quarterly Report to the Steering, from which the Executive Sponsor may bring it to the Board Committee; the Control Functions keep their own remit.
 
 - [Policies, controls, criteria](../policies-controls-criteria.md): Rules of use within the AI Policy, control maps, acceptance and evaluation criteria, guardrails, stated before the build
 - [Assessments and evaluations](../assessments-and-evaluations.md): Solutions and providers evaluated against the cases of the function before use, and the readiness of a function assessed; the check of a provider stays with the Control Function Contacts (AI Policy 4.1)

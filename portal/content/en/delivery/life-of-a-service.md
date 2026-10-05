@@ -24,4 +24,4 @@ A Service that AICC runs lives after its release. The Solution Lifecycle Model g
 
 ## 4. Rule source
 
-Solution Lifecycle Model 8.4 and 8.8 to 8.12; Business Model 2.5 and 4.2; Operating Model 4.2 and 6. The service steps draw on the practice of service portfolio management recorded in the Industry body of knowledge.
+Solution Lifecycle Model 8.4 and 8.8 to 8.12; Business Model 2.5 and 4.2; Operating Model 4.2 and 6. The service steps draw on the practice of service portfolio management recorded in Standards and frameworks.

@@ -20,10 +20,10 @@ Planned for Tuesday 22 December 2026, moved from Thursday 24 December, which is 
 
 ## Quarterly Steering
 
-Planned for Wednesday 23 December 2026, moved from Friday 25 December, which is gray. It ends 2026-PIQ4. The monthly Steering of December is the yearly Steering, held in the first two weeks (2026-PIQ4 I12W2) with the direction loop and the strategic loop for the next year, so this Steering carries the assurance loop and the portfolio review only (Operating Model 6.6, 6.7). The Decisions of the Executive Sponsor: the decision on each Active Initiative (continue, pivot, defer, or reject), the quarterly risk check, the corrective actions, the Maturity Level reached, and the report to the Board Committee, which is the Quarterly Report as the Executive Sponsor approves and issues it (decision-log.md). It sets no Priority, Envelope, Guardrail, document, or appetite, because the yearly Steering has set them, and a change that the result of PIQ4 calls for in the frame is taken at the first quarterly Steering of 2027. The controls it carries are:
+Planned for Wednesday 23 December 2026, moved from Friday 25 December, which is gray. It ends 2026-PIQ4. The monthly Steering of December is the yearly Steering, held in the first two weeks (2026-PIQ4 I12W2) with the direction loop and the strategic loop for the next year, so this Steering carries the assurance loop and the portfolio review only (Operating Model 6.6, 6.7). The Decisions of the Executive Sponsor: the decision on each Active Initiative (continue, pivot, defer, or reject), the quarterly risk check, the corrective actions, the Maturity Level reached, the approval of the Quarterly Report, and whether to submit it to the Board Committee (decision-log.md). It sets no Priority, Envelope, Guardrail, document, or appetite, because the yearly Steering has set them, and a change that the result of PIQ4 calls for in the frame is taken at the first quarterly Steering of 2027. The controls it carries are:
 
 - C-06: the results, the risk check with the review of each Risk Tier 3 Solution, and the Maturity Level.
-- C-07: the report to the Board Committee.
+- C-07: the approval of the Quarterly Report, and its submission to the Board Committee where the Executive Sponsor decides.
 
 It also takes the other controls of the assurance loop that are due (Operating Model 6.1).
 

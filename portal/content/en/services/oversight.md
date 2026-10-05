@@ -1,6 +1,6 @@
 # Oversight
 
-AICC keeps one view of every AI use of the Bank, built or bought, and reports on it. It oversees the Adopted Solutions that others deliver and run, follows the live review, the incidents, and the changes of every Solution through the Registry, and brings the whole to the Steering and to the Board Committee in the Quarterly Report.
+AICC keeps one view of every AI use of the Bank, built or bought, and reports on it. It oversees the Adopted Solutions that others deliver and run, follows the live review, the incidents, and the changes of every Solution through the Registry, and brings the whole to the Steering in the Quarterly Report, which the Executive Sponsor may bring to the Board Committee.
 
 ## 1. What it is
 
@@ -21,7 +21,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 3. What the function receives
 
-3.1. For the function: its AI uses in one view, with their tiers, their reviews, their incidents, and their changes, and a place in the Quarterly Report. For the Bank: one AI Registry of every AI use under one set of rules, reported to the Board Committee.
+3.1. For the function: its AI uses in one view, with their tiers, their reviews, their incidents, and their changes, and a place in the Quarterly Report. For the Bank: one AI Registry of every AI use under one set of rules, reported to the Executive Sponsor, who may bring it to the Board Committee.
 
 ## 4. How it runs
 
@@ -29,7 +29,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 5. What it leads to
 
-5.1. A Portfolio that shows the whole use of AI in the Bank, and a Board Committee that sees it each quarter with its benefits, its incidents, and its risks beyond appetite.
+5.1. A Portfolio that shows the whole use of AI in the Bank, and an Executive Sponsor who sees it each quarter with its benefits, its incidents, and its risks beyond appetite, and who can bring it to the Board Committee.
 
 ## 6. The Package
 
@@ -41,7 +41,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The Domain Owner owns the Adopted Solution and its results; the AICC Lead oversees and reports; the Control Function Contacts validate and may stop; the Executive Sponsor issues the report to the Board Committee.
+8.1. The Domain Owner owns the Adopted Solution and its results; the AICC Lead oversees and reports; the Control Function Contacts validate and may stop; the Executive Sponsor approves the Quarterly Report and decides whether to bring it to the Board Committee or the Board.
 
 ## 9. Rule source
 

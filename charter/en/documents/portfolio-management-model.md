@@ -29,7 +29,7 @@ revised: 2026-10-04
 
 | Part in portfolio management | Role | What it does in the portfolio |
 | --- | --- | --- |
-| Portfolio leadership | Executive Sponsor | Sets the Strategic Priorities, the Envelopes, the Guardrails, and the mix of Initiatives; approves an Initiative above a guardrail, across Domains, or for enabling work; decides to continue, pivot, defer, or reject for those; issues the Quarterly Report to the Board Committee |
+| Portfolio leadership | Executive Sponsor | Sets the Strategic Priorities, the Envelopes, the Guardrails, and the mix of Initiatives; approves an Initiative above a guardrail, across Domains, or for enabling work; decides to continue, pivot, defer, or reject for those; approves the Quarterly Report and decides whether to bring it to the Board Committee or the Board |
 | Portfolio advice | AI Steering Committee | Advises the Executive Sponsor on the Portfolio and on conflicts between Domains |
 | Client function | Domain Owner | Represents the client function; states the value; owns the business outcome of the Initiative, and with the approver owns its hypothesis, its leading indicators, and the judgment of its MVP; approves the business case within a Domain and below a guardrail; accepts the outcome and confirms the benefit |
 | Product and portfolio management, and ownership of the Capabilities | AICC Lead | Maintains the funnel and the Portfolio Backlog; screens each need at intake; writes the business case with the Domain Owner; ranks the Initiatives, sets the limit on the Active Initiatives within the mix of the Executive Sponsor, and pulls into work; prepares and runs the monthly Steering; is accountable for the progress of an Initiative through the portfolio Kanban |
@@ -70,12 +70,12 @@ In practice, the Executive Sponsor sets the Envelope of each Strategic Priority 
 
 ### The portfolio review loop
 
-4.3. The Executive Sponsor shall run the portfolio review loop each quarter, at the quarterly Steering. The plan confirms the Roadmap, the mix of Initiatives for the next Program Increment within the Envelopes. The check reads, for each Active Initiative, the leading indicators against the plan, the benefit that the Domain Owner confirms, and the quarterly risk check with the Control Function Contacts, and it reads the flow of the quarter. The act decides for each Initiative, by its approver of 6.3, whether it continues, pivots, is deferred, or is rejected; the Executive Sponsor adjusts the mix and reports to the Board Committee. The AICC Lead hands up to the strategic loop the queue of any step of the portfolio Kanban that has grown for two quarters. The loop takes the frame of the strategic loop, hands the mix down to the portfolio sync loop, where the AICC Lead sets the limit on the Active Initiatives within it, and returns the Quarterly Report to the strategic loop.
+4.3. The Executive Sponsor shall run the portfolio review loop each quarter, at the quarterly Steering. The plan confirms the Roadmap and the mix of Initiatives for the next Program Increment within the Envelopes. The check reads, for each Active Initiative, the leading indicators against the plan, the benefit that the Domain Owner confirms, and the quarterly risk check with the Control Function Contacts, and it reads the flow of the quarter. The act decides for each Initiative, by its approver of 6.3, whether it continues, pivots, is deferred, or is rejected; the Executive Sponsor adjusts the mix and approves the Quarterly Report, and may bring it to the Board Committee or the Board. The AICC Lead hands up to the strategic loop the queue of any step of the portfolio Kanban that has grown for two quarters. The loop takes the frame of the strategic loop, hands the mix down to the portfolio sync loop, where the AICC Lead sets the limit on the Active Initiatives within it, and returns the Quarterly Report to the strategic loop.
 
 ```mermaid
 flowchart LR
   IN(["From above<br/>Priorities, Envelopes, Guardrails"]):::iface --> P
-  P["Plan<br/>Roadmap, mix of Initiatives for the next PI"] --> D["Do<br/>Initiatives in MVP and implementation"] --> C["Check<br/>leading indicators, benefit confirmed, risk check"] --> A["Act<br/>continue, pivot, defer, or reject; report to the Board Committee"] --> P
+  P["Plan<br/>Roadmap, mix of Initiatives for the next PI"] --> D["Do<br/>Initiatives in MVP and implementation"] --> C["Check<br/>leading indicators, benefit confirmed, risk check"] --> A["Act<br/>continue, pivot, defer, or reject; approve the Quarterly Report"] --> P
   EV(["From below<br/>Steering Summaries of the sync loop"]):::iface --> C
   A --> OUT(["To below<br/>the mix of Initiatives"]):::iface
   A --> UP(["To above<br/>Quarterly Report"]):::iface

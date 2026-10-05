@@ -6,13 +6,13 @@ This guide explains how the unit is organized: its place in the Bank, its Roles 
 
 ## 2. The place of AICC in the Bank
 
-AICC is an internal consulting and innovation lab. It reports to the Executive Sponsor, and through the Executive Sponsor to the Board Committee. It is not a Control Function, and the Control Functions are independent of it. The Control Functions keep their own accountability for their remit. In the three lines of the Bank, AICC and the Domains own the risks of their work, the Control Functions set the rules of their remit, clear, validate, decide Exceptions, and may stop, and internal audit gives independent assurance (Operating Model 2.4). AICC has no administrative line over the people assigned to it, who stay in their own reporting line, or over the partners from the functions.
+AICC is an internal consulting and innovation lab. It reports to the Executive Sponsor. The Executive Sponsor may bring its reports and Proposals to the Board Committee or the Board, and always tells the Board Committee of a major AI Incident and of a risk accepted beyond the appetite. It is not a Control Function, and the Control Functions are independent of it. The Control Functions keep their own accountability for their remit. In the three lines of the Bank, AICC and the Domains own the risks of their work, the Control Functions set the rules of their remit, clear, validate, decide Exceptions, and may stop, and internal audit gives independent assurance (Operating Model 2.4). AICC has no administrative line over the people assigned to it, who stay in their own reporting line, or over the partners from the functions.
 
 ## 3. The Roles and their profiles
 
 | Role | Purpose | Main responsibilities | Authority | Reports in | Typical competence |
 | --- | --- | --- | --- | --- | --- |
-| Executive Sponsor | Holds the mandate and the funding | Appoints the AICC Lead and names the members of the AI Steering Committee; sets the Strategic Priorities, the Envelopes, the Guardrails, and the mix of Initiatives; decides the AI Risk Appetite Statement; approves published output; approves and issues the report to the Board Committee | Strategic Priorities, funding, the mix of Initiatives, the business case above a guardrail or across Domains and the decision after its MVP (continue, pivot, defer, or reject an Initiative), release of a Risk Tier 3 Solution, risks beyond appetite, retirement of a Service across Domains | The line of the Bank | Executive management |
+| Executive Sponsor | Holds the mandate and the funding | Appoints the AICC Lead and names the members of the AI Steering Committee; sets the Strategic Priorities, the Envelopes, the Guardrails, and the mix of Initiatives; decides the AI Risk Appetite Statement; approves published output; approves the Quarterly Report and decides whether to submit it to the Board Committee or the Board | Strategic Priorities, funding, the mix of Initiatives, the business case above a guardrail or across Domains and the decision after its MVP (continue, pivot, defer, or reject an Initiative), release of a Risk Tier 3 Solution, risks beyond appetite, retirement of a Service across Domains | The line of the Bank | Executive management |
 | AICC Lead | Leads AICC as lead engineer and architect | Owns every document and Record; takes items in; acts as the product owner of the Team while it has up to three people and accepts its Features and Capabilities; gives the final acceptance of the Team before a Solution is deployed to its first users; issues Service Agreements and Outcome Reports; assigns and reassesses the Risk Tier; sets the training; leads the AI Incident review; prepares the Quarterly Report, with the concentration on one provider | Taking an item into discovery, deferring or rejecting it at triage, pulling an Initiative and the limit on the Active Initiatives, the rank of the backlogs, the acceptance of Features and Capabilities as product owner, the final acceptance of the Team, standards, Templates, questions between Domains | The Executive Sponsor | Engineering and architecture, delivery, and governance |
 | Solution Engineer | Owns a Solution end to end with the Domains | Designs the architecture, builds, deploys, and runs a Solution, checks the work of others, coaches Domain Experts, and keeps work visible | How a Solution is designed and built; the approval of Features at Iteration Planning; the order in which the team pulls work within the agreed ranking | The AICC Lead for AICC; otherwise the own line | Engineering |
 | Domain Owner | Owns the results of AI adoption in a Domain | Names the Domain Expert; approves the business case within a Domain and below a guardrail, and the Solution Definition; approves the data classes; releases; judges the working Solution and accepts it as the requester; confirms the benefit; owns oversight in operation, disclosure, and contestability, and reviews monitoring and provider notices at each Iteration Review and Demo | The business case and the decision after the MVP within one Domain and below a guardrail, a Solution Definition, the acceptance of a Solution, retirement of a Solution | The line of the Domain | Business ownership |
@@ -84,7 +84,7 @@ The activities are grouped by family, from the direction of the unit, through th
 | **Adoption in the Domain and training** | | | | | | | | |
 | Scale adoption in the Domain and train colleagues | I | | C | C | A | R | | |
 | Set the training for a Solution, and note in the AI Registry when its users are trained | | | A | R | C | C | | |
-| Prepare a Proposal to adopt a Solution at scale; the owners and the Executive Sponsor decide on it | C | | A | R | C | | | |
+| Prepare a Proposal to adopt a Solution at scale; the Domain Owners concerned and the Executive Sponsor decide on it | C | | A | R | C | | | |
 | **Oversight, the Risk Tier, and the AI Registry** | | | | | | | | |
 | Assign the Risk Tier, and tell it to the Domain Owner (for a Solution that the AICC Lead built, the next row applies) | | | A | | I | | C | |
 | For a Solution that the AICC Lead built: approve its Solution Definition, assign its Risk Tier, and approve its use for a data class | A | | R | R | C | | C | |
@@ -94,11 +94,11 @@ The activities are grouped by family, from the direction of the unit, through th
 | Meet the requirements for oversight in operation, disclosure, and contestability | | | C | C | A | | C | |
 | Decide an Exception to a control requirement | | | C | | I | | A | |
 | Approve a Data Sharing Arrangement | A | C | R | | C | | C | |
-| Accept a risk beyond the AI Risk Appetite Statement, with a report to the Board Committee | A | C | R | | C | | C | |
+| Accept a risk beyond the AI Risk Appetite Statement, with notice to the Board Committee | A | C | R | | C | | C | |
 | Approve output published to the Board or to investors | A | | R | | C | | C | |
 | **The Quarterly Report and the records** | | | | | | | | |
 | Prepare the Quarterly Report | I | I | A | | C | | C | |
-| Approve and issue the report to the Board Committee | A | | R | | | | | |
+| Approve the Quarterly Report, and decide whether to submit it to the Board Committee or the Board | A | | R | | | | | |
 | Record the Steering Summary | A | C | R | | | | | |
 | Keep the Appointments Record and the Registry Snapshot | I | | A | R | | | | |
 
@@ -112,7 +112,7 @@ The following table states each body, who sits in it, and what it decides. A bod
 | AI Steering Committee | Advises the Executive Sponsor on the Portfolio and on conflicts between Domains | The heads of the business, technology, risk, and compliance functions, named in the Appointments Record | With the Steering | Nothing; it advises | Advice and dissent in the Steering Summary |
 | The Control Functions | Set the rules of their remit, clear, validate, decide Exceptions, and may stop | Model risk, compliance, information security, data protection, and legal, each through its Control Function Contact | When their remit is concerned, and at the quarterly risk check | Within their remit: the clearance of a business case, validation, raising the Risk Tier, a suspension, a stop, and an Exception; nobody overrides them | The Control Sign-Off |
 | Weekly Review | Runs the operating loop and the backlog care | The AICC Lead and the Team | Weekly | The AICC Lead adjusts the work, and raises to the monthly Steering what cannot be settled | The Dashboard and the working state |
-| Board Committee | Oversees AI for the Board | As the Board names it | As it meets | Its own matters; it receives the report of the Executive Sponsor | The Quarterly Report and its issuance block |
+| Board Committee | Oversees AI for the Board | As the Board names it | As it meets | Its own matters; it receives what the Executive Sponsor brings to it, and the notice of a major AI Incident and of a risk accepted beyond the appetite | Its own records; a Quarterly Report submitted to it, with its approval block |
 | Internal audit | Gives independent assurance, outside the reporting chain | The audit function | As it plans | Nothing on the work of AICC; it does not validate, release, or stop | Its own reports; read access to the Registry |
 
 ## 6. People: appointments, changes, and leavers

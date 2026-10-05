@@ -1,0 +1,25 @@
+<GraceChangeSpec graceVersion="4.0" status="approved">
+  <C-RU-TERMS-AND-RECORDS>
+    <Summary>Apply the owner's revised Russian term decisions across the Russian charter and portal, and align and rewrite the Russian Registry and Portfolio against their English sources in the same style.</Summary>
+    <Goals>
+      <Goal>Initiative is Russian again («инициатива», «паспорт инициативы», «постоянная инициатива», «структура инициатив»); Work Item is «задача»; workflow and value stream stay Latin (value stream explained at first use); all with correct agreement.</Goal>
+      <Goal>Every Russian Registry and Portfolio file is compared with its English source sentence by sentence, drift fixed, and rewritten under the style sheet (C-RU-NATURAL-ALIGNMENT/STYLE.md, revised 5 October 2026), keeping record identities, dates, decisions and states.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Authority: owner decisions of 5 October 2026; approvals and decision records not required during pre-production tuning.</Constraint>
+      <Constraint>English Registry and Portfolio are not changed by this bundle (C-BOARD-REPORTING-CLARITY may change the C-07 rows).</Constraint>
+      <Constraint>Structure rules of the style sheet apply; the build validates record identifiers and ISO dates in Registry and Portfolio translations.</Constraint>
+    </Constraints>
+    <NonGoals><NonGoal>Deployment; English edits.</NonGoal></NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>No «Initiative», «паспорт Initiative», «рабочий элемент», «рабочий процесс» in the workflow sense, or «поток создания ценности» as the replacement term remains in Russian sources.</Criterion>
+      <Criterion>All Registry and Portfolio Russian files pass the per-file checker; source, unit, scaffolding and site checks pass.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-SOURCE /><M-PORTAL-LOCALIZATION /><M-PORTAL-PROJECTION /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 portal/tools/check_sources.py</ExpectedCommand>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+    </VerificationIntent>
+  </C-RU-TERMS-AND-RECORDS>
+</GraceChangeSpec>

@@ -18,8 +18,8 @@ Along the life of an Initiative and a Solution, each Role is responsible, accoun
 | Operation, support, and the live review | Domain Owner for the results; Solution Engineer for a Service AICC runs | Solution Engineer; the IT function that operates | Platform Owner | AICC Lead |
 | Change and retirement | Domain Owner; Executive Sponsor for a Service across Domains | Solution Engineer | AICC Lead on the need for a new check | Control Function Contacts |
 | Adoption in the Domain and training | Domain Owner | Domain Expert; AICC Lead for the training | Solution Engineer | Executive Sponsor |
-| Oversight, the Risk Tier, and the AI Registry | AICC Lead | AICC Lead | Control Function Contacts | Executive Sponsor; Board Committee |
-| The Quarterly Report | Executive Sponsor | AICC Lead | Domain Owners; Control Function Contacts | Board Committee |
+| Oversight, the Risk Tier, and the AI Registry | AICC Lead | AICC Lead | Control Function Contacts | Executive Sponsor; Board Committee, of a major AI Incident |
+| The Quarterly Report | Executive Sponsor | AICC Lead | Domain Owners; Control Function Contacts | Board Committee or the Board, where the Executive Sponsor brings it |
 
 ## 2. How to read it
 

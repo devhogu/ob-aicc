@@ -1,0 +1,27 @@
+# Notes: batch 02 (terminology reference and translation map)
+
+## charter/ru/shared-technology-terminology.md
+
+- DRIFT — Lean Portfolio Management: English "The portal also writes it in lower case" (both forms occur); old Russian "Наименование пишется со строчной буквы" (a rule). Now: «На портале наименование также пишется со строчной буквы».
+- DRIFT — pilot: English "Plural form: pilots" was missing in Russian. Added «Во множественном числе — случаи пилотного применения».
+- DRIFT — feature set: old Russian «объединяет Features в составе одной Capability»; English has no "one". «одной» removed.
+- DRIFT — Change log 1.6 (Russian addition about the RU columns) cited clause «2.13», which does not exist; the provision is 2.12. Corrected to 2.12.
+- QUESTION — emergency change: English "reviews it within five working days" gives no start point; Russian keeps «не позднее пяти рабочих дней с даты изменения» (as before, matching the map row within N days). Alternative: drop «с даты изменения».
+- QUESTION — workflow: English Application says "Workflow is the fixed name in all language versions"; per owner decision the accepted Russian form is now «рабочий процесс» (also the part «Рабочие процессы»). Russian states that the name is rendered as «рабочий процесс» in the Russian version. See ENGLISH? below.
+- QUESTION — value stream: English "Fixed form"; accepted Russian form now «поток создания ценности» (owner decision). The Russian table does not state the usage class, so no text conflicts.
+- QUESTION — accepted forms changed to the style sheet term table (§4), beyond §3: cutover «переключение» → «переход» (vocabulary term «Переход»); evaluation set «тестовый набор данных» → «оценочный набор»; Platform guardrails «рамки платформы» → «защитные механизмы платформы» (and «Инвестиционные рамки» → «инвестиционные ограничения»); stakeholder «стейкхолдер» → «заинтересованное лицо; в общем значении — заинтересованная сторона»; MVP → «минимально жизнеспособный продукт (MVP); далее — MVP»; HR «кадровая функция» → «кадровое подразделение» (§3 «подразделение» rule); assistant and model accepted forms simplified because the capitalised AICC variant no longer differs.
+- QUESTION — events: Iteration Planning «планирование» → «планирование итерации»; Iteration Retrospective «ретроспектива» → «ретроспектива итерации»; Iteration Review and Demo «ревью и демонстрация» → «ревью и демонстрация итерации»; Daily Stand-up «планёрка» → «ежедневная планёрка». These match the concurrently rewritten Vocabulary (3.x «Мероприятие»), but the Solution Lifecycle Model still writes «Обзор и демонстрация Итерации» and Vocabulary writes the event list with «ревью». Someone should pick one form corpus-wide («обзор и демонстрация итерации» would parallel «обзор и демонстрация PI»).
+- QUESTION — Lean Portfolio Management accepted form «эффективное управление портфелем» kept, although the RU column and the lean entry use «бережливый». Alternative: «бережливое управление портфелем».
+- QUESTION — audit trail accepted form «аудиторский трейл» kept and now used consistently in prose (old prose mixed «аудиторский след»). The rest of the corpus uses «аудиторский след», which is the usual Russian; consider changing the accepted form.
+- QUESTION — Inspect and Adapt kept as a whole Latin name per this reference; earlier Vocabulary text used «Анализ и адаптация». Current Vocabulary uses Inspect and Adapt.
+- QUESTION — ticket / Epic / task entries cite the Vocabulary article «Рабочий элемент» (style sheet term), replacing «Рабочая задача»; workflow entry cites «Рабочий процесс»; Program Increment cites «Программный инкремент (PI)». These match the current Vocabulary headings.
+- ENGLISH? — workflow: "Workflow is the fixed name in all language versions" and "Fixed form" conflict with the owner decision to render it as «рабочий процесс» in Russian; similarly value stream "Fixed form". The English Application may need to say that a language version may render it.
+- ENGLISH? — 2.3 example "AI capabilities": the map rejects «возможности AI», so the Russian example keeps «применение AI», which is not a literal equivalent.
+
+## charter/ru/translation-en-ru-map.md
+
+- Version bumped to 0.3; «редакция» → «версия» in header, 1.1, 1.2, 5, 7.2 and the change log. Official requisite «(редакция от 20.06.2024)» in section 6 kept.
+- Added section 3 rows: iteration; Program Increment, PI; Initiative/Capability/Feature/Story/Task/Spike/Bug/Epic (Latin work-item names, gender, case through surrounding words); initiative (general sense → бизнес-инициатива); value stream; workflow; revision; language edition.
+- QUESTION — client function: row now allows only «подразделение-заказчик» and adds «функция-заказчик» as a rejected form (style sheet §3). This will flag existing «функция-заказчик» in other files.
+- QUESTION — AICC term capitalized in English row: Initiative removed from the lowercase examples (owner decision); the protected Latin work-item names added to the list of capitalised forms.
+- QUESTION — new rejected forms («паспорт инициативы», «постоянная инициатива», «лимит инициатив», «инкремент программы», «Program Increment (PI)», «за одну Iteration», «бэклог Iteration», «цикла Iteration», «поток ценности», «Редакция 1.6», «редакция 2.1», «русскоязычная редакция», «языковая редакция», «Workflow «Портфель и поставка услуг»», «указатель workflows») will raise the scan counts in files not yet rewritten; this is intended.

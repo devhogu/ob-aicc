@@ -2,7 +2,7 @@
 
 AICC has its own charter, which draws on the field's common body of knowledge: AI risk management frameworks, standards for managing AI as a system, principles agreed by governments, and model risk, service management, and agile and lean delivery practice. This page lists the sources that matter to the Bank, with a one-line description of each and the charter provisions that use them.
 
-This first edition is a curated list for orientation, maintained by the AICC Lead. Each source has a page under Reference; the page Regulators and acts covers laws and supervisors.
+This first edition is a curated list for orientation, maintained by the AICC Lead. A source linked in the tables below has its own page under Reference; the others, such as ISO/IEC 23894 and 22989 and the practices of agile delivery, service management, and internal control, are described only here. The page Regulators and acts covers laws and supervisors.
 
 How to read the list: a principle explains why and binds no one; a standard is a yardstick an auditor or partner may hold the Bank to, whether certifiable or not; a framework is a method to borrow; a practice is what the field does. The charter draws on these sources using the terminology established in the corpus, so the Bank's rule remains readable on its own and can be mapped to any of them when asked.
 
@@ -31,7 +31,7 @@ How to read the list: a principle explains why and binds no one; a standard is a
 | Source | Issued by | What it is | Where the charter uses it |
 | --- | --- | --- | --- |
 | [Supervisory guidance on model risk management (SR 11-7)](regulations/us-model-risk-and-consumer-guidance.md) | Board of Governors of the Federal Reserve System and Office of the Comptroller of the Currency, United States | The reference practice for independent validation, documentation, and monitoring of models in banks | The independence of the check and validation (AI Policy 3; Statement of Intent 7.3); the Control Sign-Off |
-| [Reports on artificial intelligence in the financial sector](regulations/financial-standard-setters-on-ai.md) | Financial Stability Board; Basel Committee on Banking Supervision; Bank for International Settlements | The standard-setters' view of the benefits, risks, and supervisory expectations of AI in finance | The AI Risk Appetite Statement (AICC Charter 5); the reporting to the Board Committee (AICC Charter 7) |
+| [Reports on artificial intelligence in the financial sector](regulations/financial-standard-setters-on-ai.md) | Financial Stability Board; Basel Committee on Banking Supervision; Bank for International Settlements | The standard-setters' view of the benefits, risks, and supervisory expectations of AI in finance | The AI Risk Appetite Statement (AICC Charter 5); the escalations and reporting that the Executive Sponsor brings to the Board Committee (AICC Charter 7) |
 
 ## 4. The practice of management and delivery
 

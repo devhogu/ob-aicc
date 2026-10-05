@@ -23,7 +23,7 @@
 
 | Principle | What it asks | What it looks like in a bank |
 | --- | --- | --- |
-| Accountability | A named person answers for each use of AI, its outcomes, and its risks; the AI itself holds no accountability; the organization is answerable for AI it buys as for AI it builds | An owner and a Risk Tier for every Solution; an AI Registry; reporting to the Board |
+| Accountability | A named person answers for each use of AI, its outcomes, and its risks; the AI itself holds no accountability; the organization is answerable for AI it buys as for AI it builds | An owner and a Risk Tier for every Solution; an AI Registry; reporting to the Executive Sponsor, who may bring it to the Board |
 | Fairness | AI treats customers and employees fairly, does not discriminate on protected grounds, and is tested for bias before release and monitored in use | Bias testing of credit and customer-facing models; monitoring of outcomes by group |
 | Transparency and explainability | People know when they interact with AI; decisions can be explained to those affected, to regulators, and to auditors in terms they can act on | Disclosure to customers; reason codes for decisions; documentation of each model |
 | Privacy and data protection | AI uses only the data it needs, keeps it within the rules of classification and residency, and protects it | Data classification deciding which data reaches which model; provider contracts; minimization |

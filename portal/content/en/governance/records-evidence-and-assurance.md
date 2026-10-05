@@ -28,12 +28,12 @@ flowchart LR
   L2 --> L3["Independent assurance<br/>internal audit<br/>independent assurance over<br/>the Portfolio and AICC"]
   L1 -.->|"evidence in<br/>the Registry"| L3
   L3 -.->|"findings into<br/>Risks and Issues"| L1
-  B(["Board Committee<br/>oversight through the<br/>Quarterly Report"]) -.-> L3
+  B(["Board Committee<br/>oversight; reports when<br/>the Sponsor brings them;<br/>escalations always"]) -.-> L3
 ```
 
 Figure 1: the three lines and the unit.
 
-4.1. AICC and the Domains are the first line: they own the risks of their work, decide, control, and record. The Control Functions stand independent of AICC: they set the rules of their remit, clear business cases, validate Solutions, decide Exceptions, and may stop; AICC is not a Control Function and does not validate its own work. Internal audit gives independent assurance over the Portfolio and over AICC, with read access to everything, and its findings enter the Risks and Issues Record like any deficiency. The Board Committee oversees through the Quarterly Report.
+4.1. AICC and the Domains are the first line: they own the risks of their work, decide, control, and record. The Control Functions stand independent of AICC: they set the rules of their remit, clear business cases, validate Solutions, decide Exceptions, and may stop; AICC is not a Control Function and does not validate its own work. Internal audit gives independent assurance over the Portfolio and over AICC, with read access to everything, and its findings enter the Risks and Issues Record like any deficiency. The Board Committee oversees for the Board: it receives the Quarterly Report or findings when the Executive Sponsor brings them, and it is always told of a major AI Incident and of a risk accepted beyond appetite.
 
 ## 5. What an auditor finds
 

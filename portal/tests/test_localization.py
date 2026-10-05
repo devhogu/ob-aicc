@@ -226,6 +226,15 @@ class PortalRendering(unittest.TestCase):
                 self.assertIn('>Операционная модель, раздел 4</a>', reference)
                 self.assertEqual(reference.count('<a '), 1)
                 self.assertIn('#c-5-4', ru.link_xrefs('Каталог документов, пункт 5.4', context))
+                reverse = ru.link_xrefs('в соответствии с разделом 4 Операционной модели', context)
+                self.assertIn('href="../../organization/operating-model/roles/#s-4"', reverse)
+                self.assertIn('>разделом 4 Операционной модели</a>', reverse)
+                self.assertEqual(reverse.count('<a '), 1)
+                self.assertIn('#c-5-4', ru.link_xrefs('(п. 5.4 Каталога документов)', context))
+                self.assertIn('#c-5-4', ru.link_xrefs('согласно пункту 5.4 Каталога документов', context))
+                listed = ru.link_xrefs('пункты 4.4, 4.5 и 4.10 Операционной модели', context)
+                self.assertIn('>пункты 4.4, 4.5 и 4.10 Операционной модели</a>', listed)
+                self.assertEqual(listed.count('<a '), 1)
                 fallback_page = ru.by_id['reference/vocabulary']
                 fallback = build.build_page(ru, fallback_page, 'ru')
                 self.assertIn('class="o-callout lang-note"', fallback)
@@ -240,9 +249,9 @@ class PortalRendering(unittest.TestCase):
 
 class RussianCorpusProjection(unittest.TestCase):
     def test_business_case_search_distinguishes_the_concept_from_the_stage(self):
-        for language, concept, stage in (
-            ('en', 'justification for an investment', 'Preparing and approving'),
-            ('ru', 'Обоснование инвестиции', 'Подготовка и одобрение'),
+        for language, concept, stage, label in (
+            ('en', 'justification for an investment', 'Preparing and approving', 'business case'),
+            ('ru', 'Обоснование инвестиции', 'Подготовка и одобрение', 'бизнес-кейс'),
         ):
             with self.subTest(language=language):
                 site = build.Site(argparse.Namespace(no_diagrams=True), language)
@@ -251,7 +260,7 @@ class RussianCorpusProjection(unittest.TestCase):
                 rendered = build.build_page(site, page, language)
                 hits = [row for row in build.search_index(site, language)
                         if '/reference/vocabulary/#' in row['u']
-                        and row['h'].lower().startswith('business case')]
+                        and row['h'].lower().startswith(label)]
                 self.assertEqual(len(hits), 2)
                 self.assertEqual(len({row['u'] for row in hits}), 2)
                 self.assertEqual(len({row['h'] for row in hits}), 2)
@@ -339,7 +348,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('AICC-MND-02-RU', charter)
         self.assertNotIn('class="o-callout lang-note"', charter)
         strategy = build.build_page(site, site.by_id['about/strategy'], 'ru')
-        self.assertIn('<td lang="ru">Экспертные знания на месте выполнения работы;', strategy)
+        self.assertIn('<td lang="ru">Экспертные знания на рабочем месте;', strategy)
         self.assertNotIn('class="o-callout lang-note"', strategy)
         self.assertNotIn('&#x27;en&#x27;:', strategy)
         english = build.Site(argparse.Namespace(no_diagrams=True), 'en')
@@ -355,8 +364,8 @@ class RussianCorpusProjection(unittest.TestCase):
         site.diagram_code = dict(diagrams)
         site.svgs = {key: {'light': '<svg></svg>', 'dark': '<svg></svg>'} for key, _ in diagrams}
         decisions = build.build_page(site, site.by_id['organization/operating-model/decisions'], 'ru')
-        self.assertIn('aria-label="Рисунок 1: движение Управленческого решения."', decisions)
-        self.assertIn('<figcaption>Рисунок 1: движение Управленческого решения.</figcaption>', decisions)
+        self.assertIn('aria-label="Рисунок 1: движение управленческого решения."', decisions)
+        self.assertIn('<figcaption>Рисунок 1: движение управленческого решения.</figcaption>', decisions)
         controls = build.build_page(site, site.by_id['governance/controls'], 'ru')
         self.assertIn('AICC-ORG-01-RU', controls)
         self.assertIn('Операционная модель: Контрольные процедуры', controls)
@@ -369,8 +378,8 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertEqual(build.nav_title(site, site.by_id['governance/control-loops']), 'Операционная модель')
         profile = build.build_page(site, site.by_id['governance/controls/c-04'], 'ru')
         self.assertNotIn('class="o-callout lang-note"', profile)
-        self.assertIn('Документы сохраняют согласованность и действующий статус', profile)
-        self.assertIn('Проверить отчёт о проверке', profile)
+        self.assertIn('Документы согласованы между собой и действуют', profile)
+        self.assertIn('Изучить отчёт о пересмотре', profile)
         # Multi-source indexes retain their own identity when one input is translated.
         self.assertEqual(site.by_id['organization/roles']['title'], 'Роли')
         self.assertEqual(site.by_id['reference/records-and-systems']['title'], 'Записи и системы')
@@ -387,7 +396,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('Руководит AICC как ведущий инженер и архитектор', role)
         self.assertIn('<th>Деятельность</th>', role)
         self.assertIn('Операционная модель 4.2</a>', role)
-        self.assertIn('Назначить Категорию риска и сообщить её Владельцу Домена', role)
+        self.assertIn('Присвоить категорию риска и сообщить её владельцу домена', role)
         self.assertNotIn('class="o-callout lang-note"', role)
         self.assertNotIn('<dd lang="en">', role)
         guide = site.by_id['organization/organization-guide']
@@ -395,9 +404,9 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('Распределение ответственности', tabs)
         self.assertNotIn('Who is responsible for what', tabs)
         self.assertEqual(site.by_id['governance/unit-governance-workflow/events-and-sequences']['title'],
-                         'Workflow: Управление подразделением: События и последовательности')
+                         'Workflow «Управление подразделением»: События и последовательности')
         rendered = build.build_page(site, guide, 'ru')
-        self.assertIn('<p class="o-lead" lang="ru">Роли, профили, RACI и кадровые записи</p>', rendered)
+        self.assertIn('<p class="o-lead" lang="ru">Роли, профили, матрица RACI и кадровые записи</p>', rendered)
 
     def test_reader_can_find_a_late_glossary_term_and_open_its_definition(self):
         site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
@@ -461,12 +470,12 @@ class RussianCorpusProjection(unittest.TestCase):
         template = build.build_page(site, site.by_id['knowledge-base/acceptance-checklist'], 'ru')
         copied = re.search(r'<script type="text/markdown" id="tpl-src">(.*?)</script>', template, re.S)[1]
         self.assertTrue(copied.startswith('# Контрольный лист приёмки'))
-        self.assertIn('Пункт «Не выполнено» останавливает Выпуск', copied)
+        self.assertIn('При наличии невыполненного пункта выпуск не допускается', copied)
         self.assertNotIn('```yaml', copied)
         self.assertIn('AICC-TPL-13-RU', template)
         self.assertNotIn('class="o-callout lang-note"', template)
         outline = build.build_page(site, site.by_id['about/charter-outline'], 'ru')
-        description = 'Мероприятия циклов по неделям, Итерациям и PI, без дат'
+        description = 'Мероприятия циклов по неделям, итерациям и PI, без дат'
         self.assertIn('<span lang="ru"> &mdash; ' + description, outline)
         # All authored explanations now come from reviewed Russian sources.
         self.assertNotIn('<span lang="en"> &mdash; ', outline)

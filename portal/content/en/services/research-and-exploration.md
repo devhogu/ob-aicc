@@ -4,7 +4,7 @@ AICC watches the field so that the Bank does not have to: the models, the platfo
 
 ## 1. What it is
 
-1.1. The category covers a regulatory watch that digests the circulars and the acts of the bodies the Bank answers to; a technology watch on models, platforms, and methods; exploration of what matters in trials, as Experiments in the Lab; the maintenance of the Industry body of knowledge and the Regulators and acts pages of this site; and partnering with other organizations that adopt AI, with providers, and with the professional bodies of the field.
+1.1. The category covers a regulatory watch that digests the circulars and the acts of the bodies the Bank answers to; a technology watch on models, platforms, and methods; exploration of what matters in trials, as Experiments in the Lab; the maintenance of the Standards and frameworks and the Regulators and acts pages of this site; and partnering with other organizations that adopt AI, with providers, and with the professional bodies of the field.
 
 ## 2. Examples of what a function asks for
 
@@ -14,7 +14,7 @@ The following are examples that illustrate the category, not a list of commitmen
 - A technology watch on models, platforms, and methods, with what it means for the Bank
 - A trial of a platform, a model, or a concept, as an Experiment, with its write-up
 - A provider or partner relation prepared for the Bank, checked with the Control Function Contacts
-- The Industry body of knowledge and the Regulators and acts pages kept current
+- The Standards and frameworks and the Regulators and acts pages kept current
 
 ## 3. What the function receives
 

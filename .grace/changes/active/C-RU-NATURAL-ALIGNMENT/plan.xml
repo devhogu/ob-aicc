@@ -1,0 +1,98 @@
+<GraceChangePlan graceVersion="4.0" status="approved">
+  <C-RU-NATURAL-ALIGNMENT>
+    <IntentSummary>Settle the Russian rules first (terminology, translation map, lowercase defined terms), then compare and rewrite the Russian sources in batches from the governing documents outward to the portal pages, rebuilding and checking after each batch, and promote the result to a branch of the deployment repository.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist><Value>charter/ru/shared-technology-terminology.md</Value></MustExist>
+      <MustExist><Value>charter/ru/translation-en-ru-map.md</Value></MustExist>
+      <MustExist><Value>charter/ru/documents/vocabulary.md</Value></MustExist>
+      <MustExist><Value>portal/tools/localization.py</Value></MustExist>
+      <MustPassCommand><Command>sha256sum --check .grace/changes/active/C-RU-NATURAL-ALIGNMENT/protected-files.sha256</Command></MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify><Module>M-PORTAL-SOURCE</Module></MustVerify>
+      <MustPassCommand><Command>sha256sum --check .grace/changes/active/C-RU-NATURAL-ALIGNMENT/protected-files.sha256</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_sources.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal-scaffolding/check.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check.py --idempotent</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope><None /></DurableScope>
+    <ObservedWriteScope>
+      <Glob>charter/ru/**</Glob>
+      <Glob>portal/content/ru/**</Glob>
+      <File>portal/content/authored.json</File>
+      <File>portal/messages/ru.json</File>
+      <File>portal/translation-source.json</File>
+      <Glob>portal/tools/**</Glob>
+      <Glob>portal/tests/**</Glob>
+      <Glob>html/aicc/**</Glob>
+      <Glob>.grace/changes/active/C-RU-NATURAL-ALIGNMENT/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001>
+        <Title>Record the baseline and reconcile the stale comparison pins</Title>
+        <DependsOn />
+        <AcceptanceCriteria>
+          <Criterion>protected-files.sha256 lists every English source, Registry and Portfolio file in scope of the portal; translation-source.json pins for shared-technology-terminology.md, authored.json and sitemap.json are reconciled so check_sources.py passes before any rewrite.</Criterion>
+          <Criterion>A before-scan records rejected translation-map forms, Latin leakage and capitalised defined terms per file.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>python3 portal/tools/check_sources.py</Command><Evidence>baseline-scan.json in this bundle.</Evidence></Verification>
+      </T-001>
+      <T-002>
+        <Title>Settle the Russian rules</Title>
+        <DependsOn>T-001</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>Each translation map section 5 entry is reviewed, corrected where needed and moved into sections 3–4, or dropped with a reason; the map revision and history are updated.</Criterion>
+          <Criterion>The Russian Vocabulary and Style capitalisation rule (3.3, 3.7 and dependent wording) and the Russian terminology reference state lowercase defined terms; the change is recorded in their change logs and in the Russian Document Catalog.</Criterion>
+          <Criterion>The build's Russian document-name and cross-reference recognition accepts the new spelling; localization tests cover it.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>python3 -m unittest discover -s portal/tests</Command><Evidence>Map review dispositions.</Evidence></Verification>
+      </T-002>
+      <T-003>
+        <Title>Compare and rewrite the governing documents and charter introductions</Title>
+        <DependsOn>T-002</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The nine governing documents, the terminology reference, executive summary and charter README are compared sentence by sentence with English, drift corrected and prose rewritten; structure is unchanged.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>python3 portal/tools/check_sources.py</Command><Evidence>Per-file review notes.</Evidence></Verification>
+      </T-003>
+      <T-004>
+        <Title>Compare and rewrite guides, workflows and templates</Title>
+        <DependsOn>T-003</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>All guide, workflow and template files and their indexes follow the settled rules and wording of the governing documents; form fields and diagram topology are unchanged.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>python3 portal/tools/check_sources.py</Command><Evidence>Per-file review notes.</Evidence></Verification>
+      </T-004>
+      <T-005>
+        <Title>Compare and rewrite the portal pages and interface text</Title>
+        <DependsOn>T-003</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>All Russian portal pages by section, the Russian fields of authored.json and messages/ru.json are compared and rewritten; placeholders and keys are unchanged.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Command>python3 portal/tools/check_sources.py</Command><Evidence>Per-file review notes.</Evidence></Verification>
+      </T-005>
+      <T-006>
+        <Title>Consistency pass, rebuild and verify</Title>
+        <DependsOn>T-004, T-005</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The after-scan shows no remaining rejected forms in covered situations and consistent terms across the corpus; the full portal builds, all checks pass, a repeat build is identical, and changed Russian routes, search and cross-references are inspected.</Criterion>
+        </AcceptanceCriteria>
+        <Verification>
+          <Command>python3 -m unittest discover -s portal/tests</Command>
+          <Command>python3 portal-scaffolding/check.py</Command>
+          <Command>python3 portal/tools/check.py --idempotent</Command>
+          <Evidence>after-scan.json and browser inspection notes.</Evidence>
+        </Verification>
+      </T-006>
+      <T-007>
+        <Title>Promote to the deployment repository branch</Title>
+        <DependsOn>T-006</DependsOn>
+        <AcceptanceCriteria>
+          <Criterion>The generated html/aicc/ tree, the charter/en and charter/ru snapshot and both manifests are copied to the deployment repository branch with matching checksums; no server deployment is made.</Criterion>
+        </AcceptanceCriteria>
+        <Verification><Evidence>Manifest checksum verification in the deployment repository.</Evidence></Verification>
+      </T-007>
+    </ImplementationPlan>
+  </C-RU-NATURAL-ALIGNMENT>
+</GraceChangePlan>

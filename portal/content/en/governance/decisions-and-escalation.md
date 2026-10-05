@@ -29,7 +29,7 @@ Figure 1: the movement of a Decision.
 
 ## 3. The Control Functions decide within their remit
 
-3.1. A Control Function decides within its remit, and its validation or its stop is final for that remit; nobody overrides it. A disagreement goes to the head of that Control Function; the Executive Sponsor may raise it with executive management and does not set a validation or a stop aside. A risk beyond the AI Risk Appetite Statement may be accepted only by the Executive Sponsor, with a report to the Board Committee. The person who suspended a Solution lifts the suspension when the facts allow. These are the Control Functions of the Bank at work inside the unit's own decisions.
+3.1. A Control Function decides within its remit, and its validation or its stop is final for that remit; nobody overrides it. A disagreement goes to the head of that Control Function; the Executive Sponsor may raise it with executive management and does not set a validation or a stop aside. A risk beyond the AI Risk Appetite Statement may be accepted only by the Executive Sponsor, who tells the Board Committee without waiting for any report. The person who suspended a Solution lifts the suspension when the facts allow. These are the Control Functions of the Bank at work inside the unit's own decisions.
 
 ## 4. Disagreement, conflict, and record
 

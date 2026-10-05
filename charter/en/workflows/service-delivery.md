@@ -17,7 +17,7 @@ Figure 1 shows the levels and how each one is broken into the next.
 ```mermaid
 flowchart TB
   T["Strategic Priority: a strategic theme set with the Board"] --> I["Initiative: a business program, long-term, held in the Portfolio Backlog"]
-  I -->|after the decision to continue| E["Capability: a capability, runs over one or more PIs, held in the Program Backlog"]
+  I -->|after the decision to continue| E["Capability: a capability of a Solution, delivered over one or more PIs, held in the Program Backlog"]
   E -->|broken into| F["Feature: closes within one PI, worked in the Iteration Backlog"]
   I -->|Standing Initiative: run-rate Feature within one Iteration| F
   F -->|broken into| W["Work Item: a task of the Team"]

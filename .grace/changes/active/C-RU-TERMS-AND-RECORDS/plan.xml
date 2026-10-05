@@ -1,0 +1,30 @@
+<GraceChangePlan graceVersion="4.0" status="approved">
+  <C-RU-TERMS-AND-RECORDS>
+    <IntentSummary>After C-BOARD-REPORTING-CLARITY lands, sweep the Russian charter and portal for the revised term decisions in disjoint batches, rewrite the Russian Registry and Portfolio in parallel, then rebuild and verify.</IntentSummary>
+    <BaselineAssertions><MustPassCommand><Command>python3 portal/tools/check_sources.py</Command></MustPassCommand></BaselineAssertions>
+    <TargetAssertions>
+      <MustPassCommand><Command>python3 portal/tools/check_sources.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check.py --idempotent</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope><None /></DurableScope>
+    <ObservedWriteScope>
+      <Glob>charter/ru/**</Glob>
+      <Glob>portal/content/ru/**</Glob>
+      <File>portal/content/authored.json</File>
+      <File>portal/messages/ru.json</File>
+      <Glob>portal/tools/**</Glob>
+      <Glob>portal/tests/**</Glob>
+      <Glob>registry/ru/**</Glob>
+      <Glob>portfolio/ru/**</Glob>
+      <Glob>html/aicc/**</Glob>
+      <Glob>.grace/changes/active/C-RU-TERMS-AND-RECORDS/**</Glob>
+      <Glob>.grace/changes/active/C-RU-NATURAL-ALIGNMENT/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001><Title>Term sweep of Russian charter and portal</Title><DependsOn /><AcceptanceCriteria><Criterion>Revised terms applied with correct agreement; per-file checker OK.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check_sources.py</Command></Verification></T-001>
+      <T-002><Title>Registry and Portfolio Russian rewrite</Title><DependsOn /><AcceptanceCriteria><Criterion>All files compared and rewritten; identities and dates kept; per-file checker OK.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check_sources.py</Command></Verification></T-002>
+      <T-003><Title>Rebuild, verify, report</Title><DependsOn>T-001, T-002</DependsOn><AcceptanceCriteria><Criterion>All checks pass; report updated.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check.py --idempotent</Command></Verification></T-003>
+    </ImplementationPlan>
+  </C-RU-TERMS-AND-RECORDS>
+</GraceChangePlan>

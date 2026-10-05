@@ -97,7 +97,7 @@ Figure 3: the flow of the month.
 - The PI Planning sets the intent and the direction of the next PI.
 - The AICC Lead drafts the Quarterly Report from the data of the PI Review and Demo and brings it to the quarterly Steering.
 - The quarterly Steering takes the Quarterly Report and the four signals of each Service, decides on each Active Initiative and on the transition of a Service that the reading calls for, takes the quarterly risk check, confirms the Maturity Level, and confirms the PI Objectives and the Roadmap.
-- The Executive Sponsor approves the Quarterly Report at the quarterly Steering and issues it to the Board Committee.
+- The Executive Sponsor approves the Quarterly Report at the quarterly Steering and decides whether to submit it to the Board Committee or the Board. A submission is a choice of the Executive Sponsor, made when it is useful or when the Board asks, and is not due each quarter.
 - In the month that holds the IP week, the quarterly Steering is also the Steering of that month, and no separate monthly Steering is held, except in December.
 
 Figure 4 shows the flow of the IP week and the treatment of a day that is not available.
@@ -111,7 +111,7 @@ flowchart LR
   QR --> QS
   PP --> QS["Quarterly Steering<br/>decision on each Active Initiative,<br/>risk check, Maturity Level,<br/>PI Objectives and Roadmap confirmed,<br/>Quarterly Report approved"]
   QS --> WR["Closing<br/>Weekly Review"]
-  QS --> BC["Report to the<br/>Board Committee<br/>issued"]
+  QS --> BC["Report to the Board Committee<br/>or the Board, when the<br/>Executive Sponsor decides"]
   RULE["An event on a blocked or gray day<br/>moves to the working day before,<br/>never after"] -.-> PR
 ```
 

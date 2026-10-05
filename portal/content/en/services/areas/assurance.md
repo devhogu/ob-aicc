@@ -1,6 +1,6 @@
 # Assurance
 
-The rules, controls, and criteria of each use of AI stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported in the Quarterly Report to the Steering and the Board Committee; the Control Functions keep their own remit.
+The rules, controls, and criteria of each use of AI stated before the build, the assessments and evaluations before use, the Risk Tier of each Solution, and the oversight of the whole, reported in the Quarterly Report to the Steering, from which the Executive Sponsor may bring it to the Board Committee; the Control Functions keep their own remit.
 
 ## 1. The categories of the area
 

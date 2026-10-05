@@ -1,10 +1,10 @@
 # Governance
 
-Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank: who decides what and when a decision rises, the loops on which the unit plans, acts, checks, and corrects, the controls an auditor can test and the evidence each leaves, and the chain of reporting that reaches the Board. This course explains it in seven parts; the Operating Model is the rule and prevails.
+Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank: who decides what and when a decision rises, the loops on which the unit plans, acts, checks, and corrects, the controls an auditor can test and the evidence each leaves, and the chain of reporting to the Executive Sponsor, which reaches the Board when the Executive Sponsor brings a matter to it. This course explains it in seven parts; the Operating Model is the rule and prevails.
 
 ## 1. One picture
 
-1.1. Figure 1 shows governance as one system: decisions taken where the facts are and rising only on stated conditions; five control loops on the Steerings and the Weekly Review; controls that leave evidence in the Registry; and reporting from the Teams through the AICC Lead and the Steering to the Board Committee, with the Control Functions beside it and internal audit above it.
+1.1. Figure 1 shows governance as one system: decisions taken where the facts are and rising only on stated conditions; five control loops on the Steerings and the Weekly Review; controls that leave evidence in the Registry; and reporting from the Teams through the AICC Lead to the Steering, which the Executive Sponsor chairs and from which the Executive Sponsor may bring a matter to the Board Committee or the Board, with the Control Functions beside it and internal audit above it.
 
 ```mermaid
 flowchart TB
@@ -19,7 +19,7 @@ flowchart TB
     direction LR
     D["Decisions<br/>taken where the facts are;<br/>rise on four conditions;<br/>Decision Log"] --> C["Controls<br/>thirty-two, each with rule,<br/>owner, timing, evidence;<br/>Control Matrix"]
     C --> R["Evidence<br/>closed, dated records<br/>in the Registry;<br/>Registry Snapshot"]
-    R --> B["Reporting<br/>Teams, AICC Lead, Steering,<br/>Board Committee;<br/>Quarterly Report"]
+    R --> B["Reporting<br/>Teams, AICC Lead, Steering;<br/>Quarterly Report; Board Committee<br/>when the Sponsor brings it"]
     CF(["Control Functions<br/>beside: validate,<br/>may stop"]) -.-> C
     IA(["Internal audit<br/>above: independent<br/>assurance"]) -.-> R
   end
@@ -34,7 +34,7 @@ Figure 1: the governance of the unit as one system.
 
 ## 3. The industry practice it follows
 
-3.1. The model follows the common practice of internal control and assurance in a bank, in general terms: three lines: a first line that owns the risks of its work; the Control Functions, independent, which set the rules of their remit, validate, and may stop; and internal audit, which gives independent assurance; control objectives with owners, timing, and evidence; a management system that plans, operates, checks, and improves on a cycle; decision rights written down, with escalation on stated conditions; and reporting that reaches the board with incidents and risks beyond appetite reported without delay. For AI it follows the management-system standard and the risk framework recorded in the Industry body of knowledge, and the expectations of the financial standard-setters on model risk, third parties, and resilience.
+3.1. The model follows the common practice of internal control and assurance in a bank, in general terms: three lines: a first line that owns the risks of its work; the Control Functions, independent, which set the rules of their remit, validate, and may stop; and internal audit, which gives independent assurance; control objectives with owners, timing, and evidence; a management system that plans, operates, checks, and improves on a cycle; decision rights written down, with escalation on stated conditions; and reporting to management that can reach the board, with major incidents and risks beyond appetite reported to it without delay. For AI it follows the management-system standard and the risk framework recorded in Standards and frameworks, and the expectations of the financial standard-setters on model risk, third parties, and resilience.
 
 ## 4. How to read this course
 

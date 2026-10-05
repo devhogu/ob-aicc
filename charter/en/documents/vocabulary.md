@@ -218,8 +218,8 @@ revised: 2026-10-04
 | Short forms | PI is Program Increment, and IP is the Innovation and Planning week. PIQ1 to PIQ4 name the PIs of a year, I01 to I12 its Iterations, and W1 to W5 the weeks of an Iteration. Iteration is never shortened to IT, because IT means information technology |  |
 | Event | A meeting of a loop, with a stated intent: Daily Stand-up, Weekly Planning, Weekly Review, Backlog Refinement, Iteration Planning, Iteration Review and Demo, Iteration Retrospective, PI Review and Demo, Inspect and Adapt, PI Planning, Innovation, and Steering |  |
 | Steering Summary | The evidence record of one Steering: attendance, advice, Decisions, and actions | Minutes serve as the Steering Summary when they record the required attendance, advice, Decisions and actions. |
-| Quarterly Report | The report of the AICC Lead on the Portfolio, benefits, risks, and Maturity Levels, which goes to the quarterly Steering and is drafted from the data of the PI Review and Demo |  |
-| Report to the Board Committee | The Quarterly Report as the Executive Sponsor approves and issues it to the Board Committee |  |
+| Quarterly Report | The report of the AICC Lead on the Portfolio, benefits, risks, and Maturity Levels, which goes to the Executive Sponsor at the quarterly Steering and is drafted from the data of the PI Review and Demo. The Executive Sponsor approves it and may bring it to the Board Committee or the Board |  |
+| Report to the Board Committee | A report, usually the Quarterly Report, that the Executive Sponsor decides to submit to the Board Committee or the Board |  |
 | quarterly risk check | The check of the assurance loop at the quarterly Steering of the open Risks and Issues, the open Exceptions, the Risk Tier reassessments that are due, each Solution of Risk Tier 3, and the reliance on providers and on the Platform Owner |  |
 | Finding | A deviation found by a check of the documents, by an audit, or by a supervisor |  |
 | Activation | The decision that makes a document active | Approval is not by itself Activation. The Document Catalog specifies the authorized act, status and recording that bring a document into effect. |

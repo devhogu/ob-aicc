@@ -9,7 +9,7 @@ revised: 2026-10-03
 
 # Quarterly Report
 
-**Template.** The AICC Lead prepares the report each quarter for the quarterly Steering. The Executive Sponsor approves it. It carries no figures of the Bank, no data, and no code; figures are given by reference.
+**Template.** The AICC Lead prepares the report each quarter for the quarterly Steering. The Executive Sponsor approves it and decides whether to submit it to the Board Committee or the Board; a submission is optional and is not due each quarter. It carries no figures of the Bank, no data, and no code; figures are given by reference.
 
 | Field | Entry |
 | --- | --- |
@@ -102,12 +102,12 @@ revised: 2026-10-03
 
 [Decisions for the Executive Sponsor, with the recommendation and the facts.]
 
-## Issuance
+## Approval
 
 | Field | Entry |
 | --- | --- |
 | Approved by | [Executive Sponsor] |
-| Date issued | [date] |
-| Sent to | [Board Committee] |
+| Date approved | [date] |
+| Submitted to, where the Executive Sponsor decides | [Board Committee or Board, with the date; or: not submitted] |
 | Version | [number] |
 | Source and date of each figure | [by reference] |

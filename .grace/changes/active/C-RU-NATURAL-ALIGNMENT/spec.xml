@@ -1,0 +1,45 @@
+<GraceChangeSpec graceVersion="4.0" status="approved">
+  <C-RU-NATURAL-ALIGNMENT>
+    <Summary>Realign the Russian charter and portal sources with the current English sources and rewrite them from word-for-word renderings into natural, formal Russian, applying the shared terminology and a reviewed translation map.</Summary>
+    <Goals>
+      <Goal>Every Russian charter and portal source states the same rules, rights, conditions, limits, periods, quantities and facts as its current English counterpart; sentence-level drift found by comparison is corrected.</Goal>
+      <Goal>Russian prose reads as native formal institutional Russian (normative, business, finance and IT register), not as a calque of English word order, nominal chains or capitalisation.</Goal>
+      <Goal>The Russian edition of Shared Business and Technology Terminology and the Russian translation map are applied consistently across every in-scope source; accepted forms replace stray Latin and rejected forms.</Goal>
+      <Goal>Russian defined terms are written in lowercase, as Russian usage requires, except proper names, document titles and fixed international names.</Goal>
+      <Goal>The translation map grows into a complete reference: section 5 entries are reviewed and moved into sections 3–4 or dropped, and new findings from the rewrite are added.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Authority: the owner requested alignment of the Russian corpus and portal with the recently updated English and a natural rewrite of the Russian text, and decided on 4 October 2026 that (a) Russian defined terms are written in lowercase, (b) translation map section 5 entries are reviewed and then approved or dropped before use, and (c) scope is the charter and the portal; Registry and Portfolio are excluded.</Constraint>
+      <Constraint>English sources are byte-identical to the start baseline. If comparison shows the English is the drifted side, the finding is reported to the owner, not fixed in English.</Constraint>
+      <Constraint>Preserve filenames, front matter fields, identifiers, numbered headings, clause numbers, table row and column order, empty cells, link targets, page: references, placeholders, JSON keys and Mermaid node and edge identities. Mermaid labels may be reworded.</Constraint>
+      <Constraint>Wording changes never change meaning: no decision right, obligation strength, condition, limit, period, status or quantity is added, removed or weakened. Normative force follows Russian legal drafting (present tense for duties of a named party, «не допускается» or «не вправе» for prohibitions) as the translation map sets.</Constraint>
+      <Constraint>Lowercasing defined terms is a style change of the Russian edition only. It is recorded in the Russian Vocabulary and Style rule, the Russian terminology reference and the translation map, and the build's Russian reference-name recognition is kept working for the new spelling.</Constraint>
+      <Constraint>Generated HTML is rebuilt from sources and never patched by hand. Unrelated portals, working-tree changes and installed skills remain unchanged.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Translate or restyle registry/ru or portfolio/ru; their capitalisation stays as is until a later change.</NonGoal>
+      <NonGoal>Change English sources, policy, decisions, operational states or approvals, or claim human review.</NonGoal>
+      <NonGoal>Deploy to the websvc server; promotion to the deployment repository is limited to a branch there.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>All 40 Russian charter files, all 117 Russian portal pages and the content index, the Russian fields of authored.json and messages/ru.json are compared sentence by sentence with their English sources and rewritten where needed; each has a recorded disposition.</Criterion>
+      <Criterion>No rejected («не: …») form of the approved translation map remains in a situation the map covers; Latin business case and other non-accepted Latin forms are gone from Russian prose.</Criterion>
+      <Criterion>Translation map section 5 is empty or contains only explicitly deferred entries with a reason; sections 3–4 hold the approved entries.</Criterion>
+      <Criterion>Structure checks show unchanged headings, clause numbers, table shapes, links and diagram topology against the English sources; source_sha256 values match the current English files.</Criterion>
+      <Criterion>Source, unit, scaffolding and generated-site checks pass; a repeat build is identical; changed Russian routes, search and cross-references are inspected in the rendered portal.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-PORTAL-SOURCE />
+      <M-PORTAL-LOCALIZATION />
+      <M-PORTAL-PROJECTION />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>sha256sum --check .grace/changes/active/C-RU-NATURAL-ALIGNMENT/protected-files.sha256</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_sources.py</ExpectedCommand>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal-scaffolding/check.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedEvidence>Per-file review inventory with drift findings and dispositions; rejected-form scan before and after; structure comparison; rendered-page inspection of changed Russian routes.</ExpectedEvidence>
+    </VerificationIntent>
+  </C-RU-NATURAL-ALIGNMENT>
+</GraceChangeSpec>

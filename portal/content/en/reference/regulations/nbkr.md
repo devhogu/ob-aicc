@@ -25,7 +25,7 @@ The central bank and the supervisor of the Bank. Its regulations govern how a ba
 
 ## 5. How the charter relates to it
 
-5.1. The Risk Tiers, the provider rules, and the AI Incident handling of the AI Policy, the AI Risk Appetite Statement of the Charter, and the reporting to the Board Committee are designed so that the Bank can show its supervisor how AI is governed; the Acts and compliance page states what the regulations require of a use of AI.
+5.1. The Risk Tiers, the provider rules, and the AI Incident handling of the AI Policy, the AI Risk Appetite Statement of the Charter, and the escalations and reporting that the Executive Sponsor brings to the Board Committee are designed so that the Bank can show its supervisor how AI is governed; the Acts and compliance page states what the regulations require of a use of AI.
 
 ## 6. Related pages
 

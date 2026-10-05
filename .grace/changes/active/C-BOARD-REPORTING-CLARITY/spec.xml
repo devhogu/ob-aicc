@@ -1,0 +1,35 @@
+<GraceChangeSpec graceVersion="4.0" status="approved">
+  <C-BOARD-REPORTING-CLARITY>
+    <Summary>Reframe reporting so that AICC reports to the Executive Sponsor and the Board or Board Committee receives reports and proposals when the Executive Sponsor brings them, keep the mandatory escalations, fix the English clarity issues found during the Russian alignment, and realign the Russian counterparts.</Summary>
+    <Goals>
+      <Goal>R1. AICC reports to the Executive Sponsor. Operational and tactical reporting (the Steerings, the measures, the Quarterly Report) goes to the Executive Sponsor, who chairs the Steering where the AI Steering Committee advises.</Goal>
+      <Goal>R2. The Executive Sponsor may bring the Quarterly Report, findings, the AI adoption strategy, and Proposals to adopt or change something at the scale of the Bank to the Board Committee or the Board, when the Executive Sponsor judges it useful or the Board asks. This is a possibility, not a fixed periodic duty; nothing requires a quarterly submission.</Goal>
+      <Goal>R3. Escalations stay mandatory: the Executive Sponsor tells the Board Committee of an AI Incident that the incident management of the Bank classifies as major and of each risk accepted beyond the AI Risk Appetite Statement, without waiting for any report; the Board Committee notes the AI Risk Appetite Statement and its changes.</Goal>
+      <Goal>R4. The Board oversees AI through the Board Committee (Statement of Intent 7.6, unchanged). The reporting chain runs Teams, AICC Lead, Steering (Executive Sponsor); it reaches the Board Committee or the Board when the Executive Sponsor brings a matter, and always for the escalations of R3.</Goal>
+      <Goal>R5. Control C-07 keeps its identifier and becomes "Approval of the Quarterly Report, and its submission to the Board Committee or the Board where the Executive Sponsor decides": AICC Lead prepares; Executive Sponsor approves and decides on submission; quarterly; evidence is the Quarterly Report with its approval block and, where made, the submission. The defined term "Report to the Board Committee" becomes "A report, usually the Quarterly Report, that the Executive Sponsor decides to submit to the Board Committee or the Board".</Goal>
+      <Goal>R6. Statement of Intent 12.2 no longer conflicts with the Charter: AICC reports progress, benefits, and risks to the Executive Sponsor each quarter at the quarterly Steering, where the AI Steering Committee advises, and the Executive Sponsor may bring them to the Board Committee.</Goal>
+      <Goal>Fix the English issues recorded in C-RU-NATURAL-ALIGNMENT/REPORT.md section 4 (ambiguous references, a missing "and", circular or leftover names, wrong link labels, a stray full stop, inconsistent backlog name) without changing rights, duties or measures.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Authority: the owner requested the reporting reframe and the English fixes on 5 October 2026, chose to keep the escalations mandatory, and stated that change logs, revisions and decision records are not needed during pre-production tuning.</Constraint>
+      <Constraint>Every changed English file is matched in Russian in the same pass, following the Russian style sheet, with source_sha256 refreshed; translation-source.json pins are refreshed for the changed English files.</Constraint>
+      <Constraint>Clause numbers, table rows and columns, control identifiers and diagram topology stay the same; a sentence may be reworded or a table cell changed.</Constraint>
+      <Constraint>Registry English and Russian change only where a record restates control C-07 or the reporting rule (control matrix, PI plan list); dates, identifiers and states stay.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>New revisions, change-log rows or decision records; deployment.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>No English or Russian source states a mandatory periodic report to the Board or Board Committee; R3 escalations remain wherever they were stated.</Criterion>
+      <Criterion>Each REPORT.md section 4 issue is fixed or recorded with a reason.</Criterion>
+      <Criterion>Source, unit, scaffolding and site checks pass; the build is repeatable.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-SOURCE /><M-PORTAL-LOCALIZATION /><M-PORTAL-PROJECTION /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 portal/tools/check_sources.py</ExpectedCommand>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal-scaffolding/check.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+    </VerificationIntent>
+  </C-BOARD-REPORTING-CLARITY>
+</GraceChangeSpec>

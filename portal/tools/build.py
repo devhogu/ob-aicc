@@ -441,6 +441,8 @@ class Site:
                         self.doc_names.update((alias, name) for alias in russian_reference_names(title))
         names = '|'.join(re.escape(name) for name in sorted(self.doc_names, key=len, reverse=True))
         self.xref = re.compile(r'\b(' + names + r')(?:\s*,\s*(?:раздел(?:ы|а|е|ов)?|пункт(?:ы|а|е|ов)?)\s+|\s+)(\d+(?:\.\d+)*)((?:\([a-z]\))?)')
+        # Russian order puts the number first: «пункт 4.4 Операционной модели», «раздел 4 Бизнес-модели».
+        self.xref_rev = re.compile(r'(?<![\w-])(?:раздел(?:ы|а|е|у|ом|ов)?|пункт(?:ы|а|е|у|ом|ов)?|[Пп]п?\.|[Рр]азд\.)\s+(\d+(?:\.\d+)*)((?:\([a-z]\))?)(?:(?:,\s*|\s+и\s+)\d+(?:\.\d+)*(?:\([a-z]\))?)*\s+(' + names + r')(?![\w-])')
 
     def combined_sources(self, paths):
         # Generated views require all their source fragments in the same language.
@@ -587,12 +589,21 @@ class Site:
         # Resolve local references only outside complete document references.
         # Otherwise «Операционная модель, раздел 4» could link «раздел 4»
         # to the current document and nest that link inside the document link.
+        def sub_rev(m):
+            href = self._target(self.doc_names[m.group(3)], m.group(1), ctx)
+            if not href:
+                return m.group(0)
+            return '<a class="xref" href="%s">%s</a>' % (href, m.group(0))
+        matches = [(m.start(), m.end(), sub, m) for m in self.xref.finditer(text)]
+        matches += [(m.start(), m.end(), sub_rev, m) for m in getattr(self, 'xref_rev', re.compile(r'(?!)')).finditer(text)]
         out = []
         end = 0
-        for match in self.xref.finditer(text):
-            out.append(LOCALXREF.sub(sub2, text[end:match.start()]))
-            out.append(sub(match))
-            end = match.end()
+        for start, stop, fn, match in sorted(matches, key=lambda x: (x[0], -x[1])):
+            if start < end:
+                continue
+            out.append(LOCALXREF.sub(sub2, text[end:start]))
+            out.append(fn(match))
+            end = stop
         out.append(LOCALXREF.sub(sub2, text[end:]))
         return ''.join(out)
 
@@ -737,7 +748,12 @@ def load_terms(site):
         if len(t) >= 3 and mean:
             terms[t] = mean if len(mean) <= 300 else mean[:297].rsplit(' ', 1)[0] + '...'
     site.terms = terms
-    site.term_re = re.compile(r'(?<![\w-])(' + '|'.join(re.escape(t) for t in sorted(terms, key=len, reverse=True)) + r')(?![\w-])')
+    # Russian terms are written in lowercase in running text; the table cell starts with a capital.
+    def alt(t):
+        if re.match(r'[А-ЯЁ][а-яё]', t):
+            return '[%s%s]' % (t[0], t[0].lower()) + re.escape(t[1:])
+        return re.escape(t)
+    site.term_re = re.compile(r'(?<![\w-])(' + '|'.join(alt(t) for t in sorted(terms, key=len, reverse=True)) + r')(?![\w-])')
 
 
 def link_terms(site, html_text, ctx, limit=40):
@@ -766,10 +782,11 @@ def link_terms(site, html_text, ctx, limit=40):
 
         def sub(m):
             t = m.group(1)
-            if t in seen or len(seen) >= limit:
+            key = t if t in site.terms else t[:1].upper() + t[1:]
+            if key in seen or len(seen) >= limit:
                 return t
-            seen.add(t)
-            return '<a class="term" href="%s#t-%s" data-tip="%s" data-tip-title="%s">%s</a>' % (base, slug(t), esc(site.terms[t]), esc(t), t)
+            seen.add(key)
+            return '<a class="term" href="%s#t-%s" data-tip="%s" data-tip-title="%s">%s</a>' % (base, slug(key), esc(site.terms[key]), esc(key), t)
         out.append(site.term_re.sub(sub, part))
     return ''.join(out)
 
@@ -1659,7 +1676,7 @@ def change_history(site, p, lang):
     main = '<h1>%s</h1><div class="o-table-wrap" role="region" tabindex="0" aria-label="%s"><table><thead><tr><th>Document</th><th>%s</th><th>%s</th><th>Change</th><th>Decision</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
         esc(p['title']), esc(p['title']), esc(m['revision']), esc(m['revised']), ''.join(rows), prev_next(site, p, lang))
     if lang == 'ru':
-        for en, ru in [('Document', 'Документ'), ('Change', 'Изменение'), ('Decision', 'Решение')]:
+        for en, ru in [('Document', 'Документ'), ('Change', 'Изменение'), ('Decision', 'Управленческое решение')]:
             main = main.replace('<th>' + en + '</th>', '<th>' + ru + '</th>')
     return layout(site, p, lang, main, [])
 
@@ -1689,13 +1706,13 @@ def records_page(site, p, lang):
                ('Service Management', 'Requests and incidents, including AI Incidents')]
     if lang == 'ru':
         systems = [
-            ('Реестр', 'Решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие записи в виде закрытых и датированных выписок. Хранятся в корпоративной папке: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
-            ('Jira и Confluence', 'Рабочее состояние Бэклога программы, досок и Рабочих задач, а также рабочие документы — с момента переноса текущего состояния работы'),
-            ('Service Management', 'Запросы и инциденты, включая Инциденты AI'),
+            ('Реестр', 'Управленческие решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие записи в виде неизменяемых датированных выгрузок. Хранятся на корпоративном сетевом ресурсе: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
+            ('Jira и Confluence', 'Рабочее состояние бэклога программы, досок и задач, а также рабочие документы — с момента перехода рабочего состояния в эти системы'),
+            ('Service Management', 'Запросы и инциденты, в том числе инциденты AI'),
         ]
     srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i == 0 else esc(b)) for i, (a, b) in enumerate(systems))
     intro = {'en': 'This site is static. It states the rules and the forms of AICC and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
-             'ru': 'Этот сайт статичен. Он излагает правила и формы AICC и не содержит текущих записей. В таблице перечислены записи по их шаблонам с указанием места хранения и контролей, которые они подтверждают.'}[lang]
+             'ru': 'Портал статичен: он излагает правила и формы AICC и не содержит текущих записей. В таблице записи перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
     main = '<h1>%s</h1><p class="o-lead">%s</p><h2>Systems</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Systems"><table><tbody>%s</tbody></table></div><h2>Records</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Records"><table><thead><tr><th>Template</th><th>%s</th><th>%s</th><th>Controls</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
         esc(p['title']), esc(intro), srows, esc(m['used_when']), esc(m['kept_in']), ''.join(rows), prev_next(site, p, lang))
     if lang == 'ru':
