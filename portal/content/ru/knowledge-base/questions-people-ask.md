@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/knowledge-base/questions-people-ask.md
-source_sha256: 958060f23d3dfbf2f69995a0fda9dc5b1affabe0a9bf69f4732aa9ad6d7b8f0a
+source_sha256: c13bf97c8906fad04bf81c0df5a3cb9381e43edea094990d0442e0214f6b9010
 translation_status: reviewed
 ```
 

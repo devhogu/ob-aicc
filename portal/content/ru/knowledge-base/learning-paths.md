@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/knowledge-base/learning-paths.md
-source_sha256: 653dc7d18d2b1dbb58c69a91c97ba70f117b913a54868cfb49a2fbfdbec4842f
+source_sha256: de9b60fcfe5976037698acf555d1657c35f7e65d09daacf26f2ec091b987da2b
 translation_status: reviewed
 ```
 

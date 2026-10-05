@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/knowledge-base/templates-and-forms.md
-source_sha256: 51c7b601bd7053d8c7c78cb0352bea5b3cafb689c20371ae91af29751d313a5e
+source_sha256: 6c74edc4000f20e55aed4d417e1992b64bc24e6b7dfe75af1bc15b50a176756c
 translation_status: reviewed
 ```
 
