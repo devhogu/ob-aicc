@@ -69,7 +69,7 @@ not required (pre-production tuning); do not add Registry records.
 
 Bank Банк · Board Совет директоров · Board Committee Комитет Совета директоров · Data Sharing Arrangement
 соглашение об обмене данными · Role роль · Hat дополнительная обязанность · Executive Sponsor куратор AICC ·
-Holder исполнитель роли · AICC Lead руководитель AICC · AICC Team команда AICC · Solution Engineer инженер
+Holder исполнитель роли · Chief Executive Officer (position) председатель Правления Банка — a position; it fills the role куратор AICC, never replaces the role name · AICC Lead руководитель AICC · AICC Team команда AICC · Solution Engineer инженер
 решений · AI Steering Committee Управляющий комитет по AI · Steering управляющее совещание (ежемесячное,
 ежеквартальное, ежегодное управляющее совещание) · Domain домен · Product owner владелец продукта · Domain
 Owner владелец домена · Domain Expert эксперт домена · Control Function контрольная функция · Three lines
