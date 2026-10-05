@@ -1025,7 +1025,7 @@ def layout(site, p, lang, main_html, outline):
   <a class="o-identity" href="{home}"><img src="{A}/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>{esc(m['site_name'])}</span></a>
   <span class="header-scope">{esc(m['header_scope'])}</span>
   <div class="o-search" role="search"><label class="o-sr-only" for="q">{esc(m['search_label'])}</label><input id="q" type="search" autocomplete="off" placeholder="{esc(m['search_placeholder'])}" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
-  <div class="o-tools"><nav class="lang-switch" aria-label="{esc(m['language_label'])}">{''.join(sw)}</nav><button id="theme-switch" type="button">{esc(m['theme_to_dark'])}</button></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="{esc(m['language_label'])}">{''.join(sw)}</nav><button id="theme-switch" type="button" class="theme-switch" aria-label="{esc(m['theme_to_dark'])}" title="{esc(m['theme_to_dark'])}"><span class="ts-moon">{icon('moon')}</span><span class="ts-sun">{icon('sun')}</span></button></div>
 </header>
 <div class="o-frame">
   <aside class="o-nav"><details open><summary>{esc(m['nav_summary'])}</summary><nav aria-label="{esc(m['nav_label'])}">{''.join(nav)}</nav></details>

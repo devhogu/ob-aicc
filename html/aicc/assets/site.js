@@ -5,7 +5,12 @@
   var root = document.documentElement;
   var themeBtn = document.getElementById('theme-switch');
   function label() {
-    if (themeBtn) themeBtn.textContent = root.dataset.theme === 'dark' ? d.tLight : d.tDark;
+    // The button shows an icon (moon in the light theme, sun in the dark one); the words are its accessible name.
+    if (themeBtn) {
+      var t = root.dataset.theme === 'dark' ? d.tLight : d.tDark;
+      themeBtn.setAttribute('aria-label', t);
+      themeBtn.title = t;
+    }
   }
   if (themeBtn) {
     label();
