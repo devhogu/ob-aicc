@@ -372,7 +372,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertNotIn('class="o-callout lang-note"', controls)
         self.assertIn('<table id="ctl" lang="ru">', controls)
         tabs = build.parts_html(site, site.by_id['governance/controls'], 'ru')
-        self.assertIn('Основные положения', tabs)
+        self.assertIn('Общие положения', tabs)
         self.assertIn('Циклы управления', tabs)
         self.assertIn('Записи и подтверждающие материалы', tabs)
         self.assertEqual(build.nav_title(site, site.by_id['governance/control-loops']), 'Операционная модель')
