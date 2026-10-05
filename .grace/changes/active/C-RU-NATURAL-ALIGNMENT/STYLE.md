@@ -97,28 +97,28 @@ Backlog бэклог итерации · Portfolio Kanban канбан порт�
 портфелем · Funnel воронка · MVP минимально жизнеспособный продукт (MVP), далее MVP · Leading indicator
 опережающий индикатор · Acceptance criteria критерии приёмки · Value hypothesis гипотеза ценности · Value
 stream value stream · Program Kanban канбан программы · Class of service класс
-обслуживания · Lane дорожка · Team команда · Teams Record запись о командах · Program Increment программный
+обслуживания · Lane дорожка · Team команда · Teams Record состав команд · Program Increment программный
 инкремент (PI) · Iteration итерация · Innovation and Planning week неделя инноваций и планирования (неделя
-IP) · PI Objective цель PI · Dependency зависимость · Calendar календарь · Cadence расписание работы (not «ритм работы»; descriptive «в едином ритме» stays) · Blocked day
+IP) · PI Objective цель PI · Dependency зависимость · Calendar календарь (not «запись о календаре») · Cadence расписание работы (not «ритм работы»; descriptive «в едином ритме» stays) · Blocked day
 нерабочий день · gray day день ограниченной доступности · AICC portal портал AICC · Operating portal
 операционный портал · Corporate share корпоративный сетевой ресурс · Dashboard панель показателей · Stage
 стадия · Environment of use среда использования · Check проверка · Checker проверяющий · Validation
 валидация · Suspension and stop приостановление и остановка · Governed source контролируемый источник ·
 Acceptance приёмка · Release выпуск · First users первые пользователи · Release block раздел о выпуске ·
 Emergency change экстренное изменение · Limit on Work in Progress WIP-лимит · WIP WIP · Risk Tier категория
-риска · AI Registry реестр AI · AI Incident инцидент AI · Severity степень серьёзности · Exception
+риска · AI Registry реестр AI-решений · AI Incident инцидент AI · Severity степень серьёзности · Exception
 отступление от требований (далее в том же пункте или абзаце — отступление; не «исключение») · Deficiency недостаток контроля · Control status статус контрольной процедуры · Accepted limit
-принятое ограничение · Risks and Issues Record запись о рисках и проблемах · AI Risk Appetite Statement
+принятое ограничение · Risks and Issues Record реестр рисков и проблем · AI Risk Appetite Statement
 Заявление о риск-аппетите в отношении AI (title) · Maturity Level уровень зрелости · Measure показатель ·
 Metric метрика · KPI KPI · Governance measures показатели управления · Milestone веха · Decision
 управленческое решение · Escalation эскалация · Delegation делегирование · Decision Log журнал решений ·
-Decision Record запись о решении · Appointments Record запись о назначениях · Control Sign-Off заключение
+Decision Record протокол решения · Appointments Record реестр назначений · Control Sign-Off заключение
 контрольной функции · Business acceptor представитель заказчика по приёмке · Acceptance Checklist
-контрольный лист приёмки · AI Incident Review разбор инцидента AI · Registry Snapshot снимок реестра ·
-Program Board доска программы · Roadmap дорожная карта · Template шаблон · Priorities Record запись о
-приоритетах · Standards Record запись о стандартах · Control Matrix матрица контроля · Registry реестр ·
-Workflow workflow · Record запись · Living record актуализируемая запись · Evidence record
-подтверждающая запись · Working state рабочее состояние · cutover переход · Light mode облегчённый режим ·
+контрольный лист приёмки · AI Incident Review разбор инцидента AI · Registry Snapshot снимок папки ·
+Program Board доска программы · Roadmap дорожная карта · Template шаблон · Priorities Record список
+приоритетов · Standards Record реестр стандартов · Control Matrix матрица контроля · Registry папка AICC (кратко: папка; «реестр» означает только Living record) ·
+Workflow workflow · Record учётная запись (обычная «запись в журнале», «запись каталога» сохраняется) · Living record реестр · Evidence record
+подтверждающий документ · Working state рабочее состояние · cutover переход · Light mode облегчённый режим ·
 Loop цикл · Review week неделя обзора · Short forms сокращения · Event мероприятие · Steering Summary итоги
 управляющего совещания · Quarterly Report квартальный отчёт · Report to the Board Committee отчёт Комитету
 Совета директоров · quarterly risk check ежеквартальная проверка рисков · Finding выявленное отклонение ·

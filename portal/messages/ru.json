@@ -49,13 +49,13 @@
   "control_title": "Контрольная процедура",
   "control_owner": "Ответственный",
   "control_when": "Периодичность",
-  "control_evidence": "Подтверждающая запись",
+  "control_evidence": "Подтверждающий документ",
   "control_template": "Шаблон",
   "control_rule": "Правило",
   "control_objective": "Цель",
   "control_test": "Порядок тестирования",
   "control_type": "Тип",
-  "control_status_note": "Статус каждой контрольной процедуры на определённую дату указывается в матрице контроля в реестре.",
+  "control_status_note": "Статус каждой контрольной процедуры на определённую дату указывается в матрице контроля в папке AICC.",
   "role_decides": "Принимает решения",
   "role_does": "Обязанности",
   "role_profile": "Профиль",
@@ -130,7 +130,7 @@
   "roles_title": "Роли",
   "roles_description": "Семь ролей и их страницы",
   "part_titles": {
-    "organization/organization-guide/bodies-people-and-records": "Органы, люди и записи",
+    "organization/organization-guide/bodies-people-and-records": "Органы, люди и учётные записи",
     "governance/unit-governance-workflow/events-and-sequences": "События и последовательности",
     "services/engagement-workflow": "Workflow",
     "services/engagement-guide": "Руководство",
@@ -170,7 +170,7 @@
     "about/values-and-principles": "Ценности и принципы",
     "about/charter-outline": "Путеводитель по AICC",
     "reference/change-history": "История изменений",
-    "reference/records-and-systems": "Записи и системы",
+    "reference/records-and-systems": "Учётная система",
     "reference/shared-terminology": "Общая деловая и технологическая терминология"
   },
   "page_descriptions": {
@@ -178,7 +178,7 @@
     "about/values-and-principles": "Ценности и принципы внедрения AI, применения, работы, а также разработки и внедрения решений и то, на что распространяется каждый из них",
     "about/charter-outline": "Как корпус документов устроен на портале, где искать каждую его часть и с чего начать",
     "reference/change-history": "История версий документов",
-    "reference/records-and-systems": "Где хранится каждая запись и какую контрольную процедуру она подтверждает",
+    "reference/records-and-systems": "Где хранится каждая учётная запись и какую контрольную процедуру она подтверждает",
     "privacy": "Что портал делает и чего не делает с информацией о своих пользователях",
     "terms-of-use": "Условия, на которых предоставляется портал, и статус его страниц",
     "reference/shared-terminology": "Общие деловые и технологические наименования, их определения и применение в AICC"
@@ -213,6 +213,6 @@
     "set-unit-governance": "Управление подразделением"
   },
   "nav_short": {
-    "governance/delivery-records-controls-and-measures": "Записи и показатели решений"
+    "governance/delivery-records-controls-and-measures": "Учёт и показатели решений"
   }
 }

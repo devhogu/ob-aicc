@@ -34,9 +34,9 @@ translation_status: reviewed
 | --- | --- | --- |
 | 1 | Курс [Разработка и внедрение](page:delivery/index), все части | Работать с расписанием, досками, контрольными точками и циклами |
 | 2 | [Модель жизненного цикла решений](page:delivery/solution-lifecycle-model) — правила | Понимать состояния, стадии и условия перехода между ними |
-| 3 | Workflow [Оказание услуг](page:delivery/service-delivery-workflow) и [Расписание работы](page:delivery/cadence-workflow) с руководствами к ним | Понимать, какая запись остаётся по каждому шагу и мероприятию |
+| 3 | Workflow [Оказание услуг](page:delivery/service-delivery-workflow) и [Расписание работы](page:delivery/cadence-workflow) с руководствами к ним | Понимать, какая учётная запись остаётся по каждому шагу и мероприятию |
 | 4 | [Workflow эксперимента](page:delivery/experiment-workflow), [Жизненный цикл сервиса](page:delivery/life-of-a-service), [Эксплуатация сервисов](page:delivery/service-operations) | Проверять гипотезу в лабораторной среде и эксплуатировать сервис после выпуска |
-| 5 | [Описание решения](page:knowledge-base/solution-definition), [Контрольный лист приёмки](page:knowledge-base/acceptance-checklist) и [Показатели разработки и внедрения](page:delivery/measures-definitions-and-formulas) | Вести запись о решении и понимать показатели |
+| 5 | [Описание решения](page:knowledge-base/solution-definition), [Контрольный лист приёмки](page:knowledge-base/acceptance-checklist) и [Показатели разработки и внедрения](page:delivery/measures-definitions-and-formulas) | Вести протокол решения и понимать показатели |
 
 ## 4. Для эксперта направления
 
@@ -55,7 +55,7 @@ translation_status: reviewed
 | 2 | [Положение об AICC](page:about/aicc-charter) | Понимать мандат, ограничения, финансирование, риск-аппетит и состав отчётности |
 | 3 | [Стратегия и инвестиции](page:portfolio/en/strategy-and-investment) и [Циклы и управление](page:portfolio/en/the-loops-and-governance) | Проводить ежегодное и ежеквартальное управляющие совещания по портфелю |
 | 4 | Курс [Управление](page:governance/index) | Вести контрольные циклы, рассматривать квартальный отчёт и знать, какие вопросы выносятся на ваш уровень |
-| 5 | [Квартальный отчёт](page:knowledge-base/quarterly-report) и [Запись о решении](page:knowledge-base/decision-record) | Утверждать отчёт и решать, выносить ли его на рассмотрение Комитета Совета директоров или Совета директоров; оформлять запись об управленческом решении |
+| 5 | [Квартальный отчёт](page:knowledge-base/quarterly-report) и [Протокол решения](page:knowledge-base/decision-record) | Утверждать отчёт и решать, выносить ли его на рассмотрение Комитета Совета директоров или Совета директоров; оформлять протокол решения |
 
 ## 6. Для представителя контрольной функции
 
@@ -71,9 +71,9 @@ translation_status: reviewed
 
 | Шаг | Материалы | Результат |
 | --- | --- | --- |
-| 1 | Курс [Управление](page:governance/index) и страница [Записи, подтверждающие материалы и независимая оценка](page:governance/records-evidence-and-assurance) | Понимать циклы и контрольные процедуры и знать, где найти подтверждающие материалы |
+| 1 | Курс [Управление](page:governance/index) и страница [Учётные записи, подтверждающие документы и независимая оценка](page:governance/records-evidence-and-assurance) | Понимать циклы и контрольные процедуры и знать, где найти подтверждающие материалы |
 | 2 | [Каталог контрольных процедур](page:governance/controls) и комплект материалов [Управление подразделением](page:governance/unit-governance-workflow) с руководством, в котором описано тестирование каждой контрольной процедуры | Тестировать контрольную процедуру по её идентификатору |
-| 3 | [Записи и системы](page:reference/records-and-systems) и [История изменений](page:reference/change-history) | Находить каждую запись и версию каждого документа |
+| 3 | [Учётная система](page:reference/records-and-systems) и [История изменений](page:reference/change-history) | Находить каждую учётную запись и версию каждого документа |
 | 4 | [Роли](page:organization/the-roles) и [Работники и назначения](page:organization/people-and-appointments) | Сверять разграничение обязанностей и назначения |
 
 ## 8. Для кадровой функции
@@ -81,5 +81,5 @@ translation_status: reviewed
 | Шаг | Материалы | Результат |
 | --- | --- | --- |
 | 1 | Курс [Организация](page:organization/index) | Понимать роли и профили, порядок назначений и то, как работники вступают в роли и освобождаются от них |
-| 2 | [Руководство: Организация](page:organization/organization-guide) | Использовать профили, матрицу ответственности и записи о работниках |
-| 3 | [Запись о назначениях](page:knowledge-base/appointments-record) | Вести учёт исполнителей ролей |
+| 2 | [Руководство: Организация](page:organization/organization-guide) | Использовать профили, матрицу ответственности и кадровый учёт |
+| 3 | [Реестр назначений](page:knowledge-base/appointments-record) | Вести учёт исполнителей ролей |

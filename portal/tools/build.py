@@ -1736,17 +1736,17 @@ def records_page(site, p, lang):
                ('Service Management', 'Requests and incidents, including AI Incidents')]
     if lang == 'ru':
         systems = [
-            ('Реестр', 'Управленческие решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие записи в виде неизменяемых датированных выгрузок. Хранятся на корпоративном сетевом ресурсе: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
+            ('Папка AICC', 'Управленческие решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие документы в виде неизменяемых датированных выгрузок. Хранятся на корпоративном сетевом ресурсе: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
             ('Jira и Confluence', 'Рабочее состояние бэклога программы, досок и задач, а также рабочие документы — с момента перехода рабочего состояния в эти системы'),
             ('Service Management', 'Запросы и инциденты, в том числе инциденты AI'),
         ]
     srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i == 0 else esc(b)) for i, (a, b) in enumerate(systems))
     intro = {'en': 'This site is static. It states the rules and the forms of AICC and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
-             'ru': 'Портал статичен: он излагает правила и формы AICC и не содержит текущих записей. В таблице записи перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
+             'ru': 'Портал статичен: он излагает правила и формы AICC и не содержит текущих учётных записей. В таблице учётные записи перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
     main = '<h1>%s</h1><p class="o-lead">%s</p><h2>Systems</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Systems"><table><tbody>%s</tbody></table></div><h2>Records</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Records"><table><thead><tr><th>Template</th><th>%s</th><th>%s</th><th>Controls</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
         esc(p['title']), esc(intro), srows, esc(m['used_when']), esc(m['kept_in']), ''.join(rows), prev_next(site, p, lang))
     if lang == 'ru':
-        for en, ru in [('Systems', 'Системы'), ('Records', 'Записи'), ('Template', 'Шаблон'), ('Controls', 'Контрольные процедуры')]:
+        for en, ru in [('Systems', 'Системы'), ('Records', 'Учётные записи'), ('Template', 'Шаблон'), ('Controls', 'Контрольные процедуры')]:
             main = main.replace('>' + en + '<', '>' + ru + '<').replace('aria-label="' + en + '"', 'aria-label="' + ru + '"')
     return layout(site, p, lang, main, [])
 

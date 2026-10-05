@@ -175,7 +175,7 @@ class PortalRendering(unittest.TestCase):
             templates_path = 'charter/en/templates/README.md'
             templates = (root / templates_path).read_text()
             templates_target = root / 'charter/ru/templates/README.md'; templates_target.parent.mkdir(parents=True)
-            templates_target.write_text(translation(templates_path, templates, templates.replace('Decision Record', 'Запись о решении')))
+            templates_target.write_text(translation(templates_path, templates, templates.replace('Decision Record', 'Протокол решения')))
             catalog_path = 'charter/en/documents/document-catalog.md'
             catalog = (root / catalog_path).read_text()
             (root / 'charter/ru/documents/document-catalog.md').write_text(translation(catalog_path, catalog, catalog.replace('Operating Model', 'Операционная модель').replace('Document Catalog', 'Каталог документов')))
@@ -215,7 +215,7 @@ class PortalRendering(unittest.TestCase):
                 self.assertIn('<table lang="ru">', about)
                 records_html = build.build_page(ru, ru.by_id['reference/records-and-systems'], 'ru')
                 self.assertEqual(len(ru.tpl_desc), 14)
-                decision_row = next(row for row in records_html.split('</tr>') if 'Запись о решении' in row)
+                decision_row = next(row for row in records_html.split('</tr>') if 'Протокол решения' in row)
                 self.assertIn('/governance/controls/c-04/', decision_row)
                 context = {'source': 'charter/ru/documents/business-model.md', 'lang': 'ru', 'url': '/ru/services/business-model/'}
                 self.assertIn('class="xref"', ru.link_xrefs('Бизнес-модель 4.8', context))
@@ -314,7 +314,7 @@ class RussianCorpusProjection(unittest.TestCase):
 
     def test_reader_can_find_generated_reference_pages_by_their_titles(self):
         for language, records_title, history_title in (
-            ('ru', 'Записи и системы', 'История изменений'),
+            ('ru', 'Учётная система', 'История изменений'),
             ('en', 'Records and systems', 'Change history'),
         ):
             with self.subTest(language=language):
@@ -374,7 +374,7 @@ class RussianCorpusProjection(unittest.TestCase):
         tabs = build.parts_html(site, site.by_id['governance/controls'], 'ru')
         self.assertIn('Общие положения', tabs)
         self.assertIn('Циклы управления', tabs)
-        self.assertIn('Записи и подтверждающие материалы', tabs)
+        self.assertIn('Учётные записи и подтверждающие документы', tabs)
         self.assertEqual(build.nav_title(site, site.by_id['governance/control-loops']), 'Операционная модель')
         profile = build.build_page(site, site.by_id['governance/controls/c-04'], 'ru')
         self.assertNotIn('class="o-callout lang-note"', profile)
@@ -382,7 +382,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertIn('Изучить отчёт о пересмотре', profile)
         # Multi-source indexes retain their own identity when one input is translated.
         self.assertEqual(site.by_id['organization/roles']['title'], 'Роли')
-        self.assertEqual(site.by_id['reference/records-and-systems']['title'], 'Записи и системы')
+        self.assertEqual(site.by_id['reference/records-and-systems']['title'], 'Учётная система')
         records = build.build_page(site, site.by_id['reference/records-and-systems'], 'ru')
         self.assertIn('<h2>Системы</h2>', records)
         self.assertIn('<th>Контрольные процедуры</th>', records)
@@ -406,7 +406,7 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertEqual(site.by_id['governance/unit-governance-workflow/events-and-sequences']['title'],
                          'Workflow «Управление подразделением»: События и последовательности')
         rendered = build.build_page(site, guide, 'ru')
-        self.assertIn('<p class="o-lead" lang="ru">Роли, профили, матрица RACI и кадровые записи</p>', rendered)
+        self.assertIn('<p class="o-lead" lang="ru">Роли, профили, матрица RACI и кадровый учёт</p>', rendered)
 
     def test_reader_can_find_a_late_glossary_term_and_open_its_definition(self):
         site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')

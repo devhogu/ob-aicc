@@ -19,7 +19,7 @@ function searchPage() {
   const pending = [];
   const entries = [
     {u: '/ru/reference/change-history/', t: 'История изменений', h: 'История изменений', x: ''},
-    {u: '/ru/reference/records-and-systems/', t: 'Записи и системы', h: 'Записи и системы', x: ''},
+    {u: '/ru/reference/records-and-systems/', t: 'Учётная система', h: 'Учётная система', x: ''},
   ];
   const document = {
     currentScript: {dataset: {search: '../assets/search-ru.json'}},
@@ -43,7 +43,7 @@ function searchPage() {
 test('a late search response still shows the latest Russian query', async () => {
   const page = searchPage();
   page.type('История');
-  page.type('Записи и системы');
+  page.type('Учётная система');
   await page.complete(1);
   assert.deepEqual(page.links(), ['../ru/reference/records-and-systems/']);
   await page.complete(0);

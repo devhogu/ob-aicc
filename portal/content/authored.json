@@ -52,7 +52,7 @@
       },
       "intro": {
         "en": "Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank. This section is a short course in seven parts, read in order or by tab, followed by the rule: the control loops, the records and evidence, and the control catalog of the Operating Model, the records and controls of delivery, and the Unit governance workflow and guide.",
-        "ru": "Управление — это то, как AICC как подразделение Банка получает направление работы, как его контролируют, как он отчитывается и как проводится независимая оценка его деятельности. Раздел содержит краткий курс из семи частей, который можно читать по порядку или по вкладкам. За ним следуют правила: контрольные циклы, записи и подтверждающие материалы и каталог контрольных процедур Операционной модели, записи и контрольные процедуры разработки и внедрения, а также workflow и руководство «Управление подразделением»."
+        "ru": "Управление — это то, как AICC как подразделение Банка получает направление работы, как его контролируют, как он отчитывается и как проводится независимая оценка его деятельности. Раздел содержит краткий курс из семи частей, который можно читать по порядку или по вкладкам. За ним следуют правила: контрольные циклы, учётные записи и подтверждающие документы и каталог контрольных процедур Операционной модели, учётные записи и контрольные процедуры разработки и внедрения, а также workflow и руководство «Управление подразделением»."
       },
       "icon": "table-properties",
       "line": {
@@ -67,7 +67,7 @@
       },
       "intro": {
         "en": "The Reference points outward and inward: to the standards and frameworks the charter draws on, the regulators and acts by jurisdiction, the research that shapes AI in finance, and the open resources from which people learn, each with how to take it and for what; and to the Vocabulary, the Document Catalog, the change history, and the records of the charter. Read by tab; the charter's own references follow.",
-        "ru": "Справочник обращён и вовне, и к самому корпусу. Вовне — к стандартам и методологиям, на которые опирается корпус, к сведениям о регуляторах и нормативных актах по юрисдикциям, к исследованиям, определяющим развитие AI в финансовой сфере, и к открытым ресурсам для обучения — с пояснением, как и для чего ими пользоваться. Внутри — к документу «Терминология и стиль», Каталогу документов, истории изменений и записям корпуса. Материалы доступны по вкладкам; далее следуют справочные документы самого корпуса."
+        "ru": "Справочник обращён и вовне, и к самому корпусу. Вовне — к стандартам и методологиям, на которые опирается корпус, к сведениям о регуляторах и нормативных актах по юрисдикциям, к исследованиям, определяющим развитие AI в финансовой сфере, и к открытым ресурсам для обучения — с пояснением, как и для чего ими пользоваться. Внутри — к документу «Терминология и стиль», Каталогу документов, истории изменений и учётным записям корпуса. Материалы доступны по вкладкам; далее следуют справочные документы самого корпуса."
       },
       "icon": "link",
       "line": {
@@ -355,7 +355,7 @@
       },
       "purpose": {
         "en": "To read the rules, the controls, and the evidence, and to find where each record is kept",
-        "ru": "Изучить правила, контрольные процедуры и подтверждения их выполнения и узнать, где хранится каждая запись"
+        "ru": "Изучить правила, контрольные процедуры и подтверждения их выполнения и узнать, где хранится каждая учётная запись"
       },
       "pages": [
         "about/aicc-charter",
@@ -405,7 +405,7 @@
         },
         "text": {
           "en": "AICC is an internal consulting and innovation lab of the Bank. It explores, trials, and proves the use of AI with the functions, delivers the outcome, and proposes what the Bank should adopt at scale. It works as a consulting unit does: it engages with a function on a defined scope, delivers an outcome with its evidence, and keeps its commitments and its records in order.",
-          "ru": "AICC — внутренняя консультационная и инновационная лаборатория Банка. Вместе с подразделениями AICC исследует, испытывает и доказывает, где AI приносит пользу, доводит работу до результата и предлагает, что стоит внедрить во всём Банке. Работа AICC устроена как у консультантов: он договаривается с подразделением о границах работы, сдаёт результат с подтверждением и держит в порядке свои обязательства и записи."
+          "ru": "AICC — внутренняя консультационная и инновационная лаборатория Банка. Вместе с подразделениями AICC исследует, испытывает и доказывает, где AI приносит пользу, доводит работу до результата и предлагает, что стоит внедрить во всём Банке. Работа AICC устроена как у консультантов: он договаривается с подразделением о границах работы, сдаёт результат с подтверждением и держит в порядке свои обязательства и учётные записи."
         },
         "links": [
           {
@@ -696,7 +696,7 @@
   "explore_page": {
     "intro": {
       "en": "The charter is the body of knowledge of the AI Competence Center. It states how the unit is mandated, governed, and operated, and it is the source of truth for what AICC is, what it produces, and how it keeps its records. This page shows how the charter is organized on this site and where to start.",
-      "ru": "Корпус нормативных документов — это свод знаний Центра компетенций по AI. Он определяет мандат подразделения, порядок управления им и порядок его работы. Это единственный достоверный источник сведений о том, что такое AICC, что он создаёт и как ведёт записи. Здесь показано, как корпус устроен на портале и с чего начать чтение."
+      "ru": "Корпус нормативных документов — это свод знаний Центра компетенций по AI. Он определяет мандат подразделения, порядок управления им и порядок его работы. Это единственный достоверный источник сведений о том, что такое AICC, что он создаёт и как ведёт учётные записи. Здесь показано, как корпус устроен на портале и с чего начать чтение."
     },
     "parts_title": {
       "en": "The charter in four parts",
@@ -704,7 +704,7 @@
     },
     "parts_lead": {
       "en": "The charter has four kinds of content. Each answers one question, and each has its place on this site. The Registry and the Portfolio hold the records of the work; they are outside the charter and are not on this site.",
-      "ru": "В корпусе материалы четырёх видов. Каждый отвечает на свой вопрос и имеет своё место на портале. Записи о работе хранятся в реестре и портфеле: они не входят в корпус и на портале не публикуются."
+      "ru": "В корпусе материалы четырёх видов. Каждый отвечает на свой вопрос и имеет своё место на портале. Учётные записи о работе хранятся в папке AICC и портфеле: они не входят в корпус и на портале не публикуются."
     },
     "parts": [
       {
@@ -742,7 +742,7 @@
         },
         "answers": {
           "en": "Who does what, when, and what is left on record?",
-          "ru": "Кто, что и когда делает и что остаётся в записях?"
+          "ru": "Кто, что и когда делает и что остаётся в учётных записях?"
         },
         "where": {
           "en": "Beside their workflows, as companion guides",
@@ -756,7 +756,7 @@
         },
         "answers": {
           "en": "What is the form of each record?",
-          "ru": "Какова форма каждой записи?"
+          "ru": "Какова форма каждой учётной записи?"
         },
         "where": {
           "en": "Knowledge base, with the guides, the acts and compliance, and the publications",
@@ -766,7 +766,7 @@
       {
         "part": {
           "en": "Registry and Portfolio",
-          "ru": "Реестр и портфель"
+          "ru": "Папка AICC и портфель"
         },
         "answers": {
           "en": "What is the state of the work, and what is the evidence? Which Solutions exist, and in what state?",
@@ -774,7 +774,7 @@
         },
         "where": {
           "en": "Outside this site, on the corporate share; the page Records and systems states where each record is kept",
-          "ru": "Вне портала, на корпоративном сетевом ресурсе; место хранения каждой записи указано на странице «Записи и системы»"
+          "ru": "Вне портала, на корпоративном сетевом ресурсе; место хранения каждой учётной записи указано на странице «Учётная система»"
         },
         "to": "reference/records-and-systems"
       }
@@ -797,7 +797,7 @@
     },
     "control": {
       "en": "The footer identifies the corpus edition of this site. Each document and template shows its own identifier, status, revision, and revised date; the edition number does not replace those revisions. Document, workflow, guide, and template pages are generated from the charter. Explanatory pages are written for the site, state no rule, and belong to the source edition in the footer (Document Catalog 5.4). A translation identifies that source edition and the revision of each document it translates. Where a page and a document differ, the document prevails. The Document Catalog states the status, the revision, and the life cycle of each document and template, and the AICC Lead activates them. Each document carries its change history, shown at the end of its page. The controls that can be tested are listed in the Operating Model, section 8, and the evidence of each is held in the Registry.",
-      "ru": "Внизу каждой страницы указана версия корпуса, к которой относится портал. У каждого документа и шаблона есть свои идентификатор, статус, версия и дата пересмотра; номер версии корпуса их не заменяет. Страницы документов, workflow, руководств и шаблонов формируются из корпуса. Пояснительные страницы пишутся для портала, правил не устанавливают и относятся к версии источников, указанной внизу страницы (п. 5.4 Каталога документов). Перевод указывает эту версию источников и версию каждого переведённого документа. Если страница расходится с документом, действует документ. Статус, версию и жизненный цикл каждого документа и шаблона устанавливает Каталог документов, а вводит их в действие руководитель AICC. У каждого документа есть журнал изменений — он приведён в конце страницы документа. Контрольные процедуры, которые можно протестировать, перечислены в разделе 8 Операционной модели, а подтверждения их выполнения хранятся в реестре."
+      "ru": "Внизу каждой страницы указана версия корпуса, к которой относится портал. У каждого документа и шаблона есть свои идентификатор, статус, версия и дата пересмотра; номер версии корпуса их не заменяет. Страницы документов, workflow, руководств и шаблонов формируются из корпуса. Пояснительные страницы пишутся для портала, правил не устанавливают и относятся к версии источников, указанной внизу страницы (п. 5.4 Каталога документов). Перевод указывает эту версию источников и версию каждого переведённого документа. Если страница расходится с документом, действует документ. Статус, версию и жизненный цикл каждого документа и шаблона устанавливает Каталог документов, а вводит их в действие руководитель AICC. У каждого документа есть журнал изменений — он приведён в конце страницы документа. Контрольные процедуры, которые можно протестировать, перечислены в разделе 8 Операционной модели, а подтверждения их выполнения хранятся в папке AICC."
     }
   },
   "strategy_page": {
@@ -1071,7 +1071,7 @@
     },
     "road_lead": {
       "en": "The Bank advances the adoption of AI through five Maturity Levels. Each Strategic Priority advances at its own pace, and a level is reached for a priority when its Measures are met. The timing and the scope of advancement are set by the Executive Sponsor in the Priorities, not in the charter.",
-      "ru": "Банк проходит в применении AI пять уровней зрелости. Каждый стратегический приоритет движется в своём темпе: уровень для приоритета достигнут, когда выполнены показатели этого уровня. Сроки и масштаб продвижения задаёт куратор AICC в записи о приоритетах, а не корпус документов."
+      "ru": "Банк проходит в применении AI пять уровней зрелости. Каждый стратегический приоритет движется в своём темпе: уровень для приоритета достигнут, когда выполнены показатели этого уровня. Сроки и масштаб продвижения задаёт куратор AICC в списке приоритетов, а не корпус документов."
     },
     "kept_title": {
       "en": "How the strategy is set and kept",
@@ -1079,7 +1079,7 @@
     },
     "kept": {
       "en": "The strategy is set once a year and kept every quarter. At the yearly Steering, in the first two weeks of December, the Executive Sponsor sets the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails from the strategy of the Bank and the priorities of the Domains, reads the benefit against each Envelope and the results against each priority, and reviews the documents and the AI Risk Appetite Statement (Portfolio Management Model 4.2); at the same Steering the Executive Sponsor presents the yearly Proposal of the AI adoption strategy that the AICC Lead prepares, and the Bank decides on it (Operating Model 6.5). At the quarterly Steering the Executive Sponsor confirms the Roadmap and the mix of Initiatives within the Envelopes, the approver of each Active Initiative decides on it, and the Executive Sponsor approves the Quarterly Report and may bring it to the Board Committee or the Board (Portfolio Management Model 4.3, AICC Charter 7.2). The Statement of Intent is reviewed at least annually and on a material change in the use of AI, in a principal provider, or in regulation (Statement of Intent 13.3). The Strategic Priorities in force, with their Envelopes, are recorded in the Priorities Record of the Registry; this site states the strategy, and the Registry states its current state.",
-      "ru": "Стратегию устанавливают раз в год и каждый квартал поддерживают в актуальном состоянии. На ежегодном управляющем совещании, в первые две недели декабря, куратор AICC исходя из стратегии Банка и приоритетов направлений определяет стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения. Там же он сопоставляет выгоды с каждым бюджетом и результаты с каждым приоритетом, пересматривает документы и Заявление о риск-аппетите в отношении AI (п. 4.2 Модели управления портфелем). На том же совещании куратор AICC представляет ежегодное предложение по стратегии внедрения AI, которое готовит руководитель AICC, и Банк принимает по нему решение (п. 6.5 Операционной модели). На ежеквартальном управляющем совещании куратор AICC подтверждает дорожную карту и структуру инициатив в пределах бюджетов, по каждой инициативе в работе решает тот, кто её одобрил, а куратор AICC утверждает квартальный отчёт и вправе вынести его на рассмотрение Комитета Совета директоров или Совета директоров (п. 4.3 Модели управления портфелем; п. 7.2 Положения об AICC). Заявление о намерениях по внедрению AI пересматривается не реже раза в год, а также при существенных изменениях в применении AI, у основного поставщика AI или в регулировании (п. 13.3 Заявления о намерениях по внедрению AI). Действующие стратегические приоритеты и их бюджеты ведутся в записи о приоритетах в реестре: портал излагает стратегию, а реестр показывает её текущее состояние."
+      "ru": "Стратегию устанавливают раз в год и каждый квартал поддерживают в актуальном состоянии. На ежегодном управляющем совещании, в первые две недели декабря, куратор AICC исходя из стратегии Банка и приоритетов направлений определяет стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения. Там же он сопоставляет выгоды с каждым бюджетом и результаты с каждым приоритетом, пересматривает документы и Заявление о риск-аппетите в отношении AI (п. 4.2 Модели управления портфелем). На том же совещании куратор AICC представляет ежегодное предложение по стратегии внедрения AI, которое готовит руководитель AICC, и Банк принимает по нему решение (п. 6.5 Операционной модели). На ежеквартальном управляющем совещании куратор AICC подтверждает дорожную карту и структуру инициатив в пределах бюджетов, по каждой инициативе в работе решает тот, кто её одобрил, а куратор AICC утверждает квартальный отчёт и вправе вынести его на рассмотрение Комитета Совета директоров или Совета директоров (п. 4.3 Модели управления портфелем; п. 7.2 Положения об AICC). Заявление о намерениях по внедрению AI пересматривается не реже раза в год, а также при существенных изменениях в применении AI, у основного поставщика AI или в регулировании (п. 13.3 Заявления о намерениях по внедрению AI). Действующие стратегические приоритеты и их бюджеты ведутся в списке приоритетов в папке AICC: портал излагает стратегию, а папка показывает её текущее состояние."
     }
   },
   "services_page": {
@@ -1093,7 +1093,7 @@
     },
     "engage_lead": {
       "en": "A function brings a need. The Engagement follows six steps, each with a record and a decision the function can see; AICC commits in a Service Agreement on a best-effort basis, and the function commits to nothing.",
-      "ru": "Подразделение приходит с потребностью. Взаимодействие с заказчиком проходит шесть шагов; на каждом оформляется запись и принимается управленческое решение, которые видит подразделение. AICC принимает обязательства в соглашении о взаимодействии и исполняет их с приложением усилий в разумных пределах; подразделение обязательств не принимает."
+      "ru": "Подразделение приходит с потребностью. Взаимодействие с заказчиком проходит шесть шагов; на каждом оформляется учётная запись и принимается управленческое решение, которые видит подразделение. AICC принимает обязательства в соглашении о взаимодействии и исполняет их с приложением усилий в разумных пределах; подразделение обязательств не принимает."
     },
     "steps": [
       {
@@ -1241,7 +1241,7 @@
     },
     "model_lead": {
       "en": "Every service of AICC follows one model: its composition, its life, its operation, and its records. The catalog has a defined form for a Solution and for a Package. This site states the model and the form; the live catalog is an instance kept in the Portfolio.",
-      "ru": "Каждая услуга AICC следует единой модели: состав, жизненный цикл, эксплуатация и записи. Для решения и для пакета установлена форма записи каталога. Портал описывает модель и форму; действующий каталог — её экземпляр, который ведётся в портфеле."
+      "ru": "Каждая услуга AICC следует единой модели: состав, жизненный цикл, эксплуатация и учётные записи. Для решения и для пакета установлена форма записи каталога. Портал описывает модель и форму; действующий каталог — её экземпляр, который ведётся в портфеле."
     },
     "areas": [
       {
