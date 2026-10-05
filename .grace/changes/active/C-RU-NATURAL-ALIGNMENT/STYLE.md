@@ -107,7 +107,7 @@ IP) · PI Objective цель PI · Dependency зависимость · Calendar
 Acceptance приёмка · Release выпуск · First users первые пользователи · Release block раздел о выпуске ·
 Emergency change экстренное изменение · Limit on Work in Progress WIP-лимит · WIP WIP · Risk Tier категория
 риска · AI Registry реестр AI · AI Incident инцидент AI · Severity степень серьёзности · Exception
-исключение · Deficiency недостаток контроля · Control status статус контрольной процедуры · Accepted limit
+отступление от требований (далее в том же пункте или абзаце — отступление; не «исключение») · Deficiency недостаток контроля · Control status статус контрольной процедуры · Accepted limit
 принятое ограничение · Risks and Issues Record запись о рисках и проблемах · AI Risk Appetite Statement
 Заявление о риск-аппетите в отношении AI (title) · Maturity Level уровень зрелости · Measure показатель ·
 Metric метрика · KPI KPI · Governance measures показатели управления · Milestone веха · Decision

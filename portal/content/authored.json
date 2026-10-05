@@ -555,7 +555,7 @@
         },
         "text": {
           "en": "Each Solution is assigned a Risk Tier, which sets the review, validation, human oversight, and speed of release that apply to it. The Bank accepts risk from AI where the benefit is measured and the controls are proportionate, and it does not accept a breach of law or regulation.",
-          "ru": "Каждому решению присваивается категория риска. От неё зависят порядок рассмотрения, валидация, контроль со стороны человека и скорость выпуска. Банк готов принимать риски AI, если польза измерена, а меры контроля соразмерны риску. Нарушение законодательства и требований регулятора недопустимо."
+          "ru": "Каждому решению присваивается категория риска. От неё зависят порядок рассмотрения, валидация, контроль со стороны человека и скорость выпуска. Банк готов принимать риски AI, если польза измерима и применение оправдано, а меры контроля соразмерны риску. Нарушение законодательства и требований регулятора недопустимо."
         },
         "links": [
           {
@@ -1035,7 +1035,7 @@
         },
         "choice": {
           "en": "The Bank accepts risk from AI where the benefit is measured and the controls are proportionate to the Risk Tier, and it does not accept a breach of law or regulation. Each Solution carries a Risk Tier that sets its review, validation, human oversight, and speed of release. The Control Functions stay independent and may stop a Solution.",
-          "ru": "Банк готов принимать риски AI, если польза измерена, а меры контроля соразмерны категории риска. Нарушение законодательства и требований регулятора недопустимо. От категории риска решения зависят порядок рассмотрения, валидация, контроль со стороны человека и скорость выпуска. Контрольные функции независимы и вправе остановить применение решения."
+          "ru": "Банк готов принимать риски AI, если польза измерима и применение оправдано, а меры контроля соразмерны категории риска. Нарушение законодательства и требований регулятора недопустимо. От категории риска решения зависят порядок рассмотрения, валидация, контроль со стороны человека и скорость выпуска. Контрольные функции независимы и вправе остановить применение решения."
         },
         "decides": {
           "en": "Executive Sponsor decides the appetite; AICC Lead owns it; Control Functions validate",

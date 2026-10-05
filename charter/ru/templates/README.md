@@ -14,7 +14,7 @@ translation_status: reviewed
 | 2 | AICC-TPL-06 | Соглашение о взаимодействии | [service-agreement.md](service-agreement.md) | Начинается изучение потребности в рамках взаимодействия с заказчиком | `registry/en/initiatives/` |
 | 3 | AICC-TPL-01 | Описание решения | [solution-definition.md](solution-definition.md) | Определяется решение | `portfolio/en/solutions/` |
 | 4 | AICC-TPL-13 | Контрольный лист приёмки | [acceptance-checklist.md](acceptance-checklist.md) | AICC передаёт направлению готовое решение для масштабного применения до его выпуска за пределы круга первых пользователей | `registry/en/checklists/` |
-| 5 | AICC-TPL-03 | Заключение контрольной функции | [control-sign-off.md](control-sign-off.md) | Представитель контрольной функции проводит валидацию, согласовывает бизнес-кейс, останавливает применение решения, проверяет поставщика или предоставляет исключение | `registry/en/sign-offs/` |
+| 5 | AICC-TPL-03 | Заключение контрольной функции | [control-sign-off.md](control-sign-off.md) | Представитель контрольной функции проводит валидацию, согласовывает бизнес-кейс, останавливает применение решения, проверяет поставщика или предоставляет отступление от требований | `registry/en/sign-offs/` |
 | 6 | AICC-TPL-08 | Запись о решении | [decision-record.md](decision-record.md) | Управленческое решение требует оформления записи | `registry/en/decisions/` |
 | 7 | AICC-TPL-04 | Итоги управляющего совещания | [steering-summary.md](steering-summary.md) | Каждое управляющее совещание | `registry/en/steering/` |
 | 8 | AICC-TPL-07 | Отчёт о результатах | [outcome-report.md](outcome-report.md) | Взаимодействие с заказчиком завершается | `registry/en/initiatives/` |
