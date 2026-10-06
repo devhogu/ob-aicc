@@ -136,3 +136,26 @@ Applied in one pass while the style work is paused, because both regenerate `htm
 5. **Then**: the Russian edition of the catalog (same 319 OKRs, same fixes, in natural Russian using the terminology and the translation map), and the redefinition of Portfolio and CloudLab.
 
 Files touched by the fix round: `html-alt/financial-services/en/**` (76 files), `portal/sections/{initiatives,projects,lab}/en/*.md` (6 files), `portal/sections/pages.json`, and the regenerated `html/aicc`. Not touched: `portal/tools/neighbours.py` and the style sheets, except the introduction string if handed over.
+
+## 9. Original versus restyled versus integrated: was anything left behind
+
+Checked on 6 October 2026 by comparing every text block of the originals in `html-alt/` (visible text and the strings held in page scripts, where the stage texts live) with the restyled copies in `html/` and with the integrated portal pages.
+
+| Original | Restyled copy | Result |
+| --- | --- | --- |
+| `html-alt/financial-services/en` (76 pages, 9,928 text blocks) | `html/financial-services/en` | Nothing lost: every block is present. |
+| `html-alt/financial-services/ru` (76 pages, 10,294 text blocks) | `html/financial-services/ru` | Nothing lost. The only difference: 31 breadcrumbs that the original leaves in English ("Strategic Banking Portfolio") are shown in Russian by the copy. |
+| `html-alt/cloudlab` (1 page) | `html/cloudlab` | Nothing lost. |
+| `html-alt/intelligent-customer-service-resolution` (EN and RU) | `html/csr` | Nothing lost (the only differences are script code). |
+| `html-alt/sts` (8 pages) | `html/sts` | Nothing lost. |
+
+The restyling therefore dropped no content. What was dropped happened at the **integration** into the portal:
+
+| Section | What the integrated portal leaves out of the original |
+| --- | --- |
+| Discovery Catalog | All 1,101 cards, sections, problem rows, counts, tabs and stage texts are carried over intact. Dropped: the original overview title and introduction ("GenAI-enabled Banking and Financial Services Framework — A uniform view of the top-level banking and operational aspects of the institution: its primary value chains, shared capabilities, and control flows. The intent is to adopt GenAI as an enabler and accelerator across every aspect: increasing visibility and insight, automating operational flows, enabling new capabilities, and unlocking new offerings and opportunities."), replaced by a two-sentence introduction; and the framework name and version line at the foot of every page ("… Framework · v11i"). The original introduction is the only place that says what the four lenses mean. |
+| Delivery Pipeline (CSR) | The page is a hand-written summary of about 400 words; the original proposal is about 2.5% represented. Left out: the problem statement, the customer outcome, every figure, the decision requested, roles and responsibilities, the architecture and all technical content. The full proposal is not reachable from the portal. |
+| CloudLab | A hand-written summary of about 240 words. Left out: the grid of stages by concerns with its 41 activities, the scorecard of 20 guardrails, the read-only data rule. |
+| STS | Not integrated. |
+
+Details of the CSR and CloudLab losses are in `notes/sections.md`.
