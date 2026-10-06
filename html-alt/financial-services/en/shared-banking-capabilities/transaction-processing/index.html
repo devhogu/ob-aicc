@@ -1273,6 +1273,239 @@ Without pattern attribution, fraud operations and product teams allocate control
 
 </section>
     
+    <section class="l3-section" id="payments-modernization">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Payments modernization</h2>
+    <p class="l3-section__intent">Payments modernization covers the changes that payment systems and their overseers bring to every bank: structured, data-rich payment messages under the ISO 20022 standard, instant payments that settle in seconds around the clock and cannot be recalled, and preparation for a central bank digital currency. Each change reaches customer data, screening, reconciliation, fraud control, liquidity and core systems at once. The opportunity is to put the richer data and the faster rails to use for customers, rather than only to comply with them.</p>
+  </header>
+
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payments-modernization/iso-20022-structured-data-enrichment">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">ISO 20022 Structured Data Enrichment</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent converts the free-text party, address and remittance details held in customer records and payment instructions into the structured fields of ISO 20022 messages — street, town, postal code, country, structured creditor reference — and routes the instructions it cannot map with confidence to the payment repair team. The Bank sends structured data as payment schemes restrict unstructured addresses, without a manual cleansing of its whole customer base.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Customer and counterparty addresses are held as free-text lines in core systems, entered over years in inconsistent formats, languages and scripts. Payment schemes moving to ISO 20022 commonly restrict or retire unstructured addresses, and sanctions screening, correspondent banks and beneficiary banks rely on structured fields. Manual cleansing of the customer base is slow and costly, so outgoing payments are rejected or held for repair, and data truncated when messages pass through older internal formats weakens screening and reconciliation.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads customer master records and outgoing payment instructions, parses free-text addresses and party details into structured ISO 20022 elements with a confidence score, and checks country, town and postal code against reference data. It proposes corrections to customer master data and flags internal interfaces that truncate structured fields. Payment repair specialists review low-confidence mappings before release, the customer data owner approves bulk master data corrections, and operations management tracks rejection and repair rates.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Outgoing payments leave the Bank with structured ISO 20022 party and address data, mapped by the AI agent and reviewed by payment repair specialists where confidence is low, so that repairs and rejections fall.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Structured mapping applied to ≥95% of outgoing payment instructions within 9 months of go-live; customer master records of all active payment customers parsed within 12 months of go-live.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of AI-proposed mappings accepted by payment repair specialists without change; rejections and repairs attributed to party or address data reduced by ≥50% versus the pre-deployment baseline.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Structured data available at instruction capture so that payments clear without repair, versus 1–2 hours of manual repair per held payment under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payments-modernization/structured-remittance-reconciliation-service">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Structured Remittance Reconciliation for Business Customers</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent uses the structured remittance data that ISO 20022 messages carry to match the incoming payments of business customers to their open invoices, explain partial and combined payments, and deliver a reconciliation file to the customer&#39;s accounting system. The Bank offers this as a cash-management service; the customer&#39;s finance team confirms the matches that the AI agent could not make with confidence.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Complexity"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Business customers spend hours each day matching incoming payments to invoices, because remittance information arrives as truncated free text, references are mistyped, and one transfer often settles several invoices less a deduction. ISO 20022 messages can carry structured references and full remittance detail, but banks commonly pass the data on as a statement line and leave the matching to the customer. The value of the richer data is lost, and the Bank competes for business accounts on price alone.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads incoming credit messages with their structured and free-text remittance data and the customer&#39;s open-invoice file, matches each payment to one or several invoices, explains differences such as deductions, fees and partial payments, and produces a reconciliation file in the format of the customer&#39;s accounting system. Low-confidence matches go to the customer&#39;s finance team for confirmation in the online channel. The cash-management product manager sets the service terms and tracks match rates and adoption by segment.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Business customers of the cash-management service receive their incoming payments matched to open invoices by the AI agent, with exceptions confirmed by their finance teams, so that the Bank&#39;s richer payment data becomes a service they value.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Service live for ≥200 business customers within 12 months of launch; ≥80% of enrolled customers&#39; incoming payments processed through the matching each business day.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≤2% of automatic matches reversed by customers&#39; finance teams; ≥70% of enrolled customers renew the service at its first annual review, as tracked by the cash-management product manager.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Reconciliation file delivered within 1 hour of each incoming payment batch, versus manual matching by the customer&#39;s finance team over the following business day under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payments-modernization/instant-payment-scam-interception">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Instant Payment Scam Interception</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent screens each outgoing instant payment, within the scheme&#39;s time limit, for signs of a scam or a mule account — a new payee, an unusual amount, a session pattern that suggests coaching, a payee name that does not match the account. It warns the customer or holds the few high-risk payments for a fraud analyst&#39;s decision before the funds leave the Bank irrevocably.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Complexity"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Instant payments settle in seconds, around the clock, and cannot be recalled once credited. Fraud shifts from stolen cards to scams in which customers are persuaded to send the money themselves, often to mule accounts that pass it on within minutes. Card-era controls act after the event or hold too many genuine payments, while requirements commonly expect banks to screen, verify the payee and warn customers without breaking the scheme&#39;s time limit. Each missed scam is a customer loss and, in some markets, a reimbursement cost to the paying bank.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent scores each outgoing instant payment in real time from payee history, amount, device and session signals, the payee name match, and mule indicators on the receiving account where available, and returns release, warn or hold within the time budget. For a warning it composes a scam-specific message for the customer; for a hold it assembles the evidence for the fraud analyst. Fraud analysts decide on held payments within the agreed time, and the fraud strategy manager tunes the thresholds from confirmed outcomes.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Customers sending instant payments are protected from scams by screening within the scheme&#39;s time limit, with high-risk payments held for a fraud analyst&#39;s decision before funds leave the Bank.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Screening applied to 100% of outgoing instant payments within 6 months of go-live, with ≤0.5% of payments held for review.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥30% of payments held by the AI agent confirmed by fraud analysts as scam or mule attempts; customer-reported scam losses on instant payments reduced by ≥40% versus the pre-deployment baseline.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Screening decision returned within 1 second of the payment request and held payments decided by a fraud analyst within 30 minutes, versus detection after settlement through customer complaints under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payments-modernization/digital-currency-readiness-brief">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Central Bank Digital Currency Readiness Brief</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent follows the central bank&#39;s publications on a digital currency — consultations, pilot specifications, rules for intermediaries — maps each design choice to the Bank&#39;s products, systems, deposits and liquidity, and keeps a readiness gap register with a quarterly brief for the head of payments and the strategy team. The brief states what each choice would require of the Bank and when a decision is due.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Many central banks are studying or piloting a digital currency, and its design choices — whether banks distribute wallets, any holding limit, offline payments, fees, and interoperability with existing schemes — decide what it means for a bank: deposit outflow, new wallet and onboarding duties, changes to payment and core systems, and new liquidity needs. Publications arrive as long technical and consultation documents, read by different teams at different times, so the Bank&#39;s position and its preparation lag behind the design.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads each new publication of the central bank on the digital currency, extracts the design choices and the obligations proposed for intermediaries, and maps each one to the Bank&#39;s affected products, systems, processes and balance-sheet positions, estimating deposit outflow under the proposed holding limits. It updates the readiness gap register and drafts the quarterly brief and consultation responses. The head of payments and the strategy team validate the mapping, set the Bank&#39;s position, and assign preparation work to owners.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The head of payments and the strategy team set the Bank&#39;s position on a central bank digital currency and assign preparation work from an AI-maintained readiness gap register and quarterly brief.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>100% of the central bank&#39;s publications on the digital currency mapped into the readiness gap register from go-live; quarterly brief produced for ≥4 consecutive quarters.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of the AI agent&#39;s mapped impacts confirmed by the head of payments and the strategy team; preparation owner assigned for 100% of confirmed gaps within one quarter.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Impact of a new publication in the readiness gap register within 10 business days of its release, versus months of separate reading by different teams under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+  </div>
+
+</section>
+    
+    
     
 
   </main>

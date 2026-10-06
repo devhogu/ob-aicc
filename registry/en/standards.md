@@ -1,6 +1,6 @@
 # Standards
 
-The architecture standards of AICC, the requirements that the use of AI places on the AI Platform, the external instruments and standards that bear on the use of AI in the Bank, and the policies of the Bank that apply to it. The AICC Lead owns them. The check of a Solution uses these standards. The Control Function Contacts of compliance and of legal confirm, each within its remit, which external instruments apply, and the AICC Lead records who confirmed and when (AI Policy 1.3). Entries are closed, not deleted.
+The architecture standards of AICC, the requirements that the use of AI places on the AI Platform, the external instruments and standards that bear on the use of AI in the Bank, the regulatory horizon for which the Bank prepares, and the policies of the Bank that apply to it. The AICC Lead owns them. The check of a Solution uses these standards. The Control Function Contacts of compliance and of legal confirm, each within its remit, which external instruments apply, and the AICC Lead records who confirmed and when (AI Policy 1.3). Entries are closed, not deleted.
 
 ## Architecture standards
 
@@ -65,6 +65,25 @@ Standing is "Applies, to confirm" for an instrument that is expected to bind the
 | EXT-031 | Agile and lean delivery practice | The common practice of the field | International | Reference |  | Solution Lifecycle Model |
 | EXT-032 | IT service management practice | The common practice of the field | International | Reference |  | Business Model 4; Solution Lifecycle Model 8 |
 | EXT-033 | Internal control and assurance practice | The common practice of the field | International | Reference |  | Operating Model 8 |
+
+## Regulatory horizon
+
+The regulatory horizon lists the kinds of rules for which the Bank prepares in advance: rules that bind the Bank, rules that are expected to reach it, and rules of other jurisdictions that inform its practice. A theme groups the instruments of one kind. Standing is "Applies, to confirm" or "Applies" as for the external instruments above, "Expected, to confirm" for a kind of rule that is announced for the Bank or is likely to reach it, until the Contacts confirm it, "Expected" once they have, and "Reference" for a kind of rule that informs the practice of the Bank only. The Discovery Catalog links each theme to the scenarios that prepare the Bank for it. The list is the first edition, entered on 2026-10-06, and is unverified until the Contacts confirm it (RI-006).
+
+| Identifier | Theme | Instruments | Standing | Confirmed by and date | Related instruments |
+| --- | --- | --- | --- | --- | --- |
+| HZ-001 | AI governance | Rules on the use of AI, such as the EU Artificial Intelligence Act | Expected, to confirm |  | EXT-005, EXT-015, EXT-026 |
+| HZ-002 | Operational and cyber resilience | Rules on operational resilience, ICT risk, ICT third parties, and incident reporting, such as the EU Digital Operational Resilience Act | Applies, to confirm |  | EXT-001, EXT-017 |
+| HZ-003 | Model risk management | Supervisory guidance on model risk management, such as SR 11-7 | Reference |  | EXT-018, EXT-020 |
+| HZ-004 | Open banking and partner APIs | Rules on access to accounts and on payment initiation by third parties, such as the EU Payment Services Directive (PSD2) | Expected, to confirm |  | EXT-001 |
+| HZ-005 | Personal data and consent | Legislation on personal data, such as the EU General Data Protection Regulation | Applies, to confirm |  | EXT-002, EXT-016 |
+| HZ-006 | Capital and liquidity reforms | The Basel III standards on capital, liquidity, and interest rate risk in the banking book | Applies, to confirm |  | EXT-001 |
+| HZ-007 | Risk data and supervisory reporting | The BCBS 239 principles for effective risk data aggregation and risk reporting; templated supervisory reporting, such as COREP and FINREP | Reference |  | EXT-020 |
+| HZ-008 | Expected credit loss | IFRS 9, Financial Instruments | Applies, to confirm |  |  |
+| HZ-009 | Climate and sustainability disclosure | IFRS S1 and IFRS S2 of the International Sustainability Standards Board; the recommendations of the TCFD | Expected, to confirm |  |  |
+| HZ-010 | AML/CFT standards | The FATF Recommendations | Applies, to confirm |  | EXT-004 |
+| HZ-011 | Consumer protection and conduct | Rules on consumer protection and conduct in financial services | Applies, to confirm |  | EXT-003 |
+| HZ-012 | Payments modernization | ISO 20022 payment messages; instant payment schemes; central bank digital currency | Expected, to confirm |  | EXT-001 |
 
 ## Policies of the Bank that apply
 

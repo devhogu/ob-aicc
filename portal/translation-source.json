@@ -1636,7 +1636,7 @@
     {
       "path": "registry/en/standards.md",
       "hash_basis": "file_bytes",
-      "sha256": "ed7eec519a66704e509b00aff34b9cec0b3f0a92f66ceffd64cfbad048cb709f",
+      "sha256": "b0d7f179cb0af61c7cf626062b7f6e09e7ae658b560ecadaf423e30a8448fb73",
       "baseline_path": "registry/standards.md",
       "baseline_sha256": "b2833e470ea6ca0ba5213553040645ae44ae285fe22d2bc4d52336faad97a3c8"
     },

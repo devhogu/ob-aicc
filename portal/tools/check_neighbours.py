@@ -10,6 +10,8 @@ from urllib.parse import urljoin, urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / 'html/aicc'
 SECTIONS = ('aicc', 'discovery', 'initiatives', 'projects', 'lab')
+# Discovery pages composed by the portal rather than retained from the catalog source.
+AUTHORED_DISCOVERY = {'regulatory-horizon/index.html'}
 
 
 class Inspection(HTMLParser):
@@ -24,6 +26,7 @@ class Inspection(HTMLParser):
         self.nav_footer_links, self.footer_links, self.feedback_refs = [], [], []
         self.feedback_buttons = 0
         self.cards, self.card, self.depth = {}, None, 0
+        self.derived = None
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
@@ -53,6 +56,8 @@ class Inspection(HTMLParser):
                 self.nav_footer_links.append(attrs['href'])
         if tag == 'script' and 'data-search' in attrs:
             self.search = attrs['data-search']
+        if 'horizon-chip' in attrs.get('class', '').split():
+            self.derived = tag
         if tag == 'details':
             if 'scenario-card' in attrs.get('class', '').split():
                 self.card = attrs['data-urn']
@@ -64,6 +69,8 @@ class Inspection(HTMLParser):
                 self.depth += 1
 
     def handle_endtag(self, tag):
+        if tag == self.derived:
+            self.derived = None
         if tag == 'main':
             self.in_main = False
         if tag == 'footer':
@@ -76,7 +83,7 @@ class Inspection(HTMLParser):
                 self.card = None
 
     def handle_data(self, text):
-        if self.card:
+        if self.card and not self.derived:
             self.cards[self.card].extend(text.split())
 
 
@@ -94,8 +101,11 @@ def check():
         source = ROOT / f'html-alt/financial-services/{lang}'
         pages = sorted((OUTPUT / lang).rglob('index.html'))
         discovery_pages = list((OUTPUT / lang / 'discovery').rglob('index.html'))
-        if len(discovery_pages) != 76:
-            errors.append(f'{lang}: expected 76 Discovery pages, got {len(discovery_pages)}')
+        source_pages = list(source.rglob('index.html'))
+        expected_pages = len(source_pages) + len(AUTHORED_DISCOVERY)
+        if len(discovery_pages) != expected_pages:
+            errors.append(f'{lang}: expected {expected_pages} Discovery pages, got {len(discovery_pages)}')
+        source_cards = sum(len(Inspection(page.read_text()).cards) for page in source_pages)
         for page in pages:
             path = '/' + page.relative_to(OUTPUT).as_posix()
             text = page.read_text()
@@ -142,12 +152,14 @@ def check():
                 if 'class="discovery-notice"' in text:
                     errors.append(f'{path}: removed Discovery notice is still rendered')
                 relative = page.relative_to(OUTPUT / lang / 'discovery')
+                if relative.as_posix() in AUTHORED_DISCOVERY:
+                    continue
                 original = Inspection((source / relative).read_text())
                 if original.cards != parsed.cards:
                     errors.append(f'{path}: scenario content or identity differs from retained source')
                 counts[lang + '_scenarios'] += len(parsed.cards)
-        if counts[lang + '_scenarios'] != 1101:
-            errors.append(f'{lang}: expected 1,101 scenario cards, got {counts[lang + "_scenarios"]}')
+        if counts[lang + '_scenarios'] != source_cards:
+            errors.append(f'{lang}: expected {source_cards} scenario cards, got {counts[lang + "_scenarios"]}')
     for path in sorted((OUTPUT / 'assets').glob('search-*.json')):
         entries = json.loads(path.read_text())
         name = path.stem.removeprefix('search-')

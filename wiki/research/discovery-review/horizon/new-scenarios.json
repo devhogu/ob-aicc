@@ -1,0 +1,157 @@
+[
+  {
+    "page": "risk-control/model-risk/index.html",
+    "section": {
+      "id": "ai-governance",
+      "title": "AI governance",
+      "intent": "AI governance covers the rules on the Bank's own use of AI: which AI systems are in use, how risky each one is, how each is overseen in operation, and what happens when one fails. Rules on AI, such as the EU Artificial Intelligence Act, commonly classify systems by risk, treat credit assessment of individuals as high risk, and expect human oversight, logging, incident reporting and transparency to customers. Much of this AI is bought, and the Bank answers for it as for its own."
+    },
+    "cards": [
+      {
+        "slug": "ai-register-risk-tier-classification",
+        "title": "AI Register Reconciliation & Risk Tier Classification",
+        "lens": "Automation",
+        "complexity": "M",
+        "intent": "The AI agent keeps the Bank's AI register complete and classified. It reconciles the register against AI platform usage logs, procurement records and vendor release notes to find AI systems not yet listed, proposes a risk tier for each entry from its data, influence on decisions, customer reach and autonomy, and flags systems in categories that rules on AI treat as high risk. The Chief Model Risk Officer confirms each tier.",
+        "problem": "AI enters a bank through many doors: models built in-house, bought software that gains AI features in a routine upgrade, generative AI services used by teams, and AI agents with rights over systems. The AI register is kept by hand from self-reported entries and lags behind actual use, and a risk tier is set once and rarely revisited when the data, the decision or the autonomy changes. A system in a high-risk category, such as credit assessment of individuals, can then run under the controls of a lower tier.",
+        "solution": "The AI agent reads the AI register, AI platform usage logs, procurement and contract records, and vendor release notes, and lists AI use that is not registered. For each entry it records the attributes that set the risk tier — data class, influence on decisions, customer reach and degree of autonomy — proposes the tier with its rationale, and flags high-risk categories and the documentation the tier requires but the entry lacks. The Chief Model Risk Officer confirms or changes each tier, and system owners complete the missing entries.",
+        "okr": {
+          "objective": "The Chief Model Risk Officer confirms the risk tier of every AI system from an AI-proposed classification with its rationale, and works from an AI register reconciled against actual use rather than self-reported entries.",
+          "adoption": "The AI agent's reconciliation and classification cover 100% of AI register entries at least quarterly within 6 months of go-live; usage logs, procurement records and vendor release notes read in every run.",
+          "acceptance": "≥80% of AI-proposed risk tiers confirmed by the Chief Model Risk Officer without change; ≥70% of unregistered AI uses flagged by the AI agent confirmed as genuine and entered in the register within one quarter.",
+          "cycle": "Reconciled and classified register delivered within 5 business days of each quarterly data cut, versus a register updated only when owners self-report a new or changed AI system under the prior approach."
+        }
+      },
+      {
+        "slug": "human-oversight-evidence-review",
+        "title": "Human Oversight Evidence Review",
+        "lens": "Insights",
+        "complexity": "L",
+        "intent": "The AI agent reads the decision logs of AI-assisted processes and produces a quarterly oversight evidence report for each AI system: how often reviewers accept, correct or override the AI output, how long reviews take, which cases affecting individuals lack a recorded human decision, and where the logs miss what record-keeping requires. The report goes to each system owner and to the Chief Model Risk Officer.",
+        "problem": "Rules on AI and the requirements of each risk tier expect a person to review AI output, a person to decide each case that affects an individual, and logs that prove both. In practice oversight is asserted in a design document rather than measured in operation. A reviewer who accepts nearly every output within seconds provides little oversight, and logs often lack the reviewer, the model version or the final decision. The gap surfaces at an audit, a complaint or an incident, when the evidence can no longer be rebuilt.",
+        "solution": "The AI agent reads the decision logs of each AI system whose risk tier requires human review and computes, by system and reviewer team, acceptance, correction and override rates, review times, and cases affecting individuals without a recorded human decision. It checks each log against the record-keeping fields the tier requires — input, output, model version, reviewer, decision and time — and flags patterns that suggest review in name only. The system owner explains or remedies each flag, and the Chief Model Risk Officer reviews the report.",
+        "okr": {
+          "objective": "Each AI system owner and the Chief Model Risk Officer receive quarterly evidence, measured from decision logs, that human oversight works as designed, with record-keeping gaps and review-in-name-only patterns flagged for remedy.",
+          "adoption": "The oversight evidence report is produced quarterly for 100% of AI systems whose risk tier requires human review within 12 months of go-live; the decision logs of every such system read in each run.",
+          "acceptance": "≥75% of the AI agent's flags confirmed by system owners as genuine oversight or logging gaps; remedy agreed for 100% of confirmed gaps before the next quarterly report.",
+          "cycle": "Oversight evidence available within 10 business days of quarter-end, versus evidence rebuilt by hand only when an audit, a complaint or an incident calls for it under the prior approach."
+        }
+      },
+      {
+        "slug": "ai-incident-detection-notification-draft",
+        "title": "AI Incident Detection & Notification Draft",
+        "lens": "Automation",
+        "complexity": "L",
+        "intent": "The AI agent watches the monitoring alerts, logs and complaints linked to the Bank's AI systems for signs of an AI incident — harmful or biased output, drift beyond alert levels, an AI agent acting beyond its permissions, data leaking through a prompt. It opens a record in the Bank's incident process marked as AI-related and drafts the incident report and, where needed, the notification to the regulator for the compliance officer's decision.",
+        "problem": "AI incidents rarely announce themselves. A model that drifts, a chat assistant that quotes wrong product terms, or an AI agent that acts outside its permissions shows up as scattered signals: a monitoring alert, a rise in overrides, a few complaints. Incident teams classify these as ordinary IT or service events and miss the AI aspect, while the time limits for reporting serious incidents, which rules on AI commonly set in days, are already running. The lessons then never reach the risk tier or the controls of the AI system.",
+        "solution": "The AI agent reads monitoring alerts, override and correction rates, AI agent action logs and customer complaints for each registered AI system, links related signals to the system and its risk tier, and opens an incident record marked as AI-related with the evidence attached. For an incident that may be serious, it drafts the incident report and the regulator notification in the required structure. The incident manager classifies the incident, the compliance officer decides whether the regulator is notified, and the Chief Model Risk Officer reassesses the risk tier.",
+        "okr": {
+          "objective": "The incident manager and the compliance officer receive AI incidents identified from linked monitoring, log and complaint signals, with the incident report and regulator notification drafted for decision within the reporting time limit.",
+          "adoption": "Detection covers 100% of registered AI systems with monitoring in place within 9 months of go-live; every incident linked to an AI system recorded as AI-related from go-live.",
+          "acceptance": "≥70% of AI incidents opened by the AI agent confirmed by the incident manager; ≥85% of AI-drafted regulator notifications used by the compliance officer without material amendment.",
+          "cycle": "AI incident record opened within 4 hours of the first linked signal and draft notification ready within 1 business day of classification as serious, versus recognition of the AI aspect only at post-incident review under the prior approach."
+        }
+      },
+      {
+        "slug": "third-party-ai-due-diligence",
+        "title": "Third-Party AI Due Diligence",
+        "lens": "Enablement",
+        "complexity": "M",
+        "intent": "The AI agent prepares the AI section of the third-party risk assessment for each provider of AI or of software with AI features: where data is processed and kept, whether the provider may train on the Bank's data, which model is in use and how changes are notified, what testing evidence exists, and the fallback and exit terms. The third-party risk manager and the information security and data protection reviewers decide.",
+        "problem": "Most AI in a bank arrives from providers: credit scoring engines, fraud tools, chat assistants, and standard software that adds AI features in an upgrade. A bank answers for that AI as for its own, yet vendor questionnaires seldom ask the questions that matter for AI, and contracts, model documentation and data-processing terms are long and differ by provider. Reviewers miss a clause that permits training on customer data, a model change made without notice, or the absence of a workable fallback when the service fails.",
+        "solution": "The AI agent reads the provider's contract, data-processing terms, model documentation, security attestations and questionnaire answers, and fills the AI section of the assessment, citing the clause or page behind each answer and flagging gaps against the Bank's provider requirements: data location, training on Bank data, notice of model changes, testing evidence, access to logs, fallback and exit. It drafts follow-up questions for the provider. The reviewers verify the cited answers, and the third-party risk manager records whether the provider is approved.",
+        "okr": {
+          "objective": "The third-party risk manager and the information security and data protection reviewers decide on each AI provider from an AI-prepared assessment that cites the contract or document behind every answer and flags each gap.",
+          "adoption": "AI-prepared assessments used for 100% of new AI providers and for every reassessment, change of terms or change of model within 9 months of go-live.",
+          "acceptance": "≥85% of the AI agent's cited answers confirmed by reviewers against the source document; ≥75% of flagged gaps confirmed as genuine and raised with the provider.",
+          "cycle": "AI section of the assessment ready within 3 business days of receipt of the provider's documents, versus 2–3 weeks of manual review of contracts and questionnaires under the prior approach."
+        }
+      },
+      {
+        "slug": "customer-ai-disclosure-explanation",
+        "title": "Customer AI Disclosure & Decision Explanation",
+        "lens": "New opps",
+        "complexity": "M",
+        "intent": "The AI agent gives customers clear notice when they deal with AI and a plain-language explanation when AI informed a decision about them. It checks that every chat assistant, AI-drafted message and AI-assisted decision notice carries the disclosure its risk tier requires, and on request drafts an explanation of the main factors behind a decision, with the route to human review, for the complaint handler to check and send.",
+        "problem": "Rules on AI and on consumer protection commonly expect customers to know when they interact with AI or receive AI-generated content, and to receive an explanation of a decision in which AI played a significant part, with a way to contest it. Disclosures are added channel by channel and drift as scripts and templates change. When a customer asks why a loan was declined or a limit was cut, staff cannot read the model's factors, so the answer is generic and the complaint escalates.",
+        "solution": "The AI agent checks chat assistant scripts, message templates and decision notices against the disclosure that the risk tier of each AI system requires, and lists the gaps for the product owner to correct. When a customer asks about a decision, it reads the decision record and the main factors the model recorded, and drafts a plain-language explanation with the route to human review. The complaint handler checks the draft against the case and sends it, and passes each contest to a person who can change the decision.",
+        "okr": {
+          "objective": "Customers are told in every channel when they deal with the Bank's AI, and customers who ask about an AI-informed decision receive a plain-language explanation and the route to human review, checked and sent by the complaint handler.",
+          "adoption": "The disclosure check covers 100% of customer-facing AI channels and templates at least monthly within 6 months of go-live; AI-drafted explanations used for ≥90% of customer requests about AI-informed decisions.",
+          "acceptance": "≥85% of AI-drafted explanations sent by the complaint handler without material amendment; ≥90% of disclosure gaps flagged by the AI agent corrected by the product owner within one month.",
+          "cycle": "Explanation sent within 2 business days of the customer's request, versus a generic reply followed by escalation through the complaints process under the prior approach."
+        }
+      }
+    ]
+  },
+  {
+    "page": "shared-banking-capabilities/transaction-processing/index.html",
+    "section": {
+      "id": "payments-modernization",
+      "title": "Payments modernization",
+      "intent": "Payments modernization covers the changes that payment systems and their overseers bring to every bank: structured, data-rich payment messages under the ISO 20022 standard, instant payments that settle in seconds around the clock and cannot be recalled, and preparation for a central bank digital currency. Each change reaches customer data, screening, reconciliation, fraud control, liquidity and core systems at once. The opportunity is to put the richer data and the faster rails to use for customers, rather than only to comply with them."
+    },
+    "cards": [
+      {
+        "slug": "iso-20022-structured-data-enrichment",
+        "title": "ISO 20022 Structured Data Enrichment",
+        "lens": "Automation",
+        "complexity": "M",
+        "intent": "The AI agent converts the free-text party, address and remittance details held in customer records and payment instructions into the structured fields of ISO 20022 messages — street, town, postal code, country, structured creditor reference — and routes the instructions it cannot map with confidence to the payment repair team. The Bank sends structured data as payment schemes restrict unstructured addresses, without a manual cleansing of its whole customer base.",
+        "problem": "Customer and counterparty addresses are held as free-text lines in core systems, entered over years in inconsistent formats, languages and scripts. Payment schemes moving to ISO 20022 commonly restrict or retire unstructured addresses, and sanctions screening, correspondent banks and beneficiary banks rely on structured fields. Manual cleansing of the customer base is slow and costly, so outgoing payments are rejected or held for repair, and data truncated when messages pass through older internal formats weakens screening and reconciliation.",
+        "solution": "The AI agent reads customer master records and outgoing payment instructions, parses free-text addresses and party details into structured ISO 20022 elements with a confidence score, and checks country, town and postal code against reference data. It proposes corrections to customer master data and flags internal interfaces that truncate structured fields. Payment repair specialists review low-confidence mappings before release, the customer data owner approves bulk master data corrections, and operations management tracks rejection and repair rates.",
+        "okr": {
+          "objective": "Outgoing payments leave the Bank with structured ISO 20022 party and address data, mapped by the AI agent and reviewed by payment repair specialists where confidence is low, so that repairs and rejections fall.",
+          "adoption": "Structured mapping applied to ≥95% of outgoing payment instructions within 9 months of go-live; customer master records of all active payment customers parsed within 12 months of go-live.",
+          "acceptance": "≥90% of AI-proposed mappings accepted by payment repair specialists without change; rejections and repairs attributed to party or address data reduced by ≥50% versus the pre-deployment baseline.",
+          "cycle": "Structured data available at instruction capture so that payments clear without repair, versus 1–2 hours of manual repair per held payment under the prior approach."
+        }
+      },
+      {
+        "slug": "structured-remittance-reconciliation-service",
+        "title": "Structured Remittance Reconciliation for Business Customers",
+        "lens": "New opps",
+        "complexity": "L",
+        "intent": "The AI agent uses the structured remittance data that ISO 20022 messages carry to match the incoming payments of business customers to their open invoices, explain partial and combined payments, and deliver a reconciliation file to the customer's accounting system. The Bank offers this as a cash-management service; the customer's finance team confirms the matches that the AI agent could not make with confidence.",
+        "problem": "Business customers spend hours each day matching incoming payments to invoices, because remittance information arrives as truncated free text, references are mistyped, and one transfer often settles several invoices less a deduction. ISO 20022 messages can carry structured references and full remittance detail, but banks commonly pass the data on as a statement line and leave the matching to the customer. The value of the richer data is lost, and the Bank competes for business accounts on price alone.",
+        "solution": "The AI agent reads incoming credit messages with their structured and free-text remittance data and the customer's open-invoice file, matches each payment to one or several invoices, explains differences such as deductions, fees and partial payments, and produces a reconciliation file in the format of the customer's accounting system. Low-confidence matches go to the customer's finance team for confirmation in the online channel. The cash-management product manager sets the service terms and tracks match rates and adoption by segment.",
+        "okr": {
+          "objective": "Business customers of the cash-management service receive their incoming payments matched to open invoices by the AI agent, with exceptions confirmed by their finance teams, so that the Bank's richer payment data becomes a service they value.",
+          "adoption": "Service live for ≥200 business customers within 12 months of launch; ≥80% of enrolled customers' incoming payments processed through the matching each business day.",
+          "acceptance": "≤2% of automatic matches reversed by customers' finance teams; ≥70% of enrolled customers renew the service at its first annual review, as tracked by the cash-management product manager.",
+          "cycle": "Reconciliation file delivered within 1 hour of each incoming payment batch, versus manual matching by the customer's finance team over the following business day under the prior approach."
+        }
+      },
+      {
+        "slug": "instant-payment-scam-interception",
+        "title": "Instant Payment Scam Interception",
+        "lens": "Automation",
+        "complexity": "L",
+        "intent": "The AI agent screens each outgoing instant payment, within the scheme's time limit, for signs of a scam or a mule account — a new payee, an unusual amount, a session pattern that suggests coaching, a payee name that does not match the account. It warns the customer or holds the few high-risk payments for a fraud analyst's decision before the funds leave the Bank irrevocably.",
+        "problem": "Instant payments settle in seconds, around the clock, and cannot be recalled once credited. Fraud shifts from stolen cards to scams in which customers are persuaded to send the money themselves, often to mule accounts that pass it on within minutes. Card-era controls act after the event or hold too many genuine payments, while requirements commonly expect banks to screen, verify the payee and warn customers without breaking the scheme's time limit. Each missed scam is a customer loss and, in some markets, a reimbursement cost to the paying bank.",
+        "solution": "The AI agent scores each outgoing instant payment in real time from payee history, amount, device and session signals, the payee name match, and mule indicators on the receiving account where available, and returns release, warn or hold within the time budget. For a warning it composes a scam-specific message for the customer; for a hold it assembles the evidence for the fraud analyst. Fraud analysts decide on held payments within the agreed time, and the fraud strategy manager tunes the thresholds from confirmed outcomes.",
+        "okr": {
+          "objective": "Customers sending instant payments are protected from scams by screening within the scheme's time limit, with high-risk payments held for a fraud analyst's decision before funds leave the Bank.",
+          "adoption": "Screening applied to 100% of outgoing instant payments within 6 months of go-live, with ≤0.5% of payments held for review.",
+          "acceptance": "≥30% of payments held by the AI agent confirmed by fraud analysts as scam or mule attempts; customer-reported scam losses on instant payments reduced by ≥40% versus the pre-deployment baseline.",
+          "cycle": "Screening decision returned within 1 second of the payment request and held payments decided by a fraud analyst within 30 minutes, versus detection after settlement through customer complaints under the prior approach."
+        }
+      },
+      {
+        "slug": "digital-currency-readiness-brief",
+        "title": "Central Bank Digital Currency Readiness Brief",
+        "lens": "Insights",
+        "complexity": "M",
+        "intent": "The AI agent follows the central bank's publications on a digital currency — consultations, pilot specifications, rules for intermediaries — maps each design choice to the Bank's products, systems, deposits and liquidity, and keeps a readiness gap register with a quarterly brief for the head of payments and the strategy team. The brief states what each choice would require of the Bank and when a decision is due.",
+        "problem": "Many central banks are studying or piloting a digital currency, and its design choices — whether banks distribute wallets, any holding limit, offline payments, fees, and interoperability with existing schemes — decide what it means for a bank: deposit outflow, new wallet and onboarding duties, changes to payment and core systems, and new liquidity needs. Publications arrive as long technical and consultation documents, read by different teams at different times, so the Bank's position and its preparation lag behind the design.",
+        "solution": "The AI agent reads each new publication of the central bank on the digital currency, extracts the design choices and the obligations proposed for intermediaries, and maps each one to the Bank's affected products, systems, processes and balance-sheet positions, estimating deposit outflow under the proposed holding limits. It updates the readiness gap register and drafts the quarterly brief and consultation responses. The head of payments and the strategy team validate the mapping, set the Bank's position, and assign preparation work to owners.",
+        "okr": {
+          "objective": "The head of payments and the strategy team set the Bank's position on a central bank digital currency and assign preparation work from an AI-maintained readiness gap register and quarterly brief.",
+          "adoption": "100% of the central bank's publications on the digital currency mapped into the readiness gap register from go-live; quarterly brief produced for ≥4 consecutive quarters.",
+          "acceptance": "≥80% of the AI agent's mapped impacts confirmed by the head of payments and the strategy team; preparation owner assigned for 100% of confirmed gaps within one quarter.",
+          "cycle": "Impact of a new publication in the readiness gap register within 10 business days of its release, versus months of separate reading by different teams under the prior approach."
+        }
+      }
+    ]
+  }
+]

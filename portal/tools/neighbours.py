@@ -11,6 +11,9 @@
 #   DOMAIN_ORDER - stable Discovery area order
 #   OVERVIEW - local navigation labels
 #   INTRO - Discovery landing introduction
+#   horizon_themes - regulatory horizon themes with their standing from the Registry
+#   scenario_index - scenarios of an edition by urn, for links from authored pages
+#   horizon_page, horizon_box, horizon_chips - render the Regulatory Horizon page, its overview box and card marks
 #   reading_guide - render the authored reading aid of the landing page
 #   finance_renderer - load the established Financial Services source adapter
 #   VisibleText - extract searchable text without embedded code
@@ -26,6 +29,7 @@
 # END_MODULE_MAP
 """Section content stays separate from the charter renderer and its term links."""
 from html import escape, unescape
+import functools
 from html.parser import HTMLParser
 import importlib.util
 import json
@@ -44,9 +48,130 @@ DOMAIN_ORDER = ('strategic-portfolio', 'strategic-initiatives', 'value-streams',
                 'shared-banking-capabilities', 'finance-treasury', 'banking-data-analytics')
 OVERVIEW = {'en': 'Overview', 'ru': 'Обзор'}
 INTRO = {
-    'en': 'The Discovery Catalog is a map of a bank and, for each part of the map, a list of scenarios in which AI could help. It gives a uniform view of the Bank\'s primary value chains, shared capabilities, steering and control, and for each it shows where AI can increase visibility and insight, automate operational flows, enable people at the point of work, and open new offerings. It holds 1,101 scenarios in nine areas. Use it to find and compare opportunities; nothing in it has been selected or approved.',
+    'en': 'The Discovery Catalog is a map of a bank and, for each part of the map, a list of scenarios in which AI could help. It gives a uniform view of the Bank\'s primary value chains, shared capabilities, steering and control, and for each it shows where AI can increase visibility and insight, automate operational flows, enable people at the point of work, and open new offerings. It holds 1,110 scenarios in nine areas. Use it to find and compare opportunities; nothing in it has been selected or approved.',
     'ru': 'Банковские услуги, клиентские пути и операционные возможности, в которых AI может принести пользу. Изучите карту и оцените каждую возможность с учётом условий её применения.',
 }
+
+
+HORIZON = ROOT / 'portal/sections/discovery/horizon.json'
+HORIZON_TEXT = {
+    'en': {'title': 'Regulatory Horizon', 'eyebrow': 'Cross-cutting view', 'box': 'Readiness for rules ahead', 'instruments': 'Instruments', 'chip': 'Regulatory Horizon',
+           'intro': 'The kinds of rules that already bind the Bank or are expected to reach it, and the scenarios in this catalog that prepare the Bank for them. Each theme names example instruments as references. Its standing for the Bank comes from the Standards record of the Registry and is to be confirmed by the Control Function Contacts. Preparing early lets the work be planned, piloted and measured before a rule applies.',
+           'groups': {'Applies': 'Applies to the Bank', 'Expected': 'Expected', 'Reference': 'Reference'}, 'scenarios': 'scenarios'},
+    'ru': {'title': 'Регуляторный горизонт', 'eyebrow': 'Сквозной взгляд', 'box': 'Готовность к новым требованиям', 'instruments': 'Акты', 'chip': 'Регуляторный горизонт',
+           'intro': 'Виды правил, которые уже обязательны для Банка или предположительно будут на него распространены, и сценарии каталога, которые готовят к ним Банк. Для каждой темы приведены примеры актов. Её статус для Банка взят из реестра «Стандарты» и подлежит подтверждению представителями контрольных функций.',
+           'groups': {'Применяется': 'Применяется', 'Ожидается': 'Ожидается', 'Справочный': 'Справочный'}, 'scenarios': 'сценариев'},
+}
+
+
+@functools.cache
+def horizon_themes_cached(lang):
+    return horizon_themes(lang)
+
+
+def horizon_themes(lang):
+    """Themes of the regulatory horizon: standing and instruments from the Registry, links from the section data."""
+    if not HORIZON.exists():
+        return []
+    register = {}
+    for line in (ROOT / 'registry' / lang / 'standards.md').read_text().splitlines():
+        cells = [cell.strip() for cell in line.strip().strip('|').split('|')]
+        if cells and re.fullmatch(r'HZ-\d{3}', cells[0]):
+            register[cells[0]] = {'title': cells[1], 'instruments': cells[2], 'standing': cells[3]}
+    present = scenario_index(lang)
+    themes = []
+    for theme in json.loads(HORIZON.read_text())['themes']:
+        if theme['id'] not in register:
+            raise ValueError(f'Regulatory horizon theme missing from the Registry: {theme["id"]}')
+        text = {key: theme[key] for key in ('asks', 'readiness') if lang == 'en' and theme.get(key)}
+        # An edition links the scenarios it holds; new scenarios reach the Russian edition with its own round.
+        held = [urn for urn in theme['scenarios'] if urn in present]
+        themes.append({**theme, **register[theme['id']], **text, 'scenarios': held})
+    return themes
+
+
+@functools.cache
+def scenario_index(lang):
+    """Every scenario of an edition by urn: its page, anchor, title and lens."""
+    index = {}
+    for path in sorted((SOURCE / lang).rglob('index.html')):
+        relative = path.relative_to(SOURCE / lang).parent.as_posix()
+        source = path.read_text()
+        page_title = title_of(source)
+        for match in re.finditer(r'<details class="scenario-card" data-urn="([^"]+)">(.*?)</details>', source, re.S):
+            title = re.search(r'<h3 class="scenario-card__title">(.*?)</h3>', match[2], re.S)
+            lens = re.search(r'<span class="scenario-lens[^"]*">(.*?)</span>', match[2], re.S)
+            index[match[1]] = {'page': '' if relative == '.' else relative + '/', 'page_title': page_title,
+                               'anchor': 'scenario-' + match[1].rsplit('/', 1)[-1],
+                               'title': VisibleText(title[1]).text().lstrip('▸ ') if title else match[1], 'lens': VisibleText(lens[1]).text() if lens else ''}
+    return index
+
+
+def standing_group(standing, lang):
+    return next(label for key, label in HORIZON_TEXT[lang]['groups'].items() if standing.startswith(key))
+
+
+def horizon_page(lang, themes, index):
+    """The Regulatory Horizon page of an edition, inside the Discovery content frame."""
+    text = HORIZON_TEXT[lang]
+    url = f'/{lang}/discovery/regulatory-horizon/'
+    sections = []
+    for theme in themes:
+        items = []
+        for urn in theme['scenarios']:
+            card = index[urn]
+            href = workspace.relative(url, f'/{lang}/discovery/{card["page"]}') + '#' + card['anchor']
+            items.append(f'<li><a href="{escape(href)}">{escape(card["title"])}</a>'
+                         f'<span class="horizon-scenarios__where">{escape(card["lens"])} · {escape(card["page_title"])}</span></li>')
+        prose = ''.join(f'<p>{escape(theme[key])}</p>' for key in ('asks', 'readiness') if theme.get(key))
+        sections.append(f'<section class="horizon-theme" id="{theme["slug"]}"><header class="horizon-theme__head">'
+                        f'<span class="horizon-theme__id">{theme["id"]}</span><h2>{escape(theme["title"])}</h2>'
+                        f'<span class="horizon-standing">{escape(theme["standing"])}</span></header>'
+                        f'<p class="horizon-theme__instruments"><strong>{text["instruments"]}:</strong> {escape(theme["instruments"])}</p>{prose}'
+                        f'<ol class="horizon-scenarios">{"".join(items)}</ol></section>')
+    contents = ''.join(f'<li><a href="#{t["slug"]}">{escape(t["title"])}</a> <span class="card-link__count">({len(t["scenarios"])})</span></li>' for t in themes)
+    label = workspace.section_label('discovery', lang)
+    header = (f'<header class="page-header"><nav class="breadcrumb" aria-label="Breadcrumb"><span class="breadcrumb__item">'
+              f'<a class="breadcrumb__link" href="../">{escape(label)}</a></span><span class="breadcrumb__item">'
+              f'<span class="breadcrumb__sep" aria-hidden="true">/</span><span class="breadcrumb__current" aria-current="page">{text["title"]}</span></span></nav>'
+              f'<h1 class="page-header__title">{text["title"]}</h1><p class="page-header__intent">{escape(text["intro"])}</p></header>')
+    body = header + f'<div class="horizon"><ol class="horizon-contents">{contents}</ol>{"".join(sections)}</div>'
+    return url, text['title'], body
+
+
+def horizon_box(themes, lang):
+    """The overview box that leads to the Regulatory Horizon page."""
+    text = HORIZON_TEXT[lang]
+    groups = {}
+    for theme in themes:
+        groups.setdefault(standing_group(theme['standing'], lang), []).append(theme)
+    total = len({urn for theme in themes for urn in theme['scenarios']})
+    rows = ''.join('<div class="sub-group"><div class="sub-group__label">' + escape(label) + '</div><div class="sub-group__items">'
+                   + '<span class="dot" aria-hidden="true">·</span>'.join(
+                       f'<a class="card-link" href="regulatory-horizon/index.html#{t["slug"]}">{escape(t["title"])} <span class="card-link__count">({len(t["scenarios"])})</span></a>' for t in items)
+                   + '</div></div>' for label, items in groups.items())
+    return (f'<div role="region" aria-label="{text["eyebrow"]}" class="horizon-region"><div class="peer-label" role="heading" aria-level="2">{text["eyebrow"]}</div>'
+            f'<article class="card card--horizon"><div class="card__head"><div class="card__eyebrow">{text["box"]}</div>'
+            f'<h2 class="card__title card__title--lg">{text["title"]} <span class="card__count" aria-label="{total} {text["scenarios"]}">({total})</span></h2></div>'
+            f'<div class="card__body"><div class="sub-groups sub-groups--row">{rows}</div></div>'
+            f'<a class="card__click-target" href="regulatory-horizon/index.html" tabindex="0" aria-label="{text["title"]}"></a></article></div>')
+
+
+def horizon_chips(body, url, lang, themes):
+    """Mark each linked scenario with the themes that it prepares for."""
+    by_urn = {}
+    for theme in themes:
+        for urn in theme['scenarios']:
+            by_urn.setdefault(urn, []).append(theme)
+    target = workspace.relative(url, f'/{lang}/discovery/regulatory-horizon/')
+
+    def chip(match):
+        found = by_urn.get(match[1])
+        if not found:
+            return match[0]
+        links = ''.join(f'<a href="{target}#{t["slug"]}">{escape(t["title"])}</a>' for t in found)
+        return match[0] + f'<p class="horizon-chip"><span>{HORIZON_TEXT[lang]["chip"]}:</span> {links}</p>'
+    return re.sub(r'<details class="scenario-card" data-urn="([^"]+)".*?<div class="scenario-card__body">', chip, body, flags=re.S)
 
 
 def reading_guide(lang):
@@ -194,6 +319,9 @@ def discovery_page(source, relative, lang):
                 return re.sub(r'(<div class="card__eyebrow">.*?)(</div>)',
                               r'\1<span class="discovery-status">In progress</span>\2', card, count=1, flags=re.S)
             body = re.sub(r'<article class="card card--peer"[^>]*>.*?</article>', development_card, body, flags=re.S)
+    themes = horizon_themes_cached(lang)
+    if relative == Path('index.html') and themes:
+        body = body.replace('<div role="region" aria-label="Peer frameworks">', horizon_box(themes, lang) + '<div role="region" aria-label="Peer frameworks">', 1)
     if lang == 'en' and relative == Path('value-streams/index.html'):
         # Stable destinations for the overview's individual stage links.
         def stage_target(match):
@@ -202,6 +330,8 @@ def discovery_page(source, relative, lang):
             stage = re.search(r'data-stage="([^"]+)"', attrs)[1]
             return f'<button{attrs} id="stage-{flow}--{stage}">'
         body = re.sub(r'<button\b([^>]*class="flow-stages__stage"[^>]*)>', stage_target, body)
+    if themes:
+        body = horizon_chips(body, url, lang, themes)
     # Add stable fragment targets without changing original scenario URNs or copy.
     body = re.sub(r'(<details class="scenario-card" data-urn="([^"]+)")', lambda m: m[1] + f' id="scenario-{m[2].rsplit("/", 1)[-1]}"', body)
     source_styles = re.findall(r'<link rel="stylesheet" href="([^"]+)">', source)
@@ -237,6 +367,9 @@ def build_discovery(output):
         for domain in DOMAIN_ORDER:
             markup = finance.discovery_source(Path(domain) / 'index.html', lang)
             links.append((f'/{lang}/discovery/{domain}/', title_of(markup)))
+        themes = horizon_themes_cached(lang)
+        if themes:
+            links.append((f'/{lang}/discovery/regulatory-horizon/', HORIZON_TEXT[lang]['title']))
         entries = []
         for path in sorted((SOURCE / lang).rglob('*.html')):
             relative = path.relative_to(SOURCE / lang)
@@ -246,6 +379,16 @@ def build_discovery(output):
             page = workspace.page(url, lang, 'discovery', title, body, local_links(url, links), extra_head=head, body_class='discovery-workspace ' + classes)
             page = page.replace('</head>', skin + '\n' + js + '\n</head>', 1)
             write(output, url + 'index.html', page)
+            entries.extend(search_entries(body, url, title))
+            count += 1
+        if themes:
+            url, title, body = horizon_page(lang, themes, scenario_index(lang))
+            body = f'<div class="discovery-content">{body}</div>'
+            head = ''.join(f'<link rel="stylesheet" href="../assets/styles/{name}">\n' for name in ('tokens.css', 'components.css', 'theme.css', 'layouts/concern.css'))
+            skin = f'<link rel="stylesheet" href="{workspace.asset(url, "discovery.css")}">'
+            js = f'<script defer src="{workspace.relative(url, "/assets/discovery.js")}"></script>'
+            page = workspace.page(url, lang, 'discovery', title, body, local_links(url, links), extra_head=head, body_class='discovery-workspace page--concern discovery-horizon')
+            write(output, url + 'index.html', page.replace('</head>', skin + '\n' + js + '\n</head>', 1))
             entries.extend(search_entries(body, url, title))
             count += 1
         write(output, f'assets/search-discovery-{lang}.json', json.dumps(entries, ensure_ascii=False, separators=(',', ':')))

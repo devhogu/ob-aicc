@@ -81,3 +81,12 @@ The round ran from tag `discovery-fix-start` and followed the steps above, with 
 - **Landing page:** the introduction is `INTRO` in `portal/tools/neighbours.py`; the reading aid is `portal/sections/discovery/en/guide.md`, shown as a collapsed block under the introduction. A Discovery page may not link into the AICC section, so the reference to Regulators and acts is plain text.
 - **For people to read:** [notes/citations-removed.md](notes/citations-removed.md) (512 references, for Compliance) and [notes/reword-notes.md](notes/reword-notes.md) (292 points the workers raised).
 
+## Regulatory Horizon, 6 October 2026
+
+The rewording removed the foreign regimes from the cards. Because some of them signal rules that will reach the Bank, the catalog gained a cross-cutting section that names them on purpose and links each to the scenarios that prepare the Bank for it.
+
+- **Grounding:** the themes and their standing for the Bank are the section "Regulatory horizon" of the Standards record of the Registry (HZ-001 to HZ-012, both editions), to be confirmed by the Control Function Contacts (RI-006).
+- **Links:** `portal/sections/discovery/horizon.json` holds, per theme, what such rules ask of a bank, how the scenarios prepare for it, and the linked scenarios (147 links to 145 scenarios). Candidates were drawn from the original text ([horizon/candidates.md](horizon/candidates.md)) and curated ([horizon/curation-notes.md](horizon/curation-notes.md)).
+- **New scenarios:** two themes had almost none, so nine scenarios were added ([horizon/new-scenarios.json](horizon/new-scenarios.json), `tools/add_scenarios.py`): a section "AI governance" (5) on the model-risk page and "Payments modernization" (4) on the transaction-processing page. The English catalog holds 1,110 scenarios; the Russian edition receives them in its own round and meanwhile links only the scenarios it holds.
+- **Portal:** a page "Regulatory Horizon" in both editions, a box on the overview grouped by standing, and on each linked card a mark that leads to its themes.
+

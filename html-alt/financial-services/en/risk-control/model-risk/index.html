@@ -1247,6 +1247,292 @@ The assembly draws on the model risk management system, validation report archiv
 
 </section>
     
+    <section class="l3-section" id="ai-governance">
+
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">AI governance</h2>
+    <p class="l3-section__intent">AI governance covers the rules on the Bank&#39;s own use of AI: which AI systems are in use, how risky each one is, how each is overseen in operation, and what happens when one fails. Rules on AI, such as the EU Artificial Intelligence Act, commonly classify systems by risk, treat credit assessment of individuals as high risk, and expect human oversight, logging, incident reporting and transparency to customers. Much of this AI is bought, and the Bank answers for it as for its own.</p>
+  </header>
+
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+
+  <div class="l3-section__scenarios">
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/ai-governance/ai-register-risk-tier-classification">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">AI Register Reconciliation &amp; Risk Tier Classification</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent keeps the Bank&#39;s AI register complete and classified. It reconciles the register against AI platform usage logs, procurement records and vendor release notes to find AI systems not yet listed, proposes a risk tier for each entry from its data, influence on decisions, customer reach and autonomy, and flags systems in categories that rules on AI treat as high risk. The Chief Model Risk Officer confirms each tier.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>AI enters a bank through many doors: models built in-house, bought software that gains AI features in a routine upgrade, generative AI services used by teams, and AI agents with rights over systems. The AI register is kept by hand from self-reported entries and lags behind actual use, and a risk tier is set once and rarely revisited when the data, the decision or the autonomy changes. A system in a high-risk category, such as credit assessment of individuals, can then run under the controls of a lower tier.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the AI register, AI platform usage logs, procurement and contract records, and vendor release notes, and lists AI use that is not registered. For each entry it records the attributes that set the risk tier — data class, influence on decisions, customer reach and degree of autonomy — proposes the tier with its rationale, and flags high-risk categories and the documentation the tier requires but the entry lacks. The Chief Model Risk Officer confirms or changes each tier, and system owners complete the missing entries.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Chief Model Risk Officer confirms the risk tier of every AI system from an AI-proposed classification with its rationale, and works from an AI register reconciled against actual use rather than self-reported entries.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent&#39;s reconciliation and classification cover 100% of AI register entries at least quarterly within 6 months of go-live; usage logs, procurement records and vendor release notes read in every run.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of AI-proposed risk tiers confirmed by the Chief Model Risk Officer without change; ≥70% of unregistered AI uses flagged by the AI agent confirmed as genuine and entered in the register within one quarter.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Reconciled and classified register delivered within 5 business days of each quarterly data cut, versus a register updated only when owners self-report a new or changed AI system under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/ai-governance/human-oversight-evidence-review">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Human Oversight Evidence Review</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent reads the decision logs of AI-assisted processes and produces a quarterly oversight evidence report for each AI system: how often reviewers accept, correct or override the AI output, how long reviews take, which cases affecting individuals lack a recorded human decision, and where the logs miss what record-keeping requires. The report goes to each system owner and to the Chief Model Risk Officer.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Complexity"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Rules on AI and the requirements of each risk tier expect a person to review AI output, a person to decide each case that affects an individual, and logs that prove both. In practice oversight is asserted in a design document rather than measured in operation. A reviewer who accepts nearly every output within seconds provides little oversight, and logs often lack the reviewer, the model version or the final decision. The gap surfaces at an audit, a complaint or an incident, when the evidence can no longer be rebuilt.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the decision logs of each AI system whose risk tier requires human review and computes, by system and reviewer team, acceptance, correction and override rates, review times, and cases affecting individuals without a recorded human decision. It checks each log against the record-keeping fields the tier requires — input, output, model version, reviewer, decision and time — and flags patterns that suggest review in name only. The system owner explains or remedies each flag, and the Chief Model Risk Officer reviews the report.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Each AI system owner and the Chief Model Risk Officer receive quarterly evidence, measured from decision logs, that human oversight works as designed, with record-keeping gaps and review-in-name-only patterns flagged for remedy.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The oversight evidence report is produced quarterly for 100% of AI systems whose risk tier requires human review within 12 months of go-live; the decision logs of every such system read in each run.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of the AI agent&#39;s flags confirmed by system owners as genuine oversight or logging gaps; remedy agreed for 100% of confirmed gaps before the next quarterly report.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Oversight evidence available within 10 business days of quarter-end, versus evidence rebuilt by hand only when an audit, a complaint or an incident calls for it under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/ai-governance/ai-incident-detection-notification-draft">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">AI Incident Detection &amp; Notification Draft</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent watches the monitoring alerts, logs and complaints linked to the Bank&#39;s AI systems for signs of an AI incident — harmful or biased output, drift beyond alert levels, an AI agent acting beyond its permissions, data leaking through a prompt. It opens a record in the Bank&#39;s incident process marked as AI-related and drafts the incident report and, where needed, the notification to the regulator for the compliance officer&#39;s decision.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--L"
+      title="Complexity"
+    >L</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>AI incidents rarely announce themselves. A model that drifts, a chat assistant that quotes wrong product terms, or an AI agent that acts outside its permissions shows up as scattered signals: a monitoring alert, a rise in overrides, a few complaints. Incident teams classify these as ordinary IT or service events and miss the AI aspect, while the time limits for reporting serious incidents, which rules on AI commonly set in days, are already running. The lessons then never reach the risk tier or the controls of the AI system.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads monitoring alerts, override and correction rates, AI agent action logs and customer complaints for each registered AI system, links related signals to the system and its risk tier, and opens an incident record marked as AI-related with the evidence attached. For an incident that may be serious, it drafts the incident report and the regulator notification in the required structure. The incident manager classifies the incident, the compliance officer decides whether the regulator is notified, and the Chief Model Risk Officer reassesses the risk tier.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The incident manager and the compliance officer receive AI incidents identified from linked monitoring, log and complaint signals, with the incident report and regulator notification drafted for decision within the reporting time limit.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>Detection covers 100% of registered AI systems with monitoring in place within 9 months of go-live; every incident linked to an AI system recorded as AI-related from go-live.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of AI incidents opened by the AI agent confirmed by the incident manager; ≥85% of AI-drafted regulator notifications used by the compliance officer without material amendment.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>AI incident record opened within 4 hours of the first linked signal and draft notification ready within 1 business day of classification as serious, versus recognition of the AI aspect only at post-incident review under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/ai-governance/third-party-ai-due-diligence">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Third-Party AI Due Diligence</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent prepares the AI section of the third-party risk assessment for each provider of AI or of software with AI features: where data is processed and kept, whether the provider may train on the Bank&#39;s data, which model is in use and how changes are notified, what testing evidence exists, and the fallback and exit terms. The third-party risk manager and the information security and data protection reviewers decide.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Most AI in a bank arrives from providers: credit scoring engines, fraud tools, chat assistants, and standard software that adds AI features in an upgrade. A bank answers for that AI as for its own, yet vendor questionnaires seldom ask the questions that matter for AI, and contracts, model documentation and data-processing terms are long and differ by provider. Reviewers miss a clause that permits training on customer data, a model change made without notice, or the absence of a workable fallback when the service fails.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the provider&#39;s contract, data-processing terms, model documentation, security attestations and questionnaire answers, and fills the AI section of the assessment, citing the clause or page behind each answer and flagging gaps against the Bank&#39;s provider requirements: data location, training on Bank data, notice of model changes, testing evidence, access to logs, fallback and exit. It drafts follow-up questions for the provider. The reviewers verify the cited answers, and the third-party risk manager records whether the provider is approved.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The third-party risk manager and the information security and data protection reviewers decide on each AI provider from an AI-prepared assessment that cites the contract or document behind every answer and flags each gap.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-prepared assessments used for 100% of new AI providers and for every reassessment, change of terms or change of model within 9 months of go-live.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of the AI agent&#39;s cited answers confirmed by reviewers against the source document; ≥75% of flagged gaps confirmed as genuine and raised with the provider.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>AI section of the assessment ready within 3 business days of receipt of the provider&#39;s documents, versus 2–3 weeks of manual review of contracts and questionnaires under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/model-risk/ai-governance/customer-ai-disclosure-explanation">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">New opps</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Customer AI Disclosure &amp; Decision Explanation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent gives customers clear notice when they deal with AI and a plain-language explanation when AI informed a decision about them. It checks that every chat assistant, AI-drafted message and AI-assisted decision notice carries the disclosure its risk tier requires, and on request drafts an explanation of the main factors behind a decision, with the route to human review, for the complaint handler to check and send.</p>
+    </div>
+    <span
+      class="scenario-complexity scenario-complexity--M"
+      title="Complexity"
+    >M</span>
+  </summary>
+
+  <div class="scenario-card__body">
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Rules on AI and on consumer protection commonly expect customers to know when they interact with AI or receive AI-generated content, and to receive an explanation of a decision in which AI played a significant part, with a way to contest it. Disclosures are added channel by channel and drift as scripts and templates change. When a customer asks why a loan was declined or a limit was cut, staff cannot read the model&#39;s factors, so the answer is generic and the complaint escalates.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent checks chat assistant scripts, message templates and decision notices against the disclosure that the risk tier of each AI system requires, and lists the gaps for the product owner to correct. When a customer asks about a decision, it reads the decision record and the main factors the model recorded, and drafts a plain-language explanation with the route to human review. The complaint handler checks the draft against the case and sends it, and passes each contest to a person who can change the decision.</p>
+    </div>
+
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Customers are told in every channel when they deal with the Bank&#39;s AI, and customers who ask about an AI-informed decision receive a plain-language explanation and the route to human review, checked and sent by the complaint handler.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The disclosure check covers 100% of customer-facing AI channels and templates at least monthly within 6 months of go-live; AI-drafted explanations used for ≥90% of customer requests about AI-informed decisions.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of AI-drafted explanations sent by the complaint handler without material amendment; ≥90% of disclosure gaps flagged by the AI agent corrected by the product owner within one month.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Explanation sent within 2 business days of the customer&#39;s request, versus a generic reply followed by escalation through the complaints process under the prior approach.</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</details>
+
+  </div>
+
+</section>
+    
+    
     
 
   </main>

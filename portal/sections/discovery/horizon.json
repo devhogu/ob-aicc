@@ -1,0 +1,259 @@
+{
+ "themes": [
+  {
+   "id": "HZ-001",
+   "slug": "ai-governance",
+   "title": "AI governance",
+   "asks": "Rules of this kind classify AI systems by risk and set the heaviest duties for uses that affect access to essential services, such as credit scoring. A bank is typically asked to keep an inventory of the AI systems it develops or deploys, document their purpose, data and design, test and monitor them for accuracy, robustness and bias, keep logs, ensure meaningful human oversight of outcomes, explain decisions to the people affected, and report serious incidents or malfunctions.",
+   "readiness": "The linked scenarios already produce parts of this evidence: a scan for models running outside the inventory, monitoring of approval rates by customer segment, accuracy tracking for a document extraction model, calibration records for an alert-scoring model, and a credit copilot whose case briefs an underwriter reviews and edits before committee.",
+   "scenarios": [
+    "urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/shadow-model-identification",
+    "urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/credit-origination-analytics",
+    "urn:financial-services:scenario:shared-banking-capabilities/customer-onboarding/kyc-document-extraction/kyc-extraction-quality-analytics",
+    "urn:financial-services:scenario:shared-banking-capabilities/financial-crime/transaction-monitoring-alert-triage/tm-alert-disposition-feedback-loop",
+    "urn:financial-services:scenario:flow/lending/lending-credit-decision-copilot",
+    "urn:financial-services:scenario:risk-control/model-risk/ai-governance/ai-register-risk-tier-classification",
+    "urn:financial-services:scenario:risk-control/model-risk/ai-governance/human-oversight-evidence-review",
+    "urn:financial-services:scenario:risk-control/model-risk/ai-governance/ai-incident-detection-notification-draft",
+    "urn:financial-services:scenario:risk-control/model-risk/ai-governance/third-party-ai-due-diligence",
+    "urn:financial-services:scenario:risk-control/model-risk/ai-governance/customer-ai-disclosure-explanation"
+   ]
+  },
+  {
+   "id": "HZ-002",
+   "slug": "operational-resilience",
+   "title": "Operational and cyber resilience",
+   "asks": "Rules of this kind treat ICT and cyber risk as part of a bank's operational resilience. They typically require a documented ICT risk framework, classification of incidents with prompt notification of major ones to the supervisor, regular resilience testing up to threat-led penetration tests for larger institutions, business continuity and recovery plans with tested recovery objectives, and oversight of ICT third-party providers through a register of arrangements, contract clauses, exit plans and concentration analysis.",
+   "readiness": "The linked scenarios prepare incident notifications and triage packs, design and prepare resilience tests, track recovery and patching against set timeframes, keep business continuity plans current, and maintain the third-party register, contract reviews, exit plans and concentration analysis, so that the Bank can show the evidence such rules ask for.",
+   "scenarios": [
+    "urn:financial-services:scenario:risk-control/cyber-risk/incident-detection-response/cyber-incident-triage-pack",
+    "urn:financial-services:scenario:risk-control/cyber-risk/incident-detection-response/incident-dora-notification-draft",
+    "urn:financial-services:scenario:risk-control/cyber-risk/incident-detection-response/incident-post-mortem-pack",
+    "urn:financial-services:scenario:risk-control/cyber-risk/vulnerability-patch-management/patch-compliance-status-report",
+    "urn:financial-services:scenario:risk-control/cyber-risk/cyber-resilience-recovery/resilience-testing-scenario-design",
+    "urn:financial-services:scenario:risk-control/cyber-risk/cyber-resilience-recovery/dora-tlpt-preparation-support",
+    "urn:financial-services:scenario:risk-control/cyber-risk/cyber-resilience-recovery/resilience-recovery-metrics-dashboard",
+    "urn:financial-services:scenario:risk-control/operational-risk/third-party-tprm/tprm-exit-plan-currency-check",
+    "urn:financial-services:scenario:risk-control/operational-risk/third-party-tprm/dora-third-party-register-extraction",
+    "urn:financial-services:scenario:risk-control/operational-risk/third-party-tprm/ict-vendor-performance-monitoring",
+    "urn:financial-services:scenario:risk-control/operational-risk/business-continuity-dr/post-incident-review-bcp-update",
+    "urn:financial-services:scenario:risk-control/operational-risk/business-continuity-dr/bcp-annual-refresh-support",
+    "urn:financial-services:scenario:risk-control/operational-risk/business-continuity-dr/rto-rpo-test-results-analysis",
+    "urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-onboarding-regulatory-timeline-planning",
+    "urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-contract-regulatory-adequacy-review",
+    "urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/sourcing-concentration-risk-renewal-analysis"
+   ]
+  },
+  {
+   "id": "HZ-003",
+   "slug": "model-risk",
+   "title": "Model risk management",
+   "asks": "Guidance of this kind treats models as a source of risk to be governed across their life. A bank is typically expected to define what counts as a model, keep a complete inventory with owners and risk tiers, document development choices and limitations, have models validated independently before use and periodically after, monitor performance against thresholds, track and remediate findings, set a model risk appetite, and report the state of model risk to senior management, the board and the supervisor.",
+   "readiness": "The linked scenarios keep the model inventory complete, including spreadsheet tools that act as models, draft development specifications and validation reports, schedule validations by risk, monitor performance and drift, synthesize findings, and assemble model risk reports, giving the Bank a working model risk cycle with the records that such guidance asks for.",
+   "scenarios": [
+    "urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/credit-parameter-inputs/credit-parameter-review-brief",
+    "urn:financial-services:scenario:risk-control/credit-risk/pd-lgd-ead-model-outputs/irb-model-performance-signal",
+    "urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/model-inventory-documentation-completeness",
+    "urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/model-inventory-annual-attestation",
+    "urn:financial-services:scenario:risk-control/model-risk/model-inventory-governance/shadow-model-identification",
+    "urn:financial-services:scenario:risk-control/model-risk/model-performance-monitoring/model-performance-monthly-dashboard",
+    "urn:financial-services:scenario:risk-control/model-risk/model-validation/model-development-spec-drafting",
+    "urn:financial-services:scenario:risk-control/model-risk/model-risk-reporting/model-risk-appetite-metric-watch",
+    "urn:financial-services:scenario:risk-control/model-risk/model-risk-reporting/model-risk-regulatory-reporting-pack",
+    "urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-inventory-completeness-support",
+    "urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-report-drafting",
+    "urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-portfolio-performance-health-dashboard",
+    "urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-schedule-dynamic-reprioritisation",
+    "urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-findings-thematic-synthesis",
+    "urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/model-recalibration-brief-drafting",
+    "urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/scorecard-characteristic-drift-monitoring"
+   ]
+  },
+  {
+   "id": "HZ-004",
+   "slug": "open-banking",
+   "title": "Open banking and partner APIs",
+   "asks": "Rules of this kind require banks to give licensed third-party providers secure access, with the customer's consent, to account data and payment initiation through dedicated interfaces. A bank is typically asked to verify each provider's authorization, authenticate customers strongly, respect the scope and duration of consent, keep complete audit trails, meet availability and performance standards for its interfaces and report on them, and keep its interfaces in line with technical standards as they are revised.",
+   "readiness": "The linked scenarios onboard and verify third-party providers, monitor API traffic against consent and authentication requirements, track interface performance and breaches, follow changes to API standards, and review partnerships for regulatory obligations, so that the Bank can operate in or join an open-banking framework with evidence of control.",
+   "scenarios": [
+    "urn:financial-services:scenario:customer-channels/partner-api-channels/open-banking-api-governance/third-party-provider-onboarding-automation",
+    "urn:financial-services:scenario:customer-channels/partner-api-channels/open-banking-api-governance/open-banking-api-compliance-monitoring",
+    "urn:financial-services:scenario:customer-channels/partner-api-channels/open-banking-api-governance/api-governance-risk-intelligence",
+    "urn:financial-services:scenario:customer-channels/partner-api-channels/partner-performance-monitoring/partner-sla-breach-alert-automation",
+    "urn:financial-services:scenario:strategic-initiatives/ecosystem-platform-strategy/api-open-banking-integration/api-third-party-performance-brief",
+    "urn:financial-services:scenario:strategic-initiatives/ecosystem-platform-strategy/api-open-banking-integration/api-integration-compliance-monitoring",
+    "urn:financial-services:scenario:strategic-initiatives/ecosystem-platform-strategy/partner-ecosystem-governance/ecosystem-compliance-monitoring",
+    "urn:financial-services:scenario:strategic-initiatives/ecosystem-platform-strategy/partner-ecosystem-governance/partner-ecosystem-quality-monitoring",
+    "urn:financial-services:scenario:strategic-initiatives/strategic-partnerships/regulatory-compliance-review/partnership-regulatory-compliance-review"
+   ]
+  },
+  {
+   "id": "HZ-005",
+   "slug": "personal-data",
+   "title": "Personal data and consent",
+   "asks": "Laws of this kind require a lawful basis for each use of personal data and treat consent as specific, informed and revocable. A bank is typically asked to record the purposes for which it processes data and the basis for each, honor withdrawals promptly across downstream uses, keep an inventory of where personal data is stored, control and document transfers to other jurisdictions, meet any localization requirement, and be able to demonstrate compliance on request.",
+   "readiness": "The linked scenarios measure consent coverage by purpose, flag expiring or missing consents, trace the effect of withdrawals on campaigns and models, enforce consent scope at the point of personalization, and monitor data location and cross-border flows against a legal basis register, giving the Bank current evidence of its data-protection position.",
+   "scenarios": [
+    "urn:financial-services:scenario:banking-data-analytics/customer-data/consent-privacy-records/consent-posture-monitoring",
+    "urn:financial-services:scenario:banking-data-analytics/customer-data/consent-privacy-records/consent-withdrawal-impact-assessment",
+    "urn:financial-services:scenario:banking-data-analytics/customer-data/consent-privacy-records/consent-coverage-by-product-segment",
+    "urn:financial-services:scenario:banking-data-analytics/regulatory-data/data-residency-localization/data-residency-compliance-check",
+    "urn:financial-services:scenario:banking-data-analytics/regulatory-data/data-residency-localization/data-residency-inventory-currency",
+    "urn:financial-services:scenario:banking-data-analytics/regulatory-data/data-residency-localization/cross-border-data-flow-monitor",
+    "urn:financial-services:scenario:customer-channels/digital-channels/digital-engagement-personalisation/consent-scope-enforcement-automation"
+   ]
+  },
+  {
+   "id": "HZ-006",
+   "slug": "capital-liquidity",
+   "title": "Capital and liquidity reforms",
+   "asks": "Reforms of this kind raise the quality and quantity of bank capital and add liquidity standards. A bank is typically asked to calculate risk-weighted assets under revised rules, respect limits on capital instruments and large exposures, hold high-quality liquid assets against stressed outflows, fund itself from stable sources, measure interest rate risk in the banking book under prescribed shocks, monitor intraday liquidity, and run internal capital and liquidity adequacy assessments that the supervisor reviews.",
+   "readiness": "The linked scenarios draft and check the internal capital and liquidity assessments, monitor capital ratios, limits and eligible instruments, explain movements in risk-weighted assets, analyze liquidity ratios and buffers, backtest behavioral assumptions, and assemble interest rate risk and liquidity returns, so that the Bank can meet stricter standards with tested processes.",
+   "scenarios": [
+    "urn:financial-services:scenario:banking-data-analytics/risk-position-data/trading-book-positions/trading-book-boundary-monitoring",
+    "urn:financial-services:scenario:finance-treasury/alm/irrbb-limit-monitoring/irrbb-supervisory-assessment-prep",
+    "urn:financial-services:scenario:finance-treasury/capital-management/capital-actions/capital-action-headroom-analysis",
+    "urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-irrbb-pack-narrative-drafting",
+    "urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/bcbs368-behavioural-assumption-backtesting",
+    "urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/daily-lcr-nsfr-exception-commentary",
+    "urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-behavioural-assumption-backtesting",
+    "urn:financial-services:scenario:finance-treasury/fpa/annual-budget-cycle/icaap-budget-consistency-check",
+    "urn:financial-services:scenario:finance-treasury/liquidity-management/investment-portfolio/hqla-stress-scenario-adequacy-check",
+    "urn:financial-services:scenario:risk-control/icaap-ilaap-narrative-assembly",
+    "urn:financial-services:scenario:risk-control/credit-risk/counterparty-exposure-analytics/counterparty-exposure-breach-pack",
+    "urn:financial-services:scenario:risk-control/credit-risk/pd-lgd-ead-model-outputs/rwa-capital-attribution-pack",
+    "urn:financial-services:scenario:risk-control/liquidity-risk/lcr-nsfr-reporting/lcr-sensitivity-analysis",
+    "urn:financial-services:scenario:risk-control/liquidity-risk/lcr-nsfr-reporting/nsfr-structural-funding-analysis",
+    "urn:financial-services:scenario:risk-control/liquidity-risk/stress-contingency-funding/cfp-trigger-monitoring",
+    "urn:financial-services:scenario:risk-control/liquidity-risk/intraday-liquidity-monitoring/intraday-peak-usage-trend-analysis",
+    "urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-model-backtesting-pack",
+    "urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/supervisory-dialogue-knowledge-base",
+    "urn:financial-services:scenario:strategic-portfolio/capital-allocation/tier-2-capital/tier-2-regulatory-limit-tracking",
+    "urn:financial-services:scenario:strategic-portfolio/capital-allocation/icaap/icaap-stress-scenario-design-support",
+    "urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/capital-adequacy-continuous-monitoring",
+    "urn:financial-services:scenario:flow/treasury-funding/trs-alco-pack-automation"
+   ]
+  },
+  {
+   "id": "HZ-007",
+   "slug": "risk-data-reporting",
+   "title": "Risk data and supervisory reporting",
+   "asks": "Standards of this kind require that the risk data behind management and supervisory reports be accurate, complete, timely and traceable. A bank is typically asked to govern its critical data elements, document lineage from source systems to each reported figure, measure and remediate data quality, reconcile reports with accounting data, file templated returns in a prescribed data format that passes the supervisor's validation rules, and show that the same data supports consistent reporting across risk types.",
+   "readiness": "The linked scenarios map and maintain data lineage for critical data elements, score and prioritize data quality issues, prepare owner attestations, validate templated returns before submission, triage validation exceptions, and track submission quality over time, so that the Bank can demonstrate the traceability and control that such standards examine.",
+   "scenarios": [
+    "urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-profiling-and-scoring-automation",
+    "urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-impact-prioritisation",
+    "urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-pack-drafting",
+    "urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-currency-dashboard",
+    "urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-quality-trend-scorecard",
+    "urn:financial-services:scenario:banking-data-analytics/regulatory-data/regulatory-reporting-datasets/regulatory-dataset-lineage-record",
+    "urn:financial-services:scenario:banking-data-analytics/regulatory-data/data-lineage-bcbs239/pipeline-change-lineage-impact",
+    "urn:financial-services:scenario:banking-data-analytics/regulatory-data/data-lineage-bcbs239/bcbs239-lineage-gap-detection",
+    "urn:financial-services:scenario:banking-data-analytics/regulatory-data/data-lineage-bcbs239/bcbs239-lineage-mapping",
+    "urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-submission-pre-dispatch-quality-gate",
+    "urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-validation-exception-triage",
+    "urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/bcbs239-lineage-documentation-maintenance",
+    "urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/corep-finrep-validation/corep-finrep-submission-readiness-check",
+    "urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/corep-finrep-validation/corep-finrep-data-quality-check",
+    "urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/cross-domain-risk-coherence-check"
+   ]
+  },
+  {
+   "id": "HZ-008",
+   "slug": "expected-credit-loss",
+   "title": "Expected credit loss",
+   "asks": "Standards of this kind require loss allowances based on expected rather than incurred credit losses. A bank is typically asked to assess at each reporting date whether the credit risk of each exposure has increased significantly since origination, assign exposures to stages, measure losses over twelve months or the life of the exposure using several forward-looking economic scenarios, justify management overlays, keep an auditable trail from inputs to booked provisions, and disclose staging, movements and sensitivities.",
+   "readiness": "The linked scenarios apply significant-increase criteria and analyze staging, calibrate macro overlays and run provision scenarios, version the macro inputs used in each run, validate model output before booking, trace provisions to journals, and review disclosures for gaps, so that the Bank's expected loss process stands up to auditors and supervisors.",
+   "scenarios": [
+    "urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/loan-level-exposure-records/loan-classification-consistency-check",
+    "urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/ecl-provision-data/ecl-stage-movement-analysis",
+    "urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/ifrs9-macro-input-version-control",
+    "urn:financial-services:scenario:finance-treasury/accounting-financial-close/lending-default-close/ecl-model-run-validation",
+    "urn:financial-services:scenario:finance-treasury/accounting-financial-close/lending-default-close/provision-journal-audit-trail",
+    "urn:financial-services:scenario:finance-treasury/performance-measurement/lending-default-attribution/provision-sensitivity-scenario-analysis",
+    "urn:financial-services:scenario:finance-treasury/performance-measurement/lending-default-attribution/vintage-cohort-default-tracking",
+    "urn:financial-services:scenario:finance-treasury/regulatory-financial-reporting/investor-disclosure/ifrs-disclosure-compliance-review",
+    "urn:financial-services:scenario:risk-control/credit-risk/vintage-cohort-migration/sicr-migration-trigger-analysis",
+    "urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/ecl-provision-narrative",
+    "urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/macro-overlay-calibration-support",
+    "urn:financial-services:scenario:risk-control/credit-risk/ecl-ifrs9-provisions/ecl-staging-distribution-analysis"
+   ]
+  },
+  {
+   "id": "HZ-009",
+   "slug": "sustainability-disclosure",
+   "title": "Climate and sustainability disclosure",
+   "asks": "Standards of this kind require banks to disclose how climate and other sustainability matters affect them and how their lending affects the climate. A bank is typically asked to describe its governance, strategy and risk management for these matters, report metrics including financed emissions, analyze its resilience under climate scenarios, disclose targets and transition plans with progress against them, report the alignment of its assets with a taxonomy where one applies, and reconcile data across frameworks.",
+   "readiness": "The linked scenarios map metrics across frameworks, follow changes to standards, collect and reconcile climate data, calculate financed emissions, assess physical and transition risk, run climate scenario analysis, screen lending against taxonomy criteria, and draft disclosures and filings, so that the Bank can report on climate matters with traceable figures.",
+   "scenarios": [
+    "urn:financial-services:scenario:risk-control/climate-esg-risk/physical-risk-assessment/physical-risk-portfolio-assessment",
+    "urn:financial-services:scenario:risk-control/climate-esg-risk/esg-counterparty-scoring/green-finance-pipeline-screening",
+    "urn:financial-services:scenario:risk-control/climate-esg-risk/transition-risk-carbon-exposure/financed-emissions-calculation",
+    "urn:financial-services:scenario:risk-control/climate-esg-risk/transition-risk-carbon-exposure/transition-risk-carbon-exposure-analysis",
+    "urn:financial-services:scenario:risk-control/climate-esg-risk/tcfd-issb-disclosure/tcfd-prior-commitment-tracking",
+    "urn:financial-services:scenario:risk-control/climate-esg-risk/tcfd-issb-disclosure/esg-disclosure-draft",
+    "urn:financial-services:scenario:risk-control/climate-esg-risk/tcfd-issb-disclosure/tcfd-metrics-data-collection",
+    "urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-regulatory-standard-monitoring",
+    "urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-framework-gap-mapping",
+    "urn:financial-services:scenario:strategic-initiatives/esg-commitments/tcfd-issb-disclosure/tcfd-scenario-analysis-brief",
+    "urn:financial-services:scenario:strategic-initiatives/esg-commitments/transition-planning/transition-plan-portfolio-pathway-brief",
+    "urn:financial-services:scenario:strategic-initiatives/esg-commitments/regulatory-esg-filings/regulatory-esg-filing-automation"
+   ]
+  },
+  {
+   "id": "HZ-010",
+   "slug": "aml-cft",
+   "title": "AML/CFT standards",
+   "asks": "Standards of this kind require a risk-based approach to money laundering and terrorist financing. A bank is typically asked to identify customers and their beneficial owners, classify customers by risk, apply enhanced measures to politically exposed persons and correspondent relationships, keep customer information current, monitor transactions against known typologies, report suspicious transactions promptly, include originator and beneficiary information with transfers, and document the basis for each decision.",
+   "readiness": "The linked scenarios map beneficial ownership, keep customer risk classifications current and consistent, monitor politically exposed persons and adverse media, check that payments carry complete originator and beneficiary data, support correspondent due diligence, update typologies, and draft investigation packs and suspicious transaction reports, giving the Bank evidence of an effective program.",
+   "scenarios": [
+    "urn:financial-services:scenario:banking-data-analytics/customer-data/customer-identity-kyc-data/kyc-risk-reclassification-trigger",
+    "urn:financial-services:scenario:banking-data-analytics/customer-data/customer-identity-kyc-data/beneficial-ownership-structure-analysis",
+    "urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/payment-data-completeness-monitoring",
+    "urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/correspondent-banking-due-diligence-data",
+    "urn:financial-services:scenario:risk-control/compliance-financial-crime/aml-transaction-monitoring/aml-typology-library-update",
+    "urn:financial-services:scenario:shared-banking-capabilities/customer-onboarding/cdd-risk-classification/complex-cdd-research-pack",
+    "urn:financial-services:scenario:shared-banking-capabilities/customer-onboarding/cdd-risk-classification/cdd-classification-consistency-analytics",
+    "urn:financial-services:scenario:shared-banking-capabilities/customer-onboarding/sanctions-pep-screening/pep-adverse-media-continuous-monitoring",
+    "urn:financial-services:scenario:shared-banking-capabilities/financial-crime/aml-investigation-pack/aml-alert-disposition-quality-analytics",
+    "urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-investigation-pack-automation"
+   ]
+  },
+  {
+   "id": "HZ-011",
+   "slug": "consumer-conduct",
+   "title": "Consumer protection and conduct",
+   "asks": "Rules of this kind require banks to deliver good outcomes for retail customers and to show that they do. A bank is typically asked to design products that meet customer needs and offer fair value, give information that customers can understand, explain credit decisions and appeal rights, assess suitability before advising on investments, handle complaints fairly, find and fix their root causes, and monitor customer outcomes and report them to its board.",
+   "readiness": "The linked scenarios analyze complaint patterns and root causes, signal emerging conduct risk, link complaints to product features, find gaps in scripted disclosures, draft complaint responses and decline notices, and document suitability for investment advice, so that the Bank can evidence customer outcomes rather than process compliance alone.",
+   "scenarios": [
+    "urn:financial-services:scenario:customer-channels/contact-center/contact-center-quality-assurance/qa-script-gap-detection",
+    "urn:financial-services:scenario:risk-control/compliance-financial-crime/conduct-complaints/conduct-risk-product-review-signal",
+    "urn:financial-services:scenario:shared-banking-capabilities/advisory-research/client-suitability-assessment/client-suitability-documentation",
+    "urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/underwriter-review-override/adverse-action-notification-drafting",
+    "urn:financial-services:scenario:shared-banking-capabilities/customer-servicing/complaint-response-drafting/complaint-response-letter-drafting",
+    "urn:financial-services:scenario:shared-banking-capabilities/customer-servicing/complaint-pattern-conduct-analytics/complaint-pattern-intelligence",
+    "urn:financial-services:scenario:shared-banking-capabilities/customer-servicing/complaint-pattern-conduct-analytics/complaint-root-cause-attribution-brief",
+    "urn:financial-services:scenario:shared-banking-capabilities/customer-servicing/complaint-pattern-conduct-analytics/conduct-risk-early-warning-signal",
+    "urn:financial-services:scenario:strategic-portfolio/product-portfolio/investment-products/investment-product-client-suitability-enablement"
+   ]
+  },
+  {
+   "id": "HZ-012",
+   "slug": "payments-modernization",
+   "title": "Payments modernization",
+   "asks": "Changes of this kind reshape how payments are sent and settled. Migration to ISO 20022 messaging carries richer, structured data on the parties and purpose of each payment; instant payment schemes require settlement around the clock and within seconds; central bank digital currency initiatives may add new settlement assets and channels. A bank is typically asked to adapt its formats and data quality, screen and settle in real time, and manage liquidity continuously rather than at the end of the day.",
+   "readiness": "The linked scenarios check that payment records carry complete party data, give treasury a continuous view of intraday liquidity from payment system feeds, flag settlement pressure and peak usage as it builds, and watch for shifts in counterparty payment timing, which prepares the Bank for faster and data-richer payment flows.",
+   "scenarios": [
+    "urn:financial-services:scenario:banking-data-analytics/risk-position-data/liquidity-funding-data/intraday-liquidity-monitor",
+    "urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/payment-data-completeness-monitoring",
+    "urn:financial-services:scenario:risk-control/liquidity-risk/intraday-liquidity-monitoring/settlement-counterparty-behaviour-monitor",
+    "urn:financial-services:scenario:risk-control/liquidity-risk/intraday-liquidity-monitoring/intraday-liquidity-position-watch",
+    "urn:financial-services:scenario:flow/treasury-funding/trs-intraday-liquidity-copilot",
+    "urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payments-modernization/iso-20022-structured-data-enrichment",
+    "urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payments-modernization/structured-remittance-reconciliation-service",
+    "urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payments-modernization/instant-payment-scam-interception",
+    "urn:financial-services:scenario:shared-banking-capabilities/transaction-processing/payments-modernization/digital-currency-readiness-brief"
+   ]
+  }
+ ]
+}
