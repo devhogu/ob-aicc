@@ -95,7 +95,7 @@ def local_links(url, links):
 
 
 def workflow_comparison(match):
-    """Compare catalogue tiles and stage previews on the English overview only."""
+    """Compare compact workflow lists and stage previews on the English overview only."""
     source = (SOURCE / 'en/value-streams/index.html').read_text()
     chunks = re.split(r'<details class="flow-detail" id="([^"]+)">', source)[1:]
     flows = {}
@@ -123,9 +123,9 @@ def workflow_comparison(match):
 
     previews = re.sub(r'<li class="flow-item">\s*<a href="([^"]+)" class="flow-item__name card-link">(.*?)</a>\s*</li>', preview, body, flags=re.S)
     previews = previews.replace('<details class="workflow-preview">', '<details class="workflow-preview" open>', 1)
-    switch = ('<fieldset class="workflow-view-switch"><legend>Compare workflow views</legend>'
-              '<label><input type="radio" name="workflow-view" value="tiles" checked>W1 · Tiles</label>'
-              '<label><input type="radio" name="workflow-view" value="previews">W2 · Stage previews</label></fieldset>')
+    switch = ('<fieldset class="workflow-view-switch" aria-label="Workflow view">'
+              '<label><input type="radio" name="workflow-view" value="tiles">List</label>'
+              '<label><input type="radio" name="workflow-view" value="previews" checked>Stages</label></fieldset>')
     return (head + '<div class="card__body"><div class="workflow-comparison">' + switch
             + '<p class="workflow-count-note">Badges show the number of scenarios.</p>'
             + f'<div class="workflow-view workflow-view--tiles">{body}</div>'
@@ -157,16 +157,13 @@ def discovery_page(source, relative, lang):
         # Temporary visual comparison, confined to the English overview.
         if lang == 'en':
             options = iter((
-                ('A', 'tiles', 'Tiles · B'), ('B', 'tiles', 'Tiles · B'), ('C', 'workflows', 'Workflow comparison'),
-                ('D', 'groups', 'Grouped rows · E + G'), ('E', 'groups', 'Grouped rows · E + G'),
-                ('F', 'groups', 'Grouped rows · E + G'), ('G', 'groups', 'Grouped rows · E + G'),
-                ('H', 'groups', 'Grouped rows · E + G'), ('I', 'tiles', 'Tiles · B'),
-                ('J', 'deferred', 'Deferred · J'), ('K', 'deferred', 'Deferred · J'),
+                ('A', 'tiles'), ('B', 'tiles'), ('C', 'workflows'),
+                ('D', 'groups'), ('E', 'groups'), ('F', 'groups'), ('G', 'groups'),
+                ('H', 'groups'), ('I', 'tiles'), ('J', 'deferred'), ('K', 'deferred'),
             ))
             def comparison_card(match):
-                key, pattern, name = next(options)
-                return (match[1] + f' data-ui-option="{key}" data-ui-pattern="{pattern}" id="ui-option-{key.lower()}">'
-                        + f'<p class="discovery-option">{name}</p>')
+                key, pattern = next(options)
+                return match[1] + f' data-ui-option="{key}" data-ui-pattern="{pattern}" id="ui-option-{key.lower()}">'
             body = re.sub(r'(<article class="card[^"]*")>', comparison_card, body)
             body = re.sub(r'<article class="card card--flow"[^>]*>.*?</article>', workflow_comparison, body, count=1, flags=re.S)
     # Add stable fragment targets without changing original scenario URNs or copy.

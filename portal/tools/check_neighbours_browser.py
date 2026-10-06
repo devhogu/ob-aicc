@@ -162,9 +162,11 @@ def main():
                     if route == 'en/discovery/index.html':
                         tiles = page.locator('.workflow-view--tiles')
                         previews = page.locator('.workflow-view--previews')
-                        assert tiles.is_visible() and not previews.is_visible()
+                        assert previews.is_visible() and not tiles.is_visible()
                         assert tiles.locator('a.flow-item__name').count() == 11
-                        page.locator('input[name="workflow-view"][value="tiles"]').focus()
+                        page.locator('input[name="workflow-view"][value="previews"]').focus()
+                        page.keyboard.press('ArrowLeft')
+                        assert tiles.is_visible() and not previews.is_visible()
                         page.keyboard.press('ArrowRight')
                         assert previews.is_visible() and not tiles.is_visible()
                         assert previews.locator('.workflow-preview').count() == 11
@@ -173,7 +175,7 @@ def main():
                         ]
                         page.keyboard.press('ArrowLeft')
                         assert tiles.is_visible() and not previews.is_visible()
-                        page.locator('.workflow-view-switch label').filter(has_text='W2').click()
+                        page.locator('.workflow-view-switch label').filter(has_text='Stages').click()
                         counts['workflow_view_checks'] += 1
                     if width == 1440 and theme == 'light' and '/discovery/' in route:
                         disclosures = page.locator('.discovery-content details')
