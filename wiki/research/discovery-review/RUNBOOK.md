@@ -67,3 +67,17 @@ The Discovery Catalog is a map of a bank and, for each part of the map, a list o
 - Russian edition of the catalog: the same structured fixes (the 319 OKRs are empty there too), then the rewording in natural Russian with the terminology and the translation map.
 - Editorial pass on the fifty groups of near-duplicate cards.
 - Portfolio, Delivery Pipeline, CloudLab: definition with the owner (see `notes/sections.md`), then the 42 prepared text fixes.
+
+## Run record, 6 October 2026 (English)
+
+The round ran from tag `discovery-fix-start` and followed the steps above, with these particulars.
+
+- **Structured fixes:** 568 OKRs inserted or replaced, 26 lenses, 23 complexities; none failed.
+- **Structural fixes** (`tools/structural.py`): eight area totals, eight cycles boxes, eight problem tabs (32 rows), five cycle descriptions split, two cards exchanged between sections on the innovation-portfolio page. The ten section-order entries were not applied (D8).
+- **Rewording:** the exported text was cut into 100 parts and given to 29 workers (`tools/batch.py view`, brief in [REWORD-BRIEF.md](REWORD-BRIEF.md), self-check `tools/scan.py`). Each worker wrote a patch of changed lines and a report. 6,002 of 15,096 texts changed; 575 text fixes applied. The paths under `/tmp/dc-run` named in the brief and the scanner are the working directory of the run.
+- **After the import** (`tools/sync.py`): link labels and tab names follow the titles they repeat. Two terms were unified across the catalog: "STR" (suspicious transaction report, the FATF term) for "SAR", and "accumulated OCI" for "AOCI".
+- **Not applied:** the breadcrumb token `service.eyebrow` stays in the source because both builders replace it; the two peer-framework boxes keep "(deferred)" in the source because the portal turns it into its "In progress" mark; fix 025 of the overview is replaced by the landing text.
+- **Verification:** 76 pages, 1,101 cards, 1,101 identifiers, every OKR one objective and three key results; no named regulator, country, currency, foreign officer, British spelling, bare "Agent" or lower-case "the bank" left. Remaining by design: human agents on the contact-center page, the CIS control framework on the cyber page, and foreign regimes kept once as "such as" examples (36 mentions). Link labels equal their target titles on every page; stage buttons equal the stage data.
+- **Landing page:** the introduction is `INTRO` in `portal/tools/neighbours.py`; the reading aid is `portal/sections/discovery/en/guide.md`, shown as a collapsed block under the introduction. A Discovery page may not link into the AICC section, so the reference to Regulators and acts is plain text.
+- **For people to read:** [notes/citations-removed.md](notes/citations-removed.md) (512 references, for Compliance) and [notes/reword-notes.md](notes/reword-notes.md) (292 points the workers raised).
+

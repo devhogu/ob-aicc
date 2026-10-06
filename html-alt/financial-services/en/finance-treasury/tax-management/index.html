@@ -103,7 +103,7 @@
   </div>
   
   
-    <p class="page-header__intent">Tax management covers the bank's current and deferred tax position under IFRS, corporate income tax filings with national tax authorities in Kazakhstan, Russia, and other operating jurisdictions, transfer pricing documentation for intra-group transactions, VAT and indirect tax compliance, and FATCA/CRS reporting obligations. The Group Tax function is accountable to the CFO and operates under the tax laws of each jurisdiction, OECD BEPS Action Plan commitments adopted locally, and international information-exchange frameworks. <strong>The GenAI opportunity is automated compliance documentation — ETR reconciliation, transfer pricing local files, and FATCA/CRS data quality validation — reducing reliance on external advisors for routine documentation and freeing Group Tax for judgment-intensive positions.</strong>
+    <p class="page-header__intent">Tax management covers the Bank's current and deferred tax position under IFRS, corporate income tax filings with the tax authority, transfer pricing documentation for intra-group transactions, VAT and indirect tax compliance, and FATCA/CRS reporting obligations. The Group Tax function is accountable to the CFO and operates under applicable tax law (that of each jurisdiction, where the Bank operates in more than one jurisdiction), OECD BEPS Action Plan commitments adopted locally, and international information-exchange frameworks. <strong>The GenAI opportunity is automated compliance documentation — ETR reconciliation, transfer pricing local files, and FATCA/CRS data quality validation — reducing reliance on external advisors for routine documentation and freeing Group Tax for judgment-intensive positions.</strong>
 </p>
   
 </header>
@@ -153,7 +153,7 @@
     id="problems-tab-tax-position-filings"
     value="tax-position-filings"
     checked
-    aria-label="Tax position filings"
+    aria-label="Tax position &amp; filings"
   >
   
 
@@ -165,7 +165,7 @@
       for="problems-tab-tax-position-filings"
       role="tab"
       aria-controls="problems-panel-tax-position-filings"
-    >Tax position filings</label>
+    >Tax position &amp; filings</label>
     
   </div>
 
@@ -265,7 +265,7 @@
       <h3 class="scenario-card__title">ETR Trend &amp; Driver Analysis</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent analyses the bank&#39;s effective tax rate over the trailing eight quarters — decomposing the ETR into its permanent difference, deferred tax, and jurisdiction components — and identifies the factors driving ETR volatility for the CFO&#39;s and audit committee&#39;s earnings quality assessment.</p>
+      <p class="scenario-card__intent">The AI agent analyzes the Bank's effective tax rate over the trailing eight quarters — decomposing the ETR into its permanent difference, deferred tax, tax credit, and jurisdiction components — and identifies the factors driving ETR volatility for the CFO's and audit committee's earnings quality assessment.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -278,14 +278,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>The quarterly ETR reconciliation reports the current-period ETR and its components but does not contextualise them within the trailing trend. Audit committee members and investors assess ETR volatility as an earnings quality signal, but the analytical framing of what is driving quarter-on-quarter ETR movements is produced informally rather than as a structured component of the ETR output.</p>
+      <p>The quarterly ETR reconciliation reports the current-period ETR and its components but does not contextualize them within the trailing trend. Audit committee members and investors assess ETR volatility as an earnings quality signal, but the analytical framing of what is driving quarter-on-quarter ETR movements is produced informally rather than as a structured component of the ETR output.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the ETR reconciliation outputs for the trailing eight quarters. It constructs a time-series decomposition — tracking the permanent difference, deferred tax movement, tax credit, and jurisdiction component of the ETR across each period — and identifies the factors responsible for quarter-on-quarter ETR change. The analysis is presented alongside the current-period ETR reconciliation as a trend annex for the audit committee and CFO. Group Tax reviews the decomposition before it is included in the audit committee pack.</p>
+      <p>The AI agent reads the ETR reconciliation outputs for the trailing eight quarters. It constructs a time-series decomposition — tracking the permanent difference, deferred tax movement, tax credit, and jurisdiction component of the ETR across each period — and identifies the factors responsible for quarter-on-quarter ETR change. The analysis is presented alongside the current-period ETR reconciliation as a trend annex for the audit committee and CFO. Group Tax reviews the decomposition before it is included in the audit committee pack.</p>
     </div>
     
 
@@ -293,9 +293,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The CFO and audit committee receive, alongside each quarterly ETR reconciliation, a trend annex that decomposes the ETR over the trailing eight quarters into permanent difference, deferred tax, tax credit, and jurisdiction components and identifies the drivers of quarter-on-quarter change.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced ETR trend annex included in ≥4 quarterly audit committee packs within year 1.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of trend annexes approved by Group Tax without material restatement; component series reconcile to the quarterly ETR reconciliations in ≥98% of reviewed quarters.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Trend annex available with the current-period ETR reconciliation, vs. informal framing of quarter-on-quarter ETR movements in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -323,7 +338,7 @@
       <h3 class="scenario-card__title">Effective Tax Rate Reconciliation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent computes the quarterly ETR reconciliation from P&amp;L and tax provision data, decomposes the rate movement against prior period and statutory rate, and surfaces items requiring discrete disclosure under IFRS.</p>
+      <p class="scenario-card__intent">The AI agent computes the quarterly ETR reconciliation from P&amp;L and tax provision data, decomposes the rate movement against prior period and statutory rate, and surfaces items requiring discrete disclosure under IFRS.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -336,14 +351,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>The quarterly ETR reconciliation requires the Group Tax function to cross-reference pre-tax income by jurisdiction, current and deferred tax entries, and permanent and temporary differences each cycle. Disclosure items requiring explicit mention in the IFRS notes surface late if the reconciliation is reviewed only after the audit committee meeting.</p>
+      <p>The quarterly ETR reconciliation requires the Group Tax function to cross-reference pre-tax income by jurisdiction, current and deferred tax entries, and permanent and temporary differences each cycle. Disclosure items requiring explicit mention in the IFRS notes surface late, because they are identified only when the reconciliation is assembled shortly before the audit committee meeting.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the consolidated P&amp;L by jurisdiction, current and deferred tax provision entries, and the statutory rate schedule per jurisdiction. It computes the ETR reconciliation, decomposes rate movement against prior quarter and statutory rate, flags items requiring discrete tax disclosure under IFRS, and delivers the reconciliation pack to Group Tax for review.</p>
+      <p>The AI agent reads the consolidated P&amp;L by jurisdiction, current and deferred tax provision entries, and the statutory rate schedule per jurisdiction. It computes the ETR reconciliation, decomposes rate movement against prior quarter and statutory rate, flags items requiring discrete tax disclosure under IFRS, and delivers the reconciliation pack to Group Tax for review.</p>
     </div>
     
 
@@ -357,13 +372,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced ETR reconciliation used for ≥4 quarterly close cycles within year 1; all material jurisdictions covered in each reconciliation.</p>
+          <p>AI-produced ETR reconciliation used for ≥4 quarterly close cycles within year 1; all material jurisdictions covered in each reconciliation.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥90% of ETR reconciliation outputs accepted by Group Tax without material restatement; IFRS discrete disclosure items flagged by the agent confirmed as requiring disclosure in ≥85% of cases on Audit Committee review.</p>
+          <p>≥90% of ETR reconciliation outputs accepted by Group Tax without material restatement; IFRS discrete disclosure items flagged by the AI agent confirmed as requiring disclosure in ≥85% of cases on audit committee review.</p>
         </div>
         
         
@@ -398,7 +413,7 @@
       <h3 class="scenario-card__title">Deferred Tax Asset Recoverability Review</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent assesses the recoverability of deferred tax assets against the approved three-year profit forecast each quarter, applies the IFRS-required probability threshold, and produces a DTA recoverability memo for the CFO and external auditor review.</p>
+      <p class="scenario-card__intent">The AI agent assesses the recoverability of deferred tax assets against the approved three-year profit forecast each quarter, applies the IFRS-required probability threshold, and produces a DTA recoverability memo for the CFO and external auditor review.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -411,14 +426,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Deferred tax assets are recognised only when it is probable that sufficient taxable profits will be available to utilise them. Each quarter, Group Tax is required to assess DTA recoverability against the forward profit forecast and document the assessment for the external auditor. The documentation is produced manually and reviewed by the auditor as a substantive audit area each reporting cycle, with queries about the probability assessment methodology generating audit correspondence under tight deadlines.</p>
+      <p>Deferred tax assets are recognized only when it is probable that sufficient taxable profits will be available to utilize them. Each quarter, Group Tax is required to assess DTA recoverability against the forward profit forecast and document the assessment for the external auditor. The documentation is produced manually and reviewed by the auditor as a substantive audit area each reporting cycle, with queries about the probability assessment methodology generating audit correspondence under tight deadlines.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the current DTA balance by category, the approved three-year profit forecast from FP&amp;A, and the tax rate assumptions for each jurisdiction. It applies the IFRS probability threshold framework — assessing which DTA categories are covered by the forecast horizon and which rely on projected reversals of temporary differences — and produces a structured recoverability memo covering each DTA category, the supporting profit evidence, and the IFRS assessment conclusion. Group Tax reviews and confirms the methodology; the auditor receives the memo at the start of the quarterly substantive review cycle.</p>
+      <p>The AI agent reads the current DTA balance by category, the approved three-year profit forecast from FP&amp;A, and the tax rate assumptions for each jurisdiction. It applies the IFRS probability threshold framework — assessing which DTA categories are covered by the forecast horizon and which rely on projected reversals of temporary differences — and produces a structured recoverability memo covering each DTA category, the supporting profit evidence, and the IFRS assessment conclusion. Group Tax reviews and confirms the methodology; the auditor receives the memo at the start of the quarterly substantive review cycle.</p>
     </div>
     
 
@@ -426,9 +441,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Group Tax receives each quarter a structured DTA recoverability memo — each DTA category, the supporting profit evidence from the approved three-year forecast, and the IFRS assessment conclusion — ready for the CFO and for the external auditor at the start of the substantive review cycle.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced DTA recoverability memo used for ≥4 quarterly reporting cycles within year 1; all DTA categories covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of memos confirmed by Group Tax without material change to the assessment conclusion; auditor queries on the probability assessment methodology reduced by ≥40% vs. the pre-deployment baseline.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Memo available at the start of the quarterly substantive review cycle, vs. manual documentation with audit correspondence under tight deadlines in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -457,7 +487,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Transfer pricing local file documentation</h2>
     
-    <p class="l3-section__intent">OECD BEPS Action 13 local files document each material intra-group transaction for the relevant tax authority — entity description, controlled transaction analysis, arm&#39;s-length comparables, and conclusions on pricing compliance. Kazakhstan and Russian transfer pricing regulations require local files for transactions above statutory thresholds, with documentation available on request by the tax authority within a defined deadline.</p>
+    <p class="l3-section__intent">OECD BEPS Action 13 local files document each material intra-group transaction for the relevant tax authority — entity description, controlled transaction analysis, arm's-length comparables, and conclusions on pricing compliance. Transfer pricing regulations commonly require local files for transactions above statutory thresholds, with documentation available on request by the tax authority within a defined deadline.</p>
     
   </header>
 
@@ -491,7 +521,7 @@
       <h3 class="scenario-card__title">Transfer Pricing Threshold Monitoring</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent monitors intra-group transaction volumes against the statutory documentation thresholds in Kazakhstan, Russia, and other operating jurisdictions, and alerts Group Tax when a transaction category approaches or crosses the threshold that triggers a local file obligation — enabling documentation preparation in advance of the fiscal year-end.</p>
+      <p class="scenario-card__intent">The AI agent monitors intra-group transaction volumes against the statutory documentation thresholds of each jurisdiction in which the Bank operates, and alerts Group Tax when a transaction category approaches or crosses the threshold that triggers a local file obligation — enabling documentation preparation in advance of the fiscal year-end.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -511,7 +541,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the intercompany transaction register and the statutory documentation thresholds for each jurisdiction. It monitors the cumulative intra-group transaction volume for each controlled transaction category on a quarterly basis and issues an alert to Group Tax when any category reaches 75% of the applicable threshold. The alert includes the current volume, the threshold, the estimated quarter in which the threshold will be crossed at the current run rate, and the documentation requirements that will apply. Group Tax uses the alert to initiate local file scoping before the fiscal year closes.</p>
+      <p>The AI agent reads the intercompany transaction register and the statutory documentation thresholds for each jurisdiction. It monitors the cumulative intra-group transaction volume for each controlled transaction category on a quarterly basis and issues an alert to Group Tax when any category reaches 75% of the applicable threshold. The alert includes the current volume, the threshold, the estimated quarter in which the threshold will be crossed at the current run rate, and the documentation requirements that will apply. Group Tax uses the alert to initiate local file scoping before the fiscal year closes.</p>
     </div>
     
 
@@ -519,9 +549,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Group Tax receives an alert when the cumulative volume of any controlled transaction category reaches 75% of the applicable statutory documentation threshold — with the current volume, the estimated quarter of crossing, and the documentation requirements that will apply.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-run threshold monitoring completed for ≥4 quarters within year 1; all controlled transaction categories and jurisdictions in the intercompany transaction register covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of alerts confirmed by Group Tax as accurate; local file scoping initiated before the fiscal year closes for 100% of categories that cross a threshold.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Threshold approach flagged in the quarter it arises, vs. identified at the annual review in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -549,7 +594,7 @@
       <h3 class="scenario-card__title">Transfer Pricing Arm&#39;s-Length Benchmarking</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent assembles the arm&#39;s-length benchmarking analysis for each material controlled transaction category — identifying comparable transactions or companies, computing interquartile ranges, and confirming that the bank&#39;s pricing falls within the arm&#39;s-length range — for inclusion in the OECD BEPS Action 13 local file.</p>
+      <p class="scenario-card__intent">The AI agent assembles the arm's-length benchmarking analysis for each material controlled transaction category — identifying comparable transactions or companies, computing interquartile ranges, and confirming whether the Bank's pricing falls within the arm's-length range — for inclusion in the OECD BEPS Action 13 local file.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -569,7 +614,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the prior-year benchmarking analysis for each transaction category and the current-year controlled transaction pricing. It constructs the updated benchmarking analysis — refreshing the comparable set for any transaction category where the prior year&#39;s comparables have become less reliable, computing updated interquartile ranges, and confirming whether the bank&#39;s current pricing falls within the arm&#39;s-length range. Transactions outside the arm&#39;s-length range are flagged for Group Tax review and potential pricing adjustment. The output is formatted for direct inclusion in the local file documentation, with Group Tax providing the technical conclusions.</p>
+      <p>The AI agent reads the prior-year benchmarking analysis for each transaction category and the current-year controlled transaction pricing. It constructs the updated benchmarking analysis — refreshing the comparable set for any transaction category where the prior year's comparables have become less reliable, computing updated interquartile ranges, and confirming whether the Bank's current pricing falls within the arm's-length range. Transactions outside the arm's-length range are flagged for Group Tax review and potential pricing adjustment. The output is formatted for direct inclusion in the local file documentation, with Group Tax providing the technical conclusions.</p>
     </div>
     
 
@@ -577,9 +622,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Group Tax receives an updated arm's-length benchmarking analysis for each material controlled transaction category — refreshed comparables, updated interquartile ranges, and the position of the Bank's pricing within the range — formatted for inclusion in the local file.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced benchmarking analysis used for ≥80% of material controlled transaction categories in ≥1 annual transfer pricing cycle within year 1.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of benchmarking analyses accepted by Group Tax without a new external comparable search; transactions flagged outside the arm's-length range confirmed in ≥90% of cases.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Updated benchmarking available within 2 weeks of the current-year pricing data, vs. a standalone annual exercise with external advisor support in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -607,7 +667,7 @@
       <h3 class="scenario-card__title">Transfer Pricing Local File Documentation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent drafts the annual transfer pricing local file for each in-scope entity from intra-group transaction data, benchmarking analysis, and prior-year documentation, reducing the external advisor dependency on routine documentation.</p>
+      <p class="scenario-card__intent">The AI agent drafts the annual transfer pricing local file for each in-scope entity from intra-group transaction data, benchmarking analysis, and prior-year documentation, reducing the external advisor dependency on routine documentation.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--L"
@@ -620,14 +680,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>OECD BEPS Action 13 and local transfer pricing regulations in Kazakhstan and Russia require annual local file documentation for each entity with above-threshold intra-group transactions. Drafting is primarily outsourced to external advisors at significant cost per entity; the Group Tax team manages the process and reviews drafts.</p>
+      <p>Under OECD BEPS Action 13 and local transfer pricing regulations, annual local file documentation is required for each entity with above-threshold intra-group transactions. Drafting is primarily outsourced to external advisors at significant cost per entity; Group Tax manages the process and reviews drafts.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads intra-group transaction data by entity, the approved intercompany pricing policy, benchmarking databases where licensed, and the prior-year local file. It generates the local file structure — entity description, controlled transaction analysis, arm&#39;s-length benchmarking narrative, and conclusions — in the format required by the local tax authority. Group Tax reviews and signs off; external advisor involvement is limited to complex or novel transactions.</p>
+      <p>The AI agent reads intra-group transaction data by entity, the approved intercompany pricing policy, benchmarking databases where licensed, and the prior-year local file. It generates the local file structure — entity description, controlled transaction analysis, arm's-length benchmarking narrative, and conclusions — in the format required by the local tax authority. Group Tax reviews and signs off; external advisor involvement is limited to complex or novel transactions.</p>
     </div>
     
 
@@ -641,13 +701,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent used to draft local file content for ≥80% of in-scope entities in ≥1 annual transfer pricing cycle within year 1.</p>
+          <p>AI-drafted local file content used for ≥80% of in-scope entities in ≥1 annual transfer pricing cycle within year 1.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of agent-drafted local file sections accepted by Group Tax without material rewrite; external advisor involvement limited to complex or novel transactions, representing ≤20% of in-scope entities by year 2.</p>
+          <p>≥80% of AI-drafted local file sections accepted by Group Tax without material rewrite; external advisor involvement limited to complex or novel transactions, representing ≤20% of in-scope entities by year 2.</p>
         </div>
         
         
@@ -683,7 +743,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Tax position in investor &amp; rating agency disclosure</h2>
     
-    <p class="l3-section__intent">Investors and rating agencies assess the bank&#39;s tax position as part of earnings quality review — examining ETR volatility, uncertain tax provisions under IFRIC 23, and the size of deferred tax assets relative to capital. Tax narrative in earnings releases, annual reports, and rating agency presentations requires technical accuracy and accessible explanation of complex tax positions.</p>
+    <p class="l3-section__intent">Investors and rating agencies assess the Bank's tax position as part of earnings quality review — examining ETR volatility, uncertain tax provisions under IFRIC 23, and the size of deferred tax assets relative to capital. Tax narrative in earnings releases, annual reports, and rating agency presentations requires technical accuracy and accessible explanation of complex tax positions.</p>
     
   </header>
 
@@ -717,7 +777,7 @@
       <h3 class="scenario-card__title">Tax Narrative for Rating Agency Pack</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent drafts the tax section of the annual rating agency presentation — covering ETR trajectory, deferred tax asset quality, uncertain tax position (IFRIC 23) provisions, and tax jurisdiction concentration — from the current year&#39;s tax data and prior rating agency correspondence.</p>
+      <p class="scenario-card__intent">The AI agent drafts the tax section of the annual rating agency presentation — covering ETR trajectory, deferred tax asset quality, uncertain tax position (IFRIC 23) provisions, and tax jurisdiction concentration — from the current year's tax data and prior rating agency correspondence.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -737,7 +797,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the current year ETR reconciliation, DTA balance and recoverability assessment, IFRIC 23 uncertain tax provision register, and the prior year&#39;s rating agency presentation tax section. It drafts the tax section covering ETR trajectory with drivers, DTA quality and recoverability, IFRIC 23 position summary, and jurisdiction concentration. Group Tax reviews the draft for technical accuracy; the CFO&#39;s office adds framing context for the rating agency audience. The draft is available for inclusion in the presentation pack at the same time as the financial sections.</p>
+      <p>The AI agent reads the current year ETR reconciliation, DTA balance and recoverability assessment, IFRIC 23 uncertain tax provision register, and the prior year's rating agency presentation tax section. It drafts the tax section covering ETR trajectory with drivers, DTA quality and recoverability, IFRIC 23 position summary, and jurisdiction concentration. Group Tax reviews the draft for technical accuracy; the CFO's office adds framing context for the rating agency audience. The draft is available for inclusion in the presentation pack at the same time as the financial sections.</p>
     </div>
     
 
@@ -745,9 +805,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Group Tax and the CFO's office receive a draft of the tax section of the annual rating agency presentation — ETR trajectory with drivers, DTA quality and recoverability, IFRIC 23 position summary, and jurisdiction concentration — at the same time as the financial sections.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted tax section used for ≥1 annual rating agency presentation within year 1; all four topics covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of the drafted section accepted by Group Tax for technical accuracy without material rewrite; figures reconcile to the ETR reconciliation, DTA recoverability assessment, and IFRIC 23 register in ≥98% of reviewed entries.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Tax section draft available with the financial sections, vs. drafting started after all other sections are assembled in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -775,7 +850,7 @@
       <h3 class="scenario-card__title">Tax Position Earnings Quality Insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent produces a quarterly tax position earnings quality summary — assessing ETR sustainability, DTA utilisation trajectory, and IFRIC 23 provision adequacy against the bank&#39;s forward profit forecast — structured for the CFO&#39;s and audit committee&#39;s earnings quality review.</p>
+      <p class="scenario-card__intent">The AI agent produces a quarterly tax position earnings quality summary — assessing ETR sustainability, DTA utilization trajectory, and IFRIC 23 provision adequacy against the Bank's forward profit forecast — structured for the CFO's and audit committee's earnings quality review.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -788,14 +863,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Rating agencies and investors assess the bank&#39;s tax position as part of their earnings quality review, but the bank&#39;s internal quarterly close process does not produce a systematic earnings quality view of the tax position. ETR volatility analysis, DTA utilisation pace, and IFRIC 23 provision adequacy are addressed separately in the ETR reconciliation and DTA assessment rather than synthesised into a single earnings quality assessment.</p>
+      <p>Rating agencies and investors assess the Bank's tax position as part of their earnings quality review, but the Bank's internal quarterly close process does not produce a systematic earnings quality view of the tax position. ETR volatility analysis, DTA utilization pace, and IFRIC 23 provision adequacy are addressed separately in the ETR reconciliation and DTA assessment rather than synthesized into a single earnings quality assessment.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the quarterly ETR reconciliation, DTA balance and prior-quarter utilisation, IFRIC 23 uncertain provision register, and the approved forward profit forecast. It produces a structured earnings quality summary covering three questions: whether the current ETR is sustainable given the mix of permanent differences and deferred items, whether the DTA utilisation pace is consistent with the forward forecast, and whether the IFRIC 23 provision is directionally adequate given open tax authority enquiries. Group Tax reviews the summary before it is included in the CFO and audit committee pack.</p>
+      <p>The AI agent reads the quarterly ETR reconciliation, DTA balance and prior-quarter utilization, IFRIC 23 uncertain provision register, and the approved forward profit forecast. It produces a structured earnings quality summary covering three questions: whether the current ETR is sustainable given the mix of permanent differences and deferred items, whether the DTA utilization pace is consistent with the forward forecast, and whether the IFRIC 23 provision is directionally adequate given open tax authority inquiries. Group Tax reviews the summary before it is included in the CFO and audit committee pack.</p>
     </div>
     
 
@@ -803,9 +878,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The CFO and audit committee receive a quarterly earnings quality summary of the tax position — ETR sustainability, DTA utilization pace against the forward profit forecast, and IFRIC 23 provision adequacy — reviewed by Group Tax.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced earnings quality summary included in ≥4 quarterly CFO and audit committee packs within year 1; all three questions addressed in each summary.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of summaries approved by Group Tax without material change to the assessment; inputs reconcile to the ETR reconciliation, DTA balance, and IFRIC 23 register in ≥98% of reviewed quarters.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Synthesized earnings quality view of the tax position available each quarter, vs. separate ETR and DTA outputs with no single assessment in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -833,7 +923,7 @@
       <h3 class="scenario-card__title">Tax Disclosure Peer Benchmarking</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent compares the bank&#39;s disclosed ETR, DTA-to-capital ratio, and IFRIC 23 provision level against peer bank disclosures from the most recent annual reports, and produces a benchmarking summary for Group Tax and IR to assess the bank&#39;s disclosure positioning.</p>
+      <p class="scenario-card__intent">The AI agent compares the Bank's disclosed ETR, DTA-to-capital ratio, and IFRIC 23 provision level against peer bank disclosures from the most recent annual reports, and produces a benchmarking summary for Group Tax and IR to assess the Bank's disclosure positioning.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -846,14 +936,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Investors and rating agencies benchmark the bank&#39;s tax position against peers. Group Tax and IR assess this benchmarking informally by reading peer annual reports, without a structured comparison of the key tax metrics. The absence of a systematic benchmarking review means that material deviations in the bank&#39;s tax metrics from the peer range — which may attract rating analyst scrutiny or investor questions — are not identified before the rating agency meeting or investor call.</p>
+      <p>Investors and rating agencies benchmark the Bank's tax position against peers. Group Tax and IR assess this benchmarking informally by reading peer annual reports, without a structured comparison of the key tax metrics. The absence of a systematic benchmarking review means that material deviations in the Bank's tax metrics from the peer range — which may attract rating analyst scrutiny or investor questions — are not identified before the rating agency meeting or investor call.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the bank&#39;s current disclosed ETR, DTA balance as a percentage of Tier 1 capital, and IFRIC 23 uncertain provision level. It reads the equivalent disclosures from the most recent annual reports of a defined peer set and computes the peer range for each metric. The benchmarking summary presents the bank&#39;s position relative to the peer range, with any metric outside the peer band flagged for Group Tax and IR discussion. Group Tax and the CFO&#39;s office use the summary to prepare responses to expected rating analyst and investor questions on the bank&#39;s tax position.</p>
+      <p>The AI agent reads the Bank's current disclosed ETR, DTA balance as a percentage of Tier 1 capital, and IFRIC 23 uncertain provision level. It reads the equivalent disclosures from the most recent annual reports of a defined peer set and computes the peer range for each metric. The benchmarking summary presents the Bank's position relative to the peer range, with any metric outside the peer band flagged for Group Tax and IR discussion. Group Tax and the CFO's office use the summary to prepare responses to expected rating analyst and investor questions on the Bank's tax position.</p>
     </div>
     
 
@@ -861,9 +951,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Group Tax and IR receive a benchmarking summary that places the Bank's disclosed ETR, DTA-to-Tier 1 capital ratio, and IFRIC 23 provision level against the range of a defined peer set, with any metric outside the peer band flagged for discussion.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced benchmarking summary prepared for ≥1 annual reporting cycle within year 1; all three metrics and the full defined peer set covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of peer figures confirmed against the published annual reports on Group Tax review; ≥75% of out-of-band flags used by Group Tax and the CFO's office to prepare responses to rating analyst and investor questions.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Benchmarking summary available before the rating agency meeting or investor call, vs. informal reading of peer annual reports in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -892,7 +997,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">FATCA / CRS reporting compliance</h2>
     
-    <p class="l3-section__intent">Annual FATCA (US Foreign Account Tax Compliance Act) and CRS (OECD Common Reporting Standard) reporting requires the bank to identify reportable account holders, validate their tax residency and classification, and submit XML-formatted account data to the local tax authority for onward exchange with partner jurisdictions. Kazakhstan and Russia are both CRS signatory jurisdictions; FATCA obligations apply to any bank with US-connected customers or correspondent relationships.</p>
+    <p class="l3-section__intent">Annual FATCA (US Foreign Account Tax Compliance Act) and CRS (OECD Common Reporting Standard) reporting requires the Bank to identify reportable account holders, validate their tax residency and classification, and submit XML-formatted account data to the local tax authority for onward exchange with partner jurisdictions. CRS applies in jurisdictions that have adopted the standard; FATCA obligations apply to any bank with US-connected customers or correspondent relationships.</p>
     
   </header>
 
@@ -926,7 +1031,7 @@
       <h3 class="scenario-card__title">FATCA &amp; CRS XML Submission Validation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Before the annual FATCA and CRS XML files are submitted to the local tax authority, agent validates the file structure, TIN format compliance, account balance population, and completeness against the reportable account population — producing a pre-submission validation report for Group Tax sign-off.</p>
+      <p class="scenario-card__intent">Before the annual FATCA and CRS XML files are submitted to the local tax authority, the AI agent validates the file structure, TIN format compliance, account balance population, and completeness against the reportable account population — producing a pre-submission validation report for Group Tax sign-off.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -939,14 +1044,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>FATCA and CRS XML submissions are generated from the bank&#39;s reporting system and submitted to the local tax authority without a comprehensive pre-submission validation. Submission errors — malformed XML, missing TINs for reportable accounts, account balances that differ from the authoritative source — are identified by the tax authority&#39;s processing system after submission and require corrective re-submissions with regulatory scrutiny.</p>
+      <p>FATCA and CRS XML submissions are generated from the Bank's reporting system and submitted to the local tax authority without a comprehensive pre-submission validation. Submission errors — malformed XML, missing TINs for reportable accounts, account balances that differ from the authoritative source — are identified by the tax authority's processing system after submission and require corrective re-submissions with regulatory scrutiny.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the generated XML file and validates it against the FATCA and CRS XML schema and the bank&#39;s authoritative reportable account population. It checks XML schema compliance, TIN format validity by jurisdiction, account balance consistency with the financial system, and completeness against the expected reportable account count. The pre-submission validation report presents each check as pass or fail, with failed items identified to the responsible data owner for correction before submission. Group Tax signs off the validation report before the file is dispatched to the tax authority.</p>
+      <p>The AI agent reads the generated XML file and validates it against the FATCA and CRS XML schema and the Bank's authoritative reportable account population. It checks XML schema compliance, TIN format validity by jurisdiction, account balance consistency with the financial system, and completeness against the expected reportable account count. The pre-submission validation report presents each check as pass or fail, with failed items identified to the responsible data owner for correction before submission. Group Tax signs off the validation report before the file is dispatched to the tax authority.</p>
     </div>
     
 
@@ -954,9 +1059,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Group Tax receives, before the annual FATCA and CRS XML files are dispatched, a pre-submission validation report with pass/fail results for XML schema compliance, TIN format validity, account balance consistency, and completeness against the reportable account population.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced validation report used for 100% of annual FATCA and CRS XML submissions within year 1; all four check categories covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥95% of failed items corrected by the responsible data owner before submission; no corrective re-submission required for an error covered by the checks.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Validation report available within 1 business day of XML file generation, vs. errors identified by the tax authority's processing system after submission in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -984,7 +1104,7 @@
       <h3 class="scenario-card__title">FATCA / CRS Reporting Quality Check</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent validates FATCA and CRS account population, classification, and XML report data against schema rules and prior-year benchmarks before the annual submission window.</p>
+      <p class="scenario-card__intent">The AI agent validates FATCA and CRS account population, classification, and XML report data against schema rules and prior-year benchmarks before the annual submission window.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -997,14 +1117,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Annual FATCA and CRS submissions require the bank to validate account classification, due diligence completeness, and XML schema compliance across thousands of reportable accounts. Data quality issues discovered after submission trigger amended returns and heightened regulator scrutiny.</p>
+      <p>Annual FATCA and CRS submissions require the Bank to validate account classification, due diligence completeness, and XML schema compliance across thousands of reportable accounts. Data quality issues discovered after submission trigger amended returns and heightened regulator scrutiny.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the account population extract, due diligence records, and classification decisions. It validates each record against FATCA/CRS classification rules, checks XML schema compliance, and compares the reportable population to the prior year with materiality-ranked exceptions. Tax Operations receives a structured exception report with remediation guidance before the submission window closes.</p>
+      <p>The AI agent reads the account population extract, due diligence records, and classification decisions. It validates each record against FATCA/CRS classification rules, checks XML schema compliance, and compares the reportable population to the prior year with materiality-ranked exceptions. Tax Operations receives a structured exception report with remediation guidance and remediates the flagged items before the submission window closes.</p>
     </div>
     
 
@@ -1018,15 +1138,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced FATCA/CRS quality validation used for ≥100% of annual submission cycles within year 1; all material account classifications and XML schema requirements covered.</p>
+          <p>AI-produced FATCA/CRS quality validation used for 100% of annual submission cycles within year 1; all material account classifications and XML schema requirements covered.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥90% of flagged exception items remediated by Tax Operations before the submission window closes; post-submission amended return rate attributable to classification or schema errors reduced by ≥50% vs. pre-deployment baseline.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -1059,7 +1177,7 @@
       <h3 class="scenario-card__title">FATCA &amp; CRS Account Classification Review</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent analyses the bank&#39;s FATCA and CRS reportable account population for classification consistency — identifying accounts where the tax residency, entity type, or reportable status classification is inconsistent with the information held in the customer data system or with OECD CRS guidance.</p>
+      <p class="scenario-card__intent">The AI agent analyzes the Bank's FATCA and CRS reportable account population for classification consistency — identifying accounts where the tax residency, entity type, or reportable status classification is inconsistent with the information held in the customer data system or with OECD CRS guidance.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1079,7 +1197,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the FATCA/CRS classification file and the corresponding customer data records — tax identification numbers, declared tax residencies, entity legal form, and controlling person records. It applies the FATCA IGA and OECD CRS consistency rules, flags accounts where the classification is inconsistent with the customer data or where the classification cannot be traced to a completed self-certification, and produces a ranked exception list for Group Tax and Compliance review. The teams resolve each exception before the annual XML submission is prepared.</p>
+      <p>The AI agent reads the FATCA/CRS classification file and the corresponding customer data records — tax identification numbers, declared tax residencies, entity legal form, and controlling person records. It applies the FATCA IGA and OECD CRS consistency rules, flags accounts where the classification is inconsistent with the customer data or where the classification cannot be traced to a completed self-certification, and produces a ranked exception list for Group Tax and Compliance review. The teams resolve each exception before the annual XML submission is prepared.</p>
     </div>
     
 
@@ -1087,9 +1205,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Group Tax and Compliance receive a ranked exception list of accounts whose FATCA or CRS classification is inconsistent with the customer data or cannot be traced to a completed self-certification, and resolve each exception before the annual XML submission is prepared.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced classification review run on the full FATCA/CRS classification file for ≥1 annual reporting cycle within year 1.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of flagged accounts confirmed by Group Tax and Compliance as genuine inconsistencies; 100% of confirmed exceptions resolved before the XML submission is prepared.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Classification exceptions identified ≥4 weeks before the annual submission window, vs. inconsistencies accumulating between periodic review cycles in the prior process.</p>
+        </div>
         
       </div>
     </div>

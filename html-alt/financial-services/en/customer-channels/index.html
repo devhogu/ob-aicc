@@ -95,7 +95,7 @@
   </div>
   
   
-    <p class="page-header__intent">Customer & Channels is the bank's distribution layer — the physical, digital, and partner infrastructure through which it acquires, serves, and retains customers across every segment. The channel mix spans six sub-concerns: physical branches, digital channels, contact center, ATMs & self-service, relationship management, and partner & API channels. Each channel has distinct economics, regulatory obligations under NBKR, NBK/ARDFM, and CBR consumer-protection frameworks, and a different customer-experience profile. <strong>The opportunity for GenAI is to instrument channel economics and customer journey quality continuously</strong> — replacing periodic reviews with always-current cost-to-serve analytics, predictive maintenance, real-time agent assist, and personalised digital engagement that lift conversion and reduce assisted-channel cost simultaneously.
+    <p class="page-header__intent">Customer &amp; Channels is the Bank's distribution layer — the physical, digital, and partner infrastructure through which it acquires, serves, and retains customers across every segment. The channel mix spans six sub-concerns: physical branches, digital channels, contact center, ATMs &amp; self-service, relationship management, and partner &amp; API channels. Each channel has distinct economics, its own consumer-protection obligations, and a different customer-experience profile. <strong>The opportunity for GenAI is to instrument channel economics and customer journey quality continuously</strong> — replacing periodic reviews with always-current cost-to-serve analytics, predictive maintenance, real-time agent assist, and personalized digital engagement that lift conversion and reduce assisted-channel cost simultaneously.
 </p>
   
 </header>
@@ -131,6 +131,16 @@
     display: block;
   }
   
+  #problems-tab-self-service-partner:checked ~ .problems-tab-bar label[for="problems-tab-self-service-partner"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-self-service-partner:checked ~ .problems-panel[data-tab="self-service-partner"] {
+    display: block;
+  }
+  
 </style>
 
 
@@ -148,6 +158,16 @@
     aria-label="Assisted channels"
   >
   
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-self-service-partner"
+    value="self-service-partner"
+    
+    aria-label="Self-service &amp; partner"
+  >
+  
 
   
   <div class="problems-tab-bar" role="tablist">
@@ -158,6 +178,13 @@
       role="tab"
       aria-controls="problems-panel-assisted-channels"
     >Assisted channels</label>
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-self-service-partner"
+      role="tab"
+      aria-controls="problems-panel-self-service-partner"
+    >Self-service &amp; partner</label>
     
   </div>
 
@@ -177,22 +204,56 @@
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">Insights &amp; analytics</th>
-          <td class="problems-statement">Branch network performance, contact center queue patterns, and relationship manager book health are each measured within their own channel reporting cycle. Cross-channel comparisons — cost-to-serve for the same transaction type across branch and contact center, or the RM interaction frequency relative to attrition risk — require bespoke analytical work that most teams complete quarterly at best.</td>
+          <td class="problems-statement">Branch network performance, contact-center queue patterns, and relationship manager book health are each measured within their own channel reporting cycle. Cross-channel comparisons — cost-to-serve for the same transaction type across branch and contact center, or the RM interaction frequency relative to attrition risk — require bespoke analytical work that most teams complete quarterly at best.</td>
         </tr>
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">Enablement</th>
-          <td class="problems-statement">Branch managers calibrate staffing schedules from historical averages; contact center agents search knowledge bases manually during live calls; relationship managers prepare client briefs from memory and ad hoc CRM review. Each assisted-channel role carries an analytical burden that reduces time for customer-facing activity.</td>
+          <td class="problems-statement">Branch managers calibrate staffing schedules from historical averages; contact-center agents search knowledge bases manually during live calls; relationship managers prepare client briefs from memory and ad hoc CRM review. Each assisted-channel role carries an analytical burden that reduces time for customer-facing activity.</td>
         </tr>
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">Automation</th>
-          <td class="problems-statement">Branch performance packs, contact center quality assurance scoring, and RM book management reporting are assembled manually from multiple system exports on a monthly or quarterly cadence. The recurring, structured nature of each report makes them candidates for agent-driven assembly.</td>
+          <td class="problems-statement">Branch performance packs, contact-center quality assurance scoring, and RM book management reporting are assembled manually from multiple system exports on a monthly or quarterly cadence. The recurring, structured nature of each report makes them candidates for AI-driven assembly.</td>
         </tr>
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">New business opportunities</th>
           <td class="problems-statement">Assisted channels generate the highest-margin customer interactions — RM cross-sell conversations, complex product advice, relationship deepening — but the bandwidth of each channel is constrained by administrative overhead. Reducing that overhead releases RM and branch capacity for revenue-generating activity that the channel mix is sized to deliver.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-self-service-partner"
+    data-tab="self-service-partner"
+    role="tabpanel"
+    aria-labelledby="problems-tab-self-service-partner"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Digital onboarding funnels, ATM fleet uptime, and API consumption are each tracked in aggregate within their own platform — the analytics platform, the incident log, and the API gateway dashboard. Step-level abandonment by segment, per-machine failure risk, and revenue yield per API product require bespoke analytical work, so the Head of Digital, the Head of Self-Service, and the Head of Partner Channels act on periodic retrospectives rather than on a current signal.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Digital operations, ATM operations, and partner management teams prepare their own working briefs — daily servicing status, cash carrier route priorities, partner review packs — by pulling data from separate systems before each cycle. The preparation burden delays the response to servicing degradation, cash depletion risk, and partner performance trends.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">ATM cash load orders, outage and fraud incident notifications, digital adoption reporting, partner billing reconciliation, and, where the Bank runs an open-banking API platform, open banking compliance reporting are calculated or compiled manually from system exports. Each is a structured, data-driven task that follows the same steps every cycle, making it a candidate for AI-driven preparation with human review and release.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Self-service and partner channels are the lowest-cost distribution surfaces, but their commercial potential is reviewed only at campaign or annual-review cadence. A next-best-action at session level, terminal estate reconfiguration modeled per location, and API catalog and partner network expansion driven by demand signals turn these channels from cost-reduction levers into sources of revenue growth.</td>
         </tr>
         
       </tbody>
@@ -237,7 +298,7 @@
     <div class="sub-groups sub-groups--row">
       
       <div class="sub-group">
-        <div class="sub-group__label">Network design operations</div>
+        <div class="sub-group__label">Network design &amp; operations</div>
         <div class="sub-group__items">
           
           <a class="card-link" href="physical-branches/index.html#branch-network-planning">Branch network planning <span class="card-link__count">(3)</span></a>
@@ -295,20 +356,20 @@
     <div class="sub-groups sub-groups--row">
       
       <div class="sub-group">
-        <div class="sub-group__label">Web mobile experience</div>
+        <div class="sub-group__label">Web &amp; mobile experience</div>
         <div class="sub-group__items">
           
           <a class="card-link" href="digital-channels/index.html#digital-onboarding">Digital onboarding <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
           
-          <a class="card-link" href="digital-channels/index.html#digital-engagement-personalisation">Digital engagement &amp; personalisation <span class="card-link__count">(3)</span></a>
+          <a class="card-link" href="digital-channels/index.html#digital-engagement-personalisation">Digital engagement &amp; personalization <span class="card-link__count">(3)</span></a>
           
           
         </div>
       </div>
       
       <div class="sub-group">
-        <div class="sub-group__label">Digital engagement operations</div>
+        <div class="sub-group__label">Digital servicing &amp; adoption</div>
         <div class="sub-group__items">
           
           <a class="card-link" href="digital-channels/index.html#digital-support-servicing">Digital support &amp; servicing <span class="card-link__count">(3)</span></a>
@@ -448,7 +509,7 @@
       </div>
       
       <div class="sub-group">
-        <div class="sub-group__label">Outbound multichannel</div>
+        <div class="sub-group__label">Quality &amp; workforce</div>
         <div class="sub-group__items">
           
           <a class="card-link" href="contact-center/index.html#contact-center-quality-assurance">Contact center quality assurance <span class="card-link__count">(3)</span></a>
@@ -499,14 +560,14 @@
           <a class="card-link" href="atms-self-service/index.html#atm-uptime-incident-management">ATM uptime &amp; incident management <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
           
-          <a class="card-link" href="atms-self-service/index.html#cash-replenishment-optimisation">Cash replenishment optimisation <span class="card-link__count">(3)</span></a>
+          <a class="card-link" href="atms-self-service/index.html#cash-replenishment-optimisation">Cash replenishment optimization <span class="card-link__count">(3)</span></a>
           
           
         </div>
       </div>
       
       <div class="sub-group">
-        <div class="sub-group__label">Service evolution</div>
+        <div class="sub-group__label">Fraud control &amp; service evolution</div>
         <div class="sub-group__items">
           
           <a class="card-link" href="atms-self-service/index.html#atm-fraud-skimming-detection">ATM fraud &amp; skimming detection <span class="card-link__count">(3)</span></a>
@@ -561,7 +622,7 @@
     <div class="sub-groups sub-groups--row">
       
       <div class="sub-group">
-        <div class="sub-group__label">Rm productivity</div>
+        <div class="sub-group__label">RM productivity</div>
         <div class="sub-group__items">
           
           <a class="card-link" href="relationship-management/index.html#rm-book-management">RM book management <span class="card-link__count">(3)</span></a>
@@ -619,13 +680,13 @@
     <div class="sub-groups sub-groups--row">
       
       <div class="sub-group">
-        <div class="sub-group__label">Open banking api governance</div>
+        <div class="sub-group__label">Open banking &amp; API governance</div>
         <div class="sub-group__items">
           
           <a class="card-link" href="partner-api-channels/index.html#open-banking-api-governance">Open banking &amp; API governance <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
           
-          <a class="card-link" href="partner-api-channels/index.html#api-product-catalogue-monetisation">API product catalogue &amp; monetisation <span class="card-link__count">(3)</span></a>
+          <a class="card-link" href="partner-api-channels/index.html#api-product-catalogue-monetisation">API product catalog &amp; monetization <span class="card-link__count">(3)</span></a>
           
           
         </div>
@@ -707,14 +768,12 @@
       <h3 class="scenario-card__title">Omnichannel Service-Recovery Orchestration</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent detects when a customer&#39;s unresolved service failure has generated contact across more than one channel and orchestrates a single consolidated resolution path, eliminating repeat-contact waste and redundant hand-offs.
-It assigns ownership to the channel best placed to resolve and drafts a resolution brief for the handling staff with full cross-channel interaction history.
-Repeat-contact rate by issue category, tracked across channels, is the primary outcome metric.</p>
+      <p class="scenario-card__intent">The AI agent detects when a customer's unresolved service failure has generated contact across more than one channel and orchestrates a single consolidated resolution path, eliminating repeat-contact waste and redundant hand-offs. It assigns ownership to the channel best placed to resolve and drafts a resolution brief for the handling staff with full cross-channel interaction history. Repeat-contact rate by issue category, tracked across channels, is the primary outcome metric.</p>
     </div>
     <span
-      class="scenario-complexity scenario-complexity--S"
+      class="scenario-complexity scenario-complexity--M"
       title="Complexity"
-    >S</span>
+    >M</span>
   </summary>
 
   <div class="scenario-card__body">
@@ -722,18 +781,14 @@ Repeat-contact rate by issue category, tracked across channels, is the primary o
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>A customer whose issue is not resolved on first contact returns through a different channel — calling after a failed digital complaint, visiting a branch after an unresolved contact center case.
-Each channel treats the incoming contact as new; the customer restates the full issue while the handling staff have no cross-channel history, and the bank generates avoidable cost across multiple channels for a single unresolved issue.
-Repeat-contact rate is not measured across channels under the current model, making the cost of repeat-contact cycles invisible to the Head of Channels.</p>
+      <p>A customer whose issue is not resolved on first contact returns through a different channel — calling after a failed digital complaint, visiting a branch after an unresolved contact-center case. Each channel treats the incoming contact as new; the customer restates the full issue while the handling staff have no cross-channel history, and the Bank generates avoidable cost across multiple channels for a single unresolved issue. Repeat-contact rate is not measured across channels under the current model, making the cost of repeat-contact cycles invisible to the Head of Channels.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors unresolved case records across all channels and flags customers who have contacted more than one channel about the same outstanding issue within a defined resolution window.
-It generates a cross-channel repeat-contact alert with the full interaction history, assigns ownership to the channel best placed to resolve, and drafts a resolution brief for the handling staff.
-The repeat-contact rate by issue category, measured across channels, provides the primary metric for tracking the impact of the orchestration capability.</p>
+      <p>The AI agent monitors unresolved case records across all channels and flags customers who have contacted more than one channel about the same outstanding issue within a defined resolution window. It generates a cross-channel repeat-contact alert with the full interaction history, assigns ownership to the channel best placed to resolve, and drafts a resolution brief for the handling staff. The repeat-contact rate by issue category, measured across channels, provides the primary metric for tracking the impact of the orchestration capability.</p>
     </div>
     
 
@@ -747,7 +802,7 @@ The repeat-contact rate by issue category, measured across channels, provides th
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent detects and orchestrates a consolidated resolution path for ≥90% of cross-channel repeat-contact cases within 4 hours of repeat-contact identification, across ≥48 consecutive weeks.</p>
+          <p>The AI agent detects and orchestrates a consolidated resolution path for ≥90% of cross-channel repeat-contact cases within 4 hours of repeat-contact identification, across ≥48 consecutive weeks.</p>
         </div>
         
         
@@ -788,9 +843,7 @@ The repeat-contact rate by issue category, measured across channels, provides th
       <h3 class="scenario-card__title">Channel Mix Cost-to-Serve Analysis</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent computes cost-to-serve by transaction type across all channels — branch, contact center, ATM, digital, and partner — and models the economic impact of channel mix shifts for the Head of Channels.
-The output consolidates staffing, infrastructure, and third-party fee allocation into a per-channel, per-transaction-type cost view unavailable from individual channel reporting.
-The Head of Channels uses the monthly cross-channel economics pack to prioritise channel migration investments and benchmark the portfolio against peer institutions.</p>
+      <p class="scenario-card__intent">The AI agent computes cost-to-serve by transaction type across all channels — branch, contact center, ATM, digital, and partner — and models the economic impact of channel mix shifts for the Head of Channels. The output consolidates staffing, infrastructure, and third-party fee allocation into a per-channel, per-transaction-type cost view unavailable from individual channel reporting. The Head of Channels uses the monthly cross-channel economics pack to prioritize channel migration investments and benchmark the portfolio against peer institutions.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -803,18 +856,14 @@ The Head of Channels uses the monthly cross-channel economics pack to prioritise
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Channel economics are tracked separately by each channel head, with no unified cost-to-serve view for the same transaction type across channels.
-The Head of Channels cannot quantify the economic impact of mix-shift programmes or compare channel unit economics without commissioning bespoke analytical work.
-Peer benchmarking and migration business-case construction are constrained by the absence of a consolidated cross-channel cost baseline.</p>
+      <p>Channel economics are tracked separately by each channel head, with no unified cost-to-serve view for the same transaction type across channels. The Head of Channels cannot quantify the economic impact of mix-shift programs or compare channel unit economics without commissioning bespoke analytical work. Peer benchmarking and migration business-case construction are constrained by the absence of a consolidated cross-channel cost baseline.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads cost allocation data per channel and maps transaction types across channel event logs, computing a per-channel, per-transaction-type cost-to-serve with a confidence range.
-It models the economic impact of target channel mix shifts — projecting cost savings from migration of high-cost transaction types to lower-cost channels.
-The Head of Channels reviews the generated economics pack monthly and uses it to direct channel migration budgets.</p>
+      <p>The AI agent reads cost allocation data per channel and maps transaction types across channel event logs, computing a per-channel, per-transaction-type cost-to-serve with a confidence range. It models the economic impact of target channel mix shifts — projecting cost savings from migration of high-cost transaction types to lower-cost channels. The Head of Channels reviews the generated economics pack monthly and uses it to direct channel migration budgets.</p>
     </div>
     
 
@@ -828,7 +877,7 @@ The Head of Channels reviews the generated economics pack monthly and uses it to
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent delivers the cross-channel cost-to-serve pack for ≥95% of scheduled monthly cycles for ≥12 consecutive months post go-live.</p>
+          <p>The AI agent delivers the cross-channel cost-to-serve pack for ≥95% of scheduled monthly cycles for ≥12 consecutive months post go-live.</p>
         </div>
         
         
@@ -840,7 +889,7 @@ The Head of Channels reviews the generated economics pack monthly and uses it to
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Cost-to-serve analysis cycle reduced from 3–4 weeks of bespoke analytical work to ≤2 days of agent-assisted pack assembly.</p>
+          <p>Cost-to-serve analysis cycle reduced from 3–4 weeks of bespoke analytical work to ≤2 days of AI-assisted pack assembly.</p>
         </div>
         
       </div>
@@ -869,9 +918,7 @@ The Head of Channels reviews the generated economics pack monthly and uses it to
       <h3 class="scenario-card__title">Cross-Channel Complaint Intake Unification</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent unifies complaint records across all intake channels — branch, contact center, digital, ATM dispute, and partner API — into a single regulatory complaint record, eliminating duplicate case creation when a customer contacts multiple channels about the same issue.
-The unified record sets the SLA timer from the earliest intake event and routes to the complaints handler with full cross-channel interaction history attached.
-The handler works from one consolidated file rather than reconciling independent channel records.</p>
+      <p class="scenario-card__intent">The AI agent unifies complaint records across all intake channels — branch, contact center, digital, ATM dispute, and partner API — into a single regulatory complaint record, eliminating duplicate case creation when a customer contacts multiple channels about the same issue. The unified record sets the SLA timer from the earliest intake event and routes to the complaint handler with full cross-channel interaction history attached. The handler works from one consolidated file rather than reconciling independent channel records.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -884,18 +931,14 @@ The handler works from one consolidated file rather than reconciling independent
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>A customer who raises the same complaint across digital, contact center, and branch generates separate case records in separate systems; the bank&#39;s regulatory complaint count is overstated and SLA timers run independently across duplicates.
-The complaints team cannot see that the same customer has escalated across channels, preventing coordinated resolution and creating the risk of contradictory responses to the same underlying issue.
-Under NBKR Resolution No. 47/4 and CBR Ordinance No. 59-I, each formal complaint requires a single dated record with an unbroken audit trail — a standard that multi-channel duplicate creation systematically undermines.</p>
+      <p>A customer who raises the same complaint across digital, contact center, and branch generates separate case records in separate systems; the Bank's regulatory complaint count is overstated and SLA timers run independently across duplicates. The complaints team cannot see that the same customer has escalated across channels, preventing coordinated resolution and creating the risk of contradictory responses to the same underlying issue. Consumer-protection requirements commonly call for a single dated record of each formal complaint with an unbroken audit trail — a standard that multi-channel duplicate creation systematically undermines.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads complaint events across all channel intake systems — contact center CRM, digital submission queue, branch teller log, ATM dispute record, and partner escalation feed — and matches records to the same underlying customer issue using customer ID, issue category, and time proximity.
-It merges duplicates into a single regulatory complaint record, sets the SLA timer from the earliest intake event, and routes the unified record with the full cross-channel history to the complaints handler.
-The handler works from one consolidated file; the regulatory complaint count reflects unique issues rather than unique intake events.</p>
+      <p>The AI agent reads complaint events across all channel intake systems — contact-center CRM, digital submission queue, branch teller log, ATM dispute record, and partner escalation feed — and matches records to the same underlying customer issue using customer ID, issue category, and time proximity. It merges duplicates into a single regulatory complaint record, sets the SLA timer from the earliest intake event, and routes the unified record with the full cross-channel history to the complaint handler. The handler works from one consolidated file; the regulatory complaint count reflects unique issues rather than unique intake events.</p>
     </div>
     
 
@@ -903,19 +946,19 @@ The handler works from one consolidated file; the regulatory complaint count ref
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Every multi-channel complaint event is unified into a single regulatory complaint record — with SLA timer set from the earliest intake event and full cross-channel interaction history attached — eliminating duplicate case creation and contradictory resolution risk.</p>
+      <p class="okr-objective">Every multi-channel complaint event is unified into a single regulatory complaint record — with SLA timer set from the earliest intake event and full cross-channel interaction history attached for the complaint handler — eliminating duplicate case creation and contradictory resolution risk.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent matches and unifies ≥95% of multi-channel complaint events involving the same customer issue within 4 hours of intake detection, across ≥48 consecutive weeks.</p>
+          <p>The AI agent matches and unifies ≥95% of multi-channel complaint events involving the same customer issue within 4 hours of intake detection, across ≥48 consecutive weeks.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥90% of unified records confirmed as accurately matched by the complaints handler; regulatory complaint count reconciled to unique issues on supervisory reporting extract.</p>
+          <p>≥90% of unified records confirmed as accurately matched by the complaint handler; regulatory complaint count reconciled to unique issues on the supervisory reporting extract.</p>
         </div>
         
         
@@ -950,9 +993,7 @@ The handler works from one consolidated file; the regulatory complaint count ref
       <h3 class="scenario-card__title">Channel Frontline Coaching Synthesis</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent synthesises frontline performance signals from branch teller interactions, contact center QA scores, ATM-assisted service events, and RM interaction outcomes into a unified coaching brief for the Head of Channels.
-The brief ranks channels and sub-channels by degrading metrics and produces a prioritised coaching agenda for the Head of Channels to direct to each channel head.
-The output is generated on a monthly cadence from operational data already produced by each channel team.</p>
+      <p class="scenario-card__intent">The AI agent synthesizes frontline performance signals from branch teller interactions, contact-center QA scores, ATM-assisted service events, and RM interaction outcomes into a unified coaching brief for the Head of Channels. The brief ranks channels and sub-channels by degrading metrics and produces a prioritized coaching agenda for the Head of Channels to direct to each channel head. The output is generated on a monthly cadence from operational data already produced by each channel team.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -965,18 +1006,14 @@ The output is generated on a monthly cadence from operational data already produ
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Frontline performance across channels is monitored separately — branch regional managers review branch metrics, the contact center operations team reviews QA scores, and RM team heads review book activity.
-The Head of Channels has no cross-channel view of where frontline quality is degrading, which channels carry the highest complaint-to-interaction ratio, or where coaching investment would produce the greatest customer experience improvement across the full service estate.
-Without a synthesised view, coaching investment is directed by individual channel heads rather than by a portfolio-wide quality signal.</p>
+      <p>Frontline performance across channels is monitored separately — branch regional managers review branch metrics, the contact-center operations team reviews QA scores, and RM team heads review book activity. The Head of Channels has no cross-channel view of where frontline quality is degrading, which channels carry the highest complaint-to-interaction ratio, or where coaching investment would produce the greatest customer experience improvement across the full service estate. Without a synthesized view, coaching investment is directed by individual channel heads rather than by a portfolio-wide quality signal.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads branch teller transaction and complaint data, contact center QA scores and FCR rates, ATM dispute-to-transaction ratios, and RM interaction quality indicators from CRM.
-It produces a monthly cross-channel frontline quality brief ranked by channel and sub-channel, with the top degrading metrics and a prioritised coaching agenda for the Head of Channels to direct to each channel head.
-Channel heads receive targeted coaching agendas; frontline quality improvement is tracked against the baseline complaint-to-interaction ratio and FCR rate per channel.</p>
+      <p>The AI agent reads branch teller transaction and complaint data, contact-center QA scores and first-contact resolution (FCR) rates, ATM dispute-to-transaction ratios, and RM interaction quality indicators from CRM. It produces a monthly cross-channel frontline quality brief ranked by channel and sub-channel, with the top degrading metrics and a prioritized coaching agenda for the Head of Channels to direct to each channel head. Channel heads receive targeted coaching agendas; frontline quality improvement is tracked against the baseline complaint-to-interaction ratio and FCR rate per channel.</p>
     </div>
     
 
@@ -984,13 +1021,13 @@ Channel heads receive targeted coaching agendas; frontline quality improvement i
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">A monthly cross-channel frontline quality brief — ranking channels by degrading metrics and producing a prioritised coaching agenda — is available to the Head of Channels from unified analysis of branch, contact center, ATM, and RM performance signals.</p>
+      <p class="okr-objective">A monthly cross-channel frontline quality brief — ranking channels by degrading metrics and producing a prioritized coaching agenda — is available to the Head of Channels from unified analysis of branch, contact center, ATM, and RM performance signals.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent delivers the cross-channel coaching brief for ≥95% of monthly cycles for ≥12 consecutive months from go-live.</p>
+          <p>The AI agent delivers the cross-channel coaching brief for ≥95% of monthly cycles for ≥12 consecutive months from go-live.</p>
         </div>
         
         
@@ -1002,7 +1039,7 @@ Channel heads receive targeted coaching agendas; frontline quality improvement i
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Cross-channel frontline quality synthesis cycle reduced from 5–7 days of manual extraction across channel reporting systems to ≤24 hours of agent-assisted assembly.</p>
+          <p>Cross-channel frontline quality synthesis cycle reduced from 5–7 days of manual extraction across channel reporting systems to ≤24 hours of AI-assisted assembly.</p>
         </div>
         
       </div>
@@ -1031,9 +1068,7 @@ Channel heads receive targeted coaching agendas; frontline quality improvement i
       <h3 class="scenario-card__title">Cross-Channel Segment Gap Intelligence</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent maps each customer segment&#39;s actual channel usage against the bank&#39;s intended channel coverage model to surface segments that are underserved — transacting through a costly channel where a digital or self-service alternative exists, or outside the bank&#39;s channel reach — for the CCO and Head of Channels.
-The quarterly segment-channel gap brief includes prioritised investment recommendations and estimated revenue and cost impact per identified gap.
-The output provides the first cross-channel investment prioritisation input based on segment-level coverage rather than aggregate volume and cost metrics.</p>
+      <p class="scenario-card__intent">The AI agent maps each customer segment's actual channel usage against the Bank's intended channel coverage model to surface segments that are underserved — transacting through a costly channel where a digital or self-service alternative exists, or outside the Bank's channel reach — for the CCO and Head of Channels. The quarterly segment-channel gap brief includes prioritized investment recommendations and estimated revenue and cost impact per identified gap. The output provides the first cross-channel investment prioritization input based on segment-level coverage rather than aggregate volume and cost metrics.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1046,18 +1081,14 @@ The output provides the first cross-channel investment prioritisation input base
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Channel investment decisions are based on aggregate volume and cost data; the bank cannot identify which customer segments are trapped in high-cost channels because a lower-cost alternative is unavailable or not adopted.
-Without a segment-level channel coverage view, investment priorities are set on cost metrics alone rather than on where channel gaps are suppressing revenue or generating avoidable cost by segment.
-Segments the bank is failing to reach through any channel are invisible in the current reporting model, creating blind spots in growth and retention planning.</p>
+      <p>Channel investment decisions are based on aggregate volume and cost data; the Bank cannot identify which customer segments are trapped in high-cost channels because a lower-cost alternative is unavailable or not adopted. Without a segment-level channel coverage view, investment priorities are set on cost metrics alone rather than on where channel gaps are suppressing revenue or generating avoidable cost by segment. Segments the Bank is failing to reach through any channel are invisible in the current reporting model, creating blind spots in growth and retention planning.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads segment profiles, product holdings, and channel usage patterns across branch transactions, digital logins, contact center call reasons, ATM usage, and RM interaction records.
-It computes a channel coverage map per segment — showing which channels each segment uses, which it avoids, and where digital or self-service alternatives are available but not adopted.
-The Head of Channels receives a quarterly segment-channel gap brief with prioritised investment recommendations and estimated revenue and cost impact per gap.</p>
+      <p>The AI agent reads segment profiles, product holdings, and channel usage patterns across branch transactions, digital logins, contact-center call reasons, ATM usage, and RM interaction records. It computes a channel coverage map per segment — showing which channels each segment uses, which it avoids, and where digital or self-service alternatives are available but not adopted. The CCO and Head of Channels receive a quarterly segment-channel gap brief with prioritized investment recommendations and estimated revenue and cost impact per gap.</p>
     </div>
     
 
@@ -1065,13 +1096,13 @@ The Head of Channels receives a quarterly segment-channel gap brief with priorit
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">A quarterly segment-channel gap brief — mapping each segment&#39;s actual channel usage against the intended coverage model and providing prioritised investment recommendations with estimated revenue and cost impact — is available to the CCO and Head of Channels.</p>
+      <p class="okr-objective">A quarterly segment-channel gap brief — mapping each segment's actual channel usage against the intended coverage model and providing prioritized investment recommendations with estimated revenue and cost impact — is available to the CCO and Head of Channels.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent delivers the segment-channel gap brief for ≥95% of scheduled quarterly cycles for ≥4 consecutive quarters post go-live.</p>
+          <p>The AI agent delivers the segment-channel gap brief for ≥95% of scheduled quarterly cycles for ≥4 consecutive quarters post go-live.</p>
         </div>
         
         

@@ -122,6 +122,18 @@
 .discovery-content .workflow-preview[open]>summary{border-bottom-color:var(--link);color:var(--link)}
 .discovery-content .workflow-preview>summary .card-link__count{margin-left:auto}
 .discovery-content .workflow-preview>summary:hover{color:var(--link)}
+.discovery-content .discovery-guide{margin:0 0 24px;border:1px solid var(--border);border-radius:8px;background:var(--surface-subtle)}
+.discovery-content .discovery-guide>summary{display:flex;align-items:center;gap:10px;padding:10px 16px;min-height:44px;font-size:15px;font-weight:600;cursor:pointer;list-style:none}
+.discovery-content .discovery-guide>summary::-webkit-details-marker{display:none}
+.discovery-content .discovery-guide>summary::before{content:'›';font-size:20px;color:var(--link);flex-shrink:0;transition:transform .15s}
+.discovery-content .discovery-guide[open]>summary::before{transform:rotate(90deg)}
+.discovery-content .discovery-guide>summary:hover{color:var(--link)}
+.discovery-content .discovery-guide__body{padding:4px 16px 16px;max-width:920px;font-size:15px;line-height:24px}
+.discovery-content .discovery-guide__body h2{margin:20px 0 8px;font-size:16px}
+.discovery-content .discovery-guide__body p{margin:0 0 12px}
+.discovery-content .discovery-guide__body .o-table-wrap{margin:12px 0;overflow-x:auto}
+.discovery-content .discovery-guide__body table{width:100%;border-collapse:collapse;background:var(--surface,transparent)}
+.discovery-content .discovery-guide__body th,.discovery-content .discovery-guide__body td{padding:8px 12px;border:1px solid var(--border);vertical-align:top;text-align:left}
 .discovery-content .workflow-preview>summary:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
 .discovery-content .workflow-preview__body{padding:10px 10px 12px}
 .discovery-content .card__body .workflow-preview__body p{font-size:14px;color:var(--text-muted);margin:0 0 10px}

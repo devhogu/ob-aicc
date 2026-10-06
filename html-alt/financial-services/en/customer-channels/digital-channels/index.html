@@ -103,7 +103,7 @@
   </div>
   
   
-    <p class="page-header__intent">Digital channels — internet banking and mobile applications — are the primary service delivery surface for the majority of retail and SME customers in Kazakhstan, Kyrgyzstan, and Russia. Digital adoption rate varies by segment and age cohort; the Head of Digital is accountable for closing adoption gaps while simultaneously improving the experience for already-digital customers. The channel operates under NBKR, NBK, and CBR digital banking regulations governing remote identification, electronic signing, and customer data protection. <strong>The opportunity for GenAI is to turn session event data and product interaction signals into a continuous customer experience intelligence loop</strong> — identifying onboarding drop-off causes, personalising in-session engagement, and deflecting contact center calls before they occur.
+    <p class="page-header__intent">Digital channels — internet banking and mobile applications — are the primary service delivery surface for the majority of retail and SME customers. Digital adoption rate varies by segment and age cohort; the Head of Digital is accountable for closing adoption gaps while simultaneously improving the experience for already-digital customers. The channel operates under regulatory requirements for digital banking that govern remote identification, electronic signing, and customer data protection. <strong>The opportunity for GenAI is to turn session event data and product interaction signals into a continuous customer experience intelligence loop</strong> — identifying onboarding drop-off causes, personalizing in-session engagement, and deflecting contact-center calls before they occur.
 </p>
   
 </header>
@@ -153,7 +153,7 @@
     id="problems-tab-web-mobile-experience"
     value="web-mobile-experience"
     checked
-    aria-label="Web mobile experience"
+    aria-label="Web &amp; mobile experience"
   >
   
 
@@ -165,7 +165,7 @@
       for="problems-tab-web-mobile-experience"
       role="tab"
       aria-controls="problems-panel-web-mobile-experience"
-    >Web mobile experience</label>
+    >Web &amp; mobile experience</label>
     
   </div>
 
@@ -185,22 +185,22 @@
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">Insights &amp; analytics</th>
-          <td class="problems-statement">Digital channel performance is measured through funnel metrics — active users, session frequency, feature utilisation — that aggregate customer behaviour without revealing where specific segments are encountering friction. Onboarding abandonment, feature discovery failures, and post-login service gaps appear in aggregate statistics but not in the step-level, segment-level decomposition that informs product decisions.</td>
+          <td class="problems-statement">Digital channel performance is measured through funnel metrics — active users, session frequency, feature utilization — that aggregate customer behavior without revealing where specific segments are encountering friction. Onboarding abandonment, feature discovery failures, and post-login service gaps appear in aggregate statistics but not in the step-level, segment-level decomposition that informs product decisions.</td>
         </tr>
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">Enablement</th>
-          <td class="problems-statement">A/B testing and personalisation decisions in digital channels are designed by product managers working from segment propensity models refreshed on a campaign cycle. They cannot test the incremental impact of a personalised next-best-action, an onboarding journey variation, or a feature placement change without a multi-week experiment pipeline.</td>
+          <td class="problems-statement">A/B testing and personalization decisions in digital channels are designed by product managers working from segment propensity models refreshed on a campaign cycle. They cannot test the incremental impact of a personalized next-best-action, an onboarding journey variation, or a feature placement change without a multi-week experiment pipeline.</td>
         </tr>
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">Automation</th>
-          <td class="problems-statement">Digital adoption reporting, onboarding completion rate analysis, and feature utilisation summaries are produced manually from analytics platform exports. The structured, session-level data is well-suited to agent-driven analysis that surfaces actionable signals without requiring analyst assembly time.</td>
+          <td class="problems-statement">Digital adoption reporting, onboarding completion rate analysis, and feature utilization summaries are produced manually from analytics platform exports. The structured, session-level data is well-suited to AI-driven analysis that surfaces actionable signals without requiring analyst assembly time.</td>
         </tr>
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">New business opportunities</th>
-          <td class="problems-statement">A digital channel that delivers a personalised next-best-action at session level — surfacing the right product at the right lifecycle moment — converts at a materially higher rate than segment-level campaign targeting. The opportunity is a self-improving digital experience where every session generates a signal that lifts the next interaction.</td>
+          <td class="problems-statement">A digital channel that delivers a personalized next-best-action at session level — surfacing the right product at the right lifecycle moment — converts at a materially higher rate than segment-level campaign targeting. The opportunity is a self-improving digital experience where every session generates a signal that lifts the next interaction.</td>
         </tr>
         
       </tbody>
@@ -231,7 +231,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Digital onboarding</h2>
     
-    <p class="l3-section__intent">The customer-facing process of opening an account, applying for a product, or registering for digital banking through web or mobile. Under NBKR Resolution No. 50/4 and CBR Ordinance No. 4243-U, remote digital onboarding requires biometric identification, document verification, and electronic signing — a multi-step process with significant drop-off risk at each stage. Completion rate is the primary KPI; abandonment decomposed by step, device, and segment determines where the product team should invest improvement effort.</p>
+    <p class="l3-section__intent">The customer-facing process of opening an account, applying for a product, or registering for digital banking through web or mobile. Under remote-identification requirements, digital onboarding typically involves biometric identification, document verification, and electronic signing — a multi-step process with significant drop-off risk at each stage. Completion rate is the primary KPI; abandonment decomposed by step, device, and segment determines where the product team should invest improvement effort.</p>
     
   </header>
 
@@ -265,8 +265,7 @@
       <h3 class="scenario-card__title">Onboarding Abandonment Recovery</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent detects digital onboarding session abandonment in real time, identifies the step and likely abandonment reason from the session event log, and generates a personalised re-engagement message for dispatch through the customer&#39;s preferred channel within a defined re-engagement window.
-The digital operations team reviews the re-engagement queue before dispatch; the completion rate of re-engaged applicants versus the cold-start baseline is the primary outcome metric.</p>
+      <p class="scenario-card__intent">The AI agent detects digital onboarding session abandonment in real time, identifies the step and likely abandonment reason from the session event log, and generates a personalized re-engagement message for dispatch through the customer's preferred channel within a defined re-engagement window. The digital operations team reviews the re-engagement queue before dispatch; the completion rate of re-engaged applicants versus the cold-start baseline is the primary outcome metric.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -288,9 +287,7 @@ Re-engagement messages sent without step-specific context are less effective tha
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors digital onboarding session events and detects abandonment — session closure without step completion — within the defined re-engagement window.
-It generates a personalised message identifying the step not completed and providing the appropriate instruction or support content for that step (document upload guidance, browser compatibility check, or a branch appointment option for verification-failed applicants).
-The digital operations team reviews the queue and releases; abandonment recovery rate — proportion of abandoned applicants who complete the journey within 7 days of re-engagement — is the primary outcome metric.</p>
+      <p>The AI agent monitors digital onboarding session events and detects abandonment — session closure without step completion — within the defined re-engagement window. It generates a personalized message identifying the step not completed and providing the appropriate instruction or support content for that step (document upload guidance, browser compatibility check, or a branch appointment option for verification-failed applicants). The digital operations team reviews the queue and releases; abandonment recovery rate — proportion of abandoned applicants who complete the journey within 7 days of re-engagement — is the primary outcome metric.</p>
     </div>
     
 
@@ -298,9 +295,24 @@ The digital operations team reviews the queue and releases; abandonment recovery
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">A personalized re-engagement message for each abandoned digital onboarding session — identifying the step not completed and giving the instruction or support option for that step — is queued for digital operations team review and dispatched through the applicant's preferred channel within the re-engagement window.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent detects abandonment and queues a step-specific re-engagement message for ≥95% of abandoned onboarding sessions within the defined re-engagement window, for ≥26 consecutive weeks post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of queued messages released by the digital operations team without edit; abandonment recovery rate — abandoned applicants completing the journey within 7 days of re-engagement — ≥20%.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Follow-up of abandoned journeys reduced from the next campaign cycle to same-day dispatch within the defined re-engagement window.</p>
+        </div>
         
       </div>
     </div>
@@ -328,9 +340,7 @@ The digital operations team reviews the queue and releases; abandonment recovery
       <h3 class="scenario-card__title">Digital Onboarding Drop-Off Intelligence</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent reconstructs digital onboarding journeys from session and KYC event data to locate the steps where applicants abandon, with root-cause attribution by step, device, and segment for the Head of Digital.
-The analysis distinguishes between document upload failure, session timeout, and identity verification latency as abandonment drivers.
-The Head of Digital receives a weekly brief with prioritised step-level remediation recommendations.</p>
+      <p class="scenario-card__intent">The AI agent reconstructs digital onboarding journeys from session and KYC event data to locate the steps where applicants abandon, with root-cause attribution by step, device, and segment for the Head of Digital. The analysis distinguishes between document upload failure, session timeout, and identity verification latency as abandonment drivers. The Head of Digital receives a weekly brief with prioritized step-level remediation recommendations.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -352,9 +362,7 @@ The absence of current-state step analytics means product and operations teams a
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads session event logs and KYC processing timestamps, reconstructs each applicant journey, and maps abandonment to the step, device, and applicant segment where it occurs.
-It decomposes abandonment drivers — distinguishing upload failure rates, session timeout frequency, and identity verification latency by device and segment combination.
-The Head of Digital reviews a weekly brief with a prioritised list of step-level interventions ranked by estimated completion-rate recovery.</p>
+      <p>The AI agent reads session event logs and KYC processing timestamps, reconstructs each applicant journey, and maps abandonment to the step, device, and applicant segment where it occurs. It decomposes abandonment drivers — distinguishing upload failure rates, session timeout frequency, and identity verification latency by device and segment combination. The Head of Digital reviews a weekly brief with a prioritized list of step-level interventions ranked by estimated completion-rate recovery.</p>
     </div>
     
 
@@ -362,13 +370,13 @@ The Head of Digital reviews a weekly brief with a prioritised list of step-level
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">A weekly brief identifying digital onboarding abandonment by step, device, and segment — with root-cause attribution distinguishing upload failure, session timeout, and identity verification latency — is available to the Head of Digital for remediation prioritisation.</p>
+      <p class="okr-objective">A weekly brief identifying digital onboarding abandonment by step, device, and segment — with root-cause attribution distinguishing upload failure, session timeout, and identity verification latency — is available to the Head of Digital for remediation prioritization.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent delivers the weekly onboarding drop-off intelligence brief for ≥95% of scheduled weeks for ≥48 consecutive weeks post go-live.</p>
+          <p>The AI agent delivers the weekly onboarding drop-off intelligence brief for ≥95% of scheduled weeks for ≥48 consecutive weeks post go-live.</p>
         </div>
         
         
@@ -409,9 +417,7 @@ The Head of Digital reviews a weekly brief with a prioritised list of step-level
       <h3 class="scenario-card__title">KYC Document Verification Automation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent verifies identity documents submitted during digital onboarding — checking document authenticity signals, expiry, name consistency, and biometric match — and generates a structured verification summary for the KYC operations team before the case is reviewed for approval.
-Documents falling outside automated confidence thresholds are flagged for manual KYC review with the specific exception noted.
-KYC review time per case and straight-through processing rate are the primary outcome metrics.</p>
+      <p class="scenario-card__intent">The AI agent verifies identity documents submitted during digital onboarding — checking document authenticity signals, expiry, name consistency, and biometric match — and generates a structured verification summary for the KYC operations team before the case is reviewed for approval. Documents falling outside automated confidence thresholds are flagged for manual KYC review with the specific exception noted. KYC review time per case and straight-through verification rate are the primary outcome metrics.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -424,18 +430,14 @@ KYC review time per case and straight-through processing rate are the primary ou
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Digital onboarding identity verification requires the KYC operations team to manually review document images and biometric data for each applicant, checking authenticity, expiry, and name consistency against multiple data points.
-Under NBKR Resolution No. 50/4 and CBR Ordinance No. 4243-U, each remote onboarding case must have a documented verification record; manual review is the rate-limiting step for completion rate and the primary driver of verification latency.
-KYC review queue depth during peak onboarding periods extends verification latency beyond the threshold at which applicants abandon the journey, directly reducing completion rate.</p>
+      <p>Digital onboarding identity verification requires the KYC operations team to manually review document images and biometric data for each applicant, checking authenticity, expiry, and name consistency against multiple data points. Under remote-identification requirements, each remote onboarding case must have a documented verification record; manual review is the rate-limiting step for completion rate and the primary driver of verification latency. KYC review queue depth during peak onboarding periods extends verification latency beyond the threshold at which applicants abandon the journey, directly reducing completion rate.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the submitted identity documents and biometric data, checks authenticity signals, expiry dates, name consistency across documents, and biometric match score, and generates a structured verification summary for each case.
-Cases meeting the automated confidence threshold are flagged for expedited KYC review; cases with specific exceptions are queued for manual review with the exception type noted.
-Straight-through processing rate — cases approved without manual intervention — and KYC review time per case are tracked against the pre-deployment manual review baseline.</p>
+      <p>The AI agent reads the submitted identity documents and biometric data, checks authenticity signals, expiry dates, name consistency across documents, and biometric match score, and generates a structured verification summary for each case. Cases meeting the automated confidence threshold are flagged for expedited review by the KYC operations team; cases with specific exceptions are queued for manual review with the exception type noted. Straight-through verification rate — cases passing all automated checks without exception — and KYC review time per case are tracked against the pre-deployment manual review baseline.</p>
     </div>
     
 
@@ -443,9 +445,24 @@ Straight-through processing rate — cases approved without manual intervention 
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">A structured verification summary for each digital onboarding case — document authenticity signals, expiry, name consistency, and biometric match, with any exception type noted — is available to the KYC operations team before the case is reviewed for approval.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent generates a verification summary for ≥98% of digital onboarding cases with submitted identity documents for ≥26 consecutive weeks post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of verification summaries confirmed as accurate by the KYC operations team on review; ≥95% of flagged exceptions confirmed as genuine on manual KYC review.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>KYC review time per case reduced from 15–20 minutes of manual document and biometric review to ≤5 minutes of summary review for cases within the automated confidence threshold.</p>
+        </div>
         
       </div>
     </div>
@@ -474,7 +491,7 @@ Straight-through processing rate — cases approved without manual intervention 
   <header class="l3-section__head">
     <h2 class="l3-section__title">Digital support &amp; servicing</h2>
     
-    <p class="l3-section__intent">Self-service tasks within the digital channel — balance enquiries, transfers, statement requests, dispute initiation, card management — that determine whether the customer resolves the need digitally or transfers to an assisted channel. Servicing deflection rate — the proportion of potential contact center contacts resolved in the digital channel — is the primary channel economics metric. Under NBKR and CBR consumer service standards, digital self-service must provide equivalent outcomes to assisted channels for the categories of transactions it covers.</p>
+    <p class="l3-section__intent">Self-service tasks within the digital channel — balance inquiries, transfers, statement requests, dispute initiation, card management — that determine whether the customer resolves the need digitally or transfers to an assisted channel. Servicing deflection rate — the proportion of potential contact-center contacts resolved in the digital channel — is the primary channel economics metric. Under consumer service standards, digital self-service must provide equivalent outcomes to assisted channels for the categories of transactions it covers.</p>
     
   </header>
 
@@ -508,13 +525,12 @@ Straight-through processing rate — cases approved without manual intervention 
       <h3 class="scenario-card__title">Digital Self-Service Task Automation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent handles routine self-service requests submitted through the digital channel — balance enquiry, mini-statement, card freeze and unfreeze, and address update — without agent involvement, completing the transaction within the session and generating a confirmation record for the customer and the bank&#39;s audit trail.
-Straight-through completion rate and the contact center volume reduction from automated digital task handling are the primary outcome metrics.</p>
+      <p class="scenario-card__intent">The AI agent handles routine self-service requests submitted through the digital channel — balance inquiry, mini-statement, card freeze and unfreeze, and address update — without contact-center agent involvement, completing the transaction within the session and generating a confirmation record for the customer and the Bank's audit trail. Straight-through completion rate and the contact-center volume reduction from automated digital task handling are the primary outcome metrics.</p>
     </div>
     <span
-      class="scenario-complexity scenario-complexity--S"
+      class="scenario-complexity scenario-complexity--M"
       title="Complexity"
-    >S</span>
+    >M</span>
   </summary>
 
   <div class="scenario-card__body">
@@ -522,18 +538,14 @@ Straight-through completion rate and the contact center volume reduction from au
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Routine self-service requests — balance enquiries, statement requests, card management, and address updates — represent a significant share of contact center inbound volume and are submitted through digital channels by customers who expect immediate completion.
-In the current model, digital channel submissions for some task types are queued for back-office processing or contact center callback rather than completed within the session, creating an inconsistency between the customer&#39;s expectation and the actual servicing experience.
-Under NBKR and CBR consumer service standards, digital self-service must provide equivalent outcomes to assisted channels for covered transaction categories; queued processing does not meet this standard for routine tasks.</p>
+      <p>Routine self-service requests — balance inquiries, statement requests, card management, and address updates — represent a significant share of contact-center inbound volume and are submitted through digital channels by customers who expect immediate completion. In the current model, digital channel submissions for some task types are queued for back-office processing or contact-center callback rather than completed within the session, creating an inconsistency between the customer's expectation and the actual servicing experience. Under consumer service standards, digital self-service must provide equivalent outcomes to assisted channels for covered transaction categories; queued processing does not meet this standard for routine tasks.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent handles routine self-service requests submitted through the digital channel by executing the transaction — balance enquiry, mini-statement generation, card freeze and unfreeze, address update — within the session against the bank&#39;s core system, generating a confirmation record immediately.
-The agent escalates to a human agent where the transaction type, regulatory category, or account status requires human review.
-Straight-through completion rate per task type and contact center volume reduction from digital task absorption are tracked against the pre-deployment baseline.</p>
+      <p>The AI agent handles routine self-service requests submitted through the digital channel by executing the transaction — balance inquiry, mini-statement generation, card freeze and unfreeze, address update — within the session against the Bank's core system, generating a confirmation record immediately. It escalates to a human agent where the transaction type, regulatory category, or account status requires human review. Straight-through completion rate per task type and contact-center volume reduction from digital task absorption are tracked against the pre-deployment baseline.</p>
     </div>
     
 
@@ -541,9 +553,24 @@ Straight-through completion rate per task type and contact center volume reducti
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Customers complete routine self-service requests — balance inquiry, mini-statement, card freeze and unfreeze, and address update — within the digital session, with a confirmation record for the customer and the Bank's audit trail and escalation to a human agent where review is required.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent handles ≥90% of in-scope routine requests submitted through the digital channel for ≥26 consecutive weeks post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Straight-through completion rate ≥85% per task type; ≥95% of escalations confirmed by the receiving human agent as requiring human review.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Completion of in-scope routine requests moved from queued back-office processing or contact-center callback to completion within the session.</p>
+        </div>
         
       </div>
     </div>
@@ -571,9 +598,7 @@ Straight-through completion rate per task type and contact center volume reducti
       <h3 class="scenario-card__title">Digital Channel Support Brief</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent generates a daily digital channel support brief for the digital operations team, summarising the prior day&#39;s servicing activity — task completion rates by category, escalation reasons, error events, and any anomalies in session failure rates.
-The brief replaces manual data extraction from session logs and enables the digital operations team to identify and respond to servicing degradation before it drives contact center volume.
-Response time to digital servicing anomalies and escalation rate per task category are the primary outcome metrics.</p>
+      <p class="scenario-card__intent">The AI agent generates a daily digital channel support brief for the digital operations team, summarizing the prior day's servicing activity — task completion rates by category, escalation reasons, error events, and any anomalies in session failure rates. The brief replaces manual data extraction from session logs and enables the digital operations team to identify and respond to servicing degradation before it drives contact-center volume. Response time to digital servicing anomalies and escalation rate per task category are the primary outcome metrics.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -586,18 +611,14 @@ Response time to digital servicing anomalies and escalation rate per task catego
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Digital channel servicing performance — task completion rates, escalation reasons, session error frequency — is monitored through periodic review of session logs; real-time degradation in completion rate for a specific task type is not detected until it shows up in contact center volume or customer complaints.
-The digital operations team does not have a consolidated daily brief covering servicing performance across all task categories; performance visibility requires manual log extraction that is performed on a reactive basis.
-Without a proactive daily brief, servicing degradation accumulates for hours or days before the digital operations team can identify and escalate for resolution.</p>
+      <p>Digital channel servicing performance — task completion rates, escalation reasons, session error frequency — is monitored through periodic review of session logs; real-time degradation in completion rate for a specific task type is not detected until it shows up in contact-center volume or customer complaints. The digital operations team does not have a consolidated daily brief covering servicing performance across all task categories; performance visibility requires manual log extraction that is performed on a reactive basis. Without a proactive daily brief, servicing degradation accumulates for hours or days before the digital operations team can identify and escalate for resolution.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads digital channel session event logs and completion records, computes task completion rates and escalation rates by category for the prior day, and identifies any anomalies against the seven-day rolling baseline.
-The daily brief is delivered to the digital operations team at the start of the working day; anomalies are flagged with the session data supporting immediate investigation.
-Response time from anomaly detection to investigation initiation and daily escalation rate per task category are tracked as primary outcome metrics.</p>
+      <p>The AI agent reads digital channel session event logs and completion records, computes task completion rates and escalation rates by category for the prior day, and identifies any anomalies against the seven-day rolling baseline. The daily brief is delivered to the digital operations team at the start of the working day; anomalies are flagged with the session data supporting immediate investigation. Response time from anomaly detection to investigation initiation and daily escalation rate per task category are tracked as primary outcome metrics.</p>
     </div>
     
 
@@ -605,9 +626,24 @@ Response time from anomaly detection to investigation initiation and daily escal
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">A daily digital channel support brief — prior-day task completion rates by category, escalation reasons, error events, and anomalies against the seven-day rolling baseline — is available to the digital operations team at the start of each working day.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the daily support brief at the start of the working day for ≥95% of working days for ≥48 consecutive weeks post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of flagged anomalies confirmed as warranting investigation by the digital operations team.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Detection of servicing degradation reduced from reactive manual log extraction over hours or days to next-working-day brief delivery; investigation initiated within 2 hours of anomaly detection.</p>
+        </div>
         
       </div>
     </div>
@@ -635,9 +671,7 @@ Response time from anomaly detection to investigation initiation and daily escal
       <h3 class="scenario-card__title">Digital Servicing Deflection Intelligence</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent maps contact center call reasons to the digital servicing capability inventory, identifying transaction categories that customers are calling about but that could be resolved in the digital channel, and quantifying the deflection opportunity per category.
-The Head of Digital and Head of Contact Center review the quarterly brief jointly to prioritise digital capability development that will close the deflection gap.
-Deflection rate by transaction category and contact center volume reduction are the primary outcome metrics tracked after capability deployment.</p>
+      <p class="scenario-card__intent">The AI agent maps contact-center call reasons to the digital servicing capability inventory, identifying transaction categories that customers are calling about but that could be resolved in the digital channel, and quantifying the deflection opportunity per category. The Head of Digital and Head of Contact Center review the quarterly brief jointly to prioritize digital capability development that will close the deflection gap. Deflection rate by transaction category and contact-center volume reduction are the primary outcome metrics tracked after capability deployment.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -650,18 +684,14 @@ Deflection rate by transaction category and contact center volume reduction are 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Digital servicing deflection rate — the proportion of potential contact center contacts resolved in digital — is tracked at the aggregate level; the specific transaction categories driving assisted-channel volume above the deflection target are not systematically identified.
-Contact center call reason data and digital channel capability inventory are maintained by separate teams; a joined analysis that identifies which call reasons lack a digital equivalent is not produced at operational cadence.
-Without category-level deflection gap analysis, digital development investment is prioritised on product roadmap criteria rather than on the highest-volume assisted-channel contacts that could be shifted to digital.</p>
+      <p>Digital servicing deflection rate — the proportion of potential contact-center contacts resolved in digital — is tracked at the aggregate level; the specific transaction categories driving assisted-channel volume above the deflection target are not systematically identified. Contact-center call reason data and digital channel capability inventory are maintained by separate teams; a joined analysis that identifies which call reasons lack a digital equivalent is not produced at operational cadence. Without category-level deflection gap analysis, digital development investment is prioritized on product roadmap criteria rather than on the highest-volume assisted-channel contacts that could be shifted to digital.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads contact center call reason classifications and maps each category against the digital channel capability inventory, flagging categories where a self-service equivalent exists but is not being used and categories where no digital capability exists.
-It estimates the contact center volume reduction potential for each capability gap, ranked by call volume.
-The quarterly brief is reviewed jointly by the Heads of Digital and Contact Center; digital capability development priorities are aligned to the highest-volume deflection opportunities identified.</p>
+      <p>The AI agent reads contact-center call reason classifications and maps each category against the digital channel capability inventory, flagging categories where a self-service equivalent exists but is not being used and categories where no digital capability exists. It estimates the contact-center volume reduction potential for each capability gap, ranked by call volume. The quarterly brief is reviewed jointly by the Head of Digital and the Head of Contact Center; digital capability development priorities are aligned to the highest-volume deflection opportunities identified.</p>
     </div>
     
 
@@ -669,9 +699,24 @@ The quarterly brief is reviewed jointly by the Heads of Digital and Contact Cent
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">A quarterly deflection brief — mapping contact-center call reasons to the digital servicing capability inventory and ranking capability gaps and unused self-service equivalents by call volume and estimated volume reduction — is available to the Head of Digital and Head of Contact Center for joint prioritization of digital capability development.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the deflection brief for ≥95% of scheduled quarterly cycles for ≥4 consecutive quarters post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of ranked deflection opportunities confirmed as actionable by the Head of Digital and Head of Contact Center on joint review; deflection rate by transaction category tracked as primary outcome metric.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Category-level deflection gap analysis moved from not being produced at operational cadence to quarterly delivery within 1 week of period close.</p>
+        </div>
         
       </div>
     </div>
@@ -698,9 +743,9 @@ The quarterly brief is reviewed jointly by the Heads of Digital and Contact Cent
 <section class="l3-section" id="digital-engagement-personalisation">
 
   <header class="l3-section__head">
-    <h2 class="l3-section__title">Digital engagement &amp; personalisation</h2>
+    <h2 class="l3-section__title">Digital engagement &amp; personalization</h2>
     
-    <p class="l3-section__intent">The in-session customer experience — feature discovery, product promotion, and personalised content — that determines whether a logged-in session deepens the customer relationship or ends at a routine transaction. Personalisation is governed by CBR and NBK data protection regulations and the bank&#39;s GDPR-aligned consent framework; offers and content must be served within the scope of the customer&#39;s marketing consent. The commercial case for personalisation is measured in cross-sell conversion lift, product activation rate, and digital engagement frequency.</p>
+    <p class="l3-section__intent">The in-session customer experience — feature discovery, product promotion, and personalized content — that determines whether a logged-in session deepens the customer relationship or ends at a routine transaction. Personalization is governed by applicable law on personal data and the Bank's consent framework; offers and content must be served within the scope of the customer's marketing consent. The commercial case for personalization is measured in cross-sell conversion lift, product activation rate, and digital engagement frequency.</p>
     
   </header>
 
@@ -734,9 +779,7 @@ The quarterly brief is reviewed jointly by the Heads of Digital and Contact Cent
       <h3 class="scenario-card__title">Consent Scope Enforcement Automation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent maintains a current-state consent scope register for each customer, verified against the consent management system on each session, and blocks any personalisation recommendation whose product category falls outside the customer&#39;s active consent scope.
-Consent scope checks are applied at the recommendation generation step rather than post-hoc, eliminating the regulatory exposure from serving out-of-scope recommendations.
-The compliance team reviews a weekly consent scope exception report; any breach triggers an incident record.</p>
+      <p class="scenario-card__intent">The AI agent maintains a current-state consent scope register for each customer, verified against the consent management system on each session, and blocks any personalization recommendation whose product category falls outside the customer's active consent scope. Consent scope checks are applied at the recommendation generation step rather than post-hoc, eliminating the regulatory exposure from serving out-of-scope recommendations. The compliance team reviews a weekly consent scope exception report; any breach triggers an incident record.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -749,18 +792,14 @@ The compliance team reviews a weekly consent scope exception report; any breach 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Personalisation recommendations are generated from product and transaction signals; consent scope adherence is enforced through a post-hoc compliance review rather than at the point of recommendation generation.
-Under CBR and NBK data protection regulations, serving marketing content outside the scope of the customer&#39;s active consent is a regulatory breach; post-hoc detection means a breach has already occurred before it is identified.
-Consent scope can change between sessions — a customer withdrawing marketing consent during one session should receive no recommendations in the next — and the current architecture does not propagate consent changes to the personalisation layer in real time.</p>
+      <p>Personalization recommendations are generated from product and transaction signals; consent scope adherence is enforced through a post-hoc compliance review rather than at the point of recommendation generation. Under applicable law on personal data, serving marketing content outside the scope of the customer's active consent is a regulatory breach; post-hoc detection means a breach has already occurred before it is identified. Consent scope can change between sessions — a customer withdrawing marketing consent during one session should receive no recommendations in the next — and the current architecture does not propagate consent changes to the personalization layer in real time.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the current-state consent scope for each customer from the consent management system at session initiation and filters the recommendation set to exclude any product category outside the active scope.
-Consent scope changes are propagated to the personalisation layer within the session event cycle; no out-of-scope recommendation is generated regardless of model output.
-The weekly exception report tracks any consent scope boundary events detected by the audit log; each exception triggers an incident record for compliance review.</p>
+      <p>The AI agent reads the current-state consent scope for each customer from the consent management system at session initiation and filters the recommendation set to exclude any product category outside the active scope. Consent scope changes are propagated to the personalization layer within the session event cycle; no out-of-scope recommendation is generated regardless of model output. The weekly exception report tracks any consent scope boundary events detected by the audit log; each exception triggers an incident record for compliance review.</p>
     </div>
     
 
@@ -768,9 +807,24 @@ The weekly exception report tracks any consent scope boundary events detected by
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Every personalization recommendation is checked against the customer's active consent scope at generation — with out-of-scope product categories blocked and consent changes propagated within the session event cycle — and the compliance team receives a weekly consent scope exception report.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent applies the consent scope check in 100% of sessions in which a personalization recommendation is generated and delivers the weekly exception report for ≥48 consecutive weeks post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Zero out-of-scope recommendations served, as confirmed by the compliance team's weekly review of the exception report; 100% of exceptions raised as incident records.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Consent scope enforcement moved from post-hoc compliance review, after a breach has already occurred, to a check at recommendation generation in every session.</p>
+        </div>
         
       </div>
     </div>
@@ -795,12 +849,10 @@ The weekly exception report tracks any consent scope boundary events detected by
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Personalisation Effectiveness Intelligence</h3>
+      <h3 class="scenario-card__title">Personalization Effectiveness Intelligence</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent analyses recommendation acceptance and conversion outcomes by segment, product type, and session context to produce a weekly personalisation performance brief for the Head of Digital.
-The brief identifies which recommendation categories are generating conversion lift and which are producing offer fatigue or consent scope boundary contacts, enabling rapid model calibration.
-The Head of Digital reviews the brief and directs the model calibration cycle from a current-state performance signal rather than from periodic A/B test results.</p>
+      <p class="scenario-card__intent">The AI agent analyzes recommendation acceptance and conversion outcomes by segment, product type, and session context to produce a weekly personalization performance brief for the Head of Digital. The brief identifies which recommendation categories are generating conversion lift and which are producing offer fatigue or consent scope boundary events, enabling rapid model calibration. The Head of Digital reviews the brief and directs the model calibration cycle from a current-state performance signal rather than from periodic A/B test results.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -813,18 +865,14 @@ The Head of Digital reviews the brief and directs the model calibration cycle fr
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Personalisation model performance is reviewed through periodic A/B tests at campaign cadence; the Head of Digital cannot see which recommendation categories are underperforming or generating offer-fatigue responses between test cycles.
-Model drift — where a recommendation type that was effective at launch loses conversion lift over time — is not detectable until the next scheduled test review.
-Consent scope boundary contacts — sessions where a recommendation was served outside the customer&#39;s consent scope — are only identified through post-hoc compliance review rather than in real time.</p>
+      <p>Personalization model performance is reviewed through periodic A/B tests at campaign cadence; the Head of Digital cannot see which recommendation categories are underperforming or generating offer-fatigue responses between test cycles. Model drift — where a recommendation type that was effective at launch loses conversion lift over time — is not detectable until the next scheduled test review. Consent scope boundary events — sessions where a recommendation was served outside the customer's consent scope — are only identified through post-hoc compliance review rather than in real time.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads session-level recommendation records, customer response events (click, dismiss, conversion), and consent scope flags, and computes weekly conversion rates by recommendation category, segment, and session context.
-It identifies offer-fatigue signals — declining acceptance rates in high-frequency recommendation categories — and consent scope boundary events for immediate review.
-The Head of Digital reviews the brief and adjusts model calibration parameters; conversion lift by recommendation category and consent scope adherence rate are the tracked outcome metrics.</p>
+      <p>The AI agent reads session-level recommendation records, customer response events (click, dismiss, conversion), and consent scope flags, and computes weekly conversion rates by recommendation category, segment, and session context. It identifies offer-fatigue signals — declining acceptance rates in high-frequency recommendation categories — and consent scope boundary events for immediate review. The Head of Digital reviews the brief and adjusts model calibration parameters; conversion lift by recommendation category and consent scope adherence rate are the tracked outcome metrics.</p>
     </div>
     
 
@@ -832,9 +880,24 @@ The Head of Digital reviews the brief and adjusts model calibration parameters; 
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">A weekly personalization performance brief — conversion rates by recommendation category, segment, and session context, with offer-fatigue signals and consent scope boundary events flagged — is available to the Head of Digital to direct model calibration.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the personalization performance brief for ≥95% of scheduled weeks for ≥48 consecutive weeks post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of flagged underperforming or offer-fatigued recommendation categories confirmed by the Head of Digital as requiring calibration; conversion lift by recommendation category and consent scope adherence rate tracked as primary outcome metrics.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Personalization performance review cycle reduced from periodic A/B test results at campaign cadence to weekly automated delivery.</p>
+        </div>
         
       </div>
     </div>
@@ -859,12 +922,10 @@ The Head of Digital reviews the brief and adjusts model calibration parameters; 
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Digital Engagement Personalisation</h3>
+      <h3 class="scenario-card__title">Digital Engagement Personalization</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent generates a next-best-action recommendation for each logged-in session — product offer, content, or service prompt — from the customer&#39;s product holdings, recent transaction signals, and lifecycle position.
-Recommendations are constrained by the customer&#39;s marketing consent scope and offer-fatigue rules, enforced systematically at session level.
-Conversion and activation rates against the session-level recommendation measure outcome.</p>
+      <p class="scenario-card__intent">The AI agent generates a next-best-action recommendation for each logged-in session — product offer, content, or service prompt — from the customer's product holdings, recent transaction signals, and lifecycle position. Recommendations are constrained by the customer's marketing consent scope and offer-fatigue rules, enforced systematically at session level. Conversion and activation rates against the session-level recommendation measure the outcome.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--L"
@@ -877,18 +938,14 @@ Conversion and activation rates against the session-level recommendation measure
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Digital channel personalisation relies on segment rules set at campaign cadence; customers at different lifecycle stages receive undifferentiated prompts because the system has no mechanism to reflect per-customer signals at session level.
-Marketing consent scope and offer-fatigue limits are not enforced consistently across the session layer, creating both compliance exposure and customer experience degradation.
-High-propensity customers at product-eligible lifecycle events — term deposit maturities, salary uplift, savings accumulation — are missed between campaign cycles.</p>
+      <p>Digital channel personalization relies on segment rules set at campaign cadence; customers at different lifecycle stages receive undifferentiated prompts because the system has no mechanism to reflect per-customer signals at session level. Marketing consent scope and offer-fatigue limits are not enforced consistently across the session layer, creating both compliance exposure and customer experience degradation. High-propensity customers at product-eligible lifecycle events — term deposit maturities, salary uplift, savings accumulation — are missed between campaign cycles.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads product holdings, recent transaction activity, segment assignment, and lifecycle stage for each session, generating a ranked next-best-action with a confidence score.
-Consent scope adherence and offer-fatigue constraints are applied at generation time rather than post-hoc, ensuring regulatory compliance and customer experience standards are met systematically.
-The recommendation is rendered via the digital channel personalisation layer; cross-sell conversion and product activation rates measure commercial outcome.</p>
+      <p>The AI agent reads product holdings, recent transaction activity, segment assignment, and lifecycle stage for each session, generating a ranked next-best-action with a confidence score. Consent scope adherence and offer-fatigue constraints are applied at generation time rather than post-hoc, ensuring regulatory compliance and customer experience standards are met systematically. The recommendation is rendered via the digital channel personalization layer; cross-sell conversion and product activation rates measure commercial outcome.</p>
     </div>
     
 
@@ -902,19 +959,19 @@ The recommendation is rendered via the digital channel personalisation layer; cr
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent generates a session-level next-best-action recommendation for ≥90% of logged-in digital sessions meeting the defined eligibility criteria for ≥26 consecutive weeks post go-live.</p>
+          <p>The AI agent generates a session-level next-best-action recommendation for ≥90% of logged-in digital sessions meeting the defined eligibility criteria for ≥26 consecutive weeks post go-live.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>Cross-sell conversion and product activation rates for sessions with agent recommendation ≥20% higher than the pre-deployment segment-rule baseline on 6-month holdout cohort; consent scope adherence rate ≥99.5%.</p>
+          <p>Cross-sell conversion and product activation rates for sessions with an AI agent recommendation ≥20% higher than the pre-deployment segment-rule baseline on a 6-month holdout cohort; consent scope adherence rate ≥99.5%.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Personalisation refresh cycle reduced from campaign-cadence segment rule updates (4–6 weeks) to per-session real-time recommendation generation.</p>
+          <p>Personalization refresh cycle reduced from campaign-cadence segment rule updates (4–6 weeks) to per-session real-time recommendation generation.</p>
         </div>
         
       </div>
@@ -944,7 +1001,7 @@ The recommendation is rendered via the digital channel personalisation layer; cr
   <header class="l3-section__head">
     <h2 class="l3-section__title">Digital adoption tracking</h2>
     
-    <p class="l3-section__intent">The measurement of how deeply and broadly the customer base uses digital channels — login frequency, feature activation, product self-service usage, and segment penetration. Digital adoption tracking informs channel investment prioritisation, contact center headcount planning, and branch network review. Under NBKR and NBK open banking strategies, digital adoption rate is a supervisory interest metric and a component of financial inclusion reporting. Cohort-level decomposition — by segment, product, and tenure — is the analytical input that makes adoption metrics actionable.</p>
+    <p class="l3-section__intent">The measurement of how deeply and broadly the customer base uses digital channels — login frequency, feature activation, product self-service usage, and segment penetration. Digital adoption tracking informs channel investment prioritization, contact-center headcount planning, and branch network review. Digital adoption rate is commonly a supervisory interest metric and a component of financial inclusion reporting. Cohort-level decomposition — by segment, product, and tenure — is the analytical input that makes adoption metrics actionable.</p>
     
   </header>
 
@@ -978,9 +1035,7 @@ The recommendation is rendered via the digital channel personalisation layer; cr
       <h3 class="scenario-card__title">Low-Adoption Customer Outreach Automation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent identifies customers who have registered for digital banking but have not logged in within a defined inactivity window, generates personalised re-engagement messages, and queues them for dispatch within the customer&#39;s marketing consent scope.
-The Head of Digital reviews the outreach queue before dispatch; no message is released without confirmation.
-Re-engagement rate — proportion of inactive customers who log in within 30 days of outreach — is the primary outcome metric.</p>
+      <p class="scenario-card__intent">The AI agent identifies customers who have registered for digital banking but have not logged in within a defined inactivity window, generates personalized re-engagement messages, and queues them for dispatch within the customer's marketing consent scope. The Head of Digital reviews the outreach queue before dispatch; no message is released without confirmation. Re-engagement rate — proportion of inactive customers who log in within 30 days of outreach — is the primary outcome metric.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -993,18 +1048,14 @@ Re-engagement rate — proportion of inactive customers who log in within 30 day
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Customers who register for digital banking but do not log in within the activation window represent a high-priority adoption recovery cohort; without systematic identification and outreach, they remain dormant and do not contribute to the digital adoption rate.
-Manual extraction of inactive registrant lists and outreach message assembly is performed at campaign cadence rather than on a rolling basis, allowing inactivity to compound before outreach is triggered.
-Marketing consent scope and message personalisation are applied inconsistently in manually assembled campaigns, creating compliance exposure and reducing outreach effectiveness.</p>
+      <p>Customers who register for digital banking but do not log in within the activation window represent a high-priority adoption recovery cohort; without systematic identification and outreach, they remain dormant and do not contribute to the digital adoption rate. Manual extraction of inactive registrant lists and outreach message assembly is performed at campaign cadence rather than on a rolling basis, allowing inactivity to compound before outreach is triggered. Marketing consent scope and message personalization are applied inconsistently in manually assembled campaigns, creating compliance exposure and reducing outreach effectiveness.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads digital banking registration records and session event logs, identifies customers inactive beyond the defined window, and generates personalised re-engagement messages tailored to the customer&#39;s product holdings and preferred contact channel, within consent scope.
-Messages are queued for the Head of Digital&#39;s review before dispatch; the agent records dispatch date and subsequent session event for re-engagement rate tracking.
-Re-engagement rate by cohort and time from inactivity threshold to outreach dispatch are tracked against the prior campaign-cadence baseline.</p>
+      <p>The AI agent reads digital banking registration records and session event logs, identifies customers inactive beyond the defined window, and generates personalized re-engagement messages tailored to the customer's product holdings and preferred contact channel, within consent scope. Messages are queued for the Head of Digital's review before dispatch; the AI agent records the dispatch date and subsequent session event for re-engagement rate tracking. Re-engagement rate by cohort and time from inactivity threshold to outreach dispatch are tracked against the prior campaign-cadence baseline.</p>
     </div>
     
 
@@ -1012,9 +1063,24 @@ Re-engagement rate by cohort and time from inactivity threshold to outreach disp
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Personalized re-engagement messages for customers who registered for digital banking but have not logged in within the inactivity window are queued — within each customer's marketing consent scope — for the Head of Digital's review and confirmation before dispatch.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent identifies inactive registrants and queues outreach messages for ≥95% of eligible customers within 5 working days of the inactivity threshold, for ≥26 consecutive weeks post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of queued messages confirmed for dispatch by the Head of Digital without edit; re-engagement rate — inactive customers logging in within 30 days of outreach — ≥15%.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Time from inactivity threshold to outreach dispatch reduced from campaign cadence (4–6 weeks) to ≤5 working days on a rolling basis.</p>
+        </div>
         
       </div>
     </div>
@@ -1042,9 +1108,7 @@ Re-engagement rate by cohort and time from inactivity threshold to outreach disp
       <h3 class="scenario-card__title">Digital Adoption Reporting Pack</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent assembles the monthly digital adoption reporting pack for the Head of Digital and regulatory reporting purposes, drawing on cohort analytics, feature activation data, and channel economics metrics.
-The pack covers segment penetration, feature adoption depth, cost-to-serve comparison versus assisted channels, and the period&#39;s activation programme outcomes.
-The Head of Digital reviews, annotates with forward-looking commentary, and releases; the pack also serves as the data source for NBKR and NBK digital adoption reporting submissions.</p>
+      <p class="scenario-card__intent">The AI agent assembles the monthly digital adoption reporting pack for the Head of Digital and regulatory reporting purposes, drawing on cohort analytics, feature activation data, and channel economics metrics. The pack covers segment penetration, feature adoption depth, cost-to-serve comparison versus assisted channels, and the period's activation program outcomes. The Head of Digital reviews, annotates with forward-looking commentary, and releases; the pack also serves as the data source for digital adoption reporting to the regulator.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -1057,18 +1121,14 @@ The Head of Digital reviews, annotates with forward-looking commentary, and rele
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>The monthly digital adoption pack is assembled manually from multiple data sources — session analytics, CRM segment data, contact center volume reports, and cost allocation models — a process that takes several working days and delivers output already stale on receipt.
-The Head of Digital&#39;s commentary is added to a manually assembled document whose underlying data cannot be refreshed once compiled.
-Regulatory reporting submissions on digital adoption draw from the same underlying data but require a different format; the two outputs are produced by parallel manual processes rather than from a shared data pipeline.</p>
+      <p>The monthly digital adoption pack is assembled manually from multiple data sources — session analytics, CRM segment data, contact-center volume reports, and cost allocation models — a process that takes several working days and delivers output already stale on receipt. The Head of Digital's commentary is added to a manually assembled document whose underlying data cannot be refreshed once compiled. Regulatory reporting submissions on digital adoption draw from the same underlying data but require a different format; the two outputs are produced by parallel manual processes rather than from a shared data pipeline.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads segment-level session analytics, feature activation records, channel cost-to-serve data, and activation programme outcomes, and generates the monthly adoption reporting pack in the bank&#39;s standard format.
-The Head of Digital reviews the agent-assembled pack and adds forward-looking commentary before release; the same underlying data is rendered in the regulatory submission format for NBKR and NBK reporting.
-Pack assembly time and the gap between period close and delivery to the Head of Digital are tracked against the prior manual baseline.</p>
+      <p>The AI agent reads segment-level session analytics, feature activation records, channel cost-to-serve data, and activation program outcomes, and generates the monthly adoption reporting pack in the Bank's standard format. The Head of Digital reviews the AI-assembled pack and adds forward-looking commentary before release; the same underlying data is rendered in the regulatory submission format. Pack assembly time and the gap between period close and delivery to the Head of Digital are tracked against the prior manual baseline.</p>
     </div>
     
 
@@ -1076,9 +1136,24 @@ Pack assembly time and the gap between period close and delivery to the Head of 
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">A monthly digital adoption reporting pack — segment penetration, feature adoption depth, cost-to-serve comparison versus assisted channels, and activation program outcomes — is available to the Head of Digital for commentary and release, with the same data rendered in the regulatory submission format.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent assembles the adoption reporting pack for ≥95% of monthly cycles for ≥12 consecutive months post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of packs released by the Head of Digital after adding commentary, without supplementary manual data extraction.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Pack assembly reduced from several working days of manual compilation to delivery within 1 working day of period close.</p>
+        </div>
         
       </div>
     </div>
@@ -1106,9 +1181,7 @@ Pack assembly time and the gap between period close and delivery to the Head of 
       <h3 class="scenario-card__title">Digital Adoption Cohort Intelligence</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent computes digital adoption rates by segment, product, and tenure cohort on a weekly cadence, identifying the cohorts where adoption is below the bank&#39;s target and the feature activation patterns associated with customers who sustain high engagement.
-The brief for the Head of Digital includes adoption gap analysis by segment and recommended activation interventions ranked by estimated adoption recovery per cohort.
-The output replaces quarterly ad hoc analytics with a continuous cohort intelligence signal for channel investment prioritisation.</p>
+      <p class="scenario-card__intent">The AI agent computes digital adoption rates by segment, product, and tenure cohort on a weekly cadence, identifying the cohorts where adoption is below the Bank's target and the feature activation patterns associated with customers who sustain high engagement. The brief for the Head of Digital includes adoption gap analysis by segment and recommended activation interventions ranked by estimated adoption recovery per cohort. The output replaces quarterly ad hoc analytics with a continuous cohort intelligence signal for channel investment prioritization.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1121,18 +1194,14 @@ The output replaces quarterly ad hoc analytics with a continuous cohort intellig
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Digital adoption rates are tracked at the aggregate level; the Head of Digital cannot identify which customer segments, product holders, or tenure cohorts are driving the adoption gap without commissioning discrete analytical work per cohort.
-Activation interventions — onboarding nudges, feature prompts, assisted-channel referrals — are applied uniformly rather than targeted to the cohorts where they would produce the greatest adoption recovery.
-Under NBKR and NBK digital adoption reporting obligations, segment-level adoption data is a supervisory interest metric; the current aggregate view provides insufficient granularity for regulatory engagement.</p>
+      <p>Digital adoption rates are tracked at the aggregate level; the Head of Digital cannot identify which customer segments, product holders, or tenure cohorts are driving the adoption gap without commissioning discrete analytical work per cohort. Activation interventions — onboarding nudges, feature prompts, assisted-channel referrals — are applied uniformly rather than targeted to the cohorts where they would produce the greatest adoption recovery. Segment-level adoption data is commonly a supervisory interest metric; the current aggregate view provides insufficient granularity for regulatory engagement.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads digital channel session data, product holdings, segment assignments, and customer tenure records, and computes adoption rates by cohort at weekly cadence.
-It identifies cohorts below the bank&#39;s adoption target, maps the feature activation sequences associated with sustained high engagement, and ranks intervention options by estimated adoption recovery per cohort.
-The Head of Digital reviews the weekly brief and directs the digital activation programme toward the highest-opportunity cohorts; segment adoption rate improvement and feature activation rate by cohort are the primary outcome metrics.</p>
+      <p>The AI agent reads digital channel session data, product holdings, segment assignments, and customer tenure records, and computes adoption rates by cohort at weekly cadence. It identifies cohorts below the Bank's adoption target, maps the feature activation sequences associated with sustained high engagement, and ranks intervention options by estimated adoption recovery per cohort. The Head of Digital reviews the weekly brief and directs the digital activation program toward the highest-opportunity cohorts; segment adoption rate improvement and feature activation rate by cohort are the primary outcome metrics.</p>
     </div>
     
 
@@ -1140,9 +1209,24 @@ The Head of Digital reviews the weekly brief and directs the digital activation 
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">A weekly cohort adoption brief — adoption rates by segment, product, and tenure cohort, the cohorts below target, and activation interventions ranked by estimated adoption recovery — is available to the Head of Digital to direct the digital activation program.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the cohort adoption brief for ≥95% of scheduled weeks for ≥48 consecutive weeks post go-live.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of recommended activation interventions confirmed as actionable by the Head of Digital; segment adoption rate and feature activation rate by cohort tracked as primary outcome metrics.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Cohort adoption analysis cycle reduced from quarterly ad hoc analytics to weekly automated delivery.</p>
+        </div>
         
       </div>
     </div>

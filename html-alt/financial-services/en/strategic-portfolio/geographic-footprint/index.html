@@ -103,11 +103,102 @@
   </div>
   
   
-    <p class="page-header__intent">Geographic footprint defines where the bank operates and in what form — domestic branch networks, cross-border corridors, digital licensing, and partnership-based presence. Footprint decisions determine revenue geography, regulatory jurisdiction, concentration risk, and the economics of physical distribution. <strong>The GenAI opportunity spans three dimensions: footprint-economics visibility (continuous unit-economics per market), market-entry and exit what-ifs (scenario simulation without a multi-week scoping exercise), and branch-rationalization scenarios (demand-signal-driven density modeling at the cluster level).</strong></p>
+    <p class="page-header__intent">Geographic footprint defines where the Bank operates and in what form — domestic branch networks, cross-border corridors, digital licensing, and partnership-based presence. Footprint decisions determine revenue geography, regulatory jurisdiction, concentration risk, and the economics of physical distribution. <strong>The GenAI opportunity spans three dimensions: footprint-economics visibility (continuous unit-economics per market), market-entry and exit what-ifs (scenario simulation without a multi-week scoping exercise), and branch-rationalization scenarios (demand-signal-driven density modeling at the cluster level).</strong></p>
   
 </header>
 
   
+  
+  
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-geographic-footprint:checked ~ .problems-tab-bar label[for="problems-tab-geographic-footprint"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-geographic-footprint:checked ~ .problems-panel[data-tab="geographic-footprint"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-geographic-footprint"
+    value="geographic-footprint"
+    checked
+    aria-label="Geographic footprint"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-geographic-footprint"
+      role="tab"
+      aria-controls="problems-panel-geographic-footprint"
+    >Geographic footprint</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-geographic-footprint"
+    data-tab="geographic-footprint"
+    role="tabpanel"
+    aria-labelledby="problems-tab-geographic-footprint"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Domestic market share, branch unit economics, cross-border corridor profitability, and digital channel performance are estimated monthly to semi-annually from central bank publications, operations reports, and fragmented finance data. Management relies on lagged or anecdotal signals when allocating investment across the footprint.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Branch rationalization scenarios, market-entry assessments, and expansion business cases depend on a small strategy team and external advisors and take weeks to months each. Few options are evaluated per planning cycle, which concentrates risk in a small number of under-researched decisions.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Regulatory change monitoring, tracking of nominated expansion markets, and, where the Bank operates in more than one jurisdiction, the cross-border obligation calendar are carried out manually by compliance and strategy staff. Material changes and filing deadlines are sometimes identified late.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Licensing windows and shifts in the attractiveness of candidate markets are tracked informally between planning cycles. With continuous monitoring of regulatory, competitive, and macroeconomic signals, the Bank can time an application or a market entry before the decision window closes.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
   
 
   
@@ -130,7 +221,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Domestic markets</h2>
     
-    <p class="l3-section__intent">Domestic market footprint defines the bank&#39;s coverage, market share, and competitive positioning across the regions and population centers within its home jurisdiction — including the economics of each domestic region by segment penetration, product revenue contribution, and cost-to-serve. Regional concentration and under-served market identification inform branch investment, digital coverage extension, and segment-targeting decisions within the domestic franchise.</p>
+    <p class="l3-section__intent">Domestic market footprint defines the Bank's coverage, market share, and competitive positioning across the regions and population centers within its home jurisdiction — including the economics of each domestic region by segment penetration, product revenue contribution, and cost-to-serve. Regional concentration and under-served market identification inform branch investment, digital coverage extension, and segment-targeting decisions within the domestic franchise.</p>
     
   </header>
 
@@ -164,7 +255,7 @@
       <h3 class="scenario-card__title">Domestic market share monitor</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Domestic market share across loans, deposits, and fee income is a foundational competitive signal that informs investment allocation across business lines. The agent synthesises central bank aggregate statistics, published peer filings, and the bank&#39;s own volume data into a continuous domestic market share read at the product and segment level.</p>
+      <p class="scenario-card__intent">Domestic market share across loans, deposits, and fee income is a foundational competitive signal that informs investment allocation across business lines. The AI agent synthesizes central bank aggregate statistics, published peer filings, and the Bank's own volume data into a continuous domestic market share read at the product and segment level.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -184,7 +275,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates central bank aggregate data releases, peer disclosure filings, and internal volume data to produce a monthly domestic market share estimate per product category. Trend alerts flag share losses or gains exceeding the defined threshold for the business line head and strategy team.</p>
+      <p>The AI agent integrates central bank aggregate data releases, peer disclosure filings, and internal volume data to produce a monthly domestic market share estimate per product category. Trend alerts flag share losses or gains exceeding the defined threshold for the business line head and strategy team.</p>
     </div>
     
 
@@ -192,13 +283,13 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Domestic market share estimates are available on a monthly basis at product-category level, compressing the competitive visibility lag from four months to one month.</p>
+      <p class="okr-objective">Domestic market share estimates are available to the business line head and strategy team on a monthly basis at product-category level, compressing the competitive visibility lag from four months to one month.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces monthly domestic market share estimates for ≥10 consecutive months in the first year.</p>
+          <p>The AI agent produces monthly domestic market share estimates for ≥10 consecutive months in the first year.</p>
         </div>
         
         
@@ -239,7 +330,7 @@
       <h3 class="scenario-card__title">Domestic regulatory change tracker</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Domestic market strategy is shaped by regulatory developments — licensing changes, capital surcharge adjustments, consumer protection requirements — issued by the national regulator. The agent monitors regulatory publications from the national central bank and financial supervisory authority, classifies changes by strategic impact, and delivers a structured briefing to the strategy and compliance teams.</p>
+      <p class="scenario-card__intent">Domestic market strategy is shaped by regulatory developments — licensing changes, capital surcharge adjustments, consumer protection requirements — issued by the regulator. The AI agent monitors official regulatory publications, classifies changes by strategic impact, and delivers a structured briefing to the strategy and compliance teams.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -252,14 +343,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Regulatory monitoring across NBKR, NBK/ARDFM, and CBR publications is performed manually by compliance staff who lack the capacity to assess strategic impact. Material regulatory changes are sometimes identified late, reducing the bank&#39;s ability to respond competitively.</p>
+      <p>Monitoring of the regulator's publications and other regulatory acts is performed manually by compliance staff who lack the capacity to assess strategic impact. Material regulatory changes are sometimes identified late, reducing the Bank's ability to respond competitively.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors official regulatory publication feeds, classifies new instruments by impact type (capital, product, distribution, reporting), and produces a structured weekly briefing with strategic significance rating. The compliance and strategy teams review the briefing rather than conducting their own monitoring.</p>
+      <p>The AI agent monitors official regulatory publication feeds, classifies new instruments by impact type (capital, product, distribution, reporting), and delivers a structured briefing with strategic significance rating within 48 hours of each material publication, consolidated into a weekly digest. The compliance and strategy teams review the briefing rather than conducting their own monitoring.</p>
     </div>
     
 
@@ -267,21 +358,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Material domestic regulatory changes are identified, classified, and delivered to the strategy team within 48 hours of publication.</p>
+      <p class="okr-objective">Material domestic regulatory changes are identified, classified, and delivered to the strategy and compliance teams within 48 hours of publication.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces weekly regulatory briefings for ≥48 of 52 weeks in the first year; covers ≥95% of material regulatory publications.</p>
+          <p>The AI agent covers ≥95% of material regulatory publications with a briefing within 48 hours; weekly digest issued for ≥48 of 52 weeks in the first year.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of briefings accepted by the strategy and compliance teams as complete and accurately classified without major additions.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -314,7 +403,7 @@
       <h3 class="scenario-card__title">Domestic competitive positioning scan</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Domestic competitive positioning requires a structured view of peer pricing, product features, distribution tactics, and digital capability investment across the main domestic competitors. The agent synthesises publicly available peer data into a quarterly competitive positioning map that equips the strategy team for ALCO and board strategic reviews.</p>
+      <p class="scenario-card__intent">Domestic competitive positioning requires a structured view of peer pricing, product features, distribution tactics, and digital capability investment across the main domestic competitors. The AI agent synthesizes publicly available peer data into a quarterly competitive positioning map that equips the strategy team for executive committee and board strategic reviews.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -334,7 +423,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent aggregates peer pricing disclosures, regulatory filings, product announcements, and digital channel benchmarks into a structured quarterly competitive map. Each peer is scored across product, price, distribution, and digital dimensions relative to the bank&#39;s own position.</p>
+      <p>The AI agent aggregates peer pricing disclosures, regulatory filings, product announcements, and digital channel benchmarks into a structured quarterly competitive map. Each peer is scored across product, price, distribution, and digital dimensions relative to the Bank's own position. The strategy team reviews each map as the basis for positioning discussion.</p>
     </div>
     
 
@@ -342,21 +431,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">A structured domestic competitive positioning map is available to the strategy team each quarter, enabling evidence-based positioning decisions at ALCO and board reviews.</p>
+      <p class="okr-objective">A structured domestic competitive positioning map is available to the strategy team each quarter, enabling evidence-based positioning decisions at executive committee and board reviews.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly competitive maps for ≥4 consecutive quarters within 15 months of deployment.</p>
+          <p>The AI agent produces quarterly competitive maps for ≥4 consecutive quarters within 15 months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥75% of competitive maps accepted by the strategy team as a sufficient basis for positioning discussion without commissioning supplementary research.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -390,7 +477,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Branch network density</h2>
     
-    <p class="l3-section__intent">Branch network density governs the physical distribution of the bank&#39;s retail and corporate service points — covering location selection, cluster rationalization, format mix (full-service, light, agency), and the unit economics of individual branch clusters. Density decisions reflect the trade-off between physical coverage as a competitive and regulatory obligation and the cost drag of underutilized distribution assets as digital migration reduces in-branch transaction volumes.</p>
+    <p class="l3-section__intent">Branch network density governs the physical distribution of the Bank's retail and corporate service points — covering location selection, cluster rationalization, format mix (full-service, light, agency), and the unit economics of individual branch clusters. Density decisions reflect the trade-off between physical coverage as a competitive and regulatory obligation and the cost drag of underutilized distribution assets as digital migration reduces in-branch transaction volumes.</p>
     
   </header>
 
@@ -444,7 +531,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent aggregates branch-level revenue, cost, and transaction-volume feeds weekly and renders a tiered performance view by region and cluster. Branch managers and regional heads work from a live dashboard; the CFO receives a drillable summary with automated narrative on material movements.</p>
+      <p>The AI agent aggregates branch-level revenue, cost, and transaction-volume feeds weekly and renders a tiered performance view by region and cluster. Branch managers and regional managers work from a live dashboard; the CFO receives a drillable summary with automated narrative on material movements.</p>
     </div>
     
 
@@ -458,7 +545,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent aggregates and publishes the branch unit-economics dashboard on a weekly cadence for ≥50 consecutive weeks per year; regional tiering and automated narrative on material movements included in ≥95% of weekly outputs.</p>
+          <p>The AI agent aggregates and publishes the branch unit-economics dashboard on a weekly cadence for ≥50 consecutive weeks per year; regional tiering and automated narrative on material movements included in ≥95% of weekly outputs.</p>
         </div>
         
         
@@ -496,10 +583,10 @@
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Branch density rationalisation scenario</h3>
+      <h3 class="scenario-card__title">Branch density rationalization scenario</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Branch network density decisions — where to open, consolidate, or close — require multi-factor analysis of footfall, deposit concentration, digital substitution rates, and competitor proximity. The agent models rationalisation scenarios at the cluster level, producing ranked options with cost, revenue impact, and customer attrition estimates for the distribution committee.</p>
+      <p class="scenario-card__intent">Branch network density decisions — where to open, consolidate, or close — require multi-factor analysis of footfall, deposit concentration, digital substitution rates, and competitor proximity. The AI agent models rationalization scenarios at the cluster level, producing ranked options with cost, revenue impact, and customer attrition estimates for the distribution committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -512,14 +599,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Branch rationalisation analysis is conducted on an ad hoc basis by a small team using heterogeneous data; scenarios lack a common methodology, and the time to produce a cluster-level analysis is typically four to six weeks. This limits how frequently the network plan can be refreshed.</p>
+      <p>Branch rationalization analysis is conducted on an ad hoc basis by a small team using heterogeneous data; scenarios lack a common methodology, and the time to produce a cluster-level analysis is typically four to six weeks. This limits how frequently the network plan can be refreshed.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent runs a standardised rationalisation scenario across the full branch network using footfall, digital substitution, competitor density, and branch P&amp;L data. Each scenario is scored on net revenue impact, cost savings, and customer displacement risk, allowing the distribution committee to compare options on a consistent basis.</p>
+      <p>The AI agent runs a standardized rationalization scenario across the full branch network using footfall, digital substitution, competitor density, and branch P&amp;L data. Each scenario is scored on net revenue impact, cost savings, and customer displacement risk, allowing the distribution committee to compare options on a consistent basis.</p>
     </div>
     
 
@@ -527,13 +614,13 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Branch rationalisation decisions are supported by a standardised scenario analysis produced within one week of a portfolio review trigger.</p>
+      <p class="okr-objective">The distribution committee's branch rationalization decisions are supported by a standardized scenario analysis produced within one week of a portfolio review trigger.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced rationalisation scenarios used in ≥80% of distribution committee reviews within 12 months of deployment.</p>
+          <p>AI-produced rationalization scenarios used in ≥80% of distribution committee reviews within 12 months of deployment.</p>
         </div>
         
         
@@ -545,7 +632,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Cluster-level rationalisation analysis time reduced from 4–6 weeks to ≤5 business days.</p>
+          <p>Cluster-level rationalization analysis time reduced from 4–6 weeks to ≤5 business days.</p>
         </div>
         
       </div>
@@ -574,7 +661,7 @@
       <h3 class="scenario-card__title">Branch Rationalization Scenario Modeling</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Demand-signal-driven density modeling at the cluster level identifies consolidation candidates and digital-substitution thresholds with regulatory-constraint overlays for ARDFM and AFSA-governed markets.</p>
+      <p class="scenario-card__intent">Demand-signal-driven density modeling at the cluster level gives the network strategy team consolidation candidates and digital-substitution thresholds, with regulatory-constraint overlays for minimum-access rules.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--L"
@@ -594,7 +681,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent runs demand-signal analysis across all branches simultaneously — transaction volume trends, digital-substitution rates, catchment-area overlap, and regulatory-constraint flags. Cluster-level rationalization candidates surface with impact estimates and regulatory annotations for ARDFM and AFSA compliance; parameter changes are rerun within hours.</p>
+      <p>The AI agent runs demand-signal analysis across all branches simultaneously — transaction volume trends, digital-substitution rates, catchment-area overlap, and regulatory-constraint flags. Cluster-level rationalization candidates surface to the network strategy team with impact estimates and regulatory annotations on minimum-access compliance; parameter changes are rerun within hours.</p>
     </div>
     
 
@@ -602,21 +689,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Demand-signal-driven branch rationalization scenarios are available on demand at the cluster level — overlaying transaction volume trends, digital-substitution rates, catchment-area overlap, and ARDFM/AFSA regulatory constraints — giving the network strategy team a quantified consolidation candidate list with parameter rerun capability within hours.</p>
+      <p class="okr-objective">Demand-signal-driven branch rationalization scenarios are available on demand at the cluster level — overlaying transaction volume trends, digital-substitution rates, catchment-area overlap, and regulatory minimum-access constraints — giving the network strategy team a quantified consolidation candidate list with parameter rerun capability within hours.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces rationalization scenario outputs covering ≥95% of the domestic branch network for ≥2 full planning cycles per year; parameter rerun requests are fulfilled within 4 hours of submission.</p>
+          <p>The AI agent produces rationalization scenario outputs covering ≥95% of the domestic branch network for ≥2 full planning cycles per year; parameter rerun requests are fulfilled within 4 hours of submission.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of cluster-level rationalization candidates rated as analytically sound by the network strategy team without material remodeling; regulatory constraint annotations confirmed accurate in ≥95% of reviewed outputs.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -650,7 +735,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Cross-border / international</h2>
     
-    <p class="l3-section__intent">Cross-border and international footprint covers the bank&#39;s operations, correspondent relationships, and representative or subsidiary presence outside the domestic market — including jurisdictional licensing status, capital adequacy under host-country regulation, cross-border fund transfer corridors, and FX exposure arising from foreign-currency-denominated balance sheets. Expansion, exit, and partnership decisions in international markets are assessed against strategic revenue contribution, regulatory cost of presence, and geopolitical concentration risk.</p>
+    <p class="l3-section__intent">Cross-border and international footprint covers the Bank's correspondent relationships and cross-border fund transfer corridors and, where the Bank operates in more than one jurisdiction, its operations and representative or subsidiary presence outside the domestic market — including jurisdictional licensing status, capital adequacy under host-country regulation, and FX exposure arising from foreign-currency-denominated balance sheets. Expansion, exit, and partnership decisions in international markets are assessed against strategic revenue contribution, regulatory cost of presence, and geopolitical concentration risk.</p>
     
   </header>
 
@@ -684,7 +769,7 @@
       <h3 class="scenario-card__title">Cross-border corridor economics monitor</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Cross-border banking corridors — remittance flows, trade finance volumes, correspondent banking relationships — generate economics that require continuous monitoring to assess whether the bank&#39;s international presence is delivering on its strategic rationale. The agent synthesises corridor-level revenue, cost, and compliance burden data into a continuous profitability read per international market.</p>
+      <p class="scenario-card__intent">Cross-border banking corridors — remittance flows, trade finance volumes, correspondent banking relationships — generate economics that require continuous monitoring to assess whether each corridor the Bank serves is delivering on its strategic rationale. The AI agent synthesizes corridor-level revenue, cost, and compliance burden data into a continuous profitability read per cross-border corridor.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -697,14 +782,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>International corridor economics are assembled once or twice a year by the strategy team from fragmented data sources; in the interim, management lacks current visibility into which corridors are profitable and which are consuming capital below the hurdle rate.</p>
+      <p>Cross-border corridor economics are assembled once or twice a year by the strategy team from fragmented data sources; in the interim, management lacks current visibility into which corridors are profitable and which are consuming capital below the hurdle rate.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates fee income, net interest, compliance cost, and capital consumption data per cross-border corridor on a monthly basis, producing a ranked profitability view with trend signals. Corridors approaching below-hurdle territory are flagged for strategic review.</p>
+      <p>The AI agent integrates fee income, net interest, compliance cost, and capital consumption data per cross-border corridor on a monthly basis, producing a ranked profitability view with trend signals. Corridors approaching below-hurdle territory are flagged for the strategy team's review.</p>
     </div>
     
 
@@ -712,25 +797,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">International corridor profitability is visible in continuous form, enabling strategic decisions on corridor investment or exit without waiting for an annual strategy review.</p>
+      <p class="okr-objective">Cross-border corridor profitability is visible to the strategy team on a monthly basis, enabling strategic decisions on corridor investment or exit without waiting for an annual strategy review.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces monthly corridor economics summaries covering ≥90% of active international corridors within six months of deployment.</p>
+          <p>The AI agent produces monthly corridor economics summaries covering ≥90% of active cross-border corridors within six months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of monthly summaries accepted by the international strategy team as accurate and actionable without material revision.</p>
+          <p>≥80% of monthly summaries accepted by the strategy team as accurate and actionable without material revision.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Corridor economics visibility cycle compressed from semi-annual assembly to monthly continuous read.</p>
+          <p>Corridor economics visibility cycle compressed from semi-annual assembly to a monthly read.</p>
         </div>
         
       </div>
@@ -759,7 +842,7 @@
       <h3 class="scenario-card__title">Cross-border regulatory obligation tracker</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Operating across multiple jurisdictions requires tracking a dynamic set of regulatory obligations — capital adequacy filings, AML reporting, foreign ownership limits, and correspondent banking requirements — across NBKR, NBK/ARDFM, CBR, and international host regulators. The agent maintains a structured obligation calendar and flags upcoming deadlines and regulatory changes across all active jurisdictions.</p>
+      <p class="scenario-card__intent">Where the Bank operates in more than one jurisdiction, it must track a dynamic set of regulatory obligations — capital adequacy filings, AML reporting, foreign ownership limits, and correspondent banking requirements — across its home and host regulators. The AI agent maintains a structured obligation calendar and flags upcoming deadlines and regulatory changes across all active jurisdictions.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -779,7 +862,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent maintains a structured regulatory obligation register across all active international markets, monitoring for changes to filing requirements and flagging deadlines at least 30 days in advance. Monthly compliance calendar distributed to country heads and the group chief compliance officer.</p>
+      <p>The AI agent maintains a structured regulatory obligation register across all active jurisdictions, monitoring for changes to filing requirements and flagging deadlines at least 30 days in advance. A monthly compliance calendar is distributed to country heads and the group chief compliance officer, and each country compliance team acknowledges its deadline alerts.</p>
     </div>
     
 
@@ -793,7 +876,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent maintains the obligation register for ≥95% of active jurisdictions within three months of deployment.</p>
+          <p>The AI agent maintains the obligation register for ≥95% of active jurisdictions within three months of deployment.</p>
         </div>
         
         
@@ -834,7 +917,7 @@
       <h3 class="scenario-card__title">Cross-border market entry scenario</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Evaluating entry into a new cross-border market requires regulatory landscape analysis, competitor positioning, capital requirement estimation, and business case modelling — tasks that traditionally require weeks of external advisory engagement. The agent accelerates this by synthesising publicly available market intelligence and regulatory frameworks into a structured entry assessment for the strategy team.</p>
+      <p class="scenario-card__intent">Where the Bank operates in more than one jurisdiction or plans to, evaluating entry into a new cross-border market requires regulatory landscape analysis, competitor positioning, capital requirement estimation, and business case modeling — tasks that traditionally require weeks of external advisory engagement. The AI agent accelerates this by synthesizing publicly available market intelligence and regulatory frameworks into a structured entry assessment for the strategy team.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--L"
@@ -854,7 +937,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent ingests central bank regulatory frameworks, banking sector market data, and competitor intelligence for candidate markets, producing a structured entry assessment covering regulatory capital requirements, competitive intensity, corridor opportunity, and risk flags. The strategy team uses the output to rank and prioritise entry options.</p>
+      <p>The AI agent ingests central bank regulatory frameworks, banking sector market data, and competitor intelligence for candidate markets, producing a structured entry assessment covering regulatory capital requirements, competitive intensity, corridor opportunity, and risk flags. The strategy team uses the output to rank and prioritize entry options.</p>
     </div>
     
 
@@ -868,13 +951,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced entry assessments used for ≥80% of new cross-border market evaluations within 12 months of deployment.</p>
+          <p>AI-produced entry assessments used for ≥80% of new cross-border market evaluations within 12 months of deployment.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥70% of assessments accepted by the strategy team as a sufficient basis for entry prioritisation without commissioning full external advisory.</p>
+          <p>≥70% of assessments accepted by the strategy team as a sufficient basis for entry prioritization without commissioning full external advisory.</p>
         </div>
         
         
@@ -910,7 +993,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Digital presence</h2>
     
-    <p class="l3-section__intent">Digital presence defines the bank&#39;s market reach delivered through digital channels — mobile banking, internet banking, API-connected partnerships, and digital-only subsidiaries — as distinct from the physical network. Digital presence economics are tracked on customer acquisition cost, activation rates, and revenue per digital-primary customer; the footprint dimension covers licensing jurisdiction, data residency obligations under local regulation, and the extent to which digital channels substitute for or extend beyond the physical network.</p>
+    <p class="l3-section__intent">Digital presence defines the Bank's market reach delivered through digital channels — mobile banking, internet banking, API-connected partnerships, and digital-only subsidiaries — as distinct from the physical network. Digital presence economics are tracked on customer acquisition cost, activation rates, and revenue per digital-primary customer; the footprint dimension covers licensing jurisdiction, data residency obligations under local regulation, and the extent to which digital channels substitute for or extend beyond the physical network.</p>
     
   </header>
 
@@ -944,7 +1027,7 @@
       <h3 class="scenario-card__title">Digital-Bank License Window Monitoring</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">NBKR and AFSA digital-licensing developments, regulatory sandbox openings, and competitor digital-license activity are monitored continuously. The optimal application timing and readiness gap for a digital-bank license in KG or KZ surface before the window closes.</p>
+      <p class="scenario-card__intent">Where the regulator issues digital-bank licenses, its digital-licensing developments, regulatory sandbox openings, and competitor digital-license activity are monitored continuously. The optimal application timing and readiness gap for a digital-bank license surface before the window closes.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -957,14 +1040,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Digital-bank licensing in KG and KZ is a window-driven regulatory process. The strategy team tracks licensing developments informally, and readiness gaps are assessed only when a formal application deadline is approaching.</p>
+      <p>Digital-bank licensing is a window-driven regulatory process. The strategy team tracks licensing developments informally, and readiness gaps are assessed only when a formal application deadline is approaching.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors NBKR and AFSA regulatory communications, competitor digital-license filings, and banking-regulation publications. When a window opens or eligibility criteria change, an automated brief surfaces to the Head of Strategy with a readiness-gap checklist and timeline estimate.</p>
+      <p>The AI agent monitors the regulator's communications, competitor digital-license filings, and banking-regulation publications. When a window opens or eligibility criteria change, an automated brief surfaces to the Head of Strategy for review, with a readiness-gap checklist and timeline estimate.</p>
     </div>
     
 
@@ -972,21 +1055,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">NBKR and AFSA digital-licensing developments, regulatory sandbox openings, and competitor digital-license activity are monitored continuously, with automated briefs — covering readiness gap and estimated timeline — surfaced to the Head of Strategy when a window opens or eligibility criteria change, before the application deadline narrows.</p>
+      <p class="okr-objective">The regulator's digital-licensing developments, regulatory sandbox openings, and competitor digital-license activity are monitored continuously, with automated briefs — covering readiness gap and estimated timeline — surfaced to the Head of Strategy when a window opens or eligibility criteria change, before the application deadline narrows.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent monitors NBKR and AFSA regulatory communications continuously; automated briefings produced within 2 business days of a qualifying regulatory publication or competitor filing for ≥95% of monitored events.</p>
+          <p>The AI agent monitors the regulator's communications continuously; automated briefs produced within 2 business days of a qualifying regulatory publication or competitor filing for ≥95% of monitored events.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥85% of agent-produced readiness-gap briefs confirmed as accurate and actionable by the Head of Strategy without material correction; regulatory eligibility-criteria mapping confirmed accurate in ≥90% of reviewed outputs.</p>
+          <p>≥85% of AI-produced readiness-gap briefs confirmed as accurate and actionable by the Head of Strategy without material correction; regulatory eligibility-criteria mapping confirmed accurate in ≥90% of reviewed outputs.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -1019,7 +1100,7 @@
       <h3 class="scenario-card__title">Digital presence performance insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The bank&#39;s digital footprint — mobile app, internet banking, API partnerships, digital licensing — generates economics that must be tracked against the capital invested in each channel. The agent synthesises digital channel unit economics, customer acquisition cost, engagement rates, and product penetration per digital channel into a continuous performance read for the digital strategy committee.</p>
+      <p class="scenario-card__intent">The Bank's digital footprint — mobile app, internet banking, API partnerships, digital licensing — generates economics that must be tracked against the capital invested in each channel. The AI agent synthesizes digital channel unit economics, customer acquisition cost, engagement rates, and product penetration per digital channel into a continuous performance read for the digital strategy committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -1039,7 +1120,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent aggregates digital channel KPIs — DAU/MAU, digital product penetration, CAC, revenue per digital user — on a weekly basis, producing a single digital performance dashboard. Underperforming channels trigger a structured flag with diagnostic context for the digital strategy team.</p>
+      <p>The AI agent aggregates digital channel KPIs — DAU/MAU, digital product penetration, CAC, revenue per digital user — on a weekly basis, producing a single digital performance dashboard. Underperforming channels trigger a structured flag with diagnostic context for the digital strategy team.</p>
     </div>
     
 
@@ -1053,19 +1134,17 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces weekly digital performance summaries for ≥80% of weeks in the first 12 months of operation.</p>
+          <p>The AI agent produces weekly digital performance summaries for ≥80% of weeks in the first 12 months of operation.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of weekly summaries accepted by the digital strategy team as accurate without material data reconciliation.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Digital channel performance visibility cycle compressed from quarterly assembly to weekly continuous read.</p>
+          <p>Digital channel performance visibility cycle compressed from quarterly assembly to a weekly read.</p>
         </div>
         
       </div>
@@ -1114,7 +1193,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent runs digital-channel-shift scenarios across the branch network; for each penetration rate assumption, it calculates branch-utilization residual, cost-per-transaction crossover, and the clusters that pass the rationalization threshold. Output is a ranked list of clusters by estimated rationalization readiness with a sensitivity table across adoption-rate scenarios.</p>
+      <p>The AI agent runs digital-channel-shift scenarios across the branch network; for each penetration rate assumption, it calculates branch-utilization residual, cost-per-transaction crossover, and the clusters that pass the rationalization threshold. The output, reviewed by the network strategy team, is a ranked list of clusters by estimated rationalization readiness with a sensitivity table across adoption-rate scenarios.</p>
     </div>
     
 
@@ -1122,25 +1201,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Digital-adoption rate scenarios are modeled across the branch network by agent, identifying at which penetration level individual branches or clusters reach the digital-substitution rationalization threshold — with cost-per-transaction crossover analysis and a sensitivity table across adoption-rate assumptions — giving the network strategy team a quantified trigger set for consolidation planning.</p>
+      <p class="okr-objective">Digital-adoption rate scenarios are modeled across the branch network by the AI agent, identifying at which penetration level individual branches or clusters reach the digital-substitution rationalization threshold — with cost-per-transaction crossover analysis and a sensitivity table across adoption-rate assumptions — giving the network strategy team a quantified trigger set for consolidation planning.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent runs digital-channel-shift scenarios covering ≥95% of the domestic branch network; parameter rerun requests fulfilled within 4 hours for ≥90% of submissions.</p>
+          <p>The AI agent runs digital-channel-shift scenarios covering ≥95% of the domestic branch network; parameter rerun requests fulfilled within 4 hours for ≥90% of submissions.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of agent-produced rationalization readiness rankings and sensitivity tables accepted by the network strategy team as analytically sound without material remodeling; cost-per-transaction crossover calculations confirmed accurate in ≥90% of reviewed outputs.</p>
+          <p>≥80% of AI-produced rationalization readiness rankings and sensitivity tables accepted by the network strategy team as analytically sound without material remodeling; cost-per-transaction crossover calculations confirmed accurate in ≥90% of reviewed outputs.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Digital-substitution threshold analysis cycle reduced from 4–6 weeks of manual modeling to ≤3 business days per scenario set.</p>
+          <p>Digital-substitution threshold analysis moves from qualitative judgment in planning discussions to a quantified scenario set delivered within ≤3 business days.</p>
         </div>
         
       </div>
@@ -1170,7 +1247,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Strategic expansion targets</h2>
     
-    <p class="l3-section__intent">Strategic expansion targets are the geographic markets — new domestic regions, international corridors, or digital licensing jurisdictions — identified for entry within the current strategic planning horizon. Each target is assessed on market size, competitive intensity, regulatory entry requirements, capital cost of presence, and strategic fit against the bank&#39;s declared growth priorities. Expansion sequencing and go/no-go decisions are governed by the strategy committee with input from finance, risk, and legal.</p>
+    <p class="l3-section__intent">Strategic expansion targets are the geographic markets — new domestic regions, international corridors, or digital licensing jurisdictions — identified for entry within the current strategic planning horizon. Each target is assessed on market size, competitive intensity, regulatory entry requirements, capital cost of presence, and strategic fit against the Bank's declared growth priorities. Expansion sequencing and go/no-go decisions are governed by the strategy committee with input from finance, risk, and legal.</p>
     
   </header>
 
@@ -1224,7 +1301,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors a named list of expansion targets for regulatory publications, licensing announcements, macroeconomic indicators, and competitor footprint changes. Material signals trigger an automated update brief ranked by impact on feasibility and timing; the Head of Strategy receives a weekly digest plus same-day alerts on high-materiality signals.</p>
+      <p>The AI agent monitors a named list of expansion targets for regulatory publications, licensing announcements, macroeconomic indicators, and competitor footprint changes. Material signals trigger an automated update brief ranked by impact on feasibility and timing; the Head of Strategy receives a weekly digest plus same-day alerts on high-materiality signals.</p>
     </div>
     
 
@@ -1232,19 +1309,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Regulatory, competitive, and macroeconomic signals across nominated expansion markets are monitored on a continuous basis by agent, with material changes to target feasibility or timing surfaced as automated update briefs — giving the Head of Strategy an opportunity signal before the decision window closes.</p>
+      <p class="okr-objective">Regulatory, competitive, and macroeconomic signals across nominated expansion markets are monitored on a continuous basis by the AI agent, with material changes to target feasibility or timing surfaced as automated update briefs — giving the Head of Strategy an opportunity signal before the decision window closes.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent monitors all nominated expansion targets continuously; automated update briefs generated within 2 business days of a qualifying signal for ≥95% of monitored events; weekly digest plus same-day high-materiality alerts maintained for ≥48 weeks per year.</p>
+          <p>The AI agent monitors all nominated expansion targets continuously; automated update briefs generated within 2 business days of a qualifying signal for ≥95% of monitored events; weekly digest plus same-day high-materiality alerts maintained for ≥48 weeks per year.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of agent-surfaced feasibility-change briefs confirmed as decision-relevant by the Head of Strategy; signal classification accuracy (high vs. standard materiality) confirmed correct in ≥90% of reviewed alerts.</p>
+          <p>≥80% of AI-surfaced feasibility-change briefs confirmed as decision-relevant by the Head of Strategy; signal classification accuracy (high vs. standard materiality) confirmed correct in ≥90% of reviewed alerts.</p>
         </div>
         
         
@@ -1279,7 +1356,7 @@
       <h3 class="scenario-card__title">Expansion market attractiveness insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Ranking candidate expansion markets requires a consistent scoring framework across macroeconomic outlook, banking sector penetration, regulatory environment, competitive intensity, and corridor opportunity. The agent maintains a continuously updated attractiveness score per candidate market, surfacing re-rankings as macro or regulatory conditions shift.</p>
+      <p class="scenario-card__intent">Ranking candidate expansion markets requires a consistent scoring framework across macroeconomic outlook, banking sector penetration, regulatory environment, competitive intensity, and corridor opportunity. The AI agent maintains an attractiveness score per candidate market, updated quarterly, surfacing re-rankings as macro or regulatory conditions shift.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1299,7 +1376,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates macro databases, supervisory publications, and competitor announcements to update attractiveness scores across candidate expansion markets on a quarterly basis. Score movements above the defined threshold trigger a briefing to the strategy team.</p>
+      <p>The AI agent integrates macro databases, supervisory publications, and competitor announcements to update attractiveness scores across candidate expansion markets on a quarterly basis. Score movements above the defined threshold trigger a briefing to the strategy team.</p>
     </div>
     
 
@@ -1313,7 +1390,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly attractiveness score updates for ≥90% of candidate markets in the expansion pipeline.</p>
+          <p>The AI agent produces quarterly attractiveness score updates for ≥90% of candidate markets in the expansion pipeline.</p>
         </div>
         
         
@@ -1354,7 +1431,7 @@
       <h3 class="scenario-card__title">Expansion target business case assembly</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Developing a board-grade business case for a new geographic expansion target requires integrating market sizing, capital requirement estimation, P&amp;L projection, and risk assessment into a coherent investment proposal. The agent accelerates this by assembling a structured first-draft business case from structured inputs and market data, compressing the preparation cycle from months to weeks.</p>
+      <p class="scenario-card__intent">Developing a board-grade business case for a new geographic expansion target requires integrating market sizing, capital requirement estimation, P&amp;L projection, and risk assessment into a coherent investment proposal. The AI agent accelerates this by assembling a structured first-draft business case from structured inputs and market data, compressing the preparation cycle from months to weeks.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--L"
@@ -1374,7 +1451,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent generates a structured expansion business case from standardised inputs — market sizing data, regulatory capital requirements, P&amp;L assumptions — producing a first-draft document in board-standard format. Strategy team focuses review on assumptions and risk judgments rather than constructing the document from scratch.</p>
+      <p>The AI agent generates a structured expansion business case from standardized inputs — market sizing data, regulatory capital requirements, P&amp;L assumptions — producing a first-draft document in board-standard format. The strategy team focuses its review on assumptions and risk judgments rather than constructing the document from scratch.</p>
     </div>
     
 
@@ -1382,25 +1459,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Board-grade expansion business case first drafts are available within three weeks of target identification, enabling the bank to evaluate twice as many candidates per planning cycle.</p>
+      <p class="okr-objective">Board-grade expansion business case first drafts are available within three weeks of target identification, enabling the Bank to evaluate twice as many candidates per planning cycle.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced first drafts used as the basis for ≥80% of expansion business cases submitted to the board within 12 months of deployment.</p>
+          <p>AI-produced first drafts used as the basis for ≥80% of expansion business cases submitted to the board within 12 months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥70% of first drafts accepted by the strategy team with revisions limited to assumption updates and risk narrative refinement.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Business case first-draft preparation time reduced from 8–12 weeks to ≤3 weeks.</p>
+          <p>Business case first-draft preparation time reduced from 2–4 months to ≤3 weeks.</p>
         </div>
         
       </div>

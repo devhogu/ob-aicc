@@ -103,11 +103,102 @@
   </div>
   
   
-    <p class="page-header__intent">Strategic priorities translate the bank's board-level ambition into a defined direction across growth, customer experience, operational excellence, innovation, and sustainability — the five commitment areas that collectively define the institution's transformation horizon. Each priority carries targets, owners, and a cadence for progress reporting from the executive committee to the board. <strong>The GenAI opportunity is continuous priority-progress visibility and scenario-driven priority re-evaluation</strong> — compressing the cycle from quarterly status packs to an always-current picture that allows re-sequencing before commitment windows close.</p>
+    <p class="page-header__intent">Strategic priorities translate the Bank's board-level ambition into a defined direction across growth, customer experience, operational excellence, innovation, and sustainability — the five commitment areas that collectively define the institution's transformation horizon. Each priority carries targets, owners, and a cadence for progress reporting from the executive committee to the board. <strong>The GenAI opportunity is continuous priority-progress visibility and scenario-driven priority re-evaluation</strong> — compressing the cycle from quarterly status packs to an always-current picture that allows re-sequencing before commitment windows close.</p>
   
 </header>
 
   
+  
+  
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-strategic-priorities:checked ~ .problems-tab-bar label[for="problems-tab-strategic-priorities"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-strategic-priorities:checked ~ .problems-panel[data-tab="strategic-priorities"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-strategic-priorities"
+    value="strategic-priorities"
+    checked
+    aria-label="Strategic priorities"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-strategic-priorities"
+      role="tab"
+      aria-controls="problems-panel-strategic-priorities"
+    >Strategic priorities</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-strategic-priorities"
+    data-tab="strategic-priorities"
+    role="tabpanel"
+    aria-labelledby="problems-tab-strategic-priorities"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Progress on growth, customer experience, operational excellence, innovation, and ESG priorities is reported in quarterly executive committee packs assembled from finance, CRM, program, and sustainability data. Shortfalls become visible at quarter-end, when little time is left to correct them within the planning period.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Target-setting and steering depend on analyses that are rarely ready when needed: peer CX benchmarks are informal, and the cross-initiative view of delivery risk and dependency conflicts is assembled manually before each steering committee. The strategy team and transformation office work without a current baseline.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Initiative effectiveness audits, benefits-realization variance reports, stage-gate return packs, and the quarterly ESG progress report are assembled by hand from separate trackers and templates. Results rest on self-reported progress, and the economic analysis is not comparable across initiatives.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Growth whitespace and innovation-relevant regulatory developments are scanned ad hoc by senior strategists between planning cycles. With systematic scans that size each candidate and assess its strategic fit, the executive committee can act on opportunities before commitment windows close.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
   
 
   
@@ -130,7 +221,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Growth priorities</h2>
     
-    <p class="l3-section__intent">Growth priorities specify the strategic bets on revenue expansion — by segment (Retail, SME, Corporate, Wealth), product category (lending growth, fee income diversification, AUM growth), or geography — that the board has approved as the primary drivers of the strategic plan&#39;s revenue trajectory. Each growth priority carries financial targets (loan book growth rate, market share gain, cross-sell ratio improvement), funding requirements, and a risk appetite alignment confirming that growth is within the RAS limits.</p>
+    <p class="l3-section__intent">Growth priorities specify the strategic bets on revenue expansion — by segment (Retail, SME, Corporate, Wealth), product category (lending growth, fee income diversification, AUM growth), or geography — that the board has approved as the primary drivers of the strategic plan's revenue trajectory. Each growth priority carries financial targets (loan book growth rate, market share gain, cross-sell ratio improvement), funding requirements, and a risk appetite alignment confirming that growth is within the limits of the risk appetite statement (RAS).</p>
     
   </header>
 
@@ -184,7 +275,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads finance and CRM feeds continuously, monitors KPI movement against growth-priority targets, and surfaces trajectory alerts when run-rates deviate. A live executive view with automated divergence flagging replaces the quarterly assembly cycle.</p>
+      <p>The AI agent reads finance and CRM feeds continuously, monitors KPI movement against growth-priority targets, and raises trajectory alerts when run-rates deviate. The strategy team reviews the weekly view and the alerts; the live executive view replaces the quarterly assembly cycle.</p>
     </div>
     
 
@@ -198,19 +289,17 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent maintains and refreshes the growth-priority dashboard on a weekly cadence for ≥50 consecutive weeks per year; divergence alerts generated within 48 hours of a tracked metric crossing a trajectory threshold.</p>
+          <p>The AI agent maintains and refreshes the growth-priority dashboard on a weekly cadence for ≥50 consecutive weeks per year; divergence alerts generated within 48 hours of a tracked metric crossing a trajectory threshold.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥85% of weekly dashboard outputs accepted by the strategy team as accurate without manual re-validation; divergence alerts confirmed as correctly classified (material vs. noise) in ≥85% of reviewed events.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Growth-priority KPI reporting cycle reduced from quarterly assembly to weekly continuous view, with trajectory divergence signals available ≥8 weeks earlier per quarter.</p>
+          <p>Growth-priority KPI reporting cycle reduced from quarterly assembly to a weekly view, with trajectory divergence signals available ≥8 weeks earlier per quarter.</p>
         </div>
         
       </div>
@@ -239,7 +328,7 @@
       <h3 class="scenario-card__title">Growth priority initiative effectiveness audit</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Growth priority initiatives — new segment campaigns, distribution expansions, product launches — consume capital and operational resources against projected growth outcomes. The agent automates the quarterly effectiveness audit, correlating initiative milestones with observed volume, revenue, and market share movements to produce an evidence-based portfolio review for the executive committee.</p>
+      <p class="scenario-card__intent">Growth priority initiatives — new segment campaigns, distribution expansions, product launches — consume capital and operational resources against projected growth outcomes. The AI agent automates the quarterly effectiveness audit, correlating initiative milestones with observed volume, revenue, and market share movements to produce an evidence-based portfolio review for the executive committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -259,7 +348,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent runs a structured effectiveness audit each quarter, correlating growth initiative deployment events with volume and revenue outcomes at the segment and product level. Output is a ranked initiative ROI assessment with a recommendation for continue, accelerate, or redirect for each initiative.</p>
+      <p>The AI agent runs a structured effectiveness audit each quarter, correlating growth initiative deployment events with volume and revenue outcomes at the segment and product level. Output is a ranked initiative ROI assessment with a recommendation to continue, accelerate, or redirect each initiative; the executive committee decides on reallocation.</p>
     </div>
     
 
@@ -273,7 +362,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly growth initiative audits for ≥4 consecutive quarters within 15 months of deployment.</p>
+          <p>The AI agent produces quarterly growth initiative audits for ≥4 consecutive quarters within 15 months of deployment.</p>
         </div>
         
         
@@ -311,10 +400,10 @@
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Growth Scenario and Whitespace Scan</h3>
+      <h3 class="scenario-card__title">Growth whitespace scan</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">On-demand scan of segment, product, and geography combinations identifies growth whitespace opportunities consistent with the bank&#39;s declared growth ambition and capital headroom.</p>
+      <p class="scenario-card__intent">On-demand scan of segment, product, and geography combinations identifies growth whitespace opportunities consistent with the Bank's declared growth ambition and capital headroom.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--L"
@@ -334,7 +423,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent scans segment-penetration data, peer positioning, and the regulatory environment to identify whitespace candidates. Each candidate surfaces with a size estimate and strategic-fit assessment for Executive Committee review.</p>
+      <p>The AI agent scans segment-penetration data, peer positioning, and the regulatory environment to identify whitespace candidates. Each candidate is presented with a size estimate and strategic-fit assessment for executive committee review.</p>
     </div>
     
 
@@ -342,19 +431,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">On-demand whitespace scans across segment, product, and geography combinations identify growth opportunities consistent with the bank&#39;s declared growth ambition and capital headroom — produced by agent with size estimates and strategic-fit assessments — giving the Executive Committee a structured candidate set between planning cycles.</p>
+      <p class="okr-objective">On-demand whitespace scans across segment, product, and geography combinations identify growth opportunities consistent with the Bank's declared growth ambition and capital headroom — produced by the AI agent with size estimates and strategic-fit assessments — giving the executive committee a structured candidate set between planning cycles.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces whitespace scan outputs for ≥90% of on-demand requests within 5 business days; size estimates and strategic-fit assessments included in ≥95% of surfaced candidates.</p>
+          <p>The AI agent produces whitespace scan outputs for ≥90% of on-demand requests within 5 business days; size estimates and strategic-fit assessments included in ≥95% of surfaced candidates.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥75% of agent-surfaced whitespace candidates confirmed as strategically relevant by the EC; size estimate accuracy within ±20% of subsequent analyst validation in ≥80% of reviewed candidates.</p>
+          <p>≥75% of AI-surfaced whitespace candidates confirmed as strategically relevant by the executive committee; size estimate accuracy within ±20% of subsequent analyst validation in ≥80% of reviewed candidates.</p>
         </div>
         
         
@@ -424,7 +513,7 @@
       <h3 class="scenario-card__title">Operational excellence priority performance insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Operational excellence priorities — cost efficiency ratio targets, process automation coverage, error rate reduction goals — require continuous tracking to give the COO and executive committee a live read on whether the bank&#39;s operational transformation is on plan. The agent synthesises operational KPI data across business lines and functions into a monthly priority-progress view.</p>
+      <p class="scenario-card__intent">Operational excellence priorities — cost efficiency ratio targets, process automation coverage, error rate reduction goals — require continuous tracking to give the COO and executive committee a live read on whether the Bank's operational transformation is on plan. The AI agent synthesizes operational KPI data across business lines and functions into a monthly priority-progress view.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -437,14 +526,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Operational excellence priority progress is reported quarterly in the executive committee pack; between packs, the bank lacks a current view of cost efficiency trajectory and automation coverage. By the time shortfalls are visible, the quarter is largely spent.</p>
+      <p>Operational excellence priority progress is reported quarterly in the executive committee pack; between packs, the Bank lacks a current view of cost efficiency trajectory and automation coverage. By the time shortfalls are visible, the quarter is largely spent.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates cost efficiency ratio, automation coverage, and process error rate data on a monthly basis, producing a priority-progress dashboard with RAG status per commitment and trend signals. Priorities falling behind plan trigger a diagnostic note for the COO.</p>
+      <p>The AI agent integrates cost efficiency ratio, automation coverage, and process error rate data on a monthly basis, producing a priority-progress dashboard with RAG status per commitment and trend signals. The COO team reviews the dashboard; priorities falling behind plan trigger a diagnostic note for the COO.</p>
     </div>
     
 
@@ -452,25 +541,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Operational excellence priority progress is visible to the executive committee in continuous form, enabling mid-quarter corrective action when KPIs drift from plan.</p>
+      <p class="okr-objective">Operational excellence priority progress is visible to the executive committee on a monthly basis, enabling mid-quarter corrective action when KPIs drift from plan.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces monthly operational excellence priority dashboards for ≥10 consecutive months in the first year.</p>
+          <p>The AI agent produces monthly operational excellence priority dashboards for ≥10 consecutive months in the first year.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of monthly dashboards accepted by the COO team as accurate and sufficient for performance review.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Operational excellence priority visibility cycle compressed from quarterly board pack to monthly continuous read.</p>
+          <p>Operational excellence priority visibility cycle compressed from quarterly executive committee pack to a monthly read.</p>
         </div>
         
       </div>
@@ -499,7 +586,7 @@
       <h3 class="scenario-card__title">Operational excellence initiative benefits tracking</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Operational excellence programmes — process automation, headcount optimisation, vendor consolidation — commit to specific cost savings and efficiency gains that must be tracked against realisation. The agent automates the quarterly benefits-realisation tracking across all active programmes, producing a variance report that compares projected savings to actuals and flags shortfalls for management action.</p>
+      <p class="scenario-card__intent">Operational excellence programs — process automation, headcount optimization, vendor consolidation — commit to specific cost savings and efficiency gains whose realization must be tracked. The AI agent automates the quarterly benefits-realization tracking across all active programs, producing a variance report that compares projected savings to actuals and flags shortfalls for management action.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -512,14 +599,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Benefits realisation tracking is performed manually by programme management teams using separate tracking spreadsheets; the consolidated view requires a weeks-long assembly process, and by the time variances are visible, the management response window is narrow.</p>
+      <p>Benefits-realization tracking is performed manually by program management teams using separate tracking spreadsheets; the consolidated view requires a weeks-long assembly process, and by the time variances are visible, the management response window is narrow.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates programme milestone data, cost actuals, and headcount data to run a quarterly benefits realisation analysis across all active operational excellence programmes. Output is a variance report showing committed vs. realised savings per programme with a shortfall narrative and recommended management actions.</p>
+      <p>The AI agent integrates program milestone data, cost actuals, and headcount data to run a quarterly benefits-realization analysis across all active operational excellence programs. Output, reviewed by the program management team, is a variance report showing committed vs. realized savings per program with a shortfall narrative and recommended management actions.</p>
     </div>
     
 
@@ -527,25 +614,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Operational excellence benefits realisation is tracked quarterly across all active programmes, with variance reports available within five business days of the data freeze.</p>
+      <p class="okr-objective">Operational excellence benefits realization is tracked quarterly across all active programs, with variance reports available within five business days of the data freeze.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces benefits realisation variance reports for ≥100% of quarterly tracking cycles from deployment.</p>
+          <p>The AI agent produces benefits-realization variance reports for 100% of quarterly tracking cycles from deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of variance reports accepted by the programme management team without major rework; COO adopts reports as the primary benefits tracking mechanism.</p>
+          <p>≥80% of variance reports accepted by the program management team without major rework; the COO adopts the reports as the primary benefits tracking mechanism.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Benefits realisation variance report production time reduced from ≥3 weeks to ≤5 business days.</p>
+          <p>Benefits-realization variance report production time reduced from ≥3 weeks to ≤5 business days.</p>
         </div>
         
       </div>
@@ -594,7 +679,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads initiative-status feeds and synthesizes a cross-portfolio view ranking delivery risk and benefit-realization exposure. Dependency conflicts surface proactively, and the transformation office uses the output as the steering-committee baseline.</p>
+      <p>The AI agent reads initiative-status feeds and synthesizes a cross-portfolio view ranking delivery risk and benefit-realization exposure. Dependency conflicts are flagged early, and the COO and transformation office review the output and use it as the steering-committee baseline.</p>
     </div>
     
 
@@ -602,21 +687,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">A cross-initiative view of the operational excellence transformation portfolio — covering delivery risk, dependency conflicts, and benefit-realization gaps against committed timelines — is produced by agent from initiative-status feeds for the COO and transformation office, replacing the manual pre-steering-committee assembly.</p>
+      <p class="okr-objective">A cross-initiative view of the operational excellence transformation portfolio — covering delivery risk, dependency conflicts, and benefit-realization gaps against committed timelines — is produced by the AI agent from initiative-status feeds for the COO and transformation office, replacing the manual pre-steering-committee assembly.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces cross-portfolio synthesis for ≥100% of scheduled steering committee cycles; delivery risk ranking and dependency conflict flags included in ≥90% of produced outputs.</p>
+          <p>The AI agent produces a cross-portfolio synthesis for 100% of scheduled steering committee cycles; delivery risk ranking and dependency conflict flags included in ≥90% of produced outputs.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of agent-produced portfolio syntheses accepted by the COO and transformation office as the steering-committee baseline without full manual re-assembly; dependency conflict identification coverage ≥80% of items subsequently surfaced by transformation leads.</p>
+          <p>≥80% of AI-produced portfolio syntheses accepted by the COO and transformation office as the steering-committee baseline without full manual re-assembly; dependency conflict identification coverage ≥80% of items subsequently surfaced by transformation leads.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -650,7 +733,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Customer experience priorities</h2>
     
-    <p class="l3-section__intent">Customer experience priorities define the board&#39;s and executive committee&#39;s declared commitments to improving client-facing outcomes — covering NPS and CSAT trajectories, service standards, complaint resolution, digital journey quality, and product accessibility targets across segments. These priorities are translated into annual program objectives with defined owners, investment budgets, and milestone cadences reported to the board&#39;s Customer and Strategy committees.</p>
+    <p class="l3-section__intent">Customer experience (CX) priorities define the board's and executive committee's declared commitments to improving client-facing outcomes — covering NPS and CSAT trajectories, service standards, complaint resolution, digital journey quality, and product accessibility targets across segments. These priorities are translated into annual program objectives with defined owners, investment budgets, and milestone cadences reported to the board's Customer and Strategy committees.</p>
     
   </header>
 
@@ -684,7 +767,7 @@
       <h3 class="scenario-card__title">CX priority progress insights dashboard</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Customer experience priorities — NPS targets, complaint resolution rates, digital adoption goals, service level commitments — require continuous tracking to ensure executive committee visibility of progress and emerging shortfalls. The agent synthesises CX KPI data across channels and segments into a continuous priority-progress view for the chief customer officer and executive committee.</p>
+      <p class="scenario-card__intent">Customer experience priorities — NPS targets, complaint resolution rates, digital adoption goals, service level commitments — require continuous tracking to ensure executive committee visibility of progress and emerging shortfalls. The AI agent synthesizes CX KPI data across channels and segments into a monthly priority-progress view for the chief customer officer and executive committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -697,14 +780,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>CX priority progress is reported quarterly in the executive committee pack; between packs, the bank lacks a current view of whether CX commitments are on track. Shortfalls identified at quarter-end leave insufficient time for corrective action within the same planning period.</p>
+      <p>CX priority progress is reported quarterly in the executive committee pack; between packs, the Bank lacks a current view of whether CX commitments are on track. Shortfalls identified at quarter-end leave insufficient time for corrective action within the same planning period.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates NPS scores, complaint data, digital adoption metrics, and service level KPIs on a monthly basis, producing a CX priority progress dashboard with RAG status per priority and trend signals. Priorities trending below target trigger a brief diagnostic note for the chief customer officer.</p>
+      <p>The AI agent integrates NPS scores, complaint data, digital adoption metrics, and service level KPIs on a monthly basis, producing a CX priority progress dashboard with RAG status per priority and trend signals. The chief customer officer team reviews the dashboard; priorities trending below target trigger a brief diagnostic note for the chief customer officer.</p>
     </div>
     
 
@@ -712,25 +795,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">CX priority progress is visible to the executive committee in continuous form, enabling corrective action within the same quarter a shortfall emerges.</p>
+      <p class="okr-objective">CX priority progress is visible to the executive committee on a monthly basis, enabling corrective action within the same quarter a shortfall emerges.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces monthly CX priority dashboards for ≥10 consecutive months in the first year.</p>
+          <p>The AI agent produces monthly CX priority dashboards for ≥10 consecutive months in the first year.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of monthly dashboards accepted by the chief customer officer team as accurate and complete without material additions.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>CX priority progress visibility cycle compressed from quarterly reporting to monthly continuous read.</p>
+          <p>CX priority progress visibility cycle compressed from quarterly reporting to a monthly read.</p>
         </div>
         
       </div>
@@ -759,7 +840,7 @@
       <h3 class="scenario-card__title">CX priority initiative impact attribution</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">The bank runs multiple concurrent CX improvement initiatives; understanding which initiatives are moving CX metrics and which are not requires systematic attribution analysis that connects initiative deployment dates to KPI shifts. The agent automates quarterly CX initiative attribution, linking programme milestones to observed metric changes and producing an evidence-based effectiveness review.</p>
+      <p class="scenario-card__intent">The Bank runs multiple concurrent CX improvement initiatives; understanding which initiatives are moving CX metrics and which are not requires systematic attribution analysis that connects initiative deployment dates to KPI shifts. The AI agent automates quarterly CX initiative attribution, linking program milestones to observed metric changes and producing an evidence-based effectiveness review.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -772,14 +853,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>CX initiative impact attribution is performed informally; programme leads claim credit for metric improvements without systematic attribution, making it difficult to prioritise investment across the CX portfolio. Ineffective initiatives continue consuming budget because their lack of impact is never formally demonstrated.</p>
+      <p>CX initiative impact attribution is performed informally; program leads claim credit for metric improvements without systematic attribution, making it difficult to prioritize investment across the CX portfolio. Ineffective initiatives continue consuming budget because their lack of impact is never formally demonstrated.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent runs a structured attribution analysis each quarter, correlating initiative deployment events with NPS, complaint, and digital adoption metric movements across relevant customer cohorts. Output is a ranked initiative effectiveness report for the chief customer officer and strategy committee.</p>
+      <p>The AI agent runs a structured attribution analysis each quarter, correlating initiative deployment events with NPS, complaint, and digital adoption metric movements across relevant customer cohorts. Output, reviewed by the chief customer officer team, is a ranked initiative effectiveness report for the chief customer officer and strategy committee.</p>
     </div>
     
 
@@ -787,19 +868,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">CX initiative investment is allocated based on a systematic quarterly attribution analysis, directing resources to programmes with demonstrated impact.</p>
+      <p class="okr-objective">CX initiative investment is allocated based on a systematic quarterly attribution analysis, directing resources to programs with demonstrated impact.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly CX initiative attribution reports for ≥4 consecutive quarters within 15 months of deployment.</p>
+          <p>The AI agent produces quarterly CX initiative attribution reports for ≥4 consecutive quarters within 15 months of deployment.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥75% of attribution reports accepted by the chief customer officer team as the basis for initiative portfolio prioritisation.</p>
+          <p>≥75% of attribution reports accepted by the chief customer officer team as the basis for initiative portfolio prioritization.</p>
         </div>
         
         
@@ -834,7 +915,7 @@
       <h3 class="scenario-card__title">CX priority peer benchmark enablement</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Setting credible CX targets requires a view of peer performance on the same dimensions — NPS, complaint rates, digital adoption — across the domestic and regional banking market. The agent synthesises publicly available peer CX data into a structured benchmark that equips the strategy team to set stretch but realistic CX priority targets at each annual planning cycle.</p>
+      <p class="scenario-card__intent">Setting credible CX targets requires a view of peer performance on the same dimensions — NPS, complaint rates, digital adoption — across the domestic and regional banking market. The AI agent synthesizes publicly available peer CX data into a structured benchmark that equips the strategy team to set stretch but realistic CX priority targets at each annual planning cycle.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -854,7 +935,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent aggregates peer NPS disclosures, regulatory complaint data, and digital channel benchmarks into a structured quarterly CX peer benchmark. The strategy team uses the benchmark as the calibration baseline for annual CX target-setting and board reporting.</p>
+      <p>The AI agent aggregates peer NPS disclosures, regulator-published complaint data, and digital channel benchmarks into a structured quarterly CX peer benchmark. The strategy team uses the benchmark as the calibration baseline for annual CX target-setting and board reporting.</p>
     </div>
     
 
@@ -868,7 +949,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly CX peer benchmarks for ≥4 consecutive quarters within 15 months of deployment.</p>
+          <p>The AI agent produces quarterly CX peer benchmarks for ≥4 consecutive quarters within 15 months of deployment.</p>
         </div>
         
         
@@ -910,7 +991,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Innovation priorities</h2>
     
-    <p class="l3-section__intent">Innovation priorities define the bank&#39;s directed investments in new capabilities — technology infrastructure, GenAI adoption, open banking integration, digital product development, and ecosystem partnerships — that the executive committee has ring-fenced in the strategic budget as transformation commitments. These priorities are governed separately from business-as-usual capital expenditure, with milestone-based funding releases tied to proof-of-concept outcomes and regulatory non-objection where applicable.</p>
+    <p class="l3-section__intent">Innovation priorities define the Bank's directed investments in new capabilities — technology infrastructure, GenAI adoption, open banking integration, digital product development, and ecosystem partnerships — that the executive committee has ring-fenced in the strategic budget as transformation commitments. These priorities are governed separately from business-as-usual capital expenditure, with milestone-based funding releases tied to proof-of-concept outcomes and regulatory non-objection where applicable.</p>
     
   </header>
 
@@ -944,7 +1025,7 @@
       <h3 class="scenario-card__title">Innovation priority pipeline insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Innovation priorities translate the bank&#39;s technology and product innovation ambition into a portfolio of experiments and stage-gated programmes. Tracking the pipeline health — funding allocated, milestones achieved, graduation rate, and P&amp;L impact from graduated programmes — in continuous form gives the chief innovation officer and executive committee a live read on whether the innovation investment is generating returns.</p>
+      <p class="scenario-card__intent">Innovation priorities translate the Bank's technology and product innovation ambition into a portfolio of experiments and stage-gated programs. Tracking the pipeline health — funding allocated, milestones achieved, graduation rate, and P&amp;L impact from graduated programs — in continuous form gives the chief innovation officer and executive committee a live read on whether the innovation investment is generating returns.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -957,14 +1038,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Innovation portfolio reporting is produced quarterly from manually assembled programme updates; pipeline health metrics — graduation rate, time-to-value, investment efficiency — are not tracked systematically, making it difficult to identify whether the innovation spend is appropriately allocated across the stage-gate model.</p>
+      <p>Innovation portfolio reporting is produced quarterly from manually assembled program updates; pipeline health metrics — graduation rate, time-to-value, investment efficiency — are not tracked systematically, making it difficult to identify whether the innovation spend is appropriately allocated across the stage-gate model.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates programme milestone data, investment tracking, and graduated programme P&amp;L on a monthly basis, producing an innovation pipeline health dashboard with stage-gate funnel metrics and trend signals. Programmes stalled at a stage gate for two consecutive periods are flagged for executive review.</p>
+      <p>The AI agent integrates program milestone data, investment tracking, and graduated program P&amp;L on a monthly basis, producing an innovation pipeline health dashboard with stage-gate funnel metrics and trend signals. The chief innovation officer team reviews the dashboard; programs stalled at a stage gate for two consecutive periods are flagged for executive review.</p>
     </div>
     
 
@@ -972,25 +1053,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Innovation pipeline health is visible to the executive committee in continuous form, enabling investment reallocation decisions based on stage-gate funnel performance.</p>
+      <p class="okr-objective">Innovation pipeline health is visible to the executive committee on a monthly basis, enabling investment reallocation decisions based on stage-gate funnel performance.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces monthly innovation pipeline dashboards for ≥10 consecutive months in the first year.</p>
+          <p>The AI agent produces monthly innovation pipeline dashboards for ≥10 consecutive months in the first year.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of monthly dashboards accepted by the chief innovation officer team as accurate and sufficient for portfolio review.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Innovation pipeline visibility cycle compressed from quarterly assembly to monthly continuous read.</p>
+          <p>Innovation pipeline visibility cycle compressed from quarterly assembly to a monthly read.</p>
         </div>
         
       </div>
@@ -1019,7 +1098,7 @@
       <h3 class="scenario-card__title">Innovation regulatory horizon scan</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Regulatory developments — open banking mandates, digital asset licensing frameworks, embedded finance rules — create both opportunities and constraints for banking innovation priorities. The agent monitors innovation-relevant regulatory developments across operating jurisdictions and translates them into a structured innovation opportunity and constraint map for the strategy and technology leadership.</p>
+      <p class="scenario-card__intent">Regulatory developments — open banking mandates, digital asset licensing frameworks, embedded finance rules — create both opportunities and constraints for banking innovation priorities. The AI agent monitors innovation-relevant regulatory developments in the Bank's market and translates them into a structured innovation opportunity and constraint map for the innovation committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1032,14 +1111,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Regulatory horizon scanning for innovation is performed ad hoc; emerging regulatory frameworks that could enable new product categories or require compliance investment are identified late, reducing the bank&#39;s ability to position as a first mover or to prepare adequately for compliance obligations.</p>
+      <p>Regulatory horizon scanning for innovation is performed ad hoc; emerging regulatory frameworks that could enable new product categories or require compliance investment are identified late, reducing the Bank's ability to position as a first mover or to prepare adequately for compliance obligations.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors innovation-relevant regulatory publications from NBKR, NBK/ARDFM, CBR, and international standards bodies, classifying developments as innovation enablers or compliance constraints, and producing a quarterly opportunity and risk map for the innovation committee.</p>
+      <p>The AI agent monitors innovation-relevant regulatory publications from the regulator and international standards bodies, classifying developments as innovation enablers or compliance constraints, and producing a quarterly opportunity and constraint map for the innovation committee.</p>
     </div>
     
 
@@ -1053,15 +1132,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly innovation regulatory horizon scans for ≥4 consecutive quarters within 15 months of deployment.</p>
+          <p>The AI agent assesses ≥90% of innovation-relevant regulatory publications within four weeks of publication and consolidates them into a quarterly horizon scan for ≥4 consecutive quarters within 15 months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥70% of regulatory opportunity assessments acted upon by the innovation committee within the subsequent planning quarter.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -1091,10 +1168,10 @@
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Innovation experiment return automation</h3>
+      <h3 class="scenario-card__title">Innovation stage-gate return pack</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Stage-gate decisions on innovation experiments require a structured return assessment comparing invested cost against projected and realised value. The agent automates the stage-gate return pack for each experiment, drawing from investment tracking, milestone data, and market sizing inputs, enabling governance bodies to make go/no-go decisions from a consistent analytical basis.</p>
+      <p class="scenario-card__intent">Stage-gate decisions on innovation experiments require a structured return assessment comparing invested cost against projected and realized value. The AI agent automates the stage-gate return pack for each experiment, drawing from investment tracking, milestone data, and market sizing inputs, enabling governance bodies to make go/no-go decisions from a consistent analytical basis.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1107,14 +1184,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Stage-gate return assessments are produced ad hoc by programme teams using inconsistent templates; the quality of economic analysis varies widely, and governance bodies make go/no-go decisions without a comparable basis across the portfolio. This creates risk of over-investment in financially weak experiments.</p>
+      <p>Stage-gate return assessments are produced ad hoc by program teams using inconsistent templates; the quality of economic analysis varies widely, and governance bodies make go/no-go decisions without a comparable basis across the portfolio. This creates risk of over-investment in financially weak experiments.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent generates a standardised stage-gate return pack for each experiment reaching a gate, using a common ROI framework with market sizing, cost trajectory, and scenario analysis. Governance bodies receive comparable assessments across all experiments in the current gate cycle.</p>
+      <p>The AI agent generates a standardized stage-gate return pack for each experiment reaching a gate, using a common ROI framework with market sizing, cost trajectory, and scenario analysis. Governance bodies receive comparable assessments across all experiments in the current gate cycle and make the go/no-go decisions.</p>
     </div>
     
 
@@ -1122,13 +1199,13 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">All stage-gate decisions are supported by a standardised agent-produced return assessment, enabling comparable go/no-go decisions across the innovation portfolio.</p>
+      <p class="okr-objective">All stage-gate decisions are supported by a standardized AI-produced return assessment, enabling comparable go/no-go decisions across the innovation portfolio.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces stage-gate return packs for ≥90% of experiments reaching a formal gate within 12 months of deployment.</p>
+          <p>The AI agent produces stage-gate return packs for ≥90% of experiments reaching a formal gate within 12 months of deployment.</p>
         </div>
         
         
@@ -1170,7 +1247,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Sustainability / ESG priorities</h2>
     
-    <p class="l3-section__intent">Sustainability and ESG priorities define the bank&#39;s commitments on climate risk, green finance, social impact, and governance standards — including green lending targets, climate risk integration into the credit framework, ESG disclosure obligations under applicable reporting frameworks (TCFD, GRI, NBKR/CBR regulatory guidance), and board-level ESG governance arrangements. These commitments are increasingly embedded in the RAS (physical and transition climate risk tolerances) and in the bank&#39;s external financing terms with international development institutions.</p>
+    <p class="l3-section__intent">Sustainability and ESG priorities define the Bank's commitments on climate risk, green finance, social impact, and governance standards — including green lending targets, climate risk integration into the credit framework, ESG disclosure obligations under applicable reporting frameworks (TCFD, GRI, the regulator's guidance), and board-level ESG governance arrangements. These commitments are increasingly embedded in the RAS (physical and transition climate risk tolerances) and in external financing terms agreed with international development institutions.</p>
     
   </header>
 
@@ -1204,7 +1281,7 @@
       <h3 class="scenario-card__title">ESG Priority Progress Report</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Quarterly ESG progress report tracking decarbonization targets, green-finance volumes, and governance metrics against TCFD/ISSB frameworks and local central bank ESG guidance is auto-drafted from sustainability and finance data feeds.</p>
+      <p class="scenario-card__intent">A quarterly ESG progress report tracking decarbonization targets, green-finance volumes, and governance metrics against TCFD/ISSB frameworks and the regulator's ESG guidance is drafted by an AI agent from sustainability and finance data feeds for review by the sustainability team.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1217,14 +1294,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Quarterly ESG progress reports are assembled manually from sustainability, finance, and risk data. Consistency with TCFD/ISSB disclosure frameworks and local central bank ESG guidance depends on individual authors tracking regulatory releases across cycles.</p>
+      <p>Quarterly ESG progress reports are assembled manually from sustainability, finance, and risk data. Consistency with TCFD/ISSB disclosure frameworks and the regulator's ESG guidance depends on individual authors tracking regulatory releases across cycles.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads sustainability and finance feeds, maps metrics to TCFD/ISSB and local CB ESG disclosure requirements, and produces a draft progress report. The sustainability team reviews for forward commitments and regulator-facing language before publication.</p>
+      <p>The AI agent reads sustainability and finance feeds, maps metrics to TCFD/ISSB and the regulator's ESG disclosure requirements, and produces a draft progress report. The sustainability team reviews for forward commitments and regulator-facing language before publication.</p>
     </div>
     
 
@@ -1232,25 +1309,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">A quarterly ESG progress report — tracking decarbonization targets, green-finance volumes, and governance metrics against TCFD/ISSB frameworks and local central bank ESG guidance — is drafted by agent from sustainability and finance data feeds, giving the sustainability team a structured editing task.</p>
+      <p class="okr-objective">A quarterly ESG progress report — tracking decarbonization targets, green-finance volumes, and governance metrics against TCFD/ISSB frameworks and the regulator's ESG guidance — is drafted by the AI agent from sustainability and finance data feeds, giving the sustainability team a structured editing task.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces draft quarterly ESG progress reports for ≥100% of reporting quarters; TCFD/ISSB and local CB disclosure requirements mapped in ≥95% of draft sections.</p>
+          <p>The AI agent produces draft quarterly ESG progress reports for 100% of reporting quarters; TCFD/ISSB and the regulator's disclosure requirements mapped in ≥95% of draft sections.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of agent-produced draft reports accepted by the sustainability team as a sound structural basis without full redraft; regulatory disclosure mapping confirmed accurate in ≥90% of reviewed sections.</p>
+          <p>≥80% of AI-produced draft reports accepted by the sustainability team as a sound structural basis without full redraft; regulatory disclosure mapping confirmed accurate in ≥90% of reviewed sections.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Quarterly ESG progress report production time reduced by ≥50% because manual cross-source assembly is replaced by structured editing of an agent-produced draft.</p>
+          <p>Quarterly ESG progress report production time reduced by ≥50% because manual cross-source assembly is replaced by structured editing of an AI-produced draft.</p>
         </div>
         
       </div>
@@ -1279,7 +1354,7 @@
       <h3 class="scenario-card__title">ESG priority data insights dashboard</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">ESG priority commitments — financed emissions targets, green lending ratios, social impact metrics, governance KPIs — require continuous monitoring to give the board, executive committee, and sustainability team a live read on trajectory. The agent synthesises ESG KPI data from multiple internal and external sources into a continuous priority-progress view.</p>
+      <p class="scenario-card__intent">ESG priority commitments — financed emissions targets, green lending ratios, social impact metrics, governance KPIs — require continuous monitoring to give the board, executive committee, and sustainability team a live read on trajectory. The AI agent synthesizes ESG KPI data from multiple internal and external sources into a quarterly priority-progress view.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1292,14 +1367,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>ESG priority performance is assembled for annual disclosure reporting and periodic board updates; between formal reporting cycles, the bank lacks a current view of whether ESG commitments are on track. Shortfalls identified at the annual reporting stage carry reputational risk and limit management response time.</p>
+      <p>ESG priority performance is assembled for annual disclosure reporting and periodic board updates; between formal reporting cycles, the Bank lacks a current view of whether ESG commitments are on track. Shortfalls identified at the annual reporting stage carry reputational risk and limit management response time.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates financed emissions data, green lending volumes, social metrics, and governance KPIs on a quarterly basis, producing an ESG priority dashboard with progress vs. commitment and trend signals. Commitments at risk of being missed trigger a structured alert to the chief sustainability officer.</p>
+      <p>The AI agent integrates financed emissions data, green lending volumes, social metrics, and governance KPIs on a quarterly basis, producing an ESG priority dashboard with progress vs. commitment and trend signals. The sustainability team reviews the dashboard; commitments at risk of being missed trigger a structured alert to the chief sustainability officer.</p>
     </div>
     
 
@@ -1307,25 +1382,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">ESG priority progress is visible on a quarterly basis in continuous form, enabling pre-emptive management action before annual disclosure deadlines.</p>
+      <p class="okr-objective">ESG priority progress is visible on a quarterly basis, enabling pre-emptive management action before annual disclosure deadlines.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly ESG priority dashboards for ≥4 consecutive quarters within 15 months of deployment.</p>
+          <p>The AI agent produces quarterly ESG priority dashboards for ≥4 consecutive quarters within 15 months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of dashboards accepted by the sustainability team as accurate and sufficient for executive committee reporting.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>ESG priority visibility cycle compressed from annual disclosure-driven assembly to quarterly continuous read.</p>
+          <p>ESG priority visibility cycle compressed from annual disclosure-driven assembly to a quarterly read.</p>
         </div>
         
       </div>
@@ -1351,10 +1424,10 @@
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">ESG priority scenario optimisation</h3>
+      <h3 class="scenario-card__title">ESG priority scenario optimization</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Achieving ESG commitments — net-zero financed emissions pathways, green asset ratio targets — requires sequencing portfolio actions across lending, investment, and operations over multi-year horizons. The agent models alternative transition pathways, showing the capital cost, portfolio impact, and probability of commitment achievement under each pathway for the board sustainability committee.</p>
+      <p class="scenario-card__intent">Achieving ESG commitments — net-zero financed emissions pathways, green asset ratio targets — requires sequencing portfolio actions across lending, investment, and operations over multi-year horizons. The AI agent models alternative transition pathways, showing the capital cost, portfolio impact, and probability of commitment achievement under each pathway for the board sustainability committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--L"
@@ -1367,14 +1440,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>ESG transition pathway analysis is performed by the sustainability team using high-level models that lack granularity at the portfolio and client level; the bank cannot credibly demonstrate to regulators and investors how its current portfolio actions translate into commitment achievement.</p>
+      <p>ESG transition pathway analysis is performed by the sustainability team using high-level models that lack granularity at the portfolio and client level; the Bank cannot credibly demonstrate to regulators and investors how its current portfolio actions translate into commitment achievement.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent models ESG transition pathways at the portfolio and sector level, estimating financed emissions trajectories, green asset ratio projections, and the capital and revenue implications of alternative sequencing strategies. Output is a ranked scenario pack for the board sustainability committee with commitment achievement probabilities per pathway.</p>
+      <p>The AI agent models ESG transition pathways at the portfolio and sector level, estimating financed emissions trajectories, green asset ratio projections, and the capital and revenue implications of alternative sequencing strategies. Output, reviewed by the sustainability team, is a ranked scenario pack for the board sustainability committee with commitment achievement probabilities per pathway.</p>
     </div>
     
 
@@ -1388,7 +1461,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced ESG transition scenarios used in ≥80% of board sustainability committee reviews within 12 months of deployment.</p>
+          <p>AI-produced ESG transition scenarios used in ≥80% of board sustainability committee reviews within 12 months of deployment.</p>
         </div>
         
         

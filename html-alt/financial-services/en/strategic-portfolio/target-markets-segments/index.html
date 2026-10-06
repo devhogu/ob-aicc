@@ -103,11 +103,102 @@
   </div>
   
   
-    <p class="page-header__intent">Segment strategy defines which customer cohorts the bank serves, where it concentrates growth capital, and how it calibrates product, pricing, and channel investment per segment. Segment economics — CAC, LTV, wallet share, churn cohort distributions — determine which focal segments sustain profitable scale and which consume capital below the hurdle. <strong>The opportunity for GenAI is continuous segment-economics visibility and on-demand segment-prioritization what-ifs</strong> — replacing quarterly pack assembly with a live read of cohort dynamics across Retail, SME, Corporate, Private Banking, Wealth Management, and Public Sector.</p>
+    <p class="page-header__intent">Segment strategy defines which customer cohorts the Bank serves, where it concentrates growth capital, and how it calibrates product, pricing, and channel investment per segment. Segment economics — CAC, LTV, wallet share, churn cohort distributions — determine which focal segments sustain profitable scale and which consume capital below the hurdle. <strong>The opportunity for GenAI is continuous segment-economics visibility, briefing support for front-line teams, and systematic opportunity detection</strong> — replacing quarterly pack assembly with a live read of cohort dynamics across Retail, SME, Corporate, Public Sector and, where the Bank serves them, Private Banking and Wealth Management.</p>
   
 </header>
 
   
+  
+  
+
+<style>
+  /*
+    Per-page tab selectors — emitted at render time from concern-problems.html.j2
+    using this L1's actual category tags. concern.css carries no hardcoded slugs.
+    Pattern: checked radio siblings the tab-bar label → active style; siblings the
+    matching panel → display:block. One rule pair per category.
+  */
+  
+  #problems-tab-target-markets-segments:checked ~ .problems-tab-bar label[for="problems-tab-target-markets-segments"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-target-markets-segments:checked ~ .problems-panel[data-tab="target-markets-segments"] {
+    display: block;
+  }
+  
+</style>
+
+
+<section class="concern-problems" aria-label="Problems">
+
+  
+  
+  <input
+    type="radio"
+    class="problems-tab-input"
+    name="problems-tabs"
+    id="problems-tab-target-markets-segments"
+    value="target-markets-segments"
+    checked
+    aria-label="Target markets &amp; segments"
+  >
+  
+
+  
+  <div class="problems-tab-bar" role="tablist">
+    
+    <label
+      class="problems-tab-label"
+      for="problems-tab-target-markets-segments"
+      role="tab"
+      aria-controls="problems-panel-target-markets-segments"
+    >Target markets &amp; segments</label>
+    
+  </div>
+
+  <hr class="problems-divider">
+
+  
+  
+  <div
+    class="problems-panel"
+    id="problems-panel-target-markets-segments"
+    data-tab="target-markets-segments"
+    role="tabpanel"
+    aria-labelledby="problems-tab-target-markets-segments"
+  >
+    <table class="problems-table">
+      <tbody>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
+          <td class="problems-statement">Segment economics for Retail, SME, Corporate, Private Banking, Wealth Management, and Public Sector are assembled quarterly or semi-annually from finance, CRM, and risk exports; wallet share is estimated once a year. Segment heads lack a current view of where each segment creates value and where capital is deployed below the hurdle rate.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Enablement</th>
+          <td class="problems-statement">Relationship managers prepare client reviews by hand from multiple systems, and churn lists and credit-appetite guidance reach them in forms that are hard to use at the point of conversation. Advisory breadth depends on each RM&#39;s own knowledge, and deals are originated that the credit committee later declines.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">Automation</th>
+          <td class="problems-statement">Obligations under national banking programs — subsidized-lending targets, Treasury Single Account servicing, government-payroll participation — are tracked in spreadsheets and reconciled manually before each regulatory reporting cycle. Gaps surface late, with limited time for remediation.</td>
+        </tr>
+        
+        <tr class="problems-row">
+          <th class="problems-lens" scope="row">New business opportunities</th>
+          <td class="problems-statement">Prospect and opportunity identification relies on individual RM networks, annual penetration analysis, and manual monitoring of procurement portals. With systematic detection of under-penetrated SME sub-sectors, corporate and private banking opportunities, and public sector tenders, coverage effort goes to the highest-value targets with lead time to act.</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+
+</section>
   
 
   
@@ -130,7 +221,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Retail</h2>
     
-    <p class="l3-section__intent">Retail segment strategy defines the bank&#39;s mass-market and emerging affluent propositions — covering acquisition targets by product (current accounts, deposits, consumer loans, mortgage, cards), pricing strategy, channel investment (branch, digital, agent), and segment economics tracked on customer lifetime value, cross-sell depth, cost-to-acquire, and NIM per product in the retail book. Retail is typically the bank&#39;s largest segment by customer count and the primary source of low-cost funding from transactional deposit balances.</p>
+    <p class="l3-section__intent">Retail segment strategy defines the Bank's mass-market and emerging affluent propositions — covering acquisition targets by product (current accounts, deposits, consumer loans, mortgage, cards), pricing strategy, channel investment (branch, digital, agent banking), and segment economics tracked on customer lifetime value, cross-sell depth, cost-to-acquire, and NIM per product in the retail book. Retail is typically a bank's largest segment by customer count and its primary source of low-cost funding from transactional deposit balances.</p>
     
   </header>
 
@@ -184,7 +275,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads daily core-banking and CRM feeds and maintains a continuous retail segment-economics view. The segment team reviews a daily digest and investigates flagged cohort movements; manual assembly between quarters is eliminated.</p>
+      <p>The AI agent reads daily core-banking and CRM feeds and maintains a continuous retail segment-economics view. The segment team reviews a daily digest and investigates flagged cohort movements; manual assembly between quarters is eliminated.</p>
     </div>
     
 
@@ -198,19 +289,17 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent refreshes the retail segment-economics view daily for ≥250 business days per year; cohort-movement alerts generated within 48 hours of a threshold crossing for ≥95% of monitored cohort events.</p>
+          <p>The AI agent refreshes the retail segment-economics view daily for ≥250 business days per year; cohort-movement alerts generated within 48 hours of a threshold crossing for ≥95% of monitored cohort events.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥85% of daily dashboard outputs accepted by the segment team as accurate without manual re-validation; cohort movement alerts confirmed as material and correctly classified in ≥80% of reviewed events.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Retail segment economics monitoring cycle reduced from quarterly assembly to a daily continuous view, with cohort signals available ≥10 weeks earlier per quarter.</p>
+          <p>Retail segment economics monitoring cycle reduced from quarterly assembly to a daily view, with cohort signals available ≥10 weeks earlier per quarter.</p>
         </div>
         
       </div>
@@ -239,7 +328,7 @@
       <h3 class="scenario-card__title">Retail segment churn risk enablement</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Retail segment economics deteriorate rapidly when high-value customers churn; early identification of churn risk and equipping front-line teams with retention tools is the most capital-efficient response. The agent scores the retail customer base for churn probability, identifies the behavioural drivers of high-risk cohorts, and equips branch and contact-centre staff with structured retention conversation guides.</p>
+      <p class="scenario-card__intent">Retail segment economics deteriorate rapidly when high-value customers churn; early identification of churn risk and equipping front-line teams with retention tools is the most capital-efficient response. The AI agent scores the retail customer base for churn probability, identifies the behavioral drivers of high-risk cohorts, and equips branch and contact-center staff with structured retention conversation guides.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -259,7 +348,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent generates monthly churn risk scores for the retail book and produces segmented retention conversation guides for front-line staff, matching retention offer type to churn driver and risk tier. Staff can query the agent for a specific customer&#39;s churn profile before initiating contact.</p>
+      <p>The AI agent generates monthly churn risk scores for the retail book and produces segmented retention conversation guides for front-line staff, matching retention offer type to churn driver and risk tier. Staff can query the AI agent for a specific customer's churn profile before initiating contact.</p>
     </div>
     
 
@@ -273,15 +362,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent churn risk scores and retention guides used in ≥60% of retention contact campaigns within 12 months of deployment.</p>
+          <p>The AI agent's churn risk scores and retention guides used in ≥60% of retention contact campaigns within 12 months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>Retention campaign conversion rate for high-risk cohorts improves by ≥20% from the prior-year baseline.</p>
+          <p>≥75% of retention conversation guides rated as usable by front-line staff; retention campaign conversion rate for high-risk cohorts improves by ≥20% from the prior-year baseline.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -311,10 +398,10 @@
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Retail segment product cross-sell optimisation</h3>
+      <h3 class="scenario-card__title">Retail segment product cross-sell optimization</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Retail cross-sell penetration — the average number of products per customer — is a primary driver of segment economics and customer lifetime value. The agent optimises cross-sell sequencing by identifying the next-best product for each customer based on transaction behaviour, lifecycle stage, and segment peer patterns, and prioritises the offer queue for digital and branch channels.</p>
+      <p class="scenario-card__intent">Retail cross-sell penetration — the average number of products per customer — is a primary driver of segment economics and customer lifetime value. The AI agent optimizes cross-sell sequencing by identifying the next-best product for each customer based on transaction behavior, lifecycle stage, and segment peer patterns, and prioritizes the offer queue for digital and branch channels.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -327,14 +414,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Cross-sell targeting is based on broad segment-level product affinity scores; individual customer propensity is not leveraged, and the offer queue prioritisation is static. Offer fatigue and low conversion rates reflect sub-optimal sequencing rather than insufficient demand.</p>
+      <p>Cross-sell targeting is based on broad segment-level product affinity scores; individual customer propensity is not leveraged, and the offer queue prioritization is static. Offer fatigue and low conversion rates reflect sub-optimal sequencing rather than insufficient demand.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent scores each retail customer for next-best-product propensity using transactional behaviour and lifecycle signals, sequences personalised offers by channel affinity, and updates the offer queue monthly. Marketing and branch teams execute from the prioritised queue.</p>
+      <p>The AI agent scores each retail customer for next-best-product propensity using transactional behavior and lifecycle signals, sequences personalized offers by channel affinity, and updates the offer queue monthly. Marketing and branch teams execute from the prioritized queue.</p>
     </div>
     
 
@@ -342,25 +429,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Retail cross-sell conversion rate improves through personalised next-best-product targeting, increasing average products per customer by ≥0.3 within 18 months.</p>
+      <p class="okr-objective">Retail cross-sell conversion rate improves through personalized next-best-product targeting, increasing average products per customer by ≥0.3 within 18 months.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-generated cross-sell offer queues used in ≥70% of digital and branch cross-sell campaigns within 12 months of deployment.</p>
+          <p>AI-generated cross-sell offer queues used in ≥70% of digital and branch cross-sell campaigns within 12 months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>Cross-sell offer conversion rate increases by ≥25% from the prior-year baseline; offer fatigue complaints remain flat or decline.</p>
+          <p>≥80% of monthly offer queues executed by marketing and branch teams without re-prioritization; cross-sell offer conversion rate increases by ≥25% from the prior-year baseline, with offer fatigue complaints flat or declining.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Offer queue refresh cycle compressed from quarterly static targeting to monthly personalised update.</p>
+          <p>Offer queue refresh cycle compressed from quarterly static targeting to monthly personalized update.</p>
         </div>
         
       </div>
@@ -390,7 +475,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Private banking</h2>
     
-    <p class="l3-section__intent">Private banking segment strategy defines the bank&#39;s proposition and investment for high-net-worth and ultra-high-net-worth clients — covering AUM targets, advisory model (discretionary vs. advisory vs. execution-only), product range (investment products, lending against assets, trust and estate services), and the client coverage ratio governing relationship manager capacity. Private banking economics are tracked on AUM growth, fee yield on AUM, net new money, and client retention rates.</p>
+    <p class="l3-section__intent">Where the Bank has a private banking business, private banking segment strategy defines its proposition and investment for high-net-worth (HNW) and ultra-high-net-worth (UHNW) clients — covering AUM targets, advisory model (discretionary vs. advisory vs. execution-only), product range (investment products, lending against assets, trust and estate services), and the client coverage ratio governing relationship manager (RM) capacity. Private banking economics are tracked on AUM growth, fee yield on AUM, net new money, and client retention rates.</p>
     
   </header>
 
@@ -424,7 +509,7 @@
       <h3 class="scenario-card__title">Private banking segment AUM insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Private banking segment economics — AUM, net new money flows, revenue yield, and wallet share per HNW and UHNW tier — determine the strategic value of the private banking franchise and its trajectory. The agent synthesises client-level AUM and revenue data into a continuous segment economics view for the private banking head and executive committee.</p>
+      <p class="scenario-card__intent">Where the Bank has a private banking business, its segment economics — AUM, net new money flows, revenue yield, and wallet share per HNW and UHNW tier — determine the strategic value of the private banking franchise and its trajectory. The AI agent synthesizes client-level AUM and revenue data into a monthly segment economics view for the private banking head and executive committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -444,7 +529,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates AUM, net new money, and revenue data by client tier and relationship manager on a monthly basis, producing a private banking segment economics dashboard with wallet share trend signals. RMs with declining AUM or below-target yield are flagged for coaching and support.</p>
+      <p>The AI agent integrates AUM, net new money, and revenue data by client tier and relationship manager on a monthly basis, producing a private banking segment economics dashboard with wallet share trend signals. RMs with declining AUM or below-target yield are flagged to the private banking leadership team for coaching and support.</p>
     </div>
     
 
@@ -458,19 +543,17 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces monthly private banking economics reports covering ≥90% of active HNW/UHNW client relationships from deployment.</p>
+          <p>The AI agent produces monthly private banking economics reports covering ≥90% of active HNW/UHNW client relationships from deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of monthly reports accepted by the private banking leadership team as accurate and actionable.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Private banking economics visibility cycle compressed from annual wallet share estimate to monthly continuous read.</p>
+          <p>Private banking economics visibility cycle compressed from annual wallet share estimate to a monthly read.</p>
         </div>
         
       </div>
@@ -496,10 +579,10 @@
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Private banking client needs enablement</h3>
+      <h3 class="scenario-card__title">Private banking client review briefings</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Private banking relationship managers must navigate complex cross-product advisory conversations across investments, lending, tax planning, and succession — a breadth that exceeds the deep knowledge of any single RM. The agent provides RM-facing briefings that synthesise client financial position, portfolio concentration, and lifecycle events into a structured client conversation guide ahead of each review meeting.</p>
+      <p class="scenario-card__intent">Where the Bank has a private banking business, its relationship managers (RMs) must navigate complex cross-product advisory conversations across investments, lending, tax planning, and succession — a breadth that exceeds the deep knowledge of any single RM. The AI agent provides RM-facing briefings that synthesize client financial position, portfolio concentration, and lifecycle events into a structured client conversation guide ahead of each review meeting.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -519,7 +602,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent generates a pre-meeting client briefing for each scheduled private banking review, synthesising current portfolio position, concentration risk, upcoming lifecycle events, and applicable product opportunities across the full advisory spectrum. RMs arrive at meetings prepared for multi-product conversations.</p>
+      <p>The AI agent generates a pre-meeting client briefing for each scheduled private banking review, synthesizing current portfolio position, concentration risk, upcoming lifecycle events, and applicable product opportunities across the full advisory spectrum. RMs review the briefing and arrive at meetings prepared for multi-product conversations.</p>
     </div>
     
 
@@ -533,15 +616,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced client briefings used in ≥70% of private banking client review meetings within 12 months of deployment.</p>
+          <p>AI-produced client briefings used in ≥70% of private banking client review meetings within 12 months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥75% of briefings rated as useful and accurate by RMs; cross-product product penetration per HNW client increases by ≥15% within 12 months.</p>
+          <p>≥75% of briefings rated as useful and accurate by RMs; cross-product penetration per HNW client increases by ≥15% within 12 months.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -574,7 +655,7 @@
       <h3 class="scenario-card__title">Private banking segment opportunity detection</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Private banking growth requires identifying new HNW and UHNW prospects, succession-driven liquidity events, and competitor-relationship displacement opportunities in the local wealth market. The agent analyses wealth event signals — business sale completions, inheritance events, liquidity events — and generates a prospect and deepening opportunity pipeline for the private banking business development team.</p>
+      <p class="scenario-card__intent">Where the Bank has a private banking business, its growth requires identifying new HNW and UHNW prospects, succession-driven liquidity events, and competitor-relationship displacement opportunities in the domestic wealth market. The AI agent analyzes publicly available wealth event signals — business registration changes, real estate transactions, regulatory filings — and generates a prospect and deepening opportunity pipeline for the private banking business development team.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -594,7 +675,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors publicly available wealth event signals — business registration data, real estate transactions, regulatory filings — and correlates them with the bank&#39;s existing client data to generate a quarterly prospect and deepening opportunity list for the private banking business development team.</p>
+      <p>The AI agent monitors publicly available wealth event signals — business registration data, real estate transactions, regulatory filings — and correlates them with the Bank's existing client data to generate a quarterly prospect and deepening opportunity list for review by the private banking business development team.</p>
     </div>
     
 
@@ -608,7 +689,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced opportunity pipeline used in ≥80% of monthly private banking business development reviews within 12 months of deployment.</p>
+          <p>AI-produced opportunity pipeline used in ≥80% of monthly private banking business development reviews within 12 months of deployment.</p>
         </div>
         
         
@@ -650,7 +731,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">SME</h2>
     
-    <p class="l3-section__intent">SME segment strategy covers the bank&#39;s proposition for small and medium enterprises — including working capital lending, trade finance, deposit products, and payment services — along with coverage model design (relationship manager capacity, digital self-service scope) and credit approach (standardized scoring vs. judgmental underwriting by size band). SME economics are tracked on portfolio yield, credit loss rate, cross-product penetration, and RAROC against the segment&#39;s capital consumption, with SME lending often subject to government guarantee programs that affect the capital efficiency calculation.</p>
+    <p class="l3-section__intent">SME segment strategy covers the Bank's proposition for small and medium enterprises — including working capital lending, trade finance, deposit products, and payment services — along with coverage model design (relationship manager capacity, digital self-service scope) and credit approach (standardized scoring vs. judgmental underwriting by size band). SME economics are tracked on portfolio yield, credit loss rate, cross-product penetration, and RAROC against the segment's capital consumption, with SME lending often subject to government guarantee programs that affect the capital efficiency calculation.</p>
     
   </header>
 
@@ -697,14 +778,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>SME penetration analysis is conducted annually during budget planning. Segment managers in KG, KZ, and RU markets lack a systematic capability to identify which SME sub-sectors are underserved at current product and pricing configurations.</p>
+      <p>SME penetration analysis is conducted annually during budget planning. Segment managers lack a systematic capability to identify which SME sub-sectors are underserved at current product and pricing configurations.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads transaction-pattern signals across the SME portfolio and surfaces under-penetrated sub-sectors with product-fit scores and revenue estimates. Segment leads use the output to prioritize pipeline development and outreach.</p>
+      <p>The AI agent reads transaction-pattern signals across the SME portfolio and surfaces under-penetrated sub-sectors with product-fit scores and revenue estimates. Segment managers use the output to prioritize pipeline development and outreach.</p>
     </div>
     
 
@@ -712,25 +793,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Under-penetrated SME sub-sectors — identified from transaction-pattern signals including revenue seasonality, payroll cadence, and supplier-payment cycles — are surfaced with product-fit scores and revenue estimates on a continuous basis, giving segment managers in KG, KZ, and RU a systematic pipeline development signal.</p>
+      <p class="okr-objective">Under-penetrated SME sub-sectors — identified from transaction-pattern signals including revenue seasonality, payroll cadence, and supplier-payment cycles — are surfaced with product-fit scores and revenue estimates on a continuous basis, giving segment managers a systematic pipeline development signal.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent monitors SME cohort transaction signals continuously; opportunity detection outputs covering ≥90% of active SME sub-sectors produced quarterly with product-fit scores and revenue estimates.</p>
+          <p>The AI agent monitors SME cohort transaction signals continuously; opportunity detection outputs covering ≥90% of active SME sub-sectors produced quarterly with product-fit scores and revenue estimates.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥75% of agent-surfaced sub-sector opportunities confirmed as actionable by segment managers; revenue estimates within ±20% of subsequent pipeline development actuals in ≥80% of validated opportunities.</p>
+          <p>≥75% of AI-surfaced sub-sector opportunities confirmed as actionable by segment managers; revenue estimates within ±20% of subsequent pipeline development actuals in ≥80% of validated opportunities.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>SME segment opportunity identification cycle reduced from annual budget-planning exercises to a continuous quarterly signal, surfacing opportunities ≥8 months earlier per cycle.</p>
+          <p>SME segment opportunity identification cycle reduced from annual budget-planning exercises to a quarterly signal, surfacing opportunities ≥8 months earlier per cycle.</p>
         </div>
         
       </div>
@@ -759,7 +838,7 @@
       <h3 class="scenario-card__title">SME segment economics insights dashboard</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">SME segment economics — revenue yield, credit loss rate, capital consumption, cross-product penetration, and churn by sub-segment — determine whether the SME franchise is generating returns above the cost of capital and where investment should be concentrated. The agent synthesises SME client-level data into a continuous segment economics view for the SME banking head and executive committee.</p>
+      <p class="scenario-card__intent">SME segment economics — revenue yield, credit loss rate, capital consumption, cross-product penetration, and churn by sub-segment — determine whether the SME franchise is generating returns above the cost of capital and where investment should be concentrated. The AI agent synthesizes SME client-level data into a quarterly segment economics view for the SME banking head and executive committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -772,14 +851,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>SME segment economics are assembled quarterly from lending, transaction banking, and credit risk data; sub-segment economics — micro vs. small vs. medium enterprises — are not routinely produced. The SME head lacks a current view of where the segment creates value by client tier and product mix.</p>
+      <p>SME segment economics are assembled quarterly from lending, transaction banking, and credit risk data; sub-segment economics — micro vs. small vs. medium enterprises — are not routinely produced. The SME banking head lacks a current view of where the segment creates value by client tier and product mix.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates revenue, credit loss, capital consumption, and product penetration data per SME sub-segment on a quarterly basis, producing a ranked economics dashboard with trend signals. Sub-segments or product combinations below the RAROC hurdle for two consecutive quarters are flagged for strategic review.</p>
+      <p>The AI agent integrates revenue, credit loss, capital consumption, and product penetration data per SME sub-segment on a quarterly basis, producing a ranked economics dashboard with trend signals. Sub-segments or product combinations below the RAROC hurdle for two consecutive quarters are flagged to the SME banking team for strategic review.</p>
     </div>
     
 
@@ -793,19 +872,17 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly SME economics dashboards covering ≥80% of the active SME portfolio from deployment.</p>
+          <p>The AI agent produces quarterly SME economics dashboards covering ≥80% of the active SME portfolio from deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of dashboards accepted by the SME banking team as accurate and sufficient for portfolio investment decisions.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>SME sub-segment economics visibility cycle compressed from ad hoc annual analysis to quarterly continuous read.</p>
+          <p>SME sub-segment economics visibility cycle compressed from ad hoc analysis to a quarterly read.</p>
         </div>
         
       </div>
@@ -828,13 +905,13 @@
 
 <details class="scenario-card" data-urn="urn:financial-services:scenario:strategic-portfolio/target-markets-segments/sme/sme-credit-appetite-cohort-calibration">
   <summary class="scenario-card__summary">
-    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
       <h3 class="scenario-card__title">SME Credit-Appetite Cohort Calibration</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Segment-level credit-appetite parameters for SME cohorts are recalibrated monthly from realized default and recovery data, with an agent-produced drift narrative delivered to the credit committee.</p>
+      <p class="scenario-card__intent">Segment-level credit-appetite parameters for SME cohorts are recalibrated monthly from realized default and recovery data, with an AI-produced drift narrative delivered to the credit committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--L"
@@ -854,7 +931,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads monthly cohort performance data and recalibrates segment-level credit-appetite parameters, producing a narrative of cohort drift with attribution. The credit committee reviews the agent-prepared summary and approves parameter adjustments at monthly intervals.</p>
+      <p>The AI agent reads monthly cohort performance data and recalibrates segment-level credit-appetite parameters, producing a narrative of cohort drift with attribution. The credit committee reviews the AI-prepared summary and approves parameter adjustments at monthly intervals.</p>
     </div>
     
 
@@ -862,21 +939,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Segment-level credit-appetite parameters for SME cohorts are recalibrated monthly from realized default and recovery data by agent, with a drift narrative attributing cohort movements delivered to the credit committee for parameter-adjustment approval on a monthly rather than annual cycle.</p>
+      <p class="okr-objective">Segment-level credit-appetite parameters for SME cohorts are recalibrated monthly from realized default and recovery data by the AI agent, with a drift narrative attributing cohort movements delivered to the credit committee for parameter-adjustment approval on a monthly rather than annual cycle.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces monthly cohort recalibration outputs and drift narratives for ≥100% of SME segment classifications for ≥11 calendar months per year; attribution of cohort drift to macro, FX, and sector-level drivers included in ≥90% of monthly outputs.</p>
+          <p>The AI agent produces monthly cohort recalibration outputs and drift narratives for 100% of SME segment classifications for ≥11 calendar months per year; attribution of cohort drift to macro, FX, and sector-level drivers included in ≥90% of monthly outputs.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥80% of agent-produced recalibration summaries accepted by the credit committee as the approval basis without requiring independent re-derivation; parameter adjustment accuracy confirmed against subsequent cohort performance in ≥85% of reviewed monthly cycles.</p>
+          <p>≥80% of AI-produced recalibration summaries accepted by the credit committee as the approval basis without requiring independent re-derivation; parameter adjustment accuracy confirmed against subsequent cohort performance in ≥85% of reviewed monthly cycles.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -910,7 +985,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Wealth management</h2>
     
-    <p class="l3-section__intent">Wealth management segment strategy defines the bank&#39;s proposition for the affluent mass-market and lower-HNW tier — covering investment advisory, discretionary portfolio management, pension products, and protection — alongside the client segmentation boundary that separates wealth management from private banking. Segment economics are measured on AUM, revenue yield on assets, net new money, and adviser productivity; the strategic question governing this segment is the optimal distribution model between human advisory, digital advisory, and hybrid service at different AUM thresholds.</p>
+    <p class="l3-section__intent">Wealth management segment strategy defines the Bank's proposition for the affluent mass-market and lower-HNW tier — covering investment advisory, discretionary portfolio management, pension products, and protection — alongside the client segmentation boundary that separates wealth management from private banking, where the Bank has both. Segment economics are measured on AUM, revenue yield on assets, net new money, and adviser productivity; the strategic question governing this segment is the optimal distribution model between human advisory, digital advisory, and hybrid service at different AUM thresholds.</p>
     
   </header>
 
@@ -944,7 +1019,7 @@
       <h3 class="scenario-card__title">Wealth management segment AUM economics insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Wealth management segment economics — AUM growth, net new money, revenue yield, cost-to-income, and client retention rate — determine the strategic value of the wealth franchise and its competitive trajectory. The agent synthesises wealth client and product data into a continuous segment economics view for the wealth management head and executive committee.</p>
+      <p class="scenario-card__intent">Wealth management segment economics — AUM growth, net new money, revenue yield, cost-to-income, and client retention rate — determine the strategic value of the wealth franchise and its competitive trajectory. The AI agent synthesizes wealth client and product data into a monthly segment economics view for the wealth management head and executive committee.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -964,7 +1039,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates AUM, net new money, advisory revenue, and client retention data by wealth tier on a monthly basis, producing a segment economics dashboard with trend signals. Tiers showing net AUM outflows or revenue yield compression are flagged for strategic response.</p>
+      <p>The AI agent integrates AUM, net new money, advisory revenue, and client retention data by wealth tier on a monthly basis, producing a segment economics dashboard with trend signals. Tiers showing net AUM outflows or revenue yield compression are flagged to the wealth management team for strategic response.</p>
     </div>
     
 
@@ -978,19 +1053,17 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces monthly wealth economics dashboards covering ≥90% of the active wealth client base from deployment.</p>
+          <p>The AI agent produces monthly wealth economics dashboards covering ≥90% of the active wealth client base from deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of monthly dashboards accepted by the wealth management team as accurate and sufficient for performance review.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Wealth management economics visibility cycle compressed from quarterly assembly to monthly continuous read.</p>
+          <p>Wealth management economics visibility cycle compressed from quarterly assembly to a monthly read.</p>
         </div>
         
       </div>
@@ -1016,10 +1089,10 @@
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Wealth management advisory model enablement</h3>
+      <h3 class="scenario-card__title">Wealth client review advisory briefs</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Wealth management relationship managers are expected to deliver personalised financial planning and investment advice across a broad product range — investments, insurance, lending, estate planning — that exceeds any individual RM&#39;s depth of expertise. The agent provides RM-facing advisory support that synthesises client financial data into structured pre-meeting briefings and identifies gaps in the current advisory coverage.</p>
+      <p class="scenario-card__intent">Wealth management relationship managers (RMs) are expected to deliver personalized financial planning and investment advice across a broad product range — investments, insurance, lending, estate planning — that exceeds any individual RM's depth of expertise. The AI agent provides RM-facing advisory support that synthesizes client financial data into structured pre-meeting briefings and identifies gaps in the current advisory coverage.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1039,7 +1112,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent generates a comprehensive pre-meeting advisory brief for each wealth client review, covering portfolio concentration risk, gaps against a full wealth plan framework, applicable product solutions, and structured conversation starters. RMs review a ten-minute briefing rather than assembling materials manually.</p>
+      <p>The AI agent generates a comprehensive pre-meeting advisory brief for each wealth client review, covering portfolio concentration risk, gaps against a full wealth plan framework, applicable product solutions, and structured conversation starters. RMs review a ten-minute briefing rather than assembling materials manually.</p>
     </div>
     
 
@@ -1053,7 +1126,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced advisory briefs used in ≥70% of wealth client review meetings within 12 months of deployment.</p>
+          <p>AI-produced advisory briefs used in ≥70% of wealth client review meetings within 12 months of deployment.</p>
         </div>
         
         
@@ -1094,7 +1167,7 @@
       <h3 class="scenario-card__title">Wealth management competitor positioning scan</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Wealth management market share is contested by domestic bank wealth arms, independent asset managers, and international private banks entering via digital channels. Identifying competitive displacement opportunities requires a structured view of peer positioning, fee structures, platform capabilities, and product gaps. The agent synthesises peer intelligence into a quarterly competitive opportunity map for the wealth strategy team.</p>
+      <p class="scenario-card__intent">Wealth management market share is contested by domestic bank wealth arms, independent asset managers, and international private banks entering via digital channels. Identifying competitive displacement opportunities requires a structured view of peer positioning, fee structures, platform capabilities, and product gaps. The AI agent synthesizes peer intelligence into a quarterly competitive opportunity map for the wealth strategy team.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1107,14 +1180,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Wealth management competitive analysis is produced ad hoc from unstructured research; the bank lacks a systematic view of which competitor segments are vulnerable to displacement and which product or channel gaps represent acquisition opportunities. Growth targets are set without grounding in competitive opportunity sizing.</p>
+      <p>Wealth management competitive analysis is produced ad hoc from unstructured research; the Bank lacks a systematic view of which competitor segments are vulnerable to displacement and which product or channel gaps represent acquisition opportunities. Growth targets are set without grounding in competitive opportunity sizing.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent aggregates peer wealth management disclosures, product pricing, digital platform reviews, and market share estimates to produce a quarterly competitive opportunity map. The wealth strategy team identifies target segments for competitive displacement with estimated acquisition opportunity per segment.</p>
+      <p>The AI agent aggregates peer wealth management disclosures, product pricing, digital platform reviews, and market share estimates to produce a quarterly competitive opportunity map. The wealth strategy team identifies target segments for competitive displacement with estimated acquisition opportunity per segment.</p>
     </div>
     
 
@@ -1128,7 +1201,7 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly competitive opportunity maps for ≥4 consecutive quarters within 15 months of deployment.</p>
+          <p>The AI agent produces quarterly competitive opportunity maps for ≥4 consecutive quarters within 15 months of deployment.</p>
         </div>
         
         
@@ -1170,7 +1243,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Corporate</h2>
     
-    <p class="l3-section__intent">Corporate banking segment strategy covers the bank&#39;s proposition, coverage model, and wallet-share objectives for mid-market and large corporates — including relationship banking, lending, transaction banking (cash management, trade finance, FX), and capital markets access. Segment economics are measured on revenue per relationship, cost-to-serve, credit quality, and cross-product penetration; corporate banking&#39;s capital consumption is tracked against RAROC hurdles set in the capital allocation framework.</p>
+    <p class="l3-section__intent">Corporate banking segment strategy covers the Bank's proposition, coverage model, and wallet-share objectives for mid-market and large corporates — including relationship banking, lending, transaction banking (cash management, trade finance, FX), and capital markets access. Segment economics are measured on revenue per relationship, cost-to-serve, credit quality, and cross-product penetration; corporate banking's capital consumption is tracked against RAROC hurdles set in the capital allocation framework.</p>
     
   </header>
 
@@ -1204,7 +1277,7 @@
       <h3 class="scenario-card__title">Corporate segment economics insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Corporate segment economics — revenue per relationship, wallet share, cross-product penetration, and capital consumption per client — determine where the corporate banking franchise creates and destroys value. The agent synthesises client-level economics into a continuous segment view for the corporate banking head and executive committee, surfacing concentration risk and below-hurdle relationships.</p>
+      <p class="scenario-card__intent">Corporate segment economics — revenue per relationship, wallet share, cross-product penetration, and capital consumption per client — determine where the corporate banking franchise creates and destroys value. The AI agent synthesizes client-level economics into a quarterly segment view for the corporate banking head and executive committee, surfacing concentration risk and below-hurdle relationships.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1224,7 +1297,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates revenue, capital consumption, and cross-product data per corporate client on a quarterly basis, producing a ranked segment economics view with wallet share trend signals. Clients below the RAROC hurdle for two consecutive quarters are flagged for relationship review.</p>
+      <p>The AI agent integrates revenue, capital consumption, and cross-product data per corporate client on a quarterly basis, producing a ranked segment economics view with wallet share trend signals. Clients below the RAROC hurdle for two consecutive quarters are flagged to the corporate banking team for relationship review.</p>
     </div>
     
 
@@ -1238,19 +1311,17 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly corporate segment economics reports covering ≥80% of Tier 1 and 2 corporate clients from deployment.</p>
+          <p>The AI agent produces quarterly corporate segment economics reports covering ≥80% of Tier 1 and 2 corporate clients from deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of quarterly reports accepted by the corporate banking team as accurate and sufficient for relationship investment decisions.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Corporate client economics visibility cycle compressed from semi-annual assembly to quarterly continuous read.</p>
+          <p>Corporate client economics visibility cycle compressed from semi-annual assembly to a quarterly read.</p>
         </div>
         
       </div>
@@ -1279,7 +1350,7 @@
       <h3 class="scenario-card__title">Corporate segment opportunity detection</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Corporate banking revenue growth opportunities — sector expansion, new product cross-sell, competitor displacement — require systematic identification beyond the coverage of individual relationship managers. The agent analyses client financial data, sector flows, and competitor activity to identify the highest-potential incremental revenue opportunities across the corporate portfolio.</p>
+      <p class="scenario-card__intent">Corporate banking revenue growth opportunities — sector expansion, new product cross-sell, competitor displacement — require systematic identification beyond the coverage of individual relationship managers. The AI agent analyzes client financial data, sector flows, and competitor activity to identify the highest-potential incremental revenue opportunities across the corporate portfolio.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1299,7 +1370,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent analyses corporate client financials, balance sheet trends, sector credit demand data, and competitor market share signals to generate a quarterly opportunity pipeline prioritised by estimated revenue impact. Relationship managers receive client-specific opportunity briefs with suggested product approaches.</p>
+      <p>The AI agent analyzes corporate client financials, balance sheet trends, sector credit demand data, and competitor market share signals to generate a quarterly opportunity pipeline prioritized by estimated revenue impact. Relationship managers (RMs) use client-specific opportunity briefs with suggested product approaches in their client planning sessions.</p>
     </div>
     
 
@@ -1307,13 +1378,13 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">A prioritised corporate segment opportunity pipeline is maintained and refreshed quarterly, directing RM coverage effort to the highest-value targets.</p>
+      <p class="okr-objective">A prioritized corporate segment opportunity pipeline is maintained and refreshed quarterly, directing RM coverage effort to the highest-value targets.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced opportunity briefs used in ≥60% of corporate RM client planning sessions within 12 months of deployment.</p>
+          <p>AI-produced opportunity briefs used in ≥60% of corporate RM client planning sessions within 12 months of deployment.</p>
         </div>
         
         
@@ -1354,7 +1425,7 @@
       <h3 class="scenario-card__title">Corporate segment credit appetite enablement</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Relationship managers need current guidance on the bank&#39;s credit appetite by sector and obligor size to calibrate deal origination effectively. The agent provides RM-facing credit appetite guidance by sector, rating tier, and facility type, reflecting current portfolio concentration limits and the credit committee&#39;s stated appetite, enabling RMs to self-qualify opportunities before committing relationship management time.</p>
+      <p class="scenario-card__intent">Relationship managers (RMs) need current guidance on the Bank's credit appetite by sector and obligor size to calibrate deal origination effectively. The AI agent provides RM-facing credit appetite guidance by sector, rating tier, and facility type, reflecting current portfolio concentration limits and the credit committee's stated appetite, enabling RMs to self-qualify opportunities before committing relationship management time.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1374,7 +1445,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent maintains a current corporate credit appetite reference by sector, rating tier, and facility type, drawing from the active credit policy and portfolio concentration data. RMs query the tool before committing to a deal discussion; appetite gaps or concentration issues are surfaced upfront.</p>
+      <p>The AI agent maintains a current corporate credit appetite reference by sector, rating tier, and facility type, drawing from the active credit policy and portfolio concentration data. RMs query the tool before committing to a deal discussion; appetite gaps or concentration issues are surfaced upfront.</p>
     </div>
     
 
@@ -1388,15 +1459,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent credit appetite tool used in ≥50% of new corporate deal origination conversations within 12 months of deployment.</p>
+          <p>The AI agent's credit appetite tool used in ≥50% of new corporate deal origination conversations within 12 months of deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>Appetite-related credit committee decline rate reduced by ≥30% from the prior-year baseline.</p>
+          <p>≥75% of appetite checks rated as clear and accurate by RMs; appetite-related credit committee decline rate reduced by ≥30% from the prior-year baseline.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -1430,7 +1499,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Public sector</h2>
     
-    <p class="l3-section__intent">Public sector segment strategy covers the bank&#39;s banking and financing relationships with government entities, state-owned enterprises, and public institutions — including government deposit management, bond issuance and distribution, project finance for infrastructure, and treasury services. Public sector relationships are often governed by framework agreements and public procurement rules, with credit assessment incorporating sovereign or quasi-sovereign risk ratings and political risk considerations under the bank&#39;s country risk policy.</p>
+    <p class="l3-section__intent">Public sector segment strategy covers the Bank's banking and financing relationships with government entities, state-owned enterprises, and public institutions — including government deposit management, bond issuance and distribution, project finance for infrastructure, and treasury services. Public sector relationships are often governed by framework agreements and public procurement rules, with credit assessment incorporating sovereign or quasi-sovereign risk ratings and political risk considerations under the Bank's country risk policy.</p>
     
   </header>
 
@@ -1464,7 +1533,7 @@
       <h3 class="scenario-card__title">Public-Sector Banking Obligation Monitoring</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Monthly reconciliation of bank obligations under national banking programs in KG, KZ, and RU markets — subsidized-lending targets, TSA servicing, government-payroll program participation — is automated, with compliance-gap alerts and pre-populated regulatory reporting output.</p>
+      <p class="scenario-card__intent">Monthly reconciliation of the Bank's obligations under national banking programs — subsidized-lending targets, Treasury Single Account (TSA) servicing, government-payroll program participation — is automated, with compliance-gap alerts and pre-populated regulatory reporting output.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1477,14 +1546,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Banks serving public-sector clients in KG, KZ, and RU carry mandatory participation obligations tracked in spreadsheets and reconciled manually before each regulatory reporting cycle. Gaps surface late, with limited time for remediation.</p>
+      <p>The Bank's public sector business carries mandatory program participation obligations tracked in spreadsheets and reconciled manually before each regulatory reporting cycle. Gaps surface late, with limited time for remediation.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads program participation data and reconciles balances against contractual and regulatory obligations monthly. Compliance gaps surface to the relationship team with time-to-breach estimates and remediation options; regulatory reporting is pre-populated from the same reconciliation output.</p>
+      <p>The AI agent reads program participation data and reconciles balances against contractual and regulatory obligations monthly. Compliance gaps are raised to the relationship team with time-to-breach estimates and remediation options; regulatory reporting is pre-populated from the same reconciliation output for compliance team review.</p>
     </div>
     
 
@@ -1492,21 +1561,19 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Monthly reconciliation of bank obligations under national banking programs in KG, KZ, and RU — subsidized-lending targets, TSA servicing, and government-payroll program participation — is automated by agent, with compliance-gap alerts carrying time-to-breach estimates and pre-populated regulatory reporting output produced from the same reconciliation.</p>
+      <p class="okr-objective">Monthly reconciliation of the Bank's obligations under national banking programs — subsidized-lending targets, TSA servicing, and government-payroll program participation — is automated by the AI agent, with compliance-gap alerts carrying time-to-breach estimates and pre-populated regulatory reporting output produced from the same reconciliation.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent performs monthly obligation reconciliations for ≥100% of in-scope national banking programs across KG, KZ, and RU markets for ≥12 consecutive months; pre-populated regulatory reporting output produced in ≥95% of reconciliation cycles.</p>
+          <p>The AI agent performs monthly obligation reconciliations for 100% of in-scope national banking programs for ≥12 consecutive months; pre-populated regulatory reporting output produced in ≥95% of reconciliation cycles.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥90% of agent-produced compliance-gap alerts confirmed as accurate by the relationship team; regulatory reporting output accepted by compliance teams as submission-ready without material manual correction in ≥85% of cycles.</p>
+          <p>≥90% of AI-produced compliance-gap alerts confirmed as accurate by the relationship team; regulatory reporting output accepted by the compliance team as submission-ready without material manual correction in ≥85% of cycles.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -1539,7 +1606,7 @@
       <h3 class="scenario-card__title">Public sector segment economics insights</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Public sector banking relationships — government ministries, state-owned enterprises, municipalities — carry distinct economics shaped by procurement rules, liquidity concentration, and regulatory relationship obligations. The agent synthesises public sector client revenue, capital consumption, and product penetration data into a continuous segment economics view for the institutional banking head.</p>
+      <p class="scenario-card__intent">Public sector banking relationships — government ministries, state-owned enterprises, municipalities — carry distinct economics shaped by procurement rules, liquidity concentration, and regulatory relationship obligations. The AI agent synthesizes public sector client revenue, capital consumption, and product penetration data into a quarterly segment economics view for the institutional banking head.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1559,7 +1626,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent integrates public sector client revenue, capital consumption, and cross-product data on a quarterly basis, producing a segment economics dashboard with wallet share trend signals. Client relationships below the RAROC hurdle for two consecutive quarters are flagged for relationship review.</p>
+      <p>The AI agent integrates public sector client revenue, capital consumption, and cross-product data on a quarterly basis, producing a segment economics dashboard with wallet share trend signals. Client relationships below the RAROC hurdle for two consecutive quarters are flagged to the institutional banking team for relationship review.</p>
     </div>
     
 
@@ -1573,19 +1640,17 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent produces quarterly public sector economics reports covering ≥80% of Tier 1 public sector relationships from deployment.</p>
+          <p>The AI agent produces quarterly public sector economics reports covering ≥80% of Tier 1 public sector relationships from deployment.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of reports accepted by the institutional banking team as accurate and sufficient for relationship investment decisions.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Public sector economics visibility cycle compressed from semi-annual assembly to quarterly continuous read.</p>
+          <p>Public sector economics visibility cycle compressed from semi-annual assembly to a quarterly read.</p>
         </div>
         
       </div>
@@ -1614,7 +1679,7 @@
       <h3 class="scenario-card__title">Public sector tender opportunity detection</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Government procurement tenders for banking services — cash management, payments infrastructure, lending facilities — represent significant revenue and balance sheet opportunities in the public sector segment. The agent monitors government procurement publications and budget announcements across the bank&#39;s operating jurisdictions, identifying relevant banking service tenders and alerting the institutional banking team with lead time for bid preparation.</p>
+      <p class="scenario-card__intent">Government procurement tenders for banking services — cash management, payments infrastructure, lending facilities — represent significant revenue and balance sheet opportunities in the public sector segment. The AI agent monitors government procurement publications and budget announcements in the Bank's market, identifying relevant banking service tenders and alerting the institutional banking team with lead time for bid preparation.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1634,7 +1699,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors government procurement portals and budget publications across operating jurisdictions, classifying banking service tenders by revenue opportunity size and strategic fit, and alerting the institutional banking team at least 60 days before bid submission deadlines.</p>
+      <p>The AI agent monitors government procurement portals and budget publications in the Bank's market, classifying banking service tenders by revenue opportunity size and strategic fit, and alerting the institutional banking team at least 60 days before bid submission deadlines so that it can prepare the bid.</p>
     </div>
     
 
@@ -1642,25 +1707,23 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">All material public sector banking tenders are identified at least 60 days before the bid deadline, enabling competitive preparation and increasing the bank&#39;s share of government banking mandates.</p>
+      <p class="okr-objective">All material public sector banking tenders are identified at least 60 days before the bid deadline, enabling competitive preparation and increasing the Bank's share of government banking mandates.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent monitors government procurement portals for ≥90% of active jurisdictions from deployment; delivers tender alerts for ≥95% of identified banking service tenders.</p>
+          <p>The AI agent monitors ≥90% of the government procurement portals in the Bank's market from deployment; delivers tender alerts for ≥95% of identified banking service tenders.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>Tender identification lead time of ≥60 days achieved for ≥90% of alerted tenders; bid submission rate on alerted tenders increases by ≥25% from the baseline.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Tender identification-to-alert time reduced from reactive monitoring to ≥60-day advance notice.</p>
+          <p>Tender identification moves from reactive, late discovery on procurement portals to alerts issued ≥60 days before the bid deadline.</p>
         </div>
         
       </div>

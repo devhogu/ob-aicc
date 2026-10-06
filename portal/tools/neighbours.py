@@ -11,6 +11,7 @@
 #   DOMAIN_ORDER - stable Discovery area order
 #   OVERVIEW - local navigation labels
 #   INTRO - Discovery landing introduction
+#   reading_guide - render the authored reading aid of the landing page
 #   finance_renderer - load the established Financial Services source adapter
 #   VisibleText - extract searchable text without embedded code
 #   title_of - extract a page's visible title
@@ -43,9 +44,24 @@ DOMAIN_ORDER = ('strategic-portfolio', 'strategic-initiatives', 'value-streams',
                 'shared-banking-capabilities', 'finance-treasury', 'banking-data-analytics')
 OVERVIEW = {'en': 'Overview', 'ru': 'Обзор'}
 INTRO = {
-    'en': 'Banking services, journeys and operating capabilities where AI may add value. Explore the map and assess each opportunity in its intended context.',
+    'en': 'The Discovery Catalog is a map of a bank and, for each part of the map, a list of scenarios in which AI could help. It gives a uniform view of the Bank\'s primary value chains, shared capabilities, steering and control, and for each it shows where AI can increase visibility and insight, automate operational flows, enable people at the point of work, and open new offerings. It holds 1,101 scenarios in nine areas. Use it to find and compare opportunities; nothing in it has been selected or approved.',
     'ru': 'Банковские услуги, клиентские пути и операционные возможности, в которых AI может принести пользу. Изучите карту и оцените каждую возможность с учётом условий её применения.',
 }
+
+
+def reading_guide(lang):
+    """Render the authored reading aid of the Discovery landing page, where an edition has one."""
+    path = ROOT / 'portal/sections/discovery' / lang / 'guide.md'
+    if not path.exists():
+        return ''
+    body = MarkdownIt('commonmark', {'html': False}).enable('table').render(path.read_text())
+    title = re.search(r'<h1>(.*?)</h1>', body, re.S)
+    if not title:
+        raise ValueError(f'Reading guide needs one h1: {path}')
+    body = body.replace(title[0], '', 1)
+    body = re.sub(r'<table>.*?</table>', lambda m: '<div class="o-table-wrap">' + m[0] + '</div>', body, flags=re.S)
+    return ('<details class="discovery-guide"><summary>' + title[1] + '</summary>'
+            '<div class="discovery-guide__body">' + body + '</div></details>')
 
 
 def finance_renderer():
@@ -160,6 +176,7 @@ def discovery_page(source, relative, lang):
     if relative == Path('index.html'):
         body = re.sub(r'(<h1\b[^>]*>).*?(</h1>)', lambda m: m[1] + escape(label) + m[2], body, count=1, flags=re.S)
         body = re.sub(r'(<p class="page-header__intent">).*?(</p>)', lambda m: m[1] + escape(INTRO[lang]) + m[2], body, count=1, flags=re.S)
+        body = re.sub(r'(<header class="page-header"[^>]*>.*?</header>)', lambda m: m[1] + reading_guide(lang), body, count=1, flags=re.S)
         # Temporary visual comparison, confined to the English overview.
         if lang == 'en':
             options = iter((

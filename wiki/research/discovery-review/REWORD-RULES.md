@@ -33,9 +33,10 @@ Do not replace a foreign specific with a Kyrgyz one (no "som", "Elcart", "State 
 
 - American spelling throughout (optimization, analyze, organization, center, modeling, program, judgment, license as noun and verb).
 - The actor is "the AI agent" ("The AI agent reads…", "an AI agent drafts…"), never bare "Agent". A human agent (contact-center agent, branch agent, relationship manager) keeps its human name; where both appear in one sentence, write "the AI agent" and "the contact-center agent" so that they cannot be confused. Titles of sections and cards that name human agents are not changed.
+- Compounds of the AI actor take "AI": "agent-produced" → "AI-produced", "agent-drafted" → "AI-drafted", "agent-generated" → "AI-generated", "agent-driven" → "AI-driven"; "agent output" → "the AI agent's output". Compounds of a human agent stay ("agent desktop", "agent-assist").
 - "the Bank" with a capital for the institution; "a bank" or "banks" for banks in general.
 - "100%" where the text says "≥100%" or "≥ 100%".
-- Remove authoring notes and scaffolding left in the text ("L complexity is retained because…", "TODO", placeholders); `service.eyebrow` in the breadcrumb becomes "Discovery Catalog".
+- Remove authoring notes and scaffolding left in the text ("L complexity is retained because…", "TODO", placeholders). The breadcrumb token `service.eyebrow` stays in the source: both builders replace it with the name of their site.
 - A label printed from an identifier is written as a proper label: "Aml investigations sar" → "AML investigations & SAR", "Rm productivity" → "RM productivity", "Pricing models ftp" → "Pricing models & FTP".
 - Keep the catalog's voice: third person, present tense, concrete roles, artifacts and cadences. Keep each text at about the length it had (within a fifth). Do not add claims, figures or roles that the card does not already have. Do not change a figure or target except "≥100%" or where a fix entry says so.
 - Fix what is wrong or unclear: a truncated sentence, text from another card, a contradiction inside the card (cadence, threshold, count, recipient), a sentence that says nothing, a sentence too long to follow. Do not rewrite a sentence that is correct, clear and already neutral.
