@@ -1384,115 +1384,155 @@ body {
 
         <div class="cl-govtable-header">
           <h2 class="cl-govtable-title">Lab practice maturity</h2>
-          <p class="cl-govtable-intent">How far good practice is applied today in each control area of the Lab, as a percentage of what the Bank expects of a production system. The figures are a self-assessment by AICC, reviewed with the guardrails each quarter. Lower figures are expected where a practice matters only once a result moves toward production; the guardrails are required at every level. Point at a figure to see what it means and why it is where it is.</p>
+          <p class="cl-govtable-intent">How far good practice is applied in each control area of the Lab, measured against what the Bank expects of a production system. The Lab has not yet been assessed: no Experiment has run, and its guardrails are not yet due. Each area shows the practice the Lab intends; point at its status to see what it must show to reach each level.</p>
         </div>
 
         <table class="cl-govtable">
           <tbody>
             <tr class="cl-govtable__category-row"><td colspan="2">Governance &amp; decisions</td></tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 50%;">Decision rights</td>
+              <td class="cl-govtable__concern-name">Decision rights</td>
               <td class="cl-govtable__posture">The sponsor decides the result; the AICC Lead assigns the Risk Tier</td>
-              <td class="cl-govtable__why">Who decides is defined, but approvals at each step are not yet recorded in one place, and the Lab has no regular decision forum. Recording each approval in the Experiment's Solution Definition would raise it.</td>
+              <td class="cl-govtable__criteria" data-band="2">Who decides is named for each Experiment.</td>
+              <td class="cl-govtable__criteria" data-band="3">Every approval is recorded in the Solution Definition.</td>
+              <td class="cl-govtable__criteria" data-band="4">Approvals are recorded and checked at each quarterly Steering.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 75%;">Prohibitions</td>
+              <td class="cl-govtable__concern-name">Prohibitions</td>
               <td class="cl-govtable__posture">A fixed list: no personal data leaves the Lab, nothing is written back to production</td>
-              <td class="cl-govtable__why">The list exists and isolation enforces most of it, but compliance is not yet tested on a schedule. A periodic check with recorded evidence would raise it.</td>
+              <td class="cl-govtable__criteria" data-band="2">The list is written down and known to the team.</td>
+              <td class="cl-govtable__criteria" data-band="3">Isolation enforces the list, and breaches are logged.</td>
+              <td class="cl-govtable__criteria" data-band="4">Compliance is tested on a schedule, with evidence kept.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 20%;">Resolving disagreements</td>
-              <td class="cl-govtable__posture">Not formalized; case by case</td>
-              <td class="cl-govtable__why">There is no agreed way to settle a dispute between the sponsor, the team, and the control functions. A short escalation rule up to the AICC Lead and Steering would move it out of this band.</td>
+              <td class="cl-govtable__concern-name">Resolving disagreements</td>
+              <td class="cl-govtable__posture">Escalation to the AICC Lead, then the quarterly Steering</td>
+              <td class="cl-govtable__criteria" data-band="2">Disputes are raised with the AICC Lead.</td>
+              <td class="cl-govtable__criteria" data-band="3">A written escalation rule is applied and its outcomes recorded.</td>
+              <td class="cl-govtable__criteria" data-band="4">Escalations are reviewed at Steering and the lessons applied.</td>
             </tr>
             <tr class="cl-govtable__category-row"><td colspan="2">Risk &amp; controls</td></tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 40%;">Risk classification</td>
-              <td class="cl-govtable__posture">Lab risk register, categorized by type</td>
-              <td class="cl-govtable__why">Risks are recorded for the Lab as a whole, but not every Experiment is assessed on its own or given a Risk Tier before the build. Assessing each Experiment at the scope step would raise it.</td>
+              <td class="cl-govtable__concern-name">Risk classification</td>
+              <td class="cl-govtable__posture">Risk register for the Lab; a Risk Tier for each Experiment</td>
+              <td class="cl-govtable__criteria" data-band="2">Risks of the Lab are recorded by type.</td>
+              <td class="cl-govtable__criteria" data-band="3">Every Experiment has a risk assessment and a Risk Tier before the build.</td>
+              <td class="cl-govtable__criteria" data-band="4">Risk Tiers are reviewed at the close and feed the Lab register.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 80%;">Output integrity</td>
-              <td class="cl-govtable__posture">Drift, bias, and grounding checks during the build</td>
-              <td class="cl-govtable__why">Checks run on an evaluation set during every build. What is missing for production is an independent review of the results and monitoring after the build.</td>
+              <td class="cl-govtable__concern-name">Output integrity</td>
+              <td class="cl-govtable__posture">Drift, bias, and grounding checks on an evaluation set during the build</td>
+              <td class="cl-govtable__criteria" data-band="2">Checks are run on some Experiments.</td>
+              <td class="cl-govtable__criteria" data-band="3">Every build runs the checks on an evaluation set.</td>
+              <td class="cl-govtable__criteria" data-band="4">Results are reviewed independently and monitored after the build.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 90%;">Lab isolation</td>
+              <td class="cl-govtable__concern-name">Lab isolation</td>
               <td class="cl-govtable__posture">Separate network segment, key management, no access to production</td>
-              <td class="cl-govtable__why">Isolation is built into the environment and checked at setup. A periodic penetration test with recorded results would close the remaining gap.</td>
+              <td class="cl-govtable__criteria" data-band="2">The Lab sits in its own network segment.</td>
+              <td class="cl-govtable__criteria" data-band="3">Isolation is checked at setup and after every change.</td>
+              <td class="cl-govtable__criteria" data-band="4">Penetration tests run on a schedule, with results recorded.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 85%;">Personal data protection</td>
+              <td class="cl-govtable__concern-name">Personal data protection</td>
               <td class="cl-govtable__posture">Masking, redaction, and extract rules</td>
-              <td class="cl-govtable__why">Personal data is masked or removed before it enters. The sign-off with the data-protection Control Function Contact is not yet recorded for every extract.</td>
+              <td class="cl-govtable__criteria" data-band="2">Personal data is masked by hand.</td>
+              <td class="cl-govtable__criteria" data-band="3">Rules mask or remove personal data before every extract enters.</td>
+              <td class="cl-govtable__criteria" data-band="4">Each extract has a recorded sign-off by the data-protection Control Function Contact.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 30%;">Failure handling</td>
-              <td class="cl-govtable__posture">Basic rollback and alerting</td>
-              <td class="cl-govtable__why">A failed run can be rolled back and raises an alert, but there is no incident procedure or named responder. A short runbook with an owner would raise it.</td>
+              <td class="cl-govtable__concern-name">Failure handling</td>
+              <td class="cl-govtable__posture">Rollback and alerting, with a named responder</td>
+              <td class="cl-govtable__criteria" data-band="2">A failed run can be rolled back.</td>
+              <td class="cl-govtable__criteria" data-band="3">A written runbook with a named owner is followed.</td>
+              <td class="cl-govtable__criteria" data-band="4">Incidents are reviewed and the runbook is updated.</td>
             </tr>
             <tr class="cl-govtable__category-row"><td colspan="2">Operations &amp; processes</td></tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 70%;">Scenario selection</td>
-              <td class="cl-govtable__posture">Prioritized backlog of scenarios</td>
-              <td class="cl-govtable__why">Scenarios come from a prioritized backlog. The criteria for choosing the next one are not yet written down.</td>
+              <td class="cl-govtable__concern-name">Scenario selection</td>
+              <td class="cl-govtable__posture">Prioritized backlog with written selection criteria</td>
+              <td class="cl-govtable__criteria" data-band="2">Scenarios are chosen from a list.</td>
+              <td class="cl-govtable__criteria" data-band="3">A prioritized backlog with written criteria is used.</td>
+              <td class="cl-govtable__criteria" data-band="4">Selection is reviewed against results at Steering.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 65%;">Workflow mapping</td>
-              <td class="cl-govtable__posture">Service workflow documented for each scenario</td>
-              <td class="cl-govtable__why">Each scenario has its workflow described, but not to a common template, so results are hard to compare.</td>
+              <td class="cl-govtable__concern-name">Workflow mapping</td>
+              <td class="cl-govtable__posture">Service workflow described for each scenario, to a common template</td>
+              <td class="cl-govtable__criteria" data-band="2">Workflows are described ad hoc.</td>
+              <td class="cl-govtable__criteria" data-band="3">Every scenario uses the common template.</td>
+              <td class="cl-govtable__criteria" data-band="4">Maps are reused and kept current across Experiments.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 25%;">Experiment lifecycle</td>
-              <td class="cl-govtable__posture">Choose → build → validate</td>
-              <td class="cl-govtable__why">Only the middle of the lifecycle is defined. The time-box, the review at its end, and the closing with an Outcome Report are not yet applied. The flow above sets them; applying it would raise this.</td>
+              <td class="cl-govtable__concern-name">Experiment lifecycle</td>
+              <td class="cl-govtable__posture">Time-box, build, evaluation, review, Outcome Report</td>
+              <td class="cl-govtable__criteria" data-band="2">Experiments are built and checked.</td>
+              <td class="cl-govtable__criteria" data-band="3">Every Experiment has a time-box and ends with an Outcome Report.</td>
+              <td class="cl-govtable__criteria" data-band="4">Time to decision and outcomes are tracked across Experiments.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 45%;">Path to delivery</td>
-              <td class="cl-govtable__posture">Informal handover to production delivery</td>
-              <td class="cl-govtable__why">A good result is handed over by agreement, without a Proposal or a handover package. Turning each accepted result into a Proposal would raise it.</td>
+              <td class="cl-govtable__concern-name">Path to delivery</td>
+              <td class="cl-govtable__posture">Each accepted result becomes a Proposal for delivery</td>
+              <td class="cl-govtable__criteria" data-band="2">Good results are handed over by agreement.</td>
+              <td class="cl-govtable__criteria" data-band="3">Every accepted result becomes a Proposal with a handover package.</td>
+              <td class="cl-govtable__criteria" data-band="4">Proposals are tracked to a delivery decision.</td>
             </tr>
             <tr class="cl-govtable__category-row"><td colspan="2">Data &amp; analytics</td></tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 80%;">Data pipeline</td>
-              <td class="cl-govtable__posture">Extract pipeline running; extracts made per scenario</td>
-              <td class="cl-govtable__why">The read-only pipeline runs and is reused. Each source does not yet have a named owner on record.</td>
+              <td class="cl-govtable__concern-name">Data pipeline</td>
+              <td class="cl-govtable__posture">Read-only extract pipeline; extracts made per scenario</td>
+              <td class="cl-govtable__criteria" data-band="2">Extracts are made by hand.</td>
+              <td class="cl-govtable__criteria" data-band="3">A reusable read-only pipeline, with a named owner for each source.</td>
+              <td class="cl-govtable__criteria" data-band="4">Pipeline runs are monitored and logged.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 75%;">Data quality</td>
-              <td class="cl-govtable__posture">Quality checked at extract; correctness confirmed</td>
-              <td class="cl-govtable__why">Quality is checked when data is extracted. The checks are not yet automated or reported in a standard way.</td>
+              <td class="cl-govtable__concern-name">Data quality</td>
+              <td class="cl-govtable__posture">Quality checked at extract</td>
+              <td class="cl-govtable__criteria" data-band="2">Quality is checked by eye.</td>
+              <td class="cl-govtable__criteria" data-band="3">Standard checks run at every extract.</td>
+              <td class="cl-govtable__criteria" data-band="4">Checks are automated and reported.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 85%;">Data privacy</td>
+              <td class="cl-govtable__concern-name">Data privacy</td>
               <td class="cl-govtable__posture">Masking and anonymization of sensitive fields</td>
-              <td class="cl-govtable__why">Sensitive fields are masked or anonymized by rule. A periodic re-identification test would close the gap.</td>
+              <td class="cl-govtable__criteria" data-band="2">Sensitive fields are masked by hand.</td>
+              <td class="cl-govtable__criteria" data-band="3">Rule-based masking and anonymization for every extract.</td>
+              <td class="cl-govtable__criteria" data-band="4">Re-identification tests run on a schedule.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 65%;">Analytics correctness</td>
+              <td class="cl-govtable__concern-name">Analytics correctness</td>
               <td class="cl-govtable__posture">Analytics checked against reference data</td>
-              <td class="cl-govtable__why">Results are compared with reference data where it exists. Reference sets are not available for every scenario.</td>
+              <td class="cl-govtable__criteria" data-band="2">Results are spot-checked.</td>
+              <td class="cl-govtable__criteria" data-band="3">Results are compared with reference data where it exists.</td>
+              <td class="cl-govtable__criteria" data-band="4">Reference sets exist for every scenario.</td>
             </tr>
             <tr class="cl-govtable__category-row"><td colspan="2">Measurement</td></tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 55%;">Performance metrics (KPIs)</td>
-              <td class="cl-govtable__posture">KPIs tracked for each scenario</td>
-              <td class="cl-govtable__why">KPIs are tracked, but the baseline before the change is not always measured, so the gain is hard to prove.</td>
+              <td class="cl-govtable__concern-name">Performance metrics (KPIs)</td>
+              <td class="cl-govtable__posture">KPIs and a baseline for each Experiment</td>
+              <td class="cl-govtable__criteria" data-band="2">KPIs are named.</td>
+              <td class="cl-govtable__criteria" data-band="3">KPIs are measured against a recorded baseline.</td>
+              <td class="cl-govtable__criteria" data-band="4">KPI results are compared across Experiments.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 75%;">Hypothesis targets</td>
-              <td class="cl-govtable__posture">Target set for each scenario's hypothesis</td>
-              <td class="cl-govtable__why">Each Experiment states its hypothesis and target. Targets are not yet reviewed by the sponsor before the build.</td>
+              <td class="cl-govtable__concern-name">Hypothesis targets</td>
+              <td class="cl-govtable__posture">A stated hypothesis and target for each Experiment</td>
+              <td class="cl-govtable__criteria" data-band="2">A hypothesis is written down.</td>
+              <td class="cl-govtable__criteria" data-band="3">The target is agreed with the sponsor before the build.</td>
+              <td class="cl-govtable__criteria" data-band="4">Targets are checked against results at the review.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 60%;">Workflow metrics</td>
-              <td class="cl-govtable__posture">Functional and integration metrics recorded</td>
-              <td class="cl-govtable__why">Functional and integration metrics are recorded, but there are no agreed thresholds that pass or fail a run.</td>
+              <td class="cl-govtable__concern-name">Workflow metrics</td>
+              <td class="cl-govtable__posture">Functional and integration metrics with pass thresholds</td>
+              <td class="cl-govtable__criteria" data-band="2">Metrics are recorded.</td>
+              <td class="cl-govtable__criteria" data-band="3">Agreed thresholds decide whether a run passes.</td>
+              <td class="cl-govtable__criteria" data-band="4">Metrics are monitored over time.</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 50%;">Acceptance criteria</td>
-              <td class="cl-govtable__posture">Acceptance defined for each scenario</td>
-              <td class="cl-govtable__why">Criteria are defined, but often late in the work and not signed by the sponsor. Agreeing them at the scope step would raise it.</td>
+              <td class="cl-govtable__concern-name">Acceptance criteria</td>
+              <td class="cl-govtable__posture">Acceptance criteria agreed at the scope step</td>
+              <td class="cl-govtable__criteria" data-band="2">Criteria are written at some point.</td>
+              <td class="cl-govtable__criteria" data-band="3">Criteria are agreed with the sponsor at the scope step.</td>
+              <td class="cl-govtable__criteria" data-band="4">Every result is checked against them and signed off.</td>
             </tr>
           </tbody>
         </table>

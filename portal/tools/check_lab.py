@@ -73,7 +73,7 @@ def check(output=OUTPUT):
     model = lab.source_content()
     source = Capture(lab.SOURCE.read_text())
     expected_cells = {(c['lane'], c['stage']): [task['id'] for task in c['tasks']] for c in model['cells']}
-    expected_values = [c['coverage'] for group in model['guardrails'] for c in group['concerns']]
+    expected_values = [c['coverage'] for group in model['guardrails'] for c in group['concerns'] if c['coverage'] is not None]
     for lang in ('en', 'ru'):
         route = Path(output) / lang / 'lab/index.html'
         if not route.exists():
@@ -91,7 +91,7 @@ def check(output=OUTPUT):
                              'lab-stage': len(model['stages']), 'lab-lane': len(model['lanes']),
                              'lab-system': len(model['systems']), 'lab-capabilities-card': len(model['capabilities']),
                              'lab-loop-card': len(model['loop']), 'lab-guardrail-group': len(model['guardrails']),
-                             'lab-coverage': concerns, 'lab-tip': concerns, 'lab-band': len(lab.BANDS[lang])}.items():
+                             'lab-coverage': len(expected_values), 'lab-tip': concerns, 'lab-band': len(lab.BANDS[lang])}.items():
             if parsed.classes[name] != number:
                 errors.append(f'{lang}: expected {number} {name}, got {parsed.classes[name]}')
         if markup.count('class="lab-guardrail-id"') != len(lab.corpus_guardrails(lang)):
@@ -115,7 +115,7 @@ def check(output=OUTPUT):
         if not set(task for tasks in expected_cells.values() for task in tasks).issubset(searchable):
             errors.append(f'{lang}: not every matrix task is searchable')
         if f'>{lab.UI[lang]["coverage"]}<' not in markup:
-            errors.append(f'{lang}: illustrative coverage not labelled')
+            errors.append(f'{lang}: assessment column not labelled')
         counts[lang + '_lab_content_units'] = len(parsed.units)
         counts[lang + '_lab_search_entries'] = len(entries)
     for lang in ('en', 'ru'):

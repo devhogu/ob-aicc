@@ -33,15 +33,15 @@ UI = {
            'guardrail': 'Guardrail', 'evidence': 'Evidence', 'setup': 'Once, before the first Experiment', 'bands': 'Maturity bands',
            'capabilities': 'Capabilities', 'loop': 'Intent loop', 'guardrails': 'Guardrails',
            'stages': 'Stage', 'lanes': 'Workstream', 'all': 'All', 'reset': 'Show complete workflow',
-           'empty': 'No separate activity specified', 'coverage': 'Maturity',
-           'concern': 'Concern', 'posture': 'Posture', 'selection': 'Workflow view'},
+           'empty': 'No separate activity specified', 'coverage': 'Assessment', 'not_assessed': 'Not yet assessed', 'levels': 'What each level requires',
+           'concern': 'Concern', 'posture': 'Intended practice', 'selection': 'Workflow view'},
     'ru': {'concept': 'Концепция', 'matrix': 'Процесс эксперимента', 'systems': 'Люди и AI-агенты', 'maturity': 'Зрелость практик',
            'guardrails_intro': 'Лабораторная среда работает в рамках семи защитных механизмов. Руководитель AICC ведёт их вместе с подтверждениями в реестре «Стандарты», а ежеквартальное управляющее совещание их рассматривает.',
            'guardrail': 'Защитный механизм', 'evidence': 'Подтверждение', 'setup': 'Один раз, до первого эксперимента', 'bands': 'Уровни зрелости',
            'capabilities': 'Возможности', 'loop': 'Цикл управления', 'guardrails': 'Защитные механизмы',
            'stages': 'Этап', 'lanes': 'Блок работ', 'all': 'Все', 'reset': 'Показать весь процесс',
-           'empty': 'Отдельная задача не указана', 'coverage': 'Зрелость',
-           'concern': 'Область контроля', 'posture': 'Подход', 'selection': 'Вид процесса'},
+           'empty': 'Отдельная задача не указана', 'coverage': 'Оценка', 'not_assessed': 'Не оценено', 'levels': 'Что требуется для каждого уровня',
+           'concern': 'Область контроля', 'posture': 'Планируемая практика', 'selection': 'Вид процесса'},
 }
 
 
@@ -194,11 +194,13 @@ def source_content(source=SOURCE):
         else:
             name = row.one('cl-govtable__concern-name')
             identifier = f'{group["id"]}-{len(group["concerns"]) + 1}'
-            why = row.find(cls='cl-govtable__why')
+            # A score appears only once the area has been assessed; until then the criteria of each level do.
+            score = re.search(r'--coverage:\s*(\d+)%', name.attrs.get('style', ''))
+            criteria = [(cell.attrs['data-band'], unit(f'{identifier}-criteria-{cell.attrs["data-band"]}', cell))
+                        for cell in row.find(cls='cl-govtable__criteria')]
             group['concerns'].append({'id': identifier, 'name': unit(identifier + '-name', name),
                                       'desc': unit(identifier + '-desc', row.one('cl-govtable__posture')),
-                                      'why': unit(identifier + '-why', why[0]) if why else None,
-                                      'coverage': int(re.search(r'--coverage:\s*(\d+)%', name.attrs['style'])[1])})
+                                      'criteria': criteria, 'coverage': int(score[1]) if score else None})
     return model
 
 
@@ -297,12 +299,19 @@ def render(model, lang):
         body += f'<article class="lab-card lab-guardrail-group" id="{group["id"]}">{text(group["name"], "h3")}<table><thead><tr><th scope="col">{ui["concern"]}</th><th scope="col">{ui["posture"]}</th><th scope="col">{ui["coverage"]}</th></tr></thead><tbody>'
         for concern in group['concerns']:
             index(concern['id'], concern['name'], concern['desc'])
-            low, high, name, meaning = band(concern['coverage'], lang)
             tip = f'tip-{concern["id"]}'
-            reason = text(concern['why'], 'span', 'class="lab-tip-why"') if concern.get('why') else ''
+            levels = ''.join(f'<li><strong>{BANDS[lang][int(level) - 1][0]}–{BANDS[lang][int(level) - 1][1]}% · {escape(BANDS[lang][int(level) - 1][2])}:</strong> {text(key)}</li>'
+                             for level, key in concern['criteria'])
+            if concern['coverage'] is None:
+                status = f'<span class="lab-assessment" tabindex="0" aria-describedby="{tip}">{ui["not_assessed"]}</span>'
+                head = f'<strong>{ui["not_assessed"]}</strong>'
+            else:
+                low, high, name, meaning = band(concern['coverage'], lang)
+                status = f'<span class="lab-coverage" tabindex="0" aria-describedby="{tip}" style="--coverage:{concern["coverage"]}%"><span>{concern["coverage"]}%</span></span>'
+                head = f'<strong>{low}–{high}% · {escape(name)}</strong><span class="lab-tip-band">{escape(meaning)}</span>'
             body += (f'<tr id="{concern["id"]}">{text(concern["name"], "th", "scope=row")}{text(concern["desc"], "td")}'
-                     f'<td class="lab-coverage-cell"><span class="lab-coverage" tabindex="0" aria-describedby="{tip}" style="--coverage:{concern["coverage"]}%"><span>{concern["coverage"]}%</span></span>'
-                     f'<span class="lab-tip" role="tooltip" id="{tip}"><strong>{low}–{high}% · {escape(name)}</strong><span class="lab-tip-band">{escape(meaning)}</span>{reason}</span></td></tr>')
+                     f'<td class="lab-coverage-cell">{status}<span class="lab-tip" role="tooltip" id="{tip}">{head}'
+                     f'<span class="lab-tip-band">{ui["levels"]}</span><ul class="lab-tip-levels">{levels}</ul></span></td></tr>')
         body += '</tbody></table></article>'
     body += '</div></section></article>'
     return body, entries

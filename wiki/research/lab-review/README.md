@@ -991,3 +991,7 @@ The language pass left the page's structure as it was; a reading for meaning sho
 3. **People and AI agents.** The "Capabilities" section repeated the AI-agent duties word for word and claimed that the model decides, governs and speaks to regulators; it was removed. The two systems and the intent loop remain, under "How people and AI agents work together".
 4. **Practice maturity.** The former "guardrails scorecard" is a self-assessment of how far good practice is applied in each control area, as a percentage of what the Bank expects of a production system. It now says so, shows four bands (0–25% not in place, 26–50% basic, 51–75% established, 76–100% strong), and each figure has a popup with its band, the band's meaning, the reason for the figure, and what would raise it. The figures themselves are unchanged.
 
+## Not yet assessed, 6 October 2026
+
+The percentages came unchanged from the predecessor page, where they were illustrative; no assessment stands behind them, and the corpus records the Lab guardrails as "Not yet due". The page therefore no longer shows scores. Each control area shows the practice the Lab intends and the status "Not yet assessed"; its popup lists what the area must show to reach each level (26–50% basic, 51–75% established, 76–100% strong). When the Lab has been assessed against these criteria, with evidence, a score can be entered in the source and the page shows it with its band.
+

@@ -23,8 +23,8 @@ class LabProjection(unittest.TestCase):
             self.assertEqual(parsed.cells['A', '2'], ['task-a-2-1', 'task-a-2-2'])
             self.assertEqual(parsed.cells['E', '1'], [])
             self.assertIn(f'/{lang}/lab/#task-a-2-2', [entry['u'] for entry in search])
-            self.assertEqual(parsed.values, [50, 75, 20, 40, 80, 90, 85, 30, 70, 65, 25, 45, 80, 75, 85, 65, 55, 75, 60, 50])
-            self.assertEqual(len(parsed.units), 206)
+            self.assertEqual(parsed.values, [])
+            self.assertEqual(len(parsed.units), len(lab.source_content()["units"]))
             self.assertNotIn('html-alt/', body)
 
     def test_incomplete_or_stale_russian_source_cannot_publish(self):
