@@ -105,6 +105,8 @@ All eleven reviewers read their scope in full, including the page header intents
 
 ## 7. Decisions needed before the fix round
 
+**Settled on 6 October 2026:** the owner chose a neutral statement of each concern with one O!Bank wrap on the landing page, in place of localizing the cards to Kyrgyz specifics (D1, D2, D4 below are superseded on that point). The decisions in force, the rewording rules and the steps of the round are in [RUNBOOK.md](RUNBOOK.md) and [REWORD-RULES.md](REWORD-RULES.md); the tool is `tools/dc.py`.
+
 Each decision settles a family of fixes. The recommendation is what the fix round will apply unless decided otherwise.
 
 | # | Decision | Recommendation |
