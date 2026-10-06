@@ -1200,6 +1200,9 @@ def content_page(site, p, lang):
     elif p['type'] not in ('template',):
         body = link_terms(site, body, ctx)
     body = substitute(site, body, lang)
+    about_guide = p['id'] in ('about/what-we-do', 'about/how-we-work')
+    if about_guide:
+        body = body.replace('<p>', '<p class="o-lead">', 1)
     desc = desc_of(site, p)
     lead = '<p class="o-lead" lang="%s">%s</p>' % (description_language(site, p), esc(desc)) if desc and p['type'] != 'catalogue' and not b['src'].startswith('portal/content/') else ''
     h1 = p['title'] if p['title'] in SHORT else disp(p['title'])
@@ -1232,6 +1235,8 @@ def content_page(site, p, lang):
         ch = ch.replace('<table>', '<div class="o-table-wrap" role="region" tabindex="0" aria-label="%s"><table>' % table_label).replace('</table>', '</table></div>')
         change = '<details class="oc-disclosure change"><summary>%s</summary><div>%s</div></details>' % (esc(tr(site, lang, 'change_history')), ch)
     main = '%s%s<div class="o-doc" lang="%s">%s</div>%s%s%s' % (head, extra if p['type'] == 'template' else '', b['language'], body, change, prev_next(site, p, lang), read_further(site, p, lang))
+    if about_guide:
+        main = main.replace('<div class="o-doc"', '<div class="o-doc about-guide"', 1)
     if p['type'] == 'catalogue':
         main = '%s<div class="o-doc" lang="%s">%s%s</div>%s%s' % (head, b['language'], extra, body, prev_next(site, p, lang), read_further(site, p, lang))
     return layout(site, p, lang, main, b['outline'])

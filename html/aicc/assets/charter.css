@@ -178,6 +178,8 @@ dialog.fb .fb-body .oc-button{flex:none;align-self:flex-end}
 @media(max-width:650px){.crumbline{flex-direction:column;gap:4px}.crumb-next{max-width:100%}.crumbline .crumbs{white-space:normal}}
 @media print{.crumb-next{display:none}}
 /* About AICC: the summary */
+.o-doc.about-guide h2{margin:32px 0 16px;padding:0;border:0}
+.o-doc.about-guide h3{margin:12px 0}
 .about-block{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 32px;padding:20px 0;border-top:1px solid var(--border)}
 .about-block h2{margin:0;font-size:18px}
 .about-block p{margin:0 0 10px}
