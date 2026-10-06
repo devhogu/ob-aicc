@@ -28,17 +28,49 @@ import workspace
 SOURCE = workspace.ROOT / 'html-alt/cloudlab/index.html'
 TRANSLATION = workspace.ROOT / 'portal/sections/lab/ru/content.json'
 UI = {
-    'en': {'concept': 'Concept', 'matrix': 'Experiment workflow', 'systems': 'Operating model',
+    'en': {'concept': 'Concept', 'matrix': 'Experiment workflow', 'systems': 'People and AI agents', 'maturity': 'Practice maturity',
+           'guardrails_intro': 'The Lab runs under seven guardrails. The AICC Lead keeps them with their evidence in the Standards record, and the quarterly Steering reviews them.',
+           'guardrail': 'Guardrail', 'evidence': 'Evidence', 'setup': 'Once, before the first Experiment', 'bands': 'Maturity bands',
            'capabilities': 'Capabilities', 'loop': 'Intent loop', 'guardrails': 'Guardrails',
            'stages': 'Stage', 'lanes': 'Workstream', 'all': 'All', 'reset': 'Show complete workflow',
-           'empty': 'No separate activity specified', 'coverage': 'Illustrative coverage',
+           'empty': 'No separate activity specified', 'coverage': 'Maturity',
            'concern': 'Concern', 'posture': 'Posture', 'selection': 'Workflow view'},
-    'ru': {'concept': 'Концепция', 'matrix': 'Процесс эксперимента', 'systems': 'Операционная модель',
+    'ru': {'concept': 'Концепция', 'matrix': 'Процесс эксперимента', 'systems': 'Люди и AI-агенты', 'maturity': 'Зрелость практик',
+           'guardrails_intro': 'Лабораторная среда работает в рамках семи защитных механизмов. Руководитель AICC ведёт их вместе с подтверждениями в реестре «Стандарты», а ежеквартальное управляющее совещание их рассматривает.',
+           'guardrail': 'Защитный механизм', 'evidence': 'Подтверждение', 'setup': 'Один раз, до первого эксперимента', 'bands': 'Уровни зрелости',
            'capabilities': 'Возможности', 'loop': 'Цикл управления', 'guardrails': 'Защитные механизмы',
            'stages': 'Этап', 'lanes': 'Блок работ', 'all': 'Все', 'reset': 'Показать весь процесс',
-           'empty': 'Отдельная задача не указана', 'coverage': 'Иллюстративный охват',
+           'empty': 'Отдельная задача не указана', 'coverage': 'Зрелость',
            'concern': 'Область контроля', 'posture': 'Подход', 'selection': 'Вид процесса'},
 }
+
+
+BANDS = {
+    'en': [(0, 25, 'Not in place', 'Done case by case or not at all; no defined practice.'),
+           (26, 50, 'Basic', 'A minimal practice exists, but it is informal, manual, or not applied to every Experiment.'),
+           (51, 75, 'Established', 'Defined and applied to every Experiment, with evidence kept; some gaps against what production requires.'),
+           (76, 100, 'Strong', 'Applied consistently, evidenced, and checked; close to what the Bank requires of production systems.')],
+    'ru': [(0, 25, 'Нет практики', 'Решается в каждом случае отдельно или не выполняется; практика не определена.'),
+           (26, 50, 'Базовый уровень', 'Минимальная практика есть, но она неформальна, выполняется вручную или не в каждом эксперименте.'),
+           (51, 75, 'Устойчивая практика', 'Определена и применяется в каждом эксперименте, подтверждения сохраняются; есть пробелы относительно требований к промышленным системам.'),
+           (76, 100, 'Высокий уровень', 'Применяется последовательно, подтверждается и проверяется; близко к требованиям Банка к промышленным системам.')],
+}
+
+
+def band(value, lang):
+    return next(item for item in BANDS[lang] if item[0] <= value <= item[1])
+
+
+def corpus_guardrails(lang):
+    """The guardrails of the Lab as the Standards record of the Registry keeps them."""
+    rows = []
+    for line in (workspace.ROOT / 'registry' / lang / 'standards.md').read_text().splitlines():
+        cells = [cell.strip() for cell in line.strip().strip('|').split('|')]
+        if cells and re.fullmatch(r'LAB-\d{3}', cells[0]):
+            rows.append({'id': cells[0], 'text': cells[1], 'evidence': cells[2]})
+    if not rows:
+        raise ValueError(f'No Lab guardrails in the {lang} Standards record')
+    return rows
 
 
 class _Node:
@@ -141,7 +173,10 @@ def source_content(source=SOURCE):
     for kind, source_cls, name_cls, desc_cls in (
         ('capabilities', 'cl-cap', 'cl-cap__name', 'cl-cap__desc'),
         ('loop', 'cl-loop-step', 'cl-loop-step__name', 'cl-loop-step__desc')):
-        section = root.one('cloud-lab-section--' + ('capabilities' if kind == 'capabilities' else 'loop'))
+        found = root.find(cls='cloud-lab-section--' + ('capabilities' if kind == 'capabilities' else 'loop'))
+        if not found:
+            continue
+        section = found[0]
         model[kind + '_title'] = unit(kind + '-title', section.one('cl-block-title'))
         model[kind + '_intro'] = unit(kind + '-intro', section.one('cl-block-intent'))
         for index, item in enumerate(section.find(cls=source_cls), 1):
@@ -159,8 +194,10 @@ def source_content(source=SOURCE):
         else:
             name = row.one('cl-govtable__concern-name')
             identifier = f'{group["id"]}-{len(group["concerns"]) + 1}'
+            why = row.find(cls='cl-govtable__why')
             group['concerns'].append({'id': identifier, 'name': unit(identifier + '-name', name),
                                       'desc': unit(identifier + '-desc', row.one('cl-govtable__posture')),
+                                      'why': unit(identifier + '-why', why[0]) if why else None,
                                       'coverage': int(re.search(r'--coverage:\s*(\d+)%', name.attrs['style'])[1])})
     return model
 
@@ -197,6 +234,11 @@ def render(model, lang):
 
     body = f'<article class="lab-content"><header class="lab-header"><span class="neighbour-status">{ui["concept"]}</span><h1>AI Lab</h1>'
     body += text(model['subtitle'], 'p', 'class="lab-subtitle"') + text(model['intro'], 'p', 'class="lab-intro"') + '</header>'
+    body += f'<section class="lab-section" aria-labelledby="guardrails"><h2 id="guardrails">{ui["guardrails"]}</h2><p class="lab-section-intro">{escape(ui["guardrails_intro"])}</p><ol class="lab-guardrail-list">'
+    for item in corpus_guardrails(lang):
+        entries.append({'u': url + '#' + item['id'].lower(), 't': 'AI Lab', 'h': item['text'], 'x': item['evidence']})
+        body += f'<li class="lab-card" id="{item["id"].lower()}"><span class="lab-guardrail-id">{item["id"]}</span><p>{escape(item["text"])}</p><p class="lab-guardrail-evidence"><span>{ui["evidence"]}:</span> {escape(item["evidence"])}</p></li>'
+    body += '</ol></section>'
     body += f'<section class="lab-section" aria-labelledby="workflow"><h2 id="workflow">{ui["matrix"]}</h2>'
     body += '<div class="lab-controls" hidden>'
     for kind, items in (('stage', model['stages']), ('lane', model['lanes'])):
@@ -206,13 +248,17 @@ def render(model, lang):
             body += f'<button type="button" data-lab-{kind}="{item["id"]}" aria-pressed="false">{escape(words[item["name"]])}</button>'
         body += '</div></fieldset>'
     body += f'<button type="button" class="lab-reset" data-lab-reset>{ui["reset"]}</button><p class="lab-selection o-sr-only" aria-live="polite"></p></div>'
-    body += f'<div class="lab-matrix-wrap" role="region" tabindex="0" aria-label="{ui["matrix"]}"><div class="lab-matrix">'
+    body += f'<div class="lab-matrix-wrap" role="region" tabindex="0" aria-label="{ui["matrix"]}"><div class="lab-matrix" style="--lab-stages:{len(model["stages"])}">'
     for row, lane in enumerate(model['lanes'], 2):
         body += text(lane['name'], 'div', f'class="lab-lane" data-lane="{lane["id"]}" style="grid-column:1;grid-row:{row}"')
     for column, stage in enumerate(model['stages'], 2):
         step = stage['id']
         index('stage-' + step, stage['name'], model['intro'])
-        body += f'<h3 id="stage-{step}" class="lab-stage" data-stage="{step}" style="grid-column:{column};grid-row:1"><span class="lab-number">{step}</span>{text(stage["name"])}</h3>'
+        if step == '0':
+            # One-time preparation precedes the repeated Experiment steps.
+            body += f'<h3 id="stage-{step}" class="lab-stage lab-stage--setup" data-stage="{step}" style="grid-column:{column};grid-row:1">{text(stage["name"])}<span class="lab-stage-note">{ui["setup"]}</span></h3>'
+        else:
+            body += f'<h3 id="stage-{step}" class="lab-stage" data-stage="{step}" style="grid-column:{column};grid-row:1"><span class="lab-number">{step}</span>{text(stage["name"])}</h3>'
         for row, lane in enumerate(model['lanes'], 2):
             cell = next(c for c in model['cells'] if c['stage'] == step and c['lane'] == lane['id'])
             body += f'<div class="lab-cell" data-stage="{step}" data-lane="{lane["id"]}" style="grid-column:{column};grid-row:{row}">'
@@ -234,19 +280,29 @@ def render(model, lang):
     body += '</div><a class="lab-systems-connection" href="#intent-loop"><span aria-hidden="true">↔</span>' + text(model['systems_connection']) + '</a>'
     body += '<aside class="lab-implication">' + text(model['implication_label'], 'h3') + text(model['implication'], 'p') + '</aside></section>'
     for kind, identifier in (('capabilities', 'capabilities'), ('loop', 'intent-loop')):
+        if not model[kind]:
+            continue
         body += f'<section class="lab-section" aria-labelledby="{identifier}">' + heading(identifier, model[kind + '_title'], model[kind + '_intro'])
         body += f'<div class="lab-{kind}">'
         for number, item in enumerate(model[kind], 1):
             index(item['id'], item['name'], item['desc'])
             body += f'<article class="lab-card lab-{kind}-card" id="{item["id"]}"><header><span class="lab-number">{number}</span>{text(item["name"], "h3")}</header>{text(item["desc"], "p")}</article>'
         body += '</div></section>'
-    body += '<section class="lab-section" aria-labelledby="guardrails">' + heading('guardrails', model['guardrails_title'], model['guardrails_intro'])
+    body += '<section class="lab-section" aria-labelledby="maturity">' + heading('maturity', model['guardrails_title'], model['guardrails_intro'])
+    body += f'<dl class="lab-bands" aria-label="{ui["bands"]}">' + ''.join(
+        f'<div class="lab-band lab-band--{n}"><dt>{low}–{high}% · {escape(name)}</dt><dd>{escape(meaning)}</dd></div>'
+        for n, (low, high, name, meaning) in enumerate(BANDS[lang], 1)) + '</dl>'
     body += f'<p class="lab-coverage-label">{ui["coverage"]}</p><div class="lab-guardrails">'
     for group in model['guardrails']:
         body += f'<article class="lab-card lab-guardrail-group" id="{group["id"]}">{text(group["name"], "h3")}<table><thead><tr><th scope="col">{ui["concern"]}</th><th scope="col">{ui["posture"]}</th><th scope="col">{ui["coverage"]}</th></tr></thead><tbody>'
         for concern in group['concerns']:
             index(concern['id'], concern['name'], concern['desc'])
-            body += f'<tr id="{concern["id"]}">{text(concern["name"], "th", "scope=row")}{text(concern["desc"], "td")}<td><span class="lab-coverage" style="--coverage:{concern["coverage"]}%"><span>{concern["coverage"]}%</span></span></td></tr>'
+            low, high, name, meaning = band(concern['coverage'], lang)
+            tip = f'tip-{concern["id"]}'
+            reason = text(concern['why'], 'span', 'class="lab-tip-why"') if concern.get('why') else ''
+            body += (f'<tr id="{concern["id"]}">{text(concern["name"], "th", "scope=row")}{text(concern["desc"], "td")}'
+                     f'<td class="lab-coverage-cell"><span class="lab-coverage" tabindex="0" aria-describedby="{tip}" style="--coverage:{concern["coverage"]}%"><span>{concern["coverage"]}%</span></span>'
+                     f'<span class="lab-tip" role="tooltip" id="{tip}"><strong>{low}–{high}% · {escape(name)}</strong><span class="lab-tip-band">{escape(meaning)}</span>{reason}</span></td></tr>')
         body += '</tbody></table></article>'
     body += '</div></section></article>'
     return body, entries
@@ -258,7 +314,10 @@ def build(output):
         url = f'/{lang}/lab/'
         body, entries = render(model, lang)
         ui = UI[lang]
-        labels = [('workflow', ui['matrix']), ('systems', ui['systems']), ('capabilities', ui['capabilities']), ('intent-loop', ui['loop']), ('guardrails', ui['guardrails'])]
+        labels = [('guardrails', ui['guardrails']), ('workflow', ui['matrix']), ('systems', ui['systems'])]
+        labels += [('capabilities', ui['capabilities'])] if model['capabilities'] else []
+        labels += [('intent-loop', ui['loop'])] if model['loop'] else []
+        labels += [('maturity', ui['maturity'])]
         nav = f'<a href="{workspace.relative(url, url)}" aria-current="page">AI Lab</a>' + ''.join(f'<a href="#{identifier}">{escape(label)}</a>' for identifier, label in labels)
         head = f'<link rel="stylesheet" href="{workspace.asset(url, "lab.css")}"><script defer src="{workspace.asset(url, "lab.js")}"></script>'
         page = workspace.page(url, lang, 'lab', 'AI Lab', body, nav, body_class='lab-workspace')

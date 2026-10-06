@@ -15,16 +15,16 @@ from check_lab import Capture
 class LabProjection(unittest.TestCase):
     def test_source_tasks_and_postures_reach_both_edition_destinations(self):
         model = lab.source_content()
-        for lang, expected_name in (('en', 'Set access roles and policies'), ('ru', 'Настроить роли и политики доступа')):
+        for lang, expected_name in (('en', 'Requirements & acceptance'), ('ru', 'Требования и приёмка')):
             body, search = lab.render(model, lang)
             parsed = Capture(body)
             self.assertEqual(parsed.units['task-a-2-2-name'], expected_name)
-            self.assertEqual(parsed.units['task-a-2-1-desc'], 'Infrastructure request approved; IT security sign-off' if lang == 'en' else 'Заявка на инфраструктуру согласована; получено заключение информационной безопасности')
+            self.assertEqual(parsed.units['task-a-2-1-desc'], 'Fix the number of Iterations and the date of the review' if lang == 'en' else 'Зафиксировать число итераций и дату рассмотрения результата')
             self.assertEqual(parsed.cells['A', '2'], ['task-a-2-1', 'task-a-2-2'])
-            self.assertEqual(parsed.cells['E', '2'], [])
+            self.assertEqual(parsed.cells['E', '1'], [])
             self.assertIn(f'/{lang}/lab/#task-a-2-2', [entry['u'] for entry in search])
             self.assertEqual(parsed.values, [50, 75, 20, 40, 80, 90, 85, 30, 70, 65, 25, 45, 80, 75, 85, 65, 55, 75, 60, 50])
-            self.assertEqual(len(parsed.units), 209)
+            self.assertEqual(len(parsed.units), 206)
             self.assertNotIn('html-alt/', body)
 
     def test_incomplete_or_stale_russian_source_cannot_publish(self):

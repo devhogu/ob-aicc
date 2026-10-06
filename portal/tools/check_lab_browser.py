@@ -46,13 +46,15 @@ def contrast(first, second):
 
 
 def interactions(page, counts):
-    for step in range(1, 7):
+    model = lab.source_content()
+    lanes = len(model['lanes'])
+    for step in [stage['id'] for stage in model['stages']]:
         button = page.locator(f'[data-lab-stage="{step}"]')
         button.focus()
         page.keyboard.press('Enter')
         assert button.get_attribute('aria-pressed') == 'true'
         assert page.locator('.lab-stage:visible').count() == 1
-        assert page.locator('.lab-cell:visible').count() == 5
+        assert page.locator('.lab-cell:visible').count() == lanes
         assert page.locator('.lab-cell:visible').evaluate_all('els=>els.every(e=>e.dataset.stage===String(' + str(step) + '))')
         assert button.evaluate('e=>document.activeElement===e')
         counts['stage_selections'] += 1
@@ -65,8 +67,8 @@ def interactions(page, counts):
         page.locator('[data-lab-lane=all]').click()
     page.locator('[data-lab-reset]').focus()
     page.keyboard.press('Space')
-    assert page.locator('.lab-cell:visible').count() == 30
-    assert page.locator('.lab-task:visible').count() == 41
+    assert page.locator('.lab-cell:visible').count() == len(model['cells'])
+    assert page.locator('.lab-task:visible').count() == sum(len(cell['tasks']) for cell in model['cells'])
     assert page.locator('[data-lab-stage=all]').get_attribute('aria-pressed') == 'true'
     assert page.locator('[data-lab-lane=all]').get_attribute('aria-pressed') == 'true'
     # Search or a local fragment must reveal content hidden by a selected view.
@@ -123,7 +125,7 @@ def main():
                             page.locator('.o-nav>details>summary').click()
                         page.locator('.portal-local-nav a[href="#guardrails"]').click()
                         assert page.locator('#guardrails').evaluate('e=>document.activeElement===e')
-                        page.locator('#q').fill('Set access roles and policies' if lang == 'en' else 'Настроить роли и политики доступа')
+                        page.locator('#q').fill('Requirements & acceptance' if lang == 'en' else 'Требования и приёмка')
                         result = page.locator('#results a').first
                         result.wait_for()
                         assert '#task-a-2-2' in result.get_attribute('href')
@@ -141,8 +143,8 @@ def main():
             for lang in ('en', 'ru'):
                 nojs = plain.new_page()
                 nojs.goto(base + lang + '/lab/')
-                assert nojs.locator('.lab-task:visible').count() == 41
-                assert nojs.locator('[data-lab-unit]').count() == 209
+                assert nojs.locator('.lab-task:visible').count() == sum(len(cell['tasks']) for cell in lab.source_content()['cells'])
+                assert nojs.locator('[data-lab-unit]').count() == len(lab.source_content()['units'])
                 assert not nojs.locator('.lab-controls').is_visible()
                 assert nojs.evaluate('document.documentElement.scrollWidth') <= 390
                 counts['no_script_editions'] += 1
