@@ -143,6 +143,20 @@ def discovery_page(source, relative, lang):
     body = re.sub(r'<footer class="page-footer".*?</footer>', '', body, flags=re.S)
     body = re.sub(r'<main\b', '<div', body, count=1).replace('</main>', '</div>', 1)
     body = body.replace('class="page-header" role="banner"', 'class="page-header"')
+    if lang == 'en' and relative == Path('strategic-portfolio/index.html'):
+        # Page-local presentation trial; retain every authored statement and destination.
+        classes += ' discovery-strategic'
+        def context_cards(match):
+            rows = re.findall(r'<tr class="problems-row">\s*<th\b[^>]*>(.*?)</th>\s*<td\b[^>]*>(.*?)</td>\s*</tr>', match[0], re.S)
+            if len(rows) != 4:
+                raise ValueError('Strategic portfolio context requires its four source lenses')
+            return '<div class="discovery-context-grid">' + ''.join(
+                '<article class="discovery-context-card"><h3>' + label + '</h3><p>' + statement + '</p></article>'
+                for label, statement in rows) + '</div>'
+        body = re.sub(r'<table class="problems-table">.*?</table>', context_cards, body, flags=re.S)
+        body = re.sub(r'(<article class="card[^"]*")>',
+                      lambda m: m[1] + ' data-ui-pattern="' + ('workflows' if 'card--flow' in m[1] else 'groups') + '">', body)
+        body = re.sub(r'(<details class="scenario-card"[^>]*)(>)', r'\1 data-ui-pattern="scenario"\2', body)
     if relative == Path('index.html'):
         body = re.sub(r'(<h1\b[^>]*>).*?(</h1>)', lambda m: m[1] + escape(label) + m[2], body, count=1, flags=re.S)
         body = re.sub(r'(<p class="page-header__intent">).*?(</p>)', lambda m: m[1] + escape(INTRO[lang]) + m[2], body, count=1, flags=re.S)
