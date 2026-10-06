@@ -19,6 +19,10 @@ class Inspection(HTMLParser):
         self.groups, self.main_links, self.ids = [], [], []
         self.search = None
         self.in_main = False
+        self.in_footer = False
+        self.nav_footer_depth = 0
+        self.nav_footer_links, self.footer_links, self.feedback_refs = [], [], []
+        self.feedback_buttons = 0
         self.cards, self.card, self.depth = {}, None, 0
         self.feed(text)
 
@@ -30,11 +34,23 @@ class Inspection(HTMLParser):
             self.ids.append(attrs['id'])
         if tag == 'main':
             self.in_main = True
+        if tag == 'footer':
+            self.in_footer = True
+        if tag == 'div' and (self.nav_footer_depth or 'nav-foot' in attrs.get('class', '').split()):
+            self.nav_footer_depth += 1
+        if tag == 'dialog' and attrs.get('id') == 'fb':
+            self.feedback_refs.append(attrs.get('data-ref', ''))
+        if tag == 'button' and attrs.get('data-dialog') == 'fb':
+            self.feedback_buttons += 1
         if tag == 'a':
             if 'data-section' in attrs:
                 self.groups.append(attrs['data-section'])
-            if self.in_main and 'href' in attrs:
+            if self.in_main and not self.in_footer and 'href' in attrs:
                 self.main_links.append(attrs['href'])
+            if self.in_footer and 'href' in attrs:
+                self.footer_links.append(attrs['href'])
+            if self.nav_footer_depth and 'href' in attrs:
+                self.nav_footer_links.append(attrs['href'])
         if tag == 'script' and 'data-search' in attrs:
             self.search = attrs['data-search']
         if tag == 'details':
@@ -50,6 +66,10 @@ class Inspection(HTMLParser):
     def handle_endtag(self, tag):
         if tag == 'main':
             self.in_main = False
+        if tag == 'footer':
+            self.in_footer = False
+        if tag == 'div' and self.nav_footer_depth:
+            self.nav_footer_depth -= 1
         if tag == 'details' and self.card:
             self.depth -= 1
             if self.depth == 0:
@@ -68,7 +88,9 @@ def section_for(path):
 def check():
     errors = []
     counts = Counter()
+    references = {}
     for lang in ('en', 'ru'):
+        seen_refs = set()
         source = ROOT / f'html-alt/financial-services/{lang}'
         pages = sorted((OUTPUT / lang).rglob('index.html'))
         discovery_pages = list((OUTPUT / lang / 'discovery').rglob('index.html'))
@@ -85,6 +107,24 @@ def check():
             expected_search = f'search-{lang}.json' if section == 'aicc' else f'search-{section}-{lang}.json'
             if not parsed.search or parsed.search.rsplit('/', 1)[-1] != expected_search:
                 errors.append(f'{path}: incorrect search scope')
+            legal = {f'/{lang}/privacy/', f'/{lang}/terms-of-use/'}
+            for location, links in (('sidebar', parsed.nav_footer_links), ('footer', parsed.footer_links)):
+                targets = {urlsplit(urljoin('http://portal' + path, href)).path for href in links}
+                if not legal.issubset(targets):
+                    errors.append(f'{path}: missing common {location} legal links')
+            if parsed.feedback_buttons != 1 or len(parsed.feedback_refs) != 1 or not re.fullmatch(r'[0-9A-HJKMNP-TV-Z]{5}', parsed.feedback_refs[0]):
+                errors.append(f'{path}: missing page feedback or reference')
+            else:
+                ref = parsed.feedback_refs[0]
+                if ref in seen_refs:
+                    errors.append(f'{path}: duplicate page reference {ref}')
+                seen_refs.add(ref)
+                key = path.split('/', 2)[2]
+                if lang == 'en':
+                    references[key] = ref
+                elif references.get(key) != ref:
+                    errors.append(f'{path}: language counterparts have different page references')
+                counts['pages_with_feedback'] += 1
             duplicates = [key for key, count in Counter(parsed.ids).items() if count > 1]
             if duplicates and section != 'aicc':
                 errors.append(f'{path}: duplicate ids {duplicates[:3]}')
@@ -95,10 +135,12 @@ def check():
                 if section_for(target.path) != section:
                     errors.append(f'{path}: body link crosses section: {href}')
             if section != 'aicc':
-                for marker in ('class="term"', 'class="xref"', 'Version 2.2', 'Версия 2.2'):
+                for marker in ('class="term"', 'class="xref"', 'class="doc-facts"'):
                     if marker in text:
                         errors.append(f'{path}: inherited charter metadata/link: {marker}')
             if section == 'discovery':
+                if 'class="discovery-notice"' in text:
+                    errors.append(f'{path}: removed Discovery notice is still rendered')
                 relative = page.relative_to(OUTPUT / lang / 'discovery')
                 original = Inspection((source / relative).read_text())
                 if original.cards != parsed.cards:

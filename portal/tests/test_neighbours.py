@@ -17,7 +17,11 @@ class NeighbourRendering(unittest.TestCase):
         self.assertEqual(parsed.section, 'projects')
         self.assertEqual(parsed.search, '../../../assets/search-projects-ru.json')
         self.assertIn('href="../../../en/projects/service-resolution/"', markup)
-        self.assertNotIn('Version 2.2', markup)
+        self.assertIn('Версия 2.2', markup)
+        self.assertEqual(parsed.feedback_buttons, 1)
+        self.assertEqual(len(parsed.nav_footer_links), 2)
+        self.assertEqual(len(parsed.footer_links), 3)
+        self.assertNotIn('class="doc-facts"', markup)
 
     def test_discovery_preserves_scenario_text_and_direct_search_destination(self):
         source = neighbours.finance_renderer().discovery_source(Path('shared-banking-capabilities/customer-servicing/index.html'), 'en')

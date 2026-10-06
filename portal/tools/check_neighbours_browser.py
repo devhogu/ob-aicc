@@ -8,6 +8,7 @@ from pathlib import Path
 import sys
 import tempfile
 import threading
+from urllib.parse import parse_qs, urlsplit
 
 from playwright.sync_api import sync_playwright
 
@@ -30,7 +31,12 @@ MEASURE = """() => {
   const a=group[i].getBoundingClientRect(),b=group[j].getBoundingClientRect();
   if(Math.min(a.right,b.right)-Math.max(a.left,b.left)>2&&Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>2)overlap.push([i,j]);
  }
- return {width:innerWidth,scroll:document.documentElement.scrollWidth,
+ const chrome=['.o-header','.o-frame','.o-nav','.o-footer'].map(selector=>{
+  const e=document.querySelector(selector);if(!e)return null;
+  const r=e.getBoundingClientRect(),s=getComputedStyle(e);
+  return {x:r.x,width:r.width,padding:s.padding,font:s.fontFamily,size:s.fontSize,line:s.lineHeight};
+ });
+ return {width:innerWidth,scroll:document.documentElement.scrollWidth,chrome,
   h1:document.querySelectorAll('h1').length,main:document.querySelectorAll('main').length,
   groups:[...document.querySelectorAll('.portal-section-link')].map(e=>e.dataset.section),
   font:getComputedStyle(document.body).fontFamily,
@@ -42,6 +48,38 @@ MEASURE = """() => {
 class Quiet(SimpleHTTPRequestHandler):
     def log_message(self, *args):
         pass
+
+
+def check_page_chrome(page, counts):
+    """Readers can identify a page, open feedback and reach the common legal pages."""
+    lang = page.locator('html').get_attribute('lang')
+    assert page.locator('.nav-foot .nav-legal a').count() == 2, 'Missing sidebar legal links'
+    assert '2.2' in page.locator('.nav-foot .o-caption').inner_text(), 'Missing site version'
+    for container in ('.nav-foot', '.o-footer'):
+        for target in ('privacy', 'terms-of-use'):
+            link = page.locator(container + f' a[href*="{target}/"]')
+            assert link.count() == 1
+            assert urlsplit(link.evaluate('e=>e.href')).path.rstrip('/').endswith('/' + lang + '/' + target)
+    trigger = page.locator('.o-footer .pagefb')
+    assert trigger.count() == 1, 'Missing page feedback control'
+    trigger.click()
+    dialog = page.locator('#fb')
+    assert dialog.is_visible(), 'Feedback dialog did not open'
+    ref = dialog.get_attribute('data-ref')
+    assert ref and ('ID: ' + ref) in trigger.inner_text()
+    title = dialog.get_attribute('data-page')
+    mail = urlsplit(dialog.locator('a[data-mail]').get_attribute('href'))
+    query = parse_qs(mail.query)
+    assert mail.scheme == 'mailto' and mail.path == 'talimbayev@obank.kg'
+    assert ref in query['subject'][0]
+    assert all(value in query['body'][0] for value in (ref, title, page.url))
+    dialog.locator('.fb-copy').click()
+    assert dialog.is_visible(), 'Copying the reference closed feedback'
+    assert page.evaluate('navigator.clipboard.readText()') == ref
+    page.keyboard.press('Escape')
+    assert not dialog.is_visible()
+    assert trigger.evaluate('e=>document.activeElement===e'), 'Feedback did not restore focus'
+    counts['page_feedback_checks'] += 1
 
 
 def check_existing_aicc(page, base, counts):
@@ -87,6 +125,7 @@ def main():
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
             context = browser.new_context(viewport={'width': 1440, 'height': 1000})
+            context.grant_permissions(['clipboard-read', 'clipboard-write'])
             page = context.new_page()
             page.on('pageerror', lambda e: errors.append('JavaScript: ' + str(e)))
             page.on('response', lambda r: errors.append(f'HTTP {r.status}: {r.url}') if r.status >= 400 else None)
@@ -95,6 +134,11 @@ def main():
             for width, theme in ((1440, 'light'), (390, 'light'), (1440, 'dark'), (390, 'dark')):
                 page.set_viewport_size({'width': width, 'height': 1000})
                 page.evaluate('(t)=>localStorage.setItem("aicc-theme",t)', theme)
+                baseline_chrome = {}
+                for lang in ('en', 'ru'):
+                    page.goto(base + lang + '/', wait_until='load')
+                    page.evaluate('document.fonts.ready')
+                    baseline_chrome[lang] = page.evaluate(MEASURE)['chrome']
                 for route in pages:
                     page.goto(base + route, wait_until='load')
                     page.evaluate('document.fonts.ready')
@@ -109,6 +153,10 @@ def main():
                         problems.append('font/theme')
                     if state['brokenImages'] or state['overlap']:
                         problems.append('images/card overlap')
+                    if state['chrome'] != baseline_chrome[route.split('/')[0]]:
+                        problems.append('page framework differs from AICC')
+                    if page.locator('.nav-foot').count() != 1 or page.locator('.o-footer .pagefb').count() != 1 or page.locator('#fb').count() != 1:
+                        problems.append('sidebar/footer/feedback')
                     if problems:
                         errors.append(f'{width}/{theme} {route}: {", ".join(problems)}')
                     if width == 1440 and theme == 'light' and '/discovery/' in route:
@@ -143,6 +191,8 @@ def main():
                             if modal.get_attribute('aria-hidden') != 'true' or not button.evaluate('e=>document.activeElement===e'):
                                 errors.append('Modal close/focus: ' + route)
                             counts['stages_clicked'] += 1
+                    if route in {f'{lang}/{section}index.html' for lang in ('en', 'ru') for section in ('', 'discovery/', 'initiatives/', 'projects/', 'lab/', 'discovery/shared-banking-capabilities/customer-servicing/')}:
+                        check_page_chrome(page, counts)
                     if route in ('en/discovery/index.html', 'ru/discovery/index.html', 'en/projects/index.html', 'ru/initiatives/register/index.html', 'en/lab/index.html'):
                         page.screenshot(path=str(REPORT / f'{route.replace("/", "-")}-{width}-{theme}.png'))
                 print(f'Checked {width}px {theme}: {len(pages)} pages', flush=True)

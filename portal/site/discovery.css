@@ -27,7 +27,6 @@
 .discovery-content .modal p{margin:0 0 12px}
 .discovery-content .modal{z-index:200}
 .discovery-content .modal__panel{max-height:calc(100dvh - 32px)}
-.discovery-notice{color:var(--text-muted);font-size:13px;line-height:1.5;border-left:3px solid var(--brand);padding:8px 12px;background:var(--surface-subtle);margin-bottom:24px;max-width:100ch}
 .finance-tab-focus{outline:3px solid var(--focus);outline-offset:-3px}
 .discovery-content :target{scroll-margin-top:20px}
 .discovery-content .scenario-card:target{outline:2px solid var(--brand);outline-offset:3px}

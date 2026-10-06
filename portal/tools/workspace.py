@@ -1,19 +1,25 @@
 # START_MODULE_CONTRACT
 #   PURPOSE: Render the common presentation and navigation of independent portal sections.
-#   SCOPE: Shared header, section navigation, local assets and relative links; no content relationships.
+#   SCOPE: Shared header, navigation, footer, page feedback, local assets and relative links; no content relationships.
 #   DEPENDS: M-PORTAL-SOURCE
 #   LINKS: M-PORTAL-NEIGHBOURS, V-M-PORTAL-NEIGHBOURS
 # END_MODULE_CONTRACT
 # START_MODULE_MAP
 #   ROOT - repository root for shared assets
 #   SECTIONS - bilingual section identities and route prefixes
+#   CONTACT - shared portal feedback contact
 #   relative - resolve a site target relative to a page
 #   messages - load cached language-specific UI strings
 #   icon - load a local presentation icon
 #   section_label - select a section's language label
 #   asset - resolve a versioned presentation asset
 #   header - render branding, scoped search, language and theme controls
+#   short_id - assign stable page references without changing existing AICC references
+#   legal_pages - shared language-specific legal destinations
+#   navigation_footer - render legal links and the site version below navigation
 #   navigation - render global groups and the active section's local navigation
+#   footer - render the common site footer and page feedback trigger
+#   feedback_dialog - render the shared page feedback dialog
 #   styles - load the shared visual shell
 #   script - bind interactions to the section's search index
 #   page - render an independent section page without charter metadata
@@ -25,9 +31,11 @@ import hashlib
 import json
 from pathlib import Path
 import posixpath
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[2]
 SECTIONS = json.loads((ROOT / 'portal/sections/navigation.json').read_text())
+CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
 
 
 def relative(url, target):
@@ -74,7 +82,36 @@ def header(url, lang, section, m=None):
 </header>'''
 
 
-def navigation(url, lang, active, local_nav, tail='', m=None):
+def short_id(key, taken=None, length=5):
+    """Hash a stable page key using the established AICC reference alphabet."""
+    taken = set() if taken is None else taken
+    alphabet = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'
+    h = hashlib.sha1(key.encode('utf-8')).digest()
+    n = 0
+    while True:
+        chunk = int.from_bytes(hashlib.sha1(h + bytes([n])).digest()[:8], 'big')
+        out = ''
+        for _ in range(length):
+            out += alphabet[chunk % 32]
+            chunk //= 32
+        if out not in taken:
+            taken.add(out)
+            return out
+        n += 1
+
+
+def legal_pages(lang, m=None):
+    m = m or messages(lang)
+    return [(f'/{lang}/privacy/', m['privacy']), (f'/{lang}/terms-of-use/', m['terms_of_use'])]
+
+
+def navigation_footer(url, lang, m=None):
+    m = m or messages(lang)
+    links = ''.join(f'<a href="{relative(url, target)}"' + (' aria-current="page"' if target == url else '') + f'>{escape(label)}</a>' for target, label in legal_pages(lang, m))
+    return f'<div class="nav-foot"><div class="nav-legal">{links}</div><p class="o-caption">{escape(m["baseline"])}</p></div>'
+
+
+def navigation(url, lang, active, local_nav, m=None):
     m = m or messages(lang)
     groups = []
     for section in SECTIONS:
@@ -84,7 +121,28 @@ def navigation(url, lang, active, local_nav, tail='', m=None):
         target = '/' + lang + '/' + section['path']
         groups.append(f'''<div class="portal-nav-group{' is-current' if selected else ''}">
 <a class="portal-section-link" data-section="{section['id']}" href="{relative(url, target)}"{current}>{icon(section['icon'])}<span>{escape(section['label'][lang])}</span></a>{children}</div>''')
-    return f'''<aside class="o-nav"><details open><summary>{escape(m['nav_summary'])}</summary><nav class="portal-sections" aria-label="{escape(m['nav_label'])}">{''.join(groups)}</nav></details>{tail}</aside>'''
+    return f'''<aside class="o-nav"><details open><summary>{escape(m['nav_summary'])}</summary><nav class="portal-sections" aria-label="{escape(m['nav_label'])}">{''.join(groups)}</nav></details>{navigation_footer(url, lang, m)}</aside>'''
+
+
+def footer(url, lang, ref, m=None):
+    m = m or messages(lang)
+    subject = m['fb_subject'].replace('{ref}', ref)
+    links = ''.join(f' <a class="contact" href="{relative(url, target)}">{escape(label)}</a>' for target, label in legal_pages(lang, m))
+    return f'''<footer class="o-footer">
+      <span class="foot-text">{escape(m['footer'])} <a class="contact" href="mailto:{CONTACT['email']}?subject={quote(subject)}">{escape(m['contact_us'])}</a>{links}</span>
+      <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>{escape(m['pagefb'])}</span><span>ID: {escape(ref)}</span></button>
+    </footer>'''
+
+
+def feedback_dialog(lang, title, ref, m=None):
+    m = m or messages(lang)
+    subject = m['fb_subject'].replace('{ref}', ref)
+    return f'''<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="{escape(subject)}" data-ref="{escape(ref)}" data-page="{escape(title)}">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">{escape(m['pagefb'])}</h2><code>ID: {escape(ref)}</code><button type="button" class="fb-copy" data-copy-text="{escape(ref)}">{escape(m['fb_copy'])}</button></div>
+    <div class="fb-body"><p>{escape(m['fb_prov'])} <a data-mail href="mailto:{CONTACT['email']}">{escape(m['fb_word'])}</a>.</p><button class="oc-button" value="close">{escape(m['fb_close'])}</button></div>
+  </form>
+</dialog>'''
 
 
 def styles(url):
@@ -92,15 +150,16 @@ def styles(url):
     return ui + ''.join(f'<link rel="stylesheet" href="{asset(url, name)}">\n' for name in ('charter.css', 'neighbours.css'))
 
 
-def script(url, lang, section):
-    m = messages(lang)
-    index = f'/assets/search-{section}-{lang}.json'
-    return f'''<script src="{asset(url, 'site.js')}" defer data-search="{relative(url, index)}" data-t-none="{escape(m['search_none'])}" data-t-light="{escape(m['theme_to_light'])}" data-t-dark="{escape(m['theme_to_dark'])}" data-t-dz-close="{escape(m['dz_close'])}"></script>'''
+def script(url, lang, section, m=None):
+    m = m or messages(lang)
+    index = f'/assets/search-{lang}.json' if section == 'aicc' else f'/assets/search-{section}-{lang}.json'
+    return f'''<script src="{asset(url, 'site.js')}" defer data-search="{relative(url, index)}" data-t-none="{escape(m['search_none'])}" data-t-light="{escape(m['theme_to_light'])}" data-t-dark="{escape(m['theme_to_dark'])}" data-t-copied="{escape(m['copied'])}" data-t-mail-body="{escape(m['fb_mail_body'])}" data-t-dz-close="{escape(m['dz_close'])}"></script>'''
 
 
 def page(url, lang, section, title, body, local_nav, *, extra_head='', body_class=''):
     m = messages(lang)
     other = 'ru' if lang == 'en' else 'en'
+    ref = short_id(url.split('/', 2)[2].rstrip('/') + '/index')
     return f'''<!doctype html>
 <html lang="{lang}" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
@@ -115,5 +174,6 @@ def page(url, lang, section, title, body, local_nav, *, extra_head='', body_clas
 {header(url, lang, section)}
 <div class="o-frame">{navigation(url, lang, section, local_nav)}
 <main class="o-main neighbour-main" id="main" tabindex="-1">{body}
-<footer class="o-footer">{escape(section_label(section, lang))} · O!Bank</footer></main></div>
+{footer(url, lang, ref, m)}</main></div>
+{feedback_dialog(lang, title, ref, m)}
 </body></html>'''

@@ -18,7 +18,6 @@ import re
 import shutil
 import subprocess
 import sys
-from urllib.parse import quote
 
 from markdown_it import MarkdownIt
 import workspace
@@ -43,7 +42,6 @@ def unc(base_url, rel=''):
     """The UNC form of a share address, for copying on Windows: \\\\host\\share\\path."""
     path = base_url.split('://', 1)[1] + rel
     return '\\\\' + path.replace('/', '\\').rstrip('\\')
-CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
 PREFIX = {'about': 'ABT', 'responsible-ai': 'RAI', 'services': 'SRV', 'portfolio': 'PFL', 'delivery': 'DLV', 'governance': 'GOV', 'organization': 'ORG', 'knowledge-base': 'KNB', 'reference': 'REF'}
 LANGS = ['en', 'ru']
 DEFAULT_LANG = 'en'
@@ -700,28 +698,11 @@ def add_generated_pages(site):
             p['content_language'] = site.role_language
 
 
-def short_id(key, taken, length=5):
-    """A short page id: letters and digits without the confusing ones, taken from the hash of the stable page key."""
-    alphabet = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'
-    h = hashlib.sha1(key.encode('utf-8')).digest()
-    n = 0
-    while True:
-        chunk = int.from_bytes(hashlib.sha1(h + bytes([n])).digest()[:8], 'big')
-        out = ''
-        for _ in range(length):
-            out += alphabet[chunk % 32]
-            chunk //= 32
-        if out not in taken:
-            taken.add(out)
-            return out
-        n += 1
-
-
 def assign_refs(site):
     """Every page has a short id that readers quote when they ask about it. It comes from the stable identifier of the page in the sitemap, so it does not change when pages are added."""
     taken = set()
     for q in sorted(site.pages, key=lambda x: x['id']):
-        q['ref'] = short_id(q['id'], taken)
+        q['ref'] = workspace.short_id(q['id'], taken)
 
 
 def vocabulary_entries(site, source):
@@ -939,7 +920,7 @@ def asset_version(name):
 
 def layout(site, p, lang, main_html, outline):
     m = site.msg[lang]
-    vcss, vjs = asset_version('charter.css'), asset_version('site.js')
+    vcss = asset_version('charter.css')
     url = site.url(p, lang)
     A = site.assets(url)
     home = site.rel(url, '/%s/' % lang)
@@ -979,10 +960,6 @@ def layout(site, p, lang, main_html, outline):
                 if q['id'] in nested:
                     sub.append(link(nested[q['id']], 'sub2'))
             nav.append('<div class="nav-sub">%s</div>' % ''.join(sub))
-    legal = sorted([x for x in site.pages if x['type'] == 'legal'], key=lambda x: x['order'])
-    nav_legal = ''
-    if legal:
-        nav_legal = '<div class="nav-legal">%s</div>' % ''.join('<a href="%s"%s>%s</a>' % (site.rel(url, site.url(q, lang)), ' aria-current="page"' if q['id'] == p['id'] else '', esc(q['title'])) for q in legal)
     crumbs = ['<a href="%s">%s</a>' % (home, esc(m['home']))]
     if p.get('section'):
         sp = site.by_id[p['section'] + '/index']
@@ -1001,8 +978,6 @@ def layout(site, p, lang, main_html, outline):
         ctx = '<aside class="o-context" aria-label="%s"><strong>%s</strong>%s</aside>' % (esc(m['on_this_page']), esc(m['on_this_page']), links)
     reading = '<div class="o-reading"><div class="o-copy">%s</div>%s</div>' % (main_html, ctx) if ctx else '<div class="o-wide">%s</div>' % main_html
     ref = p.get('ref', '')
-    subject = m['fb_subject'].replace('{ref}', ref)
-    foot_legal = ''.join(' <a class="contact" href="%s">%s</a>' % (site.rel(url, site.url(q, lang)), esc(q['title'])) for q in legal)
     title = (p['title'] if p['id'] != 'index' else site.auth['home']['title'][lang]) + ' · ' + m['site_short']
     return f'''<!doctype html>
 <html lang="{lang}" data-theme="light">
@@ -1018,28 +993,20 @@ def layout(site, p, lang, main_html, outline):
 <link rel="stylesheet" href="{A}/charter.css?v={vcss}">
 <link rel="stylesheet" href="{workspace.asset(url, 'neighbours.css')}">
 <link rel="alternate" hreflang="{other}" href="{site.rel(url, site.url(p, other))}">
-<script src="{A}/site.js?v={vjs}" defer data-search="{A}/search-{lang}.json" data-t-none="{esc(m['search_none'])}" data-t-light="{esc(m['theme_to_light'])}" data-t-dark="{esc(m['theme_to_dark'])}" data-t-copied="{esc(m['copied'])}" data-t-mail-body="{esc(m['fb_mail_body'])}" data-t-dz-close="{esc(m['dz_close'])}"></script>
+{workspace.script(url, lang, 'aicc', m)}
 </head>
 <body class="charter" data-portal-section="aicc">
 <a class="o-skip" href="#main">{esc(m['skip'])}</a>
 {workspace.header(url, lang, 'aicc', m)}
 <div class="o-frame">
-  {workspace.navigation(url, lang, 'aicc', ''.join(nav), '<div class="nav-foot">' + nav_legal + '<p class="o-caption">' + esc(m['baseline']) + '</p></div>', m)}
+  {workspace.navigation(url, lang, 'aicc', ''.join(nav), m)}
   <main class="o-main" id="main" tabindex="-1">
     {bc}
     {reading}
-    <footer class="o-footer">
-      <span class="foot-text">{esc(m['footer'])} <a class="contact" href="mailto:{CONTACT['email']}?subject={quote(subject)}">{esc(m['contact_us'])}</a>{foot_legal}</span>
-      <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>{esc(m['pagefb'])}</span><span>ID: {esc(ref)}</span></button>
-    </footer>
+    {workspace.footer(url, lang, ref, m)}
   </main>
 </div>
-<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="{esc(subject)}" data-ref="{esc(ref)}" data-page="{esc(p['title'])}">
-  <form method="dialog">
-    <div class="fb-head"><h2 id="fb-t">{esc(m['pagefb'])}</h2><code>ID: {esc(ref)}</code><button type="button" class="fb-copy" data-copy-text="{esc(ref)}">{esc(m['fb_copy'])}</button></div>
-    <div class="fb-body"><p>{esc(m['fb_prov'])} <a data-mail href="mailto:{CONTACT['email']}">{esc(m['fb_word'])}</a>.</p><button class="oc-button" value="close">{esc(m['fb_close'])}</button></div>
-  </form>
-</dialog>
+{workspace.feedback_dialog(lang, p['title'], ref, m)}
 </body>
 </html>
 '''

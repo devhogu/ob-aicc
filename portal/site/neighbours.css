@@ -1,7 +1,7 @@
 /* Common navigation only. Each neighbouring section owns its content layout. */
 .o-header{border-bottom:2px solid var(--brand)}
 .portal-workspace{min-height:100vh;display:flex;flex-direction:column}
-.portal-workspace>.o-frame{flex:1;width:calc(100% - 16px)}
+.portal-workspace>.o-frame{flex:1 0 auto;width:calc(100% - 16px)}
 .portal-nav-group{border-bottom:1px solid var(--border);padding:5px 0}
 .portal-nav-group:last-child{border-bottom:0}
 .o-nav .portal-section-link{font-family:var(--font-heading);font-size:16px;font-weight:700;min-height:50px}
@@ -12,7 +12,6 @@
 .portal-local-nav .nav-sub{margin-left:12px;padding-left:6px}
 .portal-local-nav .nav-sub a{font-size:12px}
 .portal-workspace .neighbour-main{display:flex;flex-direction:column}
-.portal-workspace .o-footer{margin-top:auto;padding-top:20px}
 .neighbour-content{max-width:var(--content-width);padding-bottom:40px;line-height:1.65}
 .neighbour-content>p,.neighbour-content>ul,.neighbour-content>ol{max-width:82ch}
 .neighbour-content h1{font-size:clamp(28px,3vw,42px);max-width:30ch}
@@ -25,5 +24,5 @@
 .neighbour-content .empty-register{padding:24px;border:1px dashed var(--border-control);border-radius:12px;background:var(--surface-subtle)}
 @media(min-width:1101px){.o-nav:has(.portal-sections){max-height:100vh;overflow-y:auto;scrollbar-width:thin}}
 @media(max-width:1100px){.o-nav details>.portal-sections{display:flex;flex-direction:column;flex-wrap:nowrap}.portal-local-nav{margin-left:18px}}
-@media(max-width:650px){.portal-workspace>.o-frame{width:calc(100% - 10px)}.neighbour-content h1{font-size:28px}}
+@media(max-width:650px){.neighbour-content h1{font-size:28px}}
 @media print{.portal-workspace>.o-frame{width:100%}}
