@@ -1,0 +1,126 @@
+Checked AI Lab en, 1440px, light
+Checked AI Lab ru, 1440px, light
+Checked AI Lab en, 1440px, dark
+Checked AI Lab ru, 1440px, dark
+Checked AI Lab en, 768px, light
+Checked AI Lab ru, 768px, light
+Checked AI Lab en, 768px, dark
+Checked AI Lab ru, 768px, dark
+Checked AI Lab en, 390px, light
+Checked AI Lab ru, 390px, light
+Checked AI Lab en, 390px, dark
+Checked AI Lab ru, 390px, dark
+Checked AI Lab en, 320px, light
+Checked AI Lab ru, 320px, light
+Checked AI Lab en, 320px, dark
+Checked AI Lab ru, 320px, dark
+Exported 644 HTML files to /tmp/aicc-lab-csle8h9k/AI Lab package; open aicc.html. All internal links and search destinations verified.
+{
+  "counts": {
+    "stage_selections": 108,
+    "stage_lane_combinations": 540,
+    "fragment_reveal_checks": 36,
+    "page_views": 16,
+    "no_script_editions": 2,
+    "portable_editions": 2
+  },
+  "observations": [
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "muted_contrast": 6.4
+    },
+    {
+      "lang": "ru",
+      "width": 1440,
+      "theme": "light",
+      "muted_contrast": 6.4
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "muted_contrast": 8.64
+    },
+    {
+      "lang": "ru",
+      "width": 1440,
+      "theme": "dark",
+      "muted_contrast": 8.64
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "theme": "light",
+      "muted_contrast": 6.4
+    },
+    {
+      "lang": "ru",
+      "width": 768,
+      "theme": "light",
+      "muted_contrast": 6.4
+    },
+    {
+      "lang": "en",
+      "width": 768,
+      "theme": "dark",
+      "muted_contrast": 8.64
+    },
+    {
+      "lang": "ru",
+      "width": 768,
+      "theme": "dark",
+      "muted_contrast": 8.64
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "muted_contrast": 6.4
+    },
+    {
+      "lang": "ru",
+      "width": 390,
+      "theme": "light",
+      "muted_contrast": 6.4
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "muted_contrast": 8.64
+    },
+    {
+      "lang": "ru",
+      "width": 390,
+      "theme": "dark",
+      "muted_contrast": 8.64
+    },
+    {
+      "lang": "en",
+      "width": 320,
+      "theme": "light",
+      "muted_contrast": 6.4
+    },
+    {
+      "lang": "ru",
+      "width": 320,
+      "theme": "light",
+      "muted_contrast": 6.4
+    },
+    {
+      "lang": "en",
+      "width": 320,
+      "theme": "dark",
+      "muted_contrast": 8.64
+    },
+    {
+      "lang": "ru",
+      "width": 320,
+      "theme": "dark",
+      "muted_contrast": 8.64
+    }
+  ],
+  "errors": []
+}

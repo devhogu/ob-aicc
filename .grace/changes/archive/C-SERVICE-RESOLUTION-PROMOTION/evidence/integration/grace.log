@@ -1,0 +1,24 @@
+GRACE Lint Report
+=================
+Root: /devops/obank/aicc-service-resolution
+Profile: standard
+Files checked: 118
+Governed files: 27
+XML artifacts checked: 67
+Errors: 0
+Warnings: 13
+
+Issues
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/legacy/build.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/legacy/check.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/legacy/tokens.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/browser_check.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-map-mismatch /devops/obank/aicc-service-resolution/portal/tools/browser_check.py:9 — MODULE_MAP EXPORTS mismatch. Missing: Prefixed; extra: none.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/check_portable_browser.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/export_portable.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/lab.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/localization.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/neighbours.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-map-mismatch /devops/obank/aicc-service-resolution/portal/tools/neighbours.py:7 — MODULE_MAP EXPORTS mismatch. Missing: HORIZON, HORIZON_TEXT, horizon_box, horizon_chips, horizon_page, horizon_themes_cached, standing_group; extra: none.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/project.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/workspace.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
