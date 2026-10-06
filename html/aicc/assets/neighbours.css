@@ -13,7 +13,7 @@
 .portal-local-nav .nav-sub a{font-size:12px}
 .portal-workspace .neighbour-main{display:flex;flex-direction:column}
 .neighbour-content{max-width:var(--content-width);padding-bottom:40px;line-height:1.65}
-.neighbour-content>p,.neighbour-content>ul,.neighbour-content>ol{max-width:82ch}
+
 .neighbour-content h1{font-size:clamp(28px,3vw,42px);max-width:30ch}
 .neighbour-status{display:inline-flex;border:1px solid var(--border-control);padding:4px 10px;border-radius:var(--radius-pill);font-size:13px;color:var(--text-muted);margin:0 0 12px}
 .neighbour-content table{width:100%;border-collapse:collapse}

@@ -5,10 +5,10 @@
 .lab-content h1{font-size:clamp(28px,3vw,42px);margin:12px 0}
 .lab-header p{margin:0 0 16px}
 .lab-subtitle{font-size:20px;font-weight:500}
-.lab-intro{font-size:18px;line-height:28px;max-width:100ch;color:var(--text-muted)}
+.lab-intro{font-size:18px;line-height:28px;color:var(--text-muted)}
 .lab-section{margin-top:64px;min-width:0}
 .lab-section>h2{font-size:24px;margin:0 0 24px;padding:0 0 16px;border-bottom:2px solid var(--brand)}
-.lab-section-intro{max-width:100ch;color:var(--text-muted);margin:0 0 24px}
+.lab-section-intro{color:var(--text-muted);margin:0 0 24px}
 .lab-content :is([id],:target){scroll-margin-top:90px}
 .lab-content :target{outline:2px solid var(--focus);outline-offset:3px}
 .lab-controls{display:grid;gap:16px;margin-bottom:24px}
