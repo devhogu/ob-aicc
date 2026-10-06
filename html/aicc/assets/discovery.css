@@ -72,10 +72,10 @@
 .discovery-content [data-ui-option] .sub-group__label{line-height:1.4;margin-bottom:6px}
 .discovery-content [data-ui-option] a:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
 
-/* Standard Discovery cards: compact grouped rows and AICC's left accent. */
-.discovery-content [data-ui-pattern=groups]::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--brand);opacity:0;z-index:3;pointer-events:none}
-.discovery-content [data-ui-pattern=groups]:is(:hover,:focus-within)::before{opacity:1}
-.discovery-content .card[data-ui-pattern=groups]:hover{border-color:var(--border)}
+/* Interactive cards share a thin left rule, clear of the rounded card corners. */
+.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows])::before{content:'';position:absolute;left:0;top:var(--radius-card);bottom:var(--radius-card);width:2px;border-radius:0;background:var(--brand);opacity:0;z-index:3;pointer-events:none}
+.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows]):is(:hover,:focus-within)::before{opacity:1}
+.discovery-content .card:is([data-ui-pattern=groups],[data-ui-pattern=workflows]):hover{border-color:var(--border)}
 .discovery-content [data-ui-pattern=groups] .card__body{padding:0}
 .discovery-content [data-ui-pattern=groups] .sub-groups{display:block}
 .discovery-content [data-ui-pattern=groups] .sub-group{display:grid;grid-template-columns:minmax(110px,1fr) minmax(0,2fr);border-bottom:1px solid var(--border)}
