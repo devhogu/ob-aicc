@@ -197,10 +197,10 @@ dialog.fb .fb-body .oc-button{flex:none;align-self:flex-end}
 /* Values and principles: numbered, standing out */
 .vp-group{margin:36px 0 0}
 .vp-group h2{margin:0 0 6px}
-.vp-applies{margin:0 0 14px;font-size:17px;line-height:1.5;color:var(--text)}
+.vp-applies{margin:0 0 14px;line-height:1.5;color:var(--text)}
 .vp-mission{margin:28px 0 8px;padding:22px 26px;border-left:4px solid var(--brand);background:var(--surface-subtle);border-radius:0 12px 12px 0}
-.vp-mission h2{margin:0 0 8px;font-size:20px}
-.vp-mission p{margin:0;font-size:19px;line-height:1.55;font-family:var(--font-heading)}
+.vp-mission h2{margin:0 0 8px}
+.vp-mission p:not(.vp-source){margin:0}
 .icon-copy{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;margin-left:4px;padding:0;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text-muted);cursor:pointer;vertical-align:middle}
 .icon-copy .o-icon{width:14px;height:14px}
 .icon-copy:hover,.icon-copy:focus-visible{border-color:var(--border-control);color:var(--link)}
