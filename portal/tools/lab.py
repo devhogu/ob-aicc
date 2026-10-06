@@ -32,14 +32,14 @@ UI = {
            'guardrails_intro': 'The Lab runs under seven guardrails. The AICC Lead keeps them with their evidence in the Standards record, and the quarterly Steering reviews them.',
            'guardrail': 'Guardrail', 'evidence': 'Evidence', 'setup': 'Once, before the first Experiment', 'bands': 'Maturity bands',
            'capabilities': 'Capabilities', 'loop': 'Intent loop', 'guardrails': 'Guardrails',
-           'stages': 'Stage', 'lanes': 'Workstream', 'all': 'All', 'reset': 'Show complete workflow',
+           'stages': 'Stage', 'lanes': 'Workstream', 'whole': 'Whole workflow', 'by_stage': 'By stage',
            'empty': 'No separate activity specified', 'coverage': 'Assessment', 'not_assessed': 'Not yet assessed', 'levels': 'What each level requires',
            'concern': 'Concern', 'posture': 'Intended practice', 'selection': 'Workflow view'},
     'ru': {'concept': 'Концепция', 'matrix': 'Процесс эксперимента', 'systems': 'Люди и AI-агенты', 'maturity': 'Зрелость практик',
            'guardrails_intro': 'Лабораторная среда работает в рамках семи защитных механизмов. Руководитель AICC ведёт их вместе с подтверждениями в реестре «Стандарты», а ежеквартальное управляющее совещание их рассматривает.',
            'guardrail': 'Защитный механизм', 'evidence': 'Подтверждение', 'setup': 'Один раз, до первого эксперимента', 'bands': 'Уровни зрелости',
            'capabilities': 'Возможности', 'loop': 'Цикл управления', 'guardrails': 'Защитные механизмы',
-           'stages': 'Этап', 'lanes': 'Блок работ', 'all': 'Все', 'reset': 'Показать весь процесс',
+           'stages': 'Этап', 'lanes': 'Блок работ', 'whole': 'Весь процесс', 'by_stage': 'По этапам',
            'empty': 'Отдельная задача не указана', 'coverage': 'Оценка', 'not_assessed': 'Не оценено', 'levels': 'Что требуется для каждого уровня',
            'concern': 'Область контроля', 'posture': 'Планируемая практика', 'selection': 'Вид процесса'},
 }
@@ -243,14 +243,25 @@ def render(model, lang):
     body += '</ol></section>'
     body += f'<section class="lab-section" aria-labelledby="workflow"><h2 id="workflow">{ui["matrix"]}</h2>'
     body += '<div class="lab-controls" hidden>'
-    for kind, items in (('stage', model['stages']), ('lane', model['lanes'])):
-        label = ui['stages' if kind == 'stage' else 'lanes']
-        body += f'<fieldset><legend>{label}</legend><div class="lab-options"><button type="button" data-lab-{kind}="all" aria-pressed="true">{ui["all"]}</button>'
-        for item in items:
-            body += f'<button type="button" data-lab-{kind}="{item["id"]}" aria-pressed="false">{escape(words[item["name"]])}</button>'
-        body += '</div></fieldset>'
-    body += f'<button type="button" class="lab-reset" data-lab-reset>{ui["reset"]}</button><p class="lab-selection o-sr-only" aria-live="polite"></p></div>'
-    body += f'<div class="lab-matrix-wrap" role="region" tabindex="0" aria-label="{ui["matrix"]}"><div class="lab-matrix" style="--lab-stages:{len(model["stages"])}">'
+
+    def count_text(count):
+        if lang == 'en':
+            noun = 'task' if count == 1 else 'tasks'
+        else:
+            noun = 'задач' if 11 <= count % 100 <= 14 else 'задача' if count % 10 == 1 else 'задачи' if 2 <= count % 10 <= 4 else 'задач'
+        return f'{count} {noun}'
+
+    total = count_text(sum(len(cell['tasks']) for cell in model['cells']))
+    body += f'<nav class="lab-stage-nav" aria-label="{ui["stages"]}">'
+    for stage in model['stages']:
+        step = stage['id']
+        count = count_text(sum(len(cell['tasks']) for cell in model['cells'] if cell['stage'] == step))
+        setup = step == '0'
+        marker = workspace.icon('layers') if setup else step
+        note = f'<span class="lab-step-note">{ui["setup"]}</span>' if setup else ''
+        body += f'<button type="button" class="lab-step{" lab-step--setup" if setup else ""}" data-lab-stage="{step}" data-lab-count="{count}" aria-pressed="false" aria-controls="lab-workflow-matrix"><span class="lab-step-number" aria-hidden="true">{marker}</span><span class="lab-step-label">{escape(words[stage["name"]])}{note}</span><span class="lab-step-count">{count}</span></button>'
+    body += f'</nav><div class="lab-view-bar"><div class="lab-view-options" role="group" aria-label="{ui["selection"]}"><button type="button" data-lab-view="all" data-lab-reset data-lab-count="{total}" aria-pressed="true" aria-controls="lab-workflow-matrix">{ui["whole"]}</button><button type="button" data-lab-view="stage" aria-pressed="false" aria-controls="lab-workflow-matrix">{ui["by_stage"]}</button></div><span class="lab-visible-count">{total}</span></div><p class="lab-selection o-sr-only" aria-live="polite"></p></div>'
+    body += f'<div id="lab-workflow-matrix" class="lab-matrix-wrap" role="region" tabindex="0" aria-label="{ui["matrix"]}"><div class="lab-matrix" style="--lab-stages:{len(model["stages"])}">'
     for row, lane in enumerate(model['lanes'], 2):
         body += text(lane['name'], 'div', f'class="lab-lane" data-lane="{lane["id"]}" style="grid-column:1;grid-row:{row}"')
     for column, stage in enumerate(model['stages'], 2):
