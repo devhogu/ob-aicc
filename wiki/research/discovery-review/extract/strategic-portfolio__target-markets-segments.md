@@ -1,0 +1,235 @@
+# 
+
+source: html-alt/financial-services/en/strategic-portfolio/target-markets-segments/index.html
+
+
+[PAGE TEXT]
+Retail
+Retail segment strategy defines the bank's mass-market and emerging affluent propositions — covering acquisition targets by product (current accounts, deposits, consumer loans, mortgage, cards), pricing strategy, channel investment (branch, digital, agent), and segment economics tracked on customer lifetime value, cross-sell depth, cost-to-acquire, and NIM per product in the retail book. Retail is typically the bank's largest segment by customer count and the primary source of low-cost funding from transactional deposit balances.
+Lens
+Scenario
+Intent
+Complexity
+
+### CARD 1 [Insights|S] Retail Segment Economics Dashboard
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/retail/retail-segment-economics-dashboard
+intent: Retail segment economics — CAC, LTV, wallet share, and churn cohort distributions — are maintained as a continuous view refreshed daily from core-banking and CRM feeds. Cohort shifts surface within 48 hours of onset.
+Problem to solve: Retail segment economics are assembled quarterly from finance and CRM exports. Intra-quarter movements in cohort quality are invisible until the next reporting cycle, leaving the segment team without a timely signal for intervention.
+Solution: Agent reads daily core-banking and CRM feeds and maintains a continuous retail segment-economics view. The segment team reviews a daily digest and investigates flagged cohort movements; manual assembly between quarters is eliminated.
+OKR objective: Retail segment economics — CAC, LTV, wallet share, and churn cohort distributions — are maintained as a continuous view refreshed daily from core-banking and CRM feeds, with cohort shifts surfaced within 48 hours of onset, giving the segment team a timely signal for intervention rather than a quarterly retrospective.
+OKR KR [Adoption]: Agent refreshes the retail segment-economics view daily for ≥250 business days per year; cohort-movement alerts generated within 48 hours of a threshold crossing for ≥95% of monitored cohort events.
+OKR KR [Acceptance]: ≥85% of daily dashboard outputs accepted by the segment team as accurate without manual re-validation; cohort movement alerts confirmed as material and correctly classified in ≥80% of reviewed events.
+OKR KR [Cycle]: Retail segment economics monitoring cycle reduced from quarterly assembly to a daily continuous view, with cohort signals available ≥10 weeks earlier per quarter.
+
+### CARD 2 [Enablement|M] Retail segment churn risk enablement
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/retail/retail-segment-churn-risk-enablement
+intent: Retail segment economics deteriorate rapidly when high-value customers churn; early identification of churn risk and equipping front-line teams with retention tools is the most capital-efficient response. The agent scores the retail customer base for churn probability, identifies the behavioural drivers of high-risk cohorts, and equips branch and contact-centre staff with structured retention conversation guides.
+Problem to solve: Retail churn risk scoring is performed quarterly by the analytics team; front-line teams receive churn risk lists but lack structured guidance on how to conduct retention conversations or which offers to make for which risk profile. Retention campaign conversion rates are below potential.
+Solution: Agent generates monthly churn risk scores for the retail book and produces segmented retention conversation guides for front-line staff, matching retention offer type to churn driver and risk tier. Staff can query the agent for a specific customer's churn profile before initiating contact.
+OKR objective: Front-line retail teams are equipped with current churn risk intelligence and structured retention guides, increasing retention campaign conversion rates.
+OKR KR [Adoption]: Agent churn risk scores and retention guides used in ≥60% of retention contact campaigns within 12 months of deployment.
+OKR KR [Acceptance]: Retention campaign conversion rate for high-risk cohorts improves by ≥20% from the prior-year baseline.
+OKR KR [Cycle]: Churn risk score refresh cycle compressed from quarterly to monthly; retention guide delivery to front-line staff reduced from ≥1 week to same-day.
+
+### CARD 3 [Optimize|M] Retail segment product cross-sell optimisation
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/retail/retail-segment-product-cross-sell-optimisation
+intent: Retail cross-sell penetration — the average number of products per customer — is a primary driver of segment economics and customer lifetime value. The agent optimises cross-sell sequencing by identifying the next-best product for each customer based on transaction behaviour, lifecycle stage, and segment peer patterns, and prioritises the offer queue for digital and branch channels.
+Problem to solve: Cross-sell targeting is based on broad segment-level product affinity scores; individual customer propensity is not leveraged, and the offer queue prioritisation is static. Offer fatigue and low conversion rates reflect sub-optimal sequencing rather than insufficient demand.
+Solution: Agent scores each retail customer for next-best-product propensity using transactional behaviour and lifecycle signals, sequences personalised offers by channel affinity, and updates the offer queue monthly. Marketing and branch teams execute from the prioritised queue.
+OKR objective: Retail cross-sell conversion rate improves through personalised next-best-product targeting, increasing average products per customer by ≥0.3 within 18 months.
+OKR KR [Adoption]: Agent-generated cross-sell offer queues used in ≥70% of digital and branch cross-sell campaigns within 12 months of deployment.
+OKR KR [Acceptance]: Cross-sell offer conversion rate increases by ≥25% from the prior-year baseline; offer fatigue complaints remain flat or decline.
+OKR KR [Cycle]: Offer queue refresh cycle compressed from quarterly static targeting to monthly personalised update.
+
+[PAGE TEXT]
+Private banking
+Private banking segment strategy defines the bank's proposition and investment for high-net-worth and ultra-high-net-worth clients — covering AUM targets, advisory model (discretionary vs. advisory vs. execution-only), product range (investment products, lending against assets, trust and estate services), and the client coverage ratio governing relationship manager capacity. Private banking economics are tracked on AUM growth, fee yield on AUM, net new money, and client retention rates.
+Lens
+Scenario
+Intent
+Complexity
+
+### CARD 4 [Insights|S] Private banking segment AUM insights
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/private-banking/private-banking-segment-aum-insights
+intent: Private banking segment economics — AUM, net new money flows, revenue yield, and wallet share per HNW and UHNW tier — determine the strategic value of the private banking franchise and its trajectory. The agent synthesises client-level AUM and revenue data into a continuous segment economics view for the private banking head and executive committee.
+Problem to solve: Private banking AUM and revenue metrics are assembled monthly for internal reporting but are not disaggregated to the client tier or RM level; wallet share against investable assets is estimated annually. Between annual reviews, the private banking head lacks a dynamic picture of franchise value growth or erosion.
+Solution: Agent integrates AUM, net new money, and revenue data by client tier and relationship manager on a monthly basis, producing a private banking segment economics dashboard with wallet share trend signals. RMs with declining AUM or below-target yield are flagged for coaching and support.
+OKR objective: Private banking segment economics are visible at the client tier and RM level on a monthly basis, enabling proactive relationship management and investment decisions.
+OKR KR [Adoption]: Agent produces monthly private banking economics reports covering ≥90% of active HNW/UHNW client relationships from deployment.
+OKR KR [Acceptance]: ≥80% of monthly reports accepted by the private banking leadership team as accurate and actionable.
+OKR KR [Cycle]: Private banking economics visibility cycle compressed from annual wallet share estimate to monthly continuous read.
+
+### CARD 5 [Enablement|M] Private banking client needs enablement
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/private-banking/private-banking-client-needs-enablement
+intent: Private banking relationship managers must navigate complex cross-product advisory conversations across investments, lending, tax planning, and succession — a breadth that exceeds the deep knowledge of any single RM. The agent provides RM-facing briefings that synthesise client financial position, portfolio concentration, and lifecycle events into a structured client conversation guide ahead of each review meeting.
+Problem to solve: Private banking RMs prepare for client reviews manually from multiple systems; preparation quality varies significantly, and complex multi-product advisory gaps are missed when RMs focus on their primary coverage product. Below-target wallet share capture reflects insufficient breadth of coverage in review conversations.
+Solution: Agent generates a pre-meeting client briefing for each scheduled private banking review, synthesising current portfolio position, concentration risk, upcoming lifecycle events, and applicable product opportunities across the full advisory spectrum. RMs arrive at meetings prepared for multi-product conversations.
+OKR objective: Private banking client review conversations systematically cover the full advisory spectrum, increasing cross-product wallet share capture per relationship.
+OKR KR [Adoption]: Agent-produced client briefings used in ≥70% of private banking client review meetings within 12 months of deployment.
+OKR KR [Acceptance]: ≥75% of briefings rated as useful and accurate by RMs; cross-product product penetration per HNW client increases by ≥15% within 12 months.
+OKR KR [Cycle]: Client review preparation time reduced from ≥2 hours of manual data assembly to ≤20 minutes of briefing review.
+
+### CARD 6 [New opps|M] Private banking segment opportunity detection
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/private-banking/private-banking-segment-opportunity-detection
+intent: Private banking growth requires identifying new HNW and UHNW prospects, succession-driven liquidity events, and competitor-relationship displacement opportunities in the local wealth market. The agent analyses wealth event signals — business sale completions, inheritance events, liquidity events — and generates a prospect and deepening opportunity pipeline for the private banking business development team.
+Problem to solve: Private banking prospect identification relies primarily on RM networks and referrals; systematic analysis of wealth event signals is not performed, and the business development team lacks a structured pipeline of qualified prospects or deepening opportunities. Growth is constrained by the breadth of individual RM networks.
+Solution: Agent monitors publicly available wealth event signals — business registration data, real estate transactions, regulatory filings — and correlates them with the bank's existing client data to generate a quarterly prospect and deepening opportunity list for the private banking business development team.
+OKR objective: A structured private banking prospect and deepening pipeline is maintained quarterly, increasing new client acquisition and existing client AUM deepening rates.
+OKR KR [Adoption]: Agent-produced opportunity pipeline used in ≥80% of monthly private banking business development reviews within 12 months of deployment.
+OKR KR [Acceptance]: ≥40% of identified prospects convert to an initial conversation within three months of identification; wallet deepening opportunities result in AUM increase for ≥50% of targeted existing clients.
+OKR KR [Cycle]: Prospect identification cycle compressed from ad hoc RM-led sourcing to a structured quarterly pipeline refresh.
+
+[PAGE TEXT]
+SME
+SME segment strategy covers the bank's proposition for small and medium enterprises — including working capital lending, trade finance, deposit products, and payment services — along with coverage model design (relationship manager capacity, digital self-service scope) and credit approach (standardized scoring vs. judgmental underwriting by size band). SME economics are tracked on portfolio yield, credit loss rate, cross-product penetration, and RAROC against the segment's capital consumption, with SME lending often subject to government guarantee programs that affect the capital efficiency calculation.
+Lens
+Scenario
+Intent
+Complexity
+
+### CARD 7 [New opps|M] SME Segment Opportunity Detection
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/sme/sme-segment-opportunity-detection
+intent: Continuous monitoring of SME cohort signals — revenue seasonality, payroll cadence, supplier-payment cycles — surfaces under-penetrated sub-sectors with near-term product fit and estimated revenue opportunity.
+Problem to solve: SME penetration analysis is conducted annually during budget planning. Segment managers in KG, KZ, and RU markets lack a systematic capability to identify which SME sub-sectors are underserved at current product and pricing configurations.
+Solution: Agent reads transaction-pattern signals across the SME portfolio and surfaces under-penetrated sub-sectors with product-fit scores and revenue estimates. Segment leads use the output to prioritize pipeline development and outreach.
+OKR objective: Under-penetrated SME sub-sectors — identified from transaction-pattern signals including revenue seasonality, payroll cadence, and supplier-payment cycles — are surfaced with product-fit scores and revenue estimates on a continuous basis, giving segment managers in KG, KZ, and RU a systematic pipeline development signal.
+OKR KR [Adoption]: Agent monitors SME cohort transaction signals continuously; opportunity detection outputs covering ≥90% of active SME sub-sectors produced quarterly with product-fit scores and revenue estimates.
+OKR KR [Acceptance]: ≥75% of agent-surfaced sub-sector opportunities confirmed as actionable by segment managers; revenue estimates within ±20% of subsequent pipeline development actuals in ≥80% of validated opportunities.
+OKR KR [Cycle]: SME segment opportunity identification cycle reduced from annual budget-planning exercises to a continuous quarterly signal, surfacing opportunities ≥8 months earlier per cycle.
+
+### CARD 8 [Insights|M] SME segment economics insights dashboard
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/sme/sme-segment-economics-insights-dashboard
+intent: SME segment economics — revenue yield, credit loss rate, capital consumption, cross-product penetration, and churn by sub-segment — determine whether the SME franchise is generating returns above the cost of capital and where investment should be concentrated. The agent synthesises SME client-level data into a continuous segment economics view for the SME banking head and executive committee.
+Problem to solve: SME segment economics are assembled quarterly from lending, transaction banking, and credit risk data; sub-segment economics — micro vs. small vs. medium enterprises — are not routinely produced. The SME head lacks a current view of where the segment creates value by client tier and product mix.
+Solution: Agent integrates revenue, credit loss, capital consumption, and product penetration data per SME sub-segment on a quarterly basis, producing a ranked economics dashboard with trend signals. Sub-segments or product combinations below the RAROC hurdle for two consecutive quarters are flagged for strategic review.
+OKR objective: SME segment economics are visible at the sub-segment level on a quarterly basis, enabling capital allocation and product investment decisions grounded in current risk-adjusted return data.
+OKR KR [Adoption]: Agent produces quarterly SME economics dashboards covering ≥80% of the active SME portfolio from deployment.
+OKR KR [Acceptance]: ≥80% of dashboards accepted by the SME banking team as accurate and sufficient for portfolio investment decisions.
+OKR KR [Cycle]: SME sub-segment economics visibility cycle compressed from ad hoc annual analysis to quarterly continuous read.
+
+### CARD 9 [Enablement|L] SME Credit-Appetite Cohort Calibration
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/sme/sme-credit-appetite-cohort-calibration
+intent: Segment-level credit-appetite parameters for SME cohorts are recalibrated monthly from realized default and recovery data, with an agent-produced drift narrative delivered to the credit committee.
+Problem to solve: SME credit appetite is set annually per broad sector groupings. Intra-year cohort performance drift — driven by macro shifts, FX movements, or sector-level events — is not captured until the next annual review, leaving the credit committee with stale calibrations.
+Solution: Agent reads monthly cohort performance data and recalibrates segment-level credit-appetite parameters, producing a narrative of cohort drift with attribution. The credit committee reviews the agent-prepared summary and approves parameter adjustments at monthly intervals.
+OKR objective: Segment-level credit-appetite parameters for SME cohorts are recalibrated monthly from realized default and recovery data by agent, with a drift narrative attributing cohort movements delivered to the credit committee for parameter-adjustment approval on a monthly rather than annual cycle.
+OKR KR [Adoption]: Agent produces monthly cohort recalibration outputs and drift narratives for ≥100% of SME segment classifications for ≥11 calendar months per year; attribution of cohort drift to macro, FX, and sector-level drivers included in ≥90% of monthly outputs.
+OKR KR [Acceptance]: ≥80% of agent-produced recalibration summaries accepted by the credit committee as the approval basis without requiring independent re-derivation; parameter adjustment accuracy confirmed against subsequent cohort performance in ≥85% of reviewed monthly cycles.
+OKR KR [Cycle]: SME credit-appetite recalibration cycle reduced from annual review to monthly committee-approved parameter updates within 5 business days of month-end data availability.
+
+[PAGE TEXT]
+Wealth management
+Wealth management segment strategy defines the bank's proposition for the affluent mass-market and lower-HNW tier — covering investment advisory, discretionary portfolio management, pension products, and protection — alongside the client segmentation boundary that separates wealth management from private banking. Segment economics are measured on AUM, revenue yield on assets, net new money, and adviser productivity; the strategic question governing this segment is the optimal distribution model between human advisory, digital advisory, and hybrid service at different AUM thresholds.
+Lens
+Scenario
+Intent
+Complexity
+
+### CARD 10 [Insights|M] Wealth management segment AUM economics insights
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/wealth-management/wealth-management-segment-aum-economics-insights
+intent: Wealth management segment economics — AUM growth, net new money, revenue yield, cost-to-income, and client retention rate — determine the strategic value of the wealth franchise and its competitive trajectory. The agent synthesises wealth client and product data into a continuous segment economics view for the wealth management head and executive committee.
+Problem to solve: Wealth management economics are assembled quarterly from investment platform, advisory, and revenue systems; net new money and yield trend by client tier are not tracked continuously. The wealth management head lacks a current picture of AUM trajectory and whether fee income is on plan.
+Solution: Agent integrates AUM, net new money, advisory revenue, and client retention data by wealth tier on a monthly basis, producing a segment economics dashboard with trend signals. Tiers showing net AUM outflows or revenue yield compression are flagged for strategic response.
+OKR objective: Wealth segment economics are visible at the client tier level on a monthly basis, enabling investment and pricing decisions grounded in current AUM and yield data.
+OKR KR [Adoption]: Agent produces monthly wealth economics dashboards covering ≥90% of the active wealth client base from deployment.
+OKR KR [Acceptance]: ≥80% of monthly dashboards accepted by the wealth management team as accurate and sufficient for performance review.
+OKR KR [Cycle]: Wealth management economics visibility cycle compressed from quarterly assembly to monthly continuous read.
+
+### CARD 11 [Enablement|M] Wealth management advisory model enablement
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/wealth-management/wealth-management-advisory-model-enablement
+intent: Wealth management relationship managers are expected to deliver personalised financial planning and investment advice across a broad product range — investments, insurance, lending, estate planning — that exceeds any individual RM's depth of expertise. The agent provides RM-facing advisory support that synthesises client financial data into structured pre-meeting briefings and identifies gaps in the current advisory coverage.
+Problem to solve: Wealth RM advisory quality is constrained by knowledge depth and time to prepare; RMs default to covering familiar product areas and miss advisory opportunities in less familiar domains. Below-target AUM deepening and product penetration rates reflect advisory coverage gaps, not lack of client demand.
+Solution: Agent generates a comprehensive pre-meeting advisory brief for each wealth client review, covering portfolio concentration risk, gaps against a full wealth plan framework, applicable product solutions, and structured conversation starters. RMs review a ten-minute briefing rather than assembling materials manually.
+OKR objective: Wealth client reviews systematically address the full financial planning framework, increasing advisory breadth and product penetration per relationship.
+OKR KR [Adoption]: Agent-produced advisory briefs used in ≥70% of wealth client review meetings within 12 months of deployment.
+OKR KR [Acceptance]: ≥75% of advisory briefs rated as useful and accurate by RMs; average products per wealth client increases by ≥0.5 within 18 months.
+OKR KR [Cycle]: Wealth client review preparation time reduced from ≥90 minutes of manual assembly to ≤15 minutes of briefing review.
+
+### CARD 12 [New opps|M] Wealth management competitor positioning scan
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/wealth-management/wealth-management-competitor-positioning-scan
+intent: Wealth management market share is contested by domestic bank wealth arms, independent asset managers, and international private banks entering via digital channels. Identifying competitive displacement opportunities requires a structured view of peer positioning, fee structures, platform capabilities, and product gaps. The agent synthesises peer intelligence into a quarterly competitive opportunity map for the wealth strategy team.
+Problem to solve: Wealth management competitive analysis is produced ad hoc from unstructured research; the bank lacks a systematic view of which competitor segments are vulnerable to displacement and which product or channel gaps represent acquisition opportunities. Growth targets are set without grounding in competitive opportunity sizing.
+Solution: Agent aggregates peer wealth management disclosures, product pricing, digital platform reviews, and market share estimates to produce a quarterly competitive opportunity map. The wealth strategy team identifies target segments for competitive displacement with estimated acquisition opportunity per segment.
+OKR objective: A structured competitive opportunity map is available to the wealth strategy team each quarter, enabling targeted acquisition and deepening investment decisions.
+OKR KR [Adoption]: Agent produces quarterly competitive opportunity maps for ≥4 consecutive quarters within 15 months of deployment.
+OKR KR [Acceptance]: ≥70% of competitive opportunity maps used as the basis for wealth acquisition targeting in the subsequent quarter.
+OKR KR [Cycle]: Competitive opportunity analysis production time reduced from ≥4 weeks of manual research to ≤1 week.
+
+[PAGE TEXT]
+Corporate
+Corporate banking segment strategy covers the bank's proposition, coverage model, and wallet-share objectives for mid-market and large corporates — including relationship banking, lending, transaction banking (cash management, trade finance, FX), and capital markets access. Segment economics are measured on revenue per relationship, cost-to-serve, credit quality, and cross-product penetration; corporate banking's capital consumption is tracked against RAROC hurdles set in the capital allocation framework.
+Lens
+Scenario
+Intent
+Complexity
+
+### CARD 13 [Insights|M] Corporate segment economics insights
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/corporate/corporate-segment-economics-insights
+intent: Corporate segment economics — revenue per relationship, wallet share, cross-product penetration, and capital consumption per client — determine where the corporate banking franchise creates and destroys value. The agent synthesises client-level economics into a continuous segment view for the corporate banking head and executive committee, surfacing concentration risk and below-hurdle relationships.
+Problem to solve: Corporate client economics are assembled semi-annually from transaction banking, capital markets, and lending data; wallet share estimates are produced annually by the strategy team. Between reviews, the corporate banking head lacks a current view of segment profitability and capital efficiency.
+Solution: Agent integrates revenue, capital consumption, and cross-product data per corporate client on a quarterly basis, producing a ranked segment economics view with wallet share trend signals. Clients below the RAROC hurdle for two consecutive quarters are flagged for relationship review.
+OKR objective: Corporate segment economics are visible at the client level on a quarterly basis, enabling relationship investment decisions grounded in current RAROC data.
+OKR KR [Adoption]: Agent produces quarterly corporate segment economics reports covering ≥80% of Tier 1 and 2 corporate clients from deployment.
+OKR KR [Acceptance]: ≥80% of quarterly reports accepted by the corporate banking team as accurate and sufficient for relationship investment decisions.
+OKR KR [Cycle]: Corporate client economics visibility cycle compressed from semi-annual assembly to quarterly continuous read.
+
+### CARD 14 [New opps|M] Corporate segment opportunity detection
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/corporate/corporate-segment-opportunity-detection
+intent: Corporate banking revenue growth opportunities — sector expansion, new product cross-sell, competitor displacement — require systematic identification beyond the coverage of individual relationship managers. The agent analyses client financial data, sector flows, and competitor activity to identify the highest-potential incremental revenue opportunities across the corporate portfolio.
+Problem to solve: Opportunity identification in the corporate segment is driven by individual RM relationships and ad hoc market intelligence; there is no systematic process for identifying which clients or sectors represent the highest unmet demand, and competitive displacement opportunities are missed.
+Solution: Agent analyses corporate client financials, balance sheet trends, sector credit demand data, and competitor market share signals to generate a quarterly opportunity pipeline prioritised by estimated revenue impact. Relationship managers receive client-specific opportunity briefs with suggested product approaches.
+OKR objective: A prioritised corporate segment opportunity pipeline is maintained and refreshed quarterly, directing RM coverage effort to the highest-value targets.
+OKR KR [Adoption]: Agent-produced opportunity briefs used in ≥60% of corporate RM client planning sessions within 12 months of deployment.
+OKR KR [Acceptance]: ≥60% of identified opportunities result in an active sales conversation within one quarter of identification.
+OKR KR [Cycle]: Time from opportunity signal to RM briefing reduced from ≥3 weeks to ≤5 business days.
+
+### CARD 15 [Enablement|M] Corporate segment credit appetite enablement
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/corporate/corporate-segment-credit-appetite-enablement
+intent: Relationship managers need current guidance on the bank's credit appetite by sector and obligor size to calibrate deal origination effectively. The agent provides RM-facing credit appetite guidance by sector, rating tier, and facility type, reflecting current portfolio concentration limits and the credit committee's stated appetite, enabling RMs to self-qualify opportunities before committing relationship management time.
+Problem to solve: Corporate credit appetite guidance is communicated through quarterly credit policy updates that are not easily accessible at the point of client conversation; RMs originate deals that are declined at credit committee due to appetite misalignment, wasting relationship capital and consuming credit committee capacity.
+Solution: Agent maintains a current corporate credit appetite reference by sector, rating tier, and facility type, drawing from the active credit policy and portfolio concentration data. RMs query the tool before committing to a deal discussion; appetite gaps or concentration issues are surfaced upfront.
+OKR objective: Corporate RM deal origination is pre-screened against current credit appetite before credit committee submission, reducing appetite-related decline rates.
+OKR KR [Adoption]: Agent credit appetite tool used in ≥50% of new corporate deal origination conversations within 12 months of deployment.
+OKR KR [Acceptance]: Appetite-related credit committee decline rate reduced by ≥30% from the prior-year baseline.
+OKR KR [Cycle]: Credit appetite check time at point of origination reduced from ≥1 day of policy reference to ≤15 minutes via self-service tool.
+
+[PAGE TEXT]
+Public sector
+Public sector segment strategy covers the bank's banking and financing relationships with government entities, state-owned enterprises, and public institutions — including government deposit management, bond issuance and distribution, project finance for infrastructure, and treasury services. Public sector relationships are often governed by framework agreements and public procurement rules, with credit assessment incorporating sovereign or quasi-sovereign risk ratings and political risk considerations under the bank's country risk policy.
+Lens
+Scenario
+Intent
+Complexity
+
+### CARD 16 [Automation|M] Public-Sector Banking Obligation Monitoring
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/public-sector/public-sector-banking-obligation-monitoring
+intent: Monthly reconciliation of bank obligations under national banking programs in KG, KZ, and RU markets — subsidized-lending targets, TSA servicing, government-payroll program participation — is automated, with compliance-gap alerts and pre-populated regulatory reporting output.
+Problem to solve: Banks serving public-sector clients in KG, KZ, and RU carry mandatory participation obligations tracked in spreadsheets and reconciled manually before each regulatory reporting cycle. Gaps surface late, with limited time for remediation.
+Solution: Agent reads program participation data and reconciles balances against contractual and regulatory obligations monthly. Compliance gaps surface to the relationship team with time-to-breach estimates and remediation options; regulatory reporting is pre-populated from the same reconciliation output.
+OKR objective: Monthly reconciliation of bank obligations under national banking programs in KG, KZ, and RU — subsidized-lending targets, TSA servicing, and government-payroll program participation — is automated by agent, with compliance-gap alerts carrying time-to-breach estimates and pre-populated regulatory reporting output produced from the same reconciliation.
+OKR KR [Adoption]: Agent performs monthly obligation reconciliations for ≥100% of in-scope national banking programs across KG, KZ, and RU markets for ≥12 consecutive months; pre-populated regulatory reporting output produced in ≥95% of reconciliation cycles.
+OKR KR [Acceptance]: ≥90% of agent-produced compliance-gap alerts confirmed as accurate by the relationship team; regulatory reporting output accepted by compliance teams as submission-ready without material manual correction in ≥85% of cycles.
+OKR KR [Cycle]: Monthly obligation reconciliation and regulatory reporting preparation cycle reduced from manual spreadsheet assembly to ≤2 business days of automated processing and compliance team review.
+
+### CARD 17 [Insights|M] Public sector segment economics insights
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/public-sector/public-sector-segment-economics-insights
+intent: Public sector banking relationships — government ministries, state-owned enterprises, municipalities — carry distinct economics shaped by procurement rules, liquidity concentration, and regulatory relationship obligations. The agent synthesises public sector client revenue, capital consumption, and product penetration data into a continuous segment economics view for the institutional banking head.
+Problem to solve: Public sector client economics are assembled semi-annually from transaction banking and lending data; wallet share against public sector budget flows is estimated once a year. The institutional banking team lacks a current view of where the public sector portfolio creates value and where capital is deployed below the hurdle rate.
+Solution: Agent integrates public sector client revenue, capital consumption, and cross-product data on a quarterly basis, producing a segment economics dashboard with wallet share trend signals. Client relationships below the RAROC hurdle for two consecutive quarters are flagged for relationship review.
+OKR objective: Public sector segment economics are visible at the client level on a quarterly basis, enabling capital allocation decisions grounded in current risk-adjusted return data.
+OKR KR [Adoption]: Agent produces quarterly public sector economics reports covering ≥80% of Tier 1 public sector relationships from deployment.
+OKR KR [Acceptance]: ≥80% of reports accepted by the institutional banking team as accurate and sufficient for relationship investment decisions.
+OKR KR [Cycle]: Public sector economics visibility cycle compressed from semi-annual assembly to quarterly continuous read.
+
+### CARD 18 [New opps|M] Public sector tender opportunity detection
+urn: urn:financial-services:scenario:strategic-portfolio/target-markets-segments/public-sector/public-sector-tender-opportunity-detection
+intent: Government procurement tenders for banking services — cash management, payments infrastructure, lending facilities — represent significant revenue and balance sheet opportunities in the public sector segment. The agent monitors government procurement publications and budget announcements across the bank's operating jurisdictions, identifying relevant banking service tenders and alerting the institutional banking team with lead time for bid preparation.
+Problem to solve: Public sector tender monitoring is performed manually by the institutional banking team from government procurement portals; relevant tenders are sometimes identified late, leaving insufficient preparation time for competitive bids. Untapped procurement opportunities remain undetected.
+Solution: Agent monitors government procurement portals and budget publications across operating jurisdictions, classifying banking service tenders by revenue opportunity size and strategic fit, and alerting the institutional banking team at least 60 days before bid submission deadlines.
+OKR objective: All material public sector banking tenders are identified at least 60 days before the bid deadline, enabling competitive preparation and increasing the bank's share of government banking mandates.
+OKR KR [Adoption]: Agent monitors government procurement portals for ≥90% of active jurisdictions from deployment; delivers tender alerts for ≥95% of identified banking service tenders.
+OKR KR [Acceptance]: Tender identification lead time of ≥60 days achieved for ≥90% of alerted tenders; bid submission rate on alerted tenders increases by ≥25% from the baseline.
+OKR KR [Cycle]: Tender identification-to-alert time reduced from reactive monitoring to ≥60-day advance notice.
+
+[PAGE TEXT]
+GenAI-enabled Banking and Financial Services Framework · v11i

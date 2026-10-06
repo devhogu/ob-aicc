@@ -1,0 +1,72 @@
+[
+ {
+  "id": "finance-treasury-133",
+  "field": "structure",
+  "current": "One <p class=\"flow-detail__intent-full\"> element holds three paragraphs separated only by line breaks in the source."
+ },
+ {
+  "id": "overview-value-streams-081",
+  "field": "other",
+  "current": "SAR/STR; STR/SAR; SAR"
+ },
+ {
+  "id": "risk-control-2-023",
+  "field": "structure",
+  "current": "AML transaction monitoring; Regulatory licensing & filings; SAR & case management; Conduct & complaints; Sanctions & PEP screening; Regulatory examination manag"
+ },
+ {
+  "id": "risk-control-2-044",
+  "field": "structure",
+  "current": "Audit universe & risk ranking; Findings & thematic synthesis; Audit execution & workpapers; Remediation tracking"
+ },
+ {
+  "id": "risk-control-2-063",
+  "field": "structure",
+  "current": "Physical risk assessment; ESG counterparty scoring; Transition risk & carbon exposure; TCFD & ISSB disclosure"
+ },
+ {
+  "id": "risk-control-2-083",
+  "field": "structure",
+  "current": "Strategic-decision risk analysis; Reputational signal monitoring; Competitive & industry signals; Crisis response & narrative"
+ },
+ {
+  "id": "strategic-initiatives-021",
+  "field": "structure",
+  "current": "Target screening > Integration planning > Due diligence > Synergy capture > Valuation & deal structuring > Post-merger reporting"
+ },
+ {
+  "id": "strategic-initiatives-026",
+  "field": "structure",
+  "current": "Program design > Milestone & dependency tracking > Business case & funding > Benefit realization > Steering governance > Change management"
+ },
+ {
+  "id": "strategic-initiatives-035",
+  "field": "structure",
+  "current": "Partner identification > KPI & value tracking > Deal structuring & negotiation > Renewal or exit assessment > Regulatory & compliance review"
+ },
+ {
+  "id": "strategic-initiatives-043",
+  "field": "structure",
+  "current": "Ecosystem mapping > API & open-banking integration > Platform role & positioning > Revenue & margin model > Network economics > Partner ecosystem governance"
+ },
+ {
+  "id": "strategic-initiatives-055",
+  "field": "structure",
+  "current": "Idea sourcing & stage-gate > Scaling decision > MVP design & hypothesis testing > Portfolio rebalancing > Experiment analytics > Innovation P&L"
+ },
+ {
+  "id": "strategic-initiatives-056",
+  "field": "structure",
+  "current": "Card sits under 'MVP design & hypothesis testing'"
+ },
+ {
+  "id": "strategic-initiatives-057",
+  "field": "structure",
+  "current": "Card sits under 'Experiment analytics'"
+ },
+ {
+  "id": "strategic-initiatives-063",
+  "field": "structure",
+  "current": "TCFD/ISSB disclosure > Transition planning > Scope 1/2/3 reporting > ESG KPI monitoring > Sustainability targets > Regulatory ESG filings"
+ }
+]
