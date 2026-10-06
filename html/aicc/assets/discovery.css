@@ -1,10 +1,10 @@
-/* Discovery's retained geometry uses the shared AICC colours and local fonts. */
+/* Discovery keeps its catalogue geometry and uses AICC's component styling. */
 .discovery-content{
-  --paper:var(--surface);--paper-soft:var(--surface-subtle);--paper-2:var(--surface-subtle);--paper-3:var(--surface-selected);--paper-deep:var(--surface-selected);--paper-warm:var(--warning-bg);--paper-blue-soft:var(--surface-selected);
-  --ink-primary:var(--text);--ink-body:var(--text);--ink-secondary:var(--text-muted);--ink-tertiary:var(--text-muted);--ink-eyebrow:var(--text-muted);--ink-accent:var(--link);--ink-accent-lt:var(--link);--ink-accent-deep:var(--link);--genai-label:var(--link);--ink-orange-deep:var(--warning);
-  --genai-soft:var(--warning-bg);--genai-line:var(--border-control);--genai-text:var(--warning);--genai-accent:var(--warning);
+  --paper:var(--surface);--paper-soft:var(--surface-subtle);--paper-2:var(--surface-subtle);--paper-3:var(--surface-subtle);--paper-deep:var(--surface-subtle);--paper-warm:var(--surface);--paper-blue-soft:var(--surface);
+  --ink-primary:var(--text);--ink-body:var(--text);--ink-secondary:var(--text-muted);--ink-tertiary:var(--text-muted);--ink-eyebrow:var(--text-muted);--ink-accent:var(--link);--ink-accent-lt:var(--link);--ink-accent-deep:var(--link);--genai-label:var(--link);--ink-orange-deep:var(--text);
+  --genai-soft:var(--surface-subtle);--genai-line:var(--discovery-border);--genai-text:var(--text);--genai-accent:var(--link);
   --border:var(--discovery-border);--border-hover:var(--border-control);--rule-soft:var(--discovery-border);--rule-warm:var(--discovery-border);--overlay-scrim:var(--overlay);--shadow-modal:var(--shadow-panel);
-  --brush-title-start:color-mix(in srgb,var(--brand) 22%,transparent);--brush-title-mid:color-mix(in srgb,var(--brand) 8%,transparent);--brush-peer-start:color-mix(in srgb,var(--shell-accent-secondary) 22%,transparent);--brush-peer-mid:color-mix(in srgb,var(--shell-accent-secondary) 8%,transparent);--brush-flow-start:color-mix(in srgb,var(--brand) 18%,transparent);--brush-flow-mid:color-mix(in srgb,var(--brand) 6%,transparent);--brush-orange-start:color-mix(in srgb,var(--warning) 20%,transparent);--brush-orange-mid:color-mix(in srgb,var(--warning) 7%,transparent);
+  --shadow-card:none;--shadow-hover:none;
   --font-serif:var(--font-heading);--font-sans:var(--font-body);--font-mono:ui-monospace,SFMono-Regular,Consolas,monospace;
   --text-body:1rem;--text-page-title:var(--text-title);--text-intent:var(--text-subhead);
   --text-h2:var(--text-section);--text-h3:var(--text-subhead);--text-h4:1rem;
@@ -24,6 +24,31 @@
 .discovery-content :is(.page-header__eyebrow,.card__eyebrow,.sub-group__label,.flow-section__label,.peer-label,.breadcrumb,.sib-nav,.problems-tab-label,.problems-lens,.scenarios-eyebrow,.scenarios-col-label,.scenario-lens,.scenario-complexity,.scenario-section__label,.okr-kr__dim,.flow-stages__stage,.modal__eyebrow,.modal__problem-label,.project-entry__label){font-family:var(--font-body);letter-spacing:.02em}
 .discovery-content :is(.breadcrumb,.sib-nav){font-size:var(--text-sm);letter-spacing:normal}
 .discovery-content .card__body p{margin:0}
+/* Plain headings and labels: grouping comes from typography, spacing and rules. */
+.discovery-content .page .page-header__title,
+.discovery-content :is(.card__title,.sub-group__label,.flow-section__label,.flow-item__name,.scenario-card__title,.flow-category__title,.flow-detail__title,.l3-section__title){background:none;padding:0;margin-inline:0;border-radius:0}
+.discovery-content .card__head{background:var(--surface)}
+.discovery-content :is(.sub-group__label,.flow-section__label){font-weight:500;margin-bottom:6px}
+.discovery-content .card:has(.card__click-target):hover{border-color:var(--link)}
+.discovery-content .card:focus-within{outline:3px solid var(--focus);outline-offset:2px}
+.discovery-content .card-link{color:var(--link)}
+/* AICC tabs use an active underline; tables use neutral row headers and rules. */
+.discovery-content .problems-tab-bar{background:var(--surface);gap:4px}
+.discovery-content .problems-tab-label{font-size:var(--text-sm);border-bottom-width:3px;min-height:44px;display:flex;align-items:center}
+.discovery-content .problems-tab-label:hover{background:var(--surface-subtle)}
+.discovery-content .problems-lens{background:var(--surface-subtle);color:var(--text);text-align:left}
+.discovery-content .problems-statement{background:var(--surface);color:var(--text);padding:12px}
+/* Categories and complexity remain explicit labels, without coloured status fills. */
+.discovery-content :is(.scenario-lens,.scenario-complexity){background:var(--surface-subtle);color:var(--text-muted);border-radius:6px;line-height:1.5}
+.discovery-content .scenario-complexity{background:var(--surface);border:1px solid var(--border-control);color:var(--text)}
+.discovery-content :is(.scenario-card__body,.flow-detail__body){background:var(--surface)}
+.discovery-content .scenario-section{border-left-color:var(--border)}
+.discovery-content :is(.okr-objective,.flow-detail__problems,.modal__problem){background:var(--surface-subtle);border-left:3px solid var(--brand);border-radius:0 8px 8px 0}
+.discovery-content .okr-kr__dim{color:var(--text-muted)}
+/* Flow stages are buttons: neutral surfaces, visible borders and keyboard focus. */
+.discovery-content .flow-stages__stage{background:var(--surface);border:1px solid var(--border-control);border-radius:var(--radius-control);min-height:44px}
+.discovery-content .flow-stages__stage:hover{background:var(--surface-subtle);border-color:var(--link)}
+.discovery-content .flow-stages__stage:focus-visible{background:var(--surface-subtle);outline:3px solid var(--focus);outline-offset:3px}
 .discovery-content .modal p{margin:0 0 12px}
 .discovery-content .modal{z-index:200}
 .discovery-content .modal__panel{max-height:calc(100dvh - 32px)}
