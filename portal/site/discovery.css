@@ -73,7 +73,7 @@
 .discovery-content [data-ui-pattern] a:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
 
 /* Top tapers over 30%; bottom stays 2px thick through 70%, then tapers to the end. */
-.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows],[data-ui-pattern=scenario])::before{
+.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows],[data-ui-pattern=scenario],.flow-detail__summary)::before{
   content:'';position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--brand);opacity:0;z-index:3;pointer-events:none;
   --card-accent-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M0 12A12 12 0 0 1 12 0V2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left top/var(--radius-card) var(--radius-card) no-repeat,
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath transform='translate(0 12) scale(1 -1)' d='M0 12A12 12 0 0 1 12 0V2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left bottom/var(--radius-card) var(--radius-card) no-repeat,
@@ -83,7 +83,7 @@
     linear-gradient(#000,#000) left center/2px calc(100% - var(--radius-card) - var(--radius-card)) no-repeat;
   -webkit-mask:var(--card-accent-mask);mask:var(--card-accent-mask);
 }
-.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows],[data-ui-pattern=scenario]):is(:hover,:focus-within,[open])::before{opacity:1}
+.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows],[data-ui-pattern=scenario],.flow-detail__summary):is(:hover,:focus-within,[open])::before{opacity:1}
 .discovery-content .card:is([data-ui-pattern=groups],[data-ui-pattern=workflows]):hover{border-color:var(--border)}
 .discovery-content [data-ui-pattern=groups] .card__body{padding:0}
 .discovery-content [data-ui-pattern=groups] .sub-groups{display:block}
@@ -254,16 +254,17 @@
 .discovery-content .l3-section__title{display:block;margin-bottom:10px;font-size:22px}
 .discovery-content .l3-section__intent{font-size:16px;font-style:normal;line-height:1.5}
 .discovery-content .l3-section__scenarios{margin-top:16px}
-.discovery-content .flow-category{margin-bottom:28px}
-.discovery-content .flow-category__title{font-size:20px;margin:0 0 14px}
+.discovery-content .flow-categories{margin-top:40px;gap:40px}
+.discovery-content .flow-category{margin:0}
+.discovery-content .flow-category__title{display:block;font-size:24px;margin:0 0 20px;padding:0 0 12px;border-bottom:1px solid var(--border)}
 .discovery-content .flow-category__table{border:0;display:grid;gap:8px}
 .discovery-content .flow-detail{border:0;background:var(--surface)}
-.discovery-content .flow-detail__summary{padding:12px 14px;background:var(--surface-subtle);border-bottom:2px solid transparent;grid-template-columns:minmax(180px,1fr) minmax(0,2fr);gap:10px 20px}
-.discovery-content .flow-detail[open]>.flow-detail__summary{border-bottom-color:var(--link)}
+.discovery-content .flow-detail__summary{position:relative;padding:12px 14px;background:var(--surface-subtle);border:0;border-radius:var(--radius-card);grid-template-columns:minmax(180px,1fr) minmax(0,2fr);gap:0;align-items:stretch}
+.discovery-content .flow-detail[open]>.flow-detail__summary::before{opacity:1}
 .discovery-content .flow-detail__summary:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
-.discovery-content .flow-detail__title-col{gap:8px}
+.discovery-content .flow-detail__title-col{gap:8px;padding-right:20px}
 .discovery-content .flow-detail__title{font-size:17px;line-height:1.4}
-.discovery-content .flow-detail__intent{font-size:15px;line-height:1.5}
+.discovery-content .flow-detail__intent{font-size:15px;line-height:1.5;padding-left:20px;border-left:1px solid var(--border)}
 .discovery-content .flow-detail__body{padding:16px 0 24px;gap:20px}
 .discovery-content :is(.flow-detail__problems,.flow-problems){padding:0;border:0;background:none;border-radius:0;box-shadow:none}
 .discovery-content .flow-problems{margin-bottom:28px}
@@ -272,5 +273,9 @@
 .discovery-content .flow-stages__stage:is(:hover,:focus-visible){border-bottom-color:var(--link);color:var(--link)}
 .discovery-content .flow-stages__stage:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 .discovery-content .modal__panel{padding:24px;border:1px solid var(--border);border-radius:var(--radius-card)}
-@media(max-width:800px){.discovery-content .flow-detail__summary{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:800px){
+  .discovery-content .flow-detail__summary{grid-template-columns:minmax(0,1fr)}
+  .discovery-content .flow-detail__title-col{padding:0 0 10px}
+  .discovery-content .flow-detail__intent{padding:10px 0 0;border-left:0;border-top:1px solid var(--border)}
+}
 @media(max-width:650px){.discovery-content .flow-stages__stage{min-height:44px}.discovery-content .modal__panel{padding:18px}}
