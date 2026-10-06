@@ -9,6 +9,7 @@
     panels.forEach(p => { p.hidden = p.id !== key; });
     tabs.forEach(t => { t.setAttribute('aria-selected', String(t.dataset.dlTab === key)); t.tabIndex = t.dataset.dlTab === key ? 0 : -1; });
     if (focus) tabs.find(t => t.dataset.dlTab === key)?.focus();
+    root.dispatchEvent(new Event('kanban:refresh'));
     const filter = root.querySelector('.dl-filters');
     if (filter) filter.hidden = !['intake'].includes(key);
   }
@@ -42,6 +43,7 @@
       card.hidden = !(card.dataset.find.includes(q) && (!selected || card.dataset.priority.split(' ').includes(selected)));
       if(!card.hidden) visible.add(card.dataset.dlItem);
     });
+    root.dispatchEvent(new Event('kanban:refresh'));
     const output = root.querySelector('[data-dl-count]');
     if (output) {output.dataset.label ||= output.textContent.split(':')[0];output.textContent = output.dataset.label+': '+visible.size;}
   }

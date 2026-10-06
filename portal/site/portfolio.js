@@ -9,6 +9,7 @@
     panels.forEach(p => { p.hidden = p.id !== key; });
     tabs.forEach(t => { t.setAttribute('aria-selected', String(t.dataset.pfTab === key)); t.tabIndex = t.dataset.pfTab === key ? 0 : -1; });
     if (focus) tabs.find(t => t.dataset.pfTab === key)?.focus();
+    root.dispatchEvent(new Event('kanban:refresh'));
     const filter = root.querySelector('.pf-filter');
     if (filter) filter.hidden = !['board', 'review'].includes(key);
   }
@@ -49,21 +50,7 @@
     });
     const empty = root.querySelector('.pf-review-empty');
     if(empty) empty.hidden = !!root.querySelector('#review [data-pf-item]:not([hidden])');
+    root.dispatchEvent(new Event('kanban:refresh'));
   }
   search?.addEventListener('input',filter);priority?.addEventListener('change',filter);
-  const dialog = root.querySelector('.pf-dialog');let opener;
-  if (dialog && typeof dialog.showModal === 'function') {
-    root.querySelectorAll('[data-pf-open]').forEach(link => link.addEventListener('click',event => {
-      if(event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      const template = root.querySelector('template[data-pf-detail="'+link.dataset.pfOpen+'"]');
-      if (!template) return;
-      event.preventDefault();opener = link;
-      dialog.querySelector('.pf-dialog-body').replaceChildren(template.content.cloneNode(true));
-      const heading = dialog.querySelector('.pf-dialog-title');heading.id = 'pf-dialog-heading';dialog.setAttribute('aria-labelledby',heading.id);
-      dialog.querySelector('.pf-full-link').href = link.href;dialog.showModal();dialog.scrollTop = 0;
-    }));
-    dialog.querySelector('[data-pf-close]').addEventListener('click',()=>dialog.close());
-    dialog.addEventListener('close',()=>opener?.focus());
-    dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom) dialog.close();}});
-  }
 })();

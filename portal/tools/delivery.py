@@ -21,6 +21,7 @@ import shutil
 from localization import Sources
 import portfolio
 import workspace
+import kanban
 
 COLUMNS = ('Backlog', 'Ready', 'Active', 'Review', 'Done')
 LANES = ('Urgent', 'High priority', 'Normal')
@@ -146,13 +147,40 @@ def initiative_card(i,data,url):
     return f'<article class="dl-card dl-proposal" data-dl-initiative="{i["id"]}"><div><div class="dl-meta">{i["id"]} · {escape(i["priority"])} <span class="dl-badge">{escape(i["status"])}</span></div><h3>{escape(i["title"])}</h3><p>{escape(i["outcome"])}</p><div class="dl-actions">{link(url,target,u["open"]+" →")}{link(url,"/"+lang+"/projects/"+project_key+"/",u["open_project"]+" →") if project_key else ""}</div></div><aside><strong>{u["next"]}</strong><p>{u["gates"][i["column"]]}</p><small>{u["none"] if not any(r["initiative"]==i["id"] for r in data["items"]) else ""}</small></aside></article>'
 
 
-def item_body(item,data,url):
+def item_body(item,data,url,embedded=False):
     u=UI[data['lang']];parent=next(i for i in data['portfolio']['items'] if i['id']==item['initiative'])
     facts=[(u['parent'],item.get('Parent: Capability or Standing Initiative',item.get('Initiative'))),
+           (portfolio.UI[data['lang']]['owner'],portfolio._owner(parent,data['portfolio'])),
            ('Solution',item.get('Solution') or next((r['Solution'] for r in data['items'] if r['Identifier']==item.get('Parent: Capability or Standing Initiative')),u['unknown'])),
            (u['rank'],item['rank'] or u['unknown']),(u['age'],item.get('Stage entered on') or u['unknown']),
            (u['approval'],item['approval'] or u['unknown']),(u['accepted'],item['accepted'] or u['unknown'])]
-    return f'<header><span class="dl-meta">{item["Identifier"]} · {escape(item["status"])} · {escape(item["stage_label"])}</span><h1>{escape(item["title"])}</h1></header><section class="dl-section"><h2>{u["parent"]}</h2>{link(url,portfolio._route(data["lang"],parent),parent["id"]+" · "+parent["title"])}<p>{escape(parent["outcome"])}</p></section><dl class="dl-facts">'+''.join(f'<div><dt>{escape(k)}</dt><dd>{escape(str(v))}</dd></div>' for k,v in facts)+f'</dl><section class="dl-section"><h2>{u["criteria"]}</h2><p>{escape(item["criteria"] or u["unknown"])}</p></section><section class="dl-section"><h2>{u["dependencies"]}</h2>'+''.join(f'<p>{d} · {escape(data["dependencies"][d]["Status"])} · {escape(data["dependencies"][d]["Needs"])}</p>' for d in item['dependencies'])+'</section>'
+    body = f'<header><span class="dl-meta">{item["Identifier"]} · {escape(item["status"])} · {escape(item["stage_label"])}</span><h1>{escape(item["title"])}</h1></header><section class="dl-section"><h2>{u["parent"]}</h2>{link(url,portfolio._route(data["lang"],parent),parent["id"]+" · "+parent["title"])}<p>{escape(parent["outcome"])}</p></section><dl class="dl-facts">'+''.join(f'<div><dt>{escape(k)}</dt><dd>{escape(str(v))}</dd></div>' for k,v in facts)+f'</dl><section class="dl-section"><h2>{u["criteria"]}</h2><p>{escape(item["criteria"] or u["unknown"])}</p></section><section class="dl-section"><h2>{u["dependencies"]}</h2>'+''.join(f'<p>{d} · {escape(data["dependencies"][d]["Status"])} · {escape(data["dependencies"][d]["Needs"])}</p>' for d in item['dependencies'])+'</section>'
+
+    if embedded:
+        # Reuse the record's parent goal and evidence; this is guidance, not a decision.
+        parent_section = re.search(r'<section class="dl-section">.*?</section>', body, re.S)
+        body = body[:parent_section.start()] + body[parent_section.end():]
+        body = body.replace('</header>', '<p>'+escape(parent['outcome'])+'</p><p>'+link(url,portfolio._route(data['lang'],parent),parent['id']+' · '+parent['title'])+'</p></header>', 1)
+        next_gate = {
+            'en': {'Backlog':'Prepare scope, acceptance criteria and admission.', 'Ready':'Pull within the shared Team limits.', 'Active':'Complete the current delivery stage and submit for acceptance.', 'Review':'Inspect acceptance evidence and record the decision.', 'Done':'Inspect the recorded acceptance and outcome.', 'Off-flow':'Inspect the recorded exit decision.'},
+            'ru': {'Backlog':'Подготовить объём, критерии приёмки и принятие в работу.', 'Ready':'Принять в работу в пределах общих WIP-лимитов команды.', 'Active':'Завершить текущую стадию реализации и передать на приёмку.', 'Review':'Проверить подтверждения приёмки и зафиксировать решение.', 'Done':'Проверить зафиксированную приёмку и результат.', 'Off-flow':'Проверить записанное решение о выходе.'}
+        }[data['lang']][item['column']]
+        if (item.get('Waiting from') if item['State'] == 'Waiting' else item['State']) == 'Completed':
+            next_gate = 'Submit completed work for acceptance.' if data['lang'] == 'en' else 'Передать выполненную работу на приёмку.'
+        marker = body.index('<section class="dl-section">')
+        body = body[:marker] + '<section class="dl-section"><h2>'+u['next']+'</h2><p>'+next_gate+'</p></section>' + body[marker:]
+        if item['State'] == 'Waiting':
+            body = body.replace('</header>', '<p class="pf-notice">'+u['waiting']+' · '+escape(item.get('Waiting Dependency',''))+'</p></header>', 1)
+        body = body.replace('<h2>', '<h3>').replace('</h2>', '</h3>').replace('<h1>', '<h2>').replace('</h1>', '</h2>')
+        body = kanban.compact_summary(body, 'dl-section', data['lang'])
+    return body
+
+
+def _card(item, data, url):
+    lang=data['lang']
+    return kanban.card(item['Identifier'],item['title'],workspace.relative(url,f'/{lang}/projects/items/{item["Identifier"].lower()}/'),
+        kind=item['kind'],state=item['status'] + (' · '+item['stage_label'] if item['stage_label'] else ''),
+        priority=item['initiative'],rank=item['rank'],lang=lang,classes='dl-card')
 
 
 def render(data,url,item=None):
@@ -164,22 +192,26 @@ def render(data,url,item=None):
     body+='<div class="dl-stats">'+''.join(f'<div><strong>{value}</strong><span>{label}</span></div>' for value,label in stats)+'</div>'
     body+=f'<p class="dl-meta">{u["capabilities"]} · {u["columns"][1]}: {c["capability"]["ready"]} / {c["limits"]["capability_ready"]}</p>'
     body+='<nav class="dl-tabs">'+''.join(f'<a href="#{key}" data-dl-tab="{key}">{u[label]}</a>' for key,label in [('board','board'),('intake','intake'),('documents','documents')])+'</nav>'
-    board='<div class="dl-board-wrap"><table class="dl-board"><thead><tr><th></th>'+''.join(f'<th scope="col">{escape(label)} <span class="dl-badge">{data["counts"][col]}</span><small>{caption}</small></th>' for col,label,caption in zip(COLUMNS,u['columns'],u['captions']))+'</tr></thead><tbody>'
+    captions = []
+    for col in COLUMNS:
+        if col == 'Ready':
+            caption = f'F {c["feature"]["ready"]}/{c["limits"]["feature_ready"]} · C {c["capability"]["ready"]}/{c["limits"]["capability_ready"]}'
+        elif col in ('Active','Review'):
+            caption = ('Shared WIP' if lang == 'en' else 'Общий WIP') + f' · F {c["feature"]["progress"]}/{c["limits"]["feature"]} · C {c["capability"]["progress"]}/{c["limits"]["capability"]}'
+        else: caption = 'No WIP cap' if lang == 'en' else 'Без WIP-лимита'
+        captions.append(caption)
+    board='<div class="dl-board-wrap kb-scroll" tabindex="0" role="region" aria-label="'+u['board']+'"><table class="dl-board kb-table"><thead><tr><th></th>'+''.join(f'<th scope="col">{kanban.column_header(label,data["counts"][col],caption)}</th>' for col,label,caption in zip(COLUMNS,u['columns'],captions))+'</tr></thead><tbody>'
     for lane,label in zip(LANES,u['lanes']):
         board+=f'<tr><th scope="row">{label}</th>'
         for col in COLUMNS:
-            cards=''
-            for r in data['items']:
-                if r['column']!=col or r['Lane']!=lane:continue
-                target=f'/{lang}/projects/items/{r["Identifier"].lower()}/'
-                cards+=f'<article class="dl-card"><span class="dl-meta">{r["Identifier"]} · {escape(r["status"])}</span><h3>{link(url,target,r["title"])}</h3><small>{r["initiative"]} · {escape(r["stage_label"])}</small></article>'
-            board+='<td>'+ (cards or '<span class="dl-empty">—</span>')+'</td>'
+            cards=''.join(_card(r,data,url) for r in data['items'] if r['column']==col and r['Lane']==lane)
+            board+='<td><div class="kb-stack">'+ (cards or '<span class="kb-empty">—</span>')+'</div></td>'
         board+='</tr>'
-    board+='</tbody></table></div>'
+    board+='</tbody></table></div>'+kanban.detail_panel(lang)
     if not data['items']:board+=f'<p class="dl-empty"><strong>{u["empty"]}</strong></p>'
     board+=f'<p class="dl-meta">{u["admission"]}</p><p class="dl-meta">{u["shared"]} · {u["waiting"]}: {sum(r["State"]=="Waiting" for r in data["items"])}</p>'
     off=[r for r in data['items'] if r['column']=='Off-flow']
-    if off:board+=f'<h2 class="dl-section-title">{u["offflow"]}</h2>'+''.join(link(url,f'/{lang}/projects/items/{r["Identifier"].lower()}/',r['title']) for r in off)
+    if off:board+=f'<h2 class="dl-section-title">{u["offflow"]}</h2>'+'<div class="kb-grid">'+''.join(_card(r,data,url) for r in off)+'</div>'
     board+=f'<h2 class="dl-section-title">{u["intake"]}</h2>'+''.join(initiative_card(i,data,url) for i in ordinary if i.get('project_key'))
     body+=f'<section id="board" data-dl-panel>{board}</section>'
     intake=f'<h2>{u["intake_title"]}</h2><p class="dl-meta">{u["intake_note"]}</p><div class="dl-filters" hidden><label>{u["search"]} <input type="search" data-dl-search></label><label>{u["priority"]} <select data-dl-priority><option value="">{u["all"]}</option>'+''.join(f'<option>{p}</option>' for p in ['PRI-1','PRI-2','PRI-3','PRI-4','PRI-5'])+f'</select></label><span data-dl-count role="status">{u["showing"]}: {len(ordinary)}</span></div><div class="dl-rows">'
@@ -194,7 +226,8 @@ def render(data,url,item=None):
         docs,_=workbook.documents(lang)
         documents+=initiative_card(i,data,url)+f'<p class="dl-meta">{u["full"]} · {len(docs)} · EN / RU</p><div class="dl-documents">'+''.join(f'<a class="dl-card" href="{workspace.relative(url,d["url"])}"><span class="dl-meta">{n:02d}</span><h3>{escape(d["label"])}</h3></a>' for n,d in enumerate(docs,1))+'</div>'
     body+=f'<section id="documents" data-dl-panel>{documents}</section><footer class="dl-source"><p>{u['footer']}: {data['review_date'] or u['unknown']} · {u['snapshot']}: {pf['date']}</p><p>{u["source"]}</p></footer>'
-    return '<article class="dl-content">'+body+'</article>'
+    body+=''.join(f'<template data-kb-detail="{r["Identifier"]}">{item_body(r,data,url,embedded=True)}</template>' for r in data['items'])
+    return '<article class="dl-content" data-kanban-workspace>'+body+'</article>'
 
 
 def build(output):
@@ -207,9 +240,10 @@ def build(output):
             title=item['title'] if item else u['title'];body=render(data,url,item)
             nav=''.join(link(url,f'/{lang}/projects/#{key}',u[label]) for key,label in [('board','board'),('intake','intake'),('documents','documents')])
             page=workspace.page(url,lang,'projects',title,body,nav,body_class='delivery-workspace')
-            page=page.replace('</head>',f'<link rel="stylesheet" href="{workspace.asset(url,"delivery.css")}"><script defer src="{workspace.asset(url,"delivery.js")}"></script>\n</head>',1)
+            page=page.replace('</head>',f'<link rel="stylesheet" href="{workspace.asset(url,"delivery.css")}"><script defer src="{workspace.asset(url,"delivery.js")}"></script>'+kanban.assets(url)+'\n</head>',1)
             target=output/url.strip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(page)
             entries.append({'u':url,'t':title,'h':item['Identifier'] if item else title,'x':VisibleText(body).text()});count+=1
         (output/f'assets/search-projects-{lang}.json').write_text(json.dumps(entries,ensure_ascii=False,separators=(',',':')))
     for name in ('delivery.css','delivery.js'):shutil.copyfile(workspace.ROOT/'portal/site'/name,output/'assets'/name)
+    kanban.assets("/en/projects/",output)
     return count

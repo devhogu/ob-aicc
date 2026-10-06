@@ -29,12 +29,12 @@ def interactions(page,lang,counts):
     assert page.locator('#board [data-pf-item]:visible').count()==1
     assert page.locator('[data-pf-visible]').inner_text().endswith(': 1')
     page.locator('#board [data-pf-open="INI-004"]').click()
-    dialog=page.locator('.pf-dialog')
+    dialog=page.locator('[data-pf-panel]:visible [data-kb-panel]')
     assert dialog.is_visible()
     assert 'INI-004' in dialog.inner_text()
     assert 'DR-2026-061' in dialog.inner_text()
     assert ('Not recorded' if lang=='en' else 'Не указано') in dialog.inner_text()
-    assert urlsplit(dialog.locator('.pf-full-link').get_attribute('href')).path.endswith(('/ini-004/','/ini-004/index.html'))
+    assert urlsplit(dialog.locator('[data-kb-full]').get_attribute('href')).path.endswith(('/ini-004/','/ini-004/index.html'))
     page.keyboard.press('Escape');assert not dialog.is_visible()
     assert page.locator('#board [data-pf-open="INI-004"]').evaluate('e=>e===document.activeElement')
     page.locator('[data-pf-priority]').select_option('')
@@ -120,7 +120,7 @@ def main():
                         page.goto((folder/lang/'initiatives/index.html').as_uri())
                         interactions(page,lang,counts)
                         page.locator('#board [data-pf-open="INI-004"]').click()
-                        page.locator('.pf-full-link').click()
+                        page.locator('[data-pf-panel]:visible [data-kb-full]').click()
                         assert page.locator('.pf-detail-page').is_visible()
                         counts['portable_paths']+=1
             assert not errors,errors

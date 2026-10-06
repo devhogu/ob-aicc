@@ -22,6 +22,7 @@ import shutil
 
 from localization import Sources, _tables
 import workspace
+import kanban
 
 COLUMNS = ('Funnel', 'Reviewing', 'Analyzing', 'Portfolio Backlog', 'MVP', 'Implementation', 'Done')
 OFF_FLOW = ('Deferred', 'Rejected', 'Pivoted', 'Cancelled')
@@ -361,10 +362,10 @@ def _facts(pairs):
     return '<dl class="pf-facts">' + ''.join(f'<div><dt>{_h(k)}</dt><dd>{_h(v)}</dd></div>' for k, v in pairs) + '</dl>'
 
 
-def summary(item, data, modal=False, url=None):
+def summary(item, data, embedded=False, url=None):
     url = url or _route(data['lang'],item)
     lang = data['lang']; u = UI[lang]; g = _gates(lang).get(item['column'])
-    title_tag = 'h2' if modal else 'h1'
+    title_tag = 'h2' if embedded else 'h1'
     heading = f'<header><span class="pf-meta">{item["id"]} · {_h(item["status"])}</span><{title_tag}>{_h(item["title"])}</{title_tag}><p>{_h(item["outcome"])}</p></header>'
     facts = [(u['owner'], _owner(item, data)), (u['filter'], _priority(item, data))]
     if not item['standing']:
@@ -399,16 +400,13 @@ def summary(item, data, modal=False, url=None):
         body += _section('Project and delivery' if lang == 'en' else 'Проект и реализация', '<p>' + _link(url, project_url, 'Project documents' if lang == 'en' else 'Документы проекта') + ' · ' + _link(url, '/' + lang + '/projects/#intake', 'Program Backlog' if lang == 'en' else 'Бэклог программы') + '</p>')
     if item['approval_ref']: references.append(f'registry/{lang}/decision-log.md')
     body += _section(u['source'], '<p class="pf-muted">' + u['source_note'] + '</p><ul class="pf-references">' + ''.join('<li>' + _reference(r) + '</li>' for r in references) + '</ul>')
-    if modal:
+    if embedded:
         body = body.replace('<h2>', '<h3>').replace('</h2>', '</h3>')
-        body = body.replace('<h3>', '<h2 class="pf-dialog-title">', 1).replace('</h3>', '</h2>', 1)
+        body = body.replace('<h3>', '<h2 class="kb-summary-title">', 1).replace('</h3>', '</h2>', 1)
+        body = kanban.compact_summary(body, 'pf-section', lang)
+        if item.get('project_key'):
+            body = body.replace('</header>', '<p>'+_link(url, '/'+lang+'/projects/'+item['project_key']+'/', 'Open project →' if lang == 'en' else 'Открыть проект →')+'</p></header>', 1)
     return body
-
-
-def _step(label):
-    # A Russian step name carries its English name in brackets (translation map); the board shows it as a second line.
-    match = re.fullmatch(r'(.+) \(([A-Za-z ]+)\)', label)
-    return f'{_h(match[1])}<small class="pf-step-en" lang="en">{_h(match[2])}</small>' if match else _h(label)
 
 
 def _reference(path):
@@ -416,19 +414,13 @@ def _reference(path):
     return f'<a href="{escape(SHARE + path)}"><code>{_h(path)}</code></a>'
 
 
-def _card(item, data, url, *, review=False):
-    lang = data['lang']; u = UI[lang]
-    next_gate = u['standing_gate'] if item['standing'] else _gates(lang).get(item['column'], {}).get('Gate', item['status'])
-    if item['state'] in ('Accepted', 'Closed'): next_gate = '—'
+def _card(item, data, url):
+    lang = data['lang']
     labels = ' '.join([item['id'], item['title'], _owner(item, data), _priority(item, data)])
-    link = _link(url, _route(lang, item), item['title'], 'pf-title-link')
-    link = link.replace('<a ', '<a data-pf-open="' + item['id'] + '" ', 1)
-    meta = item['id'] + (f' · #{item["rank"]}' if item['rank'] else '')
-    text = f'<span class="pf-status">{_h(item["status"])}</span><p class="pf-muted">{_h(_priority(item, data))}</p><p>{_h(_owner(item, data))}</p>'
-    if review: text += f'<p>{_h(item["outcome"])}</p><p class="pf-muted">{_h(item["pending"])}</p>'
-    if item['column'] == 'Reviewing' and item['owner'] == u['owner_missing'] and item['priorities']: text += f'<p class="pf-notice">{u["blocked"]}</p>'
-    if item['state'] == 'Waiting': text += '<p>' + u['waiting'] + '</p>'
-    return f'<article class="pf-card" data-pf-item="{item["id"]}" data-kind="{"standing" if item["standing"] else "ordinary"}" data-priority="{" ".join(item["priorities"]) or "enabling"}" data-find="{_h(labels.casefold())}"><span class="pf-meta">{_h(meta)}</span><h3>{link}</h3>{text}<div class="pf-next"><span>{u["next"]}</span><strong>{_h(next_gate)}</strong></div></article>'
+    attrs = f'data-pf-open="{item["id"]}" data-pf-item="{item["id"]}" data-kind="{"standing" if item["standing"] else "ordinary"}" data-priority="{" ".join(item["priorities"]) or "enabling"}" data-find="{_h(labels.casefold())}"'
+    return kanban.card(item['id'], item['title'], workspace.relative(url, _route(lang,item)),
+        kind=('Standing' if lang == 'en' else 'Постоянная') if item['standing'] else ('Initiative' if lang == 'en' else 'Инициатива'),
+        state=item['status'], priority=item['priority'], rank=item['rank'], lang=lang, attributes=attrs, classes='pf-card pf-title-link', order_label=('Run-rate' if lang == 'en' else 'Текущие') if item['standing'] else None)
 
 
 def _controls(data):
@@ -466,23 +458,21 @@ def render(data, url, kind='dashboard', item=None):
         body += '<nav class="pf-tabs" aria-label="' + u['title'] + '">' + ''.join(f'<a href="#{key}" data-pf-tab="{key}">{u[key]}</a>' for key in ('board', 'review', 'standing', 'roadmap')) + '</nav>'
         body += _controls(data)
         columns = []
-        occupied = [k for k in COLUMNS if data['counts'][k]]
         for col in COLUMNS:
             cards = ''.join(_card(x, data, url) for x in ordinary if x['column'] == col)
-            count = data['counts'][col]; label = gates[col]['_localized_Kanban step']
-            caption = u['impl_gate'] if col == 'Implementation' else u['gate_prefix'] + ': ' + (u['mvp_gate'] if col == 'MVP' else gates[col]['Gate'])
-            columns.append(f'<section class="pf-column{" pf-column--occupied" if col in occupied else ""}" data-pf-column="{col}"><header><h3>{_step(label)}</h3><span class="pf-badge">{count}</span></header><p class="pf-column-gate">{_h(caption)}</p><div class="pf-column-cards">{cards}</div><p class="pf-empty" {"hidden" if cards else ""}>{u["empty"]}</p></section>')
-        widths = ' '.join('minmax(360px,3fr)' if data['counts'][k] else '110px' for k in COLUMNS)
-        board = '<p class="pf-muted">' + u['order'] + '</p><div class="pf-board-scroll" tabindex="0" role="region" aria-label="' + u['board'] + '"><div class="pf-board" style="--pf-board-columns:' + widths + '">' + ''.join(columns) + '</div></div>'
+            label = gates[col]['_localized_Kanban step']
+            caption = (('Shared Active' if lang == 'en' else 'Общий WIP') + f' {data["capacity"]["active"]}/{data["capacity"]["limit"]}') if col in ('MVP','Implementation') else ('No WIP cap' if lang == 'en' else 'Без WIP-лимита')
+            columns.append(f'<section class="pf-column kb-column" data-pf-column="{col}">{kanban.column_header(label,data["counts"][col],caption)}<div class="pf-column-cards kb-stack">{cards}<p class="pf-empty kb-empty" {"hidden" if cards else ""}>{u["empty"]}</p></div></section>')
+        board = '<p class="pf-muted">' + u['order'] + '</p><div class="pf-board-scroll kb-scroll" tabindex="0" role="region" aria-label="' + u['board'] + '"><div class="pf-board kb-board">' + ''.join(columns) + '</div></div>' + kanban.detail_panel(lang)
         off = [x for x in ordinary if x['column'] == 'Off-flow']
-        board += _section(u['offflow'], '<div class="pf-grid">' + ''.join(_card(x, data, url) for x in off) + '</div>' if off else '<p class="pf-muted">' + u['empty'] + '</p>')
-        board += _capacity(data)
+        if off: board += _section(u['offflow'], '<div class="pf-grid">' + ''.join(_card(x, data, url) for x in off) + '</div>')
+        board += '<details class="pf-measure-disclosure"><summary>'+u['capacity']+'</summary>'+_capacity(data)+'</details>'
         body += f'<section id="board" class="pf-panel" data-pf-panel><h2 class="pf-panel-title">{u["board"]}</h2>{board}</section>'
         review_items = [x for x in ordinary if x['column'] in ('Funnel', 'Reviewing', 'Analyzing', 'Portfolio Backlog', 'MVP', 'Done')]
-        review = '<p class="pf-muted">' + u['review_intro'] + '</p><div class="pf-grid">' + ''.join(_card(x, data, url, review=True) for x in review_items) + '</div>'
-        body += f'<section id="review" class="pf-panel" data-pf-panel><h2 class="pf-panel-title">{u["review"]}</h2>{review}<p class="pf-empty pf-review-empty" hidden>{u["no_results"]}</p></section>'
-        content = '<p class="pf-muted">' + u['standing_intro'] + '</p><div class="pf-grid">' + ''.join(_card(x, data, url, review=True) for x in standing) + '</div>'
-        body += f'<section id="standing" class="pf-panel" data-pf-panel><h2 class="pf-panel-title">{u["standing"]}</h2>{content}</section>'
+        review = '<p class="pf-muted">' + u['review_intro'] + '</p><div class="pf-grid">' + ''.join(_card(x, data, url) for x in review_items) + '</div>'
+        body += f'<section id="review" class="pf-panel" data-pf-panel><h2 class="pf-panel-title">{u["review"]}</h2>{review}{kanban.detail_panel(lang)}<p class="pf-empty pf-review-empty" hidden>{u["no_results"]}</p></section>'
+        content = '<p class="pf-muted">' + u['standing_intro'] + '</p><div class="pf-grid">' + ''.join(_card(x, data, url) for x in standing) + '</div>'
+        body += f'<section id="standing" class="pf-panel" data-pf-panel><h2 class="pf-panel-title">{u["standing"]}</h2>{content}{kanban.detail_panel(lang)}</section>'
         horizon_cards = ''
         for horizon in data['horizons']:
             pi = horizon['Program Increment']; matching = [m for m in data['milestones'] if m['Program Increment'] == pi or m['Program Increment'] in pi]
@@ -504,9 +494,8 @@ def render(data, url, kind='dashboard', item=None):
     footer = ' · '.join(_reference(f'registry/{lang}/{name}') for name in ('dashboard.md', 'portfolio-backlog.md'))
     body += '<div class="pf-record-footer"><span class="pf-meta">' + u['source'] + '</span><p>' + footer + '</p><p class="pf-muted">' + u['source_note'] + '</p></div>'
     if kind == 'dashboard':
-        body += ''.join(f'<template data-pf-detail="{x["id"]}">{summary(x, data, modal=True, url=url)}</template>' for x in data['items'])
-        body += f'<dialog class="pf-dialog" aria-label="{u["open"]}"><button type="button" data-pf-close aria-label="{u["close"]}">×</button><div class="pf-dialog-body"></div><a class="pf-full-link">{u["full"]}</a></dialog>'
-    return '<article class="pf-content" data-pf-view="' + kind + '">' + body + '</article>'
+        body += ''.join(f'<template data-kb-detail="{x["id"]}">{summary(x, data, embedded=True, url=url)}</template>' for x in data['items'])
+    return '<article class="pf-content" data-kanban-workspace data-pf-view="' + kind + '">' + body + '</article>'
 
 
 def build(output):
@@ -524,7 +513,7 @@ def build(output):
             if item: nav += f'<span class="pf-nav-label">{_h(item["title"])}</span>'
             page = workspace.page(url,lang,'initiatives',title,body,nav,body_class='portfolio-workspace')
             head = f'<link rel="stylesheet" href="{workspace.asset(url,"portfolio.css")}"><script defer src="{workspace.asset(url,"portfolio.js")}"></script>'
-            page = page.replace('</head>',head+'\n</head>',1)
+            page = page.replace('</head>',head+kanban.assets(url)+'\n</head>',1)
             target = output / url.strip('/') / 'index.html'; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page)
             searchable = summary(item,data) if item else _header(data,title)
             from neighbours import VisibleText
@@ -532,4 +521,5 @@ def build(output):
             count += 1
         (output/f'assets/search-initiatives-{lang}.json').write_text(json.dumps(entries,ensure_ascii=False,separators=(',',':')))
     for name in ('portfolio.css','portfolio.js'): shutil.copyfile(workspace.ROOT/'portal/site'/name, output/'assets'/name)
+    kanban.assets("/en/initiatives/", output)
     return count

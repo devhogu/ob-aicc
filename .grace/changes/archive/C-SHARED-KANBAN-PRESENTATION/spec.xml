@@ -1,0 +1,48 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-SHARED-KANBAN-PRESENTATION>
+    <Summary>Give the operating Portfolio and Program Backlog one compact Kanban presentation with small selectable cards and expanded information below the board.</Summary>
+    <Problem>Portfolio uses variable-width columns, large cards and modal summaries while Delivery uses a table and full-page item navigation. Readers cannot scan and inspect both boards in the same way.</Problem>
+    <Goals>
+      <Goal>Use one reusable board/card/selection presentation across /en/initiatives/, /ru/initiatives/, /en/projects/ and /ru/projects/.</Goal>
+      <Goal>Present compact stacked cards, equal-width workflow columns, counts and actual WIP limits; selecting a card opens its information in a full-width panel below the active board.</Goal>
+      <Goal>Retain each board's charter-defined workflow, rank, service classes, Waiting flags, shared capacity and actual maintained Registry records.</Goal>
+      <Goal>Provide the same selection, replacement, dismissal, keyboard focus and native-link fallback mechanisms for both boards, in both languages and themes.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Use SAFe-inspired flow-board conventions, not copied proprietary graphics or a replacement for the AICC operating model. Portfolio keeps Funnel, Reviewing, Analyzing, Portfolio Backlog, MVP, Implementation and Done. Delivery keeps Backlog, Ready, Active, Review and Done with Urgent, High priority and Normal service classes.</Constraint>
+      <Constraint>Standing Initiatives remain outside the ordinary Portfolio flow; run-rate Features share actual delivery capacity. Shared MVP/Implementation and Active/Review limits are labelled as shared rather than duplicated allocations. Waiting retains its underlying column and Dependency. Do not add unrecorded owners, dates, priorities, WIP limits, admissions or work items.</Constraint>
+      <Constraint>Use existing AICC fonts, neutral surfaces and theme tokens, magenta rules and tapered wrapping selection accents. Columns remain consistent widths; compact cards expose identity, title, priority/type and recorded rank or state. Full information stays available in selected details and native record routes.</Constraint>
+      <Constraint>Reuse maintained record projections and summaries. The shared Kanban presentation does not own Registry lifecycle or persistence. Selection is reading UI only; no drag/drop state mutation, browser-local approvals, backend or duplicate tracker.</Constraint>
+      <Constraint>Preserve Portfolio filters, review/Standing/roadmap/register views, scoped search, native project documents and reciprocal Initiative/project links. Replace card modal behavior with the common inline detail mechanism where those summary controls occur.</Constraint>
+      <Constraint>Detail replacement displays exactly one selected item. Selection is visible on the card, can be cleared, returns focus on close/Escape, and remains understandable when filters hide the selected item or views change. Native links work without scripting and with modified clicks. No page-wide overflow; contained horizontal board scrolling on smaller viewports.</Constraint>
+      <Constraint>The Program Backlog currently has zero recorded Capabilities and Features. The live board remains empty. Preview-only sample delivery cards may demonstrate the layout in a disposable artifact but never enter Registry records or generated runtime output. A nonempty fixture verifies actual delivery selection independently.</Constraint>
+      <Constraint>Preserve EN/RU identity, source freshness, role-safe summaries, direct-file export and no-script reading. After approved implementation, passing verification permits durable reconciliation, archive, commit, push and publication under the user's standing instruction to publish substantial changes.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Changing charter states or gates, Registry business facts, rankings, approvals, work admission, funding, staffing or operating limits.</NonGoal>
+      <NonGoal>Introducing live editing, drag/drop persistence, Jira integration, a new backend, or sample cards in the published backlog.</NonGoal>
+      <NonGoal>Rewriting unrelated content or restyling Discovery, Lab or native project documents.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>Portfolio and Delivery use the same card spacing, type, surfaces, header/count conventions, selection accent and inline detail interaction while retaining their different state/column/lane semantics.</Criterion>
+      <Criterion>All seven ordinary Portfolio items and four separate Standing Initiatives retain actual identities and source-derived information; the actual delivery board remains empty. Nonempty delivery fixture cards expand real rendered summaries through the same mechanism.</Criterion>
+      <Criterion>Selecting a card, changing selection, closing, Escape, keyboard activation, filtering and tab changes keep detail content, selection marking and focus consistent; controls provide native summary routes without scripting.</Criterion>
+      <Criterion>EN/RU, desktop/intermediate/mobile, light/dark, scoped search, all existing record/document relationships and disposable portable output pass. The production package has no preview sample records.</Criterion>
+      <Criterion>Shared presentation ownership and verification are reconciled; full-site build and declared gates pass before archive, push and live publication.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-NEIGHBOURS /><M-PORTAL-PROJECTION /><M-PORTABLE-EXPORT /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_neighbours.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_portfolio.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_delivery.py</ExpectedCommand>
+      <ExpectedEvidence>Actual baseline integrity, shared rendering with nonempty delivery fixtures, independently exercised card selection/replacement/focus/filter interactions in both languages/themes and responsive sizes, no-script and portable paths, retained project content, and served package verification.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The user approved the reviewed preview and completed four-task build plan on 2026-10-06 with “and dont forget to commit, push and publish”; continuing authority includes implementation, verified apply/archive and release.</Assumption>
+      <Assumption>The user's requested shared card-and-detail pattern fixes presentation only; the current maintained Registry remains the operational authority.</Assumption>
+      <Assumption>The single interactive preview is the proposed concrete layout. Its sample delivery records are expressly illustrative and disposable.</Assumption>
+    </Assumptions>
+  </C-SHARED-KANBAN-PRESENTATION>
+</GraceChangeSpec>
