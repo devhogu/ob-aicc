@@ -1,6 +1,6 @@
 # Latin script in the Russian Discovery Catalog: sweep and proposals
 
-Prepared 6 October 2026. Every word in Latin script in the visible text and the stage texts of the Russian catalog (`html-alt/financial-services/ru`) was counted: 482 distinct words, about 9,400 occurrences. They fall into five groups. Group 1 is fixed; groups 2 to 5 are proposals for the owner, to be applied in the Russian rewording round and recorded in the translation map where they are terms.
+Prepared 6 October 2026. Every word in Latin script in the visible text and the stage texts of the Russian catalog (`html-alt/financial-services/ru`) was counted: 482 distinct words, about 9,400 occurrences. They fall into five groups. Group 1 is fixed. The terms of groups 4 to 6 are now rows of the AICC translation map (`charter/ru/translation-en-ru-map.md`, version 0.14), which governs every translation: the financial terms and English words in section 3 (established, owner's review of 6 October 2026, with "sandbox" set as «зона контролируемого тестирования»), and the roles, committees, SAR and governance in section 5 (proposed, after a check against Russian and Kyrgyz banking usage). The tables below are the working record.
 
 ## 1. Fixed on 6 October 2026
 
