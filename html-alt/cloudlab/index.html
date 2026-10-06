@@ -1050,12 +1050,10 @@ body {
   <header class="page-header" role="banner">
     <div class="page-header__title-row">
       <div>
-        <h1 class="page-header__title"><em>Cloud LAB</em> · Scenario Hypothesis Validation</h1>
+        <h1 class="page-header__title"><em>AI Lab</em> · Experiments with AI scenarios</h1>
       </div>
     </div>
-    <p class="page-header__intent">
-      Once established, the Cloud LAB runs continuously. New scenarios enter the validation flow at any time; data flows from production into the sandbox via read-only ETL; agentic workflows are constructed, measured, and either promoted toward production or shelved. The lab persists indefinitely as the bank's GenAI exploration runtime.
-    </p>
+    <p class="page-header__intent">The AI Lab runs continuously on the Bank's own infrastructure, isolated from its production systems. A scenario can enter at any time as an Experiment; data arrives as read-only extracts from the Bank's systems and never leaves the Bank; the AI-agent workflow is built, measured, and then accepted, turned into a Proposal for delivery, or rejected. The Lab is where the Bank tries generative AI before it commits to it.</p>
   </header>
 
   <main id="main-content" aria-label="Cloud LAB matrix and governance guardrails">
@@ -1071,145 +1069,145 @@ body {
 
         <!-- Chevrons (row 1) -->
         <div class="cl-chev" data-step="1" style="grid-column:2;grid-row:1;">
-          <div class="cl-chev-inner cl-chev-first"><span class="cl-chev-name">DEFINE<br>SCENARIOS</span></div>
+          <div class="cl-chev-inner cl-chev-first"><span class="cl-chev-name">Define scenarios</span></div>
         </div>
         <div class="cl-chev" data-step="2" style="grid-column:3;grid-row:1;">
-          <div class="cl-chev-inner"><span class="cl-chev-name">ESTABLISH<br>CLOUD LAB</span></div>
+          <div class="cl-chev-inner"><span class="cl-chev-name">Set up the Lab</span></div>
         </div>
         <div class="cl-chev" data-step="3" style="grid-column:4;grid-row:1;">
-          <div class="cl-chev-inner"><span class="cl-chev-name">CHOOSE<br>SCENARIO</span></div>
+          <div class="cl-chev-inner"><span class="cl-chev-name">Choose a scenario</span></div>
         </div>
         <div class="cl-chev" data-step="4" style="grid-column:5;grid-row:1;">
-          <div class="cl-chev-inner"><span class="cl-chev-name">PREPARE<br>DATA</span></div>
+          <div class="cl-chev-inner"><span class="cl-chev-name">Prepare data</span></div>
         </div>
         <div class="cl-chev" data-step="5" style="grid-column:6;grid-row:1;">
-          <div class="cl-chev-inner"><span class="cl-chev-name">AGENTIC<br>WORKFLOW</span></div>
+          <div class="cl-chev-inner"><span class="cl-chev-name">Build the AI-agent workflow</span></div>
         </div>
         <div class="cl-chev" data-step="6" style="grid-column:7;grid-row:1;">
-          <div class="cl-chev-inner cl-chev-last"><span class="cl-chev-name">VALIDATE</span></div>
+          <div class="cl-chev-inner cl-chev-last"><span class="cl-chev-name">Validate</span></div>
         </div>
 
         <!-- LANE A — Governance & Decisions -->
         <div class="cl-lane-label" data-lane="A" style="grid-row:2;">
-          <span class="cl-lane-label__name">Governance &amp; Decisions</span>
+          <span class="cl-lane-label__name">Governance &amp; decisions</span>
         </div>
         <div class="cl-cell" data-lane="A" data-step="1" style="grid-column:2;grid-row:2;">
-          <div class="cl-card cl-card--gov"><span class="cl-name">Secure Commitment</span><span class="cl-desc">Identify business sponsor; informal commitment</span></div>
-          <div class="cl-card cl-card--gov"><span class="cl-name">Identify Scenarios</span><span class="cl-desc">Map service-level scenarios to validate</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Secure a sponsor</span><span class="cl-desc">Name the business sponsor and agree informally</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Identify scenarios</span><span class="cl-desc">List the scenarios to test, service by service</span></div>
         </div>
         <div class="cl-cell" data-lane="A" data-step="2" style="grid-column:3;grid-row:2;">
-          <div class="cl-card cl-card--gov"><span class="cl-name">Account Registration</span><span class="cl-desc">AWS approvals; vendor onboarding sign-off</span></div>
-          <div class="cl-card cl-card--gov"><span class="cl-name">Define IAM and Policies</span><span class="cl-desc">Roles, access policies, audit gates</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Request the environment</span><span class="cl-desc">Infrastructure request approved; IT security sign-off</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Set access roles and policies</span><span class="cl-desc">Roles, access policies, audit checkpoints</span></div>
         </div>
         <div class="cl-cell" data-lane="A" data-step="3" style="grid-column:4;grid-row:2;">
-          <div class="cl-card cl-card--gov"><span class="cl-name">Prioritize</span><span class="cl-desc">Pick next scenario from validated backlog</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Prioritize</span><span class="cl-desc">Pick the next scenario from the validated backlog</span></div>
         </div>
         <div class="cl-cell" data-lane="A" data-step="4" style="grid-column:5;grid-row:2;">
-          <div class="cl-card cl-card--gov"><span class="cl-name">Data Ownership</span><span class="cl-desc">Verify usage rights and privacy stance</span></div>
-          <div class="cl-card cl-card--gov"><span class="cl-name">Identify Data Sources</span><span class="cl-desc">Authoritative sources for the scenario</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Data ownership</span><span class="cl-desc">Confirm the right to use the data and the privacy position</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Identify data sources</span><span class="cl-desc">Authoritative sources for the scenario</span></div>
         </div>
         <div class="cl-cell" data-lane="A" data-step="5" style="grid-column:6;grid-row:2;">
-          <div class="cl-card cl-card--gov"><span class="cl-name">Requirements</span><span class="cl-desc">Capture stakeholder requirements and acceptance</span></div>
-          <div class="cl-card cl-card--gov"><span class="cl-name">Select Architecture</span><span class="cl-desc">Pick agentic pattern; vet against constraints</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Requirements</span><span class="cl-desc">Record stakeholder requirements and acceptance criteria</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Select the architecture</span><span class="cl-desc">Choose the AI-agent pattern; check it against constraints</span></div>
         </div>
         <div class="cl-cell" data-lane="A" data-step="6" style="grid-column:7;grid-row:2;">
-          <div class="cl-card cl-card--gov"><span class="cl-name">Stakeholder Demo</span><span class="cl-desc">Show to sponsor; capture feedback</span></div>
-          <div class="cl-card cl-card--gov"><span class="cl-name">Promote / Discard</span><span class="cl-desc">Compare to KPIs; route to On-Prem or shelve</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Sponsor demo</span><span class="cl-desc">Show the result to the sponsor; record feedback</span></div>
+          <div class="cl-card cl-card--gov"><span class="cl-name">Accept, propose or reject</span><span class="cl-desc">Compare with the KPIs; propose for production delivery, or close</span></div>
         </div>
 
         <!-- LANE B — Risk & Controls -->
         <div class="cl-lane-label" data-lane="B" style="grid-row:3;">
-          <span class="cl-lane-label__name">Risk &amp; Controls</span>
+          <span class="cl-lane-label__name">Risk &amp; controls</span>
         </div>
         <div class="cl-cell" data-lane="B" data-step="1" style="grid-column:2;grid-row:3;"></div>
         <div class="cl-cell" data-lane="B" data-step="2" style="grid-column:3;grid-row:3;">
-          <div class="cl-card cl-card--risk"><span class="cl-name">Sandbox Isolation</span><span class="cl-desc">Network perimeter, key management, export rules</span></div>
-          <div class="cl-card cl-card--risk"><span class="cl-name">Define Guardrails</span><span class="cl-desc">Lab-level constraints on agentic outputs</span></div>
+          <div class="cl-card cl-card--risk"><span class="cl-name">Lab isolation</span><span class="cl-desc">Network segment, key management, export rules</span></div>
+          <div class="cl-card cl-card--risk"><span class="cl-name">Define guardrails</span><span class="cl-desc">Lab-wide limits on what AI agents may produce and do</span></div>
         </div>
         <div class="cl-cell" data-lane="B" data-step="3" style="grid-column:4;grid-row:3;">
-          <div class="cl-card cl-card--risk"><span class="cl-name">Risk Assessment</span><span class="cl-desc">What's the risk envelope for this scenario?</span></div>
+          <div class="cl-card cl-card--risk"><span class="cl-name">Risk assessment</span><span class="cl-desc">Set the risk limits for this scenario</span></div>
         </div>
         <div class="cl-cell" data-lane="B" data-step="4" style="grid-column:5;grid-row:3;">
-          <div class="cl-card cl-card--risk"><span class="cl-name">PII Assessment</span><span class="cl-desc">Mask, redact, or exclude personal data</span></div>
-          <div class="cl-card cl-card--risk"><span class="cl-name">Data Export Rules</span><span class="cl-desc">Confirm export-only; no production write-back</span></div>
+          <div class="cl-card cl-card--risk"><span class="cl-name">Personal data assessment</span><span class="cl-desc">Mask, redact, or exclude personal data</span></div>
+          <div class="cl-card cl-card--risk"><span class="cl-name">Data export rules</span><span class="cl-desc">Confirm read-only extracts; nothing written back to the Bank's systems</span></div>
         </div>
         <div class="cl-cell" data-lane="B" data-step="5" style="grid-column:6;grid-row:3;">
-          <div class="cl-card cl-card--risk"><span class="cl-name">Agentic Guardrails</span><span class="cl-desc">Drift, bias, grounding checks at build time</span></div>
+          <div class="cl-card cl-card--risk"><span class="cl-name">AI-agent guardrails</span><span class="cl-desc">Drift, bias, and grounding checks during the build</span></div>
         </div>
         <div class="cl-cell" data-lane="B" data-step="6" style="grid-column:7;grid-row:3;">
-          <div class="cl-card cl-card--risk"><span class="cl-name">Workflow Validation</span><span class="cl-desc">Validate agentic workflow against guardrails</span></div>
+          <div class="cl-card cl-card--risk"><span class="cl-name">Workflow validation</span><span class="cl-desc">Check the AI-agent workflow against the guardrails</span></div>
         </div>
 
         <!-- LANE C — Operations & Processes -->
         <div class="cl-lane-label" data-lane="C" style="grid-row:4;">
-          <span class="cl-lane-label__name">Operations &amp; Processes</span>
+          <span class="cl-lane-label__name">Operations &amp; processes</span>
         </div>
         <div class="cl-cell" data-lane="C" data-step="1" style="grid-column:2;grid-row:4;">
-          <div class="cl-card cl-card--ops"><span class="cl-name">Scenario Mapping</span><span class="cl-desc">Map current service workflow; pick touchpoints</span></div>
+          <div class="cl-card cl-card--ops"><span class="cl-name">Scenario mapping</span><span class="cl-desc">Map the current service workflow; choose the points to change</span></div>
         </div>
         <div class="cl-cell" data-lane="C" data-step="2" style="grid-column:3;grid-row:4;">
-          <div class="cl-card cl-card--ops"><span class="cl-name">Setup Services</span><span class="cl-desc">Provision lab services; baseline scaffolding</span></div>
+          <div class="cl-card cl-card--ops"><span class="cl-name">Set up services</span><span class="cl-desc">Provision Lab services and the base setup</span></div>
         </div>
         <div class="cl-cell" data-lane="C" data-step="3" style="grid-column:4;grid-row:4;">
-          <div class="cl-card cl-card--ops"><span class="cl-name">Scope</span><span class="cl-desc">Define boundaries, expected workflow, dependencies</span></div>
-          <div class="cl-card cl-card--ops"><span class="cl-name">Workflow Map</span><span class="cl-desc">Trace target workflow end-to-end</span></div>
+          <div class="cl-card cl-card--ops"><span class="cl-name">Scope</span><span class="cl-desc">Set the boundaries, the expected workflow, and dependencies</span></div>
+          <div class="cl-card cl-card--ops"><span class="cl-name">Workflow map</span><span class="cl-desc">Trace the target workflow end to end</span></div>
         </div>
         <div class="cl-cell" data-lane="C" data-step="4" style="grid-column:5;grid-row:4;">
-          <div class="cl-card cl-card--ops"><span class="cl-name">ETL Execution</span><span class="cl-desc">Run scenario-specific extract + load</span></div>
-          <div class="cl-card cl-card--ops"><span class="cl-name">ETL Pipeline</span><span class="cl-desc">Build read-only export to AWS</span></div>
+          <div class="cl-card cl-card--ops"><span class="cl-name">Run the extract</span><span class="cl-desc">Run the extract and load for the scenario</span></div>
+          <div class="cl-card cl-card--ops"><span class="cl-name">Extract pipeline</span><span class="cl-desc">Build the read-only extract into the Lab</span></div>
         </div>
         <div class="cl-cell" data-lane="C" data-step="5" style="grid-column:6;grid-row:4;">
-          <div class="cl-card cl-card--ops"><span class="cl-name">Workflow Build</span><span class="cl-desc">Construct agentic workflow; orchestrate sub-tasks</span></div>
+          <div class="cl-card cl-card--ops"><span class="cl-name">Build the workflow</span><span class="cl-desc">Build the AI-agent workflow; orchestrate its steps</span></div>
         </div>
         <div class="cl-cell" data-lane="C" data-step="6" style="grid-column:7;grid-row:4;">
-          <div class="cl-card cl-card--ops"><span class="cl-name">Adoption Guidelines</span><span class="cl-desc">What changes if this lands in production</span></div>
+          <div class="cl-card cl-card--ops"><span class="cl-name">Adoption guide</span><span class="cl-desc">What changes if this goes into production</span></div>
         </div>
 
         <!-- LANE D — Data & Analytics -->
         <div class="cl-lane-label" data-lane="D" style="grid-row:5;">
-          <span class="cl-lane-label__name">Data &amp; Analytics</span>
+          <span class="cl-lane-label__name">Data &amp; analytics</span>
         </div>
         <div class="cl-cell" data-lane="D" data-step="1" style="grid-column:2;grid-row:5;">
-          <div class="cl-card cl-card--dat"><span class="cl-name">Service Catalog</span><span class="cl-desc">Inventory service capabilities and dependencies</span></div>
+          <div class="cl-card cl-card--dat"><span class="cl-name">Service catalog</span><span class="cl-desc">List each service's functions and dependencies</span></div>
         </div>
         <div class="cl-cell" data-lane="D" data-step="2" style="grid-column:3;grid-row:5;">
-          <div class="cl-card cl-card--dat"><span class="cl-name">Define Data Pipeline</span><span class="cl-desc">Design read-only export pipeline</span></div>
+          <div class="cl-card cl-card--dat"><span class="cl-name">Design the data pipeline</span><span class="cl-desc">Design the read-only export pipeline</span></div>
         </div>
         <div class="cl-cell" data-lane="D" data-step="3" style="grid-column:4;grid-row:5;"></div>
         <div class="cl-cell" data-lane="D" data-step="4" style="grid-column:5;grid-row:5;">
-          <div class="cl-card cl-card--dat"><span class="cl-name">Catalog &amp; Map</span><span class="cl-desc">Inventory available data; trace what scenario needs</span></div>
-          <div class="cl-card cl-card--dat"><span class="cl-name">Extract &amp; QC</span><span class="cl-desc">Run scenario ETL; verify data fitness</span></div>
+          <div class="cl-card cl-card--dat"><span class="cl-name">Catalog &amp; map data</span><span class="cl-desc">List the available data; trace what the scenario needs</span></div>
+          <div class="cl-card cl-card--dat"><span class="cl-name">Extract &amp; check quality</span><span class="cl-desc">Run the scenario extract; check the data is fit for use</span></div>
         </div>
         <div class="cl-cell" data-lane="D" data-step="5" style="grid-column:6;grid-row:5;">
-          <div class="cl-card cl-card--dat"><span class="cl-name">Data Flows</span><span class="cl-desc">Wire data through the agentic workflow</span></div>
-          <div class="cl-card cl-card--dat"><span class="cl-name">Analytics Flows</span><span class="cl-desc">Analytics layer over workflow outputs</span></div>
+          <div class="cl-card cl-card--dat"><span class="cl-name">Data flows</span><span class="cl-desc">Connect the data to the AI-agent workflow</span></div>
+          <div class="cl-card cl-card--dat"><span class="cl-name">Analytics</span><span class="cl-desc">Analytics over the workflow's outputs</span></div>
         </div>
         <div class="cl-cell" data-lane="D" data-step="6" style="grid-column:7;grid-row:5;">
-          <div class="cl-card cl-card--dat"><span class="cl-name">Data Correctness</span><span class="cl-desc">Validate analytical results against ground truth</span></div>
-          <div class="cl-card cl-card--dat"><span class="cl-name">Analytics Quality</span><span class="cl-desc">Check correctness and consistency of analytics outputs</span></div>
+          <div class="cl-card cl-card--dat"><span class="cl-name">Data correctness</span><span class="cl-desc">Check analytical results against reference data</span></div>
+          <div class="cl-card cl-card--dat"><span class="cl-name">Analytics quality</span><span class="cl-desc">Check the analytics outputs are correct and consistent</span></div>
         </div>
 
         <!-- LANE E — Observability -->
         <div class="cl-lane-label" data-lane="E" style="grid-row:6;">
-          <span class="cl-lane-label__name">Observability</span>
+          <span class="cl-lane-label__name">Measurement</span>
         </div>
         <div class="cl-cell" data-lane="E" data-step="1" style="grid-column:2;grid-row:6;">
-          <div class="cl-card cl-card--obs"><span class="cl-name">Hypothesis OKRs</span><span class="cl-desc">Define what success looks like; pick KPI</span></div>
+          <div class="cl-card cl-card--obs"><span class="cl-name">Hypothesis targets</span><span class="cl-desc">Define what success looks like; choose the KPIs</span></div>
         </div>
         <div class="cl-cell" data-lane="E" data-step="2" style="grid-column:3;grid-row:6;"></div>
         <div class="cl-cell" data-lane="E" data-step="3" style="grid-column:4;grid-row:6;">
-          <div class="cl-card cl-card--obs"><span class="cl-name">Scenario Metric</span><span class="cl-desc">Per-scenario success criterion</span></div>
+          <div class="cl-card cl-card--obs"><span class="cl-name">Scenario metric</span><span class="cl-desc">The success criterion for this scenario</span></div>
         </div>
         <div class="cl-cell" data-lane="E" data-step="4" style="grid-column:5;grid-row:6;">
-          <div class="cl-card cl-card--obs"><span class="cl-name">Data Quality Metrics</span><span class="cl-desc">Track completeness, freshness, drift</span></div>
+          <div class="cl-card cl-card--obs"><span class="cl-name">Data quality metrics</span><span class="cl-desc">Track completeness, freshness, and drift</span></div>
         </div>
         <div class="cl-cell" data-lane="E" data-step="5" style="grid-column:6;grid-row:6;">
-          <div class="cl-card cl-card--obs"><span class="cl-name">Workflow Metrics</span><span class="cl-desc">Functional + observability sanity tests</span></div>
+          <div class="cl-card cl-card--obs"><span class="cl-name">Workflow metrics</span><span class="cl-desc">Basic functional and monitoring tests</span></div>
         </div>
         <div class="cl-cell" data-lane="E" data-step="6" style="grid-column:7;grid-row:6;">
-          <div class="cl-card cl-card--obs"><span class="cl-name">KPI Evaluation</span><span class="cl-desc">Hypothesis validation result; decision input</span></div>
-          <div class="cl-card cl-card--obs"><span class="cl-name">Benchmarking Framework</span><span class="cl-desc">Compare against baseline; cost analysis</span></div>
-          <div class="cl-card cl-card--obs"><span class="cl-name">Acceptance Criteria</span><span class="cl-desc">Per-scenario acceptance gates</span></div>
+          <div class="cl-card cl-card--obs"><span class="cl-name">KPI evaluation</span><span class="cl-desc">Result of the hypothesis test; input to the decision</span></div>
+          <div class="cl-card cl-card--obs"><span class="cl-name">Benchmarking</span><span class="cl-desc">Compare with the baseline; analyze cost</span></div>
+          <div class="cl-card cl-card--obs"><span class="cl-name">Acceptance criteria</span><span class="cl-desc">Acceptance conditions for this scenario</span></div>
         </div>
 
       </div><!-- /.cl-matrix -->
@@ -1220,8 +1218,8 @@ body {
          SECTION 2: The Dual Operating System (overview)
     ════════════════════════════════════════════════════════════ -->
     <section class="cloud-lab-section cloud-lab-section--dual-overview" aria-label="The Dual Operating System">
-      <h2 class="cl-page-subhead">The Dual Operating System</h2>
-      <p class="cl-page-subhead-intent">The dual model means Human Governance steers, sets intent, owns accountability; Agentic Intelligence collects signals, analyzes, reasons, executes, learns. They run in parallel, bound by a single intent loop and a non-negotiable trust perimeter.</p>
+      <h2 class="cl-page-subhead">Two operating systems: people and AI agents</h2>
+      <p class="cl-page-subhead-intent">People steer: they set the intent and carry accountability. AI agents gather signals, analyze, reason, execute, and learn. The two work in parallel, joined by one intent loop and a trust perimeter that is not negotiable.</p>
     </section>
 
     <!-- ════════════════════════════════════════════════════════════
@@ -1235,8 +1233,8 @@ body {
         <article class="cl-system cl-system--human">
           <header class="cl-system__head">
             <div>
-              <div class="cl-system__label"><span aria-hidden="true">◆</span> SYSTEM A</div>
-              <h3 class="cl-system__name">Human<br>Governance</h3>
+              <div class="cl-system__label"><span aria-hidden="true">◆</span> System A</div>
+              <h3 class="cl-system__name">People</h3>
               <p class="cl-system__role">Authority · Judgment · Intent</p>
             </div>
             <!-- emblem: structured / hierarchical -->
@@ -1255,15 +1253,15 @@ body {
           <ol class="cl-duties">
             <li>
               <span class="cl-duties__num">A.1</span>
-              <span><strong>Strategic Direction</strong>Sets the intent, the risk appetite, and the boundary of acceptable action.</span>
+              <span><strong>Strategic direction</strong>Sets the intent, the risk appetite, and the boundary of acceptable action.</span>
             </li>
             <li>
               <span class="cl-duties__num">A.2</span>
-              <span><strong>Ethical &amp; Regulatory Stewardship</strong>Owns the relationship with regulators, customers, and the public covenant.</span>
+              <span><strong>Ethics &amp; regulation</strong>Owns the relationship with regulators, customers, and the public.</span>
             </li>
             <li>
               <span class="cl-duties__num">A.3</span>
-              <span><strong>Final Decision Rights</strong>Reserves authority over high-stakes, irreversible, and reputational calls.</span>
+              <span><strong>Final decision rights</strong>Keeps authority over high-stakes, irreversible, and reputational decisions.</span>
             </li>
             <li>
               <span class="cl-duties__num">A.4</span>
@@ -1271,7 +1269,7 @@ body {
             </li>
             <li>
               <span class="cl-duties__num">A.5</span>
-              <span><strong>Sense-making &amp; Recalibration</strong>Reads the institution against its purpose; redirects intent when context shifts.</span>
+              <span><strong>Review &amp; recalibration</strong>Checks the Bank against its purpose; resets the intent when the context changes.</span>
             </li>
           </ol>
         </article>
@@ -1280,7 +1278,7 @@ body {
         <div class="cl-spine" aria-hidden="true">
           <div class="cl-spine__arrow--down">↓</div>
           <div class="cl-spine__line"></div>
-          <div class="cl-spine__label">The Intent Loop</div>
+          <div class="cl-spine__label">The intent loop</div>
           <div class="cl-spine__line"></div>
           <div class="cl-spine__arrow--up">↑</div>
         </div>
@@ -1289,9 +1287,9 @@ body {
         <article class="cl-system cl-system--agent">
           <header class="cl-system__head">
             <div>
-              <div class="cl-system__label"><span aria-hidden="true">●</span> SYSTEM B</div>
-              <h3 class="cl-system__name">Agentic<br>Intelligence</h3>
-              <p class="cl-system__role">Sensing · Reasoning · Execution · Learning</p>
+              <div class="cl-system__label"><span aria-hidden="true">●</span> System B</div>
+              <h3 class="cl-system__name">AI agents</h3>
+              <p class="cl-system__role">Monitoring · Analysis · Execution · Learning</p>
             </div>
             <!-- emblem: networked / constellation -->
             <svg class="cl-emblem" viewBox="0 0 80 80" aria-hidden="true">
@@ -1319,23 +1317,23 @@ body {
           <ol class="cl-duties">
             <li>
               <span class="cl-duties__num">B.1</span>
-              <span><strong>Continuous Sensing</strong>Watches signals across customer, market, risk, ops, and workforce in real time.</span>
+              <span><strong>Continuous monitoring</strong>Watches signals on customers, markets, risk, operations, and staff in real time.</span>
             </li>
             <li>
               <span class="cl-duties__num">B.2</span>
-              <span><strong>Multi-lens Reasoning</strong>Frames decisions across competing dimensions — risk, return, customer, conduct.</span>
+              <span><strong>Multi-angle analysis</strong>Weighs decisions across competing factors — risk, return, customer, conduct.</span>
             </li>
             <li>
               <span class="cl-duties__num">B.3</span>
-              <span><strong>Decision-grade Options</strong>Surfaces shaped alternatives with confidence, trade-offs, and provenance.</span>
+              <span><strong>Options for decision</strong>Presents worked-out options with confidence, trade-offs, and sources.</span>
             </li>
             <li>
               <span class="cl-duties__num">B.4</span>
-              <span><strong>Execution &amp; Automation</strong>Carries out authorized actions, handles routine work, holds the audit trail.</span>
+              <span><strong>Execution &amp; automation</strong>Carries out authorized actions and routine work, and keeps the audit trail.</span>
             </li>
             <li>
               <span class="cl-duties__num">B.5</span>
-              <span><strong>Closed-loop Learning</strong>Folds outcomes back into models; flags drift; proposes recalibrations to humans.</span>
+              <span><strong>Learning from results</strong>Feeds results back into models; flags drift; proposes adjustments to people.</span>
             </li>
           </ol>
         </article>
@@ -1344,12 +1342,8 @@ body {
 
       <!-- implication -->
       <div class="cl-implication">
-        <div class="cl-implication__tag">Implication</div>
-        <p>
-          Decision <em>rights</em> remain human. Decision <em>velocity, breadth,
-          and confidence</em> become agentic-augmented. The institution does not
-          delegate judgment — it instruments it.
-        </p>
+        <div class="cl-implication__tag">What this means</div>
+        <p>Decision rights stay with people. AI agents make decisions faster, wider in scope, and better evidenced. The Bank does not hand over judgment; it equips it.</p>
       </div>
 
     </section>
@@ -1360,38 +1354,38 @@ body {
     <section class="cloud-lab-section cloud-lab-section--capabilities" aria-label="Business Agility capabilities">
 
       <div class="cl-block-header">
-        <h2 class="cl-block-title">Business Agility. <em>What the operating model can do.</em></h2>
-        <p class="cl-block-intent">Analyze · Reason · Decide · Act · Learn · Govern · Engage</p>
+        <h2 class="cl-block-title">Capabilities</h2>
+        <p class="cl-block-intent">What the operating model can do: analyze · reason · decide · act · learn · govern · engage</p>
       </div>
 
       <div class="cl-cap-grid">
         <article class="cl-cap">
           <h3 class="cl-cap__name">Analyze</h3>
-          <p class="cl-cap__desc">Reads signals across customers, markets, risk, ops, and people in continuous streams.</p>
+          <p class="cl-cap__desc">Reads signals on customers, markets, risk, operations, and people continuously.</p>
         </article>
         <article class="cl-cap">
           <h3 class="cl-cap__name">Reason</h3>
-          <p class="cl-cap__desc">Frames decisions across competing dimensions — risk, return, customer, conduct.</p>
+          <p class="cl-cap__desc">Weighs decisions across competing factors — risk, return, customer, conduct.</p>
         </article>
         <article class="cl-cap">
           <h3 class="cl-cap__name">Decide</h3>
-          <p class="cl-cap__desc">Surfaces shaped alternatives with confidence, trade-offs, and provenance.</p>
+          <p class="cl-cap__desc">Presents worked-out options with confidence, trade-offs, and sources.</p>
         </article>
         <article class="cl-cap">
           <h3 class="cl-cap__name">Act</h3>
-          <p class="cl-cap__desc">Carries out authorized actions with attribution and an immutable audit trail.</p>
+          <p class="cl-cap__desc">Carries out authorized actions, records who did what, and keeps an unalterable audit trail.</p>
         </article>
         <article class="cl-cap">
           <h3 class="cl-cap__name">Learn</h3>
-          <p class="cl-cap__desc">Folds outcomes back into models — flags drift, proposes recalibrations.</p>
+          <p class="cl-cap__desc">Feeds results back into models — flags drift, proposes adjustments.</p>
         </article>
         <article class="cl-cap">
           <h3 class="cl-cap__name">Govern</h3>
-          <p class="cl-cap__desc">Holds the perimeter, the guardrails, and the chain of accountability.</p>
+          <p class="cl-cap__desc">Maintains the perimeter, the guardrails, and the chain of accountability.</p>
         </article>
         <article class="cl-cap">
           <h3 class="cl-cap__name">Engage</h3>
-          <p class="cl-cap__desc">Connects with customers, regulators, and partners — the institution's voice.</p>
+          <p class="cl-cap__desc">Speaks with customers, regulators, and partners on the Bank's behalf.</p>
         </article>
       </div>
 
@@ -1403,42 +1397,30 @@ body {
     <section class="cloud-lab-section cloud-lab-section--loop" aria-label="The Intent Loop">
 
       <div class="cl-block-header">
-        <h2 class="cl-block-title">The Intent Loop. <em>How the two systems converse.</em></h2>
-        <p class="cl-block-intent">Intent → Insight → Action → Audit · A continuous cycle</p>
+        <h2 class="cl-block-title">The intent loop</h2>
+        <p class="cl-block-intent">How people and AI agents work together: intent → insight → action → audit, continuously</p>
       </div>
 
       <div class="cl-loop">
 
         <div class="cl-loop-step">
           <h3 class="cl-loop-step__name">Intent</h3>
-          <p class="cl-loop-step__desc">
-            Humans declare the outcome, the constraints, the risk appetite,
-            and the ethical perimeter. Not instructions — direction.
-          </p>
+          <p class="cl-loop-step__desc">People set the outcome, the constraints, the risk appetite, and the ethical limits. Direction, not instructions.</p>
         </div>
 
         <div class="cl-loop-step">
           <h3 class="cl-loop-step__name">Insight</h3>
-          <p class="cl-loop-step__desc">
-            Agents sense across data, reason across lenses, and surface
-            decision-grade options with confidence and trade-offs.
-          </p>
+          <p class="cl-loop-step__desc">AI agents analyze the data from several angles and present options for decision, with confidence and trade-offs.</p>
         </div>
 
         <div class="cl-loop-step">
           <h3 class="cl-loop-step__name">Action</h3>
-          <p class="cl-loop-step__desc">
-            Humans authorize. Agents execute or hand off. Every step is
-            attributed, bounded, and reversible where it can be.
-          </p>
+          <p class="cl-loop-step__desc">People authorize. AI agents execute or hand over. Every step has an owner and limits, and can be reversed where possible.</p>
         </div>
 
         <div class="cl-loop-step">
           <h3 class="cl-loop-step__name">Audit</h3>
-          <p class="cl-loop-step__desc">
-            Outcomes are logged, evaluated, contested if needed, and folded
-            back into refined intent. The loop tightens with every turn.
-          </p>
+          <p class="cl-loop-step__desc">Results are logged, evaluated, challenged if needed, and used to sharpen the next intent. Each turn makes the loop more precise.</p>
         </div>
 
       </div><!-- /.cl-loop -->
@@ -1453,108 +1435,106 @@ body {
       <div class="cl-govtable-panel">
 
         <div class="cl-govtable-header">
-          <h2 class="cl-govtable-title">Cloud LAB Governance Guardrails Scorecard</h2>
-          <p class="cl-govtable-intent">
-            Tracks major concern areas by setting guardrails and measuring best-practice adoption per concern. Each concern outlines compliance and governance aspects, balancing flexibility with assurance. The lab adopts the minimum guardrails required to maintain exploratory freedom.
-          </p>
+          <h2 class="cl-govtable-title">Lab guardrails scorecard</h2>
+          <p class="cl-govtable-intent">Each area of concern has its guardrails and a measure of how far good practice is applied, balancing freedom to explore with assurance. The Lab keeps only the guardrails it needs to stay safe while experimenting.</p>
         </div>
 
         <table class="cl-govtable">
           <tbody>
 
-            <tr class="cl-govtable__category-row"><td colspan="2">Governance &amp; Decisions</td></tr>
+            <tr class="cl-govtable__category-row"><td colspan="2">Governance &amp; decisions</td></tr>
 
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 50%;">Decision Rights</td>
-              <td class="cl-govtable__posture">Sponsor + IT lead authorise scenario promotion</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 50%;">Decision rights</td>
+              <td class="cl-govtable__posture">The sponsor and the IT lead approve moving a scenario forward</td>
             </tr>
             <tr class="cl-govtable__concern-row">
               <td class="cl-govtable__concern-name" style="--coverage: 75%;">Prohibitions</td>
-              <td class="cl-govtable__posture">Hard list maintained: no PII export, no production write-back</td>
+              <td class="cl-govtable__posture">A fixed list: no personal data leaves the Lab, nothing is written back to production systems</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 20%;">Disagreement Protocol</td>
-              <td class="cl-govtable__posture">Not formalised; case-by-case</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 20%;">Resolving disagreements</td>
+              <td class="cl-govtable__posture">Not formalized; case by case</td>
             </tr>
 
-            <tr class="cl-govtable__category-row"><td colspan="2">Risk &amp; Controls</td></tr>
+            <tr class="cl-govtable__category-row"><td colspan="2">Risk &amp; controls</td></tr>
 
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 40%;">Risk Taxonomy</td>
-              <td class="cl-govtable__posture">Lab-level risk register; categorised by type</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 40%;">Risk classification</td>
+              <td class="cl-govtable__posture">Lab risk register, categorized by type</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 80%;">Output Integrity (Agentic Guardrails)</td>
-              <td class="cl-govtable__posture">Drift, bias, grounding checks at build time</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 80%;">Output integrity</td>
+              <td class="cl-govtable__posture">Drift, bias, and grounding checks during the build</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 90%;">Sandbox Isolation</td>
-              <td class="cl-govtable__posture">Perimeter, key management, no production access</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 90%;">Lab isolation</td>
+              <td class="cl-govtable__posture">Separate network segment, key management, no access to production</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 85%;">PII Protection</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 85%;">Personal data protection</td>
               <td class="cl-govtable__posture">Masking, redaction, data export rules</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 30%;">Failure Protocol</td>
-              <td class="cl-govtable__posture">Basic rollback + alert protocols</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 30%;">Failure handling</td>
+              <td class="cl-govtable__posture">Basic rollback and alerting</td>
             </tr>
 
-            <tr class="cl-govtable__category-row"><td colspan="2">Operations &amp; Processes</td></tr>
+            <tr class="cl-govtable__category-row"><td colspan="2">Operations &amp; processes</td></tr>
 
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 70%;">Use-Case Selection</td>
-              <td class="cl-govtable__posture">Scenario backlog with prioritisation</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 70%;">Scenario selection</td>
+              <td class="cl-govtable__posture">Prioritized backlog of scenarios</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 65%;">Workflow Mapping</td>
-              <td class="cl-govtable__posture">Service workflow documented per scenario</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 65%;">Workflow mapping</td>
+              <td class="cl-govtable__posture">Service workflow documented for each scenario</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 25%;">Operational Lifecycles</td>
-              <td class="cl-govtable__posture">Scenario lifecycle: choose → build → validate</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 25%;">Scenario lifecycle</td>
+              <td class="cl-govtable__posture">Choose → build → validate</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 45%;">Promotion Pathway</td>
-              <td class="cl-govtable__posture">Informal handoff to On-Prem Lab</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 45%;">Path to delivery</td>
+              <td class="cl-govtable__posture">Informal handover to production delivery</td>
             </tr>
 
-            <tr class="cl-govtable__category-row"><td colspan="2">Data &amp; Analytics</td></tr>
+            <tr class="cl-govtable__category-row"><td colspan="2">Data &amp; analytics</td></tr>
 
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 80%;">Data Pipeline</td>
-              <td class="cl-govtable__posture">ETL pipeline operational; scenario-specific extracts</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 80%;">Data pipeline</td>
+              <td class="cl-govtable__posture">Extract pipeline running; extracts made per scenario</td>
             </tr>
             <tr class="cl-govtable__concern-row">
               <td class="cl-govtable__concern-name" style="--coverage: 75%;">Data Quality</td>
-              <td class="cl-govtable__posture">Quality checks at extract; correctness validated</td>
+              <td class="cl-govtable__posture">Quality checked at extract; correctness confirmed</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 85%;">Data Privacy</td>
-              <td class="cl-govtable__posture">Masking, anonymisation for sensitive fields</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 85%;">Data privacy</td>
+              <td class="cl-govtable__posture">Masking and anonymization of sensitive fields</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 65%;">Analytics Correctness</td>
-              <td class="cl-govtable__posture">Analytics flows validated against ground truth</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 65%;">Analytics correctness</td>
+              <td class="cl-govtable__posture">Analytics checked against reference data</td>
             </tr>
 
-            <tr class="cl-govtable__category-row"><td colspan="2">Observability</td></tr>
+            <tr class="cl-govtable__category-row"><td colspan="2">Measurement</td></tr>
 
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 55%;">Performance Metrics (KRIs)</td>
-              <td class="cl-govtable__posture">Scenario-level KPIs tracked</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 55%;">Performance metrics (KPIs)</td>
+              <td class="cl-govtable__posture">KPIs tracked for each scenario</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 75%;">Hypothesis OKRs</td>
-              <td class="cl-govtable__posture">Hypothesis target defined per scenario</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 75%;">Hypothesis targets</td>
+              <td class="cl-govtable__posture">Target set for each scenario's hypothesis</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 60%;">Workflow Metrics</td>
-              <td class="cl-govtable__posture">Functional + integration metrics captured</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 60%;">Workflow metrics</td>
+              <td class="cl-govtable__posture">Functional and integration metrics recorded</td>
             </tr>
             <tr class="cl-govtable__concern-row">
-              <td class="cl-govtable__concern-name" style="--coverage: 50%;">Acceptance Criteria</td>
-              <td class="cl-govtable__posture">Per-scenario acceptance defined</td>
+              <td class="cl-govtable__concern-name" style="--coverage: 50%;">Acceptance criteria</td>
+              <td class="cl-govtable__posture">Acceptance defined for each scenario</td>
             </tr>
 
           </tbody>

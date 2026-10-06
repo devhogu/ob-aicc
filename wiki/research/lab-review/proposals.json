@@ -1,0 +1,755 @@
+{
+ "units": {
+  "subtitle": [
+   "Experiments with AI scenarios",
+   "Эксперименты со сценариями AI"
+  ],
+  "intro": [
+   "The AI Lab runs continuously on the Bank's own infrastructure, isolated from its production systems. A scenario can enter at any time as an Experiment; data arrives as read-only extracts from the Bank's systems and never leaves the Bank; the AI-agent workflow is built, measured, and then accepted, turned into a Proposal for delivery, or rejected. The Lab is where the Bank tries generative AI before it commits to it.",
+   "AI-лаборатория работает постоянно на собственной инфраструктуре Банка и изолирована от его промышленных систем. Сценарий может поступить в неё в любой момент в виде эксперимента; данные поступают в виде выгрузок из систем Банка, доступных только для чтения, и не покидают Банк; процесс с участием AI-агентов разрабатывается, измеряется и по итогам принимается, преобразуется в предложение о разработке и внедрении или отклоняется. Здесь Банк проверяет генеративный AI до того, как брать на себя обязательства."
+  ],
+  "stage-1": [
+   "Define scenarios",
+   "Отбор сценариев"
+  ],
+  "stage-2": [
+   "Set up the Lab",
+   "Подготовка лабораторной среды"
+  ],
+  "stage-3": [
+   "Choose a scenario",
+   "Выбор сценария"
+  ],
+  "stage-4": [
+   "Prepare data",
+   "Подготовка данных"
+  ],
+  "stage-5": [
+   "Build the AI-agent workflow",
+   "Разработка процесса с AI-агентами"
+  ],
+  "stage-6": [
+   "Validate",
+   "Проверка"
+  ],
+  "lane-A": [
+   "Governance & decisions",
+   "Управление и решения"
+  ],
+  "lane-B": [
+   "Risk & controls",
+   "Риски и контроль"
+  ],
+  "lane-C": [
+   "Operations & processes",
+   "Операции и процессы"
+  ],
+  "lane-D": [
+   "Data & analytics",
+   "Данные и аналитика"
+  ],
+  "lane-E": [
+   "Measurement",
+   "Измерение результатов"
+  ],
+  "task-a-1-1-name": [
+   "Secure a sponsor",
+   "Найти спонсора"
+  ],
+  "task-a-1-1-desc": [
+   "Name the business sponsor and agree informally",
+   "Назначить бизнес-спонсора и получить его предварительное согласие"
+  ],
+  "task-a-1-2-name": [
+   "Identify scenarios",
+   null
+  ],
+  "task-a-1-2-desc": [
+   "List the scenarios to test, service by service",
+   "Составить перечень сценариев для проверки по каждой услуге"
+  ],
+  "task-a-2-1-name": [
+   "Request the environment",
+   "Запросить среду"
+  ],
+  "task-a-2-1-desc": [
+   "Infrastructure request approved; IT security sign-off",
+   "Заявка на инфраструктуру согласована; получено заключение информационной безопасности"
+  ],
+  "task-a-2-2-name": [
+   "Set access roles and policies",
+   "Настроить роли и политики доступа"
+  ],
+  "task-a-2-2-desc": [
+   "Roles, access policies, audit checkpoints",
+   "Роли, политики доступа, контрольные точки аудита"
+  ],
+  "task-a-3-1-name": [
+   "Prioritize",
+   null
+  ],
+  "task-a-3-1-desc": [
+   "Pick the next scenario from the validated backlog",
+   null
+  ],
+  "task-a-4-1-name": [
+   "Data ownership",
+   null
+  ],
+  "task-a-4-1-desc": [
+   "Confirm the right to use the data and the privacy position",
+   "Подтвердить право использования данных и требования к их защите"
+  ],
+  "task-a-4-2-name": [
+   "Identify data sources",
+   null
+  ],
+  "task-a-4-2-desc": [
+   "Authoritative sources for the scenario",
+   "Достоверные источники данных для сценария"
+  ],
+  "task-a-5-1-name": [
+   "Requirements",
+   null
+  ],
+  "task-a-5-1-desc": [
+   "Record stakeholder requirements and acceptance criteria",
+   "Зафиксировать требования заинтересованных сторон и критерии приёмки"
+  ],
+  "task-a-5-2-name": [
+   "Select the architecture",
+   null
+  ],
+  "task-a-5-2-desc": [
+   "Choose the AI-agent pattern; check it against constraints",
+   "Выбрать архитектурный шаблон для AI-агентов и проверить его на соответствие ограничениям"
+  ],
+  "task-a-6-1-name": [
+   "Sponsor demo",
+   "Демонстрация спонсору"
+  ],
+  "task-a-6-1-desc": [
+   "Show the result to the sponsor; record feedback",
+   null
+  ],
+  "task-a-6-2-name": [
+   "Accept, propose or reject",
+   "Принять, предложить или отклонить"
+  ],
+  "task-a-6-2-desc": [
+   "Compare with the KPIs; propose for production delivery, or close",
+   "Сопоставить с KPI; предложить к промышленному внедрению или закрыть"
+  ],
+  "task-b-2-1-name": [
+   "Lab isolation",
+   "Изоляция лабораторной среды"
+  ],
+  "task-b-2-1-desc": [
+   "Network segment, key management, export rules",
+   "Сегмент сети, управление ключами, правила выгрузки"
+  ],
+  "task-b-2-2-name": [
+   "Define guardrails",
+   "Определить защитные механизмы"
+  ],
+  "task-b-2-2-desc": [
+   "Lab-wide limits on what AI agents may produce and do",
+   "Общие для лабораторной среды ограничения на результаты и действия AI-агентов"
+  ],
+  "task-b-3-1-name": [
+   "Risk assessment",
+   null
+  ],
+  "task-b-3-1-desc": [
+   "Set the risk limits for this scenario",
+   "Определить допустимые границы риска для сценария"
+  ],
+  "task-b-4-1-name": [
+   "Personal data assessment",
+   "Оценка персональных данных"
+  ],
+  "task-b-4-1-desc": [
+   "Mask, redact, or exclude personal data",
+   "Маскировать, удалить или исключить персональные данные"
+  ],
+  "task-b-4-2-name": [
+   "Data export rules",
+   null
+  ],
+  "task-b-4-2-desc": [
+   "Confirm read-only extracts; nothing written back to the Bank's systems",
+   "Подтвердить, что данные только выгружаются и ничего не записывается обратно в системы Банка"
+  ],
+  "task-b-5-1-name": [
+   "AI-agent guardrails",
+   "Защитные механизмы для AI-агентов"
+  ],
+  "task-b-5-1-desc": [
+   "Drift, bias, and grounding checks during the build",
+   "Проверка дрейфа, смещений и привязки к источникам в ходе разработки"
+  ],
+  "task-b-6-1-name": [
+   "Workflow validation",
+   null
+  ],
+  "task-b-6-1-desc": [
+   "Check the AI-agent workflow against the guardrails",
+   "Проверить процесс с AI-агентами на соответствие защитным механизмам"
+  ],
+  "task-c-1-1-name": [
+   "Scenario mapping",
+   "Описание сценария"
+  ],
+  "task-c-1-1-desc": [
+   "Map the current service workflow; choose the points to change",
+   "Описать текущий процесс оказания услуги и выбрать точки изменения"
+  ],
+  "task-c-2-1-name": [
+   "Set up services",
+   null
+  ],
+  "task-c-2-1-desc": [
+   "Provision Lab services and the base setup",
+   "Развернуть сервисы лабораторной среды и базовую конфигурацию"
+  ],
+  "task-c-3-1-name": [
+   "Scope",
+   null
+  ],
+  "task-c-3-1-desc": [
+   "Set the boundaries, the expected workflow, and dependencies",
+   null
+  ],
+  "task-c-3-2-name": [
+   "Workflow map",
+   "Карта процесса"
+  ],
+  "task-c-3-2-desc": [
+   "Trace the target workflow end to end",
+   "Описать целевой процесс от начала до конца"
+  ],
+  "task-c-4-1-name": [
+   "Run the extract",
+   "Выгрузка данных"
+  ],
+  "task-c-4-1-desc": [
+   "Run the extract and load for the scenario",
+   "Выгрузить и загрузить данные для сценария"
+  ],
+  "task-c-4-2-name": [
+   "Extract pipeline",
+   "Конвейер выгрузки"
+  ],
+  "task-c-4-2-desc": [
+   "Build the read-only extract into the Lab",
+   "Настроить выгрузку данных в лабораторную среду только для чтения"
+  ],
+  "task-c-5-1-name": [
+   "Build the workflow",
+   "Разработка процесса"
+  ],
+  "task-c-5-1-desc": [
+   "Build the AI-agent workflow; orchestrate its steps",
+   "Построить процесс с AI-агентами и организовать выполнение его шагов"
+  ],
+  "task-c-6-1-name": [
+   "Adoption guide",
+   "Рекомендации по внедрению"
+  ],
+  "task-c-6-1-desc": [
+   "What changes if this goes into production",
+   "Что изменится при промышленной эксплуатации"
+  ],
+  "task-d-1-1-name": [
+   "Service catalog",
+   null
+  ],
+  "task-d-1-1-desc": [
+   "List each service's functions and dependencies",
+   "Описать функции услуг и их зависимости"
+  ],
+  "task-d-2-1-name": [
+   "Design the data pipeline",
+   "Спроектировать конвейер данных"
+  ],
+  "task-d-2-1-desc": [
+   "Design the read-only export pipeline",
+   null
+  ],
+  "task-d-4-1-name": [
+   "Catalog & map data",
+   "Каталог и карта данных"
+  ],
+  "task-d-4-1-desc": [
+   "List the available data; trace what the scenario needs",
+   null
+  ],
+  "task-d-4-2-name": [
+   "Extract & check quality",
+   "Выгрузка и контроль качества"
+  ],
+  "task-d-4-2-desc": [
+   "Run the scenario extract; check the data is fit for use",
+   "Выполнить выгрузку для сценария и проверить пригодность данных"
+  ],
+  "task-d-5-1-name": [
+   "Data flows",
+   null
+  ],
+  "task-d-5-1-desc": [
+   "Connect the data to the AI-agent workflow",
+   "Подключить данные к процессу с AI-агентами"
+  ],
+  "task-d-5-2-name": [
+   "Analytics",
+   "Аналитика"
+  ],
+  "task-d-5-2-desc": [
+   "Analytics over the workflow's outputs",
+   "Аналитика по результатам процесса"
+  ],
+  "task-d-6-1-name": [
+   "Data correctness",
+   null
+  ],
+  "task-d-6-1-desc": [
+   "Check analytical results against reference data",
+   null
+  ],
+  "task-d-6-2-name": [
+   "Analytics quality",
+   null
+  ],
+  "task-d-6-2-desc": [
+   "Check the analytics outputs are correct and consistent",
+   null
+  ],
+  "task-e-1-1-name": [
+   "Hypothesis targets",
+   "Целевые показатели гипотезы"
+  ],
+  "task-e-1-1-desc": [
+   "Define what success looks like; choose the KPIs",
+   null
+  ],
+  "task-e-3-1-name": [
+   "Scenario metric",
+   null
+  ],
+  "task-e-3-1-desc": [
+   "The success criterion for this scenario",
+   "Критерий успеха для сценария"
+  ],
+  "task-e-4-1-name": [
+   "Data quality metrics",
+   null
+  ],
+  "task-e-4-1-desc": [
+   "Track completeness, freshness, and drift",
+   null
+  ],
+  "task-e-5-1-name": [
+   "Workflow metrics",
+   null
+  ],
+  "task-e-5-1-desc": [
+   "Basic functional and monitoring tests",
+   "Базовые проверки работоспособности и мониторинга"
+  ],
+  "task-e-6-1-name": [
+   "KPI evaluation",
+   null
+  ],
+  "task-e-6-1-desc": [
+   "Result of the hypothesis test; input to the decision",
+   null
+  ],
+  "task-e-6-2-name": [
+   "Benchmarking",
+   "Сравнительная оценка"
+  ],
+  "task-e-6-2-desc": [
+   "Compare with the baseline; analyze cost",
+   null
+  ],
+  "task-e-6-3-name": [
+   "Acceptance criteria",
+   null
+  ],
+  "task-e-6-3-desc": [
+   "Acceptance conditions for this scenario",
+   "Условия приёмки для сценария"
+  ],
+  "systems-title": [
+   "Two operating systems: people and AI agents",
+   "Две системы: люди и AI-агенты"
+  ],
+  "systems-intro": [
+   "People steer: they set the intent and carry accountability. AI agents gather signals, analyze, reason, execute, and learn. The two work in parallel, joined by one intent loop and a trust perimeter that is not negotiable.",
+   "Люди направляют работу: определяют цель и несут ответственность. AI-агенты собирают сигналы, анализируют, рассуждают, исполняют и обучаются. Обе системы работают параллельно и связаны единым циклом управления и неизменными границами доверия."
+  ],
+  "systems-connection": [
+   "The intent loop",
+   "Цикл управления"
+  ],
+  "system-1-duty-1-name": [
+   "Strategic direction",
+   null
+  ],
+  "system-1-duty-2-name": [
+   "Ethics & regulation",
+   "Этика и соблюдение требований"
+  ],
+  "system-1-duty-2-desc": [
+   "Owns the relationship with regulators, customers, and the public.",
+   "Отвечает за отношения с регуляторами, клиентами и обществом."
+  ],
+  "system-1-duty-3-name": [
+   "Final decision rights",
+   null
+  ],
+  "system-1-duty-3-desc": [
+   "Keeps authority over high-stakes, irreversible, and reputational decisions.",
+   "Сохраняет за собой решения с высокими ставками, необратимыми последствиями и репутационным риском."
+  ],
+  "system-1-duty-5-name": [
+   "Review & recalibration",
+   "Анализ и корректировка"
+  ],
+  "system-1-duty-5-desc": [
+   "Checks the Bank against its purpose; resets the intent when the context changes.",
+   "Сверяет работу Банка с его целями и уточняет цель при изменении условий."
+  ],
+  "system-1-label": [
+   "◆ System A",
+   "◆ Система A"
+  ],
+  "system-1-name": [
+   "People",
+   "Люди"
+  ],
+  "system-1-role": [
+   "Authority · Judgment · Intent",
+   "Полномочия · Суждение · Цель"
+  ],
+  "system-2-duty-1-name": [
+   "Continuous monitoring",
+   "Непрерывный мониторинг"
+  ],
+  "system-2-duty-1-desc": [
+   "Watches signals on customers, markets, risk, operations, and staff in real time.",
+   "Отслеживает сигналы о клиентах, рынках, рисках, операциях и персонале в реальном времени."
+  ],
+  "system-2-duty-2-name": [
+   "Multi-angle analysis",
+   "Многофакторный анализ"
+  ],
+  "system-2-duty-2-desc": [
+   "Weighs decisions across competing factors — risk, return, customer, conduct.",
+   "Оценивает решения с учётом конкурирующих факторов — риска, доходности, интересов клиента и добросовестного поведения."
+  ],
+  "system-2-duty-3-name": [
+   "Options for decision",
+   "Варианты решений"
+  ],
+  "system-2-duty-3-desc": [
+   "Presents worked-out options with confidence, trade-offs, and sources.",
+   "Предлагает проработанные варианты с оценкой уверенности, компромиссов и источников."
+  ],
+  "system-2-duty-4-name": [
+   "Execution & automation",
+   null
+  ],
+  "system-2-duty-4-desc": [
+   "Carries out authorized actions and routine work, and keeps the audit trail.",
+   "Выполняет разрешённые действия и рутинную работу и ведёт аудиторский след."
+  ],
+  "system-2-duty-5-name": [
+   "Learning from results",
+   "Обучение на результатах"
+  ],
+  "system-2-duty-5-desc": [
+   "Feeds results back into models; flags drift; proposes adjustments to people.",
+   "Учитывает результаты в моделях, сообщает о дрейфе и предлагает людям корректировки."
+  ],
+  "system-2-label": [
+   "● System B",
+   "● Система B"
+  ],
+  "system-2-name": [
+   "AI agents",
+   "AI-агенты"
+  ],
+  "system-2-role": [
+   "Monitoring · Analysis · Execution · Learning",
+   "Мониторинг · Анализ · Исполнение · Обучение"
+  ],
+  "implication-label": [
+   "What this means",
+   "Что это значит"
+  ],
+  "implication": [
+   "Decision rights stay with people. AI agents make decisions faster, wider in scope, and better evidenced. The Bank does not hand over judgment; it equips it.",
+   "Право принимать решения остаётся за людьми. AI-агенты делают решения быстрее, полнее и обоснованнее. Банк не передаёт суждение AI, а вооружает его."
+  ],
+  "capabilities-title": [
+   "Capabilities",
+   "Возможности"
+  ],
+  "capabilities-intro": [
+   "What the operating model can do: analyze · reason · decide · act · learn · govern · engage",
+   "Что умеет операционная модель: анализировать · рассуждать · решать · действовать · обучаться · управлять · взаимодействовать"
+  ],
+  "capabilities-1-desc": [
+   "Reads signals on customers, markets, risk, operations, and people continuously.",
+   "Непрерывно получает сигналы о клиентах, рынках, рисках, операциях и персонале."
+  ],
+  "capabilities-2-desc": [
+   "Weighs decisions across competing factors — risk, return, customer, conduct.",
+   "Оценивает решения с учётом конкурирующих факторов — риска, доходности, интересов клиента и добросовестного поведения."
+  ],
+  "capabilities-3-desc": [
+   "Presents worked-out options with confidence, trade-offs, and sources.",
+   "Предлагает проработанные варианты с оценкой уверенности, компромиссов и источников."
+  ],
+  "capabilities-4-desc": [
+   "Carries out authorized actions, records who did what, and keeps an unalterable audit trail.",
+   "Выполняет разрешённые действия с указанием исполнителя и ведёт неизменяемый аудиторский след."
+  ],
+  "capabilities-5-desc": [
+   "Feeds results back into models — flags drift, proposes adjustments.",
+   "Учитывает результаты в моделях — сообщает о дрейфе и предлагает корректировки."
+  ],
+  "capabilities-6-desc": [
+   "Maintains the perimeter, the guardrails, and the chain of accountability.",
+   "Поддерживает границы, защитные механизмы и цепочку ответственности."
+  ],
+  "capabilities-7-desc": [
+   "Speaks with customers, regulators, and partners on the Bank's behalf.",
+   "Взаимодействует с клиентами, регуляторами и партнёрами от имени Банка."
+  ],
+  "loop-title": [
+   "The intent loop",
+   "Цикл управления"
+  ],
+  "loop-intro": [
+   "How people and AI agents work together: intent → insight → action → audit, continuously",
+   "Как люди и AI-агенты работают вместе: цель → анализ → действие → аудит, непрерывно"
+  ],
+  "loop-1-name": [
+   "Intent",
+   "Цель"
+  ],
+  "loop-1-desc": [
+   "People set the outcome, the constraints, the risk appetite, and the ethical limits. Direction, not instructions.",
+   "Люди задают результат, ограничения, риск-аппетит и этические границы — направление, а не инструкции."
+  ],
+  "loop-2-desc": [
+   "AI agents analyze the data from several angles and present options for decision, with confidence and trade-offs.",
+   "AI-агенты анализируют данные с разных сторон и предлагают варианты решений с оценкой уверенности и компромиссов."
+  ],
+  "loop-3-desc": [
+   "People authorize. AI agents execute or hand over. Every step has an owner and limits, and can be reversed where possible.",
+   "Люди дают разрешение. AI-агенты исполняют или передают задачу дальше. У каждого шага есть исполнитель и границы, и где возможно — его можно отменить."
+  ],
+  "loop-4-desc": [
+   "Results are logged, evaluated, challenged if needed, and used to sharpen the next intent. Each turn makes the loop more precise.",
+   "Результаты фиксируются, оцениваются, при необходимости оспариваются и уточняют следующую цель. С каждым оборотом цикл становится точнее."
+  ],
+  "guardrails-title": [
+   "Lab guardrails scorecard",
+   "Оценка защитных механизмов лабораторной среды"
+  ],
+  "guardrails-intro": [
+   "Each area of concern has its guardrails and a measure of how far good practice is applied, balancing freedom to explore with assurance. The Lab keeps only the guardrails it needs to stay safe while experimenting.",
+   "Для каждой области контроля заданы защитные механизмы и оценено, насколько применяются лучшие практики, — с балансом между свободой экспериментов и надёжностью. В лабораторной среде действуют только те ограничения, которые необходимы для безопасной работы."
+  ],
+  "guardrails-1-name": [
+   "Governance & decisions",
+   null
+  ],
+  "guardrails-1-1-name": [
+   "Decision rights",
+   null
+  ],
+  "guardrails-1-1-desc": [
+   "The sponsor and the IT lead approve moving a scenario forward",
+   "Спонсор и руководитель IT утверждают переход сценария к следующему этапу"
+  ],
+  "guardrails-1-2-desc": [
+   "A fixed list: no personal data leaves the Lab, nothing is written back to production systems",
+   "Закреплённый перечень: персональные данные не покидают лабораторную среду, ничего не записывается обратно в промышленные системы"
+  ],
+  "guardrails-1-3-name": [
+   "Resolving disagreements",
+   null
+  ],
+  "guardrails-1-3-desc": [
+   "Not formalized; case by case",
+   "Не формализован; решается в каждом случае отдельно"
+  ],
+  "guardrails-2-name": [
+   "Risk & controls",
+   null
+  ],
+  "guardrails-2-1-name": [
+   "Risk classification",
+   null
+  ],
+  "guardrails-2-1-desc": [
+   "Lab risk register, categorized by type",
+   null
+  ],
+  "guardrails-2-2-name": [
+   "Output integrity",
+   "Надёжность результатов"
+  ],
+  "guardrails-2-2-desc": [
+   "Drift, bias, and grounding checks during the build",
+   "Проверка дрейфа, смещений и привязки к источникам в ходе разработки"
+  ],
+  "guardrails-2-3-name": [
+   "Lab isolation",
+   "Изоляция лабораторной среды"
+  ],
+  "guardrails-2-3-desc": [
+   "Separate network segment, key management, no access to production",
+   "Отдельный сегмент сети, управление ключами, нет доступа к промышленным системам"
+  ],
+  "guardrails-2-4-name": [
+   "Personal data protection",
+   null
+  ],
+  "guardrails-2-4-desc": [
+   "Masking, redaction, data export rules",
+   "Маскирование, удаление данных, правила выгрузки"
+  ],
+  "guardrails-2-5-name": [
+   "Failure handling",
+   "Действия при сбоях"
+  ],
+  "guardrails-2-5-desc": [
+   "Basic rollback and alerting",
+   "Базовые процедуры отката и оповещения"
+  ],
+  "guardrails-3-name": [
+   "Operations & processes",
+   null
+  ],
+  "guardrails-3-1-name": [
+   "Scenario selection",
+   "Отбор сценариев"
+  ],
+  "guardrails-3-1-desc": [
+   "Prioritized backlog of scenarios",
+   "Бэклог сценариев с приоритетами"
+  ],
+  "guardrails-3-2-name": [
+   "Workflow mapping",
+   null
+  ],
+  "guardrails-3-2-desc": [
+   "Service workflow documented for each scenario",
+   "Процесс оказания услуги описан для каждого сценария"
+  ],
+  "guardrails-3-3-name": [
+   "Scenario lifecycle",
+   "Жизненный цикл сценария"
+  ],
+  "guardrails-3-3-desc": [
+   "Choose → build → validate",
+   "Выбор → разработка → проверка"
+  ],
+  "guardrails-3-4-name": [
+   "Path to delivery",
+   "Путь к внедрению"
+  ],
+  "guardrails-3-4-desc": [
+   "Informal handover to production delivery",
+   "Неформальная передача на промышленное внедрение"
+  ],
+  "guardrails-4-name": [
+   "Data & analytics",
+   null
+  ],
+  "guardrails-4-1-name": [
+   "Data pipeline",
+   null
+  ],
+  "guardrails-4-1-desc": [
+   "Extract pipeline running; extracts made per scenario",
+   "Конвейер выгрузки работает; выгрузки формируются под сценарий"
+  ],
+  "guardrails-4-2-desc": [
+   "Quality checked at extract; correctness confirmed",
+   "Качество проверяется при выгрузке; корректность подтверждается"
+  ],
+  "guardrails-4-3-name": [
+   "Data privacy",
+   "Защита данных"
+  ],
+  "guardrails-4-3-desc": [
+   "Masking and anonymization of sensitive fields",
+   null
+  ],
+  "guardrails-4-4-name": [
+   "Analytics correctness",
+   null
+  ],
+  "guardrails-4-4-desc": [
+   "Analytics checked against reference data",
+   "Аналитика проверяется по эталонным данным"
+  ],
+  "guardrails-5-name": [
+   "Measurement",
+   "Измерение результатов"
+  ],
+  "guardrails-5-1-name": [
+   "Performance metrics (KPIs)",
+   "Показатели результативности (KPI)"
+  ],
+  "guardrails-5-1-desc": [
+   "KPIs tracked for each scenario",
+   "KPI отслеживаются по каждому сценарию"
+  ],
+  "guardrails-5-2-name": [
+   "Hypothesis targets",
+   "Целевые показатели гипотезы"
+  ],
+  "guardrails-5-2-desc": [
+   "Target set for each scenario's hypothesis",
+   "Целевой результат гипотезы задан для каждого сценария"
+  ],
+  "guardrails-5-3-name": [
+   "Workflow metrics",
+   null
+  ],
+  "guardrails-5-3-desc": [
+   "Functional and integration metrics recorded",
+   null
+  ],
+  "guardrails-5-4-name": [
+   "Acceptance criteria",
+   null
+  ],
+  "guardrails-5-4-desc": [
+   "Acceptance defined for each scenario",
+   "Условия приёмки заданы для каждого сценария"
+  ]
+ },
+ "ui_en": {
+  "matrix": "Experiment workflow",
+  "loop": "Intent loop"
+ },
+ "ui_ru": {
+  "matrix": "Процесс эксперимента",
+  "systems": "Операционная модель",
+  "capabilities": "Возможности",
+  "loop": "Цикл управления",
+  "guardrails": "Защитные механизмы",
+  "lanes": "Блок работ",
+  "concern": "Область контроля",
+  "posture": "Подход",
+  "selection": "Вид процесса"
+ }
+}
