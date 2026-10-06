@@ -157,9 +157,9 @@ def discovery_page(source, relative, lang):
         # Temporary visual comparison, confined to the English overview.
         if lang == 'en':
             options = iter((
-                ('A', 'tiles'), ('B', 'tiles'), ('C', 'workflows'),
+                ('A', 'groups'), ('B', 'groups'), ('C', 'workflows'),
                 ('D', 'groups'), ('E', 'groups'), ('F', 'groups'), ('G', 'groups'),
-                ('H', 'groups'), ('I', 'tiles'), ('J', 'deferred'), ('K', 'deferred'),
+                ('H', 'groups'), ('I', 'groups'), ('J', 'deferred'), ('K', 'deferred'),
             ))
             def comparison_card(match):
                 key, pattern = next(options)
