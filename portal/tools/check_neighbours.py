@@ -185,6 +185,10 @@ def check():
         for entry in entries:
             if section_for(entry['u']) != section:
                 errors.append(f'{path.name}: cross-section search result {entry["u"]}')
+    from check_lab import check as check_lab
+    lab_errors, lab_counts = check_lab(OUTPUT)
+    errors.extend(lab_errors)
+    counts.update(lab_counts)
     print(json.dumps({'counts': dict(counts), 'errors': errors}, ensure_ascii=False, indent=2))
     return errors
 

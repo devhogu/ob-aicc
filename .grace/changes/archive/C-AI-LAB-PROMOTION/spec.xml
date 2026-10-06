@@ -1,0 +1,51 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-AI-LAB-PROMOTION>
+    <Summary>Promote the complete retained Cloud LAB source into the independent AI Lab section of the AICC portal, with native AICC presentation and accessible interactive navigation in English and Russian. Publish the verified complete site under the user's standing publication authorization.</Summary>
+    <Goals>
+      <Goal>Readers can explore the complete laboratory operating model at the existing /en/lab/ and /ru/lab/ routes, rather than a shortened concept scaffold.</Goal>
+      <Goal>The global navigation, section heading and search identity say AI Lab in both editions, as explicitly requested by the user.</Goal>
+      <Goal>Preserve the six-stage, five-lane validation matrix and every task, both operating systems and their duties, seven capabilities, four intent-loop steps, and all guardrail concerns and supplied coverage values.</Goal>
+      <Goal>Make the matrix navigable through stage and lane selection with a return to the complete view, and provide local section links and search destinations for the actual content.</Goal>
+      <Goal>Use the shared AICC header, sidebar, footer, feedback, fonts, tokens and themes, and the recently adopted compact card and selection conventions.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>The retained English content source is html-alt/cloudlab/index.html. It remains a build input, never a runtime dependency or externally linked substitute for published content. Russian text is a maintained translation of the same source units, with identical structural identifiers and behavior.</Constraint>
+      <Constraint>The supplied predecessor is one English HTML file with CSS hover effects and no scripted controls. New interaction is bounded to reading and navigating that content; it does not create an experiment-management application, infrastructure or business records.</Constraint>
+      <Constraint>Preserve source meaning, provider references and supplied scorecard values. Retain the concept status and identify supplied coverage as illustrative, without presenting source assertions as independently verified operational readiness or approved Bank policy.</Constraint>
+      <Constraint>AI Lab remains an independent neighbor under the common shell. Do not add charter citations, cross-section business links, inferred initiative relationships or shared lifecycle records.</Constraint>
+      <Constraint>Desktop and mobile, light and dark themes, and English and Russian use equivalent styling and controls. All content remains readable without JavaScript. Selection is keyboard accessible and is indicated beyond color alone.</Constraint>
+      <Constraint>Reuse the maintained complete-site build and publication pipeline. Package every required asset under html/aicc and use bundled AICC fonts. Do not mutate the retained Cloud LAB source, unrelated research files, charter corpus or on-demand portable export.</Constraint>
+      <Constraint>Publish substantial changes automatically under the user's standing instruction. Preserve concurrent source work and publish the current complete source snapshot.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Provisioning a cloud lab, choosing a provider, approving policies, authorizing data export or establishing measured scorecard results.</NonGoal>
+      <NonGoal>Substantively rewriting the supplied operating model or changing the Discovery, Portfolio, Delivery Pipeline or AICC content.</NonGoal>
+      <NonGoal>Runtime dependency on html-alt, a backend, authentication changes, a new CMS or automated promotion of scenarios.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>Every source content unit is present in the published English AI Lab and has a corresponding Russian translation, including matrix assignments, operating-system duties, capability and loop descriptions, and scorecard concerns, postures and coverage values.</Criterion>
+      <Criterion>The matrix preserves the six stages and five lanes, supports accessible stage and lane selection and reset, and remains usable at desktop and mobile widths. All content is available with scripting disabled.</Criterion>
+      <Criterion>Local navigation and search reach the lab sections and matrix content. Language switching reaches the counterpart route. Shared navigation says AI Lab everywhere and common footer and feedback remain available.</Criterion>
+      <Criterion>Compact cards, section separators, selected tab underlines and tapered card accents follow the adopted AICC presentation. Layout and readable theme colors are equivalent across languages and themes, without page-level horizontal overflow.</Criterion>
+      <Criterion>The output contains all content, scripts and styles locally. The maintained Discovery completeness check continues to pass; published Discovery pages have no dependency on the predecessor folder.</Criterion>
+      <Criterion>The complete build is repeatable, checks and browser interaction evidence pass, durable GRACE state is reconciled, and the served deployment manifest matches the committed published source.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas>
+      <M-PORTAL-NEIGHBOURS />
+      <M-PORTAL-PROJECTION />
+      <M-PORTAL-LOCALIZATION />
+    </AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_neighbours.py</ExpectedCommand>
+      <ExpectedEvidence>Source-to-output inventories prove complete English content retention and matching Russian content keys, matrix coordinates and coverage values. Asset and boundary checks prove a self-contained publication.</ExpectedEvidence>
+      <ExpectedEvidence>Browser checks exercise every matrix stage and lane, reset, keyboard selection, local navigation, search, language switching, feedback and theme behavior in both languages at desktop and mobile widths. A no-script check confirms content availability.</ExpectedEvidence>
+      <ExpectedEvidence>The existing complete-site checks continue to protect Discovery source content and shared-shell behavior. Deployment verification records the current source commit and served manifest.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The requested label is AI Lab in English and Russian. The existing lab/ routes remain stable.</Assumption>
+      <Assumption>The complete English source is adopted and translated, rather than expanded into new operational policies or interpreted as an already running environment.</Assumption>
+    </Assumptions>
+  </C-AI-LAB-PROMOTION>
+</GraceChangeSpec>

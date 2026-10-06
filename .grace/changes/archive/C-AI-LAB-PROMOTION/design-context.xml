@@ -1,0 +1,20 @@
+<GraceChangeDesignContext graceVersion="4.0">
+  <Change>C-AI-LAB-PROMOTION</Change>
+  <NormativeStatus>non-normative</NormativeStatus>
+  <Rationale>The current Lab is a Markdown concept scaffold. The supplied predecessor has one complete English page, a spatial matrix and conceptual diagrams, with CSS hover behavior but no JavaScript. A source-driven adapter can preserve every content unit while replacing the obsolete presentation and adding reading controls. Shared shell ownership and section boundaries remain unchanged.</Rationale>
+  <Alternatives>
+    <Alternative>Do not embed the predecessor in an iframe: its external fonts, old colors and separate chrome would reproduce the inconsistency the user already corrected in Discovery.</Alternative>
+    <Alternative>Do not duplicate a manually restyled English HTML page. Parse retained source units at build time and maintain Russian translations by stable content key so completeness can be checked.</Alternative>
+  </Alternatives>
+  <Scenarios>
+    <Scenario>A reader sees all six validation stages and five lanes, selects a stage or lane to focus the matrix, and restores the complete view without losing content.</Scenario>
+    <Scenario>A mobile reader uses the same controls with a compact reflowed matrix. Without scripting, the complete matrix and every later section remain readable.</Scenario>
+    <Scenario>A reader follows local sidebar anchors to the two operating systems, capabilities, intent loop and grouped guardrails. Cards and tables share the AICC visual language; coverage values are explicitly illustrative.</Scenario>
+  </Scenarios>
+  <ExecutionProposal>
+    <Step>Implement a bounded source adapter in portal/tools/lab.py, Russian translations in portal/sections/lab/ru/content.json, scoped presentation in portal/site/lab.css and reading controls in portal/site/lab.js. Connect it through portal/tools/neighbours.py and update section identity and routing metadata in portal/sections/navigation.json and portal/sections/pages.json.</Step>
+    <Step>Preserve content with stable unit identifiers, build both editions, and index meaningful fragments through the existing local search. Use workspace.page for shared chrome and load only scoped local assets. Replace the obsolete concept Markdown scaffolds with the complete projection.</Step>
+    <Step>Add source completeness and bilingual parity checks to the existing neighbor verification, plus focused browser checks for matrix behavior, common shell, themes, responsive layout and scripting-disabled content. Run complete-site freshness, idempotence and existing regression checks.</Step>
+    <Step>Update affected GRACE ownership and verification evidence within the approved lifecycle, close and archive the change, commit only task-owned files, push and publish the latest complete source snapshot, then verify the served manifest and AI Lab pages.</Step>
+  </ExecutionProposal>
+</GraceChangeDesignContext>

@@ -1,6 +1,6 @@
 # START_MODULE_CONTRACT
-#   PURPOSE: Compose independent Discovery, Portfolio, Delivery Pipeline and CloudLab sections.
-#   SCOPE: Retained scenario projection, bounded authored landing pages, local search and assets.
+#   PURPOSE: Compose independent Discovery, Portfolio, Delivery Pipeline and AI Lab sections.
+#   SCOPE: Retained scenario and laboratory projection, authored neighbour pages, local search and assets.
 #   DEPENDS: M-PORTAL-SOURCE
 #   LINKS: M-PORTAL-NEIGHBOURS, V-M-PORTAL-NEIGHBOURS
 # END_MODULE_CONTRACT
@@ -408,9 +408,11 @@ def build_landings(output):
     md = MarkdownIt('commonmark', {'html': False}).enable('table')
     count = 0
     for lang in ('en', 'ru'):
-        indexes = {name: [] for name in ('initiatives', 'projects', 'lab')}
+        indexes = {name: [] for name in ('initiatives', 'projects')}
         for item in PAGES:
             section = item['section']
+            if item.get('renderer') == 'lab':
+                continue
             url = f'/{lang}/' + item['path']
             text = (ROOT / 'portal/sections' / section / lang / item['source']).read_text()
             body = md.render(text)
@@ -430,5 +432,6 @@ def build_landings(output):
 
 
 def build_neighbours(output):
+    import lab
     output = Path(output)
-    return build_discovery(output) + build_landings(output)
+    return build_discovery(output) + build_landings(output) + lab.build(output)

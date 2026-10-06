@@ -4,5 +4,5 @@
   {"section":"initiatives","path":"initiatives/register/","source":"register.md","title":{"en":"Initiative register","ru":"Реестр инициатив"},"status":{"en":"0 initiatives","ru":"0 инициатив"}},
   {"section":"projects","path":"projects/","source":"index.md","title":{"en":"Delivery Pipeline","ru":"Проекты"},"status":{"en":"Project register","ru":"Реестр проектов"}},
   {"section":"projects","path":"projects/service-resolution/","source":"service-resolution.md","title":{"en":"Customer Intelligence–Enabled Service Resolution","ru":"Решение клиентских обращений на основе клиентской аналитики"},"status":{"en":"Proposal","ru":"Предложение"}},
-  {"section":"lab","path":"lab/","source":"index.md","title":{"en":"CloudLab","ru":"CloudLab"},"status":{"en":"Concept","ru":"Концепция"}}
+  {"section":"lab","path":"lab/","source":"html-alt/cloudlab/index.html","title":{"en":"AI Lab","ru":"AI Lab"},"status":{"en":"Concept","ru":"Концепция"},"renderer":"lab"}
 ]
