@@ -1,0 +1,74 @@
+/* Native project document presentation, scoped to Delivery Pipeline's workbook. */
+.project-content{min-width:0;line-height:1.6;color:var(--text)}
+.project-content h1{font-size:40px;line-height:1.2;margin:24px 0;overflow-wrap:anywhere}
+.project-content .lede{font-size:18px;max-width:none;color:var(--text-muted)}
+.project-breadcrumb{font-size:14px;line-height:1.5;color:var(--text-muted);margin:24px 0 12px}
+.project-content .doc-label,.project-content .eyebrow{font-size:13px;font-weight:500;color:var(--text-muted);margin:20px 0 10px}
+.project-content .landing-meta{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.project-content .pill{background:var(--surface-subtle);color:var(--text-muted);padding:4px 8px;border-radius:6px;font-size:13px}
+.project-content :is(h2,.audience-title){font-size:26px;line-height:1.3;margin:56px 0 24px;padding-bottom:14px;border-bottom:2px solid var(--brand)}
+.project-content h3{font-size:20px;line-height:1.4;margin:32px 0 12px}
+.project-content p{margin:16px 0}
+.project-content :is(ul,ol){padding-left:24px;margin:16px 0}
+.project-content li{margin:6px 0}
+.project-content .project-topic{min-width:0}
+.project-content .table-wrap{overflow:auto;max-width:100%;margin:24px 0;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.project-content table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.5}
+.project-content :is(th,td){text-align:left;vertical-align:top;padding:12px 14px;border:0;border-bottom:1px solid var(--border);min-width:130px}
+.project-content th{background:var(--surface-subtle);font-weight:500}
+.project-content tbody tr:last-child td{border-bottom:0}
+.project-content tbody td:first-child{font-weight:500;background:var(--surface-subtle)}
+.project-content tbody td{overflow-wrap:break-word}
+.project-content :is(pre,code){font-family:var(--font-mono)}
+.project-content pre{padding:16px;border:1px solid var(--border);border-radius:12px;background:var(--surface-subtle);font-size:13px;overflow:auto;max-width:100%}
+.project-content hr{border:0;border-top:1px solid var(--border);margin:40px 0}
+.project-content :is(.value-flow,.audience-grid,.project-document-grid){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.project-content .project-document-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.project-content :is(.value-step,.audience-card,.project-card){position:relative;min-width:0;padding:16px;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);text-decoration:none;overflow:hidden}
+.project-content :is(.value-step,.audience-card,.project-card) strong,.project-content .value-step b{display:block;font-size:18px;line-height:1.4;margin:0 0 10px}
+.project-content :is(.audience-card,.project-card) span{display:block;font-size:14px;color:var(--text-muted)}
+.project-content .value-step p{font-size:14px;color:var(--text-muted);margin:0}
+.project-content :is(.audience-card,.project-card):is(:hover,:focus-visible){border-color:var(--text-muted)}
+.project-nav-topics{margin:8px 0 16px;font-size:13px}
+.project-nav-topics>summary{display:list-item;padding:8px 12px;color:var(--text-muted);cursor:pointer}
+.project-nav-topics>div{margin-left:10px;border-left:1px solid var(--border)}
+.project-nav-topics>div>a{font-size:12px!important;line-height:1.5}
+/* Retained graph geometry, presented with the same fonts and neutral tokens as AICC. */
+.project-diagram{min-width:0;margin:24px 0;border:1px solid var(--border);border-radius:12px;background:var(--surface);padding:16px}
+.project-diagram-preview{overflow:auto;max-width:100%;max-height:420px}
+.project-diagram-preview>svg{display:block;width:max(100%,var(--project-graph-width));height:auto;margin:0 auto;max-width:none!important}
+.project-diagram figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px;color:var(--text-muted);font-size:13px}
+.project-diagram-open{flex-shrink:0;font-size:13px}
+.project-diagram-open{display:none}
+.project-workspace.project-enhanced .project-diagram-open{display:inline-flex}
+.project-content :is(.audience-card,.project-card)::before{content:'';position:absolute;inset:0;pointer-events:none;background:var(--brand);opacity:0;--project-wrap:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M0 12A12 12 0 0 1 12 0V2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left top/12px 12px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath transform='translate(0 12) scale(1 -1)' d='M0 12A12 12 0 0 1 12 0V2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left bottom/12px 12px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 2' preserveAspectRatio='none'%3E%3Cpath d='M0 0H100C66 0 34 2 0 2Z'/%3E%3C/svg%3E") left 12px top/calc(30% - 12px) 2px no-repeat,linear-gradient(#000,#000) left 12px bottom/calc(70% - 12px) 2px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 2' preserveAspectRatio='none'%3E%3Cpath transform='translate(0 2) scale(1 -1)' d='M0 0H100C66 0 34 2 0 2Z'/%3E%3C/svg%3E") right bottom/30% 2px no-repeat,linear-gradient(#000,#000) left center/2px calc(100% - 24px) no-repeat;mask:var(--project-wrap);-webkit-mask:var(--project-wrap)}
+.project-content :is(.audience-card,.project-card):is(:hover,:focus-visible,:target)::before{opacity:1}
+.project-diagram svg,.project-viewer svg{font-family:var(--font-body);font-size:14px;fill:var(--text)}
+:is(.project-diagram,.project-viewer) svg :is(.label,.nodeLabel,.cluster-label,.edgeLabel){font-family:var(--font-body);font-size:14px;color:var(--text);fill:var(--text);text-align:center}
+:is(.project-diagram,.project-viewer) svg :is(span,p){color:var(--text);font-family:var(--font-body);font-size:14px;line-height:1.5;margin:0}
+:is(.project-diagram,.project-viewer) svg :is(foreignObject,.label){overflow:visible}
+:is(.project-diagram,.project-viewer) svg .node :is(rect,circle,ellipse,polygon,path){fill:var(--surface-subtle)!important;stroke:var(--text-muted)!important;stroke-width:1px}
+:is(.project-diagram,.project-viewer) svg .cluster rect{fill:var(--surface)!important;stroke:var(--border)!important}
+:is(.project-diagram,.project-viewer) svg .flowchart-link{fill:none;stroke:var(--text-muted)!important;stroke-width:1px}
+:is(.project-diagram,.project-viewer) svg .edge-pattern-dashed{stroke-dasharray:3}
+:is(.project-diagram,.project-viewer) svg .edge-pattern-dotted{stroke-dasharray:2}
+:is(.project-diagram,.project-viewer) svg .edge-thickness-thick{stroke-width:3.5px}
+:is(.project-diagram,.project-viewer) svg .edge-thickness-invisible{stroke-width:0}
+:is(.project-diagram,.project-viewer) svg :is(.marker,.arrowheadPath){fill:var(--text-muted)!important;stroke:var(--text-muted)!important}
+:is(.project-diagram,.project-viewer) svg :is(.labelBkg,.edgeLabel p){background:var(--surface)}
+:is(.project-diagram,.project-viewer) svg .cluster-label text{fill:var(--text)}
+.project-viewer{width:min(98vw,2000px);max-width:98vw;height:92vh;max-height:94vh;padding:16px;overflow:hidden;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:12px}
+.project-viewer::backdrop{background:rgba(0,0,0,.55)}
+.project-viewer-shell{height:100%;display:flex;flex-direction:column;gap:12px;min-height:0}
+.project-viewer-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.project-viewer-title{margin:0;font-size:16px;font-weight:500}
+.project-viewer-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.project-viewer-controls .oc-button{padding:6px 10px;font-size:14px}
+.project-viewer-controls output{font-size:13px;min-width:4ch}
+.project-viewer-viewport{flex:1;min-height:0;min-width:0;overflow:auto;border:1px solid var(--border);border-radius:8px}
+.project-viewer-stage{box-sizing:content-box;padding:24px}
+.project-viewer-stage>svg{max-width:none!important;display:block}
+.project-viewer-hint{font-size:12px;color:var(--text-muted);margin:0}
+@media(max-width:1000px){.project-content :is(.value-flow,.audience-grid){grid-template-columns:minmax(0,1fr)}}
+@media(max-width:650px){.project-content h1{font-size:30px}.project-content :is(h2,.audience-title){font-size:22px;margin-top:44px}.project-content h3{font-size:18px}.project-content .project-document-grid{grid-template-columns:minmax(0,1fr)}.project-content :is(th,td){padding:10px;min-width:150px}.project-diagram{padding:12px}.project-diagram figcaption{align-items:flex-start;flex-direction:column}.project-viewer{padding:10px}.project-viewer-stage{padding:16px}.project-breadcrumb{font-size:13px}}
+@media print{.project-diagram-open,.project-viewer{display:none!important}.project-content .table-wrap{overflow:visible}.project-diagram{break-inside:avoid}}

@@ -1,6 +1,6 @@
 # START_MODULE_CONTRACT
 #   PURPOSE: Compose independent Discovery, Portfolio, Delivery Pipeline and AI Lab sections.
-#   SCOPE: Retained scenario and laboratory projection, authored neighbour pages, local search and assets.
+#   SCOPE: Retained scenario, laboratory and project projection, authored neighbour pages, local search and assets.
 #   DEPENDS: M-PORTAL-SOURCE
 #   LINKS: M-PORTAL-NEIGHBOURS, V-M-PORTAL-NEIGHBOURS
 # END_MODULE_CONTRACT
@@ -411,7 +411,7 @@ def build_landings(output):
         indexes = {name: [] for name in ('initiatives', 'projects')}
         for item in PAGES:
             section = item['section']
-            if item.get('renderer') == 'lab':
+            if item.get('renderer') in ('lab', 'project'):
                 continue
             url = f'/{lang}/' + item['path']
             text = (ROOT / 'portal/sections' / section / lang / item['source']).read_text()
@@ -433,5 +433,6 @@ def build_landings(output):
 
 def build_neighbours(output):
     import lab
+    import project
     output = Path(output)
-    return build_discovery(output) + build_landings(output) + lab.build(output)
+    return build_discovery(output) + build_landings(output) + lab.build(output) + project.build(output)

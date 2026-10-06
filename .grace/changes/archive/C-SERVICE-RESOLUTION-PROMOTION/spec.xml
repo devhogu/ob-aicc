@@ -1,0 +1,46 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-SERVICE-RESOLUTION-PROMOTION>
+    <Summary>Promote the complete English and Russian Customer Intelligence–Enabled Service Resolution business-case portal from html-alt into Delivery Pipeline, using native AICC presentation and reading interactions, then publish the verified complete site.</Summary>
+    <Goals>
+      <Goal>Replace the short project scaffold with the full retained business-case package at /en/projects/service-resolution/ and /ru/projects/service-resolution/, keeping these addresses as the project overview.</Goal>
+      <Goal>Make the eight supplied documents independently navigable within this project: business use case, charter-selection and evidence guide, three candidate journey charters, technical blueprint, journey technical profiles, and platform capability and readiness map.</Goal>
+      <Goal>Preserve all authored content, tables, diagrams, diagram labels and relationships, code examples, numerical targets, qualifications, placeholders and internal project references in each supplied language edition.</Goal>
+      <Goal>Use common AICC fonts, tokens, header, sidebar, footer, feedback, language switch, scoped search, light and dark themes, compact cards, neutral grouped tables, section rules and tapered selection accents.</Goal>
+      <Goal>Retain useful diagram reading behavior: accessible expansion, zoom, fit, actual size, scrolling, close and focus return. Make document and section links reach their actual content.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>The retained sources are html-alt/intelligent-customer-service-resolution/en/index.html and html-alt/intelligent-customer-service-resolution/ru/index.html. Each edition is projected from its own complete source, without rewriting its substance or silently replacing Russian text with English.</Constraint>
+      <Constraint>The project overview remains at the existing service-resolution route. The eight documents become child pages under that route; rewrite all source fragment links to their corresponding published document and heading destinations.</Constraint>
+      <Constraint>Published content, assets and search indexes are fully packaged within html/aicc. The retained predecessor remains an unchanged build input and is never a runtime dependency or substitute link for the project content.</Constraint>
+      <Constraint>Preserve the proposal and candidate-charter status. Do not fill unassigned owners, approval records or baseline fields, confirm proposed targets, infer funding or delivery commitments, or turn publication into authorization to implement or operate the banking solution.</Constraint>
+      <Constraint>Delivery Pipeline stays an independent neighbor under the shared shell. References among this project's own documents remain internal to the project; do not add links to the AICC charter corpus, Discovery scenarios, Portfolio initiatives or AI Lab.</Constraint>
+      <Constraint>Both languages use matching structural routes, page layouts, table treatment and diagram controls. Both themes remain readable at desktop and mobile widths; wide tables and expanded diagrams scroll within their own regions rather than overflowing the page.</Constraint>
+      <Constraint>All authored text, tables and diagrams remain available without JavaScript. Reading controls are keyboard accessible, with meaningful labels, visible focus, Escape-to-close and return of focus to the originating diagram control.</Constraint>
+      <Constraint>Reuse the maintained common shell, complete-site build, export and deployment path. Preserve unrelated and concurrent work, keep the latest committed wording in the release, and do not refresh the on-demand portal/published export.</Constraint>
+      <Constraint>Commit, push and publish after verification under the user's standing instruction to publish substantial changes; verify the served manifest and actual bilingual project pages.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Substantive business-case editing, new translation, target validation, policy approval, banking system integration or delivery of the proposed customer-service capability.</NonGoal>
+      <NonGoal>A backend, live project-management records, interactive financial calculations, infrastructure provisioning or new links between independent portal sections.</NonGoal>
+      <NonGoal>Restyling or rewriting unrelated AICC, Discovery, Portfolio or AI Lab content, modifying the retained project predecessor or publishing html-alt as a separate destination.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>The project overview and all eight retained documents are published in both languages beneath service-resolution, with the complete source body content. Independent checks compare prose, headings, lists, table cells, code and diagram labels/structure against each retained source.</Criterion>
+      <Criterion>Each edition retains its 47 tables and 34 diagrams, including all eight document bodies, the landing-page content and the original intra-project references. No required content is hidden behind an external predecessor link.</Criterion>
+      <Criterion>Shared navigation, project register, local document navigation, counterpart-language links, project-scoped search and deep section links reach the complete content, with no duplicate identifiers or broken asset references.</Criterion>
+      <Criterion>Cards, tables, headings, section separation and diagrams follow the adopted AICC presentation, with equivalent English/Russian layout and readable light/dark themes on desktop and mobile.</Criterion>
+      <Criterion>All diagram controls work on the served pages and temporary portable output, including keyboard activation, zoom, fit, actual size, scrolling, close and focus return. Content remains readable with scripting disabled.</Criterion>
+      <Criterion>The complete-site repeat-build, static/content and browser regression checks pass. Durable ownership and verification describe this source-driven project projection, and closure records approval and evidence before apply/archive.</Criterion>
+      <Criterion>The clean committed source is pushed and published; the served package manifest and project page/asset bytes match the release while retaining the latest committed unrelated content.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-NEIGHBOURS /><M-PORTAL-PROJECTION /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_neighbours.py</ExpectedCommand>
+      <ExpectedCommand>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_project_browser.py</ExpectedCommand>
+      <ExpectedCommand>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py</ExpectedCommand>
+      <ExpectedEvidence>Independent source-to-output completeness checks for both editions, working document/heading/search destinations, diagram structure and labels, responsive themes and controls, shared chrome and feedback, no-script reading, disposable portable output and the served deployment manifest.</ExpectedEvidence>
+    </VerificationIntent>
+  </C-SERVICE-RESOLUTION-PROMOTION>
+</GraceChangeSpec>

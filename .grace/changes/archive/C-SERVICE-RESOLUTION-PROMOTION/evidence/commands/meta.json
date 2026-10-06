@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "tool": "grace-lint",
+  "changeId": "C-SERVICE-RESOLUTION-PROMOTION",
+  "assertionMode": "final",
+  "projectRoot": "/devops/obank/aicc-service-resolution",
+  "slug": "aicc-service-resolution-44d99f52",
+  "startedAt": "2026-10-06T10:21:29.555Z",
+  "finishedAt": "2026-10-06T10:32:14.742Z",
+  "status": "passed",
+  "commands": [
+    {
+      "index": 1,
+      "assertionId": "plan.xml#2",
+      "command": "python3 -m unittest discover -s portal/tests",
+      "exitCode": 0,
+      "durationMs": 17874,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-service-resolution-44d99f52/runs/2026-10-06T10-21-29_C-SERVICE-RESOLUTION-PROMOTION/1-python3-m-unittest-discover-s-portal-tes.log"
+    },
+    {
+      "index": 2,
+      "assertionId": "plan.xml#3",
+      "command": "python3 portal/tools/check.py --idempotent",
+      "exitCode": 0,
+      "durationMs": 13548,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-service-resolution-44d99f52/runs/2026-10-06T10-21-29_C-SERVICE-RESOLUTION-PROMOTION/2-python3-portal-tools-check-py-idempotent.log"
+    },
+    {
+      "index": 3,
+      "assertionId": "plan.xml#4",
+      "command": "python3 portal/tools/check_neighbours.py",
+      "exitCode": 0,
+      "durationMs": 10676,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-service-resolution-44d99f52/runs/2026-10-06T10-21-29_C-SERVICE-RESOLUTION-PROMOTION/3-python3-portal-tools-check-neighbours-py.log"
+    },
+    {
+      "index": 4,
+      "assertionId": "plan.xml#5",
+      "command": "portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_project_browser.py",
+      "exitCode": 0,
+      "durationMs": 209762,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-service-resolution-44d99f52/runs/2026-10-06T10-21-29_C-SERVICE-RESOLUTION-PROMOTION/4-portal-tools-with-browser-env-sh-portal.log"
+    },
+    {
+      "index": 5,
+      "assertionId": "plan.xml#6",
+      "command": "portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py",
+      "exitCode": 0,
+      "durationMs": 393314,
+      "timedOut": false,
+      "skipped": false,
+      "logFile": "/home/dev-one/.cache/grace/run-commands/aicc-service-resolution-44d99f52/runs/2026-10-06T10-21-29_C-SERVICE-RESOLUTION-PROMOTION/5-portal-tools-with-browser-env-sh-portal.log"
+    }
+  ]
+}

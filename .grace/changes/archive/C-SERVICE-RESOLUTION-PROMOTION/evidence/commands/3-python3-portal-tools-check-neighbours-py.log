@@ -1,0 +1,27 @@
+{
+  "counts": {
+    "aicc_pages": 460,
+    "pages_with_feedback": 642,
+    "discovery_pages": 154,
+    "en_context_cards": 424,
+    "en_scenarios": 1110,
+    "initiatives_pages": 6,
+    "lab_pages": 2,
+    "projects_pages": 20,
+    "ru_context_cards": 424,
+    "ru_scenarios": 1110,
+    "en_lab_content_units": 209,
+    "en_lab_search_entries": 93,
+    "ru_lab_content_units": 209,
+    "ru_lab_search_entries": 93,
+    "en_project_documents": 9,
+    "en_project_diagrams": 34,
+    "en_project_tables": 47,
+    "en_project_content_atoms": 2270,
+    "ru_project_documents": 9,
+    "ru_project_diagrams": 34,
+    "ru_project_tables": 47,
+    "ru_project_content_atoms": 2270
+  },
+  "errors": []
+}

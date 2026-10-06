@@ -13,13 +13,16 @@
       <M-PORTAL-NEIGHBOURS />
     </M-PORTAL-SOURCE>
     <M-PORTAL-NEIGHBOURS>
-      <Summary>Common O!Bank presentation and navigation for AICC, Discovery Catalog, Portfolio, Delivery Pipeline and AI Lab. Discovery projects retained bilingual Financial Services content into shared context, grouped navigation and expandable scenario cards; workflow previews link to source stages. AI Lab projects the complete html-alt/cloudlab/index.html operating model with a source-keyed, freshness-checked Russian edition, a six-stage/five-lane matrix with accessible focus/reset controls, both operating systems, capabilities, intent loop and illustrative guardrail scorecard. Portfolio and Delivery use authored Markdown. Section bodies, search and lifecycle remain separate; only the common shell connects neighbours.</Summary>
+      <Summary>Common O!Bank presentation and navigation for AICC, Discovery Catalog, Portfolio, Delivery Pipeline and AI Lab. Discovery projects retained bilingual Financial Services content into shared context, grouped navigation and expandable scenario cards; workflow previews link to source stages. AI Lab projects the complete html-alt/cloudlab/index.html operating model with a source-keyed, freshness-checked Russian edition, a six-stage/five-lane matrix with accessible focus/reset controls, both operating systems, capabilities, intent loop and illustrative guardrail scorecard. Portfolio and the Delivery register use authored Markdown. Delivery projects the complete retained bilingual service-resolution workbook into an overview and eight child documents, retaining all text, tables, code, diagram labels and geometry, intra-project destinations and section search. Scoped native diagram controls support expansion, pan, zoom, fit, actual size and focus return. Section bodies, search and lifecycle remain separate; only the common shell connects neighbours.</Summary>
       <Path>portal/tools/workspace.py</Path>
       <Path>portal/tools/neighbours.py</Path>
       <Path>portal/sections/navigation.json</Path>
       <Path>portal/sections/pages.json</Path>
       <Path>portal/site/neighbours.css</Path>
       <Path>portal/site/discovery.css</Path>
+      <Path>portal/tools/project.py</Path>
+      <Path>portal/site/project.css</Path>
+      <Path>portal/site/project.js</Path>
       <Path>portal/tools/lab.py</Path>
       <Path>portal/site/lab.css</Path>
       <Path>portal/site/lab.js</Path>
@@ -27,7 +30,7 @@
       <Path>finance-portal/build.py</Path>
     </M-PORTAL-NEIGHBOURS>
     <M-PORTAL-PROJECTION>
-      <Summary>One generated static site under html/aicc with English and Russian routes and shared assets for five independent sections. AICC retains its existing routes; Discovery, the live Portfolio, Delivery Pipeline and AI Lab use discovery/, initiatives/, projects/ and lab/ within each language. English is the default route. AICC source translations are selected per language; missing translations are visibly English. Never edited by hand.</Summary>
+      <Summary>One generated static site under html/aicc with English and Russian routes and shared assets for five independent sections. AICC retains its existing routes; Discovery, the live Portfolio, Delivery Pipeline and AI Lab use discovery/, initiatives/, projects/ and lab/ within each language. Delivery project documents live beneath projects/service-resolution/ with matching child routes in both languages. English is the default route. AICC source translations are selected per language; missing translations are visibly English. Never edited by hand.</Summary>
       <Path>html/aicc/index.html</Path>
       <M-PORTAL-SOURCE />
     </M-PORTAL-PROJECTION>

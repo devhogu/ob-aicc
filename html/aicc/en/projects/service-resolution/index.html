@@ -18,7 +18,8 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-</head><body class="portal-workspace " data-portal-section="projects">
+<link rel="stylesheet" href="../../../assets/project.css?v=1b24d895"><script defer src="../../../assets/project.js?v=20eeeeb8" data-project-ui="{&quot;overview&quot;: &quot;Project overview&quot;, &quot;documents&quot;: &quot;Project documents&quot;, &quot;contents&quot;: &quot;In this document&quot;, &quot;register&quot;: &quot;Project register&quot;, &quot;proposal&quot;: &quot;Proposal&quot;, &quot;expand&quot;: &quot;Expand diagram&quot;, &quot;close&quot;: &quot;Close&quot;, &quot;fit&quot;: &quot;Fit&quot;, &quot;actual&quot;: &quot;100%&quot;, &quot;out&quot;: &quot;Zoom out&quot;, &quot;in&quot;: &quot;Zoom in&quot;, &quot;view&quot;: &quot;Expanded diagram&quot;, &quot;hint&quot;: &quot;Scroll to pan · Ctrl/⌘ + wheel to zoom&quot;}"></script>
+</head><body class="portal-workspace project-workspace" data-portal-section="projects">
 <a class="o-skip" href="#main">Skip to content</a>
 <header class="o-header">
   <a class="o-identity" href="../../"><img src="../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>AI Competence Center</span></a>
@@ -131,7 +132,7 @@ Question or comment:
   <path d="M7 11v4a2 2 0 0 0 2 2h4" />
   <rect width="8" height="8" x="13" y="13" rx="2" />
 </svg>
-<span>Delivery Pipeline</span></a><div class="portal-local-nav"><a href="../">Delivery Pipeline</a><a href="./" aria-current="page">Customer Intelligence–Enabled Service Resolution</a></div></div><div class="portal-nav-group">
+<span>Delivery Pipeline</span></a><div class="portal-local-nav"><a href="../">Project register</a><a href="./" aria-current="page">Project overview</a><a href="business-case/">Business use case</a><a href="charter-selection/">Selection and evidence guide</a><a href="payment-issue/">Payment Issue Resolution</a><a href="card-dispute/">Card Dispute Progress Support</a><a href="onboarding-kyc/">Onboarding/KYC Progress Support</a><a href="technical-blueprint/">Common technical blueprint</a><a href="journey-profiles/">Journey technical profiles</a><a href="platform-readiness/">Platform capability and readiness</a></div></div><div class="portal-nav-group">
 <a class="portal-section-link" data-section="lab" href="../../lab/"><svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -146,52 +147,32 @@ Question or comment:
   <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
 </svg>
 <span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../privacy/">Privacy</a><a href="../../terms-of-use/">Terms of use</a></div><p class="o-caption">Version 2.2 · October 2026</p></div></aside>
-<main class="o-main neighbour-main" id="main" tabindex="-1"><article class="neighbour-content"><span class="neighbour-status">Proposal</span><h1>Customer Intelligence–Enabled Service Resolution</h1>
-<p><strong>Status: proposal.</strong> A controlled employee-assist pilot for one customer-service journey and one team.</p>
-<h2>Intended outcome</h2>
-<p>Help the servicing employee understand what happened, verify the current state of a customer issue and identify the next permitted step. The proposed workspace brings together relevant contacts, case history, authoritative status and approved service guidance with links to the underlying evidence.</p>
-<p>The employee reviews the interpretation, owns the response and approves any operational action. AI-generated interpretations remain distinguishable from verified facts.</p>
-<h2>Candidate journeys</h2>
-<div class="o-table-wrap"><table>
-<thead>
-<tr>
-<th>Journey</th>
-<th>Proposed scope</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Payment Issue Resolution</td>
-<td>One domestic retail-payment type with supported failed, pending or reversed states.</td>
-</tr>
-<tr>
-<td>Card Dispute Progress Support</td>
-<td>One dispute type and servicing queue, using authoritative stage, evidence and deadline information.</td>
-</tr>
-<tr>
-<td>Onboarding/KYC Progress Support</td>
-<td>One onboarding path using permitted service-state metadata and approved customer-facing explanations.</td>
-</tr>
-</tbody>
-</table></div>
-<p>Payment Issue Resolution is the initial candidate, subject to confirmation of ownership, source availability and case volume. The pilot would implement one selected journey.</p>
-<h2>Proposed delivery approach</h2>
-<ol>
-<li>Agree the service problem, eligible cases, exclusions, ownership and measurement approach.</li>
-<li>Establish a baseline and manually review representative historical cases.</li>
-<li>Assemble a source-linked customer and case context with explicit freshness and access limits.</li>
-<li>Evaluate interpretation and proposed next steps against protected acceptance cases.</li>
-<li>Introduce controlled employee use only when the required readiness and approval conditions are met.</li>
-<li>Assess outcomes and decide whether to extend, refine or close the pilot.</li>
-</ol>
-<p>Compare the existing process, a context-only workspace and an AI-assisted workspace. This makes the additional contribution of AI visible alongside the value of better information access.</p>
-<h2>Boundaries</h2>
-<p>The proposal excludes autonomous customer communication, movement or reversal of funds, reimbursement decisions and regulated credit, fraud, AML, sanctions or onboarding decisions. Each journey has its own more restrictive data and action boundaries.</p>
-<p>Missing, conflicting or stale evidence leads to manual handling or specialist referral. The model does not establish authoritative banking facts or replace an unavailable source.</p>
-<h2>Evidence and continuing ownership</h2>
-<p>Evaluation covers source accuracy, permitted next steps, employee usefulness, repeat contact, handling effort, customer outcomes and control failures. Measures and thresholds are agreed for the selected journey after establishing the baseline.</p>
-<p>Before delivery is committed, the project needs named business and process owners, a measurement owner, confirmed source and interface owners, and arrangements for support, suspension and handover. Those appointments and commitments remain to be established.</p>
-</article>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><article class="project-content"><span class="neighbour-status">Proposal</span><section class="landing" id="en-start" data-document="en-start">
+          <div class="eyebrow">Project proposal · Three selectable charters</div>
+          <h1>Customer Intelligence–Enabled Service Resolution</h1>
+          <p class="lede">Customers should receive one accurate explanation and a clear next step even when their history spans several banking systems. The proposed capability assembles authoritative service context, uses governed GenAI to interpret what happened, keeps employees accountable for communication and action, and records the outcome as reusable customer intelligence.</p>
+          <div class="landing-meta">
+            <span class="pill">Fewer repeat contacts</span>
+            <span class="pill">Faster confirmed resolution</span>
+            <span class="pill">Employee-approved action</span>
+            <span class="pill">Measured customer outcome</span>
+            <span class="pill">Reusable customer intelligence</span>
+          </div>
+
+          <h2 class="audience-title">Expected value</h2>
+          <div class="value-flow" aria-label="Expected value">
+            <div class="value-step"><b>Customer</b><p>One coherent explanation, less repetition, and a resolution or committed next step.</p></div>
+            <div class="value-step"><b>Bank operations</b><p>Less investigation effort, fewer avoidable handoffs, clearer ownership and visible process failures.</p></div>
+            <div class="value-step"><b>Strategic capability</b><p>Governed customer context, a controlled AI workflow, approved knowledge and outcome learning that can be reused across journeys.</p></div>
+          </div>
+
+          <h2 class="audience-title">Candidate pilot journeys</h2>
+          <div class="audience-grid">
+            <a class="audience-card" href="payment-issue/#en-payment-charter"><strong>Payment Issue Resolution · Lower complexity</strong><span>Failed, pending or reversed domestic payments with authoritative status and an approved resolution action.</span></a>
+            <a class="audience-card" href="card-dispute/#en-dispute-charter"><strong>Card Dispute Progress Support · Medium</strong><span>Dispute stage, evidence, deadlines and permitted customer-status communication.</span></a>
+            <a class="audience-card" href="onboarding-kyc/#en-kyc-charter"><strong>Onboarding/KYC Progress Support · Medium–high</strong><span>Safe service-state and permitted information guidance through a restricted metadata boundary.</span></a>
+          </div>
+        </section><section class="project-topic"><h2>Project documents</h2><div class="project-document-grid"><a class="project-card" href="business-case/"><strong>Business use case</strong><span>Customer Intelligence–Enabled Service Resolution</span></a><a class="project-card" href="charter-selection/"><strong>Selection and evidence guide</strong><span>Customer Intelligence–Enabled Service Resolution — Candidate Project Charters</span></a><a class="project-card" href="technical-blueprint/"><strong>Common technical blueprint</strong><span>Customer Intelligence–Enabled Service Resolution — Technical Pilot Blueprint</span></a><a class="project-card" href="journey-profiles/"><strong>Journey technical profiles</strong><span>Customer Intelligence–Enabled Service Resolution — Journey Technical Profiles</span></a><a class="project-card" href="platform-readiness/"><strong>Platform capability and readiness</strong><span>Customer Intelligence–Enabled Service Resolution — Platform Capability and Readiness Map</span></a></div></section></article>
 <footer class="o-footer">
       <span class="foot-text">AI Competence Center, O!Bank. Version 2.2, 2026. <a class="contact" href="mailto:talimbayev@obank.kg?subject=AICC%20Portal%20%5BPEPPE%5D%20page%20feedback">Contact us</a> <a class="contact" href="../../privacy/">Privacy</a> <a class="contact" href="../../terms-of-use/">Terms of use</a></span>
       <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: PEPPE</span></button>

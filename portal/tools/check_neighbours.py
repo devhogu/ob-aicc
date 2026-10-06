@@ -189,6 +189,10 @@ def check():
     lab_errors, lab_counts = check_lab(OUTPUT)
     errors.extend(lab_errors)
     counts.update(lab_counts)
+    from check_project import check as check_project
+    project_errors, project_counts = check_project(OUTPUT)
+    errors.extend(project_errors)
+    counts.update(project_counts)
     print(json.dumps({'counts': dict(counts), 'errors': errors}, ensure_ascii=False, indent=2))
     return errors
 

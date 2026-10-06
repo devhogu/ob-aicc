@@ -1,0 +1,18 @@
+<GraceChangeDesignContext graceVersion="4.0">
+  <Change>C-SERVICE-RESOLUTION-PROMOTION</Change>
+  <NormativeStatus>non-normative</NormativeStatus>
+  <Rationale>The existing Delivery Pipeline entry contains a short Markdown summary. Each retained bilingual predecessor contains a landing page and eight complete documents, with 47 tables and 34 embedded diagrams. Splitting the documents into child pages preserves their authored boundaries and gives project readers useful navigation and search destinations without one extremely long page. Shared AICC presentation replaces the predecessor shell and colors; the supplied business and technical meaning remains unchanged.</Rationale>
+  <Alternatives>
+    <Alternative>Keep the short summary and link to html-alt. Rejected because the user requests full scope and content inside AICC.</Alternative>
+    <Alternative>Place the entire predecessor body in one project page. Complete but unwieldy for document navigation, large table sets and technical material.</Alternative>
+    <Alternative>Project the source overview and eight document bodies into matching child routes, rewrite their fragment links, and package native diagram-reading controls. Selected for the execution proposal.</Alternative>
+  </Alternatives>
+  <DeferredDecisions><Decision>Business-case substance, completed ownership/approval fields, actual banking products, targets, funding and implementation remain decisions of the project owner and are outside this presentation change.</Decision></DeferredDecisions>
+  <Scenarios>
+    <Scenario>Execution step 1: Create the approved plan from this specification and the accepted execution proposal, check the selected baseline, then project both retained sources through a bounded project renderer. Route the eight documents to business-case/, charter-selection/, payment-issue/, card-dispute/, onboarding-kyc/, technical-blueprint/, journey-profiles/ and platform-readiness/ beneath projects/service-resolution/.</Scenario>
+    <Scenario>Execution step 2: Apply scoped native project styling and diagram controls. Reuse the shared shell and asset tokens; preserve all document and heading identities while rewriting intra-project links, populate section-scoped search, and keep the current project register and main address.</Scenario>
+    <Scenario>Execution step 3: Verify independent content and diagram completeness, real navigation/search, language/theme/viewport parity, full diagram controls and focus behavior, no-script reading and temporary portable output. Run the complete-site checks and regression sweep; preserve concurrent work in an isolated checkout if needed.</Scenario>
+    <Scenario>Execution step 4: Reconcile M-PORTAL-NEIGHBOURS, M-PORTAL-PROJECTION, V-M-PORTAL-NEIGHBOURS and deployment/UX context within the approved scope; run the final gate, record closure, apply/archive, commit and push, publish the latest verified complete source and check the served manifest and pages under the standing publication instruction.</Scenario>
+    <Scenario>Proposed observed scope: portal/tools/project.py, portal/tools/check_project.py, portal/tools/check_project_browser.py, portal/tests/test_project.py, portal/site/project.css, portal/site/project.js, portal/tools/neighbours.py, portal/tools/check_neighbours.py, portal/sections/pages.json, portal/sections/projects/** and html/aicc/**. Touch portal/tools/workspace.py or portal/tools/build.py only if the existing supported build/shell seam requires a small opt-in hook; all unrelated section behavior remains unchanged.</Scenario>
+  </Scenarios>
+</GraceChangeDesignContext>

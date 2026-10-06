@@ -1,0 +1,49 @@
+[grace] run-commands: change C-SERVICE-RESOLUTION-PROMOTION (final), 5 assertions, 5 commands, timeout 600s
+[grace]   [1/5] python3 -m unittest discover -s portal/tests
+[grace]   [2/5] python3 portal/tools/check.py --idempotent
+[grace]   [3/5] python3 portal/tools/check_neighbours.py
+[grace]   [4/5] portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_project_browser.py
+[grace]   [5/5] portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py
+[grace] ▶ [1/5] python3 -m unittest discover -s portal/tests
+[grace] ✔ [1/5] python3 -m unittest discover -s portal/tests (17s)
+[grace] ▶ [2/5] python3 portal/tools/check.py --idempotent
+[grace] ✔ [2/5] python3 portal/tools/check.py --idempotent (13s)
+[grace] ▶ [3/5] python3 portal/tools/check_neighbours.py
+[grace] ✔ [3/5] python3 portal/tools/check_neighbours.py (10s)
+[grace] ▶ [4/5] portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_project_browser.py
+[grace] ✔ [4/5] portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_project_browser.py (3m 29s)
+[grace] ▶ [5/5] portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py
+[grace] ✔ [5/5] portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py (6m 33s)
+[grace] complete: 5/5 commands passed (total 10m 45s)
+[grace] logs: /home/dev-one/.cache/grace/run-commands/aicc-service-resolution-44d99f52/runs/2026-10-06T10-21-29_C-SERVICE-RESOLUTION-PROMOTION
+GRACE Lint Report
+=================
+Root: /devops/obank/aicc-service-resolution
+Profile: standard
+Files checked: 117
+Governed files: 27
+XML artifacts checked: 67
+Commands
+  ✔ [1/5] python3 -m unittest discover -s portal/tests (17s)
+  ✔ [2/5] python3 portal/tools/check.py --idempotent (13s)
+  ✔ [3/5] python3 portal/tools/check_neighbours.py (10s)
+  ✔ [4/5] portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_project_browser.py (3m 29s)
+  ✔ [5/5] portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py (6m 33s)
+  Logs: /home/dev-one/.cache/grace/run-commands/aicc-service-resolution-44d99f52/runs/2026-10-06T10-21-29_C-SERVICE-RESOLUTION-PROMOTION
+Errors: 0
+Warnings: 13
+
+Issues
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/legacy/build.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/legacy/check.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/legacy/tokens.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/browser_check.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-map-mismatch /devops/obank/aicc-service-resolution/portal/tools/browser_check.py:9 — MODULE_MAP EXPORTS mismatch. Missing: Prefixed; extra: none.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/check_portable_browser.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/export_portable.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/lab.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/localization.py:2 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/neighbours.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-map-mismatch /devops/obank/aicc-service-resolution/portal/tools/neighbours.py:7 — MODULE_MAP EXPORTS mismatch. Missing: HORIZON, HORIZON_TEXT, horizon_box, horizon_chips, horizon_page, horizon_themes_cached, standing_group; extra: none.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/project.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.
+- [warning] analysis.heuristic-confidence /devops/obank/aicc-service-resolution/portal/tools/workspace.py:1 — python analysis is heuristic and cannot prove exact MODULE_MAP parity.

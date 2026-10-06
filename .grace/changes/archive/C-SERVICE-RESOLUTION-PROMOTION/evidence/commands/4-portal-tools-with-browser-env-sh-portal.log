@@ -1,0 +1,23 @@
+Checked project en, 1440px, light
+Checked project ru, 1440px, light
+Checked project en, 390px, light
+Checked project ru, 390px, light
+Checked project en, 1440px, dark
+Checked project ru, 1440px, dark
+Checked project en, 390px, dark
+Checked project ru, 390px, dark
+Exported 644 HTML files to /tmp/aicc-project-wpp8a69a/portable; open aicc.html. All internal links and search destinations verified.
+{
+  "counts": {
+    "page_views": 80,
+    "diagram_controls": 296,
+    "close_buttons": 88,
+    "feedback_checks": 72,
+    "search_checks": 4,
+    "no_script_pages": 18,
+    "portable_pages": 18,
+    "section_links": 8
+  },
+  "errors": [],
+  "failed_requests": []
+}

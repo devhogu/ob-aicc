@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "page_views": 744,
+    "shared_card_groups": 2872,
+    "keyboard_scenario_checks": 600,
+    "disclosures_toggled": 2409,
+    "tabs_clicked": 116,
+    "stages_clicked": 472,
+    "domain_preview_links": 72,
+    "workflow_stage_links": 119,
+    "page_feedback_checks": 48,
+    "section_switches": 5,
+    "scoped_search_checks": 2,
+    "aicc_interactions": 6,
+    "portable_pages_validated": 644
+  },
+  "errors": []
+}

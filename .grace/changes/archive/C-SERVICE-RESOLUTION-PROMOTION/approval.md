@@ -1,0 +1,1 @@
+The owner explicitly approved the linked specification and four-step execution outline with “proceed” on 2026-10-06. The completed plan encodes that accepted scope and sequence. Approval includes verified apply/archive, commit and push; publication is also covered by the standing instruction to publish substantial changes.
