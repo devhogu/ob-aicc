@@ -10,6 +10,7 @@
 #   PAGES - authored neighbour page routing
 #   DOMAIN_ORDER - stable Discovery area order
 #   OVERVIEW - local navigation labels
+#   CATALOG_TITLE - full catalog name on the landing page
 #   INTRO - Discovery landing introduction
 #   horizon_themes - regulatory horizon themes with their standing from the Registry
 #   scenario_index - scenarios of an edition by urn, for links from authored pages
@@ -48,6 +49,8 @@ DOMAIN_ORDER = ('strategic-portfolio', 'strategic-initiatives', 'value-streams',
                 'customer-market-intelligence', 'customer-channels', 'risk-control',
                 'shared-banking-capabilities', 'finance-treasury', 'banking-data-analytics')
 OVERVIEW = {'en': 'Overview', 'ru': 'Обзор'}
+# Full name of the catalog on its landing page; navigation and breadcrumbs use the short section label.
+CATALOG_TITLE = {'en': 'Discovery Catalog', 'ru': 'Каталог сценариев для применения AI'}
 INTRO = {
     'en': 'The Discovery Catalog is a map of a bank and, for each part of the map, a list of scenarios in which AI could help. It gives a uniform view of the Bank\'s primary value chains, shared capabilities, steering and control, and for each it shows where AI can increase visibility and insight, automate operational flows, enable people at the point of work, and open new offerings. It holds 1,110 scenarios in nine areas. Use it to find and compare opportunities; nothing in it has been selected or approved.',
     'ru': 'Банковские услуги, клиентские пути и операционные возможности, в которых AI может принести пользу. Изучите карту и оцените каждую возможность с учётом условий её применения.',
@@ -318,7 +321,7 @@ def discovery_page(source, relative, lang):
     body = re.sub(r'<main\b', '<div', body, count=1).replace('</main>', '</div>', 1)
     body = body.replace('class="page-header" role="banner"', 'class="page-header"')
     if relative == Path('index.html'):
-        body = re.sub(r'(<h1\b[^>]*>).*?(</h1>)', lambda m: m[1] + escape(label) + m[2], body, count=1, flags=re.S)
+        body = re.sub(r'(<h1\b[^>]*>).*?(</h1>)', lambda m: m[1] + escape(CATALOG_TITLE[lang]) + m[2], body, count=1, flags=re.S)
         body = re.sub(r'(<p class="page-header__intent">).*?(</p>)', lambda m: m[1] + escape(INTRO[lang]) + m[2], body, count=1, flags=re.S)
         body = re.sub(r'(<header class="page-header"[^>]*>.*?</header>)', lambda m: m[1] + reading_guide(lang), body, count=1, flags=re.S)
     body = discovery_layout(body, relative, lang)
