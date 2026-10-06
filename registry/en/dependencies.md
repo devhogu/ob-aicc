@@ -36,7 +36,7 @@ The following table places the Milestones of the Roadmap (roadmap.md) at the Ite
 | DEP-001 | INI-002 Service landscape | Time and knowledge of the function heads and service owners; their existing artifacts | The functions | each month, as the functions are visited | Open |
 | DEP-002 | INI-002 Service landscape | Access to and classification of the EA repository and the portal | Information security | before publication | Open |
 | DEP-003 | INI-003 Daily work of functions | The ranked candidates for adoption | INI-002 | when the function is engaged | Open |
-| DEP-004 | INI-002, INI-003, INI-004, INI-006, INI-007, INI-008 | Named Domain Owners and Domain Experts | Executive Sponsor and the heads of function | before the item is selected into an Iteration | Open |
+| DEP-004 | INI-002, INI-003, INI-004, INI-006, INI-007, INI-008 | Named Domain Owners and Domain Experts | Executive Sponsor and the heads of function | before the Scoped gate of each Initiative | Open |
 | DEP-005 | INI-003 Daily work of functions | Approval of the data classes for the function | The Domain Owner of each function | before first use | Open |
 | DEP-006 | INI-004 FP&A Board reporting | The time of the FP&A analytics function; the financial data sources; the Board portal | FP&A | each monthly edition | Open |
 | DEP-007 | INI-004 FP&A Board reporting | The approval of each edition | Executive Sponsor | each issue | Open |

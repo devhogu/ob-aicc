@@ -33,7 +33,7 @@ def main():
         p=Published(board)
         assert p.cards[:6]==ids[:6] and p.cards[6:12]==ids[:6] and p.cards[12:]==ids[6:]
         assert p.sections==['board','review','standing','roadmap']
-        assert d['date'] in board
+        assert portfolio._date(lang, d['date']) in board
         assert len(re.findall(r'<li><span class="pf-meta">MS-',board))==len(d['milestones'])
         register=Published((OUTPUT/lang/'initiatives/register/index.html').read_text())
         assert register.cards==ids

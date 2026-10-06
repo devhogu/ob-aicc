@@ -43,13 +43,13 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 | Waiting time, in days, and the age of the work in progress |  |
 | First-time-right rate at Verify and Review |  |
 | Dependencies Met by their date |  |
-| Work in progress against the Limits |  |
+| Work in progress against the Limits | Initiatives 0 of 1; Features 0 of 1; Capabilities 0 of 1 |
 | Time from a proposal to its approval, and from its approval to its acceptance |  |
-| Funnel: the age of the oldest item, and the items in the funnel |  |
-| Approved Initiatives waiting, and the days waiting |  |
-| Business cases returned |  |
+| Funnel: the age of the oldest item, and the items in the funnel | No items in the funnel |
+| Approved Initiatives waiting, and the days waiting | 0 |
+| Business cases returned | 0 |
 | Release: time from verified to released, and the items of the Acceptance Checklist not met |  |
-| Active Initiatives against the limit |  |
+| Active Initiatives against the limit | 0 of 1 |
 | Change failure rate, and repeat incidents of live Solutions |  |
 | Benefit confirmed against the claimed benefit and the Envelope |  |
 

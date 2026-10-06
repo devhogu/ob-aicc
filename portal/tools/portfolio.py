@@ -26,6 +26,7 @@ import workspace
 COLUMNS = ('Funnel', 'Reviewing', 'Analyzing', 'Portfolio Backlog', 'MVP', 'Implementation', 'Done')
 OFF_FLOW = ('Deferred', 'Rejected', 'Pivoted', 'Cancelled')
 BASE = 'registry/en/'
+SHARE = 'smb://10.128.20.244/aicc/governance/'
 
 
 def position(state, stage='', *, waiting_from=None, dependency=None):
@@ -47,12 +48,14 @@ def position(state, stage='', *, waiting_from=None, dependency=None):
 
 
 def capacity(items, limits, features=(), capabilities=()):
-    active = sum(not x['standing'] and (x['state'] == 'Active' or
-                 x['state'] == 'Waiting' and x.get('waiting_from') == 'Active') for x in items)
+    # A Completed Initiative stays in Implementation and keeps its place until it moves to Review.
+    active = sum(not x['standing'] and (x['state'] in ('Active', 'Completed') or
+                 x['state'] == 'Waiting' and x.get('waiting_from') in ('Active', 'Completed')) for x in items)
     def program(rows):
         progress = sum(x['State'] in ('Active', 'Completed', 'Review') or
                        x['State'] == 'Waiting' and x.get('Waiting from') in ('Active', 'Completed', 'Review') for x in rows)
-        return {'progress': progress, 'ready': sum(x['State'] == 'Approved' for x in rows)}
+        ready = sum(x['State'] == 'Approved' or x['State'] == 'Waiting' and x.get('Waiting from') == 'Approved' for x in rows)
+        return {'progress': progress, 'ready': ready}
     return {'active': active, 'limit': limits['initiative'], 'feature': program(features),
             'capability': program(capabilities), 'limits': limits}
 
@@ -136,6 +139,7 @@ def project(root=workspace.ROOT, lang='en'):
         open_match = re.search(r'^Open sections: (.*)', original, re.M)
         if not open_match: raise ValueError('Open sections not recorded: ' + identifier)
         pending = _pair_paragraph(original, translated, 'Open sections:')
+        authority = None
         if not standing:
             mvp = _pair_paragraph(sec[3], tr[3], 'Minimum viable product:')
             out_scope = _pair_paragraph(sec[3], tr[3], 'Out of scope:')
@@ -156,6 +160,12 @@ def project(root=workspace.ROOT, lang='en'):
             if establishment['Result'] != 'Approved' or not approval_ref or establishment['Date'] not in row['Approved on']:
                 raise ValueError('Standing approval disagreement: ' + identifier)
             review_date = next(r['Date'] for r in decision_rows if r['Decision'] == 'First recurring review') or None
+            log = {r['Identifier']: r for r in en.table(BASE + 'decision-log.md', 'Identifier | Date')}
+            local_log = {r['Identifier']: r for r in sources.table(BASE + 'decision-log.md', 'Identifier | Date')}
+            refs = approval_ref.split(', ')
+            if any(r not in log for r in refs): raise ValueError('Unknown Decision Record: ' + identifier)
+            # Business Model 4.9: the Executive Sponsor approves; show the authority actually recorded.
+            authority = None if all('Executive Sponsor' in log[r]['Decided by'] for r in refs) else '; '.join(_plain(local_log[r]['Decided by']) for r in refs)
         items.append({'id': identifier, 'title': _plain(public_meta['Title']), 'state': state, 'stage': stage,
                       'status': public_meta['State and Stage'], 'standing': standing, 'column': column,
                       'rank': int(row['Rank']) if row['Rank'] else None, 'priorities': row_priorities,
@@ -166,7 +176,7 @@ def project(root=workspace.ROOT, lang='en'):
                       'stage_entered': row.get('Stage entered on') or None,
                       'waiting_from': waiting_from, 'approval_ref': approval_ref,
                       'approved_on': row['Approved on'] or None, 'active_on': row['Active on'] or None,
-                      'review_date': review_date, 'agreement': public_meta['Service Agreement']})
+                      'review_date': review_date, 'agreement': public_meta['Service Agreement'], 'authority': authority})
     ordinary = sorted((x for x in items if not x['standing']), key=lambda x: x['rank'] if x['rank'] is not None else float('inf'))
     ranks = [x['rank'] for x in ordinary if x['rank'] is not None]
     if len(set(ranks)) != len(ranks): raise ValueError('Duplicate recorded rank')
@@ -217,66 +227,72 @@ def project(root=workspace.ROOT, lang='en'):
 
 UI = {
 'en': {
- 'title':'Portfolio', 'subtitle':'AICC initiatives in motion', 'snapshot':'Recorded snapshot', 'recorded':'Maintained in the Registry',
- 'board':'Board', 'review':'Review queue', 'standing':'Standing Initiatives', 'roadmap':'Roadmap', 'register':'Initiative register', 'selection':'Review and decisions',
- 'discovery':'In discovery', 'approved':'Approved queue', 'active':'Ordinary Active', 'ordinary':'Ordinary initiatives', 'count':'initiatives',
- 'owner_missing':'Domain Owner · not yet recorded', 'all':'All priorities', 'enabling':'Enabling', 'search':'Find an initiative', 'filter':'Strategic priority',
- 'empty':'No recorded items', 'no_results':'No matching initiatives', 'next':'Next gate', 'owner':'Owner role', 'outcome':'Expected outcome',
- 'state':'State and stage', 'rank':'Recorded order', 'score':'WSJF score', 'unknown':'Not recorded', 'age':'Stage entry / age',
- 'source':'Record references', 'order':'Order follows the goals of the first 100 days. WSJF scores are shown without changing that recorded order.',
- 'shared':'MVP and Implementation share one ordinary Active limit. Standing Initiatives are tracked separately; their Features share delivery capacity.',
- 'capacity':'Shared delivery capacity', 'features':'Features in progress', 'ready':'Features Ready', 'capabilities':'Capabilities in progress',
- 'offflow':'Deferred and other exits', 'review_intro':'Prepare the next decision with the owner. Resolve open Brief sections and missing evidence before approval.',
- 'missing':'Preparation still needed', 'gate':'Gate and decision', 'decider':'Decider', 'criterion':'Before this gate',
- 'mvp':'Planned MVP', 'planned':'Scope is planned; it starts after business-case approval, clearance and pull within capacity.',
- 'scope':'Planned scope', 'delivery_gate':'Delivery', 'mvp_gate':'MVP decision', 'risk':'Risk and clearances', 'risk_note':'An expected Risk Tier does not establish assignment, clearance or validation.',
+ 'title':'Portfolio', 'page_title':'Overview', 'snapshot':'As of', 'recorded':'Maintained in the AICC Registry', 'week':'current week',
+ 'board':'Portfolio Kanban', 'review':'Review queue', 'standing':'Standing Initiatives', 'roadmap':'Roadmap', 'register':'Initiative register', 'selection':'Review and decisions',
+ 'discovery':'In Discovery', 'approved':'Approved, awaiting pull', 'active':'Active against the limit', 'ordinary':'Ordinary initiatives',
+ 'owner_missing':'Not yet appointed', 'all':'All priorities', 'enabling':'Enabling work', 'search':'Find an initiative', 'filter':'Strategic Priority',
+ 'empty':'No initiatives', 'no_results':'No matching initiatives', 'next':'Next gate', 'gate_prefix':'Gate', 'owner':'Domain Owner', 'sponsor':'Executive Sponsor (enabling work)',
+ 'state':'State and Stage', 'rank':'Rank', 'score':'WSJF score', 'unknown':'Not recorded', 'age':'Entered the current step / age',
+ 'source':'Record references', 'order':'The AICC Lead sets the rank (Portfolio Management Model 6.5). The recorded rank follows the goals of the first 100 days and departs from the WSJF order; the reason for each departure is still to be recorded.',
+ 'shared':'MVP and Implementation count against one limit on Active Initiatives; a Completed Initiative still counts until it moves to Review. Standing Initiatives take no place under that limit; their Features count against the shared Team limits.',
+ 'capacity':'Work in progress against the limits', 'features':'Features in progress', 'ready':'Features Ready (cap; target: one to two Iterations ahead)', 'capabilities':'Capabilities in progress', 'capabilities_ready':'Capabilities Ready',
+ 'offflow':'Off the main flow', 'review_intro':'Initiatives before a portfolio gate. Each card shows the next gate and what the Initiative still needs.',
+ 'blocked':'The Scoped gate needs a Domain Owner; none is appointed yet.',
+ 'missing':'Open sections of the Initiative Brief (needed for the Approval gate)', 'gate':'Gate and decision', 'decider':'Decided by',
+ 'mvp':'Planned MVP', 'planned':'The MVP starts only after the business case is cleared by the Control Function Contacts, approved, and pulled within the limit.',
+ 'mvp_gate':'Decision after the MVP', 'impl_gate':'No portfolio gate (each Solution passes its own gates)', 'risk':'Risk and clearances', 'risk_note':'An expected Risk Tier is not an assigned tier, and it does not mean that the business case is cleared or validated.',
  'dependencies':'Dependencies', 'agreement':'Service Agreement', 'approval':'Business-case approval',
- 'confirmation':'DR-2026-061 confirms a first-100-days goal. It does not approve the business case.',
- 'standing_intro':'Approved service arrangements for small run-rate requests. They do not reserve four delivery slots or count against ordinary Active capacity.',
- 'standing_gate':'Admit the next eligible Feature at the Weekly Review', 'standing_decider':'AICC Lead within shared Team limits',
- 'standing_note':'Each Feature needs a client and Domain Owner, acceptance criteria, known dependencies, approval for its data use where AI applies, and a scope that fits one Iteration.',
- 'standing_review':'Next recurring review', 'standing_approval':'Establishment approval', 'no_mvp':'No separate MVP; the work is delivered through run-rate Features.',
+ 'confirmation':'Decision Record DR-2026-061 confirms a goal of the first 100 days. It does not approve the business case.',
+ 'standing_intro':'Standing Initiatives, one per service area, approved for small run-rate requests. They take no place under the limit on Active Initiatives.',
+ 'standing_gate':'Admit the next eligible Feature at the Weekly Review', 'standing_decider':'AICC Lead, within the shared Team limits',
+ 'standing_note':'Each Feature needs a client function and its Domain Owner, acceptance criteria, known dependencies, AI use approval for its data class where AI applies, and a scope that fits one Iteration.',
+ 'standing_review':'Next quarterly review', 'standing_approval':'Approval recorded', 'no_mvp':'No MVP of its own; the work is done as run-rate Features.',
+ 'authority_note':'Decider recorded in {ref}: {by}. Business Model 4.9 gives the approval of a Standing Initiative to the Executive Sponsor; that approval is still to be recorded.',
  'roadmap_intro':'Intent for the current Program Increment, planned work for the next, and indicative direction beyond. Milestones are not achieved outcomes.',
- 'measures':'Recorded flow measures', 'measure_intro':'Missing observations remain unknown. Stage aging cannot be calculated until entry dates are recorded.',
- 'workflow_intro':'Use these gates to prepare reviews of the maintained portfolio. Decisions and state changes are recorded in the Registry and then republished here.',
- 'rhythm':'Review cadence', 'weekly':'Weekly Review: scope, complete Briefs, resolve blockers and raise items ready for a gate.',
- 'monthly':'Monthly Steering: decide at gates, review rank and WIP, and pull within the shared limit.',
- 'quarterly':'Quarterly Steering: review Active outcomes, confirmed benefit, risk and the work mix.',
- 'yearly':'Yearly Steering: set Strategic Priorities, Investment Envelopes and Guardrails.',
- 'authority':'Business-case authority: Domain Owner within one Domain and guardrails; Executive Sponsor for enabling work, across Domains or above a guardrail.',
+ 'measures':'Recorded flow measures', 'measure_intro':'Values that are not recorded are not estimated. Item age is calculated once the date of entry to each step is recorded.',
+ 'workflow_intro':'These gates prepare the reviews of the portfolio; clause numbers refer to the Portfolio Management Model. Decisions and state changes are recorded in the AICC Registry and then shown here.',
+ 'rhythm':'Review cadence', 'weekly':'Weekly Review: scope, complete Briefs, resolve blockers, and raise the items that reach a gate.',
+ 'monthly':'Monthly Steering: decide at gates, review the rank and the work in progress, and pull within the limit.',
+ 'quarterly':'Quarterly Steering: review the outcomes of Active Initiatives against their leading indicators, decide to continue, pivot, defer or reject, confirm the Roadmap, and review the Standing Initiatives.',
+ 'yearly':'Yearly Steering: set the Strategic Priorities, Investment Envelopes and Guardrails.',
+ 'authority':'Business-case approval: the Domain Owner, within one Domain and the Guardrails; otherwise, and for enabling work, the Executive Sponsor.',
  'open':'Open progress summary', 'close':'Close', 'full':'Full initiative page', 'back':'Back to portfolio', 'visible':'Matching ordinary initiatives',
- 'waiting':'Waiting · retains its column and capacity place', 'source_note':'Progress summaries use public role names. Authoritative records and closed evidence remain in their maintained locations.',
+ 'waiting':'Waiting: stays in its column and counts against the limit', 'source_note':'Summaries show role names, not people. Working documents and restricted evidence stay in the AICC Registry on the corporate share.',
+ 'months':('January','February','March','April','May','June','July','August','September','October','November','December'),
 },
 'ru': {
- 'title':'Портфель инициатив', 'subtitle':'Инициативы AICC в работе', 'snapshot':'Состояние по данным на', 'recorded':'Рабочие записи ведутся в реестре',
- 'board':'Доска', 'review':'Очередь на рассмотрение', 'standing':'Постоянные инициативы', 'roadmap':'Дорожная карта', 'register':'Реестр инициатив', 'selection':'Рассмотрение и решения',
- 'discovery':'На исследовании', 'approved':'Одобренная очередь', 'active':'Обычные инициативы в работе', 'ordinary':'Обычные инициативы', 'count':'инициатив',
- 'owner_missing':'Владелец направления · ещё не указан', 'all':'Все приоритеты', 'enabling':'Обеспечивающая работа', 'search':'Найти инициативу', 'filter':'Стратегический приоритет',
- 'empty':'Записей нет', 'no_results':'Нет подходящих инициатив', 'next':'Следующее контрольное решение', 'owner':'Роль владельца', 'outcome':'Ожидаемый результат',
- 'state':'Состояние и этап', 'rank':'Порядок в реестре', 'score':'Оценка WSJF', 'unknown':'Не указано', 'age':'Дата входа в этап / возраст',
- 'source':'Ссылки на рабочие записи', 'order':'Порядок соответствует целям первых 100 дней. Оценки WSJF приведены без изменения этого порядка.',
- 'shared':'MVP и реализация используют общий лимит обычных инициатив в работе. Постоянные инициативы учитываются отдельно; их функциональности используют общую мощность команды.',
- 'capacity':'Общая мощность команды', 'features':'Функциональности в работе', 'ready':'Функциональности в очереди Ready', 'capabilities':'Возможности в работе',
- 'offflow':'Отложенные инициативы и другие выходы', 'review_intro':'Подготовьте следующее решение с владельцем. До одобрения завершите открытые разделы паспорта и соберите недостающие доказательства.',
- 'missing':'Что ещё требуется подготовить', 'gate':'Контрольное решение', 'decider':'Кто решает', 'criterion':'До принятия решения',
- 'mvp':'Планируемый MVP', 'planned':'Объём запланирован; работа начинается после одобрения и согласования бизнес-кейса и принятия в работу в пределах мощности команды.',
- 'scope':'Планируемый объём работ', 'delivery_gate':'Поставка', 'mvp_gate':'Решение по MVP', 'risk':'Риск и согласования', 'risk_note':'Ожидаемая категория риска не означает её присвоение, согласование или валидацию.',
- 'dependencies':'Зависимости', 'agreement':'Соглашение об услуге', 'approval':'Одобрение бизнес-кейса',
- 'confirmation':'DR-2026-061 подтверждает цель первых 100 дней. Это не одобрение бизнес-кейса.',
- 'standing_intro':'Одобренные постоянные инициативы для небольших текущих запросов. Они не резервируют четыре места в работе и не входят в лимит обычных инициатив.',
- 'standing_gate':'Принять следующую подходящую функциональность на еженедельном рассмотрении', 'standing_decider':'Руководитель AICC в пределах общих лимитов команды',
- 'standing_note':'Для каждой функциональности нужны заказчик и владелец направления, критерии приёмки, известные зависимости, одобрение использования данных при применении AI и объём в пределах одной итерации.',
- 'standing_review':'Следующее регулярное рассмотрение', 'standing_approval':'Одобрение постоянной инициативы', 'no_mvp':'Отдельного MVP нет; работа выполняется через функциональности текущего обслуживания.',
- 'roadmap_intro':'Текущий программный инкремент задаёт намерение, следующий — план, последующие — ориентир. Контрольные точки не являются достигнутыми результатами.',
- 'measures':'Зафиксированные показатели потока', 'measure_intro':'Отсутствующие наблюдения остаются неизвестными. Возраст этапа нельзя рассчитать без даты входа.',
- 'workflow_intro':'Контрольные решения помогают подготовить рассмотрение рабочего портфеля. Решения и изменения состояния фиксируются в реестре и затем публикуются здесь.',
- 'rhythm':'Ритм рассмотрения', 'weekly':'Еженедельное рассмотрение: уточнить объём, завершить паспорта, снять блокировки и вынести готовые вопросы на решение.',
- 'monthly':'Ежемесячное совещание: принять контрольные решения, проверить порядок и незавершённую работу, принять инициативу в пределах общего лимита.',
- 'quarterly':'Ежеквартальное совещание: рассмотреть результаты активных инициатив, подтверждённую пользу, риск и состав работ.',
- 'yearly':'Годовое совещание: определить стратегические приоритеты, инвестиционные лимиты и пороги решений.',
- 'authority':'Бизнес-кейс одобряет владелец направления в пределах одного направления и порогов; куратор AICC — для обеспечивающей работы, нескольких направлений или превышения порога.',
- 'open':'Открыть сводку инициативы', 'close':'Закрыть', 'full':'Полная страница инициативы', 'back':'К портфелю', 'visible':'Подходящие обычные инициативы',
- 'waiting':'Ожидание · сохраняет столбец и место в мощности', 'source_note':'В сводках указаны роли. Рабочие записи и закрытые доказательства остаются в установленных местах.',
+ 'title':'Портфель инициатив', 'page_title':'Обзор', 'snapshot':'По состоянию на', 'recorded':'Рабочие документы ведутся в папке AICC', 'week':'текущая неделя',
+ 'board':'Канбан портфеля', 'review':'Очередь на рассмотрение', 'standing':'Постоянные инициативы', 'roadmap':'Дорожная карта', 'register':'Реестр инициатив', 'selection':'Рассмотрение и решения',
+ 'discovery':'В проработке', 'approved':'Ожидают принятия в работу', 'active':'В работе, в пределах лимита', 'ordinary':'Обычные инициативы',
+ 'owner_missing':'Ещё не назначен', 'all':'Все приоритеты', 'enabling':'Обеспечивающие работы', 'search':'Найти инициативу', 'filter':'Стратегический приоритет',
+ 'empty':'Инициатив нет', 'no_results':'Инициативы не найдены', 'next':'Следующая контрольная точка', 'gate_prefix':'Контрольная точка', 'owner':'Владелец направления', 'sponsor':'Куратор AICC (обеспечивающие работы)',
+ 'state':'Состояние и стадия', 'rank':'Место в бэклоге портфеля', 'score':'Оценка WSJF', 'unknown':'Не указано', 'age':'Дата перехода на текущий шаг / возраст элемента',
+ 'source':'Ссылки на рабочие документы', 'order':'Место в бэклоге портфеля определяет руководитель AICC (п. 6.5 Модели управления портфелем). Зафиксированный порядок следует целям первых 100 дней и отличается от порядка по оценке WSJF; основание каждого отступления ещё не зафиксировано.',
+ 'shared':'Стадии «MVP» и «Реализация» учитываются в одном лимите инициатив в работе; инициатива в состоянии «Завершено» учитывается в нём до перехода на рассмотрение. Постоянные инициативы мест в этом лимите не занимают; их Features входят в общие WIP-лимиты команды.',
+ 'capacity':'Незавершённая работа в сопоставлении с WIP-лимитами', 'features':'Features в работе', 'ready':'Features в колонке «Готово к работе» (предел; целевой запас — одна-две итерации)', 'capabilities':'Capabilities в работе', 'capabilities_ready':'Capabilities в колонке «Готово к работе»',
+ 'offflow':'Инициативы вне основного потока', 'review_intro':'Инициативы перед контрольной точкой портфеля. На каждой карточке указаны следующая контрольная точка и то, чего инициативе ещё не хватает.',
+ 'blocked':'Для контрольной точки «Определение объёма» нужен владелец направления; он ещё не назначен.',
+ 'missing':'Незаполненные разделы паспорта инициативы (требуются к контрольной точке «Одобрение»)', 'gate':'Контрольная точка и управленческое решение', 'decider':'Лицо, принимающее решение',
+ 'mvp':'Планируемый MVP', 'planned':'Работа над MVP начинается только после согласования бизнес-кейса представителями контрольных функций, его одобрения и принятия инициативы в работу в пределах лимита.',
+ 'mvp_gate':'Управленческое решение по итогам MVP', 'impl_gate':'Контрольной точки портфеля нет (каждое решение проходит собственные контрольные точки)', 'risk':'Риск и согласования', 'risk_note':'Указание ожидаемой категории риска не означает её присвоения, а также согласования или валидации бизнес-кейса.',
+ 'dependencies':'Зависимости', 'agreement':'Соглашение о взаимодействии', 'approval':'Одобрение бизнес-кейса',
+ 'confirmation':'Протоколом решения DR-2026-061 подтверждена цель первых 100 дней. Бизнес-кейс этим протоколом не одобрен.',
+ 'standing_intro':'Постоянные инициативы, по одной на каждое направление услуг, одобрены для выполнения небольших текущих запросов. Мест в лимите инициатив в работе они не занимают.',
+ 'standing_gate':'Принять в работу следующую Feature, отвечающую требованиям, на еженедельном обзоре', 'standing_decider':'Руководитель AICC в пределах общих WIP-лимитов команды',
+ 'standing_note':'Для каждой Feature необходимы подразделение-заказчик и владелец направления, критерии приёмки, известные зависимости, одобрение применения AI для соответствующего класса данных (если используется AI) и объём, укладывающийся в одну итерацию.',
+ 'standing_review':'Следующее ежеквартальное рассмотрение', 'standing_approval':'Одобрение зафиксировано', 'no_mvp':'Собственный MVP не требуется; работа выполняется в виде Features текущих работ.',
+ 'authority_note':'Лицо, принявшее решение, по протоколу {ref}: {by}. Согласно п. 4.9 Бизнес-модели постоянную инициативу одобряет куратор AICC; это одобрение ещё не зафиксировано.',
+ 'roadmap_intro':'Для текущего программного инкремента (PI) указаны намерения, для следующего — запланированная работа, для последующих — ориентиры. Вехи не означают достигнутых результатов.',
+ 'measures':'Зафиксированные показатели потока', 'measure_intro':'Значения, которые не зафиксированы, не указываются и не оцениваются. Возраст элемента рассчитывается после внесения дат перехода на шаги.',
+ 'workflow_intro':'Приведённые ниже контрольные точки используются при подготовке к рассмотрению портфеля; номера пунктов относятся к Модели управления портфелем. Управленческие решения и изменения состояний вносятся в рабочие документы в папке AICC, после чего отражаются на этой странице.',
+ 'rhythm':'Периодичность рассмотрения', 'weekly':'Еженедельный обзор: определение объёма, подготовка паспортов инициатив, устранение препятствий, вынесение элементов, достигших контрольной точки.',
+ 'monthly':'Ежемесячное управляющее совещание: управленческие решения на контрольных точках, ранжирование и незавершённая работа, принятие инициативы в работу в пределах лимита.',
+ 'quarterly':'Ежеквартальное управляющее совещание: результаты инициатив в работе в сопоставлении с опережающими индикаторами, решение о продолжении, перенаправлении, откладывании или отклонении, подтверждение дорожной карты, рассмотрение постоянных инициатив.',
+ 'yearly':'Ежегодное управляющее совещание: стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения.',
+ 'authority':'Бизнес-кейс одобряет владелец направления, если инициатива не выходит за пределы одного направления и не превышает инвестиционного ограничения; в остальных случаях, а также для обеспечивающих работ — куратор AICC.',
+ 'open':'Открыть сводку инициативы', 'close':'Закрыть', 'full':'Полная страница инициативы', 'back':'К портфелю', 'visible':'Найдено обычных инициатив',
+ 'waiting':'Ожидание: остаётся в своей колонке и учитывается в лимите', 'source_note':'В сводках указаны роли, а не имена исполнителей. Рабочие документы и подтверждающие документы ограниченного доступа хранятся в папке AICC на корпоративном файловом ресурсе.',
+ 'months':('января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'),
 }}
 
 
@@ -286,6 +302,39 @@ def _gates(lang):
 
 
 def _h(value): return escape(_plain(str(value)))
+
+
+def _date(lang, value):
+    # A recorded ISO date reads as a date of the edition's language.
+    match = re.fullmatch(r'(\d{4})-(\d{2})-(\d{2})', value or '')
+    if not match: return value
+    day, month = int(match[3]), UI[lang]['months'][int(match[2]) - 1]
+    return f'{day} {month} {match[1]} года' if lang == 'ru' else f'{day} {month} {match[1]}'
+
+
+def _prose_dates(lang, text):
+    # Registry records keep ISO dates so that the editions can be checked against each other; readers see words.
+    return re.sub(r'(?<![\w/-])\d{4}-\d{2}-\d{2}(?![\w/-])', lambda m: _date(lang, m[0]), text)
+
+
+def _decimal(lang, value):
+    text = f'{value:.2f}'.rstrip('0').rstrip('.')
+    return text.replace('.', ',') if lang == 'ru' else text
+
+
+def _priority(item, data):
+    names = {p['Identifier']: p['Strategic Priority'] for p in data['priorities']}
+    return '; '.join(f'{k} · {names[k]}' for k in item['priorities'] if k in names) or UI[data['lang']]['enabling']
+
+
+def _owner(item, data):
+    u = UI[data['lang']]
+    return u['sponsor'] if not item['priorities'] and not item['standing'] and item['owner'] == u['owner_missing'] else item['owner']
+
+
+def _sentence(text):
+    text = text.strip()
+    return text if not text or text[-1] in '.!?»' else text + '.'
 
 
 def _route(lang, item): return f'/{lang}/initiatives/' + item['id'].lower() + '/'
@@ -307,17 +356,23 @@ def summary(item, data, modal=False):
     lang = data['lang']; u = UI[lang]; g = _gates(lang).get(item['column'])
     title_tag = 'h2' if modal else 'h1'
     heading = f'<header><span class="pf-meta">{item["id"]} · {_h(item["status"])}</span><{title_tag}>{_h(item["title"])}</{title_tag}><p>{_h(item["outcome"])}</p></header>'
-    facts = [(u['owner'], item['owner']), (u['rank'], item['rank'] or '—'), (u['score'], item['wsjf'] if item['wsjf'] is not None else u['unknown']),
-             (u['filter'], item['priority']), (u['age'], item['stage_entered'] or u['unknown'])]
+    facts = [(u['owner'], _owner(item, data)), (u['filter'], _priority(item, data))]
+    if not item['standing']:
+        # Standing Initiatives are not ranked in the Kanban (Portfolio Management Model 5.5).
+        facts += [(u['rank'], item['rank'] or '—'), (u['score'], _decimal(lang, item['wsjf']) if item['wsjf'] is not None else u['unknown']),
+                  (u['age'], _date(lang, item['stage_entered']) or u['unknown'])]
     body = heading + _facts(facts)
+    if item['column'] == 'Reviewing' and item['owner'] == u['owner_missing'] and item['priorities']:
+        body += '<p class="pf-notice">' + u['blocked'] + '</p>'
     if item['state'] == 'Waiting': body += '<p class="pf-notice">' + u['waiting'] + '</p>'
     if item['standing']:
         gate = _facts([(u['next'], u['standing_gate']), (u['decider'], u['standing_decider']),
-                       (u['standing_approval'], (item['approved_on'] or u['unknown'])), (u['standing_review'], item['review_date'] or u['unknown'])])
+                       (u['standing_approval'], _date(lang, item['approved_on']) or u['unknown']), (u['standing_review'], _date(lang, item['review_date']) or u['unknown'])])
+        if item['authority']: gate += '<p class="pf-notice">' + _h(u['authority_note'].format(by=item['authority'], ref=item['approval_ref'])) + '</p>'
         body += _section(u['gate'], gate + f'<p>{u["standing_note"]}</p><p>{u["no_mvp"]}</p>')
     elif g:
         gate = _facts([(u['next'], g['Gate']), (u['decider'], g['Decided by'])])
-        body += _section(u['gate'], gate + '<p>' + _h(g['Exit criterion']) + '</p><p class="pf-muted">' + u['authority'] + '</p>')
+        body += _section(u['gate'], gate + '<p>' + _h(_sentence(g['Exit criterion'])) + '</p><p class="pf-muted">' + u['authority'] + '</p>')
         body += _section(u['missing'], '<p>' + _h(item['pending']) + '</p>' + _facts([(u['approval'], item['approval_ref'] or u['unknown']), (u['agreement'], item['agreement'])]))
         if not item['approval_ref']: body += f'<p class="pf-notice">{u["confirmation"]}</p>'
         scope = f'<p>{_h(item["mvp"])}</p><p class="pf-muted">{u["planned"]}</p>'
@@ -329,23 +384,30 @@ def summary(item, data, modal=False):
     deps = '<ul class="pf-dependencies">' + ''.join(f'<li><div><strong>{d["id"]}</strong><span class="pf-badge">{_h(d["Status"])}</span></div><p>{_h(d["Needs"])}</p><small>{_h(d["From"])} · {_h(d["Needed by"])}</small></li>' for d in item['dependencies']) + '</ul>'
     body += _section(u['dependencies'], deps or '<p>' + u['unknown'] + '</p>')
     references = [item['path'], f'registry/{lang}/portfolio-backlog.md', f'registry/{lang}/dependencies.md', f'registry/{lang}/board.md']
-    if item['approval_ref']: references.append(item['approval_ref'])
-    body += _section(u['source'], '<p class="pf-muted">' + u['source_note'] + '</p><ul class="pf-references">' + ''.join('<li><code>' + _h(r) + '</code></li>' for r in references) + '</ul>')
+    if item['approval_ref']: references.append(f'registry/{lang}/decision-log.md')
+    body += _section(u['source'], '<p class="pf-muted">' + u['source_note'] + '</p><ul class="pf-references">' + ''.join('<li>' + _reference(r) + '</li>' for r in references) + '</ul>')
     if modal:
         body = body.replace('<h2>', '<h3>').replace('</h2>', '</h3>')
         body = body.replace('<h3>', '<h2 class="pf-dialog-title">', 1).replace('</h3>', '</h2>', 1)
     return body
 
 
+def _reference(path):
+    # Records are linked on the corporate share; the portal does not embed them.
+    return f'<a href="{escape(SHARE + path)}"><code>{_h(path)}</code></a>'
+
+
 def _card(item, data, url, *, review=False):
     lang = data['lang']; u = UI[lang]
     next_gate = u['standing_gate'] if item['standing'] else _gates(lang).get(item['column'], {}).get('Gate', item['status'])
-    labels = ' '.join([item['id'], item['title'], item['owner'], item['priority']])
+    if item['state'] in ('Accepted', 'Closed'): next_gate = '—'
+    labels = ' '.join([item['id'], item['title'], _owner(item, data), _priority(item, data)])
     link = _link(url, _route(lang, item), item['title'], 'pf-title-link')
     link = link.replace('<a ', '<a data-pf-open="' + item['id'] + '" ', 1)
     meta = item['id'] + (f' · #{item["rank"]}' if item['rank'] else '')
-    text = f'<span class="pf-status">{_h(item["status"])}</span><p class="pf-muted">{_h(item["priority"])}</p><p>{_h(item["owner"])}</p>'
+    text = f'<span class="pf-status">{_h(item["status"])}</span><p class="pf-muted">{_h(_priority(item, data))}</p><p>{_h(_owner(item, data))}</p>'
     if review: text += f'<p>{_h(item["outcome"])}</p><p class="pf-muted">{_h(item["pending"])}</p>'
+    if item['column'] == 'Reviewing' and item['owner'] == u['owner_missing'] and item['priorities']: text += f'<p class="pf-notice">{u["blocked"]}</p>'
     if item['state'] == 'Waiting': text += '<p>' + u['waiting'] + '</p>'
     return f'<article class="pf-card" data-pf-item="{item["id"]}" data-kind="{"standing" if item["standing"] else "ordinary"}" data-priority="{" ".join(item["priorities"]) or "enabling"}" data-find="{_h(labels.casefold())}"><span class="pf-meta">{_h(meta)}</span><h3>{link}</h3>{text}<div class="pf-next"><span>{u["next"]}</span><strong>{_h(next_gate)}</strong></div></article>'
 
@@ -360,14 +422,15 @@ def _controls(data):
 
 def _header(data, title):
     u = UI[data['lang']]
-    return f'<header class="pf-header"><span class="pf-meta">{u["snapshot"]} {data["date"]}</span><h1>{_h(title)}</h1><p>{_h(data["frame"]["Program Increment"])}</p><p class="pf-muted">{u["recorded"]} · {_h(data["frame"]["Current Iteration and week"])}</p></header>'
+    return f'<header class="pf-header"><span class="pf-meta">{u["snapshot"]} {_date(data["lang"], data["date"])}</span><h1>{_h(title)}</h1><p>{_h(data["frame"]["Program Increment"])}</p><p class="pf-muted">{u["recorded"]} · {u["week"]}: {_h(data["frame"]["Current Iteration and week"])}</p></header>'
 
 
 def _capacity(data):
     u = UI[data['lang']]; c = data['capacity']
     return _section(u['capacity'], _facts([(u['features'], f'{c["feature"]["progress"]} / {c["limits"]["feature"]}'),
                        (u['ready'], f'{c["feature"]["ready"]} / {c["limits"]["feature_ready"]}'),
-                       (u['capabilities'], f'{c["capability"]["progress"]} / {c["limits"]["capability"]}')]) + f'<p class="pf-muted">{u["shared"]}</p>')
+                       (u['capabilities'], f'{c["capability"]["progress"]} / {c["limits"]["capability"]}'),
+                       (u['capabilities_ready'], f'{c["capability"]["ready"]} / {c["limits"]["capability_ready"]}')]) + f'<p class="pf-muted">{u["shared"]}</p>')
 
 
 def render(data, url, kind='dashboard', item=None):
@@ -388,7 +451,7 @@ def render(data, url, kind='dashboard', item=None):
         for col in COLUMNS:
             cards = ''.join(_card(x, data, url) for x in ordinary if x['column'] == col)
             count = data['counts'][col]; label = gates[col]['_localized_Kanban step']
-            caption = u['delivery_gate'] if col == 'Implementation' else u['mvp_gate'] if col == 'MVP' else gates[col]['Gate']
+            caption = u['impl_gate'] if col == 'Implementation' else u['gate_prefix'] + ': ' + (u['mvp_gate'] if col == 'MVP' else gates[col]['Gate'])
             columns.append(f'<section class="pf-column{" pf-column--occupied" if col in occupied else ""}" data-pf-column="{col}"><header><h3>{_h(label)}</h3><span class="pf-badge">{count}</span></header><p class="pf-column-gate">{_h(caption)}</p><div class="pf-column-cards">{cards}</div><p class="pf-empty" {"hidden" if cards else ""}>{u["empty"]}</p></section>')
         widths = ' '.join('minmax(360px,3fr)' if data['counts'][k] else '110px' for k in COLUMNS)
         board = '<p class="pf-muted">' + u['order'] + '</p><div class="pf-board-scroll" tabindex="0" role="region" aria-label="' + u['board'] + '"><div class="pf-board" style="--pf-board-columns:' + widths + '">' + ''.join(columns) + '</div></div>'
@@ -399,7 +462,7 @@ def render(data, url, kind='dashboard', item=None):
         review_items = [x for x in ordinary if x['column'] in ('Funnel', 'Reviewing', 'Analyzing', 'Portfolio Backlog', 'MVP', 'Done')]
         review = '<p class="pf-muted">' + u['review_intro'] + '</p><div class="pf-grid">' + ''.join(_card(x, data, url, review=True) for x in review_items) + '</div>'
         body += f'<section id="review" class="pf-panel" data-pf-panel><h2 class="pf-panel-title">{u["review"]}</h2>{review}<p class="pf-empty pf-review-empty" hidden>{u["no_results"]}</p></section>'
-        content = '<p class="pf-muted">' + u['standing_intro'] + '</p><div class="pf-grid">' + ''.join(_card(x, data, url, review=True) for x in standing) + '</div>' + _capacity(data)
+        content = '<p class="pf-muted">' + u['standing_intro'] + '</p><div class="pf-grid">' + ''.join(_card(x, data, url, review=True) for x in standing) + '</div>'
         body += f'<section id="standing" class="pf-panel" data-pf-panel><h2 class="pf-panel-title">{u["standing"]}</h2>{content}</section>'
         horizon_cards = ''
         for horizon in data['horizons']:
@@ -417,9 +480,10 @@ def render(data, url, kind='dashboard', item=None):
     else:
         body += '<p>' + u['workflow_intro'] + '</p><p class="pf-notice">' + u['authority'] + '</p>'
         for key, g in gates.items():
-            body += _section(g['_localized_Kanban step'], _facts([(u['state'], g['State and Stage']), (u['next'], g['Gate']), (u['decider'], g['Decided by'])]) + '<p>' + _h(g['Exit criterion']) + '</p><p class="pf-muted">' + _h(g['Record']) + '</p>')
+            body += _section(g['_localized_Kanban step'], _facts([(u['state'], g['State and Stage']), (u['next'], g['Gate']), (u['decider'], g['Decided by'])]) + '<p>' + _h(_sentence(g['Exit criterion'])) + '</p><p class="pf-muted">' + _h(g['Record']) + '</p>')
         body += _section(u['rhythm'], '<ul>' + ''.join('<li>' + u[k] + '</li>' for k in ('weekly','monthly','quarterly','yearly')) + '</ul>')
-    body += '<div class="pf-record-footer"><span class="pf-meta">' + u['source'] + '</span><p><code>' + f'registry/{lang}/dashboard.md' + '</code> · <code>' + f'registry/{lang}/portfolio-backlog.md' + '</code></p><p class="pf-muted">' + u['source_note'] + '</p></div>'
+    footer = ' · '.join(_reference(f'registry/{lang}/{name}') for name in ('dashboard.md', 'portfolio-backlog.md'))
+    body += '<div class="pf-record-footer"><span class="pf-meta">' + u['source'] + '</span><p>' + footer + '</p><p class="pf-muted">' + u['source_note'] + '</p></div>'
     if kind == 'dashboard':
         body += ''.join(f'<template data-pf-detail="{x["id"]}">{summary(x, data, modal=True)}</template>' for x in data['items'])
         body += f'<dialog class="pf-dialog" aria-label="{u["open"]}"><button type="button" data-pf-close aria-label="{u["close"]}">×</button><div class="pf-dialog-body"></div><a class="pf-full-link">{u["full"]}</a></dialog>'
@@ -435,8 +499,8 @@ def build(output):
         routes += [(_route(lang, item), 'initiative', item) for item in data['items']]
         nav_routes = [(routes[0][0], u['title']), (routes[1][0], u['register']), (routes[2][0], u['selection'])]
         for url, kind, item in routes:
-            title = item['title'] if item else u['title'] if kind == 'dashboard' else u[kind]
-            body = render(data, url, kind, item)
+            title = item['title'] if item else u['page_title'] if kind == 'dashboard' else u[kind]
+            body = _prose_dates(lang, render(data, url, kind, item))
             nav = ''.join(_link(url, target, label).replace('<a ', '<a aria-current="page" ', 1) if target == url else _link(url,target,label) for target,label in nav_routes)
             if item: nav += f'<span class="pf-nav-label">{_h(item["title"])}</span>'
             page = workspace.page(url,lang,'initiatives',title,body,nav,body_class='portfolio-workspace')
@@ -445,7 +509,7 @@ def build(output):
             target = output / url.strip('/') / 'index.html'; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page)
             searchable = summary(item,data) if item else _header(data,title)
             from neighbours import VisibleText
-            entries.append({'u':url,'t':title,'h':item['id'] if item else title,'x':VisibleText(searchable).text()})
+            entries.append({'u':url,'t':u['title'] if kind == 'dashboard' else title,'h':item['id'] if item else title,'x':_prose_dates(lang, VisibleText(searchable).text())})
             count += 1
         (output/f'assets/search-initiatives-{lang}.json').write_text(json.dumps(entries,ensure_ascii=False,separators=(',',':')))
     for name in ('portfolio.css','portfolio.js'): shutil.copyfile(workspace.ROOT/'portal/site'/name, output/'assets'/name)

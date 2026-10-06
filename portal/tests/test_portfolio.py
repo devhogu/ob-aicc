@@ -33,8 +33,17 @@ class PortfolioRules(unittest.TestCase):
                     {'State':'Waiting','Waiting from':'Active'}, {'State':'Waiting','Waiting from':'Approved'},
                     {'State':'Approved'}, {'State':'Accepted'}]
         c = portfolio.capacity([],{'initiative':1},features)
-        self.assertEqual(c['feature'],{'progress':4,'ready':1})
+        # A Waiting Feature keeps its column, so Waiting after Approved still occupies Ready.
+        self.assertEqual(c['feature'],{'progress':4,'ready':2})
         self.assertEqual(c['active'],0)
+        # A Completed Initiative stays in Implementation and keeps its place until Review.
+        self.assertEqual(portfolio.capacity([{'state':'Completed','standing':False},{'state':'Review','standing':False}],{'initiative':1})['active'],1)
+
+    def test_dates_and_scores_read_in_the_language_of_the_edition(self):
+        self.assertEqual(portfolio._date('ru','2026-10-03'),'3 октября 2026 года')
+        self.assertEqual(portfolio._date('en','2026-12-23'),'23 December 2026')
+        self.assertEqual(portfolio._decimal('ru',3.75),'3,75')
+        self.assertEqual(portfolio._decimal('en',4.0),'4')
 
     def test_actual_record_identities_rank_and_unknown_dates_in_both_editions(self):
         expected = ['INI-002','INI-006','INI-004','INI-003','INI-007','INI-008','INI-009','INI-010','INI-011','INI-012']
