@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -301,31 +301,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Статус сделочного портфеля, ключевые темы рисков дью-дилидженса и траектории синергий от интеграции формируются в дискретные моменты сделочного и интеграционного цикла. Непрерывная видимость качества портфеля, возникающих выводов по дью-дилидженсу и темпов фиксации синергий отсутствует в стандартном операционном информационном наборе.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Калибровка масштаба и глубины дью-дилидженса — какие направления требуют детального анализа, а какие — поверхностного — определяется старшими руководителями сделки в условиях дефицита времени без структурированной методологии риск-сигналов. Альтернативные оценочные сценарии (базовый, стрессовый, с корректировкой синергий) требуют последовательного ручного пересчёта моделей, что ограничивает пространство сценариев до одобрения советом директоров.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Синтез данных из виртуального дата-рума, агрегация выводов дью-дилидженса, подготовка меморандумов для одобрения советом директоров, оформление регуляторных заявок и отчётность по статусу постслиятельной интеграции — объёмные, структурированные задачи документального производства. Типовая структура в рамках транзакций делает их пригодными для сборки с участием агента под контролем старших руководителей сделки.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Выводы постсделочных ретроспектив — какие риски дью-дилидженса материализовались, какие синергии были переоценены или недооценены, какие подходы к интеграции оказались успешными — редко фиксируются в форме, питающей последующие предположения при андеррайтинге сделок. Институциональные знания в области M&amp;A накапливаются неформально.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Статус сделочного портфеля, ключевые темы рисков дью-дилидженса и траектории синергий от интеграции формируются в дискретные моменты сделочного и интеграционного цикла. Непрерывная видимость качества портфеля, возникающих выводов по дью-дилидженсу и темпов фиксации синергий отсутствует в стандартном операционном информационном наборе.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Калибровка масштаба и глубины дью-дилидженса — какие направления требуют детального анализа, а какие — поверхностного — определяется старшими руководителями сделки в условиях дефицита времени без структурированной методологии риск-сигналов. Альтернативные оценочные сценарии (базовый, стрессовый, с корректировкой синергий) требуют последовательного ручного пересчёта моделей, что ограничивает пространство сценариев до одобрения советом директоров.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Синтез данных из виртуального дата-рума, агрегация выводов дью-дилидженса, подготовка меморандумов для одобрения советом директоров, оформление регуляторных заявок и отчётность по статусу постслиятельной интеграции — объёмные, структурированные задачи документального производства. Типовая структура в рамках транзакций делает их пригодными для сборки с участием агента под контролем старших руководителей сделки.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Выводы постсделочных ретроспектив — какие риски дью-дилидженса материализовались, какие синергии были переоценены или недооценены, какие подходы к интеграции оказались успешными — редко фиксируются в форме, питающей последующие предположения при андеррайтинге сделок. Институциональные знания в области M&amp;A накапливаются неформально.</p></article></div>
     </section>
     
 
@@ -347,7 +323,7 @@
     type="button"
     data-stage="originate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--originate">
     <span class="flow-stages__stage-label">Поиск</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -359,7 +335,7 @@
     type="button"
     data-stage="diligence"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--diligence">
     <span class="flow-stages__stage-label">Due diligence</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -371,7 +347,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--approve">
     <span class="flow-stages__stage-label">Одобрение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -383,7 +359,7 @@
     type="button"
     data-stage="close"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--close">
     <span class="flow-stages__stage-label">Закрытие</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -395,7 +371,7 @@
     type="button"
     data-stage="integrate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--integrate">
     <span class="flow-stages__stage-label">Интеграция</span>
     
   </button>
@@ -439,7 +415,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-target-screening-pipeline" id="scenario-ma-target-screening-pipeline">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-target-screening-pipeline" id="scenario-ma-target-screening-pipeline" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -514,7 +490,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-approval-memo-regulatory-filing" id="scenario-ma-approval-memo-regulatory-filing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-approval-memo-regulatory-filing" id="scenario-ma-approval-memo-regulatory-filing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -589,7 +565,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-synergy-variance-tracking" id="scenario-ma-synergy-variance-tracking">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-synergy-variance-tracking" id="scenario-ma-synergy-variance-tracking" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -664,7 +640,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/data-room-diligence-synthesis" id="scenario-data-room-diligence-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/data-room-diligence-synthesis" id="scenario-data-room-diligence-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -768,31 +744,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Статус партнёрского портфеля, прогресс онбординга и актуальные показатели эффективности отслеживаются в раздельных системах разными командами. У банка нет консолидированного взгляда на весь партнёрский портфель — какие партнёрства работают эффективно, какие находятся под угрозой, по каким подходит срок принятия решений о пролонгации — в едином операционном разрезе.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Переговоры по коммерческим условиям и рефинансирование при пролонгации ведутся без структурированного обзора прецедентных условий в партнёрском портфеле банка. Правовые и коммерческие команды вручную восстанавливают данные из предыдущих договоров; сравнительный анализ прецедентов и оптимизация условий носят ситуативный характер.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка документации для KYB-скрининга, управление чек-листами комплаенс-онбординга, периодическая отчётность об эффективности партнёрств и подготовка оценок к пролонгации — структурированные, повторяющиеся задачи с высоким документооборотом. Каждая из них поддаётся автоматизации с участием агента под контролем комплаенс-офицера и менеджера по работе с клиентами.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Решения о пролонгации партнёрств редко опираются на структурированный ретроспективный анализ фактической и прогнозной коммерческой ценности партнёрства или на выводы из предыдущих реструктуризаций. Институциональные знания банка о факторах успешности партнёрств сосредоточены у отдельных менеджеров по работе с партнёрами, а не встроены в процесс пролонгации.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Статус партнёрского портфеля, прогресс онбординга и актуальные показатели эффективности отслеживаются в раздельных системах разными командами. У банка нет консолидированного взгляда на весь партнёрский портфель — какие партнёрства работают эффективно, какие находятся под угрозой, по каким подходит срок принятия решений о пролонгации — в едином операционном разрезе.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Переговоры по коммерческим условиям и рефинансирование при пролонгации ведутся без структурированного обзора прецедентных условий в партнёрском портфеле банка. Правовые и коммерческие команды вручную восстанавливают данные из предыдущих договоров; сравнительный анализ прецедентов и оптимизация условий носят ситуативный характер.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка документации для KYB-скрининга, управление чек-листами комплаенс-онбординга, периодическая отчётность об эффективности партнёрств и подготовка оценок к пролонгации — структурированные, повторяющиеся задачи с высоким документооборотом. Каждая из них поддаётся автоматизации с участием агента под контролем комплаенс-офицера и менеджера по работе с клиентами.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Решения о пролонгации партнёрств редко опираются на структурированный ретроспективный анализ фактической и прогнозной коммерческой ценности партнёрства или на выводы из предыдущих реструктуризаций. Институциональные знания банка о факторах успешности партнёрств сосредоточены у отдельных менеджеров по работе с партнёрами, а не встроены в процесс пролонгации.</p></article></div>
     </section>
     
 
@@ -814,7 +766,7 @@
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--identify">
     <span class="flow-stages__stage-label">Выявление</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -826,7 +778,7 @@
     type="button"
     data-stage="negotiate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--negotiate">
     <span class="flow-stages__stage-label">Переговоры</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -838,7 +790,7 @@
     type="button"
     data-stage="onboard"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--onboard">
     <span class="flow-stages__stage-label">Подключение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -850,7 +802,7 @@
     type="button"
     data-stage="operate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--operate">
     <span class="flow-stages__stage-label">Операционная деятельность</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -862,7 +814,7 @@
     type="button"
     data-stage="renew"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--renew">
     <span class="flow-stages__stage-label">Пересмотр</span>
     
   </button>
@@ -906,7 +858,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-landscape-fit-brief" id="scenario-partnership-landscape-fit-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-landscape-fit-brief" id="scenario-partnership-landscape-fit-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -981,7 +933,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-performance-renewal-brief" id="scenario-partnership-performance-renewal-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-performance-renewal-brief" id="scenario-partnership-performance-renewal-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1056,7 +1008,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-onboarding-coordinator" id="scenario-partnership-onboarding-coordinator">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-onboarding-coordinator" id="scenario-partnership-onboarding-coordinator" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1182,31 +1134,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Статус программы, расходование бюджета и траектория реализации выгод фиксируются на границах управленческого цикла — на двухнедельных или ежемесячных заседаниях руководящего комитета — без непрерывного мониторинга. Блокирующие факторы, ускорение расходования бюджета и отставание по реализации выгод накапливаются между заседаниями без раннего предупреждения на уровне управления.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Межпрограммное распределение ресурсов и сквозное выстраивание зависимостей управляются через двусторонние договорённости между руководителями программ, а не через оптимизацию на уровне портфеля. PMO располагает ограниченной видимостью полной карты ограничений по параллельным программам; неоптимальное распределение ресурсов устраняется реактивно при возникновении конфликтов.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка материалов руководящего комитета, агрегация RAG-статусов, отчётность о расходовании бюджета и отслеживание контрольных точек относительно плана — структурированные, повторяющиеся производственные задачи, выполняемые в двухнедельном или ежемесячном цикле. Каждая из них поддаётся сборке с участием агента под контролем PMO и директора программы.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Выводы по урокам, извлечённым из программы, и итоговые ретроспективы документируются, однако редко влияют на дизайн устава, плана или управленческой структуры следующей программы. Банк повторяет одни и те же ошибки планирования и исполнения в последовательных программах.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Статус программы, расходование бюджета и траектория реализации выгод фиксируются на границах управленческого цикла — на двухнедельных или ежемесячных заседаниях руководящего комитета — без непрерывного мониторинга. Блокирующие факторы, ускорение расходования бюджета и отставание по реализации выгод накапливаются между заседаниями без раннего предупреждения на уровне управления.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Межпрограммное распределение ресурсов и сквозное выстраивание зависимостей управляются через двусторонние договорённости между руководителями программ, а не через оптимизацию на уровне портфеля. PMO располагает ограниченной видимостью полной карты ограничений по параллельным программам; неоптимальное распределение ресурсов устраняется реактивно при возникновении конфликтов.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка материалов руководящего комитета, агрегация RAG-статусов, отчётность о расходовании бюджета и отслеживание контрольных точек относительно плана — структурированные, повторяющиеся производственные задачи, выполняемые в двухнедельном или ежемесячном цикле. Каждая из них поддаётся сборке с участием агента под контролем PMO и директора программы.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Выводы по урокам, извлечённым из программы, и итоговые ретроспективы документируются, однако редко влияют на дизайн устава, плана или управленческой структуры следующей программы. Банк повторяет одни и те же ошибки планирования и исполнения в последовательных программах.</p></article></div>
     </section>
     
 
@@ -1228,7 +1156,7 @@
     type="button"
     data-stage="charter"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--charter">
     <span class="flow-stages__stage-label">Устав</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1240,7 +1168,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1252,7 +1180,7 @@
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--execute">
     <span class="flow-stages__stage-label">Исполнение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1264,7 +1192,7 @@
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--track">
     <span class="flow-stages__stage-label">Мониторинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1276,7 +1204,7 @@
     type="button"
     data-stage="close"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--close">
     <span class="flow-stages__stage-label">Закрытие</span>
     
   </button>
@@ -1320,7 +1248,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/program-benefits-realization-assessment" id="scenario-program-benefits-realization-assessment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/program-benefits-realization-assessment" id="scenario-program-benefits-realization-assessment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1395,7 +1323,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/program-steering-pack-assembly" id="scenario-program-steering-pack-assembly">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/program-steering-pack-assembly" id="scenario-program-steering-pack-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1470,7 +1398,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/cross-program-dependency-map" id="scenario-cross-program-dependency-map">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/cross-program-dependency-map" id="scenario-cross-program-dependency-map" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1574,31 +1502,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Статус инновационного портфеля, результаты пилотных экспериментов и итоги решений о масштабировании отслеживаются в разрозненных инструментах инновационного подразделения. У банка нет консолидированного взгляда на инновационный портфель: на каком этапе находится каждая инициатива, какие пилоты рискуют выйти за рамки времени или бюджета, какие эксперименты дали релевантные выводы для текущих решений.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Калибровка критериев стадийных шлюзов — насколько требовательным должен быть каждый шлюз с учётом уровня инвестиций и регуляторных рисков — определяется прецедентами комитета, а не структурированной методологией. Решения о ребалансировке портфеля (концентрации инвестиций на кандидатах с наибольшей вероятностью масштабирования) принимаются при ограниченной видимости всего портфеля.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Скрининговые оценки инноваций, документация по дизайну пилотов, подготовка кейсов масштабирования и пакеты передачи на индустриализацию — структурированные документы, создаваемые с нуля на каждом шлюзе. Типовая структура между шлюзами и инновационными циклами делает их кандидатами для подготовки с участием агента под контролем руководителя инновационного направления.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты пилотных экспериментов и итоги решений о масштабировании фиксируются в проектных файлах, однако не индексируются в форме, доступной для скрининга или дизайна пилота следующего цикла. Банк многократно обнаруживает одни и те же технические ограничения и паттерны клиентского отклика в последовательных пилотах, не опираясь на накопленные экспериментальные данные.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Статус инновационного портфеля, результаты пилотных экспериментов и итоги решений о масштабировании отслеживаются в разрозненных инструментах инновационного подразделения. У банка нет консолидированного взгляда на инновационный портфель: на каком этапе находится каждая инициатива, какие пилоты рискуют выйти за рамки времени или бюджета, какие эксперименты дали релевантные выводы для текущих решений.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Калибровка критериев стадийных шлюзов — насколько требовательным должен быть каждый шлюз с учётом уровня инвестиций и регуляторных рисков — определяется прецедентами комитета, а не структурированной методологией. Решения о ребалансировке портфеля (концентрации инвестиций на кандидатах с наибольшей вероятностью масштабирования) принимаются при ограниченной видимости всего портфеля.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Скрининговые оценки инноваций, документация по дизайну пилотов, подготовка кейсов масштабирования и пакеты передачи на индустриализацию — структурированные документы, создаваемые с нуля на каждом шлюзе. Типовая структура между шлюзами и инновационными циклами делает их кандидатами для подготовки с участием агента под контролем руководителя инновационного направления.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты пилотных экспериментов и итоги решений о масштабировании фиксируются в проектных файлах, однако не индексируются в форме, доступной для скрининга или дизайна пилота следующего цикла. Банк многократно обнаруживает одни и те же технические ограничения и паттерны клиентского отклика в последовательных пилотах, не опираясь на накопленные экспериментальные данные.</p></article></div>
     </section>
     
 
@@ -1620,7 +1524,7 @@
     type="button"
     data-stage="ideate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--ideate">
     <span class="flow-stages__stage-label">Генерация идей</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1632,7 +1536,7 @@
     type="button"
     data-stage="screen"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--screen">
     <span class="flow-stages__stage-label">Отбор</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1644,7 +1548,7 @@
     type="button"
     data-stage="pilot"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--pilot">
     <span class="flow-stages__stage-label">Пилот</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1656,7 +1560,7 @@
     type="button"
     data-stage="scale"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--scale">
     <span class="flow-stages__stage-label">Масштабирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1668,7 +1572,7 @@
     type="button"
     data-stage="industrialize"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--industrialize">
     <span class="flow-stages__stage-label">Промышленное внедрение</span>
     
   </button>
@@ -1712,7 +1616,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-pipeline-screening-synthesis" id="scenario-innovation-pipeline-screening-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-pipeline-screening-synthesis" id="scenario-innovation-pipeline-screening-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1787,7 +1691,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-stage-gate-decision-pack" id="scenario-innovation-stage-gate-decision-pack">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-stage-gate-decision-pack" id="scenario-innovation-stage-gate-decision-pack" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1862,7 +1766,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-experiment-knowledge-base" id="scenario-innovation-experiment-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-experiment-knowledge-base" id="scenario-innovation-experiment-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1966,31 +1870,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Показатели ESG в соответствии с принятыми обязательствами и динамика год к году отслеживаются единожды — на этапе публикации отчётности. Постоянный мониторинг траекторий ESG KPI, позволяющий банку корректировать целевые показатели до открытия окна годовой отчётности, отсутствует в стандартном операционном цикле большинства банков рынка СНГ.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Сопоставление фреймворков с метриками и проверка согласованности между фреймворками — ручные, трудоёмкие задачи, воссоздаваемые в каждом цикле по мере развития стандартов. У банка нет систематического механизма для отслеживания изменений стандартов раскрытия (обновлений ISSB, климатических рекомендаций ЦБР) и оценки их влияния на шаблон сбора данных текущего года до открытия сбора.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Валидация полноты данных, маркировка аномалий, проверка согласованности с данными прошлого года, выявление пробелов в охвате фреймворка и подготовка нарративных разделов из проверенных таблиц данных — структурированные, повторяющиеся задачи. Каждая из них поддаётся автоматизации с участием агента, при этом работа команды по устойчивому развитию концентрируется на методологических решениях и суждениях в области раскрытия информации.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Эволюция требований к раскрытию ESG-информации на рынке СНГ — конвергенция внутренних регуляторных рекомендаций ARDFM, НБК и ЦБР с международными стандартами TCFD/ISSB — отслеживается командой по устойчивому развитию в неформальном режиме. У банка отсутствует структурированный механизм мониторинга разработки стандартов и их включения в дизайн сбора данных и обновление методологии следующего цикла.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Показатели ESG в соответствии с принятыми обязательствами и динамика год к году отслеживаются единожды — на этапе публикации отчётности. Постоянный мониторинг траекторий ESG KPI, позволяющий банку корректировать целевые показатели до открытия окна годовой отчётности, отсутствует в стандартном операционном цикле большинства банков рынка СНГ.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Сопоставление фреймворков с метриками и проверка согласованности между фреймворками — ручные, трудоёмкие задачи, воссоздаваемые в каждом цикле по мере развития стандартов. У банка нет систематического механизма для отслеживания изменений стандартов раскрытия (обновлений ISSB, климатических рекомендаций ЦБР) и оценки их влияния на шаблон сбора данных текущего года до открытия сбора.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Валидация полноты данных, маркировка аномалий, проверка согласованности с данными прошлого года, выявление пробелов в охвате фреймворка и подготовка нарративных разделов из проверенных таблиц данных — структурированные, повторяющиеся задачи. Каждая из них поддаётся автоматизации с участием агента, при этом работа команды по устойчивому развитию концентрируется на методологических решениях и суждениях в области раскрытия информации.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Эволюция требований к раскрытию ESG-информации на рынке СНГ — конвергенция внутренних регуляторных рекомендаций ARDFM, НБК и ЦБР с международными стандартами TCFD/ISSB — отслеживается командой по устойчивому развитию в неформальном режиме. У банка отсутствует структурированный механизм мониторинга разработки стандартов и их включения в дизайн сбора данных и обновление методологии следующего цикла.</p></article></div>
     </section>
     
 
@@ -2012,7 +1892,7 @@
     type="button"
     data-stage="collect"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--collect">
     <span class="flow-stages__stage-label">Сбор</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2024,7 +1904,7 @@
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--validate">
     <span class="flow-stages__stage-label">Проверка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2036,7 +1916,7 @@
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--aggregate">
     <span class="flow-stages__stage-label">Агрегирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2048,7 +1928,7 @@
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--report">
     <span class="flow-stages__stage-label">Подготовка отчёта</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2060,7 +1940,7 @@
     type="button"
     data-stage="disclose"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--disclose">
     <span class="flow-stages__stage-label">Раскрытие</span>
     
   </button>
@@ -2104,7 +1984,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-data-collection-completeness" id="scenario-esg-data-collection-completeness">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-data-collection-completeness" id="scenario-esg-data-collection-completeness" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2179,7 +2059,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-regulatory-standard-monitoring" id="scenario-esg-regulatory-standard-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-regulatory-standard-monitoring" id="scenario-esg-regulatory-standard-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2254,7 +2134,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-framework-gap-mapping" id="scenario-esg-framework-gap-mapping">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-framework-gap-mapping" id="scenario-esg-framework-gap-mapping" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2329,7 +2209,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-report-narrative-drafting" id="scenario-esg-report-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-report-narrative-drafting" id="scenario-esg-report-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">

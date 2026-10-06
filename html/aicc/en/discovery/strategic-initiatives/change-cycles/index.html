@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -297,31 +297,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Deal pipeline status, diligence risk themes, and integration synergy trajectories are each assembled at discrete points in the deal and integration cycle. Continuous visibility into pipeline quality, emerging diligence findings, and synergy-capture pacing is absent from the standard operating information set.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Diligence scope and depth calibration — which workstreams require deep dive versus light-touch — is set by senior deal leads under time pressure without a structured risk-signal framework. Alternative valuation scenarios (base, downside, synergy haircut) require sequential manual model rebuilds that limit the scenario space explored before board approval.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Data room synthesis, diligence finding aggregation, board approval memo drafting, regulatory filing preparation, and post-merger integration status reporting are each high-volume, structured document production tasks. The recurring structure across transactions makes them amenable to AI-driven assembly with senior deal-lead review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Deal retrospective findings — which diligence risks materialized, which synergies were over- or under-estimated, which integration approaches succeeded — are rarely captured in a form that feeds forward into subsequent deal underwriting assumptions. Institutional M&amp;A learning accumulates informally.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Deal pipeline status, diligence risk themes, and integration synergy trajectories are each assembled at discrete points in the deal and integration cycle. Continuous visibility into pipeline quality, emerging diligence findings, and synergy-capture pacing is absent from the standard operating information set.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Diligence scope and depth calibration — which workstreams require deep dive versus light-touch — is set by senior deal leads under time pressure without a structured risk-signal framework. Alternative valuation scenarios (base, downside, synergy haircut) require sequential manual model rebuilds that limit the scenario space explored before board approval.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Data room synthesis, diligence finding aggregation, board approval memo drafting, regulatory filing preparation, and post-merger integration status reporting are each high-volume, structured document production tasks. The recurring structure across transactions makes them amenable to AI-driven assembly with senior deal-lead review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Deal retrospective findings — which diligence risks materialized, which synergies were over- or under-estimated, which integration approaches succeeded — are rarely captured in a form that feeds forward into subsequent deal underwriting assumptions. Institutional M&amp;A learning accumulates informally.</p></article></div>
     </section>
     
 
@@ -343,7 +319,7 @@ Question or comment:
     type="button"
     data-stage="originate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--originate">
     <span class="flow-stages__stage-label">Source</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -355,7 +331,7 @@ Question or comment:
     type="button"
     data-stage="diligence"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--diligence">
     <span class="flow-stages__stage-label">Diligence</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -367,7 +343,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -379,7 +355,7 @@ Question or comment:
     type="button"
     data-stage="close"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--close">
     <span class="flow-stages__stage-label">Close</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -391,7 +367,7 @@ Question or comment:
     type="button"
     data-stage="integrate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/ma-deal-cycle"
-  >
+   id="stage-ma-deal-cycle--integrate">
     <span class="flow-stages__stage-label">Integrate</span>
     
   </button>
@@ -435,7 +411,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-target-screening-pipeline" id="scenario-ma-target-screening-pipeline">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-target-screening-pipeline" id="scenario-ma-target-screening-pipeline" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -510,7 +486,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-approval-memo-regulatory-filing" id="scenario-ma-approval-memo-regulatory-filing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-approval-memo-regulatory-filing" id="scenario-ma-approval-memo-regulatory-filing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -583,7 +559,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-synergy-variance-tracking" id="scenario-ma-synergy-variance-tracking">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/ma-synergy-variance-tracking" id="scenario-ma-synergy-variance-tracking" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -656,7 +632,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/data-room-diligence-synthesis" id="scenario-data-room-diligence-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/ma-deal-cycle/data-room-diligence-synthesis" id="scenario-data-room-diligence-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -756,31 +732,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Partnership pipeline status, onboarding progress, and live performance metrics are each tracked in separate systems by different teams. The Bank lacks a consolidated view of its full partnership portfolio — which are performing, which are at-risk, which renewal decisions are approaching — in a single operating picture.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Commercial term negotiation and renewal renegotiation are conducted without a structured view of precedent terms across the Bank's partnership portfolio. The legal and commercial teams reconstruct from prior contracts manually; precedent benchmarking and term optimization are ad hoc.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">KYB screening documentation assembly, compliance onboarding checklist management, periodic partnership performance reporting, and renewal assessment preparation are structured, recurring tasks with high documentation volume. Each is amenable to AI-assisted production with compliance officer and partnership manager review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Partnership renewal decisions rarely draw on structured retrospective analysis of the partnership's actual versus projected commercial value, or on lessons from prior partnership restructurings. The Bank's institutional knowledge of what makes partnerships succeed is concentrated in individual partnership managers rather than embedded in the renewal process.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Partnership pipeline status, onboarding progress, and live performance metrics are each tracked in separate systems by different teams. The Bank lacks a consolidated view of its full partnership portfolio — which are performing, which are at-risk, which renewal decisions are approaching — in a single operating picture.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Commercial term negotiation and renewal renegotiation are conducted without a structured view of precedent terms across the Bank's partnership portfolio. The legal and commercial teams reconstruct from prior contracts manually; precedent benchmarking and term optimization are ad hoc.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>KYB screening documentation assembly, compliance onboarding checklist management, periodic partnership performance reporting, and renewal assessment preparation are structured, recurring tasks with high documentation volume. Each is amenable to AI-assisted production with compliance officer and partnership manager review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Partnership renewal decisions rarely draw on structured retrospective analysis of the partnership's actual versus projected commercial value, or on lessons from prior partnership restructurings. The Bank's institutional knowledge of what makes partnerships succeed is concentrated in individual partnership managers rather than embedded in the renewal process.</p></article></div>
     </section>
     
 
@@ -802,7 +754,7 @@ Question or comment:
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--identify">
     <span class="flow-stages__stage-label">Identify</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -814,7 +766,7 @@ Question or comment:
     type="button"
     data-stage="negotiate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--negotiate">
     <span class="flow-stages__stage-label">Negotiate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -826,7 +778,7 @@ Question or comment:
     type="button"
     data-stage="onboard"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--onboard">
     <span class="flow-stages__stage-label">Onboard</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -838,7 +790,7 @@ Question or comment:
     type="button"
     data-stage="operate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--operate">
     <span class="flow-stages__stage-label">Operate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -850,7 +802,7 @@ Question or comment:
     type="button"
     data-stage="renew"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/partnership-lifecycle"
-  >
+   id="stage-partnership-lifecycle--renew">
     <span class="flow-stages__stage-label">Renew</span>
     
   </button>
@@ -894,7 +846,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-landscape-fit-brief" id="scenario-partnership-landscape-fit-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-landscape-fit-brief" id="scenario-partnership-landscape-fit-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -969,7 +921,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-performance-renewal-brief" id="scenario-partnership-performance-renewal-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-performance-renewal-brief" id="scenario-partnership-performance-renewal-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1044,7 +996,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-onboarding-coordinator" id="scenario-partnership-onboarding-coordinator">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/partnership-lifecycle/partnership-onboarding-coordinator" id="scenario-partnership-onboarding-coordinator" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1166,31 +1118,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Program status, financial burn, and benefit realization trajectory are each observed at governance cycle boundaries — fortnightly or monthly steering committee meetings — not in continuous form. Blockers, burn acceleration, and benefit shortfalls accumulate between steering meetings without an early-warning mechanism at the governance level.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Cross-program resource allocation and dependency sequencing are managed through bilateral coordination between program managers rather than through portfolio-level optimization. The PMO has limited visibility into the full constraint map across concurrent programs; sub-optimal resource allocation is resolved reactively when conflicts surface.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Steering committee pack assembly, RAG status aggregation, financial burn reporting, and milestone tracking against plan are structured, recurring production tasks that repeat on fortnightly or monthly cycles. Each is amenable to AI-driven assembly with PMO and program director review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Program lessons-learned findings and closure retrospectives are documented but rarely feed forward into how the next program's charter, plan, or governance framework is designed. The Bank repeats the same planning and execution failure modes across successive programs.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Program status, financial burn, and benefit realization trajectory are each observed at governance cycle boundaries — fortnightly or monthly steering committee meetings — not in continuous form. Blockers, burn acceleration, and benefit shortfalls accumulate between steering meetings without an early-warning mechanism at the governance level.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-program resource allocation and dependency sequencing are managed through bilateral coordination between program managers rather than through portfolio-level optimization. The PMO has limited visibility into the full constraint map across concurrent programs; sub-optimal resource allocation is resolved reactively when conflicts surface.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Steering committee pack assembly, RAG status aggregation, financial burn reporting, and milestone tracking against plan are structured, recurring production tasks that repeat on fortnightly or monthly cycles. Each is amenable to AI-driven assembly with PMO and program director review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Program lessons-learned findings and closure retrospectives are documented but rarely feed forward into how the next program's charter, plan, or governance framework is designed. The Bank repeats the same planning and execution failure modes across successive programs.</p></article></div>
     </section>
     
 
@@ -1212,7 +1140,7 @@ Question or comment:
     type="button"
     data-stage="charter"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--charter">
     <span class="flow-stages__stage-label">Charter</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1224,7 +1152,7 @@ Question or comment:
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--plan">
     <span class="flow-stages__stage-label">Plan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1236,7 +1164,7 @@ Question or comment:
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--execute">
     <span class="flow-stages__stage-label">Execute</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1248,7 +1176,7 @@ Question or comment:
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--track">
     <span class="flow-stages__stage-label">Track</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1260,7 +1188,7 @@ Question or comment:
     type="button"
     data-stage="close"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/program-governance-cycle"
-  >
+   id="stage-program-governance-cycle--close">
     <span class="flow-stages__stage-label">Close</span>
     
   </button>
@@ -1304,7 +1232,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/program-benefits-realization-assessment" id="scenario-program-benefits-realization-assessment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/program-benefits-realization-assessment" id="scenario-program-benefits-realization-assessment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1379,7 +1307,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/program-steering-pack-assembly" id="scenario-program-steering-pack-assembly">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/program-steering-pack-assembly" id="scenario-program-steering-pack-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1454,7 +1382,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/cross-program-dependency-map" id="scenario-cross-program-dependency-map">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/program-governance-cycle/cross-program-dependency-map" id="scenario-cross-program-dependency-map" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1552,31 +1480,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Innovation pipeline status, pilot experiment results, and scaling decision outcomes are tracked in disconnected tools across the innovation function. The Bank lacks a consolidated view of its innovation portfolio — which initiatives are at which stage, which pilots are at risk of exceeding time or budget constraints, and which prior experiments produced relevant evidence for current decisions.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Stage-gate criteria calibration — how demanding each gate should be relative to investment level and regulatory exposure — is set by committee precedent rather than by a structured framework. Portfolio rebalancing decisions (concentrating investment on the highest-probability-of-scale candidates) are made with limited visibility into the full pipeline.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Innovation screening assessments, pilot design documentation, scaling-case preparation, and industrialization handover packs are structured documents that are authored from scratch at each gate. The common structure across gates and across innovation cycles makes these candidates for AI-assisted drafting with innovation lead review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Pilot experiment results and scaling decision outcomes are captured in project files but are not indexed in a form accessible to the next cycle's screening or pilot design. The Bank repeatedly discovers the same technical constraints and customer response patterns in successive pilots without drawing on its accumulated experiment evidence.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Innovation pipeline status, pilot experiment results, and scaling decision outcomes are tracked in disconnected tools across the innovation function. The Bank lacks a consolidated view of its innovation portfolio — which initiatives are at which stage, which pilots are at risk of exceeding time or budget constraints, and which prior experiments produced relevant evidence for current decisions.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Stage-gate criteria calibration — how demanding each gate should be relative to investment level and regulatory exposure — is set by committee precedent rather than by a structured framework. Portfolio rebalancing decisions (concentrating investment on the highest-probability-of-scale candidates) are made with limited visibility into the full pipeline.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Innovation screening assessments, pilot design documentation, scaling-case preparation, and industrialization handover packs are structured documents that are authored from scratch at each gate. The common structure across gates and across innovation cycles makes these candidates for AI-assisted drafting with innovation lead review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Pilot experiment results and scaling decision outcomes are captured in project files but are not indexed in a form accessible to the next cycle's screening or pilot design. The Bank repeatedly discovers the same technical constraints and customer response patterns in successive pilots without drawing on its accumulated experiment evidence.</p></article></div>
     </section>
     
 
@@ -1598,7 +1502,7 @@ Question or comment:
     type="button"
     data-stage="ideate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--ideate">
     <span class="flow-stages__stage-label">Ideate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1610,7 +1514,7 @@ Question or comment:
     type="button"
     data-stage="screen"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--screen">
     <span class="flow-stages__stage-label">Screen</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1622,7 +1526,7 @@ Question or comment:
     type="button"
     data-stage="pilot"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--pilot">
     <span class="flow-stages__stage-label">Pilot</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1634,7 +1538,7 @@ Question or comment:
     type="button"
     data-stage="scale"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--scale">
     <span class="flow-stages__stage-label">Scale</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1646,7 +1550,7 @@ Question or comment:
     type="button"
     data-stage="industrialize"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/innovation-stage-gate-cycle"
-  >
+   id="stage-innovation-stage-gate-cycle--industrialize">
     <span class="flow-stages__stage-label">Industrialize</span>
     
   </button>
@@ -1690,7 +1594,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-pipeline-screening-synthesis" id="scenario-innovation-pipeline-screening-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-pipeline-screening-synthesis" id="scenario-innovation-pipeline-screening-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1763,7 +1667,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-stage-gate-decision-pack" id="scenario-innovation-stage-gate-decision-pack">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-stage-gate-decision-pack" id="scenario-innovation-stage-gate-decision-pack" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1838,7 +1742,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-experiment-knowledge-base" id="scenario-innovation-experiment-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/innovation-stage-gate-cycle/innovation-experiment-knowledge-base" id="scenario-innovation-experiment-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1938,31 +1842,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">ESG metric performance against commitments and year-on-year progress are observed once annually at the report publication stage. Continuous tracking of ESG KPI trajectories — enabling the Bank to course-correct on targets before the year-end reporting window — is absent from the standard operating cycle of most banks.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Framework-to-metric mapping and cross-framework consistency checking are manual, labor-intensive tasks that are reconstructed each cycle as standards evolve. The Bank has no systematic mechanism for tracking disclosure standard changes (ISSB updates, the regulator's climate guidance) and assessing their impact on the current-year collection template before data collection opens.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Data completeness validation, anomaly flagging, prior-year consistency checking, framework gap identification, and narrative section drafting from validated data tables are all structured, recurring tasks. Each is amenable to AI-assisted production, with sustainability team review concentrated on methodology decisions and disclosure judgment calls.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">The evolution of ESG disclosure requirements — domestic regulatory guidance converging with international TCFD/ISSB standards — is tracked informally by the sustainability team. The Bank lacks a structured mechanism for monitoring standard-setting developments and feeding those into the following cycle's collection design and methodology update.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>ESG metric performance against commitments and year-on-year progress are observed once annually at the report publication stage. Continuous tracking of ESG KPI trajectories — enabling the Bank to course-correct on targets before the year-end reporting window — is absent from the standard operating cycle of most banks.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Framework-to-metric mapping and cross-framework consistency checking are manual, labor-intensive tasks that are reconstructed each cycle as standards evolve. The Bank has no systematic mechanism for tracking disclosure standard changes (ISSB updates, the regulator's climate guidance) and assessing their impact on the current-year collection template before data collection opens.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Data completeness validation, anomaly flagging, prior-year consistency checking, framework gap identification, and narrative section drafting from validated data tables are all structured, recurring tasks. Each is amenable to AI-assisted production, with sustainability team review concentrated on methodology decisions and disclosure judgment calls.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>The evolution of ESG disclosure requirements — domestic regulatory guidance converging with international TCFD/ISSB standards — is tracked informally by the sustainability team. The Bank lacks a structured mechanism for monitoring standard-setting developments and feeding those into the following cycle's collection design and methodology update.</p></article></div>
     </section>
     
 
@@ -1984,7 +1864,7 @@ Question or comment:
     type="button"
     data-stage="collect"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--collect">
     <span class="flow-stages__stage-label">Collect</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1996,7 +1876,7 @@ Question or comment:
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--validate">
     <span class="flow-stages__stage-label">Validate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2008,7 +1888,7 @@ Question or comment:
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--aggregate">
     <span class="flow-stages__stage-label">Aggregate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2020,7 +1900,7 @@ Question or comment:
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--report">
     <span class="flow-stages__stage-label">Report</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2032,7 +1912,7 @@ Question or comment:
     type="button"
     data-stage="disclose"
     data-flow-id="urn:financial-services:flow:strategic-initiatives/change-cycles/esg-reporting-cycle"
-  >
+   id="stage-esg-reporting-cycle--disclose">
     <span class="flow-stages__stage-label">Disclose</span>
     
   </button>
@@ -2076,7 +1956,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-data-collection-completeness" id="scenario-esg-data-collection-completeness">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-data-collection-completeness" id="scenario-esg-data-collection-completeness" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2151,7 +2031,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-regulatory-standard-monitoring" id="scenario-esg-regulatory-standard-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-regulatory-standard-monitoring" id="scenario-esg-regulatory-standard-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2226,7 +2106,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-framework-gap-mapping" id="scenario-esg-framework-gap-mapping">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-framework-gap-mapping" id="scenario-esg-framework-gap-mapping" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2299,7 +2179,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-report-narrative-drafting" id="scenario-esg-report-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-initiatives/change-cycles/esg-reporting-cycle/esg-report-narrative-drafting" id="scenario-esg-report-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">

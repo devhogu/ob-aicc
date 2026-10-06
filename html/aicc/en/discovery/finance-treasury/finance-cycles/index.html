@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -299,31 +299,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">The full-year financial trajectory — current actuals plus reforecast-to-year-end — is assembled quarterly after close rather than on a continuous basis. Intra-quarter signals that indicate the full-year outlook is shifting — loan volume deviation, deposit repricing, expense run-rate change — are not routinely incorporated into management projections between formal reforecast cycles.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Budget scenario exploration is constrained by the time cost of each what-if. The FP&amp;A team delivers two or three planning scenarios before the approval deadline; alternative capital deployment assumptions, product mix scenarios, or rate environment sensitivities that would sharpen the board discussion are not explored because each iteration consumes days of model-run time.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Budget narrative drafting, reforecast commentary, board pack assembly, and sensitivity table production are structured, recurring tasks performed on consistent frameworks each cycle. The narrative structure across years is substantially stable; GenAI can draft from model outputs with analyst review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Budget assumptions from prior years — which proved accurate, which proved systematically optimistic or conservative by business line — are held in prior-year model files rather than in a structured assumption library. Each planning cycle re-creates the assumption calibration exercise from scratch.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The full-year financial trajectory — current actuals plus reforecast-to-year-end — is assembled quarterly after close rather than on a continuous basis. Intra-quarter signals that indicate the full-year outlook is shifting — loan volume deviation, deposit repricing, expense run-rate change — are not routinely incorporated into management projections between formal reforecast cycles.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Budget scenario exploration is constrained by the time cost of each what-if. The FP&amp;A team delivers two or three planning scenarios before the approval deadline; alternative capital deployment assumptions, product mix scenarios, or rate environment sensitivities that would sharpen the board discussion are not explored because each iteration consumes days of model-run time.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Budget narrative drafting, reforecast commentary, board pack assembly, and sensitivity table production are structured, recurring tasks performed on consistent frameworks each cycle. The narrative structure across years is substantially stable; GenAI can draft from model outputs with analyst review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Budget assumptions from prior years — which proved accurate, which proved systematically optimistic or conservative by business line — are held in prior-year model files rather than in a structured assumption library. Each planning cycle re-creates the assumption calibration exercise from scratch.</p></article></div>
     </section>
     
 
@@ -345,7 +321,7 @@ Question or comment:
     type="button"
     data-stage="set"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--set">
     <span class="flow-stages__stage-label">Set assumptions</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -357,7 +333,7 @@ Question or comment:
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--plan">
     <span class="flow-stages__stage-label">Plan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -369,7 +345,7 @@ Question or comment:
     type="button"
     data-stage="build"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--build">
     <span class="flow-stages__stage-label">Build</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -381,7 +357,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -393,7 +369,7 @@ Question or comment:
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--track">
     <span class="flow-stages__stage-label">Track &amp; reforecast</span>
     
   </button>
@@ -437,7 +413,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/intra-quarter-nim-ftp-signal-monitoring" id="scenario-intra-quarter-nim-ftp-signal-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/intra-quarter-nim-ftp-signal-monitoring" id="scenario-intra-quarter-nim-ftp-signal-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -513,7 +489,7 @@ Intra-quarter signals — a large-volume fixed-rate loan origination, a deposit 
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-assumption-calibration-library" id="scenario-budget-assumption-calibration-library">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-assumption-calibration-library" id="scenario-budget-assumption-calibration-library" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -589,7 +565,7 @@ Each planning cycle re-creates the calibration exercise from scratch; systematic
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-scenario-sensitivity-engine" id="scenario-budget-scenario-sensitivity-engine">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-scenario-sensitivity-engine" id="scenario-budget-scenario-sensitivity-engine" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -663,7 +639,7 @@ Material sensitivity space — alternative capital deployment assumptions, produ
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-board-pack-narrative-drafting" id="scenario-budget-board-pack-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-board-pack-narrative-drafting" id="scenario-budget-board-pack-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -738,7 +714,7 @@ Material sensitivity space — alternative capital deployment assumptions, produ
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/rolling-reforecast-model-compression" id="scenario-rolling-reforecast-model-compression">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/rolling-reforecast-model-compression" id="scenario-rolling-reforecast-model-compression" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -841,31 +817,7 @@ The manual re-run takes one to two weeks after close, delaying the revised full-
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">NII and EVE sensitivity is measured monthly. Intra-month balance-sheet movements — deposit repricing events, large fixed-rate loan originations, significant hedge maturities — that alter the IRRBB position between measurements are not reflected in the continuous management picture.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">ALCO scenario exploration at each meeting is constrained by the time required to produce each rate scenario run. Alternative balance-sheet positioning strategies — different hedge tenors, different deposit pricing assumptions, different origination mix — are rarely explored with quantitative depth before the ALCO decision.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">ALCO rate narrative drafting, sensitivity position change attribution, and the monthly IRRBB limit utilization report are structured tasks that repeat on a known cycle with a consistent analytical framework and stable output format. GenAI can draft from model outputs with ALM officer review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Rate scenario assumptions used in prior IRRBB cycles — their accuracy relative to realized rates, and the accuracy of behavioral deposit modeling assumptions — are rarely fed back systematically into the model calibration process. BCBS 368 Principle 5 (behavioral assumption governance) calls for regular backtesting, but the findings rarely loop back into the cycle's assumption setting.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>NII and EVE sensitivity is measured monthly. Intra-month balance-sheet movements — deposit repricing events, large fixed-rate loan originations, significant hedge maturities — that alter the IRRBB position between measurements are not reflected in the continuous management picture.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>ALCO scenario exploration at each meeting is constrained by the time required to produce each rate scenario run. Alternative balance-sheet positioning strategies — different hedge tenors, different deposit pricing assumptions, different origination mix — are rarely explored with quantitative depth before the ALCO decision.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>ALCO rate narrative drafting, sensitivity position change attribution, and the monthly IRRBB limit utilization report are structured tasks that repeat on a known cycle with a consistent analytical framework and stable output format. GenAI can draft from model outputs with ALM officer review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Rate scenario assumptions used in prior IRRBB cycles — their accuracy relative to realized rates, and the accuracy of behavioral deposit modeling assumptions — are rarely fed back systematically into the model calibration process. BCBS 368 Principle 5 (behavioral assumption governance) calls for regular backtesting, but the findings rarely loop back into the cycle's assumption setting.</p></article></div>
     </section>
     
 
@@ -887,7 +839,7 @@ The manual re-run takes one to two weeks after close, delaying the revised full-
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--measure">
     <span class="flow-stages__stage-label">Measure</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -899,7 +851,7 @@ The manual re-run takes one to two weeks after close, delaying the revised full-
     type="button"
     data-stage="analyze"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--analyze">
     <span class="flow-stages__stage-label">Analyze</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -911,7 +863,7 @@ The manual re-run takes one to two weeks after close, delaying the revised full-
     type="button"
     data-stage="decide"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--decide">
     <span class="flow-stages__stage-label">Decide</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -923,7 +875,7 @@ The manual re-run takes one to two weeks after close, delaying the revised full-
     type="button"
     data-stage="hedge"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--hedge">
     <span class="flow-stages__stage-label">Execute hedges</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -935,7 +887,7 @@ The manual re-run takes one to two weeks after close, delaying the revised full-
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--monitor">
     <span class="flow-stages__stage-label">Monitor</span>
     
   </button>
@@ -979,7 +931,7 @@ The manual re-run takes one to two weeks after close, delaying the revised full-
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/intra-month-irrbb-position-signal" id="scenario-intra-month-irrbb-position-signal">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/intra-month-irrbb-position-signal" id="scenario-intra-month-irrbb-position-signal" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1055,7 +1007,7 @@ Intra-month balance-sheet movements that alter the IRRBB position between measur
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/ftp-rate-curve-attribution-brief" id="scenario-ftp-rate-curve-attribution-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/ftp-rate-curve-attribution-brief" id="scenario-ftp-rate-curve-attribution-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1131,7 +1083,7 @@ The attribution brief is typically available late in the ALCO pack production wi
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-irrbb-pack-narrative-drafting" id="scenario-alco-irrbb-pack-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-irrbb-pack-narrative-drafting" id="scenario-alco-irrbb-pack-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1207,7 +1159,7 @@ The rate narrative and sensitivity attribution are drafted manually; the time pr
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-balance-sheet-positioning-scenarios" id="scenario-alco-balance-sheet-positioning-scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-balance-sheet-positioning-scenarios" id="scenario-alco-balance-sheet-positioning-scenarios" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1283,7 +1235,7 @@ Alternative strategies — different hedge tenors, modified deposit pricing assu
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/bcbs368-behavioural-assumption-backtesting" id="scenario-bcbs368-behavioural-assumption-backtesting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/bcbs368-behavioural-assumption-backtesting" id="scenario-bcbs368-behavioural-assumption-backtesting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1383,31 +1335,7 @@ Alternative strategies — different hedge tenors, modified deposit pricing assu
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">LCR and NSFR are calculated daily, but the forward-looking liquidity picture — survival horizon under stress, funding maturity cliff analysis, deposit concentration trend — is assembled monthly for ALCO. Management lacks a continuous-form view of liquidity adequacy margin between formal committee reviews.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">ILAAP stress scenario design and the monthly operational stress scenarios operate on separate assumptions and run on separate cadences. Aligning the operational monthly cycle with the annual ILAAP design would reduce the duplication of stress modeling effort and improve the ILAAP's credibility with the supervisor.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Daily LCR/NSFR exception commentary, monthly ALCO liquidity narrative, ILAAP document sections, and Contingency Funding Plan updates are structured narrative tasks with consistent frameworks that repeat on known cycles. LCR, NSFR, and ILAAP disclosure sections follow prescribed formats amenable to AI-assisted drafting.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Behavioral assumptions for demand deposits, credit line drawdown rates, and contingent outflows are calibrated annually from historical data but are rarely backtested continuously against realized behavior within the year. ILAAP submissions that rely on stale behavioral assumptions accumulate model risk that supervisors increasingly challenge.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>LCR and NSFR are calculated daily, but the forward-looking liquidity picture — survival horizon under stress, funding maturity cliff analysis, deposit concentration trend — is assembled monthly for ALCO. Management lacks a continuous-form view of liquidity adequacy margin between formal committee reviews.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>ILAAP stress scenario design and the monthly operational stress scenarios operate on separate assumptions and run on separate cadences. Aligning the operational monthly cycle with the annual ILAAP design would reduce the duplication of stress modeling effort and improve the ILAAP's credibility with the supervisor.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Daily LCR/NSFR exception commentary, monthly ALCO liquidity narrative, ILAAP document sections, and Contingency Funding Plan updates are structured narrative tasks with consistent frameworks that repeat on known cycles. LCR, NSFR, and ILAAP disclosure sections follow prescribed formats amenable to AI-assisted drafting.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Behavioral assumptions for demand deposits, credit line drawdown rates, and contingent outflows are calibrated annually from historical data but are rarely backtested continuously against realized behavior within the year. ILAAP submissions that rely on stale behavioral assumptions accumulate model risk that supervisors increasingly challenge.</p></article></div>
     </section>
     
 
@@ -1429,7 +1357,7 @@ Alternative strategies — different hedge tenors, modified deposit pricing assu
     type="button"
     data-stage="forecast"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--forecast">
     <span class="flow-stages__stage-label">Forecast</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1441,7 +1369,7 @@ Alternative strategies — different hedge tenors, modified deposit pricing assu
     type="button"
     data-stage="stress"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--stress">
     <span class="flow-stages__stage-label">Stress</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1453,7 +1381,7 @@ Alternative strategies — different hedge tenors, modified deposit pricing assu
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--plan">
     <span class="flow-stages__stage-label">Plan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1465,7 +1393,7 @@ Alternative strategies — different hedge tenors, modified deposit pricing assu
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--report">
     <span class="flow-stages__stage-label">Report</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1477,7 +1405,7 @@ Alternative strategies — different hedge tenors, modified deposit pricing assu
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--adjust">
     <span class="flow-stages__stage-label">Adjust</span>
     
   </button>
@@ -1521,7 +1449,7 @@ Alternative strategies — different hedge tenors, modified deposit pricing assu
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/daily-lcr-nsfr-exception-commentary" id="scenario-daily-lcr-nsfr-exception-commentary">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/daily-lcr-nsfr-exception-commentary" id="scenario-daily-lcr-nsfr-exception-commentary" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1597,7 +1525,7 @@ On days with material ratio movements, the commentary production consumes one to
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/continuous-liquidity-position-monitoring" id="scenario-continuous-liquidity-position-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/continuous-liquidity-position-monitoring" id="scenario-continuous-liquidity-position-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1673,7 +1601,7 @@ Compound deterioration signals that individually do not breach daily thresholds 
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-operational-stress-scenario-alignment" id="scenario-ilaap-operational-stress-scenario-alignment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-operational-stress-scenario-alignment" id="scenario-ilaap-operational-stress-scenario-alignment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1748,7 +1676,7 @@ Compound deterioration signals that individually do not breach daily thresholds 
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/alco-liquidity-pack-narrative-drafting" id="scenario-alco-liquidity-pack-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/alco-liquidity-pack-narrative-drafting" id="scenario-alco-liquidity-pack-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1824,7 +1752,7 @@ The draft is often available only one business day before the ALCO meeting.</p>
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-behavioural-assumption-backtesting" id="scenario-ilaap-behavioural-assumption-backtesting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-behavioural-assumption-backtesting" id="scenario-ilaap-behavioural-assumption-backtesting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1946,31 +1874,7 @@ The draft is often available only one business day before the ALCO meeting.</p>
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Close performance — exception volumes, late-submission counts, reconciliation duration by entity and sub-ledger — is reviewed informally at team level but not tracked systematically across close cycles. The Controllers team cannot measure which reconciliation steps are trending longer or which exception types are recurring without manual extraction from close task logs.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">The sequence of reconciliation tasks within the close cycle is managed by a close task tracker but is not dynamically prioritized. When a critical-path reconciliation is delayed, the re-sequencing of downstream tasks to minimize total close duration is performed by the close manager manually without analytical support.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Management accounts commentary, reconciliation exception triage commentary, and close task status reporting are structured, recurring production tasks. The narrative structure is stable across periods; only the current-period variance content changes. GenAI can draft from closed accounts data with Finance review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Recurring reconciliation exception types — the same GL-to-sub-ledger mismatch arising from the same system interface limitation each month — are resolved individually each close cycle without a root-cause fix being escalated through the systems improvement process. Close cycle exception history is not mined for systemic patterns.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Close performance — exception volumes, late-submission counts, reconciliation duration by entity and sub-ledger — is reviewed informally at team level but not tracked systematically across close cycles. The Controllers team cannot measure which reconciliation steps are trending longer or which exception types are recurring without manual extraction from close task logs.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>The sequence of reconciliation tasks within the close cycle is managed by a close task tracker but is not dynamically prioritized. When a critical-path reconciliation is delayed, the re-sequencing of downstream tasks to minimize total close duration is performed by the close manager manually without analytical support.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Management accounts commentary, reconciliation exception triage commentary, and close task status reporting are structured, recurring production tasks. The narrative structure is stable across periods; only the current-period variance content changes. GenAI can draft from closed accounts data with Finance review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Recurring reconciliation exception types — the same GL-to-sub-ledger mismatch arising from the same system interface limitation each month — are resolved individually each close cycle without a root-cause fix being escalated through the systems improvement process. Close cycle exception history is not mined for systemic patterns.</p></article></div>
     </section>
     
 
@@ -1992,7 +1896,7 @@ The draft is often available only one business day before the ALCO meeting.</p>
     type="button"
     data-stage="cutoff"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--cutoff">
     <span class="flow-stages__stage-label">Cut-off</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2004,7 +1908,7 @@ The draft is often available only one business day before the ALCO meeting.</p>
     type="button"
     data-stage="reconcile"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--reconcile">
     <span class="flow-stages__stage-label">Reconcile</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2016,7 +1920,7 @@ The draft is often available only one business day before the ALCO meeting.</p>
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--adjust">
     <span class="flow-stages__stage-label">Adjust</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2028,7 +1932,7 @@ The draft is often available only one business day before the ALCO meeting.</p>
     type="button"
     data-stage="close"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--close">
     <span class="flow-stages__stage-label">Close</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2040,7 +1944,7 @@ The draft is often available only one business day before the ALCO meeting.</p>
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--report">
     <span class="flow-stages__stage-label">Report</span>
     
   </button>
@@ -2084,7 +1988,7 @@ The draft is often available only one business day before the ALCO meeting.</p>
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/ifrs9-ecl-provision-commentary-drafting" id="scenario-ifrs9-ecl-provision-commentary-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/ifrs9-ecl-provision-commentary-drafting" id="scenario-ifrs9-ecl-provision-commentary-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2160,7 +2064,7 @@ Senior Finance and Risk input is applied under deadline pressure.</p>
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-performance-trend-analytics" id="scenario-close-performance-trend-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-performance-trend-analytics" id="scenario-close-performance-trend-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2236,7 +2140,7 @@ The Controllers team cannot readily identify which reconciliation steps are tren
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-reconciliation-exception-triage" id="scenario-close-reconciliation-exception-triage">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-reconciliation-exception-triage" id="scenario-close-reconciliation-exception-triage" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2312,7 +2216,7 @@ Recurring exceptions — the same mismatch arising from the same system interfac
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-critical-path-resequencing" id="scenario-close-critical-path-resequencing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-critical-path-resequencing" id="scenario-close-critical-path-resequencing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2387,7 +2291,7 @@ Recurring exceptions — the same mismatch arising from the same system interfac
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/management-accounts-commentary-production" id="scenario-management-accounts-commentary-production">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/management-accounts-commentary-production" id="scenario-management-accounts-commentary-production" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2490,31 +2394,7 @@ The narrative structure is largely consistent across periods; only the current-p
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Regulatory submission quality — validation failure rates, exception volumes, post-submission query frequencies — is monitored informally by the reporting team but not tracked in a structured form across submission cycles. The Head of Regulatory Reporting cannot produce a trend analysis of data quality improvement across returns without manual extraction from submission records.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">The validation exception queue is resolved sequentially by the reporting team each cycle, with priority set by exception severity and submission deadline proximity. Systematic patterns — the same source system consistently generating the same exception type — are identified informally rather than through a structured root-cause framework that could eliminate recurring exceptions at source.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Explanatory note drafting for validation exceptions, post-submission reconciliation commentary, supervisory query response packs, and the standard narrative sections of regulatory returns (management commentary, methodology disclosures) are structured, recurring writing tasks with consistent frameworks. BCBS 239 lineage documentation follows a traceable path from source to report field that an AI agent can traverse systematically.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Supervisory queries from prior submission cycles — which data points were challenged, which explanations were accepted, which methodology clarifications were requested — are held in individual query files rather than in a structured knowledge base. The reporting team repeats the investigation and drafting effort for similar queries across cycles without a shared institutional response library.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Regulatory submission quality — validation failure rates, exception volumes, post-submission query frequencies — is monitored informally by the reporting team but not tracked in a structured form across submission cycles. The Head of Regulatory Reporting cannot produce a trend analysis of data quality improvement across returns without manual extraction from submission records.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>The validation exception queue is resolved sequentially by the reporting team each cycle, with priority set by exception severity and submission deadline proximity. Systematic patterns — the same source system consistently generating the same exception type — are identified informally rather than through a structured root-cause framework that could eliminate recurring exceptions at source.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Explanatory note drafting for validation exceptions, post-submission reconciliation commentary, supervisory query response packs, and the standard narrative sections of regulatory returns (management commentary, methodology disclosures) are structured, recurring writing tasks with consistent frameworks. BCBS 239 lineage documentation follows a traceable path from source to report field that an AI agent can traverse systematically.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Supervisory queries from prior submission cycles — which data points were challenged, which explanations were accepted, which methodology clarifications were requested — are held in individual query files rather than in a structured knowledge base. The reporting team repeats the investigation and drafting effort for similar queries across cycles without a shared institutional response library.</p></article></div>
     </section>
     
 
@@ -2536,7 +2416,7 @@ The narrative structure is largely consistent across periods; only the current-p
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--aggregate">
     <span class="flow-stages__stage-label">Aggregate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2548,7 +2428,7 @@ The narrative structure is largely consistent across periods; only the current-p
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--validate">
     <span class="flow-stages__stage-label">Validate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2560,7 +2440,7 @@ The narrative structure is largely consistent across periods; only the current-p
     type="button"
     data-stage="submit"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--submit">
     <span class="flow-stages__stage-label">Submit</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2572,7 +2452,7 @@ The narrative structure is largely consistent across periods; only the current-p
     type="button"
     data-stage="reconcile"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--reconcile">
     <span class="flow-stages__stage-label">Reconcile</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2584,7 +2464,7 @@ The narrative structure is largely consistent across periods; only the current-p
     type="button"
     data-stage="audit"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--audit">
     <span class="flow-stages__stage-label">Audit &amp; respond</span>
     
   </button>
@@ -2628,7 +2508,7 @@ The narrative structure is largely consistent across periods; only the current-p
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-submission-pre-dispatch-quality-gate" id="scenario-regulatory-submission-pre-dispatch-quality-gate">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-submission-pre-dispatch-quality-gate" id="scenario-regulatory-submission-pre-dispatch-quality-gate" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2701,7 +2581,7 @@ The narrative structure is largely consistent across periods; only the current-p
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-reporting-quality-trend-analytics" id="scenario-regulatory-reporting-quality-trend-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-reporting-quality-trend-analytics" id="scenario-regulatory-reporting-quality-trend-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2776,7 +2656,7 @@ The narrative structure is largely consistent across periods; only the current-p
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-validation-exception-triage" id="scenario-regulatory-validation-exception-triage">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-validation-exception-triage" id="scenario-regulatory-validation-exception-triage" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2850,7 +2730,7 @@ Recurring exceptions — the same source system generating the same data quality
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/bcbs239-lineage-documentation-maintenance" id="scenario-bcbs239-lineage-documentation-maintenance">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/bcbs239-lineage-documentation-maintenance" id="scenario-bcbs239-lineage-documentation-maintenance" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2924,7 +2804,7 @@ Reconstructing lineage for a supervisory query requires the reporting team to tr
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/supervisory-query-response-knowledge-base" id="scenario-supervisory-query-response-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/supervisory-query-response-knowledge-base" id="scenario-supervisory-query-response-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">

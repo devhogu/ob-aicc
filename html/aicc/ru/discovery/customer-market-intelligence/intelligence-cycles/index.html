@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -297,31 +297,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Паттерны миграции между сегментами и поведенческие сдвиги, сигнализирующие об устаревании модели сегментации, становятся видны только на границе ежегодного или квартального цикла обновления. Непрерывный мониторинг стабильности распределения по сегментам — выявление поведенческого дрейфа когорт до достижения формального триггера обновления — отсутствует в стандартном операционном цикле разведки.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Калибровка модели сегментации — какие переменные обеспечивают дифференциацию сегментов, каково оптимальное количество сегментов, формирует ли модель коммерчески применимые границы — оценивается неформально командой по науке о данных при каждом обновлении. Структурированное сравнение моделей (альтернативные подходы к сегментации, различные наборы переменных, разное количество кластеров) редко проводится между основными циклами обновления.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Документация по оценке стабильности сегментов, подготовка пакетов для согласования с органами управления и передача обновлённых определений сегментов командам-потребителям — это структурированные, повторяющиеся задачи с последовательным форматом в каждом цикле. Каждая из них подходит для подготовки с участием агента при последующей проверке командами по науке о данных и управлению рисками.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Ретроспективные выводы по обновлению сегментов — какие сегменты оказались нестабильными, какие изменения границ впоследствии были отменены, какие переменные модели дрейфовали — не фиксируются в структурированном виде для улучшения дизайна модели следующего цикла. Банк воссоздаёт один и тот же аналитический фреймворк при каждом обновлении, не накапливая институциональные знания в области моделирования.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Паттерны миграции между сегментами и поведенческие сдвиги, сигнализирующие об устаревании модели сегментации, становятся видны только на границе ежегодного или квартального цикла обновления. Непрерывный мониторинг стабильности распределения по сегментам — выявление поведенческого дрейфа когорт до достижения формального триггера обновления — отсутствует в стандартном операционном цикле разведки.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Калибровка модели сегментации — какие переменные обеспечивают дифференциацию сегментов, каково оптимальное количество сегментов, формирует ли модель коммерчески применимые границы — оценивается неформально командой по науке о данных при каждом обновлении. Структурированное сравнение моделей (альтернативные подходы к сегментации, различные наборы переменных, разное количество кластеров) редко проводится между основными циклами обновления.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Документация по оценке стабильности сегментов, подготовка пакетов для согласования с органами управления и передача обновлённых определений сегментов командам-потребителям — это структурированные, повторяющиеся задачи с последовательным форматом в каждом цикле. Каждая из них подходит для подготовки с участием агента при последующей проверке командами по науке о данных и управлению рисками.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Ретроспективные выводы по обновлению сегментов — какие сегменты оказались нестабильными, какие изменения границ впоследствии были отменены, какие переменные модели дрейфовали — не фиксируются в структурированном виде для улучшения дизайна модели следующего цикла. Банк воссоздаёт один и тот же аналитический фреймворк при каждом обновлении, не накапливая институциональные знания в области моделирования.</p></article></div>
     </section>
     
 
@@ -343,7 +319,7 @@
     type="button"
     data-stage="sample"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--sample">
     <span class="flow-stages__stage-label">Выборка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -355,7 +331,7 @@
     type="button"
     data-stage="analyze"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--analyze">
     <span class="flow-stages__stage-label">Анализ</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -367,7 +343,7 @@
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--validate">
     <span class="flow-stages__stage-label">Валидация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -379,7 +355,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--approve">
     <span class="flow-stages__stage-label">Утверждение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -391,7 +367,7 @@
     type="button"
     data-stage="deploy"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--deploy">
     <span class="flow-stages__stage-label">Развёртывание</span>
     
   </button>
@@ -435,7 +411,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-governance-pack-drafting" id="scenario-segmentation-governance-pack-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-governance-pack-drafting" id="scenario-segmentation-governance-pack-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -510,7 +486,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-cycle-retrospective" id="scenario-segmentation-cycle-retrospective">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-cycle-retrospective" id="scenario-segmentation-cycle-retrospective" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -585,7 +561,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segment-stability-continuous-monitor" id="scenario-segment-stability-continuous-monitor">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segment-stability-continuous-monitor" id="scenario-segment-stability-continuous-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -660,7 +636,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-model-calibration-sandbox" id="scenario-segmentation-model-calibration-sandbox">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-model-calibration-sandbox" id="scenario-segmentation-model-calibration-sandbox" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -760,31 +736,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Риск оттока клиентов накапливается в данных о поведении клиентов в промежутках между ежемесячными расчётными циклами. Непрерывный мониторинг индивидуальных сигналов вовлечённости клиентов — движение средств, частота транзакций, взаимодействие с продуктами — позволил бы банку реагировать на риск оттока до того, как когорта сформирует окончательное решение. Такой подход в непрерывном режиме не является стандартом для розничных операций на рынках СНГ.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Калибровка предложений по удержанию — какие предложения обеспечивают наибольшую долю сохранённых клиентов для тех или иных профилей риска — управляется на основе качественного опыта кампаний, а не структурированного A/B-тестирования в масштабе. Банк не может систематически оптимизировать набор предложений, поскольку атрибуция результатов при одновременно проводимых кампаниях не отслеживается с требуемой детализацией.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Профилирование когорт под риском, подготовка брифингов по удержанию, разработка вариантов контента кампаний и подготовка отчётов об отслеживании результатов — это структурированные, повторяющиеся задачи с последовательной схемой в каждом цикле. Каждая из них подходит для подготовки с участием агента, при этом экспертная оценка команды удержания концентрируется на разработке мер воздействия и решениях об эскалации.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты мер по удержанию и паттерны факторов оттока клиентов накапливаются из цикла в цикл, но не организованы в институциональную базу знаний, улучшающую проектирование следующих циклов. Понимание банком динамики оттока своих клиентов воссоздаётся неформально тем аналитиком, который ведёт текущий цикл, а не на основе накопленных записей о динамике удержания.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Риск оттока клиентов накапливается в данных о поведении клиентов в промежутках между ежемесячными расчётными циклами. Непрерывный мониторинг индивидуальных сигналов вовлечённости клиентов — движение средств, частота транзакций, взаимодействие с продуктами — позволил бы банку реагировать на риск оттока до того, как когорта сформирует окончательное решение. Такой подход в непрерывном режиме не является стандартом для розничных операций на рынках СНГ.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Калибровка предложений по удержанию — какие предложения обеспечивают наибольшую долю сохранённых клиентов для тех или иных профилей риска — управляется на основе качественного опыта кампаний, а не структурированного A/B-тестирования в масштабе. Банк не может систематически оптимизировать набор предложений, поскольку атрибуция результатов при одновременно проводимых кампаниях не отслеживается с требуемой детализацией.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Профилирование когорт под риском, подготовка брифингов по удержанию, разработка вариантов контента кампаний и подготовка отчётов об отслеживании результатов — это структурированные, повторяющиеся задачи с последовательной схемой в каждом цикле. Каждая из них подходит для подготовки с участием агента, при этом экспертная оценка команды удержания концентрируется на разработке мер воздействия и решениях об эскалации.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты мер по удержанию и паттерны факторов оттока клиентов накапливаются из цикла в цикл, но не организованы в институциональную базу знаний, улучшающую проектирование следующих циклов. Понимание банком динамики оттока своих клиентов воссоздаётся неформально тем аналитиком, который ведёт текущий цикл, а не на основе накопленных записей о динамике удержания.</p></article></div>
     </section>
     
 
@@ -806,7 +758,7 @@
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--detect">
     <span class="flow-stages__stage-label">Выявление</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -818,7 +770,7 @@
     type="button"
     data-stage="diagnose"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--diagnose">
     <span class="flow-stages__stage-label">Диагностика</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -830,7 +782,7 @@
     type="button"
     data-stage="engage"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--engage">
     <span class="flow-stages__stage-label">Вовлечение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -842,7 +794,7 @@
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--track">
     <span class="flow-stages__stage-label">Отслеживание</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -854,7 +806,7 @@
     type="button"
     data-stage="learn"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--learn">
     <span class="flow-stages__stage-label">Обучение</span>
     
   </button>
@@ -898,7 +850,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-cohort-profiling-brief" id="scenario-retention-cohort-profiling-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-cohort-profiling-brief" id="scenario-retention-cohort-profiling-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -973,7 +925,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/real-time-churn-signal-detection" id="scenario-real-time-churn-signal-detection">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/real-time-churn-signal-detection" id="scenario-real-time-churn-signal-detection" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1048,7 +1000,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-offer-ab-optimisation" id="scenario-retention-offer-ab-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-offer-ab-optimisation" id="scenario-retention-offer-ab-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1123,7 +1075,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intervention-personalisation" id="scenario-retention-intervention-personalisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intervention-personalisation" id="scenario-retention-intervention-personalisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1198,7 +1150,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intelligence-knowledge-base" id="scenario-retention-intelligence-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intelligence-knowledge-base" id="scenario-retention-intelligence-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1320,31 +1272,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Конкурентная среда оценивается в границах квартального цикла брифингов. Изменения рыночной доли, запуски продуктов конкурентами и ценовые манипуляции, происходящие между брифинговыми циклами, накапливаются без структурированного механизма ранней эскалации. Коммерческие решения, принимаемые между брифинговыми циклами, принимаются без актуального конкурентного контекста.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Охват конкурентной разведки — за какими конкурентами наблюдать, каким сигналам отдавать приоритет, какие аналитические фреймворки применять — устанавливается стратегической командой на основе текущих приоритетов руководства. Систематическая оптимизация охвата (обеспечение пропорционального покрытия высокосигнальных источников с учётом их конкурентной значимости) не проводится; пробелы в источниках и охвате накапливаются со временем.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Агрегирование сигналов, подготовка сводок по конкретным конкурентам, выявление межконкурентных тем и формирование вариантов брифингов для разных аудиторий — это структурированные, повторяющиеся производственные задачи. Каждая из них воспроизводит последовательную структуру в каждом цикле; переменная составляющая — это содержание сигналов текущего цикла. Они являются сильными кандидатами для подготовки с участием агента и последующей редакционной проверкой стратегической команды.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Брифинги по конкурентной разведке из предыдущих циклов вместе с последующими коммерческими результатами оценённых конкурентных манипуляций формируют накопленную базу доказательств для калибровки значимости конкурентных сигналов. Эта ретроспективная база не организована систематически для повышения точности конкурентного анализа следующего цикла.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Конкурентная среда оценивается в границах квартального цикла брифингов. Изменения рыночной доли, запуски продуктов конкурентами и ценовые манипуляции, происходящие между брифинговыми циклами, накапливаются без структурированного механизма ранней эскалации. Коммерческие решения, принимаемые между брифинговыми циклами, принимаются без актуального конкурентного контекста.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Охват конкурентной разведки — за какими конкурентами наблюдать, каким сигналам отдавать приоритет, какие аналитические фреймворки применять — устанавливается стратегической командой на основе текущих приоритетов руководства. Систематическая оптимизация охвата (обеспечение пропорционального покрытия высокосигнальных источников с учётом их конкурентной значимости) не проводится; пробелы в источниках и охвате накапливаются со временем.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Агрегирование сигналов, подготовка сводок по конкретным конкурентам, выявление межконкурентных тем и формирование вариантов брифингов для разных аудиторий — это структурированные, повторяющиеся производственные задачи. Каждая из них воспроизводит последовательную структуру в каждом цикле; переменная составляющая — это содержание сигналов текущего цикла. Они являются сильными кандидатами для подготовки с участием агента и последующей редакционной проверкой стратегической команды.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Брифинги по конкурентной разведке из предыдущих циклов вместе с последующими коммерческими результатами оценённых конкурентных манипуляций формируют накопленную базу доказательств для калибровки значимости конкурентных сигналов. Эта ретроспективная база не организована систематически для повышения точности конкурентного анализа следующего цикла.</p></article></div>
     </section>
     
 
@@ -1366,7 +1294,7 @@
     type="button"
     data-stage="scan"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--scan">
     <span class="flow-stages__stage-label">Сканирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1378,7 +1306,7 @@
     type="button"
     data-stage="analyze"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--analyze">
     <span class="flow-stages__stage-label">Анализ</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1390,7 +1318,7 @@
     type="button"
     data-stage="synthesize"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--synthesize">
     <span class="flow-stages__stage-label">Синтез</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1402,7 +1330,7 @@
     type="button"
     data-stage="brief"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--brief">
     <span class="flow-stages__stage-label">Брифинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1414,7 +1342,7 @@
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--track">
     <span class="flow-stages__stage-label">Отслеживание</span>
     
   </button>
@@ -1458,7 +1386,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-signal-continuous-scan" id="scenario-competitive-signal-continuous-scan">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-signal-continuous-scan" id="scenario-competitive-signal-continuous-scan" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1533,7 +1461,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-brief-audience-variants" id="scenario-competitive-brief-audience-variants">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-brief-audience-variants" id="scenario-competitive-brief-audience-variants" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1608,7 +1536,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-coverage-gap-audit" id="scenario-competitive-coverage-gap-audit">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-coverage-gap-audit" id="scenario-competitive-coverage-gap-audit" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1683,7 +1611,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-intelligence-evidence-base" id="scenario-competitive-intelligence-evidence-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-intelligence-evidence-base" id="scenario-competitive-intelligence-evidence-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1783,31 +1711,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Бренд-сигналы накапливаются в каналах мониторинга в промежутках между отчётными циклами. Существенные изменения тональности, зарождающиеся в социальных сетях или Telegram-каналах и перерастающие в комментарии прессы или регуляторов, проходят начальные стадии без осведомлённости руководства. Мониторинг бренд-сигналов в непрерывном режиме позволил бы банку реагировать на этапе раннего предупреждения, а не после эскалации.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Охват источников мониторинга бренда — какие каналы отслеживать, с какой периодичностью, при каком пороге соотношения сигнала и шума — определяется текущей конфигурацией инструментов мониторинга и рутинными практиками аналитиков. Пробелы в охвате (неотслеживаемые Telegram-каналы, платформы-агрегаторы жалоб, региональные новостные источники) накапливаются без систематического аудита; банк обнаруживает пробелы в источниках только тогда, когда существенный сигнал поступает через неотслеживаемый канал.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Агрегирование сигналов, категоризация, оценка тональности, подготовка сводок трендов и генерация оповещений — это структурированные, повторяющиеся задачи с чёткими критериями. Каждая из них подходит для обработки с участием агента, что сокращает интервал от сигнала до осведомлённости руководства с нескольких дней до нескольких часов.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Тренды тональности бренда и их корреляция с downstream-показателями — темпами привлечения клиентов, объёмом жалоб, динамикой депозитов — не анализируются систематически для построения прогностической модели влияния бренда на коммерческие результаты. Функция бренда отслеживает тональность как самоцель, а не как опережающий индикатор коммерческих и репутационных результатов.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Бренд-сигналы накапливаются в каналах мониторинга в промежутках между отчётными циклами. Существенные изменения тональности, зарождающиеся в социальных сетях или Telegram-каналах и перерастающие в комментарии прессы или регуляторов, проходят начальные стадии без осведомлённости руководства. Мониторинг бренд-сигналов в непрерывном режиме позволил бы банку реагировать на этапе раннего предупреждения, а не после эскалации.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Охват источников мониторинга бренда — какие каналы отслеживать, с какой периодичностью, при каком пороге соотношения сигнала и шума — определяется текущей конфигурацией инструментов мониторинга и рутинными практиками аналитиков. Пробелы в охвате (неотслеживаемые Telegram-каналы, платформы-агрегаторы жалоб, региональные новостные источники) накапливаются без систематического аудита; банк обнаруживает пробелы в источниках только тогда, когда существенный сигнал поступает через неотслеживаемый канал.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Агрегирование сигналов, категоризация, оценка тональности, подготовка сводок трендов и генерация оповещений — это структурированные, повторяющиеся задачи с чёткими критериями. Каждая из них подходит для обработки с участием агента, что сокращает интервал от сигнала до осведомлённости руководства с нескольких дней до нескольких часов.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Тренды тональности бренда и их корреляция с downstream-показателями — темпами привлечения клиентов, объёмом жалоб, динамикой депозитов — не анализируются систематически для построения прогностической модели влияния бренда на коммерческие результаты. Функция бренда отслеживает тональность как самоцель, а не как опережающий индикатор коммерческих и репутационных результатов.</p></article></div>
     </section>
     
 
@@ -1829,7 +1733,7 @@
     type="button"
     data-stage="listen"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--listen">
     <span class="flow-stages__stage-label">Мониторинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1841,7 +1745,7 @@
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--aggregate">
     <span class="flow-stages__stage-label">Агрегация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1853,7 +1757,7 @@
     type="button"
     data-stage="analyze"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--analyze">
     <span class="flow-stages__stage-label">Анализ</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1865,7 +1769,7 @@
     type="button"
     data-stage="alert"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--alert">
     <span class="flow-stages__stage-label">Оповещение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1877,7 +1781,7 @@
     type="button"
     data-stage="respond"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--respond">
     <span class="flow-stages__stage-label">Реагирование</span>
     
   </button>
@@ -1921,7 +1825,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-signal-continuous-aggregation" id="scenario-brand-signal-continuous-aggregation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-signal-continuous-aggregation" id="scenario-brand-signal-continuous-aggregation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1996,7 +1900,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-materiality-alert-calibration" id="scenario-brand-materiality-alert-calibration">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-materiality-alert-calibration" id="scenario-brand-materiality-alert-calibration" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2071,7 +1975,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-response-protocol-assistant" id="scenario-brand-response-protocol-assistant">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-response-protocol-assistant" id="scenario-brand-response-protocol-assistant" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -2146,7 +2050,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-commercial-impact-model" id="scenario-brand-commercial-impact-model">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-commercial-impact-model" id="scenario-brand-commercial-impact-model" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">

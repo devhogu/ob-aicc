@@ -1,7 +1,9 @@
 """Behaviour at the retained source -> independent neighbour page boundary."""
 from pathlib import Path
+import re
 import sys
 import unittest
+from urllib.parse import urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 import neighbours
@@ -39,6 +41,26 @@ class NeighbourRendering(unittest.TestCase):
         self.assertIn('не отобрано ни одной инициативы', (root / 'initiatives/ru/register.md').read_text())
         self.assertIn('**Status: proposal.**', (root / 'projects/en/service-resolution.md').read_text())
         self.assertIn('**Статус: предложение.**', (root / 'projects/ru/service-resolution.md').read_text())
+
+    def test_domain_preview_stage_links_reach_preserved_flow_actions(self):
+        renderer = neighbours.finance_renderer()
+        for lang in ('en', 'ru'):
+            with self.subTest(lang=lang):
+                route = Path('strategic-portfolio/index.html')
+                source = renderer.discovery_source(route, lang)
+                body = neighbours.discovery_page(source, route, lang)[2]
+                links = [urlsplit(link) for link in Inspection('<main>' + body + '</main>').main_links if '#stage-' in link]
+                self.assertTrue(links)
+                target = route.parent / links[0].path
+                original = renderer.discovery_source(target, lang)
+                projected = neighbours.discovery_page(original, target, lang)[2]
+                def identities(text):
+                    buttons = re.findall(r'<button\b[^>]*data-flow-id="[^"]+"[^>]*>', text)
+                    return [(re.search(r'data-flow-id="([^"]+)"', button)[1],
+                             re.search(r'data-stage="([^"]+)"', button)[1]) for button in buttons]
+                self.assertTrue(identities(original))
+                self.assertEqual(identities(original), identities(projected))
+                self.assertTrue(all(link.fragment in Inspection(projected).ids for link in links))
 
 
 if __name__ == '__main__':

@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -297,31 +297,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Segment migration patterns and behavioral shifts that signal a segmentation model becoming stale are visible only at the annual or quarterly refresh cycle boundary. Continuous monitoring of segment assignment stability — detecting cohort behavioral drift before it reaches the formal refresh trigger — is absent from the standard intelligence operating cycle.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Segmentation model calibration — which variables drive segment differentiation, what the optimal number of segments is, whether the model produces commercially actionable boundaries — is assessed informally by the data science team at each refresh. Structured model comparison (alternative segmentation approaches, different variable sets, different cluster counts) is rarely conducted between major refresh cycles.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Segment stability assessment documentation, governance approval pack production, and segment-definition communication to consuming teams are structured, recurring tasks that follow a consistent format each cycle. Each is amenable to AI-assisted drafting with data science and governance review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Segment refresh retrospective findings — which segments proved unstable, which boundary changes were later reversed, which model variables drifted — are not captured in a structured form that improves the design of the next cycle's model. The Bank reconstructs the same analytical framework each refresh cycle without building on what earlier cycles learned.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Segment migration patterns and behavioral shifts that signal a segmentation model becoming stale are visible only at the annual or quarterly refresh cycle boundary. Continuous monitoring of segment assignment stability — detecting cohort behavioral drift before it reaches the formal refresh trigger — is absent from the standard intelligence operating cycle.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Segmentation model calibration — which variables drive segment differentiation, what the optimal number of segments is, whether the model produces commercially actionable boundaries — is assessed informally by the data science team at each refresh. Structured model comparison (alternative segmentation approaches, different variable sets, different cluster counts) is rarely conducted between major refresh cycles.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Segment stability assessment documentation, governance approval pack production, and segment-definition communication to consuming teams are structured, recurring tasks that follow a consistent format each cycle. Each is amenable to AI-assisted drafting with data science and governance review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Segment refresh retrospective findings — which segments proved unstable, which boundary changes were later reversed, which model variables drifted — are not captured in a structured form that improves the design of the next cycle's model. The Bank reconstructs the same analytical framework each refresh cycle without building on what earlier cycles learned.</p></article></div>
     </section>
     
 
@@ -343,7 +319,7 @@ Question or comment:
     type="button"
     data-stage="sample"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--sample">
     <span class="flow-stages__stage-label">Sample</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -355,7 +331,7 @@ Question or comment:
     type="button"
     data-stage="analyze"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--analyze">
     <span class="flow-stages__stage-label">Analyze</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -367,7 +343,7 @@ Question or comment:
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--validate">
     <span class="flow-stages__stage-label">Validate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -379,7 +355,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -391,7 +367,7 @@ Question or comment:
     type="button"
     data-stage="deploy"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle"
-  >
+   id="stage-segmentation-refresh-cycle--deploy">
     <span class="flow-stages__stage-label">Deploy</span>
     
   </button>
@@ -435,7 +411,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-governance-pack-drafting" id="scenario-segmentation-governance-pack-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-governance-pack-drafting" id="scenario-segmentation-governance-pack-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -510,7 +486,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-cycle-retrospective" id="scenario-segmentation-cycle-retrospective">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-cycle-retrospective" id="scenario-segmentation-cycle-retrospective" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -585,7 +561,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segment-stability-continuous-monitor" id="scenario-segment-stability-continuous-monitor">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segment-stability-continuous-monitor" id="scenario-segment-stability-continuous-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -660,7 +636,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-model-calibration-sandbox" id="scenario-segmentation-model-calibration-sandbox">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/segmentation-refresh-cycle/segmentation-model-calibration-sandbox" id="scenario-segmentation-model-calibration-sandbox" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -760,31 +736,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Churn risk accumulates in customer behavior data between monthly scoring runs. Continuous monitoring of individual customer engagement signals — balance flows, transaction frequency, product interaction — would enable the Bank to act on retention risk before the customer has decided to leave. Such continuous monitoring is not yet standard practice in retail banking.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Retention offer calibration — which offers produce the highest save rate for which risk profiles — is managed through qualitative campaign experience rather than structured A/B testing at scale. The Bank cannot systematically optimize its offer mix because outcome attribution across simultaneous campaigns is not tracked at the required granularity.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">At-risk cohort profiling, retention brief preparation, campaign content variant drafting, and outcome tracking report production are structured, recurring tasks that follow a consistent pattern each cycle. Each is amenable to AI-assisted production, with retention team judgment concentrated on intervention design and escalation decisions.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Retention intervention outcomes and churn driver patterns accumulate across cycles but are not organized into an institutional knowledge base that improves subsequent cycle design. The Bank's understanding of its customers' churn dynamics is rebuilt informally by whichever analyst leads the current cycle rather than from a compounding retention intelligence record.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Churn risk accumulates in customer behavior data between monthly scoring runs. Continuous monitoring of individual customer engagement signals — balance flows, transaction frequency, product interaction — would enable the Bank to act on retention risk before the customer has decided to leave. Such continuous monitoring is not yet standard practice in retail banking.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Retention offer calibration — which offers produce the highest save rate for which risk profiles — is managed through qualitative campaign experience rather than structured A/B testing at scale. The Bank cannot systematically optimize its offer mix because outcome attribution across simultaneous campaigns is not tracked at the required granularity.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>At-risk cohort profiling, retention brief preparation, campaign content variant drafting, and outcome tracking report production are structured, recurring tasks that follow a consistent pattern each cycle. Each is amenable to AI-assisted production, with retention team judgment concentrated on intervention design and escalation decisions.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Retention intervention outcomes and churn driver patterns accumulate across cycles but are not organized into an institutional knowledge base that improves subsequent cycle design. The Bank's understanding of its customers' churn dynamics is rebuilt informally by whichever analyst leads the current cycle rather than from a compounding retention intelligence record.</p></article></div>
     </section>
     
 
@@ -806,7 +758,7 @@ Question or comment:
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--detect">
     <span class="flow-stages__stage-label">Detect</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -818,7 +770,7 @@ Question or comment:
     type="button"
     data-stage="diagnose"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--diagnose">
     <span class="flow-stages__stage-label">Diagnose</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -830,7 +782,7 @@ Question or comment:
     type="button"
     data-stage="engage"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--engage">
     <span class="flow-stages__stage-label">Engage</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -842,7 +794,7 @@ Question or comment:
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--track">
     <span class="flow-stages__stage-label">Track</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -854,7 +806,7 @@ Question or comment:
     type="button"
     data-stage="learn"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/retention-review-cycle"
-  >
+   id="stage-retention-review-cycle--learn">
     <span class="flow-stages__stage-label">Learn</span>
     
   </button>
@@ -898,7 +850,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-cohort-profiling-brief" id="scenario-retention-cohort-profiling-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-cohort-profiling-brief" id="scenario-retention-cohort-profiling-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -971,7 +923,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/real-time-churn-signal-detection" id="scenario-real-time-churn-signal-detection">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/real-time-churn-signal-detection" id="scenario-real-time-churn-signal-detection" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1046,7 +998,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-offer-ab-optimisation" id="scenario-retention-offer-ab-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-offer-ab-optimisation" id="scenario-retention-offer-ab-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1119,7 +1071,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intervention-personalisation" id="scenario-retention-intervention-personalisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intervention-personalisation" id="scenario-retention-intervention-personalisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1194,7 +1146,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intelligence-knowledge-base" id="scenario-retention-intelligence-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/retention-review-cycle/retention-intelligence-knowledge-base" id="scenario-retention-intelligence-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1316,31 +1268,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">The competitive landscape is assessed at quarterly briefing cycle boundaries. Market-share shifts, competitor product launches, and pricing moves that occur between briefing cycles accumulate without a structured early-escalation mechanism. Commercial decisions made between briefing cycles are made without current competitive context.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Competitive intelligence scope — which competitors to monitor, which signals to prioritize, which analytical frameworks to apply — is set by the strategy team based on current management priorities. Systematic coverage optimization (ensuring high-signal sources are covered proportionally to their competitive significance) is not performed; source and coverage gaps accumulate over time.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Signal aggregation, competitor-specific summary production, cross-competitor theme extraction, and briefing-format variants for different audiences are all structured, recurring production tasks. Each follows a consistent structure across cycles; the variable is the current-cycle signal content. These are strong candidates for AI-assisted production with strategy team editorial review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Competitive intelligence briefs from prior cycles, together with the subsequent commercial outcomes of the competitive moves that were assessed, represent a cumulative evidence base for calibrating competitive signal significance. This retrospective evidence is not systematically organized to improve the accuracy of the next cycle&#39;s competitive assessment.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The competitive landscape is assessed at quarterly briefing cycle boundaries. Market-share shifts, competitor product launches, and pricing moves that occur between briefing cycles accumulate without a structured early-escalation mechanism. Commercial decisions made between briefing cycles are made without current competitive context.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Competitive intelligence scope — which competitors to monitor, which signals to prioritize, which analytical frameworks to apply — is set by the strategy team based on current management priorities. Systematic coverage optimization (ensuring high-signal sources are covered proportionally to their competitive significance) is not performed; source and coverage gaps accumulate over time.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Signal aggregation, competitor-specific summary production, cross-competitor theme extraction, and briefing-format variants for different audiences are all structured, recurring production tasks. Each follows a consistent structure across cycles; the variable is the current-cycle signal content. These are strong candidates for AI-assisted production with strategy team editorial review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Competitive intelligence briefs from prior cycles, together with the subsequent commercial outcomes of the competitive moves that were assessed, represent a cumulative evidence base for calibrating competitive signal significance. This retrospective evidence is not systematically organized to improve the accuracy of the next cycle&#39;s competitive assessment.</p></article></div>
     </section>
     
 
@@ -1362,7 +1290,7 @@ Question or comment:
     type="button"
     data-stage="scan"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--scan">
     <span class="flow-stages__stage-label">Scan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1374,7 +1302,7 @@ Question or comment:
     type="button"
     data-stage="analyze"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--analyze">
     <span class="flow-stages__stage-label">Analyze</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1386,7 +1314,7 @@ Question or comment:
     type="button"
     data-stage="synthesize"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--synthesize">
     <span class="flow-stages__stage-label">Synthesize</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1398,7 +1326,7 @@ Question or comment:
     type="button"
     data-stage="brief"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--brief">
     <span class="flow-stages__stage-label">Brief</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1410,7 +1338,7 @@ Question or comment:
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle"
-  >
+   id="stage-competitive-intelligence-cycle--track">
     <span class="flow-stages__stage-label">Track</span>
     
   </button>
@@ -1454,7 +1382,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-signal-continuous-scan" id="scenario-competitive-signal-continuous-scan">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-signal-continuous-scan" id="scenario-competitive-signal-continuous-scan" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1527,7 +1455,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-brief-audience-variants" id="scenario-competitive-brief-audience-variants">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-brief-audience-variants" id="scenario-competitive-brief-audience-variants" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1602,7 +1530,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-coverage-gap-audit" id="scenario-competitive-coverage-gap-audit">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-coverage-gap-audit" id="scenario-competitive-coverage-gap-audit" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1675,7 +1603,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-intelligence-evidence-base" id="scenario-competitive-intelligence-evidence-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/competitive-intelligence-cycle/competitive-intelligence-evidence-base" id="scenario-competitive-intelligence-evidence-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1775,31 +1703,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Brand signals accumulate across monitoring channels between reporting cycles. Significant sentiment shifts that begin in social media or Telegram channels and escalate to press or regulatory commentary progress through their early stages without management awareness. A continuous-form brand signal posture would enable the Bank to respond at the early-warning phase rather than after the escalation.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Brand monitoring source coverage — which channels to monitor, with what frequency, at what signal-to-noise threshold — is set by the current monitoring tool configuration and analyst routine. Coverage gaps (unmonitored Telegram channels, complaint aggregator platforms, regional news sources) accumulate without a systematic coverage audit; the Bank discovers source gaps when a material signal surfaces through an unmonitored channel.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Signal aggregation, categorization, sentiment scoring, trend summary production, and alert generation are all structured, recurring tasks with defined criteria. Each is amenable to AI-assisted processing that compresses the signal-to-management-awareness interval from days to hours.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Brand sentiment trends and their correlation with downstream outcomes — customer acquisition rate, complaint volume, deposit flow — are not analyzed systematically to build a predictive model of brand impact on commercial performance. The brand function tracks sentiment as an end in itself rather than as a leading indicator of commercial and reputational outcomes.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Brand signals accumulate across monitoring channels between reporting cycles. Significant sentiment shifts that begin in social media or Telegram channels and escalate to press or regulatory commentary progress through their early stages without management awareness. A continuous-form brand signal posture would enable the Bank to respond at the early-warning phase rather than after the escalation.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Brand monitoring source coverage — which channels to monitor, with what frequency, at what signal-to-noise threshold — is set by the current monitoring tool configuration and analyst routine. Coverage gaps (unmonitored Telegram channels, complaint aggregator platforms, regional news sources) accumulate without a systematic coverage audit; the Bank discovers source gaps when a material signal surfaces through an unmonitored channel.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Signal aggregation, categorization, sentiment scoring, trend summary production, and alert generation are all structured, recurring tasks with defined criteria. Each is amenable to AI-assisted processing that compresses the signal-to-management-awareness interval from days to hours.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Brand sentiment trends and their correlation with downstream outcomes — customer acquisition rate, complaint volume, deposit flow — are not analyzed systematically to build a predictive model of brand impact on commercial performance. The brand function tracks sentiment as an end in itself rather than as a leading indicator of commercial and reputational outcomes.</p></article></div>
     </section>
     
 
@@ -1821,7 +1725,7 @@ Question or comment:
     type="button"
     data-stage="listen"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--listen">
     <span class="flow-stages__stage-label">Listen</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1833,7 +1737,7 @@ Question or comment:
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--aggregate">
     <span class="flow-stages__stage-label">Aggregate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1845,7 +1749,7 @@ Question or comment:
     type="button"
     data-stage="analyze"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--analyze">
     <span class="flow-stages__stage-label">Analyze</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1857,7 +1761,7 @@ Question or comment:
     type="button"
     data-stage="alert"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--alert">
     <span class="flow-stages__stage-label">Alert</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1869,7 +1773,7 @@ Question or comment:
     type="button"
     data-stage="respond"
     data-flow-id="urn:financial-services:flow:customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle"
-  >
+   id="stage-brand-sentiment-cycle--respond">
     <span class="flow-stages__stage-label">Respond</span>
     
   </button>
@@ -1913,7 +1817,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-signal-continuous-aggregation" id="scenario-brand-signal-continuous-aggregation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-signal-continuous-aggregation" id="scenario-brand-signal-continuous-aggregation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1986,7 +1890,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-materiality-alert-calibration" id="scenario-brand-materiality-alert-calibration">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-materiality-alert-calibration" id="scenario-brand-materiality-alert-calibration" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2059,7 +1963,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-response-protocol-assistant" id="scenario-brand-response-protocol-assistant">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-response-protocol-assistant" id="scenario-brand-response-protocol-assistant" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2134,7 +2038,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-commercial-impact-model" id="scenario-brand-commercial-impact-model">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-market-intelligence/intelligence-cycles/brand-sentiment-cycle/brand-commercial-impact-model" id="scenario-brand-commercial-impact-model" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">

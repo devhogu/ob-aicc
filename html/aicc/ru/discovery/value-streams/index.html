@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -239,31 +239,7 @@
 
 
 <section class="flow-problems" aria-label="Проблемы потока">
-  <table class="problems-table">
-    <tbody>
-      
-      <tr class="problems-row">
-        <th class="problems-lens" scope="row">Waste</th>
-        <td class="problems-statement">В банковских потоках накапливается деятельность, не создающая ценности: ожидание при передаче, сверки между системами, переработка после исключений. Доля времени, создающего ценность, мала относительно общей длительности процесса, а видимость расположения потерь восстанавливается вручную в каждом цикле.</td>
-      </tr>
-      
-      <tr class="problems-row">
-        <th class="problems-lens" scope="row">Variability</th>
-        <td class="problems-statement">Нагрузка на потоки существенно колеблется в течение дня, недели и квартала: пики в конце месяца, накопление пакетных задач, нерегулярные клиентские события. Решения о распределении мощности поглощают эту вариабельность, не превращая её в отслеживаемый показатель операционной дисциплины.</td>
-      </tr>
-      
-      <tr class="problems-row">
-        <th class="problems-lens" scope="row">Overload</th>
-        <td class="problems-statement">Ключевые роли, требующие профессионального суждения, — кредитные комитеты, специалисты по комплаенс-расследованиям, руководители аудита, контролёры финансового закрытия — работают в режиме устойчивой перегрузки. Институциональная нагрузка на этих специалистов не измеряется системно и оценивается лишь экспертно.</td>
-      </tr>
-      
-      <tr class="problems-row">
-        <th class="problems-lens" scope="row">Quality at source</th>
-        <td class="problems-statement">Дефекты в банковских потоках проявляются на поздних этапах, когда стоимость их устранения многократно возрастает: ошибки маршрутизации, некорректные классификации, исключения, переносимые через точки передачи. Поток, как правило, не останавливается в момент возникновения ошибки.</td>
-      </tr>
-      
-    </tbody>
-  </table>
+  <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Waste</h3><p>В банковских потоках накапливается деятельность, не создающая ценности: ожидание при передаче, сверки между системами, переработка после исключений. Доля времени, создающего ценность, мала относительно общей длительности процесса, а видимость расположения потерь восстанавливается вручную в каждом цикле.</p></article><article class="discovery-context-card"><h3>Variability</h3><p>Нагрузка на потоки существенно колеблется в течение дня, недели и квартала: пики в конце месяца, накопление пакетных задач, нерегулярные клиентские события. Решения о распределении мощности поглощают эту вариабельность, не превращая её в отслеживаемый показатель операционной дисциплины.</p></article><article class="discovery-context-card"><h3>Overload</h3><p>Ключевые роли, требующие профессионального суждения, — кредитные комитеты, специалисты по комплаенс-расследованиям, руководители аудита, контролёры финансового закрытия — работают в режиме устойчивой перегрузки. Институциональная нагрузка на этих специалистов не измеряется системно и оценивается лишь экспертно.</p></article><article class="discovery-context-card"><h3>Quality at source</h3><p>Дефекты в банковских потоках проявляются на поздних этапах, когда стоимость их устранения многократно возрастает: ошибки маршрутизации, некорректные классификации, исключения, переносимые через точки передачи. Поток, как правило, не останавливается в момент возникновения ошибки.</p></article></div>
 </section>
 
 
@@ -316,31 +292,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Показатели исключений платежей, объёмы спорных операций и паттерны сбоев транзакций отслеживаются в изолированных системных отчётах без межканальной агрегации. Операционные менеджеры еженедельно восстанавливают общую картину из отдельных выгрузок; первопричины повторяющихся сбоев по-прежнему классифицируются как единичные случаи.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Маршрутизация спорных операций и последовательность расследований определяются ответственными сотрудниками без учёта сложности обращений или вероятности урегулирования. Очереди расследования платежей нарастают в пиковые периоды без логики балансировки нагрузки; обращения одного типа требуют существенно разного времени в зависимости от назначенной очереди.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Первичная сортировка обращений по расследованию транзакций, подготовка ответов по спорным операциям и подтверждение получения жалоб поглощают ресурсы аналитиков первой линии на задачах с устойчивыми путями урегулирования. Срок от инициирования до урегулирования простых спорных операций составляет несколько дней, поскольку каждое обращение поступает в общую очередь вне зависимости от сложности.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Аналитика паттернов расходов из транзакционного регистра систематически не используется для продуктовых или ценовых решений. Возможности оптимизации interchange, сигналы оттока на уровне когорт и сдвиги в динамике остатков остаются скрытыми в транзакционных данных и не отрабатываются до появления запаздывающих индикаторов.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Показатели исключений платежей, объёмы спорных операций и паттерны сбоев транзакций отслеживаются в изолированных системных отчётах без межканальной агрегации. Операционные менеджеры еженедельно восстанавливают общую картину из отдельных выгрузок; первопричины повторяющихся сбоев по-прежнему классифицируются как единичные случаи.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Маршрутизация спорных операций и последовательность расследований определяются ответственными сотрудниками без учёта сложности обращений или вероятности урегулирования. Очереди расследования платежей нарастают в пиковые периоды без логики балансировки нагрузки; обращения одного типа требуют существенно разного времени в зависимости от назначенной очереди.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Первичная сортировка обращений по расследованию транзакций, подготовка ответов по спорным операциям и подтверждение получения жалоб поглощают ресурсы аналитиков первой линии на задачах с устойчивыми путями урегулирования. Срок от инициирования до урегулирования простых спорных операций составляет несколько дней, поскольку каждое обращение поступает в общую очередь вне зависимости от сложности.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Аналитика паттернов расходов из транзакционного регистра систематически не используется для продуктовых или ценовых решений. Возможности оптимизации interchange, сигналы оттока на уровне когорт и сдвиги в динамике остатков остаются скрытыми в транзакционных данных и не отрабатываются до появления запаздывающих индикаторов.</p></article></div>
     </section>
     
 
@@ -362,7 +314,7 @@
     type="button"
     data-stage="account-opening"
     data-flow-id="urn:financial-services:flow:deposits-transaction-banking"
-  >
+   id="stage-deposits-transaction-banking--account-opening">
     <span class="flow-stages__stage-label">Открытие счёта</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -374,7 +326,7 @@
     type="button"
     data-stage="fund"
     data-flow-id="urn:financial-services:flow:deposits-transaction-banking"
-  >
+   id="stage-deposits-transaction-banking--fund">
     <span class="flow-stages__stage-label">Пополнение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -386,7 +338,7 @@
     type="button"
     data-stage="transact"
     data-flow-id="urn:financial-services:flow:deposits-transaction-banking"
-  >
+   id="stage-deposits-transaction-banking--transact">
     <span class="flow-stages__stage-label">Транзакции</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -398,7 +350,7 @@
     type="button"
     data-stage="service"
     data-flow-id="urn:financial-services:flow:deposits-transaction-banking"
-  >
+   id="stage-deposits-transaction-banking--service">
     <span class="flow-stages__stage-label">Обслуживание</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -410,7 +362,7 @@
     type="button"
     data-stage="retain"
     data-flow-id="urn:financial-services:flow:deposits-transaction-banking"
-  >
+   id="stage-deposits-transaction-banking--retain">
     <span class="flow-stages__stage-label">Удержание</span>
     
   </button>
@@ -454,7 +406,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-dispute-resolution-automation" id="scenario-dtb-dispute-resolution-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-dispute-resolution-automation" id="scenario-dtb-dispute-resolution-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -529,7 +481,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-kyc-adaptive-sequencing" id="scenario-dtb-kyc-adaptive-sequencing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-kyc-adaptive-sequencing" id="scenario-dtb-kyc-adaptive-sequencing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -604,7 +556,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-exception-pattern-analytics" id="scenario-dtb-exception-pattern-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-exception-pattern-analytics" id="scenario-dtb-exception-pattern-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -679,7 +631,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-stp-routing-intelligence" id="scenario-dtb-stp-routing-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-stp-routing-intelligence" id="scenario-dtb-stp-routing-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -754,7 +706,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-transaction-behavior-intelligence" id="scenario-dtb-transaction-behavior-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-transaction-behavior-intelligence" id="scenario-dtb-transaction-behavior-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -854,31 +806,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Время цикла выдачи, глубина очереди на кредитную проверку и структура исключений восстанавливаются вручную в каждом цикле из разрозненных систем ведения дел. Андеррайтеры и секретари кредитного комитета лишены актуальной картины того, какие заявки застряли и по какой причине.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Решения о маршрутизации (ускоренный трек или полная проверка), очерёдность сбора документов и пакетирование заседаний кредитного комитета задаются на уровне политики и редко пересматриваются. Оценка резервов оптимизации для каждого сегмента требует многодневного моделирования, конкурирующего с текущим потоком выдачи.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Сбор документов, информирование клиентов и посредников о статусе заявки, принятие решений низкого риска в рамках установленных порогов и каскадные уведомления после выдачи — всё это поглощает рабочее время фронтлайн-аналитиков. Большинство шагов носят регламентный и предписанный характер, а структурное сходство заявок открывает возможность для сквозной автоматизации.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты оптимизации в розничном сегменте редко переносятся на МСБ или корпоративный; межсегментные наработки остаются изолированными. Пилотирование новых кредитных продуктов (новые структуры, новые виды обеспечения) требует нескольких недель подготовки до обработки первой заявки.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Время цикла выдачи, глубина очереди на кредитную проверку и структура исключений восстанавливаются вручную в каждом цикле из разрозненных систем ведения дел. Андеррайтеры и секретари кредитного комитета лишены актуальной картины того, какие заявки застряли и по какой причине.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Решения о маршрутизации (ускоренный трек или полная проверка), очерёдность сбора документов и пакетирование заседаний кредитного комитета задаются на уровне политики и редко пересматриваются. Оценка резервов оптимизации для каждого сегмента требует многодневного моделирования, конкурирующего с текущим потоком выдачи.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Сбор документов, информирование клиентов и посредников о статусе заявки, принятие решений низкого риска в рамках установленных порогов и каскадные уведомления после выдачи — всё это поглощает рабочее время фронтлайн-аналитиков. Большинство шагов носят регламентный и предписанный характер, а структурное сходство заявок открывает возможность для сквозной автоматизации.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты оптимизации в розничном сегменте редко переносятся на МСБ или корпоративный; межсегментные наработки остаются изолированными. Пилотирование новых кредитных продуктов (новые структуры, новые виды обеспечения) требует нескольких недель подготовки до обработки первой заявки.</p></article></div>
     </section>
     
 
@@ -900,7 +828,7 @@
     type="button"
     data-stage="application"
     data-flow-id="urn:financial-services:flow:lending"
-  >
+   id="stage-lending--application">
     <span class="flow-stages__stage-label">Заявка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -912,7 +840,7 @@
     type="button"
     data-stage="underwriting"
     data-flow-id="urn:financial-services:flow:lending"
-  >
+   id="stage-lending--underwriting">
     <span class="flow-stages__stage-label">Андеррайтинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -924,7 +852,7 @@
     type="button"
     data-stage="decision"
     data-flow-id="urn:financial-services:flow:lending"
-  >
+   id="stage-lending--decision">
     <span class="flow-stages__stage-label">Решение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -936,7 +864,7 @@
     type="button"
     data-stage="documentation"
     data-flow-id="urn:financial-services:flow:lending"
-  >
+   id="stage-lending--documentation">
     <span class="flow-stages__stage-label">Документация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -948,7 +876,7 @@
     type="button"
     data-stage="funding"
     data-flow-id="urn:financial-services:flow:lending"
-  >
+   id="stage-lending--funding">
     <span class="flow-stages__stage-label">Финансирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -960,7 +888,7 @@
     type="button"
     data-stage="servicing"
     data-flow-id="urn:financial-services:flow:lending"
-  >
+   id="stage-lending--servicing">
     <span class="flow-stages__stage-label">Сопровождение</span>
     
   </button>
@@ -1004,7 +932,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-doc-collection-automation" id="scenario-lending-doc-collection-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-doc-collection-automation" id="scenario-lending-doc-collection-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1079,7 +1007,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-origination-queue-intelligence" id="scenario-lending-origination-queue-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-origination-queue-intelligence" id="scenario-lending-origination-queue-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1154,7 +1082,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-underwriting-capacity-optimisation" id="scenario-lending-underwriting-capacity-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-underwriting-capacity-optimisation" id="scenario-lending-underwriting-capacity-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1229,7 +1157,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-credit-decision-copilot" id="scenario-lending-credit-decision-copilot">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-credit-decision-copilot" id="scenario-lending-credit-decision-copilot" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1304,7 +1232,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-cross-segment-learning-transfer" id="scenario-lending-cross-segment-learning-transfer">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-cross-segment-learning-transfer" id="scenario-lending-cross-segment-learning-transfer" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1404,31 +1332,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Атрибуция доходности портфеля по классам активов, кастодианам и клиентским мандатам формируется из разрозненных системных выгрузок на каждом цикле пересмотра. У RM и инвестиционного комитета нет непрерывного представления о том, какие мандаты отклоняются от стратегического распределения и как доходность книги соотносится с бенчмарком.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Распределение времени RM между клиентской работой и административной подготовкой не отслеживается и не корректируется. Трудоёмкие задачи — пакеты для обзоров, предматериалы для ИК, синтез DD — потребляют фиксированное количество часов на клиента вне зависимости от сложности мандата или существенности пересмотра.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка пакетов для клиентских обзоров, составление предварительных материалов для инвестиционного комитета и извлечение поручений по итогам встреч выполняются вручную. Каждая из этих задач структурно однотипна по клиентам и циклам — синтез текста из структурированных данных — и непропорционально расходует ёмкость RM.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Аналитика по воронке потенциальных клиентов и конкурентное позиционирование собираются RM неформально перед встречами с перспективными клиентами. Институциональные знания, накопленные в завершённых обзорах портфелей, истории взаимодействий с клиентами и тезисных записках по инвестициям, систематически не переиспользуются в рамках консультационной команды.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Атрибуция доходности портфеля по классам активов, кастодианам и клиентским мандатам формируется из разрозненных системных выгрузок на каждом цикле пересмотра. У RM и инвестиционного комитета нет непрерывного представления о том, какие мандаты отклоняются от стратегического распределения и как доходность книги соотносится с бенчмарком.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Распределение времени RM между клиентской работой и административной подготовкой не отслеживается и не корректируется. Трудоёмкие задачи — пакеты для обзоров, предматериалы для ИК, синтез DD — потребляют фиксированное количество часов на клиента вне зависимости от сложности мандата или существенности пересмотра.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка пакетов для клиентских обзоров, составление предварительных материалов для инвестиционного комитета и извлечение поручений по итогам встреч выполняются вручную. Каждая из этих задач структурно однотипна по клиентам и циклам — синтез текста из структурированных данных — и непропорционально расходует ёмкость RM.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Аналитика по воронке потенциальных клиентов и конкурентное позиционирование собираются RM неформально перед встречами с перспективными клиентами. Институциональные знания, накопленные в завершённых обзорах портфелей, истории взаимодействий с клиентами и тезисных записках по инвестициям, систематически не переиспользуются в рамках консультационной команды.</p></article></div>
     </section>
     
 
@@ -1450,7 +1354,7 @@
     type="button"
     data-stage="discover"
     data-flow-id="urn:financial-services:flow:wealth-management"
-  >
+   id="stage-wealth-management--discover">
     <span class="flow-stages__stage-label">Выявление</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1462,7 +1366,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:wealth-management"
-  >
+   id="stage-wealth-management--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1474,7 +1378,7 @@
     type="button"
     data-stage="construct"
     data-flow-id="urn:financial-services:flow:wealth-management"
-  >
+   id="stage-wealth-management--construct">
     <span class="flow-stages__stage-label">Формирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1486,7 +1390,7 @@
     type="button"
     data-stage="implement"
     data-flow-id="urn:financial-services:flow:wealth-management"
-  >
+   id="stage-wealth-management--implement">
     <span class="flow-stages__stage-label">Исполнение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1498,7 +1402,7 @@
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:wealth-management"
-  >
+   id="stage-wealth-management--monitor">
     <span class="flow-stages__stage-label">Мониторинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1510,7 +1414,7 @@
     type="button"
     data-stage="review"
     data-flow-id="urn:financial-services:flow:wealth-management"
-  >
+   id="stage-wealth-management--review">
     <span class="flow-stages__stage-label">Пересмотр</span>
     
   </button>
@@ -1554,7 +1458,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-review-pack-automation" id="scenario-wm-review-pack-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-review-pack-automation" id="scenario-wm-review-pack-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1629,7 +1533,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-discovery-capture-enablement" id="scenario-wm-discovery-capture-enablement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-discovery-capture-enablement" id="scenario-wm-discovery-capture-enablement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1704,7 +1608,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-portfolio-drift-monitoring" id="scenario-wm-portfolio-drift-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-portfolio-drift-monitoring" id="scenario-wm-portfolio-drift-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1779,7 +1683,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-rm-time-allocation-optimisation" id="scenario-wm-rm-time-allocation-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-rm-time-allocation-optimisation" id="scenario-wm-rm-time-allocation-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1854,7 +1758,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-prospect-intelligence-enrichment" id="scenario-wm-prospect-intelligence-enrichment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-prospect-intelligence-enrichment" id="scenario-wm-prospect-intelligence-enrichment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1954,31 +1858,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Конверсия страховых продуктов по каналам, клиентским менеджерам и продуктам отслеживается на агрегированном уровне без разбивки по типу триггера, этапу предложения или клиентскому сегменту. Банк не может установить, какие триггеры жизненных событий дают наибольшую вероятность конверсии и на каком этапе продажной беседы чаще всего происходит срыв.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Клиентские менеджеры при позиционировании страховых продуктов не получают поддержки в режиме реального времени: ни рекомендации о том, какой продукт предложить, ни сценария беседы, ни алгоритма работы с типичными возражениями. Сотрудники опираются на периодическое обучение и печатные продуктовые справочники; качество предложения и полнота обязательных раскрытий не фиксируются на уровне каждого взаимодействия.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Оформление полисной документации, доставка пакета раскрытий и настройка премиальных платежей после продажи требуют отдельных ручных операций. Между подтверждением продажи и вступлением полиса в силу возникают передачи между операционным подразделением банкострахования, платформой страховщика-партнёра и платёжной системой банка.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Данные о праве клиентов на продукты и склонности к их покупке из банковских транзакционных данных не используются системно для ранжирования контактов. Таргетинг кросс-продаж определяется продуктовыми кампаниями, а не поведенческими сигналами из транзакционных отношений клиента с банком.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Конверсия страховых продуктов по каналам, клиентским менеджерам и продуктам отслеживается на агрегированном уровне без разбивки по типу триггера, этапу предложения или клиентскому сегменту. Банк не может установить, какие триггеры жизненных событий дают наибольшую вероятность конверсии и на каком этапе продажной беседы чаще всего происходит срыв.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Клиентские менеджеры при позиционировании страховых продуктов не получают поддержки в режиме реального времени: ни рекомендации о том, какой продукт предложить, ни сценария беседы, ни алгоритма работы с типичными возражениями. Сотрудники опираются на периодическое обучение и печатные продуктовые справочники; качество предложения и полнота обязательных раскрытий не фиксируются на уровне каждого взаимодействия.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Оформление полисной документации, доставка пакета раскрытий и настройка премиальных платежей после продажи требуют отдельных ручных операций. Между подтверждением продажи и вступлением полиса в силу возникают передачи между операционным подразделением банкострахования, платформой страховщика-партнёра и платёжной системой банка.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Данные о праве клиентов на продукты и склонности к их покупке из банковских транзакционных данных не используются системно для ранжирования контактов. Таргетинг кросс-продаж определяется продуктовыми кампаниями, а не поведенческими сигналами из транзакционных отношений клиента с банком.</p></article></div>
     </section>
     
 
@@ -2000,7 +1880,7 @@
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:bancassurance"
-  >
+   id="stage-bancassurance--identify">
     <span class="flow-stages__stage-label">Идентификация триггера</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2012,7 +1892,7 @@
     type="button"
     data-stage="position"
     data-flow-id="urn:financial-services:flow:bancassurance"
-  >
+   id="stage-bancassurance--position">
     <span class="flow-stages__stage-label">Позиционирование предложения</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2024,7 +1904,7 @@
     type="button"
     data-stage="underwrite"
     data-flow-id="urn:financial-services:flow:bancassurance"
-  >
+   id="stage-bancassurance--underwrite">
     <span class="flow-stages__stage-label">Андеррайтинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2036,7 +1916,7 @@
     type="button"
     data-stage="sell-onboard"
     data-flow-id="urn:financial-services:flow:bancassurance"
-  >
+   id="stage-bancassurance--sell-onboard">
     <span class="flow-stages__stage-label">Продажа и онбординг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2048,7 +1928,7 @@
     type="button"
     data-stage="retain"
     data-flow-id="urn:financial-services:flow:bancassurance"
-  >
+   id="stage-bancassurance--retain">
     <span class="flow-stages__stage-label">Удержание</span>
     
   </button>
@@ -2092,7 +1972,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-frontline-positioning-enablement" id="scenario-banc-frontline-positioning-enablement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-frontline-positioning-enablement" id="scenario-banc-frontline-positioning-enablement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -2167,7 +2047,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-policy-onboarding-automation" id="scenario-banc-policy-onboarding-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-policy-onboarding-automation" id="scenario-banc-policy-onboarding-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2242,7 +2122,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-conversion-trigger-analytics" id="scenario-banc-conversion-trigger-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-conversion-trigger-analytics" id="scenario-banc-conversion-trigger-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2317,7 +2197,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-offer-sequencing-optimisation" id="scenario-banc-offer-sequencing-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-offer-sequencing-optimisation" id="scenario-banc-offer-sequencing-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2392,7 +2272,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-lapse-early-warning" id="scenario-banc-lapse-early-warning">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-lapse-early-warning" id="scenario-banc-lapse-early-warning" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -2492,31 +2372,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Стоимость фондирования, запас по нормативам ликвидности и точность прогнозов отслеживаются в статических отчётах, формируемых к каждому заседанию КУАП. У казначейства нет непрерывного представления об атрибуции ошибок прогноза, декомпозиции стоимости фондирования по инструментам или динамике нормативного запаса в межсессионный период.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Решения о структуре фондирования принимаются еженедельно на основе актуального среза стоимости и нормативов. Сценарный анализ по инструментам — сравнение стоимости с учётом влияния на LCR, NSFR и коэффициент левериджа — выполняется вручную и занимает несколько часов; окно для использования внутринедельных рыночных возможностей нередко упускается.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Формирование пакета КУАП, подготовка регуляторной отчётности и нарратив, объясняющий изменения позиции по ликвидности, выполняются полностью вручную в каждом цикле. Процесс структурно однотипен от периода к периоду — выгрузка данных из известных источников, применение стандартной методологии, описание отклонений — и является основным ограничивающим фактором качества подготовки к КУАП.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Циклы присвоения рейтингов и проверки контрагентов создают эпизодические запросы к казначейству на подготовку структурированного нарратива о стратегии фондирования, позиции по ликвидности и достаточности капитала. Эти запросы обрабатываются реактивно: каждый раз создаётся отдельный документ на основе институциональных знаний конкретных сотрудников.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Стоимость фондирования, запас по нормативам ликвидности и точность прогнозов отслеживаются в статических отчётах, формируемых к каждому заседанию КУАП. У казначейства нет непрерывного представления об атрибуции ошибок прогноза, декомпозиции стоимости фондирования по инструментам или динамике нормативного запаса в межсессионный период.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Решения о структуре фондирования принимаются еженедельно на основе актуального среза стоимости и нормативов. Сценарный анализ по инструментам — сравнение стоимости с учётом влияния на LCR, NSFR и коэффициент левериджа — выполняется вручную и занимает несколько часов; окно для использования внутринедельных рыночных возможностей нередко упускается.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Формирование пакета КУАП, подготовка регуляторной отчётности и нарратив, объясняющий изменения позиции по ликвидности, выполняются полностью вручную в каждом цикле. Процесс структурно однотипен от периода к периоду — выгрузка данных из известных источников, применение стандартной методологии, описание отклонений — и является основным ограничивающим фактором качества подготовки к КУАП.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Циклы присвоения рейтингов и проверки контрагентов создают эпизодические запросы к казначейству на подготовку структурированного нарратива о стратегии фондирования, позиции по ликвидности и достаточности капитала. Эти запросы обрабатываются реактивно: каждый раз создаётся отдельный документ на основе институциональных знаний конкретных сотрудников.</p></article></div>
     </section>
     
 
@@ -2538,7 +2394,7 @@
     type="button"
     data-stage="forecast"
     data-flow-id="urn:financial-services:flow:treasury-funding"
-  >
+   id="stage-treasury-funding--forecast">
     <span class="flow-stages__stage-label">Прогноз</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2550,7 +2406,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:treasury-funding"
-  >
+   id="stage-treasury-funding--plan">
     <span class="flow-stages__stage-label">Планирование фондирования</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2562,7 +2418,7 @@
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:treasury-funding"
-  >
+   id="stage-treasury-funding--execute">
     <span class="flow-stages__stage-label">Исполнить</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2574,7 +2430,7 @@
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:treasury-funding"
-  >
+   id="stage-treasury-funding--monitor">
     <span class="flow-stages__stage-label">Мониторинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2586,7 +2442,7 @@
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:treasury-funding"
-  >
+   id="stage-treasury-funding--report">
     <span class="flow-stages__stage-label">Отчётность и нарратив</span>
     
   </button>
@@ -2630,7 +2486,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-rating-agency-posture-brief" id="scenario-trs-rating-agency-posture-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-rating-agency-posture-brief" id="scenario-trs-rating-agency-posture-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -2705,7 +2561,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-forecast-accuracy-attribution" id="scenario-trs-forecast-accuracy-attribution">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-forecast-accuracy-attribution" id="scenario-trs-forecast-accuracy-attribution" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2780,7 +2636,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-funding-mix-scenario-optimisation" id="scenario-trs-funding-mix-scenario-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-funding-mix-scenario-optimisation" id="scenario-trs-funding-mix-scenario-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2855,7 +2711,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-alco-pack-automation" id="scenario-trs-alco-pack-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-alco-pack-automation" id="scenario-trs-alco-pack-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2930,7 +2786,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-intraday-liquidity-copilot" id="scenario-trs-intraday-liquidity-copilot">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-intraday-liquidity-copilot" id="scenario-trs-intraday-liquidity-copilot" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -3030,31 +2886,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Уровни исключений по FX-операциям, причины сбоев расчётов и объёмы расхождений по ностро-счетам отслеживаются в отчётах конца дня из отдельных систем без агрегирования по коридорам. Операционный блок не может определить, в каких коридорах через банки-корреспонденты наблюдается наибольшее число исключений и какие причины сбоев расчётов носят системный, а не разовый характер.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Решения по маршрутизации через банки-корреспонденты для платежей в коридорах СНГ закреплены в статичных таблицах маршрутизации, которые пересматриваются нерегулярно. Оптимизация маршрутизации — выбор пути через корреспондента с наименьшим ожидаемым процентом сбоев расчётов и минимальными затратами — не является непрерывным процессом.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Сверка ностро-счетов, разбор исключений SWIFT и подготовка уведомлений валютного контроля — ежедневные ручные задачи, требующие значительных ресурсов казначейского операционного блока. Каждая задача выполняется по регламентированным правилам и использует структурированные данные; структурное сходство между периодами делает их кандидатами для сквозной автоматизации.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Корпоративные клиенты с существенными FX-позициями не получают систематической аналитики о движении курсов относительно их хеджинговых пороговых значений. FX-данные банка — история котировок, объёмы по коридорам, сроки расчётов — не используются для формирования клиентской FX-аналитики и заблаговременных предупреждений.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Уровни исключений по FX-операциям, причины сбоев расчётов и объёмы расхождений по ностро-счетам отслеживаются в отчётах конца дня из отдельных систем без агрегирования по коридорам. Операционный блок не может определить, в каких коридорах через банки-корреспонденты наблюдается наибольшее число исключений и какие причины сбоев расчётов носят системный, а не разовый характер.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Решения по маршрутизации через банки-корреспонденты для платежей в коридорах СНГ закреплены в статичных таблицах маршрутизации, которые пересматриваются нерегулярно. Оптимизация маршрутизации — выбор пути через корреспондента с наименьшим ожидаемым процентом сбоев расчётов и минимальными затратами — не является непрерывным процессом.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Сверка ностро-счетов, разбор исключений SWIFT и подготовка уведомлений валютного контроля — ежедневные ручные задачи, требующие значительных ресурсов казначейского операционного блока. Каждая задача выполняется по регламентированным правилам и использует структурированные данные; структурное сходство между периодами делает их кандидатами для сквозной автоматизации.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Корпоративные клиенты с существенными FX-позициями не получают систематической аналитики о движении курсов относительно их хеджинговых пороговых значений. FX-данные банка — история котировок, объёмы по коридорам, сроки расчётов — не используются для формирования клиентской FX-аналитики и заблаговременных предупреждений.</p></article></div>
     </section>
     
 
@@ -3076,7 +2908,7 @@
     type="button"
     data-stage="capture"
     data-flow-id="urn:financial-services:flow:fx-cross-border"
-  >
+   id="stage-fx-cross-border--capture">
     <span class="flow-stages__stage-label">Оформление поручения</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3088,7 +2920,7 @@
     type="button"
     data-stage="price"
     data-flow-id="urn:financial-services:flow:fx-cross-border"
-  >
+   id="stage-fx-cross-border--price">
     <span class="flow-stages__stage-label">Котировка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3100,7 +2932,7 @@
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:fx-cross-border"
-  >
+   id="stage-fx-cross-border--execute">
     <span class="flow-stages__stage-label">Исполнение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3112,7 +2944,7 @@
     type="button"
     data-stage="settle"
     data-flow-id="urn:financial-services:flow:fx-cross-border"
-  >
+   id="stage-fx-cross-border--settle">
     <span class="flow-stages__stage-label">Расчёт</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3124,7 +2956,7 @@
     type="button"
     data-stage="reconcile"
     data-flow-id="urn:financial-services:flow:fx-cross-border"
-  >
+   id="stage-fx-cross-border--reconcile">
     <span class="flow-stages__stage-label">Сверка</span>
     
   </button>
@@ -3168,7 +3000,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-purpose-code-classification-enablement" id="scenario-fx-purpose-code-classification-enablement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-purpose-code-classification-enablement" id="scenario-fx-purpose-code-classification-enablement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -3243,7 +3075,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-exception-corridor-analytics" id="scenario-fx-exception-corridor-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-exception-corridor-analytics" id="scenario-fx-exception-corridor-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -3318,7 +3150,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-correspondent-routing-optimisation" id="scenario-fx-correspondent-routing-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-correspondent-routing-optimisation" id="scenario-fx-correspondent-routing-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -3393,7 +3225,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-nostro-reconciliation-automation" id="scenario-fx-nostro-reconciliation-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-nostro-reconciliation-automation" id="scenario-fx-nostro-reconciliation-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -3468,7 +3300,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-corporate-client-rate-intelligence" id="scenario-fx-corporate-client-rate-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-corporate-client-rate-intelligence" id="scenario-fx-corporate-client-rate-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -3590,31 +3422,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Данные о пути клиента распределены между системами привлечения, KYC-платформами, системами управления счетами и CRM — без единого сквозного представления по этапам. Банк восстанавливает коэффициенты перехода между стадиями жизненного цикла и длительность циклов вручную раз в квартал; картина того, на каком этапе клиенты уходят, отваливаются или зависают, всегда ретроспективна.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Последовательность шагов онбординга, тайминг контактов по перекрёстным продажам и пороги вмешательства для удержания задаются на уровне политики и пересматриваются редко. Оптимизация под конкретный сегмент — кого из клиентов контактировать, когда и с чем — требует многонедельных аналитических циклов, запаздывающих относительно коммерческого окна.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Сбор документов по KYC, обновление статусов онбординга, сопровождение предложений по перекрёстным продажам и шаги обработки выхода — каждый из них потребляет ресурсы фронтлайна или операций на задачах, следующих установленным правилам. Структурное сходство клиентских ситуаций на каждом этапе делает их кандидатами для исполнения агентом с проверкой человеком.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Аналитика долгосрочной ценности — стоимость привлечения, глубина продуктового портфеля, срок отношений и маржа с учётом риска в разрезе клиента — формируется эпизодически для обзоров портфеля. Банк не ведёт непрерывного представления о ценности жизненного цикла на уровне клиента, которое могло бы служить основой для приоритизации удержания и последовательности перекрёстных продаж в режиме реального времени.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Данные о пути клиента распределены между системами привлечения, KYC-платформами, системами управления счетами и CRM — без единого сквозного представления по этапам. Банк восстанавливает коэффициенты перехода между стадиями жизненного цикла и длительность циклов вручную раз в квартал; картина того, на каком этапе клиенты уходят, отваливаются или зависают, всегда ретроспективна.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Последовательность шагов онбординга, тайминг контактов по перекрёстным продажам и пороги вмешательства для удержания задаются на уровне политики и пересматриваются редко. Оптимизация под конкретный сегмент — кого из клиентов контактировать, когда и с чем — требует многонедельных аналитических циклов, запаздывающих относительно коммерческого окна.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Сбор документов по KYC, обновление статусов онбординга, сопровождение предложений по перекрёстным продажам и шаги обработки выхода — каждый из них потребляет ресурсы фронтлайна или операций на задачах, следующих установленным правилам. Структурное сходство клиентских ситуаций на каждом этапе делает их кандидатами для исполнения агентом с проверкой человеком.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Аналитика долгосрочной ценности — стоимость привлечения, глубина продуктового портфеля, срок отношений и маржа с учётом риска в разрезе клиента — формируется эпизодически для обзоров портфеля. Банк не ведёт непрерывного представления о ценности жизненного цикла на уровне клиента, которое могло бы служить основой для приоритизации удержания и последовательности перекрёстных продаж в режиме реального времени.</p></article></div>
     </section>
     
 
@@ -3636,7 +3444,7 @@
     type="button"
     data-stage="acquire"
     data-flow-id="urn:financial-services:flow:customer-lifecycle"
-  >
+   id="stage-customer-lifecycle--acquire">
     <span class="flow-stages__stage-label">Привлечение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3648,7 +3456,7 @@
     type="button"
     data-stage="onboard"
     data-flow-id="urn:financial-services:flow:customer-lifecycle"
-  >
+   id="stage-customer-lifecycle--onboard">
     <span class="flow-stages__stage-label">Онбординг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3660,7 +3468,7 @@
     type="button"
     data-stage="serve"
     data-flow-id="urn:financial-services:flow:customer-lifecycle"
-  >
+   id="stage-customer-lifecycle--serve">
     <span class="flow-stages__stage-label">Обслуживание</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3672,7 +3480,7 @@
     type="button"
     data-stage="grow"
     data-flow-id="urn:financial-services:flow:customer-lifecycle"
-  >
+   id="stage-customer-lifecycle--grow">
     <span class="flow-stages__stage-label">Развитие</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3684,7 +3492,7 @@
     type="button"
     data-stage="retain"
     data-flow-id="urn:financial-services:flow:customer-lifecycle"
-  >
+   id="stage-customer-lifecycle--retain">
     <span class="flow-stages__stage-label">Удержание</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -3696,7 +3504,7 @@
     type="button"
     data-stage="exit"
     data-flow-id="urn:financial-services:flow:customer-lifecycle"
-  >
+   id="stage-customer-lifecycle--exit">
     <span class="flow-stages__stage-label">Выход</span>
     
   </button>
@@ -3740,7 +3548,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-cross-stage-journey-analytics" id="scenario-cl-cross-stage-journey-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-cross-stage-journey-analytics" id="scenario-cl-cross-stage-journey-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -3815,7 +3623,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-onboarding-sequence-optimisation" id="scenario-cl-onboarding-sequence-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-onboarding-sequence-optimisation" id="scenario-cl-onboarding-sequence-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -3890,7 +3698,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-lifecycle-agent-execution" id="scenario-cl-lifecycle-agent-execution">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-lifecycle-agent-execution" id="scenario-cl-lifecycle-agent-execution" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -3965,7 +3773,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-churn-signal-enrichment" id="scenario-cl-churn-signal-enrichment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-churn-signal-enrichment" id="scenario-cl-churn-signal-enrichment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -4040,7 +3848,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-lifetime-value-intelligence" id="scenario-cl-lifetime-value-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-lifetime-value-intelligence" id="scenario-cl-lifetime-value-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -4140,31 +3948,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Возникающие риски в кредитном, рыночном, операционном и стратегическом сегментах фиксируются в разрозненных системах мониторинга. Риск-команды формируют консолидированные аналитические материалы вручную к каждому управленческому циклу; интервал между появлением рискового сигнала и его представлением в формате, готовом к принятию решений, составляет от нескольких дней до нескольких недель.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Приоритизация мероприятий по митигации рисков и контрольных мер формируется в рамках ежегодных пересмотров риск-аппетита и корректируется при возникновении существенных событий. Непрерывная оптимизация — переранжирование мероприятий на основе наблюдаемой эффективности контролей и меняющейся экспозиции — не является регулярной практикой.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка риск-нарративов для ALCO, комитета совета директоров по рискам и регуляторной отчётности поглощает ресурсы риск-команды на задачи, основанные на структурированных данных и устоявшейся методологии. Каждый отчётный цикл воспроизводит одну и ту же последовательность: выгрузка данных, синтез, формирование нарратива — вручную.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты стресс-тестирования и выводы риск-оценок подготавливаются для регуляторных и управленческих циклов, однако систематически не используются для обогащения перспективных бизнес-решений. Кредитное ценообразование, продуктовая разработка и установка лимитов редко опираются непосредственно на последние результаты стресс-тестирования или оценки возникающих рисков.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Возникающие риски в кредитном, рыночном, операционном и стратегическом сегментах фиксируются в разрозненных системах мониторинга. Риск-команды формируют консолидированные аналитические материалы вручную к каждому управленческому циклу; интервал между появлением рискового сигнала и его представлением в формате, готовом к принятию решений, составляет от нескольких дней до нескольких недель.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Приоритизация мероприятий по митигации рисков и контрольных мер формируется в рамках ежегодных пересмотров риск-аппетита и корректируется при возникновении существенных событий. Непрерывная оптимизация — переранжирование мероприятий на основе наблюдаемой эффективности контролей и меняющейся экспозиции — не является регулярной практикой.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка риск-нарративов для ALCO, комитета совета директоров по рискам и регуляторной отчётности поглощает ресурсы риск-команды на задачи, основанные на структурированных данных и устоявшейся методологии. Каждый отчётный цикл воспроизводит одну и ту же последовательность: выгрузка данных, синтез, формирование нарратива — вручную.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты стресс-тестирования и выводы риск-оценок подготавливаются для регуляторных и управленческих циклов, однако систематически не используются для обогащения перспективных бизнес-решений. Кредитное ценообразование, продуктовая разработка и установка лимитов редко опираются непосредственно на последние результаты стресс-тестирования или оценки возникающих рисков.</p></article></div>
     </section>
     
 
@@ -4186,7 +3970,7 @@
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:risk-management-cycle"
-  >
+   id="stage-risk-management-cycle--identify">
     <span class="flow-stages__stage-label">Идентификация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -4198,7 +3982,7 @@
     type="button"
     data-stage="assess"
     data-flow-id="urn:financial-services:flow:risk-management-cycle"
-  >
+   id="stage-risk-management-cycle--assess">
     <span class="flow-stages__stage-label">Оценка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -4210,7 +3994,7 @@
     type="button"
     data-stage="mitigate"
     data-flow-id="urn:financial-services:flow:risk-management-cycle"
-  >
+   id="stage-risk-management-cycle--mitigate">
     <span class="flow-stages__stage-label">Митигация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -4222,7 +4006,7 @@
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:risk-management-cycle"
-  >
+   id="stage-risk-management-cycle--monitor">
     <span class="flow-stages__stage-label">Мониторинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -4234,7 +4018,7 @@
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:risk-management-cycle"
-  >
+   id="stage-risk-management-cycle--report">
     <span class="flow-stages__stage-label">Отчётность</span>
     
   </button>
@@ -4278,7 +4062,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-emerging-risk-signal-synthesis" id="scenario-rmc-emerging-risk-signal-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-emerging-risk-signal-synthesis" id="scenario-rmc-emerging-risk-signal-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -4353,7 +4137,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-control-effectiveness-optimisation" id="scenario-rmc-control-effectiveness-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-control-effectiveness-optimisation" id="scenario-rmc-control-effectiveness-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -4428,7 +4212,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-risk-narrative-automation" id="scenario-rmc-risk-narrative-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-risk-narrative-automation" id="scenario-rmc-risk-narrative-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -4503,7 +4287,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-stress-test-enrichment-copilot" id="scenario-rmc-stress-test-enrichment-copilot">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-stress-test-enrichment-copilot" id="scenario-rmc-stress-test-enrichment-copilot" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -4578,7 +4362,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-aggregate-risk-view" id="scenario-rmc-aggregate-risk-view">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-aggregate-risk-view" id="scenario-rmc-aggregate-risk-view" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -4678,31 +4462,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Объём оповещений, доля ложноположительных срабатываний и пропускная способность расследований отслеживаются на уровне системы в отчётах, формируемых к каждому циклу управления. Операционная команда по финансовым преступлениям не имеет непрерывного представления о том, какие правила мониторинга транзакций создают наибольшую нагрузку ложных срабатываний, какие клиентские сегменты формируют наибольшее число результативных оповещений и где концентрируется время следователей.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Последовательность триажа оповещений и назначение дел следователям определяются порядком очереди, а не сложностью дела или вероятностью подачи SAR. Дела с высокой вероятностью не отделяются от низкоприоритетных оповещений в момент назначения; ресурс следователей не соответствует сложности дел.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Формирование досье по делу, поиск негативных публикаций в СМИ, составление нарратива SAR и форматирование уведомления по форме СПД — каждая из этих задач поглощает ресурс следователей при наличии чёткой структуры и определённых входных данных. Эти задачи подходят для исполнения агентом с последующей проверкой и утверждением следователем до направления любого регуляторного уведомления.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Типологическая экспертиза — закономерности подозрительной активности, идентифицированные подразделениями финансовой разведки и FATF как индикаторы ОД/ФТ, — доступна в открытых методических материалах, однако не применяется системно для настройки правил мониторинга транзакций или обогащения аналитики следователей на уровне конкретного дела.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Объём оповещений, доля ложноположительных срабатываний и пропускная способность расследований отслеживаются на уровне системы в отчётах, формируемых к каждому циклу управления. Операционная команда по финансовым преступлениям не имеет непрерывного представления о том, какие правила мониторинга транзакций создают наибольшую нагрузку ложных срабатываний, какие клиентские сегменты формируют наибольшее число результативных оповещений и где концентрируется время следователей.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Последовательность триажа оповещений и назначение дел следователям определяются порядком очереди, а не сложностью дела или вероятностью подачи SAR. Дела с высокой вероятностью не отделяются от низкоприоритетных оповещений в момент назначения; ресурс следователей не соответствует сложности дел.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Формирование досье по делу, поиск негативных публикаций в СМИ, составление нарратива SAR и форматирование уведомления по форме СПД — каждая из этих задач поглощает ресурс следователей при наличии чёткой структуры и определённых входных данных. Эти задачи подходят для исполнения агентом с последующей проверкой и утверждением следователем до направления любого регуляторного уведомления.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Типологическая экспертиза — закономерности подозрительной активности, идентифицированные подразделениями финансовой разведки и FATF как индикаторы ОД/ФТ, — доступна в открытых методических материалах, однако не применяется системно для настройки правил мониторинга транзакций или обогащения аналитики следователей на уровне конкретного дела.</p></article></div>
     </section>
     
 
@@ -4724,7 +4484,7 @@
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:compliance-financial-crime-cycle"
-  >
+   id="stage-compliance-financial-crime-cycle--detect">
     <span class="flow-stages__stage-label">Выявление</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -4736,7 +4496,7 @@
     type="button"
     data-stage="investigate"
     data-flow-id="urn:financial-services:flow:compliance-financial-crime-cycle"
-  >
+   id="stage-compliance-financial-crime-cycle--investigate">
     <span class="flow-stages__stage-label">Расследование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -4748,7 +4508,7 @@
     type="button"
     data-stage="action"
     data-flow-id="urn:financial-services:flow:compliance-financial-crime-cycle"
-  >
+   id="stage-compliance-financial-crime-cycle--action">
     <span class="flow-stages__stage-label">Действие</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -4760,7 +4520,7 @@
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:compliance-financial-crime-cycle"
-  >
+   id="stage-compliance-financial-crime-cycle--report">
     <span class="flow-stages__stage-label">Отчётность</span>
     
   </button>
@@ -4804,7 +4564,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-typology-enrichment-copilot" id="scenario-cfc-typology-enrichment-copilot">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-typology-enrichment-copilot" id="scenario-cfc-typology-enrichment-copilot" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -4879,7 +4639,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-alert-throughput-analytics" id="scenario-cfc-alert-throughput-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-alert-throughput-analytics" id="scenario-cfc-alert-throughput-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -4954,7 +4714,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-case-complexity-triage-optimisation" id="scenario-cfc-case-complexity-triage-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-case-complexity-triage-optimisation" id="scenario-cfc-case-complexity-triage-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -5029,7 +4789,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-investigation-pack-automation" id="scenario-cfc-investigation-pack-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-investigation-pack-automation" id="scenario-cfc-investigation-pack-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -5104,7 +4864,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-aml-program-health-continuous" id="scenario-cfc-aml-program-health-continuous">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-aml-program-health-continuous" id="scenario-cfc-aml-program-health-continuous" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -5204,31 +4964,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Данные аудиторских замечаний — в разрезе бизнес-подразделений, типов контроля, категорий коренных причин и частоты повторения — хранятся в системе управления аудитом, однако систематический анализ закономерностей не проводится. Комитет по аудиту и высшее руководство получают сводки замечаний по итогам каждого отчётного цикла, но не имеют непрерывной картины того, в каких контрольных областях возникают повторяющиеся проблемы.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Планирование аудита распределяет ресурс команды на год вперёд на основе статичного риск-рейтинга. Бизнес-подразделения с высокой частотой повторяющихся замечаний — что свидетельствует об устойчивых недостатках контрольной среды — не получают автоматически более высокой частоты проверок в плановом цикле; пересмотр планов требует ручного анализа данных замечаний за предыдущий период.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Ведение рабочих документов, индексирование доказательств, подготовка проектов замечаний и отслеживание статуса устранения нарушений отвлекают время аудиторской команды на структурированные задачи с чётко определёнными входными данными. Эти задачи конкурируют с аналитической работой, требующей профессионального суждения и формирующей ценность аудита; передача их агенту сохраняет ресурс аудиторов для содержательного тестирования.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Знания функции внутреннего аудита о слабостях контрольной среды, закономерностях коренных причин и эффективности устранения нарушений не распространяются систематически между бизнес-подразделениями. Слабость контроля, выявленная в розничном банкинге, может иметь структурный аналог в сегментах МСБ или корпоративного бизнеса; институциональные уроки из аудиторских замечаний редко доходят до подразделений, ещё не прошедших проверку по той же контрольной области.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Данные аудиторских замечаний — в разрезе бизнес-подразделений, типов контроля, категорий коренных причин и частоты повторения — хранятся в системе управления аудитом, однако систематический анализ закономерностей не проводится. Комитет по аудиту и высшее руководство получают сводки замечаний по итогам каждого отчётного цикла, но не имеют непрерывной картины того, в каких контрольных областях возникают повторяющиеся проблемы.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Планирование аудита распределяет ресурс команды на год вперёд на основе статичного риск-рейтинга. Бизнес-подразделения с высокой частотой повторяющихся замечаний — что свидетельствует об устойчивых недостатках контрольной среды — не получают автоматически более высокой частоты проверок в плановом цикле; пересмотр планов требует ручного анализа данных замечаний за предыдущий период.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Ведение рабочих документов, индексирование доказательств, подготовка проектов замечаний и отслеживание статуса устранения нарушений отвлекают время аудиторской команды на структурированные задачи с чётко определёнными входными данными. Эти задачи конкурируют с аналитической работой, требующей профессионального суждения и формирующей ценность аудита; передача их агенту сохраняет ресурс аудиторов для содержательного тестирования.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Знания функции внутреннего аудита о слабостях контрольной среды, закономерностях коренных причин и эффективности устранения нарушений не распространяются систематически между бизнес-подразделениями. Слабость контроля, выявленная в розничном банкинге, может иметь структурный аналог в сегментах МСБ или корпоративного бизнеса; институциональные уроки из аудиторских замечаний редко доходят до подразделений, ещё не прошедших проверку по той же контрольной области.</p></article></div>
     </section>
     
 
@@ -5250,7 +4986,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:internal-audit-cycle"
-  >
+   id="stage-internal-audit-cycle--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -5262,7 +4998,7 @@
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:internal-audit-cycle"
-  >
+   id="stage-internal-audit-cycle--execute">
     <span class="flow-stages__stage-label">Исполнение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -5274,7 +5010,7 @@
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:internal-audit-cycle"
-  >
+   id="stage-internal-audit-cycle--report">
     <span class="flow-stages__stage-label">Отчётность</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -5286,7 +5022,7 @@
     type="button"
     data-stage="remediate"
     data-flow-id="urn:financial-services:flow:internal-audit-cycle"
-  >
+   id="stage-internal-audit-cycle--remediate">
     <span class="flow-stages__stage-label">Устранение нарушений</span>
     
   </button>
@@ -5330,7 +5066,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-fieldwork-documentation-automation" id="scenario-iac-fieldwork-documentation-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-fieldwork-documentation-automation" id="scenario-iac-fieldwork-documentation-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -5405,7 +5141,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-remediation-tracking-enablement" id="scenario-iac-remediation-tracking-enablement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-remediation-tracking-enablement" id="scenario-iac-remediation-tracking-enablement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -5480,7 +5216,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-finding-pattern-intelligence" id="scenario-iac-finding-pattern-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-finding-pattern-intelligence" id="scenario-iac-finding-pattern-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -5555,7 +5291,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-risk-ranked-audit-planning" id="scenario-iac-risk-ranked-audit-planning">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-risk-ranked-audit-planning" id="scenario-iac-risk-ranked-audit-planning" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -5630,7 +5366,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-cross-entity-control-learning" id="scenario-iac-cross-entity-control-learning">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-cross-entity-control-learning" id="scenario-iac-cross-entity-control-learning" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -5730,31 +5466,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Анализ отклонений фактических результатов от бюджетных показателей проводится финансовыми командами вручную после закрытия периода: каждое подразделение анализирует собственные строки P&amp;L. CFO и финансовые директора бизнес-единиц получают аналитику отклонений в момент рассылки управленческого пакета; время от получения фактических данных до готового к принятию решений анализа отклонений измеряется днями.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Последовательность представления бюджета и ревизии прогноза по бизнес-единицам определяется финансовым календарём и отслеживается через электронную почту и таблицы. Допущения, оспариваемые или пересматриваемые на завершающем этапе цикла консолидации, растягивают общие сроки без ясного понимания того, какое именно представление является ограничивающим фактором.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка нарратива по итогам месячного закрытия, формирование управленческого пакета, составление регуляторной отчётности и разработка раздела MD&amp;A — ручные операции, поглощающие ресурсы старших сотрудников финансового блока на хорошо структурированные синтетические задачи. Архитектура этих задач — выгрузка из известных источников данных, применение стандартной методологии, нарратив отклонений — делает их сильными кандидатами для производства с участием агента.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Допущения для ревизии прогноза обновляются бизнес-единицами на основании их собственного прогнозного горизонта. Межподразделенческие сигналы — тенденция в кредитном портфеле, указывающая на встречный ветер для доходов; динамика операционных расходов, требующая корректировки резервов — систематически не поступают в процесс ревизии прогноза до момента их отражения в фактических данных.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Анализ отклонений фактических результатов от бюджетных показателей проводится финансовыми командами вручную после закрытия периода: каждое подразделение анализирует собственные строки P&amp;L. CFO и финансовые директора бизнес-единиц получают аналитику отклонений в момент рассылки управленческого пакета; время от получения фактических данных до готового к принятию решений анализа отклонений измеряется днями.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Последовательность представления бюджета и ревизии прогноза по бизнес-единицам определяется финансовым календарём и отслеживается через электронную почту и таблицы. Допущения, оспариваемые или пересматриваемые на завершающем этапе цикла консолидации, растягивают общие сроки без ясного понимания того, какое именно представление является ограничивающим фактором.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка нарратива по итогам месячного закрытия, формирование управленческого пакета, составление регуляторной отчётности и разработка раздела MD&amp;A — ручные операции, поглощающие ресурсы старших сотрудников финансового блока на хорошо структурированные синтетические задачи. Архитектура этих задач — выгрузка из известных источников данных, применение стандартной методологии, нарратив отклонений — делает их сильными кандидатами для производства с участием агента.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Допущения для ревизии прогноза обновляются бизнес-единицами на основании их собственного прогнозного горизонта. Межподразделенческие сигналы — тенденция в кредитном портфеле, указывающая на встречный ветер для доходов; динамика операционных расходов, требующая корректировки резервов — систематически не поступают в процесс ревизии прогноза до момента их отражения в фактических данных.</p></article></div>
     </section>
     
 
@@ -5776,7 +5488,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:financial-control-cycle"
-  >
+   id="stage-financial-control-cycle--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -5788,7 +5500,7 @@
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:financial-control-cycle"
-  >
+   id="stage-financial-control-cycle--execute">
     <span class="flow-stages__stage-label">Исполнение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -5800,7 +5512,7 @@
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:financial-control-cycle"
-  >
+   id="stage-financial-control-cycle--measure">
     <span class="flow-stages__stage-label">Измерение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -5812,7 +5524,7 @@
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:financial-control-cycle"
-  >
+   id="stage-financial-control-cycle--report">
     <span class="flow-stages__stage-label">Отчётность</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -5824,7 +5536,7 @@
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:financial-control-cycle"
-  >
+   id="stage-financial-control-cycle--adjust">
     <span class="flow-stages__stage-label">Корректировка</span>
     
   </button>
@@ -5868,7 +5580,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-variance-attribution-analytics" id="scenario-fcc-variance-attribution-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-variance-attribution-analytics" id="scenario-fcc-variance-attribution-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -5943,7 +5655,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-budget-consolidation-optimisation" id="scenario-fcc-budget-consolidation-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-budget-consolidation-optimisation" id="scenario-fcc-budget-consolidation-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -6018,7 +5730,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-close-narrative-automation" id="scenario-fcc-close-narrative-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-close-narrative-automation" id="scenario-fcc-close-narrative-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -6093,7 +5805,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-reforecast-cross-signal-enrichment" id="scenario-fcc-reforecast-cross-signal-enrichment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-reforecast-cross-signal-enrichment" id="scenario-fcc-reforecast-cross-signal-enrichment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -6168,7 +5880,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-ifrs9-provision-intelligence" id="scenario-fcc-ifrs9-provision-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-ifrs9-provision-intelligence" id="scenario-fcc-ifrs9-provision-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">

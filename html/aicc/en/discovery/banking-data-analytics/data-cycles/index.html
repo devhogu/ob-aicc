@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -298,31 +298,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">CDE quality dimension scores are measured monthly but tracked informally between cycles. The CDO lacks a continuous view of the data quality trajectory — which CDEs are improving, which are stable, which are deteriorating — and the connection between quality trends and downstream risk reporting impact is not routinely surfaced.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Remediation resource allocation across the issue backlog is not systematically optimized against downstream regulatory reporting impact. Issues in less-visible data domains that affect BCBS 239 risk aggregation may be deprioritized relative to issues in high-profile business reporting systems, creating a compliance exposure that the standard prioritization process does not detect.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Data profiling execution, quality score calculation, issue classification from profiling output, and remediation plan drafting from structured issue records are structured, rule-based tasks applied to large data volumes each cycle. Quality dimension checks follow the Bank's approved definitions and are amenable to AI-driven assessment with steward review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Data quality issue histories — root causes, remediation actions, and time-to-resolution — are held in individual issue records rather than in a structured knowledge base. Systematic patterns in quality failures — the same ETL transformation consistently producing null values for a category of CDEs — are not detected across the issue history, preventing proactive engineering fixes from being prioritized.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>CDE quality dimension scores are measured monthly but tracked informally between cycles. The CDO lacks a continuous view of the data quality trajectory — which CDEs are improving, which are stable, which are deteriorating — and the connection between quality trends and downstream risk reporting impact is not routinely surfaced.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Remediation resource allocation across the issue backlog is not systematically optimized against downstream regulatory reporting impact. Issues in less-visible data domains that affect BCBS 239 risk aggregation may be deprioritized relative to issues in high-profile business reporting systems, creating a compliance exposure that the standard prioritization process does not detect.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Data profiling execution, quality score calculation, issue classification from profiling output, and remediation plan drafting from structured issue records are structured, rule-based tasks applied to large data volumes each cycle. Quality dimension checks follow the Bank's approved definitions and are amenable to AI-driven assessment with steward review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Data quality issue histories — root causes, remediation actions, and time-to-resolution — are held in individual issue records rather than in a structured knowledge base. Systematic patterns in quality failures — the same ETL transformation consistently producing null values for a category of CDEs — are not detected across the issue history, preventing proactive engineering fixes from being prioritized.</p></article></div>
     </section>
     
 
@@ -344,7 +320,7 @@ Question or comment:
     type="button"
     data-stage="profile"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--profile">
     <span class="flow-stages__stage-label">Profile</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -356,7 +332,7 @@ Question or comment:
     type="button"
     data-stage="score"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--score">
     <span class="flow-stages__stage-label">Score</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -368,7 +344,7 @@ Question or comment:
     type="button"
     data-stage="issue"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--issue">
     <span class="flow-stages__stage-label">Issue</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -380,7 +356,7 @@ Question or comment:
     type="button"
     data-stage="remediate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--remediate">
     <span class="flow-stages__stage-label">Remediate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -392,7 +368,7 @@ Question or comment:
     type="button"
     data-stage="retest"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--retest">
     <span class="flow-stages__stage-label">Retest</span>
     
   </button>
@@ -436,7 +412,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-profiling-and-scoring-automation" id="scenario-dq-profiling-and-scoring-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-profiling-and-scoring-automation" id="scenario-dq-profiling-and-scoring-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -509,7 +485,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-plan-drafting" id="scenario-dq-remediation-plan-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-plan-drafting" id="scenario-dq-remediation-plan-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -582,7 +558,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-continuous-posture-monitor" id="scenario-dq-continuous-posture-monitor">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-continuous-posture-monitor" id="scenario-dq-continuous-posture-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -657,7 +633,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-impact-prioritisation" id="scenario-dq-remediation-impact-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-impact-prioritisation" id="scenario-dq-remediation-impact-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -730,7 +706,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-failure-pattern-knowledge-base" id="scenario-dq-failure-pattern-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-failure-pattern-knowledge-base" id="scenario-dq-failure-pattern-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -831,31 +807,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Master data quality — golden record completeness, deduplication coverage, cross-domain identifier consistency — is assessed quarterly. The CDO lacks a continuous view of master data estate health between formal stewardship cycles and cannot quantify the impact of outstanding deduplication backlogs on downstream risk aggregation accuracy.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Deduplication candidate review prioritization is not systematically aligned to the downstream regulatory and risk impact of specific master data CDEs. High-volume, low-impact customer match pairs consume review capacity that would be better directed at counterparty and instrument CDEs that affect BCBS 239 risk aggregation.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Deduplication candidate identification from statistical matching, reference data refresh from authoritative external sources, cross-domain consistency validation queries, and data stewardship decision documentation are structured, high-volume tasks amenable to AI-assisted execution with steward review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Master data governance decisions and their downstream quality impacts are documented in individual meeting records rather than in a structured governance knowledge base. Recurring disputes — the same cross-domain identifier inconsistency arising from the same source system interface limitation — are resolved from first principles each time rather than through a cataloged resolution pattern.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Master data quality — golden record completeness, deduplication coverage, cross-domain identifier consistency — is assessed quarterly. The CDO lacks a continuous view of master data estate health between formal stewardship cycles and cannot quantify the impact of outstanding deduplication backlogs on downstream risk aggregation accuracy.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Deduplication candidate review prioritization is not systematically aligned to the downstream regulatory and risk impact of specific master data CDEs. High-volume, low-impact customer match pairs consume review capacity that would be better directed at counterparty and instrument CDEs that affect BCBS 239 risk aggregation.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Deduplication candidate identification from statistical matching, reference data refresh from authoritative external sources, cross-domain consistency validation queries, and data stewardship decision documentation are structured, high-volume tasks amenable to AI-assisted execution with steward review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Master data governance decisions and their downstream quality impacts are documented in individual meeting records rather than in a structured governance knowledge base. Recurring disputes — the same cross-domain identifier inconsistency arising from the same source system interface limitation — are resolved from first principles each time rather than through a cataloged resolution pattern.</p></article></div>
     </section>
     
 
@@ -877,7 +829,7 @@ Question or comment:
     type="button"
     data-stage="define"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--define">
     <span class="flow-stages__stage-label">Define</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -889,7 +841,7 @@ Question or comment:
     type="button"
     data-stage="govern"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--govern">
     <span class="flow-stages__stage-label">Govern</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -901,7 +853,7 @@ Question or comment:
     type="button"
     data-stage="curate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--curate">
     <span class="flow-stages__stage-label">Curate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -913,7 +865,7 @@ Question or comment:
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--validate">
     <span class="flow-stages__stage-label">Validate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -925,7 +877,7 @@ Question or comment:
     type="button"
     data-stage="publish"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--publish">
     <span class="flow-stages__stage-label">Publish</span>
     
   </button>
@@ -969,7 +921,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/golden-record-deduplication-assist" id="scenario-golden-record-deduplication-assist">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/golden-record-deduplication-assist" id="scenario-golden-record-deduplication-assist" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1044,7 +996,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/governance-decision-documentation" id="scenario-governance-decision-documentation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/governance-decision-documentation" id="scenario-governance-decision-documentation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1117,7 +1069,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/master-data-estate-health-monitor" id="scenario-master-data-estate-health-monitor">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/master-data-estate-health-monitor" id="scenario-master-data-estate-health-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1192,7 +1144,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/deduplication-impact-prioritisation" id="scenario-deduplication-impact-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/deduplication-impact-prioritisation" id="scenario-deduplication-impact-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1267,7 +1219,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/reference-data-change-impact-map" id="scenario-reference-data-change-impact-map">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/reference-data-change-impact-map" id="scenario-reference-data-change-impact-map" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1368,31 +1320,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Lineage documentation currency — how many CDEs have lineage documentation that matches the current production configuration — is not measured continuously. The CDO cannot answer the BCBS 239 question of whether the Bank's risk data aggregation capability is audit-ready without commissioning a manual coverage assessment.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Lineage mapping effort is allocated to CDEs that are in scope for the current attestation cycle, based on the prior cycle&#39;s scope definition. CDEs that have changed their production pipeline configuration between attestation cycles are not re-attested until the next full cycle, creating a window of unattested lineage change that accumulates without systematic detection.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Pipeline metadata traversal for lineage discovery, transformation logic documentation from ETL script parsing, control total comparison across pipeline boundaries, and attestation-ready lineage summary drafting are structured technical tasks that follow repeatable patterns amenable to AI-assisted execution with engineering and governance review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Prior attestation findings — lineage gaps, control test failures, and documentation deficiencies identified in previous cycles — are documented in attestation reports but not synthesized into a pattern analysis that would prioritize systematic pipeline quality improvements over individual cycle remediations.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Lineage documentation currency — how many CDEs have lineage documentation that matches the current production configuration — is not measured continuously. The CDO cannot answer the BCBS 239 question of whether the Bank's risk data aggregation capability is audit-ready without commissioning a manual coverage assessment.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Lineage mapping effort is allocated to CDEs that are in scope for the current attestation cycle, based on the prior cycle&#39;s scope definition. CDEs that have changed their production pipeline configuration between attestation cycles are not re-attested until the next full cycle, creating a window of unattested lineage change that accumulates without systematic detection.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Pipeline metadata traversal for lineage discovery, transformation logic documentation from ETL script parsing, control total comparison across pipeline boundaries, and attestation-ready lineage summary drafting are structured technical tasks that follow repeatable patterns amenable to AI-assisted execution with engineering and governance review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Prior attestation findings — lineage gaps, control test failures, and documentation deficiencies identified in previous cycles — are documented in attestation reports but not synthesized into a pattern analysis that would prioritize systematic pipeline quality improvements over individual cycle remediations.</p></article></div>
     </section>
     
 
@@ -1414,7 +1342,7 @@ Question or comment:
     type="button"
     data-stage="map"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--map">
     <span class="flow-stages__stage-label">Map</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1426,7 +1354,7 @@ Question or comment:
     type="button"
     data-stage="document"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--document">
     <span class="flow-stages__stage-label">Document</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1438,7 +1366,7 @@ Question or comment:
     type="button"
     data-stage="test"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--test">
     <span class="flow-stages__stage-label">Test controls</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1450,7 +1378,7 @@ Question or comment:
     type="button"
     data-stage="attest"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--attest">
     <span class="flow-stages__stage-label">Attest</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1462,7 +1390,7 @@ Question or comment:
     type="button"
     data-stage="renew"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--renew">
     <span class="flow-stages__stage-label">Renew</span>
     
   </button>
@@ -1506,7 +1434,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/change-triggered-lineage-prioritisation" id="scenario-change-triggered-lineage-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/change-triggered-lineage-prioritisation" id="scenario-change-triggered-lineage-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1581,7 +1509,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-documentation-automation" id="scenario-lineage-documentation-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-documentation-automation" id="scenario-lineage-documentation-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1654,7 +1582,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-pack-drafting" id="scenario-attestation-pack-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-pack-drafting" id="scenario-attestation-pack-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1729,7 +1657,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-currency-dashboard" id="scenario-lineage-currency-dashboard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-currency-dashboard" id="scenario-lineage-currency-dashboard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1804,7 +1732,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-findings-pattern-synthesis" id="scenario-attestation-findings-pattern-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-findings-pattern-synthesis" id="scenario-attestation-findings-pattern-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1925,31 +1853,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Submission performance — validation failure rates, exception volumes, query frequencies by supervisor — is tracked informally by the regulatory reporting team but not aggregated into a quality trend analysis across submissions and supervisors. The CDO cannot produce a scorecard against the BCBS 239 principles without manual extraction from submission records.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Validation exception resolution is performed sequentially by the reporting team against each supervisor's deadline. Where the Bank operates in more than one jurisdiction, cross-supervisor pattern analysis — identifying data quality issues that consistently generate exceptions across multiple supervisors because they originate in the same source system — is not applied within the standard submission cycle.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Regulatory submission aggregation commentary, validation exception explanatory notes, post-submission reconciliation difference commentary, and supervisory query response drafts are structured writing tasks with consistent frameworks. Lineage traversal for specific CDE data points follows a reproducible path from source to submitted value amenable to AI-assisted response generation.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Supervisory query histories — which data points were challenged, which explanations were accepted, which methodology changes were requested — accumulate in individual query files rather than in a consolidated knowledge base. Each query cycle re-performs the investigation and drafting effort that prior cycle responses could have informed.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Submission performance — validation failure rates, exception volumes, query frequencies by supervisor — is tracked informally by the regulatory reporting team but not aggregated into a quality trend analysis across submissions and supervisors. The CDO cannot produce a scorecard against the BCBS 239 principles without manual extraction from submission records.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Validation exception resolution is performed sequentially by the reporting team against each supervisor's deadline. Where the Bank operates in more than one jurisdiction, cross-supervisor pattern analysis — identifying data quality issues that consistently generate exceptions across multiple supervisors because they originate in the same source system — is not applied within the standard submission cycle.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Regulatory submission aggregation commentary, validation exception explanatory notes, post-submission reconciliation difference commentary, and supervisory query response drafts are structured writing tasks with consistent frameworks. Lineage traversal for specific CDE data points follows a reproducible path from source to submitted value amenable to AI-assisted response generation.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Supervisory query histories — which data points were challenged, which explanations were accepted, which methodology changes were requested — accumulate in individual query files rather than in a consolidated knowledge base. Each query cycle re-performs the investigation and drafting effort that prior cycle responses could have informed.</p></article></div>
     </section>
     
 
@@ -1971,7 +1875,7 @@ Question or comment:
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--aggregate">
     <span class="flow-stages__stage-label">Aggregate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1983,7 +1887,7 @@ Question or comment:
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--validate">
     <span class="flow-stages__stage-label">Validate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1995,7 +1899,7 @@ Question or comment:
     type="button"
     data-stage="submit"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--submit">
     <span class="flow-stages__stage-label">Submit</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2007,7 +1911,7 @@ Question or comment:
     type="button"
     data-stage="reconcile"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--reconcile">
     <span class="flow-stages__stage-label">Reconcile</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2019,7 +1923,7 @@ Question or comment:
     type="button"
     data-stage="resolve"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--resolve">
     <span class="flow-stages__stage-label">Resolve queries</span>
     
   </button>
@@ -2063,7 +1967,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-commentary-automation" id="scenario-submission-commentary-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-commentary-automation" id="scenario-submission-commentary-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2138,7 +2042,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-response-assistant" id="scenario-supervisory-query-response-assistant">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-response-assistant" id="scenario-supervisory-query-response-assistant" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2213,7 +2117,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-quality-trend-scorecard" id="scenario-submission-quality-trend-scorecard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-quality-trend-scorecard" id="scenario-submission-quality-trend-scorecard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2288,7 +2192,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/cross-supervisor-exception-pattern" id="scenario-cross-supervisor-exception-pattern">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/cross-supervisor-exception-pattern" id="scenario-cross-supervisor-exception-pattern" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2363,7 +2267,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-knowledge-base" id="scenario-supervisory-query-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-knowledge-base" id="scenario-supervisory-query-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">

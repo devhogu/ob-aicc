@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -298,31 +298,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">The RCSA risk register and issue log are point-in-time documents updated at cycle boundaries. The CRO lacks a continuous view of residual risk trends — which risks are migrating upward between formal refresh cycles, which action plans are slipping — without manual extraction from the GRC system.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">RCSA rating calibration across business lines and the second-line challenge process are constrained by the time available for manual review. Risks with above-tolerance residual ratings and overdue action plans receive less review time than their materiality warrants when the review burden across the full register is high.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">RCSA risk description drafting, control effectiveness narrative production, issue summary writing, and quarterly refresh commentary are structured narrative tasks performed on a consistent framework for each risk item each cycle. GenAI can draft from structured inputs — risk type, loss event history, control design details — with risk officer review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">RCSA ratings across business lines and the incident event database accumulate across annual cycles but are rarely mined for patterns that would improve the next cycle&#39;s risk identification step. Recurring themes — the same operational risk type appearing in three business lines, or a control failing repeatedly in the same way — are identified informally rather than through systematic cross-cycle analysis.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The RCSA risk register and issue log are point-in-time documents updated at cycle boundaries. The CRO lacks a continuous view of residual risk trends — which risks are migrating upward between formal refresh cycles, which action plans are slipping — without manual extraction from the GRC system.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>RCSA rating calibration across business lines and the second-line challenge process are constrained by the time available for manual review. Risks with above-tolerance residual ratings and overdue action plans receive less review time than their materiality warrants when the review burden across the full register is high.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>RCSA risk description drafting, control effectiveness narrative production, issue summary writing, and quarterly refresh commentary are structured narrative tasks performed on a consistent framework for each risk item each cycle. GenAI can draft from structured inputs — risk type, loss event history, control design details — with risk officer review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>RCSA ratings across business lines and the incident event database accumulate across annual cycles but are rarely mined for patterns that would improve the next cycle&#39;s risk identification step. Recurring themes — the same operational risk type appearing in three business lines, or a control failing repeatedly in the same way — are identified informally rather than through systematic cross-cycle analysis.</p></article></div>
     </section>
     
 
@@ -344,7 +320,7 @@ Question or comment:
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--identify">
     <span class="flow-stages__stage-label">Identify</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -356,7 +332,7 @@ Question or comment:
     type="button"
     data-stage="assess"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--assess">
     <span class="flow-stages__stage-label">Assess</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -368,7 +344,7 @@ Question or comment:
     type="button"
     data-stage="score"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--score">
     <span class="flow-stages__stage-label">Score</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -380,7 +356,7 @@ Question or comment:
     type="button"
     data-stage="document"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--document">
     <span class="flow-stages__stage-label">Document</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -392,7 +368,7 @@ Question or comment:
     type="button"
     data-stage="refresh"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--refresh">
     <span class="flow-stages__stage-label">Refresh</span>
     
   </button>
@@ -436,7 +412,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-risk-identification-facilitation" id="scenario-rcsa-risk-identification-facilitation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-risk-identification-facilitation" id="scenario-rcsa-risk-identification-facilitation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -511,7 +487,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-narrative-drafting" id="scenario-rcsa-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-narrative-drafting" id="scenario-rcsa-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -584,7 +560,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-cross-cycle-risk-trend-signal" id="scenario-rcsa-cross-cycle-risk-trend-signal">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-cross-cycle-risk-trend-signal" id="scenario-rcsa-cross-cycle-risk-trend-signal" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -659,7 +635,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-rating-calibration-challenge-assist" id="scenario-rcsa-rating-calibration-challenge-assist">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-rating-calibration-challenge-assist" id="scenario-rcsa-rating-calibration-challenge-assist" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -734,7 +710,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-pattern-mining-next-cycle-brief" id="scenario-rcsa-pattern-mining-next-cycle-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-pattern-mining-next-cycle-brief" id="scenario-rcsa-pattern-mining-next-cycle-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -835,31 +811,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Stress test results are produced and reviewed at the annual submission cycle. Continuous monitoring of the Bank's resilience position — how the ICAAP trough CET1 or ILAAP survival horizon is shifting with the balance sheet between annual submissions — is absent from the standard management information set.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Stress scenario design and cross-domain consistency checking are constrained by the serial production process. Exploring a wider scenario set — additional macro pathways, idiosyncratic bank-specific scenarios, climate scenario variants — requires proportional additional production effort that the current cycle calendar cannot accommodate.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">ICAAP/ILAAP narrative sections — stress scenario descriptions, risk-type-specific adequacy narratives, management action plan documentation, and supervisory query response packs — are structured writing tasks with substantial content reuse across cycles. Climate scenario description following NGFS pathway conventions follows a reproducible structure amenable to AI-assisted drafting.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Prior supervisory dialogue — questions raised by the regulator in prior supervisory review cycles, findings on methodology, management action plan credibility — represents an institutional knowledge base that rarely feeds systematically into the next cycle's scenario design or narrative framing. Each submission cycle re-learns the same supervisory preferences through fresh dialogue.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Stress test results are produced and reviewed at the annual submission cycle. Continuous monitoring of the Bank's resilience position — how the ICAAP trough CET1 or ILAAP survival horizon is shifting with the balance sheet between annual submissions — is absent from the standard management information set.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Stress scenario design and cross-domain consistency checking are constrained by the serial production process. Exploring a wider scenario set — additional macro pathways, idiosyncratic bank-specific scenarios, climate scenario variants — requires proportional additional production effort that the current cycle calendar cannot accommodate.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>ICAAP/ILAAP narrative sections — stress scenario descriptions, risk-type-specific adequacy narratives, management action plan documentation, and supervisory query response packs — are structured writing tasks with substantial content reuse across cycles. Climate scenario description following NGFS pathway conventions follows a reproducible structure amenable to AI-assisted drafting.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Prior supervisory dialogue — questions raised by the regulator in prior supervisory review cycles, findings on methodology, management action plan credibility — represents an institutional knowledge base that rarely feeds systematically into the next cycle's scenario design or narrative framing. Each submission cycle re-learns the same supervisory preferences through fresh dialogue.</p></article></div>
     </section>
     
 
@@ -881,7 +833,7 @@ Question or comment:
     type="button"
     data-stage="define"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--define">
     <span class="flow-stages__stage-label">Define scenarios</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -893,7 +845,7 @@ Question or comment:
     type="button"
     data-stage="run"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--run">
     <span class="flow-stages__stage-label">Run models</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -905,7 +857,7 @@ Question or comment:
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--aggregate">
     <span class="flow-stages__stage-label">Aggregate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -917,7 +869,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -929,7 +881,7 @@ Question or comment:
     type="button"
     data-stage="submit"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--submit">
     <span class="flow-stages__stage-label">Submit</span>
     
   </button>
@@ -973,7 +925,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/stress-scenario-design-documentation-support" id="scenario-stress-scenario-design-documentation-support">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/stress-scenario-design-documentation-support" id="scenario-stress-scenario-design-documentation-support" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1048,7 +1000,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/icaap-ilaap-narrative-section-drafting" id="scenario-icaap-ilaap-narrative-section-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/icaap-ilaap-narrative-section-drafting" id="scenario-icaap-ilaap-narrative-section-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1123,7 +1075,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/continuous-capital-resilience-monitoring" id="scenario-continuous-capital-resilience-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/continuous-capital-resilience-monitoring" id="scenario-continuous-capital-resilience-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1198,7 +1150,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/parallel-scenario-set-expansion" id="scenario-parallel-scenario-set-expansion">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/parallel-scenario-set-expansion" id="scenario-parallel-scenario-set-expansion" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1273,7 +1225,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/supervisory-dialogue-knowledge-base" id="scenario-supervisory-dialogue-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/supervisory-dialogue-knowledge-base" id="scenario-supervisory-dialogue-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1396,31 +1348,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Limit utilization across risk types is monitored within each domain but not in a consolidated cross-domain view. The CRO cannot see the full limit utilization picture — which risk types are at high utilization simultaneously, where concentration of near-limit positions creates systemic risk — without manual assembly from multiple risk reporting systems.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Soft-breach threshold calibration and the timing of escalation relative to hard breach events are set by static rules rather than by dynamic position trajectory analysis. The escalation design does not distinguish between slow drift toward a limit and rapid directional moves, both of which have different intervention needs.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Breach investigation narrative drafting, limit utilization report commentary, and breach resolution documentation are structured writing tasks that repeat for each breach on a consistent framework. The factual content — position history, driver attribution, approver chain — is drawn from risk reporting systems and approval records that an AI agent can traverse systematically.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Breach histories across risk types — root causes, resolution outcomes, time-to-resolution — are held in individual breach files rather than in a structured repository. Pattern analysis across breach histories that could improve limit calibration and early-warning design is not routinely applied between formal limit review cycles.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Limit utilization across risk types is monitored within each domain but not in a consolidated cross-domain view. The CRO cannot see the full limit utilization picture — which risk types are at high utilization simultaneously, where concentration of near-limit positions creates systemic risk — without manual assembly from multiple risk reporting systems.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Soft-breach threshold calibration and the timing of escalation relative to hard breach events are set by static rules rather than by dynamic position trajectory analysis. The escalation design does not distinguish between slow drift toward a limit and rapid directional moves, both of which have different intervention needs.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Breach investigation narrative drafting, limit utilization report commentary, and breach resolution documentation are structured writing tasks that repeat for each breach on a consistent framework. The factual content — position history, driver attribution, approver chain — is drawn from risk reporting systems and approval records that an AI agent can traverse systematically.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Breach histories across risk types — root causes, resolution outcomes, time-to-resolution — are held in individual breach files rather than in a structured repository. Pattern analysis across breach histories that could improve limit calibration and early-warning design is not routinely applied between formal limit review cycles.</p></article></div>
     </section>
     
 
@@ -1442,7 +1370,7 @@ Question or comment:
     type="button"
     data-stage="set"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--set">
     <span class="flow-stages__stage-label">Set limits</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1454,7 +1382,7 @@ Question or comment:
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--monitor">
     <span class="flow-stages__stage-label">Monitor</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1466,7 +1394,7 @@ Question or comment:
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--detect">
     <span class="flow-stages__stage-label">Detect breaches</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1478,7 +1406,7 @@ Question or comment:
     type="button"
     data-stage="investigate"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--investigate">
     <span class="flow-stages__stage-label">Investigate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1490,7 +1418,7 @@ Question or comment:
     type="button"
     data-stage="resolve"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--resolve">
     <span class="flow-stages__stage-label">Resolve</span>
     
   </button>
@@ -1534,7 +1462,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/limit-governance-framework-calibration-support" id="scenario-limit-governance-framework-calibration-support">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/limit-governance-framework-calibration-support" id="scenario-limit-governance-framework-calibration-support" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1607,7 +1535,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-investigation-narrative-drafting" id="scenario-breach-investigation-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-investigation-narrative-drafting" id="scenario-breach-investigation-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1682,7 +1610,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/cross-domain-limit-utilisation-dashboard" id="scenario-cross-domain-limit-utilisation-dashboard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/cross-domain-limit-utilisation-dashboard" id="scenario-cross-domain-limit-utilisation-dashboard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1757,7 +1685,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/dynamic-soft-breach-threshold-calibration" id="scenario-dynamic-soft-breach-threshold-calibration">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/dynamic-soft-breach-threshold-calibration" id="scenario-dynamic-soft-breach-threshold-calibration" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1830,7 +1758,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-pattern-limit-recalibration-brief" id="scenario-breach-pattern-limit-recalibration-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-pattern-limit-recalibration-brief" id="scenario-breach-pattern-limit-recalibration-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1931,31 +1859,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">The committee risk pack is produced at monthly and quarterly intervals. The CRO lacks a continuous view of the institution's aggregate risk posture between formal reporting cycles — which domains are in motion, which are stable — without triggering an ad hoc report assembly.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Cross-domain risk coherence checking and the calibration of the pack&#39;s executive summary to committee members&#39; analytical priorities are performed by the Risk Reporting team manually each cycle without a systematic framework for allocating editorial attention to the most material and actionable risk developments.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Risk pack narrative drafting — executive summary, domain commentaries, emerging risk sections, regulatory developments summary — follows a consistent structure each cycle with only the current-period risk content varying. GenAI can draft from structured risk data inputs with CRO editorial review, compressing the production window from days to hours.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Risk committee discussions and management commitments accumulate in meeting minutes but are not systematically structured to feed forward into the next cycle&#39;s pack framing or the annual risk appetite review. The longitudinal record of risk committee governance — what was discussed, what actions were taken, whether management responses were effective — is thin and inaccessible.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The committee risk pack is produced at monthly and quarterly intervals. The CRO lacks a continuous view of the institution's aggregate risk posture between formal reporting cycles — which domains are in motion, which are stable — without triggering an ad hoc report assembly.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-domain risk coherence checking and the calibration of the pack&#39;s executive summary to committee members&#39; analytical priorities are performed by the Risk Reporting team manually each cycle without a systematic framework for allocating editorial attention to the most material and actionable risk developments.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Risk pack narrative drafting — executive summary, domain commentaries, emerging risk sections, regulatory developments summary — follows a consistent structure each cycle with only the current-period risk content varying. GenAI can draft from structured risk data inputs with CRO editorial review, compressing the production window from days to hours.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Risk committee discussions and management commitments accumulate in meeting minutes but are not systematically structured to feed forward into the next cycle&#39;s pack framing or the annual risk appetite review. The longitudinal record of risk committee governance — what was discussed, what actions were taken, whether management responses were effective — is thin and inaccessible.</p></article></div>
     </section>
     
 
@@ -1977,7 +1881,7 @@ Question or comment:
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--aggregate">
     <span class="flow-stages__stage-label">Aggregate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1989,7 +1893,7 @@ Question or comment:
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--validate">
     <span class="flow-stages__stage-label">Validate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2001,7 +1905,7 @@ Question or comment:
     type="button"
     data-stage="brief"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--brief">
     <span class="flow-stages__stage-label">Brief</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2013,7 +1917,7 @@ Question or comment:
     type="button"
     data-stage="discuss"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--discuss">
     <span class="flow-stages__stage-label">Discuss</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2025,7 +1929,7 @@ Question or comment:
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--track">
     <span class="flow-stages__stage-label">Track actions</span>
     
   </button>
@@ -2069,7 +1973,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-pre-read-structuring" id="scenario-risk-committee-pre-read-structuring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-pre-read-structuring" id="scenario-risk-committee-pre-read-structuring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2144,7 +2048,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-pack-narrative-drafting" id="scenario-risk-pack-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-pack-narrative-drafting" id="scenario-risk-pack-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2219,7 +2123,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/continuous-risk-posture-view" id="scenario-continuous-risk-posture-view">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/continuous-risk-posture-view" id="scenario-continuous-risk-posture-view" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2294,7 +2198,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/cross-domain-risk-coherence-check" id="scenario-cross-domain-risk-coherence-check">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/cross-domain-risk-coherence-check" id="scenario-cross-domain-risk-coherence-check" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2369,7 +2273,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-governance-longitudinal-record" id="scenario-risk-committee-governance-longitudinal-record">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-governance-longitudinal-record" id="scenario-risk-committee-governance-longitudinal-record" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -2468,31 +2372,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Model performance across the production model inventory is monitored by individual domain teams on separate schedules and reported through separate channels. The CRO and Model Risk Committee lack a consolidated view of model performance health — which models are approaching performance thresholds, which have unresolved validation findings — without manual assembly from multiple model monitoring systems.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Validation resource allocation to the prioritized model schedule is a manual planning exercise. When unexpected validation findings from a high-priority model consume more validation capacity than planned, the schedule for lower-priority models slips without a structured re-prioritization that considers the relative risk of delaying each pending validation.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Validation report drafting — conceptual soundness summary, data integrity test results, backtesting analysis, and findings documentation — follows the validation framework structure for each model type. Model performance monitoring commentary and the Model Risk Committee pack are structured, recurring production tasks that repeat for each model each cycle.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Validation findings across the model inventory — recurring finding types, common model limitations by domain, and patterns in model performance deterioration — accumulate in individual validation reports rather than in a consolidated findings database. The Model Risk Committee does not have access to a thematic synthesis of validation findings that could prioritize systemic model risk issues above individual model-level management.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Model performance across the production model inventory is monitored by individual domain teams on separate schedules and reported through separate channels. The CRO and Model Risk Committee lack a consolidated view of model performance health — which models are approaching performance thresholds, which have unresolved validation findings — without manual assembly from multiple model monitoring systems.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Validation resource allocation to the prioritized model schedule is a manual planning exercise. When unexpected validation findings from a high-priority model consume more validation capacity than planned, the schedule for lower-priority models slips without a structured re-prioritization that considers the relative risk of delaying each pending validation.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Validation report drafting — conceptual soundness summary, data integrity test results, backtesting analysis, and findings documentation — follows the validation framework structure for each model type. Model performance monitoring commentary and the Model Risk Committee pack are structured, recurring production tasks that repeat for each model each cycle.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Validation findings across the model inventory — recurring finding types, common model limitations by domain, and patterns in model performance deterioration — accumulate in individual validation reports rather than in a consolidated findings database. The Model Risk Committee does not have access to a thematic synthesis of validation findings that could prioritize systemic model risk issues above individual model-level management.</p></article></div>
     </section>
     
 
@@ -2514,7 +2394,7 @@ Question or comment:
     type="button"
     data-stage="inventory"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--inventory">
     <span class="flow-stages__stage-label">Inventory</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2526,7 +2406,7 @@ Question or comment:
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--validate">
     <span class="flow-stages__stage-label">Validate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2538,7 +2418,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2550,7 +2430,7 @@ Question or comment:
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--monitor">
     <span class="flow-stages__stage-label">Monitor performance</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2562,7 +2442,7 @@ Question or comment:
     type="button"
     data-stage="retire"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--retire">
     <span class="flow-stages__stage-label">Retire</span>
     
   </button>
@@ -2606,7 +2486,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-inventory-completeness-support" id="scenario-model-inventory-completeness-support">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-inventory-completeness-support" id="scenario-model-inventory-completeness-support" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2679,7 +2559,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-report-drafting" id="scenario-validation-report-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-report-drafting" id="scenario-validation-report-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2754,7 +2634,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-portfolio-performance-health-dashboard" id="scenario-model-portfolio-performance-health-dashboard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-portfolio-performance-health-dashboard" id="scenario-model-portfolio-performance-health-dashboard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2829,7 +2709,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-schedule-dynamic-reprioritisation" id="scenario-validation-schedule-dynamic-reprioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-schedule-dynamic-reprioritisation" id="scenario-validation-schedule-dynamic-reprioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2904,7 +2784,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-findings-thematic-synthesis" id="scenario-validation-findings-thematic-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-findings-thematic-synthesis" id="scenario-validation-findings-thematic-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">

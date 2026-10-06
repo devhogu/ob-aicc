@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -298,31 +298,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">External-signal flow, posture drift, and plan-execution variance are all observed in batch form at cycle boundaries. Continuous-form visibility into the cycle&#39;s operating signals (scan freshness, posture deltas, cascade reach, target variance) lags execution by quarters.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Cross-sub-concern coherence (capital × risk × segment × product × geography) is reconciled by senior judgment under cycle-deadline pressure. Alternative-plan exploration (different priorities, different bets) is rare because each what-if costs days of analyst time.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Briefing book production, plan-section drafting, board-pack assembly, and cascade variant production consume disproportionate analyst time. The recurring structure across years makes these production tasks ripe for end-to-end automation within prescribed editorial guardrails.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Cycle retrospective findings rarely feed forward into the next cycle's scan or planning assumptions. The Bank repeats the same synthesis discoveries year over year, building little compounding institutional memory.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>External-signal flow, posture drift, and plan-execution variance are all observed in batch form at cycle boundaries. Continuous-form visibility into the cycle&#39;s operating signals (scan freshness, posture deltas, cascade reach, target variance) lags execution by quarters.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-sub-concern coherence (capital × risk × segment × product × geography) is reconciled by senior judgment under cycle-deadline pressure. Alternative-plan exploration (different priorities, different bets) is rare because each what-if costs days of analyst time.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Briefing book production, plan-section drafting, board-pack assembly, and cascade variant production consume disproportionate analyst time. The recurring structure across years makes these production tasks ripe for end-to-end automation within prescribed editorial guardrails.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Cycle retrospective findings rarely feed forward into the next cycle's scan or planning assumptions. The Bank repeats the same synthesis discoveries year over year, building little compounding institutional memory.</p></article></div>
     </section>
     
 
@@ -344,7 +320,7 @@ Question or comment:
     type="button"
     data-stage="scan"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--scan">
     <span class="flow-stages__stage-label">Scan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -356,7 +332,7 @@ Question or comment:
     type="button"
     data-stage="assess"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--assess">
     <span class="flow-stages__stage-label">Assess</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -368,7 +344,7 @@ Question or comment:
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--plan">
     <span class="flow-stages__stage-label">Plan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -380,7 +356,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -392,7 +368,7 @@ Question or comment:
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--track">
     <span class="flow-stages__stage-label">Track</span>
     
   </button>
@@ -436,7 +412,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/continuous-environmental-scan-briefing" id="scenario-continuous-environmental-scan-briefing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/continuous-environmental-scan-briefing" id="scenario-continuous-environmental-scan-briefing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -511,7 +487,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-posture-drift-baseline" id="scenario-strategic-posture-drift-baseline">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-posture-drift-baseline" id="scenario-strategic-posture-drift-baseline" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -584,7 +560,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/plan-cascade-variant-production" id="scenario-plan-cascade-variant-production">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/plan-cascade-variant-production" id="scenario-plan-cascade-variant-production" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -657,7 +633,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-cycle-retrospective-synthesis" id="scenario-strategic-cycle-retrospective-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-cycle-retrospective-synthesis" id="scenario-strategic-cycle-retrospective-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -730,7 +706,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-plan-section-drafting" id="scenario-strategic-plan-section-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-plan-section-drafting" id="scenario-strategic-plan-section-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -829,31 +805,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Capital headroom, RWA trajectory, and stress scenario outcomes are all observed at cycle production points — ICAAP submission and quarterly refresh. Continuous-form visibility into capital adequacy drift and emerging capital pressures between cycles is absent from the standard operating rhythm.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Cross-risk stress aggregation and the translation of stress outputs into the adequacy narrative consume disproportionate analyst time. Alternative capital-action scenarios (dividend vs retained earnings vs, where the Bank issues such instruments, AT1 issuance) require sequential manual re-runs, limiting the management action space explored before submission.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">ICAAP narrative sections are substantially templated and updated from prior-year text each cycle. Stress-result synthesis, risk-by-risk adequacy commentary, and supervisor information-request response packs are high-volume structured writing tasks amenable to drafting by an AI agent with human sign-off.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Supervisor dialog from prior supervisory review cycles (questions asked, findings raised, management commitments made) represents a valuable institutional memory that rarely feeds forward systematically into the next cycle's ICAAP framing or management-action calibration.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Capital headroom, RWA trajectory, and stress scenario outcomes are all observed at cycle production points — ICAAP submission and quarterly refresh. Continuous-form visibility into capital adequacy drift and emerging capital pressures between cycles is absent from the standard operating rhythm.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-risk stress aggregation and the translation of stress outputs into the adequacy narrative consume disproportionate analyst time. Alternative capital-action scenarios (dividend vs retained earnings vs, where the Bank issues such instruments, AT1 issuance) require sequential manual re-runs, limiting the management action space explored before submission.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>ICAAP narrative sections are substantially templated and updated from prior-year text each cycle. Stress-result synthesis, risk-by-risk adequacy commentary, and supervisor information-request response packs are high-volume structured writing tasks amenable to drafting by an AI agent with human sign-off.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Supervisor dialog from prior supervisory review cycles (questions asked, findings raised, management commitments made) represents a valuable institutional memory that rarely feeds forward systematically into the next cycle's ICAAP framing or management-action calibration.</p></article></div>
     </section>
     
 
@@ -875,7 +827,7 @@ Question or comment:
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--plan">
     <span class="flow-stages__stage-label">Plan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -887,7 +839,7 @@ Question or comment:
     type="button"
     data-stage="project"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--project">
     <span class="flow-stages__stage-label">Project</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -899,7 +851,7 @@ Question or comment:
     type="button"
     data-stage="stress"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--stress">
     <span class="flow-stages__stage-label">Stress</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -911,7 +863,7 @@ Question or comment:
     type="button"
     data-stage="narrate"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--narrate">
     <span class="flow-stages__stage-label">Narrate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -923,7 +875,7 @@ Question or comment:
     type="button"
     data-stage="submit"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--submit">
     <span class="flow-stages__stage-label">Submit</span>
     
   </button>
@@ -967,7 +919,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/srep-information-request-response" id="scenario-srep-information-request-response">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/srep-information-request-response" id="scenario-srep-information-request-response" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1042,7 +994,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/capital-adequacy-continuous-monitoring" id="scenario-capital-adequacy-continuous-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/capital-adequacy-continuous-monitoring" id="scenario-capital-adequacy-continuous-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1117,7 +1069,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/icaap-narrative-section-drafting" id="scenario-icaap-narrative-section-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/icaap-narrative-section-drafting" id="scenario-icaap-narrative-section-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1190,7 +1142,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/cross-risk-stress-aggregation" id="scenario-cross-risk-stress-aggregation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/cross-risk-stress-aggregation" id="scenario-cross-risk-stress-aggregation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1289,31 +1241,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Capital deployment drift by business line, segment, and product is observable only at quarterly close. A continuous picture of deployment-versus-plan and risk-adjusted return-versus-hurdle between formal reviews is absent from the standard capital management information set.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Rebalancing option exploration is constrained by the time cost of each what-if. The Bank explores a shallow set of reallocation scenarios before the ALCO deadline; alternative portfolio shapes — different segment weights, different product mix, different geographic emphasis — are rarely surfaced.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Capital drift detection, root-cause attribution, and the implementation-brief production for approved reallocations are structured analytical tasks that repeat on a quarterly cadence. Each iteration reconstructs the same framework from raw data.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Rebalancing decisions and their outcomes — did the reallocation achieve the intended RoE improvement? — are rarely captured in a form that feeds forward into the next cycle's rebalancing proposal. The Bank's portfolio rebalancing institutional memory is thin.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Capital deployment drift by business line, segment, and product is observable only at quarterly close. A continuous picture of deployment-versus-plan and risk-adjusted return-versus-hurdle between formal reviews is absent from the standard capital management information set.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Rebalancing option exploration is constrained by the time cost of each what-if. The Bank explores a shallow set of reallocation scenarios before the ALCO deadline; alternative portfolio shapes — different segment weights, different product mix, different geographic emphasis — are rarely surfaced.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Capital drift detection, root-cause attribution, and the implementation-brief production for approved reallocations are structured analytical tasks that repeat on a quarterly cadence. Each iteration reconstructs the same framework from raw data.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Rebalancing decisions and their outcomes — did the reallocation achieve the intended RoE improvement? — are rarely captured in a form that feeds forward into the next cycle's rebalancing proposal. The Bank's portfolio rebalancing institutional memory is thin.</p></article></div>
     </section>
     
 
@@ -1335,7 +1263,7 @@ Question or comment:
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--detect">
     <span class="flow-stages__stage-label">Detect drift</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1347,7 +1275,7 @@ Question or comment:
     type="button"
     data-stage="diagnose"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--diagnose">
     <span class="flow-stages__stage-label">Diagnose</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1359,7 +1287,7 @@ Question or comment:
     type="button"
     data-stage="propose"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--propose">
     <span class="flow-stages__stage-label">Propose</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1371,7 +1299,7 @@ Question or comment:
     type="button"
     data-stage="decide"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--decide">
     <span class="flow-stages__stage-label">Decide</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1383,7 +1311,7 @@ Question or comment:
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--execute">
     <span class="flow-stages__stage-label">Execute</span>
     
   </button>
@@ -1427,7 +1355,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/capital-deployment-drift-detection" id="scenario-capital-deployment-drift-detection">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/capital-deployment-drift-detection" id="scenario-capital-deployment-drift-detection" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1502,7 +1430,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/rebalancing-implementation-brief" id="scenario-rebalancing-implementation-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/rebalancing-implementation-brief" id="scenario-rebalancing-implementation-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1575,7 +1503,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/raroc-rebalancing-scenario-pack" id="scenario-raroc-rebalancing-scenario-pack">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/raroc-rebalancing-scenario-pack" id="scenario-raroc-rebalancing-scenario-pack" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1696,31 +1624,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Quarterly plan-versus-actual variance is assembled post-close over one to two weeks. Continuous visibility into the quarter&#39;s performance trajectory — which business lines are tracking behind plan mid-quarter — is absent from the standard operating information set.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Cross-BU coherence checking — ensuring that the CFO&#39;s aggregate revenue figure reconciles with each segment head&#39;s reported contribution — is a manual multi-day exercise. The time cost of cross-BU reconciliation limits the depth of the diagnostic and the quality of the EC discussion.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">EC briefing pack assembly, variance commentary drafting, and corrective-action mandate production repeat on a quarterly cadence with a consistent structure. Each iteration reconstructs the same framework from raw actuals and prior-quarter packs.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Quarterly performance review findings and EC decisions are captured in minutes but rarely structured in a form that feeds forward into the next quarter's review framing or the next year's strategic plan target-setting. The Bank's performance review institutional memory is thin.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Quarterly plan-versus-actual variance is assembled post-close over one to two weeks. Continuous visibility into the quarter&#39;s performance trajectory — which business lines are tracking behind plan mid-quarter — is absent from the standard operating information set.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-BU coherence checking — ensuring that the CFO&#39;s aggregate revenue figure reconciles with each segment head&#39;s reported contribution — is a manual multi-day exercise. The time cost of cross-BU reconciliation limits the depth of the diagnostic and the quality of the EC discussion.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>EC briefing pack assembly, variance commentary drafting, and corrective-action mandate production repeat on a quarterly cadence with a consistent structure. Each iteration reconstructs the same framework from raw actuals and prior-quarter packs.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Quarterly performance review findings and EC decisions are captured in minutes but rarely structured in a form that feeds forward into the next quarter's review framing or the next year's strategic plan target-setting. The Bank's performance review institutional memory is thin.</p></article></div>
     </section>
     
 
@@ -1742,7 +1646,7 @@ Question or comment:
     type="button"
     data-stage="assemble"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--assemble">
     <span class="flow-stages__stage-label">Assemble actuals</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1754,7 +1658,7 @@ Question or comment:
     type="button"
     data-stage="compare"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--compare">
     <span class="flow-stages__stage-label">Compare</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1766,7 +1670,7 @@ Question or comment:
     type="button"
     data-stage="diagnose"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--diagnose">
     <span class="flow-stages__stage-label">Diagnose variance</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1778,7 +1682,7 @@ Question or comment:
     type="button"
     data-stage="brief"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--brief">
     <span class="flow-stages__stage-label">Brief</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1790,7 +1694,7 @@ Question or comment:
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--adjust">
     <span class="flow-stages__stage-label">Adjust</span>
     
   </button>
@@ -1834,7 +1738,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/mid-cycle-performance-trajectory" id="scenario-mid-cycle-performance-trajectory">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/mid-cycle-performance-trajectory" id="scenario-mid-cycle-performance-trajectory" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1909,7 +1813,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/cross-bu-variance-attribution" id="scenario-cross-bu-variance-attribution">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/cross-bu-variance-attribution" id="scenario-cross-bu-variance-attribution" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1982,7 +1886,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/ec-quarterly-review-pack-assembly" id="scenario-ec-quarterly-review-pack-assembly">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/ec-quarterly-review-pack-assembly" id="scenario-ec-quarterly-review-pack-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2083,31 +1987,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Board and investor communication is produced episodically at each cycle's publication point. The Bank has no continuous-form view of its communication posture — which commitments are outstanding, which themes recur, which investor questions accumulate between cycles.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Cross-memo and cross-cycle consistency checking — ensuring the CFO&#39;s quarterly letter does not contradict the prior annual report or the CRO&#39;s concurrent risk memo — is a manual sequential review. The review burden limits the number of revision cycles possible before the release deadline.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">First-draft production of board memos, investor letters, and earnings releases follows a consistent structure each cycle. Style, format, and disclosure obligations are largely stable; the variable is the current-period performance content that populates the template.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Investor questions, analyst themes, and board member feedback accumulate across communication cycles but are not captured in a structured form that improves the quality and anticipatory coverage of subsequent communications.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Board and investor communication is produced episodically at each cycle's publication point. The Bank has no continuous-form view of its communication posture — which commitments are outstanding, which themes recur, which investor questions accumulate between cycles.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-memo and cross-cycle consistency checking — ensuring the CFO&#39;s quarterly letter does not contradict the prior annual report or the CRO&#39;s concurrent risk memo — is a manual sequential review. The review burden limits the number of revision cycles possible before the release deadline.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>First-draft production of board memos, investor letters, and earnings releases follows a consistent structure each cycle. Style, format, and disclosure obligations are largely stable; the variable is the current-period performance content that populates the template.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Investor questions, analyst themes, and board member feedback accumulate across communication cycles but are not captured in a structured form that improves the quality and anticipatory coverage of subsequent communications.</p></article></div>
     </section>
     
 
@@ -2129,7 +2009,7 @@ Question or comment:
     type="button"
     data-stage="synthesize"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--synthesize">
     <span class="flow-stages__stage-label">Synthesize</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2141,7 +2021,7 @@ Question or comment:
     type="button"
     data-stage="draft"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--draft">
     <span class="flow-stages__stage-label">Draft</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2153,7 +2033,7 @@ Question or comment:
     type="button"
     data-stage="review"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--review">
     <span class="flow-stages__stage-label">Review</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2165,7 +2045,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2177,7 +2057,7 @@ Question or comment:
     type="button"
     data-stage="deliver"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--deliver">
     <span class="flow-stages__stage-label">Deliver</span>
     
   </button>
@@ -2221,7 +2101,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/cross-cycle-disclosure-consistency-check" id="scenario-cross-cycle-disclosure-consistency-check">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/cross-cycle-disclosure-consistency-check" id="scenario-cross-cycle-disclosure-consistency-check" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2294,7 +2174,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/investor-analyst-theme-intelligence" id="scenario-investor-analyst-theme-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/investor-analyst-theme-intelligence" id="scenario-investor-analyst-theme-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2367,7 +2247,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/investor-communication-delivery-checklist" id="scenario-investor-communication-delivery-checklist">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/investor-communication-delivery-checklist" id="scenario-investor-communication-delivery-checklist" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2440,7 +2320,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/board-investor-communication-drafting" id="scenario-board-investor-communication-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/board-investor-communication-drafting" id="scenario-board-investor-communication-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">

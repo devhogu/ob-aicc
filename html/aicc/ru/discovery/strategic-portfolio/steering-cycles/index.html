@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -297,31 +297,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Поток внешних сигналов, отклонение позиции и отклонение факта исполнения от плана наблюдаются в пакетном режиме на границах цикла. Непрерывный мониторинг операционных сигналов цикла — актуальность скана, дельты позиции, охват каскадирования, отклонение целевых показателей — отстаёт от исполнения на несколько кварталов.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Согласованность между суббеспокойствами — капитал × риск × сегмент × продукт × география — обеспечивается старшим суждением под давлением дедлайна цикла. Проработка альтернативных планов — иные приоритеты, иные ставки — редка, поскольку каждый альтернативный сценарий требует нескольких аналитических дней.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка брифинговых книг, составление разделов плана, сборка пакетов для совета директоров и производство вариантов каскадирования непропорционально нагружают аналитиков. Повторяющаяся структура из года в год делает эти задачи подходящими для сквозной автоматизации в рамках установленных редакционных ограничений.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Выводы ретроспектив цикла редко используются при формировании скана или плановых допущений следующего цикла. Банк из года в год повторяет одни и те же аналитические открытия, накапливая незначительную институциональную память.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Поток внешних сигналов, отклонение позиции и отклонение факта исполнения от плана наблюдаются в пакетном режиме на границах цикла. Непрерывный мониторинг операционных сигналов цикла — актуальность скана, дельты позиции, охват каскадирования, отклонение целевых показателей — отстаёт от исполнения на несколько кварталов.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Согласованность между суббеспокойствами — капитал × риск × сегмент × продукт × география — обеспечивается старшим суждением под давлением дедлайна цикла. Проработка альтернативных планов — иные приоритеты, иные ставки — редка, поскольку каждый альтернативный сценарий требует нескольких аналитических дней.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка брифинговых книг, составление разделов плана, сборка пакетов для совета директоров и производство вариантов каскадирования непропорционально нагружают аналитиков. Повторяющаяся структура из года в год делает эти задачи подходящими для сквозной автоматизации в рамках установленных редакционных ограничений.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Выводы ретроспектив цикла редко используются при формировании скана или плановых допущений следующего цикла. Банк из года в год повторяет одни и те же аналитические открытия, накапливая незначительную институциональную память.</p></article></div>
     </section>
     
 
@@ -343,7 +319,7 @@
     type="button"
     data-stage="scan"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--scan">
     <span class="flow-stages__stage-label">Сканировать</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -355,7 +331,7 @@
     type="button"
     data-stage="assess"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--assess">
     <span class="flow-stages__stage-label">Оценить</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -367,7 +343,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--plan">
     <span class="flow-stages__stage-label">Планировать</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -379,7 +355,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--approve">
     <span class="flow-stages__stage-label">Утвердить</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -391,7 +367,7 @@
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/strategic-planning-cycle"
-  >
+   id="stage-strategic-planning-cycle--track">
     <span class="flow-stages__stage-label">Отслеживать</span>
     
   </button>
@@ -435,7 +411,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/continuous-environmental-scan-briefing" id="scenario-continuous-environmental-scan-briefing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/continuous-environmental-scan-briefing" id="scenario-continuous-environmental-scan-briefing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -510,7 +486,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-posture-drift-baseline" id="scenario-strategic-posture-drift-baseline">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-posture-drift-baseline" id="scenario-strategic-posture-drift-baseline" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -585,7 +561,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/plan-cascade-variant-production" id="scenario-plan-cascade-variant-production">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/plan-cascade-variant-production" id="scenario-plan-cascade-variant-production" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -660,7 +636,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-cycle-retrospective-synthesis" id="scenario-strategic-cycle-retrospective-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-cycle-retrospective-synthesis" id="scenario-strategic-cycle-retrospective-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -735,7 +711,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-plan-section-drafting" id="scenario-strategic-plan-section-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/strategic-planning-cycle/strategic-plan-section-drafting" id="scenario-strategic-plan-section-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -837,31 +813,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Запас капитала, траектория взвешенных по риску активов и результаты стресс-сценариев наблюдаются только в точках производства цикла — при подаче ВПОДК и квартальном обновлении. Непрерывный мониторинг отклонения достаточности капитала и формирующегося давления на капитал между циклами в стандартном операционном ритме отсутствует.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Агрегирование стресс-результатов по видам риска и трансляция стресс-показателей в нарратив о достаточности непропорционально нагружают аналитиков. Альтернативные сценарии капитальных действий — дивиденды, нераспределённая прибыль или выпуск AT1 — требуют последовательных ручных пересчётов, что ограничивает пространство управленческих решений, изученных до представления документа.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Нарративные разделы ВПОДК в значительной мере шаблонизированы и обновляются от цикла к циклу на основе текста предыдущего года. Синтез стресс-результатов, комментарии по достаточности в разрезе видов риска и пакеты ответов на информационные запросы регулятора — объёмные структурированные задачи написания, подходящие для подготовки агентом с последующим согласованием со стороны человека.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Диалог с регулятором по предыдущим циклам SREP — заданные вопросы, выявленные замечания, принятые руководством обязательства — представляет ценную институциональную память, которая редко систематически переносится в формирование следующего цикла ВПОДК или калибровку управленческих действий.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Запас капитала, траектория взвешенных по риску активов и результаты стресс-сценариев наблюдаются только в точках производства цикла — при подаче ВПОДК и квартальном обновлении. Непрерывный мониторинг отклонения достаточности капитала и формирующегося давления на капитал между циклами в стандартном операционном ритме отсутствует.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Агрегирование стресс-результатов по видам риска и трансляция стресс-показателей в нарратив о достаточности непропорционально нагружают аналитиков. Альтернативные сценарии капитальных действий — дивиденды, нераспределённая прибыль или выпуск AT1 — требуют последовательных ручных пересчётов, что ограничивает пространство управленческих решений, изученных до представления документа.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Нарративные разделы ВПОДК в значительной мере шаблонизированы и обновляются от цикла к циклу на основе текста предыдущего года. Синтез стресс-результатов, комментарии по достаточности в разрезе видов риска и пакеты ответов на информационные запросы регулятора — объёмные структурированные задачи написания, подходящие для подготовки агентом с последующим согласованием со стороны человека.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Диалог с регулятором по предыдущим циклам SREP — заданные вопросы, выявленные замечания, принятые руководством обязательства — представляет ценную институциональную память, которая редко систематически переносится в формирование следующего цикла ВПОДК или калибровку управленческих действий.</p></article></div>
     </section>
     
 
@@ -883,7 +835,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -895,7 +847,7 @@
     type="button"
     data-stage="project"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--project">
     <span class="flow-stages__stage-label">Прогнозирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -907,7 +859,7 @@
     type="button"
     data-stage="stress"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--stress">
     <span class="flow-stages__stage-label">Стресс-тестирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -919,7 +871,7 @@
     type="button"
     data-stage="narrate"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--narrate">
     <span class="flow-stages__stage-label">Нарратив</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -931,7 +883,7 @@
     type="button"
     data-stage="submit"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/capital-management-cycle"
-  >
+   id="stage-capital-management-cycle--submit">
     <span class="flow-stages__stage-label">Подача</span>
     
   </button>
@@ -975,7 +927,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/srep-information-request-response" id="scenario-srep-information-request-response">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/srep-information-request-response" id="scenario-srep-information-request-response" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1050,7 +1002,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/capital-adequacy-continuous-monitoring" id="scenario-capital-adequacy-continuous-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/capital-adequacy-continuous-monitoring" id="scenario-capital-adequacy-continuous-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1125,7 +1077,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/icaap-narrative-section-drafting" id="scenario-icaap-narrative-section-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/icaap-narrative-section-drafting" id="scenario-icaap-narrative-section-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1200,7 +1152,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/cross-risk-stress-aggregation" id="scenario-cross-risk-stress-aggregation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/capital-management-cycle/cross-risk-stress-aggregation" id="scenario-cross-risk-stress-aggregation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1302,31 +1254,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Отклонение фактического размещения капитала по бизнес-направлениям, сегментам и продуктам наблюдается только на квартальном клозинге. Непрерывная картина соотношения фактического размещения и плана, а также рискоскорректированной доходности относительно барьерной ставки между плановыми обзорами в стандартном информационном наборе управления капиталом отсутствует.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Изучение вариантов ребалансировки ограничено трудозатратами на каждый альтернативный сценарий. До наступления крайнего срока ALCO банк прорабатывает лишь узкий набор сценариев перераспределения; альтернативные конфигурации портфеля — иные веса сегментов, иной продуктовый микс, иной географический акцент — анализируются редко.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Выявление отклонений в размещении капитала, атрибуция первопричин и подготовка реализационных брифов по утверждённым перераспределениям — структурированные аналитические задачи, повторяющиеся ежеквартально. Каждая итерация воссоздаёт один и тот же фреймворк из исходных данных.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Решения о ребалансировке и их результаты — привело ли перераспределение к ожидаемому улучшению рентабельности капитала? — редко фиксируются в форме, которая используется при подготовке следующего предложения по ребалансировке. Институциональная память банка по ребалансировке портфеля невелика.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Отклонение фактического размещения капитала по бизнес-направлениям, сегментам и продуктам наблюдается только на квартальном клозинге. Непрерывная картина соотношения фактического размещения и плана, а также рискоскорректированной доходности относительно барьерной ставки между плановыми обзорами в стандартном информационном наборе управления капиталом отсутствует.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Изучение вариантов ребалансировки ограничено трудозатратами на каждый альтернативный сценарий. До наступления крайнего срока ALCO банк прорабатывает лишь узкий набор сценариев перераспределения; альтернативные конфигурации портфеля — иные веса сегментов, иной продуктовый микс, иной географический акцент — анализируются редко.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Выявление отклонений в размещении капитала, атрибуция первопричин и подготовка реализационных брифов по утверждённым перераспределениям — структурированные аналитические задачи, повторяющиеся ежеквартально. Каждая итерация воссоздаёт один и тот же фреймворк из исходных данных.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Решения о ребалансировке и их результаты — привело ли перераспределение к ожидаемому улучшению рентабельности капитала? — редко фиксируются в форме, которая используется при подготовке следующего предложения по ребалансировке. Институциональная память банка по ребалансировке портфеля невелика.</p></article></div>
     </section>
     
 
@@ -1348,7 +1276,7 @@
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--detect">
     <span class="flow-stages__stage-label">Выявление смещения</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1360,7 +1288,7 @@
     type="button"
     data-stage="diagnose"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--diagnose">
     <span class="flow-stages__stage-label">Диагностика</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1372,7 +1300,7 @@
     type="button"
     data-stage="propose"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--propose">
     <span class="flow-stages__stage-label">Предложить</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1384,7 +1312,7 @@
     type="button"
     data-stage="decide"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--decide">
     <span class="flow-stages__stage-label">Решение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1396,7 +1324,7 @@
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/portfolio-rebalancing"
-  >
+   id="stage-portfolio-rebalancing--execute">
     <span class="flow-stages__stage-label">Реализация</span>
     
   </button>
@@ -1440,7 +1368,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/capital-deployment-drift-detection" id="scenario-capital-deployment-drift-detection">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/capital-deployment-drift-detection" id="scenario-capital-deployment-drift-detection" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1515,7 +1443,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/rebalancing-implementation-brief" id="scenario-rebalancing-implementation-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/rebalancing-implementation-brief" id="scenario-rebalancing-implementation-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1590,7 +1518,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/raroc-rebalancing-scenario-pack" id="scenario-raroc-rebalancing-scenario-pack">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/portfolio-rebalancing/raroc-rebalancing-scenario-pack" id="scenario-raroc-rebalancing-scenario-pack" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1714,31 +1642,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Квартальный анализ отклонений «план — факт» формируется пост-клозинг в течение одной-двух недель. Непрерывный мониторинг траектории результатов в течение квартала — какие бизнес-направления отстают от плана в середине квартала — в стандартном информационном наборе отсутствует.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Проверка согласованности между бизнес-единицами — контроль того, чтобы совокупный показатель выручки финансового директора сходился с задекларированным вкладом каждого руководителя сегмента — проводится вручную в течение нескольких дней. Трудозатраты на межсегментную сверку ограничивают глубину диагностики и качество обсуждения в исполнительном комитете.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка брифинг-пакета для исполнительного комитета, составление комментариев по отклонениям и выработка предписаний по корректирующим действиям повторяются ежеквартально с единой структурой. Каждая итерация воссоздаёт один и тот же фреймворк из исходных фактических данных и пакетов предыдущего квартала.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты квартальных обзоров эффективности и решения исполнительного комитета фиксируются в протоколах, однако редко структурируются в форму, которая используется при формировании следующего квартального обзора или целевых показателей очередного стратегического плана. Институциональная память банка по обзорам эффективности невелика.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Квартальный анализ отклонений «план — факт» формируется пост-клозинг в течение одной-двух недель. Непрерывный мониторинг траектории результатов в течение квартала — какие бизнес-направления отстают от плана в середине квартала — в стандартном информационном наборе отсутствует.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Проверка согласованности между бизнес-единицами — контроль того, чтобы совокупный показатель выручки финансового директора сходился с задекларированным вкладом каждого руководителя сегмента — проводится вручную в течение нескольких дней. Трудозатраты на межсегментную сверку ограничивают глубину диагностики и качество обсуждения в исполнительном комитете.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка брифинг-пакета для исполнительного комитета, составление комментариев по отклонениям и выработка предписаний по корректирующим действиям повторяются ежеквартально с единой структурой. Каждая итерация воссоздаёт один и тот же фреймворк из исходных фактических данных и пакетов предыдущего квартала.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты квартальных обзоров эффективности и решения исполнительного комитета фиксируются в протоколах, однако редко структурируются в форму, которая используется при формировании следующего квартального обзора или целевых показателей очередного стратегического плана. Институциональная память банка по обзорам эффективности невелика.</p></article></div>
     </section>
     
 
@@ -1760,7 +1664,7 @@
     type="button"
     data-stage="assemble"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--assemble">
     <span class="flow-stages__stage-label">Сбор фактических данных</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1772,7 +1676,7 @@
     type="button"
     data-stage="compare"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--compare">
     <span class="flow-stages__stage-label">Сравнение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1784,7 +1688,7 @@
     type="button"
     data-stage="diagnose"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--diagnose">
     <span class="flow-stages__stage-label">Диагностика отклонений</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1796,7 +1700,7 @@
     type="button"
     data-stage="brief"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--brief">
     <span class="flow-stages__stage-label">Брифинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1808,7 +1712,7 @@
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/performance-review-strategic-targets"
-  >
+   id="stage-performance-review-strategic-targets--adjust">
     <span class="flow-stages__stage-label">Корректировка</span>
     
   </button>
@@ -1852,7 +1756,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/mid-cycle-performance-trajectory" id="scenario-mid-cycle-performance-trajectory">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/mid-cycle-performance-trajectory" id="scenario-mid-cycle-performance-trajectory" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1927,7 +1831,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/cross-bu-variance-attribution" id="scenario-cross-bu-variance-attribution">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/cross-bu-variance-attribution" id="scenario-cross-bu-variance-attribution" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2002,7 +1906,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/ec-quarterly-review-pack-assembly" id="scenario-ec-quarterly-review-pack-assembly">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/performance-review-strategic-targets/ec-quarterly-review-pack-assembly" id="scenario-ec-quarterly-review-pack-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2104,31 +2008,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Коммуникация с советом директоров и инвесторами формируется эпизодически в точках публикации каждого цикла. Банк не ведёт непрерывного мониторинга коммуникационной позиции: какие обязательства остаются открытыми, какие темы повторяются, какие вопросы инвесторов накапливаются между циклами.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Проверка согласованности между меморандумами и между циклами — контроль того, чтобы квартальное письмо финансового директора не противоречило предыдущему годовому отчёту или текущему меморандуму директора по рискам — проводится вручную последовательно. Трудозатраты на проверку ограничивают число итераций доработки до крайнего срока публикации.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка первых версий меморандумов для совета директоров, писем инвесторам и пресс-релизов о финансовых результатах следует единой структуре в каждом цикле. Стиль, формат и требования к раскрытию информации в основном стабильны; переменная составляющая — показатели текущего периода, которые заполняют шаблон.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Вопросы инвесторов, темы аналитиков и обратная связь от членов совета директоров накапливаются в коммуникационных циклах, однако не структурируются в форму, позволяющую повышать качество и упреждающий охват последующих коммуникаций.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Коммуникация с советом директоров и инвесторами формируется эпизодически в точках публикации каждого цикла. Банк не ведёт непрерывного мониторинга коммуникационной позиции: какие обязательства остаются открытыми, какие темы повторяются, какие вопросы инвесторов накапливаются между циклами.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Проверка согласованности между меморандумами и между циклами — контроль того, чтобы квартальное письмо финансового директора не противоречило предыдущему годовому отчёту или текущему меморандуму директора по рискам — проводится вручную последовательно. Трудозатраты на проверку ограничивают число итераций доработки до крайнего срока публикации.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка первых версий меморандумов для совета директоров, писем инвесторам и пресс-релизов о финансовых результатах следует единой структуре в каждом цикле. Стиль, формат и требования к раскрытию информации в основном стабильны; переменная составляющая — показатели текущего периода, которые заполняют шаблон.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Вопросы инвесторов, темы аналитиков и обратная связь от членов совета директоров накапливаются в коммуникационных циклах, однако не структурируются в форму, позволяющую повышать качество и упреждающий охват последующих коммуникаций.</p></article></div>
     </section>
     
 
@@ -2150,7 +2030,7 @@
     type="button"
     data-stage="synthesize"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--synthesize">
     <span class="flow-stages__stage-label">Синтез</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2162,7 +2042,7 @@
     type="button"
     data-stage="draft"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--draft">
     <span class="flow-stages__stage-label">Подготовка черновика</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2174,7 +2054,7 @@
     type="button"
     data-stage="review"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--review">
     <span class="flow-stages__stage-label">Проверка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2186,7 +2066,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--approve">
     <span class="flow-stages__stage-label">Утверждение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2198,7 +2078,7 @@
     type="button"
     data-stage="deliver"
     data-flow-id="urn:financial-services:flow:strategic-portfolio/steering-cycles/board-investor-communication"
-  >
+   id="stage-board-investor-communication--deliver">
     <span class="flow-stages__stage-label">Рассылка</span>
     
   </button>
@@ -2242,7 +2122,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/cross-cycle-disclosure-consistency-check" id="scenario-cross-cycle-disclosure-consistency-check">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/cross-cycle-disclosure-consistency-check" id="scenario-cross-cycle-disclosure-consistency-check" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2317,7 +2197,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/investor-analyst-theme-intelligence" id="scenario-investor-analyst-theme-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/investor-analyst-theme-intelligence" id="scenario-investor-analyst-theme-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2392,7 +2272,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/investor-communication-delivery-checklist" id="scenario-investor-communication-delivery-checklist">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/investor-communication-delivery-checklist" id="scenario-investor-communication-delivery-checklist" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -2467,7 +2347,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/board-investor-communication-drafting" id="scenario-board-investor-communication-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/strategic-portfolio/steering-cycles/board-investor-communication/board-investor-communication-drafting" id="scenario-board-investor-communication-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">

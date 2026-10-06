@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -301,31 +301,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Финансовая траектория на полный год — текущие фактические данные плюс повторный прогноз до конца года — собирается поквартально после закрытия, а не непрерывно. Внутриквартальные сигналы, свидетельствующие об изменении прогноза на полный год, — отклонение объёма кредитов, переоценка депозитов, изменение темпа роста расходов — не учитываются в управленческих прогнозах между формальными циклами пересмотра.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Проработка бюджетных сценариев ограничена временными затратами на каждый вариант расчёта. Команда FP&amp;A представляет два-три сценария планирования к моменту согласования бюджета; альтернативные допущения по распределению капитала, сценарии продуктового микса или чувствительности к процентной среде, которые обострили бы дискуссию на правлении, не прорабатываются, поскольку каждая итерация требует нескольких дней машинного времени.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка бюджетных нарративов, комментарии к пересмотренным прогнозам, сборка материалов для правления и формирование таблиц чувствительности — структурированные, повторяющиеся задачи, выполняемые в рамках последовательных методологий в каждом цикле. Структура нарратива по годам существенно стабильна; ИИ может формировать проекты на основе модельных выходных данных с последующей проверкой аналитиком.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Бюджетные допущения прошлых лет — оказавшиеся точными, систематически оптимистичными или консервативными в разрезе бизнес-подразделений — хранятся в файлах модели за прошлые годы, а не в структурированной библиотеке допущений. Каждый цикл планирования воссоздаёт упражнение по калибровке допущений с нуля.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Финансовая траектория на полный год — текущие фактические данные плюс повторный прогноз до конца года — собирается поквартально после закрытия, а не непрерывно. Внутриквартальные сигналы, свидетельствующие об изменении прогноза на полный год, — отклонение объёма кредитов, переоценка депозитов, изменение темпа роста расходов — не учитываются в управленческих прогнозах между формальными циклами пересмотра.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Проработка бюджетных сценариев ограничена временными затратами на каждый вариант расчёта. Команда FP&amp;A представляет два-три сценария планирования к моменту согласования бюджета; альтернативные допущения по распределению капитала, сценарии продуктового микса или чувствительности к процентной среде, которые обострили бы дискуссию на правлении, не прорабатываются, поскольку каждая итерация требует нескольких дней машинного времени.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка бюджетных нарративов, комментарии к пересмотренным прогнозам, сборка материалов для правления и формирование таблиц чувствительности — структурированные, повторяющиеся задачи, выполняемые в рамках последовательных методологий в каждом цикле. Структура нарратива по годам существенно стабильна; ИИ может формировать проекты на основе модельных выходных данных с последующей проверкой аналитиком.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Бюджетные допущения прошлых лет — оказавшиеся точными, систематически оптимистичными или консервативными в разрезе бизнес-подразделений — хранятся в файлах модели за прошлые годы, а не в структурированной библиотеке допущений. Каждый цикл планирования воссоздаёт упражнение по калибровке допущений с нуля.</p></article></div>
     </section>
     
 
@@ -347,7 +323,7 @@
     type="button"
     data-stage="set"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--set">
     <span class="flow-stages__stage-label">Установка допущений</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -359,7 +335,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -371,7 +347,7 @@
     type="button"
     data-stage="build"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--build">
     <span class="flow-stages__stage-label">Построение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -383,7 +359,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--approve">
     <span class="flow-stages__stage-label">Утверждение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -395,7 +371,7 @@
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:finance-treasury/budget-forecast-cycle"
-  >
+   id="stage-budget-forecast-cycle--track">
     <span class="flow-stages__stage-label">Мониторинг и переоценка прогноза</span>
     
   </button>
@@ -439,7 +415,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/intra-quarter-nim-ftp-signal-monitoring" id="scenario-intra-quarter-nim-ftp-signal-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/intra-quarter-nim-ftp-signal-monitoring" id="scenario-intra-quarter-nim-ftp-signal-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -518,7 +494,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-assumption-calibration-library" id="scenario-budget-assumption-calibration-library">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-assumption-calibration-library" id="scenario-budget-assumption-calibration-library" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -597,7 +573,7 @@ FP&amp;A применяет калибровку в качестве начал�
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-scenario-sensitivity-engine" id="scenario-budget-scenario-sensitivity-engine">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-scenario-sensitivity-engine" id="scenario-budget-scenario-sensitivity-engine" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -676,7 +652,7 @@ FP&amp;A применяет калибровку в качестве начал�
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-board-pack-narrative-drafting" id="scenario-budget-board-pack-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/budget-board-pack-narrative-drafting" id="scenario-budget-board-pack-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -757,7 +733,7 @@ CFO проверяет, добавляет управленческие сужд
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/rolling-reforecast-model-compression" id="scenario-rolling-reforecast-model-compression">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/budget-forecast-cycle/rolling-reforecast-model-compression" id="scenario-rolling-reforecast-model-compression" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -865,31 +841,7 @@ CFO проверяет, добавляет управленческие сужд
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Чувствительность NII и EVE измеряется ежемесячно. Внутримесячные изменения баланса — события переоценки депозитов, крупные выдачи кредитов с фиксированной ставкой, значительные погашения хеджей, — изменяющие позицию IRRBB между измерениями, не отражаются в текущей управленческой картине.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Проработка сценариев на каждом заседании КУАП ограничена временными затратами на подготовку каждого расчёта по сценарию ставок. Альтернативные стратегии позиционирования баланса — различные сроки хеджа, различные допущения о переоценке депозитов, различный состав выдач — редко прорабатываются с необходимой количественной глубиной до принятия решения КУАП.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка процентного нарратива КУАП, атрибуция изменений чувствительности и ежемесячный отчёт об использовании лимитов IRRBB — структурированные задачи, повторяющиеся в известном цикле с последовательной аналитической методологией и стабильным форматом выходных данных. ИИ может формировать проекты на основе модельных выходных данных с последующей проверкой офицера по ALM.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Предположения о сценариях ставок, использованных в предыдущих циклах IRRBB, — их точность относительно реализованных ставок и точность предположений поведенческого моделирования депозитов — редко системно возвращаются в процесс калибровки модели. Принцип 4 BCBS 368 (управление поведенческими допущениями) требует регулярного бэктестирования, однако его результаты редко учитываются при формировании допущений в рамках цикла.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Чувствительность NII и EVE измеряется ежемесячно. Внутримесячные изменения баланса — события переоценки депозитов, крупные выдачи кредитов с фиксированной ставкой, значительные погашения хеджей, — изменяющие позицию IRRBB между измерениями, не отражаются в текущей управленческой картине.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Проработка сценариев на каждом заседании КУАП ограничена временными затратами на подготовку каждого расчёта по сценарию ставок. Альтернативные стратегии позиционирования баланса — различные сроки хеджа, различные допущения о переоценке депозитов, различный состав выдач — редко прорабатываются с необходимой количественной глубиной до принятия решения КУАП.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка процентного нарратива КУАП, атрибуция изменений чувствительности и ежемесячный отчёт об использовании лимитов IRRBB — структурированные задачи, повторяющиеся в известном цикле с последовательной аналитической методологией и стабильным форматом выходных данных. ИИ может формировать проекты на основе модельных выходных данных с последующей проверкой офицера по ALM.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Предположения о сценариях ставок, использованных в предыдущих циклах IRRBB, — их точность относительно реализованных ставок и точность предположений поведенческого моделирования депозитов — редко системно возвращаются в процесс калибровки модели. Принцип 4 BCBS 368 (управление поведенческими допущениями) требует регулярного бэктестирования, однако его результаты редко учитываются при формировании допущений в рамках цикла.</p></article></div>
     </section>
     
 
@@ -911,7 +863,7 @@ CFO проверяет, добавляет управленческие сужд
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--measure">
     <span class="flow-stages__stage-label">Измерение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -923,7 +875,7 @@ CFO проверяет, добавляет управленческие сужд
     type="button"
     data-stage="analyze"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--analyze">
     <span class="flow-stages__stage-label">Анализ</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -935,7 +887,7 @@ CFO проверяет, добавляет управленческие сужд
     type="button"
     data-stage="decide"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--decide">
     <span class="flow-stages__stage-label">Решение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -947,7 +899,7 @@ CFO проверяет, добавляет управленческие сужд
     type="button"
     data-stage="hedge"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--hedge">
     <span class="flow-stages__stage-label">Исполнение хеджей</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -959,7 +911,7 @@ CFO проверяет, добавляет управленческие сужд
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:finance-treasury/alm-balance-sheet-steering-cycle"
-  >
+   id="stage-alm-balance-sheet-steering-cycle--monitor">
     <span class="flow-stages__stage-label">Мониторинг</span>
     
   </button>
@@ -1003,7 +955,7 @@ CFO проверяет, добавляет управленческие сужд
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/intra-month-irrbb-position-signal" id="scenario-intra-month-irrbb-position-signal">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/intra-month-irrbb-position-signal" id="scenario-intra-month-irrbb-position-signal" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1082,7 +1034,7 @@ CFO проверяет, добавляет управленческие сужд
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/ftp-rate-curve-attribution-brief" id="scenario-ftp-rate-curve-attribution-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/ftp-rate-curve-attribution-brief" id="scenario-ftp-rate-curve-attribution-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1161,7 +1113,7 @@ CFO проверяет, добавляет управленческие сужд
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-irrbb-pack-narrative-drafting" id="scenario-alco-irrbb-pack-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-irrbb-pack-narrative-drafting" id="scenario-alco-irrbb-pack-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1240,7 +1192,7 @@ ALM-офицер проверяет проект, подтверждает ра�
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-balance-sheet-positioning-scenarios" id="scenario-alco-balance-sheet-positioning-scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/alco-balance-sheet-positioning-scenarios" id="scenario-alco-balance-sheet-positioning-scenarios" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1321,7 +1273,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/bcbs368-behavioural-assumption-backtesting" id="scenario-bcbs368-behavioural-assumption-backtesting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/alm-balance-sheet-steering-cycle/bcbs368-behavioural-assumption-backtesting" id="scenario-bcbs368-behavioural-assumption-backtesting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1429,31 +1381,7 @@ ALCO рассматривает сравнение на заседании и у
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">LCR и NSFR рассчитываются ежедневно, однако перспективная картина ликвидности — горизонт выживания при стрессе, анализ обрыва сроков фондирования, тенденция концентрации депозитов — собирается ежемесячно для КУАП. У руководства отсутствует непрерывный взгляд на запас достаточности ликвидности между формальными заседаниями комитета.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Разработка стресс-сценариев ВПОДЛ и ежемесячные операционные стресс-сценарии функционируют на отдельных допущениях и выполняются в отдельных циклах. Согласование ежемесячного операционного цикла с годовой методологией ВПОДЛ сократит дублирование усилий по стресс-моделированию и повысит достоверность ВПОДЛ в глазах надзорных органов НБКР/НБК/ЦБ РФ.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Ежедневный комментарий по расхождениям LCR/NSFR, ежемесячный нарратив КУАП по ликвидности, разделы документа ВПОДЛ и обновления плана финансирования в чрезвычайных ситуациях — структурированные нарративные задачи с последовательными методологиями, повторяющиеся в известных циклах. Разделы раскрытия информации BCBS 368 и ВПОДЛ следуют предписанным форматам, пригодным для подготовки с участием агента.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Поведенческие допущения по депозитам до востребования, ставкам выборки кредитных линий и условным оттокам калибруются ежегодно по историческим данным, но редко непрерывно верифицируются на фактическом поведении в течение года. Представления ВПОДЛ, опирающиеся на устаревшие поведенческие допущения, накапливают модельный риск, который надзорные органы НБКР/НБК/ЦБ РФ всё активнее оспаривают.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>LCR и NSFR рассчитываются ежедневно, однако перспективная картина ликвидности — горизонт выживания при стрессе, анализ обрыва сроков фондирования, тенденция концентрации депозитов — собирается ежемесячно для КУАП. У руководства отсутствует непрерывный взгляд на запас достаточности ликвидности между формальными заседаниями комитета.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Разработка стресс-сценариев ВПОДЛ и ежемесячные операционные стресс-сценарии функционируют на отдельных допущениях и выполняются в отдельных циклах. Согласование ежемесячного операционного цикла с годовой методологией ВПОДЛ сократит дублирование усилий по стресс-моделированию и повысит достоверность ВПОДЛ в глазах надзорных органов НБКР/НБК/ЦБ РФ.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Ежедневный комментарий по расхождениям LCR/NSFR, ежемесячный нарратив КУАП по ликвидности, разделы документа ВПОДЛ и обновления плана финансирования в чрезвычайных ситуациях — структурированные нарративные задачи с последовательными методологиями, повторяющиеся в известных циклах. Разделы раскрытия информации BCBS 368 и ВПОДЛ следуют предписанным форматам, пригодным для подготовки с участием агента.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Поведенческие допущения по депозитам до востребования, ставкам выборки кредитных линий и условным оттокам калибруются ежегодно по историческим данным, но редко непрерывно верифицируются на фактическом поведении в течение года. Представления ВПОДЛ, опирающиеся на устаревшие поведенческие допущения, накапливают модельный риск, который надзорные органы НБКР/НБК/ЦБ РФ всё активнее оспаривают.</p></article></div>
     </section>
     
 
@@ -1475,7 +1403,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="forecast"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--forecast">
     <span class="flow-stages__stage-label">Прогнозирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1487,7 +1415,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="stress"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--stress">
     <span class="flow-stages__stage-label">Стресс-тестирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1499,7 +1427,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1511,7 +1439,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--report">
     <span class="flow-stages__stage-label">Отчётность</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1523,7 +1451,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:finance-treasury/liquidity-steering-cycle"
-  >
+   id="stage-liquidity-steering-cycle--adjust">
     <span class="flow-stages__stage-label">Корректировка</span>
     
   </button>
@@ -1567,7 +1495,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/daily-lcr-nsfr-exception-commentary" id="scenario-daily-lcr-nsfr-exception-commentary">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/daily-lcr-nsfr-exception-commentary" id="scenario-daily-lcr-nsfr-exception-commentary" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1648,7 +1576,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/continuous-liquidity-position-monitoring" id="scenario-continuous-liquidity-position-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/continuous-liquidity-position-monitoring" id="scenario-continuous-liquidity-position-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1729,7 +1657,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-operational-stress-scenario-alignment" id="scenario-ilaap-operational-stress-scenario-alignment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-operational-stress-scenario-alignment" id="scenario-ilaap-operational-stress-scenario-alignment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1810,7 +1738,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/alco-liquidity-pack-narrative-drafting" id="scenario-alco-liquidity-pack-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/alco-liquidity-pack-narrative-drafting" id="scenario-alco-liquidity-pack-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1891,7 +1819,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-behavioural-assumption-backtesting" id="scenario-ilaap-behavioural-assumption-backtesting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/liquidity-steering-cycle/ilaap-behavioural-assumption-backtesting" id="scenario-ilaap-behavioural-assumption-backtesting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -2023,31 +1951,7 @@ ALCO рассматривает сравнение на заседании и у
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Эффективность закрытия — объём расхождений, число просроченных представлений, продолжительность выверки по юридическому лицу и субсчёту — анализируется неформально на уровне команды, но не отслеживается системно по циклам закрытия. Команда контролёров не может без ручных выгрузок из журналов задач закрытия оценить, по каким шагам выверки наблюдается тенденция к удлинению или какие типы расхождений носят повторяющийся характер.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Последовательность задач выверки в рамках цикла закрытия управляется трекером задач, но не расставляет приоритеты динамически. Когда выверка на критическом пути задерживается, менеджер закрытия вручную перепланирует последующие задачи для минимизации общей продолжительности закрытия — без аналитической поддержки.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Комментарий к управленческой отчётности, трижды повторяющийся комментарий по урегулированию расхождений и статусная отчётность по задачам закрытия — структурированные, повторяющиеся производственные задачи. Структура нарратива стабильна по периодам; меняется только содержательная часть, отражающая отклонения текущего периода. ИИ может формировать проекты на основе данных закрытой отчётности с последующей проверкой финансового блока.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Повторяющиеся типы расхождений при выверке — одно и то же несоответствие между главной книгой и субсчётом, возникающее каждый месяц из-за одного и того же ограничения системного интерфейса, — урегулируются индивидуально в каждом цикле закрытия без эскалации корневой причины через процесс улучшения систем. История расхождений цикла закрытия не анализируется на предмет системных закономерностей.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Эффективность закрытия — объём расхождений, число просроченных представлений, продолжительность выверки по юридическому лицу и субсчёту — анализируется неформально на уровне команды, но не отслеживается системно по циклам закрытия. Команда контролёров не может без ручных выгрузок из журналов задач закрытия оценить, по каким шагам выверки наблюдается тенденция к удлинению или какие типы расхождений носят повторяющийся характер.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Последовательность задач выверки в рамках цикла закрытия управляется трекером задач, но не расставляет приоритеты динамически. Когда выверка на критическом пути задерживается, менеджер закрытия вручную перепланирует последующие задачи для минимизации общей продолжительности закрытия — без аналитической поддержки.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Комментарий к управленческой отчётности, трижды повторяющийся комментарий по урегулированию расхождений и статусная отчётность по задачам закрытия — структурированные, повторяющиеся производственные задачи. Структура нарратива стабильна по периодам; меняется только содержательная часть, отражающая отклонения текущего периода. ИИ может формировать проекты на основе данных закрытой отчётности с последующей проверкой финансового блока.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Повторяющиеся типы расхождений при выверке — одно и то же несоответствие между главной книгой и субсчётом, возникающее каждый месяц из-за одного и того же ограничения системного интерфейса, — урегулируются индивидуально в каждом цикле закрытия без эскалации корневой причины через процесс улучшения систем. История расхождений цикла закрытия не анализируется на предмет системных закономерностей.</p></article></div>
     </section>
     
 
@@ -2069,7 +1973,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="cutoff"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--cutoff">
     <span class="flow-stages__stage-label">Отчётный срез</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2081,7 +1985,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="reconcile"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--reconcile">
     <span class="flow-stages__stage-label">Сверка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2093,7 +1997,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--adjust">
     <span class="flow-stages__stage-label">Корректировка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2105,7 +2009,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="close"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--close">
     <span class="flow-stages__stage-label">Закрытие</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2117,7 +2021,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="report"
     data-flow-id="urn:financial-services:flow:finance-treasury/financial-close-cycle"
-  >
+   id="stage-financial-close-cycle--report">
     <span class="flow-stages__stage-label">Отчётность</span>
     
   </button>
@@ -2161,7 +2065,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/ifrs9-ecl-provision-commentary-drafting" id="scenario-ifrs9-ecl-provision-commentary-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/ifrs9-ecl-provision-commentary-drafting" id="scenario-ifrs9-ecl-provision-commentary-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -2242,7 +2146,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-performance-trend-analytics" id="scenario-close-performance-trend-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-performance-trend-analytics" id="scenario-close-performance-trend-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2321,7 +2225,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-reconciliation-exception-triage" id="scenario-close-reconciliation-exception-triage">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-reconciliation-exception-triage" id="scenario-close-reconciliation-exception-triage" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2402,7 +2306,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-critical-path-resequencing" id="scenario-close-critical-path-resequencing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/close-critical-path-resequencing" id="scenario-close-critical-path-resequencing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2483,7 +2387,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/management-accounts-commentary-production" id="scenario-management-accounts-commentary-production">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/financial-close-cycle/management-accounts-commentary-production" id="scenario-management-accounts-commentary-production" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2591,31 +2495,7 @@ ALCO рассматривает сравнение на заседании и у
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Качество регуляторных представлений — частота ошибок валидации, объём расхождений, частота запросов после представления — отслеживается командой отчётности неформально, без структурированного учёта по циклам представления. Руководитель отдела регуляторной отчётности не может без ручных выгрузок из записей о представлениях сформировать трендовый анализ улучшения качества данных в разрезе надзорных органов.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Очередь ошибок валидации урегулируется командой отчётности последовательно в каждом цикле, при этом приоритизация определяется серьёзностью ошибки и близостью дедлайна представления. Системные закономерности — один и тот же источник данных, стабильно генерирующий один и тот же тип ошибки, — выявляются неформально, а не посредством структурированного фреймворка корневых причин, который мог бы устранить повторяющиеся ошибки на уровне источника.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка пояснительных записок по ошибкам валидации, комментарии по выверке после представления, пакеты ответов на надзорные запросы и стандартные нарративные разделы регуляторных форм (управленческий комментарий, раскрытие методологии) — структурированные, повторяющиеся задачи подготовки текстов с последовательными методологиями. Документация о происхождении данных по BCBS 239 следует прослеживаемому пути от источника до поля отчёта, который агент может систематически воспроизводить.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Надзорные запросы по предыдущим циклам представления — какие точки данных были оспорены, какие объяснения были приняты, какие разъяснения методологии были запрошены — хранятся в индивидуальных файлах запросов, а не в структурированной базе знаний. Команда отчётности повторяет усилия по расследованию и подготовке ответов на аналогичные запросы в разных циклах без общей институциональной библиотеки ответов.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Качество регуляторных представлений — частота ошибок валидации, объём расхождений, частота запросов после представления — отслеживается командой отчётности неформально, без структурированного учёта по циклам представления. Руководитель отдела регуляторной отчётности не может без ручных выгрузок из записей о представлениях сформировать трендовый анализ улучшения качества данных в разрезе надзорных органов.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Очередь ошибок валидации урегулируется командой отчётности последовательно в каждом цикле, при этом приоритизация определяется серьёзностью ошибки и близостью дедлайна представления. Системные закономерности — один и тот же источник данных, стабильно генерирующий один и тот же тип ошибки, — выявляются неформально, а не посредством структурированного фреймворка корневых причин, который мог бы устранить повторяющиеся ошибки на уровне источника.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка пояснительных записок по ошибкам валидации, комментарии по выверке после представления, пакеты ответов на надзорные запросы и стандартные нарративные разделы регуляторных форм (управленческий комментарий, раскрытие методологии) — структурированные, повторяющиеся задачи подготовки текстов с последовательными методологиями. Документация о происхождении данных по BCBS 239 следует прослеживаемому пути от источника до поля отчёта, который агент может систематически воспроизводить.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Надзорные запросы по предыдущим циклам представления — какие точки данных были оспорены, какие объяснения были приняты, какие разъяснения методологии были запрошены — хранятся в индивидуальных файлах запросов, а не в структурированной базе знаний. Команда отчётности повторяет усилия по расследованию и подготовке ответов на аналогичные запросы в разных циклах без общей институциональной библиотеки ответов.</p></article></div>
     </section>
     
 
@@ -2637,7 +2517,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--aggregate">
     <span class="flow-stages__stage-label">Агрегирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2649,7 +2529,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--validate">
     <span class="flow-stages__stage-label">Валидация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2661,7 +2541,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="submit"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--submit">
     <span class="flow-stages__stage-label">Подача</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2673,7 +2553,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="reconcile"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--reconcile">
     <span class="flow-stages__stage-label">Сверка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2685,7 +2565,7 @@ ALCO рассматривает сравнение на заседании и у
     type="button"
     data-stage="audit"
     data-flow-id="urn:financial-services:flow:finance-treasury/regulatory-reporting-cycle"
-  >
+   id="stage-regulatory-reporting-cycle--audit">
     <span class="flow-stages__stage-label">Аудит и ответы на запросы</span>
     
   </button>
@@ -2729,7 +2609,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-submission-pre-dispatch-quality-gate" id="scenario-regulatory-submission-pre-dispatch-quality-gate">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-submission-pre-dispatch-quality-gate" id="scenario-regulatory-submission-pre-dispatch-quality-gate" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2810,7 +2690,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-reporting-quality-trend-analytics" id="scenario-regulatory-reporting-quality-trend-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-reporting-quality-trend-analytics" id="scenario-regulatory-reporting-quality-trend-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2891,7 +2771,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-validation-exception-triage" id="scenario-regulatory-validation-exception-triage">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/regulatory-validation-exception-triage" id="scenario-regulatory-validation-exception-triage" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2970,7 +2850,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/bcbs239-lineage-documentation-maintenance" id="scenario-bcbs239-lineage-documentation-maintenance">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/bcbs239-lineage-documentation-maintenance" id="scenario-bcbs239-lineage-documentation-maintenance" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -3051,7 +2931,7 @@ ALCO рассматривает сравнение на заседании и у
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/supervisory-query-response-knowledge-base" id="scenario-supervisory-query-response-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/finance-treasury/regulatory-reporting-cycle/supervisory-query-response-knowledge-base" id="scenario-supervisory-query-response-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">

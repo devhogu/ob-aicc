@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -301,31 +301,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Данные об эффективности каналов собираются и оцениваются на рубежах ежемесячного или квартального цикла. Непрерывная видимость межканальной стоимости обслуживания, соблюдения SLA и уровня цифровой активности между официальными обзорами — позволяющая менеджерам каналов реагировать на складывающиеся тренды внутри периода — отсутствует в стандартном операционном ритме большинства банков рынков СНГ.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Оптимизация стоимости обслуживания по каналам — определение типов операций и клиентских сегментов с наибольшим разрывом в стоимости между каналами и перераспределение объёмов в пользу менее затратных каналов — требует многопериодного кросс-канального анализа, который не выполняется в рамках стандартного цикла обзора. Оптимизация маршрутизации реализуется как отдельный проект, а не как встроенный элемент регулярного цикла.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Межканальная сборка данных, сравнение план/факт, формирование комментариев по отклонениям и подготовка управленческого пакета — структурированные, повторяющиеся задачи, следующие единому фреймворку в каждом цикле. Переменная — данные текущего периода; структура и расчёты повторяются без изменений. Они являются сильными кандидатами для автоматизированной подготовки с проверкой командой управления каналами.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты обзоров эффективности каналов и итоги корректировок фиксируются в протоколах совещаний, но не аккумулируются в структурированной базе знаний. Банк не может оперативно извлечь данные о первопричинах повторяющихся проблем за предыдущие периоды или оценить применимость ранее успешных мер к текущим отклонениям.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Данные об эффективности каналов собираются и оцениваются на рубежах ежемесячного или квартального цикла. Непрерывная видимость межканальной стоимости обслуживания, соблюдения SLA и уровня цифровой активности между официальными обзорами — позволяющая менеджерам каналов реагировать на складывающиеся тренды внутри периода — отсутствует в стандартном операционном ритме большинства банков рынков СНГ.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Оптимизация стоимости обслуживания по каналам — определение типов операций и клиентских сегментов с наибольшим разрывом в стоимости между каналами и перераспределение объёмов в пользу менее затратных каналов — требует многопериодного кросс-канального анализа, который не выполняется в рамках стандартного цикла обзора. Оптимизация маршрутизации реализуется как отдельный проект, а не как встроенный элемент регулярного цикла.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Межканальная сборка данных, сравнение план/факт, формирование комментариев по отклонениям и подготовка управленческого пакета — структурированные, повторяющиеся задачи, следующие единому фреймворку в каждом цикле. Переменная — данные текущего периода; структура и расчёты повторяются без изменений. Они являются сильными кандидатами для автоматизированной подготовки с проверкой командой управления каналами.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты обзоров эффективности каналов и итоги корректировок фиксируются в протоколах совещаний, но не аккумулируются в структурированной базе знаний. Банк не может оперативно извлечь данные о первопричинах повторяющихся проблем за предыдущие периоды или оценить применимость ранее успешных мер к текущим отклонениям.</p></article></div>
     </section>
     
 
@@ -347,7 +323,7 @@
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--measure">
     <span class="flow-stages__stage-label">Измерение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -359,7 +335,7 @@
     type="button"
     data-stage="compare"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--compare">
     <span class="flow-stages__stage-label">Сравнение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -371,7 +347,7 @@
     type="button"
     data-stage="investigate"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--investigate">
     <span class="flow-stages__stage-label">Расследование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -383,7 +359,7 @@
     type="button"
     data-stage="decide"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--decide">
     <span class="flow-stages__stage-label">Решение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -395,7 +371,7 @@
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--adjust">
     <span class="flow-stages__stage-label">Корректировка</span>
     
   </button>
@@ -439,7 +415,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-performance-pack-automation" id="scenario-channel-performance-pack-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-performance-pack-automation" id="scenario-channel-performance-pack-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -514,7 +490,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-review-decision-framing" id="scenario-channel-review-decision-framing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-review-decision-framing" id="scenario-channel-review-decision-framing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -589,7 +565,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-variance-root-cause-synthesis" id="scenario-channel-variance-root-cause-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-variance-root-cause-synthesis" id="scenario-channel-variance-root-cause-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -664,7 +640,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-cost-routing-optimisation" id="scenario-channel-cost-routing-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-cost-routing-optimisation" id="scenario-channel-cost-routing-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -739,7 +715,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-performance-knowledge-base" id="scenario-channel-performance-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-performance-knowledge-base" id="scenario-channel-performance-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -843,31 +819,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Паттерны инцидентов — повторяющиеся режимы технологических сбоев, каналы с непропорционально высокой частотой нарушений SLA, концентрация инцидентов по времени суток или дням недели — становятся видны только через агрегированные постмортем-обзоры, проводимые периодически. Непрерывная картина паттернов инцидентов, позволяющая банку выявлять системную нестабильность до наступления следующего инцидента, не встроена в стандартный цикл операционного управления.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Калибровка протоколов реагирования на инциденты — какие уровни критичности требуют активации каких групп реагирования, какие сроки регуляторного уведомления применяются к каким типам инцидентов, какие шаблоны коммуникаций предварительно согласованы — поддерживается в регламентах реагирования, обновляемых нечасто. Пробелы в протоколах обнаруживаются в ходе инцидентов, а не заблаговременно.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка уведомлений для клиентов, формирование регуляторных извещений, восстановление хронологии инцидентов и составление постмортем-отчётов — структурированные задачи документопроизводства, выполняемые под значительным временным давлением. Предварительная разработка шаблонов на основе метаданных инцидентов и генерация проектов постмортем-нарративов из данных журнала инцидентов — сильные кандидаты для агентной помощи.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Выводы постмортемов и принятые корректирующие обязательства фиксируются в отдельных отчётах об инцидентах, но не агрегируются в системную базу знаний по надёжности. Банк не может оперативно получить историю предыдущих инцидентов для конкретного технологического компонента или вендора, а также оценить, соответствует ли текущий инцидент ранее выявленному паттерну сбоя.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Паттерны инцидентов — повторяющиеся режимы технологических сбоев, каналы с непропорционально высокой частотой нарушений SLA, концентрация инцидентов по времени суток или дням недели — становятся видны только через агрегированные постмортем-обзоры, проводимые периодически. Непрерывная картина паттернов инцидентов, позволяющая банку выявлять системную нестабильность до наступления следующего инцидента, не встроена в стандартный цикл операционного управления.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Калибровка протоколов реагирования на инциденты — какие уровни критичности требуют активации каких групп реагирования, какие сроки регуляторного уведомления применяются к каким типам инцидентов, какие шаблоны коммуникаций предварительно согласованы — поддерживается в регламентах реагирования, обновляемых нечасто. Пробелы в протоколах обнаруживаются в ходе инцидентов, а не заблаговременно.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка уведомлений для клиентов, формирование регуляторных извещений, восстановление хронологии инцидентов и составление постмортем-отчётов — структурированные задачи документопроизводства, выполняемые под значительным временным давлением. Предварительная разработка шаблонов на основе метаданных инцидентов и генерация проектов постмортем-нарративов из данных журнала инцидентов — сильные кандидаты для агентной помощи.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Выводы постмортемов и принятые корректирующие обязательства фиксируются в отдельных отчётах об инцидентах, но не агрегируются в системную базу знаний по надёжности. Банк не может оперативно получить историю предыдущих инцидентов для конкретного технологического компонента или вендора, а также оценить, соответствует ли текущий инцидент ранее выявленному паттерну сбоя.</p></article></div>
     </section>
     
 
@@ -889,7 +841,7 @@
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--detect">
     <span class="flow-stages__stage-label">Обнаружение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -901,7 +853,7 @@
     type="button"
     data-stage="triage"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--triage">
     <span class="flow-stages__stage-label">Триаж</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -913,7 +865,7 @@
     type="button"
     data-stage="resolve"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--resolve">
     <span class="flow-stages__stage-label">Устранение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -925,7 +877,7 @@
     type="button"
     data-stage="communicate"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--communicate">
     <span class="flow-stages__stage-label">Коммуникация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -937,7 +889,7 @@
     type="button"
     data-stage="postmortem"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--postmortem">
     <span class="flow-stages__stage-label">Разбор инцидента</span>
     
   </button>
@@ -981,7 +933,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-communication-drafting" id="scenario-incident-communication-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-communication-drafting" id="scenario-incident-communication-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1056,7 +1008,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-postmortem-report-generation" id="scenario-incident-postmortem-report-generation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-postmortem-report-generation" id="scenario-incident-postmortem-report-generation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1131,7 +1083,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-pattern-systemic-analysis" id="scenario-incident-pattern-systemic-analysis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-pattern-systemic-analysis" id="scenario-incident-pattern-systemic-analysis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1206,7 +1158,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-protocol-calibration" id="scenario-incident-protocol-calibration">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-protocol-calibration" id="scenario-incident-protocol-calibration" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1332,31 +1284,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Экономика структуры каналов — текущее распределение стоимости обслуживания по каналам и инкрементальная экономика переноса единицы объёма между каналами — рассчитывается периодически в целях планирования, а не поддерживается как непрерывно актуальная управленческая метрика. Решения по структуре каналов между плановыми циклами принимаются без актуальной картины эффективности.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Пространство сценариев для оптимизации структуры каналов ограничено модельной ёмкостью. Банк рассматривает узкий диапазон вариантов структуры перед каждым решением по управлению; альтернативные конфигурации с существенно иной экономикой не оцениваются, поскольку каждый вариант сценария требует ручного восстановления модели. Граница эффективности структуры каналов редко исследуется в полной мере.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Производство прогнозов спроса по каналам, моделирование экономических сценариев для определённого набора переменных структуры и документирование плана перебалансировки каналов — структурированные, повторяющиеся аналитические задачи. Агентная генерация сценариев и документирование планов сократили бы аналитическое окно цикла управления и расширили пространство принятия решений.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Решения по управлению структурой каналов и последующие результаты их реализации — какие инициативы достигли запланированного сдвига объёма, какие не достигли и каково фактическое влияние на экономику — не фиксируются в структурированном ретроспективном анализе, который питал бы прогнозные допущения следующего цикла. Институциональная память банка по управлению структурой каналов невелика.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Экономика структуры каналов — текущее распределение стоимости обслуживания по каналам и инкрементальная экономика переноса единицы объёма между каналами — рассчитывается периодически в целях планирования, а не поддерживается как непрерывно актуальная управленческая метрика. Решения по структуре каналов между плановыми циклами принимаются без актуальной картины эффективности.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Пространство сценариев для оптимизации структуры каналов ограничено модельной ёмкостью. Банк рассматривает узкий диапазон вариантов структуры перед каждым решением по управлению; альтернативные конфигурации с существенно иной экономикой не оцениваются, поскольку каждый вариант сценария требует ручного восстановления модели. Граница эффективности структуры каналов редко исследуется в полной мере.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Производство прогнозов спроса по каналам, моделирование экономических сценариев для определённого набора переменных структуры и документирование плана перебалансировки каналов — структурированные, повторяющиеся аналитические задачи. Агентная генерация сценариев и документирование планов сократили бы аналитическое окно цикла управления и расширили пространство принятия решений.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Решения по управлению структурой каналов и последующие результаты их реализации — какие инициативы достигли запланированного сдвига объёма, какие не достигли и каково фактическое влияние на экономику — не фиксируются в структурированном ретроспективном анализе, который питал бы прогнозные допущения следующего цикла. Институциональная память банка по управлению структурой каналов невелика.</p></article></div>
     </section>
     
 
@@ -1378,7 +1306,7 @@
     type="button"
     data-stage="forecast"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--forecast">
     <span class="flow-stages__stage-label">Прогнозирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1390,7 +1318,7 @@
     type="button"
     data-stage="compare"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--compare">
     <span class="flow-stages__stage-label">Сравнение сценариев</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1402,7 +1330,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1414,7 +1342,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--approve">
     <span class="flow-stages__stage-label">Согласование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1426,7 +1354,7 @@
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--execute">
     <span class="flow-stages__stage-label">Исполнение</span>
     
   </button>
@@ -1470,7 +1398,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-demand-forecast-automation" id="scenario-channel-demand-forecast-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-demand-forecast-automation" id="scenario-channel-demand-forecast-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1545,7 +1473,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-rebalancing-plan-documentation" id="scenario-channel-rebalancing-plan-documentation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-rebalancing-plan-documentation" id="scenario-channel-rebalancing-plan-documentation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1620,7 +1548,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-mix-scenario-expansion" id="scenario-channel-mix-scenario-expansion">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-mix-scenario-expansion" id="scenario-channel-mix-scenario-expansion" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1695,7 +1623,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-mix-execution-retrospective" id="scenario-channel-mix-execution-retrospective">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-mix-execution-retrospective" id="scenario-channel-mix-execution-retrospective" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1799,31 +1727,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Результаты пилотов по эволюции каналов и эффективность масштабирования оцениваются в дискретных точках оценки — обзор пилота, постмасштабная оценка. Непрерывное отслеживание траектории активности относительно плана развёртывания и раннее выявление локаций масштабирования с отставанием по активности не встроены в стандартный управленческий цикл.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Последовательность масштабирования — приоритизация развёртывания в локациях с наибольшим потенциалом активности — определяется командой по эволюции каналов при ограниченной аналитической поддержке. Структурированный обзор того, какие демографические характеристики клиентов, транзакционное поведение и географические особенности предсказывают успех активации в данных пилота, улучшил бы последовательность масштабирования, однако не производится на регулярной основе.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Документация по анализу результатов пилота, подготовка пакета согласования развёртывания, контент коммуникации при масштабировании (брифинги для сотрудников, уведомления клиентов) и отчёты по отслеживанию вывода из эксплуатации — структурированные задачи производства документов. Каждый следует единой структуре и поддаётся агентной подготовке с проверкой командами по стратегии каналов и коммуникациям.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты пилотов и масштабирования — фактический уровень активности относительно прогноза, влияние на стоимость обслуживания относительно бизнес-кейса, выявленные комплаенс-проблемы — фиксируются в отдельных проектных файлах, но не агрегируются в институциональную базу знаний по эволюции каналов. Банк повторяет одни и те же недочёты в разработке пилотов и ошибки в последовательности масштабирования в рамках последующих инициатив по эволюции каналов.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Результаты пилотов по эволюции каналов и эффективность масштабирования оцениваются в дискретных точках оценки — обзор пилота, постмасштабная оценка. Непрерывное отслеживание траектории активности относительно плана развёртывания и раннее выявление локаций масштабирования с отставанием по активности не встроены в стандартный управленческий цикл.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Последовательность масштабирования — приоритизация развёртывания в локациях с наибольшим потенциалом активности — определяется командой по эволюции каналов при ограниченной аналитической поддержке. Структурированный обзор того, какие демографические характеристики клиентов, транзакционное поведение и географические особенности предсказывают успех активации в данных пилота, улучшил бы последовательность масштабирования, однако не производится на регулярной основе.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Документация по анализу результатов пилота, подготовка пакета согласования развёртывания, контент коммуникации при масштабировании (брифинги для сотрудников, уведомления клиентов) и отчёты по отслеживанию вывода из эксплуатации — структурированные задачи производства документов. Каждый следует единой структуре и поддаётся агентной подготовке с проверкой командами по стратегии каналов и коммуникациям.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты пилотов и масштабирования — фактический уровень активности относительно прогноза, влияние на стоимость обслуживания относительно бизнес-кейса, выявленные комплаенс-проблемы — фиксируются в отдельных проектных файлах, но не агрегируются в институциональную базу знаний по эволюции каналов. Банк повторяет одни и те же недочёты в разработке пилотов и ошибки в последовательности масштабирования в рамках последующих инициатив по эволюции каналов.</p></article></div>
     </section>
     
 
@@ -1845,7 +1749,7 @@
     type="button"
     data-stage="pilot"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--pilot">
     <span class="flow-stages__stage-label">Пилот</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1857,7 +1761,7 @@
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--validate">
     <span class="flow-stages__stage-label">Валидация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1869,7 +1773,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--approve">
     <span class="flow-stages__stage-label">Согласование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1881,7 +1785,7 @@
     type="button"
     data-stage="rollout"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--rollout">
     <span class="flow-stages__stage-label">Развёртывание</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1893,7 +1797,7 @@
     type="button"
     data-stage="sunset"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--sunset">
     <span class="flow-stages__stage-label">Вывод из эксплуатации</span>
     
   </button>
@@ -1937,7 +1841,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/channel-evolution-approval-pack" id="scenario-channel-evolution-approval-pack">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/channel-evolution-approval-pack" id="scenario-channel-evolution-approval-pack" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2012,7 +1916,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/rollout-adoption-trajectory-monitoring" id="scenario-rollout-adoption-trajectory-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/rollout-adoption-trajectory-monitoring" id="scenario-rollout-adoption-trajectory-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2087,7 +1991,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/rollout-sequencing-optimisation" id="scenario-rollout-sequencing-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/rollout-sequencing-optimisation" id="scenario-rollout-sequencing-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2162,7 +2066,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/channel-evolution-institutional-memory" id="scenario-channel-evolution-institutional-memory">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/channel-evolution-institutional-memory" id="scenario-channel-evolution-institutional-memory" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">

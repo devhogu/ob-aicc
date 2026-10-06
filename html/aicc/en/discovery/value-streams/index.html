@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -239,31 +239,7 @@ Question or comment:
 
 
 <section class="flow-problems" aria-label="Flow-set problems">
-  <table class="problems-table">
-    <tbody>
-      
-      <tr class="problems-row">
-        <th class="problems-lens" scope="row">Waste</th>
-        <td class="problems-statement">Banking flows accumulate non-value-add activity — hand-off waiting, reconciliations across systems, rework after exceptions. Value-add time is a fraction of elapsed time, and visibility into where the waste sits is reconstructed manually each cycle.</td>
-      </tr>
-      
-      <tr class="problems-row">
-        <th class="problems-lens" scope="row">Variability</th>
-        <td class="problems-statement">Flow load swings across day, week, and quarter — month-end peaks, batch backlogs, intermittent customer events. Capacity is sized to absorb the swings, but the swings themselves are not measured or planned for.</td>
-      </tr>
-      
-      <tr class="problems-row">
-        <th class="problems-lens" scope="row">Overload</th>
-        <td class="problems-statement">Critical judgment roles — credit committees, compliance investigators, audit leads, financial-close teams — operate at sustained over-capacity. The load on these scarce roles is known by anecdote, not measured.</td>
-      </tr>
-      
-      <tr class="problems-row">
-        <th class="problems-lens" scope="row">Quality at source</th>
-        <td class="problems-statement">Defects in banking flows surface downstream where correction costs multiply — mis-routings, mis-classifications, exception escapes carried forward through hand-offs. The flow rarely stops at the moment of error.</td>
-      </tr>
-      
-    </tbody>
-  </table>
+  <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Waste</h3><p>Banking flows accumulate non-value-add activity — hand-off waiting, reconciliations across systems, rework after exceptions. Value-add time is a fraction of elapsed time, and visibility into where the waste sits is reconstructed manually each cycle.</p></article><article class="discovery-context-card"><h3>Variability</h3><p>Flow load swings across day, week, and quarter — month-end peaks, batch backlogs, intermittent customer events. Capacity is sized to absorb the swings, but the swings themselves are not measured or planned for.</p></article><article class="discovery-context-card"><h3>Overload</h3><p>Critical judgment roles — credit committees, compliance investigators, audit leads, financial-close teams — operate at sustained over-capacity. The load on these scarce roles is known by anecdote, not measured.</p></article><article class="discovery-context-card"><h3>Quality at source</h3><p>Defects in banking flows surface downstream where correction costs multiply — mis-routings, mis-classifications, exception escapes carried forward through hand-offs. The flow rarely stops at the moment of error.</p></article></div>
 </section>
 
 
@@ -317,31 +293,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Payment exception rates, dispute volumes, and transaction failure patterns are tracked in isolated system reports with no cross-channel aggregation. Operations managers reconstruct the picture each week from separate extracts; recurrent failure patterns remain attributed to one-off causes.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Dispute routing and investigation sequencing are handler-driven and not informed by case complexity or resolution probability. Payment investigation queues grow during peak periods without workload-balancing logic; cases of similar type take materially different time depending on queue assignment.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Transaction investigation triage, dispute-response drafting, and complaint acknowledgment consume frontline analyst capacity on tasks that follow consistent resolution paths. Initiation-to-resolution for straightforward disputes runs days because each case enters a shared queue regardless of complexity.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Spend-pattern intelligence from the transaction ledger is not systematically surfaced for product or pricing decisions. Interchange optimization, cohort-level churn signals, and balance-behavior shifts remain latent in the transaction data and are not acted on until lag indicators appear.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Payment exception rates, dispute volumes, and transaction failure patterns are tracked in isolated system reports with no cross-channel aggregation. Operations managers reconstruct the picture each week from separate extracts; recurrent failure patterns remain attributed to one-off causes.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Dispute routing and investigation sequencing are handler-driven and not informed by case complexity or resolution probability. Payment investigation queues grow during peak periods without workload-balancing logic; cases of similar type take materially different time depending on queue assignment.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Transaction investigation triage, dispute-response drafting, and complaint acknowledgment consume frontline analyst capacity on tasks that follow consistent resolution paths. Initiation-to-resolution for straightforward disputes runs days because each case enters a shared queue regardless of complexity.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Spend-pattern intelligence from the transaction ledger is not systematically surfaced for product or pricing decisions. Interchange optimization, cohort-level churn signals, and balance-behavior shifts remain latent in the transaction data and are not acted on until lag indicators appear.</p></article></div>
     </section>
     
 
@@ -455,7 +407,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-dispute-resolution-automation" id="scenario-dtb-dispute-resolution-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-dispute-resolution-automation" id="scenario-dtb-dispute-resolution-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -530,7 +482,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-kyc-adaptive-sequencing" id="scenario-dtb-kyc-adaptive-sequencing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-kyc-adaptive-sequencing" id="scenario-dtb-kyc-adaptive-sequencing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -605,7 +557,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-exception-pattern-analytics" id="scenario-dtb-exception-pattern-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-exception-pattern-analytics" id="scenario-dtb-exception-pattern-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -680,7 +632,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-stp-routing-intelligence" id="scenario-dtb-stp-routing-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-stp-routing-intelligence" id="scenario-dtb-stp-routing-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -753,7 +705,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-transaction-behavior-intelligence" id="scenario-dtb-transaction-behavior-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/deposits-transaction-banking/dtb-transaction-behavior-intelligence" id="scenario-dtb-transaction-behavior-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -854,31 +806,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Origination cycle time, queue depth at credit review, and exception patterns are reconstructed manually each cycle from disconnected case-management systems. Underwriters and credit-committee secretaries lack a live picture of which applications are stalled and why.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Routing decisions (fast-track vs. full review), document-collection sequencing, and credit-committee batching are set at the policy level and rarely retuned. Each segment&#39;s optimization headroom requires multi-day modeling that competes with day-to-day origination throughput.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Document collection, status updates to customers and intermediaries, low-risk decisioning under a threshold, and post-decision notification cascades all consume frontline analyst time. Most steps are rule-driven and prescribed — the structural similarity across applications makes them ripe for end-to-end automation.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Optimization wins in retail rarely transfer to SME or corporate; cross-segment learnings stay siloed. Trial of new lending products (new structures, new collateral types) requires multi-week setup before the first application can be processed.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Origination cycle time, queue depth at credit review, and exception patterns are reconstructed manually each cycle from disconnected case-management systems. Underwriters and credit-committee secretaries lack a live picture of which applications are stalled and why.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Routing decisions (fast-track vs. full review), document-collection sequencing, and credit-committee batching are set at the policy level and rarely retuned. Each segment&#39;s optimization headroom requires multi-day modeling that competes with day-to-day origination throughput.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Document collection, status updates to customers and intermediaries, low-risk decisioning under a threshold, and post-decision notification cascades all consume frontline analyst time. Most steps are rule-driven and prescribed — the structural similarity across applications makes them ripe for end-to-end automation.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Optimization wins in retail rarely transfer to SME or corporate; cross-segment learnings stay siloed. Trial of new lending products (new structures, new collateral types) requires multi-week setup before the first application can be processed.</p></article></div>
     </section>
     
 
@@ -1004,7 +932,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-doc-collection-automation" id="scenario-lending-doc-collection-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-doc-collection-automation" id="scenario-lending-doc-collection-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1077,7 +1005,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-origination-queue-intelligence" id="scenario-lending-origination-queue-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-origination-queue-intelligence" id="scenario-lending-origination-queue-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1152,7 +1080,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-underwriting-capacity-optimisation" id="scenario-lending-underwriting-capacity-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-underwriting-capacity-optimisation" id="scenario-lending-underwriting-capacity-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1227,7 +1155,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-credit-decision-copilot" id="scenario-lending-credit-decision-copilot">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-credit-decision-copilot" id="scenario-lending-credit-decision-copilot" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1302,7 +1230,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-cross-segment-learning-transfer" id="scenario-lending-cross-segment-learning-transfer">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/lending/lending-cross-segment-learning-transfer" id="scenario-lending-cross-segment-learning-transfer" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1403,31 +1331,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Portfolio performance attribution across asset classes, custodians, and client mandates is assembled from separate system extracts each review cycle. RMs and the investment committee have no continuous view of which mandates are drifting from strategic allocation or how book-level performance compares to benchmark.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">RM time allocation across client-facing and back-office preparation tasks is not tracked or rebalanced. High-effort preparation tasks — review packs, investment committee pre-reads, due-diligence synthesis — consume fixed hours per client regardless of mandate complexity or review materiality.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Client review pack assembly, investment committee pre-read drafting, and post-meeting follow-up extraction are fully manual. Each of these tasks is structurally similar across clients and cycles — text synthesis from structured inputs — and absorbs disproportionate RM capacity.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Prospect pipeline intelligence and competitor positioning are gathered informally by RMs before prospect meetings. The institutional knowledge embedded in completed portfolio reviews, client interaction histories, and investment thesis notes is not systematically reused across the advisory team.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Portfolio performance attribution across asset classes, custodians, and client mandates is assembled from separate system extracts each review cycle. RMs and the investment committee have no continuous view of which mandates are drifting from strategic allocation or how book-level performance compares to benchmark.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>RM time allocation across client-facing and back-office preparation tasks is not tracked or rebalanced. High-effort preparation tasks — review packs, investment committee pre-reads, due-diligence synthesis — consume fixed hours per client regardless of mandate complexity or review materiality.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Client review pack assembly, investment committee pre-read drafting, and post-meeting follow-up extraction are fully manual. Each of these tasks is structurally similar across clients and cycles — text synthesis from structured inputs — and absorbs disproportionate RM capacity.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Prospect pipeline intelligence and competitor positioning are gathered informally by RMs before prospect meetings. The institutional knowledge embedded in completed portfolio reviews, client interaction histories, and investment thesis notes is not systematically reused across the advisory team.</p></article></div>
     </section>
     
 
@@ -1553,7 +1457,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-review-pack-automation" id="scenario-wm-review-pack-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-review-pack-automation" id="scenario-wm-review-pack-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1628,7 +1532,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-discovery-capture-enablement" id="scenario-wm-discovery-capture-enablement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-discovery-capture-enablement" id="scenario-wm-discovery-capture-enablement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1703,7 +1607,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-portfolio-drift-monitoring" id="scenario-wm-portfolio-drift-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-portfolio-drift-monitoring" id="scenario-wm-portfolio-drift-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1776,7 +1680,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-rm-time-allocation-optimisation" id="scenario-wm-rm-time-allocation-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-rm-time-allocation-optimisation" id="scenario-wm-rm-time-allocation-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1851,7 +1755,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-prospect-intelligence-enrichment" id="scenario-wm-prospect-intelligence-enrichment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/wealth-management/wm-prospect-intelligence-enrichment" id="scenario-wm-prospect-intelligence-enrichment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1952,31 +1856,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Insurance conversion rates by channel, frontline staff, and product are tracked at the total level without decomposition by trigger type, offer stage, or customer segment. The Bank cannot identify which life-event triggers carry the highest conversion probability or where the offer conversation most commonly breaks down.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Customer eligibility and propensity intelligence from the Bank's account data are not systematically used to rank which customers to contact for which product. Cross-sell targeting is driven by product campaigns rather than behavioral signals from the customer's transactional relationship with the Bank.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Post-sale policy documentation, disclosure pack delivery, and premium setup each require separate manual steps. The sequence between sale agreement and policy binding involves hand-offs across bancassurance operations, the partner insurer's platform, and the Bank's payment system.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Frontline staff positioning of insurance products is not supported by real-time guidance on which product to offer, what to say, or how to handle common objections. Staff rely on periodic training and printed product guides; offer quality and compliance-disclosure completeness are not measured per interaction.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Insurance conversion rates by channel, frontline staff, and product are tracked at the total level without decomposition by trigger type, offer stage, or customer segment. The Bank cannot identify which life-event triggers carry the highest conversion probability or where the offer conversation most commonly breaks down.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Customer eligibility and propensity intelligence from the Bank's account data are not systematically used to rank which customers to contact for which product. Cross-sell targeting is driven by product campaigns rather than behavioral signals from the customer's transactional relationship with the Bank.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Post-sale policy documentation, disclosure pack delivery, and premium setup each require separate manual steps. The sequence between sale agreement and policy binding involves hand-offs across bancassurance operations, the partner insurer's platform, and the Bank's payment system.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Frontline staff positioning of insurance products is not supported by real-time guidance on which product to offer, what to say, or how to handle common objections. Staff rely on periodic training and printed product guides; offer quality and compliance-disclosure completeness are not measured per interaction.</p></article></div>
     </section>
     
 
@@ -2090,7 +1970,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-frontline-positioning-enablement" id="scenario-banc-frontline-positioning-enablement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-frontline-positioning-enablement" id="scenario-banc-frontline-positioning-enablement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2165,7 +2045,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-policy-onboarding-automation" id="scenario-banc-policy-onboarding-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-policy-onboarding-automation" id="scenario-banc-policy-onboarding-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2240,7 +2120,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-conversion-trigger-analytics" id="scenario-banc-conversion-trigger-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-conversion-trigger-analytics" id="scenario-banc-conversion-trigger-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2315,7 +2195,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-offer-sequencing-optimisation" id="scenario-banc-offer-sequencing-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-offer-sequencing-optimisation" id="scenario-banc-offer-sequencing-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2390,7 +2270,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-lapse-early-warning" id="scenario-banc-lapse-early-warning">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/bancassurance/banc-lapse-early-warning" id="scenario-banc-lapse-early-warning" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -2491,31 +2371,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Funding cost, liquidity ratio headroom, and forecast accuracy are tracked in static reports produced for each ALCO cycle. Treasury has no continuous view of forecast error attribution, funding cost decomposition by instrument, or how regulatory ratio headroom is evolving across the inter-ALCO period.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Funding mix decisions are made weekly against a point-in-time view of costs and ratios. Scenario analysis across instrument options — comparing cost against LCR, NSFR, and leverage impacts — is manual and takes hours; the window for acting on intraweek market opportunities is often missed.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">ALCO pack assembly, regulatory return production, and the narrative explaining liquidity position changes are fully manual each cycle. The process is structurally similar across periods — pulling data from known sources, applying consistent methodology, narrating variances — and is the primary constraint on ALCO preparation quality.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Rating agency and counterparty due diligence cycles create episodic demands on Treasury for structured narrative on funding strategy, liquidity position, and capital adequacy. These demands are handled reactively with bespoke document production each time, drawing on institutional knowledge held in individuals.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Funding cost, liquidity ratio headroom, and forecast accuracy are tracked in static reports produced for each ALCO cycle. Treasury has no continuous view of forecast error attribution, funding cost decomposition by instrument, or how regulatory ratio headroom is evolving across the inter-ALCO period.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Funding mix decisions are made weekly against a point-in-time view of costs and ratios. Scenario analysis across instrument options — comparing cost against LCR, NSFR, and leverage impacts — is manual and takes hours; the window for acting on intraweek market opportunities is often missed.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>ALCO pack assembly, regulatory return production, and the narrative explaining liquidity position changes are fully manual each cycle. The process is structurally similar across periods — pulling data from known sources, applying consistent methodology, narrating variances — and is the primary constraint on ALCO preparation quality.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Rating agency and counterparty due diligence cycles create episodic demands on Treasury for structured narrative on funding strategy, liquidity position, and capital adequacy. These demands are handled reactively with bespoke document production each time, drawing on institutional knowledge held in individuals.</p></article></div>
     </section>
     
 
@@ -2629,7 +2485,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-rating-agency-posture-brief" id="scenario-trs-rating-agency-posture-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-rating-agency-posture-brief" id="scenario-trs-rating-agency-posture-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -2702,7 +2558,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-forecast-accuracy-attribution" id="scenario-trs-forecast-accuracy-attribution">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-forecast-accuracy-attribution" id="scenario-trs-forecast-accuracy-attribution" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2777,7 +2633,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-funding-mix-scenario-optimisation" id="scenario-trs-funding-mix-scenario-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-funding-mix-scenario-optimisation" id="scenario-trs-funding-mix-scenario-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2852,7 +2708,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-alco-pack-automation" id="scenario-trs-alco-pack-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-alco-pack-automation" id="scenario-trs-alco-pack-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2927,7 +2783,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-intraday-liquidity-copilot" id="scenario-trs-intraday-liquidity-copilot">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/treasury-funding/trs-intraday-liquidity-copilot" id="scenario-trs-intraday-liquidity-copilot" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -3026,31 +2882,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">FX exception rates, settlement failure causes, and nostro break volumes are tracked in end-of-day reports from individual systems with no cross-corridor aggregation. Operations cannot identify which correspondent bank corridors carry the highest exception rates or what settlement failure causes are systematic versus episodic.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Correspondent bank routing decisions for cross-border payments are encoded in static routing tables that are reviewed infrequently. Routing optimization — selecting the correspondent path with the lowest expected settlement failure rate and cost — is not a continuous process.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Nostro reconciliation, SWIFT exception triage, and currency-control notification preparation are manual daily tasks consuming treasury operations capacity. Each task is rule-governed and draws on structured data; the structural similarity across periods makes them candidates for end-to-end automation.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Corporate clients with material FX exposures lack a systematic intelligence service on rate movements against their hedging thresholds. The Bank's FX data — pricing history, corridor volumes, settlement timing — is not used to generate client-specific FX intelligence or early-warning alerts.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>FX exception rates, settlement failure causes, and nostro break volumes are tracked in end-of-day reports from individual systems with no cross-corridor aggregation. Operations cannot identify which correspondent bank corridors carry the highest exception rates or what settlement failure causes are systematic versus episodic.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Correspondent bank routing decisions for cross-border payments are encoded in static routing tables that are reviewed infrequently. Routing optimization — selecting the correspondent path with the lowest expected settlement failure rate and cost — is not a continuous process.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Nostro reconciliation, SWIFT exception triage, and currency-control notification preparation are manual daily tasks consuming treasury operations capacity. Each task is rule-governed and draws on structured data; the structural similarity across periods makes them candidates for end-to-end automation.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Corporate clients with material FX exposures lack a systematic intelligence service on rate movements against their hedging thresholds. The Bank's FX data — pricing history, corridor volumes, settlement timing — is not used to generate client-specific FX intelligence or early-warning alerts.</p></article></div>
     </section>
     
 
@@ -3164,7 +2996,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-purpose-code-classification-enablement" id="scenario-fx-purpose-code-classification-enablement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-purpose-code-classification-enablement" id="scenario-fx-purpose-code-classification-enablement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -3239,7 +3071,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-exception-corridor-analytics" id="scenario-fx-exception-corridor-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-exception-corridor-analytics" id="scenario-fx-exception-corridor-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -3312,7 +3144,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-correspondent-routing-optimisation" id="scenario-fx-correspondent-routing-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-correspondent-routing-optimisation" id="scenario-fx-correspondent-routing-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -3385,7 +3217,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-nostro-reconciliation-automation" id="scenario-fx-nostro-reconciliation-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-nostro-reconciliation-automation" id="scenario-fx-nostro-reconciliation-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -3460,7 +3292,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-corporate-client-rate-intelligence" id="scenario-fx-corporate-client-rate-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/fx-cross-border/fx-corporate-client-rate-intelligence" id="scenario-fx-corporate-client-rate-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -3583,31 +3415,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Customer journey data spans acquisition systems, KYC platforms, account management systems, and CRM — with no continuous cross-stage view. The Bank reconstructs lifecycle stage transition rates and cycle times manually per quarter; the picture of where customers drop off, churn, or stall is always retrospective.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Onboarding sequencing, cross-sell contact timing, and retention intervention thresholds are set at the policy level and reviewed infrequently. Segment-specific optimization — which customers to contact, when, and with what — requires multi-week analytical cycles that lag the commercial window.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">KYC document chase, onboarding status updates, cross-sell offer follow-up, and exit processing steps each consume frontline or operations capacity on tasks that follow defined rules. The structural similarity across customers at each stage makes these candidates for AI-driven execution with human review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Lifetime value intelligence — acquisition cost, product depth, tenure, and risk-adjusted margin by customer — is assembled episodically for portfolio reviews. The Bank does not maintain a continuous, customer-level lifetime value view that could anchor retention prioritization and cross-sell sequencing in real time.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Customer journey data spans acquisition systems, KYC platforms, account management systems, and CRM — with no continuous cross-stage view. The Bank reconstructs lifecycle stage transition rates and cycle times manually per quarter; the picture of where customers drop off, churn, or stall is always retrospective.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Onboarding sequencing, cross-sell contact timing, and retention intervention thresholds are set at the policy level and reviewed infrequently. Segment-specific optimization — which customers to contact, when, and with what — requires multi-week analytical cycles that lag the commercial window.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>KYC document chase, onboarding status updates, cross-sell offer follow-up, and exit processing steps each consume frontline or operations capacity on tasks that follow defined rules. The structural similarity across customers at each stage makes these candidates for AI-driven execution with human review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Lifetime value intelligence — acquisition cost, product depth, tenure, and risk-adjusted margin by customer — is assembled episodically for portfolio reviews. The Bank does not maintain a continuous, customer-level lifetime value view that could anchor retention prioritization and cross-sell sequencing in real time.</p></article></div>
     </section>
     
 
@@ -3733,7 +3541,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-cross-stage-journey-analytics" id="scenario-cl-cross-stage-journey-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-cross-stage-journey-analytics" id="scenario-cl-cross-stage-journey-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -3808,7 +3616,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-onboarding-sequence-optimisation" id="scenario-cl-onboarding-sequence-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-onboarding-sequence-optimisation" id="scenario-cl-onboarding-sequence-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -3881,7 +3689,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-lifecycle-agent-execution" id="scenario-cl-lifecycle-agent-execution">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-lifecycle-agent-execution" id="scenario-cl-lifecycle-agent-execution" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -3956,7 +3764,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-churn-signal-enrichment" id="scenario-cl-churn-signal-enrichment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-churn-signal-enrichment" id="scenario-cl-churn-signal-enrichment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -4029,7 +3837,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-lifetime-value-intelligence" id="scenario-cl-lifetime-value-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-lifecycle/cl-lifetime-value-intelligence" id="scenario-cl-lifetime-value-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -4130,31 +3938,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Emerging risks surface across credit, market, operational, and strategic domains in separate monitoring silos. Risk teams produce consolidated views manually for each governance cycle; the interval between the emergence of a risk signal and its appearance in a decision-ready format is measured in days to weeks.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Risk mitigation action sequencing and control prioritization are set through annual risk appetite reviews and updated in response to material events. Continuous optimization — reranking mitigations based on observed control effectiveness and evolving exposure — is not a routine process.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Risk narrative production for ALCO, board risk committee, and regulatory submissions consumes risk team capacity on tasks that draw on structured data and established methodology. Each reporting cycle repeats the same data-pull, synthesis, and narrative sequence with manual effort.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Stress-test results and risk assessment outputs are produced for regulatory and governance cycles but are not systematically used to enrich forward-looking business decisions. Credit pricing, product design, and limit-setting rarely draw directly on the most recent stress-test or emerging-risk assessment output.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Emerging risks surface across credit, market, operational, and strategic domains in separate monitoring silos. Risk teams produce consolidated views manually for each governance cycle; the interval between the emergence of a risk signal and its appearance in a decision-ready format is measured in days to weeks.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Risk mitigation action sequencing and control prioritization are set through annual risk appetite reviews and updated in response to material events. Continuous optimization — reranking mitigations based on observed control effectiveness and evolving exposure — is not a routine process.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Risk narrative production for ALCO, board risk committee, and regulatory submissions consumes risk team capacity on tasks that draw on structured data and established methodology. Each reporting cycle repeats the same data-pull, synthesis, and narrative sequence with manual effort.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Stress-test results and risk assessment outputs are produced for regulatory and governance cycles but are not systematically used to enrich forward-looking business decisions. Credit pricing, product design, and limit-setting rarely draw directly on the most recent stress-test or emerging-risk assessment output.</p></article></div>
     </section>
     
 
@@ -4268,7 +4052,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-emerging-risk-signal-synthesis" id="scenario-rmc-emerging-risk-signal-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-emerging-risk-signal-synthesis" id="scenario-rmc-emerging-risk-signal-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -4343,7 +4127,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-control-effectiveness-optimisation" id="scenario-rmc-control-effectiveness-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-control-effectiveness-optimisation" id="scenario-rmc-control-effectiveness-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -4416,7 +4200,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-risk-narrative-automation" id="scenario-rmc-risk-narrative-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-risk-narrative-automation" id="scenario-rmc-risk-narrative-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -4491,7 +4275,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-stress-test-enrichment-copilot" id="scenario-rmc-stress-test-enrichment-copilot">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-stress-test-enrichment-copilot" id="scenario-rmc-stress-test-enrichment-copilot" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -4564,7 +4348,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-aggregate-risk-view" id="scenario-rmc-aggregate-risk-view">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-management-cycle/rmc-aggregate-risk-view" id="scenario-rmc-aggregate-risk-view" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -4665,31 +4449,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Alert volumes, false-positive rates, and investigation throughput are tracked at the system level in reports produced for each governance cycle. The financial crime operations team has no continuous view of which transaction monitoring rules generate the highest false-positive burden, which customer segments produce the most actionable alerts, or where investigation time is concentrated.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Alert triage sequencing and investigator case assignment are driven by queue order rather than case complexity or filing probability. High-probability cases that warrant faster investigation are not differentiated from low-probability alerts at the point of assignment; investigator capacity is not matched to case complexity.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Case dossier assembly, adverse media search, STR narrative drafting, and STR submission formatting each consume investigator capacity on tasks with defined structure and clear inputs. These tasks are strong candidates for execution by an AI agent, with investigator review and approval before any regulatory action.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Typology intelligence — the patterns of suspicious activity that financial intelligence units and FATF have identified as indicative of ML/TF — is available in public guidance but is not systematically applied to tune transaction monitoring rules or to enrich investigator decision-making at the case level.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Alert volumes, false-positive rates, and investigation throughput are tracked at the system level in reports produced for each governance cycle. The financial crime operations team has no continuous view of which transaction monitoring rules generate the highest false-positive burden, which customer segments produce the most actionable alerts, or where investigation time is concentrated.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Alert triage sequencing and investigator case assignment are driven by queue order rather than case complexity or filing probability. High-probability cases that warrant faster investigation are not differentiated from low-probability alerts at the point of assignment; investigator capacity is not matched to case complexity.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Case dossier assembly, adverse media search, STR narrative drafting, and STR submission formatting each consume investigator capacity on tasks with defined structure and clear inputs. These tasks are strong candidates for execution by an AI agent, with investigator review and approval before any regulatory action.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Typology intelligence — the patterns of suspicious activity that financial intelligence units and FATF have identified as indicative of ML/TF — is available in public guidance but is not systematically applied to tune transaction monitoring rules or to enrich investigator decision-making at the case level.</p></article></div>
     </section>
     
 
@@ -4791,7 +4551,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-typology-enrichment-copilot" id="scenario-cfc-typology-enrichment-copilot">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-typology-enrichment-copilot" id="scenario-cfc-typology-enrichment-copilot" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -4866,7 +4626,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-alert-throughput-analytics" id="scenario-cfc-alert-throughput-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-alert-throughput-analytics" id="scenario-cfc-alert-throughput-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -4939,7 +4699,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-case-complexity-triage-optimisation" id="scenario-cfc-case-complexity-triage-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-case-complexity-triage-optimisation" id="scenario-cfc-case-complexity-triage-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -5014,7 +4774,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-investigation-pack-automation" id="scenario-cfc-investigation-pack-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-investigation-pack-automation" id="scenario-cfc-investigation-pack-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -5089,7 +4849,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-aml-program-health-continuous" id="scenario-cfc-aml-program-health-continuous">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/compliance-financial-crime-cycle/cfc-aml-program-health-continuous" id="scenario-cfc-aml-program-health-continuous" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -5190,31 +4950,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Audit finding data — by business unit, control type, root-cause category, and recurrence rate — is held in the audit management system but not routinely analyzed for systematic patterns. The audit committee and senior management receive finding summaries per report cycle but not a continuous view of which control domains are generating recurring issues.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Audit planning allocates team capacity annually against a static risk ranking. High-risk business units that generate frequent repeat findings — indicating control environments that have not sustainably improved — do not automatically attract higher audit frequency in the planning cycle; replanning requires a manual review of the prior period&#39;s finding data.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Working paper documentation, evidence indexing, finding draft preparation, and remediation status update chasing consume audit team time on structured tasks with well-defined inputs. These tasks compete with the judgment-intensive analytical work that generates the assurance value; shifting them to an AI agent preserves auditor capacity for substantive testing.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">The audit function&#39;s intelligence on control weaknesses, root-cause patterns, and remediation effectiveness is not systematically shared across business lines. A control weakness identified in retail banking may have a structural equivalent in SME or corporate banking; the institutional learning from audit findings rarely propagates to business units that have not yet been audited on the same control domain.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Audit finding data — by business unit, control type, root-cause category, and recurrence rate — is held in the audit management system but not routinely analyzed for systematic patterns. The audit committee and senior management receive finding summaries per report cycle but not a continuous view of which control domains are generating recurring issues.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Audit planning allocates team capacity annually against a static risk ranking. High-risk business units that generate frequent repeat findings — indicating control environments that have not sustainably improved — do not automatically attract higher audit frequency in the planning cycle; replanning requires a manual review of the prior period&#39;s finding data.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Working paper documentation, evidence indexing, finding draft preparation, and remediation status update chasing consume audit team time on structured tasks with well-defined inputs. These tasks compete with the judgment-intensive analytical work that generates the assurance value; shifting them to an AI agent preserves auditor capacity for substantive testing.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>The audit function&#39;s intelligence on control weaknesses, root-cause patterns, and remediation effectiveness is not systematically shared across business lines. A control weakness identified in retail banking may have a structural equivalent in SME or corporate banking; the institutional learning from audit findings rarely propagates to business units that have not yet been audited on the same control domain.</p></article></div>
     </section>
     
 
@@ -5316,7 +5052,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-fieldwork-documentation-automation" id="scenario-iac-fieldwork-documentation-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-fieldwork-documentation-automation" id="scenario-iac-fieldwork-documentation-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -5389,7 +5125,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-remediation-tracking-enablement" id="scenario-iac-remediation-tracking-enablement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-remediation-tracking-enablement" id="scenario-iac-remediation-tracking-enablement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -5462,7 +5198,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-finding-pattern-intelligence" id="scenario-iac-finding-pattern-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-finding-pattern-intelligence" id="scenario-iac-finding-pattern-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -5535,7 +5271,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-risk-ranked-audit-planning" id="scenario-iac-risk-ranked-audit-planning">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-risk-ranked-audit-planning" id="scenario-iac-risk-ranked-audit-planning" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -5610,7 +5346,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-cross-entity-control-learning" id="scenario-iac-cross-entity-control-learning">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/internal-audit-cycle/iac-cross-entity-control-learning" id="scenario-iac-cross-entity-control-learning" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -5709,31 +5445,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Variance between actual and budgeted performance is analyzed manually by finance teams after close, with each sub-team covering its own P&amp;L line. The CFO and business unit CFOs receive the variance narrative at the point of the management pack distribution; the cycle time between actuals and decision-ready variance analysis is measured in days.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Budget submission and reforecast sequencing across business units is driven by the finance calendar and managed through email and spreadsheet tracking. Assumptions that are challenged or revised late in the consolidation cycle extend the overall timeline without a clear view of which submission is the constraint.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Monthly close narrative, management pack production, regulatory return formatting, and MD&amp;A drafting are manual tasks that consume senior finance capacity on well-structured synthesis work. The structure of these tasks — pulling from known data sources, applying standard methodology, narrating variance — makes them strong candidates for AI-assisted production.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Reforecast assumptions are updated by business units based on their own forward visibility. Cross-unit signals — a credit portfolio trend that implies a revenue headwind, an operational cost trajectory that will require provision adjustment — are not systematically surfaced to the reforecast process before they appear in the actuals.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Variance between actual and budgeted performance is analyzed manually by finance teams after close, with each sub-team covering its own P&amp;L line. The CFO and business unit CFOs receive the variance narrative at the point of the management pack distribution; the cycle time between actuals and decision-ready variance analysis is measured in days.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Budget submission and reforecast sequencing across business units is driven by the finance calendar and managed through email and spreadsheet tracking. Assumptions that are challenged or revised late in the consolidation cycle extend the overall timeline without a clear view of which submission is the constraint.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Monthly close narrative, management pack production, regulatory return formatting, and MD&amp;A drafting are manual tasks that consume senior finance capacity on well-structured synthesis work. The structure of these tasks — pulling from known data sources, applying standard methodology, narrating variance — makes them strong candidates for AI-assisted production.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Reforecast assumptions are updated by business units based on their own forward visibility. Cross-unit signals — a credit portfolio trend that implies a revenue headwind, an operational cost trajectory that will require provision adjustment — are not systematically surfaced to the reforecast process before they appear in the actuals.</p></article></div>
     </section>
     
 
@@ -5847,7 +5559,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-variance-attribution-analytics" id="scenario-fcc-variance-attribution-analytics">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-variance-attribution-analytics" id="scenario-fcc-variance-attribution-analytics" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -5922,7 +5634,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-budget-consolidation-optimisation" id="scenario-fcc-budget-consolidation-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-budget-consolidation-optimisation" id="scenario-fcc-budget-consolidation-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -5997,7 +5709,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-close-narrative-automation" id="scenario-fcc-close-narrative-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-close-narrative-automation" id="scenario-fcc-close-narrative-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -6072,7 +5784,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-reforecast-cross-signal-enrichment" id="scenario-fcc-reforecast-cross-signal-enrichment">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-reforecast-cross-signal-enrichment" id="scenario-fcc-reforecast-cross-signal-enrichment" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -6147,7 +5859,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-ifrs9-provision-intelligence" id="scenario-fcc-ifrs9-provision-intelligence">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/financial-control-cycle/fcc-ifrs9-provision-intelligence" id="scenario-fcc-ifrs9-provision-intelligence" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">

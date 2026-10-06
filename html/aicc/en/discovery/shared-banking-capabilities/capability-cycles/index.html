@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -298,31 +298,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">KPI and SLA actuals across all shared capabilities are assembled manually once per month or quarter. Continuous visibility into intra-period performance trends — which capabilities are trending toward breach mid-cycle — is absent from the standard management information set.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Cross-capability breach prioritization and remediation-plan coherence are assessed by separate capability owners without a common framework. The cumulative remediation backlog and the interaction between overlapping remediations are not visible to a single owner between formal review cycles.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Actuals collection, SLA threshold comparison, breach identification, and draft root-cause commentary are structured, repeating tasks performed on the same data sources each cycle. The assembly and comparison steps are high-volume and rule-bound — primary candidates for AI-driven execution with analyst review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Remediation outcomes — whether the action taken resolved the breach — are rarely linked back to the root-cause attribution that framed the remediation. The cycle builds little compounding knowledge about which root causes recur and which remediation types are effective.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>KPI and SLA actuals across all shared capabilities are assembled manually once per month or quarter. Continuous visibility into intra-period performance trends — which capabilities are trending toward breach mid-cycle — is absent from the standard management information set.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Cross-capability breach prioritization and remediation-plan coherence are assessed by separate capability owners without a common framework. The cumulative remediation backlog and the interaction between overlapping remediations are not visible to a single owner between formal review cycles.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Actuals collection, SLA threshold comparison, breach identification, and draft root-cause commentary are structured, repeating tasks performed on the same data sources each cycle. The assembly and comparison steps are high-volume and rule-bound — primary candidates for AI-driven execution with analyst review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Remediation outcomes — whether the action taken resolved the breach — are rarely linked back to the root-cause attribution that framed the remediation. The cycle builds little compounding knowledge about which root causes recur and which remediation types are effective.</p></article></div>
     </section>
     
 
@@ -344,7 +320,7 @@ Question or comment:
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--measure">
     <span class="flow-stages__stage-label">Measure</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -356,7 +332,7 @@ Question or comment:
     type="button"
     data-stage="review"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--review">
     <span class="flow-stages__stage-label">Review</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -368,7 +344,7 @@ Question or comment:
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--identify">
     <span class="flow-stages__stage-label">Identify breaches</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -380,7 +356,7 @@ Question or comment:
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--plan">
     <span class="flow-stages__stage-label">Plan remediation</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -392,7 +368,7 @@ Question or comment:
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--track">
     <span class="flow-stages__stage-label">Track</span>
     
   </button>
@@ -436,7 +412,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/mid-cycle-sla-breach-signal" id="scenario-mid-cycle-sla-breach-signal">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/mid-cycle-sla-breach-signal" id="scenario-mid-cycle-sla-breach-signal" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -512,7 +488,7 @@ Remediation that could have been applied mid-cycle is deferred until the breach 
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/sla-breach-root-cause-commentary" id="scenario-sla-breach-root-cause-commentary">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/sla-breach-root-cause-commentary" id="scenario-sla-breach-root-cause-commentary" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -588,7 +564,7 @@ Recurring root causes — interface latency, batch processing failure, staffing 
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/remediation-outcome-institutional-record" id="scenario-remediation-outcome-institutional-record">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/remediation-outcome-institutional-record" id="scenario-remediation-outcome-institutional-record" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -664,7 +640,7 @@ Each new capability investment case and planning round re-creates OPEX and SLA a
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/kpi-sla-scorecard-assembly-agent" id="scenario-kpi-sla-scorecard-assembly-agent">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/kpi-sla-scorecard-assembly-agent" id="scenario-kpi-sla-scorecard-assembly-agent" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -740,7 +716,7 @@ Cross-capability scorecard assembly is a manual consolidation exercise; the mana
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/capability-remediation-backlog-prioritisation" id="scenario-capability-remediation-backlog-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/capability-remediation-backlog-prioritisation" id="scenario-capability-remediation-backlog-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -839,31 +815,7 @@ Cross-capability scorecard assembly is a manual consolidation exercise; the mana
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">The improvement pipeline — intake queue size, prioritization backlog, implementation progress, and realization status — is not tracked in a consolidated form. The Head of Shared Capabilities cannot see the full improvement lifecycle at any point in the cycle without manual assembly from multiple project and operational sources.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Prioritization scoring is applied within each capability domain independently. Cross-capability prioritization — an improvement in transaction processing that unlocks capacity in AML alert triage — requires cross-domain analysis that capability-specific prioritization committees are not structured to perform.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Business-case modeling, post-implementation metric comparison, and the production of the quarterly prioritization pack are structured analytical tasks that repeat each cycle with the same framework applied to updated operational data.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Completed improvements and their realized benefit outcomes are rarely documented in a form that informs future improvement identification. The Bank does not maintain a searchable library of past interventions, their root causes, and their outcomes that could accelerate business-case assembly for similar future improvements.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The improvement pipeline — intake queue size, prioritization backlog, implementation progress, and realization status — is not tracked in a consolidated form. The Head of Shared Capabilities cannot see the full improvement lifecycle at any point in the cycle without manual assembly from multiple project and operational sources.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Prioritization scoring is applied within each capability domain independently. Cross-capability prioritization — an improvement in transaction processing that unlocks capacity in AML alert triage — requires cross-domain analysis that capability-specific prioritization committees are not structured to perform.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Business-case modeling, post-implementation metric comparison, and the production of the quarterly prioritization pack are structured analytical tasks that repeat each cycle with the same framework applied to updated operational data.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Completed improvements and their realized benefit outcomes are rarely documented in a form that informs future improvement identification. The Bank does not maintain a searchable library of past interventions, their root causes, and their outcomes that could accelerate business-case assembly for similar future improvements.</p></article></div>
     </section>
     
 
@@ -885,7 +837,7 @@ Cross-capability scorecard assembly is a manual consolidation exercise; the mana
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--identify">
     <span class="flow-stages__stage-label">Identify</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -897,7 +849,7 @@ Cross-capability scorecard assembly is a manual consolidation exercise; the mana
     type="button"
     data-stage="prioritize"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--prioritize">
     <span class="flow-stages__stage-label">Prioritize</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -909,7 +861,7 @@ Cross-capability scorecard assembly is a manual consolidation exercise; the mana
     type="button"
     data-stage="implement"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--implement">
     <span class="flow-stages__stage-label">Implement</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -921,7 +873,7 @@ Cross-capability scorecard assembly is a manual consolidation exercise; the mana
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--measure">
     <span class="flow-stages__stage-label">Measure benefit</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -933,7 +885,7 @@ Cross-capability scorecard assembly is a manual consolidation exercise; the mana
     type="button"
     data-stage="sustain"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--sustain">
     <span class="flow-stages__stage-label">Sustain</span>
     
   </button>
@@ -977,7 +929,7 @@ Cross-capability scorecard assembly is a manual consolidation exercise; the mana
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-business-case-drafting" id="scenario-improvement-business-case-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-business-case-drafting" id="scenario-improvement-business-case-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1053,7 +1005,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-post-implementation-benefit-measurement" id="scenario-improvement-post-implementation-benefit-measurement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-post-implementation-benefit-measurement" id="scenario-improvement-post-implementation-benefit-measurement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1128,7 +1080,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-knowledge-base-accumulation" id="scenario-improvement-knowledge-base-accumulation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-knowledge-base-accumulation" id="scenario-improvement-knowledge-base-accumulation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1203,7 +1155,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-intake-channel-unification" id="scenario-improvement-intake-channel-unification">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-intake-channel-unification" id="scenario-improvement-intake-channel-unification" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1278,7 +1230,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/cross-capability-improvement-prioritisation" id="scenario-cross-capability-improvement-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/cross-capability-improvement-prioritisation" id="scenario-cross-capability-improvement-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1399,31 +1351,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">The capability investment portfolio — cases in preparation, cases in approval, programs in delivery, and benefits in realization — is not tracked in a consolidated view. The Head of Shared Capabilities and the CTO cannot see pipeline coverage, approval lag, delivery variance, and benefit realization gap simultaneously.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Investment case benefit modeling is the weakest stage in the cycle. Cases use directional estimates because the data assembly required for rigorous modeling consumes more time than the planning deadline allows. Alternative investment options — build vs buy, phased vs full-scope, vendor A vs vendor B — are rarely explored with equal analytical depth before the approval decision.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Investment case document production, cross-function input synthesis, regulatory notification checklist preparation, and post-deployment benefit tracking reports are structured tasks that repeat for each investment across a consistent framework. The assembly burden is the primary cycle constraint.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Completed investment programs — their actual vs planned cost, delivery timelines, and realized benefits — are rarely documented in a structured form that informs the next investment cycle's assumptions. Each new investment case is built from first principles, repeating the estimation effort that prior program outcomes could have informed.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>The capability investment portfolio — cases in preparation, cases in approval, programs in delivery, and benefits in realization — is not tracked in a consolidated view. The Head of Shared Capabilities and the CTO cannot see pipeline coverage, approval lag, delivery variance, and benefit realization gap simultaneously.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Investment case benefit modeling is the weakest stage in the cycle. Cases use directional estimates because the data assembly required for rigorous modeling consumes more time than the planning deadline allows. Alternative investment options — build vs buy, phased vs full-scope, vendor A vs vendor B — are rarely explored with equal analytical depth before the approval decision.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Investment case document production, cross-function input synthesis, regulatory notification checklist preparation, and post-deployment benefit tracking reports are structured tasks that repeat for each investment across a consistent framework. The assembly burden is the primary cycle constraint.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Completed investment programs — their actual vs planned cost, delivery timelines, and realized benefits — are rarely documented in a structured form that informs the next investment cycle's assumptions. Each new investment case is built from first principles, repeating the estimation effort that prior program outcomes could have informed.</p></article></div>
     </section>
     
 
@@ -1445,7 +1373,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--plan">
     <span class="flow-stages__stage-label">Plan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1457,7 +1385,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1469,7 +1397,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
     type="button"
     data-stage="build"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--build">
     <span class="flow-stages__stage-label">Build</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1481,7 +1409,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
     type="button"
     data-stage="deploy"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--deploy">
     <span class="flow-stages__stage-label">Deploy</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1493,7 +1421,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
     type="button"
     data-stage="sustain"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--sustain">
     <span class="flow-stages__stage-label">Sustain</span>
     
   </button>
@@ -1537,7 +1465,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/programme-delivery-variance-monitoring" id="scenario-programme-delivery-variance-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/programme-delivery-variance-monitoring" id="scenario-programme-delivery-variance-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1612,7 +1540,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-benefit-realisation" id="scenario-capability-investment-benefit-realisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-benefit-realisation" id="scenario-capability-investment-benefit-realisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1687,7 +1615,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-gap-assessment-synthesis" id="scenario-capability-gap-assessment-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-gap-assessment-synthesis" id="scenario-capability-gap-assessment-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1762,7 +1690,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-case-assembly" id="scenario-capability-investment-case-assembly">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-case-assembly" id="scenario-capability-investment-case-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1835,7 +1763,7 @@ Cases rely on directional estimates; cross-candidate comparisons are inconsisten
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/build-buy-partner-scenario-modelling" id="scenario-build-buy-partner-scenario-modelling">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/build-buy-partner-scenario-modelling" id="scenario-build-buy-partner-scenario-modelling" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1935,31 +1863,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Vendor performance, financial health, and risk signals are assessed on fixed review cycles rather than continuously. A vendor&#39;s SLA degradation trajectory between quarterly reviews, or a financial distress signal appearing in public filings between annual reviews, is not systematically surfaced to the sourcing team.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Sourcing strategy decisions — which capabilities to insource, which to consolidate to a single vendor, which to multi-source — are made at contract renewal with incomplete market intelligence. Concentration risk analysis across the vendor portfolio requires manual aggregation that is rarely current enough to inform active sourcing decisions.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Vendor performance report assembly, contract adequacy review against current outsourcing requirements, financial health summary production, and due diligence pack assembly for new vendor onboarding are structured tasks with defined frameworks that repeat for each vendor each cycle.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Vendor review findings, incident histories, and regulatory observations accumulate in individual contract files rather than in a consolidated vendor knowledge base. The sourcing team does not have access to a searchable record of prior findings across the portfolio that would improve the efficiency and quality of each new review.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Vendor performance, financial health, and risk signals are assessed on fixed review cycles rather than continuously. A vendor&#39;s SLA degradation trajectory between quarterly reviews, or a financial distress signal appearing in public filings between annual reviews, is not systematically surfaced to the sourcing team.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Sourcing strategy decisions — which capabilities to insource, which to consolidate to a single vendor, which to multi-source — are made at contract renewal with incomplete market intelligence. Concentration risk analysis across the vendor portfolio requires manual aggregation that is rarely current enough to inform active sourcing decisions.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Vendor performance report assembly, contract adequacy review against current outsourcing requirements, financial health summary production, and due diligence pack assembly for new vendor onboarding are structured tasks with defined frameworks that repeat for each vendor each cycle.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Vendor review findings, incident histories, and regulatory observations accumulate in individual contract files rather than in a consolidated vendor knowledge base. The sourcing team does not have access to a searchable record of prior findings across the portfolio that would improve the efficiency and quality of each new review.</p></article></div>
     </section>
     
 
@@ -1981,7 +1885,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
     type="button"
     data-stage="evaluate"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--evaluate">
     <span class="flow-stages__stage-label">Evaluate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1993,7 +1897,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
     type="button"
     data-stage="negotiate"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--negotiate">
     <span class="flow-stages__stage-label">Negotiate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2005,7 +1909,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
     type="button"
     data-stage="onboard"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--onboard">
     <span class="flow-stages__stage-label">Onboard</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2017,7 +1921,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--monitor">
     <span class="flow-stages__stage-label">Monitor</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2029,7 +1933,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
     type="button"
     data-stage="renew"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--renew">
     <span class="flow-stages__stage-label">Renew or exit</span>
     
   </button>
@@ -2073,7 +1977,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-onboarding-regulatory-timeline-planning" id="scenario-vendor-onboarding-regulatory-timeline-planning">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-onboarding-regulatory-timeline-planning" id="scenario-vendor-onboarding-regulatory-timeline-planning" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2148,7 +2052,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-performance-pack-assembly" id="scenario-vendor-performance-pack-assembly">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-performance-pack-assembly" id="scenario-vendor-performance-pack-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -2223,7 +2127,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/continuous-vendor-risk-monitoring" id="scenario-continuous-vendor-risk-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/continuous-vendor-risk-monitoring" id="scenario-continuous-vendor-risk-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2296,7 +2200,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-contract-regulatory-adequacy-review" id="scenario-vendor-contract-regulatory-adequacy-review">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-contract-regulatory-adequacy-review" id="scenario-vendor-contract-regulatory-adequacy-review" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -2371,7 +2275,7 @@ Time constraints in the annual planning cycle mean the committee typically revie
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/sourcing-concentration-risk-renewal-analysis" id="scenario-sourcing-concentration-risk-renewal-analysis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/sourcing-concentration-risk-renewal-analysis" id="scenario-sourcing-concentration-risk-renewal-analysis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">

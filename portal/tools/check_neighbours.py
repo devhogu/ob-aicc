@@ -27,10 +27,16 @@ class Inspection(HTMLParser):
         self.feedback_buttons = 0
         self.cards, self.card, self.depth = {}, None, 0
         self.derived = None
+        self.contexts, self.context_tag, self.context_card_count = [], None, 0
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        classes = attrs.get('class', '').split()
+        if 'problems-row' in classes or 'discovery-context-card' in classes:
+            self.contexts.append([])
+            self.context_tag = tag
+            self.context_card_count += 'discovery-context-card' in classes
         if tag == 'body':
             self.section = attrs.get('data-portal-section')
         if 'id' in attrs:
@@ -71,6 +77,8 @@ class Inspection(HTMLParser):
     def handle_endtag(self, tag):
         if tag == self.derived:
             self.derived = None
+        if tag == self.context_tag:
+            self.context_tag = None
         if tag == 'main':
             self.in_main = False
         if tag == 'footer':
@@ -83,6 +91,8 @@ class Inspection(HTMLParser):
                 self.card = None
 
     def handle_data(self, text):
+        if self.context_tag:
+            self.contexts[-1].extend(text.split())
         if self.card and not self.derived:
             self.cards[self.card].extend(text.split())
 
@@ -157,6 +167,9 @@ def check():
                 original = Inspection((source / relative).read_text())
                 if original.cards != parsed.cards:
                     errors.append(f'{path}: scenario content or identity differs from retained source')
+                if original.contexts != parsed.contexts or parsed.context_card_count != len(original.contexts):
+                    errors.append(f'{path}: context cards omit or change source text')
+                counts[lang + '_context_cards'] += parsed.context_card_count
                 counts[lang + '_scenarios'] += len(parsed.cards)
         if counts[lang + '_scenarios'] != source_cards:
             errors.append(f'{lang}: expected {source_cards} scenario cards, got {counts[lang + "_scenarios"]}')

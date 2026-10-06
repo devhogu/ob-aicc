@@ -23,7 +23,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -307,31 +307,7 @@ Question or comment:
     role="tabpanel"
     aria-labelledby="problems-tab-pricing-rates"
   >
-    <table class="problems-table">
-      <tbody>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
-          <td class="problems-statement">Market data quality — stale prices, outlier rates, missing fields, and cross-vendor discrepancies — is assessed through end-of-day reconciliation between vendor feeds and the valuation engine output. Quality anomalies that enter the valuation engine before end-of-day reconciliation cause MTM errors, incorrect margin calls, and VaR distortions that are identified only after the downstream system has consumed and acted on the incorrect data.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Enablement</th>
-          <td class="problems-statement">Yield curve construction — selecting input instruments, applying bootstrapping methodology, interpolating missing tenors, and documenting the construction rationale for front-office and risk review — is a daily quant task that precedes the distribution of curves to pricing and risk systems. The documentation and commentary step consumes a material portion of the quant team&#39;s morning preparation time.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Automation</th>
-          <td class="problems-statement">Daily market data quality checks, curve construction documentation, and vendor-feed completeness reports follow defined rule sets applied to structured market data on each delivery cycle. Each process is repeatable and data-driven — candidates for continuous AI-driven execution before downstream systems consume the feed.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">New business opportunities</th>
-          <td class="problems-statement">Pre-consumption market data quality monitoring — catching stale prices and outlier rates before they reach the valuation engine — eliminates the downstream rework cost of MTM restatements, incorrect margin calls, and VaR corrections. Banks with real-time quality gates upstream of the valuation engine process fewer end-of-day breaks than peers relying on post-consumption reconciliation.</td>
-        </tr>
-        
-      </tbody>
-    </table>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Market data quality — stale prices, outlier rates, missing fields, and cross-vendor discrepancies — is assessed through end-of-day reconciliation between vendor feeds and the valuation engine output. Quality anomalies that enter the valuation engine before end-of-day reconciliation cause MTM errors, incorrect margin calls, and VaR distortions that are identified only after the downstream system has consumed and acted on the incorrect data.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Yield curve construction — selecting input instruments, applying bootstrapping methodology, interpolating missing tenors, and documenting the construction rationale for front-office and risk review — is a daily quant task that precedes the distribution of curves to pricing and risk systems. The documentation and commentary step consumes a material portion of the quant team&#39;s morning preparation time.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Daily market data quality checks, curve construction documentation, and vendor-feed completeness reports follow defined rule sets applied to structured market data on each delivery cycle. Each process is repeatable and data-driven — candidates for continuous AI-driven execution before downstream systems consume the feed.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Pre-consumption market data quality monitoring — catching stale prices and outlier rates before they reach the valuation engine — eliminates the downstream rework cost of MTM restatements, incorrect margin calls, and VaR corrections. Banks with real-time quality gates upstream of the valuation engine process fewer end-of-day breaks than peers relying on post-consumption reconciliation.</p></article></div>
   </div>
   
 
@@ -384,7 +360,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/eod-price-validation-gate" id="scenario-eod-price-validation-gate">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/eod-price-validation-gate" id="scenario-eod-price-validation-gate" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -459,7 +435,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/real-time-feed-latency-monitor" id="scenario-real-time-feed-latency-monitor">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/real-time-feed-latency-monitor" id="scenario-real-time-feed-latency-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -534,7 +510,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/missing-instrument-coverage-report" id="scenario-missing-instrument-coverage-report">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/missing-instrument-coverage-report" id="scenario-missing-instrument-coverage-report" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -644,7 +620,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/macro-data-publication-tracker" id="scenario-macro-data-publication-tracker">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/macro-data-publication-tracker" id="scenario-macro-data-publication-tracker" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -719,7 +695,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/macro-indicator-consistency-check" id="scenario-macro-indicator-consistency-check">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/macro-indicator-consistency-check" id="scenario-macro-indicator-consistency-check" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -794,7 +770,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/ifrs9-macro-input-version-control" id="scenario-ifrs9-macro-input-version-control">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/ifrs9-macro-input-version-control" id="scenario-ifrs9-macro-input-version-control" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -904,7 +880,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/fx-rate-context-brief" id="scenario-fx-rate-context-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/fx-rate-context-brief" id="scenario-fx-rate-context-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -977,7 +953,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/benchmark-rate-anomaly-detection" id="scenario-benchmark-rate-anomaly-detection">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/benchmark-rate-anomaly-detection" id="scenario-benchmark-rate-anomaly-detection" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1052,7 +1028,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/fx-rate-coverage-completeness-report" id="scenario-fx-rate-coverage-completeness-report">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/fx-rate-coverage-completeness-report" id="scenario-fx-rate-coverage-completeness-report" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1162,7 +1138,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/market-data-feed-quality-monitor" id="scenario-market-data-feed-quality-monitor">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/market-data-feed-quality-monitor" id="scenario-market-data-feed-quality-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1237,7 +1213,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/vendor-entitlement-register-audit" id="scenario-vendor-entitlement-register-audit">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/vendor-entitlement-register-audit" id="scenario-vendor-entitlement-register-audit" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1312,7 +1288,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/vendor-sla-performance-dashboard" id="scenario-vendor-sla-performance-dashboard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/vendor-sla-performance-dashboard" id="scenario-vendor-sla-performance-dashboard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1422,7 +1398,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/yield-curve-input-quality-gate" id="scenario-yield-curve-input-quality-gate">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/yield-curve-input-quality-gate" id="scenario-yield-curve-input-quality-gate" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1497,7 +1473,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/curve-construction-commentary" id="scenario-curve-construction-commentary">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/curve-construction-commentary" id="scenario-curve-construction-commentary" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1572,7 +1548,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/interpolation-methodology-review-brief" id="scenario-interpolation-methodology-review-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/interpolation-methodology-review-brief" id="scenario-interpolation-methodology-review-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">

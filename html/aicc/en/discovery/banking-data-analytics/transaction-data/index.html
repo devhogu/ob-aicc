@@ -23,7 +23,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -307,31 +307,7 @@ Question or comment:
     role="tabpanel"
     aria-labelledby="problems-tab-payments-movement-data"
   >
-    <table class="problems-table">
-      <tbody>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
-          <td class="problems-statement">Transaction volumes, payment-rail utilization, and settlement failure rates are each monitored within separate operations dashboards. Cross-rail patterns — a payment-rail capacity constraint correlating with a settlement-failure spike, or a transaction-value distribution shift indicating emerging merchant or counterparty behavior — are identified only through bespoke analytical work commissioned after an event.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Enablement</th>
-          <td class="problems-statement">AML transaction monitoring alert investigation requires analysts to retrieve the full transaction history of a flagged customer across all payment rails, enrich each transaction with merchant category and counterparty identity, and reconstruct the transaction network before assessing the alert. The data-retrieval and enrichment step precedes the substantive compliance judgment.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Automation</th>
-          <td class="problems-statement">Transaction enrichment rule application, reconciliation break classification, and settlement exception reporting follow defined logic applied to structured transaction data on each settlement cycle. Each process is repeatable, rule-driven, and high-volume — candidates for continuous AI-driven execution with operations team review at the exception level.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">New business opportunities</th>
-          <td class="problems-statement">An enriched transaction stream — with merchant category, counterparty identity, and economic purpose attached to each record within hours of settlement — provides the substrate for customer-facing spending insights, AML pattern detection, credit underwriting behavioral signals, and merchant analytics. Peers operating with batch-enriched transaction data delivered at T+1 or later cannot offer the same depth of near-real-time analytics.</td>
-        </tr>
-        
-      </tbody>
-    </table>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Transaction volumes, payment-rail utilization, and settlement failure rates are each monitored within separate operations dashboards. Cross-rail patterns — a payment-rail capacity constraint correlating with a settlement-failure spike, or a transaction-value distribution shift indicating emerging merchant or counterparty behavior — are identified only through bespoke analytical work commissioned after an event.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>AML transaction monitoring alert investigation requires analysts to retrieve the full transaction history of a flagged customer across all payment rails, enrich each transaction with merchant category and counterparty identity, and reconstruct the transaction network before assessing the alert. The data-retrieval and enrichment step precedes the substantive compliance judgment.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Transaction enrichment rule application, reconciliation break classification, and settlement exception reporting follow defined logic applied to structured transaction data on each settlement cycle. Each process is repeatable, rule-driven, and high-volume — candidates for continuous AI-driven execution with operations team review at the exception level.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>An enriched transaction stream — with merchant category, counterparty identity, and economic purpose attached to each record within hours of settlement — provides the substrate for customer-facing spending insights, AML pattern detection, credit underwriting behavioral signals, and merchant analytics. Peers operating with batch-enriched transaction data delivered at T+1 or later cannot offer the same depth of near-real-time analytics.</p></article></div>
   </div>
   
 
@@ -384,7 +360,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/payment-data-quality-self-service" id="scenario-payment-data-quality-self-service">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/payment-data-quality-self-service" id="scenario-payment-data-quality-self-service" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -459,7 +435,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/payment-data-completeness-monitoring" id="scenario-payment-data-completeness-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/payment-data-completeness-monitoring" id="scenario-payment-data-completeness-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -532,7 +508,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/correspondent-banking-due-diligence-data" id="scenario-correspondent-banking-due-diligence-data">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/payment-transfer-records/correspondent-banking-due-diligence-data" id="scenario-correspondent-banking-due-diligence-data" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -640,7 +616,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/reconciliation-break-investigation" id="scenario-reconciliation-break-investigation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/reconciliation-break-investigation" id="scenario-reconciliation-break-investigation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -715,7 +691,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/settlement-reconciliation-break-classification" id="scenario-settlement-reconciliation-break-classification">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/settlement-reconciliation-break-classification" id="scenario-settlement-reconciliation-break-classification" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -790,7 +766,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/aml-transaction-tracing-support" id="scenario-aml-transaction-tracing-support">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-lineage-reconciliation/aml-transaction-tracing-support" id="scenario-aml-transaction-tracing-support" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -900,7 +876,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/enrichment-rule-maintenance" id="scenario-enrichment-rule-maintenance">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/enrichment-rule-maintenance" id="scenario-enrichment-rule-maintenance" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -975,7 +951,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/spending-category-insight-delivery" id="scenario-spending-category-insight-delivery">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/spending-category-insight-delivery" id="scenario-spending-category-insight-delivery" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1048,7 +1024,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/transaction-enrichment-pipeline" id="scenario-transaction-enrichment-pipeline">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-enrichment-categorisation/transaction-enrichment-pipeline" id="scenario-transaction-enrichment-pipeline" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1158,7 +1134,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/product-analytics-usage-dashboard" id="scenario-product-analytics-usage-dashboard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/product-analytics-usage-dashboard" id="scenario-product-analytics-usage-dashboard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1233,7 +1209,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/transaction-behaviour-profile" id="scenario-transaction-behaviour-profile">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/transaction-behaviour-profile" id="scenario-transaction-behaviour-profile" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1308,7 +1284,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/aml-network-anomaly-detection" id="scenario-aml-network-anomaly-detection">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/transaction-analytics-patterns/aml-network-anomaly-detection" id="scenario-aml-network-anomaly-detection" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1418,7 +1394,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/chargeback-root-cause-analysis" id="scenario-chargeback-root-cause-analysis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/chargeback-root-cause-analysis" id="scenario-chargeback-root-cause-analysis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1491,7 +1467,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/merchant-mcc-assignment-quality" id="scenario-merchant-mcc-assignment-quality">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/merchant-mcc-assignment-quality" id="scenario-merchant-mcc-assignment-quality" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1566,7 +1542,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/card-fraud-pattern-detection" id="scenario-card-fraud-pattern-detection">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/transaction-data/card-merchant-data/card-fraud-pattern-detection" id="scenario-card-fraud-pattern-detection" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">

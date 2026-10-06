@@ -22,6 +22,10 @@ GROUPS = ['aicc', 'discovery', 'initiatives', 'projects', 'lab']
 MEASURE = """() => {
  const visible = e => !!e.getClientRects().length;
  const overlap=[];
+ const clipped=[];
+ for(const card of document.querySelectorAll('.discovery-content .card,.discovery-context-card,.scenario-card')){
+  if(visible(card)&&(card.scrollHeight>card.clientHeight+2||card.scrollWidth>card.clientWidth+2))clipped.push(card.className);
+ }
  const groups=new Map();
  for(const e of document.querySelectorAll('.discovery-content .card,.discovery-content .scenario-card')){
   if(!visible(e))continue;
@@ -42,7 +46,7 @@ MEASURE = """() => {
   groups:[...document.querySelectorAll('.portal-section-link')].map(e=>e.dataset.section),
   font:getComputedStyle(document.body).fontFamily,
   theme:document.documentElement.dataset.theme,
-  brokenImages:[...document.images].filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src),overlap};
+  brokenImages:[...document.images].filter(e=>!e.complete||!e.naturalWidth).map(e=>e.src),overlap,clipped};
 }"""
 
 
@@ -111,9 +115,9 @@ def check_existing_aicc(page, base, counts):
         counts['aicc_interactions'] += 3
 
 
-def check_workflow_stage_links(page, overview, counts, *, all_stages=False):
+def check_workflow_stage_links(page, overview, counts, *, lang='en', all_stages=False):
     """A stage link opens that stage's source content, on HTTP and file URLs."""
-    source = (ROOT / 'html-alt/financial-services/en/value-streams/index.html').read_text()
+    source = (ROOT / f'html-alt/financial-services/{lang}/value-streams/index.html').read_text()
     catalogue = json.loads(re.search(r'const FLOW_STAGES = (.*?);\n', source)[1])
     expected = [(flow, stage) for flow, stages in catalogue.items() for stage in stages]
     page.goto(overview)
@@ -154,8 +158,60 @@ def check_workflow_stage_links(page, overview, counts, *, all_stages=False):
     page.keyboard.press('Escape')
     page.evaluate('location.hash="stage-deposits-transaction-banking--transact"')
     page.wait_for_function('document.querySelector("#stageModal").getAttribute("aria-hidden")==="false"')
-    assert page.locator('#stageModal .modal__title').inner_text() == 'Day-to-day payment and transfer execution'
+    expected_transact = next(stage['title'] for flow, stage in expected if flow.endswith(':deposits-transaction-banking') and stage['slug'] == 'transact')
+    assert page.locator('#stageModal .modal__title').inner_text() == expected_transact
     page.goto(overview)
+
+
+def check_card_layout(page, counts):
+    """The adopted constructs reach every page family without hiding readable content."""
+    flow = page.locator('.flow-detail').first
+    opened_flow = flow.count() and not flow.evaluate('e=>e.open')
+    if opened_flow:
+        flow.locator(':scope > summary').focus();page.keyboard.press('Enter')
+        assert flow.evaluate('e=>e.open')
+    for selector in ('.concern-scenarios', '.l3-section__scenarios', '.discovery-context-grid'):
+        for container in page.locator(selector).all():
+            if container.is_visible():
+                assert container.evaluate('e=>getComputedStyle(e).display') == 'grid', selector
+                counts['shared_card_groups'] += 1
+    card = page.locator('.scenario-card:visible').first
+    if card.count():
+        summary = card.locator(':scope > summary')
+        summary.focus(); page.keyboard.press('Enter')
+        assert card.evaluate('e=>e.open')
+        assert card.locator('.scenario-card__body').is_visible()
+        assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1')
+        assert not page.evaluate(MEASURE)['clipped'], 'Expanded card clipped'
+        page.keyboard.press('Enter'); assert not card.evaluate('e=>e.open')
+        counts['keyboard_scenario_checks'] += 1
+    if opened_flow:
+        flow.locator(':scope > summary').focus();page.keyboard.press('Enter')
+        assert not flow.evaluate('e=>e.open')
+
+
+def check_domain_previews(page, route, counts):
+    """Every domain preview reaches its own source stage, in the current language."""
+    previews = page.locator('.workflow-preview')
+    if not previews.count() or route.endswith('/discovery/index.html'):
+        return
+    destinations = previews.evaluate_all('els=>els.map(e=>{const a=e.querySelector(".workflow-preview__stages a");return {href:a.getAttribute("href"),label:a.textContent.trim()}})')
+    for target in destinations:
+        page.goto(route)
+        link = page.locator('.workflow-preview__stages a[href="' + target['href'] + '"]')
+        link.locator('xpath=ancestor::details').locator(':scope > summary').click()
+        link.focus(); page.keyboard.press('Enter')
+        modal = page.locator('#stageModal');modal.wait_for(state='visible')
+        stage = page.locator('.flow-stages__stage[id="' + urlsplit(page.url).fragment + '"]')
+        assert stage.locator('.flow-stages__stage-label').inner_text()==target['label']
+        prefix, relative = urlsplit(page.url).path.split('/discovery/', 1)
+        source = (ROOT / 'html-alt/financial-services' / prefix.rsplit('/', 1)[-1] / relative).read_text()
+        catalogue = json.loads(re.search(r'const FLOW_STAGES = (.*?);\n', source)[1])
+        expected = next(item for item in catalogue[stage.get_attribute('data-flow-id')] if item['slug'] == stage.get_attribute('data-stage'))
+        assert modal.locator('.modal__title').inner_text()==expected['title']
+        page.keyboard.press('Escape');assert not modal.is_visible()
+        counts['domain_preview_links'] += 1
+    page.goto(route)
 
 
 def main():
@@ -199,17 +255,20 @@ def main():
                         problems.append('landmarks/navigation')
                     if 'Golos Text' not in state['font'] or state['theme'] != theme:
                         problems.append('font/theme')
-                    if state['brokenImages'] or state['overlap']:
-                        problems.append('images/card overlap')
+                    if state['brokenImages'] or state['overlap'] or state['clipped']:
+                        problems.append('images/card overlap or clipping: ' + str(state['clipped'][:3]))
                     if state['chrome'] != baseline_chrome[route.split('/')[0]]:
                         problems.append('page framework differs from AICC')
                     if page.locator('.nav-foot').count() != 1 or page.locator('.o-footer .pagefb').count() != 1 or page.locator('#fb').count() != 1:
                         problems.append('sidebar/footer/feedback')
                     if problems:
                         errors.append(f'{width}/{theme} {route}: {", ".join(problems)}')
-                    if route == 'en/discovery/index.html':
-                        check_workflow_stage_links(page, base + route, counts, all_stages=width == 1440 and theme == 'light')
+                    if route in ('en/discovery/index.html','ru/discovery/index.html'):
+                        check_workflow_stage_links(page, base + route, counts, lang=route.split('/')[0], all_stages=width == 1440 and theme == 'light')
+                    if '/discovery/' in route:
+                        check_card_layout(page, counts)
                     if width == 1440 and theme == 'light' and '/discovery/' in route:
+                        check_domain_previews(page, base + route, counts)
                         disclosures = page.locator('.discovery-content details')
                         counts['disclosures_toggled'] += disclosures.count()
                         if disclosures.count():

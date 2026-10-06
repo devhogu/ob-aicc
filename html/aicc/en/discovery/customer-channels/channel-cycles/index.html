@@ -24,7 +24,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -298,31 +298,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Channel performance data is assembled and assessed at monthly or quarterly cycle boundaries. Continuous visibility into cross-channel cost-to-serve, SLA adherence, and digital adoption between formal reviews — enabling channel managers to act on developing trends within the period — is absent from the standard operating rhythm of most banks.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Channel cost-to-serve optimization — identifying the transaction types and customer segments for which the cost differential between channels is largest, and redesigning the routing to shift volume to lower-cost channels — requires multi-period, cross-channel analysis that is not performed within the standard review cycle. Routing optimization is a project-based exercise rather than a cycle-embedded output.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Cross-channel data assembly, performance-versus-target comparison, variance commentary production, and management pack preparation are structured, recurring tasks that follow the same framework each cycle. The variable is the current-period data; the structure and calculations repeat unchanged. These are strong candidates for automated production with channel management review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Channel performance review findings and adjustment outcomes are documented in meeting minutes but not captured in a structured performance knowledge base. The Bank cannot easily retrieve prior-period root-cause findings for a recurrent issue, or identify whether a previously successful adjustment is applicable to the current period's variance.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Channel performance data is assembled and assessed at monthly or quarterly cycle boundaries. Continuous visibility into cross-channel cost-to-serve, SLA adherence, and digital adoption between formal reviews — enabling channel managers to act on developing trends within the period — is absent from the standard operating rhythm of most banks.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Channel cost-to-serve optimization — identifying the transaction types and customer segments for which the cost differential between channels is largest, and redesigning the routing to shift volume to lower-cost channels — requires multi-period, cross-channel analysis that is not performed within the standard review cycle. Routing optimization is a project-based exercise rather than a cycle-embedded output.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Cross-channel data assembly, performance-versus-target comparison, variance commentary production, and management pack preparation are structured, recurring tasks that follow the same framework each cycle. The variable is the current-period data; the structure and calculations repeat unchanged. These are strong candidates for automated production with channel management review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Channel performance review findings and adjustment outcomes are documented in meeting minutes but not captured in a structured performance knowledge base. The Bank cannot easily retrieve prior-period root-cause findings for a recurrent issue, or identify whether a previously successful adjustment is applicable to the current period's variance.</p></article></div>
     </section>
     
 
@@ -344,7 +320,7 @@ Question or comment:
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--measure">
     <span class="flow-stages__stage-label">Measure</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -356,7 +332,7 @@ Question or comment:
     type="button"
     data-stage="compare"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--compare">
     <span class="flow-stages__stage-label">Compare</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -368,7 +344,7 @@ Question or comment:
     type="button"
     data-stage="investigate"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--investigate">
     <span class="flow-stages__stage-label">Investigate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -380,7 +356,7 @@ Question or comment:
     type="button"
     data-stage="decide"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--decide">
     <span class="flow-stages__stage-label">Decide</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -392,7 +368,7 @@ Question or comment:
     type="button"
     data-stage="adjust"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-performance-review-cycle"
-  >
+   id="stage-channel-performance-review-cycle--adjust">
     <span class="flow-stages__stage-label">Adjust</span>
     
   </button>
@@ -436,7 +412,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-performance-pack-automation" id="scenario-channel-performance-pack-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-performance-pack-automation" id="scenario-channel-performance-pack-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -509,7 +485,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-review-decision-framing" id="scenario-channel-review-decision-framing">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-review-decision-framing" id="scenario-channel-review-decision-framing" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -584,7 +560,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-variance-root-cause-synthesis" id="scenario-channel-variance-root-cause-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-variance-root-cause-synthesis" id="scenario-channel-variance-root-cause-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -657,7 +633,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-cost-routing-optimisation" id="scenario-channel-cost-routing-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-cost-routing-optimisation" id="scenario-channel-cost-routing-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -732,7 +708,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-performance-knowledge-base" id="scenario-channel-performance-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-performance-review-cycle/channel-performance-knowledge-base" id="scenario-channel-performance-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -833,31 +809,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Incident patterns — recurring technology failure modes, channels with disproportionate SLA breach frequency, time-of-day or day-of-week incident concentration — are visible only through aggregated postmortem reviews conducted periodically. A continuous incident-pattern picture, enabling the Bank to identify systemic fragility before it produces the next incident, is not embedded in the standard operations governance cycle.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Incident response protocol calibration — which severity levels require which response team activation, which regulatory notification timelines apply to which incident types, which communication templates are pre-approved — is maintained in incident response runbooks that are updated infrequently. Protocol gaps are discovered during incidents rather than in advance of them.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Customer notification drafting, regulatory notification preparation, incident timeline reconstruction, and postmortem report production are structured document production tasks with significant time pressure. Pre-drafting templates from incident metadata and generating draft postmortem narratives from incident log data are strong candidates for assistance by an AI agent.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Postmortem findings and remediation commitments are documented in individual incident reports but not aggregated into a systemic reliability knowledge base. The Bank cannot easily retrieve the prior-incident history for a specific technology component or vendor, or assess whether a current incident matches a previously seen failure pattern.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Incident patterns — recurring technology failure modes, channels with disproportionate SLA breach frequency, time-of-day or day-of-week incident concentration — are visible only through aggregated postmortem reviews conducted periodically. A continuous incident-pattern picture, enabling the Bank to identify systemic fragility before it produces the next incident, is not embedded in the standard operations governance cycle.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Incident response protocol calibration — which severity levels require which response team activation, which regulatory notification timelines apply to which incident types, which communication templates are pre-approved — is maintained in incident response runbooks that are updated infrequently. Protocol gaps are discovered during incidents rather than in advance of them.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Customer notification drafting, regulatory notification preparation, incident timeline reconstruction, and postmortem report production are structured document production tasks with significant time pressure. Pre-drafting templates from incident metadata and generating draft postmortem narratives from incident log data are strong candidates for assistance by an AI agent.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Postmortem findings and remediation commitments are documented in individual incident reports but not aggregated into a systemic reliability knowledge base. The Bank cannot easily retrieve the prior-incident history for a specific technology component or vendor, or assess whether a current incident matches a previously seen failure pattern.</p></article></div>
     </section>
     
 
@@ -879,7 +831,7 @@ Question or comment:
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--detect">
     <span class="flow-stages__stage-label">Detect</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -891,7 +843,7 @@ Question or comment:
     type="button"
     data-stage="triage"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--triage">
     <span class="flow-stages__stage-label">Triage</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -903,7 +855,7 @@ Question or comment:
     type="button"
     data-stage="resolve"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--resolve">
     <span class="flow-stages__stage-label">Resolve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -915,7 +867,7 @@ Question or comment:
     type="button"
     data-stage="communicate"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--communicate">
     <span class="flow-stages__stage-label">Communicate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -927,7 +879,7 @@ Question or comment:
     type="button"
     data-stage="postmortem"
     data-flow-id="urn:financial-services:flow:customer-channels/service-level-incident-cycle"
-  >
+   id="stage-service-level-incident-cycle--postmortem">
     <span class="flow-stages__stage-label">Postmortem</span>
     
   </button>
@@ -971,7 +923,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-communication-drafting" id="scenario-incident-communication-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-communication-drafting" id="scenario-incident-communication-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1046,7 +998,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-postmortem-report-generation" id="scenario-incident-postmortem-report-generation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-postmortem-report-generation" id="scenario-incident-postmortem-report-generation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1121,7 +1073,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-pattern-systemic-analysis" id="scenario-incident-pattern-systemic-analysis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-pattern-systemic-analysis" id="scenario-incident-pattern-systemic-analysis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -1196,7 +1148,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-protocol-calibration" id="scenario-incident-protocol-calibration">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/service-level-incident-cycle/incident-protocol-calibration" id="scenario-incident-protocol-calibration" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1319,31 +1271,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Channel mix economics — the current cost-to-serve distribution across channels, and the incremental economics of shifting a unit of volume between channels — are calculated periodically for planning purposes rather than maintained as a continuously current management metric. Channel mix decisions between planning cycles are made without a current efficiency picture.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">The scenario space for channel mix optimization is constrained by modeling capacity. The Bank explores a narrow range of mix scenarios before each steering decision; alternative mix configurations with materially different economics are not assessed because each scenario variant requires manual model reconstruction. The efficiency frontier of the channel mix is rarely fully explored.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Channel demand forecast production, economics scenario modeling for a defined set of mix variables, and channel rebalancing plan documentation are structured, repeating analytical tasks. AI-assisted scenario generation and plan documentation would compress the steering cycle's analytical window and expand the decision-relevant scenario space.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Channel mix steering decisions and their subsequent execution outcomes — which initiatives achieved the planned volume shift, which failed, and what the actual economics impact was — are not captured in a structured retrospective that feeds into the following cycle's forecasting assumptions. The Bank's channel-mix institutional memory is thin.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Channel mix economics — the current cost-to-serve distribution across channels, and the incremental economics of shifting a unit of volume between channels — are calculated periodically for planning purposes rather than maintained as a continuously current management metric. Channel mix decisions between planning cycles are made without a current efficiency picture.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>The scenario space for channel mix optimization is constrained by modeling capacity. The Bank explores a narrow range of mix scenarios before each steering decision; alternative mix configurations with materially different economics are not assessed because each scenario variant requires manual model reconstruction. The efficiency frontier of the channel mix is rarely fully explored.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Channel demand forecast production, economics scenario modeling for a defined set of mix variables, and channel rebalancing plan documentation are structured, repeating analytical tasks. AI-assisted scenario generation and plan documentation would compress the steering cycle's analytical window and expand the decision-relevant scenario space.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Channel mix steering decisions and their subsequent execution outcomes — which initiatives achieved the planned volume shift, which failed, and what the actual economics impact was — are not captured in a structured retrospective that feeds into the following cycle's forecasting assumptions. The Bank's channel-mix institutional memory is thin.</p></article></div>
     </section>
     
 
@@ -1365,7 +1293,7 @@ Question or comment:
     type="button"
     data-stage="forecast"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--forecast">
     <span class="flow-stages__stage-label">Forecast</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1377,7 +1305,7 @@ Question or comment:
     type="button"
     data-stage="compare"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--compare">
     <span class="flow-stages__stage-label">Compare</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1389,7 +1317,7 @@ Question or comment:
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--plan">
     <span class="flow-stages__stage-label">Plan</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1401,7 +1329,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1413,7 +1341,7 @@ Question or comment:
     type="button"
     data-stage="execute"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-mix-steering-cycle"
-  >
+   id="stage-channel-mix-steering-cycle--execute">
     <span class="flow-stages__stage-label">Execute</span>
     
   </button>
@@ -1457,7 +1385,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-demand-forecast-automation" id="scenario-channel-demand-forecast-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-demand-forecast-automation" id="scenario-channel-demand-forecast-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1530,7 +1458,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-rebalancing-plan-documentation" id="scenario-channel-rebalancing-plan-documentation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-rebalancing-plan-documentation" id="scenario-channel-rebalancing-plan-documentation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
     <div class="scenario-card__title-col">
@@ -1605,7 +1533,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-mix-scenario-expansion" id="scenario-channel-mix-scenario-expansion">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-mix-scenario-expansion" id="scenario-channel-mix-scenario-expansion" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -1678,7 +1606,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-mix-execution-retrospective" id="scenario-channel-mix-execution-retrospective">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-mix-steering-cycle/channel-mix-execution-retrospective" id="scenario-channel-mix-execution-retrospective" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">
@@ -1779,31 +1707,7 @@ Question or comment:
 
     
     <section class="flow-detail__problems" aria-label="Flow lens problems">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Channel evolution pilot results and rollout performance are assessed at discrete evaluation points — pilot review, post-rollout assessment. Continuous tracking of the adoption trajectory against the deployment plan, and early identification of rollout locations where adoption is lagging, is not embedded in the standard governance cycle.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Rollout sequencing — prioritizing deployment to the highest-adoption-potential locations first — is decided by the channel evolution team with limited analytical support. A structured view of which customer demographics, transaction behaviors, and geographic characteristics predict adoption success in the pilot data would improve rollout sequencing but is not routinely produced.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Pilot performance analysis documentation, deployment approval pack preparation, rollout communication content (staff briefings, customer notifications), and sunset migration tracking reports are structured document production tasks. Each follows a consistent structure and is amenable to AI-assisted drafting with channel strategy and communications review.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Pilot and rollout outcomes — adoption rate versus forecast, cost-to-serve impact versus business case, compliance issues encountered — are documented in individual project files but are not aggregated into an institutional channel evolution knowledge base. The Bank repeats the same pilot design oversights and rollout sequencing errors across successive channel evolution initiatives.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Channel evolution pilot results and rollout performance are assessed at discrete evaluation points — pilot review, post-rollout assessment. Continuous tracking of the adoption trajectory against the deployment plan, and early identification of rollout locations where adoption is lagging, is not embedded in the standard governance cycle.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Rollout sequencing — prioritizing deployment to the highest-adoption-potential locations first — is decided by the channel evolution team with limited analytical support. A structured view of which customer demographics, transaction behaviors, and geographic characteristics predict adoption success in the pilot data would improve rollout sequencing but is not routinely produced.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Pilot performance analysis documentation, deployment approval pack preparation, rollout communication content (staff briefings, customer notifications), and sunset migration tracking reports are structured document production tasks. Each follows a consistent structure and is amenable to AI-assisted drafting with channel strategy and communications review.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Pilot and rollout outcomes — adoption rate versus forecast, cost-to-serve impact versus business case, compliance issues encountered — are documented in individual project files but are not aggregated into an institutional channel evolution knowledge base. The Bank repeats the same pilot design oversights and rollout sequencing errors across successive channel evolution initiatives.</p></article></div>
     </section>
     
 
@@ -1825,7 +1729,7 @@ Question or comment:
     type="button"
     data-stage="pilot"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--pilot">
     <span class="flow-stages__stage-label">Pilot</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1837,7 +1741,7 @@ Question or comment:
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--validate">
     <span class="flow-stages__stage-label">Validate</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1849,7 +1753,7 @@ Question or comment:
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--approve">
     <span class="flow-stages__stage-label">Approve</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1861,7 +1765,7 @@ Question or comment:
     type="button"
     data-stage="rollout"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--rollout">
     <span class="flow-stages__stage-label">Rollout</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1873,7 +1777,7 @@ Question or comment:
     type="button"
     data-stage="sunset"
     data-flow-id="urn:financial-services:flow:customer-channels/channel-evolution-cycle"
-  >
+   id="stage-channel-evolution-cycle--sunset">
     <span class="flow-stages__stage-label">Sunset</span>
     
   </button>
@@ -1917,7 +1821,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/channel-evolution-approval-pack" id="scenario-channel-evolution-approval-pack">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/channel-evolution-approval-pack" id="scenario-channel-evolution-approval-pack" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
@@ -1992,7 +1896,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/rollout-adoption-trajectory-monitoring" id="scenario-rollout-adoption-trajectory-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/rollout-adoption-trajectory-monitoring" id="scenario-rollout-adoption-trajectory-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
@@ -2065,7 +1969,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/rollout-sequencing-optimisation" id="scenario-rollout-sequencing-optimisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/rollout-sequencing-optimisation" id="scenario-rollout-sequencing-optimisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
     <div class="scenario-card__title-col">
@@ -2140,7 +2044,7 @@ Question or comment:
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/channel-evolution-institutional-memory" id="scenario-channel-evolution-institutional-memory">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/customer-channels/channel-evolution-cycle/channel-evolution-institutional-memory" id="scenario-channel-evolution-institutional-memory" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
     <div class="scenario-card__title-col">

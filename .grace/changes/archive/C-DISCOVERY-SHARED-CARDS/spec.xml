@@ -1,0 +1,17 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-DISCOVERY-SHARED-CARDS>
+    <Summary>Roll out the approved Discovery overview and Strategic Banking Portfolio presentation across both Discovery editions.</Summary>
+    <Goals><Goal>Readers encounter the same compact grouped cards, context cards, tab underlines, expandable scenario cards and restrained workflow presentation throughout Discovery.</Goal></Goals>
+    <Constraints><Constraint>Preserve authored content, scenario URNs, page routes, section boundaries, search destinations and stage content. Keep the concurrent wording work untouched. Reuse the existing O!Bank tokens and shell in both themes; localize interface labels.</Constraint></Constraints>
+    <NonGoals><NonGoal>No banking-content rewrite, charter change, new section or automatic portable-package refresh.</NonGoal></NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>All 76 pages per language adopt the applicable approved constructs, including overview, domain, sub-concern and workflow pages.</Criterion>
+      <Criterion>All 1,101 scenarios per language retain their source content and identity; disclosures, tabs, stage dialogs and fragment navigation continue to work.</Criterion>
+      <Criterion>Desktop and mobile layouts have no clipped content or horizontal page overflow in either theme. Non-Discovery sections retain their framework.</Criterion>
+      <Criterion>The verified generated package is committed, pushed and published through the existing deployment tool.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-NEIGHBOURS /><M-PORTAL-PROJECTION /></AffectedAreas>
+    <VerificationIntent><ExpectedCommand>python3 portal/tools/check_neighbours.py</ExpectedCommand><ExpectedCommand>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py</ExpectedCommand><ExpectedEvidence>Full Discovery route sweep, source-preservation checks, responsive screenshots and served manifest verification.</ExpectedEvidence></VerificationIntent>
+    <Assumptions><Assumption>User approval: “looks good.lets adopt our style of cards and these constructs on this page to the rest of discovery pages at scale.” The approved reference is source commit 47cca18f. The standing instruction authorizes publication after each substantial change; existing closure and commit authority is reused.</Assumption></Assumptions>
+  </C-DISCOVERY-SHARED-CARDS>
+</GraceChangeSpec>

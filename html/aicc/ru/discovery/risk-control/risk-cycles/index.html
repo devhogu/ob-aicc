@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -301,31 +301,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Реестр рисков RCSA и журнал проблем являются документами на конкретный момент времени, обновляемыми на границах цикла. У CRO отсутствует непрерывное представление о тенденциях остаточного риска — какие риски движутся вверх между формальными циклами обновления, по каким планам действий наблюдается просрочка, — без ручной выгрузки из GRC-системы.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Калибровка рейтингов RCSA по бизнес-линиям и процесс проверки второй линией защиты ограничены временем, доступным для ручной проверки. Риски с остаточными рейтингами выше допустимого и просроченными планами действий получают меньше времени на проверку, чем этого требует их существенность, когда нагрузка на проверку всего реестра высока.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка описаний рисков RCSA, нарративов об эффективности контролей, резюме по проблемам и комментариев к квартальному обновлению — структурированные нарративные задачи, выполняемые по единому фреймворку для каждого риска в каждом цикле. ИИ может формировать черновики на основе структурированных входных данных — тип риска, история убыточных событий, детали дизайна контроля — с последующей проверкой риск-офицером.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Рейтинги RCSA по бизнес-линиям и база данных инцидентных событий накапливаются по ежегодным циклам, однако редко используются для выявления паттернов, способных улучшить этап идентификации рисков в следующем цикле. Повторяющиеся темы — один и тот же тип операционного риска в трёх бизнес-линиях или контроль, регулярно дающий сбой одним и тем же способом, — выявляются неформально, а не через систематический межцикловый анализ.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Реестр рисков RCSA и журнал проблем являются документами на конкретный момент времени, обновляемыми на границах цикла. У CRO отсутствует непрерывное представление о тенденциях остаточного риска — какие риски движутся вверх между формальными циклами обновления, по каким планам действий наблюдается просрочка, — без ручной выгрузки из GRC-системы.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Калибровка рейтингов RCSA по бизнес-линиям и процесс проверки второй линией защиты ограничены временем, доступным для ручной проверки. Риски с остаточными рейтингами выше допустимого и просроченными планами действий получают меньше времени на проверку, чем этого требует их существенность, когда нагрузка на проверку всего реестра высока.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка описаний рисков RCSA, нарративов об эффективности контролей, резюме по проблемам и комментариев к квартальному обновлению — структурированные нарративные задачи, выполняемые по единому фреймворку для каждого риска в каждом цикле. ИИ может формировать черновики на основе структурированных входных данных — тип риска, история убыточных событий, детали дизайна контроля — с последующей проверкой риск-офицером.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Рейтинги RCSA по бизнес-линиям и база данных инцидентных событий накапливаются по ежегодным циклам, однако редко используются для выявления паттернов, способных улучшить этап идентификации рисков в следующем цикле. Повторяющиеся темы — один и тот же тип операционного риска в трёх бизнес-линиях или контроль, регулярно дающий сбой одним и тем же способом, — выявляются неформально, а не через систематический межцикловый анализ.</p></article></div>
     </section>
     
 
@@ -347,7 +323,7 @@
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--identify">
     <span class="flow-stages__stage-label">Идентификация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -359,7 +335,7 @@
     type="button"
     data-stage="assess"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--assess">
     <span class="flow-stages__stage-label">Оценка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -371,7 +347,7 @@
     type="button"
     data-stage="score"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--score">
     <span class="flow-stages__stage-label">Рейтингование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -383,7 +359,7 @@
     type="button"
     data-stage="document"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--document">
     <span class="flow-stages__stage-label">Документирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -395,7 +371,7 @@
     type="button"
     data-stage="refresh"
     data-flow-id="urn:financial-services:flow:risk-control/rcsa-cycle"
-  >
+   id="stage-rcsa-cycle--refresh">
     <span class="flow-stages__stage-label">Актуализация</span>
     
   </button>
@@ -439,7 +415,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-risk-identification-facilitation" id="scenario-rcsa-risk-identification-facilitation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-risk-identification-facilitation" id="scenario-rcsa-risk-identification-facilitation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -514,7 +490,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-narrative-drafting" id="scenario-rcsa-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-narrative-drafting" id="scenario-rcsa-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -589,7 +565,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-cross-cycle-risk-trend-signal" id="scenario-rcsa-cross-cycle-risk-trend-signal">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-cross-cycle-risk-trend-signal" id="scenario-rcsa-cross-cycle-risk-trend-signal" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -664,7 +640,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-rating-calibration-challenge-assist" id="scenario-rcsa-rating-calibration-challenge-assist">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-rating-calibration-challenge-assist" id="scenario-rcsa-rating-calibration-challenge-assist" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -739,7 +715,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-pattern-mining-next-cycle-brief" id="scenario-rcsa-pattern-mining-next-cycle-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/rcsa-cycle/rcsa-pattern-mining-next-cycle-brief" id="scenario-rcsa-pattern-mining-next-cycle-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -843,31 +819,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Результаты стресс-тестирования формируются и рассматриваются в рамках годового цикла подачи. Непрерывный мониторинг позиции устойчивости банка — динамика минимального уровня CET1 по ВПОДК или горизонта выживаемости по ВПОДЛ между ежегодными подачами с учётом изменений баланса — отсутствует в стандартном наборе управленческой информации.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Разработка стресс-сценариев и проверка междоменной согласованности ограничены последовательным производственным процессом. Расширение набора сценариев — дополнительные макроэкономические траектории, идиосинкратические банковские сценарии, климатические варианты TCFD — требует пропорционально бо́льших усилий, которые текущий цикловый календарь не вмещает.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Нарративные разделы ВПОДК/ВПОДЛ — описания стресс-сценариев, нарративы о достаточности по видам риска, документирование планов управленческих действий, пакеты ответов на регуляторные запросы — представляют собой структурированные нарративные задачи со значительным повторным использованием контента между циклами. Описание климатических сценариев в соответствии с методологией путей NGFS следует воспроизводимой структуре, позволяющей применять агент-ассистированную подготовку черновиков.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Предшествующий диалог с надзорными органами — вопросы НБКР/НБК/ЦБ РФ по предыдущим циклам SREP, замечания по методологии, обоснованность планов управленческих действий — формирует институциональную базу знаний, которая редко систематически используется при разработке сценариев или нарративном фреймировании следующего цикла. Каждый цикл подачи заново осваивает те же регуляторные предпочтения в ходе нового диалога.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Результаты стресс-тестирования формируются и рассматриваются в рамках годового цикла подачи. Непрерывный мониторинг позиции устойчивости банка — динамика минимального уровня CET1 по ВПОДК или горизонта выживаемости по ВПОДЛ между ежегодными подачами с учётом изменений баланса — отсутствует в стандартном наборе управленческой информации.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Разработка стресс-сценариев и проверка междоменной согласованности ограничены последовательным производственным процессом. Расширение набора сценариев — дополнительные макроэкономические траектории, идиосинкратические банковские сценарии, климатические варианты TCFD — требует пропорционально бо́льших усилий, которые текущий цикловый календарь не вмещает.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Нарративные разделы ВПОДК/ВПОДЛ — описания стресс-сценариев, нарративы о достаточности по видам риска, документирование планов управленческих действий, пакеты ответов на регуляторные запросы — представляют собой структурированные нарративные задачи со значительным повторным использованием контента между циклами. Описание климатических сценариев в соответствии с методологией путей NGFS следует воспроизводимой структуре, позволяющей применять агент-ассистированную подготовку черновиков.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Предшествующий диалог с надзорными органами — вопросы НБКР/НБК/ЦБ РФ по предыдущим циклам SREP, замечания по методологии, обоснованность планов управленческих действий — формирует институциональную базу знаний, которая редко систематически используется при разработке сценариев или нарративном фреймировании следующего цикла. Каждый цикл подачи заново осваивает те же регуляторные предпочтения в ходе нового диалога.</p></article></div>
     </section>
     
 
@@ -889,7 +841,7 @@
     type="button"
     data-stage="define"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--define">
     <span class="flow-stages__stage-label">Определение сценариев</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -901,7 +853,7 @@
     type="button"
     data-stage="run"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--run">
     <span class="flow-stages__stage-label">Запуск моделей</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -913,7 +865,7 @@
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--aggregate">
     <span class="flow-stages__stage-label">Агрегирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -925,7 +877,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--approve">
     <span class="flow-stages__stage-label">Утверждение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -937,7 +889,7 @@
     type="button"
     data-stage="submit"
     data-flow-id="urn:financial-services:flow:risk-control/stress-testing-cycle"
-  >
+   id="stage-stress-testing-cycle--submit">
     <span class="flow-stages__stage-label">Представление</span>
     
   </button>
@@ -981,7 +933,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/stress-scenario-design-documentation-support" id="scenario-stress-scenario-design-documentation-support">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/stress-scenario-design-documentation-support" id="scenario-stress-scenario-design-documentation-support" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1056,7 +1008,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/icaap-ilaap-narrative-section-drafting" id="scenario-icaap-ilaap-narrative-section-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/icaap-ilaap-narrative-section-drafting" id="scenario-icaap-ilaap-narrative-section-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1131,7 +1083,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/continuous-capital-resilience-monitoring" id="scenario-continuous-capital-resilience-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/continuous-capital-resilience-monitoring" id="scenario-continuous-capital-resilience-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1206,7 +1158,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/parallel-scenario-set-expansion" id="scenario-parallel-scenario-set-expansion">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/parallel-scenario-set-expansion" id="scenario-parallel-scenario-set-expansion" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1281,7 +1233,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/supervisory-dialogue-knowledge-base" id="scenario-supervisory-dialogue-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/stress-testing-cycle/supervisory-dialogue-knowledge-base" id="scenario-supervisory-dialogue-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1407,31 +1359,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Использование лимитов по типам рисков мониторируется в рамках каждого домена, но не в консолидированном кросс-доменном представлении. CRO не может видеть полную картину использования лимитов — какие типы рисков находятся на высоком уровне использования одновременно, где концентрация позиций вблизи лимитов создаёт системный риск — без ручной сборки данных из нескольких систем риск-отчётности.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Калибровка мягких пороговых значений нарушения и момент эскалации относительно событий жёсткого нарушения задаются статическими правилами, а не динамическим анализом траектории позиции. Дизайн эскалации не разграничивает медленное дрейфование к лимиту и быстрые направленные движения, которые требуют различных механизмов вмешательства.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка нарратива расследования нарушения, комментариев к отчёту об использовании лимитов и документации по урегулированию нарушения — структурированные задачи технического письма, повторяющиеся для каждого нарушения по единой методологической рамке. Фактическое содержание — история позиции, атрибуция факторов, цепочка согласования — извлекается из систем риск-отчётности и записей об утверждениях, которые агент может систематически обходить.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Истории нарушений по типам рисков — коренные причины, итоги урегулирования, время до урегулирования — хранятся в отдельных файлах нарушений, а не в структурированном репозитории. Паттерный анализ истории нарушений, который мог бы улучшить калибровку лимитов и дизайн системы раннего предупреждения, планомерно не применяется в промежутках между формальными циклами пересмотра лимитов.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Использование лимитов по типам рисков мониторируется в рамках каждого домена, но не в консолидированном кросс-доменном представлении. CRO не может видеть полную картину использования лимитов — какие типы рисков находятся на высоком уровне использования одновременно, где концентрация позиций вблизи лимитов создаёт системный риск — без ручной сборки данных из нескольких систем риск-отчётности.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Калибровка мягких пороговых значений нарушения и момент эскалации относительно событий жёсткого нарушения задаются статическими правилами, а не динамическим анализом траектории позиции. Дизайн эскалации не разграничивает медленное дрейфование к лимиту и быстрые направленные движения, которые требуют различных механизмов вмешательства.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка нарратива расследования нарушения, комментариев к отчёту об использовании лимитов и документации по урегулированию нарушения — структурированные задачи технического письма, повторяющиеся для каждого нарушения по единой методологической рамке. Фактическое содержание — история позиции, атрибуция факторов, цепочка согласования — извлекается из систем риск-отчётности и записей об утверждениях, которые агент может систематически обходить.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Истории нарушений по типам рисков — коренные причины, итоги урегулирования, время до урегулирования — хранятся в отдельных файлах нарушений, а не в структурированном репозитории. Паттерный анализ истории нарушений, который мог бы улучшить калибровку лимитов и дизайн системы раннего предупреждения, планомерно не применяется в промежутках между формальными циклами пересмотра лимитов.</p></article></div>
     </section>
     
 
@@ -1453,7 +1381,7 @@
     type="button"
     data-stage="set"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--set">
     <span class="flow-stages__stage-label">Установка лимитов</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1465,7 +1393,7 @@
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--monitor">
     <span class="flow-stages__stage-label">Мониторинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1477,7 +1405,7 @@
     type="button"
     data-stage="detect"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--detect">
     <span class="flow-stages__stage-label">Выявление нарушений</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1489,7 +1417,7 @@
     type="button"
     data-stage="investigate"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--investigate">
     <span class="flow-stages__stage-label">Расследование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1501,7 +1429,7 @@
     type="button"
     data-stage="resolve"
     data-flow-id="urn:financial-services:flow:risk-control/limits-breach-governance-cycle"
-  >
+   id="stage-limits-breach-governance-cycle--resolve">
     <span class="flow-stages__stage-label">Урегулирование</span>
     
   </button>
@@ -1545,7 +1473,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/limit-governance-framework-calibration-support" id="scenario-limit-governance-framework-calibration-support">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/limit-governance-framework-calibration-support" id="scenario-limit-governance-framework-calibration-support" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1620,7 +1548,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-investigation-narrative-drafting" id="scenario-breach-investigation-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-investigation-narrative-drafting" id="scenario-breach-investigation-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1695,7 +1623,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/cross-domain-limit-utilisation-dashboard" id="scenario-cross-domain-limit-utilisation-dashboard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/cross-domain-limit-utilisation-dashboard" id="scenario-cross-domain-limit-utilisation-dashboard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1770,7 +1698,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/dynamic-soft-breach-threshold-calibration" id="scenario-dynamic-soft-breach-threshold-calibration">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/dynamic-soft-breach-threshold-calibration" id="scenario-dynamic-soft-breach-threshold-calibration" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1845,7 +1773,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-pattern-limit-recalibration-brief" id="scenario-breach-pattern-limit-recalibration-brief">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/limits-breach-governance-cycle/breach-pattern-limit-recalibration-brief" id="scenario-breach-pattern-limit-recalibration-brief" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1949,31 +1877,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Риск-пакет для комитета формируется ежемесячно и ежеквартально. У CRO отсутствует непрерывное представление об агрегированной риск-позиции организации между формальными отчётными циклами — какие домены находятся в движении, какие стабильны, — без инициирования внеплановой сборки отчёта.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Проверка междоменной согласованности риска и калибровка исполнительного резюме пакета в соответствии с аналитическими приоритетами членов комитета выполняются командой риск-отчётности вручную в каждом цикле без системного фреймворка для распределения редакционного внимания на наиболее существенные и требующие действий риск-события.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка нарратива риск-пакета — исполнительное резюме, доменные комментарии, разделы о возникающих рисках, сводка регуляторных изменений — следует согласованной структуре в каждом цикле, варьируясь лишь по содержанию текущего периода. ИИ может готовить черновики на основе структурированных данных о рисках с последующей редакционной проверкой CRO, сжимая окно производства с дней до часов.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Обсуждения на заседаниях риск-комитета и принятые руководством обязательства накапливаются в протоколах, однако систематически не структурируются для формирования повестки следующего цикла или годового пересмотра риск-аппетита. Долгосрочный архив риск-governance-комитета — что обсуждалось, какие меры принимались, насколько эффективными были ответные действия руководства — скуден и труднодоступен.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Риск-пакет для комитета формируется ежемесячно и ежеквартально. У CRO отсутствует непрерывное представление об агрегированной риск-позиции организации между формальными отчётными циклами — какие домены находятся в движении, какие стабильны, — без инициирования внеплановой сборки отчёта.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Проверка междоменной согласованности риска и калибровка исполнительного резюме пакета в соответствии с аналитическими приоритетами членов комитета выполняются командой риск-отчётности вручную в каждом цикле без системного фреймворка для распределения редакционного внимания на наиболее существенные и требующие действий риск-события.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка нарратива риск-пакета — исполнительное резюме, доменные комментарии, разделы о возникающих рисках, сводка регуляторных изменений — следует согласованной структуре в каждом цикле, варьируясь лишь по содержанию текущего периода. ИИ может готовить черновики на основе структурированных данных о рисках с последующей редакционной проверкой CRO, сжимая окно производства с дней до часов.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Обсуждения на заседаниях риск-комитета и принятые руководством обязательства накапливаются в протоколах, однако систематически не структурируются для формирования повестки следующего цикла или годового пересмотра риск-аппетита. Долгосрочный архив риск-governance-комитета — что обсуждалось, какие меры принимались, насколько эффективными были ответные действия руководства — скуден и труднодоступен.</p></article></div>
     </section>
     
 
@@ -1995,7 +1899,7 @@
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--aggregate">
     <span class="flow-stages__stage-label">Агрегирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2007,7 +1911,7 @@
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--validate">
     <span class="flow-stages__stage-label">Верификация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2019,7 +1923,7 @@
     type="button"
     data-stage="brief"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--brief">
     <span class="flow-stages__stage-label">Подготовка материалов</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2031,7 +1935,7 @@
     type="button"
     data-stage="discuss"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--discuss">
     <span class="flow-stages__stage-label">Обсуждение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2043,7 +1947,7 @@
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:risk-control/risk-reporting-cycle"
-  >
+   id="stage-risk-reporting-cycle--track">
     <span class="flow-stages__stage-label">Отслеживание поручений</span>
     
   </button>
@@ -2087,7 +1991,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-pre-read-structuring" id="scenario-risk-committee-pre-read-structuring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-pre-read-structuring" id="scenario-risk-committee-pre-read-structuring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -2162,7 +2066,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-pack-narrative-drafting" id="scenario-risk-pack-narrative-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-pack-narrative-drafting" id="scenario-risk-pack-narrative-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2237,7 +2141,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/continuous-risk-posture-view" id="scenario-continuous-risk-posture-view">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/continuous-risk-posture-view" id="scenario-continuous-risk-posture-view" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2312,7 +2216,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/cross-domain-risk-coherence-check" id="scenario-cross-domain-risk-coherence-check">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/cross-domain-risk-coherence-check" id="scenario-cross-domain-risk-coherence-check" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2387,7 +2291,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-governance-longitudinal-record" id="scenario-risk-committee-governance-longitudinal-record">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/risk-reporting-cycle/risk-committee-governance-longitudinal-record" id="scenario-risk-committee-governance-longitudinal-record" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -2491,31 +2395,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Мониторинг работоспособности моделей в составе производственного инвентаря осуществляется профильными командами по отдельным расписаниям и отражается в разрозненных каналах отчётности. У CRO и Комитета по модельному риску отсутствует консолидированное представление о состоянии портфеля моделей — какие модели приближаются к пороговым значениям, по каким остаются неурегулированные замечания по итогам валидации, — без ручной сборки данных из множества систем мониторинга.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Распределение ресурсов валидации по приоритетному расписанию моделей выполняется как ручное плановое упражнение. Когда неожиданные замечания по высокоприоритетной модели поглощают больше валидационных мощностей, чем предусмотрено планом, расписание по менее приоритетным моделям сдвигается без структурированного пересмотра приоритетов с учётом относительного риска задержки каждой ожидающей валидации.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка отчёта о валидации — резюме концептуальной обоснованности, результаты проверки целостности данных, бэктестинг и документирование замечаний — следует структуре валидационного фреймворка SR 11-7 для каждого типа моделей. Комментарии к мониторингу работоспособности моделей и пакет материалов для Комитета по модельному риску представляют собой структурированные, регулярно повторяющиеся задачи, выполняемые для каждой модели в каждом цикле.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Замечания по валидации по всему инвентарю моделей — повторяющиеся типы замечаний, типичные ограничения моделей по доменам, паттерны ухудшения показателей — накапливаются в отдельных валидационных отчётах, а не в единой базе данных замечаний. Комитет по модельному риску не имеет доступа к тематическому синтезу валидационных замечаний, который позволил бы поставить системные проблемы модельного риска выше управления рисками на уровне отдельных моделей.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Мониторинг работоспособности моделей в составе производственного инвентаря осуществляется профильными командами по отдельным расписаниям и отражается в разрозненных каналах отчётности. У CRO и Комитета по модельному риску отсутствует консолидированное представление о состоянии портфеля моделей — какие модели приближаются к пороговым значениям, по каким остаются неурегулированные замечания по итогам валидации, — без ручной сборки данных из множества систем мониторинга.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Распределение ресурсов валидации по приоритетному расписанию моделей выполняется как ручное плановое упражнение. Когда неожиданные замечания по высокоприоритетной модели поглощают больше валидационных мощностей, чем предусмотрено планом, расписание по менее приоритетным моделям сдвигается без структурированного пересмотра приоритетов с учётом относительного риска задержки каждой ожидающей валидации.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка отчёта о валидации — резюме концептуальной обоснованности, результаты проверки целостности данных, бэктестинг и документирование замечаний — следует структуре валидационного фреймворка SR 11-7 для каждого типа моделей. Комментарии к мониторингу работоспособности моделей и пакет материалов для Комитета по модельному риску представляют собой структурированные, регулярно повторяющиеся задачи, выполняемые для каждой модели в каждом цикле.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Замечания по валидации по всему инвентарю моделей — повторяющиеся типы замечаний, типичные ограничения моделей по доменам, паттерны ухудшения показателей — накапливаются в отдельных валидационных отчётах, а не в единой базе данных замечаний. Комитет по модельному риску не имеет доступа к тематическому синтезу валидационных замечаний, который позволил бы поставить системные проблемы модельного риска выше управления рисками на уровне отдельных моделей.</p></article></div>
     </section>
     
 
@@ -2537,7 +2417,7 @@
     type="button"
     data-stage="inventory"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--inventory">
     <span class="flow-stages__stage-label">Реестр</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2549,7 +2429,7 @@
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--validate">
     <span class="flow-stages__stage-label">Валидация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2561,7 +2441,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--approve">
     <span class="flow-stages__stage-label">Утверждение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2573,7 +2453,7 @@
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--monitor">
     <span class="flow-stages__stage-label">Мониторинг производительности</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2585,7 +2465,7 @@
     type="button"
     data-stage="retire"
     data-flow-id="urn:financial-services:flow:risk-control/model-validation-cycle"
-  >
+   id="stage-model-validation-cycle--retire">
     <span class="flow-stages__stage-label">Вывод из эксплуатации</span>
     
   </button>
@@ -2629,7 +2509,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-inventory-completeness-support" id="scenario-model-inventory-completeness-support">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-inventory-completeness-support" id="scenario-model-inventory-completeness-support" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -2704,7 +2584,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-report-drafting" id="scenario-validation-report-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-report-drafting" id="scenario-validation-report-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2779,7 +2659,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-portfolio-performance-health-dashboard" id="scenario-model-portfolio-performance-health-dashboard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/model-portfolio-performance-health-dashboard" id="scenario-model-portfolio-performance-health-dashboard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2854,7 +2734,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-schedule-dynamic-reprioritisation" id="scenario-validation-schedule-dynamic-reprioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-schedule-dynamic-reprioritisation" id="scenario-validation-schedule-dynamic-reprioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2929,7 +2809,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-findings-thematic-synthesis" id="scenario-validation-findings-thematic-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/risk-control/model-validation-cycle/validation-findings-thematic-synthesis" id="scenario-validation-findings-thematic-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">

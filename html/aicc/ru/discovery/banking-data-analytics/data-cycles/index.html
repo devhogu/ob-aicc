@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -301,31 +301,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Оценки качества по измерениям CDE проводятся ежемесячно, но отслеживаются неформально между циклами. Директору по данным недоступно непрерывное представление о динамике качества данных — какие CDE улучшаются, какие стабильны, какие деградируют — и связь между трендами качества и влиянием на нижестоящую риск-отчётность не отображается регулярно.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Распределение ресурсов по устранению в рамках очереди проблем не оптимизируется системно с учётом влияния на нижестоящую регуляторную отчётность. Проблемы в менее видимых доменах данных, влияющие на агрегирование рисков по BCBS 239, могут деприворитизироваться относительно проблем в высокопрофильных бизнес-системах отчётности, создавая комплаенс-риск, который стандартный процесс приоритизации не обнаруживает.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Выполнение профилирования данных, расчёт оценок качества, классификация проблем из выходных данных профилирования и формирование планов устранения из структурированных записей о проблемах — структурированные, основанные на правилах задачи, применяемые к большим объёмам данных в каждом цикле. Проверки измерений качества BCBS 239 следуют предписанным определениям, поддающимся оценке с участием агента и проверкой стюарда.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Истории проблем качества данных — первопричины, действия по устранению и время до разрешения — хранятся в отдельных записях о проблемах, а не в структурированной базе знаний. Системные паттерны сбоев качества — одно и то же ETL-преобразование, стабильно производящее нулевые значения для категории CDE, — не обнаруживаются по истории проблем, что препятствует приоритизации проактивных инженерных исправлений.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Оценки качества по измерениям CDE проводятся ежемесячно, но отслеживаются неформально между циклами. Директору по данным недоступно непрерывное представление о динамике качества данных — какие CDE улучшаются, какие стабильны, какие деградируют — и связь между трендами качества и влиянием на нижестоящую риск-отчётность не отображается регулярно.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Распределение ресурсов по устранению в рамках очереди проблем не оптимизируется системно с учётом влияния на нижестоящую регуляторную отчётность. Проблемы в менее видимых доменах данных, влияющие на агрегирование рисков по BCBS 239, могут деприворитизироваться относительно проблем в высокопрофильных бизнес-системах отчётности, создавая комплаенс-риск, который стандартный процесс приоритизации не обнаруживает.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Выполнение профилирования данных, расчёт оценок качества, классификация проблем из выходных данных профилирования и формирование планов устранения из структурированных записей о проблемах — структурированные, основанные на правилах задачи, применяемые к большим объёмам данных в каждом цикле. Проверки измерений качества BCBS 239 следуют предписанным определениям, поддающимся оценке с участием агента и проверкой стюарда.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Истории проблем качества данных — первопричины, действия по устранению и время до разрешения — хранятся в отдельных записях о проблемах, а не в структурированной базе знаний. Системные паттерны сбоев качества — одно и то же ETL-преобразование, стабильно производящее нулевые значения для категории CDE, — не обнаруживаются по истории проблем, что препятствует приоритизации проактивных инженерных исправлений.</p></article></div>
     </section>
     
 
@@ -347,7 +323,7 @@
     type="button"
     data-stage="profile"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--profile">
     <span class="flow-stages__stage-label">Профиль</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -359,7 +335,7 @@
     type="button"
     data-stage="score"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--score">
     <span class="flow-stages__stage-label">Оценка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -371,7 +347,7 @@
     type="button"
     data-stage="issue"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--issue">
     <span class="flow-stages__stage-label">Проблема</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -383,7 +359,7 @@
     type="button"
     data-stage="remediate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--remediate">
     <span class="flow-stages__stage-label">Устранение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -395,7 +371,7 @@
     type="button"
     data-stage="retest"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/data-quality-assessment-cycle"
-  >
+   id="stage-data-quality-assessment-cycle--retest">
     <span class="flow-stages__stage-label">Повторное тестирование</span>
     
   </button>
@@ -439,7 +415,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-profiling-and-scoring-automation" id="scenario-dq-profiling-and-scoring-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-profiling-and-scoring-automation" id="scenario-dq-profiling-and-scoring-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -514,7 +490,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-plan-drafting" id="scenario-dq-remediation-plan-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-plan-drafting" id="scenario-dq-remediation-plan-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -589,7 +565,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-continuous-posture-monitor" id="scenario-dq-continuous-posture-monitor">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-continuous-posture-monitor" id="scenario-dq-continuous-posture-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -664,7 +640,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-impact-prioritisation" id="scenario-dq-remediation-impact-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-remediation-impact-prioritisation" id="scenario-dq-remediation-impact-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -739,7 +715,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-failure-pattern-knowledge-base" id="scenario-dq-failure-pattern-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/data-quality-assessment-cycle/dq-failure-pattern-knowledge-base" id="scenario-dq-failure-pattern-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -843,31 +819,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Качество нормативно-справочных данных — полнота золотых записей, охват дедупликации, согласованность кросс-доменных идентификаторов — оценивается ежеквартально. Директор по данным лишён непрерывного представления о состоянии нормативного информационного хозяйства между плановыми циклами стюардства и не может оценить влияние накопившихся очередей дедупликации на точность нижестоящего агрегирования рисков.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Приоритизация проверки кандидатов на дедупликацию не выстраивается системно с учётом регуляторного и риск-влияния конкретных CDE нормативно-справочных данных. Высокообъёмные, малозначимые пары клиентских совпадений потребляют мощность проверки, которую лучше направить на CDE контрагентов и инструментов, влияющих на агрегирование рисков по BCBS 239.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Выявление кандидатов на дедупликацию с помощью статистического сопоставления, обновление справочных данных из авторитетных внешних источников, запросы для валидации кросс-доменной согласованности и документирование решений по стюардству данных — структурированные, высокообъёмные задачи, поддающиеся исполнению с участием агента при проверке стюарда.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Решения по управлению нормативно-справочными данными и их влияние на качество нижестоящих данных документируются в отдельных записях совещаний, а не в структурированной базе знаний по управлению. Повторяющиеся споры — одно и то же несоответствие кросс-доменных идентификаторов из-за того же ограничения интерфейса системы-источника — решаются с нуля каждый раз, а не через каталогизированный паттерн разрешения.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Качество нормативно-справочных данных — полнота золотых записей, охват дедупликации, согласованность кросс-доменных идентификаторов — оценивается ежеквартально. Директор по данным лишён непрерывного представления о состоянии нормативного информационного хозяйства между плановыми циклами стюардства и не может оценить влияние накопившихся очередей дедупликации на точность нижестоящего агрегирования рисков.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Приоритизация проверки кандидатов на дедупликацию не выстраивается системно с учётом регуляторного и риск-влияния конкретных CDE нормативно-справочных данных. Высокообъёмные, малозначимые пары клиентских совпадений потребляют мощность проверки, которую лучше направить на CDE контрагентов и инструментов, влияющих на агрегирование рисков по BCBS 239.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Выявление кандидатов на дедупликацию с помощью статистического сопоставления, обновление справочных данных из авторитетных внешних источников, запросы для валидации кросс-доменной согласованности и документирование решений по стюардству данных — структурированные, высокообъёмные задачи, поддающиеся исполнению с участием агента при проверке стюарда.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Решения по управлению нормативно-справочными данными и их влияние на качество нижестоящих данных документируются в отдельных записях совещаний, а не в структурированной базе знаний по управлению. Повторяющиеся споры — одно и то же несоответствие кросс-доменных идентификаторов из-за того же ограничения интерфейса системы-источника — решаются с нуля каждый раз, а не через каталогизированный паттерн разрешения.</p></article></div>
     </section>
     
 
@@ -889,7 +841,7 @@
     type="button"
     data-stage="define"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--define">
     <span class="flow-stages__stage-label">Определение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -901,7 +853,7 @@
     type="button"
     data-stage="govern"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--govern">
     <span class="flow-stages__stage-label">Управление</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -913,7 +865,7 @@
     type="button"
     data-stage="curate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--curate">
     <span class="flow-stages__stage-label">Сборка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -925,7 +877,7 @@
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--validate">
     <span class="flow-stages__stage-label">Валидация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -937,7 +889,7 @@
     type="button"
     data-stage="publish"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/master-reference-data-cycle"
-  >
+   id="stage-master-reference-data-cycle--publish">
     <span class="flow-stages__stage-label">Публикация</span>
     
   </button>
@@ -981,7 +933,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/golden-record-deduplication-assist" id="scenario-golden-record-deduplication-assist">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/golden-record-deduplication-assist" id="scenario-golden-record-deduplication-assist" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1056,7 +1008,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/governance-decision-documentation" id="scenario-governance-decision-documentation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/governance-decision-documentation" id="scenario-governance-decision-documentation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1131,7 +1083,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/master-data-estate-health-monitor" id="scenario-master-data-estate-health-monitor">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/master-data-estate-health-monitor" id="scenario-master-data-estate-health-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1206,7 +1158,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/deduplication-impact-prioritisation" id="scenario-deduplication-impact-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/deduplication-impact-prioritisation" id="scenario-deduplication-impact-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1281,7 +1233,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/reference-data-change-impact-map" id="scenario-reference-data-change-impact-map">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/master-reference-data-cycle/reference-data-change-impact-map" id="scenario-reference-data-change-impact-map" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1385,31 +1337,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Актуальность документации о происхождении данных — сколько CDE имеют документацию о происхождении, соответствующую текущей производственной конфигурации, — не измеряется непрерывно. Директор по данным не может ответить на вопрос BCBS 239 о готовности к аудиту возможностей агрегирования риск-данных без проведения ручной оценки охвата.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Усилия по картированию происхождения распределяются по CDE, входящим в периметр текущего цикла аттестации, исходя из определения периметра предыдущего цикла. CDE, изменившие конфигурацию производственного конвейера между циклами аттестации, не проходят повторную аттестацию до следующего полного цикла, создавая окно незаверенного изменения происхождения, накапливающегося без систематического обнаружения.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Обход метаданных конвейера для обнаружения происхождения, документирование логики преобразований из анализа ETL-скриптов, сравнение контрольных сумм по границам конвейеров и формирование готовых к аттестации сводок о происхождении — структурированные технические задачи, следующие повторяемым паттернам, поддающимся исполнению с участием агента при проверке инженерами и командой управления.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты предыдущих аттестаций — пробелы в происхождении, ошибки тестирования контролей и недостатки документации, выявленные в предыдущих циклах, — задокументированы в отчётах об аттестации, но не синтезированы в анализ паттернов, который приоритизировал бы системные улучшения качества конвейеров над устранением проблем отдельных циклов.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Актуальность документации о происхождении данных — сколько CDE имеют документацию о происхождении, соответствующую текущей производственной конфигурации, — не измеряется непрерывно. Директор по данным не может ответить на вопрос BCBS 239 о готовности к аудиту возможностей агрегирования риск-данных без проведения ручной оценки охвата.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Усилия по картированию происхождения распределяются по CDE, входящим в периметр текущего цикла аттестации, исходя из определения периметра предыдущего цикла. CDE, изменившие конфигурацию производственного конвейера между циклами аттестации, не проходят повторную аттестацию до следующего полного цикла, создавая окно незаверенного изменения происхождения, накапливающегося без систематического обнаружения.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Обход метаданных конвейера для обнаружения происхождения, документирование логики преобразований из анализа ETL-скриптов, сравнение контрольных сумм по границам конвейеров и формирование готовых к аттестации сводок о происхождении — структурированные технические задачи, следующие повторяемым паттернам, поддающимся исполнению с участием агента при проверке инженерами и командой управления.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты предыдущих аттестаций — пробелы в происхождении, ошибки тестирования контролей и недостатки документации, выявленные в предыдущих циклах, — задокументированы в отчётах об аттестации, но не синтезированы в анализ паттернов, который приоритизировал бы системные улучшения качества конвейеров над устранением проблем отдельных циклов.</p></article></div>
     </section>
     
 
@@ -1431,7 +1359,7 @@
     type="button"
     data-stage="map"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--map">
     <span class="flow-stages__stage-label">Сопоставление</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1443,7 +1371,7 @@
     type="button"
     data-stage="document"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--document">
     <span class="flow-stages__stage-label">Документирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1455,7 +1383,7 @@
     type="button"
     data-stage="test"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--test">
     <span class="flow-stages__stage-label">Тестирование контролей</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1467,7 +1395,7 @@
     type="button"
     data-stage="attest"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--attest">
     <span class="flow-stages__stage-label">Аттестация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1479,7 +1407,7 @@
     type="button"
     data-stage="renew"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/lineage-control-attestation-cycle"
-  >
+   id="stage-lineage-control-attestation-cycle--renew">
     <span class="flow-stages__stage-label">Обновление</span>
     
   </button>
@@ -1523,7 +1451,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/change-triggered-lineage-prioritisation" id="scenario-change-triggered-lineage-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/change-triggered-lineage-prioritisation" id="scenario-change-triggered-lineage-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1598,7 +1526,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-documentation-automation" id="scenario-lineage-documentation-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-documentation-automation" id="scenario-lineage-documentation-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1673,7 +1601,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-pack-drafting" id="scenario-attestation-pack-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-pack-drafting" id="scenario-attestation-pack-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1748,7 +1676,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-currency-dashboard" id="scenario-lineage-currency-dashboard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/lineage-currency-dashboard" id="scenario-lineage-currency-dashboard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1823,7 +1751,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-findings-pattern-synthesis" id="scenario-attestation-findings-pattern-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/lineage-control-attestation-cycle/attestation-findings-pattern-synthesis" id="scenario-attestation-findings-pattern-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1949,31 +1877,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Результативность представлений — частота ошибок валидации, объёмы исключений, частота запросов по регуляторам — неформально отслеживается командой регуляторной отчётности, но не агрегируется в анализ трендов качества по представлениям и регуляторам. Директор по данным не может сформировать систему показателей соответствия BCBS 239 без ручного извлечения из записей представлений.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Разрешение исключений валидации выполняется последовательно командой отчётности относительно сроков каждого регулятора. Анализ паттернов по нескольким регуляторам — выявление проблем качества данных, стабильно генерирующих исключения у нескольких регуляторов, поскольку они берут начало в одной системе-источнике, — не применяется в рамках стандартного цикла представления.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Комментарии к агрегированию регуляторных представлений, пояснительные записки к исключениям валидации, комментарии к расхождениям сверки после представления и черновики ответов на надзорные запросы — структурированные задачи написания с последовательными фреймворками. Обход происхождения данных BCBS 239 для конкретных CDE следует воспроизводимому пути от источника до представленного значения, поддающемуся генерации ответов с участием агента.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Истории надзорных запросов по НБКР, НБК/АРРФР и ЦБР — какие точки данных оспаривались, какие объяснения принимались, какие методологические изменения запрашивались — накапливаются в отдельных файлах запросов, а не в консолидированной базе знаний. Каждый цикл запросов повторяет исследовательские и редакционные усилия, которые могли быть обеспечены ответами предыдущих циклов.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Результативность представлений — частота ошибок валидации, объёмы исключений, частота запросов по регуляторам — неформально отслеживается командой регуляторной отчётности, но не агрегируется в анализ трендов качества по представлениям и регуляторам. Директор по данным не может сформировать систему показателей соответствия BCBS 239 без ручного извлечения из записей представлений.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Разрешение исключений валидации выполняется последовательно командой отчётности относительно сроков каждого регулятора. Анализ паттернов по нескольким регуляторам — выявление проблем качества данных, стабильно генерирующих исключения у нескольких регуляторов, поскольку они берут начало в одной системе-источнике, — не применяется в рамках стандартного цикла представления.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Комментарии к агрегированию регуляторных представлений, пояснительные записки к исключениям валидации, комментарии к расхождениям сверки после представления и черновики ответов на надзорные запросы — структурированные задачи написания с последовательными фреймворками. Обход происхождения данных BCBS 239 для конкретных CDE следует воспроизводимому пути от источника до представленного значения, поддающемуся генерации ответов с участием агента.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Истории надзорных запросов по НБКР, НБК/АРРФР и ЦБР — какие точки данных оспаривались, какие объяснения принимались, какие методологические изменения запрашивались — накапливаются в отдельных файлах запросов, а не в консолидированной базе знаний. Каждый цикл запросов повторяет исследовательские и редакционные усилия, которые могли быть обеспечены ответами предыдущих циклов.</p></article></div>
     </section>
     
 
@@ -1995,7 +1899,7 @@
     type="button"
     data-stage="aggregate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--aggregate">
     <span class="flow-stages__stage-label">Агрегирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2007,7 +1911,7 @@
     type="button"
     data-stage="validate"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--validate">
     <span class="flow-stages__stage-label">Валидация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2019,7 +1923,7 @@
     type="button"
     data-stage="submit"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--submit">
     <span class="flow-stages__stage-label">Представление</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2031,7 +1935,7 @@
     type="button"
     data-stage="reconcile"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--reconcile">
     <span class="flow-stages__stage-label">Сверка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2043,7 +1947,7 @@
     type="button"
     data-stage="resolve"
     data-flow-id="urn:financial-services:flow:banking-data-analytics/regulatory-data-submission-cycle"
-  >
+   id="stage-regulatory-data-submission-cycle--resolve">
     <span class="flow-stages__stage-label">Урегулирование запросов</span>
     
   </button>
@@ -2087,7 +1991,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-commentary-automation" id="scenario-submission-commentary-automation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-commentary-automation" id="scenario-submission-commentary-automation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2162,7 +2066,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-response-assistant" id="scenario-supervisory-query-response-assistant">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-response-assistant" id="scenario-supervisory-query-response-assistant" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -2237,7 +2141,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-quality-trend-scorecard" id="scenario-submission-quality-trend-scorecard">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/submission-quality-trend-scorecard" id="scenario-submission-quality-trend-scorecard" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2312,7 +2216,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/cross-supervisor-exception-pattern" id="scenario-cross-supervisor-exception-pattern">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/cross-supervisor-exception-pattern" id="scenario-cross-supervisor-exception-pattern" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2387,7 +2291,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-knowledge-base" id="scenario-supervisory-query-knowledge-base">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/banking-data-analytics/regulatory-data-submission-cycle/supervisory-query-knowledge-base" id="scenario-supervisory-query-knowledge-base" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">

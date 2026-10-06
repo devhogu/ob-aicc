@@ -20,7 +20,8 @@
 #   title_of - extract a page's visible title
 #   write - write a generated section file
 #   local_links - render section-local navigation
-#   workflow_card - render expandable workflows with links to retained stage details
+#   workflow_card - render bilingual workflow previews with source stage destinations
+#   discovery_layout - apply shared cards and context presentation without rewriting content
 #   discovery_page - retain scenario bodies while replacing presentation chrome
 #   search_entries - index Discovery pages and scenario fragments
 #   build_discovery - generate both retained catalogue editions
@@ -151,7 +152,7 @@ def horizon_box(themes, lang):
                        f'<a class="card-link" href="regulatory-horizon/index.html#{t["slug"]}">{escape(t["title"])} <span class="card-link__count">({len(t["scenarios"])})</span></a>' for t in items)
                    + '</div></div>' for label, items in groups.items())
     return (f'<div role="region" aria-label="{text["eyebrow"]}" class="horizon-region"><div class="peer-label" role="heading" aria-level="2">{text["eyebrow"]}</div>'
-            f'<article class="card card--horizon"><div class="card__head"><div class="card__eyebrow">{text["box"]}</div>'
+            f'<article class="card card--horizon" data-ui-pattern="groups"><div class="card__head"><div class="card__eyebrow">{text["box"]}</div>'
             f'<h2 class="card__title card__title--lg">{text["title"]} <span class="card__count" aria-label="{total} {text["scenarios"]}">({total})</span></h2></div>'
             f'<div class="card__body"><div class="sub-groups sub-groups--row">{rows}</div></div>'
             f'<a class="card__click-target" href="regulatory-horizon/index.html" tabindex="0" aria-label="{text["title"]}"></a></article></div>')
@@ -235,9 +236,11 @@ def local_links(url, links):
     return ''.join(f'<a href="{workspace.relative(url, target)}"' + (' aria-current="page"' if target == url else '') + f'>{escape(label)}</a>' for target, label in links)
 
 
-def workflow_card(match):
-    """Render expandable workflows and stage destinations on the English overview."""
-    source = (SOURCE / 'en/value-streams/index.html').read_text()
+def workflow_card(match, relative, lang):
+    """Render workflow previews from the linked flow page in the same edition."""
+    destination = re.search(r'<a class="card__click-target" href="([^"]+)"', match[0])[1]
+    source = (SOURCE / lang / relative.parent / destination).read_text()
+    stages_label = re.search(r'<nav class="flow-stages" aria-label="([^"]+)"', source)[1]
     chunks = re.split(r'<details class="flow-detail" id="([^"]+)">', source)[1:]
     flows = {}
     for identifier, chunk in zip(chunks[::2], chunks[1::2]):
@@ -249,7 +252,7 @@ def workflow_card(match):
 
     article = re.sub(r'<a class="card__click-target"[^>]*>.*?</a>', '', match[0], flags=re.S)
     head, remainder = article.split('<div class="card__body">', 1)
-    head = re.sub(r'(<h2[^>]*>)(.*?)(</h2>)', lambda m: m[1] + '<a class="workflow-overview-link" href="value-streams/index.html">' + m[2] + '</a>' + m[3], head, count=1, flags=re.S)
+    head = re.sub(r'(<h2[^>]*>)(.*?)(</h2>)', lambda m: m[1] + f'<a class="workflow-overview-link" href="{destination}">' + m[2] + '</a>' + m[3], head, count=1, flags=re.S)
     body = re.sub(r'[ \t]+$', '', remainder.rsplit('</div>', 1)[0], flags=re.M)
 
     def preview(item):
@@ -259,11 +262,41 @@ def workflow_card(match):
         steps = ''.join(f'<li><a href="{path}#stage-{identifier}--{slug}">{label}</a></li>' for slug, label in stages)
         return ('<li class="flow-item"><details class="workflow-preview">'
                 f'<summary>{title}</summary><div class="workflow-preview__body">'
-                f'<p>{intent}</p><ol class="workflow-preview__stages" aria-label="Workflow stages">{steps}</ol>'
+                f'<p>{intent}</p><ol class="workflow-preview__stages" aria-label="{stages_label}">{steps}</ol>'
                 '</div></details></li>')
 
     previews = re.sub(r'<li class="flow-item">\s*<a href="([^"]+)" class="flow-item__name card-link">(.*?)</a>\s*</li>', preview, body, flags=re.S)
     return head + '<div class="card__body">' + previews + '</div></article>'
+
+
+def discovery_layout(body, relative, lang):
+    """Project the approved shared constructs; source wording and identities stay intact."""
+    def context_cards(match):
+        rows = re.findall(r'<tr class="problems-row">\s*<th\b[^>]*>(.*?)</th>\s*<td\b[^>]*>(.*?)</td>\s*</tr>', match[0], re.S)
+        if not rows or len(rows) != len(re.findall(r'<tr\b', match[0])):
+            raise ValueError(f'Unrecognized context rows: {lang}/{relative}')
+        return '<div class="discovery-context-grid">' + ''.join(
+            '<article class="discovery-context-card"><h3>' + label + '</h3><p>' + statement + '</p></article>'
+            for label, statement in rows) + '</div>'
+
+    body = re.sub(r'<table class="problems-table">.*?</table>', context_cards, body, flags=re.S)
+    overview_ids = iter('abcdefghijk')
+    def card_pattern(match):
+        classes = match[1]
+        pattern = 'in-progress' if 'card--peer' in classes else 'workflows' if 'card--flow' in classes else 'groups'
+        # Retain the overview's existing public fragment destinations.
+        identifier = f' id="ui-option-{next(overview_ids)}"' if relative == Path('index.html') else ''
+        return classes + f' data-ui-pattern="{pattern}"' + identifier + '>'
+    body = re.sub(r'(<article class="card[^"]*")>', card_pattern, body)
+    body = re.sub(r'<article class="card card--flow"[^>]*>.*?</article>',
+                  lambda match: workflow_card(match, relative, lang), body, flags=re.S)
+    def development_card(match):
+        card = match[0].replace(' (deferred)', '').replace('card-link--deferred', 'card-link--pending')
+        status = 'In progress' if lang == 'en' else 'В разработке'
+        return re.sub(r'(<div class="card__eyebrow">.*?)(</div>)',
+                      lambda m: m[1] + f'<span class="discovery-status">{status}</span>' + m[2], card, count=1, flags=re.S)
+    body = re.sub(r'<article class="card card--peer"[^>]*>.*?</article>', development_card, body, flags=re.S)
+    return re.sub(r'(<details class="scenario-card"[^>]*)(>)', r'\1 data-ui-pattern="scenario"\2', body)
 
 
 def discovery_page(source, relative, lang):
@@ -284,52 +317,21 @@ def discovery_page(source, relative, lang):
     body = re.sub(r'<footer class="page-footer".*?</footer>', '', body, flags=re.S)
     body = re.sub(r'<main\b', '<div', body, count=1).replace('</main>', '</div>', 1)
     body = body.replace('class="page-header" role="banner"', 'class="page-header"')
-    if lang == 'en' and relative == Path('strategic-portfolio/index.html'):
-        # Page-local presentation trial; retain every authored statement and destination.
-        classes += ' discovery-strategic'
-        def context_cards(match):
-            rows = re.findall(r'<tr class="problems-row">\s*<th\b[^>]*>(.*?)</th>\s*<td\b[^>]*>(.*?)</td>\s*</tr>', match[0], re.S)
-            if len(rows) != 4:
-                raise ValueError('Strategic portfolio context requires its four source lenses')
-            return '<div class="discovery-context-grid">' + ''.join(
-                '<article class="discovery-context-card"><h3>' + label + '</h3><p>' + statement + '</p></article>'
-                for label, statement in rows) + '</div>'
-        body = re.sub(r'<table class="problems-table">.*?</table>', context_cards, body, flags=re.S)
-        body = re.sub(r'(<article class="card[^"]*")>',
-                      lambda m: m[1] + ' data-ui-pattern="' + ('workflows' if 'card--flow' in m[1] else 'groups') + '">', body)
-        body = re.sub(r'(<details class="scenario-card"[^>]*)(>)', r'\1 data-ui-pattern="scenario"\2', body)
     if relative == Path('index.html'):
         body = re.sub(r'(<h1\b[^>]*>).*?(</h1>)', lambda m: m[1] + escape(label) + m[2], body, count=1, flags=re.S)
         body = re.sub(r'(<p class="page-header__intent">).*?(</p>)', lambda m: m[1] + escape(INTRO[lang]) + m[2], body, count=1, flags=re.S)
         body = re.sub(r'(<header class="page-header"[^>]*>.*?</header>)', lambda m: m[1] + reading_guide(lang), body, count=1, flags=re.S)
-        # Temporary visual comparison, confined to the English overview.
-        if lang == 'en':
-            options = iter((
-                ('A', 'groups'), ('B', 'groups'), ('C', 'workflows'),
-                ('D', 'groups'), ('E', 'groups'), ('F', 'groups'), ('G', 'groups'),
-                ('H', 'groups'), ('I', 'groups'), ('J', 'in-progress'), ('K', 'in-progress'),
-            ))
-            def comparison_card(match):
-                key, pattern = next(options)
-                return match[1] + f' data-ui-option="{key}" data-ui-pattern="{pattern}" id="ui-option-{key.lower()}">'
-            body = re.sub(r'(<article class="card[^"]*")>', comparison_card, body)
-            body = re.sub(r'<article class="card card--flow"[^>]*>.*?</article>', workflow_card, body, count=1, flags=re.S)
-            def development_card(match):
-                card = match[0].replace(' (deferred)', '').replace('card-link--deferred', 'card-link--pending')
-                return re.sub(r'(<div class="card__eyebrow">.*?)(</div>)',
-                              r'\1<span class="discovery-status">In progress</span>\2', card, count=1, flags=re.S)
-            body = re.sub(r'<article class="card card--peer"[^>]*>.*?</article>', development_card, body, flags=re.S)
+    body = discovery_layout(body, relative, lang)
+    # Each stage is a stable destination, including Russian and domain workflow pages.
+    def stage_target(match):
+        attrs = match[1]
+        flow = re.search(r'data-flow-id="([^"]+)"', attrs)[1].rsplit(':', 1)[-1].rsplit('/', 1)[-1]
+        stage = re.search(r'data-stage="([^"]+)"', attrs)[1]
+        return f'<button{attrs} id="stage-{flow}--{stage}">'
+    body = re.sub(r'<button\b([^>]*class="flow-stages__stage"[^>]*)>', stage_target, body)
     themes = horizon_themes_cached(lang)
     if relative == Path('index.html') and themes:
         body = body.replace('<div role="region" aria-label="Peer frameworks">', horizon_box(themes, lang) + '<div role="region" aria-label="Peer frameworks">', 1)
-    if lang == 'en' and relative == Path('value-streams/index.html'):
-        # Stable destinations for the overview's individual stage links.
-        def stage_target(match):
-            attrs = match[1]
-            flow = re.search(r'data-flow-id="([^"]+)"', attrs)[1].rsplit(':', 1)[-1]
-            stage = re.search(r'data-stage="([^"]+)"', attrs)[1]
-            return f'<button{attrs} id="stage-{flow}--{stage}">'
-        body = re.sub(r'<button\b([^>]*class="flow-stages__stage"[^>]*)>', stage_target, body)
     if themes:
         body = horizon_chips(body, url, lang, themes)
     # Add stable fragment targets without changing original scenario URNs or copy.

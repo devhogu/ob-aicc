@@ -23,7 +23,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -306,31 +306,7 @@
     role="tabpanel"
     aria-labelledby="problems-tab-var-sensitivity"
   >
-    <table class="problems-table">
-      <tbody>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Insights &amp; analytics</th>
-          <td class="problems-statement">Ежедневные метрики VaR и чувствительности формируются из риск-системы, однако обнаружение аномалий — выявление ночного скачка VaR или движения фактора, статистически значимого относительно скользящих распределений, — зависит от того, заметит ли дежурный аналитик это движение. Ситуации приближения к лимиту и нарастающая концентрация в факторе риска не фиксируются в отчётности в промежутке между ежедневным отчётом и следующим циклом комитета.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Enablement</th>
-          <td class="problems-statement">Повторные прогоны стресс-тестов — требующие специального анализа чувствительности при конкретных рыночных сценариях — ограничены мощностью моделирования команды рыночного риска. CRO и ALCO не могут задать вопрос «что, если KZT обесценится на 15%» и получить немедленный ответ; каждый сценарный запрос требует аналитического спринта по моделированию.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">Automation</th>
-          <td class="problems-statement">Ежедневный нарратив по VaR и еженедельный пакет для Комитета по рыночному риску формируются вручную из результатов риск-системы — декомпозиция факторов, использование лимитов, количество исключений бэктестинга — в каждом цикле. Нарративный формат унифицирован; исходные данные структурированы.</td>
-        </tr>
-        
-        <tr class="problems-row">
-          <th class="problems-lens" scope="row">New business opportunities</th>
-          <td class="problems-statement">Непрерывный мониторинг использования лимитов по всем факторам риска и лимитам деска обеспечивает руководителю казначейства представление о доступном риск-бюджете в режиме близком к реальному времени. Дескам, работающим значительно ниже лимитов, может быть подан сигнал о наращивании позиции; дескам, приближающимся к лимитам, направляется раннее предупреждение до возникновения нарушения. Этот сигнал в настоящее время доступен только в еженедельном пакете для комитета.</td>
-        </tr>
-        
-      </tbody>
-    </table>
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Ежедневные метрики VaR и чувствительности формируются из риск-системы, однако обнаружение аномалий — выявление ночного скачка VaR или движения фактора, статистически значимого относительно скользящих распределений, — зависит от того, заметит ли дежурный аналитик это движение. Ситуации приближения к лимиту и нарастающая концентрация в факторе риска не фиксируются в отчётности в промежутке между ежедневным отчётом и следующим циклом комитета.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Повторные прогоны стресс-тестов — требующие специального анализа чувствительности при конкретных рыночных сценариях — ограничены мощностью моделирования команды рыночного риска. CRO и ALCO не могут задать вопрос «что, если KZT обесценится на 15%» и получить немедленный ответ; каждый сценарный запрос требует аналитического спринта по моделированию.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Ежедневный нарратив по VaR и еженедельный пакет для Комитета по рыночному риску формируются вручную из результатов риск-системы — декомпозиция факторов, использование лимитов, количество исключений бэктестинга — в каждом цикле. Нарративный формат унифицирован; исходные данные структурированы.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Непрерывный мониторинг использования лимитов по всем факторам риска и лимитам деска обеспечивает руководителю казначейства представление о доступном риск-бюджете в режиме близком к реальному времени. Дескам, работающим значительно ниже лимитов, может быть подан сигнал о наращивании позиции; дескам, приближающимся к лимитам, направляется раннее предупреждение до возникновения нарушения. Этот сигнал в настоящее время доступен только в еженедельном пакете для комитета.</p></article></div>
   </div>
   
 
@@ -383,7 +359,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-expected-shortfall-narrative" id="scenario-var-expected-shortfall-narrative">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-expected-shortfall-narrative" id="scenario-var-expected-shortfall-narrative" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -462,7 +438,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-model-backtesting-pack" id="scenario-var-model-backtesting-pack">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-model-backtesting-pack" id="scenario-var-model-backtesting-pack" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -524,7 +500,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/stressed-var-scenario-narrative" id="scenario-stressed-var-scenario-narrative">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/stressed-var-scenario-narrative" id="scenario-stressed-var-scenario-narrative" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -623,7 +599,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/backtesting-exception-pack" id="scenario-backtesting-exception-pack">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/backtesting-exception-pack" id="scenario-backtesting-exception-pack" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -685,7 +661,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/pl-attribution-daily-narrative" id="scenario-pl-attribution-daily-narrative">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/pl-attribution-daily-narrative" id="scenario-pl-attribution-daily-narrative" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -747,7 +723,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/pl-attribution-pattern-analysis" id="scenario-pl-attribution-pattern-analysis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/pl-attribution-pattern-analysis" id="scenario-pl-attribution-pattern-analysis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -842,7 +818,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/greeks-daily-position-report" id="scenario-greeks-daily-position-report">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/greeks-daily-position-report" id="scenario-greeks-daily-position-report" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -904,7 +880,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/sensitivity-limit-breach-escalation" id="scenario-sensitivity-limit-breach-escalation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/sensitivity-limit-breach-escalation" id="scenario-sensitivity-limit-breach-escalation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -966,7 +942,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/sensitivity-risk-factor-concentration" id="scenario-sensitivity-risk-factor-concentration">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/sensitivity-risk-factor-concentration" id="scenario-sensitivity-risk-factor-concentration" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1061,7 +1037,7 @@ CRO получает еженедельный анализ концентрац�
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/market-risk-limits-utilization-report" id="scenario-market-risk-limits-utilization-report">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/market-risk-limits-utilization-report" id="scenario-market-risk-limits-utilization-report" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1140,7 +1116,7 @@ CRO получает еженедельный анализ концентрац�
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/market-risk-limit-breach-pattern-analysis" id="scenario-market-risk-limit-breach-pattern-analysis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/market-risk-limit-breach-pattern-analysis" id="scenario-market-risk-limit-breach-pattern-analysis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1202,7 +1178,7 @@ CRO получает еженедельный анализ концентрац�
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/limits-framework-calibration-review" id="scenario-limits-framework-calibration-review">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/limits-framework-calibration-review" id="scenario-limits-framework-calibration-review" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">

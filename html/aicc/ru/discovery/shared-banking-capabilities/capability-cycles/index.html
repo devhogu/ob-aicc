@@ -24,7 +24,7 @@
 
 Вопрос или замечание:
 " data-t-dz-close="Закрыть"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=e805126e">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=964cb3de">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--flow-set" data-portal-section="discovery">
 <a class="o-skip" href="#main">К содержанию</a>
@@ -301,31 +301,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Фактические значения КПЭ и SLA по всем общебанковским возможностям собираются вручную раз в месяц или квартал. Непрерывная видимость внутрипериодных тенденций — какие возможности движутся к нарушению показателей в середине цикла — отсутствует в стандартном управленческом информационном наборе.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Приоритизация нарушений по разным возможностям и согласованность планов по их устранению оцениваются отдельными владельцами возможностей без единой методологии. Совокупный реестр невыполненных корректирующих мер и взаимодействие между перекрывающимися планами по устранению нарушений не видны ни одному владельцу в промежутке между плановыми циклами анализа.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Сбор фактических данных, сравнение с пороговыми значениями SLA, идентификация нарушений и подготовка предварительных комментариев по корневым причинам — структурированные, регулярно повторяющиеся задачи, выполняемые по одним и тем же источникам данных в каждом цикле. Этапы сборки и сравнения — высокообъёмные и формально регламентированные — являются первоочередными кандидатами для исполнения агентами с последующей проверкой аналитиком.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты устранения нарушений — было ли принятое действие эффективным — редко сопоставляются с атрибуцией корневых причин, лежавшей в основе план-меропроприятий. Цикл накапливает минимум знаний о том, какие корневые причины повторяются и какие типы корректирующих мер оказываются результативными.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Фактические значения КПЭ и SLA по всем общебанковским возможностям собираются вручную раз в месяц или квартал. Непрерывная видимость внутрипериодных тенденций — какие возможности движутся к нарушению показателей в середине цикла — отсутствует в стандартном управленческом информационном наборе.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Приоритизация нарушений по разным возможностям и согласованность планов по их устранению оцениваются отдельными владельцами возможностей без единой методологии. Совокупный реестр невыполненных корректирующих мер и взаимодействие между перекрывающимися планами по устранению нарушений не видны ни одному владельцу в промежутке между плановыми циклами анализа.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Сбор фактических данных, сравнение с пороговыми значениями SLA, идентификация нарушений и подготовка предварительных комментариев по корневым причинам — структурированные, регулярно повторяющиеся задачи, выполняемые по одним и тем же источникам данных в каждом цикле. Этапы сборки и сравнения — высокообъёмные и формально регламентированные — являются первоочередными кандидатами для исполнения агентами с последующей проверкой аналитиком.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты устранения нарушений — было ли принятое действие эффективным — редко сопоставляются с атрибуцией корневых причин, лежавшей в основе план-меропроприятий. Цикл накапливает минимум знаний о том, какие корневые причины повторяются и какие типы корректирующих мер оказываются результативными.</p></article></div>
     </section>
     
 
@@ -347,7 +323,7 @@
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--measure">
     <span class="flow-stages__stage-label">Измерение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -359,7 +335,7 @@
     type="button"
     data-stage="review"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--review">
     <span class="flow-stages__stage-label">Проверка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -371,7 +347,7 @@
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--identify">
     <span class="flow-stages__stage-label">Выявление нарушений</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -383,7 +359,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--plan">
     <span class="flow-stages__stage-label">Планирование устранения</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -395,7 +371,7 @@
     type="button"
     data-stage="track"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-kpi-sla-review-cycle"
-  >
+   id="stage-capability-kpi-sla-review-cycle--track">
     <span class="flow-stages__stage-label">Отслеживание</span>
     
   </button>
@@ -439,7 +415,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/mid-cycle-sla-breach-signal" id="scenario-mid-cycle-sla-breach-signal">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/mid-cycle-sla-breach-signal" id="scenario-mid-cycle-sla-breach-signal" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -518,7 +494,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/sla-breach-root-cause-commentary" id="scenario-sla-breach-root-cause-commentary">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/sla-breach-root-cause-commentary" id="scenario-sla-breach-root-cause-commentary" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -599,7 +575,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/remediation-outcome-institutional-record" id="scenario-remediation-outcome-institutional-record">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/remediation-outcome-institutional-record" id="scenario-remediation-outcome-institutional-record" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -678,7 +654,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/kpi-sla-scorecard-assembly-agent" id="scenario-kpi-sla-scorecard-assembly-agent">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/kpi-sla-scorecard-assembly-agent" id="scenario-kpi-sla-scorecard-assembly-agent" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -759,7 +735,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/capability-remediation-backlog-prioritisation" id="scenario-capability-remediation-backlog-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-kpi-sla-review-cycle/capability-remediation-backlog-prioritisation" id="scenario-capability-remediation-backlog-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -869,31 +845,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Портфель инициатив по улучшению — размер очереди входящих заявок, реестр приоритизации, ход реализации и статус получения выгод — не отслеживается в консолидированном виде. Руководитель блока общебанковских возможностей не может видеть полный жизненный цикл улучшений в любой момент цикла без ручной сборки данных из множества проектных и операционных источников.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Оценка приоритетов применяется независимо в каждом домене возможностей. Междоменная приоритизация — улучшение в обработке транзакций, высвобождающее мощность в сортировке AML-алертов — требует кросс-доменного анализа, к выполнению которого комитеты по приоритизации отдельных возможностей не приспособлены.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Разработка бизнес-кейсов, сравнение метрик после внедрения и подготовка квартального пакета по приоритизации — структурированные аналитические задачи, повторяющиеся каждый цикл по единой методологии, применяемой к актуализированным операционным данным.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Завершённые инициативы по улучшению и фактически достигнутые выгоды редко документируются в форме, которая информирует выявление будущих возможностей для улучшения. Банк не ведёт пополняемую базу знаний о прошлых вмешательствах, их корневых причинах и результатах, которая позволила бы ускорить формирование бизнес-кейсов для аналогичных будущих инициатив.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Портфель инициатив по улучшению — размер очереди входящих заявок, реестр приоритизации, ход реализации и статус получения выгод — не отслеживается в консолидированном виде. Руководитель блока общебанковских возможностей не может видеть полный жизненный цикл улучшений в любой момент цикла без ручной сборки данных из множества проектных и операционных источников.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Оценка приоритетов применяется независимо в каждом домене возможностей. Междоменная приоритизация — улучшение в обработке транзакций, высвобождающее мощность в сортировке AML-алертов — требует кросс-доменного анализа, к выполнению которого комитеты по приоритизации отдельных возможностей не приспособлены.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Разработка бизнес-кейсов, сравнение метрик после внедрения и подготовка квартального пакета по приоритизации — структурированные аналитические задачи, повторяющиеся каждый цикл по единой методологии, применяемой к актуализированным операционным данным.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Завершённые инициативы по улучшению и фактически достигнутые выгоды редко документируются в форме, которая информирует выявление будущих возможностей для улучшения. Банк не ведёт пополняемую базу знаний о прошлых вмешательствах, их корневых причинах и результатах, которая позволила бы ускорить формирование бизнес-кейсов для аналогичных будущих инициатив.</p></article></div>
     </section>
     
 
@@ -915,7 +867,7 @@
     type="button"
     data-stage="identify"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--identify">
     <span class="flow-stages__stage-label">Выявление</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -927,7 +879,7 @@
     type="button"
     data-stage="prioritize"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--prioritize">
     <span class="flow-stages__stage-label">Приоритизация</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -939,7 +891,7 @@
     type="button"
     data-stage="implement"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--implement">
     <span class="flow-stages__stage-label">Внедрение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -951,7 +903,7 @@
     type="button"
     data-stage="measure"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--measure">
     <span class="flow-stages__stage-label">Измерение эффекта</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -963,7 +915,7 @@
     type="button"
     data-stage="sustain"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/continuous-improvement-cycle"
-  >
+   id="stage-continuous-improvement-cycle--sustain">
     <span class="flow-stages__stage-label">Закрепление</span>
     
   </button>
@@ -1007,7 +959,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-business-case-drafting" id="scenario-improvement-business-case-drafting">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-business-case-drafting" id="scenario-improvement-business-case-drafting" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1088,7 +1040,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-post-implementation-benefit-measurement" id="scenario-improvement-post-implementation-benefit-measurement">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-post-implementation-benefit-measurement" id="scenario-improvement-post-implementation-benefit-measurement" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1167,7 +1119,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-knowledge-base-accumulation" id="scenario-improvement-knowledge-base-accumulation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-knowledge-base-accumulation" id="scenario-improvement-knowledge-base-accumulation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1246,7 +1198,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-intake-channel-unification" id="scenario-improvement-intake-channel-unification">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/improvement-intake-channel-unification" id="scenario-improvement-intake-channel-unification" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1327,7 +1279,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/cross-capability-improvement-prioritisation" id="scenario-cross-capability-improvement-prioritisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/continuous-improvement-cycle/cross-capability-improvement-prioritisation" id="scenario-cross-capability-improvement-prioritisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -1457,31 +1409,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Портфель капитальных вложений в возможности — кейсы на стадии подготовки, в процессе согласования, программы в реализации и фиксируемые выгоды — не отслеживается в едином консолидированном разрезе. Руководитель блока общебанковских возможностей и CTO не имеют одновременного доступа к данным о наполненности портфеля, задержках в согласовании, отклонениях в сроках реализации и разрывах в реализации ожидаемых выгод.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Моделирование выгод в инвестиционном кейсе — наиболее слабый этап цикла. Кейсы строятся на ориентировочных оценках, поскольку сбор данных для полноценного моделирования занимает больше времени, чем допускает плановый дедлайн. Альтернативные сценарии инвестирования — создание собственными силами или покупка решения, поэтапный или полный охват, поставщик А или поставщик Б — редко прорабатываются с одинаковой аналитической глубиной до принятия решения о согласовании.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка инвестиционных кейсов, синтез вводных из разных функциональных блоков, формирование чек-листа регуляторных уведомлений и отчётов о фактических выгодах после внедрения — структурированные задачи, повторяющиеся для каждого инвестиционного проекта в рамках единого методологического каркаса. Нагрузка по сборке материалов является основным ограничителем цикла.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Завершённые инвестиционные программы — их фактические и плановые затраты, сроки реализации и достигнутые выгоды — редко документируются в структурированной форме, пригодной для обоснования допущений следующего инвестиционного цикла. Каждый новый инвестиционный кейс формируется с нуля, повторяя оценочную работу, которую могли бы информировать результаты предыдущих программ.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Портфель капитальных вложений в возможности — кейсы на стадии подготовки, в процессе согласования, программы в реализации и фиксируемые выгоды — не отслеживается в едином консолидированном разрезе. Руководитель блока общебанковских возможностей и CTO не имеют одновременного доступа к данным о наполненности портфеля, задержках в согласовании, отклонениях в сроках реализации и разрывах в реализации ожидаемых выгод.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Моделирование выгод в инвестиционном кейсе — наиболее слабый этап цикла. Кейсы строятся на ориентировочных оценках, поскольку сбор данных для полноценного моделирования занимает больше времени, чем допускает плановый дедлайн. Альтернативные сценарии инвестирования — создание собственными силами или покупка решения, поэтапный или полный охват, поставщик А или поставщик Б — редко прорабатываются с одинаковой аналитической глубиной до принятия решения о согласовании.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка инвестиционных кейсов, синтез вводных из разных функциональных блоков, формирование чек-листа регуляторных уведомлений и отчётов о фактических выгодах после внедрения — структурированные задачи, повторяющиеся для каждого инвестиционного проекта в рамках единого методологического каркаса. Нагрузка по сборке материалов является основным ограничителем цикла.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Завершённые инвестиционные программы — их фактические и плановые затраты, сроки реализации и достигнутые выгоды — редко документируются в структурированной форме, пригодной для обоснования допущений следующего инвестиционного цикла. Каждый новый инвестиционный кейс формируется с нуля, повторяя оценочную работу, которую могли бы информировать результаты предыдущих программ.</p></article></div>
     </section>
     
 
@@ -1503,7 +1431,7 @@
     type="button"
     data-stage="plan"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--plan">
     <span class="flow-stages__stage-label">Планирование</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1515,7 +1443,7 @@
     type="button"
     data-stage="approve"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--approve">
     <span class="flow-stages__stage-label">Утверждение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1527,7 +1455,7 @@
     type="button"
     data-stage="build"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--build">
     <span class="flow-stages__stage-label">Разработка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1539,7 +1467,7 @@
     type="button"
     data-stage="deploy"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--deploy">
     <span class="flow-stages__stage-label">Развёртывание</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -1551,7 +1479,7 @@
     type="button"
     data-stage="sustain"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/capability-investment-cycle"
-  >
+   id="stage-capability-investment-cycle--sustain">
     <span class="flow-stages__stage-label">Поддержание</span>
     
   </button>
@@ -1595,7 +1523,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/programme-delivery-variance-monitoring" id="scenario-programme-delivery-variance-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/programme-delivery-variance-monitoring" id="scenario-programme-delivery-variance-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -1676,7 +1604,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-benefit-realisation" id="scenario-capability-investment-benefit-realisation">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-benefit-realisation" id="scenario-capability-investment-benefit-realisation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
@@ -1755,7 +1683,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-gap-assessment-synthesis" id="scenario-capability-gap-assessment-synthesis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-gap-assessment-synthesis" id="scenario-capability-gap-assessment-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -1836,7 +1764,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-case-assembly" id="scenario-capability-investment-case-assembly">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/capability-investment-case-assembly" id="scenario-capability-investment-case-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -1917,7 +1845,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/build-buy-partner-scenario-modelling" id="scenario-build-buy-partner-scenario-modelling">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/capability-investment-cycle/build-buy-partner-scenario-modelling" id="scenario-build-buy-partner-scenario-modelling" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2025,31 +1953,7 @@
 
     
     <section class="flow-detail__problems" aria-label="Проблемы потока по аспектам">
-      <table class="problems-table">
-        <tbody>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Analyze</th>
-            <td class="problems-statement">Показатели поставщиков, их финансовое состояние и сигналы рисков оцениваются в рамках фиксированных циклов проверки, а не непрерывно. Ухудшение траектории выполнения SLA в промежутке между квартальными проверками или сигнал финансовых затруднений, появившийся в публичных документах между ежегодными проверками, не доводится систематически до сведения закупочной команды.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Optimize</th>
-            <td class="problems-statement">Решения о стратегии закупок — какие возможности переводить на собственное выполнение, какие консолидировать у единственного поставщика, по каким применять мультисорсинг — принимаются при продлении контрактов при неполной рыночной информации. Анализ концентрационного риска по портфелю поставщиков требует ручной агрегации, которая редко оказывается достаточно актуальной для обоснования активных закупочных решений.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Automate</th>
-            <td class="problems-statement">Подготовка отчётов о показателях поставщиков, анализ достаточности контрактных условий в соответствии с актуальными требованиями НБК/НБКР и ЕБА, формирование сводок о финансовом состоянии и сборка пакетов должной осмотрительности при онбординге новых поставщиков — структурированные задачи с определёнными методологическими рамками, повторяющиеся для каждого поставщика в каждом цикле.</td>
-          </tr>
-          
-          <tr class="problems-row">
-            <th class="problems-lens" scope="row">Enrich</th>
-            <td class="problems-statement">Результаты проверок поставщиков, истории инцидентов и регуляторные замечания накапливаются в отдельных контрактных файлах, а не в консолидированной базе знаний по поставщикам. Закупочная команда не имеет доступа к поиску по реестру предыдущих результатов проверок по всему портфелю, который повысил бы эффективность и качество каждой новой проверки.</td>
-          </tr>
-          
-        </tbody>
-      </table>
+      <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Analyze</h3><p>Показатели поставщиков, их финансовое состояние и сигналы рисков оцениваются в рамках фиксированных циклов проверки, а не непрерывно. Ухудшение траектории выполнения SLA в промежутке между квартальными проверками или сигнал финансовых затруднений, появившийся в публичных документах между ежегодными проверками, не доводится систематически до сведения закупочной команды.</p></article><article class="discovery-context-card"><h3>Optimize</h3><p>Решения о стратегии закупок — какие возможности переводить на собственное выполнение, какие консолидировать у единственного поставщика, по каким применять мультисорсинг — принимаются при продлении контрактов при неполной рыночной информации. Анализ концентрационного риска по портфелю поставщиков требует ручной агрегации, которая редко оказывается достаточно актуальной для обоснования активных закупочных решений.</p></article><article class="discovery-context-card"><h3>Automate</h3><p>Подготовка отчётов о показателях поставщиков, анализ достаточности контрактных условий в соответствии с актуальными требованиями НБК/НБКР и ЕБА, формирование сводок о финансовом состоянии и сборка пакетов должной осмотрительности при онбординге новых поставщиков — структурированные задачи с определёнными методологическими рамками, повторяющиеся для каждого поставщика в каждом цикле.</p></article><article class="discovery-context-card"><h3>Enrich</h3><p>Результаты проверок поставщиков, истории инцидентов и регуляторные замечания накапливаются в отдельных контрактных файлах, а не в консолидированной базе знаний по поставщикам. Закупочная команда не имеет доступа к поиску по реестру предыдущих результатов проверок по всему портфелю, который повысил бы эффективность и качество каждой новой проверки.</p></article></div>
     </section>
     
 
@@ -2071,7 +1975,7 @@
     type="button"
     data-stage="evaluate"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--evaluate">
     <span class="flow-stages__stage-label">Оценка</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2083,7 +1987,7 @@
     type="button"
     data-stage="negotiate"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--negotiate">
     <span class="flow-stages__stage-label">Переговоры</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2095,7 +1999,7 @@
     type="button"
     data-stage="onboard"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--onboard">
     <span class="flow-stages__stage-label">Подключение</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2107,7 +2011,7 @@
     type="button"
     data-stage="monitor"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--monitor">
     <span class="flow-stages__stage-label">Мониторинг</span>
     
     <span class="flow-stages__arrow" aria-hidden="true">→</span>
@@ -2119,7 +2023,7 @@
     type="button"
     data-stage="renew"
     data-flow-id="urn:financial-services:flow:shared-banking-capabilities/vendor-sourcing-review-cycle"
-  >
+   id="stage-vendor-sourcing-review-cycle--renew">
     <span class="flow-stages__stage-label">Продление или выход</span>
     
   </button>
@@ -2163,7 +2067,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-onboarding-regulatory-timeline-planning" id="scenario-vendor-onboarding-regulatory-timeline-planning">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-onboarding-regulatory-timeline-planning" id="scenario-vendor-onboarding-regulatory-timeline-planning" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--оптимизация">Оптимизация</span>
     <div class="scenario-card__title-col">
@@ -2244,7 +2148,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-performance-pack-assembly" id="scenario-vendor-performance-pack-assembly">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-performance-pack-assembly" id="scenario-vendor-performance-pack-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--автоматизация">Автоматизация</span>
     <div class="scenario-card__title-col">
@@ -2323,7 +2227,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/continuous-vendor-risk-monitoring" id="scenario-continuous-vendor-risk-monitoring">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/continuous-vendor-risk-monitoring" id="scenario-continuous-vendor-risk-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--аналитика">Аналитика</span>
     <div class="scenario-card__title-col">
@@ -2402,7 +2306,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-contract-regulatory-adequacy-review" id="scenario-vendor-contract-regulatory-adequacy-review">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/vendor-contract-regulatory-adequacy-review" id="scenario-vendor-contract-regulatory-adequacy-review" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--поддержка">Поддержка</span>
     <div class="scenario-card__title-col">
@@ -2483,7 +2387,7 @@
 
 
 
-<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/sourcing-concentration-risk-renewal-analysis" id="scenario-sourcing-concentration-risk-renewal-analysis">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:flow/shared-banking-capabilities/vendor-sourcing-review-cycle/sourcing-concentration-risk-renewal-analysis" id="scenario-sourcing-concentration-risk-renewal-analysis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--новые-возможности">Новые возможности</span>
     <div class="scenario-card__title-col">
