@@ -53,7 +53,7 @@ OVERVIEW = {'en': 'Overview', 'ru': 'Обзор'}
 CATALOG_TITLE = {'en': 'Discovery Catalog', 'ru': 'Каталог сценариев для применения AI'}
 INTRO = {
     'en': 'The Discovery Catalog is a map of a bank and, for each part of the map, a list of scenarios in which AI could help. It gives a uniform view of the Bank\'s primary value chains, shared capabilities, steering and control, and for each it shows where AI can increase visibility and insight, automate operational flows, enable people at the point of work, and open new offerings. It holds 1,110 scenarios in nine areas. Use it to find and compare opportunities; nothing in it has been selected or approved.',
-    'ru': 'Банковские услуги, клиентские пути и операционные возможности, в которых AI может принести пользу. Изучите карту и оцените каждую возможность с учётом условий её применения.',
+    'ru': 'Каталог — это карта банка: для каждой её части приведены сценарии, в которых AI может принести пользу. Он охватывает основные бизнес-процессы, общие банковские функции, управление и контроль и показывает, где AI помогает лучше видеть и анализировать, автоматизировать операции, поддерживать сотрудников в работе и создавать новые продукты. В каталоге 1 101 сценарий в девяти областях. Используйте его, чтобы находить и сравнивать возможности: ни один сценарий пока не отобран и не утверждён.',
 }
 
 
