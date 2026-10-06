@@ -1,11 +1,11 @@
-# Delivery Pipeline
+# Projects
 
-This section presents project definitions and the evidence of their progress. Each entry states its purpose, scope and current status so that a proposal, an implementation and an operating solution can be distinguished clearly.
+This section shows the projects that AICC proposes or runs, each with its documents. A project is an Initiative of the AICC portfolio: it enters as Proposed, is scoped and approved through the business case, and is delivered and accepted under the Solution Lifecycle Model. The status of each project is its state in that flow.
 
 ## Project register
 
 | Project | Intended outcome | Status |
 | --- | --- | --- |
-| [Customer Intelligence–Enabled Service Resolution](service-resolution/) | Help service employees understand a customer's unresolved issue and identify an evidence-supported next step. | Proposal |
+| [Customer Intelligence–Enabled Service Resolution](service-resolution/) | Help service employees understand a customer's unresolved issue and take a verified next step, with every action approved by the employee. | Proposed initiative |
 
-The first entry defines a proposed pilot. Funding, delivery dates and approval to operate are not established by its publication here.
+A proposed initiative is not yet approved: its business case, funding and dates are decided when it passes the portfolio gates.

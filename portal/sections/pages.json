@@ -2,7 +2,7 @@
   {"section":"initiatives","path":"initiatives/","source":"index.md","title":{"en":"Portfolio","ru":"Портфель инициатив"},"status":{"en":"Selected initiatives","ru":"Отобранные инициативы"}},
   {"section":"initiatives","path":"initiatives/selection/","source":"selection.md","title":{"en":"Selection approach","ru":"Подход к отбору"},"status":{"en":"Guidance","ru":"Рекомендации"}},
   {"section":"initiatives","path":"initiatives/register/","source":"register.md","title":{"en":"Initiative register","ru":"Реестр инициатив"},"status":{"en":"0 initiatives","ru":"0 инициатив"}},
-  {"section":"projects","path":"projects/","source":"index.md","title":{"en":"Delivery Pipeline","ru":"Проекты"},"status":{"en":"Project register","ru":"Реестр проектов"}},
-  {"section":"projects","path":"projects/service-resolution/","source":"html-alt/intelligent-customer-service-resolution","title":{"en":"Customer Intelligence–Enabled Service Resolution","ru":"Разрешение вопросов клиентского обслуживания на основе Customer Intelligence"},"status":{"en":"Proposal","ru":"Предложение"},"renderer":"project"},
+  {"section":"projects","path":"projects/","source":"index.md","title":{"en":"Projects","ru":"Проекты"},"status":{"en":"Project register","ru":"Реестр проектов"}},
+  {"section":"projects","path":"projects/service-resolution/","source":"html-alt/intelligent-customer-service-resolution","title":{"en":"Customer Intelligence–Enabled Service Resolution","ru":"Решение клиентских обращений на основе клиентской аналитики"},"status":{"en":"Proposed initiative","ru":"Предлагаемая инициатива"},"renderer":"project"},
   {"section":"lab","path":"lab/","source":"html-alt/cloudlab/index.html","title":{"en":"AI Lab","ru":"AI Lab"},"status":{"en":"Concept","ru":"Концепция"},"renderer":"lab"}
 ]

@@ -39,8 +39,8 @@ class NeighbourRendering(unittest.TestCase):
         root = workspace.ROOT / 'portal/sections'
         self.assertIn('No initiatives have been selected', (root / 'initiatives/en/register.md').read_text())
         self.assertIn('не отобрано ни одной инициативы', (root / 'initiatives/ru/register.md').read_text())
-        self.assertIn('**Status: proposal.**', (root / 'projects/en/service-resolution.md').read_text())
-        self.assertIn('**Статус: предложение.**', (root / 'projects/ru/service-resolution.md').read_text())
+        self.assertIn('| Proposed initiative |', (root / 'projects/en/index.md').read_text())
+        self.assertIn('| Предлагаемая инициатива |', (root / 'projects/ru/index.md').read_text())
 
     def test_domain_preview_stage_links_reach_preserved_flow_actions(self):
         renderer = neighbours.finance_renderer()

@@ -20,15 +20,15 @@ import shutil
 import workspace
 
 SOURCE = workspace.ROOT / 'html-alt/intelligent-customer-service-resolution'
-ROUTES = {'start': '', 'business-use-case': 'business-case/', 'charter-guide': 'charter-selection/',
-          'payment-charter': 'payment-issue/', 'dispute-charter': 'card-dispute/', 'kyc-charter': 'onboarding-kyc/',
-          'technical-blueprint': 'technical-blueprint/', 'journey-profiles': 'journey-profiles/',
-          'platform-map': 'platform-readiness/'}
+ROUTES = {'start': '', 'charter': 'charter/', 'journeys': 'journeys/', 'journey-payment': 'journeys/payment-issue/',
+          'journey-dispute': 'journeys/card-dispute/', 'journey-kyc': 'journeys/onboarding-kyc/', 'governance': 'governance/',
+          'how-it-works': 'how-it-works/', 'controls': 'controls-and-evidence/', 'technical-design': 'technical-design/',
+          'journey-profiles': 'journey-profiles/', 'it-readiness': 'it-readiness/'}
 UI = {'en': {'overview': 'Project overview', 'documents': 'Project documents', 'contents': 'In this document', 'register': 'Project register',
-             'proposal': 'Proposal', 'expand': 'Expand diagram', 'close': 'Close', 'fit': 'Fit', 'actual': '100%',
+             'proposal': 'Proposed initiative', 'expand': 'Expand diagram', 'close': 'Close', 'fit': 'Fit', 'actual': '100%',
              'out': 'Zoom out', 'in': 'Zoom in', 'view': 'Expanded diagram', 'hint': 'Scroll to pan · Ctrl/⌘ + wheel to zoom'},
       'ru': {'overview': 'Обзор проекта', 'documents': 'Документы проекта', 'contents': 'Разделы документа', 'register': 'Реестр проектов',
-             'proposal': 'Предложение', 'expand': 'Развернуть диаграмму', 'close': 'Закрыть', 'fit': 'Вписать', 'actual': '100%',
+             'proposal': 'Предлагаемая инициатива', 'expand': 'Развернуть диаграмму', 'close': 'Закрыть', 'fit': 'Вписать', 'actual': '100%',
              'out': 'Уменьшить', 'in': 'Увеличить', 'view': 'Развернутая диаграмма', 'hint': 'Прокрутка для перемещения · Ctrl/⌘ + колесо для масштаба'}}
 
 
@@ -141,7 +141,7 @@ def render(doc, docs, owners, lang):
             last = chunks[-1]; end = last.rfind('</section>')
             body += '<section class="project-topic">' + last[:end] + '</section>' + last[end:]
     else:
-        cards = ''.join(f'<a class="project-card" href="{workspace.relative(url, other["url"])}"><strong>{escape(other["label"])}</strong><span>{escape(other["title"])}</span></a>' for other in docs[1:] if other['key'] not in ('payment-charter', 'dispute-charter', 'kyc-charter'))
+        cards = ''.join(f'<a class="project-card" href="{workspace.relative(url, other["url"])}"><strong>{escape(other["label"])}</strong><span>{escape(other["title"])}</span></a>' for other in docs[1:] if other['key'] not in ('journey-payment', 'journey-dispute', 'journey-kyc'))
         body += f'<section class="project-topic"><h2>{ui["documents"]}</h2><div class="project-document-grid">{cards}</div></section>'
     for number, markup in enumerate(diagrams): body = body.replace(f'<!--PROJECT_DIAGRAM_{number}-->', markup)
     back = '' if doc['key'] == 'start' else f'<nav class="project-breadcrumb" aria-label="{ui["overview"]}"><a href="{workspace.relative(url, docs[0]["url"])}">{escape(docs[0]["title"])}</a><span aria-hidden="true"> / </span><span>{escape(doc["label"])}</span></nav>'
@@ -160,8 +160,11 @@ def build(output):
             page = page.replace('</head>', head + '\n</head>', 1)
             target = output / url.strip('/') / 'index.html'; target.parent.mkdir(parents=True, exist_ok=True); target.write_text(page)
             entries.append({'u': url, 't': doc['title'], 'h': doc['label'], 'x': _Text(doc['body']).text()})
-            for match in re.finditer(r'<h[34]\b[^>]*id="([^"]+)"[^>]*>(.*?)</h[34]>(.*?)(?=<h[34]\b|$)', doc['body'], re.S):
-                entries.append({'u': url + '#' + match[1], 't': doc['title'], 'h': _Text(match[2]).text(), 'x': _Text(match[3]).text()})
+            # The document title has the page-level entry; every subordinate heading gets its own.
+            title = re.search(r'<h[12]\b([^>]*)>', doc['body']); title = re.search(r'id="([^"]+)"', title[1]) if title else None
+            for level, identifier, heading, text in re.findall(r'<h([234])\b[^>]*id="([^"]+)"[^>]*>(.*?)</h\1>(.*?)(?=<h[234]\b|$)', doc['body'], re.S):
+                if title and identifier == title[1]: continue
+                entries.append({'u': url + '#' + identifier, 't': doc['title'], 'h': _Text(heading).text(), 'x': _Text(text).text()})
         index_path.write_text(json.dumps(entries, ensure_ascii=False, separators=(',', ':')))
     for name in ('project.css', 'project.js'): shutil.copyfile(workspace.ROOT / 'portal/site' / name, output / 'assets' / name)
-    return 18
+    return 2 * len(ROUTES)

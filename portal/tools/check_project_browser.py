@@ -90,33 +90,33 @@ def run():
                             diagram_controls(page,counts,every=True)
                             page.locator('.o-footer .pagefb').click();expect(page.locator('#fb')).to_be_visible();page.keyboard.press('Escape')
                             counts['feedback_checks']+=1;counts['page_views']+=1
-                            if source in ('start','business-use-case','technical-blueprint'):
+                            if source in ('start','charter','technical-design'):
                                 page.evaluate('scrollTo(0,0)');page.screenshot(path=str(REPORT/f'{lang}-{source}-{width}-{theme}.png'))
                         # Native document contents must be discoverable on desktop and mobile.
-                        page.goto(base+f'/{lang}/projects/service-resolution/business-case/')
+                        page.goto(base+f'/{lang}/projects/service-resolution/charter/')
                         if width<=1100: page.locator('.o-nav>details>summary').click()
                         contents=page.locator('.project-nav-topics>summary');expect(contents).to_be_visible();contents.click()
                         first=page.locator('.project-nav-topics a').first;first.click()
-                        assert urlsplit(page.url).fragment.startswith(lang+'-business-use-case-')
+                        assert urlsplit(page.url).fragment.startswith(lang+'-charter-')
                         counts['section_links']=counts.get('section_links',0)+1
                         # A source reference reaches another document, rather than an absent fragment.
-                        page.goto(base+f'/{lang}/projects/service-resolution/business-case/')
-                        page.locator(f'.project-content a[href="../payment-issue/#{lang}-payment-charter"]').first.click()
-                        assert page.url.endswith('/payment-issue/#'+lang+'-payment-charter')
+                        page.goto(base+f'/{lang}/projects/service-resolution/charter/')
+                        page.locator(f'.project-content a[href="../journeys/#{lang}-journeys"]').first.click()
+                        assert page.url.endswith('/journeys/#'+lang+'-journeys')
                         page.locator('.lang-switch a[lang="'+('ru' if lang=='en' else 'en')+'"]').click()
-                        assert ('/ru/' if lang=='en' else '/en/') in page.url and '/payment-issue/' in page.url
+                        assert ('/ru/' if lang=='en' else '/en/') in page.url and '/journeys/' in page.url
                         print(f'Checked project {lang}, {width}px, {theme}',flush=True)
             for width in (320,768):
                 page.set_viewport_size({'width':width,'height':1000})
                 for lang in ('en','ru'):
                     for theme in ('light','dark'):
                         page.evaluate('t=>localStorage.setItem("aicc-theme",t)',theme)
-                        page.goto(base+f'/{lang}/projects/service-resolution/technical-blueprint/',wait_until='networkidle')
+                        page.goto(base+f'/{lang}/projects/service-resolution/technical-design/',wait_until='networkidle')
                         assert page.evaluate(MEASURE)['scroll']<=width+1
                         diagram_controls(page,counts);counts['page_views']+=1
             for lang in ('en','ru'):
                 page.goto(base+f'/{lang}/projects/')
-                page.locator('#q').fill('Request-scoped workflow state' if lang=='en' else 'Customer Context Service')
+                page.locator('#q').fill('Functions and who uses them' if lang=='en' else 'Функции и их пользователи')
                 result=page.locator('#results a').first;expect(result).to_be_visible();result.click()
                 assert '/projects/service-resolution/' in page.url
                 counts['search_checks']+=1
@@ -143,8 +143,8 @@ def run():
                         counts['portable_pages']+=1
                     filepage.goto((target/lang/'projects/service-resolution/index.html').as_uri())
                     filepage.locator('.project-content .audience-card').first.click()
-                    filepage.wait_for_url(lambda u: urlsplit(u).path.endswith('/payment-issue/index.html') and urlsplit(u).fragment==lang+'-payment-charter')
-                    filepage.locator('#q').fill('purpose-bound' if lang=='en' else 'Customer Context Service')
+                    filepage.wait_for_url(lambda u: urlsplit(u).path.endswith('/journeys/payment-issue/index.html') and urlsplit(u).fragment==lang+'-journey-payment')
+                    filepage.locator('#q').fill('Hypothesis' if lang=='en' else 'Гипотеза')
                     result=filepage.locator('#results a').first;expect(result).to_be_visible();result.click()
                     assert '/projects/service-resolution/' in filepage.url
                     counts['search_checks']+=1

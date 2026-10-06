@@ -2,6 +2,6 @@
   {"id":"aicc","path":"","icon":"building-2","label":{"en":"AICC","ru":"AICC"}},
   {"id":"discovery","path":"discovery/","icon":"search","label":{"en":"Discovery Catalog","ru":"Каталог сценариев"}},
   {"id":"initiatives","path":"initiatives/","icon":"layers","label":{"en":"Portfolio","ru":"Портфель инициатив"}},
-  {"id":"projects","path":"projects/","icon":"workflow","label":{"en":"Delivery Pipeline","ru":"Проекты"}},
+  {"id":"projects","path":"projects/","icon":"workflow","label":{"en":"Projects","ru":"Проекты"}},
   {"id":"lab","path":"lab/","icon":"cloud","label":{"en":"AI Lab","ru":"AI Lab"}}
 ]

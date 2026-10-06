@@ -3,14 +3,16 @@
 from collections import Counter
 from html.parser import HTMLParser
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
 # Literal source-to-reader contract; does not import the renderer or its routing data.
-DOCUMENTS = [('start', ''), ('business-use-case', 'business-case'), ('charter-guide', 'charter-selection'),
-             ('payment-charter', 'payment-issue'), ('dispute-charter', 'card-dispute'), ('kyc-charter', 'onboarding-kyc'),
-             ('technical-blueprint', 'technical-blueprint'), ('journey-profiles', 'journey-profiles'), ('platform-map', 'platform-readiness')]
+DOCUMENTS = [('start', ''), ('charter', 'charter'), ('journeys', 'journeys'), ('journey-payment', 'journeys/payment-issue'),
+             ('journey-dispute', 'journeys/card-dispute'), ('journey-kyc', 'journeys/onboarding-kyc'), ('governance', 'governance'),
+             ('how-it-works', 'how-it-works'), ('controls', 'controls-and-evidence'), ('technical-design', 'technical-design'),
+             ('journey-profiles', 'journey-profiles'), ('it-readiness', 'it-readiness')]
 ATOMS = {'h1', 'h2', 'h3', 'h4', 'p', 'li', 'th', 'td', 'pre'}
 
 
@@ -86,8 +88,11 @@ def check(output):
         # Document titles have page-level entries; every subordinate heading is searchable.
         for identifier,heading in heading_destinations:
             if heading not in indexed and heading!=original.documents[identifier]['headings'][0][0]: errors.append(f'{lang}: unsearchable heading {heading}')
-        if diagrams!=34 or tables!=47: errors.append(f'{lang}: expected 34 diagrams and 47 tables, got {diagrams}/{tables}')
-        counts.update({lang+'_project_documents':9,lang+'_project_diagrams':diagrams,lang+'_project_tables':tables,lang+'_project_content_atoms':atoms})
+        # Published diagrams and tables equal those of the source workbook.
+        source_text=(ROOT/f'html-alt/intelligent-customer-service-resolution/{lang}/index.html').read_text()
+        expected_diagrams=source_text.count('<figure class="diagram"'); expected_tables=len(re.findall(r'<table\b',source_text))
+        if diagrams!=expected_diagrams or tables!=expected_tables: errors.append(f'{lang}: expected {expected_diagrams} diagrams and {expected_tables} tables, got {diagrams}/{tables}')
+        counts.update({lang+'_project_documents':len(DOCUMENTS),lang+'_project_diagrams':diagrams,lang+'_project_tables':tables,lang+'_project_content_atoms':atoms})
     return errors,counts
 
 
