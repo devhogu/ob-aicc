@@ -334,7 +334,10 @@ def discovery_page(source, relative, lang):
     body = re.sub(r'<button\b([^>]*class="flow-stages__stage"[^>]*)>', stage_target, body)
     themes = horizon_themes_cached(lang)
     if relative == Path('index.html') and themes:
-        body = body.replace('<div role="region" aria-label="Peer frameworks">', horizon_box(themes, lang) + '<div role="region" aria-label="Peer frameworks">', 1)
+        peer_region = re.search(r'<div\b[^>]*role="region"[^>]*>\s*<div\b[^>]*class="peer-label"', body)
+        if not peer_region:
+            raise ValueError(f'Missing peer framework region: {lang}/{relative}')
+        body = body[:peer_region.start()] + horizon_box(themes, lang) + body[peer_region.start():]
     if themes:
         body = horizon_chips(body, url, lang, themes)
     # Add stable fragment targets without changing original scenario URNs or copy.

@@ -2,8 +2,8 @@
 .discovery-content{
   --paper:var(--surface);--paper-soft:var(--surface-subtle);--paper-2:var(--surface-subtle);--paper-3:var(--surface-subtle);--paper-deep:var(--surface-subtle);--paper-warm:var(--surface);--paper-blue-soft:var(--surface);
   --ink-primary:var(--text);--ink-body:var(--text);--ink-secondary:var(--text-muted);--ink-tertiary:var(--text-muted);--ink-eyebrow:var(--text-muted);--ink-accent:var(--link);--ink-accent-lt:var(--link);--ink-accent-deep:var(--link);--genai-label:var(--link);--ink-orange-deep:var(--text);
-  --genai-soft:var(--surface-subtle);--genai-line:var(--discovery-border);--genai-text:var(--text);--genai-accent:var(--link);
-  --border:var(--discovery-border);--border-hover:var(--border-control);--rule-soft:var(--discovery-border);--rule-warm:var(--discovery-border);--overlay-scrim:var(--overlay);--shadow-modal:var(--shadow-panel);
+  --genai-soft:var(--surface-subtle);--genai-line:var(--border);--genai-text:var(--text);--genai-accent:var(--link);
+  --border:inherit;--border-hover:var(--border-control);--rule-soft:var(--border);--rule-warm:var(--border);--overlay-scrim:var(--overlay);--shadow-modal:var(--shadow-panel);
   --shadow-card:none;--shadow-hover:none;
   --font-serif:var(--font-heading);--font-sans:var(--font-body);--font-mono:ui-monospace,SFMono-Regular,Consolas,monospace;
   --text-body:1rem;--text-page-title:var(--text-title);--text-intent:var(--text-subhead);
@@ -11,8 +11,6 @@
   --text-card-title:var(--text-subhead);--text-card-title-lg:1.25rem;--text-flow:1rem;
   --text-eyebrow:var(--text-xs);--text-mono-tiny:var(--text-xs);--text-lens:var(--text-sm);
 }
-:root[data-theme=light]{--discovery-border:#dcd6de}
-:root[data-theme=dark]{--discovery-border:#3c3840}
 .discovery-content>.page{padding:0;max-width:none}
 /* Match AICC's page titles, introductions, reading text and card hierarchy. */
 .discovery-content :is(h1,h2,h3,h4,.project-entry__title){font-family:var(--font-heading);font-weight:700;line-height:1.22;letter-spacing:normal}

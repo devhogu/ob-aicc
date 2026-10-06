@@ -26,6 +26,7 @@ class Inspection(HTMLParser):
         self.nav_footer_links, self.footer_links, self.feedback_refs = [], [], []
         self.feedback_buttons = 0
         self.cards, self.card, self.depth = {}, None, 0
+        self.horizon_cards = 0
         self.derived = None
         self.contexts, self.context_tag, self.context_card_count = [], None, 0
         self.feed(text)
@@ -33,6 +34,8 @@ class Inspection(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         classes = attrs.get('class', '').split()
+        if 'card--horizon' in classes:
+            self.horizon_cards += 1
         if 'problems-row' in classes or 'discovery-context-card' in classes:
             self.contexts.append([])
             self.context_tag = tag
@@ -162,6 +165,8 @@ def check():
                 if 'class="discovery-notice"' in text:
                     errors.append(f'{path}: removed Discovery notice is still rendered')
                 relative = page.relative_to(OUTPUT / lang / 'discovery')
+                if relative == Path('index.html') and parsed.horizon_cards != 1:
+                    errors.append(f'{path}: overview must include one Regulatory Horizon card')
                 if relative.as_posix() in AUTHORED_DISCOVERY:
                     continue
                 original = Inspection((source / relative).read_text())
