@@ -6,13 +6,23 @@
   --border:var(--discovery-border);--border-hover:var(--border-control);--rule-soft:var(--discovery-border);--rule-warm:var(--discovery-border);--overlay-scrim:var(--overlay);--shadow-modal:var(--shadow-panel);
   --brush-title-start:color-mix(in srgb,var(--brand) 22%,transparent);--brush-title-mid:color-mix(in srgb,var(--brand) 8%,transparent);--brush-peer-start:color-mix(in srgb,var(--shell-accent-secondary) 22%,transparent);--brush-peer-mid:color-mix(in srgb,var(--shell-accent-secondary) 8%,transparent);--brush-flow-start:color-mix(in srgb,var(--brand) 18%,transparent);--brush-flow-mid:color-mix(in srgb,var(--brand) 6%,transparent);--brush-orange-start:color-mix(in srgb,var(--warning) 20%,transparent);--brush-orange-mid:color-mix(in srgb,var(--warning) 7%,transparent);
   --font-serif:var(--font-heading);--font-sans:var(--font-body);--font-mono:ui-monospace,SFMono-Regular,Consolas,monospace;
-  --text-body:.9375rem;--text-page-title:clamp(1.8rem,3vw,2.65rem);
+  --text-body:1rem;--text-page-title:var(--text-title);--text-intent:var(--text-subhead);
+  --text-h2:var(--text-section);--text-h3:var(--text-subhead);--text-h4:1rem;
+  --text-card-title:var(--text-subhead);--text-card-title-lg:1.25rem;--text-flow:1rem;
+  --text-eyebrow:var(--text-xs);--text-mono-tiny:var(--text-xs);--text-lens:var(--text-sm);
 }
 :root[data-theme=light]{--discovery-border:#dcd6de}
 :root[data-theme=dark]{--discovery-border:#3c3840}
 .discovery-content>.page{padding:0;max-width:none}
-.discovery-content h1,.discovery-content h2,.discovery-content h3{font-family:var(--font-heading)}
-.discovery-content{font-family:var(--font-body);line-height:1.55;padding-bottom:30px;min-width:0}
+/* Match AICC's page titles, introductions, reading text and card hierarchy. */
+.discovery-content :is(h1,h2,h3,h4,.project-entry__title){font-family:var(--font-heading);font-weight:700;line-height:1.22;letter-spacing:normal}
+.discovery-content{font-family:var(--font-body);line-height:1.5;padding-bottom:30px;min-width:0}
+.discovery-content p{font-family:var(--font-body);line-height:1.5}
+.discovery-content .page-header__intent{font-size:var(--text-intent);line-height:28px}
+.discovery-content .card__body{--text-body:.9375rem}
+.discovery-content .sub-group__items{line-height:1.5}
+.discovery-content :is(.page-header__eyebrow,.card__eyebrow,.sub-group__label,.flow-section__label,.peer-label,.breadcrumb,.sib-nav,.problems-tab-label,.problems-lens,.scenarios-eyebrow,.scenarios-col-label,.scenario-lens,.scenario-complexity,.scenario-section__label,.okr-kr__dim,.flow-stages__stage,.modal__eyebrow,.modal__problem-label,.project-entry__label){font-family:var(--font-body);letter-spacing:.02em}
+.discovery-content :is(.breadcrumb,.sib-nav){font-size:var(--text-sm);letter-spacing:normal}
 .discovery-content .card__body p{margin:0}
 .discovery-content .modal p{margin:0 0 12px}
 .discovery-content .modal{z-index:200}
@@ -25,4 +35,5 @@
 .discovery-workspace .o-header,.discovery-workspace .o-nav{font-family:var(--font-body)}
 .discovery-workspace .o-header{border-bottom:2px solid var(--brand)}
 @media(max-width:768px){.discovery-content .top-band,.discovery-content .main-row,.discovery-content .below-band,.discovery-content .cap-row,.discovery-content .peer-row{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:650px){.discovery-content{--text-page-title:1.75rem;--text-h2:1.375rem}}
 @media(max-width:380px){.discovery-content .page-header__title{overflow-wrap:anywhere}}
