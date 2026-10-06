@@ -159,14 +159,31 @@ def main():
                         problems.append('sidebar/footer/feedback')
                     if problems:
                         errors.append(f'{width}/{theme} {route}: {", ".join(problems)}')
+                    if route == 'en/discovery/index.html':
+                        tiles = page.locator('.workflow-view--tiles')
+                        previews = page.locator('.workflow-view--previews')
+                        assert tiles.is_visible() and not previews.is_visible()
+                        assert tiles.locator('a.flow-item__name').count() == 11
+                        page.locator('input[name="workflow-view"][value="tiles"]').focus()
+                        page.keyboard.press('ArrowRight')
+                        assert previews.is_visible() and not tiles.is_visible()
+                        assert previews.locator('.workflow-preview').count() == 11
+                        assert previews.locator('.workflow-preview__stages').first.locator('li').all_text_contents() == [
+                            'Account opening', 'Fund', 'Transact', 'Service', 'Retain',
+                        ]
+                        page.keyboard.press('ArrowLeft')
+                        assert tiles.is_visible() and not previews.is_visible()
+                        page.locator('.workflow-view-switch label').filter(has_text='W2').click()
+                        counts['workflow_view_checks'] += 1
                     if width == 1440 and theme == 'light' and '/discovery/' in route:
                         disclosures = page.locator('.discovery-content details')
                         counts['disclosures_toggled'] += disclosures.count()
                         if disclosures.count():
                             summary = disclosures.first.locator(':scope > summary')
+                            was_open = disclosures.first.evaluate('e=>e.open')
                             summary.click()
-                            if not disclosures.first.evaluate('e=>e.open'):
-                                errors.append('Disclosure did not open: ' + route)
+                            if disclosures.first.evaluate('e=>e.open') == was_open:
+                                errors.append('Disclosure did not toggle: ' + route)
                             # Expand all retained disclosures and check the resulting layout.
                             disclosures.evaluate_all('elements=>elements.forEach(e=>e.open=true)')
                             if page.evaluate('document.documentElement.scrollWidth') > width + 1:

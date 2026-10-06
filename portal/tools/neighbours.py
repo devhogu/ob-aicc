@@ -16,6 +16,7 @@
 #   title_of - extract a page's visible title
 #   write - write a generated section file
 #   local_links - render section-local navigation
+#   workflow_comparison - render overview alternatives using retained workflow stages
 #   discovery_page - retain scenario bodies while replacing presentation chrome
 #   search_entries - index Discovery pages and scenario fragments
 #   build_discovery - generate both retained catalogue editions
@@ -93,6 +94,45 @@ def local_links(url, links):
     return ''.join(f'<a href="{workspace.relative(url, target)}"' + (' aria-current="page"' if target == url else '') + f'>{escape(label)}</a>' for target, label in links)
 
 
+def workflow_comparison(match):
+    """Compare catalogue tiles and stage previews on the English overview only."""
+    source = (SOURCE / 'en/value-streams/index.html').read_text()
+    chunks = re.split(r'<details class="flow-detail" id="([^"]+)">', source)[1:]
+    flows = {}
+    for identifier, chunk in zip(chunks[::2], chunks[1::2]):
+        intent = re.search(r'<p class="flow-detail__intent">(.*?)</p>', chunk, re.S)
+        stages = re.findall(r'<span class="flow-stages__stage-label">(.*?)</span>', chunk, re.S)
+        if not intent or not stages:
+            raise ValueError(f'Missing workflow preview source: {identifier}')
+        flows[identifier] = (intent[1], stages)
+
+    article = re.sub(r'<a class="card__click-target"[^>]*>.*?</a>', '', match[0], flags=re.S)
+    head, remainder = article.split('<div class="card__body">', 1)
+    head = re.sub(r'(<h2[^>]*>)(.*?)(</h2>)', lambda m: m[1] + '<a class="workflow-overview-link" href="value-streams/index.html">' + m[2] + '</a>' + m[3], head, count=1, flags=re.S)
+    body = re.sub(r'[ \t]+$', '', remainder.rsplit('</div>', 1)[0], flags=re.M)
+
+    def preview(item):
+        href, title = item[1], item[2]
+        intent, stages = flows[href.split('#', 1)[1]]
+        steps = ''.join(f'<li>{stage}</li>' for stage in stages)
+        return ('<li class="flow-item"><details class="workflow-preview">'
+                f'<summary>{title}</summary><div class="workflow-preview__body">'
+                f'<p>{intent}</p><ol class="workflow-preview__stages" aria-label="Workflow stages">{steps}</ol>'
+                f'<a class="workflow-explore" href="{href}">Explore workflow and scenarios →</a>'
+                '</div></details></li>')
+
+    previews = re.sub(r'<li class="flow-item">\s*<a href="([^"]+)" class="flow-item__name card-link">(.*?)</a>\s*</li>', preview, body, flags=re.S)
+    previews = previews.replace('<details class="workflow-preview">', '<details class="workflow-preview" open>', 1)
+    switch = ('<fieldset class="workflow-view-switch"><legend>Compare workflow views</legend>'
+              '<label><input type="radio" name="workflow-view" value="tiles" checked>W1 · Tiles</label>'
+              '<label><input type="radio" name="workflow-view" value="previews">W2 · Stage previews</label></fieldset>')
+    return (head + '<div class="card__body"><div class="workflow-comparison">' + switch
+            + '<p class="workflow-count-note">Badges show the number of scenarios.</p>'
+            + f'<div class="workflow-view workflow-view--tiles">{body}</div>'
+            + f'<div class="workflow-view workflow-view--previews">{previews}</div>'
+            + '</div></div></article>')
+
+
 def discovery_page(source, relative, lang):
     """Retain the content layout, local links and scripts, replacing only its shell."""
     label = workspace.section_label('discovery', lang)
@@ -117,16 +157,18 @@ def discovery_page(source, relative, lang):
         # Temporary visual comparison, confined to the English overview.
         if lang == 'en':
             options = iter((
-                ('A', 'Ruled lists'), ('B', 'Individual tiles'), ('C', 'Open directory'),
-                ('D', 'Inset groups'), ('E', 'Compact rows'), ('F', 'Column rails'),
-                ('G', 'Grouped table'), ('H', 'Outline chips'), ('I', 'Open columns'),
-                ('J', 'Dashed card'), ('K', 'Side note'),
+                ('A', 'tiles', 'Tiles · B'), ('B', 'tiles', 'Tiles · B'), ('C', 'workflows', 'Workflow comparison'),
+                ('D', 'groups', 'Grouped rows · E + G'), ('E', 'groups', 'Grouped rows · E + G'),
+                ('F', 'groups', 'Grouped rows · E + G'), ('G', 'groups', 'Grouped rows · E + G'),
+                ('H', 'groups', 'Grouped rows · E + G'), ('I', 'tiles', 'Tiles · B'),
+                ('J', 'deferred', 'Deferred · J'), ('K', 'deferred', 'Deferred · J'),
             ))
             def comparison_card(match):
-                key, name = next(options)
-                return (match[1] + f' data-ui-option="{key}" id="ui-option-{key.lower()}">'
-                        + f'<p class="discovery-option">{key} · {name}</p>')
+                key, pattern, name = next(options)
+                return (match[1] + f' data-ui-option="{key}" data-ui-pattern="{pattern}" id="ui-option-{key.lower()}">'
+                        + f'<p class="discovery-option">{name}</p>')
             body = re.sub(r'(<article class="card[^"]*")>', comparison_card, body)
+            body = re.sub(r'<article class="card card--flow"[^>]*>.*?</article>', workflow_comparison, body, count=1, flags=re.S)
     # Add stable fragment targets without changing original scenario URNs or copy.
     body = re.sub(r'(<details class="scenario-card" data-urn="([^"]+)")', lambda m: m[1] + f' id="scenario-{m[2].rsplit("/", 1)[-1]}"', body)
     source_styles = re.findall(r'<link rel="stylesheet" href="([^"]+)">', source)
