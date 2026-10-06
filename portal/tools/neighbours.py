@@ -62,7 +62,7 @@ HORIZON_TEXT = {
     'en': {'title': 'Regulatory Horizon', 'eyebrow': 'Cross-cutting view', 'box': 'Readiness for rules ahead', 'instruments': 'Instruments', 'chip': 'Regulatory Horizon',
            'intro': 'The kinds of rules that already bind the Bank or are expected to reach it, and the scenarios in this catalog that prepare the Bank for them. Each theme names example instruments as references. Its standing for the Bank comes from the Standards record of the Registry and is to be confirmed by the Control Function Contacts. Preparing early lets the work be planned, piloted and measured before a rule applies.',
            'groups': {'Applies': 'Applies to the Bank', 'Expected': 'Expected', 'Reference': 'Reference'}, 'scenarios': 'scenarios'},
-    'ru': {'title': 'Регуляторный горизонт', 'eyebrow': 'Сквозной взгляд', 'box': 'Готовность к новым требованиям', 'instruments': 'Акты', 'chip': 'Регуляторный горизонт',
+    'ru': {'title': 'Регуляторные требования', 'eyebrow': 'Сквозной взгляд', 'box': 'Готовность к новым требованиям', 'instruments': 'Акты', 'chip': 'Регуляторные требования',
            'intro': 'Виды правил, которые уже обязательны для Банка или предположительно будут на него распространены, и сценарии каталога, которые готовят к ним Банк. Для каждой темы приведены примеры актов. Её статус для Банка взят из реестра «Стандарты» и подлежит подтверждению представителями контрольных функций.',
            'groups': {'Применяется': 'Применяется', 'Ожидается': 'Ожидается', 'Справочный': 'Справочный'}, 'scenarios': 'сценариев'},
 }
