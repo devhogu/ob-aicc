@@ -1,0 +1,35 @@
+<GraceChangePlan graceVersion="4.0" status="applied">
+  <C-PORTFOLIO-DASHBOARD>
+    <IntentSummary>Implement the four-task completed design and build plan approved by the user on 2026-10-06 with “lets do it”. This approval covers source implementation, verified durable reconciliation and apply/archive, commit, push and publication under the standing publish instruction. Registry and charter remain read-only; the dashboard is a public role-safe projection.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist><Value>M-PORTAL-NEIGHBOURS</Value><Value>M-PORTAL-PROJECTION</Value><Value>V-M-PORTAL-NEIGHBOURS</Value></MustExist>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify><Module>M-PORTAL-NEIGHBOURS</Module><Module>M-PORTAL-PROJECTION</Module></MustVerify>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check.py --idempotent</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_neighbours.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_portfolio.py</Command></MustPassCommand>
+      <MustPassCommand><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_portfolio_browser.py</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors><M-PORTAL-NEIGHBOURS /><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /></GraphAnchors>
+      <VerificationAnchors><V-M-PORTAL-NEIGHBOURS /><V-M-PORTAL-PROJECTION /><V-M-PORTAL-LOCALIZATION /></VerificationAnchors>
+      <ContextArtifact>ux-guidelines.xml</ContextArtifact><ContextArtifact>deployment.xml</ContextArtifact>
+    </DurableScope>
+    <ObservedWriteScope>
+      <File>portal/tools/portfolio.py</File><File>portal/tools/neighbours.py</File><File>portal/tools/workspace.py</File>
+      <File>portal/site/portfolio.css</File><File>portal/site/portfolio.js</File><File>portal/sections/pages.json</File>
+      <Glob>portal/sections/initiatives/**/*.md</Glob><File>portal/tests/test_portfolio.py</File><File>portal/tests/test_neighbours.py</File>
+      <File>portal/tools/check_portfolio.py</File><File>portal/tools/check_portfolio_browser.py</File><File>portal/tools/check_neighbours.py</File><File>portal/tools/check_neighbours_browser.py</File>
+      <Glob>html/aicc/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001><Title>Project and validate maintained portfolio records</Title><DependsOn></DependsOn><AcceptanceCriteria><Criterion>Read the actual ten Registry records, validate states and derive role-safe fields, order and limits; independent fixtures verify shared capacity, Waiting, standing exclusions and unknown dates/measures.</Criterion></AcceptanceCriteria><Verification><Command>python3 -m unittest discover -s portal/tests -p test_portfolio.py</Command></Verification></T-001>
+      <T-002><Title>Render the English dashboard and initiative summaries</Title><DependsOn>T-001</DependsOn><AcceptanceCriteria><Criterion>Board, Review, Standing, Roadmap, register, selection and initiative destinations use one derived projection, practical gates, accessible filters and no-script reading with scoped search.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check_portfolio.py</Command></Verification></T-002>
+      <T-003><Title>Render the Russian counterpart and verify real consumer paths</Title><DependsOn>T-002</DependsOn><AcceptanceCriteria><Criterion>Reviewed Russian sources, matched controls and themes pass desktop/mobile, keyboard, search, language, no-script and disposable direct-file checks; established site and section checks pass.</Criterion></AcceptanceCriteria><Verification><Command>python3 -m unittest discover -s portal/tests</Command><Command>python3 portal/tools/check.py --idempotent</Command><Command>python3 portal/tools/check_neighbours.py</Command><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_portfolio_browser.py</Command></Verification></T-003>
+      <T-004><Title>Reconcile approved durable state and publish</Title><DependsOn>T-003</DependsOn><AcceptanceCriteria><Criterion>Ownership and verification describe the projection and its boundary; passing fresh evidence permits apply/archive. Commit and push clean source, publish with maintained tool, verify served manifest and bilingual dashboard, preserving concurrent work.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check_portfolio.py</Command></Verification></T-004>
+    </ImplementationPlan>
+  </C-PORTFOLIO-DASHBOARD>
+</GraceChangePlan>

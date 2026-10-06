@@ -1,0 +1,50 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-PORTFOLIO-DASHBOARD>
+    <Summary>Replace the empty Portfolio scaffold with an interactive operating dashboard of AICC's recorded portfolio, grounded in the charter and existing Registry, with English design first and equivalent Russian presentation.</Summary>
+    <Problem>The initiatives section describes selection and incorrectly reports zero initiatives while the Registry records six ordinary initiatives in Discovery: Scoping and four approved Standing Initiatives. Readers cannot inspect the portfolio flow, capacity, next gate, outstanding information or recorded progress from this section.</Problem>
+    <Goals>
+      <Goal>Make /en/initiatives/ and /ru/initiatives/ the practical portfolio view: a Kanban board, a review queue, Standing Initiatives and roadmap, with a compact register and initiative summaries.</Goal>
+      <Goal>Project maintained Registry working records into dated non-sensitive progress views; keep the Registry as the record owner until the recorded Jira cutover.</Goal>
+      <Goal>Show each initiative's recorded state and stage, strategic priority, recorded order, owner role, expected outcome, next gate and decider, dependencies, missing information and source references.</Goal>
+      <Goal>Make review work clear: scope with the owner, prepare the business case, obtain required clearances, approve and rank, pull within capacity, test the MVP, decide on continuation and accept the outcome.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Use the Portfolio Management Model 5.2 and Solution Lifecycle Model 5.1 for columns and state mapping. The columns are Funnel, Reviewing, Analyzing, Portfolio Backlog, MVP, Implementation and Done; Done distinguishes Review from Accepted and Closed. Waiting retains the underlying column and dependency reference. Deferred and terminal off-flow states remain visible separately.</Constraint>
+      <Constraint>MVP and Implementation share the recorded ordinary Active Initiative limit of one. Standing Initiatives are separate and excluded from ordinary flow measures, while their Features share the existing delivery limits. Derive later limits from their maintained record, not a second dashboard setting.</Constraint>
+      <Constraint>Read identity, state, stage, rank and dates from the Portfolio Backlog; use Initiative Briefs for recorded scope and outcomes, board.md for limits, and Dashboard, Priorities, Dependencies and Roadmap for their corresponding facts. Validate disagreements rather than silently selecting contradictory states.</Constraint>
+      <Constraint>Preserve the initial recorded order of the first-100-days goals. Display WSJF only where scores exist, without automatically reordering the baseline. Show the stated order basis. An expected Risk Tier is not an assigned or cleared Risk Tier.</Constraint>
+      <Constraint>Unknown dates, owners, gate evidence and measurements remain explicitly unknown. Never turn a missing measure into zero, use file or publication dates as stage-entry dates, infer a business-case approval from a goal confirmation, or invent achieved benefits and readiness percentages.</Constraint>
+      <Constraint>Keep owners as roles and omit personal names, Bank financial figures, data, code and closed evidence bodies from published progress summaries. References identify authoritative records; summaries do not become governance records or a separate maintained register.</Constraint>
+      <Constraint>Use the existing static build and common AICC shell, Golos body and TT Norms headings, neutral compact cards, magenta section rules and tapered selection accents. Preserve section-scoped search, language counterparts, mobile reading, keyboard focus, light/dark themes and no-script content.</Constraint>
+      <Constraint>The first version provides viewing, filtering and review preparation. It does not persist state transitions or approvals in browser storage or introduce a backend. Decisions and maintained working-state changes follow the existing Registry workflow. A later shared editor or Jira integration requires a separate decision.</Constraint>
+      <Constraint>Keep unrelated Discovery, Delivery Pipeline, Lab and charter content intact. Do not infer a portfolio identifier or approved state for the service-resolution project proposal. Shared section navigation remains the connection between portal neighbours.</Constraint>
+      <Constraint>Build English first, then use the reviewed corresponding Russian records and equivalent controls and layouts. Preserve existing routes, including register and selection, with practical local navigation.</Constraint>
+      <Constraint>After approval and successful checks, commit, push and publish using the maintained deployment tool under the user's standing publishing instruction; verify the served manifest and actual bilingual dashboard.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Changing charter rules, authoritative initiative states, ranks, decisions, appointments, limits, financial envelopes or benefit claims.</NonGoal>
+      <NonGoal>A browser-local operational database, authenticated editor, Jira cutover, new reporting cadence, parallel record store or a new banking workflow.</NonGoal>
+      <NonGoal>Promoting STS prototypes as AICC rules, conflating the Initiative board with the Program Kanban, or treating Discovery catalog scenarios as already selected initiatives.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>The current baseline renders exactly six ordinary initiatives in Reviewing and four approved Standing Initiatives separately. Ordinary Active capacity is 0/1, the approved ordinary pull queue is empty, and no run-rate Feature is reported Active.</Criterion>
+      <Criterion>Every recorded initiative is reachable from the dashboard, register and section search, with a matching language route and meaningful next gate, responsible roles, missing information and actual record references.</Criterion>
+      <Criterion>Board, review queue and register share the same derived initiative identities and states. Priority and text filtering, board/register navigation, disclosures and fragment destinations operate accessibly without changing authoritative records.</Criterion>
+      <Criterion>Recorded state/stage mapping, Waiting capacity, shared WIP, standing exclusions, terminal states and unknown measurements are independently verified using domain fixtures and compared against the actual maintained baseline.</Criterion>
+      <Criterion>Both editions use matching AICC style in both themes without page overflow; full readable content is available with scripting disabled and in disposable portable output.</Criterion>
+      <Criterion>The source projection, unit checks, full-site links and repeat build, section-boundary checks and relevant browser paths pass. Durable module ownership and verification describe the portfolio projection without creating another record owner.</Criterion>
+      <Criterion>The clean committed source is published and the served manifest and bilingual dashboard match the verified release.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-NEIGHBOURS /><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_neighbours.py</ExpectedCommand>
+      <ExpectedEvidence>Independent record-to-dashboard comparison, state and capacity boundary fixtures, bilingual theme and mobile checks, actual search and card destinations, no-script reading, portable export and served release verification.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The user approved the completed design and build plan on 2026-10-06 with ‘lets do it’. The first dashboard is a periodically published interactive projection of maintained records, not a shared editor.</Assumption>
+      <Assumption>The English Dashboard's recorded date of 2026-10-03 identifies the current baseline snapshot; build and publication dates are distinct.</Assumption>
+    </Assumptions>
+  </C-PORTFOLIO-DASHBOARD>
+</GraceChangeSpec>

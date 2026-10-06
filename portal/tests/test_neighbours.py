@@ -35,10 +35,10 @@ class NeighbourRendering(unittest.TestCase):
         self.assertIn('id="scenario-frontline-service-copilot"', body)
         self.assertNotIn('<main', body)
 
-    def test_portfolio_is_empty_and_project_remains_a_proposal_in_both_editions(self):
+    def test_portfolio_is_record_projected_and_project_remains_a_proposal_in_both_editions(self):
         root = workspace.ROOT / 'portal/sections'
-        self.assertIn('No initiatives have been selected', (root / 'initiatives/en/register.md').read_text())
-        self.assertIn('не отобрано ни одной инициативы', (root / 'initiatives/ru/register.md').read_text())
+        self.assertIn('maintained Registry', (root / 'initiatives/en/register.md').read_text())
+        self.assertIn('рабочих записей реестра', (root / 'initiatives/ru/register.md').read_text())
         self.assertIn('| Proposed initiative |', (root / 'projects/en/index.md').read_text())
         self.assertIn('| Предлагаемая инициатива |', (root / 'projects/ru/index.md').read_text())
 
