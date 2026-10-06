@@ -45,7 +45,7 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 | Dependencies Met by their date |  |
 | Work in progress against the Limits | Initiatives 0 of 1; Features 0 of 1; Capabilities 0 of 1 |
 | Time from a proposal to its approval, and from its approval to its acceptance |  |
-| Funnel: the age of the oldest item, and the items in the funnel | No items in the funnel |
+| Funnel: the age of the oldest item, and the items in the funnel | 1 item; INI-013 entered the Funnel on 2026-10-06; age observation not recorded |
 | Approved Initiatives waiting, and the days waiting | 0 |
 | Business cases returned | 0 |
 | Release: time from verified to released, and the items of the Acceptance Checklist not met |  |

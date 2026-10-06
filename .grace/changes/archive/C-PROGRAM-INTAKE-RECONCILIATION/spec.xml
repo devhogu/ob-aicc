@@ -1,0 +1,13 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+<C-PROGRAM-INTAKE-RECONCILIATION>
+<Summary>Reconcile the already authorized INI-013 intake with the incoming reviewed Russian terminology before publication.</Summary>
+<Problem>The Russian Funnel terminology changed during the push, and the retained Dashboard measure still says the Funnel is empty despite the recorded intake.</Problem>
+<Goals><Goal>Preserve the incoming reviewed corpus, use its Funnel terminology in the new intake records, and report the actual one-item intake observation without inventing approval or delivery.</Goal></Goals>
+<Constraints><Constraint>Continue the user's explicit push and publish authority for the same Program Backlog outcome and bounded intake scope. Existing ranks, decisions, delivery counts, full native project content and shared limits stay unchanged. Incoming corpus edits are integrated as their reviewed commit, not reauthored by this change.</Constraint><Constraint>Report the recorded intake date, with flow-age observation not recorded, rather than inventing an elapsed-age measurement. Keep both language editions fresh.</Constraint></Constraints>
+<AcceptanceCriteria><Criterion>Both Dashboards agree with the one-item Funnel count and recorded entry date. New RU intake wording agrees with the incoming reviewed vocabulary. Existing checks, retained-content checks and browser paths pass; clean source is pushed and the release is verified live.</Criterion></AcceptanceCriteria>
+<NonGoals><NonGoal>Changing the design, ranks, approvals, admission or delivery state, or rewriting the incoming reviewed corpus.</NonGoal></NonGoals>
+<VerificationIntent><ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand><ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand><ExpectedEvidence>Retained native content and paired browser paths pass after integrating reviewed Russian changes; the served package matches committed source.</ExpectedEvidence></VerificationIntent>
+<AffectedAreas><M-PORTAL-NEIGHBOURS /><M-PORTAL-LOCALIZATION /><M-PORTAL-PROJECTION /></AffectedAreas>
+<Assumptions><Assumption>The user authorized this same concrete release with push and publish. This is bounded reconciliation required to complete that release, not a new product design or business decision.</Assumption></Assumptions>
+</C-PROGRAM-INTAKE-RECONCILIATION>
+</GraceChangeSpec>

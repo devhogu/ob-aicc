@@ -28,6 +28,9 @@ class ProgramDelivery(unittest.TestCase):
             proposal=next(i for i in data['portfolio']['items'] if i['id']=='INI-013')
             self.assertEqual((proposal['state'],proposal['column'],proposal['project_key']),('Proposed','Funnel','service-resolution'))
             self.assertIsNone(proposal['approval_ref']);self.assertIsNone(proposal['rank'])
+            funnel = next(r for r in data['portfolio']['measures'] if r['Flow Measure'].startswith(('Funnel:', 'Фаннел:')))
+            self.assertIn('1 ',funnel['Value'])
+            self.assertIn('2026-10-06',funnel['Value'])
             self.assertEqual(data['portfolio']['capacity']['feature'],{'progress':0,'ready':0})
 
     def test_model_mapping_distinguishes_completed_review_and_acceptance(self):
