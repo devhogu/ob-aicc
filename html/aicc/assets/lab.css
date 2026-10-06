@@ -105,3 +105,7 @@
 @media(max-width:650px){.lab-bands{grid-template-columns:minmax(0,1fr)}.lab-tip{width:min(300px,86vw)}}
 .lab-guardrail-group{overflow:visible}
 .lab-guardrail-group:has(.lab-coverage-cell:hover,.lab-coverage-cell:focus-within){z-index:30}
+.lab-assessment{display:inline-block;padding:2px 8px;border:1px dashed var(--border);border-radius:999px;font-size:12px;color:var(--text-muted);cursor:help}
+.lab-assessment:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.lab-tip-levels{margin:4px 0 0;padding-left:16px}
+.lab-tip-levels li{margin:0 0 4px}
