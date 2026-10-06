@@ -23,7 +23,10 @@
     const visibleStages = stage === 'all' ? stages : [stage];
     for (const button of stageButtons) button.setAttribute('aria-pressed', String(button.dataset.labStage === stage));
     for (const button of viewButtons) button.setAttribute('aria-pressed', String(button.dataset.labView === (stage === 'all' ? 'all' : 'stage')));
-    matrix.style.gridTemplateColumns = `minmax(116px,.7fr) repeat(${visibleStages.length},minmax(${visibleStages.length > 3 ? '130px' : '0'},1fr))`;
+    matrix.classList.toggle('lab-matrix--focused', stage !== 'all');
+    matrix.style.gridTemplateColumns = stage === 'all'
+      ? `minmax(116px,.7fr) repeat(${visibleStages.length},minmax(130px,1fr))`
+      : 'minmax(140px,190px) minmax(0,1fr)';
     for (const element of matrix.children) {
       const column = visibleStages.indexOf(element.dataset.stage);
       element.hidden = Boolean(element.dataset.stage && column < 0);

@@ -44,6 +44,17 @@
 .lab-task{padding:10px;border-radius:12px;--lab-card-radius:12px}
 .lab-task h4{font-size:13px;margin:0 0 6px;overflow-wrap:anywhere}
 .lab-task p{font-size:12px;line-height:1.5;margin:0;color:var(--text-muted);overflow-wrap:anywhere}
+@media screen{
+  .lab-matrix-wrap:has(>.lab-matrix--focused){max-width:1000px}
+  .lab-matrix--focused .lab-stage{padding:10px 12px;margin:0!important;border-top:0}
+  .lab-matrix--focused .lab-lane{padding:10px 12px}
+  .lab-matrix--focused .lab-cell{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:8px;padding:6px 8px;align-content:start;align-items:start}
+  .lab-matrix--focused .lab-task{padding:8px 10px}
+  .lab-matrix--focused .lab-task h4{margin-bottom:4px}
+  .lab-matrix--focused :is(.lab-empty,.lab-cell-label){grid-column:1/-1}
+  .lab-matrix--focused .lab-empty{padding:2px 4px}
+  .lab-matrix--focused .lab-cell-label{margin-bottom:0}
+}
 .lab-systems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
 .lab-systems-connection{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px;color:var(--link);font-size:14px}
 .lab-system{overflow:hidden}
