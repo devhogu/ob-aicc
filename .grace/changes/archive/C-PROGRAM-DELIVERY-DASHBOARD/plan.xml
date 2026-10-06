@@ -1,0 +1,38 @@
+<GraceChangePlan graceVersion="4.0" status="applied">
+  <C-PROGRAM-DELIVERY-DASHBOARD>
+    <IntentSummary>Execute the four-task completed Program Backlog design and build plan explicitly approved on 2026-10-06 with “push and publish”. Authority includes bounded Proposed registration, implementation, verified durable apply/archive, commit, push and publication. Preserve charter rules, existing approvals and ranks; no delivery admission is authorized.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist><Value>M-PORTAL-NEIGHBOURS</Value><Value>M-PORTAL-PROJECTION</Value><Value>V-M-PORTAL-NEIGHBOURS</Value></MustExist>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify><Module>M-PORTAL-NEIGHBOURS</Module><Module>M-PORTAL-PROJECTION</Module></MustVerify>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check.py --idempotent</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_neighbours.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_portfolio.py</Command></MustPassCommand>
+      <MustPassCommand><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_portfolio_browser.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_delivery.py</Command></MustPassCommand>
+      <MustPassCommand><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_delivery_browser.py</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors><M-PORTAL-NEIGHBOURS /><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /></GraphAnchors>
+      <VerificationAnchors><V-M-PORTAL-NEIGHBOURS /><V-M-PORTAL-PROJECTION /><V-M-PORTAL-LOCALIZATION /></VerificationAnchors>
+      <ContextArtifact>ux-guidelines.xml</ContextArtifact><ContextArtifact>deployment.xml</ContextArtifact>
+    </DurableScope>
+    <ObservedWriteScope>
+      <File>portal/tools/delivery.py</File><File>portal/site/delivery.css</File><File>portal/site/delivery.js</File><File>portal/sections/projects/mapping.json</File>
+      <File>portal/tools/portfolio.py</File><File>portal/tools/project.py</File><File>portal/tools/neighbours.py</File><File>portal/sections/pages.json</File>
+      <Glob>portal/sections/projects/**/*.md</Glob><Glob>portal/tests/test_*delivery*.py</Glob><File>portal/tests/test_portfolio.py</File><File>portal/tests/test_neighbours.py</File>
+      <File>portal/tools/check_delivery.py</File><File>portal/tools/check_delivery_browser.py</File><File>portal/tools/check_portfolio.py</File><File>portal/tools/check_portfolio_browser.py</File><File>portal/tools/check_neighbours.py</File><File>portal/tools/check_neighbours_browser.py</File>
+      <Glob>registry/**/initiatives/INI-013-*/brief.md</Glob><Glob>registry/*/portfolio-backlog.md</Glob><Glob>registry/*/board.md</Glob><Glob>registry/*/dashboard.md</Glob><Glob>registry/*/program-backlog.md</Glob>
+      <Glob>html-alt/intelligent-customer-service-resolution/*/index.html</Glob><Glob>html/aicc/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001><Title>Register the bounded existing proposal in both editions</Title><DependsOn></DependsOn><AcceptanceCriteria><Criterion>One unranked/unscored Proposed INI-013 Brief and backlog entry agree with Funnel placement, dated intake update and translated records; six earlier ranks and all business decisions remain unchanged.</Criterion></AcceptanceCriteria><Verification><Command>python3 -m unittest discover -s portal/tests -p test_portfolio.py</Command></Verification></T-001>
+      <T-002><Title>Project and validate maintained delivery records</Title><DependsOn>T-001</DependsOn><AcceptanceCriteria><Criterion>Actual Program Backlog, parents, admission, states, Waiting, shared limits and counts are validated; domain fixtures verify nonempty records and absent observations.</Criterion></AcceptanceCriteria><Verification><Command>python3 -m unittest discover -s portal/tests -p test_delivery.py</Command></Verification></T-002>
+      <T-003><Title>Render and connect the bilingual Projects fronts</Title><DependsOn>T-002</DependsOn><AcceptanceCriteria><Criterion>Delivery board, Portfolio intake and all native project documents have reciprocal identity links, shared state and role-safe goals; complete retained content survives bounded registration corrections. EN/RU, themes, keyboard, search, no-script and temporary portable paths pass.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check.py --idempotent</Command><Command>python3 portal/tools/check_neighbours.py</Command><Command>python3 portal/tools/check_delivery.py</Command><Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_delivery_browser.py</Command></Verification></T-003>
+      <T-004><Title>Reconcile durable state and push/publish verified source</Title><DependsOn>T-003</DependsOn><AcceptanceCriteria><Criterion>Approved ownership and verification describe the connected delivery projection; fresh passing gates permit apply/archive. Preserve concurrent work, commit and push clean source, publish with maintained tool, verify served manifest and EN/RU links.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check_delivery.py</Command></Verification></T-004>
+    </ImplementationPlan>
+  </C-PROGRAM-DELIVERY-DASHBOARD>
+</GraceChangePlan>

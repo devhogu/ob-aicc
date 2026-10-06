@@ -155,7 +155,8 @@ def check():
                 target = urlsplit(urljoin('http://portal' + path, href))
                 if target.netloc != 'portal' or target.scheme not in ('http', 'https'):
                     continue
-                if section_for(target.path) != section:
+                relationship = section == 'projects' and bool(re.fullmatch(r'/(en|ru)/initiatives/(ini-\d+/)?',target.path)) or section == 'initiatives' and bool(re.fullmatch(r'/(en|ru)/projects/(service-resolution/)?',target.path))
+                if section_for(target.path) != section and not relationship:
                     errors.append(f'{path}: body link crosses section: {href}')
             if section != 'aicc':
                 for marker in ('class="term"', 'class="xref"', 'class="doc-facts"'):

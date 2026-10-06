@@ -173,10 +173,19 @@ def project(root=workspace.ROOT, lang='en'):
                       'outcome': outcome, 'mvp': mvp, 'scope_steps': steps, 'out_scope': out_scope,
                       'risk': risk, 'controls': controls, 'pending': pending, 'wsjf': wsjf,
                       'dependencies': [{**depmap[k], 'id': k} for k in dep_ids], 'path': sources.resolve(path).path,
-                      'stage_entered': row.get('Stage entered on') or None,
+                      'stage_entered': row.get('Stage entered on') or (row.get('Funnel entered on') if state == 'Proposed' else None),
+                      'goal_confirmation': 'DR-2026-061' if re.search(r'confirmed .*goal.*DR-2026-061', sec[6], re.I) else None,
+                      'continuation_ref': next((r.get('Record') for r in decision_rows if r['Decision'].startswith('Decision after the MVP') and (r.get('Result','').lower() == 'continue' or re.search(r': continue',r['Decision'],re.I))), None),
                       'waiting_from': waiting_from, 'approval_ref': approval_ref,
                       'approved_on': row['Approved on'] or None, 'active_on': row['Active on'] or None,
                       'review_date': review_date, 'agreement': public_meta['Service Agreement'], 'authority': authority})
+    mapping_path = Path(root) / 'portal/sections/projects/mapping.json'
+    mapping = json.loads(mapping_path.read_text()) if mapping_path.exists() else {}
+    if set(mapping) - {'service-resolution'}: raise ValueError('Project mapping lacks native renderer')
+    if len(set(mapping.values())) != len(mapping): raise ValueError('Ambiguous project mapping')
+    if set(mapping.values()) - {x['id'] for x in items}: raise ValueError('Unknown mapped Initiative')
+    for item in items:
+        item['project_key'] = next((key for key, identifier in mapping.items() if identifier == item['id']), None)
     ordinary = sorted((x for x in items if not x['standing']), key=lambda x: x['rank'] if x['rank'] is not None else float('inf'))
     ranks = [x['rank'] for x in ordinary if x['rank'] is not None]
     if len(set(ranks)) != len(ranks): raise ValueError('Duplicate recorded rank')
@@ -352,7 +361,8 @@ def _facts(pairs):
     return '<dl class="pf-facts">' + ''.join(f'<div><dt>{_h(k)}</dt><dd>{_h(v)}</dd></div>' for k, v in pairs) + '</dl>'
 
 
-def summary(item, data, modal=False):
+def summary(item, data, modal=False, url=None):
+    url = url or _route(data['lang'],item)
     lang = data['lang']; u = UI[lang]; g = _gates(lang).get(item['column'])
     title_tag = 'h2' if modal else 'h1'
     heading = f'<header><span class="pf-meta">{item["id"]} · {_h(item["status"])}</span><{title_tag}>{_h(item["title"])}</{title_tag}><p>{_h(item["outcome"])}</p></header>'
@@ -374,7 +384,7 @@ def summary(item, data, modal=False):
         gate = _facts([(u['next'], g['Gate']), (u['decider'], g['Decided by'])])
         body += _section(u['gate'], gate + '<p>' + _h(_sentence(g['Exit criterion'])) + '</p><p class="pf-muted">' + u['authority'] + '</p>')
         body += _section(u['missing'], '<p>' + _h(item['pending']) + '</p>' + _facts([(u['approval'], item['approval_ref'] or u['unknown']), (u['agreement'], item['agreement'])]))
-        if not item['approval_ref']: body += f'<p class="pf-notice">{u["confirmation"]}</p>'
+        if item['goal_confirmation'] and not item['approval_ref']: body += f'<p class="pf-notice">{u["confirmation"]}</p>'
         scope = f'<p>{_h(item["mvp"])}</p><p class="pf-muted">{u["planned"]}</p>'
         scope += '<ol>' + ''.join('<li>' + _h(s) + '</li>' for s in item['scope_steps']) + '</ol><p>' + _h(item['out_scope']) + '</p>'
         body += _section(u['mvp'], scope)
@@ -384,6 +394,9 @@ def summary(item, data, modal=False):
     deps = '<ul class="pf-dependencies">' + ''.join(f'<li><div><strong>{d["id"]}</strong><span class="pf-badge">{_h(d["Status"])}</span></div><p>{_h(d["Needs"])}</p><small>{_h(d["From"])} · {_h(d["Needed by"])}</small></li>' for d in item['dependencies']) + '</ul>'
     body += _section(u['dependencies'], deps or '<p>' + u['unknown'] + '</p>')
     references = [item['path'], f'registry/{lang}/portfolio-backlog.md', f'registry/{lang}/dependencies.md', f'registry/{lang}/board.md']
+    if item.get('project_key'):
+        project_url = '/' + lang + '/projects/' + item['project_key'] + '/'
+        body += _section('Project and delivery' if lang == 'en' else 'Проект и реализация', '<p>' + _link(url, project_url, 'Project documents' if lang == 'en' else 'Документы проекта') + ' · ' + _link(url, '/' + lang + '/projects/#intake', 'Program Backlog' if lang == 'en' else 'Бэклог программы') + '</p>')
     if item['approval_ref']: references.append(f'registry/{lang}/decision-log.md')
     body += _section(u['source'], '<p class="pf-muted">' + u['source_note'] + '</p><ul class="pf-references">' + ''.join('<li>' + _reference(r) + '</li>' for r in references) + '</ul>')
     if modal:
@@ -485,7 +498,7 @@ def render(data, url, kind='dashboard', item=None):
     footer = ' · '.join(_reference(f'registry/{lang}/{name}') for name in ('dashboard.md', 'portfolio-backlog.md'))
     body += '<div class="pf-record-footer"><span class="pf-meta">' + u['source'] + '</span><p>' + footer + '</p><p class="pf-muted">' + u['source_note'] + '</p></div>'
     if kind == 'dashboard':
-        body += ''.join(f'<template data-pf-detail="{x["id"]}">{summary(x, data, modal=True)}</template>' for x in data['items'])
+        body += ''.join(f'<template data-pf-detail="{x["id"]}">{summary(x, data, modal=True, url=url)}</template>' for x in data['items'])
         body += f'<dialog class="pf-dialog" aria-label="{u["open"]}"><button type="button" data-pf-close aria-label="{u["close"]}">×</button><div class="pf-dialog-body"></div><a class="pf-full-link">{u["full"]}</a></dialog>'
     return '<article class="pf-content" data-pf-view="' + kind + '">' + body + '</article>'
 

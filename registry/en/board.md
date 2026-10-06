@@ -7,7 +7,7 @@ The Portfolio Kanban shows the Initiatives by step of the Portfolio Management M
 | Funnel | Reviewing | Analyzing | Portfolio Backlog | MVP | Implementation | Done |
 | --- | --- | --- | --- | --- | --- | --- |
 | No WIP cap: intake queue | No WIP cap: discovery queue | No WIP cap: business-case queue | No WIP cap: approved queue | Shared Active limit: 1 | Shared Active limit: 1 | No WIP cap: completed work |
-|  | INI-002 | | | | | |
+| INI-013 | INI-002 | | | | | |
 |  | INI-006 | | | | | |
 |  | INI-004 | | | | | |
 |  | INI-003 | | | | | |

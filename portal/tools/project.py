@@ -24,10 +24,10 @@ ROUTES = {'start': '', 'charter': 'charter/', 'journeys': 'journeys/', 'journey-
           'journey-dispute': 'journeys/card-dispute/', 'journey-kyc': 'journeys/onboarding-kyc/', 'governance': 'governance/',
           'how-it-works': 'how-it-works/', 'controls': 'controls-and-evidence/', 'technical-design': 'technical-design/',
           'journey-profiles': 'journey-profiles/', 'it-readiness': 'it-readiness/'}
-UI = {'en': {'overview': 'Project overview', 'documents': 'Project documents', 'contents': 'In this document', 'register': 'Project register',
+UI = {'en': {'overview': 'Project overview', 'documents': 'Project documents', 'contents': 'In this document', 'register': 'Program Backlog',
              'proposal': 'Proposed initiative', 'expand': 'Expand diagram', 'close': 'Close', 'fit': 'Fit', 'actual': '100%',
              'out': 'Zoom out', 'in': 'Zoom in', 'view': 'Expanded diagram', 'hint': 'Scroll to pan · Ctrl/⌘ + wheel to zoom'},
-      'ru': {'overview': 'Обзор проекта', 'documents': 'Документы проекта', 'contents': 'Разделы документа', 'register': 'Реестр проектов',
+      'ru': {'overview': 'Обзор проекта', 'documents': 'Документы проекта', 'contents': 'Разделы документа', 'register': 'Бэклог программы',
              'proposal': 'Предлагаемая инициатива', 'expand': 'Развернуть диаграмму', 'close': 'Закрыть', 'fit': 'Вписать', 'actual': '100%',
              'out': 'Уменьшить', 'in': 'Увеличить', 'view': 'Развернутая диаграмма', 'hint': 'Прокрутка для перемещения · Ctrl/⌘ + колесо для масштаба'}}
 
@@ -145,7 +145,13 @@ def render(doc, docs, owners, lang):
         body += f'<section class="project-topic"><h2>{ui["documents"]}</h2><div class="project-document-grid">{cards}</div></section>'
     for number, markup in enumerate(diagrams): body = body.replace(f'<!--PROJECT_DIAGRAM_{number}-->', markup)
     back = '' if doc['key'] == 'start' else f'<nav class="project-breadcrumb" aria-label="{ui["overview"]}"><a href="{workspace.relative(url, docs[0]["url"])}">{escape(docs[0]["title"])}</a><span aria-hidden="true"> / </span><span>{escape(doc["label"])}</span></nav>'
-    return '<article class="project-content"><span class="neighbour-status">' + ui['proposal'] + '</span>' + back + body + '</article>'
+    import portfolio
+    mapping = json.loads((workspace.ROOT / 'portal/sections/projects/mapping.json').read_text())
+    item = next(i for i in portfolio.project(lang=lang)['items'] if i['id'] == mapping['service-resolution'])
+    record_url = portfolio._route(lang,item)
+    label = 'Portfolio initiative' if lang == 'en' else 'Инициатива портфеля'
+    link = f'<nav class="project-breadcrumb"><a href="{workspace.relative(url,record_url)}">{label}: {item["id"]}</a> · <a href="{workspace.relative(url,"/"+lang+"/projects/#intake")}">{"Program Backlog" if lang == "en" else "Бэклог программы"}</a></nav>'
+    return '<article class="project-content"><span class="neighbour-status">' + escape(item['status']) + '</span>' + link + back + body + '</article>'
 
 
 def build(output):

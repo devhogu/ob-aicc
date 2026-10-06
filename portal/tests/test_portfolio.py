@@ -46,21 +46,27 @@ class PortfolioRules(unittest.TestCase):
         self.assertEqual(portfolio._decimal('en',4.0),'4')
 
     def test_actual_record_identities_rank_and_unknown_dates_in_both_editions(self):
-        expected = ['INI-002','INI-006','INI-004','INI-003','INI-007','INI-008','INI-009','INI-010','INI-011','INI-012']
+        expected = ['INI-002','INI-006','INI-004','INI-003','INI-007','INI-008','INI-013','INI-009','INI-010','INI-011','INI-012']
         for lang in ('en','ru'):
             d = portfolio.project(lang=lang)
             self.assertEqual([x['id'] for x in d['items']], expected)
-            self.assertEqual(d['date'],'2026-10-03')
+            self.assertEqual(d['date'],'2026-10-06')
             self.assertEqual(d['counts']['Reviewing'],6)
             self.assertEqual(d['capacity']['active'],0)
             self.assertEqual(d['capacity']['limit'],1)
             ordinary = [x for x in d['items'] if not x['standing']]
-            self.assertEqual([x['rank'] for x in ordinary],[1,2,3,4,5,6])
+            self.assertEqual([x['rank'] for x in ordinary],[1,2,3,4,5,6,None])
             # Scored order is different; the first-100-days order must survive.
             self.assertGreater(ordinary[2]['wsjf'], ordinary[0]['wsjf'])
-            self.assertTrue(all(x['stage_entered'] is None and x['approval_ref'] is None for x in ordinary))
-            self.assertEqual([x['state'] for x in d['items'][6:]],['Approved']*4)
+            self.assertTrue(all(x['stage_entered'] is None and x['approval_ref'] is None for x in ordinary[:6]))
+            self.assertEqual([x['state'] for x in d['items'][7:]],['Approved']*4)
             self.assertEqual(d['features'],0)
+            proposed = next(x for x in d['items'] if x['id']=='INI-013')
+            self.assertEqual(proposed['column'],'Funnel')
+            self.assertEqual(proposed['stage_entered'],'2026-10-06')
+            self.assertIsNone(proposed['goal_confirmation'])
+            self.assertIsNone(proposed['approval_ref'])
+            self.assertIsNone(proposed['wsjf'])
             self.assertTrue(any(r['Value']=='' for r in d['measures']))
             self.assertEqual(len(d['milestones']),13)
             public = json.dumps(d,ensure_ascii=False)
@@ -84,7 +90,7 @@ class PortfolioRules(unittest.TestCase):
             snapshot.write_text(snapshot.read_text().replace('1 shared Active','2 shared Active'))
             self.assertEqual(portfolio.project(root)['capacity']['limit'],2)
             path=root/'registry/en/dashboard.md'
-            path.write_text(path.read_text().replace('| Items | 0 | 6 |','| Items | 0 | 5 |',1))
+            path.write_text(path.read_text().replace('| Items | 1 | 6 |','| Items | 1 | 5 |',1))
             with self.assertRaisesRegex(ValueError,'count disagreement'):
                 portfolio.project(root)
 

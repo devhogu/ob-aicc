@@ -411,7 +411,7 @@ def build_landings(output):
         indexes = {name: [] for name in ('initiatives', 'projects')}
         for item in PAGES:
             section = item['section']
-            if item.get('renderer') in ('lab', 'project', 'portfolio'):
+            if item.get('renderer') in ('lab', 'project', 'portfolio', 'delivery'):
                 continue
             url = f'/{lang}/' + item['path']
             text = (ROOT / 'portal/sections' / section / lang / item['source']).read_text()
@@ -435,5 +435,6 @@ def build_neighbours(output):
     import lab
     import project
     import portfolio
+    import delivery
     output = Path(output)
-    return build_discovery(output) + build_landings(output) + lab.build(output) + project.build(output) + portfolio.build(output)
+    return build_discovery(output) + build_landings(output) + lab.build(output) + delivery.build(output) + project.build(output) + portfolio.build(output)

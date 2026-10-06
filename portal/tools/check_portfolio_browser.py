@@ -23,7 +23,7 @@ class Quiet(SimpleHTTPRequestHandler):
 
 
 def interactions(page,lang,counts):
-    assert page.locator('#board:visible [data-pf-item]').count()==6
+    assert page.locator('#board:visible [data-pf-item]').count()==7
     assert page.locator('.pf-column').count()==7
     page.locator('[data-pf-priority]').select_option('PRI-2')
     assert page.locator('#board [data-pf-item]:visible').count()==1
@@ -107,7 +107,7 @@ def main():
             for lang in ('en','ru'):
                 nojs=plain.new_page();nojs.goto(base+lang+'/initiatives/')
                 assert nojs.locator('[data-pf-panel]:visible').count()==4
-                assert nojs.locator('[data-pf-item]:visible').count()==16
+                assert nojs.locator('[data-pf-item]:visible').count()==18
                 assert not nojs.locator('.pf-filter').is_visible()
                 nojs.locator('[data-pf-open="INI-004"]').first.click()
                 assert nojs.locator('.pf-detail-page').is_visible()

@@ -31,7 +31,9 @@ def main():
         assert len(pages)==len(ids)+3
         board=(OUTPUT/lang/'initiatives/index.html').read_text()
         p=Published(board)
-        assert p.cards[:6]==ids[:6] and p.cards[6:12]==ids[:6] and p.cards[12:]==ids[6:]
+        n=sum(not i['standing'] for i in d['items'])
+        board_ids=[i['id'] for col in portfolio.COLUMNS for i in d['items'] if not i['standing'] and i['column']==col]
+        assert p.cards[:n]==board_ids and p.cards[n:2*n]==ids[:n] and p.cards[2*n:]==ids[n:]
         assert p.sections==['board','review','standing','roadmap']
         assert portfolio._date(lang, d['date']) in board
         assert len(re.findall(r'<li><span class="pf-meta">MS-',board))==len(d['milestones'])
