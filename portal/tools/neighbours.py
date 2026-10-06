@@ -122,7 +122,6 @@ def workflow_card(match):
                 '</div></details></li>')
 
     previews = re.sub(r'<li class="flow-item">\s*<a href="([^"]+)" class="flow-item__name card-link">(.*?)</a>\s*</li>', preview, body, flags=re.S)
-    previews = previews.replace('<details class="workflow-preview">', '<details class="workflow-preview" open>', 1)
     return head + '<div class="card__body">' + previews + '</div></article>'
 
 
@@ -152,13 +151,18 @@ def discovery_page(source, relative, lang):
             options = iter((
                 ('A', 'groups'), ('B', 'groups'), ('C', 'workflows'),
                 ('D', 'groups'), ('E', 'groups'), ('F', 'groups'), ('G', 'groups'),
-                ('H', 'groups'), ('I', 'groups'), ('J', 'deferred'), ('K', 'deferred'),
+                ('H', 'groups'), ('I', 'groups'), ('J', 'in-progress'), ('K', 'in-progress'),
             ))
             def comparison_card(match):
                 key, pattern = next(options)
                 return match[1] + f' data-ui-option="{key}" data-ui-pattern="{pattern}" id="ui-option-{key.lower()}">'
             body = re.sub(r'(<article class="card[^"]*")>', comparison_card, body)
             body = re.sub(r'<article class="card card--flow"[^>]*>.*?</article>', workflow_card, body, count=1, flags=re.S)
+            def development_card(match):
+                card = match[0].replace(' (deferred)', '').replace('card-link--deferred', 'card-link--pending')
+                return re.sub(r'(<div class="card__eyebrow">.*?)(</div>)',
+                              r'\1<span class="discovery-status">In progress</span>\2', card, count=1, flags=re.S)
+            body = re.sub(r'<article class="card card--peer"[^>]*>.*?</article>', development_card, body, flags=re.S)
     if lang == 'en' and relative == Path('value-streams/index.html'):
         # Stable destinations for the overview's individual stage links.
         def stage_target(match):

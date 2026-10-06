@@ -119,6 +119,7 @@ def check_workflow_stage_links(page, overview, counts, *, all_stages=False):
     page.goto(overview)
     card = page.locator('[data-ui-pattern=workflows]')
     assert card.locator('.workflow-preview').count() == 11
+    assert not card.locator('.workflow-preview[open]').count()
     assert not card.locator('input[name="workflow-view"],.workflow-count-note,.workflow-explore').count()
     links = card.locator('.workflow-preview__stages a').evaluate_all(
         'els=>els.map(e=>({href:e.getAttribute("href"),label:e.textContent.trim()}))')

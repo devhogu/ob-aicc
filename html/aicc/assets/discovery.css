@@ -84,10 +84,18 @@
 .discovery-content [data-ui-pattern=groups] .sub-group__items{display:grid;gap:0;padding:6px 12px}
 .discovery-content [data-ui-pattern=groups] .card-link{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:4px 0}
 
-/* J: deferred neighbours share one quiet, non-interactive treatment. */
-.discovery-content [data-ui-pattern=deferred]{border:1px dashed var(--border-control)}
-.discovery-content [data-ui-pattern=deferred] .card__head{border-bottom:0}
-.discovery-content [data-ui-pattern=deferred] .card-link--deferred{color:var(--text);text-decoration:none}
+/* The full-width data card presents its two groups alongside each other. */
+.discovery-content [data-ui-option=I] .sub-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.discovery-content [data-ui-option=I] .sub-group{display:block;border-bottom:0}
+.discovery-content [data-ui-option=I] .sub-group+.sub-group{border-left:1px solid var(--border)}
+.discovery-content [data-ui-option=I] .sub-group__label{border-bottom:1px solid var(--border)}
+
+/* Content in development has a visible status and remains non-interactive. */
+.discovery-content [data-ui-pattern=in-progress]{border:1px dashed var(--border-control)}
+.discovery-content [data-ui-pattern=in-progress] .card__head{border-bottom:0}
+.discovery-content [data-ui-pattern=in-progress] .card-link--pending{color:var(--text);text-decoration:none}
+.discovery-content [data-ui-pattern=in-progress] .card__eyebrow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.discovery-content .discovery-status{display:inline-block;padding:2px 8px;border:1px solid var(--border-control);border-radius:999px;background:var(--surface-subtle);color:var(--text);font-size:12px;font-weight:500;line-height:1.5;text-transform:none;letter-spacing:normal}
 
 /* Workflows: lightly shaded lines; an open preview has the AICC active underline. */
 .discovery-content [data-ui-pattern=workflows]{align-self:start}
@@ -95,8 +103,8 @@
 .discovery-content .workflow-overview-link:hover{color:var(--link);text-decoration:underline}
 .discovery-content [data-ui-pattern=workflows] .flow-item{padding:0;border-radius:0;background:none;width:100%;display:block}
 .discovery-content [data-ui-pattern=workflows] .flow-list{gap:4px}
-.discovery-content [data-ui-pattern=workflows] .flow-sections{gap:12px}
-.discovery-content [data-ui-pattern=workflows] .flow-section+.flow-section{padding-top:12px;border-top:1px solid var(--border)}
+.discovery-content [data-ui-pattern=workflows] .flow-sections{gap:24px}
+.discovery-content [data-ui-pattern=workflows] .flow-section+.flow-section{padding-top:16px;border-top:1px solid var(--border)}
 .discovery-content .workflow-preview{border:0;border-radius:0}
 .discovery-content .workflow-preview>summary{display:flex;align-items:center;gap:10px;padding:6px 10px;min-height:40px;font-size:15px;cursor:pointer;list-style:none;background:var(--surface-subtle);border-bottom:3px solid transparent}
 .discovery-content .workflow-preview>summary::-webkit-details-marker{display:none}
@@ -116,5 +124,7 @@
 @media(max-width:650px){
   .discovery-content [data-ui-pattern=groups] .sub-group{grid-template-columns:minmax(0,1fr)}
   .discovery-content [data-ui-pattern=groups] .sub-group__label{padding:8px 12px}
+  .discovery-content [data-ui-option=I] .sub-groups{grid-template-columns:minmax(0,1fr)}
+  .discovery-content [data-ui-option=I] .sub-group+.sub-group{border-left:0;border-top:1px solid var(--border)}
   .discovery-content [data-ui-option] .card-link,.discovery-content .workflow-preview>summary{min-height:44px}
 }
