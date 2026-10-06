@@ -61,3 +61,104 @@
 @media(max-width:768px){.discovery-content .top-band,.discovery-content .main-row,.discovery-content .below-band,.discovery-content .cap-row,.discovery-content .peer-row{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:650px){.discovery-content{--text-page-title:1.75rem;--text-h2:1.375rem}}
 @media(max-width:380px){.discovery-content .page-header__title{overflow-wrap:anywhere}}
+
+/* Temporary comparison on the English overview only. Options preserve its links and groups. */
+.discovery-content [data-ui-option]{min-width:0}
+.discovery-content .discovery-option{display:block;margin:0;padding:14px 20px 0;color:var(--text-muted);font-size:12px;font-weight:500;letter-spacing:.02em}
+.discovery-content [data-ui-option] .card__head{padding-top:10px}
+.discovery-content [data-ui-option] .dot{display:none}
+.discovery-content [data-ui-option] .card-link__count{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--text-muted);font-size:12px;font-weight:400}
+.discovery-content [data-ui-option] .card__count{font-size:14px;font-weight:400;white-space:nowrap}
+.discovery-content [data-ui-option] .sub-group__label{line-height:1.4;margin-bottom:10px}
+.discovery-content [data-ui-option] a.card-link:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+
+/* A: two simple lists, separated by fine rules, with counts aligned at the edge. */
+.discovery-content [data-ui-option=A]{border-top:3px solid var(--brand)}
+.discovery-content [data-ui-option=A] .sub-group__items{display:flex;flex-direction:column}
+.discovery-content [data-ui-option=A] .card-link{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);color:var(--text)}
+.discovery-content [data-ui-option=A] .card-link:last-child{border-bottom:0}
+.discovery-content [data-ui-option=A] .card-link:hover{color:var(--link)}
+
+/* B: each destination is an individual, clearly bounded tile. */
+.discovery-content [data-ui-option=B] .card__head{border-bottom:0}
+.discovery-content [data-ui-option=B] .sub-group__items{display:grid;gap:8px}
+.discovery-content [data-ui-option=B] .card-link{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:10px 12px;border:1px solid var(--border);border-radius:8px;color:var(--text)}
+.discovery-content [data-ui-option=B] .card-link:hover{background:var(--surface-subtle);border-color:var(--link);color:var(--link)}
+.discovery-content [data-ui-option=B] .card-link__count{padding:2px 5px;border-radius:4px;background:var(--surface-subtle)}
+
+/* C: an open directory, with a clear arrow for each destination. */
+.discovery-content [data-ui-option=C]{border:0;border-left:3px solid var(--brand);border-radius:0;align-self:start}
+.discovery-content [data-ui-option=C] .card__head{border-bottom:0}
+.discovery-content [data-ui-option=C] .flow-section+.flow-section{border-top:1px solid var(--border);padding-top:18px}
+.discovery-content [data-ui-option=C] .flow-item{padding:0;border-bottom:1px solid var(--border);border-radius:0}
+.discovery-content [data-ui-option=C] .flow-item:last-child{border-bottom:0}
+.discovery-content [data-ui-option=C] .flow-item__name{display:flex;align-items:baseline;gap:8px;padding:10px 0;color:var(--text);width:100%}
+.discovery-content [data-ui-option=C] .flow-item__name::after{content:'→';margin-left:auto;color:var(--link);font-size:15px}
+.discovery-content [data-ui-option=C] .card-link:hover{color:var(--link)}
+
+/* D: neutral inset panels distinguish the two groups within the card. */
+.discovery-content [data-ui-option=D] .card__head{border-bottom:0}
+.discovery-content [data-ui-option=D] .sub-groups{gap:12px}
+.discovery-content [data-ui-option=D] .sub-group{padding:14px;border-radius:8px;background:var(--surface-subtle)}
+.discovery-content [data-ui-option=D] .sub-group__items{display:grid;gap:10px}
+.discovery-content [data-ui-option=D] .card-link{display:block;color:var(--text)}
+.discovery-content [data-ui-option=D] .card-link:hover{color:var(--link)}
+
+/* E: compact directory rows pair each group label with its destinations. */
+.discovery-content [data-ui-option=E] .sub-groups{display:block}
+.discovery-content [data-ui-option=E] .sub-group{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--border)}
+.discovery-content [data-ui-option=E] .sub-group:first-child{padding-top:0}
+.discovery-content [data-ui-option=E] .sub-group:last-child{border-bottom:0;padding-bottom:0}
+.discovery-content [data-ui-option=E] .sub-group__items{display:grid;gap:8px}
+.discovery-content [data-ui-option=E] .card-link{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+
+/* F: vertical rules and group headings give the card a column structure. */
+.discovery-content [data-ui-option=F]{border:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);border-radius:0}
+.discovery-content [data-ui-option=F] .card__head{border-bottom:0}
+.discovery-content [data-ui-option=F] .sub-groups{gap:18px}
+.discovery-content [data-ui-option=F] .sub-group{border-left:2px solid var(--border-control);padding-left:12px}
+.discovery-content [data-ui-option=F] .sub-group__label{color:var(--text)}
+.discovery-content [data-ui-option=F] .sub-group__items{display:grid;gap:9px}
+.discovery-content [data-ui-option=F] .card-link{display:flex;justify-content:space-between;align-items:baseline;gap:8px;color:var(--text)}
+.discovery-content [data-ui-option=F] .card-link:hover{color:var(--link)}
+
+/* G: a table-like directory, using AICC's neutral row-header treatment. */
+.discovery-content [data-ui-option=G] .card__body{padding:0}
+.discovery-content [data-ui-option=G] .sub-groups{display:block}
+.discovery-content [data-ui-option=G] .sub-group{display:grid;grid-template-columns:minmax(100px,1fr) minmax(0,2fr);border-bottom:1px solid var(--border)}
+.discovery-content [data-ui-option=G] .sub-group:last-child{border-bottom:0}
+.discovery-content [data-ui-option=G] .sub-group__label{background:var(--surface-subtle);padding:16px;margin:0;color:var(--text)}
+.discovery-content [data-ui-option=G] .sub-group__items{display:grid;gap:10px;padding:16px}
+.discovery-content [data-ui-option=G] .card-link{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+
+/* H: wrapping outline chips make each destination a discrete control. */
+.discovery-content [data-ui-option=H] .card__head{border-bottom:0}
+.discovery-content [data-ui-option=H] .sub-groups{gap:20px}
+.discovery-content [data-ui-option=H] .sub-group__items{display:flex;flex-wrap:wrap;gap:8px}
+.discovery-content [data-ui-option=H] .card-link{display:inline-flex;align-items:baseline;gap:8px;max-width:100%;min-height:38px;padding:8px 11px;border:1px solid var(--border-control);border-radius:6px;color:var(--text)}
+.discovery-content [data-ui-option=H] .card-link:hover{background:var(--surface-subtle);border-color:var(--link);color:var(--link)}
+
+/* I: an open, wide section with calm columns and no surrounding card box. */
+.discovery-content [data-ui-option=I]{border:0;border-top:2px solid var(--border-control);border-radius:0}
+.discovery-content [data-ui-option=I] .card__head{border-bottom:0}
+.discovery-content [data-ui-option=I] .sub-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.discovery-content [data-ui-option=I] .sub-group__label{padding-bottom:10px;border-bottom:1px solid var(--border)}
+.discovery-content [data-ui-option=I] .sub-group__items{display:grid;gap:12px}
+.discovery-content [data-ui-option=I] .card-link{display:flex;justify-content:space-between;align-items:baseline;gap:10px;color:var(--text)}
+.discovery-content [data-ui-option=I] .card-link:hover{color:var(--link)}
+
+/* J and K: two quiet treatments for deferred, non-interactive neighbours. */
+.discovery-content [data-ui-option=J]{border:1px dashed var(--border-control)}
+.discovery-content [data-ui-option=J] .card__head{border-bottom:0}
+.discovery-content [data-ui-option=K]{border:0;border-left:3px solid var(--border-control);border-radius:0 8px 8px 0;background:var(--surface-subtle)}
+.discovery-content [data-ui-option=K] .card__head{background:transparent;border-bottom:0}
+.discovery-content :is([data-ui-option=J],[data-ui-option=K]) .card-link--deferred{color:var(--text);text-decoration:none}
+
+@media(max-width:1100px){
+  .discovery-content [data-ui-option] .sub-groups--row{flex-direction:column}
+}
+@media(max-width:650px){
+  .discovery-content :is([data-ui-option=E],[data-ui-option=G]) .sub-group{grid-template-columns:minmax(0,1fr)}
+  .discovery-content [data-ui-option=I] .sub-groups{grid-template-columns:minmax(0,1fr)}
+  .discovery-content [data-ui-option=C] .flow-item__name{flex-wrap:wrap}
+}

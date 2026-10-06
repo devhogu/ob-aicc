@@ -114,6 +114,19 @@ def discovery_page(source, relative, lang):
     if relative == Path('index.html'):
         body = re.sub(r'(<h1\b[^>]*>).*?(</h1>)', lambda m: m[1] + escape(label) + m[2], body, count=1, flags=re.S)
         body = re.sub(r'(<p class="page-header__intent">).*?(</p>)', lambda m: m[1] + escape(INTRO[lang]) + m[2], body, count=1, flags=re.S)
+        # Temporary visual comparison, confined to the English overview.
+        if lang == 'en':
+            options = iter((
+                ('A', 'Ruled lists'), ('B', 'Individual tiles'), ('C', 'Open directory'),
+                ('D', 'Inset groups'), ('E', 'Compact rows'), ('F', 'Column rails'),
+                ('G', 'Grouped table'), ('H', 'Outline chips'), ('I', 'Open columns'),
+                ('J', 'Dashed card'), ('K', 'Side note'),
+            ))
+            def comparison_card(match):
+                key, name = next(options)
+                return (match[1] + f' data-ui-option="{key}" id="ui-option-{key.lower()}">'
+                        + f'<p class="discovery-option">{key} · {name}</p>')
+            body = re.sub(r'(<article class="card[^"]*")>', comparison_card, body)
     # Add stable fragment targets without changing original scenario URNs or copy.
     body = re.sub(r'(<details class="scenario-card" data-urn="([^"]+)")', lambda m: m[1] + f' id="scenario-{m[2].rsplit("/", 1)[-1]}"', body)
     source_styles = re.findall(r'<link rel="stylesheet" href="([^"]+)">', source)
