@@ -112,7 +112,7 @@
   </div>
   
   
-    <p class="page-header__intent">Accounting and financial close is the month-end and quarter-end discipline that produces the bank's authoritative financial record — from journal posting and accruals through consolidation, reconciliation, and the trial balance that feeds management reporting and external filings. The close cycle is governed by a fixed task calendar, a hierarchy of approvals, and IFRS-based accounting standards as adopted under the regulatory frameworks of NBKR, NBK/ARDFM, and CBR. Close quality determines the accuracy of every downstream report: management accounts, regulatory returns, and statutory financial statements all start from the same ledger. <strong>The GenAI opportunity is automating the mechanical elements of the close cycle — status monitoring, exception identification, reconciliation matching, and narrative drafting — so Controllers focus on judgment and audit-readiness.</strong>
+    <p class="page-header__intent">Accounting and financial close is the month-end and quarter-end discipline that produces the Bank's authoritative financial record — from journal posting and accruals through consolidation, reconciliation, and the trial balance that feeds management reporting and external filings. The close cycle is governed by a fixed task calendar, a hierarchy of approvals, and IFRS-based accounting standards as adopted under the applicable regulatory framework. Close quality determines the accuracy of every downstream report: management accounts, regulatory returns, and statutory financial statements all start from the same ledger. <strong>The GenAI opportunity is automating the mechanical elements of the close cycle — status monitoring, exception identification, reconciliation matching, and narrative drafting — so Controllers focus on judgment and audit-readiness.</strong>
 </p>
   
 </header>
@@ -162,7 +162,7 @@
     id="problems-tab-period-end-close"
     value="period-end-close"
     checked
-    aria-label="Period end close"
+    aria-label="Period-end close"
   >
   
 
@@ -174,7 +174,7 @@
       for="problems-tab-period-end-close"
       role="tab"
       aria-controls="problems-panel-period-end-close"
-    >Period end close</label>
+    >Period-end close</label>
     
   </div>
 
@@ -274,7 +274,7 @@
       <h3 class="scenario-card__title">Close Critical Path Monitoring</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent identifies the close task dependencies that constitute the critical path to the publication deadline, monitors completion status of critical-path tasks in real time, and alerts the Controller when a delay on a critical-path task threatens the publication window before the impact propagates to downstream tasks.</p>
+      <p class="scenario-card__intent">The AI agent identifies the close task dependencies that constitute the critical path to the publication deadline, monitors completion status of critical-path tasks in real time, and alerts the Controller when a delay on a critical-path task threatens the publication window before the impact propagates to downstream tasks.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -294,7 +294,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the close task calendar with declared dependencies and the current completion status of each task. It constructs the dependency network, identifies the critical path from current status to the publication deadline, and monitors critical-path task completion in real time. When a critical-path task falls behind schedule, the agent issues an alert to the Controller with the downstream cascade impact — which subsequent tasks are affected, by how long the publication window is compressed, and which team owns each affected task. The Controller reviews and determines the recovery action.</p>
+      <p>The AI agent reads the close task calendar with declared dependencies and the current completion status of each task. It constructs the dependency network, identifies the critical path from current status to the publication deadline, and monitors critical-path task completion in real time. When a critical-path task falls behind schedule, the AI agent issues an alert to the Controller with the downstream cascade impact — which subsequent tasks are affected, by how long the publication window is compressed, and which team owns each affected task. The Controller reviews and determines the recovery action.</p>
     </div>
     
 
@@ -302,9 +302,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The Controller receives an alert when a delay on a critical-path close task threatens the publication window — the downstream tasks affected, the compression of the window, and the team that owns each task — before the impact propagates.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-maintained dependency network and critical-path monitoring active for ≥10 of 12 monthly close cycles in year 1; all close tasks with declared dependencies covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of critical-path alerts confirmed by the Controller as genuine threats to the publication window; ≥90% of critical-path delays alerted before a downstream task reports that it is waiting.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Critical-path delay alerted within 1 hour of the task falling behind schedule, vs. identification only when a downstream task reports waiting in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -332,7 +347,7 @@
       <h3 class="scenario-card__title">Close Exception Escalation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent monitors the daily end-of-close-day status report for tasks that remain open beyond their scheduled completion time, drafts escalation messages to the relevant team lead with the task context and downstream impact, and updates the Controller&#39;s status log automatically.</p>
+      <p class="scenario-card__intent">The AI agent monitors the end-of-day close status report for tasks that remain open beyond their scheduled completion time, drafts escalation messages to the relevant team lead with the task context and downstream impact, and updates the Controller's status log automatically.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -352,7 +367,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the current close task status against the scheduled completion calendar each evening. For each task that is open beyond its scheduled time, it drafts an escalation message to the responsible team lead, including the task description, the hours overdue, and the downstream tasks that depend on the output. The Controller reviews the drafts and releases them for dispatch; no escalation is sent without Controller review. The agent also updates the status log entry for each affected task with the escalation timestamp and reason.</p>
+      <p>The AI agent reads the current close task status against the scheduled completion calendar each evening. For each task that is open beyond its scheduled time, it drafts an escalation message to the responsible team lead, including the task description, the hours overdue, and the downstream tasks that depend on the output. The Controller reviews the drafts and releases them for dispatch; no escalation is sent without Controller review. The AI agent also updates the status log entry for each affected task with the escalation timestamp and reason.</p>
     </div>
     
 
@@ -360,9 +375,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The Controller receives, each evening of the close period, drafted escalation messages for every task open beyond its scheduled completion time — task description, hours overdue, and dependent downstream tasks — ready to review and release, with the status log updated.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted escalations produced on ≥90% of close days in year 1; all tasks open beyond their scheduled time covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of drafted escalations released by the Controller without material edit; status log entries confirmed accurate in ≥98% of sampled tasks.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Escalation drafts ready within 30 minutes of the end-of-day status report, vs. manual composition by the Controller each evening in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -390,7 +420,7 @@
       <h3 class="scenario-card__title">Month-End Close Management</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent monitors month-end close task completion, surfaces a prioritised exception report of overdue items, runs GL-to-sub-ledger reconciliation matching, and drafts the close narrative for CFO review on the first day of reporting.</p>
+      <p class="scenario-card__intent">The AI agent monitors month-end close task completion, surfaces a prioritized exception report of overdue items, runs GL-to-sub-ledger reconciliation matching, and drafts the close narrative for CFO review on the first day of reporting.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -403,14 +433,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Month-end close involves 80–150 discrete tasks coordinated across Controllers, segment finance, and shared service centres within a fixed publication window. Tracking task completion, escalating delays, and reconciling GL balances to sub-ledger each consume significant Controller time during the close period; the close narrative is drafted after data is finalised, compressing the CFO&#39;s review window.</p>
+      <p>Month-end close involves 80–150 discrete tasks coordinated across Controllers, segment finance, and shared service centers within a fixed publication window. Tracking task completion, escalating delays, and reconciling GL balances to sub-ledger each consume significant Controller time during the close period; the close narrative is drafted after data is finalized, compressing the CFO's review window.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors the close task log and issues automated reminders to owners of items approaching their deadline, generates a real-time status report for the Controller, and runs GL-to-sub-ledger matching with unmatched items classified by materiality and age. On close completion, it drafts the close narrative from the finalised P&amp;L and prior-period narrative as a style anchor. Controller reviews task exceptions; CFO edits the narrative draft before distribution.</p>
+      <p>The AI agent monitors the close task log and issues automated reminders to owners of items approaching their deadline, generates a real-time status report for the Controller, and runs GL-to-sub-ledger matching with unmatched items classified by materiality and age. On close completion, it drafts the close narrative from the finalized P&amp;L and prior-period narrative as a style anchor. The Controller reviews task exceptions; the CFO edits the narrative draft before distribution.</p>
     </div>
     
 
@@ -424,13 +454,13 @@
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-assisted close management used for ≥10 of 12 monthly close cycles in year 1; all material close tasks, GL-to-sub-ledger pairs, and narrative sections covered.</p>
+          <p>AI-assisted close management used for ≥10 of 12 monthly close cycles in year 1; all material close tasks, GL-to-sub-ledger pairs, and narrative sections covered.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥85% of close narratives accepted by the CFO without material structural amendment; GL-to-sub-ledger unmatched item classification accuracy ≥90% on Controllers review.</p>
+          <p>≥85% of close narratives accepted by the CFO without material structural amendment; GL-to-sub-ledger unmatched item classification accuracy ≥90% on Controller review.</p>
         </div>
         
         
@@ -466,7 +496,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">GL-to-sub-ledger reconciliations</h2>
     
-    <p class="l3-section__intent">GL-to-sub-ledger reconciliation matches every general ledger balance to the underlying sub-ledger that supports it — loan sub-ledger to loan GL accounts, deposit sub-ledger to deposit GL accounts, fixed asset register to the balance sheet. Unexplained breaks indicate a posting error, system interface failure, or accounting judgment issue. NBKR, NBK/ARDFM, and CBR expect the GL to be fully reconciled before regulatory returns are submitted.</p>
+    <p class="l3-section__intent">GL-to-sub-ledger reconciliation matches every general ledger balance to the underlying sub-ledger that supports it — loan sub-ledger to loan GL accounts, deposit sub-ledger to deposit GL accounts, fixed asset register to the balance sheet. Unexplained breaks indicate a posting error, system interface failure, or accounting judgment issue. Supervisors commonly expect the GL to be fully reconciled before regulatory returns are submitted.</p>
     
   </header>
 
@@ -500,7 +530,7 @@
       <h3 class="scenario-card__title">GL Reconciliation Break Triage</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">When GL-to-sub-ledger breaks are identified in the close cycle, agent classifies each break by probable cause — timing difference, interface failure, posting error, or accounting judgment item — and routes each to the relevant resolution owner, reducing the manual triage time that precedes remediation.</p>
+      <p class="scenario-card__intent">When GL-to-sub-ledger breaks are identified in the close cycle, the AI agent classifies each break by probable cause — timing difference, interface failure, posting error, or accounting judgment item — and routes each to the relevant resolution owner, reducing the manual triage time that precedes remediation.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -513,14 +543,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>GL-to-sub-ledger breaks surface at multiple points in the close cycle and are triaged manually by the Controllers team. Identifying whether a break reflects a known timing difference, a system interface failure, or a posting error requires the Controller to query the sub-ledger, the interface log, and the journal history for each item — a process that takes 30–60 minutes per break and serialises the remediation queue.</p>
+      <p>GL-to-sub-ledger breaks surface at multiple points in the close cycle and are triaged manually by the Controllers team. Identifying whether a break reflects a known timing difference, a system interface failure, or a posting error requires the Controller to query the sub-ledger, the interface log, and the journal history for each item — a process that takes 30–60 minutes per break and serializes the remediation queue.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the current reconciliation output, the interface error log, the pending journal queue, and the known timing difference register. For each break it applies a classification logic — matching breaks against known timing patterns, interface error codes, and pending journals — and assigns each item to a classification category and resolution owner. The Controller reviews the triage output and confirms the classification before owners are notified. Items that cannot be classified are escalated to the Controller with the relevant system data attached.</p>
+      <p>The AI agent reads the current reconciliation output, the interface error log, the pending journal queue, and the known timing difference register. For each break it applies a classification logic — matching breaks against known timing patterns, interface error codes, and pending journals — and assigns each item to a classification category and resolution owner. The Controller reviews the triage output and confirms the classification before owners are notified. Items that cannot be classified are escalated to the Controller with the relevant system data attached.</p>
     </div>
     
 
@@ -528,9 +558,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The Controller receives each GL-to-sub-ledger break classified by probable cause — timing difference, interface failure, posting error, or accounting judgment item — and assigned to a resolution owner, with unclassifiable items escalated with the relevant system data attached.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced triage applied to ≥90% of GL-to-sub-ledger breaks in ≥10 of 12 monthly close cycles in year 1.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of classifications confirmed by the Controller without change; ≤10% of breaks escalated as unclassified.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Triage output available within 1 hour of the reconciliation output, vs. 30–60 minutes of manual triage per break in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -558,7 +603,7 @@
       <h3 class="scenario-card__title">GL Reconciliation Pattern Analysis</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent analyses the rolling twelve-month history of GL-to-sub-ledger breaks by account, system interface, and break type to identify recurring patterns — accounts or interfaces that produce a disproportionate share of breaks — and surface root-cause candidates for the Controller&#39;s quarterly reconciliation quality review.</p>
+      <p class="scenario-card__intent">The AI agent analyzes the rolling twelve-month history of GL-to-sub-ledger breaks by account, system interface, and break type to identify recurring patterns — accounts or interfaces that produce a disproportionate share of breaks — and surface root-cause candidates for the Controller's quarterly reconciliation quality review.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -578,7 +623,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent maintains a rolling twelve-month registry of GL reconciliation breaks by account, interface, and break type. Each close cycle it appends the new break data and runs a frequency and clustering analysis to identify accounts and interfaces that appear in the break registry consistently. The analysis is presented to the Controller at the quarterly reconciliation quality review — showing the top ten recurring break sources, estimated cumulative Controller time consumed per source, and candidate root-cause hypotheses for each. The Controller determines which root causes to investigate for permanent remediation.</p>
+      <p>The AI agent maintains a rolling twelve-month registry of GL reconciliation breaks by account, interface, and break type. Each close cycle it appends the new break data and runs a frequency and clustering analysis to identify accounts and interfaces that appear in the break registry consistently. The analysis is presented to the Controller at the quarterly reconciliation quality review — showing the top ten recurring break sources, estimated cumulative Controller time consumed per source, and candidate root-cause hypotheses for each. The Controller determines which root causes to investigate for permanent remediation.</p>
     </div>
     
 
@@ -586,9 +631,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The Controller receives, for each quarterly reconciliation quality review, the top ten recurring sources of GL-to-sub-ledger breaks over the rolling twelve months, with the estimated Controller time consumed per source and candidate root-cause hypotheses.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-maintained break registry updated for ≥10 of 12 monthly close cycles and pattern analysis presented at ≥4 quarterly reconciliation quality reviews within year 1.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥70% of candidate root-cause hypotheses rated by the Controller as worth investigating; ≥50% of the top ten recurring sources selected for permanent remediation within two quarters.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Recurring break sources surfaced each quarter, vs. breaks resolved individually each close cycle without pattern analysis in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -616,7 +676,7 @@
       <h3 class="scenario-card__title">Pre-Submission GL Completeness Check</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Before regulatory returns are submitted, agent verifies that the GL is fully reconciled to all material sub-ledgers — loan, deposit, fixed asset, and investment — and produces a reconciliation completeness certificate for the Controller&#39;s sign-off, meeting NBKR, NBK/ARDFM, and CBR expectations.</p>
+      <p class="scenario-card__intent">Before regulatory returns are submitted, the AI agent verifies that the GL is fully reconciled to all material sub-ledgers — loan, deposit, fixed asset, and investment — and produces a reconciliation completeness certificate for the Controller's sign-off, meeting supervisory expectations.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -629,14 +689,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>NBKR, NBK/ARDFM, and CBR require the GL to be fully reconciled before regulatory returns are submitted. The reconciliation completeness check is performed manually by the Controllers team across multiple sub-ledger systems, and the sign-off is documented in a spreadsheet tracker. Missed or incorrectly closed items are identified during external audit or regulatory inspection rather than before submission.</p>
+      <p>The regulator expects the GL to be fully reconciled before regulatory returns are submitted. The reconciliation completeness check is performed manually by the Controllers team across multiple sub-ledger systems, and the sign-off is documented in a spreadsheet tracker. Missed or incorrectly closed items are identified during external audit or regulatory inspection rather than before submission.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the reconciliation status from each sub-ledger reconciliation system — loan, deposit, fixed asset, and investment — and checks that every material GL account has a matched and signed-off reconciliation. It produces a completeness matrix showing the reconciliation status of each account group against each sub-ledger, flagging unreconciled or open items with the break amount and responsible owner. The Controller reviews the matrix and signs off the completeness certificate before any regulatory return is submitted. The certificate is retained as evidence for external audit and regulatory inspection.</p>
+      <p>The AI agent reads the reconciliation status from each sub-ledger reconciliation system — loan, deposit, fixed asset, and investment — and checks that every material GL account has a matched and signed-off reconciliation. It produces a completeness matrix showing the reconciliation status of each account group against each sub-ledger, flagging unreconciled or open items with the break amount and responsible owner. The Controller reviews the matrix and signs off the completeness certificate before any regulatory return is submitted. The certificate is retained as evidence for external audit and regulatory inspection.</p>
     </div>
     
 
@@ -644,9 +704,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The Controller receives, before any regulatory return is submitted, a completeness matrix showing the reconciliation status of every material GL account group against each sub-ledger, and signs off the completeness certificate on that basis.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced completeness matrix used before ≥95% of regulatory return submissions in year 1; loan, deposit, fixed asset, and investment sub-ledgers covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of items flagged as unreconciled or open confirmed by the Controller as genuine; no unreconciled material account first identified by external audit or regulatory inspection after submission.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Completeness matrix available within 2 hours of request, vs. a manual check across sub-ledger systems documented in a spreadsheet tracker in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -709,7 +784,7 @@
       <h3 class="scenario-card__title">Close Narrative Cross-Document Consistency</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Before the close narrative is distributed, agent cross-references every numerical figure in the draft against the authoritative source documents — management accounts, capital report, and liquidity report — and flags any inconsistency for CFO review.</p>
+      <p class="scenario-card__intent">Before the close narrative is distributed, the AI agent cross-references every numerical figure in the draft against the authoritative source documents — management accounts, capital report, and liquidity report — and flags any inconsistency for CFO review.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -729,7 +804,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the draft close narrative and the authoritative source documents. It extracts every numerical figure in the narrative, maps it to the corresponding source document entry, and checks for consistency across all figures. Discrepancies — including rounding differences, period mismatches, and figures that cannot be traced to a source — are presented to the CFO in a structured exception list before distribution. The CFO confirms each exception as intentional or directs a correction.</p>
+      <p>The AI agent reads the draft close narrative and the authoritative source documents. It extracts every numerical figure in the narrative, maps it to the corresponding source document entry, and checks for consistency across all figures. Discrepancies — including rounding differences, period mismatches, and figures that cannot be traced to a source — are presented to the CFO in a structured exception list before distribution. The CFO confirms each exception as intentional or directs a correction.</p>
     </div>
     
 
@@ -737,9 +812,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The CFO receives, before the close narrative is distributed, a structured exception list of every numerical figure in the draft that is inconsistent with, or cannot be traced to, the management accounts, capital report, or liquidity report.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced consistency check run on ≥10 of 12 monthly close narratives in year 1; every numerical figure in each draft checked.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of listed exceptions confirmed by the CFO as either intentional or requiring correction; no numerical inconsistency identified by readers after distribution in ≥95% of cycles.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Exception list available within 1 hour of the draft narrative, vs. inconsistencies identified by the reader after distribution in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -767,7 +857,7 @@
       <h3 class="scenario-card__title">Close Narrative Peer Benchmarking Context</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent augments the CFO&#39;s draft close narrative with a peer context section — comparing the bank&#39;s reported NIM, cost-to-income ratio, and provision charge to the most recently published figures from peer institutions — to support the board&#39;s and investors&#39; relative performance assessment.</p>
+      <p class="scenario-card__intent">The AI agent augments the CFO's draft close narrative with a peer context section — comparing the Bank's reported NIM, cost-to-income ratio, credit cost rate, and return on equity to the most recently published figures from peer institutions — to support the board's and investors' relative performance assessment.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -780,14 +870,14 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>The close narrative presents the bank&#39;s performance in absolute terms and against budget. Board members and investor relations staff add peer context manually, drawing on published peer results from their own reading. The peer context section is produced inconsistently — present in some months, absent in others — and without a systematic check that the peer figures used are the most recently available.</p>
+      <p>The close narrative presents the Bank's performance in absolute terms and against budget. Board members and investor relations staff add peer context manually, drawing on published peer results from their own reading. The peer context section is produced inconsistently — present in some months, absent in others — and without a systematic check that the peer figures used are the most recently available.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the draft close narrative, identifies the key performance metrics reported — NIM, cost-to-income ratio, credit cost rate, and return on equity — and cross-references each against the most recently published equivalent figures from a defined peer set. It produces a peer context addendum for inclusion in the close narrative, noting the period covered by each peer figure and flagging any peer whose most recent publication is more than two quarters old. The CFO reviews the addendum and confirms the peer set and period before distribution.</p>
+      <p>The AI agent reads the draft close narrative, identifies the key performance metrics reported — NIM, cost-to-income ratio, credit cost rate, and return on equity — and cross-references each against the most recently published equivalent figures from a defined peer set. It produces a peer context addendum for inclusion in the close narrative, noting the period covered by each peer figure and flagging any peer whose most recent publication is more than two quarters old. The CFO reviews the addendum and confirms the peer set and period before distribution.</p>
     </div>
     
 
@@ -795,9 +885,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The CFO receives, with each close narrative, a peer context addendum comparing the Bank's NIM, cost-to-income ratio, credit cost rate, and return on equity with the most recently published figures of a defined peer set, with the period covered by each peer figure noted.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced peer context addendum included in ≥10 of 12 monthly close narratives in year 1; all four metrics and the full defined peer set covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of addenda confirmed by the CFO without correction of the peer set or period; peer figures match the published sources in ≥98% of sampled entries.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Peer context available with every close narrative, vs. produced manually in some months and absent in others in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -825,7 +930,7 @@
       <h3 class="scenario-card__title">Close Narrative Drafting</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent drafts the CFO monthly close narrative — P&amp;L performance summary, variance attribution, one-time item schedule, and capital and liquidity highlights — from closed management accounts and prior narrative submissions as style anchors, available for CFO review on the day reporting completes.</p>
+      <p class="scenario-card__intent">The AI agent drafts the CFO monthly close narrative — P&amp;L performance summary, variance attribution, one-time item schedule, and capital and liquidity highlights — from closed management accounts and prior narrative submissions as style anchors, available for CFO review on the day reporting completes.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -845,7 +950,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the closed management accounts, the variance attribution output, the capital and liquidity position reports, and the three most recent approved close narratives as style anchors. It generates a full draft covering the CFO&#39;s standard commentary structure — consolidated P&amp;L performance, segment commentary, variance attribution, one-time items, capital and liquidity highlights, and outlook framing — and formats it in the house template. The CFO reviews the draft and applies forward judgment and tone; the agent handles the assembly and initial drafting cycle.</p>
+      <p>The AI agent reads the closed management accounts, the variance attribution output, the capital and liquidity position reports, and the three most recent approved close narratives as style anchors. It generates a full draft covering the CFO's standard commentary structure — consolidated P&amp;L performance, segment commentary, variance attribution, one-time items, capital and liquidity highlights, and outlook framing — and formats it in the house template. The CFO reviews the draft and applies forward judgment and tone; the AI agent handles the assembly and initial drafting cycle.</p>
     </div>
     
 
@@ -853,9 +958,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The CFO receives a full draft of the monthly close narrative — consolidated P&amp;L performance, segment commentary, variance attribution, one-time items, capital and liquidity highlights, and outlook framing — in the house template on the day reporting completes.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted close narrative used for ≥10 of 12 monthly close cycles in year 1; all standard commentary sections covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of drafts accepted by the CFO without material structural rewrite; figures in the draft reconcile to the closed management accounts in ≥98% of reviewed cycles.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Draft available on the day the last source document is received, vs. two to three days later in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -884,7 +1004,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">Provisions &amp; IFRS 9 close entries</h2>
     
-    <p class="l3-section__intent">IFRS 9 impairment provisioning requires the bank to compute expected credit loss across the full loan portfolio each close cycle — running the ECL model, booking the provision journal, and producing the stage migration analysis for disclosure. The quarter-end process feeds both the management P&amp;L and the IFRS statutory financial statements, with external audit substantive testing focused on staging decisions and model inputs.</p>
+    <p class="l3-section__intent">Under IFRS 9, the Bank computes expected credit loss across the full loan portfolio each close cycle — running the ECL model, booking the provision journal, and producing the stage migration analysis for disclosure. The quarter-end process feeds both the management P&amp;L and the IFRS statutory financial statements, with external audit substantive testing focused on staging decisions and model inputs.</p>
     
   </header>
 
@@ -918,7 +1038,7 @@
       <h3 class="scenario-card__title">ECL Model Run Validation</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">After the IFRS 9 ECL model run completes each close cycle, agent validates the model output for completeness, sign coherence, and period-on-period movement reasonableness — flagging anomalies that warrant Controller review before the provision journal is booked.</p>
+      <p class="scenario-card__intent">After the IFRS 9 ECL model run completes each close cycle, the AI agent validates the model output for completeness, sign coherence, and period-on-period movement reasonableness — flagging anomalies that warrant Controller review before the provision journal is booked.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -938,7 +1058,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the ECL model output file as soon as the model run completes. It applies a structured validation — checking for non-negative provisions at the segment level, reconciling segment totals to the portfolio aggregate, testing period-on-period ECL movement against defined reasonableness bounds by segment, and checking that each portfolio segment has been processed and has a non-null stage distribution. Anomalies are presented to the Controllers team and Credit Modeling in a structured exception list with the relevant model output rows attached. The team confirms each exception before the provision journal is released.</p>
+      <p>The AI agent reads the ECL model output file as soon as the model run completes. It applies a structured validation — checking for non-negative provisions at the segment level, reconciling segment totals to the portfolio aggregate, testing period-on-period ECL movement against defined reasonableness bounds by segment, and checking that each portfolio segment has been processed and has a non-null stage distribution. Anomalies are presented to the Controllers team and Credit Modeling in a structured exception list with the relevant model output rows attached. The team confirms each exception before the provision journal is released.</p>
     </div>
     
 
@@ -946,9 +1066,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Controllers and Credit Modeling receive, as soon as each IFRS 9 ECL model run completes, a structured exception list of completeness, sign, reconciliation, and movement-reasonableness anomalies to confirm before the provision journal is released.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced validation applied to the ECL model run in ≥90% of close cycles in year 1; all portfolio segments and IFRS 9 stages checked.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of listed anomalies confirmed by Controllers and Credit Modeling as warranting review; no provision journal corrected after booking for a model output anomaly in ≥95% of close cycles.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Exception list available within 2 hours of model run completion, vs. one to two days of manual review in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -976,7 +1111,7 @@
       <h3 class="scenario-card__title">Provision Journal Audit Trail</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent generates a fully traced audit trail from the ECL model inputs through the provision calculation to the booked GL journal entries, structured for external auditor review and formatted to address the auditor&#39;s standard substantive testing questions for IFRS 9 close.</p>
+      <p class="scenario-card__intent">The AI agent generates a fully traced audit trail from the ECL model inputs through the provision calculation to the booked GL journal entries, structured for external auditor review and formatted to address the auditor's standard substantive testing questions for IFRS 9 close.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -996,7 +1131,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the ECL model input data snapshot, the model output, and the GL journal entries for the provision booking. It constructs a structured audit trail document — mapping each GL provision entry to the corresponding ECL model output cell, the input data used in the calculation, and the model methodology reference. The document is formatted to address the auditor&#39;s standard substantive testing questions for IFRS 9 close and is available at the start of the audit window. Controllers review the audit trail for accuracy before it is shared with the auditors.</p>
+      <p>The AI agent reads the ECL model input data snapshot, the model output, and the GL journal entries for the provision booking. It constructs a structured audit trail document — mapping each GL provision entry to the corresponding ECL model output cell, the input data used in the calculation, and the model methodology reference. The document is formatted to address the auditor's standard substantive testing questions for IFRS 9 close and is available at the start of the audit window. Controllers review the audit trail for accuracy before it is shared with the auditors.</p>
     </div>
     
 
@@ -1004,9 +1139,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">The external auditors receive, at the start of the audit window, a Controller-reviewed audit trail mapping each GL provision entry to its ECL model output cell, input data, and methodology reference, structured around their standard IFRS 9 substantive testing questions.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced audit trail prepared for ≥4 quarterly IFRS 9 closes within year 1; all provision journal entries traced.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of audit trail documents released by Controllers without material correction; ≥70% of auditor trace queries on the provision answered from the document without a separate data retrieval.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Audit trail available at the start of the audit window, vs. one to two days per auditor query in the prior process.</p>
+        </div>
         
       </div>
     </div>
@@ -1034,7 +1184,7 @@
       <h3 class="scenario-card__title">Stage Migration Analysis Drafting</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent produces the IFRS 9 stage migration analysis — showing flows between Stage 1, Stage 2, and Stage 3 by portfolio segment with driver attribution — from the ECL model output, providing the first quantified view of portfolio credit quality movement each close cycle.</p>
+      <p class="scenario-card__intent">The AI agent produces the IFRS 9 stage migration analysis — showing flows between Stage 1, Stage 2, and Stage 3 by portfolio segment with driver attribution — from the ECL model output, providing the first quantified view of portfolio credit quality movement each close cycle.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1054,7 +1204,7 @@
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the ECL model output with borrower-level stage assignments for the current and prior period. It constructs the stage migration matrix — flows between Stage 1, Stage 2, and Stage 3 by portfolio segment — and attributes each migration category to its primary driver from the model&#39;s input data. The migration analysis is available to Controllers and Credit Modeling on the day the ECL model run is validated. The teams review and add narrative commentary for the disclosure; the agent handles the structured migration table and quantitative driver attribution.</p>
+      <p>The AI agent reads the ECL model output with borrower-level stage assignments for the current and prior period. It constructs the stage migration matrix — flows between Stage 1, Stage 2, and Stage 3 by portfolio segment — and attributes each migration category to its primary driver from the model's input data. The migration analysis is available to Controllers and Credit Modeling on the day the ECL model run is validated. The teams review and add narrative commentary for the disclosure; the AI agent handles the structured migration table and quantitative driver attribution.</p>
     </div>
     
 
@@ -1062,9 +1212,24 @@
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
+      <p class="okr-objective">Controllers and Credit Modeling receive the IFRS 9 stage migration matrix — flows between Stage 1, Stage 2, and Stage 3 by portfolio segment with quantitative driver attribution — on the day the ECL model run is validated.</p>
+      
       <div class="okr-grid">
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced stage migration analysis used for ≥90% of close cycles in year 1; all portfolio segments covered.</p>
+        </div>
         
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of migration tables accepted by Controllers and Credit Modeling without material restatement; migration flows reconcile to the ECL model stage assignments in ≥98% of reviewed cycles.</p>
+        </div>
+        
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Migration analysis available on the day the ECL model run is validated, vs. two to three days of manual assembly late in the close cycle in the prior process.</p>
+        </div>
         
       </div>
     </div>

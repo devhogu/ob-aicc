@@ -23,7 +23,7 @@ Address: {url}
 
 Question or comment:
 " data-t-dz-close="Close"></script>
-<link rel="stylesheet" href="../../../../assets/discovery.css?v=7b408f9c">
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=6396e68f">
 <script defer src="../../../../assets/discovery.js"></script>
 </head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
 <a class="o-skip" href="#main">Skip to content</a>
@@ -230,7 +230,7 @@ Question or comment:
   </div>
   
   
-    <p class="page-header__intent">Transaction processing and settlement is the operational spine of the bank — the infrastructure through which payment instructions are validated, routed, executed, and settled across wire, ACH, card, and internal-transfer rails. Under NBKR payment system regulations, NBK/ARDFM oversight requirements, and SWIFT messaging standards, each rail carries prescribed operational and compliance obligations. Payment exceptions, investigation queues, and settlement reconciliation breaks generate substantial daily operational load across payment operations teams. <strong>The opportunity for GenAI is to compress exception resolution cycles</strong> — classifying failure patterns before they accumulate, supporting investigators with structured case context, and automating reconciliation commentary — so payment operations converts from a reactive exception-management function to a proactive capacity management discipline.
+    <p class="page-header__intent">Transaction processing and settlement is the operational spine of a bank — the infrastructure through which payment instructions are validated, routed, executed, and settled across cross-border wire, domestic clearing and gross-settlement, card, and internal-transfer rails. Under payment-system regulations, oversight requirements, and SWIFT messaging standards, each rail carries prescribed operational and compliance obligations. Payment exceptions, investigation queues, and settlement reconciliation breaks generate substantial daily operational load across payment operations teams. <strong>The opportunity for GenAI is to compress exception resolution cycles</strong> — classifying failure patterns before they accumulate, supporting investigators with structured case context, and automating reconciliation commentary — so payment operations converts from a reactive exception-management function to a proactive capacity management discipline.
 </p>
   
 </header>
@@ -317,7 +317,7 @@ Question or comment:
         
         <tr class="problems-row">
           <th class="problems-lens" scope="row">Enablement</th>
-          <td class="problems-statement">Payment investigators handle 20-50 cases per day — each requiring context gathering across the payment instruction, network reason code, customer history, prior similar cases, and correspondence with partner banks. New investigators ramp slowly because the pattern knowledge that determines the correct next step for each case type lives in senior investigators&#39; heads rather than in accessible institutional knowledge.</td>
+          <td class="problems-statement">Payment investigators handle 20–50 cases per day — each requiring context gathering across the payment instruction, network reason code, customer history, prior similar cases, and correspondence with partner banks. New investigators ramp slowly because the pattern knowledge that determines the correct next step for each case type lives in senior investigators' heads rather than in accessible institutional knowledge.</td>
         </tr>
         
         <tr class="problems-row">
@@ -358,7 +358,7 @@ Question or comment:
   <header class="l3-section__head">
     <h2 class="l3-section__title">Payment failure &amp; exception pattern analytics</h2>
     
-    <p class="l3-section__intent">Classification and clustering of payment failures, rejections, and exceptions across wire, ACH, card, and internal-transfer rails — identifying the family patterns that drive exception volume, attributing failures to internal, counterparty, or customer causes, and quantifying the cost of each pattern. Under NBKR payment system reporting requirements, persistent exception families must be investigated and resolved. Current practice processes exceptions case-by-case without systematic pattern visibility.</p>
+    <p class="l3-section__intent">Classification and clustering of payment failures, rejections, and exceptions across cross-border wire, domestic clearing and gross-settlement, card, and internal-transfer rails — identifying the family patterns that drive exception volume, attributing failures to internal, counterparty, or customer causes, and quantifying the cost of each pattern. Payment-system reporting requirements commonly expect persistent exception families to be investigated and resolved. Current practice processes exceptions case-by-case without systematic pattern visibility.</p>
     
   </header>
 
@@ -392,8 +392,7 @@ Question or comment:
       <h3 class="scenario-card__title">Straight-through processing gap signal</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Continuous monitoring of STP rate by payment rail, counterparty, and instruction type — identifying the payment populations where manual exception handling cost is highest relative to the volume processed and flagging specific instruction or counterparty configurations where STP rate has declined below the historical baseline.
-The analysis supports the operations team&#39;s channel and counterparty routing optimisation discussions and the product team&#39;s instruction quality improvement programme.</p>
+      <p class="scenario-card__intent">Weekly monitoring of STP rate by payment rail, counterparty, and instruction type — identifying the payment populations where manual exception handling cost is highest relative to the volume processed and flagging specific instruction or counterparty configurations where STP rate has declined below the historical baseline. The analysis supports the operations team's channel and counterparty routing optimization discussions and the product team's instruction quality improvement program.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -414,8 +413,7 @@ Without granular STP gap analysis, routing and instruction quality improvements 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors STP rates by payment rail, counterparty, and instruction type on a weekly basis, flagging counterparty and instruction configurations where the STP rate has declined below the 13-week baseline by a material threshold.
-Operations management and the product team review the STP gap signal and direct counterparty routing discussions and instruction quality improvement toward the flagged configurations.</p>
+      <p>The AI agent monitors STP rates by payment rail, counterparty, and instruction type on a weekly basis, flagging counterparty and instruction configurations where the STP rate has declined below the 13-week baseline by a material threshold. Operations management and the product team review the STP gap signal and direct counterparty routing discussions and instruction quality improvement toward the flagged configurations.</p>
     </div>
     
 
@@ -423,7 +421,7 @@ Operations management and the product team review the STP gap signal and direct 
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">STP rate declines below historical baseline by payment rail, counterparty, and instruction type are identified on a weekly monitoring cycle and routed to operations and product management for investigation.</p>
+      <p class="okr-objective">STP rate declines below historical baseline by payment rail, counterparty, and instruction type are identified on a weekly monitoring cycle and routed to operations management and the product team for investigation.</p>
       
       <div class="okr-grid">
         
@@ -441,7 +439,7 @@ Operations management and the product team review the STP gap signal and direct 
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>STP gap signal available each Monday from the prior week&#39;s processing data so operations and product teams can act within the same week as the decline detection.</p>
+          <p>STP gap signal available each Monday from the prior week's processing data so operations management and the product team can act within the same week as the decline detection.</p>
         </div>
         
       </div>
@@ -470,9 +468,7 @@ Operations management and the product team review the STP gap signal and direct 
       <h3 class="scenario-card__title">Payment Exception Pattern Analytics</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent classifies and clusters payment exceptions and chargebacks across all rails, attributes failure families to internal, counterparty, or customer causes, and produces a weekly pattern dashboard with a prioritised fix list for payment operations management.
-Chargeback concentration, BIN-level fraud signatures, and network monitoring threshold proximity are surfaced as standing pattern outputs rather than accumulating unseen to enforcement levels.
-Payment operations management directs process changes, partner-bank escalations, and instruction-validation improvements from the pattern view.</p>
+      <p class="scenario-card__intent">The AI agent classifies and clusters payment exceptions and chargebacks across all rails, attributes failure families to internal, counterparty, or customer causes, and produces a weekly pattern dashboard with a prioritized fix list for payment operations management. Chargeback concentration, BIN-level fraud signatures, and network monitoring threshold proximity are surfaced as standing pattern outputs rather than accumulating unseen to enforcement levels. Payment operations management directs process changes, partner-bank escalations, and instruction-validation improvements from the pattern view.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -494,9 +490,7 @@ The absence of a current-pattern view means payment operations investment — in
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent processes every payment exception and chargeback on a batch basis, classifying by failure type, rail, and cause attribution — internal process, partner bank, or customer instruction — and for chargebacks by merchant, BIN, and network threshold proximity.
-It clusters failure families, quantifies handle-time cost per family, and produces the weekly pattern dashboard with a prioritised fix list.
-Payment operations management uses the ranked pattern view to direct process changes, partner-bank escalations, and instruction-validation improvements; exception volume per failure family and handle-time cost per exception are the primary outcome metrics.</p>
+      <p>The AI agent processes every payment exception and chargeback on a batch basis, classifying by failure type, rail, and cause attribution — internal process, partner bank, or customer instruction — and for chargebacks by merchant, BIN, and network threshold proximity. It clusters failure families, quantifies handle-time cost per family, and produces the weekly pattern dashboard with a prioritized fix list. Payment operations management uses the ranked pattern view to direct process changes, partner-bank escalations, and instruction-validation improvements; exception volume per failure family and handle-time cost per exception are the primary outcome metrics.</p>
     </div>
     
 
@@ -510,7 +504,7 @@ Payment operations management uses the ranked pattern view to direct process cha
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced weekly payment exception pattern dashboard used for ≥48 of 52 weeks in year 1; all active payment rails and chargeback types covered in each cycle.</p>
+          <p>AI-produced weekly payment exception pattern dashboard used for ≥48 of 52 weeks in year 1; all active payment rails and chargeback types covered in each cycle.</p>
         </div>
         
         
@@ -551,8 +545,7 @@ Payment operations management uses the ranked pattern view to direct process cha
       <h3 class="scenario-card__title">Payment failure root-cause attribution</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Attribution of payment failure and exception volume to root causes — counterparty processing failures, internal instruction errors, customer data quality issues, and network rule changes — with cost-per-exception quantified by root cause category.
-The attribution informs operations management and product team improvement prioritisation, concentrating effort on the root causes with the highest remediation impact.</p>
+      <p class="scenario-card__intent">Attribution of payment failure and exception volume to root causes — counterparty processing failures, internal instruction errors, customer data quality issues, and network rule changes — with cost-per-exception quantified by root cause category. The attribution informs operations management and product team improvement prioritization, concentrating effort on the root causes with the highest remediation impact.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -573,8 +566,7 @@ Without root-cause attribution, exception reduction initiatives address symptoms
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the exception pattern clusters and analyses the associated payment instruction data, network reason codes, and counterparty behavior patterns to attribute each exception family to its primary root cause.
-Operations management and the product team review the root-cause attribution report and direct improvement initiatives toward the specific internal, counterparty, or customer causes driving the highest exception cost.</p>
+      <p>The AI agent reads the exception pattern clusters and analyzes the associated payment instruction data, network reason codes, and counterparty behavior patterns to attribute each exception family to its primary root cause. Operations management and the product team review the root-cause attribution report and direct improvement initiatives toward the specific internal, counterparty, or customer causes driving the highest exception cost.</p>
     </div>
     
 
@@ -582,7 +574,7 @@ Operations management and the product team review the root-cause attribution rep
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Payment exception family root causes are attributed from pattern and instruction data on a rolling basis and available for improvement initiative targeting.</p>
+      <p class="okr-objective">Payment exception family root causes are attributed from pattern and instruction data on a rolling basis and available to operations management and the product team for improvement initiative targeting.</p>
       
       <div class="okr-grid">
         
@@ -630,7 +622,7 @@ Operations management and the product team review the root-cause attribution rep
   <header class="l3-section__head">
     <h2 class="l3-section__title">Nostro reconciliation</h2>
     
-    <p class="l3-section__intent">Daily matching of the bank&#39;s internal ledger positions against nostro account statements from correspondent banks — identifying breaks by value date, currency, counterparty, and instruction reference. Under NBKR and CBR foreign currency control rules, unreconciled nostro positions must be investigated and resolved within prescribed timeframes. For banks with multiple correspondent relationships and multi-currency flows, the daily reconciliation cycle generates persistent break populations that require investigator time to explain and resolve.</p>
+    <p class="l3-section__intent">Daily matching of the Bank's internal ledger positions against nostro account statements from correspondent banks — identifying breaks by value date, currency, counterparty, and instruction reference. Foreign-currency control rules commonly require unreconciled nostro positions to be investigated and resolved within prescribed timeframes. For banks with multiple correspondent relationships and multi-currency flows, the daily reconciliation cycle generates persistent break populations that require investigator time to explain and resolve.</p>
     
   </header>
 
@@ -664,8 +656,7 @@ Operations management and the product team review the root-cause attribution rep
       <h3 class="scenario-card__title">Nostro position intraday monitoring</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Intraday monitoring of nostro account positions against the bank&#39;s internal ledger projections — flagging developing discrepancies before the end-of-day reconciliation cycle so that positions approaching an unreconciled balance threshold can be investigated before the close.
-Early identification of developing breaks reduces the end-of-day unreconciled balance and the investigator workload required to resolve time-sensitive breaks under NBKR foreign currency control timelines.</p>
+      <p class="scenario-card__intent">Intraday monitoring of nostro account positions against the Bank's internal ledger projections — flagging developing discrepancies before the end-of-day reconciliation cycle so that positions approaching an unreconciled balance threshold can be investigated before the close. Early identification of developing breaks reduces the end-of-day unreconciled balance and the investigator workload required to resolve time-sensitive breaks under foreign-currency control timelines.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -678,16 +669,14 @@ Early identification of developing breaks reduces the end-of-day unreconciled ba
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Nostro position discrepancies that develop intraday are identified only at the end-of-day reconciliation cycle; discrepancies that accumulate throughout the day arrive at the reconciliation team as a batch at close, creating a concentrated investigation load under the NBKR and CBR resolution deadline.
-Intraday visibility into developing discrepancies would allow the operations team to investigate and resolve time-sensitive breaks before the end-of-day deadline pressure accumulates.</p>
+      <p>Nostro position discrepancies that develop intraday are identified only at the end-of-day reconciliation cycle; discrepancies that accumulate throughout the day arrive at the reconciliation team as a batch at close, creating a concentrated investigation load under the regulatory resolution deadline. Intraday visibility into developing discrepancies would allow the operations team to investigate and resolve time-sensitive breaks before the end-of-day deadline pressure accumulates.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads intraday nostro account position updates and compares them against the bank&#39;s internal ledger projections, flagging developing discrepancies above a prescribed balance threshold for same-day investigation.
-Operations team reviews the intraday flag queue and investigates developing discrepancies before the end-of-day reconciliation cycle, reducing the concentrated workload at close.</p>
+      <p>The AI agent reads intraday nostro account position updates and compares them against the Bank's internal ledger projections, flagging developing discrepancies above a prescribed balance threshold for same-day investigation. The operations team reviews the intraday flag queue and investigates developing discrepancies before the end-of-day reconciliation cycle, reducing the concentrated workload at close.</p>
     </div>
     
 
@@ -707,7 +696,7 @@ Operations team reviews the intraday flag queue and investigates developing disc
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>End-of-day unreconciled balance volume reduced by ≥20% within 12 months; NBKR and CBR resolution deadline breach rate on nostro breaks reduced to below 1%.</p>
+          <p>End-of-day unreconciled balance volume reduced by ≥20% within 12 months; regulatory resolution deadline breach rate on nostro breaks reduced to below 1%.</p>
         </div>
         
         
@@ -742,9 +731,7 @@ Operations team reviews the intraday flag queue and investigates developing disc
       <h3 class="scenario-card__title">Nostro Reconciliation Break Commentary</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent generates the daily nostro break commentary — categorising each unmatched item by counterparty, currency, and probable cause, and drafting correspondent-bank follow-up messages — from structured reconciliation data.
-The commentary is produced in the prescribed format used by the settlements team, with correspondent-bank messages drafted for senior review and dispatch.
-Daily commentary production concentrates settlements team effort on exception judgment rather than on format assembly.</p>
+      <p class="scenario-card__intent">The AI agent generates the daily nostro break commentary — categorizing each unmatched item by counterparty, currency, and probable cause, and drafting correspondent-bank follow-up messages — from structured reconciliation data. The commentary is produced in the prescribed format used by the settlements team, with correspondent-bank messages drafted for senior review and dispatch. Daily commentary production concentrates settlements team effort on exception judgment rather than on format assembly.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -766,9 +753,7 @@ For banks with multiple correspondent relationships and multi-currency flows, th
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the daily reconciliation output, categorises each break by counterparty, currency, instruction type, and probable cause, and drafts the break commentary in prescribed format.
-It generates correspondent-bank follow-up messages for each unresolved break, ready for senior settlements review and dispatch.
-Daily commentary production time and unresolved break ageing are the primary outcome metrics; senior settlement staff review and dispatch the generated messages, retaining authority over correspondent-bank communications.</p>
+      <p>The AI agent reads the daily reconciliation output, categorizes each break by counterparty, currency, instruction type, and probable cause, and drafts the break commentary in prescribed format. It generates correspondent-bank follow-up messages for each unresolved break, ready for senior settlements review and dispatch. Daily commentary production time and unresolved break aging are the primary outcome metrics; senior settlements staff review and dispatch the generated messages, retaining authority over correspondent-bank communications.</p>
     </div>
     
 
@@ -776,19 +761,19 @@ Daily commentary production time and unresolved break ageing are the primary out
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Daily nostro break commentary — categorising each unmatched item by counterparty, currency, and probable cause, with correspondent-bank follow-up messages drafted for senior review and dispatch — is produced from structured reconciliation data each business day.</p>
+      <p class="okr-objective">Daily nostro break commentary — categorizing each unmatched item by counterparty, currency, and probable cause, with correspondent-bank follow-up messages drafted for senior review and dispatch — is produced from structured reconciliation data each business day.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced nostro break commentary used for ≥95% of business days in year 1; all active correspondent relationships and multi-currency flows covered.</p>
+          <p>AI-produced nostro break commentary used for ≥95% of business days in year 1; all active correspondent relationships and multi-currency flows covered.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥85% of agent-drafted follow-up messages accepted by senior settlements staff without material amendment before dispatch; cause categorisation accuracy confirmed at ≥90% on periodic reconciliation audit.</p>
+          <p>≥85% of AI-drafted follow-up messages accepted by senior settlements staff without material amendment before dispatch; cause categorization accuracy confirmed at ≥90% on periodic reconciliation audit.</p>
         </div>
         
         
@@ -823,8 +808,7 @@ Daily commentary production time and unresolved break ageing are the primary out
       <h3 class="scenario-card__title">Nostro break pattern analytics</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Analysis of the persistent nostro break population — by currency, correspondent bank, value date pattern, and instruction type — to identify the root causes generating the highest volume of recurring breaks and to quantify the investigator time cost attributable to each break family.
-The analysis informs the operations team&#39;s correspondent relationship management discussions and internal instruction processing improvement prioritisation.</p>
+      <p class="scenario-card__intent">Analysis of the persistent nostro break population — by currency, correspondent bank, value date pattern, and instruction type — to identify the root causes generating the highest volume of recurring breaks and to quantify the investigator time cost attributable to each break family. The analysis informs the operations team's correspondent relationship management discussions and internal instruction processing improvement prioritization.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -845,8 +829,7 @@ Recurring break families that could be eliminated through a single correspondent
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent analyses the closed nostro break population — by currency, correspondent, value date deviation pattern, and instruction type — and produces a ranked break family report with the resolution cost and recurrence frequency per family and the likely root cause attributed.
-Operations management uses the break family report to prioritise correspondent relationship management discussions and internal processing improvements, with the recurrence and cost evidence available for the discussion rationale.</p>
+      <p>The AI agent analyzes the closed nostro break population — by currency, correspondent, value date deviation pattern, and instruction type — and produces a ranked break family report with the resolution cost and recurrence frequency per family and the likely root cause attributed. Operations management uses the break family report to prioritize correspondent relationship management discussions and internal processing improvements, with the recurrence and cost evidence available for the discussion rationale.</p>
     </div>
     
 
@@ -854,7 +837,7 @@ Operations management uses the break family report to prioritise correspondent r
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Recurring nostro break families are identified from reconciliation history on a rolling basis and available for correspondent relationship management and processing improvement prioritisation.</p>
+      <p class="okr-objective">Recurring nostro break families are identified from reconciliation history on a rolling basis and available to operations management for correspondent relationship management and processing improvement prioritization.</p>
       
       <div class="okr-grid">
         
@@ -872,7 +855,7 @@ Operations management uses the break family report to prioritise correspondent r
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Break pattern report refreshed monthly from the prior 90 days of reconciliation data so improvement prioritisation reflects the most recent break distribution.</p>
+          <p>Break pattern report refreshed monthly from the prior 90 days of reconciliation data so improvement prioritization reflects the most recent break distribution.</p>
         </div>
         
       </div>
@@ -958,8 +941,7 @@ Cases where the institutional next-step pattern consistently produces additional
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent analyses prior investigation cases — next-step selected, subsequent steps required, and total resolution time — by payment reason code, counterparty type, and case characteristic, and produces a next-step efficiency report identifying the decision patterns that produce the fastest and slowest resolution cycles.
-The investigation triage support system incorporates the efficiency evidence into its next-step recommendations, and operations management uses the report to identify the process step sequences requiring procedure improvement.</p>
+      <p>The AI agent analyzes prior investigation cases — next-step selected, subsequent steps required, and total resolution time — by payment reason code, counterparty type, and case characteristic, and produces a next-step efficiency report identifying the decision patterns that produce the fastest and slowest resolution cycles. The investigation triage support system incorporates the efficiency evidence into its next-step recommendations, and operations management uses the report to identify the process step sequences requiring procedure improvement.</p>
     </div>
     
 
@@ -1014,9 +996,7 @@ The investigation triage support system incorporates the efficiency evidence int
       <h3 class="scenario-card__title">Payment Investigation Triage</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent assembles case context and a recommended next step for each payment investigation — payment instruction, reason code analysis, customer history, and similar prior cases — ready for investigator review and action.
-New investigator ramp-up on institutional pattern knowledge accelerates because the context pack is available at case open rather than requiring manual research.
-Investigator judgment is applied to the next-step decision and case resolution rather than to evidence assembly.</p>
+      <p class="scenario-card__intent">The AI agent assembles case context and a recommended next step for each payment investigation — payment instruction, reason code analysis, customer history, and similar prior cases — ready for investigator review and action. New investigator ramp-up on institutional pattern knowledge accelerates because the context pack is available at case open rather than requiring manual research. Investigator judgment is applied to the next-step decision and case resolution rather than to evidence assembly.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1038,9 +1018,7 @@ Exception queues age during context-gathering delays, with downstream implicatio
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>When a case is opened, agent reads the payment instruction, decodes the network reason code, retrieves similar prior cases, and produces a structured advisory output with a recommended next step.
-Investigator reviews the context pack and the recommended next step, validates the recommendation, and acts; context-gathering time is eliminated from the case cycle.
-New investigator ramp-up speed and average case resolution time are the primary outcome metrics alongside queue age distribution.</p>
+      <p>When a case is opened, the AI agent reads the payment instruction, decodes the network reason code, pulls the customer history, retrieves similar prior cases, and produces a structured context pack with a recommended next step. The investigator reviews the context pack and the recommended next step, validates the recommendation, and acts; context-gathering time is eliminated from the case cycle. New investigator ramp-up speed and average case resolution time are the primary outcome metrics alongside queue age distribution.</p>
     </div>
     
 
@@ -1054,7 +1032,7 @@ New investigator ramp-up speed and average case resolution time are the primary 
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced investigation context packs used for ≥90% of payment investigations opened within 12 months of go-live.</p>
+          <p>AI-produced investigation context packs used for ≥90% of payment investigations opened within 12 months of go-live.</p>
         </div>
         
         
@@ -1092,7 +1070,7 @@ New investigator ramp-up speed and average case resolution time are the primary 
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Payment exception queue prioritisation</h3>
+      <h3 class="scenario-card__title">Payment exception queue prioritization</h3>
     </div>
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">Automated priority ranking of the payment exception queue — sequencing cases by value-at-risk, regulatory deadline proximity, counterparty exposure, and SLA remaining — so investigators work the highest-risk exceptions before the deadline window closes.
@@ -1109,16 +1087,14 @@ The queue ranking is refreshed continuously as new exceptions arrive and existin
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Payment exception queues processed in arrival order allocate investigator attention to low-value or early-deadline cases at the same rate as high-value or deadline-critical cases; high-value or regulatory-deadline exceptions that arrive mid-queue may not reach the investigator before the deadline.
-Under NBKR payment system reporting requirements, persistent exception families must be investigated and resolved within prescribed timeframes; deadline breaches on high-value exceptions create regulatory reporting obligations and correspondent banking relationship risk.</p>
+      <p>Payment exception queues processed in arrival order allocate investigator attention to low-value or distant-deadline cases at the same rate as high-value or deadline-critical cases; high-value or regulatory-deadline exceptions that arrive mid-queue may not reach the investigator before the deadline. Payment-system requirements commonly provide that payment exceptions be investigated and resolved within prescribed timeframes; deadline breaches on high-value exceptions create regulatory reporting obligations and correspondent banking relationship risk.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads each exception in the queue and scores it on value-at-risk, regulatory deadline proximity, counterparty exposure, and SLA remaining, producing a continuously refreshed priority ranking for the investigation team.
-Investigators work the prioritised queue, with the ranking rationale for each case available on the exception record and the cases at deadline risk flagged for supervisor escalation.</p>
+      <p>The AI agent reads each exception in the queue and scores it on value-at-risk, regulatory deadline proximity, counterparty exposure, and SLA remaining, producing a continuously refreshed priority ranking for the investigation team. Investigators work the prioritized queue, with the ranking rationale for each case available on the exception record and the cases at deadline risk flagged for supervisor escalation.</p>
     </div>
     
 
@@ -1126,13 +1102,13 @@ Investigators work the prioritised queue, with the ranking rationale for each ca
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">The payment exception queue is prioritised by value-at-risk and deadline proximity on a continuous basis so investigators work the highest-risk cases before the resolution window closes.</p>
+      <p class="okr-objective">The payment exception queue is prioritized by value-at-risk and deadline proximity on a continuous basis so investigators work the highest-risk cases before the resolution window closes.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Prioritised queue used by the payment exceptions team for ≥90% of daily exception volume within 6 months of go-live.</p>
+          <p>Prioritized queue used by the payment exceptions team for ≥90% of daily exception volume within 6 months of go-live.</p>
         </div>
         
         
@@ -1174,7 +1150,7 @@ Investigators work the prioritised queue, with the ranking rationale for each ca
   <header class="l3-section__head">
     <h2 class="l3-section__title">Case dossier builder</h2>
     
-    <p class="l3-section__intent">Pre-assembled context pack for complex payment investigations, fraud cases, and dispute reviews — pulling KYC, recent transaction history, prior cases, complaints, and external watchlist hits from multiple systems into a structured timeline before the analyst begins substantive review. For AML-linked payment investigations, the dossier must include the full transaction-monitoring alert history and sanctions screening results. Dossier assembly currently consumes the first 30-180 minutes of every complex case.</p>
+    <p class="l3-section__intent">Pre-assembled context pack for complex payment investigations, fraud cases, and dispute reviews — pulling KYC, recent transaction history, prior cases, complaints, and external watchlist hits from multiple systems into a structured timeline before the analyst begins substantive review. For AML-linked payment investigations, the dossier must include the full transaction-monitoring alert history and sanctions screening results. Dossier assembly typically consumes the first 30–180 minutes of every complex case. Closed cases and their dossiers also feed resolution-time and fraud-pattern analysis.</p>
     
   </header>
 
@@ -1230,8 +1206,7 @@ Without resolution time analytics at the case type and preparation condition lev
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent analyses closed investigation cases — resolution time by case type, investigator, and dossier completeness score — and produces a resolution time attribution report ranking the case types with the highest resolution time variance and identifying the dossier preparation conditions that correlate with the fastest resolution.
-Operations management uses the attribution report to prioritise dossier template improvements for the highest-variance case types and to calibrate investigator capacity allocation by case mix.</p>
+      <p>The AI agent analyzes closed investigation cases — resolution time by case type, investigator, and dossier completeness score — and produces a resolution time attribution report ranking the case types with the highest resolution time variance and identifying the dossier preparation conditions that correlate with the fastest resolution. Operations management uses the attribution report to prioritize dossier template improvements for the highest-variance case types and to calibrate investigator capacity allocation by case mix.</p>
     </div>
     
 
@@ -1239,7 +1214,7 @@ Operations management uses the attribution report to prioritise dossier template
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Investigation resolution time is attributed to case type and dossier preparation condition on a rolling basis and available for operations management capacity planning and dossier improvement prioritisation.</p>
+      <p class="okr-objective">Investigation resolution time is attributed to case type and dossier preparation condition on a rolling basis and available for operations management capacity planning and dossier improvement prioritization.</p>
       
       <div class="okr-grid">
         
@@ -1308,8 +1283,7 @@ Dossier assembly time that is not available for substantive analysis compresses 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the investigation trigger — case type and subject identifier — and retrieves KYC profile, recent transaction history, prior cases, complaints, and external watchlist hits from connected source systems, assembling them into a structured timeline dossier with source citations.
-Analyst receives the pre-assembled dossier and begins substantive review without additional data retrieval, with the dossier structure aligned to the prescribed investigation checklist.</p>
+      <p>The AI agent reads the investigation trigger — case type and subject identifier — and retrieves KYC profile, recent transaction history, prior cases, complaints, and external watchlist hits from connected source systems, assembling them into a structured timeline dossier with source citations. The analyst receives the pre-assembled dossier and begins substantive review without additional data retrieval, with the dossier structure aligned to the prescribed investigation checklist.</p>
     </div>
     
 
@@ -1364,8 +1338,7 @@ Analyst receives the pre-assembled dossier and begins substantive review without
       <h3 class="scenario-card__title">Fraud and dispute pattern signal</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Analysis of closed fraud cases and disputed transactions — clustering by fraud type, merchant category, transaction channel, and customer segment — to identify the case type patterns with the highest investigation cost and the recurring fraud typologies that would benefit from rule or control adjustment.
-The analysis surfaces the specific fraud patterns and dispute drivers that account for the largest proportion of investigation volume and cost for fraud operations prioritisation.</p>
+      <p class="scenario-card__intent">Analysis of closed fraud cases and disputed transactions — clustering by fraud type, merchant category, transaction channel, and customer segment — to identify the case type patterns with the highest investigation cost and the recurring fraud typologies that would benefit from rule or control adjustment. The analysis surfaces the specific fraud patterns and dispute drivers that account for the largest proportion of investigation volume and cost for fraud operations prioritization.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1386,8 +1359,7 @@ Without pattern attribution, fraud operations and product teams allocate control
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent clusters closed fraud cases and disputed transactions by fraud type, merchant category, transaction channel, and customer segment, attributes investigation cost to each cluster, and produces a ranked pattern report with the specific typologies and channel combinations driving volume and cost concentration.
-Fraud operations management and the product team use the pattern report to prioritise control improvement and rule adjustment for the highest-cost fraud patterns.</p>
+      <p>The AI agent clusters closed fraud cases and disputed transactions by fraud type, merchant category, transaction channel, and customer segment, attributes investigation cost to each cluster, and produces a ranked pattern report with the specific typologies and channel combinations driving volume and cost concentration. Fraud operations management and the product team use the pattern report to prioritize control improvement and rule adjustment for the highest-cost fraud patterns.</p>
     </div>
     
 
@@ -1395,7 +1367,7 @@ Fraud operations management and the product team use the pattern report to prior
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Fraud case and dispute pattern attribution is available on a rolling basis for fraud operations and product team control improvement prioritisation.</p>
+      <p class="okr-objective">Fraud case and dispute pattern attribution is available on a rolling basis for fraud operations and product team control improvement prioritization.</p>
       
       <div class="okr-grid">
         

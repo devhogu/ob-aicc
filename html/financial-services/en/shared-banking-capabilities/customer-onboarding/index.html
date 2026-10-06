@@ -112,7 +112,7 @@
   </div>
   
   
-    <p class="page-header__intent">Customer onboarding is the regulated entry process through which the bank establishes a customer's identity, assesses their risk profile, and activates their products — governed by NBKR Instruction No. 5, NBK/ARDFM AML/CFT rules, and CBR Regulation No. 499-P on CDD. KYC document collection, CDD risk classification, sanctions and PEP screening, and account activation each run as distinct operational steps with prescribed evidence standards. Onboarding failure or delay is both a regulatory exposure and a commercial drag — incomplete KYC triggers supervisory findings; slow activation loses customers at the moment of highest intent. <strong>The opportunity for GenAI is to automate document extraction and CDD classification, compress the KYC review cycle, and surface early cross-sell signals at the point of activation.</strong>
+    <p class="page-header__intent">Customer onboarding is the regulated entry process through which the Bank establishes a customer's identity, assesses their risk profile, and activates their products — governed by AML/CFT and customer due diligence (CDD) requirements. KYC document collection, CDD risk classification, sanctions and PEP screening, and account activation each run as distinct operational steps with prescribed evidence standards. Onboarding failure or delay is both a regulatory exposure and a commercial drag — incomplete KYC triggers supervisory findings; slow activation loses customers at the moment of highest intent. <strong>The opportunity for GenAI is to automate document extraction and CDD classification, compress the KYC review cycle, and surface early cross-sell signals at the point of activation.</strong>
 </p>
   
 </header>
@@ -240,7 +240,7 @@
   <header class="l3-section__head">
     <h2 class="l3-section__title">KYC document extraction</h2>
     
-    <p class="l3-section__intent">Structured extraction of customer identity, address, and beneficial ownership fields from submitted documents — including passports, national IDs, utility bills, corporate registry filings, and company accounts — into the CDD system of record. Under NBKR and CBR CDD rules, prescribed fields must be captured with source-document traceability. Extraction is currently manual for all document types, consuming the majority of KYC analyst time on standard cases.</p>
+    <p class="l3-section__intent">Structured extraction of customer identity, address, and beneficial ownership fields from submitted documents — including passports, national IDs, utility bills, corporate registry filings, and company accounts — into the CDD system of record. Under CDD rules, prescribed fields must be captured with source-document traceability. Extraction is currently manual for all document types, consuming the majority of KYC analyst time on standard cases.</p>
     
   </header>
 
@@ -274,14 +274,12 @@
       <h3 class="scenario-card__title">KYC Extraction and CDD Classification</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent extracts prescribed KYC fields from submitted identity and address documents into the CDD system, applies the bank&#39;s risk-rating methodology to the extracted data, and routes standard cases for analyst spot-check while flagging EDD triggers for mandatory senior review.
-Standard-case classification — which follows a rule-based methodology for the majority of applicants — is completed without analyst intervention, concentrating analyst capacity on complex and elevated-risk cases.
-Source citations accompany each extracted field, maintaining the evidentiary audit trail required under NBKR and CBR CDD obligations.</p>
+      <p class="scenario-card__intent">The AI agent extracts prescribed KYC fields from submitted identity and address documents into the CDD system, applies the Bank's risk-rating methodology to the extracted data, and routes standard cases for analyst spot-check while flagging EDD triggers for mandatory senior review. Standard-case classification — which follows a rule-based methodology for the majority of applicants — is completed without analyst intervention, concentrating analyst capacity on complex and elevated-risk cases. Source citations accompany each extracted field, maintaining the evidentiary audit trail required under CDD obligations.</p>
     </div>
     <span
-      class="scenario-complexity scenario-complexity--S"
+      class="scenario-complexity scenario-complexity--M"
       title="Complexity"
-    >S</span>
+    >M</span>
   </summary>
 
   <div class="scenario-card__body">
@@ -289,18 +287,14 @@ Source citations accompany each extracted field, maintaining the evidentiary aud
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>KYC analysts populate CDD records manually from each submitted identity document, utility bill, and corporate registry filing — extraction consumes 15 to 30 minutes per applicant on standard retail cases and is the primary throughput constraint on the onboarding team.
-Standard-case classification follows a rule-based methodology for 80 to 90 percent of applicants, applying analyst capacity to low-judgment work that does not require professional assessment.
-Manual extraction introduces transcription error into CDD records; errors identified during periodic CDD refresh reviews require remediation work that compounds the original extraction cost.</p>
+      <p>KYC analysts populate CDD records manually from each submitted identity document, utility bill, and corporate registry filing — extraction consumes 15–30 minutes per applicant on standard retail cases and is the primary throughput constraint on the onboarding team. Standard-case classification follows a rule-based methodology for 80–90 percent of applicants, applying analyst capacity to low-judgment work that does not require professional assessment. Manual extraction introduces transcription error into CDD records; errors identified during periodic CDD refresh reviews require remediation work that compounds the original extraction cost.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads submitted documents via OCR and structured extraction, populates prescribed CDD fields with source citations, and applies the bank&#39;s risk-scoring methodology to produce a classification recommendation with supporting rationale.
-Standard cases route for analyst spot-check; EDD triggers — PEP indicators, high-risk-country nationals, complex ownership structures — route for mandatory senior review.
-Analyst capacity concentrates on the complex and elevated-risk population where classification requires professional judgment and regulatory accountability.</p>
+      <p>The AI agent reads submitted documents via OCR and structured extraction, populates prescribed CDD fields with source citations, and applies the Bank's risk-rating methodology to produce a classification recommendation with supporting rationale. Standard cases route for analyst spot-check; EDD triggers — PEP indicators, high-risk-country nationals, complex ownership structures — route for mandatory senior review. Analyst capacity concentrates on the complex and elevated-risk population where classification requires professional judgment and regulatory accountability.</p>
     </div>
     
 
@@ -308,25 +302,23 @@ Analyst capacity concentrates on the complex and elevated-risk population where 
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">KYC fields are extracted from submitted identity and address documents into the CDD system with source citations, risk-rating is applied per the bank&#39;s methodology, and standard cases route for analyst spot-check while EDD triggers route for mandatory senior review — concentrating analyst capacity on the complex and elevated-risk population.</p>
+      <p class="okr-objective">KYC fields are extracted from submitted identity and address documents into the CDD system with source citations, risk-rating is applied per the Bank's methodology, and standard cases route for analyst spot-check while EDD triggers route for mandatory senior review — concentrating analyst capacity on the complex and elevated-risk population.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent used for KYC extraction and initial CDD classification for ≥90% of retail and SME onboarding applications within 12 months of go-live.</p>
+          <p>The AI agent is used for KYC extraction and initial CDD classification for ≥90% of retail and SME onboarding applications within 12 months of go-live.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥95% of standard-case classifications confirmed correct on analyst spot-check; EDD trigger accuracy (PEP, high-risk-country, complex ownership) ≥90% on periodic Compliance QA review under NBKR and CBR CDD obligations.</p>
+          <p>≥95% of standard-case classifications confirmed correct on analyst spot-check; EDD trigger accuracy (PEP, high-risk-country, complex ownership) ≥90% on periodic Compliance QA review against CDD obligations.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>CDD extraction and classification recommendation available within 15 minutes of document submission, vs. 15–30 minutes of manual extraction per standard case in the prior process.</p>
+          <p>CDD extraction and classification recommendation available within 15 minutes of document submission without analyst data entry, vs. 15–30 minutes of analyst extraction time per standard case in the prior process.</p>
         </div>
         
       </div>
@@ -369,16 +361,14 @@ Pre-screening reduces the rate of incomplete submission re-requests, which are a
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Incomplete or poor-quality KYC document submissions are identified after the documents enter the extraction and CDD workflow; the identification and re-request cycle extends onboarding time by 2 to 5 business days per affected customer.
-Under NBKR and CBR CDD rules, prescribed field completeness is required before account opening proceeds; processing incomplete submissions into the workflow consumes analyst time on cases that will be suspended for re-request.</p>
+      <p>Incomplete or poor-quality KYC document submissions are identified after the documents enter the extraction and CDD workflow; the identification and re-request cycle extends onboarding time by 2–5 business days per affected customer. CDD rules require prescribed field completeness before account opening proceeds; processing incomplete submissions into the workflow consumes analyst time on cases that will be suspended for re-request.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent screens each KYC document submission at intake against the prescribed document set for the customer type and jurisdiction, flagging missing documents, expired identity documents, and low-resolution images before the submission enters the extraction workflow.
-Customers receive a targeted re-submission request identifying the specific gap rather than a generic re-submission notice, reducing the re-submission cycle from multiple rounds to a single targeted request.</p>
+      <p>The AI agent screens each KYC document submission at intake against the prescribed document set for the customer type and jurisdiction, flagging missing documents, expired identity documents, and low-resolution images before the submission enters the extraction workflow. Customers receive a targeted re-submission request identifying the specific gap rather than a generic re-submission notice, reducing the re-submission cycle from multiple rounds to a single targeted request.</p>
     </div>
     
 
@@ -392,7 +382,7 @@ Customers receive a targeted re-submission request identifying the specific gap 
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced completeness pre-screening covering ≥95% of KYC submissions within 6 months of go-live.</p>
+          <p>AI-produced completeness pre-screening covering ≥95% of KYC submissions within 6 months of go-live.</p>
         </div>
         
         
@@ -455,8 +445,7 @@ Without granular extraction quality analytics, model improvement effort is alloc
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent analyses extraction outcome data — accuracy rate, confidence score distribution, and manual review trigger rate — by document type, field, and submission condition, producing a ranked error concentration report with the specific combinations requiring model improvement or customer guidance adjustment.
-The extraction model team uses the concentration report to prioritise retraining data collection and rule adjustment, with the field-level error evidence available for model validation documentation.</p>
+      <p>The AI agent analyzes extraction outcome data — accuracy rate, confidence score distribution, and manual review trigger rate — by document type, field, and submission condition, producing a ranked error concentration report with the specific combinations requiring model improvement or customer guidance adjustment. The extraction model team uses the concentration report to prioritize retraining data collection and rule adjustment, with the field-level error evidence available for model validation documentation.</p>
     </div>
     
 
@@ -464,7 +453,7 @@ The extraction model team uses the concentration report to prioritise retraining
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">KYC extraction error concentration by document type and field is identified on a continuous basis and available for model improvement prioritisation.</p>
+      <p class="okr-objective">KYC extraction error concentration by document type and field is identified each week and available for model improvement prioritization.</p>
       
       <div class="okr-grid">
         
@@ -473,12 +462,10 @@ The extraction model team uses the concentration report to prioritise retraining
           <p>Extraction quality analytics covering ≥90% of monthly KYC extraction volume within 6 months of go-live; used in ≥4 model improvement reviews per year.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>Extraction accuracy rate improves by ≥10 percentage points within 12 months of first model improvement cycle informed by the analytics; manual review trigger rate reduced by ≥20%.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -512,7 +499,7 @@ The extraction model team uses the concentration report to prioritise retraining
   <header class="l3-section__head">
     <h2 class="l3-section__title">Account setup &amp; activation</h2>
     
-    <p class="l3-section__intent">Post-KYC workflow that provisions the customer&#39;s accounts and products in the core banking system, generates welcome communications, routes any outstanding CDD items for resolution, and confirms activation to downstream systems. Under NBKR and CBR account-opening rules, prescribed steps must complete in a defined sequence with documented audit trails. Multi-product onboarding — concurrent current account, savings, and lending product setup — requires coordinated orchestration across product-specific activation workflows.</p>
+    <p class="l3-section__intent">Post-KYC workflow that provisions the customer's accounts and products in the core banking system, generates welcome communications, routes any outstanding CDD items for resolution, and confirms activation to downstream systems. Under account-opening rules, prescribed steps must complete in a defined sequence with documented audit trails. Multi-product onboarding — concurrent current account, savings, and lending product setup — requires coordinated orchestration across product-specific activation workflows.</p>
     
   </header>
 
@@ -543,11 +530,10 @@ The extraction model team uses the concentration report to prioritise retraining
     <span class="scenario-lens scenario-lens--automation">Automation</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Welcome communication personalisation</h3>
+      <h3 class="scenario-card__title">Welcome communication personalization</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Automated drafting of personalised welcome communications for newly activated accounts — tailored to the customer&#39;s product set, segment, and any specific onboarding commitments made during the sales process — in the channel format appropriate for the customer&#39;s stated communication preference.
-The communications consolidate account activation confirmation, product usage guidance, and any pending onboarding steps into a single coherent sequence.</p>
+      <p class="scenario-card__intent">Automated drafting of personalized welcome communications for newly activated accounts — tailored to the customer's product set, segment, and any specific onboarding commitments made during the sales process — in the channel format appropriate for the customer's stated communication preference. The communications consolidate account activation confirmation, product usage guidance, and any pending onboarding steps into a single coherent sequence.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -568,8 +554,7 @@ Customers who receive welcome communications that do not reflect their actual pr
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the activated account record — product set, customer segment, onboarding commitments, and communication preference — and drafts the personalised welcome communication sequence tailored to the customer&#39;s specific product configuration and any outstanding activation steps.
-Operations reviews and dispatches the communication sequence, with the personalisation rationale logged to the CRM record.</p>
+      <p>The AI agent reads the activated account record — product set, customer segment, onboarding commitments, and communication preference — and drafts the personalized welcome communication sequence tailored to the customer's specific product configuration and any outstanding activation steps. Operations reviews and dispatches the communication sequence, with the personalization rationale logged to the CRM record.</p>
     </div>
     
 
@@ -577,13 +562,13 @@ Operations reviews and dispatches the communication sequence, with the personali
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Welcome communications for newly activated accounts are personalised to the customer&#39;s product set and onboarding commitments and dispatched without manual communication drafting.</p>
+      <p class="okr-objective">Welcome communications for newly activated accounts are personalized to the customer's product set and onboarding commitments and dispatched without manual communication drafting.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-drafted welcome communications used for ≥85% of new account activations within 6 months of go-live.</p>
+          <p>AI-drafted welcome communications used for ≥85% of new account activations within 6 months of go-live.</p>
         </div>
         
         
@@ -638,16 +623,14 @@ Exceptions are resolved in parallel across responsible teams rather than queued 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Multi-product onboarding — concurrent current account, savings, and lending product setup — requires coordinated activation across product-specific workflows; provisioning exceptions in one product stream block activation across all concurrent streams when routing is sequential.
-Under NBKR and CBR account-opening rules, prescribed steps must complete in a defined sequence with documented audit trails; unresolved activation exceptions that delay account access create regulatory timing risk and customer attrition in the onboarding window.</p>
+      <p>Multi-product onboarding — concurrent current account, savings, and lending product setup — requires coordinated activation across product-specific workflows; provisioning exceptions in one product stream block activation across all concurrent streams when routing is sequential. Under account-opening rules, prescribed steps must complete in a defined sequence with documented audit trails; unresolved activation exceptions that delay account access create regulatory timing risk and customer attrition in the onboarding window.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads each activation exception, classifies it by type — provisioning failure, CDD item, or downstream system error — and routes it to the responsible resolution team with the prescribed resolution workflow and the relevant audit trail requirement.
-Operations monitoring receives an exception dashboard with resolution status by product stream and customer, enabling management intervention before the regulatory activation deadline.</p>
+      <p>The AI agent reads each activation exception, classifies it by type — provisioning failure, CDD item, or downstream system error — and routes it to the responsible resolution team with the prescribed resolution workflow and the relevant audit trail requirement. Operations monitoring receives an exception dashboard with resolution status by product stream and customer, enabling management intervention before the regulatory activation deadline.</p>
     </div>
     
 
@@ -661,7 +644,7 @@ Operations monitoring receives an exception dashboard with resolution status by 
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced exception routing covering ≥90% of account activation exceptions within 6 months of go-live.</p>
+          <p>AI-produced exception routing covering ≥90% of account activation exceptions within 6 months of go-live.</p>
         </div>
         
         
@@ -724,8 +707,7 @@ Onboarding attrition during account activation represents a direct cost of the K
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent analyses activation event data across the post-KYC workflow, attributing completion failures to specific exception types, workflow steps, channels, and product segments, and produces a ranked bottleneck report with the attrition rate and volume per failure category.
-Operations management uses the bottleneck report to prioritise process improvement initiatives, with the exception category and segment evidence available for initiative scoping.</p>
+      <p>The AI agent analyzes activation event data across the post-KYC workflow, attributing completion failures to specific exception types, workflow steps, channels, and product segments, and produces a ranked bottleneck report with the attrition rate and volume per failure category. Operations management uses the bottleneck report to prioritize process improvement initiatives, with the exception category and segment evidence available for initiative scoping.</p>
     </div>
     
 
@@ -733,7 +715,7 @@ Operations management uses the bottleneck report to prioritise process improveme
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">Account activation completion failures are attributed to specific exception types and workflow steps and available for process improvement prioritisation on a rolling basis.</p>
+      <p class="okr-objective">Account activation completion failures are attributed to specific exception types and workflow steps and available for process improvement prioritization on a rolling basis.</p>
       
       <div class="okr-grid">
         
@@ -751,7 +733,7 @@ Operations management uses the bottleneck report to prioritise process improveme
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>Bottleneck report refreshed monthly from activation event data so improvement prioritisation reflects the most recent onboarding cohort experience.</p>
+          <p>Bottleneck report refreshed monthly from activation event data so improvement prioritization reflects the most recent onboarding cohort experience.</p>
         </div>
         
       </div>
@@ -781,7 +763,7 @@ Operations management uses the bottleneck report to prioritise process improveme
   <header class="l3-section__head">
     <h2 class="l3-section__title">CDD risk classification</h2>
     
-    <p class="l3-section__intent">Assignment of the customer&#39;s AML/CFT risk rating — standard, enhanced, or simplified due diligence — based on prescribed risk factors including country of residence, business type, product profile, source of funds, and PEP status. Under FATF Recommendation 10 and regional CDD rules (NBKR, CBR), the classification drives the depth of due diligence applied and the ongoing review frequency. Complex corporate structures and PEP-adjacent relationships require senior analyst judgment to classify correctly.</p>
+    <p class="l3-section__intent">Assignment of the customer's AML/CFT risk rating — standard, enhanced, or simplified due diligence — based on prescribed risk factors including country of residence, business type, product profile, source of funds, and PEP status. In line with FATF Recommendation 10 and applicable CDD rules, the classification drives the depth of due diligence applied and the ongoing review frequency. Complex corporate structures and PEP-adjacent relationships require senior analyst judgment to classify correctly.</p>
     
   </header>
 
@@ -815,9 +797,7 @@ Operations management uses the bottleneck report to prioritise process improveme
       <h3 class="scenario-card__title">Complex CDD Research Pack</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent assembles source-of-funds narrative, beneficial ownership map, adverse media summary, and sanctions screening results for complex corporate or PEP-adjacent onboarding cases, ready for senior analyst classification decision.
-The research pack covers available corporate registry and adverse media sources, maps the beneficial ownership structure, and presents findings with source citations for senior analyst review.
-Senior analyst reviews the pack, applies judgment on the classification decision, and documents the rationale.</p>
+      <p class="scenario-card__intent">The AI agent assembles source-of-funds narrative, beneficial ownership map, adverse media summary, and sanctions screening results for complex corporate or PEP-adjacent onboarding cases, ready for senior analyst classification decision. The research pack covers available corporate registry and adverse media sources, maps the beneficial ownership structure, and presents findings with source citations for senior analyst review. The senior analyst reviews the pack, applies judgment on the classification decision, and documents the rationale.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -839,9 +819,7 @@ The volume of EDD cases cannot be expanded to support business growth without ei
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads submitted documents, pulls available corporate registry and adverse media sources, maps the beneficial ownership structure, and assembles a structured research pack with source citations.
-The pack covers source-of-funds narrative, beneficial ownership map, adverse media summary with severity indicators, and sanctions and PEP screening results in a format aligned to the bank&#39;s CDD classification framework.
-Senior analyst reviews the pack, applies judgment on the classification decision, and documents the rationale; EDD throughput capacity is the primary outcome metric.</p>
+      <p>The AI agent reads submitted documents, pulls available corporate registry and adverse media sources, maps the beneficial ownership structure, and assembles a structured research pack with source citations. The pack covers source-of-funds narrative, beneficial ownership map, adverse media summary with severity indicators, and sanctions and PEP screening results in a format aligned to the Bank's CDD classification framework. The senior analyst reviews the pack, applies judgment on the classification decision, and documents the rationale; EDD throughput capacity is the primary outcome metric.</p>
     </div>
     
 
@@ -849,21 +827,19 @@ Senior analyst reviews the pack, applies judgment on the classification decision
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">The CDD research pack for complex corporate and PEP-adjacent onboarding cases — source-of-funds narrative, beneficial ownership map, adverse media summary, and sanctions screening — is assembled and ready for senior analyst classification before the analyst begins the disposition review.</p>
+      <p class="okr-objective">The CDD research pack for complex corporate and PEP-adjacent onboarding cases — source-of-funds narrative, beneficial ownership map, adverse media summary, and sanctions screening — is assembled and ready for senior analyst classification before the analyst begins the classification review.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-assembled research pack used for ≥85% of EDD cases within 12 months of go-live.</p>
+          <p>AI-assembled research pack used for ≥85% of EDD cases within 12 months of go-live.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥85% of research packs rated by senior analysts as complete and sufficient for the classification decision; source citation accuracy confirmed in ≥95% of sampled packs.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -910,16 +886,14 @@ Inconsistency signals are surfaced to compliance management for targeted analyst
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Under FATF Recommendation 10 and regional CDD rules, the risk classification drives the depth of due diligence applied and the ongoing review frequency; inconsistent classification of comparable customer profiles produces uneven due diligence depth and creates a supervisory examination risk.
-Classification inconsistency — where analysts reach different outcomes for materially comparable profiles — is not systematically identified between examination cycles; it emerges as a finding during supervisory review of the classification record.</p>
+      <p>In line with FATF Recommendation 10 and applicable CDD rules, the risk classification drives the depth of due diligence applied and the ongoing review frequency; inconsistent classification of comparable customer profiles produces uneven due diligence depth and creates a supervisory examination risk. Classification inconsistency — where analysts reach different outcomes for materially comparable profiles — is not systematically identified between examination cycles; it emerges as a finding during supervisory review of the classification record.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent analyses completed CDD risk classification decisions, grouping customers by profile comparability — country, business type, product, and PEP status — and identifies analyst pairs or teams where classification outcomes diverge materially for comparable profiles.
-Compliance management reviews the inconsistency report, determines whether the divergence reflects legitimate analytical judgment or calibration gaps, and directs targeted training or framework adjustment where gaps are confirmed.</p>
+      <p>The AI agent analyzes completed CDD risk classification decisions, grouping customers by profile comparability — country, business type, product, and PEP status — and identifies analyst pairs or teams where classification outcomes diverge materially for comparable profiles. Compliance management reviews the inconsistency report, determines whether the divergence reflects legitimate analytical judgment or calibration gaps, and directs targeted training or framework adjustment where gaps are confirmed.</p>
     </div>
     
 
@@ -927,7 +901,7 @@ Compliance management reviews the inconsistency report, determines whether the d
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">CDD risk classification inconsistency across analysts and teams is identified on a continuous basis and available for compliance management intervention before examination.</p>
+      <p class="okr-objective">CDD risk classification inconsistency across analysts and teams is identified each month and available for compliance management intervention before examination.</p>
       
       <div class="okr-grid">
         
@@ -936,12 +910,10 @@ Compliance management reviews the inconsistency report, determines whether the d
           <p>Consistency analytics covering ≥80% of monthly CDD classification volume within 6 months of go-live; used in ≥4 compliance calibration reviews per year.</p>
         </div>
         
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>Classification inconsistency rate for comparable profiles reduced by ≥30% within 18 months; supervisory examination findings on CDD classification consistency reduced to zero within 24 months.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
@@ -988,16 +960,14 @@ Pre-assembled research packs reduce the investigation preparation time for EDD c
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Enhanced due diligence investigations require the compliance analyst to assemble adverse media results, corporate ownership traces, sanctions screening outputs, and source-of-funds documentation from multiple sources before the substantive risk assessment can begin.
-Pack assembly typically consumes 60 to 120 minutes per EDD case; for institutions onboarding significant volumes of high-risk customers, the assembly step is the primary constraint on EDD throughput and cycle time.</p>
+      <p>Enhanced due diligence investigations require the compliance analyst to assemble adverse media results, corporate ownership traces, sanctions screening outputs, and source-of-funds documentation from multiple sources before the substantive risk assessment can begin. Pack assembly typically consumes 60–120 minutes per EDD case; for institutions onboarding significant volumes of high-risk customers, the assembly step is the primary constraint on EDD throughput and cycle time.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the customer&#39;s classification record and assembles the EDD research pack — adverse media search results, corporate registry ownership trace, sanctions and PEP screening outputs, and source-of-funds documentation — from connected source systems and approved external data providers.
-Compliance analyst receives the pre-assembled pack before beginning the EDD review, with each source cited and the pack structure aligned to the bank&#39;s EDD assessment template.</p>
+      <p>The AI agent reads the customer's classification record and assembles the EDD research pack — adverse media search results, corporate registry ownership trace, sanctions and PEP screening outputs, and source-of-funds documentation — from connected source systems and approved external data providers. The compliance analyst receives the pre-assembled pack before beginning the EDD review, with each source cited and the pack structure aligned to the Bank's EDD assessment template.</p>
     </div>
     
 
@@ -1011,7 +981,7 @@ Compliance analyst receives the pre-assembled pack before beginning the EDD revi
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-assembled EDD packs used for ≥80% of high-risk and PEP-adjacent onboarding cases within 9 months of go-live.</p>
+          <p>AI-assembled EDD packs used for ≥80% of high-risk and PEP-adjacent onboarding cases within 9 months of go-live.</p>
         </div>
         
         
@@ -1053,7 +1023,7 @@ Compliance analyst receives the pre-assembled pack before beginning the EDD revi
   <header class="l3-section__head">
     <h2 class="l3-section__title">Early cross-sell signals</h2>
     
-    <p class="l3-section__intent">Behavioral and transactional signals in the first 30-90 days of the customer relationship that indicate readiness for additional products — salary credit patterns signaling payroll account consolidation, spending patterns suggesting credit card appetite, business turnover trajectory indicating SME lending eligibility. Banks that surface these signals early and act on them within the onboarding window convert single-product customers to multi-product relationships at a higher rate than those who rely on scheduled portfolio review cycles.</p>
+    <p class="l3-section__intent">Behavioral and transactional signals in the first 30–90 days of the customer relationship that indicate readiness for additional products — salary credit patterns signaling payroll account consolidation, spending patterns suggesting credit card appetite, business turnover trajectory indicating SME lending eligibility. Banks that surface these signals early and act on them within the onboarding window convert single-product customers to multi-product relationships at a higher rate than those who rely on scheduled portfolio review cycles.</p>
     
   </header>
 
@@ -1087,8 +1057,7 @@ Compliance analyst receives the pre-assembled pack before beginning the EDD revi
       <h3 class="scenario-card__title">Onboarding window activation coaching</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Real-time guidance to relationship managers and digital service channels on the specific activation actions and cross-sell contact timing that have proven most effective for customers matching the current customer&#39;s behavioral and demographic profile.
-The guidance draws on the accumulated outcome record across comparable prior onboarding cohorts to recommend the activation action sequence most likely to drive product adoption within the 90-day window.</p>
+      <p class="scenario-card__intent">Real-time guidance to relationship managers and digital channels on the specific activation actions and cross-sell contact timing that have proven most effective for customers matching the current customer's behavioral and demographic profile. The guidance draws on the accumulated outcome record across comparable prior onboarding cohorts to recommend the activation action sequence most likely to drive product adoption within the 90-day window.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--S"
@@ -1109,8 +1078,7 @@ New relationship managers and digital channels without institutional memory appl
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the current customer&#39;s profile and behavioral signals and retrieves the activation action sequence — contact timing, channel, product offer sequence, and self-service activation prompts — that has produced the highest 90-day product adoption rates for comparable prior customers.
-Relationship manager receives the recommended activation sequence with the outcome evidence from comparable prior cohorts, enabling informed sequencing decisions rather than reliance on generic protocol.</p>
+      <p>The AI agent reads the current customer's profile and behavioral signals and retrieves the activation action sequence — contact timing, channel, product offer sequence, and self-service activation prompts — that has produced the highest 90-day product adoption rates for comparable prior customers. The relationship manager or the digital channel receives the recommended activation sequence with the outcome evidence from comparable prior cohorts, enabling informed sequencing decisions rather than reliance on generic protocol.</p>
     </div>
     
 
@@ -1124,7 +1092,7 @@ Relationship manager receives the recommended activation sequence with the outco
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced activation guidance used by ≥75% of relationship managers for new customer onboarding within 9 months of go-live.</p>
+          <p>AI-produced activation guidance used by ≥75% of relationship managers for new customer onboarding within 9 months of go-live.</p>
         </div>
         
         
@@ -1165,9 +1133,7 @@ Relationship manager receives the recommended activation sequence with the outco
       <h3 class="scenario-card__title">Early-Tenure Cross-Sell Signal</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Agent monitors new customer transaction behaviour on a weekly cadence during the first 90 days and surfaces product eligibility signals to the relationship manager when behavioural thresholds are crossed.
-The signal includes a product-specific eligibility assessment and a recommended next step, enabling the RM to act within the high-engagement early-tenure window.
-Cross-sell conversion during the first 90 days and products per new customer are the primary outcome metrics.</p>
+      <p class="scenario-card__intent">The AI agent monitors new customer transaction behavior on a weekly cadence during the first 90 days and surfaces product eligibility signals to the relationship manager when behavioral thresholds are crossed. The signal includes a product-specific eligibility assessment and a recommended next step. Relationship managers act on the signal within the high-engagement early-tenure window rather than at the next scheduled portfolio review.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1180,18 +1146,14 @@ Cross-sell conversion during the first 90 days and products per new customer are
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Newly onboarded customers who meet eligibility criteria for additional products — based on salary levels, transaction volume, or savings behaviour — are identified at the next scheduled portfolio review cycle rather than within the early-tenure period when customer engagement is highest.
-The early-tenure window, during which customers are most receptive to product additions, passes without timely cross-sell contact in the current campaign-cadence model.
-Revenue from the new-customer cohort is systematically below potential when eligibility signals are not surfaced at the point they emerge.</p>
+      <p>Newly onboarded customers who meet eligibility criteria for additional products — based on salary levels, transaction volume, or savings behavior — are identified at the next scheduled portfolio review cycle rather than within the early-tenure period when customer engagement is highest. The early-tenure window, during which customers are most receptive to product additions, passes without timely cross-sell contact in the current campaign-cadence model. Revenue from the new-customer cohort is systematically below potential when eligibility signals are not surfaced at the point they emerge.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads new customer transaction activity on a weekly cadence during the first 90 days; when behavioural signals cross the bank&#39;s eligibility thresholds for additional products, the agent surfaces a cross-sell signal to the relationship manager.
-The signal includes the relevant product, the eligibility assessment based on observed behaviour, and a recommended next step for the RM to act on promptly.
-Relationship managers act within the high-engagement window; cross-sell conversion during the first 90 days is the primary metric tracked against the pre-deployment baseline.</p>
+      <p>The AI agent reads new customer transaction activity on a weekly cadence during the first 90 days; when behavioral signals cross the Bank's eligibility thresholds for additional products, the AI agent surfaces a cross-sell signal to the relationship manager. The signal includes the relevant product, the eligibility assessment based on observed behavior, and a recommended next step for the relationship manager to act on promptly. Relationship managers act within the high-engagement window; cross-sell conversion during the first 90 days is the primary metric tracked against the pre-deployment baseline.</p>
     </div>
     
 
@@ -1199,19 +1161,19 @@ Relationship managers act within the high-engagement window; cross-sell conversi
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
       
-      <p class="okr-objective">New customer cross-sell eligibility signals are surfaced to relationship managers within the first 90 days when behavioural thresholds are crossed, with a product-specific eligibility assessment and recommended next step provided for each signal.</p>
+      <p class="okr-objective">New customer cross-sell eligibility signals are surfaced to relationship managers within the first 90 days when behavioral thresholds are crossed, with a product-specific eligibility assessment and recommended next step provided for each signal.</p>
       
       <div class="okr-grid">
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced cross-sell signals delivered for ≥90% of new customers crossing eligibility thresholds within the first 90 days, within 12 months of go-live.</p>
+          <p>AI-produced cross-sell signals delivered for ≥90% of new customers crossing eligibility thresholds within the first 90 days, within 12 months of go-live.</p>
         </div>
         
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>≥70% of relationship managers take action on agent-surfaced signals within 5 business days; cross-sell conversion rate during the first 90 days improves by ≥15% vs. pre-deployment baseline.</p>
+          <p>≥70% of relationship managers take action on AI-surfaced signals within 5 business days; cross-sell conversion rate during the first 90 days improves by ≥15% vs. pre-deployment baseline.</p>
         </div>
         
         
@@ -1243,11 +1205,10 @@ Relationship managers act within the high-engagement window; cross-sell conversi
     <span class="scenario-lens scenario-lens--insights">Insights</span>
     <div class="scenario-card__title-col">
       <span class="scenario-card__chevron" aria-hidden="true">▸</span>
-      <h3 class="scenario-card__title">Early tenure product propensity scoring</h3>
+      <h3 class="scenario-card__title">Early-tenure product propensity scoring</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Propensity scoring for cross-sell product offers during the first 90 days of the customer relationship — using transactional signals, channel behavior, and demographic profile to rank the probability of conversion for each eligible product in the bank&#39;s onboarding product set.
-The scoring drives next-best-offer sequencing for the onboarding relationship manager, concentrating outreach on the product-customer combinations with the highest conversion probability within the activation window.</p>
+      <p class="scenario-card__intent">Propensity scoring for cross-sell product offers during the first 90 days of the customer relationship — using transactional signals, channel behavior, and demographic profile to rank the probability of conversion for each eligible product in the Bank's onboarding product set. The scoring drives next-best-offer sequencing for the onboarding relationship manager, concentrating outreach on the product-customer combinations with the highest conversion probability within the activation window.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1268,8 +1229,7 @@ Banks that convert single-product onboarding customers to multi-product relation
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads the newly onboarded customer&#39;s transactional signals, channel usage, and declared profile, and produces a ranked propensity score across eligible products within the bank&#39;s onboarding cross-sell set.
-Relationship managers and digital servicing channels use the product propensity ranking to sequence cross-sell contact during the first 90 days, with the specific behavioral signals supporting each recommendation available for the contact rationale.</p>
+      <p>The AI agent reads the newly onboarded customer's transactional signals, channel usage, and declared profile, and produces a ranked propensity score across eligible products within the Bank's onboarding cross-sell set. Relationship managers and digital channels use the product propensity ranking to sequence cross-sell contact during the first 90 days, with the specific behavioral signals supporting each recommendation available for the contact rationale.</p>
     </div>
     
 
@@ -1283,7 +1243,7 @@ Relationship managers and digital servicing channels use the product propensity 
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced propensity scores used by relationship managers or digital channels for ≥80% of new customer cross-sell contact within 6 months of go-live.</p>
+          <p>AI-produced propensity scores used by relationship managers or digital channels for ≥80% of new customer cross-sell contact within 6 months of go-live.</p>
         </div>
         
         
@@ -1325,7 +1285,7 @@ Relationship managers and digital servicing channels use the product propensity 
   <header class="l3-section__head">
     <h2 class="l3-section__title">Sanctions &amp; PEP screening</h2>
     
-    <p class="l3-section__intent">Automated matching of customer identity data against OFAC SDN, UN, EU, and HM Treasury sanctions lists, and against PEP databases, at onboarding and on a continuous basis as list updates occur. Under NBKR anti-money laundering rules and FATF Recommendations 6 and 12, sanctions hits must be escalated immediately and PEP relationships require enhanced due diligence. False-positive alert rates on standard screening tools range from 90-98%, generating significant manual review volume.</p>
+    <p class="l3-section__intent">Automated matching of customer identity data against the UN and other applicable sanctions lists, and against PEP databases, at onboarding and on a continuous basis as list updates occur. Under anti-money laundering rules, in line with FATF Recommendations 6 and 12, sanctions hits must be escalated immediately and PEP relationships require enhanced due diligence. False-positive alert rates on standard screening tools range from 90–98%, generating significant manual review volume.</p>
     
   </header>
 
@@ -1359,8 +1319,7 @@ Relationship managers and digital servicing channels use the product propensity 
       <h3 class="scenario-card__title">Sanctions false-positive triage</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Automated pre-classification of sanctions and PEP screening alerts into probable true-positive and false-positive categories — using name match score, country, date of birth, and contextual discriminators — before manual analyst review begins.
-Pre-classification reduces the manual review burden for the 90-98% of alerts that are false positives, enabling analyst capacity to be concentrated on the true-positive population.</p>
+      <p class="scenario-card__intent">Automated pre-classification of sanctions and PEP screening alerts into probable true-positive and false-positive categories — using name match score, country, date of birth, and contextual discriminators — before manual analyst review begins. Pre-classification reduces the manual review burden for the 90–98% of alerts that are false positives, enabling analyst capacity to be concentrated on the true-positive population.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1373,16 +1332,14 @@ Pre-classification reduces the manual review burden for the 90-98% of alerts tha
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>False-positive alert rates on standard screening tools range from 90 to 98%; each alert carries a mandatory review obligation under NBKR anti-money laundering rules and FATF Recommendations 6 and 12, generating significant manual review volume regardless of the predicted outcome.
-Without pre-classification, analysts allocate equal review time to high-probability false positives and genuine match candidates, creating unnecessary volume load and increasing the mean time to identify and escalate true-positive hits.</p>
+      <p>False-positive alert rates on standard screening tools range from 90–98%; each alert carries a mandatory review obligation under anti-money laundering rules, in line with FATF Recommendations 6 and 12, generating significant manual review volume regardless of the predicted outcome. Without pre-classification, analysts allocate equal review time to high-probability false positives and genuine match candidates, creating unnecessary volume load and increasing the mean time to identify and escalate true-positive hits.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent reads each sanctions and PEP screening alert, scores the match against the name, country, date of birth, and contextual discriminators available in the customer record, and pre-classifies the alert as probable false positive or requiring analyst review.
-Probable false-positive alerts are routed to a streamlined confirmation queue with the discriminating evidence pre-populated; probable true positives and uncertain alerts are routed to the full analyst investigation queue.</p>
+      <p>The AI agent reads each sanctions and PEP screening alert, scores the match against the name, country, date of birth, and contextual discriminators available in the customer record, and pre-classifies the alert as probable false positive or requiring analyst review. Probable false-positive alerts are routed to a streamlined confirmation queue with the discriminating evidence pre-populated; probable true positives and uncertain alerts are routed to the full analyst investigation queue.</p>
     </div>
     
 
@@ -1396,7 +1353,7 @@ Probable false-positive alerts are routed to a streamlined confirmation queue wi
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced pre-classification covering ≥95% of daily screening alert volume within 6 months of go-live.</p>
+          <p>AI-produced pre-classification covering ≥95% of daily screening alert volume within 6 months of go-live.</p>
         </div>
         
         
@@ -1451,16 +1408,14 @@ The calibration analysis informs rule parameter adjustments that reduce false-po
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Sanctions screening rule parameters are set at system configuration and adjusted infrequently; the relationship between specific matching thresholds and observed false-positive rates by name type, country, and customer segment is not systematically analysed against accumulated alert disposition data.
-Rule changes require documentation and model-risk committee approval under NBKR AML/CFT supervisory expectations; without a calibration analysis grounded in disposition outcomes, rule change proposals lack the quantitative evidence base required for committee approval.</p>
+      <p>Sanctions screening rule parameters are set at system configuration and adjusted infrequently; the relationship between specific matching thresholds and observed false-positive rates by name type, country, and customer segment is not systematically analyzed against accumulated alert disposition data. Rule changes require documentation and model risk committee approval under AML/CFT supervisory expectations; without a calibration analysis grounded in disposition outcomes, rule change proposals lack the quantitative evidence base required for committee approval.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent analyses the accumulated alert disposition record — true-positive rate, false-positive driver by name matching threshold, country, and customer segment — and produces a calibration analysis identifying the specific parameter adjustments that would reduce false-positive volume by the estimated magnitude without reducing true-positive detection coverage.
-The compliance team uses the calibration output as the evidence base for the model risk committee rule change proposal, with the quantitative impact estimate and the detection coverage preservation argument documented.</p>
+      <p>The AI agent analyzes the accumulated alert disposition record — true-positive rate, false-positive driver by name matching threshold, country, and customer segment — and produces a calibration analysis identifying the specific parameter adjustments that would reduce false-positive volume by the estimated magnitude without reducing true-positive detection coverage. The compliance team uses the calibration output as the evidence base for the model risk committee rule change proposal, with the quantitative impact estimate and the detection coverage preservation argument documented.</p>
     </div>
     
 
@@ -1515,8 +1470,7 @@ The compliance team uses the calibration output as the evidence base for the mod
       <h3 class="scenario-card__title">PEP and adverse media continuous monitoring</h3>
     </div>
     <div class="scenario-card__intent-col">
-      <p class="scenario-card__intent">Continuous monitoring of existing customers against PEP database updates and adverse media sources — identifying newly PEP-designated individuals, family and close associates of newly designated PEPs, and adverse media events affecting current customers — and routing material changes to the CDD refresh queue.
-Under FATF Recommendation 12, PEP status changes for existing customers must trigger enhanced due diligence review; continuous monitoring ensures the obligation is met as list updates occur rather than at the next scheduled periodic review.</p>
+      <p class="scenario-card__intent">Continuous monitoring of existing customers against PEP database updates and adverse media sources — identifying newly PEP-designated individuals, family and close associates of newly designated PEPs, and adverse media events affecting current customers — and routing material changes to the CDD refresh queue. In line with FATF Recommendation 12, PEP status changes for existing customers trigger enhanced due diligence review; continuous monitoring ensures the obligation is met as list updates occur rather than at the next scheduled periodic review.</p>
     </div>
     <span
       class="scenario-complexity scenario-complexity--M"
@@ -1529,16 +1483,14 @@ Under FATF Recommendation 12, PEP status changes for existing customers must tri
     
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>PEP database changes and adverse media events that affect existing customers occur continuously between periodic CDD review cycles; customers who become PEP-adjacent or who generate adverse media events after onboarding are not identified until the next scheduled review cycle.
-Under NBKR anti-money laundering rules and FATF Recommendation 12, PEP status changes require immediate enhanced due diligence; identification at the next periodic review rather than at the time of the change represents a compliance gap for the intervening period.</p>
+      <p>PEP database changes and adverse media events that affect existing customers occur continuously between periodic CDD review cycles; customers who become PEP-adjacent or who generate adverse media events after onboarding are not identified until the next scheduled review cycle. Under anti-money laundering rules, in line with FATF Recommendation 12, PEP status changes require immediate enhanced due diligence; identification at the next periodic review rather than at the time of the change represents a compliance gap for the intervening period.</p>
     </div>
     
 
     
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
-      <p>Agent monitors PEP database update feeds and approved adverse media sources for events matching existing customer records, classifies each event by type and materiality, and routes material changes to the CDD refresh queue with the specific triggering event and the required EDD scope.
-Compliance receives a daily event log of PEP and adverse media matches across the existing customer base, with the cases requiring immediate EDD action distinguished from those requiring documentation only.</p>
+      <p>The AI agent monitors PEP database update feeds and approved adverse media sources for events matching existing customer records, classifies each event by type and materiality, and routes material changes to the CDD refresh queue with the specific triggering event and the required EDD scope. Compliance receives a daily event log of PEP and adverse media matches across the existing customer base, with the cases requiring immediate EDD action distinguished from those requiring documentation only.</p>
     </div>
     
 
@@ -1552,19 +1504,17 @@ Compliance receives a daily event log of PEP and adverse media matches across th
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
-          <p>Agent-produced continuous monitoring covering ≥90% of the existing customer base within 9 months of go-live, subject to data source access agreements.</p>
+          <p>AI-produced continuous monitoring covering ≥90% of the existing customer base within 9 months of go-live, subject to data source access agreements.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
-          <p>Mean time from PEP designation change to CDD refresh queue routing reduced from next periodic review cycle to within 24 hours of database update; compliance confirms EDD response completeness in ≥97% of sampled events.</p>
+          <p>≥85% of routed PEP and adverse media events confirmed by compliance as correctly classified for type and materiality; compliance confirms EDD response completeness in ≥97% of sampled events.</p>
         </div>
-        
         
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
-          <p>PEP and adverse media monitoring event log reviewed daily by compliance; CDD refresh queue cases actioned within 2 business days of routing.</p>
+          <p>PEP designation changes routed to the CDD refresh queue within 24 hours of the database update, vs. identification at the next periodic review cycle in the prior process; daily event log reviewed by compliance and CDD refresh queue cases actioned within 2 business days of routing.</p>
         </div>
         
       </div>
