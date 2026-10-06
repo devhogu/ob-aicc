@@ -51,7 +51,8 @@
 .discovery-content .flow-stages__stage:focus-visible{background:var(--surface-subtle);outline:3px solid var(--focus);outline-offset:3px}
 .discovery-content .modal p{margin:0 0 12px}
 .discovery-content .modal{z-index:200}
-.discovery-content .modal__panel{max-height:calc(100dvh - 32px)}
+.discovery-content .modal__panel{width:100%;max-width:76rem;max-height:calc(100dvh - 32px)}
+.discovery-content .modal__panel :is(h3,p){max-width:none;overflow-wrap:anywhere}
 .finance-tab-focus{outline:3px solid var(--focus);outline-offset:-3px}
 .discovery-content :target{scroll-margin-top:20px}
 .discovery-content .scenario-card:target{outline:2px solid var(--brand);outline-offset:3px}
