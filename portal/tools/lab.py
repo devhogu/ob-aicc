@@ -35,7 +35,7 @@ UI = {
            'stages': 'Stage', 'lanes': 'Workstream', 'all': 'All', 'reset': 'Show complete workflow',
            'empty': 'No separate activity specified', 'coverage': 'Assessment', 'not_assessed': 'Not yet assessed', 'levels': 'What each level requires',
            'concern': 'Concern', 'posture': 'Intended practice', 'selection': 'Workflow view'},
-    'ru': {'concept': 'Концепция', 'matrix': 'Процесс эксперимента', 'systems': 'Люди и AI-агенты', 'maturity': 'Оценка контролей',
+    'ru': {'concept': 'Концепция', 'matrix': 'Процесс эксперимента', 'systems': 'Люди и AI-агенты', 'maturity': 'Оценка контроля',
            'guardrails_intro': 'Лабораторная среда работает в рамках семи защитных механизмов. Руководитель AICC ведёт их вместе с подтверждениями в реестре «Стандарты», а ежеквартальное управляющее совещание их рассматривает.',
            'guardrail': 'Защитный механизм', 'evidence': 'Подтверждение', 'setup': 'Один раз, до первого эксперимента', 'bands': 'Уровни зрелости',
            'capabilities': 'Возможности', 'loop': 'Цикл управления', 'guardrails': 'Защитные механизмы',
