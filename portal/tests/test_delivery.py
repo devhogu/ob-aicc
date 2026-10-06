@@ -28,7 +28,7 @@ class ProgramDelivery(unittest.TestCase):
             proposal=next(i for i in data['portfolio']['items'] if i['id']=='INI-013')
             self.assertEqual((proposal['state'],proposal['column'],proposal['project_key']),('Proposed','Funnel','service-resolution'))
             self.assertIsNone(proposal['approval_ref']);self.assertIsNone(proposal['rank'])
-            funnel = next(r for r in data['portfolio']['measures'] if r['Flow Measure'].startswith(('Funnel:', 'Фаннел:')))
+            funnel = next(r for r in data['portfolio']['measures'] if r['Flow Measure'].startswith(('Funnel:', 'Воронка:')))
             self.assertIn('1 ',funnel['Value'])
             self.assertIn('2026-10-06',funnel['Value'])
             self.assertEqual(data['portfolio']['capacity']['feature'],{'progress':0,'ready':0})

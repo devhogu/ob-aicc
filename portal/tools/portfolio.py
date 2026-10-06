@@ -405,6 +405,12 @@ def summary(item, data, modal=False, url=None):
     return body
 
 
+def _step(label):
+    # A Russian step name carries its English name in brackets (translation map); the board shows it as a second line.
+    match = re.fullmatch(r'(.+) \(([A-Za-z ]+)\)', label)
+    return f'{_h(match[1])}<small class="pf-step-en" lang="en">{_h(match[2])}</small>' if match else _h(label)
+
+
 def _reference(path):
     # Records are linked on the corporate share; the portal does not embed them.
     return f'<a href="{escape(SHARE + path)}"><code>{_h(path)}</code></a>'
@@ -465,7 +471,7 @@ def render(data, url, kind='dashboard', item=None):
             cards = ''.join(_card(x, data, url) for x in ordinary if x['column'] == col)
             count = data['counts'][col]; label = gates[col]['_localized_Kanban step']
             caption = u['impl_gate'] if col == 'Implementation' else u['gate_prefix'] + ': ' + (u['mvp_gate'] if col == 'MVP' else gates[col]['Gate'])
-            columns.append(f'<section class="pf-column{" pf-column--occupied" if col in occupied else ""}" data-pf-column="{col}"><header><h3>{_h(label)}</h3><span class="pf-badge">{count}</span></header><p class="pf-column-gate">{_h(caption)}</p><div class="pf-column-cards">{cards}</div><p class="pf-empty" {"hidden" if cards else ""}>{u["empty"]}</p></section>')
+            columns.append(f'<section class="pf-column{" pf-column--occupied" if col in occupied else ""}" data-pf-column="{col}"><header><h3>{_step(label)}</h3><span class="pf-badge">{count}</span></header><p class="pf-column-gate">{_h(caption)}</p><div class="pf-column-cards">{cards}</div><p class="pf-empty" {"hidden" if cards else ""}>{u["empty"]}</p></section>')
         widths = ' '.join('minmax(360px,3fr)' if data['counts'][k] else '110px' for k in COLUMNS)
         board = '<p class="pf-muted">' + u['order'] + '</p><div class="pf-board-scroll" tabindex="0" role="region" aria-label="' + u['board'] + '"><div class="pf-board" style="--pf-board-columns:' + widths + '">' + ''.join(columns) + '</div></div>'
         off = [x for x in ordinary if x['column'] == 'Off-flow']
