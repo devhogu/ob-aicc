@@ -5,6 +5,7 @@ from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 from pathlib import Path
+import re
 import sys
 import tempfile
 import threading
@@ -110,6 +111,52 @@ def check_existing_aicc(page, base, counts):
         counts['aicc_interactions'] += 3
 
 
+def check_workflow_stage_links(page, overview, counts, *, all_stages=False):
+    """A stage link opens that stage's source content, on HTTP and file URLs."""
+    source = (ROOT / 'html-alt/financial-services/en/value-streams/index.html').read_text()
+    catalogue = json.loads(re.search(r'const FLOW_STAGES = (.*?);\n', source)[1])
+    expected = [(flow, stage) for flow, stages in catalogue.items() for stage in stages]
+    page.goto(overview)
+    card = page.locator('[data-ui-pattern=workflows]')
+    assert card.locator('.workflow-preview').count() == 11
+    assert not card.locator('input[name="workflow-view"],.workflow-count-note,.workflow-explore').count()
+    links = card.locator('.workflow-preview__stages a').evaluate_all(
+        'els=>els.map(e=>({href:e.getAttribute("href"),label:e.textContent.trim()}))')
+    assert len(links) == len(expected) == 56
+    assert [link['label'] for link in links] == [stage['label'] for _, stage in expected]
+    cases = list(zip(links, expected)) if all_stages else [(links[1], expected[1])]
+    for link, (flow, stage) in cases:
+        page.goto(overview)
+        anchor = page.locator('.workflow-preview__stages a[href="' + link['href'] + '"]')
+        preview = anchor.locator('xpath=ancestor::details')
+        if not preview.evaluate('e=>e.open'):
+            preview.locator(':scope > summary').click()
+        anchor.focus()
+        page.keyboard.press('Enter')
+        page.wait_for_url(lambda url: urlsplit(url).path.endswith('/value-streams/index.html') and bool(urlsplit(url).fragment))
+        modal = page.locator('#stageModal')
+        assert modal.get_attribute('aria-hidden') == 'false'
+        assert modal.locator('.modal__title').inner_text() == stage['title']
+        assert modal.locator('.modal__intent').inner_text() == stage['intent']
+        assert modal.locator('.modal__problem p').inner_text() == stage['problem']
+        button = page.locator('.flow-stages__stage[data-flow-id="' + flow + '"][data-stage="' + stage['slug'] + '"]')
+        assert button.locator('xpath=ancestor::details').evaluate('e=>e.open')
+        assert modal.locator('.modal__close').evaluate('e=>document.activeElement===e')
+        page.keyboard.press('Escape')
+        assert modal.get_attribute('aria-hidden') == 'true'
+        assert button.evaluate('e=>document.activeElement===e')
+        counts['workflow_stage_links'] += 1
+    # Refresh and same-page fragment navigation preserve the chosen stage.
+    page.reload()
+    assert page.locator('#stageModal').get_attribute('aria-hidden') == 'false'
+    assert page.locator('#stageModal .modal__title').inner_text() == cases[-1][1][1]['title']
+    page.keyboard.press('Escape')
+    page.evaluate('location.hash="stage-deposits-transaction-banking--transact"')
+    page.wait_for_function('document.querySelector("#stageModal").getAttribute("aria-hidden")==="false"')
+    assert page.locator('#stageModal .modal__title').inner_text() == 'Day-to-day payment and transfer execution'
+    page.goto(overview)
+
+
 def main():
     REPORT.mkdir(parents=True, exist_ok=True)
     server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Quiet, directory=str(OUTPUT)))
@@ -160,23 +207,7 @@ def main():
                     if problems:
                         errors.append(f'{width}/{theme} {route}: {", ".join(problems)}')
                     if route == 'en/discovery/index.html':
-                        tiles = page.locator('.workflow-view--tiles')
-                        previews = page.locator('.workflow-view--previews')
-                        assert previews.is_visible() and not tiles.is_visible()
-                        assert tiles.locator('a.flow-item__name').count() == 11
-                        page.locator('input[name="workflow-view"][value="previews"]').focus()
-                        page.keyboard.press('ArrowLeft')
-                        assert tiles.is_visible() and not previews.is_visible()
-                        page.keyboard.press('ArrowRight')
-                        assert previews.is_visible() and not tiles.is_visible()
-                        assert previews.locator('.workflow-preview').count() == 11
-                        assert previews.locator('.workflow-preview__stages').first.locator('li').all_text_contents() == [
-                            'Account opening', 'Fund', 'Transact', 'Service', 'Retain',
-                        ]
-                        page.keyboard.press('ArrowLeft')
-                        assert tiles.is_visible() and not previews.is_visible()
-                        page.locator('.workflow-view-switch label').filter(has_text='Stages').click()
-                        counts['workflow_view_checks'] += 1
+                        check_workflow_stage_links(page, base + route, counts, all_stages=width == 1440 and theme == 'light')
                     if width == 1440 and theme == 'light' and '/discovery/' in route:
                         disclosures = page.locator('.discovery-content details')
                         counts['disclosures_toggled'] += disclosures.count()
@@ -258,7 +289,7 @@ def main():
                 filepage.on('pageerror', lambda e: errors.append('File JavaScript: ' + str(e)))
                 network = []
                 filepage.on('request', lambda r: network.append(r.url) if r.url.startswith(('http:', 'https:')) else None)
-                filepage.goto((folder / 'en/discovery/index.html').as_uri())
+                check_workflow_stage_links(filepage, (folder / 'en/discovery/index.html').as_uri(), counts)
                 filepage.locator('#q').fill('Frontline Service Copilot')
                 filepage.locator('#results a').filter(has_text='Frontline Service Copilot').first.click()
                 if not filepage.locator('#scenario-frontline-service-copilot').evaluate('e=>e.open'):

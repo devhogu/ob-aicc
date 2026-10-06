@@ -16,7 +16,7 @@
 #   title_of - extract a page's visible title
 #   write - write a generated section file
 #   local_links - render section-local navigation
-#   workflow_comparison - render overview alternatives using retained workflow stages
+#   workflow_card - render expandable workflows with links to retained stage details
 #   discovery_page - retain scenario bodies while replacing presentation chrome
 #   search_entries - index Discovery pages and scenario fragments
 #   build_discovery - generate both retained catalogue editions
@@ -94,14 +94,14 @@ def local_links(url, links):
     return ''.join(f'<a href="{workspace.relative(url, target)}"' + (' aria-current="page"' if target == url else '') + f'>{escape(label)}</a>' for target, label in links)
 
 
-def workflow_comparison(match):
-    """Compare compact workflow lists and stage previews on the English overview only."""
+def workflow_card(match):
+    """Render expandable workflows and stage destinations on the English overview."""
     source = (SOURCE / 'en/value-streams/index.html').read_text()
     chunks = re.split(r'<details class="flow-detail" id="([^"]+)">', source)[1:]
     flows = {}
     for identifier, chunk in zip(chunks[::2], chunks[1::2]):
         intent = re.search(r'<p class="flow-detail__intent">(.*?)</p>', chunk, re.S)
-        stages = re.findall(r'<span class="flow-stages__stage-label">(.*?)</span>', chunk, re.S)
+        stages = re.findall(r'<button\b[^>]*data-stage="([^"]+)"[^>]*>\s*<span class="flow-stages__stage-label">(.*?)</span>', chunk, re.S)
         if not intent or not stages:
             raise ValueError(f'Missing workflow preview source: {identifier}')
         flows[identifier] = (intent[1], stages)
@@ -113,24 +113,17 @@ def workflow_comparison(match):
 
     def preview(item):
         href, title = item[1], item[2]
-        intent, stages = flows[href.split('#', 1)[1]]
-        steps = ''.join(f'<li>{stage}</li>' for stage in stages)
+        path, identifier = href.split('#', 1)
+        intent, stages = flows[identifier]
+        steps = ''.join(f'<li><a href="{path}#stage-{identifier}--{slug}">{label}</a></li>' for slug, label in stages)
         return ('<li class="flow-item"><details class="workflow-preview">'
                 f'<summary>{title}</summary><div class="workflow-preview__body">'
                 f'<p>{intent}</p><ol class="workflow-preview__stages" aria-label="Workflow stages">{steps}</ol>'
-                f'<a class="workflow-explore" href="{href}">Explore workflow and scenarios →</a>'
                 '</div></details></li>')
 
     previews = re.sub(r'<li class="flow-item">\s*<a href="([^"]+)" class="flow-item__name card-link">(.*?)</a>\s*</li>', preview, body, flags=re.S)
     previews = previews.replace('<details class="workflow-preview">', '<details class="workflow-preview" open>', 1)
-    switch = ('<fieldset class="workflow-view-switch" aria-label="Workflow view">'
-              '<label><input type="radio" name="workflow-view" value="tiles">List</label>'
-              '<label><input type="radio" name="workflow-view" value="previews" checked>Stages</label></fieldset>')
-    return (head + '<div class="card__body"><div class="workflow-comparison">' + switch
-            + '<p class="workflow-count-note">Badges show the number of scenarios.</p>'
-            + f'<div class="workflow-view workflow-view--tiles">{body}</div>'
-            + f'<div class="workflow-view workflow-view--previews">{previews}</div>'
-            + '</div></div></article>')
+    return head + '<div class="card__body">' + previews + '</div></article>'
 
 
 def discovery_page(source, relative, lang):
@@ -165,7 +158,15 @@ def discovery_page(source, relative, lang):
                 key, pattern = next(options)
                 return match[1] + f' data-ui-option="{key}" data-ui-pattern="{pattern}" id="ui-option-{key.lower()}">'
             body = re.sub(r'(<article class="card[^"]*")>', comparison_card, body)
-            body = re.sub(r'<article class="card card--flow"[^>]*>.*?</article>', workflow_comparison, body, count=1, flags=re.S)
+            body = re.sub(r'<article class="card card--flow"[^>]*>.*?</article>', workflow_card, body, count=1, flags=re.S)
+    if lang == 'en' and relative == Path('value-streams/index.html'):
+        # Stable destinations for the overview's individual stage links.
+        def stage_target(match):
+            attrs = match[1]
+            flow = re.search(r'data-flow-id="([^"]+)"', attrs)[1].rsplit(':', 1)[-1]
+            stage = re.search(r'data-stage="([^"]+)"', attrs)[1]
+            return f'<button{attrs} id="stage-{flow}--{stage}">'
+        body = re.sub(r'<button\b([^>]*class="flow-stages__stage"[^>]*)>', stage_target, body)
     # Add stable fragment targets without changing original scenario URNs or copy.
     body = re.sub(r'(<details class="scenario-card" data-urn="([^"]+)")', lambda m: m[1] + f' id="scenario-{m[2].rsplit("/", 1)[-1]}"', body)
     source_styles = re.findall(r'<link rel="stylesheet" href="([^"]+)">', source)

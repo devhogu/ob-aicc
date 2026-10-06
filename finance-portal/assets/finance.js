@@ -1,4 +1,4 @@
-/* Keep keyboard focus inside the retained stage modal and return it on close. */
+/* Open linked stage details and keep keyboard focus inside their retained modal. */
 (() => {
   const tabs = [...document.querySelectorAll('.problems-tab-input')];
   function syncTabs() {
@@ -50,4 +50,21 @@
       close.focus({ preventScroll: true });
     }
   });
+
+  function openLinkedStage() {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch (e) { return; }
+    const stage = document.getElementById(id);
+    if (!stage || !stage.matches('.flow-stages__stage')) return;
+    for (let parent = stage.parentElement; parent; parent = parent.parentElement) {
+      if (parent.tagName === 'DETAILS') parent.open = true;
+    }
+    stage.scrollIntoView({ block: 'center' });
+    stage.click();
+  }
+  // Initial fragment navigation focuses its target before load. Open afterward
+  // so that the dialog keeps focus instead of the stage button behind it.
+  if (document.readyState === 'complete') openLinkedStage();
+  else window.addEventListener('load', openLinkedStage, { once: true });
+  window.addEventListener('hashchange', openLinkedStage);
 })();

@@ -93,21 +93,10 @@
 .discovery-content [data-ui-pattern=workflows]{align-self:start}
 .discovery-content .workflow-overview-link{color:inherit;text-decoration:none}
 .discovery-content .workflow-overview-link:hover{color:var(--link);text-decoration:underline}
-.discovery-content .workflow-view-switch{border:0;border-bottom:1px solid var(--border);padding:0;margin:0 0 8px;display:flex;gap:16px;flex-wrap:wrap;min-width:0}
-.discovery-content .workflow-view-switch label{position:relative;display:flex;align-items:center;min-height:40px;padding:6px 0;border-bottom:3px solid transparent;margin-bottom:-1px;font-size:14px;color:var(--text-muted);cursor:pointer}
-.discovery-content .workflow-view-switch input{position:absolute;opacity:0;width:1px;height:1px}
-.discovery-content .workflow-view-switch label:has(:checked){border-bottom-color:var(--link);color:var(--link);font-weight:500}
-.discovery-content .workflow-view-switch label:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:2px}
-.discovery-content .card__body .workflow-count-note{font-size:12px;color:var(--text-muted);margin:0 0 10px}
-.discovery-content .workflow-view--previews{display:none}
-.discovery-content .workflow-comparison:has([value=previews]:checked) .workflow-view--tiles{display:none}
-.discovery-content .workflow-comparison:has([value=previews]:checked) .workflow-view--previews{display:block}
 .discovery-content [data-ui-pattern=workflows] .flow-item{padding:0;border-radius:0;background:none;width:100%;display:block}
 .discovery-content [data-ui-pattern=workflows] .flow-list{gap:4px}
 .discovery-content [data-ui-pattern=workflows] .flow-sections{gap:12px}
 .discovery-content [data-ui-pattern=workflows] .flow-section+.flow-section{padding-top:12px;border-top:1px solid var(--border)}
-.discovery-content .workflow-view--tiles .flow-item__name{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:40px;padding:6px 10px;border-bottom:3px solid transparent;background:var(--surface-subtle);color:var(--text)}
-.discovery-content .workflow-view--tiles .flow-item__name:hover{border-bottom-color:var(--link);color:var(--link)}
 .discovery-content .workflow-preview{border:0;border-radius:0}
 .discovery-content .workflow-preview>summary{display:flex;align-items:center;gap:10px;padding:6px 10px;min-height:40px;font-size:15px;cursor:pointer;list-style:none;background:var(--surface-subtle);border-bottom:3px solid transparent}
 .discovery-content .workflow-preview>summary::-webkit-details-marker{display:none}
@@ -119,13 +108,13 @@
 .discovery-content .workflow-preview>summary:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
 .discovery-content .workflow-preview__body{padding:10px 10px 12px}
 .discovery-content .card__body .workflow-preview__body p{font-size:14px;color:var(--text-muted);margin:0 0 10px}
-.discovery-content .workflow-preview__stages{display:flex;flex-wrap:wrap;list-style:none;gap:6px 10px;padding:0;margin:0 0 10px}
+.discovery-content .workflow-preview__stages{display:flex;flex-wrap:wrap;list-style:none;gap:6px 10px;padding:0;margin:0}
 .discovery-content .workflow-preview__stages li{display:flex;align-items:baseline;gap:10px;min-width:0;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
 .discovery-content .workflow-preview__stages li:not(:last-child)::after{content:'→';color:var(--text-muted)}
-.discovery-content .workflow-explore{font-size:14px;font-weight:500}
+.discovery-content .workflow-preview__stages a{display:inline-flex;align-items:center;min-height:28px;color:var(--link);text-decoration:underline;text-underline-offset:3px}
 
 @media(max-width:650px){
   .discovery-content [data-ui-pattern=groups] .sub-group{grid-template-columns:minmax(0,1fr)}
   .discovery-content [data-ui-pattern=groups] .sub-group__label{padding:8px 12px}
-  .discovery-content [data-ui-option] .card-link,.discovery-content .workflow-preview>summary,.discovery-content .workflow-view-switch label{min-height:44px}
+  .discovery-content [data-ui-option] .card-link,.discovery-content .workflow-preview>summary{min-height:44px}
 }
