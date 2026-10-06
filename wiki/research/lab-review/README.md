@@ -982,3 +982,12 @@ Changes proposed: English 175 texts, Russian 120 texts, of 209. Interface labels
 | systems | Operating model | Operating model | Операционная модель | Операционная модель |
 | navigation | AI Lab | AI Lab | AI Lab | AI-лаборатория |
 
+## Restructure, 6 October 2026
+
+The language pass left the page's structure as it was; a reading for meaning showed that it did not hold. The page was restructured as follows, in both languages.
+
+1. **Guardrails from the corpus.** The page opens with the seven guardrails of the Lab (LAB-001 to LAB-007) with their evidence, read by the builder from the Standards record, so the page cannot drift from the corpus.
+2. **Experiment workflow.** A one-time setup column, then six steps that follow the corpus (Solution Lifecycle Model 8.13): intake, scope and hypothesis, data, build, evaluate, decide and report. Added: time-box, Risk Tier, data-protection sign-off, Outcome Report, and the decision by the Executive Sponsor or Domain Owner (accept, Proposal, reject). Merged: the four extraction cards, the duplicate acceptance and target cards. 41 cards became 37.
+3. **People and AI agents.** The "Capabilities" section repeated the AI-agent duties word for word and claimed that the model decides, governs and speaks to regulators; it was removed. The two systems and the intent loop remain, under "How people and AI agents work together".
+4. **Practice maturity.** The former "guardrails scorecard" is a self-assessment of how far good practice is applied in each control area, as a percentage of what the Bank expects of a production system. It now says so, shows four bands (0–25% not in place, 26–50% basic, 51–75% established, 76–100% strong), and each figure has a popup with its band, the band's meaning, the reason for the figure, and what would raise it. The figures themselves are unchanged.
+

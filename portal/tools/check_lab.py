@@ -85,11 +85,17 @@ def check(output=OUTPUT):
             errors.append(f'{lang}: published source units or translation incomplete/changed')
         if parsed.cells != expected_cells or parsed.values != expected_values:
             errors.append(f'{lang}: matrix assignments or scorecard values changed')
-        for name, number in {'lab-task': 41, 'lab-cell': 30, 'lab-stage': 6, 'lab-lane': 5,
-                             'lab-system': 2, 'lab-capabilities-card': 7, 'lab-loop-card': 4,
-                             'lab-guardrail-group': 5, 'lab-coverage': 20}.items():
+        # Expected structure follows the source model and the Standards record, not fixed numbers.
+        concerns = sum(len(group['concerns']) for group in model['guardrails'])
+        for name, number in {'lab-task': sum(len(tasks) for tasks in expected_cells.values()), 'lab-cell': len(model['cells']),
+                             'lab-stage': len(model['stages']), 'lab-lane': len(model['lanes']),
+                             'lab-system': len(model['systems']), 'lab-capabilities-card': len(model['capabilities']),
+                             'lab-loop-card': len(model['loop']), 'lab-guardrail-group': len(model['guardrails']),
+                             'lab-coverage': concerns, 'lab-tip': concerns, 'lab-band': len(lab.BANDS[lang])}.items():
             if parsed.classes[name] != number:
                 errors.append(f'{lang}: expected {number} {name}, got {parsed.classes[name]}')
+        if markup.count('class="lab-guardrail-id"') != len(lab.corpus_guardrails(lang)):
+            errors.append(f'{lang}: Lab guardrails differ from the Standards record')
         if len(parsed.ids) != len(set(parsed.ids)):
             errors.append(f'{lang}: duplicate Lab fragment identifiers')
         if 'html-alt/' in markup or 'fonts.googleapis.com' in markup:
