@@ -11,7 +11,6 @@
 #   DOMAIN_ORDER - stable Discovery area order
 #   OVERVIEW - local navigation labels
 #   INTRO - Discovery landing introduction
-#   NOTICE - Discovery's indicative status
 #   finance_renderer - load the established Financial Services source adapter
 #   VisibleText - extract searchable text without embedded code
 #   title_of - extract a page's visible title
@@ -45,10 +44,6 @@ OVERVIEW = {'en': 'Overview', 'ru': 'Обзор'}
 INTRO = {
     'en': 'Banking services, journeys and operating capabilities where AI may add value. Explore the map and assess each opportunity in its intended context.',
     'ru': 'Банковские услуги, клиентские пути и операционные возможности, в которых AI может принести пользу. Изучите карту и оцените каждую возможность с учётом условий её применения.',
-}
-NOTICE = {
-    'en': 'Discovery material. Scenarios and measures are indicative and require validation for the intended use; they do not establish delivery commitments or approved Bank requirements.',
-    'ru': 'Материалы для исследования возможностей. Сценарии и показатели носят предварительный характер и требуют проверки для конкретного применения; они не устанавливают обязательств по реализации или утверждённых требований Банка.',
 }
 
 
@@ -159,7 +154,7 @@ def build_discovery(output):
             relative = path.relative_to(SOURCE / lang)
             source = finance.discovery_source(relative, lang)
             url, title, body, classes, head, skin, js = discovery_page(source, relative, lang)
-            body = f'<div class="discovery-notice">{escape(NOTICE[lang])}</div><div class="discovery-content">{body}</div>'
+            body = f'<div class="discovery-content">{body}</div>'
             page = workspace.page(url, lang, 'discovery', title, body, local_links(url, links), extra_head=head, body_class='discovery-workspace ' + classes)
             page = page.replace('</head>', skin + '\n' + js + '\n</head>', 1)
             write(output, url + 'index.html', page)

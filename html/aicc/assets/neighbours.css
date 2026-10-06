@@ -1,4 +1,4 @@
-/* Common navigation only. Each neighbouring section owns its content layout. */
+/* Common navigation and highlight palette. Each section owns its content layout. */
 .o-header{border-bottom:2px solid var(--brand)}
 .portal-workspace{min-height:100vh;display:flex;flex-direction:column}
 .portal-workspace>.o-frame{flex:1;width:calc(100% - 16px)}
@@ -15,7 +15,7 @@
 .portal-workspace .o-footer{margin-top:auto;padding-top:20px}
 .neighbour-content{max-width:var(--content-width);padding-bottom:40px;line-height:1.65}
 .neighbour-content>p,.neighbour-content>ul,.neighbour-content>ol{max-width:82ch}
-.neighbour-content h1{font-size:clamp(28px,3vw,42px);max-width:30ch}
+.neighbour-content h1{font-size:32px;max-width:30ch}
 .neighbour-status{display:inline-flex;border:1px solid var(--border-control);padding:4px 10px;border-radius:var(--radius-pill);font-size:13px;color:var(--text-muted);margin:0 0 12px}
 .neighbour-content table{width:100%;border-collapse:collapse}
 .neighbour-content th,.neighbour-content td{padding:12px;border:1px solid var(--border);vertical-align:top;text-align:left}
@@ -23,6 +23,31 @@
 .neighbour-content .o-table-wrap{margin:20px 0}
 .neighbour-content a{font-weight:500}
 .neighbour-content .empty-register{padding:24px;border:1px dashed var(--border-control);border-radius:12px;background:var(--surface-subtle)}
+/* Light reading surfaces keep the header's dark plum for navigation and emphasis. */
+:root[data-theme=light]{
+  --shell-navigation:#21191f;
+  --portal-highlight:var(--shell-control-bg);
+  --portal-highlight-strong:var(--shell-header-start);
+  --portal-highlight-hover:#3d2231;
+  --portal-highlight-text:var(--shell-header-text);
+  --portal-highlight-muted:var(--shell-header-muted);
+  --portal-highlight-link:#ff85c1;
+  --portal-highlight-border:#695360;
+}
+:root[data-theme=light] .o-nav{
+  --text:var(--portal-highlight-text);--text-muted:var(--portal-highlight-muted);
+  --link:var(--portal-highlight-link);--surface-subtle:#30212a;--surface-selected:var(--portal-highlight-hover);
+  --border:#464149;--focus:var(--shell-focus);
+  color:var(--text);
+}
+:root[data-theme=light] :is(.o-callout,.o-state,.o-node[aria-pressed=true],.o-doc p:target,.o-doc h2:target,.o-doc h3:target,.vp-mission,.card--primary,.support-list li,.levels li,.home-newhere,.neighbour-content .empty-register,.o-main th,.o-tabs.parts a){
+  --text:var(--portal-highlight-text);--text-muted:var(--portal-highlight-muted);
+  --link:var(--portal-highlight-link);--border:var(--portal-highlight-border);--border-control:var(--portal-highlight-border);
+  --surface-subtle:var(--portal-highlight);--surface-selected:var(--portal-highlight-hover);--focus:var(--shell-focus);
+  background:var(--portal-highlight);color:var(--text);
+}
+:root[data-theme=light] .o-tabs.parts a[aria-current=page]{background:var(--portal-highlight-strong);color:var(--portal-highlight-text)}
+:root[data-theme=light] :is(.vp-list li,.home-chips a)::before{background:var(--portal-highlight);color:var(--portal-highlight-text);border-color:var(--portal-highlight-border)}
 @media(min-width:1101px){.o-nav:has(.portal-sections){max-height:100vh;overflow-y:auto;scrollbar-width:thin}}
 @media(max-width:1100px){.o-nav details>.portal-sections{display:flex;flex-direction:column;flex-wrap:nowrap}.portal-local-nav{margin-left:18px}}
 @media(max-width:650px){.portal-workspace>.o-frame{width:calc(100% - 10px)}.neighbour-content h1{font-size:28px}}
