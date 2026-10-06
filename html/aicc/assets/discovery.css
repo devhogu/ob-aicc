@@ -72,8 +72,14 @@
 .discovery-content [data-ui-option] .sub-group__label{line-height:1.4;margin-bottom:6px}
 .discovery-content [data-ui-option] a:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
 
-/* Interactive cards share a thin left rule, clear of the rounded card corners. */
-.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows])::before{content:'';position:absolute;left:0;top:var(--radius-card);bottom:var(--radius-card);width:2px;border-radius:0;background:var(--brand);opacity:0;z-index:3;pointer-events:none}
+/* A 2px accent follows the left corners, tapering to nothing along both edges. */
+.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows])::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:88px;background:var(--brand);opacity:0;z-index:3;pointer-events:none;
+  --card-accent-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 88 12'%3E%3Cpath d='M0 12A12 12 0 0 1 12 0H88C62 0 38 2 12 2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left top/88px var(--radius-card) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 88 12'%3E%3Cpath transform='translate(0 12) scale(1 -1)' d='M0 12A12 12 0 0 1 12 0H88C62 0 38 2 12 2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left bottom/88px var(--radius-card) no-repeat,
+    linear-gradient(#000,#000) left center/2px calc(100% - var(--radius-card) - var(--radius-card)) no-repeat;
+  -webkit-mask:var(--card-accent-mask);mask:var(--card-accent-mask);
+}
 .discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows]):is(:hover,:focus-within)::before{opacity:1}
 .discovery-content .card:is([data-ui-pattern=groups],[data-ui-pattern=workflows]):hover{border-color:var(--border)}
 .discovery-content [data-ui-pattern=groups] .card__body{padding:0}
