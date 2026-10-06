@@ -23,7 +23,7 @@
 .lab-reset:hover{background:var(--surface-subtle)}
 .lab-matrix-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--radius-card)}
 .lab-matrix-wrap:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-.lab-matrix{display:grid;grid-template-columns:minmax(116px,.7fr) repeat(6,minmax(130px,1fr));background:var(--surface)}
+.lab-matrix{display:grid;grid-template-columns:minmax(116px,.7fr) repeat(var(--lab-stages,6),minmax(130px,1fr));background:var(--surface)}
 .lab-stage{display:flex;align-items:flex-start;gap:8px;font-size:13px!important;margin:0!important;padding:16px 10px;background:var(--surface);border-bottom:2px solid var(--brand);border-left:1px solid var(--border);overflow-wrap:anywhere}
 .lab-number{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font:500 12px var(--font-body);color:var(--text-muted);background:var(--surface-subtle);border-radius:4px;min-width:24px;height:24px}
 .lab-lane{padding:16px 12px;font-size:13px;font-weight:500;background:var(--surface-subtle);border-bottom:1px solid var(--border);overflow-wrap:anywhere}
@@ -79,3 +79,29 @@
 @media(max-width:1000px){.lab-capabilities,.lab-loop{grid-template-columns:repeat(2,minmax(0,1fr))}.lab-loop-card>header::after{display:none}.lab-guardrails{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:650px){.lab-matrix{display:block}.lab-lane{display:none}.lab-stage{border-left:0;padding:16px;font-size:16px!important}.lab-stage:not(:first-of-type){margin-top:20px!important;border-top:1px solid var(--border)}.lab-cell{border-left:0;padding:12px 16px}.lab-cell-label{display:block;font-size:12px;font-weight:500;color:var(--text-muted);margin-bottom:4px}.lab-task h4{font-size:15px}.lab-task p{font-size:14px}.lab-systems,.lab-capabilities,.lab-loop{grid-template-columns:minmax(0,1fr)}.lab-section{margin-top:48px}.lab-section>h2{font-size:22px}.lab-guardrail-group :is(th,td){padding:8px}.lab-options{gap:4px}.lab-options button{font-size:12px}.lab-options button[data-lab-stage=all]{flex-shrink:0}.lab-system h3{font-size:20px}}
 @media print{.lab-controls{display:none}.lab-content [hidden]{display:revert!important}.lab-matrix{display:block}.lab-lane{display:none}.lab-cell-label{display:block}.lab-card{break-inside:avoid}.lab-content :target{outline:0}}
+
+/* One-time setup column, corpus guardrails, maturity bands and the reason popups. */
+.lab-stage--setup{background:var(--surface-subtle)}
+.lab-stage-note{display:block;margin-top:4px;font-size:12px;font-weight:400;color:var(--text-muted)}
+.lab-guardrail-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:16px 0 0;padding:0;list-style:none}
+.lab-guardrail-list li{padding:14px 16px}
+.lab-guardrail-list p{margin:6px 0 0}
+.lab-guardrail-id{font-size:12px;font-weight:600;color:var(--text-muted)}
+.lab-guardrail-evidence{font-size:14px;color:var(--text-muted)}
+.lab-guardrail-evidence span{font-weight:600}
+.lab-bands{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0}
+.lab-band{padding:10px 12px;border:1px solid var(--border);border-radius:8px}
+.lab-band dt{font-size:13px;font-weight:600}
+.lab-band dd{margin:4px 0 0;font-size:13px;color:var(--text-muted)}
+.lab-coverage-cell{position:relative}
+.lab-coverage{cursor:help}
+.lab-coverage:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.lab-tip{position:absolute;right:0;top:100%;z-index:20;display:none;width:min(340px,80vw);padding:12px 14px;border:1px solid var(--border);border-radius:8px;background:var(--surface);box-shadow:0 8px 24px rgba(0,0,0,.18);font-size:13px;line-height:1.45;text-align:left;font-weight:400}
+.lab-tip strong{display:block;margin-bottom:4px}
+.lab-tip-band{display:block;color:var(--text-muted);margin-bottom:6px}
+.lab-tip-why{display:block}
+.lab-coverage-cell:hover .lab-tip,.lab-coverage-cell:focus-within .lab-tip{display:block}
+@media(max-width:1000px){.lab-bands{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.lab-bands{grid-template-columns:minmax(0,1fr)}.lab-tip{width:min(300px,86vw)}}
+.lab-guardrail-group{overflow:visible}
+.lab-guardrail-group:has(.lab-coverage-cell:hover,.lab-coverage-cell:focus-within){z-index:30}
