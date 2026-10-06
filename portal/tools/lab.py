@@ -28,16 +28,16 @@ import workspace
 SOURCE = workspace.ROOT / 'html-alt/cloudlab/index.html'
 TRANSLATION = workspace.ROOT / 'portal/sections/lab/ru/content.json'
 UI = {
-    'en': {'concept': 'Concept', 'matrix': 'Validation workflow', 'systems': 'Operating model',
+    'en': {'concept': 'Concept', 'matrix': 'Experiment workflow', 'systems': 'Operating model',
            'capabilities': 'Capabilities', 'loop': 'Intent loop', 'guardrails': 'Guardrails',
            'stages': 'Stage', 'lanes': 'Workstream', 'all': 'All', 'reset': 'Show complete workflow',
            'empty': 'No separate activity specified', 'coverage': 'Illustrative coverage',
            'concern': 'Concern', 'posture': 'Posture', 'selection': 'Workflow view'},
-    'ru': {'concept': 'Концепция', 'matrix': 'Проверка гипотез', 'systems': 'Операционная модель',
-           'capabilities': 'Возможности', 'loop': 'Цикл взаимодействия', 'guardrails': 'Ограничения и контроль',
-           'stages': 'Этап', 'lanes': 'Направление работы', 'all': 'Все', 'reset': 'Показать весь процесс',
+    'ru': {'concept': 'Концепция', 'matrix': 'Процесс эксперимента', 'systems': 'Операционная модель',
+           'capabilities': 'Возможности', 'loop': 'Цикл управления', 'guardrails': 'Защитные механизмы',
+           'stages': 'Этап', 'lanes': 'Блок работ', 'all': 'Все', 'reset': 'Показать весь процесс',
            'empty': 'Отдельная задача не указана', 'coverage': 'Иллюстративный охват',
-           'concern': 'Область контроля', 'posture': 'Подход', 'selection': 'Представление процесса'},
+           'concern': 'Область контроля', 'posture': 'Подход', 'selection': 'Вид процесса'},
 }
 
 

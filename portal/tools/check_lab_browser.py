@@ -123,7 +123,7 @@ def main():
                             page.locator('.o-nav>details>summary').click()
                         page.locator('.portal-local-nav a[href="#guardrails"]').click()
                         assert page.locator('#guardrails').evaluate('e=>document.activeElement===e')
-                        page.locator('#q').fill('Define IAM and Policies' if lang == 'en' else 'Определить IAM и политики')
+                        page.locator('#q').fill('Set access roles and policies' if lang == 'en' else 'Настроить роли и политики доступа')
                         result = page.locator('#results a').first
                         result.wait_for()
                         assert '#task-a-2-2' in result.get_attribute('href')

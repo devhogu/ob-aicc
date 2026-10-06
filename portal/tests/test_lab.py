@@ -15,11 +15,11 @@ from check_lab import Capture
 class LabProjection(unittest.TestCase):
     def test_source_tasks_and_postures_reach_both_edition_destinations(self):
         model = lab.source_content()
-        for lang, expected_name in (('en', 'Define IAM and Policies'), ('ru', 'Определить IAM и политики')):
+        for lang, expected_name in (('en', 'Set access roles and policies'), ('ru', 'Настроить роли и политики доступа')):
             body, search = lab.render(model, lang)
             parsed = Capture(body)
             self.assertEqual(parsed.units['task-a-2-2-name'], expected_name)
-            self.assertEqual(parsed.units['task-a-2-1-desc'], 'AWS approvals; vendor onboarding sign-off' if lang == 'en' else 'Согласования AWS; одобрение подключения поставщика')
+            self.assertEqual(parsed.units['task-a-2-1-desc'], 'Infrastructure request approved; IT security sign-off' if lang == 'en' else 'Заявка на инфраструктуру согласована; получено заключение информационной безопасности')
             self.assertEqual(parsed.cells['A', '2'], ['task-a-2-1', 'task-a-2-2'])
             self.assertEqual(parsed.cells['E', '2'], [])
             self.assertIn(f'/{lang}/lab/#task-a-2-2', [entry['u'] for entry in search])
