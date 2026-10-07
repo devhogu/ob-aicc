@@ -2,7 +2,7 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 1.2
+revision: 1.3
 created: 2026-10-02
 revised: 2026-10-07
 ```
@@ -17,6 +17,7 @@ revised: 2026-10-07
 | Title | [title] |
 | State and Stage | [state, and Stage if in discovery or active] |
 | Strategic Priority | [PRI-n] |
+| Source scenario | [URN of the scenario of the Discovery catalog that the need comes from; none if it does not come from the catalog] |
 | Service area and category | [service area and service category of the Business Model 4] |
 | Kind of work | [business / enabling / risk and compliance] |
 | Standing Initiative | [yes / no] |

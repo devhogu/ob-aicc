@@ -8,6 +8,7 @@
 | Title | Standing Initiative: Advise and formulate |
 | State and Stage | Approved; no Stage |
 | Strategic Priority | Enabling (all priorities); each request records the priority it supports |
+| Source scenario | None: a Standing Initiative carries run-rate work, not a scenario of the catalog |
 | Service area and category | Advise and formulate; Strategy and governance; Normatives and processes; Research and exploration; Business cases and scenarios |
 | Kind of work | Enabling |
 | Standing Initiative | Yes |

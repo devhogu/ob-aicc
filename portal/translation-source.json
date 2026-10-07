@@ -261,7 +261,7 @@
     {
       "path": "charter/en/templates/initiative-brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "fa1f2f84bcf3a3dda54cb7a7e333f762419ee6eece52b62ce5a755c58950f790",
+      "sha256": "35e9c66124cabea583479fa2963ae374bcb8ad7eee47f780eaac06b92749d64e",
       "document": {
         "id": "AICC-TPL-02-EN",
         "status": "active",
@@ -1475,70 +1475,70 @@
     {
       "path": "portfolio/en/initiatives/INI-002-service-landscape-discovery/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "cdee90d2eb3410fa72ec3050f2a744603dab658f5cc09523eb56ba69225faead",
+      "sha256": "7f4869081261de35acc00f832334f8c3d59ec1b43ec8a144cbbad88b4b3e3b6f",
       "baseline_path": "registry/initiatives/INI-002-service-landscape-discovery/brief.md",
       "baseline_sha256": "b103ba498ef197394531b1296c4ca7e13134cfda4fd1e20b839b696abe78c5d7"
     },
     {
       "path": "portfolio/en/initiatives/INI-003-ai-in-daily-work-of-functions/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "7bbd8c56d0420772860903a6a6dd0c467d4c3b51f44f92535fa35756b8c88c11",
+      "sha256": "3a86cc682484d378298a9c4dd54185691bf5677433c62d33184b492a88ed34d5",
       "baseline_path": "registry/initiatives/INI-003-ai-in-daily-work-of-functions/brief.md",
       "baseline_sha256": "7bbd8c56d0420772860903a6a6dd0c467d4c3b51f44f92535fa35756b8c88c11"
     },
     {
       "path": "portfolio/en/initiatives/INI-004-fpa-board-reporting/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "dc50c4e5c234b504b34e0f399d1ce40437ff70c9af362cc8546c72321cc581d8",
+      "sha256": "be843057873f931e92f83781af8778e853dac187f40e2cf08d92eb150de06530",
       "baseline_path": "registry/initiatives/INI-004-fpa-board-reporting/brief.md",
       "baseline_sha256": "dc50c4e5c234b504b34e0f399d1ce40437ff70c9af362cc8546c72321cc581d8"
     },
     {
       "path": "portfolio/en/initiatives/INI-006-customer-experience-intelligence-discovery/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "000d31116abd24a2cd91b4df2592c20ff89ca5cd23096ed9dc89abb3f2fc98be",
+      "sha256": "fca4cf2465d294d6cfc1cb216b6a9fcdd0394f3bdf974ea8de154ae21639a75a",
       "baseline_path": "registry/initiatives/INI-006-customer-experience-intelligence-discovery/brief.md",
       "baseline_sha256": "000d31116abd24a2cd91b4df2592c20ff89ca5cd23096ed9dc89abb3f2fc98be"
     },
     {
       "path": "portfolio/en/initiatives/INI-007-retail-credit-discovery/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "3d2f37818f5504de93f460b9e1b4c2fc9ac407366c457222fbd74d3b0c78dacd",
+      "sha256": "e52a9858239683dea508ff6fd68902a1e2d58e4de70fa29f5a2319f6777bd253",
       "baseline_path": "registry/initiatives/INI-007-retail-credit-discovery/brief.md",
       "baseline_sha256": "3d2f37818f5504de93f460b9e1b4c2fc9ac407366c457222fbd74d3b0c78dacd"
     },
     {
       "path": "portfolio/en/initiatives/INI-008-knowledge-bases/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "88d6fde675c6a49a4dc6d76137bede833f247341540a3481bc1ff56613e6984f",
+      "sha256": "39baefedf1b7e16e88aaa4269d541d19687edbbe482298168302079193987d6c",
       "baseline_path": "registry/initiatives/INI-008-knowledge-bases/brief.md",
       "baseline_sha256": "88d6fde675c6a49a4dc6d76137bede833f247341540a3481bc1ff56613e6984f"
     },
     {
       "path": "portfolio/en/initiatives/INI-009-standing-advise-and-formulate/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "1d90c59757eeb80ac6c0e1ba7f41cb0edba7fd5452f5f379f2ec06d22a3a652b",
+      "sha256": "eefd678d4ff724d131efecfc140c76d620a2297ebe1c45f99295f438e49ae8d3",
       "baseline_path": "registry/initiatives/INI-009-standing-advise-and-formulate/brief.md",
       "baseline_sha256": "1d90c59757eeb80ac6c0e1ba7f41cb0edba7fd5452f5f379f2ec06d22a3a652b"
     },
     {
       "path": "portfolio/en/initiatives/INI-010-standing-build-and-run/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "a9db6a8ec31ce8d3ea4240fc8d7ff72ef96d9ca4c23bda5e0915fa784ce1e765",
+      "sha256": "719a2a3de2a433c45e5a89ce87358ee428ad5974cae56be9f791130455ea856c",
       "baseline_path": "registry/initiatives/INI-010-standing-build-and-run/brief.md",
       "baseline_sha256": "a9db6a8ec31ce8d3ea4240fc8d7ff72ef96d9ca4c23bda5e0915fa784ce1e765"
     },
     {
       "path": "portfolio/en/initiatives/INI-011-standing-enablement/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "e19c79e561462a44fe0ccc2efef96e7cada5bea34d2da2eda23018677ac8aa49",
+      "sha256": "f9317127677871d3673296c23918a2fe8f1431ee6988458a738426a7061ab97a",
       "baseline_path": "registry/initiatives/INI-011-standing-enablement/brief.md",
       "baseline_sha256": "e19c79e561462a44fe0ccc2efef96e7cada5bea34d2da2eda23018677ac8aa49"
     },
     {
       "path": "portfolio/en/initiatives/INI-012-standing-assurance/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "f5291e606f464ed49e134e79b8225a20b868d940ae53c526d98ee32436f1dfc0",
+      "sha256": "8fa7dafe0d5c24ce00fe90a48af6974647c757c5674186523875a49ab039304d",
       "baseline_path": "registry/initiatives/INI-012-standing-assurance/brief.md",
       "baseline_sha256": "f5291e606f464ed49e134e79b8225a20b868d940ae53c526d98ee32436f1dfc0"
     },
@@ -2059,7 +2059,7 @@
     {
       "path": "portfolio/en/initiatives/INI-013-service-resolution/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "08a79d0de0b386dee9f1d2f7645f5d8ebf6471a4ff6e2d760fc458871d6713a4"
+      "sha256": "309c47962783ce7eeb09fbcbe84529594d943eecd415e5897d6a78905b7e73a9"
     },
     {
       "path": "portfolio/en/projects/README.md",

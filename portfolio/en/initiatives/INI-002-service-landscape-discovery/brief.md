@@ -6,6 +6,7 @@
 | Title | Service landscape discovery |
 | State and Stage | Discovery: Scoping |
 | Strategic Priority | Enabling (all priorities) |
+| Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
 | Domain Owner (represents the client function) | Enabling work: the Executive Sponsor stands in for the Domain Owner (Portfolio Management Model 5.2). Enterprise architecture leads the work, with the function heads and service owners of the Bank; its lead is not yet named, a Steering action |
 | Solutions expected | None: the Initiative ends in ranked candidates for the Backlog |
 | Business acceptor | Executive Sponsor, because it is enabling work across all functions (section 6) |

@@ -6,6 +6,7 @@
 | Title | Customer Intelligence–Enabled Service Resolution |
 | State and Stage | Proposed |
 | Strategic Priority | PRI-1 Customer intelligence |
+| Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
 | Service area and category | Build and run; Workplace automation |
 | Kind of work | Business |
 | Standing Initiative | No |

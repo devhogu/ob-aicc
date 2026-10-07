@@ -8,6 +8,7 @@
 | Title | Standing Initiative: Assurance |
 | State and Stage | Approved; no Stage |
 | Strategic Priority | Enabling (all priorities); each request records the priority it supports |
+| Source scenario | None: a Standing Initiative carries run-rate work, not a scenario of the catalog |
 | Service area and category | Assurance; Policies, controls, criteria; Assessments and evaluations; Risk tiering; Oversight |
 | Kind of work | Enabling |
 | Standing Initiative | Yes |

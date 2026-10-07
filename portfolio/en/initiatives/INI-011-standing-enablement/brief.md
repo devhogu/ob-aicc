@@ -8,6 +8,7 @@
 | Title | Standing Initiative: Enablement |
 | State and Stage | Approved; no Stage |
 | Strategic Priority | Enabling (all priorities); each request records the priority it supports |
+| Source scenario | None: a Standing Initiative carries run-rate work, not a scenario of the catalog |
 | Service area and category | Enablement; Training and knowledge sharing; Adoption and lifecycle management |
 | Kind of work | Enabling |
 | Standing Initiative | Yes |

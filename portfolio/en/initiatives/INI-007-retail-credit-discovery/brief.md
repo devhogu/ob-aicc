@@ -6,6 +6,7 @@
 | Title | Retail credit: credit lines, loans, and mortgages |
 | State and Stage | Discovery: Scoping |
 | Strategic Priority | PRI-5 AI in banking operations and systems; PRI-4 Expertise at the point of work |
+| Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
 | Domain Owner (represents the client function) | Retail banking functions for credit lines, loans, and mortgages. The Domain Owner is not yet named; a Steering action |
 | Solutions expected | The Solutions, with their types, are defined in discovery |
 | Business acceptor | The head of the retail credit function (section 6) |

@@ -6,6 +6,7 @@
 | Title | FP&A: Board reporting of financial metrics |
 | State and Stage | Discovery: Scoping |
 | Strategic Priority | PRI-2 Business intelligence |
+| Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
 | Domain Owner (represents the client function) | FP&A analytics function. Domain Owner: Ademi Moldogazieva, head of the FP&A function |
 | Solutions expected | SOL-001 FP&A Board reporting pipeline; its type is set when the Solution is defined |
 | Business acceptor | Ademi Moldogazieva, head of the FP&A function (section 6) |

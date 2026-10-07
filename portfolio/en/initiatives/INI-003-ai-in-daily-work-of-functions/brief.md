@@ -6,6 +6,7 @@
 | Title | AI in the daily work of functions: compliance, HR, legal, finance, and accounting |
 | State and Stage | Discovery: Scoping |
 | Strategic Priority | PRI-3 Adoption within Domains |
+| Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
 | Domain Owner (represents the client function) | Compliance, HR, legal, finance, and accounting. The Domain Owner of each function is not yet named; a Steering action |
 | Solutions expected | The Solutions, with their types, are defined in discovery from the ranked tasks |
 | Business acceptor | The head of each function, for the part of its function; the Executive Sponsor for the whole (section 6) |

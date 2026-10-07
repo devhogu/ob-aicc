@@ -6,6 +6,7 @@
 | Title | Knowledge bases across functions |
 | State and Stage | Discovery: Scoping |
 | Strategic Priority | PRI-4 Expertise at the point of work |
+| Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
 | Domain Owner (represents the client function) | Legal, HR, the commercial functions (products and services), retail credit, and other functions found in the landscape. The Domain Owner of each is not yet named; a Steering action |
 | Solutions expected | One knowledge base Solution for each function, with its type, defined in discovery |
 | Business acceptor | The head of each function, for its knowledge base; the Executive Sponsor for the common approach (section 6) |

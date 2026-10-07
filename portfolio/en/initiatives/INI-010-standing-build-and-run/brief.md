@@ -8,6 +8,7 @@
 | Title | Standing Initiative: Build and run |
 | State and Stage | Approved; no Stage |
 | Strategic Priority | Enabling (all priorities); each request records the priority it supports |
+| Source scenario | None: a Standing Initiative carries run-rate work, not a scenario of the catalog |
 | Service area and category | Build and run; Knowledge services; Workplace automation; Analytics and decision support; Content management; Platforms |
 | Kind of work | Enabling |
 | Standing Initiative | Yes |
