@@ -2,9 +2,9 @@
 
 ## 1. Intent and scope
 
-This workflow is the value stream of AICC from a business need to a retired solution. It runs from the portfolio Kanban, from the funnel to a ranked backlog and the minimum viable product, through the breakdown into Capabilities and Features and the execution in the Program Increments, to the deployment and the life of the Solution. The portfolio part is the Portfolio Management Model, and the execution and the life cycle are the Solution Lifecycle Model. This workflow shows the whole stream in one view.
+This workflow is the value stream of the Competence Center from a business need to a retired solution. It runs from the portfolio Kanban, from the funnel to a ranked backlog and the minimum viable product, through the breakdown into Capabilities and Features and the execution in the Program Increments, to the deployment and the life of the Solution. The portfolio part is the Portfolio Management Model, and the execution and the life cycle are the Solution Lifecycle Model. This workflow shows the whole stream in one view.
 
-AICC is a lab. It defines and tries solutions with the functions, so that the Bank can decide on adoption at scale. Some solutions become services that AICC runs. Some are products built for one consumer. Some are experiments that end in a proposal, which another owner may adopt. AICC also oversees the adoption of solutions that others deliver.
+The Competence Center is a lab. It defines and tries solutions with the functions, so that the Bank can decide on adoption at scale. Some solutions become services that the Competence Center runs. Some are products built for one consumer. Some are experiments that end in a proposal, which another owner may adopt. The Competence Center also oversees the adoption of solutions that others deliver.
 
 The Engagement workflow sits on top of this one: it states the commitment to the function, and this workflow carries the work. The rules are in the Operating Model, the Portfolio Management Model, the Solution Lifecycle Model, the AI Policy, and the Vocabulary. This workflow shows the flow and the intent, and states no rule of its own. The events are those of the Cadence.
 
@@ -27,7 +27,7 @@ flowchart TB
 
 Figure 1: the levels of the work.
 
-The Solution is not a step in the chain: an Initiative delivers it and its Capabilities build it. Enabling work may have a Capability that builds no Solution. Run-rate work is a Feature directly under its Standing Initiative, without a Capability. Once the Standing Initiative Brief is approved, the AICC Lead admits the Feature at the Weekly Review, with its client, data-use approval where AI is used, acceptance criteria, and Dependencies recorded. The Feature enters the current Iteration Backlog within its limits, and the product owner accepts its result (Solution Lifecycle Model 3.1, 5.2, and 7.3).
+The Solution is not a step in the chain: an Initiative delivers it and its Capabilities build it. Enabling work may have a Capability that builds no Solution. Run-rate work is a Feature directly under its Standing Initiative, without a Capability. Once the Standing Initiative Brief is approved, the Competence Center Lead admits the Feature at the Weekly Review, with its client, data-use approval where AI is used, acceptance criteria, and Dependencies recorded. The Feature enters the current Iteration Backlog within its limits, and the product owner accepts its result (Solution Lifecycle Model 3.1, 5.2, and 7.3).
 
 | Level | Backlog or board | Horizon | Closes |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ The Solution is not a step in the chain: an Initiative delivers it and its Capab
 
 Every Initiative, Solution, Capability, and Feature has one of thirteen states, defined in the Vocabulary. A Strategic Priority has four (Solution Lifecycle Model 5.1). A Stage is a phase of the work inside the discovery state or the active state.
 
-Figure 2 shows the main stream of an item. Waiting is a state shown as a flag on the item: it is set when a Dependency outside AICC blocks the work in Discovery, Approved, or Active, and the item returns to the state it came from when the Dependency is cleared. A Solution only may go from Active to Closed, when it is retired, handed off, or ended, and from Active back to Discovery when a change raises its Risk Tier. While the Team has up to three people, Completed is skipped, and Accepted and Closed are one step (Solution Lifecycle Model 6.6).
+Figure 2 shows the main stream of an item. Waiting is a state shown as a flag on the item: it is set when a Dependency outside the Competence Center blocks the work in Discovery, Approved, or Active, and the item returns to the state it came from when the Dependency is cleared. A Solution only may go from Active to Closed, when it is retired, handed off, or ended, and from Active back to Discovery when a change raises its Risk Tier. While the Team has up to three people, Completed is skipped, and Accepted and Closed are one step (Solution Lifecycle Model 6.6).
 
 ```mermaid
 flowchart LR
@@ -54,7 +54,7 @@ flowchart LR
   R --> AK["Accepted"]
   AK --> CL["Closed"]
   R -.->|"returned"| AC
-  AC -.->|"a Dependency outside AICC"| W["Waiting<br/>a flag on the item"]
+  AC -.->|"a Dependency outside the Competence Center"| W["Waiting<br/>a flag on the item"]
   W -.->|"returns to the state it came from"| AC
 ```
 
@@ -65,7 +65,7 @@ An item may leave the main stream at any gate. Figure 3 shows the routes out. Th
 ```mermaid
 flowchart LR
   IT["An item that does not<br/>continue on the main stream"] --> Q["Why?"]
-  Q -->|"waits for a person or an event outside AICC"| WT["Waiting<br/>the Dependency is named<br/>it returns to the state it came from"]
+  Q -->|"waits for a person or an event outside the Competence Center"| WT["Waiting<br/>the Dependency is named<br/>it returns to the state it came from"]
   Q -->|"not yet sufficient reason to proceed"| DF["Deferred<br/>the reason and the date<br/>to look at it again"]
   Q -->|"what was learned calls for a different item"| PV["Pivoted<br/>a new item linked to the first<br/>an Initiative: a new Initiative<br/>at the funnel"]
   Q -->|"the value is not seen"| RJ["Rejected<br/>a decision on the merits<br/>the lessons are kept"]
@@ -115,13 +115,13 @@ Figure 5: the portfolio Kanban from the Portfolio Backlog to Done.
 
 | Step | State and Stage | Intent | Who | Output |
 | --- | --- | --- | --- | --- |
-| Funnel | Initiative, Proposed | Capture every idea or need from a function, from the discovery work, or from AICC | A function, the discovery work, or AICC proposes; the AICC Lead takes in, defers, or rejects | An entry in the Portfolio Backlog |
-| Reviewing | Initiative, Discovery: Scoping | Understand the need and the requirements with the function, and check the fit with the Strategic Priorities, the limit on the Active Initiatives, and the catalog of Solutions | AICC Lead with the Domain Owner | The scope in the Initiative Brief |
-| Analyzing | Initiative, Discovery: Business case | State the hypothesis, the outcomes with their leading indicators, the MVP, the cost and value, and the risks, and obtain the clearance of the Control Function Contacts when Risk Tier 2 or 3 is expected. A Risk Tier assigned that is higher than the one cleared returns the business case to the Control Function Contacts (Portfolio Management Model 6.4) | Domain Owner with the AICC Lead; the Executive Sponsor above a guardrail, across Domains, or for enabling work; the Control Function Contacts clear | The Initiative Brief and the Decision Record; the Initiative is approved |
-| Portfolio Backlog | Initiative, Approved | Rank the approved Initiatives and take the highest-ranked one that fits into work | AICC Lead | The rank in the Portfolio Backlog |
-| MVP | Initiative, Active: MVP | Define the architecture and the Solution Definition of the first Solution, and try it as a probe against the leading indicators | Solution Engineer with the Domain Expert; the Domain Owner approves the Solution Definition, and the AICC Lead assigns the Risk Tier; where the AICC Lead built the Solution, the Executive Sponsor approves the Definition and assigns the Tier (Operating Model 4.4(d)) | The Solution Definition in the Portfolio and the AI Registry entry; the result of the probe |
+| Funnel | Initiative, Proposed | Capture every idea or need from a function, from the discovery work, or from the Competence Center | A function, the discovery work, or the Competence Center proposes; the Competence Center Lead takes in, defers, or rejects | An entry in the Portfolio Backlog |
+| Reviewing | Initiative, Discovery: Scoping | Understand the need and the requirements with the function, and check the fit with the Strategic Priorities, the limit on the Active Initiatives, and the catalog of Solutions | Competence Center Lead with the Domain Owner | The scope in the Initiative Brief |
+| Analyzing | Initiative, Discovery: Business case | State the hypothesis, the outcomes with their leading indicators, the MVP, the cost and value, and the risks, and obtain the clearance of the Control Function Contacts when Risk Tier 2 or 3 is expected. A Risk Tier assigned that is higher than the one cleared returns the business case to the Control Function Contacts (Portfolio Management Model 6.4) | Domain Owner with the Competence Center Lead; the Executive Sponsor above a guardrail, across Domains, or for enabling work; the Control Function Contacts clear | The Initiative Brief and the Decision Record; the Initiative is approved |
+| Portfolio Backlog | Initiative, Approved | Rank the approved Initiatives and take the highest-ranked one that fits into work | Competence Center Lead | The rank in the Portfolio Backlog |
+| MVP | Initiative, Active: MVP | Define the architecture and the Solution Definition of the first Solution, and try it as a probe against the leading indicators | Solution Engineer with the Domain Expert; the Domain Owner approves the Solution Definition, and the Competence Center Lead assigns the Risk Tier; where the Competence Center Lead built the Solution, the Executive Sponsor approves the Definition and assigns the Tier (Operating Model 4.4(d)) | The Solution Definition in the Portfolio and the AI Registry entry; the result of the probe |
 | Decision after the MVP | Initiative, Active | Continue, pivot, defer, or reject | The approver of the business case | The Decision Log entry and the Decision Record |
-| Implementation | Initiative, Active: Implementation | Define the Capabilities and break them into Features, each with acceptance criteria and Dependencies | AICC Lead with the Domain Owner | Capabilities and Features in the Program Backlog, under the Initiative; the Program Board |
+| Implementation | Initiative, Active: Implementation | Define the Capabilities and break them into Features, each with acceptance criteria and Dependencies | Competence Center Lead with the Domain Owner | Capabilities and Features in the Program Backlog, under the Initiative; the Program Board |
 | Done | Initiative, Review, Accepted, Closed | Review the outcome against the leading indicators and accept it | Domain Owner, or the Executive Sponsor for enabling work, after the final acceptance of the Team | The acceptance with who and when |
 
 ## 5. The execution in the Program Increment
@@ -132,17 +132,17 @@ The execution takes the approved Features and builds them, on the loops of the C
 | --- | --- | --- | --- | --- |
 | Set the intent | PI Planning | Choose the Capabilities and Features that the PI aims at, with their Dependencies | The Teams and the Domain Owners | The PI Objectives; the Program Board; the proposed Roadmap, confirmed at the quarterly Steering |
 | Select the Features | Iteration Planning | Select the Features for the month into the Iteration Backlog | The Team with the product owner | The Iteration Backlog |
-| Admit run-rate work | Weekly Review | Admit a Feature directly under an approved Standing Initiative into the current Iteration Backlog, within its Limits on Work in Progress (Solution Lifecycle Model 3.1, 5.2) | AICC Lead | The Feature, its admission decision, client, acceptance criteria, and Dependencies |
+| Admit run-rate work | Weekly Review | Admit a Feature directly under an approved Standing Initiative into the current Iteration Backlog, within its Limits on Work in Progress (Solution Lifecycle Model 3.1, 5.2) | Competence Center Lead | The Feature, its admission decision, client, acceptance criteria, and Dependencies |
 | Develop | Weekly loops | Build the minimum solution with the function | Solution Engineer with the Domain Expert | Working increments |
 | Verify | Before every deployment | Integrate the work as it goes, and test every Feature, and the MVP, by a person other than the builder outside production, with the result referenced in the Feature; a failed test returns to its builder the same day (Solution Lifecycle Model 7.1); and the check for Risk Tier 1, or the validation by the Control Function Contacts for Risk Tier 2 and 3 with its security test against attacks on AI (Solution Lifecycle Model 7.2), before the first deployment to real users or data | A person other than the builder; the Checker; the Control Function Contacts | The test result in the Feature; the check, or the Control Sign-Off |
 | Deploy | Weekly loops | A Feature is deployed to the environment of use after its test and check. The deployment of the Solution to its first users, and of each significant change, follows the final acceptance of the Team. A deployment to production follows the change management of the Bank: raise the change, enter the change ticket and the test result in the Feature, and use the access process of the Bank (Solution Lifecycle Model 8.3). The first users are trained before use (Solution Lifecycle Model 7.1, AI Policy 2.1) | Solution Engineer; the change management of the Bank approves; the Platform Owner for the platform | A deployed Feature, with its change ticket and test result |
-| Demonstrate and accept | Iteration Review and Demo | Show what works, and take the acceptance of each Feature and each Capability (Solution Lifecycle Model 7.3(a)) | Product owner (the AICC Lead while the Team has up to three people) | The acceptance, with who and when |
-| Give the final acceptance of the Team | Before the first deployment of a Solution to its first users, and of a significant change | Confirm that the Solution meets the acceptance criteria of its Solution Definition, that its tests are referenced, and that its check or validation is in place (Solution Lifecycle Model 7.3(b)) | AICC Lead | The final acceptance of the Team in the release block of the Solution Definition, with who and when |
-| Judge and accept the Solution | When the Solution works for its first users | Judge the Solution against the acceptance criteria, and accept it, return it, or reject it (Solution Lifecycle Model 7.3(c)) | Domain Owner; the Executive Sponsor for an item across Domains, enabling work, or an Experiment with no Domain, and where the AICC Lead is the Domain Owner | The business acceptance in the release block of the Solution Definition; the Outcome Report for an Engagement |
-| Release | Before use beyond the first users | Decide that the Solution goes beyond its first users, with the Acceptance Checklist signed where AICC hands the Solution to a Domain (Solution Lifecycle Model 7.1, 7.4) | Domain Owner (the Executive Sponsor where the AICC Lead is the Domain Owner); Executive Sponsor for Risk Tier 3 | The release block of the Solution Definition, and the Acceptance Checklist |
-| Control the flow | Weekly Review | Keep the boards, the Limits, and the Dependencies under control | AICC Lead | The Dashboard |
+| Demonstrate and accept | Iteration Review and Demo | Show what works, and take the acceptance of each Feature and each Capability (Solution Lifecycle Model 7.3(a)) | Product owner (the Competence Center Lead while the Team has up to three people) | The acceptance, with who and when |
+| Give the final acceptance of the Team | Before the first deployment of a Solution to its first users, and of a significant change | Confirm that the Solution meets the acceptance criteria of its Solution Definition, that its tests are referenced, and that its check or validation is in place (Solution Lifecycle Model 7.3(b)) | Competence Center Lead | The final acceptance of the Team in the release block of the Solution Definition, with who and when |
+| Judge and accept the Solution | When the Solution works for its first users | Judge the Solution against the acceptance criteria, and accept it, return it, or reject it (Solution Lifecycle Model 7.3(c)) | Domain Owner; the Executive Sponsor for an item across Domains, enabling work, or an Experiment with no Domain, and where the Competence Center Lead is the Domain Owner | The business acceptance in the release block of the Solution Definition; the Outcome Report for an Engagement |
+| Release | Before use beyond the first users | Decide that the Solution goes beyond its first users, with the Acceptance Checklist signed where the Competence Center hands the Solution to a Domain (Solution Lifecycle Model 7.1, 7.4) | Domain Owner (the Executive Sponsor where the Competence Center Lead is the Domain Owner); Executive Sponsor for Risk Tier 3 | The release block of the Solution Definition, and the Acceptance Checklist |
+| Control the flow | Weekly Review | Keep the boards, the Limits, and the Dependencies under control | Competence Center Lead | The Dashboard |
 
-The AICC Lead does not check, validate, release, or give the business acceptance of a Solution that the AICC Lead built (Operating Model 4.4(d)). The builder does not test, check, or validate, the requester who accepts is not from AICC, and the person who releases owns the results (Solution Lifecycle Model 7.5).
+The Competence Center Lead does not check, validate, release, or give the business acceptance of a Solution that the Competence Center Lead built (Operating Model 4.4(d)). The builder does not test, check, or validate, the requester who accepts is not from the Competence Center, and the person who releases owns the results (Solution Lifecycle Model 7.5).
 
 A Feature whose result is a document, training, or another non-deployed deliverable records the delivered result and the evidence against its acceptance criteria. The product owner accepts it under Solution Lifecycle Model 4.5 and 7.3(a). Solution and production-deployment gates apply when the work includes a Solution or a production deployment.
 
@@ -151,7 +151,7 @@ Figure 6 shows the order in which a Feature and a Solution are accepted, checked
 ```mermaid
 flowchart LR
   FA["Feature accepted<br/>product owner<br/>Iteration Review and Demo"] --> CV["Check or validation<br/>in place<br/>tests referenced"]
-  CV --> TF["Gate: final acceptance<br/>of the Team<br/>AICC Lead"]
+  CV --> TF["Gate: final acceptance<br/>of the Team<br/>Competence Center Lead"]
   TF --> FU["Deployed to the<br/>first users<br/>change management<br/>of the Bank"]
   FU --> BA["Gate: business acceptance<br/>the requester"]
   BA --> RL["Gate: release beyond<br/>the first users<br/>Acceptance Checklist"]
@@ -200,7 +200,7 @@ flowchart LR
   D["Solution delivered"] --> SV
   D --> PR
   D --> EX
-  subgraph SV["Service: AICC owns the whole life cycle"]
+  subgraph SV["Service: The Competence Center owns the whole life cycle"]
     direction LR
     S1["Operate"] --> S2["Evolve"] --> S3["Retire"]
     S2 -.new Capabilities and Features.-> S1
@@ -214,7 +214,7 @@ flowchart LR
   subgraph EX["Experiment: time-boxed, no consumer"]
     direction LR
     X1["Trial"] --> X2["Proposal"] --> X3["Handover to the Receiver"]
-    X3 -.AICC oversees.-> A["Adopted Solution"]
+    X3 -.the Competence Center oversees.-> A["Adopted Solution"]
     X2 -.->|"no Receiver"| X4["Closed with its lessons, or rejected"]
   end
 ```
@@ -223,8 +223,8 @@ Figure 8: the life of a Solution by type.
 
 | Type | Owner after delivery | Life | End |
 | --- | --- | --- | --- |
-| Service | AICC, with a business case that states the run cost and a sunset rule | Operate, Evolve, Retire, through the service steps (Solution Lifecycle Model 8.8) | Retired, handed over to an IT function of the Bank, or cancelled |
-| Product | The consumer owns the version; AICC supports on demand | Handover, Support, Revise, Retire for the consumer; a Product or a Package with a second consumer gives rise to a Service (Solution Lifecycle Model 8.12) | Retired for the consumer |
+| Service | Competence Center, with a business case that states the run cost and a sunset rule | Operate, Evolve, Retire, through the service steps (Solution Lifecycle Model 8.8) | Retired, handed over to an IT function of the Bank, or cancelled |
+| Product | The consumer owns the version; The Competence Center supports on demand | Handover, Support, Revise, Retire for the consumer; a Product or a Package with a second consumer gives rise to a Service (Solution Lifecycle Model 8.12) | Retired for the consumer |
 | Experiment | None yet; the Executive Sponsor accepts it where it has no Domain, and otherwise the Domain Owner (Solution Lifecycle Model 8.1) | Trial, Proposal, Handover when a Receiver accepts it | Handed off, closed with its lessons without a Receiver, a Proposal, or rejected |
 
 ### The Experiment in the Lab
@@ -242,15 +242,15 @@ An Experiment runs in the Lab under the rules of the Solution Lifecycle Model 8.
 
 ### The life of a live Solution
 
-Operation and support answer the requests of the users and the incidents. AICC reassesses the Risk Tier on a change, each year for Risk Tier 2, and each six months for Risk Tier 3 (AI Policy 3.3). The following table points to the clauses that govern the life of a live Solution, and Figure 9 shows how the steps follow each other.
+Operation and support answer the requests of the users and the incidents. The Competence Center reassesses the Risk Tier on a change, each year for Risk Tier 2, and each six months for Risk Tier 3 (AI Policy 3.3). The following table points to the clauses that govern the life of a live Solution, and Figure 9 shows how the steps follow each other.
 
 | Step | Intent | Who | Output | Where the rule is |
 | --- | --- | --- | --- | --- |
-| Operate and support | Run the Solution, triage and answer the requests by class of service, handle the incidents, take repeats into problem management, and review the four signals of the live Solution at each Iteration Review and Demo | The IT function that operates it, the Solution Engineer for a Service that AICC runs; the Solution Engineer triages and the AICC Lead decides a class in doubt; the Domain Owner reviews, and the Executive Sponsor for a Service across Domains | The ticket in Service Management; the note of the review in the Solution Definition | Solution Lifecycle Model 8.4, 8.5, 8.10 |
+| Operate and support | Run the Solution, triage and answer the requests by class of service, handle the incidents, take repeats into problem management, and review the four signals of the live Solution at each Iteration Review and Demo | The IT function that operates it, the Solution Engineer for a Service that the Competence Center runs; the Solution Engineer triages and the Competence Center Lead decides a class in doubt; the Domain Owner reviews, and the Executive Sponsor for a Service across Domains | The ticket in Service Management; the note of the review in the Solution Definition | Solution Lifecycle Model 8.4, 8.5, 8.10 |
 | Transition of a Service | Decide, on the reading of the four signals at the quarterly Steering, whether a Service is handed over to an IT function of the Bank or retired | The Domain Owner, or the Executive Sponsor for a Service across Domains; the Receiver accepts the Handover | The Decision Log entry; the Proposal; the Solution Definition | Solution Lifecycle Model 8.11 |
-| Change | Handle a change to a released Solution as a Feature, and decide whether a significant change needs a new check or validation. An emergency change follows the emergency procedure of the change management of the Bank: the AICC Lead authorizes it, and the Executive Sponsor reviews it within five working days | The Solution Engineer; the change management of the Bank approves; the AICC Lead decides on a new check and authorizes an emergency change | The Feature with its change ticket; the Decision Log entry | Solution Lifecycle Model 8.6 |
+| Change | Handle a change to a released Solution as a Feature, and decide whether a significant change needs a new check or validation. An emergency change follows the emergency procedure of the change management of the Bank: the Competence Center Lead authorizes it, and the Executive Sponsor reviews it within five working days | The Solution Engineer; the change management of the Bank approves; the Competence Center Lead decides on a new check and authorizes an emergency change | The Feature with its change ticket; the Decision Log entry | Solution Lifecycle Model 8.6 |
 | Retire | Remove the access, handle the data, and mark the AI Registry entry before the Solution is closed | The Solution Engineer; the Domain Owner or the Executive Sponsor approves | The approval and the dates in the Solution Definition | Solution Lifecycle Model 8.7 |
-| Measures | Read the flow, the quality, and the health of the operation to control and to improve, and not to rank people | The AICC Lead, with the Team | The Dashboard | Solution Lifecycle Model 10 |
+| Measures | Read the flow, the quality, and the health of the operation to control and to improve, and not to rank people | The Competence Center Lead, with the Team | The Dashboard | Solution Lifecycle Model 10 |
 
 ```mermaid
 flowchart LR
@@ -258,7 +258,7 @@ flowchart LR
   O --> RV["Review of the live Solution<br/>at the Iteration Review and Demo"]
   RV -->|"a change is needed"| C["Change, as a Feature<br/>under the change management<br/>of the Bank"]
   C --> O
-  EM["Emergency change<br/>authorized by the AICC Lead"] -.-> C
+  EM["Emergency change<br/>authorized by the Competence Center Lead"] -.-> C
   RV -->|"no longer worth running"| X["Retire"]
   X --> Z(["Closed"])
   RV -->|"a Service to be run at scale"| HO["Handover to an IT function<br/>of the Bank, on a Proposal"]
@@ -299,7 +299,7 @@ Figure 10: the service steps of a Service.
 
 ## 7. Oversight of the Adopted Solutions
 
-AICC oversees the Adopted Solutions that others deliver, in the Portfolio, with their state, and reports on what was adopted and what works. The AI adoption strategy is a series of Proposals that AICC shapes from what it learns, and the Bank decides on them. The AICC Lead reviews the Adopted Solutions at each quarterly Steering, and the Quarterly Report records the review (Solution Lifecycle Model 8.2). The owners and the Executive Sponsor decide on a Proposal of a Solution. The AICC Lead prepares the yearly Proposal of the AI adoption strategy, the Executive Sponsor presents it at the yearly Steering, and the Bank decides on it (Operating Model 6.5). This is the mission side of the lab.
+The Competence Center oversees the Adopted Solutions that others deliver, in the Portfolio, with their state, and reports on what was adopted and what works. The AI adoption strategy is a series of Proposals that the Competence Center shapes from what it learns, and the Bank decides on them. The Competence Center Lead reviews the Adopted Solutions at each quarterly Steering, and the Quarterly Report records the review (Solution Lifecycle Model 8.2). The owners and the Executive Sponsor decide on a Proposal of a Solution. The Competence Center Lead prepares the yearly Proposal of the AI adoption strategy, the Executive Sponsor presents it at the yearly Steering, and the Bank decides on it (Operating Model 6.5). This is the mission side of the lab.
 
 ## 8. Decisions along the stream
 

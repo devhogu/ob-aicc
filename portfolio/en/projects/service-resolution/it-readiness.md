@@ -69,9 +69,9 @@ The decisions below are recorded before the Solution Definition is approved, in 
 
 | # | Decision | What is recorded | Where, and who decides |
 | --- | --- | --- | --- |
-| 1 | Data class and purpose | data classes of each source; the purpose (service resolution and evaluation of the assistant); use in the Lab and with the named first users | Solution Definition and AI Registry; the Domain Owner approves the use of the data class (the Executive Sponsor, while the AICC Lead builds), after the source owners' and data protection approvals |
+| 1 | Data class and purpose | data classes of each source; the purpose (service resolution and evaluation of the assistant); use in the Lab and with the named first users | Solution Definition and AI Registry; the Domain Owner approves the use of the data class (the Executive Sponsor, while the Competence Center Lead builds), after the source owners' and data protection approvals |
 | 2 | Model route and provider check | in-Bank model and its serving; license; for an external model, the provider check and EXT-001 and EXT-002 confirmed | Control Sign-Off of information security, data protection and legal; AI Registry |
-| 3 | Journey and mode | the selected journey; phase 1 in the Lab, phase 2 with first users; the last mode in scope is employee-approved communication through an existing channel | Initiative Brief and Solution Definition; the Domain Owner with the AICC Lead |
+| 3 | Journey and mode | the selected journey; phase 1 in the Lab, phase 2 with first users; the last mode in scope is employee-approved communication through an existing channel | Initiative Brief and Solution Definition; the Domain Owner with the Competence Center Lead |
 | 4 | Integration per source | interface, adapter, extract or unavailable; owner, freshness and supported use | Solution Definition section 3; a Dependency per source |
 | 5 | Identity and linkage | identifiers and matching rules; quarantine of uncertain matches | Solution Definition section 3 |
 | 6 | Data and knowledge boundary | allowed fields and sources, exclusions, retention and access; knowledge sources with owner and review date | Solution Definition section 3; AI Registry |
@@ -97,7 +97,7 @@ Each row is a Dependency on the Program Board, with its owner, the Iteration in 
 | Service knowledge | approved procedure, product rules, routing and escalation conditions, and the action list | the journey's process function and the knowledge owners |
 | Employee access | single sign-on, role entitlement, audit, and the service desktop or a separate screen | identity and access management; owner of the service desktop |
 | Customer communication | the existing channel and its communication record | channel owner and Customer Service |
-| The Lab | environment record, read-only extracts, logging, the in-Bank model | AICC Lead; Platform Owner |
+| The Lab | environment record, read-only extracts, logging, the in-Bank model | Competence Center Lead; Platform Owner |
 | Model hosting and provider check | an in-Bank model route checked as a provider; approval for the data class | Platform Owner; information security, data protection and legal |
 | Outcome reporting | repeat contact, resolution, handling effort, handoff, complaint and customer feedback measures | owner of the management-information source |
 
@@ -107,12 +107,12 @@ The evidence on architecture, data, controls, operability and quality is read by
 
 | Before | Evidence | Decided by |
 | --- | --- | --- |
-| Approval of the Solution Definition (Experiment) | selected journey profile completed; decisions 1 to 12 recorded; capability dispositions, temporary components and owners listed; journey logic kept apart from shared capabilities; Risk Tier assigned; AI Registry entry made; compliance confirms the applicable law | Domain Owner (the Executive Sponsor, while the AICC Lead builds) |
+| Approval of the Solution Definition (Experiment) | selected journey profile completed; decisions 1 to 12 recorded; capability dispositions, temporary components and owners listed; journey logic kept apart from shared capabilities; Risk Tier assigned; AI Registry entry made; compliance confirms the applicable law | Domain Owner (the Executive Sponsor, while the Competence Center Lead builds) |
 | Lab data (phase 1) | use of the data class approved; environment record (LAB-001, LAB-002); each extract with its owner and class (LAB-003); personal data minimized and assessed (LAB-004); the in-Bank model checked as a provider, and any cloud environment too (LAB-005); licenses recorded (ARC-006) | Domain Owner or Executive Sponsor; data protection, information security and legal Contacts |
-| Reading the result of phase 1 | Evaluation set with grounding, drift and bias checks (LAB-006); tests run by a person other than the builder; context-only and GenAI compared on the locked cases; the Outcome Report (LAB-007) | AICC Lead prepares; Domain Owner reviews |
-| Approval of the Solution Definition (Service) | run cost and sunset rule in the business case; Receiver to be asked; first users named; Risk Tier, AI Registry entry and applicable law confirmed for the Service | Domain Owner (the Executive Sponsor, while the AICC Lead builds) |
+| Reading the result of phase 1 | Evaluation set with grounding, drift and bias checks (LAB-006); tests run by a person other than the builder; context-only and GenAI compared on the locked cases; the Outcome Report (LAB-007) | Competence Center Lead prepares; Domain Owner reviews |
+| Approval of the Solution Definition (Service) | run cost and sunset rule in the business case; Receiver to be asked; first users named; Risk Tier, AI Registry entry and applicable law confirmed for the Service | Domain Owner (the Executive Sponsor, while the Competence Center Lead builds) |
 | Validation | sources, linkage and status meanings confirmed; allowed fields, exclusions and freshness tested; prohibited data, decisions and functions blocked; security test (prompt injection, cross-customer access, exfiltration, open components); bias and error tests; logs and evidence kept by the Platform Owner | Control Function Contacts of model risk, information security, data protection, compliance and legal, each by Control Sign-Off |
-| Team final acceptance | acceptance criteria met; no critical error, as the profile defines it, found in the Evaluation set (any found blocks first use until corrected and retested); workflow, correction, escalation and outcome capture work end to end; operating readiness below | AICC Lead |
+| Team final acceptance | acceptance criteria met; no critical error, as the profile defines it, found in the Evaluation set (any found blocks first use until corrected and retested); workflow, correction, escalation and outcome capture work end to end; operating readiness below | Competence Center Lead |
 | First deployment to production | Dependencies Met; change ticket and test result; logging and monitoring on (PLT-002), with the alert levels and who watches them (ARC-008); suspension tested (PLT-005); manual route tested; incident path in the Bank's incident management; the Solution Engineer named as operating function | the Bank's change management |
 | First users see output | training complete; disclosure of AI-drafted explanations in place, in the form compliance decided | Domain Owner |
 

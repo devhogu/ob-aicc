@@ -1,6 +1,6 @@
 # Program Backlog
 
-This section shows the projects that AICC proposes or runs, each with its documents. A project is an Initiative of the AICC portfolio: it enters as Proposed, is scoped and approved through the business case, and is delivered and accepted under the Solution Lifecycle Model. The status of each project is its state in that flow.
+This section shows the projects that the Competence Center proposes or runs, each with its documents. A project is an Initiative of the Competence Center portfolio: it enters as Proposed, is scoped and approved through the business case, and is delivered and accepted under the Solution Lifecycle Model. The status of each project is its state in that flow.
 
 ## Project register
 

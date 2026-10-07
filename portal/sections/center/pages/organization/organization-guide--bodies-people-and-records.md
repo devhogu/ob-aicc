@@ -9,7 +9,7 @@ source: charter/en/guides/organization-guide.md
 source_sections: 5, 6, 7, 8, 9
 document: organization-guide
 part: 3 of 3
-words: 1802
+words: 1853
 series: set-operating-model
 series_order: 3
 production: generated
@@ -26,9 +26,9 @@ Page type: guide. Address: /organization/organization-guide/bodies-people-and-re
 
 ## Sections of the source
 
-- 5. The governing bodies (424 words)
-- 6. People: appointments, changes, and leavers (963 words)
-- 7. How the organization grows (210 words)
+- 5. The governing bodies (429 words)
+- 6. People: appointments, changes, and leavers (1000 words)
+- 7. How the organization grows (219 words)
 - 8. Records and evidence (167 words)
 - 9. Rule source (38 words)
 
@@ -39,7 +39,7 @@ Elements: Header: title, purpose; Diagrams with text versions; Tables; Rule sour
 Headings of the source:
 
 - 1. Purpose and when it applies
-- 2. The place of AICC in the Bank
+- 2. The place of the Competence Center in the Bank
 - 3. The Roles and their profiles
 - 4. Who is responsible for what
 - 5. The governing bodies

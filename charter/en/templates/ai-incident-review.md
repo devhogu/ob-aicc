@@ -2,14 +2,14 @@
 id: AICC-TPL-10-EN
 title: AI Incident Review
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # AI Incident Review
 
-**Template.** Written by the AICC Lead after the post-incident review of an AI Incident in the incident management of the Bank (AI Policy 5.8). It states what happened and what was decided for AI, and the details stay in the ticket. It carries no figures of the Bank, no data, and no code.
+**Template.** Written by the Competence Center Lead after the post-incident review of an AI Incident in the incident management of the Bank (AI Policy 5.8). It states what happened and what was decided for AI, and the details stay in the ticket. It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |

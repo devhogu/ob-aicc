@@ -9,7 +9,7 @@ source: charter/en/guides/cadence-guide.md
 source_sections: 1, 2, 3, 4, 5, 6
 document: cadence-guide
 part: 5 of 5
-words: 1551
+words: 1560
 series: set-cadence
 production: generated
 status: scaffold
@@ -25,10 +25,10 @@ Page type: guide. Address: /delivery/cadence-guide/
 
 ## Sections of the source
 
-- 1. Purpose and when it applies (111 words)
-- 2. The beats and their records (295 words)
+- 1. Purpose and when it applies (115 words)
+- 2. The beats and their records (296 words)
 - 3. The loops on the beats (213 words)
-- 4. The conduct of the month, the quarter, and the year (739 words)
+- 4. The conduct of the month, the quarter, and the year (743 words)
 - 5. Exceptions when the calendar is not clean (173 words)
 - 6. Rule source (20 words)
 

@@ -16,7 +16,7 @@ The most-cited source on the adoption and the value of AI in business: a yearly 
 
 ## 3. Why it matters to the Bank
 
-3.1. The surveys are the benchmark a Board or an investor is likely to quote; the Bank should know them. The function-level estimates of value are a useful first cut when a function asks where AI could matter, and the banking pieces describe what peer banks are doing. The organizational material on scaling AI, platforms, talent, operating model, maps onto the questions AICC answers for the Bank.
+3.1. The surveys are the benchmark a Board or an investor is likely to quote; the Bank should know them. The function-level estimates of value are a useful first cut when a function asks where AI could matter, and the banking pieces describe what peer banks are doing. The organizational material on scaling AI, platforms, talent, operating model, maps onto the questions the Competence Center answers for the Bank.
 
 ## 4. How to take it, and for what
 

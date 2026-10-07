@@ -9,7 +9,7 @@ source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 5
 document: solution-lifecycle-model
 part: 4 of 7
-words: 1239
+words: 1247
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/states-and-stag
 
 ## Sections of the source
 
-- 5. States and Stages (1239 words)
+- 5. States and Stages (1247 words)
 
 ## Outline
 

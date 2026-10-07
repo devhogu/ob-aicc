@@ -1,6 +1,6 @@
 ```yaml
 source: portal/content/en/reference/resources/world-economic-forum.md
-source_sha256: fd88529e5340d0b20ed55f3b3fd88524cd29536d816439b13c3c349e6471ee2f
+source_sha256: 01603dd2a71f7226c499ae6af32d231aa7bfe7825ad50a9dcff9c46b3af61fff
 translation_status: reviewed
 ```
 
@@ -36,6 +36,6 @@ translation_status: reviewed
 
 - [Исследования и аналитика](page:reference/research-and-insight)
 - [Что означает ответственное применение AI — курс «Ответственное применение AI»](page:responsible-ai/what-responsible-ai-means)
-- [Стратегия в разделе «О центре AICC»](page:about/strategy)
+- [Стратегия в разделе «О Центре компетенций»](page:about/strategy)
 
 Эта страница носит ознакомительный характер. Включение ресурса в перечень не означает его одобрения. Действуют правила Банка об использовании его систем и информации; никакие материалы Банка во внешние ресурсы не вводятся.

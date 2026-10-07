@@ -1,6 +1,6 @@
 # Calendar
 
-The year calendar of AICC: the Program Increments, the Iterations, the weeks, and the days that are blocked or gray. The general flow of the events, without dates, is in the Cadence, in the charter workflows. This calendar is a schedule, and nobody approves it. The AICC Lead keeps it current.
+The year calendar of the Competence Center: the Program Increments, the Iterations, the weeks, and the days that are blocked or gray. The general flow of the events, without dates, is in the Cadence, in the charter workflows. This calendar is a schedule, and nobody approves it. The Competence Center Lead keeps it current.
 
 ## 1. Rules
 
@@ -9,7 +9,7 @@ The year calendar of AICC: the Program Increments, the Iterations, the weeks, an
 3. A week is named with its year, Program Increment, Iteration, and week, for example 2026-PIQ4 I10W1. The Iteration number tells the month, and the week number the week of that month.
 4. The IP week is the last week of the third Iteration of a Program Increment. If more than two of its working days are blocked or gray, it is the week before. The last week of a five-week I12 is the year-end week and has no events, so the IP week of PIQ4 is the week before it.
 5. A blocked day is an official non-working day or an expected one. A gray day is a working day on which people are likely to be out in some way, such as the eve of a holiday or a bridge day. A short day is a working day that ends early. Blocked and gray days are listed in section 4. The official calendar of the Kyrgyz Republic prevails, and the list is revised when it changes. A day marked Expected is an expected observance that the official calendar has not confirmed.
-6. Nothing that needs people outside AICC is planned for a blocked or gray day. An event that falls on one moves to the working day before it, and never after.
+6. Nothing that needs people outside the Competence Center is planned for a blocked or gray day. An event that falls on one moves to the working day before it, and never after.
 
 ## 2. Program Increments and Iterations
 
@@ -108,7 +108,7 @@ The year calendar of AICC: the Program Increments, the Iterations, the weeks, an
 
 ## 4. Blocked, gray, and short days
 
-4.1. The following table lists the days that are not ordinary working days, from 2026-10-01 to the end of 2027. The kind is Official, Expected, Gray, or Short. The summer leave season, from 2027-07-12 to 2027-08-27, is a period of reduced availability of people outside AICC, and its days are not listed one by one.
+4.1. The following table lists the days that are not ordinary working days, from 2026-10-01 to the end of 2027. The kind is Official, Expected, Gray, or Short. The summer leave season, from 2027-07-12 to 2027-08-27, is a period of reduced availability of people outside the Competence Center, and its days are not listed one by one.
 
 | Date | Day | Kind | What | Basis |
 | --- | --- | --- | --- | --- |
@@ -161,7 +161,7 @@ The year calendar of AICC: the Program Increments, the Iterations, the weeks, an
 
 ## 5. Events of the IP weeks
 
-5.1. The following table lists the dated order of the events of each IP week. It takes the general flow of the Cadence (Monday the PI Review and Demo, Tuesday Inspect and Adapt, Wednesday Innovation, Thursday PI Planning, Friday the quarterly Steering and then the Weekly Review that closes the Program Increment) and applies rule 6: an event that falls on a blocked or gray day moves to the working day before it. Where moved events meet on one day, the larger keeps the day and the smaller moves to the working day before it, and the Steering is the larger event (Solution Lifecycle Model 6.5). In light mode Inspect and Adapt is held in the PI Review and Demo, and Innovation is optional and is dropped first when days are lost (Solution Lifecycle Model 6.5, 6.6). The dates are a schedule that the AICC Lead keeps current.
+5.1. The following table lists the dated order of the events of each IP week. It takes the general flow of the Cadence (Monday the PI Review and Demo, Tuesday Inspect and Adapt, Wednesday Innovation, Thursday PI Planning, Friday the quarterly Steering and then the Weekly Review that closes the Program Increment) and applies rule 6: an event that falls on a blocked or gray day moves to the working day before it. Where moved events meet on one day, the larger keeps the day and the smaller moves to the working day before it, and the Steering is the larger event (Solution Lifecycle Model 6.5). In light mode Inspect and Adapt is held in the PI Review and Demo, and Innovation is optional and is dropped first when days are lost (Solution Lifecycle Model 6.5, 6.6). The dates are a schedule that the Competence Center Lead keeps current.
 
 | IP week | Monday | Tuesday | Wednesday | Thursday | Friday |
 | --- | --- | --- | --- | --- | --- |

@@ -1,6 +1,6 @@
 # Solution Definition: SOL-001 FP&A Board reporting pipeline
 
-State: Proposed. The Solution Engineer completes the Definition in the MVP of INI-004, once the business case is approved and cleared (Portfolio Management Model 7.1). The AICC Lead builds the Solution, so the Executive Sponsor also approves the Solution Definition (Operating Model 4.4).
+State: Proposed. The Solution Engineer completes the Definition in the MVP of INI-004, once the business case is approved and cleared (Portfolio Management Model 7.1). The Competence Center Lead builds the Solution, so the Executive Sponsor also approves the Solution Definition (Operating Model 4.4).
 
 | Field | Entry |
 | --- | --- |
@@ -13,7 +13,7 @@ State: Proposed. The Solution Engineer completes the Definition in the MVP of IN
 | Time-box | Not applicable: the type is not an Experiment |
 | Receiver | |
 | Domain, Domain Owner | FP&A, the head of the FP&A function |
-| Domain Expert, Solution Engineer | -; the AICC Lead |
+| Domain Expert, Solution Engineer | -; the Competence Center Lead |
 | Date of last change | 2026-10-02 |
 
 ## 1. The need and the outcome
@@ -30,7 +30,7 @@ Financial data, not personal data, from sources with an owner and a review date.
 
 ## 4. Risk Tier
 
-Risk Tier 2 is expected. The AICC Lead builds the Solution, so the Executive Sponsor assigns the Risk Tier when the Solution is defined and approves its use for a data class (Operating Model 4.4), and the AICC Lead tells the Domain Owner. A Control Function Contact may raise it.
+Risk Tier 2 is expected. The Competence Center Lead builds the Solution, so the Executive Sponsor assigns the Risk Tier when the Solution is defined and approves its use for a data class (Operating Model 4.4), and the Competence Center Lead tells the Domain Owner. A Control Function Contact may raise it.
 
 ## 5. Acceptance criteria
 

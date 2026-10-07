@@ -1,6 +1,6 @@
 # Training and knowledge sharing
 
-AI reaches the Bank through its people. AICC trains employees before they use AI, coaches them in the workplace, builds prompt and skill libraries for each line of work, runs communities of practice, and publishes what it learns so the next function starts further ahead.
+AI reaches the Bank through its people. The Competence Center trains employees before they use AI, coaches them in the workplace, builds prompt and skill libraries for each line of work, runs communities of practice, and publishes what it learns so the next function starts further ahead.
 
 ## 1. What it is
 
@@ -10,7 +10,7 @@ AI reaches the Bank through its people. AICC trains employees before they use AI
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - Training by role before people use AI
 - Coaching at the workplace and clinics in the function
@@ -21,7 +21,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 3. What the function receives
 
-3.1. A training path for each role, delivered with the function; workplace clinics; a skill library the function owns and extends; a community of practice; and AICC's playbooks and publications.
+3.1. A training path for each role, delivered with the function; workplace clinics; a skill library the function owns and extends; a community of practice; and the Competence Center's playbooks and publications.
 
 ## 4. How it runs
 
@@ -41,7 +41,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The AICC Lead sets the training; the heads of function schedule it for their people.
+8.1. The Competence Center Lead sets the training; the heads of function schedule it for their people.
 
 ## 9. Rule source
 

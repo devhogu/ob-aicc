@@ -41,7 +41,7 @@ A Portfolio that cannot say whether its Initiatives worked, or whether its work 
 | Loop | What it reads | From | Decides on it |
 | --- | --- | --- | --- |
 | Backlog care, weekly | Aging of the funnel, business cases in progress, blockers, cycle time of the work | Dashboard | Triage, re-rank, raise items at a gate |
-| Portfolio sync, monthly | Active against the limit, time in each step, returns at the gates, a sample of the Decisions of the AICC Lead, time to decision | Steering Summary, Portfolio Backlog | Decide at the gates, pull into work, adjust the limit |
+| Portfolio sync, monthly | Active against the limit, time in each step, returns at the gates, a sample of the Decisions of the Competence Center Lead, time to decision | Steering Summary, Portfolio Backlog | Decide at the gates, pull into work, adjust the limit |
 | Portfolio review, quarterly | For each Active Initiative, the leading indicators against the plan and the benefit confirmed; the quarterly risk check; throughput and predictability; the benefit against each Envelope | Quarterly Report, Registry Snapshot | Continue, pivot, defer, or reject; the mix; the Quarterly Report, which the Executive Sponsor may bring to the Board Committee or the Board |
 | Strategic, yearly | The benefit against each Envelope over the year; the results of each Strategic Priority; the Measures of the Maturity Levels | Quarterly Reports of the year | The Priorities, the Envelopes, the Guardrails for the next year |
 
@@ -53,4 +53,4 @@ A Portfolio that cannot say whether its Initiatives worked, or whether its work 
 
 ## 5. Rule source
 
-Portfolio Management Model 6.1, 6.2, 6.7, 6.8, 7.2, and 9; Solution Lifecycle Model 10; AICC Charter 7.1; Statement of Intent 11.3 and 12; Business Model 6.
+Portfolio Management Model 6.1, 6.2, 6.7, 6.8, 7.2, and 9; Solution Lifecycle Model 10; AI Competence Center Charter 7.1; Statement of Intent 11.3 and 12; Business Model 6.

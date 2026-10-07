@@ -63,7 +63,7 @@
 
 4.3. **It is not a one-time approval.** A use is monitored for its life, because the world and the model both change.
 
-4.4. **It is not the job of a single function.** The owner of the use is accountable; the Control Functions validate and may stop; the technology functions secure; audit assures; AICC sets the practice within the standards of the Bank and keeps the AI Registry. Responsibility is distributed and named.
+4.4. **It is not the job of a single function.** The owner of the use is accountable; the Control Functions validate and may stop; the technology functions secure; audit assures; The Competence Center sets the practice within the standards of the Bank and keeps the AI Registry. Responsibility is distributed and named.
 
 ## 5. How this becomes the Bank's rules
 

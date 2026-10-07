@@ -20,7 +20,7 @@ Two knowledge bases a bank that uses AI should know. ATLAS catalogs the techniqu
 
 ## 4. How to take it, and for what
 
-4.1. For threat modeling before a build and for the security test, use ATLAS with the OWASP list: which techniques apply to this Solution, which mitigations are in place. For the Lab's guardrails and for the AI Incident Review, read the database's incidents in finance and in customer service, and ask whether the same failure could happen here. Information security and the Checker use ATLAS; the AICC Lead uses the database in the quarterly risk check.
+4.1. For threat modeling before a build and for the security test, use ATLAS with the OWASP list: which techniques apply to this Solution, which mitigations are in place. For the Lab's guardrails and for the AI Incident Review, read the database's incidents in finance and in customer service, and ask whether the same failure could happen here. Information security and the Checker use ATLAS; the Competence Center Lead uses the database in the quarterly risk check.
 
 ## 5. Cautions
 

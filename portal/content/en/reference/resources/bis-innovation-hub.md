@@ -16,11 +16,11 @@ The institution whose research central banks and supervisors read, and whose Inn
 
 ## 3. Why it matters to the Bank
 
-3.1. What the BIS writes becomes, in time, what a supervisor asks. The Innovation Hub's projects show what regulated institutions can do with AI under supervision, which is the question AICC answers for the Bank. Its work on the risks of AI in finance, concentration, model risk, data, operational resilience, is the source behind the themes of the financial standard-setters page.
+3.1. What the BIS writes becomes, in time, what a supervisor asks. The Innovation Hub's projects show what regulated institutions can do with AI under supervision, which is the question the Competence Center answers for the Bank. Its work on the risks of AI in finance, concentration, model risk, data, operational resilience, is the source behind the themes of the financial standard-setters page.
 
 ## 4. How to take it, and for what
 
-4.1. For the supervisory view, read the bulletins and the annual report chapters first; they are short and written for decision-makers. For worked examples, read the Innovation Hub project reports in the areas the Bank works in: data and reporting, supervision technology, payments. For the risk themes, read the Basel Committee's papers on AI and on operational resilience. The AICC Lead reads the new publications each quarter for the watch; a Control Function Contact reads them for the themes of the risk check.
+4.1. For the supervisory view, read the bulletins and the annual report chapters first; they are short and written for decision-makers. For worked examples, read the Innovation Hub project reports in the areas the Bank works in: data and reporting, supervision technology, payments. For the risk themes, read the Basel Committee's papers on AI and on operational resilience. The Competence Center Lead reads the new publications each quarter for the watch; a Control Function Contact reads them for the themes of the risk check.
 
 ## 5. Cautions
 

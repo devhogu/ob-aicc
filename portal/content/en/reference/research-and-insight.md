@@ -1,6 +1,6 @@
 # Research and insight
 
-These sources shape how banks think about AI: international financial institutions and standard-setters, policy observatories, academic centers, consulting houses, and the fintech press. This page lists the ones worth a bank's attention, explains what each publishes and how to read it, and gives the most influential sources their own pages. This first edition is kept by the AICC Lead; access is free unless marked.
+These sources shape how banks think about AI: international financial institutions and standard-setters, policy observatories, academic centers, consulting houses, and the fintech press. This page lists the ones worth a bank's attention, explains what each publishes and how to read it, and gives the most influential sources their own pages. This first edition is kept by the Competence Center Lead; access is free unless marked.
 
 ## 1. How to read this shelf
 

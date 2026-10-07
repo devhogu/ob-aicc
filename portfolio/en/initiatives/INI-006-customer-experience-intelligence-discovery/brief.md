@@ -36,7 +36,7 @@ The baseline and the target of each indicator are figures of the Bank. They are 
 
 The steps below are the plan of the MVP. They start when the business case is approved and cleared and the Initiative is taken from the Portfolio Backlog into work (Portfolio Management Model 5).
 
-AICC does the following.
+The Competence Center does the following.
 
 1. With the front office, retail functions, and commercial sales, list where customer experience information arises: support requests, issues, challenges, and others.
 2. Establish for each source its owner, format, volume, data class, and how it can be brought together.
@@ -51,7 +51,7 @@ Minimum viable product: The map of the sources and the approach tested on one sm
 
 ## 4. Cost and value
 
-Cost: the time of the AICC Lead. No other cost is stated.
+Cost: the time of the Competence Center Lead. No other cost is stated.
 
 Investment Envelope: None; no Investment Envelope is set (Priorities Record).
 
@@ -75,7 +75,7 @@ The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (
 | --- | --- | --- | --- |
 | Approval of the business case | | | |
 | Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
-| Service Agreement issued | AICC Lead | | |
+| Service Agreement issued | Competence Center Lead | | |
 | Decision after the MVP (Portfolio Management Model 7.2) | | | |
 | Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | The head of each function, for the part of its function; the Executive Sponsor for the whole | | |
 

@@ -1,6 +1,6 @@
 # Registry
 
-The Registry holds the governance and the evidence of AICC: the living governance records, the decisions, and the closed and dated evidence records. It holds no figures of the Bank, no data, and no code. The Registry names the people who hold the Roles, in the Appointments Record. A comment in brackets marks an open place and states what is expected there. The Operating Model 7 states the rules: the working state of the portfolio and the program is kept in the Portfolio (`portfolio/`), Jira and Confluence run the daily work, and the evidence records are always kept here as closed and dated extracts. Jira, Confluence, and Service Management are not stores of evidence. The AICC Lead is accountable for all the Records.
+The Registry holds the governance and the evidence of the Competence Center: the living governance records, the decisions, and the closed and dated evidence records. It holds no figures of the Bank, no data, and no code. The Registry names the people who hold the Roles, in the Appointments Record. A comment in brackets marks an open place and states what is expected there. The Operating Model 7 states the rules: the working state of the portfolio and the program is kept in the Portfolio (`portfolio/`), Jira and Confluence run the daily work, and the evidence records are always kept here as closed and dated extracts. Jira, Confluence, and Service Management are not stores of evidence. The Competence Center Lead is accountable for all the Records.
 
 ## Working state
 
@@ -15,7 +15,7 @@ Current by nature, and always kept here.
 | Priorities | [priorities.md](priorities.md) | Strategic Priorities, and references to the Investment Envelopes, Guardrails, and Measures |
 | Standards | [standards.md](standards.md) | Architecture standards and Platform requirements |
 | Risks and Issues | [risks-and-issues.md](risks-and-issues.md) | Risks, issues, AI Incidents, Exceptions, Findings |
-| AI Registry | [ai-registry.md](ai-registry.md) | Each Solution, model, and AI agent; a Record of AICC kept by the AICC Lead, which the AI Platform feeds when it can |
+| AI Registry | [ai-registry.md](ai-registry.md) | Each Solution, model, and AI agent; a Record of the Competence Center kept by the Competence Center Lead, which the AI Platform feeds when it can |
 | Control Matrix | [control-matrix.md](control-matrix.md) | Each control of the Operating Model 8 with its latest evidence and its status, and the populations for sampling; the objective, type, and test of each control are in the Unit governance guide |
 | Appointments | [appointments.md](appointments.md) | The Appointments Record: the map of the Roles to the Holders, the appointment log, the declarations, the access, and the delegations of the Executive Sponsor |
 

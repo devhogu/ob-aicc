@@ -16,11 +16,11 @@ The most practical free entry into generative AI for people who will build or ev
 
 ## 3. Why it matters to the Bank
 
-3.1. The short courses teach exactly the techniques AICC uses in its Solutions, grounding, evaluation, bounded AI agents, in a form a Domain Expert or a Solution Engineer can take in an afternoon. The Batch is the one newsletter a non-specialist can follow and stay current.
+3.1. The short courses teach exactly the techniques the Competence Center uses in its Solutions, grounding, evaluation, bounded AI agents, in a form a Domain Expert or a Solution Engineer can take in an afternoon. The Batch is the one newsletter a non-specialist can follow and stay current.
 
 ## 4. How to take it, and for what
 
-4.1. For a Solution Engineer: the courses on building systems, retrieval, evaluation, and AI agents, before building the first knowledge service or automation. For a Domain Expert or a function's analyst: the prompting course and the one on evaluation, to take part in the evaluation set. For everyone: The Batch, weekly. The AICC Lead names the courses in the training path of each role.
+4.1. For a Solution Engineer: the courses on building systems, retrieval, evaluation, and AI agents, before building the first knowledge service or automation. For a Domain Expert or a function's analyst: the prompting course and the one on evaluation, to take part in the evaluation set. For everyone: The Batch, weekly. The Competence Center Lead names the courses in the training path of each role.
 
 ## 5. Cautions
 

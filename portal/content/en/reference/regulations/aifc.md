@@ -25,7 +25,7 @@ A financial center in Kazakhstan with its own jurisdiction, courts, and regulato
 
 ## 5. How the charter relates to it
 
-5.1. The Experiment workflow and the Lab of AICC follow the idea of a bounded trial that a regulatory sandbox embodies.
+5.1. The Experiment workflow and the Lab of the Competence Center follow the idea of a bounded trial that a regulatory sandbox embodies.
 
 ## 6. Related pages
 

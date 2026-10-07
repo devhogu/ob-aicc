@@ -25,8 +25,8 @@ PURPOSE = {
                'ru': 'Устав, операционные модели, база знаний и шаблоны Центра компетенций по AI.'},
     'discovery': {'en': 'Scenarios in which AI can help the Bank, by area and capability.',
                   'ru': 'Сценарии применения AI в Банке по направлениям и областям.'},
-    'portfolio': {'en': 'The Initiatives of AICC on the Portfolio Kanban, from the Funnel to Done.',
-                  'ru': 'Инициативы AICC на канбане портфеля — от воронки до завершения.'},
+    'portfolio': {'en': 'The Initiatives of the Competence Center on the Portfolio Kanban, from the Funnel to Done.',
+                  'ru': 'Инициативы Центра компетенций на канбане портфеля — от воронки до завершения.'},
     'program': {'en': 'Delivery: the Program Kanban and the documents of each project.',
                 'ru': 'Реализация: канбан программы и документы каждого проекта.'},
     'lab': {'en': 'The on-premises AI Lab: how an Experiment runs and how it is controlled.',
@@ -40,7 +40,7 @@ FACTS = {
     'program': {'en': ('project', 'projects'), 'ru': 'Проектов'},
     'lab': {'en': ('workflow task', 'workflow tasks'), 'ru': 'Задач процесса'},
 }
-TITLE = {'en': 'Sections of AICC', 'ru': 'Разделы AICC'}
+TITLE = {'en': 'Sections of the Competence Center', 'ru': 'Разделы Центра компетенций'}
 
 
 def facts(lang):

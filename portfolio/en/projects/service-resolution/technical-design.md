@@ -6,7 +6,7 @@ section: "Technical"
 
 ## Technical design {#technical-design-page}
 
-This page describes what the pilot builds, so that IT can estimate it and the Control Function Contacts can test it. It explains section 3 (architecture and data) of the Solution Definition; the full design is kept in the architecture repository of AICC, and product and framework choices go to the Decision Log. It names no systems, figures or data of the Bank. What the pilot asks of IT is on the [IT readiness checklist](#it-readiness); what differs by journey is in the [journey technical profiles](#journey-profiles). The design is journey-neutral: Payment Issue Resolution is the technical recommendation, subject to the journey selected at the business case.
+This page describes what the pilot builds, so that IT can estimate it and the Control Function Contacts can test it. It explains section 3 (architecture and data) of the Solution Definition; the full design is kept in the architecture repository of the Competence Center, and product and framework choices go to the Decision Log. It names no systems, figures or data of the Bank. What the pilot asks of IT is on the [IT readiness checklist](#it-readiness); what differs by journey is in the [journey technical profiles](#journey-profiles). The design is journey-neutral: Payment Issue Resolution is the technical recommendation, subject to the journey selected at the business case.
 
 ### Summary for approvers {#technical-design-summary}
 
@@ -17,10 +17,10 @@ This page describes what the pilot builds, so that IT can estimate it and the Co
 | What it may not do | Hold tools or write anything; establish identity, status, eligibility or deadlines; move funds, change a case state, take a regulated decision or send anything to a customer. Every write is the employee's action in the workspace. |
 | Expected Risk Tier | 2: customer personal data; the output informs the employee's decision and reaches the customer only after review. A model holding write tools would make it Tier 3. |
 | Where the model runs | In the Bank. An external model only after the provider check and approval for the data class; introducing one later is a significant change (see [Deployment and model route](#technical-design-model-route)). |
-| Phases | 1: an Experiment in the Lab on read-only extracts, ending in an Outcome Report. 2: the first Solution, a Service run by AICC with a sunset rule, deployed to its first users (one service team) after validation, Team final acceptance and the Bank's change management. |
-| Who builds, tests, approves | The AICC Lead builds as Solution Engineer; a person other than the builder tests and checks (Operating Model 4.4); the Executive Sponsor approves the Solution Definition and the use of the data class. |
+| Phases | 1: an Experiment in the Lab on read-only extracts, ending in an Outcome Report. 2: the first Solution, a Service run by the Competence Center with a sunset rule, deployed to its first users (one service team) after validation, Team final acceptance and the Bank's change management. |
+| Who builds, tests, approves | The Competence Center Lead builds as Solution Engineer; a person other than the builder tests and checks (Operating Model 4.4); the Executive Sponsor approves the Solution Definition and the use of the data class. |
 | Asked of IT | Read access to the journey's sources, an in-Bank model route, environments, logging, support and change: see the [IT readiness checklist](#it-readiness). |
-| Effort, time-box, cost | [AICC Lead's estimate: effort by Role, Iterations per phase]; [AICC Lead's estimate: run cost and model cost per case, with source]. The cost limits per case go to the Conditions of use. |
+| Effort, time-box, cost | [Competence Center Lead's estimate: effort by Role, Iterations per phase]; [Competence Center Lead's estimate: run cost and model cost per case, with source]. The cost limits per case go to the Conditions of use. |
 
 ### Where generative AI adds value {#technical-design-genai-value}
 
@@ -94,7 +94,7 @@ Operating the Service in phase 2:
 - one trace per case from request to outcome; alert levels for performance, drift, the human override and correction rate, incidents and cost, each with who watches it (ARC-008);
 - fallback to the context-only view or the manual route is always allowed; a second model route only if validated beforehand and named in the Solution Definition; no automatic failover;
 - the first users are named in the Solution Definition; widening them is a Domain Owner decision, never automatic;
-- rollback under the Bank's change management; an AI Incident goes through the Bank's incident management, with the AICC Lead told; a tested suspension control that keeps the record of use (PLT-005, ARC-002).
+- rollback under the Bank's change management; an AI Incident goes through the Bank's incident management, with the Competence Center Lead told; a tested suspension control that keeps the record of use (PLT-005, ARC-002).
 
 ### Engineering and test approach {#technical-design-engineering}
 
@@ -112,7 +112,7 @@ Code, infrastructure, prompts, schemas, retrieval settings, knowledge versions a
 | Resilience | source failure, degraded mode, recovery, latency and suspension work |
 | Expert review | Domain Experts confirm representative states and exceptions, as evidence for the Evaluation set |
 
-A failed mandatory test stops the Feature at Verify. Deployment follows the Bank's change management, with the change ticket and test result; nothing is promoted automatically. A changed model, prompt, corpus, mapping or workflow runs its regression set, and the AICC Lead decides whether it is a significant change needing a new validation.
+A failed mandatory test stops the Feature at Verify. Deployment follows the Bank's change management, with the change ticket and test result; nothing is promoted automatically. A changed model, prompt, corpus, mapping or workflow runs its regression set, and the Competence Center Lead decides whether it is a significant change needing a new validation.
 
 ### Data and evaluation assets {#technical-design-evaluation}
 

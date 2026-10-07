@@ -2,14 +2,14 @@
 id: AICC-TPL-13-EN
 title: Acceptance Checklist
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Acceptance Checklist
 
-**Template.** One checklist for each Solution when AICC hands it to a Domain as ready for use at scale, before its release beyond the first users: the AICC Lead completes it, each party answers and signs its items, the Control Functions of each remit concerned sign their own, an item that is Not met stops the release, and it adds no approval of its own (Solution Lifecycle Model 7.4; AI Policy 3.3). Where the AICC Lead is the Domain Owner, or the item spans Domains, the Executive Sponsor signs the items of the Domain Owner (Operating Model 4.4(d), 4.6).
+**Template.** One checklist for each Solution when the Competence Center hands it to a Domain as ready for use at scale, before its release beyond the first users: the Competence Center Lead completes it, each party answers and signs its items, the Control Functions of each remit concerned sign their own, an item that is Not met stops the release, and it adds no approval of its own (Solution Lifecycle Model 7.4; AI Policy 3.3). Where the Competence Center Lead is the Domain Owner, or the item spans Domains, the Executive Sponsor signs the items of the Domain Owner (Operating Model 4.4(d), 4.6).
 
 | Field | Entry |
 | --- | --- |
@@ -17,8 +17,8 @@ revised: 2026-10-03
 | Solution | SOL-[nnn] |
 | Receiver | [the Domain and the Domain Owner, or the Receiver named in the Solution Definition] |
 | Risk Tier | [1 / 2 / 3] |
-| Prerequisites | Team final acceptance on [date] by the AICC Lead; business acceptance on [date] by the Business acceptor |
-| Completed by the AICC Lead on | [date] |
+| Prerequisites | Team final acceptance on [date] by the Competence Center Lead; business acceptance on [date] by the Business acceptor |
+| Completed by the Competence Center Lead on | [date] |
 | Items not met | [count] |
 
 | Party | Item | Result | Name, signature, and date |
@@ -27,7 +27,7 @@ revised: 2026-10-03
 | Domain Owner | The use is approved for the data classes and the purpose (AI Policy 2.1), and the users are trained, or use the Solution first under supervision as training | | |
 | Domain Owner | Oversight in operation, disclosure, and contestability are in place (AI Policy 3.5) | | |
 | Solution Engineer | The Solution is handed over to the Receiver named in the Solution Definition, who accepts the handover, and human oversight, testing, and logging are in the Solution as built (AI Policy 3.5) | | |
-| AICC Lead (Risk Tier 2 or 3) | The Risk Tier is recorded in the AI Registry, with who assigned it and when, the owners of the knowledge sources are noted, and the training is set (AI Policy 3.5) | | |
+| Competence Center Lead (Risk Tier 2 or 3) | The Risk Tier is recorded in the AI Registry, with who assigned it and when, the owners of the knowledge sources are noted, and the training is set (AI Policy 3.5) | | |
 | Checker (Risk Tier 1) | The Solution was checked by a person who did not build it, and the check holds for use at scale | | |
 | Model risk (Risk Tier 2 or 3) | The validation holds for use at scale, with its conditions and its date | | |
 | Compliance (Risk Tier 2 or 3) | The applicable law is confirmed for use at scale, including whether the Solution is in a category treated as high risk (Solution Lifecycle Model 5.2; AI Policy 3.2), and, where the output reaches a customer, the disclosure and the right to contest | | |
@@ -44,4 +44,4 @@ revised: 2026-10-03
 
 ## Acceptance and release
 
-[Release decision: [released / not released], by [the Domain Owner for Risk Tier 1 or 2, or the Executive Sponsor where the AICC Lead is the Domain Owner; the Executive Sponsor for Risk Tier 3] (Solution Lifecycle Model 7.1, 7.4), on [date], with the Decision Record for Risk Tier 3.]
+[Release decision: [released / not released], by [the Domain Owner for Risk Tier 1 or 2, or the Executive Sponsor where the Competence Center Lead is the Domain Owner; the Executive Sponsor for Risk Tier 3] (Solution Lifecycle Model 7.1, 7.4), on [date], with the Decision Record for Risk Tier 3.]

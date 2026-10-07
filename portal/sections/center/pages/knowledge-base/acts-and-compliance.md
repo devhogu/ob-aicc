@@ -8,7 +8,7 @@ slug: /knowledge-base/acts-and-compliance/
 source: portal/content/en/knowledge-base/acts-and-compliance.md
 part: 6 of 7
 series: knowledge-base-course
-production: authored; curated by the AICC Lead with the Control Function Contacts
+production: authored; curated by the Competence Center Lead with the Control Function Contacts
 status: scaffold
 ---
 

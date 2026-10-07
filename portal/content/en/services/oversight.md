@@ -1,18 +1,18 @@
 # Oversight
 
-AICC keeps one view of every AI use of the Bank, built or bought, and reports on it. It oversees the Adopted Solutions that others deliver and run, follows the live review, the incidents, and the changes of every Solution through the Registry, and brings the whole to the Steering in the Quarterly Report, which the Executive Sponsor may bring to the Board Committee.
+The Competence Center keeps one view of every AI use of the Bank, built or bought, and reports on it. It oversees the Adopted Solutions that others deliver and run, follows the live review, the incidents, and the changes of every Solution through the Registry, and brings the whole to the Steering in the Quarterly Report, which the Executive Sponsor may bring to the Board Committee.
 
 ## 1. What it is
 
-1.1. The category covers the oversight of the Adopted Solutions, Solutions that others deliver and run, which AICC records, reviews, and reports on; the follow-up of the live review of every Solution at the Iteration Review and Demo, of the AI Incidents and their reviews, and of the changes and their checks; the reconciliation of the AI Registry with what runs; and the reporting of the Portfolio and its risks in the Steering Summary and the Quarterly Report.
+1.1. The category covers the oversight of the Adopted Solutions, Solutions that others deliver and run, which the Competence Center records, reviews, and reports on; the follow-up of the live review of every Solution at the Iteration Review and Demo, of the AI Incidents and their reviews, and of the changes and their checks; the reconciliation of the AI Registry with what runs; and the reporting of the Portfolio and its risks in the Steering Summary and the Quarterly Report.
 
 1.2. Oversight is not ownership. The Domain that runs a Solution owns its results, and the Control Functions keep their own remit and their right to stop.
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
-- An Adopted Solution recorded, reviewed, and reported under the same rules as a Solution of AICC
+- An Adopted Solution recorded, reviewed, and reported under the same rules as a Solution of the Competence Center
 - The live review of the Solutions of a function followed and reported
 - An AI Incident reviewed with the function and the Control Function Contacts, and its lessons recorded
 - The AI Registry reconciled with what runs in a function
@@ -25,7 +25,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 4. How it runs
 
-4.1. Run-rate work: an Adopted Solution enters the Portfolio when a function declares it or when a Receiver accepts the Handover of an Experiment; the AICC Lead records its Risk Tier when it is known; AICC follows its review, its incidents, and its changes through the Registry; the AICC Lead reviews the Adopted Solutions at each quarterly Steering, and the Quarterly Report records the review (Solution Lifecycle Model 8.2).
+4.1. Run-rate work: an Adopted Solution enters the Portfolio when a function declares it or when a Receiver accepts the Handover of an Experiment; the Competence Center Lead records its Risk Tier when it is known; The Competence Center follows its review, its incidents, and its changes through the Registry; the Competence Center Lead reviews the Adopted Solutions at each quarterly Steering, and the Quarterly Report records the review (Solution Lifecycle Model 8.2).
 
 ## 5. What it leads to
 
@@ -41,8 +41,8 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The Domain Owner owns the Adopted Solution and its results; the AICC Lead oversees and reports; the Control Function Contacts validate and may stop; the Executive Sponsor approves the Quarterly Report and decides whether to bring it to the Board Committee or the Board.
+8.1. The Domain Owner owns the Adopted Solution and its results; the Competence Center Lead oversees and reports; the Control Function Contacts validate and may stop; the Executive Sponsor approves the Quarterly Report and decides whether to bring it to the Board Committee or the Board.
 
 ## 9. Rule source
 
-Business Model 2.3; AI Policy 5; Operating Model 6 and 7; AICC Charter 7; Solution Lifecycle Model 8.
+Business Model 2.3; AI Policy 5; Operating Model 6 and 7; AI Competence Center Charter 7; Solution Lifecycle Model 8.

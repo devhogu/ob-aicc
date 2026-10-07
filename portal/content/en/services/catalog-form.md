@@ -1,10 +1,10 @@
 # Service catalog: the form
 
-The catalog of AICC lists what AICC runs, has delivered, is proving, and can re-deploy. This page states the form of the catalog: the two kinds of entry, the fields of each, and the state or the status of each. The live catalog is an instance of this form, kept in the Portfolio of AICC (Business Model 4.4); this site states the form only (Document Catalog 5.4). One entry of each kind is shown as an illustration.
+The catalog of the Competence Center lists what the Competence Center runs, has delivered, is proving, and can re-deploy. This page states the form of the catalog: the two kinds of entry, the fields of each, and the state or the status of each. The live catalog is an instance of this form, kept in the Portfolio of the Competence Center (Business Model 4.4); this site states the form only (Document Catalog 5.4). One entry of each kind is shown as an illustration.
 
 ## 1. The two kinds of entry
 
-1.1. A Solution entry describes one Solution of AICC, by its Solution Definition: an Experiment, a Product, or a Service. A Package entry describes one Package that an Engagement left, by its Package Definition (Template AICC-TPL-14): a method, a kit, an engine, a catalog of automations, a template set.
+1.1. A Solution entry describes one Solution of the Competence Center, by its Solution Definition: an Experiment, a Product, or a Service. A Package entry describes one Package that an Engagement left, by its Package Definition (Template AICC-TPL-14): a method, a kit, an engine, a catalog of automations, a template set.
 
 1.2. A Solution serves its client; a Package serves the next Engagement. The second function takes a Package in days where the first Engagement took weeks, and the catalog of Solutions and Packages is how a small unit serves the whole Bank.
 
@@ -21,7 +21,7 @@ The catalog of AICC lists what AICC runs, has delivered, is proving, and can re-
 | Domain and Domain Owner | The client function and its representative | Service Agreement |
 | Receiver | Who runs or adopts it after delivery; for an Experiment, who accepts the Handover | Solution Definition |
 | Risk Tier | 1, 2, or 3 | AI Registry |
-| Support level | None, on demand, agreed response targets, run by AICC | Service Agreement |
+| Support level | None, on demand, agreed response targets, run by the Competence Center | Service Agreement |
 | Health | The four signals, service levels, incidents, use, and cost, at the last review | Service Management; the live review |
 
 ## 3. The fields of a Package entry
@@ -33,7 +33,7 @@ The catalog of AICC lists what AICC runs, has delivered, is proving, and can re-
 | Kind | Method, kit, engine, catalog, template set |
 | Service area and category | The service category that produces and uses it, with its service area |
 | Status | Planned, in preparation, available, or withdrawn; a status, not a state of an item |
-| Owner | The Solution Engineer or the AICC Lead who keeps it |
+| Owner | The Solution Engineer or the Competence Center Lead who keeps it |
 | Used by | The functions and the Solutions that use it |
 | Needs to re-deploy | What a new function must provide: a corpus, a data source, a template set, an owner |
 | Where it is kept | The repository or the folder |
@@ -54,7 +54,7 @@ The catalog of AICC lists what AICC runs, has delivered, is proving, and can re-
 
 | Package | What it does | Kind | Category | Status | Used by |
 | --- | --- | --- | --- | --- | --- |
-| Portal generator | Generates a portal from a charter pack: sections, documents in parts, clause anchors, cross-references, defined terms, diagrams, search, two languages | Engine | Platforms | Available | AICC, for this site |
+| Portal generator | Generates a portal from a charter pack: sections, documents in parts, clause anchors, cross-references, defined terms, diagrams, search, two languages | Engine | Platforms | Available | Competence Center, for this site |
 
 ## 6. Rule source
 

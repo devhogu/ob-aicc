@@ -216,7 +216,7 @@ def export(source, output):
     source_hash = digest(original)
     if source_hash != digest(snapshot(source)):
         raise ValueError('Source changed during export; retry after the site build finishes')
-    files['README.txt'] = ('AICC portable portal\n\nOpen aicc.html in your browser. Keep the entire folder together.\nEN/RU navigation and search work without an HTTP server. External citations and corporate record links still need their normal access.\nThis folder is generated; request a fresh export to update its content. See HOW-TO.txt for regeneration instructions.\n').encode()
+    files['README.txt'] = ('AI Competence Center portable portal\n\nOpen aicc.html in your browser. Keep the entire folder together.\nEN/RU navigation and search work without an HTTP server. External citations and corporate record links still need their normal access.\nThis folder is generated; request a fresh export to update its content. See HOW-TO.txt for regeneration instructions.\n').encode()
     files['HOW-TO.txt'] = (ROOT / 'portal/PORTABLE-HOWTO.txt').read_bytes()
     manifest = {'kind': KIND, 'source_tree_sha256': source_hash, 'html_pages': count,
                 'files': {p: hashlib.sha256(data).hexdigest() for p, data in sorted(files.items())}}

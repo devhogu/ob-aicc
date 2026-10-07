@@ -1,10 +1,10 @@
 # Controls and the control catalog
 
-A control is a rule the unit follows anyway, written so that an auditor can test it: an objective, the rule and its clause, an owner, a timing, the evidence record it leaves, and the way it is tested. AICC has thirty-two, each with a reference, carried by the five control loops and kept in a catalog; their status at any date is in the Control Matrix of the Registry. This part explains what a control is, how the catalog is built, and how a control lives.
+A control is a rule the unit follows anyway, written so that an auditor can test it: an objective, the rule and its clause, an owner, a timing, the evidence record it leaves, and the way it is tested. The Competence Center has thirty-two, each with a reference, carried by the five control loops and kept in a catalog; their status at any date is in the Control Matrix of the Registry. This part explains what a control is, how the catalog is built, and how a control lives.
 
 ## 1. What a control is
 
-1.1. Each control is a rule of the Operating Model, the Solution Lifecycle Model, the AI Policy, or the Business Model, or an event of the control loop, and it leaves an evidence record. It has a reference, C-01 to C-32; a title and an objective; the rule, with the clause that states it; an owner, the Role accountable for it; a timing, when it operates; an evidence record and, where one applies, a template; a type; and a test, the way an auditor or the AICC Lead confirms it operated. The controls are not added to the work; they are the work, named.
+1.1. Each control is a rule of the Operating Model, the Solution Lifecycle Model, the AI Policy, or the Business Model, or an event of the control loop, and it leaves an evidence record. It has a reference, C-01 to C-32; a title and an objective; the rule, with the clause that states it; an owner, the Role accountable for it; a timing, when it operates; an evidence record and, where one applies, a template; a type; and a test, the way an auditor or the Competence Center Lead confirms it operated. The controls are not added to the work; they are the work, named.
 
 ## 2. The catalog by loop
 

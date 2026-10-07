@@ -1,16 +1,16 @@
 # Platforms
 
-Some of what AICC builds serves more than one function and more than one Solution: the portal generator, the knowledge-base kit, the workflow runtime of the automations, the evaluation harness, and the Lab in which Experiments run. AICC builds these shared engines and environments, runs one as a Service where it serves several consumers, states the requirements that the use of AI places on the AI Platform of the Bank, and hands an engine over to an IT function of the Bank when the Bank should run it at scale.
+Some of what the Competence Center builds serves more than one function and more than one Solution: the portal generator, the knowledge-base kit, the workflow runtime of the automations, the evaluation harness, and the Lab in which Experiments run. The Competence Center builds these shared engines and environments, runs one as a Service where it serves several consumers, states the requirements that the use of AI places on the AI Platform of the Bank, and hands an engine over to an IT function of the Bank when the Bank should run it at scale.
 
 ## 1. What it is
 
-1.1. The category covers the shared engines and environments of AICC: the engines behind its Services and packages, the Lab environment for Experiments, and the tooling that the Teams use; the statement of the requirements of AICC on the AI Platform of the Bank, which is provided and operated outside AICC; and the Handover of an engine to an IT function of the Bank through the service steps of the life of a Service.
+1.1. The category covers the shared engines and environments of the Competence Center: the engines behind its Services and packages, the Lab environment for Experiments, and the tooling that the Teams use; the statement of the requirements of the Competence Center on the AI Platform of the Bank, which is provided and operated outside the Competence Center; and the Handover of an engine to an IT function of the Bank through the service steps of the life of a Service.
 
-1.2. AICC does not own or operate the AI Platform of the Bank, is not a platform team of the Bank, and does not operate a Solution at the scale of the Bank (AICC Charter 3.2). It builds what proves the case and what its own Services need, and a Solution that the Bank adopts at scale is handed over to its Receiver (Business Model 2.5).
+1.2. The Competence Center does not own or operate the AI Platform of the Bank, is not a platform team of the Bank, and does not operate a Solution at the scale of the Bank (AI Competence Center Charter 3.2). It builds what proves the case and what its own Services need, and a Solution that the Bank adopts at scale is handed over to its Receiver (Business Model 2.5).
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - A portal generated and run for a function from its charter pack
 - A knowledge-base kit deployed for a function on its own corpus
@@ -22,11 +22,11 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 3. What the function receives
 
-3.1. An engine of AICC in operation for the function, under the service model of AICC: catalog entry, service levels, request and incident route, and the four signals; or a requirements statement that the Platform Owner can act on; or a Handover pack for the Receiver.
+3.1. An engine of the Competence Center in operation for the function, under the service model of the Competence Center: catalog entry, service levels, request and incident route, and the four signals; or a requirements statement that the Platform Owner can act on; or a Handover pack for the Receiver.
 
 ## 4. How it runs
 
-4.1. An engine of AICC is born as the Package of an Engagement and becomes a Service when it has a second consumer, a business case that states its run cost and its sunset rule, approved under Portfolio Management Model 6.3, and a named owner; the Service is a new Solution with its own Solution Definition (Solution Lifecycle Model 8.12). It is operated as any Service of AICC. When the Bank should run it at scale, it goes through Transition planned and Migrating to an IT function of the Bank, on a Proposal that names the Receiver, and it is Closed as handed off when the Receiver accepts the Handover (Solution Lifecycle Model 8.11).
+4.1. An engine of the Competence Center is born as the Package of an Engagement and becomes a Service when it has a second consumer, a business case that states its run cost and its sunset rule, approved under Portfolio Management Model 6.3, and a named owner; the Service is a new Solution with its own Solution Definition (Solution Lifecycle Model 8.12). It is operated as any Service of the Competence Center. When the Bank should run it at scale, it goes through Transition planned and Migrating to an IT function of the Bank, on a Proposal that names the Receiver, and it is Closed as handed off when the Receiver accepts the Handover (Solution Lifecycle Model 8.11).
 
 ## 5. What it leads to
 
@@ -46,4 +46,4 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 9. Rule source
 
-AICC Charter 3.2; Statement of Intent 10.3 and 11.2; Business Model 2.5, 4.2, and 4.5; Solution Lifecycle Model 8.8 to 8.12.
+AI Competence Center Charter 3.2; Statement of Intent 10.3 and 11.2; Business Model 2.5, 4.2, and 4.5; Solution Lifecycle Model 8.8 to 8.12.

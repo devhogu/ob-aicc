@@ -21,7 +21,7 @@ The body of practice that treats a portfolio as a flow to be managed rather than
 
 ## 4. Relevance to the Bank
 
-4.1. It is the practice that the Portfolio of AICC is built on, adapted to a small unit in a bank: a yearly frame instead of a rolling one, a single Team instead of many, and the clearances of the Control Functions written into the business case.
+4.1. It is the practice that the Portfolio of the Competence Center is built on, adapted to a small unit in a bank: a yearly frame instead of a rolling one, a single Team instead of many, and the clearances of the Control Functions written into the business case.
 
 ## 5. How the charter relates to it
 

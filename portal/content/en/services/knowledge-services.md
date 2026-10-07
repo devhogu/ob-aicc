@@ -10,7 +10,7 @@ The documents of a function, and the state and regulator documents it works with
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - A knowledge base over the procedures and the regulator documents of legal, compliance, or accounting, with citations
 - A cross-unit knowledge base where functions share a corpus
@@ -24,7 +24,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 4. How it runs
 
-4.1. A study of one Iteration maps the corpus, its owners, and its data classes. The MVP builds the base on a first set and measures it against the evaluation set with the Domain Expert. The function then owns the sources; AICC runs or hands over the assistant as the Service Agreement states.
+4.1. A study of one Iteration maps the corpus, its owners, and its data classes. The MVP builds the base on a first set and measures it against the evaluation set with the Domain Expert. The function then owns the sources; The Competence Center runs or hands over the assistant as the Service Agreement states.
 
 ## 5. What it leads to
 
@@ -40,7 +40,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The Domain Owner decides the corpus and the audience; the Control Function Contacts clear the data classes; the AICC Lead assigns the Risk Tier.
+8.1. The Domain Owner decides the corpus and the audience; the Control Function Contacts clear the data classes; the Competence Center Lead assigns the Risk Tier.
 
 ## 9. Rule source
 

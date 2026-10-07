@@ -9,7 +9,7 @@ source: charter/en/guides/organization-guide.md
 source_sections: 1, 2, 3
 document: organization-guide
 part: 1 of 3
-words: 931
+words: 946
 series: set-operating-model
 series_order: 3
 production: generated
@@ -27,8 +27,8 @@ Page type: guide. Address: /organization/organization-guide/
 ## Sections of the source
 
 - 1. Purpose and when it applies (83 words)
-- 2. The place of AICC in the Bank (148 words)
-- 3. The Roles and their profiles (700 words)
+- 2. The place of the Competence Center in the Bank (156 words)
+- 3. The Roles and their profiles (707 words)
 
 ## Outline
 
@@ -37,7 +37,7 @@ Elements: Header: title, purpose; Diagrams with text versions; Tables; Rule sour
 Headings of the source:
 
 - 1. Purpose and when it applies
-- 2. The place of AICC in the Bank
+- 2. The place of the Competence Center in the Bank
 - 3. The Roles and their profiles
 - 4. Who is responsible for what
 - 5. The governing bodies

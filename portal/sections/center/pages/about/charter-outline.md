@@ -1,6 +1,6 @@
 ---
 id: about/charter-outline
-title: Explore AICC
+title: Explore the Competence Center
 section: about
 order: 10
 type: outline
@@ -10,7 +10,7 @@ production: generated, with an authored introduction
 status: scaffold
 ---
 
-# Explore AICC
+# Explore the Competence Center
 
 Page type: outline. Address: /about/charter-outline/
 

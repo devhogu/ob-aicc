@@ -37,7 +37,7 @@ The baseline and the target of each indicator are figures of the Bank. They are 
 
 The steps below are the plan of the MVP. They start when the business case is approved and cleared and the Initiative is taken from the Portfolio Backlog into work (Portfolio Management Model 5).
 
-AICC does the following.
+The Competence Center does the following.
 
 1. Take stock of the reports that FP&A already produces with AI: the metrics, their sources, the schedule, and the manual steps.
 2. Define with FP&A the standard set of financial metrics and the monthly and quarterly editions: definitions, sources, and periods.
@@ -52,7 +52,7 @@ Minimum viable product: The monthly edition, issued through the Board portal by 
 
 ## 4. Cost and value
 
-Cost: the time of the AICC Lead. No other cost is stated.
+Cost: the time of the Competence Center Lead. No other cost is stated.
 
 Investment Envelope: None; no Investment Envelope is set (Priorities Record).
 
@@ -76,7 +76,7 @@ The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (
 | --- | --- | --- | --- |
 | Approval of the business case | | | |
 | Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
-| Service Agreement issued | AICC Lead | | |
+| Service Agreement issued | Competence Center Lead | | |
 | Decision after the MVP (Portfolio Management Model 7.2) | | | |
 | Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | Ademi Moldogazieva, head of the FP&A function | | |
 

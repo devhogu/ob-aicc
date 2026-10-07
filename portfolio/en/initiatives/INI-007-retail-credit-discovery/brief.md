@@ -18,9 +18,9 @@ Open sections: 2 (the source system of the figures, and the baseline and target 
 
 ## 1. Hypothesis
 
-If AICC and the function discuss in full what AI can do for credit lines, loans, and mortgages and how to do it, then the function can start with the work that is most useful and controllable, beginning with the analysis of why mortgages are rejected.
+If the Competence Center and the function discuss in full what AI can do for credit lines, loans, and mortgages and how to do it, then the function can start with the work that is most useful and controllable, beginning with the analysis of why mortgages are rejected.
 
-Today the function holds knowledge and does routine work across credit lines, loans, and mortgages, and it wants to understand the reasoning behind rejected mortgages. These are not worked through with AICC.
+Today the function holds knowledge and does routine work across credit lines, loans, and mortgages, and it wants to understand the reasoning behind rejected mortgages. These are not worked through with the Competence Center.
 
 ## 2. Business outcomes and leading indicators
 
@@ -37,7 +37,7 @@ The baseline and the target of each indicator are figures of the Bank. They are 
 
 The steps below are the plan of the MVP. They start when the business case is approved and cleared and the Initiative is taken from the Portfolio Backlog into work (Portfolio Management Model 5).
 
-AICC does the following.
+The Competence Center does the following.
 
 1. Hold working sessions with the function on credit lines, loans, and mortgages end to end: the process, the routine work, the knowledge it relies on, and its pain points.
 2. Identify and rank what AI can do and how, including the routine work of the day and the knowledge base (INI-008).
@@ -52,7 +52,7 @@ Minimum viable product: The approach to the analysis of mortgage rejections, agr
 
 ## 4. Cost and value
 
-Cost: the time of the AICC Lead. No other cost is stated.
+Cost: the time of the Competence Center Lead. No other cost is stated.
 
 Investment Envelope: None; no Investment Envelope is set (Priorities Record).
 
@@ -76,7 +76,7 @@ The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (
 | --- | --- | --- | --- |
 | Approval of the business case | | | |
 | Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
-| Service Agreement issued | AICC Lead | | |
+| Service Agreement issued | Competence Center Lead | | |
 | Decision after the MVP (Portfolio Management Model 7.2) | | | |
 | Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | The head of the retail credit function | | |
 

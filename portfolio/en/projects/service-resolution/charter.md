@@ -6,7 +6,7 @@ section: "Charter"
 
 ## Charter: Initiative Brief and measurement annex {#charter-initiative-brief}
 
-This page is the project charter in AICC form: the Initiative Brief, which is the one-page business case of an Initiative, followed by the measurement and evidence annex that is approved with it. The Domain Owner and the AICC Lead complete the Brief. The maintained Initiative Brief is kept in the Initiative's folder in the Portfolio. This page preserves the complete supporting business-case draft and measurement annex; it is not a separate authoritative record. Figures of the Bank do not appear here: each figure is a reference to its source, and each estimate is a field with the name of whoever fills it.
+This page is the project charter in the Competence Center form: the Initiative Brief, which is the one-page business case of an Initiative, followed by the measurement and evidence annex that is approved with it. The Domain Owner and the Competence Center Lead complete the Brief. The maintained Initiative Brief is kept in the Initiative's folder in the Portfolio. This page preserves the complete supporting business-case draft and measurement annex; it is not a separate authoritative record. Figures of the Bank do not appear here: each figure is a reference to its source, and each estimate is a field with the name of whoever fills it.
 
 Familiar labels and where they now live: **Decision requested** is the paragraph below and the first row of section 6. The **Approval record** is section 6, together with the Control Sign-Offs and the Decision Record. **Ownership to name before signature** is in the Appointments Record, which names the holder of each Role. This page shows Roles, not names.
 
@@ -23,7 +23,7 @@ Familiar labels and where they now live: **Decision requested** is the paragraph
 | Standing Initiative | No |
 | Domain Owner (represents the client function) | Head of Customer Service. Customer Service is the only Domain |
 | Pivot of | None |
-| Solutions expected | Phase 1: an Experiment in the Lab on read-only extracts, which ends in an Outcome Report. Phase 2: the first Solution, a Service run by AICC with a sunset rule, used by one service team as its first users |
+| Solutions expected | Phase 1: an Experiment in the Lab on read-only extracts, which ends in an Outcome Report. Phase 2: the first Solution, a Service run by the Competence Center with a sunset rule, used by one service team as its first users |
 | Business acceptor | Domain Owner |
 | Service Agreement | AGR-[nnn]. Issued at Scoping for the study phase, then amended at approval to cover the proof, delivery, and support phases |
 | Period | [from and to, set at approval from the time-box in section 3] |
@@ -33,7 +33,7 @@ Open sections: 2 (baselines and targets, as references to their sources), 3 (tim
 
 ### Decision requested {#charter-decision-requested}
 
-Approve the business case of this Initiative. The MVP is one employee-assist assistant (expected Risk Tier 2) for one queue of the journey chosen at Scoping, with that queue's service team as first users, built in two phases within [AICC Lead's estimate, Iterations] and ending in the decision after the MVP. The Domain Owner approves, after the Control Function Contacts have cleared the business case. The decision is taken at a monthly Steering. If the MVP needs funding beyond staff time, the Executive Sponsor first settles the Investment Envelope (see section 4).
+Approve the business case of this Initiative. The MVP is one employee-assist assistant (expected Risk Tier 2) for one queue of the journey chosen at Scoping, with that queue's service team as first users, built in two phases within [Competence Center Lead's estimate, Iterations] and ending in the decision after the MVP. The Domain Owner approves, after the Control Function Contacts have cleared the business case. The decision is taken at a monthly Steering. If the MVP needs funding beyond staff time, the Executive Sponsor first settles the Investment Envelope (see section 4).
 
 ### 1. Hypothesis {#charter-hypothesis}
 
@@ -45,7 +45,7 @@ Some customers contact the Bank again and again about one unresolved issue. For 
 | --- | --- | --- | --- |
 | Customers do not have to come back about the same need | Repeat contact for the same need within [n] days, on eligible cases | [MI report: repeat contacts by journey], owned by the source owner of the figures | [baseline date] |
 | Less effort to investigate and handle a case | Handling or investigation effort per eligible case | [workforce or case-system report: handling time], owned by the source owner of the figures | [baseline date] |
-| The service team works with the assistant | Share of eligible cases handled by the first users where the assistant's view was used and the outcome recorded | [workspace records of the pilot], reported by the AICC Lead and checked by the source owner of the figures | [from the first week of live use] |
+| The service team works with the assistant | Share of eligible cases handled by the first users where the assistant's view was used and the outcome recorded | [workspace records of the pilot], reported by the Competence Center Lead and checked by the source owner of the figures | [from the first week of live use] |
 | The journey's own problem eases | One indicator from the selected journey annex: time to confirmed resolution (payments), avoidable status contacts (disputes), or repeated information requests (onboarding) | [MI report named in the journey annex], owned by the source owner of the figures | [baseline date] |
 
 The source owner of the figures takes the baselines from existing management information (MI), with no use of AI, during Discovery: Business case. The Domain Owner sets the targets. Both stay in the source; this Brief only points to them. If an indicator has no MI yet, the approving Decision Record makes it a condition, and the first MVP Feature measures it before any live use. The formulas, eligibility, and comparison design are in the [annex](#charter-annex).
@@ -71,24 +71,24 @@ The source owner of the figures takes the baselines from existing management inf
 9. Compare the results with the existing process, as the annex describes.
 10. The decision after the MVP.
 
-**Time-box.** Phase 1: [AICC Lead's estimate, Iterations]. Phase 2: [AICC Lead's estimate, Iterations, at least the observation period of the annex]. **What may follow.** After a decision to continue: Capabilities such as more queues or the next payment type, and release beyond the first users. Another journey is a new need at the Funnel.
+**Time-box.** Phase 1: [Competence Center Lead's estimate, Iterations]. Phase 2: [Competence Center Lead's estimate, Iterations, at least the observation period of the annex]. **What may follow.** After a decision to continue: Capabilities such as more queues or the next payment type, and release beyond the first users. Another journey is a new need at the Funnel.
 
 ### 4. Cost and value {#charter-cost-and-value}
 
 | Item | Entry |
 | --- | --- |
-| MVP effort, by Role and phase | [AICC Lead's estimate, Role-Iterations for phase 1 and phase 2: AICC Lead as Solution Engineer, tester, Domain Experts, process function, source owner of the figures, Control Function Contacts, IT function] |
+| MVP effort, by Role and phase | [Competence Center Lead's estimate, Role-Iterations for phase 1 and phase 2: Competence Center Lead as Solution Engineer, tester, Domain Experts, process function, source owner of the figures, Control Function Contacts, IT function] |
 | Capacity of the business team | [Domain Owner and process-function head: availability of Domain Experts and of the first users, per phase]. This is recorded as Assumptions and in Part B of the Service Agreement |
-| Run cost of the Service, in-Bank model hosting, and integration | [AICC Lead's estimate with the IT function, by reference to the financial planning of the Bank] |
-| Sunset rule of the Service | [Domain Owner with the AICC Lead: the condition under which the Service is retired or handed over] |
-| Full scope if the MVP succeeds | [AICC Lead's estimate, by reference] |
+| Run cost of the Service, in-Bank model hosting, and integration | [Competence Center Lead's estimate with the IT function, by reference to the financial planning of the Bank] |
+| Sunset rule of the Service | [Domain Owner with the Competence Center Lead: the condition under which the Service is retired or handed over] |
+| Full scope if the MVP succeeds | [Competence Center Lead's estimate, by reference] |
 | Investment Envelope | PRI-1 has no Envelope yet. If the MVP costs anything beyond staff time, the Executive Sponsor settles the Envelope at a monthly Steering before the approval |
-| Who pays | AICC does not charge. The Domain pays the run, licenses, and provider costs from its Envelope |
+| Who pays | Competence Center does not charge. The Domain pays the run, licenses, and provider costs from its Envelope |
 | Value and where it is tracked | The leading indicators of section 2, reviewed at each Iteration Review and Demo. The Domain Owner confirms the benefit from the named source, in the Outcome Report and the Quarterly Report |
 
 ### 5. Risks, dependencies, and Risk Tier {#charter-risks-and-tier}
 
-**Expected Risk Tier: 2.** The data is customer personal data and confidential service records. The output informs the employee's choice, the employee decides each case, and the output reaches the customer only through the employee. The assistant holds no tools: every write, such as recording an outcome or creating a referral, is the employee's action in the workspace. With write rights it would be Tier 3. The AICC Lead assigns the Risk Tier when the Solution is defined. While the AICC Lead builds, the Executive Sponsor assigns it, approves the Solution Definition and the use of the data class, and a person other than the builder tests and checks (Operating Model 4.4). [Controls and evidence](#controls) lists what Tier 2 requires and what would raise the Tier.
+**Expected Risk Tier: 2.** The data is customer personal data and confidential service records. The output informs the employee's choice, the employee decides each case, and the output reaches the customer only through the employee. The assistant holds no tools: every write, such as recording an outcome or creating a referral, is the employee's action in the workspace. With write rights it would be Tier 3. The Competence Center Lead assigns the Risk Tier when the Solution is defined. While the Competence Center Lead builds, the Executive Sponsor assigns it, approves the Solution Definition and the use of the data class, and a person other than the builder tests and checks (Operating Model 4.4). [Controls and evidence](#controls) lists what Tier 2 requires and what would raise the Tier.
 
 **Model hosting and providers.** The model runs in the Bank and is checked as a provider before it processes Bank data. An external model may be used only after the provider check by information security, data protection, and legal, and approval for the data class. Introducing one later is a significant change.
 
@@ -103,7 +103,7 @@ The source owner of the figures takes the baselines from existing management inf
 - The Platform Owner: in-Bank model hosting, the AI gateway, logging, and monitoring.
 - The source owner of the figures: baselines and the reports of section 2.
 - INI-006: shared sources (DEP-008, DEP-009).
-- If the Bank's own project or IT demand intake must also run, for IT capacity or funding outside AICC, it is one Dependency on the IT function and not a separate route.
+- If the Bank's own project or IT demand intake must also run, for IT capacity or funding outside the Competence Center, it is one Dependency on the IT function and not a separate route.
 
 **Main risks** (in the Risks and Issues Record, each RI-[nnn] with an owner and a due date):
 
@@ -111,7 +111,7 @@ The source owner of the figures takes the baselines from existing management inf
 - Records in Russian, Kyrgyz, and mixed or transliterated text may lower interpretation quality. The Evaluation set covers each language, and the result is reported by language.
 - One team's eligible volume may be too small to show a change in customer outcome within the time-box. See the annex.
 - The Domain Experts and the first users may not get the time the work needs.
-- AICC has one member, so the AICC Lead builds. This is an accepted limit with the compensating controls of Operating Model 4.4: the Executive Sponsor approves, and an engineer named by the AICC Lead tests.
+- The Competence Center has one member, so the Competence Center Lead builds. This is an accepted limit with the compensating controls of Operating Model 4.4: the Executive Sponsor approves, and an engineer named by the Competence Center Lead tests.
 
 **Local assumptions to confirm at Scoping:** the languages of the records; which system holds the case state and whether it keeps step timestamps; whether a shared customer key links contacts, cases, and complaints; how handling time is measured today; and which system and team supply the comparison population.
 
@@ -121,7 +121,7 @@ The source owner of the figures takes the baselines from existing management inf
 | --- | --- | --- | --- |
 | Approval of the business case: [approved / returned / deferred / rejected] | Domain Owner (the Executive Sponsor if a guardrail is exceeded) | [date] | DR-[yyyy]-[nnn] |
 | Clearance of the Control Function Contacts, Risk Tier 2 expected: [cleared / not cleared] | Model risk, information security, data protection, compliance, legal | [date] | [Control Sign-Off reference for each remit] |
-| Service Agreement issued, then amended at approval | AICC Lead | [date] | AGR-[nnn] |
+| Service Agreement issued, then amended at approval | Competence Center Lead | [date] | AGR-[nnn] |
 | Decision after the MVP: [continue / pivot / defer / reject], or return with a stated extension | Domain Owner, as approver of the business case | [date] | DR-[yyyy]-[nnn] |
 | Acceptance on delivery: [accepted / returned / rejected] | Domain Owner, as Business acceptor | [date] | [release block of the Solution Definition; Outcome Report] |
 

@@ -30,6 +30,6 @@ The forum where industry, regulators, and civil society state shared positions o
 
 - [Research and insight](page:reference/research-and-insight)
 - [What responsible AI means, in the Responsible AI course](page:responsible-ai/what-responsible-ai-means)
-- [Strategy, in About AICC](page:about/strategy)
+- [Strategy, in About the Competence Center](page:about/strategy)
 
 This page is for orientation. A listing is not an endorsement; the rules of the Bank for the use of its systems and its information apply, and nothing of the Bank is entered into an external resource.

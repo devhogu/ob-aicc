@@ -1,8 +1,8 @@
 # Discovery catalog
 
-The Discovery catalog holds the scenarios in which AI could help the Bank, by service area and capability: each with its problem, the Solution it suggests, and its leading indicators. The catalog feeds the Funnel: a scenario becomes an Initiative only when a function states a need for it and the AICC Lead enters it in the [Portfolio Backlog](../portfolio-backlog.md) as Proposed (Portfolio Management Model 5.2). A scenario is not an Initiative and has no state of the Portfolio Kanban.
+The Discovery catalog holds the scenarios in which AI could help the Bank, by service area and capability: each with its problem, the Solution it suggests, and its leading indicators. The catalog feeds the Funnel: a scenario becomes an Initiative only when a function states a need for it and the Competence Center Lead enters it in the [Portfolio Backlog](../portfolio-backlog.md) as Proposed (Portfolio Management Model 5.2). A scenario is not an Initiative and has no state of the Portfolio Kanban.
 
-The catalog is kept in this folder as Markdown records in both languages, one record for each page of the Discovery Catalog section of the AICC portal. The portal generator (`portal/tools/discovery.py`) renders the pages from the records; the records hold the content only, and the generator adds the interface labels, the layout, the links and the counts.
+The catalog is kept in this folder as Markdown records in both languages, one record for each page of the Discovery Catalog section of the Competence Center portal. The portal generator (`portal/tools/discovery.py`) renders the pages from the records; the records hold the content only, and the generator adds the interface labels, the layout, the links and the counts.
 
 When a scenario is entered in the Funnel, the Initiative Brief names the scenario it comes from, by its URN, so that the link from the catalog to the Portfolio Backlog is kept.
 

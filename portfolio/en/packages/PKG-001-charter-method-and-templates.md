@@ -1,6 +1,6 @@
 # PKG-001 Charter method and templates
 
-This is a Package Definition under Business Model 4.4, using AICC-TPL-14. Available in the AICC repository and used for the AICC charter, governance records, or portal as specified below. Availability of the material does not grant approval for a new AI use.
+This is a Package Definition under Business Model 4.4, using AICC-TPL-14. Available in the Competence Center repository and used for the Competence Center charter, governance records, or portal as specified below. Availability of the material does not grant approval for a new AI use.
 
 | Field | Entry |
 | --- | --- |
@@ -9,9 +9,9 @@ This is a Package Definition under Business Model 4.4, using AICC-TPL-14. Availa
 | Kind | Method |
 | Service area and category | Advise and formulate; Strategy and governance |
 | Status | Available |
-| Owner | AICC Lead |
-| Produced by | AICC charter development; no originating Initiative or Service Agreement identifier is recorded. |
-| Used by or intended use | AICC |
+| Owner | Competence Center Lead |
+| Produced by | Competence Center charter development; no originating Initiative or Service Agreement identifier is recorded. |
+| Used by or intended use | Competence Center |
 | Needs to re-deploy | The mandate and the policies of the unit, an owner of its charter, and a repository |
 | Risk Tier of its uses | No Risk Tier is assigned to a description or template set alone. Each use that involves AI is tiered under AI Policy 3; the data class, influence on a decision, customer effect, and autonomy determine the tier. |
 | Where it is kept | The source references in section 2; English source edition 2.2, with the revision of each document stated in that document. The receiving owner records the repository revision used for an adaptation. |
@@ -31,7 +31,7 @@ The way a charter pack is written: one voice, one source, every rule once, flows
 ## 3. How a function re-deploys it
 
 1. The receiving owner identifies the unit mandate, applicable Bank policies, decision rights, and intended readers.
-2. The owner uses the AICC charter as a worked example and selects the documents and blank forms that the unit needs. Existing AICC decisions and appointments are not evidence for the receiving unit.
+2. The owner uses the Competence Center charter as a worked example and selects the documents and blank forms that the unit needs. Existing the Competence Center decisions and appointments are not evidence for the receiving unit.
 3. The owner adapts the terms, responsibilities, controls, and workflows and checks their consistency. Adapted documents remain drafts until activated by the receiving unit.
 4. The owner records the source edition and the adopted document revisions, then maintains its own change history.
 

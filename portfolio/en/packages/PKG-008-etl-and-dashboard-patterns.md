@@ -9,7 +9,7 @@ This is a Package Definition under Business Model 4.4, using AICC-TPL-14. Planne
 | Kind | Kit |
 | Service area and category | Build and run; Analytics and decision support |
 | Status | Planned |
-| Owner | AICC Lead |
+| Owner | Competence Center Lead |
 | Produced by | No originating Initiative or Service Agreement identifier is recorded in the package catalog. |
 | Used by or intended use | No consumer recorded. |
 | Needs to re-deploy | Governed sources with owners, a target environment, and an owner of each dashboard |

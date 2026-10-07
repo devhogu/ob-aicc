@@ -9,7 +9,7 @@ This is a Package Definition under Business Model 4.4, using AICC-TPL-14. In pre
 | Kind | Engine |
 | Service area and category | Build and run; Content management |
 | Status | In preparation |
-| Owner | AICC Lead |
+| Owner | Competence Center Lead |
 | Produced by | No originating Initiative or Service Agreement identifier is recorded in the package catalog. |
 | Used by or intended use | Intended for INI-004 and SOL-001 (Proposed); no operating Board-reporting engine is established by this record. |
 | Needs to re-deploy | Governed data, approved templates, and an approver of each edition |

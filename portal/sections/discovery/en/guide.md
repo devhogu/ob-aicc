@@ -16,7 +16,7 @@ The scenarios describe concerns that every bank has, in terms that hold for any 
 | --- | --- |
 | the regulator, the supervisor | the National Bank of the Kyrgyz Republic |
 | the financial intelligence unit | the financial intelligence service of the Kyrgyz Republic (name to be confirmed by Compliance) |
-| applicable law on personal data, consumer protection, AML | the law of the Kyrgyz Republic and the regulations of the National Bank on the subject (see the page Regulators and acts in the AICC Reference) |
+| applicable law on personal data, consumer protection, AML | the law of the Kyrgyz Republic and the regulations of the National Bank on the subject (see the page Regulators and acts in the Competence Center Reference) |
 | local currency | the Kyrgyz som |
 | the national card scheme, the domestic payment systems | the national systems operated or overseen by the National Bank (names to be confirmed) |
 | international standards named in a scenario (Basel, IFRS 9, BCBS 239, FATF) | references; what binds the Bank is confirmed by the Control Function Contacts |

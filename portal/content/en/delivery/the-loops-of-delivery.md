@@ -79,7 +79,7 @@ flowchart TB
 
 Figure 4: the three loops of the work.
 
-2.2. The separation of deploy from release is the device that makes this safe. A Feature can be deployed to its environment of use, judged by its first users, and held there until the Domain Owner, or the Executive Sponsor for Risk Tier 3 or where the AICC Lead is the Domain Owner, decides to release it beyond them. Value is switched on by a business decision, not by the end of a build.
+2.2. The separation of deploy from release is the device that makes this safe. A Feature can be deployed to its environment of use, judged by its first users, and held there until the Domain Owner, or the Executive Sponsor for Risk Tier 3 or where the Competence Center Lead is the Domain Owner, decides to release it beyond them. Value is switched on by a business decision, not by the end of a build.
 
 ## 3. The feedback loops
 

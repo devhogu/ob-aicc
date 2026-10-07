@@ -9,7 +9,7 @@ source: charter/en/guides/organization-guide.md
 source_sections: 4
 document: organization-guide
 part: 2 of 3
-words: 2038
+words: 2055
 series: set-operating-model
 series_order: 3
 production: generated
@@ -26,7 +26,7 @@ Page type: guide. Address: /organization/organization-guide/who-is-responsible-f
 
 ## Sections of the source
 
-- 4. Who is responsible for what (2038 words)
+- 4. Who is responsible for what (2055 words)
 
 ## Outline
 
@@ -35,7 +35,7 @@ Elements: Header: title, purpose; Diagrams with text versions; Tables; Rule sour
 Headings of the source:
 
 - 1. Purpose and when it applies
-- 2. The place of AICC in the Bank
+- 2. The place of the Competence Center in the Bank
 - 3. The Roles and their profiles
 - 4. Who is responsible for what
 - 5. The governing bodies

@@ -39,15 +39,15 @@ Each Feature states the benefit sought for its function and its acceptance crite
 
 ## 3. Scope and the minimum viable product
 
-A small change to an existing knowledge base, automation, view, or document template may enter as run-rate work if it meets Business Model 4.7 and 4.8. The service category proposes the mode and the AICC Lead confirms it. Work that needs more than one Iteration is scoped as a separate Initiative. The Standing Initiative has no MVP of its own (Portfolio Management Model 5.5).
+A small change to an existing knowledge base, automation, view, or document template may enter as run-rate work if it meets Business Model 4.7 and 4.8. The service category proposes the mode and the Competence Center Lead confirms it. Work that needs more than one Iteration is scoped as a separate Initiative. The Standing Initiative has no MVP of its own (Portfolio Management Model 5.5).
 
 Each run-rate Feature sits directly under this Initiative in the Program Backlog, is admitted at the Weekly Review within the Team's limits, and records its client, data-use approval where AI is used, acceptance criteria, Dependencies, admission, delivery, and acceptance. The support level is on demand. AI Solution, validation, release, and production-change requirements still apply.
 
 ## 4. Cost and value
 
-The Standing Initiatives share the existing AICC Team capacity; no separate headcount, funding, or fixed share of capacity is reserved for a service area. The initial Team limit is one Feature in progress across ordinary and run-rate delivery combined, including a Feature in Review or Waiting. The Ready queue holds at most two Features. The same shared limit applies across lanes and Domains; an urgent request changes the order of work and does not add capacity. The boards record these limits under DR-2026-063.
+The Standing Initiatives share the existing the Competence Center Team capacity; no separate headcount, funding, or fixed share of capacity is reserved for a service area. The initial Team limit is one Feature in progress across ordinary and run-rate delivery combined, including a Feature in Review or Waiting. The Ready queue holds at most two Features. The same shared limit applies across lanes and Domains; an urgent request changes the order of work and does not add capacity. The boards record these limits under DR-2026-063.
 
-At each Weekly Review the AICC Lead admits the highest-ranked eligible request that fits the remaining Iteration and the shared limit. If none fits, none is admitted. Each request states its expected benefit and acceptance criteria. Financial figures remain in their governed sources. The normal monthly and quarterly reviews may change the limits and work mix within the authority of the charter.
+At each Weekly Review the Competence Center Lead admits the highest-ranked eligible request that fits the remaining Iteration and the shared limit. If none fits, none is admitted. Each request states its expected benefit and acceptance criteria. Financial figures remain in their governed sources. The normal monthly and quarterly reviews may change the limits and work mix within the authority of the charter.
 
 ## 5. Risks, dependencies, and Risk Tier
 

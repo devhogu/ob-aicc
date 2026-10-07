@@ -2,14 +2,14 @@
 id: AICC-TPL-07-EN
 title: Outcome Report
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Outcome Report
 
-**Template.** Written by the AICC Lead at the end of an Engagement, or of a phase that the Service Agreement states. It is the closing deliverable: what was delivered, with the evidence referenced, and who accepted it. It carries no figures of the Bank, no data, and no code. Start with the executive summary, and keep it short.
+**Template.** Written by the Competence Center Lead at the end of an Engagement, or of a phase that the Service Agreement states. It is the closing deliverable: what was delivered, with the evidence referenced, and who accepted it. It carries no figures of the Bank, no data, and no code. Start with the executive summary, and keep it short.
 
 | Field | Entry |
 | --- | --- |
@@ -22,7 +22,7 @@ revised: 2026-10-03
 
 ## 1. Executive summary
 
-[What was asked, what was delivered, what was learned, and what AICC recommends.]
+[What was asked, what was delivered, what was learned, and what the Competence Center recommends.]
 
 ## 2. What was delivered
 
@@ -50,4 +50,4 @@ Package left: [PKG-nnn, with its Package Definition; or none]
 
 ## 7. Acceptance and what follows
 
-[The final acceptance of the Team by the AICC Lead, with the date. Accepted, returned, or rejected, by the Business acceptor (the Domain Owner, or the Executive Sponsor for items across Domains, enabling work, or an Experiment with no Domain), with the date. The support level that applies from now. The follow-on, if any, with its Proposal.]
+[The final acceptance of the Team by the Competence Center Lead, with the date. Accepted, returned, or rejected, by the Business acceptor (the Domain Owner, or the Executive Sponsor for items across Domains, enabling work, or an Experiment with no Domain), with the date. The support level that applies from now. The follow-on, if any, with its Proposal.]

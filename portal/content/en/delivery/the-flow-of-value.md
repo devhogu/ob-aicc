@@ -8,9 +8,9 @@ Value flows from a strategic theme to a task on a board through a small number o
 | --- | --- | --- | --- | --- |
 | Strategic Priority | A strategic theme set with the Board, with an Investment Envelope | A theme with an objective, a scope, and an intended outcome | Priorities | Executive Sponsor |
 | Initiative | A business program that delivers one or more Solutions; an Engagement when it has a client function | A hypothesis, in the Initiative Brief | Portfolio Backlog | Domain Owner, or Executive Sponsor |
-| Solution | A solution or service that an Initiative delivers for a Domain, with a type, a Risk Tier, and an AI Registry entry | A Solution Definition, with its acceptance criteria | The Portfolio | Domain Owner approves; AICC Lead assigns the Risk Tier |
-| Capability | A capability of a Solution, delivered over one or more Program Increments | A hypothesis | Program Backlog | AICC Lead, with the Domain Owner consulted |
-| Feature | A deliverable of a Capability, closed within one Program Increment; run-rate work sits directly under its Standing Initiative and is done within one Iteration | A benefit hypothesis with acceptance criteria in the form Given, When, Then | Program Backlog, then Iteration Backlog | The Team at Iteration Planning; for run-rate work, the AICC Lead at the Weekly Review. The product owner accepts |
+| Solution | A solution or service that an Initiative delivers for a Domain, with a type, a Risk Tier, and an AI Registry entry | A Solution Definition, with its acceptance criteria | The Portfolio | Domain Owner approves; Competence Center Lead assigns the Risk Tier |
+| Capability | A capability of a Solution, delivered over one or more Program Increments | A hypothesis | Program Backlog | Competence Center Lead, with the Domain Owner consulted |
+| Feature | A deliverable of a Capability, closed within one Program Increment; run-rate work sits directly under its Standing Initiative and is done within one Iteration | A benefit hypothesis with acceptance criteria in the form Given, When, Then | Program Backlog, then Iteration Backlog | The Team at Iteration Planning; for run-rate work, the Competence Center Lead at the Weekly Review. The product owner accepts |
 | Work Item | A task of a Team within a Feature | A task | The Team board | The Team |
 
 1.1. The Portfolio Management Model manages the first two levels; the Solution Lifecycle Model governs Capabilities and Features in the Program Backlog, including run-rate Features directly under a Standing Initiative. In Jira, an Initiative sits above the Epic, a Capability is an Epic, a Feature is an issue type, and a Work Item is a sub-task. Epic identifies the Jira item to which a Capability maps; use in another framework is explained in that context and does not change this mapping.
@@ -25,7 +25,7 @@ Value flows from a strategic theme to a task on a board through a small number o
 
 ## 4. The Team
 
-4.1. A Team delivers the work: a Solution Engineer with the Domain Expert, the Domain Owner who owns the outcome and states the value of an item, and the product owner who accepts during development, the AICC Lead while the Team has up to three people. The AICC Lead ranks; the Team pulls what it can finish and decides how it is built.
+4.1. A Team delivers the work: a Solution Engineer with the Domain Expert, the Domain Owner who owns the outcome and states the value of an item, and the product owner who accepts during development, the Competence Center Lead while the Team has up to three people. The Competence Center Lead ranks; the Team pulls what it can finish and decides how it is built.
 
 ## 5. The stream a Feature travels
 

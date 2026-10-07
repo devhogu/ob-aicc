@@ -9,7 +9,7 @@ source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 8
 document: solution-lifecycle-model
 part: 7 of 7
-words: 2871
+words: 2914
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/life-cycle-mana
 
 ## Sections of the source
 
-- 8. Life-cycle management (2871 words)
+- 8. Life-cycle management (2914 words)
 
 ## Outline
 

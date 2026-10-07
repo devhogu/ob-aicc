@@ -1,6 +1,6 @@
 # Adoption and lifecycle management
 
-A Solution is not adopted when it is released; it is adopted when the function uses it, keeps it, and knows when to change or retire it. AICC supports the adoption of AI in each Domain through its Domain Experts, and manages the life of each Solution after delivery: the Handover, support, revision, and retirement, with the health of the Solution read at each review.
+A Solution is not adopted when it is released; it is adopted when the function uses it, keeps it, and knows when to change or retire it. The Competence Center supports the adoption of AI in each Domain through its Domain Experts, and manages the life of each Solution after delivery: the Handover, support, revision, and retirement, with the health of the Solution read at each review.
 
 ## 1. What it is
 
@@ -10,7 +10,7 @@ A Solution is not adopted when it is released; it is adopted when the function u
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - A Domain Expert appointed and coached for a Domain
 - An adoption plan for a Domain: the Solutions, the order, the training, the measures
@@ -41,7 +41,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The Domain Owners appoint their Domain Experts and decide the adoption within their Domains, the acceptance of a Solution, and its retirement; the Executive Sponsor decides for a Service across Domains; the AICC Lead decides whether a change needs a new check or validation.
+8.1. The Domain Owners appoint their Domain Experts and decide the adoption within their Domains, the acceptance of a Solution, and its retirement; the Executive Sponsor decides for a Service across Domains; the Competence Center Lead decides whether a change needs a new check or validation.
 
 ## 9. Rule source
 

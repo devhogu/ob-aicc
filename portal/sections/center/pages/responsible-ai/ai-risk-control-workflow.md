@@ -9,7 +9,7 @@ source: charter/en/workflows/ai-risk-control.md
 source_sections: 1, 2, 3
 document: ai-risk-control-workflow
 part: 1 of 2
-words: 1082
+words: 1100
 series: set-ai-risk-control
 production: generated
 status: scaffold
@@ -25,9 +25,9 @@ Page type: workflow. Address: /responsible-ai/ai-risk-control-workflow/
 
 ## Sections of the source
 
-- 1. Intent and scope (139 words)
-- 2. The Risk Tier (365 words)
-- 3. The gates before first use (578 words)
+- 1. Intent and scope (143 words)
+- 2. The Risk Tier (369 words)
+- 3. The gates before first use (588 words)
 
 ## Outline
 

@@ -1,6 +1,6 @@
 # Records, evidence, and assurance
 
-Governance is only as good as what it can show. AICC keeps three kinds of record, keeps the evidence in one place that is not rewritten, and submits the whole to independent assurance. This part states what is recorded where, what makes a record evidence, how the Registry is kept, and how the three lines of the Bank apply to the unit.
+Governance is only as good as what it can show. The Competence Center keeps three kinds of record, keeps the evidence in one place that is not rewritten, and submits the whole to independent assurance. This part states what is recorded where, what makes a record evidence, how the Registry is kept, and how the three lines of the Bank apply to the unit.
 
 ## 1. Three kinds of record
 
@@ -18,14 +18,14 @@ Governance is only as good as what it can show. AICC keeps three kinds of record
 
 ## 3. How the Registry is kept
 
-3.1. The Registry is a repository with a protected main branch and restricted visibility, and its history is not rewritten. Only the AICC Lead and the named deputy merge to the main branch. Whoever does the work keeps the Record, and the AICC Lead is accountable for all of them. Each Record is kept for the period the retention rules of the Bank require for its type. The closed records are promoted to the corporate share, where the AICC portal links to them; internal audit has read access to the Registry and, read only, to Jira, Confluence, and Service Management. Every tool has a keeper named in the Appointments Record, and the collaboration tooling workflow lists what each tool is used for.
+3.1. The Registry is a repository with a protected main branch and restricted visibility, and its history is not rewritten. Only the Competence Center Lead and the named deputy merge to the main branch. Whoever does the work keeps the Record, and the Competence Center Lead is accountable for all of them. Each Record is kept for the period the retention rules of the Bank require for its type. The closed records are promoted to the corporate share, where the Competence Center portal links to them; internal audit has read access to the Registry and, read only, to Jira, Confluence, and Service Management. Every tool has a keeper named in the Appointments Record, and the collaboration tooling workflow lists what each tool is used for.
 
 ## 4. The three lines, applied to the unit
 
 ```mermaid
 flowchart LR
-  L1["First line<br/>AICC and the Domains<br/>own the risks of their work:<br/>decide, control, record"] --> L2["Independent control<br/>the Control Functions<br/>set the rules of their remit,<br/>clear, validate, may stop"]
-  L2 --> L3["Independent assurance<br/>internal audit<br/>independent assurance over<br/>the Portfolio and AICC"]
+  L1["First line<br/>the Competence Center and the Domains<br/>own the risks of their work:<br/>decide, control, record"] --> L2["Independent control<br/>the Control Functions<br/>set the rules of their remit,<br/>clear, validate, may stop"]
+  L2 --> L3["Independent assurance<br/>internal audit<br/>independent assurance over<br/>the Portfolio and the Competence Center"]
   L1 -.->|"evidence in<br/>the Registry"| L3
   L3 -.->|"findings into<br/>Risks and Issues"| L1
   B(["Board Committee<br/>oversight; reports when<br/>the Sponsor brings them;<br/>escalations always"]) -.-> L3
@@ -33,12 +33,12 @@ flowchart LR
 
 Figure 1: the three lines and the unit.
 
-4.1. AICC and the Domains are the first line: they own the risks of their work, decide, control, and record. The Control Functions stand independent of AICC: they set the rules of their remit, clear business cases, validate Solutions, decide Exceptions, and may stop; AICC is not a Control Function and does not validate its own work. Internal audit gives independent assurance over the Portfolio and over AICC, with read access to everything, and its findings enter the Risks and Issues Record like any deficiency. The Board Committee oversees for the Board: it receives the Quarterly Report or findings when the Executive Sponsor brings them, and it is always told of a major AI Incident and of a risk accepted beyond appetite.
+4.1. The Competence Center and the Domains are the first line: they own the risks of their work, decide, control, and record. The Control Functions stand independent of the Competence Center: they set the rules of their remit, clear business cases, validate Solutions, decide Exceptions, and may stop; The Competence Center is not a Control Function and does not validate its own work. Internal audit gives independent assurance over the Portfolio and over the Competence Center, with read access to everything, and its findings enter the Risks and Issues Record like any deficiency. The Board Committee oversees for the Board: it receives the Quarterly Report or findings when the Executive Sponsor brings them, and it is always told of a major AI Incident and of a risk accepted beyond appetite.
 
 ## 5. What an auditor finds
 
-5.1. For any control, the reference leads to its rule in a document, its evidence record in the Registry, its status in the Control Matrix, and the Steering Summary that reviewed it. For any Solution, the Solution Definition leads to its Risk Tier, its check or validation, its acceptances, its release, and its live reviews. For any decision at the AICC Lead level or above, the Decision Log leads to the facts and the date to revisit. The page Records and systems states where each record is kept and which control it evidences.
+5.1. For any control, the reference leads to its rule in a document, its evidence record in the Registry, its status in the Control Matrix, and the Steering Summary that reviewed it. For any Solution, the Solution Definition leads to its Risk Tier, its check or validation, its acceptances, its release, and its live reviews. For any decision at the Competence Center Lead level or above, the Decision Log leads to the facts and the date to revisit. The page Records and systems states where each record is kept and which control it evidences.
 
 ## 6. Rule source
 
-Operating Model 6.10, 7, and 8.2; Statement of Intent 7.3 and 12.4; AICC Charter 7.2; the collaboration tooling workflow; the Unit governance guide 5 and 6.
+Operating Model 6.10, 7, and 8.2; Statement of Intent 7.3 and 12.4; AI Competence Center Charter 7.2; the collaboration tooling workflow; the Unit governance guide 5 and 6.

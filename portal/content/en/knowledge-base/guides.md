@@ -6,7 +6,7 @@ A guide explains a workflow or an area to the people who use it: who does what, 
 
 | If you ask | Read | Beside |
 | --- | --- | --- |
-| How does a function start with AICC, what does AICC commit to, and what happens after delivery | [Guide: Engagement](page:services/engagement-guide) | How to engage, in Services |
+| How does a function start with the Competence Center, what does the Competence Center commit to, and what happens after delivery | [Guide: Engagement](page:services/engagement-guide) | How to engage, in Services |
 | How does an item move from a need to a retired Solution, and who decides at each step | [Guide: Service delivery](page:delivery/service-delivery-guide) | Service delivery, in Delivery |
 | When is each event held, what does each beat leave on record, and what happens when the calendar is not clean | [Guide: Cadence](page:delivery/cadence-guide) | Cadence, in Delivery |
 | How is the unit directed, reported, and controlled, and how is each control tested | [Guide: Unit governance](page:governance/unit-governance-guide) | Unit governance, in Governance |

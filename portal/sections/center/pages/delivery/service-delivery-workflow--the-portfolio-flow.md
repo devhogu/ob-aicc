@@ -9,7 +9,7 @@ source: charter/en/workflows/service-delivery.md
 source_sections: 4
 document: service-delivery-workflow
 part: 2 of 6
-words: 686
+words: 697
 series: set-service-delivery
 production: generated
 status: scaffold
@@ -25,7 +25,7 @@ Page type: workflow. Address: /delivery/service-delivery-workflow/the-portfolio-
 
 ## Sections of the source
 
-- 4. The portfolio flow: from need to Initiative to Capabilities (686 words)
+- 4. The portfolio flow: from need to Initiative to Capabilities (697 words)
 
 ## Outline
 

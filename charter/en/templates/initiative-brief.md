@@ -2,14 +2,14 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 1.3
+revision: 1.4
 created: 2026-10-02
 revised: 2026-10-07
 ```
 
 # Initiative Brief
 
-**Template.** The business case of an Initiative, in lean form. Copy for each Initiative. The Domain Owner and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in the working state in the Portfolio, and in the Work Items in Jira and Confluence after the cutover. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One page.
+**Template.** The business case of an Initiative, in lean form. Copy for each Initiative. The Domain Owner and the Competence Center Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in the working state in the Portfolio, and in the Work Items in Jira and Confluence after the cutover. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One page.
 
 | Field | Entry |
 | --- | --- |
@@ -49,7 +49,7 @@ Open sections: [none, or the numbers and what is missing]
 
 ## 4. Cost and value
 
-[The estimate for the full scope if the minimum viable product succeeds. The cost and the Investment Envelope as references to the financial planning of the Bank. The expected value and where it is tracked. AICC does not charge the functions; the Domain pays the run, the licenses, and the provider costs from its Envelope (Portfolio Management Model 6.6, AICC Charter 4.1).]
+[The estimate for the full scope if the minimum viable product succeeds. The cost and the Investment Envelope as references to the financial planning of the Bank. The expected value and where it is tracked. The Competence Center does not charge the functions; the Domain pays the run, the licenses, and the provider costs from its Envelope (Portfolio Management Model 6.6, AI Competence Center Charter 4.1).]
 
 ## 5. Risks, dependencies, and Risk Tier
 
@@ -61,7 +61,7 @@ Open sections: [none, or the numbers and what is missing]
 | --- | --- | --- | --- |
 | Approval of the business case: [approved / returned / deferred / rejected] | [Domain Owner, or the Executive Sponsor above a guardrail, across Domains, or for enabling work (Portfolio Management Model 6.3)] | [date] | DR-[yyyy]-[nnn] |
 | Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected: [cleared / not cleared] (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | [Control Function Contacts concerned] | [date] | [Control Sign-Off reference] |
-| Service Agreement issued | [AICC Lead] | [date] | AGR-[nnn] |
+| Service Agreement issued | [Competence Center Lead] | [date] | AGR-[nnn] |
 | Decision after the MVP: [continue / pivot / defer / reject] (Portfolio Management Model 7.2) | [approver of the business case] | [date] | DR-[yyyy]-[nnn] |
 | Acceptance on delivery: [accepted / returned / rejected] (Solution Lifecycle Model 7.3(c)) | [Business acceptor] | [date] | [Outcome Report or release block] |
 

@@ -24,7 +24,7 @@ Two devices carry the commercial judgment of the Portfolio: the one-page busines
 
 ## 3. The ranking
 
-3.1. The approved Initiatives in the Portfolio Backlog are ranked by weighted shortest job first: the sum of the scores of value, urgency, and risk reduction or opportunity, each from one to five, divided by the score of effort, from one to five. The Domain Owner states the value; the AICC Lead scores the other terms and ranks; the AICC Lead may depart from the rank for a stated reason, and records it. The method favors small, valuable, urgent work, which is what a small unit should do first, and it makes the order of the backlog a reasoned record rather than a preference.
+3.1. The approved Initiatives in the Portfolio Backlog are ranked by weighted shortest job first: the sum of the scores of value, urgency, and risk reduction or opportunity, each from one to five, divided by the score of effort, from one to five. The Domain Owner states the value; the Competence Center Lead scores the other terms and ranks; the Competence Center Lead may depart from the rank for a stated reason, and records it. The method favors small, valuable, urgent work, which is what a small unit should do first, and it makes the order of the backlog a reasoned record rather than a preference.
 
 ## 4. The MVP and the decision after it
 

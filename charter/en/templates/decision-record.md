@@ -2,9 +2,9 @@
 id: AICC-TPL-08-EN
 title: Decision Record
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-07
 ```
 
 # Decision Record
@@ -16,8 +16,8 @@ revised: 2026-10-02
 | Identifier | DR-[yyyy]-[nnn] |
 | Title | [verb and subject] |
 | Date | [date] |
-| Type | [Decision of the Executive Sponsor that is hard to reverse / check of the documents (Document Catalog 7.1) / Data Sharing Arrangement / Exception of the AICC Lead / approval of published output / cutover / business case approval / decision after the MVP / release of a Risk Tier 3 Solution / risk beyond the appetite / Strategic Priorities, Envelopes, or Guardrails / the appetite, or the review of the documents / Proposal decision] |
-| Level | [AICC Lead / Executive Sponsor / Domain Owner] |
+| Type | [Decision of the Executive Sponsor that is hard to reverse / check of the documents (Document Catalog 7.1) / Data Sharing Arrangement / Exception of the Competence Center Lead / approval of published output / cutover / business case approval / decision after the MVP / release of a Risk Tier 3 Solution / risk beyond the appetite / Strategic Priorities, Envelopes, or Guardrails / the appetite, or the review of the documents / Proposal decision] |
+| Level | [Competence Center Lead / Executive Sponsor / Domain Owner] |
 | Decided by | [Role and name] |
 | Status | [Decided / Superseded / Revoked] |
 | Expires | [date, for an Exception] |

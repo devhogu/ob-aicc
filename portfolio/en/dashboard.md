@@ -1,6 +1,6 @@
 # Dashboard
 
-The state of the Program Increment at a glance. The AICC Lead updates it at each Weekly Review, from the Records named in each section. Last updated: 2026-10-06. Last Weekly Review baseline: 2026-10-03. Intake update only: INI-013 entered the Funnel; no delivery admission or business approval. The approved English baseline and Standing Initiative establishment are recorded in DR-2026-063; this Dashboard records the resulting state and counts.
+The state of the Program Increment at a glance. The Competence Center Lead updates it at each Weekly Review, from the Records named in each section. Last updated: 2026-10-06. Last Weekly Review baseline: 2026-10-03. Intake update only: INI-013 entered the Funnel; no delivery admission or business approval. The approved English baseline and Standing Initiative establishment are recorded in DR-2026-063; this Dashboard records the resulting state and counts.
 
 ## 1. Program Increment
 

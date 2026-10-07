@@ -9,7 +9,7 @@ source: charter/en/documents/operating-model.md
 source_sections: 4
 document: operating-model
 part: 2 of 3
-words: 1769
+words: 1823
 series: set-operating-model
 series_order: 1
 production: generated
@@ -26,7 +26,7 @@ Page type: document. Address: /organization/operating-model/roles/
 
 ## Sections of the source
 
-- 4. Roles (1769 words)
+- 4. Roles (1823 words)
 
 ## Outline
 

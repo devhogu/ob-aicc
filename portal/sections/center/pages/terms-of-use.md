@@ -24,5 +24,5 @@ Page type: legal. Address: /terms-of-use/
 - Information of the Bank and ownership
 - Standing of the pages: generated and authored, the document prevails, the regulatory pages are orientation, the live records are elsewhere, no right arises from a page
 - Use of the site, the external sources, and AI tools under the AI Policy
-- How the site is kept: the AICC Lead, the life cycle of the charter, the yearly review, the access review
+- How the site is kept: the Competence Center Lead, the life cycle of the charter, the yearly review, the access review
 - Changes and contact

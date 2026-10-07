@@ -1,6 +1,6 @@
 # Business cases and scenarios
 
-Before the Bank invests in a use of AI, it needs to know what the use is, what it would take, what it would return, and what it would risk. AICC does this work with the function: it finds and shapes the needs, writes each as a scenario with its problem, its solution, and its measures, assesses the readiness of the function and its sources, and writes the business case that the Portfolio decides on.
+Before the Bank invests in a use of AI, it needs to know what the use is, what it would take, what it would return, and what it would risk. The Competence Center does this work with the function: it finds and shapes the needs, writes each as a scenario with its problem, its solution, and its measures, assesses the readiness of the function and its sources, and writes the business case that the Portfolio decides on.
 
 ## 1. What it is
 
@@ -10,7 +10,7 @@ Before the Bank invests in a use of AI, it needs to know what the use is, what i
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - A discovery of needs with a function, ending in a ranked backlog of scenarios
 - A scenario written for one need: problem, Solution, people who review the output, leading indicators, size
@@ -24,7 +24,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 4. How it runs
 
-4.1. A head of function brings the need; the AICC Lead takes it in. For an Engagement, the AICC Lead issues a Service Agreement that covers the study. The study runs in one Iteration for a single scenario and in two to three for a Domain, with the Domain Owner and a Domain Expert. The business case goes to the approver; an approved Initiative goes on to its MVP.
+4.1. A head of function brings the need; the Competence Center Lead takes it in. For an Engagement, the Competence Center Lead issues a Service Agreement that covers the study. The study runs in one Iteration for a single scenario and in two to three for a Domain, with the Domain Owner and a Domain Expert. The business case goes to the approver; an approved Initiative goes on to its MVP.
 
 ## 5. What it leads to
 
@@ -40,7 +40,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The AICC Lead takes the need in. The Domain Owner approves the business case; the Executive Sponsor approves it above a guardrail, across Domains, or for enabling work. The Control Function Contacts clear it when Risk Tier 2 or 3 is expected.
+8.1. The Competence Center Lead takes the need in. The Domain Owner approves the business case; the Executive Sponsor approves it above a guardrail, across Domains, or for enabling work. The Control Function Contacts clear it when Risk Tier 2 or 3 is expected.
 
 ## 9. Rule source
 

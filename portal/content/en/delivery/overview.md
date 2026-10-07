@@ -1,6 +1,6 @@
 # Delivery
 
-Delivery is how an approved idea becomes a working Solution in the hands of a function, and how that Solution is kept, changed, and retired. AICC delivers in small steps on a fixed cadence, with the work visible and limited, with quality built into the flow rather than inspected at the end, and with a decision and a record at each step. This course explains the method in ten parts, as a reader new to agile delivery at scale would need it; the Solution Lifecycle Model is the rule and prevails.
+Delivery is how an approved idea becomes a working Solution in the hands of a function, and how that Solution is kept, changed, and retired. The Competence Center delivers in small steps on a fixed cadence, with the work visible and limited, with quality built into the flow rather than inspected at the end, and with a decision and a record at each step. This course explains the method in ten parts, as a reader new to agile delivery at scale would need it; the Solution Lifecycle Model is the rule and prevails.
 
 ## 1. One picture
 

@@ -9,7 +9,7 @@ source: charter/en/guides/unit-governance-guide.md
 source_sections: 1, 2, 3, 4, 5, 6
 document: unit-governance-guide
 part: 3 of 4
-words: 1940
+words: 1970
 series: set-unit-governance
 production: generated
 status: scaffold
@@ -25,12 +25,12 @@ Page type: guide. Address: /governance/unit-governance-guide/
 
 ## Sections of the source
 
-- 1. Purpose and when it applies (77 words)
-- 2. The mandate, the authority, and independence (277 words)
-- 3. The loops (958 words)
-- 4. How a decision moves (274 words)
-- 5. Reporting and assurance (225 words)
-- 6. Where the evidence is (129 words)
+- 1. Purpose and when it applies (79 words)
+- 2. The mandate, the authority, and independence (286 words)
+- 3. The loops (963 words)
+- 4. How a decision moves (277 words)
+- 5. Reporting and assurance (235 words)
+- 6. Where the evidence is (130 words)
 
 ## Outline
 

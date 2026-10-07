@@ -8,8 +8,8 @@ The Portfolio is governed by four loops, each a plan, do, check, act cycle with 
 | --- | --- | --- | --- | --- | --- | --- |
 | Strategic | Yearly, at the yearly Steering in December | The Strategic Priorities, the Envelopes, the Guardrails | The benefit against each Envelope, the results of each priority, the documents and the risk appetite | Renews or adjusts the frame | Executive Sponsor, the AI Steering Committee advising | Priorities, Decision Records |
 | Portfolio review | Quarterly, at the quarterly Steering | The Roadmap and the mix of Initiatives for the next Program Increment within the Envelopes | For each Active Initiative, the leading indicators against the plan, the benefit the Domain Owner confirms, the quarterly risk check | Continues, pivots, defers, or rejects each; adjusts the mix; the Executive Sponsor approves the Quarterly Report and may bring it to the Board Committee or the Board | The approver of each Initiative (Domain Owner or Executive Sponsor); the Executive Sponsor for the mix | Quarterly Report, Registry Snapshot, Decision Log |
-| Portfolio sync | Monthly, at the monthly Steering | The agenda: gate decisions due, the funnel, the places free under the limit | The flow: Active against the limit, time in each step, blockers, a sample of the AICC Lead's decisions | Decides at the gates, ranks, pulls into work, re-ranks, adjusts the limit, unblocks | The approver of each Initiative at the gates; the Executive Sponsor chairs; the AICC Lead runs it, ranks, and pulls | Steering Summary, Portfolio Backlog |
-| Backlog care | Weekly, at the Weekly Review | The triage of the funnel | The flow and the blockers | Scopes needs, writes business cases, obtains clearances, updates the rank, raises items at a gate to the monthly Steering | AICC Lead | Dashboard, Initiative Briefs |
+| Portfolio sync | Monthly, at the monthly Steering | The agenda: gate decisions due, the funnel, the places free under the limit | The flow: Active against the limit, time in each step, blockers, a sample of the Competence Center Lead's decisions | Decides at the gates, ranks, pulls into work, re-ranks, adjusts the limit, unblocks | The approver of each Initiative at the gates; the Executive Sponsor chairs; the Competence Center Lead runs it, ranks, and pulls | Steering Summary, Portfolio Backlog |
+| Backlog care | Weekly, at the Weekly Review | The triage of the funnel | The flow and the blockers | Scopes needs, writes business cases, obtains clearances, updates the rank, raises items at a gate to the monthly Steering | Competence Center Lead | Dashboard, Initiative Briefs |
 
 ## 2. How the loops nest
 
@@ -68,7 +68,7 @@ flowchart LR
   C --> OUT(["To above:<br/>Steering Summary"])
 ```
 
-Figure 4: the portfolio sync loop, monthly, at the monthly Steering, run by the AICC Lead.
+Figure 4: the portfolio sync loop, monthly, at the monthly Steering, run by the Competence Center Lead.
 
 ```mermaid
 flowchart LR
@@ -80,7 +80,7 @@ flowchart LR
   A --> OUT(["To above:<br/>items at a gate,<br/>Dashboard"])
 ```
 
-Figure 5: the backlog care loop, weekly, at the Weekly Review, run by the AICC Lead.
+Figure 5: the backlog care loop, weekly, at the Weekly Review, run by the Competence Center Lead.
 
 ## 4. The Portfolio as a control loop
 
@@ -90,7 +90,7 @@ Figure 5: the backlog care loop, weekly, at the Weekly Review, run by the AICC L
 
 ## 5. The forums
 
-5.1. The monthly Steering is the working body of the Portfolio: the gate decisions due, the funnel, the places free under the limit, and a sample of at least three Decisions of the AICC Lead, chosen by the Executive Sponsor. The quarterly Steering is the review body: each Active Initiative in turn, the AICC Lead showing its indicators, the Domain Owner confirming its benefit, the approver deciding, and the result entered in the Quarterly Report, which the Executive Sponsor approves and may bring to the Board Committee or the Board. The yearly Steering, the December one, is the strategy body. The AI Steering Committee, the heads of the business, technology, risk, and compliance functions the Executive Sponsor names, advises at each and decides nothing.
+5.1. The monthly Steering is the working body of the Portfolio: the gate decisions due, the funnel, the places free under the limit, and a sample of at least three Decisions of the Competence Center Lead, chosen by the Executive Sponsor. The quarterly Steering is the review body: each Active Initiative in turn, the Competence Center Lead showing its indicators, the Domain Owner confirming its benefit, the approver deciding, and the result entered in the Quarterly Report, which the Executive Sponsor approves and may bring to the Board Committee or the Board. The yearly Steering, the December one, is the strategy body. The AI Steering Committee, the heads of the business, technology, risk, and compliance functions the Executive Sponsor names, advises at each and decides nothing.
 
 ## 6. Rule source
 

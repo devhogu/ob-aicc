@@ -1,6 +1,6 @@
 # Research and exploration
 
-AICC watches the field so that the Bank does not have to: the models, the platforms, the methods, and the rules that change every quarter. It digests the changes for the functions concerned, explores what matters in trials, keeps the reference of the industry body of knowledge and of the regulators and acts, and works with other organizations, with providers, and with the professional bodies where the Bank gains from it.
+The Competence Center watches the field so that the Bank does not have to: the models, the platforms, the methods, and the rules that change every quarter. It digests the changes for the functions concerned, explores what matters in trials, keeps the reference of the industry body of knowledge and of the regulators and acts, and works with other organizations, with providers, and with the professional bodies where the Bank gains from it.
 
 ## 1. What it is
 
@@ -8,7 +8,7 @@ AICC watches the field so that the Bank does not have to: the models, the platfo
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - A digest of the circulars and acts of the National Bank and other bodies for compliance, legal, and the functions concerned
 - A technology watch on models, platforms, and methods, with what it means for the Bank

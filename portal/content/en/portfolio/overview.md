@@ -1,6 +1,6 @@
 # The Portfolio
 
-The Portfolio is where the Bank decides what AICC works on. It serves two purposes. As a commercial decision body, it takes in business needs, funds them against the Strategic Priorities, and continues, pivots, defers, or rejects them based on evidence. As a control loop, it runs on a fixed cadence, keeps work in progress low, and feeds what it learns back into the strategy that framed it. This eight-part course explains how the Portfolio works; the Portfolio Management Model is the governing rule and prevails.
+The Portfolio is where the Bank decides what the Competence Center works on. It serves two purposes. As a commercial decision body, it takes in business needs, funds them against the Strategic Priorities, and continues, pivots, defers, or rejects them based on evidence. As a control loop, it runs on a fixed cadence, keeps work in progress low, and feeds what it learns back into the strategy that framed it. This eight-part course explains how the Portfolio works; the Portfolio Management Model is the governing rule and prevails.
 
 ## 1. One picture
 
@@ -12,7 +12,7 @@ flowchart TB
     direction LR
     S(["Strategy of the Bank,<br/>priorities of the Domains"]) --> Y["Yearly Steering<br/>Strategic Priorities,<br/>Envelopes, Guardrails"]
     Y --> F["Funnel<br/>a need is proposed"]
-    F --> G1["Gate: intake<br/>AICC Lead"]
+    F --> G1["Gate: intake<br/>Competence Center Lead"]
     G1 --> R["Reviewing<br/>scope with the<br/>Domain Owner"]
     R --> AN["Analyzing<br/>Initiative Brief,<br/>clearance of the<br/>Control Functions"]
     AN --> G2["Gate: approval<br/>Domain Owner, or<br/>Executive Sponsor"]

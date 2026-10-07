@@ -21,7 +21,7 @@ class NeighbourRendering(unittest.TestCase):
         self.assertEqual(parsed.search, '../../../assets/search-program-ru.json')
         self.assertEqual(parsed.search_all, [f'../../../assets/search-{s}-ru.json' for s in ('center', 'discovery', 'portfolio', 'program', 'lab')])
         self.assertFalse(parsed.global_default)
-        self.assertIn('Весь сайт AICC', markup)
+        self.assertIn('Все разделы', markup)
         self.assertIn('href="../../../en/program/service-resolution/"', markup)
         self.assertIn('Версия 2.2', markup)
         self.assertEqual(parsed.feedback_buttons, 1)

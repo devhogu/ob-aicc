@@ -328,7 +328,7 @@ def index_page(lang, pages, original):
         main = next(n for n in root.walk() if n.tag == 'body')
     title = next((n for n in root.walk() if n.tag == 'title'), None)
     if title:
-        title.children = [html.escape(WORDS[lang]['contents'] + ' · AICC')]
+        title.children = [html.escape(WORDS[lang]['contents'] + ' · Competence Center')]
     main.children = []
     article = main.append(element('article', {'class': 'static-index'}))
     article.append(element('h1', text=WORDS[lang]['contents']))
@@ -387,7 +387,7 @@ def edition(lang, original):
                         n.attrs[key] = url
         files[page[len(lang) + 1:]] = root.render().encode()
     files['aicc.html'] = files['index.html']
-    files['README.txt'] = (f'AICC — {WORDS[lang]["edition"]}\n\nOpen index.html. Keep this entire folder together; the other language folder is not required.\nLight theme only; no JavaScript. Use Topics, native disclosures, browser Find and browser zoom. Select text to copy.\n').encode()
+    files['README.txt'] = (f'AI Competence Center — {WORDS[lang]["edition"]}\n\nOpen index.html. Keep this entire folder together; the other language folder is not required.\nLight theme only; no JavaScript. Use Topics, native disclosures, browser Find and browser zoom. Select text to copy.\n').encode()
     validate_edition(files, lang)
     return files, len(pages), stages
 
@@ -433,9 +433,9 @@ def export_static(source, output):
     for lang in ('en', 'ru'):
         contents, counts[lang], stages[lang] = edition(lang, original)
         files.update({lang + '/' + p: data for p, data in contents.items()})
-    entry = '''<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>AICC · Language editions</title><link rel="stylesheet" href="en/assets/ui/fonts.css"><link rel="stylesheet" href="en/assets/ui/tokens.css"><link rel="stylesheet" href="en/assets/static-export.css"></head><body><main class="static-entry"><h1>AI Competence Center · AICC</h1><nav aria-label="Language editions"><a href="en/index.html" lang="en">English</a><a href="ru/index.html" lang="ru">Русский</a></nav></main></body></html>'''
+    entry = '''<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>AI Competence Center · Language editions</title><link rel="stylesheet" href="en/assets/ui/fonts.css"><link rel="stylesheet" href="en/assets/ui/tokens.css"><link rel="stylesheet" href="en/assets/static-export.css"></head><body><main class="static-entry"><h1>AI Competence Center</h1><nav aria-label="Language editions"><a href="en/index.html" lang="en">English</a><a href="ru/index.html" lang="ru">Русский</a></nav></main></body></html>'''
     files['index.html'] = files['aicc.html'] = entry.encode()
-    files['README.txt'] = b'AICC static language editions\n\nOpen en/index.html for English or ru/index.html for Russian.\nEach language folder is complete and can be copied separately. Keep its own assets and subfolders together.\nNo JavaScript; light theme only. Topics replaces search. Native expandable content and email links work without scripts. Use browser zoom and select text to copy.\nRegenerate: python3 portal/tools/build.py then python3 portal/tools/export_portable.py --static\n'
+    files['README.txt'] = b'AI Competence Center static language editions\n\nOpen en/index.html for English or ru/index.html for Russian.\nEach language folder is complete and can be copied separately. Keep its own assets and subfolders together.\nNo JavaScript; light theme only. Topics replaces search. Native expandable content and email links work without scripts. Use browser zoom and select text to copy.\nRegenerate: python3 portal/tools/build.py then python3 portal/tools/export_portable.py --static\n'
     files['HOW-TO.txt'] = (ROOT / 'portal/PORTABLE-HOWTO.txt').read_bytes()
     source_hash = digest(original)
     if source_hash != digest(snapshot(source)):

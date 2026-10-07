@@ -1,16 +1,16 @@
 # Normatives and processes
 
-Every function writes and keeps normative documents: policies, procedures, regulations, instructions, runbooks, and the process descriptions behind them. AICC helps HR, legal, accounting, compliance, operations, technology, and any other function draft, align, and maintain them with AI, in the style of the Bank and in one voice, under the ownership of the function.
+Every function writes and keeps normative documents: policies, procedures, regulations, instructions, runbooks, and the process descriptions behind them. The Competence Center helps HR, legal, accounting, compliance, operations, technology, and any other function draft, align, and maintain them with AI, in the style of the Bank and in one voice, under the ownership of the function.
 
 ## 1. What it is
 
 1.1. The category covers the drafting of a new document from the facts the function gives and the acts it answers to; the rewrite of an existing set for consistency, style, and coverage; the mapping and the drawing of a process from the documents and the artifacts of the function; the runbooks and the checklists that operations and technology keep; the translation of a set across Kyrgyz, Russian, and English; and the glossary of the function.
 
-1.2. AICC does not set the substance. The function states what the rule is; AICC states it well, once, in its place, and shows where it conflicts with another document.
+1.2. The Competence Center does not set the substance. The function states what the rule is; The Competence Center states it well, once, in its place, and shows where it conflicts with another document.
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - A policy, a procedure, a regulation, an instruction, or a runbook drafted from the facts the function gives
 - A corpus rewritten for one voice, with a consistency and conflict report
@@ -41,7 +41,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The owner of the document in the function decides its content and takes it through the approval route of the Bank. AICC drafts and checks.
+8.1. The owner of the document in the function decides its content and takes it through the approval route of the Bank. The Competence Center drafts and checks.
 
 ## 9. Rule source
 

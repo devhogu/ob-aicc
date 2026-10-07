@@ -48,8 +48,8 @@ ROUTER = 'router'
 REFERENCE_PREFIX = {'portfolio/': 'initiatives/', 'program/': 'projects/'}
 SEARCH_TEXT = {
     'branch': {'en': 'Search this section', 'ru': 'Поиск в разделе'},
-    'router': {'en': 'Search AICC', 'ru': 'Поиск по сайту AICC'},
-    'all': {'en': 'All of AICC', 'ru': 'Весь сайт AICC'},
+    'router': {'en': 'Search the Competence Center', 'ru': 'Поиск по сайту Центра компетенций'},
+    'all': {'en': 'All sections', 'ru': 'Все разделы'},
 }
 CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
 

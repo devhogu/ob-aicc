@@ -7,8 +7,8 @@
   {
    "id": "about",
    "order": 1,
-   "label": "About AICC",
-   "summary": "The intent, the strategy, the mandate, the values, and the place of AICC in the Bank; what we do and how we work in one page each."
+   "label": "About the Competence Center",
+   "summary": "The intent, the strategy, the mandate, the values, and the place of the Competence Center in the Bank; what we do and how we work in one page each."
   },
   {
    "id": "responsible-ai",
@@ -20,37 +20,37 @@
    "id": "services",
    "order": 3,
    "label": "Services",
-   "summary": "The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do."
+   "summary": "The service catalog of the Competence Center: the service lines, how a function engages the Competence Center, the service levels, and what the Competence Center does not do."
   },
   {
    "id": "portfolio",
    "order": 4,
    "label": "Portfolio",
-   "summary": "How AICC decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP."
+   "summary": "How the Competence Center decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP."
   },
   {
    "id": "delivery",
    "order": 5,
    "label": "Delivery",
-   "summary": "How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution."
+   "summary": "How the Competence Center delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution."
   },
   {
    "id": "governance",
    "order": 6,
    "label": "Governance",
-   "summary": "How AICC is directed, controlled, reported, and assured as a unit: decision rights, the control loops, the Steerings, the controls, the records and evidence, the measures."
+   "summary": "How the Competence Center is directed, controlled, reported, and assured as a unit: decision rights, the control loops, the Steerings, the controls, the records and evidence, the measures."
   },
   {
    "id": "organization",
    "order": 7,
    "label": "Organization",
-   "summary": "The Roles, the decision levels, and the bodies of AICC."
+   "summary": "The Roles, the decision levels, and the bodies of the Competence Center."
   },
   {
    "id": "knowledge-base",
    "order": 8,
    "label": "Knowledge base",
-   "summary": "The templates, the guides, the acts and compliance, and the publications of AICC."
+   "summary": "The templates, the guides, the acts and compliance, and the publications of the Competence Center."
   },
   {
    "id": "reference",
@@ -72,10 +72,10 @@
    ],
    "production": "authored",
    "outline": [
-    "Intent of AICC in two sentences, from the Summary of intent (Statement of Intent 2) and the Mission (AICC Charter 2)",
+    "Intent of the Competence Center in two sentences, from the Summary of intent (Statement of Intent 2) and the Mission (Competence Center Charter 2)",
     "Feature: the Strategic Priorities (about/statement-of-intent/strategic-priorities)",
     "Feature: the Maturity Roadmap (about/statement-of-intent/capability-and-maturity-roadmap)",
-    "The map of AICC: what AICC does, how it works, how it is safeguarded, with its text version",
+    "The map of the Competence Center: what the Competence Center does, how it works, how it is safeguarded, with its text version",
     "The eight sections, each with one line",
     "The reading routes",
     "Footer: baseline revision, date, owner, link to Records and systems"
@@ -87,11 +87,11 @@
    "order": 0,
    "type": "section",
    "slug": "/about/",
-   "title": "About AICC",
+   "title": "About the Competence Center",
    "source": [],
    "production": "authored, with a generated list",
    "outline": [
-    "Introduction of three to five lines: The intent, the strategy, the mandate, the values, and the place of AICC in the Bank; what we do and how we work in one page each.",
+    "Introduction of three to five lines: The intent, the strategy, the mandate, the values, and the place of the Competence Center in the Bank; what we do and how we work in one page each.",
     "Statement of what the section does not hold and where it is kept",
     "The pages of the section with one line each (generated)",
     "Related sections"
@@ -276,7 +276,7 @@
    ],
    "document": "statement-of-intent",
    "part": "1 of 4",
-   "words": 1334,
+   "words": 1341,
    "production": "generated"
   },
   {
@@ -313,7 +313,7 @@
    ],
    "document": "statement-of-intent",
    "part": "3 of 4",
-   "words": 1064,
+   "words": 1072,
    "production": "generated"
   },
   {
@@ -332,7 +332,7 @@
    ],
    "document": "statement-of-intent",
    "part": "4 of 4",
-   "words": 235,
+   "words": 240,
    "production": "generated"
   },
   {
@@ -347,9 +347,9 @@
    "outline": [
     "The strategy of the Bank: its mission and the four Strategic Pillars, and the contribution of AI to each (Statement of Intent 3)",
     "The AI adoption strategy: the seven Strategic Priorities (Statement of Intent 9) and the areas of application (8)",
-    "The strategy across the aspects of AICC: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures",
+    "The strategy across the aspects of the Competence Center: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures",
     "The road: the Maturity Roadmap and its measures (Statement of Intent 11)",
-    "How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, AICC Charter 7)"
+    "How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, Competence Center Charter 7)"
    ]
   },
   {
@@ -358,7 +358,7 @@
    "order": 6,
    "type": "document",
    "slug": "/about/aicc-charter/",
-   "title": "AICC Charter",
+   "title": "AI Competence Center Charter",
    "source": [
     "charter/en/documents/aicc-charter.md"
    ],
@@ -377,9 +377,9 @@
    ],
    "production": "authored",
    "outline": [
-    "One page: AICC as the internal consulting and innovation lab of the Bank; research and consulting across strategy, programs, solutions, and ways of working",
+    "One page: The Competence Center as the internal consulting and innovation lab of the Bank; research and consulting across strategy, programs, solutions, and ways of working",
     "The service lines in one line each, with a link to the Services section",
-    "What AICC is not: no AI Platform, no business results of a Domain, no Control Function rules, no validation of its own work, no delivery at scale (AICC Charter 3.2)"
+    "What the Competence Center is not: no AI Platform, no business results of a Domain, no Control Function rules, no validation of its own work, no delivery at scale (Competence Center Charter 3.2)"
    ]
   },
   {
@@ -421,7 +421,7 @@
    "order": 10,
    "type": "outline",
    "slug": "/about/charter-outline/",
-   "title": "Explore AICC",
+   "title": "Explore the Competence Center",
    "source": [
     "charter/en/README.md",
     "charter/en/executive-summary.md",
@@ -469,7 +469,7 @@
     "Information of the Bank and ownership",
     "Standing of the pages: generated and authored, the document prevails, the regulatory pages are orientation, the live records are elsewhere, no right arises from a page",
     "Use of the site, the external sources, and AI tools under the AI Policy",
-    "How the site is kept: the AICC Lead, the life cycle of the charter, the yearly review, the access review",
+    "How the site is kept: the Competence Center Lead, the life cycle of the charter, the yearly review, the access review",
     "Changes and contact"
    ]
   },
@@ -578,7 +578,7 @@
    "series_title": "Advise and formulate",
    "tab": "Strategy and governance",
    "outline": [
-    "Area: Advise and formulate. Strategy, charter, operating and governance model, portal and repository of a function or an Initiative, drafted with AI, as AICC did for itself",
+    "Area: Advise and formulate. Strategy, charter, operating and governance model, portal and repository of a function or an Initiative, drafted with AI, as the Competence Center did for itself",
     "What the function receives, how it runs, and what it leads to",
     "The Package; run-rate work or an Initiative; who decides",
     "Rule source: Business Model 2.4, 4.5, and 4.10"
@@ -762,10 +762,10 @@
    "series_title": "Build and run",
    "tab": "Platforms",
    "outline": [
-    "Area: Build and run. The shared engines and environments that AICC builds, the requirements of AICC on the AI Platform, and the Handover of an engine to an IT function of the Bank",
+    "Area: Build and run. The shared engines and environments that the Competence Center builds, the requirements of the Competence Center on the AI Platform, and the Handover of an engine to an IT function of the Bank",
     "What the function receives, how it runs, and what it leads to",
     "The Package; run-rate work or an Initiative; who decides",
-    "Rule source: AICC Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8"
+    "Rule source: Competence Center Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8"
    ]
   },
   {
@@ -880,7 +880,7 @@
     "Area: Assurance. The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes",
     "What the function receives, how it runs, and what it leads to",
     "The Package; run-rate work or an Initiative; who decides",
-    "Rule source: AI Policy 3; Operating Model 4.4; AICC Charter 5"
+    "Rule source: AI Policy 3; Operating Model 4.4; Competence Center Charter 5"
    ]
   },
   {
@@ -903,7 +903,7 @@
     "Area: Assurance. Adopted Solutions, the review of the Solutions in use, AI Incidents, and changes followed through the Registry and reported in the Quarterly Report",
     "What the function receives, how it runs, and what it leads to",
     "The Package; run-rate work or an Initiative; who decides",
-    "Rule source: Business Model 2.3; AI Policy 5; AICC Charter 7"
+    "Rule source: Business Model 2.3; AI Policy 5; Competence Center Charter 7"
    ]
   },
   {
@@ -923,9 +923,9 @@
    "tab": "How to engage",
    "outline": [
     "The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)",
-    "The function commits to nothing; AICC works on a best-effort basis within its capability",
-    "Support levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)",
-    "What AICC does not do (AICC Charter 3.2)",
+    "The function commits to nothing; The Competence Center works on a best-effort basis within its capability",
+    "Support levels: none, on demand, agreed response targets, run by the Competence Center, and the Solution type each gives (Engagement guide 6)",
+    "What the Competence Center does not do (Competence Center Charter 3.2)",
     "Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report"
    ]
   },
@@ -1034,7 +1034,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "1 of 5",
-   "words": 746,
+   "words": 761,
    "production": "generated"
   },
   {
@@ -1052,7 +1052,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "2 of 5",
-   "words": 1712,
+   "words": 1726,
    "production": "generated"
   },
   {
@@ -1070,7 +1070,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "3 of 5",
-   "words": 1371,
+   "words": 1382,
    "production": "generated"
   },
   {
@@ -1089,7 +1089,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "4 of 5",
-   "words": 1265,
+   "words": 1274,
    "production": "generated"
   },
   {
@@ -1108,7 +1108,7 @@
    ],
    "document": "portfolio-management-model",
    "part": "5 of 5",
-   "words": 1220,
+   "words": 1229,
    "production": "generated"
   },
   {
@@ -1127,7 +1127,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "1 of 7",
-   "words": 424,
+   "words": 436,
    "production": "generated"
   },
   {
@@ -1145,7 +1145,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "2 of 7",
-   "words": 1481,
+   "words": 1490,
    "production": "generated"
   },
   {
@@ -1163,7 +1163,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "3 of 7",
-   "words": 1398,
+   "words": 1408,
    "production": "generated"
   },
   {
@@ -1181,7 +1181,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "4 of 7",
-   "words": 1239,
+   "words": 1247,
    "production": "generated"
   },
   {
@@ -1199,7 +1199,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "5 of 7",
-   "words": 1807,
+   "words": 1816,
    "production": "generated"
   },
   {
@@ -1217,7 +1217,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "6 of 7",
-   "words": 1340,
+   "words": 1361,
    "production": "generated"
   },
   {
@@ -1235,7 +1235,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "7 of 7",
-   "words": 2871,
+   "words": 2914,
    "production": "generated"
   },
   {
@@ -1255,7 +1255,7 @@
    ],
    "document": "service-delivery-workflow",
    "part": "1 of 6",
-   "words": 946,
+   "words": 961,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Intent and levels",
@@ -1276,7 +1276,7 @@
    ],
    "document": "service-delivery-workflow",
    "part": "2 of 6",
-   "words": 686,
+   "words": 697,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Portfolio flow",
@@ -1297,7 +1297,7 @@
    ],
    "document": "service-delivery-workflow",
    "part": "3 of 6",
-   "words": 1082,
+   "words": 1095,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Execution",
@@ -1321,7 +1321,7 @@
    ],
    "document": "service-delivery-workflow",
    "part": "4 of 6",
-   "words": 1732,
+   "words": 1754,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "After delivery",
@@ -1345,7 +1345,7 @@
    ],
    "document": "service-delivery-guide",
    "part": "5 of 6",
-   "words": 1734,
+   "words": 1763,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Guide: flow and decisions",
@@ -1368,7 +1368,7 @@
    ],
    "document": "service-delivery-guide",
    "part": "6 of 6",
-   "words": 616,
+   "words": 627,
    "series": "set-service-delivery",
    "series_title": "Service delivery",
    "tab": "Guide: after delivery",
@@ -1434,7 +1434,7 @@
    ],
    "document": "cadence-workflow",
    "part": "3 of 5",
-   "words": 1244,
+   "words": 1252,
    "series": "set-cadence",
    "series_title": "Cadence",
    "tab": "What each event carries",
@@ -1458,7 +1458,7 @@
    ],
    "document": "cadence-workflow",
    "part": "4 of 5",
-   "words": 303,
+   "words": 305,
    "series": "set-cadence",
    "series_title": "Cadence",
    "tab": "Rules and calendar",
@@ -1484,7 +1484,7 @@
    ],
    "document": "cadence-guide",
    "part": "5 of 5",
-   "words": 1551,
+   "words": 1560,
    "series": "set-cadence",
    "series_title": "Cadence",
    "tab": "Guide: Cadence",
@@ -1914,7 +1914,7 @@
    ],
    "document": "operating-model",
    "part": "1 of 3",
-   "words": 418,
+   "words": 447,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Foundations",
@@ -1936,7 +1936,7 @@
    ],
    "document": "operating-model",
    "part": "2 of 3",
-   "words": 1769,
+   "words": 1823,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Roles",
@@ -1958,7 +1958,7 @@
    ],
    "document": "operating-model",
    "part": "3 of 3",
-   "words": 793,
+   "words": 797,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Decisions",
@@ -1982,7 +1982,7 @@
    ],
    "document": "organization-guide",
    "part": "1 of 3",
-   "words": 931,
+   "words": 946,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Guide: Roles and profiles",
@@ -2004,7 +2004,7 @@
    ],
    "document": "organization-guide",
    "part": "2 of 3",
-   "words": 2038,
+   "words": 2055,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Guide: Who is responsible",
@@ -2030,7 +2030,7 @@
    ],
    "document": "organization-guide",
    "part": "3 of 3",
-   "words": 1802,
+   "words": 1853,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Guide: Bodies and people",
@@ -2043,13 +2043,13 @@
    "order": 2,
    "type": "outline",
    "slug": "/organization/the-place-of-aicc-in-the-bank/",
-   "title": "The place of AICC in the Bank",
+   "title": "The place of the Competence Center in the Bank",
    "source": [
     "portal/content/en/organization/the-place-of-aicc-in-the-bank.md"
    ],
    "production": "authored; explanatory, the Operating Model is the rule",
    "outline": [
-    "Mandate and reporting line; what AICC is; what it is not; whom it works with"
+    "Mandate and reporting line; what the Competence Center is; what it is not; whom it works with"
    ],
    "series": "organization-course",
    "series_title": "Organization",
@@ -2176,7 +2176,7 @@
    "order": 22,
    "type": "role",
    "slug": "/organization/roles/aicc-lead/",
-   "title": "AICC Lead",
+   "title": "Competence Center Lead",
    "source": [
     "charter/en/documents/operating-model.md",
     "charter/en/guides/organization-guide.md"
@@ -2434,7 +2434,7 @@
    ],
    "document": "ai-risk-control-workflow",
    "part": "1 of 2",
-   "words": 1082,
+   "words": 1100,
    "series": "set-ai-risk-control",
    "series_title": "AI risk and control workflow",
    "tab": "Risk Tier and gates",
@@ -2460,7 +2460,7 @@
    ],
    "document": "ai-risk-control-workflow",
    "part": "2 of 2",
-   "words": 1266,
+   "words": 1285,
    "series": "set-ai-risk-control",
    "series_title": "AI risk and control workflow",
    "tab": "In operation and situations",
@@ -2481,7 +2481,7 @@
    ],
    "document": "operating-model",
    "part": "governance view",
-   "words": 2908,
+   "words": 2936,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "The control loops",
@@ -2503,7 +2503,7 @@
    ],
    "document": "operating-model",
    "part": "governance view",
-   "words": 876,
+   "words": 892,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Records and evidence",
@@ -2525,7 +2525,7 @@
    ],
    "document": "operating-model",
    "part": "governance view",
-   "words": 2402,
+   "words": 2434,
    "series": "set-operating-model",
    "series_title": "Operating Model",
    "tab": "Controls and the control catalog",
@@ -2553,7 +2553,7 @@
    ],
    "document": "solution-lifecycle-model",
    "part": "7 of 7 (governance view)",
-   "words": 2286,
+   "words": 2296,
    "production": "generated"
   },
   {
@@ -2573,7 +2573,7 @@
    ],
    "document": "unit-governance-workflow",
    "part": "1 of 4",
-   "words": 979,
+   "words": 986,
    "series": "set-unit-governance",
    "series_title": "Unit governance",
    "tab": "Loops and decisions",
@@ -2599,7 +2599,7 @@
    ],
    "document": "unit-governance-workflow",
    "part": "2 of 4",
-   "words": 1284,
+   "words": 1302,
    "series": "set-unit-governance",
    "series_title": "Unit governance",
    "tab": "Events and sequences",
@@ -2625,7 +2625,7 @@
    ],
    "document": "unit-governance-guide",
    "part": "3 of 4",
-   "words": 1940,
+   "words": 1970,
    "series": "set-unit-governance",
    "series_title": "Unit governance",
    "tab": "Guide: governance",
@@ -2647,7 +2647,7 @@
    ],
    "document": "unit-governance-guide",
    "part": "4 of 4",
-   "words": 1949,
+   "words": 1963,
    "series": "set-unit-governance",
    "series_title": "Unit governance",
    "tab": "Guide: the controls",
@@ -3024,7 +3024,7 @@
    ],
    "production": "authored",
    "outline": [
-    "Short answers grounded in the charter: using AI at work, starting with AICC, risk and approval, the unit"
+    "Short answers grounded in the charter: using AI at work, starting with the Competence Center, risk and approval, the unit"
    ],
    "series": "knowledge-base-course",
    "series_title": "Knowledge base",
@@ -3045,7 +3045,7 @@
    "series_title": "Knowledge base",
    "part": "6 of 7",
    "tab": "Acts and compliance",
-   "production": "authored; curated by the AICC Lead with the Control Function Contacts",
+   "production": "authored; curated by the Competence Center Lead with the Control Function Contacts",
    "outline": [
     "DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution",
     "For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it",
@@ -3130,7 +3130,7 @@
    "tab": "Regulators and acts",
    "outline": [
     "The regulators, acts, standards, and frameworks the Bank is aware of, by jurisdiction, with a page for each",
-    "The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how AICC complies"
+    "The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how the Competence Center complies"
    ]
   },
   {

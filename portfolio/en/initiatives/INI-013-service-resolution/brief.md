@@ -13,7 +13,7 @@
 | Requester | Not recorded; confirm at intake. Existing AICC-authored project proposal |
 | Domain Owner (represents the client function) | Head of Customer Service is the intended role; appointment not confirmed |
 | Related Initiative | INI-006 Customer experience intelligence: discovery; shared source needs, separate case-resolution outcome |
-| Solutions expected | Experiment in the Lab on read-only historical extracts, then a Service run by AICC with a sunset rule for one Customer Service team; identifiers not assigned |
+| Solutions expected | Experiment in the Lab on read-only historical extracts, then a Service run by the Competence Center with a sunset rule for one Customer Service team; identifiers not assigned |
 | Business acceptor | Customer Service Domain Owner; appointment and applicable approval guardrails to be confirmed |
 | Service Agreement | Not issued |
 | Period | Not set |
@@ -55,15 +55,15 @@ Out of scope: Model-held tools or writes; autonomous customer messages; moving o
 
 ## 4. Cost and value
 
-Effort by Role and phase, business-team availability, hosting/integration/run costs, full-scope estimates and the Service sunset rule are not recorded. The AICC Lead estimates with the responsible business and IT roles. Bank figures remain references to financial planning.
+Effort by Role and phase, business-team availability, hosting/integration/run costs, full-scope estimates and the Service sunset rule are not recorded. The Competence Center Lead estimates with the responsible business and IT roles. Bank figures remain references to financial planning.
 
-PRI-1 has no recorded Investment Envelope. Any cost beyond staff time requires the Executive Sponsor to settle the Envelope before approval. AICC does not charge the functions; the Domain pays run, license and provider costs from its Envelope. Value is tested through section 2, not assumed from this design.
+PRI-1 has no recorded Investment Envelope. Any cost beyond staff time requires the Executive Sponsor to settle the Envelope before approval. The Competence Center does not charge the functions; the Domain pays run, license and provider costs from its Envelope. Value is tested through section 2, not assumed from this design.
 
 ## 5. Risks, dependencies, and Risk Tier
 
 Expected Risk Tier: Risk Tier 2, because customer personal data informs employee advice. This is expected, not assigned or cleared. The assistant holds no tools and writes nothing; each write is an employee action. Model-held writes would raise the Tier.
 
-Control Functions to clear the business case: Model risk, information security, data protection, compliance and legal. While the AICC Lead builds, the Executive Sponsor approves the Solution Definition and assigns its Risk Tier; testing/checking must be by someone other than the builder, under Operating Model 4.4.
+Control Functions to clear the business case: Model risk, information security, data protection, compliance and legal. While the Competence Center Lead builds, the Executive Sponsor approves the Solution Definition and assigns its Risk Tier; testing/checking must be by someone other than the builder, under Operating Model 4.4.
 
 Dependencies: DEP-014 applies to clearance and validation. The proposal shares source needs with INI-006 through DEP-008 and DEP-009; those remain Open and do not establish access or permission for this project. Candidates to register at intake include the process function and Domain Experts, approved procedures/action list, source-owner extracts/live reads, IT identity/desktop/integration/environment/change support, Platform Owner hosting/gateway/logging/monitoring and source-owner baseline reports. Their project-specific identifiers, owners and needed-by dates are not yet recorded.
 
@@ -73,10 +73,10 @@ Risks include missing read interfaces/customer keys/timestamps, interpretation q
 
 | Decision | By | Date | Record |
 | --- | --- | --- | --- |
-| Intake screening and decision to enter Discovery | AICC Lead with Customer Service Domain Owner | | |
+| Intake screening and decision to enter Discovery | Competence Center Lead with Customer Service Domain Owner | | |
 | Approval of the business case | Domain Owner; Executive Sponsor if guardrails or cross-Domain scope require it | | |
 | Control Function clearance | Model risk, information security, data protection, compliance and legal | | |
-| Service Agreement issued | AICC Lead | | |
+| Service Agreement issued | Competence Center Lead | | |
 | Decision after the MVP | Business-case approver | | |
 | Acceptance on delivery | Business acceptor | | |
 

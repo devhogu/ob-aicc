@@ -9,7 +9,7 @@ source: charter/en/workflows/unit-governance.md
 source_sections: 1, 2, 3
 document: unit-governance-workflow
 part: 1 of 4
-words: 979
+words: 986
 series: set-unit-governance
 production: generated
 status: scaffold
@@ -25,9 +25,9 @@ Page type: workflow. Address: /governance/unit-governance-workflow/
 
 ## Sections of the source
 
-- 1. Intent and scope (148 words)
-- 2. The loops on the Steerings (685 words)
-- 3. How a decision escalates (146 words)
+- 1. Intent and scope (152 words)
+- 2. The loops on the Steerings (687 words)
+- 3. How a decision escalates (147 words)
 
 ## Outline
 

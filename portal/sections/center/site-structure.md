@@ -1,10 +1,10 @@
 # Portal site structure: scaffolding
 
-Working design for the structure of the AICC charter site. It positions the existing charter content and defines no content of its own. The charter folder stays the only source of the text, and this page is the plan for where each piece appears. The machine-readable form is `sitemap.json`, the table of all pages is `inventory.md`, the outline of each page is in `pages/`, and the folder is described in the README. The reasons for the placement are in `content-fit.md`. It is explanatory and is not a document of the charter.
+Working design for the structure of the Competence Center charter site. It positions the existing charter content and defines no content of its own. The charter folder stays the only source of the text, and this page is the plan for where each piece appears. The machine-readable form is `sitemap.json`, the table of all pages is `inventory.md`, the outline of each page is in `pages/`, and the folder is described in the README. The reasons for the placement are in `content-fit.md`. It is explanatory and is not a document of the charter.
 
 ## 1. What kind of site this is
 
-The site is a static knowledge base and the department site of AICC. It states what AICC is, what it does, how it works, how it is organized, how it uses AI responsibly, and how it is governed. Internal audit and other reviewers use it as a reference, and they are served by a reading route and not by the organizing principle. The live matters stay in other systems: the Registry holds the records, Jira holds the working state, Confluence holds the working documents, and Service Management holds requests and incidents. The site names those systems and does not reproduce their content.
+The site is a static knowledge base and the department site of the Competence Center. It states what the Competence Center is, what it does, how it works, how it is organized, how it uses AI responsibly, and how it is governed. Internal audit and other reviewers use it as a reference, and they are served by a reading route and not by the organizing principle. The live matters stay in other systems: the Registry holds the records, Jira holds the working state, Confluence holds the working documents, and Service Management holds requests and incidents. The site names those systems and does not reproduce their content.
 
 ## 2. How site structures are drawn
 
@@ -29,9 +29,9 @@ The site has a home page, eight sections, and 73 pages in the scaffold, and the 
 ```mermaid
 flowchart LR
   H["Home<br/>intent, Strategic Priorities, Maturity Roadmap, map, routes"]
-  A["1 About AICC"]
-  W["2 What AICC does"]
-  M["3 How AICC works"]
+  A["1 About the Competence Center"]
+  W["2 What the Competence Center does"]
+  M["3 How the Competence Center works"]
   O["4 Organization"]
   R["5 Responsible AI"]
   G["6 Governance and oversight"]
@@ -47,9 +47,9 @@ flowchart LR
   H --> X
   A --> A1["Statement of Intent: 4 pages"]
   A --> A2["Strategy"]
-  A --> A2b["AICC Charter"]
+  A --> A2b["Competence Center Charter"]
   A --> A3["Values and principles"]
-  A --> A4["Explore AICC"]
+  A --> A4["Explore the Competence Center"]
   W --> W1["Business Model"]
   W --> W2["Engagement workflow and guide"]
   M --> M1["Portfolio Management Model: 5 pages"]
@@ -74,7 +74,7 @@ flowchart LR
 
 Figure 1: the sitemap, with the pages that sit under each section.
 
-Three documents serve more than one section. The Operating Model supplies Organization (foundations, Roles, Decisions) and Governance and oversight (control loops, records and evidence, controls). The Solution Lifecycle Model supplies How AICC works (sections 1 to 8) and Governance and oversight (sections 9 and 10). The Statement of Intent supplies About AICC and is featured on the home page. Responsible AI links the AICC Charter 5 (the AI Risk Appetite Statement) and the Solution Lifecycle Model 7 (the gates before use). About AICC links "also stated in" for Business Model 2 and Operating Model 2.
+Three documents serve more than one section. The Operating Model supplies Organization (foundations, Roles, Decisions) and Governance and oversight (control loops, records and evidence, controls). The Solution Lifecycle Model supplies How the Competence Center works (sections 1 to 8) and Governance and oversight (sections 9 and 10). The Statement of Intent supplies About the Competence Center and is featured on the home page. Responsible AI links the Competence Center Charter 5 (the AI Risk Appetite Statement) and the Solution Lifecycle Model 7 (the gates before use). About the Competence Center links "also stated in" for Business Model 2 and Operating Model 2.
 
 ## 4. Navigation model
 
@@ -97,7 +97,7 @@ Three documents serve more than one section. The Operating Model supplies Organi
 
 | Type | Used for | Elements from top to bottom |
 | --- | --- | --- |
-| Home | The entry | Intent in two sentences; the Strategic Priorities and the Maturity Roadmap; the map of AICC; the eight sections; the reading routes; the baseline stamp |
+| Home | The entry | Intent in two sentences; the Strategic Priorities and the Maturity Roadmap; the map of the Competence Center; the eight sections; the reading routes; the baseline stamp |
 | Section | The grouping | Introduction; the pages of the section with one line each; the related sections |
 | Document | A document, or a part of one | Title; purpose; revision, date, and owner; the parts of the document; outline; the clauses with permalinks and a cited-by line; related pages; change history; previous and next |
 | Workflow | The six workflows | Title and purpose; the companion guide; the diagram with its text version and clause links; the steps table; the actors; the situations; the templates that it uses; previous and next |
@@ -115,7 +115,7 @@ The home page:
 ```text
 +----------------------------------------------------------------------+
 | O!Bank | AI Competence Center      [Search........]   EN | RU   (o)   |
-| 1 About  2 What AICC does  3 How it works  4 Organization  5 Resp. AI |
+| 1 About  2 What the Competence Center does  3 How it works  4 Organization  5 Resp. AI |
 | 6 Governance  7 Library  8 Reference                                  |
 +----------------------------------------------------------------------+
 |  The AI Competence Center explores, trials, and proves the use of AI  |
@@ -123,9 +123,9 @@ The home page:
 |                                                                      |
 |  Strategic Priorities (7)              Maturity Roadmap (levels)      |
 |                                                                      |
-|  [ Map of AICC: what it does -> how it works -> how it is safeguarded ]|
+|  [ Map of the Competence Center: what it does -> how it works -> how it is safeguarded ]|
 |                                                                      |
-|  About AICC        What AICC does      How AICC works                 |
+|  About the Competence Center        What the Competence Center does      How the Competence Center works                 |
 |  one line          one line            one line                       |
 |  Organization      Responsible AI      Governance and oversight       |
 |  one line          one line            one line                       |
@@ -144,7 +144,7 @@ A part of a document:
 | Home > Organization > Operating Model: Roles                          |
 +----------------------------------------------------------------------+
 | Operating Model                                    Rev 1.0 | 2026-10-02|
-| Parts: Foundations | [Roles] | Decisions        Owner: AICC Lead      |
+| Parts: Foundations | [Roles] | Decisions        Owner: Competence Center Lead      |
 |                                                                      |
 | On this page         | 4.2  The Roles and their decisions   [link]   |
 |  4.1 ...             |      text of the clause...                    |
@@ -159,7 +159,7 @@ A workflow page:
 
 ```text
 +----------------------------------------------------------------------+
-| Home > How AICC works > Service delivery workflow                     |
+| Home > How the Competence Center works > Service delivery workflow                     |
 | Purpose: one sentence.                       Companion: Service guide |
 | [ Diagram ]  Read as text: step 1 ... step 2 ...  (clause links)      |
 | Steps: who | when | record | clause                                   |
@@ -180,12 +180,12 @@ The charter text is complete. The site needs only the following short authored i
 | --- | --- | --- |
 | Home introduction | Two sentences | From the Summary of intent and the Mission |
 | Eight section introductions | Three to five lines each | State what the section covers and what is kept elsewhere |
-| The map of AICC | One diagram and a text version | Connects what AICC does, how it works, and how it is safeguarded |
-| About AICC | One page, a summary of AICC | What it is, the goal, the strategy, the approach, the authority, the safeguards, with links to the deep pages |
+| The map of the Competence Center | One diagram and a text version | Connects what the Competence Center does, how it works, and how it is safeguarded |
+| About the Competence Center | One page, a summary of the Competence Center | What it is, the goal, the strategy, the approach, the authority, the safeguards, with links to the deep pages |
 | Values and principles | One page | The values and the principles of adoption, application, work, and delivery, each with what it applies to |
 | Reading routes | The five routes | Based on the routes of the charter README |
 | Records and systems | One table | Built from the Operating Model 7 and the Registry README |
-| Explore AICC | An introduction | The rest is generated from the charter README; the last page of About AICC |
+| Explore the Competence Center | An introduction | The rest is generated from the charter README; the last page of About the Competence Center |
 
 ## 9. Open points
 
@@ -196,23 +196,23 @@ The charter text is complete. The site needs only the following short authored i
 5. Whether the five-line summaries are authored or taken from the purpose clause.
 6. The language of the first release: the charter text is in English.
 
-## 10. The structure in use: AICC as a consulting organization (adopted 2026-10-02)
+## 10. The structure in use: The Competence Center as a consulting organization (adopted 2026-10-02)
 
-The site was first built on the sitemap of section 3. After the About section was settled, the review of What AICC does found that the offer of AICC is not visible in one place: the services sat scattered in the Business Model 4, the Solution Lifecycle Model 8, the Engagement guide, and the Statement of Intent 10, and the navigation read as an index of documents and not as the site of a services organization. The following structure replaced it on 2026-10-02 and is the one the site is built from. `make_pages.py` writes it; `make_pages.py --previous` writes the first structure to `previous/` for the record. The new pages are authored in `portal/content/` as first editions for review.
+The site was first built on the sitemap of section 3. After the About section was settled, the review of What the Competence Center does found that the offer of the Competence Center is not visible in one place: the services sat scattered in the Business Model 4, the Solution Lifecycle Model 8, the Engagement guide, and the Statement of Intent 10, and the navigation read as an index of documents and not as the site of a services organization. The following structure replaced it on 2026-10-02 and is the one the site is built from. `make_pages.py` writes it; `make_pages.py --previous` writes the first structure to `previous/` for the record. The new pages are authored in `portal/content/` as first editions for review.
 
 ### 10.1. The model
 
-AICC presents itself as the internal consulting and innovation lab of the Bank: a research and consulting organization across strategy, programs, solutions, and ways of working, and a small delivery unit that proves and builds and relies on the platform teams and IT to scale. The pattern follows how consulting houses and internal AI centers present themselves: the service lines in one place, the method apart from the offer, the products that the unit runs as a catalog, a visible front door, enablement, and governance.
+The Competence Center presents itself as the internal consulting and innovation lab of the Bank: a research and consulting organization across strategy, programs, solutions, and ways of working, and a small delivery unit that proves and builds and relies on the platform teams and IT to scale. The pattern follows how consulting houses and internal AI centers present themselves: the service lines in one place, the method apart from the offer, the products that the unit runs as a catalog, a visible front door, enablement, and governance.
 
 ### 10.2. The sections
 
 | Order | Section | Address | Holds | Change |
 | --- | --- | --- | --- | --- |
-| 1 | About AICC | /about/ | Statement of Intent (four pages), Strategy, Charter, What we do, How we work, Values and principles, Explore AICC | two one-page summaries move in |
+| 1 | About the Competence Center | /about/ | Statement of Intent (four pages), Strategy, Charter, What we do, How we work, Values and principles, Explore the Competence Center | two one-page summaries move in |
 | 2 | Responsible AI | /responsible-ai/ | AI Policy, AI risk and control workflow | moves up, before the offer |
-| 3 | Services | /services/ | The service lines (seven pages), How to engage, the Service catalog, Business Model, Engagement workflow and guide | new; replaces What AICC does |
-| 4 | Portfolio | /portfolio/ | Portfolio Management Model (five pages) | split out of How AICC works |
-| 5 | Delivery | /delivery/ | Solution Lifecycle Model (seven pages), Service delivery workflow and guide, Cadence workflow and guide, Collaboration tooling workflow | the rest of How AICC works |
+| 3 | Services | /services/ | The service lines (seven pages), How to engage, the Service catalog, Business Model, Engagement workflow and guide | new; replaces What the Competence Center does |
+| 4 | Portfolio | /portfolio/ | Portfolio Management Model (five pages) | split out of How the Competence Center works |
+| 5 | Delivery | /delivery/ | Solution Lifecycle Model (seven pages), Service delivery workflow and guide, Cadence workflow and guide, Collaboration tooling workflow | the rest of How the Competence Center works |
 | 6 | Governance and oversight | /governance/ | as in section 3 | moves down, under Delivery |
 | 7 | Organization | /organization/ | as in section 3 | moves down; see decision 4 |
 | 8 | Knowledge base | /knowledge-base/ | The 13 templates, the list of the guides, Acts and compliance, Publications | replaces Library; three pages added |
@@ -220,7 +220,7 @@ AICC presents itself as the internal consulting and innovation lab of the Bank: 
 
 ```mermaid
 flowchart LR
-  H["AICC"] --> A["About AICC"]
+  H["the Competence Center"] --> A["About the Competence Center"]
   H --> R["Responsible AI"]
   H --> S["Services"]
   H --> P["Portfolio"]
@@ -231,8 +231,8 @@ flowchart LR
   H --> X["Reference"]
   A --> A1["Statement of Intent · Strategy · Charter"]
   A --> A2["What we do · How we work"]
-  A --> A3["Values and principles · Explore AICC"]
-  S --> S1["Service lines: Advisory · Proof and prototyping · Solution delivery · AI services run by AICC · Enablement · Oversight of Adopted Solutions · Research and partnering"]
+  A --> A3["Values and principles · Explore the Competence Center"]
+  S --> S1["Service lines: Advisory · Proof and prototyping · Solution delivery · AI services run by the Competence Center · Enablement · Oversight of Adopted Solutions · Research and partnering"]
   S --> S2["How to engage · Service catalog"]
   S --> S3["Business Model · Engagement workflow and guide"]
   P --> P1["Portfolio Management Model: 5 pages"]
@@ -242,23 +242,23 @@ flowchart LR
   X --> X1["Vocabulary · Document Catalog · Change history · Records and systems · Industry body of knowledge · Regulators and acts"]
 ```
 
-The order places what AICC stands for and the rules of use first, the offer and the method next, the control of the unit after the method, and the knowledge last.
+The order places what the Competence Center stands for and the rules of use first, the offer and the method next, the control of the unit after the method, and the knowledge last.
 
 ### 10.3. The Services section page
 
 The section page is the core of the refactoring, and it is authored for the site. It has five parts.
 
-1. The lead: AICC as the internal consulting and innovation lab of the Bank; what it researches, advises on, proves, builds, runs, and teaches; and that it relies on the platform teams and IT to scale.
-2. The service lines as cards, each opening a one-page description: what it is, what the client receives, the typical shape, what it leads to, the templates used, who decides, and the governing clauses. The lines are Advisory; Proof and prototyping; Solution delivery; AI services run by AICC; Enablement; Oversight of Adopted Solutions; Research and partnering.
-3. How to engage: the front door in six steps (contact, study, Service Agreement, delivery, Outcome Report, support), the statement that the function commits to nothing and that AICC works on a best-effort basis within its capability, and the links to the Engagement workflow and guide and to the Initiative Brief, the Service Agreement, and the Outcome Report.
-4. Service levels: none, on demand, agreed response targets, run by AICC, and the Solution type that each gives (Engagement guide 6).
-5. What AICC does not do: the limits of the AICC Charter 3.2, stated plainly, with the note that AICC does not deliver at scale.
+1. The lead: The Competence Center as the internal consulting and innovation lab of the Bank; what it researches, advises on, proves, builds, runs, and teaches; and that it relies on the platform teams and IT to scale.
+2. The service lines as cards, each opening a one-page description: what it is, what the client receives, the typical shape, what it leads to, the templates used, who decides, and the governing clauses. The lines are Advisory; Proof and prototyping; Solution delivery; AI services run by the Competence Center; Enablement; Oversight of Adopted Solutions; Research and partnering.
+3. How to engage: the front door in six steps (contact, study, Service Agreement, delivery, Outcome Report, support), the statement that the function commits to nothing and that the Competence Center works on a best-effort basis within its capability, and the links to the Engagement workflow and guide and to the Initiative Brief, the Service Agreement, and the Outcome Report.
+4. Service levels: none, on demand, agreed response targets, run by the Competence Center, and the Solution type that each gives (Engagement guide 6).
+5. What the Competence Center does not do: the limits of the Competence Center Charter 3.2, stated plainly, with the note that the Competence Center does not deliver at scale.
 
 The text of the service lines synthesizes the Business Model 4, the Solution Lifecycle Model 8, and the Statement of Intent 10, and every card links the governing clause. It restates no rule.
 
-### 10.4. The two one-pagers of About AICC
+### 10.4. The two one-pagers of About the Competence Center
 
-What we do and How we work are summaries of one page each: the first states the offer in one line per service line and what AICC is not; the second states the engagement model and the method in brief, and links to Services, Portfolio, and Delivery. They replace the role that the section pages What AICC does and How AICC works play today.
+What we do and How we work are summaries of one page each: the first states the offer in one line per service line and what the Competence Center is not; the second states the engagement model and the method in brief, and links to Services, Portfolio, and Delivery. They replace the role that the section pages What the Competence Center does and How the Competence Center works play today.
 
 ### 10.5. Decisions taken at the build, open for review
 
@@ -266,7 +266,7 @@ What we do and How we work are summaries of one page each: the first states the 
 2. **Research and partnering as a service line.** Built as a page that states on its face that the line is stated on the site and not yet in the Business Model, and that it becomes a commitment when the Business Model states it. A clause for the Business Model 4 is proposed.
 3. **The names** Services, Portfolio, Delivery are used.
 4. **Organization.** The order given for the navigation did not name it. It stays a section after Governance and oversight in this record; the alternative is to fold it into Governance and oversight as "Governance and organization", since both draw on the Operating Model.
-5. **The new knowledge pages.** Acts and compliance, Publications, Industry body of knowledge, and Regulators and acts hold content that the charter does not state. They are authored for the site and curated: the acts and the regulators with the Control Function Contacts, the publications and the body of knowledge by the AICC Lead. The split between the two acts pages: Reference lists the bodies and the texts; the Knowledge base states what each requires and how AICC complies. Each page starts as a curated list and grows with use.
+5. **The new knowledge pages.** Acts and compliance, Publications, Industry body of knowledge, and Regulators and acts hold content that the charter does not state. They are authored for the site and curated: the acts and the regulators with the Control Function Contacts, the publications and the body of knowledge by the Competence Center Lead. The split between the two acts pages: Reference lists the bodies and the texts; the Knowledge base states what each requires and how the Competence Center complies. Each page starts as a curated list and grows with use.
 
 ### 10.6. Effect on the build
 
@@ -274,33 +274,33 @@ The identifiers and addresses under `what-aicc-does/`, `how-aicc-works/`, and `l
 
 ## 11. The service catalog: the lines and the packages (recorded 2026-10-02)
 
-The Services section states AICC as its clients see it. The service lines were first cut by the phases of an Engagement (advisory, proof, delivery, run, enablement, oversight, research), which describes how AICC works and not what a function can ask for. They were re-cut on 2026-10-02 as nine promises to a function, each with what the function receives, how the work runs, the reusable package that remains, whether it is run-rate or a program, who decides, and the governing clauses. The phases and the three types of Solution moved to the page How to engage, where they belong.
+The Services section states the Competence Center as its clients see it. The service lines were first cut by the phases of an Engagement (advisory, proof, delivery, run, enablement, oversight, research), which describes how the Competence Center works and not what a function can ask for. They were re-cut on 2026-10-02 as nine promises to a function, each with what the function receives, how the work runs, the reusable package that remains, whether it is run-rate or a program, who decides, and the governing clauses. The phases and the three types of Solution moved to the page How to engage, where they belong.
 
 ### 11.1. The nine lines
 
 | # | Line | The promise | Mode | Charter backing |
 | --- | --- | --- | --- | --- |
-| 1 | Strategy and governance office | What AICC built for itself, built for any unit: strategy, charter, operating and governance model, process set, portal and repository, developed with AI and maintained with it; AICC as the strategy office and the governance office of the function, which keeps the ownership | Program | Business Model 2.4 and 4; a clause proposed |
-| 2 | Normative documents and processes | Policies, procedures, regulations, instructions, runbooks, and process descriptions drafted, aligned, and maintained with AI for HR, legal, accounting, compliance, operations, technology, and any function, in the style of the Bank and in one voice; the function states the rule, AICC states it well | Run-rate and program | Business Model 4; a clause proposed |
+| 1 | Strategy and governance office | What the Competence Center built for itself, built for any unit: strategy, charter, operating and governance model, process set, portal and repository, developed with AI and maintained with it; The Competence Center as the strategy office and the governance office of the function, which keeps the ownership | Program | Business Model 2.4 and 4; a clause proposed |
+| 2 | Normative documents and processes | Policies, procedures, regulations, instructions, runbooks, and process descriptions drafted, aligned, and maintained with AI for HR, legal, accounting, compliance, operations, technology, and any function, in the style of the Bank and in one voice; the function states the rule, the Competence Center states it well | Run-rate and program | Business Model 4; a clause proposed |
 | 3 | Knowledge services | The corpus of a function, and the state and regulator documents it works with, as a governed knowledge base it can ask, with citations, source governance, and access by data class; cross-unit where functions share a corpus | Program | Statement of Intent 5.3, 9.5, 10.2; AI Policy 2 and 3 |
 | 4 | Workplace automation | Routing, forms, reports, consolidation, and documents from templates, done by assistants under human validation, in the tools the function uses; the catalog of automations | Run-rate | Statement of Intent 9.4; AI Policy 2 and 3 |
 | 5 | Information and decision support | ETL and consolidation, dashboards, analytical and research tooling, and the factual base for decisions, with lineage to governed sources | Run-rate and program | Statement of Intent 9.3 and 10.2; Business Model 6 |
 | 6 | Content and document engines | Public, investor, and management material generated from governed data and templates, pre-filled for people to finish; the engine drafts, a person approves and publishes | Program | Statement of Intent 9.3; Operating Model 4.2 |
 | 7 | Enablement at the workplace | Training by role, coaching at the desk, Domain Experts, prompt and skill libraries per line of work, clinics, communities of practice | Run-rate | Business Model 4.4; Statement of Intent 10.1 |
-| 8 | Assurance and governance support | Risk Tier, AI Registry entry, provider assessment, evaluation and testing before use, the Acceptance Checklist prepared, oversight of Adopted Solutions; AICC helps a function comply and does not replace the Control Functions | Run-rate | AI Policy 2 to 4; Business Model 2.3 |
+| 8 | Assurance and governance support | Risk Tier, AI Registry entry, provider assessment, evaluation and testing before use, the Acceptance Checklist prepared, oversight of Adopted Solutions; The Competence Center helps a function comply and does not replace the Control Functions | Run-rate | AI Policy 2 to 4; Business Model 2.3 |
 | 9 | Watch, research, and partnering | Regulatory and technology watch with digests for the functions concerned, trials, relations with other organizations and providers | Run-rate and program | Business Model 2.3 and 2.4; Statement of Intent 10.5; a clause proposed |
 
 ### 11.2. The packages
 
-Every Engagement leaves a package: a method, a kit, an engine, or a catalog entry that the next function takes in days where the first took weeks. The packages are the centre of the catalog and the way a small unit serves the whole Bank without headcount. The Service catalog page lists them beside the Solutions, with the service line, the status (available, in preparation, planned), and who uses them. The list is kept in `portal/content/services/packages.md`. At the baseline the available packages are the ones proven on AICC itself: the charter method and templates, the governance catalogue, and the portal generator.
+Every Engagement leaves a package: a method, a kit, an engine, or a catalog entry that the next function takes in days where the first took weeks. The packages are the centre of the catalog and the way a small unit serves the whole Bank without headcount. The Service catalog page lists them beside the Solutions, with the service line, the status (available, in preparation, planned), and who uses them. The list is kept in `portal/content/services/packages.md`. At the baseline the available packages are the ones proven on the Competence Center itself: the charter method and templates, the governance catalogue, and the portal generator.
 
 ### 11.3. Further offers within the lines
 
-Recorded for the build-up of the lines: a readiness and source audit of a function (what documents, systems, and owners it has, and what that allows); bilingual document work across Kyrgyz, Russian, and English; meeting-to-record assistants that draft minutes, decision records, and actions for approval; AI-assisted consistency review of long document sets; a regulatory watch that digests the circulars of the National Bank and other bodies for compliance and legal; process mapping from a function's own artifacts to find the automation points; and pilot-to-platform packaging, where AICC prepares a proven prototype for IT to run.
+Recorded for the build-up of the lines: a readiness and source audit of a function (what documents, systems, and owners it has, and what that allows); bilingual document work across Kyrgyz, Russian, and English; meeting-to-record assistants that draft minutes, decision records, and actions for approval; AI-assisted consistency review of long document sets; a regulatory watch that digests the circulars of the National Bank and other bodies for compliance and legal; process mapping from a function's own artifacts to find the automation points; and pilot-to-platform packaging, where the Competence Center prepares a proven prototype for IT to run.
 
 ### 11.4. What holds
 
-Run-rate work comes through the front door and is done in days to one Iteration within the limit on the Active Initiatives; programs start with a study and a business case and go through the Portfolio. AICC does not charge the functions; the Domain pays the run, the licenses, and the provider costs from its Envelope. AICC builds and proves; the platform teams and the IT functions run at scale; the Control Functions validate and may stop. Lines 1, 2, and 9 need one clause in the Business Model 4 to be charter-backed; until then the pages say so.
+Run-rate work comes through the front door and is done in days to one Iteration within the limit on the Active Initiatives; programs start with a study and a business case and go through the Portfolio. The Competence Center does not charge the functions; the Domain pays the run, the licenses, and the provider costs from its Envelope. The Competence Center builds and proves; the platform teams and the IT functions run at scale; the Control Functions validate and may stop. Lines 1, 2, and 9 need one clause in the Business Model 4 to be charter-backed; until then the pages say so.
 
 ### 11.5. The work-in-progress collection
 
@@ -308,7 +308,7 @@ The service ideas that feed the lines and the catalog are collected in the wiki,
 
 ## 12. Two sides of the services: the static framework and the live instance (recorded 2026-10-02)
 
-The services of AICC have two sides, as the charter and the Registry do. The static portal holds the framework: the service lines as directions along which AICC provides services, with examples that illustrate them; the model of a service of AICC (what a service is composed of, its life after go-live, its operations, its records); the form of the catalog and of a package; and how the lines run through the Portfolio and the delivery organization. It holds no live list of services, projects, or packages with their status. The live instance, the Initiatives in flight, the Solutions and Services in operation, the packages available, the health of each Service, belongs to a live portal fed from the Registry, the Portfolio, Jira, and Service Management, to be designed after the framework is defined. The static side comes first, because the live side instantiates it.
+The services of the Competence Center have two sides, as the charter and the Registry do. The static portal holds the framework: the service lines as directions along which the Competence Center provides services, with examples that illustrate them; the model of a service of the Competence Center (what a service is composed of, its life after go-live, its operations, its records); the form of the catalog and of a package; and how the lines run through the Portfolio and the delivery organization. It holds no live list of services, projects, or packages with their status. The live instance, the Initiatives in flight, the Solutions and Services in operation, the packages available, the health of each Service, belongs to a live portal fed from the Registry, the Portfolio, Jira, and Service Management, to be designed after the framework is defined. The static side comes first, because the live side instantiates it.
 
 Consequences for the site: the Service catalog page becomes the template of the catalog (the entry form, the types, the states, the fields of a package) with illustrative examples, and the live list moves to the Portfolio folder as the instance; the service-line pages keep their offers as examples, not commitments; the Portfolio section gains the framework page of how the lines enter the funnel (run-rate lane and program lane, screening, business case); the Delivery section gains the life of a Service after go-live, the Experiment workflow, and the operations run-book of a Service as framework pages; and the templates gain a Package Definition, which is a change to the charter from the baseline when adopted.
 
@@ -318,7 +318,7 @@ The static side is built. Services: the nine lines grouped in three families (ad
 
 ### 11.6. Re-cut into areas and categories (2026-10-03)
 
-The nine lines in three families were re-cut into fifteen categories in four areas, so that the directions are concrete and separable: a category is one kind of service a function asks for, and an area is the posture of AICC toward it.
+The nine lines in three families were re-cut into fifteen categories in four areas, so that the directions are concrete and separable: a category is one kind of service a function asks for, and an area is the posture of the Competence Center toward it.
 
 | Area | Categories |
 | --- | --- |
@@ -327,7 +327,7 @@ The nine lines in three families were re-cut into fifteen categories in four are
 | Enablement | Training and knowledge sharing; Adoption and lifecycle management |
 | Assurance | Policies, controls, criteria; Assessments and evaluations; Risk tiering; Oversight |
 
-The mapping from the lines: Strategy and governance office became Strategy and governance; Normative documents and processes became Normatives and processes; Watch, research, and partnering became Research and exploration; the study and the scenario work of the former Advisory and of the Financial Services scenario card became Business cases and scenarios; Information and decision support became Analytics and decision support; Content and document engines became Content management, with the templates, editions, versions, and languages added; Platforms is new and holds the shared engines and environments of AICC, the requirements on the AI Platform, and the hand-over to the teams that run at scale; Enablement at the workplace became Training and knowledge sharing, and the Domain Experts, the adoption plans, and the life of a Solution after delivery became Adoption and lifecycle management; Assurance and governance support was split into Policies, controls, criteria; Assessments and evaluations; Risk tiering; and Oversight. The tables of the site show area and category without a mode column; the mode is stated on each category page. The ids under `services/` and the page The service categories in the Portfolio changed accordingly.
+The mapping from the lines: Strategy and governance office became Strategy and governance; Normative documents and processes became Normatives and processes; Watch, research, and partnering became Research and exploration; the study and the scenario work of the former Advisory and of the Financial Services scenario card became Business cases and scenarios; Information and decision support became Analytics and decision support; Content and document engines became Content management, with the templates, editions, versions, and languages added; Platforms is new and holds the shared engines and environments of the Competence Center, the requirements on the AI Platform, and the hand-over to the teams that run at scale; Enablement at the workplace became Training and knowledge sharing, and the Domain Experts, the adoption plans, and the life of a Solution after delivery became Adoption and lifecycle management; Assurance and governance support was split into Policies, controls, criteria; Assessments and evaluations; Risk tiering; and Oversight. The tables of the site show area and category without a mode column; the mode is stated on each category page. The ids under `services/` and the page The service categories in the Portfolio changed accordingly.
 
 ## 13. Responsible AI as a short course (2026-10-03)
 
@@ -355,7 +355,7 @@ The section Governance and oversight is labelled Governance in the navigation an
 
 ## 19. Organization as a short course (2026-10-03)
 
-The Organization section opens on a course of six parts: Organization (a joint team by Roles; one picture of mandate, team, Domains, and the functions beside; what the design is for; the practice of a small internal unit in a regulated organization); The place of AICC in the Bank (mandate and reporting line, what AICC is and is not, whom it works with); The Roles (the seven in one line each, Hats, the rules of separation, the limits accepted while small); Who does what (the responsibility pattern by family of activity, with the full matrix left to the guide); People and appointments (who appoints whom, joining, changing, leaving, the state at the baseline); How the organization grows (light mode, the steps out of it, the shape as it scales). The rule follows: the Operating Model's Foundations, Roles, and Decisions; the Organization guide in three tabs; the Roles index and the seven Role pages. Decisions and escalation stay in the Governance course and are not repeated.
+The Organization section opens on a course of six parts: Organization (a joint team by Roles; one picture of mandate, team, Domains, and the functions beside; what the design is for; the practice of a small internal unit in a regulated organization); The place of the Competence Center in the Bank (mandate and reporting line, what the Competence Center is and is not, whom it works with); The Roles (the seven in one line each, Hats, the rules of separation, the limits accepted while small); Who does what (the responsibility pattern by family of activity, with the full matrix left to the guide); People and appointments (who appoints whom, joining, changing, leaving, the state at the baseline); How the organization grows (light mode, the steps out of it, the shape as it scales). The rule follows: the Operating Model's Foundations, Roles, and Decisions; the Organization guide in three tabs; the Roles index and the seven Role pages. Decisions and escalation stay in the Governance course and are not repeated.
 
 ## 20. The Knowledge base organized by question (2026-10-03)
 

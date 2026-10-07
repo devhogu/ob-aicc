@@ -1,19 +1,19 @@
 # Service operations
 
-The Business Model states that the support of a Service is managed in Service Management and that requests and incidents come to the queue of AICC. This page states the practices behind that sentence, sized to a small unit: how a request, an incident, a problem, a change, and a question are handled for a Service that AICC runs, what the service levels are, and what each practice leaves on record. It is the run-book template of a Service of AICC; each Service fills it in its Service Agreement and its Solution Definition.
+The Business Model states that the support of a Service is managed in Service Management and that requests and incidents come to the queue of the Competence Center. This page states the practices behind that sentence, sized to a small unit: how a request, an incident, a problem, a change, and a question are handled for a Service that the Competence Center runs, what the service levels are, and what each practice leaves on record. It is the run-book template of a Service of the Competence Center; each Service fills it in its Service Agreement and its Solution Definition.
 
 ## 1. The practices
 
-| Practice | What it covers for a Service of AICC | Who acts | Record |
+| Practice | What it covers for a Service of the Competence Center | Who acts | Record |
 | --- | --- | --- | --- |
-| Request handling | A request or a question from a consumer, triaged by class of service (Urgent, High priority, Normal), handled, and closed | The Solution Engineer; the AICC Lead for the class | The Service Management ticket |
-| Incident handling | An outage or a failure; the incident management of the Bank applies; an AI Incident, where AI is involved, is reviewed as the AI Policy states, with the AICC Lead as a stakeholder | The incident management of the Bank; the Solution Engineer; the Control Function Contacts for an AI Incident | The incident record; the AI Incident Review |
+| Request handling | A request or a question from a consumer, triaged by class of service (Urgent, High priority, Normal), handled, and closed | The Solution Engineer; the Competence Center Lead for the class | The Service Management ticket |
+| Incident handling | An outage or a failure; the incident management of the Bank applies; an AI Incident, where AI is involved, is reviewed as the AI Policy states, with the Competence Center Lead as a stakeholder | The incident management of the Bank; the Solution Engineer; the Control Function Contacts for an AI Incident | The incident record; the AI Incident Review |
 | Problem management | A cause behind repeated incidents or requests, found and removed | The Solution Engineer; the Team at the Iteration Retrospective | A Feature in the Program Backlog; the Risks and Issues Record where a risk remains |
-| Change enablement | A change or a new feature, raised by the Domain Owner or the product owner, built and verified as any Feature, deployed through the change management of the Bank; the AICC Lead decides whether a new check or validation is needed | The Team; the change management of the Bank | The change ticket and test reference; the Solution Definition; the Decision Log for a new-check decision |
+| Change enablement | A change or a new feature, raised by the Domain Owner or the product owner, built and verified as any Feature, deployed through the change management of the Bank; the Competence Center Lead decides whether a new check or validation is needed | The Team; the change management of the Bank | The change ticket and test reference; the Solution Definition; the Decision Log for a new-check decision |
 | Knowledge | The user guide, the known errors, and the answers to recurring questions, kept with the Service and in the knowledge base of the function | The Solution Engineer with the Domain Expert | The Solution Definition; the Knowledge base |
-| Service levels | The response targets of the Service Agreement, read at each Iteration Review and Demo; targets, not guarantees | The AICC Lead with the Domain Owner | The Service Agreement; the live review note |
-| Run cost | The run cost against the business case, the licenses and the provider costs paid by the Domain from its Envelope, and the sunset rule | The AICC Lead; the Domain Owner | The business case; the Quarterly Report |
-| Suppliers | The providers of models and services behind the Service: checked before use by the Control Function Contacts, with the fallback and the exit of each, and their notices read at each review | The Control Function Contacts; the Solution Engineer; the AICC Lead | The AI Registry; the Control Sign-Off of the provider check |
+| Service levels | The response targets of the Service Agreement, read at each Iteration Review and Demo; targets, not guarantees | The Competence Center Lead with the Domain Owner | The Service Agreement; the live review note |
+| Run cost | The run cost against the business case, the licenses and the provider costs paid by the Domain from its Envelope, and the sunset rule | The Competence Center Lead; the Domain Owner | The business case; the Quarterly Report |
+| Suppliers | The providers of models and services behind the Service: checked before use by the Control Function Contacts, with the fallback and the exit of each, and their notices read at each review | The Control Function Contacts; the Solution Engineer; the Competence Center Lead | The AI Registry; the Control Sign-Off of the provider check |
 
 ## 2. The classes of service
 

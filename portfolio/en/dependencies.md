@@ -1,6 +1,6 @@
 # Program Board
 
-The Program Board is the board of the dependencies of the Program Increment (Solution Lifecycle Model 4.3). It shows, for each Capability and Feature, the Iteration in which it is planned, its state, and what it needs from other items, Teams, functions, and persons (most of it is outside AICC), and it shows the Milestones of the Roadmap at the Iteration in which they fall. The scope of each Iteration is decided at Iteration Planning and changes with the Dependencies. The AICC Lead keeps the Board current at the Weekly Review. Status of a Dependency: Open, Met, or At risk. A Milestone is At risk when a Feature or a Dependency that it needs is At risk, and what is At risk is raised to the monthly Steering.
+The Program Board is the board of the dependencies of the Program Increment (Solution Lifecycle Model 4.3). It shows, for each Capability and Feature, the Iteration in which it is planned, its state, and what it needs from other items, Teams, functions, and persons (most of it is outside the Competence Center), and it shows the Milestones of the Roadmap at the Iteration in which they fall. The scope of each Iteration is decided at Iteration Planning and changes with the Dependencies. The Competence Center Lead keeps the Board current at the Weekly Review. Status of a Dependency: Open, Met, or At risk. A Milestone is At risk when a Feature or a Dependency that it needs is At risk, and what is At risk is raised to the monthly Steering.
 
 ## 1. Capabilities and Features
 
@@ -64,7 +64,7 @@ The scope of the PIQ4 items for each Iteration. It is set at Iteration Planning,
 
 ## 5. Map
 
-Figure 1 shows the Dependencies between the items. Dashed lines are Dependencies on persons and functions outside AICC.
+Figure 1 shows the Dependencies between the items. Dashed lines are Dependencies on persons and functions outside the Competence Center.
 
 ```mermaid
 flowchart LR

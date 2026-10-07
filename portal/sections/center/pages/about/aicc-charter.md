@@ -1,6 +1,6 @@
 ---
 id: about/aicc-charter
-title: AICC Charter
+title: AI Competence Center Charter
 section: about
 order: 6
 type: document
@@ -11,7 +11,7 @@ production: generated
 status: scaffold
 ---
 
-# AICC Charter
+# AI Competence Center Charter
 
 Page type: document. Address: /about/aicc-charter/
 

@@ -1,10 +1,10 @@
 # Governance
 
-Governance is how AICC is directed, controlled, reported, and assured as a unit of the Bank: who decides what and when a decision rises, the loops on which the unit plans, acts, checks, and corrects, the controls an auditor can test and the evidence each leaves, and the chain of reporting to the Executive Sponsor, which reaches the Board when the Executive Sponsor brings a matter to it. This course explains it in seven parts; the Operating Model is the rule and prevails.
+Governance is how the Competence Center is directed, controlled, reported, and assured as a unit of the Bank: who decides what and when a decision rises, the loops on which the unit plans, acts, checks, and corrects, the controls an auditor can test and the evidence each leaves, and the chain of reporting to the Executive Sponsor, which reaches the Board when the Executive Sponsor brings a matter to it. This course explains it in seven parts; the Operating Model is the rule and prevails.
 
 ## 1. One picture
 
-1.1. Figure 1 shows governance as one system: decisions taken where the facts are and rising only on stated conditions; five control loops on the Steerings and the Weekly Review; controls that leave evidence in the Registry; and reporting from the Teams through the AICC Lead to the Steering, which the Executive Sponsor chairs and from which the Executive Sponsor may bring a matter to the Board Committee or the Board, with the Control Functions beside it and internal audit above it.
+1.1. Figure 1 shows governance as one system: decisions taken where the facts are and rising only on stated conditions; five control loops on the Steerings and the Weekly Review; controls that leave evidence in the Registry; and reporting from the Teams through the Competence Center Lead to the Steering, which the Executive Sponsor chairs and from which the Executive Sponsor may bring a matter to the Board Committee or the Board, with the Control Functions beside it and internal audit above it.
 
 ```mermaid
 flowchart TB
@@ -19,7 +19,7 @@ flowchart TB
     direction LR
     D["Decisions<br/>taken where the facts are;<br/>rise on four conditions;<br/>Decision Log"] --> C["Controls<br/>thirty-two, each with rule,<br/>owner, timing, evidence;<br/>Control Matrix"]
     C --> R["Evidence<br/>closed, dated records<br/>in the Registry;<br/>Registry Snapshot"]
-    R --> B["Reporting<br/>Teams, AICC Lead, Steering;<br/>Quarterly Report; Board Committee<br/>when the Sponsor brings it"]
+    R --> B["Reporting<br/>Teams, Competence Center Lead, Steering;<br/>Quarterly Report; Board Committee<br/>when the Sponsor brings it"]
     CF(["Control Functions<br/>beside: validate,<br/>may stop"]) -.-> C
     IA(["Internal audit<br/>above: independent<br/>assurance"]) -.-> R
   end

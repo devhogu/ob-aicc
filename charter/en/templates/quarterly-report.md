@@ -2,14 +2,14 @@
 id: AICC-TPL-05-EN
 title: Quarterly Report
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Quarterly Report
 
-**Template.** The AICC Lead prepares the report each quarter for the quarterly Steering. The Executive Sponsor approves it and decides whether to submit it to the Board Committee or the Board; a submission is optional and is not due each quarter. It carries no figures of the Bank, no data, and no code; figures are given by reference.
+**Template.** The Competence Center Lead prepares the report each quarter for the quarterly Steering. The Executive Sponsor approves it and decides whether to submit it to the Board Committee or the Board; a submission is optional and is not due each quarter. It carries no figures of the Bank, no data, and no code; figures are given by reference.
 
 | Field | Entry |
 | --- | --- |
@@ -51,7 +51,7 @@ revised: 2026-10-03
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
-[The cost of AICC, by reference to the financial planning of the Bank. The flow measures (lead time, cycle time, throughput, and the Active Initiatives against the limit); the detail of each Engagement is in its Outcome Report.]
+[The cost of the Competence Center, by reference to the financial planning of the Bank. The flow measures (lead time, cycle time, throughput, and the Active Initiatives against the limit); the detail of each Engagement is in its Outcome Report.]
 
 ## 5. Benefits against the Investment Envelope
 

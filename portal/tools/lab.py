@@ -28,14 +28,14 @@ SOURCE = workspace.ROOT / 'lab/en/lab.md'
 TRANSLATION = workspace.ROOT / 'lab/ru/lab.md'
 UI = {
     'en': {'concept': 'Concept', 'matrix': 'Experiment workflow', 'systems': 'People and AI agents', 'maturity': 'Practice maturity',
-           'guardrails_intro': 'The Lab runs under seven guardrails. The AICC Lead keeps them with their evidence in the Standards record, and the quarterly Steering reviews them.',
+           'guardrails_intro': 'The Lab runs under seven guardrails. The Competence Center Lead keeps them with their evidence in the Standards record, and the quarterly Steering reviews them.',
            'guardrail': 'Guardrail', 'evidence': 'Evidence', 'setup': 'Once, before the first Experiment', 'bands': 'Maturity bands',
            'capabilities': 'Capabilities', 'loop': 'Intent loop', 'guardrails': 'Guardrails',
            'stages': 'Stage', 'lanes': 'Workstream', 'whole': 'Whole workflow', 'by_stage': 'By stage',
            'empty': 'No separate activity specified', 'coverage': 'Assessment', 'not_assessed': 'Not yet assessed', 'levels': 'What each level requires',
            'concern': 'Concern', 'posture': 'Intended practice', 'selection': 'Workflow view'},
     'ru': {'concept': 'Концепция', 'matrix': 'Процесс эксперимента', 'systems': 'Люди и AI-агенты', 'maturity': 'Оценка контроля',
-           'guardrails_intro': 'Лабораторная среда работает в рамках семи защитных механизмов. Руководитель AICC ведёт их вместе с подтверждениями в реестре «Стандарты», а ежеквартальное управляющее совещание их рассматривает.',
+           'guardrails_intro': 'Лабораторная среда работает в рамках семи защитных механизмов. Руководитель Центра компетенций ведёт их вместе с подтверждениями в реестре «Стандарты», а ежеквартальное управляющее совещание их рассматривает.',
            'guardrail': 'Защитный механизм', 'evidence': 'Подтверждение', 'setup': 'Один раз, до первого эксперимента', 'bands': 'Уровни зрелости',
            'capabilities': 'Возможности', 'loop': 'Цикл управления', 'guardrails': 'Защитные механизмы',
            'stages': 'Этап', 'lanes': 'Блок работ', 'whole': 'Весь процесс', 'by_stage': 'По этапам',

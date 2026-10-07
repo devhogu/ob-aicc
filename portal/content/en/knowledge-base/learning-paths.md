@@ -6,9 +6,9 @@ A learning path is a reading order for a role: what to read, in what sequence, a
 
 | Step | Read | So that you can |
 | --- | --- | --- |
-| 1 | [About AICC](page:about/index), with [What we do](page:about/what-we-do) and [How we work](page:about/how-we-work) | Describe AICC, its mission and values, and how an Engagement runs |
+| 1 | [About the Competence Center](page:about/index), with [What we do](page:about/what-we-do) and [How we work](page:about/how-we-work) | Describe the Competence Center, its mission and values, and how an Engagement runs |
 | 2 | [Responsible AI](page:responsible-ai/index), the course | Explain what AI is today, its value and risks, and the Bank's rules for its use |
-| 3 | [Services](page:services/index), the areas | Identify what a function can ask AICC for |
+| 3 | [Services](page:services/index), the areas | Identify what a function can ask the Competence Center for |
 | 4 | [Questions people ask](page:knowledge-base/questions-people-ask) | Answer the common questions yourself |
 | 5 | The [Vocabulary](page:reference/vocabulary), kept at hand | Use the charter's terms as defined |
 
@@ -16,7 +16,7 @@ A learning path is a reading order for a role: what to read, in what sequence, a
 
 | Step | Read | So that you can |
 | --- | --- | --- |
-| 1 | [How to engage](page:services/how-to-engage), with the Engagement workflow and guide | Bring a need, understand the six steps, and know your commitments and those of AICC |
+| 1 | [How to engage](page:services/how-to-engage), with the Engagement workflow and guide | Bring a need, understand the six steps, and know your commitments and those of the Competence Center |
 | 2 | [The Portfolio](page:portfolio/en/index), the course, parts 2 to 5 | Know how your business case is approved, ranked, probed, and continued |
 | 3 | [The Roles](page:organization/the-roles) and [Who does what](page:organization/who-does-what) | Understand what you decide as Domain Owner and what the Domain Expert does |
 | 4 | [How the Bank applies it](page:responsible-ai/how-the-bank-applies-it) | Understand the Risk Tier your Solution will carry and what it requires of you |
@@ -39,7 +39,7 @@ A learning path is a reading order for a role: what to read, in what sequence, a
 | 1 | The orientation, path 1 | |
 | 2 | [How to engage](page:services/how-to-engage) and [Adoption and lifecycle management](page:services/adoption-and-lifecycle-management) | Understand your role in an Engagement and in the adoption of your Domain |
 | 3 | [Quality, verification, and release](page:delivery/quality-verification-and-release) | Understand the acceptances and your role in the evaluation set and with the first users |
-| 4 | [Training and knowledge sharing](page:services/training-and-knowledge-sharing) | Know what training and coaching AICC provides and the skill library for your line of work |
+| 4 | [Training and knowledge sharing](page:services/training-and-knowledge-sharing) | Know what training and coaching the Competence Center provides and the skill library for your line of work |
 
 ## 5. The Executive Sponsor and the AI Steering Committee
 

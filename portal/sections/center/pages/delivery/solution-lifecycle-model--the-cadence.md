@@ -9,7 +9,7 @@ source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 6
 document: solution-lifecycle-model
 part: 5 of 7
-words: 1807
+words: 1816
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /delivery/solution-lifecycle-model/the-cadence/
 
 ## Sections of the source
 
-- 6. The cadence (1807 words)
+- 6. The cadence (1816 words)
 
 ## Outline
 

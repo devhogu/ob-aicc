@@ -2,14 +2,14 @@
 id: AICC-TPL-11-EN
 title: Registry Snapshot
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 ```
 
 # Registry Snapshot
 
-**Template.** Taken by the AICC Lead at the close of each Iteration and each PI, and at the cutover, as a closed and dated extract, kept in the Registry, of the working state in the Portfolio (Operating Model 7.1 to 7.3). It carries no figures of the Bank, no data, and no code.
+**Template.** Taken by the Competence Center Lead at the close of each Iteration and each PI, and at the cutover, as a closed and dated extract, kept in the Registry, of the working state in the Portfolio (Operating Model 7.1 to 7.3). It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |

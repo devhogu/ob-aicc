@@ -27,7 +27,7 @@ Figure 1: the shelves of the Reference.
 
 ## 3. Using external resources safely
 
-3.1. The resources listed are public and reputable, and they are used within the rules of the Bank for the use of its systems and its information. No data of the Bank, no customer or employee data, and no internal document is entered into an external site, tool, form, or model, whatever the resource; reading is free, feeding is not. Registration with a work address is made only where the rules of the Bank allow it. Material from a vendor or a consulting house is read as that party's view. A source behind a paywall is listed for awareness and is procured only through the procurement rules of the Bank. A listing is not an endorsement, and a model or a service found through a resource enters the Bank only through the provider check of the AI Policy. The AICC Lead keeps the lists and removes what goes stale.
+3.1. The resources listed are public and reputable, and they are used within the rules of the Bank for the use of its systems and its information. No data of the Bank, no customer or employee data, and no internal document is entered into an external site, tool, form, or model, whatever the resource; reading is free, feeding is not. Registration with a work address is made only where the rules of the Bank allow it. Material from a vendor or a consulting house is read as that party's view. A source behind a paywall is listed for awareness and is procured only through the procurement rules of the Bank. A listing is not an endorsement, and a model or a service found through a resource enters the Bank only through the provider check of the AI Policy. The Competence Center Lead keeps the lists and removes what goes stale.
 
 ## 4. The categories
 

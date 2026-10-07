@@ -10,7 +10,7 @@ This page is written for the Control Function Contacts and for the people who de
 
 ### Expected Risk Tier 2, and what keeps it there {#controls-risk-tier}
 
-The AICC Lead assigns the Risk Tier when each Solution is defined and tells the Domain Owner; if the AICC Lead builds the Solution, the Executive Sponsor assigns it. Any Control Function Contact may raise it within their remit; only the model risk Contact may lower it. The Tier is the highest that any attribute indicates.
+The Competence Center Lead assigns the Risk Tier when each Solution is defined and tells the Domain Owner; if the Competence Center Lead builds the Solution, the Executive Sponsor assigns it. Any Control Function Contact may raise it within their remit; only the model risk Contact may lower it. The Tier is the highest that any attribute indicates.
 
 | Attribute | This pilot | Tier indicated | What holds it there |
 | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ The Tier would rise with any write or tool held by the model, any customer-facin
 | --- | --- | --- | --- |
 | Where the model runs | In the Bank. The in-Bank model is checked as a provider before it processes any data of the Bank, and the license of each open component and model is recorded. | information security, data protection and legal Contacts (provider check) | Control Sign-Off of the provider check; Solution Definition, section 3 |
 | An external model | Not used unless three things are in place: the provider check (where data is processed and kept, training on the data, contract terms, fallback and exit); approval for the data class; and the Contacts' confirmation of the Bank's outsourcing and personal-information rules (Standards Record EXT-001, EXT-002). The contract forbids training on the Bank's data. Introducing one later is a significant change. | the same Contacts; the Domain Owner for the data class | Control Sign-Off; AI Registry "Models, versions, and providers" |
-| Use for the data class and purpose | No customer data is used with AI, in discovery or later, before the Domain Owner approves the use, after the approvals the Bank's rules require from each source owner and from data protection. The Executive Sponsor approves instead if the AICC Lead built the Solution. | Domain Owner, or Executive Sponsor | AI Registry "Approved for", "Approved by and date" |
+| Use for the data class and purpose | No customer data is used with AI, in discovery or later, before the Domain Owner approves the use, after the approvals the Bank's rules require from each source owner and from data protection. The Executive Sponsor approves instead if the Competence Center Lead built the Solution. | Domain Owner, or Executive Sponsor | AI Registry "Approved for", "Approved by and date" |
 | Phase 1 data in the Lab | Read-only extracts, each with its source owner and class. Personal data is minimized and assessed before it enters. Nothing is written back. Access is by role and every action is logged. Any re-identification key is kept outside the Lab and away from the model. | data protection Contact; source owners | Experiment block "Data extracts" and "Environment record"; Control Sign-Off of data protection |
 | Phase 2 live reads | Only after validation. The context service reads only the fields in the context contract and drops any other before the model call. The customer segment is not read unless the journey needs it and data protection agrees. | data protection Contact at validation | context contract, referenced in Solution Definition section 3 |
 | Purpose | Pilot outputs serve service resolution and the evaluation of the assistant only. Any other use needs its own approval for the data class and purpose. | Domain Owner; data protection Contact | Solution Definition, Conditions of use |
@@ -37,7 +37,7 @@ The Tier would rise with any write or tool held by the model, any customer-facin
 
 | Obligation | How the pilot meets it | Meets it | Checks it | Evidence |
 | --- | --- | --- | --- | --- |
-| Solution Definition and AI Registry entry | One Solution Definition for each phase. The AI Registry entry reads, under AI agents and permissions: "none: Assistant; reads made by the workflow; writes are employee actions". | Solution Engineer; AICC Lead for the entry | Control Function Contacts at validation | Solution Definition; AI Registry |
+| Solution Definition and AI Registry entry | One Solution Definition for each phase. The AI Registry entry reads, under AI agents and permissions: "none: Assistant; reads made by the workflow; writes are employee actions". | Solution Engineer; Competence Center Lead for the entry | Control Function Contacts at validation | Solution Definition; AI Registry |
 | Validation | One Control Sign-Off for each remit (see [Validation by remit](#controls-validation-by-remit)). Its scope covers live use by the first users, the draft customer explanation, and any fallback model named in advance. | Control Function Contacts | each Contact within their remit | Control Sign-Offs, each with a valid-until date, conditions, and what the Solution shall not be used for |
 | Security test against attacks on AI | Tests for prompt injection through customer messages and complaints, which are untrusted content; cross-customer access; data exfiltration; and the open components. | a tester who did not build the Solution | information security Contact | test report, referenced in the Control Sign-Off |
 | Human oversight | The employee reviews every output and decides each case. No action happens without the employee's click. The manual route is always open. | Solution Engineer (design); Domain Owner (in operation) | model risk and compliance Contacts | the workspace decision record: the assistant's contribution and the employee's decision for each case |
@@ -45,12 +45,12 @@ The Tier would rise with any write or tool held by the model, any customer-facin
 | Logs kept | For each case: the snapshot reference, the model and prompt version, the output, the result of each check, and the employee's decision and action. | Platform Owner provides the logging; Solution Engineer designs what is logged | information security and model risk Contacts | the logs, kept as the Bank's rules require |
 | Disclosure, explanation and contestability | See [Disclosure](#controls-disclosure). | Domain Owner | compliance Contact | Control Sign-Off of compliance |
 | Monitoring with alert levels | See [Monitoring](#controls-monitoring). | Solution Engineer states them; Platform Owner provides the monitoring; Domain Owner reviews | model risk Contact | Solution Definition, Conditions of use and "Review of the live Solution" |
-| Knowledge sources | Every procedure the assistant uses is cited by section. Each source has an owner and a review date. | process function owns the procedures; AICC Lead notes the owners | model risk Contact | AI Registry |
-| Training before first use | The first users are trained before they see any output. | AICC Lead sets the training; a Domain Expert delivers it | Domain Owner | AI Registry "Training of the users complete" (no names) |
-| Release | Deployment to the first users after validation, the Team's final acceptance and the Bank's change management. Use beyond the first users only after the Acceptance Checklist is signed and the Domain Owner releases. | AICC Lead (Team final acceptance); change management of the Bank; Domain Owner (release) | every signatory of the Acceptance Checklist | release block of the Solution Definition; change ticket; Acceptance Checklist |
-| Reassessment | On every change and each year. The provider check is repeated at each reassessment and on any change of the provider's terms or model. | AICC Lead; the Contacts for the provider check | model risk Contact | AI Registry "Reassess by" |
+| Knowledge sources | Every procedure the assistant uses is cited by section. Each source has an owner and a review date. | process function owns the procedures; Competence Center Lead notes the owners | model risk Contact | AI Registry |
+| Training before first use | The first users are trained before they see any output. | Competence Center Lead sets the training; a Domain Expert delivers it | Domain Owner | AI Registry "Training of the users complete" (no names) |
+| Release | Deployment to the first users after validation, the Team's final acceptance and the Bank's change management. Use beyond the first users only after the Acceptance Checklist is signed and the Domain Owner releases. | Competence Center Lead (Team final acceptance); change management of the Bank; Domain Owner (release) | every signatory of the Acceptance Checklist | release block of the Solution Definition; change ticket; Acceptance Checklist |
+| Reassessment | On every change and each year. The provider check is repeated at each reassessment and on any change of the provider's terms or model. | Competence Center Lead; the Contacts for the provider check | model risk Contact | AI Registry "Reassess by" |
 
-If the AICC Lead builds the Solution, the AICC Lead does not validate, release or give the business acceptance, and the test by another person is done by an engineer of the IT function or the Domain whom the AICC Lead names.
+If the Competence Center Lead builds the Solution, the Competence Center Lead does not validate, release or give the business acceptance, and the test by another person is done by an engineer of the IT function or the Domain whom the Competence Center Lead names.
 
 ### Validation by remit {#controls-validation-by-remit}
 
@@ -64,15 +64,15 @@ If the AICC Lead builds the Solution, the AICC Lead does not validate, release o
 
 ### Readiness evidence for each decision {#controls-readiness-evidence}
 
-Readiness for live use is not a separate approval. The evidence on architecture, data, controls, operability and quality is what the deciders below read. In the AICC flows these are not approvals. Their content is the evidence that the corpus deciders read. The IT items are listed in detail on the [IT readiness checklist](#it-readiness).
+Readiness for live use is not a separate approval. The evidence on architecture, data, controls, operability and quality is what the deciders below read. In the Competence Center flows these are not approvals. Their content is the evidence that the corpus deciders read. The IT items are listed in detail on the [IT readiness checklist](#it-readiness).
 
 | Former gate | Evidence | Decision it supports | Decided by | Record |
 | --- | --- | --- | --- | --- |
-| Architecture | journey profile completed and consistent with the journey annex; disposition and owner of each capability; temporary components named; journey logic kept apart from AI Platform functions | approval of the Solution Definition | Domain Owner (Executive Sponsor if the AICC Lead built it) | Solution Definition, section 3 |
+| Architecture | journey profile completed and consistent with the journey annex; disposition and owner of each capability; temporary components named; journey logic kept apart from AI Platform functions | approval of the Solution Definition | Domain Owner (Executive Sponsor if the Competence Center Lead built it) | Solution Definition, section 3 |
 | Data and integration | sources, identifiers, status meanings and read paths confirmed; field and knowledge lists tested; extracts recorded with owner and class; personal data assessed | approval for the data class; entry of data into the Lab | Domain Owner with the source owners; data protection Contact | AI Registry; Experiment block; Control Sign-Off |
 | Controls | identity, purpose, field access, model route, retrieval and output checks enforced and logged; prohibited data, decisions and actions blocked in code; threat model, incident path and suspension recorded | validation; provider check | Control Function Contacts | Control Sign-Offs |
-| Operability | environments, deployment, secrets, logging, fallback and support exercised; manual route works when a dependency fails; incident path in the Bank's incident management; monitoring on, with alert levels and who watches them | Team final acceptance; first deployment to production | AICC Lead; change management of the Bank | release block; change ticket |
-| Quality | results on the locked cases for common states and material exceptions; no critical error found; correction, escalation and outcome recording work end to end; each Feature tested by someone other than its builder | Team final acceptance; business acceptance | AICC Lead; Domain Owner | test references in the Features; Outcome Report |
+| Operability | environments, deployment, secrets, logging, fallback and support exercised; manual route works when a dependency fails; incident path in the Bank's incident management; monitoring on, with alert levels and who watches them | Team final acceptance; first deployment to production | Competence Center Lead; change management of the Bank | release block; change ticket |
+| Quality | results on the locked cases for common states and material exceptions; no critical error found; correction, escalation and outcome recording work end to end; each Feature tested by someone other than its builder | Team final acceptance; business acceptance | Competence Center Lead; Domain Owner | test references in the Features; Outcome Report |
 
 A run in production with the output hidden from the employees (a silent run) is already a deployment: it comes after validation, the Team's final acceptance and the Bank's change management, not before them.
 
@@ -80,7 +80,7 @@ A run in production with the output hidden from the employees (a silent run) is 
 
 This is the one acceptance rule of the pilot. Other pages link to it. It has two parts and one decision.
 
-**Part 1: mandatory gates.** They are acceptance criteria in section 5 of the Solution Definition. They are first applied to the locked cases in the Lab, and the Outcome Report shows the result; a Service is defined only if they pass there. The AICC Lead applies them at the Team's final acceptance, and the Domain Owner applies them to the working Service with its first users at the business acceptance. If a gate fails, the Service is returned or rejected.
+**Part 1: mandatory gates.** They are acceptance criteria in section 5 of the Solution Definition. They are first applied to the locked cases in the Lab, and the Outcome Report shows the result; a Service is defined only if they pass there. The Competence Center Lead applies them at the Team's final acceptance, and the Domain Owner applies them to the working Service with its first users at the business acceptance. If a gate fails, the Service is returned or rejected.
 
 | Gate | Acceptance criterion |
 | --- | --- |
@@ -122,9 +122,9 @@ Before the first users see any output, section 7 of the Solution Definition stat
 | A prohibited action or a regulated decision put to the employee as a next step | only approved codes for the verified state pass the output check | output-check log |
 | Bypass of a mandatory control, or critical customer harm | the checks above run in code before display; the manual route is always open | monitoring; incident reports |
 
-Each zero-tolerance event is an AI Incident. Anyone who sees one reports it through the Bank's incident channel and states that AI is involved. The Bank's incident management notifies the AICC Lead, who enters it in the Risks and Issues Record and may suspend the Service.
+Each zero-tolerance event is an AI Incident. Anyone who sees one reports it through the Bank's incident channel and states that AI is involved. The Bank's incident management notifies the Competence Center Lead, who enters it in the Risks and Issues Record and may suspend the Service.
 
-The monitored limits include complaints about the journey, employee corrections and rejections, the age of unresolved cases, repeat contacts, and the share of cases sent to the manual route. None may get worse than its baseline by more than the agreed tolerance. A crossed alert level triggers a review by the Domain Owner. The validation conditions may name the levels at which the AICC Lead suspends.
+The monitored limits include complaints about the journey, employee corrections and rejections, the age of unresolved cases, repeat contacts, and the share of cases sent to the manual route. None may get worse than its baseline by more than the agreed tolerance. A crossed alert level triggers a review by the Domain Owner. The validation conditions may name the levels at which the Competence Center Lead suspends.
 
 ### Monitoring: alert levels and who watches them {#controls-monitoring}
 
@@ -135,14 +135,14 @@ The Solution Engineer states each alert level in section 7 of the Solution Defin
 | Performance | quality on a regular sample of live cases reviewed by Domain Experts who did not build the Solution, by language; the share of outputs with statements removed | [Solution Engineer, Solution Definition section 7] | Solution Engineer, as the operating function; Domain Expert for the sample |
 | Drift | changes in the language mix, case types, proposed action codes, retrieval misses, and the share of cases sent to the manual route | [Solution Engineer, Solution Definition section 7] | Solution Engineer |
 | Human override and correction rate | accepted, corrected and rejected outputs by week | [Solution Engineer, Solution Definition section 7] | Solution Engineer; the Service Operations Manager for the team's use |
-| Incidents | AI Incidents, near misses and zero-tolerance events | any event | the Bank's incident management; AICC Lead |
+| Incidents | AI Incidents, near misses and zero-tolerance events | any event | the Bank's incident management; Competence Center Lead |
 | Cost | cost per case and per month against the cost limit | [cost limit, Solution Definition section 7] | Solution Engineer; Domain Owner, whose Domain pays the run cost |
 | Service levels | availability, response time, and how often the context-only mode is used | [Service Agreement response targets] | Solution Engineer |
 
 ### Suspension and the manual route {#controls-suspension}
 
-- **Who suspends.** The AICC Lead or any Control Function Contact. The suspension and its lifting are entered in the Decision Log; the lifting records the evidence that the cause was corrected and retested.
-- **The team's own switch.** The Service Operations Manager may move the team to the existing process at any time. This is not a suspension, and they tell the AICC Lead the same day.
+- **Who suspends.** The Competence Center Lead or any Control Function Contact. The suspension and its lifting are entered in the Decision Log; the lifting records the evidence that the cause was corrected and retested.
+- **The team's own switch.** The Service Operations Manager may move the team to the existing process at any time. This is not a suspension, and they tell the Competence Center Lead the same day.
 - **How it works.** Three switches: generation off (the workspace stays in the context-only mode), one action off, or the whole workspace off. None of them deletes the record of use. All three are tested before the first users see output.
 - **Fallback.** The context-only mode and the manual route are always allowed. A second model may be used only if it was validated in advance and named as the fallback in the Solution Definition. Nothing switches automatically to another model or provider, and nothing widens the group of users automatically.
 
@@ -163,7 +163,7 @@ The Solution Engineer states each alert level in section 7 of the Solution Defin
 
 ### Significant changes {#controls-significant-changes}
 
-Every change is a Feature. These are significant: a change of model, model version, provider or model route; a field or data class beyond the context contract; any write or tool held by the model; customer output without employee review; a second journey; and any change the validation named. For each, the AICC Lead decides whether a new validation is needed and records it in the Decision Log; the change needs the Team's final acceptance and is released by the Domain Owner. Changes to prompts, output formats or the procedure set run against the locked cases first, and the AICC Lead decides whether they are significant. Use by more people than the first users is a release decision, not a change.
+Every change is a Feature. These are significant: a change of model, model version, provider or model route; a field or data class beyond the context contract; any write or tool held by the model; customer output without employee review; a second journey; and any change the validation named. For each, the Competence Center Lead decides whether a new validation is needed and records it in the Decision Log; the change needs the Team's final acceptance and is released by the Domain Owner. Changes to prompts, output formats or the procedure set run against the locked cases first, and the Competence Center Lead decides whether they are significant. Use by more people than the first users is a release decision, not a change.
 
 ### Records that hold the evidence {#controls-records}
 

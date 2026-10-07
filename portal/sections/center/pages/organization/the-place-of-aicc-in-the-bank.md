@@ -1,6 +1,6 @@
 ---
 id: organization/the-place-of-aicc-in-the-bank
-title: The place of AICC in the Bank
+title: The place of the Competence Center in the Bank
 section: organization
 order: 2
 type: outline
@@ -12,7 +12,7 @@ production: authored; explanatory, the Operating Model is the rule
 status: scaffold
 ---
 
-# The place of AICC in the Bank
+# The place of the Competence Center in the Bank
 
 Page type: outline. Address: /organization/the-place-of-aicc-in-the-bank/
 
@@ -22,4 +22,4 @@ Page type: outline. Address: /organization/the-place-of-aicc-in-the-bank/
 
 ## Outline
 
-- Mandate and reporting line; what AICC is; what it is not; whom it works with
+- Mandate and reporting line; what the Competence Center is; what it is not; whom it works with

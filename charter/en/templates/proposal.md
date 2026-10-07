@@ -2,14 +2,14 @@
 id: AICC-TPL-12-EN
 title: Proposal
 status: active
-revision: 1.0
+revision: 1.1
 created: 2026-10-02
-revised: 2026-10-02
+revised: 2026-10-07
 ```
 
 # Proposal
 
-**Template.** Written by the AICC Lead when an Experiment ends in a Proposal to adopt a Solution at scale, and for the yearly Proposal of the AI adoption strategy. It is an evidence record of what AICC proposed and what the Bank decided. It carries no figures of the Bank, no data, and no code.
+**Template.** Written by the Competence Center Lead when an Experiment ends in a Proposal to adopt a Solution at scale, and for the yearly Proposal of the AI adoption strategy. It is an evidence record of what the Competence Center proposed and what the Bank decided. It carries no figures of the Bank, no data, and no code.
 
 | Field | Entry |
 | --- | --- |
@@ -29,7 +29,7 @@ revised: 2026-10-02
 
 ## 3. Options and recommendation
 
-[The options, and AICC's recommendation with its reasons.]
+[The options, and the Competence Center's recommendation with its reasons.]
 
 ## 4. Decision
 

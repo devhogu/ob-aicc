@@ -17,6 +17,6 @@ Page type: outline. Address: /about/strategy/
 
 - The strategy of the Bank: its mission and the four Strategic Pillars, and the contribution of AI to each (Statement of Intent 3)
 - The AI adoption strategy: the seven Strategic Priorities (Statement of Intent 9) and the areas of application (8)
-- The strategy across the aspects of AICC: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures
+- The strategy across the aspects of the Competence Center: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures
 - The road: the Maturity Roadmap and its measures (Statement of Intent 11)
-- How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, AICC Charter 7)
+- How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, Competence Center Charter 7)

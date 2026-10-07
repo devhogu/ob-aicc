@@ -33,4 +33,4 @@ Delivery is measured to control the flow and to improve it, not to rank people. 
 
 ## 7. Rule source
 
-Solution Lifecycle Model 10; AICC Charter 7.1; Statement of Intent 11.3; Portfolio Management Model 9.
+Solution Lifecycle Model 10; AI Competence Center Charter 7.1; Statement of Intent 11.3; Portfolio Management Model 9.

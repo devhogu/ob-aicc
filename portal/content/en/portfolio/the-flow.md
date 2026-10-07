@@ -10,7 +10,7 @@ An Initiative is a business program that delivers one or more Solutions, and its
 flowchart TB
   subgraph ROW1["The way in: from the funnel to the Portfolio Backlog"]
     direction LR
-    FU["Funnel<br/>Proposed<br/>a need is stated"] --> G1["Gate: intake<br/>AICC Lead<br/>take in, defer,<br/>or reject"]
+    FU["Funnel<br/>Proposed<br/>a need is stated"] --> G1["Gate: intake<br/>Competence Center Lead<br/>take in, defer,<br/>or reject"]
     G1 --> RV["Reviewing<br/>Discovery: scoping<br/>with the Domain Owner"]
     RV --> G2["Gate: scoped<br/>fits a priority, has an<br/>owner, within the limit,<br/>no duplicate"]
     G2 --> AN["Analyzing<br/>Discovery: business case<br/>Initiative Brief, clearance<br/>of the Control Functions"]
@@ -19,7 +19,7 @@ flowchart TB
   end
   subgraph ROW2["The way through: from the pull to Done"]
     direction LR
-    G4["Gate: pull<br/>AICC Lead, when the<br/>limit on the Active<br/>Initiatives allows"] --> MV["MVP<br/>Active: the probe<br/>the first Solution,<br/>narrow by rule"]
+    G4["Gate: pull<br/>Competence Center Lead, when the<br/>limit on the Active<br/>Initiatives allows"] --> MV["MVP<br/>Active: the probe<br/>the first Solution,<br/>narrow by rule"]
     MV --> G5["Gate: decision<br/>after the MVP<br/>continue, pivot,<br/>defer, reject"]
     G5 --> IM["Implementation<br/>Active: Capabilities and<br/>Features in the<br/>Program Backlog"]
     IM --> G6["Gate: acceptance<br/>Domain Owner, or<br/>Executive Sponsor"]
@@ -37,27 +37,27 @@ Figure 1: the portfolio Kanban, with its gates and the routes out.
 
 | Step | What happens | Exit criterion, in short | Decided by | Record |
 | --- | --- | --- | --- | --- |
-| Funnel | A function, the discovery work, or AICC proposes an idea or a need | The problem, the strategic relevance, and the requester are stated | AICC Lead takes it in, defers it, or rejects it | An entry in the Portfolio Backlog |
-| Reviewing | The need is scoped with the Domain Owner | It fits a Strategic Priority, has a Domain Owner, is permitted by the limit, and does not duplicate a Solution or a Package of the catalog | AICC Lead with the Domain Owner | The scope in the Initiative Brief |
+| Funnel | A function, the discovery work, or the Competence Center proposes an idea or a need | The problem, the strategic relevance, and the requester are stated | Competence Center Lead takes it in, defers it, or rejects it | An entry in the Portfolio Backlog |
+| Reviewing | The need is scoped with the Domain Owner | It fits a Strategic Priority, has a Domain Owner, is permitted by the limit, and does not duplicate a Solution or a Package of the catalog | Competence Center Lead with the Domain Owner | The scope in the Initiative Brief |
 | Analyzing | The business case is written and cleared | The Initiative Brief is complete, meets the five criteria, and is cleared by the Control Function Contacts where Risk Tier 2 or 3 is expected | Domain Owner, or Executive Sponsor | Initiative Brief, clearances, Decision Record |
-| Portfolio Backlog | The approved Initiative is ranked and waits for a place under the limit | It is ranked by weighted shortest job first and pulled when the limit on the Active Initiatives allows | AICC Lead pulls the highest-ranked that fits | The rank and the scores |
+| Portfolio Backlog | The approved Initiative is ranked and waits for a place under the limit | It is ranked by weighted shortest job first and pulled when the limit on the Active Initiatives allows | Competence Center Lead pulls the highest-ranked that fits | The rank and the scores |
 | MVP | The first Solution is probed | The probe has tested the hypothesis against the leading indicators | The approver decides to continue, pivot, defer, or reject | Solution Definition, the result, Decision Log |
 | Implementation | The Capabilities are built and the Solutions delivered | The Capabilities are in the Program Backlog and the Solutions delivered | Domain Owner, or Executive Sponsor, accepts | Capabilities under the Initiative |
 | Done | The outcome is reviewed and accepted | Reviewed against the leading indicators and accepted | Domain Owner, or Executive Sponsor | The acceptance; the Outcome Report of an Engagement |
 
 ## 2. The four outcomes at a gate
 
-2.1. The AICC Lead brings an Initiative to a gate with its entry in order, and the decider checks the exit criterion. The outcome is one of four. Advance: the Initiative moves to the next step. Return: it goes back with what is missing, and the step is repeated. Defer: there is not yet sufficient reason to proceed; it stays in the funnel with a reason and a date to look again. Reject: the value is not seen, and the lessons are kept. A pivot is a fifth route after the MVP: the Initiative is closed as Pivoted and a new one enters the funnel, linked to it, carrying what was learned. Every decision is entered in the Decision Log.
+2.1. The Competence Center Lead brings an Initiative to a gate with its entry in order, and the decider checks the exit criterion. The outcome is one of four. Advance: the Initiative moves to the next step. Return: it goes back with what is missing, and the step is repeated. Defer: there is not yet sufficient reason to proceed; it stays in the funnel with a reason and a date to look again. Reject: the value is not seen, and the lessons are kept. A pivot is a fifth route after the MVP: the Initiative is closed as Pivoted and a new one enters the funnel, linked to it, carrying what was learned. Every decision is entered in the Decision Log.
 
 2.2. Rejected and Cancelled differ. Rejected is a business decision on the merits. Cancelled is a withdrawal without one, an error, a duplicate, a need that no longer exists, or a stop by a Control Function, and it is available in any state.
 
 ## 3. Discovery is research, the MVP is a probe
 
-3.1. Reviewing and Analyzing together are Discovery. Discovery learns the need and the requirements, builds nothing, and shapes the Initiative Brief; its cost is the time of the AICC Lead and the Domain Owner. The MVP is the smallest version of the first Solution that can test the hypothesis, built by the Solution Engineer with the Domain Expert within the Limits on Work in Progress. The distinction protects the Bank from the two classic failures of portfolio work: building before the need is understood, and committing before the idea is proven.
+3.1. Reviewing and Analyzing together are Discovery. Discovery learns the need and the requirements, builds nothing, and shapes the Initiative Brief; its cost is the time of the Competence Center Lead and the Domain Owner. The MVP is the smallest version of the first Solution that can test the hypothesis, built by the Solution Engineer with the Domain Expert within the Limits on Work in Progress. The distinction protects the Bank from the two classic failures of portfolio work: building before the need is understood, and committing before the idea is proven.
 
 ## 4. The limit on the Active Initiatives
 
-4.1. A limit applies to the Initiatives that are Active at one time, so that the work in progress of the Portfolio stays low and its flow steady. The AICC Lead sets it within the mix that the Executive Sponsor decides at the quarterly Steering, and reviews it at the monthly Steering. The limit is why the Portfolio Backlog exists: an approved Initiative waits, ranked, until a place is free, and a Service Agreement is not issued above the limit. For a team of three, the limit is the single most important control of the Portfolio: it is what makes a small unit finish things.
+4.1. A limit applies to the Initiatives that are Active at one time, so that the work in progress of the Portfolio stays low and its flow steady. The Competence Center Lead sets it within the mix that the Executive Sponsor decides at the quarterly Steering, and reviews it at the monthly Steering. The limit is why the Portfolio Backlog exists: an approved Initiative waits, ranked, until a place is free, and a Service Agreement is not issued above the limit. For a team of three, the limit is the single most important control of the Portfolio: it is what makes a small unit finish things.
 
 ## 5. The states behind the Kanban
 

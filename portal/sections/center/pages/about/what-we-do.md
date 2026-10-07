@@ -20,6 +20,6 @@ Page type: outline. Address: /about/what-we-do/
 
 ## Outline
 
-- One page: AICC as the internal consulting and innovation lab of the Bank; research and consulting across strategy, programs, solutions, and ways of working
+- One page: The Competence Center as the internal consulting and innovation lab of the Bank; research and consulting across strategy, programs, solutions, and ways of working
 - The service lines in one line each, with a link to the Services section
-- What AICC is not: no AI Platform, no business results of a Domain, no Control Function rules, no validation of its own work, no delivery at scale (AICC Charter 3.2)
+- What the Competence Center is not: no AI Platform, no business results of a Domain, no Control Function rules, no validation of its own work, no delivery at scale (Competence Center Charter 3.2)

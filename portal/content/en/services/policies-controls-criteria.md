@@ -1,16 +1,16 @@
 # Policies, controls, criteria
 
-The use of AI in a function answers to the AI Policy of the Bank, to the controls of AICC, and to criteria that say when a Solution is good enough and safe enough to use. AICC helps a function state its own rules of use within the policy, map the controls that apply to its Solutions, and define the acceptance and evaluation criteria before any build, so that compliance is designed in and not inspected in.
+The use of AI in a function answers to the AI Policy of the Bank, to the controls of the Competence Center, and to criteria that say when a Solution is good enough and safe enough to use. The Competence Center helps a function state its own rules of use within the policy, map the controls that apply to its Solutions, and define the acceptance and evaluation criteria before any build, so that compliance is designed in and not inspected in.
 
 ## 1. What it is
 
 1.1. The category covers the rules of use of a function within the AI Policy, which data classes, which Solutions, which uses, and which human review; the mapping of the controls of the Operating Model and of the Control Functions to the Solutions of the function; the acceptance criteria of a Solution, what it must do and must not do, and the Acceptance Checklist prepared from them; the evaluation criteria and the evaluation set against which a model or a Solution is tested; and the guardrails of a Solution in operation, grounding, limits, logging, escalation.
 
-1.2. AICC helps the function state these; the Control Functions set the rules of their remit, validate, and may stop. AICC does not set the rules of a Control Function.
+1.2. The Competence Center helps the function state these; the Control Functions set the rules of their remit, validate, and may stop. The Competence Center does not set the rules of a Control Function.
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - The rules of use of a function within the AI Policy, for its data classes and its Solutions
 - A control map for the Solutions of a function: which control applies, who owns it, what evidence it leaves
@@ -41,7 +41,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The Domain Owner approves the rules of use and the acceptance criteria of its Solutions; the Control Function concerned sets and validates what is in its remit; the controls of AICC are those of the Operating Model 8.
+8.1. The Domain Owner approves the rules of use and the acceptance criteria of its Solutions; the Control Function concerned sets and validates what is in its remit; the controls of the Competence Center are those of the Operating Model 8.
 
 ## 9. Rule source
 

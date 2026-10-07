@@ -20,7 +20,7 @@ The yearly AI Index is the reference for the data of the field: how much researc
 
 ## 4. How to take it, and for what
 
-4.1. For any number about the field, start here and cite the Index with its year. For the trend of models, cost, and capability, read the technical performance chapter. For the state of regulation, read the policy chapter beside the Regulators and acts pages. The AICC Lead updates the figures of the Responsible AI course from each new edition.
+4.1. For any number about the field, start here and cite the Index with its year. For the trend of models, cost, and capability, read the technical performance chapter. For the state of regulation, read the policy chapter beside the Regulators and acts pages. The Competence Center Lead updates the figures of the Responsible AI course from each new edition.
 
 ## 5. Cautions
 

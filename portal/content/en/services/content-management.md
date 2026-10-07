@@ -10,7 +10,7 @@ Public, investor, and management material generated from governed data and templ
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - Monthly and quarterly report editions from governed data
 - Board and investor material pre-filled for review
@@ -25,7 +25,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 4. How it runs
 
-4.1. An Initiative: the study maps the editions, the sources, and the approvals; the MVP produces the first edition in parallel with the current process and measures the difference; the function then runs it with the support of AICC, or AICC runs it as a Service. A template added to an existing engine is run-rate work.
+4.1. An Initiative: the study maps the editions, the sources, and the approvals; the MVP produces the first edition in parallel with the current process and measures the difference; the function then runs it with the support of the Competence Center, or the Competence Center runs it as a Service. A template added to an existing engine is run-rate work.
 
 ## 5. What it leads to
 

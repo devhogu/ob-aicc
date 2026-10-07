@@ -1,12 +1,12 @@
 # The modes and the front door
 
-Every service of AICC enters through the same front door and the same Portfolio. What differs is the mode: run-rate work is small and repeatable and is done within one Iteration; any other work is an Initiative with a business case and an MVP, which flows through the portfolio Kanban and its loops. This part states the two modes, how the fifteen service categories map to them, how an item is screened at the front door, and what the Portfolio shows at a glance.
+Every service of the Competence Center enters through the same front door and the same Portfolio. What differs is the mode: run-rate work is small and repeatable and is done within one Iteration; any other work is an Initiative with a business case and an MVP, which flows through the portfolio Kanban and its loops. This part states the two modes, how the fifteen service categories map to them, how an item is screened at the front door, and what the Portfolio shows at a glance.
 
 ## 1. The two modes
 
 | Mode | What flows in it | How it is decided | How long | Limit |
 | --- | --- | --- | --- | --- |
-| Run-rate work | A single document or runbook, an automation, a view or a consolidation, a training, an assessment, a digest | Taken in by the AICC Lead at the Weekly Review, as a Feature under the Standing Initiative of its service area, ranked by value and urgency, once the Domain Owner has approved the use for its data class | Within one Iteration | Within the Limits on Work in Progress; not counted against the limit on the Active Initiatives |
+| Run-rate work | A single document or runbook, an automation, a view or a consolidation, a training, an assessment, a digest | Taken in by the Competence Center Lead at the Weekly Review, as a Feature under the Standing Initiative of its service area, ranked by value and urgency, once the Domain Owner has approved the use for its data class | Within one Iteration | Within the Limits on Work in Progress; not counted against the limit on the Active Initiatives |
 | Initiative | A charter pack, a knowledge base, a process rewrite, a pipeline that feeds a report of the Bank, a document engine, a trial | An Initiative: study, business case, approval by the Domain Owner or the Executive Sponsor, MVP, decision after the MVP | Two Iterations to a Program Increment and more | Within the limit on the Active Initiatives |
 
 1.1. Run-rate work is carried by one Standing Initiative for each service area: an Initiative of enabling work whose Initiative Brief the Executive Sponsor approves and reviews at each quarterly Steering, and which does not count against the limit on the Active Initiatives (Business Model 4.9). Each item has its place in the Portfolio and its record as a Feature, with no Initiative Brief, Service Agreement, or Outcome Report of its own, and it is supported on demand only (Business Model 4.8). A request that cannot be done within one Iteration is taken in as an Initiative.
@@ -32,7 +32,7 @@ Every service of AICC enters through the same front door and the same Portfolio.
 | Workplace automation | An automation in the catalog | A set of automations for a process |
 | Analytics and decision support | A view, a consolidation, an analysis pack | A pipeline that feeds a recurring report of the Bank |
 | Content management | A template or an edition change | An engine for a document family |
-| Platforms | None; the category is taken in as an Initiative | An engine of AICC; a requirements statement to the AI Platform; the Handover of an engine to an IT function of the Bank |
+| Platforms | None; the category is taken in as an Initiative | An engine of the Competence Center; a requirements statement to the AI Platform; the Handover of an engine to an IT function of the Bank |
 
 ### Enablement
 
@@ -52,13 +52,13 @@ Every service of AICC enters through the same front door and the same Portfolio.
 
 ## 3. Screening at the front door
 
-3.1. The AICC Lead screens each need at intake on four questions, in this order (Portfolio Management Model 5.5): which problem lens it answers (insight, enablement, automation, optimization, a new opportunity); what size it is (small, medium, large, extra large, by the effort and the number of sources and systems it touches); which Risk Tier it is likely to carry; and whether a Package or a Solution of the catalog answers it already. The service category proposes the mode and the AICC Lead confirms it: run-rate work enters the Program Backlog as a Feature under the Standing Initiative of its service area and does not pass the gates of the portfolio Kanban, and every other need enters the funnel as an Initiative, which is taken in when it fits a Strategic Priority, has a client function with a Domain Owner, and the limit on the Active Initiatives permits it (Business Model 7.2).
+3.1. The Competence Center Lead screens each need at intake on four questions, in this order (Portfolio Management Model 5.5): which problem lens it answers (insight, enablement, automation, optimization, a new opportunity); what size it is (small, medium, large, extra large, by the effort and the number of sources and systems it touches); which Risk Tier it is likely to carry; and whether a Package or a Solution of the catalog answers it already. The service category proposes the mode and the Competence Center Lead confirms it: run-rate work enters the Program Backlog as a Feature under the Standing Initiative of its service area and does not pass the gates of the portfolio Kanban, and every other need enters the funnel as an Initiative, which is taken in when it fits a Strategic Priority, has a client function with a Domain Owner, and the limit on the Active Initiatives permits it (Business Model 7.2).
 
 3.2. The Portfolio checks each proposed Initiative against the catalog, so that the Portfolio reuses what exists and does not duplicate it.
 
 ## 4. The Portfolio at a glance
 
-4.1. The Portfolio is read in four groups, in the Portfolio Backlog of the Registry and in the Steering Summary: the Active Initiatives, with their mode, service category, Domain, and state; the candidates in the funnel and in Discovery, with their lens, size, and likely Risk Tier; the enabling work of AICC, with its Standing Initiatives; and the backlog of scenarios by Domain, screened and ranked, from which the funnel is fed. This site states the structure of this view; the instance is in the Registry.
+4.1. The Portfolio is read in four groups, in the Portfolio Backlog of the Registry and in the Steering Summary: the Active Initiatives, with their mode, service category, Domain, and state; the candidates in the funnel and in Discovery, with their lens, size, and likely Risk Tier; the enabling work of the Competence Center, with its Standing Initiatives; and the backlog of scenarios by Domain, screened and ranked, from which the funnel is fed. This site states the structure of this view; the instance is in the Registry.
 
 ## 5. Rule source
 

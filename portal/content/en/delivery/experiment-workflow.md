@@ -1,6 +1,6 @@
 # The Experiment workflow: the Lab
 
-Before the Bank invests, AICC proves. An Experiment is a time-boxed trial of a Solution, a platform, or a concept, run on governed data in a bounded environment, measured against leading indicators, and sent to review at the close of its time-box: it is accepted with its lessons and closed, a Proposal is made, or it is rejected. This page states the workflow of an Experiment and the rules of the environment in which it runs, the Lab of AICC (Solution Lifecycle Model 8.13). The six steps below detail the Stage Trial of an Experiment as explanation; the Stages of an Experiment are Trial, Proposal, and Handover (Solution Lifecycle Model 8.1).
+Before the Bank invests, the Competence Center proves. An Experiment is a time-boxed trial of a Solution, a platform, or a concept, run on governed data in a bounded environment, measured against leading indicators, and sent to review at the close of its time-box: it is accepted with its lessons and closed, a Proposal is made, or it is rejected. This page states the workflow of an Experiment and the rules of the environment in which it runs, the Lab of the Competence Center (Solution Lifecycle Model 8.13). The six steps below detail the Stage Trial of an Experiment as explanation; the Stages of an Experiment are Trial, Proposal, and Handover (Solution Lifecycle Model 8.1).
 
 ## 1. The steps of the Trial
 
@@ -19,10 +19,10 @@ Before the Bank invests, AICC proves. An Experiment is a time-boxed trial of a S
 
 2.2. Data enters the Lab as read-only extracts under the classification of the Bank, with a named owner for each source and no write-back to a system of the Bank. Personal data is minimized and is assessed with the Control Function Contact for data protection. A cloud or external environment is a provider and passes the check of the AI Policy before use.
 
-2.3. Every Experiment has a time-box in Iterations and goes to review at its close: it is accepted with its lessons and closed, a Proposal is made, or it is rejected. An Experiment keeps its one offering type: what proves its case leads to a Proposal, and when a Receiver accepts the Handover the Experiment is closed and AICC oversees the Adopted Solution (Solution Lifecycle Model 8.1).
+2.3. Every Experiment has a time-box in Iterations and goes to review at its close: it is accepted with its lessons and closed, a Proposal is made, or it is rejected. An Experiment keeps its one offering type: what proves its case leads to a Proposal, and when a Receiver accepts the Handover the Experiment is closed and the Competence Center oversees the Adopted Solution (Solution Lifecycle Model 8.1).
 
-2.4. The guardrails of the Lab, among them isolation, access, personal data protection, logging, grounding and bias checks, a failure protocol, and the path from the Lab to delivery, are kept by the AICC Lead with the evidence of each in the Standards Record, and the quarterly Steering reviews them (Solution Lifecycle Model 8.13(f)).
+2.4. The guardrails of the Lab, among them isolation, access, personal data protection, logging, grounding and bias checks, a failure protocol, and the path from the Lab to delivery, are kept by the Competence Center Lead with the evidence of each in the Standards Record, and the quarterly Steering reviews them (Solution Lifecycle Model 8.13(f)).
 
 ## 3. Rule source
 
-Solution Lifecycle Model 7, 8.1, and 8.13; Portfolio Management Model 7; AI Policy 2, 3, and 4; AICC Charter 3.3; Operating Model 4.4. The stages draw on the scenario validation concept of the Cloud LAB recorded in the wiki of the portal.
+Solution Lifecycle Model 7, 8.1, and 8.13; Portfolio Management Model 7; AI Policy 2, 3, and 4; AI Competence Center Charter 3.3; Operating Model 4.4. The stages draw on the scenario validation concept of the Cloud LAB recorded in the wiki of the portal.

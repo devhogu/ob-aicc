@@ -9,7 +9,7 @@ source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 1, 2
 document: solution-lifecycle-model
 part: 1 of 7
-words: 424
+words: 436
 production: generated
 status: scaffold
 ---
@@ -24,8 +24,8 @@ Page type: document. Address: /delivery/solution-lifecycle-model/
 
 ## Sections of the source
 
-- 1. Purpose and scope (192 words)
-- 2. Principles and values (232 words)
+- 1. Purpose and scope (200 words)
+- 2. Principles and values (236 words)
 
 ## Outline
 

@@ -1,19 +1,19 @@
 # Strategy and governance
 
-AICC builds for any unit of the Bank what it built for itself: a strategy, a charter and mandate, an operating and governance model with its roles, decisions, control loops, and controls, and the portal and repository that publish them. AICC develops these with AI in weeks and maintains them with it afterward. AICC drafts them for the function, and the function owns their substance; AICC decides none of it (Business Model 4.10).
+The Competence Center builds for any unit of the Bank what it built for itself: a strategy, a charter and mandate, an operating and governance model with its roles, decisions, control loops, and controls, and the portal and repository that publish them. The Competence Center develops these with AI in weeks and maintains them with it afterward. The Competence Center drafts them for the function, and the function owns their substance; The Competence Center decides none of it (Business Model 4.10).
 
 ## 1. What it is
 
-1.1. The category covers a function's or an Initiative's strategy paper, charter and mandate, operating model, governance package with a control catalog and a registry of records, and the portal and repository that hold the pack, as this site holds the charter of AICC. It covers governance for both an Initiative and a unit: the steering, the reporting chain, and the decision rights.
+1.1. The category covers a function's or an Initiative's strategy paper, charter and mandate, operating model, governance package with a control catalog and a registry of records, and the portal and repository that hold the pack, as this site holds the charter of the Competence Center. It covers governance for both an Initiative and a unit: the steering, the reporting chain, and the decision rights.
 
-1.2. The method is the one AICC used on itself: the documents are written in one voice from a single source, every rule is stated once, the processes are drawn as flows and loops, the controls are testable, and the portal is generated from the documents so that it cannot drift from them. AICC drafts, structures, and builds; the head of function reviews, decides, and owns.
+1.2. The method is the one the Competence Center used on itself: the documents are written in one voice from a single source, every rule is stated once, the processes are drawn as flows and loops, the controls are testable, and the portal is generated from the documents so that it cannot drift from them. The Competence Center drafts, structures, and builds; the head of function reviews, decides, and owns.
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - A strategy paper for a function or an Initiative, with its priorities and its measures
-- A charter and mandate for a unit, in the form of the AICC Charter
+- A charter and mandate for a unit, in the form of the AI Competence Center Charter
 - An operating and governance model: Roles, decisions, control loops, records, controls
 - A governance package for an Initiative: steering, reporting chain, decision rights, records
 - A portal and repository generated from the pack, in English and Russian
@@ -33,7 +33,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 6. The Package
 
-6.1. The charter method and its templates, the governance catalog, and the portal generator, proven on AICC itself and re-deployed for each function. The second function takes days where the first took weeks.
+6.1. The charter method and its templates, the governance catalog, and the portal generator, proven on the Competence Center itself and re-deployed for each function. The second function takes days where the first took weeks.
 
 ## 7. Run-rate work or an Initiative
 
@@ -41,7 +41,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The head of function owns the pack and decides its content; the Executive Sponsor approves the Initiative where it exceeds a guardrail or spans Domains. AICC decides nothing of the substance of the function.
+8.1. The head of function owns the pack and decides its content; the Executive Sponsor approves the Initiative where it exceeds a guardrail or spans Domains. The Competence Center decides nothing of the substance of the function.
 
 ## 9. Rule source
 

@@ -36,12 +36,12 @@ The baseline and the target of each indicator are figures of the Bank. They are 
 
 The steps below are the plan of the MVP. They start when the business case is approved and cleared and the Initiative is taken from the Portfolio Backlog into work (Portfolio Management Model 5).
 
-AICC does the following.
+The Competence Center does the following.
 
 1. Meet each function and go through its daily and monthly work to find the routine, mechanical tasks with files and reports.
 2. Rank the tasks with the function by the time they would release and by their risk.
 3. Introduce the functions that do not use AI to an approved assistant, and train their people on the job, on their own tasks.
-4. Each Domain Owner approves which data classes the function uses with the assistant, and obtains the approvals that the rules of the Bank require. AICC provides the technical means.
+4. Each Domain Owner approves which data classes the function uses with the assistant, and obtains the approvals that the rules of the Bank require. The Competence Center provides the technical means.
 5. Collect what worked and what did not, and enter the ranked tasks in the Backlog.
 
 Out of scope: The automation of decisions; custom Solutions in this period; use of data classes that are not approved.
@@ -50,7 +50,7 @@ Minimum viable product: One function using the approved assistant on its ranked 
 
 ## 4. Cost and value
 
-Cost: the time of the AICC Lead. No other cost is stated.
+Cost: the time of the Competence Center Lead. No other cost is stated.
 
 Investment Envelope: None; no Investment Envelope is set (Priorities Record).
 
@@ -74,7 +74,7 @@ The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (
 | --- | --- | --- | --- |
 | Approval of the business case | | | |
 | Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
-| Service Agreement issued | AICC Lead | | |
+| Service Agreement issued | Competence Center Lead | | |
 | Decision after the MVP (Portfolio Management Model 7.2) | | | |
 | Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | The head of each function, for the part of its function; the Executive Sponsor for the whole | | |
 

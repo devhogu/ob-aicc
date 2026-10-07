@@ -20,7 +20,7 @@ Where AI research appears first, as preprints, before and often instead of peer 
 
 ## 4. How to take it, and for what
 
-4.1. For a claim, find the paper and read its evaluation section and its limitations. For a method, read the paper beside its code. For the state of a task, read the leaderboard with care. Follow a few categories or authors rather than the daily firehose. The Research and exploration category of AICC keeps the watch and digests what matters.
+4.1. For a claim, find the paper and read its evaluation section and its limitations. For a method, read the paper beside its code. For the state of a task, read the leaderboard with care. Follow a few categories or authors rather than the daily firehose. The Research and exploration category of the Competence Center keeps the watch and digests what matters.
 
 ## 5. Cautions
 

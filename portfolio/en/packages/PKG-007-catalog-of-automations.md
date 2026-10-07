@@ -9,7 +9,7 @@ This is a Package Definition under Business Model 4.4, using AICC-TPL-14. Planne
 | Kind | Catalog of automations |
 | Service area and category | Build and run; Workplace automation |
 | Status | Planned |
-| Owner | AICC Lead |
+| Owner | Competence Center Lead |
 | Produced by | No originating Initiative or Service Agreement identifier is recorded in the package catalog. |
 | Used by or intended use | No consumer recorded. |
 | Needs to re-deploy | The process and its owner, the source systems, and the approval for the data class |

@@ -10,7 +10,7 @@ The routine work of a function done with AI and reviewed by a person: routing re
 
 ## 2. Examples of what a function asks for
 
-The following are examples that illustrate the category, not a list of commitments. What AICC commits to is stated in the Service Agreement of each Engagement.
+The following are examples that illustrate the category, not a list of commitments. What the Competence Center commits to is stated in the Service Agreement of each Engagement.
 
 - Triage and routing of requests, complaints, and messages
 - Extraction from forms and documents, and the filling of forms
@@ -41,7 +41,7 @@ The following are examples that illustrate the category, not a list of commitmen
 
 ## 8. Who decides
 
-8.1. The Domain Owner approves the use for its data class; the owner in the function reviews the output; the AICC Lead assigns the Risk Tier.
+8.1. The Domain Owner approves the use for its data class; the owner in the function reviews the output; the Competence Center Lead assigns the Risk Tier.
 
 ## 9. Rule source
 

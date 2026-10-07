@@ -26,4 +26,4 @@ Page type: service. Address: /services/risk-tiering/
 - Area: Assurance. The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes
 - What the function receives, how it runs, and what it leads to
 - The Package; run-rate work or an Initiative; who decides
-- Rule source: AI Policy 3; Operating Model 4.4; AICC Charter 5
+- Rule source: AI Policy 3; Operating Model 4.4; Competence Center Charter 5

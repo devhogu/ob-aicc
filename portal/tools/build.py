@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the AICC charter site (html/aicc) from the charter Markdown.
+"""Build the Competence Center site (html/aicc) from the charter Markdown.
 
 Source of the content: charter/en/**/*.md. Source of the structure: portal/sections/center/sitemap.json.
 Source of the chrome: portal/ui (the O! UI/UX kit), portal/site, portal/messages, portal/content.
@@ -52,9 +52,9 @@ BASELINE = {'revision': '2.2', 'date': '2026-10-03'}  # English source edition; 
 FONTS = os.path.join(ROOT, 'portal', '.tools', 'pw-syslibs')
 SHORT = {'Statement of Intent on the Adoption of Artificial Intelligence': 'Statement of Intent', 'Vocabulary and Style': 'Vocabulary', 'Portfolio and service delivery workflow': 'Service delivery workflow'}
 SHORT['Заявление о намерениях по внедрению AI'] = 'Заявление о намерениях'
-NAV_SHORT = {'AICC Charter': 'Charter', 'Portfolio measures: definitions and formulas': 'Portfolio measures', 'Delivery measures: definitions and formulas': 'Delivery measures',
+NAV_SHORT = {'AI Competence Center Charter': 'Charter', 'Portfolio measures: definitions and formulas': 'Portfolio measures', 'Delivery measures: definitions and formulas': 'Delivery measures',
              'Portfolio and service delivery workflow': 'Service delivery workflow'}      # shorter in the left navigation
-PAGE_TITLE = {'AICC Charter': 'AI Competence Center Charter'}      # fuller as the page title
+PAGE_TITLE = {}      # fuller page titles, where the document title is shortened elsewhere
 
 
 def disp(t):
@@ -65,7 +65,7 @@ LIBS = os.environ.get('MMDC_LIBS', os.path.join(ROOT, 'portal', '.tools', 'pw-sy
 
 DOC_NAMES = {
     'Statement of Intent': 'statement-of-intent',
-    'AICC Charter': 'aicc-charter',
+    'AI Competence Center Charter': 'aicc-charter',
     'Charter': 'aicc-charter',
     'Business Model': 'business-model',
     'Operating Model': 'operating-model',
@@ -76,7 +76,7 @@ DOC_NAMES = {
     'Catalog': 'document-catalog',
     'Vocabulary': 'vocabulary',
 }
-XREF = re.compile(r'\b(Statement of Intent|AICC Charter|Charter|Business Model|Operating Model|Portfolio Management Model|Solution Lifecycle Model|AI Policy|Document Catalog|Catalog|Vocabulary)\s+(\d+(?:\.\d+)*)((?:\([a-z]\))?)')
+XREF = re.compile(r'\b(Statement of Intent|AI Competence Center Charter|Charter|Business Model|Operating Model|Portfolio Management Model|Solution Lifecycle Model|AI Policy|Document Catalog|Catalog|Vocabulary)\s+(\d+(?:\.\d+)*)((?:\([a-z]\))?)')
 LOCALXREF = re.compile(r'\b(sections?|clause|раздел(?:а|е|ы|ов)?|пункт(?:а|е|ы|ов)?)\s+(\d+(?:\.\d+)*)', re.I)
 CLAUSE = re.compile(r'^(\d+(?:\.\d+)+)\.\s')
 
@@ -837,7 +837,7 @@ def desc_of(site, p):
     fixed = {
         'about/charter-outline': 'How the charter is organized on this site, where each part is, and where to start',
         'knowledge-base/guides': 'The five guides in one place: who does what, when, and what is left on record, each beside its workflow',
-        'about/strategy': 'The strategy of the Bank, the Strategic Priorities, the strategic choices across every aspect of AICC, and the road of Maturity Levels',
+        'about/strategy': 'The strategy of the Bank, the Strategic Priorities, the strategic choices across every aspect of the Competence Center, and the road of Maturity Levels',
         'about/values-and-principles': 'The values and the principles of adoption, application, work, and delivery, and what each applies to',
         'reference/vocabulary': 'The defined terms of the charter and its style',
         'reference/change-history': 'The revision history of the documents',
@@ -1706,14 +1706,14 @@ def records_page(site, p, lang):
                ('Service Management', 'Requests and incidents, including AI Incidents')]
     if lang == 'ru':
         systems = [
-            ('Папка AICC', 'Управленческие решения, назначения, приоритеты, стандарты, риски и проблемы, реестр AI-решений, контрольные процедуры и подтверждающие документы в виде неизменяемых датированных выгрузок. Хранится на корпоративном файловом ресурсе: ' + share(REGISTRY_BASE)),
+            ('Папка Центра компетенций', 'Управленческие решения, назначения, приоритеты, стандарты, риски и проблемы, реестр AI-решений, контрольные процедуры и подтверждающие документы в виде неизменяемых датированных выгрузок. Хранится на корпоративном файловом ресурсе: ' + share(REGISTRY_BASE)),
             ('Портфель', 'Каталог решений и пакетов и рабочее состояние: каталог сценариев, бэклоги и канбаны портфеля и программы с паспортами инициатив, дорожная карта, календарь, программные инкременты, панель показателей и проекты. Хранится на корпоративном файловом ресурсе: ' + share(PORTFOLIO_BASE)),
             ('Jira и Confluence', 'Повседневная работа: задачи команд и зеркальная копия инициатив, Capabilities и Features; методические материалы и панели — по ссылкам'),
             ('Service Management', 'Запросы и инциденты, в том числе инциденты AI'),
         ]
     srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i < 2 else esc(b)) for i, (a, b) in enumerate(systems))
-    intro = {'en': 'This site is static. It states the rules and the forms of AICC and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
-             'ru': 'Портал статичен: он излагает правила и формы AICC и не содержит текущих рабочих документов. В таблице рабочие документы перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
+    intro = {'en': 'This site is static. It states the rules and the forms of the Competence Center and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
+             'ru': 'Портал статичен: он излагает правила и формы Центра компетенций и не содержит текущих рабочих документов. В таблице рабочие документы перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
     main = '<h1>%s</h1><p class="o-lead">%s</p><h2>Systems</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Systems"><table><tbody>%s</tbody></table></div><h2>Records</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Records"><table><thead><tr><th>Template</th><th>%s</th><th>%s</th><th>Controls</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
         esc(p['title']), esc(intro), srows, esc(m['used_when']), esc(m['kept_in']), ''.join(rows), prev_next(site, p, lang))
     if lang == 'ru':
@@ -1776,7 +1776,7 @@ def role_page(site, p, lang):
     name = p.get('english_title', p['title'])
     om = site.roles['om'].get(name, {})
     prof = site.roles['prof'].get(name, {})
-    cols = {'Executive Sponsor': 'SP', 'AICC Lead': 'AL', 'Solution Engineer': 'SE', 'Domain Owner': 'DO', 'Domain Expert': 'DE', 'Control Function Contact': 'CFC', 'Platform Owner': 'PO'}
+    cols = {'Executive Sponsor': 'SP', 'Competence Center Lead': 'AL', 'Solution Engineer': 'SE', 'Domain Owner': 'DO', 'Domain Expert': 'DE', 'Control Function Contact': 'CFC', 'Platform Owner': 'PO'}
     col = cols.get(name)
     raci = [(r['Activity'], r.get(col, '')) for r in site.roles['raci'] if col and r.get(col)]
     dl = ''

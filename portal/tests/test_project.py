@@ -26,7 +26,7 @@ class ProjectPromotion(unittest.TestCase):
         baseline = Capture(case['body']).documents[case['id']]
         self.assertEqual(baseline['atoms'], Capture(rendered).documents[case['id']]['atoms'])
         self.assertEqual(baseline['diagrams'], Capture(rendered).documents[case['id']]['diagrams'])
-        changed = rendered.replace('<td>AICC Lead</td>', '<td>Unassigned</td>', 1)
+        changed = rendered.replace('<td>Competence Center Lead</td>', '<td>Unassigned</td>', 1)
         self.assertNotEqual(baseline['atoms'], Capture(changed).documents[case['id']]['atoms'])
         changed = rendered.replace('marker-end="url(', 'marker-end="broken(', 1)
         self.assertNotEqual(baseline['diagrams'], Capture(changed).documents[case['id']]['diagrams'])

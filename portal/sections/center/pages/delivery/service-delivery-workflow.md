@@ -9,7 +9,7 @@ source: charter/en/workflows/service-delivery.md
 source_sections: 1, 2, 3
 document: service-delivery-workflow
 part: 1 of 6
-words: 946
+words: 961
 series: set-service-delivery
 production: generated
 status: scaffold
@@ -25,9 +25,9 @@ Page type: workflow. Address: /delivery/service-delivery-workflow/
 
 ## Sections of the source
 
-- 1. Intent and scope (214 words)
-- 2. The levels (364 words)
-- 3. The states (368 words)
+- 1. Intent and scope (222 words)
+- 2. The levels (365 words)
+- 3. The states (374 words)
 
 ## Outline
 

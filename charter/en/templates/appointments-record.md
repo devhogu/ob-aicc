@@ -2,7 +2,7 @@
 id: AICC-TPL-09-EN
 title: Appointments Record
 status: active
-revision: 1.2
+revision: 1.3
 created: 2026-10-02
 revised: 2026-10-07
 ```
@@ -19,21 +19,21 @@ revised: 2026-10-07
 
 The members of the AI Steering Committee and the Control Function Contacts are listed in the same table, in the rows after the Roles, each with a Status and a decision reference.
 
-**Checkers.** The Checker of a Risk Tier 1 Solution, whom the AICC Lead names, and the engineer of the IT function or the Domain who checks until AICC has a second Solution Engineer (Operating Model 4.4(e)), are entered here. A Checker is a designation and not a Role.
+**Checkers.** The Checker of a Risk Tier 1 Solution, whom the Competence Center Lead names, and the engineer of the IT function or the Domain who checks until the Competence Center has a second Solution Engineer (Operating Model 4.4(e)), are entered here. A Checker is a designation and not a Role.
 
 | Solution | Name | Named by | Date | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- |
-| SOL-[nnn] | [name and post] | [AICC Lead] | [date] | DR-[yyyy]-[nnn] |
+| SOL-[nnn] | [name and post] | [Competence Center Lead] | [date] | DR-[yyyy]-[nnn] |
 
-**Product owners.** While a Team has up to three people the AICC Lead is its product owner, and no entry is needed. When the AICC Lead names another person as the product owner of a Team (Solution Lifecycle Model 7.3), the person is entered here. A product owner is a designation and not a Role.
+**Product owners.** While a Team has up to three people the Competence Center Lead is its product owner, and no entry is needed. When the Competence Center Lead names another person as the product owner of a Team (Solution Lifecycle Model 7.3), the person is entered here. A product owner is a designation and not a Role.
 
 | Team | Name | Named by | Date | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- |
-| [Team] | [name and post] | [AICC Lead] | [date] | DR-[yyyy]-[nnn] |
+| [Team] | [name and post] | [Competence Center Lead] | [date] | DR-[yyyy]-[nnn] |
 
 ## Part B. The responsibilities
 
-The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the AICC Lead. Each accepted limit is also tracked in the Risks and Issues Record, by its RI identifier.
+The RACI by activity, with one accountable Role for each activity, is in the Organization guide. The Holders in Part A resolve each Role to a person. The rules of separation of the Operating Model 4.4 apply, and the combinations accepted while the Team is small, those of the Business Model 7.5 and the Solution Lifecycle Model 7.3(d), are listed here as accepted limits, each with its compensating controls, which include the monthly sample of the Decisions of the Competence Center Lead. Each accepted limit is also tracked in the Risks and Issues Record, by its RI identifier.
 
 | Accepted limit | Holder | Rule | Compensating controls | Risks and Issues entry | Reviewed (date) |
 | --- | --- | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ The RACI by activity, with one accountable Role for each activity, is in the Org
 
 | Entry | Date entered | Entered by | Event | Role | Person | Effective from and to | Decided by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| AP-[nnn] |  | [AICC Lead, or the named deputy] | [Appointed / Acting / Relieved / Changed / Deputy named / Confirmed / Left] |  |  |  |  | DR-[yyyy]-[nnn] |
+| AP-[nnn] |  | [Competence Center Lead, or the named deputy] | [Appointed / Acting / Relieved / Changed / Deputy named / Confirmed / Left] |  |  |  |  | DR-[yyyy]-[nnn] |
 
 ## Part D. Declarations and competence
 
@@ -57,7 +57,7 @@ The RACI by activity, with one accountable Role for each activity, is in the Org
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
-The keepers of the Registry, of the Portfolio, of each tool, of the AICC portal, of its tooling, and of the mailbox of AICC are entered here (Operating Model 7.6, 7.8).
+The keepers of the Registry, of the Portfolio, of each tool, of the Competence Center portal, of its tooling, and of the mailbox of the Competence Center are entered here (Operating Model 7.6, 7.8).
 
 | Tool | Keeper (Role and name) | From | To |
 | --- | --- | --- | --- |

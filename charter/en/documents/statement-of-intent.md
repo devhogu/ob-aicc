@@ -2,9 +2,9 @@
 id: AICC-MND-01-EN
 title: Statement of Intent on the Adoption of Artificial Intelligence
 status: active
-revision: 1.3
+revision: 1.4
 created: 2026-10-02
-revised: 2026-10-05
+revised: 2026-10-07
 ```
 
 # Statement of Intent on the Adoption of Artificial Intelligence
@@ -13,9 +13,9 @@ revised: 2026-10-05
 
 1.1. This Statement sets out the intent, values, principles, and strategy of the Bank for the adoption of artificial intelligence ("AI"). In this Statement, "the Bank" means O!Bank, and "Domain" means a business function or a product line of the Bank.
 
-1.2. This Statement applies to the use of AI in the operations, products, and services of the Bank, whether or not that use is managed by the AI Competence Center ("AICC").
+1.2. This Statement applies to the use of AI in the operations, products, and services of the Bank, whether or not that use is managed by the AI Competence Center ("the Competence Center").
 
-1.3. This Statement records what the Bank intends to achieve and the commitments it makes in doing so. The internal operation of AICC is set out in the Operating Model and is not repeated here.
+1.3. This Statement records what the Bank intends to achieve and the commitments it makes in doing so. The internal operation of the Competence Center is set out in the Operating Model and is not repeated here.
 
 1.4. Capitalized terms that are not defined in this Statement have the meaning given in the Vocabulary and Style.
 
@@ -94,13 +94,13 @@ revised: 2026-10-05
 
 7.3. The model risk, compliance, information security, data protection, and legal functions remain independent. They validate the use of AI and may stop it. Internal audit remains independent and gives assurance only. No person validates their own work.
 
-7.4. AICC is the internal consulting and innovation lab of the Bank for the adoption of AI across the Bank. It manages the Portfolio of Initiatives, provides a delivery capability within the Initiatives of the Domains, and coordinates the deployment and use of AI in the Domains. Execution is carried out by the Domains.
+7.4. The Competence Center is the internal consulting and innovation lab of the Bank for the adoption of AI across the Bank. It manages the Portfolio of Initiatives, provides a delivery capability within the Initiatives of the Domains, and coordinates the deployment and use of AI in the Domains. Execution is carried out by the Domains.
 
 7.5. The AI Steering Committee, composed of the heads of the business, technology, risk, and compliance functions whom the Executive Sponsor names, advises the Executive Sponsor on the Portfolio and on conflicts between Domains.
 
 7.6. The Board oversees AI through the Board Committee, the committee that the Board names for the purpose.
 
-7.7. The Bank shall maintain a statement of its appetite for AI risk, decided by the Executive Sponsor, owned by the AICC Lead, and noted by the Board Committee, against which the use of AI is assessed.
+7.7. The Bank shall maintain a statement of its appetite for AI risk, decided by the Executive Sponsor, owned by the Competence Center Lead, and noted by the Board Committee, against which the use of AI is assessed.
 
 7.8. Each Solution is assigned a Risk Tier. The Risk Tier determines the review, validation, human oversight, and speed of release that apply to it.
 
@@ -164,11 +164,11 @@ revised: 2026-10-05
 
 ## 10. Capability and enablers
 
-10.1. **People and skills.** Employees shall receive training by role before they use AI. Each Domain shall appoint Domain Experts who promote and enable adoption in that Domain. AICC shall maintain training, templates, and communities of practice.
+10.1. **People and skills.** Employees shall receive training by role before they use AI. Each Domain shall appoint Domain Experts who promote and enable adoption in that Domain. The Competence Center shall maintain training, templates, and communities of practice.
 
 10.2. **Data and knowledge.** Data shall be classified, and the classification shall determine which data may reach which models and services and where they may run. Knowledge sources shall have named owners and review cycles.
 
-10.3. **AI Platform.** A shared AI Platform shall serve the Bank, with data separated as its classification requires. The AI Platform is provided and operated outside AICC. AICC states the requirements that the use of AI places on it.
+10.3. **AI Platform.** A shared AI Platform shall serve the Bank, with data separated as its classification requires. The AI Platform is provided and operated outside the Competence Center. The Competence Center states the requirements that the use of AI places on it.
 
 10.4. **Funding.** Investment shall be allocated to Strategic Priorities and to the Teams by means of Investment Envelopes. Investment Guardrails shall determine which Initiatives require the approval of the Executive Sponsor.
 
@@ -197,7 +197,7 @@ revised: 2026-10-05
 | Model gateway: a single controlled access point to models, with routing, cost control, and data protection policy | Basic | Established | Established | Established | Established |
 | Knowledge layer: governed retrieval over the Bank's knowledge | | First knowledge bases | Priority processes | Shared by all assistants | Shared by all AI agents |
 | Tool gateway: permissioned access from AI to systems and interfaces | | | Read access to selected systems | Governed access across systems | Scoped action rights for AI agents |
-| AI Registry: the Record of AICC of each Solution, model, and AI agent, with owner, scope, data access, and Risk Tier, which the AI Platform feeds | List of known AI uses | List with Risk Tiers | Registry | Registry across Domains | AI agent registry with limits |
+| AI Registry: the Record of the Competence Center of each Solution, model, and AI agent, with owner, scope, data access, and Risk Tier, which the AI Platform feeds | List of known AI uses | List with Risk Tiers | Registry | Registry across Domains | AI agent registry with limits |
 | Platform Guardrails: enforced permissions, limits, and checks | Policies activated | Policies applied | Checks at the Stages of an item | Enforced in the AI Platform | Deterministic checks before actions |
 | Human oversight: approval points for high-stakes actions | By policy | By policy | Within operational flows | Standard across the AI Platform | On channels that AI agents cannot influence |
 | Observability and evaluation: audit trail, evaluation, monitoring, and lineage | Manual | Basic logs | Evaluation before release | Continuous monitoring | Continuous evaluation of AI agents |
@@ -218,11 +218,11 @@ revised: 2026-10-05
 
 12.1. Progress shall be assessed against the Measures in section 11.3 and against the baselines established at Maturity Level 1.
 
-12.2. AICC shall report progress, benefits, and risks to the Executive Sponsor each quarter, at the quarterly Steering, where the AI Steering Committee advises. The Executive Sponsor may bring them to the Board Committee.
+12.2. The Competence Center shall report progress, benefits, and risks to the Executive Sponsor each quarter, at the quarterly Steering, where the AI Steering Committee advises. The Executive Sponsor may bring them to the Board Committee.
 
 12.3. Benefits shall be reported against the Investment Envelope of each Strategic Priority.
 
-12.4. Internal audit shall provide independent assurance over the Portfolio and over AICC.
+12.4. Internal audit shall provide independent assurance over the Portfolio and over the Competence Center.
 
 ## 13. Commitments, review, and activation
 
@@ -234,7 +234,7 @@ revised: 2026-10-05
 
 13.4. This Statement shall be documented and communicated to all employees, and made available to regulators, investors, and customers as the Executive Sponsor decides.
 
-13.5. This Statement takes effect on the date of its activation, as recorded in its change log. Amendments are activated by the same authority, the AICC Lead, and a change to the statement of appetite on the decision of the Executive Sponsor. Its activation binds the Bank.
+13.5. This Statement takes effect on the date of its activation, as recorded in its change log. Amendments are activated by the same authority, the Competence Center Lead, and a change to the statement of appetite on the decision of the Executive Sponsor. Its activation binds the Bank.
 
 ## Change log
 
@@ -243,4 +243,5 @@ revised: 2026-10-05
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 1.1 | 2026-10-04 | Applied fixed international AI agent naming consistently; functional meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
 | 1.2 | 2026-10-05 | Clarified in 9.1 that the Strategic Priorities are those of the Bank for the adoption of AI and do not limit the strategy of the Bank; meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
-| 1.3 | 2026-10-05 | Clarified in 7.4 that AICC coordinates the deployment and use of AI in the Domains, not the Domains themselves; decision rights are unchanged. | none (correction under Document Catalog 4.2) |
+| 1.3 | 2026-10-05 | Clarified in 7.4 that the Competence Center coordinates the deployment and use of AI in the Domains, not the Domains themselves; decision rights are unchanged. | none (correction under Document Catalog 4.2) |
+| 1.4 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | DR-2026-066 |

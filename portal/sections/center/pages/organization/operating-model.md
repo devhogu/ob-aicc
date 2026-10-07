@@ -9,7 +9,7 @@ source: charter/en/documents/operating-model.md
 source_sections: 1, 2, 3
 document: operating-model
 part: 1 of 3
-words: 418
+words: 447
 series: set-operating-model
 series_order: 1
 production: generated
@@ -26,9 +26,9 @@ Page type: document. Address: /organization/operating-model/
 
 ## Sections of the source
 
-- 1. Purpose and scope (176 words)
-- 2. What AICC is (152 words)
-- 3. Principles of work (90 words)
+- 1. Purpose and scope (182 words)
+- 2. What the Competence Center is (171 words)
+- 3. Principles of work (94 words)
 
 ## Outline
 

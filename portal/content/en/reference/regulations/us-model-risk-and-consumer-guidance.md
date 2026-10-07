@@ -25,7 +25,7 @@ The reference practice for the management of model risk in banks, and the positi
 
 ## 5. How the charter relates to it
 
-5.1. The independent check or validation of the AI Policy, the rule that AICC does not validate its own work, the Control Sign-Off, and the disclosure, explanation, and contestability requirements of the higher Risk Tiers follow this practice.
+5.1. The independent check or validation of the AI Policy, the rule that the Competence Center does not validate its own work, the Control Sign-Off, and the disclosure, explanation, and contestability requirements of the higher Risk Tiers follow this practice.
 
 ## 6. Related pages
 

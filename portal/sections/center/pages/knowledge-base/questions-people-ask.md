@@ -22,4 +22,4 @@ Page type: outline. Address: /knowledge-base/questions-people-ask/
 
 ## Outline
 
-- Short answers grounded in the charter: using AI at work, starting with AICC, risk and approval, the unit
+- Short answers grounded in the charter: using AI at work, starting with the Competence Center, risk and approval, the unit

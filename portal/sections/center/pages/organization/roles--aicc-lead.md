@@ -1,6 +1,6 @@
 ---
 id: organization/roles/aicc-lead
-title: AICC Lead
+title: Competence Center Lead
 section: organization
 order: 22
 type: role
@@ -10,7 +10,7 @@ production: generated from tables
 status: scaffold
 ---
 
-# AICC Lead
+# Competence Center Lead
 
 Page type: role. Address: /organization/roles/aicc-lead/
 

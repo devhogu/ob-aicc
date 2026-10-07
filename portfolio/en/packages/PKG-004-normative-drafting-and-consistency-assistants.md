@@ -9,9 +9,9 @@ This is a Package Definition under Business Model 4.4, using AICC-TPL-14. In pre
 | Kind | Kit |
 | Service area and category | Advise and formulate; Normatives and processes |
 | Status | In preparation |
-| Owner | AICC Lead |
+| Owner | Competence Center Lead |
 | Produced by | No originating Initiative or Service Agreement identifier is recorded in the package catalog. |
-| Used by or intended use | AICC |
+| Used by or intended use | Competence Center |
 | Needs to re-deploy | The document set and the style rules of the function, an owner, and a model approved for its data class |
 | Risk Tier of its uses | No Risk Tier is assigned to a description or template set alone. Each use that involves AI is tiered under AI Policy 3; the data class, influence on a decision, customer effect, and autonomy determine the tier. |
 | Where it is kept | This Definition records the catalog entry. A separately versioned implementation location is not yet recorded. |

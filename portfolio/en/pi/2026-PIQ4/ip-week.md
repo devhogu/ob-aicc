@@ -4,7 +4,7 @@ The results of the events of the IP week of the Program Increment (2026-PIQ4 I12
 
 ## PI Review and Demo
 
-Planned for Monday 21 December 2026, with the Iteration Review and Demo of I12. What the Program Increment delivered, the business value achieved against the PI Objectives (objectives.md) and the acceptances. In light mode Inspect and Adapt is held in it (Solution Lifecycle Model 6.6). The AICC Lead writes the Quarterly Report from it (reports/).
+Planned for Monday 21 December 2026, with the Iteration Review and Demo of I12. What the Program Increment delivered, the business value achieved against the PI Objectives (objectives.md) and the acceptances. In light mode Inspect and Adapt is held in it (Solution Lifecycle Model 6.6). The Competence Center Lead writes the Quarterly Report from it (reports/).
 
 ## Inspect and Adapt
 

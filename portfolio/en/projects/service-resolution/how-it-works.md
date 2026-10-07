@@ -129,7 +129,7 @@ Every write is the employee's action. A write happens only when the employee cli
 | Phase | Where | Data | Who sees the assistant's output | Ends with |
 | --- | --- | --- | --- | --- |
 | 1. Experiment in the Lab: historical reconstruction and evaluation | the Lab, on the Bank's infrastructure, isolated from production | read-only extracts of past cases; nothing written back | no service employee; Domain Experts label the locked cases and review the output | the Outcome Report |
-| 2. The first Solution: a Service run by AICC, with a sunset rule | production | live reads of the pilot team's cases, within the context contract | the first users: one service team, trained before use, after validation, the Team's final acceptance and the Bank's change management | the business acceptance and the decision after the minimum viable product (MVP) |
+| 2. The first Solution: a Service run by the Competence Center, with a sunset rule | production | live reads of the pilot team's cases, within the context contract | the first users: one service team, trained before use, after validation, the Team's final acceptance and the Bank's change management | the business acceptance and the decision after the minimum viable product (MVP) |
 
 ### Scope boundary {#how-it-works-scope-boundary}
 

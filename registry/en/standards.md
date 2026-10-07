@@ -1,6 +1,6 @@
 # Standards
 
-The architecture standards of AICC, the requirements that the use of AI places on the AI Platform, the external instruments and standards that bear on the use of AI in the Bank, the regulatory horizon for which the Bank prepares, and the policies of the Bank that apply to it. The AICC Lead owns them. The check of a Solution uses these standards. The Control Function Contacts of compliance and of legal confirm, each within its remit, which external instruments apply, and the AICC Lead records who confirmed and when (AI Policy 1.3). Entries are closed, not deleted.
+The architecture standards of the Competence Center, the requirements that the use of AI places on the AI Platform, the external instruments and standards that bear on the use of AI in the Bank, the regulatory horizon for which the Bank prepares, and the policies of the Bank that apply to it. The Competence Center Lead owns them. The check of a Solution uses these standards. The Control Function Contacts of compliance and of legal confirm, each within its remit, which external instruments apply, and the Competence Center Lead records who confirmed and when (AI Policy 1.3). Entries are closed, not deleted.
 
 ## Architecture standards
 
@@ -19,7 +19,7 @@ The architecture standards of AICC, the requirements that the use of AI places o
 
 | Identifier | Requirement | Applies to | Date |
 | --- | --- | --- | --- |
-| PLT-001 | The AI Platform feeds the AI Registry, a Record of AICC kept by the AICC Lead, and keeps what it feeds current. | Every Solution | 2026-10-02 |
+| PLT-001 | The AI Platform feeds the AI Registry, a Record of the Competence Center kept by the Competence Center Lead, and keeps what it feeds current. | Every Solution | 2026-10-02 |
 | PLT-002 | The AI Platform provides logging, with the retention that the rules require. | Risk Tier 2 and 3 | 2026-10-02 |
 | PLT-003 | The AI Platform supports continuous monitoring, with alerts. | Risk Tier 3 | 2026-10-02 |
 | PLT-004 | The AI Platform keeps data separated, as the data classification rules require. | Every Solution | 2026-10-02 |
@@ -32,8 +32,8 @@ Standing is "Applies, to confirm" for an instrument that is expected to bind the
 
 | Identifier | Instrument | Body | Jurisdiction | Standing | Confirmed by and date | Where the charter answers it |
 | --- | --- | --- | --- | --- | --- | --- |
-| EXT-001 | Banking legislation and the regulations on information security, outsourcing, and operational risk | National Bank of the Kyrgyz Republic | Kyrgyz Republic | Applies, to confirm |  | AI Policy 3, 4, and 5; AICC Charter 5 |
-| EXT-002 | Law on Personal Information | The authorized body for personal data of the Kyrgyz Republic | Kyrgyz Republic | Applies, to confirm |  | AI Policy 2; AICC Charter 3 |
+| EXT-001 | Banking legislation and the regulations on information security, outsourcing, and operational risk | National Bank of the Kyrgyz Republic | Kyrgyz Republic | Applies, to confirm |  | AI Policy 3, 4, and 5; AI Competence Center Charter 5 |
+| EXT-002 | Law on Personal Information | The authorized body for personal data of the Kyrgyz Republic | Kyrgyz Republic | Applies, to confirm |  | AI Policy 2; AI Competence Center Charter 3 |
 | EXT-003 | Legislation on the protection of consumer rights in financial services | National Bank of the Kyrgyz Republic | Kyrgyz Republic | Applies, to confirm |  | Statement of Intent 6; AI Policy 3 |
 | EXT-004 | Legislation against money laundering and the financing of terrorism | The financial intelligence body of the Kyrgyz Republic; National Bank of the Kyrgyz Republic | Kyrgyz Republic | Applies, to confirm |  | Statement of Intent 9; AI Policy 3; Operating Model 8 |
 | EXT-005 | Acts and programs on digital development and digitalization | The ministry responsible for digital development | Kyrgyz Republic | Applies, to confirm |  | Statement of Intent 3 |
@@ -51,14 +51,14 @@ Standing is "Applies, to confirm" for an instrument that is expected to bind the
 | EXT-017 | Digital Operational Resilience Act, and the guidance of the European Banking Authority | European Union; European Banking Authority | European Union | Reference |  | AI Policy 4 and 5 |
 | EXT-018 | Supervisory guidance on model risk management (SR 11-7), and the guidance on AI in credit | Board of Governors of the Federal Reserve System; Office of the Comptroller of the Currency; the federal consumer agencies | United States | Reference |  | AI Policy 3; Statement of Intent 7 |
 | EXT-019 | Federal and state policy on AI | Federal government and the states | United States | Reference |  | AI Policy 3 |
-| EXT-020 | Reports on artificial intelligence in the financial sector | Financial Stability Board; Basel Committee on Banking Supervision; Bank for International Settlements | International | Reference |  | AICC Charter 5 and 7 |
+| EXT-020 | Reports on artificial intelligence in the financial sector | Financial Stability Board; Basel Committee on Banking Supervision; Bank for International Settlements | International | Reference |  | AI Competence Center Charter 5 and 7 |
 | EXT-021 | Principles on Artificial Intelligence | Organisation for Economic Co-operation and Development | International | Reference |  | Statement of Intent 6 |
 | EXT-022 | Recommendation on the Ethics of Artificial Intelligence | UNESCO | International | Reference |  | Statement of Intent 4 and 6 |
 | EXT-023 | Framework Convention on Artificial Intelligence | Council of Europe | International | Reference |  | Statement of Intent 6; AI Policy 3 |
 | EXT-024 | Hiroshima AI Process | The Group of Seven | International | Reference |  | AI Policy 4 |
 | EXT-025 | AI Risk Management Framework, with its Generative AI Profile | National Institute of Standards and Technology | United States | Reference |  | AI Policy 3 and 5 |
 | EXT-026 | ISO/IEC 42001, Artificial intelligence management system | ISO and IEC | International | Reference |  | Operating Model 6, 7, and 8; AI Policy |
-| EXT-027 | ISO/IEC 23894, Guidance on AI risk management | ISO and IEC | International | Reference |  | AI Policy 3; AICC Charter 5 |
+| EXT-027 | ISO/IEC 23894, Guidance on AI risk management | ISO and IEC | International | Reference |  | AI Policy 3; AI Competence Center Charter 5 |
 | EXT-028 | ISO/IEC 22989, AI concepts and terminology | ISO and IEC | International | Reference |  | Vocabulary and Style |
 | EXT-029 | Top 10 for Large Language Model Applications | Open Worldwide Application Security Project | International | Reference |  | AI Policy 3; ARC-005, ARC-006, ARC-007 |
 | EXT-030 | Lean portfolio management practice | The common practice of the field | International | Reference |  | Portfolio Management Model |

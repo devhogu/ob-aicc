@@ -43,7 +43,7 @@ Figure 1: a Program Increment in sequence.
 
 ## 4. Light mode
 
-4.1. While the AICC Team has up to three people, AICC runs in light mode: the Weekly Planning and the Weekly Review are one session; the Iteration Retrospective and the monthly Steering are held in the Iteration Review and Demo; Inspect and Adapt is held in the PI Review and Demo; the Daily Stand-up, Backlog Refinement, and Innovation are optional; Work Items are not tracked; and the AICC Lead is the product owner. Everything else stays as stated, so that the method grows without changing when the Team does.
+4.1. While the Competence Center Team has up to three people, the Competence Center runs in light mode: the Weekly Planning and the Weekly Review are one session; the Iteration Retrospective and the monthly Steering are held in the Iteration Review and Demo; Inspect and Adapt is held in the PI Review and Demo; the Daily Stand-up, Backlog Refinement, and Innovation are optional; Work Items are not tracked; and the Competence Center Lead is the product owner. Everything else stays as stated, so that the method grows without changing when the Team does.
 
 ## 5. The cadence and the control of the unit
 

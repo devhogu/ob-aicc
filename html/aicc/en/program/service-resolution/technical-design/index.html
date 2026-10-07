@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="../../../../assets/neighbours.css?v=d5f02ae9">
 
 <link rel="alternate" hreflang="ru" href="../../../../ru/program/service-resolution/technical-design/">
-<script src="../../../../assets/site.js?v=8d979e99" defer data-search="../../../../assets/search-program-en.json" data-search-all="../../../../assets/search-center-en.json ../../../../assets/search-discovery-en.json ../../../../assets/search-portfolio-en.json ../../../../assets/search-program-en.json ../../../../assets/search-lab-en.json" data-search-names="Center|Discovery Catalog|Portfolio|Program|AI Lab" data-t-none="No page matches the query." data-t-light="Light theme" data-t-dark="Dark theme" data-t-copied="Copied" data-t-mail-body="Page: {title}
+<script src="../../../../assets/site.js?v=8d979e99" defer data-search="../../../../assets/search-program-en.json" data-search-all="../../../../assets/search-center-en.json ../../../../assets/search-discovery-en.json ../../../../assets/search-portfolio-en.json ../../../../assets/search-program-en.json ../../../../assets/search-lab-en.json" data-search-names="Competence Center|Discovery Catalog|Portfolio|Program|AI Lab" data-t-none="No page matches the query." data-t-light="Light theme" data-t-dark="Dark theme" data-t-copied="Copied" data-t-mail-body="Page: {title}
 Reference: {ref}
 Address: {url}
 
@@ -24,7 +24,7 @@ Question or comment:
 <header class="o-header">
   <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>AI Competence Center</span></a>
   <span class="header-scope">Program</span>
-  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search this section</label><input id="q" type="search" autocomplete="off" placeholder="Search this section" aria-controls="results"><label class="search-scope"><input id="q-all" type="checkbox"><span>All of AICC</span></label><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search this section</label><input id="q" type="search" autocomplete="off" placeholder="Search this section" aria-controls="results"><label class="search-scope"><input id="q-all" type="checkbox"><span>All sections</span></label><div id="results" class="o-search-results" hidden></div></div>
   <div class="o-tools"><nav class="lang-switch" aria-label="Language"><a lang="en" hreflang="en" href="./" aria-current="true">EN</a><a lang="ru" hreflang="ru" href="../../../../ru/program/service-resolution/technical-design/">RU</a></nav><button id="theme-switch" type="button" class="theme-switch" aria-label="Dark theme" title="Dark theme"><span class="ts-moon"><svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -85,7 +85,7 @@ Question or comment:
   <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
   <rect x="4" y="2" width="16" height="20" rx="2" />
 </svg>
-<span>Center</span></a></div><div class="portal-nav-group">
+<span>Competence Center</span></a></div><div class="portal-nav-group">
 <a class="portal-section-link" data-section="discovery" href="../../../discovery/"><svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -149,7 +149,7 @@ Question or comment:
 <span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../../center/privacy/">Privacy</a><a href="../../../center/terms-of-use/">Terms of use</a></div><p class="o-caption">Version 2.2 · October 2026</p></div></aside>
 <main class="o-main neighbour-main" id="main" tabindex="-1"><article class="project-content"><span class="neighbour-status">Proposed</span><nav class="project-breadcrumb"><a href="../../../portfolio/ini-013/">Portfolio initiative: INI-013</a> · <a href="../../#intake">Program Backlog</a></nav><nav class="project-breadcrumb" aria-label="Project overview"><a href="../">Customer Intelligence–Enabled Service Resolution</a><span aria-hidden="true"> / </span><span>Technical design</span></nav><section id="en-technical-design" class="doc-panel" data-document="en-technical-design"><div class="doc-label">Technical</div><h1 id="en-technical-design-page">Technical design</h1>
 
-<p>This page describes what the pilot builds, so that IT can estimate it and the Control Function Contacts can test it. It explains section 3 (architecture and data) of the Solution Definition; the full design is kept in the architecture repository of AICC, and product and framework choices go to the Decision Log. It names no systems, figures or data of the Bank. What the pilot asks of IT is on the <a href="../it-readiness/#en-it-readiness">IT readiness checklist</a>; what differs by journey is in the <a href="../journey-profiles/#en-journey-profiles">journey technical profiles</a>. The design is journey-neutral: Payment Issue Resolution is the technical recommendation, subject to the journey selected at the business case.</p>
+<p>This page describes what the pilot builds, so that IT can estimate it and the Control Function Contacts can test it. It explains section 3 (architecture and data) of the Solution Definition; the full design is kept in the architecture repository of the Competence Center, and product and framework choices go to the Decision Log. It names no systems, figures or data of the Bank. What the pilot asks of IT is on the <a href="../it-readiness/#en-it-readiness">IT readiness checklist</a>; what differs by journey is in the <a href="../journey-profiles/#en-journey-profiles">journey technical profiles</a>. The design is journey-neutral: Payment Issue Resolution is the technical recommendation, subject to the journey selected at the business case.</p>
 
 <section class="project-topic"><h2 id="en-technical-design-summary">Summary for approvers</h2>
 
@@ -183,11 +183,11 @@ Question or comment:
 </tr>
 <tr>
 <td>Phases</td>
-<td>1: an Experiment in the Lab on read-only extracts, ending in an Outcome Report. 2: the first Solution, a Service run by AICC with a sunset rule, deployed to its first users (one service team) after validation, Team final acceptance and the Bank's change management.</td>
+<td>1: an Experiment in the Lab on read-only extracts, ending in an Outcome Report. 2: the first Solution, a Service run by the Competence Center with a sunset rule, deployed to its first users (one service team) after validation, Team final acceptance and the Bank's change management.</td>
 </tr>
 <tr>
 <td>Who builds, tests, approves</td>
-<td>The AICC Lead builds as Solution Engineer; a person other than the builder tests and checks (Operating Model 4.4); the Executive Sponsor approves the Solution Definition and the use of the data class.</td>
+<td>The Competence Center Lead builds as Solution Engineer; a person other than the builder tests and checks (Operating Model 4.4); the Executive Sponsor approves the Solution Definition and the use of the data class.</td>
 </tr>
 <tr>
 <td>Asked of IT</td>
@@ -195,7 +195,7 @@ Question or comment:
 </tr>
 <tr>
 <td>Effort, time-box, cost</td>
-<td>[AICC Lead's estimate: effort by Role, Iterations per phase]; [AICC Lead's estimate: run cost and model cost per case, with source]. The cost limits per case go to the Conditions of use.</td>
+<td>[Competence Center Lead's estimate: effort by Role, Iterations per phase]; [Competence Center Lead's estimate: run cost and model cost per case, with source]. The cost limits per case go to the Conditions of use.</td>
 </tr>
 </tbody>
 </table></div>
@@ -350,7 +350,7 @@ Question or comment:
 <li>one trace per case from request to outcome; alert levels for performance, drift, the human override and correction rate, incidents and cost, each with who watches it (ARC-008);</li>
 <li>fallback to the context-only view or the manual route is always allowed; a second model route only if validated beforehand and named in the Solution Definition; no automatic failover;</li>
 <li>the first users are named in the Solution Definition; widening them is a Domain Owner decision, never automatic;</li>
-<li>rollback under the Bank's change management; an AI Incident goes through the Bank's incident management, with the AICC Lead told; a tested suspension control that keeps the record of use (PLT-005, ARC-002).</li>
+<li>rollback under the Bank's change management; an AI Incident goes through the Bank's incident management, with the Competence Center Lead told; a tested suspension control that keeps the record of use (PLT-005, ARC-002).</li>
 </ul>
 
 </section><section class="project-topic"><h2 id="en-technical-design-engineering">Engineering and test approach</h2>
@@ -404,7 +404,7 @@ Question or comment:
 </tbody>
 </table></div>
 
-<p>A failed mandatory test stops the Feature at Verify. Deployment follows the Bank's change management, with the change ticket and test result; nothing is promoted automatically. A changed model, prompt, corpus, mapping or workflow runs its regression set, and the AICC Lead decides whether it is a significant change needing a new validation.</p>
+<p>A failed mandatory test stops the Feature at Verify. Deployment follows the Bank's change management, with the change ticket and test result; nothing is promoted automatically. A changed model, prompt, corpus, mapping or workflow runs its regression set, and the Competence Center Lead decides whether it is a significant change needing a new validation.</p>
 
 </section><section class="project-topic"><h2 id="en-technical-design-evaluation">Data and evaluation assets</h2>
 
@@ -508,10 +508,10 @@ Question or comment:
 </ul>
 </section></section></article>
 <footer class="o-footer">
-      <span class="foot-text">AI Competence Center, O!Bank. Version 2.2, 2026. <a class="contact" href="mailto:talimbayev@obank.kg?subject=AICC%20Portal%20%5BMBACS%5D%20page%20feedback">Contact us</a> <a class="contact" href="../../../center/privacy/">Privacy</a> <a class="contact" href="../../../center/terms-of-use/">Terms of use</a></span>
+      <span class="foot-text">AI Competence Center, O!Bank. Version 2.2, 2026. <a class="contact" href="mailto:talimbayev@obank.kg?subject=Competence%20Center%20portal%20%5BMBACS%5D%20page%20feedback">Contact us</a> <a class="contact" href="../../../center/privacy/">Privacy</a> <a class="contact" href="../../../center/terms-of-use/">Terms of use</a></span>
       <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: MBACS</span></button>
     </footer></main></div>
-<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="AICC Portal [MBACS] page feedback" data-ref="MBACS" data-page="Technical design">
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Center portal [MBACS] page feedback" data-ref="MBACS" data-page="Technical design">
   <form method="dialog">
     <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: MBACS</code><button type="button" class="fb-copy" data-copy-text="MBACS">Copy</button></div>
     <div class="fb-body"><p>Provide feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>

@@ -25,7 +25,7 @@ The direction of the Russian Federation on AI: a national strategy with goals to
 
 ## 5. How the charter relates to it
 
-5.1. The Experiment workflow and the Lab of AICC, with their time-box, their read-only data, and their decision at the end, follow the same idea of bounded trial under rules.
+5.1. The Experiment workflow and the Lab of the Competence Center, with their time-box, their read-only data, and their decision at the end, follow the same idea of bounded trial under rules.
 
 ## 6. Related pages
 

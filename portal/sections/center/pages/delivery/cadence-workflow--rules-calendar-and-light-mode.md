@@ -9,7 +9,7 @@ source: charter/en/workflows/cadence.md
 source_sections: 7, 8, 9, 10
 document: cadence-workflow
 part: 4 of 5
-words: 303
+words: 305
 series: set-cadence
 production: generated
 status: scaffold
@@ -27,7 +27,7 @@ Page type: workflow. Address: /delivery/cadence-workflow/rules-calendar-and-ligh
 
 - 7. Rules (31 words)
 - 8. The dated calendar of events (77 words)
-- 9. Light mode (161 words)
+- 9. Light mode (163 words)
 - 10. Vocabulary (34 words)
 
 ## Outline

@@ -2,14 +2,14 @@
 id: AICC-TPL-01-EN
 title: Solution Definition
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Solution Definition
 
-**Template.** Copy for each Solution when it is defined. The Solution Engineer and the Domain Expert complete it, the AICC Lead assigns the Risk Tier, and the Domain Owner approves it. For a Solution that the AICC Lead built, the Executive Sponsor approves the Definition and assigns the Risk Tier. It describes the Solution: its scope, methods, and architecture. It carries no figures of the Bank, no data, and no code. Keep it short, in one form.
+**Template.** Copy for each Solution when it is defined. The Solution Engineer and the Domain Expert complete it, the Competence Center Lead assigns the Risk Tier, and the Domain Owner approves it. For a Solution that the Competence Center Lead built, the Executive Sponsor approves the Definition and assigns the Risk Tier. It describes the Solution: its scope, methods, and architecture. It carries no figures of the Bank, no data, and no code. Keep it short, in one form.
 
 | Field | Entry |
 | --- | --- |
@@ -19,8 +19,8 @@ revised: 2026-10-03
 | Initiative | [INI-nnn] |
 | Type | [Service / Product / Experiment] |
 | Receiver | [who runs or adopts it after delivery; for an Experiment, "none yet, to be asked" is allowed] |
-| Approved by the Domain Owner on | [date; for a Solution that the AICC Lead built, by the Executive Sponsor] |
-| Approved for the data class by | [Role], on [date] (noted in the AI Registry); the Executive Sponsor for a Solution that the AICC Lead built (Operating Model 4.4(d)) |
+| Approved by the Domain Owner on | [date; for a Solution that the Competence Center Lead built, by the Executive Sponsor] |
+| Approved for the data class by | [Role], on [date] (noted in the AI Registry); the Executive Sponsor for a Solution that the Competence Center Lead built (Operating Model 4.4(d)) |
 | Time-box | [for an Experiment: the number of Iterations] |
 | Domain, Domain Owner | [names] |
 | Domain Expert, Solution Engineer | [names] |
@@ -40,11 +40,11 @@ revised: 2026-10-03
 
 ## 4. Risk Tier
 
-[Tier 1, 2, or 3, with the reasons, assigned by the AICC Lead, or by the Executive Sponsor for a Solution that the AICC Lead built, on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies (AI Policy 3.2; Portfolio Management Model 6.4). For Tier 2 and 3: the confirmation of the Control Function Contact of compliance that the applicable law is met, with the date.]
+[Tier 1, 2, or 3, with the reasons, assigned by the Competence Center Lead, or by the Executive Sponsor for a Solution that the Competence Center Lead built, on [date] and told to the Domain Owner; raised by a Control Function Contact where that applies (AI Policy 3.2; Portfolio Management Model 6.4). For Tier 2 and 3: the confirmation of the Control Function Contact of compliance that the applicable law is met, with the date.]
 
 ## 5. Acceptance criteria
 
-[The criteria for the acceptance of the Solution, in the form Given a situation, when an action is taken, then a result that can be observed (Solution Lifecycle Model 3.3), on which the AICC Lead gives the final acceptance of the Team and the Domain Owner judges it. The benefit and the outcome targets are in the Initiative Brief.]
+[The criteria for the acceptance of the Solution, in the form Given a situation, when an action is taken, then a result that can be observed (Solution Lifecycle Model 3.3), on which the Competence Center Lead gives the final acceptance of the Team and the Domain Owner judges it. The benefit and the outcome targets are in the Initiative Brief.]
 
 ## 6. Check or validation, and release block
 
@@ -91,7 +91,7 @@ revised: 2026-10-03
 | User guide | [reference] |
 | Handover to a Receiver | [the IT function of the Bank as Receiver; Proposal reference; transition decided by [who] on [date], Decision Log reference; Handover accepted on [date]] |
 
-**Practices checklist (light mode).** [While AICC runs in light mode, for a Service: each practice of Solution Lifecycle Model 8.10 with how it is met, or "not applicable" with the reason.]
+**Practices checklist (light mode).** [While the Competence Center runs in light mode, for a Service: each practice of Solution Lifecycle Model 8.10 with how it is met, or "not applicable" with the reason.]
 
 | Practice | How it is met |
 | --- | --- |
@@ -109,11 +109,11 @@ revised: 2026-10-03
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | [date] | [Domain Owner, or the Executive Sponsor for a Service across Domains] |  |  |  |  |  |  |
 
-**Changes and new-check decisions.** [Each significant change, and the decision of the AICC Lead on whether it requires a new check or validation, with the reason, the date, and its Decision Log reference.]
+**Changes and new-check decisions.** [Each significant change, and the decision of the Competence Center Lead on whether it requires a new check or validation, with the reason, the date, and its Decision Log reference.]
 
 **Significant change.** [Team final acceptance and release of a significant change: by whom and on [date] (Solution Lifecycle Model 7.3(b), 8.6).]
 
-**Emergency change.** [Authorized by [the AICC Lead] on [date], reviewed by the Executive Sponsor within five working days, Decision Log reference; for Risk Tier 3 the Control Function Contacts told (Solution Lifecycle Model 8.6).]
+**Emergency change.** [Authorized by [the Competence Center Lead] on [date], reviewed by the Executive Sponsor within five working days, Decision Log reference; for Risk Tier 3 the Control Function Contacts told (Solution Lifecycle Model 8.6).]
 
 **Backup and recovery.** [Those of the AI Platform and of the Bank that apply, by reference.]
 

@@ -57,7 +57,7 @@ The source record of the AI Lab section. Each row is one unit of text, identifie
 | task-a-6-2 | A | 6 | Decision | The sponsor accepts and closes, turns the result into a Proposal for delivery, or rejects it |
 | task-b-0-1 | B | 0 | Lab isolation | Separate network segment and key management; no write access to production |
 | task-b-0-2 | B | 0 | Keep the guardrails | Hold the Lab guardrails and their evidence in the Standards record |
-| task-b-2-1 | B | 2 | Risk Tier | The AICC Lead assigns the Risk Tier; set the risk limits for this Experiment |
+| task-b-2-1 | B | 2 | Risk Tier | The Competence Center Lead assigns the Risk Tier; set the risk limits for this Experiment |
 | task-b-2-2 | B | 2 | Personal data sign-off | Minimize personal data; assess it with the data-protection Control Function Contact before it enters |
 | task-b-3-1 | B | 3 | Extract rules | Read-only extracts only; nothing written back to the Bank's systems |
 | task-b-4-1 | B | 4 | AI-agent checks | Drift, bias, and grounding checks on an evaluation set during the build |
@@ -127,9 +127,9 @@ The source record of the AI Lab section. Each row is one unit of text, identifie
 
 | Key | Area | Concern | Intended practice | Assessed coverage | Level 2 | Level 3 | Level 4 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| guardrails-1-1 | guardrails-1 | Decision rights | The sponsor decides the result; the AICC Lead assigns the Risk Tier |  | Who decides is named for each Experiment. | Every approval is recorded in the Solution Definition. | Approvals are recorded and checked at each quarterly Steering. |
+| guardrails-1-1 | guardrails-1 | Decision rights | The sponsor decides the result; the Competence Center Lead assigns the Risk Tier |  | Who decides is named for each Experiment. | Every approval is recorded in the Solution Definition. | Approvals are recorded and checked at each quarterly Steering. |
 | guardrails-1-2 | guardrails-1 | Prohibitions | A fixed list: no personal data leaves the Lab, nothing is written back to production |  | The list is written down and known to the team. | Isolation enforces the list, and breaches are logged. | Compliance is tested on a schedule, with evidence kept. |
-| guardrails-1-3 | guardrails-1 | Resolving disagreements | Escalation to the AICC Lead, then the quarterly Steering |  | Disputes are raised with the AICC Lead. | A written escalation rule is applied and its outcomes recorded. | Escalations are reviewed at Steering and the lessons applied. |
+| guardrails-1-3 | guardrails-1 | Resolving disagreements | Escalation to the Competence Center Lead, then the quarterly Steering |  | Disputes are raised with the Competence Center Lead. | A written escalation rule is applied and its outcomes recorded. | Escalations are reviewed at Steering and the lessons applied. |
 | guardrails-2-1 | guardrails-2 | Risk classification | Risk register for the Lab; a Risk Tier for each Experiment |  | Risks of the Lab are recorded by type. | Every Experiment has a risk assessment and a Risk Tier before the build. | Risk Tiers are reviewed at the close and feed the Lab register. |
 | guardrails-2-2 | guardrails-2 | Output integrity | Drift, bias, and grounding checks on an evaluation set during the build |  | Checks are run on some Experiments. | Every build runs the checks on an evaluation set. | Results are reviewed independently and monitored after the build. |
 | guardrails-2-3 | guardrails-2 | Lab isolation | Separate network segment, key management, no access to production |  | The Lab sits in its own network segment. | Isolation is checked at setup and after every change. | Penetration tests run on a schedule, with results recorded. |

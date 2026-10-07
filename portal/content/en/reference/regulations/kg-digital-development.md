@@ -25,7 +25,7 @@ The body that sets the direction of digitalization in the Kyrgyz Republic and th
 
 ## 5. How the charter relates to it
 
-5.1. The Statement of Intent commits the Bank to satisfy the legal and regulatory requirements that apply to the use of AI as they are adopted; the Research and exploration category of AICC keeps the watch on them.
+5.1. The Statement of Intent commits the Bank to satisfy the legal and regulatory requirements that apply to the use of AI as they are adopted; the Research and exploration category of the Competence Center keeps the watch on them.
 
 ## 6. Related pages
 

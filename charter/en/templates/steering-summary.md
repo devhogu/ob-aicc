@@ -2,14 +2,14 @@
 id: AICC-TPL-04-EN
 title: Steering Summary
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Steering Summary
 
-**Template.** Written by the AICC Lead for each Steering, monthly, quarterly, or yearly. It is an evidence record: it states what was considered and decided, and it copies no discussion. It carries no figures of the Bank, no data, and no code. The notes of the other events stay in Confluence, or in the work items.
+**Template.** Written by the Competence Center Lead for each Steering, monthly, quarterly, or yearly. It is an evidence record: it states what was considered and decided, and it copies no discussion. It carries no figures of the Bank, no data, and no code. The notes of the other events stay in Confluence, or in the work items.
 
 | Field | Entry |
 | --- | --- |
@@ -28,7 +28,7 @@ The yearly Steering is the monthly Steering of December. In the month that holds
 | Matter | Monthly | Quarterly | Yearly | Result |
 | --- | --- | --- | --- | --- |
 | Progress, risks, and blockers | x |  | x |  |
-| Sample of at least three Decisions of the AICC Lead, chosen by the Executive Sponsor, and the share found in order | x |  | x |  |
+| Sample of at least three Decisions of the Competence Center Lead, chosen by the Executive Sponsor, and the share found in order | x |  | x |  |
 | Events of the month, and the controls that they triggered (Operating Model 6.9) | x |  | x |  |
 | Acceptances, and review of the live Solutions | x |  | x |  |
 | Open Exceptions | x |  | x |  |
@@ -80,7 +80,7 @@ The yearly Steering is the monthly Steering of December. In the month that holds
 | --- | --- | --- | --- |
 |  |  |  |  |
 
-## 7. Sample of the Decisions of the AICC Lead
+## 7. Sample of the Decisions of the Competence Center Lead
 
 [The Decision Log lines that the Steering reviewed, and the result of each.]
 

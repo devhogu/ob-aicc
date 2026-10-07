@@ -23,4 +23,4 @@ Page type: outline. Address: /reference/regulators-and-acts/
 ## Outline
 
 - The regulators, acts, standards, and frameworks the Bank is aware of, by jurisdiction, with a page for each
-- The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how AICC complies
+- The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how the Competence Center complies

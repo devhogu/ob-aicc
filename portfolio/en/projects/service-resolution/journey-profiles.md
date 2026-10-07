@@ -23,7 +23,7 @@ System names, owners, interfaces, volumes and service expectations are completed
 
 ### The three journeys side by side {#journey-profiles-side-by-side}
 
-The Risk Tier attributes follow AI Policy 3.1. The AICC Lead assigns the Tier when the Solution is defined (the Executive Sponsor, while the AICC Lead builds); any Control Function Contact may raise it, and only the model risk Contact may lower it.
+The Risk Tier attributes follow AI Policy 3.1. The Competence Center Lead assigns the Tier when the Solution is defined (the Executive Sponsor, while the Competence Center Lead builds); any Control Function Contact may raise it, and only the model risk Contact may lower it.
 
 | Attribute | Payment Issue Resolution | Card Dispute Progress Support | Onboarding/KYC Progress Support |
 | --- | --- | --- | --- |

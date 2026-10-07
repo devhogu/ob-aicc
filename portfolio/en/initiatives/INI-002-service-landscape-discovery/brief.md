@@ -18,7 +18,7 @@ Open sections: 2 (the source system of the figures, and the baseline and target 
 
 ## 1. Hypothesis
 
-If AICC consolidates the knowledge and the artifacts that the functions and service owners already hold into one map of the service landscape, then the Bank can see where AI adoption can start with least disturbance and where adoption has already started.
+If the Competence Center consolidates the knowledge and the artifacts that the functions and service owners already hold into one map of the service landscape, then the Bank can see where AI adoption can start with least disturbance and where adoption has already started.
 
 Today the knowledge of the services of the Bank is spread across the functions. No single view connects the commercial portfolio to the processes, applications, and infrastructure that deliver it, so adoption starts wherever someone asks first.
 
@@ -36,7 +36,7 @@ The baseline and the target of each indicator are figures of the Bank. They are 
 
 The steps below are the plan of the MVP. They start when the business case is approved and cleared and the Initiative is taken from the Portfolio Backlog into work (Portfolio Management Model 5).
 
-AICC does the following.
+The Competence Center does the following.
 
 1. Agree with enterprise architecture a common way to describe a service, in layers: commercial portfolio, services, processes, organization, applications and data, and infrastructure.
 2. Work with each function head and service owner to collect the knowledge and the artifacts that they already hold (documents, diagrams, registers), and not to create new ones.
@@ -51,7 +51,7 @@ Minimum viable product: The first functions and services mapped and reviewed by 
 
 ## 4. Cost and value
 
-Cost: the time of the AICC Lead. No other cost is stated.
+Cost: the time of the Competence Center Lead. No other cost is stated.
 
 Investment Envelope: None; no Investment Envelope is set (Priorities Record).
 
@@ -75,7 +75,7 @@ The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (
 | --- | --- | --- | --- |
 | Approval of the business case | | | |
 | Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
-| Service Agreement issued | AICC Lead | | |
+| Service Agreement issued | Competence Center Lead | | |
 | Decision after the MVP (Portfolio Management Model 7.2) | | | |
 | Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | Executive Sponsor, because it is enabling work across all functions | | |
 

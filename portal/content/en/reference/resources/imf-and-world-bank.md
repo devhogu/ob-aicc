@@ -20,7 +20,7 @@ The institutions that advise the governments and the central banks of the region
 
 ## 4. How to take it, and for what
 
-4.1. For the policy context, read the fintech notes on AI and on digital finance, and the country work on the Kyrgyz Republic and its neighbors where it is public. For inclusion figures, use the Global Findex. For the strategy pages of the Bank, cite these sources where a regional or inclusion figure is needed. The AICC Lead and the Strategy and governance category use them when a function's strategy touches inclusion or digital payments.
+4.1. For the policy context, read the fintech notes on AI and on digital finance, and the country work on the Kyrgyz Republic and its neighbors where it is public. For inclusion figures, use the Global Findex. For the strategy pages of the Bank, cite these sources where a regional or inclusion figure is needed. The Competence Center Lead and the Strategy and governance category use them when a function's strategy touches inclusion or digital payments.
 
 ## 5. Cautions
 

@@ -8,7 +8,7 @@ import json, os, re, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 SCAF = os.path.join(ROOT, 'portal', 'sections', 'center')
 
-# Two layouts are defined. The layout in use, adopted on 2026-10-02, presents AICC as a consulting organization with a Services section
+# Two layouts are defined. The layout in use, adopted on 2026-10-02, presents the Competence Center as a consulting organization with a Services section
 # and a Knowledge base. The previous layout (`--previous`, written to previous/) is the first structure of the site, kept for the record.
 NEXT = '--previous' not in sys.argv
 OUT = SCAF if NEXT else os.path.join(SCAF, 'previous')
@@ -17,23 +17,23 @@ S_PORTFOLIO = 'portfolio' if NEXT else 'how-aicc-works'
 S_DELIVERY = 'delivery' if NEXT else 'how-aicc-works'
 
 SECTIONS = [
-    ('about', 'About AICC', 'The intent, the strategy, the mandate, the values, and the place of AICC in the Bank; what we do and how we work in one page each.'),
+    ('about', 'About the Competence Center', 'The intent, the strategy, the mandate, the values, and the place of the Competence Center in the Bank; what we do and how we work in one page each.'),
     ('responsible-ai', 'Responsible AI', 'A short course on AI today, its opportunities, its risks, and what responsible use means; and the rules of the Bank: the AI Policy, the Risk Tiers, and the gates before use.'),
-    ('services', 'Services', 'The service catalog of AICC: the service lines, how a function engages AICC, the service levels, and what AICC does not do.'),
-    ('portfolio', 'Portfolio', 'How AICC decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP.'),
-    ('delivery', 'Delivery', 'How AICC delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution.'),
-    ('governance', 'Governance', 'How AICC is directed, controlled, reported, and assured as a unit: decision rights, the control loops, the Steerings, the controls, the records and evidence, the measures.'),
-    ('organization', 'Organization', 'The Roles, the decision levels, and the bodies of AICC.'),
-    ('knowledge-base', 'Knowledge base', 'The templates, the guides, the acts and compliance, and the publications of AICC.'),
+    ('services', 'Services', 'The service catalog of the Competence Center: the service lines, how a function engages the Competence Center, the service levels, and what the Competence Center does not do.'),
+    ('portfolio', 'Portfolio', 'How the Competence Center decides which Initiatives to take in, fund, continue, defer, or reject: the strategic inputs, the portfolio loops, the Kanban, the business case, and the MVP.'),
+    ('delivery', 'Delivery', 'How the Competence Center delivers: the flow of value, the backlogs, the states, the cadence, verification and release, and the life cycle of a Solution.'),
+    ('governance', 'Governance', 'How the Competence Center is directed, controlled, reported, and assured as a unit: decision rights, the control loops, the Steerings, the controls, the records and evidence, the measures.'),
+    ('organization', 'Organization', 'The Roles, the decision levels, and the bodies of the Competence Center.'),
+    ('knowledge-base', 'Knowledge base', 'The templates, the guides, the acts and compliance, and the publications of the Competence Center.'),
     ('reference', 'Reference', 'The Vocabulary, the Document Catalog, the change history, the systems that hold the records, the industry body of knowledge, and the regulators and acts.'),
 ] if NEXT else [
-    ('about', 'About AICC', 'The intent, the purpose, the mandate, and the place of AICC in the Bank.'),
-    ('what-aicc-does', 'What AICC does', 'The services that AICC offers, how a function engages AICC, and the Solutions that AICC delivers.'),
-    ('how-aicc-works', 'How AICC works', 'The method: how Initiatives are taken in, decided, delivered, paced, and measured.'),
-    ('organization', 'Organization', 'The Roles, the decision levels, and the bodies of AICC.'),
+    ('about', 'About the Competence Center', 'The intent, the purpose, the mandate, and the place of the Competence Center in the Bank.'),
+    ('what-aicc-does', 'What the Competence Center does', 'The services that the Competence Center offers, how a function engages the Competence Center, and the Solutions that the Competence Center delivers.'),
+    ('how-aicc-works', 'How the Competence Center works', 'The method: how Initiatives are taken in, decided, delivered, paced, and measured.'),
+    ('organization', 'Organization', 'The Roles, the decision levels, and the bodies of the Competence Center.'),
     ('responsible-ai', 'Responsible AI', 'The rules for the use of AI, the Risk Tiers, and the gates before use.'),
-    ('governance', 'Governance and oversight', 'The control loops, the records, the controls, and the way AICC is reported and assured.'),
-    ('library', 'Library', 'The templates, the forms of the records that AICC produces.'),
+    ('governance', 'Governance and oversight', 'The control loops, the records, the controls, and the way the Competence Center is reported and assured.'),
+    ('library', 'Library', 'The templates, the forms of the records that the Competence Center produces.'),
     ('reference', 'Reference', 'The Vocabulary, the Document Catalog, the change history, and the systems that hold the records.'),
 ]
 S_LIBRARY = 'knowledge-base' if NEXT else 'library'
@@ -75,10 +75,10 @@ def add(**k):
 # Home
 add(id='index', section=None, order=0, type='home', slug='/', title='Home', source=['charter/en/executive-summary.md'],
     production='authored',
-    outline=['Intent of AICC in two sentences, from the Summary of intent (Statement of Intent 2) and the Mission (AICC Charter 2)',
+    outline=['Intent of the Competence Center in two sentences, from the Summary of intent (Statement of Intent 2) and the Mission (Competence Center Charter 2)',
              'Feature: the Strategic Priorities (about/statement-of-intent/strategic-priorities)',
              'Feature: the Maturity Roadmap (about/statement-of-intent/capability-and-maturity-roadmap)',
-             'The map of AICC: what AICC does, how it works, how it is safeguarded, with its text version',
+             'The map of the Competence Center: what the Competence Center does, how it works, how it is safeguarded, with its text version',
              'The eight sections, each with one line',
              'The reading routes',
              'Footer: baseline revision, date, owner, link to Records and systems'])
@@ -123,16 +123,16 @@ split_doc('about', 'statement-of-intent', 'charter/en/documents/statement-of-int
 add(id='about/strategy', section='about', order=5, type='outline', slug='/about/strategy/', title='Strategy', source=[], production='authored, with tables generated from the Statement of Intent',
     outline=['The strategy of the Bank: its mission and the four Strategic Pillars, and the contribution of AI to each (Statement of Intent 3)',
              'The AI adoption strategy: the seven Strategic Priorities (Statement of Intent 9) and the areas of application (8)',
-             'The strategy across the aspects of AICC: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures',
+             'The strategy across the aspects of the Competence Center: commercial, investment, portfolio, adoption, delivery, solutions, platform and data, people, providers, risk, measures',
              'The road: the Maturity Roadmap and its measures (Statement of Intent 11)',
-             'How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, AICC Charter 7)'])
+             'How the strategy is set and kept: the strategic loop, the portfolio review, the reporting (Portfolio Management Model 4, Competence Center Charter 7)'])
 add(id='about/aicc-charter', section='about', order=6, type='document', slug='/about/aicc-charter/', title=h1('charter/en/documents/aicc-charter.md'),
     source=['charter/en/documents/aicc-charter.md'], words=900)
 if NEXT:
     add(id='about/what-we-do', section='about', order=7, type='outline', slug='/about/what-we-do/', title='What we do', source=['portal/content/en/about/what-we-do.md'], production='authored',
-        outline=['One page: AICC as the internal consulting and innovation lab of the Bank; research and consulting across strategy, programs, solutions, and ways of working',
+        outline=['One page: The Competence Center as the internal consulting and innovation lab of the Bank; research and consulting across strategy, programs, solutions, and ways of working',
                  'The service lines in one line each, with a link to the Services section',
-                 'What AICC is not: no AI Platform, no business results of a Domain, no Control Function rules, no validation of its own work, no delivery at scale (AICC Charter 3.2)'])
+                 'What the Competence Center is not: no AI Platform, no business results of a Domain, no Control Function rules, no validation of its own work, no delivery at scale (Competence Center Charter 3.2)'])
     add(id='about/how-we-work', section='about', order=8, type='outline', slug='/about/how-we-work/', title='How we work', source=['portal/content/en/about/how-we-work.md'], production='authored',
         outline=['One page: the engagement model (a need, a study, a Service Agreement, delivery, an Outcome Report, support)',
                  'The method in brief: Portfolio decides, Delivery builds in small steps on a cadence, quality and control in the flow',
@@ -143,7 +143,7 @@ add(id='about/values-and-principles', section='about', order=9 if NEXT else 7, t
              'Principles of adoption (Statement of Intent 5) and of application (Statement of Intent 6)',
              'Principles of work (Operating Model 3) and of delivery (Solution Lifecycle Model 2)',
              'Each group states what it applies to, and links to its clause'])
-add(id='about/charter-outline', section='about', order=10 if NEXT else 8, type='outline', slug='/about/charter-outline/', title='Explore AICC',
+add(id='about/charter-outline', section='about', order=10 if NEXT else 8, type='outline', slug='/about/charter-outline/', title='Explore the Competence Center',
     source=['charter/en/README.md', 'charter/en/executive-summary.md', 'charter/en/guides/README.md'], production='generated, with an authored introduction',
     outline=['Introduction: how the manual is organized and how the pages relate (authored)',
              'The document hierarchy and the contents table (from the charter README)',
@@ -157,9 +157,9 @@ add(id='privacy', section=None, order=90, type='legal', slug='/privacy/', title=
              'Feedback and contact by email', 'Links from the site: the corporate share only, no external links', 'Persons named on the site: Roles, not persons; no data of the Bank', 'Questions and revision'])
 add(id='terms-of-use', section=None, order=91, type='legal', slug='/terms-of-use/', title='Terms of use', source=['portal/content/en/terms-of-use.md'], production='authored; aligned with the Operating Model 7, the AI Policy 2, and the collaboration tooling workflow',
     outline=['Scope and access', 'Information of the Bank and ownership', 'Standing of the pages: generated and authored, the document prevails, the regulatory pages are orientation, the live records are elsewhere, no right arises from a page',
-             'Use of the site, the external sources, and AI tools under the AI Policy', 'How the site is kept: the AICC Lead, the life cycle of the charter, the yearly review, the access review', 'Changes and contact'])
+             'Use of the site, the external sources, and AI tools under the AI Policy', 'How the site is kept: the Competence Center Lead, the life cycle of the charter, the yearly review, the access review', 'Changes and contact'])
 
-# What AICC does (current) / Services (next)
+# What the Competence Center does (current) / Services (next)
 S = S_SERVICES
 if NEXT:
     # The service lines, one page each, authored for the site from the Business Model, the Solution Lifecycle Model, and the Statement of Intent.
@@ -168,7 +168,7 @@ if NEXT:
     # how it runs, what it leads to, the Package, run-rate work or an Initiative, who decides, rule source.
     AREAS = [
         ('advise', 'Advise and formulate', [
-            ('strategy-and-governance', 'Strategy and governance', 'Strategy, charter, operating and governance model, portal and repository of a function or an Initiative, drafted with AI, as AICC did for itself', 'Business Model 2.4, 4.5, and 4.10'),
+            ('strategy-and-governance', 'Strategy and governance', 'Strategy, charter, operating and governance model, portal and repository of a function or an Initiative, drafted with AI, as the Competence Center did for itself', 'Business Model 2.4, 4.5, and 4.10'),
             ('normatives-and-processes', 'Normatives and processes', 'Policies, procedures, regulations, runbooks, and process descriptions drafted, aligned, and maintained with AI for a function', 'Business Model 4.5 and 4.10'),
             ('research-and-exploration', 'Research and exploration', 'Regulatory and technology watch with digests, trials in the Lab, partnering with organizations and providers', 'Business Model 2.3, 4.5, 4.11; Statement of Intent 10.5'),
             ('business-cases-and-scenarios', 'Business cases and scenarios', 'The discovery of needs, scenarios with their problem, Solution, and leading indicators, the audit of readiness and of sources, and the business case the Portfolio decides on', 'Business Model 3, 4.1; Portfolio Management Model 5, 6'),
@@ -178,7 +178,7 @@ if NEXT:
             ('workplace-automation', 'Workplace automation', 'Routing, forms, reports, consolidation, documents from templates, and case assistance, done with AI and reviewed by a person', 'Statement of Intent 9.4; AI Policy 2, 3'),
             ('analytics-and-decision-support', 'Analytics and decision support', 'Pipelines, dashboards, analyses, and research tooling that prepare the factual base for decisions, with lineage to governed sources', 'Statement of Intent 9.3, 10.2; Business Model 6'),
             ('content-management', 'Content management', 'Public, investor, and management material generated from governed data and templates, and the templates, editions, versions, and languages behind it', 'Statement of Intent 9.3; Operating Model 4.2'),
-            ('platforms', 'Platforms', 'The shared engines and environments that AICC builds, the requirements of AICC on the AI Platform, and the Handover of an engine to an IT function of the Bank', 'AICC Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8'),
+            ('platforms', 'Platforms', 'The shared engines and environments that the Competence Center builds, the requirements of the Competence Center on the AI Platform, and the Handover of an engine to an IT function of the Bank', 'Competence Center Charter 3.2; Statement of Intent 10.3; Solution Lifecycle Model 8'),
         ]),
         ('enablement', 'Enablement', [
             ('training-and-knowledge-sharing', 'Training and knowledge sharing', 'Training by role, coaching at the workplace, skill libraries, communities of practice, playbooks and publications', 'Business Model 4.4; Statement of Intent 10.1'),
@@ -187,8 +187,8 @@ if NEXT:
         ('assurance', 'Assurance', [
             ('policies-controls-criteria', 'Policies, controls, criteria', 'Rules of use within the AI Policy, control maps, acceptance and evaluation criteria, guardrails, stated before the build', 'AI Policy 2, 3; Operating Model 8; Solution Lifecycle Model 7'),
             ('assessments-and-evaluations', 'Assessments and evaluations', 'Solutions and providers evaluated against the cases of the function before use, and the readiness of a function assessed; the check of a provider stays with the Control Function Contacts (AI Policy 4.1)', 'AI Policy 3, 4; Solution Lifecycle Model 7'),
-            ('risk-tiering', 'Risk tiering', 'The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes', 'AI Policy 3; Operating Model 4.4; AICC Charter 5'),
-            ('oversight', 'Oversight', 'Adopted Solutions, the review of the Solutions in use, AI Incidents, and changes followed through the Registry and reported in the Quarterly Report', 'Business Model 2.3; AI Policy 5; AICC Charter 7'),
+            ('risk-tiering', 'Risk tiering', 'The Risk Tier assigned, recorded in the AI Registry, explained, and reassessed when the use changes', 'AI Policy 3; Operating Model 4.4; Competence Center Charter 5'),
+            ('oversight', 'Oversight', 'Adopted Solutions, the review of the Solutions in use, AI Incidents, and changes followed through the Registry and reported in the Quarterly Report', 'Business Model 2.3; AI Policy 5; Competence Center Charter 7'),
         ]),
     ]
     # The section page is the overview of the areas (part 1 of the series 'service-areas'); one page per area follows (parts 2 to 5).
@@ -214,8 +214,8 @@ if NEXT:
     add(id='services/how-to-engage', section='services', order=21, type='outline', slug='/services/how-to-engage/', title='How to engage', source=['portal/content/en/services/how-to-engage.md'], production='authored, with the Engagement workflow',
         series='how-to-engage', series_title='How to engage', part='1 of 3', tab='How to engage',
         outline=['The front door in six steps: contact, study, Service Agreement, delivery, Outcome Report, support (Business Model 3 to 5)',
-                 'The function commits to nothing; AICC works on a best-effort basis within its capability', 'Support levels: none, on demand, agreed response targets, run by AICC, and the Solution type each gives (Engagement guide 6)',
-                 'What AICC does not do (AICC Charter 3.2)', 'Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report'])
+                 'The function commits to nothing; The Competence Center works on a best-effort basis within its capability', 'Support levels: none, on demand, agreed response targets, run by the Competence Center, and the Solution type each gives (Engagement guide 6)',
+                 'What the Competence Center does not do (Competence Center Charter 3.2)', 'Links: Engagement workflow and guide, Initiative Brief, Service Agreement, Outcome Report'])
     add(id='services/catalog', section='services', order=24, type='outline', slug='/services/catalog/', title='Service catalog',
         source=['portal/content/en/services/catalog-form.md'], production='authored; the form of the catalog; the live catalog is an instance kept in the Portfolio (portfolio/en/solutions, portfolio/en/packages.md) for the live portal',
         series='service-catalog', series_title='Service catalog', part='1 of 2', tab='The form of the catalog',
@@ -232,7 +232,7 @@ add(id=f'{S}/engagement-guide', section=S, order=23 if NEXT else 3, type='guide'
     title=h1('charter/en/guides/engagement-guide.md'), source=['charter/en/guides/engagement-guide.md'], companion=f'{S}/engagement-workflow',
     **({'series': 'how-to-engage', 'series_title': 'How to engage', 'part': '3 of 3', 'tab': 'Guide: Engagement'} if NEXT else {}))
 
-# How AICC works (current) / Portfolio and Delivery (next)
+# How the Competence Center works (current) / Portfolio and Delivery (next)
 split_doc(S_PORTFOLIO, 'portfolio-management-model', 'charter/en/documents/portfolio-management-model.md', [
     ('', 'Foundations', [1, 2, 3]),
     ('the-portfolio-loops', 'The portfolio loops', [4]),
@@ -352,13 +352,13 @@ split_doc('organization', 'operating-model', 'charter/en/documents/operating-mod
 ], 10 if NEXT else 0, **({'series': 'set-operating-model', 'series_title': 'Operating Model', 'tabs': ['Foundations', 'Roles', 'Decisions'], 'series_order': 1} if NEXT else {}))
 if NEXT:
     split_doc('organization', 'organization-guide', 'charter/en/guides/organization-guide.md', [
-        ('', 'Purpose, the place of AICC, and the Roles and their profiles', [1, 2, 3]),
+        ('', 'Purpose, the place of the Competence Center, and the Roles and their profiles', [1, 2, 3]),
         ('who-is-responsible-for-what', 'Who is responsible for what', [4]),
         ('bodies-people-and-records', 'The governing bodies, the people records, the growth of the organization, the evidence, and the rule source', [5, 6, 7, 8, 9]),
     ], 14, type_='guide', series='set-operating-model', series_title='Operating Model', tabs=['Guide: Roles and profiles', 'Guide: Who is responsible', 'Guide: Bodies and people'], series_order=3)
     OCOURSE = [
         ('overview', 'Organization', 'Overview', 'A joint team by Roles; one picture; what the organization is for; the practice it follows'),
-        ('the-place-of-aicc-in-the-bank', 'The place of AICC in the Bank', 'Place in the Bank', 'Mandate and reporting line; what AICC is; what it is not; whom it works with'),
+        ('the-place-of-aicc-in-the-bank', 'The place of the Competence Center in the Bank', 'Place in the Bank', 'Mandate and reporting line; what the Competence Center is; what it is not; whom it works with'),
         ('the-roles', 'The Roles', 'Roles', 'The seven Roles in one line each; Hats; the rules of separation; the limits accepted while small'),
         ('who-does-what', 'Who does what', 'Who does what', 'The responsibility pattern by family of activity; how to read it'),
         ('people-and-appointments', 'People and appointments', 'Appointments', 'Who appoints whom; joining, changing, leaving; the state at the baseline'),
@@ -382,7 +382,7 @@ add(id='organization/roles', section='organization', order=20 if NEXT else 5, ty
              'The seven Roles, each with its purpose in one line (Operating Model 4.2)',
              'One page for each Role'])
 ROLES = ['executive-sponsor', 'aicc-lead', 'solution-engineer', 'domain-owner', 'domain-expert', 'control-function-contact', 'platform-owner']
-RNAMES = ['Executive Sponsor', 'AICC Lead', 'Solution Engineer', 'Domain Owner', 'Domain Expert', 'Control Function Contact', 'Platform Owner']
+RNAMES = ['Executive Sponsor', 'Competence Center Lead', 'Solution Engineer', 'Domain Owner', 'Domain Expert', 'Control Function Contact', 'Platform Owner']
 for i, (slug, name) in enumerate(zip(ROLES, RNAMES), 1):
     add(id=f'organization/roles/{slug}', section='organization', order=(20 if NEXT else 10) + i, type='role', slug=f'/organization/roles/{slug}/', title=name,
         source=['charter/en/documents/operating-model.md', 'charter/en/guides/organization-guide.md'], production='generated from tables',
@@ -493,7 +493,7 @@ if NEXT:
         ('guides', 'Guides', 'Guides', 'The five guides by the question each answers, beside their subjects; the guides and the courses'),
         ('playbooks-and-lessons', 'Playbooks and lessons', 'Playbooks and lessons', 'The charter as published; the Proposals; the playbooks and method notes; the lessons; the packages'),
         ('acts-and-compliance', 'Acts and compliance', 'Acts and compliance', 'What the applicable acts and policies require of a use of AI at the Bank, and where the charter answers it'),
-        ('questions-people-ask', 'Questions people ask', 'Questions', 'Short answers grounded in the charter: using AI at work, starting with AICC, risk and approval, the unit'),
+        ('questions-people-ask', 'Questions people ask', 'Questions', 'Short answers grounded in the charter: using AI at work, starting with the Competence Center, risk and approval, the unit'),
     ]
     for i, (slug, title, tab, line) in enumerate(KCOURSE, 1):
         if i == 1:
@@ -508,7 +508,7 @@ if NEXT:
             series='knowledge-base-course', series_title='Knowledge base', part=f'{i} of {len(KCOURSE)}', tab=tab)
     add(id='knowledge-base/acts-and-compliance', section='knowledge-base', order=6, type='outline', slug='/knowledge-base/acts-and-compliance/', title='Acts and compliance', source=['portal/content/en/knowledge-base/acts-and-compliance.md'],
         series='knowledge-base-course', series_title='Knowledge base', part='6 of 7', tab='Acts and compliance',
-        production='authored; curated by the AICC Lead with the Control Function Contacts',
+        production='authored; curated by the Competence Center Lead with the Control Function Contacts',
         outline=['DECISION 5: new content, not in the charter. The acts, regulations, and internal policies that apply to the use of AI at the Bank, and what each requires of a Solution',
                  'For each: the act or policy, who oversees it, what it requires, where the AI Policy and the controls answer it', 'Links to the Reference page Regulators and acts for the bodies and the texts'])
     # The Reference as tabs: the overview, then the four outward shelves; the charter's own references follow in the navigation.
@@ -527,7 +527,7 @@ if NEXT:
     add(id='reference/regulators-and-acts', section='reference', order=2, type='outline', slug='/reference/regulators-and-acts/', title='Regulators and acts', source=['portal/content/en/reference/regulators-and-acts.md'],
         production='authored; the index of the regulation pages, curated with the Control Function Contacts', series='reference-course', series_title='Reference', part='3 of 5', tab='Regulators and acts',
         outline=['The regulators, acts, standards, and frameworks the Bank is aware of, by jurisdiction, with a page for each',
-                 'The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how AICC complies'])
+                 'The split with Acts and compliance: this page and its sub-pages position each instrument; that page states what the applicable ones require and how the Competence Center complies'])
     REGS = [['lean-portfolio-management', 'Lean portfolio management practice', 'Global', 'Industry practice and framework']] + [["oecd-ai-principles", "OECD Principles on Artificial Intelligence", "Global", "Intergovernmental principles"], ["unesco-recommendation-ethics-ai", "UNESCO Recommendation on the Ethics of Artificial Intelligence", "Global", "Normative instrument of an international organization"], ["council-of-europe-ai-convention", "Council of Europe Framework Convention on Artificial Intelligence", "Global", "International treaty"], ["g7-hiroshima-ai-process", "G7 Hiroshima AI Process", "Global", "Voluntary international commitments"], ["iso-iec-ai-standards", "ISO/IEC standards on AI: 42001, 23894, 22989", "Global", "International standards"], ["nist-ai-rmf", "NIST AI Risk Management Framework", "United States", "Voluntary framework"], ["owasp-top-10-llm", "OWASP Top 10 for Large Language Model Applications", "Global", "Community security standard"], ["financial-standard-setters-on-ai", "The financial standard-setters on AI: FSB, BCBS, BIS", "Global", "Reports and principles of the standard-setters of finance"], ["eu-ai-act", "EU Artificial Intelligence Act", "European Union", "Regulation of the European Union"], ["eu-gdpr", "EU General Data Protection Regulation", "European Union", "Regulation of the European Union"], ["eu-dora", "EU Digital Operational Resilience Act and the guidance of the European Banking Authority", "European Union", "Regulation of the European Union and supervisory guidance"], ["us-model-risk-and-consumer-guidance", "United States supervisory guidance on model risk and on AI in credit", "United States", "Supervisory guidance of the federal banking and consumer agencies"], ["us-federal-and-state-ai-policy", "United States federal and state AI policy", "United States", "Executive policy and state legislation"], ["ru-personal-data-law", "Russian Federation: the Federal Law on Personal Data (152-FZ)", "Russian Federation", "Federal law"], ["ru-national-ai-strategy", "Russian Federation: the National Strategy for the Development of AI and the experimental legal regimes", "Russian Federation", "Presidential decree and federal laws"], ["bank-of-russia-on-ai", "Bank of Russia on artificial intelligence in the financial market", "Russian Federation", "Reports and guidance of a central bank and financial supervisor"], ["ru-ai-code-of-ethics", "Russian Federation: the Code of Ethics in the Field of AI", "Russian Federation", "Voluntary industry code"], ["kz-law-on-ai", "Kazakhstan: the Law on Artificial Intelligence and the national concept for AI", "Kazakhstan", "Law of the Republic of Kazakhstan and government concept"], ["kz-personal-data-law", "Kazakhstan: the Law on Personal Data and Their Protection", "Kazakhstan", "Law of the Republic of Kazakhstan"], ["kz-financial-regulators", "Kazakhstan: the National Bank and the Agency for Regulation and Development of the Financial Market", "Kazakhstan", "Central bank and financial supervisor"], ["aifc", "Astana International Financial Centre", "Kazakhstan", "Financial centre with its own regulatory framework"], ["nbkr", "National Bank of the Kyrgyz Republic", "Kyrgyz Republic", "Central bank and banking supervisor"], ["kg-personal-information-law", "Kyrgyz Republic: the Law on Personal Information and the authorized body for personal data", "Kyrgyz Republic", "Law of the Kyrgyz Republic and its authorized body"], ["kg-digital-development", "Kyrgyz Republic: the ministry responsible for digital development and the acts on digitalization", "Kyrgyz Republic", "Ministry and the acts and programs of digital development"], ["kg-aml-body", "Kyrgyz Republic: the financial intelligence body and the legislation against money laundering and the financing of terrorism", "Kyrgyz Republic", "Law and its authorized body"]]
     for i, (slug, title, region, kind) in enumerate(REGS, 1):
         add(id=f'reference/regulations/{slug}', section='reference', order=20 + i, type='regulation', slug=f'/reference/regulations/{slug}/', title=title,

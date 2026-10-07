@@ -2,7 +2,7 @@
 
 ## 1. Purpose and when it applies
 
-This guide explains the rhythm of AICC: which events are held, what each is for, and what each leaves on record. It applies to every Initiative and to the control of AICC as a unit. Work runs in Program Increments (PI) of one quarter. A PI has three Iterations, each one calendar month of four or five whole weeks, and the last week of the third Iteration is the Innovation and Planning (IP) week. Every week starts with planning and ends with review. The Cadence workflow shows the general flow without dates, and the Calendar Record holds the dates with the blocked and gray days.
+This guide explains the rhythm of the Competence Center: which events are held, what each is for, and what each leaves on record. It applies to every Initiative and to the control of the Competence Center as a unit. Work runs in Program Increments (PI) of one quarter. A PI has three Iterations, each one calendar month of four or five whole weeks, and the last week of the third Iteration is the Innovation and Planning (IP) week. Every week starts with planning and ends with review. The Cadence workflow shows the general flow without dates, and the Calendar Record holds the dates with the blocked and gray days.
 
 ## 2. The beats and their records
 
@@ -10,7 +10,7 @@ This guide explains the rhythm of AICC: which events are held, what each is for,
 | --- | --- | --- | --- |
 | Day | Daily Stand-up | Progress and blockers | None; a blocker is entered in the work item |
 | Week | Weekly Planning, Weekly Review | The flow, the Limits on Work in Progress, the Dependencies, and the care of the funnel and the Portfolio Backlog | The current boards and the Dashboard |
-| Iteration | Iteration Planning, Iteration Review and Demo, Iteration Retrospective, and the monthly Steering | The work of the month; the acceptance of the Features and the Capabilities by the product owner; the review of each live Solution by its Domain Owner; the gate decisions that are due; the sample of the Decisions of the AICC Lead; the open deficiencies | The Steering Summary; the note of each acceptance in the backlog; the note of each review in the Solution Definition; the Registry Snapshot at the Iteration close |
+| Iteration | Iteration Planning, Iteration Review and Demo, Iteration Retrospective, and the monthly Steering | The work of the month; the acceptance of the Features and the Capabilities by the product owner; the review of each live Solution by its Domain Owner; the gate decisions that are due; the sample of the Decisions of the Competence Center Lead; the open deficiencies | The Steering Summary; the note of each acceptance in the backlog; the note of each review in the Solution Definition; the Registry Snapshot at the Iteration close |
 | Program Increment | PI Review and Demo, Inspect and Adapt, PI Planning, and the quarterly Steering | The value of the quarter; the decision on each Active Initiative; the four signals of each Service; the quarterly risk check, the access review, and the reconciliation of the AI Incidents; the confirmation of the PI Objectives and the Roadmap | The Quarterly Report; the Registry Snapshot at the PI close; the Steering Summary |
 | Year | The yearly Steering, which is the monthly Steering of December | The direction for the next year: the documents, the AI Risk Appetite Statement, the appointments, the Strategic Priorities, the Investment Envelopes, and the Investment Guardrails | The Decision Records; the Appointments Record; the Priorities |
 
@@ -72,7 +72,7 @@ Figure 2: the Steerings of a year.
 
 - The month starts with the Iteration Planning, in which the Team selects the Features of the month.
 - Each Monday and Friday the Team plans and reviews the week.
-- The last week is the review week. It holds the Iteration Review and Demo, in which the product owner accepts the Features and the Capabilities and the Domain Owner reviews each live Solution, the Iteration Retrospective, and the monthly Steering, on a day that is fixed with the people outside AICC.
+- The last week is the review week. It holds the Iteration Review and Demo, in which the product owner accepts the Features and the Capabilities and the Domain Owner reviews each live Solution, the Iteration Retrospective, and the monthly Steering, on a day that is fixed with the people outside the Competence Center.
 - The Registry Snapshot is taken at the close.
 
 Figure 3 shows the flow of the month.
@@ -95,7 +95,7 @@ Figure 3: the flow of the month.
 - Inspect and Adapt solves the main problems of the quarter.
 - Innovation gives time to learn.
 - The PI Planning sets the intent and the direction of the next PI.
-- The AICC Lead drafts the Quarterly Report from the data of the PI Review and Demo and brings it to the quarterly Steering.
+- The Competence Center Lead drafts the Quarterly Report from the data of the PI Review and Demo and brings it to the quarterly Steering.
 - The quarterly Steering takes the Quarterly Report and the four signals of each Service, decides on each Active Initiative and on the transition of a Service that the reading calls for, takes the quarterly risk check, confirms the Maturity Level, and confirms the PI Objectives and the Roadmap.
 - The Executive Sponsor approves the Quarterly Report at the quarterly Steering and decides whether to submit it to the Board Committee or the Board. A submission is a choice of the Executive Sponsor, made when it is useful or when the Board asks, and is not due each quarter.
 - In the month that holds the IP week, the quarterly Steering is also the Steering of that month, and no separate monthly Steering is held, except in December.
@@ -107,7 +107,7 @@ flowchart LR
   PR["PI Review and Demo<br/>what the quarter delivered,<br/>value scored"] --> IA["Inspect and Adapt<br/>the main problems"]
   IA --> IN["Innovation<br/>optional, dropped first<br/>when days are lost"]
   IN --> PP["PI Planning<br/>PI Objectives, Program Board,<br/>proposed Roadmap"]
-  PR -.->|"data"| QR["Quarterly Report<br/>drafted by the AICC Lead"]
+  PR -.->|"data"| QR["Quarterly Report<br/>drafted by the Competence Center Lead"]
   QR --> QS
   PP --> QS["Quarterly Steering<br/>decision on each Active Initiative,<br/>risk check, Maturity Level,<br/>PI Objectives and Roadmap confirmed,<br/>Quarterly Report approved"]
   QS --> WR["Closing<br/>Weekly Review"]

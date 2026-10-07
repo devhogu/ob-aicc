@@ -18,7 +18,7 @@ From the Statement of Intent. The Executive Sponsor sets the targets each year. 
 
 | Measure | Maturity Level | Baseline and target: which figures | Owner | Source |
 | --- | --- | --- | --- | --- |
-| AI Policy active; Control Function Contacts named; every known AI use in the AI Registry with a Risk Tier; baselines set | 1 | | AICC Lead | AI Registry, Appointments |
+| AI Policy active; Control Function Contacts named; every known AI use in the AI Registry with a Risk Tier; baselines set | 1 | | Competence Center Lead | AI Registry, Appointments |
 | Share of employees with access to an approved assistant and trained in its use | 2 | | | |
 | Share of priority processes with an owned and current knowledge source | 2 | | | |
 | Share of Solutions in the AI Registry with a Risk Tier, validated, and monitored | 4 | | | |

@@ -62,8 +62,8 @@ The course states what delivery measures and why. This page states the measures 
 
 ## 6. How the measures are kept
 
-6.1. Each measure has one owner for its definition, the AICC Lead, and one source. The AICC Lead adds, changes, or removes a measure by a Decision taken at the monthly Steering and entered in the Decision Log, and removes a measure that is not read for two Program Increments (Solution Lifecycle Model 10.5). The definitions of the Solution Lifecycle Model prevail over this page where they differ.
+6.1. Each measure has one owner for its definition, the Competence Center Lead, and one source. The Competence Center Lead adds, changes, or removes a measure by a Decision taken at the monthly Steering and entered in the Decision Log, and removes a measure that is not read for two Program Increments (Solution Lifecycle Model 10.5). The definitions of the Solution Lifecycle Model prevail over this page where they differ.
 
 ## 7. Rule source
 
-Solution Lifecycle Model 10; AICC Charter 7.1; Statement of Intent 11.3; Portfolio Management Model 9; Business Model 4.2.
+Solution Lifecycle Model 10; AI Competence Center Charter 7.1; Statement of Intent 11.3; Portfolio Management Model 9; Business Model 4.2.
