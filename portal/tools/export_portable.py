@@ -153,7 +153,7 @@ def export(source, output):
         raise ValueError('Output must be a separate directory outside the input tree')
     if output.exists():
         marker = output / MARKER
-        if not marker.is_file() or json.loads(marker.read_text()).get('kind') != KIND:
+        if not marker.is_file() or json.loads(marker.read_text()).get('kind') not in (KIND, 'aicc-static-languages-v1'):
             raise ValueError('Refusing to replace a directory not created by this exporter')
     original = snapshot(source)
     for required in ('index.html', 'en/index.html', 'ru/index.html', 'assets/site.js', 'assets/search-en.json', 'assets/search-ru.json'):
@@ -237,9 +237,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source', type=Path, default=ROOT / 'html/aicc')
     parser.add_argument('--output', type=Path, default=ROOT / 'portal/published')
+    parser.add_argument('--static', action='store_true', help='Separate EN/RU editions, light only, no JavaScript')
     args = parser.parse_args()
     try:
-        export(args.source, args.output)
+        if args.static:
+            from static_export import export_static
+            export_static(args.source, args.output)
+        else:
+            export(args.source, args.output)
     except (ValueError, OSError, KeyError) as error:
         parser.exit(1, f'Export failed: {error}\n')
 

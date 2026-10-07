@@ -1,0 +1,33 @@
+/* Native reading adaptations for the JavaScript-free folder edition only. */
+:root{color-scheme:light}
+.static-edition{color:var(--shell-header-muted);font:13px var(--font-body);white-space:nowrap}
+.static-contents-link{color:var(--link);margin-left:auto;font:14px var(--font-body)}
+.static-entry{max-width:720px;margin:64px auto;padding:24px;font-family:var(--font-body);color:var(--text)}
+.static-entry h1{font-family:var(--font-heading)}
+.static-entry nav{display:flex;gap:16px;flex-wrap:wrap}
+.static-entry nav a{padding:16px 24px;border:1px solid var(--border);border-radius:12px;color:var(--link)}
+.static-index h2,.static-panel-title{font:700 24px/1.3 var(--font-heading);padding-bottom:16px;border-bottom:2px solid var(--brand);margin:40px 0 24px}
+.static-index ul{list-style:none;margin:0;padding:0}
+.static-index li{margin:8px 0}
+.static-index li>details{border:1px solid var(--border);border-radius:12px;padding:12px 16px}
+.static-index summary{font-weight:500;cursor:pointer}
+.static-index details ul{padding:8px 0 0 20px;font-size:14px}
+.static-index a{color:var(--link)}
+.static-stage-details{border:1px solid var(--border);border-radius:12px;margin:8px 0;background:var(--surface);min-width:0}
+.static-stage-details summary{cursor:pointer;padding:12px 16px;font:500 15px/1.5 var(--font-body);color:var(--link)}
+.static-stage-details>div{padding:0 16px 16px;scroll-margin-top:90px}
+.static-stage-details p{font:15px/1.6 var(--font-body);margin:8px 0;max-width:none}
+.static-stage-problem{background:var(--surface-subtle);border-left:2px solid var(--brand);padding:12px 16px;margin-top:12px}
+.static-stage-problem strong{font:500 13px var(--font-body)}
+.discovery-content .problems-panel{display:block!important}
+.discovery-content .problems-tab-label{text-decoration:none;color:var(--link)}
+.discovery-content a.flow-stages__stage{text-decoration:none;display:inline-flex;align-items:center}
+.static-diagram-link{display:inline-block;padding:6px 10px;color:var(--link);font:13px var(--font-body)}
+.static-diagram-link.dz-open{position:static;width:auto;height:auto}
+.lab-step{text-decoration:none}
+.lab-view-bar{display:none}
+.lab-stage-nav{margin-bottom:20px}
+.pf-tabs a,.dl-tabs a{color:var(--link)}
+:target{scroll-margin-top:90px}
+@media(max-width:1100px){.o-nav{position:static;max-height:340px;overflow:auto}}
+@media(max-width:650px){.static-edition{font-size:12px}.static-contents-link{font-size:13px}.static-panel-title{font-size:22px}.static-entry{margin:24px auto}}

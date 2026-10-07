@@ -1,9 +1,11 @@
 <GraceGraphDocument graceVersion="4.0">
   <GD-MAIN>
     <M-PORTABLE-EXPORT>
-      <Summary>Explicit on-demand export of generated portal pages into portal/published, with file links, bundled search, embedded fonts and portable interactions. The aicc.html entry point works without an HTTP server; export does not build or deploy the website.</Summary>
+      <Summary>Explicit on-demand export of generated portal pages into portal/published. Interactive mode retains bundled search, embedded fonts and portable controls. Static mode creates complete independently relocatable en/ru editions with local assets, light-only colors, no JavaScript, native topic/section links, inline workflow-stage descriptions and standalone diagram views. Both use validated file links and owned output replacement; neither builds nor deploys the hosted site.</Summary>
       <Path>portal/tools/export_portable.py</Path>
       <Path>portal/site/portable.js</Path>
+      <Path>portal/tools/static_export.py</Path>
+      <Path>portal/site/static-export.css</Path>
       <M-PORTAL-PROJECTION />
     </M-PORTABLE-EXPORT>
     <M-PORTAL-SOURCE>

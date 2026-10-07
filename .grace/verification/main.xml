@@ -2,13 +2,15 @@
   <VD-MAIN>
     <V-M-PORTABLE-EXPORT>
       <M-PORTABLE-EXPORT />
-      <TestFiles><File>portal/tests/test_portable.py</File><File>portal/tools/check_portable_browser.py</File></TestFiles>
+      <TestFiles><File>portal/tests/test_portable.py</File><File>portal/tools/check_portable_browser.py</File><File>portal/tools/check_static_export_browser.py</File></TestFiles>
       <Command>python3 -m unittest discover -s portal/tests</Command>
-      <Command>python3 portal/tools/export_portable.py</Command>
-      <Command>portal/.venv/bin/python portal/tools/check_portable_browser.py</Command>
-      <Scenario kind="success">Export preserves source files and visible content, uses explicit file and anchor destinations, is repeatable and refuses to overwrite an unowned folder. The relocated package opens every page under file URLs and supports both-language search, language switches, theme carry-over, embedded fonts, diagram zoom and manual copying without external resource requests. Each section bundles its own search index; the neighbour browser check exercises cross-section navigation and Discovery search in a disposable export.</Scenario>
+      <Command>python3 portal/tools/export_portable.py --output .runtime/portable/check-package</Command>
+      <Command>portal/.venv/bin/python portal/tools/check_portable_browser.py --folder .runtime/portable/check-package</Command>
+      <Command>python3 portal/tools/export_portable.py --static</Command>
+      <Command>portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_static_export_browser.py</Command>
+      <Scenario kind="success">Export preserves source files and visible content, uses explicit file and anchor destinations, is repeatable and refuses to overwrite an unowned folder. The relocated package opens every page under file URLs and supports both-language search, language switches, theme carry-over, embedded fonts, diagram zoom and manual copying without external resource requests. Each section bundles its own search index; the neighbour browser check exercises cross-section navigation and Discovery search in a disposable export. Static mode protects independently portable EN/RU folders, no scripts or dead controls, fixed light rendering under a dark OS preference, complete authored reading text and workflow popup descriptions, native disclosures and stage fragment reveal, visible board sections, all Lab tasks, topic links, standalone diagrams, local fonts and responsive direct-file layouts. All static pages and local destinations are checked after relocation without sibling editions.</Scenario>
       <Scenario kind="failure">A local Chromium pass does not establish corporate Windows SMB access, browser policy or file associations. External references still need their usual access. The export only contains the last generated website state.</Scenario>
-      <TraceAssertion>Commands exit zero. The browser report records the package manifest hash and direct-file evidence in .runtime/portable/browser-report.json.</TraceAssertion>
+      <TraceAssertion>Commands exit zero. Interactive evidence is in .runtime/portable/browser-report.json; static evidence is in .runtime/static-export/browser-report.json. Reports bind to the manifest/source tree and actual direct-file reading paths.</TraceAssertion>
     </V-M-PORTABLE-EXPORT>
     <V-M-PORTAL-NEIGHBOURS>
       <M-PORTAL-NEIGHBOURS />

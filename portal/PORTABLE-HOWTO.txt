@@ -1,16 +1,18 @@
-AICC portable portal — how to regenerate
+AICC published portal — how to regenerate
 
-Run these commands from the root of the configured AICC source repository (ob-aicc), not from this exported folder.
+Run from the AICC source repository, not from the exported folder.
 
-1. If content has changed, rebuild the website first:
+1. Rebuild the current content:
    python3 portal/tools/build.py
 
-2. Generate the folder edition:
-   python3 portal/tools/export_portable.py
+2. Generate separate English and Russian editions without JavaScript:
+   python3 portal/tools/export_portable.py --static
 
-3. Copy the complete portal/published/ folder to the shared drive. Keep all files and subfolders together, then open aicc.html.
+3. Copy portal/published/en/ or portal/published/ru/ separately, or copy all of portal/published/. Keep each edition's assets and subfolders together. Open its index.html. The parent aicc.html links to both editions.
 
-Optional browser check before sharing:
-   portal/.venv/bin/python portal/tools/check_portable_browser.py
+4. Optional direct-file browser check:
+   portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_static_export_browser.py
 
-Regeneration is on demand. The export does not upload files or update the hosted website. Make content changes in the source repository, then regenerate.
+Light theme only. Native disclosures and links replace popups and tab switching. Topics and browser Find replace live search. Select text to copy; open the full diagram and use browser zoom. Email feedback and external citations need their normal applications/access.
+
+For the earlier interactive edition, omit --static. To keep both editions, use a separate --output folder. Regeneration is on demand and does not upload files or update the hosted website.
