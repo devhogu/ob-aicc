@@ -1,6 +1,6 @@
 ```yaml
 source: portfolio/en/projects/service-resolution/governance.md
-source_sha256: ad8a788ab8fcea3ac5dc40a9a8493d17588888facdacf2650fda4c2d5a88f4fa
+source_sha256: 4a0254ee7bf734913a39751a8112eb95adca72552b44944fceebab60fddabab5
 translation_status: reviewed
 ```
 

@@ -6,7 +6,7 @@ section: "Journey options"
 
 ## Journey options and selection {#journeys-journey-options-and-selection}
 
-The pilot serves one customer journey, one servicing queue and one service team. Three journeys are candidates. At Scoping (Reviewing, Discovery: Scoping), the Competence Center Lead and the Domain Owner, the Head of Customer Service, select one by the rule below. Each candidate has a one-page annex with only what is specific to it. What is common to all three (delivery commitments, ownership, the approval record, risk coverage) is on the [Charter](#charter), [Governance and roles](#governance) and [Controls and evidence](#controls) pages; the technical side is on [Journey technical profiles](#journey-profiles).
+The pilot serves one customer journey, one servicing queue and one service team. Three journeys are candidates. At Scoping (Reviewing, Discovery: Scoping), the Competence Center Lead and the Domain Owner, the Head of Customer Service, select one by the rule below. Each candidate has a one-page annex with only what is specific to it. What is common to all three (delivery commitments, ownership, the approval record, risk coverage) is on the [Initiative Brief](#charter), [Governance and roles](#governance) and [Controls and evidence](#controls) pages; the technical side is on [Journey technical profiles](#journey-profiles).
 
 Status: INI-013 (Proposed; Portfolio Funnel). No journey is selected yet.
 
@@ -55,14 +55,14 @@ If no candidate meets the rule, the scope is narrowed (fewer states, one payment
 
 ### How the selected journey enters the Initiative Brief {#journeys-how-the-selected-journey-enters-the-initiative-brief}
 
-The selection is the scoped gate. The Competence Center Lead, with the Domain Owner, records it in the Decision Log, and the Brief names the journey in its scope and in the Solution expected. The selected annex is completed and kept with the Brief in the Initiative's folder in the Portfolio as "Charter: journey annex to the Initiative Brief"; the two others remain options on this page. Each section of the annex then has one home.
+The selection is the scoped gate. The Competence Center Lead, with the Domain Owner, records it in the Decision Log, and the Brief names the journey in its scope and in the Solution expected. The selected annex is completed and kept with the Brief in the Initiative's folder in the Portfolio as "Initiative Brief: journey annex"; the two others remain options on this page. Each section of the annex then has one home.
 
 | Annex section | Where it goes | Who completes or approves it |
 | --- | --- | --- |
 | Scope and exclusions | Brief section 3; later the scope of the Solution Definition | Competence Center Lead with the Domain Owner; the Domain Owner approves the Brief |
 | Process function and what it approves | Brief section 5 as a Dependency, on the Program Board with the Iteration it is needed by; its approvals become acceptance criteria of the Solution Definition | The head of the process function approves; the Competence Center Lead records each approval as a Dependency met |
 | Control remits the journey adds | Brief section 5: the Control Function Contacts who clear the business case | Each Contact concerned, by a Control Sign-Off |
-| Baseline measures | Brief section 2 (the journey indicator) and the measurement annex on the [Charter](#charter) page | The owner of each source takes the baseline; the Domain Owner states the targets |
+| Baseline measures | Brief section 2 (the journey indicator) and the measurement annex on the [Initiative Brief](#charter) page | The owner of each source takes the baseline; the Domain Owner states the targets |
 | Quality and control-limit criteria | Acceptance criteria and alert levels of the Solution Definition (see [Controls and evidence](#controls)) | The Domain Owner approves the Solution Definition, or the Executive Sponsor if the Competence Center Lead built the Solution |
 | Stop conditions | Conditions of use and alert levels of the Solution Definition; the facts of the decision after the MVP | The Competence Center Lead or a Control Function Contact suspends; the approver of the Brief decides after the MVP |
 | Expected volume | The measurement annex: whether the repeat-contact indicator carries a target or is read as directional evidence, as stated in the Decision Record that approves the Brief | The source owner supplies the volume; the approver of the Brief accepts the claim it supports |

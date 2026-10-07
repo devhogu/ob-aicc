@@ -53,3 +53,5 @@
 @media print{[data-kanban-workspace] .kb-scroll{overflow:visible}[data-kanban-workspace] .kb-board{display:block;min-width:0}[data-kanban-workspace] .kb-column{margin-bottom:12px}[data-kanban-workspace] .kb-stack{max-height:none;overflow:visible}[data-kanban-workspace] .kb-table{min-width:0}[data-kanban-workspace] .kb-detail-actions{display:none}}
 
 [data-kanban-workspace] .kb-step-en{display:block;font:400 11px/1.3 var(--font-body);color:var(--text-muted);margin-top:3px}
+
+[data-kanban-workspace] .kb-card p,[data-kanban-workspace] .kb-card h3{overflow-wrap:break-word;hyphens:auto}

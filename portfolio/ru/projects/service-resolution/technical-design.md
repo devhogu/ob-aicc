@@ -1,6 +1,6 @@
 ```yaml
 source: portfolio/en/projects/service-resolution/technical-design.md
-source_sha256: 78596e7e6cbf76350b9d416ab735a3f775f1c75e30663a50005527dfaafd2080
+source_sha256: 2d90dfc767c3387515bf1dd4cb877dbe8b0e79e035e6e6a66a7fb2fb6ae118bf
 translation_status: reviewed
 ```
 

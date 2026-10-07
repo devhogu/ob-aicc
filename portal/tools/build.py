@@ -1693,7 +1693,7 @@ def records_page(site, p, lang):
                 controls += refs
         ctl = ', '.join('<a href="%s">%s</a>' % (site.rel(url, '/%s/center/governance/controls/%s/' % (lang, r.lower())), r) for r in sorted(set(controls)))
         rows.append('<tr><td><a href="%s">%s</a></td><td lang="en">%s</td><td lang="en"><code>%s</code></td><td>%s</td></tr>' % (
-            site.rel(url, site.url(page, lang)), esc(d['name']), esc(d['used']), esc(d['kept'].strip('`')), ctl or '&ndash;'))
+            site.rel(url, site.url(page, lang)), esc(d['name']), esc(d['used']), esc(d['kept'].replace('`', '').replace('/en/', '/%s/' % lang)), ctl or '&ndash;'))
     template_language = site.sources.resolve('charter/en/templates/README.md').language
     rows = [row.replace('lang="en"', 'lang="%s"' % template_language) for row in rows]
     def share(base):

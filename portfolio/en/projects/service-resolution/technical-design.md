@@ -124,7 +124,7 @@ Three separate assets, owned by people who did not build the Solution: developme
 | Context-only view | linked facts, rule-based timeline, record references | what does bringing the data together give? | on the locked cases; also the degraded mode |
 | GenAI-assisted view | context plus summary, blocker, procedure, next step and draft | what does GenAI add? | on the locked cases, and live with the first users |
 
-If the context-only view gives most of the improvement, the result supports investment in customer context and limits further GenAI investment. The added value of GenAI is an input to the decision after the MVP, not a pass or fail criterion. Case numbers are in the measurement annex of the [Charter](#charter); the acceptance rule is on [Controls and evidence](#controls).
+If the context-only view gives most of the improvement, the result supports investment in customer context and limits further GenAI investment. The added value of GenAI is an input to the decision after the MVP, not a pass or fail criterion. Case numbers are in the measurement annex of the [Initiative Brief](#charter); the acceptance rule is on [Controls and evidence](#controls).
 
 ### Fit with the AI Platform and the Standards {#technical-design-platform-standards}
 

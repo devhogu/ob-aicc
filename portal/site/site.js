@@ -234,4 +234,8 @@
       });
     });
   });
+  // the language switch keeps the anchor the reader is at
+  document.querySelectorAll('.lang-switch a[href]').forEach(function (a) {
+    a.addEventListener('click', function () { if (location.hash && a.href.indexOf('#') < 0) a.href += location.hash; });
+  });
 })();

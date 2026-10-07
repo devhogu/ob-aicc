@@ -79,7 +79,7 @@ The decisions below are recorded before the Solution Definition is approved, in 
 | 8 | Functions and authority | read services only for the workflow; employee actions and their interfaces; the prohibited list | Solution Definition section 7 (Conditions of use); AI Registry "AI agents and permissions: none" |
 | 9 | Capability dispositions | reuse, extend, pilot-local, or narrow or block for every row of the capability table | Solution Definition section 3; Dependencies on the Program Board |
 | 10 | Environments and service position | environments, network zone, workload estimate, support window, suspension path | Solution Definition; the Platform Owner and infrastructure as Dependencies |
-| 11 | Evidence position | Evaluation set coverage, comparison design, monitoring sample, required trace | Experiment block of the Solution Definition; the measurement annex of the [Charter](#charter) |
+| 11 | Evidence position | Evaluation set coverage, comparison design, monitoring sample, required trace | Experiment block of the Solution Definition; the measurement annex of the [Initiative Brief](#charter) |
 | 12 | Continuing ownership | the Receiver: an IT function of the Bank, to be asked; the run cost and sunset rule of the Service | Solution Definition header and section 7 |
 
 The workflow engine and other product and framework choices are Team decisions in the Decision Log. They must meet the contracts of the technical design and stay replaceable.

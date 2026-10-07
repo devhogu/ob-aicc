@@ -1,6 +1,6 @@
 ```yaml
 source: portfolio/en/projects/service-resolution/controls.md
-source_sha256: 4bc90c517b634c238ac467fe029a9f347d676c174d2316968c04d841d587b94b
+source_sha256: 0861d865577781f50b4fba833a6de9fd0f836db3b8d9ba2c238b8637b14565a8
 translation_status: reviewed
 ```
 

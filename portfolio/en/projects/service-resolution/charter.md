@@ -1,10 +1,10 @@
 ---
 key: "charter"
-label: "Charter"
-section: "Charter"
+label: "Initiative Brief"
+section: "Initiative Brief"
 ---
 
-## Charter: Initiative Brief and measurement annex {#charter-initiative-brief}
+## Initiative Brief and measurement annex {#charter-initiative-brief}
 
 This page is the project charter in the Competence Center form: the Initiative Brief, which is the one-page business case of an Initiative, followed by the measurement and evidence annex that is approved with it. The Domain Owner and the Competence Center Lead complete the Brief. The maintained Initiative Brief is kept in the Initiative's folder in the Portfolio. This page preserves the complete supporting business-case draft and measurement annex; it is not a separate authoritative record. Figures of the Bank do not appear here: each figure is a reference to its source, and each estimate is a field with the name of whoever fills it.
 
@@ -16,7 +16,7 @@ Familiar labels and where they now live: **Decision requested** is the paragraph
 | --- | --- |
 | Identifier | INI-013 (Proposed; Portfolio Funnel). Registered in the Portfolio Funnel on 2026-10-06; intake screening and business-case approval are not recorded. |
 | Title | Customer Intelligence–Enabled Service Resolution |
-| State and Stage | Proposed (Funnel). Next: Discovery: Scoping, then Discovery: Business case |
+| State and Stage | Proposed (Funnel). Next: the Intake gate; then Discovery: Scoping (the Scoped gate), then Discovery: Business case (the Approval gate) |
 | Strategic Priority | Strategic Priority 1 (PRI-1), customer intelligence. Linked to INI-006, Customer experience intelligence, whose sources this Initiative shares |
 | Service area and category | Build and run; Workplace automation (case assistance, done with AI and reviewed by a person) |
 | Kind of work | Business |

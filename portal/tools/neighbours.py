@@ -226,7 +226,11 @@ def write(output, path, text):
 
 
 def local_links(url, links):
-    return ''.join(f'<a href="{workspace.relative(url, target)}"' + (' aria-current="page"' if target == url else '') + f'>{escape(label)}</a>' for target, label in links)
+    # The page itself is current; the area that holds it is marked as the place the reader is in.
+    def mark(target):
+        if target == url: return ' aria-current="page"'
+        return ' aria-current="true"' if url.startswith(target) and target.count('/') > 3 else ''
+    return ''.join(f'<a href="{workspace.relative(url, target)}"{mark(target)}>{escape(label)}</a>' for target, label in links)
 
 
 def workflow_card(match, relative, lang):

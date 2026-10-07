@@ -2074,17 +2074,17 @@
     {
       "path": "portfolio/en/projects/service-resolution/charter.md",
       "hash_basis": "file_bytes",
-      "sha256": "75c9ef4ffde25095b586e364004367d31647694e4fe8e99c70098348df801ee8"
+      "sha256": "3861a1b7c90bd8dbbc57b73b711d0b67d37de5229e3a64add94e234caa46a3c6"
     },
     {
       "path": "portfolio/en/projects/service-resolution/controls.md",
       "hash_basis": "file_bytes",
-      "sha256": "4bc90c517b634c238ac467fe029a9f347d676c174d2316968c04d841d587b94b"
+      "sha256": "0861d865577781f50b4fba833a6de9fd0f836db3b8d9ba2c238b8637b14565a8"
     },
     {
       "path": "portfolio/en/projects/service-resolution/governance.md",
       "hash_basis": "file_bytes",
-      "sha256": "ad8a788ab8fcea3ac5dc40a9a8493d17588888facdacf2650fda4c2d5a88f4fa"
+      "sha256": "4a0254ee7bf734913a39751a8112eb95adca72552b44944fceebab60fddabab5"
     },
     {
       "path": "portfolio/en/projects/service-resolution/how-it-works.md",
@@ -2094,22 +2094,22 @@
     {
       "path": "portfolio/en/projects/service-resolution/it-readiness.md",
       "hash_basis": "file_bytes",
-      "sha256": "d0a5d997fc65774db6f1fcb9fdd78b715b495189ded2145fc01e6ffd412d201a"
+      "sha256": "a42cd69c6bc69a668c0042829e0c177ed399baa1fafc15d06990a14063a1e09e"
     },
     {
       "path": "portfolio/en/projects/service-resolution/journey-dispute.md",
       "hash_basis": "file_bytes",
-      "sha256": "c7f7395b4f446c727fa60fb36eb99d9ff4453e0d5613f254d8da5c8e49ef3df2"
+      "sha256": "3ecde0fbe3bcfe46a0bf7238ed0064797cbdabcfbcade956f81b9794eef69304"
     },
     {
       "path": "portfolio/en/projects/service-resolution/journey-kyc.md",
       "hash_basis": "file_bytes",
-      "sha256": "b74b53df3de4f8ef47b596810b6e3b72919c7876c632dd645038eddf985ee60e"
+      "sha256": "fcf4526ac17a99839fd001f9b8249b7d5d8be385d47dbd6beb08bfcd8263228b"
     },
     {
       "path": "portfolio/en/projects/service-resolution/journey-payment.md",
       "hash_basis": "file_bytes",
-      "sha256": "97111e1d6adf7461e18c4e5337352e8e342e358eb16c25980bad1bc2ce49144d"
+      "sha256": "6daf910e02df1b5be6b64a7b35dc7a0227c02c363a8d88cda35279a6b1de26fd"
     },
     {
       "path": "portfolio/en/projects/service-resolution/journey-profiles.md",
@@ -2119,17 +2119,17 @@
     {
       "path": "portfolio/en/projects/service-resolution/journeys.md",
       "hash_basis": "file_bytes",
-      "sha256": "bf7169e8571fe4632ff7317be9a14ec560f6a851b63d1713c5b605485f6e1991"
+      "sha256": "cdb53adc8a3ca7e6e0f4bf5e63477018f14e03ad6a19358364cdc30c64410329"
     },
     {
       "path": "portfolio/en/projects/service-resolution/start.md",
       "hash_basis": "file_bytes",
-      "sha256": "d12f00c4c2f047227baa66c508b5bd040cb7ccb55bc7b4ca256101e6156088b9"
+      "sha256": "6b59f18e23aa3adeaf051e63bc8c408226d6bd3bdc8575a50879931b8878edb6"
     },
     {
       "path": "portfolio/en/projects/service-resolution/technical-design.md",
       "hash_basis": "file_bytes",
-      "sha256": "78596e7e6cbf76350b9d416ab735a3f775f1c75e30663a50005527dfaafd2080"
+      "sha256": "2d90dfc767c3387515bf1dd4cb877dbe8b0e79e035e6e6a66a7fb2fb6ae118bf"
     },
     {
       "path": "registry/en/decisions/DR-2026-066-the-name-competence-center.md",

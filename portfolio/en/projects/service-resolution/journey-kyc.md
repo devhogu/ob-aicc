@@ -6,7 +6,7 @@ section: "Journey options"
 
 ## Onboarding/KYC Progress Support {#journey-kyc-onboarding-kyc-progress-support}
 
-Journey option for the INI-013 (Proposed; Portfolio Funnel). If selected at Scoping, it becomes the Charter: journey annex to the Initiative Brief (see [Journey options and selection](#journeys)). This page holds only what is specific to the journey; the common content is on the [Charter](#charter), [Governance and roles](#governance) and [Controls and evidence](#controls) pages, and the technical profile on [Journey technical profiles](#journey-profiles).
+Journey option for the INI-013 (Proposed; Portfolio Funnel). If selected at Scoping, it becomes the journey annex to the Initiative Brief (see [Journey options and selection](#journeys)). This page holds only what is specific to the journey; the common content is on the [Initiative Brief](#charter), [Governance and roles](#governance) and [Controls and evidence](#controls) pages, and the technical profile on [Journey technical profiles](#journey-profiles).
 
 **Intent:** stalled onboarding and know-your-customer (KYC) cases move forward, because the servicing employee sees one accurate account of the service state, the information the customer still has to provide, the responsible queue and the approved next step, without reading, exposing or inferring restricted financial-crime information. **Scope of the decision requested:** one customer segment, one onboarding path and one support queue.
 
@@ -34,7 +34,7 @@ Journey option for the INI-013 (Proposed; Portfolio Funnel). If selected at Scop
 
 ### Baseline measures {#journey-kyc-baseline-measures}
 
-Each baseline is a reference to its source, usually a management information (MI) report, taken in Discovery: Business case by the source owner; formulas and the comparison design are in the measurement annex on the [Charter](#charter) page.
+Each baseline is a reference to its source, usually a management information (MI) report, taken in Discovery: Business case by the source owner; formulas and the comparison design are in the measurement annex on the [Initiative Brief](#charter) page.
 
 | Measure | Use | Source reference |
 | --- | --- | --- |

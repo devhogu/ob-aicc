@@ -1,6 +1,6 @@
 ```yaml
 source: portfolio/en/projects/service-resolution/it-readiness.md
-source_sha256: d0a5d997fc65774db6f1fcb9fdd78b715b495189ded2145fc01e6ffd412d201a
+source_sha256: a42cd69c6bc69a668c0042829e0c177ed399baa1fafc15d06990a14063a1e09e
 translation_status: reviewed
 ```
 

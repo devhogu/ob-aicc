@@ -6,7 +6,7 @@ section: "Governance"
 
 ## Governance and roles {#governance-governance-and-roles}
 
-This page shows the project's governance (who decides, who does the work, and how the work is controlled) as the Competence Center flows carry it. A reader used to a project charter will find each familiar element under its usual label, next to the Competence Center term. The page explains and does not commit anyone: the commitments are in the [Charter (Initiative Brief)](#charter) and the Service Agreement. The project uses the existing the Competence Center events and records and adds none of its own.
+This page shows the project's governance (who decides, who does the work, and how the work is controlled) as the Competence Center flows carry it. A reader used to a project charter will find each familiar element under its usual label, next to the Competence Center term. The page explains and does not commit anyone: the commitments are in the [Initiative Brief](#charter) and the Service Agreement. The project uses the existing the Competence Center events and records and adds none of its own.
 
 ### The Competence Center path, step by step {#governance-path}
 
@@ -16,7 +16,7 @@ The first column keeps the project's own steps. The other columns show where eac
 | --- | --- | --- | --- | --- |
 | Idea and journey shortlist | Funnel (Proposed) | The Competence Center Lead takes it in, defers it, or rejects it | Portfolio Backlog entry; Decision Log line | Weekly Review |
 | Journey selection, ownership, baseline from existing figures | Reviewing (Discovery: Scoping), then Analyzing (Discovery: Business case) | The Competence Center Lead with the Domain Owner | Initiative Brief and journey annex; Service Agreement for the study phase | Weekly Review; Service Agreement check-in at each Iteration |
-| Charter approval | Approval of the business case, after clearance by the Control Function Contacts | Domain Owner; each Contact clears within its remit | Initiative Brief; Control Sign-Offs; Decision Record; Service Agreement amended | Monthly Steering |
+| Initiative Brief approval | Approval of the business case, after clearance by the Control Function Contacts | Domain Owner; each Contact clears within its remit | Initiative Brief; Control Sign-Offs; Decision Record; Service Agreement amended | Monthly Steering |
 | Mobilization | Ranked in the Portfolio Backlog and pulled into the MVP | Competence Center Lead | Portfolio Backlog rank; Decision Log line | Monthly Steering; PI Planning |
 | Historical validation (reconstruct past cases, check accuracy) | Phase 1 of the MVP: an Experiment in the Lab on read-only extracts, ending in an Outcome Report | The Competence Center Lead runs it, and the Domain Owner reviews it. While the Competence Center Lead builds, the Executive Sponsor approves the Solution Definition, assigns the Risk Tier, and approves the use of the data class | Solution Definition (Experiment); AI Registry entry; Outcome Report | Iteration Planning; Iteration Review and Demo |
 | Readiness for live use | Validation by the Control Function Contacts, the Team's final acceptance, and the Bank's change management | The Contacts; the Competence Center Lead; change management | Control Sign-Offs; release block (Team final acceptance, change ticket, test reference); [IT readiness checklist](#it-readiness) | Iteration Review and Demo; monthly Steering |

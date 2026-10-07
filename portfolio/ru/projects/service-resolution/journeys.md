@@ -1,6 +1,6 @@
 ```yaml
 source: portfolio/en/projects/service-resolution/journeys.md
-source_sha256: bf7169e8571fe4632ff7317be9a14ec560f6a851b63d1713c5b605485f6e1991
+source_sha256: cdb53adc8a3ca7e6e0f4bf5e63477018f14e03ad6a19358364cdc30c64410329
 translation_status: reviewed
 ```
 

@@ -208,7 +208,7 @@ def page(url, lang, section, title, body, local_nav, *, extra_head='', body_clas
     return f'''<!doctype html>
 <html lang="{lang}" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
-<title>{escape(title)} · {escape(section_label(section, lang))}</title>
+<title>{escape(title) if title == section_label(section, lang) else escape(title) + ' · ' + escape(section_label(section, lang))}</title>
 <script>try{{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}}catch(e){{}}</script>
 {extra_head}
 {styles(url)}

@@ -1,6 +1,6 @@
 ```yaml
 source: portfolio/en/projects/service-resolution/journey-payment.md
-source_sha256: 97111e1d6adf7461e18c4e5337352e8e342e358eb16c25980bad1bc2ce49144d
+source_sha256: 6daf910e02df1b5be6b64a7b35dc7a0227c02c363a8d88cda35279a6b1de26fd
 translation_status: reviewed
 ```
 

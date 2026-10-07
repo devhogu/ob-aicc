@@ -1,6 +1,6 @@
 ```yaml
 source: portfolio/en/projects/service-resolution/journey-kyc.md
-source_sha256: b74b53df3de4f8ef47b596810b6e3b72919c7876c632dd645038eddf985ee60e
+source_sha256: fcf4526ac17a99839fd001f9b8249b7d5d8be385d47dbd6beb08bfcd8263228b
 translation_status: reviewed
 ```
 

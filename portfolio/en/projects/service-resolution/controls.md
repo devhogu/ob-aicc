@@ -94,7 +94,7 @@ This is the one acceptance rule of the pilot. Other pages link to it. It has two
 | Process approval | Given the action list and the outcome definitions, then the process function has approved them, recorded as a Dependency met. |
 | Recording | Given any correction, accepted action, escalation or result, then it is recorded in the pilot store. |
 
-**Part 2: leading indicators.** Two to four indicators are set in the Initiative Brief: customer outcome, handling effort, and use of the assistant on eligible cases, with one indicator for the journey. Each is a reference to its source and its owner, not a figure on the portal. The comparison design, the observation period and the number of cases needed are in the measurement annex. Both are on the [Charter](#charter) page.
+**Part 2: leading indicators.** Two to four indicators are set in the Initiative Brief: customer outcome, handling effort, and use of the assistant on eligible cases, with one indicator for the journey. Each is a reference to its source and its owner, not a figure on the portal. The comparison design, the observation period and the number of cases needed are in the measurement annex. Both are on the [Initiative Brief](#charter) page.
 
 **The decision after the minimum viable product (MVP).** The approver of the business case (the Domain Owner, or the Executive Sponsor if the Initiative spans Domains) reads the evidence and decides.
 
