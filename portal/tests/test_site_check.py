@@ -10,7 +10,6 @@ import unittest
 
 CHECKER = Path(__file__).resolve().parents[1] / 'tools' / 'check.py'
 BRANCHES = ('center', 'discovery', 'portfolio', 'program', 'lab')
-NOT_FOUND = '<!doctype html><html lang="en"><body><a href="/aicc/en/">EN</a><a href="/aicc/ru/">RU</a></body></html>'
 
 
 def page(lang, depth, body):
@@ -24,7 +23,7 @@ def page(lang, depth, body):
 
 
 class SiteCheck(unittest.TestCase):
-    def run_check(self, body='', *, extra=None, not_found=NOT_FOUND, search=None):
+    def run_check(self, body='', *, extra=None, search=None):
         """A minimal complete site; body goes into both routers, extra maps site paths to page bodies."""
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -40,7 +39,6 @@ class SiteCheck(unittest.TestCase):
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(page(route.split('/')[0], route.count('/'), content), encoding='utf-8')
             (site / 'index.html').write_text('<!doctype html><html lang="en"><body><a href="en/">English</a></body></html>', encoding='utf-8')
-            (site / '404.html').write_text(not_found, encoding='utf-8')
             assets = site / 'assets'
             assets.mkdir()
             for lang in ('en', 'ru'):
@@ -91,16 +89,6 @@ class SiteCheck(unittest.TestCase):
         result = self.run_check(extra={'en/projects/': '', 'ru/projects/': ''})
         self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
         self.assertIn('expected exactly the router and the branches', result.stdout)
-
-    def test_not_found_page_is_self_contained(self):
-        for markup, message in (
-            (NOT_FOUND.replace('<body>', '<head><link rel="stylesheet" href="assets/ui/tokens.css"></head><body>'), 'self-contained'),
-            (NOT_FOUND.replace('/aicc/ru/', 'ru/'), 'must link exactly the routers'),
-        ):
-            with self.subTest(markup=markup):
-                result = self.run_check(not_found=markup)
-                self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
-                self.assertIn(message, result.stdout)
 
     def test_search_results_must_resolve_inside_their_branch(self):
         for entry, message in (

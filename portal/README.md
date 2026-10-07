@@ -4,7 +4,7 @@ Editable home for the AICC portal: the interface kit, page chrome, messages, nei
 
 ## Branches
 
-The site has one language-first layout. `html/aicc/index.html` forwards to `en/`; `html/aicc/{en,ru}/index.html` is the router of each language, which holds only the five branch doors; `html/aicc/404.html` is the one page for a missing address. There are no other routes and no redirect stubs. The five branches share one O!Bank shell: branding, the left navigation of all branches with the current one marked, the language switch to the same page in the other language, the theme switch, page feedback and search. Each branch owns its source, content, local navigation, search index and checks. Content bodies do not link across branches except the recorded Initiative–project relationship between Portfolio and Program, and charter terminology links or document status are not added to the other branches.
+The site has one language-first layout. `html/aicc/index.html` forwards to `en/`; `html/aicc/{en,ru}/index.html` is the router of each language, which holds only the five branch doors. There are no other routes and no redirect stubs. The five branches share one O!Bank shell: branding, the left navigation of all branches with the current one marked, the language switch to the same page in the other language, the theme switch, page feedback and search. Each branch owns its source, content, local navigation, search index and checks. Content bodies do not link across branches except the recorded Initiative–project relationship between Portfolio and Program, and charter terminology links or document status are not added to the other branches.
 
 | Branch | Route within each language | Source | Builder |
 | --- | --- | --- | --- |
@@ -14,7 +14,7 @@ The site has one language-first layout. `html/aicc/index.html` forwards to `en/`
 | Program | `program/` | `../portfolio/{en,ru}/`: the Program Backlog, and `../portfolio/{en,ru}/projects/<key>/` for the documents of each project | `tools/delivery.py`, `tools/project.py` |
 | AI Lab | `lab/` | `../lab/{en,ru}/lab.md` | `tools/lab.py` |
 
-`sections/navigation.json` defines the five branches, their routes and icons; `sections/pages.json` lists the branch landing pages. `sections/portfolio/` and `sections/program/` hold the authored landing text and the project mapping. `tools/workspace.py` renders the common shell, `tools/router.py` the routers and the 404 page, and `tools/neighbours.py` composes Discovery, Portfolio, Program and AI Lab. Every count on the router is taken from the branch's sources when the site is built.
+`sections/navigation.json` defines the five branches, their routes and icons; `sections/pages.json` lists the branch landing pages. `sections/portfolio/` and `sections/program/` hold the authored landing text and the project mapping. `tools/workspace.py` renders the common shell, `tools/router.py` the routers, and `tools/neighbours.py` composes Discovery, Portfolio, Program and AI Lab. Every count on the router is taken from the branch's sources when the site is built.
 
 Search covers the current branch by default. The box beside it, "All of AICC" (Russian «Весь сайт AICC»), adds every branch index and names the branch of each result; on the routers it is on by default. Without scripts the box has no effect and every page remains reachable through links. Page feedback references are stable: a page whose route changed keeps the reference of its former route.
 

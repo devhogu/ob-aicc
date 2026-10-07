@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Static checks of the generated site html/aicc.
 
-Checks: the layout is the gateway, the 404 page, the assets and, per language, the router and the five branches, nothing else;
-every internal href and src of every page (the gateway and the 404 page included) resolves, with its anchor; both languages have the same pages;
+Checks: the layout is the gateway, the assets and, per language, the router and the five branches, nothing else;
+every internal href and src of every page (the gateway included) resolves, with its anchor; both languages have the same pages;
 every page has a language switch to the same page, a skip link, one h1, and a lang attribute; no resource load from another host (source citations
 are allowed); every referenced asset and search index exists; every search result resolves to a page and anchor; every diagram is inlined
 (no placeholder). Exit code 1 on any error.
@@ -19,8 +19,6 @@ from urllib.parse import urldefrag, urljoin
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, 'html', 'aicc')
 BRANCHES = ('center', 'discovery', 'portfolio', 'program', 'lab')
-# The 404 page is served for a missing path at any depth, so it links from the site root, where the site is served under /aicc/.
-SERVED = '/aicc/'
 errors = []
 
 
@@ -84,7 +82,7 @@ def pages(lang):
     return out
 
 
-expected_root = {'index.html', '404.html', 'assets', 'en', 'ru'}
+expected_root = {'index.html', 'assets', 'en', 'ru'}
 if set(os.listdir(OUT)) != expected_root:
     errors.append('html/aicc holds %s, expected exactly %s' % (sorted(os.listdir(OUT)), sorted(expected_root)))
 for lang in ('en', 'ru'):
@@ -118,7 +116,7 @@ for lang, ps in all_pages.items():
             errors.append('%s: request to another host' % path)
 
 standalone = {}
-for name in ('index.html', '404.html'):
+for name in ('index.html',):
     path = os.path.join(OUT, name)
     if os.path.exists(path):
         p = P()
@@ -127,14 +125,6 @@ for name in ('index.html', '404.html'):
         standalone[path] = (p, text)
         if '@@' in text:
             errors.append('%s: unresolved placeholder' % name)
-not_found = os.path.join(OUT, '404.html')
-if not_found in standalone:
-    p = standalone[not_found][0]
-    if p.srcs:
-        errors.append('404.html: loads a resource; it must be self-contained')
-    if sorted(p.links) != [SERVED + 'en/', SERVED + 'ru/']:
-        errors.append('404.html: must link exactly the routers %sen/ and %sru/' % (SERVED, SERVED))
-
 for path, (p, text) in list(parsed.items()) + list(standalone.items()):
     here = os.path.dirname(path)
     for h in p.links + p.srcs:
@@ -146,9 +136,7 @@ for path, (p, text) in list(parsed.items()) + list(standalone.items()):
             continue
         if target.startswith('smb://'):
             continue    # the corporate folder that holds the charter and the Registry
-        if path == not_found and target.startswith(SERVED):
-            target = os.path.relpath(os.path.join(OUT, target[len(SERVED):]), here)
-        elif target.startswith('/'):
+        if target.startswith('/'):
             errors.append('%s: site-absolute link %s' % (os.path.relpath(path, OUT), h))
             continue
         dest = os.path.normpath(os.path.join(here, target)) if target else path

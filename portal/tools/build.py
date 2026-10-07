@@ -3,7 +3,7 @@
 
 Source of the content: charter/en/**/*.md. Source of the structure: portal-scaffolding/sitemap.json.
 Source of the chrome: portal/ui (the O! UI/UX kit), portal/site, portal/messages, portal/content.
-Output: html/aicc/{index.html, 404.html, en/, ru/, assets/}: the gateway, the language routers at {lang}/, and the
+Output: html/aicc/{index.html, en/, ru/, assets/}: the gateway, the language routers at {lang}/, and the
 Center branch at {lang}/center/; the other branches are composed by neighbours.py. The output is generated and is never edited by hand.
 
 Usage: python3 portal/tools/build.py [--no-diagrams]

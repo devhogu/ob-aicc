@@ -161,7 +161,6 @@ def export(source, output):
             raise ValueError(f'Missing source file: {required}')
     files = dict(original)
     files.pop('package-manifest.json', None)  # HTTP manifest describes a different output.
-    files.pop('404.html', None)  # Served by the web server for missing paths; a folder of files has none.
     indexes = {}
     for index_path in sorted(p for p in original if p.startswith('assets/search-') and p.endswith('.json')):
         entries = json.loads(files.pop(index_path))
