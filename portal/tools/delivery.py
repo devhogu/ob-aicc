@@ -119,22 +119,22 @@ def project(root=workspace.ROOT,lang='en'):
 
 
 UI={
-'en':{'title':'Program Backlog','subtitle':'AICC delivery, connected to initiative goals and project documents.','board':'Delivery board','intake':'Portfolio intake','documents':'Project documents',
+'en':{'title':'Program Backlog','subtitle':'AICC delivery, connected to initiative goals and project documents.','board':'Program Kanban','intake':'Portfolio intake','documents':'Project documents',
       'snapshot':'Recorded snapshot','features':'Features in progress','ready':'Ready Features','capabilities':'Capabilities in progress','upstream':'Initiatives preparing for delivery',
-      'columns':COLUMNS,'lanes':LANES,'captions':('Proposed / Discovery','Approved','Active / Completed','Awaiting acceptance','Accepted / Closed'),
+      'columns':COLUMNS,'lanes':LANES,'captions':('Proposed / Discovery','Approved','Active / Completed','Review','Accepted / Closed'),
       'empty':'No Capabilities or Features have been admitted yet.','admission':'Ordinary delivery enters after the MVP continue decision. Run-rate Features enter under approved Standing Initiatives at Weekly Review.',
-      'next':'Next decision','unknown':'Not recorded','waiting':'Waiting','shared':'Shared capacity across all projects and service classes','intake_title':'Prepare the next portfolio decision','intake_note':'These rows retain their Portfolio state; they are not delivery cards.',
-      'standing':'Run-rate admission sources','standing_note':'Approved Standing Initiatives share delivery capacity. Each Feature needs its own admission.','open':'Open initiative','open_project':'Open project','none':'No Program items admitted','full':'Complete native workbook','search':'Find an initiative','priority':'Priority','all':'All priorities','showing':'Showing',
-      'source':'Maintained Registry records own state and decisions. Changes follow the Registry workflow.','offflow':'Other exits','back':'Program Backlog','criteria':'Acceptance criteria','parent':'Parent and goal','dependencies':'Dependencies','approval':'Admission reference / date','accepted':'Acceptance reference / date','age':'Stage entry','rank':'Recorded order','risk':'Expected Tier 2; not assigned or cleared','footer':'Last Weekly Review baseline',
-      'gates':{'Funnel':'Screen the need and confirm requester','Reviewing':'Confirm scope, owner and indicator sources','Analyzing':'Complete the business case and clearances','Portfolio Backlog':'Rank and pull within capacity','MVP':'Evaluate the MVP and decide on continuation','Implementation':'Deliver admitted Capabilities and Features','Done':'Inspect acceptance and confirmed outcome','Off-flow':'Inspect the recorded exit decision'}},
-'ru':{'title':'Бэклог программы','subtitle':'Реализация в AICC — от целей инициатив к проектным документам.','board':'Канбан реализации','intake':'Входящие инициативы','documents':'Документы проектов',
-      'snapshot':'Рабочее состояние','features':'Feature в работе','ready':'Готовые Feature','capabilities':'Capability в работе','upstream':'Инициативы до начала реализации',
-      'columns':('Бэклог','Готово к работе','В работе','На приёмке','Завершено'),'lanes':('Срочные','Высокий приоритет','Обычные'),'captions':('Предложено / Проработка','Одобрено','В работе / Выполнено','Ожидает приёмки','Принято / Закрыто'),
-      'empty':'Capability и Feature ещё не включены в бэклог программы.','admission':'Обычная реализация поступает после решения продолжить по результатам MVP. Текущие Feature принимаются под одобренными постоянными инициативами на еженедельном обзоре.',
-      'next':'Следующее решение','unknown':'Не указано','waiting':'Ожидание','shared':'Общая ёмкость для всех проектов и классов обслуживания','intake_title':'Подготовка следующего решения по портфелю','intake_note':'Строки сохраняют состояние в портфеле; это не карточки реализации.',
-      'standing':'Источники текущих работ','standing_note':'Одобренные постоянные инициативы используют общую ёмкость. Каждая Feature принимается отдельно.','open':'Открыть инициативу','open_project':'Открыть проект','none':'Элементы программы ещё не приняты','full':'Полный комплект документов','search':'Поиск инициативы','priority':'Приоритет','all':'Все приоритеты','showing':'Показано',
-      'source':'Рабочие записи реестра определяют состояния и решения. Изменения вносятся по процессу реестра.','offflow':'Прочие выходы','back':'Бэклог программы','criteria':'Критерии приёмки','parent':'Родительский элемент и цель','dependencies':'Зависимости','approval':'Ссылка и дата принятия в работу','accepted':'Ссылка и дата приёмки','age':'Вход в стадию','rank':'Порядок','risk':'Ожидаемый уровень риска 2; не назначен и не согласован','footer':'Базовое состояние последнего еженедельного обзора',
-      'gates':{'Funnel':'Рассмотреть потребность и подтвердить заявителя','Reviewing':'Уточнить объём, владельца и источники индикаторов','Analyzing':'Подготовить бизнес-кейс и заключения','Portfolio Backlog':'Упорядочить и принять в работу в пределах ёмкости','MVP':'Оценить MVP и принять решение о продолжении','Implementation':'Реализовать принятые Capability и Feature','Done':'Проверить приёмку и подтверждённый результат','Off-flow':'Проверить записанное решение о выходе'}}}
+      'next':'Next decision','unknown':'Not recorded','waiting':'Waiting','shared':'Shared Team limits across all projects and classes of service','intake_title':'Prepare the next portfolio decision','intake_note':'These rows retain their Portfolio state; they are not delivery cards.',
+      'standing':'Run-rate admission sources','standing_note':'Approved Standing Initiatives share the Team limits. Each Feature needs its own admission.','open':'Open initiative','open_project':'Open project','none':'No Program items admitted','full':'Complete native workbook','search':'Find an initiative','priority':'Priority','all':'All priorities','showing':'Showing',
+      'source':'Maintained Registry records own state and decisions. Changes follow the Registry workflow.','offflow':'Other exits','back':'Program Backlog','criteria':'Acceptance criteria','parent':'Parent and goal','dependencies':'Dependencies','approval':'Admission reference / date','accepted':'Acceptance reference / date','age':'Entered the current step','rank':'Rank','risk':'Expected Risk Tier 2; not assigned or cleared','footer':'Last Weekly Review baseline',
+      'gates':{'Funnel':'Screen the need and confirm requester','Reviewing':'Confirm scope, owner and indicator sources','Analyzing':'Complete the business case and clearances','Portfolio Backlog':'Rank and pull within the limit','MVP':'Evaluate the MVP and decide on continuation','Implementation':'Deliver admitted Capabilities and Features','Done':'Inspect acceptance and confirmed outcome','Off-flow':'Inspect the recorded exit decision'}},
+'ru':{'title':'Бэклог программы','subtitle':'Реализация в AICC — от целей инициатив к проектным документам.','board':'Канбан программы','intake':'Поступление из портфеля','documents':'Документы проектов',
+      'snapshot':'По состоянию на','features':'Features в работе','ready':'Features в колонке «Готово к работе»','capabilities':'Capabilities в работе','upstream':'Инициативы до начала реализации',
+      'columns':('Бэклог (Backlog)','Готово к работе (Ready)','В работе (Active)','Рассмотрение (Review)','Готово (Done)'),'lanes':('Срочно (Urgent)','Высокий приоритет (High priority)','Обычный приоритет (Normal)'),'captions':('Предложено / Проработка','Одобрено','В работе / Выполнено','На рассмотрении','Принято / Закрыто'),
+      'empty':'Capabilities и Features ещё не включены в бэклог программы.','admission':'Capabilities обычной инициативы поступают после управленческого решения о продолжении по итогам MVP. Features текущих работ принимаются в работу в рамках одобренных постоянных инициатив на еженедельном обзоре.',
+      'next':'Следующее решение','unknown':'Не указано','waiting':'Ожидание','shared':'Общие WIP-лимиты команды для всех проектов и классов обслуживания','intake_title':'Подготовка следующего решения по портфелю','intake_note':'Строки сохраняют состояние в портфеле; это не карточки реализации.',
+      'standing':'Источники текущих работ','standing_note':'Одобренные постоянные инициативы входят в общие WIP-лимиты команды. Каждая Feature принимается в работу отдельно.','open':'Открыть инициативу','open_project':'Открыть проект','none':'Элементы программы ещё не приняты','full':'Полный комплект документов','search':'Поиск инициативы','priority':'Приоритет','all':'Все приоритеты','showing':'Показано',
+      'source':'Состояния и решения определяются рабочими документами в папке AICC. Изменения вносятся в установленном порядке ведения папки AICC.','offflow':'Прочие выходы','back':'Бэклог программы','criteria':'Критерии приёмки','parent':'Родительский элемент и цель','dependencies':'Зависимости','approval':'Ссылка и дата принятия в работу','accepted':'Ссылка и дата приёмки','age':'Дата перехода на текущий шаг','rank':'Место в бэклоге программы','risk':'Ожидаемая категория риска 2; не присвоена и не согласована','footer':'Базовое состояние последнего еженедельного обзора',
+      'gates':{'Funnel':'Рассмотреть потребность и подтвердить заявителя','Reviewing':'Уточнить объём, владельца и источники индикаторов','Analyzing':'Подготовить бизнес-кейс и получить согласования контрольных функций','Portfolio Backlog':'Ранжировать и принять в работу в пределах лимита','MVP':'Оценить MVP и принять решение о продолжении','Implementation':'Реализовать принятые Capabilities и Features','Done':'Проверить приёмку и подтверждённый результат','Off-flow':'Проверить записанное решение о выходе'}}}
 
 
 def link(url,target,title,cls=''):
@@ -163,10 +163,10 @@ def item_body(item,data,url,embedded=False):
         body = body.replace('</header>', '<p>'+escape(parent['outcome'])+'</p><p>'+link(url,portfolio._route(data['lang'],parent),parent['id']+' · '+parent['title'])+'</p></header>', 1)
         next_gate = {
             'en': {'Backlog':'Prepare scope, acceptance criteria and admission.', 'Ready':'Pull within the shared Team limits.', 'Active':'Complete the current delivery stage and submit for acceptance.', 'Review':'Inspect acceptance evidence and record the decision.', 'Done':'Inspect the recorded acceptance and outcome.', 'Off-flow':'Inspect the recorded exit decision.'},
-            'ru': {'Backlog':'Подготовить объём, критерии приёмки и принятие в работу.', 'Ready':'Принять в работу в пределах общих WIP-лимитов команды.', 'Active':'Завершить текущую стадию реализации и передать на приёмку.', 'Review':'Проверить подтверждения приёмки и зафиксировать решение.', 'Done':'Проверить зафиксированную приёмку и результат.', 'Off-flow':'Проверить записанное решение о выходе.'}
+            'ru': {'Backlog':'Подготовить объём, критерии приёмки и принятие в работу.', 'Ready':'Принять в работу в пределах общих WIP-лимитов команды.', 'Active':'Завершить текущую стадию и передать элемент на рассмотрение.', 'Review':'Проверить соответствие критериям приёмки и зафиксировать решение.', 'Done':'Проверить зафиксированную приёмку и результат.', 'Off-flow':'Проверить записанное решение о выходе.'}
         }[data['lang']][item['column']]
         if (item.get('Waiting from') if item['State'] == 'Waiting' else item['State']) == 'Completed':
-            next_gate = 'Submit completed work for acceptance.' if data['lang'] == 'en' else 'Передать выполненную работу на приёмку.'
+            next_gate = 'Submit completed work for acceptance.' if data['lang'] == 'en' else 'Передать выполненную работу на рассмотрение.'
         marker = body.index('<section class="dl-section">')
         body = body[:marker] + '<section class="dl-section"><h2>'+u['next']+'</h2><p>'+next_gate+'</p></section>' + body[marker:]
         if item['State'] == 'Waiting':
@@ -187,7 +187,7 @@ def render(data,url,item=None):
     import project as workbook
     lang=data['lang'];u=UI[lang];pf=data['portfolio'];c=pf['capacity'];ordinary=[i for i in pf['items'] if not i['standing']];standing=[i for i in pf['items'] if i['standing']]
     if item:return '<article class="dl-content">'+link(url,f'/{lang}/projects/',u['back'])+item_body(item,data,url)+'</article>'
-    body=f'<header class="dl-intro"><div><h1>{u["title"]}</h1><p>{u["subtitle"]}</p></div><aside><strong>{escape(pf["frame"]["Program Increment"].split(" (")[0])}</strong><p class="dl-meta">{u["snapshot"]} · {pf["date"]}</p></aside></header>'
+    body=f'<header class="dl-intro"><div><h1>{u["title"]}</h1><p>{u["subtitle"]}</p></div><aside><strong>{escape(pf["frame"]["Program Increment"].split(" (")[0])}</strong><p class="dl-meta">{u["snapshot"]} {portfolio._date(lang, pf["date"])}</p></aside></header>'
     stats=[(f'{c["feature"]["progress"]} / {c["limits"]["feature"]}',u['features']), (f'{c["feature"]["ready"]} / {c["limits"]["feature_ready"]}',u['ready']), (f'{c["capability"]["progress"]} / {c["limits"]["capability"]}',u['capabilities']), (str(sum(i['column'] not in ('Implementation','Done','Off-flow') for i in ordinary)),u['upstream'])]
     body+='<div class="dl-stats">'+''.join(f'<div><strong>{value}</strong><span>{label}</span></div>' for value,label in stats)+'</div>'
     body+=f'<p class="dl-meta">{u["capabilities"]} · {u["columns"][1]}: {c["capability"]["ready"]} / {c["limits"]["capability_ready"]}</p>'
@@ -195,14 +195,14 @@ def render(data,url,item=None):
     captions = []
     for col in COLUMNS:
         if col == 'Ready':
-            caption = f'F {c["feature"]["ready"]}/{c["limits"]["feature_ready"]} · C {c["capability"]["ready"]}/{c["limits"]["capability_ready"]}'
+            caption = f'Features {c["feature"]["ready"]}/{c["limits"]["feature_ready"]} · Capabilities {c["capability"]["ready"]}/{c["limits"]["capability_ready"]}'
         elif col in ('Active','Review'):
-            caption = ('Shared WIP' if lang == 'en' else 'Общий WIP') + f' · F {c["feature"]["progress"]}/{c["limits"]["feature"]} · C {c["capability"]["progress"]}/{c["limits"]["capability"]}'
+            caption = ('Shared WIP limit' if lang == 'en' else 'Общий WIP-лимит') + f' · Features {c["feature"]["progress"]}/{c["limits"]["feature"]} · Capabilities {c["capability"]["progress"]}/{c["limits"]["capability"]}'
         else: caption = 'No WIP cap' if lang == 'en' else 'Без WIP-лимита'
         captions.append(caption)
     board='<div class="dl-board-wrap kb-scroll" tabindex="0" role="region" aria-label="'+u['board']+'"><table class="dl-board kb-table"><thead><tr><th></th>'+''.join(f'<th scope="col">{kanban.column_header(label,data["counts"][col],caption)}</th>' for col,label,caption in zip(COLUMNS,u['columns'],captions))+'</tr></thead><tbody>'
     for lane,label in zip(LANES,u['lanes']):
-        board+=f'<tr><th scope="row">{label}</th>'
+        board+=f'<tr><th scope="row">{kanban.bilingual(label)}</th>'
         for col in COLUMNS:
             cards=''.join(_card(r,data,url) for r in data['items'] if r['column']==col and r['Lane']==lane)
             board+='<td><div class="kb-stack">'+ (cards or '<span class="kb-empty">—</span>')+'</div></td>'

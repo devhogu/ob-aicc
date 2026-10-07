@@ -25,9 +25,14 @@ def card(identifier, title, href, *, kind, state, priority='', rank=None, lang='
     return f'<a class="kb-card {classes}" data-kb-open="{escape(identifier)}" href="{escape(href)}" title="{escape(title)}" {attributes}><div class="kb-meta"><span>{escape(identifier)}</span><span>{escape(kind)}</span></div><h3>{escape(title)}</h3><div class="kb-state">{escape(state)}</div><div class="kb-foot"><span>{escape(priority)}</span><span>{escape(order)}</span></div></a>'
 
 
-def column_header(label, count, caption):
+def bilingual(label):
+    # A Russian Kanban name carries its English name in brackets (translation map); show it as a second line.
     match = re.fullmatch(r'(.+) \(([A-Za-z ]+)\)', label)
-    title = escape(label) if not match else escape(match[1])+'<span class="kb-step-en" lang="en">'+escape(match[2])+'</span>'
+    return escape(label) if not match else escape(match[1])+'<span class="kb-step-en" lang="en">'+escape(match[2])+'</span>'
+
+
+def column_header(label, count, caption):
+    title = bilingual(label)
     return f'<div class="kb-column-head"><div><h3>{title}</h3><span class="kb-count">{count}</span></div><small>{escape(caption)}</small></div>'
 
 
