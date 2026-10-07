@@ -6,7 +6,7 @@ translation_status: reviewed
 
 ---
 key: "controls"
-label: "Меры контроля и материалы"
+label: "Меры контроля и подтверждающие материалы"
 section: "Решение"
 ---
 

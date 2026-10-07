@@ -25,6 +25,7 @@
         heading.id = panel.id+'-heading';heading.tabIndex = -1;
         panel.setAttribute('aria-labelledby',heading.id);panel.hidden = false;
         card.setAttribute('aria-current','true');card.setAttribute('aria-expanded','true');
+        panel.scrollIntoView({block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
         if (event.detail === 0) heading.focus();
       });
     });

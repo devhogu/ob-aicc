@@ -176,7 +176,7 @@ def check():
                 target = urlsplit(urljoin('http://portal' + path, href))
                 if target.netloc != 'portal' or target.scheme not in ('http', 'https'):
                     continue
-                relationship = section == 'program' and bool(re.fullmatch(r'/(en|ru)/portfolio/(ini-\d+/)?',target.path)) or section == 'portfolio' and bool(re.fullmatch(r'/(en|ru)/program/(service-resolution/)?',target.path))
+                relationship = section == 'program' and bool(re.fullmatch(r'/(en|ru)/portfolio/(ini-\d+/)?',target.path)) or section == 'portfolio' and bool(re.fullmatch(r'/(en|ru)/program/(service-resolution/)?',target.path)) or section == 'portfolio' and bool(re.fullmatch(r'/(en|ru)/center/portfolio/portfolio-management-model/',target.path))
                 # The router leads to the home of each branch, and nowhere else.
                 door = section == ROUTER and target.path in {f'/{lang}/{s}/' for s in SECTIONS}
                 if section_for(target.path) != section and not relationship and not door:

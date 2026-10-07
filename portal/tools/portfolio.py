@@ -181,7 +181,7 @@ def project(root=workspace.ROOT, lang='en'):
                       'continuation_ref': next((r.get('Record') for r in decision_rows if r['Decision'].startswith('Decision after the MVP') and (r.get('Result','').lower() == 'continue' or re.search(r': continue',r['Decision'],re.I))), None),
                       'waiting_from': waiting_from, 'approval_ref': approval_ref,
                       'approved_on': row['Approved on'] or None, 'active_on': row['Active on'] or None,
-                      'review_date': review_date, 'agreement': public_meta['Service Agreement'], 'authority': authority})
+                      'review_date': review_date, 'agreement': public_meta['Service Agreement'], 'scenario': public_meta['Source scenario'], 'authority': authority})
     mapping_path = Path(root) / 'portal/sections/program/mapping.json'
     mapping = json.loads(mapping_path.read_text()) if mapping_path.exists() else {}
     if set(mapping) - {'service-resolution'}: raise ValueError('Project mapping lacks native renderer')
@@ -245,7 +245,7 @@ UI = {
  'owner_missing':'Not yet appointed', 'all':'All priorities', 'enabling':'Enabling work', 'search':'Find an initiative', 'filter':'Strategic Priority',
  'empty':'No initiatives', 'no_results':'No matching initiatives', 'next':'Next gate', 'gate_prefix':'Gate', 'owner':'Domain Owner', 'sponsor':'Executive Sponsor (enabling work)',
  'state':'State and Stage', 'rank':'Rank', 'score':'WSJF score', 'unknown':'Not recorded', 'age':'Entered the current step / age',
- 'source':'Record references', 'order':'The Competence Center Lead sets the rank (Portfolio Management Model 6.5). The recorded rank follows the goals of the first 100 days and departs from the WSJF order; the reason for each departure is still to be recorded.',
+ 'source':'Record references', 'scenario':'Source scenario','exit':'Exit criterion','model':'Clause numbers refer to','order':'The Competence Center Lead sets the rank (Portfolio Management Model 6.5). The recorded rank follows the goals of the first 100 days and departs from the WSJF order; the reason for each departure is still to be recorded.',
  'shared':'MVP and Implementation count against one limit on Active Initiatives; a Completed Initiative still counts until it moves to Review. Standing Initiatives take no place under that limit; their Features count against the shared Team limits.',
  'capacity':'Work in progress against the limits', 'features':'Features in progress', 'ready':'Features Ready (cap; target: one to two Iterations ahead)', 'capabilities':'Capabilities in progress', 'capabilities_ready':'Capabilities Ready',
  'offflow':'Off the main flow', 'review_intro':'Initiatives before a portfolio gate. Each card shows the next gate and what the Initiative still needs.',
@@ -273,6 +273,7 @@ UI = {
  'months':('January','February','March','April','May','June','July','August','September','October','November','December'),
 },
 'ru': {
+ 'scenario':'Исходный сценарий', 'exit':'Критерий выхода', 'model':'Номера пунктов относятся к документу',
  'title':'Портфель инициатив', 'page_title':'Обзор', 'snapshot':'По состоянию на', 'recorded':'Рабочее состояние ведётся в портфеле Центра Компетенций', 'week':'текущая неделя',
  'board':'Канбан портфеля', 'review':'Очередь на рассмотрение', 'standing':'Постоянные инициативы', 'roadmap':'Дорожная карта', 'register':'Реестр инициатив', 'selection':'Рассмотрение и решения',
  'discovery':'В проработке', 'approved':'Ожидают принятия в работу', 'active':'В работе, в пределах лимита', 'ordinary':'Обычные инициативы',
@@ -369,7 +370,8 @@ def summary(item, data, embedded=False, url=None):
     lang = data['lang']; u = UI[lang]; g = _gates(lang).get(item['column'])
     title_tag = 'h2' if embedded else 'h1'
     heading = f'<header><span class="pf-meta">{item["id"]} · {_h(item["status"])}</span><{title_tag}>{_h(item["title"])}</{title_tag}><p>{_h(item["outcome"])}</p></header>'
-    facts = [(u['owner'], _owner(item, data)), (u['filter'], _priority(item, data))]
+    scenario = item['scenario'] if item['scenario'] and not item['scenario'].startswith('[') else u['unknown']
+    facts = [(u['owner'], _owner(item, data)), (u['filter'], _priority(item, data)), (u['scenario'], scenario)]
     if not item['standing']:
         # Standing Initiatives are not ranked in the Kanban (Portfolio Management Model 5.5).
         facts += [(u['rank'], item['rank'] or '—'), (u['score'], _decimal(lang, item['wsjf']) if item['wsjf'] is not None else u['unknown']),
@@ -385,7 +387,7 @@ def summary(item, data, embedded=False, url=None):
         body += _section(u['gate'], gate + f'<p>{u["standing_note"]}</p><p>{u["no_mvp"]}</p>')
     elif g:
         gate = _facts([(u['next'], g['Gate']), (u['decider'], g['Decided by'])])
-        body += _section(u['gate'], gate + '<p>' + _h(_sentence(g['Exit criterion'])) + '</p><p class="pf-muted">' + u['authority'] + '</p>')
+        body += _section(u['gate'], gate + '<p><strong>' + u['exit'] + '.</strong> ' + _h(_sentence(g['Exit criterion'])) + '</p><p class="pf-muted">' + u['authority'] + '</p>' + _model_link(lang, url))
         body += _section(u['missing'], '<p>' + _h(item['pending']) + '</p>' + _facts([(u['approval'], item['approval_ref'] or u['unknown']), (u['agreement'], item['agreement'])]))
         if item['goal_confirmation'] and not item['approval_ref']: body += f'<p class="pf-notice">{u["confirmation"]}</p>'
         scope = f'<p>{_h(item["mvp"])}</p><p class="pf-muted">{u["planned"]}</p>'
@@ -409,6 +411,15 @@ def summary(item, data, embedded=False, url=None):
         if item.get('project_key'):
             body = body.replace('</header>', '<p>'+_link(url, workspace.route(lang, 'program', item['project_key']+'/'), 'Open project →' if lang == 'en' else 'Открыть проект →')+'</p></header>', 1)
     return body
+
+
+def _model_link(lang, url):
+    # The clause numbers of the gates are those of the Portfolio Management Model; the page links to it.
+    if not url: return ''
+    target = workspace.route(lang, 'center', 'portfolio/portfolio-management-model/')
+    name = 'Portfolio Management Model' if lang == 'en' else 'Модель управления портфелем'
+    label = UI[lang]['model']
+    return f'<p class="pf-muted">{label}: <a href="{workspace.relative(url, target)}">{_h(name)}</a></p>'
 
 
 def _reference(path):
@@ -490,7 +501,7 @@ def render(data, url, kind='dashboard', item=None):
             rows = ''.join(f'<article class="pf-register-row" data-pf-item="{x["id"]}" data-kind="{"standing" if x["standing"] else "ordinary"}" data-priority="{" ".join(x["priorities"]) or "enabling"}" data-find="{_h((x["id"]+" "+x["title"]+" "+x["owner"]).casefold())}"><span class="pf-meta">{x["id"]}{" · #"+str(x["rank"]) if x["rank"] else ""}</span><h3>{_link(url, _route(lang,x), x["title"])}</h3><span>{_h(x["status"])}</span><span>{_h(x["owner"])}</span></article>' for x in items)
             body += _section(label, rows)
     else:
-        body += '<p>' + u['workflow_intro'] + '</p><p class="pf-notice">' + u['authority'] + '</p>'
+        body += '<p>' + u['workflow_intro'] + '</p>' + _model_link(lang, url) + '<p class="pf-notice">' + u['authority'] + '</p>'
         for key, g in gates.items():
             body += _section(g['_localized_Kanban step'], _facts([(u['state'], g['State and Stage']), (u['next'], g['Gate']), (u['decider'], g['Decided by'])]) + '<p>' + _h(_sentence(g['Exit criterion'])) + '</p><p class="pf-muted">' + _h(g['Record']) + '</p>')
         body += _section(u['rhythm'], '<ul>' + ''.join('<li>' + u[k] + '</li>' for k in ('weekly','monthly','quarterly','yearly')) + '</ul>')
@@ -518,7 +529,7 @@ def build(output):
             head = f'<link rel="stylesheet" href="{workspace.asset(url,"portfolio.css")}"><script defer src="{workspace.asset(url,"portfolio.js")}"></script>'
             page = page.replace('</head>',head+kanban.assets(url)+'\n</head>',1)
             target = output / url.strip('/') / 'index.html'; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page)
-            searchable = summary(item,data) if item else _header(data,title)
+            searchable = summary(item,data) if item else re.sub(r'<template\b.*?</template>', ' ', body, flags=re.S)
             from neighbours import VisibleText
             entries.append({'u':url,'t':u['title'] if kind == 'dashboard' else title,'h':item['id'] if item else title,'x':_prose_dates(lang, VisibleText(searchable).text())})
             count += 1
