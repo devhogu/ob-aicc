@@ -12,7 +12,7 @@ __pycache__/
 
 # Local portal tooling (recreate with portal/tools/setup_browser.sh)
 portal/.venv/
-portal/.tools/
+portal/.tools
 
 # Rust build output
 deploy/target/
@@ -21,7 +21,7 @@ deploy/target/
 .smbdelete*
 
 # generated build cache
-portal/.cache/
+portal/.cache
 
 # On-demand portable portal; regenerate with portal/tools/export_portable.py
 portal/published/
