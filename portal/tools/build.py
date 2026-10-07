@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the AICC charter site (html/aicc) from the charter Markdown.
 
-Source of the content: charter/en/**/*.md. Source of the structure: portal-scaffolding/sitemap.json.
+Source of the content: charter/en/**/*.md. Source of the structure: portal/sections/center/sitemap.json.
 Source of the chrome: portal/ui (the O! UI/UX kit), portal/site, portal/messages, portal/content.
 Output: html/aicc/{index.html, en/, ru/, assets/}: the gateway, the language routers at {lang}/, and the
 Center branch at {lang}/center/; the other branches are composed by neighbours.py. The output is generated and is never edited by hand.
@@ -27,7 +27,7 @@ from localization import Sources, canonical_path, front_matter, validate_transla
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PORTAL = os.path.join(ROOT, 'portal')
 OUT = os.path.join(ROOT, 'html', 'aicc')
-SITEMAP = os.path.join(ROOT, 'portal-scaffolding', 'sitemap.json')
+SITEMAP = os.path.join(ROOT, 'portal', 'sections', 'center', 'sitemap.json')
 CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v6')
 NPX = os.environ.get('MMDC_NPX', os.path.expanduser('~/.npm/_npx/668c188756b835f3/node_modules'))
 CHROME = os.environ.get('MMDC_CHROME', os.path.expanduser('~/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome'))

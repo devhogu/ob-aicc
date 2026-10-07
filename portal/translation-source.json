@@ -1263,10 +1263,10 @@
       "baseline_sha256": "f5f7ba5d166f962f82d874684f4bdbb85f8d8bb893ad10cd7c8cf211cbf92b98"
     },
     {
-      "path": "portal-scaffolding/sitemap.json",
+      "path": "portal/sections/center/sitemap.json",
       "hash_basis": "file_bytes",
       "sha256": "8be2d6fb1cf8c7cb844ffbb303488cad6a1cbfa0b0effdffe0dcb2f49ebf1ef0",
-      "baseline_path": "portal-scaffolding/sitemap.json",
+      "baseline_path": "portal/sections/center/sitemap.json",
       "baseline_sha256": "e7a76c224c675e96464b8124fd5bacb02a53babfd653befe1845612b7f2ee1ed"
     },
     {
@@ -1293,7 +1293,7 @@
     {
       "path": "portfolio/en/packages/PKG-003-portal-generator.md",
       "hash_basis": "file_bytes",
-      "sha256": "bb8dfe064685a9d8f894b6adcb3718b622b7557b57d2ce70be4d9aec067d623b",
+      "sha256": "61f0c56789ac3ca5c3c2c5d95721ff60afae6c38b38e942d153c3cf2bb445697",
       "baseline_path": "portfolio/packages/PKG-003-portal-generator.md",
       "baseline_sha256": "04b4db2f1eecc4ef879422dd0c564cb0f08a8acddfe3b1c62a58befa16402721"
     },

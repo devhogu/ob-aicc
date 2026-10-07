@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Make sitemap.json, inventory.md, and the outline file of every page from the page definitions below.
 
-Edit the definitions, run `python3 portal-scaffolding/make_pages.py`, and then `python3 portal-scaffolding/check.py`.
+Edit the definitions, run `python3 portal/sections/center/make_pages.py`, and then `python3 portal/sections/center/check.py`.
 """
 import json, os, re, sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SCAF = os.path.join(ROOT, 'portal-scaffolding')
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+SCAF = os.path.join(ROOT, 'portal', 'sections', 'center')
 
 # Two layouts are defined. The layout in use, adopted on 2026-10-02, presents AICC as a consulting organization with a Services section
 # and a Knowledge base. The previous layout (`--previous`, written to previous/) is the first structure of the site, kept for the record.
@@ -660,7 +660,7 @@ for p in sorted(PAGES, key=lambda x: (SEC_ORDER.get(x['section'], 0), x['order']
 open(os.path.join(OUT, 'inventory.md'), 'w').write('\n'.join(rows) + '\n')
 if NEXT:
     # the reading routes of the next layout: the same routes with the identifiers of the new sections
-    rr = read('portal-scaffolding/reading-routes.md')
+    rr = read('portal/sections/center/reading-routes.md')
     rr = rr.replace('`library/', '`knowledge-base/')
     for a, b in (('what-aicc-does/', 'services/'), ('how-aicc-works/portfolio-management-model', 'portfolio/portfolio-management-model'), ('how-aicc-works/', 'delivery/'), ('`library/', '`knowledge-base/')):
         rr = rr.replace(a, b)

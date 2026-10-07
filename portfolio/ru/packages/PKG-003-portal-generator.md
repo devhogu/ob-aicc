@@ -1,6 +1,6 @@
 ```yaml
 source: portfolio/en/packages/PKG-003-portal-generator.md
-source_sha256: bb8dfe064685a9d8f894b6adcb3718b622b7557b57d2ce70be4d9aec067d623b
+source_sha256: 61f0c56789ac3ca5c3c2c5d95721ff60afae6c38b38e942d153c3cf2bb445697
 translation_status: reviewed
 ```
 
@@ -30,7 +30,7 @@ translation_status: reviewed
 ## 2. Состав пакета
 
 - [Исходные материалы портала и инструкции по сборке](../../../portal/README.md).
-- [Карта сайта](../../../portal-scaffolding/sitemap.json) и [структура страниц](../../../portal-scaffolding/README.md).
+- [Карта сайта](../../../portal/sections/center/sitemap.json) и [структура страниц](../../../portal/sections/center/README.md).
 - [Инструмент сборки](../../../portal/tools/build.py) и [статические проверки](../../../portal/tools/check.py).
 - Тексты интерфейса, содержание страниц, локальные ресурсы и комплект интерфейса O! UI kit в `portal/`. Ссылки на источники описывают реализацию; код в настоящий рабочий документ не включён.
 

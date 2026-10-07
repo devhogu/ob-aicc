@@ -69,10 +69,10 @@ The body of the file holds the source, the sections of the source with their siz
 ## Use
 
 ```sh
-python3 portal-scaffolding/make_pages.py            # the structure in use, to sitemap.json, inventory.md, pages/, reading-routes.md
-python3 portal-scaffolding/check.py
-python3 portal-scaffolding/make_pages.py --previous # the first structure of the site, to previous/
-python3 portal-scaffolding/check.py --previous
+python3 portal/sections/center/make_pages.py            # the structure in use, to sitemap.json, inventory.md, pages/, reading-routes.md
+python3 portal/sections/center/check.py
+python3 portal/sections/center/make_pages.py --previous # the first structure of the site, to previous/
+python3 portal/sections/center/check.py --previous
 ```
 
 The sitemap records English file paths for build-time source lookup. The builder resolves corresponding reviewed files from the Russian source trees while retaining page IDs and URLs. See [language sources](../portal/README.md#language-sources).

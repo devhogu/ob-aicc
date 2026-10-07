@@ -8,7 +8,7 @@ The site has one language-first layout. `html/aicc/index.html` forwards to `en/`
 
 | Branch | Route within each language | Source | Builder |
 | --- | --- | --- | --- |
-| Center | `center/` | `../charter/{en,ru}/`, `../registry/{en,ru}/`, `content/` and `../portal-scaffolding/sitemap.json` | `tools/build.py` |
+| Center | `center/` | `../charter/{en,ru}/`, `../registry/{en,ru}/`, `content/` and `sections/center/sitemap.json` | `tools/build.py` |
 | Discovery Catalog | `discovery/` | `../portfolio/{en,ru}/discovery/`: one Markdown record for each of the 76 pages per language | `tools/discovery.py`, `tools/neighbours.py` |
 | Portfolio | `portfolio/` | `../portfolio/{en,ru}/`: the Portfolio Backlog, board, Initiative Briefs and roadmap | `tools/portfolio.py` |
 | Program | `program/` | `../portfolio/{en,ru}/`: the Program Backlog, and `../portfolio/{en,ru}/projects/<key>/` for the documents of each project | `tools/delivery.py`, `tools/project.py` |
@@ -23,7 +23,7 @@ Search covers the current branch by default. The box beside it, "All of AICC" (R
 | Input | Holds |
 | --- | --- |
 | `../charter/{en,ru}/**/*.md` | The content of each document, workflow, guide, and template |
-| `../portal-scaffolding/sitemap.json` | The structure: sections, pages, addresses, and which sections of a document each page holds |
+| `sections/center/sitemap.json` | The structure: sections, pages, addresses, and which sections of a document each page holds |
 | `ui/` | The O! UI/UX kit: tokens, fonts, workspace CSS, the O! mark, and icons (copied from `../obank-uiux/site`) |
 | `site/charter.css`, `site/site.js` | The additions of the charter site: layout, diagrams, theme switch, search, control filter, template copy |
 | `messages/en.json`, `messages/ru.json` | The interface text in English and Russian |
