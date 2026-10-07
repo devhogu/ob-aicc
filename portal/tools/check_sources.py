@@ -30,7 +30,7 @@ def check(root=ROOT):
         if hashlib.sha256(raw).hexdigest() != entry['sha256']:
             raise ValueError(f'{entry["path"]}: changed since the pinned English source; reconcile the source baseline')
     expected = set()
-    for area in ('charter', 'registry', 'portfolio', 'portal/content'):
+    for area in ('charter', 'registry', 'portfolio', 'lab', 'portal/content'):
         expected.update(path.relative_to(root).as_posix() for path in (root / area / 'en').rglob('*.md'))
     listed = {entry['path'] for entry in manifest['files'] if entry['path'].endswith('.md')}
     if expected != listed:

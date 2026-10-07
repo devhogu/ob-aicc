@@ -5,18 +5,16 @@
 #   LINKS: M-PORTAL-NEIGHBOURS, V-M-PORTAL-NEIGHBOURS
 # END_MODULE_CONTRACT
 # START_MODULE_MAP
-#   SOURCE - retained English laboratory source
-#   TRANSLATION - Russian content keyed to source units
+#   SOURCE - English Lab record (lab/en/lab.md)
+#   TRANSLATION - Russian Lab record with the same keys, pinned to the English one
 #   UI - bilingual reading controls and local section names
-#   source_content - extract every authored content unit and structural assignment
-#   content_hash - translation freshness identity for the extracted content
+#   source_content - read the Lab model and its text units from the English record
 #   edition - require a complete, current language edition
 #   render - build native laboratory content and search destinations
 #   build - package both editions and local reading assets in the common shell
 # END_MODULE_MAP
-"""The predecessor is a build input, never a publication dependency."""
+"""The AI Lab section, built from its own Markdown records."""
 from html import escape
-from html.parser import HTMLParser
 import hashlib
 import json
 from pathlib import Path
@@ -25,8 +23,9 @@ import shutil
 
 import workspace
 
-SOURCE = workspace.ROOT / 'html-alt/cloudlab/index.html'
-TRANSLATION = workspace.ROOT / 'portal/sections/lab/ru/content.json'
+# The Lab is its own source context: lab/<lang>/lab.md, the Russian record pinned to the English one.
+SOURCE = workspace.ROOT / 'lab/en/lab.md'
+TRANSLATION = workspace.ROOT / 'lab/ru/lab.md'
 UI = {
     'en': {'concept': 'Concept', 'matrix': 'Experiment workflow', 'systems': 'People and AI agents', 'maturity': 'Practice maturity',
            'guardrails_intro': 'The Lab runs under seven guardrails. The AICC Lead keeps them with their evidence in the Standards record, and the quarterly Steering reviews them.',
@@ -73,150 +72,84 @@ def corpus_guardrails(lang):
     return rows
 
 
-class _Node:
-    def __init__(self, tag='', attrs=()):
-        self.tag, self.attrs, self.children = tag, dict(attrs), []
-
-    def text(self):
-        return ' '.join(' '.join(c.text() if isinstance(c, _Node) else c for c in self.children).split())
-
-    def find(self, *, cls=None, tag=None):
-        result = []
-        for child in self.children:
-            if isinstance(child, _Node):
-                if (cls is None or cls in child.attrs.get('class', '').split()) and (tag is None or child.tag == tag):
-                    result.append(child)
-                result.extend(child.find(cls=cls, tag=tag))
-        return result
-
-    def one(self, cls):
-        found = self.find(cls=cls)
-        if len(found) != 1:
-            raise ValueError(f'Expected one source {cls}, found {len(found)}')
-        return found[0]
+def _records(path):
+    """Tables of a Lab record by section: {section heading: [row dicts by column]} with the column order kept."""
+    sections, current, header = {}, None, None
+    for line in Path(path).read_text().splitlines():
+        if line.startswith('## '):
+            current, header = line[3:].strip(), None
+            sections[current] = []
+        elif current and line.startswith('|'):
+            cells = [c.strip().replace('\\|', '|') for c in re.split(r'(?<!\\)\|', line.strip())[1:-1]]
+            if header is None:
+                header = cells
+            elif not all(set(c) <= {'-'} for c in cells):
+                sections[current].append(cells)
+    return list(sections.values())
 
 
-class _Source(HTMLParser):
-    def __init__(self, text):
-        super().__init__()
-        self.root = _Node()
-        self.stack = [self.root]
-        self.feed(text)
-
-    def handle_starttag(self, tag, attrs):
-        node = _Node(tag, attrs)
-        self.stack[-1].children.append(node)
-        if tag not in {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'}:
-            self.stack.append(node)
-
-    def handle_startendtag(self, tag, attrs):
-        self.stack[-1].children.append(_Node(tag, attrs))
-
-    def handle_endtag(self, tag):
-        for index in range(len(self.stack) - 1, 0, -1):
-            if self.stack[index].tag == tag:
-                del self.stack[index:]
-                break
-
-    def handle_data(self, text):
-        self.stack[-1].children.append(text)
+def _units(path):
+    """Every text unit of a Lab record, keyed as the model keys it."""
+    page, stages, lanes, tasks, systems, duties, loop, areas, concerns = _records(path)
+    units = {}
+    def put(key, value):
+        if key in units or not value:
+            raise ValueError(f'Invalid Lab source unit: {key}')
+        units[key] = value
+    for key, text in page: put(key, text)
+    for key, text in stages + lanes: put(key, text)
+    for key, _lane, _stage, name, desc in tasks: put(key + '-name', name); put(key + '-desc', desc)
+    for key, label, name, role in systems: put(key + '-label', label); put(key + '-name', name); put(key + '-role', role)
+    for key, _system, number, name, desc in duties: put(key + '-number', number); put(key + '-name', name); put(key + '-desc', desc)
+    for key, name, desc in loop: put(key + '-name', name); put(key + '-desc', desc)
+    for key, name in areas: put(key + '-name', name)
+    for key, _area, name, desc, _coverage, *levels in concerns:
+        put(key + '-name', name); put(key + '-desc', desc)
+        for band, text in zip(('2', '3', '4'), levels):
+            if text: put(f'{key}-criteria-{band}', text)
+    return units
 
 
 def source_content(source=SOURCE):
-    """Extract the source model; keys identify content, not translated wording."""
-    root = _Source(Path(source).read_text()).root
-    units = {}
-
-    def unit(key, node):
-        value = node.text() if isinstance(node, _Node) else node
-        if key in units or not value:
-            raise ValueError(f'Invalid source unit: {key}')
-        units[key] = value
-        return key
-
-    model = {'units': units, 'stages': [], 'lanes': [], 'cells': [], 'systems': [], 'capabilities': [], 'loop': [], 'guardrails': []}
-    model['subtitle'] = unit('subtitle', root.one('page-header__title').text().split('·', 1)[1].strip())
-    model['intro'] = unit('intro', root.one('page-header__intent'))
-    for stage in root.find(cls='cl-chev'):
-        step = stage.attrs['data-step']
-        model['stages'].append({'id': step, 'name': unit(f'stage-{step}', stage.one('cl-chev-name'))})
-    for lane in root.find(cls='cl-lane-label'):
-        identifier = lane.attrs['data-lane']
-        model['lanes'].append({'id': identifier, 'name': unit(f'lane-{identifier}', lane.one('cl-lane-label__name'))})
-    for cell in root.find(cls='cl-cell'):
-        lane, step = cell.attrs['data-lane'], cell.attrs['data-step']
-        tasks = []
-        for index, card in enumerate(cell.find(cls='cl-card'), 1):
-            identifier = f'task-{lane.lower()}-{step}-{index}'
-            tasks.append({'id': identifier, 'name': unit(identifier + '-name', card.one('cl-name')),
-                          'desc': unit(identifier + '-desc', card.one('cl-desc'))})
-        model['cells'].append({'lane': lane, 'stage': step, 'tasks': tasks})
-    model['systems_title'] = unit('systems-title', root.one('cl-page-subhead'))
-    model['systems_intro'] = unit('systems-intro', root.one('cl-page-subhead-intent'))
-    model['systems_connection'] = unit('systems-connection', root.one('cl-spine__label'))
-    for index, system in enumerate(root.find(cls='cl-system'), 1):
-        prefix = f'system-{index}'
-        duties = []
-        for number, duty in enumerate(system.one('cl-duties').find(tag='li'), 1):
-            title = duty.find(tag='strong')[0]
-            spans = [c for c in duty.children if isinstance(c, _Node) and c.tag == 'span']
-            description = ' '.join(c.text() if isinstance(c, _Node) else c for c in spans[-1].children if c is not title)
-            identifier = f'{prefix}-duty-{number}'
-            duties.append({'id': identifier, 'number': unit(identifier + '-number', duty.one('cl-duties__num')),
-                           'name': unit(identifier + '-name', title), 'desc': unit(identifier + '-desc', ' '.join(description.split()))})
-        model['systems'].append({'id': prefix, 'label': unit(prefix + '-label', system.one('cl-system__label')),
-                                'name': unit(prefix + '-name', system.one('cl-system__name')),
-                                'role': unit(prefix + '-role', system.one('cl-system__role')), 'duties': duties})
-    implication = root.one('cl-implication')
-    model['implication_label'] = unit('implication-label', implication.one('cl-implication__tag'))
-    model['implication'] = unit('implication', implication.find(tag='p')[0])
-    for kind, source_cls, name_cls, desc_cls in (
-        ('capabilities', 'cl-cap', 'cl-cap__name', 'cl-cap__desc'),
-        ('loop', 'cl-loop-step', 'cl-loop-step__name', 'cl-loop-step__desc')):
-        found = root.find(cls='cloud-lab-section--' + ('capabilities' if kind == 'capabilities' else 'loop'))
-        if not found:
-            continue
-        section = found[0]
-        model[kind + '_title'] = unit(kind + '-title', section.one('cl-block-title'))
-        model[kind + '_intro'] = unit(kind + '-intro', section.one('cl-block-intent'))
-        for index, item in enumerate(section.find(cls=source_cls), 1):
-            identifier = f'{kind}-{index}'
-            model[kind].append({'id': identifier, 'name': unit(identifier + '-name', item.one(name_cls)),
-                                'desc': unit(identifier + '-desc', item.one(desc_cls))})
-    model['guardrails_title'] = unit('guardrails-title', root.one('cl-govtable-title'))
-    model['guardrails_intro'] = unit('guardrails-intro', root.one('cl-govtable-intent'))
-    group = None
-    for row in root.one('cl-govtable').find(tag='tr'):
-        if 'cl-govtable__category-row' in row.attrs.get('class', '').split():
-            number = len(model['guardrails']) + 1
-            group = {'id': f'guardrails-{number}', 'name': unit(f'guardrails-{number}-name', row), 'concerns': []}
-            model['guardrails'].append(group)
-        else:
-            name = row.one('cl-govtable__concern-name')
-            identifier = f'{group["id"]}-{len(group["concerns"]) + 1}'
-            # A score appears only once the area has been assessed; until then the criteria of each level do.
-            score = re.search(r'--coverage:\s*(\d+)%', name.attrs.get('style', ''))
-            criteria = [(cell.attrs['data-band'], unit(f'{identifier}-criteria-{cell.attrs["data-band"]}', cell))
-                        for cell in row.find(cls='cl-govtable__criteria')]
-            group['concerns'].append({'id': identifier, 'name': unit(identifier + '-name', name),
-                                      'desc': unit(identifier + '-desc', row.one('cl-govtable__posture')),
-                                      'criteria': criteria, 'coverage': int(score[1]) if score else None})
+    """The Lab model from its English record; keys identify content, not translated wording."""
+    page, stages, lanes, tasks, systems, duties, loop, areas, concerns = _records(source)
+    model = {'units': _units(source), 'stages': [], 'lanes': [], 'cells': [], 'systems': [], 'capabilities': [], 'loop': [], 'guardrails': []}
+    for field in ('subtitle', 'intro', 'systems-title', 'systems-intro', 'systems-connection', 'implication-label', 'implication',
+                  'loop-title', 'loop-intro', 'guardrails-title', 'guardrails-intro'):
+        model[field.replace('-', '_')] = field
+    model['stages'] = [{'id': key.split('-', 1)[1], 'name': key} for key, _ in stages]
+    model['lanes'] = [{'id': key.split('-', 1)[1], 'name': key} for key, _ in lanes]
+    # Every workstream meets every stage; a cell without a task stays visible as empty.
+    for lane in model['lanes']:
+        for stage in model['stages']:
+            cell = [{'id': k, 'name': k + '-name', 'desc': k + '-desc'} for k, l, st, *_ in tasks if l == lane['id'] and st == stage['id']]
+            model['cells'].append({'lane': lane['id'], 'stage': stage['id'], 'tasks': cell})
+    for key, *_ in systems:
+        model['systems'].append({'id': key, 'label': key + '-label', 'name': key + '-name', 'role': key + '-role',
+                                 'duties': [{'id': d, 'number': d + '-number', 'name': d + '-name', 'desc': d + '-desc'} for d, owner, *_ in duties if owner == key]})
+    model['loop'] = [{'id': key, 'name': key + '-name', 'desc': key + '-desc'} for key, *_ in loop]
+    for key, _ in areas:
+        group = {'id': key, 'name': key + '-name', 'concerns': []}
+        for c, area, _n, _d, coverage, *levels in concerns:
+            if area == key:
+                group['concerns'].append({'id': c, 'name': c + '-name', 'desc': c + '-desc', 'coverage': int(coverage) if coverage else None,
+                                          'criteria': [(band, f'{c}-criteria-{band}') for band, text in zip(('2', '3', '4'), levels) if text]})
+        model['guardrails'].append(group)
     return model
 
 
-def content_hash(units):
-    return hashlib.sha256(json.dumps(units, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
-
-
 def edition(model, lang):
+    """The text units of one language; the Russian record must be current with the English one and cover every unit."""
     if lang == 'en':
         return model['units']
-    translation = json.loads(TRANSLATION.read_text())
-    if translation['source_hash'] != content_hash(model['units']):
-        raise ValueError('AI Lab Russian translation requires source reconciliation')
-    if set(translation['text']) != set(model['units']) or not all(translation['text'].values()):
-        raise ValueError('AI Lab Russian translation must cover exactly all source units')
-    return translation['text']
+    text = TRANSLATION.read_text()
+    pin = re.search(r'^source_sha256: ([0-9a-f]{64})$', text, re.M)
+    if not pin or pin[1] != hashlib.sha256(SOURCE.read_bytes()).hexdigest():
+        raise ValueError('AI Lab Russian record requires reconciliation with the English record')
+    units = _units(TRANSLATION)
+    if list(units) != list(model['units']):
+        raise ValueError('AI Lab Russian record must cover exactly the English units, in the same order')
+    return units
 
 
 def render(model, lang):

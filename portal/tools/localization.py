@@ -24,7 +24,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 LANGUAGES = ('en', 'ru')
-ROOTS = ('charter', 'registry', 'portfolio', 'portal/content')
+ROOTS = ('charter', 'registry', 'portfolio', 'lab', 'portal/content')
 TERMINOLOGY_REFERENCE = 'charter/en/shared-technology-terminology.md'
 UNIVERSAL_TERM_COLUMNS = ['Universal term', 'Meaning', 'Application']
 RUSSIAN_TERM_COLUMNS = ['EN', 'RU', 'Принятая форма', 'Определение']

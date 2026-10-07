@@ -1,6 +1,7 @@
 """Content preservation and fail-closed translation at the actual build boundary."""
 import copy
 import json
+import re
 from pathlib import Path
 import sys
 import tempfile
@@ -27,16 +28,17 @@ class LabProjection(unittest.TestCase):
             self.assertEqual(len(parsed.units), len(lab.source_content()["units"]))
             self.assertNotIn('html-alt/', body)
 
-    def test_incomplete_or_stale_russian_source_cannot_publish(self):
+    def test_incomplete_or_stale_russian_record_cannot_publish(self):
         model = lab.source_content()
-        original = json.loads(lab.TRANSLATION.read_text())
+        original = lab.TRANSLATION.read_text()
         with tempfile.TemporaryDirectory() as directory:
-            path = Path(directory) / 'translation.json'
+            path = Path(directory) / 'lab.md'
             for kind in ('missing', 'stale'):
-                data = copy.deepcopy(original)
-                if kind == 'missing': del data['text']['task-a-2-2-name']
-                else: data['source_hash'] = 'obsolete'
-                path.write_text(json.dumps(data))
+                if kind == 'missing':
+                    text = '\n'.join(l for l in original.splitlines() if not l.startswith('| task-a-2-2 |'))
+                else:
+                    text = re.sub(r'source_sha256: [0-9a-f]+', 'source_sha256: ' + '0' * 64, original)
+                path.write_text(text)
                 with patch.object(lab, 'TRANSLATION', path), self.assertRaises(ValueError):
                     lab.render(model, 'ru')
 

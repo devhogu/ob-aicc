@@ -71,7 +71,13 @@ class Capture(HTMLParser):
 def check(output=OUTPUT):
     errors, counts = [], {}
     model = lab.source_content()
-    source = Capture(lab.SOURCE.read_text())
+    # Every text cell of the English record, read independently of the projection model.
+    source_cells = []
+    for line in lab.SOURCE.read_text().splitlines():
+        cells = [c.strip().replace('\\|', '|') for c in re.split(r'(?<!\\)\|', line.strip())[1:-1]] if line.startswith('|') else []
+        for cell in cells[1:]:
+            if cell and not set(cell) <= {'-'} and not re.fullmatch(r'[A-E]|\d{1,3}|system-\d+|guardrails-\d+|(Workstream|Stage|Task|Description|Text|Label|Name|Role|System|Number|Duty|Step|Area|Concern|Intended practice|Assessed coverage|Level \d)', cell):
+                source_cells.append(cell)
     expected_cells = {(c['lane'], c['stage']): [task['id'] for task in c['tasks']] for c in model['cells']}
     expected_values = [c['coverage'] for group in model['guardrails'] for c in group['concerns'] if c['coverage'] is not None]
     for lang in ('en', 'ru'):
@@ -99,13 +105,12 @@ def check(output=OUTPUT):
         if len(parsed.ids) != len(set(parsed.ids)):
             errors.append(f'{lang}: duplicate Lab fragment identifiers')
         if 'html-alt/' in markup or 'fonts.googleapis.com' in markup:
-            errors.append(f'{lang}: Lab depends on predecessor or external fonts')
+            errors.append(f'{lang}: Lab depends on a retired source or external fonts')
         if lang == 'en':
             visible = ' '.join(parsed.units.values())
-            # Check raw predecessor blocks independently of the projection model.
-            for block in source.blocks:
-                if block and block not in visible:
-                    errors.append(f'en: predecessor content absent: {block[:80]}')
+            for cell in source_cells:
+                if cell not in visible:
+                    errors.append(f'en: source record content absent: {cell[:80]}')
         entries = json.loads((Path(output) / f'assets/search-lab-{lang}.json').read_text())
         for entry in entries:
             destination = urlsplit(entry['u'])

@@ -1685,6 +1685,11 @@
       "path": "portfolio/en/projects/README.md",
       "hash_basis": "file_bytes",
       "sha256": "0ae39140262b27c18d35baceb7cdf31c71dba54f31404697250cb00271d80167"
+    },
+    {
+      "path": "lab/en/lab.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a6f8efe95da39944ab6177c83e293b1a4f92c3b54791a4f54f928d3a56191316"
     }
   ],
   "baseline_tag": "baseline-2026-10-03-en-v2.2",
