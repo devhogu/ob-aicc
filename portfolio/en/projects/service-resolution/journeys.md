@@ -55,7 +55,7 @@ If no candidate meets the rule, the scope is narrowed (fewer states, one payment
 
 ### How the selected journey enters the Initiative Brief {#journeys-how-the-selected-journey-enters-the-initiative-brief}
 
-The selection is the scoped gate. The AICC Lead, with the Domain Owner, records it in the Decision Log, and the Brief names the journey in its scope and in the Solution expected. The selected annex is completed and kept with the Brief in the Initiative's Registry folder as "Charter: journey annex to the Initiative Brief"; the two others remain options on this page. Each section of the annex then has one home.
+The selection is the scoped gate. The AICC Lead, with the Domain Owner, records it in the Decision Log, and the Brief names the journey in its scope and in the Solution expected. The selected annex is completed and kept with the Brief in the Initiative's folder in the Portfolio as "Charter: journey annex to the Initiative Brief"; the two others remain options on this page. Each section of the annex then has one home.
 
 | Annex section | Where it goes | Who completes or approves it |
 | --- | --- | --- |

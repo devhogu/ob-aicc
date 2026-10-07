@@ -1,6 +1,6 @@
 # Cloud LAB: flow-first O! workspace
 
-This recipe records the accepted **version C** of AICC's Cloud LAB page. It combines the O! workspace shell with the original page's visible flow map. The page itself is `html/cloudlab/index.html`; its active CSS and JavaScript are in `html/cloudlab/assets/`. It is a concrete reference, not a template whose Cloud LAB content belongs in every portal.
+This recipe records the accepted **version C** of AICC's Cloud LAB page. It combines the O! workspace shell with the original page's visible flow map. The page is now the AI Lab branch of the AICC portal (`html/aicc/{en,ru}/lab/`), built from `lab/{en,ru}/lab.md`; its CSS and JavaScript are `portal/site/lab.css` and `portal/site/lab.js`. It is a concrete reference, not a template whose Cloud LAB content belongs in every portal.
 
 ## Choose the view by meaning
 
@@ -34,15 +34,7 @@ Stage notes use matching IDs so a reader can move from the compact map to detail
 
 Use the shared O! semantic tokens and the **TT Norms Pro + Golos Text** pair. The O! mark is the global identity. Provider marks identify a subject, not a new theme. The header can carry the burgundy-to-near-black treatment; the working canvas stays quiet and opaque. A single accent per concern helps orientation, but labels and position carry the meaning. Use restrained borders and spacing rather than a card around every paragraph.
 
-The current page demonstrates the implementation split:
-
-| AICC file | Role |
-| --- | --- |
-| `html/cloudlab/index.html` | Semantic page structure and Cloud LAB-specific content |
-| `html/cloudlab/assets/base.css`, `palette.css`, `tokens.css`, `fonts.css` | Base presentation and shared visual values |
-| `html/cloudlab/assets/workspace.css`, `reframed.css` | O! shell and stage-detail presentation |
-| `html/cloudlab/assets/converged.css`, `converged.js` | Sticky layout, map focus, selection and inspector |
-| `html/cloudlab/assets/reframed.js` | Theme control and page navigation |
+The standalone Cloud LAB page (`html/cloudlab/`) was retired on 7 October 2026. Its content is now the AI Lab branch of the AICC portal: the source records are `lab/en/lab.md` and `lab/ru/lab.md`, the page is built by `portal/tools/lab.py` into `html/aicc/{en,ru}/lab/`, and its presentation is `portal/site/lab.css` and `portal/site/lab.js` on the shared portal shell.
 
 For a new site, start with the generated shared guide CSS and its [foundations](content/foundations.md), [layout](content/layout.md) and [component rules](content/components.md). Reuse the Cloud LAB **composition and interaction rules** only where the subject has an actual ordered flow. Keep content and IDs in the consuming application; do not hard-code Cloud LAB's activities as shared components.
 

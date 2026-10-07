@@ -1258,7 +1258,7 @@
     {
       "path": "portal/messages/en.json",
       "hash_basis": "file_bytes",
-      "sha256": "79ccda97937f697b2b7ad5762674d16ee384cb7f43b6b6275d86e35e8b067a46",
+      "sha256": "d6482631f00e1a35f8b56a6282a8ac210b3990c907f4ae85f14af3471f59e57c",
       "baseline_path": "portal/messages/en.json",
       "baseline_sha256": "f5f7ba5d166f962f82d874684f4bdbb85f8d8bb893ad10cd7c8cf211cbf92b98"
     },
@@ -2074,7 +2074,7 @@
     {
       "path": "portfolio/en/projects/service-resolution/charter.md",
       "hash_basis": "file_bytes",
-      "sha256": "bb4fa583510635d3828290b1fe836d1002863b8fea791aa69ce0ebcf43dd5cff"
+      "sha256": "b42cfdeb62652384e6735674f0626d2154adde100aed8bff2a37c541a9b15751"
     },
     {
       "path": "portfolio/en/projects/service-resolution/controls.md",
@@ -2119,7 +2119,7 @@
     {
       "path": "portfolio/en/projects/service-resolution/journeys.md",
       "hash_basis": "file_bytes",
-      "sha256": "002c6c4bc58dd934f94df18c1ff5a234b0142b55924a750b0def72c2323c5111"
+      "sha256": "6f2e43cfb547feab83c44c1b6f2c2ffee20d537b6d780f8a425fcb820c05a774"
     },
     {
       "path": "portfolio/en/projects/service-resolution/start.md",

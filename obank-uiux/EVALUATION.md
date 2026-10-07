@@ -17,7 +17,7 @@ The kit is a usable common **visual and interaction foundation**: one O! identit
 
 ## Practical limits and next use
 
-- The standalone `site/o-uiux-kit.zip` is a **selected implementation kit**, not the complete 108-asset research inventory or the Cloud LAB page source. This repository holds the full curated asset source, and `html/cloudlab/` holds the accepted page.
+- The standalone `site/o-uiux-kit.zip` is a **selected implementation kit**, not the complete 108-asset research inventory or the Cloud LAB page source. This repository holds the full curated asset source; the accepted page is now the AI Lab branch of the AICC portal (`html/aicc/{en,ru}/lab/`).
 - The shell and examples have RU/EN UI; the explanatory guidance is currently English. A Russian-first product still needs its actual content and UI messages localized from one source of identities and facts.
 - Visual grammar is now explicit, but this kit does not implement a production graph, catalogue backend, CMS, identity/permissions, export or content publication boundary. Those belong to a consuming portal and its own verified task.
 - The [STS design trial](../sts-portal/README.md) now provides a second page-family proof: eight retained pages under the common shell, a lifecycle front door, preserved outer/inner model and practice references, and verified mobile/keyboard behaviour. Its practice catalogue remains a classification, not a process flow. This establishes reuse on that conceptual corpus, not adoption by AICC's current production portal.

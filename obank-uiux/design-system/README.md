@@ -6,7 +6,7 @@ The common working style for our internal portals: brand, layout, navigation, ty
 
 This is an AICC-local, editable copy of the EA shared style source from 2 October 2026. Build output lives in `../site/` and can be hosted as static files. The guide's example records are fictional and are not O! enterprise knowledge.
 
-The accepted [Cloud LAB page](../../html/cloudlab/index.html) is the first AICC application of this style. Its [flow-first pattern notes](content/cloud-lab.md) explain the added map, diagram and sticky-header choices.
+The [AI Lab page](../../html/aicc/en/lab/index.html) of the AICC portal, formerly the standalone Cloud LAB page, is the first AICC application of this style. Its [flow-first pattern notes](content/cloud-lab.md) explain the added map, diagram and sticky-header choices.
 
 ## What is included
 

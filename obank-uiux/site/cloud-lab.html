@@ -162,7 +162,7 @@
     </aside>
     <main class="o-main" id="main" tabindex="-1">
       <p class="o-eyebrow" data-ru="Правила и пояснения · текст на английском" data-en="Guidelines and explanation · English source text">Правила и пояснения · текст на английском</p><div class="o-reading"><article class="o-copy o-guide-copy" lang="en"><h1>Cloud LAB: flow-first O! workspace</h1>
-<p>This recipe records the accepted <strong>version C</strong> of AICC's Cloud LAB page. It combines the O! workspace shell with the original page's visible flow map. The page itself is <code>html/cloudlab/index.html</code>; its active CSS and JavaScript are in <code>html/cloudlab/assets/</code>. It is a concrete reference, not a template whose Cloud LAB content belongs in every portal.</p>
+<p>This recipe records the accepted <strong>version C</strong> of AICC's Cloud LAB page. It combines the O! workspace shell with the original page's visible flow map. The page is now the AI Lab branch of the AICC portal (<code>html/aicc/{en,ru}/lab/</code>), built from <code>lab/{en,ru}/lab.md</code>; its CSS and JavaScript are <code>portal/site/lab.css</code> and <code>portal/site/lab.js</code>. It is a concrete reference, not a template whose Cloud LAB content belongs in every portal.</p>
 <h2>Choose the view by meaning</h2>
 <table>
 <thead>
@@ -215,37 +215,7 @@
 <p>Stage notes use matching IDs so a reader can move from the compact map to detail. A text pathway or structured stage list should expose the same essential information when the visual is hard to scan. Preserve the distinction between a stage, a concern, an activity and a dependency; they are different concepts.</p>
 <h2>Visual language and reusable source</h2>
 <p>Use the shared O! semantic tokens and the <strong>TT Norms Pro + Golos Text</strong> pair. The O! mark is the global identity. Provider marks identify a subject, not a new theme. The header can carry the burgundy-to-near-black treatment; the working canvas stays quiet and opaque. A single accent per concern helps orientation, but labels and position carry the meaning. Use restrained borders and spacing rather than a card around every paragraph.</p>
-<p>The current page demonstrates the implementation split:</p>
-<table>
-<thead>
-<tr>
-<th>AICC file</th>
-<th>Role</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>html/cloudlab/index.html</code></td>
-<td>Semantic page structure and Cloud LAB-specific content</td>
-</tr>
-<tr>
-<td><code>html/cloudlab/assets/base.css</code>, <code>palette.css</code>, <code>tokens.css</code>, <code>fonts.css</code></td>
-<td>Base presentation and shared visual values</td>
-</tr>
-<tr>
-<td><code>html/cloudlab/assets/workspace.css</code>, <code>reframed.css</code></td>
-<td>O! shell and stage-detail presentation</td>
-</tr>
-<tr>
-<td><code>html/cloudlab/assets/converged.css</code>, <code>converged.js</code></td>
-<td>Sticky layout, map focus, selection and inspector</td>
-</tr>
-<tr>
-<td><code>html/cloudlab/assets/reframed.js</code></td>
-<td>Theme control and page navigation</td>
-</tr>
-</tbody>
-</table>
+<p>The standalone Cloud LAB page (<code>html/cloudlab/</code>) was retired on 7 October 2026. Its content is now the AI Lab branch of the AICC portal: the source records are <code>lab/en/lab.md</code> and <code>lab/ru/lab.md</code>, the page is built by <code>portal/tools/lab.py</code> into <code>html/aicc/{en,ru}/lab/</code>, and its presentation is <code>portal/site/lab.css</code> and <code>portal/site/lab.js</code> on the shared portal shell.</p>
 <p>For a new site, start with the generated shared guide CSS and its <a href="foundations.html">foundations</a>, <a href="layout.html">layout</a> and <a href="components.html">component rules</a>. Reuse the Cloud LAB <strong>composition and interaction rules</strong> only where the subject has an actual ordered flow. Keep content and IDs in the consuming application; do not hard-code Cloud LAB's activities as shared components.</p>
 <h2>Review a new application of this pattern</h2>
 <ul>

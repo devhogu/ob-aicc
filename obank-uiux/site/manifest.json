@@ -385,8 +385,8 @@
     },
     {
       "path": "cloud-lab.html",
-      "sha256": "fd67e942882a155de5fcaa43c426f81fb3736f70aeb3b9c5abf00669a0c3a934",
-      "bytes": 14192
+      "sha256": "bf7efa1435413e0401a593946fd83d6093c2ace768013a69c790d9b1ca0aeea4",
+      "bytes": 13872
     },
     {
       "path": "components.html",
@@ -400,8 +400,8 @@
     },
     {
       "path": "content/cloud-lab.md",
-      "sha256": "1c7681d205cddc9eba4f4248abdbd0a92cc22116d12a9308b5ab979ccad31844",
-      "bytes": 5969
+      "sha256": "e688f08a252d717fc3b43458fa400202700096427ccf7488513e30135a3b34c6",
+      "bytes": 5834
     },
     {
       "path": "content/components.md",
@@ -430,8 +430,8 @@
     },
     {
       "path": "data.js",
-      "sha256": "80ff007e0d293ebfb5e07f6a0c7540fa3201f342bc470ed0b9eab63dd09c867d",
-      "bytes": 46016
+      "sha256": "8b159e20b051babf50e2a754cbdc37d69fdf0991364b208d7cb47a9d103f7c5f",
+      "bytes": 45873
     },
     {
       "path": "examples.html",
@@ -460,8 +460,8 @@
     },
     {
       "path": "o-uiux-kit.zip",
-      "sha256": "30e01f09a955dbb7ddff076e1cec013f8b35e08ef46101bffefd8154170597a4",
-      "bytes": 516274
+      "sha256": "401d5f2e04f97b1cd8ee960b38dc4e946d86feaba20e2c55545b818adc280cdd",
+      "bytes": 516194
     },
     {
       "path": "patterns.html",

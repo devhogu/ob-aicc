@@ -6,7 +6,7 @@ section: "Charter"
 
 ## Charter: Initiative Brief and measurement annex {#charter-initiative-brief}
 
-This page is the project charter in AICC form: the Initiative Brief, which is the one-page business case of an Initiative, followed by the measurement and evidence annex that is approved with it. The Domain Owner and the AICC Lead complete the Brief. The maintained lean Initiative Brief sits in the Initiative's Registry folder. This page preserves the complete supporting business-case draft and measurement annex; it is not a separate authoritative record. Figures of the Bank do not appear here: each figure is a reference to its source, and each estimate is a field with the name of whoever fills it.
+This page is the project charter in AICC form: the Initiative Brief, which is the one-page business case of an Initiative, followed by the measurement and evidence annex that is approved with it. The Domain Owner and the AICC Lead complete the Brief. The maintained Initiative Brief is kept in the Initiative's folder in the Portfolio. This page preserves the complete supporting business-case draft and measurement annex; it is not a separate authoritative record. Figures of the Bank do not appear here: each figure is a reference to its source, and each estimate is a field with the name of whoever fills it.
 
 Familiar labels and where they now live: **Decision requested** is the paragraph below and the first row of section 6. The **Approval record** is section 6, together with the Control Sign-Offs and the Decision Record. **Ownership to name before signature** is in the Appointments Record, which names the holder of each Role. This page shows Roles, not names.
 
@@ -137,7 +137,7 @@ A change after approval is entered here with its date and its Decision Record, a
 
 ### Annex: measurement and evidence plan {#charter-annex}
 
-This annex sets out how the leading indicators are measured and how much evidence each question needs. It is kept with the Brief in the Initiative's Registry folder and approved with it. The source owner of the figures drafts the formulas and the comparison design, and the Domain Owner approves them. No one who builds the assistant owns this annex. It holds no Bank figures: volumes and rates are references to their sources.
+This annex sets out how the leading indicators are measured and how much evidence each question needs. It is kept with the Brief in the Initiative's folder in the Portfolio and approved with it. The source owner of the figures drafts the formulas and the comparison design, and the Domain Owner approves them. No one who builds the assistant owns this annex. It holds no Bank figures: volumes and rates are references to their sources.
 
 ### Measurement of each indicator {#charter-annex-indicators}
 

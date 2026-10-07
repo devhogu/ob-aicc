@@ -402,12 +402,7 @@ def _breadcrumb(page, content, lang):
 
 
 def _header(content, lang):
-    # The former English pages wrote the ampersands of page titles unescaped and the Russian pages escaped them.
-    # The Discovery projection reads the page title from this markup (and reads "M&A" and "FP&A" as empty titles),
-    # so the titles keep that form until the projection is corrected; the published pages stay as they were.
     title = inline(content['title'])
-    if lang == 'en':
-        title = title.replace('&amp;', '&')
     intent = f'\n  <p class="page-header__intent">{inline(content["intent"])}</p>' if content['intent'] else ''
     return ('<header class="page-header" role="banner">\n  <div class="page-header__title-row">\n    <div>\n'
             f'      <h1 class="page-header__title">{title}</h1>\n    </div>\n  </div>{intent}\n</header>')

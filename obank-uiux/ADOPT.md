@@ -3,7 +3,7 @@
 Use this entry when building a new internal O! page/site or changing its visual system, navigation, shared components or diagram behaviour. A content-only correction does not require a style migration. Enterprise facts and product workflows stay owned by their consuming repositories.
 
 1. Read the canonical [design-system adoption guide](design-system/ADOPT.md), then [foundations](design-system/content/foundations.md) and [layout](design-system/content/layout.md).
-2. Choose the relevant [functional pattern](design-system/content/patterns.md). For ordered stage/concern maps, also read the [Cloud LAB recipe](design-system/content/cloud-lab.md) and inspect the [accepted page](../html/cloudlab/index.html).
+2. Choose the relevant [functional pattern](design-system/content/patterns.md). For ordered stage/concern maps, also read the [Cloud LAB recipe](design-system/content/cloud-lab.md) and inspect the [AI Lab page](../html/aicc/en/lab/index.html).
 3. Reuse the generated tokens, CSS, fonts and selected assets from `site/`, or rebuild them from the editable sources. [ASSETS.md](ASSETS.md) describes identities and font use.
 4. Verify the actual page's navigation, main interaction, keyboard path, narrow layout, theme and language/fallback. Record what was checked; the shared kit's own checks do not prove a consuming site works.
 

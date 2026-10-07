@@ -2,7 +2,7 @@
 
 This is the AICC-local home for the shared O! portal style: guidance, semantic tokens, local fonts, curated marks and icons, reusable CSS, working examples and the Cloud LAB flow-first recipe. Use it when creating a new internal O! site or materially changing layout, navigation or components. For content-only edits, keep the page's existing presentation.
 
-Start with [ADOPT.md](ADOPT.md). The [interactive guidance site](site/index.html) renders the editable [design-system sources](design-system/README.md), including [brand foundations](design-system/content/foundations.md), [layout](design-system/content/layout.md), [patterns](design-system/content/patterns.md) and the [Cloud LAB recipe](design-system/content/cloud-lab.md). The accepted [Cloud LAB page](../html/cloudlab/index.html) is the concrete AICC reference.
+Start with [ADOPT.md](ADOPT.md). The [interactive guidance site](site/index.html) renders the editable [design-system sources](design-system/README.md), including [brand foundations](design-system/content/foundations.md), [layout](design-system/content/layout.md), [patterns](design-system/content/patterns.md) and the [Cloud LAB recipe](design-system/content/cloud-lab.md). The accepted [AI Lab page](../html/aicc/en/lab/index.html) is the concrete AICC reference.
 
 | Home | Role |
 | --- | --- |
