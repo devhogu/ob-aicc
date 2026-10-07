@@ -1706,14 +1706,14 @@ def records_page(site, p, lang):
                ('Service Management', 'Requests and incidents, including AI Incidents')]
     if lang == 'ru':
         systems = [
-            ('Папка Центра компетенций', 'Управленческие решения, назначения, приоритеты, стандарты, риски и проблемы, реестр AI-решений, контрольные процедуры и подтверждающие документы в виде неизменяемых датированных выгрузок. Хранится на корпоративном файловом ресурсе: ' + share(REGISTRY_BASE)),
+            ('Папка Центра Компетенций', 'Управленческие решения, назначения, приоритеты, стандарты, риски и проблемы, реестр AI-решений, контрольные процедуры и подтверждающие документы в виде неизменяемых датированных выгрузок. Хранится на корпоративном файловом ресурсе: ' + share(REGISTRY_BASE)),
             ('Портфель', 'Каталог решений и пакетов и рабочее состояние: каталог сценариев, бэклоги и канбаны портфеля и программы с паспортами инициатив, дорожная карта, календарь, программные инкременты, панель показателей и проекты. Хранится на корпоративном файловом ресурсе: ' + share(PORTFOLIO_BASE)),
             ('Jira и Confluence', 'Повседневная работа: задачи команд и зеркальная копия инициатив, Capabilities и Features; методические материалы и панели — по ссылкам'),
             ('Service Management', 'Запросы и инциденты, в том числе инциденты AI'),
         ]
     srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i < 2 else esc(b)) for i, (a, b) in enumerate(systems))
     intro = {'en': 'This site is static. It states the rules and the forms of the Competence Center and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
-             'ru': 'Портал статичен: он излагает правила и формы Центра компетенций и не содержит текущих рабочих документов. В таблице рабочие документы перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
+             'ru': 'Портал статичен: он излагает правила и формы Центра Компетенций и не содержит текущих рабочих документов. В таблице рабочие документы перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
     main = '<h1>%s</h1><p class="o-lead">%s</p><h2>Systems</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Systems"><table><tbody>%s</tbody></table></div><h2>Records</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Records"><table><thead><tr><th>Template</th><th>%s</th><th>%s</th><th>Controls</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
         esc(p['title']), esc(intro), srows, esc(m['used_when']), esc(m['kept_in']), ''.join(rows), prev_next(site, p, lang))
     if lang == 'ru':

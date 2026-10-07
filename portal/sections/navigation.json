@@ -1,5 +1,5 @@
 [
-  {"id":"center","path":"center/","icon":"building-2","label":{"en":"Competence Center","ru":"Центр компетенций"}},
+  {"id":"center","path":"center/","icon":"building-2","label":{"en":"Competence Center","ru":"Центр Компетенций"}},
   {"id":"discovery","path":"discovery/","icon":"search","label":{"en":"Discovery Catalog","ru":"Каталог сценариев"}},
   {"id":"portfolio","path":"portfolio/","icon":"layers","label":{"en":"Portfolio","ru":"Портфель инициатив"}},
   {"id":"program","path":"program/","icon":"workflow","label":{"en":"Program","ru":"Программа"}},

@@ -15,3 +15,5 @@ One line for each Decision at the AICC Lead level or above, and for any Decision
 Dated supplement, 2026-10-03: the AICC Lead's subsequent instruction confirmed revision 2.0 as the baseline. The confirmation and the later English corrections are appended to DR-2026-062. The four affected documents now carry correction revision 2.1 under Document Catalog 4.2; the original activation entry above is retained. The four Standing Initiative Briefs remain Proposed and require separate Executive Sponsor decisions.
 
 Subsequent settlement, 2026-10-03: DR-2026-063 supersedes the provisional Standing Initiative status in the supplement above. All four Briefs are Approved with initial measures and shared limits; RI-008 is Closed and DEP-015 is Met. English source edition 2.2 is the approved baseline for translation.
+
+Dated supplement, 2026-10-07, to DR-2026-066: the Competence Center Lead's subsequent instruction makes the name a brand name; in Russian both words are capitalized in every case: «Центр Компетенций», «Центра Компетенций», «Центр Компетенций по AI». Records written before this supplement keep their wording.

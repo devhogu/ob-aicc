@@ -273,7 +273,7 @@ class RussianCorpusProjection(unittest.TestCase):
 
     def test_page_titles_feedback_tables_and_card_ids_follow_the_selected_language(self):
         for language, home_title, about_title, table_label, suffix in (
-            ('ru', 'Центр компетенций по AI', 'О Центре компетенций', 'Таблица', 'RU'),
+            ('ru', 'Центр Компетенций по AI', 'О Центре Компетенций', 'Таблица', 'RU'),
             ('en', 'Welcome to the AI Competence Center', 'About the Competence Center', 'Table', 'EN'),
         ):
             with self.subTest(language=language):
@@ -281,7 +281,7 @@ class RussianCorpusProjection(unittest.TestCase):
                 build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
                 for page_id, title in [('index', home_title), ('about/index', about_title)]:
                     rendered = build.build_page(site, site.by_id[page_id], language)
-                    self.assertEqual(re.search(r'<title>(.*?)</title>', rendered)[1], title + ' · ' + {'en': 'Competence Center', 'ru': 'Центр компетенций'}[language])
+                    self.assertEqual(re.search(r'<title>(.*?)</title>', rendered)[1], title + ' · ' + {'en': 'Competence Center', 'ru': 'Центр Компетенций'}[language])
                     self.assertEqual(re.search(r'data-page="([^"]*)"', rendered)[1], title)
                 hits = [e for e in build.search_index(site, language) if e['u'] == '/' + language + '/center/']
                 self.assertEqual([e['t'] for e in hits], [home_title])
@@ -332,9 +332,9 @@ class RussianCorpusProjection(unittest.TestCase):
         self.assertEqual(statement['title'], 'Заявление о намерениях по внедрению AI')
         self.assertEqual(build.nav_title(site, statement), 'Заявление о намерениях')
         values = build.build_page(site, site.by_id['about/values-and-principles'], 'ru')
-        self.assertIn('Миссия Центра компетенций — сделать AI', values)
+        self.assertIn('Миссия Центра Компетенций — сделать AI', values)
         self.assertIn('<strong>Добросовестность</strong>', values)
-        self.assertIn('Положение о Центре компетенций по AI 2.1</a>', values)
+        self.assertIn('Положение о Центре Компетенций по AI 2.1</a>', values)
         self.assertIn('Заявление о намерениях по внедрению AI 4</a>', values)
         self.assertIn('lang="ru"', values.split('id="g-work"', 1)[1].split('</section>', 1)[0])
         # Delivery principles follow the reviewed lifecycle model.
@@ -392,8 +392,8 @@ class RussianCorpusProjection(unittest.TestCase):
         site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
         build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
         role = build.build_page(site, site.by_id['organization/roles/aicc-lead'], 'ru')
-        self.assertIn('<h1>Руководитель Центра компетенций</h1>', role)
-        self.assertIn('Руководит Центром компетенций как ведущий инженер и архитектор', role)
+        self.assertIn('<h1>Руководитель Центра Компетенций</h1>', role)
+        self.assertIn('Руководит Центром Компетенций как ведущий инженер и архитектор', role)
         self.assertIn('<th>Деятельность</th>', role)
         self.assertIn('Операционная модель 4.2</a>', role)
         self.assertIn('Присвоить категорию риска и сообщить её владельцу направления', role)

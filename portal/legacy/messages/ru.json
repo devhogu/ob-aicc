@@ -1,5 +1,5 @@
 {
- "portal_name": "Центр компетенций по ИИ",
+ "portal_name": "Центр Компетенций по ИИ",
  "portal_short": "AICC",
  "skip": "Перейти к содержанию",
  "nav_label": "Основная навигация",
@@ -16,8 +16,8 @@
  "source_language_note": "Язык оригинала: {language}. Версия оригинала: {revision}.",
  "source_language_ru": "русский",
  "source_language_en": "английский",
- "footer": "Центр компетенций по ИИ, O!Bank. Внутренний портал.",
- "gateway_title": "Центр компетенций по ИИ",
+ "footer": "Центр Компетенций по ИИ, O!Bank. Внутренний портал.",
+ "gateway_title": "Центр Компетенций по ИИ",
  "gateway_link": "Продолжить на русском",
  "badge_draft": "Черновик",
  "sidebar_eyebrow": "AICC · O!Bank"

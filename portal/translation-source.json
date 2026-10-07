@@ -1426,7 +1426,7 @@
     {
       "path": "registry/en/decision-log.md",
       "hash_basis": "file_bytes",
-      "sha256": "8b587a7122d9dc5663f7c25cb844691b78099a7efea276c8920dc9202bacacd6",
+      "sha256": "649d313a51707dbba748447276eedb03706d6dd55a42ecba1627db9f1ae24c8c",
       "baseline_path": "registry/decision-log.md",
       "baseline_sha256": "c1c52d67510a5a55640be4d50c2c8d51404fcbc1ce695d2cf727cbac747d0159"
     },
