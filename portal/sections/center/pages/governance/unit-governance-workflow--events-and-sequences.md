@@ -9,7 +9,7 @@ source: charter/en/workflows/unit-governance.md
 source_sections: 4, 5, 6, 7, 8, 9
 document: unit-governance-workflow
 part: 2 of 4
-words: 1268
+words: 1284
 series: set-unit-governance
 production: generated
 status: scaffold
@@ -26,11 +26,11 @@ Page type: workflow. Address: /governance/unit-governance-workflow/events-and-se
 ## Sections of the source
 
 - 4. Events (479 words)
-- 5. A month, a quarter, and a year in sequence (243 words)
+- 5. A month, a quarter, and a year in sequence (247 words)
 - 6. An AI Incident in sequence (226 words)
 - 7. The reporting chain (173 words)
 - 8. The life of a document (112 words)
-- 9. Where it runs (35 words)
+- 9. Where it runs (47 words)
 
 ## Outline
 

@@ -9,7 +9,7 @@ source: charter/en/guides/unit-governance-guide.md
 source_sections: 1, 2, 3, 4, 5, 6
 document: unit-governance-guide
 part: 3 of 4
-words: 1910
+words: 1940
 series: set-unit-governance
 production: generated
 status: scaffold
@@ -30,7 +30,7 @@ Page type: guide. Address: /governance/unit-governance-guide/
 - 3. The loops (958 words)
 - 4. How a decision moves (274 words)
 - 5. Reporting and assurance (225 words)
-- 6. Where the evidence is (99 words)
+- 6. Where the evidence is (129 words)
 
 ## Outline
 

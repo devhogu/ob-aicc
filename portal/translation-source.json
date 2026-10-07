@@ -516,7 +516,7 @@
     {
       "path": "portal/content/en/delivery/roles-and-records.md",
       "hash_basis": "file_bytes",
-      "sha256": "9d54df95abd56c496bbfc7a5db51f080f631f1f710dbd1b4764f654a2f6827e9",
+      "sha256": "8e907407d1d0f1200e518ed966037a60f584c5680f33a1b25a731f3f9f44981b",
       "baseline_path": "portal/content/delivery/roles-and-records.md",
       "baseline_sha256": "75e15d76246c50e01d7b31e5e4ec996a9615fff5657747c3a1fb25fc16b4cd08"
     },
@@ -579,7 +579,7 @@
     {
       "path": "portal/content/en/governance/records-evidence-and-assurance.md",
       "hash_basis": "file_bytes",
-      "sha256": "3fabeec37f3d75963ce2ac08ab78288af29009327ec1e14819a7da057ea12ee2",
+      "sha256": "d6e28123e6e39d676fc8425f492577a078837d45fcb5d64777d4ec94e64db0ad",
       "baseline_path": "portal/content/governance/records-evidence-and-assurance.md",
       "baseline_sha256": "1f55a5a6e64fe9d9e866a505656eeb911940730db0c1d1e81afeb21448c2fc14"
     },
@@ -1251,7 +1251,7 @@
     {
       "path": "portal/content/en/terms-of-use.md",
       "hash_basis": "file_bytes",
-      "sha256": "366716ae8e1c2f8a18deeab8bc3f9aa195fea0704c427ae87bb308d8c8f5d8c8",
+      "sha256": "0830e63374850d15ee190c0ba5a412b52a1de2f325c54ecb23c16227a709b49a",
       "baseline_path": "portal/content/terms-of-use.md",
       "baseline_sha256": "366716ae8e1c2f8a18deeab8bc3f9aa195fea0704c427ae87bb308d8c8f5d8c8"
     },
@@ -1265,7 +1265,7 @@
     {
       "path": "portal/sections/center/sitemap.json",
       "hash_basis": "file_bytes",
-      "sha256": "8be2d6fb1cf8c7cb844ffbb303488cad6a1cbfa0b0effdffe0dcb2f49ebf1ef0",
+      "sha256": "5e09d730b0fe1178eeb345b746afb34ffd8fb81307496017b5d2789fa29626b2",
       "baseline_path": "portal/sections/center/sitemap.json",
       "baseline_sha256": "e7a76c224c675e96464b8124fd5bacb02a53babfd653befe1845612b7f2ee1ed"
     },

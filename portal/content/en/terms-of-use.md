@@ -18,7 +18,7 @@
 
 3.2. The pages on regulators, acts, standards, and external sources summarize those instruments and sources in general terms for orientation. They quote no provision, they are not legal advice, and a listing is not an endorsement. What applies to the Bank is confirmed by the Control Function Contacts of compliance and of legal, each within its remit, and recorded in the Standards Record (AI Policy 1.3), and the Knowledge base page Acts and compliance is kept with them.
 
-3.3. The site is a reference. The live records of AICC, among them the decisions, the appointments, the risks, the AI Registry, the Portfolio, and the backlogs, are kept in the Registry, Jira, Confluence, and Service Management, as the page Records and systems states, and the site links to the Registry and the charter on the corporate share. A page that states the form of a catalog, a measure, or a package is the form; the instance is in the Registry or the Portfolio.
+3.3. The site is a reference. The live records of AICC, among them the decisions, the appointments, the risks, the AI Registry, the Portfolio, and the backlogs, are kept in the Registry, the Portfolio, Jira, Confluence, and Service Management, as the page Records and systems states, and the site links to the Registry, the Portfolio, and the charter on the corporate share. A page that states the form of a catalog, a measure, or a package is the form; the instance is in the Registry or the Portfolio.
 
 3.4. The site is provided for information, as it is. A page does not by itself create a right, an obligation, an approval, or a commitment of AICC to a function. Those arise from the documents, the Records, the Service Agreements, and the decisions of the persons whom the Operating Model names.
 

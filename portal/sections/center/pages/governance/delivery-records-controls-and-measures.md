@@ -9,7 +9,7 @@ source: charter/en/documents/solution-lifecycle-model.md
 source_sections: 9, 10
 document: solution-lifecycle-model
 part: 7 of 7 (governance view)
-words: 2255
+words: 2286
 production: generated
 status: scaffold
 ---
@@ -24,7 +24,7 @@ Page type: document. Address: /governance/delivery-records-controls-and-measures
 
 ## Sections of the source
 
-- 9. Records and controls (431 words)
+- 9. Records and controls (462 words)
 - 10. Measures (1824 words)
 
 ## Outline

@@ -20,7 +20,7 @@ Delivery is carried by a small number of Roles, each with a defined part, and it
 
 ## 2. The records and the controls
 
-2.1. Delivery records follow the classes and locations in Operating Model 7. Working state, including backlogs, boards and the Roadmap, moves from the Registry to Jira and Confluence at cutover. Living Solution Definitions remain in the Portfolio; the Registry keeps its living governance records and all Evidence records, including Control Sign-Offs, Acceptance Checklists, AI Incident Reviews and dated Registry Snapshots. Snapshots preserve the state, Risk Tier and release of Solution Definitions at Iteration and PI close and at cutover. The page Records and systems identifies each location; Solution Lifecycle Model 9 identifies each decision and its evidence; the Control Matrix records control status.
+2.1. Delivery records follow the classes and locations in Operating Model 7. Working state, including backlogs, boards and the Roadmap, is kept in the Portfolio, its source of truth; Jira and Confluence run the daily work and mirror the portfolio and program levels. Living Solution Definitions remain in the Portfolio; the Registry keeps its living governance records and all Evidence records, including Control Sign-Offs, Acceptance Checklists, AI Incident Reviews and dated Registry Snapshots. Snapshots preserve the state, Risk Tier and release of Solution Definitions at Iteration and PI close and at cutover. The page Records and systems identifies each location; Solution Lifecycle Model 9 identifies each decision and its evidence; the Control Matrix records control status.
 
 ## 3. Rule source
 

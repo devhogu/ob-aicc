@@ -6,7 +6,7 @@ Governance is only as good as what it can show. AICC keeps three kinds of record
 
 | Kind | What it is | Examples | Where |
 | --- | --- | --- | --- |
-| Working state | The live state of the work, current by use | The backlogs, the boards, the Roadmap, the Calendar, the Program Board, the Dashboard, the Teams, the Program Increment folder | The Registry until the cutover, then Jira and Confluence |
+| Working state | The live state of the work, current by use | The backlogs, the boards, the Roadmap, the Calendar, the Program Board, the Dashboard, the Teams, the Program Increment folder | The Portfolio; Jira and Confluence run the daily work and mirror the portfolio and program levels |
 | Living records | Records that are current by nature and kept up to date | The Priorities, the Standards, the Risks and Issues, the AI Registry, the Appointments; the Solution Definitions in the Portfolio | The Registry; the Portfolio |
 | Evidence records | A closed and dated extract, taken when an event happens, stating what happened, who decided or acted, on which facts, and where the live item is | Decision Records, Control Sign-Offs, Acceptance Checklists, Outcome Reports, Steering Summaries, Quarterly Reports, AI Incident Reviews, Registry Snapshots | The Registry, always |
 

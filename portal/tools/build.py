@@ -37,6 +37,7 @@ FONT_FILE = os.path.join(PORTAL, 'ui', 'assets', 'fonts', 'golos-text', 'GolosTe
 SHARE_HOST = '10.128.20.244'
 CHARTER_BASE = 'smb://%s/aicc/governance/charter/' % SHARE_HOST
 REGISTRY_BASE = 'smb://%s/aicc/governance/registry/' % SHARE_HOST
+PORTFOLIO_BASE = 'smb://%s/aicc/portfolio/' % SHARE_HOST
 
 
 def unc(base_url, rel=''):
@@ -1695,17 +1696,22 @@ def records_page(site, p, lang):
             site.rel(url, site.url(page, lang)), esc(d['name']), esc(d['used']), esc(d['kept'].strip('`')), ctl or '&ndash;'))
     template_language = site.sources.resolve('charter/en/templates/README.md').language
     rows = [row.replace('lang="en"', 'lang="%s"' % template_language) for row in rows]
-    systems = [('Registry', 'Decisions, appointments, controls, backlogs, roadmap, calendar, and other evidence records, as closed and dated extracts. Kept on the corporate folder: <a href="%s" title="%s">%s</a> <button type="button" class="icon-copy" data-copy-text="%s" aria-label="%s" title="%s">%s</button>' % (
-                    REGISTRY_BASE, esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(unc(REGISTRY_BASE)), esc(m['copy_path']), esc(m['copy_path']), icon('copy'))),
-               ('Jira and Confluence', 'The working state of the Program Backlog, boards, and Work Items, and the working documents, from the cutover of the working state'),
+    def share(base):
+        return '<a href="%s" title="%s">%s</a> <button type="button" class="icon-copy" data-copy-text="%s" aria-label="%s" title="%s">%s</button>' % (
+            base, esc(unc(base)), esc(unc(base)), esc(unc(base)), esc(m['copy_path']), esc(m['copy_path']), icon('copy'))
+    # Operating Model 7 (DR-2026-065): the Registry keeps governance and evidence; the Portfolio holds the working state; Jira runs the daily work.
+    systems = [('Registry', 'Decisions, appointments, priorities, standards, risks and issues, the AI Registry, the controls, and the evidence records as closed and dated extracts. Kept on the corporate folder: ' + share(REGISTRY_BASE)),
+               ('Portfolio', 'The catalog of Solutions and Packages and the working state: the Discovery catalog, the Portfolio and Program Backlogs and Kanbans with the Initiative Briefs, the Roadmap, the Calendar, the Program Increments, the Dashboard, and the projects. Kept on the corporate folder: ' + share(PORTFOLIO_BASE)),
+               ('Jira and Confluence', 'The daily work: the Work Items of the Teams and a mirror of the Initiatives, Capabilities, and Features; guidance and dashboards by reference'),
                ('Service Management', 'Requests and incidents, including AI Incidents')]
     if lang == 'ru':
         systems = [
-            ('Папка AICC', 'Управленческие решения, назначения, контрольные процедуры, бэклоги, дорожная карта, календарь и другие подтверждающие документы в виде неизменяемых датированных выгрузок. Хранятся на корпоративном сетевом ресурсе: ' + systems[0][1].split('Kept on the corporate folder: ', 1)[1]),
-            ('Jira и Confluence', 'Рабочее состояние бэклога программы, бордов и задач, а также рабочие документы — с момента перехода рабочего состояния в эти системы'),
+            ('Папка AICC', 'Управленческие решения, назначения, приоритеты, стандарты, риски и проблемы, реестр AI-решений, контрольные процедуры и подтверждающие документы в виде неизменяемых датированных выгрузок. Хранится на корпоративном файловом ресурсе: ' + share(REGISTRY_BASE)),
+            ('Портфель', 'Каталог решений и пакетов и рабочее состояние: каталог сценариев, бэклоги и канбаны портфеля и программы с паспортами инициатив, дорожная карта, календарь, программные инкременты, панель показателей и проекты. Хранится на корпоративном файловом ресурсе: ' + share(PORTFOLIO_BASE)),
+            ('Jira и Confluence', 'Повседневная работа: задачи команд и зеркальная копия инициатив, Capabilities и Features; методические материалы и панели — по ссылкам'),
             ('Service Management', 'Запросы и инциденты, в том числе инциденты AI'),
         ]
-    srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i == 0 else esc(b)) for i, (a, b) in enumerate(systems))
+    srows = ''.join('<tr><th scope="row">%s</th><td lang="%s">%s</td></tr>' % (esc(a), lang, b if i < 2 else esc(b)) for i, (a, b) in enumerate(systems))
     intro = {'en': 'This site is static. It states the rules and the forms of AICC and holds no live record. The table lists each record by its template, with the place where it is kept and the controls that it evidences.',
              'ru': 'Портал статичен: он излагает правила и формы AICC и не содержит текущих рабочих документов. В таблице рабочие документы перечислены по их шаблонам с указанием места хранения и контрольных процедур, которые они подтверждают.'}[lang]
     main = '<h1>%s</h1><p class="o-lead">%s</p><h2>Systems</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Systems"><table><tbody>%s</tbody></table></div><h2>Records</h2><div class="o-table-wrap" role="region" tabindex="0" aria-label="Records"><table><thead><tr><th>Template</th><th>%s</th><th>%s</th><th>Controls</th></tr></thead><tbody>%s</tbody></table></div>%s' % (
