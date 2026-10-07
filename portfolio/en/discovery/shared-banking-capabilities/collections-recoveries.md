@@ -1,0 +1,274 @@
+# Collections & recoveries
+
+Collections and recoveries manage the credit exposure of delinquent borrowers — from early-stage contact strategy through restructuring, legal referral, and portfolio write-off and sale. Under consumer credit protection rules and loan classification requirements, collections practices are subject to direct supervisory oversight. The collections waterfall — from soft-touch early contact through escalating intervention — is defined by prescribed contact strategies and borrower segmentation rules. Recovery cycle scoring, legal referral triage, and portfolio sale decisions require judgment over large borrower populations with heterogeneous financial profiles. **The opportunity for GenAI is to sharpen the segmentation that determines which contact strategy each delinquent borrower receives** — and to automate the case documentation and reporting that currently consumes collections officer time on every case.
+
+## Problems
+
+### Early-stage delinquency {#early-stage-delinquency}
+
+| Lens | Problem |
+| --- | --- |
+| Insights & analytics | Delinquency roll rates, contact effectiveness by strategy and channel, promise-to-pay fulfillment rates, and early warning indicators for escalation are tracked in collections management systems but are not synthesized into a real-time view that collections managers can act on. Which contact strategies are working, which borrower segments are responding, and which early-stage cases are trending toward write-off — these signals accumulate in data but rarely surface in time for proactive strategy adjustments. |
+| Enablement | Contact strategy decisions for individual delinquent borrowers — which channel to use, what tone and offer to present, and whether to escalate immediately to a specialist — depend on collections officers assessing each borrower's profile, payment history, financial hardship indicators, and behavioral signals. For portfolios with hundreds of delinquencies per day, individual-level assessment at scale requires a decisioning framework that manual judgment cannot deliver consistently. |
+| Automation | Promise-to-pay arrangement documentation, hardship assessment forms, and collections activity logging follow prescribed formats across contact types. Case notes for each contact — required under consumer protection regulations — consume collections officer time on every interaction. The structured, repetitive nature of collections documentation across high-volume contact strategies makes it a strong automation candidate. |
+| New business opportunities | Collections performance — recovery rates, write-off avoidance, and legal cost minimization — is a direct driver of credit loss outcomes and IFRS 9 provisioning. Banks that improve early-stage contact effectiveness and precision-target restructuring offers to the borrowers most likely to respond reduce loss rates below the portfolio average. The improvement compounds: lower write-off rates reduce provisioning, capital consumption, and recovery cost simultaneously. |
+
+## Delinquency segmentation & contact strategy {#delinquency-segmentation}
+
+Behavioral segmentation of newly delinquent borrowers — distinguishing between temporary cash-flow disruption, chronic over-commitment, and strategic non-payment — to assign each borrower to the appropriate collections treatment strategy. Consumer credit protection rules commonly require collections contact strategies to be proportionate to the borrower's financial situation and to avoid harassment. Current segmentation applies rule-based thresholds by days-past-due rather than behavioral signal.
+
+### Hardship pathway eligibility screening
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/delinquency-segmentation/hardship-pathway-eligibility-screening
+- Lens: Automation
+- Complexity: S
+- Intent: Automated pre-screening of newly delinquent borrowers against the Bank's hardship assistance eligibility criteria — temporary income disruption, declared hardship, or qualifying life event — to identify borrowers who should be offered a hardship pathway before standard collections contact. Consumer credit protection rules commonly require banks to assess hardship assistance eligibility for qualifying borrowers; pre-screening ensures the obligation is met systematically rather than case-by-case.
+- Problem to solve: Hardship eligibility assessment requires cross-referencing account behavior, declared income data, and the Bank's hardship policy criteria for each newly delinquent borrower; at portfolio scale this assessment is not operationally tractable through manual case review. Missed hardship eligibility assessments create a compliance gap under consumer credit protection rules and expose the Bank to complaint risk when eligible borrowers are subjected to standard collections contact.
+- Solution: The AI agent reads the delinquent borrower's account behavior, income indicators, and any declared hardship signals and screens against the Bank's hardship eligibility criteria, flagging qualifying borrowers for hardship pathway routing before collections contact is initiated. Collections officers receive a pre-screened queue with each borrower's eligibility status and the specific criteria satisfied, enabling compliant and proportionate treatment assignment at case-level.
+- OKR: Hardship pathway eligibility screening is applied to all newly delinquent borrowers before collections contact is initiated.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced eligibility screening covering ≥95% of newly delinquent borrowers within 6 months of go-live. |
+| Acceptance | ≥90% of collections officer treatment assignments consistent with the AI agent's eligibility classification; hardship-related complaints from delinquent borrowers reduced by ≥20% within 12 months. |
+| Cycle | Eligibility screening completed within 2 hours of delinquency flag so hardship-eligible borrowers are identified before the first contact cycle. |
+
+### Delinquency Segmentation and Contact Strategy
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/delinquency-segmentation/delinquency-segmentation-contact-strategy
+- Lens: Insights
+- Complexity: M
+- Intent: The AI agent segments newly delinquent borrowers by behavioral and financial signal — distinguishing temporary cash-flow disruption, chronic over-commitment, and strategic non-payment — and assigns each cohort to the appropriate collections treatment strategy. The segmentation drives treatment differentiation where days-past-due thresholds alone would assign borrowers with different recovery profiles to the same contact strategy. Collections managers review the segmentation and approve the treatment assignment before outreach commences.
+- Problem to solve: Collections applies days-past-due (DPD) thresholds to assign all delinquent borrowers to the same contact strategy within each bucket; borrowers in temporary cash-flow disruption receive the same treatment as chronic non-payers at the same DPD level. The mismatch between treatment strategy and borrower profile reduces promise-to-pay rates and increases write-off losses on the temporary-disruption population, which responds to a hardship pathway rather than a standard collections contact. Segmentation based on behavioral signals requires synthesis across payment history, income indicators, and prior delinquency episodes — a data volume that is not operationally tractable through manual review at portfolio scale.
+- Solution: The AI agent reads payment history, product balance, income indicators, prior delinquency episodes, and behavioral signals for each newly delinquent borrower and segments the cohort by payment pattern type. It assigns the appropriate collections treatment — soft-touch hardship pathway for temporary disruption, structured payment plan for over-commitment, and early escalation for strategic non-payment indicators. Collections managers review the segmentation and approve treatment assignments; promise-to-pay rates and net write-off losses by cohort are the primary outcome metrics.
+- OKR: Newly delinquent borrowers are segmented by behavioral and financial signal — distinguishing temporary cash-flow disruption, chronic over-commitment, and strategic non-payment — and assigned to the appropriate treatment strategy before outreach commences.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced segmentation and treatment assignment used for ≥90% of newly delinquent borrowers entering the collections queue within 12 months of go-live. |
+| Acceptance | ≥75% of collections managers' treatment assignment reviews result in no material change to the AI agent's recommendation; promise-to-pay rates on the temporary-disruption cohort improve by ≥10% vs. pre-deployment DPD-threshold assignment. |
+| Cycle | Segmentation and treatment assignment available within 4 hours of delinquency flag, vs. next working day manual review in the prior process. |
+
+### Delinquency contact outcome analytics
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/delinquency-segmentation/delinquency-contact-outcome-analytics
+- Lens: Insights
+- Complexity: M
+- Intent: Analysis of contact outcomes — promise-to-pay rates, promise fulfillment rates, and write-off rates — by contact strategy, channel, and borrower segment to identify which treatment combinations produce the highest net recovery per case. The analysis informs treatment strategy calibration by surfacing the contact channel, tone, and timing combinations that convert at the highest rate for each behavioral segment.
+- Problem to solve: Collections contact strategies are calibrated at policy design and adjusted infrequently; the relationship between contact strategy parameters — channel, timing, tone, and escalation sequence — and recovery outcomes is not systematically tracked at the treatment-segment intersection. Consumer credit protection rules commonly require collections strategies to be proportionate and evidence-based; without outcome analytics at the treatment level, the proportionality rationale rests on policy design rather than observed data.
+- Solution: The AI agent aggregates contact outcome data — promise-to-pay rate, promise fulfillment rate, and net recovery by case — by contact strategy, channel, timing, and borrower segment, and produces a ranked treatment performance report. Collections managers review the treatment performance rankings and use them to calibrate strategy parameters for each segment, with the specific outcome evidence available for regulatory proportionality documentation.
+- OKR: Contact strategy performance is tracked at the treatment-segment intersection and available for strategy calibration on a rolling basis.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced treatment performance report used in ≥2 strategy calibration cycles within the first 12 months of go-live. |
+| Acceptance | ≥80% of strategy calibration decisions by collections managers reference the AI agent's treatment performance output; net recovery per case improves by ≥5% vs. pre-deployment baseline within 12 months. |
+| Cycle | Treatment performance report refreshed monthly so calibration decisions are based on data no older than 30 days. |
+
+## Legal referral triage {#legal-referral-triage}
+
+Assessment of whether a delinquent account should be referred to legal collections — considering collateral value, borrower financial position, legal cost estimate, recovery probability, and statutory limitation timing. Legal referral for accounts that are unlikely to recover the cost of litigation creates a net loss; deferral for accounts that would benefit from early legal action delays recovery and reduces the net recovery rate. The triage decision requires synthesis across multiple data sources per account.
+
+### Legal referral dossier assembly
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/legal-referral-triage/legal-referral-dossier-assembly
+- Lens: Automation
+- Complexity: S
+- Intent: Automated assembly of the legal referral dossier for accounts approved for legal collections — credit agreement, security documentation, account statement, collections history, and prior correspondence — in the format required by the Bank's external legal panel. The dossier enables the legal panel to commence proceedings without requesting additional documentation from the Bank, reducing instruction-to-filing time.
+- Problem to solve: Legal referral dossier assembly requires the collections officer to retrieve and collate documentation from multiple systems — credit origination, account administration, and collections CRM — before the account can be instructed to the legal panel. Incomplete dossiers returned by the legal panel for additional documentation create instruction delays and increase statutory limitation risk for time-sensitive cases.
+- Solution: The AI agent reads the approved legal referral record and retrieves the required documentation set — credit agreement, security documentation, account statement, collections history, and prior correspondence — from connected source systems, assembling the dossier in the legal panel's prescribed format. The collections officer reviews the assembled dossier for completeness before instructing the legal panel, with missing document gaps flagged for resolution before dispatch.
+- OKR: Legal referral dossiers are assembled from source documentation for approved referrals and available for legal panel instruction without manual document collation.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-assembled dossiers used for ≥90% of legal referrals within 6 months of go-live. |
+| Acceptance | Dossier return rate from legal panel for missing documentation reduced by ≥70% vs. pre-deployment baseline within 9 months. |
+| Cycle | Dossier available for collections officer review within 4 hours of legal referral approval, enabling same-day instruction to the legal panel for priority cases. |
+
+### Legal Referral Triage
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/legal-referral-triage/legal-referral-triage
+- Lens: Enablement
+- Complexity: M
+- Intent: The AI agent assembles collateral value, borrower financial position, legal cost estimate, and recovery probability for each candidate account and produces a ranked referral recommendation for the recoveries team's decision review. The ranked list presents estimated net recovery per account alongside the supporting evidence, enabling consistent referral decisions across the team. Recoveries officers review the ranked list and make referral decisions from a shared evidence base.
+- Problem to solve: Legal referral decisions require recoveries officers to assess collateral value, borrower financial position, legal cost estimates, and recovery probability from data across property valuation, credit bureau, and legal cost systems — a multi-source synthesis that produces inconsistent referral criteria across the team. Referral of accounts that will not recover litigation cost creates net losses; deferral of accounts that would benefit from early legal action reduces net recovery rate. Senior recoveries capacity is consumed in evidence assembly that could be systematically generated, reducing the time available for judgment on borderline cases.
+- Solution: The AI agent reads collateral valuation, current borrower credit data, outstanding balance, legal cost estimate, and statutory limitation status for each candidate account. It generates a ranked referral recommendation with recovery probability, estimated net recovery per account, and a brief evidence summary covering the key factors supporting or weighing against referral. The recoveries team reviews the ranked list and makes referral decisions from a consistent evidence base; net recovery rate on legal-referral accounts is the primary outcome metric.
+- OKR: A ranked referral recommendation — with recovery probability, estimated net recovery, and supporting collateral, financial position, and legal cost evidence — is available for the recoveries team before the referral decision review for each candidate account.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced referral triage packs used for ≥85% of candidate accounts reviewed by the recoveries team within 12 months of go-live. |
+| Acceptance | ≥75% of referral decisions align with the AI agent's ranked recommendation; net recovery rate on legal-referral accounts improves by ≥10% vs. pre-deployment baseline. |
+| Cycle | Referral triage pack available for recoveries review within 4 hours of candidate account identification with no manual assembly, vs. 2–4 hours of senior recoveries officer multi-source assembly per case in the prior process. |
+
+### Legal referral cost-recovery analytics
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/legal-referral-triage/legal-referral-cost-recovery-analytics
+- Lens: Insights
+- Complexity: M
+- Intent: Analysis of completed legal referral outcomes — legal cost incurred, recovery achieved, statutory limitation consumption, and net recovery rate — against the pre-referral triage recommendation to identify the account characteristics that predict net-positive legal recovery. The analysis calibrates the triage decision model by surfacing the collateral, borrower, and balance profiles that correlate with positive legal recovery outcomes versus net-loss referrals.
+- Problem to solve: Legal referral triage decisions are made at the case level against policy criteria; whether the criteria effectively distinguish net-positive from net-negative legal recovery cases is not systematically measured against actual outcomes. Without a feedback loop from completed legal cases to the triage decision model, the criteria used for referral decisions may systematically over-refer accounts with low recovery probability or under-refer accounts where early legal action would improve net recovery.
+- Solution: The AI agent reads completed legal referral case outcomes — legal cost, recovery amount, timeline, and court outcome — and maps them against the account characteristics recorded at the time of the triage recommendation, producing a calibration analysis of triage decision accuracy. Collections managers use the calibration output to adjust the triage criteria and collateral value thresholds, with the specific profile characteristics that predict net-positive outcomes documented for policy reference.
+- OKR: Legal referral triage decision criteria are calibrated against completed case outcomes on a rolling basis, improving the accuracy of net-recovery predictions.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | Calibration analysis used in ≥2 triage criteria review cycles within the first 18 months of go-live. |
+| Acceptance | Net-positive legal recovery rate on referred accounts improves by ≥10% vs. pre-calibration baseline within 18 months; triage criteria changes documented with outcome evidence. |
+| Cycle | Calibration analysis refreshed quarterly from completed case outcomes so triage criteria reflect cases resolved within the prior 12 months. |
+
+## Promise-to-pay arrangement documentation {#promise-to-pay-management}
+
+Structured documentation of payment arrangement terms agreed with delinquent borrowers — amount, schedule, channel, and consequences of non-fulfillment — with automated follow-up tracking and breach notification. Consumer credit rules commonly require payment arrangement terms to be documented and provided to the borrower in writing. Arrangement documentation consumes collections officer time on every case and is prone to error when produced manually under high-volume contact conditions.
+
+### Payment Arrangement Documentation
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/promise-to-pay-management/payment-arrangement-documentation
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent generates the payment arrangement confirmation letter and follow-up monitoring record from arrangement terms agreed in the collections interaction, ready for collections officer review and dispatch. The letter is produced in the format required by consumer credit regulations, covering arrangement terms, payment schedule, and breach consequences. The officer reviews and dispatches; the follow-up monitoring record enters the arrangement tracking system without manual transcription.
+- Problem to solve: Collections officers document payment arrangements manually after each contact — arrangement terms, schedule, and breach consequences — and produce the confirmation letter required by consumer credit regulations. Consumer credit rules commonly require arrangement terms to be documented and provided to the borrower in writing; manual documentation consumes officer time on every case and is prone to transcription error under high-volume contact conditions. Arrangement breaches go undetected when follow-up monitoring records are not created consistently, reducing collections effectiveness on the promise-to-pay population.
+- Solution: The AI agent reads the arrangement terms recorded by the collections officer — amount, payment schedule, channel, and breach consequence — and generates the confirmation letter in the prescribed regulatory format. It creates a follow-up monitoring record in the arrangement tracking system at the same time, ensuring every arrangement has an associated monitoring trigger. The officer reviews and dispatches the letter; arrangement adherence rate and breach detection speed are the primary outcome metrics.
+- OKR: Payment arrangement confirmation letters and follow-up monitoring records are generated from terms agreed in the collections interaction and available for officer review and dispatch in the format required by consumer credit rules, for every arrangement.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to generate payment arrangement documentation for ≥95% of arrangements documented in the collections system within 12 months of go-live. |
+| Acceptance | ≥90% of AI-generated confirmation letters accepted by officers without material amendment; follow-up monitoring record completeness (monitoring trigger created per arrangement) ≥98% on QA review. |
+| Cycle | Confirmation letter and monitoring record available for officer review within 5 minutes of arrangement terms being recorded, vs. 10–20 minutes of manual documentation per case in the prior process. |
+
+### Arrangement breach pattern intelligence
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/promise-to-pay-management/arrangement-breach-pattern-intelligence
+- Lens: Insights
+- Complexity: S
+- Intent: Systematic identification of the arrangement term configurations — installment size relative to declared income, payment channel, and first-payment timing — that correlate with elevated breach rates across the delinquent borrower population. The analysis supports regular recalibration of the Bank's standard arrangement term guidelines to improve portfolio-level fulfillment rates.
+- Problem to solve: Standard arrangement term guidelines are set at policy design and reviewed infrequently; the relationship between specific term configurations and observed breach rates is not systematically analyzed against accumulated arrangement outcome data. Term configurations that systematically produce elevated breach rates — such as installment sizes that exceed sustainable payment capacity for specific income bands — persist in the standard guidelines until a formal policy review cycle is triggered.
+- Solution: The AI agent analyzes the accumulated arrangement outcome data — breach rate by installment size band, payment channel, and first-payment timing — and produces a ranked configuration report identifying the term combinations with the highest and lowest breach rates. The collections policy team uses the configuration report to recalibrate standard arrangement guidelines, with the breach rate evidence available for the policy change rationale.
+- OKR: Arrangement term configurations that correlate with elevated breach rates are identified from outcome data and available for collections policy recalibration.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | Configuration analysis used in ≥2 arrangement guideline recalibration cycles within the first 18 months of go-live. |
+| Acceptance | Portfolio-level arrangement breach rate improves by ≥10% within 18 months of first guideline recalibration informed by the analysis. |
+| Cycle | Configuration analysis refreshed quarterly from accumulated arrangement outcome data so recalibration decisions reflect the most recent 12 months of breach experience. |
+
+### Arrangement fulfillment propensity signal
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/promise-to-pay-management/arrangement-fulfillment-propensity-signal
+- Lens: Insights
+- Complexity: M
+- Intent: Analysis of payment arrangement terms, borrower characteristics, and prior arrangement history to produce a fulfillment propensity score for each new arrangement — identifying borrowers where the agreed terms are unlikely to be fulfilled based on the observed pattern across comparable prior arrangements. Collections officers use the propensity score to calibrate arrangement terms — installment frequency, first payment timing, and channel — for borderline-propensity cases before committing the arrangement.
+- Problem to solve: Payment arrangements are agreed with delinquent borrowers against standard term guidelines without a systematic assessment of the borrower's specific propensity to fulfill the agreed terms based on their characteristics and prior arrangement history. High arrangement breach rates — particularly on arrangements where the propensity signals were unfavorable — create re-engagement workload, consume collections officer capacity, and delay recovery timing without improving net recovery rates.
+- Solution: The AI agent reads the proposed arrangement terms and the borrower's payment history, prior arrangement outcomes, and behavioral signals, and produces a fulfillment propensity score with the specific factors driving the score. Collections officers review the propensity score before committing the arrangement; for low-propensity cases, the AI agent provides the term adjustments — shorter installment cycle, earlier first payment, or direct debit enrollment — that correlate with improved fulfillment rates for comparable borrowers.
+- OKR: Fulfillment propensity scores are available for new payment arrangements before commitment, enabling collections officers to calibrate terms for low-propensity cases.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | Propensity score used for ≥85% of new payment arrangements within 9 months of go-live. |
+| Acceptance | Arrangement breach rate on low-propensity cases where terms were adjusted per the AI agent's recommendation improves by ≥15% vs. unadjusted baseline within 12 months. |
+| Cycle | Propensity score available within 15 minutes of arrangement proposal so the collections officer can use it during the commitment conversation. |
+
+## Portfolio write-off & sale analysis {#portfolio-write-off-sale}
+
+Timing and route analysis for the terminal stage of the recovery cycle — when to write off versus continue recovery efforts, and for portfolios selected for sale, what bid price is defensible based on the portfolio's recovery characteristics. Write-off timing is subject to the regulator's provisioning and loan classification rules. Portfolio sale decisions require IFRS 9 impairment testing and board approval. The analysis requires synthesis across IFRS 9 expected loss, recovery probability, and sale bid comparables.
+
+### Write-off cohort recovery retrospective
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/portfolio-write-off-sale/write-off-cohort-recovery-retrospective
+- Lens: Insights
+- Complexity: S
+- Intent: Post-write-off analysis of recovery outcomes for written-off account cohorts — tracking actual recoveries against the pre-write-off expected recovery estimate and identifying the account characteristics that produced material forecast deviation. The retrospective calibrates the recovery probability assumptions used in future write-off timing and portfolio sale decisions.
+- Problem to solve: Recovery probability estimates used in write-off timing decisions are based on historical assumptions that are not systematically calibrated against actual post-write-off recovery outcomes for comparable account cohorts. Without a feedback loop from actual outcomes to recovery probability assumptions, systematic bias in the estimates — over-optimism on recovery from certain collateral types or borrower segments — persists across write-off timing decisions and portfolio sale bid analysis.
+- Solution: The AI agent tracks post-write-off recovery outcomes for each written-off cohort and compares actual recoveries against the pre-write-off probability estimate, producing a calibration analysis of forecast accuracy by account characteristic. The credit risk team uses the calibration output to adjust recovery probability assumptions in the write-off timing decision model, subject to approval by the model risk committee, with the specific characteristic deviations documented for model validation purposes.
+- OKR: Post-write-off recovery outcomes are tracked against pre-write-off estimates and used to calibrate recovery probability assumptions on a rolling basis.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | Recovery retrospective analysis covering ≥80% of written-off cohorts from the prior 24 months available within 6 months of go-live. |
+| Acceptance | Recovery probability assumption revisions driven by retrospective analysis documented and approved by the model risk committee within 18 months; forecast accuracy improves by ≥15% vs. pre-calibration baseline. |
+| Cycle | Retrospective analysis refreshed semi-annually from accumulated post-write-off outcome data so assumptions reflect the most recent 24-month recovery experience. |
+
+### Write-off timing scenario analysis
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/portfolio-write-off-sale/write-off-timing-scenario-analysis
+- Lens: Insights
+- Complexity: M
+- Intent: Scenario analysis of write-off timing decisions for individual accounts and cohorts — comparing net present value of continued recovery effort against immediate write-off under alternative recovery probability and cost-of-capital assumptions. The analysis supports the credit officer's write-off recommendation with a structured NPV comparison across timing scenarios, meeting IFRS 9 impairment evidence requirements.
+- Problem to solve: Write-off timing decisions require synthesis across IFRS 9 expected loss, recovery probability, cost-of-capital, and operating cost of continued recovery effort; this multi-variable analysis is currently performed manually by the credit officer for each account proposed for write-off. Write-off timing is subject to the regulator's provisioning and loan classification rules; the supporting evidence for write-off decisions must be documented and available for supervisory review.
+- Solution: The AI agent reads the account's IFRS 9 classification, current expected loss, recovery probability estimate, and accumulated collection cost, and produces a structured NPV comparison across write-off timing scenarios — immediate, 3-month, and 6-month deferral — under the credit officer's cost-of-capital assumptions. The credit officer reviews the scenario comparison, makes the write-off recommendation, and retains the AI-produced analysis as the evidential basis for the decision.
+- OKR: Write-off timing decisions are supported by a structured NPV scenario analysis produced from IFRS 9 and recovery data, meeting the documentation standard for supervisory review.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced scenario analysis used for ≥80% of individual write-off recommendations within 9 months of go-live. |
+| Acceptance | ≥85% of credit officer write-off recommendations reference the AI-produced scenario analysis; supervisory review confirms documentation completeness in ≥97% of sampled decisions. |
+| Cycle | Scenario analysis available within 2 hours of write-off candidacy flag so the credit officer can complete the recommendation within the same working day. |
+
+### Portfolio sale bid analysis
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/portfolio-write-off-sale/portfolio-sale-bid-analysis
+- Lens: Automation
+- Complexity: M
+- Intent: Automated assembly of the portfolio sale analysis pack for debt portfolios selected for sale — IFRS 9 carrying value, recovery characteristic profile, bid comparables from prior sales, and the defensible bid price range — formatted for CFO and CRO review and board approval. The pack provides the quantitative basis for the minimum acceptable bid determination and satisfies IFRS 9 impairment testing requirements for the disposal decision.
+- Problem to solve: Portfolio sale decisions require IFRS 9 impairment testing, recovery profile characterization, and bid comparable analysis before a minimum acceptable bid can be determined and presented to the board; this analysis is assembled manually by the finance and risk teams from multiple source systems. Incomplete or inconsistent bid analysis packs create board approval delays and expose the Bank to challenge on the IFRS 9 adequacy of the disposal decision documentation.
+- Solution: The AI agent reads the selected portfolio's IFRS 9 carrying value, recovery characteristic profile, and prior sale bid comparables from connected source systems, and assembles the sale analysis pack with the defensible bid price range and IFRS 9 impairment test output. The CFO and CRO review the assembled pack before board submission, with the bid comparable evidence and impairment test documentation available for board challenge and supervisory inquiry.
+- OKR: Portfolio sale analysis packs are assembled from IFRS 9 and recovery data and available for CFO and CRO review before board submission, without manual data consolidation by finance and risk teams.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-assembled sale analysis used for ≥85% of portfolio sale decisions within 12 months of go-live. |
+| Acceptance | ≥90% of AI-assembled packs accepted by the CFO and CRO as sufficient for board submission without material additional analysis; IFRS 9 documentation completeness confirmed at ≥97% on audit review. |
+| Cycle | Sale analysis pack available within 3 business days of portfolio selection for sale, vs. 5–7 days of manual assembly in the prior process. |
+
+## Early warning & escalation signals {#early-warning-escalation}
+
+Monitoring of delinquent borrower behavior between contact cycles to identify cases where the risk trajectory has changed materially — broken payment arrangements, deteriorating account behavior, or external credit signals that indicate higher write-off probability. Early identification of cases that are trending toward legal referral or write-off allows the collections team to shift treatment strategy before the trajectory locks in.
+
+### Broken arrangement re-engagement brief
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/early-warning-escalation/broken-arrangement-re-engagement-brief
+- Lens: Automation
+- Complexity: S
+- Intent: Automated drafting of a collections officer brief for cases where a payment arrangement has been broken — summarizing the arrangement terms, the breach event, the borrower's payment history, and the recommended re-engagement approach based on the borrower's segment classification. The brief enables the collections officer to re-engage with full case context without reconstructing the arrangement history from system records.
+- Problem to solve: Broken payment arrangements require the collections officer to reconstruct the original arrangement terms, identify the specific breach, and determine the appropriate re-engagement approach from multiple system records before the re-engagement contact can be made. The reconstruction step consumes 15–30 minutes per broken arrangement; at portfolio scale this creates a material backlog in re-engagement timing, reducing the probability of recovering a functioning arrangement before the case escalates.
+- Solution: When a payment arrangement breach is flagged, the AI agent reads the arrangement record, the breach event, and the borrower's payment and behavioral history, and drafts a re-engagement brief with the arrangement terms, breach context, and recommended re-engagement approach based on the borrower's segment. The collections officer initiates re-engagement contact from the pre-assembled brief, with the case history and recommended approach available without additional system navigation.
+- OKR: Broken payment arrangement cases are surfaced to collections officers with a pre-assembled re-engagement brief within the same business day as the breach event.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced re-engagement brief used for ≥90% of broken arrangement cases within 6 months of go-live. |
+| Acceptance | ≥85% of re-engagement briefs accepted by collections officers without material revision; re-engagement contact initiated on the same business day as breach for ≥80% of cases. |
+| Cycle | Re-engagement brief available within 2 hours of breach flag with no officer reconstruction effort, vs. 15–30 minutes of manual reconstruction per case, worked through a re-engagement backlog, in the prior process. |
+
+### Collections trajectory change detection
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/early-warning-escalation/collections-trajectory-change-detection
+- Lens: Insights
+- Complexity: M
+- Intent: Continuous monitoring of delinquent borrower behavior between contact cycles to identify cases where the risk trajectory has changed materially — broken payment arrangements, deteriorating account activity, or external credit signals that indicate higher write-off probability. Cases where trajectory has worsened are flagged for collections officer review before the next scheduled contact cycle so that treatment strategy can be adjusted before the deterioration locks in.
+- Problem to solve: Collections cases are reviewed at scheduled contact intervals; trajectory changes that occur between cycles — broken arrangements, further account deterioration, or adverse external credit signals — are not identified until the next contact event. Early identification of cases trending toward legal referral or write-off allows the collections team to adjust treatment strategy and reduce the population of accounts that reach legal referral cost or net write-off.
+- Solution: The AI agent monitors each active collections case continuously for trajectory-change signals — missed arrangement installments, further account debit activity, external credit file changes, and behavioral baseline deviations — and produces a daily escalation queue ranked by trajectory deterioration severity. Collections officers review the escalation queue each morning and adjust treatment strategy for flagged cases, with the specific signal and the recommended strategy adjustment provided for each case.
+- OKR: Delinquent borrower trajectory changes are detected continuously between contact cycles and surfaced for collections officer review before the next scheduled contact.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced trajectory escalation queue used by collections officers for ≥90% of active cases within 6 months of go-live. |
+| Acceptance | ≥75% of trajectory escalation flags confirmed as requiring treatment adjustment by collections officers; legal referral population reduced by ≥10% within 12 months vs. pre-deployment baseline. |
+| Cycle | Trajectory change detected and surfaced within 24 hours of the signal event, vs. next scheduled contact cycle in the prior process. |
+
+### External credit signal enrichment for collections
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/collections-recoveries/early-warning-escalation/external-credit-signal-enrichment-collections
+- Lens: Enablement
+- Complexity: M
+- Intent: Integration of external credit bureau signals — new derogatory marks, credit utilization changes, and new inquiry patterns — into the active collections case record to provide the collections officer with an updated view of the borrower's external credit trajectory. External signals that predate the Bank's internal data refresh cycles allow earlier identification of borrowers whose external financial position has deteriorated materially since the last internal assessment.
+- Problem to solve: Collections decisions are based on internal account data; external credit bureau signals — new derogatory marks, rapid utilization increase across other facilities, or high-frequency new credit inquiries — that indicate a borrower's broader financial deterioration are not systematically available to collections officers at case level. Borrowers whose external credit position has deteriorated rapidly present a materially higher write-off risk than their internal account status alone would indicate; treatment strategy calibrated only on internal data systematically underestimates write-off probability for this cohort.
+- Solution: The AI agent retrieves external credit bureau data for active collections cases at prescribed intervals, integrates the external signals into the case record, and flags cases where the external trajectory has worsened materially since the prior assessment. Collections officers access the enriched case record with the specific external signals and their implications for write-off probability, enabling treatment strategy adjustment for the highest-risk external-deterioration cases.
+- OKR: External credit bureau signals are integrated into active collections case records at prescribed intervals, enabling treatment strategy calibration on the combined internal and external risk view.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | External signal enrichment applied to ≥80% of active collections cases within 9 months of go-live, subject to bureau data access agreements. |
+| Acceptance | ≥70% of external deterioration flags result in treatment strategy adjustment by collections officers; net write-off rate on the flagged cohort improves by ≥8% vs. unflagged comparable cohort within 12 months. |
+| Cycle | External signal refresh applied within 24 hours of new bureau data availability for active collections cases. |

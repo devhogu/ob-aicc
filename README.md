@@ -21,4 +21,4 @@ The [STS O! workspace](html/sts/en/index.html) is a generated eight-page design 
 
 The [CSR · Customer Service Resolution trial](html/csr/ru/index.html) is a generated bilingual proposal explorer built by [csr-portal/](csr-portal/README.md) from the retained [Customer Intelligence source](html-alt/intelligent-customer-service-resolution/ru/index.html). It is a standalone static trial outside `aicc-deploy`.
 
-The [Financial Services O! trial](html/financial-services/ru/index.html) applies the shared brand shell and typography to all 152 retained bilingual framework pages. [Build and verification](finance-portal/README.md) preserve the source layouts and interactions; this conceptual framework is outside `aicc-deploy`.
+The Discovery Catalog section of the portal is built from the Markdown records of the catalog in [portfolio/en/discovery/](portfolio/en/discovery/README.md) and `portfolio/ru/discovery/`, one record for each page in each language; the README there describes the record format.

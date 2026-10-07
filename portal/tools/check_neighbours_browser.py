@@ -13,6 +13,7 @@ from urllib.parse import parse_qs, urlsplit
 
 from playwright.sync_api import sync_playwright
 
+import discovery
 from export_portable import export
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -117,7 +118,7 @@ def check_existing_aicc(page, base, counts):
 
 def check_workflow_stage_links(page, overview, counts, *, lang='en', all_stages=False):
     """A stage link opens that stage's source content, on HTTP and file URLs."""
-    source = (ROOT / f'html-alt/financial-services/{lang}/value-streams/index.html').read_text()
+    source = discovery.source(Path('value-streams/index.html'), lang)
     catalogue = json.loads(re.search(r'const FLOW_STAGES = (.*?);\n', source)[1])
     expected = [(flow, stage) for flow, stages in catalogue.items() for stage in stages]
     page.goto(overview)
@@ -205,7 +206,7 @@ def check_domain_previews(page, route, counts):
         stage = page.locator('.flow-stages__stage[id="' + urlsplit(page.url).fragment + '"]')
         assert stage.locator('.flow-stages__stage-label').inner_text()==target['label']
         prefix, relative = urlsplit(page.url).path.split('/discovery/', 1)
-        source = (ROOT / 'html-alt/financial-services' / prefix.rsplit('/', 1)[-1] / relative).read_text()
+        source = discovery.source(Path(relative) if relative.endswith('.html') else Path(relative, 'index.html'), prefix.rsplit('/', 1)[-1])
         catalogue = json.loads(re.search(r'const FLOW_STAGES = (.*?);\n', source)[1])
         expected = next(item for item in catalogue[stage.get_attribute('data-flow-id')] if item['slug'] == stage.get_attribute('data-stage'))
         assert modal.locator('.modal__title').inner_text()==expected['title']

@@ -6,7 +6,6 @@
 # END_MODULE_CONTRACT
 # START_MODULE_MAP
 #   ROOT - repository root
-#   SOURCE - retained Financial Services source tree
 #   PAGES - authored neighbour page routing
 #   DOMAIN_ORDER - stable Discovery area order
 #   OVERVIEW - local navigation labels
@@ -16,7 +15,6 @@
 #   scenario_index - scenarios of an edition by urn, for links from authored pages
 #   horizon_page, horizon_box, horizon_chips - render the Regulatory Horizon page, its overview box and card marks
 #   reading_guide - render the authored reading aid of the landing page
-#   finance_renderer - load the established Financial Services source adapter
 #   VisibleText - extract searchable text without embedded code
 #   title_of - extract a page's visible title
 #   write - write a generated section file
@@ -25,7 +23,7 @@
 #   discovery_layout - apply shared cards and context presentation without rewriting content
 #   discovery_page - retain scenario bodies while replacing presentation chrome
 #   search_entries - index Discovery pages and scenario fragments
-#   build_discovery - generate both retained catalogue editions
+#   build_discovery - generate both catalogue editions from the Discovery records
 #   build_landings - generate the independent authored pages and search indexes
 #   build_neighbours - compose all four neighbours
 # END_MODULE_MAP
@@ -33,17 +31,16 @@
 from html import escape, unescape
 import functools
 from html.parser import HTMLParser
-import importlib.util
 import json
 from pathlib import Path
 import re
 import shutil
 
 from markdown_it import MarkdownIt
+import discovery
 import workspace
 
 ROOT = workspace.ROOT
-SOURCE = ROOT / 'html-alt/financial-services'
 PAGES = json.loads((ROOT / 'portal/sections/pages.json').read_text())
 DOMAIN_ORDER = ('strategic-portfolio', 'strategic-initiatives', 'value-streams',
                 'customer-market-intelligence', 'customer-channels', 'risk-control',
@@ -98,9 +95,9 @@ def horizon_themes(lang):
 def scenario_index(lang):
     """Every scenario of an edition by urn: its page, anchor, title and lens."""
     index = {}
-    for path in sorted((SOURCE / lang).rglob('index.html')):
-        relative = path.relative_to(SOURCE / lang).parent.as_posix()
-        source = path.read_text()
+    for path in discovery.pages(lang):
+        relative = path.parent.as_posix()
+        source = discovery.source(path, lang)
         page_title = title_of(source)
         for match in re.finditer(r'<details class="scenario-card" data-urn="([^"]+)">(.*?)</details>', source, re.S):
             title = re.search(r'<h3 class="scenario-card__title">(.*?)</h3>', match[2], re.S)
@@ -193,13 +190,6 @@ def reading_guide(lang):
             '<div class="discovery-guide__body">' + body + '</div></details>')
 
 
-def finance_renderer():
-    spec = importlib.util.spec_from_file_location('finance_renderer', ROOT / 'finance-portal/build.py')
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
-
-
 class VisibleText(HTMLParser):
     def __init__(self, markup):
         super().__init__(convert_charrefs=True)
@@ -242,7 +232,7 @@ def local_links(url, links):
 def workflow_card(match, relative, lang):
     """Render workflow previews from the linked flow page in the same edition."""
     destination = re.search(r'<a class="card__click-target" href="([^"]+)"', match[0])[1]
-    source = (SOURCE / lang / relative.parent / destination).read_text()
+    source = discovery.source(relative.parent / destination, lang)
     stages_label = re.search(r'<nav class="flow-stages" aria-label="([^"]+)"', source)[1]
     chunks = re.split(r'<details class="flow-detail" id="([^"]+)">', source)[1:]
     flows = {}
@@ -361,11 +351,10 @@ def search_entries(body, url, title):
 
 
 def build_discovery(output):
-    finance = finance_renderer()
     count = 0
     for lang in ('en', 'ru'):
         output_assets = output / lang / 'discovery/assets'
-        shutil.copytree(SOURCE / lang / 'assets', output_assets)
+        shutil.copytree(discovery.ASSETS, output_assets)
         for css in output_assets.rglob('*.css'):
             text = css.read_text()
             text = re.sub(r'@import\s+url\(.*?\);', '', text, flags=re.S)
@@ -373,15 +362,14 @@ def build_discovery(output):
             css.write_text(text)
         links = [(f'/{lang}/discovery/', OVERVIEW[lang])]
         for domain in DOMAIN_ORDER:
-            markup = finance.discovery_source(Path(domain) / 'index.html', lang)
+            markup = discovery.source(Path(domain) / 'index.html', lang)
             links.append((f'/{lang}/discovery/{domain}/', title_of(markup)))
         themes = horizon_themes_cached(lang)
         if themes:
             links.append((f'/{lang}/discovery/regulatory-horizon/', HORIZON_TEXT[lang]['title']))
         entries = []
-        for path in sorted((SOURCE / lang).rglob('*.html')):
-            relative = path.relative_to(SOURCE / lang)
-            source = finance.discovery_source(relative, lang)
+        for relative in discovery.pages(lang):
+            source = discovery.source(relative, lang)
             url, title, body, classes, head, skin, js = discovery_page(source, relative, lang)
             body = f'<div class="discovery-content">{body}</div>'
             page = workspace.page(url, lang, 'discovery', title, body, local_links(url, links), extra_head=head, body_class='discovery-workspace ' + classes)
@@ -400,7 +388,7 @@ def build_discovery(output):
             entries.extend(search_entries(body, url, title))
             count += 1
         write(output, f'assets/search-discovery-{lang}.json', json.dumps(entries, ensure_ascii=False, separators=(',', ':')))
-    shutil.copyfile(ROOT / 'finance-portal/assets/finance.js', output / 'assets/discovery.js')
+    shutil.copyfile(discovery.SCRIPT, output / 'assets/discovery.js')
     return count
 
 

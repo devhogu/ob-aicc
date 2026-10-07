@@ -1,0 +1,222 @@
+# Market risk
+
+Market risk is the risk of loss from adverse movements in interest rates, foreign exchange rates, equity prices, and commodity prices — arising in the trading book and, for banks with structural positions, in the banking book as interest rate risk (IRRBB). Market risk capital is held under the Basel III standardized approach or, where a bank uses internal models, the Internal Models Approach (IMA); for a bank with a trading book, daily VaR and stressed VaR reporting are core regulatory obligations. **The GenAI opportunity is to eliminate the manual assembly burden** — daily VaR narratives, P&L attribution, backtesting documentation, and limit utilization reports — so the market risk team's time is directed at interpretation and response rather than production.
+
+## Problems
+
+### VaR & sensitivity {#var-sensitivity}
+
+| Lens | Problem |
+| --- | --- |
+| Insights & analytics | Daily VaR and sensitivity metrics are produced from the risk system, but anomaly detection — identifying an overnight VaR spike or a factor move that is statistically significant relative to trailing distributions — depends on the analyst on duty noticing the movement. Near-limit breaches and emerging concentration in a risk factor go unreported between the daily report and the next committee cycle. |
+| Enablement | Stress test re-runs — which require ad-hoc sensitivity analysis under specific market scenarios — are bottlenecked on the market risk team's modeling capacity. The CRO and ALCO cannot ask 'what if the local currency depreciates 15%' and receive an immediate answer; each scenario request requires a modeling sprint. |
+| Automation | The daily VaR narrative and weekly Market Risk Committee pack are assembled manually from risk system outputs — factor decomposition, limit utilization, backtesting exception counts — each cycle. The narrative format is consistent; the source data is structured. |
+| New business opportunities | Continuous limit utilization monitoring across all risk factor and desk limits gives the Head of Treasury a near-real-time view of available risk budget. Desks operating well within limits can be signaled to increase exposure; desks approaching limits receive an early warning before a breach occurs. The signal is currently available only in the weekly committee pack. |
+
+## VaR & expected shortfall {#var-expected-shortfall}
+
+Value-at-Risk (VaR) and Expected Shortfall (ES) are the primary statistical measures of potential market loss at a given confidence level and horizon. Where a bank uses the Basel III Internal Models Approach (IMA), it computes daily 99th-percentile VaR and 97.5th-percentile ES across the trading book; backtesting against actual P&L is a regulatory requirement with defined exception thresholds. VaR by risk factor and desk provides the granular view used in limit monitoring; aggregate ES provides the board-level capital adequacy signal.
+
+### VaR & Expected Shortfall Narrative
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-expected-shortfall-narrative
+- Lens: Automation
+- Complexity: M
+- Intent: For a bank with a trading book, the AI agent drafts the daily VaR and expected shortfall commentary — decomposing drivers by desk, risk factor, and portfolio — for the Market Risk Committee pack.
+- Problem to solve: Daily VaR and ES figures are produced by the risk engine, but the driver commentary — which desks, risk factors, or position changes drove the move — is assembled manually. The commentary step adds analyst hours to a same-day reporting cycle in which timeliness is a supervisory expectation.
+- Solution: The AI agent reads the risk engine decomposition, maps VaR and ES movements to desk contributions and factor sensitivities, and drafts the narrative commentary in the committee's standard format. The market risk analyst reviews, adds judgment on unusual patterns, and releases the pack.
+- OKR: The market risk analyst reviews and releases the daily VaR and expected shortfall commentary — decomposing movements by desk, risk factor, and portfolio in the committee's standard format — drafted by the AI agent from the risk engine decomposition.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to draft daily VaR and ES narrative commentary on ≥200 business days per year within 6 months of go-live; desk contribution and factor sensitivity decomposition included in every draft from go-live. |
+| Acceptance | ≥90% of AI-drafted commentaries released by the market risk analyst with only minor additions before committee distribution; driver attribution accuracy confirmed at ≥95% on monthly quality checks. |
+| Cycle | Daily VaR and ES commentary draft available within 30 minutes of risk engine output publication, versus ≥90 minutes of manual assembly under the prior approach. |
+
+### VaR Model Backtesting Pack
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/var-model-backtesting-pack
+- Lens: Automation
+- Complexity: M
+- Intent: Where the Bank uses internal models, the AI agent maintains the rolling 250-day backtesting record, generates the monthly backtesting report in Basel III traffic-light format, and drafts any required supervisory notification when the exception threshold is crossed.
+- Problem to solve: The Basel III backtesting framework rests on a rolling 250-day comparison of actual P&L with VaR, maintained in a format that identifies the traffic-light zone and supports immediate supervisory notification. The monthly backtesting report is assembled manually from the daily comparison records; supervisory notification drafts are prepared from scratch when exception counts breach the threshold.
+- Solution: The AI agent maintains the rolling daily P&L vs VaR comparison, computes the exception count in the 250-day window, applies the traffic-light classification, generates the monthly report, and drafts the supervisory notification where the amber or red threshold is crossed. The Market Risk Officer reviews and submits.
+- OKR: The Market Risk Officer reviews and submits the monthly backtesting report — rolling 250-day exception count and Basel III traffic-light classification — and any required supervisory notification from AI-generated drafts rather than manual assembly from daily comparison records.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent maintains the rolling 250-day P&L vs VaR comparison on ≥200 business days per year within 6 months of go-live; monthly backtesting report generated for ≥11 of 12 months in year 1. |
+| Acceptance | ≥90% of AI-generated monthly reports submitted by the Market Risk Officer without material amendment; exception count and traffic-light classification confirmed accurate in 100% of reports on quarterly quality review. |
+| Cycle | Monthly backtesting report available within 1 business day of month-end, and the supervisory notification draft within 2 hours of a threshold crossing, versus drafting from scratch under the prior approach. |
+
+### Stressed VaR Scenario Narrative
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/var-expected-shortfall/stressed-var-scenario-narrative
+- Lens: Enablement
+- Complexity: M
+- Intent: Where the Bank uses internal models, the AI agent drafts the stressed VaR scenario selection rationale and comparative narrative — justifying the chosen stress period, comparing stressed VaR to current VaR by risk factor, and mapping capital implications — for the Market Risk Committee quarterly pack.
+- Problem to solve: Stressed VaR requires selecting a one-year stress period relevant to the Bank's current portfolio. Justifying the stress period selection, comparing the stressed and current VaR by risk factor, and explaining capital implications requires a narrative that is drafted manually each quarter, consuming the market risk team's time before the committee pack is finalized.
+- Solution: The AI agent reads the current portfolio risk-factor profile, historical stress period performance data, and prior stressed VaR narratives. It evaluates the stress period's relevance to the current portfolio and drafts the selection rationale and comparative narrative in the committee's standard format. The market risk team reviews and approves before submission.
+- OKR: The market risk team reviews and approves an AI-drafted stressed VaR narrative — stress period selection rationale, stressed versus current VaR by risk factor, and capital implications — for the Market Risk Committee quarterly pack, rather than drafting it manually each quarter.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to draft the stressed VaR narrative for ≥4 consecutive quarterly committee packs within 18 months of go-live; stress period relevance evaluated against the current portfolio risk-factor profile in every run. |
+| Acceptance | ≥80% of AI-drafted narratives approved by the market risk team with only minor amendment; stress period selection rationale accepted by the Market Risk Committee without a request for rework in ≥90% of quarters. |
+| Cycle | Narrative draft delivered within 2 business days of the quarter-end stressed VaR output, versus ≥1 week of manual drafting before the committee pack is finalized under the prior approach. |
+
+## P&L attribution & backtesting {#pl-attribution-backtesting}
+
+For a bank with a trading book, P&L attribution explains the daily profit or loss of each trading desk in terms of changes in underlying risk factors — decomposing performance into rate, FX, spread, and volatility drivers. Backtesting compares actual P&L against the VaR estimate to test model accuracy; under Basel III IMA, five or more exceptions in 250 trading days trigger a regulatory capital add-on and supervisory review (the 'traffic light' framework). Both attribution and backtesting documentation are regulatory requirements and are produced daily. Reconciling attributed P&L to the official finance P&L adds a further data-quality step to each cycle.
+
+### Backtesting Exception Documentation Pack
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/backtesting-exception-pack
+- Lens: Automation
+- Complexity: S
+- Intent: Where the Bank uses internal models, the AI agent generates the regulatory backtesting exception documentation when the actual loss exceeds the VaR estimate, pre-populating the root-cause template and Basel III traffic-light status for the Market Risk Committee and supervisor.
+- Problem to solve: Each VaR backtesting exception requires a documented root-cause analysis filed with the Market Risk Committee and, where the exception count triggers the Basel III traffic-light threshold, with the supervisor. Assembling the documentation — exception count in the rolling 250-day window, root-cause classification, and supervisor notification draft — is performed manually after the exception is identified.
+- Solution: The AI agent detects exceptions from the daily P&L vs VaR comparison, updates the rolling 250-day exception counter, classifies the root cause from the P&L attribution data, and generates the exception documentation pack, including a supervisor notification draft if the traffic-light threshold is crossed. The Market Risk Officer reviews and files it.
+- OKR: The Market Risk Officer reviews and files an AI-generated documentation pack for every VaR backtesting exception — updated 250-day exception count, root-cause classification, and traffic-light status — rather than assembling it manually after the exception is identified.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to generate the exception documentation pack for 100% of backtesting exceptions within 6 months of go-live; root-cause template and Basel III traffic-light status pre-populated in every pack from go-live. |
+| Acceptance | ≥85% of AI-proposed root-cause classifications confirmed by the Market Risk Officer on review; ≥90% of packs filed with the Market Risk Committee without material amendment. |
+| Cycle | Exception documentation pack available to the Market Risk Officer within 1 hour of the daily P&L vs VaR comparison, versus ≥1 business day of manual assembly under the prior approach. |
+
+### P&L Attribution Daily Narrative
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/pl-attribution-daily-narrative
+- Lens: Automation
+- Complexity: M
+- Intent: For a bank with a trading book, the AI agent generates the daily P&L attribution narrative — decomposing desk P&L into rate, FX, spread, and volatility drivers — and reconciles attributed P&L to the official finance P&L for the Market Risk Committee.
+- Problem to solve: Daily P&L attribution requires the market risk team to decompose desk performance into risk-factor contributions and reconcile to the official finance P&L. Both steps are performed manually; the reconciliation adds a further data-quality check before the committee pack can be finalized.
+- Solution: The AI agent reads the risk system factor sensitivities and daily market data moves, computes risk-factor P&L attributions by desk, maps to the official finance P&L, and flags reconciliation breaks above threshold. The market risk analyst reviews breaks and releases the narrative for the committee pack.
+- OKR: The market risk analyst reviews reconciliation breaks and releases the daily P&L attribution narrative — desk P&L decomposed into rate, FX, spread, and volatility drivers and reconciled to the official finance P&L — from an AI-generated draft rather than manual decomposition.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to generate the daily P&L attribution narrative on ≥200 business days per year within 6 months of go-live; all desks attributed and reconciled to the official finance P&L in every run. |
+| Acceptance | ≥90% of AI-generated narratives released by the market risk analyst without material amendment; ≥90% of flagged reconciliation breaks confirmed as genuine on review. |
+| Cycle | Attribution narrative and reconciliation break list available within 30 minutes of official finance P&L publication, versus ≥2 hours of manual attribution and reconciliation under the prior approach. |
+
+### P&L Attribution Pattern Analysis
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/pl-attribution-backtesting/pl-attribution-pattern-analysis
+- Lens: Insights
+- Complexity: M
+- Intent: For a bank with a trading book, the AI agent analyzes rolling 90-day P&L attribution patterns to identify systematic model misspecification — risk factors consistently over- or under-attributed — and delivers a quarterly signal to the market risk model validation team.
+- Problem to solve: Daily P&L attribution is reviewed for the current day but not analyzed for systematic patterns across the quarter. Recurring attribution misses — a specific risk factor consistently under-attributed on one desk — indicate model misspecification that should trigger validation review but are not visible without time-series aggregation.
+- Solution: The AI agent reads 90 days of P&L attribution records, computes residual attribution error by risk factor and desk, identifies factors with systematic directional bias, and delivers a quarterly signal report to the market risk model validation team for investigation.
+- OKR: The market risk model validation team receives a quarterly signal report identifying risk factors that are systematically over- or under-attributed by desk, so model misspecification triggers a validation review instead of going unnoticed in daily attribution.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent's pattern analysis runs on rolling 90-day P&L attribution records for ≥4 consecutive quarters within 18 months of go-live; all desks and risk factors covered in every run. |
+| Acceptance | ≥70% of risk factors flagged for systematic bias confirmed by the validation team as warranting investigation; ≥1 model validation review per year initiated from a signal raised by the AI agent. |
+| Cycle | Quarterly signal report delivered within 5 business days of quarter-end, versus no time-series aggregation of attribution residuals under the prior day-by-day review. |
+
+## Sensitivity & Greeks monitoring {#sensitivity-greeks-monitoring}
+
+For a bank with a trading book, sensitivity analysis quantifies the change in portfolio value for a unit movement in a risk factor — interest rate delta, FX gamma, equity vega — enabling the market risk team to monitor the portfolio's directional and convexity exposure to each factor. Greeks monitoring for options-containing books tracks delta, gamma, vega, theta, and rho at desk and aggregate level. Limit frameworks for sensitivities are set alongside VaR limits; a sensitivity near-breach in a specific factor signals concentrated risk-factor exposure before it translates into a VaR breach.
+
+### Greeks Daily Position Report
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/greeks-daily-position-report
+- Lens: Automation
+- Complexity: S
+- Intent: For a bank with an options book, the AI agent compiles the daily Greeks and sensitivity position report — delta, gamma, vega, theta, rho by desk and risk factor — against defined sensitivity limits for the Market Risk Committee morning pack.
+- Problem to solve: Options-containing desks require daily reporting of delta, gamma, vega, theta, and rho positions relative to sensitivity limits. Compiling these from the risk system into the committee's standard tabular format and flagging near-limit positions is performed manually each morning, adding a production step to a same-day reporting cycle.
+- Solution: The AI agent reads the overnight Greeks output from the risk system, applies the limit framework per desk and risk factor, computes utilization percentages, and generates the daily sensitivity report with near-limit flags. The market risk analyst reviews the output before the morning pack is distributed.
+- OKR: The market risk analyst reviews an AI-compiled daily Greeks and sensitivity report — delta, gamma, vega, theta, and rho by desk and risk factor, with limit utilization and near-limit flags — before the Market Risk Committee morning pack is distributed.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to compile the daily sensitivity report on ≥200 business days per year within 6 months of go-live; the limit framework applied per desk and risk factor in every run from go-live. |
+| Acceptance | ≥95% of AI-compiled reports released by the market risk analyst without correction; near-limit flags confirmed accurate against the limit framework in ≥98% of cases on monthly quality checks. |
+| Cycle | Daily report available within 30 minutes of the overnight Greeks output, versus ≥1 hour of manual compilation each morning under the prior approach. |
+
+### Sensitivity Limit Breach Escalation Pack
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/sensitivity-limit-breach-escalation
+- Lens: Automation
+- Complexity: S
+- Intent: For a bank with a trading book, the AI agent generates the escalation pack when a desk crosses a sensitivity limit — pulling the position detail, breach history, and a pre-drafted desk head notification — within the escalation window required by the limits policy.
+- Problem to solve: A sensitivity limit breach triggers an escalation sequence: the desk head is notified, the Market Risk Officer documents the breach, and a management action is agreed. Assembling the escalation documentation — position detail, limit comparison, breach history, and notification draft — consumes part of the escalation window before the escalation itself can start.
+- Solution: The AI agent detects the breach from the daily position report, retrieves the desk position detail, breach count in the rolling period, and prior breach documentation, and generates the escalation pack including the desk head notification draft. The Market Risk Officer reviews and sends within the policy window.
+- OKR: The Market Risk Officer starts every sensitivity limit breach escalation with an AI-generated pack — position detail, limit comparison, breach history, and a pre-drafted notification — and sends it within the window required by the limits policy.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to generate the escalation pack for ≥95% of sensitivity limit breaches within 6 months of go-live; desk position detail, rolling-period breach count, and prior breach documentation included in every pack. |
+| Acceptance | ≥90% of AI-generated escalation packs sent by the Market Risk Officer without material amendment; 100% of breach escalations issued within the limits policy window. |
+| Cycle | Escalation pack available to the Market Risk Officer within 15 minutes of breach detection in the daily position report, versus ≥1 hour of manual assembly at the start of the escalation window under the prior approach. |
+
+### Sensitivity Risk-Factor Concentration Analysis
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/sensitivity-greeks-monitoring/sensitivity-risk-factor-concentration
+- Lens: Insights
+- Complexity: M
+- Intent: For a bank with a trading book, the AI agent analyzes aggregate sensitivity positions across all desks to identify concentrated risk-factor exposures — where multiple desks hold correlated directional positions — for the CRO's weekly risk review.
+- Problem to solve: Desk-level sensitivity limits control individual desk exposures, but correlated directional positions across multiple desks in the same risk factor — interest rate delta concentrated in rates and credit desks simultaneously — represent an aggregate exposure that desk-level monitoring does not capture.
+- Solution: The AI agent reads all desk sensitivity positions, aggregates by risk factor, computes directional correlation across desks, and identifies risk factors where aggregate exposure across multiple desks warrants the CRO's attention beyond individual desk limit status. The CRO receives a weekly risk-factor concentration view alongside the standard desk-level report.
+- OKR: The CRO receives a weekly risk-factor concentration view — aggregate sensitivity positions across all desks, with correlated directional exposures identified — alongside the standard desk-level report.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent's concentration analysis, covering 100% of desk sensitivity positions, runs weekly within 6 months of go-live; weekly view delivered to the CRO for ≥45 consecutive weeks in year 1. |
+| Acceptance | ≥75% of risk factors flagged for aggregate concentration rated as material by the CRO on review; ≥1 cross-desk exposure discussion per quarter initiated from an AI-identified concentration. |
+| Cycle | Weekly concentration view delivered within 1 business day of the week-end position cut, versus no aggregate cross-desk view under the prior desk-level monitoring. |
+
+## Market risk limits utilization {#market-risk-limits-utilization}
+
+For a bank with a trading book, the market risk limits framework sets position constraints at desk, product, and aggregate trading-book level — covering VaR, sensitivity, stop-loss, and concentration limits. Monitoring compliance with the limits framework is a daily obligation; breaches are escalated within defined timeframes and reported to the supervisor. Limit utilization reporting for the Market Risk Committee is typically produced weekly, with breaches and near-misses documented separately. In line with the BCBS 239 principles for risk data aggregation, the Bank should be able to produce consolidated limit utilization data across the trading book on demand.
+
+### Market Risk Limits Utilization Report
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/market-risk-limits-utilization-report
+- Lens: Automation
+- Complexity: M
+- Intent: For a bank with a trading book, the AI agent compiles the weekly market risk limits utilization report across all desks and limit types, highlighting near-breaches and breach documentation for the Market Risk Committee.
+- Problem to solve: The weekly limits utilization report spans VaR, sensitivity, stop-loss, and concentration limits across all desks. Assembling utilization percentages, flagging near-limit positions, and documenting actual breaches with escalation history consumes analyst time before the committee pack is ready.
+- Solution: The AI agent reads daily limit utilization feeds across all limit types and desks, computes weekly utilization summaries, flags near-limit positions above the committee threshold, and generates breach documentation where applicable. The Market Risk Committee secretary checks the assembled pack, and the committee receives it the day before the meeting.
+- OKR: The Market Risk Committee receives the weekly limits utilization report — spanning VaR, sensitivity, stop-loss, and concentration limits across all desks — assembled by the AI agent with near-breach flags and breach documentation current as of the day before the meeting.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to compile the weekly market risk limits utilization report for ≥48 consecutive weeks within 12 months of go-live; all limit types (VaR, sensitivity, stop-loss, concentration) covered across all desks from go-live. |
+| Acceptance | ≥90% of AI-compiled reports accepted by the Market Risk Committee secretary without manual supplementation; breach documentation completeness confirmed at ≥95% of confirmed breach events on quarterly quality review. |
+| Cycle | Full limits utilization pack available to the committee secretary by close of business the day before the weekly meeting, versus same-day manual assembly that compressed committee review time. |
+
+### Market Risk Limit Breach Pattern Analysis
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/market-risk-limit-breach-pattern-analysis
+- Lens: Insights
+- Complexity: M
+- Intent: For a bank with a trading book, the AI agent analyzes rolling 12-month limit breach history by desk, limit type, and market condition, identifying structural limit calibration issues and presenting a signal to the Market Risk Committee for limit review.
+- Problem to solve: Individual limit breaches are documented and escalated per event. Patterns in breach history — a specific desk breaching the same limit type under a defined market condition, or repeated near-breaches that suggest a limit set below normal operating requirements — require time-series analysis not produced routinely by the weekly utilization report.
+- Solution: The AI agent reads 12 months of limit utilization and breach records, computes breach frequency and near-breach distribution by desk and limit type, cross-references against market conditions at the time of each breach, and identifies structural patterns. The Market Risk Committee receives the quarterly breach pattern analysis alongside the standard utilization report.
+- OKR: The Market Risk Committee receives a quarterly breach pattern analysis — breach frequency and near-breach distribution by desk and limit type, cross-referenced to market conditions — identifying structural limit calibration issues for limit review.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent's breach pattern analysis runs on rolling 12-month limit utilization and breach records for ≥4 consecutive quarters within 18 months of go-live; all desks and limit types covered in every run. |
+| Acceptance | ≥70% of structural patterns identified by the AI agent rated by the Market Risk Committee as warranting limit review; ≥1 limit recalibration per year initiated from an AI-identified pattern. |
+| Cycle | Quarterly breach pattern analysis delivered with the standard utilization report within 5 business days of quarter-end, versus event-by-event breach documentation with no routine time-series view under the prior approach. |
+
+### Limits Framework Calibration Review Support
+
+- URN: urn:financial-services:scenario:risk-control/market-risk/market-risk-limits-utilization/limits-framework-calibration-review
+- Lens: Optimize
+- Complexity: M
+- Intent: For a bank with a trading book, the AI agent analyzes the relationship between current limits and the Bank's risk appetite, comparing utilization distributions and capital consumption to identify limits that appear miscalibrated relative to the Bank's capital allocation and strategy, as input for the annual limits review.
+- Problem to solve: The annual limits review is informed by the prior year's utilization experience but does not systematically compare limits against capital allocation or business strategy. Limits set in a prior year's market environment may be too restrictive or too permissive relative to the current strategy and capital position.
+- Solution: The AI agent reads the full year's limit utilization distributions by desk and limit type, the current capital allocation by desk, and the annual business plan. It identifies limits with very low median utilization relative to risk appetite capacity and limits where frequent near-breaches suggest under-calibration, and assembles the analysis document. The annual limits review decides which flagged limits warrant adjustment.
+- OKR: The annual limits review starts from an AI-assembled calibration analysis — utilization distributions by desk and limit type compared against capital allocation and the business plan — identifying limits that appear too restrictive or too permissive for the Bank's risk appetite.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent's calibration analysis is produced for ≥1 annual limits review within 18 months of go-live; the full year's utilization distributions, current capital allocation by desk, and the annual business plan read in every run. |
+| Acceptance | ≥70% of limits flagged as miscalibrated confirmed in the annual limits review as warranting adjustment or further analysis; ≥1 limit change per annual review attributable to the AI agent's analysis. |
+| Cycle | Calibration analysis document delivered ≥2 weeks before the annual limits review, versus a review informed only by the prior year's utilization experience under the prior approach. |

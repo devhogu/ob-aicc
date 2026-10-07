@@ -1674,7 +1674,387 @@
     {
       "path": "portfolio/en/discovery/README.md",
       "hash_basis": "file_bytes",
-      "sha256": "545576f10387e2db7e97efe1cb0e2133425c624f7a4a730b0d67caba8f695ab1"
+      "sha256": "9ff161f5696f98acc2a778b10911dce18113dda5df375c8b6d64157d517b6885"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/credit-exposure-data.md",
+      "hash_basis": "file_bytes",
+      "sha256": "95557d7a4d0667d2a21a8f09e4c1cbb8d2a00e2d730b915b43653bb0601212e3"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/customer-data.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5f5f10b4cb450bd4f34520612f8a487e864cbd459e4fd15b5e2a377cf1ac0ba2"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/data-cycles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5adab745764a501cb1d8bd9648928180dd7e9746cf7d4d799f76a191e669abba"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "0476644f5fcaa0048ae349ca49fcd37ee1f4728748c9add76db3cb6877ab6aa0"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/market-data.md",
+      "hash_basis": "file_bytes",
+      "sha256": "aeb6743dd30e291b2746ed65eba6c6ed13786667b46af740227fe82e89dad9b6"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/master-reference-data.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5ebfdaad58ae82073e37e0819eb34cd51d5e7fa70c818351d164b1cacbe797c1"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/regulatory-data.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6939c6dbac867076997721b8aee6fdc638ca0388059ef1819dd84b3852616017"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/risk-position-data.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6d3ffbeef5b70d43d1b84f143769e966646d3b13960d37efa502797fe9049766"
+    },
+    {
+      "path": "portfolio/en/discovery/banking-data-analytics/transaction-data.md",
+      "hash_basis": "file_bytes",
+      "sha256": "64c45a415ba779c08a542663f5c9ef9fd52e9964512d6f8fd16c2fce7f95d10b"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-channels/atms-self-service.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c9c810c15f2c27974f84ed5d217ca621d146e04aa5d9cc09af4e77b45ad58af1"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-channels/channel-cycles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "545b45c6b138b1c23124cf7fc4975f03ca455da4ee3d6bee4894d75ddbf28fc7"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-channels/contact-center.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f08bdc6a8c1ae47808732bed09c4b612d3ed16b96505ce5e6b09b9f084bf5ec6"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-channels/digital-channels.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a1135e6ea876d562edb0ffb0d8079482c94652ac8e1146c66127bb5368463bc1"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-channels/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "fcfa6cf83543172f309628689a5a17fdec8c4fac96a998ee857c4dabf33f5938"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-channels/partner-api-channels.md",
+      "hash_basis": "file_bytes",
+      "sha256": "589473095604dea01d86f3c644be525e40282664c836561c3c45d17082c1ba6b"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-channels/physical-branches.md",
+      "hash_basis": "file_bytes",
+      "sha256": "188230aa9e455146159bc8137951a2f2c123bfaadb422c8f3b6a9704bcc7a012"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-channels/relationship-management.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e960dc899de3884a087d1a870a44bfb1a67356ae63cd69ef960ec3fed660f09b"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/brand-reputation.md",
+      "hash_basis": "file_bytes",
+      "sha256": "483e6ad8d2808afc7e428fe702658f33fab63c7baebb4224697af767c4b27faf"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/customer-lifetime-value.md",
+      "hash_basis": "file_bytes",
+      "sha256": "aeb69c3d78db9c52d97f242179ba590d613a5457a9838e700b4b0c06d26a8866"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/customer-segmentation.md",
+      "hash_basis": "file_bytes",
+      "sha256": "378e428321323adb49efa56c4241f05ac3fbf0ee84a5519cdd3e5d4ca53d5d11"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "90d4bfec12fc0a80fc824e29c7f7016a4ad98dc4fbda76aed78116524582a553"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/intelligence-cycles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e71228c727e33c6af5bbdf3b17775b1c804b0e3d7bfcf201b94e58aacd0bf45f"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/market-share-positioning.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a4fcb5e46e2c60d86732ddccb1ea40df11eb1fdaa87ee82a9897fe93b4d0079f"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/retention-churn.md",
+      "hash_basis": "file_bytes",
+      "sha256": "137cd9fc54a26417ddf131b2ef5f8534d122b8b50c0dbdf37e4a31adea408bbb"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/voice-of-customer.md",
+      "hash_basis": "file_bytes",
+      "sha256": "860753e67b8b0bdc788714d0f83eea2a6a8b5900494bc54cd84aae7d317c9921"
+    },
+    {
+      "path": "portfolio/en/discovery/customer-market-intelligence/wallet-share.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ca0bad3499a58b5ffef7e7beded65bff803647b98e3e903b7eae20c30ea965e1"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/accounting-financial-close.md",
+      "hash_basis": "file_bytes",
+      "sha256": "fe272460f38df70ed2d2b0c7073b6d25dab5cc45f211a84414b79105aeba0fde"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/alm.md",
+      "hash_basis": "file_bytes",
+      "sha256": "2f583ea3212eb6a4a0f04aadcf90b9a8936c6962002208748a60aa1c59bbada4"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/capital-management.md",
+      "hash_basis": "file_bytes",
+      "sha256": "333406a6b2420dd0a20f6c0c066d9f43a347736f5a35db537c596fb724e4089e"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/finance-cycles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "51ecc88b77eeb34d5a30774ad74d3e3295ae7868a43415102c89c0d845218c6a"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/fpa.md",
+      "hash_basis": "file_bytes",
+      "sha256": "dd2062b01bd5684ee6253f87eea0d952151d6370b241e04dffb6969823a4fbb3"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a8603f74240cb0dd7b584c32ccbf7bfc20165006e7e9e05eabb0cceae3cb8c89"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/liquidity-management.md",
+      "hash_basis": "file_bytes",
+      "sha256": "9b9c78d9ddbf98c00410d551b2d9d205204d5dfef29be4ba87bc1b6c26c61c80"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/performance-measurement.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a38dd0dfcd1383e06e7de0db9cc0042187b823587a4a5a34056b73059757248e"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/regulatory-financial-reporting.md",
+      "hash_basis": "file_bytes",
+      "sha256": "06e4d1f20ee7d7756cf5db7b1bd344610e833648ce21ab4532a66bf59b7bbd12"
+    },
+    {
+      "path": "portfolio/en/discovery/finance-treasury/tax-management.md",
+      "hash_basis": "file_bytes",
+      "sha256": "d5cf69ef85c5336974e1178f35f550e1ccbfc5a77a30143be29292e9fdb4269c"
+    },
+    {
+      "path": "portfolio/en/discovery/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5ec3ff783ab3985ffa13be4aa15d93eb134819b1307246f0d1cb5c9f3f3e48ed"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/climate-esg-risk.md",
+      "hash_basis": "file_bytes",
+      "sha256": "ff9d3174ccea92683926685b4ed70ef13db1450b6b241aff3b54475a3ce86c79"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/compliance-financial-crime.md",
+      "hash_basis": "file_bytes",
+      "sha256": "50cf086fe3ad67d8c5781c23a858932ae0580d9b1a695ba7d273499cc8392b19"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/credit-risk.md",
+      "hash_basis": "file_bytes",
+      "sha256": "dc86fed948b8d309e5b04ce99d8d5c5c6e317dc9a814d259c6991bb71a6bc18c"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/cyber-risk.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e9f38051db0b7867cbebdd7357389dbf6f92bdc7648f096cee0f36db1e22621f"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "1bb1c57a14a6b9fb7df985f8bc353056d7a9f632ba437efaf177af39cbe7d351"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/internal-audit.md",
+      "hash_basis": "file_bytes",
+      "sha256": "08c8d4b8ac9c80aff810089b0fc3b4fadbb1ff219d456ae026faef78c0c2b7a7"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/liquidity-risk.md",
+      "hash_basis": "file_bytes",
+      "sha256": "0af6c739cadb1e5ac52f4b5a861b16aba2c24ef03420a0e8a2cc773ee5ff553a"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/market-risk.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6f64e29598b1d109954351fa7e84cc8db420923ea4e6bb00592cf254fbc539e9"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/model-risk.md",
+      "hash_basis": "file_bytes",
+      "sha256": "dc083ff48d1f6c360fdc61759c6b2a6ba4170239f1c5fc3dd9ffc3f6d8f6d073"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/operational-risk.md",
+      "hash_basis": "file_bytes",
+      "sha256": "d031a4e921cb324f388e90183fc7dc756e0ed10a4589d35cfbf99e8602db84c9"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/risk-cycles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "94812dc7eb4074eab50f89f8f3cb7d3132f0918c6fdeab60540559404d485ec4"
+    },
+    {
+      "path": "portfolio/en/discovery/risk-control/strategic-reputational-risk.md",
+      "hash_basis": "file_bytes",
+      "sha256": "e79809b05721b5d114f4d1c738e4110774cc89122ae4145b3c9ffc93813b8156"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/advisory-research.md",
+      "hash_basis": "file_bytes",
+      "sha256": "2a4ef33cd9865c135ee0f81de0d8ccf0a3b8a3d0a2606427931b0f1719729cf7"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/capability-cycles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "499a83e93e2b1c84e25929ead64034566dc38f799fff60df08ac2647d988ef59"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/collections-recoveries.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bc106080b5cfacae481f06fc502219667547a5b8dff2ba3c87aef52c765c818a"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/credit-decisioning.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5926cfff18f7e6186250be96b64cb243232ef4a5aeda01b76a35fa0a324b0d20"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/customer-onboarding.md",
+      "hash_basis": "file_bytes",
+      "sha256": "392e8eb2351cd881f9dbe8ffb861466480d3938d56598aab6b4bd1b6842f4933"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/customer-servicing.md",
+      "hash_basis": "file_bytes",
+      "sha256": "dc19477717f438857e404160ee9adce73e5fb9b5a8f0241c696e7804408107b5"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/financial-crime.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b54c0880e406f29775f0362ff6f8319c87e0238c97758c287f488abe84a4c7b9"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a9b5b2a19fa6cdb347d43669e0b8efd28c435d8ea34704dca2c24d51da2a3745"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/pricing-profitability.md",
+      "hash_basis": "file_bytes",
+      "sha256": "44c3ed644cc09aaeee367c161d99bd12682e2cdac78ece1a20e2a7e1df501f33"
+    },
+    {
+      "path": "portfolio/en/discovery/shared-banking-capabilities/transaction-processing.md",
+      "hash_basis": "file_bytes",
+      "sha256": "831f26bf3692bf14a6025578edcbd3cdcbac080065ea4d19285a51d2d3c2256f"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-initiatives/change-cycles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "6d89ceb57f83acdaa2f480dbdf3b1acbbe3b23b04ec8f9a167ee6c77dcd7378e"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-initiatives/ecosystem-platform-strategy.md",
+      "hash_basis": "file_bytes",
+      "sha256": "120fee2bc48fba404a26b611ce97e54eb31c2fc776caff66172a577305939ae5"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-initiatives/esg-commitments.md",
+      "hash_basis": "file_bytes",
+      "sha256": "9d067c93ba0d0ae72558a44e525ade7653b233142549587f8690a427254a8ead"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-initiatives/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bbb1434b5bb373e1972744859a58ea57811c8a5020f86ebcb28478f2e7980671"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-initiatives/innovation-portfolio.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c2debdd93268048c1f1d45435f22b7768d2e27afca3b7d1a6a9f8cd9fc85aa0e"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-initiatives/ma.md",
+      "hash_basis": "file_bytes",
+      "sha256": "89ecaf188fe5d766b94a6dfb3f21e31129ddf2d98a4eb1c641faf66caa322306"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-initiatives/major-transformation-programs.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5c323fc45e38c88d4f63b8fa8aca5424ccdb2ca943b61c6c1b8ad5d2703fc0ef"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-initiatives/strategic-partnerships.md",
+      "hash_basis": "file_bytes",
+      "sha256": "cdfcbf8c2ed847298e23a84574fa05e3978026abdd212cbbcaa6d842c27b9c38"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-portfolio/capital-allocation.md",
+      "hash_basis": "file_bytes",
+      "sha256": "1035f637bf26b2f2d10141be34b42b6e772f69419e759416bf742bc0a779d557"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-portfolio/geographic-footprint.md",
+      "hash_basis": "file_bytes",
+      "sha256": "7bb011eaaf9d95e341f29a84c670d9ec399f9db527871b2d638be86f489d441e"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-portfolio/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f7da2d06f2c17fe0899f6dd888b90374c5f20f9cb849d7253c0e62ed873023e7"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-portfolio/product-portfolio.md",
+      "hash_basis": "file_bytes",
+      "sha256": "9d6c80cbb4b1a8ab7d3c5356b4103efa9b7fdaa3323dcd3bad03ac75c2b04d3f"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-portfolio/risk-appetite.md",
+      "hash_basis": "file_bytes",
+      "sha256": "603e73a13e077a959bd6ae6fb127b1df1b982db69a18a66d5de3d4945990e706"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-portfolio/steering-cycles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "8a150502c3e24a603935bf169d11c0dc654fa4ed39d4bb0d64905e4d901872a8"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-portfolio/strategic-priorities.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b4dfac43bbd1a6c3a2891f644d5ae79fe1bb9cf3bc3350ed97c255d09740a98b"
+    },
+    {
+      "path": "portfolio/en/discovery/strategic-portfolio/target-markets-segments.md",
+      "hash_basis": "file_bytes",
+      "sha256": "5b887bb52431a451b7089d7be2a0dcd42cf1b9a51040ff91246167dfd7ebc371"
+    },
+    {
+      "path": "portfolio/en/discovery/value-streams/index.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bb0b80f21c24a1b8677d0600cba77832e2679bee50c9c4f20062af3c142563d8"
     },
     {
       "path": "portfolio/en/initiatives/INI-013-service-resolution/brief.md",

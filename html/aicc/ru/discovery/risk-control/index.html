@@ -154,101 +154,27 @@
 <span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../privacy/">Конфиденциальность</a><a href="../../terms-of-use/">Условия использования</a></div><p class="o-caption">Версия 2.2 · октябрь 2026</p></div></aside>
 <main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-content">
 
-<!-- Skip to main content (keyboard / screen-reader users) -->
-
-
 <div class="page">
-
-  
-  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
-    
-
-
-
-
-
-
-
-
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
 <nav class="breadcrumb" aria-label="Навигационная цепочка">
-  
   <span class="breadcrumb__item">
-    
-    
     <a class="breadcrumb__link" href="../index.html">Каталог сценариев</a>
-    
   </span>
-  
   <span class="breadcrumb__item">
-    
     <span class="breadcrumb__sep" aria-hidden="true">/</span>
-    
-    
     <span class="breadcrumb__current" aria-current="page">Риск и контроль</span>
-    
   </span>
-  
 </nav>
-
-    
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  
-
-  
-  
-
-
-
-
-
-
-
+</div>
 <header class="page-header">
   <div class="page-header__title-row">
     <div>
-      
       <h1 class="page-header__title">Риск и контроль</h1>
     </div>
   </div>
-  
-  
-    <p class="page-header__intent">Риск и контроль — это единое направление управления рисками Банка, построенное на классификации рисков в соответствии с Basel III/IV: финансовые риски (кредитный, рыночный, риск ликвидности), нефинансовые риски (операционный, комплаенс и финансовые преступления, киберриск, модельный, стратегический и репутационный, климатический и ESG-риск) и функция независимой оценки (внутренний аудит). В надзорной системе регулятора по каждой области риска действуют собственные требования к регуляторному капиталу, отчётности и системе управления и контроля; вместе они образуют модель трёх линий защиты Банка. <strong>Генеративный AI позволяет вести непрерывный мониторинг рисков</strong> — и сократить задержку между изменением позиции и управленческим сигналом с месяцев до дней во всех областях классификации рисков.
-</p>
-  
+  <p class="page-header__intent">Риск и контроль — это единое направление управления рисками Банка, построенное на классификации рисков в соответствии с Basel III/IV: финансовые риски (кредитный, рыночный, риск ликвидности), нефинансовые риски (операционный, комплаенс и финансовые преступления, киберриск, модельный, стратегический и репутационный, климатический и ESG-риск) и функция независимой оценки (внутренний аудит). В надзорной системе регулятора по каждой области риска действуют собственные требования к регуляторному капиталу, отчётности и системе управления и контроля; вместе они образуют модель трёх линий защиты Банка. <strong>Генеративный AI позволяет вести непрерывный мониторинг рисков</strong> — и сократить задержку между изменением позиции и управленческим сигналом с месяцев до дней во всех областях классификации рисков.</p>
 </header>
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
 <style>
-  /*
-    Per-page tab selectors — emitted at render time from concern-problems.html.j2
-    using this L1's actual category tags. concern.css carries no hardcoded slugs.
-    Pattern: checked radio siblings the tab-bar label → active style; siblings the
-    matching panel → display:block. One rule pair per category.
-  */
-  
   #problems-tab-financial-risks:checked ~ .problems-tab-bar label[for="problems-tab-financial-risks"] {
     color: var(--ink-accent);
     border-bottom-color: var(--ink-accent);
@@ -258,7 +184,6 @@
   #problems-tab-financial-risks:checked ~ .problems-panel[data-tab="financial-risks"] {
     display: block;
   }
-  
   #problems-tab-non-financial-risks:checked ~ .problems-tab-bar label[for="problems-tab-non-financial-risks"] {
     color: var(--ink-accent);
     border-bottom-color: var(--ink-accent);
@@ -268,241 +193,89 @@
   #problems-tab-non-financial-risks:checked ~ .problems-panel[data-tab="non-financial-risks"] {
     display: block;
   }
-  
 </style>
-
-
 <section class="concern-problems" aria-label="Проблемы">
-
-  
-  
-  <input
-    type="radio"
-    class="problems-tab-input"
-    name="problems-tabs"
-    id="problems-tab-financial-risks"
-    value="financial-risks"
-    checked
-    aria-label="Финансовые риски"
-  >
-  
-  <input
-    type="radio"
-    class="problems-tab-input"
-    name="problems-tabs"
-    id="problems-tab-non-financial-risks"
-    value="non-financial-risks"
-    
-    aria-label="Нефинансовые риски"
-  >
-  
-
-  
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-financial-risks" value="financial-risks" checked aria-label="Финансовые риски">
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-non-financial-risks" value="non-financial-risks" aria-label="Нефинансовые риски">
   <div class="problems-tab-bar" role="tablist">
-    
-    <label
-      class="problems-tab-label"
-      for="problems-tab-financial-risks"
-      role="tab"
-      aria-controls="problems-panel-financial-risks"
-    >Финансовые риски</label>
-    
-    <label
-      class="problems-tab-label"
-      for="problems-tab-non-financial-risks"
-      role="tab"
-      aria-controls="problems-panel-non-financial-risks"
-    >Нефинансовые риски</label>
-    
+    <label class="problems-tab-label" for="problems-tab-financial-risks" role="tab" aria-controls="problems-panel-financial-risks">Финансовые риски</label>
+    <label class="problems-tab-label" for="problems-tab-non-financial-risks" role="tab" aria-controls="problems-panel-non-financial-risks">Нефинансовые риски</label>
   </div>
-
   <hr class="problems-divider">
-
-  
-  
-  <div
-    class="problems-panel"
-    id="problems-panel-financial-risks"
-    data-tab="financial-risks"
-    role="tabpanel"
-    aria-labelledby="problems-tab-financial-risks"
-  >
+  <div class="problems-panel" id="problems-panel-financial-risks" data-tab="financial-risks" role="tabpanel" aria-labelledby="problems-tab-financial-risks">
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Аналитика</h3><p>Миграцию и концентрацию кредитного риска, изменения VaR и чувствительности, сигналы по LCR и оттоку фондирования формируют разные системы управления рисками, каждая в своём отчётном цикле. Между заседаниями комитетов у директора по рискам нет сводной картины использования риск-аппетита по финансовым рискам: приближение контрагента к лимиту, нарастающая концентрация по фактору риска в нескольких торговых подразделениях или формирующаяся концентрация фондирования выявляются, только когда их покажет очередной плановый отчёт.</p></article><article class="discovery-context-card"><h3>Поддержка</h3><p>Чтобы построить отраслевые стресс-сценарии, подготовить пояснения к стрессовому VaR и смоделировать горизонт выживания в рамках внутренней процедуры оценки достаточности ликвидности (ILAAP), аналитики по кредитному и рыночному риску и казначейства сначала собирают данные об экспозициях, позициях и фондировании из нескольких систем и только затем начинают анализ. Кредитный комитет, комитет по рыночному риску и комитет по управлению активами и пассивами (КУАП) часто получают анализ уже после заседания, к которому он готовился.</p></article><article class="discovery-context-card"><h3>Автоматизация</h3><p>Пояснения к резервам под ожидаемые кредитные убытки (ОКУ), комментарии к выходным данным моделей PD/LGD/EAD, ежедневные пояснения к VaR и атрибуции P&amp;L, отчёты об использовании лимитов и управленческие пояснения по LCR и NSFR готовятся в фиксированных ежедневных, ежемесячных или ежеквартальных циклах на основе структурированных выходных данных моделей и систем. У каждого из этих документов есть заданный формат, известные источники данных и повторяющийся порядок сборки, поэтому проект можно готовить с применением AI, оставив проверку и утверждение за сотрудником.</p></article><article class="discovery-context-card"><h3>Новые возможности</h3><p>Непрерывный мониторинг позиции по финансовым рискам — еженедельные сигналы о концентрации и миграции, текущий запас по лимитам и обновлённый горизонт выживания по ликвидности — позволяет директору по рискам, директору по кредитным рискам и руководителю казначейства распределять аппетит к кредитному риску, бюджет риска и буферы ликвидности исходя из текущей позиции, а не из отчёта за прошлый месяц.</p></article></div>
   </div>
-  
-  <div
-    class="problems-panel"
-    id="problems-panel-non-financial-risks"
-    data-tab="non-financial-risks"
-    role="tabpanel"
-    aria-labelledby="problems-tab-non-financial-risks"
-  >
+  <div class="problems-panel" id="problems-panel-non-financial-risks" data-tab="non-financial-risks" role="tabpanel" aria-labelledby="problems-tab-non-financial-risks">
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Аналитика</h3><p>События операционного риска, число сигналов мониторинга в целях ПОД/ФТ, сигналы о киберугрозах, показатели работы моделей, упоминания Банка в СМИ, значимые для репутации, и данные о подверженности ESG-рискам поступают на отдельные дашборды по каждой области риска, у каждого из которых свой отчётный цикл. Между ежеквартальными заседаниями комитетов у директора по рискам нет сводной картины использования бюджета нефинансовых рисков по всем этим областям; новые закономерности на стыке областей — например, серия операционных инцидентов, связанная со сбоем модели, или сигнал переходного ESG-риска, усиливающий кредитный риск, — систематически не выявляются.</p></article><article class="discovery-context-card"><h3>Поддержка</h3><p>Обновление самооценки рисков и контролей (RCSA), донастройка моделей мониторинга в целях ПОД/ФТ, оценка киберустойчивости, валидация моделей, сценарный анализ стратегического риска и климатическое стресс-тестирование требуют, чтобы специалисты по рискам сначала собрали данные из нескольких систем и только потом приступали к содержательному анализу. Во всех областях нефинансовых рисков сбор данных отнимает значительную часть времени старших специалистов, и на профессиональное суждение и реагирование его остаётся меньше.</p></article><article class="discovery-context-card"><h3>Автоматизация</h3><p>Регуляторная отчётность по нефинансовым рискам — отчёты об операционной устойчивости, сообщения о подозрительных операциях (сделках), пакеты ответов в ходе надзорных проверок, материалы для комитета по модельному риску, раскрытие информации по ESG и TCFD — готовится в фиксированных циклах на основе структурированных исходных данных. У каждого вида отчётов есть заданный формат, известные источники данных и повторяющийся порядок сборки, поэтому проект можно готовить с применением AI, оставив проверку и утверждение за сотрудником.</p></article><article class="discovery-context-card"><h3>Новые возможности</h3><p>Банки, которые непрерывно отслеживают нефинансовые риски — долю обработанных сигналов ПОД/ФТ в режиме реального времени, еженедельные оценки подверженности киберрискам, ежемесячные тепловые карты ESG-рисков портфеля, — могут показать надзорному органу такую зрелость управления рисками, какой не достичь банкам, собирающим ту же картину раз в квартал. Это выражается в более быстром согласовании новых продуктов регулятором, менее пристальном внимании надзорного органа и репутационном преимуществе при комплексной проверке (due diligence), которую проводят институциональные клиенты.</p></article></div>
   </div>
-  
-
 </section>
-  
-
-  
-  <div id="main-content" aria-label="Обзор раздела">
-
-    <div class="bp-grid">
-
-      
-      
-      <div class="top-band" role="region" aria-label="Стратегический уровень">
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="main-content" aria-label="Обзор раздела">
+<div class="bp-grid">
+<div class="top-band" role="region" aria-label="Стратегический уровень">
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Финансовые риски</div>
     <h2 class="card__title card__title--lg">Кредитный риск <span class="card__count" aria-label="19 сценариев">(19)</span></h2>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Экспозиции на контрагентов</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="credit-risk/index.html#counterparty-exposure-analytics">Аналитика экспозиций на контрагентов <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="credit-risk/index.html#pd-lgd-ead-model-outputs">Выходные данные моделей PD/LGD/EAD <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="credit-risk/index.html#watchlist-early-warning">Список наблюдения и раннее предупреждение <span class="card-link__count">(4)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Концентрация портфеля и резервы</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="credit-risk/index.html#concentration-sector-risk">Концентрация и отраслевой риск <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="credit-risk/index.html#vintage-cohort-migration">Поколения кредитов и миграция <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="credit-risk/index.html#ecl-ifrs9-provisions">ОКУ и резервы по МСФО (IFRS) 9 <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="credit-risk/index.html" tabindex="0" aria-label="Кредитный риск"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Нефинансовые риски</div>
     <h2 class="card__title card__title--lg">Комплаенс и финансовые преступления <span class="card__count" aria-label="18 сценариев">(18)</span></h2>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">ПОД/ФТ, санкции и финансовые преступления</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="compliance-financial-crime/index.html#aml-transaction-monitoring">Мониторинг операций в целях ПОД/ФТ <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="compliance-financial-crime/index.html#sar-case-management">Сообщения о подозрительных операциях и ведение дел <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="compliance-financial-crime/index.html#sanctions-pep-screening">Проверка по санкционным спискам и ПДЛ <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Поведенческий риск и соблюдение требований регулятора</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="compliance-financial-crime/index.html#regulatory-licensing-filings">Лицензирование и регуляторная отчётность <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="compliance-financial-crime/index.html#conduct-complaints">Поведенческий риск и жалобы <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="compliance-financial-crime/index.html#regulatory-examination-management">Надзорные проверки <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="compliance-financial-crime/index.html" tabindex="0" aria-label="Комплаенс и финансовые преступления"></a>
-  
 </article>
-        
-      </div>
-      
-
-      
-      
-      
-      
-      <div class="main-row" role="region" aria-label="Цепочка создания стоимости и возможности">
-
-        
-        
-        
-
-
-
-
-
-
-
-
-
-
+</div>
+<div class="main-row" role="region" aria-label="Цепочка создания стоимости и возможности">
 <article class="card card--flow" data-ui-pattern="workflows">
   <div class="card__head">
     <div class="card__eyebrow">Управление рисками</div>
@@ -510,566 +283,263 @@
   </div>
   <div class="card__body">
     <div class="flow-sections">
-
       <div class="flow-section">
         <div class="flow-section__label">Выявление и оценка</div>
         <ul class="flow-list" aria-label="Идентификация и оценка">
-
           <li class="flow-item"><details class="workflow-preview"><summary>Цикл RCSA (самооценка рисков и контролей) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Ежегодная самооценка рисков и контролей с ежеквартальной актуализацией: выявление присущих рисков и их оценка, оценка эффективности контролей, рейтинг остаточного риска и фиксация замечаний. Цикл соответствует стандартам Базельского комитета по операционному риску, а если в периметр оценки входят модели, — рекомендациям по управлению модельным риском.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="risk-cycles/index.html#stage-rcsa-cycle--identify">Выявление</a></li><li><a href="risk-cycles/index.html#stage-rcsa-cycle--assess">Оценка</a></li><li><a href="risk-cycles/index.html#stage-rcsa-cycle--score">Рейтинг</a></li><li><a href="risk-cycles/index.html#stage-rcsa-cycle--document">Документирование</a></li><li><a href="risk-cycles/index.html#stage-rcsa-cycle--refresh">Актуализация</a></li></ol></div></details></li>
-
           <li class="flow-item"><details class="workflow-preview"><summary>Цикл стресс-тестирования (ICAAP, ILAAP, климатические риски) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Ежегодная комплексная программа стресс-тестирования: стресс-тестирование капитала в рамках ICAAP, ликвидности — в рамках ILAAP и сценарный анализ климатических рисков по базовому и неблагоприятному сценариям для кредитного, рыночного, климатического риска и риска ликвидности. Программа соответствует требованиям и рекомендациям надзорных органов к ICAAP и ILAAP и сценариям физических и переходных рисков NGFS в соответствии с рекомендациями TCFD.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--define">Определение сценариев</a></li><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--run">Расчёт по моделям</a></li><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--aggregate">Агрегирование</a></li><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--approve">Утверждение</a></li><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--submit">Представление</a></li></ol></div></details></li>
-
         </ul>
       </div>
-
       <div class="flow-section">
         <div class="flow-section__label">Система управления и контроля</div>
         <ul class="flow-list" aria-label="Корпоративное управление и надзор">
-
           <li class="flow-item"><details class="workflow-preview"><summary>Цикл управления лимитами и контроля нарушений <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Непрерывный мониторинг лимитов риска со структурированным циклом контроля нарушений — выявление нарушений, анализ причин, эскалация и урегулирование — по финансовым и нефинансовым видам риска. Ключевой показатель цикла — время от выявления нарушения до задокументированного урегулирования или утверждённого решения по лимиту.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--set">Установление лимитов</a></li><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--monitor">Мониторинг</a></li><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--detect">Выявление нарушений</a></li><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--investigate">Расследование</a></li><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--resolve">Урегулирование</a></li></ol></div></details></li>
-
           <li class="flow-item"><details class="workflow-preview"><summary>Цикл отчётности о рисках (комитет по управлению рисками и Совет директоров) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Ежемесячная и ежеквартальная отчётность о рисках для комитета по управлению рисками при Правлении и Совета директоров: сводная картина рисков, использование лимитов, новые риски и изменения регулирования. Ключевой показатель цикла — время от получения данных о позициях по рискам до готовности пакета материалов для комитета.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--aggregate">Агрегирование</a></li><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--validate">Сверка данных</a></li><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--brief">Подготовка пакета</a></li><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--discuss">Обсуждение</a></li><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--track">Контроль поручений</a></li></ol></div></details></li>
-
           <li class="flow-item"><details class="workflow-preview"><summary>Цикл валидации моделей (управление модельным риском) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Ежегодная программа валидации моделей: анализ реестра моделей, независимая валидация существенных моделей, утверждение для дальнейшего использования, мониторинг качества работы и плановый вывод из эксплуатации — в соответствии с надзорными рекомендациями по управлению модельным риском, такими как SR 11-7.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="risk-cycles/index.html#stage-model-validation-cycle--inventory">Реестр моделей</a></li><li><a href="risk-cycles/index.html#stage-model-validation-cycle--validate">Валидация</a></li><li><a href="risk-cycles/index.html#stage-model-validation-cycle--approve">Утверждение</a></li><li><a href="risk-cycles/index.html#stage-model-validation-cycle--monitor">Мониторинг качества</a></li><li><a href="risk-cycles/index.html#stage-model-validation-cycle--retire">Вывод из эксплуатации</a></li></ol></div></details></li>
-
         </ul>
       </div>
-
     </div>
 </div></article>
-        
-
-        
-        <div class="right-col">
-          
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="right-col">
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Финансовые риски</div>
     <h3 class="card__title">Рыночный риск <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">VaR и чувствительность</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="market-risk/index.html#var-expected-shortfall">VaR и ожидаемый дефицит <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="market-risk/index.html#sensitivity-greeks-monitoring">Мониторинг чувствительности и «греков» <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Атрибуция P&amp;L и лимиты</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="market-risk/index.html#pl-attribution-backtesting">Атрибуция P&amp;L и бэктестинг <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="market-risk/index.html#market-risk-limits-utilization">Использование лимитов рыночного риска <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="market-risk/index.html" tabindex="0" aria-label="Рыночный риск"></a>
-  
 </article>
-          
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Финансовые риски</div>
     <h3 class="card__title">Риск ликвидности <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Достаточность фондирования и отток средств</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="liquidity-risk/index.html#lcr-nsfr-reporting">Отчётность по LCR и NSFR <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="liquidity-risk/index.html#intraday-liquidity-monitoring">Мониторинг внутридневной ликвидности <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="liquidity-risk/index.html#funding-runoff-concentration">Отток и концентрация фондирования <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Стресс-тестирование и кризисные ситуации</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="liquidity-risk/index.html#stress-contingency-funding">Стресс-тестирование и экстренное фондирование <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="liquidity-risk/index.html" tabindex="0" aria-label="Риск ликвидности"></a>
-  
 </article>
-          
-        </div>
-        
-
-      </div>
-      
-
-      
-      
-      <div class="below-band" role="region" aria-label="Цепочка создания стоимости и возможности">
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+</div>
+<div class="below-band" role="region" aria-label="Цепочка создания стоимости и возможности">
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Нефинансовые риски</div>
     <h3 class="card__title">Операционный риск <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">События с потерями и KRI</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="operational-risk/index.html#loss-events-near-misses">События с потерями и инциденты без потерь <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="operational-risk/index.html#rcsa-kri-monitoring">RCSA и мониторинг KRI <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Третьи стороны и непрерывность деятельности</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="operational-risk/index.html#third-party-tprm">Третьи стороны и TPRM <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="operational-risk/index.html#business-continuity-dr">Непрерывность деятельности и аварийное восстановление <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="operational-risk/index.html" tabindex="0" aria-label="Операционный риск"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Нефинансовые риски</div>
     <h3 class="card__title">Киберриск <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Угрозы и уязвимости</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="cyber-risk/index.html#threat-intelligence-exposure">Анализ угроз и подверженность атакам <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="cyber-risk/index.html#vulnerability-patch-management">Управление уязвимостями и обновлениями безопасности <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Реагирование и устойчивость</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="cyber-risk/index.html#incident-detection-response">Обнаружение инцидентов и реагирование <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="cyber-risk/index.html#cyber-resilience-recovery">Киберустойчивость и восстановление <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="cyber-risk/index.html" tabindex="0" aria-label="Киберриск"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Нефинансовые риски</div>
     <h3 class="card__title">Модельный риск <span class="card__count" aria-label="17 сценариев">(17)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Жизненный цикл и валидация моделей</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="model-risk/index.html#model-inventory-governance">Реестр моделей и система управления и контроля <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="model-risk/index.html#model-validation">Валидация моделей <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Мониторинг моделей и отчётность</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="model-risk/index.html#model-performance-monitoring">Мониторинг качества моделей <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="model-risk/index.html#model-risk-reporting">Отчётность по модельному риску <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
-    
       <div class="sub-group">
         <div class="sub-group__label">Управление применением AI</div>
         <div class="sub-group__items">
           <a class="card-link" href="model-risk/index.html#ai-governance">Управление применением AI <span class="card-link__count">(5)</span></a>
         </div>
       </div>
-      </div>
-    
+    </div>
   </div>
-  
   <a class="card__click-target" href="model-risk/index.html" tabindex="0" aria-label="Модельный риск"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Нефинансовые риски</div>
     <h3 class="card__title">Стратегический и репутационный риск <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Риск стратегических решений</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="strategic-reputational-risk/index.html#strategic-decision-risk-analysis">Анализ риска стратегических решений <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="strategic-reputational-risk/index.html#competitive-industry-signals">Конкурентные и отраслевые сигналы <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Репутационные сигналы и реагирование</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="strategic-reputational-risk/index.html#reputational-signal-monitoring">Мониторинг репутационных сигналов <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="strategic-reputational-risk/index.html#crisis-response-narrative">Антикризисное реагирование и сообщения <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="strategic-reputational-risk/index.html" tabindex="0" aria-label="Стратегический и репутационный риск"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Нефинансовые риски</div>
     <h3 class="card__title">Климатический и ESG-риск <span class="card__count" aria-label="13 сценариев">(13)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Физический и переходный риск</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="climate-esg-risk/index.html#physical-risk-assessment">Оценка физического риска <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="climate-esg-risk/index.html#transition-risk-carbon-exposure">Переходный риск и подверженность углеродному риску <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Подверженность ESG-рискам и раскрытие информации</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="climate-esg-risk/index.html#esg-counterparty-scoring">ESG-оценка контрагентов <span class="card-link__count">(4)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="climate-esg-risk/index.html#tcfd-issb-disclosure">Раскрытие информации по TCFD и ISSB <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="climate-esg-risk/index.html" tabindex="0" aria-label="Климатический и ESG-риск"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Независимая оценка</div>
     <h3 class="card__title">Внутренний аудит <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Планирование и проведение аудита</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="internal-audit/index.html#audit-universe-risk-ranking">Объекты аудита и ранжирование по риску <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="internal-audit/index.html#audit-execution-workpapers">Проведение аудита и рабочие документы <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Замечания и их устранение</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="internal-audit/index.html#findings-thematic-synthesis">Замечания и тематическое обобщение <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="internal-audit/index.html#remediation-tracking">Контроль устранения замечаний <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="internal-audit/index.html" tabindex="0" aria-label="Внутренний аудит"></a>
-  
 </article>
-        
-      </div>
-      
-
-    </div>
-
-  </div>
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
+</div>
+</div>
+</div>
 <section class="concern-scenarios" aria-label="Сценарии">
-
-  
   <div class="scenarios-header-row">
     <div class="scenarios-eyebrow">Сценарии</div>
     <h2 class="scenarios-heading">Сценарии</h2>
   </div>
-  
-
   <div class="scenarios-column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
     <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
     <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
     <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
   </div>
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/icaap-ilaap-narrative-assembly" id="scenario-icaap-ilaap-narrative-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
@@ -1080,69 +550,37 @@
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">AI-агент собирает пояснительные главы документов внутренней процедуры оценки достаточности капитала (ICAAP) и внутренней процедуры оценки достаточности ликвидности (ILAAP) из выходных данных стресс-моделей, оценок достаточности капитала по каждому компоненту (Pillar) и анализа горизонта выживания по ликвидности по всем видам риска и готовит проект документа, который директор по рискам и финансовый директор рассматривают до представления надзорному органу.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--L"
-      title="Сложность"
-    >L</span>
+    <span class="scenario-complexity scenario-complexity--L" title="Сложность">L</span>
   </summary>
-
   <div class="scenario-card__body"><p class="horizon-chip"><span>Регуляторные требования:</span> <a href="../regulatory-horizon/#capital-liquidity">Реформы требований к капиталу и ликвидности</a></p>
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решаемая задача</div>
       <p>Пояснительная часть ICAAP и ILAAP охватывает кредитный, рыночный, операционный, модельный, климатический и стратегический риски и риск ликвидности, и за каждый из них отвечает отдельное подразделение. Чтобы собрать главы, выверить перекрёстные ссылки и подготовить из материалов 14–20 участников цельное заключение директора по рискам, старшие специалисты по управлению рисками в каждом цикле несколько недель координируют работу.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решение</div>
       <p>AI-агент анализирует выходные данные стресс-моделей, оценки достаточности капитала и пояснения к анализу горизонта выживания по ликвидности от всех подразделений по управлению рисками, участвующих в подготовке. Он собирает документ в установленной структуре ICAAP/ILAAP — профиль рисков, внутренняя оценка достаточности капитала, результаты стресс-сценариев, управленческие меры и проект заверения директора по рискам — с выверенными перекрёстными ссылками и добавленными сравнениями с прошлым годом. Директор по рискам и финансовый директор рассматривают собранный документ и до представления надзорному органу выносят профессиональное суждение по прогнозным заявлениям.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Критерии приёмки</div>
-      
       <p class="okr-objective">Директор по рискам и финансовый директор выносят профессиональное суждение о рисках Банка в целом по проекту ICAAP/ILAAP, собранному AI-агентом, — все установленные разделы заполнены, перекрёстные ссылки выверены, сравнения с прошлым годом добавлены, — вместо того чтобы координировать материалы 14–20 участников.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Внедрение</div>
           <p>Не позднее 18 месяцев с даты запуска пояснительная часть ICAAP/ILAAP, собранная AI-агентом, используется как базовый документ хотя бы в одном ежегодном цикле представления надзорному органу; все установленные разделы (профиль рисков, внутренняя оценка достаточности капитала, результаты стресс-сценариев, управленческие меры, проект заверения директора по рискам) охвачены с момента запуска.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Принятие</div>
           <p>≥80% собранных пояснительных разделов директор по рискам принимает без переработки структуры; число ошибок в перекрёстных ссылках между разделами, выявленных надзорным органом, сокращается до ≤2 за цикл представления.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Цикл</div>
           <p>Полная сборка пояснительной части ICAAP/ILAAP завершается не позднее пяти рабочих дней с даты поступления материалов от всех участников; в прежнем процессе этап координации и сборки занимал ≥4 недель.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/risk-appetite-breach-investigation" id="scenario-risk-appetite-breach-investigation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Поддержка</span>
@@ -1153,71 +591,37 @@
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">Когда показатель риск-аппетита выходит за пороговое значение, AI-агент собирает для директора по рискам пакет материалов для разбора нарушения — текущую позицию по всем связанным видам риска, историю нарушений и соответствующий стрессовый контекст, — чтобы директор по рискам мог ответить Совету директоров или надзорному органу в установленный срок.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Сложность"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решаемая задача</div>
       <p>Нарушение показателя системы риск-аппетита требует от директора по рискам структурированного ответа: позиция, вызвавшая нарушение, её динамика, связанные показатели по другим видам риска и предлагаемые управленческие меры. Для этого нужны данные по кредитному, рыночному, операционному риску, риску ликвидности и капиталу из разных систем отчётности, и аналитики обычно тратят на подготовку несколько дней.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решение</div>
       <p>AI-агент анализирует сработавший показатель системы риск-аппетита, получает текущую позицию по всем связанным показателям других видов риска, показывает историю и динамику нарушения, соотносит его с соответствующим стресс-сценарием и формирует пакет материалов в стандартном формате Банка для ответа на нарушение риск-аппетита. Директор по рискам рассматривает пакет, добавляет предложение по управленческим мерам и в установленный срок представляет его комитету Совета директоров по рискам или надзорному органу.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Критерии приёмки</div>
-      
       <p class="okr-objective">В срок, установленный системой управления и контроля, директор по рискам представляет комитету Совета директоров по рискам или надзорному органу структурированный ответ на нарушение показателя риск-аппетита; текущую позицию по связанным видам риска, историю нарушений и стрессовый контекст собирает AI-агент.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Внедрение</div>
           <p>Не позднее 12 месяцев с даты запуска AI-агент собирает пакет материалов для директора по рискам не менее чем по 90% нарушений пороговых значений показателей риск-аппетита; с момента запуска каждый пакет охватывает все пять видов риска (кредитный, рыночный, риск ликвидности, операционный, капитал).</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Принятие</div>
           <p>≥80% пакетов, собранных AI-агентом, директор по рискам принимает без существенных дополнений до представления Совету директоров или надзорному органу; при контроле качества точность данных по видам риска подтверждается на уровне ≥95%.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Цикл</div>
           <p>Пакет материалов поступает директору по рискам не позднее четырёх часов с момента уведомления о нарушении показателя риск-аппетита; при прежнем подходе аналитики готовили его ≥2 рабочих дней.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/raf-threshold-calibration-synthesis" id="scenario-raf-threshold-calibration-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Оптимизация</span>
@@ -1228,69 +632,37 @@
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">AI-агент анализирует работу показателей по всей системе риск-аппетита — частоту нарушений, близость к стрессовым уровням и динамику портфеля по каждому показателю — и выявляет показатели, пороговые значения которых не соответствуют текущей структуре портфеля или заявленной Банком толерантности к риску.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Сложность"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решаемая задача</div>
       <p>Пороговые значения системы риск-аппетита пересматриваются ежегодно: каждый ответственный за вид риска выносит экспертное суждение, не видя, как работает весь набор показателей в совокупности. Пороги, которые стали систематически слишком жёсткими или слишком мягкими по сравнению с фактическим риском портфеля, — а это видно только в совокупности показателей по кредитному, рыночному риску, риску ликвидности и капиталу, — выявляются от случая к случаю, а не планомерно.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решение</div>
       <p>AI-агент анализирует данные о работе показателей риск-аппетита по всем видам риска за 24 месяца, рассчитывает по каждому показателю частоту нарушений, распределение расстояния до порога и динамику портфеля и выявляет показатели, которые следует перекалибровать. Он сопоставляет каждый такой показатель с заявлением Банка о толерантности к риску и диапазонами ориентиров банков-аналогов и готовит пакет материалов по калибровке для директора по рискам и комитета Совета директоров по рискам. Ответственные за виды риска рассматривают отмеченные показатели и до ежегодного обновления системы риск-аппетита подтверждают или корректируют пороговые значения.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Критерии приёмки</div>
-      
       <p class="okr-objective">До каждого ежегодного обновления системы риск-аппетита директор по рискам и комитет Совета директоров по рискам получают подготовленный AI-агентом пакет материалов по калибровке пороговых значений, в котором кандидаты на пересмотр выявлены по частоте нарушений, близости к стрессовым уровням и динамике портфеля по всем видам риска.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Внедрение</div>
           <p>Не позднее 18 месяцев с даты запуска пакет материалов по калибровке, подготовленный AI-агентом на основе данных о работе показателей риск-аппетита за 24 месяца, представлен хотя бы в одном ежегодном цикле обновления системы риск-аппетита; каждый расчёт охватывает все четыре группы видов риска (кредитный, рыночный, риск ликвидности, капитал).</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Принятие</div>
           <p>≥70% выявленных AI-агентом кандидатов на перекалибровку ответственные за виды риска признают требующими пересмотра порога; в каждом ежегодном обновлении ≥1 существенная корректировка порога риск-аппетита основана на сигнале о работе показателя, выявленном AI-агентом.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Цикл</div>
           <p>Пакет материалов по калибровке готов не позднее пяти рабочих дней с даты ежегодного среза данных о работе показателей; при прежнем подходе каждый ответственный за вид риска ежегодно выносил экспертное суждение без установленного срока завершения.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/regulatory-capital-efficiency-signals" id="scenario-regulatory-capital-efficiency-signals" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">Новые возможности</span>
@@ -1301,71 +673,37 @@
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">AI-агент анализирует структуру активов Банка, взвешенных по риску (RWA), по кредитному, рыночному и операционному риску, выявляет структурную неэффективность использования капитала — участки с высокой плотностью RWA, пробелы в методологии моделей, неполное признание обеспечения — и до начала планирования капитала в рамках внутренней процедуры оценки достаточности капитала (ICAAP) представляет директору по рискам и финансовому директору ранжированный набор сигналов.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Сложность"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решаемая задача</div>
       <p>Возможности оптимизации RWA оценивают по отдельности: по кредитному риску — признание обеспечения, по рыночному — выбор методологии, по операционному — калибровку стандартизированного подхода, а если Банк применяет внутренние модели или может запросить разрешение на них, — также соответствие требованиям подхода на основе внутренних рейтингов (IRB) и выбор между стандартизированным подходом и подходом на основе внутренних моделей. Единую картину по всем видам риска — где в пределах действующих регуляторных разрешений можно повысить эффективность использования капитала — директор по рискам и финансовый директор получают, только когда цикл планирования капитала в рамках ICAAP уже идёт.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решение</div>
       <p>AI-агент анализирует данные о структуре и плотности RWA из систем кредитного, рыночного и операционного риска, учитывает действующий набор регуляторных разрешений Банка и выявляет случаи, когда совершенствование методологии моделей, улучшение документации по обеспечению или доработка соглашений о неттинге снизят требования к капиталу в допустимых пределах. Он ранжирует сигналы по оценочному влиянию на RWA и регуляторной осуществимости и передаёт пакет директору по рискам и финансовому директору до начала цикла планирования капитала в рамках ICAAP. Специалисты по рискам и финансам проверяют оценки и запускают наиболее приоритетные направления работ.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Критерии приёмки</div>
-      
       <p class="okr-objective">Директор по рискам и финансовый директор начинают планирование капитала в рамках ICAAP с подготовленным AI-агентом ранжированным набором сигналов о неэффективности RWA — по признанию кредитного обеспечения и соответствию подходу IRB, методологии рыночного риска и калибровке стандартизированного подхода к операционному риску — с оценкой влияния на RWA и баллами регуляторной осуществимости.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Внедрение</div>
           <p>Не позднее 18 месяцев с даты запуска анализ сигналов эффективности капитала, выполненный AI-агентом, подготовлен хотя бы к одному циклу планирования капитала в рамках ICAAP; с момента запуска каждый расчёт охватывает RWA по всем трём видам риска (кредитный, рыночный, операционный).</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Принятие</div>
           <p>≥65% ранжированных AI-агентом сигналов директор по рискам и финансовый директор по итогам рассмотрения признают существенными; в каждом ежегодном цикле планирования на основе выявленных AI-агентом сигналов запускается ≥1 направление работ по оптимизации RWA.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Цикл</div>
           <p>Пакет сигналов эффективности капитала готов не менее чем за 4 недели до начала планирования капитала в рамках ICAAP, а не тогда, когда цикл планирования уже идёт; специалисты по рискам и финансам успевают заказать анализ осуществимости до того, как цикл планирования сожмёт график.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/cro-risk-synthesis" id="scenario-cro-risk-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Аналитика</span>
@@ -1376,77 +714,40 @@
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">AI-агент сводит результаты стресс-тестирования, сигналы о новых рисках из разных областей и описания неблагоприятных сценариев в структурированный пакет материалов директора по рискам для комитета Совета директоров по рискам. Пакет охватывает кредитный, рыночный, операционный риск, риск ликвидности и другие нефинансовые риски в едином согласованном представлении.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--L"
-      title="Сложность"
-    >L</span>
+    <span class="scenario-complexity scenario-complexity--L" title="Сложность">L</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решаемая задача</div>
       <p>Директор по рискам представляет комитету Совета директоров по рискам цельную картину рисков Банка по всем существенным видам риска. Описания результатов стресс-тестирования отдельно готовит подразделение моделирования рисков, сигналы о новых рисках отслеживаются разрозненно в каждой области, а антикризисные шаблоны сообщений готовятся только при возникновении кризиса. Чтобы свести всё это в единый обзор для Совета директоров, старшие специалисты по управлению рисками тратят много часов в неделю перед каждым заседанием.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Решение</div>
       <p>AI-агент анализирует выходные данные моделей стресс-тестирования и применяет стандартную схему пояснений Банка: влияние на портфель, ключевые факторы, сравнение с предыдущими расчётами и комментарии к регуляторным порогам. Он сводит сигналы о новых рисках из разных областей — из внешних аналитических источников, анализа банков-аналогов и внутреннего мониторинга — и поддерживает заранее подготовленные антикризисные шаблоны сообщений для разных заинтересованных сторон на случай вероятных неблагоприятных сценариев. Директор по рискам рассматривает сводный пакет и до представления комитету Совета директоров по рискам выносит профессиональное суждение о рисках Банка в целом.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Критерии приёмки</div>
-      
       <p class="okr-objective">Директор по рискам представляет комитету Совета директоров по рискам сводный пакет материалов по рискам Банка, подготовленный AI-агентом, — по кредитному, рыночному, операционному риску, риску ликвидности и другим нефинансовым рискам, — который он рассматривает и дополняет своими суждениями, а не собирает с нуля.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Внедрение</div>
           <p>В первый год сводный пакет, подготовленный AI-агентом, используется не менее чем на 6 заседаниях комитета Совета директоров по рискам; с момента запуска каждый пакет охватывает все существенные виды риска.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Принятие</div>
           <p>≥80% разделов сводного пакета директор по рискам принимает без переработки структуры; в ≥75% рассмотренных сценариев заранее подготовленные антикризисные шаблоны сообщений признаются пригодными к применению без серьёзной доработки.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Цикл</div>
           <p>Полный сводный пакет для Совета директоров готов не позднее двух рабочих дней с даты поступления исходных данных; время, которое старшие специалисты по управлению рисками тратят на сборку, сокращается с ≥5 дней до ≤1 дня редакторской проверки директором по рискам.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-
 </section>
-  
-
-  
-  
-
-
-
-
-
-
-
-
 
 </div>
-
 </div>
 <footer class="o-footer">
       <span class="foot-text">Центр компетенций по AI, O!Bank. Версия 2.2, 2026 год. <a class="contact" href="mailto:talimbayev@obank.kg?subject=%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB%20AICC%20%5BQ226R%5D%3A%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%20%D0%BE%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B5">Связаться с нами</a> <a class="contact" href="../../privacy/">Конфиденциальность</a> <a class="contact" href="../../terms-of-use/">Условия использования</a></span>

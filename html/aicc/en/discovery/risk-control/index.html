@@ -154,101 +154,27 @@ Question or comment:
 <span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../privacy/">Privacy</a><a href="../../terms-of-use/">Terms of use</a></div><p class="o-caption">Version 2.2 · October 2026</p></div></aside>
 <main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-content">
 
-<!-- Skip to main content (keyboard / screen-reader users) -->
-
-
 <div class="page">
-
-  
-  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
-    
-
-
-
-
-
-
-
-
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  
   <span class="breadcrumb__item">
-    
-    
     <a class="breadcrumb__link" href="../index.html">Discovery Catalog</a>
-    
   </span>
-  
   <span class="breadcrumb__item">
-    
     <span class="breadcrumb__sep" aria-hidden="true">/</span>
-    
-    
     <span class="breadcrumb__current" aria-current="page">Risk &amp; Control</span>
-    
   </span>
-  
 </nav>
-
-    
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  
-
-  
-  
-
-
-
-
-
-
-
+</div>
 <header class="page-header">
   <div class="page-header__title-row">
     <div>
-      
       <h1 class="page-header__title">Risk & Control</h1>
     </div>
   </div>
-  
-  
-    <p class="page-header__intent">Risk &amp; Control is the Bank's integrated risk-management pillar — a Basel III/IV-aligned taxonomy spanning financial risks (credit, market, liquidity), non-financial risks (operational, compliance &amp; financial crime, cyber, model, strategic &amp; reputational, climate &amp; ESG), and an independent assurance function (internal audit). Under the regulator's supervisory framework, each risk domain carries its own regulatory capital, reporting, and governance obligations; together they constitute the institution's three-lines-of-defense architecture. <strong>The GenAI opportunity is to instrument risk monitoring continuously</strong> — compressing the lag between position movement and management signal from months to days across every domain in the taxonomy.
-</p>
-  
+  <p class="page-header__intent">Risk &amp; Control is the Bank's integrated risk-management pillar — a Basel III/IV-aligned taxonomy spanning financial risks (credit, market, liquidity), non-financial risks (operational, compliance &amp; financial crime, cyber, model, strategic &amp; reputational, climate &amp; ESG), and an independent assurance function (internal audit). Under the regulator's supervisory framework, each risk domain carries its own regulatory capital, reporting, and governance obligations; together they constitute the institution's three-lines-of-defense architecture. <strong>The GenAI opportunity is to instrument risk monitoring continuously</strong> — compressing the lag between position movement and management signal from months to days across every domain in the taxonomy.</p>
 </header>
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
 <style>
-  /*
-    Per-page tab selectors — emitted at render time from concern-problems.html.j2
-    using this L1's actual category tags. concern.css carries no hardcoded slugs.
-    Pattern: checked radio siblings the tab-bar label → active style; siblings the
-    matching panel → display:block. One rule pair per category.
-  */
-  
   #problems-tab-financial-risks:checked ~ .problems-tab-bar label[for="problems-tab-financial-risks"] {
     color: var(--ink-accent);
     border-bottom-color: var(--ink-accent);
@@ -258,7 +184,6 @@ Question or comment:
   #problems-tab-financial-risks:checked ~ .problems-panel[data-tab="financial-risks"] {
     display: block;
   }
-  
   #problems-tab-non-financial-risks:checked ~ .problems-tab-bar label[for="problems-tab-non-financial-risks"] {
     color: var(--ink-accent);
     border-bottom-color: var(--ink-accent);
@@ -268,241 +193,89 @@ Question or comment:
   #problems-tab-non-financial-risks:checked ~ .problems-panel[data-tab="non-financial-risks"] {
     display: block;
   }
-  
 </style>
-
-
 <section class="concern-problems" aria-label="Problems">
-
-  
-  
-  <input
-    type="radio"
-    class="problems-tab-input"
-    name="problems-tabs"
-    id="problems-tab-financial-risks"
-    value="financial-risks"
-    checked
-    aria-label="Financial risks"
-  >
-  
-  <input
-    type="radio"
-    class="problems-tab-input"
-    name="problems-tabs"
-    id="problems-tab-non-financial-risks"
-    value="non-financial-risks"
-    
-    aria-label="Non-financial risks"
-  >
-  
-
-  
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-financial-risks" value="financial-risks" checked aria-label="Financial risks">
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-non-financial-risks" value="non-financial-risks" aria-label="Non-financial risks">
   <div class="problems-tab-bar" role="tablist">
-    
-    <label
-      class="problems-tab-label"
-      for="problems-tab-financial-risks"
-      role="tab"
-      aria-controls="problems-panel-financial-risks"
-    >Financial risks</label>
-    
-    <label
-      class="problems-tab-label"
-      for="problems-tab-non-financial-risks"
-      role="tab"
-      aria-controls="problems-panel-non-financial-risks"
-    >Non-financial risks</label>
-    
+    <label class="problems-tab-label" for="problems-tab-financial-risks" role="tab" aria-controls="problems-panel-financial-risks">Financial risks</label>
+    <label class="problems-tab-label" for="problems-tab-non-financial-risks" role="tab" aria-controls="problems-panel-non-financial-risks">Non-financial risks</label>
   </div>
-
   <hr class="problems-divider">
-
-  
-  
-  <div
-    class="problems-panel"
-    id="problems-panel-financial-risks"
-    data-tab="financial-risks"
-    role="tabpanel"
-    aria-labelledby="problems-tab-financial-risks"
-  >
-    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Credit migration and concentration, VaR and sensitivity movements, and LCR and funding runoff signals are each produced by a separate risk system on its own reporting cycle. The CRO lacks a consolidated view of financial risk-appetite consumption between committee cycles; a counterparty approaching its exposure limit, a risk-factor concentration building across desks, or a funding concentration forming is identified only when the next scheduled report surfaces it.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Sector stress scenarios, stressed VaR narratives, and ILAAP survival-horizon modeling each require credit, market, and treasury risk analysts to assemble exposure, position, and funding data from multiple systems before analysis can begin. The Credit Committee, Market Risk Committee, and ALCO frequently receive the analysis after the meeting it was meant to inform.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>ECL provision narratives, PD/LGD/EAD output commentary, daily VaR and P&amp;L attribution narratives, limit utilization reports, and LCR/NSFR management narratives are produced on fixed daily, monthly, or quarterly cycles from structured model and system outputs. Each has a defined format, known source data, and a recurring assembly pattern that makes it a candidate for AI-driven drafting with human review and sign-off.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously instrumented financial risk position — weekly concentration and migration signals, current limit headroom, and a refreshed liquidity survival horizon — lets the CRO, Chief Credit Officer, and Head of Treasury deploy credit appetite, risk budget, and liquidity buffers against the current position rather than last month&#39;s report.</p></article></div>
+  <div class="problems-panel" id="problems-panel-financial-risks" data-tab="financial-risks" role="tabpanel" aria-labelledby="problems-tab-financial-risks">
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Credit migration and concentration, VaR and sensitivity movements, and LCR and funding runoff signals are each produced by a separate risk system on its own reporting cycle. The CRO lacks a consolidated view of financial risk-appetite consumption between committee cycles; a counterparty approaching its exposure limit, a risk-factor concentration building across desks, or a funding concentration forming is identified only when the next scheduled report surfaces it.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Sector stress scenarios, stressed VaR narratives, and ILAAP survival-horizon modeling each require credit, market, and treasury risk analysts to assemble exposure, position, and funding data from multiple systems before analysis can begin. The Credit Committee, Market Risk Committee, and ALCO frequently receive the analysis after the meeting it was meant to inform.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>ECL provision narratives, PD/LGD/EAD output commentary, daily VaR and P&amp;L attribution narratives, limit utilization reports, and LCR/NSFR management narratives are produced on fixed daily, monthly, or quarterly cycles from structured model and system outputs. Each has a defined format, known source data, and a recurring assembly pattern that makes it a candidate for AI-driven drafting with human review and sign-off.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously instrumented financial risk position — weekly concentration and migration signals, current limit headroom, and a refreshed liquidity survival horizon — lets the CRO, Chief Credit Officer, and Head of Treasury deploy credit appetite, risk budget, and liquidity buffers against the current position rather than last month's report.</p></article></div>
   </div>
-  
-  <div
-    class="problems-panel"
-    id="problems-panel-non-financial-risks"
-    data-tab="non-financial-risks"
-    role="tabpanel"
-    aria-labelledby="problems-tab-non-financial-risks"
-  >
+  <div class="problems-panel" id="problems-panel-non-financial-risks" data-tab="non-financial-risks" role="tabpanel" aria-labelledby="problems-tab-non-financial-risks">
     <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Operational risk events, AML alert volumes, cyber threat signals, model performance metrics, reputational media mentions, and ESG exposure data each feed separate domain dashboards with their own reporting cycle. The CRO lacks a consolidated view of non-financial risk-budget consumption across these domains between quarterly committee cycles; emerging cross-domain patterns — an operational incident cluster correlated with a model failure, or an ESG transition signal amplifying credit risk — are not detected systematically.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>RCSA refresh, AML model tuning, cyber resilience assessments, model validation exercises, strategic risk scenario analysis, and climate stress tests each require risk officers to assemble data from multiple systems before substantive analysis can begin. Across the non-financial risk domains, data-assembly overhead consumes a material proportion of senior specialist time — compressing the window available for judgment and response.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Regulatory reporting across non-financial risk domains — operational-resilience reports, STR filings, regulatory examination response packs, model risk committee packs, ESG/TCFD disclosures — is produced on fixed cycles from structured inputs. Each report type has a defined format, known source data, and a recurring assembly pattern that makes it a candidate for AI-driven drafting with human review and sign-off.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Banks with continuously instrumented non-financial risk postures — real-time AML disposition rates, weekly cyber exposure scores, monthly ESG portfolio heat maps — can demonstrate supervisory maturity that peers assembling the same picture quarterly cannot. That posture quality translates into faster regulatory approval cycles for new products, reduced supervisory scrutiny, and a reputational advantage in institutional client due-diligence processes.</p></article></div>
   </div>
-  
-
 </section>
-  
-
-  
-  <div id="main-content" aria-label="Concern overview">
-
-    <div class="bp-grid">
-
-      
-      
-      <div class="top-band" role="region" aria-label="Strategic layer">
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="main-content" aria-label="Concern overview">
+<div class="bp-grid">
+<div class="top-band" role="region" aria-label="Strategic layer">
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Financial risks</div>
     <h2 class="card__title card__title--lg">Credit risk <span class="card__count" aria-label="19 scenarios">(19)</span></h2>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Counterparty exposure</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="credit-risk/index.html#counterparty-exposure-analytics">Counterparty exposure analytics <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="credit-risk/index.html#pd-lgd-ead-model-outputs">PD/LGD/EAD model outputs <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="credit-risk/index.html#watchlist-early-warning">Watchlist &amp; early-warning <span class="card-link__count">(4)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Portfolio concentration &amp; provisions</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="credit-risk/index.html#concentration-sector-risk">Concentration &amp; sector risk <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="credit-risk/index.html#vintage-cohort-migration">Vintage cohort &amp; migration <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="credit-risk/index.html#ecl-ifrs9-provisions">ECL &amp; IFRS 9 provisions <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="credit-risk/index.html" tabindex="0" aria-label="Credit risk"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Non-financial risks</div>
     <h2 class="card__title card__title--lg">Compliance &amp; financial crime <span class="card__count" aria-label="18 scenarios">(18)</span></h2>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">AML, sanctions &amp; financial crime</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="compliance-financial-crime/index.html#aml-transaction-monitoring">AML transaction monitoring <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="compliance-financial-crime/index.html#sar-case-management">STR &amp; case management <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="compliance-financial-crime/index.html#sanctions-pep-screening">Sanctions &amp; PEP screening <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Conduct &amp; regulatory adherence</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="compliance-financial-crime/index.html#regulatory-licensing-filings">Regulatory licensing &amp; filings <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="compliance-financial-crime/index.html#conduct-complaints">Conduct &amp; complaints <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="compliance-financial-crime/index.html#regulatory-examination-management">Regulatory examination management <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="compliance-financial-crime/index.html" tabindex="0" aria-label="Compliance &amp; financial crime"></a>
-  
 </article>
-        
-      </div>
-      
-
-      
-      
-      
-      
-      <div class="main-row" role="region" aria-label="Value chain and capabilities">
-
-        
-        
-        
-
-
-
-
-
-
-
-
-
-
+</div>
+<div class="main-row" role="region" aria-label="Value chain and capabilities">
 <article class="card card--flow" data-ui-pattern="workflows">
   <div class="card__head">
     <div class="card__eyebrow">Risk governance</div>
@@ -510,566 +283,263 @@ Question or comment:
   </div>
   <div class="card__body">
     <div class="flow-sections">
-
       <div class="flow-section">
         <div class="flow-section__label">Identification &amp; assessment</div>
         <ul class="flow-list" aria-label="Identification &amp; assessment">
-
           <li class="flow-item"><details class="workflow-preview"><summary>RCSA cycle (risk &amp; control self-assessment) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Annual RCSA with quarterly refresh — identification and scoring of inherent risks, assessment of control effectiveness, residual risk rating, and issue capture. Aligned to the Basel operational risk standards and, where models are in scope, to model-risk guidance.</p><ol class="workflow-preview__stages" aria-label="Flow stages"><li><a href="risk-cycles/index.html#stage-rcsa-cycle--identify">Identify</a></li><li><a href="risk-cycles/index.html#stage-rcsa-cycle--assess">Assess</a></li><li><a href="risk-cycles/index.html#stage-rcsa-cycle--score">Score</a></li><li><a href="risk-cycles/index.html#stage-rcsa-cycle--document">Document</a></li><li><a href="risk-cycles/index.html#stage-rcsa-cycle--refresh">Refresh</a></li></ol></div></details></li>
-
           <li class="flow-item"><details class="workflow-preview"><summary>Stress testing cycle (ICAAP, ILAAP, climate) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Annual integrated stress testing program — ICAAP capital stress, ILAAP liquidity stress, and climate scenario analysis — covering base and adverse scenarios across credit, market, liquidity, and climate risk. Aligned to supervisory expectations for ICAAP/ILAAP and to NGFS physical and transition scenarios, in line with the TCFD recommendations.</p><ol class="workflow-preview__stages" aria-label="Flow stages"><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--define">Define scenarios</a></li><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--run">Run models</a></li><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--aggregate">Aggregate</a></li><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--approve">Approve</a></li><li><a href="risk-cycles/index.html#stage-stress-testing-cycle--submit">Submit</a></li></ol></div></details></li>
-
         </ul>
       </div>
-
       <div class="flow-section">
         <div class="flow-section__label">Governance &amp; oversight</div>
         <ul class="flow-list" aria-label="Governance &amp; oversight">
-
           <li class="flow-item"><details class="workflow-preview"><summary>Limits &amp; breach governance cycle <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Continuous risk limit monitoring with a structured breach governance cycle — breach detection, root-cause investigation, escalation, and resolution — across financial and non-financial risk types. The cycle anchor is the time from breach detection to documented resolution or approved limit action.</p><ol class="workflow-preview__stages" aria-label="Flow stages"><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--set">Set limits</a></li><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--monitor">Monitor</a></li><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--detect">Detect breaches</a></li><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--investigate">Investigate</a></li><li><a href="risk-cycles/index.html#stage-limits-breach-governance-cycle--resolve">Resolve</a></li></ol></div></details></li>
-
           <li class="flow-item"><details class="workflow-preview"><summary>Risk reporting cycle (ERMC &amp; board) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Monthly and quarterly risk reporting to the executive risk management committee and board — integrated risk picture, limit utilization, emerging risks, and regulatory developments. The cycle anchor is the time from risk position data to a committee-ready risk pack.</p><ol class="workflow-preview__stages" aria-label="Flow stages"><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--aggregate">Aggregate</a></li><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--validate">Validate</a></li><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--brief">Brief</a></li><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--discuss">Discuss</a></li><li><a href="risk-cycles/index.html#stage-risk-reporting-cycle--track">Track actions</a></li></ol></div></details></li>
-
           <li class="flow-item"><details class="workflow-preview"><summary>Model validation cycle (model risk management) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Annual model validation program — inventory review, independent validation of material models, approval for continued use, performance monitoring, and planned retirement — aligned to supervisory model-risk guidance such as SR 11-7.</p><ol class="workflow-preview__stages" aria-label="Flow stages"><li><a href="risk-cycles/index.html#stage-model-validation-cycle--inventory">Inventory</a></li><li><a href="risk-cycles/index.html#stage-model-validation-cycle--validate">Validate</a></li><li><a href="risk-cycles/index.html#stage-model-validation-cycle--approve">Approve</a></li><li><a href="risk-cycles/index.html#stage-model-validation-cycle--monitor">Monitor performance</a></li><li><a href="risk-cycles/index.html#stage-model-validation-cycle--retire">Retire</a></li></ol></div></details></li>
-
         </ul>
       </div>
-
     </div>
 </div></article>
-        
-
-        
-        <div class="right-col">
-          
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="right-col">
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Financial risks</div>
     <h3 class="card__title">Market risk <span class="card__count" aria-label="12 scenarios">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">VaR &amp; sensitivity</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="market-risk/index.html#var-expected-shortfall">VaR &amp; expected shortfall <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="market-risk/index.html#sensitivity-greeks-monitoring">Sensitivity &amp; Greeks monitoring <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">P&amp;L attribution &amp; limits</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="market-risk/index.html#pl-attribution-backtesting">P&amp;L attribution &amp; backtesting <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="market-risk/index.html#market-risk-limits-utilization">Market risk limits utilization <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="market-risk/index.html" tabindex="0" aria-label="Market risk"></a>
-  
 </article>
-          
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Financial risks</div>
     <h3 class="card__title">Liquidity risk <span class="card__count" aria-label="12 scenarios">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Funding adequacy &amp; runoff</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="liquidity-risk/index.html#lcr-nsfr-reporting">LCR &amp; NSFR reporting <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="liquidity-risk/index.html#intraday-liquidity-monitoring">Intraday liquidity monitoring <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="liquidity-risk/index.html#funding-runoff-concentration">Funding runoff &amp; concentration <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Stress &amp; contingency</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="liquidity-risk/index.html#stress-contingency-funding">Stress &amp; contingency funding <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="liquidity-risk/index.html" tabindex="0" aria-label="Liquidity risk"></a>
-  
 </article>
-          
-        </div>
-        
-
-      </div>
-      
-
-      
-      
-      <div class="below-band" role="region" aria-label="Value chain and capabilities">
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+</div>
+<div class="below-band" role="region" aria-label="Value chain and capabilities">
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Non-financial risks</div>
     <h3 class="card__title">Operational risk <span class="card__count" aria-label="12 scenarios">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Loss events &amp; KRIs</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="operational-risk/index.html#loss-events-near-misses">Loss events &amp; near-misses <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="operational-risk/index.html#rcsa-kri-monitoring">RCSA &amp; KRI monitoring <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Third parties &amp; continuity</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="operational-risk/index.html#third-party-tprm">Third-party &amp; TPRM <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="operational-risk/index.html#business-continuity-dr">Business continuity &amp; DR <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="operational-risk/index.html" tabindex="0" aria-label="Operational risk"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Non-financial risks</div>
     <h3 class="card__title">Cyber risk <span class="card__count" aria-label="12 scenarios">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Threat &amp; vulnerability exposure</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="cyber-risk/index.html#threat-intelligence-exposure">Threat intelligence &amp; exposure <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="cyber-risk/index.html#vulnerability-patch-management">Vulnerability &amp; patch management <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Response &amp; resilience</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="cyber-risk/index.html#incident-detection-response">Incident detection &amp; response <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="cyber-risk/index.html#cyber-resilience-recovery">Cyber resilience &amp; recovery <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="cyber-risk/index.html" tabindex="0" aria-label="Cyber risk"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Non-financial risks</div>
     <h3 class="card__title">Model risk <span class="card__count" aria-label="17 scenarios">(17)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Model lifecycle &amp; validation</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="model-risk/index.html#model-inventory-governance">Model inventory &amp; governance <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="model-risk/index.html#model-validation">Model validation <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Model monitoring &amp; reporting</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="model-risk/index.html#model-performance-monitoring">Model performance monitoring <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="model-risk/index.html#model-risk-reporting">Model risk reporting <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
-    
       <div class="sub-group">
         <div class="sub-group__label">AI governance</div>
         <div class="sub-group__items">
           <a class="card-link" href="model-risk/index.html#ai-governance">AI governance <span class="card-link__count">(5)</span></a>
         </div>
       </div>
-      </div>
-    
+    </div>
   </div>
-  
   <a class="card__click-target" href="model-risk/index.html" tabindex="0" aria-label="Model risk"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Non-financial risks</div>
     <h3 class="card__title">Strategic &amp; reputational risk <span class="card__count" aria-label="12 scenarios">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Strategic decision risk</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="strategic-reputational-risk/index.html#strategic-decision-risk-analysis">Strategic-decision risk analysis <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="strategic-reputational-risk/index.html#competitive-industry-signals">Competitive &amp; industry signals <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Reputational signal &amp; response</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="strategic-reputational-risk/index.html#reputational-signal-monitoring">Reputational signal monitoring <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="strategic-reputational-risk/index.html#crisis-response-narrative">Crisis response &amp; narrative <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="strategic-reputational-risk/index.html" tabindex="0" aria-label="Strategic &amp; reputational risk"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Non-financial risks</div>
     <h3 class="card__title">Climate &amp; ESG risk <span class="card__count" aria-label="13 scenarios">(13)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Physical &amp; transition risk</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="climate-esg-risk/index.html#physical-risk-assessment">Physical risk assessment <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="climate-esg-risk/index.html#transition-risk-carbon-exposure">Transition risk &amp; carbon exposure <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">ESG exposure &amp; disclosure</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="climate-esg-risk/index.html#esg-counterparty-scoring">ESG counterparty scoring <span class="card-link__count">(4)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="climate-esg-risk/index.html#tcfd-issb-disclosure">TCFD &amp; ISSB disclosure <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="climate-esg-risk/index.html" tabindex="0" aria-label="Climate &amp; ESG risk"></a>
-  
 </article>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 <article class="card" data-ui-pattern="groups">
   <div class="card__head">
     <div class="card__eyebrow">Independent assurance</div>
     <h3 class="card__title">Internal audit <span class="card__count" aria-label="12 scenarios">(12)</span></h3>
   </div>
   <div class="card__body">
-    
-    
     <div class="sub-groups sub-groups--row">
-      
       <div class="sub-group">
         <div class="sub-group__label">Audit planning &amp; execution</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="internal-audit/index.html#audit-universe-risk-ranking">Audit universe &amp; risk ranking <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="internal-audit/index.html#audit-execution-workpapers">Audit execution &amp; workpapers <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
       <div class="sub-group">
         <div class="sub-group__label">Findings &amp; remediation</div>
         <div class="sub-group__items">
-          
           <a class="card-link" href="internal-audit/index.html#findings-thematic-synthesis">Findings &amp; thematic synthesis <span class="card-link__count">(3)</span></a>
           <span class="dot" aria-hidden="true">·</span>
-          
           <a class="card-link" href="internal-audit/index.html#remediation-tracking">Remediation tracking <span class="card-link__count">(3)</span></a>
-          
-          
         </div>
       </div>
-      
     </div>
-    
   </div>
-  
   <a class="card__click-target" href="internal-audit/index.html" tabindex="0" aria-label="Internal audit"></a>
-  
 </article>
-        
-      </div>
-      
-
-    </div>
-
-  </div>
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
+</div>
+</div>
+</div>
 <section class="concern-scenarios" aria-label="Scenarios">
-
-  
   <div class="scenarios-header-row">
     <div class="scenarios-eyebrow">Scenarios</div>
     <h2 class="scenarios-heading">Scenarios</h2>
   </div>
-  
-
   <div class="scenarios-column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
     <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
     <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
     <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
   </div>
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/icaap-ilaap-narrative-assembly" id="scenario-icaap-ilaap-narrative-assembly" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
@@ -1080,70 +550,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent assembles the ICAAP and ILAAP narrative chapters from stress model outputs, pillar-by-pillar capital adequacy assessments, and liquidity survival analysis across all risk disciplines, producing a draft document for the CRO and CFO to review before regulatory submission.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--L"
-      title="Complexity"
-    >L</span>
+    <span class="scenario-complexity scenario-complexity--L" title="Complexity">L</span>
   </summary>
-
   <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../regulatory-horizon/#capital-liquidity">Capital and liquidity reforms</a></p>
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>The ICAAP and ILAAP narrative spans credit, market, liquidity, operational, model, climate, and strategic risk disciplines, each owned by a separate team.
-Assembling chapters, reconciling cross-references, and producing a coherent CRO narrative statement from fourteen to twenty contributor inputs consumes several weeks of senior risk management coordination per cycle.</p>
+      <p>The ICAAP and ILAAP narrative spans credit, market, liquidity, operational, model, climate, and strategic risk disciplines, each owned by a separate team. Assembling chapters, reconciling cross-references, and producing a coherent CRO narrative statement from fourteen to twenty contributor inputs consumes several weeks of senior risk management coordination per cycle.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads stress model outputs, capital adequacy assessments, and liquidity survival narratives from all contributing risk functions. It assembles the prescribed ICAAP/ILAAP structure — risk profile, internal capital adequacy assessment, stress scenario outcomes, management actions, and CRO attestation draft — with cross-references resolved and prior-year comparisons inserted. The CRO and CFO review the assembled document and apply judgment to forward-looking statements before supervisory submission.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The CRO and CFO apply enterprise risk judgment to an AI-assembled ICAAP/ILAAP draft — with all prescribed sections populated, cross-references resolved, and prior-year comparisons inserted — rather than coordinating fourteen to twenty contributor inputs.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>AI-assembled ICAAP/ILAAP narrative used as the submission base document for ≥1 annual supervisory submission cycle within 18 months of go-live; all prescribed sections (risk profile, internal capital adequacy assessment, stress outcomes, management actions, CRO attestation draft) covered from go-live.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of assembled narrative sections accepted by the CRO without structural revision; cross-reference errors between sections identified by supervisors reduced to ≤2 per submission cycle.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Full ICAAP/ILAAP narrative assembly completed within 5 business days of all contributor inputs received, reducing the overall coordination and assembly phase from ≥4 weeks.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/risk-appetite-breach-investigation" id="scenario-risk-appetite-breach-investigation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
@@ -1154,71 +591,37 @@ Assembling chapters, reconciling cross-references, and producing a coherent CRO 
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent assembles the CRO investigation pack when a risk appetite metric breaches its threshold — pulling the current cross-discipline position, breach history, and relevant stress context — so the CRO can respond to the Board or the regulator within the required window.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Complexity"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Breaches of risk appetite framework (RAF) metrics require the CRO to present a structured response covering the position that caused the breach, its trajectory, related metrics across disciplines, and a proposed management action. Assembling this context draws on credit, market, liquidity, operational, and capital data from separate reporting systems, typically consuming days of analyst preparation.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the triggered RAF metric, retrieves the current position across all related cross-discipline metrics, surfaces the breach history and trajectory, maps the breach to the relevant stress scenario context, and generates the investigation pack in the Bank's standard RAF response format. The CRO reviews, adds the management action proposal, and presents to the Board Risk Committee or the regulator within the required window.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The CRO presents a structured RAF metric breach response — with current cross-discipline position, breach history, and stress context assembled by the AI agent — to the Board Risk Committee or the regulator within the required governance window.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>AI agent used to assemble the CRO investigation pack for ≥90% of RAF metric threshold breaches within 12 months of go-live; all five risk disciplines (credit, market, liquidity, operational, capital) covered in each pack from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of AI-assembled investigation packs accepted by the CRO without material supplementation before Board or regulatory presentation; cross-discipline data accuracy confirmed at ≥95% on quality review.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Investigation pack delivered to the CRO within 4 hours of RAF metric breach notification, versus ≥2 business days of analyst preparation under the prior approach.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/raf-threshold-calibration-synthesis" id="scenario-raf-threshold-calibration-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
@@ -1229,69 +632,37 @@ Assembling chapters, reconciling cross-references, and producing a coherent CRO 
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent analyzes RAF metric performance across the full risk appetite framework — reviewing breach frequency, stress proximity, and portfolio trajectory for each metric — and surfaces candidates where thresholds are misaligned with current portfolio composition or the Bank's stated risk tolerance.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Complexity"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>RAF threshold reviews are conducted annually as a judgment exercise by each risk discipline owner, without a cross-discipline view of how the full metric set is performing collectively. Thresholds that have become systematically tight or loose relative to actual portfolio risk — visible only in aggregate across credit, market, liquidity, and capital metrics — are identified by exception rather than by design.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads 24 months of RAF metric performance data across all disciplines, computes breach frequency, distance-to-threshold distribution, and portfolio trend for each metric, and identifies candidates where recalibration is warranted. It cross-references each candidate against the Bank's risk tolerance statement and peer benchmark ranges, and produces a calibration review pack for the CRO and Board Risk Committee. Risk discipline owners review the flagged candidates and confirm or adjust thresholds before the annual RAF update.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The CRO and Board Risk Committee receive an AI-produced RAF threshold calibration review pack — with candidates identified by breach frequency, stress proximity, and portfolio trajectory across all risk disciplines — ahead of each annual RAF update.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>AI-produced calibration review pack incorporating 24 months of RAF metric performance data delivered for ≥1 annual RAF update cycle within 18 months of go-live; all four risk discipline categories (credit, market, liquidity, capital) covered in every run.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥70% of AI-identified recalibration candidates confirmed by risk discipline owners as warranting threshold review; ≥1 material RAF threshold adjustment per annual update attributable to an AI-identified metric performance signal.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Calibration review pack delivered within 5 business days of annual performance data cut, versus an annual judgment exercise by each risk discipline owner with no defined completion date under the prior approach.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/regulatory-capital-efficiency-signals" id="scenario-regulatory-capital-efficiency-signals" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--new-opps">New opps</span>
@@ -1302,71 +673,37 @@ Assembling chapters, reconciling cross-references, and producing a coherent CRO 
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent scans the Bank's risk-weighted asset composition across credit, market, and operational risk to identify structural capital inefficiencies — dense RWA pockets, model methodology gaps, and collateral recognition shortfalls — and presents a ranked signal set to the CRO and CFO ahead of the ICAAP capital planning window.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Complexity"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>RWA optimization opportunities are assessed separately by credit risk (collateral recognition), market risk (methodology selection), and operational risk (SMA calibration) — and, where the Bank uses or may apply for internal models, by IRB eligibility and the choice between SA and IMA. The CRO and CFO have no integrated cross-discipline view of where capital efficiency improvements are achievable within current regulatory permissions until the ICAAP capital planning cycle is already underway.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads RWA composition and density data from credit, market, and operational risk systems, applies the Bank's current regulatory permission set, and identifies candidates where model methodology upgrades, improved collateral documentation, or netting agreement enhancements would reduce capital requirements within permitted bounds. It ranks signals by estimated RWA impact and regulatory feasibility and delivers the pack to the CRO and CFO ahead of the ICAAP capital planning cycle. The risk and finance teams validate estimates and commission the highest-priority workstreams.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The CRO and CFO enter the ICAAP capital planning window with an AI-produced ranked signal set identifying RWA inefficiencies — across credit collateral recognition and IRB eligibility, market risk methodology, and operational risk SMA calibration — with estimated RWA impact and regulatory feasibility scores.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent's capital efficiency signal analysis produced ahead of ≥1 ICAAP capital planning cycle within 18 months of go-live; all three RWA disciplines (credit, market, operational) covered in every run from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥65% of AI-ranked signals confirmed as material by the CRO and CFO on review; ≥1 RWA optimization workstream per annual planning cycle initiated from AI-identified signals.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Capital efficiency signal pack delivered ≥4 weeks before the ICAAP capital planning window opens — rather than once the planning cycle is already underway — enabling the risk and finance teams to commission feasibility analysis before the planning cycle constrains the calendar.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-  
-  
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:risk-control/cro-risk-synthesis" id="scenario-cro-risk-synthesis" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
@@ -1377,77 +714,40 @@ Assembling chapters, reconciling cross-references, and producing a coherent CRO 
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent synthesizes stress-test outputs, cross-domain emerging risk signals, and adverse scenario narratives into a structured Board Risk Committee pack for the CRO. The pack spans credit, market, liquidity, operational, and other non-financial risk disciplines in a single coherent view.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--L"
-      title="Complexity"
-    >L</span>
+    <span class="scenario-complexity scenario-complexity--L" title="Complexity">L</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The CRO must present a coherent enterprise-wide risk picture to the Board Risk Committee covering all material risk disciplines. Stress-test narratives are drafted separately by the risk modeling team; emerging risk signals are monitored in domain silos; crisis narrative frameworks are assembled reactively. Assembling these into a single board-ready view consumes senior risk management hours in the week before each meeting.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads stress-test model outputs and applies the Bank's standard narrative framework — portfolio impact, key drivers, comparison to prior runs, and regulatory threshold commentary. It aggregates cross-domain emerging risk signals from external intelligence, peer analysis, and internal monitoring, and maintains pre-drafted stakeholder-specific crisis narrative frameworks for plausible adverse scenarios. The CRO reviews the synthesized pack and applies enterprise risk judgment before Board Risk Committee submission.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The CRO presents the Board Risk Committee with an AI-synthesized enterprise risk pack — spanning credit, market, liquidity, operational, and other non-financial risk — reviewed and judgment-annotated by the CRO rather than assembled from scratch.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>AI-synthesized Board Risk Committee pack used for ≥6 committee meetings in year 1; all material risk disciplines covered in each pack from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥80% of synthesized pack sections accepted by the CRO without structural revision; pre-drafted crisis narrative frameworks rated as deployable without major revision in ≥75% of scenarios reviewed.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Full board pack synthesis completed within 2 business days of input data availability, reducing senior risk management assembly time from ≥5 days to ≤1 day of CRO editorial review.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-  
-
 </section>
-  
-
-  
-  
-
-
-
-
-
-
-
-
 
 </div>
-
 </div>
 <footer class="o-footer">
       <span class="foot-text">AI Competence Center, O!Bank. Version 2.2, 2026. <a class="contact" href="mailto:talimbayev@obank.kg?subject=AICC%20Portal%20%5BQ226R%5D%20page%20feedback">Contact us</a> <a class="contact" href="../../privacy/">Privacy</a> <a class="contact" href="../../terms-of-use/">Terms of use</a></span>

@@ -1,0 +1,274 @@
+# Geographic footprint
+
+Geographic footprint defines where the Bank operates and in what form — domestic branch networks, cross-border corridors, digital licensing, and partnership-based presence. Footprint decisions determine revenue geography, regulatory jurisdiction, concentration risk, and the economics of physical distribution. **The GenAI opportunity spans three dimensions: footprint-economics visibility (continuous unit-economics per market), market-entry and exit what-ifs (scenario simulation without a multi-week scoping exercise), and branch-rationalization scenarios (demand-signal-driven density modeling at the cluster level).**
+
+## Problems
+
+### Geographic footprint {#geographic-footprint}
+
+| Lens | Problem |
+| --- | --- |
+| Insights & analytics | Domestic market share, branch unit economics, cross-border corridor profitability, and digital channel performance are estimated monthly to semi-annually from central bank publications, operations reports, and fragmented finance data. Management relies on lagged or anecdotal signals when allocating investment across the footprint. |
+| Enablement | Branch rationalization scenarios, market-entry assessments, and expansion business cases depend on a small strategy team and external advisors and take weeks to months each. Few options are evaluated per planning cycle, which concentrates risk in a small number of under-researched decisions. |
+| Automation | Regulatory change monitoring, tracking of nominated expansion markets, and, where the Bank operates in more than one jurisdiction, the cross-border obligation calendar are carried out manually by compliance and strategy staff. Material changes and filing deadlines are sometimes identified late. |
+| New business opportunities | Licensing windows and shifts in the attractiveness of candidate markets are tracked informally between planning cycles. With continuous monitoring of regulatory, competitive, and macroeconomic signals, the Bank can time an application or a market entry before the decision window closes. |
+
+## Domestic markets {#domestic-markets}
+
+Domestic market footprint defines the Bank's coverage, market share, and competitive positioning across the regions and population centers within its home jurisdiction — including the economics of each domestic region by segment penetration, product revenue contribution, and cost-to-serve. Regional concentration and under-served market identification inform branch investment, digital coverage extension, and segment-targeting decisions within the domestic franchise.
+
+### Domestic market share monitor
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/domestic-markets/domestic-market-share-continuous-monitor
+- Lens: Insights
+- Complexity: S
+- Intent: Domestic market share across loans, deposits, and fee income is a foundational competitive signal that informs investment allocation across business lines. The AI agent synthesizes central bank aggregate statistics, published peer filings, and the Bank's own volume data into a continuous domestic market share read at the product and segment level.
+- Problem to solve: Domestic market share is estimated quarterly from central bank publications and peer disclosures; the data arrives with a two-to-four-month lag and requires manual reconciliation. Between estimates, management relies on anecdote and directional signals rather than a structured competitive read.
+- Solution: The AI agent integrates central bank aggregate data releases, peer disclosure filings, and internal volume data to produce a monthly domestic market share estimate per product category. Trend alerts flag share losses or gains exceeding the defined threshold for the business line head and strategy team.
+- OKR: Domestic market share estimates are available to the business line head and strategy team on a monthly basis at product-category level, compressing the competitive visibility lag from four months to one month.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces monthly domestic market share estimates for ≥10 consecutive months in the first year. |
+| Acceptance | ≥85% of monthly estimates validated against subsequent official data within ±100 bps tolerance. |
+| Cycle | Market share visibility lag reduced from 2–4 months post-period to ≤1 month. |
+
+### Domestic regulatory change tracker
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/domestic-markets/domestic-market-regulatory-change-tracker
+- Lens: Automation
+- Complexity: S
+- Intent: Domestic market strategy is shaped by regulatory developments — licensing changes, capital surcharge adjustments, consumer protection requirements — issued by the regulator. The AI agent monitors official regulatory publications, classifies changes by strategic impact, and delivers a structured briefing to the strategy and compliance teams.
+- Problem to solve: Monitoring of the regulator's publications and other regulatory acts is performed manually by compliance staff who lack the capacity to assess strategic impact. Material regulatory changes are sometimes identified late, reducing the Bank's ability to respond competitively.
+- Solution: The AI agent monitors official regulatory publication feeds, classifies new instruments by impact type (capital, product, distribution, reporting), and delivers a structured briefing with strategic significance rating within 48 hours of each material publication, consolidated into a weekly digest. The compliance and strategy teams review the briefing rather than conducting their own monitoring.
+- OKR: Material domestic regulatory changes are identified, classified, and delivered to the strategy and compliance teams within 48 hours of publication.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent covers ≥95% of material regulatory publications with a briefing within 48 hours; weekly digest issued for ≥48 of 52 weeks in the first year. |
+| Acceptance | ≥80% of briefings accepted by the strategy and compliance teams as complete and accurately classified without major additions. |
+| Cycle | Regulatory change identification-to-briefing time reduced from ≥5 business days to ≤48 hours. |
+
+### Domestic competitive positioning scan
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/domestic-markets/domestic-market-competitive-positioning-scan
+- Lens: Enablement
+- Complexity: M
+- Intent: Domestic competitive positioning requires a structured view of peer pricing, product features, distribution tactics, and digital capability investment across the main domestic competitors. The AI agent synthesizes publicly available peer data into a quarterly competitive positioning map that equips the strategy team for executive committee and board strategic reviews.
+- Problem to solve: Competitive analysis is produced ad hoc by junior strategy analysts drawing on unstructured data; outputs are inconsistent in depth and frequency, and the analysis is rarely available when strategic decisions are being made. A structured peer benchmark does not exist between annual strategy exercises.
+- Solution: The AI agent aggregates peer pricing disclosures, regulatory filings, product announcements, and digital channel benchmarks into a structured quarterly competitive map. Each peer is scored across product, price, distribution, and digital dimensions relative to the Bank's own position. The strategy team reviews each map as the basis for positioning discussion.
+- OKR: A structured domestic competitive positioning map is available to the strategy team each quarter, enabling evidence-based positioning decisions at executive committee and board reviews.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces quarterly competitive maps for ≥4 consecutive quarters within 15 months of deployment. |
+| Acceptance | ≥75% of competitive maps accepted by the strategy team as a sufficient basis for positioning discussion without commissioning supplementary research. |
+| Cycle | Competitive map production time reduced from ≥3 weeks of manual research to ≤5 business days. |
+
+## Branch network density {#branch-network-density}
+
+Branch network density governs the physical distribution of the Bank's retail and corporate service points — covering location selection, cluster rationalization, format mix (full-service, light, agency), and the unit economics of individual branch clusters. Density decisions reflect the trade-off between physical coverage as a competitive and regulatory obligation and the cost drag of underutilized distribution assets as digital migration reduces in-branch transaction volumes.
+
+### Domestic Branch Unit-Economics Dashboard
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/branch-network-density/domestic-branch-unit-economics
+- Lens: Insights
+- Complexity: M
+- Intent: Per-branch revenue, cost, and utilization are aggregated weekly across the domestic network, with clustering by region and performance tier. Regional managers and the CFO work from a continuously updated view rather than a monthly assembly.
+- Problem to solve: Branch-level P&L and utilization data across the domestic network are assembled monthly from operations reports and finance feeds. Regional managers lack a continuous view of which clusters are below unit-economics thresholds, and the CFO sees a consolidated picture that masks branch-level dynamics.
+- Solution: The AI agent aggregates branch-level revenue, cost, and transaction-volume feeds weekly and renders a tiered performance view by region and cluster. Branch managers and regional managers work from a live dashboard; the CFO receives a drillable summary with automated narrative on material movements.
+- OKR: Per-branch revenue, cost, and utilization are aggregated weekly across the domestic network — clustered by region and performance tier — giving regional managers and the CFO a continuously updated view rather than a monthly assembly.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent aggregates and publishes the branch unit-economics dashboard on a weekly cadence for ≥50 consecutive weeks per year; regional tiering and automated narrative on material movements included in ≥95% of weekly outputs. |
+| Acceptance | ≥85% of weekly dashboard outputs accepted by regional managers and the CFO as accurate without manual re-validation; data reconciliation errors ≤2% of branch records per week. |
+| Cycle | Branch unit-economics view refresh cycle reduced from monthly manual assembly to weekly automated aggregation, with the CFO receiving a current view ≥3 weeks earlier per period. |
+
+### Branch density rationalization scenario
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/branch-network-density/branch-density-rationalisation-scenario
+- Lens: Optimize
+- Complexity: M
+- Intent: Branch network density decisions — where to open, consolidate, or close — require multi-factor analysis of footfall, deposit concentration, digital substitution rates, and competitor proximity. The AI agent models rationalization scenarios at the cluster level, producing ranked options with cost, revenue impact, and customer attrition estimates for the distribution committee.
+- Problem to solve: Branch rationalization analysis is conducted on an ad hoc basis by a small team using heterogeneous data; scenarios lack a common methodology, and the time to produce a cluster-level analysis is typically four to six weeks. This limits how frequently the network plan can be refreshed.
+- Solution: The AI agent runs a standardized rationalization scenario across the full branch network using footfall, digital substitution, competitor density, and branch P&L data. Each scenario is scored on net revenue impact, cost savings, and customer displacement risk, allowing the distribution committee to compare options on a consistent basis.
+- OKR: The distribution committee's branch rationalization decisions are supported by a standardized scenario analysis produced within one week of a portfolio review trigger.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced rationalization scenarios used in ≥80% of distribution committee reviews within 12 months of deployment. |
+| Acceptance | ≥75% of scenario outputs adopted as the analytical basis for committee deliberation without major rework. |
+| Cycle | Cluster-level rationalization analysis time reduced from 4–6 weeks to ≤5 business days. |
+
+### Branch Rationalization Scenario Modeling
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/branch-network-density/branch-rationalization-scenario
+- Lens: Enablement
+- Complexity: L
+- Intent: Demand-signal-driven density modeling at the cluster level gives the network strategy team consolidation candidates and digital-substitution thresholds, with regulatory-constraint overlays for minimum-access rules.
+- Problem to solve: Identifying which branches to consolidate or close requires overlaying transaction demand, digital-channel penetration, competitor proximity, and regulatory minimum-access rules. A full domestic rationalization scenario is typically run only in annual planning cycles and takes four to six weeks to complete.
+- Solution: The AI agent runs demand-signal analysis across all branches simultaneously — transaction volume trends, digital-substitution rates, catchment-area overlap, and regulatory-constraint flags. Cluster-level rationalization candidates surface to the network strategy team with impact estimates and regulatory annotations on minimum-access compliance; parameter changes are rerun within hours.
+- OKR: Demand-signal-driven branch rationalization scenarios are available on demand at the cluster level — overlaying transaction volume trends, digital-substitution rates, catchment-area overlap, and regulatory minimum-access constraints — giving the network strategy team a quantified consolidation candidate list with parameter rerun capability within hours.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces rationalization scenario outputs covering ≥95% of the domestic branch network for ≥2 full planning cycles per year; parameter rerun requests are fulfilled within 4 hours of submission. |
+| Acceptance | ≥80% of cluster-level rationalization candidates rated as analytically sound by the network strategy team without material remodeling; regulatory constraint annotations confirmed accurate in ≥95% of reviewed outputs. |
+| Cycle | Full domestic rationalization scenario cycle time reduced from 4–6 weeks of manual assembly to ≤3 business days per scenario run. |
+
+## Cross-border / international {#cross-border-international}
+
+Cross-border and international footprint covers the Bank's correspondent relationships and cross-border fund transfer corridors and, where the Bank operates in more than one jurisdiction, its operations and representative or subsidiary presence outside the domestic market — including jurisdictional licensing status, capital adequacy under host-country regulation, and FX exposure arising from foreign-currency-denominated balance sheets. Expansion, exit, and partnership decisions in international markets are assessed against strategic revenue contribution, regulatory cost of presence, and geopolitical concentration risk.
+
+### Cross-border corridor economics monitor
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/cross-border-international/cross-border-corridor-economics-insights
+- Lens: Insights
+- Complexity: M
+- Intent: Cross-border banking corridors — remittance flows, trade finance volumes, correspondent banking relationships — generate economics that require continuous monitoring to assess whether each corridor the Bank serves is delivering on its strategic rationale. The AI agent synthesizes corridor-level revenue, cost, and compliance burden data into a continuous profitability read per cross-border corridor.
+- Problem to solve: Cross-border corridor economics are assembled once or twice a year by the strategy team from fragmented data sources; in the interim, management lacks current visibility into which corridors are profitable and which are consuming capital below the hurdle rate.
+- Solution: The AI agent integrates fee income, net interest, compliance cost, and capital consumption data per cross-border corridor on a monthly basis, producing a ranked profitability view with trend signals. Corridors approaching below-hurdle territory are flagged for the strategy team's review.
+- OKR: Cross-border corridor profitability is visible to the strategy team on a monthly basis, enabling strategic decisions on corridor investment or exit without waiting for an annual strategy review.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces monthly corridor economics summaries covering ≥90% of active cross-border corridors within six months of deployment. |
+| Acceptance | ≥80% of monthly summaries accepted by the strategy team as accurate and actionable without material revision. |
+| Cycle | Corridor economics visibility cycle compressed from semi-annual assembly to a monthly read. |
+
+### Cross-border regulatory obligation tracker
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/cross-border-international/cross-border-regulatory-obligation-tracker
+- Lens: Automation
+- Complexity: M
+- Intent: Where the Bank operates in more than one jurisdiction, it must track a dynamic set of regulatory obligations — capital adequacy filings, AML reporting, foreign ownership limits, and correspondent banking requirements — across its home and host regulators. The AI agent maintains a structured obligation calendar and flags upcoming deadlines and regulatory changes across all active jurisdictions.
+- Problem to solve: Cross-border regulatory obligations are tracked manually across the compliance and legal teams in each jurisdiction; overlaps, missed deadlines, and late-cycle scrambles are a recurring operational risk. A single authoritative view of multi-jurisdictional obligations does not exist.
+- Solution: The AI agent maintains a structured regulatory obligation register across all active jurisdictions, monitoring for changes to filing requirements and flagging deadlines at least 30 days in advance. A monthly compliance calendar is distributed to country heads and the group chief compliance officer, and each country compliance team acknowledges its deadline alerts.
+- OKR: All cross-border regulatory filing deadlines are visible in a single structured calendar, with no compliance obligations missed due to inadequate advance notice.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent maintains the obligation register for ≥95% of active jurisdictions within three months of deployment. |
+| Acceptance | Zero material regulatory filing misses attributable to calendar gaps after deployment; ≥90% of deadline alerts acknowledged by the relevant country compliance team ≥30 days in advance. |
+| Cycle | Regulatory deadline identification lead time extended from reactive identification to ≥30-day advance notice for all obligations. |
+
+### Cross-border market entry scenario
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/cross-border-international/cross-border-market-entry-scenario
+- Lens: Enablement
+- Complexity: L
+- Intent: Where the Bank operates in more than one jurisdiction or plans to, evaluating entry into a new cross-border market requires regulatory landscape analysis, competitor positioning, capital requirement estimation, and business case modeling — tasks that traditionally require weeks of external advisory engagement. The AI agent accelerates this by synthesizing publicly available market intelligence and regulatory frameworks into a structured entry assessment for the strategy team.
+- Problem to solve: Market entry feasibility studies are bottlenecked on senior strategy staff and external advisors; a typical study takes six to twelve weeks and significant budget. This limits how many entry options can be evaluated in a planning cycle, concentrating risk in a small number of under-researched decisions.
+- Solution: The AI agent ingests central bank regulatory frameworks, banking sector market data, and competitor intelligence for candidate markets, producing a structured entry assessment covering regulatory capital requirements, competitive intensity, corridor opportunity, and risk flags. The strategy team uses the output to rank and prioritize entry options.
+- OKR: The strategy team evaluates cross-border entry options with a structured assessment framework available within two weeks of candidate identification.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced entry assessments used for ≥80% of new cross-border market evaluations within 12 months of deployment. |
+| Acceptance | ≥70% of assessments accepted by the strategy team as a sufficient basis for entry prioritization without commissioning full external advisory. |
+| Cycle | Market entry assessment time reduced from 6–12 weeks of external advisory to ≤2 weeks of internal review. |
+
+## Digital presence {#digital-presence}
+
+Digital presence defines the Bank's market reach delivered through digital channels — mobile banking, internet banking, API-connected partnerships, and digital-only subsidiaries — as distinct from the physical network. Digital presence economics are tracked on customer acquisition cost, activation rates, and revenue per digital-primary customer; the footprint dimension covers licensing jurisdiction, data residency obligations under local regulation, and the extent to which digital channels substitute for or extend beyond the physical network.
+
+### Digital-Bank License Window Monitoring
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/digital-presence/digital-license-window-monitoring
+- Lens: New opps
+- Complexity: S
+- Intent: Where the regulator issues digital-bank licenses, its digital-licensing developments, regulatory sandbox openings, and competitor digital-license activity are monitored continuously. The optimal application timing and readiness gap for a digital-bank license surface before the window closes.
+- Problem to solve: Digital-bank licensing is a window-driven regulatory process. The strategy team tracks licensing developments informally, and readiness gaps are assessed only when a formal application deadline is approaching.
+- Solution: The AI agent monitors the regulator's communications, competitor digital-license filings, and banking-regulation publications. When a window opens or eligibility criteria change, an automated brief surfaces to the Head of Strategy for review, with a readiness-gap checklist and timeline estimate.
+- OKR: The regulator's digital-licensing developments, regulatory sandbox openings, and competitor digital-license activity are monitored continuously, with automated briefs — covering readiness gap and estimated timeline — surfaced to the Head of Strategy when a window opens or eligibility criteria change, before the application deadline narrows.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent monitors the regulator's communications continuously; automated briefs produced within 2 business days of a qualifying regulatory publication or competitor filing for ≥95% of monitored events. |
+| Acceptance | ≥85% of AI-produced readiness-gap briefs confirmed as accurate and actionable by the Head of Strategy without material correction; regulatory eligibility-criteria mapping confirmed accurate in ≥90% of reviewed outputs. |
+| Cycle | Digital-license window intelligence lag reduced from informal periodic scanning to ≤2 business days from triggering regulatory publication. |
+
+### Digital presence performance insights
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/digital-presence/digital-presence-performance-insights
+- Lens: Insights
+- Complexity: S
+- Intent: The Bank's digital footprint — mobile app, internet banking, API partnerships, digital licensing — generates economics that must be tracked against the capital invested in each channel. The AI agent synthesizes digital channel unit economics, customer acquisition cost, engagement rates, and product penetration per digital channel into a continuous performance read for the digital strategy committee.
+- Problem to solve: Digital channel performance data sits across technology, marketing, and finance teams; assembling a coherent picture of digital economics requires weeks of manual data extraction and reconciliation. Without a current view, digital investment decisions are made from a stale performance baseline.
+- Solution: The AI agent aggregates digital channel KPIs — DAU/MAU, digital product penetration, CAC, revenue per digital user — on a weekly basis, producing a single digital performance dashboard. Underperforming channels trigger a structured flag with diagnostic context for the digital strategy team.
+- OKR: Digital channel economics are visible to the digital strategy committee in a single continuously updated dashboard, enabling investment reallocation decisions on a weekly rather than quarterly cadence.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces weekly digital performance summaries for ≥80% of weeks in the first 12 months of operation. |
+| Acceptance | ≥80% of weekly summaries accepted by the digital strategy team as accurate without material data reconciliation. |
+| Cycle | Digital channel performance visibility cycle compressed from quarterly assembly to a weekly read. |
+
+### Digital Channel-Shift Scenario Simulation
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/digital-presence/digital-channel-shift-simulation
+- Lens: Optimize
+- Complexity: M
+- Intent: Digital-adoption rate scenarios are modeled across the branch network to identify at which penetration level individual branches or clusters reach the digital-substitution threshold for rationalization.
+- Problem to solve: The question of when digital penetration passes the threshold at which a branch can be rationalized is answered qualitatively in planning discussions, without a quantified penetration-rate trigger per cluster.
+- Solution: The AI agent runs digital-channel-shift scenarios across the branch network; for each penetration rate assumption, it calculates branch-utilization residual, cost-per-transaction crossover, and the clusters that pass the rationalization threshold. The output, reviewed by the network strategy team, is a ranked list of clusters by estimated rationalization readiness with a sensitivity table across adoption-rate scenarios.
+- OKR: Digital-adoption rate scenarios are modeled across the branch network by the AI agent, identifying at which penetration level individual branches or clusters reach the digital-substitution rationalization threshold — with cost-per-transaction crossover analysis and a sensitivity table across adoption-rate assumptions — giving the network strategy team a quantified trigger set for consolidation planning.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent runs digital-channel-shift scenarios covering ≥95% of the domestic branch network; parameter rerun requests fulfilled within 4 hours for ≥90% of submissions. |
+| Acceptance | ≥80% of AI-produced rationalization readiness rankings and sensitivity tables accepted by the network strategy team as analytically sound without material remodeling; cost-per-transaction crossover calculations confirmed accurate in ≥90% of reviewed outputs. |
+| Cycle | Digital-substitution threshold analysis moves from qualitative judgment in planning discussions to a quantified scenario set delivered within ≤3 business days. |
+
+## Strategic expansion targets {#strategic-expansion-targets}
+
+Strategic expansion targets are the geographic markets — new domestic regions, international corridors, or digital licensing jurisdictions — identified for entry within the current strategic planning horizon. Each target is assessed on market size, competitive intensity, regulatory entry requirements, capital cost of presence, and strategic fit against the Bank's declared growth priorities. Expansion sequencing and go/no-go decisions are governed by the strategy committee with input from finance, risk, and legal.
+
+### Expansion Target Pipeline Monitoring
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/strategic-expansion-targets/expansion-target-pipeline-monitoring
+- Lens: Automation
+- Complexity: M
+- Intent: Regulatory, competitive, and macroeconomic signals across nominated expansion markets are monitored on a continuous basis. Material changes to a target's feasibility or timing surface as automated update briefs rather than waiting for a planning cycle.
+- Problem to solve: Nominated expansion markets are monitored informally between formal planning cycles. A regulatory window opening, a competitor entry, or a macroeconomic shift changes the economics of a target market but surfaces only when a member of the strategy team notices it — often after the relevant decision window has closed.
+- Solution: The AI agent monitors a named list of expansion targets for regulatory publications, licensing announcements, macroeconomic indicators, and competitor footprint changes. Material signals trigger an automated update brief ranked by impact on feasibility and timing; the Head of Strategy receives a weekly digest plus same-day alerts on high-materiality signals.
+- OKR: Regulatory, competitive, and macroeconomic signals across nominated expansion markets are monitored on a continuous basis by the AI agent, with material changes to target feasibility or timing surfaced as automated update briefs — giving the Head of Strategy an opportunity signal before the decision window closes.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent monitors all nominated expansion targets continuously; automated update briefs generated within 2 business days of a qualifying signal for ≥95% of monitored events; weekly digest plus same-day high-materiality alerts maintained for ≥48 weeks per year. |
+| Acceptance | ≥80% of AI-surfaced feasibility-change briefs confirmed as decision-relevant by the Head of Strategy; signal classification accuracy (high vs. standard materiality) confirmed correct in ≥90% of reviewed alerts. |
+| Cycle | Expansion target intelligence lag reduced from informal periodic scanning to ≤2 business days from triggering regulatory or market signal. |
+
+### Expansion market attractiveness insights
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/strategic-expansion-targets/strategic-expansion-market-attractiveness-insights
+- Lens: Insights
+- Complexity: M
+- Intent: Ranking candidate expansion markets requires a consistent scoring framework across macroeconomic outlook, banking sector penetration, regulatory environment, competitive intensity, and corridor opportunity. The AI agent maintains an attractiveness score per candidate market, updated quarterly, surfacing re-rankings as macro or regulatory conditions shift.
+- Problem to solve: Expansion market attractiveness is assessed annually using a static scoring model; between reviews, material shifts in macro conditions, peer activity, or regulatory environment are not captured. The strategy team may act on an outdated ranking when expansion decisions are triggered.
+- Solution: The AI agent integrates macro databases, supervisory publications, and competitor announcements to update attractiveness scores across candidate expansion markets on a quarterly basis. Score movements above the defined threshold trigger a briefing to the strategy team.
+- OKR: Expansion market attractiveness scores are maintained on a quarterly basis, ensuring the strategy team acts on a current rather than lagged ranking.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces quarterly attractiveness score updates for ≥90% of candidate markets in the expansion pipeline. |
+| Acceptance | ≥75% of quarterly score updates accepted by the strategy team without requiring supplementary research. |
+| Cycle | Attractiveness score refresh cycle compressed from annual to quarterly. |
+
+### Expansion target business case assembly
+
+- URN: urn:financial-services:scenario:strategic-portfolio/geographic-footprint/strategic-expansion-targets/strategic-expansion-business-case-assembly
+- Lens: Enablement
+- Complexity: L
+- Intent: Developing a board-grade business case for a new geographic expansion target requires integrating market sizing, capital requirement estimation, P&L projection, and risk assessment into a coherent investment proposal. The AI agent accelerates this by assembling a structured first-draft business case from structured inputs and market data, compressing the preparation cycle from months to weeks.
+- Problem to solve: Expansion business cases are developed over two to four months by a small strategy team drawing on external advisors; the cost and time of production limits the number of candidates that can be evaluated, creating concentration risk in market selection.
+- Solution: The AI agent generates a structured expansion business case from standardized inputs — market sizing data, regulatory capital requirements, P&L assumptions — producing a first-draft document in board-standard format. The strategy team focuses its review on assumptions and risk judgments rather than constructing the document from scratch.
+- OKR: Board-grade expansion business case first drafts are available within three weeks of target identification, enabling the Bank to evaluate twice as many candidates per planning cycle.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced first drafts used as the basis for ≥80% of expansion business cases submitted to the board within 12 months of deployment. |
+| Acceptance | ≥70% of first drafts accepted by the strategy team with revisions limited to assumption updates and risk narrative refinement. |
+| Cycle | Business case first-draft preparation time reduced from 2–4 months to ≤3 weeks. |

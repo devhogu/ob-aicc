@@ -9,12 +9,12 @@ The portal has five neighbouring sections in one O!Bank shell. They share brandi
 | Section | Route within each language | Maintained content |
 | --- | --- | --- |
 | AICC | Existing routes | Charter and explanatory sources described below |
-| Discovery Catalog | `discovery/` | `../html-alt/financial-services/{en,ru}/`: 76 pages and 1,101 scenario cards per language, with retained layouts and interactions |
+| Discovery Catalog | `discovery/` | `../portfolio/{en,ru}/discovery/`: one Markdown record for each of the 76 pages per language, rendered by `tools/discovery.py` with the catalog layouts and interactions |
 | Portfolio | `initiatives/` | `sections/initiatives/{en,ru}/`: overview, selection guidance and an empty initiative register |
 | Delivery Pipeline | `projects/` | `sections/projects/{en,ru}/`: project register and the first Customer Intelligence–Enabled Service Resolution proposal |
 | CloudLab | `lab/` | `sections/lab/{en,ru}/`: concept, approach and experiment workflow |
 
-`sections/navigation.json` defines the five navigation groups; `sections/pages.json` defines the authored landing routes and their labels. `tools/workspace.py` renders the common shell, and `tools/neighbours.py` composes the independent content. Discovery applies the existing Financial Services breadcrumb correction and an AICC visual skin while preserving its source. Edit its retained source, not the generated Discovery pages. The new landing pages have paired English and Russian Markdown; they do not inherit the charter's document versioning or translation metadata.
+`sections/navigation.json` defines the five navigation groups; `sections/pages.json` defines the authored landing routes and their labels. `tools/workspace.py` renders the common shell, and `tools/neighbours.py` composes the independent content. Discovery renders its pages from the catalog records with `tools/discovery.py` and applies an AICC visual skin. Edit the records, not the generated Discovery pages. The new landing pages have paired English and Russian Markdown; they do not inherit the charter's document versioning or translation metadata.
 
 The live Portfolio starts empty and does not import records from the existing `../portfolio/` corpus. AICC's existing Portfolio and Delivery routes remain, with local navigation labels “Portfolio management” and “Delivery model”. The CSR entry remains a proposal, and CloudLab remains a concept.
 

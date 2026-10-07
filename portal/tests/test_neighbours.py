@@ -1,4 +1,4 @@
-"""Behaviour at the retained source -> independent neighbour page boundary."""
+"""Behaviour at the catalog record -> independent neighbour page boundary."""
 from pathlib import Path
 import re
 import sys
@@ -6,6 +6,7 @@ import unittest
 from urllib.parse import urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
+import discovery
 import neighbours
 import workspace
 from check_neighbours import Inspection
@@ -26,7 +27,7 @@ class NeighbourRendering(unittest.TestCase):
         self.assertNotIn('class="doc-facts"', markup)
 
     def test_discovery_preserves_scenario_text_and_direct_search_destination(self):
-        source = neighbours.finance_renderer().discovery_source(Path('shared-banking-capabilities/customer-servicing/index.html'), 'en')
+        source = discovery.source(Path('shared-banking-capabilities/customer-servicing/index.html'), 'en')
         url, title, body, *_ = neighbours.discovery_page(source, Path('shared-banking-capabilities/customer-servicing/index.html'), 'en')
         self.assertEqual(Inspection(source).cards, Inspection(body).cards)
         entries = neighbours.search_entries(body, url, title)
@@ -43,16 +44,15 @@ class NeighbourRendering(unittest.TestCase):
         self.assertIn('| Предлагаемая инициатива |', (root / 'projects/ru/index.md').read_text())
 
     def test_domain_preview_stage_links_reach_preserved_flow_actions(self):
-        renderer = neighbours.finance_renderer()
         for lang in ('en', 'ru'):
             with self.subTest(lang=lang):
                 route = Path('strategic-portfolio/index.html')
-                source = renderer.discovery_source(route, lang)
+                source = discovery.source(route, lang)
                 body = neighbours.discovery_page(source, route, lang)[2]
                 links = [urlsplit(link) for link in Inspection('<main>' + body + '</main>').main_links if '#stage-' in link]
                 self.assertTrue(links)
                 target = route.parent / links[0].path
-                original = renderer.discovery_source(target, lang)
+                original = discovery.source(target, lang)
                 projected = neighbours.discovery_page(original, target, lang)[2]
                 def identities(text):
                     buttons = re.findall(r'<button\b[^>]*data-flow-id="[^"]+"[^>]*>', text)

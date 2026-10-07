@@ -1,0 +1,222 @@
+# Credit decisioning
+
+Credit decisioning is the structured process through which the Bank assesses borrower creditworthiness, sets lending terms, and manages limit exposure across the credit lifecycle — from origination scoring through annual review and line management. In line with Basel III Pillar 1 and the regulator's credit-risk requirements, the Bank maintains model documentation, governance records, and audit trails for every material credit decision. Scorecard performance, override rates, and decline reason distributions are key supervisory metrics. **The opportunity for GenAI is to accelerate the analysis-intensive stages of the decisioning cycle** — decline pattern synthesis, annual borrower review, and override documentation — while preserving human accountability for every material credit judgment.
+
+## Problems
+
+### Application underwriting {#application-underwriting}
+
+| Lens | Problem |
+| --- | --- |
+| Insights & analytics | Origination funnel conversion, decline reason distributions, scorecard performance, and override rates are reported monthly to the Risk Committee but are not available to underwriting managers in real time. Scorecard drift — gradual divergence between model predictions and observed default rates — is caught only at the quarterly recalibration cycle, allowing the model to operate on degraded assumptions for weeks. |
+| Enablement | Complex credit applications — SME borrowers with multi-entity structures, project finance facilities, or borrowers near the automatic decline boundary — require underwriters to synthesize bureau data, financial statements, sector analysis, and group exposure before reaching a decision. The judgment synthesis step is bottlenecked on a small team of senior underwriters whose capacity constrains application throughput. |
+| Automation | Decline notification letters, credit committee memos, and override justification documentation are structured outputs that follow prescribed formats under consumer credit regulations and internal credit policy. The templated nature of these documents — with credit decision, key factors, and regulatory disclosures as standard fields — makes them strong candidates for automated drafting from structured decision data. |
+| New business opportunities | Banks that reduce average application-to-decision time — from days to hours for standard cases — improve conversion at the point of customer intent and reduce cost per originated loan. GenAI-backed synthesis of bureau and financial data accelerates the analysis phase without relaxing underwriting standards, creating a throughput advantage over peers relying on fully manual workflows. |
+
+## Scorecard & model performance {#scorecard-model-performance}
+
+Ongoing monitoring of credit scoring model performance against observed default outcomes — tracking Gini coefficients, population stability index (PSI), and characteristic-level drift across origination cohorts. Under model governance requirements — and, where the Bank uses internal-ratings models, the Basel III IRB requirements — material model drift triggers a mandatory recalibration and board notification cycle. Current practice monitors model performance quarterly, with drift identified weeks after it emerges in origination data.
+
+### Credit Origination Analytics
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/credit-origination-analytics
+- Lens: Insights
+- Complexity: M
+- Intent: The AI agent produces weekly origination analytics — funnel conversion, decline reason clustering, scorecard drift indicators, and policy-change attribution — for underwriting management review. The output includes segment-level approval-rate comparisons and closed-loan performance attribution unavailable from the monthly management reporting cycle. Underwriting management reviews a current picture each week and acts on scorecard drift before the next regulatory review cycle.
+- Problem to solve: Underwriting management reviews approval rate trends and decline distributions at the monthly reporting cycle; scorecard drift, policy-change attribution, and decline-regret analysis require multi-step manual investigations that delay corrective action. Segment-level approval-rate comparisons are unavailable without bespoke analyst work, leaving potential disparate impact signals undetected between formal model validation cycles. Monthly retrospective reporting means scorecard drift identified in the cycle can represent six to eight weeks of degraded decisioning quality before corrective action is taken.
+- Solution: The AI agent reads the origination system, bureau pull data, and closed-loan performance data on a weekly cadence, producing funnel conversion by step, decline reason clustering, scorecard drift indicators by characteristic, and policy-change attribution. Segment-level approval-rate comparisons are included as a standard output to support fair-lending monitoring. Underwriting management reviews the weekly output and directs scorecard recalibration or policy adjustment before the signal accumulates to a regulatory review threshold.
+- OKR: Weekly origination analytics — funnel conversion, decline reason clustering, scorecard drift indicators, policy-change attribution, and segment-level approval-rate comparisons — are available for underwriting management review each week.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced weekly origination analytics report delivered for ≥48 of 52 weeks in year 1; all prescribed analytical dimensions covered in each weekly output. |
+| Acceptance | ≥80% of weekly analytics accepted by underwriting management as accurate and actionable without requiring supplementary analysis; scorecard drift indicators validated against model monitoring reports in ≥90% of reviewed weeks. |
+| Cycle | Origination analytics available weekly vs. monthly in the prior process; scorecard drift detection latency reduced from 6–8 weeks to ≤7 days. |
+
+### Model recalibration brief drafting
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/model-recalibration-brief-drafting
+- Lens: Automation
+- Complexity: S
+- Intent: Automated drafting of the model recalibration brief for credit scoring models flagged for mandatory or recommended recalibration — summarizing the performance trigger, the characteristic drift profile, the affected origination cohorts, and the proposed recalibration scope — in the format required for model risk committee approval. The brief provides the model risk committee with the performance evidence and recalibration scope without requiring the model developer to assemble the pack from monitoring outputs.
+- Problem to solve: Under model governance requirements — and, where the Bank uses internal-ratings models, the Basel III IRB standards — model recalibration requires board notification and model risk committee approval; the supporting brief must document the performance trigger, drift evidence, and recalibration scope. Manual assembly of the recalibration brief from monitoring reports, PSI outputs, and cohort performance data consumes 2–3 days of model developer time before the committee review process can begin.
+- Solution: The AI agent reads the model monitoring reports, characteristic drift outputs, and affected cohort performance data and drafts the recalibration brief in the model risk committee's prescribed format — performance trigger summary, drift evidence, affected cohort analysis, and proposed recalibration scope. The model developer reviews the draft, adds technical methodology context, and submits to the model risk committee queue.
+- OKR: Model recalibration briefs are drafted from monitoring output data and available for model developer review within 1 business day of recalibration trigger.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-drafted recalibration briefs used for ≥85% of mandatory and recommended recalibration events within 9 months of go-live. |
+| Acceptance | Model risk committee return rate for recalibration brief documentation deficiency eliminated within 12 months; brief quality confirmed sufficient for supervisory review in ≥97% of sampled recalibrations. |
+| Cycle | Draft brief available within 24 hours of recalibration trigger so the model developer can complete and submit to committee within 3 business days of the trigger event. |
+
+### Scorecard characteristic drift monitoring
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/scorecard-model-performance/scorecard-characteristic-drift-monitoring
+- Lens: Automation
+- Complexity: M
+- Intent: Continuous monitoring of population stability index and characteristic-level distribution drift across active credit scoring models — tracking deviations in the input characteristic distributions between the development population and current origination cohorts. Characteristic drift that precedes performance degradation is identified and escalated to model risk management before the Gini coefficient decline triggers a mandatory recalibration cycle.
+- Problem to solve: Under model governance requirements — and, where the Bank uses internal-ratings models, the Basel III IRB requirements — material model drift triggers a mandatory recalibration and board notification cycle; current practice monitors model performance quarterly, with characteristic drift identified weeks after it emerges in origination data. Leading-indicator drift detection — at the characteristic level rather than the output Gini — enables earlier intervention and reduces the period during which decisioning occurs on a drifted model.
+- Solution: The AI agent computes PSI and characteristic-level distribution metrics from each origination cohort against the development population baseline and flags characteristics with PSI above prescribed drift thresholds, producing a drift alert with the specific characteristics, their current vs. development distributions, and the recommended monitoring escalation level. Model risk management reviews the drift alerts, determines whether recalibration is warranted, and documents the assessment for the model governance record.
+- OKR: Characteristic-level drift across active credit scoring models is monitored continuously and escalated to model risk management before output performance degradation becomes material.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced characteristic drift monitoring covering all active credit scoring models within 9 months of go-live. |
+| Acceptance | ≥80% of model recalibration triggers identified via characteristic drift alert rather than output Gini decline within 18 months; mean detection lead time vs. Gini decline ≥4 weeks. |
+| Cycle | Drift metrics computed and alerts issued within 24 hours of each origination cohort closing so monitoring is current with the origination cycle. |
+
+## Annual credit review {#annual-credit-review}
+
+Structured review of each borrower's creditworthiness, financial performance, covenant compliance, and risk rating — required annually for all material credit facilities under credit-risk governance requirements, in line with Basel III Pillar 2. The review cycle for a mid-size SME or corporate portfolio spans hundreds of borrowers, each requiring a review memo with financial analysis, risk rating update, and limit recommendation. Relationship managers and credit analysts spend the majority of the review cycle on data assembly and memo drafting rather than on the judgment steps.
+
+### Annual review portfolio scheduling optimization
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/annual-credit-review/annual-review-portfolio-scheduling-optimisation
+- Lens: Automation
+- Complexity: S
+- Intent: Automated sequencing of the annual credit review calendar — prioritizing reviews by facility maturity, covenant reset dates, and current risk rating — so that the highest-priority reviews are completed before their regulatory or contractual deadlines. The schedule accounts for analyst capacity and identifies the reviews at risk of missing their deadline with sufficient lead time for management intervention.
+- Problem to solve: Annual credit reviews are scheduled by relationship managers based on informal knowledge of facility maturity dates and relationship management priorities; reviews for facilities with imminent covenant resets or approaching regulatory classification deadlines are not systematically prioritized. Credit-risk governance rules commonly require the annual review cycle to be completed within prescribed timelines; overdue reviews represent a regulatory gap that must be reported and remediated.
+- Solution: The AI agent reads the credit portfolio's facility maturity dates, covenant reset schedules, current risk ratings, and analyst capacity data, and produces a prioritized annual review schedule with deadline-at-risk flags for reviews that are unlikely to complete within the regulatory and contractual timeline. Credit operations uses the schedule to allocate analyst capacity, with deadline-at-risk cases escalated to management for capacity intervention before the deadline window closes.
+- OKR: The annual credit review calendar is sequenced by regulatory and contractual priority so deadline-at-risk reviews are identified and escalated before the deadline window.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced review schedule used by credit operations for ≥90% of annual review cycle planning within 6 months of go-live. |
+| Acceptance | Overdue review rate reduced by ≥30% vs. prior cycle; deadline-at-risk escalations actioned within 2 business days in ≥85% of cases. |
+| Cycle | Schedule refreshed weekly throughout the review cycle so capacity reallocation decisions are based on current completion status and remaining deadlines. |
+
+### Annual credit review memo drafting
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/annual-credit-review/annual-review-memo-drafting
+- Lens: Automation
+- Complexity: M
+- Intent: Automated drafting of the annual credit review memo for each borrower in the portfolio — covering financial performance analysis, risk rating update rationale, covenant compliance summary, and limit recommendation — from financial statement data and the credit file. Credit analysts review and apply judgment on the rating recommendation and limit decision, concentrating effort on the judgment steps rather than data assembly and memo structure.
+- Problem to solve: The annual credit review cycle for a mid-size SME or corporate portfolio spans hundreds of borrowers, each requiring a review memo that synthesizes financial analysis, risk rating update, covenant compliance, and limit recommendation. Relationship managers and credit analysts spend the majority of the review cycle on data assembly and memo drafting rather than on the judgment steps — risk rating calibration, limit recommendation, and covenant waiver assessment — that constitute the regulatory and supervisory substance of the review.
+- Solution: The AI agent reads the borrower's financial statements, prior review memo, risk rating history, covenant compliance data, and credit file, and drafts the annual review memo in the prescribed format — financial analysis narrative, ratio calculations, risk rating update rationale, covenant compliance summary, and limit recommendation basis. The credit analyst reviews the draft, applies judgment on the rating and limit recommendation, and completes the sign-off memo with any adjustments and the forward-looking credit assessment.
+- OKR: Annual credit review memos are drafted from financial statement and credit file data and available for credit analyst judgment review without manual data assembly.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-drafted review memos used for ≥75% of annual credit reviews within the first full review cycle after go-live. |
+| Acceptance | ≥85% of AI-drafted memos accepted by credit analysts with minor adjustments only; credit committee confirms memo quality meets regulatory documentation standard in ≥97% of sampled reviews. |
+| Cycle | Draft memo available within 4 hours of financial data submission so the credit analyst can complete the review within a single working session. |
+
+### Credit review financial ratio benchmarking
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/annual-credit-review/credit-review-financial-ratio-benchmarking
+- Lens: Insights
+- Complexity: M
+- Intent: Automated benchmarking of each borrower's financial ratios against the sector peer group — leverage, coverage, liquidity, and margin — as part of the annual credit review cycle, with deviation flags identifying borrowers whose ratios have moved materially relative to the peer distribution. Ratio benchmarking supports the risk rating update rationale and surfaces borrowers whose credit profile has deteriorated relative to peers, warranting deeper review before the annual cycle deadline.
+- Problem to solve: Annual credit review memos are expected to contextualize the borrower's financial performance against sector peers; credit analysts currently construct peer comparisons informally or omit them due to time constraints within the review cycle. Borrowers whose ratios have deteriorated relative to peers represent a higher risk rating migration risk; without systematic benchmarking, these migrations are identified at the rating committee step rather than during the analyst review, creating last-minute rating changes and committee rework.
+- Solution: The AI agent calculates the borrower's key financial ratios from the submitted financial statements and benchmarks them against the sector peer distribution from the Bank's internal credit database and external sector data, producing a benchmarking table with deviation flags for ratio movements in the bottom quartile. Credit analysts incorporate the benchmarking output into the review memo, with the peer deviation flags informing the risk rating update rationale and limit recommendation.
+- OKR: Financial ratio benchmarking against sector peers is produced for each annual credit review and incorporated into the review memo rationale.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced benchmarking output used in ≥80% of annual credit review memos within the first full review cycle after go-live. |
+| Acceptance | ≥80% of credit analysts report that peer benchmarking output materially informed their risk rating assessment; rating migration surprises at committee stage reduced by ≥20% vs. prior cycle. |
+| Cycle | Benchmarking output available within 2 hours of financial statement submission so it is available during the analyst's primary review session. |
+
+## Underwriter review & override {#underwriter-review-override}
+
+Manual review of applications referred from automated decisioning — near-boundary cases, complex borrower structures, policy exceptions, and appeals — where an underwriter applies judgment beyond the scorecard output. Where the Bank uses internal-ratings models, the Basel III IRB standards call for override rates and override performance to be tracked and reported; override documentation must capture the specific factors that led to the deviation from model recommendation. High override rates are a supervisory flag. Declined applications additionally require a decline notification carrying the prescribed reasons and disclosures.
+
+### Adverse Action Notification Drafting
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/underwriter-review-override/adverse-action-notification-drafting
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent drafts the credit decline or adverse action notification from structured decision data — reason codes, regulatory disclosures, and appeal rights — in the format required by consumer credit regulations. The draft covers all mandatory disclosure elements under consumer protection requirements, including credit bureau contact information and appeal rights. The case handler reviews and sends; regulatory disclosure completeness is consistent across all decline notifications.
+- Problem to solve: Consumer credit regulations commonly require decline notifications to include specific adverse action reasons, credit bureau contact information, and appeal rights; drafting compliant notifications manually consumes case-handler time on each decline. Quality varies across drafters, and compliance gaps — missing required disclosures or incorrectly stated reason codes — surface only in post-dispatch QA reviews or supervisory examinations. High decline volumes across retail and SME origination mean the aggregate compliance exposure is material even when individual error rates are low.
+- Solution: The AI agent reads the structured decision record — outcome, primary decline reasons, applicable regulation, and customer profile — and generates the compliant notification in the prescribed format with all required disclosure elements. The case handler reviews the draft and sends; no manual drafting of regulatory disclosure language is required. Disclosure completeness is monitored through QA review of a sample of AI-generated notifications; systemic gaps surface in QA before reaching supervisory examination.
+- OKR: Adverse action notifications for all credit decline decisions comply with consumer protection disclosure requirements, with consistent mandatory content regardless of case handler or decline volume.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent is used to draft adverse action notifications for ≥95% of consumer credit decline decisions within 12 months of go-live. |
+| Acceptance | ≥90% of AI-drafted notifications accepted by case handlers without material amendment; QA review confirms required disclosure completeness in ≥97% of sampled notifications. |
+| Cycle | Per-notification drafting time reduced from 10–20 minutes of manual composition to ≤5 minutes of case handler review and dispatch. |
+
+### Underwriter Application Synthesis
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/underwriter-review-override/underwriter-application-synthesis
+- Lens: Enablement
+- Complexity: M
+- Intent: The AI agent assembles bureau data, financial statement analysis, sector context, and group exposure summary into a structured underwriter pack for referred applications, ready for judgment review and decision documentation. The pack includes key financial ratios, red flags, and comparable case references drawn from prior credit decisions. The underwriter reviews the pack, applies judgment, and documents the decision; pre-synthesis work is eliminated from the underwriter's case cycle.
+- Problem to solve: Applications referred to underwriting require the underwriter to gather bureau reports, financial statements, sector analysis, and group-level exposure from multiple systems before the credit judgment can be applied. For complex SME or near-boundary cases, pre-synthesis work consumes the majority of the underwriter's time on each case, constraining the volume of cases that can receive thorough review within the decisioning SLA. Override documentation requirements — capturing the basis for departure from scorecard recommendation — add further administrative load on the same resource.
+- Solution: When an application is referred, the AI agent reads the bureau report, financial statements, sector classification, group exposure, and prior facility history. It assembles a structured synthesis pack with key ratios, red flags, and comparable case references, and pre-populates the override documentation template with the decision inputs. The underwriter reviews the pack, applies judgment, completes the documentation, and releases the decision; cases decided per underwriter per decisioning period is the primary outcome metric.
+- OKR: Referred applications are provided with a structured underwriter pack — bureau data, financial statement analysis, sector context, group exposure summary, key ratios, red flags, and comparable case references — and a pre-populated override documentation template ready for underwriter judgment review.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced underwriter synthesis packs used for ≥90% of referred applications within 12 months of go-live. |
+| Acceptance | ≥85% of synthesis packs accepted by underwriters as complete and sufficient for the credit judgment step without requiring supplementary data gathering; override documentation pre-population accuracy confirmed at ≥90% on periodic credit audit. |
+| Cycle | Synthesis pack and pre-populated override template available within 30 minutes of referral, vs. 1–3 hours of underwriter multi-system assembly per case in the prior process. |
+
+### Underwriter override pattern analytics
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/underwriter-review-override/underwriter-override-pattern-analytics
+- Lens: Insights
+- Complexity: M
+- Intent: Systematic analysis of override decisions — approve-against-model and decline-against-model — across the underwriter population, tracking override rates by underwriter, product, and applicant segment alongside the subsequent performance of overridden accounts. The analysis surfaces override patterns that indicate systematic underwriter deviation from model recommendation, enabling credit risk management to identify high-override underwriters and assess whether their overrides produce superior or inferior default outcomes.
+- Problem to solve: Where the Bank uses internal-ratings models, the Basel III IRB standards call for override rates and override performance to be tracked and reported; high override rates are a supervisory flag that requires documented investigation of the basis for systematic deviation from model recommendation. Current override performance reporting is produced at portfolio level quarterly; underwriter-level patterns that would identify systematic over-optimism or systematic over-conservatism are not surfaced until the aggregate override rate exceeds the supervisory threshold.
+- Solution: The AI agent analyzes override decisions by underwriter, product, and applicant segment, comparing each underwriter's override rate against the portfolio median and tracking the 12-month default rate on overridden accounts against the model's predicted probability of default. Credit risk management reviews the underwriter-level analysis, identifies patterns requiring coaching or process intervention, and retains the output as the documented override performance record for supervisory purposes.
+- OKR: Override rates and subsequent performance are tracked at the underwriter level and available to credit risk management for coaching intervention and supervisory reporting.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced override performance analysis covering all active underwriters within 6 months of go-live; used in ≥2 credit risk governance reviews per year. |
+| Acceptance | Override rate at or below supervisory threshold maintained across ≥90% of underwriter population; underwriter-level default performance on overrides within ±10% of model baseline within 18 months. |
+| Cycle | Override performance report refreshed monthly so coaching and intervention decisions are based on data no older than 30 days. |
+
+## Covenant monitoring {#covenant-monitoring}
+
+Ongoing tracking of financial and maintenance covenant compliance across the credit portfolio — debt-service coverage ratios, leverage ratios, liquidity covenants, and reporting covenants — with breach identification and escalation. Covenant breaches trigger waiver negotiations, facility restructuring, or acceleration rights under the loan documentation. Credit-risk reporting requirements commonly provide that material covenant breaches are reported to the supervisor. Monitoring across a mid-size portfolio requires monthly or quarterly data extraction across hundreds of facilities.
+
+### Covenant waiver pack drafting
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/covenant-monitoring/covenant-waiver-pack-drafting
+- Lens: Automation
+- Complexity: S
+- Intent: Automated drafting of the covenant waiver or amendment pack for borrowers in breach — summarizing the breached covenant, the breach magnitude, the borrower's explanation, the credit officer's assessment, and the proposed waiver or amendment terms — in the format required for credit committee approval. The pack enables the credit officer to present the waiver case to committee without manual assembly of the breach evidence and assessment narrative.
+- Problem to solve: Covenant breach waiver packs require the credit officer to collate the breach event, the facility terms, the borrower's explanation, and the credit assessment narrative before presenting to credit committee; manual assembly from multiple source records consumes 2–4 hours per waiver request. Waiver packs that do not meet the credit committee's documentation standard are returned for rework, delaying waiver approval and creating contractual ambiguity during the gap period.
+- Solution: The AI agent reads the breach flag, facility agreement, borrower financial submission, and the credit officer's assessment notes, and drafts the waiver pack in the credit committee's prescribed format — breach summary, facility terms, borrower explanation, credit assessment, and proposed waiver or amendment terms. The credit officer reviews the draft, adds forward-looking credit context, and submits to the credit committee queue.
+- OKR: Covenant waiver packs are drafted from breach event and facility data and available for credit officer review within the same day as the breach escalation.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-drafted waiver packs used for ≥80% of covenant breach waivers within 9 months of go-live. |
+| Acceptance | Credit committee return rate for waiver pack documentation deficiency reduced by ≥60% vs. pre-deployment baseline within 12 months. |
+| Cycle | Draft waiver pack available within 3 hours of breach escalation so the credit officer can complete the pack for committee submission within the same business day. |
+
+### Covenant compliance monitoring
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/covenant-monitoring/covenant-compliance-continuous-monitoring
+- Lens: Automation
+- Complexity: M
+- Intent: Automated extraction and computation of financial covenant compliance metrics — debt-service coverage ratios, leverage ratios, liquidity covenants, and reporting covenants — from borrower financial submissions and account data on each reporting cycle, with breach flags routed to the responsible relationship manager. Automated monitoring eliminates the manual data extraction and ratio calculation step that currently consumes the majority of covenant monitoring analyst time per facility.
+- Problem to solve: Covenant monitoring across a mid-size portfolio requires monthly or quarterly data extraction across hundreds of facilities, each requiring ratio computation from the borrower's financial submission and comparison against the specific covenant threshold in the facility agreement. Credit-risk reporting requirements commonly provide that material covenant breaches are reported to the supervisor; breaches identified after the reporting deadline create a regulatory compliance gap for the period between breach occurrence and identification.
+- Solution: The AI agent extracts the relevant financial metrics from each borrower's financial submission, computes the covenant ratios specified in the facility agreement, and compares results against the covenant thresholds, routing breach flags with the specific covenant, the computed ratio, and the threshold to the relationship manager and credit monitoring team. Relationship managers receive breach notifications within the reporting cycle, enabling waiver negotiation or facility restructuring before the supervisory reporting deadline.
+- OKR: Financial and maintenance covenant compliance is computed from borrower financial submissions on each reporting cycle and breach flags are routed to relationship managers within the reporting period.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | AI-produced covenant compliance monitoring covering ≥85% of material credit facilities within 9 months of go-live. |
+| Acceptance | Breach detection rate improves by ≥25% vs. prior manual cycle; fewer than 2% of breaches identified after the supervisory reporting deadline within 12 months. |
+| Cycle | Covenant compliance computation completed within 24 hours of financial submission receipt so breach flags are available before the end of the reporting period. |
+
+### Covenant breach pattern analytics
+
+- URN: urn:financial-services:scenario:shared-banking-capabilities/credit-decisioning/covenant-monitoring/covenant-breach-pattern-analytics
+- Lens: Insights
+- Complexity: M
+- Intent: Systematic analysis of covenant breach patterns across the credit portfolio — identifying which covenant types, sectors, and facility structures produce the highest breach frequency and the shortest time-to-breach from origination — to inform covenant structure calibration on new originations. The analysis supports credit risk management's review of covenant design standards and the relationship between covenant thresholds and observed borrower financial trajectories.
+- Problem to solve: Covenant breaches are managed case-by-case at the relationship manager level; portfolio-level patterns — covenant types with elevated breach frequency, sectors where standard thresholds are systematically tight, or facility structures with short time-to-breach — are not synthesized into a structured feedback signal for covenant design. Without portfolio-level breach pattern analysis, covenant structures on new originations are calibrated against policy precedent rather than against the observed performance of comparable prior facilities.
+- Solution: The AI agent analyzes the covenant breach history across the portfolio — by covenant type, sector, facility structure, and time-to-breach — and produces a ranked pattern report identifying the combinations with elevated breach frequency and the covenant threshold levels that have proven non-predictive of actual default. Credit risk management uses the pattern report to recalibrate covenant design standards on new originations, with the breach frequency evidence available for the credit policy update rationale.
+- OKR: Covenant breach patterns across the portfolio are analyzed by covenant type, sector, and facility structure and available for credit policy calibration on a rolling basis.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | Breach pattern analysis used in ≥1 credit covenant design review within the first 18 months of go-live. |
+| Acceptance | Covenant breach frequency on new originations declines by ≥15% within 24 months of covenant design recalibration informed by the analysis. |
+| Cycle | Breach pattern analysis refreshed semi-annually from the accumulated breach history so design calibration reflects the most recent portfolio experience. |

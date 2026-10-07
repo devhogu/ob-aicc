@@ -155,107 +155,31 @@ Question or comment:
 <span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../../privacy/">Privacy</a><a href="../../../terms-of-use/">Terms of use</a></div><p class="o-caption">Version 2.2 · October 2026</p></div></aside>
 <main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-content">
 
-
-
 <div class="page">
-
-  
-  <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
-    
-
-
-
-
-
-
-
-
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  
   <span class="breadcrumb__item">
-    
-    
     <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
-    
   </span>
-  
   <span class="breadcrumb__item">
-    
     <span class="breadcrumb__sep" aria-hidden="true">/</span>
-    
-    
     <a class="breadcrumb__link" href="../index.html">Banking Data &amp; Analytics</a>
-    
   </span>
-  
   <span class="breadcrumb__item">
-    
     <span class="breadcrumb__sep" aria-hidden="true">/</span>
-    
-    
     <span class="breadcrumb__current" aria-current="page">Risk &amp; position data</span>
-    
   </span>
-  
 </nav>
-
-    
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  
-  
-
-
-
-
-
-
-
+</div>
 <header class="page-header">
   <div class="page-header__title-row">
     <div>
-      
       <h1 class="page-header__title">Risk & position data</h1>
     </div>
   </div>
-  
-  
-    <p class="page-header__intent">Risk &amp; position data is the intraday and end-of-day record of the Bank's market and liquidity risk exposures — covering trading book positions and their VaR and sensitivity outputs, risk metrics including Greeks and expected shortfall, limit and headroom data across the full limits hierarchy, liquidity and funding position data for ALCO, and stress and scenario outputs from regulatory and internal scenario exercises. Prudential market risk requirements and the BCBS 239 principles for risk data aggregation expect risk data to be aggregated accurately and completely across all risk types and business lines within a defined reporting window. <strong>The GenAI opportunity is to automate daily risk position commentary, generate limit breach escalation drafts within the required response window, and produce stress scenario narratives without manual assembly</strong> — sustaining the cadence of risk management information without consuming additional analyst capacity.
-</p>
-  
+  <p class="page-header__intent">Risk &amp; position data is the intraday and end-of-day record of the Bank's market and liquidity risk exposures — covering trading book positions and their VaR and sensitivity outputs, risk metrics including Greeks and expected shortfall, limit and headroom data across the full limits hierarchy, liquidity and funding position data for ALCO, and stress and scenario outputs from regulatory and internal scenario exercises. Prudential market risk requirements and the BCBS 239 principles for risk data aggregation expect risk data to be aggregated accurately and completely across all risk types and business lines within a defined reporting window. <strong>The GenAI opportunity is to automate daily risk position commentary, generate limit breach escalation drafts within the required response window, and produce stress scenario narratives without manual assembly</strong> — sustaining the cadence of risk management information without consuming additional analyst capacity.</p>
 </header>
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
 <style>
-  /*
-    Per-page tab selectors — emitted at render time from concern-problems.html.j2
-    using this L1's actual category tags. concern.css carries no hardcoded slugs.
-    Pattern: checked radio siblings the tab-bar label → active style; siblings the
-    matching panel → display:block. One rule pair per category.
-  */
-  
   #problems-tab-risk-metrics-sensitivities:checked ~ .problems-tab-bar label[for="problems-tab-risk-metrics-sensitivities"] {
     color: var(--ink-accent);
     border-bottom-color: var(--ink-accent);
@@ -265,101 +189,30 @@ Question or comment:
   #problems-tab-risk-metrics-sensitivities:checked ~ .problems-panel[data-tab="risk-metrics-sensitivities"] {
     display: block;
   }
-  
 </style>
-
-
 <section class="concern-problems" aria-label="Problems">
-
-  
-  
-  <input
-    type="radio"
-    class="problems-tab-input"
-    name="problems-tabs"
-    id="problems-tab-risk-metrics-sensitivities"
-    value="risk-metrics-sensitivities"
-    checked
-    aria-label="Risk metrics &amp; sensitivities"
-  >
-  
-
-  
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-risk-metrics-sensitivities" value="risk-metrics-sensitivities" checked aria-label="Risk metrics &amp; sensitivities">
   <div class="problems-tab-bar" role="tablist">
-    
-    <label
-      class="problems-tab-label"
-      for="problems-tab-risk-metrics-sensitivities"
-      role="tab"
-      aria-controls="problems-panel-risk-metrics-sensitivities"
-    >Risk metrics &amp; sensitivities</label>
-    
+    <label class="problems-tab-label" for="problems-tab-risk-metrics-sensitivities" role="tab" aria-controls="problems-panel-risk-metrics-sensitivities">Risk metrics &amp; sensitivities</label>
   </div>
-
   <hr class="problems-divider">
-
-  
-  
-  <div
-    class="problems-panel"
-    id="problems-panel-risk-metrics-sensitivities"
-    data-tab="risk-metrics-sensitivities"
-    role="tabpanel"
-    aria-labelledby="problems-tab-risk-metrics-sensitivities"
-  >
-    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>VaR by desk and asset class, limit utilization across the limits hierarchy, and Greek sensitivities are each monitored within the risk management system with separate reporting outputs. Cross-cutting risk signals — a VaR increase in a desk correlated with a limit utilization spike in a related desk, or a correlation shift between two positions amplifying aggregate portfolio risk — are not surfaced by standard per-desk reports and require dedicated cross-desk analysis.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>The morning risk briefing — assembling and narrating position data, VaR attribution, limit utilization, and notable sensitivity changes — is a daily preparation task for the market risk team. The commentary and narration step requires reading raw risk system outputs and translating them into management language, consuming 45–90 minutes of analyst time before the briefing can be distributed.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Daily VaR reports, limit utilization narratives, and limit breach escalation notices follow defined structures applied to position and risk metric data on each processing cycle. The structure is prescribed by the Bank's risk governance framework; the assembly is manual and time-constrained, particularly for intraday breach escalations that carry defined response windows.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A risk management team freed from daily report assembly has capacity for substantive analysis — cross-portfolio risk signal interpretation, stress scenario deep-dives, and limit framework enhancement — that the assembly burden displaces. Higher-quality risk analysis at the same headcount level improves the quality of the Risk Committee&#39;s information set and the speed of risk-informed decision-making.</p></article></div>
+  <div class="problems-panel" id="problems-panel-risk-metrics-sensitivities" data-tab="risk-metrics-sensitivities" role="tabpanel" aria-labelledby="problems-tab-risk-metrics-sensitivities">
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>VaR by desk and asset class, limit utilization across the limits hierarchy, and Greek sensitivities are each monitored within the risk management system with separate reporting outputs. Cross-cutting risk signals — a VaR increase in a desk correlated with a limit utilization spike in a related desk, or a correlation shift between two positions amplifying aggregate portfolio risk — are not surfaced by standard per-desk reports and require dedicated cross-desk analysis.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>The morning risk briefing — assembling and narrating position data, VaR attribution, limit utilization, and notable sensitivity changes — is a daily preparation task for the market risk team. The commentary and narration step requires reading raw risk system outputs and translating them into management language, consuming 45–90 minutes of analyst time before the briefing can be distributed.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Daily VaR reports, limit utilization narratives, and limit breach escalation notices follow defined structures applied to position and risk metric data on each processing cycle. The structure is prescribed by the Bank's risk governance framework; the assembly is manual and time-constrained, particularly for intraday breach escalations that carry defined response windows.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A risk management team freed from daily report assembly has capacity for substantive analysis — cross-portfolio risk signal interpretation, stress scenario deep-dives, and limit framework enhancement — that the assembly burden displaces. Higher-quality risk analysis at the same headcount level improves the quality of the Risk Committee's information set and the speed of risk-informed decision-making.</p></article></div>
   </div>
-  
-
 </section>
-  
-
-  
-  <div id="main-content" class="l3-sections" aria-label="Sub-concerns">
-
-    
-    
-    
-
-
-
-
-
-
-
-
-
+<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
 <section class="l3-section" id="trading-book-positions">
-
   <header class="l3-section__head">
     <h2 class="l3-section__title">Trading book positions</h2>
-    
     <p class="l3-section__intent">For a bank with a trading book, the intraday and end-of-day record of each financial instrument held in that book — covering security positions, derivative contracts, foreign exchange positions, and commodity exposures — marked to market from current pricing feeds. Trading book positions drive VaR calculation, regulatory market risk capital under the Standardized Approach (SA) or, where the Bank uses internal models, the Internal Models Approach (IMA), P&amp;L attribution, and collateral margining. Position data flows from trading systems to the risk engine on each intraday cycle; its accuracy and completeness are prerequisites for every downstream risk metric.</p>
-    
   </header>
-
-  
-  
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
     <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
     <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
     <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
   </div>
-
   <div class="l3-section__scenarios">
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/trading-book-positions/trading-book-position-completeness-check" id="scenario-trading-book-position-completeness-check" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
@@ -370,71 +223,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">Where the Bank has a trading book, the AI agent validates position completeness on each intraday cycle — checking that positions from all trading systems have loaded to the risk engine, that the position count and aggregate notional are consistent with the prior cycle within tolerance, and that no instrument classes are missing relative to the expected coverage set. Exceptions are routed to the risk operations team before the risk calculation cycle runs, preventing the VaR and sensitivity calculations from proceeding on an incomplete position set.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Trading book position data flows from multiple trading systems to the risk engine on each intraday cycle; feed failures, system timeouts, and booking delays can result in incomplete position sets reaching the risk engine without detection. VaR and sensitivity calculations that proceed on an incomplete position set produce understated risk metrics; the understatement is identified only when the position reconciliation is performed at end-of-day, after the risk metrics have been used in intraday limit monitoring and margin call calculations.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the position load confirmation records from the risk engine at the completion of each intraday load cycle and checks: source system feed confirmation for all registered trading systems, position count and aggregate notional within a tolerance band of the prior cycle, and instrument class coverage against the expected set for each trading desk. Missing source system feeds, material count drops, and absent instrument classes are flagged immediately as load exceptions routed to the risk operations team. The risk calculation cycle proceeds only after exceptions are resolved or formally accepted by the risk operations lead.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">VaR and sensitivity calculations proceed on a complete, confirmed trading book position set on each intraday cycle, with load exceptions resolved by the risk operations team before the calculation runs.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent validates position completeness for ≥ 95% of intraday calculation cycles for ≥ 48 weeks within 12 months; all trading system feed confirmations integrated from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 90% of completeness exceptions confirmed as genuine load failures by the risk operations team; VaR understatement events attributable to incomplete position sets eliminated within 3 months of go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Position completeness validation completed within 5 minutes of load cycle confirmation; risk calculation cycle gate active from go-live for 100% of intraday runs.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/trading-book-positions/trading-book-boundary-monitoring" id="scenario-trading-book-boundary-monitoring" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
@@ -445,71 +264,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">Where the Bank has a trading book, the AI agent monitors the trading and banking book boundary on a weekly basis, identifying positions that exhibit characteristics inconsistent with their current book assignment — banking book positions showing trading intent indicators, or trading book positions with characteristics suggesting they should be classified as banking book. The risk governance and finance teams use the boundary monitoring report to maintain the integrity of the regulatory book boundary under prudential market risk requirements.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/#capital-liquidity">Capital and liquidity reforms</a></p>
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The trading book/banking book boundary is established at the point of instrument designation and reviewed through the annual regulatory capital assessment. Positions that migrate in character — a banking book holding that develops short-term trading patterns, or a trading book position that has become effectively illiquid — may not be reclassified promptly. Incorrect book classification affects regulatory capital under the FRTB and SA market risk frameworks; boundary breaches identified in supervisory examinations require restatement of capital calculations.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the full position inventory and applies boundary characterization rules — trading intent indicators for banking book positions (frequency of turnover, mark-to-market designation, desk assignment) and illiquidity indicators for trading book positions (bid-offer spread width, days-to-liquidate estimates, pricing source classification). Positions where the characterization analysis suggests a potential boundary inconsistency are flagged weekly with the specific indicators driving the flag. The risk governance and finance teams review flagged positions and initiate reclassification through the formal boundary review process where warranted.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The trading/banking book boundary is maintained at current regulatory classification through weekly characterization monitoring, with reclassification candidates identified for the risk governance and finance teams before supervisory examination.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces weekly boundary monitoring reports for 100% of in-scope positions for ≥ 48 weeks within 12 months; characterization rules approved by risk governance and finance within 60 days of go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 75% of flagged boundary inconsistencies confirmed as requiring reclassification review by the risk governance and finance teams; boundary restatement events in supervisory examinations eliminated within 12 months of go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Boundary monitoring cycle shifted from annual regulatory capital review to a weekly proactive scan; reclassification candidates identified and processed within the quarter in which the change in characteristics begins.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/trading-book-positions/position-to-pl-attribution-reconciliation" id="scenario-position-to-pl-attribution-reconciliation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
@@ -520,106 +305,51 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">Where the Bank has a trading book, the AI agent reconciles end-of-day P&amp;L attribution — the model-implied P&amp;L derived from risk sensitivities applied to market moves — against the desk-reported actual P&amp;L, identifying unexplained residuals by desk and instrument class. The market risk and finance teams use the reconciliation output to detect position booking errors, missing positions, or model deficiencies before the attributed P&amp;L feeds the capital and performance reporting cycles.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Complexity"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>P&amp;L attribution reconciliation — comparing model-implied P&amp;L from sensitivity-based attribution to actual desk P&amp;L — is a daily risk management discipline, required where the Bank uses the Internal Models Approach (IMA) for market risk capital. The reconciliation is performed manually by the market risk quant team, joining the risk engine sensitivity output with the actual P&amp;L from the finance system. Material unexplained residuals indicate position errors, missing Greeks, or model deficiencies; identifying and investigating these residuals within the EOD cycle is time-constrained.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the end-of-day risk sensitivity output and market moves, calculates the model-implied P&amp;L for each desk and instrument class, and compares it to the actual desk P&amp;L from the finance system. Unexplained residuals exceeding the defined threshold are flagged by desk and instrument class with the residual magnitude and the contributing sensitivity components. The market risk team uses the residual report to initiate investigation of booking errors or model deficiencies before the attributed P&amp;L feeds the next cycle. The reconciliation record is archived for IMA backtesting and regulatory reporting.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">End-of-day P&amp;L attribution reconciliation is completed systematically for all trading desks each day, with unexplained residuals identified for the market risk team and investigated within the EOD processing window.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces daily P&amp;L attribution reconciliations for 100% of in-scope trading desks for ≥ 48 weeks within 12 months; risk engine sensitivity and finance system P&amp;L integrations active from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 85% of flagged residuals confirmed as requiring investigation by the market risk team; residual investigation closure within the EOD window achieved in ≥ 80% of material residual events.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>P&amp;L attribution reconciliation cycle shifted from manual post-close analysis to an automated EOD run available ≤ 1 hour after market close; IMA backtesting data quality improved through systematic daily archiving.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
   </div>
-  
-
 </section>
-    
-    
-
-
-
-
-
-
-
-
-
 <section class="l3-section" id="limit-headroom-data">
-
   <header class="l3-section__head">
     <h2 class="l3-section__title">Limit &amp; headroom data</h2>
-    
     <p class="l3-section__intent">The real-time and end-of-day state of the limits hierarchy — from board-level aggregate risk limits through business-unit, desk, and position sub-limits — showing current utilization, available headroom, and breach status for each limit. Limit data is maintained in the risk management system and feeds the daily limit monitoring process, intraday trading controls, and the Risk Committee's monthly utilization report. Limit breach events require escalation to the CRO within a defined response window under the Bank's risk governance framework; the escalation notice must include breach magnitude, contributing positions, and proposed remediation.</p>
-    
   </header>
-
-  
-  
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
     <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
     <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
     <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
   </div>
-
   <div class="l3-section__scenarios">
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/limit-headroom-data/limit-breach-escalation-draft" id="scenario-limit-breach-escalation-draft" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
@@ -630,69 +360,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent drafts the limit breach escalation notice when a position exceeds a board-approved risk limit, including breach magnitude, contributing positions, and remediation options for the CRO to evaluate. The notice is drafted in the prescribed format ready for the risk officer to review and sign off within the defined escalation window. Assembling breach context from separate data sources is handled by the AI agent; the escalation decision remains with the risk officer.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>When a trading desk exceeds a board-approved risk limit, the risk officer must draft an escalation notice to the CRO and relevant committees within a defined response window. The notice requires assembling breach magnitude, contributing positions, market context, and proposed remediation from separate data sources under deadline pressure. The assembly step competes with the risk officer&#39;s judgment responsibilities during the escalation window.</p>
+      <p>When a trading desk exceeds a board-approved risk limit, the risk officer must draft an escalation notice to the CRO and relevant committees within a defined response window. The notice requires assembling breach magnitude, contributing positions, market context, and proposed remediation from separate data sources under deadline pressure. The assembly step competes with the risk officer's judgment responsibilities during the escalation window.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent detects the limit breach from intraday position monitoring, reads the contributing positions, limit hierarchy, and market context, and drafts the escalation notice in the prescribed format: breach identification covering limit type, desk, and magnitude; contributing position decomposition; market context; and remediation options for the CRO to evaluate. The risk officer reviews and signs off before distribution within the defined escalation window.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">When a board-approved risk limit is breached, the risk officer reviews an AI-drafted escalation notice — including breach magnitude, contributing positions, and remediation options — in the prescribed format within the defined escalation window.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent detects the breach and drafts the escalation notice for ≥ 95% of intraday limit breaches within 30 minutes of breach confirmation; all required notice sections covered in each draft.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 90% of draft notices accepted by the risk officer without material amendment to the factual sections; breach magnitude and contributing position decompositions validated as accurate in ≥ 95% of cases.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Escalation notice ready for risk officer review within 30 minutes of breach detection, compared to manual assembly under deadline pressure that previously consumed 1–2 hours of risk officer capacity.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/limit-headroom-data/limit-utilisation-trend-monitor" id="scenario-limit-utilisation-trend-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
@@ -703,69 +401,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent monitors the rate of limit utilization build-up across the limits hierarchy on a daily basis, identifying sub-limits where the utilization trend line projects a breach within a defined forward window under the current trajectory. The risk management team receives a daily trend alert for limits approaching the forward-breach projection threshold, enabling proactive position management before the breach materializes.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Limit monitoring focuses on current utilization against the current limit; the rate at which utilization is building and the projected time to breach under the current trajectory are not surfaced systematically. A desk or business unit approaching a limit through consistent daily utilization build-up may cross the limit without a trend-based early warning — the only alert is the breach event itself. The CRO's response window after breach detection is constrained by the breach magnitude and the time required to reduce the offending position.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the daily utilization time series for each limit in the hierarchy and calculates the trend — linear extrapolation and 7-day moving average — projecting the time to breach at the current trajectory. Limits where the trend line projects a breach within the defined forward window are flagged in a daily trend alert ranked by proximity to projected breach. The risk management team uses the alert to engage the relevant desk or business unit in position management before the utilization reaches the breach threshold.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The risk management team receives forward-looking trend alerts for limits approaching projected breach, enabling position management at least 5 business days before the breach materializes.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces daily trend alerts covering 100% of the limits hierarchy on ≥ 95% of business days within 12 months; trend projection methodology applied from go-live.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 70% of trend alerts result in position management action by the relevant desk within the alert period; projected-breach accuracy within ±2 business days confirmed in ≥ 75% of cases that reach the projected breach date.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Forward breach warning lead time extended from zero (reactive breach detection) to a minimum 5-business-day trend alert in ≥ 80% of breach events within 6 months of go-live.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/limit-headroom-data/limit-hierarchy-coverage-check" id="scenario-limit-hierarchy-coverage-check" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
@@ -776,104 +442,51 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent validates the limits hierarchy in the risk management system against the current legal entity structure, business unit taxonomy, and trading desk roster, identifying positions or books held by entities or desks not covered by the current limit framework. Uncovered positions — those with no applicable sub-limit — are flagged for the risk governance team to assess whether a new limit requires board approval or whether the position should be closed.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The limits hierarchy is defined at the point of board approval and updated through the risk governance framework when new business units or legal entities are established. In practice, new trading books, new desk structures, and new entity formations can result in positions being held in structures not yet covered by the limits framework. Positions without an applicable sub-limit are not visible in the limit monitoring system and do not appear in the daily limit utilization report. The risk governance team identifies uncovered positions reactively — when a report query returns no limit for a given position.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the current limit hierarchy and compares the covered entity, business unit, and desk structure against the current legal entity register, business unit taxonomy, and trading desk roster in the risk management system. Positions or books held by structures not present in the limit hierarchy are identified and ranked by position value. For each uncovered structure, the AI agent flags whether the position exceeds the threshold requiring board-level limit approval under the risk governance framework. The risk governance team receives the weekly coverage check report and initiates the limit approval or position closure process as appropriate.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">All positions and books held by the Bank's legal entities, business units, and trading desks are covered by an applicable limit in the hierarchy, with uncovered structures identified and remediated through the risk governance process.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces weekly limit hierarchy coverage checks for ≥ 48 weeks within 12 months; entity register, business unit taxonomy, and desk roster source integrations active from go-live.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 90% of uncovered structure flags confirmed as genuine gaps by the risk governance team; limit approval or position closure process initiated for 100% of confirmed gaps within the defined governance response window.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Limit coverage gap identification cycle shifted from reactive query-based discovery to a weekly proactive check; uncovered position exposure eliminated within 2 governance cycles of go-live.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
   </div>
-  
-
 </section>
-    
-    
-
-
-
-
-
-
-
-
-
 <section class="l3-section" id="risk-metrics-sensitivities">
-
   <header class="l3-section__head">
     <h2 class="l3-section__title">Risk metrics &amp; sensitivities</h2>
-    
     <p class="l3-section__intent">Derived risk measures calculated from positions and market data — VaR (parametric and historical simulation), expected shortfall, Greeks (delta, gamma, vega, rho), DV01, CS01, and P&amp;L attribution — that characterize the portfolio's sensitivity to market movements. These metrics are the primary inputs to the daily risk briefing, the limit monitoring process, and regulatory capital reporting. Their accuracy depends on the completeness of the underlying position data and the timeliness of the market data consumed in the calculation.</p>
-    
   </header>
-
-  
-  
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
     <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
     <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
     <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
   </div>
-
   <div class="l3-section__scenarios">
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/risk-metrics-sensitivities/risk-metric-sense-check" id="scenario-risk-metric-sense-check" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--optimize">Optimize</span>
@@ -884,69 +497,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent validates end-of-day VaR, DV01, and CS01 outputs against position and market data inputs, flagging metric results that fall outside expected ranges before the daily risk briefing is distributed. A statistical sense-check against prior-day values, position delta, and market data movement is applied to each metric. The risk technology team investigates flagged metrics and releases or corrects the end-of-day pack before distribution.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>End-of-day risk metrics — VaR, DV01, CS01 — are consumed directly in the daily risk briefing and limit monitoring process. Anomalous metric outputs caused by position data errors, stale market data, or model exceptions are identified after distribution rather than before. A material metric error in the daily briefing requires a restatement and delays limit-monitoring decisions.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads end-of-day position inputs, market data consumed by the risk engine, and the resulting metric outputs. It applies a statistical sense-check — comparing each metric against the prior day's value, the position delta, and the market data movement — and flags metric results where the change magnitude cannot be explained by the input movements. The risk technology team investigates flagged metrics and releases or corrects the end-of-day pack before distribution.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">End-of-day VaR, DV01, and CS01 outputs are validated against position and market data inputs before the daily risk briefing is distributed, with anomalous metric results flagged for risk technology investigation and release.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent executes the statistical sense-check for ≥ 95% of trading days within 12 months of go-live; VaR, DV01, and CS01 metrics covered in each daily validation run.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 90% of flagged metrics confirmed as requiring investigation by the risk technology team; false-positive flag rate ≤ 10% of total daily validations as assessed over rolling 90-day periods.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Sense-check complete and results available to the risk technology team within 30 minutes of end-of-day metric generation, before daily risk briefing distribution.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/risk-metrics-sensitivities/daily-risk-briefing-generation" id="scenario-daily-risk-briefing-generation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
@@ -957,71 +538,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent generates the daily risk briefing for the CRO and desk risk officers — covering end-of-day VaR by business line, Greeks summary for the derivatives portfolio, DV01 and CS01 for fixed income, and material moves in the P&amp;L attribution — formatted for the morning review before the trading day opens. The risk officer reviews the briefing and adds contextual commentary before distribution. The briefing is produced from the risk engine output without manual extraction.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The daily risk briefing requires risk analysts to extract VaR, sensitivity, and P&amp;L attribution outputs from the risk engine, format the summary tables, and draft the contextual commentary for the CRO and desk risk officers each morning. The extraction and formatting step is performed before market open; time pressure and the sequential nature of the extraction make it difficult to complete the briefing before the first client-facing sessions begin. The commentary drafting step further compresses the available review time.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the completed end-of-day risk engine output — VaR by business line and methodology, Greeks for the derivatives book, DV01 and CS01 positions, and P&amp;L attribution by desk — and produces a structured daily risk briefing. Material moves from the prior day — VaR increases above a defined threshold, Greeks that have shifted materially, unexplained P&amp;L attribution items — are flagged. The risk officer reviews the briefing, adds contextual commentary on the flagged items, and approves for CRO distribution before the trading day opens.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The CRO and desk risk officers receive a complete, data-grounded daily risk briefing before the trading day opens, with analyst capacity directed to contextual assessment rather than extraction and formatting.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces daily risk briefings for ≥ 48 weeks within 12 months of go-live; risk engine output integration for VaR, Greeks, and P&amp;L attribution active from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 85% of briefings accepted by the risk officer without material data corrections; CRO confirms briefing provides sufficient information for morning review in ≥ 45 of 48 weeks.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Briefing production time reduced from 1–2 hours of manual extraction and formatting to ≤ 20 minutes of risk officer review of the AI agent's draft; briefing available to the CRO ≥ 30 minutes before prior baseline delivery time.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/risk-metrics-sensitivities/sensitivity-limit-approach-alert" id="scenario-sensitivity-limit-approach-alert" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
@@ -1032,106 +579,51 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent monitors DV01, CS01, vega, and delta limits for each trading desk and generates an approach alert when a sensitivity measure moves above the early-warning threshold — typically 80% of the desk limit — so the risk officer and desk head can manage the position before the limit is reached. The alert includes the sensitivity measure, current level, desk limit, and the position contributing the largest incremental sensitivity.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Sensitivity limit monitoring is performed through the end-of-day limit report, which shows current utilization against limits. Intraday sensitivity build-up — a desk accumulating DV01 through a series of transactions during the trading session — reaches the end-of-day report only after the session closes. Early-warning alerts for sensitivity limits approaching the threshold are not generated intraday; the first formal notification may be a limit breach at the day's end.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads sensitivity calculations from the risk engine on each intraday calculation cycle, monitors DV01, CS01, vega, and delta measures against desk limits, and generates an approach alert when any measure crosses the 80% early-warning threshold. The alert identifies the sensitivity measure, the current level, the desk limit, the headroom remaining, and the position contributing the largest incremental sensitivity. The desk head and risk officer receive the alert with sufficient session time remaining to manage the position before the end-of-day limit check.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">Desk heads and risk officers receive intraday sensitivity limit approach alerts at the 80% threshold, enabling position management before end-of-day limit breaches.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent monitors sensitivity limits on each intraday calculation cycle for ≥ 48 weeks within 12 months; DV01, CS01, vega, and delta limit frameworks ingested and active from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 75% of approach alerts result in position management action by the desk head within the session; end-of-day sensitivity limit breach rate reduced by ≥ 40% within 3 months of go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Early-warning lead time extended from zero (end-of-day breach detection) to an intraday alert delivered ≥ 2 hours before close in ≥ 80% of cases.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
   </div>
-  
-
 </section>
-    
-    
-
-
-
-
-
-
-
-
-
 <section class="l3-section" id="liquidity-funding-data">
-
   <header class="l3-section__head">
     <h2 class="l3-section__title">Liquidity &amp; funding data</h2>
-    
     <p class="l3-section__intent">The position data layer for liquidity risk management — covering the high-quality liquid asset (HQLA) buffer, the liquidity coverage ratio (LCR), the net stable funding ratio (NSFR), intraday liquidity monitoring, and the funding gap analysis across maturity buckets used by ALCO. LCR and NSFR are typically reported to the regulator monthly; intraday liquidity monitoring is a supervisory expectation set out in the BCBS 2013 monitoring tools framework. The liquidity and funding position integrates data from treasury, ALM, and the securities ledger on each ALCO cycle.</p>
-    
   </header>
-
-  
-  
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
     <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
     <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
     <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
   </div>
-
   <div class="l3-section__scenarios">
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/liquidity-funding-data/lcr-nsfr-driver-commentary" id="scenario-lcr-nsfr-driver-commentary" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
@@ -1142,71 +634,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent generates the monthly LCR and NSFR driver commentary for the ALCO pack — identifying the HQLA components, cash outflow and inflow categories, and available stable funding and required stable funding categories that drove the ratio movements from the prior month. The treasury and ALM team reviews the draft commentary and adds forward-looking context before ALCO submission. The commentary follows the format of the Bank's prudential liquidity reporting.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The monthly ALCO pack requires a narrative explaining LCR and NSFR movements from the prior period, covering the key drivers — HQLA buffer changes, outflow category movements, funding structure changes — and the implications for the Bank's liquidity risk profile. The commentary is drafted manually by the treasury team after extracting and aggregating the component data from the liquidity reporting system. The drafting step consumes treasury analyst time within the compressed ALCO pack preparation window.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the monthly LCR and NSFR calculation outputs from the liquidity reporting system and decomposes the ratio movements into their component drivers — HQLA tier changes, outflow category movements by product type, inflow changes, and available-versus-required stable funding movements. It drafts the driver commentary with the three largest contributing factors for each ratio, with month-on-month comparisons and the relevant regulatory threshold context. The treasury and ALM team reviews the draft, adds forward-looking management commentary, and submits to ALCO.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The ALCO receives a complete, data-grounded LCR and NSFR driver commentary each month, with treasury analyst capacity directed to forward-looking assessment rather than data assembly and drafting.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces LCR/NSFR driver commentary for ≥ 12 consecutive monthly ALCO cycles within the first year; prudential liquidity reporting format templates applied from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 80% of driver commentaries accepted by the treasury and ALM team without material data amendments; ALCO feedback confirms commentary addresses ratio movement questions in ≥ 10 of 12 monthly cycles.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>LCR/NSFR commentary drafting time within the ALCO pack preparation window reduced from 1–2 days of manual drafting to ≤ half a day of review and approval of the AI agent's draft.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/liquidity-funding-data/dynamic-operational-dashboards-alert-narratives" id="scenario-dynamic-operational-dashboards-alert-narratives" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
@@ -1217,71 +675,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent assembles the weekly ALCO liquidity posture narrative — LCR, NSFR, HQLA buffer, intraday liquidity, and funding gap by maturity bucket — with trend commentary and headroom above supervisory minimums for the Treasurer and ALCO. The narrative integrates data from treasury and ALM systems into a single management-ready document. The Treasurer reviews the AI-generated narrative and adds market context before ALCO distribution.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Complexity"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The ALCO liquidity posture narrative is assembled weekly from separate treasury and ALM system outputs. Integrating LCR, NSFR, HQLA buffer, intraday liquidity monitoring, and funding gap data into a single narrative with trend commentary is a recurring manual aggregation exercise for the treasury analyst team each cycle. Consistent quality and completeness across each cycle depend on individual analyst capacity.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads LCR, NSFR, HQLA buffer composition, intraday liquidity monitoring data, and funding gap matrices from treasury and ALM systems. It produces the weekly liquidity posture narrative: metric levels and trends, headroom above supervisory minimums, HQLA quality composition, and funding gap by maturity bucket. The Treasurer reviews the AI-generated narrative and adds market context before ALCO distribution.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The Treasurer and ALCO receive a weekly liquidity posture narrative integrating LCR, NSFR, HQLA buffer, intraday liquidity, and funding gap by maturity bucket — assembled by the AI agent and reviewed by the Treasurer before ALCO distribution.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces the weekly ALCO liquidity posture narrative for ≥ 48 weeks within the first 12 months; LCR, NSFR, HQLA, intraday liquidity, and funding gap dimensions covered in each output.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 85% of AI-generated narratives accepted by the Treasurer with only market context additions; data accuracy across treasury and ALM source systems validated in ≥ 95% of weekly outputs.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Weekly narrative assembly time reduced from multi-hour manual aggregation by treasury analysts to ≤ 30 minutes of Treasurer review per cycle.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/liquidity-funding-data/intraday-liquidity-monitor" id="scenario-intraday-liquidity-monitor" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
@@ -1292,106 +716,51 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent monitors intraday liquidity positions across settlement accounts and correspondent banking relationships throughout the business day, tracking peak intraday exposures, available intraday liquidity, and utilization against intraday limits. The treasury team receives real-time alerts when intraday liquidity falls below the defined minimum buffer and an end-of-day intraday liquidity report for reporting in line with the BCBS 2013 monitoring tools and for ALCO review.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Complexity"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-
   <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/#payments-modernization">Payments modernization</a></p>
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>The BCBS monitoring tools for intraday liquidity expect banks to track peak intraday exposures, available liquidity, and utilization against intraday limits throughout the business day. In practice, many institutions monitor intraday positions at defined checkpoints rather than continuously; material intraday liquidity stress events can develop and resolve between checkpoints without being captured in the monitoring record. The end-of-day ALCO report does not reflect intraday peak exposures.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads settlement account balances, correspondent bank positions, and payment queue data continuously throughout the business day, calculates available intraday liquidity and peak exposure metrics, and monitors utilization against intraday limits. When available intraday liquidity falls below the minimum buffer threshold defined in the liquidity risk framework, an immediate alert is generated for the treasury team. The end-of-day report captures peak intraday exposure, minimum available liquidity reached during the day, and the time at which each peak occurred — formatted for reporting in line with the BCBS 2013 monitoring tools and for ALCO review.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The treasury team holds a continuous intraday view of liquidity positions and receives real-time alerts when available intraday liquidity falls below the defined minimum buffer, supporting reporting in line with the BCBS monitoring tools.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent monitors intraday liquidity positions continuously for ≥ 48 weeks within 12 months; settlement account, correspondent bank, and payment queue integrations active from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 90% of intraday buffer breach alerts confirmed as genuine by the treasury team; BCBS monitoring tool report data confirmed as complete and accurate against manual end-of-day reconstructions in ≥ 95% of cases.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Intraday monitoring posture shifted from checkpoint-based review to continuous monitoring; peak intraday exposure captured accurately in the end-of-day ALCO report from go-live.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
   </div>
-  
-
 </section>
-    
-    
-
-
-
-
-
-
-
-
-
 <section class="l3-section" id="stress-scenario-data">
-
   <header class="l3-section__head">
     <h2 class="l3-section__title">Stress &amp; scenario data</h2>
-    
     <p class="l3-section__intent">The inputs and outputs of regulatory and internal stress testing exercises — including supervisory stress scenarios, ICAAP adverse and severely adverse scenarios, and bank-internal tail scenarios — covering the scenario narrative, the shocked market and macro parameters, the model output by risk type and business line, and the capital and liquidity impact assessment. Stress scenario data is consumed by the board, Risk Committee, and supervisors to assess the institution's resilience; its interpretation and narration consume significant senior risk officer time each stress cycle.</p>
-    
   </header>
-
-  
-  
   <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
     <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
     <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
     <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
     <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
   </div>
-
   <div class="l3-section__scenarios">
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/stress-scenario-data/stress-scenario-input-validation" id="scenario-stress-scenario-input-validation" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--enablement">Enablement</span>
@@ -1402,71 +771,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent validates the shocked market and macro parameter inputs for each stress scenario against internal consistency rules and historical precedent — checking that shocked parameters do not violate cross-market relationships (e.g., equity market decline without corresponding credit spread widening) and that shock magnitudes are within the range of historically observed stress periods. The market risk and credit risk teams use the validation report to identify parameter inconsistencies before the stress model runs.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--S"
-      title="Complexity"
-    >S</span>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Stress scenario parameter sets are assembled by the market risk quant team from regulatory templates and internal scenario narratives; cross-parameter consistency — the internal coherence of shocked variables within a scenario — is checked informally. Parameters that violate known cross-market relationships or that lie outside historically observed ranges may produce stress results that are not credible under scrutiny by the board, Risk Committee, or supervisors. The inconsistency is typically identified during the results review rather than before the model run.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the proposed stress scenario parameter set and applies a two-layer validation: cross-parameter consistency rules (defined relationships between asset class shocks that must hold within a coherent scenario) and historical calibration checks (comparison of each shock magnitude against the distribution of historically observed shocks for the same variable and market). Parameters failing either layer are flagged with the rule violated and a comparison against the historical calibration range. The market risk quant team reviews the validation output and either adjusts the parameter or documents the basis for retaining the challenged value.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">Stress scenario parameter sets are validated for internal consistency and historical calibration before the model run, reducing the risk of producing non-credible results that require revision after board or supervisory review.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent validates parameter sets for ≥ 95% of regulatory and ICAAP stress scenario runs within 12 months of go-live; consistency rules and historical calibration database approved by model risk within 60 days.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 80% of flagged parameter inconsistencies confirmed as requiring adjustment by the market risk quant team; results revision rate after board or supervisory review reduced by ≥ 50% within 2 stress cycle runs.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Parameter validation completed before the model run in ≥ 95% of stress exercises; validation-driven parameter adjustments applied before model execution rather than as post-results corrections.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/stress-scenario-data/risk-position-commentary" id="scenario-risk-position-commentary" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--automation">Automation</span>
@@ -1477,69 +812,37 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent synthesizes stress scenario outputs across scenarios into a management-readable narrative — capital impact decomposition, liquidity gap, and comparison to prior cycle — for the Risk Committee. Each driver contribution is decomposed by risk type and business line; prior-cycle comparison and management-action assumptions are noted. The CRO reviews and adds forward-looking judgment before Committee submission.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Complexity"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
       <p>Each stress test cycle produces model output per scenario across capital, liquidity, and P&amp;L dimensions. Cross-scenario comparison, driver decomposition, and prior-cycle comparison require manual assembly by the risk team. The narration exercise consumes senior risk officer days per cycle ahead of Risk Committee submission, compressing the time available for analytical review.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads multi-scenario stress outputs, computes capital and liquidity impact by risk type and business line, and decomposes the impact by driver — credit migration, spread widening, funding outflow. It generates the Risk Committee narrative with prior-cycle comparison and management-action assumptions noted. The CRO reviews and adds forward-looking judgment before Committee submission.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The Risk Committee receives an AI-assembled stress scenario narrative — capital impact decomposition, liquidity gap, and prior-cycle comparison — reviewed and supplemented by the CRO before each Committee submission.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces the stress scenario narrative for 100% of Risk Committee cycles within 12 months of go-live; all scenario dimensions, risk types, and business line decompositions included in each output.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 85% of narratives accepted by the CRO with only forward-looking judgment additions; driver decompositions validated against underlying model outputs in ≥ 90% of cycles.</p>
         </div>
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Stress scenario narration cycle reduced from senior risk officer days of manual cross-scenario assembly to ≤ 4 hours of CRO review per cycle.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
-    
-    
-
-
-
-
-
-
-
-
-
 <details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/risk-position-data/stress-scenario-data/stress-result-board-summary" id="scenario-stress-result-board-summary" data-ui-pattern="scenario">
   <summary class="scenario-card__summary">
     <span class="scenario-lens scenario-lens--insights">Insights</span>
@@ -1550,82 +853,42 @@ Question or comment:
     <div class="scenario-card__intent-col">
       <p class="scenario-card__intent">The AI agent generates a board-level stress test result summary — covering capital and liquidity impact by scenario and business line, comparison to the prior cycle, and a plain-language narrative of the key risk concentrations exposed by the severe stress scenario — for the board Risk Committee pack. The CRO reviews the draft summary and adds qualitative context and management response; the AI agent handles the data synthesis and narrative structuring that precede the CRO's contribution.</p>
     </div>
-    <span
-      class="scenario-complexity scenario-complexity--M"
-      title="Complexity"
-    >M</span>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
   </summary>
-
   <div class="scenario-card__body">
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Problem to solve</div>
-      <p>Stress test results are produced by the model engine as a large dataset of impacts by scenario, risk type, and business line. Translating this dataset into a board-level narrative — explaining which scenarios stress the institution most, which business lines contribute disproportionately, and what the capital and liquidity implications are — requires significant senior risk officer time each cycle. The CRO&#39;s drafting time is consumed by data synthesis that could be automated, reducing the time available for the qualitative risk assessment that is genuinely judgment-dependent.</p>
+      <p>Stress test results are produced by the model engine as a large dataset of impacts by scenario, risk type, and business line. Translating this dataset into a board-level narrative — explaining which scenarios stress the institution most, which business lines contribute disproportionately, and what the capital and liquidity implications are — requires significant senior risk officer time each cycle. The CRO's drafting time is consumed by data synthesis that could be automated, reducing the time available for the qualitative risk assessment that is genuinely judgment-dependent.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">Solution</div>
       <p>The AI agent reads the stress model output, identifies the scenarios with the largest capital impact, the business lines contributing the largest stress losses, and the risk concentrations exposed by the severe scenario. It produces a structured board summary: a capital and liquidity impact table by scenario and business line, a comparison to the prior cycle with variance commentary, and a plain-language narrative of the key risk concentrations exposed. The CRO reviews the draft, adds qualitative assessment and management response, and approves for board Risk Committee submission.</p>
     </div>
-    
-
-    
     <div class="scenario-section">
       <div class="scenario-section__label">OKR</div>
-      
       <p class="okr-objective">The board Risk Committee receives a complete, data-grounded stress result summary each cycle, with CRO capacity directed to qualitative risk assessment and management response rather than data synthesis.</p>
-      
       <div class="okr-grid">
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Adoption</div>
           <p>The AI agent produces board stress summaries for ≥ 2 supervisory and ≥ 2 ICAAP stress cycles within the first year; stress model output integration active from go-live.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Acceptance</div>
           <p>≥ 80% of draft summaries accepted by the CRO as factually complete without data amendments; board Risk Committee feedback confirms summary addresses resilience questions in ≥ 3 of 4 reviewed cycles.</p>
         </div>
-        
-        
         <div class="okr-kr">
           <div class="okr-kr__dim">Cycle</div>
           <p>Board summary drafting time reduced from 2–3 days of manual data synthesis to ≤ half a day of CRO review and qualitative addition per cycle.</p>
         </div>
-        
       </div>
     </div>
-    
-
   </div>
 </details>
-    
   </div>
-  
-
 </section>
-    
-    
-
-  </div>
-
-  
-  
-
-
-
-
-
-
-
-
-
 </div>
 
+</div>
 </div>
 <footer class="o-footer">
       <span class="foot-text">AI Competence Center, O!Bank. Version 2.2, 2026. <a class="contact" href="mailto:talimbayev@obank.kg?subject=AICC%20Portal%20%5BW6TCD%5D%20page%20feedback">Contact us</a> <a class="contact" href="../../../privacy/">Privacy</a> <a class="contact" href="../../../terms-of-use/">Terms of use</a></span>

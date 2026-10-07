@@ -7,10 +7,12 @@ from pathlib import Path
 import re
 from urllib.parse import urljoin, urlsplit
 
+import discovery
+
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / 'html/aicc'
 SECTIONS = ('aicc', 'discovery', 'initiatives', 'projects', 'lab')
-# Discovery pages composed by the portal rather than retained from the catalog source.
+# Discovery pages composed by the portal rather than built from the catalog records.
 AUTHORED_DISCOVERY = {'regulatory-horizon/index.html'}
 
 
@@ -111,14 +113,13 @@ def check():
     references = {}
     for lang in ('en', 'ru'):
         seen_refs = set()
-        source = ROOT / f'html-alt/financial-services/{lang}'
         pages = sorted((OUTPUT / lang).rglob('index.html'))
         discovery_pages = list((OUTPUT / lang / 'discovery').rglob('index.html'))
-        source_pages = list(source.rglob('index.html'))
+        source_pages = discovery.pages(lang)
         expected_pages = len(source_pages) + len(AUTHORED_DISCOVERY)
         if len(discovery_pages) != expected_pages:
             errors.append(f'{lang}: expected {expected_pages} Discovery pages, got {len(discovery_pages)}')
-        source_cards = sum(len(Inspection(page.read_text()).cards) for page in source_pages)
+        source_cards = sum(len(Inspection(discovery.source(page, lang)).cards) for page in source_pages)
         for page in pages:
             path = '/' + page.relative_to(OUTPUT).as_posix()
             text = page.read_text()
@@ -170,9 +171,9 @@ def check():
                     errors.append(f'{path}: overview must include one Regulatory Horizon card')
                 if relative.as_posix() in AUTHORED_DISCOVERY:
                     continue
-                original = Inspection((source / relative).read_text())
+                original = Inspection(discovery.source(relative, lang))
                 if original.cards != parsed.cards:
-                    errors.append(f'{path}: scenario content or identity differs from retained source')
+                    errors.append(f'{path}: scenario content or identity differs from the catalog record')
                 if original.contexts != parsed.contexts or parsed.context_card_count != len(original.contexts):
                     errors.append(f'{path}: context cards omit or change source text')
                 counts[lang + '_context_cards'] += parsed.context_card_count
