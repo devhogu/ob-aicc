@@ -147,11 +147,12 @@ Question or comment:
   <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
 </svg>
 <span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../../privacy/">Privacy</a><a href="../../../terms-of-use/">Terms of use</a></div><p class="o-caption">Version 2.2 · October 2026</p></div></aside>
-<main class="o-main neighbour-main" id="main" tabindex="-1"><article class="project-content"><span class="neighbour-status">Proposed</span><nav class="project-breadcrumb"><a href="../../../initiatives/ini-013/">Portfolio initiative: INI-013</a> · <a href="../../#intake">Program Backlog</a></nav><nav class="project-breadcrumb" aria-label="Project overview"><a href="../">Customer Intelligence–Enabled Service Resolution</a><span aria-hidden="true"> / </span><span>Technical design</span></nav><section id="en-technical-design" class="doc-panel" data-document="en-technical-design">
-    <div class="doc-label">Technical</div>
-    <h1 id="en-technical-design-page">Technical design</h1>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><article class="project-content"><span class="neighbour-status">Proposed</span><nav class="project-breadcrumb"><a href="../../../initiatives/ini-013/">Portfolio initiative: INI-013</a> · <a href="../../#intake">Program Backlog</a></nav><nav class="project-breadcrumb" aria-label="Project overview"><a href="../">Customer Intelligence–Enabled Service Resolution</a><span aria-hidden="true"> / </span><span>Technical design</span></nav><section id="en-technical-design" class="doc-panel" data-document="en-technical-design"><div class="doc-label">Technical</div><h1 id="en-technical-design-page">Technical design</h1>
+
 <p>This page describes what the pilot builds, so that IT can estimate it and the Control Function Contacts can test it. It explains section 3 (architecture and data) of the Solution Definition; the full design is kept in the architecture repository of AICC, and product and framework choices go to the Decision Log. It names no systems, figures or data of the Bank. What the pilot asks of IT is on the <a href="../it-readiness/#en-it-readiness">IT readiness checklist</a>; what differs by journey is in the <a href="../journey-profiles/#en-journey-profiles">journey technical profiles</a>. The design is journey-neutral: Payment Issue Resolution is the technical recommendation, subject to the journey selected at the business case.</p>
+
 <section class="project-topic"><h2 id="en-technical-design-summary">Summary for approvers</h2>
+
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -198,10 +199,15 @@ Question or comment:
 </tr>
 </tbody>
 </table></div>
+
 </section><section class="project-topic"><h2 id="en-technical-design-genai-value">Where generative AI adds value</h2>
+
 <p>Generative AI (GenAI) is used for work that is hard to write as stable rules: interpreting fragmented contact notes, chats, cases and complaints, in Russian, Kyrgyz or mixed text; reconstructing a short timeline; telling the current need apart from earlier requests; explaining the likely blocker; applying the relevant approved procedure; proposing a permitted next step; and drafting a source-grounded explanation for the employee's review.</p>
+
 <p>GenAI does not establish customer identity, payment status, eligibility, deadlines, permissions, or transaction outcome. Those remain facts and decisions supplied by authoritative banking systems and approved policy. This sentence goes into the Conditions of use of the Solution Definition.</p>
+
 </section><section class="project-topic"><h2 id="en-technical-design-architecture">Architecture</h2>
+
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -210,21 +216,42 @@ Question or comment:
 </tr>
 </thead>
 <tbody>
-<tr><td>Banking systems</td><td>Hold the facts and run the Bank's processes. The pilot reads them and changes nothing in them.</td></tr>
-<tr><td>Customer context service</td><td>Builds the minimum authorized view for the journey: linked records, a timeline, a source reference for each value. It is not a customer 360.</td></tr>
-<tr><td>Assistant: fixed workflow, AI model behind the AI gateway, knowledge retrieval</td><td>The workflow calls the read services and the retrieval, sends the context to the model and checks its structured output. The model calls nothing and writes nothing.</td></tr>
-<tr><td>Workspace</td><td>Shows the result beside the service desktop. The employee accepts, corrects, rejects, investigates or escalates, and acts. It sends nothing on its own.</td></tr>
-<tr><td>Decision and outcome record</td><td>Keeps the AI's contribution, the employee's decision and the outcome in the pilot's own store. Nothing is written back to the Bank's systems.</td></tr>
+<tr>
+<td>Banking systems</td>
+<td>Hold the facts and run the Bank's processes. The pilot reads them and changes nothing in them.</td>
+</tr>
+<tr>
+<td>Customer context service</td>
+<td>Builds the minimum authorized view for the journey: linked records, a timeline, a source reference for each value. It is not a customer 360.</td>
+</tr>
+<tr>
+<td>Assistant: fixed workflow, AI model behind the AI gateway, knowledge retrieval</td>
+<td>The workflow calls the read services and the retrieval, sends the context to the model and checks its structured output. The model calls nothing and writes nothing.</td>
+</tr>
+<tr>
+<td>Workspace</td>
+<td>Shows the result beside the service desktop. The employee accepts, corrects, rejects, investigates or escalates, and acts. It sends nothing on its own.</td>
+</tr>
+<tr>
+<td>Decision and outcome record</td>
+<td>Keeps the AI's contribution, the employee's decision and the outcome in the pilot's own store. Nothing is written back to the Bank's systems.</td>
+</tr>
 </tbody>
 </table></div>
+
 <p>For each case: the employee opens an eligible case; the workflow checks the employee, purpose and eligibility, reads the sources and retrieves the procedure; the model returns structured output through the AI gateway; the workflow checks schema, citations and the action code against the approved list. If a check fails, a required source is missing or two sources conflict, no proposal is shown and the case follows the manual route. The employee then acts, and the record keeps what the AI proposed and what the employee decided.</p>
+
 </section><section class="project-topic"><h2 id="en-technical-design-information-paths">Information paths</h2>
+
 <ul>
 <li><strong>Historical extracts in the Lab (phase 1).</strong> Read-only extracts enter the Lab, each with its source owner and class. They become historical cases for building, evaluation and the baseline. Personal data is minimized and assessed with the data protection Contact first. Nothing is written back.</li>
 <li><strong>The live read path (phase 2).</strong> After validation, read interfaces or adapters fetch the current state when an eligible case is opened. Each value carries its source and freshness. Missing, stale, conflicting or mislinked information is shown as an exception and follows the existing manual route.</li>
 </ul>
+
 <p>The sources are the customer master or CRM, the journey system, the case system, contact platforms, complaints, knowledge repositories, identity services and management information; each keeps its authority, and only the fields the journey needs are read. Integration rules: versioned contracts, so that model, workflow, workspace and adapters can be replaced separately; journey logic kept in the Solution; snapshots for evaluation, never as a live source of truth; no model access to core databases, credentials, message buses or open search; source references kept from context to outcome.</p>
+
 <p><strong>Assumptions to confirm in discovery, each with its fallback:</strong></p>
+
 <ul>
 <li>no read interface: a scheduled extract for the Lab, and a narrower live scope;</li>
 <li>no shared customer key: an approved matching rule, with uncertain matches quarantined;</li>
@@ -233,11 +260,17 @@ Question or comment:
 <li>voice calls: out of the pilot, with no transcription;</li>
 <li>no deep links: the record reference is shown instead.</li>
 </ul>
+
 </section><section class="project-topic"><h2 id="en-technical-design-context-service">Customer context service</h2>
+
 <p>A journey-specific service. It links customer, journey event, open case and related contacts by the Bank's identifiers; normalizes them into one timeline of service events; keeps facts, calculated values and inferences apart; applies purpose, role, field and retention restrictions; gives the source, time, freshness and owner of each value; and produces a reproducible snapshot for every model call and employee action. Each event holds its identifiers, source record, type and business time, status or reason code, owning queue, access class and freshness. Inferences are stored apart, with their evidence, model and prompt version and expiry, and never become customer facts. The pilot's outputs serve only service resolution and the evaluation of the assistant.</p>
+
 </section><section class="project-topic"><h2 id="en-technical-design-assistant">The assistant and the employee's actions</h2>
+
 <p>The assistant is an Assistant in the corpus sense: it drafts for the employee and takes no action beyond its output. It is one fixed workflow, not an open loop. The workflow enforces a fixed sequence and step limit; schemas for requests and responses; time, call and cost limits per case; citation checks; separation of facts and inferences; a rule-based stop on missing or conflicting sources; a manual fallback at every failure; and the employee's decision before any communication or action. The workflow engine is a Team decision in the Decision Log; the model, prompt and retrieval versions are attached to each case trace. No agent protocols are used: there is one workflow and no AI agent.</p>
+
 <h3 id="en-technical-design-functions">Functions and who uses them</h3>
+
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -247,16 +280,40 @@ Question or comment:
 </tr>
 </thead>
 <tbody>
-<tr><td><code>get_customer_service_context</code>, <code>get_journey_status</code>, <code>get_related_contacts</code>, <code>get_open_case</code>, <code>get_applicable_procedure</code>, <code>get_permitted_actions</code></td><td>the workflow</td><td>read only, within the journey profile</td></tr>
-<tr><td>Timeline, likely blocker, next step (an action code), draft explanation, draft case note, prefilled referral</td><td>the model, as output</td><td>none outside the workspace</td></tr>
-<tr><td>Record the decision and feedback; record the service outcome</td><td>the employee, by a click</td><td>write to the pilot store</td></tr>
-<tr><td>Create a specialist referral; save the case note</td><td>the employee, after review</td><td>write through the existing interface, or by hand where none exists</td></tr>
-<tr><td>Explain to the customer</td><td>the employee, in their own words or by sending an edited draft from the existing channel</td><td>the Solution sends nothing</td></tr>
+<tr>
+<td><code>get_customer_service_context</code>, <code>get_journey_status</code>, <code>get_related_contacts</code>, <code>get_open_case</code>, <code>get_applicable_procedure</code>, <code>get_permitted_actions</code></td>
+<td>the workflow</td>
+<td>read only, within the journey profile</td>
+</tr>
+<tr>
+<td>Timeline, likely blocker, next step (an action code), draft explanation, draft case note, prefilled referral</td>
+<td>the model, as output</td>
+<td>none outside the workspace</td>
+</tr>
+<tr>
+<td>Record the decision and feedback; record the service outcome</td>
+<td>the employee, by a click</td>
+<td>write to the pilot store</td>
+</tr>
+<tr>
+<td>Create a specialist referral; save the case note</td>
+<td>the employee, after review</td>
+<td>write through the existing interface, or by hand where none exists</td>
+</tr>
+<tr>
+<td>Explain to the customer</td>
+<td>the employee, in their own words or by sending an edited draft from the existing channel</td>
+<td>the Solution sends nothing</td>
+</tr>
 </tbody>
 </table></div>
+
 <p>No function moves or reverses money, changes an authoritative journey state, makes a regulated decision, determines reimbursement, alters fraud, anti-money-laundering or sanctions state, or sends an unreviewed customer message. Each journey profile may only remove items from this list.</p>
+
 <p><strong>Workspace.</strong> A side panel in the service desktop, or a separate screen if the desktop cannot be extended. It shows the customer's request; what happened, with evidence; the verified current state; the likely blocker, marked as an inference; the applicable procedure; the permitted next step; the suggested explanation, marked as drafted by AI; the record references; and the employee's decision. It offers no open chat.</p>
+
 </section><section class="project-topic"><h2 id="en-technical-design-model-route">Deployment and model route</h2>
+
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -266,13 +323,28 @@ Question or comment:
 </tr>
 </thead>
 <tbody>
-<tr><td>In-Bank model on existing internal serving</td><td>Lab and live (default)</td><td>provider check of an in-Bank or open model (AI Policy 4.4); license recorded (ARC-006); approval for the data class</td></tr>
-<tr><td>New in-Bank model serving</td><td>Lab and live, if no internal serving exists</td><td>the same, sized from the Lab measurements (<a href="../it-readiness/#en-it-readiness-capacity">capacity observations</a>)</td></tr>
-<tr><td>External managed model</td><td>live only, never in the Lab</td><td>provider check by information security, data protection and legal (AI Policy 4.1, 4.3); approval for the data class; EXT-001 and EXT-002 confirmed by the Contacts</td></tr>
+<tr>
+<td>In-Bank model on existing internal serving</td>
+<td>Lab and live (default)</td>
+<td>provider check of an in-Bank or open model (AI Policy 4.4); license recorded (ARC-006); approval for the data class</td>
+</tr>
+<tr>
+<td>New in-Bank model serving</td>
+<td>Lab and live, if no internal serving exists</td>
+<td>the same, sized from the Lab measurements (<a href="../it-readiness/#en-it-readiness-capacity">capacity observations</a>)</td>
+</tr>
+<tr>
+<td>External managed model</td>
+<td>live only, never in the Lab</td>
+<td>provider check by information security, data protection and legal (AI Policy 4.1, 4.3); approval for the data class; EXT-001 and EXT-002 confirmed by the Contacts</td>
+</tr>
 </tbody>
 </table></div>
+
 <p>The AI gateway lets the Bank change the model later; every change of model, version or route is a significant change. Workspace, workflow and context service run on ordinary application servers; graphics processors are needed only for model serving.</p>
+
 <p>Operating the Service in phase 2:</p>
+
 <ul>
 <li>three environments: the Lab, non-production test, production; infrastructure as code, managed secrets, a workload identity;</li>
 <li>one trace per case from request to outcome; alert levels for performance, drift, the human override and correction rate, incidents and cost, each with who watches it (ARC-008);</li>
@@ -280,8 +352,11 @@ Question or comment:
 <li>the first users are named in the Solution Definition; widening them is a Domain Owner decision, never automatic;</li>
 <li>rollback under the Bank's change management; an AI Incident goes through the Bank's incident management, with the AICC Lead told; a tested suspension control that keeps the record of use (PLT-005, ARC-002).</li>
 </ul>
+
 </section><section class="project-topic"><h2 id="en-technical-design-engineering">Engineering and test approach</h2>
+
 <p>Code, infrastructure, prompts, schemas, retrieval settings, knowledge versions and evaluation data are versioned. Tests are built with each component; a person other than the builder runs them, and the result is referenced in each Feature (Solution Lifecycle Model 7.1).</p>
+
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -290,20 +365,51 @@ Question or comment:
 </tr>
 </thead>
 <tbody>
-<tr><td>Unit, interface and contract</td><td>rules, schemas, redaction and workflow steps work; contracts stay compatible and enforce authorization</td></tr>
-<tr><td>Data quality</td><td>identifiers, status mappings, freshness, exclusions and quarantine work</td></tr>
-<tr><td>Retrieval</td><td>the effective source is returned; stale, restricted and irrelevant sources are handled</td></tr>
-<tr><td>Model evaluation</td><td>factual support, interpretation, next step, abstention and draft quality meet the acceptance criteria, in each language of the records</td></tr>
-<tr><td>Workflow path</td><td>allowed paths and limits hold; the model holds no function</td></tr>
-<tr><td>Bias and error</td><td>no materially different treatment across relevant customer groups, before the first deployment to real users or data and in monitoring</td></tr>
-<tr><td>Security</td><td>prompt injection through customer messages, exfiltration, cross-customer access and open components are resisted</td></tr>
-<tr><td>Resilience</td><td>source failure, degraded mode, recovery, latency and suspension work</td></tr>
-<tr><td>Expert review</td><td>Domain Experts confirm representative states and exceptions, as evidence for the Evaluation set</td></tr>
+<tr>
+<td>Unit, interface and contract</td>
+<td>rules, schemas, redaction and workflow steps work; contracts stay compatible and enforce authorization</td>
+</tr>
+<tr>
+<td>Data quality</td>
+<td>identifiers, status mappings, freshness, exclusions and quarantine work</td>
+</tr>
+<tr>
+<td>Retrieval</td>
+<td>the effective source is returned; stale, restricted and irrelevant sources are handled</td>
+</tr>
+<tr>
+<td>Model evaluation</td>
+<td>factual support, interpretation, next step, abstention and draft quality meet the acceptance criteria, in each language of the records</td>
+</tr>
+<tr>
+<td>Workflow path</td>
+<td>allowed paths and limits hold; the model holds no function</td>
+</tr>
+<tr>
+<td>Bias and error</td>
+<td>no materially different treatment across relevant customer groups, before the first deployment to real users or data and in monitoring</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>prompt injection through customer messages, exfiltration, cross-customer access and open components are resisted</td>
+</tr>
+<tr>
+<td>Resilience</td>
+<td>source failure, degraded mode, recovery, latency and suspension work</td>
+</tr>
+<tr>
+<td>Expert review</td>
+<td>Domain Experts confirm representative states and exceptions, as evidence for the Evaluation set</td>
+</tr>
 </tbody>
 </table></div>
+
 <p>A failed mandatory test stops the Feature at Verify. Deployment follows the Bank's change management, with the change ticket and test result; nothing is promoted automatically. A changed model, prompt, corpus, mapping or workflow runs its regression set, and the AICC Lead decides whether it is a significant change needing a new validation.</p>
+
 </section><section class="project-topic"><h2 id="en-technical-design-evaluation">Data and evaluation assets</h2>
+
 <p>Three separate assets, owned by people who did not build the Solution: development cases; locked acceptance cases, unseen during building, which form the Evaluation set agreed with the Domain and labelled by Domain Experts; and monitoring samples from live cases, within the purpose approved for the data class. Historical cases are pseudonymized so that the links between customer, event, contact and case stay realistic; dates are shifted only where process order stays valid. Free text in Russian or Kyrgyz is hard to pseudonymize fully; where it cannot be done reliably, identifiable data stays in the Lab under the data protection Contact's sign-off, and any re-identification mapping stays outside it. Each case records the source state, expected interpretation, permitted action, procedure, exclusions and the expert's reasons.</p>
+
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -314,14 +420,33 @@ Question or comment:
 </tr>
 </thead>
 <tbody>
-<tr><td>Existing process</td><td>current systems and procedures</td><td>what is the baseline?</td><td>live, against the first users</td></tr>
-<tr><td>Context-only view</td><td>linked facts, rule-based timeline, record references</td><td>what does bringing the data together give?</td><td>on the locked cases; also the degraded mode</td></tr>
-<tr><td>GenAI-assisted view</td><td>context plus summary, blocker, procedure, next step and draft</td><td>what does GenAI add?</td><td>on the locked cases, and live with the first users</td></tr>
+<tr>
+<td>Existing process</td>
+<td>current systems and procedures</td>
+<td>what is the baseline?</td>
+<td>live, against the first users</td>
+</tr>
+<tr>
+<td>Context-only view</td>
+<td>linked facts, rule-based timeline, record references</td>
+<td>what does bringing the data together give?</td>
+<td>on the locked cases; also the degraded mode</td>
+</tr>
+<tr>
+<td>GenAI-assisted view</td>
+<td>context plus summary, blocker, procedure, next step and draft</td>
+<td>what does GenAI add?</td>
+<td>on the locked cases, and live with the first users</td>
+</tr>
 </tbody>
 </table></div>
+
 <p>If the context-only view gives most of the improvement, the result supports investment in customer context and limits further GenAI investment. The added value of GenAI is an input to the decision after the MVP, not a pass or fail criterion. Case numbers are in the measurement annex of the <a href="../charter/#en-charter">Charter</a>; the acceptance rule is on <a href="../controls-and-evidence/#en-controls">Controls and evidence</a>.</p>
+
 </section><section class="project-topic"><h2 id="en-technical-design-platform-standards">Fit with the AI Platform and the Standards</h2>
+
 <p>The pilot uses the AI Platform where it exists. A pilot-local stand-in for a Platform function is recorded in section 3 of the Solution Definition and as a Dependency on the Platform Owner, who accepts it for this Solution. The evidence is on <a href="../controls-and-evidence/#en-controls">Controls and evidence</a>.</p>
+
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -330,19 +455,51 @@ Question or comment:
 </tr>
 </thead>
 <tbody>
-<tr><td>Model gateway (PLT-004)</td><td>the AI gateway, or one authenticated proxy as a stand-in; data separated by class</td></tr>
-<tr><td>Knowledge layer (ARC-001)</td><td>one approved corpus; outputs cite sources; each source has an owner and review date in the AI Registry</td></tr>
-<tr><td>Tool gateway (ARC-007)</td><td>not needed: the model holds no tools and is not an AI agent</td></tr>
-<tr><td>Guardrails (ARC-005)</td><td>customer messages treated as untrusted input and filtered; output checks; a person before every action</td></tr>
-<tr><td>Human oversight (ARC-004)</td><td>the employee decides each case; the record keeps the AI's contribution and the decision</td></tr>
-<tr><td>Observability (PLT-002, ARC-008)</td><td>logging with the required retention; a trace per case; alert levels with watchers</td></tr>
-<tr><td>AI Registry (PLT-001)</td><td>model and version, data classes, knowledge sources; "AI agents and permissions: none"</td></tr>
-<tr><td>Suspension (PLT-005, ARC-002)</td><td>generation or the Service switched off without losing the record</td></tr>
-<tr><td>Open components (ARC-006)</td><td>licenses in the Solution Definition; covered by the security test</td></tr>
-<tr><td>The Lab (LAB-001 to LAB-007)</td><td>isolated, logged, read-only extracts with owners, personal data assessed, Evaluation set with grounding, drift and bias checks, Outcome Report at the end</td></tr>
+<tr>
+<td>Model gateway (PLT-004)</td>
+<td>the AI gateway, or one authenticated proxy as a stand-in; data separated by class</td>
+</tr>
+<tr>
+<td>Knowledge layer (ARC-001)</td>
+<td>one approved corpus; outputs cite sources; each source has an owner and review date in the AI Registry</td>
+</tr>
+<tr>
+<td>Tool gateway (ARC-007)</td>
+<td>not needed: the model holds no tools and is not an AI agent</td>
+</tr>
+<tr>
+<td>Guardrails (ARC-005)</td>
+<td>customer messages treated as untrusted input and filtered; output checks; a person before every action</td>
+</tr>
+<tr>
+<td>Human oversight (ARC-004)</td>
+<td>the employee decides each case; the record keeps the AI's contribution and the decision</td>
+</tr>
+<tr>
+<td>Observability (PLT-002, ARC-008)</td>
+<td>logging with the required retention; a trace per case; alert levels with watchers</td>
+</tr>
+<tr>
+<td>AI Registry (PLT-001)</td>
+<td>model and version, data classes, knowledge sources; &quot;AI agents and permissions: none&quot;</td>
+</tr>
+<tr>
+<td>Suspension (PLT-005, ARC-002)</td>
+<td>generation or the Service switched off without losing the record</td>
+</tr>
+<tr>
+<td>Open components (ARC-006)</td>
+<td>licenses in the Solution Definition; covered by the security test</td>
+</tr>
+<tr>
+<td>The Lab (LAB-001 to LAB-007)</td>
+<td>isolated, logged, read-only extracts with owners, personal data assessed, Evaluation set with grounding, drift and bias checks, Outcome Report at the end</td>
+</tr>
 </tbody>
 </table></div>
+
 </section><section class="project-topic"><h2 id="en-technical-design-later">Later, outside this pilot</h2>
+
 <ul>
 <li>A shared tool gateway, policy service, workflow runtime or event streams: only if a second journey needs them, as a Proposal to the Platform Owner.</li>
 <li>Reuse of components: a Package Definition; shared use needs a second consumer (Solution Lifecycle Model 8.12).</li>

@@ -2,6 +2,7 @@
 """Exercise every retained CSR document link and diagram in headless Chromium."""
 from __future__ import annotations
 
+import sys
 import json
 from pathlib import Path
 import re
@@ -10,6 +11,8 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "portfolio"
+sys.path.insert(0, str(ROOT / "portal/tools"))
+import project  # assembles the project documents from their Markdown records
 ARTIFACTS = ROOT / "csr-portal/verification"
 BASE = "http://127.0.0.1:8905"
 
@@ -25,7 +28,7 @@ def audit() -> dict:
         page.on("pageerror", lambda error: errors.append(str(error)))
         page.on("response", lambda response: errors.append(f"HTTP {response.status}: {response.url}") if response.status >= 400 else None)
         for lang in ("ru", "en"):
-            source = (SOURCE / lang / "projects/service-resolution/workbook.html").read_text()
+            source = project._workbook(lang)
             source_hrefs = re.findall(r'<a\b[^>]*href="#([^"]+)"', source)
             page.set_viewport_size({"width": 1440, "height": 900})
             page.goto(f"{BASE}/{lang}/index.html")

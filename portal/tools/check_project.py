@@ -4,7 +4,10 @@ from collections import Counter
 from html.parser import HTMLParser
 import json
 import re
+import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import project
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -65,7 +68,7 @@ class Capture(HTMLParser):
 def check(output):
     errors=[];counts={}
     for lang in ('en','ru'):
-        original=Capture((ROOT/f'portfolio/{lang}/projects/service-resolution/workbook.html').read_text())
+        original=Capture(project._workbook(lang))
         diagrams=0;tables=0;atoms=0;heading_destinations=[]
         for source,route in DOCUMENTS:
             identifier=lang+'-'+source
@@ -89,7 +92,7 @@ def check(output):
         for identifier,heading in heading_destinations:
             if heading not in indexed and heading!=original.documents[identifier]['headings'][0][0]: errors.append(f'{lang}: unsearchable heading {heading}')
         # Published diagrams and tables equal those of the source workbook.
-        source_text=(ROOT/f'portfolio/{lang}/projects/service-resolution/workbook.html').read_text()
+        source_text=project._workbook(lang)
         expected_diagrams=source_text.count('<figure class="diagram"'); expected_tables=len(re.findall(r'<table\b',source_text))
         if diagrams!=expected_diagrams or tables!=expected_tables: errors.append(f'{lang}: expected {expected_diagrams} diagrams and {expected_tables} tables, got {diagrams}/{tables}')
         counts.update({lang+'_project_documents':len(DOCUMENTS),lang+'_project_diagrams':diagrams,lang+'_project_tables':tables,lang+'_project_content_atoms':atoms})

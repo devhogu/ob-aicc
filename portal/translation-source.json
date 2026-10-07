@@ -1684,12 +1684,72 @@
     {
       "path": "portfolio/en/projects/README.md",
       "hash_basis": "file_bytes",
-      "sha256": "0ae39140262b27c18d35baceb7cdf31c71dba54f31404697250cb00271d80167"
+      "sha256": "5ae1ab15e0ebf8b6b5a879bca25af4d67fe80f6a6267daef93020355156d0ca3"
     },
     {
       "path": "lab/en/lab.md",
       "hash_basis": "file_bytes",
       "sha256": "a6f8efe95da39944ab6177c83e293b1a4f92c3b54791a4f54f928d3a56191316"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/charter.md",
+      "hash_basis": "file_bytes",
+      "sha256": "bb4fa583510635d3828290b1fe836d1002863b8fea791aa69ce0ebcf43dd5cff"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/controls.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f357aa26b4dcdd326c46a1f90fc4655144b9ae27da3781d27b6035c63a00265e"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/governance.md",
+      "hash_basis": "file_bytes",
+      "sha256": "1737a2dfcdb486b8c9f3630e1aa6f4ae4091454129044025adad963baf471e25"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/how-it-works.md",
+      "hash_basis": "file_bytes",
+      "sha256": "f7442e6f61c8102e3498c753c11b7e48ee038ed0be5e02a50c86c169b65a9e7a"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/it-readiness.md",
+      "hash_basis": "file_bytes",
+      "sha256": "a2f91beb2d1ba805cf2dc5704f19d1b4079b49648f948bf867c2b9fe0f22ee75"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/journey-dispute.md",
+      "hash_basis": "file_bytes",
+      "sha256": "c7f7395b4f446c727fa60fb36eb99d9ff4453e0d5613f254d8da5c8e49ef3df2"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/journey-kyc.md",
+      "hash_basis": "file_bytes",
+      "sha256": "b74b53df3de4f8ef47b596810b6e3b72919c7876c632dd645038eddf985ee60e"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/journey-payment.md",
+      "hash_basis": "file_bytes",
+      "sha256": "97111e1d6adf7461e18c4e5337352e8e342e358eb16c25980bad1bc2ce49144d"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/journey-profiles.md",
+      "hash_basis": "file_bytes",
+      "sha256": "10ef694f9c5a23d4d25b566ff7cf8e7129ab0b884b1aea0f69cf8c45924f39b2"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/journeys.md",
+      "hash_basis": "file_bytes",
+      "sha256": "002c6c4bc58dd934f94df18c1ff5a234b0142b55924a750b0def72c2323c5111"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/start.md",
+      "hash_basis": "file_bytes",
+      "sha256": "914dbf1bd642387e011cdfff56c0906331a3167327d7cd45d775d9ca5262408c"
+    },
+    {
+      "path": "portfolio/en/projects/service-resolution/technical-design.md",
+      "hash_basis": "file_bytes",
+      "sha256": "515ef8e175c6bbd17b4819e7ebc8ec03f55c56bdcafca911f0aaf87f32f40276"
     }
   ],
   "baseline_tag": "baseline-2026-10-03-en-v2.2",

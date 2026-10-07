@@ -15,11 +15,12 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import hashlib
 import shutil
 
 import workspace
 
-# The project workbook is a record of the Portfolio: portfolio/<lang>/projects/<key>/workbook.html.
+# The project documents are records of the Portfolio: portfolio/<lang>/projects/<key>/<document>.md.
 SOURCE = workspace.ROOT / 'portfolio'
 ROUTES = {'start': '', 'charter': 'charter/', 'journeys': 'journeys/', 'journey-payment': 'journeys/payment-issue/',
           'journey-dispute': 'journeys/card-dispute/', 'journey-kyc': 'journeys/onboarding-kyc/', 'governance': 'governance/',
@@ -73,8 +74,121 @@ class _Source(HTMLParser):
                 self.sections[self.current] = self.text[self.start:end]; self.current = None
 
 
+PROJECT = 'projects/service-resolution'
+
+
+def _front(text):
+    """Front matter of a project document: one JSON value per line."""
+    text = re.sub(r'\A```yaml\n.*?```\s*', '', text, count=1, flags=re.S)  # the source pin of a translation
+    match = re.match(r'---\n(.*?)\n---\n', text, re.S)
+    if not match: raise ValueError('Project document without front matter')
+    meta = {}
+    for line in match[1].splitlines():
+        key, _, value = line.partition(': ')
+        meta[key] = json.loads(value)
+    return meta, text[match.end():]
+
+
+def _mermaid(code, lang):
+    """A Mermaid block, drawn with the portal renderer, as the figure the project pages expect."""
+    import build
+    ident = re.search(r'^%% id: (\S+)$', code, re.M)[1]; caption = re.search(r'^%% caption: (.+)$', code, re.M)[1]
+    body = '\n'.join(l for l in code.splitlines() if not l.startswith('%%'))
+    # Break label lines before the renderer's own wrap width, so each line breaks once at a word boundary.
+    body = re.sub(r'"([^"]*)"', lambda m: '"%s"' % build.wrap_label(m[1], 26), body)
+    key = f'project-{ident}-{lang}-' + hashlib.sha256(body.encode()).hexdigest()[:12]
+    svg = build.render_diagrams([(key, body)], True)[key]
+    if not svg: raise ValueError('Project diagram not rendered: ' + ident)
+    svg = re.sub(r'<svg\b', f'<svg role="img" aria-label="{escape(caption)}"', svg['light'], count=1)
+    svg = re.sub(r'(<svg\b[^>]*?) id="[^"]*"', rf'\1 id="{lang}-project-{ident}"', svg, count=1)
+    return f'<figure class="diagram" data-language="{lang}" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false" aria-label="{escape(caption)}" title="{escape(caption)}">{svg}</figure>'
+
+
+def _markdown(text, lang):
+    """A project document body as HTML: ids and links take the language prefix; '<' cells merge left."""
+    from markdown_it import MarkdownIt
+    md = MarkdownIt('commonmark', {'html': False}).enable('table')
+    out = []
+    for chunk in re.split(r'\n(?=<!-- (?:flow|cards) -->\n)|(?<=\n)\n(?=\S)', '\n' + text):
+        chunk = chunk.strip('\n')
+        if not chunk: continue
+        if chunk.startswith('<!-- flow -->'):
+            steps = [re.match(r'- \*\*(.+?)\*\* (.*)', l) for l in chunk.splitlines()[1:]]
+            out.append('<div class="value-flow" aria-label="' + escape(_last_heading) + '">' + ''.join(f'<div class="value-step"><b>{_inline(md, m[1], lang)}</b><p>{_inline(md, m[2], lang)}</p></div>' for m in steps) + '</div>')
+        elif chunk.startswith('<!-- cards -->'):
+            cards = [re.match(r'- \[(.+?)\]\(#([^)]+)\): (.*)', l) for l in chunk.splitlines()[1:]]
+            out.append('<div class="audience-grid">' + ''.join(f'<a class="audience-card" href="#{lang}-{m[2]}"><strong>{_inline(md, m[1], lang)}</strong><span>{_inline(md, m[3], lang)}</span></a>' for m in cards) + '</div>')
+        elif chunk.startswith('```mermaid'):
+            out.append(_mermaid(chunk.split('\n', 1)[1].rsplit('```', 1)[0], lang))
+        else:
+            out.append(_block(md, chunk, lang))
+    return '\n'.join(out)
+
+
+_last_heading = ''
+
+
+def _inline(md, text, lang):
+    return _prefix(md.renderInline(text), lang)
+
+
+def _prefix(html_text, lang):
+    return re.sub(r'href="#([^"]+)"', lambda m: f'href="#{lang}-{m[1]}"', html_text)
+
+
+def _block(md, chunk, lang):
+    global _last_heading
+    tokens = md.parse(chunk)
+    for i, t in enumerate(tokens):
+        if t.type == 'heading_open':
+            inline = tokens[i + 1]
+            m = re.search(r'\s*\{#([\w-]+)\}$', inline.content)
+            if m:
+                t.attrSet('id', f'{lang}-{m[1]}')
+                inline.content = inline.content[:m.start()]
+                inline.children = md.parseInline(inline.content, {})[0].children
+            _last_heading = inline.content
+        if t.type in ('td_open', 'th_open') and tokens[i + 1].content == '<':
+            t.attrSet('data-merge', '1')
+    html_text = md.renderer.render(tokens, md.options, {})
+    # A cell holding only '<' merges into the cell on its left.
+    def merge(row):
+        cells = re.findall(r'<(t[dh])([^>]*)>(.*?)</\1>', row, re.S); result = []
+        for tag, attrs, content in cells:
+            if 'data-merge' in attrs:
+                prev = result[-1]; span = int(prev[3]) + 1; result[-1] = (prev[0], prev[1], prev[2], span)
+            else:
+                result.append((tag, attrs, content, 1))
+        return '<tr>\n' + ''.join(f'<{t}{a}{"" if n == 1 else f" colspan={chr(34)}{n}{chr(34)}"}>{c}</{t}>\n' for t, a, c, n in result) + '</tr>'
+    html_text = re.sub(r'<tr>\n(.*?)</tr>', lambda m: merge(m[0]), html_text, flags=re.S)
+    html_text = re.sub(r'<table>(.*?)</table>', r'<div class="table-wrap"><table>\1</table></div>', html_text, flags=re.S)
+    return _prefix(html_text, lang)
+
+
+def _workbook(lang):
+    """The project documents of one language, assembled as the sections and navigation the pages are built from."""
+    folder = SOURCE / lang / PROJECT
+    nav, sections = [], []
+    for key in ROUTES:
+        meta, body = _front((folder / f'{key}.md').read_text())
+        if meta['key'] != key: raise ValueError('Project document key disagrees with its file: ' + key)
+        html_body = _markdown(body, lang)
+        if key == 'start':
+            pills = ''.join(f'<span class="pill">{escape(p)}</span>' for p in meta.get('pills', []))
+            html_body = html_body.replace('<h2 ', '<h2 class="audience-title" ')
+            title, _, rest = html_body.partition('\n')
+            head = f'<div class="eyebrow">{escape(meta["eyebrow"])}</div>{title}<p class="lede">{escape(meta["lede"])}</p><div class="landing-meta">{pills}</div>'
+            sections.append(f'<section class="landing" id="{lang}-start" data-document="{lang}-start">{head}{rest}</section>')
+        else:
+            label = f'<div class="doc-label">{escape(meta["section"])}</div>' if meta.get('section') else ''
+            sections.append(f'<section id="{lang}-{key}" class="doc-panel" data-document="{lang}-{key}">{label}{html_body}</section>')
+        if 'label' in meta:
+            nav.append(f'<details class="nav-doc"><summary>{escape(meta["label"])}</summary><div class="nav-doc-links"><a data-doc-link="{lang}-{key}" href="#{lang}-{key}"></a></div></details>')
+    return '<nav>' + ''.join(nav) + '</nav>\n' + '\n'.join(sections)
+
+
 def documents(lang):
-    text = (SOURCE / lang / 'projects/service-resolution/workbook.html').read_text()
+    text = _workbook(lang)
     parsed = _Source(text)
     expected = [lang + '-' + key for key in ROUTES]
     if list(parsed.sections) != expected: raise ValueError('Project document structure drift: ' + lang)
