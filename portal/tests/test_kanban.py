@@ -20,7 +20,7 @@ class Cards(HTMLParser):
 class SharedKanban(unittest.TestCase):
     def test_actual_portfolio_has_native_compact_cards_and_matching_details(self):
         for lang in ('en','ru'):
-            text=portfolio.render(portfolio.project(lang=lang),f'/{lang}/initiatives/')
+            text=portfolio.render(portfolio.project(lang=lang),f'/{lang}/portfolio/')
             parsed=Cards(text)
             self.assertEqual(len(parsed.cards),18) # 7 board + 7 review + 4 Standing
             self.assertEqual(len(parsed.templates),11)
@@ -32,7 +32,7 @@ class SharedKanban(unittest.TestCase):
 
     def test_production_delivery_has_no_demo_cards_but_keeps_intake_documents(self):
         for lang in ('en','ru'):
-            text=delivery.render(delivery.project(lang=lang),f'/{lang}/projects/')
+            text=delivery.render(delivery.project(lang=lang),f'/{lang}/program/')
             self.assertEqual(Cards(text).cards,[])
             self.assertIn('INI-013',text)
             self.assertIn('data-dl-panel',text)
@@ -43,7 +43,7 @@ class SharedKanban(unittest.TestCase):
         data=delivery.project();parent=next(i for i in data['portfolio']['items'] if i['id']=='INI-009')
         row={'Identifier':'FEAT-001','kind':'Feature','title':'Verified case history','initiative':'INI-009','State':'Waiting','status':'Waiting','column':'Active','Lane':'Normal','stage_label':'Develop','rank':1,'approval':'2026-10-06','accepted':'','criteria':'Given a permitted case, show source-linked history','dependencies':['DEP-014'],'Waiting Dependency':'DEP-014','Parent: Capability or Standing Initiative':'INI-009'}
         data['items']=[row];data['counts']['Active']=1
-        text=delivery.render(data,'/en/projects/');parsed=Cards(text)
+        text=delivery.render(data,'/en/program/');parsed=Cards(text)
         self.assertEqual(parsed.cards[0]['href'],'items/feat-001/')
         self.assertEqual(parsed.templates,['FEAT-001'])
         self.assertIn(parent['outcome'],text)

@@ -192,9 +192,9 @@ class PortalRendering(unittest.TestCase):
                 self.assertNotIn('class="o-callout lang-note"', rendered)
                 self.assertIn('hreflang="en"', rendered)
                 self.assertTrue(any('Возможность' in code for _, code in diagrams))
-                records = [r for r in build.search_index(ru, 'ru') if r['u'].startswith('/ru/delivery/#')]
+                records = [r for r in build.search_index(ru, 'ru') if r['u'].startswith('/ru/center/delivery/#')]
                 self.assertTrue(any('Проверка русской поставки' in r['x'] for r in records))
-                href = ru.map_link('../reference/industry-body-of-knowledge.md', {'source': str(target.relative_to(root)), 'lang': 'ru', 'url': '/ru/delivery/'})
+                href = ru.map_link('../reference/industry-body-of-knowledge.md', {'source': str(target.relative_to(root)), 'lang': 'ru', 'url': '/ru/center/delivery/'})
                 self.assertEqual(href, '../reference/industry-body-of-knowledge/')
                 doc_page = ru.by_id['services/business-model']
                 doc_html = build.build_page(ru, doc_page, 'ru')
@@ -217,7 +217,7 @@ class PortalRendering(unittest.TestCase):
                 self.assertEqual(len(ru.tpl_desc), 14)
                 decision_row = next(row for row in records_html.split('</tr>') if 'Протокол решения' in row)
                 self.assertIn('/governance/controls/c-04/', decision_row)
-                context = {'source': 'charter/ru/documents/business-model.md', 'lang': 'ru', 'url': '/ru/services/business-model/'}
+                context = {'source': 'charter/ru/documents/business-model.md', 'lang': 'ru', 'url': '/ru/center/services/business-model/'}
                 self.assertIn('class="xref"', ru.link_xrefs('Бизнес-модель 4.8', context))
                 self.assertIn('class="xref"', ru.link_xrefs('Операционной модели 8.5', context))
                 self.assertIn('#c-5-4', ru.link_xrefs('Каталоге документов 5.4', context))
@@ -283,7 +283,7 @@ class RussianCorpusProjection(unittest.TestCase):
                     rendered = build.build_page(site, site.by_id[page_id], language)
                     self.assertEqual(re.search(r'<title>(.*?)</title>', rendered)[1], title + ' · AICC')
                     self.assertEqual(re.search(r'data-page="([^"]*)"', rendered)[1], title)
-                hits = [e for e in build.search_index(site, language) if e['u'] == '/' + language + '/']
+                hits = [e for e in build.search_index(site, language) if e['u'] == '/' + language + '/center/']
                 self.assertEqual([e['t'] for e in hits], [home_title])
                 catalog = build.build_page(site, site.by_id['reference/document-catalog'], language)
                 for fragment in (catalog.split('<div class="o-doc"', 1)[1].split('<details', 1)[0],
@@ -323,7 +323,7 @@ class RussianCorpusProjection(unittest.TestCase):
                 index = build.search_index(site, language)
                 for title, route in ((records_title, 'records-and-systems'), (history_title, 'change-history')):
                     hits = [entry for entry in index if entry['h'] == title]
-                    self.assertEqual([entry['u'] for entry in hits], ['/' + language + '/reference/' + route + '/'])
+                    self.assertEqual([entry['u'] for entry in hits], ['/' + language + '/center/reference/' + route + '/'])
 
     def test_mandate_projections_follow_the_selected_corpus(self):
         site = build.Site(argparse.Namespace(no_diagrams=True), 'ru')
@@ -415,7 +415,7 @@ class RussianCorpusProjection(unittest.TestCase):
         html = build.build_page(site, page, 'ru')
         hits = [row for row in build.search_index(site, 'ru') if row['h'] == 'Степень серьёзности']
         self.assertEqual(len(hits), 1)
-        self.assertEqual(hits[0]['u'], '/ru/reference/vocabulary/#t-степень-серьёзности')
+        self.assertEqual(hits[0]['u'], '/ru/center/reference/vocabulary/#t-степень-серьёзности')
         self.assertIn('id="t-степень-серьёзности"', html)
         self.assertIn('AICC-REF-01-RU', html)
         self.assertIn('<div class="o-doc" lang="ru">', html)
@@ -451,7 +451,7 @@ class RussianCorpusProjection(unittest.TestCase):
                     hits = [entry for entry in entries if entry['h'] == term
                             or entry['h'].startswith(term + ' — ')]
                     self.assertEqual(len(hits), 1)
-                    self.assertEqual(hits[0]['u'], f'/{language}/reference/shared-terminology/#{section}')
+                    self.assertEqual(hits[0]['u'], f'/{language}/center/reference/shared-terminology/#{section}')
                     self.assertIn(f'id="{section}"', html)
                     self.assertIn(term, html)
                     self.assertTrue(hits[0]['x'])
@@ -496,7 +496,7 @@ class RussianCorpusProjection(unittest.TestCase):
             site = build.Site(argparse.Namespace(no_diagrams=True), language)
             build.add_generated_pages(site); build.assign_refs(site); build.load_terms(site); build.render_pages(site)
             hits = [row for row in build.search_index(site, language)
-                    if row['u'] == '/' + language + '/knowledge-base/control-sign-off/']
+                    if row['u'] == '/' + language + '/center/knowledge-base/control-sign-off/']
             self.assertEqual(len(hits), 1, language)
             self.assertEqual(hits[0]['t'], title)
             self.assertTrue(hits[0]['x'])

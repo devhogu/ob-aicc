@@ -116,7 +116,7 @@ async def check(folder, report_dir):
                     assert await page.locator('parsererror').count() == 0, diagram
                 for width in (1440, 900, 390):
                     await page.set_viewport_size({'width':width,'height':900})
-                    for route in ('index.html','contents.html','about/values-and-principles/index.html','discovery/strategic-portfolio/index.html','discovery/value-streams/index.html','lab/index.html','initiatives/index.html','projects/index.html','projects/service-resolution/charter/index.html'):
+                    for route in ('index.html','contents.html','center/index.html','center/about/values-and-principles/index.html','discovery/strategic-portfolio/index.html','discovery/value-streams/index.html','lab/index.html','portfolio/index.html','program/index.html','program/service-resolution/charter/index.html'):
                         await page.goto((standalone / route).as_uri())
                         assert await page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), (lang, width, route, 'page overflow')
                         if route == 'discovery/strategic-portfolio/index.html':
@@ -135,10 +135,10 @@ async def check(folder, report_dir):
                         if route == 'lab/index.html':
                             assert await page.locator('.lab-task').count() == 37
                             assert await page.locator('.lab-stage-nav a').count() == 7
-                        if route == 'initiatives/index.html':
+                        if route == 'portfolio/index.html':
                             for panel in await page.locator('[data-pf-panel]').all():
                                 assert await panel.is_visible()
-                        if route == 'projects/service-resolution/charter/index.html':
+                        if route == 'program/service-resolution/charter/index.html':
                             link = page.locator('.static-diagram-link').first
                             assert await link.is_visible()
                             url = await link.get_attribute('href')
@@ -149,8 +149,8 @@ async def check(folder, report_dir):
                 await page.goto((standalone / 'index.html').as_uri())
                 await page.locator('.static-contents-link').click()
                 assert page.url.split('#')[0].endswith('/contents.html')
-                await page.locator('a[href="about/strategy/index.html"]').click()
-                assert page.url.endswith('/about/strategy/index.html')
+                await page.locator('a[href="center/about/strategy/index.html"]').click()
+                assert page.url.endswith('/center/about/strategy/index.html')
                 await page.wait_for_load_state('load')
                 await page.evaluate('''async () => {
                     await document.fonts.load('16px "Golos Text"', 'Текст');

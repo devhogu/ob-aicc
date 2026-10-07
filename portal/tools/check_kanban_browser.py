@@ -31,9 +31,9 @@ def fixture(output,lang):
         row.update(title=row['Feature'] if lang=='en' else ('История обращения с источниками' if row['Identifier']=='FEAT-901' else 'Одобренный запрос на анализ'),status=row['State'] if lang=='en' else ('Ожидание' if row['State']=='Waiting' else 'Одобрено'),stage_label=row['Stage'],rank=int(row['Rank']),criteria=row['Acceptance criteria and Dependencies'],approval='2026-10-06',accepted='')
     data['counts']={'Backlog':0,'Ready':1,'Active':1,'Review':0,'Done':0}
     data['portfolio']['capacity']['feature']={'progress':1,'ready':1}
-    for url,item in [(f'/{lang}/projects/',None)]+[(f'/{lang}/projects/items/{r["Identifier"].lower()}/',r) for r in data['items']]:
+    for url,item in [(f'/{lang}/program/',None)]+[(f'/{lang}/program/items/{r["Identifier"].lower()}/',r) for r in data['items']]:
         body=delivery.render(data,url,item)
-        page=workspace.page(url,lang,'projects','Delivery fixture',body,'',body_class='delivery-workspace')
+        page=workspace.page(url,lang,'program','Delivery fixture',body,'',body_class='delivery-workspace')
         page=page.replace('</head>',f'<link rel="stylesheet" href="{workspace.asset(url,"delivery.css")}"><script defer src="{workspace.asset(url,"delivery.js")}"></script>'+kanban.assets(url)+'</head>',1)
         target=output/url.strip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(page)
 
@@ -73,7 +73,7 @@ def main():
                     for width in (1440,900,390,320):
                         page.set_viewport_size({'width':width,'height':1000})
                         for theme in ('light','dark'):
-                            page.goto(base+lang+'/initiatives/')
+                            page.goto(base+lang+'/portfolio/')
                             page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
                             assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
                             widths=page.locator('.kb-column').evaluate_all('es=>es.map(e=>e.getBoundingClientRect().width)')
@@ -92,7 +92,7 @@ def main():
                             assert page.locator('#standing .pf-notice').is_visible() # Approval authority limitation stays visible.
                             if width in (1440,390):page.screenshot(path=str(REPORT/f'{lang}-{width}-{theme}-portfolio.png'),full_page=True)
                             pfstyle=page.locator('#standing [data-kb-open=INI-009]').evaluate('e=>({font:getComputedStyle(e.querySelector("h3")).font, padding:getComputedStyle(e).padding, radius:getComputedStyle(e).borderRadius,bg:getComputedStyle(e).backgroundColor,fg:getComputedStyle(e).color})')
-                            page.goto(base+lang+'/projects/');page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
+                            page.goto(base+lang+'/program/');page.evaluate('t=>document.documentElement.dataset.theme=t',theme)
                             assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
                             inspect(page,'[data-kb-open=FEAT-901]','[data-kb-open=FEAT-902]','[data-kb-close]',counts)
                             dlstyle=page.locator('[data-kb-open=FEAT-901]').evaluate('e=>({font:getComputedStyle(e.querySelector("h3")).font, padding:getComputedStyle(e).padding,radius:getComputedStyle(e).borderRadius,bg:getComputedStyle(e).backgroundColor,fg:getComputedStyle(e).color})')
@@ -107,15 +107,15 @@ def main():
                             page.locator('[data-dl-tab=board]').click();page.locator('[data-kb-open=FEAT-901]').click();page.locator('[data-kb-full]').click()
                             assert '/items/feat-901/' in page.url
                             views.append({'lang':lang,'width':width,'theme':theme})
-                    page.goto(base+lang+'/projects/')
+                    page.goto(base+lang+'/program/')
                     with context.expect_page() as opened:page.locator('[data-kb-open=FEAT-902]').click(modifiers=['Control'])
                     child=opened.value;child.wait_for_load_state();assert '/items/feat-902/' in child.url;child.close()
                     assert not page.locator('[data-kb-panel]').is_visible()
-                    plain=browser.new_context(java_script_enabled=False);reader=plain.new_page();reader.goto(base+lang+'/projects/')
+                    plain=browser.new_context(java_script_enabled=False);reader=plain.new_page();reader.goto(base+lang+'/program/')
                     reader.locator('[data-kb-open=FEAT-901]').click();assert '/items/feat-901/' in reader.url;plain.close();counts['native_fallback']+=1
                 package=Path(tmp)/'Portable package';export(output,package)
                 for lang in ('en','ru'):
-                    page.goto((package/lang/'projects/index.html').as_uri())
+                    page.goto((package/lang/'program/index.html').as_uri())
                     inspect(page,'[data-kb-open=FEAT-901]','[data-kb-open=FEAT-902]','[data-kb-close]',counts)
                     counts['nonempty_portable']+=1
                 browser.close()

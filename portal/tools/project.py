@@ -200,7 +200,7 @@ def documents(lang):
     for key, route in ROUTES.items():
         identifier = lang + '-' + key; body = parsed.sections[identifier]
         heading = re.search(r'<h[12]\b[^>]*>(.*?)</h[12]>', body, re.S)
-        docs.append({'id': identifier, 'key': key, 'url': f'/{lang}/projects/service-resolution/' + route,
+        docs.append({'id': identifier, 'key': key, 'url': workspace.route(lang, 'program', 'service-resolution/' + route),
                      'title': _Text(heading[1]).text(), 'label': labels.get(identifier, UI[lang]['overview']), 'body': body})
     owners = {identifier: next(d['url'] for d in docs if d['id'] == owner) for identifier, owner in parsed.owners.items()}
     return docs, owners
@@ -212,7 +212,7 @@ def _headings(body):
 
 def _nav(docs, current, lang):
     ui = UI[lang]; url = current['url']
-    out = f'<a href="{workspace.relative(url, "/" + lang + "/projects/")}">{ui["register"]}</a>'
+    out = f'<a href="{workspace.relative(url, workspace.route(lang, 'program'))}">{ui["register"]}</a>'
     for doc in docs:
         label = ui['overview'] if doc['key'] == 'start' else doc['label']
         state = ' aria-current="page"' if doc is current else ''
@@ -261,22 +261,22 @@ def render(doc, docs, owners, lang):
     for number, markup in enumerate(diagrams): body = body.replace(f'<!--PROJECT_DIAGRAM_{number}-->', markup)
     back = '' if doc['key'] == 'start' else f'<nav class="project-breadcrumb" aria-label="{ui["overview"]}"><a href="{workspace.relative(url, docs[0]["url"])}">{escape(docs[0]["title"])}</a><span aria-hidden="true"> / </span><span>{escape(doc["label"])}</span></nav>'
     import portfolio
-    mapping = json.loads((workspace.ROOT / 'portal/sections/projects/mapping.json').read_text())
+    mapping = json.loads((workspace.ROOT / 'portal/sections/program/mapping.json').read_text())
     item = next(i for i in portfolio.project(lang=lang)['items'] if i['id'] == mapping['service-resolution'])
     record_url = portfolio._route(lang,item)
     label = 'Portfolio initiative' if lang == 'en' else 'Инициатива портфеля'
-    link = f'<nav class="project-breadcrumb"><a href="{workspace.relative(url,record_url)}">{label}: {item["id"]}</a> · <a href="{workspace.relative(url,"/"+lang+"/projects/#intake")}">{"Program Backlog" if lang == "en" else "Бэклог программы"}</a></nav>'
+    link = f'<nav class="project-breadcrumb"><a href="{workspace.relative(url,record_url)}">{label}: {item["id"]}</a> · <a href="{workspace.relative(url,workspace.route(lang,'program','#intake'))}">{"Program Backlog" if lang == "en" else "Бэклог программы"}</a></nav>'
     return '<article class="project-content"><span class="neighbour-status">' + escape(item['status']) + '</span>' + link + back + body + '</article>'
 
 
 def build(output):
     output = Path(output)
     for lang in ('en', 'ru'):
-        docs, owners = documents(lang); index_path = output / f'assets/search-projects-{lang}.json'
+        docs, owners = documents(lang); index_path = output / f'assets/search-program-{lang}.json'
         entries = json.loads(index_path.read_text())
         for doc in docs:
             url = doc['url']; body = render(doc, docs, owners, lang)
-            page = workspace.page(url, lang, 'projects', doc['title'], body, _nav(docs, doc, lang), body_class='project-workspace')
+            page = workspace.page(url, lang, 'program', doc['title'], body, _nav(docs, doc, lang), body_class='project-workspace')
             head = f'<link rel="stylesheet" href="{workspace.asset(url, "project.css")}"><script defer src="{workspace.asset(url, "project.js")}" data-project-ui="{escape(json.dumps(UI[lang], ensure_ascii=False))}"></script>'
             page = page.replace('</head>', head + '\n</head>', 1)
             target = output / url.strip('/') / 'index.html'; target.parent.mkdir(parents=True, exist_ok=True); target.write_text(page)

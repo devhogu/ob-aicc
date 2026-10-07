@@ -156,11 +156,12 @@ def export(source, output):
         if not marker.is_file() or json.loads(marker.read_text()).get('kind') not in (KIND, 'aicc-static-languages-v1'):
             raise ValueError('Refusing to replace a directory not created by this exporter')
     original = snapshot(source)
-    for required in ('index.html', 'en/index.html', 'ru/index.html', 'assets/site.js', 'assets/search-en.json', 'assets/search-ru.json'):
+    for required in ('index.html', 'en/index.html', 'ru/index.html', 'assets/site.js', 'assets/search-center-en.json', 'assets/search-center-ru.json'):
         if required not in original:
             raise ValueError(f'Missing source file: {required}')
     files = dict(original)
     files.pop('package-manifest.json', None)  # HTTP manifest describes a different output.
+    files.pop('404.html', None)  # Served by the web server for missing paths; a folder of files has none.
     indexes = {}
     for index_path in sorted(p for p in original if p.startswith('assets/search-') and p.endswith('.json')):
         entries = json.loads(files.pop(index_path))
@@ -186,6 +187,14 @@ def export(source, output):
             text, count = re.subn(r'(<script\b[^>]*data-search=")([^"]+\.json)("[^>]*></script>)', bundle_index, text)
             if count != 1:
                 raise ValueError(f'{path}: expected one portal script with a search index')
+            # Global search loads every branch index the same way, as a script.
+            def bundle_all(match):
+                names = match[2].split()
+                for name in names:
+                    if local_target(name, path) not in indexes:
+                        raise ValueError(f'{path}: unknown search index {name}')
+                return match[1] + ' '.join(name[:-5] + '.js' for name in names) + match[3]
+            text = re.sub(r'(<script\b[^>]*data-search-all=")([^"]*)(")', bundle_all, text, count=1)
             extra = f'<script src="{selected_index[0]}"></script>\n<script src="{asset}/portable.js"></script>\n'
             text = re.sub(r'(?=<script\b[^>]*data-search=)', lambda _: extra, text, count=1)
         files[path] = text.encode()

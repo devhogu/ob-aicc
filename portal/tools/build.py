@@ -3,7 +3,8 @@
 
 Source of the content: charter/en/**/*.md. Source of the structure: portal-scaffolding/sitemap.json.
 Source of the chrome: portal/ui (the O! UI/UX kit), portal/site, portal/messages, portal/content.
-Output: html/aicc/{index.html, en/, ru/, assets/}. The output is generated and is never edited by hand.
+Output: html/aicc/{index.html, 404.html, en/, ru/, assets/}: the gateway, the language routers at {lang}/, and the
+Center branch at {lang}/center/; the other branches are composed by neighbours.py. The output is generated and is never edited by hand.
 
 Usage: python3 portal/tools/build.py [--no-diagrams]
 """
@@ -485,7 +486,8 @@ class Site:
 
     # ----- urls
     def url(self, page, lang):
-        return '/%s%s' % (lang, page['slug']) if page['slug'] != '/' else '/%s/' % lang
+        # The charter pages form the Center branch: /{lang}/center/ is its home.
+        return '/%s/center%s' % (lang, page['slug'])
 
     def rel(self, from_url, to_url):
         """Relative link between two site urls (directory style)."""
@@ -923,7 +925,7 @@ def layout(site, p, lang, main_html, outline):
     vcss = asset_version('charter.css')
     url = site.url(p, lang)
     A = site.assets(url)
-    home = site.rel(url, '/%s/' % lang)
+    home = site.rel(url, site.url(site.by_id['index'], lang))
     other = [l for l in LANGS if l != lang][0]
     nav = ['<a href="%s"%s>%s<span>%s</span></a>' % (home, ' aria-current="page"' if p['id'] == 'index' else '', icon('map'), esc(m['home']))]
     for s in site.sections:
@@ -993,13 +995,13 @@ def layout(site, p, lang, main_html, outline):
 <link rel="stylesheet" href="{A}/charter.css?v={vcss}">
 <link rel="stylesheet" href="{workspace.asset(url, 'neighbours.css')}">
 <link rel="alternate" hreflang="{other}" href="{site.rel(url, site.url(p, other))}">
-{workspace.script(url, lang, 'aicc', m)}
+{workspace.script(url, lang, 'center', m)}
 </head>
-<body class="charter" data-portal-section="aicc">
+<body class="charter" data-portal-section="center">
 <a class="o-skip" href="#main">{esc(m['skip'])}</a>
-{workspace.header(url, lang, 'aicc', m)}
+{workspace.header(url, lang, 'center', m)}
 <div class="o-frame">
-  {workspace.navigation(url, lang, 'aicc', ''.join(nav), m)}
+  {workspace.navigation(url, lang, 'center', ''.join(nav), m)}
   <main class="o-main" id="main" tabindex="-1">
     {bc}
     {reading}
@@ -1688,7 +1690,7 @@ def records_page(site, p, lang):
         for t, refs in by_tpl.items():
             if t and (t.lower() in d['canonical_name'].lower() or d['canonical_name'].lower() in t.lower()):
                 controls += refs
-        ctl = ', '.join('<a href="%s">%s</a>' % (site.rel(url, '/%s/governance/controls/%s/' % (lang, r.lower())), r) for r in sorted(set(controls)))
+        ctl = ', '.join('<a href="%s">%s</a>' % (site.rel(url, '/%s/center/governance/controls/%s/' % (lang, r.lower())), r) for r in sorted(set(controls)))
         rows.append('<tr><td><a href="%s">%s</a></td><td lang="en">%s</td><td lang="en"><code>%s</code></td><td>%s</td></tr>' % (
             site.rel(url, site.url(page, lang)), esc(d['name']), esc(d['used']), esc(d['kept'].strip('`')), ctl or '&ndash;'))
     template_language = site.sources.resolve('charter/en/templates/README.md').language
@@ -1721,7 +1723,7 @@ def controls_catalogue(site, p, lang):
     opts = ''.join('<option value="%s">%s</option>' % (esc(t), esc(t)) for t in types)
     rows = []
     for c in site.controls:
-        href = site.rel(url, '/%s/governance/controls/%s/' % (lang, c['ref'].lower()))
+        href = site.rel(url, '/%s/center/governance/controls/%s/' % (lang, c['ref'].lower()))
         rows.append('<tr data-type="%s"><td><a href="%s">%s</a></td><td lang="en">%s</td><td lang="en">%s</td><td lang="en">%s</td><td>%s</td></tr>' % (
             esc(c['type']), href, esc(c['ref']), esc(c['title']), esc(c['owner']), esc(c['when']), esc(c['type'])))
     return ('<section class="catalogue" aria-label="%s"><div class="o-toolbar"><div class="oc-field"><label for="cf">%s</label><input id="cf" class="oc-input" type="search" data-filter="ctl"></div>'
@@ -1744,10 +1746,10 @@ def control_page(site, p, lang):
     pn = []
     if idx > 0:
         q = site.controls[idx - 1]
-        pn.append('<a class="pn prev" href="%s"><span>%s</span>%s</a>' % (site.rel(url, '/%s/governance/controls/%s/' % (lang, q['ref'].lower())), esc(m['previous']), esc(q['ref'])))
+        pn.append('<a class="pn prev" href="%s"><span>%s</span>%s</a>' % (site.rel(url, '/%s/center/governance/controls/%s/' % (lang, q['ref'].lower())), esc(m['previous']), esc(q['ref'])))
     if idx + 1 < len(site.controls):
         q = site.controls[idx + 1]
-        pn.append('<a class="pn next" href="%s"><span>%s</span>%s</a>' % (site.rel(url, '/%s/governance/controls/%s/' % (lang, q['ref'].lower())), esc(m['next']), esc(q['ref'])))
+        pn.append('<a class="pn next" href="%s"><span>%s</span>%s</a>' % (site.rel(url, '/%s/center/governance/controls/%s/' % (lang, q['ref'].lower())), esc(m['next']), esc(q['ref'])))
     main = '<h1 lang="en">%s</h1><p class="o-lead" lang="en">%s</p>%s<dl class="o-facts control-facts">%s</dl><p class="o-caption">%s</p><p><a href="%s">%s</a></p><nav class="o-pn">%s</nav>' % (
         esc(c['ref'] + ' ' + c['title']), esc(c['objective']), lang_note(site, lang, site.control_language if p['type'] == 'control' else site.role_language), dl, esc(m['control_status_note']), site.rel(url, site.url(parent, lang)), esc(parent['title']), ''.join(pn))
     return layout(site, p, lang, main.replace('lang="en"', 'lang="%s"' % (site.control_language if p['type'] == 'control' else site.role_language)), [])
@@ -1935,9 +1937,11 @@ def main():
             rel = site.url(p, lang).strip('/')
             write(os.path.join(OUT, rel, 'index.html'), page)
             count += 1
-        write(os.path.join(OUT, 'assets', 'search-%s.json' % lang), json.dumps(search_index(site, lang), ensure_ascii=False, separators=(',', ':')))
+        write(os.path.join(OUT, 'assets', 'search-center-%s.json' % lang), json.dumps(search_index(site, lang), ensure_ascii=False, separators=(',', ':')))
     from neighbours import build_neighbours
     count += build_neighbours(OUT)
+    import router
+    count += router.build(OUT)
     write(os.path.join(OUT, 'index.html'), gateway())
     print('built %d pages, %d diagrams (%d not rendered)' % (count, len(site.svgs), len(missing)))
 

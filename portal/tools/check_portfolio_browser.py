@@ -73,7 +73,7 @@ def main():
                 for width in (1440,900,390,320):
                     page.set_viewport_size({'width':width,'height':1000})
                     for theme in ('light','dark'):
-                        page.goto(base+lang+'/initiatives/')
+                        page.goto(base+lang+'/portfolio/')
                         page.evaluate('t=>{localStorage.setItem("aicc-theme",t);document.documentElement.dataset.theme=t}',theme)
                         page.evaluate('document.fonts.ready');
                         assert page.evaluate('document.documentElement.scrollWidth')<=width
@@ -82,30 +82,30 @@ def main():
                         assert contrast(colors['fg'],colors['bg'])>=4.5
                         interactions(page,lang,counts)
                         for identifier in [x['id'] for x in portfolio.project(lang=lang)['items']]:
-                            page.goto(base+lang+'/initiatives/'+identifier.lower()+'/')
+                            page.goto(base+lang+'/portfolio/'+identifier.lower()+'/')
                             assert page.evaluate('document.documentElement.scrollWidth')<=width
                             assert page.locator('.pf-content header').is_visible()
                             counts['summary_views']+=1
                         for route in ('register/','selection/'):
-                            page.goto(base+lang+'/initiatives/'+route)
+                            page.goto(base+lang+'/portfolio/'+route)
                             assert page.evaluate('document.documentElement.scrollWidth')<=width
                             counts['register_workflow_views']+=1
-                        page.goto(base+lang+'/initiatives/')
+                        page.goto(base+lang+'/portfolio/')
                         if width in (1440,390):page.screenshot(path=str(REPORT/f'{lang}-{width}-{theme}.png'),full_page=True)
                         views.append({'language':lang,'width':width,'theme':theme,'contrast':round(contrast(colors['fg'],colors['bg']),2)})
-                page.set_viewport_size({'width':1440,'height':1000});page.goto(base+lang+'/initiatives/')
+                page.set_viewport_size({'width':1440,'height':1000});page.goto(base+lang+'/portfolio/')
                 page.locator('#q').fill('INI-004')
                 # Use the shared section search results, never a board card as a fallback.
                 page.wait_for_timeout(400)
                 assert page.locator('#results a[href*="ini-004"]').count()>0
                 page.locator('#results a[href*="ini-004"]').first.click()
-                assert '/initiatives/ini-004/' in page.url
+                assert '/portfolio/ini-004/' in page.url
                 page.locator('.lang-switch a').filter(has_text='RU' if lang=='en' else 'EN').click()
-                assert ('ru/' if lang=='en' else 'en/')+'initiatives/ini-004/' in page.url
+                assert ('ru/' if lang=='en' else 'en/')+'portfolio/ini-004/' in page.url
                 counts['search_counterpart_paths']+=1
             plain=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':1000})
             for lang in ('en','ru'):
-                nojs=plain.new_page();nojs.goto(base+lang+'/initiatives/')
+                nojs=plain.new_page();nojs.goto(base+lang+'/portfolio/')
                 assert nojs.locator('[data-pf-panel]:visible').count()==4
                 assert nojs.locator('[data-pf-item]:visible').count()==18
                 assert not nojs.locator('.pf-filter').is_visible()
@@ -117,7 +117,7 @@ def main():
                 with tempfile.TemporaryDirectory(prefix='aicc-portfolio-') as tmp:
                     folder=Path(tmp)/'Portfolio package';export(OUTPUT,folder)
                     for lang in ('en','ru'):
-                        page.goto((folder/lang/'initiatives/index.html').as_uri())
+                        page.goto((folder/lang/'portfolio/index.html').as_uri())
                         interactions(page,lang,counts)
                         page.locator('#board [data-pf-open="INI-004"]').click()
                         page.locator('[data-pf-panel]:visible [data-kb-full]').click()

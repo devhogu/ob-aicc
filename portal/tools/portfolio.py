@@ -182,7 +182,7 @@ def project(root=workspace.ROOT, lang='en'):
                       'waiting_from': waiting_from, 'approval_ref': approval_ref,
                       'approved_on': row['Approved on'] or None, 'active_on': row['Active on'] or None,
                       'review_date': review_date, 'agreement': public_meta['Service Agreement'], 'authority': authority})
-    mapping_path = Path(root) / 'portal/sections/projects/mapping.json'
+    mapping_path = Path(root) / 'portal/sections/program/mapping.json'
     mapping = json.loads(mapping_path.read_text()) if mapping_path.exists() else {}
     if set(mapping) - {'service-resolution'}: raise ValueError('Project mapping lacks native renderer')
     if len(set(mapping.values())) != len(mapping): raise ValueError('Ambiguous project mapping')
@@ -349,7 +349,7 @@ def _sentence(text):
     return text if not text or text[-1] in '.!?»' else text + '.'
 
 
-def _route(lang, item): return f'/{lang}/initiatives/' + item['id'].lower() + '/'
+def _route(lang, item): return workspace.route(lang, 'portfolio', item['id'].lower() + '/')
 
 
 def _link(url, target, label, cls=''):
@@ -398,8 +398,8 @@ def summary(item, data, embedded=False, url=None):
     body += _section(u['dependencies'], deps or '<p>' + u['unknown'] + '</p>')
     references = [item['path'], f'portfolio/{lang}/portfolio-backlog.md', f'portfolio/{lang}/dependencies.md', f'portfolio/{lang}/board.md']
     if item.get('project_key'):
-        project_url = '/' + lang + '/projects/' + item['project_key'] + '/'
-        body += _section('Project and delivery' if lang == 'en' else 'Проект и реализация', '<p>' + _link(url, project_url, 'Project documents' if lang == 'en' else 'Документы проекта') + ' · ' + _link(url, '/' + lang + '/projects/#intake', 'Program Backlog' if lang == 'en' else 'Бэклог программы') + '</p>')
+        project_url = workspace.route(lang, 'program', item['project_key'] + '/')
+        body += _section('Project and delivery' if lang == 'en' else 'Проект и реализация', '<p>' + _link(url, project_url, 'Project documents' if lang == 'en' else 'Документы проекта') + ' · ' + _link(url, workspace.route(lang, 'program', '#intake'), 'Program Backlog' if lang == 'en' else 'Бэклог программы') + '</p>')
     if item['approval_ref']: references.append(f'registry/{lang}/decision-log.md')
     body += _section(u['source'], '<p class="pf-muted">' + u['source_note'] + '</p><ul class="pf-references">' + ''.join('<li>' + _reference(r) + '</li>' for r in references) + '</ul>')
     if embedded:
@@ -407,7 +407,7 @@ def summary(item, data, embedded=False, url=None):
         body = body.replace('<h3>', '<h2 class="kb-summary-title">', 1).replace('</h3>', '</h2>', 1)
         body = kanban.compact_summary(body, 'pf-section', lang)
         if item.get('project_key'):
-            body = body.replace('</header>', '<p>'+_link(url, '/'+lang+'/projects/'+item['project_key']+'/', 'Open project →' if lang == 'en' else 'Открыть проект →')+'</p></header>', 1)
+            body = body.replace('</header>', '<p>'+_link(url, workspace.route(lang, 'program', item['project_key']+'/'), 'Open project →' if lang == 'en' else 'Открыть проект →')+'</p></header>', 1)
     return body
 
 
@@ -451,7 +451,7 @@ def render(data, url, kind='dashboard', item=None):
     lang = data['lang']; u = UI[lang]; ordinary = [x for x in data['items'] if not x['standing']]
     standing = [x for x in data['items'] if x['standing']]; gates = _gates(lang)
     if kind == 'initiative':
-        return '<article class="pf-content pf-detail-page">' + _link(url, f'/{lang}/initiatives/', u['back']) + summary(item, data) + '</article>'
+        return '<article class="pf-content pf-detail-page">' + _link(url, workspace.route(lang, 'portfolio'), u['back']) + summary(item, data) + '</article>'
     title = u['title'] if kind == 'dashboard' else u[kind]
     body = _header(data, title)
     if kind == 'dashboard':
@@ -505,8 +505,8 @@ def build(output):
     output = Path(output); count = 0
     for lang in ('en', 'ru'):
         data = project(lang=lang); u = UI[lang]; entries = []
-        routes = [(f'/{lang}/initiatives/', 'dashboard', None), (f'/{lang}/initiatives/register/', 'register', None),
-                  (f'/{lang}/initiatives/selection/', 'selection', None)]
+        routes = [(workspace.route(lang, 'portfolio'), 'dashboard', None), (workspace.route(lang, 'portfolio', 'register/'), 'register', None),
+                  (workspace.route(lang, 'portfolio', 'selection/'), 'selection', None)]
         routes += [(_route(lang, item), 'initiative', item) for item in data['items']]
         nav_routes = [(routes[0][0], u['title']), (routes[1][0], u['register']), (routes[2][0], u['selection'])]
         for url, kind, item in routes:
@@ -514,7 +514,7 @@ def build(output):
             body = _prose_dates(lang, render(data, url, kind, item))
             nav = ''.join(_link(url, target, label).replace('<a ', '<a aria-current="page" ', 1) if target == url else _link(url,target,label) for target,label in nav_routes)
             if item: nav += f'<span class="pf-nav-label">{_h(item["title"])}</span>'
-            page = workspace.page(url,lang,'initiatives',title,body,nav,body_class='portfolio-workspace')
+            page = workspace.page(url,lang,'portfolio',title,body,nav,body_class='portfolio-workspace')
             head = f'<link rel="stylesheet" href="{workspace.asset(url,"portfolio.css")}"><script defer src="{workspace.asset(url,"portfolio.js")}"></script>'
             page = page.replace('</head>',head+kanban.assets(url)+'\n</head>',1)
             target = output / url.strip('/') / 'index.html'; target.parent.mkdir(parents=True,exist_ok=True); target.write_text(page)
@@ -522,7 +522,7 @@ def build(output):
             from neighbours import VisibleText
             entries.append({'u':url,'t':u['title'] if kind == 'dashboard' else title,'h':item['id'] if item else title,'x':_prose_dates(lang, VisibleText(searchable).text())})
             count += 1
-        (output/f'assets/search-initiatives-{lang}.json').write_text(json.dumps(entries,ensure_ascii=False,separators=(',',':')))
+        (output/f'assets/search-portfolio-{lang}.json').write_text(json.dumps(entries,ensure_ascii=False,separators=(',',':')))
     for name in ('portfolio.css','portfolio.js'): shutil.copyfile(workspace.ROOT/'portal/site'/name, output/'assets'/name)
-    kanban.assets("/en/initiatives/", output)
+    kanban.assets(workspace.route('en', 'portfolio'), output)
     return count

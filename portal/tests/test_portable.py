@@ -21,9 +21,9 @@ class PortableExport(unittest.TestCase):
         }
         for lang in ('en', 'ru'):
             other = 'ru' if lang == 'en' else 'en'
-            files[f'{lang}/index.html'] = f'''<html lang="{lang}"><head><script src="../assets/site.js" defer data-search="../assets/search-{lang}.json"></script></head><body><h1>AI — Банк</h1><a href="guide/?print=1#term">Guide</a><a href="../{other}/">Language</a><a href="https://example.org/">Citation</a><svg viewBox="0 0 24 24"><path d="M1 2"/></svg></body></html>'''
-            files[f'{lang}/guide/index.html'] = f'''<html lang="{lang}"><head><script src="../../assets/site.js" defer data-search="../../assets/search-{lang}.json"></script></head><body><h1 id="term">AI</h1><a href="../">Home</a><a href="/">Entry</a><a href="#term">Term</a></body></html>'''
-            files[f'assets/search-{lang}.json'] = json.dumps([{'u': f'/{lang}/guide/#term', 'h': 'AI', 't': 'Guide', 'x': 'AI — Банк'}])
+            files[f'{lang}/index.html'] = f'''<html lang="{lang}"><head><script src="../assets/site.js" defer data-search="../assets/search-center-{lang}.json"></script></head><body><h1>AI — Банк</h1><a href="guide/?print=1#term">Guide</a><a href="../{other}/">Language</a><a href="https://example.org/">Citation</a><svg viewBox="0 0 24 24"><path d="M1 2"/></svg></body></html>'''
+            files[f'{lang}/guide/index.html'] = f'''<html lang="{lang}"><head><script src="../../assets/site.js" defer data-search="../../assets/search-center-{lang}.json"></script></head><body><h1 id="term">AI</h1><a href="../">Home</a><a href="/">Entry</a><a href="#term">Term</a></body></html>'''
+            files[f'assets/search-center-{lang}.json'] = json.dumps([{'u': f'/{lang}/guide/#term', 'h': 'AI', 't': 'Guide', 'x': 'AI — Банк'}])
         for path, text in files.items():
             target = self.source / path
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -46,9 +46,9 @@ class PortableExport(unittest.TestCase):
         self.assertIn('href="https://example.org/"', page)
         self.assertIn('<h1>AI — Банк</h1>', page)
         self.assertIn('<svg viewBox="0 0 24 24"><path d="M1 2"/></svg>', page)
-        self.assertIn('src="../assets/search-ru.js"', page)
-        self.assertIn('data-search="../assets/search-ru.js"', page)
-        self.assertIn('/ru/guide/index.html#term', (self.output / 'assets/search-ru.js').read_text())
+        self.assertIn('src="../assets/search-center-ru.js"', page)
+        self.assertIn('data-search="../assets/search-center-ru.js"', page)
+        self.assertIn('/ru/guide/index.html#term', (self.output / 'assets/search-center-ru.js').read_text())
         self.assertIn('href="../../index.html"', (self.output / 'ru/guide/index.html').read_text())
         entry = (self.output / 'aicc.html').read_text()
         self.assertNotIn('http-equiv="refresh"', entry)
@@ -71,14 +71,16 @@ class PortableExport(unittest.TestCase):
         for lang in ('en', 'ru'):
             path = self.source / lang / 'discovery/index.html'
             path.parent.mkdir()
-            path.write_text(f'<html lang="{lang}"><script src="../../assets/site.js" defer data-search="../../assets/search-discovery-{lang}.json"></script><h1 id="payment">Payment discovery</h1></html>')
+            path.write_text(f'<html lang="{lang}"><script src="../../assets/site.js" defer data-search="../../assets/search-discovery-{lang}.json" data-search-all="../../assets/search-center-{lang}.json ../../assets/search-discovery-{lang}.json"></script><h1 id="payment">Payment discovery</h1></html>')
             (self.source / f'assets/search-discovery-{lang}.json').write_text(json.dumps([{'u': f'/{lang}/discovery/#payment', 'h': 'Payment discovery', 't': 'Discovery', 'x': 'Scenario'}]))
         result = self.run_export()
         self.assertEqual(result.returncode, 0, result.stderr)
         page = (self.output / 'ru/discovery/index.html').read_text()
         self.assertIn('src="../../assets/search-discovery-ru.js"', page)
         self.assertIn('data-search="../../assets/search-discovery-ru.js"', page)
-        self.assertNotIn('src="../../assets/search-ru.js"', page)
+        self.assertNotIn('src="../../assets/search-center-ru.js"', page)
+        # Global search loads every branch index as a script too.
+        self.assertIn('data-search-all="../../assets/search-center-ru.js ../../assets/search-discovery-ru.js"', page)
         self.assertIn('/ru/discovery/index.html#payment', (self.output / 'assets/search-discovery-ru.js').read_text())
 
     def test_refuses_to_replace_an_unowned_folder(self):

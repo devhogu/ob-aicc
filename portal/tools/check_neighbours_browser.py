@@ -19,7 +19,7 @@ from export_portable import export
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / 'html/aicc'
 REPORT = ROOT / '.runtime/portal-neighbours'
-GROUPS = ['aicc', 'discovery', 'initiatives', 'projects', 'lab']
+GROUPS = ['center', 'discovery', 'portfolio', 'program', 'lab']
 MEASURE = """() => {
  const visible = e => !!e.getClientRects().length;
  const overlap=[];
@@ -65,7 +65,7 @@ def check_page_chrome(page, counts):
         for target in ('privacy', 'terms-of-use'):
             link = page.locator(container + f' a[href*="{target}/"]')
             assert link.count() == 1
-            assert urlsplit(link.evaluate('e=>e.href')).path.rstrip('/').endswith('/' + lang + '/' + target)
+            assert urlsplit(link.evaluate('e=>e.href')).path.rstrip('/').endswith('/' + lang + '/center/' + target)
     trigger = page.locator('.o-footer .pagefb')
     assert trigger.count() == 1, 'Missing page feedback control'
     trigger.click()
@@ -89,18 +89,18 @@ def check_page_chrome(page, counts):
 
 
 def check_existing_aicc(page, base, counts):
-    """Exercise the existing document paths through the new common shell."""
+    """Exercise the existing document paths of the Center branch through the common shell."""
     page.set_viewport_size({'width': 1440, 'height': 1000})
     page.context.grant_permissions(['clipboard-read', 'clipboard-write'])
     for lang in ('en', 'ru'):
-        page.goto(base + lang + '/')
+        page.goto(base + lang + '/center/')
         page.locator('#q').fill('Operating Model' if lang == 'en' else 'Операционная модель')
         result = page.locator('#results a').first
         result.wait_for()
-        assert '/discovery/' not in result.get_attribute('href')
+        assert '/center/' in result.get_attribute('href')
         result.click()
-        assert page.locator('body').get_attribute('data-portal-section') == 'aicc'
-        page.goto(base + lang + '/delivery/')
+        assert page.locator('body').get_attribute('data-portal-section') == 'center'
+        page.goto(base + lang + '/center/delivery/')
         trigger = page.locator('.dz-open').first
         trigger.click()
         assert page.locator('#dz').is_visible()
@@ -108,7 +108,7 @@ def check_existing_aicc(page, base, counts):
         page.keyboard.press('Escape')
         page.locator('#dz').wait_for(state='detached')
         assert trigger.evaluate('e=>document.activeElement===e')
-        page.goto(base + lang + '/knowledge-base/initiative-brief/')
+        page.goto(base + lang + '/center/knowledge-base/initiative-brief/')
         copy = page.locator('[data-copy]').first
         expected = page.locator('#' + copy.get_attribute('data-copy')).text_content()
         copy.click()
@@ -215,6 +215,45 @@ def check_domain_previews(page, route, counts):
     page.goto(route)
 
 
+def check_router_and_global_search(page, base, counts):
+    """The router leads to every branch; global search reaches across branches and names each result's branch."""
+    page.set_viewport_size({'width': 1440, 'height': 1000})
+    names = {'en': 'Discovery Catalog', 'ru': 'Каталог сценариев'}
+    for lang in ('en', 'ru'):
+        # The scenario is named in the language of the edition.
+        copilot = next(e['h'] for e in json.loads((OUTPUT / f'assets/search-discovery-{lang}.json').read_text()) if e['u'].endswith('#scenario-frontline-service-copilot'))
+        page.goto(base + lang + '/')
+        assert page.locator('body').get_attribute('data-portal-section') == 'router'
+        assert page.locator('.router-door').evaluate_all('els=>els.map(e=>e.dataset.door)') == GROUPS
+        assert page.locator('.o-nav .portal-section-link[aria-current]').count() == 0
+        assert page.locator('#q-all').is_checked(), 'Global search is not on by default on the router'
+        for door in GROUPS:
+            page.goto(base + lang + '/')
+            fact = page.locator(f'.router-door[data-door="{door}"] .router-fact').inner_text()
+            assert re.search(r'\d', fact), 'Router fact without a count: ' + door
+            page.locator(f'.router-door[data-door="{door}"]').click()
+            assert page.locator('body').get_attribute('data-portal-section') == door
+            assert urlsplit(page.url).path.endswith(f'/{lang}/{door}/')
+            page.locator('.o-identity').click()
+            assert urlsplit(page.url).path.endswith(f'/{lang}/'), 'The brand does not lead to the router'
+            counts['router_doors'] += 1
+        page.locator('#q').fill(copilot)
+        result = page.locator('#results a').filter(has_text=copilot).first
+        result.wait_for()
+        assert names[lang] in result.locator('.search-branch').inner_text()
+        page.goto(base + lang + '/portfolio/')
+        assert not page.locator('#q-all').is_checked()
+        page.locator('#q').fill(copilot)
+        page.locator('#results').wait_for(state='visible')
+        assert not page.locator('#results a').count(), 'Branch search crossed its branch'
+        page.locator('#q-all').check()
+        result = page.locator('#results a').filter(has_text=copilot).first
+        result.wait_for()
+        result.click()
+        assert f'/{lang}/discovery/' in page.url and page.locator('#scenario-frontline-service-copilot').evaluate('e=>e.open')
+        counts['global_search_checks'] += 2
+
+
 def main():
     REPORT.mkdir(parents=True, exist_ok=True)
     server = ThreadingHTTPServer(('127.0.0.1', 0), partial(Quiet, directory=str(OUTPUT)))
@@ -225,7 +264,9 @@ def main():
     for lang in ('en', 'ru'):
         for section in GROUPS[1:]:
             pages += [p.relative_to(OUTPUT).as_posix() for p in sorted((OUTPUT / lang / section).rglob('index.html'))]
-        pages += [f'{lang}/index.html', f'{lang}/responsible-ai/ai-policy/index.html'] if (OUTPUT / lang / 'responsible-ai/ai-policy/index.html').exists() else [f'{lang}/index.html']
+        pages += [f'{lang}/index.html', f'{lang}/center/index.html']
+        if (OUTPUT / lang / 'center/responsible-ai/ai-policy/index.html').exists():
+            pages.append(f'{lang}/center/responsible-ai/ai-policy/index.html')
     try:
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
@@ -302,15 +343,15 @@ def main():
                             if modal.get_attribute('aria-hidden') != 'true' or not button.evaluate('e=>document.activeElement===e'):
                                 errors.append('Modal close/focus: ' + route)
                             counts['stages_clicked'] += 1
-                    if route in {f'{lang}/{section}index.html' for lang in ('en', 'ru') for section in ('', 'discovery/', 'initiatives/', 'projects/', 'lab/', 'discovery/shared-banking-capabilities/customer-servicing/')}:
+                    if route in {f'{lang}/{section}index.html' for lang in ('en', 'ru') for section in ('', 'center/', 'discovery/', 'portfolio/', 'program/', 'lab/', 'discovery/shared-banking-capabilities/customer-servicing/')}:
                         check_page_chrome(page, counts)
-                    if route in ('en/discovery/index.html', 'ru/discovery/index.html', 'en/projects/index.html', 'ru/initiatives/register/index.html', 'en/lab/index.html'):
+                    if route in ('en/index.html', 'ru/index.html', 'en/discovery/index.html', 'ru/discovery/index.html', 'en/program/index.html', 'ru/portfolio/register/index.html', 'en/lab/index.html'):
                         page.screenshot(path=str(REPORT / f'{route.replace("/", "-")}-{width}-{theme}.png'))
                 print(f'Checked {width}px {theme}: {len(pages)} pages', flush=True)
             # Visit all neighbours using the real common navigation, then the counterpart page.
             page.set_viewport_size({'width': 1440, 'height': 1000})
             page.goto(base + 'en/')
-            for section in GROUPS[1:] + ['aicc']:
+            for section in GROUPS[1:] + ['center']:
                 page.locator(f'.portal-section-link[data-section="{section}"]').click()
                 if page.locator('body').get_attribute('data-portal-section') != section:
                     errors.append('Section switch failed: ' + section)
@@ -324,8 +365,8 @@ def main():
             if page.locator('.o-nav>details').evaluate('e=>e.open'):
                 errors.append('Mobile menu starts expanded')
             page.locator('.o-nav>details>summary').click()
-            page.locator('.portal-section-link[data-section="projects"]').click()
-            if page.locator('body').get_attribute('data-portal-section') != 'projects':
+            page.locator('.portal-section-link[data-section="program"]').click()
+            if page.locator('body').get_attribute('data-portal-section') != 'program':
                 errors.append('Mobile section switch failed')
             # Search must find a scenario, open its disclosure and stay inside Discovery.
             page.goto(base + 'en/discovery/')
@@ -335,13 +376,14 @@ def main():
             result.click()
             if '/en/discovery/' not in page.url or not page.locator('#scenario-frontline-service-copilot').evaluate('e=>e.open'):
                 errors.append('Discovery search/deep link failed')
-            page.goto(base + 'en/initiatives/')
+            page.goto(base + 'en/portfolio/')
             page.locator('#q').fill('Frontline Service Copilot')
             page.locator('#results').wait_for(state='visible')
             if page.locator('#results a').count():
                 errors.append('Search crossed section boundary')
             counts['scoped_search_checks'] += 2
             check_existing_aicc(page, base, counts)
+            check_router_and_global_search(page, base, counts)
             # Direct-file test uses an isolated output and never refreshes portal/published.
             with tempfile.TemporaryDirectory(prefix='aicc-neighbours-') as temp:
                 folder = Path(temp) / 'Портал AICC'
@@ -356,9 +398,19 @@ def main():
                 if not filepage.locator('#scenario-frontline-service-copilot').evaluate('e=>e.open'):
                     errors.append('Portable scenario search failed')
                 filepage.locator('.lang-switch a[lang="ru"]').click()
-                filepage.locator('.portal-section-link[data-section="projects"]').click()
-                if '/ru/projects/index.html' not in filepage.url:
+                filepage.locator('.portal-section-link[data-section="program"]').click()
+                if '/ru/program/index.html' not in filepage.url:
                     errors.append('Portable section/language navigation failed')
+                # Global search from the router of the direct-file edition loads every branch index as a script.
+                filepage.goto((folder / 'en/index.html').as_uri())
+                filepage.locator('#q').fill('Frontline Service Copilot')
+                found = filepage.locator('#results a').filter(has_text='Frontline Service Copilot').first
+                found.wait_for()
+                if 'Discovery Catalog' not in found.locator('.search-branch').inner_text():
+                    errors.append('Portable global search does not name the branch')
+                found.click()
+                if not filepage.locator('#scenario-frontline-service-copilot').evaluate('e=>e.open'):
+                    errors.append('Portable global search failed')
                 if network:
                     errors.append('Portable external requests: ' + str(network))
                 counts['portable_pages_validated'] = manifest['html_pages']

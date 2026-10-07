@@ -72,7 +72,15 @@ async def check(source, report_dir):
             assert await page.locator('html').get_attribute('data-theme') == selected
             assert urlsplit(page.url).path.endswith('/en/index.html')
             for lang in ('en', 'ru'):
+                # The router searches every branch by default: each branch index loads as a script, never by fetch.
                 await page.goto((folder / lang / 'index.html').as_uri())
+                await page.evaluate("() => { window.fetch = () => { throw new Error('fetch is unavailable in the file edition'); }; }")
+                assert await page.locator('#q-all').is_checked()
+                await page.locator('#q').fill('Frontline Service Copilot' if lang == 'en' else 'AI-помощник сотрудника первой линии')
+                found = page.locator('#results a[href*="discovery/"]').first
+                await found.wait_for(state='visible')
+                assert await found.locator('.search-branch').count() == 1
+                await page.goto((folder / lang / 'center/index.html').as_uri())
                 # Block fetch explicitly so the real search must use the bundled index.
                 await page.evaluate("() => { window.fetch = () => { throw new Error('fetch is unavailable in the file edition'); }; }")
                 heading = await page.evaluate("window.AICC_SEARCH_INDEX.find(e => e.u.includes('/reference/vocabulary/index.html')).h")
@@ -88,12 +96,12 @@ async def check(source, report_dir):
                   return document.fonts.check('16px "Golos Text"', 'Термин') && document.fonts.check('16px "TT Norms Pro"', 'Title');
                 }''')
                 assert fonts, lang
-            await page.goto((folder / 'ru/delivery/index.html').as_uri())
+            await page.goto((folder / 'ru/center/delivery/index.html').as_uri())
             await page.locator('.dz-open').first.click()
             assert await page.locator('#dz').is_visible()
             assert await page.locator('#dz svg').count() > 0
             await page.keyboard.press('Escape')
-            await page.goto((folder / 'ru/knowledge-base/initiative-brief/index.html').as_uri())
+            await page.goto((folder / 'ru/center/knowledge-base/initiative-brief/index.html').as_uri())
             await page.evaluate("Object.defineProperty(navigator, 'clipboard', {value: undefined, configurable: true}); document.execCommand = () => false;")
             copy = page.locator('[data-copy]').first
             target = await copy.get_attribute('data-copy')
@@ -113,7 +121,7 @@ async def check(source, report_dir):
             assert not failed, failed[:10]
             await browser.close()
     report = {'status': 'passed', 'package_manifest_sha256': hashlib.sha256((source / 'portable-manifest.json').read_bytes()).hexdigest(), 'protocol': 'file:', 'pages': len(checked), 'relocated_with_spaces_and_cyrillic': True,
-              'checks': ['entry point', 'all pages', 'EN/RU switch', 'theme across files with storage cleared', 'search without fetch', 'search result navigation', 'embedded fonts', 'diagram zoom', 'manual copy fallback', 'mobile layout'],
+              'checks': ['entry point', 'all pages', 'EN/RU switch', 'theme across files with storage cleared', 'global search from the router without fetch', 'search without fetch', 'search result navigation', 'embedded fonts', 'diagram zoom', 'manual copy fallback', 'mobile layout'],
               'external_requests': external, 'failed_requests': failed, 'page_errors': errors,
               'limitation': 'Windows SMB access and corporate browser policy require a workstation check.'}
     (report_dir / 'browser-report.json').write_text(json.dumps(report, indent=2) + '\n')

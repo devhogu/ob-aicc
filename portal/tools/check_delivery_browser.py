@@ -35,7 +35,7 @@ def main():
                 for width in (1440,900,390,320):
                     page.set_viewport_size({'width':width,'height':1000})
                     for theme in ('light','dark'):
-                        page.goto(base+lang+'/projects/')
+                        page.goto(base+lang+'/program/')
                         page.evaluate('t=>{localStorage.setItem("aicc-theme",t);document.documentElement.dataset.theme=t}',theme);page.evaluate('document.fonts.ready')
                         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),(lang,width,theme)
                         assert page.locator('.dl-content').evaluate('e=>getComputedStyle(e).fontFamily').startswith('"Golos Text"')
@@ -58,36 +58,36 @@ def main():
                         assert page.locator('.dl-documents a:visible').count()==12
                         page.locator('[data-dl-tab=board]').click()
                         page.locator('#board .dl-proposal a[href*="ini-013"]').click()
-                        assert '/initiatives/ini-013/' in page.url
+                        assert '/portfolio/ini-013/' in page.url
                         assert not page.locator('.pf-notice').count()
                         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
-                        page.locator('.pf-detail-page a[href$="/projects/service-resolution/"]').click()
-                        assert '/projects/service-resolution/' in page.url
+                        page.locator('.pf-detail-page a[href$="/program/service-resolution/"]').click()
+                        assert '/program/service-resolution/' in page.url
                         assert page.locator('.project-content a[href*="ini-013"]').count()==1
                         page.locator('.project-content a[href*="#intake"]').click()
                         assert page.locator('#intake').is_visible()
                         page.locator('[data-dl-tab=board]').click()
                         if width in (1440,390):page.screenshot(path=str(REPORT/f'{lang}-{width}-{theme}.png'),full_page=True)
                         views.append({'lang':lang,'width':width,'theme':theme,'contrast':round(contrast(colors['fg'],colors['bg']),2)});paths+=1
-                page.goto(base+lang+'/projects/');page.locator('#q').fill('INI-013');page.wait_for_timeout(400)
-                assert page.locator('#results a[href*="projects"]').count()>0
-                assert not page.locator('#results a[href*="initiatives"]').count()
+                page.goto(base+lang+'/program/');page.locator('#q').fill('INI-013');page.wait_for_timeout(400)
+                assert page.locator('#results a[href*="program"]').count()>0
+                assert not page.locator('#results a[href*="portfolio"]').count()
                 counterpart=page.locator('.o-lang a',has_text='EN' if lang=='ru' else 'RU')
-                if not counterpart.count():counterpart=page.locator('a[href*="/'+('en' if lang=='ru' else 'ru')+'/projects/"]').first
-                counterpart.click();assert '/'+('en' if lang=='ru' else 'ru')+'/projects/' in page.url
-                nojs=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':1000});reader=nojs.new_page();reader.goto(base+lang+'/projects/')
+                if not counterpart.count():counterpart=page.locator('a[href*="/'+('en' if lang=='ru' else 'ru')+'/program/"]').first
+                counterpart.click();assert '/'+('en' if lang=='ru' else 'ru')+'/program/' in page.url
+                nojs=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':1000});reader=nojs.new_page();reader.goto(base+lang+'/program/')
                 assert reader.locator('[data-dl-panel]:visible').count()==3
                 assert reader.locator('[data-dl-item]:visible').count()==7
-                reader.locator('#board a[href*="ini-013"]').click();assert '/initiatives/ini-013/' in reader.url
+                reader.locator('#board a[href*="ini-013"]').click();assert '/portfolio/ini-013/' in reader.url
                 nojs.close()
             with tempfile.TemporaryDirectory() as tmp:
                 package=Path(tmp)/'aicc';export(OUTPUT,package);file_context=browser.new_context(viewport={'width':1000,'height':1000});file_page=file_context.new_page()
                 for lang in ('en','ru'):
-                    file_page.goto((package/lang/'projects/index.html').as_uri())
+                    file_page.goto((package/lang/'program/index.html').as_uri())
                     file_page.locator('[data-dl-tab=documents]').click();file_page.locator('.dl-documents a').first.click()
-                    assert '/projects/service-resolution/index.html' in urlsplit(file_page.url).path
+                    assert '/program/service-resolution/index.html' in urlsplit(file_page.url).path
                     file_page.locator('.project-content a[href*="ini-013"]').click()
-                    assert '/initiatives/ini-013/index.html' in urlsplit(file_page.url).path
+                    assert '/portfolio/ini-013/index.html' in urlsplit(file_page.url).path
                 file_context.close()
             browser.close()
     finally:server.shutdown()

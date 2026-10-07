@@ -1,8 +1,8 @@
 [
-  {"section":"initiatives","path":"initiatives/","source":"index.md","title":{"en":"Portfolio","ru":"Портфель инициатив"},"status":{"en":"Recorded portfolio","ru":"Рабочий портфель"},"renderer":"portfolio"},
-  {"section":"initiatives","path":"initiatives/selection/","source":"selection.md","title":{"en":"Review and decisions","ru":"Рассмотрение и решения"},"status":{"en":"Recorded portfolio","ru":"Рабочий портфель"},"renderer":"portfolio"},
-  {"section":"initiatives","path":"initiatives/register/","source":"register.md","title":{"en":"Initiative register","ru":"Реестр инициатив"},"status":{"en":"Recorded portfolio","ru":"Рабочий портфель"},"renderer":"portfolio"},
-  {"section":"projects","path":"projects/","source":"index.md","title":{"en":"Program Backlog","ru":"Бэклог программы"},"status":{"en":"Recorded delivery","ru":"Рабочее состояние реализации"},"renderer":"delivery"},
-  {"section":"projects","path":"projects/service-resolution/","source":"portfolio/{en,ru}/projects/service-resolution/*.md","title":{"en":"Customer Intelligence–Enabled Service Resolution","ru":"Решение клиентских обращений на основе клиентской аналитики"},"status":{"en":"Proposed initiative","ru":"Предлагаемая инициатива"},"renderer":"project"},
+  {"section":"portfolio","path":"portfolio/","source":"index.md","title":{"en":"Portfolio","ru":"Портфель инициатив"},"status":{"en":"Recorded portfolio","ru":"Рабочий портфель"},"renderer":"portfolio"},
+  {"section":"portfolio","path":"portfolio/selection/","source":"selection.md","title":{"en":"Review and decisions","ru":"Рассмотрение и решения"},"status":{"en":"Recorded portfolio","ru":"Рабочий портфель"},"renderer":"portfolio"},
+  {"section":"portfolio","path":"portfolio/register/","source":"register.md","title":{"en":"Initiative register","ru":"Реестр инициатив"},"status":{"en":"Recorded portfolio","ru":"Рабочий портфель"},"renderer":"portfolio"},
+  {"section":"program","path":"program/","source":"index.md","title":{"en":"Program Backlog","ru":"Бэклог программы"},"status":{"en":"Recorded delivery","ru":"Рабочее состояние реализации"},"renderer":"delivery"},
+  {"section":"program","path":"program/service-resolution/","source":"portfolio/{en,ru}/projects/service-resolution/*.md","title":{"en":"Customer Intelligence–Enabled Service Resolution","ru":"Решение клиентских обращений на основе клиентской аналитики"},"status":{"en":"Proposed initiative","ru":"Предлагаемая инициатива"},"renderer":"project"},
   {"section":"lab","path":"lab/","source":"lab/{en,ru}/lab.md","title":{"en":"AI Lab","ru":"AI Lab"},"status":{"en":"Concept","ru":"Концепция"},"renderer":"lab"}
 ]

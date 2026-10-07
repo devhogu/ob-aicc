@@ -8,7 +8,8 @@
 #   STATIC_KIND - static package ownership marker
 #   VOID - HTML elements requiring XML closure in standalone SVGs
 #   WORDS - native reading labels by language
-#   SECTIONS - topic index groups by language
+#   SECTIONS - topic index groups by language: the five branches
+#   branch_of - the topic group of a page
 #   Node - retain HTML/SVG structure and original case-sensitive markup
 #   Tree - preserve source HTML/SVG while changing selected reading controls
 #   element - construct a native reading element
@@ -37,6 +38,7 @@ from urllib.parse import urlsplit, unquote
 from xml.etree import ElementTree
 
 from export_portable import ROOT, MARKER, KIND, Page, snapshot, digest, local_target, file_url
+import workspace
 
 STATIC_KIND = 'aicc-static-languages-v1'
 VOID = set('area base br col embed hr img input link meta param source track wbr'.split())
@@ -44,10 +46,14 @@ WORDS = {
     'en': {'contents': 'Topics', 'edition': 'English', 'find': 'Browse the topics below or use your browser’s Find command (Ctrl+F / ⌘F).', 'diagram': 'Open full diagram', 'problem': 'Problem to solve', 'feedback': 'Page feedback'},
     'ru': {'contents': 'Темы', 'edition': 'Русский', 'find': 'Выберите тему ниже или используйте поиск браузера (Ctrl+F / ⌘F).', 'diagram': 'Открыть схему полностью', 'problem': 'Решаемая задача', 'feedback': 'Обратная связь'},
 }
-SECTIONS = {
-    'en': {'aicc': 'AICC', 'discovery': 'Discovery Catalog', 'initiatives': 'Portfolio', 'projects': 'Projects', 'lab': 'AI Lab'},
-    'ru': {'aicc': 'AICC', 'discovery': 'Каталог возможностей', 'initiatives': 'Портфель', 'projects': 'Проекты', 'lab': 'AI Lab'},
-}
+# Topic groups are the five branches, named as in the navigation.
+SECTIONS = {lang: {s['id']: s['label'][lang] for s in workspace.SECTIONS} for lang in ('en', 'ru')}
+
+
+def branch_of(page, lang):
+    """The branch of a page of an edition; the router and pages outside the branches are listed with the Center."""
+    parts = page.split('/')
+    return parts[1] if len(parts) > 2 and parts[1] in SECTIONS[lang] else 'center'
 
 
 class Node:
@@ -222,7 +228,7 @@ def adapt(text, page, lang, files):
             n.remove()
             continue
         if n.has('o-search'):
-            section = page.split('/')[1] if len(page.split('/')) > 2 and page.split('/')[1] in SECTIONS[lang] else 'aicc'
+            section = branch_of(page, lang)
             target = posixpath.relpath(lang + '/contents.html', posixpath.dirname(page))
             replace(n, element('a', {'class': 'static-contents-link', 'href': target + '#contents-' + section}, words['contents']))
             continue
@@ -340,7 +346,7 @@ def index_page(lang, pages, original):
         article.append(element('h2', {'id': 'contents-' + section}, label))
         listing = article.append(element('ul'))
         for page, title in sorted(pages.items(), key=lambda item: item[1].casefold()):
-            kind = page.split('/')[1] if len(page.split('/')) > 2 and page.split('/')[1] in SECTIONS[lang] else 'aicc'
+            kind = branch_of(page, lang)
             if kind != section:
                 continue
             item = listing.append(element('li'))

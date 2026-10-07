@@ -38,27 +38,56 @@
   revealFragment();
   window.addEventListener('hashchange', revealFragment);
 
-  // search
+  // search: the branch index by default; with the global scope on, every branch index, each result named by its branch
   var input = document.getElementById('q');
   var results = document.getElementById('results');
-  var index = null;
-  function load(cb) {
-    if (index) return cb();
-    if (Array.isArray(window.AICC_SEARCH_INDEX)) {
-      index = window.AICC_SEARCH_INDEX;
-      return cb();
+  var every = document.getElementById('q-all');
+  // A direct-file edition loads the branch index as a script before this one; other indexes load the same way on demand.
+  var bundled = Array.isArray(window.AICC_SEARCH_INDEX) ? window.AICC_SEARCH_INDEX : null;
+  var index = null, merged = null;
+  function fetchIndex(url, cb) {
+    if (bundled) {
+      var tag = document.createElement('script');
+      tag.src = url.replace(/\.json$/, '.js');
+      tag.onload = function () { var j = window.AICC_SEARCH_INDEX; tag.remove(); cb(Array.isArray(j) ? j : []); };
+      tag.onerror = function () { tag.remove(); cb([]); };
+      document.head.appendChild(tag);
+      return;
     }
-    fetch(d.search).then(function (r) { return r.json(); }).then(function (j) { index = j; cb(); }).catch(function () { index = []; cb(); });
+    fetch(url).then(function (r) { return r.json(); }).then(cb).catch(function () { cb([]); });
   }
+  function loadOwn(cb) {
+    if (index) return cb(index);
+    if (bundled) { index = bundled; return cb(index); }
+    fetchIndex(d.search, function (j) { index = j; cb(index); });
+  }
+  function loadAll(cb) {
+    if (merged) return cb(merged);
+    var urls = (d.searchAll || '').split(' ').filter(Boolean), names = (d.searchNames || '').split('|');
+    var parts = [], i = 0;
+    // Script-loaded indexes share one global name, so they load one after another.
+    (function next() {
+      if (i >= urls.length) { merged = [].concat.apply([], parts); return cb(merged); }
+      var n = i++;
+      fetchIndex(urls[n], function (j) {
+        parts[n] = j.map(function (e) { return {u: e.u, t: e.t, h: e.h, x: e.x, b: names[n] || ''}; });
+        next();
+      });
+    })();
+  }
+  function global() { return !!(every && every.checked && d.searchAll); }
+  function load(cb) { return global() ? loadAll(cb) : loadOwn(cb); }
   function tokens(s) { return s.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean); }
   function run() {
     if (!tokens(input.value).length) { results.hidden = true; return; }
-    load(function () {
-      // Loading may finish after the reader changes or clears the query.
+    var scope = global();
+    load(function (entries) {
+      // Loading may finish after the reader changes or clears the query, or changes the scope.
       var q = tokens(input.value);
       if (!q.length) { results.hidden = true; return; }
+      if (scope !== global()) return;
       var scored = [];
-      index.forEach(function (e) {
+      entries.forEach(function (e) {
         var h = (e.h + ' ' + e.t).toLowerCase(), x = e.x.toLowerCase(), s = 0, ok = true;
         q.forEach(function (w) {
           var inH = h.indexOf(w) >= 0, inX = x.indexOf(w) >= 0;
@@ -73,10 +102,11 @@
       if (!scored.length) {
         var p = document.createElement('p'); p.textContent = d.tNone; results.appendChild(p);
       }
-      scored.slice(0, 12).forEach(function (r) {
+      scored.slice(0, scope ? 20 : 12).forEach(function (r) {
         var a = document.createElement('a'); a.href = base + r[1].u.replace(/^\//, '');
         var b = document.createElement('strong'); b.textContent = r[1].h; a.appendChild(b);
         var s = document.createElement('small'); s.textContent = ' ' + r[1].t; a.appendChild(s);
+        if (scope && r[1].b) { var c = document.createElement('span'); c.className = 'search-branch'; c.textContent = r[1].b; a.appendChild(c); }
         results.appendChild(a);
       });
       results.hidden = false;
@@ -89,7 +119,8 @@
   })();
   if (input) {
     input.addEventListener('input', run);
-    document.addEventListener('click', function (e) { if (!results.contains(e.target) && e.target !== input) results.hidden = true; });
+    if (every) every.addEventListener('change', run);
+    document.addEventListener('click', function (e) { if (!results.contains(e.target) && e.target !== input && e.target !== every) results.hidden = true; });
     input.addEventListener('keydown', function (e) { if (e.key === 'Escape') { results.hidden = true; } });
   }
 

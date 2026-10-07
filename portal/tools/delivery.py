@@ -144,7 +144,7 @@ def link(url,target,title,cls=''):
 def initiative_card(i,data,url):
     lang=data['lang'];u=UI[lang];target=portfolio._route(lang,i)
     project_key=i.get('project_key')
-    return f'<article class="dl-card dl-proposal" data-dl-initiative="{i["id"]}"><div><div class="dl-meta">{i["id"]} · {escape(i["priority"])} <span class="dl-badge">{escape(i["status"])}</span></div><h3>{escape(i["title"])}</h3><p>{escape(i["outcome"])}</p><div class="dl-actions">{link(url,target,u["open"]+" →")}{link(url,"/"+lang+"/projects/"+project_key+"/",u["open_project"]+" →") if project_key else ""}</div></div><aside><strong>{u["next"]}</strong><p>{u["gates"][i["column"]]}</p><small>{u["none"] if not any(r["initiative"]==i["id"] for r in data["items"]) else ""}</small></aside></article>'
+    return f'<article class="dl-card dl-proposal" data-dl-initiative="{i["id"]}"><div><div class="dl-meta">{i["id"]} · {escape(i["priority"])} <span class="dl-badge">{escape(i["status"])}</span></div><h3>{escape(i["title"])}</h3><p>{escape(i["outcome"])}</p><div class="dl-actions">{link(url,target,u["open"]+" →")}{link(url,workspace.route(lang,'program',project_key+'/'),u["open_project"]+" →") if project_key else ""}</div></div><aside><strong>{u["next"]}</strong><p>{u["gates"][i["column"]]}</p><small>{u["none"] if not any(r["initiative"]==i["id"] for r in data["items"]) else ""}</small></aside></article>'
 
 
 def item_body(item,data,url,embedded=False):
@@ -178,7 +178,7 @@ def item_body(item,data,url,embedded=False):
 
 def _card(item, data, url):
     lang=data['lang']
-    return kanban.card(item['Identifier'],item['title'],workspace.relative(url,f'/{lang}/projects/items/{item["Identifier"].lower()}/'),
+    return kanban.card(item['Identifier'],item['title'],workspace.relative(url,workspace.route(lang,'program',f'items/{item["Identifier"].lower()}/')),
         kind=item['kind'],state=item['status'] + (' · '+item['stage_label'] if item['stage_label'] else ''),
         priority=item['initiative'],rank=item['rank'],lang=lang,classes='dl-card')
 
@@ -186,7 +186,7 @@ def _card(item, data, url):
 def render(data,url,item=None):
     import project as workbook
     lang=data['lang'];u=UI[lang];pf=data['portfolio'];c=pf['capacity'];ordinary=[i for i in pf['items'] if not i['standing']];standing=[i for i in pf['items'] if i['standing']]
-    if item:return '<article class="dl-content">'+link(url,f'/{lang}/projects/',u['back'])+item_body(item,data,url)+'</article>'
+    if item:return '<article class="dl-content">'+link(url,workspace.route(lang,'program'),u['back'])+item_body(item,data,url)+'</article>'
     body=f'<header class="dl-intro"><div><h1>{u["title"]}</h1><p>{u["subtitle"]}</p></div><aside><strong>{escape(pf["frame"]["Program Increment"].split(" (")[0])}</strong><p class="dl-meta">{u["snapshot"]} {portfolio._date(lang, pf["date"])}</p></aside></header>'
     stats=[(f'{c["feature"]["progress"]} / {c["limits"]["feature"]}',u['features']), (f'{c["feature"]["ready"]} / {c["limits"]["feature_ready"]}',u['ready']), (f'{c["capability"]["progress"]} / {c["limits"]["capability"]}',u['capabilities']), (str(sum(i['column'] not in ('Implementation','Done','Off-flow') for i in ordinary)),u['upstream'])]
     body+='<div class="dl-stats">'+''.join(f'<div><strong>{value}</strong><span>{label}</span></div>' for value,label in stats)+'</div>'
@@ -217,7 +217,7 @@ def render(data,url,item=None):
     intake=f'<h2>{u["intake_title"]}</h2><p class="dl-meta">{u["intake_note"]}</p><div class="dl-filters" hidden><label>{u["search"]} <input type="search" data-dl-search></label><label>{u["priority"]} <select data-dl-priority><option value="">{u["all"]}</option>'+''.join(f'<option>{p}</option>' for p in ['PRI-1','PRI-2','PRI-3','PRI-4','PRI-5'])+f'</select></label><span data-dl-count role="status">{u["showing"]}: {len(ordinary)}</span></div><div class="dl-rows">'
     for i in ordinary:
         find=escape(' '.join([i['id'],i['title'],i['outcome']]).lower(),quote=True)
-        intake+=f'<article class="dl-row" data-dl-item="{i["id"]}" data-find="{find}" data-priority="{" ".join(i["priorities"])}"><span class="dl-meta">{i["id"]}<br>{escape(i["priority"])}</span><div><h3>{link(url,portfolio._route(lang,i),i["title"])}</h3><p class="dl-meta">{escape(i["status"])}</p><p>{escape(i["outcome"])}</p></div><div><strong class="dl-meta">{u["next"]}</strong><p>{u["gates"][i["column"]]}</p>{link(url,f"/{lang}/projects/{i['project_key']}/",u['open_project']+' →') if i.get('project_key') else ''}</div></article>'
+        intake+=f'<article class="dl-row" data-dl-item="{i["id"]}" data-find="{find}" data-priority="{" ".join(i["priorities"])}"><span class="dl-meta">{i["id"]}<br>{escape(i["priority"])}</span><div><h3>{link(url,portfolio._route(lang,i),i["title"])}</h3><p class="dl-meta">{escape(i["status"])}</p><p>{escape(i["outcome"])}</p></div><div><strong class="dl-meta">{u["next"]}</strong><p>{u["gates"][i["column"]]}</p>{link(url,workspace.route(lang,'program',i['project_key']+'/'),u['open_project']+' →') if i.get('project_key') else ''}</div></article>'
     intake+=f'</div><h2 class="dl-section-title">{u["standing"]}</h2><p class="dl-meta">{u["standing_note"]}</p><div class="dl-standing">'+''.join(f'<article class="dl-card"><span class="dl-meta">{i["id"]}</span><h3>{link(url,portfolio._route(lang,i),i["title"])}</h3><span class="dl-badge">{escape(i["status"])}</span></article>' for i in standing)+'</div>'
     body+=f'<section id="intake" data-dl-panel>{intake}</section>'
     documents=''
@@ -235,15 +235,15 @@ def build(output):
     output=Path(output);count=0
     for lang in ('en','ru'):
         data=project(lang=lang);u=UI[lang];entries=[]
-        routes=[(f'/{lang}/projects/',None)]+[(f'/{lang}/projects/items/{r["Identifier"].lower()}/',r) for r in data['items']]
+        routes=[(workspace.route(lang,'program'),None)]+[(workspace.route(lang,'program',f'items/{r["Identifier"].lower()}/'),r) for r in data['items']]
         for url,item in routes:
             title=item['title'] if item else u['title'];body=render(data,url,item)
-            nav=''.join(link(url,f'/{lang}/projects/#{key}',u[label]) for key,label in [('board','board'),('intake','intake'),('documents','documents')])
-            page=workspace.page(url,lang,'projects',title,body,nav,body_class='delivery-workspace')
+            nav=''.join(link(url,workspace.route(lang,'program','#'+key),u[label]) for key,label in [('board','board'),('intake','intake'),('documents','documents')])
+            page=workspace.page(url,lang,'program',title,body,nav,body_class='delivery-workspace')
             page=page.replace('</head>',f'<link rel="stylesheet" href="{workspace.asset(url,"delivery.css")}"><script defer src="{workspace.asset(url,"delivery.js")}"></script>'+kanban.assets(url)+'\n</head>',1)
             target=output/url.strip('/')/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(page)
             entries.append({'u':url,'t':title,'h':item['Identifier'] if item else title,'x':VisibleText(body).text()});count+=1
-        (output/f'assets/search-projects-{lang}.json').write_text(json.dumps(entries,ensure_ascii=False,separators=(',',':')))
+        (output/f'assets/search-program-{lang}.json').write_text(json.dumps(entries,ensure_ascii=False,separators=(',',':')))
     for name in ('delivery.css','delivery.js'):shutil.copyfile(workspace.ROOT/'portal/site'/name,output/'assets'/name)
-    kanban.assets("/en/projects/",output)
+    kanban.assets(workspace.route('en','program'),output)
     return count

@@ -72,14 +72,14 @@ def run():
             page=browser.new_page()
             page.on('pageerror',lambda e:errors.append(str(e)))
             page.on('requestfailed',lambda r:network.append(r.url))
-            page.goto(base+'/en/projects/service-resolution/')
+            page.goto(base+'/en/program/service-resolution/')
             for theme in ('light','dark'):
                 page.evaluate('t=>localStorage.setItem("aicc-theme",t)',theme)
                 for width in (1440,390):
                     page.set_viewport_size({'width':width,'height':1000})
                     for lang in ('en','ru'):
                         for source,route in DOCUMENTS:
-                            url=f'/{lang}/projects/service-resolution/'+(route+'/' if route else '')
+                            url=f'/{lang}/program/service-resolution/'+(route+'/' if route else '')
                             page.goto(base+url,wait_until='networkidle')
                             state=page.evaluate(MEASURE)
                             assert state['scroll']<=width+1, (url,width,theme,'Page overflow',state)
@@ -93,14 +93,14 @@ def run():
                             if source in ('start','charter','technical-design'):
                                 page.evaluate('scrollTo(0,0)');page.screenshot(path=str(REPORT/f'{lang}-{source}-{width}-{theme}.png'))
                         # Native document contents must be discoverable on desktop and mobile.
-                        page.goto(base+f'/{lang}/projects/service-resolution/charter/')
+                        page.goto(base+f'/{lang}/program/service-resolution/charter/')
                         if width<=1100: page.locator('.o-nav>details>summary').click()
                         contents=page.locator('.project-nav-topics>summary');expect(contents).to_be_visible();contents.click()
                         first=page.locator('.project-nav-topics a').first;first.click()
                         assert urlsplit(page.url).fragment.startswith(lang+'-charter-')
                         counts['section_links']=counts.get('section_links',0)+1
                         # A source reference reaches another document, rather than an absent fragment.
-                        page.goto(base+f'/{lang}/projects/service-resolution/charter/')
+                        page.goto(base+f'/{lang}/program/service-resolution/charter/')
                         page.locator(f'.project-content a[href="../journeys/#{lang}-journeys"]').first.click()
                         assert page.url.endswith('/journeys/#'+lang+'-journeys')
                         page.locator('.lang-switch a[lang="'+('ru' if lang=='en' else 'en')+'"]').click()
@@ -111,18 +111,18 @@ def run():
                 for lang in ('en','ru'):
                     for theme in ('light','dark'):
                         page.evaluate('t=>localStorage.setItem("aicc-theme",t)',theme)
-                        page.goto(base+f'/{lang}/projects/service-resolution/technical-design/',wait_until='networkidle')
+                        page.goto(base+f'/{lang}/program/service-resolution/technical-design/',wait_until='networkidle')
                         assert page.evaluate(MEASURE)['scroll']<=width+1
                         diagram_controls(page,counts);counts['page_views']+=1
             for lang in ('en','ru'):
-                page.goto(base+f'/{lang}/projects/')
+                page.goto(base+f'/{lang}/program/')
                 page.locator('#q').fill('Functions and who uses them' if lang=='en' else 'Функции и их пользователи')
                 result=page.locator('#results a').first;expect(result).to_be_visible();result.click()
-                assert '/projects/service-resolution/' in page.url
+                assert '/program/service-resolution/' in page.url
                 counts['search_checks']+=1
                 nojs=browser.new_page(java_script_enabled=False)
                 for source,route in DOCUMENTS:
-                    nojs.goto(base+f'/{lang}/projects/service-resolution/'+(route+'/' if route else ''))
+                    nojs.goto(base+f'/{lang}/program/service-resolution/'+(route+'/' if route else ''))
                     assert nojs.locator('[data-document]').count()==1 and nojs.locator('h1').is_visible()
                     assert not nojs.locator('.project-diagram-open:visible').count()
                     if nojs.locator('.project-diagram-preview').count():
@@ -138,15 +138,15 @@ def run():
                 filepage=browser.new_page()
                 for lang in ('en','ru'):
                     for source,route in DOCUMENTS:
-                        file=filepage.goto((target/lang/'projects/service-resolution'/route/'index.html').as_uri(),wait_until='networkidle')
+                        file=filepage.goto((target/lang/'program/service-resolution'/route/'index.html').as_uri(),wait_until='networkidle')
                         diagram_controls(filepage,counts)
                         counts['portable_pages']+=1
-                    filepage.goto((target/lang/'projects/service-resolution/index.html').as_uri())
+                    filepage.goto((target/lang/'program/service-resolution/index.html').as_uri())
                     filepage.locator('.project-content .audience-card').first.click()
                     filepage.wait_for_url(lambda u: urlsplit(u).path.endswith('/journeys/payment-issue/index.html') and urlsplit(u).fragment==lang+'-journey-payment')
                     filepage.locator('#q').fill('Hypothesis' if lang=='en' else 'Гипотеза')
                     result=filepage.locator('#results a').first;expect(result).to_be_visible();result.click()
-                    assert '/projects/service-resolution/' in filepage.url
+                    assert '/program/service-resolution/' in filepage.url
                     counts['search_checks']+=1
                 filepage.close()
             browser.close()

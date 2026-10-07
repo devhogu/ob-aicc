@@ -6,23 +6,29 @@
 # END_MODULE_CONTRACT
 # START_MODULE_MAP
 #   ROOT - repository root for shared assets
-#   SECTIONS - bilingual section identities and route prefixes
+#   SECTIONS - bilingual branch identities and route prefixes
+#   ROUTER - the language router that leads to the five branches
+#   REFERENCE_PREFIX - former routes whose page references renamed branches keep
+#   SEARCH_TEXT - search labels of a branch, the router and the global scope
+#   route - the site-absolute route of a branch page
+#   search_index - the search index of a branch
 #   CONTACT - shared portal feedback contact
 #   relative - resolve a site target relative to a page
 #   messages - load cached language-specific UI strings
 #   icon - load a local presentation icon
 #   section_label - select a section's language label
 #   asset - resolve a versioned presentation asset
-#   header - render branding, scoped search, language and theme controls
+#   header - render branding, branch or global search, language and theme controls
 #   short_id - assign stable page references without changing existing AICC references
+#   page_key - the stable reference key of a page, kept across route changes
 #   legal_pages - shared language-specific legal destinations
 #   navigation_footer - render legal links and the site version below navigation
 #   navigation - render global groups and the active section's local navigation
 #   footer - render the common site footer and page feedback trigger
 #   feedback_dialog - render the shared page feedback dialog
 #   styles - load the shared visual shell
-#   script - bind interactions to the section's search index
-#   page - render an independent section page without charter metadata
+#   script - bind interactions to the branch search index and to every branch index for global search
+#   page - render an independent branch page (or the router) without charter metadata
 # END_MODULE_MAP
 """The common roof. Section renderers own their bodies, search and metadata."""
 from functools import lru_cache
@@ -35,6 +41,16 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[2]
 SECTIONS = json.loads((ROOT / 'portal/sections/navigation.json').read_text())
+# The language router at /{lang}/ belongs to no branch; it carries the shared shell and global search.
+ROUTER = 'router'
+# Feedback references are quoted by readers. Branch routes renamed by the bounded-branch layout keep the
+# reference of their former route, so a quoted ID still names the same page.
+REFERENCE_PREFIX = {'portfolio/': 'initiatives/', 'program/': 'projects/'}
+SEARCH_TEXT = {
+    'branch': {'en': 'Search this section', 'ru': 'Поиск в разделе'},
+    'router': {'en': 'Search AICC', 'ru': 'Поиск по сайту AICC'},
+    'all': {'en': 'All of AICC', 'ru': 'Весь сайт AICC'},
+}
 CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
 
 
@@ -55,7 +71,20 @@ def icon(name):
 
 
 def section_label(section, lang):
+    if section == ROUTER:
+        return messages(lang)['site_short']
     return next(s['label'][lang] for s in SECTIONS if s['id'] == section)
+
+
+def route(lang, section, rest=''):
+    """The site-absolute route of a page of a branch, e.g. route('en', 'program', 'items/x/')."""
+    if section == ROUTER:
+        return f'/{lang}/' + rest
+    return f'/{lang}/' + next(s['path'] for s in SECTIONS if s['id'] == section) + rest
+
+
+def search_index(lang, section):
+    return f'/assets/search-{section}-{lang}.json'
 
 
 def asset(url, name):
@@ -67,17 +96,21 @@ def asset(url, name):
 def header(url, lang, section, m=None):
     m = m or messages(lang)
     label = section_label(section, lang)
-    search = m['search_label'] if section == 'aicc' else ({'en': 'Search this section', 'ru': 'Поиск в разделе'}[lang])
+    search = m['search_label'] if section == 'center' else SEARCH_TEXT['router' if section == ROUTER else 'branch'][lang]
     switches = []
     for language in ('en', 'ru'):
         target = url.replace('/' + lang + '/', '/' + language + '/', 1)
         current = ' aria-current="true"' if language == lang else ''
         switches.append(f'<a lang="{language}" hreflang="{language}" href="{escape(relative(url, target))}"{current}>{language.upper()}</a>')
-    scope = m['header_scope'] if section == 'aicc' else label
+    scope = m['header_scope'] if section == 'center' else label
+    scope = '' if section == ROUTER else f'<span class="header-scope">{escape(scope)}</span>'
+    # Global search is a scope of the same box; it is on by default on the router.
+    checked = ' checked' if section == ROUTER else ''
+    every = f'<label class="search-scope"><input id="q-all" type="checkbox"{checked}><span>{escape(SEARCH_TEXT["all"][lang])}</span></label>'
     return f'''<header class="o-header">
   <a class="o-identity" href="{relative(url, '/' + lang + '/')}"><img src="{relative(url, '/assets/ui/assets/logos/o-mark.svg')}" width="34" height="38" alt=""><span>{escape(m['site_name'])}</span></a>
-  <span class="header-scope">{escape(scope)}</span>
-  <div class="o-search" role="search"><label class="o-sr-only" for="q">{escape(search)}</label><input id="q" type="search" autocomplete="off" placeholder="{escape(search)}" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  {scope}
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">{escape(search)}</label><input id="q" type="search" autocomplete="off" placeholder="{escape(search)}" aria-controls="results">{every}<div id="results" class="o-search-results" hidden></div></div>
   <div class="o-tools"><nav class="lang-switch" aria-label="{escape(m['language_label'])}">{''.join(switches)}</nav><button id="theme-switch" type="button" class="theme-switch" aria-label="{escape(m['theme_to_dark'])}" title="{escape(m['theme_to_dark'])}"><span class="ts-moon">{icon('moon')}</span><span class="ts-sun">{icon('sun')}</span></button></div>
 </header>'''
 
@@ -100,9 +133,18 @@ def short_id(key, taken=None, length=5):
         n += 1
 
 
+def page_key(url):
+    """The reference key of a branch page: its route below the language, under its former route where renamed."""
+    path = url.split('/', 2)[2]
+    for new, old in REFERENCE_PREFIX.items():
+        if path.startswith(new):
+            path = old + path[len(new):]
+    return path.rstrip('/') + '/index'
+
+
 def legal_pages(lang, m=None):
     m = m or messages(lang)
-    return [(f'/{lang}/privacy/', m['privacy']), (f'/{lang}/terms-of-use/', m['terms_of_use'])]
+    return [(route(lang, 'center', 'privacy/'), m['privacy']), (route(lang, 'center', 'terms-of-use/'), m['terms_of_use'])]
 
 
 def navigation_footer(url, lang, m=None):
@@ -152,14 +194,17 @@ def styles(url):
 
 def script(url, lang, section, m=None):
     m = m or messages(lang)
-    index = f'/assets/search-{lang}.json' if section == 'aicc' else f'/assets/search-{section}-{lang}.json'
-    return f'''<script src="{asset(url, 'site.js')}" defer data-search="{relative(url, index)}" data-t-none="{escape(m['search_none'])}" data-t-light="{escape(m['theme_to_light'])}" data-t-dark="{escape(m['theme_to_dark'])}" data-t-copied="{escape(m['copied'])}" data-t-mail-body="{escape(m['fb_mail_body'])}" data-t-dz-close="{escape(m['dz_close'])}"></script>'''
+    # The router searches the whole site by default; its own index is the Center's.
+    index = search_index(lang, 'center' if section == ROUTER else section)
+    every = ' '.join(relative(url, search_index(lang, s['id'])) for s in SECTIONS)
+    names = '|'.join(s['label'][lang] for s in SECTIONS)
+    return f'''<script src="{asset(url, 'site.js')}" defer data-search="{relative(url, index)}" data-search-all="{escape(every)}" data-search-names="{escape(names)}" data-t-none="{escape(m['search_none'])}" data-t-light="{escape(m['theme_to_light'])}" data-t-dark="{escape(m['theme_to_dark'])}" data-t-copied="{escape(m['copied'])}" data-t-mail-body="{escape(m['fb_mail_body'])}" data-t-dz-close="{escape(m['dz_close'])}"></script>'''
 
 
 def page(url, lang, section, title, body, local_nav, *, extra_head='', body_class=''):
     m = messages(lang)
     other = 'ru' if lang == 'en' else 'en'
-    ref = short_id(url.split('/', 2)[2].rstrip('/') + '/index')
+    ref = short_id(page_key(url))
     return f'''<!doctype html>
 <html lang="{lang}" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">

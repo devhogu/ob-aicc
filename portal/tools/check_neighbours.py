@@ -11,7 +11,9 @@ import discovery
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / 'html/aicc'
-SECTIONS = ('aicc', 'discovery', 'initiatives', 'projects', 'lab')
+SECTIONS = ('center', 'discovery', 'portfolio', 'program', 'lab')
+# The language router at /{lang}/ belongs to no branch.
+ROUTER = 'router'
 # Discovery pages composed by the portal rather than built from the catalog records.
 AUTHORED_DISCOVERY = {'regulatory-horizon/index.html'}
 
@@ -22,6 +24,9 @@ class Inspection(HTMLParser):
         self.section = None
         self.groups, self.main_links, self.ids = [], [], []
         self.search = None
+        self.search_all = []
+        self.global_default = False
+        self.doors = []
         self.in_main = False
         self.in_footer = False
         self.nav_footer_depth = 0
@@ -67,6 +72,11 @@ class Inspection(HTMLParser):
                 self.nav_footer_links.append(attrs['href'])
         if tag == 'script' and 'data-search' in attrs:
             self.search = attrs['data-search']
+            self.search_all = attrs.get('data-search-all', '').split()
+        if tag == 'input' and attrs.get('id') == 'q-all':
+            self.global_default = 'checked' in attrs
+        if tag == 'a' and 'data-door' in attrs:
+            self.doors.append(attrs['data-door'])
         if 'horizon-chip' in attrs.get('class', '').split():
             self.derived = tag
         if tag == 'details':
@@ -104,7 +114,11 @@ class Inspection(HTMLParser):
 
 def section_for(path):
     parts = path.strip('/').split('/')
-    return parts[1] if len(parts) > 1 and parts[1] in SECTIONS[1:] else 'aicc'
+    if len(parts) > 1 and parts[1] in SECTIONS:
+        return parts[1]
+    if len(parts) == 1 or parts[1:] == ['index.html']:
+        return ROUTER
+    return None
 
 
 def check():
@@ -128,10 +142,16 @@ def check():
             counts[section + '_pages'] += 1
             if parsed.section != section or parsed.groups != list(SECTIONS):
                 errors.append(f'{path}: incorrect section identity/navigation')
-            expected_search = f'search-{lang}.json' if section == 'aicc' else f'search-{section}-{lang}.json'
+            # The router searches every branch by default; its own index is the Center's.
+            expected_search = f'search-{"center" if section == ROUTER else section}-{lang}.json'
             if not parsed.search or parsed.search.rsplit('/', 1)[-1] != expected_search:
                 errors.append(f'{path}: incorrect search scope')
-            legal = {f'/{lang}/privacy/', f'/{lang}/terms-of-use/'}
+            everything = [f'search-{s}-{lang}.json' for s in SECTIONS]
+            if [name.rsplit('/', 1)[-1] for name in parsed.search_all] != everything:
+                errors.append(f'{path}: global search does not cover every branch')
+            if parsed.global_default != (section == ROUTER):
+                errors.append(f'{path}: global search must be on by default exactly on the router')
+            legal = {f'/{lang}/center/privacy/', f'/{lang}/center/terms-of-use/'}
             for location, links in (('sidebar', parsed.nav_footer_links), ('footer', parsed.footer_links)):
                 targets = {urlsplit(urljoin('http://portal' + path, href)).path for href in links}
                 if not legal.issubset(targets):
@@ -150,16 +170,21 @@ def check():
                     errors.append(f'{path}: language counterparts have different page references')
                 counts['pages_with_feedback'] += 1
             duplicates = [key for key, count in Counter(parsed.ids).items() if count > 1]
-            if duplicates and section != 'aicc':
+            if duplicates and section != 'center':
                 errors.append(f'{path}: duplicate ids {duplicates[:3]}')
             for href in parsed.main_links:
                 target = urlsplit(urljoin('http://portal' + path, href))
                 if target.netloc != 'portal' or target.scheme not in ('http', 'https'):
                     continue
-                relationship = section == 'projects' and bool(re.fullmatch(r'/(en|ru)/initiatives/(ini-\d+/)?',target.path)) or section == 'initiatives' and bool(re.fullmatch(r'/(en|ru)/projects/(service-resolution/)?',target.path))
-                if section_for(target.path) != section and not relationship:
+                relationship = section == 'program' and bool(re.fullmatch(r'/(en|ru)/portfolio/(ini-\d+/)?',target.path)) or section == 'portfolio' and bool(re.fullmatch(r'/(en|ru)/program/(service-resolution/)?',target.path))
+                # The router leads to the home of each branch, and nowhere else.
+                door = section == ROUTER and target.path in {f'/{lang}/{s}/' for s in SECTIONS}
+                if section_for(target.path) != section and not relationship and not door:
                     errors.append(f'{path}: body link crosses section: {href}')
-            if section != 'aicc':
+            if section == ROUTER:
+                if parsed.doors != list(SECTIONS):
+                    errors.append(f'{path}: the router must hold exactly the five branch doors in order')
+            if section != 'center':
                 for marker in ('class="term"', 'class="xref"', 'class="doc-facts"'):
                     if marker in text:
                         errors.append(f'{path}: inherited charter metadata/link: {marker}')
@@ -183,7 +208,7 @@ def check():
     for path in sorted((OUTPUT / 'assets').glob('search-*.json')):
         entries = json.loads(path.read_text())
         name = path.stem.removeprefix('search-')
-        section = name.rsplit('-', 1)[0] if '-' in name else 'aicc'
+        section = name.rsplit('-', 1)[0]
         for entry in entries:
             if section_for(entry['u']) != section:
                 errors.append(f'{path.name}: cross-section search result {entry["u"]}')

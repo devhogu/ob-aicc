@@ -82,7 +82,7 @@ class ProgramDelivery(unittest.TestCase):
             data=delivery.project(root)
             self.assertEqual(data['counts']['Backlog'],1)
             self.assertEqual(data['items'][0]['initiative'],'INI-009')
-            markup=delivery.render(data,'/en/projects/')
+            markup=delivery.render(data,'/en/program/')
             self.assertIn('href="items/feat-001/"',markup)
             self.assertIn('Verified case history',markup)
             path=root/'portfolio/en/dashboard.md';path.write_text(path.read_text().replace('| Items | 1 | 0 | 0 | 0 | 0 | 0 |','| Items | 2 | 0 | 0 | 0 | 0 | 0 |'))

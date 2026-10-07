@@ -14,17 +14,44 @@ from check_neighbours import Inspection
 
 class NeighbourRendering(unittest.TestCase):
     def test_shell_keeps_five_sections_and_current_search_scope(self):
-        markup = workspace.page('/ru/projects/service-resolution/', 'ru', 'projects', 'Проект', '<h1>Проект</h1>', '<a href="../">Реестр</a>')
+        markup = workspace.page('/ru/program/service-resolution/', 'ru', 'program', 'Проект', '<h1>Проект</h1>', '<a href="../">Реестр</a>')
         parsed = Inspection(markup)
-        self.assertEqual(parsed.groups, ['aicc', 'discovery', 'initiatives', 'projects', 'lab'])
-        self.assertEqual(parsed.section, 'projects')
-        self.assertEqual(parsed.search, '../../../assets/search-projects-ru.json')
-        self.assertIn('href="../../../en/projects/service-resolution/"', markup)
+        self.assertEqual(parsed.groups, ['center', 'discovery', 'portfolio', 'program', 'lab'])
+        self.assertEqual(parsed.section, 'program')
+        self.assertEqual(parsed.search, '../../../assets/search-program-ru.json')
+        self.assertEqual(parsed.search_all, [f'../../../assets/search-{s}-ru.json' for s in ('center', 'discovery', 'portfolio', 'program', 'lab')])
+        self.assertFalse(parsed.global_default)
+        self.assertIn('Весь сайт AICC', markup)
+        self.assertIn('href="../../../en/program/service-resolution/"', markup)
         self.assertIn('Версия 2.2', markup)
         self.assertEqual(parsed.feedback_buttons, 1)
         self.assertEqual(len(parsed.nav_footer_links), 2)
         self.assertEqual(len(parsed.footer_links), 3)
         self.assertNotIn('class="doc-facts"', markup)
+
+    def test_renamed_routes_keep_their_page_references(self):
+        # A reader may quote the feedback ID of a page published under its former route.
+        self.assertEqual(workspace.page_key('/en/program/service-resolution/charter/'), 'projects/service-resolution/charter/index')
+        self.assertEqual(workspace.page_key('/ru/portfolio/ini-004/'), 'initiatives/ini-004/index')
+        self.assertEqual(workspace.page_key('/en/lab/'), 'lab/index')
+
+    def test_router_leads_to_the_five_branches_with_counted_facts(self):
+        import router
+        for lang in ('en', 'ru'):
+            with self.subTest(lang=lang):
+                url, markup = router.router_page(lang)
+                parsed = Inspection(markup)
+                self.assertEqual(url, f'/{lang}/')
+                self.assertEqual(parsed.section, 'router')
+                self.assertEqual(parsed.doors, ['center', 'discovery', 'portfolio', 'program', 'lab'])
+                self.assertTrue(parsed.global_default)
+                self.assertEqual(parsed.main_links, ['center/', 'discovery/', 'portfolio/', 'program/', 'lab/'])
+                counts = router.facts(lang)
+                self.assertEqual(counts['discovery'], len(neighbours.scenario_index(lang)))
+                self.assertEqual(counts['center'], len([p for p in (workspace.ROOT / 'charter/en').rglob('*.md') if p.name != 'README.md']))
+                fact = f'{counts["lab"]} workflow tasks' if lang == 'en' else f'Задач процесса: {counts["lab"]}'
+                self.assertIn(fact, markup)
+                self.assertIn(f'href="../{"ru" if lang == "en" else "en"}/"', markup)
 
     def test_discovery_preserves_scenario_text_and_direct_search_destination(self):
         source = discovery.source(Path('shared-banking-capabilities/customer-servicing/index.html'), 'en')
@@ -38,10 +65,10 @@ class NeighbourRendering(unittest.TestCase):
 
     def test_portfolio_is_record_projected_and_project_remains_a_proposal_in_both_editions(self):
         root = workspace.ROOT / 'portal/sections'
-        self.assertIn('maintained Registry', (root / 'initiatives/en/register.md').read_text())
-        self.assertIn('рабочих записей реестра', (root / 'initiatives/ru/register.md').read_text())
-        self.assertIn('| Proposed initiative |', (root / 'projects/en/index.md').read_text())
-        self.assertIn('| Предлагаемая инициатива |', (root / 'projects/ru/index.md').read_text())
+        self.assertIn('maintained Registry', (root / 'portfolio/en/register.md').read_text())
+        self.assertIn('рабочих записей реестра', (root / 'portfolio/ru/register.md').read_text())
+        self.assertIn('| Proposed initiative |', (root / 'program/en/index.md').read_text())
+        self.assertIn('| Предлагаемая инициатива |', (root / 'program/ru/index.md').read_text())
 
     def test_domain_preview_stage_links_reach_preserved_flow_actions(self):
         for lang in ('en', 'ru'):

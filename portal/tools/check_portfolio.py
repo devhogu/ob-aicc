@@ -27,9 +27,9 @@ class Published(HTMLParser):
 def main():
     for lang in ('en','ru'):
         d=portfolio.project(lang=lang);ids=[x['id'] for x in d['items']]
-        pages=list((OUTPUT/lang/'initiatives').rglob('index.html'))
+        pages=list((OUTPUT/lang/'portfolio').rglob('index.html'))
         assert len(pages)==len(ids)+3
-        board=(OUTPUT/lang/'initiatives/index.html').read_text()
+        board=(OUTPUT/lang/'portfolio/index.html').read_text()
         p=Published(board)
         n=sum(not i['standing'] for i in d['items'])
         board_ids=[i['id'] for col in portfolio.COLUMNS for i in d['items'] if not i['standing'] and i['column']==col]
@@ -37,9 +37,9 @@ def main():
         assert p.sections==['board','review','standing','roadmap']
         assert portfolio._date(lang, d['date']) in board
         assert len(re.findall(r'<li><span class="pf-meta">MS-',board))==len(d['milestones'])
-        register=Published((OUTPUT/lang/'initiatives/register/index.html').read_text())
+        register=Published((OUTPUT/lang/'portfolio/register/index.html').read_text())
         assert register.cards==ids
-        search=json.loads((OUTPUT/f'assets/search-initiatives-{lang}.json').read_text())
+        search=json.loads((OUTPUT/f'assets/search-portfolio-{lang}.json').read_text())
         assert {entry['h'] for entry in search if entry['h'].startswith('INI-')}==set(ids)
         for item in d['items']:
             path=OUTPUT/portfolio._route(lang,item).strip('/')/'index.html'
@@ -56,7 +56,7 @@ def main():
             assert '<link rel="alternate"' in text
             for link in Published(text).links:
                 target=urlsplit(urljoin('https://portal/'+page.relative_to(OUTPUT).as_posix(),link))
-                if target.netloc=='portal' and '/initiatives/' in target.path:
+                if target.netloc=='portal' and target.path.startswith(f'/{lang}/portfolio/'):
                     destination = OUTPUT/target.path.strip('/')
                     if target.path.endswith('/'): destination /= 'index.html'
                     assert destination.exists(),target.path

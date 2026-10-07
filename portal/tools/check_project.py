@@ -72,7 +72,7 @@ def check(output):
         diagrams=0;tables=0;atoms=0;heading_destinations=[]
         for source,route in DOCUMENTS:
             identifier=lang+'-'+source
-            path=Path(output)/lang/'projects/service-resolution'/route/'index.html'
+            path=Path(output)/lang/'program/service-resolution'/route/'index.html'
             if not path.exists(): errors.append(f'Missing project document: {path}');continue
             text=path.read_text();published=Capture(text)
             expected=original.documents[identifier];actual=published.documents.get(identifier)
@@ -86,7 +86,7 @@ def check(output):
                 if urlsplit(new).fragment != urlsplit(old).fragment: errors.append(f'{path}: changed project reference {old}')
             diagrams+=len(actual['diagrams']);tables+=actual['tables'];atoms+=len(actual['atoms'])
             heading_destinations.extend((identifier,heading[0]) for heading in expected['headings'] if heading[0])
-        entries=json.loads((Path(output)/f'assets/search-projects-{lang}.json').read_text())
+        entries=json.loads((Path(output)/f'assets/search-program-{lang}.json').read_text())
         indexed={urlsplit(item['u']).fragment for item in entries}
         # Document titles have page-level entries; every subordinate heading is searchable.
         for identifier,heading in heading_destinations:

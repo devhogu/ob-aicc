@@ -2,21 +2,21 @@
 
 Editable home for the AICC portal: the interface kit, page chrome, messages, neighbouring sections and build tools. The generated site goes to `../html/aicc/` and is never edited by hand.
 
-## Independent sections
+## Branches
 
-The portal has five neighbouring sections in one O!Bank shell. They share branding, navigation, language switching and themes. Each section owns its content, local navigation, search and lifecycle. Content bodies do not link across these boundaries, and charter terminology links or document status are not added to neighbouring content.
+The site has one language-first layout. `html/aicc/index.html` forwards to `en/`; `html/aicc/{en,ru}/index.html` is the router of each language, which holds only the five branch doors; `html/aicc/404.html` is the one page for a missing address. There are no other routes and no redirect stubs. The five branches share one O!Bank shell: branding, the left navigation of all branches with the current one marked, the language switch to the same page in the other language, the theme switch, page feedback and search. Each branch owns its source, content, local navigation, search index and checks. Content bodies do not link across branches except the recorded Initiative–project relationship between Portfolio and Program, and charter terminology links or document status are not added to the other branches.
 
-| Section | Route within each language | Maintained content |
-| --- | --- | --- |
-| AICC | Existing routes | Charter and explanatory sources described below |
-| Discovery Catalog | `discovery/` | `../portfolio/{en,ru}/discovery/`: one Markdown record for each of the 76 pages per language, rendered by `tools/discovery.py` with the catalog layouts and interactions |
-| Portfolio | `initiatives/` | `sections/initiatives/{en,ru}/`: overview, selection guidance and an empty initiative register |
-| Delivery Pipeline | `projects/` | `sections/projects/{en,ru}/`: project register and the first Customer Intelligence–Enabled Service Resolution proposal |
-| CloudLab | `lab/` | `sections/lab/{en,ru}/`: concept, approach and experiment workflow |
+| Branch | Route within each language | Source | Builder |
+| --- | --- | --- | --- |
+| Center | `center/` | `../charter/{en,ru}/`, `../registry/{en,ru}/`, `content/` and `../portal-scaffolding/sitemap.json` | `tools/build.py` |
+| Discovery Catalog | `discovery/` | `../portfolio/{en,ru}/discovery/`: one Markdown record for each of the 76 pages per language | `tools/discovery.py`, `tools/neighbours.py` |
+| Portfolio | `portfolio/` | `../portfolio/{en,ru}/`: the Portfolio Backlog, board, Initiative Briefs and roadmap | `tools/portfolio.py` |
+| Program | `program/` | `../portfolio/{en,ru}/`: the Program Backlog, and `../portfolio/{en,ru}/projects/<key>/` for the documents of each project | `tools/delivery.py`, `tools/project.py` |
+| AI Lab | `lab/` | `../lab/{en,ru}/lab.md` | `tools/lab.py` |
 
-`sections/navigation.json` defines the five navigation groups; `sections/pages.json` defines the authored landing routes and their labels. `tools/workspace.py` renders the common shell, and `tools/neighbours.py` composes the independent content. Discovery renders its pages from the catalog records with `tools/discovery.py` and applies an AICC visual skin. Edit the records, not the generated Discovery pages. The new landing pages have paired English and Russian Markdown; they do not inherit the charter's document versioning or translation metadata.
+`sections/navigation.json` defines the five branches, their routes and icons; `sections/pages.json` lists the branch landing pages. `sections/portfolio/` and `sections/program/` hold the authored landing text and the project mapping. `tools/workspace.py` renders the common shell, `tools/router.py` the routers and the 404 page, and `tools/neighbours.py` composes Discovery, Portfolio, Program and AI Lab. Every count on the router is taken from the branch's sources when the site is built.
 
-The live Portfolio starts empty and does not import records from the existing `../portfolio/` corpus. AICC's existing Portfolio and Delivery routes remain, with local navigation labels “Portfolio management” and “Delivery model”. The CSR entry remains a proposal, and CloudLab remains a concept.
+Search covers the current branch by default. The box beside it, "All of AICC" (Russian «Весь сайт AICC»), adds every branch index and names the branch of each result; on the routers it is on by default. Without scripts the box has no effect and every page remains reachable through links. Page feedback references are stable: a page whose route changed keeps the reference of its former route.
 
 ## How the site is built
 
@@ -30,7 +30,7 @@ The live Portfolio starts empty and does not import records from the existing `.
 | `content/authored.json` | The authored chrome: section introductions, home text, reading routes (English and Russian) |
 | `content/{en,ru}/**/*.md` | Explanatory pages, courses, service descriptions, and references; governing rules come from the charter |
 
-The build converts the Markdown with clause anchors, links each cross-reference such as Operating Model 6.6 to its clause, draws each Mermaid diagram to SVG in a light and a dark variant, wraps the tables, and writes `html/aicc/{en,ru}/`. The build selects reviewed Russian source files when available. Missing or draft translations show the English source with an explicit language notice. A reviewed translation whose source has changed fails validation until it is reconciled. The language switch is at the top right of every page and leads to the same page in the other language. The theme is light by default and can be switched to dark.
+The build converts the Markdown with clause anchors, links each cross-reference such as Operating Model 6.6 to its clause, draws each Mermaid diagram to SVG in a light and a dark variant, wraps the tables, and writes the Center branch to `html/aicc/{en,ru}/center/`. The build selects reviewed Russian source files when available. Missing or draft translations show the English source with an explicit language notice. A reviewed translation whose source has changed fails validation until it is reconciled. The language switch is at the top right of every page and leads to the same page in the other language. The theme is light by default and can be switched to dark.
 
 ## Build and check
 
@@ -38,13 +38,13 @@ The build converts the Markdown with clause anchors, links each cross-reference 
 python3 portal/tools/build.py            # regenerate html/aicc/ (the first run draws the diagrams, which takes about a minute; later runs use portal/.cache)
 python3 portal/tools/check_sources.py    # pinned English sources and all Russian translation metadata
 python3 -m unittest discover -s portal/tests  # language selection through the real renderer
-python3 portal/tools/check.py            # links, anchors, language parity, one h1 per page, no external resource loads (citations allowed)
-python3 portal/tools/check_neighbours.py # section boundaries, scoped search and retained scenario content
+python3 portal/tools/check.py            # layout, every href/src and search result, anchors, language parity, one h1 per page, no external resource loads (citations allowed)
+python3 portal/tools/check_neighbours.py # router doors, branch boundaries, branch and global search, retained scenario content
 python3 portal/tools/check.py --idempotent # complete-site repeatability; run before the browser sweep
 portal/tools/with-browser-env.sh portal/.venv/bin/python portal/tools/check_neighbours_browser.py
 ```
 
-The complete-site build includes all five sections. Run the browser sweep after the build and freshness check finish; rebuilding concurrently removes files that the browser is reading. The sweep covers the new pages in both languages, desktop/mobile layouts, light/dark themes, retained interactions, section navigation, search and existing AICC controls. It also verifies a disposable direct-file export without refreshing `published/`. Its report is written to `.runtime/portal-neighbours/browser-report.json` at the repository root. Regeneration of the corporate-share package remains an explicit action; see [PORTABLE-HOWTO.txt](PORTABLE-HOWTO.txt).
+The complete-site build includes the routers and all five branches. Run the browser sweep after the build and freshness check finish; rebuilding concurrently removes files that the browser is reading. The sweep covers the new pages in both languages, desktop/mobile layouts, light/dark themes, retained interactions, branch navigation, the router doors, branch and global search, and the Center controls. It also verifies a disposable direct-file export without refreshing `published/`. Its report is written to `.runtime/portal-neighbours/browser-report.json` at the repository root. Regeneration of the corporate-share package remains an explicit action; see [PORTABLE-HOWTO.txt](PORTABLE-HOWTO.txt).
 
 The diagrams are drawn with Mermaid CLI and the headless browser of this host. The paths are set in `tools/build.py` and can be overridden with `MMDC_NPX`, `MMDC_CHROME`, and `MMDC_LIBS`. `tools/browser_check.py` and `tools/setup_browser*.sh` are the earlier browser checks of the first portal slice. Language selection is covered by `tests/test_localization.py`; the static check covers the current full page set.
 

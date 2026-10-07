@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Static checks of the generated site html/aicc.
 
-Checks: every internal link and anchor resolves; both languages have the same pages; every page has a language switch to the same page,
-a skip link, one h1, and a lang attribute; no resource load from another host (source citations are allowed); every referenced asset exists; every diagram is inlined (no placeholder);
-the search indexes exist. Exit code 1 on any error.
+Checks: the layout is the gateway, the 404 page, the assets and, per language, the router and the five branches, nothing else;
+every internal href and src of every page (the gateway and the 404 page included) resolves, with its anchor; both languages have the same pages;
+every page has a language switch to the same page, a skip link, one h1, and a lang attribute; no resource load from another host (source citations
+are allowed); every referenced asset and search index exists; every search result resolves to a page and anchor; every diagram is inlined
+(no placeholder). Exit code 1 on any error.
 """
 import hashlib
+import json
 import os
 import re
 import subprocess
@@ -15,6 +18,9 @@ from urllib.parse import urldefrag, urljoin
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, 'html', 'aicc')
+BRANCHES = ('center', 'discovery', 'portfolio', 'program', 'lab')
+# The 404 page is served for a missing path at any depth, so it links from the site root, where the site is served under /aicc/.
+SERVED = '/aicc/'
 errors = []
 
 
@@ -57,10 +63,14 @@ class P(HTMLParser):
                 self.skip += 1
             if 'hreflang' in a:
                 self.langsw += 1
-        if tag in ('link',) and 'href' in a:
+        elif 'href' in a:
             self.srcs.append(a['href'])
         if 'src' in a:
             self.srcs.append(a['src'])
+        # The search indexes a page script loads, its own branch and every branch for global search.
+        for key in ('data-search', 'data-search-all'):
+            if a.get(key):
+                self.srcs.extend(a[key].split())
         if tag == 'h1':
             self.h1 += 1
 
@@ -73,6 +83,14 @@ def pages(lang):
             out['/' + os.path.relpath(d, base).replace(os.sep, '/') + '/'] = os.path.join(d, 'index.html')
     return out
 
+
+expected_root = {'index.html', '404.html', 'assets', 'en', 'ru'}
+if set(os.listdir(OUT)) != expected_root:
+    errors.append('html/aicc holds %s, expected exactly %s' % (sorted(os.listdir(OUT)), sorted(expected_root)))
+for lang in ('en', 'ru'):
+    found = set(os.listdir(os.path.join(OUT, lang))) if os.path.isdir(os.path.join(OUT, lang)) else set()
+    if found != {'index.html', *BRANCHES}:
+        errors.append('%s/ holds %s, expected exactly the router and the branches %s' % (lang, sorted(found), ', '.join(BRANCHES)))
 
 all_pages = {l: pages(l) for l in ('en', 'ru')}
 norm = lambda k: k.replace('/./', '/')
@@ -99,7 +117,25 @@ for lang, ps in all_pages.items():
         if any(re.match(r'^(?:https?:)?//', src, re.IGNORECASE) for src in p.srcs):
             errors.append('%s: request to another host' % path)
 
-for path, (p, text) in parsed.items():
+standalone = {}
+for name in ('index.html', '404.html'):
+    path = os.path.join(OUT, name)
+    if os.path.exists(path):
+        p = P()
+        text = open(path, encoding='utf-8').read()
+        p.feed(text)
+        standalone[path] = (p, text)
+        if '@@' in text:
+            errors.append('%s: unresolved placeholder' % name)
+not_found = os.path.join(OUT, '404.html')
+if not_found in standalone:
+    p = standalone[not_found][0]
+    if p.srcs:
+        errors.append('404.html: loads a resource; it must be self-contained')
+    if sorted(p.links) != [SERVED + 'en/', SERVED + 'ru/']:
+        errors.append('404.html: must link exactly the routers %sen/ and %sru/' % (SERVED, SERVED))
+
+for path, (p, text) in list(parsed.items()) + list(standalone.items()):
     here = os.path.dirname(path)
     for h in p.links + p.srcs:
         if h.startswith(('mailto:', 'javascript:')):
@@ -110,6 +146,11 @@ for path, (p, text) in parsed.items():
             continue
         if target.startswith('smb://'):
             continue    # the corporate folder that holds the charter and the Registry
+        if path == not_found and target.startswith(SERVED):
+            target = os.path.relpath(os.path.join(OUT, target[len(SERVED):]), here)
+        elif target.startswith('/'):
+            errors.append('%s: site-absolute link %s' % (os.path.relpath(path, OUT), h))
+            continue
         dest = os.path.normpath(os.path.join(here, target)) if target else path
         if os.path.isdir(dest):
             dest = os.path.join(dest, 'index.html')
@@ -126,9 +167,26 @@ for path, (p, text) in parsed.items():
             if frag not in ids:
                 errors.append('%s: missing anchor %s' % (os.path.relpath(path, OUT), h))
 
-for f in ('search-en.json', 'search-ru.json'):
-    if not os.path.exists(os.path.join(OUT, 'assets', f)):
-        errors.append('missing ' + f)
+ids_of = {}
+for lang in ('en', 'ru'):
+    for branch in BRANCHES:
+        name = 'search-%s-%s.json' % (branch, lang)
+        index = os.path.join(OUT, 'assets', name)
+        if not os.path.exists(index):
+            errors.append('missing ' + name)
+            continue
+        for entry in json.load(open(index, encoding='utf-8')):
+            target, frag = urldefrag(entry['u'])
+            if not target.startswith('/%s/%s/' % (lang, branch)):
+                errors.append('%s: result outside its branch %s' % (name, entry['u']))
+            dest = os.path.join(OUT, target.strip('/'), 'index.html')
+            if dest not in parsed:
+                errors.append('%s: broken result %s' % (name, entry['u']))
+            elif frag and frag not in parsed[dest][0].ids:
+                errors.append('%s: missing result anchor %s' % (name, entry['u']))
+leftover = sorted(f for f in os.listdir(os.path.join(OUT, 'assets')) if f.startswith('search-') and not re.fullmatch(r'search-(%s)-(en|ru)\.json' % '|'.join(BRANCHES), f))
+if leftover:
+    errors.append('search indexes outside the branches: %s' % ', '.join(leftover))
 
 print('pages: en %d, ru %d' % (len(all_pages['en']), len(all_pages['ru'])))
 if errors:

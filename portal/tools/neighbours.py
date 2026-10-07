@@ -396,7 +396,7 @@ def build_landings(output):
     md = MarkdownIt('commonmark', {'html': False}).enable('table')
     count = 0
     for lang in ('en', 'ru'):
-        indexes = {name: [] for name in ('initiatives', 'projects')}
+        indexes = {name: [] for name in ('portfolio', 'program')}
         for item in PAGES:
             section = item['section']
             if item.get('renderer') in ('lab', 'project', 'portfolio', 'delivery'):
