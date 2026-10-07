@@ -19,7 +19,8 @@ import shutil
 
 import workspace
 
-SOURCE = workspace.ROOT / 'html-alt/intelligent-customer-service-resolution'
+# The project workbook is a record of the Portfolio: portfolio/<lang>/projects/<key>/workbook.html.
+SOURCE = workspace.ROOT / 'portfolio'
 ROUTES = {'start': '', 'charter': 'charter/', 'journeys': 'journeys/', 'journey-payment': 'journeys/payment-issue/',
           'journey-dispute': 'journeys/card-dispute/', 'journey-kyc': 'journeys/onboarding-kyc/', 'governance': 'governance/',
           'how-it-works': 'how-it-works/', 'controls': 'controls-and-evidence/', 'technical-design': 'technical-design/',
@@ -73,7 +74,7 @@ class _Source(HTMLParser):
 
 
 def documents(lang):
-    text = (SOURCE / lang / 'index.html').read_text()
+    text = (SOURCE / lang / 'projects/service-resolution/workbook.html').read_text()
     parsed = _Source(text)
     expected = [lang + '-' + key for key in ROUTES]
     if list(parsed.sections) != expected: raise ValueError('Project document structure drift: ' + lang)

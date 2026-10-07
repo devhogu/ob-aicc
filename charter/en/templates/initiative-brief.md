@@ -2,14 +2,14 @@
 id: AICC-TPL-02-EN
 title: Initiative Brief
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Initiative Brief
 
-**Template.** The business case of an Initiative, in lean form. Copy for each Initiative. The Domain Owner and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in the working state (Jira and Confluence after the cutover). It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One page.
+**Template.** The business case of an Initiative, in lean form. Copy for each Initiative. The Domain Owner and the AICC Lead complete it. It is the investment decision: it holds the business goal and the case, and the volatile detail of the trials stays in the working state in the Portfolio, and in the Work Items in Jira and Confluence after the cutover. It carries no figures of the Bank, no data, and no code: a figure is a reference to its source. One page.
 
 | Field | Entry |
 | --- | --- |

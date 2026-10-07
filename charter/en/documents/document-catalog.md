@@ -2,9 +2,9 @@
 id: AICC-REF-02-EN
 title: Document Catalog
 status: active
-revision: 3.3
+revision: 3.4
 created: 2026-10-02
-revised: 2026-10-04
+revised: 2026-10-07
 ```
 
 # Document Catalog
@@ -77,7 +77,7 @@ revised: 2026-10-04
 | 8 | AICC-TPL-07 Outcome Report | The end of each Engagement: what was delivered, the evidence, and the acceptance |
 | 9 | AICC-TPL-14 Package Definition | Each Package: its kind, owner, status, what a function needs to re-deploy it, and the Risk Tier of its uses |
 | 10 | AICC-TPL-10 AI Incident Review | The review of each AI Incident |
-| 11 | AICC-TPL-11 Registry Snapshot | The closed extract of the working state at the close of each Iteration and PI, and at the cutover |
+| 11 | AICC-TPL-11 Registry Snapshot | The closed extract, kept in the Registry, of the working state in the Portfolio at the close of each Iteration and PI, and at the cutover |
 | 12 | AICC-TPL-05 Quarterly Report | The Quarterly Report, and the report to the Board Committee |
 | 13 | AICC-TPL-09 Appointments Record | The Roles mapped to people, the appointment log, the declarations, and the access |
 | 14 | AICC-TPL-12 Proposal | A Proposal to adopt a Solution at scale, and the yearly Proposal of the AI adoption strategy |
@@ -120,3 +120,4 @@ The table is in the order of use, and the identifiers do not follow that order. 
 | 3.1 | 2026-10-04 | Recorded separate English and Russian editions of the shared terminology reference, each with definitions and application in its own language. | none (correction under Document Catalog 4.2) |
 | 3.2 | 2026-10-04 | Clarified the governing vocabulary's function: defined meanings, interpretation and document style. | none (correction under Document Catalog 4.2) |
 | 3.3 | 2026-10-04 | Recorded consistent application of the shared terminology in the corpus and portal; no document authority or operating requirement changed. | none (correction under Document Catalog 4.2) |
+| 3.4 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |

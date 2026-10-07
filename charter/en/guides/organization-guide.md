@@ -113,7 +113,7 @@ The following table states each body, who sits in it, and what it decides. A bod
 | The Control Functions | Set the rules of their remit, clear, validate, decide Exceptions, and may stop | Model risk, compliance, information security, data protection, and legal, each through its Control Function Contact | When their remit is concerned, and at the quarterly risk check | Within their remit: the clearance of a business case, validation, raising the Risk Tier, a suspension, a stop, and an Exception; nobody overrides them | The Control Sign-Off |
 | Weekly Review | Runs the operating loop and the backlog care | The AICC Lead and the Team | Weekly | The AICC Lead adjusts the work, and raises to the monthly Steering what cannot be settled | The Dashboard and the working state |
 | Board Committee | Oversees AI for the Board | As the Board names it | As it meets | Its own matters; it receives what the Executive Sponsor brings to it, and the notice of a major AI Incident and of a risk accepted beyond the appetite | Its own records; a Quarterly Report submitted to it, with its approval block |
-| Internal audit | Gives independent assurance, outside the reporting chain | The audit function | As it plans | Nothing on the work of AICC; it does not validate, release, or stop | Its own reports; read access to the Registry |
+| Internal audit | Gives independent assurance, outside the reporting chain | The audit function | As it plans | Nothing on the work of AICC; it does not validate, release, or stop | Its own reports; read access to the Registry and the Portfolio |
 
 ## 6. People: appointments, changes, and leavers
 
@@ -143,7 +143,7 @@ The following table states what happens at each event in the life of a Holder.
 | A change or a relief | The Holder changes or is relieved, the access that the Role gave is removed, and the previous Holder is recorded | The appointer; the keeper of each tool removes the access | The Appointments Record, Part C and Part E |
 | An assigned person | The person works for AICC while staying in their own line, with the consent of the line manager and a stated time allocation | The AICC Lead and the line manager | The Appointments Record, Part D |
 | Competence and training | The documents are read and the training that a Role needs is completed and recorded | The Holder and the AICC Lead | The Appointments Record, Part D |
-| Access to the tools | Access to Jira, Confluence, Service Management, and the repository follows the Role and is reviewed at each quarterly Steering | The keeper of each tool | The Appointments Record, Part E |
+| Access to the tools | Access to Jira, Confluence, Service Management, and the repositories of the Registry and the Portfolio follows the Role and is reviewed at each quarterly Steering | The keeper of each tool | The Appointments Record, Part E |
 
 The first week of a Holder runs in this order. The Holder accepts the Role and declares any conflict of interest. The line manager consents and the time allocation is stated, where the Holder is assigned. The AICC Lead enters the appointment in the Appointments Record within five working days, and the Holder names the deputy. Access to the tools is granted for the Role. The Holder reads the documents, following the reading path in the README of the charter, and completes the training that the Role needs as the AICC Lead sets it.
 
@@ -173,7 +173,7 @@ The organization grows by adding Holders and Teams, and adds no layer, no meetin
 
 ## 8. Records and evidence
 
-The charter holds the rules, and Jira and Confluence run the live work. The Registry holds the evidence records as closed and dated extracts, taken when an event happens, and a Registry Snapshot at the close of each Iteration and PI and at the cutover. Jira, Confluence, and Service Management are not an evidence store. The Registry is kept in a repository with a protected main branch, its history is not rewritten, and each Record is kept for the period that the Bank requires for its type. Personal data in the Registry is limited to the names and the posts of the Holders, and the declarations, consents, and access of the Appointments Record (Operating Model 7.4). The Operating Model 8 lists the controls and the record that evidences each.
+The charter holds the rules. The Portfolio holds the working state of the portfolio and the program, and Jira and Confluence run the daily work of the Teams. The Registry holds the governance records and the evidence records as closed and dated extracts, taken when an event happens, and a Registry Snapshot of the working state in the Portfolio at the close of each Iteration and PI and at the cutover. Jira, Confluence, and Service Management are not an evidence store. The Registry and the Portfolio are each kept in a repository with a protected main branch, their history is not rewritten, and each Record is kept for the period that the Bank requires for its type. Personal data in the Registry and in the Portfolio is limited to the names and the posts of the Holders, and the declarations, consents, and access of the Appointments Record (Operating Model 7.4). The Operating Model 8 lists the controls and the record that evidences each.
 
 ## 9. Rule source
 

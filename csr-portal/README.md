@@ -1,6 +1,6 @@
 # CSR · Customer Service Resolution
 
-This standalone O! workspace trial builds `html/csr/` from the retained bilingual project proposal under `html-alt/intelligent-customer-service-resolution/`. Russian is the entry page; English is available from the same navigation. The original 34 diagrams per language, proposal text, document anchors and diagram viewer remain the content source.
+This standalone O! workspace trial builds `html/csr/` from the retained bilingual project proposal under `portfolio/{en,ru}/projects/service-resolution/workbook.html`. Russian is the entry page; English is available from the same navigation. The original 34 diagrams per language, proposal text, document anchors and diagram viewer remain the content source.
 
 ```sh
 python3 csr-portal/build.py

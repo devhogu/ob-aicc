@@ -28,4 +28,4 @@ Three Risk Tiers set the checks that a Solution passes before it reaches users. 
 
 ## 7. Records
 
-The charter states the rules. Jira and Confluence run the live work from the cutover, and until then the Registry holds it. The Registry holds the records and the evidence for audit, and the Portfolio holds the catalog of Solutions and Packages. Source: Operating Model 7.
+The charter states the rules. The Portfolio holds the working state of the portfolio and the program, from the Discovery catalog to delivery, and the catalog of Solutions and Packages. Jira and Confluence run the daily work of the Teams from the cutover, and Jira mirrors the Initiatives, Capabilities, and Features. The Registry holds the governance records and the evidence for audit. Source: Operating Model 7.

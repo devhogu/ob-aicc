@@ -32,4 +32,4 @@ flowchart TB
 
 Figure 1: the workflows.
 
-The workflows run in Jira and Confluence from the cutover of the working state (Operating Model 7.1), and until then the Registry holds the working state. The charter holds the schema.
+The working state of the portfolio and the program is in the Portfolio, and from the cutover the daily work of the Teams runs in Jira and Confluence, and Jira mirrors the Initiatives, Capabilities, and Features (Operating Model 7.1). The charter holds the schema.

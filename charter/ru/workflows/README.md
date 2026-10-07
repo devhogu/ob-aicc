@@ -1,6 +1,6 @@
 ```yaml
 source: charter/en/workflows/README.md
-source_sha256: 2ee2e427d46623cdf45b94462e54809c838db30e90c326edee9beea85ba91a3d
+source_sha256: 764208af68e574071feb9a0e2eab03bac6013fc6906cc500aadb6b98dfca04ff
 translation_status: reviewed
 ```
 
@@ -40,4 +40,4 @@ flowchart TB
 
 Рисунок 1 — Workflows AICC
 
-После перехода рабочего состояния в Jira и Confluence (п. 7.1 Операционной модели) workflows выполняются в этих системах; до перехода рабочее состояние ведётся в папке AICC. Схема рабочего состояния содержится в корпусе.
+Рабочее состояние портфеля и программы ведётся в портфеле; со дня перехода ежедневная работа команд ведётся в Jira и Confluence, а в Jira зеркально отражаются инициативы, Capabilities и Features (п. 7.1 Операционной модели). Схема рабочего состояния содержится в корпусе.

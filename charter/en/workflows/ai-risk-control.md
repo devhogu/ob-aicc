@@ -128,4 +128,4 @@ An AI Incident is handled in the incident management of the Bank, and the AICC L
 
 ## 9. Where it runs
 
-From the cutover of the working state (Operating Model 7.1), the Solution Definitions and the work items run in Jira and Confluence, and until then the Registry holds the working state. The AI Registry, the Control Sign-Offs, and the Decision Records are kept in the Registry. The charter holds this schema.
+The Solution Definitions and the working state are in the Portfolio, and from the cutover the Work Items of the Teams run in Jira and Confluence (Operating Model 7.1, 7.3). The AI Registry, the Control Sign-Offs, and the Decision Records are kept in the Registry. The charter holds this schema.

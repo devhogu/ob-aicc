@@ -2,9 +2,9 @@
 id: AICC-ORG-02-EN
 title: Portfolio Management Model
 status: active
-revision: 2.2
+revision: 2.3
 created: 2026-10-02
-revised: 2026-10-04
+revised: 2026-10-07
 ```
 
 # Portfolio Management Model
@@ -323,7 +323,7 @@ Figure 8: the levels of the work.
 
 9.3. An Initiative is complete when its Solutions are delivered and its outcome is reviewed and accepted by the Domain Owner, or by the Executive Sponsor for enabling work, after the final acceptance of the Team (Solution Lifecycle Model 7.3). The Outcome Report records the acceptance of an Engagement.
 
-9.4. The records of the Portfolio are the Portfolio Backlog, the Priorities Record, the Roadmap, the Dashboard, the Decision Log, the Steering Summaries, the Quarterly Report, and the Registry Snapshots, and the AICC Lead shall add no other record to track the Portfolio. The Portfolio Backlog holds, for each Initiative, the date on which it entered each state and the references of its leading indicators. The Portfolio Backlog and the Initiative Briefs are kept in the Registry, and the Solution Definitions in the Portfolio. The controls that this model carries, whose rules it states or whose evidence it keeps, are C-02, C-08, C-09, C-23, and C-24 of the Operating Model 8.
+9.4. The records of the Portfolio are the Portfolio Backlog, the Priorities Record, the Roadmap, the Dashboard, the Decision Log, the Steering Summaries, the Quarterly Report, and the Registry Snapshots, and the AICC Lead shall add no other record to track the Portfolio. The Portfolio Backlog holds, for each Initiative, the date on which it entered each state and the references of its leading indicators. The Portfolio Backlog with the Portfolio Kanban, the Initiative Briefs, the Roadmap, and the Dashboard are kept in the Portfolio as the working state, with the Solution Definitions; the Priorities Record, the Decision Log, the Steering Summaries, the Quarterly Report, and the Registry Snapshots are kept in the Registry (Operating Model 7.1 to 7.3). There is one Portfolio Backlog and one Portfolio Kanban, and the service area of an Initiative is a field of the item and not a separate backlog. The controls that this model carries, whose rules it states or whose evidence it keeps, are C-02, C-08, C-09, C-23, and C-24 of the Operating Model 8.
 
 9.5. The measures of 9.2 count calendar days and are read as the median and the 85th percentile and as trends. No measure is used to rank people.
 
@@ -337,3 +337,4 @@ Figure 8: the levels of the work.
 | 2.0 | 2026-10-03 | Adds the intake of run-rate work and Initiatives, the gates and cancellation, the separation of duties, the mix of Initiatives and the four controls, the rules of leading indicators and of the MVP decision, and the table of Portfolio measures with their governance and records. | DR-2026-062 |
 | 2.1 | 2026-10-03 | Clarified the Standing Initiative approval and its direct run-rate Features, with no MVP of its own. | none (correction under Document Catalog 4.2) |
 | 2.2 | 2026-10-04 | Clarified Epic as a Jira mapping without prohibiting its use for the corresponding concept in another framework; the AICC work hierarchy is unchanged. | DR-2026-064 |
+| 2.3 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |

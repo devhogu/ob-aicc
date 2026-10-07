@@ -16,8 +16,8 @@ The charter has four parts. The table also shows the Registry and the Portfolio,
 | Workflows | [workflows/](workflows/README.md) | How does the work flow, and on which events? |
 | Guides | [guides/](guides/README.md) | Who does what, when, and what is left on record? |
 | Templates | [templates/](templates/README.md) | What is the form of each record? |
-| Registry | [registry/](../../registry/en/README.md) | What is the state of the work, and what is the evidence? |
-| Portfolio | [portfolio/](../../portfolio/en/README.md) | Which Solutions and Packages exist, and in what state? |
+| Registry | [registry/](../../registry/en/README.md) | What was decided, and what is the evidence? |
+| Portfolio | [portfolio/](../../portfolio/en/README.md) | What is the state of the work, and which Solutions and Packages exist? |
 
 ## 3. Contents
 
@@ -65,8 +65,8 @@ The contents list every file of the charter in the order of reading, with its li
 | 5.13 |  | [Appointments Record](templates/appointments-record.md) | The Roles mapped to Holders, with the appointment log |
 | 5.14 |  | [Proposal](templates/proposal.md) | A Proposal to adopt a Solution at scale |
 | 6 |  | **Records outside the charter** | |
-| 6.1 |  | [Registry](../../registry/en/README.md) | The working state, the living records, and the evidence records, including the [Control Matrix](../../registry/en/control-matrix.md) |
-| 6.2 |  | [Portfolio](../../portfolio/en/README.md) | The catalog of Solutions and Packages |
+| 6.1 |  | [Registry](../../registry/en/README.md) | The living records of governance and the evidence records, including the [Control Matrix](../../registry/en/control-matrix.md) |
+| 6.2 |  | [Portfolio](../../portfolio/en/README.md) | The working state of the portfolio and the program, from the Discovery catalog to delivery, and the catalog of Solutions and Packages |
 | 7 |  | [Shared Business and Technology Terminology](shared-technology-terminology.md) | Shared business and technology names, definitions, application and protected product aliases; each language edition provides its own definitions and usage text |
 
 ## 4. How to read the charter
@@ -81,7 +81,7 @@ A reader with a specific purpose follows the route in the following table.
 | A new member of AICC | [Operating Model](documents/operating-model.md); [Portfolio Management Model](documents/portfolio-management-model.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md); [AI Policy](documents/ai-policy.md); [AI risk and control workflow](workflows/ai-risk-control.md); [Organization guide](guides/organization-guide.md); [Cadence guide](guides/cadence-guide.md) | The Roles, the rules, the first week of a Holder, and the rhythm of the events |
 | The Executive Sponsor or the Board Committee | [AICC Charter](documents/aicc-charter.md); [Unit governance guide](guides/unit-governance-guide.md), sections 3 and 5; the Quarterly Report Template | The mandate, the funding, the risk appetite, the reporting chain, and what is reported |
 | A Control Function Contact | [AI Policy](documents/ai-policy.md); [Solution Lifecycle Model](documents/solution-lifecycle-model.md), sections 7 and 8; [Operating Model](documents/operating-model.md), section 8; [AI risk and control workflow](workflows/ai-risk-control.md); the Control Sign-Off Template | The Risk Tiers, the checks, the validation, and the right to stop |
-| Internal audit | [Operating Model](documents/operating-model.md), sections 6 to 8; the [Control Matrix](../../registry/en/control-matrix.md); [Unit governance guide](guides/unit-governance-guide.md); [Organization guide](guides/organization-guide.md), section 8; the [Registry](../../registry/en/README.md) | Each control with its rule, owner, timing, and evidence record, and the records themselves |
+| Internal audit | [Operating Model](documents/operating-model.md), sections 6 to 8; the [Control Matrix](../../registry/en/control-matrix.md); [Unit governance guide](guides/unit-governance-guide.md); [Organization guide](guides/organization-guide.md), section 8; the [Registry](../../registry/en/README.md); the [Portfolio](../../portfolio/en/README.md) | Each control with its rule, owner, timing, and evidence record, and the records themselves |
 | Human resources | [Organization guide](guides/organization-guide.md); [Operating Model](documents/operating-model.md), sections 4 and 5; the Appointments Record Template | The Roles, the profiles, the RACI, and the people records |
 
 ## 5. Control of the charter

@@ -1,0 +1,43 @@
+<GraceChangeSpec graceVersion="4.0" status="applied">
+  <C-PORTFOLIO-RUNTIME-STORE>
+    <Summary>Make the Portfolio the persistent, auditable source of truth for the working state of the portfolio and the program, from the Discovery catalog to delivery, keep the Registry for governance and evidence, and treat Jira and Confluence as the runtime that runs the daily work and mirrors the portfolio and program levels.</Summary>
+    <Problem>The corpus keeps the working state in the Registry until a cutover and then moves it to Jira. An auditor does not accept Jira as flexible persistent storage, and Initiatives, the Discovery catalog and projects carry far more than Jira holds. The Registry also mixes governance and evidence with the daily working state of the portfolio and the program.</Problem>
+    <Goals>
+      <Goal>Registry: governance and evidence only: Appointments, Decision Log and Decision Records, Steering Summaries, Priorities, Standards, Risks and Issues, AI Registry, Control Matrix, reports, Registry Snapshots and closed extracts.</Goal>
+      <Goal>Portfolio: the catalog of Solutions and Packages, plus the working state: Discovery catalog, Portfolio Backlog and Kanban with the Initiative Briefs, Roadmap, Program Backlog and Kanban with the Program Board, Program Increment folder, Dependencies, Calendar, Teams, Dashboard, and the project register with each project's documents.</Goal>
+      <Goal>Jira: the Teams' Stories, Spikes, Tasks and Bugs on team backlogs and boards, and a mirror of the Initiatives, Capabilities (Epics) and Features with the program Kanban. Confluence: guidance and dashboards by reference.</Goal>
+      <Goal>One owner per field: the Portfolio owns identity, parent, rank, class of service, definitions, acceptance criteria, gate states and dates; Jira owns execution below the Feature and Feature progress between Weekly Reviews, which is recorded in the Portfolio at each Weekly Review and at once at a gate.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>One Portfolio Backlog and Portfolio Kanban, and one Program Backlog and Program Kanban, with service area (Business Model 4.5: Advise and formulate, Build and run, Enablement, Assurance) as a field and a filter, not a partition; the single rank and the limits of PMM 5.4, 6.5 and SLM 4.2 hold.</Constraint>
+      <Constraint>Each item keeps one stable path; state is a field with the date of each state (PMM 9.4); no folder per state.</Constraint>
+      <Constraint>The Discovery catalog feeds the Funnel; it is not the Funnel.</Constraint>
+      <Constraint>Evidence flows one way: a closed, dated extract goes from the Portfolio into the Registry at each decision; the Registry is never edited after the fact (OM 7.2, 7.4).</Constraint>
+      <Constraint>Move records with history; keep identities, paired Russian records and their source pins; invent no values: new fields without a recorded value carry a bracketed open place.</Constraint>
+      <Constraint>Corpus edits in both editions, formal register, as dev-phase clarifications (change-log row, revision +0.1) under one Decision Record of the AICC Lead.</Constraint>
+      <Constraint>Builders read the new locations; share links follow smb://10.128.20.244/aicc/governance/registry/ and smb://10.128.20.244/aicc/portfolio/.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Moving the generated Discovery Catalog content or its generator in this change; the Portfolio records its place and contract.</NonGoal>
+      <NonGoal>A Jira integration, synchronizer or team-level records in the repository.</NonGoal>
+      <NonGoal>Changing states, ranks, limits, decisions or appointments recorded today.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>registry/ holds only governance and evidence records; portfolio/ holds the catalog and the working state with READMEs stating ownership, the Jira projection and the reconciliation rule, in both languages.</Criterion>
+      <Criterion>The corpus states the split consistently in both editions, with no remaining clause that moves the working state of the portfolio and program to Jira.</Criterion>
+      <Criterion>The Portfolio, Delivery and Projects views render unchanged content from the new locations, and all checks pass.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /><M-PORTAL-NEIGHBOURS /><M-PORTAL-SOURCE /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_portfolio.py</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_delivery.py</ExpectedCommand>
+      <ExpectedEvidence>Rendered Portfolio, Delivery and Projects pages identical in content before and after the move; corpus grep shows no residual cutover-to-Jira rule for the portfolio and program.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The user (AICC Lead) approved the design on 2026-10-07 with "lets do that and setup solid fondation in our repo for this runtime work running projects from discovery to delivery", after the ownership discussion of the same day.</Assumption>
+      <Assumption>The folder name is portfolio/, the existing Portfolio of the corpus, extended.</Assumption>
+    </Assumptions>
+  </C-PORTFOLIO-RUNTIME-STORE>
+</GraceChangeSpec>

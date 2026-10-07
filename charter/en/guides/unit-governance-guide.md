@@ -109,7 +109,7 @@ AICC works within the three lines of the Bank (Operating Model 2.4). AICC and th
 
 ## 6. Where the evidence is
 
-The working state is in the Registry until the cutover and then in Jira and Confluence (Operating Model 7.1). The evidence records are always in the Registry as closed and dated extracts, and a Registry Snapshot closes each Iteration and each PI, and the cutover (Operating Model 7.3). The Operating Model 8 lists each control with its evidence record, and the index of the Registry lists the Records by class. The AICC portal links to the evidence records on the corporate share. The Document Catalog states how a document is activated, changed, and checked.
+The working state of the portfolio and the program is in the Portfolio, from the Discovery catalog to delivery, and Jira runs the daily work of the Teams and mirrors the Initiatives, Capabilities, and Features (Operating Model 7.1). The evidence records are always in the Registry as closed and dated extracts, and a Registry Snapshot of the working state in the Portfolio closes each Iteration and each PI, and the cutover (Operating Model 7.3). The Operating Model 8 lists each control with its evidence record, and the indexes of the Registry and of the Portfolio list the Records by class. The AICC portal links to the evidence records on the corporate share. The Document Catalog states how a document is activated, changed, and checked.
 
 ## 7. The controls and how to test them
 
@@ -151,8 +151,8 @@ The status of a control has one of the following meanings (Operating Model 8.5).
 | C-22 | Separation of duties and independence | No person checks, releases, or gives the business acceptance of their own work | Preventive | At a release, compare the builder, the Checker, and the releaser; compare the Holders of the Roles with the rules of separation and the accepted limits |
 | C-23 | Intake of Engagements and the limit on work in progress | AICC takes in no more than the limit on work in progress allows | Preventive | Compare the Active Initiatives and the Service Agreements issued with the limit on the Active Initiatives |
 | C-24 | Completeness of the Outcome Reports | Closed Engagements are reported | Detective | Read section 8 of the Summary |
-| C-25 | Access of internal audit | Internal audit can see the records | Directive | Test read access to the Registry, and read-only access to Jira, Confluence, and Service Management |
-| C-26 | Access review of the Registry, the tools, and production | Access follows the Roles, and the access of Solution Engineers to production is reviewed | Preventive | Read the result of the quarterly comparison with the Appointments Record and the access review of the Bank for production |
+| C-25 | Access of internal audit | Internal audit can see the records | Directive | Test read access to the Registry and the Portfolio, and read-only access to Jira, Confluence, and Service Management |
+| C-26 | Access review of the Registry, the Portfolio, the tools, and production | Access follows the Roles, and the access of Solution Engineers to production is reviewed | Preventive | Read the result of the quarterly comparison with the Appointments Record and the access review of the Bank for production |
 | C-27 | Acceptance of a risk beyond the appetite | Only the Executive Sponsor accepts a risk beyond the appetite, and the Board Committee is told | Preventive | Read the Decision Record and the notice to the Board Committee |
 | C-28 | Reassessment of the Risk Tier and expiry of a validation | A Solution is not used on a validation that has expired or on a stale Risk Tier | Preventive | Compare the dates in the AI Registry with the dates of the reassessment and the validation |
 | C-29 | Review of live Solutions | Live Solutions are monitored by their owners | Detective | Read the note of the review in the Solution Definition at each Iteration Review and Demo |

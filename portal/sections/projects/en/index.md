@@ -6,7 +6,7 @@ This section shows the projects that AICC proposes or runs, each with its docume
 
 | Project | Intended outcome | Status |
 | --- | --- | --- |
-| [Customer Intelligence–Enabled Service Resolution](service-resolution/) | Help service employees understand a customer's unresolved issue and take a verified next step, with every action approved by the employee. | Proposed initiative |
+| [Customer Intelligence–Enabled Service Resolution](service-resolution) | Help service employees understand a customer's unresolved issue and take a verified next step, with every action approved by the employee. | Proposed initiative |
 
 A proposed initiative is not yet approved: its business case, funding and dates are decided when it passes the portfolio gates.
 

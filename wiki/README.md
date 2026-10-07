@@ -36,8 +36,8 @@ The wiki holds lineage, research, open items, and an archive. It is explanatory 
 
 ### Archive
 
-- [Charter, first version](archive/charter-v1/) - the 25 documents and 23 Templates replaced by the six documents (DR-2026-009)
-- [Records, first version](archive/records-v1/) - the earlier Records of the portfolio
+- [Charter, first version](archive/charter-v1) - the 25 documents and 23 Templates replaced by the six documents (DR-2026-009)
+- [Records, first version](archive/records-v1) - the earlier Records of the portfolio
 - [Document next actions](archive/document-next-actions.md) and [decision rights open items](archive/decision-rights-open-items.md) - superseded
 
 - [Open decisions](archive/open-decisions.md) - the portal choices of the first specification; the stack, tooling, and deployment are since decided

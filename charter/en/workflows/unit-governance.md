@@ -83,10 +83,11 @@ sequenceDiagram
   participant CF as Control Function Contacts
   participant BC as Board Committee
   participant BK as The Bank
+  participant P as Portfolio
   participant R as Registry
   Note over T,R: Each month
   T->>L: Weekly Review: flow, limits, Dependencies
-  L->>R: Dashboard kept current
+  L->>P: Dashboard kept current
   T->>L: Iteration Review and Demo: results and acceptances
   L->>ES: Monthly Steering: progress, risks, blockers, events of the month
   ES->>L: Samples the Decisions of the AICC Lead
@@ -178,4 +179,4 @@ Figure 6: the life of a document.
 
 ## 9. Where it runs
 
-The loops run in Jira and Confluence from the cutover of the working state (Operating Model 7.1), and until then the Registry holds the working state. The charter holds this schema.
+The working state of the loops is in the Portfolio, and from the cutover the daily work of the Teams runs in Jira and Confluence (Operating Model 7.1). The Registry holds the governance records and the evidence records. The charter holds this schema.

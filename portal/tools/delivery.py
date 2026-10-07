@@ -1,4 +1,4 @@
-"""Program delivery views of the maintained Registry, linked to native projects."""
+"""Program delivery views of the maintained Portfolio, linked to native projects."""
 # START_MODULE_CONTRACT
 # PURPOSE: Present AICC delivery without manufacturing admissions or operational state.
 # SCOPE: Program records, parent validation, Kanban, intake relationships and documents.
@@ -87,11 +87,11 @@ def validate(capabilities, features, initiatives, dependencies):
 
 def project(root=workspace.ROOT,lang='en'):
     pf = portfolio.project(root,lang); en = Sources(root,'en'); local = Sources(root,lang)
-    path='registry/en/program-backlog.md'
+    path='portfolio/en/program-backlog.md'
     caps=en.table(path,'Identifier | Capability'); features=en.table(path,'Rank | Identifier | Feature')
-    deps=en.table('registry/en/dependencies.md','Identifier | Item'); depmap={r['Identifier']:r for r in deps}
+    deps=en.table('portfolio/en/dependencies.md','Identifier | Item'); depmap={r['Identifier']:r for r in deps}
     items=validate(caps,features,pf['items'],depmap)
-    board=en.table('registry/en/board.md','Lane | Backlog (proposed, discovery, deferred)')
+    board=en.table('portfolio/en/board.md','Lane | Backlog (proposed, discovery, deferred)')
     fields=dict(zip(COLUMNS,('Backlog (proposed, discovery, deferred)','Ready (approved)','Active','Review','Done')))
     if [r['Lane'] for r in board[1:]] != list(LANES): raise ValueError('Program lanes disagree')
     for row in board[1:]:
@@ -99,7 +99,7 @@ def project(root=workspace.ROOT,lang='en'):
             recorded=re.findall(r'(?:CAP|FEAT)-\d+',row[field])
             expected=[r['Identifier'] for r in items if r['Lane']==row['Lane'] and r['column']==column]
             if sorted(recorded)!=sorted(expected): raise ValueError('Program Backlog/board placement disagreement')
-    review=re.search(r'Last Weekly Review baseline: (\d{4}-\d{2}-\d{2})',en.text('registry/en/dashboard.md'))
+    review=re.search(r'Last Weekly Review baseline: (\d{4}-\d{2}-\d{2})',en.text('portfolio/en/dashboard.md'))
 
     translated=local.table(path,'Identifier | Capability')+local.table(path,'Rank | Identifier | Feature')
     for r,t in zip(items,translated):
@@ -112,7 +112,7 @@ def project(root=workspace.ROOT,lang='en'):
         r['rank']=int(r['Rank']) if r.get('Rank') else None
     items.sort(key=lambda r:(r['rank'] is None,r['rank'] or 0,r['Identifier']))
     counts={col:sum(r['column']==col for r in items) for col in COLUMNS}
-    reported=en.table('registry/en/dashboard.md','Program Kanban: Capabilities and Features | Backlog')[-1]
+    reported=en.table('portfolio/en/dashboard.md','Program Kanban: Capabilities and Features | Backlog')[-1]
     if any(int(reported[col])!=counts[col] for col in COLUMNS) or int(reported['Waiting (flag, in any column)'])!=sum(r['State']=='Waiting' for r in items):
         raise ValueError('Dashboard/Program count disagreement')
     return {'lang':lang,'portfolio':pf,'items':items,'counts':counts,'dependencies':depmap,'review_date':review[1] if review else None}
@@ -125,7 +125,7 @@ UI={
       'empty':'No Capabilities or Features have been admitted yet.','admission':'Ordinary delivery enters after the MVP continue decision. Run-rate Features enter under approved Standing Initiatives at Weekly Review.',
       'next':'Next decision','unknown':'Not recorded','waiting':'Waiting','shared':'Shared Team limits across all projects and classes of service','intake_title':'Prepare the next portfolio decision','intake_note':'These rows retain their Portfolio state; they are not delivery cards.',
       'standing':'Run-rate admission sources','standing_note':'Approved Standing Initiatives share the Team limits. Each Feature needs its own admission.','open':'Open initiative','open_project':'Open project','none':'No Program items admitted','full':'Complete native workbook','search':'Find an initiative','priority':'Priority','all':'All priorities','showing':'Showing',
-      'source':'Maintained Registry records own state and decisions. Changes follow the Registry workflow.','offflow':'Other exits','back':'Program Backlog','criteria':'Acceptance criteria','parent':'Parent and goal','dependencies':'Dependencies','approval':'Admission reference / date','accepted':'Acceptance reference / date','age':'Entered the current step','rank':'Rank','risk':'Expected Risk Tier 2; not assigned or cleared','footer':'Last Weekly Review baseline',
+      'source':'The Portfolio records own the working state, and the Registry holds the decisions. Changes follow the Portfolio and Registry workflow.','offflow':'Other exits','back':'Program Backlog','criteria':'Acceptance criteria','parent':'Parent and goal','dependencies':'Dependencies','approval':'Admission reference / date','accepted':'Acceptance reference / date','age':'Entered the current step','rank':'Rank','risk':'Expected Risk Tier 2; not assigned or cleared','footer':'Last Weekly Review baseline',
       'gates':{'Funnel':'Screen the need and confirm requester','Reviewing':'Confirm scope, owner and indicator sources','Analyzing':'Complete the business case and clearances','Portfolio Backlog':'Rank and pull within the limit','MVP':'Evaluate the MVP and decide on continuation','Implementation':'Deliver admitted Capabilities and Features','Done':'Inspect acceptance and confirmed outcome','Off-flow':'Inspect the recorded exit decision'}},
 'ru':{'title':'Бэклог программы','subtitle':'Реализация в AICC — от целей инициатив к проектным документам.','board':'Канбан программы','intake':'Поступление из портфеля','documents':'Документы проектов',
       'snapshot':'По состоянию на','features':'Features в работе','ready':'Features в колонке «Готово к работе»','capabilities':'Capabilities в работе','upstream':'Инициативы до начала реализации',
@@ -133,7 +133,7 @@ UI={
       'empty':'Capabilities и Features ещё не включены в бэклог программы.','admission':'Capabilities обычной инициативы поступают после управленческого решения о продолжении по итогам MVP. Features текущих работ принимаются в работу в рамках одобренных постоянных инициатив на еженедельном обзоре.',
       'next':'Следующее решение','unknown':'Не указано','waiting':'Ожидание','shared':'Общие WIP-лимиты команды для всех проектов и классов обслуживания','intake_title':'Подготовка следующего решения по портфелю','intake_note':'Строки сохраняют состояние в портфеле; это не карточки реализации.',
       'standing':'Источники текущих работ','standing_note':'Одобренные постоянные инициативы входят в общие WIP-лимиты команды. Каждая Feature принимается в работу отдельно.','open':'Открыть инициативу','open_project':'Открыть проект','none':'Элементы программы ещё не приняты','full':'Полный комплект документов','search':'Поиск инициативы','priority':'Приоритет','all':'Все приоритеты','showing':'Показано',
-      'source':'Состояния и решения определяются рабочими документами в папке AICC. Изменения вносятся в установленном порядке ведения папки AICC.','offflow':'Прочие выходы','back':'Бэклог программы','criteria':'Критерии приёмки','parent':'Родительский элемент и цель','dependencies':'Зависимости','approval':'Ссылка и дата принятия в работу','accepted':'Ссылка и дата приёмки','age':'Дата перехода на текущий шаг','rank':'Место в бэклоге программы','risk':'Ожидаемая категория риска 2; не присвоена и не согласована','footer':'Базовое состояние последнего еженедельного обзора',
+      'source':'Рабочее состояние ведётся в портфеле AICC, управленческие решения — в папке AICC. Изменения вносятся в установленном порядке ведения портфеля и папки AICC.','offflow':'Прочие выходы','back':'Бэклог программы','criteria':'Критерии приёмки','parent':'Родительский элемент и цель','dependencies':'Зависимости','approval':'Ссылка и дата принятия в работу','accepted':'Ссылка и дата приёмки','age':'Дата перехода на текущий шаг','rank':'Место в бэклоге программы','risk':'Ожидаемая категория риска 2; не присвоена и не согласована','footer':'Базовое состояние последнего еженедельного обзора',
       'gates':{'Funnel':'Рассмотреть потребность и подтвердить заявителя','Reviewing':'Уточнить объём, владельца и источники индикаторов','Analyzing':'Подготовить бизнес-кейс и получить согласования контрольных функций','Portfolio Backlog':'Ранжировать и принять в работу в пределах лимита','MVP':'Оценить MVP и принять решение о продолжении','Implementation':'Реализовать принятые Capabilities и Features','Done':'Проверить приёмку и подтверждённый результат','Off-flow':'Проверить записанное решение о выходе'}}}
 
 

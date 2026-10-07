@@ -1,0 +1,34 @@
+<GraceChangePlan graceVersion="4.0" status="applied">
+  <C-PORTFOLIO-RUNTIME-STORE>
+    <IntentSummary>Implement the Portfolio runtime store approved by the user on 2026-10-07: amend the corpus, move the working state from registry/ to portfolio/, give the store its contract, point the builders at it, verify, and publish under the standing publish instruction.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist><Value>M-PORTAL-PROJECTION</Value><Value>M-PORTAL-LOCALIZATION</Value></MustExist>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify><Module>M-PORTAL-PROJECTION</Module><Module>M-PORTAL-LOCALIZATION</Module></MustVerify>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check.py --idempotent</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_portfolio.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_delivery.py</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check_project.py</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /></GraphAnchors>
+      <VerificationAnchors><V-M-PORTAL-PROJECTION /><V-M-PORTAL-LOCALIZATION /></VerificationAnchors>
+    </DurableScope>
+    <ObservedWriteScope>
+      <Glob>charter/en/**/*.md</Glob><Glob>charter/ru/**/*.md</Glob>
+      <Glob>registry/**</Glob><Glob>portfolio/**</Glob>
+      <Glob>html-alt/intelligent-customer-service-resolution/**</Glob>
+      <Glob>portal/tools/*.py</Glob><Glob>portal/tests/*.py</Glob>
+      <Glob>html/aicc/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001><Title>Amend the corpus in both editions</Title><DependsOn></DependsOn><AcceptanceCriteria><Criterion>OM 7.1, 7.4, 7.5, the collaboration tooling, the cutover, the vocabulary and every clause that places the working state in the Registry or moves it to Jira state the split; change-log rows and DR-2026-065.</Criterion></AcceptanceCriteria><Verification><Command>grep -rn "moves from the Registry to Jira" charter/en</Command></Verification></T-001>
+      <T-002><Title>Move the working state into the Portfolio and write its contract</Title><DependsOn></DependsOn><AcceptanceCriteria><Criterion>Records moved with history in both languages; READMEs, discovery and project register; service area and Discovery-entry fields.</Criterion></AcceptanceCriteria><Verification><Command>python3 -m unittest discover -s portal/tests</Command></Verification></T-002>
+      <T-003><Title>Point the builders and checks at the new locations</Title><DependsOn>T-002</DependsOn><AcceptanceCriteria><Criterion>Portfolio, Delivery and Projects views render from portfolio/; share links follow the two bases.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check.py --idempotent</Command><Command>python3 portal/tools/check_portfolio.py</Command><Command>python3 portal/tools/check_delivery.py</Command></Verification></T-003>
+      <T-004><Title>Verify, archive and publish</Title><DependsOn>T-001, T-003</DependsOn><AcceptanceCriteria><Criterion>All target commands and browser checks pass; change archived; published manifest verified.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check_project.py</Command></Verification></T-004>
+    </ImplementationPlan>
+  </C-PORTFOLIO-RUNTIME-STORE>
+</GraceChangePlan>

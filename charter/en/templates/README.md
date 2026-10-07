@@ -1,17 +1,17 @@
 # Templates
 
-The forms of the records that AICC produces. A Template gives the form of a Record in the Registry or the Portfolio, and its rules are in the documents. The Document Catalog 6 lists them. Copy a Template from its title and omit the metadata block (Document Catalog 6.1). The Templates are in the order of use: an Initiative starts at the first and an Engagement ends at the eighth. The Package Definition is opened when a service category foresees a Package or an Engagement leaves one, and is kept current while the Package is available. The Appointments Record, the Registry Snapshot, the Quarterly Report, and the Proposal are used on their own cycle.
+The forms of the records that AICC produces. A Template gives the form of a Record in the Portfolio, which holds the working state and the catalog, or in the Registry, which holds the governance and evidence records, and its rules are in the documents. The Document Catalog 6 lists them. Copy a Template from its title and omit the metadata block (Document Catalog 6.1). The Templates are in the order of use: an Initiative starts at the first and an Engagement ends at the eighth. The Package Definition is opened when a service category foresees a Package or an Engagement leaves one, and is kept current while the Package is available. The Appointments Record, the Registry Snapshot, the Quarterly Report, and the Proposal are used on their own cycle.
 
 | Order | Id | Template | File | Used when | Kept in |
 | --- | --- | --- | --- | --- | --- |
-| 1 | AICC-TPL-02 | Initiative Brief | [initiative-brief.md](initiative-brief.md) | A need becomes an Initiative | `registry/en/initiatives/` |
-| 2 | AICC-TPL-06 | Service Agreement | [service-agreement.md](service-agreement.md) | The study of an Engagement starts | `registry/en/initiatives/` |
+| 1 | AICC-TPL-02 | Initiative Brief | [initiative-brief.md](initiative-brief.md) | A need becomes an Initiative | `portfolio/en/initiatives/`; closed copy in `registry/en/approved/` |
+| 2 | AICC-TPL-06 | Service Agreement | [service-agreement.md](service-agreement.md) | The study of an Engagement starts | `portfolio/en/initiatives/`; closed copy in `registry/en/approved/` |
 | 3 | AICC-TPL-01 | Solution Definition | [solution-definition.md](solution-definition.md) | A Solution is defined | `portfolio/en/solutions/` |
 | 4 | AICC-TPL-13 | Acceptance Checklist | [acceptance-checklist.md](acceptance-checklist.md) | AICC hands a ready Solution to a Domain for use at scale, before its release beyond the first users | `registry/en/checklists/` |
 | 5 | AICC-TPL-03 | Control Sign-Off | [control-sign-off.md](control-sign-off.md) | A Control Function Contact validates, clears a business case, stops, checks a provider, or grants an Exception | `registry/en/sign-offs/` |
 | 6 | AICC-TPL-08 | Decision Record | [decision-record.md](decision-record.md) | A Decision needs a record | `registry/en/decisions/` |
 | 7 | AICC-TPL-04 | Steering Summary | [steering-summary.md](steering-summary.md) | Each Steering | `registry/en/steering/` |
-| 8 | AICC-TPL-07 | Outcome Report | [outcome-report.md](outcome-report.md) | An Engagement ends | `registry/en/initiatives/` |
+| 8 | AICC-TPL-07 | Outcome Report | [outcome-report.md](outcome-report.md) | An Engagement ends | `portfolio/en/initiatives/`; closed copy in `registry/en/approved/` |
 | 9 | AICC-TPL-14 | Package Definition | [package-definition.md](package-definition.md) | A service category foresees a Package, or an Engagement leaves one | `portfolio/en/packages/` |
 | 10 | AICC-TPL-10 | AI Incident Review | [ai-incident-review.md](ai-incident-review.md) | After the post-incident review of an AI Incident (AI Policy 5.8) | `registry/en/incident-reviews/` |
 | 11 | AICC-TPL-11 | Registry Snapshot | [registry-snapshot.md](registry-snapshot.md) | The close of an Iteration and a PI, and at the cutover | `registry/en/snapshots/` |

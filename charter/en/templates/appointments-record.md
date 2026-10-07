@@ -2,9 +2,9 @@
 id: AICC-TPL-09-EN
 title: Appointments Record
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Appointments Record
@@ -57,7 +57,7 @@ The RACI by activity, with one accountable Role for each activity, is in the Org
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
-The keepers of the Registry, of each tool, of the AICC portal, of its tooling, and of the mailbox of AICC are entered here (Operating Model 7.6, 7.8).
+The keepers of the Registry, of the Portfolio, of each tool, of the AICC portal, of its tooling, and of the mailbox of AICC are entered here (Operating Model 7.6, 7.8).
 
 | Tool | Keeper (Role and name) | From | To |
 | --- | --- | --- | --- |

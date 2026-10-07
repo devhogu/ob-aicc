@@ -2,9 +2,9 @@
 id: AICC-REF-01-EN
 title: Vocabulary and Style
 status: active
-revision: 3.4
+revision: 3.5
 created: 2026-10-02
-revised: 2026-10-05
+revised: 2026-10-07
 ```
 
 # Vocabulary and Style
@@ -108,7 +108,7 @@ revised: 2026-10-05
 | Package | A method, kit, engine, catalog of automations, or template set that an Engagement leaves in the Portfolio, described in a Package Definition. Its status is planned, in preparation, available, or withdrawn, and is not a state of an item | Reusable asset is broader. A Package has a Package Definition and its own availability status, distinct from a work item's state. |
 | Package Definition | The description of a Package in the Portfolio, in the form of the Template AICC-TPL-14: its kind, owner, status, what a function needs to re-deploy it, and the Risk Tier of its uses |  |
 | Catalog | The list in the Portfolio of the Solutions, each with its Solution Definition, and of the Packages, each with its Package Definition |  |
-| Portfolio | The Initiatives of AICC and the Solutions and Packages that they deliver, taken together |  |
+| Portfolio | The Initiatives of AICC and the Solutions and Packages that they deliver, taken together. Also the folder of AICC that holds the catalog and the working state of the portfolio and the program, from the Discovery catalog to delivery, and that is the source of truth of the working state (Operating Model 7.1) |  |
 | Initiative | A business program: a long-term business service or product that delivers one or more Solutions, held in the Portfolio Backlog | Project is a general work designation; Initiative identifies the portfolio level with the business case and decisions required by the Portfolio Management Model. |
 | Initiative Brief | The one-page Record of an Initiative's business case: its hypothesis, scope, benefit, cost and risk. |  |
 | Business case | The justification for an investment or change: the need, options, expected benefits, costs, risks, and basis for deciding whether to proceed. The Initiative Brief records the business case of an Initiative | Initiative Brief is the record, not a competing name for the concept |
@@ -198,20 +198,20 @@ revised: 2026-10-05
 | Business acceptor | The requester who gives the business acceptance of a Solution against its acceptance criteria: the Domain Owner, or the Executive Sponsor for an item that spans Domains, is enabling work, is an Experiment with no Domain, or has the AICC Lead as Domain Owner (Solution Lifecycle Model 7.3(c)–(d); Operating Model 4.4(d)) |  |
 | Acceptance Checklist | The evidence record of the release of a Solution beyond its first users, listing for each party concerned the items that it confirms within its remit and signs |  |
 | AI Incident Review | The evidence record of the review of one AI Incident |  |
-| Registry Snapshot | The dated evidence record that preserves the Working state at the close of an Iteration or Program Increment, or at cutover. It also records the state, Risk Tier and release of Solution Definitions held in the Portfolio (Operating Model 7.3). |  |
+| Registry Snapshot | The dated evidence record in the Registry that preserves the Working state, taken from the Portfolio, at the close of an Iteration or Program Increment, or at cutover. It also records the state, Risk Tier and release of Solution Definitions held in the Portfolio (Operating Model 7.3). |  |
 | Program Board | The board of the dependencies of a Program Increment: for each Capability and Feature, the Iteration in which it is planned and what it needs from other items, Teams, functions, and persons | A dependency map serves this purpose when it identifies the relevant items, planned Iterations and required inputs. It is distinct from the Program Kanban's state view. |
 | Roadmap | The Record of three horizons: the current PI as intent and direction, the next as planned, the rest indicative, with its Milestones |  |
 | Template | The prescribed form for a Record where a form is required. The Template has its own status and revision; a Record created from it does not retain the Template's metadata block. |  |
 | Priorities Record | The living Record of the Strategic Priorities, with references to the Investment Envelopes, Guardrails, and Measures |  |
 | Standards Record | The living Record of the architecture standards and Platform requirements, and of the external instruments and frameworks, with the map of their terms to the terms of the documents |  |
 | Control Matrix | The living Record in the Registry that keeps the test and the status of each control of the Operating Model 8 by its reference |  |
-| Registry | The folder of the Records of AICC: the process records of the work, the decisions, the proposals, and the governance records |  |
+| Registry | The folder of the governance records and the evidence records of AICC: the Appointments, the Decision Log and the Decision Records, the Steering Summaries, the Priorities, the Standards, the Risks and Issues, the AI Registry, the Control Matrix, the reports, the proposals, the Registry Snapshots, and the closed and dated evidence extracts |  |
 | Workflow | In the charter, an explanatory description of an AICC loop or flow, including its purpose, sequence and decision points. It states no rule of its own. | The general technology term workflow can describe an executable process; the charter Workflow is the explanatory document defined here. |
-| Record | Documented information about AICC work, decisions or governance, held as Working state, a Living record or an Evidence record. Its location and retention follow Operating Model 7; it is distinct from a governing charter document. | A register is a list or collection; a Record is the documented information itself. Evidence records remain in the Registry; living Solution Definitions are held in the Portfolio. |
+| Record | Documented information about AICC work, decisions or governance, held as Working state, a Living record or an Evidence record. Its location and retention follow Operating Model 7; it is distinct from a governing charter document. | A register is a list or collection; a Record is the documented information itself. Evidence records remain in the Registry; the Working state and the living Solution Definitions are held in the Portfolio. |
 | Living record | A Record maintained to reflect current information, including Priorities, Standards, Risks and Issues, the AI Registry and Appointments in the Registry, and Solution Definitions in the Portfolio (Operating Model 7.3). | Current information changes as work proceeds; an Evidence record preserves a dated event or state and follows its own correction rules. |
 | Evidence record | A closed and dated extract in the Registry of an event: a Decision, an approval, a sign-off, an acceptance, an incident, or an appointment |  |
-| Working state | The live state of the work: the backlogs, boards, Roadmap, Calendar, Program Board, Dashboard, Teams, and Program Increment folder. It moves to Jira and Confluence at the cutover |  |
-| cutover | The day on which the working state of the Program Backlog, the boards, and the Work Items moves from the Registry to Jira, set by the AICC Lead and entered in the Decision Log |  |
+| Working state | The live state of the work: the Portfolio Backlog and the Initiative Briefs, the Program Backlog, the boards, Roadmap, Calendar, Program Board, Dashboard, Teams, and Program Increment folder. The Portfolio holds it and is its source of truth; Jira mirrors the Initiatives, Capabilities, and Features and holds the Work Items of the Teams (Operating Model 7.1) |  |
+| cutover | The day from which the Work Items of the Teams, and the mirror of the Initiatives, Capabilities, and Features, run in Jira and Confluence, set by the AICC Lead and entered in the Decision Log. The working state of the portfolio and the program stays in the Portfolio |  |
 | Light mode | The way AICC runs while the AICC Team has up to three people, with fewer events and a smaller set of states |  |
 | Loop | A cycle that starts with planning and ends with review: the day, the week, the Iteration, and the PI. The control loops of the Operating Model and the portfolio loops of the Portfolio Management Model are loops of Plan, Do, Check, and Act, which run on the events of these cycles |  |
 | Review week | The last week of an Iteration, except in the third Iteration of a Program Increment, where the IP week holds the review |  |
@@ -271,3 +271,4 @@ revised: 2026-10-05
 | 3.2 | 2026-10-04 | Clarified functional interpretation and concept distinctions; reconciled acceptance, delegation and record definitions with governing clauses and aligned the language editions. No operating requirements or decision rights changed. | none (correction under Document Catalog 4.2) |
 | 3.3 | 2026-10-04 | Applied fixed international naming and clarified acceptance timing and the existing separation-of-duties exception; governing requirements and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
 | 3.4 | 2026-10-05 | Defined a Strategic Priority as a top priority of the strategy of the Bank for the adoption of AI, in line with the Statement of Intent 9.1; meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
+| 3.5 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |

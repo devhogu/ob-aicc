@@ -43,7 +43,7 @@ The statuses have the meanings of the Operating Model 8.5, and the gap is stated
 | C-23 | Intake of Engagements and the limit on work in progress | - | Service Agreement; Portfolio Backlog | Not yet due: no Initiative is Active and no Service Agreement is issued, and the AICC Lead sets the limit on the Active Initiatives, within the mix, before an Initiative is pulled to its MVP (Portfolio Management Model 5.4); initial portfolio and Team limits are now recorded in the Kanban boards under DR-2026-063 |
 | C-24 | Completeness of the Outcome Reports | - | Steering Summary | Not yet due: at the quarterly Steering of 2026-12-23 (IP week of 2026-PIQ4) |
 | C-25 | Access of internal audit | - | Appointments Record Part E | Not yet due: the contact of internal audit is not named (RI-005), and is entered in Part E within 60 days of the activation on 2026-10-02 (Operating Model 4.8), by 2026-12-01 |
-| C-26 | Access review of the Registry, the tools, and production | - | Steering Summary | Not yet due: at the quarterly Steering of 2026-12-23 (IP week of 2026-PIQ4) |
+| C-26 | Access review of the Registry, the Portfolio, the tools, and production | - | Steering Summary | Not yet due: at the quarterly Steering of 2026-12-23 (IP week of 2026-PIQ4) |
 | C-27 | Acceptance of a risk beyond the appetite | - | Decision Record (`decisions/`); the report to the Board Committee | No occurrence yet |
 | C-28 | Reassessment of the Risk Tier and expiry of a validation | - | AI Registry; Control Sign-Off (`sign-offs/`) | No occurrence yet: no date of a reassessment or a validation is in the AI Registry |
 | C-29 | Review of live Solutions | - | Solution Definition (`portfolio/en/solutions/`) | No occurrence yet: no Solution is live |

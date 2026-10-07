@@ -2,9 +2,9 @@
 id: AICC-ORG-03-EN
 title: Solution Lifecycle Model
 status: active
-revision: 2.1
+revision: 2.2
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Solution Lifecycle Model
@@ -527,13 +527,13 @@ Figure 13: the loop of a change to a released Solution.
 
 ## 9. Records and controls
 
-9.1. The records of this model are the Program Backlog, the Iteration Backlogs, the Program Board, the Roadmap, the Dashboard, the Calendar, and the PI Objectives with their scores (6.2), kept in the Registry; the Solution Definitions, kept in the Portfolio; and the Acceptance Checklists, the Control Sign-Offs, the AI Incident Reviews, and the Registry Snapshots, which are the evidence records.
+9.1. The records of this model are the Program Backlog, the Iteration Backlogs, the Program Board, the Roadmap, the Dashboard, the Calendar, the PI Objectives with their scores (6.2), and the Solution Definitions, kept in the Portfolio (Operating Model 7.1, 7.3); and the Acceptance Checklists, the Control Sign-Offs, the AI Incident Reviews, and the Registry Snapshots, which are the evidence records, kept in the Registry. There is one Program Backlog and one Program Kanban, and the service area of a Capability or a Feature is a field of the item and not a separate backlog.
 
 9.2. The controls that this model carries, whose rules it states or whose evidence it keeps, are C-10, C-12, C-13, C-14, C-15, C-16, C-20, C-22, C-26, C-28, C-29, C-30, and C-31 of the Operating Model 8. The following table shows where each step of the life of a Solution is controlled.
 
 | Step | Clause | Decides | Evidence | Control |
 | --- | --- | --- | --- | --- |
-| Approval of a Capability or a Feature | 3.1, 5.1 | AICC Lead; the Team | Program Backlog | None; working state, in the Registry until the cutover and then in Jira |
+| Approval of a Capability or a Feature | 3.1, 5.1 | AICC Lead; the Team | Program Backlog | None; working state, in the Portfolio and mirrored in Jira |
 | Solution Definition and Risk Tier | 5.2 | Domain Owner approves; AICC Lead assigns the Tier; the Executive Sponsor for a Solution that the AICC Lead built | Solution Definition; AI Registry | C-12, C-15 |
 | Verify, check or validation | 7.1 | Checker; Control Function Contacts | AI Registry entry; Control Sign-Off | C-13 |
 | Deployment to production, and change | 8.3, 8.6 | Change management of the Bank; AICC Lead | Change ticket; Solution Definition | C-30 |
@@ -626,3 +626,4 @@ Figure 13: the loop of a change to a released Solution.
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Added the definitions of ready and done, the Program Board on the boards, the participants of the events with the work and feedback loops, the separations, the service steps with the four signals and the Handover of a Service to an IT function of the Bank, the service operations practices and the default meaning of the classes of service, the rules of the Lab, and the measures with their target rules and governance; the Domain Owner states the business value of an item. | DR-2026-062 |
 | 2.1 | 2026-10-03 | Corrected the units and population of expected lead time; completed the run-rate approval, parent, record, and delivery path; distinguished the Planning selection from later admissions in the acceptance measure. | none (correction under Document Catalog 4.2) |
+| 2.2 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |

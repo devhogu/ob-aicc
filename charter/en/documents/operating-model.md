@@ -2,9 +2,9 @@
 id: AICC-ORG-01-EN
 title: Operating Model
 status: active
-revision: 2.0
+revision: 2.1
 created: 2026-10-02
-revised: 2026-10-03
+revised: 2026-10-07
 ```
 
 # Operating Model
@@ -215,12 +215,12 @@ In practice, the Executive Sponsor picks the Decisions to read from the Decision
 
 ### The operating loop of the week
 
-6.8. The AICC Lead shall run the operating loop each week, at the Weekly Review, which is one session with the Weekly Planning in light mode. The AICC Lead and the Team attend it. The plan reads the flow, the Limits on Work in Progress, and the Dependencies. The check is the Weekly Review of the Dashboard and of the boards. The act adjusts the work, updates the Registry, and raises to the monthly Steering what cannot be settled. The care of the Portfolio Backlog is in the Portfolio Management Model 4.5, and the flow of the work is in the Solution Lifecycle Model.
+6.8. The AICC Lead shall run the operating loop each week, at the Weekly Review, which is one session with the Weekly Planning in light mode. The AICC Lead and the Team attend it. The plan reads the flow, the Limits on Work in Progress, and the Dependencies. The check is the Weekly Review of the Dashboard and of the boards. The act adjusts the work, updates the Portfolio, and raises to the monthly Steering what cannot be settled. The care of the Portfolio Backlog is in the Portfolio Management Model 4.5, and the flow of the work is in the Solution Lifecycle Model.
 
 ```mermaid
 flowchart LR
   IN(["From above<br/>Steering Summary, limits, priorities"]):::iface --> P
-  P["Plan<br/>flow, limits, Dependencies"] --> D["Do<br/>the Teams work"] --> C["Check<br/>Weekly Review of the Dashboard and the boards"] --> A["Act<br/>adjust, update the Registry, raise what cannot be settled"] --> P
+  P["Plan<br/>flow, limits, Dependencies"] --> D["Do<br/>the Teams work"] --> C["Check<br/>Weekly Review of the Dashboard and the boards"] --> A["Act<br/>adjust, update the Portfolio, raise what cannot be settled"] --> P
   A --> UP(["To above<br/>Dashboard and open items"]):::iface
   classDef iface fill:#e8eefc,stroke:#5a6fa8,color:#111
 ```
@@ -263,23 +263,23 @@ In practice, an AI Incident is handled in the incident management of the Bank, w
 | Risk Tier reassessments | The number of reassessments of the Risk Tier and of validations due in the quarter, and the number overdue | AI Registry | Quarterly Steering | None overdue |
 | AI Incidents and control breaches | The number of AI Incidents, by Severity, and of control breaches in the quarter | Risks and Issues Record; the incident management of the Bank | Quarterly Steering | Read as a trend; each reviewed (AI Policy 5.8) |
 | Risks accepted beyond appetite | The number of risks accepted beyond the AI Risk Appetite Statement and in force | Decision Records; Risks and Issues Record | Quarterly Steering | Each told to the Board Committee (5.4) |
-| Access review | Whether the comparison of access with the Appointments Record was done for the Registry, each tool, and production, and the number of differences found and corrected | Steering Summary; Appointments Record | Quarterly Steering | Done each quarter, and no difference left open |
+| Access review | Whether the comparison of access with the Appointments Record was done for the Registry, the Portfolio, each tool, and production, and the number of differences found and corrected | Steering Summary; Appointments Record | Quarterly Steering | Done each quarter, and no difference left open |
 | Appointments | The number of Roles without a Holder, the number past the date by which they are due, and the entries made later than five working days (4.8) | Appointments Record | Quarterly and yearly Steering | None past due |
 | Documents reviewed | The share of the documents checked within the year (Document Catalog 7.1) | Decision Log | Yearly Steering | All |
 
 ## 7. Records and evidence
 
-7.1. The live state of the work is the working state: the backlogs, the boards, the Roadmap, the Calendar, the Program Board, the Dashboard, the Teams, and the Program Increment folder. The working state moves from the Registry to Jira at the cutover, and until then the Registry holds it.
+7.1. The live state of the work is the working state: the Portfolio Backlog and the Initiative Briefs, the Program Backlog, the boards, the Roadmap, the Calendar, the Program Board, the Dashboard, the Teams, and the Program Increment folder. The Portfolio holds the working state of the portfolio and the program and is its source of truth, from the Discovery catalog to delivery. Jira runs the daily work: it holds the Work Items of the Teams, and a mirror of the Initiatives, Capabilities, and Features. A gate decision is recorded in the Portfolio and in the Registry first, and then in Jira. The AICC Lead records the progress of the Features from Jira in the Portfolio at each Weekly Review, and at once at a gate, and corrects and notes any difference there.
 
 7.2. The evidence records shall always be kept in the Registry. An evidence record is a closed and dated extract, taken when an event happens, such as a portfolio Decision, an approval, a sign-off, an acceptance, a high-impact incident, or an appointment. It states what happened, who decided or acted, on which facts, and where the live item is.  Jira, Confluence, and Service Management are not an evidence store.
 
-7.3. The Registry also keeps living records that are current by nature: the Priorities, the Standards, the Risks and Issues, the AI Registry, and the Appointments. The AI Registry is a Record of AICC, kept by the AICC Lead, and the capability of the AI Platform that carries the same name only feeds it. The Solution Definitions are living records in the Portfolio, and each Registry Snapshot records their state, Risk Tier, and release, which makes the Snapshot their evidence. The AICC Lead shall take a Registry Snapshot at the close of each Iteration, which closes with the monthly Steering, at the close of each PI, and at the cutover. The index of the Registry lists all the Records by class.
+7.3. The Registry also keeps living records that are current by nature: the Priorities, the Standards, the Risks and Issues, the AI Registry, and the Appointments. The AI Registry is a Record of AICC, kept by the AICC Lead, and the capability of the AI Platform that carries the same name only feeds it. The Solution Definitions are living records in the Portfolio, and each Registry Snapshot records their state, Risk Tier, and release, which makes the Snapshot their evidence. The AICC Lead shall take a Registry Snapshot of the working state in the Portfolio at the close of each Iteration, which closes with the monthly Steering, at the close of each PI, and at the cutover. The indexes of the Registry and of the Portfolio list all the Records by class.
 
-7.4. The Registry shall be kept in a repository with a protected main branch and restricted visibility, and its history is not rewritten. Only the AICC Lead and the named deputy merge to the main branch. A closed evidence record is corrected only by a new dated entry that refers to it. The main branch of the Registry is published to the corporate share, where the AICC portal links to its records. Each Record is kept for the period that the record retention rules of the Bank require for its type. Personal data in the Registry is limited to the names and the posts of the Holders, and the declarations, consents, and access of the Appointments Record.
+7.4. The Registry and the Portfolio shall each be kept in a repository with a protected main branch and restricted visibility, and their history is not rewritten. Only the AICC Lead and the named deputy merge to the main branch. A closed evidence record is corrected only by a new dated entry that refers to it. The main branches of the Registry and of the Portfolio are published to the corporate share, where the AICC portal links to their records. Each Record is kept for the period that the record retention rules of the Bank require for its type. Personal data in the Registry and in the Portfolio is limited to the names and the posts of the Holders, and the declarations, consents, and access of the Appointments Record.
 
-7.5. Whoever does the work shall keep the Record, and the AICC Lead is accountable for all of them. Internal audit has read access to the Registry and, read only, to Jira, Confluence, and Service Management.
+7.5. Whoever does the work shall keep the Record, and the AICC Lead is accountable for all of them. Internal audit has read access to the Registry and the Portfolio and, read only, to Jira, Confluence, and Service Management.
 
-7.6. The tools and the portals of AICC, what each is used for, and the workflows that use it are listed in the collaboration tooling of the charter. Jira and Confluence carry no figures of the Bank, no data, and no code in the process content of AICC, and a ticket in Service Management for an AI Incident describes it without data and the records point to the ticket key. The operating portal holds non-sensitive information only and carries no governance and no evidence. Each tool has a keeper named in the Appointments Record, and access to a tool follows the Roles. The keeper of each tool and of the Registry shall compare the access with the Appointments Record at each quarterly Steering and record the result.
+7.6. The tools and the portals of AICC, what each is used for, and the workflows that use it are listed in the collaboration tooling of the charter. Each field of an Initiative, a Capability, or a Feature has one owner. The Portfolio owns its identity, parent, rank, class of service, definition, acceptance criteria, and gate states with their dates. Jira owns the execution below the Feature and the progress of a Feature between Weekly Reviews. Jira and Confluence carry no figures of the Bank, no data, and no code in the process content of AICC, and a ticket in Service Management for an AI Incident describes it without data and the records point to the ticket key. The operating portal holds non-sensitive information only and carries no governance and no evidence. Each tool has a keeper named in the Appointments Record, and access to a tool follows the Roles. The keeper of each tool, of the Registry, and of the Portfolio shall compare the access with the Appointments Record at each quarterly Steering and record the result.
 
 7.7. The Templates for the Records that need a form are listed in the Document Catalog. Every other Record is a table that its keeper adapts as needed.
 
@@ -315,8 +315,8 @@ In practice, an AI Incident is handled in the incident management of the Bank, w
 | C-22 | Separation of duties and independence | 4.4 | Executive Sponsor | At each release and each appointment | Appointments; the Acceptance Checklist or the release block | Appointments Record | Preventive |
 | C-23 | Intake of Engagements and the limit on work in progress | Business Model 7.1, 7.2 | AICC Lead | When an Initiative is taken in or pulled, and when a Service Agreement is issued | Service Agreement; Portfolio Backlog | Service Agreement | Preventive |
 | C-24 | Completeness of the Outcome Reports | Business Model 7.4 | Executive Sponsor | Quarterly | Steering Summary | Steering Summary | Detective |
-| C-25 | Access of internal audit | 7.5 | AICC Lead | Always | The Registry | Not needed | Directive |
-| C-26 | Access review of the Registry, the tools, and production | 7.6; Solution Lifecycle Model 7.1 | AICC Lead; the keeper of each tool; the access process of the Bank for production | Quarterly | Steering Summary | Steering Summary | Preventive |
+| C-25 | Access of internal audit | 7.5 | AICC Lead | Always | The Registry and the Portfolio | Not needed | Directive |
+| C-26 | Access review of the Registry, the Portfolio, the tools, and production | 7.6; Solution Lifecycle Model 7.1 | AICC Lead; the keeper of each tool; the access process of the Bank for production | Quarterly | Steering Summary | Steering Summary | Preventive |
 | C-27 | Acceptance of a risk beyond the appetite | Charter 5.4; 5.4 | Executive Sponsor | When it arises | Decision Record; Decision Log entry of the notice to the Board Committee | Decision Record | Preventive |
 | C-28 | Reassessment of the Risk Tier and expiry of a validation | AI Policy 3.3, 3.4 | AICC Lead | On a change, and by the date in the AI Registry | AI Registry; Control Sign-Off | Control Sign-Off | Preventive |
 | C-29 | Review of live Solutions | AI Policy 3.5; Solution Lifecycle Model 8.4 | Domain Owner; Executive Sponsor for a Service across Domains | Each Iteration Review and Demo | Solution Definition | Solution Definition | Detective |
@@ -385,3 +385,4 @@ Figure 8: the status of a control in the Control Matrix.
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
 | 2.0 | 2026-10-03 | Controls given their elements, type, and five status meanings and each carried by a loop, with governance measures, Steering attendance, the three lines, appointments and growth, and the AICC portal added, and the Strategic Priorities placed in the strategic loop. | DR-2026-062 |
+| 2.1 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |

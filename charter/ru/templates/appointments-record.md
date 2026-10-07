@@ -2,12 +2,12 @@
 id: AICC-TPL-09-RU
 title: Реестр назначений
 status: active
-revision: 1.1
+revision: 1.2
 created: 2026-10-02
-revised: 2026-10-03
-source_revision: 1.1
+revised: 2026-10-07
+source_revision: 1.2
 source: charter/en/templates/appointments-record.md
-source_sha256: 5e86531f9e0191933e6488ff5c74488ceda2c91e0b6386ef5a608fafa019d72c
+source_sha256: 355217ba82ce490cd978c15bd99a423f86dbcc3b1d9d168096273dfe6315463a
 translation_status: reviewed
 ```
 
@@ -61,7 +61,7 @@ translation_status: reviewed
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
-Здесь указываются ответственные за ведение папки AICC, каждого инструмента, портала AICC и средств его сопровождения, а также почтового ящика AICC (пп. 7.6, 7.8 Операционной модели).
+Здесь указываются ответственные за ведение папки AICC, портфеля, каждого инструмента, портала AICC и средств его сопровождения, а также почтового ящика AICC (пп. 7.6, 7.8 Операционной модели).
 
 | Инструмент | Ответственный (роль, ФИО) | С | По |
 | --- | --- | --- | --- |

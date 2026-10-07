@@ -75,21 +75,21 @@ class PortfolioRules(unittest.TestCase):
 
     def test_record_disagreement_prevents_a_misleading_dashboard(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp); shutil.copytree(portfolio.workspace.ROOT/'registry/en',root/'registry/en')
-            path = root/'registry/en/portfolio-backlog.md'
+            root = Path(tmp); shutil.copytree(portfolio.workspace.ROOT/'portfolio/en',root/'portfolio/en');shutil.copytree(portfolio.workspace.ROOT/'registry/en',root/'registry/en')
+            path = root/'portfolio/en/portfolio-backlog.md'
             path.write_text(path.read_text().replace('| Discovery | Scoping |','| Approved |  |',1))
             with self.assertRaisesRegex(ValueError,'state disagreement'):
                 portfolio.project(root)
 
     def test_changed_recorded_limits_and_snapshot_counts_are_checked(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp);shutil.copytree(portfolio.workspace.ROOT/'registry/en',root/'registry/en')
-            path = root/'registry/en/board.md'
+            root = Path(tmp);shutil.copytree(portfolio.workspace.ROOT/'portfolio/en',root/'portfolio/en');shutil.copytree(portfolio.workspace.ROOT/'registry/en',root/'registry/en')
+            path = root/'portfolio/en/board.md'
             path.write_text(path.read_text().replace('Shared Active limit: 1','Shared Active limit: 2'))
-            snapshot = root/'registry/en/dashboard.md'
+            snapshot = root/'portfolio/en/dashboard.md'
             snapshot.write_text(snapshot.read_text().replace('1 shared Active','2 shared Active'))
             self.assertEqual(portfolio.project(root)['capacity']['limit'],2)
-            path=root/'registry/en/dashboard.md'
+            path=root/'portfolio/en/dashboard.md'
             path.write_text(path.read_text().replace('| Items | 1 | 6 |','| Items | 1 | 5 |',1))
             with self.assertRaisesRegex(ValueError,'count disagreement'):
                 portfolio.project(root)

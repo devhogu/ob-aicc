@@ -68,8 +68,8 @@ class ProgramDelivery(unittest.TestCase):
 
     def test_nonempty_maintained_record_reaches_its_real_board_card(self):
         with tempfile.TemporaryDirectory() as tmp:
-            root=Path(tmp);shutil.copytree(delivery.workspace.ROOT/'registry/en',root/'registry/en')
-            path=root/'registry/en/program-backlog.md';text=path.read_text()
+            root=Path(tmp);shutil.copytree(delivery.workspace.ROOT/'portfolio/en',root/'portfolio/en');shutil.copytree(delivery.workspace.ROOT/'registry/en',root/'registry/en')
+            path=root/'portfolio/en/program-backlog.md';text=path.read_text()
             row=self.feature();row['Rank']='1';row['Acceptance criteria and Dependencies']=row['Acceptance criteria and Dependencies'].replace('DEP-016','DEP-014')
             header=next(line for line in text.splitlines() if line.startswith('| Rank | Identifier | Feature'))
             fields=[x.strip() for x in header.strip('|').split('|')]
@@ -77,15 +77,15 @@ class ProgramDelivery(unittest.TestCase):
             index=text.index(header);end=text.index('\n',text.index('\n',index)+1)
             text=text[:end]+'\n| '+' | '.join(str(row.get(k,'')) for k in fields)+' |'+text[end:]
             path.write_text(text)
-            path=root/'registry/en/dashboard.md';path.write_text(path.read_text().replace('| Items | 0 | 0 | 0 | 0 | 0 | 0 |','| Items | 1 | 0 | 0 | 0 | 0 | 0 |'))
-            path=root/'registry/en/board.md';path.write_text(path.read_text().replace('| Normal | | | | | |','| Normal | FEAT-001 | | | | |'))
+            path=root/'portfolio/en/dashboard.md';path.write_text(path.read_text().replace('| Items | 0 | 0 | 0 | 0 | 0 | 0 |','| Items | 1 | 0 | 0 | 0 | 0 | 0 |'))
+            path=root/'portfolio/en/board.md';path.write_text(path.read_text().replace('| Normal | | | | | |','| Normal | FEAT-001 | | | | |'))
             data=delivery.project(root)
             self.assertEqual(data['counts']['Backlog'],1)
             self.assertEqual(data['items'][0]['initiative'],'INI-009')
             markup=delivery.render(data,'/en/projects/')
             self.assertIn('href="items/feat-001/"',markup)
             self.assertIn('Verified case history',markup)
-            path=root/'registry/en/dashboard.md';path.write_text(path.read_text().replace('| Items | 1 | 0 | 0 | 0 | 0 | 0 |','| Items | 2 | 0 | 0 | 0 | 0 | 0 |'))
+            path=root/'portfolio/en/dashboard.md';path.write_text(path.read_text().replace('| Items | 1 | 0 | 0 | 0 | 0 | 0 |','| Items | 2 | 0 | 0 | 0 | 0 | 0 |'))
             with self.assertRaisesRegex(ValueError,'count disagreement'):delivery.project(root)
 
     def test_accepted_requires_evidence_and_active_requires_valid_stage(self):

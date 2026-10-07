@@ -26,8 +26,10 @@ import kanban
 
 COLUMNS = ('Funnel', 'Reviewing', 'Analyzing', 'Portfolio Backlog', 'MVP', 'Implementation', 'Done')
 OFF_FLOW = ('Deferred', 'Rejected', 'Pivoted', 'Cancelled')
-BASE = 'registry/en/'
-SHARE = 'smb://10.128.20.244/aicc/governance/'
+# The Portfolio holds the working state; the Registry holds governance and evidence (Operating Model 7.1-7.3).
+BASE = 'portfolio/en/'
+GOVERNANCE = 'registry/en/'
+SHARE = {'portfolio': 'smb://10.128.20.244/aicc/portfolio/', 'registry': 'smb://10.128.20.244/aicc/governance/registry/'}
 
 
 def position(state, stage='', *, waiting_from=None, dependency=None):
@@ -161,8 +163,8 @@ def project(root=workspace.ROOT, lang='en'):
             if establishment['Result'] != 'Approved' or not approval_ref or establishment['Date'] not in row['Approved on']:
                 raise ValueError('Standing approval disagreement: ' + identifier)
             review_date = next(r['Date'] for r in decision_rows if r['Decision'] == 'First recurring review') or None
-            log = {r['Identifier']: r for r in en.table(BASE + 'decision-log.md', 'Identifier | Date')}
-            local_log = {r['Identifier']: r for r in sources.table(BASE + 'decision-log.md', 'Identifier | Date')}
+            log = {r['Identifier']: r for r in en.table(GOVERNANCE + 'decision-log.md', 'Identifier | Date')}
+            local_log = {r['Identifier']: r for r in sources.table(GOVERNANCE + 'decision-log.md', 'Identifier | Date')}
             refs = approval_ref.split(', ')
             if any(r not in log for r in refs): raise ValueError('Unknown Decision Record: ' + identifier)
             # Business Model 4.9: the Executive Sponsor approves; show the authority actually recorded.
@@ -229,7 +231,7 @@ def project(root=workspace.ROOT, lang='en'):
     milestones = sources.table(BASE + 'roadmap.md', 'Identifier | Milestone')
     # Milestone person fields stay private: only ID, title, horizon and status are projected.
     milestones = [{k: r[k] for k in ('Identifier', 'Milestone', 'Program Increment', 'Status')} for r in milestones]
-    priorities = [{k: r[k] for k in ('Identifier', 'Strategic Priority')} for r in sources.table(BASE + 'priorities.md', 'Identifier | Strategic Priority')]
+    priorities = [{k: r[k] for k in ('Identifier', 'Strategic Priority')} for r in sources.table(GOVERNANCE + 'priorities.md', 'Identifier | Strategic Priority')]
     return {'lang': lang, 'date': date[1], 'frame': frame, 'items': ordinary + [x for x in items if x['standing']],
             'capacity': capacity(items, limits, features, capabilities), 'counts': {k: len(v) for k, v in projected.items()},
             'features': len(features), 'capabilities': len(capabilities), 'measures': measures,
@@ -237,7 +239,7 @@ def project(root=workspace.ROOT, lang='en'):
 
 UI = {
 'en': {
- 'title':'Portfolio', 'page_title':'Overview', 'snapshot':'As of', 'recorded':'Maintained in the AICC Registry', 'week':'current week',
+ 'title':'Portfolio', 'page_title':'Overview', 'snapshot':'As of', 'recorded':'Maintained in the AICC Portfolio', 'week':'current week',
  'board':'Portfolio Kanban', 'review':'Review queue', 'standing':'Standing Initiatives', 'roadmap':'Roadmap', 'register':'Initiative register', 'selection':'Review and decisions',
  'discovery':'In Discovery', 'approved':'Approved, awaiting pull', 'active':'Active against the limit', 'ordinary':'Ordinary initiatives',
  'owner_missing':'Not yet appointed', 'all':'All priorities', 'enabling':'Enabling work', 'search':'Find an initiative', 'filter':'Strategic Priority',
@@ -260,18 +262,18 @@ UI = {
  'authority_note':'Decider recorded in {ref}: {by}. Business Model 4.9 gives the approval of a Standing Initiative to the Executive Sponsor; that approval is still to be recorded.',
  'roadmap_intro':'Intent for the current Program Increment, planned work for the next, and indicative direction beyond. Milestones are not achieved outcomes.',
  'measures':'Recorded flow measures', 'measure_intro':'Values that are not recorded are not estimated. Item age is calculated once the date of entry to each step is recorded.',
- 'workflow_intro':'These gates prepare the reviews of the portfolio; clause numbers refer to the Portfolio Management Model. Decisions and state changes are recorded in the AICC Registry and then shown here.',
+ 'workflow_intro':'These gates prepare the reviews of the portfolio; clause numbers refer to the Portfolio Management Model. State changes are recorded in the AICC Portfolio and decisions in the AICC Registry, and then shown here.',
  'rhythm':'Review cadence', 'weekly':'Weekly Review: scope, complete Briefs, resolve blockers, and raise the items that reach a gate.',
  'monthly':'Monthly Steering: decide at gates, review the rank and the work in progress, and pull within the limit.',
  'quarterly':'Quarterly Steering: review the outcomes of Active Initiatives against their leading indicators, decide to continue, pivot, defer or reject, confirm the Roadmap, and review the Standing Initiatives.',
  'yearly':'Yearly Steering: set the Strategic Priorities, Investment Envelopes and Guardrails.',
  'authority':'Business-case approval: the Domain Owner, within one Domain and the Guardrails; otherwise, and for enabling work, the Executive Sponsor.',
  'open':'Open progress summary', 'close':'Close', 'full':'Full initiative page', 'back':'Back to portfolio', 'visible':'Matching ordinary initiatives',
- 'waiting':'Waiting: stays in its column and counts against the limit', 'source_note':'Summaries show role names, not people. Working documents and restricted evidence stay in the AICC Registry on the corporate share.',
+ 'waiting':'Waiting: stays in its column and counts against the limit', 'source_note':'Summaries show role names, not people. The working state is kept in the AICC Portfolio, and decisions and restricted evidence in the AICC Registry, both on the corporate share.',
  'months':('January','February','March','April','May','June','July','August','September','October','November','December'),
 },
 'ru': {
- 'title':'Портфель инициатив', 'page_title':'Обзор', 'snapshot':'По состоянию на', 'recorded':'Рабочие документы ведутся в папке AICC', 'week':'текущая неделя',
+ 'title':'Портфель инициатив', 'page_title':'Обзор', 'snapshot':'По состоянию на', 'recorded':'Рабочее состояние ведётся в портфеле AICC', 'week':'текущая неделя',
  'board':'Канбан портфеля', 'review':'Очередь на рассмотрение', 'standing':'Постоянные инициативы', 'roadmap':'Дорожная карта', 'register':'Реестр инициатив', 'selection':'Рассмотрение и решения',
  'discovery':'В проработке', 'approved':'Ожидают принятия в работу', 'active':'В работе, в пределах лимита', 'ordinary':'Обычные инициативы',
  'owner_missing':'Ещё не назначен', 'all':'Все приоритеты', 'enabling':'Обеспечивающие работы', 'search':'Найти инициативу', 'filter':'Стратегический приоритет',
@@ -294,14 +296,14 @@ UI = {
  'authority_note':'Лицо, принявшее решение, по протоколу {ref}: {by}. Согласно п. 4.9 Бизнес-модели постоянную инициативу одобряет куратор AICC; это одобрение ещё не зафиксировано.',
  'roadmap_intro':'Для текущего программного инкремента (PI) указаны намерения, для следующего — запланированная работа, для последующих — ориентиры. Вехи не означают достигнутых результатов.',
  'measures':'Зафиксированные показатели потока', 'measure_intro':'Значения, которые не зафиксированы, не указываются и не оцениваются. Возраст элемента рассчитывается после внесения дат перехода на шаги.',
- 'workflow_intro':'Приведённые ниже контрольные точки используются при подготовке к рассмотрению портфеля; номера пунктов относятся к Модели управления портфелем. Управленческие решения и изменения состояний вносятся в рабочие документы в папке AICC, после чего отражаются на этой странице.',
+ 'workflow_intro':'Приведённые ниже контрольные точки используются при подготовке к рассмотрению портфеля; номера пунктов относятся к Модели управления портфелем. Изменения состояний вносятся в портфель AICC, управленческие решения — в папку AICC, после чего они отражаются на этой странице.',
  'rhythm':'Периодичность рассмотрения', 'weekly':'Еженедельный обзор: определение объёма, подготовка паспортов инициатив, устранение препятствий, вынесение элементов, достигших контрольной точки.',
  'monthly':'Ежемесячное управляющее совещание: управленческие решения на контрольных точках, ранжирование и незавершённая работа, принятие инициативы в работу в пределах лимита.',
  'quarterly':'Ежеквартальное управляющее совещание: результаты инициатив в работе в сопоставлении с опережающими индикаторами, решение о продолжении, перенаправлении, откладывании или отклонении, подтверждение дорожной карты, рассмотрение постоянных инициатив.',
  'yearly':'Ежегодное управляющее совещание: стратегические приоритеты, инвестиционные бюджеты и инвестиционные ограничения.',
  'authority':'Бизнес-кейс одобряет владелец направления, если инициатива не выходит за пределы одного направления и не превышает инвестиционного ограничения; в остальных случаях, а также для обеспечивающих работ — куратор AICC.',
  'open':'Открыть сводку инициативы', 'close':'Закрыть', 'full':'Полная страница инициативы', 'back':'К портфелю', 'visible':'Найдено обычных инициатив',
- 'waiting':'Ожидание: остаётся в своей колонке и учитывается в лимите', 'source_note':'В сводках указаны роли, а не имена исполнителей. Рабочие документы и подтверждающие документы ограниченного доступа хранятся в папке AICC на корпоративном файловом ресурсе.',
+ 'waiting':'Ожидание: остаётся в своей колонке и учитывается в лимите', 'source_note':'В сводках указаны роли, а не имена исполнителей. Рабочее состояние ведётся в портфеле AICC, управленческие решения и подтверждающие документы ограниченного доступа хранятся в папке AICC; оба размещены на корпоративном файловом ресурсе.',
  'months':('января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'),
 }}
 
@@ -394,7 +396,7 @@ def summary(item, data, embedded=False, url=None):
         body += _section(u['state'], f'<p>{_h(item["status"])}</p><p>{_h(item["pending"])}</p>')
     deps = '<ul class="pf-dependencies">' + ''.join(f'<li><div><strong>{d["id"]}</strong><span class="pf-badge">{_h(d["Status"])}</span></div><p>{_h(d["Needs"])}</p><small>{_h(d["From"])} · {_h(d["Needed by"])}</small></li>' for d in item['dependencies']) + '</ul>'
     body += _section(u['dependencies'], deps or '<p>' + u['unknown'] + '</p>')
-    references = [item['path'], f'registry/{lang}/portfolio-backlog.md', f'registry/{lang}/dependencies.md', f'registry/{lang}/board.md']
+    references = [item['path'], f'portfolio/{lang}/portfolio-backlog.md', f'portfolio/{lang}/dependencies.md', f'portfolio/{lang}/board.md']
     if item.get('project_key'):
         project_url = '/' + lang + '/projects/' + item['project_key'] + '/'
         body += _section('Project and delivery' if lang == 'en' else 'Проект и реализация', '<p>' + _link(url, project_url, 'Project documents' if lang == 'en' else 'Документы проекта') + ' · ' + _link(url, '/' + lang + '/projects/#intake', 'Program Backlog' if lang == 'en' else 'Бэклог программы') + '</p>')
@@ -411,7 +413,8 @@ def summary(item, data, embedded=False, url=None):
 
 def _reference(path):
     # Records are linked on the corporate share; the portal does not embed them.
-    return f'<a href="{escape(SHARE + path)}"><code>{_h(path)}</code></a>'
+    root, _, rest = path.partition('/')
+    return f'<a href="{escape(SHARE[root] + rest)}"><code>{_h(path)}</code></a>'
 
 
 def _card(item, data, url):
@@ -491,7 +494,7 @@ def render(data, url, kind='dashboard', item=None):
         for key, g in gates.items():
             body += _section(g['_localized_Kanban step'], _facts([(u['state'], g['State and Stage']), (u['next'], g['Gate']), (u['decider'], g['Decided by'])]) + '<p>' + _h(_sentence(g['Exit criterion'])) + '</p><p class="pf-muted">' + _h(g['Record']) + '</p>')
         body += _section(u['rhythm'], '<ul>' + ''.join('<li>' + u[k] + '</li>' for k in ('weekly','monthly','quarterly','yearly')) + '</ul>')
-    footer = ' · '.join(_reference(f'registry/{lang}/{name}') for name in ('dashboard.md', 'portfolio-backlog.md'))
+    footer = ' · '.join(_reference(f'portfolio/{lang}/{name}') for name in ('dashboard.md', 'portfolio-backlog.md'))
     body += '<div class="pf-record-footer"><span class="pf-meta">' + u['source'] + '</span><p>' + footer + '</p><p class="pf-muted">' + u['source_note'] + '</p></div>'
     if kind == 'dashboard':
         body += ''.join(f'<template data-kb-detail="{x["id"]}">{summary(x, data, embedded=True, url=url)}</template>' for x in data['items'])

@@ -307,7 +307,7 @@ The [Service delivery guide](../guides/service-delivery-guide.md) section 4 list
 
 ## 9. Where it runs
 
-From the cutover of the working state (Operating Model 7.1) the stream runs in Jira and Confluence, and until then the Registry holds the working state. The charter holds this schema, and the Registry and the Portfolio hold the evidence records. Jira stays clean: a few statuses and one flag, while the exact business state is in a field.
+The working state of the stream is in the Portfolio, from the Discovery catalog to delivery (Operating Model 7.1). From the cutover, the Work Items of the Teams run in Jira and Confluence, and Jira mirrors the Initiatives, Capabilities, and Features; a gate decision is recorded in the Portfolio and in the Registry first, and then in Jira. The charter holds this schema, and the Registry holds the evidence records. Jira stays clean: a few statuses and one flag, while the exact business state is in a field.
 
 | Business state | Jira status |
 | --- | --- |

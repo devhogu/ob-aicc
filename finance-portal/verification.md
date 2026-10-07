@@ -1,6 +1,6 @@
 # Financial Services O! walkthrough
 
-Checked 2 October 2026 against the generated `html/financial-services/` package. The [full Chromium report](verification/quality-report.json) covers every one of the 152 EN/RU pages; [baseline and current screenshots](verification/preview/) show the recurring layout families. The retained source is `html-alt/financial-services/`.
+Checked 2 October 2026 against the generated `html/financial-services/` package. The [full Chromium report](verification/quality-report.json) covers every one of the 152 EN/RU pages; [baseline and current screenshots](verification/preview) show the recurring layout families. The retained source is `html-alt/financial-services/`.
 
 | Check | Result |
 | --- | ---: |
