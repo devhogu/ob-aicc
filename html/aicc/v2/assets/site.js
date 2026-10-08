@@ -218,6 +218,35 @@
     window.addEventListener('hashchange', fromHash);
     if (!fromHash()) show(keys[0]);
   });
+  // learning maps: steps ticked off are kept in this browser; every progress bar on the page follows them
+  (function () {
+    var KEY = 'hub-learning';
+    function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+    function save(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
+    var state = load();
+    function paint() {
+      document.querySelectorAll('[data-step]').forEach(function (li) {
+        var done = !!state[li.dataset.step];
+        li.classList.toggle('is-done', done);
+        var b = li.querySelector('[data-step-toggle]'); if (b) b.setAttribute('aria-pressed', String(done));
+      });
+      document.querySelectorAll('[data-map-progress]').forEach(function (el) {
+        var id = el.dataset.mapProgress, total = parseInt(el.dataset.total, 10) || 0, done = 0;
+        Object.keys(state).forEach(function (k) { if (state[k] && k.indexOf(id + '|') === 0) done++; });
+        done = Math.min(done, total);
+        var bar = el.querySelector('i'); if (bar) bar.style.width = (total ? Math.round(100 * done / total) : 0) + '%';
+        var label = el.querySelector('b'); if (label) label.textContent = done ? done + ' из ' + total : (el.classList.contains('lm-progress--mini') ? total + ' шагов' : '0 из ' + total);
+        el.classList.toggle('is-complete', total > 0 && done >= total);
+      });
+    }
+    document.addEventListener('click', function (ev) {
+      var b = ev.target.closest('[data-step-toggle]');
+      if (b) { var id = b.closest('[data-step]').dataset.step; if (state[id]) delete state[id]; else state[id] = true; save(state); paint(); return; }
+      if (ev.target.closest('[data-learn-reset]') && confirm('Сбросить отметки о пройденных шагах во всех картах?')) { state = {}; save(state); paint(); }
+    });
+    paint();
+  })();
+
   // reference and knowledge base lists: a search box and topic chips over cards; empty groups hide
   document.querySelectorAll('[data-lib]').forEach(function (root) {
     var search = root.querySelector('[data-lib-search]'), count = root.querySelector('[data-lib-count]'), group = '';

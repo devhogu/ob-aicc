@@ -1,0 +1,309 @@
+# Learning maps: one roadmap of stops, each stop a map from zero to hero in four levels.
+# A step is either one of our guides (guide: id, optional anchor) or an outside course (url, title, lang).
+# outcome - what the reader can do after the step; practice - a small task to try.
+roadmap:
+  title: "Claude: от нуля до эксперта"
+  lede: Общий маршрут обучения работе с AI и Claude. Начните с основ, пройдите остановки по порядку, а дальше выберите ветку — для разработчиков или для руководителей. Каждая остановка — отдельная карта от новичка до эксперта.
+  core: [foundations, prompting, daily-work, skills-automation]
+  branches:
+    - title: Разработчикам
+      maps: [claude-code]
+    - title: Руководителям
+      maps: [leadership]
+levels: [Новичок, Практик, Продвинутый, Эксперт]
+maps:
+  - id: foundations
+    title: Основы работы с AI
+    for: для всех
+    goal: Понимать, что AI умеет и чего не умеет, работать с ним осознанно и безопасно, отвечать за результат.
+    levels:
+      - checkpoint: Вы провели несколько полезных разговоров, знаете, что можно передавать AI, и проверяете его ответы.
+        steps:
+          - guide: getting-started
+            outcome: Начать работу с ассистентом на простой задаче, которую легко проверить.
+            practice: Сократите длинное письмо до пяти пунктов и сверьте с оригиналом.
+          - guide: what-to-share
+            outcome: Отличать данные, которые можно передавать, от тех, что нельзя.
+            practice: Возьмите свой рабочий документ и отметьте, что в нём нужно убрать перед отправкой в AI.
+          - guide: checking-results
+            outcome: Проверять ответ AI по списку — факты, цифры, полнота, тон.
+            practice: Найдите в одном ответе Claude утверждение, которое нужно сверить с источником.
+      - checkpoint: Вы понимаете, как устроена языковая модель, и пользуетесь рамкой 4D в своей работе.
+        steps:
+          - guide: ai-capabilities-limitations
+            outcome: Объяснять, почему модель уверенно ошибается и где ей нужны ваши документы.
+          - guide: ai-fluency-4d
+            outcome: Разбирать задачу по четырём навыкам — делегировать, описать, оценить, ответить.
+            practice: Пройдите одну рабочую задачу по 4D и запишите, что отдали AI, а что оставили себе.
+      - checkpoint: Вы осознанно выбираете способ работы с AI и ведёте цикл «описать — оценить».
+        steps:
+          - guide: ai-fluency-complete-guide
+            outcome: Выбирать между автоматизацией, совместной работой и самостоятельной работой AI.
+            practice: Сделайте упражнение «Плохой запрос» из руководства.
+          - url: https://academy.claude.com/courses/ai-capabilities-and-limitations
+            title: "Курс: AI Capabilities and Limitations"
+            lang: en
+            minutes: 60
+            outcome: Закрепить картину возможностей и ограничений моделей — с сертификатом.
+      - checkpoint: У вас есть личные правила работы с AI, и вы помогаете коллегам работать ответственно.
+        steps:
+          - guide: ai-fluency-complete-guide
+            anchor: policy
+            title: Личные правила работы с AI
+            outcome: Записать свою политику — для каких задач, какие границы, как проверяю, как раскрываю участие AI.
+            practice: Напишите свои правила на одну страницу и обсудите с руководителем.
+          - page: responsible-ai
+            title: Ответственный AI — курс в шести частях
+            outcome: Понимать риски AI в финансах и принципы ответственного применения.
+          - url: https://academy.claude.com/courses/ai-fluency-framework-foundations
+            title: "Курс: AI Fluency — Framework and Foundations"
+            lang: en
+            minutes: 240
+            outcome: Пройти полный курс Anthropic и получить сертификат.
+
+  - id: prompting
+    title: Запросы к Claude
+    for: для всех
+    goal: Ставить Claude задачу так, чтобы с первого раза получать нужный результат, — от простой просьбы до сложного многошагового сценария.
+    levels:
+      - checkpoint: Ваши запросы ясные — с ролью, задачей, материалами и форматом — и вы показываете примеры.
+        steps:
+          - guide: writing-a-task
+            outcome: Собирать запрос из пяти частей.
+            practice: Перепишите свой последний запрос по пяти частям и сравните ответы.
+          - guide: prompt-clear-and-direct
+            outcome: Применять тест на коллегу и объяснять, зачем нужен результат.
+          - guide: prompt-examples
+            outcome: Задавать тон и формат примерами.
+            practice: Дайте Claude три своих удачных письма как образец для нового.
+      - checkpoint: Вы управляете структурой, форматом и работаете с длинными документами.
+        steps:
+          - guide: prompt-structure
+            outcome: Разделять инструкции и данные метками, задавать роль.
+          - guide: prompt-output-format
+            outcome: Получать ответ нужной формы и длины.
+          - guide: prompt-long-documents
+            outcome: Работать с большими документами — порядок, метки, цитаты.
+            practice: Сравните два договора, попросив сначала выписать цитаты.
+      - checkpoint: Вы снижаете выдумки и решаете сложные задачи цепочками.
+        steps:
+          - guide: prompt-thinking
+            outcome: Выбирать уровень усилия и просить подумать там, где это нужно.
+          - guide: prompt-fewer-hallucinations
+            outcome: Применять семь приёмов против выдумок.
+            practice: Задайте вопрос по документу с разрешением сказать «не знаю» и проверкой по цитатам.
+          - guide: prompt-chains
+            outcome: Разбивать большую задачу на цепочку «черновик — проверка — доработка».
+      - checkpoint: Вы пишете шаблоны для повторяющихся задач и улучшаете их по результатам проверки.
+        steps:
+          - guide: prompting-complete-guide
+            outcome: Строить сложный запрос по каркасу и улучшать его на 5–10 примерах.
+            practice: Сделайте шаблон для своей еженедельной задачи и проверьте на прошлых примерах.
+          - url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
+            title: Лучшие практики составления подсказок — документация на русском
+            lang: ru
+            minutes: 60
+            outcome: Знать первоисточник и особенности конкретных моделей.
+          - url: https://github.com/anthropics/prompt-eng-interactive-tutorial
+            title: Интерактивный учебник Anthropic по запросам
+            lang: en
+            minutes: 240
+            outcome: Пройти девять глав с упражнениями.
+
+  - id: daily-work
+    title: Claude в ежедневной работе
+    for: для всех
+    goal: Уверенно работать в Claude каждый день — проекты, документы, Office, подключения и Cowork — безопасно для данных организации.
+    levels:
+      - checkpoint: Вы знаете возможности Claude и ведёте свой первый проект.
+        steps:
+          - guide: claude-overview
+            outcome: Выбирать между разговором, проектом, артефактом и навыком.
+          - guide: claude-projects
+            outcome: Собирать проект с документами и инструкциями.
+            practice: Создайте проект для одной своей повторяющейся задачи.
+      - checkpoint: Вы работаете с файлами, получаете готовые Word, Excel и PowerPoint и пользуетесь Claude прямо в Office.
+        steps:
+          - guide: claude-work-complete-guide
+            anchor: projects
+            title: Проекты от создания до сопровождения
+            outcome: Писать хорошие инструкции проекта и делиться им с коллегами.
+          - guide: claude-work-complete-guide
+            anchor: create-files
+            title: Создание Word, Excel, PowerPoint и PDF
+            outcome: Получать готовые файлы и артефакты.
+            practice: Попросите сделать таблицу Excel с формулами по вашей выгрузке.
+          - guide: claude-work-complete-guide
+            anchor: office
+            title: Claude в Excel, Word, PowerPoint и Outlook
+            outcome: Работать с открытым файлом прямо в Office.
+      - checkpoint: Вы поручаете Claude многошаговую работу в Cowork и используете подключения.
+        steps:
+          - guide: claude-work-complete-guide
+            anchor: connectors
+            title: Подключения и исследование
+            outcome: Работать с почтой, файлами и календарём через подключения.
+          - guide: claude-cowork
+            outcome: Понимать, когда нужен Cowork, и безопасно начать.
+          - guide: claude-work-complete-guide
+            anchor: cowork
+            title: Cowork — поручить Claude работу
+            outcome: Вести цикл задачи, задавать постоянный контекст и задачи по расписанию.
+            practice: Поручите Cowork собрать справку из папки документов.
+      - checkpoint: Вы применяете Claude в сценариях своей роли и знаете правила безопасности данных.
+        steps:
+          - guide: claude-work-complete-guide
+            anchor: safety
+            title: Безопасность и данные
+            outcome: Знать, где нет следа аудита и когда Cowork и надстройки не подходят.
+          - guide: claude-work-complete-guide
+            anchor: roles
+            title: Сценарии по ролям
+            outcome: Внедрить один сценарий в своём подразделении.
+          - url: https://academy.claude.com/courses/claude-101
+            title: "Курс: Claude 101"
+            lang: en
+            minutes: 90
+            outcome: Пройти вводный курс Anthropic с сертификатом.
+          - url: https://academy.claude.com/courses/introduction-to-claude-cowork
+            title: "Курс: Introduction to Claude Cowork"
+            lang: en
+            minutes: 150
+            outcome: Пройти курс по Cowork с сертификатом.
+
+  - id: skills-automation
+    title: Навыки и автоматизация рабочего места
+    for: для всех, кто хочет автоматизировать свою работу
+    goal: Превращать повторяющуюся работу в навыки и автоматические задачи, проверять их и безопасно делиться с коллегами.
+    levels:
+      - checkpoint: Вы понимаете, что такое навык, и нашли в своей работе первую задачу для автоматизации.
+        steps:
+          - guide: claude-skills
+            outcome: Отличать навык от проекта и подключения.
+          - guide: automate-a-routine-task
+            outcome: Пройти пять шагов от ручной задачи к автоматизации.
+            practice: Опишите свою рутинную задачу в трёх строках — вход, выход, кто читает.
+      - checkpoint: Вы написали и включили свой первый навык.
+        steps:
+          - guide: skills-complete-guide
+            anchor: anatomy
+            title: Как устроен навык
+            outcome: Писать SKILL.md с хорошим описанием.
+          - guide: skills-complete-guide
+            anchor: app
+            title: Навыки в приложении Claude
+            outcome: Включать, загружать и создавать навык в разговоре.
+            practice: Сделайте навык «служебная записка» по образцу из руководства.
+      - checkpoint: Ваши навыки срабатывают надёжно, а повторяющаяся работа идёт по расписанию.
+        steps:
+          - guide: skills-complete-guide
+            anchor: write
+            title: Как написать хороший навык
+            outcome: Применять девять правил написания.
+          - guide: skills-complete-guide
+            anchor: test
+            title: Проверка и улучшение навыка
+            outcome: Проверять навык на трёх задачах с ним и без него.
+          - guide: claude-work-complete-guide
+            anchor: cowork-schedule
+            title: Задачи по расписанию в Cowork
+            outcome: Настроить еженедельную задачу, которая готовит черновик.
+      - checkpoint: Вы делитесь проверенными навыками с коллегами и строите работу людей и агентов вместе.
+        steps:
+          - guide: skills-complete-guide
+            anchor: safety
+            title: Безопасность и распространение навыков
+            outcome: Проверять навыки перед включением и распространять через общую библиотеку.
+          - guide: human-agent-teams
+            outcome: Встроить агента в работу команды с постепенным доверием.
+          - url: https://academy.claude.com/courses/introduction-to-agent-skills
+            title: "Курс: Introduction to Agent Skills"
+            lang: en
+            minutes: 60
+            outcome: Пройти курс Anthropic по навыкам.
+
+  - id: claude-code
+    title: Claude Code
+    for: для разработчиков
+    goal: Пройти путь от первого сеанса в репозитории до долгой работы Claude Code без присмотра — с проверкой результата и по правилам регулируемой организации.
+    levels:
+      - checkpoint: Вы работаете с Claude Code в своём репозитории на повседневных задачах.
+        steps:
+          - guide: claude-code-first-session
+            outcome: Запустить Claude Code, создать CLAUDE.md, дать первую задачу.
+          - guide: claude-code-how-it-works
+            outcome: Понимать агентный цикл, инструменты, сеансы и режимы разрешений.
+          - guide: claude-code-workflows
+            outcome: Применять рецепты — разобраться в коде, исправить ошибку, написать тесты.
+            practice: Попросите Claude написать недостающие тесты к одному модулю.
+      - checkpoint: Ваши сессии эффективны, проект настроен, расходы под контролем.
+        steps:
+          - guide: claude-code-best-practices
+            outcome: Давать способ проверки, работать по плану, держать контекст чистым.
+          - guide: claude-code-setup
+            outcome: Настроить CLAUDE.md, разрешения, навыки и хуки.
+          - guide: claude-code-costs
+            outcome: Применять десять привычек экономии контекста и бюджета.
+      - checkpoint: Вы расширяете Claude Code помощниками, хуками и подключениями.
+        steps:
+          - guide: claude-code-subagents
+            outcome: Проектировать помощников и понимать, когда они нужны.
+          - guide: claude-code-hooks
+            outcome: Делать обязательные действия хуками.
+          - guide: claude-code-mcp
+            outcome: Подключать внешние системы безопасно.
+      - checkpoint: Вы запускаете долгую работу без присмотра и уверенно проверяете её результат.
+        steps:
+          - guide: claude-code-in-action
+            outcome: Цели, проверочный навык, режимы, автоматизация, проверка без присмотра и безопасность.
+            practice: Поставьте /goal на прохождение тестов и проверьте результат по diff, а не по резюме.
+          - url: https://code.claude.com/docs/ru/overview
+            title: Документация Claude Code на русском
+            lang: ru
+            minutes: 120
+            outcome: Знать первоисточник по всем возможностям.
+          - url: https://academy.claude.com/courses/claude-code-in-action
+            title: "Курс: Claude Code in Action"
+            lang: en
+            minutes: 60
+            outcome: Пройти курс Anthropic с сертификатом.
+
+  - id: leadership
+    title: Внедрение и руководство
+    for: для руководителей
+    goal: Принимать решения о внедрении Claude в организации и строить работу людей и агентов в командах — с учётом регулирования.
+    levels:
+      - checkpoint: Вы понимаете возможности и риски AI на уровне, достаточном для решений.
+        steps:
+          - guide: ai-fluency-4d
+            outcome: Говорить с командой на общем языке 4D.
+          - page: responsible-ai
+            title: Ответственный AI — курс в шести частях
+            outcome: Понимать риски и принципы ответственного применения.
+      - checkpoint: Вы знаете, как работает команда людей и агентов, и готовы к пилоту.
+        steps:
+          - guide: human-agent-teams
+            outcome: Оценить готовность команды и спланировать первые две недели.
+            practice: Пройдите пять вопросов готовности со своей командой.
+          - guide: claude-tag
+            outcome: Понимать, как агент работает в общих каналах — если вы пользуетесь Slack.
+      - checkpoint: Вы можете провести пять решений о внедрении для своей организации.
+        steps:
+          - guide: deploying-claude-enterprise
+            outcome: Структура, доступ, управление, расходы, прозрачность и позиция для регулируемого подразделения.
+      - checkpoint: Вы ведёте внедрение и измеряете его по сигналам, а не по нормам.
+        steps:
+          - guide: deploying-claude-enterprise
+            anchor: adoption
+            title: Сигналы внедрения
+            outcome: Читать сигналы внедрения и находить причины.
+          - url: https://academy.claude.com/courses/deploying-claude-enterprise-with-confidence
+            title: "Курс: Deploying Claude Enterprise with Confidence"
+            lang: en
+            minutes: 150
+            outcome: Пройти курс Anthropic с рабочим планом внедрения.
+          - url: https://academy.claude.com/courses/building-effective-human-agent-teams
+            title: "Курс: Building Effective Human-Agent Teams"
+            lang: en
+            minutes: 45
+            outcome: Пройти курс о совместной работе людей и агентов.

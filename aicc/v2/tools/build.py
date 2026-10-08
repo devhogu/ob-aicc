@@ -278,6 +278,7 @@ def add_generated(pages, site, terms):
     import cards
     import library
     library.add_pages(pages, site, sys.modules[__name__])
+    library.add_maps(pages, sys.modules[__name__])
     cards.add_pages(pages, site, terms, sys.modules[__name__])
 
 
@@ -469,7 +470,7 @@ def publish_sources(site):
     """The source files of this version, so it can be read without the repository."""
     base = OUT / 'sources'
     listing = []
-    for folder in ('content', 'vocabulary', 'cards', 'reference'):
+    for folder in ('content', 'vocabulary', 'cards', 'reference', 'learning'):
         for path in sorted((SRC / folder).rglob('*')):
             if path.is_file() and path.suffix in ('.md', '.yaml', '.yml', '.json'):
                 target = base / path.relative_to(SRC)
