@@ -112,13 +112,47 @@ def now_line(day):
             f'сейчас: итерация {it["name"]} ({it["title"]}), неделя {r["week"]} из {it["weeks"]}')
 
 
+def item_html(item):
+    return (f'<a class="pi-item pi-item--{STATE_CLASS.get(item["state"], "backlog")}" href="{esc(item["href"])}" title="{esc(item["title"])} · {esc(item["state"])}">'
+            f'<b>{esc(item["id"])}</b><span>{esc(item["title"])}</span></a>')
+
+
+STATE_CLASS = {'Бэклог': 'backlog', 'Готово к работе': 'ready', 'В работе': 'doing', 'На проверке': 'review', 'Завершено': 'done'}
+
+
+# START_CONTRACT: board_html
+#   PURPOSE: The work of each project placed in the iterations of one increment, with what is not yet planned.
+#   INPUTS: { pi: dict - an increment; it: dict - the current iteration; rows: list - {id, title, href, find, function, area, items: [{id, title, state, iteration, href}]} }
+#   OUTPUTS: { str - HTML table }
+#   SIDE_EFFECTS: none
+# END_CONTRACT: board_html
+def board_html(pi, it, rows):
+    names = [f'{pi["name"]} {i["name"]}' for i in pi['iterations']]
+    head = ''.join(f'<th{" class=\"is-current\"" if i["name"] == it["name"] and i["year"] == it["year"] else ""}><b>{i["name"]}</b> {i["title"]}<small>{span(i["start"], i["end"])}</small></th>'
+                   for i in pi['iterations'])
+    body = []
+    for row in rows:
+        cells = [[x for x in row['items'] if x.get('iteration') == n] for n in names]
+        loose = [x for x in row['items'] if not x.get('iteration') and x['state'] != 'Завершено']
+        if not any(cells) and not loose:
+            continue
+        body.append(f'<tr data-kb-row data-find="{esc(row["find"])}" data-function="{esc(row["function"])}" data-area="{esc(row["area"])}">'
+                    f'<th scope="row"><a href="{esc(row["href"])}">{esc(row["id"])}</a><span>{esc(row["title"])}</span></th>'
+                    + ''.join(f'<td>{"".join(item_html(x) for x in c)}</td>' for c in cells)
+                    + f'<td class="pi-loose">{"".join(item_html(x) for x in loose)}</td></tr>')
+    if not body:
+        body.append(f'<tr><td colspan="5" class="pi-empty">В этом PI работы не запланировано.</td></tr>')
+    return (f'<div class="o-table-wrap pi-board-wrap"><table class="pi-board"><thead><tr><th>Проект</th>{head}<th>Не запланировано</th></tr></thead>'
+            f'<tbody>{"".join(body)}</tbody></table></div>')
+
+
 # START_CONTRACT: calendar_html
-#   PURPOSE: The PI calendar as of a date: the current week, three increments from a shift with their iterations and IP weeks, and the weeks of the current iteration.
-#   INPUTS: { day: date; shift: int - increments to move the three-increment window }
+#   PURPOSE: The PI calendar as of a date: the current week, three increments from a shift with their iterations and IP weeks, the work of the first of them by iteration, and the weeks of the current iteration.
+#   INPUTS: { day: date; shift: int - increments to move the three-increment window; rows: list - see board_html }
 #   OUTPUTS: { str - HTML; site.js renders the same markup for the reader's own date with the same rules }
 #   SIDE_EFFECTS: none
 # END_CONTRACT: calendar_html
-def calendar_html(day, shift=0):
+def calendar_html(day, shift=0, rows=()):
     r = rolling(day, 1)
     it, week = r['iteration'], r['week']
     year, quarter = it['year'], (it['month'] - 1) // 3 + 1
@@ -135,12 +169,13 @@ def calendar_html(day, shift=0):
         done = max(0, min(total, (day - pi['start']).days + 1))
         pct = 100 * done // total
         state = 'идёт' if pi['name'] == it['pi'] else ('завершён' if done == total else 'впереди')
-        rows = ''.join(f'<li{" class=\"is-current\"" if i["name"] == it["name"] and i["year"] == it["year"] else ""}><b>{i["name"]}</b><em>{i["title"]}</em>'
+        its = ''.join(f'<li{" class=\"is-current\"" if i["name"] == it["name"] and i["year"] == it["year"] else ""}><b>{i["name"]}</b><em>{i["title"]}</em>'
                        f'<span>{span(i["start"], i["end"])} · {i["weeks"]} нед.</span></li>' for i in pi['iterations'])
         out.append(f'<article class="pi-card{" is-current" if pi["name"] == it["pi"] else ""}"><header><strong>{pi["name"]}</strong><small>{state}</small></header>'
                    f'<span class="pi-dates">{span(pi["start"], pi["end"])}</span>'
                    f'<div class="pi-progress" title="Пройдено {pct}%"><span style="width:{pct}%"></span></div>'
-                   f'<ol class="pi-its">{rows}</ol><p class="pi-ip"><b>Неделя IP</b> {span(pi["ip"]["start"], pi["ip"]["end"])}</p></article>')
+                   f'<ol class="pi-its">{its}</ol><p class="pi-ip"><b>Неделя IP</b> {span(pi["ip"]["start"], pi["ip"]["end"])}</p></article>')
+    out.append('</div>')
     ip = increment(year, quarter)['ip']['name']
     weeks = []
     for w in range(1, it['weeks'] + 1):
@@ -150,5 +185,6 @@ def calendar_html(day, shift=0):
         cls = ' '.join(x for x in ('is-current' if w == week else '', 'is-ip' if name == ip else '') if x)
         weeks.append(f'<li{f" class=\"{cls}\"" if cls else ""}{f" title=\"{esc(text)}\"" if text else ""}><b>W{w}</b>'
                      f'<span>{span(start, start + timedelta(days=6))}</span>{f"<small>{esc(text.split(chr(59))[0])}</small>" if text else ""}</li>')
-    out.append(f'</div><div class="pi-weeks"><span class="pi-weeks__label">Недели итерации {it["name"]} ({it["title"]})</span><ol>{"".join(weeks)}</ol></div>')
+    out.append(f'<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации {it["name"]} ({it["title"]})</span><ol>{"".join(weeks)}</ol></div>'
+               f'<h3 class="pi-board-title">Работа по итерациям {pis[0]["name"]}</h3>{board_html(pis[0], it, rows)}')
     return ''.join(out)

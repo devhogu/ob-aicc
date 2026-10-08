@@ -2,7 +2,7 @@
 title: Воронка и портфель
 summary: Как принести идею, как работа движется по канбану портфеля и кто принимает решения в точках контроля.
 order: 10
-related: projects/portfolio, projects/new, process/roles, hub/how-we-work
+related: projects, projects/new, process/roles, hub/how-we-work
 ---
 
 [[funnel|Воронка]] — вход: сюда приносят идеи и задачи. [[portfolio|Портфель]] — выбор: из воронки берут то, за что стоит браться сейчас, и ведут до результата. Оба уровня видны на одном канбане.
@@ -38,7 +38,7 @@ flowchart TB
   end
   R1 ~~~ R2
 ```
-<p class="kb-live">Действующий канбан с реальными карточками — в разделе <a href="page:projects/portfolio">Проекты → Портфель</a>.</p>
+<p class="kb-live">Действующий канбан с реальными карточками — в разделе <a href="page:projects#portfolio">Проекты → Портфель</a>.</p>
 
 ## Три решения {#decisions}
 

@@ -46,14 +46,22 @@ class PageScript(unittest.TestCase):
         text = SITE_JS.read_text(encoding='utf-8')
         block = text[text.index('var PI = (function'):text.index('window.HubPI')]
         days = [date(2026, 9, 27) + timedelta(days=9 * k) for k in range(90)]
-        data = {k: cadence.DATA[k] for k in ('ip_weeks', 'notes')}
+        rows = [{'id': 'INI-001', 'title': 'Проект <первый>', 'href': '../ini-001/', 'find': 'ini-001', 'function': 'HR', 'area': 'Услуга "А"',
+                 'items': [{'id': 'FEAT-001', 'title': 'Отчёт', 'state': 'В работе', 'iteration': '2026-PIQ4 I11', 'href': '../ini-001/'},
+                           {'id': 'FEAT-002', 'title': 'Форма', 'state': 'Бэклог', 'iteration': '', 'href': '../ini-001/'},
+                           {'id': 'FEAT-003', 'title': 'Сверка', 'state': 'Завершено', 'iteration': '2027-PIQ1 I02', 'href': '../ini-001/'}]},
+                {'id': 'INI-002', 'title': 'Второй', 'href': '../ini-002/', 'find': 'ini-002', 'function': '', 'area': '',
+                 'items': [{'id': 'FEAT-004', 'title': 'Готово', 'state': 'Завершено', 'iteration': '', 'href': '../ini-002/'}]}]
+        data = {'ip_weeks': cadence.DATA['ip_weeks'], 'notes': cadence.DATA['notes'], 'rows': rows}
         program = block + (f'Object.assign(PI.data, {json.dumps(data, ensure_ascii=False)});'
                            f'var days = {json.dumps([d.isoformat() for d in days])};'
                            'var out = []; days.forEach(function (s) { var p = s.split("-").map(Number), t = PI.at(p[0], p[1], p[2]);'
                            '[-1, 0, 2].forEach(function (k) { out.push(PI.calendar(t, k)); }); out.push(PI.nowLine(t)); });'
                            'process.stdout.write(JSON.stringify(out));')
         got = json.loads(subprocess.run(['node', '-e', program], capture_output=True, text=True, check=True).stdout)
-        want = [x for d in days for x in [cadence.calendar_html(d, k) for k in (-1, 0, 2)] + [cadence.now_line(d)]]
+        want = [x for d in days for x in [cadence.calendar_html(d, k, rows) for k in (-1, 0, 2)] + [cadence.now_line(d)]]
+        self.assertIn('FEAT-001', cadence.calendar_html(date(2026, 10, 8), 0, rows))  # planned in I11 of the current PI
+        self.assertNotIn('FEAT-004', ''.join(want))  # done and never planned: shown nowhere
         for g, w in zip(got, want):
             self.assertEqual(g, w)
         self.assertEqual(len(got), len(want))

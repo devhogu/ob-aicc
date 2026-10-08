@@ -166,8 +166,10 @@
         var ok = !q || (el.dataset.find || '').indexOf(q) >= 0;
         selects.forEach(function (s) { if (s.value && el.dataset[s.dataset.kbFilter] !== s.value) ok = false; });
         el.hidden = !ok;
-        if (ok && (el.hasAttribute('data-kb-open') || !root.querySelector('[data-kb-open]'))) shown++;
       });
+      // the count follows the open view: cards on a board, otherwise rows of a table
+      var view = root.querySelector('[data-tab-panel]:not([hidden])') || root;
+      shown = view.querySelectorAll('[data-kb-open]:not([hidden])').length || view.querySelectorAll('[data-kb-row]:not([hidden])').length;
       root.querySelectorAll('.kb-column').forEach(function (col) {
         var n = col.querySelectorAll('[data-kb-open]:not([hidden])').length, c = col.querySelector('.kb-count'); if (c) c.textContent = n;
       });
@@ -178,6 +180,7 @@
       if (!panel) return; panel.hidden = true; panel.querySelector('.kb-detail-body').replaceChildren();
       if (opener) { opener.removeAttribute('aria-current'); if (focus) opener.focus(); } opener = null;
     }
+    root.addEventListener('kb-refresh', apply);
     if (search) search.addEventListener('input', apply);
     selects.forEach(function (s) { s.addEventListener('change', apply); });
     root.querySelectorAll('[data-kb-open]').forEach(function (card) {
@@ -199,12 +202,17 @@
   document.querySelectorAll('[data-tabs]').forEach(function (root) {
     var buttons = root.querySelectorAll('[data-tab]'), panels = root.querySelectorAll('[data-tab-panel]');
     root.classList.add('tabs-on');
+    var keys = Array.prototype.map.call(buttons, function (b) { return b.dataset.tab; });
     function show(key) {
       buttons.forEach(function (b) { b.setAttribute('aria-selected', String(b.dataset.tab === key)); });
       panels.forEach(function (p) { p.hidden = p.dataset.tabPanel !== key; });
+      root.dispatchEvent(new Event('kb-refresh', {bubbles: true}));
     }
-    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.tab); }); });
-    show(buttons[0].dataset.tab);
+    // a tab opens from the address (#plan) and keeps it, so a view can be linked to
+    function fromHash() { var k = decodeURIComponent(location.hash.slice(1)); if (keys.indexOf(k) >= 0) { show(k); return true; } return false; }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.tab); try { history.replaceState(null, '', '#' + b.dataset.tab); } catch (e) {} }); });
+    window.addEventListener('hashchange', fromHash);
+    if (!fromHash()) show(keys[0]);
   });
   // PI calendar: the same rules as aicc/v2/tools/cadence.py, applied to the reader's date on every load
   var PI = (function () {
@@ -212,7 +220,7 @@
     var MONTHS = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
     var SHORT = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
     var LONG = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-    var data = {ip_weeks: {}, notes: {}};
+    var data = {ip_weeks: {}, notes: {}, rows: []};
     function at(y, m, d) { return Date.UTC(y, m - 1, d); }
     function parts(t) { var x = new Date(t); return {y: x.getUTCFullYear(), m: x.getUTCMonth() + 1, d: x.getUTCDate(), wd: (x.getUTCDay() + 6) % 7}; }
     function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -236,6 +244,26 @@
       var x = parts(a), y = parts(b), n = long ? LONG : SHORT;
       return x.d + ' ' + n[x.m - 1] + (x.y !== y.y ? ' ' + x.y : '') + ' – ' + y.d + ' ' + n[y.m - 1] + ' ' + y.y;
     }
+    var STATE_CLASS = {'Бэклог': 'backlog', 'Готово к работе': 'ready', 'В работе': 'doing', 'На проверке': 'review', 'Завершено': 'done'};
+    function item(x) {
+      return '<a class="pi-item pi-item--' + (STATE_CLASS[x.state] || 'backlog') + '" href="' + esc(x.href) + '" title="' + esc(x.title) + ' · ' + esc(x.state) + '"><b>' + esc(x.id) + '</b><span>' + esc(x.title) + '</span></a>';
+    }
+    function board(pi, it) {
+      var names = pi.iterations.map(function (i) { return pi.name + ' ' + i.name; });
+      var head = pi.iterations.map(function (i) {
+        return '<th' + (i.name === it.name && i.year === it.year ? ' class="is-current"' : '') + '><b>' + i.name + '</b> ' + i.title + '<small>' + span(i.start, i.end) + '</small></th>';
+      }).join('');
+      var body = [];
+      data.rows.forEach(function (row) {
+        var cells = names.map(function (n) { return row.items.filter(function (x) { return x.iteration === n; }); });
+        var loose = row.items.filter(function (x) { return !x.iteration && x.state !== 'Завершено'; });
+        if (!cells.some(function (c) { return c.length; }) && !loose.length) return;
+        body.push('<tr data-kb-row data-find="' + esc(row.find) + '" data-function="' + esc(row['function']) + '" data-area="' + esc(row.area) + '"><th scope="row"><a href="' + esc(row.href) + '">' + esc(row.id) + '</a><span>' + esc(row.title) + '</span></th>' +
+          cells.map(function (c) { return '<td>' + c.map(item).join('') + '</td>'; }).join('') + '<td class="pi-loose">' + loose.map(item).join('') + '</td></tr>');
+      });
+      if (!body.length) body.push('<tr><td colspan="5" class="pi-empty">В этом PI работы не запланировано.</td></tr>');
+      return '<div class="o-table-wrap pi-board-wrap"><table class="pi-board"><thead><tr><th>Проект</th>' + head + '<th>Не запланировано</th></tr></thead><tbody>' + body.join('') + '</tbody></table></div>';
+    }
     function today() { var n = new Date(); return at(n.getFullYear(), n.getMonth() + 1, n.getDate()); }
     function nowLine(day) {
       var w = weekOf(day), it = w[0], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1);
@@ -248,8 +276,9 @@
       var out = ['<div class="pi-bar"><div class="pi-now"><span class="pi-now__label">Сейчас</span><strong>' + it.pi + ' · ' + it.name + ' · неделя ' + week + ' из ' + it.weeks + '</strong><span>' + span(monday, monday + 6 * DAY) + '</span>' +
         (note ? '<span class="pi-note">' + esc(note) + '</span>' : '') + '</div>' +
         '<div class="pi-nav"><button type="button" data-pi-step="-1" aria-label="Предыдущий PI">‹</button><button type="button" data-pi-step="0">Сегодня</button><button type="button" data-pi-step="1" aria-label="Следующий PI">›</button></div></div><div class="pi-row">'];
+      var pis = [0, 1, 2].map(function (k) { return increment(Math.floor((q + k) / 4), (q + k) % 4 + 1); });
       for (var k = 0; k < 3; k++) {
-        var pi = increment(Math.floor((q + k) / 4), (q + k) % 4 + 1);
+        var pi = pis[k];
         var total = Math.round((pi.end - pi.start) / DAY) + 1, done = Math.max(0, Math.min(total, Math.round((day - pi.start) / DAY) + 1)), pct = Math.floor(100 * done / total);
         var state = pi.name === it.pi ? 'идёт' : (done === total ? 'завершён' : 'впереди');
         var rows = pi.iterations.map(function (i) {
@@ -259,13 +288,15 @@
           '<span class="pi-dates">' + span(pi.start, pi.end) + '</span><div class="pi-progress" title="Пройдено ' + pct + '%"><span style="width:' + pct + '%"></span></div>' +
           '<ol class="pi-its">' + rows + '</ol><p class="pi-ip"><b>Неделя IP</b> ' + span(pi.ip.start, pi.ip.end) + '</p></article>');
       }
+      out.push('</div>');
       var ip = increment(year, quarter).ip.name, weeks = [];
       for (var n = 1; n <= it.weeks; n++) {
         var start = it.start + (n - 1) * WEEK, name = it.pi + ' ' + it.name + 'W' + n, text = data.notes[name] || '';
         var cls = [n === week ? 'is-current' : '', name === ip ? 'is-ip' : ''].filter(Boolean).join(' ');
         weeks.push('<li' + (cls ? ' class="' + cls + '"' : '') + (text ? ' title="' + esc(text) + '"' : '') + '><b>W' + n + '</b><span>' + span(start, start + 6 * DAY) + '</span>' + (text ? '<small>' + esc(text.split(';')[0]) + '</small>' : '') + '</li>');
       }
-      out.push('</div><div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + it.name + ' (' + it.title + ')</span><ol>' + weeks.join('') + '</ol></div>');
+      out.push('<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + it.name + ' (' + it.title + ')</span><ol>' + weeks.join('') + '</ol></div>' +
+        '<h3 class="pi-board-title">Работа по итерациям ' + pis[0].name + '</h3>' + board(pis[0], it));
       return out.join('');
     }
     return {data: data, today: today, at: at, nowLine: nowLine, calendar: calendar};
@@ -273,9 +304,9 @@
   window.HubPI = PI;
   document.querySelectorAll('[data-pi-now]').forEach(function (el) { el.textContent = PI.nowLine(PI.today()); });
   document.querySelectorAll('[data-pi-calendar]').forEach(function (el) {
-    try { var given = JSON.parse(el.dataset.piCalendar); PI.data.ip_weeks = given.ip_weeks || {}; PI.data.notes = given.notes || {}; } catch (e) {}
+    try { var given = JSON.parse(el.dataset.piCalendar); PI.data.ip_weeks = given.ip_weeks || {}; PI.data.notes = given.notes || {}; PI.data.rows = given.rows || []; } catch (e) {}
     var shift = 0;
-    function draw() { el.innerHTML = PI.calendar(PI.today(), shift); }
+    function draw() { el.innerHTML = PI.calendar(PI.today(), shift); el.dispatchEvent(new Event('kb-refresh', {bubbles: true})); }
     draw();
     el.addEventListener('click', function (ev) {
       var b = ev.target.closest('[data-pi-step]'); if (!b) return;

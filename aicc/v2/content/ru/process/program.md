@@ -2,7 +2,7 @@
 title: Программа
 summary: Как инициатива превращается в результат: доска и бэклог программы, рабочий цикл и связь с Jira.
 order: 20
-related: projects/program, process/portfolio, process/roles, hub/how-we-work
+related: projects, process/portfolio, process/roles, hub/how-we-work
 ---
 
 [[program|Программа]] — уровень, на котором начатая инициатива превращается в результат. Её ведёт [[project-manager|руководитель проекта]], а очерёдность работ между проектами определяет [[program-decision-forum|форум решений по программе]].
@@ -29,7 +29,7 @@ flowchart TB
   end
   R1 ~~~ R2
 ```
-<p class="kb-live">Действующая доска программы — в разделе <a href="page:projects/program">Проекты → Программа</a>.</p>
+<p class="kb-live">Действующая доска программы — в разделе <a href="page:projects#program">Проекты → Программа</a>.</p>
 
 ## Бэклог программы {#backlog}
 
