@@ -42,6 +42,8 @@ NEXT_POINT = {
     'Закрыто': ('—', '—', 'Причина закрытия записана на карточке.'),
 }
 RUN_RATE_NEXT = {'Воронка': ('Взять в работу', 'менеджер продукта', 'Есть место по WIP-лимиту; запрос записан строкой на постоянной карточке.')}
+TAB_HINT = {'portfolio': 'где каждый проект', 'program': 'что делается сейчас', 'plan': 'что по итерациям',
+            'backlog': 'что дальше', 'decisions': 'кто что решает', 'register': 'все карточки'}
 PROFILE_TITLE = {'initiative': 'Инициатива', 'run-rate': 'Текущая работа', 'recurring-check': 'Регулярная проверка', 'enablement': 'Обучение и внедрение'}
 
 
@@ -147,7 +149,7 @@ def add_pages(pages, site, terms, api):
                 '<div><a data-kb-full>Полная карточка →</a><button type="button" data-kb-close>Закрыть ×</button></div></div><div class="kb-detail-body"></div></section>')
 
     def tabs(items):
-        heads = ''.join(f'<button type="button" role="tab" data-tab="{k}"{" aria-selected=true" if i == 0 else ""}>{e(label)}</button>' for i, (k, label, _) in enumerate(items))
+        heads = ''.join(f'<button type="button" role="tab" data-tab="{k}"{" aria-selected=true" if i == 0 else ""}><span>{e(label)}</span><small>{e(TAB_HINT[k])}</small></button>' for i, (k, label, _) in enumerate(items))
         panels = ''.join(f'<section class="tab-panel" id="{k}" data-tab-panel="{k}" aria-label="{e(label)}"><h2 class="tab-title">{e(label)}</h2>{html}</section>' for k, label, html in items)
         return f'<div data-tabs><div class="pf-tabs" role="tablist">{heads}</div>{panels}</div>'
 
@@ -165,15 +167,15 @@ def add_pages(pages, site, terms, api):
     here = 'projects'
     lane_of = lambda c, w: w.get('class_of_service') or c.get('class_of_service') or 'инициатива'
 
-    def lead(text):
-        return f'<p class="pf-muted pf-why">{text}</p>'
+    def tip(view, text):
+        return f'<p class="pf-tip"><span class="pf-tip__view en" lang="en">{e(view)}</span>{text}</p>'
 
     # where each project is
     cols = ''.join(column(s, pf_en[s], len(by_stage[s]), pf_gate[s],
                           ''.join(kb_card(here, c, c['id'], c['title'], PROFILE_TITLE[c['profile']], c['live'].get('next_step') or c['stage'],
                                           c.get('function') or '—', c.get('class_of_service') or '') for c in sorted(by_stage[s], key=rank_key)))
                    for s in STAGES)
-    portfolio = (lead('Где каждый проект: от воронки до завершения. Дальше по доске проект переводит решение в точке контроля, указанной в заголовке колонки. Нажмите на колонку, чтобы раскрыть её, на карточку — чтобы увидеть подробности.')
+    portfolio = (tip('Portfolio Kanban', 'Нажмите на колонку — она раскроется; на карточку — откроется сводка проекта. В заголовке колонки — точка контроля, которая переводит проект дальше.')
                  + f'<div class="kb-scroll"><div class="kb-board kb-accordion" data-kb-accordion>{cols}</div></div>')
     off = by_stage['Отложено'] + by_stage['Закрыто']
     if off:
@@ -186,7 +188,7 @@ def add_pages(pages, site, terms, api):
     head_cells = ''.join(f'<th><div class="kb-column-head"><div><h3>{e(s)}<span class="kb-step-en" lang="en">{e(pg_en[s])}</span></h3><span class="kb-count">{sum(1 for _, w in work if w["state"] == s)}</span></div><small>{e(pg_gate[s])}</small></div></th>' for s in PROGRAM_COLUMNS)
     lane_rows = ''.join(f'<tr><th scope="row">{e(l.capitalize())}<span class="kb-step-en" lang="en">{e(LANE_EN[l])}</span></th>' + ''.join(
         '<td><div class="kb-stack">' + (''.join(wcard(c, w) for c, w in work if w['state'] == s and lane_of(c, w) == l) or '<span class="kb-empty">—</span>') + '</div></td>' for s in PROGRAM_COLUMNS) + '</tr>' for l in LANES)
-    program = (lead('Что делается сейчас: Capabilities и Features начатых проектов и текущей работы. Дорожки — классы обслуживания: срочная работа идёт первой, текущая не ждёт решения о старте. Подробности каждой Feature — в Jira.')
+    program = (tip('Program Kanban', 'Строки — классы обслуживания: срочная работа, инициативы, текущая работа. Нажмите на карточку, чтобы увидеть её проект; подробности Feature — в Jira.')
                + f'<div class="kb-scroll"><table class="kb-table"><thead><tr><th></th>{head_cells}</tr></thead><tbody>{lane_rows}</tbody></table></div>')
 
     # when: the PI calendar with the work placed in iterations
@@ -197,7 +199,7 @@ def add_pages(pages, site, terms, api):
                              'href': rel(api.url_of(here), api.url_of(ids[c['id']]))} for w in c.get('work', [])]}
                  for c in sorted(cards, key=rank_key) if c.get('work')]
     cal_data = {k: cadence.DATA[k] for k in ('days', 'year_end_from', 'seasons')} | {'rows': plan_rows}
-    plan = (lead('Когда: календарь PI от сегодняшней даты и работа проектов по итерациям. Итерация — календарный месяц, PI — квартал из трёх итераций; в конце PI — Planning, неделя инноваций и планирования (IP): ревью, демонстрация и планирование следующего PI. Работа попадает в итерацию на планировании; что ещё не запланировано, стоит справа. Стрелки листают по одному PI.')
+    plan = (tip('Program Board', 'Нажмите на PI, итерацию или неделю — откроются даты и запланированная работа. Стрелки листают PI. Review — зелёным, Planning — синим.')
             + f'<section class="pi-cal" data-pi-calendar="{e(json.dumps(cal_data, ensure_ascii=False))}">{cadence.calendar_html(day, 0, plan_rows)}</section>')
 
     # what comes next
@@ -206,7 +208,7 @@ def add_pages(pages, site, terms, api):
                     f'<td>{e(c["stage"])}</td><td>{e(c.get("function") or "—")}</td></tr>' for c in backlog]
     pb_rows = [f'<tr {card_attrs(c)} data-kb-row><td>{e(w["id"])}</td><td>{"Capability" if w["type"] == "capability" else "Feature"}</td><td>{e(w["title"])}</td><td>{e(w["state"])}</td>'
                f'<td>{e((w.get("iteration") or "—").replace(" I", " i"))}</td><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td></tr>' for c, w in work if w['state'] != 'Завершено']
-    backlog_html = (lead('Что дальше по очереди. Порядок проектов задаёт менеджер продукта, порядок работы между проектами — форум решений по программе.')
+    backlog_html = (tip('Portfolio Backlog · Program Backlog', 'Что ещё не начато, по очереди. Порядок проектов задаёт менеджер продукта, порядок работы между проектами — форум решений по программе.')
                     + '<h3>Проекты, ещё не начатые</h3>' + table(['Место', 'Карточка', 'Название', 'Состояние', 'Функция'], backlog_rows)
                     + '<h3>Capabilities и Features, ещё не принятые</h3>' + table(['Ключ', 'Вид', 'Название', 'Состояние', 'Итерация', 'Карточка'], pb_rows))
 
@@ -217,13 +219,13 @@ def add_pages(pages, site, terms, api):
     log = [(c, d) for c in cards for d in c.get('decisions', [])]
     log_html = (table(['Карточка', 'Что решили', 'Кто', 'Когда'], [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(d["what"])}</td><td>{e(d.get("who") or "—")}</td><td>{e(d.get("when") or "—")}</td></tr>' for c, d in log])
                 if log else '<p class="pf-notice">Решений пока не записано: все проекты ещё в начале пути.</p>')
-    decisions = (lead('Какое решение впереди у каждого открытого проекта и кто его принимает. Ниже — журнал принятых решений; каждое записывается и на карточке проекта.')
+    decisions = (tip('Control points', 'Какое решение ждёт каждый открытый проект и кто его принимает. Ниже — журнал принятых решений.')
                  + table(['Карточка', 'Название', 'Состояние', 'Следующая точка контроля', 'Кто решает'], point_rows) + '<h3>Журнал решений</h3>' + log_html)
 
     # everything in one list
     reg_rows = [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(PROFILE_TITLE[c["profile"]])}</td><td>{e(c["stage"])}</td>'
                 f'<td>{e(c.get("function") or "—")}</td><td>{e(c.get("area") or "—")}</td></tr>' for c in cards]
-    register = lead('Все карточки одним списком, включая постоянные карточки текущей работы.') + table(['Карточка', 'Название', 'Профиль', 'Состояние', 'Функция', 'Услуга'], reg_rows)
+    register = tip('Register', 'Все карточки одним списком, включая текущую работу. Ищите и фильтруйте полем сверху.') + table(['Карточка', 'Название', 'Профиль', 'Состояние', 'Функция', 'Услуга'], reg_rows)
 
     here_strip = ('<section class="here" aria-label="Где мы сейчас">'
                   f'<div class="here-time" data-pi-here>{cadence.here_html(day)}</div><div class="here-place">'

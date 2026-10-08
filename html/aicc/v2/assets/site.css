@@ -858,3 +858,11 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 /* weeks when most people are away */
 .here-cells button.is-quiet{background:repeating-linear-gradient(135deg,var(--surface-subtle) 0 3px,var(--border) 3px 5px)}
 .here-weeks button.is-quiet{background:repeating-linear-gradient(135deg,var(--surface-subtle) 0 5px,var(--surface) 5px 10px);color:var(--text-muted);text-decoration:line-through}
+/* tabs carry what they show; each view opens with a tip */
+.pf-tabs{gap:28px}
+.pf-tabs button{display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:8px 0 10px}
+.pf-tabs button>span{font:600 15px/1.3 var(--font-body)}
+.pf-tabs button>small{font:400 12px/1.3 var(--font-body);color:var(--text-muted)}
+.pf-tabs button[aria-selected=true]>small{color:var(--link)}
+.pf-tip{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin:0 0 16px;padding:8px 12px;border-left:3px solid var(--brand);border-radius:0 8px 8px 0;background:var(--surface-subtle);font-size:13px;color:var(--text-muted)}
+.pf-tip__view{flex:none;font-weight:700;color:var(--text);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
