@@ -65,7 +65,7 @@
     {
       "id": "kb",
       "path": "kb/",
-      "icon": "info",
+      "icon": "circle-help",
       "label": {
         "ru": "База знаний"
       }
@@ -73,7 +73,7 @@
     {
       "id": "reference",
       "path": "reference/",
-      "icon": "link",
+      "icon": "library",
       "label": {
         "ru": "Справочник"
       }
