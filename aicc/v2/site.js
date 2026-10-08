@@ -62,4 +62,43 @@
   }
   reveal();
   window.addEventListener('hashchange', reveal);
+
+  // tooltips that follow the pointer, and appear on keyboard focus
+  var tip = document.createElement('div');
+  tip.className = 'tip'; tip.id = 'tip'; tip.setAttribute('role', 'tooltip'); tip.hidden = true;
+  document.body.appendChild(tip);
+  var cur = null, timer = null;
+  function fill(el) {
+    var t = el.getAttribute('data-tip'); if (!t) return false;
+    var ti = el.getAttribute('data-tip-title');
+    tip.textContent = '';
+    if (ti) { var s = document.createElement('strong'); s.textContent = ti; tip.appendChild(s); }
+    tip.appendChild(document.createTextNode(t));
+    return true;
+  }
+  function place(x, y) {
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    var nx = x + 16, ny = y + 20;
+    if (nx + w > window.innerWidth - 8) nx = x - w - 16;
+    if (ny + h > window.innerHeight - 8) ny = y - h - 20;
+    tip.style.left = Math.max(8, nx) + 'px'; tip.style.top = Math.max(8, ny) + 'px';
+  }
+  function hideTip() { clearTimeout(timer); tip.hidden = true; if (cur) { cur.removeAttribute('aria-describedby'); cur = null; } }
+  document.addEventListener('mouseover', function (e) {
+    var el = e.target.closest ? e.target.closest('[data-tip]') : null;
+    if (!el || el === cur) return;
+    hideTip(); cur = el; var x = e.clientX, y = e.clientY;
+    timer = setTimeout(function () { if (cur === el && fill(el)) { tip.hidden = false; el.setAttribute('aria-describedby', 'tip'); place(x, y); } }, 220);
+  });
+  document.addEventListener('mousemove', function (e) { if (cur && !tip.hidden) place(e.clientX, e.clientY); else if (cur) { cur._x = e.clientX; } });
+  document.addEventListener('mouseout', function (e) { if (cur && (!e.relatedTarget || !cur.contains(e.relatedTarget))) hideTip(); });
+  document.addEventListener('focusin', function (e) {
+    var el = e.target.closest ? e.target.closest('[data-tip]') : null;
+    if (!el) return; hideTip(); cur = el;
+    if (fill(el)) { tip.hidden = false; el.setAttribute('aria-describedby', 'tip'); var r = el.getBoundingClientRect(); place(r.left, r.bottom - 14); }
+  });
+  document.addEventListener('focusout', hideTip);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideTip(); });
+  window.addEventListener('scroll', hideTip, { passive: true });
+
 })();

@@ -37,6 +37,8 @@ LENIENT = bool(os.environ.get('AICC_V2_LENIENT'))  # writers: links to pages ano
 ALPHABET = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'
 TERM = re.compile(r'\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]')
 PAGE_LINK = re.compile(r'\]\(page:([a-z0-9/_-]+)(#[^)]*)?\)')
+HTML_PAGE_LINK = re.compile(r'href="page:([a-z0-9/_-]+)(#[^"]*)?"')
+ICON = re.compile(r'\{\{icon:([a-z0-9-]+)\}\}')
 
 
 def load_site():
@@ -107,8 +109,9 @@ def icon(name):
 
 
 class Page:
-    def __init__(self, page_id, title, section, order, summary, body, source=None, nav=True):
+    def __init__(self, page_id, title, section, order, summary, body, source=None, nav=True, nav_title=None, layout=''):
         self.id, self.title, self.section, self.order = page_id, title, section, order
+        self.nav_title, self.layout = nav_title or title, layout
         self.summary, self.body, self.source, self.nav = summary, body, source, nav
         self.ident = ''
         self.headings = []
@@ -164,8 +167,17 @@ def render_markdown(text, page, terms, pages, site):
             raise ValueError(f'{page.id}: link to unknown page {target}')
         return '](' + rel(here, pages[target].url) + (match[2] or '') + ')'
 
+    def html_link(match):
+        if match[1] not in pages:
+            if LENIENT:
+                return 'href="#"'
+            raise ValueError(f'{page.id}: link to unknown page {match[1]}')
+        return 'href="' + rel(here, pages[match[1]].url) + (match[2] or '') + '"'
+
     text = TERM.sub(term, text)
     text = PAGE_LINK.sub(link, text)
+    text = HTML_PAGE_LINK.sub(html_link, text)
+    text = ICON.sub(lambda m: icon(m[1]), text)
     md = MarkdownIt('commonmark', {'html': True}).enable('table')
     tokens = md.parse(text)
     used = set()
@@ -205,7 +217,7 @@ def load_pages(site, terms):
         first = page_id.split('/')[0]
         section = 'hub' if page_id == 'index' or first not in {s['id'] for s in site['sections']} else first
         pages[page_id] = Page(page_id, meta['title'], section, int(meta.get('order', 100)), meta.get('summary', ''), body,
-                              source=path, nav=bool(meta.get('nav', True)))
+                              source=path, nav=bool(meta.get('nav', True)), nav_title=meta.get('nav_title'), layout=meta.get('layout', ''))
     return pages
 
 
@@ -222,11 +234,15 @@ def add_generated(pages, site, terms):
     cards.add_pages(pages, site, terms, sys.modules[__name__])
 
 
+def section_members(pages, section_id):
+    return sorted((p for p in pages.values() if p.section == section_id and p.nav), key=lambda p: (p.order, p.title.casefold()))
+
+
 def navigation(page, pages, site):
     groups = []
     m = site['messages']['ru']
     for section in site['sections']:
-        members = sorted((p for p in pages.values() if p.section == section['id'] and p.nav), key=lambda p: (p.order, p.title.casefold()))
+        members = section_members(pages, section['id'])
         if not members:
             continue
         first = members[0]
@@ -237,13 +253,30 @@ def navigation(page, pages, site):
             area = '/'.join(page.id.split('/')[:2])
             shown = [p for p in members if p.id.count('/') <= 1 or p.id.startswith(area + '/')]
             local = '<div class="portal-local-nav">' + ''.join(
-                f'<a{" class=nav-sub" if p.id.count("/") >= 2 else ""} href="{escape(rel(page.url, p.url))}"' + (' aria-current="page"' if p is page else '') + f'>{escape(p.title)}</a>'
+                f'<a{" class=nav-sub" if p.id.count("/") >= 2 else ""} href="{escape(rel(page.url, p.url))}"' + (' aria-current="page"' if p is page else '') + f'>{escape(p.nav_title)}</a>'
                 for p in shown) + '</div>'
         groups.append(f'<div class="portal-nav-group{" is-current" if current else ""}"><a class="portal-section-link" data-section="{section["id"]}" '
                       f'href="{escape(rel(page.url, first.url))}"' + (' aria-current="true"' if current else '') +
                       f'>{icon(section["icon"])}<span>{escape(section["label"]["ru"])}</span></a>{local}</div>')
     return (f'<aside class="o-nav"><details open><summary>{escape(m["nav_summary"])}</summary>'
             f'<nav class="portal-sections" aria-label="{escape(m["nav_label"])}">{"".join(groups)}</nav></details></aside>')
+
+
+def crumbbar(page, pages, site):
+    """The line above the title: where the page sits in its section, and the next page of the section."""
+    m = site['messages']['ru']
+    section = next(s for s in site['sections'] if s['id'] == page.section)
+    members = section_members(pages, page.section)
+    root = members[0] if members else page
+    parts = f'<a href="{escape(rel(page.url, root.url))}">{escape(section["label"]["ru"])}</a>'
+    if page is not root:
+        parts += f' / <span aria-current="page">{escape(page.nav_title)}</span>'
+    following = ''
+    if page in members and members.index(page) + 1 < len(members):
+        nxt = members[members.index(page) + 1]
+        following = (f'<a class="crumb-next" href="{escape(rel(page.url, nxt.url))}" rel="next"><span>{escape(m["next"])}</span> '
+                     f'<strong>{escape(nxt.nav_title)}</strong> &rsaquo;</a>')
+    return f'<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="{escape(m["breadcrumb"])}">{parts}</nav>{following}</div></div>'
 
 
 def render_page(page, pages, site):
@@ -253,12 +286,21 @@ def render_page(page, pages, site):
     root = posixpath.relpath('.', posixpath.dirname(here))
     asset = lambda name: rel(here, 'assets/' + name)
     toc = ''
-    if len(page.headings) >= 4:
+    if len(page.headings) >= 4 and page.layout != 'home':
         toc = (f'<nav class="page-toc" aria-label="{escape(m["on_this_page"])}"><strong>{escape(m["on_this_page"])}</strong><ul>' +
                ''.join(f'<li class="{tag}"><a href="#{i}">{escape(label)}</a></li>' for tag, i, label in page.headings) + '</ul></nav>')
     subject = quote(m['feedback_subject'].format(id=page.ident))
     section = next(s for s in site['sections'] if s['id'] == page.section)
-    lede = f'<p class="lede">{escape(page.summary)}</p>' if page.summary and page.id != 'vocabulary' else ''
+    id_chip = f'<span class="page-id" title="{escape(m["page_id_title"])}">ID: {page.ident}</span>'
+    if page.layout == 'home':
+        # the front page carries its own title inside the hero; the page identifier sits beside it
+        head, lede = '', ''
+        body = re.sub(r'(<h1>.*?</h1>)', lambda m: '<div class="title-row">' + m[1] + id_chip + '</div>', page.body, count=1, flags=re.S)
+        body = f'<div class="o-wide">{body}</div>'
+    else:
+        lede = f'<p class="lede">{escape(page.summary)}</p>' if page.summary and page.id != 'vocabulary' else ''
+        head = f'<div class="page-title"><h1>{escape(page.title)}</h1>{id_chip}</div>'
+        body = page.body
     return f'''<!doctype html>
 <html lang="ru" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
@@ -270,15 +312,16 @@ def render_page(page, pages, site):
 <a class="o-skip" href="#main">{escape(m["skip"])}</a>
 <header class="o-header">
   <a class="o-identity" href="{escape(rel(here, url_of("index")))}"><img src="{escape(rel(here, "assets/ui/assets/logos/o-mark.svg"))}" width="34" height="38" alt=""><span>{escape(names["title"])}</span></a>
+  <span class="header-scope">{escape(section["label"]["ru"])}</span>
   <span class="status-chip" title="{escape(m["status_chip_title"])}">{escape(m["status_chip"])}</span>
   <div class="o-search" role="search"><label class="o-sr-only" for="q">{escape(m["search_label"])}</label><input id="q" type="search" autocomplete="off" placeholder="{escape(m["search_label"])}" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
   <div class="o-tools"><button id="theme-switch" type="button" class="theme-switch" aria-label="{escape(m["theme_to_dark"])}" title="{escape(m["theme_to_dark"])}"><span class="ts-moon">{icon("moon")}</span><span class="ts-sun">{icon("sun")}</span></button></div>
 </header>
 <div class="o-frame">{navigation(page, pages, site)}
 <main class="o-main hub-main" id="main" tabindex="-1">
-<div class="page-head"><p class="page-section">{escape(section["label"]["ru"])}</p><div class="page-title"><h1>{escape(page.title)}</h1><span class="page-id" title="{escape(m["page_id_title"])}">ID: {page.ident}</span></div></div>
-{lede}{toc}
-<article class="page-body">{page.body}</article>
+{crumbbar(page, pages, site)}
+{head}{lede}{toc}
+<article class="page-body">{body}</article>
 <footer class="o-footer"><span class="foot-text">{escape(m["footer"])} <a class="contact" href="mailto:{site["contact"]}?subject={subject}">{escape(m["feedback"])}</a> <a class="contact" href="{escape(rel(here, "sources/index.html"))}">{escape(m["sources_title"])}</a></span></footer>
 </main></div>
 </body></html>

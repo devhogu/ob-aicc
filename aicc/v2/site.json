@@ -17,9 +17,9 @@
     {
       "id": "hub",
       "path": "",
-      "icon": "info",
+      "icon": "network",
       "label": {
-        "ru": "Хаб"
+        "ru": "Хаб Компетенций"
       }
     },
     {
@@ -92,7 +92,9 @@
       "vocabulary_definition": "Что это значит",
       "sources_title": "Исходные файлы",
       "sources_intro": "Файлы, из которых собран этот сайт. Их можно прочитать без сервера.",
-      "back_to_site": "Вернуться на сайт"
+      "back_to_site": "Вернуться на сайт",
+      "next": "Далее:",
+      "breadcrumb": "Навигационная цепочка"
     }
   },
   "forbidden": [
