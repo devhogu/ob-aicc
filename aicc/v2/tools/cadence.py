@@ -331,6 +331,6 @@ def calendar_html(day, shift=0, rows=()):
         text = week_note(start)
         weeks.append(f'<li{cls("is-current" if start == monday else "", "is-ip" if name == ip else "", "is-review" if week_kind(sel, w, ip) == "review" else "")} data-week="{start.isoformat()}" tabindex="0"><b>W{w}</b>'
                      f'<span>{span(start, start + timedelta(days=6))}</span>{f"<small>{esc(text.split(chr(59))[0])}</small>" if text else ""}</li>')
-    out.append(f'<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации {sel["label"]} ({sel["title"]}) · нажмите на неделю, итерацию или PI, чтобы открыть подробности</span><ol>{"".join(weeks)}</ol></div>'
+    out.append(f'<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации {sel["label"]} ({sel["title"]})</span><ol>{"".join(weeks)}</ol></div>'
                f'<h3 class="pi-board-title">Работа по итерациям {shown["name"]}</h3>{board_html(shown, it, sel, rows)}')
     return ''.join(out)

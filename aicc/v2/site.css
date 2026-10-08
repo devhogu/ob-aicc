@@ -696,20 +696,13 @@ details.svc[open]::after{opacity:1}
 .pi-board thead th.is-selected,.pi-board td.is-selected{background:color-mix(in srgb,var(--brand) 6%,var(--surface))}
 .pi-board thead th.is-current.is-selected{background:var(--surface-selected)}
 .pi-cal [tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
-.pi-pop{width:min(760px,calc(100vw - 32px));max-height:calc(100vh - 64px);padding:0;border:1px solid var(--border);border-radius:16px;background:var(--surface);color:var(--text);box-shadow:var(--shadow-panel);overflow:hidden}
-.pi-pop[open]{display:flex;flex-direction:column}
-.pi-pop::backdrop{background:rgba(20,10,20,.45)}
-.pi-pop__bar{display:flex;justify-content:space-between;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);background:var(--surface-subtle)}
-.pi-pop__bar button{border:1px solid var(--border-control);border-radius:8px;background:var(--surface);color:var(--text);padding:6px 12px;font:500 13px/1 var(--font-body);cursor:pointer}
-.pi-pop__bar button:hover{border-color:var(--brand);color:var(--link)}
-.pi-pop__bar [data-pop-close]{margin-left:auto}
-.pi-pop__body{padding:20px 24px 24px;overflow:auto;font-size:14px}
-.pi-pop__body header{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
-.pi-pop__body header small{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted)}
-.pi-pop__body h2{margin:0;font:700 24px/1.2 var(--font-heading)}
-.pi-pop__body h3{margin:20px 0 8px;font-size:15px}
-.pi-pop__body p{margin:0 0 6px}
-.pi-pop__body a[data-pi],.pi-pop__body a[data-it]{color:var(--link)}
+.pi-view{padding:20px 24px 24px;overflow:auto;font-size:14px}
+.pi-view header{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.pi-view header small{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted)}
+.pi-view h2{margin:0;font:700 24px/1.2 var(--font-heading)}
+.pi-view h3{margin:20px 0 8px;font-size:15px}
+.pi-view p{margin:0 0 6px}
+.pi-view a[data-pi],.pi-view a[data-it]{color:var(--link)}
 .pop-muted{color:var(--text-muted)}
 .pop-rows{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
 .pop-rows li{display:grid;grid-template-columns:150px 1fr;gap:4px 12px;padding:8px 10px;border-radius:8px;background:var(--surface-subtle);cursor:pointer;font-size:13px}
@@ -738,10 +731,10 @@ details.svc[open]::after{opacity:1}
 :root[data-theme="dark"] .pop-days li.is-short{background:#3d2b13;border-color:#6b4d1f}
 .pop-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}
 .pop-full{font-weight:600}
-.pi-pop__body .pf-facts{margin:12px 0}
+.pi-view .pf-facts{margin:12px 0}
 @media (max-width:640px){.pop-rows li,.pop-rows--its li,.pop-rows--weeks li{grid-template-columns:1fr}}
 .pop-card{padding:14px 16px;border:1px solid var(--border);border-radius:12px}
-.pi-pop__body .pop-card h2{font-size:17px}
+.pi-view .pop-card h2{font-size:17px}
 .pop-card .pf-notice{margin:10px 0 0}
 /* PI tile: three iterations as week cells; the IP week in its own colour */
 :root{--plan:#2f6fdb;--plan-soft:#e3edfc;--plan-ink:#fff;--review:#2e9e5b;--review-soft:#e0f3e8;--review-ink:#fff}
@@ -867,3 +860,14 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .pf-tip{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin:0 0 16px;padding:8px 12px;border-left:3px solid var(--brand);border-radius:0 8px 8px 0;background:var(--surface-subtle);font-size:13px;color:var(--text-muted)}
 .pf-tip__view{flex:none;font-weight:700;color:var(--text);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
 .pf-tip{display:block;font-size:14px;color:var(--text)}
+/* in-place views on the PI plan */
+.pi-view{position:relative;margin:4px 0 8px;padding:18px 22px;border:1px solid var(--border);border-left:3px solid var(--brand);border-radius:12px;background:var(--surface);font-size:14px}
+.pi-view header{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.pi-view header small{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted)}
+.pi-view h2{margin:0;font:700 20px/1.2 var(--font-heading)}
+.pi-view h3{margin:16px 0 8px;font-size:15px}
+.pi-view__close{position:absolute;top:10px;right:12px;border:1px solid var(--border-control);border-radius:8px;background:var(--surface);color:var(--text);width:30px;height:30px;cursor:pointer;font-size:16px}
+.pi-view__close:hover{border-color:var(--brand);color:var(--link)}
+.pi-weeks li.is-picked{box-shadow:0 0 0 2px var(--text)}
+.pi-item.is-picked{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand)}
+.pi-view .pop-days{margin-top:4px}

@@ -363,12 +363,12 @@
         var start = sel.start + (n - 1) * WEEK, name = sel.pi + ' ' + sel.name + 'W' + n, text = weekNote(start);
         weeks.push('<li' + cls(start === monday ? 'is-current' : '', name === shown.ip.name ? 'is-ip' : '', weekKind(sel, n, shown.ip.name) === 'review' ? 'is-review' : '') + ' data-week="' + iso(start) + '" tabindex="0"><b>W' + n + '</b><span>' + span(start, start + 6 * DAY) + '</span>' + (text ? '<small>' + esc(text.split(';')[0]) + '</small>' : '') + '</li>');
       }
-      out.push('<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + sel.label + ' (' + sel.title + ') · нажмите на неделю, итерацию или PI, чтобы открыть подробности</span><ol>' + weeks.join('') + '</ol></div>' +
+      out.push('<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + sel.label + ' (' + sel.title + ')</span><ol>' + weeks.join('') + '</ol></div>' +
         '<h3 class="pi-board-title">Работа по итерациям ' + shown.name + '</h3>' + board(shown, it, sel));
       return out.join('');
     }
 
-    // pop-up content: what a PI, an iteration, a week or a work item holds
+    // in-place views under the calendar: a week day by day, and a work item with its project
     function work(names) {
       var list = [];
       data.rows.forEach(function (row) { row.items.forEach(function (x) { if (names.indexOf(x.iteration) >= 0) list.push(x); }); });
@@ -377,33 +377,7 @@
     function itemList(list, empty) {
       return list.length ? '<div class="pop-items">' + list.map(item).join('') + '</div>' : '<p class="pop-muted">' + empty + '</p>';
     }
-    function popPI(name, day) {
-      var pi = piByName(name), it = weekOf(day)[0], weeks = Math.round((pi.end - pi.start + DAY) / WEEK);
-      var total = Math.round((pi.end - pi.start) / DAY) + 1, done = Math.max(0, Math.min(total, Math.round((day - pi.start) / DAY) + 1));
-      var rows = pi.iterations.map(function (i) {
-        var n = work([pi.name + ' ' + i.name]).length;
-        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.label + '</b><span>' + i.title + '</span><span>' + span(i.start, i.end) + '</span><span>' + i.weeks + ' нед.</span><span>' + (n ? 'работ: ' + n : '—') + '</span></li>';
-      }).join('');
-      var marked = [];
-      for (var t = pi.start; t <= pi.end; t += WEEK) { var note = weekNote(t); if (note) marked.push('<li data-week="' + iso(t) + '" tabindex="0"><b>' + span(t, t + 6 * DAY) + '</b><span>' + esc(note) + '</span></li>'); }
-      return '<header><small>Программный инкремент · ' + (pi.name === it.pi ? 'идёт' : done === total ? 'завершён' : 'впереди') + '</small><h2>PI ' + pi.name + '</h2><p>' + span(pi.start, pi.end, true) + ' · ' + weeks + ' недель</p>' +
-        '<div class="pi-progress"><span style="width:' + Math.floor(100 * done / total) + '%"></span></div></header>' +
-        '<h3>Итерации</h3><ul class="pop-rows pop-rows--its">' + rows + '</ul>' +
-        '<h3>Planning</h3><p>' + span(pi.ip.start, pi.ip.end, true) + ': ревью и демонстрация третьей итерации, инновации и планирование следующего PI.</p>' +
-        '<h3>Отмеченные недели</h3>' + (marked.length ? '<ul class="pop-rows">' + marked.join('') + '</ul>' : '<p class="pop-muted">Отметок нет.</p>') +
-        '<h3>Работа в этом PI</h3>' + itemList(work(pi.iterations.map(function (i) { return pi.name + ' ' + i.name; })), 'В этот PI работа пока не запланирована.');
-    }
-    function popIt(key, day) {
-      var p = key.split('-').map(Number), i = iteration(p[0], p[1]), w = weekOf(day), monday = day - parts(day).wd * DAY, ip = piByName(i.pi).ip.name, weeks = [];
-      for (var n = 1; n <= i.weeks; n++) {
-        var s = i.start + (n - 1) * WEEK, note = weekNote(s);
-        weeks.push('<li' + cls(s === monday ? 'is-current' : '', i.pi + ' ' + i.name + 'W' + n === ip ? 'is-ip' : '', weekKind(i, n, ip) === 'review' ? 'is-review' : '') + ' data-week="' + iso(s) + '" tabindex="0"><b>W' + n + '</b><span>' + span(s, s + 6 * DAY) + '</span><span>' + (esc(note) || '—') + '</span></li>');
-      }
-      return '<header><small>Итерация · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a>' + (itKey(i) === itKey(w[0]) ? ' · идёт, неделя ' + w[1] : '') + '</small><h2>' + i.label + ' · ' + i.title + ' ' + i.year + '</h2><p>' + span(i.start, i.end, true) + ' · ' + i.weeks + ' нед.</p></header>' +
-        '<h3>Недели</h3><ul class="pop-rows pop-rows--weeks">' + weeks.join('') + '</ul>' +
-        '<h3>Работа в этой итерации</h3>' + itemList(work([i.pi + ' ' + i.name]), 'В эту итерацию работа пока не запланирована.');
-    }
-    function popWeek(key, day) {
+    function weekView(key, day) {
       var start = fromIso(key), w = weekOf(start), i = w[0], events = [];
       var friday = iso(start + 4 * DAY), mon = iso(start);
       data.seasons.forEach(function (s) { if (s.from <= friday && mon <= s.to) events.push(s.text); });
@@ -420,19 +394,16 @@
         '<p class="pop-legend"><span class="is-off">нерабочий день</span><span class="is-short">сокращённый день</span><span class="is-away">вероятны отсутствия</span><span class="is-today">сегодня</span></p>' +
         '<h3>Работа в итерации ' + i.label + '</h3>' + itemList(work([i.pi + ' ' + i.name]), 'В эту итерацию работа пока не запланирована.');
     }
-    function popItem(id) {
+    function itemView(id) {
       var found = null, card = null;
       data.rows.forEach(function (row) { row.items.forEach(function (x) { if (x.id === id) { found = x; card = row; } }); });
       if (!found) return '<p class="pop-muted">Не найдено.</p>';
       var tpl = document.querySelector('template[data-kb-detail="' + card.id + '"]'), wrap = document.createElement('div');
       if (tpl) wrap.appendChild(tpl.content.cloneNode(true));
       var planned = found.iteration ? 'итерация <a href="#" data-it="' + found.iteration.slice(0, 4) + '-' + found.iteration.slice(11, 13) + '">' + esc(found.iteration.replace(' I', ' i')) + '</a>' : 'ещё не запланировано';
-      return '<header><small>' + esc(found.id) + ' · ' + esc(found.state) + ' · ' + planned + '</small><h2>' + esc(found.title) + '</h2></header>' +
+      return '<button type="button" class="pi-view__close" data-item-close aria-label="Закрыть">×</button><header><small>' + esc(found.id) + ' · ' + esc(found.state) + ' · ' + planned + '</small><h2>' + esc(found.title) + '</h2></header>' +
         '<h3>Проект ' + esc(card.id) + '</h3><div class="pop-card">' + wrap.innerHTML + '</div>' +
         '<p><a class="pop-full" href="' + esc(card.href) + '">Полная карточка проекта →</a></p>';
-    }
-    function pop(kind, key, day) {
-      return kind === 'pi' ? popPI(key, day) : kind === 'it' ? popIt(key, day) : kind === 'week' ? popWeek(key, day) : popItem(key);
     }
     function plural(n, f) { var k = n % 100; return k >= 11 && k <= 14 ? f[2] : n % 10 === 1 ? f[0] : n % 10 >= 2 && n % 10 <= 4 ? f[1] : f[2]; }
     // one line on where the plan stands today; the same text as cadence.plan_status
@@ -450,60 +421,43 @@
         'В этой итерации ' + planned + ' ' + plural(planned, ['работа', 'работы', 'работ']) + ', без итерации — ' + loose + '. ' +
         'Ближайшая Review — ' + (nxt.review || '—') + ', Planning — ' + (nxt.ip || '—') + '.';
     }
-    return {data: data, today: today, at: at, here: here, status: status, iterTileOf: iterTileOf, calendar: calendar, pop: pop, qIndex: qIndex, weekOf: weekOf, fromIso: fromIso, itKey: itKey};
+    return {data: data, today: today, at: at, here: here, status: status, iterTileOf: iterTileOf, calendar: calendar, weekView: weekView, itemView: itemView, qIndex: qIndex, weekOf: weekOf, fromIso: fromIso, itKey: itKey};
   })();
   window.HubPI = PI;
 
-  // the explorer: a click on a PI, an iteration, a week or a work item selects it and opens its details; inside, the same clicks go deeper
+  // the explorer: a click on a PI, an iteration or a week selects it in place; the picked week opens day by day under the weeks, a work item under the board
   document.querySelectorAll('[data-pi-calendar]').forEach(function (el) {
     try { var given = JSON.parse(el.dataset.piCalendar); PI.data.days = given.days || {}; PI.data.year_end_from = given.year_end_from || [12, 21]; PI.data.seasons = given.seasons || []; PI.data.rows = given.rows || []; } catch (e) {}
-    var day = PI.today(), shift = 0, state = {}, dlg = null, stack = [], opener = null;
+    var day = PI.today(), shift = 0, state = {};
     var base = PI.qIndex(PI.weekOf(day)[0].pi);
-    function draw() { el.innerHTML = PI.calendar(day, shift, state); el.dispatchEvent(new Event('kb-refresh', {bubbles: true})); }
+    function draw() {
+      el.innerHTML = PI.calendar(day, shift, state);
+      // the week shown day by day: the picked one, else this week when it is in view, else the first week of the iteration
+      var strip = el.querySelector('.pi-weeks'), weeks = strip ? strip.querySelectorAll('[data-week]') : [];
+      var shown = state.week && strip.querySelector('[data-week="' + state.week + '"]') || strip && strip.querySelector('.is-current') || weeks[0];
+      if (shown) {
+        shown.classList.add('is-picked');
+        strip.insertAdjacentHTML('afterend', '<section class="pi-view pi-view--week" aria-live="polite">' + PI.weekView(shown.dataset.week, day) + '</section>');
+      }
+      if (state.item) {
+        var board = el.querySelector('.pi-board-wrap'), mark = el.querySelectorAll('.pi-board [data-item="' + state.item + '"]');
+        mark.forEach(function (m) { m.classList.add('is-picked'); });
+        if (board) board.insertAdjacentHTML('afterend', '<section class="pi-view pi-view--item" aria-live="polite">' + PI.itemView(state.item) + '</section>');
+      }
+      el.dispatchEvent(new Event('kb-refresh', {bubbles: true}));
+    }
     function select(kind, key) {
       var pi = kind === 'pi' ? key : kind === 'it' ? PI.weekOf(PI.fromIso(key + '-15'))[0].pi : PI.weekOf(PI.fromIso(key))[0].pi;
       var q = PI.qIndex(pi);
       if (q < base + shift || q > base + shift + 2) shift = q - base;
-      state = {pi: pi, it: kind === 'it' ? key : kind === 'week' ? PI.itKey(PI.weekOf(PI.fromIso(key))[0]) : null};
+      state = {pi: pi, it: kind === 'it' ? key : kind === 'week' ? PI.itKey(PI.weekOf(PI.fromIso(key))[0]) : null, week: kind === 'week' ? key : null, item: state.item};
       draw();
     }
-    function render() {
-      var top = stack[stack.length - 1];
-      dlg.querySelector('.pi-pop__body').innerHTML = PI.pop(top[0], top[1], day);
-      dlg.querySelector('[data-pop-back]').hidden = stack.length < 2;
-      dlg.querySelector('.pi-pop__body').scrollTop = 0;
-    }
-    function open(kind, key, deeper) {
-      if (!dlg) {
-        dlg = document.createElement('dialog'); dlg.className = 'pi-pop';
-        dlg.innerHTML = '<div class="pi-pop__bar"><button type="button" data-pop-back>← Назад</button><button type="button" data-pop-close>Закрыть ×</button></div><div class="pi-pop__body"></div>';
-        document.body.appendChild(dlg);
-        dlg.addEventListener('click', function (ev) {
-          if (ev.target === dlg || ev.target.closest('[data-pop-close]')) { dlg.close(); return; }
-          if (ev.target.closest('[data-pop-back]')) { stack.pop(); render(); return; }
-          var t = ev.target.closest('[data-item],[data-week],[data-it],[data-pi]');
-          if (t && !(ev.ctrlKey || ev.metaKey || ev.shiftKey)) { ev.preventDefault(); go(t, true); }
-        });
-        dlg.addEventListener('keydown', function (ev) {
-          var t = ev.target.closest && ev.target.closest('li[data-week],li[data-it]');
-          if (t && ev.key === 'Enter') { ev.preventDefault(); go(t, true); }
-        });
-        dlg.addEventListener('close', function () { stack = []; if (opener && document.contains(opener)) opener.focus(); });
-      }
-      if (!deeper) stack = [];
-      stack.push([kind, key]); render();
-      if (!dlg.open) dlg.showModal();
-    }
-    function go(t, deeper) {
-      var kind = t.hasAttribute('data-item') ? 'item' : t.hasAttribute('data-week') ? 'week' : t.hasAttribute('data-it') ? 'it' : 'pi';
-      open(kind, t.getAttribute('data-' + kind), deeper);
-    }
     function pick(t) {
-      var kind = t.hasAttribute('data-item') ? 'item' : t.hasAttribute('data-week') ? 'week' : t.hasAttribute('data-it') ? 'it' : 'pi';
-      var key = t.getAttribute('data-' + kind), inside = el.contains(t);
-      opener = t;
-      if (kind !== 'item') { select(kind, key); if (inside) opener = el.querySelector('[data-' + kind + '="' + key + '"]') || t; }
-      open(kind, key, false);
+      var kind = t.hasAttribute('data-item') ? 'item' : t.hasAttribute('data-week') ? 'week' : t.hasAttribute('data-it') ? 'it' : 'pi', key = t.getAttribute('data-' + kind);
+      if (kind === 'item') { state.item = key; draw(); var v = el.querySelector('.pi-view--item'); if (v) v.scrollIntoView({block: 'nearest', behavior: 'smooth'}); return; }
+      select(kind, key);
+      var again = el.querySelector('[data-' + kind + '="' + key + '"]'); if (again && again.focus) again.focus({preventScroll: true});
     }
     // a tile at the top takes the reader to the same place on the plan: selected, scrolled into view and briefly lit
     function jump(t) {
@@ -563,10 +517,11 @@
     el.addEventListener('click', function (ev) {
       var b = ev.target.closest('[data-pi-step]');
       if (b) {
-        var step = parseInt(b.dataset.piStep, 10); shift = step ? shift + step : 0; state = {}; draw();
+        var step = parseInt(b.dataset.piStep, 10); shift = step ? shift + step : 0; state = {item: state.item}; draw();
         var again = el.querySelector('[data-pi-step="' + b.dataset.piStep + '"]'); if (again) again.focus();
         return;
       }
+      if (ev.target.closest('[data-item-close]')) { state.item = null; draw(); return; }
       var t = ev.target.closest('[data-item],[data-week],[data-it],[data-pi]');
       if (!t || ev.ctrlKey || ev.metaKey || ev.shiftKey) return;
       ev.preventDefault(); pick(t);
