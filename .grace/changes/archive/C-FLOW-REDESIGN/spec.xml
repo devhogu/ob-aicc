@@ -1,4 +1,4 @@
-<GraceChangeSpec graceVersion="4.0" status="draft">
+<GraceChangeSpec graceVersion="4.0" status="superseded">
   <C-FLOW-REDESIGN>
     <Summary>Redesign the end-to-end process of the Competence Center as a lean agile flow on two separate floors, the functional and the governance floor, with Project Profiles and live Project Cards, and refactor the corpus, the Portfolio records and the portal to it in verified phases.</Summary>
     <Problem>The corpus mirrors the SAFe states but adds five portfolio gates, a pull gate, three Steering forums and five Program Increment events for a unit of about three people. Functional decisions and governance controls are mixed in the Operating Model control table and in the Solution Lifecycle Model. Project documents mix theory with live facts, and the backlog and the boards are hand-kept tables, so a project cannot be started from a profile or tracked as a live card.</Problem>
@@ -42,5 +42,6 @@
     <Assumptions>
       <Assumption>The owner stated the intent in the project conversation of 2026-10-07 and 2026-10-08 (quoted in the design context) and asked on 2026-10-08 to record the intent and the refactor approach before engineering. This spec is a draft until the owner approves it explicitly.</Assumption>
     </Assumptions>
+    <Replacement>C-HUB-V2</Replacement>
   </C-FLOW-REDESIGN>
 </GraceChangeSpec>

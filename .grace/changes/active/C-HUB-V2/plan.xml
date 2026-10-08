@@ -1,0 +1,31 @@
+<GraceChangePlan graceVersion="4.0" status="approved">
+  <C-HUB-V2>
+    <IntentSummary>Execute the Hub v2 spec approved on 2026-10-08: clean and freeze v1, then build v2 in its own package, then the cards and views, and publish both versions together.</IntentSummary>
+    <BaselineAssertions>
+      <MustExist><Value>M-PORTAL-PROJECTION</Value><Value>M-PORTAL-LOCALIZATION</Value></MustExist>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+    </BaselineAssertions>
+    <TargetAssertions>
+      <MustVerify><Module>M-PORTAL-PROJECTION</Module><Module>M-PORTAL-LOCALIZATION</Module></MustVerify>
+      <MustPassCommand><Command>python3 -m unittest discover -s portal/tests</Command></MustPassCommand>
+      <MustPassCommand><Command>python3 portal/tools/check.py --idempotent</Command></MustPassCommand>
+    </TargetAssertions>
+    <DurableScope>
+      <GraphAnchors><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /><M-PORTAL-SOURCE /></GraphAnchors>
+      <VerificationAnchors><V-M-PORTAL-PROJECTION /><V-M-PORTAL-LOCALIZATION /></VerificationAnchors>
+    </DurableScope>
+    <ObservedWriteScope>
+      <Glob>aicc/**</Glob><Glob>charter/**</Glob><Glob>registry/**</Glob><Glob>portfolio/**</Glob><Glob>lab/**</Glob>
+      <Glob>portal/**</Glob><Glob>html/aicc/**</Glob><Glob>.grace/**</Glob><Glob>wiki/**</Glob><Glob>deploy/**</Glob>
+    </ObservedWriteScope>
+    <ImplementationPlan>
+      <T-001><Title>Record the intent</Title><DependsOn></DependsOn><AcceptanceCriteria><Criterion>The spec and the design context are committed; the draft redesign is superseded.</Criterion></AcceptanceCriteria><Verification><Command>python3 -m unittest discover -s portal/tests</Command></Verification></T-001>
+      <T-002><Title>Clean v1 in place</Title><DependsOn>T-001</DependsOn><AcceptanceCriteria><Criterion>Registry and portfolio records of v1 carry no names, decisions, approvals or decision dates, all Draft or Proposed; the charter's references to Decision Records are replaced by a dash; v1 builds, and a scan finds no name, no DR identifier and no approved state; a Draft status shows on every page.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check.py --idempotent</Command></Verification></T-002>
+      <T-003><Title>Package layout and v1 freeze</Title><DependsOn>T-002</DependsOn><AcceptanceCriteria><Criterion>v1 moves to aicc/v1 as a self-contained package that builds into html/aicc/v1 and is identical to the cleaned build; the chooser exists at html/aicc; the source files of v1 are published under its root without its decision records.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check.py --idempotent</Command></Verification></T-003>
+      <T-004><Title>v2 shell and Russian-source machinery</Title><DependsOn>T-003</DependsOn><AcceptanceCriteria><Criterion>aicc/v2 holds the forked shell and tooling with Russian as the source language, the Draft status chip, the page id beside the title, the term-with-English convention, the Hub names, and the publishing of its own source files.</Criterion></AcceptanceCriteria><Verification><Command>python3 -m unittest discover -s portal/tests</Command></Verification></T-004>
+      <T-005><Title>v2 content</Title><DependsOn>T-004</DependsOn><AcceptanceCriteria><Criterion>The Hub intent pages, the vocabulary RU (EN), the process pages (levels, states, forums, roles, profiles) and the carried Discovery catalog exist in Russian with no reference to v1.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check_sources.py</Command></Verification></T-005>
+      <T-006><Title>Project Cards and the views</Title><DependsOn>T-005</DependsOn><AcceptanceCriteria><Criterion>The card schema, template and validation exist; the existing initiatives and the HR and Compliance run-rate work are cards; Funnel, Portfolio and Program are rendered from cards.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check_portfolio.py</Command></Verification></T-006>
+      <T-007><Title>Verify and publish</Title><DependsOn>T-006</DependsOn><AcceptanceCriteria><Criterion>All checks and browser checks pass for both versions; the package is published with the chooser; the default stays v1 until the owner switches it.</Criterion></AcceptanceCriteria><Verification><Command>python3 portal/tools/check.py --idempotent</Command></Verification></T-007>
+    </ImplementationPlan>
+  </C-HUB-V2>
+</GraceChangePlan>

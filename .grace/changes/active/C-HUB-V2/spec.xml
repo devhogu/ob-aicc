@@ -1,0 +1,47 @@
+<GraceChangeSpec graceVersion="4.0" status="approved">
+  <C-HUB-V2>
+    <Summary>Freeze the current portal as v1 with a cleaned registry and build v2 from scratch as the AI Competence Hub: a shell that holds the full lean agile process and visualises live Project Cards of the Funnel, Portfolio and Program, packaged together with v1 in one deployable package.</Summary>
+    <Problem>The portal presents the Competence Center as a legal unit with a Board, an Executive Sponsor, appointed Holders, Decision Records and a control table, and the owner has been told that no decision creating such a unit exists. The records name real officials and record decisions as taken. The process itself is heavier than a lean agile flow, and project data is hand-kept in tables beside Jira.</Problem>
+    <Goals>
+      <Goal>Freeze v1: rebuild the current portal once more with a cleaned registry (no names, no decisions or approvals, every record Draft or Proposed, no decision dates, the owner's mailbox kept for portal help), then keep it unchanged as a self-contained package (sources and built site) at aicc/v1, published at /aicc/v1/.</Goal>
+      <Goal>Build v2 from scratch as the AI Competence Hub, in its own package at aicc/v2, published at /aicc/v2/, with no reference to v1 in its text, links or sources; the Russian text is the source and the English is translated later.</Goal>
+      <Goal>The Hub is a shell that holds the full process (profiles of the kinds of work, the forums per level, the few roles, the vocabulary) and visualises live instances of it as Project Cards in the Funnel, Portfolio and Program views. The Team level stays in Jira and is linked. The site does not state a mission of consolidation, a lack of authority or any governance claim about itself; it presents the process and the instances.</Goal>
+      <Goal>Keep the intent, wording and shape of v1's inspirational text (intent, relation to the strategies of the Bank, principles and values, how we work, the services and the way work gets engaged) in a plain, non-legal, non-numbered voice, without documents, clause references or document codes. The community idea has a quiet place in the structure and is not shown yet.</Goal>
+      <Goal>Decisions in the flow are taken on the spot by the business owner, the product manager and the project manager for their own part, and in a forum at each level (the product management forum for the Portfolio, the program decision forum for the Program), and are recorded on the card. Nothing else decides; there is no lead and no appointment.</Goal>
+      <Goal>Project Cards are structured files maintained by the project manager of the work; the site renders them live. The first cards are the existing initiatives and the new run-rate work of routine automation for HR and Compliance (report preparation and forms processing with Claude on the employee workspace).</Goal>
+      <Goal>One deployable package: html/aicc holds a chooser and the two versions side by side; each version publishes its own source files (charter, registry, portfolio, program and so on) under its root, and nothing refers outside the package. Each page shows a Draft status and its page id beside the title; work item ids stay.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>The registry baseline is zero: no appointments or names, no decisions, no acceptances, nothing dated as decided, every status Draft or Proposed; the scaffolding of templates and procedures stays.</Constraint>
+      <Constraint>v1 is changed only by the one cleaning rebuild; afterwards it is not edited. v2 never cites, links to or copies from v1 by reference; ideas and wording carry over by being rewritten in v2.</Constraint>
+      <Constraint>The Russian text is the source of truth of v2. Each industry term shows its English form where visible, for example воронка (funnel). The vocabulary is Russian with the English term and an explanation. English follows later as a translation, and a missing translation is shown as the Russian text.</Constraint>
+      <Constraint>Roles are the business owner (владелец бизнеса), the product manager (менеджер продукта) and the project manager (менеджер проекта). No other roles, no lead, no facilitator, no named banking functions or structure.</Constraint>
+      <Constraint>The names are AI Competence Hub (title), Competence Hub (the middle form for navigation and general reference) and Hub (short); in Russian «Хаб Компетенций по AI», «Хаб Компетенций» and «Хаб». AICC remains only as a label or code (paths, identifiers).</Constraint>
+      <Constraint>State is a field; a path holds identity; a card exists for each unit managed as a project; the cards, not hand-kept tables, feed the views. Cards hold positions and people only when the live part is deployed to its runtime share; the static pages hold none.</Constraint>
+      <Constraint>Git history is kept as it is; no history rewrite. The local tag pre-hub-2026-10-08 marks the starting state.</Constraint>
+      <Constraint>Every phase is verified (builders, checks, browser checks where the rendering changes), committed and pushed. The live site changes only through a verified publish; the default of /aicc/ remains v1 until the owner switches it.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>Rewriting history in Git, or removing the original records from the GitHub repositories.</NonGoal>
+      <NonGoal>A Jira synchronisation: the cards are maintained by hand first.</NonGoal>
+      <NonGoal>English text of v2 at the start, and the community features.</NonGoal>
+      <NonGoal>Any change to the frozen v1 charter text other than replacing references to Decision Records that no longer exist.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>v1 is published at /aicc/v1/ in both languages, built from a cleaned registry: no personal names, no decisions or approvals and no decision dates in any record or page, every status Draft or Proposed, and all existing checks pass for it.</Criterion>
+      <Criterion>v2 is published at /aicc/v2/ in Russian with its own source package, no mention of or link to v1, the Draft status and the page id on every page, the vocabulary with English terms, the process pages, the forums and the three roles.</Criterion>
+      <Criterion>The Funnel, Portfolio and Program views of v2 are rendered from Project Cards; the existing initiatives and the HR and Compliance run-rate work exist as cards; no backlog table is kept by hand.</Criterion>
+      <Criterion>/aicc/ offers the choice between v1 and v2 and the source files of each version are reachable under its root; the site check, the source check and the browser checks pass for both versions.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /><M-PORTAL-NEIGHBOURS /><M-PORTAL-SOURCE /><M-AICC-DEPLOY /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_sources.py</ExpectedCommand>
+      <ExpectedEvidence>For v1, a scan of its rebuilt pages and source files for names, decision identifiers and approved states, and an identical rebuild after relocation; for v2, the site and source checks, the browser checks of the views rendered from cards, and a scan for any reference to v1.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The owner aligned the model in the project conversation of 2026-10-08 and instructed "lets spec and plan and execute"; this spec is approved on that instruction. It supersedes the draft C-FLOW-REDESIGN, whose flow, profile and card design carries into v2 without the legal structure.</Assumption>
+    </Assumptions>
+  </C-HUB-V2>
+</GraceChangeSpec>
