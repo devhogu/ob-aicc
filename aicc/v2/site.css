@@ -820,3 +820,5 @@ details.svc[open]::after{opacity:1}
 .pi-weeks li.is-review{background:var(--review-soft);border-color:var(--review)}
 .pop-rows li.is-review{box-shadow:inset 3px 0 0 var(--review)}
 .pi-ip b{color:var(--plan-ink);background:var(--plan)}
+@keyframes pi-flash{0%,60%{box-shadow:0 0 0 3px var(--brand),0 0 0 8px color-mix(in srgb,var(--brand) 25%,transparent)}100%{box-shadow:none}}
+.pi-cal .is-flash{animation:pi-flash 1.8s ease-out}

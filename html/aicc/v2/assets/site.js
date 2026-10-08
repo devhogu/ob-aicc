@@ -469,6 +469,17 @@
       if (kind !== 'item') { select(kind, key); if (inside) opener = el.querySelector('[data-' + kind + '="' + key + '"]') || t; }
       open(kind, key, false);
     }
+    // a tile at the top takes the reader to the same place on the plan: selected, scrolled into view and briefly lit
+    function jump(t) {
+      var kind = t.hasAttribute('data-week') ? 'week' : t.hasAttribute('data-it') ? 'it' : 'pi', key = t.getAttribute('data-' + kind);
+      var tab = document.querySelector('[data-tab="plan"]'); if (tab) tab.click();
+      select(kind, key);
+      var spots = kind === 'pi' ? el.querySelectorAll('.pi-card[data-pi="' + key + '"]') : kind === 'it' ? el.querySelectorAll('[data-it="' + key + '"]') : el.querySelectorAll('.pi-weeks [data-week="' + key + '"]');
+      if (!spots.length) return;
+      spots[0].scrollIntoView({block: 'center', behavior: 'smooth'});
+      spots.forEach(function (s) { s.classList.remove('is-flash'); void s.offsetWidth; s.classList.add('is-flash'); });
+      setTimeout(function () { spots.forEach(function (s) { s.classList.remove('is-flash'); }); }, 1800);
+    }
     draw();
     document.querySelectorAll('[data-pi-here]').forEach(function (h) {
       h.innerHTML = PI.here(day);
@@ -482,8 +493,7 @@
         }
         if (ev.target.closest('.here-key, .here-cells i[tabindex]')) return;
         var t = ev.target.closest('[data-week],[data-it],[data-pi]'); if (!t) return;
-        var tab = document.querySelector('[data-tab="plan"]'); if (tab) tab.click();
-        pick(t);
+        jump(t);
       });
       h.addEventListener('keydown', function (ev) {
         if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.classList.contains('here-tile')) { ev.preventDefault(); ev.target.click(); }
