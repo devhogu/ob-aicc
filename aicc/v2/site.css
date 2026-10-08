@@ -330,3 +330,4 @@ h2#h-sec{margin:0;text-align:center;font-size:30px}
 .page-body .vp-list li{margin:0}
 .vp-mission h2{border-top:0;padding-top:0}
 .vp-group h2{margin-top:0}
+.page-body .vp-list+p{margin-top:20px}
