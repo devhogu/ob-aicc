@@ -108,19 +108,46 @@ DAYS = ['понедельник', 'вторник', 'среда', 'четвер�
 #   OUTPUTS: { str - HTML of three tiles; site.js draws the same tiles for the reader's date }
 #   SIDE_EFFECTS: none
 # END_CONTRACT: here_html
+def short(a, b):
+    return f'{a.day} {SHORT[a.month - 1]} – {b.day} {SHORT[b.month - 1]}'
+
+
+IP_TIP = ('Неделя инноваций и планирования. Это последняя рабочая неделя PI, отдельной итерацией она не считается: '
+          'ревью и демонстрация третьей итерации, итоги PI, планирование следующего PI, время на инновации и обучение. Новую работу в эту неделю не берут.')
+
+
+def ip_tip(pi):
+    return f'<span class="here-tip" role="tooltip"><b>Неделя IP · {span(pi["ip"]["start"], pi["ip"]["end"])}</b>{IP_TIP}</span>'
+
+
 def here_html(day):
     r = rolling(day, 1)
     pi, it, week = r['increments'][0], r['iteration'], r['week']
     monday = day - timedelta(days=day.weekday())
     pi_weeks = ((pi['end'] - pi['start']).days + 1) // 7
     pi_week = (monday - pi['start']).days // 7 + 1
-    dots = ''.join(f'<li class="{"is-done" if w < week else "is-current" if w == week else ""}">W{w}</li>' for w in range(1, it['weeks'] + 1))
-    note = f'<span class="here-note">{esc(r["note"])}</span>' if r['note'] else ''
-    return (f'<a class="here-tile" href="#plan" data-week="{monday.isoformat()}"><small>Сегодня</small><strong>{day.day} {LONG[day.month - 1]} {day.year}</strong><span>{DAYS[day.weekday()]}</span></a>'
-            f'<a class="here-tile" href="#plan" data-pi="{pi["name"]}"><small>Программный инкремент</small><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span>'
-            f'<div class="here-bar"><i style="width:{100 * pi_week // pi_weeks}%"></i></div><span>неделя {pi_week} из {pi_weeks} · неделя IP {span(pi["ip"]["start"], pi["ip"]["end"])}</span></a>'
-            f'<a class="here-tile" href="#plan" data-it="{it_key(it)}"><small>Итерация</small><strong>{it["name"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span>'
-            f'<ol class="here-weeks">{dots}</ol><span>неделя {week} из {it["weeks"]}</span>{note}</a>')
+    ip = pi['ip']['name']
+    segs = []
+    for i in pi['iterations']:
+        cells = ''.join(
+            f'<i{cls("is-done" if s < monday else "is-current" if s == monday else "", "is-ip" if n == ip else "")}{" tabindex=\"0\"" if n == ip else ""}>{ip_tip(pi) if n == ip else ""}</i>'
+            for s, n in ((i['start'] + timedelta(weeks=w - 1), f'{i["pi"]} {i["name"]}W{w}') for w in range(1, i['weeks'] + 1)))
+        segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "")} style="flex:{i["weeks"]}">'
+                    f'<span class="here-cells">{cells}</span><b>{i["name"]} · {i["title"]}</b><span>{short(i["start"], i["end"])}</span></li>')
+    weeks = []
+    for w in range(1, it['weeks'] + 1):
+        s = it['start'] + timedelta(weeks=w - 1)
+        n = f'{it["pi"]} {it["name"]}W{w}'
+        weeks.append(f'<li><button type="button"{cls("is-done" if w < week else "is-current" if w == week else "", "is-ip" if n == ip else "", "is-picked" if w == week else "")} '
+                     f'data-here-week data-range="W{w} · {span(s, s + timedelta(days=6))}{" · сейчас" if w == week else ""}" data-note="{esc(DATA["notes"].get(n, ""))}">W{w}</button></li>')
+    note = r['note']
+    return (f'<div class="here-tile" data-week="{monday.isoformat()}" tabindex="0"><small>Сегодня</small><strong>{day.day} {LONG[day.month - 1]} {day.year}</strong><span>{DAYS[day.weekday()]}</span></div>'
+            f'<div class="here-tile" data-pi="{pi["name"]}" tabindex="0"><small>Программный инкремент · неделя {pi_week} из {pi_weeks}</small><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span>'
+            f'<ol class="here-pi">{"".join(segs)}</ol>'
+            f'<span class="here-ip" tabindex="0"><i></i>Неделя IP · {span(pi["ip"]["start"], pi["ip"]["end"])}{ip_tip(pi)}</span></div>'
+            f'<div class="here-tile" data-it="{it_key(it)}" tabindex="0"><small>Итерация · неделя {week} из {it["weeks"]}</small><strong>{it["name"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span>'
+            f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>W{week} · {span(monday, monday + timedelta(days=6))} · сейчас</span>'
+            f'<span class="here-note" data-here-note{"" if note else " hidden"}>{esc(note)}</span></div>')
 
 
 def cls(*names):

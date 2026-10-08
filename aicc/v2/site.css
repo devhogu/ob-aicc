@@ -661,7 +661,7 @@ details.svc[open]::after{opacity:1}
 .pi-empty{color:var(--text-muted);font-size:14px;text-align:center}
 /* where we are: time and place at the top of Проекты */
 .here{display:flex;flex-direction:column;gap:14px;margin:0 0 28px}
-.here-time{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.1fr) minmax(0,1.1fr);gap:14px}
+.here-time{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.5fr) minmax(0,1fr);gap:14px}
 .here-place{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .here-tile{position:relative;display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid var(--border);border-radius:14px;background:var(--surface);color:var(--text);text-decoration:none;font-size:13px}
 .here-tile:hover{border-color:var(--brand)}
@@ -670,12 +670,8 @@ details.svc[open]::after{opacity:1}
 .here-tile>span{color:var(--text-muted)}
 .here-time .here-tile:first-child{background:var(--surface-selected);border-color:transparent}
 .here-time .here-tile:first-child strong{color:var(--link)}
-.here-bar{height:6px;border-radius:3px;background:var(--surface-subtle);overflow:hidden;margin-top:4px}
-.here-bar i{display:block;height:100%;background:var(--brand);border-radius:3px}
 .here-weeks{list-style:none;margin:4px 0 0;padding:0;display:flex;gap:4px}
 .page-body .here-weeks li{margin:0;flex:1;text-align:center;padding:3px 0;border-radius:6px;background:var(--surface-subtle);font-size:11px;color:var(--text-muted)}
-.page-body .here-weeks li.is-done{background:color-mix(in srgb,var(--brand) 25%,var(--surface))}
-.page-body .here-weeks li.is-current{background:var(--brand);color:#fff;font-weight:700}
 .here-note{align-self:flex-start;padding:2px 10px;border-radius:999px;background:var(--surface-subtle);font-size:12px;color:var(--text-muted)}
 .here-flow ol{list-style:none;margin:4px 0 0;padding:0;display:flex;gap:4px}
 .page-body .here-flow li{margin:0;flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;padding:8px 8px 8px 14px;background:var(--surface-subtle);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 50%,calc(100% - 8px) 100%,0 100%,8px 50%);font-size:11px;line-height:1.25;color:var(--text-muted)}
@@ -747,3 +743,34 @@ details.svc[open]::after{opacity:1}
 .pop-card{padding:14px 16px;border:1px solid var(--border);border-radius:12px}
 .pi-pop__body .pop-card h2{font-size:17px}
 .pop-card .pf-notice{margin:10px 0 0}
+/* PI tile: three iterations as week cells; the IP week in its own colour */
+:root{--plan:#d99100;--plan-soft:#fdf1d8}
+:root[data-theme="dark"]{--plan:#f0b44a;--plan-soft:#3d2b13}
+.here-tile{cursor:pointer}
+.here-tile:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.here-pi{list-style:none;margin:6px 0 0;padding:0;display:flex;gap:6px}
+.page-body .here-pi li{margin:0;min-width:0;display:flex;flex-direction:column;gap:3px;padding:6px;border-radius:8px;font-size:11px;line-height:1.25;color:var(--text-muted)}
+.here-pi li b{font-size:12px;color:var(--text);text-transform:none}
+.page-body .here-pi li.is-current{background:var(--surface-selected)}
+.here-pi li.is-current b{color:var(--link)}
+.here-cells{display:flex;gap:2px}
+.here-cells i{position:relative;flex:1;height:10px;border-radius:3px;background:var(--surface-subtle);border:1px solid var(--border)}
+.here-cells i.is-done{background:color-mix(in srgb,var(--brand) 30%,var(--surface));border-color:transparent}
+.here-cells i.is-current{background:var(--brand);border-color:var(--brand)}
+.here-cells i.is-ip{background:var(--plan);border-color:var(--plan);cursor:help}
+.here-cells i.is-ip.is-current{box-shadow:0 0 0 2px var(--brand)}
+.here-ip{position:relative;align-self:flex-start;display:inline-flex;align-items:center;gap:6px;margin-top:2px;padding:2px 10px 2px 6px;border-radius:999px;background:var(--plan-soft);color:var(--text);font-size:12px;cursor:help}
+.here-ip>i{width:10px;height:10px;border-radius:3px;background:var(--plan)}
+.here-tip{position:absolute;z-index:20;left:0;top:calc(100% + 8px);width:300px;padding:10px 12px;border-radius:10px;background:var(--text);color:var(--surface);font:400 12px/1.45 var(--font-body);text-transform:none;letter-spacing:0;box-shadow:var(--shadow-panel);opacity:0;visibility:hidden;transition:opacity var(--motion-fast);pointer-events:none}
+.here-tile .here-tip b{display:block;margin-bottom:4px;font-size:12px;color:var(--plan)}
+.here-cells i .here-tip{left:auto;right:-8px;top:calc(100% + 6px)}
+.here-ip:hover .here-tip,.here-ip:focus .here-tip,.here-cells i:hover .here-tip,.here-cells i:focus .here-tip{opacity:1;visibility:visible}
+/* iteration tile: weeks to pick */
+.page-body .here-weeks li{padding:0;background:none}
+.here-weeks button{width:100%;padding:4px 0;border:1px solid transparent;border-radius:6px;background:var(--surface-subtle);color:var(--text-muted);font:500 11px/1.2 var(--font-body);cursor:pointer}
+.here-weeks button:hover{border-color:var(--brand)}
+.here-weeks button.is-done{background:color-mix(in srgb,var(--brand) 25%,var(--surface))}
+.here-weeks button.is-current{background:var(--brand);color:#fff;font-weight:700}
+.here-weeks button.is-ip{background:var(--plan);color:#fff}
+.here-weeks button.is-picked{border-color:var(--text);box-shadow:0 0 0 1px var(--text)}
+.here-range{font-weight:600;color:var(--text)!important}

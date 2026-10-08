@@ -272,16 +272,35 @@
       if (!body.length) body.push('<tr><td colspan="5" class="pi-empty">В этом PI работы не запланировано.</td></tr>');
       return '<div class="o-table-wrap pi-board-wrap"><table class="pi-board"><thead><tr><th>Проект</th>' + head + '<th>Не запланировано</th></tr></thead><tbody>' + body.join('') + '</tbody></table></div>';
     }
+    function short(a, b) { var x = parts(a), y = parts(b); return x.d + ' ' + SHORT[x.m - 1] + ' – ' + y.d + ' ' + SHORT[y.m - 1]; }
+    var IP_TIP = 'Неделя инноваций и планирования. Это последняя рабочая неделя PI, отдельной итерацией она не считается: ' +
+      'ревью и демонстрация третьей итерации, итоги PI, планирование следующего PI, время на инновации и обучение. Новую работу в эту неделю не берут.';
+    function ipTip(pi) { return '<span class="here-tip" role="tooltip"><b>Неделя IP · ' + span(pi.ip.start, pi.ip.end) + '</b>' + IP_TIP + '</span>'; }
     function here(day) {
       var w = weekOf(day), it = w[0], week = w[1], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1), p = parts(day);
-      var monday = day - p.wd * DAY, piWeeks = Math.round((pi.end - pi.start + DAY) / WEEK), piWeek = Math.round((monday - pi.start) / WEEK) + 1;
-      var dots = '', note = data.notes[it.pi + ' ' + it.name + 'W' + week] || '';
-      for (var n = 1; n <= it.weeks; n++) dots += '<li class="' + (n < week ? 'is-done' : n === week ? 'is-current' : '') + '">W' + n + '</li>';
-      return '<a class="here-tile" href="#plan" data-week="' + iso(monday) + '"><small>Сегодня</small><strong>' + p.d + ' ' + LONG[p.m - 1] + ' ' + p.y + '</strong><span>' + DAYS[p.wd] + '</span></a>' +
-        '<a class="here-tile" href="#plan" data-pi="' + pi.name + '"><small>Программный инкремент</small><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span>' +
-        '<div class="here-bar"><i style="width:' + Math.floor(100 * piWeek / piWeeks) + '%"></i></div><span>неделя ' + piWeek + ' из ' + piWeeks + ' · неделя IP ' + span(pi.ip.start, pi.ip.end) + '</span></a>' +
-        '<a class="here-tile" href="#plan" data-it="' + itKey(it) + '"><small>Итерация</small><strong>' + it.name + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span>' +
-        '<ol class="here-weeks">' + dots + '</ol><span>неделя ' + week + ' из ' + it.weeks + '</span>' + (note ? '<span class="here-note">' + esc(note) + '</span>' : '') + '</a>';
+      var monday = day - p.wd * DAY, piWeeks = Math.round((pi.end - pi.start + DAY) / WEEK), piWeek = Math.round((monday - pi.start) / WEEK) + 1, ip = pi.ip.name;
+      var segs = pi.iterations.map(function (i) {
+        var cells = '';
+        for (var k = 1; k <= i.weeks; k++) {
+          var s = i.start + (k - 1) * WEEK, n = i.pi + ' ' + i.name + 'W' + k;
+          cells += '<i' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', n === ip ? 'is-ip' : '') + (n === ip ? ' tabindex="0"' : '') + '>' + (n === ip ? ipTip(pi) : '') + '</i>';
+        }
+        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', i.end < monday ? 'is-done' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span><b>' + i.name + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></li>';
+      }).join('');
+      var weeks = '';
+      for (var n = 1; n <= it.weeks; n++) {
+        var s = it.start + (n - 1) * WEEK, name = it.pi + ' ' + it.name + 'W' + n;
+        weeks += '<li><button type="button"' + cls(n < week ? 'is-done' : n === week ? 'is-current' : '', name === ip ? 'is-ip' : '', n === week ? 'is-picked' : '') +
+          ' data-here-week data-range="W' + n + ' · ' + span(s, s + 6 * DAY) + (n === week ? ' · сейчас' : '') + '" data-note="' + esc(data.notes[name] || '') + '">W' + n + '</button></li>';
+      }
+      var note = data.notes[it.pi + ' ' + it.name + 'W' + week] || '';
+      return '<div class="here-tile" data-week="' + iso(monday) + '" tabindex="0"><small>Сегодня</small><strong>' + p.d + ' ' + LONG[p.m - 1] + ' ' + p.y + '</strong><span>' + DAYS[p.wd] + '</span></div>' +
+        '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span>' +
+        '<ol class="here-pi">' + segs + '</ol>' +
+        '<span class="here-ip" tabindex="0"><i></i>Неделя IP · ' + span(pi.ip.start, pi.ip.end) + ipTip(pi) + '</span></div>' +
+        '<div class="here-tile" data-it="' + itKey(it) + '" tabindex="0"><small>Итерация · неделя ' + week + ' из ' + it.weeks + '</small><strong>' + it.name + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span>' +
+        '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>W' + week + ' · ' + span(monday, monday + 6 * DAY) + ' · сейчас</span>' +
+        '<span class="here-note" data-here-note' + (note ? '' : ' hidden') + '>' + esc(note) + '</span></div>';
     }
     // state: {pi, it} - the increment and iteration picked by the reader; empty means today's
     function calendar(day, shift, state) {
@@ -446,10 +465,21 @@
     document.querySelectorAll('[data-pi-here]').forEach(function (h) {
       h.innerHTML = PI.here(day);
       h.addEventListener('click', function (ev) {
-        var t = ev.target.closest('[data-week],[data-it],[data-pi]'); if (!t || ev.ctrlKey || ev.metaKey) return;
-        ev.preventDefault();
+        var wk = ev.target.closest('[data-here-week]');
+        if (wk) {  // a week of the iteration tile: show its dates and note, stay on the tile
+          var tile = wk.closest('.here-tile');
+          tile.querySelectorAll('[data-here-week]').forEach(function (b) { b.classList.toggle('is-picked', b === wk); });
+          tile.querySelector('[data-here-range]').textContent = wk.dataset.range;
+          var note = tile.querySelector('[data-here-note]'); note.textContent = wk.dataset.note; note.hidden = !wk.dataset.note;
+          return;
+        }
+        if (ev.target.closest('.here-ip, .is-ip')) return;
+        var t = ev.target.closest('[data-week],[data-it],[data-pi]'); if (!t) return;
         var tab = document.querySelector('[data-tab="plan"]'); if (tab) tab.click();
         pick(t);
+      });
+      h.addEventListener('keydown', function (ev) {
+        if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.classList.contains('here-tile')) { ev.preventDefault(); ev.target.click(); }
       });
     });
     el.addEventListener('click', function (ev) {
