@@ -94,8 +94,8 @@ def add_pages(pages, site, api):
         return (f'<a class="lib-card lib-card--link" href="{e(x["url"])}" target="_blank" rel="noopener" data-lib-item data-group="{e(x["group"])}" '
                 f'data-find="{find_text(x["title"], x["what"], x["group"], x["lang"])}">'
                 f'<div class="lib-card__top"><small>{e(x["group"])}</small>{lang}</div><h3>{e(x["title"])} ↗</h3><p>{e(x["what"])}</p></a>')
-    body = ('<p class="lede">Всё обучение от Anthropic, создателя Claude, в одном месте: учебный портал Claude Academy с бесплатными курсами, '
-            'официальная документация на русском и практические материалы. Ссылки ведут на первоисточник.</p>'
+    body = ('<p class="lede">Всё обучение от Anthropic, создателя Claude, в одном месте: сначала официальные материалы на русском, '
+            'затем учебный портал Claude Academy с бесплатными курсами и практические материалы на английском. Ссылки ведут на первоисточник.</p>'
             f'<p class="pf-tip">Короткие пересказы самого полезного — на русском и с нашими примерами — в <a href="{e(rel(url_of("reference/anthropic"), url_of("kb")))}">Базе знаний</a>.</p>'
             f'<div class="lib" data-lib>{finder(lgroups, len(links), "Найти: курс, тема, продукт")}{grid(links, lgroups, outside)}</div>')
     pages['reference/anthropic'] = Page('reference/anthropic', 'Обучение Anthropic', 'reference', 25,
