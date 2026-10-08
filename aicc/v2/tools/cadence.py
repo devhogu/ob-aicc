@@ -116,8 +116,20 @@ IP_TIP = ('Неделя инноваций и планирования (IP). Э�
           'ревью и демонстрация третьей итерации, итоги PI, планирование следующего PI, время на инновации и обучение. Новую работу в эту неделю не берут.')
 
 
-def ip_tip(pi):
-    return f'<span class="here-tip" role="tooltip"><b>Planning · {span(pi["ip"]["start"], pi["ip"]["end"])}</b>{IP_TIP}</span>'
+REVIEW_TIP = ('Последняя неделя итерации: показ готовых результатов менеджеру продукта и бизнес-владельцу, приёмка Features, '
+              'короткая ретроспектива и планирование следующей итерации. Работа в эту неделю продолжается.')
+TAG = {'ip': 'Planning', 'review': 'Review'}
+
+
+def week_kind(i, w, ip):
+    """'ip' for the Planning week of the increment, 'review' for the last week of its first and second iterations."""
+    if f'{i["pi"]} {i["name"]}W{w}' == ip:
+        return 'ip'
+    return 'review' if w == i['weeks'] and i['month'] % 3 else ''
+
+
+def tip(kind, title):
+    return f'<span class="here-tip" role="tooltip"><b>{title}</b>{IP_TIP if kind == "ip" else REVIEW_TIP}</span>'
 
 
 def here_html(day):
@@ -129,23 +141,28 @@ def here_html(day):
     ip = pi['ip']['name']
     segs = []
     for i in pi['iterations']:
-        cells = ''.join(
-            f'<i{cls("is-done" if s < monday else "is-current" if s == monday else "", "is-ip" if n == ip else "")}{" tabindex=\"0\"" if n == ip else ""}>{ip_tip(pi) if n == ip else ""}</i>'
-            for s, n in ((i['start'] + timedelta(weeks=w - 1), f'{i["pi"]} {i["name"]}W{w}') for w in range(1, i['weeks'] + 1)))
+        cells = []
+        for w in range(1, i['weeks'] + 1):
+            s = i['start'] + timedelta(weeks=w - 1)
+            k = week_kind(i, w, ip)
+            title = f'{TAG[k]} · {span(s, s + timedelta(days=4 if k == "ip" else 6))}' if k else ''
+            cells.append(f'<i{cls("is-done" if s < monday else "is-current" if s == monday else "", f"is-{k}" if k else "")}{" tabindex=\"0\"" if k else ""}>{tip(k, title) if k else ""}</i>')
         segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "")} style="flex:{i["weeks"]}">'
-                    f'<span class="here-cells">{cells}</span><b>{i["label"]} · {i["title"]}</b><span>{short(i["start"], i["end"])}</span></li>')
+                    f'<span class="here-cells">{"".join(cells)}</span><b>{i["label"]} · {i["title"]}</b><span>{short(i["start"], i["end"])}</span></li>')
     weeks = []
     for w in range(1, it['weeks'] + 1):
         s = it['start'] + timedelta(weeks=w - 1)
-        n = f'{it["pi"]} {it["name"]}W{w}'
-        weeks.append(f'<li><button type="button"{cls("is-done" if w < week else "is-current" if w == week else "", "is-ip" if n == ip else "", "is-picked" if w == week else "")} '
-                     f'data-here-week data-range="W{w} · {span(s, s + timedelta(days=6))}{" · Planning" if n == ip else ""}{" · сейчас" if w == week else ""}">{"Planning" if n == ip else f"W{w}"}</button></li>')
+        k = week_kind(it, w, ip)
+        weeks.append(f'<li><button type="button"{cls("is-done" if w < week else "is-current" if w == week else "", f"is-{k}" if k else "", "is-picked" if w == week else "")} '
+                     f'data-here-week data-range="W{w} · {span(s, s + timedelta(days=6))}{" · " + TAG[k] if k else ""}{" · сейчас" if w == week else ""}">{TAG.get(k, f"W{w}")}</button></li>')
+    now = week_kind(it, week, ip)
     return (f'<div class="here-tile" data-week="{monday.isoformat()}" tabindex="0"><small>Сегодня</small><strong>{day.day} {LONG[day.month - 1]} {day.year}</strong><span>{DAYS[day.weekday()]}</span></div>'
             f'<div class="here-tile" data-pi="{pi["name"]}" tabindex="0"><small>Программный инкремент · неделя {pi_week} из {pi_weeks}</small><div class="here-head"><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span></div>'
-            f'<ol class="here-pi">{"".join(segs)}</ol>'
-            f'<span class="here-ip" tabindex="0"><i></i>Planning · {span(pi["ip"]["start"], pi["ip"]["end"])}{ip_tip(pi)}</span></div>'
+            f'<ol class="here-pi">{"".join(segs)}</ol><div class="here-legend">'
+            f'<span class="here-key here-key--review" tabindex="0"><i></i>Review · последняя неделя итерации{tip("review", "Review")}</span>'
+            f'<span class="here-key here-key--ip" tabindex="0"><i></i>Planning · {span(pi["ip"]["start"], pi["ip"]["end"])}{tip("ip", "Planning · " + span(pi["ip"]["start"], pi["ip"]["end"]))}</span></div></div>'
             f'<div class="here-tile" data-it="{it_key(it)}" tabindex="0"><small>Итерация · неделя {week} из {it["weeks"]}</small><div class="here-head"><strong>{it["label"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span></div>'
-            f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>W{week} · {span(monday, monday + timedelta(days=6))}{" · Planning" if f"{it['pi']} {it['name']}W{week}" == ip else ""} · сейчас</span></div>')
+            f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>W{week} · {span(monday, monday + timedelta(days=6))}{" · " + TAG[now] if now else ""} · сейчас</span></div>')
 
 
 def cls(*names):
@@ -229,7 +246,7 @@ def calendar_html(day, shift=0, rows=()):
         start = sel['start'] + timedelta(weeks=w - 1)
         name = f'{sel["pi"]} {sel["name"]}W{w}'
         text = DATA['notes'].get(name, '')
-        weeks.append(f'<li{cls("is-current" if start == monday else "", "is-ip" if name == ip else "")} data-week="{start.isoformat()}" tabindex="0"><b>W{w}</b>'
+        weeks.append(f'<li{cls("is-current" if start == monday else "", "is-ip" if name == ip else "", "is-review" if week_kind(sel, w, ip) == "review" else "")} data-week="{start.isoformat()}" tabindex="0"><b>W{w}</b>'
                      f'<span>{span(start, start + timedelta(days=6))}</span>{f"<small>{esc(text.split(chr(59))[0])}</small>" if text else ""}</li>')
     out.append(f'<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации {sel["label"]} ({sel["title"]}) · нажмите на неделю, итерацию или PI, чтобы открыть подробности</span><ol>{"".join(weeks)}</ol></div>'
                f'<h3 class="pi-board-title">Работа по итерациям {shown["name"]}</h3>{board_html(shown, it, sel, rows)}')
