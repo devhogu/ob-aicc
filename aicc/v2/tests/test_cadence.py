@@ -37,7 +37,19 @@ class Rules(unittest.TestCase):
         self.assertEqual(r['week_name'], '2026-PIQ4 I10W2')
         self.assertEqual([p['name'] for p in r['increments']], ['2026-PIQ4', '2027-PIQ1', '2027-PIQ2'])
         self.assertEqual(cadence.week_of(date(2027, 1, 1))[0]['name'], 'I12')  # the week of New Year belongs to December
-        self.assertEqual(cadence.increment(2026, 4)['ip']['start'], date(2026, 12, 21))
+
+    def test_planning_avoids_weeks_when_people_are_away(self):
+        # from 21 December people are away, so the year's last Planning moves before it
+        self.assertEqual(cadence.increment(2026, 4)['ip']['start'], date(2026, 12, 14))
+        self.assertEqual(cadence.increment(2027, 4)['ip']['start'], date(2027, 12, 13))
+        # one holiday in the week is not enough to move it
+        self.assertEqual(cadence.increment(2027, 1)['ip']['start'], date(2027, 3, 22))
+        self.assertEqual(cadence.increment(2027, 3)['ip']['start'], date(2027, 9, 27))
+
+    def test_week_notes_come_from_the_days(self):
+        self.assertEqual(cadence.week_note(date(2027, 1, 4)), 'нерабочие: 4 янв, 5 янв, 6 янв, 7 янв; вероятны отсутствия: 8 янв')
+        self.assertEqual(cadence.week_note(date(2026, 12, 21)), 'вероятны отсутствия: вся неделя')
+        self.assertEqual(cadence.week_note(date(2026, 10, 12)), '')
 
 
 @unittest.skipUnless(shutil.which('node'), 'node is not installed')
@@ -52,7 +64,7 @@ class PageScript(unittest.TestCase):
                            {'id': 'FEAT-003', 'title': 'Сверка', 'state': 'Завершено', 'iteration': '2027-PIQ1 I02', 'href': '../ini-001/'}]},
                 {'id': 'INI-002', 'title': 'Второй', 'href': '../ini-002/', 'find': 'ini-002', 'function': '', 'area': '',
                  'items': [{'id': 'FEAT-004', 'title': 'Готово', 'state': 'Завершено', 'iteration': '', 'href': '../ini-002/'}]}]
-        data = {'ip_weeks': cadence.DATA['ip_weeks'], 'notes': cadence.DATA['notes'], 'rows': rows}
+        data = {k: cadence.DATA[k] for k in ('days', 'year_end_from', 'seasons')} | {'rows': rows}
         program = block + (f'Object.assign(PI.data, {json.dumps(data, ensure_ascii=False)});'
                            f'var days = {json.dumps([d.isoformat() for d in days])};'
                            'var out = []; days.forEach(function (s) { var p = s.split("-").map(Number), t = PI.at(p[0], p[1], p[2]);'

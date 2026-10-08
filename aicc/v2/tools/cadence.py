@@ -55,14 +55,32 @@ def week_of(day):
     return it, (monday - it['start']).days // 7 + 1
 
 
+# START_CONTRACT: day_kind
+#   PURPOSE: What kind of day a date is for planning: 'off' (non-working), 'away' (people likely absent), 'short' (shortened) or '' (ordinary).
+#   INPUTS: { day: date }
+#   OUTPUTS: { str }
+#   SIDE_EFFECTS: none
+# END_CONTRACT: day_kind
+def day_kind(day):
+    kind = DATA['days'].get(day.isoformat())
+    if kind:
+        return kind
+    month, first = DATA['year_end_from']
+    return 'away' if day.weekday() < 5 and day.month == month and day.day >= first else ''
+
+
+def lost_days(monday):
+    """Working days of the week that are off or with people likely absent."""
+    return sum(1 for k in range(5) if day_kind(monday + timedelta(days=k)) in ('off', 'away'))
+
+
 def increment(year, quarter):
     its = [iteration(year, 3 * (quarter - 1) + k) for k in (1, 2, 3)]
     name = f'{year}-PIQ{quarter}'
     last = its[-1]
-    ip_week = last['weeks'] - 1 if last['month'] == 12 and last['weeks'] == 5 else last['weeks']
-    known = DATA['ip_weeks'].get(name)
-    if known:
-        ip_week = int(known.rsplit('W', 1)[1])
+    ip_week = last['weeks']
+    while ip_week > 1 and lost_days(last['start'] + timedelta(weeks=ip_week - 1)) > 2:
+        ip_week -= 1  # Planning moves to the week before until enough people are there
     ip_start = last['start'] + timedelta(weeks=ip_week - 1)
     return {'name': name, 'iterations': its, 'start': its[0]['start'], 'end': last['end'],
             'ip': {'name': f'{name} {last["name"]}W{ip_week}', 'start': ip_start, 'end': ip_start + timedelta(days=4)}}
@@ -82,7 +100,7 @@ def rolling(day, count=3):
         pis.append(increment(year, quarter))
         year, quarter = (year + 1, 1) if quarter == 4 else (year, quarter + 1)
     name = f'{it["pi"]} {it["name"]}W{week}'
-    return {'today': day, 'iteration': it, 'week': week, 'week_name': name, 'note': DATA['notes'].get(name, ''), 'increments': pis}
+    return {'today': day, 'iteration': it, 'week': week, 'week_name': name, 'note': week_note(it['start'] + timedelta(weeks=week - 1)), 'increments': pis}
 
 
 SHORT = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
@@ -97,6 +115,26 @@ def span(a, b, long=False):
     names = LONG if long else SHORT
     left = f'{a.day} {names[a.month - 1]}' + (f' {a.year}' if a.year != b.year else '')
     return f'{left} – {b.day} {names[b.month - 1]} {b.year}'
+
+
+# START_CONTRACT: week_note
+#   PURPOSE: A short note on a week's working days that are off, with likely absences or shortened, and on a season.
+#   INPUTS: { monday: date }
+#   OUTPUTS: { str - empty for an ordinary week }
+#   SIDE_EFFECTS: none
+# END_CONTRACT: week_note
+def week_note(monday):
+    groups = {'off': [], 'away': [], 'short': []}
+    for k in range(5):
+        d = monday + timedelta(days=k)
+        kind = day_kind(d)
+        if kind:
+            groups[kind].append(f'{d.day} {SHORT[d.month - 1]}')
+    parts = [f'{label}: {"вся неделя" if len(groups[key]) == 5 else ", ".join(groups[key])}'
+             for key, label in (('off', 'нерабочие'), ('away', 'вероятны отсутствия'), ('short', 'сокращённый день')) if groups[key]]
+    friday = (monday + timedelta(days=4)).isoformat()
+    parts += [s['text'] for s in DATA['seasons'] if s['from'] <= friday and monday.isoformat() <= s['to']]
+    return '; '.join(parts)
 
 
 DAYS = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
@@ -117,6 +155,15 @@ def week_kind(i, w, ip):
         return 'ip'
     return 'review' if w == i['weeks'] and i['month'] % 3 else ''
 
+
+
+def quiet(s, kind):
+    """An ordinary week in which most working days are off or people are away."""
+    return not kind and lost_days(s) > 2
+
+
+def wtext(prefix, s, kind):
+    return f'{prefix} · {week_range(s, kind)}' + (f' · {TAG[kind]}' if kind else '') + (' · вероятны отсутствия' if quiet(s, kind) else '')
 
 
 def week_range(s, kind):
@@ -147,8 +194,8 @@ def here_html(day):
         for w in range(1, i['weeks'] + 1):
             s = i['start'] + timedelta(weeks=w - 1)
             k = week_kind(i, w, ip)
-            text = f'{i["label"]} W{w} · {week_range(s, k)}' + (f' · {TAG[k]}' if k else '')
-            cells.append(f'<button type="button"{cls("is-done" if s < monday else "is-current" if s == monday else "", f"is-{k}" if k else "", "is-picked" if s == monday else "")} '
+            text = wtext(f'{i["label"]} W{w}', s, k)
+            cells.append(f'<button type="button"{cls("is-done" if s < monday else "is-current" if s == monday else "", f"is-{k}" if k else "", "is-quiet" if quiet(s, k) else "", "is-picked" if s == monday else "")} '
                          f'data-here-week data-range="{pick(text, s == monday)}" aria-label="{i["label"]} W{w}"></button>')
         segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "", "is-picked" if it_key(i) == it_key(it) else "")} data-here-it="{it_key(i)}" style="flex:{i["weeks"]}">'
                     f'<span class="here-cells">{"".join(cells)}</span>'
@@ -158,16 +205,16 @@ def here_html(day):
     for w in range(1, it['weeks'] + 1):
         s = it['start'] + timedelta(weeks=w - 1)
         k = week_kind(it, w, ip)
-        weeks.append(f'<li><button type="button"{cls("is-done" if w < week else "is-current" if w == week else "", f"is-{k}" if k else "", "is-picked" if w == week else "")} '
-                     f'data-here-week data-range="{pick(f"W{w} · {week_range(s, k)}" + (f" · {TAG[k]}" if k else ""), w == week)}">{TAG.get(k, f"W{w}")}</button></li>')
+        weeks.append(f'<li><button type="button"{cls("is-done" if w < week else "is-current" if w == week else "", f"is-{k}" if k else "", "is-quiet" if quiet(s, k) else "", "is-picked" if w == week else "")} '
+                     f'data-here-week data-range="{pick(wtext(f"W{w}", s, k), w == week)}">{TAG.get(k, f"W{w}")}</button></li>')
     now = week_kind(it, week, ip)
     return (f'<div class="here-tile" data-week="{monday.isoformat()}" tabindex="0"><small>Сегодня</small><strong>{day.day} {LONG[day.month - 1]} {day.year}</strong><span>{DAYS[day.weekday()]}</span></div>'
             f'<div class="here-tile" data-pi="{pi["name"]}" tabindex="0"><small>Программный инкремент · неделя {pi_week} из {pi_weeks}</small><div class="here-head"><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span></div>'
             f'<ol class="here-pi">{"".join(segs)}</ol>'
-            f'<span class="here-range" data-here-range>{pick(f"{it["label"]} W{week} · {week_range(monday, now)}" + (f" · {TAG[now]}" if now else ""), True)}</span>'
+            f'<span class="here-range" data-here-range>{pick(wtext(f"{it['label']} W{week}", monday, now), True)}</span>'
             f'</div>'
             f'<div class="here-tile" data-it="{it_key(it)}" tabindex="0"><small>Итерация · неделя {week} из {it["weeks"]}</small><div class="here-head"><strong>{it["label"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span></div>'
-            f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>{pick(f"W{week} · {week_range(monday, now)}" + (f" · {TAG[now]}" if now else ""), True)}</span></div>')
+            f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>{pick(wtext(f"W{week}", monday, now), True)}</span></div>')
 
 
 def cls(*names):
@@ -250,7 +297,7 @@ def calendar_html(day, shift=0, rows=()):
     for w in range(1, sel['weeks'] + 1):
         start = sel['start'] + timedelta(weeks=w - 1)
         name = f'{sel["pi"]} {sel["name"]}W{w}'
-        text = DATA['notes'].get(name, '')
+        text = week_note(start)
         weeks.append(f'<li{cls("is-current" if start == monday else "", "is-ip" if name == ip else "", "is-review" if week_kind(sel, w, ip) == "review" else "")} data-week="{start.isoformat()}" tabindex="0"><b>W{w}</b>'
                      f'<span>{span(start, start + timedelta(days=6))}</span>{f"<small>{esc(text.split(chr(59))[0])}</small>" if text else ""}</li>')
     out.append(f'<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации {sel["label"]} ({sel["title"]}) · нажмите на неделю, итерацию или PI, чтобы открыть подробности</span><ol>{"".join(weeks)}</ol></div>'

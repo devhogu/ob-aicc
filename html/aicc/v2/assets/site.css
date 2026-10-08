@@ -855,3 +855,6 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .here-pi{gap:6px}
 .here-it:hover b{color:inherit}
 .here-tile.is-flash{animation:pi-flash .9s ease-out}
+/* weeks when most people are away */
+.here-cells button.is-quiet{background:repeating-linear-gradient(135deg,var(--surface-subtle) 0 3px,var(--border) 3px 5px)}
+.here-weeks button.is-quiet{background:repeating-linear-gradient(135deg,var(--surface-subtle) 0 5px,var(--surface) 5px 10px);color:var(--text-muted);text-decoration:line-through}

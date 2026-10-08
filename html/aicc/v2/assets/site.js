@@ -222,7 +222,7 @@
     var LONG = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
     var DAYS = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
     var STATE_CLASS = {'Бэклог': 'backlog', 'Готово к работе': 'ready', 'В работе': 'doing', 'На проверке': 'review', 'Завершено': 'done'};
-    var data = {ip_weeks: {}, notes: {}, rows: []};
+    var data = {days: {}, year_end_from: [12, 21], seasons: [], rows: []};
     function at(y, m, d) { return Date.UTC(y, m - 1, d); }
     function parts(t) { var x = new Date(t); return {y: x.getUTCFullYear(), m: x.getUTCMonth() + 1, d: x.getUTCDate(), wd: (x.getUTCDay() + 6) % 7}; }
     function iso(t) { var p = parts(t); return p.y + '-' + (p.m < 10 ? '0' : '') + p.m + '-' + (p.d < 10 ? '0' : '') + p.d; }
@@ -239,10 +239,25 @@
       var monday = t - parts(t).wd * DAY, th = parts(monday + 3 * DAY), it = iteration(th.y, th.m);
       return [it, Math.round((monday - it.start) / WEEK) + 1];
     }
+    // what kind of day a date is for planning: 'off', 'away' (people likely absent), 'short' or ''
+    function dayKind(t) {
+      var k = data.days[iso(t)]; if (k) return k;
+      var p = parts(t); return p.wd < 5 && p.m === data.year_end_from[0] && p.d >= data.year_end_from[1] ? 'away' : '';
+    }
+    function lostDays(monday) { var n = 0; for (var k = 0; k < 5; k++) { var d = dayKind(monday + k * DAY); if (d === 'off' || d === 'away') n++; } return n; }
+    function weekNote(monday) {
+      var groups = {off: [], away: [], short: []};
+      for (var k = 0; k < 5; k++) { var t = monday + k * DAY, d = dayKind(t), p = parts(t); if (d) groups[d].push(p.d + ' ' + SHORT[p.m - 1]); }
+      var out = [['off', 'нерабочие'], ['away', 'вероятны отсутствия'], ['short', 'сокращённый день']].filter(function (g) { return groups[g[0]].length; })
+        .map(function (g) { return g[1] + ': ' + (groups[g[0]].length === 5 ? 'вся неделя' : groups[g[0]].join(', ')); });
+      var friday = iso(monday + 4 * DAY), mon = iso(monday);
+      data.seasons.forEach(function (s) { if (s.from <= friday && mon <= s.to) out.push(s.text); });
+      return out.join('; ');
+    }
     function increment(y, q) {
       var its = [1, 2, 3].map(function (k) { return iteration(y, 3 * (q - 1) + k); }), last = its[2], name = y + '-PIQ' + q;
-      var ipWeek = last.month === 12 && last.weeks === 5 ? last.weeks - 1 : last.weeks;
-      if (data.ip_weeks[name]) ipWeek = parseInt(data.ip_weeks[name].split('W').pop(), 10);
+      var ipWeek = last.weeks;
+      while (ipWeek > 1 && lostDays(last.start + (ipWeek - 1) * WEEK) > 2) ipWeek--;  // Planning moves to the week before until enough people are there
       var ipStart = last.start + (ipWeek - 1) * WEEK;
       return {name: name, iterations: its, start: its[0].start, end: last.end, ip: {name: name + ' ' + last.name + 'W' + ipWeek, start: ipStart, end: ipStart + 4 * DAY}};
     }
@@ -278,6 +293,8 @@
       if (i.pi + ' ' + i.name + 'W' + w === ip) return 'ip';
       return w === i.weeks && i.month % 3 ? 'review' : '';
     }
+    function quiet(s, kind) { return !kind && lostDays(s) > 2; }
+    function wtext(prefix, s, kind) { return prefix + ' · ' + weekRange(s, kind) + (kind ? ' · ' + TAG[kind] : '') + (quiet(s, kind) ? ' · вероятны отсутствия' : ''); }
     function weekRange(s, kind) { return short(s, s + (kind === 'ip' ? 4 : 6) * DAY); }
     function here(day) {
       var w = weekOf(day), it = w[0], week = w[1], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1), p = parts(day);
@@ -286,8 +303,8 @@
       var segs = pi.iterations.map(function (i) {
         var cells = '';
         for (var n = 1; n <= i.weeks; n++) {
-          var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip), text = i.label + ' W' + n + ' · ' + weekRange(s, k) + (k ? ' · ' + TAG[k] : '');
-          cells += '<button type="button"' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '', s === monday ? 'is-picked' : '') +
+          var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip), text = wtext(i.label + ' W' + n, s, k);
+          cells += '<button type="button"' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '', quiet(s, k) ? 'is-quiet' : '', s === monday ? 'is-picked' : '') +
             ' data-here-week data-range="' + pick(text, s === monday) + '" aria-label="' + i.label + ' W' + n + '"></button>';
         }
         var cur = itKey(i) === itKey(it);
@@ -298,7 +315,7 @@
       return '<div class="here-tile" data-week="' + iso(monday) + '" tabindex="0"><small>Сегодня</small><strong>' + p.d + ' ' + LONG[p.m - 1] + ' ' + p.y + '</strong><span>' + DAYS[p.wd] + '</span></div>' +
         '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><div class="here-head"><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span></div>' +
         '<ol class="here-pi">' + segs + '</ol>' +
-        '<span class="here-range" data-here-range>' + pick(it.label + ' W' + week + ' · ' + weekRange(monday, now) + (now ? ' · ' + TAG[now] : ''), true) + '</span>' +
+        '<span class="here-range" data-here-range>' + pick(wtext(it.label + ' W' + week, monday, now), true) + '</span>' +
         '</div>' +
         iterTile(it, day, null);
     }
@@ -306,11 +323,11 @@
     function iterTile(i, day, pick) {
       var w = weekOf(day), cur = itKey(i) === itKey(w[0]), monday = day - parts(day).wd * DAY, ip = increment(i.year, Math.floor((i.month - 1) / 3) + 1).ip.name;
       if (pick === null) pick = cur ? monday : i.start;
-      function text(n, s) { var k = weekKind(i, n, ip); return esc('W' + n + ' · ' + weekRange(s, k) + (k ? ' · ' + TAG[k] : '') + (s === monday ? ' · сейчас' : '')); }
+      function text(n, s) { return esc(wtext('W' + n, s, weekKind(i, n, ip)) + (s === monday ? ' · сейчас' : '')); }
       var weeks = '', shown = '';
       for (var n = 1; n <= i.weeks; n++) {
         var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip);
-        weeks += '<li><button type="button"' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '', s === pick ? 'is-picked' : '') +
+        weeks += '<li><button type="button"' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '', quiet(s, k) ? 'is-quiet' : '', s === pick ? 'is-picked' : '') +
           ' data-here-week data-range="' + text(n, s) + '">' + (k ? TAG[k] : 'W' + n) + '</button></li>';
         if (s === pick) shown = text(n, s);
       }
@@ -325,7 +342,7 @@
       var pis = [0, 1, 2].map(function (k) { return increment(Math.floor((q + k) / 4), (q + k) % 4 + 1); });
       var shown = pis.filter(function (p) { return p.name === state.pi; })[0] || pis[0];
       var sel = shown.iterations.filter(function (i) { return itKey(i) === state.it; })[0] || (it.pi === shown.name ? it : shown.iterations[0]);
-      var monday = it.start + (week - 1) * WEEK, note = data.notes[it.pi + ' ' + it.name + 'W' + week] || '';
+      var monday = it.start + (week - 1) * WEEK, note = weekNote(monday);
       var out = ['<div class="pi-bar"><div class="pi-now" data-week="' + iso(monday) + '" tabindex="0"><span class="pi-now__label">Сейчас</span><strong>' + it.pi + ' · ' + it.label + ' · неделя ' + week + ' из ' + it.weeks + '</strong><span>' + span(monday, monday + 6 * DAY) + '</span>' +
         (note ? '<span class="pi-note">' + esc(note) + '</span>' : '') + '</div>' +
         '<div class="pi-nav"><button type="button" data-pi-step="-1" aria-label="Предыдущий PI">‹</button><button type="button" data-pi-step="0">Сегодня</button><button type="button" data-pi-step="1" aria-label="Следующий PI">›</button></div></div><div class="pi-row">'];
@@ -343,7 +360,7 @@
       out.push('</div>');
       var weeks = [];
       for (var n = 1; n <= sel.weeks; n++) {
-        var start = sel.start + (n - 1) * WEEK, name = sel.pi + ' ' + sel.name + 'W' + n, text = data.notes[name] || '';
+        var start = sel.start + (n - 1) * WEEK, name = sel.pi + ' ' + sel.name + 'W' + n, text = weekNote(start);
         weeks.push('<li' + cls(start === monday ? 'is-current' : '', name === shown.ip.name ? 'is-ip' : '', weekKind(sel, n, shown.ip.name) === 'review' ? 'is-review' : '') + ' data-week="' + iso(start) + '" tabindex="0"><b>W' + n + '</b><span>' + span(start, start + 6 * DAY) + '</span>' + (text ? '<small>' + esc(text.split(';')[0]) + '</small>' : '') + '</li>');
       }
       out.push('<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + sel.label + ' (' + sel.title + ') · нажмите на неделю, итерацию или PI, чтобы открыть подробности</span><ol>' + weeks.join('') + '</ol></div>' +
@@ -360,7 +377,6 @@
     function itemList(list, empty) {
       return list.length ? '<div class="pop-items">' + list.map(item).join('') + '</div>' : '<p class="pop-muted">' + empty + '</p>';
     }
-    function weekNote(start) { var w = weekOf(start); return data.notes[w[0].pi + ' ' + w[0].name + 'W' + w[1]] || ''; }
     function popPI(name, day) {
       var pi = piByName(name), it = weekOf(day)[0], weeks = Math.round((pi.end - pi.start + DAY) / WEEK);
       var total = Math.round((pi.end - pi.start) / DAY) + 1, done = Math.max(0, Math.min(total, Math.round((day - pi.start) / DAY) + 1));
@@ -380,28 +396,23 @@
     function popIt(key, day) {
       var p = key.split('-').map(Number), i = iteration(p[0], p[1]), w = weekOf(day), monday = day - parts(day).wd * DAY, ip = piByName(i.pi).ip.name, weeks = [];
       for (var n = 1; n <= i.weeks; n++) {
-        var s = i.start + (n - 1) * WEEK, note = data.notes[i.pi + ' ' + i.name + 'W' + n] || '';
+        var s = i.start + (n - 1) * WEEK, note = weekNote(s);
         weeks.push('<li' + cls(s === monday ? 'is-current' : '', i.pi + ' ' + i.name + 'W' + n === ip ? 'is-ip' : '', weekKind(i, n, ip) === 'review' ? 'is-review' : '') + ' data-week="' + iso(s) + '" tabindex="0"><b>W' + n + '</b><span>' + span(s, s + 6 * DAY) + '</span><span>' + (esc(note) || '—') + '</span></li>');
       }
       return '<header><small>Итерация · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a>' + (itKey(i) === itKey(w[0]) ? ' · идёт, неделя ' + w[1] : '') + '</small><h2>' + i.label + ' · ' + i.title + ' ' + i.year + '</h2><p>' + span(i.start, i.end, true) + ' · ' + i.weeks + ' нед.</p></header>' +
         '<h3>Недели</h3><ul class="pop-rows pop-rows--weeks">' + weeks.join('') + '</ul>' +
         '<h3>Работа в этой итерации</h3>' + itemList(work([i.pi + ' ' + i.name]), 'В эту итерацию работа пока не запланирована.');
     }
-    var MARKS = {'нерабочие': 'is-off', 'вероятны отсутствия': 'is-away', 'сокращённый день': 'is-short'};
     function popWeek(key, day) {
-      var start = fromIso(key), w = weekOf(start), i = w[0], note = weekNote(start), marks = {}, events = [];
-      note.split(';').forEach(function (part) {
-        part = part.trim(); if (!part) return;
-        var c = part.indexOf(':');
-        if (c > 0 && MARKS[part.slice(0, c)]) part.slice(c + 1).split(',').forEach(function (d) { marks[d.trim()] = MARKS[part.slice(0, c)]; });
-        else if (part.indexOf('неделя IP') !== 0 && part.indexOf('неделя ревью') !== 0) events.push(part);  // Planning and Review come from the rules below
-      });
+      var start = fromIso(key), w = weekOf(start), i = w[0], events = [];
+      var friday = iso(start + 4 * DAY), mon = iso(start);
+      data.seasons.forEach(function (s) { if (s.from <= friday && mon <= s.to) events.push(s.text); });
       var kind = weekKind(i, w[1], piByName(i.pi).ip.name);
       if (kind) events.unshift(TAG[kind]);
       var days = [];
       for (var k = 0; k < 7; k++) {
-        var t = start + k * DAY, p = parts(t), label = p.d + ' ' + SHORT[p.m - 1];
-        days.push('<li' + cls(k > 4 ? 'is-weekend' : '', marks[label] || '', t === day ? 'is-today' : '') + '><small>' + DAYS[k].slice(0, 2) + '</small><b>' + p.d + '</b><span>' + SHORT[p.m - 1] + '</span></li>');
+        var t = start + k * DAY, p = parts(t), dk = k < 5 ? dayKind(t) : '';
+        days.push('<li' + cls(k > 4 ? 'is-weekend' : '', dk ? 'is-' + dk : '', t === day ? 'is-today' : '') + '><small>' + DAYS[k].slice(0, 2) + '</small><b>' + p.d + '</b><span>' + SHORT[p.m - 1] + '</span></li>');
       }
       return '<header><small>Неделя ' + w[1] + ' из ' + i.weeks + ' · итерация <a href="#" data-it="' + itKey(i) + '">' + i.label + ' ' + i.title + '</a> · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a></small><h2>W' + w[1] + ' · ' + span(start, start + 6 * DAY) + '</h2>' +
         (events.length ? '<p class="pop-events">' + events.map(function (e) { return '<span>' + esc(e) + '</span>'; }).join('') + '</p>' : '') + '</header>' +
@@ -429,7 +440,7 @@
 
   // the explorer: a click on a PI, an iteration, a week or a work item selects it and opens its details; inside, the same clicks go deeper
   document.querySelectorAll('[data-pi-calendar]').forEach(function (el) {
-    try { var given = JSON.parse(el.dataset.piCalendar); PI.data.ip_weeks = given.ip_weeks || {}; PI.data.notes = given.notes || {}; PI.data.rows = given.rows || []; } catch (e) {}
+    try { var given = JSON.parse(el.dataset.piCalendar); PI.data.days = given.days || {}; PI.data.year_end_from = given.year_end_from || [12, 21]; PI.data.seasons = given.seasons || []; PI.data.rows = given.rows || []; } catch (e) {}
     var day = PI.today(), shift = 0, state = {}, dlg = null, stack = [], opener = null;
     var base = PI.qIndex(PI.weekOf(day)[0].pi);
     function draw() { el.innerHTML = PI.calendar(day, shift, state); el.dispatchEvent(new Event('kb-refresh', {bubbles: true})); }
