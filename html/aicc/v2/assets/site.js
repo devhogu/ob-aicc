@@ -386,7 +386,7 @@
       var days = [];
       for (var k = 0; k < 7; k++) {
         var t = start + k * DAY, p = parts(t), dk = k < 5 ? dayKind(t) : '';
-        days.push('<li' + cls(k > 4 ? 'is-weekend' : '', dk ? 'is-' + dk : '', t === day ? 'is-today' : '') + '><small>' + DAYS[k].slice(0, 2) + '</small><b>' + p.d + '</b><span>' + SHORT[p.m - 1] + '</span></li>');
+        days.push('<li' + cls(k > 4 ? 'is-weekend' : '', dk ? 'is-' + dk : '', t === day ? 'is-today' : '') + '><small>' + ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'][k] + '</small><b>' + p.d + '</b><span>' + SHORT[p.m - 1] + '</span></li>');
       }
       return '<header><small>Неделя ' + w[1] + ' из ' + i.weeks + ' · итерация <a href="#" data-it="' + itKey(i) + '">' + i.label + ' ' + i.title + '</a> · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a></small><h2>W' + w[1] + ' · ' + span(start, start + 6 * DAY) + '</h2>' +
         (events.length ? '<p class="pop-events">' + events.map(function (e) { return '<span>' + esc(e) + '</span>'; }).join('') + '</p>' : '') + '</header>' +
