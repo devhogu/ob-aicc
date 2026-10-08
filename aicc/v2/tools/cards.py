@@ -1,5 +1,5 @@
 # START_MODULE_CONTRACT
-#   PURPOSE: Read the project cards (YAML checked by a schema) and render the Hub views from them: the projects overview, the Funnel, the Portfolio, the Program and one page per card.
+#   PURPOSE: Read the project cards (YAML checked by a schema) and render the live views from them: the overview, the Portfolio (kanban, backlog, run-rate, register), the Program (kanban with lanes, backlog, intake), the control points and one page per card.
 #   SCOPE: Reads aicc/v2/cards only. Produces Page objects for the builder; writes nothing itself.
 #   DEPENDS: PyYAML, jsonschema, M-HUB-V2-BUILD (passed in as api)
 #   LINKS: C-HUB-V2
@@ -8,7 +8,9 @@
 # START_MODULE_MAP
 #   STAGES, PROGRAM_COLUMNS - the states of the Portfolio and the columns of the Program board
 #   load_cards - read and validate every card
+#   NEXT_POINT - the next control point of each state: what is decided, by whom, on what
 #   add_pages - add the generated pages to the page set
+#   render_card - one card as a page
 # END_MODULE_MAP
 """Project cards and the views rendered from them."""
 import json
@@ -25,6 +27,18 @@ OFF_FLOW = ['Отложено', 'Закрыто']
 PROGRAM_COLUMNS = ['Бэклог', 'Готово к работе', 'В работе', 'На проверке', 'Завершено']
 STAGE_TERM = {'Воронка': 'funnel', 'Проработка': 'shaping', 'Готово к старту': 'ready', 'В работе': 'doing', 'Завершено': 'done'}
 STATUS_CLASS = {'зелёный': 'ok', 'жёлтый': 'warn', 'красный': 'bad', 'не задан': 'none'}
+LANES = ['срочная работа', 'инициатива', 'текущая работа']
+LANE_EN = {'срочная работа': 'Urgent', 'инициатива': 'Initiative', 'текущая работа': 'Run-rate'}
+NEXT_POINT = {
+    'Воронка': ('Взять в проработку', 'менеджер продукта', 'На карточке записаны задача, кому станет легче и как поймём, что получилось.'),
+    'Проработка': ('Готово к старту', 'менеджер продукта с бизнес-владельцем', 'Записаны ожидаемый результат, критерий выхода, допустимый объём вложений и порог остановки.'),
+    'Готово к старту': ('Решение о старте', 'бизнес-владелец и менеджер продукта', 'Есть место по WIP-лимиту; бизнес-кейс и условия на карточке.'),
+    'В работе': ('Продолжить, изменить курс или остановить', 'бизнес-владелец', 'Достигнут критерий выхода или порог остановки, записанные до старта.'),
+    'Завершено': ('Подтверждение результата', 'бизнес-владелец', 'Результат и уроки записаны на карточке.'),
+    'Отложено': ('Вернуться в воронку', 'менеджер продукта', 'Наступили условия возвращения, записанные на карточке.'),
+    'Закрыто': ('—', '—', 'Причина закрытия записана на карточке.'),
+}
+RUN_RATE_NEXT = {'Воронка': ('Взять в работу', 'менеджер продукта', 'Есть место по WIP-лимиту; запрос записан строкой на постоянной карточке.')}
 PROFILE_TITLE = {'initiative': 'Инициатива', 'run-rate': 'Текущая работа', 'recurring-check': 'Регулярная проверка', 'enablement': 'Обучение и внедрение'}
 
 
@@ -66,77 +80,56 @@ def add_pages(pages, site, terms, api):
     cards = load_cards()
     rel, Page, term = api.rel, api.Page, api.term_html
     ids = {c['id']: 'projects/' + c['id'].lower() for c in cards}
+    e = escape
+    wip = site.get('wip_limits', {})
+    cad = site.get('cadence', {})
+    by_stage = {s: [c for c in cards if c['stage'] == s] for s in STAGES + OFF_FLOW}
+    work = [(c, w) for c in cards for w in c.get('work', [])]
 
     def link(here, page_id):
-        return escape(rel(api.url_of(here), api.url_of(page_id)))
+        return e(rel(api.url_of(here), api.url_of(page_id)))
 
-    def tile(here, card):
-        status = card['live']['status']
-        owner = card['people']['business_owner'].get('holder') or ''
-        meta = ' · '.join(x for x in (card.get('function'), card.get('class_of_service')) if x)
-        owner_html = f'<span class="tile-owner">{escape(owner)}</span>' if owner else ''
-        return (f'<li class="tile"><a href="{link(here, ids[card["id"]])}"><span class="tile-id">{escape(card["id"])}</span> '
-                f'<strong>{escape(card["title"])}</strong></a>'
-                f'<span class="tile-meta">{escape(meta)}</span>'
-                f'{owner_html}'
-                f'<span class="dot {STATUS_CLASS[status]}" title="Состояние: {escape(status)}"></span></li>')
+    def next_point(card):
+        if card['profile'] == 'run-rate' and card['stage'] in RUN_RATE_NEXT:
+            return RUN_RATE_NEXT[card['stage']]
+        return NEXT_POINT[card['stage']]
 
-    def column(here, title, items, tile_html, term_id=None, note=''):
-        head = term(terms, term_id, title, api.url_of(here)) if term_id else escape(title)
-        body = ''.join(tile_html(i) for i in items) or '<li class="tile-empty">Пока ничего</li>'
-        return f'<section class="column"><h3>{head} <span class="count">{len(items)}</span></h3>{note}<ul class="tiles">{body}</ul></section>'
+    def rank_key(card):
+        return (card.get('rank') or 10 ** 6, card['id'])
 
-    by_stage = {s: [c for c in cards if c['stage'] == s] for s in STAGES + OFF_FLOW}
+    def header(sub):
+        line = f'PI {e(cad["pi"])}: итерации {e(cad["iterations"])}, с {e(cad["from"])} по {e(cad["to"])}' if cad else ''
+        now = f' · сейчас: {e(cad["current"])}' if cad.get('current') else ''
+        return (f'<header class="pf-header"><span class="pf-meta">По состоянию на {e(site.get("as_of", ""))}</span>'
+                f'<p class="pf-sub">{e(sub)}</p><p class="pf-muted">{line}{now}</p></header>')
 
-    # the overview
-    here = 'projects'
-    counts = ''.join(f'<li><strong>{len(by_stage[s])}</strong> {escape(s)}</li>' for s in STAGES)
-    body = (
-        f'<p class="lede">Все проекты Хаба в одном месте. Каждый проект ведёт своя карточка, сайт показывает её как есть.</p>'
-        f'<ul class="stats">{counts}</ul>'
-        f'<h2>Виды</h2><ul class="cards">'
-        f'<li><strong><a href="{link(here, "projects/portfolio")}">Портфель</a></strong> канбан от воронки до завершения, по функциям и направлениям</li>'
-        f'<li><strong><a href="{link(here, "projects/program")}">Программа</a></strong> возможности и функции на доске</li>'
-        f'<li><strong><a href="{link(here, "projects/new")}">Завести карточку</a></strong> как принести идею или проект</li></ul>'
-        f'<h2>Как это работает</h2>'
-        f'<p>У каждого проекта есть карточка: один файл, в котором записано, что делаем, зачем, кто отвечает и на каком мы этапе. Карточку ведёт руководитель проекта. Пока карточка актуальна, сайт показывает проект правильно. Это всё, что нужно для отчётности.</p>')
-    pages[here] = Page(here, 'Проекты', 'projects', 0, 'Портфель и программа в виде карточек.', body)
-
-    # the live boards: one interactive workspace per level, in the manner of the kit's Kanban
-    wip = site.get('wip_limits', {})
-    pf_gates = {'Воронка': 'Взять в проработку — менеджер продукта', 'Проработка': 'Условия записаны: критерий выхода, объём вложений, порог остановки',
-                'Готово к старту': 'Решение о старте — бизнес-владелец и менеджер продукта',
-                'В работе': f'WIP-лимит {wip.get("portfolio", 1)} · продолжать ли — бизнес-владелец', 'Завершено': 'Результат подтверждает бизнес-владелец'}
-    pf_en = {'Воронка': 'Funnel', 'Проработка': 'Shaping', 'Готово к старту': 'Ready', 'В работе': 'Doing', 'Завершено': 'Done'}
-    pg_gates = {'Бэклог': 'Порядок — менеджер продукта и форум решений по программе', 'Готово к работе': 'Понятны результат и критерии приёмки',
-                'В работе': f'WIP-лимит {wip.get("program", 1)}', 'На проверке': 'Приёмка Feature — менеджер продукта', 'Завершено': 'Принято и отмечено на карточке'}
-    pg_en = {'Бэклог': 'Backlog', 'Готово к работе': 'Ready', 'В работе': 'Active', 'На проверке': 'Review', 'Завершено': 'Done'}
-    e = escape
+    def stats(items):
+        return '<div class="pf-stats">' + ''.join(f'<div><strong>{e(str(v))}</strong><span>{e(k)}</span></div>' for k, v in items) + '</div>'
 
     def options(values, label):
         return f'<option value="">{e(label)}</option>' + ''.join(f'<option value="{e(v)}">{e(v)}</option>' for v in values)
 
-    def filters(here, items, kind):
+    def filters(count):
         functions = sorted({c.get('function') for c in cards if c.get('function')})
         areas = sorted({c.get('area') for c in cards if c.get('area')})
         return (f'<div class="pf-filter" role="search"><label>Найти<input type="search" data-kb-search placeholder="идентификатор, название, функция"></label>'
                 f'<label>Функция<select data-kb-filter="function">{options(functions, "Все функции")}</select></label>'
                 f'<label>Услуга<select data-kb-filter="area">{options(areas, "Все услуги")}</select></label>'
-                f'<output data-kb-count aria-live="polite">Показано: {len(items)}</output></div>')
+                f'<output data-kb-count aria-live="polite">Показано: {count}</output></div>')
 
     def card_attrs(card):
         find = ' '.join(x for x in (card['id'], card['title'], card.get('function', ''), card.get('area', ''), card['summary']) if x).lower()
         return f'data-find="{e(find)}" data-function="{e(card.get("function", ""))}" data-area="{e(card.get("area", ""))}"'
 
-    def kb_card(here, card, ident, title, kind, state, foot_left, foot_right, find_attrs):
-        return (f'<a class="kb-card" data-kb-open="{e(ident)}" href="{link(here, ids[card["id"]])}" title="{e(title)}" {find_attrs}>'
+    def kb_card(here, card, ident, title, kind, state, foot_left, foot_right):
+        return (f'<a class="kb-card" data-kb-open="{e(ident)}" href="{link(here, ids[card["id"]])}" title="{e(title)}" {card_attrs(card)}>'
                 f'<div class="kb-meta"><span>{e(ident)}</span><span>{e(kind)}</span></div><h3>{e(title)}</h3>'
                 f'<div class="kb-state">{e(state)}</div><div class="kb-foot"><span>{e(foot_left)}</span><span>{e(foot_right)}</span></div></a>')
 
-    def detail_template(here, card, ident=None, extra=''):
-        status = card['live']['status']
+    def detail_template(card, ident=None, extra=''):
+        point, who, _ = next_point(card)
         facts = ''.join(f'<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>' for k, v in (
-            ('Состояние', card['stage']), ('Статус', status), ('Класс', card.get('class_of_service', '—')), ('Функция', card.get('function') or '—')))
+            ('Состояние', card['stage']), ('Следующая точка контроля', point), ('Кто решает', who), ('Функция', card.get('function') or '—')))
         o = card['outcome']
         return (f'<template data-kb-detail="{e(ident or card["id"])}"><header><span class="pf-meta">{e(card["id"])} · {e(PROFILE_TITLE[card["profile"]])}</span>'
                 f'<h2>{e(card["title"])}</h2><p>{e(card["summary"])}</p></header><dl class="pf-facts">{facts}</dl>{extra}'
@@ -153,71 +146,138 @@ def add_pages(pages, site, terms, api):
         return ('<section class="kb-detail" data-kb-panel hidden><div class="kb-detail-actions"><span data-kb-identity></span>'
                 '<div><a data-kb-full>Полная карточка →</a><button type="button" data-kb-close>Закрыть ×</button></div></div><div class="kb-detail-body"></div></section>')
 
-    def stats(items):
-        return '<div class="pf-stats">' + ''.join(f'<div><strong>{e(str(v))}</strong><span>{e(k)}</span></div>' for k, v in items) + '</div>'
+    def tabs(items):
+        heads = ''.join(f'<button type="button" role="tab" data-tab="{k}"{" aria-selected=true" if i == 0 else ""}>{e(label)}</button>' for i, (k, label, _) in enumerate(items))
+        panels = ''.join(f'<section class="tab-panel" data-tab-panel="{k}" aria-label="{e(label)}"><h2 class="tab-title">{e(label)}</h2>{html}</section>' for k, label, html in items)
+        return f'<div data-tabs><div class="pf-tabs" role="tablist">{heads}</div>{panels}</div>'
 
-    # the Portfolio
-    here = 'projects/portfolio'
-    cols = []
-    for s in STAGES:
-        html = ''.join(kb_card(here, c, c['id'], c['title'], PROFILE_TITLE[c['profile']], c['live'].get('next_step') or c['stage'],
-                               c.get('function') or '—', c.get('class_of_service') or '', card_attrs(c)) for c in by_stage[s])
-        cols.append(column(s, pf_en[s], len(by_stage[s]), pf_gates[s], html))
-    templates = ''.join(detail_template(here, c) for c in cards)
-    off = by_stage['Отложено'] + by_stage['Закрыто']
-    register = ''.join(f'<tr data-kb-row {card_attrs(c)}><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(c["stage"])}</td>'
-                       f'<td>{e(c.get("function") or "—")}</td><td>{e(c.get("area") or "—")}</td><td>{e(c.get("class_of_service") or "—")}</td></tr>' for c in cards)
-    run_rate = sum(1 for c in cards if c['profile'] == 'run-rate')
-    body = (f'<article class="hub-board" data-kanban-workspace>'
-            f'<p class="lede">Все идеи, инициативы и текущая работа на одном канбане — от воронки до завершения. Нажмите на карточку, чтобы увидеть её здесь же; полная карточка открывается по ссылке.</p>'
-            + stats([('В воронке', len(by_stage['Воронка'])), ('В проработке', len(by_stage['Проработка'])),
-                     ('В работе, в пределах лимита', f'{len(by_stage["В работе"])} / {wip.get("portfolio", 1)}'), ('Текущая работа', run_rate)])
-            + filters(here, cards, 'portfolio')
-            + f'<div class="kb-scroll"><div class="kb-board" style="grid-template-columns:repeat(5,minmax(170px,1fr));min-width:900px">{"".join(cols)}</div></div>'
-            + panel() + templates
-            + (('<h2>Отложено и закрыто</h2><ul class="tiles wide">' + ''.join(tile(here, c) for c in off) + '</ul>') if off else '')
-            + f'<h2>Реестр</h2><div class="o-table-wrap"><table class="hub-register"><thead><tr><th>Карточка</th><th>Название</th><th>Состояние</th><th>Функция</th><th>Услуга</th><th>Класс</th></tr></thead><tbody>{register}</tbody></table></div>'
+    def table(head, rows):
+        return '<div class="o-table-wrap"><table class="hub-register"><thead><tr>' + ''.join(f'<th>{e(h)}</th>' for h in head) + f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+
+    pf_en = {'Воронка': 'Funnel', 'Проработка': 'Shaping', 'Готово к старту': 'Ready', 'В работе': 'Doing', 'Завершено': 'Done'}
+    pf_gate = {s: f'{NEXT_POINT[s][0]} — {NEXT_POINT[s][1]}' for s in STAGES}
+    pf_gate['В работе'] = f'WIP-лимит {wip.get("portfolio", 1)} · {NEXT_POINT["В работе"][0].lower()} — бизнес-владелец'
+    pg_en = {'Бэклог': 'Backlog', 'Готово к работе': 'Ready', 'В работе': 'Active', 'На проверке': 'Review', 'Завершено': 'Done'}
+    pg_gate = {'Бэклог': 'Порядок — менеджер продукта; между проектами — форум решений по программе', 'Готово к работе': f'Понятны результат и критерии приёмки · лимит {wip.get("program_ready", 2)}',
+               'В работе': f'WIP-лимит {wip.get("program", 1)}', 'На проверке': 'Приёмка Feature — менеджер продукта', 'Завершено': 'Принято и отмечено на карточке'}
+    run_rate = [c for c in cards if c['profile'] == 'run-rate']
+    feats = lambda state: sum(1 for _, w in work if w['state'] == state and w['type'] == 'feature')
+    caps = lambda state: sum(1 for _, w in work if w['state'] == state and w['type'] == 'capability')
+
+    # ---- the overview
+    here = 'projects'
+    tiles = ''.join(f'<li><span class="mini-count">{len(by_stage[s])}</span><span>{e(s)}</span></li>' for s in STAGES)
+    upcoming = sorted([c for c in cards if c['stage'] not in ('Завершено', 'Закрыто')], key=lambda c: (STAGES.index(c['stage']) if c['stage'] in STAGES else 0, ) + rank_key(c), reverse=False)
+    rows = [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(c["stage"])}</td>'
+            f'<td><strong>{e(next_point(c)[0])}</strong></td><td>{e(next_point(c)[1])}</td></tr>' for c in upcoming]
+    body = ('<article class="hub-board">' + header('Сводка по всем проектам Хаба: что в воронке, что в работе и какие точки контроля впереди.')
+            + stats([('Карточек всего', len(cards)), ('В работе, в пределах лимита', f'{len(by_stage["В работе"])} / {wip.get("portfolio", 1)}'),
+                     ('Текущая работа', len(run_rate)), ('Features в программе', sum(1 for _, w in work if w['type'] == 'feature'))])
+            + '<div class="proj-doors">'
+            + f'<a class="proj-door" href="{link(here, "projects/portfolio")}"><small>Уровни 1–2</small><strong>Портфель</strong><span>Канбан от воронки до завершения, бэклог портфеля, текущая работа и реестр.</span><ul class="mini-board">{tiles}</ul></a>'
+            + f'<a class="proj-door" href="{link(here, "projects/program")}"><small>Уровень 3</small><strong>Программа</strong><span>Capabilities и Features на доске с дорожками по классам обслуживания, бэклог программы и поступление из портфеля.</span>'
+            + '<ul class="mini-board">' + ''.join(f'<li><span class="mini-count">{sum(1 for _, w in work if w["state"] == s)}</span><span>{e(s)}</span></li>' for s in PROGRAM_COLUMNS) + '</ul></a>'
+            + '</div>'
+            + '<h2>Ближайшие точки контроля</h2><p class="pf-muted">Что решается дальше по каждой открытой карточке и кто решает. Подробнее — на странице <a href="' + link(here, 'projects/decisions') + '">Точки контроля и решения</a>.</p>'
+            + table(['Карточка', 'Название', 'Состояние', 'Следующая точка контроля', 'Кто решает'], rows)
+            + f'<h2>Как это работает</h2><p>У каждого проекта есть карточка: один файл, где записано, что делаем, зачем, кто отвечает и на каком этапе. Карточку ведёт руководитель проекта; пока она актуальна, все виды здесь показывают проект правильно. <a href="{link(here, "projects/new")}">Завести карточку</a>.</p>'
             + '</article>')
-    pages[here] = Page(here, 'Портфель', 'projects', 20, 'Канбан портфеля от воронки до завершения, с поиском и фильтрами.', body)
+    pages[here] = Page(here, 'Проекты', 'projects', 0, 'Сводка по всем проектам: портфель, программа и ближайшие точки контроля.', body)
 
-    # the Program
+    # ---- the Portfolio
+    here = 'projects/portfolio'
+    cols = ''.join(column(s, pf_en[s], len(by_stage[s]), pf_gate[s],
+                          ''.join(kb_card(here, c, c['id'], c['title'], PROFILE_TITLE[c['profile']], c['live'].get('next_step') or c['stage'],
+                                          c.get('function') or '—', c.get('class_of_service') or '') for c in sorted(by_stage[s], key=rank_key)))
+                   for s in STAGES)
+    board = f'<div class="kb-scroll"><div class="kb-board" style="grid-template-columns:repeat(5,minmax(170px,1fr));min-width:900px">{cols}</div></div>'
+    off = by_stage['Отложено'] + by_stage['Закрыто']
+    if off:
+        board += '<h3>Отложено и закрыто</h3><div class="kb-scroll"><div class="kb-board" style="grid-template-columns:repeat(4,minmax(170px,1fr))">' + ''.join(
+            kb_card(here, c, c['id'], c['title'], PROFILE_TITLE[c['profile']], c['stage'], c.get('function') or '—', '') for c in off) + '</div></div>'
+    backlog = sorted([c for c in cards if c['stage'] in ('Воронка', 'Проработка', 'Готово к старту') and c['profile'] != 'run-rate'], key=lambda c: (-STAGES.index(c['stage']),) + rank_key(c))
+    backlog_rows = [f'<tr {card_attrs(c)} data-kb-row><td>{e(str(c["rank"])) if c.get("rank") else "без места"}</td><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td>'
+                    f'<td>{e(c["stage"])}</td><td>{e(next_point(c)[0])}</td><td>{e(c.get("function") or "—")}</td></tr>' for c in backlog]
+    backlog_html = ('<p class="pf-muted">Инициативы, которые ещё не начаты, в порядке очереди: сначала готовые к старту, затем в проработке, затем в воронке. '
+                    'Место в очереди задаёт менеджер продукта; если инициативы одинаково важны, порядок определяет очерёдность по ценности и срокам.</p>'
+                    + table(['Место', 'Карточка', 'Название', 'Состояние', 'Следующая точка контроля', 'Функция'], backlog_rows))
+    rr_html = ('<p class="pf-muted">Постоянные карточки текущей работы: небольшие повторяющиеся запросы становятся на них строками и делаются за одну итерацию, без решения о старте.</p><div class="kb-scroll"><div class="kb-board" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr))">'
+               + ''.join(kb_card(here, c, c['id'], c['title'], 'Текущая работа', f'{sum(1 for w in c.get("work", []) if w["type"] == "feature")} запросов на карточке · {c["stage"]}',
+                                 c.get('function') or c.get('area') or '—', c.get('area') or '') for c in run_rate) + '</div></div>')
+    reg_rows = [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(PROFILE_TITLE[c["profile"]])}</td><td>{e(c["stage"])}</td>'
+                f'<td>{e(c.get("function") or "—")}</td><td>{e(c.get("area") or "—")}</td></tr>' for c in cards]
+    wip_rows = [f'<tr><td>{e(s)}</td><td>{len(by_stage[s])}</td><td>{wip.get("portfolio", 1) if s == "В работе" else "без лимита"}</td></tr>' for s in STAGES]
+    body = ('<article class="hub-board" data-kanban-workspace>' + header('Все идеи, инициативы и текущая работа — от воронки до завершения. Нажмите на карточку, чтобы увидеть её здесь же.')
+            + stats([('В воронке', len(by_stage['Воронка'])), ('В проработке и готово к старту', len(by_stage['Проработка']) + len(by_stage['Готово к старту'])),
+                     ('В работе, в пределах лимита', f'{len(by_stage["В работе"])} / {wip.get("portfolio", 1)}'), ('Постоянные карточки текущей работы', len(run_rate))])
+            + filters(len(cards))
+            + tabs([('kanban', 'Канбан портфеля', board), ('backlog', 'Бэклог портфеля', backlog_html), ('run-rate', 'Текущая работа', rr_html),
+                    ('register', 'Реестр', table(['Карточка', 'Название', 'Профиль', 'Состояние', 'Функция', 'Услуга'], reg_rows))])
+            + panel() + ''.join(detail_template(c) for c in cards)
+            + '<details class="pf-more"><summary>Незавершённая работа в сопоставлении с WIP-лимитами</summary>' + table(['Состояние', 'Карточек', 'Лимит'], wip_rows) + '</details>'
+            + '</article>')
+    pages[here] = Page(here, 'Портфель', 'projects', 10, 'Канбан портфеля, бэклог портфеля, текущая работа и реестр — с поиском и фильтрами.', body)
+
+    # ---- the Program
     here = 'projects/program'
-    work = [(c, w) for c in cards for w in c.get('work', [])]
-    cols = []
-    for s in PROGRAM_COLUMNS:
-        html = ''.join(kb_card(here, c, w['id'], w['title'], 'Capability' if w['type'] == 'capability' else 'Feature', f'{c["id"]} · {c["title"]}',
-                               c.get('function') or '—', ('Jira ' + w['jira']) if w.get('jira') else '', card_attrs(c))
-                       for c, w in work if w['state'] == s)
-        cols.append(column(s, pg_en[s], sum(1 for _, w in work if w['state'] == s), pg_gates[s], html))
-    templates = ''.join(detail_template(here, c, w['id'], f'<p class="pf-notice"><strong>{e(w["id"])}</strong> · {"Capability" if w["type"] == "capability" else "Feature"} · {e(w["title"])} · {e(w["state"])}</p>') for c, w in work)
-    body = (f'<article class="hub-board" data-kanban-workspace>'
-            f'<p class="lede">Capabilities и Features всех начатых инициатив и текущей работы на одной доске. Строки берутся из карточек, подробности каждой Feature — в Jira.</p>'
-            + stats([('В бэклоге', sum(1 for _, w in work if w['state'] == 'Бэклог')), ('Готово к работе', sum(1 for _, w in work if w['state'] == 'Готово к работе')),
-                     ('В работе, в пределах лимита', f'{sum(1 for _, w in work if w["state"] == "В работе")} / {wip.get("program", 1)}'), ('Принято', sum(1 for _, w in work if w['state'] == 'Завершено'))])
-            + filters(here, [c for c, _ in work], 'program')
-            + f'<div class="kb-scroll"><div class="kb-board" style="grid-template-columns:repeat(5,minmax(170px,1fr));min-width:900px">{"".join(cols)}</div></div>'
-            + panel() + templates + '</article>')
-    pages[here] = Page(here, 'Программа', 'projects', 30, 'Доска программы: Capabilities и Features всех инициатив, с поиском и фильтрами.', body)
+    def wcard(c, w):
+        return kb_card(here, c, w['id'], w['title'], 'Capability' if w['type'] == 'capability' else 'Feature', f'{c["id"]} · {c["title"]}', c.get('function') or '—', ('Jira ' + w['jira']) if w.get('jira') else '')
+    lane_of = lambda c, w: w.get('class_of_service') or c.get('class_of_service') or 'инициатива'
+    head_cells = ''.join(f'<th><div class="kb-column-head"><div><h3>{e(s)}<span class="kb-step-en" lang="en">{e(pg_en[s])}</span></h3><span class="kb-count">{sum(1 for _, w in work if w["state"] == s)}</span></div><small>{e(pg_gate[s])}</small></div></th>' for s in PROGRAM_COLUMNS)
+    lane_rows = ''.join(f'<tr><th scope="row">{e(l.capitalize())}<span class="kb-step-en" lang="en">{e(LANE_EN[l])}</span></th>' + ''.join(
+        '<td><div class="kb-stack">' + (''.join(wcard(c, w) for c, w in work if w['state'] == s and lane_of(c, w) == l) or '<span class="kb-empty">—</span>') + '</div></td>' for s in PROGRAM_COLUMNS) + '</tr>' for l in LANES)
+    lanes = f'<div class="kb-scroll"><table class="kb-table"><thead><tr><th></th>{head_cells}</tr></thead><tbody>{lane_rows}</tbody></table></div>'
+    pb_rows = [f'<tr {card_attrs(c)} data-kb-row><td>{e(w["id"])}</td><td>{"Capability" if w["type"] == "capability" else "Feature"}</td><td>{e(w["title"])}</td><td>{e(w["state"])}</td>'
+               f'<td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(lane_of(c, w))}</td><td>{e(w.get("jira") or "—")}</td></tr>' for c, w in work if w['state'] != 'Завершено']
+    pb_html = ('<p class="pf-muted">Capabilities и Features, которые ещё не приняты, в порядке очереди. Порядок внутри инициативы задаёт менеджер продукта, между инициативами — форум решений по программе. В «Готово к работе» попадает то, у чего понятны результат и критерии приёмки.</p>'
+               + table(['Ключ', 'Вид', 'Название', 'Состояние', 'Карточка', 'Класс', 'Jira'], pb_rows))
+    intake = [c for c in cards if (c['stage'] in ('Готово к старту', 'В работе') and not c.get('work')) or (c['profile'] == 'run-rate')]
+    in_rows = [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(c["stage"])}</td>'
+               f'<td>{e("строки запросов на постоянной карточке" if c["profile"] == "run-rate" else "Capabilities появятся после решения о старте и проверки гипотезы")}</td><td>{len(c.get("work", []))}</td></tr>' for c in intake]
+    in_html = ('<p class="pf-muted">Что приходит в программу из портфеля. Capabilities инициативы появляются после решения о старте и проверки гипотезы; запросы текущей работы приходят строками на постоянных карточках.</p>'
+               + table(['Карточка', 'Название', 'Состояние', 'Что поступает', 'Строк на карточке'], in_rows))
+    body = ('<article class="hub-board" data-kanban-workspace>' + header('Capabilities и Features всех начатых инициатив и текущей работы. Подробности каждой Feature — в Jira.')
+            + stats([('Features в работе', f'{feats("В работе")} / {wip.get("program", 1)}'), ('Features в «Готово к работе»', f'{feats("Готово к работе")} / {wip.get("program_ready", 2)}'),
+                     ('Capabilities в работе', caps('В работе')), ('Инициативы, ещё не перешедшие к реализации', sum(1 for c in cards if c['profile'] != 'run-rate' and c['stage'] in ('Воронка', 'Проработка', 'Готово к старту')))])
+            + filters(len(work))
+            + tabs([('kanban', 'Канбан программы', lanes), ('backlog', 'Бэклог программы', pb_html), ('intake', 'Поступление из портфеля', in_html)])
+            + panel() + ''.join(detail_template(c, w['id'], f'<p class="pf-notice"><strong>{e(w["id"])}</strong> · {"Capability" if w["type"] == "capability" else "Feature"} · {e(w["title"])} · {e(w["state"])}</p>') for c, w in work)
+            + '</article>')
+    pages[here] = Page(here, 'Программа', 'projects', 20, 'Канбан программы с дорожками по классам обслуживания, бэклог программы и поступление из портфеля.', body)
 
-    # how to bring a card
+    # ---- control points and decisions
+    here = 'projects/decisions'
+    rows = [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(c["stage"])}</td>'
+            f'<td><strong>{e(next_point(c)[0])}</strong></td><td>{e(next_point(c)[1])}</td><td>{e(next_point(c)[2])}</td></tr>' for c in sorted(cards, key=lambda c: (STAGES.index(c['stage']) if c['stage'] in STAGES else 9, c['id']))]
+    log = [(c, d) for c in cards for d in c.get('decisions', [])]
+    log_html = (table(['Карточка', 'Что решили', 'Кто', 'Когда'], [f'<tr><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(d["what"])}</td><td>{e(d.get("who") or "—")}</td><td>{e(d.get("when") or "—")}</td></tr>' for c, d in log])
+                if log else '<p class="pf-notice">Решений пока не записано: все карточки ещё в начале пути.</p>')
+    body = ('<article class="hub-board" data-kanban-workspace>' + header('Какая точка контроля впереди у каждой карточки, кто решает и на что опирается решение, и журнал всех записанных решений.')
+            + filters(len(cards))
+            + '<h2>Следующие точки контроля</h2>' + table(['Карточка', 'Название', 'Состояние', 'Точка контроля', 'Кто решает', 'На что опирается'], rows)
+            + '<h2>Журнал решений</h2><p class="pf-muted">Каждое решение записывается на карточке в ту же минуту, когда его приняли; здесь они собраны вместе.</p>' + log_html
+            + '</article>')
+    pages[here] = Page(here, 'Точки контроля и решения', 'projects', 30, 'Следующая точка контроля каждой карточки и журнал записанных решений.', body)
+
+    # ---- how to bring a card
     here = 'projects/new'
     template = (CARDS / 'template.yaml').read_text(encoding='utf-8')
-    body = (f'<p class="lede">Заведите карточку, и ваш проект появится на сайте.</p>'
+    body = (f'<p class="lede">Заведите карточку, и ваш проект появится во всех видах раздела.</p>'
             f'<ol><li>Скопируйте шаблон ниже в файл <code>cards/ИДЕНТИФИКАТОР.yaml</code>.</li>'
-            f'<li>Заполните обязательные поля: идентификатор, название, суть, профиль, состояние, позиции людей, задача и ожидаемый результат, текущее состояние.</li>'
+            f'<li>Заполните обязательные поля: идентификатор, название, суть, профиль, состояние, позиции людей, задачу и ожидаемый результат, текущее состояние.</li>'
             f'<li>Для идеи поставьте состояние «Воронка». Остальное можно добавить позже.</li>'
-            f'<li>Обновляйте карточку по мере работы. Сайт при следующей сборке покажет изменения.</li></ol>'
-            f'<p>Карточка проверяется схемой: сборка остановится и скажет, что поправить. Файл схемы — <code>cards/schema.json</code>, оба файла лежат в <a href="{escape(rel(api.url_of(here), "sources/index.html"))}">исходных файлах</a>.</p>'
-            f'<h2>Шаблон</h2><pre><code>{escape(template)}</code></pre>')
+            f'<li>Обновляйте карточку по мере работы: при следующей сборке все виды покажут изменения.</li></ol>'
+            f'<p>Карточка проверяется схемой: сборка остановится и подскажет, что поправить. Схема — <code>cards/schema.json</code>.</p>'
+            f'<h2>Шаблон</h2><pre><code>{e(template)}</code></pre>')
     pages[here] = Page(here, 'Завести карточку', 'projects', 40, 'Как принести идею или проект.', body)
 
-    # one page per card
+    # ---- one page per card
     for card in cards:
-        pages[ids[card['id']]] = render_card(card, ids[card['id']], pages, terms, api, ids)
+        pages[ids[card['id']]] = render_card(card, ids[card['id']], pages, terms, api, ids, next_point(card))
         pages[ids[card['id']]].nav = False
 
 
-def render_card(card, page_id, pages, terms, api, ids):
+def render_card(card, page_id, pages, terms, api, ids, point=None):
     rel, Page, term = api.rel, api.Page, api.term_html
     here = api.url_of(page_id)
     e = escape
@@ -247,16 +307,27 @@ def render_card(card, page_id, pages, terms, api, ids):
     links = card.get('links') or {}
     profile_page = 'process/profiles'
     meta = ' · '.join(dict.fromkeys(x for x in (PROFILE_TITLE[profile], (card.get('class_of_service') or '').capitalize(), card.get('function')) if x))
+    point_name, point_who, point_basis = point or ('—', '—', '')
+    back = e(rel(here, api.url_of('projects/portfolio')))
+    owner = card['people']['business_owner']
+    facts = ''.join(f'<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>' for k, v in (
+        ('Состояние', card['stage']), ('Профиль', PROFILE_TITLE[profile]), ('Класс обслуживания', card.get('class_of_service') or '—'),
+        ('Бизнес-владелец', owner.get('holder') or owner['position']), ('Функция', card.get('function') or '—'), ('Услуга', card.get('area') or '—'),
+        ('Место в бэклоге', str(card['rank']) if card.get('rank') else 'без места'), ('Статус', status)))
+    exit_rule = point_basis + (f' Критерий выхода на карточке: {constraints["exit_criterion"]}' if card['stage'] == 'В работе' and constraints.get('exit_criterion') else '')
     body = (
-        f'<p class="card-meta"><span class="stage">{e(card["stage"])}</span> <span class="dot {STATUS_CLASS[status]}"></span> Состояние: {e(status)} · {e(meta)}</p>'
-        f'<p>Как устроена работа такого вида: <a href="{e(rel(here, api.url_of(profile_page)))}#{profile}">профиль «{e(PROFILE_TITLE[profile])}»</a>.</p>'
+        f'<p class="card-back"><a href="{back}">← К портфелю</a></p>'
+        f'<dl class="pf-facts card-facts">{facts}</dl>'
+        f'<section class="card-point"><h2>Следующая точка контроля</h2><dl class="pf-facts"><div><dt>Точка контроля</dt><dd><strong>{e(point_name)}</strong></dd></div>'
+        f'<div><dt>Кто решает</dt><dd>{e(point_who)}</dd></div></dl><p><strong>На что опирается.</strong> {e(exit_rule)}</p>'
+        f'<p class="pf-muted">Как устроена работа такого вида: <a href="{e(rel(here, api.url_of(profile_page)))}#{profile}">профиль «{e(PROFILE_TITLE[profile])}»</a>.</p></section>'
         f'<h2>Люди</h2><div class="o-table-wrap"><table><thead><tr><th>Роль</th><th>Позиция</th><th>Кто</th></tr></thead><tbody>{people}</tbody></table></div>'
         f'<h2>Задача и результат</h2><div class="o-table-wrap"><table><tbody>{out_rows}</tbody></table></div>'
         + (f'<h2>Условия</h2><div class="o-table-wrap"><table><tbody>{con_rows}</tbody></table></div>' if con_rows else '')
         + (f'<h2>Памятка по практике</h2><ul class="checklist">{check}</ul>' if check else '')
         + f'<h2>Сейчас</h2><p><strong>Следующий шаг.</strong> {e(live.get("next_step") or "—")}</p><div class="two"><div><h3>Главные риски</h3><ul>{risks}</ul></div><div><h3>Зависимости</h3><ul>{deps}</ul></div></div>'
         + (f'<h2>Работа</h2><div class="o-table-wrap"><table><thead><tr><th>Ключ</th><th>Вид</th><th>Название</th><th>Состояние</th><th>Jira</th></tr></thead><tbody>{work}</tbody></table></div>' if work else '')
-        + (f'<h2>Журнал решений</h2><div class="o-table-wrap"><table><thead><tr><th>Что решили</th><th>Кто</th><th>Когда</th></tr></thead><tbody>{decisions}</tbody></table></div>' if decisions else '')
+        + (f'<h2>Журнал решений</h2><div class="o-table-wrap"><table><thead><tr><th>Что решили</th><th>Кто</th><th>Когда</th></tr></thead><tbody>{decisions}</tbody></table></div>' if decisions else '<h2>Журнал решений</h2><p class="pf-muted">Решений пока не записано.</p>')
         + (f'<h2>Итог</h2><p><strong>Результат.</strong> {e(closure.get("result") or "—")}</p><p><strong>Чему научились.</strong> {e(closure.get("lessons") or "—")}</p>' if closure.get('result') or closure.get('lessons') else '')
         + (f'<h2>Ссылки</h2><ul>' + ''.join(f'<li>{e(k)}: {e(v)}</li>' for k, v in links.items() if v) + '</ul>' if any(links.values()) else ''))
     page = Page(page_id, f'{card["id"]}: {card["title"]}', 'projects', 100, card['summary'], body)

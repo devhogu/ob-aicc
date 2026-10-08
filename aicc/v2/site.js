@@ -177,4 +177,16 @@
     root.querySelectorAll('[data-kb-close]').forEach(function (b) { b.addEventListener('click', function () { close(true); }); });
     root.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') close(true); });
   });
+
+  // tabs: one view at a time; without the script every view stays visible
+  document.querySelectorAll('[data-tabs]').forEach(function (root) {
+    var buttons = root.querySelectorAll('[data-tab]'), panels = root.querySelectorAll('[data-tab-panel]');
+    root.classList.add('tabs-on');
+    function show(key) {
+      buttons.forEach(function (b) { b.setAttribute('aria-selected', String(b.dataset.tab === key)); });
+      panels.forEach(function (p) { p.hidden = p.dataset.tabPanel !== key; });
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.tab); }); });
+    show(buttons[0].dataset.tab);
+  });
 })();
