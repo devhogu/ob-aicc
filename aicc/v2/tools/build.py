@@ -258,11 +258,8 @@ def navigation(page, pages, site):
         groups.append(f'<div class="portal-nav-group{" is-current" if current else ""}"><a class="portal-section-link" data-section="{section["id"]}" '
                       f'href="{escape(rel(page.url, first.url))}"' + (' aria-current="true"' if current else '') +
                       f'>{icon(section["icon"])}<span>{escape(section["label"]["ru"])}</span></a>{local}</div>')
-    legal = ''.join(f'<a href="{escape(rel(page.url, pages[pid].url))}"' + (' aria-current="page"' if pages[pid] is page else '') + f'>{escape(m[key])}</a>'
-                    for pid, key in (('privacy', 'privacy'), ('terms-of-use', 'terms_of_use')))
-    foot = f'<div class="nav-foot"><div class="nav-legal">{legal}</div></div>'
     return (f'<aside class="o-nav"><details open><summary>{escape(m["nav_summary"])}</summary>'
-            f'<nav class="portal-sections" aria-label="{escape(m["nav_label"])}">{"".join(groups)}</nav></details>{foot}</aside>')
+            f'<nav class="portal-sections" aria-label="{escape(m["nav_label"])}">{"".join(groups)}</nav></details></aside>')
 
 
 def crumbbar(page, pages, site):
@@ -323,9 +320,13 @@ def render_page(page, pages, site):
 {crumbbar(page, pages, site)}
 {head}{lede}{toc}
 <article class="page-body">{body}</article>
-<footer class="o-footer"><span class="foot-text">{escape(m["footer"])} <a class="contact" href="mailto:{site["contact"]}?subject={subject}">{escape(m["contact_us"])}</a> <a class="contact" href="{escape(rel(here, pages["privacy"].url))}">{escape(m["privacy"])}</a> <a class="contact" href="{escape(rel(here, pages["terms-of-use"].url))}">{escape(m["terms_of_use"])}</a> <a class="contact" href="{escape(rel(here, "sources/index.html"))}">{escape(m["sources_title"])}</a></span>
-<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>{escape(m["pagefb"])}</span><span>ID: {page.ident}</span></button></footer>
-</main></div>
+</main>
+<footer class="o-footbar">
+<nav class="fb-left" aria-label="{escape(m["legal_label"])}"><a href="{escape(rel(here, pages["privacy"].url))}"{' aria-current="page"' if page.id == "privacy" else ""}>{escape(m["privacy"])}</a><a href="{escape(rel(here, pages["terms-of-use"].url))}"{' aria-current="page"' if page.id == "terms-of-use" else ""}>{escape(m["terms_of_use"])}</a></nav>
+<div class="fb-right"><span class="foot-text">{escape(m["footer"])} <a class="contact" href="mailto:{site["contact"]}?subject={subject}">{escape(m["contact_us"])}</a> <a class="contact" href="{escape(rel(here, "sources/index.html"))}">{escape(m["sources_title"])}</a></span>
+<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>{escape(m["pagefb"])}</span><span>ID: {page.ident}</span></button></div>
+</footer>
+</div>
 <dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="{escape(m["feedback_subject"].format(id=page.ident))}" data-ref="{page.ident}" data-page="{escape(page.title)}">
   <form method="dialog">
     <div class="fb-head"><h2 id="fb-t">{escape(m["pagefb"])}</h2><code>ID: {page.ident}</code></div>

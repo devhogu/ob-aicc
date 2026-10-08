@@ -215,3 +215,16 @@ section[aria-labelledby=h-sec]{margin-top:40px}
 h2#h-sec{margin:0;text-align:center;font-size:30px}
 .home-sections,h2+.home-sections{margin:24px 0 0}
 .home-pri .home-pri-lead{margin:0 0 24px}
+
+/* the bottom bar: legal links under the navigation, the footer text and the feedback button, all on one line aligned by their bottoms */
+.o-frame{grid-template-rows:1fr auto}
+.o-footbar{grid-column:1/-1;display:grid;grid-template-columns:subgrid;font-size:12px;line-height:1.4;color:var(--text-muted)}
+.o-footbar .fb-left{background:var(--shell-navigation);display:flex;flex-direction:column;justify-content:flex-end;gap:0;padding:14px 12px 22px;border-top:1px solid var(--border)}
+.o-footbar .fb-left a{display:block;padding:2px 12px;color:var(--text-muted);text-decoration:none;font-size:12px;line-height:1.4}
+.o-footbar .fb-left a:hover,.o-footbar .fb-left a[aria-current=page]{color:var(--link);text-decoration:underline}
+.o-footbar .fb-right{background:var(--surface);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:6px 24px;padding:14px 34px 22px;border-top:1px solid var(--border)}
+.o-footbar .foot-text{flex:1 1 320px;min-width:0}
+.o-footbar a.contact{color:var(--text-muted);text-decoration:underline dotted;text-underline-offset:3px;margin-left:8px;white-space:nowrap}
+.o-footbar a.contact:hover{color:var(--link)}
+@media(max-width:1100px){.o-footbar{display:block}.o-footbar .fb-left{flex-direction:row;flex-wrap:wrap;padding:12px 16px}.o-footbar .fb-right{padding:12px 24px 20px}}
+@media print{.o-footbar{display:none}}
