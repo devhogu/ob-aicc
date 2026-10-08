@@ -166,7 +166,7 @@
         var ok = !q || (el.dataset.find || '').indexOf(q) >= 0;
         selects.forEach(function (s) { if (s.value && el.dataset[s.dataset.kbFilter] !== s.value) ok = false; });
         el.hidden = !ok;
-        if (ok && el.hasAttribute('data-kb-open')) shown++;
+        if (ok && (el.hasAttribute('data-kb-open') || !root.querySelector('[data-kb-open]'))) shown++;
       });
       root.querySelectorAll('.kb-column').forEach(function (col) {
         var n = col.querySelectorAll('[data-kb-open]:not([hidden])').length, c = col.querySelector('.kb-count'); if (c) c.textContent = n;

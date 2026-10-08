@@ -170,7 +170,7 @@ def add_pages(pages, site, terms, api):
     upcoming = sorted([c for c in cards if c['stage'] not in ('Завершено', 'Закрыто')], key=lambda c: (STAGES.index(c['stage']) if c['stage'] in STAGES else 0, ) + rank_key(c), reverse=False)
     rows = [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(c["stage"])}</td>'
             f'<td><strong>{e(next_point(c)[0])}</strong></td><td>{e(next_point(c)[1])}</td></tr>' for c in upcoming]
-    body = ('<article class="hub-board">' + header('Сводка по всем проектам Хаба: что в воронке, что в работе и какие точки контроля впереди.')
+    body = ('<article class="hub-board" data-kanban-workspace>' + header('Сводка по всем проектам Хаба: что в воронке, что в работе и какие точки контроля впереди.')
             + stats([('Карточек всего', len(cards)), ('В работе, в пределах лимита', f'{len(by_stage["В работе"])} / {wip.get("portfolio", 1)}'),
                      ('Текущая работа', len(run_rate)), ('Features в программе', sum(1 for _, w in work if w['type'] == 'feature'))])
             + '<div class="proj-doors">'
@@ -179,7 +179,7 @@ def add_pages(pages, site, terms, api):
             + '<ul class="mini-board">' + ''.join(f'<li><span class="mini-count">{sum(1 for _, w in work if w["state"] == s)}</span><span>{e(s)}</span></li>' for s in PROGRAM_COLUMNS) + '</ul></a>'
             + '</div>'
             + '<h2>Ближайшие точки контроля</h2><p class="pf-muted">Что решается дальше по каждой открытой карточке и кто решает. Подробнее — на странице <a href="' + link(here, 'projects/decisions') + '">Точки контроля и решения</a>.</p>'
-            + table(['Карточка', 'Название', 'Состояние', 'Следующая точка контроля', 'Кто решает'], rows)
+            + filters(len(upcoming)) + table(['Карточка', 'Название', 'Состояние', 'Следующая точка контроля', 'Кто решает'], rows)
             + f'<h2>Как это работает</h2><p>У каждого проекта есть карточка: один файл, где записано, что делаем, зачем, кто отвечает и на каком этапе. Карточку ведёт руководитель проекта; пока она актуальна, все виды здесь показывают проект правильно. <a href="{link(here, "projects/new")}">Завести карточку</a>.</p>'
             + '</article>')
     pages[here] = Page(here, 'Проекты', 'projects', 0, 'Сводка по всем проектам: портфель, программа и ближайшие точки контроля.', body)
