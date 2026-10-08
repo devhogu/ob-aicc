@@ -283,31 +283,37 @@
       return w === i.weeks && i.month % 3 ? 'review' : '';
     }
     function tip(kind, title) { return '<span class="here-tip" role="tooltip"><b>' + title + '</b>' + (kind === 'ip' ? IP_TIP : REVIEW_TIP) + '</span>'; }
+    function weekRange(s, kind) { return span(s, s + (kind === 'ip' ? 4 : 6) * DAY); }
     function here(day) {
       var w = weekOf(day), it = w[0], week = w[1], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1), p = parts(day);
       var monday = day - p.wd * DAY, piWeeks = Math.round((pi.end - pi.start + DAY) / WEEK), piWeek = Math.round((monday - pi.start) / WEEK) + 1, ip = pi.ip.name;
+      function pick(text, now) { return esc(text + (now ? ' · сейчас' : '')); }
+      var keys = '';
       var segs = pi.iterations.map(function (i) {
         var cells = '';
         for (var n = 1; n <= i.weeks; n++) {
-          var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip), title = k ? TAG[k] + ' · ' + span(s, s + (k === 'ip' ? 4 : 6) * DAY) : '';
-          cells += '<i' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '') + (k ? ' tabindex="0"' : '') + '>' + (k ? tip(k, title) : '') + '</i>';
+          var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip), text = i.label + ' W' + n + ' · ' + weekRange(s, k) + (k ? ' · ' + TAG[k] : '');
+          cells += '<button type="button"' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '', s === monday ? 'is-picked' : '') +
+            ' data-here-week data-range="' + pick(text, s === monday) + '" aria-label="' + i.label + ' W' + n + '"></button>';
+          if (k) keys += '<button type="button" class="here-key here-key--' + k + '" data-here-week data-range="' + pick(text, s === monday) + '"><i></i>' + TAG[k] + ' · ' + short(s, s + (k === 'ip' ? 4 : 6) * DAY) + tip(k, text) + '</button>';
         }
-        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', i.end < monday ? 'is-done' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></li>';
+        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', i.end < monday ? 'is-done' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span>' +
+          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + i.title + ' · ' + span(i.start, i.end) + ' · ' + i.weeks + ' нед."><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button></li>';
       }).join('');
       var weeks = '';
       for (var n = 1; n <= it.weeks; n++) {
         var s = it.start + (n - 1) * WEEK, k = weekKind(it, n, ip);
         weeks += '<li><button type="button"' + cls(n < week ? 'is-done' : n === week ? 'is-current' : '', k ? 'is-' + k : '', n === week ? 'is-picked' : '') +
-          ' data-here-week data-range="W' + n + ' · ' + span(s, s + 6 * DAY) + (k ? ' · ' + TAG[k] : '') + (n === week ? ' · сейчас' : '') + '">' + (k ? TAG[k] : 'W' + n) + '</button></li>';
+          ' data-here-week data-range="' + pick('W' + n + ' · ' + weekRange(s, k) + (k ? ' · ' + TAG[k] : ''), n === week) + '">' + (k ? TAG[k] : 'W' + n) + '</button></li>';
       }
       var now = weekKind(it, week, ip);
       return '<div class="here-tile" data-week="' + iso(monday) + '" tabindex="0"><small>Сегодня</small><strong>' + p.d + ' ' + LONG[p.m - 1] + ' ' + p.y + '</strong><span>' + DAYS[p.wd] + '</span></div>' +
         '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><div class="here-head"><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span></div>' +
-        '<ol class="here-pi">' + segs + '</ol><div class="here-legend">' +
-        '<span class="here-key here-key--review" tabindex="0"><i></i>Review · последняя неделя итерации' + tip('review', 'Review') + '</span>' +
-        '<span class="here-key here-key--ip" tabindex="0"><i></i>Planning · ' + span(pi.ip.start, pi.ip.end) + tip('ip', 'Planning · ' + span(pi.ip.start, pi.ip.end)) + '</span></div></div>' +
+        '<ol class="here-pi">' + segs + '</ol>' +
+        '<span class="here-range" data-here-range>' + pick(it.label + ' W' + week + ' · ' + weekRange(monday, now) + (now ? ' · ' + TAG[now] : ''), true) + '</span>' +
+        '<div class="here-legend">' + keys + '</div></div>' +
         '<div class="here-tile" data-it="' + itKey(it) + '" tabindex="0"><small>Итерация · неделя ' + week + ' из ' + it.weeks + '</small><div class="here-head"><strong>' + it.label + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span></div>' +
-        '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>W' + week + ' · ' + span(monday, monday + 6 * DAY) + (now ? ' · ' + TAG[now] : '') + ' · сейчас</span></div>';
+        '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>' + pick('W' + week + ' · ' + weekRange(monday, now) + (now ? ' · ' + TAG[now] : ''), true) + '</span></div>';
     }
     // state: {pi, it} - the increment and iteration picked by the reader; empty means today's
     function calendar(day, shift, state) {
@@ -487,11 +493,10 @@
         var wk = ev.target.closest('[data-here-week]');
         if (wk) {  // a week of the iteration tile: show its dates, stay on the tile
           var tile = wk.closest('.here-tile');
-          tile.querySelectorAll('[data-here-week]').forEach(function (b) { b.classList.toggle('is-picked', b === wk); });
+          tile.querySelectorAll('[data-here-week]').forEach(function (b) { b.classList.toggle('is-picked', b.dataset.range === wk.dataset.range); });
           tile.querySelector('[data-here-range]').textContent = wk.dataset.range;
           return;
         }
-        if (ev.target.closest('.here-key, .here-cells i[tabindex]')) return;
         var t = ev.target.closest('[data-week],[data-it],[data-pi]'); if (!t) return;
         jump(t);
       });

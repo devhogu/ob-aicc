@@ -754,11 +754,11 @@ details.svc[open]::after{opacity:1}
 .page-body .here-pi li.is-current{background:var(--surface-selected)}
 .here-pi li.is-current b{color:var(--link)}
 .here-cells{display:flex;gap:2px}
-.here-cells i{position:relative;flex:1;height:10px;border-radius:3px;background:var(--surface-subtle);border:1px solid var(--border)}
-.here-cells i.is-done{background:color-mix(in srgb,var(--brand) 30%,var(--surface));border-color:transparent}
-.here-cells i.is-current{background:var(--brand);border-color:var(--brand)}
-.here-cells i.is-ip{background:var(--plan);border-color:var(--plan);cursor:help}
-.here-cells i.is-ip.is-current{box-shadow:0 0 0 2px var(--brand)}
+.here-cells button{position:relative;flex:1;height:10px;border-radius:3px;background:var(--surface-subtle);border:1px solid var(--border)}
+.here-cells button.is-done{background:color-mix(in srgb,var(--brand) 30%,var(--surface));border-color:transparent}
+.here-cells button.is-current{background:var(--brand);border-color:var(--brand)}
+.here-cells button.is-ip{background:var(--plan);border-color:var(--plan);cursor:help}
+.here-cells button.is-ip.is-current{box-shadow:0 0 0 2px var(--brand)}
 .here-ip{position:relative;align-self:flex-start;display:inline-flex;align-items:center;gap:6px;margin-top:2px;padding:2px 10px 2px 6px;border-radius:999px;background:var(--plan-soft);color:var(--text);font-size:12px;cursor:help}
 .here-ip>i{width:10px;height:10px;border-radius:3px;background:var(--plan)}
 .here-tip{position:absolute;z-index:20;left:0;top:calc(100% + 8px);width:300px;padding:10px 12px;border-radius:10px;background:var(--text);color:var(--surface);font:400 12px/1.45 var(--font-body);text-transform:none;letter-spacing:0;box-shadow:var(--shadow-panel);opacity:0;visibility:hidden;transition:opacity var(--motion-fast);pointer-events:none}
@@ -766,8 +766,8 @@ details.svc[open]::after{opacity:1}
 .pi-weeks li.is-ip{background:var(--plan-soft);border-color:var(--plan)}
 .pop-rows li.is-ip{box-shadow:inset 3px 0 0 var(--plan)}
 .pi-ip b{color:var(--plan-ink);background:var(--plan);padding:1px 8px;border-radius:999px}
-.here-cells i .here-tip{left:auto;right:-8px;top:calc(100% + 6px)}
-.here-ip:hover .here-tip,.here-ip:focus .here-tip,.here-cells i:hover .here-tip,.here-cells i:focus .here-tip{opacity:1;visibility:visible}
+.here-cells button .here-tip{left:auto;right:-8px;top:calc(100% + 6px)}
+.here-ip:hover .here-tip,.here-ip:focus .here-tip,.here-cells button:hover .here-tip,.here-cells button:focus .here-tip{opacity:1;visibility:visible}
 /* iteration tile: weeks to pick */
 .page-body .here-weeks li{padding:0;background:none}
 .here-weeks button{width:100%;padding:4px 0;border:1px solid transparent;border-radius:6px;background:var(--surface-subtle);color:var(--text-muted);font:500 11px/1.2 var(--font-body);cursor:pointer}
@@ -804,8 +804,8 @@ details.svc[open]::after{opacity:1}
 .here-place .here-tile{padding:14px 18px}
 .page-body .here-flow li{padding:8px 8px 8px 14px}
 /* Review green, Planning blue */
-.here-cells i.is-review{background:var(--review);border-color:var(--review);cursor:help}
-.here-cells i.is-review.is-current,.here-cells i.is-ip.is-current{box-shadow:0 0 0 2px var(--brand)}
+.here-cells button.is-review{background:var(--review);border-color:var(--review);cursor:help}
+.here-cells button.is-review.is-current,.here-cells button.is-ip.is-current{box-shadow:0 0 0 2px var(--brand)}
 .here-weeks button.is-review{background:var(--review);color:var(--review-ink);font-weight:600}
 .here-weeks button.is-ip{background:var(--plan);color:var(--plan-ink);font-weight:600}
 .here-weeks button.is-review.is-current,.here-weeks button.is-ip.is-current{box-shadow:0 0 0 2px var(--brand)}
@@ -815,10 +815,29 @@ details.svc[open]::after{opacity:1}
 .here-key--review{background:var(--review-soft)}.here-key--review>i{background:var(--review)}
 .here-key--ip{background:var(--plan-soft)}.here-key--ip>i{background:var(--plan)}
 .here-key:hover .here-tip,.here-key:focus .here-tip{opacity:1;visibility:visible}
-.here-tile .here-key--review .here-tip b,.here-tile .here-cells i.is-review .here-tip b{color:#7fe0a6}
-.here-tile .here-key--ip .here-tip b,.here-tile .here-cells i.is-ip .here-tip b{color:#9dbcff}
+.here-tile .here-key--review .here-tip b,.here-tile .here-cells button.is-review .here-tip b{color:#7fe0a6}
+.here-tile .here-key--ip .here-tip b,.here-tile .here-cells button.is-ip .here-tip b{color:#9dbcff}
 .pi-weeks li.is-review{background:var(--review-soft);border-color:var(--review)}
 .pop-rows li.is-review{box-shadow:inset 3px 0 0 var(--review)}
 .pi-ip b{color:var(--plan-ink);background:var(--plan)}
 @keyframes pi-flash{0%,60%{box-shadow:0 0 0 3px var(--brand),0 0 0 8px color-mix(in srgb,var(--brand) 25%,transparent)}100%{box-shadow:none}}
 .pi-cal .is-flash{animation:pi-flash 1.8s ease-out}
+/* PI tile: weeks, iterations and key weeks to pick; narrower */
+.here-time{grid-template-columns:minmax(0,.7fr) minmax(0,1.15fr) minmax(0,1fr)}
+.here-cells button{padding:0;height:12px;cursor:pointer;font:inherit}
+.here-cells button:hover{border-color:var(--text)}
+.here-cells button.is-picked{outline:2px solid var(--text);outline-offset:1px}
+.here-it{all:unset;display:flex;flex-direction:column;gap:2px;cursor:pointer;border-radius:6px}
+.here-it b{font-size:12px;color:var(--text)}
+.here-it span{font-size:11px;color:var(--text-muted)}
+.here-it:hover b{color:var(--link)}
+.here-it.is-picked b{text-decoration:underline;text-underline-offset:3px}
+.here-pi li.is-current .here-it b{color:var(--link)}
+.here-it:focus-visible,.here-cells button:focus-visible,.here-key:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+button.here-key{border:0;font:400 12px/1.4 var(--font-body)}
+.here-key.is-picked{box-shadow:0 0 0 2px var(--text)}
+.here-legend{gap:6px}
+.here-legend{flex-wrap:nowrap;gap:4px}
+button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowrap}
+.here-key>i{width:8px;height:8px}
+.here-time{grid-template-columns:minmax(0,.5fr) minmax(0,1.3fr) minmax(0,1fr)}
