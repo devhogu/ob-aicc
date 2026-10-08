@@ -116,4 +116,65 @@
     b.addEventListener('click', function () { mail(); if (dlg && dlg.showModal) dlg.showModal(); });
   });
   if (dlg) dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+
+  // expand a diagram to its natural size
+  document.querySelectorAll('.dz-open').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var fig = b.closest('figure'); if (!fig) return;
+      var old = document.getElementById('dz'); if (old) old.remove();
+      var dz = document.createElement('dialog'); dz.id = 'dz'; dz.className = 'dz';
+      var bar = document.createElement('div'); bar.className = 'dz-bar';
+      var cap = fig.querySelector('figcaption'); var span = document.createElement('span'); span.textContent = cap ? cap.textContent : ''; bar.appendChild(span);
+      var close = document.createElement('button'); close.type = 'button'; close.className = 'oc-button'; close.textContent = d.tDzClose || 'Close'; close.addEventListener('click', function () { dz.close(); }); bar.appendChild(close);
+      dz.appendChild(bar);
+      fig.querySelectorAll('.mm').forEach(function (m) {
+        var c = m.cloneNode(true); var svg = c.querySelector('svg');
+        if (svg) { var vb = (svg.getAttribute('viewBox') || '').split(/\s+/); if (vb.length === 4) { svg.style.width = Math.ceil(parseFloat(vb[2])) + 'px'; svg.style.height = 'auto'; } }
+        dz.appendChild(c);
+      });
+      dz.addEventListener('click', function (e) { if (e.target === dz) dz.close(); });
+      dz.addEventListener('close', function () { dz.remove(); b.focus(); });
+      document.body.appendChild(dz); dz.showModal();
+    });
+  });
+
+
+  // live boards: search and filters, and a card opens in place
+  document.querySelectorAll('[data-kanban-workspace]').forEach(function (root) {
+    var search = root.querySelector('[data-kb-search]'), selects = root.querySelectorAll('[data-kb-filter]'), count = root.querySelector('[data-kb-count]');
+    var panel = root.querySelector('[data-kb-panel]'), opener = null;
+    function apply() {
+      var q = (search && search.value || '').toLowerCase().trim(), shown = 0;
+      root.querySelectorAll('[data-kb-open], [data-kb-row]').forEach(function (el) {
+        var ok = !q || (el.dataset.find || '').indexOf(q) >= 0;
+        selects.forEach(function (s) { if (s.value && el.dataset[s.dataset.kbFilter] !== s.value) ok = false; });
+        el.hidden = !ok;
+        if (ok && el.hasAttribute('data-kb-open')) shown++;
+      });
+      root.querySelectorAll('.kb-column').forEach(function (col) {
+        var n = col.querySelectorAll('[data-kb-open]:not([hidden])').length, c = col.querySelector('.kb-count'); if (c) c.textContent = n;
+      });
+      if (count) count.textContent = 'Показано: ' + shown;
+      if (opener && opener.hidden) close();
+    }
+    function close(focus) {
+      if (!panel) return; panel.hidden = true; panel.querySelector('.kb-detail-body').replaceChildren();
+      if (opener) { opener.removeAttribute('aria-current'); if (focus) opener.focus(); } opener = null;
+    }
+    if (search) search.addEventListener('input', apply);
+    selects.forEach(function (s) { s.addEventListener('change', apply); });
+    root.querySelectorAll('[data-kb-open]').forEach(function (card) {
+      card.addEventListener('click', function (ev) {
+        if (!panel || ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.button !== 0) return;
+        var tpl = root.querySelector('template[data-kb-detail="' + card.dataset.kbOpen + '"]'); if (!tpl) return;
+        ev.preventDefault(); close(); opener = card; card.setAttribute('aria-current', 'true');
+        panel.querySelector('.kb-detail-body').replaceChildren(tpl.content.cloneNode(true));
+        panel.querySelector('[data-kb-identity]').textContent = card.dataset.kbOpen;
+        panel.querySelector('[data-kb-full]').href = card.href;
+        panel.hidden = false; panel.scrollIntoView({block: 'nearest', behavior: 'smooth'});
+      });
+    });
+    root.querySelectorAll('[data-kb-close]').forEach(function (b) { b.addEventListener('click', function () { close(true); }); });
+    root.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') close(true); });
+  });
 })();

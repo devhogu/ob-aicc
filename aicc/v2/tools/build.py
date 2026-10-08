@@ -175,6 +175,14 @@ def render_markdown(text, page, terms, pages, site):
             raise ValueError(f'{page.id}: link to unknown page {match[1]}')
         return 'href="' + rel(here, pages[match[1]].url) + (match[2] or '') + '"'
 
+    figures = []
+
+    def mermaid(match):
+        caption = re.search(r'^%%\s*caption:\s*(.+)$', match[1], re.M)
+        code = re.sub(r'^%%.*\n?', '', match[1], flags=re.M)
+        figures.append((code, caption[1].strip() if caption else ''))
+        return f'\n\n@@FIGURE{len(figures) - 1}@@\n\n'
+    text = re.sub(r'^```mermaid\n(.*?)^```\s*$', mermaid, text, flags=re.S | re.M)
     text = TERM.sub(term, text)
     text = PAGE_LINK.sub(link, text)
     text = HTML_PAGE_LINK.sub(html_link, text)
@@ -203,6 +211,17 @@ def render_markdown(text, page, terms, pages, site):
             if token.tag in ('h2', 'h3'):
                 page.headings.append((token.tag, ident, label))
     html = md.renderer.render(tokens, md.options, {})
+    if figures:
+        import diagrams
+        drawn = diagrams.render([code for code, _ in figures])
+        for n, (code, caption) in enumerate(figures):
+            svgs = drawn[diagrams.key_of(diagrams.prepare(code))]
+            if svgs is None:
+                raise ValueError(f'{page.id}: a diagram could not be drawn')
+            cap = f'<figcaption>{escape(caption)}</figcaption>' if caption else ''
+            figure = (f'<figure class="o-diagram" role="group" aria-label="{escape(caption or page.title)}"><button type="button" class="dz-open" aria-label="Открыть крупно">{icon("maximize")}</button>'
+                      f'<div class="mm mm-light">{svgs["light"]}</div><div class="mm mm-dark">{svgs["dark"]}</div>{cap}</figure>')
+            html = re.sub(r'<p>@@FIGURE' + str(n) + r'@@</p>', lambda _: figure, html)
     # headings written as HTML blocks count too, in the order they appear
     page.headings = [(m[1], m[2], plain(m[3])) for m in re.finditer(r'<(h2|h3)\b[^>]*\bid="([^"]+)"[^>]*>(.*?)</\1>', html, re.S)]
     return html.replace('<table>', '<div class="o-table-wrap"><table>').replace('</table>', '</table></div>')

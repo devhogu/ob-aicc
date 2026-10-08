@@ -19,16 +19,25 @@ related: projects/portfolio, projects/new, process/roles, hub/how-we-work
 
 ## Канбан портфеля {#kanban}
 
-Работа движется слева направо. Ниже колонок — точки контроля, где принимается решение о переходе.
+Работа движется слева направо. Между состояниями — точки контроля, где принимается решение о переходе.
 
-<div class="kb-illus" style="--cols:5">
-<div class="col"><h4>Воронка<span class="en">funnel</span></h4><p>идея записана на карточке</p><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="gate">Взять в проработку — менеджер продукта</div></div>
-<div class="col"><h4>Проработка<span class="en">shaping</span></h4><p>результат, критерий выхода, допустимый объём вложений, порог остановки</p><div class="tile"></div><div class="tile"></div><div class="gate">Задача понятна, условия записаны</div></div>
-<div class="col"><h4>Готово к старту<span class="en">ready</span></h4><p>ждёт свободного места</p><div class="tile"></div><div class="gate">Решение о старте — бизнес-владелец и менеджер продукта</div></div>
-<div class="col"><h4>В работе<span class="en">doing</span></h4><span class="wip">WIP-лимит</span><p>проверка гипотезы, затем Capabilities и Features на доске программы</p><div class="tile"></div><div class="gate">Продолжить, изменить курс или остановить — бизнес-владелец</div></div>
-<div class="col"><h4>Завершено<span class="en">done</span></h4><p>результат и уроки записаны на карточке</p><div class="tile"></div><div class="gate">Бизнес-владелец подтверждает результат</div></div>
-</div>
-<div class="kb-off"><span>Отложено — с условием возвращения</span><span>Закрыто — с причиной</span></div>
+```mermaid
+%% caption: Канбан портфеля: состояния и точки контроля между ними.
+flowchart TB
+  subgraph R1["До старта"]
+    direction LR
+    F["Воронка<br/>идея на карточке"] --> G1["Точка контроля: взять в проработку<br/>менеджер продукта"]
+    G1 --> S["Проработка<br/>результат и условия"]
+    S --> R["Готово к старту<br/>ждёт места"]
+  end
+  subgraph R2["После старта"]
+    direction LR
+    G2["Точка контроля: решение о старте<br/>бизнес-владелец и менеджер продукта"] --> D["В работе<br/>WIP-лимит"]
+    D --> G3["Точка контроля: продолжить, изменить курс или остановить<br/>бизнес-владелец"]
+    G3 --> X(["Завершено<br/>результат подтверждён"])
+  end
+  R1 ~~~ R2
+```
 <p class="kb-live">Живой канбан с реальными карточками — в разделе <a href="page:projects/portfolio">Проекты → Портфель</a>.</p>
 
 ## Три решения {#decisions}

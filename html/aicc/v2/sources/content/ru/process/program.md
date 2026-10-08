@@ -13,13 +13,22 @@ related: projects/program, process/portfolio, process/roles, hub/how-we-work
 
 ## Доска программы {#board}
 
-<div class="kb-illus" style="--cols:5">
-<div class="col"><h4>Бэклог<span class="en">backlog</span></h4><p>всё, что ждёт очереди, по порядку ценности</p><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
-<div class="col"><h4>Готово к работе<span class="en">ready</span></h4><p>понятно, что делать и как принять</p><div class="tile"></div><div class="tile"></div><div class="gate">Порядок — форум решений по программе</div></div>
-<div class="col"><h4>В работе<span class="en">active</span></h4><span class="wip">WIP-лимит</span><p>команда делает в итерации</p><div class="tile"></div></div>
-<div class="col"><h4>На проверке<span class="en">review</span></h4><p>проверка по категории риска, ревью и демонстрация</p><div class="tile"></div><div class="gate">Приёмка Feature — менеджер продукта</div></div>
-<div class="col"><h4>Завершено<span class="en">done</span></h4><p>принято и записано на карточке</p><div class="tile"></div></div>
-</div>
+```mermaid
+%% caption: Доска программы: путь Feature от бэклога до приёмки.
+flowchart TB
+  subgraph R1["До работы"]
+    direction LR
+    B["Бэклог<br/>по порядку ценности"] --> G1["Точка контроля: порядок работ<br/>форум решений по программе"]
+    G1 --> R["Готово к работе<br/>понятны результат и критерии приёмки"]
+  end
+  subgraph R2["В итерации"]
+    direction LR
+    A["В работе<br/>WIP-лимит"] --> V["На проверке<br/>ревью и демонстрация"]
+    V --> G2["Точка контроля: приёмка Feature<br/>менеджер продукта"]
+    G2 --> D(["Завершено<br/>отмечено на карточке"])
+  end
+  R1 ~~~ R2
+```
 <p class="kb-live">Живая доска программы — в разделе <a href="page:projects/program">Проекты → Программа</a>.</p>
 
 ## Бэклог программы {#backlog}

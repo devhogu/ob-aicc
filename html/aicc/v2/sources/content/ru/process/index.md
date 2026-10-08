@@ -9,12 +9,19 @@ related: process/portfolio, process/program, process/roles, projects
 
 ## Четыре уровня {#levels}
 
-<div class="levels-illus">
-<div class="band"><div><small>Уровень 1</small><strong>Воронка</strong></div><span>Всё, что предложили: идеи и потребности подразделений, каждая на своей карточке.</span><span>Брать ли в проработку — решает менеджер продукта.</span><span class="where"><a href="page:projects/portfolio">Портфель</a>, колонка «Воронка»</span></div>
-<div class="band"><div><small>Уровень 2</small><strong>Портфель</strong></div><span>Инициативы и текущая работа по состояниям: проработка, готово к старту, в работе, завершено.</span><span>Старт, вложение, продолжать ли — бизнес-владелец с менеджером продукта; общая картина — форум управления продуктами.</span><span class="where"><a href="page:projects/portfolio">Портфель</a></span></div>
-<div class="band"><div><small>Уровень 3</small><strong>Программа</strong></div><span>Capabilities и Features инициатив на одной доске, итерациями.</span><span>Порядок работ и зависимости — форум решений по программе; приёмка Feature — менеджер продукта.</span><span class="where"><a href="page:projects/program">Программа</a></span></div>
-<div class="band jira"><div><small>Уровень 4</small><strong>Командный уровень</strong></div><span>Задачи, ошибки и повседневная работа команд.</span><span>Как сделать задачу — решает команда.</span><span class="where">Jira</span></div>
-</div>
+```mermaid
+%% caption: Четыре уровня: что на каждом, кто решает и где это видно.
+flowchart TB
+  F["Воронка<br/>все идеи на карточках"] --> G1["Точка контроля: взять в проработку<br/>менеджер продукта"]
+  G1 --> P["Портфель<br/>проработка, готово к старту, в работе, завершено"]
+  P --> G2["Точка контроля: старт, вложение, продолжать ли<br/>бизнес-владелец и менеджер продукта"]
+  G2 --> R["Программа<br/>Capabilities и Features итерациями"]
+  R --> G3["Точка контроля: приёмка Feature<br/>менеджер продукта"]
+  G3 --> T(["Командный уровень<br/>задачи в Jira"])
+  PMF(["Форум управления продуктами<br/>раз в две недели"]) -.-> P
+  PDF(["Форум решений по программе<br/>раз в итерацию"]) -.-> R
+```
+
 
 ## Одна карточка от идеи до результата {#card}
 
