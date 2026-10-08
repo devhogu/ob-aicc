@@ -483,16 +483,26 @@
     draw();
     document.querySelectorAll('[data-pi-here]').forEach(function (h) {
       h.innerHTML = PI.here(day);
+      // weeks and iterations in a tile: hovering previews one, a click keeps it; leaving returns to the kept one
+      function show(wk) {
+        var tile = wk.closest('.here-tile'), seg = wk.closest('.here-pi > li');
+        tile.querySelectorAll('[data-here-week]').forEach(function (b) { b.classList.toggle('is-picked', b.dataset.range === wk.dataset.range); });
+        tile.querySelectorAll('.here-pi > li').forEach(function (li) { li.classList.toggle('is-picked', li === seg); });
+        tile.querySelector('[data-here-range]').textContent = wk.dataset.range;
+      }
+      function under(target) {
+        var wk = target.closest('[data-here-week]'); if (wk) return wk;
+        var seg = target.closest('.here-pi > li'); return seg ? seg.querySelector('.here-it') : null;
+      }
+      var kept = new Map();
+      h.querySelectorAll('.here-tile').forEach(function (tile) { var k = tile.querySelector('[data-here-week].is-picked'); if (k) kept.set(tile, k); });
+      h.addEventListener('mouseover', function (ev) { var wk = under(ev.target); if (wk) show(wk); });
+      h.querySelectorAll('.here-pi, .here-weeks').forEach(function (area) {
+        area.addEventListener('mouseleave', function () { var tile = area.closest('.here-tile'); if (kept.get(tile)) show(kept.get(tile)); });
+      });
       h.addEventListener('click', function (ev) {
-        var wk = ev.target.closest('[data-here-week]');
-        if (wk) {  // a week of the iteration tile: show its dates, stay on the tile
-          var tile = wk.closest('.here-tile');
-          tile.querySelectorAll('[data-here-week]').forEach(function (b) { b.classList.toggle('is-picked', b.dataset.range === wk.dataset.range); });
-          var seg = wk.closest('.here-pi > li');  // the picked iteration gets the border
-          if (seg) tile.querySelectorAll('.here-pi > li').forEach(function (li) { li.classList.toggle('is-picked', li === seg); });
-          tile.querySelector('[data-here-range]').textContent = wk.dataset.range;
-          return;
-        }
+        var wk = under(ev.target);
+        if (wk) { kept.set(wk.closest('.here-tile'), wk); show(wk); return; }  // stay on the tile
         var t = ev.target.closest('[data-week],[data-it],[data-pi]'); if (!t) return;
         jump(t);
       });
