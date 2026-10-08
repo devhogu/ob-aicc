@@ -522,3 +522,10 @@ a.pcard:hover h4{color:var(--link)}
 .profile-detail p{margin:0 0 28px}
 .profile-detail h4{margin:0 0 10px}
 .page-body .profile-detail .checks li{margin:8px 0}
+
+/* hover accent, as on the cards of the kit's Kanban: the brand line runs down the left edge and along the top and bottom */
+.pcard::before{display:none}
+:is(.pcard,.o-card.linked,.role-cards .o-card,details.svc){position:relative}
+:is(.pcard,.o-card.linked,.role-cards .o-card,details.svc)::after{content:'';--kb-card-radius:12px;position:absolute;inset:0;pointer-events:none;background:var(--brand);z-index:3;opacity:0;transition:opacity var(--motion-fast);--kb-accent-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M0 12A12 12 0 0 1 12 0V2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left top/var(--kb-card-radius) var(--kb-card-radius) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath transform='translate(0 12) scale(1 -1)' d='M0 12A12 12 0 0 1 12 0V2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left bottom/var(--kb-card-radius) var(--kb-card-radius) no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 2' preserveAspectRatio='none'%3E%3Cpath d='M0 0H100C66 0 34 2 0 2Z'/%3E%3C/svg%3E") left var(--kb-card-radius) top/calc(30% - var(--kb-card-radius)) 2px no-repeat,linear-gradient(#000,#000) left var(--kb-card-radius) bottom/calc(70% - var(--kb-card-radius)) 2px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 2' preserveAspectRatio='none'%3E%3Cpath transform='translate(0 2) scale(1 -1)' d='M0 0H100C66 0 34 2 0 2Z'/%3E%3C/svg%3E") right bottom/30% 2px no-repeat,linear-gradient(#000,#000) left center/2px calc(100% - var(--kb-card-radius) - var(--kb-card-radius)) no-repeat;-webkit-mask:var(--kb-accent-mask);mask:var(--kb-accent-mask)}
+:is(.pcard,.o-card.linked,.role-cards .o-card,details.svc):is(:hover,:focus-within)::after{opacity:1}
+details.svc[open]::after{opacity:1}
