@@ -273,32 +273,26 @@
       return '<div class="o-table-wrap pi-board-wrap"><table class="pi-board"><thead><tr><th>Проект</th>' + head + '<th>Не запланировано</th></tr></thead><tbody>' + body.join('') + '</tbody></table></div>';
     }
     function short(a, b) { var x = parts(a), y = parts(b); return x.m === y.m ? x.d + '–' + y.d + ' ' + SHORT[y.m - 1] : x.d + ' ' + SHORT[x.m - 1] + ' – ' + y.d + ' ' + SHORT[y.m - 1]; }
-    var IP_TIP = 'Неделя инноваций и планирования (IP). Это последняя рабочая неделя PI, отдельной итерацией она не считается: ' +
-      'ревью и демонстрация третьей итерации, итоги PI, планирование следующего PI, время на инновации и обучение. Новую работу в эту неделю не берут.';
-    var REVIEW_TIP = 'Последняя неделя итерации: показ готовых результатов менеджеру продукта и бизнес-владельцу, приёмка Features, ' +
-      'короткая ретроспектива и планирование следующей итерации. Работа в эту неделю продолжается.';
     var TAG = {ip: 'Planning', review: 'Review'};
     function weekKind(i, w, ip) {
       if (i.pi + ' ' + i.name + 'W' + w === ip) return 'ip';
       return w === i.weeks && i.month % 3 ? 'review' : '';
     }
-    function tip(kind, title) { return '<span class="here-tip" role="tooltip"><b>' + title + '</b>' + (kind === 'ip' ? IP_TIP : REVIEW_TIP) + '</span>'; }
     function weekRange(s, kind) { return short(s, s + (kind === 'ip' ? 4 : 6) * DAY); }
     function here(day) {
       var w = weekOf(day), it = w[0], week = w[1], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1), p = parts(day);
       var monday = day - p.wd * DAY, piWeeks = Math.round((pi.end - pi.start + DAY) / WEEK), piWeek = Math.round((monday - pi.start) / WEEK) + 1, ip = pi.ip.name;
       function pick(text, now) { return esc(text + (now ? ' · сейчас' : '')); }
       var segs = pi.iterations.map(function (i) {
-        var cells = '', keys = '';
+        var cells = '';
         for (var n = 1; n <= i.weeks; n++) {
           var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip), text = i.label + ' W' + n + ' · ' + weekRange(s, k) + (k ? ' · ' + TAG[k] : '');
           cells += '<button type="button"' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '', s === monday ? 'is-picked' : '') +
             ' data-here-week data-range="' + pick(text, s === monday) + '" aria-label="' + i.label + ' W' + n + '"></button>';
-          if (k) keys += '<button type="button" class="here-key here-key--' + k + '" data-here-week data-range="' + pick(text, s === monday) + '"><b>' + TAG[k] + '</b><span>' + weekRange(s, k) + '</span>' + tip(k, text) + '</button>';
         }
         var cur = itKey(i) === itKey(it);
         return '<li' + cls(cur ? 'is-current' : '', i.end < monday ? 'is-done' : '', cur ? 'is-picked' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span>' +
-          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + short(i.start, i.end) + ' · ' + i.weeks + ' нед."><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button>' + keys + '</li>';
+          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + short(i.start, i.end) + ' · ' + i.weeks + ' нед."><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button></li>';
       }).join('');
       var weeks = '';
       for (var n = 1; n <= it.weeks; n++) {

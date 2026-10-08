@@ -108,12 +108,6 @@ def short(a, b):
     return f'{a.day} {SHORT[a.month - 1]} – {b.day} {SHORT[b.month - 1]}'
 
 
-IP_TIP = ('Неделя инноваций и планирования (IP). Это последняя рабочая неделя PI, отдельной итерацией она не считается: '
-          'ревью и демонстрация третьей итерации, итоги PI, планирование следующего PI, время на инновации и обучение. Новую работу в эту неделю не берут.')
-
-
-REVIEW_TIP = ('Последняя неделя итерации: показ готовых результатов менеджеру продукта и бизнес-владельцу, приёмка Features, '
-              'короткая ретроспектива и планирование следующей итерации. Работа в эту неделю продолжается.')
 TAG = {'ip': 'Planning', 'review': 'Review'}
 
 
@@ -123,9 +117,6 @@ def week_kind(i, w, ip):
         return 'ip'
     return 'review' if w == i['weeks'] and i['month'] % 3 else ''
 
-
-def tip(kind, title):
-    return f'<span class="here-tip" role="tooltip"><b>{title}</b>{IP_TIP if kind == "ip" else REVIEW_TIP}</span>'
 
 
 def week_range(s, kind):
@@ -152,19 +143,17 @@ def here_html(day):
 
     segs = []
     for i in pi['iterations']:
-        cells, keys = [], []
+        cells = []
         for w in range(1, i['weeks'] + 1):
             s = i['start'] + timedelta(weeks=w - 1)
             k = week_kind(i, w, ip)
             text = f'{i["label"]} W{w} · {week_range(s, k)}' + (f' · {TAG[k]}' if k else '')
             cells.append(f'<button type="button"{cls("is-done" if s < monday else "is-current" if s == monday else "", f"is-{k}" if k else "", "is-picked" if s == monday else "")} '
                          f'data-here-week data-range="{pick(text, s == monday)}" aria-label="{i["label"]} W{w}"></button>')
-            if k:
-                keys.append(f'<button type="button" class="here-key here-key--{k}" data-here-week data-range="{pick(text, s == monday)}"><b>{TAG[k]}</b><span>{week_range(s, k)}</span>{tip(k, text)}</button>')
         segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "", "is-picked" if it_key(i) == it_key(it) else "")} style="flex:{i["weeks"]}">'
                     f'<span class="here-cells">{"".join(cells)}</span>'
                     f'<button type="button" class="here-it" data-here-week data-range="{i["label"]} · {short(i["start"], i["end"])} · {i["weeks"]} нед."><b>{i["label"]} · {i["title"]}</b><span>{short(i["start"], i["end"])}</span></button>'
-                    f'{"".join(keys)}</li>')
+                    '</li>')
     weeks = []
     for w in range(1, it['weeks'] + 1):
         s = it['start'] + timedelta(weeks=w - 1)

@@ -852,3 +852,5 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .here-pi li button.here-key>span{font-size:11px;color:var(--text-muted)}
 .here-pi li .here-key--review>b{color:var(--review)}
 .here-pi li .here-key--ip>b{color:var(--plan)}
+.here-time{grid-template-columns:minmax(0,.6fr) minmax(0,.95fr) minmax(0,1fr)}
+.here-pi{gap:6px}
