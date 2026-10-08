@@ -434,7 +434,23 @@
     function pop(kind, key, day) {
       return kind === 'pi' ? popPI(key, day) : kind === 'it' ? popIt(key, day) : kind === 'week' ? popWeek(key, day) : popItem(key);
     }
-    return {data: data, today: today, at: at, here: here, iterTileOf: iterTileOf, calendar: calendar, pop: pop, qIndex: qIndex, weekOf: weekOf, fromIso: fromIso, itKey: itKey};
+    function plural(n, f) { var k = n % 100; return k >= 11 && k <= 14 ? f[2] : n % 10 === 1 ? f[0] : n % 10 >= 2 && n % 10 <= 4 ? f[1] : f[2]; }
+    // one line on where the plan stands today; the same text as cadence.plan_status
+    function status(day) {
+      var w = weekOf(day), it = w[0], week = w[1], monday = day - parts(day).wd * DAY, here = it.pi + ' ' + it.name, planned = 0, loose = 0, nxt = {};
+      data.rows.forEach(function (r) { r.items.forEach(function (x) {
+        if (x.state === 'Завершено') return;
+        if (x.iteration === here) planned++; else if (!x.iteration) loose++;
+      }); });
+      for (var k = 0; k < 30; k++) {
+        var s = monday + k * WEEK, ww = weekOf(s), i = ww[0], kind = weekKind(i, ww[1], increment(i.year, Math.floor((i.month - 1) / 3) + 1).ip.name);
+        if (kind && !nxt[kind]) nxt[kind] = weekRange(s, kind) + (k === 0 ? ' (эта неделя)' : '');
+      }
+      return 'Сейчас ' + it.pi + ', итерация ' + it.label + ' (' + it.title + '), неделя ' + week + ' из ' + it.weeks + '. ' +
+        'В этой итерации ' + planned + ' ' + plural(planned, ['работа', 'работы', 'работ']) + ', без итерации — ' + loose + '. ' +
+        'Ближайшая Review — ' + (nxt.review || '—') + ', Planning — ' + (nxt.ip || '—') + '.';
+    }
+    return {data: data, today: today, at: at, here: here, status: status, iterTileOf: iterTileOf, calendar: calendar, pop: pop, qIndex: qIndex, weekOf: weekOf, fromIso: fromIso, itKey: itKey};
   })();
   window.HubPI = PI;
 
@@ -501,6 +517,7 @@
       setTimeout(function () { spots.forEach(function (s) { s.classList.remove('is-flash'); }); }, 1800);
     }
     draw();
+    document.querySelectorAll('[data-pi-status]').forEach(function (s) { s.textContent = PI.status(day); });
     document.querySelectorAll('[data-pi-here]').forEach(function (h) {
       h.innerHTML = PI.here(day);
       // weeks and iterations in a tile: hovering previews one, a click keeps it; leaving returns to the kept one

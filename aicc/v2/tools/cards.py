@@ -167,15 +167,48 @@ def add_pages(pages, site, terms, api):
     here = 'projects'
     lane_of = lambda c, w: w.get('class_of_service') or c.get('class_of_service') or 'инициатива'
 
-    def tip(view, text):
-        return f'<p class="pf-tip"><span class="pf-tip__view en" lang="en">{e(view)}</span>{text}</p>'
+    def tip(text, live=''):
+        return f'<p class="pf-tip"{live}>{e(text)}</p>'
+
+    plural = cadence.plural
+    PROJECTS = ('проект', 'проекта', 'проектов')
+    IN_STAGE = {'Воронка': 'в воронке', 'Проработка': 'в проработке', 'Готово к старту': 'готовы к старту', 'В работе': 'в работе',
+                'Завершено': 'завершены', 'Отложено': 'отложены', 'Закрыто': 'закрыты'}
+    IN_STATE = {'Бэклог': 'в бэклоге', 'Готово к работе': 'готовы к работе', 'В работе': 'в работе', 'На проверке': 'на проверке', 'Завершено': 'завершены'}
+
+    def counts(groups, names):
+        return ', '.join(f'{len(groups[s])} {names[s]}' for s in names if groups.get(s))
+
+    def nearest(items):
+        """The most common next control point among open cards: (point, who, how many)."""
+        tally = {}
+        for c in items:
+            point, who, _ = next_point(c)
+            tally.setdefault((point, who), []).append(c)
+        return sorted(((p, w, len(v)) for (p, w), v in tally.items()), key=lambda x: -x[2])
+
+    # status lines: what can be read off the cards right now
+    open_now = [c for c in cards if c['stage'] not in ('Завершено', 'Закрыто', 'Отложено')]
+    n_work, lim = len(by_stage['В работе']), wip.get('portfolio', 1)
+    top = nearest(open_now)
+    pf_status = (f'{len(cards)} {plural(len(cards), PROJECTS)}: {counts(by_stage, IN_STAGE)}. В работе {n_work} из {lim} — '
+                 + ('есть место для старта.' if n_work < lim else 'лимит занят, следующий старт ждёт места.')
+                 + (f' Ближайшее решение у {top[0][2]} {plural(top[0][2], PROJECTS)} — «{top[0][0].lower()}», решает {top[0][1]}.' if top else ''))
+    by_state = {s: [w for _, w in work if w['state'] == s] for s in PROGRAM_COLUMNS}
+    feats = lambda s: sum(1 for _, w in work if w['state'] == s and w['type'] == 'feature')
+    urgent = sum(1 for c, w in work if (w.get('class_of_service') or c.get('class_of_service')) == 'срочная работа' and w['state'] != 'Завершено')
+    pg_status = (f'{len(work)} Capabilities и Features: {counts(by_state, IN_STATE)}. Features в работе {feats("В работе")} из {wip.get("program", 1)}, '
+                 f'готовы к работе {feats("Готово к работе")} из {wip.get("program_ready", 2)}. ' + (f'Срочная работа: {urgent}.' if urgent else 'Срочной работы нет.')
+                 if work else 'Capabilities и Features пока нет: они появляются после решения о старте.')
+    reg_status = (f'{len(cards)} {plural(len(cards), ("карточка", "карточки", "карточек"))}: '
+                  + ', '.join(f'{n} — {title.lower()}' for title, n in sorted({PROFILE_TITLE[c["profile"]]: sum(1 for x in cards if x["profile"] == c["profile"]) for c in cards}.items(), key=lambda x: -x[1])) + '.')
 
     # where each project is
     cols = ''.join(column(s, pf_en[s], len(by_stage[s]), pf_gate[s],
                           ''.join(kb_card(here, c, c['id'], c['title'], PROFILE_TITLE[c['profile']], c['live'].get('next_step') or c['stage'],
                                           c.get('function') or '—', c.get('class_of_service') or '') for c in sorted(by_stage[s], key=rank_key)))
                    for s in STAGES)
-    portfolio = (tip('Portfolio Kanban', 'Нажмите на колонку — она раскроется; на карточку — откроется сводка проекта. В заголовке колонки — точка контроля, которая переводит проект дальше.')
+    portfolio = (tip(pf_status)
                  + f'<div class="kb-scroll"><div class="kb-board kb-accordion" data-kb-accordion>{cols}</div></div>')
     off = by_stage['Отложено'] + by_stage['Закрыто']
     if off:
@@ -188,7 +221,7 @@ def add_pages(pages, site, terms, api):
     head_cells = ''.join(f'<th><div class="kb-column-head"><div><h3>{e(s)}<span class="kb-step-en" lang="en">{e(pg_en[s])}</span></h3><span class="kb-count">{sum(1 for _, w in work if w["state"] == s)}</span></div><small>{e(pg_gate[s])}</small></div></th>' for s in PROGRAM_COLUMNS)
     lane_rows = ''.join(f'<tr><th scope="row">{e(l.capitalize())}<span class="kb-step-en" lang="en">{e(LANE_EN[l])}</span></th>' + ''.join(
         '<td><div class="kb-stack">' + (''.join(wcard(c, w) for c, w in work if w['state'] == s and lane_of(c, w) == l) or '<span class="kb-empty">—</span>') + '</div></td>' for s in PROGRAM_COLUMNS) + '</tr>' for l in LANES)
-    program = (tip('Program Kanban', 'Строки — классы обслуживания: срочная работа, инициативы, текущая работа. Нажмите на карточку, чтобы увидеть её проект; подробности Feature — в Jira.')
+    program = (tip(pg_status)
                + f'<div class="kb-scroll"><table class="kb-table"><thead><tr><th></th>{head_cells}</tr></thead><tbody>{lane_rows}</tbody></table></div>')
 
     # when: the PI calendar with the work placed in iterations
@@ -199,7 +232,7 @@ def add_pages(pages, site, terms, api):
                              'href': rel(api.url_of(here), api.url_of(ids[c['id']]))} for w in c.get('work', [])]}
                  for c in sorted(cards, key=rank_key) if c.get('work')]
     cal_data = {k: cadence.DATA[k] for k in ('days', 'year_end_from', 'seasons')} | {'rows': plan_rows}
-    plan = (tip('Program Board', 'Нажмите на PI, итерацию или неделю — откроются даты и запланированная работа. Стрелки листают PI. Review — зелёным, Planning — синим.')
+    plan = (tip(cadence.plan_status(day, plan_rows), ' data-pi-status')
             + f'<section class="pi-cal" data-pi-calendar="{e(json.dumps(cal_data, ensure_ascii=False))}">{cadence.calendar_html(day, 0, plan_rows)}</section>')
 
     # what comes next
@@ -208,7 +241,10 @@ def add_pages(pages, site, terms, api):
                     f'<td>{e(c["stage"])}</td><td>{e(c.get("function") or "—")}</td></tr>' for c in backlog]
     pb_rows = [f'<tr {card_attrs(c)} data-kb-row><td>{e(w["id"])}</td><td>{"Capability" if w["type"] == "capability" else "Feature"}</td><td>{e(w["title"])}</td><td>{e(w["state"])}</td>'
                f'<td>{e((w.get("iteration") or "—").replace(" I", " i"))}</td><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td></tr>' for c, w in work if w['state'] != 'Завершено']
-    backlog_html = (tip('Portfolio Backlog · Program Backlog', 'Что ещё не начато, по очереди. Порядок проектов задаёт менеджер продукта, порядок работы между проектами — форум решений по программе.')
+    open_work = [w for _, w in work if w['state'] != 'Завершено']
+    bl_status = (f'Не начато {len(backlog)} {plural(len(backlog), PROJECTS)} и {len(open_work)} Capabilities и Features.'
+                 + (f' Первым в очереди — {backlog[0]["id"]} «{backlog[0]["title"]}».' if backlog else ''))
+    backlog_html = (tip(bl_status)
                     + '<h3>Проекты, ещё не начатые</h3>' + table(['Место', 'Карточка', 'Название', 'Состояние', 'Функция'], backlog_rows)
                     + '<h3>Capabilities и Features, ещё не принятые</h3>' + table(['Ключ', 'Вид', 'Название', 'Состояние', 'Итерация', 'Карточка'], pb_rows))
 
@@ -219,13 +255,19 @@ def add_pages(pages, site, terms, api):
     log = [(c, d) for c in cards for d in c.get('decisions', [])]
     log_html = (table(['Карточка', 'Что решили', 'Кто', 'Когда'], [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(d["what"])}</td><td>{e(d.get("who") or "—")}</td><td>{e(d.get("when") or "—")}</td></tr>' for c, d in log])
                 if log else '<p class="pf-notice">Решений пока не записано: все проекты ещё в начале пути.</p>')
-    decisions = (tip('Control points', 'Какое решение ждёт каждый открытый проект и кто его принимает. Ниже — журнал принятых решений.')
+    groups = nearest(open_cards)
+    one = len({who for _, who, _ in groups}) == 1
+    dec_status = (f'Решения ждут {len(open_cards)} {plural(len(open_cards), PROJECTS)}'
+                  + (f', все решает {groups[0][1]}: ' + ', '.join(f'«{pt.lower()}» — {n}' for pt, _, n in groups) if one
+                     else ': ' + '; '.join(f'«{pt.lower()}» — {n}, решает {who}' for pt, who, n in groups)) + '. '
+                  + (f'Принято решений: {len(log)}.' if log else 'Принятых решений пока нет.'))
+    decisions = (tip(dec_status)
                  + table(['Карточка', 'Название', 'Состояние', 'Следующая точка контроля', 'Кто решает'], point_rows) + '<h3>Журнал решений</h3>' + log_html)
 
     # everything in one list
     reg_rows = [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(PROFILE_TITLE[c["profile"]])}</td><td>{e(c["stage"])}</td>'
                 f'<td>{e(c.get("function") or "—")}</td><td>{e(c.get("area") or "—")}</td></tr>' for c in cards]
-    register = tip('Register', 'Все карточки одним списком, включая текущую работу. Ищите и фильтруйте полем сверху.') + table(['Карточка', 'Название', 'Профиль', 'Состояние', 'Функция', 'Услуга'], reg_rows)
+    register = tip(reg_status) + table(['Карточка', 'Название', 'Профиль', 'Состояние', 'Функция', 'Услуга'], reg_rows)
 
     here_strip = ('<section class="here" aria-label="Где мы сейчас">'
                   f'<div class="here-time" data-pi-here>{cadence.here_html(day)}</div><div class="here-place">'

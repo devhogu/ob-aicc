@@ -866,3 +866,4 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .pf-tabs button[aria-selected=true]>small{color:var(--link)}
 .pf-tip{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin:0 0 16px;padding:8px 12px;border-left:3px solid var(--brand);border-radius:0 8px 8px 0;background:var(--surface-subtle);font-size:13px;color:var(--text-muted)}
 .pf-tip__view{flex:none;font-weight:700;color:var(--text);font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.pf-tip{display:block;font-size:14px;color:var(--text)}

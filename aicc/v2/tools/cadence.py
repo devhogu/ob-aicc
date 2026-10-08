@@ -226,6 +226,37 @@ def it_key(i):
     return f'{i["year"]}-{i["month"]:02d}'
 
 
+def plural(n, forms):
+    """Russian noun form for a count: (one, few, many)."""
+    k = n % 100
+    return forms[2] if 11 <= k <= 14 else forms[0] if n % 10 == 1 else forms[1] if 2 <= n % 10 <= 4 else forms[2]
+
+
+# START_CONTRACT: plan_status
+#   PURPOSE: One line on where the plan stands today: the PI, iteration and week, the work in this iteration and without one, the next Review and Planning.
+#   INPUTS: { day: date; rows: list - see board_html }
+#   OUTPUTS: { str - plain text; site.js writes the same line for the reader's date }
+#   SIDE_EFFECTS: none
+# END_CONTRACT: plan_status
+def plan_status(day, rows):
+    it, week = week_of(day)
+    monday = day - timedelta(days=day.weekday())
+    here = f'{it["pi"]} {it["name"]}'
+    items = [x for r in rows for x in r['items'] if x['state'] != 'Завершено']
+    planned = sum(1 for x in items if x.get('iteration') == here)
+    loose = sum(1 for x in items if not x.get('iteration'))
+    nxt = {}
+    for k in range(30):
+        s = monday + timedelta(weeks=k)
+        i, w = week_of(s)
+        kind = week_kind(i, w, increment(i['year'], (i['month'] - 1) // 3 + 1)['ip']['name'])
+        if kind and kind not in nxt:
+            nxt[kind] = week_range(s, kind) + (' (эта неделя)' if k == 0 else '')
+    return (f'Сейчас {it["pi"]}, итерация {it["label"]} ({it["title"]}), неделя {week} из {it["weeks"]}. '
+            f'В этой итерации {planned} {plural(planned, ("работа", "работы", "работ"))}, без итерации — {loose}. '
+            f'Ближайшая Review — {nxt.get("review", "—")}, Planning — {nxt.get("ip", "—")}.')
+
+
 def item_html(item):
     return (f'<a class="pi-item pi-item--{STATE_CLASS.get(item["state"], "backlog")}" href="{esc(item["href"])}" data-item="{esc(item["id"])}" title="{esc(item["title"])} · {esc(item["state"])}">'
             f'<b>{esc(item["id"])}</b><span>{esc(item["title"])}</span></a>')
