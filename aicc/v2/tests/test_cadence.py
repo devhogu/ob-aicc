@@ -56,10 +56,10 @@ class PageScript(unittest.TestCase):
         program = block + (f'Object.assign(PI.data, {json.dumps(data, ensure_ascii=False)});'
                            f'var days = {json.dumps([d.isoformat() for d in days])};'
                            'var out = []; days.forEach(function (s) { var p = s.split("-").map(Number), t = PI.at(p[0], p[1], p[2]);'
-                           '[-1, 0, 2].forEach(function (k) { out.push(PI.calendar(t, k)); }); out.push(PI.nowLine(t)); });'
+                           '[-1, 0, 2].forEach(function (k) { out.push(PI.calendar(t, k)); }); out.push(PI.here(t)); });'
                            'process.stdout.write(JSON.stringify(out));')
         got = json.loads(subprocess.run(['node', '-e', program], capture_output=True, text=True, check=True).stdout)
-        want = [x for d in days for x in [cadence.calendar_html(d, k, rows) for k in (-1, 0, 2)] + [cadence.now_line(d)]]
+        want = [x for d in days for x in [cadence.calendar_html(d, k, rows) for k in (-1, 0, 2)] + [cadence.here_html(d)]]
         self.assertIn('FEAT-001', cadence.calendar_html(date(2026, 10, 8), 0, rows))  # planned in I11 of the current PI
         self.assertNotIn('FEAT-004', ''.join(want))  # done and never planned: shown nowhere
         for g, w in zip(got, want):

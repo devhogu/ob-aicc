@@ -100,12 +100,11 @@ def add_pages(pages, site, terms, api):
     def rank_key(card):
         return (card.get('rank') or 10 ** 6, card['id'])
 
-    def header(sub):
-        return (f'<header class="pf-header"><span class="pf-meta">По состоянию на {e(site.get("as_of", ""))}</span>'
-                f'<p class="pf-sub">{e(sub)}</p><p class="pf-muted" data-pi-now>{e(cadence.now_line(day))}</p></header>')
-
-    def stats(items):
-        return '<div class="pf-stats">' + ''.join(f'<div><strong>{e(str(v))}</strong><span>{e(k)}</span></div>' for k, v in items) + '</div>'
+    def flow(target, title, steps):
+        """A row of states with their counts; a limit shows as count / limit."""
+        cells = ''.join(f'<li class="{"is-busy" if n else ""}{" is-limited" if lim is not None else ""}"><strong>{n}{f"<em>/{lim}</em>" if lim is not None else ""}</strong><span>{e(s)}</span></li>'
+                        for s, n, lim in steps)
+        return f'<a class="here-tile here-flow" href="#{target}"><small>{e(title)}</small><ol>{cells}</ol></a>'
 
     def options(values, label):
         return f'<option value="">{e(label)}</option>' + ''.join(f'<option value="{e(v)}">{e(v)}</option>' for v in values)
@@ -161,7 +160,6 @@ def add_pages(pages, site, terms, api):
     pg_en = {'Бэклог': 'Backlog', 'Готово к работе': 'Ready', 'В работе': 'Active', 'На проверке': 'Review', 'Завершено': 'Done'}
     pg_gate = {'Бэклог': 'Порядок — менеджер продукта; между проектами — форум решений по программе', 'Готово к работе': f'Понятны результат и критерии приёмки · лимит {wip.get("program_ready", 2)}',
                'В работе': f'WIP-лимит {wip.get("program", 1)}', 'На проверке': 'Приёмка Feature — менеджер продукта', 'Завершено': 'Принято и отмечено на карточке'}
-    feats = lambda state: sum(1 for _, w in work if w['state'] == state and w['type'] == 'feature')
 
     # ---- the one page: every view of the cards, each answering one question
     here = 'projects'
@@ -227,9 +225,13 @@ def add_pages(pages, site, terms, api):
                 f'<td>{e(c.get("function") or "—")}</td><td>{e(c.get("area") or "—")}</td></tr>' for c in cards]
     register = lead('Все карточки одним списком, включая постоянные карточки текущей работы.') + table(['Карточка', 'Название', 'Профиль', 'Состояние', 'Функция', 'Услуга'], reg_rows)
 
-    body = ('<article class="hub-board" data-kanban-workspace>' + header('Все проекты Хаба на одной странице: где каждый проект, что делается сейчас, что запланировано по итерациям и какое решение впереди.')
-            + stats([('Проектов в портфеле', len(cards)), ('Проектов в работе, лимит', f'{len(by_stage["В работе"])} / {wip.get("portfolio", 1)}'),
-                     ('Features в работе, лимит', f'{feats("В работе")} / {wip.get("program", 1)}'), ('Ждут решения', len(open_cards))])
+    here_strip = ('<section class="here" aria-label="Где мы сейчас">'
+                  f'<div class="here-time" data-pi-here>{cadence.here_html(day)}</div><div class="here-place">'
+                  + flow('portfolio', f'Портфель · проектов: {len(cards)}', [(s, len(by_stage[s]), wip.get('portfolio', 1) if s == 'В работе' else None) for s in STAGES])
+                  + flow('program', f'Программа · Capabilities и Features: {len(work)}', [(s, sum(1 for _, w in work if w['state'] == s),
+                                                                                          {'Готово к работе': wip.get('program_ready', 2), 'В работе': wip.get('program', 1)}.get(s)) for s in PROGRAM_COLUMNS])
+                  + f'</div><p class="here-asof">Карточки — по состоянию на {e(site.get("as_of", ""))}; дата, PI и итерация считаются от сегодняшнего дня.</p></section>')
+    body = ('<article class="hub-board" data-kanban-workspace>' + here_strip
             + filters(len(cards))
             + tabs([('portfolio', 'Портфель', portfolio), ('program', 'Программа', program), ('plan', 'План PI', plan),
                     ('backlog', 'Бэклог', backlog_html), ('decisions', 'Решения', decisions), ('register', 'Реестр', register)])

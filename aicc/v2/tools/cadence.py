@@ -99,17 +99,28 @@ def span(a, b, long=False):
     return f'{left} – {b.day} {names[b.month - 1]} {b.year}'
 
 
-# START_CONTRACT: now_line
-#   PURPOSE: One line for page headers: the current increment with its dates, the current iteration and week.
+DAYS = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
+
+
+# START_CONTRACT: here_html
+#   PURPOSE: Where we are in time: today, the current increment with its progress and IP week, the current iteration with its weeks.
 #   INPUTS: { day: date }
-#   OUTPUTS: { str - plain text; site.js writes the same line for the reader's date }
+#   OUTPUTS: { str - HTML of three tiles; site.js draws the same tiles for the reader's date }
 #   SIDE_EFFECTS: none
-# END_CONTRACT: now_line
-def now_line(day):
+# END_CONTRACT: here_html
+def here_html(day):
     r = rolling(day, 1)
-    pi, it = r['increments'][0], r['iteration']
-    return (f'PI {pi["name"]}: итерации {pi["iterations"][0]["name"]}–{pi["iterations"][-1]["name"]}, {span(pi["start"], pi["end"], True)} · '
-            f'сейчас: итерация {it["name"]} ({it["title"]}), неделя {r["week"]} из {it["weeks"]}')
+    pi, it, week = r['increments'][0], r['iteration'], r['week']
+    monday = day - timedelta(days=day.weekday())
+    pi_weeks = ((pi['end'] - pi['start']).days + 1) // 7
+    pi_week = (monday - pi['start']).days // 7 + 1
+    dots = ''.join(f'<li class="{"is-done" if w < week else "is-current" if w == week else ""}">W{w}</li>' for w in range(1, it['weeks'] + 1))
+    note = f'<span class="here-note">{esc(r["note"])}</span>' if r['note'] else ''
+    return (f'<a class="here-tile" href="#plan"><small>Сегодня</small><strong>{day.day} {LONG[day.month - 1]} {day.year}</strong><span>{DAYS[day.weekday()]}</span></a>'
+            f'<a class="here-tile" href="#plan"><small>Программный инкремент</small><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span>'
+            f'<div class="here-bar"><i style="width:{100 * pi_week // pi_weeks}%"></i></div><span>неделя {pi_week} из {pi_weeks} · неделя IP {span(pi["ip"]["start"], pi["ip"]["end"])}</span></a>'
+            f'<a class="here-tile" href="#plan"><small>Итерация</small><strong>{it["name"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span>'
+            f'<ol class="here-weeks">{dots}</ol><span>неделя {week} из {it["weeks"]}</span>{note}</a>')
 
 
 def item_html(item):

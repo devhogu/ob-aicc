@@ -265,10 +265,17 @@
       return '<div class="o-table-wrap pi-board-wrap"><table class="pi-board"><thead><tr><th>Проект</th>' + head + '<th>Не запланировано</th></tr></thead><tbody>' + body.join('') + '</tbody></table></div>';
     }
     function today() { var n = new Date(); return at(n.getFullYear(), n.getMonth() + 1, n.getDate()); }
-    function nowLine(day) {
-      var w = weekOf(day), it = w[0], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1);
-      return 'PI ' + pi.name + ': итерации ' + pi.iterations[0].name + '–' + pi.iterations[2].name + ', ' + span(pi.start, pi.end, true) + ' · ' +
-        'сейчас: итерация ' + it.name + ' (' + it.title + '), неделя ' + w[1] + ' из ' + it.weeks;
+    var DAYS = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+    function here(day) {
+      var w = weekOf(day), it = w[0], week = w[1], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1), p = parts(day);
+      var monday = day - p.wd * DAY, piWeeks = Math.round((pi.end - pi.start + DAY) / WEEK), piWeek = Math.round((monday - pi.start) / WEEK) + 1;
+      var dots = '', note = data.notes[it.pi + ' ' + it.name + 'W' + week] || '';
+      for (var n = 1; n <= it.weeks; n++) dots += '<li class="' + (n < week ? 'is-done' : n === week ? 'is-current' : '') + '">W' + n + '</li>';
+      return '<a class="here-tile" href="#plan"><small>Сегодня</small><strong>' + p.d + ' ' + LONG[p.m - 1] + ' ' + p.y + '</strong><span>' + DAYS[p.wd] + '</span></a>' +
+        '<a class="here-tile" href="#plan"><small>Программный инкремент</small><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span>' +
+        '<div class="here-bar"><i style="width:' + Math.floor(100 * piWeek / piWeeks) + '%"></i></div><span>неделя ' + piWeek + ' из ' + piWeeks + ' · неделя IP ' + span(pi.ip.start, pi.ip.end) + '</span></a>' +
+        '<a class="here-tile" href="#plan"><small>Итерация</small><strong>' + it.name + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span>' +
+        '<ol class="here-weeks">' + dots + '</ol><span>неделя ' + week + ' из ' + it.weeks + '</span>' + (note ? '<span class="here-note">' + esc(note) + '</span>' : '') + '</a>';
     }
     function calendar(day, shift) {
       var w = weekOf(day), it = w[0], week = w[1], year = it.year, quarter = Math.floor((it.month - 1) / 3) + 1, q = year * 4 + quarter - 1 + shift;
@@ -299,15 +306,15 @@
         '<h3 class="pi-board-title">Работа по итерациям ' + pis[0].name + '</h3>' + board(pis[0], it));
       return out.join('');
     }
-    return {data: data, today: today, at: at, nowLine: nowLine, calendar: calendar};
+    return {data: data, today: today, at: at, here: here, calendar: calendar};
   })();
   window.HubPI = PI;
-  document.querySelectorAll('[data-pi-now]').forEach(function (el) { el.textContent = PI.nowLine(PI.today()); });
   document.querySelectorAll('[data-pi-calendar]').forEach(function (el) {
     try { var given = JSON.parse(el.dataset.piCalendar); PI.data.ip_weeks = given.ip_weeks || {}; PI.data.notes = given.notes || {}; PI.data.rows = given.rows || []; } catch (e) {}
     var shift = 0;
     function draw() { el.innerHTML = PI.calendar(PI.today(), shift); el.dispatchEvent(new Event('kb-refresh', {bubbles: true})); }
     draw();
+    document.querySelectorAll('[data-pi-here]').forEach(function (h) { h.innerHTML = PI.here(PI.today()); });
     el.addEventListener('click', function (ev) {
       var b = ev.target.closest('[data-pi-step]'); if (!b) return;
       var step = parseInt(b.dataset.piStep, 10); shift = step ? shift + step : 0; draw();
