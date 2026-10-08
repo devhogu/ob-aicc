@@ -209,7 +209,6 @@ def add_pages(pages, site, terms, api):
                                  c.get('function') or c.get('area') or '—', c.get('area') or '') for c in run_rate) + '</div></div>')
     reg_rows = [f'<tr {card_attrs(c)} data-kb-row><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td><td>{e(PROFILE_TITLE[c["profile"]])}</td><td>{e(c["stage"])}</td>'
                 f'<td>{e(c.get("function") or "—")}</td><td>{e(c.get("area") or "—")}</td></tr>' for c in cards]
-    wip_rows = [f'<tr><td>{e(s)}</td><td>{len(by_stage[s])}</td><td>{wip.get("portfolio", 1) if s == "В работе" else "без лимита"}</td></tr>' for s in STAGES]
     body = ('<article class="hub-board" data-kanban-workspace>' + header('Все идеи, инициативы и текущая работа — от воронки до завершения. Нажмите на карточку, чтобы увидеть её здесь же.')
             + stats([('В воронке', len(by_stage['Воронка'])), ('В проработке и готово к старту', len(by_stage['Проработка']) + len(by_stage['Готово к старту'])),
                      ('В работе, в пределах лимита', f'{len(by_stage["В работе"])} / {wip.get("portfolio", 1)}'), ('Постоянные карточки текущей работы', len(run_rate))])
@@ -217,7 +216,6 @@ def add_pages(pages, site, terms, api):
             + tabs([('kanban', 'Канбан портфеля', board), ('backlog', 'Бэклог портфеля', backlog_html), ('run-rate', 'Текущая работа', rr_html),
                     ('register', 'Реестр', table(['Карточка', 'Название', 'Профиль', 'Состояние', 'Функция', 'Услуга'], reg_rows))])
             + panel() + ''.join(detail_template(c) for c in cards)
-            + '<details class="pf-more"><summary>Незавершённая работа в сопоставлении с WIP-лимитами</summary>' + table(['Состояние', 'Карточек', 'Лимит'], wip_rows) + '</details>'
             + '</article>')
     pages[here] = Page(here, 'Портфель', 'projects', 10, 'Канбан портфеля, бэклог портфеля, текущая работа и реестр — с поиском и фильтрами.', body)
 

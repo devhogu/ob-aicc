@@ -562,8 +562,6 @@ details.svc[open]::after{opacity:1}
 .tab-title{font-size:20px;margin:24px 0 12px}
 .pf-sub{font-size:16px;margin:4px 0}
 .hub-board .pf-header{margin-bottom:20px}
-.pf-more{margin:28px 0;border-top:1px solid var(--border);padding-top:14px}
-.pf-more>summary{cursor:pointer;font:600 16px/1.4 var(--font-heading)}
 .proj-doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:24px 0 8px}
 .proj-door{position:relative;display:flex;flex-direction:column;gap:8px;padding:22px 24px;border:1px solid var(--border);border-radius:14px;background:var(--surface);color:var(--text);text-decoration:none}
 .proj-door small{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted)}
