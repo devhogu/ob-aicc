@@ -1,18 +1,75 @@
 {
   "id": "aicc-hub",
-  "languages": ["ru"],
+  "languages": [
+    "ru"
+  ],
   "default_language": "ru",
   "english_terms": "always",
   "contact": "talimbayev@obank.kg",
   "names": {
-    "ru": {"title": "Хаб Компетенций по AI", "middle": "Хаб Компетенций", "short": "Хаб"}
+    "ru": {
+      "title": "Хаб Компетенций по AI",
+      "middle": "Хаб Компетенций",
+      "short": "Хаб"
+    }
   },
   "sections": [
-    {"id": "hub", "path": "", "icon": "info", "label": {"ru": "Хаб"}},
-    {"id": "process", "path": "process/", "icon": "workflow", "label": {"ru": "Процесс"}},
-    {"id": "catalog", "path": "catalog/", "icon": "list-tree", "label": {"ru": "Каталог сценариев"}},
-    {"id": "projects", "path": "projects/", "icon": "layers", "label": {"ru": "Проекты"}},
-    {"id": "vocabulary", "path": "vocabulary/", "icon": "file-text", "label": {"ru": "Словарь"}}
+    {
+      "id": "hub",
+      "path": "",
+      "icon": "info",
+      "label": {
+        "ru": "Хаб"
+      }
+    },
+    {
+      "id": "services",
+      "path": "services/",
+      "icon": "users",
+      "label": {
+        "ru": "Услуги"
+      }
+    },
+    {
+      "id": "process",
+      "path": "process/",
+      "icon": "workflow",
+      "label": {
+        "ru": "Процесс"
+      }
+    },
+    {
+      "id": "catalog",
+      "path": "catalog/",
+      "icon": "list-tree",
+      "label": {
+        "ru": "Каталог сценариев"
+      }
+    },
+    {
+      "id": "projects",
+      "path": "projects/",
+      "icon": "layers",
+      "label": {
+        "ru": "Проекты"
+      }
+    },
+    {
+      "id": "responsible-ai",
+      "path": "responsible-ai/",
+      "icon": "shield-check",
+      "label": {
+        "ru": "Ответственный AI"
+      }
+    },
+    {
+      "id": "vocabulary",
+      "path": "vocabulary/",
+      "icon": "file-text",
+      "label": {
+        "ru": "Словарь"
+      }
+    }
   ],
   "messages": {
     "ru": {
@@ -39,8 +96,18 @@
     }
   },
   "forbidden": [
-    "Executive Sponsor", "Domain Owner", "Steering", "DR-2026", "Руководитель Центра Компетенций",
-    "консолидирующ", "не имеет полномочий", "нет полномочий", "не принимает решений", "v1", "прежн"
+    "Executive Sponsor",
+    "Domain Owner",
+    "Steering",
+    "DR-2026",
+    "Руководитель Центра Компетенций",
+    "консолидирующ",
+    "не имеет полномочий",
+    "нет полномочий",
+    "не принимает решений",
+    "v1"
   ],
-  "forbidden_patterns": ["AICC-[A-Z]{2,}-\\d+"]
+  "forbidden_patterns": [
+    "AICC-[A-Z]{2,}-\\d+"
+  ]
 }

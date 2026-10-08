@@ -1,0 +1,39 @@
+# Шаблон карточки проекта. Скопируйте файл, назовите по идентификатору (INI-020.yaml) и заполните.
+# Обязательны: id, title, summary, profile, stage, people, outcome, live.
+# Текст, в котором есть двоеточие, берите в двойные кавычки.
+id: INI-000
+title: Название проекта
+summary: Одно-два предложения о том, что делаем.
+profile: initiative            # initiative | run-rate | recurring-check | enablement
+class_of_service: инициатива   # инициатива | текущая работа | срочная работа
+stage: Воронка                 # Воронка | Проработка | Готово к старту | В работе | Завершено | Отложено | Закрыто
+function: ""                   # функция, которой нужен результат
+area: ""                       # направление услуг
+people:
+  business_owner: {position: "кто в функции отвечает за результат", holder: ""}
+  product_manager: {position: "кто отвечает за то, что делаем", holder: ""}
+  project_manager: {position: "кто ведёт проект", holder: ""}
+outcome:
+  problem: Какая задача или потребность.
+  intended_outcome: Какой результат хотим получить.
+  measure: Чем измерим.
+  baseline: Как сейчас.
+  target: Как хотим.
+constraints:
+  appetite: Сколько усилий готовы вложить.
+  review_point: Когда смотрим, продолжать ли.
+  exit_criterion: Когда шаг считаем пройденным.
+  stop_threshold: Когда останавливаемся.
+checklist:
+  - {item: "Памятка по практике: пункт", state: "не начато"}
+live:
+  status: не задан             # зелёный | жёлтый | красный | не задан
+  next_step: ""
+  risks: []
+  dependencies: []
+work:
+  - {id: CAP-000, type: capability, title: "Возможность", state: Бэклог}
+  - {id: FEAT-000, type: feature, parent: CAP-000, title: "Функция", state: Бэклог, jira: ""}
+decisions: []                  # - {what: "что решили", who: "кто", when: "когда"}
+closure: {result: "", lessons: ""}
+links: {jira: "", confluence: ""}

@@ -3,7 +3,7 @@
 Source of the Hub site. It is self-contained: its own interface kit copy (`ui/`), its own build and check tools, its own content. Russian is the source language; English will be translated later.
 
 - `content/ru/` the pages (Markdown with a front matter of `title`, `summary`, `order`)
-- `vocabulary/terms.yaml` the terms; a page writes `[[funnel]]` or `[[funnel|воронки]]` and the site shows «воронка (funnel)» linked to the vocabulary
+- `vocabulary/terms-*.yaml` the terms; a page writes `[[funnel]]` or `[[funnel|воронки]]` and the site shows «воронка (funnel)» linked to the vocabulary
 - `cards/` the project cards (later)
 - `site.json` names, sections, messages and the wording the check refuses
 

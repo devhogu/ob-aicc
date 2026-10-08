@@ -24,6 +24,7 @@ from pathlib import Path
 import posixpath
 import re
 import shutil
+import sys
 from urllib.parse import quote
 
 import yaml
@@ -31,7 +32,8 @@ from markdown_it import MarkdownIt
 
 ROOT = Path(__file__).resolve().parents[3]
 SRC = ROOT / 'aicc' / 'v2'
-OUT = ROOT / 'html' / 'aicc' / 'v2'
+OUT = Path(os.environ.get('AICC_V2_OUT') or ROOT / 'html' / 'aicc' / 'v2')  # a writer may build into a private folder
+LENIENT = bool(os.environ.get('AICC_V2_LENIENT'))  # writers: links to pages another writer has not finished yet do not stop the build
 ALPHABET = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'
 TERM = re.compile(r'\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]')
 PAGE_LINK = re.compile(r'\]\(page:([a-z0-9/_-]+)(#[^)]*)?\)')
@@ -42,13 +44,17 @@ def load_site():
 
 
 def load_terms():
-    terms = yaml.safe_load((SRC / 'vocabulary' / 'terms.yaml').read_text(encoding='utf-8')) or []
+    terms = []
+    for path in sorted((SRC / 'vocabulary').glob('*.yaml')):
+        terms.extend(yaml.safe_load(path.read_text(encoding='utf-8')) or [])
     seen = {}
     for term in terms:
         for key in ('id', 'ru', 'en', 'definition'):
             if not term.get(key):
                 raise ValueError(f'vocabulary term without {key}: {term}')
         if term['id'] in seen:
+            if LENIENT:
+                continue  # writers may define the same term at the same time; the assembled site refuses it
             raise ValueError('duplicate vocabulary id ' + term['id'])
         seen[term['id']] = term
     return seen
@@ -116,7 +122,24 @@ def front_matter(text, path):
     match = re.match(r'---\n(.*?)\n---\n', text, re.S)
     if not match:
         raise ValueError(f'{path}: front matter is missing')
-    return yaml.safe_load(match[1]) or {}, text[match.end():]
+    meta = {}
+    for line in match[1].split('\n'):
+        pair = re.match(r'([\w-]+):\s*(.*)$', line)
+        if not pair:
+            raise ValueError(f'{path}: cannot read the front matter line {line!r}')
+        value = pair[2].strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in '"\'':
+            value = value[1:-1]
+        meta[pair[1]] = value
+    return meta, text[match.end():]
+
+
+def term_html(terms, key, surface, here):
+    """A vocabulary term as it appears in running text: the Russian word with the English term beside it, linked to the vocabulary."""
+    entry = terms[key]
+    href = rel(here, url_of('vocabulary')) + '#' + key
+    return (f'<a class="term" href="{href}" title="{escape(entry["definition"], quote=True)}">'
+            f'{escape(surface or entry["ru"])} <span class="term-en">({escape(entry["en"])})</span></a>')
 
 
 # START_CONTRACT: render_markdown
@@ -129,17 +152,15 @@ def render_markdown(text, page, terms, pages, site):
     here = page.url
 
     def term(match):
-        key, surface = match[1], match[2]
-        if key not in terms:
-            raise ValueError(f'{page.id}: unknown term [[{key}]]')
-        entry = terms[key]
-        href = rel(here, url_of('vocabulary')) + '#' + key
-        return (f'<a class="term" href="{href}" title="{escape(entry["definition"], quote=True)}">'
-                f'{escape(surface or entry["ru"])} <span class="term-en">({escape(entry["en"])})</span></a>')
+        if match[1] not in terms:
+            raise ValueError(f'{page.id}: unknown term [[{match[1]}]]')
+        return term_html(terms, match[1], match[2], here)
 
     def link(match):
         target = match[1]
         if target not in pages:
+            if LENIENT:
+                return '](#)'
             raise ValueError(f'{page.id}: link to unknown page {target}')
         return '](' + rel(here, pages[target].url) + (match[2] or '') + ')'
 
@@ -152,8 +173,13 @@ def render_markdown(text, page, terms, pages, site):
     for i, token in enumerate(tokens):
         if token.type == 'heading_open':
             inline = tokens[i + 1]
+            explicit = re.search(r'\s*\{#([\w-]+)\}\s*$', inline.content)
+            if explicit:
+                inline.content = inline.content[:explicit.start()]
+                if inline.children and inline.children[-1].type == 'text':
+                    inline.children[-1].content = re.sub(r'\s*\{#[\w-]+\}\s*$', '', inline.children[-1].content)
             label = plain(md.renderer.renderInline(inline.children, md.options, {}))
-            ident = slug(label)
+            ident = explicit[1] if explicit else slug(label)
             n = 2
             base = ident
             while ident in used:
@@ -192,11 +218,8 @@ def add_generated(pages, site, terms):
     body = (f'<p class="lede">{escape(m["vocabulary_intro"])}</p><div class="o-table-wrap"><table class="vocabulary"><thead><tr>'
             f'<th>{escape(m["vocabulary_term"])}</th><th>{escape(m["vocabulary_definition"])}</th></tr></thead><tbody>{rows}</tbody></table></div>')
     pages['vocabulary'] = Page('vocabulary', 'Словарь', 'vocabulary', 0, m['vocabulary_intro'], body)
-    try:
-        import cards
-    except ImportError:
-        return
-    cards.add_pages(pages, site, terms)
+    import cards
+    cards.add_pages(pages, site, terms, sys.modules[__name__])
 
 
 def navigation(page, pages, site):
@@ -210,9 +233,12 @@ def navigation(page, pages, site):
         current = section['id'] == page.section
         local = ''
         if current and len(members) > 1:
+            # Large sections list their top pages; the pages of the area the reader is in open beside them.
+            area = '/'.join(page.id.split('/')[:2])
+            shown = [p for p in members if p.id.count('/') <= 1 or p.id.startswith(area + '/')]
             local = '<div class="portal-local-nav">' + ''.join(
-                f'<a href="{escape(rel(page.url, p.url))}"' + (' aria-current="page"' if p is page else '') + f'>{escape(p.title)}</a>'
-                for p in members) + '</div>'
+                f'<a{" class=nav-sub" if p.id.count("/") >= 2 else ""} href="{escape(rel(page.url, p.url))}"' + (' aria-current="page"' if p is page else '') + f'>{escape(p.title)}</a>'
+                for p in shown) + '</div>'
         groups.append(f'<div class="portal-nav-group{" is-current" if current else ""}"><a class="portal-section-link" data-section="{section["id"]}" '
                       f'href="{escape(rel(page.url, first.url))}"' + (' aria-current="true"' if current else '') +
                       f'>{icon(section["icon"])}<span>{escape(section["label"]["ru"])}</span></a>{local}</div>')

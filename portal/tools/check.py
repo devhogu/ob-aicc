@@ -193,6 +193,13 @@ if leftover:
     errors.append('search indexes outside the branches: %s' % ', '.join(leftover))
 
 print('pages: en %d, ru %d' % (len(all_pages['en']), len(all_pages['ru'])))
+
+# Version 2 sits beside version 1 in the package and is checked with it, so one command guards the whole package.
+v2_check = os.path.join(ROOT, 'aicc', 'v2', 'tools', 'check.py')
+if os.path.isdir(os.path.join(PACKAGE, 'v2')) and os.path.exists(v2_check):
+    r2 = subprocess.run([sys.executable, v2_check] + (['--idempotent'] if '--idempotent' in sys.argv else []), capture_output=True, text=True)
+    if r2.returncode != 0:
+        errors.append('v2: ' + (r2.stdout + r2.stderr).strip()[-600:])
 if errors:
     for e in sorted(set(errors))[:60]:
         print('error:', e)

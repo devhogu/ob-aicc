@@ -13,6 +13,7 @@
 """Check html/aicc/v2: python3 aicc/v2/tools/check.py [--idempotent]"""
 import hashlib
 import json
+import os
 from html.parser import HTMLParser
 from pathlib import Path
 import posixpath
@@ -25,7 +26,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[3]
 SRC = ROOT / 'aicc' / 'v2'
-OUT = ROOT / 'html' / 'aicc' / 'v2'
+OUT = Path(os.environ.get('AICC_V2_OUT') or ROOT / 'html' / 'aicc' / 'v2')
 
 
 class Parsed(HTMLParser):
@@ -52,7 +53,7 @@ class Parsed(HTMLParser):
             self.chips += 1
         if 'page-id' in classes:
             self._stack.append('page-id')
-        elif tag in ('script', 'style') or 'term-en' in classes or tag == 'title':
+        elif tag in ('script', 'style', 'pre', 'code') or 'term-en' in classes or tag == 'title':
             self._stack.append('skip')
         else:
             self._stack.append('')
@@ -83,7 +84,9 @@ def tree_hash():
 def check():
     errors = []
     site = json.loads((SRC / 'site.json').read_text(encoding='utf-8'))
-    terms = yaml.safe_load((SRC / 'vocabulary' / 'terms.yaml').read_text(encoding='utf-8')) or []
+    terms = []
+    for path in sorted((SRC / 'vocabulary').glob('*.yaml')):
+        terms.extend(yaml.safe_load(path.read_text(encoding='utf-8')) or [])
     ids = json.loads((OUT / 'assets' / 'page-ids.json').read_text(encoding='utf-8'))
     if len(set(ids.values())) != len(ids):
         errors.append('page identifiers are not unique')

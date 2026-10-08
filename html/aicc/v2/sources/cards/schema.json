@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Карточка проекта",
+  "description": "Живая запись об одном проекте. Файл называется по идентификатору карточки: INI-002.yaml. Карточку ведёт руководитель проекта; сайт показывает её как есть.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "profile", "stage", "summary", "people", "outcome", "live"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[A-Z]{2,5}-\\d{3}$", "description": "Идентификатор работы, например INI-002."},
+    "title": {"type": "string", "minLength": 3},
+    "summary": {"type": "string", "minLength": 10, "description": "Одно-два предложения: о чём проект."},
+    "profile": {"enum": ["initiative", "run-rate", "recurring-check", "enablement"], "description": "Профиль проекта: страница process/profiles/<профиль>."},
+    "class_of_service": {"enum": ["инициатива", "текущая работа", "срочная работа"]},
+    "stage": {"enum": ["Воронка", "Проработка", "Готово к старту", "В работе", "Завершено", "Отложено", "Закрыто"]},
+    "function": {"type": "string", "description": "Функция Банка, которой нужен результат, если работа для одной функции."},
+    "area": {"type": "string", "description": "Направление услуг: слаг страницы раздела «Услуги»."},
+    "people": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["business_owner", "product_manager", "project_manager"],
+      "properties": {
+        "business_owner": {"$ref": "#/$defs/person"},
+        "product_manager": {"$ref": "#/$defs/person"},
+        "project_manager": {"$ref": "#/$defs/person"}
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["problem", "intended_outcome"],
+      "properties": {
+        "problem": {"type": "string", "minLength": 5},
+        "intended_outcome": {"type": "string", "minLength": 5},
+        "measure": {"type": "string"},
+        "baseline": {"type": "string"},
+        "target": {"type": "string"}
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "appetite": {"type": "string"},
+        "review_point": {"type": "string"},
+        "exit_criterion": {"type": "string"},
+        "stop_threshold": {"type": "string"}
+      }
+    },
+    "checklist": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item", "state"],
+        "properties": {
+          "item": {"type": "string"},
+          "state": {"enum": ["не начато", "сделано", "не нужно"]},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "live": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["зелёный", "жёлтый", "красный", "не задан"]},
+        "next_step": {"type": "string"},
+        "risks": {"type": "array", "items": {"type": "string"}},
+        "dependencies": {"type": "array", "items": {"type": "string"}},
+        "updated": {"type": "string", "description": "Дата последнего обновления, если ведётся."}
+      }
+    },
+    "work": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "title", "state"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^(CAP|FEAT)-\\d{3}$"},
+          "type": {"enum": ["capability", "feature"]},
+          "title": {"type": "string"},
+          "parent": {"type": "string", "description": "Идентификатор возможности, если это функция."},
+          "state": {"enum": ["Бэклог", "Готово к работе", "В работе", "На проверке", "Завершено"]},
+          "class_of_service": {"enum": ["инициатива", "текущая работа", "срочная работа"]},
+          "jira": {"type": "string"}
+        }
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["what"],
+        "properties": {
+          "what": {"type": "string"},
+          "who": {"type": "string"},
+          "when": {"type": "string"}
+        }
+      }
+    },
+    "closure": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {"result": {"type": "string"}, "lessons": {"type": "string"}}
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {"jira": {"type": "string"}, "confluence": {"type": "string"}}
+    }
+  },
+  "$defs": {
+    "person": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["position"],
+      "properties": {
+        "position": {"type": "string", "description": "Должность в проекте или в Банке, на которой стоит эта роль."},
+        "holder": {"type": "string", "description": "Кто сейчас на этой позиции. Пусто, пока в репозитории имена не ведутся."}
+      }
+    }
+  }
+}
