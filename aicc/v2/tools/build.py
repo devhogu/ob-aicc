@@ -314,7 +314,7 @@ def render_page(page, pages, site):
 </head><body class="portal-workspace" data-portal-section="{page.section}" data-page="{escape(page.id)}">
 <a class="o-skip" href="#main">{escape(m["skip"])}</a>
 <header class="o-header">
-  <a class="o-identity" href="{escape(rel(here, url_of("index")))}"><img src="{escape(rel(here, "assets/ui/assets/logos/o-mark.svg"))}" width="34" height="38" alt=""><span>{escape(names["title"])}</span></a>
+  <a class="o-identity" href="{escape(rel(here, url_of("index")))}"><img src="{escape(rel(here, "assets/ui/assets/logos/hub-mark.svg"))}" width="36" height="36" alt=""><span>{escape(names["title"])}</span></a>
   <span class="header-scope">{escape(section["label"]["ru"])}</span>
   <span class="status-chip" title="{escape(m["status_chip_title"])}">{escape(m["status_chip"])}</span>
   <div class="o-search" role="search"><label class="o-sr-only" for="q">{escape(m["search_label"])}</label><input id="q" type="search" autocomplete="off" placeholder="{escape(m["search_label"])}" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
