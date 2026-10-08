@@ -6,9 +6,10 @@ order: 0
 
 <p class="lede">Сюда приходят за точным словом или источником: что значит термин, кто регулирует AI и данные и где учиться дальше.</p>
 
-<div class="rai-cards rai-cards--3 ref-doors">
+<div class="rai-cards rai-cards--4 ref-doors">
 <a class="ref-door" href="page:reference/vocabulary"><small>Термины</small><h3>Словарь</h3><p>Термины, которыми мы пользуемся: русское слово, принятое английское название и простое определение.</p></a>
 <a class="ref-door" href="page:reference/regulation"><small>Регулирование</small><h3>Регуляторы и нормативные акты</h3><p>Кто регулирует AI и данные у нас, в регионе и в мире — и что это значит для нас.</p></a>
+<a class="ref-door" href="page:reference/anthropic"><small>Обучение</small><h3>Обучение Anthropic</h3><p>Claude Academy и все её курсы, документация Claude на русском, практические материалы.</p></a>
 <a class="ref-door" href="page:reference/resources"><small>Источники</small><h3>Ресурсы для обучения и исследований</h3><p>Где учиться, где следить за отраслью и где искать сведения об атаках и инцидентах.</p></a>
 </div>
 

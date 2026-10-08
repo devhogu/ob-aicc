@@ -7,7 +7,7 @@ minutes: 6
 order: 40
 tags: claude, проекты, артефакты, навыки, подключения
 source: Claude 101
-source_url: https://anthropic.skilljar.com/claude-101
+source_url: https://academy.claude.com/courses/claude-101
 ---
 
 Claude — AI-ассистент компании Anthropic. С ним разговаривают обычным языком, дают ему документы и поручают работу: прочитать, сравнить, написать, посчитать. Вот основные возможности и когда каждая пригодится.

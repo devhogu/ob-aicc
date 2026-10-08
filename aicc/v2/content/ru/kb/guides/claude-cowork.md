@@ -7,7 +7,7 @@ minutes: 5
 order: 45
 tags: cowork, файлы, office, автоматизация
 source: Introduction to Claude Cowork
-source_url: https://anthropic.skilljar.com/introduction-to-claude-cowork
+source_url: https://academy.claude.com/courses/introduction-to-claude-cowork
 ---
 
 В обычном разговоре Claude отвечает текстом, а дальше работаете вы. В Cowork Claude сам работает с вашими файлами, папками и приложениями: читает, правит и создаёт настоящие документы. Вы описываете задачу, Claude составляет план и выполняет его по шагам, а вы следите и направляете.

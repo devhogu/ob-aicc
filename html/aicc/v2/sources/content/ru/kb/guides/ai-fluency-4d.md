@@ -7,7 +7,7 @@ minutes: 5
 order: 11
 tags: ai fluency, 4d, грамотность, навыки
 source: "AI Fluency: Framework & Foundations"
-source_url: https://anthropic.skilljar.com/ai-fluency-framework-foundations
+source_url: https://academy.claude.com/courses/ai-fluency-framework-foundations
 ---
 
 Уметь работать с AI — это не про знание кнопок. Курс AI Fluency, который Anthropic использует и для обучения своих сотрудников, сводит это умение к четырём навыкам. Их удобно запомнить по первым буквам английских слов — **4D**.

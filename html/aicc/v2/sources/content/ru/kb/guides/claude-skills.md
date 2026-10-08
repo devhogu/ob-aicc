@@ -7,7 +7,7 @@ minutes: 5
 order: 42
 tags: claude, навыки, skills, процедура, автоматизация
 source: Claude 101 · Introduction to agent skills
-source_url: https://anthropic.skilljar.com/claude-101
+source_url: https://academy.claude.com/courses/claude-101
 ---
 
 Навык — это записанная процедура: как именно делать определённую работу. Например, «как оформлять служебную записку по нашему шаблону» или «как проверять договор по списку». Claude подключает навык сам, когда видит, что он подходит к задаче, а вы можете вызвать его и напрямую.

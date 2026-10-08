@@ -85,6 +85,22 @@ def add_pages(pages, site, api):
     pages['reference/resources'] = Page('reference/resources', 'Ресурсы для обучения и исследований', 'reference', 20,
                                         'Где учиться, где следить за отраслью и где искать сведения об атаках и инцидентах.', body)
 
+    # Anthropic's learning resources: every section and course, linked at its root
+    links = load('anthropic')
+    lgroups = list(dict.fromkeys(x['group'] for x in links))
+
+    def outside(x):
+        lang = '<span class="lib-tag is-applies">на русском</span>' if x['lang'] == 'ru' else '<span class="lib-tag is-benchmark">EN</span>'
+        return (f'<a class="lib-card lib-card--link" href="{e(x["url"])}" target="_blank" rel="noopener" data-lib-item data-group="{e(x["group"])}" '
+                f'data-find="{find_text(x["title"], x["what"], x["group"], x["lang"])}">'
+                f'<div class="lib-card__top"><small>{e(x["group"])}</small>{lang}</div><h3>{e(x["title"])} ↗</h3><p>{e(x["what"])}</p></a>')
+    body = ('<p class="lede">Всё обучение от Anthropic, создателя Claude, в одном месте: учебный портал Claude Academy с бесплатными курсами, '
+            'официальная документация на русском и практические материалы. Ссылки ведут на первоисточник.</p>'
+            f'<p class="pf-tip">Короткие пересказы самого полезного — на русском и с нашими примерами — в <a href="{e(rel(url_of("reference/anthropic"), url_of("kb")))}">Базе знаний</a>.</p>'
+            f'<div class="lib" data-lib>{finder(lgroups, len(links), "Найти: курс, тема, продукт")}{grid(links, lgroups, outside)}</div>')
+    pages['reference/anthropic'] = Page('reference/anthropic', 'Обучение Anthropic', 'reference', 25,
+                                        'Claude Academy и все её курсы, официальная документация на русском и практические материалы Anthropic.', body)
+
     # the knowledge base: guides by category
     guides = sorted((p for pid, p in pages.items() if pid.startswith('kb/guides/')), key=lambda p: (p.order, p.title.casefold()))
     cats = list(dict.fromkeys(p.meta.get('category', 'Разное') for p in guides))
@@ -112,6 +128,8 @@ def add_pages(pages, site, api):
         p.body = (f'<p class="kb-head"><a href="{e(rel(url_of(p.id), url_of(here)))}">← Все руководства</a>'
                   f'<span>{e(m.get("category", ""))}</span><span>{e(level)}</span><span>{e(m.get("minutes", ""))} мин</span></p>\n\n' + p.body)
         if m.get('source_url'):  # a retelling of an outside guide names it and links to the original
-            p.body += (f'\n\n<p class="kb-source">По материалам: <a href="{e(m["source_url"])}">{e(m.get("source", m["source_url"]))}</a> — Anthropic, на английском. '
-                       'Здесь — короткий пересказ на русском с нашими примерами.</p>\n')
+            ru = '/ru/' in m['source_url'] or '/docs/ru' in m['source_url']
+            p.body += (f'\n\n<p class="kb-source">По материалам: <a href="{e(m["source_url"])}">{e(m.get("source", m["source_url"]))}</a> — '
+                       + ('официальная документация Anthropic на русском. Здесь — короткая выжимка с нашими примерами.</p>\n' if ru else
+                          'Anthropic, на английском. Здесь — короткий пересказ на русском с нашими примерами.</p>\n'))
         p.nav = False

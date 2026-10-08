@@ -1,0 +1,202 @@
+# Anthropic's learning resources: the academy, every course, the official Russian documentation and practice material.
+# lang: ru (official Russian edition) or en.
+- group: Claude Academy
+  title: Claude Academy — главная
+  what: Учебный портал Anthropic по Claude — курсы, материалы по продуктам и подборки. Бесплатно, с сертификатами.
+  lang: en
+  url: https://academy.claude.com/
+- group: Claude Academy
+  title: С чего начать
+  what: Стартовая страница академии с рекомендованным порядком обучения.
+  lang: en
+  url: https://academy.claude.com/start
+- group: Claude Academy
+  title: Все материалы
+  what: Полный каталог курсов и материалов академии с поиском.
+  lang: en
+  url: https://academy.claude.com/all
+- group: Claude Academy
+  title: Подборка «Как работает AI»
+  what: Короткие материалы о том, как устроены большие языковые модели.
+  lang: en
+  url: https://academy.claude.com/collections/how-ai-works
+- group: Claude Academy
+  title: Материалы по Claude
+  what: Всё о Claude в браузере и приложениях — разговор, проекты, артефакты, навыки.
+  lang: en
+  url: https://academy.claude.com/products/claude
+- group: Claude Academy
+  title: Материалы по Claude Cowork
+  what: Работа Claude с вашими файлами, папками и приложениями.
+  lang: en
+  url: https://academy.claude.com/products/cowork
+- group: Claude Academy
+  title: Материалы по Claude Code
+  what: Агентная разработка в терминале, редакторе и настольном приложении.
+  lang: en
+  url: https://academy.claude.com/products/code
+- group: Claude Academy
+  title: Материалы по Claude Tag
+  what: Claude в рабочем пространстве Slack команды.
+  lang: en
+  url: https://academy.claude.com/products/tag
+- group: Claude Academy
+  title: Материалы по Claude Platform
+  what: Разработка собственных решений на API и платформе Claude.
+  lang: en
+  url: https://academy.claude.com/products/platform
+- group: Курсы для всех
+  title: "AI Fluency: Framework and Foundations"
+  what: Четыре навыка работы с AI (4D) — эффективно, этично и безопасно.
+  lang: en
+  url: https://academy.claude.com/courses/ai-fluency-framework-foundations
+- group: Курсы для всех
+  title: AI Capabilities and Limitations
+  what: Верная картина того, что большие языковые модели умеют и чего не умеют.
+  lang: en
+  url: https://academy.claude.com/courses/ai-capabilities-and-limitations
+- group: Курсы для всех
+  title: Claude 101
+  what: Повседневная работа с Claude — от первого разговора до проектов, артефактов и навыков.
+  lang: en
+  url: https://academy.claude.com/courses/claude-101
+- group: Курсы для всех
+  title: Introduction to Claude Cowork
+  what: Поручать Claude многошаговую работу — рабочее пространство, контекст, циклы задач.
+  lang: en
+  url: https://academy.claude.com/courses/introduction-to-claude-cowork
+- group: Курсы для всех
+  title: Introduction to Claude Tag
+  what: Claude в Slack команды — что ему поручать и как направлять.
+  lang: en
+  url: https://academy.claude.com/courses/introduction-to-claude-tag
+- group: Курсы для всех
+  title: Building Effective Human-Agent Teams
+  what: Как команде перейти от личной работы с AI к совместной работе людей и агентов. Бета.
+  lang: en
+  url: https://academy.claude.com/courses/building-effective-human-agent-teams
+- group: Курсы для всех
+  title: AI Fluency для отдельных аудиторий
+  what: Варианты курса для разработчиков продуктов, творческих профессий, преподавателей, школ, студентов, некоммерческих организаций и малого бизнеса.
+  lang: en
+  url: https://academy.claude.com/all
+- group: Курсы для руководителей
+  title: Deploying Claude Enterprise with Confidence
+  what: Пять решений при внедрении Claude в организации — структура, доступ, управление, расходы, прозрачность.
+  lang: en
+  url: https://academy.claude.com/courses/deploying-claude-enterprise-with-confidence
+- group: Курсы по Claude Code и агентам
+  title: Claude Code 101
+  what: Что такое Claude Code, как он работает и основные приёмы работы.
+  lang: en
+  url: https://academy.claude.com/courses/claude-code-101
+- group: Курсы по Claude Code и агентам
+  title: Claude Code in Action
+  what: Долгие сессии, которым можно доверять, — направлять, настраивать, автоматизировать, проверять.
+  lang: en
+  url: https://academy.claude.com/courses/claude-code-in-action
+- group: Курсы по Claude Code и агентам
+  title: Introduction to Agent Skills
+  what: Создавать, настраивать и делиться навыками в Claude Code.
+  lang: en
+  url: https://academy.claude.com/courses/introduction-to-agent-skills
+- group: Курсы по Claude Code и агентам
+  title: Introduction to Subagents
+  what: Делить сложную задачу между параллельными помощниками и управлять ими.
+  lang: en
+  url: https://academy.claude.com/courses/introduction-to-subagents
+- group: Курсы для разработчиков
+  title: Claude Platform 101
+  what: Разработка на платформе Claude с нуля до продвинутого уровня.
+  lang: en
+  url: https://academy.claude.com/courses/claude-platform-101
+- group: Курсы для разработчиков
+  title: Building with the Claude API
+  what: Запросы, инструменты, поиск по документам, агенты и MCP через API.
+  lang: en
+  url: https://academy.claude.com/courses/building-with-the-claude-api
+- group: Курсы для разработчиков
+  title: Introduction to Model Context Protocol
+  what: Серверы и клиенты MCP на Python с нуля.
+  lang: en
+  url: https://academy.claude.com/courses/introduction-to-model-context-protocol
+- group: Курсы для разработчиков
+  title: Claude with Amazon Bedrock
+  what: Claude через Amazon Bedrock — API, инструменты, поиск по документам, агенты.
+  lang: en
+  url: https://academy.claude.com/courses/claude-with-amazon-bedrock
+- group: Курсы для разработчиков
+  title: "Claude with Google Cloud's Vertex AI"
+  what: Claude через Vertex AI — настройка, запросы, инструменты, агенты.
+  lang: en
+  url: https://academy.claude.com/courses/claude-with-google-cloud-s-vertex-ai
+- group: Документация на русском
+  title: Документация Claude Code
+  what: Официальная документация Claude Code на русском — установка, настройка, навыки, помощники, хуки, MCP.
+  lang: ru
+  url: https://code.claude.com/docs/ru/overview
+- group: Документация на русском
+  title: "Claude Code: быстрый старт"
+  what: Установить, войти и сделать первое изменение в коде.
+  lang: ru
+  url: https://code.claude.com/docs/ru/quickstart
+- group: Документация на русском
+  title: "Claude Code: лучшие практики"
+  what: Проверка работы, план перед кодом, управление контекстом, типичные ошибки.
+  lang: ru
+  url: https://code.claude.com/docs/ru/best-practices
+- group: Документация на русском
+  title: "Claude Code: распространённые рабочие процессы"
+  what: Пошаговые сценарии — изучить код, исправить ошибку, переработать, написать тесты.
+  lang: ru
+  url: https://code.claude.com/docs/ru/common-workflows
+- group: Документация на русском
+  title: "Claude Code: библиотека промптов"
+  what: Готовые запросы для Claude Code по задачам и ролям.
+  lang: ru
+  url: https://code.claude.com/docs/ru/prompt-library
+- group: Документация на русском
+  title: Документация платформы Claude
+  what: Модели, API, инструменты и руководства по разработке на платформе.
+  lang: ru
+  url: https://platform.claude.com/docs/ru/home
+- group: Документация на русском
+  title: Промпт-инжиниринг
+  what: Обзор и лучшие практики составления запросов к Claude.
+  lang: ru
+  url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/overview
+- group: Документация на русском
+  title: Библиотека промптов платформы
+  what: Примеры запросов для типовых задач — от анализа данных до деловой переписки.
+  lang: ru
+  url: https://platform.claude.com/docs/ru/resources/prompt-library/library
+- group: Документация на русском
+  title: Справочный центр Claude
+  what: Ответы на вопросы о работе в Claude — проекты, файлы, аккаунт, планы, безопасность.
+  lang: ru
+  url: https://support.claude.com/ru
+- group: Практика и примеры
+  title: Курсы Anthropic на GitHub
+  what: Набор учебных курсов в виде тетрадок — запросы, оценка качества, работа с инструментами.
+  lang: en
+  url: https://github.com/anthropics/courses
+- group: Практика и примеры
+  title: Интерактивный учебник по промптам
+  what: Пошаговый практикум по составлению запросов с упражнениями.
+  lang: en
+  url: https://github.com/anthropics/prompt-eng-interactive-tutorial
+- group: Практика и примеры
+  title: Claude Cookbooks
+  what: Готовые рецепты кода — поиск по документам, инструменты, агенты, работа с изображениями.
+  lang: en
+  url: https://github.com/anthropics/claude-cookbooks
+- group: Практика и примеры
+  title: Блог Anthropic Engineering
+  what: Статьи инженеров Anthropic о том, как они строят агентов и работают с Claude.
+  lang: en
+  url: https://www.anthropic.com/engineering
+- group: Практика и примеры
+  title: Сценарии использования Claude
+  what: Примеры применения Claude по профессиям и задачам.
+  lang: en
+  url: https://claude.com/resources/use-cases
