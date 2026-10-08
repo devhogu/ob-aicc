@@ -260,7 +260,7 @@ def navigation(page, pages, site):
                       f'>{icon(section["icon"])}<span>{escape(section["label"]["ru"])}</span></a>{local}</div>')
     legal = ''.join(f'<a href="{escape(rel(page.url, pages[pid].url))}"' + (' aria-current="page"' if pages[pid] is page else '') + f'>{escape(m[key])}</a>'
                     for pid, key in (('privacy', 'privacy'), ('terms-of-use', 'terms_of_use')))
-    foot = f'<div class="nav-foot"><div class="nav-legal">{legal}</div><p class="o-caption">{escape(m["baseline"])}</p></div>'
+    foot = f'<div class="nav-foot"><div class="nav-legal">{legal}</div></div>'
     return (f'<aside class="o-nav"><details open><summary>{escape(m["nav_summary"])}</summary>'
             f'<nav class="portal-sections" aria-label="{escape(m["nav_label"])}">{"".join(groups)}</nav></details>{foot}</aside>')
 
