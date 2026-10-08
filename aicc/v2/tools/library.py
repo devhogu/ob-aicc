@@ -16,7 +16,7 @@ import yaml
 
 SRC = Path(__file__).resolve().parents[1]
 WEIGHT = {'applies': ('действует для нас', 'is-applies'), 'partners': ('касается партнёров', 'is-partners'), 'benchmark': ('ориентир', 'is-benchmark')}
-LEVEL = {'start': 'с нуля', 'basic': 'базовый', 'advanced': 'продвинутый'}
+LEVEL = {'start': 'с нуля', 'basic': 'базовый', 'advanced': 'продвинутый', 'deep': 'полное руководство'}
 
 
 def load(name):
@@ -113,11 +113,22 @@ def add_pages(pages, site, api):
                 f'data-find="{find_text(p.title, p.summary, m.get("category"), m.get("tags", ""))}">'
                 f'<div class="lib-card__top"><small>{e(m.get("category", ""))}</small><span class="lib-time">{e(m.get("minutes", ""))} мин · {e(level)}</span></div>'
                 f'<h3>{e(p.title)}</h3><p>{e(p.summary)}</p></a>')
+    def featured_band():
+        """The deep guides, shown first: each is a course of several parts."""
+        deep = [p for p in guides if str(p.meta.get('featured', '')).lower() in ('true', 'yes', '1')]
+        if not deep:
+            return ''
+        cards = ''.join(
+            f'<a class="kb-feature" href="{e(rel(url_of(here), url_of(p.id)))}"><small>Полное руководство · {e(p.meta.get("minutes", ""))} мин</small>'
+            f'<h3>{e(p.title)}</h3><p>{e(p.summary)}</p><span>Открыть →</span></a>' for p in deep)
+        return f'<section class="kb-featured" aria-label="Полные руководства"><h2>Полные руководства</h2><div class="kb-featured__grid">{cards}</div></section>'
+
     body = ('<p class="lede">Руководства по работе с AI и с Claude: как начать, как писать запросы, как работать безопасно и как автоматизировать свою работу. '
             'Короткие пересказы лучших материалов — курсов и документации Anthropic — на русском, с примерами из нашей работы.</p>'
             '<p class="pf-tip">Пользуйтесь только теми инструментами и аккаунтами, которые одобрены в вашей организации. Если инструмента нет — '
             f'<a href="{e(rel(url_of(here), url_of("services/how-to-engage")))}">напишите нам</a>, разберёмся вместе.</p>'
-            f'<div class="lib" data-lib>{finder(cats, len(guides), "Найти руководство")}'
+            + featured_band()
+            + f'<div class="lib" data-lib>{finder(cats, len(guides), "Найти руководство")}'
             f'<div class="lib-grid">{"".join(guide(p) for p in guides)}</div></div>')
     pages[here] = Page(here, 'База знаний', 'kb', 0, 'Руководства по работе с AI по категориям, с поиском.', body)
 

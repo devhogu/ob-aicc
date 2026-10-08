@@ -983,3 +983,15 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 @media (max-width:900px){.page-body .kb-steps--5{grid-template-columns:1fr}}
 .page-body p.kb-head{font-size:13px;line-height:1.4;color:var(--text-muted)}
 .page-body p.kb-source{margin-top:32px;padding-top:12px;border-top:1px solid var(--border);font-size:13px;color:var(--text-muted)}
+/* knowledge base: the deep guides first */
+.kb-featured{margin:28px 0 36px}
+.page-body .kb-featured h2{margin:0 0 14px;padding:0;border:0;font-size:20px}
+.kb-featured__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.kb-feature{display:flex;flex-direction:column;gap:8px;padding:22px 24px;border-radius:14px;background:linear-gradient(135deg,var(--surface-selected),var(--surface));border:1px solid var(--border);border-top:4px solid var(--brand);color:var(--text);text-decoration:none}
+.kb-feature:hover{border-color:var(--brand)}
+.kb-feature small{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--link);font-weight:600}
+.page-body .kb-feature h3{margin:0;font-size:19px;line-height:1.25}
+.page-body .kb-feature p{margin:0;font-size:14px;color:var(--text-muted)}
+.kb-feature span{margin-top:auto;font-weight:600;color:var(--link);font-size:14px}
+@media (max-width:900px){.kb-featured__grid{grid-template-columns:1fr}}
+.rai-cards--2{grid-template-columns:repeat(2,minmax(0,1fr))}

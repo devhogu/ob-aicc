@@ -152,7 +152,7 @@
   url: https://code.claude.com/docs/ru/common-workflows
 - group: Документация на русском
   title: "Claude Code: библиотека промптов"
-  what: Готовые запросы для Claude Code по задачам и ролям.
+  what: Готовые запросы для Claude Code по задачам и ролям — копировать и вставлять.
   lang: ru
   url: https://code.claude.com/docs/ru/prompt-library
 - group: Документация на русском
@@ -161,15 +161,10 @@
   lang: ru
   url: https://platform.claude.com/docs/ru/home
 - group: Документация на русском
-  title: Промпт-инжиниринг
-  what: Обзор и лучшие практики составления запросов к Claude.
+  title: Лучшие практики составления подсказок
+  what: Постоянно обновляемый справочник Anthropic по запросам к Claude — главный первоисточник.
   lang: ru
-  url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/overview
-- group: Документация на русском
-  title: Библиотека промптов платформы
-  what: Примеры запросов для типовых задач — от анализа данных до деловой переписки.
-  lang: ru
-  url: https://platform.claude.com/docs/ru/resources/prompt-library/library
+  url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
 - group: Документация на русском
   title: Справочный центр Claude
   what: Ответы на вопросы о работе в Claude — проекты, файлы, аккаунт, планы, безопасность.

@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Как писать запросы к Claude: полное руководство · Хаб Компетенций по AI</title>
+<script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css"><link rel="stylesheet" href="../../../../assets/ui/tokens.css"><link rel="stylesheet" href="../../../../assets/ui/primitives.css"><link rel="stylesheet" href="../../../../assets/ui/workspace.css"><link rel="stylesheet" href="../../../../assets/site.css">
+<script src="../../../../assets/search-ru.js"></script><script src="../../../../assets/site.js" defer data-root="../../../.." data-t-none="По запросу ничего не найдено." data-t-light="Дневной режим" data-t-dark="Ночной режим" data-t-mail-body="Страница: {title}
+Номер: {ref}
+Адрес: {url}
+
+Вопрос или замечание:
+"></script>
+</head><body class="portal-workspace" data-portal-section="kb" data-page="kb/guides/prompting-complete-guide">
+<a class="o-skip" href="#main">К содержанию</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../index.html"><img src="../../../../assets/ui/assets/logos/hub-mark.svg" width="36" height="36" alt=""><span>Хаб Компетенций по AI</span></a>
+  <span class="header-scope">База знаний</span>
+  <span class="status-chip" title="Эта страница и показанные на ней записи — черновики: ничего в них не принято и не утверждено">Черновик</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Поиск по Хабу</label><input id="q" type="search" autocomplete="off" placeholder="Поиск по Хабу" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><button id="theme-switch" type="button" class="theme-switch" aria-label="Ночной режим" title="Ночной режим"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg></span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg></span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Разделы сайта</summary><nav class="portal-sections" aria-label="Разделы"><div class="portal-nav-group"><a class="portal-section-link" data-section="hub" href="../../../index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="16" y="16" width="6" height="6" rx="1" />
+  <rect x="2" y="16" width="6" height="6" rx="1" />
+  <rect x="9" y="2" width="6" height="6" rx="1" />
+  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+  <path d="M12 12V8" />
+</svg><span>Хаб Компетенций</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="services" href="../../../services/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</svg><span>Услуги</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="process" href="../../../process/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg><span>Процесс</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="catalog" href="../../../catalog/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 5h13" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="M3 10a2 2 0 0 0 2 2h3" />
+  <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+</svg><span>Каталог сценариев</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="projects" href="../../../projects/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg><span>Проекты</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="responsible-ai" href="../../../responsible-ai/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg><span>Ответственный AI</span></a></div><div class="portal-nav-group is-current"><a class="portal-section-link" data-section="kb" href="../../index.html" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" />
+</svg><span>База знаний</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="reference" href="../../../reference/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 6 4 14" />
+  <path d="M12 6v14" />
+  <path d="M8 8v12" />
+  <path d="M4 4v16" />
+</svg><span>Справочник</span></a></div></nav></details></aside>
+<main class="o-main hub-main" id="main" tabindex="-1">
+<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Навигационная цепочка"><a href="../../index.html">База знаний</a> / <span aria-current="page">Как писать запросы к Claude: полное руководство</span></nav></div></div>
+<div class="o-reading o-single"><div class="o-copy"><h1>Как писать запросы к Claude: полное руководство</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← Все руководства</a><span>Промпт-инжиниринг</span><span>полное руководство</span><span>35 мин</span></p>
+<p>Хороший <a class="term" href="../../../reference/vocabulary/index.html#prompt" title="Инструкции и контекст, которые модель получает в момент использования. Системный запрос задаёт разработчик, и он действует постоянно.">запрос к модели <span class="term-en">(prompt)</span></a> — это не магическая формула, а хорошо поставленная задача: так же, как вы объяснили бы её толковому новому сотруднику. Это руководство собирает всё, что Anthropic сегодня рекомендует для своих моделей, и переводит на язык нашей работы — писем, отчётов, таблиц, договоров и справок.</p>
+<p>Девять частей идут от простого к сложному. Первые три пригодятся каждому уже сегодня. Короткие версии отдельных приёмов — в серии <a href="../writing-a-task/index.html">Промпт-инжиниринг</a>.</p>
+<p>Документация Anthropic приводит примеры на английском; здесь они переведены и дополнены нашими. Писать запросы можно по-русски — Claude отвечает на языке, на котором к нему обращаются.</p>
+<div class="course" data-tabs><div class="course-tabs" role="tablist"><button type="button" role="tab" data-tab="clear" aria-selected=true><b>1</b><span>Основа: ясно, конкретно и зачем</span></button><button type="button" role="tab" data-tab="examples"><b>2</b><span>Примеры: показать, а не описать</span></button><button type="button" role="tab" data-tab="structure"><b>3</b><span>Структура: роль, данные, инструкции</span></button><button type="button" role="tab" data-tab="long"><b>4</b><span>Длинные документы</span></button><button type="button" role="tab" data-tab="format"><b>5</b><span>Формат, объём и рамки задачи</span></button><button type="button" role="tab" data-tab="thinking"><b>6</b><span>Размышления и режимы работы</span></button><button type="button" role="tab" data-tab="accuracy"><b>7</b><span>Точность: меньше выдумок</span></button><button type="button" role="tab" data-tab="iterate"><b>8</b><span>Шаблоны, цепочки и итерации</span></button><button type="button" role="tab" data-tab="skeleton"><b>9</b><span>Каркас сложного запроса</span></button></div><section class="tab-panel" id="clear" data-tab-panel="clear"><h2 class="tab-title">1. Основа: ясно, конкретно и зачем</h2>
+<p>Anthropic советует думать о Claude как о <strong>блестящем, но новом сотруднике</strong>: он многое умеет, но не знает ваших норм, привычек и того, что «и так понятно».</p>
+<h3 id="golden">Золотое правило</h3>
+<p>Покажите запрос коллеге, который ничего не знает о задаче, и попросите выполнить. Если он запутается — запутается и Claude.</p>
+<h3 id="direct">Говорите прямо, что нужно</h3>
+<div class="o-table-wrap"><table>
+<thead>
+<tr>
+<th>Слабее</th>
+<th>Сильнее</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«Напиши письмо о задержке проекта»</td>
+<td>«Напиши письмо нашему корпоративному клиенту: интеграция задерживается на две недели из-за проверки безопасности, новый срок — 15 ноября. Тон спокойный, извиняющийся без лишнего. До 150 слов.»</td>
+</tr>
+<tr>
+<td>«Сделай анализ продаж»</td>
+<td>«Сравни продажи по продуктам за сентябрь и август. Нужны три главных изменения и их вероятные причины. Таблица и пять строк выводов для руководителя.»</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Укажите <strong>формат и ограничения</strong>: длину, структуру, язык.</li>
+<li>Если важен порядок или полнота — дайте <strong>шаги нумерованным списком</strong>.</li>
+<li>Хотите «с запасом», подробно, творчески — <strong>попросите явно</strong>: модель не станет делать больше, чем вы попросили.</li>
+</ul>
+<h3 id="describe">Три вещи, которые стоит описать</h3>
+<p>Курс AI Fluency выделяет три стороны описания задачи:</p>
+<div class="rai-cards rai-cards--3">
+<article><h3>Что получить</h3><p>Результат, формат, адресат, стиль: «служебная записка на одну страницу для финансового директора».</p></article>
+<article><h3>Как подойти</h3><p>Порядок работы: «сначала выпиши цифры из отчёта, потом сравни с планом, потом сделай выводы».</p></article>
+<article><h3>Как себя вести</h3><p>Роль собеседника: «будь критичным, ищи слабые места», «отвечай коротко», «задавай вопросы, если чего-то не хватает».</p></article>
+</div>
+<h3 id="why">Объясняйте зачем</h3>
+<p>Причина работает лучше запрета: Claude понимает смысл и сам переносит его на похожие случаи.</p>
+<div class="o-table-wrap"><table>
+<thead>
+<tr>
+<th>Слабее</th>
+<th>Сильнее</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«Никаких сокращений»</td>
+<td>«Текст прочитает клиент, который не знает наших внутренних терминов, поэтому пиши без сокращений и аббревиатур.»</td>
+</tr>
+</tbody>
+</table></div>
+<p>Удобная форма из документации Anthropic:</p>
+<pre><code>Я работаю над [большая задача] для [кого].
+Им нужно [что даст результат].
+С учётом этого: [просьба].
+</code></pre>
+<p class="course-next"><a href="#examples">Дальше: Примеры: показать, а не описать →</a></p></section><section class="tab-panel" id="examples" data-tab-panel="examples"><h2 class="tab-title">2. Примеры: показать, а не описать</h2>
+<p>Примеры — <strong>один из самых надёжных способов</strong> задать формат, тон и структуру ответа. Описать стиль словами трудно, показать — легко.</p>
+<div class="rai-cards rai-cards--3">
+<article><h3>Похожие</h3><p>Близкие к настоящей задаче: те же документы, тот же адресат, та же сложность.</p></article>
+<article><h3>Разные</h3><p>Непохожие друг на друга, с пограничными случаями — иначе Claude перенимает случайную деталь: одинаковую длину, одно и то же начало.</p></article>
+<article><h3>Отделённые</h3><p>Явно помеченные как примеры, чтобы их не спутали с инструкцией: «Пример 1:» или теги &lt;example&gt;.</p></article>
+</div>
+<ul>
+<li><strong>Сколько:</strong> лучше всего — <strong>три–пять</strong> примеров.</li>
+<li><strong>Положительный пример сильнее запрета.</strong> Показать, как надо, работает лучше, чем перечислять, как не надо.</li>
+<li><strong>Попросите помощи:</strong> Claude может оценить, достаточно ли разные ваши примеры, или придумать ещё несколько по образцу.</li>
+</ul>
+<pre><code>Ответь клиенту в том же стиле, что и в примерах.
+
+&lt;examples&gt;
+&lt;example&gt;
+Вопрос: Можно ли закрыть карту через приложение?
+Ответ: Да. Откройте карту → «Настройки» → «Закрыть карту». Остаток переведём на ваш счёт.
+&lt;/example&gt;
+&lt;example&gt;
+Вопрос: Почему не прошёл платёж?
+Ответ: Чаще всего из-за лимита по карте. Проверьте его в разделе «Карта» → «Лимиты». Если лимит не исчерпан — напишите нам, разберёмся.
+&lt;/example&gt;
+&lt;/examples&gt;
+
+Вопрос клиента: {вопрос}
+</code></pre>
+<p>Самый простой источник примеров — ваша собственная хорошая работа: два–три удачных письма, справки или ответа.</p>
+<p class="course-next"><a href="#structure">Дальше: Структура: роль, данные, инструкции →</a></p></section><section class="tab-panel" id="structure" data-tab-panel="structure"><h2 class="tab-title">3. Структура: роль, данные, инструкции</h2>
+<p>Когда в запросе смешаны инструкции, документы, примеры и вопрос, модель может принять часть документа за указание. Помогают две привычки.</p>
+<h3 id="role">Роль</h3>
+<p>Одна фраза в начале фокусирует тон и знания: «Ты — аналитик кредитных рисков. Объясняй коротко и без жаргона». Полезно назвать и аудиторию: «…для сотрудников отделений, не знакомых с методикой». Длинные «легенды» о роли современным моделям обычно не нужны — достаточно одного-двух предложений.</p>
+<h3 id="tags">Подписанные коробки для данных</h3>
+<p>Оберните каждую часть запроса в понятную метку — XML-теги, то есть слова в угловых скобках. Это как подписать коробки при переезде.</p>
+<pre><code>&lt;instructions&gt;
+Сравни два договора и перечисли различия в условиях оплаты.
+Ответ — таблица: пункт, договор А, договор Б, чем это важно для нас.
+&lt;/instructions&gt;
+
+&lt;documents&gt;
+  &lt;document index=&quot;1&quot;&gt;
+    &lt;source&gt;Договор А, ред. 2026&lt;/source&gt;
+    &lt;document_content&gt;…текст…&lt;/document_content&gt;
+  &lt;/document&gt;
+  &lt;document index=&quot;2&quot;&gt;
+    &lt;source&gt;Договор Б&lt;/source&gt;
+    &lt;document_content&gt;…текст…&lt;/document_content&gt;
+  &lt;/document&gt;
+&lt;/documents&gt;
+</code></pre>
+<ul>
+<li>Названия меток — понятные и одинаковые из запроса в запрос.</li>
+<li>Вкладывайте метки, когда части естественно вложены.</li>
+<li>Ссылайтесь на метки в инструкции: «по документу 1».</li>
+</ul>
+<p>Метки — не обязательный синтаксис: для простой просьбы они не нужны. Они полезны, когда в запросе много частей.</p>
+<h3 id="safety">Это ещё и безопасность</h3>
+<p>Если документ пришёл извне — письмо, страница, файл клиента, — в нём может оказаться текст, похожий на команду. Явная граница «вот моя просьба, а вот вставленный документ» снижает риск <a class="term" href="../../../reference/vocabulary/index.html#prompt-injection" title="Текст во входных данных, который модель выполняет как инструкцию вопреки замыслу разработчика. Он может быть спрятан в документе, письме или веб-странице.">промпт-инъекции <span class="term-en">(prompt injection)</span></a>.</p>
+<p class="course-next"><a href="#long">Дальше: Длинные документы →</a></p></section><section class="tab-panel" id="long" data-tab-panel="long"><h2 class="tab-title">4. Длинные документы</h2>
+<p>Claude читает очень длинные тексты: годовой отчёт, пакет договоров, десяток регламентов. Три приёма из документации Anthropic делают ответ точнее.</p>
+<ol class="rai-flow">
+<li><b>Документы — вверху</b><span>сначала все материалы, а вопрос и инструкции — в самом конце</span></li>
+<li><b>У каждого — метка</b><span>с названием и источником, как в примере выше</span></li>
+<li><b>Сначала цитаты</b><span>потом ответ, опирающийся только на них</span></li>
+</ol>
+<ul>
+<li><strong>Вопрос в конце</strong> — по тестам Anthropic это улучшает качество ответа до <strong>30 процентов</strong>, особенно когда документов несколько.</li>
+<li><strong>Цитаты сначала:</strong> «Сначала выпиши дословно фрагменты, которые относятся к вопросу. Затем ответь, опираясь только на них». Claude сосредотачивается на нужном, а вы проверяете ответ по цитатам — это и есть <a class="term" href="../../../reference/vocabulary/index.html#grounding" title="Привязка ответов модели к проверенным источникам, чтобы каждый ответ можно было перепроверить.">опора на источники <span class="term-en">(grounding)</span></a>.</li>
+<li><strong>Называйте файлы осмысленно:</strong> «Отчёт_Q3_2026.pdf» Claude поймёт лучше, чем «document1.pdf».</li>
+</ul>
+<p class="course-next"><a href="#format">Дальше: Формат, объём и рамки задачи →</a></p></section><section class="tab-panel" id="format" data-tab-panel="format"><h2 class="tab-title">5. Формат, объём и рамки задачи</h2>
+<h3 id="positive">Говорите, что делать, а не чего не делать</h3>
+<div class="o-table-wrap"><table>
+<thead>
+<tr>
+<th>Слабее</th>
+<th>Сильнее</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«Не используй списки»</td>
+<td>«Пиши связным текстом, абзацами»</td>
+</tr>
+<tr>
+<td>«Не пиши длинно»</td>
+<td>«Не больше пяти предложений»</td>
+</tr>
+<tr>
+<td>«Без вступлений»</td>
+<td>«Отвечай сразу по существу, первым предложением — вывод»</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="match">Стиль запроса — стиль ответа</h3>
+<p>Если запрос весь в маркерах и выделениях, ответ, скорее всего, будет таким же. Хотите спокойный деловой текст — так и пишите запрос.</p>
+<h3 id="length">Объём</h3>
+<p>Современные модели Claude отвечают довольно кратко и могут пропускать итоговое резюме. Нужен подробный разбор — попросите. Нужно совсем коротко — назовите предел: «до 100 слов». Хорошее правило из документации: <strong>сначала результат</strong>, потом подробности; и <strong>понятность важнее краткости</strong> — сокращайте отбором содержания, а не телеграфным стилем.</p>
+<h3 id="verb">Действие или совет — решает глагол</h3>
+<p>«Можешь подсказать, как улучшить письмо?» — получите советы. «Перепиши письмо» — получите новое письмо. Выбирайте глагол под то, что вам нужно.</p>
+<h3 id="scope">Рамки задачи</h3>
+<ul>
+<li>Современные модели следуют указаниям <strong>буквально</strong>. Хотите, чтобы правило касалось всего документа, — скажите: «примени это ко всем разделам, а не только к первому».</li>
+<li>Просите только идеи — так и скажите: «дай варианты и остановись», иначе Claude может сразу начать делать.</li>
+<li>Не пишите заглавными «ОБЯЗАТЕЛЬНО» и «КРИТИЧЕСКИ ВАЖНО»: новые модели и так внимательны к инструкциям, а нажим приводит к перегибам.</li>
+</ul>
+<h3 id="strict">Если формат должен быть строгим</h3>
+<p>Для повторяющихся задач дайте шаблон ответа с метками или полями — например, «для каждого конкурента: сильные стороны, слабые стороны, наш ответ в 30 словах». Шаблон плюс пример — самый надёжный способ получать одинаковый результат каждый раз.</p>
+<p class="course-next"><a href="#thinking">Дальше: Размышления и режимы работы →</a></p></section><section class="tab-panel" id="thinking" data-tab-panel="thinking"><h2 class="tab-title">6. Размышления и режимы работы</h2>
+<p>Современные модели Claude <strong>сами решают, когда и сколько думать</strong>. На самых новых моделях размышление включено всегда, а его глубину задаёт уровень усилия.</p>
+<h3 id="effort">Уровень усилия в приложении</h3>
+<div class="o-table-wrap"><table>
+<thead>
+<tr>
+<th>Уровень</th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low, Medium</td>
+<td>рутина: перевод, переформулировка, короткие ответы; экономит лимит</td>
+</tr>
+<tr>
+<td>High</td>
+<td>лучший баланс для большинства задач</td>
+</tr>
+<tr>
+<td>Xhigh, Max</td>
+<td>сложные расчёты, глубокий анализ документов, многошаговое планирование</td>
+</tr>
+</tbody>
+</table></div>
+<p>Модель и уровень выбираются рядом с кнопкой отправки сообщения. Повышайте уровень для расчётов, детального анализа документов и сложного планирования — это надёжнее, чем уговаривать модель «думать лучше» в тексте запроса.</p>
+<h3 id="how-think">Как просить подумать</h3>
+<ul>
+<li>Короткая общая установка — «подумай тщательно, прежде чем ответить» — обычно работает лучше расписанного по шагам плана рассуждений.</li>
+<li><strong>Не просите выписывать рассуждения</strong> в отдельный блок: на новых моделях такая просьба может быть отклонена, а размышления и так происходят.</li>
+<li><strong>Самопроверка:</strong> «Прежде чем закончить, проверь ответ по этим критериям: …» — полезная последняя строка запроса.</li>
+</ul>
+<h3 id="modes">Поиск, размышление или исследование</h3>
+<div class="rai-cards rai-cards--3">
+<article><h3>Веб-поиск</h3><p>Простой фактический вопрос, где важна свежесть: курс, новость, текущее правило.</p></article>
+<article><h3>Размышление</h3><p>Сложное рассуждение без свежих данных: расчёт, разбор договора, логика решения.</p></article>
+<article><h3>Исследование</h3><p>Отчёт по пяти и более источникам: обзор рынка, сравнение подходов регуляторов.</p></article>
+</div>
+<p>Если ваша организация отключила поиск, работайте с документами, которые даёте сами.</p>
+<p class="course-next"><a href="#accuracy">Дальше: Точность: меньше выдумок →</a></p></section><section class="tab-panel" id="accuracy" data-tab-panel="accuracy"><h2 class="tab-title">7. Точность: меньше выдумок</h2>
+<p>Модель старается ответить всегда — даже когда ответа не знает. Так появляется <a class="term" href="../../../reference/vocabulary/index.html#hallucination" title="Гладкий, уверенный и ошибочный результат модели: несуществующий факт, число или ссылка. Её ещё называют конфабуляцией.">галлюцинация <span class="term-en">(hallucination)</span></a>. Полностью её не исключить, но сильно уменьшить — можно.</p>
+<ol class="rai-principles">
+<li><b>Разрешите сказать «не знаю»</b><span>«Если в отчёте не хватает данных для вывода — так и напиши: «недостаточно данных», не додумывай».</span></li>
+<li><b>Ограничьте источники</b><span>«Отвечай только по приложенным документам, а не по общим знаниям».</span></li>
+<li><b>Сначала цитаты</b><span>«Выпиши дословные фрагменты; если их нет — напиши «подходящих цитат нет». Анализ — только по выписанным цитатам».</span></li>
+<li><b>Проверка по источникам</b><span>«Для каждого утверждения найди подтверждающую цитату. Если не нашёл — удали утверждение и отметь место».</span></li>
+<li><b>Уверенность и источник</b><span>«Для каждого вывода укажи источник и насколько ты уверен».</span></li>
+<li><b>Свежие факты — через поиск</b><span>Тарифы, требования, ставки, правила меняются. «Проверь поиском всё, что могло измениться: что разрешено, что требуется, сколько стоит — даже если уверен».</span></li>
+<li><b>Два прогона</b><span>Задайте один и тот же запрос дважды в новых разговорах. Где ответы расходятся — там, вероятно, выдумка.</span></li>
+</ol>
+<p>Эти приёмы снижают ошибки, но не отменяют проверки: цифры, даты, названия и ссылки, которые уйдут клиенту, руководителю или регулятору, сверяйте сами. Подробно — <a href="../checking-results/index.html">Как проверять результат AI</a>.</p>
+<h3 id="quoting">Внимание к цитированию</h3>
+<p>В сводках модель иногда переносит фразы источника без кавычек. Если важно отличать цитату от пересказа (например, в материалах для комплаенса), скажите это прямо и покажите пример правильного оформления.</p>
+<p class="course-next"><a href="#iterate">Дальше: Шаблоны, цепочки и итерации →</a></p></section><section class="tab-panel" id="iterate" data-tab-panel="iterate"><h2 class="tab-title">8. Шаблоны, цепочки и итерации</h2>
+<h3 id="template">Шаблон с переменными</h3>
+<p>Для повторяющейся задачи отделите <strong>постоянную часть</strong> запроса от <strong>того, что меняется</strong>. Постоянную часть сохраните, а переменные — документ, клиента, период — подставляйте каждый раз, явно отмечая начало и конец.</p>
+<pre><code>Ты готовишь краткую справку для руководителя.
+&lt;report&gt;{ТЕКСТ ОТЧЁТА}&lt;/report&gt;
+&lt;period&gt;{ПЕРИОД}&lt;/period&gt;
+Сделай справку по шаблону: три главных изменения, риски, что предложить.
+</code></pre>
+<p>Сохранить такой шаблон удобно в <a href="../claude-projects/index.html">проекте</a> или превратить в <a href="../skills-complete-guide/index.html">навык</a>.</p>
+<h3 id="chain">Цепочка: черновик → проверка → доработка</h3>
+<p>Большую задачу лучше разбить на шаги, где каждый — отдельный запрос с одной целью. Главный образец из документации — самокоррекция:</p>
+<ol class="rai-flow">
+<li><b>Черновик</b><span>«напиши справку по данным»</span></li>
+<li><b>Проверка</b><span>«вот справка и исходные данные: найди ошибки и неподтверждённые утверждения»</span></li>
+<li><b>Доработка</b><span>«исправь справку по замечаниям»</span></li>
+</ol>
+<p>Совет для проверок: просите найти <strong>всё</strong>, а важное отбирайте отдельным шагом. Если сразу просить «только серьёзные проблемы», модель буквально сообщит меньше и может пропустить нужное.</p>
+<h3 id="improve">Как улучшать запрос</h3>
+<ol>
+<li><strong>Определите, что такое «хорошо»</strong> — конкретно и проверяемо: «таблица из пяти колонок, все цифры с источником», а не «качественная справка».</li>
+<li><strong>Соберите 5–10 примеров</strong> своей прошлой работы по этой задаче.</li>
+<li><strong>Прогоните запрос</strong> на этих примерах и сравните с тем, как сделали бы вы.</li>
+<li><strong>Доработайте</strong> запрос по найденным расхождениям. Начинайте с простого и добавляйте приёмы только по необходимости.</li>
+<li><strong>Попросите Claude помочь:</strong> «Вот мой запрос и что получилось. Как улучшить запрос, чтобы результат был таким: …» — простой и сильный приём.</li>
+</ol>
+<p>Первый запрос — начало разговора, а не окончательная просьба: уточнять по ходу нормально.</p>
+<p class="course-next"><a href="#skeleton">Дальше: Каркас сложного запроса →</a></p></section><section class="tab-panel" id="skeleton" data-tab-panel="skeleton"><h2 class="tab-title">9. Каркас сложного запроса</h2>
+<p>Для серьёзной задачи — анализа, отчёта, регулярного процесса — удобно идти по каркасу из учебника Anthropic.</p>
+<ol class="rai-principles">
+<li><b>Роль и контекст</b><span>Кто ты и для чего эта работа.</span></li>
+<li><b>Тон</b><span>Как говорить с адресатом.</span></li>
+<li><b>Задача и правила</b><span>Что сделать, что важно, что делать, если ответа нет.</span></li>
+<li><b>Примеры</b><span>Один–пять образцов хорошего результата.</span></li>
+<li><b>Данные</b><span>Документы и входные сведения — в метках.</span></li>
+<li><b>Сама просьба</b><span>Ближе к концу, после данных.</span></li>
+<li><b>Формат ответа</b><span>Структура, объём, порядок.</span></li>
+</ol>
+<p>Сначала добейтесь хорошего результата с полным каркасом, потом уберите лишнее.</p>
+<h3 id="full-example">Пример целиком</h3>
+<pre><code>Ты — финансовый аналитик. Готовишь материал для правления.
+Пиши деловым языком, без жаргона: читатели — не финансисты.
+
+Задача: по квартальному отчёту подготовь справку на одну страницу.
+Если для вывода не хватает данных — так и напиши, не додумывай.
+Цифры бери только из отчёта; для каждой укажи раздел, откуда она.
+
+&lt;example&gt;
+Выручка выросла на 12% (раздел 2.1) за счёт розничного кредитования…
+&lt;/example&gt;
+
+&lt;report&gt;
+{ТЕКСТ КВАРТАЛЬНОГО ОТЧЁТА}
+&lt;/report&gt;
+
+Сделай справку: 1) три главных изменения квартала; 2) два риска;
+3) что предложить правлению. Каждый пункт — 2–3 предложения.
+Перед тем как закончить, проверь: у каждой цифры есть ссылка на раздел.
+</code></pre>
+<h3 id="learn">Где учиться дальше</h3>
+<ul>
+<li>Интерактивный учебник Anthropic по запросам — девять глав с упражнениями, от структуры запроса до сложных задач; там есть и упражнение для финансовых услуг. Учебник написан для прежних моделей: где он расходится с этим руководством, верно это руководство.</li>
+<li>Курсы Claude 101 и AI Fluency — уроки «Getting better results» и «Effective prompting techniques».</li>
+<li>Все ссылки — в Справочнике: <a href="../../../reference/anthropic/index.html">Обучение Anthropic</a>.</li>
+</ul>
+<p class="kb-source">По материалам: <a href="https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices">Лучшие практики составления подсказок — документация платформы Claude</a> — официальная документация Anthropic на русском. Здесь — короткая выжимка с нашими примерами.</p>
+</section></div></article></div></div>
+</main>
+<footer class="o-footbar">
+<nav class="fb-left" aria-label="Правовая информация"><a href="../../../privacy/index.html">Конфиденциальность</a><a href="../../../terms-of-use/index.html">Условия использования</a></nav>
+<div class="fb-right"><span class="foot-text">2026 Хаб Компетенций AI. v2.1 <a class="contact" href="mailto:talimbayev@obank.kg?subject=%D0%A5%D0%B0%D0%B1%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%86%D0%B8%D0%B9%20%5BPR4SS%5D%3A%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%20%D0%BE%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B5">Связаться с нами</a></span>
+<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Отзыв о странице</span><span>ID: PR4SS</span></button></div>
+</footer>
+</div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Хаб Компетенций [PR4SS]: отзыв о странице" data-ref="PR4SS" data-page="Как писать запросы к Claude: полное руководство">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Отзыв о странице</h2><code>ID: PR4SS</code></div>
+    <div class="fb-body"><p>Оставить отзыв о содержании этой страницы: <a data-mail href="mailto:talimbayev@obank.kg">отзыв</a>.</p><button class="oc-button" value="close">Закрыть</button></div>
+  </form>
+</dialog>
+</body></html>
