@@ -97,8 +97,8 @@ def add_pages(pages, site, api):
                 f'data-find="{find_text(p.title, p.summary, m.get("category"), m.get("tags", ""))}">'
                 f'<div class="lib-card__top"><small>{e(m.get("category", ""))}</small><span class="lib-time">{e(m.get("minutes", ""))} мин · {e(level)}</span></div>'
                 f'<h3>{e(p.title)}</h3><p>{e(p.summary)}</p></a>')
-    body = ('<p class="lede">Руководства по работе с AI: как начать, как поставить задачу, как работать безопасно и как автоматизировать свою работу. '
-            'Короткие и практичные; новые появляются по мере того, как мы осваиваем инструменты.</p>'
+    body = ('<p class="lede">Руководства по работе с AI и с Claude: как начать, как писать запросы, как работать безопасно и как автоматизировать свою работу. '
+            'Короткие пересказы лучших материалов — курсов и документации Anthropic — на русском, с примерами из нашей работы.</p>'
             '<p class="pf-tip">Пользуйтесь только теми инструментами и аккаунтами, которые одобрены в вашей организации. Если инструмента нет — '
             f'<a href="{e(rel(url_of(here), url_of("services/how-to-engage")))}">напишите нам</a>, разберёмся вместе.</p>'
             f'<div class="lib" data-lib>{finder(cats, len(guides), "Найти руководство")}'
@@ -111,4 +111,7 @@ def add_pages(pages, site, api):
         level = LEVEL.get(m.get('level', ''), m.get('level', ''))
         p.body = (f'<p class="kb-head"><a href="{e(rel(url_of(p.id), url_of(here)))}">← Все руководства</a>'
                   f'<span>{e(m.get("category", ""))}</span><span>{e(level)}</span><span>{e(m.get("minutes", ""))} мин</span></p>\n\n' + p.body)
+        if m.get('source_url'):  # a retelling of an outside guide names it and links to the original
+            p.body += (f'\n\n<p class="kb-source">По материалам: <a href="{e(m["source_url"])}">{e(m.get("source", m["source_url"]))}</a> — Anthropic, на английском. '
+                       'Здесь — короткий пересказ на русском с нашими примерами.</p>\n')
         p.nav = False

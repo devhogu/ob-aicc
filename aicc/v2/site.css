@@ -982,3 +982,4 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .kb-traffic .is-ok{border-top-color:#2e9e5b}.kb-traffic .is-care{border-top-color:#d9a400}.kb-traffic .is-no{border-top-color:#c9302c}
 @media (max-width:900px){.page-body .kb-steps--5{grid-template-columns:1fr}}
 .page-body p.kb-head{font-size:13px;line-height:1.4;color:var(--text-muted)}
+.page-body p.kb-source{margin-top:32px;padding-top:12px;border-top:1px solid var(--border);font-size:13px;color:var(--text-muted)}

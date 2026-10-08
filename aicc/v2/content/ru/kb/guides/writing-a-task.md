@@ -1,7 +1,7 @@
 ---
 title: Как поставить задачу ассистенту
 summary: Пять частей хорошего запроса — роль, задача, материалы, формат и проверка — и примеры до и после.
-category: Постановка задачи
+category: Промпт-инжиниринг
 level: basic
 minutes: 7
 order: 20
@@ -34,4 +34,4 @@ tags: запрос, промпт, формулировка
 - **Задайте границы.** «Используй только приложенный документ»; «если данных не хватает, так и скажи».
 - **Сохраняйте удачные запросы.** Хороший запрос для повторяющейся задачи — уже маленькая автоматизация.
 
-Дальше: [Как проверять результат AI](page:kb/guides/checking-results).
+Это вход в серию о запросах. Дальше по шагам: [пишите ясно](page:kb/guides/prompt-clear-and-direct), [покажите пример](page:kb/guides/prompt-examples), [разделите инструкции и данные](page:kb/guides/prompt-structure), [дайте подумать](page:kb/guides/prompt-thinking), [длинные документы](page:kb/guides/prompt-long-documents), [формат ответа](page:kb/guides/prompt-output-format), [меньше выдумок](page:kb/guides/prompt-fewer-hallucinations), [цепочки запросов](page:kb/guides/prompt-chains).
