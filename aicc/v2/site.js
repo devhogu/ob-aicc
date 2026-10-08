@@ -295,10 +295,10 @@
       }
       var note = data.notes[it.pi + ' ' + it.name + 'W' + week] || '';
       return '<div class="here-tile" data-week="' + iso(monday) + '" tabindex="0"><small>Сегодня</small><strong>' + p.d + ' ' + LONG[p.m - 1] + ' ' + p.y + '</strong><span>' + DAYS[p.wd] + '</span></div>' +
-        '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span>' +
+        '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><div class="here-head"><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span></div>' +
         '<ol class="here-pi">' + segs + '</ol>' +
         '<span class="here-ip" tabindex="0"><i></i>Неделя IP · ' + span(pi.ip.start, pi.ip.end) + ipTip(pi) + '</span></div>' +
-        '<div class="here-tile" data-it="' + itKey(it) + '" tabindex="0"><small>Итерация · неделя ' + week + ' из ' + it.weeks + '</small><strong>' + it.name + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span>' +
+        '<div class="here-tile" data-it="' + itKey(it) + '" tabindex="0"><small>Итерация · неделя ' + week + ' из ' + it.weeks + '</small><div class="here-head"><strong>' + it.name + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span></div>' +
         '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>W' + week + ' · ' + span(monday, monday + 6 * DAY) + ' · сейчас</span>' +
         '<span class="here-note" data-here-note' + (note ? '' : ' hidden') + '>' + esc(note) + '</span></div>';
     }

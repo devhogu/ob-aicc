@@ -142,10 +142,10 @@ def here_html(day):
                      f'data-here-week data-range="W{w} · {span(s, s + timedelta(days=6))}{" · сейчас" if w == week else ""}" data-note="{esc(DATA["notes"].get(n, ""))}">W{w}</button></li>')
     note = r['note']
     return (f'<div class="here-tile" data-week="{monday.isoformat()}" tabindex="0"><small>Сегодня</small><strong>{day.day} {LONG[day.month - 1]} {day.year}</strong><span>{DAYS[day.weekday()]}</span></div>'
-            f'<div class="here-tile" data-pi="{pi["name"]}" tabindex="0"><small>Программный инкремент · неделя {pi_week} из {pi_weeks}</small><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span>'
+            f'<div class="here-tile" data-pi="{pi["name"]}" tabindex="0"><small>Программный инкремент · неделя {pi_week} из {pi_weeks}</small><div class="here-head"><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span></div>'
             f'<ol class="here-pi">{"".join(segs)}</ol>'
             f'<span class="here-ip" tabindex="0"><i></i>Неделя IP · {span(pi["ip"]["start"], pi["ip"]["end"])}{ip_tip(pi)}</span></div>'
-            f'<div class="here-tile" data-it="{it_key(it)}" tabindex="0"><small>Итерация · неделя {week} из {it["weeks"]}</small><strong>{it["name"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span>'
+            f'<div class="here-tile" data-it="{it_key(it)}" tabindex="0"><small>Итерация · неделя {week} из {it["weeks"]}</small><div class="here-head"><strong>{it["name"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span></div>'
             f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>W{week} · {span(monday, monday + timedelta(days=6))} · сейчас</span>'
             f'<span class="here-note" data-here-note{"" if note else " hidden"}>{esc(note)}</span></div>')
 
