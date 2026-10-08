@@ -506,3 +506,16 @@ a.pcard:hover h4{color:var(--link)}
 .role-cards .card-desc{font-size:15px;line-height:1.55;color:var(--text)}
 @media(max-width:900px){.role-cards,h2+.role-cards{grid-template-columns:minmax(0,1fr)}}
 .read-further .card-desc{display:block;-webkit-line-clamp:unset;overflow:visible}
+/* profiles: card | vertical steps | details */
+.profile-row{grid-template-columns:300px 250px minmax(0,1fr)}
+.vsteps{list-style:none;margin:0;padding:0;position:relative}
+.vsteps::before{content:'';position:absolute;left:7px;top:10px;bottom:10px;width:2px;background:var(--border)}
+.page-body .vsteps li{position:relative;margin:0;padding:3px 0 12px 28px;font-size:14px;line-height:1.35}
+.vsteps li::before{content:'';position:absolute;left:2px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--border-control)}
+.vsteps li.gate::before{left:2px;width:11px;height:11px;border-radius:2px;transform:rotate(45deg);background:var(--brand);border-color:var(--brand)}
+.vsteps li.gate span{font-weight:600}
+.vsteps li small{display:block;font-size:11px;color:var(--brand);margin-top:1px}
+.vsteps li:last-child{padding-bottom:0}
+@media(max-width:1250px){.profile-row{grid-template-columns:300px minmax(0,1fr)}.profile-detail{grid-column:1/-1}}
+@media(max-width:900px){.profile-row{grid-template-columns:minmax(0,1fr)}}
+.profile-steps h4{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);border:0;padding:0}
