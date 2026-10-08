@@ -152,7 +152,7 @@ def add_pages(pages, site, terms, api):
         return f'<div data-tabs><div class="pf-tabs" role="tablist">{heads}</div>{panels}</div>'
 
     def table(head, rows):
-        return '<div class="o-table-wrap"><table class="hub-register"><thead><tr>' + ''.join(f'<th>{e(h)}</th>' for h in head) + f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+        return '<div class="o-table-wrap reg-scroll"><table class="hub-register"><thead><tr>' + ''.join(f'<th>{e(h)}</th>' for h in head) + f'</tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
 
     pf_en = {'Воронка': 'Funnel', 'Проработка': 'Shaping', 'Готово к старту': 'Ready', 'В работе': 'Doing', 'Завершено': 'Done'}
     pf_gate = {s: f'{NEXT_POINT[s][0]} — {NEXT_POINT[s][1]}' for s in STAGES}
