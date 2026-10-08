@@ -995,3 +995,8 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .kb-feature span{margin-top:auto;font-weight:600;color:var(--link);font-size:14px}
 @media (max-width:900px){.kb-featured__grid{grid-template-columns:1fr}}
 .rai-cards--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.lib-card h3 a{color:var(--text);text-decoration:none}
+.lib-card h3 a:hover{color:var(--link);text-decoration:underline}
+.page-body .lib-card p.lib-ours{margin-top:auto;padding-top:8px;border-top:1px solid var(--border);font-size:13px;color:var(--text)}
+.lib-ours b{color:#1f6b3f}
+:root[data-theme="dark"] .lib-ours b{color:#86d9a0}

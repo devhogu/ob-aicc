@@ -1,26 +1,31 @@
 # Anthropic's learning resources: the academy, every course, the official Russian documentation and practice material.
 # lang: ru (official Russian edition) or en.
 # Order: the official Russian materials first, then the English ones.
+# ours: our Knowledge Base guides that retell this source (kb/guides/<id>).
 - group: Документация на русском
   title: Документация Claude Code
   what: Официальная документация Claude Code на русском — установка, настройка, навыки, помощники, хуки, MCP.
   lang: ru
   url: https://code.claude.com/docs/ru/overview
+  ours: [claude-code-how-it-works]
 - group: Документация на русском
   title: "Claude Code: быстрый старт"
   what: Установить, войти и сделать первое изменение в коде.
   lang: ru
   url: https://code.claude.com/docs/ru/quickstart
+  ours: [claude-code-first-session]
 - group: Документация на русском
   title: "Claude Code: лучшие практики"
   what: Проверка работы, план перед кодом, управление контекстом, типичные ошибки.
   lang: ru
   url: https://code.claude.com/docs/ru/best-practices
+  ours: [claude-code-best-practices, claude-code-setup]
 - group: Документация на русском
   title: "Claude Code: распространённые рабочие процессы"
   what: Пошаговые сценарии — изучить код, исправить ошибку, переработать, написать тесты.
   lang: ru
   url: https://code.claude.com/docs/ru/common-workflows
+  ours: [claude-code-workflows]
 - group: Документация на русском
   title: "Claude Code: библиотека промптов"
   what: Готовые запросы для Claude Code по задачам и ролям — копировать и вставлять.
@@ -36,16 +41,19 @@
   what: Постоянно обновляемый справочник Anthropic по запросам к Claude — главный первоисточник.
   lang: ru
   url: https://platform.claude.com/docs/ru/build-with-claude/prompt-engineering/claude-prompting-best-practices
+  ours: [prompting-complete-guide]
 - group: Документация на русском
   title: Справочный центр Claude
   what: Ответы на вопросы о работе в Claude — проекты, файлы, аккаунт, планы, безопасность.
   lang: ru
   url: https://support.claude.com/ru
+  ours: [claude-work-complete-guide]
 - group: Claude Academy
   title: Claude Academy — главная
   what: Учебный портал Anthropic по Claude — курсы, материалы по продуктам и подборки. Бесплатно, с сертификатами.
   lang: en
   url: https://academy.claude.com/
+  ours: [anthropic-academy]
 - group: Claude Academy
   title: С чего начать
   what: Стартовая страница академии с рекомендованным порядком обучения.
@@ -66,16 +74,19 @@
   what: Всё о Claude в браузере и приложениях — разговор, проекты, артефакты, навыки.
   lang: en
   url: https://academy.claude.com/products/claude
+  ours: [claude-work-complete-guide]
 - group: Claude Academy
   title: Материалы по Claude Cowork
   what: Работа Claude с вашими файлами, папками и приложениями.
   lang: en
   url: https://academy.claude.com/products/cowork
+  ours: [claude-work-complete-guide]
 - group: Claude Academy
   title: Материалы по Claude Code
   what: Агентная разработка в терминале, редакторе и настольном приложении.
   lang: en
   url: https://academy.claude.com/products/code
+  ours: [claude-code-how-it-works]
 - group: Claude Academy
   title: Материалы по Claude Tag
   what: Claude в рабочем пространстве Slack команды.
@@ -91,21 +102,25 @@
   what: Четыре навыка работы с AI (4D) — эффективно, этично и безопасно.
   lang: en
   url: https://academy.claude.com/courses/ai-fluency-framework-foundations
+  ours: [ai-fluency-4d]
 - group: Курсы для всех
   title: AI Capabilities and Limitations
   what: Верная картина того, что большие языковые модели умеют и чего не умеют.
   lang: en
   url: https://academy.claude.com/courses/ai-capabilities-and-limitations
+  ours: [ai-capabilities-limitations]
 - group: Курсы для всех
   title: Claude 101
   what: Повседневная работа с Claude — от первого разговора до проектов, артефактов и навыков.
   lang: en
   url: https://academy.claude.com/courses/claude-101
+  ours: [claude-work-complete-guide, claude-overview]
 - group: Курсы для всех
   title: Introduction to Claude Cowork
   what: Поручать Claude многошаговую работу — рабочее пространство, контекст, циклы задач.
   lang: en
   url: https://academy.claude.com/courses/introduction-to-claude-cowork
+  ours: [claude-work-complete-guide]
 - group: Курсы для всех
   title: Introduction to Claude Tag
   what: Claude в Slack команды — что ему поручать и как направлять.
@@ -131,6 +146,7 @@
   what: Что такое Claude Code, как он работает и основные приёмы работы.
   lang: en
   url: https://academy.claude.com/courses/claude-code-101
+  ours: [claude-code-first-session, claude-code-how-it-works]
 - group: Курсы по Claude Code и агентам
   title: Claude Code in Action
   what: Долгие сессии, которым можно доверять, — направлять, настраивать, автоматизировать, проверять.
@@ -141,11 +157,13 @@
   what: Создавать, настраивать и делиться навыками в Claude Code.
   lang: en
   url: https://academy.claude.com/courses/introduction-to-agent-skills
+  ours: [skills-complete-guide]
 - group: Курсы по Claude Code и агентам
   title: Introduction to Subagents
   what: Делить сложную задачу между параллельными помощниками и управлять ими.
   lang: en
   url: https://academy.claude.com/courses/introduction-to-subagents
+  ours: [claude-code-subagents]
 - group: Курсы для разработчиков
   title: Claude Platform 101
   what: Разработка на платформе Claude с нуля до продвинутого уровня.
@@ -181,6 +199,7 @@
   what: Пошаговый практикум по составлению запросов с упражнениями.
   lang: en
   url: https://github.com/anthropics/prompt-eng-interactive-tutorial
+  ours: [prompting-complete-guide]
 - group: Практика и примеры
   title: Claude Cookbooks
   what: Готовые рецепты кода — поиск по документам, инструменты, агенты, работа с изображениями.

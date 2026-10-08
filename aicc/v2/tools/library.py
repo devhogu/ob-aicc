@@ -91,9 +91,12 @@ def add_pages(pages, site, api):
 
     def outside(x):
         lang = '<span class="lib-tag is-applies">на русском</span>' if x['lang'] == 'ru' else '<span class="lib-tag is-benchmark">EN</span>'
-        return (f'<a class="lib-card lib-card--link" href="{e(x["url"])}" target="_blank" rel="noopener" data-lib-item data-group="{e(x["group"])}" '
-                f'data-find="{find_text(x["title"], x["what"], x["group"], x["lang"])}">'
-                f'<div class="lib-card__top"><small>{e(x["group"])}</small>{lang}</div><h3>{e(x["title"])} ↗</h3><p>{e(x["what"])}</p></a>')
+        retold = [pages[f'kb/guides/{g}'] for g in x.get('ours', []) if f'kb/guides/{g}' in pages]
+        mine = ('<p class="lib-ours"><b>Пересказ у нас:</b> ' + ', '.join(
+            f'<a href="{e(rel(url_of("reference/anthropic"), url_of(g.id)))}">{e(g.title)}</a>' for g in retold) + '</p>') if retold else ''
+        return (f'<article class="lib-card" data-lib-item data-group="{e(x["group"])}" data-find="{find_text(x["title"], x["what"], x["group"], x["lang"])}">'
+                f'<div class="lib-card__top"><small>{e(x["group"])}</small>{lang}</div>'
+                f'<h3><a href="{e(x["url"])}" target="_blank" rel="noopener">{e(x["title"])} ↗</a></h3><p>{e(x["what"])}</p>{mine}</article>')
     body = ('<p class="lede">Всё обучение от Anthropic, создателя Claude, в одном месте: сначала официальные материалы на русском, '
             'затем учебный портал Claude Academy с бесплатными курсами и практические материалы на английском. Ссылки ведут на первоисточник.</p>'
             f'<p class="pf-tip">Короткие пересказы самого полезного — на русском и с нашими примерами — в <a href="{e(rel(url_of("reference/anthropic"), url_of("kb")))}">Базе знаний</a>.</p>'
