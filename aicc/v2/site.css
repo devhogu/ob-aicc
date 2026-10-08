@@ -841,3 +841,14 @@ button.here-key{border:0;font:400 12px/1.4 var(--font-body)}
 button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowrap}
 .here-key>i{width:8px;height:8px}
 .here-time{grid-template-columns:minmax(0,.5fr) minmax(0,1.3fr) minmax(0,1fr)}
+/* PI tile: key weeks under their iteration; the picked iteration has a border */
+.here-time{grid-template-columns:minmax(0,.55fr) minmax(0,1.1fr) minmax(0,1fr)}
+.page-body .here-pi li{border:2px solid transparent}
+.page-body .here-pi li.is-picked{border-color:var(--brand)}
+.here-pi li button.here-key{align-self:flex-start;margin-top:2px;font-size:11px;padding:1px 7px 1px 5px}
+.here-pi li button.here-key{white-space:normal;max-width:100%;border-radius:8px;text-align:left}
+.here-pi li button.here-key{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:3px 8px;border-radius:6px;line-height:1.25}
+.here-pi li button.here-key>b{font-size:11px;font-weight:700}
+.here-pi li button.here-key>span{font-size:11px;color:var(--text-muted)}
+.here-pi li .here-key--review>b{color:var(--review)}
+.here-pi li .here-key--ip>b{color:var(--plan)}

@@ -102,13 +102,9 @@ def span(a, b, long=False):
 DAYS = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']
 
 
-# START_CONTRACT: here_html
-#   PURPOSE: Where we are in time: today, the current increment with its progress and IP week, the current iteration with its weeks.
-#   INPUTS: { day: date }
-#   OUTPUTS: { str - HTML of three tiles; site.js draws the same tiles for the reader's date }
-#   SIDE_EFFECTS: none
-# END_CONTRACT: here_html
 def short(a, b):
+    if a.month == b.month:
+        return f'{a.day}–{b.day} {SHORT[b.month - 1]}'
     return f'{a.day} {SHORT[a.month - 1]} – {b.day} {SHORT[b.month - 1]}'
 
 
@@ -133,8 +129,8 @@ def tip(kind, title):
 
 
 def week_range(s, kind):
-    """A week's dates; the Planning week counts its working days."""
-    return span(s, s + timedelta(days=4 if kind == 'ip' else 6))
+    """A week's dates without the year; the Planning week counts its working days."""
+    return short(s, s + timedelta(days=4 if kind == 'ip' else 6))
 
 
 # START_CONTRACT: here_html
@@ -154,9 +150,9 @@ def here_html(day):
     def pick(text, now):
         return esc(text + (' · сейчас' if now else ''))
 
-    segs, keys = [], []
+    segs = []
     for i in pi['iterations']:
-        cells = []
+        cells, keys = [], []
         for w in range(1, i['weeks'] + 1):
             s = i['start'] + timedelta(weeks=w - 1)
             k = week_kind(i, w, ip)
@@ -164,11 +160,11 @@ def here_html(day):
             cells.append(f'<button type="button"{cls("is-done" if s < monday else "is-current" if s == monday else "", f"is-{k}" if k else "", "is-picked" if s == monday else "")} '
                          f'data-here-week data-range="{pick(text, s == monday)}" aria-label="{i["label"]} W{w}"></button>')
             if k:
-                keys.append(f'<button type="button" class="here-key here-key--{k}" data-here-week data-range="{pick(text, s == monday)}"><i></i>{TAG[k]} · {short(s, s + timedelta(days=4 if k == "ip" else 6))}'
-                            f'{tip(k, text)}</button>')
-        segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "")} style="flex:{i["weeks"]}">'
+                keys.append(f'<button type="button" class="here-key here-key--{k}" data-here-week data-range="{pick(text, s == monday)}"><b>{TAG[k]}</b><span>{week_range(s, k)}</span>{tip(k, text)}</button>')
+        segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "", "is-picked" if it_key(i) == it_key(it) else "")} style="flex:{i["weeks"]}">'
                     f'<span class="here-cells">{"".join(cells)}</span>'
-                    f'<button type="button" class="here-it" data-here-week data-range="{i["label"]} · {i["title"]} · {span(i["start"], i["end"])} · {i["weeks"]} нед."><b>{i["label"]} · {i["title"]}</b><span>{short(i["start"], i["end"])}</span></button></li>')
+                    f'<button type="button" class="here-it" data-here-week data-range="{i["label"]} · {short(i["start"], i["end"])} · {i["weeks"]} нед."><b>{i["label"]} · {i["title"]}</b><span>{short(i["start"], i["end"])}</span></button>'
+                    f'{"".join(keys)}</li>')
     weeks = []
     for w in range(1, it['weeks'] + 1):
         s = it['start'] + timedelta(weeks=w - 1)
@@ -180,7 +176,7 @@ def here_html(day):
             f'<div class="here-tile" data-pi="{pi["name"]}" tabindex="0"><small>Программный инкремент · неделя {pi_week} из {pi_weeks}</small><div class="here-head"><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span></div>'
             f'<ol class="here-pi">{"".join(segs)}</ol>'
             f'<span class="here-range" data-here-range>{pick(f"{it["label"]} W{week} · {week_range(monday, now)}" + (f" · {TAG[now]}" if now else ""), True)}</span>'
-            f'<div class="here-legend">{"".join(keys)}</div></div>'
+            f'</div>'
             f'<div class="here-tile" data-it="{it_key(it)}" tabindex="0"><small>Итерация · неделя {week} из {it["weeks"]}</small><div class="here-head"><strong>{it["label"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span></div>'
             f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>{pick(f"W{week} · {week_range(monday, now)}" + (f" · {TAG[now]}" if now else ""), True)}</span></div>')
 

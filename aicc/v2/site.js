@@ -272,7 +272,7 @@
       if (!body.length) body.push('<tr><td colspan="5" class="pi-empty">В этом PI работы не запланировано.</td></tr>');
       return '<div class="o-table-wrap pi-board-wrap"><table class="pi-board"><thead><tr><th>Проект</th>' + head + '<th>Не запланировано</th></tr></thead><tbody>' + body.join('') + '</tbody></table></div>';
     }
-    function short(a, b) { var x = parts(a), y = parts(b); return x.d + ' ' + SHORT[x.m - 1] + ' – ' + y.d + ' ' + SHORT[y.m - 1]; }
+    function short(a, b) { var x = parts(a), y = parts(b); return x.m === y.m ? x.d + '–' + y.d + ' ' + SHORT[y.m - 1] : x.d + ' ' + SHORT[x.m - 1] + ' – ' + y.d + ' ' + SHORT[y.m - 1]; }
     var IP_TIP = 'Неделя инноваций и планирования (IP). Это последняя рабочая неделя PI, отдельной итерацией она не считается: ' +
       'ревью и демонстрация третьей итерации, итоги PI, планирование следующего PI, время на инновации и обучение. Новую работу в эту неделю не берут.';
     var REVIEW_TIP = 'Последняя неделя итерации: показ готовых результатов менеджеру продукта и бизнес-владельцу, приёмка Features, ' +
@@ -283,22 +283,22 @@
       return w === i.weeks && i.month % 3 ? 'review' : '';
     }
     function tip(kind, title) { return '<span class="here-tip" role="tooltip"><b>' + title + '</b>' + (kind === 'ip' ? IP_TIP : REVIEW_TIP) + '</span>'; }
-    function weekRange(s, kind) { return span(s, s + (kind === 'ip' ? 4 : 6) * DAY); }
+    function weekRange(s, kind) { return short(s, s + (kind === 'ip' ? 4 : 6) * DAY); }
     function here(day) {
       var w = weekOf(day), it = w[0], week = w[1], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1), p = parts(day);
       var monday = day - p.wd * DAY, piWeeks = Math.round((pi.end - pi.start + DAY) / WEEK), piWeek = Math.round((monday - pi.start) / WEEK) + 1, ip = pi.ip.name;
       function pick(text, now) { return esc(text + (now ? ' · сейчас' : '')); }
-      var keys = '';
       var segs = pi.iterations.map(function (i) {
-        var cells = '';
+        var cells = '', keys = '';
         for (var n = 1; n <= i.weeks; n++) {
           var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip), text = i.label + ' W' + n + ' · ' + weekRange(s, k) + (k ? ' · ' + TAG[k] : '');
           cells += '<button type="button"' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '', s === monday ? 'is-picked' : '') +
             ' data-here-week data-range="' + pick(text, s === monday) + '" aria-label="' + i.label + ' W' + n + '"></button>';
-          if (k) keys += '<button type="button" class="here-key here-key--' + k + '" data-here-week data-range="' + pick(text, s === monday) + '"><i></i>' + TAG[k] + ' · ' + short(s, s + (k === 'ip' ? 4 : 6) * DAY) + tip(k, text) + '</button>';
+          if (k) keys += '<button type="button" class="here-key here-key--' + k + '" data-here-week data-range="' + pick(text, s === monday) + '"><b>' + TAG[k] + '</b><span>' + weekRange(s, k) + '</span>' + tip(k, text) + '</button>';
         }
-        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', i.end < monday ? 'is-done' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span>' +
-          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + i.title + ' · ' + span(i.start, i.end) + ' · ' + i.weeks + ' нед."><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button></li>';
+        var cur = itKey(i) === itKey(it);
+        return '<li' + cls(cur ? 'is-current' : '', i.end < monday ? 'is-done' : '', cur ? 'is-picked' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span>' +
+          '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + short(i.start, i.end) + ' · ' + i.weeks + ' нед."><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button>' + keys + '</li>';
       }).join('');
       var weeks = '';
       for (var n = 1; n <= it.weeks; n++) {
@@ -311,7 +311,7 @@
         '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><div class="here-head"><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span></div>' +
         '<ol class="here-pi">' + segs + '</ol>' +
         '<span class="here-range" data-here-range>' + pick(it.label + ' W' + week + ' · ' + weekRange(monday, now) + (now ? ' · ' + TAG[now] : ''), true) + '</span>' +
-        '<div class="here-legend">' + keys + '</div></div>' +
+        '</div>' +
         '<div class="here-tile" data-it="' + itKey(it) + '" tabindex="0"><small>Итерация · неделя ' + week + ' из ' + it.weeks + '</small><div class="here-head"><strong>' + it.label + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span></div>' +
         '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>' + pick('W' + week + ' · ' + weekRange(monday, now) + (now ? ' · ' + TAG[now] : ''), true) + '</span></div>';
     }
@@ -494,6 +494,8 @@
         if (wk) {  // a week of the iteration tile: show its dates, stay on the tile
           var tile = wk.closest('.here-tile');
           tile.querySelectorAll('[data-here-week]').forEach(function (b) { b.classList.toggle('is-picked', b.dataset.range === wk.dataset.range); });
+          var seg = wk.closest('.here-pi > li');  // the picked iteration gets the border
+          if (seg) tile.querySelectorAll('.here-pi > li').forEach(function (li) { li.classList.toggle('is-picked', li === seg); });
           tile.querySelector('[data-here-range]').textContent = wk.dataset.range;
           return;
         }
