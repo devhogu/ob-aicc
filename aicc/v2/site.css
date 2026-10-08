@@ -228,3 +228,6 @@ h2#h-sec{margin:0;text-align:center;font-size:30px}
 .o-footbar a.contact:hover{color:var(--link)}
 @media(max-width:1100px){.o-footbar{display:block}.o-footbar .fb-left{flex-direction:row;flex-wrap:wrap;padding:12px 16px}.o-footbar .fb-right{padding:12px 24px 20px}}
 @media print{.o-footbar{display:none}}
+.home-group{margin-top:40px}
+.home-group h2{margin:0;text-align:center;font-size:30px}
+.home-group .home-sections,.home-group h2+.home-sections{margin:24px 0 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
