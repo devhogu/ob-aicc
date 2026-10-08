@@ -101,4 +101,19 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideTip(); });
   window.addEventListener('scroll', hideTip, { passive: true });
 
+
+  // feedback dialog
+  var dlg = document.getElementById('fb');
+  function mail() {
+    if (!dlg) return;
+    var body = (d.tMailBody || '').replace('{title}', dlg.dataset.page).replace('{ref}', dlg.dataset.ref).replace('{url}', location.href);
+    dlg.querySelectorAll('a[data-mail]').forEach(function (a) {
+      var addr = a.getAttribute('href').split('?')[0];
+      a.setAttribute('href', addr + '?subject=' + encodeURIComponent(dlg.dataset.subject) + '&body=' + encodeURIComponent(body));
+    });
+  }
+  document.querySelectorAll('[data-dialog]').forEach(function (b) {
+    b.addEventListener('click', function () { mail(); if (dlg && dlg.showModal) dlg.showModal(); });
+  });
+  if (dlg) dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
 })();

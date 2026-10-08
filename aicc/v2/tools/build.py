@@ -217,7 +217,7 @@ def load_pages(site, terms):
         first = page_id.split('/')[0]
         section = 'hub' if page_id == 'index' or first not in {s['id'] for s in site['sections']} else first
         pages[page_id] = Page(page_id, meta['title'], section, int(meta.get('order', 100)), meta.get('summary', ''), body,
-                              source=path, nav=bool(meta.get('nav', True)), nav_title=meta.get('nav_title'), layout=meta.get('layout', ''))
+                              source=path, nav=str(meta.get('nav', 'true')).lower() not in ('false', 'no', '0'), nav_title=meta.get('nav_title'), layout=meta.get('layout', ''))
     return pages
 
 
@@ -258,8 +258,11 @@ def navigation(page, pages, site):
         groups.append(f'<div class="portal-nav-group{" is-current" if current else ""}"><a class="portal-section-link" data-section="{section["id"]}" '
                       f'href="{escape(rel(page.url, first.url))}"' + (' aria-current="true"' if current else '') +
                       f'>{icon(section["icon"])}<span>{escape(section["label"]["ru"])}</span></a>{local}</div>')
+    legal = ''.join(f'<a href="{escape(rel(page.url, pages[pid].url))}"' + (' aria-current="page"' if pages[pid] is page else '') + f'>{escape(m[key])}</a>'
+                    for pid, key in (('privacy', 'privacy'), ('terms-of-use', 'terms_of_use')))
+    foot = f'<div class="nav-foot"><div class="nav-legal">{legal}</div><p class="o-caption">{escape(m["baseline"])}</p></div>'
     return (f'<aside class="o-nav"><details open><summary>{escape(m["nav_summary"])}</summary>'
-            f'<nav class="portal-sections" aria-label="{escape(m["nav_label"])}">{"".join(groups)}</nav></details></aside>')
+            f'<nav class="portal-sections" aria-label="{escape(m["nav_label"])}">{"".join(groups)}</nav></details>{foot}</aside>')
 
 
 def crumbbar(page, pages, site):
@@ -307,7 +310,7 @@ def render_page(page, pages, site):
 <title>{escape(page.title)} · {escape(names["title"])}</title>
 <script>try{{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}}catch(e){{}}</script>
 {''.join(f'<link rel="stylesheet" href="{asset("ui/" + n)}">' for n in ('fonts.css', 'tokens.css', 'primitives.css', 'workspace.css'))}<link rel="stylesheet" href="{asset("site.css")}">
-<script src="{asset("search-ru.js")}"></script><script src="{asset("site.js")}" defer data-root="{escape(root)}" data-t-none="{escape(m["search_none"])}" data-t-light="{escape(m["theme_to_light"])}" data-t-dark="{escape(m["theme_to_dark"])}"></script>
+<script src="{asset("search-ru.js")}"></script><script src="{asset("site.js")}" defer data-root="{escape(root)}" data-t-none="{escape(m["search_none"])}" data-t-light="{escape(m["theme_to_light"])}" data-t-dark="{escape(m["theme_to_dark"])}" data-t-mail-body="{escape(m["fb_mail_body"])}"></script>
 </head><body class="portal-workspace" data-portal-section="{page.section}" data-page="{escape(page.id)}">
 <a class="o-skip" href="#main">{escape(m["skip"])}</a>
 <header class="o-header">
@@ -322,8 +325,15 @@ def render_page(page, pages, site):
 {crumbbar(page, pages, site)}
 {head}{lede}{toc}
 <article class="page-body">{body}</article>
-<footer class="o-footer"><span class="foot-text">{escape(m["footer"])} <a class="contact" href="mailto:{site["contact"]}?subject={subject}">{escape(m["feedback"])}</a> <a class="contact" href="{escape(rel(here, "sources/index.html"))}">{escape(m["sources_title"])}</a></span></footer>
+<footer class="o-footer"><span class="foot-text">{escape(m["footer"])} <a class="contact" href="mailto:{site["contact"]}?subject={subject}">{escape(m["contact_us"])}</a> <a class="contact" href="{escape(rel(here, pages["privacy"].url))}">{escape(m["privacy"])}</a> <a class="contact" href="{escape(rel(here, pages["terms-of-use"].url))}">{escape(m["terms_of_use"])}</a> <a class="contact" href="{escape(rel(here, "sources/index.html"))}">{escape(m["sources_title"])}</a></span>
+<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>{escape(m["pagefb"])}</span><span>ID: {page.ident}</span></button></footer>
 </main></div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="{escape(m["feedback_subject"].format(id=page.ident))}" data-ref="{page.ident}" data-page="{escape(page.title)}">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">{escape(m["pagefb"])}</h2><code>ID: {page.ident}</code></div>
+    <div class="fb-body"><p>{escape(m["fb_prov"])} <a data-mail href="mailto:{site["contact"]}">{escape(m["fb_word"])}</a>.</p><button class="oc-button" value="close">{escape(m["fb_close"])}</button></div>
+  </form>
+</dialog>
 </body></html>
 '''
 
