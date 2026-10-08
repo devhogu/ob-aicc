@@ -203,6 +203,8 @@ def render_markdown(text, page, terms, pages, site):
             if token.tag in ('h2', 'h3'):
                 page.headings.append((token.tag, ident, label))
     html = md.renderer.render(tokens, md.options, {})
+    # headings written as HTML blocks count too, in the order they appear
+    page.headings = [(m[1], m[2], plain(m[3])) for m in re.finditer(r'<(h2|h3)\b[^>]*\bid="([^"]+)"[^>]*>(.*?)</\1>', html, re.S)]
     return html.replace('<table>', '<div class="o-table-wrap"><table>').replace('</table>', '</table></div>')
 
 
