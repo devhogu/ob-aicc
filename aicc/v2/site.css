@@ -519,3 +519,6 @@ a.pcard:hover h4{color:var(--link)}
 @media(max-width:1250px){.profile-row{grid-template-columns:300px minmax(0,1fr)}.profile-detail{grid-column:1/-1}}
 @media(max-width:900px){.profile-row{grid-template-columns:minmax(0,1fr)}}
 .profile-steps h4{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);border:0;padding:0}
+.profile-detail p{margin:0 0 28px}
+.profile-detail h4{margin:0 0 10px}
+.page-body .profile-detail .checks li{margin:8px 0}
