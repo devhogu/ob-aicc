@@ -45,8 +45,8 @@ async def check():
                     problems.append(f'{width} {path.relative_to(SITE)}: h1 count')
                 if not await page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'):
                     problems.append(f'{width} {path.relative_to(SITE)}: horizontal overflow')
-                if await page.locator('.status-chip').count() != 1 or await page.locator('.page-id').count() != 1:
-                    problems.append(f'{width} {path.relative_to(SITE)}: chip or page id missing')
+                if await page.locator('.status-chip').count() != 1 or await page.locator('.pagefb').count() != 1:
+                    problems.append(f'{width} {path.relative_to(SITE)}: chip or feedback button missing')
                 problems.extend(f'{width} {path.relative_to(SITE)}: {s}' for s in seen)
             counts[f'swept_{width}'] = len(pages)
             await context.close()

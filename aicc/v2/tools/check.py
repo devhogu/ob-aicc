@@ -51,8 +51,8 @@ class Parsed(HTMLParser):
             self.h1 += 1
         if 'status-chip' in classes:
             self.chips += 1
-        if 'page-id' in classes:
-            self._stack.append('page-id')
+        if 'pagefb' in classes:
+            self._stack.append('pagefb')
         elif tag in ('script', 'style', 'pre', 'code') or 'term-en' in classes or tag == 'title':
             self._stack.append('skip')
         else:
@@ -65,8 +65,9 @@ class Parsed(HTMLParser):
             self._stack.pop()
 
     def handle_data(self, data):
-        if 'page-id' in self._stack:
-            self.page_ids.append(data.strip())
+        if 'pagefb' in self._stack:
+            if data.strip().startswith('ID:'):
+                self.page_ids.append(data.strip())
         elif 'skip' not in self._stack:
             self.text.append(data)
 

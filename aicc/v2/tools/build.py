@@ -294,15 +294,13 @@ def render_page(page, pages, site):
                ''.join(f'<li class="{tag}"><a href="#{i}">{escape(label)}</a></li>' for tag, i, label in page.headings) + '</ul></nav>')
     subject = quote(m['feedback_subject'].format(id=page.ident))
     section = next(s for s in site['sections'] if s['id'] == page.section)
-    id_chip = f'<span class="page-id" title="{escape(m["page_id_title"])}">ID: {page.ident}</span>'
     if page.layout == 'home':
         # the front page carries its own title inside the hero; the page identifier sits beside it
         head, lede = '', ''
-        body = re.sub(r'(<h1>.*?</h1>)', lambda m: '<div class="title-row">' + m[1] + id_chip + '</div>', page.body, count=1, flags=re.S)
-        body = f'<div class="o-wide">{body}</div>'
+        body = f'<div class="o-wide">{page.body}</div>'
     else:
         lede = f'<p class="lede">{escape(page.summary)}</p>' if page.summary and page.id != 'vocabulary' else ''
-        head = f'<div class="page-title"><h1>{escape(page.title)}</h1>{id_chip}</div>'
+        head = f'<div class="page-title"><h1>{escape(page.title)}</h1></div>'
         body = page.body
     return f'''<!doctype html>
 <html lang="ru" data-theme="light"><head>

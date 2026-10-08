@@ -72,7 +72,7 @@ class Checker(unittest.TestCase):
         (out / 'ru').mkdir(parents=True)
         (out / 'assets').mkdir()
         (out / 'ru' / 'index.html').write_text(
-            f'<html lang="ru"><head><title>t</title></head><body><span class="status-chip">Черновик</span><h1>Хаб</h1><span class="page-id">ID: AAAAA</span>{body}</body></html>', encoding='utf-8')
+            f'<html lang="ru"><head><title>t</title></head><body><span class="status-chip">Черновик</span><h1>Хаб</h1><button class="pagefb"><span>Отзыв</span><span>ID: AAAAA</span></button>{body}</body></html>', encoding='utf-8')
         (out / 'index.html').write_text('<meta http-equiv="refresh" content="0; url=ru/index.html">', encoding='utf-8')
         (out / 'assets' / 'page-ids.json').write_text('{"index": "AAAAA"}', encoding='utf-8')
         (out / 'assets' / 'search-ru.js').write_text('window.AICC_SEARCH_INDEX=[];\n', encoding='utf-8')
