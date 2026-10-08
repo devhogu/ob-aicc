@@ -112,6 +112,7 @@ class Page:
     def __init__(self, page_id, title, section, order, summary, body, source=None, nav=True, nav_title=None, layout=''):
         self.id, self.title, self.section, self.order = page_id, title, section, order
         self.nav_title, self.layout = nav_title or title, layout
+        self.related = []
         self.summary, self.body, self.source, self.nav = summary, body, source, nav
         self.ident = ''
         self.headings = []
@@ -218,6 +219,7 @@ def load_pages(site, terms):
         section = 'hub' if page_id == 'index' or first not in {s['id'] for s in site['sections']} else first
         pages[page_id] = Page(page_id, meta['title'], section, int(meta.get('order', 100)), meta.get('summary', ''), body,
                               source=path, nav=str(meta.get('nav', 'true')).lower() not in ('false', 'no', '0'), nav_title=meta.get('nav_title'), layout=meta.get('layout', ''))
+        pages[page_id].related = [x.strip() for x in meta.get('related', '').split(',') if x.strip()]
     return pages
 
 
@@ -279,6 +281,39 @@ def crumbbar(page, pages, site, has_ctx=False):
     return f'<div class="crumbbar{" has-ctx" if has_ctx else ""}"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="{escape(m["breadcrumb"])}">{parts}</nav>{following}</div></div>'
 
 
+def page_end(page, pages, site):
+    """The end of a reading page, as on the overview pages of the kit: back and next within the section, then related pages in boxes."""
+    m = site['messages']['ru']
+    members = section_members(pages, page.section)
+    out = ''
+    if page in members:
+        i = members.index(page)
+        prev = members[i - 1] if i > 0 else None
+        nxt = members[i + 1] if i + 1 < len(members) else None
+        links = ''
+        if prev:
+            links += f'<a class="pn prev" href="{escape(rel(page.url, prev.url))}" rel="prev"><span>{escape(m["back"])}</span>{escape(prev.nav_title)}</a>'
+        if nxt:
+            links += f'<a class="pn next" href="{escape(rel(page.url, nxt.url))}" rel="next"><span>{escape(m["next_word"])}</span>{escape(nxt.nav_title)}</a>'
+        if links:
+            out += f'<nav class="o-pn" aria-label="{escape(m["back"])} / {escape(m["next_word"])}">{links}</nav>'
+    related = []
+    for pid in page.related:
+        if pid not in pages:
+            if LENIENT:
+                continue
+            raise ValueError(f'{page.id}: related page {pid} does not exist')
+        related.append(pages[pid])
+    if related:
+        labels = {s['id']: s['label']['ru'] for s in site['sections']}
+        cards = ''.join(
+            f'<li class="o-card linked card--compact" data-tip="{escape(r.summary)}" data-tip-title="{escape(r.title)}">'
+            f'<p class="card-kicker">{escape(labels[r.section])}</p><h3><a href="{escape(rel(page.url, r.url))}">{escape(r.title)}</a></h3>'
+            f'<p class="card-desc">{escape(r.summary)}</p></li>' for r in related)
+        out += f'<h2 class="about-deeper">{escape(m["read_further"])}</h2><ul class="o-grid card-list cards-compact read-further">{cards}</ul>'
+    return out
+
+
 def render_page(page, pages, site):
     m = site['messages']['ru']
     names = site['names']['ru']
@@ -296,7 +331,7 @@ def render_page(page, pages, site):
         body = f'<div class="o-wide">{page.body}</div>'
     else:
         single = '' if context else ' o-single'
-        body = (f'<div class="o-reading{single}"><div class="o-copy"><h1>{escape(page.title)}</h1><article class="page-body o-doc">{page.body}</article></div>{context}</div>')
+        body = (f'<div class="o-reading{single}"><div class="o-copy"><h1>{escape(page.title)}</h1><article class="page-body o-doc">{page.body}</article>{page_end(page, pages, site)}</div>{context}</div>')
     return f'''<!doctype html>
 <html lang="ru" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
