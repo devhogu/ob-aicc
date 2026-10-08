@@ -83,7 +83,7 @@ def pages(lang):
     return out
 
 
-PACKAGE_ENTRIES = {'index.html', 'en', 'ru', 'v1'}
+PACKAGE_ENTRIES = {'index.html', 'en', 'ru', 'v1'} | ({'v2'} if os.path.isdir(os.path.join(PACKAGE, 'v2')) else set())  # v2 is built and checked by aicc/v2/tools
 if set(os.listdir(PACKAGE)) != PACKAGE_ENTRIES:
     errors.append('the package root holds %s, expected exactly %s' % (sorted(os.listdir(PACKAGE)), sorted(PACKAGE_ENTRIES)))
 for lang in ('en', 'ru'):

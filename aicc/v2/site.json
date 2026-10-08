@@ -1,0 +1,46 @@
+{
+  "id": "aicc-hub",
+  "languages": ["ru"],
+  "default_language": "ru",
+  "english_terms": "always",
+  "contact": "talimbayev@obank.kg",
+  "names": {
+    "ru": {"title": "Хаб Компетенций по AI", "middle": "Хаб Компетенций", "short": "Хаб"}
+  },
+  "sections": [
+    {"id": "hub", "path": "", "icon": "info", "label": {"ru": "Хаб"}},
+    {"id": "process", "path": "process/", "icon": "workflow", "label": {"ru": "Процесс"}},
+    {"id": "catalog", "path": "catalog/", "icon": "list-tree", "label": {"ru": "Каталог сценариев"}},
+    {"id": "projects", "path": "projects/", "icon": "layers", "label": {"ru": "Проекты"}},
+    {"id": "vocabulary", "path": "vocabulary/", "icon": "file-text", "label": {"ru": "Словарь"}}
+  ],
+  "messages": {
+    "ru": {
+      "skip": "К содержанию",
+      "search_label": "Поиск по Хабу",
+      "search_none": "По запросу ничего не найдено.",
+      "theme_to_light": "Дневной режим",
+      "theme_to_dark": "Ночной режим",
+      "nav_label": "Разделы",
+      "nav_summary": "Разделы сайта",
+      "on_this_page": "На этой странице",
+      "status_chip": "Черновик",
+      "status_chip_title": "Эта страница и показанные на ней записи — черновики: ничего в них не принято и не утверждено",
+      "page_id_title": "Идентификатор страницы: назовите его, когда пишете нам об этой странице",
+      "feedback": "Написать об этой странице",
+      "feedback_subject": "Хаб Компетенций, страница {id}",
+      "footer": "Хаб Компетенций по AI, O!Bank. 2026 год.",
+      "vocabulary_intro": "Термины, которые мы используем. Английское слово рядом с русским — принятое в отрасли название.",
+      "vocabulary_term": "Термин",
+      "vocabulary_definition": "Что это значит",
+      "sources_title": "Исходные файлы",
+      "sources_intro": "Файлы, из которых собран этот сайт. Их можно прочитать без сервера.",
+      "back_to_site": "Вернуться на сайт"
+    }
+  },
+  "forbidden": [
+    "Executive Sponsor", "Domain Owner", "Steering", "DR-2026", "Руководитель Центра Компетенций",
+    "консолидирующ", "не имеет полномочий", "нет полномочий", "не принимает решений", "v1", "прежн"
+  ],
+  "forbidden_patterns": ["AICC-[A-Z]{2,}-\\d+"]
+}
