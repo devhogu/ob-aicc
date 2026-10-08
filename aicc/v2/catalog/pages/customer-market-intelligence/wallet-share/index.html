@@ -1,0 +1,580 @@
+<!--page {"id": "catalog/customer-market-intelligence/wallet-share", "title": "Доля кошелька", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "Доля кошелька — это часть всех расходов клиента на финансовые услуги (кредитные, сберегательные, страховые, инвестиционные и платёжные), которая приходится на Банк. У большинства розничных клиентов и клиентов МСБ на один"} -->
+<div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Каталог сценариев</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Клиентская и рыночная аналитика</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Доля кошелька</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Доля кошелька</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Доля кошелька — это часть всех расходов клиента на финансовые услуги (кредитные, сберегательные, страховые, инвестиционные и платёжные), которая приходится на Банк. У большинства розничных клиентов и клиентов МСБ на один банк обычно приходится менее 40% всего финансового кошелька; остальное приходится на конкурентов, небанковские организации или неформальные сбережения. Наращивать долю кошелька в существующей клиентской базе эффективнее с точки зрения капитала, чем привлекать новых клиентов. <strong>Генеративный AI позволяет непрерывно оценивать долю конкурентов и систематически выявлять благоприятные моменты для кросс-продаж</strong> — и превращает анализ доли кошелька из ежегодного входного параметра планирования в еженедельный коммерческий сигнал.</p>
+</header>
+<div id="main-content" class="l3-sections" aria-label="Подразделы">
+<section class="l3-section" id="primary-bank-relationship-share">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Доля клиентов, для которых Банк основной</h2>
+    <p class="l3-section__intent">Доля клиентов, для которых Банк — основной поставщик финансовых услуг; это определяется по зачислению зарплаты, основному расчётному счёту или тому, что на Банк приходится большая часть кошелька клиента. Глубина отношений с основным банком — самый важный отдельный показатель доли кошелька: доходный потенциал клиента, для которого банк основной, в 3–5 раз выше, чем клиента, для которого банк дополнительный. Основной банк обычно определяется по счёту для зачисления зарплаты, поэтому уязвимость перед конкурентами сосредоточена в моменты, связанные с зарплатным циклом.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/primary-bank-relationship-share/primary-relationship-migration-monitor" id="scenario-primary-relationship-migration-monitor" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг смены основного банка</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Автоматический ежемесячный отчёт для коммерческого руководства о переходах клиентов между уровнями основного и дополнительного банка: чистое изменение доли клиентов, для которых Банк основной, и сегменты, где переходы наиболее активны.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Долю клиентов, для которых Банк основной, раз в год измеряют в заказном исследовании клиентов. Изменения в течение года не отслеживаются: например, клиенты переводят Банк из основных в дополнительные после кампании конкурента по зарплатным счетам или, наоборот, делают его основным после нового продуктового предложения. Коммерческое руководство не видит, растёт эта доля или снижается в течение года, и коммерческая программа реагирует медленнее.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент берёт результаты ежемесячной классификации основного банка, рассчитывает чистые потоки переходов между уровнями и готовит помесячный мониторинг отношений с основным банком. Коммерческое руководство ежемесячно получает отчёт о переходах; ежегодное заказное исследование становится проверкой сигнала, полученного в течение года, а не единственным измерением доли клиентов, для которых Банк основной.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Коммерческое руководство ежемесячно получает мониторинг отношений с основным банком — чистые переходы между уровнями основного и дополнительного банка и сегменты, где переходы наиболее активны, — и видит долю клиентов, для которых Банк основной, в течение года.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент готовит мониторинг переходов не менее чем в 95% плановых ежемесячных циклов на протяжении не менее 12 месяцев подряд после запуска.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% отчётов коммерческое руководство принимает без дополнительного анализа; направление динамики в течение года совпадает с результатами ежегодного заказного исследования.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо ежегодного заказного исследования доля клиентов, для которых Банк основной, измеряется ежемесячным мониторингом не позднее пяти рабочих дней после закрытия месяца.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/primary-bank-relationship-share/salary-switch-risk-alert" id="scenario-salary-switch-risk-alert" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Предупреждение о риске перевода зарплаты в другой банк</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент выявляет клиентов с признаками скорого перевода зарплаты (зачисления снижаются несколько циклов подряд, появляются входящие платежи из банка-конкурента) и передаёт их как клиентов с риском перевода зарплаты для приоритетной работы по удержанию до наступления очередного зарплатного цикла.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>В розничном банковском бизнесе зачисление зарплаты обычно служит главным признаком основного банка. Если клиент переводит зачисление зарплаты к конкуренту, Банк сразу и существенно теряет долю кошелька. Решение о переводе обычно принимается, когда у работодателя меняются реквизиты для выплаты зарплаты, и в течение квартала необратимо. Сейчас Банк выявляет уход зарплаты после первого пропущенного зачисления, то есть в момент потери, а не до неё.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент еженедельно отслеживает зачисления зарплаты по всем клиентам, для которых Банк основной, отмечает клиентов с признаками скорого перевода (сумма зачисления снижается два цикла подряд, рядом с зарплатой появляется новый входящий платёж из банка-конкурента) и готовит приоритетный перечень предупреждений. Клиентские менеджеры получают предупреждение о риске перевода зарплаты не менее чем за один зарплатный цикл до вероятной даты перевода.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Клиентские менеджеры еженедельно получают приоритетный перечень клиентов, для которых Банк основной и у которых есть признаки скорого перевода зарплаты, не менее чем за один зарплатный цикл до вероятной даты перевода.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент отслеживает зачисления зарплаты 100% клиентов, для которых Банк основной, и передаёт перечень предупреждений не менее чем в 95% еженедельных циклов на протяжении не менее 48 недель подряд после запуска.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥65% клиентов из предупреждений клиентский менеджер при контакте подтверждает как рискующих перевести зарплату; с ≥80% таких клиентов связываются до следующей даты выплаты зарплаты.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Перевод зарплаты выявляется не после первого пропущенного зачисления, а не менее чем за один зарплатный цикл до вероятной даты перевода.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/primary-bank-relationship-share/primary-bank-identification-model" id="scenario-primary-bank-identification-model" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Модель определения основного банка</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент ежемесячно делит активную клиентскую базу на клиентов, для которых Банк основной, и клиентов, для которых он дополнительный, по признакам зачисления зарплаты, доли Банка в объёме операций клиента и глубины набора продуктов и выделяет когорту клиентов, для которых Банк дополнительный, как главную возможность роста доли кошелька.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Статус основного банка систематически не определяется. Коммерческие команды знают, что зачисление зарплаты — самый сильный признак основного банка, но клиенты без зачисления зарплаты, чей основной расчётный счёт открыт в Банке, не выявляются, а клиенты с зачислением зарплаты, перенёсшие основные расходы на карту конкурента, не отмечаются. Без явной классификации коммерческий потенциал каждого уровня отношений остаётся невидимым.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент ежемесячно анализирует зачисления зарплаты, объём операций, источники входящих платежей и данные о глубине набора продуктов, относит каждого активного клиента к одному из уровней — Банк основной, вероятно основной, дополнительный или только расчётное обслуживание — и готовит отчёт о классификации с оценкой потенциала доли кошелька по каждому уровню. Коммерческие команды в первую очередь работают с клиентами, для которых Банк дополнительный, с высокой долгосрочной ценностью клиента (CLV): это первая когорта для роста доли кошелька.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Каждый месяц каждый активный клиент отнесён к одному из уровней — Банк основной, вероятно основной, дополнительный или только расчётное обслуживание, — а для коммерческих команд оценён потенциал доли кошелька по каждому уровню.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент классифицирует 100% активной клиентской базы и готовит отчёт о классификации не менее чем в 95% плановых ежемесячных циклов на протяжении не менее 12 месяцев подряд после запуска.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% классификаций коммерческие команды при ежемесячной выборочной проверке подтверждают как правильные.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Основной банк, который раньше систематически не определялся, классифицируется ежемесячно не позднее недели после закрытия месяца.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="cross-sell-opportunity-identification">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Выявление возможностей кросс-продаж</h2>
+    <p class="l3-section__intent">Систематическое выявление клиентов, которые с высокой вероятностью примут предложение конкретного продукта, исходя из их текущего набора продуктов, финансового поведения и уровня долгосрочной ценности клиента (CLV). Выявление возможностей кросс-продаж — коммерческое применение сегментации, CLV и оценки доли кошелька: на выходе коммерческие команды получают ранжированный перечень пар «клиент — продукт», по которому можно сразу работать. Больше всего возможностей кросс-продаж обычно приходится на держателей зарплатных счетов без розничного кредитного продукта и на клиентов МСБ с расчётным счётом без продукта торгового финансирования.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/cross-sell-opportunity-identification/cross-sell-campaign-performance-report" id="scenario-cross-sell-campaign-performance-report" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Отчёт об эффективности кампаний кросс-продаж</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Автоматический ежемесячный отчёт о конверсии кампаний кросс-продаж, оформлении продуктов по сегментам и влиянии на долю кошелька, который коммерческое руководство получает без ручной выгрузки из систем управления кампаниями и CRM.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Эффективность кампаний кросс-продаж собирают из выгрузок системы управления кампаниями, записей о контактах в CRM и данных об открытии продуктов в автоматизированной банковской системе (АБС) — трёх систем с разными идентификаторами, которые приходится сопоставлять вручную. Ежемесячный отчёт об эффективности занимает у аналитика два-три дня и попадает в цикл коммерческого рассмотрения с опозданием, поэтому мало влияет на разработку кампаний следующего месяца.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент берёт из систем-источников записи о контактах в рамках кампаний, условия предложений и события открытия продуктов, сопоставляет их по идентификатору клиента, рассчитывает конверсию по сегментам и продуктам и готовит стандартный ежемесячный отчёт об эффективности кампаний. Коммерческое руководство рассматривает подготовленный AI-агентом отчёт; при разработке кампаний следующего месяца данные об эффективности используются уже в течение недели после закрытия месяца.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Коммерческое руководство получает ежемесячный отчёт об эффективности кампаний кросс-продаж (конверсия, оформление продуктов по сегментам и влияние на долю кошелька) не позднее недели после закрытия месяца, вовремя для разработки кампаний следующего месяца.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент готовит отчёт об эффективности кампаний не менее чем в 95% плановых ежемесячных циклов на протяжении не менее 12 месяцев подряд после запуска, сопоставляя записи системы управления кампаниями, CRM и АБС.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% отчётов коммерческое руководство принимает без исправлений; доля записей, сопоставленных по идентификатору клиента во всех трёх системах-источниках, ≥98%.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо двух-трёх дней ручного сопоставления у аналитика отчёт готов не позднее недели после закрытия месяца, а его проверка аналитиком занимает ≤2 часа.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/cross-sell-opportunity-identification/next-best-offer-prioritisation" id="scenario-next-best-offer-prioritisation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Приоритизация следующего лучшего предложения</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент еженедельно оценивает склонность клиентов к покупке конкретных продуктов и готовит ранжированный перечень следующих лучших предложений для проведения кампаний и очередей клиентских менеджеров.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Целевые списки для кросс-продаж формируются в периодических циклах планирования кампаний. Клиенты, которые становятся подходящими для кросс-продажи между кампаниями (например, держатель зарплатного счёта, получающий на него зарплату три месяца подряд), остаются без внимания до следующего цикла, а признаки готовности теряют силу раньше, чем по ним начинают действовать.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент еженедельно анализирует данные о продуктах клиентов, их операциях и признаках готовности, оценивает склонность каждого клиента к кросс-продаже по каждому продукту и готовит ранжированный перечень следующих лучших предложений. Руководитель кампаний каждую неделю проверяет предложения из верхней части перечня, прежде чем команды кампаний начнут по нему работать; клиентские менеджеры получают собственные очереди клиентов, а соответствие клиентов условиям предложений пересчитывается каждую неделю.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Еженедельный ранжированный перечень следующих лучших предложений, построенный на оценке склонности к покупке конкретных продуктов по всей активной клиентской базе, доступен для проведения кампаний и очередей клиентских менеджеров.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент готовит ранжированный перечень следующих лучших предложений не менее чем в 95% еженедельных циклов оценки на протяжении не менее 48 недель подряд после запуска.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% предложений из верхней части перечня руководитель кампаний при еженедельной проверке признаёт подходящими для целевого сегмента; конверсия кросс-продаж отслеживается как основной показатель результата.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо ежемесячной пакетной подготовки кампаний ранжированная оценка следующих лучших предложений обновляется автоматически каждую неделю.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/cross-sell-opportunity-identification/propensity-model-cross-sell-insights" id="scenario-propensity-model-cross-sell-insights" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ признаков моделей склонности к кросс-продажам</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент анализирует, какие продукты клиенты принимали и от каких отказывались за последние шесть месяцев, определяет признаки склонности, лучше всего предсказывающие конверсию кросс-продаж, и готовит аналитическую записку для команды data science и коммерческих команд.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Модели склонности к кросс-продажам строятся и валидируются при первом внедрении. Признаки, хорошо предсказывавшие поведение при построении модели, со временем могут терять силу по мере изменения поведения клиентов: признак, который три года назад при зачислении зарплаты предсказывал оформление кредитной карты, может работать хуже после изменения процесса оформления клиентов в цифровых каналах. Анализ признаков модели проводится только при ежегодной перестройке модели и не отражает их дрейфа в течение года.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент берёт результаты предложений за последние шесть месяцев (принятые и отклонённые), анализирует, какие признаки склонности на момент предложения сильнее всего связаны с принятием в нынешней клиентской базе, и готовит записку с ранжированием признаков по значимости и направлением их дрейфа по сравнению с исходной калибровкой модели. Команда data science использует записку, чтобы определить приоритеты следующего обновления модели.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Команда data science и коммерческие команды получают аналитическую записку с ранжированием признаков склонности, лучше всего предсказывавших конверсию кросс-продаж за последние шесть месяцев, и направлением их дрейфа по сравнению с исходной калибровкой модели.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>С момента запуска AI-агент готовит аналитическую записку не менее чем в 90% плановых циклов анализа; записка охватывает все модели склонности к кросс-продажам, работающие в промышленной эксплуатации.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% указанных в записке дрейфов признаков команда data science подтверждает при валидации; записка используется для определения приоритетов в 100% циклов обновления моделей.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо анализа при ежегодной перестройке модели признаки склонности анализируются в записке раз в шесть месяцев.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="product-penetration-depth">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Глубина проникновения продуктов</h2>
+    <p class="l3-section__intent">Число активных продуктовых категорий у одного клиента и распределение этого показателя по клиентской базе — структурная мера доли кошелька в пределах собственной продуктовой линейки Банка. Глубокое проникновение (три и более продуктовые категории на клиента) лучше всего предсказывает удержание клиента и его долгосрочную ценность (CLV). Клиенты с неглубоким проникновением, у которых есть только зарплатный счёт или один кредитный продукт, дают наибольший потенциал роста доли кошелька для программ кросс-продаж. Анализ проникновения продуктов по сегментам показывает, какие сочетания продуктов сильнее всего влияют на удержание и доходы.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/product-penetration-depth/penetration-gap-analysis" id="scenario-penetration-gap-analysis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ пробелов в проникновении продуктов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент еженедельно строит распределение глубины проникновения продуктов по сегментам, выявляет пробелы с наибольшим потенциалом кросс-продаж по парам продуктов и показывает связь удержания с уровнем глубины проникновения.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Глубина проникновения продуктов ежеквартально отражается в отчётности сводным показателем — средним числом продуктов на клиента по сегментам. Распределение за этим средним (сколько клиентов пользуются только одним продуктом, какие сочетания продуктов связаны с удержанием) не раскрывается, и программы кросс-продаж по умолчанию строятся на одном и том же стандартном наборе предложений независимо от картины проникновения.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент еженедельно берёт данные о продуктах клиентов из CRM и автоматизированной банковской системы (АБС) и готовит анализ пробелов в проникновении: долю клиентов на каждом уровне глубины по сегментам, главные пробелы кросс-продаж по парам продуктов и связь удержания с уровнем глубины. Руководители сегментов при ежемесячном рассмотрении подтверждают приоритетные пробелы; коммерческие и продуктовые команды используют результаты, чтобы определить приоритеты кампаний кросс-продаж.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Руководители сегментов и коммерческое руководство еженедельно получают распределение проникновения продуктов с пробелами, дающими наибольший потенциал кросс-продаж по парам продуктов, и связью удержания с уровнем глубины проникновения.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент готовит анализ пробелов в проникновении не менее чем в 95% плановых еженедельных циклов на протяжении не менее 48 недель подряд после запуска.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% выявленных пробелов кросс-продаж руководители сегментов при ежемесячном рассмотрении подтверждают как приоритетные цели; уровень проникновения кросс-продаж по каждой паре продуктов отслеживается как основной показатель результата.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо ежеквартального ручного анализа когорт пробелы в проникновении анализируются автоматически каждую неделю, не позднее 24 часов после обновления данных по сегментам.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/product-penetration-depth/product-penetration-milestone-alert" id="scenario-product-penetration-milestone-alert" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Уведомление о переходе рубежа проникновения продуктов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент еженедельно отслеживает глубину проникновения продуктов по клиентской базе и уведомляет клиентских менеджеров и команды кампаний, когда клиент переходит рубеж глубины — оформляет второй или третий активный продукт, — чтобы своевременно выстроить последовательность следующих предложений.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Рубежи проникновения продуктов — переход клиента от одного активного продукта к двум или от двух к трём — сильный сигнал для выстраивания последовательности следующих предложений: с каждым дополнительным продуктом удержание и долгосрочная ценность клиента (CLV) существенно растут. Эти рубежи не отслеживаются в реальном времени; целевые списки кампаний строятся по снимку глубины проникновения на момент последнего цикла кампании, и время сразу после перехода рубежа упускается.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент еженедельно анализирует события оформления продуктов, выявляет клиентов, перешедших рубеж глубины проникновения за последние семь дней, и направляет клиентским менеджерам и командам кампаний уведомление с текущим набором продуктов клиента и рекомендацией следующего продукта, к которому у клиента наибольшая склонность. Предложения выстраиваются в лучший период после перехода рубежа, а не в следующем цикле кампании.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Клиентские менеджеры и команды кампаний еженедельно получают уведомления о клиентах, перешедших рубеж глубины проникновения за последние семь дней, с текущим набором продуктов и рекомендацией следующего продукта, к которому у клиента наибольшая склонность.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент выявляет переходы рубежей и направляет уведомления не менее чем в 95% еженедельных циклов на протяжении не менее 48 недель подряд после запуска.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>По ≥70% уведомлений следующее предложение сделано не позднее 14 дней; ≥75% рекомендаций следующего продукта команды кампаний при выборочной проверке признают подходящими.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Переход рубежа выявляется не позднее чем через 7 дней, а не по снимку проникновения на момент последнего цикла кампании.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/product-penetration-depth/product-combination-retention-analysis" id="scenario-product-combination-retention-analysis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ удержания по сочетаниям продуктов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент анализирует исторические показатели удержания по сочетаниям продуктов, определяет, какие сочетания из двух и трёх продуктов дают наилучшее удержание и наибольшую долгосрочную ценность клиента (CLV), и готовит записку с рейтингом сочетаний для продуктовой и коммерческой стратегии.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Стратегия кросс-продаж нацелена на оформление отдельных дополнительных продуктов без систематического понимания того, какие сочетания продуктов лучше всего удерживают клиентов. Удерживает ли сочетание «зарплатный счёт + кредитная карта» клиентов существенно лучше, чем «зарплатный счёт + потребительский кредит», и насколько — стандартные аналитические материалы не показывают. Решения о приоритетах продуктов не учитывают различий во влиянии на удержание.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент анализирует историю владения продуктами вместе с результатами удержания за 12 месяцев, рассчитывает показатели удержания и средние значения CLV по сочетаниям продуктов, ранжирует лучшие сочетания из двух и трёх продуктов по превышению удержания над базовым уровнем клиентов с одним продуктом и готовит записку с рейтингом сочетаний. Подразделения продуктовой и коммерческой стратегии используют рейтинг, чтобы выстраивать приоритеты программ кросс-продаж в пользу сочетаний с наилучшим удержанием.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Подразделения продуктовой и коммерческой стратегии получают записку с рейтингом сочетаний из двух и трёх продуктов, которые дают наилучшее удержание и наибольшую CLV сверх базового уровня клиентов с одним продуктом, чтобы определять очерёдность приоритетов программ кросс-продаж.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>С момента запуска AI-агент готовит записку с рейтингом сочетаний не менее чем в 90% плановых циклов обновления; охвачены все сочетания из двух и трёх продуктов, у которых достаточно держателей для сравнения.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% сочетаний из рейтинга подразделения продуктовой и коммерческой стратегии признают обоснованными; рейтинг используется для определения очерёдности приоритетов программ кросс-продаж в ≥75% циклов планирования.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Анализ удержания по сочетаниям продуктов, которого раньше не было в стандартных аналитических материалах, готовится в записке, обновляемой не реже двух раз в год.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="competitor-held-share-estimation">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Оценка доли конкурентов</h2>
+    <p class="l3-section__intent">Оценка того, какая часть финансового кошелька клиента приходится на другие финансовые организации. Долю конкурентов нельзя наблюдать напрямую, но её можно оценить по исходящим платежам, источникам зачисления зарплаты, данным кредитного бюро о продуктах клиента и внешним сравнительным данным о долях рынка. Банки с крупным портфелем розничных депозитов обычно отслеживают уход клиентов, для которых они были основным банком, в рамках оценки риска фондирования.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/competitor-held-share-estimation/competitor-share-movement-monitor" id="scenario-competitor-share-movement-monitor" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг изменения доли конкурентов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Автоматический ежемесячный отчёт об изменении оценочной доли конкурентов по сегментам, который показывает коммерческому руководству и руководству по стратегии, в каких сегментах конкуренты наращивают долю кошелька.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Оценки доли конкурентов готовятся для отбора клиентов в кампании кросс-продаж, но их ежемесячная динамика по сегментам не отслеживается. Наращивает ли конкретный конкурент долю кошелька в ключевом сегменте МСБ (это видно по росту исходящих платежей в эту организацию), становится известно лишь через несколько месяцев, когда это подтверждает ежегодное заказное исследование долей рынка.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент берёт ежемесячные результаты оценки доли конкурентов, рассчитывает оценку доли конкурентов по каждому сегменту и направление её изменения за месяц и готовит отчёт об изменении доли конкурентов. Коммерческое руководство и руководство по стратегии рассматривают этот ежемесячный сигнал; в сегментах, где конкуренты наращивают долю кошелька, коммерческие меры получают приоритет в программе следующего месяца.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Коммерческое руководство и руководство по стратегии ежемесячно получают отчёт об оценочной доле конкурентов по сегментам и направлении её изменения за месяц с указанием сегментов, где конкуренты наращивают долю кошелька.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент готовит отчёт об изменении доли конкурентов не менее чем в 95% плановых ежемесячных циклов на протяжении не менее 12 месяцев подряд после запуска; отчёт охватывает все сегменты.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% сегментов, отмеченных как сегменты роста конкурентов, коммерческое руководство и руководство по стратегии при ежемесячном рассмотрении признают требующими коммерческих мер.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Рост доли кошелька у конкурентов виден в ежемесячном отчёте, а не только в ежегодном заказном исследовании долей рынка.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/competitor-held-share-estimation/high-share-customer-targeting-brief" id="scenario-high-share-customer-targeting-brief" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подборка клиентов с высокой долей конкурентов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент выявляет на каждом уровне долгосрочной ценности клиента (CLV) верхний дециль клиентов по оценочной доле конкурентов и готовит для клиентских менеджеров подборку, в которой указаны наиболее вероятная категория продукта, оформленного у конкурента, и рекомендуемое первое предложение.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Оценки доли конкурентов есть на уровне портфеля, но не используются, чтобы определять для клиентских менеджеров приоритеты по отдельным клиентам. Клиентский менеджер, ведущий 200 клиентов, не может без специального запроса определить, у каких 20 из них доля конкурентов даёт наибольшую возможность; поэтому он по умолчанию связывается с теми, кого знает лучше, а не с теми, у кого возможность наибольшая.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент берёт оценки доли конкурентов по каждому клиенту и распределение клиентов по уровням CLV, выделяет на каждом уровне CLV верхний дециль по доле конкурентов и готовит для клиентских менеджеров ежемесячную подборку, где для каждого клиента указаны предполагаемая категория продукта, оформленного у конкурента, и рекомендуемое предложение для первого разговора. Клиентские менеджеры определяют очерёдность контактов по подборке, подготовленной AI-агентом.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Клиентские менеджеры ежемесячно получают подборку клиентов из верхнего дециля по оценочной доле конкурентов на каждом уровне CLV с наиболее вероятной категорией продукта, оформленного у конкурента, и рекомендуемым первым предложением.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент готовит подборку не менее чем в 95% плановых ежемесячных циклов на протяжении не менее 12 месяцев подряд после запуска; подборка охватывает клиентов всех клиентских менеджеров.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>С ≥70% клиентов из подборки клиентские менеджеры связываются в течение месяца; в ≥75% контактов рекомендуемое предложение признаётся подходящим.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Клиенты с наибольшей возможностью в портфеле клиентского менеджера выявляются в ежемесячной подборке, а не специальным запросом по требованию.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/wallet-share/competitor-held-share-estimation/competitor-share-inference-model" id="scenario-competitor-share-inference-model" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Модель оценки доли конкурентов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент оценивает долю кошелька каждого клиента, приходящуюся на конкурентов, по исходящим платежам, источникам зачисления зарплаты и данным кредитного бюро о продуктах клиента и готовит ранжированный перечень возможностей для коммерческих кампаний.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Долю финансового кошелька клиента, приходящуюся на конкурентов, нельзя наблюдать напрямую. Коммерческие команды исходят из того, что у клиентов, для которых Банк дополнительный, часть кошелька приходится на конкурентов, но не могут оценить эту долю по каждому клиенту. Без такой оценки при расстановке приоритетов кросс-продаж нельзя отличить клиента с долей конкурентов 60% от клиента с долей 15%, хотя коммерческая возможность в первом случае в четыре раза больше.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент анализирует получателей исходящих платежей, источники зачисления зарплаты, отметки кредитного бюро о продуктах клиента (если они доступны) и динамику остатков на счетах и строит оценку доли конкурентов по каждому клиенту. Клиенты ранжируются по оценочной доле конкурентов внутри своего уровня долгосрочной ценности клиента (CLV), и получается перечень приоритетов для кросс-продаж, упорядоченный по возможности роста доли кошелька. Коммерческие команды сосредоточивают контакты на когорте с наибольшей возможностью.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Для каждого клиента есть оценка доли кошелька, приходящейся на конкурентов (по исходящим платежам, зачислениям зарплаты, данным кредитного бюро и динамике остатков), а коммерческие команды получают перечень приоритетов для кросс-продаж, ранжированный по этой оценке внутри уровня CLV.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>AI-агент оценивает долю конкурентов по каждому клиенту не менее чем для 90% активной клиентской базы в каждом ежемесячном цикле на протяжении не менее 12 месяцев подряд после запуска.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% клиентов из верхней части перечня коммерческие команды при контакте или выборочной проверке подтверждают как имеющих существенные продукты у конкурентов.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Доля конкурентов по каждому клиенту, которая раньше не оценивалась, рассчитывается ежемесячно, а ранжированный перечень готов не позднее недели после закрытия месяца.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+</div>

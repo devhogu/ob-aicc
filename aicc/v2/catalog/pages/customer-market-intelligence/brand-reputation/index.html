@@ -1,0 +1,717 @@
+<!--page {"id": "catalog/customer-market-intelligence/brand-reputation", "title": "Бренд и репутация", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css", "layouts/concern-l2.css"], "summary": "Работа с брендом и репутацией — это отслеживание того, как Банк воспринимают общество, регулятор и клиенты. Репутация — нематериальный актив: от неё зависят доверие клиентов, привлекательность Банка как работодателя и бл"} -->
+<div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Каталог сценариев</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Клиентская и рыночная аналитика</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Бренд и репутация</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Бренд и репутация</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Работа с брендом и репутацией — это отслеживание того, как Банк воспринимают общество, регулятор и клиенты. Репутация — нематериальный актив: от неё зависят доверие клиентов, привлекательность Банка как работодателя и благожелательность регулятора, которая влияет на то, как он пользуется надзорным усмотрением. В надзорной практике репутационный риск обычно относят к существенным, а репутационные события, связанные с ненадлежащим поведением, прямо влекут надзорные последствия. Доверие к бренду банка хрупко: один резонансный случай ненадлежащего поведения или сбой обслуживания, раздутый в социальных сетях, способен за несколько дней существенно изменить показатели привлечения и удержания клиентов. <strong>Генеративный AI позволяет непрерывно отслеживать репутацию по всем публичным сигналам</strong> — от социальных сетей до регуляторной отчётности — и выявлять репутационные угрозы, пока они не вышли из-под контроля.</p>
+</header>
+<div id="main-content" class="l3-sections" aria-label="Подразделы">
+<section class="l3-section" id="net-promoter-brand-equity-tracking">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Отслеживание NPS и капитала бренда</h2>
+    <p class="l3-section__intent">Отслеживание в динамике индекса потребительской лояльности (NPS), узнаваемости бренда и оценок капитала бренда — систематическое измерение того, как клиенты воспринимают Банк и готовы ли они его рекомендовать. Капитал бренда — сводный показатель известности, ассоциаций, лояльности и отличия от конкурентов; NPS — единичный косвенный показатель, который финансовые организации чаще всего включают в отчётность для советов директоров.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/net-promoter-brand-equity-tracking/nps-brand-equity-board-report" id="scenario-nps-brand-equity-board-report" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Отчёт для Совета директоров по NPS и капиталу бренда</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент без ручной сборки готовит раздел ежеквартальных материалов для Совета директоров по NPS и капиталу бренда на основе данных опросов, исследований и тональности в социальных сетях, оформляет его по стандарту отчётности для Совета директоров и передаёт на рассмотрение секретарю Совета директоров.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Раздел материалов для Совета директоров по NPS и капиталу бренда каждый квартал собирается вручную из результатов опросов, исследовательских отчётов и данных маркетинговой службы. Структура раздела стандартна — текущее значение, динамика, комментарий о факторах, сравнение с банками-аналогами, — но в каждом цикле его собирают заново. Сборка занимает три-четыре рабочих дня аналитиков и маркетинговой службы и создаёт напряжение со сроками при подготовке материалов для Совета директоров.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент ежеквартально анализирует данные опросов, исследовательские материалы и косвенные показатели тональности в социальных сетях, применяет стандартную структуру отчётности для Совета директоров и готовит раздел материалов по NPS и капиталу бренда. Секретарь Совета директоров получает проект раздела на рассмотрение; ручная сборка и согласование между подразделениями больше не нужны, а раздел готов не позднее двух дней после завершения сбора данных опросов.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Каждый квартал секретарь Совета директоров получает проект раздела материалов по NPS и капиталу бренда (текущее значение, динамика, комментарий о факторах, сравнение с банками-аналогами), оформленный по стандарту отчётности для Совета директоров, не позднее двух дней после завершения сбора данных опросов.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент готовит проект раздела в 100% ежеквартальных циклов подготовки материалов для Совета директоров на протяжении не менее четырёх кварталов подряд.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% проектов раздела секретарь Совета директоров принимает без правок или с незначительными правками.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сборка раздела занимает не более двух дней после завершения сбора данных опросов вместо трёх-четырёх рабочих дней работы аналитиков и маркетинговой службы.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/net-promoter-brand-equity-tracking/nps-brand-equity-dashboard" id="scenario-nps-brand-equity-dashboard" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Дашборд NPS и капитала бренда</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент сводит значения NPS, данные опросов об узнаваемости бренда и сводные показатели капитала бренда в единый ежемесячный дашборд для Совета директоров и высшего руководства с комментарием о динамике и разбивкой по сегментам.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>NPS отслеживает служба клиентского опыта, показатели узнаваемости и капитала бренда ведёт маркетинговая служба, а сводные показатели для отчётности Совету директоров собираются из обоих источников вручную. Совет директоров получает в ежеквартальных материалах объединённый показатель бренда, который готовится ручным согласованием между двумя подразделениями с разными источниками данных и разной периодичностью.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент берёт значения NPS из платформы опросов, показатели узнаваемости и капитала бренда из исследовательских данных и готовит объединённый ежемесячный дашборд с комментарием о динамике и разбивкой по сегментам. Служба клиентского опыта и маркетинговая служба сверяют его со своими исходными данными. Раздел ежеквартальных материалов Совета директоров о бренде и NPS готовится на основе результатов AI-агента; ручное согласование между подразделениями заменяется общим потоком данных.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Совет директоров и высшее руководство пользуются единым ежемесячным дашбордом, который объединяет значения NPS, данные об узнаваемости бренда и сводные показатели капитала бренда, содержит комментарий о динамике и разбивку по сегментам и служит источником для ежеквартального раздела материалов Совета директоров.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент готовит объединённый дашборд не менее чем в 95% плановых ежемесячных циклов на протяжении не менее 12 месяцев подряд.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% дашбордов служба клиентского опыта и маркетинговая служба подтверждают как соответствующие их исходным данным.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо ежеквартального ручного согласования между двумя подразделениями объединённые показатели бренда ежемесячно выводятся на дашборд из общего потока данных.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/net-promoter-brand-equity-tracking/nps-brand-equity-peer-benchmark" id="scenario-nps-brand-equity-peer-benchmark" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сравнение NPS и капитала бренда с банками-аналогами</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент сводит общедоступные отраслевые значения NPS и косвенные показатели капитала бренда по группе банков-аналогов на рынке Банка и ежеквартально готовит для руководителей по стратегии и маркетингу справку об относительной позиции Банка.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Значения NPS и капитала бренда Банк измеряет собственными опросами. Позицию относительно банков-аналогов оценивают по отраслевым сравнительным отчётам, которые заказываются раз в год и обходятся недёшево. Между годовыми отчётами руководство не может оценить, укрепляется или ослабевает позиция бренда Банка по сравнению с аналогами.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент ежеквартально анализирует опубликованные в отраслевых отчётах значения NPS, оценки приложений в магазинах приложений как косвенный показатель капитала бренда и сравнительную динамику тональности в социальных сетях по группе банков-аналогов и готовит справку об относительной позиции. Руководители по стратегии и маркетингу оценивают конкурентную позицию бренда ежеквартально, а не раз в год; ежегодное заказное исследование служит для проверки системы косвенных показателей и перестаёт быть единственным источником.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Руководители по стратегии и маркетингу ежеквартально получают справку об относительной позиции, в которой NPS и косвенные показатели капитала бренда Банка сравниваются с группой банков-аналогов на основе опубликованных отраслевых данных, оценок в магазинах приложений и динамики тональности в социальных сетях.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент готовит справку об относительной позиции не менее чем в 90% плановых ежеквартальных циклов на протяжении не менее четырёх кварталов подряд, охватывая всю установленную группу банков-аналогов.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% оценок относительной позиции руководители по стратегии и маркетингу признают совпадающими по направлению с ежегодным заказным сравнительным отчётом.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Позиция бренда относительно банков-аналогов оценивается ежеквартально, а не только по ежегодным заказным отчётам.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="reputational-risk-early-warning">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Раннее предупреждение о репутационном риске</h2>
+    <p class="l3-section__intent">Сводный сигнал раннего предупреждения о репутационном риске объединяет динамику тональности в социальных сетях, характер эскалации жалоб, объём переписки с регулятором и изменения тона СМИ в единый опережающий индикатор для Совета директоров и высшего руководства. Репутационный риск не тождествен событию, которое его вызывает: сигнал раннего предупреждения — это не само событие, а сочетание признаков, которые предшествуют существенному репутационному ущербу. В надзорной практике репутационный риск обычно формально выделяется как отдельный вид риска, и от Совета директоров ожидают контроля за систематическим мониторингом этого риска.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/reputational-risk-early-warning/reputational-risk-composite-automation" id="scenario-reputational-risk-composite-automation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Автоматический расчёт сводного показателя репутационного риска</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент еженедельно рассчитывает для директора по рискам сводный показатель репутационного риска: без ручного агрегирования сводит сигналы тональности в социальных сетях, эскалации жалоб, тона СМИ и объёма переписки с регулятором и оформляет результат в формате материалов для Совета директоров.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Для Совета директоров сводный показатель репутационного риска раз в квартал собирается вручную из данных четырёх подразделений. Еженедельная версия, которая нужна директору по рискам для постоянного мониторинга, зависит от того, готовит ли каждое подразделение свои данные еженедельно, а этого регулярно не происходит. Директор по рискам получает сводный сигнал раз в квартал, а в промежуточные недели ситуация отслеживается в неформальных разговорах с подразделениями, без структурированной картины.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент еженедельно анализирует данные о тональности в социальных сетях, эскалации жалоб, тоне СМИ и объёме переписки с регулятором, применяет методологию расчёта сводного показателя и автоматически готовит на рассмотрение директору по рискам еженедельную справку и ежеквартальный раздел материалов для Совета директоров. AI-агент получает данные каждого подразделения напрямую; ручное агрегирование заменяется автоматическим расчётом.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Директор по рискам еженедельно получает сводный показатель репутационного риска, а раз в квартал — раздел материалов для Совета директоров; и то и другое собирается из сигналов тональности в социальных сетях, эскалации жалоб, тона СМИ и объёма переписки с регулятором без ручного агрегирования.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент готовит еженедельную справку для директора по рискам не менее чем в 95% недель на протяжении не менее 48 недель подряд, а раздел материалов для Совета директоров — в 100% ежеквартальных циклов.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% еженедельных справок директор по рискам принимает без исправления исходных сигналов.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сводный показатель рассчитывается автоматически каждую неделю, а не собирается вручную раз в квартал из данных четырёх подразделений.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/reputational-risk-early-warning/reputation-risk-composite-signal" id="scenario-reputation-risk-composite-signal" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сводный сигнал репутационного риска</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент объединяет сигналы тональности в социальных сетях, эскалации жалоб, объёма переписки с регулятором и тона СМИ в еженедельный сводный показатель репутационного риска с разложением по факторам для директора по рискам и Совета директоров.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Репутационный риск отслеживается по отдельным сигналам в разных подразделениях: служба коммуникаций следит за социальными сетями, служба комплаенс-контроля — за жалобами, подразделение по правовым вопросам — за перепиской с регулятором, но сводной картины нет. Совет директоров раз в квартал получает описание репутационного риска, собранное вручную из материалов четырёх подразделений без единой системы сигналов.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент анализирует сигналы тональности в социальных сетях, эскалации жалоб, объёма переписки с регулятором и тона СМИ, рассчитывает сводный показатель репутационного риска с разложением по факторам и готовит еженедельную справку для директора по рискам и ежеквартальные материалы для Совета директоров. Директор по рискам раз в квартал проверяет разложение по факторам; комитет по рискам получает сводную картину, подготовленную AI-агентом, вместо четырёх отдельных описаний от подразделений.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Еженедельный сводный показатель репутационного риска, объединяющий сигналы тональности в социальных сетях, эскалации жалоб, объёма переписки с регулятором и тона СМИ, вместе с разложением по факторам поступает директору по рискам и Совету директоров в установленные сроки отчётности.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент рассчитывает сводный показатель репутационного риска и его разложение по факторам не менее чем в 98% еженедельных циклов на протяжении не менее 48 недель подряд.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% разложений сводного показателя по факторам директор по рискам при ежеквартальной проверке подтверждает как верные по направлению.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сводный сигнал репутационного риска рассчитывается автоматически каждую неделю не позднее 24 часов после обновления данных, а не собирается вручную раз в квартал из разных источников.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/reputational-risk-early-warning/reputational-risk-scenario-brief" id="scenario-reputational-risk-scenario-brief" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сценарная справка по репутационному риску</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент ежеквартально готовит для комитета по рискам прогнозную справку о сценариях репутационного риска: по динамике сводных сигналов он определяет два-три наиболее вероятных репутационных события следующего квартала и признаки, которые, вероятно, будут им предшествовать.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Мониторинг репутационного риска обращён в прошлое: он сообщает о сигналах, которые уже изменились. Комитет по рискам видит текущее состояние сигналов, но не получает структурированной оценки того, какие сценарии репутационного риска наиболее вероятны в следующем квартале при текущей динамике сигналов. Между тем требования и рекомендации регулятора обычно предусматривают прогнозную оценку репутационного риска во внутренней процедуре оценки достаточности капитала (ICAAP) и в системе риск-аппетита.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент анализирует динамику сводных сигналов, применяет методику оценки вероятности сценариев, откалиброванную на прошлых репутационных событиях в банковском секторе, определяет два-три наиболее вероятных сценария следующего квартала и готовит проект сценарной справки для комитета по рискам. Комитет рассматривает подготовленные AI-агентом сценарии в качестве постоянного пункта повестки; справка заменяет разовое описание, которое раньше готовилось в спешке.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Комитет по рискам ежеквартально получает прогнозную справку о двух-трёх наиболее вероятных репутационных событиях следующего квартала и признаках, которые, вероятно, будут им предшествовать.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент готовит проект сценарной справки к 100% ежеквартальных заседаний комитета по рискам на протяжении не менее четырёх кварталов подряд.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% справок комитет по рискам принимает в качестве постоянного пункта повестки без правок или с незначительными правками.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо разового описания, подготовленного в спешке, прогнозная оценка репутационного риска поступает в виде ежеквартальной справки не позднее чем за неделю до заседания комитета.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="social-media-sentiment">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Тональность в социальных сетях и СМИ</h2>
+    <p class="l3-section__intent">Непрерывный мониторинг упоминаний бренда, оценок тональности и тем обсуждения в социальных сетях и новостных источниках — канал, по которому восприятие бренда видно в реальном времени. Тональность в социальных сетях и СМИ опережает NPS: вирусное негативное событие в социальных сетях обычно на 4–6 недель опережает снижение NPS, измеренное опросами. Во многих странах основными площадками для обсуждения банков служат мессенджеры и местные социальные сети; для их мониторинга нужны средства обработки текстов на местных языках (NLP).</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/social-media-sentiment/social-media-brand-monitoring" id="scenario-social-media-brand-monitoring" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг бренда в социальных сетях и СМИ</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент ежедневно отслеживает упоминания бренда в социальных сетях и новостных каналах и сообщает руководству службы коммуникаций об изменениях тональности, всплесках упоминаний и новых негативных темах до того, как обсуждение достигнет пика.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Мониторинг бренда в социальных сетях и СМИ опирается на коммерческие инструменты мониторинга, которые выдают показатели объёма упоминаний и тональности, но для выводов, применимых на практике, их приходится интерпретировать вручную. Негативные темы, которые набирают силу от трёх до пяти дней до пика, выявляются, когда они уже стали существенными, и времени на упреждающую реакцию остаётся меньше. Для мессенджеров и местных социальных сетей нужна обработка текстов на местных языках, которой большинство коммерческих инструментов не обеспечивает.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент ежедневно отслеживает социальные сети (мессенджеры, местные социальные сети и глобальные платформы) и новостные источники, группирует упоминания бренда по тональности и темам, отмечает всплески упоминаний и ускорение негативных тем и готовит ежедневную справку для руководства службы коммуникаций. Подготовка к упреждающей реакции начинается до того, как негативная тема достигнет пика.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Ежедневные результаты мониторинга бренда — изменения тональности, всплески упоминаний и новые негативные темы в социальных сетях и новостных каналах — поступают руководству службы коммуникаций до того, как новые сигналы достигнут пика.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>С момента запуска AI-агент готовит ежедневные результаты мониторинга бренда не менее чем в 98% запланированных календарных дней.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% отмеченных изменений тональности и новых тем при еженедельной выборочной проверке признаются требующими внимания руководства службы коммуникаций.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо периодического ручного просмотра социальных сетей и прессы сигналы о бренде отслеживаются автоматически каждый день, а результаты поступают в тот же день.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/social-media-sentiment/sentiment-crisis-threshold-alert" id="scenario-sentiment-crisis-threshold-alert" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Предупреждение о достижении кризисного порога тональности</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент в реальном времени отслеживает скорость изменения тональности в социальных сетях, направляет руководству службы коммуникаций предупреждение об эскалации, когда тональность ухудшается быстрее кризисного порога, и заранее подбирает соответствующую справку по антикризисным коммуникациям.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежедневная справка по мониторингу социальных сетей выявляет новые негативные темы, но формального механизма эскалации, привязанного к скорости изменения тональности, в ней нет. Руководство службы коммуникаций распознаёт возможный кризис, когда ухудшение тональности уже видно в агрегированном показателе, — обычно через два-три дня после момента, когда упреждающая реакция была бы наиболее эффективной. Требования к добросовестному поведению на рынке обычно предполагают задокументированную реакцию на существенные репутационные события в установленные сроки.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент в реальном времени отслеживает скорость изменения тональности в социальных сетях, сравнивает текущий темп ухудшения с заданным кризисным порогом и в момент его превышения направляет руководству службы коммуникаций предупреждение об эскалации. В предупреждении указаны текущая динамика тональности, тема, вызвавшая ухудшение, и ссылка на соответствующую заранее подготовленную справку по антикризисным коммуникациям из библиотеки.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Руководство службы коммуникаций получает предупреждение об эскалации в тот момент, когда скорость ухудшения тональности в социальных сетях превышает кризисный порог; в предупреждении указаны динамика тональности, тема, вызвавшая ухудшение, и ссылка на заранее подготовленную справку по антикризисным коммуникациям.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>С момента запуска AI-агент непрерывно сравнивает скорость изменения тональности с кризисным порогом; мониторинг доступен не менее 99% часов каждого месяца.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥70% предупреждений об эскалации руководство службы коммуникаций при разборе после события признаёт требующими мер антикризисной готовности.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Возможный кризис тональности распознаётся не позднее чем через час после превышения порога, а не через два-три дня, как раньше.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/social-media-sentiment/social-sentiment-competitor-comparison" id="scenario-social-sentiment-competitor-comparison" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сравнение тональности в социальных сетях с конкурентами</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент ежемесячно сравнивает динамику тональности в отношении Банка в социальных сетях с группой банков-аналогов, определяет, касаются ли изменения тональности только Банка или всего сектора, и готовит справку об относительной позиции для руководителей по коммуникациям и стратегии.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Мониторинг тональности в социальных сетях показывает тональность в отношении Банка без контекста. Ухудшение тональности, касающееся только Банка, выглядит иначе, чем общее для сектора ухудшение после объявления регулятора или отраслевого события, но текущие результаты мониторинга эти случаи не различают. Между тем на события, касающиеся только Банка, нужно реагировать иначе, чем на изменения тональности во всём секторе.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент ежемесячно анализирует данные о тональности в социальных сетях по Банку и группе банков-аналогов, рассчитывает относительную позицию и направление изменения тональности по каждому банку и готовит сравнительную справку, в которой факторы, касающиеся только Банка, отделены от общих для сектора. Руководство службы коммуникаций выбирает линию реагирования в зависимости от того, носит ли изменение частный или системный характер.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Руководители по коммуникациям и стратегии ежемесячно получают сравнительную справку, которая показывает позицию Банка по тональности в социальных сетях относительно группы банков-аналогов и отделяет изменения, касающиеся только Банка, от общих для сектора.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент готовит сравнительную справку не менее чем в 95% плановых ежемесячных циклов на протяжении не менее 12 месяцев подряд, охватывая всю установленную группу банков-аналогов.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% случаев отнесения изменений к касающимся только Банка или общим для сектора руководство службы коммуникаций при рассмотрении подтверждает как верные.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Сравнение изменений тональности с банками-аналогами, которого раньше не было, поступает в виде ежемесячной справки не позднее пяти рабочих дней после окончания месяца.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="crisis-communication-readiness">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Готовность к антикризисным коммуникациям</h2>
+    <p class="l3-section__intent">Заблаговременная подготовка схем реагирования, библиотек ключевых сообщений и шаблонов обращений к заинтересованным сторонам для наиболее вероятных сценариев репутационного кризиса — именно она определяет, ответит ли Банк на событие за часы или за дни. Типичные кризисные сценарии в банковской деятельности: утечка данных, крупный сбой обслуживания, меры воздействия регулятора, мошенничество или проступок сотрудника и жалоба, широко разошедшаяся в социальных сетях. Рекомендации надзорных органов обычно предусматривают, что поднадзорные организации ведут задокументированные планы антикризисных коммуникаций.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/crisis-communication-readiness/stakeholder-communication-readiness-check" id="scenario-stakeholder-communication-readiness-check" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка готовности коммуникаций с заинтересованными сторонами</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент ежеквартально проверяет готовность контактных списков для антикризисных коммуникаций, порядка эскалации и учётных данных для доступа к каналам и готовит отчёт о выявленных пробелах для службы коммуникаций и подразделения по обеспечению непрерывности деятельности.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Готовность к антикризисным коммуникациям зависит от актуальности контактных списков заинтересованных сторон, порядка эскалации и учётных данных для доступа к каналам. Всё это со временем устаревает: меняются сотрудники, платформы обновляют порядок доступа, у регулятора меняются контактные лица. Служба коммуникаций проверяет эти сведения вручную, когда кризис уже наступил, и нередко обнаруживает пробелы в самый неподходящий момент.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент сверяет контактные списки заинтересованных сторон для антикризисных коммуникаций с текущими данными кадрового учёта, проверяет порядок эскалации на соответствие задокументированной иерархии согласований и отмечает учётные данные для доступа к каналам, которые нужно обновить. Для службы коммуникаций и подразделения по обеспечению непрерывности деятельности готовится ежеквартальный отчёт о пробелах в готовности; служба коммуникаций подтверждает пробелы, и их устраняют при ежеквартальной проверке, а не обнаруживают во время реального события.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Служба коммуникаций и подразделение по обеспечению непрерывности деятельности ежеквартально получают отчёт о пробелах в готовности контактных списков для антикризисных коммуникаций, порядка эскалации и учётных данных для доступа к каналам, чтобы устранить пробелы до реального события.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент проводит проверку готовности в 100% плановых ежеквартальных циклов на протяжении не менее четырёх кварталов подряд и сверяет каждый контактный список с текущими данными кадрового учёта.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥90% выявленных пробелов служба коммуникаций подтверждает как действительные; ≥90% подтверждённых пробелов устраняются до следующей ежеквартальной проверки.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо ручной проверки в момент кризиса готовность проверяется ежеквартально с отчётом о пробелах.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/crisis-communication-readiness/crisis-response-brief-generator" id="scenario-crisis-response-brief-generator" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка антикризисной справки</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент по запросу готовит антикризисную справку для события определённого типа — ключевые сообщения, формулировки для клиентов, проект уведомления надзорного органа и указания по модерации в социальных сетях — и передаёт её на рассмотрение службе коммуникаций и подразделению по правовым вопросам.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Схемы антикризисного реагирования существуют в виде общих шаблонов. Когда происходит конкретное событие — сбой обслуживания, инцидент с данными, меры воздействия регулятора, — нужную схему приходится найти, адаптировать, согласовать с подразделением по правовым вопросам и утвердить у высшего руководства. Когда общие шаблоны дорабатывают в спешке, сообщения получаются несогласованными.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент ведёт библиотеку схем реагирования на кризисные сценарии с параметрами по типу события, степени серьёзности и затронутому продукту. Когда кризисный сигнал обнаружен или кризис объявлен, AI-агент готовит конкретную справку с ключевыми сообщениями, формулировками для клиентов, проектом уведомления надзорного органа и указаниями по модерации в социальных сетях и передаёт её на рассмотрение службе коммуникаций и подразделению по правовым вопросам. Руководство получает на утверждение конкретный проект, а не общий шаблон.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Антикризисная справка с ключевыми сообщениями, формулировками для клиентов, проектом уведомления надзорного органа и указаниями по модерации в социальных сетях поступает на рассмотрение службе коммуникаций и подразделению по правовым вопросам не позднее 30 минут после отнесения события к установленному классу.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>С момента запуска AI-агент готовит антикризисную справку не позднее 30 минут после классификации не менее чем для 90% событий, отнесённых к классу выше установленного порога серьёзности.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% антикризисных справок, по данным разбора после события, руководитель службы коммуникаций утверждает без правок или с незначительными правками.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Подготовка первой антикризисной справки занимает не более 30 минут на рассмотрение и утверждение проекта AI-агента вместо 2–4 часов ручной подготовки в условиях кризиса.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/crisis-communication-readiness/crisis-scenario-library-audit" id="scenario-crisis-scenario-library-audit" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Проверка актуальности библиотеки кризисных сценариев</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент ежеквартально анализирует библиотеку сценариев антикризисных коммуникаций, оценивает актуальность каждого шаблона с учётом недавних событий в банковском секторе и отмечает сценарии, которые нужно обновить или добавить, для рассмотрения службой коммуникаций и подразделением по правовым вопросам.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Шаблоны антикризисных коммуникаций обновляются, когда происходит кризис или когда библиотеку просматривает один из руководителей службы коммуникаций. Сценарии, которые не проверялись реальным событием, — утечка данных у банка-партнёра, санкционное событие с трансграничными последствиями, — копятся без пересмотра, пока не понадобятся в спешке. Надзорные требования к управлению кризисами обычно предписывают организациям вести задокументированные и актуальные планы антикризисных коммуникаций.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент ежеквартально проверяет каждый шаблон сценария по контрольному списку актуальности: соответствие действующему регулированию, согласованность с недавними событиями в банковском секторе, полнота перечня заинтересованных сторон и структуры сообщений. Шаблоны, которые нужно обновить, отмечаются с конкретным описанием пробела; новые сценарии, выявленные по недавним событиям в секторе, готовятся в виде проектов дополнений и передаются на рассмотрение службе коммуникаций и подразделению по правовым вопросам.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Служба коммуникаций и подразделение по правовым вопросам ежеквартально получают результаты проверки библиотеки сценариев антикризисных коммуникаций: каждый шаблон, который нужно обновить, отмечен с конкретным описанием пробела, а новые сценарии по недавним событиям в секторе подготовлены в виде проектов дополнений.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент проверяет 100% шаблонов сценариев по контрольному списку актуальности на протяжении не менее четырёх кварталов подряд.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% отмеченных пробелов в шаблонах служба коммуникаций и подразделение по правовым вопросам подтверждают как требующие обновления; ≥60% подготовленных новых сценариев включаются в библиотеку.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо обновления после кризиса или от случая к случаю по инициативе руководства библиотека проверяется ежеквартально.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="conduct-complaint-signals">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Жалобы как сигналы поведенческого риска</h2>
+    <p class="l3-section__intent">Отслеживание того, как развивается эскалация жалоб, — динамики их числа, жалоб, поступивших через регулятора, жалоб, освещённых в СМИ, и итогов рассмотрения — как опережающих индикаторов репутационного и поведенческого риска. Рост числа жалоб по конкретному продукту обычно привлекает внимание органов поведенческого надзора раньше, чем перерастает в репутационное событие. Если сигналы жалоб своевременно доводятся до руководства, Банк может заранее начать диалог с регулятором, а не реагировать постфактум.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/conduct-complaint-signals/product-complaint-concentration-analysis" id="scenario-product-complaint-concentration-analysis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Анализ концентрации жалоб по продуктам</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент анализирует число жалоб относительно размера действующего портфеля по категориям продуктов и выявляет продукты с непропорционально высокой концентрацией жалоб; это служит основанием для анализа поведенческого риска.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Число жалоб по продуктам отражается в абсолютных значениях. Продукт со 150 жалобами при базе в 50 000 клиентов и продукт со 150 жалобами при базе в 5 000 клиентов имеют существенно разный профиль поведенческого риска, но в таблице числа жалоб выглядят одинаково. В поведенческом надзоре эскалацию поведенческого риска обычно запускает частота жалоб относительно размера портфеля, а не их абсолютное число.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент ежемесячно анализирует число жалоб по категориям продуктов и число клиентов с действующими продуктами, рассчитывает частоту жалоб на тысячу активных клиентов по каждому продукту и отмечает продукты, где частота превышает пороговое значение, для анализа поведенческого риска. Служба комплаенс-контроля и директор по рискам ежемесячно получают анализ концентрации; продукты с повышенной частотой жалоб передаются на анализ первопричин до того, как поступит запрос регулятора.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Служба комплаенс-контроля и директор по рискам ежемесячно получают анализ концентрации с частотой жалоб на тысячу активных клиентов по каждому продукту; продукты с частотой выше пороговой отмечены для анализа поведенческого риска.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент готовит анализ концентрации не менее чем в 95% плановых ежемесячных циклов на протяжении не менее 12 месяцев подряд, охватывая все категории продуктов.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% отмеченных продуктов служба комплаенс-контроля подтверждает как требующие анализа первопричин.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо абсолютного числа жалоб в отчётности ежемесячно представляется анализ частоты жалоб не позднее пяти рабочих дней после закрытия месяца.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/conduct-complaint-signals/complaint-escalation-pattern-monitor" id="scenario-complaint-escalation-pattern-monitor" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Мониторинг эскалации жалоб</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент еженедельно отслеживает число жалоб по продуктам и каналам, выявляет признаки эскалации — ускорение роста числа жалоб, увеличение доли жалоб, поступивших через регулятора, темы жалоб, освещаемые в СМИ, — и направляет директору по рискам и руководству службы комплаенс-контроля предупреждение о поведенческом риске.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Признаки эскалации жалоб, указывающие на нарастающий поведенческий риск, выявляются в рамках стандартного рассмотрения жалоб, по итогам которого готовятся ежемесячные сводки за прошедший период. Двукратный рост числа жалоб по продукту за шесть недель при растущей доле жалоб, поступивших через регулятора, — как раз тот сигнал, который предшествует разговору с надзорным органом, но при нынешней периодичности отчётности он не выявляется вовремя, чтобы Банк успел начать диалог первым.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент еженедельно анализирует данные системы работы с жалобами, отслеживает динамику числа жалоб по продуктам и каналам, долю жалоб, поступивших через регулятора, и темы жалоб в СМИ и направляет предупреждение о поведенческом риске, когда появляются признаки эскалации. Служба комплаенс-контроля и директор по рискам получают предупреждение до того, как ситуация станет формальным поводом для надзорных мер, и Банк может заранее начать диалог с регулятором.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Директор по рискам и руководство службы комплаенс-контроля получают предупреждение о поведенческом риске, как только появляются признаки эскалации жалоб (ускорение роста их числа, увеличение доли жалоб, поступивших через регулятора, или темы жалоб, освещаемые в СМИ), — вовремя, чтобы заранее начать диалог с регулятором.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>После запуска AI-агент проверяет данные о жалобах по продуктам и каналам на признаки эскалации не менее чем в 95% еженедельных циклов на протяжении не менее 48 недель подряд.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥75% предупреждений о поведенческом риске руководство службы комплаенс-контроля подтверждает как требующие мер.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Вместо ежемесячных сводок за прошедший период признаки эскалации отслеживаются еженедельно, а предупреждение направляется не позднее двух рабочих дней после их появления.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:customer-market-intelligence/brand-reputation/conduct-complaint-signals/conduct-signal-regulator-report-prep" id="scenario-conduct-signal-regulator-report-prep" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка отчётности для поведенческого надзора</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент собирает структурированные данные о жалобах, которые нужны для периодической отчётности в рамках поведенческого надзора, и по исходным данным предварительно заполняет форму, установленную регулятором, для проверки и утверждения службой комплаенс-контроля.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Требования поведенческого надзора обычно предусматривают периодическую отчётность о жалобах в структурированном формате. Служба комплаенс-контроля вручную собирает нужные данные из системы работы с жалобами, журналов эскалации и сведений об итогах рассмотрения и перед представлением сверяет каждое поле с формой отчётности. На это уходит два-три рабочих дня аналитика службы комплаенс-контроля в каждом отчётном цикле, и сохраняется риск того, что классификация в разных периодах будет расходиться.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент анализирует данные системы работы с жалобами, журналов эскалации и сведения об итогах рассмотрения, сопоставляет их с полями формы отчётности, предварительно заполняет её и готовит версию для проверки и утверждения службой комплаенс-контроля. Аналитики службы проверяют точность и добавляют пояснения; сбор данных и заполнение формы автоматизированы.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">В каждом отчётном цикле служба комплаенс-контроля получает предварительно заполненную отчётность о жалобах для поведенческого надзора: данные системы работы с жалобами, журналов эскалации и сведений об итогах рассмотрения сопоставлены с полями формы и готовы к проверке и утверждению.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>С момента запуска AI-агент предварительно заполняет форму отчётности в 100% отчётных циклов.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥95% предварительно заполненных полей аналитики службы комплаенс-контроля принимают без исправлений; в каждом цикле классификация согласуется с предыдущим периодом.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Подготовка отчётности занимает не более четырёх часов на проверку и пояснения вместо двух-трёх рабочих дней аналитика службы комплаенс-контроля в каждом отчётном цикле.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,571 @@
+/* @urn:           urn:financial-services:style:components@1.0.0 */
+/* @version:       1.0.0 */
+/* @kind:          style */
+/* @description:   Component CSS — card, page-header, footer, sub-groups, flow, peer, skip-link, sib-nav. */
+/* @engine_compat: ">=1.0.0" */
+/* @last_modified: 2026-05-02 */
+
+/* ================================================================
+   RESET LAYER
+   Minimal baseline — box-sizing, margin removal, base font.
+   ================================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background: var(--ink-primary);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  border-radius: var(--radius-label);
+  text-decoration: none;
+  z-index: 100;
+  transition: top 0.15s;
+}
+.skip-link:focus {
+  top: var(--space-4);
+  outline: 2px solid var(--genai-label);
+  outline-offset: 2px;
+}
+
+
+/* ================================================================
+   COMPONENT LAYER
+   ================================================================ */
+
+/* ─── Page container ─── */
+.page {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+  position: relative;  /* containing block for .cross-package-nav (top-right) */
+}
+
+/* ─── Page header ─── */
+.page-header {
+  margin-bottom: 3rem;
+}
+
+.page-header__title-row {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-8);
+}
+
+.page-header__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-accent);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+.page-header__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-page-title);
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* GenAI-enabled highlight: blue, weight 700 */
+.page-header__title .genai-label,
+.page-header__title em {
+  color: var(--genai-label);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.page-header__intent {
+  font-size: var(--text-intent);
+  line-height: 1.7;
+  color: var(--ink-secondary);
+  margin: 0;
+}
+
+.page-header__intent strong {
+  color: var(--ink-primary);
+  font-weight: 600;
+}
+
+/* ─── Card base — Notion ambient shadow construct ─── */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;            /* containing block for .card__click-target */
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-hover);
+}
+
+/* Focus state for keyboard navigation */
+.card:focus-within {
+  outline: 2px solid var(--genai-label);
+  outline-offset: 2px;
+}
+
+/* ─── Whole-card click target (anchor overlay) ───
+   Lets the entire card surface be clickable, while keeping nested .card-link
+   anchors clickable on top via z-index. */
+.card__click-target {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  text-decoration: none;
+  /* invisible, but reachable by keyboard */
+}
+.card__click-target:focus-visible {
+  outline: 2px solid var(--genai-label);
+  outline-offset: -3px;
+}
+
+/* Only interactive elements sit above the click-target.
+   Non-interactive containers (head, body, sub-group items) render below
+   the transparent overlay so the whole-card click works on background. */
+.card-link {
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── Card head ─── */
+.card__head {
+  background: var(--paper-2);
+  padding: var(--space-4) var(--space-5) calc(var(--space-4) - 0.125rem);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+/* ─── Card eyebrow ─── */
+.card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-eyebrow);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+/* ─── Card titles — primary brush highlight ─── */
+.card__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-card-title);
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.01em;
+  display: block;
+  padding: var(--space-1) var(--space-3);
+  margin-inline: calc(-1 * var(--space-3));
+  border-radius: var(--radius-brush);
+  background: linear-gradient(90deg,
+    var(--brush-title-start) 0%,
+    var(--brush-title-mid)   50%,
+    transparent              82%);
+}
+
+.card__title--lg {
+  font-size: var(--text-card-title-lg);
+}
+
+/* ─── Card body ─── */
+.card__body {
+  padding: var(--space-4) var(--space-5) calc(var(--space-4) + 0.125rem);
+}
+
+/* ─── Card pointer text (peer cards) ─── */
+.card__pointer {
+  font-size: var(--text-body);
+  color: var(--ink-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ─── Sub-groups ─── */
+.sub-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sub-groups--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: var(--space-8);
+  row-gap: var(--space-3);
+}
+
+/* Within card containers (top-band, right-col, below-band) sub-groups lay
+   out 2-per-row; the third and beyond wrap to the next row. Shared across
+   service (top) and concern (L1) pages so card layout is uniform. */
+.top-band .sub-groups--row > .sub-group,
+.right-col .sub-groups--row > .sub-group,
+.below-band .sub-groups--row > .sub-group {
+  flex: 1 1 calc(50% - var(--space-4));
+  min-width: 0;
+}
+
+/* Sub-group label — gray brush */
+.sub-group__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-tertiary);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+  padding: 2px var(--space-2);
+  margin-inline: calc(-1 * var(--space-2));
+  border-radius: var(--radius-label);
+  background: linear-gradient(90deg,
+    var(--brush-label-start) 0%,
+    var(--brush-label-mid)   50%,
+    transparent              82%);
+}
+
+.sub-group__items {
+  font-size: var(--text-body);
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+.sub-group__items span { color: var(--ink-primary); }
+
+/* ─── Card link — hover-underline for drilldown targets ─── */
+.card-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: text-decoration-color 120ms ease;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.card-link:hover,
+.card-link:focus-visible {
+  text-decoration-color: var(--ink-accent, #0a5483);
+}
+.card-link--deferred {
+  cursor: default;
+}
+.card-link--deferred:hover {
+  text-decoration-color: var(--ink-tertiary, #888);
+}
+
+/* Dot separator */
+.dot {
+  color: var(--ink-accent-lt);
+  opacity: 0.5;
+  margin: 0 0.2em;
+  font-size: 0.75em;
+}
+
+/* ─── Flow card ─── */
+.card--flow .card__head { background: var(--paper-3); }
+
+.flow-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Flow section label — gray brush (matches sub-group label) */
+.flow-section__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-tertiary);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+  padding: 2px var(--space-2);
+  margin-inline: calc(-1 * var(--space-2));
+  border-radius: var(--radius-label);
+  background: linear-gradient(90deg,
+    var(--brush-label-start) 0%,
+    var(--brush-label-mid)   50%,
+    transparent              82%);
+}
+
+.flow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flow-item {
+  font-size: var(--text-flow);
+  color: var(--ink-primary);
+  padding: 0.1875rem var(--space-2);
+  border-radius: var(--space-1);
+  display: flex;
+  align-items: center;
+  transition: background 0.12s;
+}
+
+.flow-item:hover { background: var(--paper-2); }
+
+/* Flow item name — amber brush */
+.flow-item__name {
+  display: inline-block;
+  padding: 1px var(--space-2);
+  margin-left: calc(-1 * var(--space-2));
+  border-radius: var(--radius-label);
+  background: linear-gradient(90deg,
+    var(--brush-flow-start) 0%,
+    var(--brush-flow-mid)   50%,
+    transparent             50%);
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+}
+
+/* ─── Teal/sage variants (head background only) ─── */
+.card--teal .card__head,
+.card--sage .card__head { background: var(--paper-3); }
+
+/* ─── Data card ─── */
+.card--data { border-color: var(--rule-warm); }
+.card--data .card__head { background: var(--paper-3); }
+.card--data .card__body .sub-groups {
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: var(--space-10);
+  row-gap: var(--space-3);
+}
+
+/* ─── Peer cards ─── */
+.card--peer {
+  border-style: dashed;
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+.card--peer .card__head { background: var(--paper); }
+
+.card--peer .card__title {
+  color: var(--ink-primary);
+  font-weight: 600;
+  background: linear-gradient(90deg,
+    var(--brush-peer-start) 0%,
+    var(--brush-peer-mid)   50%,
+    transparent             82%);
+}
+
+.card--peer:hover {
+  border-style: solid;
+  box-shadow: var(--shadow-card);
+}
+
+/* ─── Peer section heading ─── */
+.peer-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  font-weight: 500;       /* G3: all eyebrows/labels weight 500 */
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-tertiary);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ─── Breadcrumb ─── */
+.breadcrumb {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.08em;
+  color: var(--ink-tertiary);
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.breadcrumb__item { display: flex; align-items: center; gap: var(--space-2); }
+
+.breadcrumb__link {
+  color: var(--ink-accent);
+  text-decoration: none;
+}
+
+.breadcrumb__link:hover { text-decoration: underline; }
+
+.breadcrumb__sep {
+  color: var(--ink-tertiary);
+  opacity: 0.6;
+}
+
+.breadcrumb__current {
+  color: var(--ink-primary);
+  font-weight: 500;
+}
+
+/* ─── Sibling nav ─── */
+.sib-nav {
+  display: flex;
+  gap: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.sib-nav__link {
+  color: var(--ink-tertiary);
+  text-decoration: none;
+}
+
+.sib-nav__link:hover {
+  color: var(--ink-accent);
+  text-decoration: underline;
+}
+
+/* ─── Page footer ─── */
+.page-footer {
+  margin-top: var(--space-10);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-tertiary);
+}
+
+
+/* ================================================================
+   RESPONSIVE LAYER
+   ================================================================ */
+
+/* Tablet (≤1024px): collapse cap-row to single column */
+@media (max-width: 64em) {
+  .cap-row,
+  .peer-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet portrait (≤768px): collapse all two-column grids */
+@media (max-width: 48em) {
+  .top-band,
+  .main-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-groups--row {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  /* At narrow widths sub-groups stack 1-per-row, undoing the 50% basis. */
+  .top-band .sub-groups--row > .sub-group,
+  .right-col .sub-groups--row > .sub-group,
+  .below-band .sub-groups--row > .sub-group {
+    flex-basis: 100%;
+  }
+
+  .card--data .card__body .sub-groups {
+    flex-direction: column;
+  }
+
+  .page-header__intent {
+    font-size: 1.1875rem;
+  }
+}
+
+/* ---- Locale toggle (top-right, top page only) ----
+   Single-word monospace eyebrow link in the top-right corner. Same visual
+   level as the breadcrumb (top-left): same font, size, casing, color. The
+   label is intentionally NOT translated — readers see "Russian" or "English"
+   so the toggle is recognisable from either locale view. */
+.locale-toggle {
+  position: absolute;
+  top: clamp(1.5rem, 4vw, 3rem);
+  right: clamp(1.5rem, 5vw, 4rem);
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow, 0.72rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-tertiary);
+  text-decoration: none;
+  transition: color 120ms ease;
+  z-index: 10;
+}
+
+.locale-toggle:hover {
+  color: var(--ink-primary);
+  text-decoration: underline;
+}
+
+/* Peer-package breadcrumb crumb (the leading "Cloud Lab" link) — same
+   monospace eyebrow style as other crumbs; the link styling is inherited
+   from .breadcrumb__link. No special override needed. */
+
+/* ---- Scenario count badges (next to card titles + entries) ----
+   Subtle metadata — lighter weight + secondary ink so the title stays
+   the visual anchor. Used by card.html.j2 (.card__count) and inside
+   card link entries (.card-link__count) when scenario_count > 0. */
+.card__count {
+  font-weight: 400;
+  color: var(--ink-secondary);
+  font-feature-settings: "tnum" 1;
+}
+
+.card-link__count {
+  font-size: 0.92em;
+  font-weight: 400;
+  color: var(--ink-secondary);
+  font-feature-settings: "tnum" 1;
+  margin-inline-start: 0.15em;
+}
+
+/* Mobile (≤480px): tighten page padding, base type slightly smaller */
+@media (max-width: 30em) {
+  .page {
+    padding-inline: var(--space-4);
+  }
+
+  .card__body,
+  .card__head {
+    padding-inline: var(--space-4);
+  }
+
+  .flow-item {
+    font-size: var(--text-body);
+    min-height: 2.75rem;
+    align-items: center;
+  }
+}

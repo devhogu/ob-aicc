@@ -1,0 +1,516 @@
+<!--page {"id": "catalog/finance-treasury", "title": "Финансы и казначейство", "styles": ["tokens.css", "components.css", "theme.css", "layouts/concern.css"], "summary": "Финансы и казначейство — это система финансового планирования и контроля Банка. Функция оценивает каждый операционный и клиентский поток по марже, управляет балансом и представляет надзорному органу, Совету директоров и "} -->
+<div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Навигационная цепочка">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../index.html">Каталог сценариев</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Финансы и казначейство</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Финансы и казначейство</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Финансы и казначейство — это система финансового планирования и контроля Банка. Функция оценивает каждый операционный и клиентский поток по марже, управляет балансом и представляет надзорному органу, Совету директоров и инвесторам финансово обоснованную картину. Она включает восемь направлений: финансовое планирование и анализ, управление капиталом, управление ликвидностью, управление активами и пассивами, оценку эффективности, бухгалтерский учёт и закрытие периода, регуляторную финансовую отчётность и управление налогами. В соответствии с надзорными требованиями по большинству этих направлений действуют формальные обязательства по отчётности с фиксированными сроками представления, установленными формами и проверкой надзорного органа. <strong>Генеративный AI позволяет непрерывно отслеживать финансовые показатели и сократить путь от данных до решения во всех процессах планирования, закрытия периода, отчётности и раскрытия информации с нескольких недель до нескольких часов.</strong></p>
+</header>
+<style>
+  #problems-tab-planning-balance-sheet-steering:checked ~ .problems-tab-bar label[for="problems-tab-planning-balance-sheet-steering"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-planning-balance-sheet-steering:checked ~ .problems-panel[data-tab="planning-balance-sheet-steering"] {
+    display: block;
+  }
+</style>
+<section class="concern-problems" aria-label="Проблемы">
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-planning-balance-sheet-steering" value="planning-balance-sheet-steering" checked aria-label="Планирование и управление балансом">
+  <div class="problems-tab-bar" role="tablist">
+    <label class="problems-tab-label" for="problems-tab-planning-balance-sheet-steering" role="tab" aria-controls="problems-panel-planning-balance-sheet-steering">Планирование и управление балансом</label>
+  </div>
+  <hr class="problems-divider">
+  <div class="problems-panel" id="problems-panel-planning-balance-sheet-steering" data-tab="planning-balance-sheet-steering" role="tabpanel" aria-labelledby="problems-tab-planning-balance-sheet-steering">
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Аналитика</h3><p>Позиции по капиталу, ликвидности и чувствительности к процентным ставкам измеряют разные команды в разных циклах: капитал — финансовый блок ежемесячно, LCR и NSFR — казначейство ежедневно, чувствительность чистого процентного дохода (ЧПД) и экономической стоимости капитала (EVE) — подразделение управления активами и пассивами ежемесячно. Комитет по управлению активами и пассивами (КУАП) и финансовый директор сводят общую картину баланса вручную, поэтому нарастающее давление сразу в нескольких измерениях выявляется лишь по факту: например, когда сдвиг ставок одновременно сжимает чистую процентную маржу, снижает CET1 через накопленный прочий совокупный доход и уменьшает буфер HQLA.</p></article><article class="discovery-context-card"><h3>Поддержка</h3><p>Пересмотр прогноза, прогнозирование капитала и сценарный анализ процентных ставок упираются в небольшие команды специалистов с собственными моделями. Когда финансовому директору в тот же день нужен анализ чувствительности к решению центрального банка по ставке или в ходе телефонной конференции с рейтинговым агентством возникает вопрос о капитале, ответ проходит по цепочке обращений к нескольким командам, что обычно занимает от одного до трёх дней. Функции планирования и казначейства не успевают работать в темпе, которого требует бизнес.</p></article><article class="discovery-context-card"><h3>Автоматизация</h3><p>Пояснительные записки к бюджету, разделы документа внутренней процедуры оценки достаточности капитала (ICAAP), материалы КУАП по процентным ставкам, записки по трансфертному ценообразованию (FTP) и скользящие пересмотры прогноза в каждом цикле собираются вручную из выходных данных моделей и выгрузок из систем. Каждый документ предсказуем по структуре: исходные данные известны, формат задан. Поэтому именно их в первую очередь целесообразно готовить с применением AI с последующим утверждением ответственным работником.</p></article><article class="discovery-context-card"><h3>Новые возможности</h3><p>Баланс под постоянным мониторингом — запас капитала, избыток ликвидности и чувствительность к ставкам, обновляемые по текущим потокам данных, — даёт опережающий сигнал для решений о размещении капитала и ценообразовании. Банки, работающие в еженедельном, а не ежемесячном цикле, быстрее конкурентов, связанных стандартной периодичностью отчётности, принимают решения о целях приобретений, пересмотре ставок по депозитам и перебалансировке портфеля.</p></article></div>
+  </div>
+</section>
+<div id="main-content" aria-label="Обзор раздела">
+<div class="bp-grid">
+<div class="top-band" role="region" aria-label="Стратегический уровень">
+<article class="card" data-ui-pattern="groups">
+  <div class="card__head">
+    <div class="card__eyebrow">Планирование и управление балансом</div>
+    <h2 class="card__title card__title--lg">Финансовое планирование и анализ <span class="card__count" aria-label="12 сценариев">(12)</span></h2>
+  </div>
+  <div class="card__body">
+    <div class="sub-groups sub-groups--row">
+      <div class="sub-group">
+        <div class="sub-group__label">Планирование и прогнозирование</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="fpa/index.html#annual-budget-cycle">Годовой бюджетный цикл <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="fpa/index.html#rolling-forecast">Скользящий прогноз <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+      <div class="sub-group">
+        <div class="sub-group__label">Анализ отклонений и поддержка решений</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="fpa/index.html#budget-to-actual-variance">Атрибуция отклонений факта от бюджета <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="fpa/index.html#cfo-alco-qa-support">Ответы на вопросы финансового директора и КУАП <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="card__click-target" href="fpa/index.html" tabindex="0" aria-label="Финансовое планирование и анализ"></a>
+</article>
+<article class="card" data-ui-pattern="groups">
+  <div class="card__head">
+    <div class="card__eyebrow">Планирование и управление балансом</div>
+    <h2 class="card__title card__title--lg">Управление активами и пассивами <span class="card__count" aria-label="12 сценариев">(12)</span></h2>
+  </div>
+  <div class="card__body">
+    <div class="sub-groups sub-groups--row">
+      <div class="sub-group">
+        <div class="sub-group__label">IRRBB и хеджирование баланса</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="alm/index.html#nii-eve-sensitivity">Чувствительность ЧПД и EVE <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="alm/index.html#irrbb-limit-monitoring">Мониторинг лимитов IRRBB <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+      <div class="sub-group">
+        <div class="sub-group__label">Трансфертное ценообразование и сценарии ставок</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="alm/index.html#ftp-curve-governance">Пересмотр и утверждение кривой FTP <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="alm/index.html#alco-rate-pack">Пакет сценариев изменения ставок для КУАП <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="card__click-target" href="alm/index.html" tabindex="0" aria-label="Управление активами и пассивами"></a>
+</article>
+</div>
+<div class="main-row" role="region" aria-label="Цепочка создания стоимости и возможности">
+<article class="card card--flow" data-ui-pattern="workflows">
+  <div class="card__head">
+    <div class="card__eyebrow">Управление финансами</div>
+    <h2 class="card__title card__title--lg"><a class="workflow-overview-link" href="finance-cycles/index.html">Финансовые циклы <span class="card__count" aria-label="25 сценариев">(25)</span></a></h2>
+  </div>
+  <div class="card__body">
+    <div class="flow-sections">
+      <div class="flow-section">
+        <div class="flow-section__label">Планирование и управление балансом</div>
+        <ul class="flow-list" aria-label="Планирование и управление балансом">
+          <li class="flow-item"><details class="workflow-preview"><summary>Цикл бюджетирования и прогнозирования <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Ежегодная подготовка бюджета со скользящим пересмотром прогноза: целевые показатели доходов, расходов, капитала и рисков устанавливаются по направлениям бизнеса, ежеквартально сопоставляются с фактом и уточняются в течение года. Ключевой показатель цикла — время от определения плановых допущений до утверждения бюджета Советом директоров.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="finance-cycles/index.html#stage-budget-forecast-cycle--set">Допущения</a></li><li><a href="finance-cycles/index.html#stage-budget-forecast-cycle--plan">Планирование</a></li><li><a href="finance-cycles/index.html#stage-budget-forecast-cycle--build">Моделирование</a></li><li><a href="finance-cycles/index.html#stage-budget-forecast-cycle--approve">Утверждение</a></li><li><a href="finance-cycles/index.html#stage-budget-forecast-cycle--track">Мониторинг и пересмотр</a></li></ol></div></details></li>
+          <li class="flow-item"><details class="workflow-preview"><summary>Цикл управления активами, пассивами и структурой баланса <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Ежемесячный цикл, в котором Банк при поддержке комитета по управлению активами и пассивами (КУАП) измеряет процентный риск банковского портфеля, чувствительность чистого процентного дохода (ЧПД), экономическую стоимость капитала (EVE) и позиции хеджирования баланса и управляет ими в соответствии с базельским стандартом IRRBB (BCBS 368). Ключевой показатель цикла — время от сигнала по ставкам или балансу до управленческих мер.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="finance-cycles/index.html#stage-alm-balance-sheet-steering-cycle--measure">Измерение</a></li><li><a href="finance-cycles/index.html#stage-alm-balance-sheet-steering-cycle--analyze">Анализ</a></li><li><a href="finance-cycles/index.html#stage-alm-balance-sheet-steering-cycle--decide">Решение</a></li><li><a href="finance-cycles/index.html#stage-alm-balance-sheet-steering-cycle--hedge">Хеджирование</a></li><li><a href="finance-cycles/index.html#stage-alm-balance-sheet-steering-cycle--monitor">Мониторинг</a></li></ol></div></details></li>
+          <li class="flow-item"><details class="workflow-preview"><summary>Цикл управления ликвидностью (LCR и ILAAP) <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Ежедневный мониторинг LCR и NSFR и ежемесячный цикл управления ликвидностью при поддержке КУАП: достаточность высоколиквидных активов (HQLA), структура сроков фондирования и представление ILAAP. Ключевой показатель цикла — время от сигнала по ликвидности до мер по фондированию или позиции в HQLA.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="finance-cycles/index.html#stage-liquidity-steering-cycle--forecast">Прогнозирование</a></li><li><a href="finance-cycles/index.html#stage-liquidity-steering-cycle--stress">Стресс-тестирование</a></li><li><a href="finance-cycles/index.html#stage-liquidity-steering-cycle--plan">Планирование</a></li><li><a href="finance-cycles/index.html#stage-liquidity-steering-cycle--report">Отчётность</a></li><li><a href="finance-cycles/index.html#stage-liquidity-steering-cycle--adjust">Корректировка</a></li></ol></div></details></li>
+        </ul>
+      </div>
+      <div class="flow-section">
+        <div class="flow-section__label">Отчётность и закрытие периода</div>
+        <ul class="flow-list" aria-label="Отчётность и закрытие периода">
+          <li class="flow-item"><details class="workflow-preview"><summary>Цикл закрытия финансового периода <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Закрытие месяца и года: отсечка проводок, сверки, корректирующие проводки, консолидация и подготовка пакета управленческой отчётности. Ключевой показатель цикла — время от отсечки до окончательного утверждения управленческой отчётности.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="finance-cycles/index.html#stage-financial-close-cycle--cutoff">Отсечка</a></li><li><a href="finance-cycles/index.html#stage-financial-close-cycle--reconcile">Сверка</a></li><li><a href="finance-cycles/index.html#stage-financial-close-cycle--adjust">Корректировка</a></li><li><a href="finance-cycles/index.html#stage-financial-close-cycle--close">Закрытие</a></li><li><a href="finance-cycles/index.html#stage-financial-close-cycle--report">Отчётность</a></li></ol></div></details></li>
+          <li class="flow-item"><details class="workflow-preview"><summary>Цикл регуляторной отчётности <span class="card-link__count">(5)</span></summary><div class="workflow-preview__body"><p>Ежемесячная и ежеквартальная финансовая отчётность Банка для надзорного органа: пруденциальные и финансовые формы, годовая финансовая отчётность по МСФО и ответы на разовые запросы данных. Ключевой показатель цикла — время от закрытия периода до представления регуляторной формы, прошедшей валидацию.</p><ol class="workflow-preview__stages" aria-label="Этапы потока"><li><a href="finance-cycles/index.html#stage-regulatory-reporting-cycle--aggregate">Агрегирование</a></li><li><a href="finance-cycles/index.html#stage-regulatory-reporting-cycle--validate">Валидация</a></li><li><a href="finance-cycles/index.html#stage-regulatory-reporting-cycle--submit">Представление</a></li><li><a href="finance-cycles/index.html#stage-regulatory-reporting-cycle--reconcile">Сверка</a></li><li><a href="finance-cycles/index.html#stage-regulatory-reporting-cycle--audit">Аудит и запросы</a></li></ol></div></details></li>
+        </ul>
+      </div>
+    </div>
+</div></article>
+<div class="right-col">
+<article class="card" data-ui-pattern="groups">
+  <div class="card__head">
+    <div class="card__eyebrow">Планирование и управление балансом</div>
+    <h3 class="card__title">Управление капиталом <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
+  </div>
+  <div class="card__body">
+    <div class="sub-groups sub-groups--row">
+      <div class="sub-group">
+        <div class="sub-group__label">Позиция и прогноз капитала</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="capital-management/index.html#cet1-tier1-position">Позиция по CET1 и капиталу первого уровня <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="capital-management/index.html#icaap-stress-capital">ICAAP и стрессовый капитал <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+      <div class="sub-group">
+        <div class="sub-group__label">Операции с капиталом и взаимодействие с надзорным органом</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="capital-management/index.html#supervisory-communications">Взаимодействие с надзорным органом <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="capital-management/index.html#capital-actions">Дивиденды и операции с инструментами AT1 и Tier 2 <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="card__click-target" href="capital-management/index.html" tabindex="0" aria-label="Управление капиталом"></a>
+</article>
+<article class="card" data-ui-pattern="groups">
+  <div class="card__head">
+    <div class="card__eyebrow">Планирование и управление балансом</div>
+    <h3 class="card__title">Управление ликвидностью <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
+  </div>
+  <div class="card__body">
+    <div class="sub-groups sub-groups--row">
+      <div class="sub-group">
+        <div class="sub-group__label">Позиция по денежным средствам и ликвидности</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="liquidity-management/index.html#daily-lcr-nsfr">Ежедневный мониторинг LCR и NSFR <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="liquidity-management/index.html#investment-portfolio">Портфель HQLA и управление инвестициями <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+      <div class="sub-group">
+        <div class="sub-group__label">Стресс-тестирование ликвидности и экстренное фондирование</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="liquidity-management/index.html#contingency-funding-plan">План экстренного фондирования <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="liquidity-management/index.html#funding-strategy">Стратегия фондирования и структура оптового фондирования <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="card__click-target" href="liquidity-management/index.html" tabindex="0" aria-label="Управление ликвидностью"></a>
+</article>
+</div>
+</div>
+<div class="below-band" role="region" aria-label="Цепочка создания стоимости и возможности">
+<article class="card" data-ui-pattern="groups">
+  <div class="card__head">
+    <div class="card__eyebrow">Планирование и управление балансом</div>
+    <h3 class="card__title">Оценка результатов деятельности <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
+  </div>
+  <div class="card__body">
+    <div class="sub-groups sub-groups--row">
+      <div class="sub-group">
+        <div class="sub-group__label">Атрибуция прибыли</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="performance-measurement/index.html#segment-pl">P&amp;L сегментов и управленческая отчётность <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="performance-measurement/index.html#budget-variance-attribution">Отклонения факта от бюджета и их атрибуция <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+      <div class="sub-group">
+        <div class="sub-group__label">Доходность с учётом риска</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="performance-measurement/index.html#raroc-by-bu">Атрибуция RAROC и EVA по бизнес-подразделениям <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="performance-measurement/index.html#lending-default-attribution">Атрибуция результатов кредитного портфеля и резервы по МСФО (IFRS) 9 <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="card__click-target" href="performance-measurement/index.html" tabindex="0" aria-label="Оценка результатов деятельности"></a>
+</article>
+<article class="card" data-ui-pattern="groups">
+  <div class="card__head">
+    <div class="card__eyebrow">Бухгалтерский учёт, отчётность и налоги</div>
+    <h3 class="card__title">Бухгалтерский учёт и закрытие периода <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
+  </div>
+  <div class="card__body">
+    <div class="sub-groups sub-groups--row">
+      <div class="sub-group">
+        <div class="sub-group__label">Закрытие периода</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="accounting-financial-close/index.html#close-task-management">Управление задачами закрытия <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="accounting-financial-close/index.html#close-narrative">Пояснительная записка к закрытию и управленческий комментарий <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+      <div class="sub-group">
+        <div class="sub-group__label">Сверки и учёт во вспомогательных книгах</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="accounting-financial-close/index.html#gl-sub-ledger-reconciliations">Сверка главной книги с аналитическим учётом <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="accounting-financial-close/index.html#lending-default-close">Резервы и проводки закрытия по МСФО (IFRS) 9 <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="card__click-target" href="accounting-financial-close/index.html" tabindex="0" aria-label="Бухгалтерский учёт и закрытие периода"></a>
+</article>
+<article class="card" data-ui-pattern="groups">
+  <div class="card__head">
+    <div class="card__eyebrow">Бухгалтерский учёт, отчётность и налоги</div>
+    <h3 class="card__title">Регуляторная финансовая отчётность <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
+  </div>
+  <div class="card__body">
+    <div class="sub-groups sub-groups--row">
+      <div class="sub-group">
+        <div class="sub-group__label">Базельская и надзорная отчётность</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="regulatory-financial-reporting/index.html#corep-finrep-validation">Контроль качества данных в шаблонах надзорной отчётности <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="regulatory-financial-reporting/index.html#regulatory-narrative">Пояснения к регуляторной отчётности <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+      <div class="sub-group">
+        <div class="sub-group__label">Отчётность для национального регулятора</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="regulatory-financial-reporting/index.html#local-prudential-returns">Национальные формы пруденциальной отчётности <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="regulatory-financial-reporting/index.html#investor-disclosure">Материалы для инвесторов и официальная финансовая отчётность <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="card__click-target" href="regulatory-financial-reporting/index.html" tabindex="0" aria-label="Регуляторная финансовая отчётность"></a>
+</article>
+<article class="card" data-ui-pattern="groups">
+  <div class="card__head">
+    <div class="card__eyebrow">Бухгалтерский учёт, отчётность и налоги</div>
+    <h3 class="card__title">Управление налогами <span class="card__count" aria-label="12 сценариев">(12)</span></h3>
+  </div>
+  <div class="card__body">
+    <div class="sub-groups sub-groups--row">
+      <div class="sub-group">
+        <div class="sub-group__label">Налоговая позиция и налоговая отчётность</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="tax-management/index.html#etr-reconciliation">Сверка эффективной налоговой ставки <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="tax-management/index.html#rating-agency-tax">Налоговая позиция в материалах для инвесторов и рейтинговых агентств <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+      <div class="sub-group">
+        <div class="sub-group__label">Трансфертное ценообразование и налоговая информационная отчётность</div>
+        <div class="sub-group__items">
+          <a class="card-link" href="tax-management/index.html#transfer-pricing-documentation">Локальная документация по трансфертному ценообразованию <span class="card-link__count">(3)</span></a>
+          <span class="dot" aria-hidden="true">·</span>
+          <a class="card-link" href="tax-management/index.html#fatca-crs-reporting">Соблюдение требований к отчётности по FATCA и CRS <span class="card-link__count">(3)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="card__click-target" href="tax-management/index.html" tabindex="0" aria-label="Управление налогами"></a>
+</article>
+</div>
+</div>
+</div>
+<section class="concern-scenarios" aria-label="Сценарии">
+  <div class="scenarios-header-row">
+    <div class="scenarios-eyebrow">Сценарии</div>
+    <h2 class="scenarios-heading">Сценарии</h2>
+  </div>
+  <div class="scenarios-column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Аспект</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Сценарий</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Назначение</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Сложность</span>
+  </div>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/cfo-adhoc-financial-qa" id="scenario-cfo-adhoc-financial-qa" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Поддержка</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Оперативные ответы на вопросы финансового директора</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Диалоговый интерфейс, через который финансовый директор во время заседаний Совета директоров, встреч с инвесторами или встреч с надзорным органом получает ответы со ссылками на источники на финансовые вопросы, затрагивающие несколько функций. Интерфейс одновременно использует данные FP&amp;A, управления капиталом, ликвидностью, активами и пассивами, оценки эффективности, закрытия периода, регуляторной отчётности и налогов. Запросы в команды отдельных направлений второго уровня (L2) не требуются.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Вопросы уровня финансового директора, возникающие на заседаниях Совета директоров и встречах с инвесторами, часто затрагивают сразу несколько направлений (L2): вопрос о динамике чистой процентной маржи требует данных FP&amp;A, управления активами и пассивами и ликвидности, а вопрос о достаточности капитала — данных по капиталу, регуляторной отчётности и оценке эффективности. Сейчас для каждого такого ответа нужен отдельный запрос в соответствующую команду, и ответы приходят уже после встречи.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент поддерживает постоянно обновляемое параметрическое представление финансового положения Банка по всем направлениям (L2). Финансовый директор задаёт вопросы в диалоговом режиме; AI-агент находит и сверяет нужные данные разных функций и прямо во время встречи даёт ответ со ссылками на источники. Команды направлений привлекаются только к дальнейшей аналитической работе, необходимость которой выявил ответ; финансовый блок периодически проверяет ответы на ошибки сверки.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Во время взаимодействия с Советом директоров, инвесторами и надзорным органом финансовый директор получает ответы со ссылками на источники на финансовые вопросы, затрагивающие несколько функций (данные FP&amp;A, капитала, ликвидности, управления активами и пассивами, оценки эффективности, закрытия периода, регуляторной отчётности и налогов), не направляя запросы в очередь отдельных команд направлений (L2).</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>В течение 12 месяцев после запуска интерфейс на базе AI используется не менее чем для 80% межфункциональных финансовых вопросов, возникающих на заседаниях Совета директоров, встречах с инвесторами и надзорным органом.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% ответов финансовый директор оценивает как точные и достаточно подкреплённые ссылками на источники, без последующих исправлений со стороны команд направлений; при периодических проверках финансового блока доля ошибок сверки данных ≤3%.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Ответ на межфункциональный финансовый вопрос даётся прямо во время встречи; в прежнем процессе ожидание в очереди команд направлений занимало 4–24 часа.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/finance-production-calendar-sequencing" id="scenario-finance-production-calendar-sequencing" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Оптимизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Планирование производственного календаря финансового блока</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент сводит полный годовой производственный календарь финансового блока Банка — закрытие периода, заседания комитета по управлению активами и пассивами (КУАП), материалы для Совета директоров, ICAAP, пруденциальная отчётность, отчётность по FATCA и CRS, трансфертное ценообразование и другие сроки регуляторной отчётности, — выявляет цепочки зависимостей и конфликты в графике и предлагает последовательность работ, при которой общая продолжительность по всем направлениям второго уровня (L2) минимальна.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Сложность">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Служба финансового директора ведёт от пятнадцати до двадцати ежегодных событий представления отчётности по восьми направлениям (L2), у каждого из которых свои внутренние сроки подготовки, зависимости по данным от других направлений и жёсткие регуляторные сроки. Конфликты последовательности между функциями — когда задержка закрытия периода сдвигает пруденциальную отчётность или подготовка ICAAP сжимает время на подготовку к КУАП — выявляются, когда они уже возникли, а не заранее.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент анализирует календарь представления регуляторной отчётности, внутренний график органов управления Банка и заявленные сроки подготовки по каждому процессу направлений (L2). Он строит единую модель зависимостей, которая показывает, какие результаты направлений используются в последующих процессах второго (L2) или первого (L1) уровня, и формирует последовательный производственный календарь с анализом резерва времени по каждому событию и отметками о конфликтах там, где текущий график сжимает сроки последующих работ. Служба финансового директора рассматривает и утверждает предложенный график.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">В начале каждого календарного года служба финансового директора получает на рассмотрение единый производственный календарь финансового блока с цепочками зависимостей и анализом резерва времени; он охватывает закрытие периода, заседания КУАП, материалы для Совета директоров, ICAAP, пруденциальную отчётность, отчётность по FATCA и CRS, трансфертное ценообразование и все прочие сроки регуляторной отчётности.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>В первый год единый производственный календарь, подготовленный AI-агентом, используется хотя бы в одном годовом цикле; охвачены все 8 направлений (L2) и все существенные события представления регуляторной отчётности.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥80% конфликтов в графике, выявленных AI-агентом, служба финансового директора подтверждает как реальный риск сжатия сроков между направлениями; в ≥75% случаев разрешения выявленных конфликтов календарь принимается без существенного изменения последовательности.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Единый производственный календарь с картой зависимостей поступает на рассмотрение службы финансового директора не позднее пяти рабочих дней с начала нового календарного года; в прежнем процессе последовательное согласование между направлениями занимало 3–4 недели.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/cfo-cross-function-finance-briefing" id="scenario-cfo-cross-function-finance-briefing" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Аналитика</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Сводная финансовая справка для финансового директора</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">В конце каждого месяца AI-агент обрабатывает полный набор отчётов направлений второго уровня (L2) — FP&amp;A, управления капиталом, ликвидностью, активами и пассивами, оценки эффективности, закрытия периода, регуляторной отчётности и налогов — и готовит для финансового директора единую справку, ранжированную по существенности. Взаимосвязи между функциями в ней показаны явно, в одном сводном представлении.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежемесячно финансовый директор получает отчёты восьми направлений (L2) в разных форматах, с разной терминологией и разными аналитическими подходами. Межфункциональные закономерности — например, сжатие чистой процентной маржи, которое одновременно затрагивает управление активами и пассивами, FP&amp;A и закрытие периода, — остаются незамеченными, поскольку ни у одного из ответственных за отчёты нет полной картины.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент анализирует отчёт каждого направления, выделяет изменения KPI и требуемые решения, сверяет цифры там, где один и тот же показатель должен совпадать в разных отчётах, и связывает взаимосвязанные темы разных функций. Результат — единая справка для финансового директора, ранжированная по существенности для решений, а не по функции-источнику. Финансовый директор рассматривает сводное представление и по своему суждению определяет приоритеты и ответные меры.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">В первый день подготовки отчётности финансовый директор получает единую ежемесячную справку на основе отчётов всех восьми направлений (L2), ранжированную по существенности для решений, с явно показанными взаимосвязями между функциями и сверенными цифрами.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>В первый год единая справка, подготовленная AI-агентом, используется не менее чем в 10 из 12 ежемесячных циклов; в каждую справку включены отчёты всех 8 направлений.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% единых справок, по оценке финансового директора, существенно яснее показывают взаимосвязи между функциями, чем отдельные отчёты направлений; в ≥95% рассмотренных циклов расхождения в цифрах между функциями выявляются и отмечаются до рассмотрения финансовым директором.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Единая справка готова в первый день подготовки отчётности; в прежнем процессе просмотр всех отчётов направлений занимал 2–3 дня.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/cfo-board-investor-pack-assembly" id="scenario-cfo-board-investor-pack-assembly" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Автоматизация</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Подготовка материалов финансового директора для Совета директоров и инвесторов</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент собирает ежеквартальный пакет материалов финансового директора для Совета директоров и информацию для инвесторов из итоговых данных всех направлений второго уровня (L2) — оценки эффективности, управления капиталом, ликвидностью, активами и пассивами, закрытия периода, регуляторной отчётности, FP&amp;A и налогов — в единый согласованный документ. Пакет готов к рассмотрению финансовым директором в первый день подготовки отчётности.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Ежеквартальные материалы для Совета директоров и информацию для инвесторов готовят финансовый блок, подразделение по связям с инвесторами и контроллинг по результатам восьми направлений (L2), которые поступают в разное время и в разных форматах. Согласованность цифр между разделами — например, совпадение значений чистой процентной маржи в управленческой отчётности, материалах комитета по управлению активами и пассивами (КУАП) и пресс-релизе для инвесторов — проверяется вручную, и полный проект редко бывает готов раньше предпоследнего дня.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент берёт итоговые данные направлений после закрытия и применяет принятую в Банке стандартную структуру пакета — ключевые результаты, позиция по капиталу и ликвидности, обзор управления активами и пассивами, регуляторная позиция и прогноз, — заполняя каждый раздел из основного источника данных соответствующего направления. Согласованность цифр между разделами проверяется автоматически; расходящиеся значения отмечаются до рассмотрения финансовым директором. Финансовый директор вносит правки, отражающие его суждение и оценку перспектив.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">Ежеквартальный пакет материалов финансового директора для Совета директоров и информация для инвесторов собираются из итоговых данных всех финансовых направлений (L2) в единый согласованный документ, готовый к рассмотрению финансовым директором в первый день подготовки отчётности.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>В первый год пакет материалов, подготовленный AI-агентом, используется не менее чем в 4 ежеквартальных отчётных циклах; в каждом цикле охвачены все 8 направлений.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% собранных пакетов финансовый директор принимает к рассылке без существенных изменений структуры; в ≥97% рассмотренных циклов расхождения в цифрах между разделами отмечаются и устраняются до рассмотрения финансовым директором.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Полный пакет материалов готов к рассмотрению финансовым директором в первый день подготовки отчётности; в прежнем ручном процессе — только к предпоследнему дню.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/cfo-continuous-financial-posture" id="scenario-cfo-continuous-financial-posture" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--new-opps">Новые возможности</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Постоянно актуальная финансовая картина для финансового директора</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">AI-агент поддерживает для финансового директора постоянно обновляемую картину финансового положения по всем восьми направлениям второго уровня (L2) — капиталу, ликвидности, управлению активами и пассивами, FP&amp;A, оценке эффективности, закрытию периода, регуляторной отчётности и налогам. Картина обновляется по текущим потокам данных и доступна по запросу между плановыми отчётными циклами.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Сложность">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решаемая задача</div>
+      <p>Между плановыми отчётными циклами у финансового директора есть только снимок на дату последнего набора отчётов направлений (L2). Изменения запаса капитала, нормативов ликвидности, динамики чистой процентной маржи или налоговых резервов внутри периода становятся видны лишь при подготовке следующего планового отчёта, а возникающие межфункциональные закономерности обнаруживаются, только когда каждое изменение попадает в свой ежемесячный отчёт направления.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Решение</div>
+      <p>AI-агент непрерывно анализирует текущие данные всех направлений (L2) — данные о регуляторном капитале, позиции казначейства по ликвидности, результаты моделей управления активами и пассивами, фактические данные, которые отслеживает FP&amp;A, и изменения налоговых резервов — и поддерживает постоянно обновляемую сводку в принятом у финансового директора формате. При нарушении межфункциональных пороговых значений AI-агент заблаговременно направляет уведомление с пояснением и разбором причин; команды направлений по-прежнему отвечают за свои данные и аналитические выводы.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Критерии приёмки</div>
+      <p class="okr-objective">У финансового директора есть постоянно обновляемая картина финансового положения по всем восьми направлениям (L2) — капитал, ликвидность, управление активами и пассивами, FP&amp;A, оценка эффективности, закрытие периода, регуляторная отчётность и налоги, — которая обновляется по текущим потокам данных и доступна по запросу между плановыми отчётными циклами.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Внедрение</div>
+          <p>В первый год финансовый директор обращается к сводке, которую ведёт AI-агент, не менее чем в 80% рабочих дней между плановыми отчётными циклами; при каждом обновлении охвачены все 8 направлений.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Принятие</div>
+          <p>≥85% уведомлений о нарушении межфункциональных пороговых значений финансовый директор оценивает как точные и значимые для решений, без исправлений со стороны команд направлений; в ≥97% выборочно проверенных ячеек данные сводки совпадают со следующим плановым отчётом направления.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Цикл</div>
+          <p>Межфункциональная картина внутри периода доступна по запросу между плановыми отчётными циклами; в прежнем процессе приходилось ждать следующего планового ежемесячного отчёта.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+</section>
+
+</div>
+</div>

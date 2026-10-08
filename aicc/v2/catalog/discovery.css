@@ -1,0 +1,283 @@
+/* Discovery keeps its catalogue geometry and uses AICC's component styling. */
+.discovery-content{
+  --paper:var(--surface);--paper-soft:var(--surface-subtle);--paper-2:var(--surface-subtle);--paper-3:var(--surface-subtle);--paper-deep:var(--surface-subtle);--paper-warm:var(--surface);--paper-blue-soft:var(--surface);
+  --ink-primary:var(--text);--ink-body:var(--text);--ink-secondary:var(--text-muted);--ink-tertiary:var(--text-muted);--ink-eyebrow:var(--text-muted);--ink-accent:var(--link);--ink-accent-lt:var(--link);--ink-accent-deep:var(--link);--genai-label:var(--link);--ink-orange-deep:var(--text);
+  --genai-soft:var(--surface-subtle);--genai-line:var(--border);--genai-text:var(--text);--genai-accent:var(--link);
+  --border:inherit;--border-hover:var(--border-control);--rule-soft:var(--border);--rule-warm:var(--border);--overlay-scrim:var(--overlay);--shadow-modal:var(--shadow-panel);
+  --shadow-card:none;--shadow-hover:none;
+  --font-serif:var(--font-heading);--font-sans:var(--font-body);--font-mono:ui-monospace,SFMono-Regular,Consolas,monospace;
+  --text-body:1rem;--text-page-title:var(--text-title);--text-intent:var(--text-subhead);
+  --text-h2:var(--text-section);--text-h3:var(--text-subhead);--text-h4:1rem;
+  --text-card-title:var(--text-subhead);--text-card-title-lg:1.25rem;--text-flow:1rem;
+  --text-eyebrow:var(--text-xs);--text-mono-tiny:var(--text-xs);--text-lens:var(--text-sm);
+}
+.discovery-content>.page{padding:0;max-width:none}
+/* Match AICC's page titles, introductions, reading text and card hierarchy. */
+.discovery-content :is(h1,h2,h3,h4,.project-entry__title){font-family:var(--font-heading);font-weight:700;line-height:1.22;letter-spacing:normal}
+.discovery-content{font-family:var(--font-body);line-height:1.5;padding-bottom:30px;min-width:0}
+.discovery-content p{font-family:var(--font-body);line-height:1.5}
+.discovery-content .page-header__intent{font-size:var(--text-intent);line-height:28px}
+.discovery-content .card__body{--text-body:.9375rem}
+.discovery-content .sub-group__items{line-height:1.5}
+.discovery-content :is(.page-header__eyebrow,.card__eyebrow,.sub-group__label,.flow-section__label,.peer-label,.breadcrumb,.sib-nav,.problems-tab-label,.problems-lens,.scenarios-eyebrow,.scenarios-col-label,.scenario-lens,.scenario-complexity,.scenario-section__label,.okr-kr__dim,.flow-stages__stage,.modal__eyebrow,.modal__problem-label,.project-entry__label){font-family:var(--font-body);letter-spacing:.02em}
+.discovery-content :is(.breadcrumb,.sib-nav){font-size:var(--text-sm);letter-spacing:normal}
+.discovery-content .card__body p{margin:0}
+/* Plain headings and labels: grouping comes from typography, spacing and rules. */
+.discovery-content .page .page-header__title,
+.discovery-content :is(.card__title,.sub-group__label,.flow-section__label,.flow-item__name,.scenario-card__title,.flow-category__title,.flow-detail__title,.l3-section__title){background:none;padding:0;margin-inline:0;border-radius:0}
+.discovery-content .card__head{background:var(--surface)}
+.discovery-content :is(.sub-group__label,.flow-section__label){font-weight:500;margin-bottom:6px}
+.discovery-content .card:has(.card__click-target):hover{border-color:var(--link)}
+.discovery-content .card:focus-within{outline:3px solid var(--focus);outline-offset:2px}
+.discovery-content .card-link{color:var(--link)}
+/* AICC tabs use an active underline; tables use neutral row headers and rules. */
+.discovery-content .problems-tab-bar{background:var(--surface);gap:4px}
+.discovery-content .problems-tab-label{font-size:var(--text-sm);border-bottom-width:3px;min-height:44px;display:flex;align-items:center}
+.discovery-content .problems-tab-label:hover{background:var(--surface-subtle)}
+.discovery-content .problems-lens{background:var(--surface-subtle);color:var(--text);text-align:left}
+.discovery-content .problems-statement{background:var(--surface);color:var(--text);padding:12px}
+/* Categories and complexity remain explicit labels, without coloured status fills. */
+.discovery-content :is(.scenario-lens,.scenario-complexity){background:var(--surface-subtle);color:var(--text-muted);border-radius:6px;line-height:1.5}
+.discovery-content .scenario-complexity{background:var(--surface);border:1px solid var(--border-control);color:var(--text)}
+.discovery-content :is(.scenario-card__body,.flow-detail__body){background:var(--surface)}
+.discovery-content .scenario-section{border-left-color:var(--border)}
+.discovery-content :is(.okr-objective,.flow-detail__problems,.modal__problem){background:var(--surface-subtle);border-left:3px solid var(--brand);border-radius:0 8px 8px 0}
+.discovery-content .okr-kr__dim{color:var(--text-muted)}
+/* Flow stages are buttons: neutral surfaces, visible borders and keyboard focus. */
+.discovery-content .flow-stages__stage{background:var(--surface);border:1px solid var(--border-control);border-radius:var(--radius-control);min-height:44px}
+.discovery-content .flow-stages__stage:hover{background:var(--surface-subtle);border-color:var(--link)}
+.discovery-content .flow-stages__stage:focus-visible{background:var(--surface-subtle);outline:3px solid var(--focus);outline-offset:3px}
+.discovery-content .modal p{margin:0 0 12px}
+.discovery-content .modal{z-index:200}
+.discovery-content .modal__panel{width:100%;max-width:76rem;max-height:calc(100dvh - 32px)}
+.discovery-content .modal__panel :is(h3,p){max-width:none;overflow-wrap:anywhere}
+.finance-tab-focus{outline:3px solid var(--focus);outline-offset:-3px}
+.discovery-content :target{scroll-margin-top:20px}
+.discovery-content .scenario-card:target{outline:2px solid var(--brand);outline-offset:3px}
+.discovery-content .scenario-card__intent{overflow-wrap:anywhere}
+.discovery-workspace .o-header,.discovery-workspace .o-nav{font-family:var(--font-body)}
+.discovery-workspace .o-header{border-bottom:2px solid var(--brand)}
+@media(max-width:768px){.discovery-content .top-band,.discovery-content .main-row,.discovery-content .below-band,.discovery-content .cap-row,.discovery-content .peer-row{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:650px){.discovery-content{--text-page-title:1.75rem;--text-h2:1.375rem}}
+@media(max-width:380px){.discovery-content .page-header__title{overflow-wrap:anywhere}}
+
+/* Shared compact navigation cards. */
+.discovery-content [data-ui-pattern]{min-width:0}
+.discovery-content [data-ui-pattern] .card__head{padding:12px 16px}
+.discovery-content [data-ui-pattern] .card__body{padding:12px 16px}
+.discovery-content [data-ui-pattern] .dot{display:none}
+.discovery-content [data-ui-pattern] .card-link__count{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--text-muted);font-size:12px;font-weight:400;background:var(--surface-subtle);border-radius:4px;padding:2px 5px;flex-shrink:0}
+.discovery-content [data-ui-pattern] .card__count{font-size:14px;font-weight:400;white-space:nowrap}
+.discovery-content [data-ui-pattern] .sub-group__label{line-height:1.4;margin-bottom:6px}
+.discovery-content [data-ui-pattern] a:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+
+/* Top tapers over 30%; bottom stays 2px thick through 70%, then tapers to the end. */
+.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows],[data-ui-pattern=scenario],.flow-detail__summary)::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--brand);opacity:0;z-index:3;pointer-events:none;
+  --card-accent-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M0 12A12 12 0 0 1 12 0V2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left top/var(--radius-card) var(--radius-card) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath transform='translate(0 12) scale(1 -1)' d='M0 12A12 12 0 0 1 12 0V2A10 10 0 0 0 2 12Z'/%3E%3C/svg%3E") left bottom/var(--radius-card) var(--radius-card) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 2' preserveAspectRatio='none'%3E%3Cpath d='M0 0H100C66 0 34 2 0 2Z'/%3E%3C/svg%3E") left var(--radius-card) top/calc(30% - var(--radius-card)) 2px no-repeat,
+    linear-gradient(#000,#000) left var(--radius-card) bottom/calc(70% - var(--radius-card)) 2px no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 2' preserveAspectRatio='none'%3E%3Cpath transform='translate(0 2) scale(1 -1)' d='M0 0H100C66 0 34 2 0 2Z'/%3E%3C/svg%3E") right bottom/30% 2px no-repeat,
+    linear-gradient(#000,#000) left center/2px calc(100% - var(--radius-card) - var(--radius-card)) no-repeat;
+  -webkit-mask:var(--card-accent-mask);mask:var(--card-accent-mask);
+}
+.discovery-content :is([data-ui-pattern=groups],[data-ui-pattern=workflows],[data-ui-pattern=scenario],.flow-detail__summary):is(:hover,:focus-within,[open])::before{opacity:1}
+.discovery-content .card:is([data-ui-pattern=groups],[data-ui-pattern=workflows]):hover{border-color:var(--border)}
+.discovery-content [data-ui-pattern=groups] .card__body{padding:0}
+.discovery-content [data-ui-pattern=groups] .sub-groups{display:block}
+.discovery-content [data-ui-pattern=groups] .sub-group{display:grid;grid-template-columns:minmax(110px,1fr) minmax(0,2fr);border-bottom:1px solid var(--border)}
+.discovery-content [data-ui-pattern=groups] .sub-group:last-child{border-bottom:0}
+.discovery-content [data-ui-pattern=groups] .sub-group__label{background:var(--surface-subtle);padding:12px;margin:0;color:var(--text)}
+.discovery-content [data-ui-pattern=groups] .sub-group__items{display:grid;gap:0;padding:6px 12px}
+.discovery-content [data-ui-pattern=groups] .card-link{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:4px 0}
+
+/* The full-width data card presents its two groups alongside each other. */
+.discovery-content .card--data[data-ui-pattern=groups] .sub-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.discovery-content .card--data[data-ui-pattern=groups] .sub-group{display:block;border-bottom:0}
+.discovery-content .card--data[data-ui-pattern=groups] .sub-group+.sub-group{border-left:1px solid var(--border)}
+.discovery-content .card--data[data-ui-pattern=groups] .sub-group__label{border-bottom:1px solid var(--border)}
+
+/* Content in development has a visible status and remains non-interactive. */
+.discovery-content [data-ui-pattern=in-progress]{border:1px dashed var(--border-control)}
+.discovery-content [data-ui-pattern=in-progress] .card__head{border-bottom:0}
+.discovery-content [data-ui-pattern=in-progress] .card-link--pending{color:var(--text);text-decoration:none}
+.discovery-content [data-ui-pattern=in-progress] .card__eyebrow{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.discovery-content .discovery-status{display:inline-block;padding:2px 8px;border:1px solid var(--border-control);border-radius:999px;background:var(--surface-subtle);color:var(--text);font-size:12px;font-weight:500;line-height:1.5;text-transform:none;letter-spacing:normal}
+
+/* Workflows: lightly shaded lines; an open preview has the AICC active underline. */
+.discovery-content [data-ui-pattern=workflows]{align-self:start}
+.discovery-content .workflow-overview-link{color:inherit;text-decoration:none}
+.discovery-content .workflow-overview-link:hover{color:var(--link);text-decoration:underline}
+.discovery-content [data-ui-pattern=workflows] .flow-item{padding:0;border-radius:0;background:none;width:100%;display:block}
+.discovery-content [data-ui-pattern=workflows] .flow-list{gap:4px}
+.discovery-content [data-ui-pattern=workflows] .flow-sections{gap:24px}
+.discovery-content [data-ui-pattern=workflows] .flow-section+.flow-section{padding-top:16px;border-top:1px solid var(--border)}
+.discovery-content .workflow-preview{border:0;border-radius:0}
+.discovery-content .workflow-preview>summary{display:flex;align-items:center;gap:10px;padding:6px 10px;min-height:40px;font-size:15px;cursor:pointer;list-style:none;background:var(--surface-subtle);border-bottom:3px solid transparent}
+.discovery-content .workflow-preview>summary::-webkit-details-marker{display:none}
+.discovery-content .workflow-preview>summary::before{content:'›';font-size:20px;color:var(--link);flex-shrink:0;transition:transform .15s}
+.discovery-content .workflow-preview[open]>summary::before{transform:rotate(90deg)}
+.discovery-content .workflow-preview[open]>summary{border-bottom-color:var(--link);color:var(--link)}
+.discovery-content .workflow-preview>summary .card-link__count{margin-left:auto}
+.discovery-content .workflow-preview>summary:hover{color:var(--link)}
+.discovery-content .discovery-guide{margin:0 0 24px;border:1px solid var(--border);border-radius:8px;background:var(--surface-subtle)}
+.discovery-content .discovery-guide>summary{display:flex;align-items:center;gap:10px;padding:10px 16px;min-height:44px;font-size:15px;font-weight:600;cursor:pointer;list-style:none}
+.discovery-content .discovery-guide>summary::-webkit-details-marker{display:none}
+.discovery-content .discovery-guide>summary::before{content:'›';font-size:20px;color:var(--link);flex-shrink:0;transition:transform .15s}
+.discovery-content .discovery-guide[open]>summary::before{transform:rotate(90deg)}
+.discovery-content .discovery-guide>summary:hover{color:var(--link)}
+.discovery-content .discovery-guide__body{padding:4px 16px 16px;font-size:15px;line-height:24px}
+.discovery-content .discovery-guide__body h2{margin:20px 0 8px;font-size:16px}
+.discovery-content .discovery-guide__body p{margin:0 0 12px}
+.discovery-content .discovery-guide__body .o-table-wrap{margin:12px 0;overflow-x:auto}
+.discovery-content .discovery-guide__body table{width:100%;border-collapse:collapse;background:var(--surface,transparent)}
+.discovery-content .discovery-guide__body th,.discovery-content .discovery-guide__body td{padding:8px 12px;border:1px solid var(--border);vertical-align:top;text-align:left}
+.discovery-content .workflow-preview>summary:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
+.discovery-content .workflow-preview__body{padding:10px 10px 12px}
+.discovery-content .card__body .workflow-preview__body p{font-size:14px;color:var(--text-muted);margin:0 0 10px}
+.discovery-content .workflow-preview__stages{display:flex;flex-wrap:wrap;list-style:none;gap:6px 10px;padding:0;margin:0}
+.discovery-content .workflow-preview__stages li{display:flex;align-items:baseline;gap:10px;min-width:0;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.discovery-content .workflow-preview__stages li:not(:last-child)::after{content:'→';color:var(--text-muted)}
+.discovery-content .workflow-preview__stages a{display:inline-flex;align-items:center;min-height:28px;color:var(--link);text-decoration:underline;text-underline-offset:3px}
+
+@media(max-width:650px){
+  .discovery-content [data-ui-pattern=groups] .sub-group{grid-template-columns:minmax(0,1fr)}
+  .discovery-content [data-ui-pattern=groups] .sub-group__label{padding:8px 12px}
+  .discovery-content .card--data[data-ui-pattern=groups] .sub-groups{grid-template-columns:minmax(0,1fr)}
+  .discovery-content .card--data[data-ui-pattern=groups] .sub-group+.sub-group{border-left:0;border-top:1px solid var(--border)}
+  .discovery-content [data-ui-pattern] .card-link,.discovery-content .workflow-preview>summary{min-height:44px}
+}
+
+/* Shared context tabs and cards across both Discovery editions. */
+.discovery-content .concern-problems{border:0;border-radius:0;background:none;box-shadow:none;overflow:visible;margin-bottom:28px}
+.discovery-content .problems-tab-bar{padding:0;gap:8px;flex-wrap:nowrap}
+.discovery-content .problems-tab-label{padding:10px 14px;white-space:normal;text-transform:none;letter-spacing:normal;line-height:1.4;font-size:15px;flex:0 1 auto}
+.discovery-content .problems-panel{padding:16px 0 0}
+.discovery-content .discovery-context-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.discovery-content .discovery-context-card{border:1px solid var(--border);border-radius:var(--radius-card);background:var(--surface);overflow:hidden}
+.discovery-content .discovery-context-card h3{margin:0;padding:10px 16px;font-size:15px;font-weight:500;background:var(--surface-subtle);border-bottom:1px solid var(--border)}
+.discovery-content .discovery-context-card p{margin:0;padding:12px 16px;font-size:15px;line-height:1.5}
+
+/* Area cards retain their destinations and the overview's compact grouped rows. */
+.discovery-content .bp-grid{gap:16px}
+.discovery-content :is(.top-band,.main-row,.right-col,.below-band){gap:16px;align-items:start}
+.discovery-content .right-col{align-items:stretch}
+.discovery-content .right-col>.card{flex:0 0 auto}
+.discovery-content .card__head{padding:12px 16px}
+.discovery-content .card__eyebrow{font-size:12px;margin-bottom:6px}
+.discovery-content .card__title{font-size:20px}
+.discovery-content .card__count{font-size:14px;font-weight:400;white-space:nowrap}
+.discovery-content .sub-group__label{font-size:12px;line-height:1.4}
+.discovery-content .dot{display:none}
+.discovery-content .card-link{font-size:15px;line-height:1.45}
+.discovery-content .card-link__count{font-size:12px;white-space:nowrap;color:var(--text-muted);background:var(--surface-subtle);border-radius:4px;padding:2px 5px;font-variant-numeric:tabular-nums;flex-shrink:0}
+.discovery-content .card--flow .card__body{padding:12px 16px}
+.discovery-content .flow-section__label{font-size:12px;margin-bottom:8px}
+.discovery-content .flow-item__name{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding:8px 10px;background:var(--surface-subtle);border-bottom:2px solid transparent}
+.discovery-content .flow-item__name:hover{border-bottom-color:var(--link);text-decoration:none}
+.discovery-content .card-link:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+
+/* Scenario cards show their intent at a glance and open into a full-width detail. */
+.discovery-content :is(.concern-scenarios,.l3-section__scenarios){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:12px;margin-top:32px}
+.discovery-content .concern-scenarios{margin-top:64px}
+.discovery-content .scenarios-header-row{grid-column:1/-1;margin:0 0 20px;padding:0}
+.discovery-content :is(.scenarios-eyebrow,.scenarios-column-labels){display:none}
+.discovery-content .scenario-card{position:relative;margin:0;background:var(--surface);border-color:var(--border);box-shadow:none}
+.discovery-content .scenario-card:hover{border-color:var(--border-control);box-shadow:none}
+.discovery-content .scenario-card[open]{grid-column:1/-1;border-color:var(--border-control);box-shadow:none}
+.discovery-content .scenario-card__summary{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:'lens complexity' 'title title' 'intent intent';gap:10px 16px;padding:16px;background:var(--surface)}
+.discovery-content .scenario-card__summary:hover{background:var(--surface)}
+.discovery-content .scenario-card__summary:focus-visible{outline:3px solid var(--focus);outline-offset:-3px;border-radius:var(--radius-card)}
+.discovery-content .scenario-lens{grid-area:lens;justify-self:start;font-size:11px;font-weight:500;padding:3px 7px;letter-spacing:.02em;min-width:0}
+.discovery-content .scenario-complexity{grid-area:complexity;align-self:center;font-size:12px;padding:2px 7px;letter-spacing:normal}
+.discovery-content .scenario-complexity::before{content:attr(title) ' ';font-weight:400;color:var(--text-muted)}
+.discovery-content .scenario-card__title-col{grid-area:title;align-items:baseline;gap:8px}
+.discovery-content .scenario-card__chevron{font-size:14px;color:var(--link)}
+.discovery-content .scenario-card__title{font-size:18px;line-height:1.3}
+.discovery-content .scenario-card__intent-col{grid-area:intent;padding-left:16px}
+.discovery-content .scenario-card__intent{font-size:15px;line-height:1.5}
+.discovery-content .scenario-card[open]>.scenario-card__summary{border-bottom:2px solid var(--link)}
+.discovery-content .scenario-card__body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:18px 20px;border-top:0}
+.discovery-content .scenario-section{padding:0;border:0;min-width:0}
+.discovery-content .scenario-section:has(.okr-grid){grid-column:1/-1;border-top:1px solid var(--border);padding-top:16px}
+.discovery-content .scenario-section__label{font-size:12px;color:var(--text-muted);letter-spacing:.02em;margin-bottom:8px}
+.discovery-content .scenario-section p{font-size:15px;line-height:1.5}
+.discovery-content .okr-objective{border:0;border-radius:8px;padding:12px 14px;margin:0 0 12px}
+.discovery-content .okr-grid{gap:12px}
+.discovery-content .okr-kr{padding:12px;border:1px solid var(--border);border-radius:8px}
+.discovery-content .okr-kr__dim{font-size:12px;font-weight:500;margin-bottom:6px}
+
+@media(max-width:1100px){
+  .discovery-content :is(.concern-scenarios,.l3-section__scenarios){grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:800px){
+  .discovery-content .discovery-context-grid,.discovery-content .scenario-card__body{grid-template-columns:minmax(0,1fr)}
+  .discovery-content .okr-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:650px){
+  .discovery-content .problems-tab-label{padding:8px 10px;font-size:14px;flex:1 1 0}
+  .discovery-content .scenario-card__summary{padding:14px;gap:10px}
+  .discovery-content .scenario-card__intent-col{padding-left:0}
+  .discovery-content .scenario-card__body{padding:14px}
+  .discovery-content .card-link{min-height:44px}
+}
+/* Regulatory Horizon: overview box, page and the marks on linked scenarios. */
+.discovery-content .horizon-region{margin-top:32px}
+.discovery-content .card--horizon{border-style:solid}
+.discovery-content .card--horizon[data-ui-pattern=groups] .sub-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.discovery-content .card--horizon[data-ui-pattern=groups] .sub-group{display:block;min-width:0;border-bottom:0}
+.discovery-content .card--horizon[data-ui-pattern=groups] .sub-group+.sub-group{border-left:1px solid var(--border)}
+.discovery-content .card--horizon[data-ui-pattern=groups] .sub-group__label{border-bottom:1px solid var(--border)}
+@media(max-width:900px){
+  .discovery-content .card--horizon[data-ui-pattern=groups] .sub-groups{grid-template-columns:minmax(0,1fr)}
+  .discovery-content .card--horizon[data-ui-pattern=groups] .sub-group+.sub-group{border-left:0;border-top:1px solid var(--border)}
+}
+.discovery-content .horizon-contents{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 24px;margin:0 0 32px;padding:16px 16px 16px 36px;border:1px solid var(--border);border-radius:8px;background:var(--surface-subtle);font-size:15px}
+.discovery-content .horizon-theme{margin:0 0 64px;scroll-margin-top:80px}
+.discovery-content .horizon-theme__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin:0 0 24px}
+.discovery-content .horizon-theme__head h2{margin:0;font-size:24px}
+.discovery-content .horizon-theme__id{font-family:var(--font-mono,monospace);font-size:12px;color:var(--text-muted,inherit)}
+.discovery-content .horizon-standing{margin-left:auto;padding:2px 10px;border:1px solid var(--border);border-radius:999px;font-size:13px;white-space:nowrap}
+.discovery-content .horizon-theme p{margin:0 0 10px;font-size:15px;line-height:24px}
+.discovery-content .horizon-scenarios{margin:12px 0 0;padding-left:24px;font-size:15px;line-height:24px}
+.discovery-content .horizon-scenarios li{margin:0 0 4px}
+.discovery-content .horizon-scenarios__where{margin-left:8px;font-size:13px;color:var(--text-muted,inherit)}
+.discovery-content .horizon-chip{display:flex;flex-wrap:wrap;gap:4px 10px;margin:0 0 12px;font-size:13px}
+.discovery-content .scenario-card__body>.horizon-chip{grid-column:1/-1;margin:0}
+.discovery-content .horizon-chip span{font-weight:600}
+.discovery-content .horizon-chip a{padding:1px 8px;border:1px solid var(--border);border-radius:999px;color:var(--link)}
+
+/* Detailed topics and workflow pages share the same reading rhythm and controls. */
+.discovery-content .l3-sections{gap:64px;margin-top:64px}
+.discovery-content .l3-section__head{margin-bottom:16px}
+.discovery-content .l3-section__title{display:block;margin:0 0 24px;font-size:24px}
+.discovery-content .l3-section__intent{font-size:16px;font-style:normal;line-height:1.5}
+.discovery-content .l3-section__scenarios{margin-top:16px}
+.discovery-content .flow-categories{margin-top:64px;gap:64px}
+.discovery-content .flow-category{margin:0}
+.discovery-content .flow-category__title{display:block;font-size:24px;margin:0 0 28px}
+/* Major section boundaries stay distinct from the neutral rules inside cards. */
+.discovery-content :is(.l3-section__title,.scenarios-header-row,.flow-category__title,.horizon-theme__head){padding-bottom:16px;border-bottom:2px solid var(--brand)}
+.discovery-content .flow-category__table{border:0;display:grid;gap:8px}
+.discovery-content .flow-detail{border:0;background:var(--surface)}
+.discovery-content .flow-detail__summary{position:relative;padding:12px 14px;background:var(--surface-subtle);border:0;border-radius:var(--radius-card);grid-template-columns:minmax(180px,1fr) minmax(0,2fr);gap:0;align-items:stretch}
+.discovery-content .flow-detail[open]>.flow-detail__summary::before{opacity:1}
+.discovery-content .flow-detail__summary:focus-visible{outline:3px solid var(--focus);outline-offset:-3px}
+.discovery-content .flow-detail__title-col{gap:8px;padding-right:20px}
+.discovery-content .flow-detail__title{font-size:17px;line-height:1.4}
+.discovery-content .flow-detail__intent{font-size:15px;line-height:1.5;padding-left:20px;border-left:1px solid var(--border)}
+.discovery-content .flow-detail__body{padding:16px 0 24px;gap:20px}
+.discovery-content :is(.flow-detail__problems,.flow-problems){padding:0;border:0;background:none;border-radius:0;box-shadow:none}
+.discovery-content .flow-problems{margin-bottom:28px}
+.discovery-content .flow-stages{padding:0;border:0;border-radius:0;background:none;gap:6px 10px}
+.discovery-content .flow-stages__stage{flex:0 1 auto;padding:6px 10px;font-size:14px;font-weight:500;text-transform:none;letter-spacing:normal;background:var(--surface-subtle);border:0;border-bottom:2px solid transparent;border-radius:0;min-height:40px}
+.discovery-content .flow-stages__stage:is(:hover,:focus-visible){border-bottom-color:var(--link);color:var(--link)}
+.discovery-content .flow-stages__stage:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.discovery-content .modal__panel{padding:24px;border:1px solid var(--border);border-radius:var(--radius-card)}
+@media(max-width:800px){
+  .discovery-content .flow-detail__summary{grid-template-columns:minmax(0,1fr)}
+  .discovery-content .flow-detail__title-col{padding:0 0 10px}
+  .discovery-content .flow-detail__intent{padding:10px 0 0;border-left:0;border-top:1px solid var(--border)}
+}
+@media(max-width:650px){.discovery-content .flow-stages__stage{min-height:44px}.discovery-content .modal__panel{padding:18px}}

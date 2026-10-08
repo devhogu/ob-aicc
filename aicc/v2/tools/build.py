@@ -244,6 +244,25 @@ def load_pages(site, terms):
     return pages
 
 
+def load_catalog(pages):
+    """The scenario catalog, carried over verbatim as HTML fragments with their own styles."""
+    base = SRC / 'catalog' / 'pages'
+    if not base.exists():
+        return
+    home = (base / 'index.html').read_text(encoding='utf-8')
+    order = {}
+    for n, href in enumerate(re.findall(r'href="([^"#]+)', home)):
+        order.setdefault(('catalog/' + href.replace('/index.html', '')).rstrip('/'), n + 1)
+    for path in sorted(base.rglob('index.html')):
+        text = path.read_text(encoding='utf-8')
+        meta = json.loads(re.match(r'<!--page (.*?) -->\n', text)[1])
+        body = text[text.index('-->\n') + 4:]
+        page = Page(meta['id'], meta['title'], 'catalog', 0 if meta['id'] == 'catalog' else order.get(meta['id'], 9999), meta['summary'], body, layout='raw',
+                    nav_title='Обзор' if meta['id'] == 'catalog' else None)
+        page.styles = meta['styles']
+        pages[meta['id']] = page
+
+
 def add_generated(pages, site, terms):
     """Pages that are projections of data rather than Markdown: the vocabulary, and later the card views."""
     rows = ''.join(
@@ -273,8 +292,11 @@ def navigation(page, pages, site):
         local = ''
         if current and len(members) > 1:
             # Large sections list their top pages; the pages of the area the reader is in open beside them.
-            area = '/'.join(page.id.split('/')[:2])
-            shown = [p for p in members if p.id.count('/') <= 1 or p.id.startswith(area + '/')]
+            area = '/'.join(page.id.split('/')[:2]) if page.id.count('/') >= 1 else None
+            if section['id'] == 'catalog':
+                shown = [p for p in members if p.id.count('/') <= 1]  # the catalog lists its areas, as it always did
+            else:
+                shown = [p for p in members if p.id.count('/') <= 1 or (area and p.id.startswith(area + '/'))]
             local = '<div class="portal-local-nav">' + ''.join(
                 f'<a{" class=nav-sub" if p.id.count("/") >= 2 else ""} href="{escape(rel(page.url, p.url))}"' + (' aria-current="page"' if p is page else '') + f'>{escape(p.nav_title)}</a>'
                 for p in shown) + '</div>'
@@ -347,7 +369,14 @@ def render_page(page, pages, site):
                    ''.join(f'<a class="lv{2 if tag == "h2" else 3}" href="#{i}">{escape(label)}</a>' for tag, i, label in page.headings) + '</aside>')
     subject = quote(m['feedback_subject'].format(id=page.ident))
     section = next(s for s in site['sections'] if s['id'] == page.section)
-    if page.layout == 'home':
+    extra_head = ''
+    if page.layout == 'raw':
+        styles = ['tokens.css', 'components.css', 'theme.css'] + [s for s in page.styles if s.startswith('layouts/')]
+        extra_head = (''.join(f'<link rel="stylesheet" href="{escape(rel(here, "ru/catalog/assets/styles/" + s))}">' for s in styles) +
+                      f'<link rel="stylesheet" href="{escape(asset("discovery.css"))}"><script defer src="{escape(asset("discovery.js"))}"></script>')
+    if page.layout == 'raw':
+        body = page.body
+    elif page.layout == 'home':
         # the front page carries its own title inside the hero; the page identifier sits beside it
         body = f'<div class="o-wide">{page.body}</div>'
     else:
@@ -358,7 +387,7 @@ def render_page(page, pages, site):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
 <title>{escape(page.title)} · {escape(names["title"])}</title>
 <script>try{{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}}catch(e){{}}</script>
-{''.join(f'<link rel="stylesheet" href="{asset("ui/" + n)}">' for n in ('fonts.css', 'tokens.css', 'primitives.css', 'workspace.css'))}<link rel="stylesheet" href="{asset("site.css")}">
+{extra_head}{''.join(f'<link rel="stylesheet" href="{asset("ui/" + n)}">' for n in ('fonts.css', 'tokens.css', 'primitives.css', 'workspace.css'))}<link rel="stylesheet" href="{asset("site.css")}">
 <script src="{asset("search-ru.js")}"></script><script src="{asset("site.js")}" defer data-root="{escape(root)}" data-t-none="{escape(m["search_none"])}" data-t-light="{escape(m["theme_to_light"])}" data-t-dark="{escape(m["theme_to_dark"])}" data-t-mail-body="{escape(m["fb_mail_body"])}"></script>
 </head><body class="portal-workspace" data-portal-section="{page.section}" data-page="{escape(page.id)}">
 <a class="o-skip" href="#main">{escape(m["skip"])}</a>
@@ -371,7 +400,7 @@ def render_page(page, pages, site):
 </header>
 <div class="o-frame">{navigation(page, pages, site)}
 <main class="o-main hub-main" id="main" tabindex="-1">
-{crumbbar(page, pages, site, bool(context))}
+{'' if page.layout == 'raw' else crumbbar(page, pages, site, bool(context))}
 {body}
 </main>
 <footer class="o-footbar">
@@ -392,6 +421,11 @@ def render_page(page, pages, site):
 
 def search_entries(page):
     entries = [{'u': page.url, 't': next_label(page), 'h': page.title, 'x': plain(page.body)[:360]}]
+    if page.layout == 'raw':
+        # every scenario of the catalog is found by its title and intent, and the result opens it
+        for m in re.finditer(r'<details class="scenario-card"[^>]*\bid="([^"]+)".*?<h3[^>]*>(.*?)</h3>.*?(?:<p class="scenario-card__intent">(.*?)</p>|</summary>)', page.body, re.S):
+            entries.append({'u': page.url + '#' + m[1], 't': page.title, 'h': plain(m[2]), 'x': plain(m[3] or '')[:240]})
+        return entries
     for tag, ident, label in page.headings:
         entries.append({'u': page.url + '#' + ident, 't': page.title, 'h': label, 'x': ''})
     return entries
@@ -435,12 +469,13 @@ def build():
     site = load_site()
     terms = load_terms()
     pages = load_pages(site, terms)
+    load_catalog(pages)
     add_generated(pages, site, terms)
     taken = set()
     for page_id in sorted(pages):
         pages[page_id].ident = short_id(page_id, taken)
     for page in pages.values():
-        if page.source is not None:
+        if page.source is not None and page.layout != 'raw':
             page.body = render_markdown(page.body, page, terms, pages, site)
         else:
             page.headings = []
@@ -452,6 +487,10 @@ def build():
     shutil.copytree(SRC / 'ui', OUT / 'assets' / 'ui', ignore=shutil.ignore_patterns('icons'))
     shutil.copy(SRC / 'site.css', OUT / 'assets' / 'site.css')
     shutil.copy(SRC / 'site.js', OUT / 'assets' / 'site.js')
+    if (SRC / 'catalog').exists():
+        shutil.copytree(SRC / 'catalog' / 'assets', OUT / 'ru' / 'catalog' / 'assets')
+        shutil.copy(SRC / 'catalog' / 'discovery.css', OUT / 'assets' / 'discovery.css')
+        shutil.copy(SRC / 'catalog' / 'discovery.js', OUT / 'assets' / 'discovery.js')
     write(OUT / 'index.html', '<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=ru/index.html">'
           f'<title>{escape(site["names"]["ru"]["title"])}</title></head><body><main><h1><a href="ru/index.html">{escape(site["names"]["ru"]["title"])}</a></h1></main></body></html>\n')
     sources = publish_sources(site)

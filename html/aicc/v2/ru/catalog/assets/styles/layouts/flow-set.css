@@ -1,0 +1,428 @@
+/* @urn:           urn:financial-services:style:layout-flow-set@2.0.0 */
+/* @version:       2.0.0 */
+/* @kind:          style */
+/* @description:   Service-level flow-set page overlay — page-level LEAN problems (single panel, no tabs), category sections (each H2 + 2-column table of flows), and a stage-detail modal popup. Loaded ON TOP of service.css (top-page grid) and concern.css (problems-table primitives). Uses --section-gap (3rem) for uniform between-section vertical rhythm. Page H1 stays plain (no brushed background) — body has no .page--concern class so concern.css's brush rule does not match. */
+/* @engine_compat: ">=1.0.0" */
+/* @last_modified: 2026-05-03 */
+
+/* ================================================================
+   PAGE-LAYOUT LAYER — flow-set page overlay
+
+   Visual contract:
+   - Page H1 ≡ L1/L2 page-header H1 — blue brush from --brush-title-*
+     (same brush rule body-class-scoped to .page--flow-set, mirroring
+     concern.css's .page--concern rule)
+   - Category H2 ≡ L2 L3-section H2 — same blue brush family so all
+     major section titles across L1/L2/flow-set pages share one
+     visual identity
+   - Flow titles inside table rows ≡ amber brush from --brush-flow-*
+     (matches .flow-item__name pattern in components.css — flows
+     carry the amber identity wherever they're named)
+   - Page-level LEAN problems ≡ same .problems-table primitives
+     as L1/L2, single flat panel (no tabs)
+   - Section spacing ≡ --section-gap (3rem), matching the
+     header→problems gap on L1/L2 pages
+   ================================================================ */
+
+.page--flow-set {
+  --section-gap: 3rem;             /* 48px — uniform with .page-header margin-bottom */
+  --flow-title-col: 18rem;         /* fixed left-column width inside flow tables */
+}
+
+/* Page H1 — blue brush, same rule as L1/L2 (body.page--concern in
+   concern.css). Body-class-scoped so it only fires on flow-set pages
+   and doesn't leak to the service top page (which has no body class). */
+body.page--flow-set .page-header__title {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  margin-inline: calc(-1 * var(--space-3));
+  border-radius: var(--radius-brush);
+  background: linear-gradient(90deg,
+    var(--brush-title-start) 0%,
+    var(--brush-title-mid)   50%,
+    transparent              82%);
+}
+
+/* ─── Page-level LEAN problems — single panel, no tab chrome ─── */
+.flow-problems {
+  margin-bottom: var(--section-gap);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--paper-warm);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  padding: var(--space-3) var(--space-5);
+}
+
+/* ─── Categories wrapper ──────────────────────────────────── */
+/* Vertical stack of category sections; --section-gap mirrors the
+   header→problems gap above so the entire page reads with one
+   uniform vertical rhythm. */
+.flow-categories {
+  margin-top: var(--section-gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+/* ─── Category section ────────────────────────────────────── */
+.flow-category {
+  scroll-margin-top: var(--space-4);
+}
+
+/* Category title — blue brush from --brush-title-* (matches the
+   L2 .l3-section__title pattern). Same brush family as the page H1
+   above; hierarchy holds via font size (H1 clamps larger). */
+.flow-category__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-h2);
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-5);
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  margin-inline: calc(-1 * var(--space-3));
+  border-radius: var(--radius-brush);
+  background: linear-gradient(90deg,
+    var(--brush-title-start) 0%,
+    var(--brush-title-mid)   50%,
+    transparent              82%);
+}
+
+/* ─── 2-column flow table inside a category ────────────────── */
+/* Plain bordered table — top + bottom rules and a divider between
+   rows. Each <details> participates as a row; expanded body sits
+   below the row spanning both columns. */
+.flow-category__table {
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.flow-detail {
+  border-bottom: 1px solid var(--rule-soft);
+  transition: background 0.15s;
+}
+
+.flow-detail:last-child {
+  border-bottom: none;
+}
+
+/* ─── Closed summary row (the table row) ────────────────────── */
+.flow-detail__summary {
+  display: grid;
+  grid-template-columns: var(--flow-title-col) 1fr;
+  align-items: baseline;
+  column-gap: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+/* Belt-and-suspenders: suppress the native <summary> disclosure marker
+   across every browser. Some renderers still show the marker even when
+   summary has display: grid + list-style: none. */
+.flow-detail__summary::-webkit-details-marker { display: none; }
+.flow-detail__summary::marker              { content: ''; }
+.flow-detail__summary                      { list-style: none; }
+
+.flow-detail__summary:hover {
+  background: var(--paper-2);
+}
+
+details[open] > .flow-detail__summary {
+  background: var(--paper-2);
+}
+
+/* Title cell — serif title with the amber brush family (matches the
+   L1/top-page flow-card title brush so flows carry one visual
+   identity wherever they appear). Cleanly aligned in the left column
+   across all rows in the section. */
+.flow-detail__title-col {
+  display: flex;
+  align-items: baseline;
+  min-width: 0;
+}
+
+/* Flow title — serif with the SAME amber-brush highlight pattern that
+   .flow-item__name uses inside the top-page flow card (V5 components.css):
+     - padding: 1px var(--space-2)
+     - margin-left: calc(-1 * var(--space-2))  (only left — brush
+       extends slightly into the cell's left gutter, like a marker stroke)
+     - border-radius: var(--radius-label)
+     - hard-cut gradient at 50% (start→mid, then transparent) — this is
+       the "highlighter wash" look used everywhere flows are named in V5.
+   Result: flow titles on this page carry the same visual identity as
+   the flow-name links inside the L1/top-page flow card. */
+.flow-detail__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.3;
+  margin: 0;
+  display: inline-block;
+  padding: 1px var(--space-2);
+  margin-left: calc(-1 * var(--space-2));
+  border-radius: var(--radius-label);
+  background: linear-gradient(90deg,
+    var(--brush-flow-start) 0%,
+    var(--brush-flow-mid)   50%,
+    transparent             50%);
+}
+
+/* Right-column intent — body text, no italic (table cell context). */
+.flow-detail__intent {
+  /* Body prose — inherits --font-sans from body for typeface uniformity (G1).
+     Was previously --font-serif which violated G1 and made the summary intent
+     read in a different typeface than the body intent_full / problem statements. */
+  font-size: var(--text-body);
+  line-height: 1.55;
+  color: var(--ink-secondary);
+  margin: 0;
+}
+
+/* ─── Expanded body (below the row, spanning both cols) ─────── */
+.flow-detail__body {
+  padding: var(--space-5) var(--space-5) var(--space-6);
+  background: var(--paper-soft);
+  border-top: 1px solid var(--rule-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* Body heading — title repeated as an H4 at the top of the expanded body,
+   matching v3's bp-flow__title placement so the body reads as a
+   self-contained section. Plain heading (no brush) — the brush identity
+   stays on the summary title. Sized via --text-h4 (= 1rem) so the
+   hierarchy stays monotonic vs the H3 .flow-detail__title above (G4). */
+.flow-detail__heading {
+  font-family: var(--font-serif);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.flow-detail__intent-full {
+  /* Body prose — inherits --font-sans from body so paragraphs read in
+     the same typeface across page intent, problems, and flow body. */
+  font-size: var(--text-body);
+  line-height: 1.65;
+  color: var(--ink-secondary);
+  margin: 0;
+}
+
+/* Per-flow problems — warm-cream band with an amber left vertical rule,
+   right-rounded corners only. Matches v3's bp-flow-problems visual: the
+   block sits inset against the body, anchored by the left rule so it
+   reads as a related-but-distinct sub-section, not a free-floating card. */
+.flow-detail__problems {
+  background: var(--paper-warm);
+  border-left: 3px solid var(--genai-accent);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  padding: var(--space-3) var(--space-5) var(--space-4);
+}
+
+.flow-detail__problems .problems-table {
+  width: 100%;
+}
+
+/* G8: problems-table primitive renders identically across all wrappers
+   (concern-problems / flow-problems / flow-detail__problems). Cell-level
+   color overrides removed — only the WRAPPER (warm-cream bg + amber left
+   rule) is the documented variant; the table cells inherit defaults
+   (problems-lens → ink-orange-deep, problems-statement → ink-secondary,
+   row separator → rule-soft) from concern.css. */
+
+/* ─── Stage chain ───────────────────────────────────────────── */
+.flow-stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--paper);
+  border: 1px solid var(--rule-soft);
+  border-radius: var(--radius-card);
+}
+
+/* Stage pill — navy-tinted, flex:1 so each stage takes equal width and
+   the row fills the container, mirroring v3's bp-flow-diagram__stage.
+   Bold uppercase mono label for the stage name. */
+.flow-stages__stage {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-lens);
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--ink-primary);
+  background: var(--brush-title-mid);
+  border: 1px solid var(--brush-title-start);
+  border-radius: var(--radius-label);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+}
+
+.flow-stages__stage:hover,
+.flow-stages__stage:focus-visible {
+  background: var(--brush-title-start);
+  outline: none;
+}
+
+.flow-stages__stage:active {
+  transform: scale(0.98);
+}
+
+.flow-stages__arrow {
+  color: var(--ink-tertiary);
+  font-weight: 400;
+  margin-left: var(--space-1);
+}
+
+/* ================================================================
+   STAGE-POPUP MODAL
+   Generic overlay; opened via the inline page script. Closed by
+   default (no .is-open class).
+   ================================================================ */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--overlay-scrim);
+  z-index: 1000;
+  padding: var(--space-5);
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal__panel {
+  position: relative;
+  background: var(--paper);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-modal);
+  max-width: 38rem;
+  width: 100%;
+  max-height: 85vh;
+  overflow: auto;
+  padding: var(--space-6) var(--space-8);
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--ink-tertiary);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.15s, color 0.15s;
+}
+
+.modal__close:hover {
+  background: var(--paper-2);
+  color: var(--ink-primary);
+}
+
+.modal__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-orange-deep);
+  font-weight: 500;     /* aligned with all other eyebrows (G3) */
+  margin-bottom: var(--space-2);
+}
+
+.modal__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--ink-primary);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-4);
+}
+
+.modal__intent {
+  /* Body prose — inherits --font-sans from body for typeface uniformity
+     with page intent / problem statements / flow intent_full. */
+  font-size: var(--text-body);
+  line-height: 1.65;
+  color: var(--ink-secondary);
+  margin: 0 0 var(--space-4);
+}
+
+.modal__problem {
+  background: var(--genai-soft);
+  border-radius: var(--radius-card);
+  padding: var(--space-4) var(--space-5);
+}
+
+.modal__problem-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--genai-text);
+  margin-bottom: var(--space-2);
+}
+
+.modal__problem p {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--ink-primary);
+  margin: 0;
+}
+
+/* ================================================================
+   RESPONSIVE LAYER
+   ================================================================ */
+
+@media (max-width: 48em) {
+  .page--flow-set {
+    --flow-title-col: 14rem;
+  }
+}
+
+@media (max-width: 40em) {
+  /* Stack the 2-col table row when title column would crowd intent */
+  .flow-detail__summary {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-1);
+  }
+}
+
+@media (max-width: 30em) {
+  .flow-detail__summary,
+  .flow-detail__body {
+    padding: var(--space-4);
+  }
+  .modal__panel {
+    padding: var(--space-5);
+  }
+}
