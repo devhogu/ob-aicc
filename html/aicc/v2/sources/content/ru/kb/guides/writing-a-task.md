@@ -35,3 +35,5 @@ tags: запрос, промпт, формулировка
 - **Сохраняйте удачные запросы.** Хороший запрос для повторяющейся задачи — уже маленькая автоматизация.
 
 Это вход в серию о запросах. Дальше по шагам: [пишите ясно](page:kb/guides/prompt-clear-and-direct), [покажите пример](page:kb/guides/prompt-examples), [разделите инструкции и данные](page:kb/guides/prompt-structure), [дайте подумать](page:kb/guides/prompt-thinking), [длинные документы](page:kb/guides/prompt-long-documents), [формат ответа](page:kb/guides/prompt-output-format), [меньше выдумок](page:kb/guides/prompt-fewer-hallucinations), [цепочки запросов](page:kb/guides/prompt-chains).
+
+Всё о запросах в одном месте — [Как писать запросы к Claude: полное руководство](page:kb/guides/prompting-complete-guide).

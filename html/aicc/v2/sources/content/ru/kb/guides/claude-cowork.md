@@ -40,3 +40,5 @@ source_url: https://academy.claude.com/courses/introduction-to-claude-cowork
 - Многошаговую работу направляйте: если Claude пошёл не туда — остановите и уточните задачу.
 
 Доступность Cowork зависит от плана и настроек вашей организации. Если хотите попробовать его на задаче своего подразделения — [напишите нам](page:services/how-to-engage).
+
+Подробно, шаг за шагом — в руководстве [Работа в Claude: проекты, документы, Office и Cowork](page:kb/guides/claude-work-complete-guide).

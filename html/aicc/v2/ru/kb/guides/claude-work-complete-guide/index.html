@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ru" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Работа в Claude: проекты, документы, Office и Cowork — полное руководство · Хаб Компетенций по AI</title>
+<script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css"><link rel="stylesheet" href="../../../../assets/ui/tokens.css"><link rel="stylesheet" href="../../../../assets/ui/primitives.css"><link rel="stylesheet" href="../../../../assets/ui/workspace.css"><link rel="stylesheet" href="../../../../assets/site.css">
+<script src="../../../../assets/search-ru.js"></script><script src="../../../../assets/site.js" defer data-root="../../../.." data-t-none="По запросу ничего не найдено." data-t-light="Дневной режим" data-t-dark="Ночной режим" data-t-mail-body="Страница: {title}
+Номер: {ref}
+Адрес: {url}
+
+Вопрос или замечание:
+"></script>
+</head><body class="portal-workspace" data-portal-section="kb" data-page="kb/guides/claude-work-complete-guide">
+<a class="o-skip" href="#main">К содержанию</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../index.html"><img src="../../../../assets/ui/assets/logos/hub-mark.svg" width="36" height="36" alt=""><span>Хаб Компетенций по AI</span></a>
+  <span class="header-scope">База знаний</span>
+  <span class="status-chip" title="Эта страница и показанные на ней записи — черновики: ничего в них не принято и не утверждено">Черновик</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Поиск по Хабу</label><input id="q" type="search" autocomplete="off" placeholder="Поиск по Хабу" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><button id="theme-switch" type="button" class="theme-switch" aria-label="Ночной режим" title="Ночной режим"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg></span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg></span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Разделы сайта</summary><nav class="portal-sections" aria-label="Разделы"><div class="portal-nav-group"><a class="portal-section-link" data-section="hub" href="../../../index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="16" y="16" width="6" height="6" rx="1" />
+  <rect x="2" y="16" width="6" height="6" rx="1" />
+  <rect x="9" y="2" width="6" height="6" rx="1" />
+  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+  <path d="M12 12V8" />
+</svg><span>Хаб Компетенций</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="services" href="../../../services/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</svg><span>Услуги</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="process" href="../../../process/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg><span>Процесс</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="catalog" href="../../../catalog/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 5h13" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="M3 10a2 2 0 0 0 2 2h3" />
+  <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+</svg><span>Каталог сценариев</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="projects" href="../../../projects/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg><span>Проекты</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="responsible-ai" href="../../../responsible-ai/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg><span>Ответственный AI</span></a></div><div class="portal-nav-group is-current"><a class="portal-section-link" data-section="kb" href="../../index.html" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+  <path d="M12 17h.01" />
+</svg><span>База знаний</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="reference" href="../../../reference/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m16 6 4 14" />
+  <path d="M12 6v14" />
+  <path d="M8 8v12" />
+  <path d="M4 4v16" />
+</svg><span>Справочник</span></a></div></nav></details></aside>
+<main class="o-main hub-main" id="main" tabindex="-1">
+<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Навигационная цепочка"><a href="../../index.html">База знаний</a> / <span aria-current="page">Работа в Claude: проекты, документы, Office и Cowork — полное руководство</span></nav></div></div>
+<div class="o-reading o-single"><div class="o-copy"><h1>Работа в Claude: проекты, документы, Office и Cowork — полное руководство</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← Все руководства</a><span>Claude</span><span>полное руководство</span><span>45 мин</span></p>
+<p>Это главное руководство нашей Базы знаний: как работать с Claude на рабочем месте — от первого разговора до задач, которые Claude выполняет сам по расписанию. Оно собрано по Справочному центру Anthropic, документации Claude для Office и курсам Claude 101 и Introduction to Claude Cowork, состояние — октябрь 2026 года.</p>
+<div class="rai-cards rai-cards--3">
+<article><h3>Chat — думать вместе</h3><p>Разговор: обсудить, разобрать документ, написать черновик, получить готовый файл. Для повторяющейся работы — <b>проекты</b>.</p></article>
+<article><h3>Cowork — поручить</h3><p>Claude сам работает с вашими файлами, папками, приложениями и браузером, выполняет многошаговую задачу и сдаёт готовый результат.</p></article>
+<article><h3>Office — прямо в документе</h3><p>Claude в Excel, Word, PowerPoint и Outlook: правит открытый файл на месте, сохраняя его оформление.</p></article>
+</div>
+<p>Возможности зависят от плана и от того, что включил администратор вашей организации. Работайте только в одобренном рабочем аккаунте; если чего-то нет — <a href="../../../services/how-to-engage/index.html">напишите нам</a>.</p>
+<div class="course" data-tabs><div class="course-tabs" role="tablist"><button type="button" role="tab" data-tab="start" aria-selected=true><b>1</b><span>С чего начать</span></button><button type="button" role="tab" data-tab="projects"><b>2</b><span>Проекты</span></button><button type="button" role="tab" data-tab="files"><b>3</b><span>Файлы и документы в разговоре</span></button><button type="button" role="tab" data-tab="create-files"><b>4</b><span>Создание Word, Excel, PowerPoint и PDF</span></button><button type="button" role="tab" data-tab="office"><b>5</b><span>Claude в Excel, Word, PowerPoint и Outlook</span></button><button type="button" role="tab" data-tab="connectors"><b>6</b><span>Подключения и исследование</span></button><button type="button" role="tab" data-tab="cowork"><b>7</b><span>Cowork: поручить Claude работу</span></button><button type="button" role="tab" data-tab="safety"><b>8</b><span>Безопасность и данные</span></button><button type="button" role="tab" data-tab="roles"><b>9</b><span>Сценарии по ролям</span></button></div><section class="tab-panel" id="start" data-tab-panel="start"><h2 class="tab-title">1. С чего начать</h2>
+<h3 id="language">Язык интерфейса</h3>
+<p>Интерфейса Claude на русском нет, поэтому кнопки и меню — на английском. В этом руководстве английское название дано первым, а перевод — в скобках. <strong>Разговаривать с Claude можно по-русски</strong>: он отвечает на языке, на котором к нему обращаются.</p>
+<h3 id="where">Где что находится</h3>
+<ul>
+<li><strong>Новый разговор</strong> — кнопка вверху слева. Каждый разговор начинается с чистого листа.</li>
+<li><strong>Projects</strong> (Проекты) — в левой панели или по адресу claude.ai/projects.</li>
+<li><strong>Модель и уровень усилия</strong> — меню рядом с кнопкой отправки. Для рутины — Low или Medium, для большинства задач — High, для сложного анализа — Xhigh или Max. На новых моделях размышление включено всегда.</li>
+<li><strong>«+» в поле сообщения</strong> — приложить файлы, включить исследование (Research), подключения (Connectors), выключить память для этого разговора.</li>
+<li><strong>Settings</strong> (Параметры) → <strong>Instructions for Claude</strong> — ваши постоянные инструкции для всех разговоров: кто вы, как оформлять ответы.</li>
+</ul>
+<h3 id="memory">Память и личные разговоры</h3>
+<ul>
+<li>В командных планах память по умолчанию выключена: её включает владелец организации, а затем каждый сотрудник — у себя в Settings → Memory. Там же видно и можно исправить то, что Claude запомнил.</li>
+<li>Значок призрака — <strong>приватный разговор</strong>: он не сохраняется в истории и памяти. В командных планах такие разговоры всё равно подпадают под правила хранения и выгрузки организации.</li>
+</ul>
+<p class="course-next"><a href="#projects">Дальше: Проекты →</a></p></section><section class="tab-panel" id="projects" data-tab-panel="projects"><h2 class="tab-title">2. Проекты</h2>
+<p>Проект — рабочее пространство со своей историей разговоров, своими документами и своими инструкциями. Всё, что лежит в проекте, Claude учитывает в каждом разговоре внутри него.</p>
+<ol class="rai-flow rai-flow--4">
+<li><b>Создать</b><span>одна тема — один проект</span></li>
+<li><b>Знания</b><span>документы, на которые опираться</span></li>
+<li><b>Инструкции</b><span>роль, порядок работы, тон, требования</span></li>
+<li><b>Работать и поддерживать</b><span>разговоры, совместный доступ, обновления</span></li>
+</ol>
+<h3 id="create">1. Создать</h3>
+<ol>
+<li><strong>Projects</strong> → <strong>+ New Project</strong> (Новый проект) вверху справа.</li>
+<li>Название и описание — для людей: <strong>Claude их не видит</strong>, поэтому всё важное пишите в инструкции.</li>
+<li>В командных планах выберите видимость: <strong>Keep it private</strong> (только вы) или <strong>Share with your broader organization</strong> (вся организация), если администратор это разрешил.</li>
+</ol>
+<p>Лучше несколько узких проектов, чем один «всё по работе»: «Ответы на обращения клиентов», «Квартальная отчётность», «Проверка договоров поставки».</p>
+<h3 id="knowledge">2. Добавить знания</h3>
+<p>Справа на странице проекта — база знаний: «+» → загрузите документы.</p>
+<ul>
+<li>До <strong>30 МБ на файл</strong>, число файлов не ограничено, но общий объём должен поместиться в рабочую память модели.</li>
+<li>На платных планах, когда знаний становится много, Claude сам включает поиск по документам проекта — это увеличивает ёмкость примерно в десять раз без потери качества.</li>
+<li><strong>Называйте файлы понятно:</strong> «Регламент_кредитования_2026.pdf», а не «document1.pdf» — Claude ориентируется по именам.</li>
+<li>Кладите полные и действующие версии; черновики и устаревшее — не нужно.</li>
+<li>В вопросах называйте конкретный документ: «по регламенту кредитования, раздел 4».</li>
+<li>Google Docs можно добавить ссылкой, если подключён Google Drive.</li>
+</ul>
+<h3 id="instructions">3. Написать инструкции</h3>
+<p><strong>Set project instructions</strong> (Установить инструкции проекта) → текст → <strong>Save instructions</strong>. Хорошие инструкции содержат четыре вещи: контекст, порядок работы, тон, обязательные требования.</p>
+<pre><code>Контекст: проект для специалистов контакт-центра. Мы отвечаем
+клиентам по вопросам карт и платежей.
+
+Порядок: сначала найди ответ в документах проекта. Если его там нет —
+так и скажи и предложи передать вопрос старшему специалисту.
+
+Тон: вежливо, просто, без внутренних терминов. 5–7 предложений.
+
+Обязательно: никогда не обещай сроков и решений, которые не указаны
+в регламенте. Не проси у клиента полный номер карты и коды.
+</code></pre>
+<pre><code>Контекст: проект финансовой службы для подготовки ежемесячной
+справки по исполнению бюджета.
+
+Порядок: 1) выпиши факт и план из приложенной выгрузки; 2) посчитай
+отклонения; 3) отклонения больше 5% объясни по комментариям
+подразделений; 4) сделай справку.
+
+Формат: одна страница. Сначала три главных вывода, затем таблица,
+затем риски. Каждая цифра — со ссылкой на лист и строку выгрузки.
+</code></pre>
+<p>Подробно о том, как формулировать, — <a href="../prompting-complete-guide/index.html">Как писать запросы к Claude</a>.</p>
+<h3 id="work">4. Работать в проекте</h3>
+<ul>
+<li>Каждая задача — новый разговор внутри проекта: все они видят знания и инструкции.</li>
+<li><strong>Разговоры одного проекта не видят друг друга</strong>: что должно быть общим — кладите в знания. Если включена память, у проекта она своя, отдельная от остальных разговоров.</li>
+<li>Удачный разговор вне проекта можно перенести в него: меню у названия разговора → <strong>Add to project</strong>.</li>
+</ul>
+<h3 id="share">5. Поделиться (Team и Enterprise)</h3>
+<ol>
+<li><strong>Share project</strong> (Поделиться проектом) справа от названия.</li>
+<li>Добавьте коллег по имени или почте — можно вставить сразу список адресов.</li>
+<li>Права: <strong>Can view</strong> — видит знания и инструкции и может работать в проекте, но не менять их; <strong>Can edit</strong> — может менять инструкции, знания и участников.</li>
+</ol>
+<p>Ваши разговоры внутри общего проекта остаются <strong>вашими</strong> — коллеги их не видят, пока вы сами не поделитесь.</p>
+<h3 id="maintain">6. Поддерживать</h3>
+<ul>
+<li><strong>Star</strong> — закрепить нужный проект наверху.</li>
+<li>Регулярно пересматривайте документы: изменился регламент — замените файл, иначе Claude ответит по старому.</li>
+<li><strong>Archive</strong> — убрать неактуальный проект с сохранением прав; <strong>Delete</strong> — удалить совсем.</li>
+</ul>
+<p class="course-next"><a href="#files">Дальше: Файлы и документы в разговоре →</a></p></section><section class="tab-panel" id="files" data-tab-panel="files"><h2 class="tab-title">3. Файлы и документы в разговоре</h2>
+<h3 id="upload">Что можно приложить</h3>
+<p>«+» → <strong>Add files or photos</strong>, или перетащите файл в окно, или вставьте картинку из буфера.</p>
+<div class="o-table-wrap"><table>
+<thead>
+<tr>
+<th>Что</th>
+<th>Ограничения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PDF, DOCX, XLSX, CSV, TXT, HTML, ODT, RTF, JSON</td>
+<td>до 20 файлов в разговоре</td>
+</tr>
+<tr>
+<td>Картинки JPEG, PNG, GIF, WebP</td>
+<td>до 8000×8000 точек; лучше от 1000×1000</td>
+</tr>
+<tr>
+<td>PDF до 100 страниц</td>
+<td>Claude видит и текст, и картинки с графиками</td>
+</tr>
+<tr>
+<td>PDF 101–1000 страниц</td>
+<td>только текст</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Для больших файлов ориентируйтесь на <strong>30 МБ</strong>: разные статьи Справочного центра называют разные пределы, а 30 МБ — надёжная граница.</li>
+<li>Из Word и других не-PDF файлов Claude берёт только текст; картинки внутри не читаются.</li>
+<li>Ссылаясь на страницу PDF, называйте номер, который показывает программа просмотра, а не напечатанный на странице.</li>
+<li>Большой документ лучше разбить на части.</li>
+</ul>
+<p>Перед тем как приложить файл, вспомните <a href="../what-to-share/index.html">что можно и нельзя передавать AI</a>.</p>
+<p class="course-next"><a href="#create-files">Дальше: Создание Word, Excel, PowerPoint и PDF →</a></p></section><section class="tab-panel" id="create-files" data-tab-panel="create-files"><h2 class="tab-title">4. Создание Word, Excel, PowerPoint и PDF</h2>
+<p>Claude умеет не только читать, но и <strong>создавать настоящие файлы</strong>: таблицы Excel с формулами и диаграммами, документы Word, презентации PowerPoint, PDF.</p>
+<h3 id="enable-files">Включить</h3>
+<ul>
+<li><strong>Free, Pro, Max:</strong> Settings → Capabilities → <strong>Code execution and file creation</strong> (Выполнение кода и создание файлов).</li>
+<li><strong>Team, Enterprise:</strong> включено по умолчанию; администратор может выключить.</li>
+</ul>
+<h3 id="ask-files">Как просить</h3>
+<p>Будьте конкретны: опишите структуру, содержание и оформление.</p>
+<div class="rai-cards rai-cards--2">
+<article><h3>Excel</h3><p>«Сделай таблицу для учёта расходов по месяцам: категории, суммы, итоги и экономия формулами». «Перенеси все данные из этого PDF в Excel и построй сводную диаграмму».</p></article>
+<article><h3>Отчёт по данным</h3><p>«По этой выгрузке CSV сделай квартальный отчёт о продажах: динамика, выводы, рекомендации».</p></article>
+<article><h3>Word</h3><p>«Объясни эту таблицу Excel в отчёте Word с комментариями к каждому показателю».</p></article>
+<article><h3>PowerPoint</h3><p>«Преврати этот документ в презентацию на 8 слайдов для правления».</p></article>
+</div>
+<p>Можно и цепочкой: выгрузка → финансовая модель → служебная записка → презентация. Готовые файлы скачиваются кнопкой и доступны всё время, пока открыт разговор; их можно сохранить и в Google Drive.</p>
+<ul>
+<li>В Excel Claude ставит <strong>формулы, а не готовые числа</strong> — проверяйте связи формул.</li>
+<li>Создание файлов расходует лимит быстрее обычного разговора.</li>
+<li>Файлы и сайты извне могут содержать скрытые команды: следите за тем, что делает Claude, и остановите работу, если видите неожиданное обращение к внешним ресурсам.</li>
+</ul>
+<h3 id="artifacts">Артефакты</h3>
+<p>Артефакт — то, что Claude создаёт для вас и чем можно поделиться: документ, слайды, дизайн, панель с показателями, небольшой инструмент. Он открывается в панели рядом с разговором.</p>
+<ul>
+<li><strong>Шаблоны:</strong> документы (Docs), слайды (Slides), дизайн (Design) — на всех планах; панели показателей и анимация — на старших планах.</li>
+<li><strong>Править:</strong> попросить Claude, поправить прямо в артефакте или выделить текст → «Edit with Claude».</li>
+<li><strong>Экспорт:</strong> документы — в Word, PDF, Google Docs; слайды — в PowerPoint, PDF, Google Slides.</li>
+<li><strong>Поделиться:</strong> по умолчанию артефакт личный; в командных планах — только внутри организации. Права: просмотр, комментарии, редактирование.</li>
+<li>Артефакт может хранить данные — прежде чем вводить в него что-то конфиденциальное, проверьте, не общее ли у него хранилище.</li>
+<li>Просите сразу готовый результат: «сделай из итогов квартала документ на одну страницу», а не «напиши текст об итогах».</li>
+</ul>
+<p class="course-next"><a href="#office">Дальше: Claude в Excel, Word, PowerPoint и Outlook →</a></p></section><section class="tab-panel" id="office" data-tab-panel="office"><h2 class="tab-title">5. Claude в Excel, Word, PowerPoint и Outlook</h2>
+<p>Надстройка Claude for Microsoft 365 встраивает Claude прямо в приложения Office: он работает с <strong>открытым файлом</strong> и правит его на месте, сохраняя оформление. Планы: Pro, Max, Team, Enterprise. Excel, Word и PowerPoint — в общем доступе, Outlook — бета.</p>
+<div class="rai-cards rai-cards--2">
+<article><h3>Excel</h3><p>Объяснит любую цифру со ссылками на ячейки; изменит допущение и пересчитает зависимые формулы; найдёт причину #REF! и #DIV/0!; построит модель или заполнит шаблон; сводные таблицы, фильтры, условное форматирование. Перед перезаписью данных — предупредит.</p></article>
+<article><h3>Word</h3><p>Ответит по документу со ссылками на разделы; перепишет выделенный фрагмент, сохранив стили и нумерацию; правки — в режиме исправлений, которые вы принимаете или отклоняете; разберёт комментарии и правки контрагента.</p></article>
+<article><h3>PowerPoint</h3><p>Использует ваш корпоративный шаблон — макеты, шрифты, цвета; поправит один слайд, не трогая остальные; соберёт презентацию по описанию; превратит пункты в схему или редактируемую диаграмму.</p></article>
+<article><h3>Outlook (бета)</h3><p>Разберёт входящие на «нужен я», «Claude справится» и «шум»; подготовит черновики ответов в вашем стиле; сведёт длинную переписку в решения и открытые вопросы. <b>Сам ничего не отправляет</b> — все ответы остаются черновиками.</p></article>
+</div>
+<h3 id="office-prompts">Примеры запросов</h3>
+<ul>
+<li>Excel: «Объясни, как считается выручка в ячейке C42». «Поставь ставку дисконтирования 8% и обнови зависимые расчёты». «Найди источник ошибки #REF! на листе сводки».</li>
+<li>Word: «Найди все положения о сроках хранения данных». «Перепиши раздел 3 проще, правки — исправлениями». «Кратко изложи, что поменял контрагент».</li>
+<li>PowerPoint: «Добавь слайд с резюме для руководства в одноколоночном макете». «Построй столбчатую диаграмму: первый–четвёртый квартал».</li>
+<li>Outlook: «Что требует моего внимания?» «Подготовь черновики ответов на всё, с чем ты справишься».</li>
+</ul>
+<h3 id="across">Вместе в нескольких приложениях</h3>
+<p>Если включить в каждой надстройке «Let Claude work across files», Claude связывает открытые файлы: «возьми факт из листа Q3, сравни с планом, напиши комментарии к отклонениям в столбце F — и сделай из этого три слайда для квартального обзора». Работает только с открытыми файлами. В командных планах эту возможность включает администратор.</p>
+<h3 id="office-limits">Чего надстройки не умеют и где осторожно</h3>
+<ul>
+<li>Excel: не работает с макросами, VBA и таблицами данных; не поддерживает Excel 2016 и 2019 с бессрочной лицензией, iPad и Android.</li>
+<li>Outlook: только Exchange Online в Microsoft 365, нужно согласие администратора.</li>
+<li>Не рекомендуется без проверки человеком: итоговые материалы для клиентов, расчёты, важные для аудита, документы для контрагентов и суда. Надстройка не заменяет юридического и финансового суждения.</li>
+</ul>
+<h3 id="office-install">Как установить</h3>
+<p>Самостоятельно: Microsoft AppSource → «Claude for Microsoft 365» → «Get it now» → в приложении Office включить надстройку и войти рабочим аккаунтом Claude. В организации надстройку обычно разворачивает администратор Microsoft 365 — если её нет, обратитесь в ИТ. Постоянные инструкции для Excel задаются в самой надстройке: Settings → Instructions.</p>
+<h3 id="office-data">Важно для данных</h3>
+<p>У надстроек свои правила хранения: история разговоров хранится <strong>локально в браузере</strong> и не синхронизируется, данные на стороне Anthropic удаляются в течение 30 дней, а <strong>сроки хранения организации на надстройки не распространяются и в журналы аудита они не попадают</strong> (в Enterprise с включённым Compliance API — попадают, в бете). Для материалов, где нужен след аудита, учитывайте это заранее.</p>
+<p class="course-next"><a href="#connectors">Дальше: Подключения и исследование →</a></p></section><section class="tab-panel" id="connectors" data-tab-panel="connectors"><h2 class="tab-title">6. Подключения и исследование</h2>
+<h3 id="connect">Подключения (Connectors)</h3>
+<p>Подключение даёт Claude доступ к вашим рабочим системам — с вашими же правами: он видит только то, что видите вы.</p>
+<ul>
+<li><strong>Microsoft 365:</strong> поиск и анализ по SharePoint, OneDrive, почте и календарю Outlook, Teams. Нужен рабочий аккаунт; в организации сначала включает администратор. Действия «на запись» — отправка писем, изменения файлов — только если их разрешил администратор. Полезная привычка: «составь ответ поставщику, но не отправляй».</li>
+<li><strong>Google Workspace:</strong> Gmail, Календарь, Google Drive. Отправку писем Claude по умолчанию согласует с вами перед каждым действием.</li>
+<li>Где управлять: Customize → <strong>Connectors</strong>, или «+» в поле сообщения → Connectors.</li>
+<li>В командных планах есть поиск по источникам организации (<strong>Ask Your Org</strong>) — готовый проект, который ищет по подключённым системам, показывая только то, к чему у сотрудника есть доступ.</li>
+</ul>
+<h3 id="research">Поиск, размышление или исследование</h3>
+<div class="rai-cards rai-cards--3">
+<article><h3>Веб-поиск</h3><p>Быстрый факт, где важна свежесть.</p></article>
+<article><h3>Размышление</h3><p>Сложное рассуждение без свежих данных: расчёт, разбор документа.</p></article>
+<article><h3>Research (Исследование)</h3><p>Отчёт по многим источникам со ссылками: «+» → Research. Работает несколько минут.</p></article>
+</div>
+<p class="course-next"><a href="#cowork">Дальше: Cowork: поручить Claude работу →</a></p></section><section class="tab-panel" id="cowork" data-tab-panel="cowork"><h2 class="tab-title">7. Cowork: поручить Claude работу</h2>
+<p>«Chat — чтобы думать вместе с Claude. Cowork — чтобы поручать ему работу». В Cowork Claude получает доступ к выбранной папке, подключённым приложениям и браузеру, сам составляет план, выполняет его по шагам и сдаёт готовый результат. Это тот же подход, что и в Claude Code, но без командной строки.</p>
+<p><strong>Когда Cowork:</strong> задача из нескольких шагов, занимает время, заканчивается конкретным результатом и требует нескольких источников или инструментов. Для разового вопроса достаточно обычного разговора; для правки одного открытого файла — надстройки Office.</p>
+<h3 id="cowork-setup">Настроить</h3>
+<ol>
+<li>Нужен платный план и настольное приложение Claude (macOS или Windows) с claude.com/download. В организации Cowork включает администратор.</li>
+<li><strong>Выберите рабочую папку</strong> — одну папку под одну работу, не «Документы» и не весь диск. Папка даёт Claude право и читать, и записывать.</li>
+<li>Добавьте нужные подключения.</li>
+</ol>
+<h3 id="cowork-run">Запустить задачу</h3>
+<p>В поле сообщения выберите <strong>Cowork</strong>, опишите задачу, посмотрите план Claude — и запускайте. Задачи могут выполняться в облаке и продолжаться, даже когда ноутбук закрыт; работа с локальными файлами и браузером требует открытого приложения.</p>
+<h3 id="cowork-modes">Режимы разрешений</h3>
+<div class="o-table-wrap"><table>
+<thead>
+<tr>
+<th>Режим</th>
+<th>Что происходит</th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manual (ручное одобрение)</td>
+<td>Claude спрашивает перед действиями</td>
+<td>по умолчанию; новые задачи и важные данные</td>
+</tr>
+<tr>
+<td>Auto (автоматическое одобрение)</td>
+<td>каждое действие проверяется на безопасность, опасное блокируется; тратит больше лимита</td>
+<td>знакомые задачи; в организации — если разрешил администратор</td>
+</tr>
+<tr>
+<td>Skip (пропустить все одобрения)</td>
+<td>Claude действует без вопросов</td>
+<td>только когда вы полностью доверяете каждому действию</td>
+</tr>
+</tbody>
+</table></div>
+<p>Удаление файлов <strong>всегда</strong> требует вашего явного разрешения.</p>
+<h3 id="cowork-loop">Цикл задачи</h3>
+<ol class="rai-flow rai-flow--4">
+<li><b>Поручить</b><span>что сдать (формат, объём), из чего (папки, каналы, даты), какие нюансы учесть</span></li>
+<li><b>Ответить на вопросы</b><span>Claude уточнит — обычно с готовыми вариантами</span></li>
+<li><b>Направлять по ходу</b><span>поправить курс лучше, чем переделывать с нуля</span></li>
+<li><b>Проверить результат</b><span>сверить с источниками; придуманные даты, имена и цитаты — красный флаг</span></li>
+</ol>
+<p>Пример поручения: «Собери из папки &quot;Отчёты подразделений&quot; справку по исполнению бюджета за сентябрь: таблица факт/план по подразделениям, отклонения больше 5% с объяснениями из комментариев, одна страница в Word. Учти, что в третьем квартале открылись три новых отделения».</p>
+<h3 id="cowork-context">Постоянный контекст</h3>
+<p>Добавляйте постепенно — не всё в первый день.</p>
+<ul>
+<li><strong>Глобальные инструкции:</strong> Settings → Cowork → Global instructions — ваша роль, организация, сокращения и термины, формат результатов, предпочтения вроде «начинай с рекомендаций». Поправка, которую вы повторяете из раза в раз, — кандидат в глобальные инструкции.</li>
+<li><strong>Инструкции папки:</strong> контекст для конкретной работы; Claude может сам их дополнять.</li>
+<li><strong>Проекты Cowork:</strong> «+» рядом с Projects — с нуля, из существующей папки или из проекта чата. В проекте — инструкции, задачи по расписанию, контекст и своя память.</li>
+</ul>
+<h3 id="cowork-skills">Навыки и плагины</h3>
+<ul>
+<li><strong>Навык</strong> — записанная процедура: как именно делать определённую работу. Попросите: «Хочу сделать навык для [процесса]. Расспроси, что тебе нужно знать». Подробно — <a href="../skills-complete-guide/index.html">Навыки Claude: полное руководство</a>.</li>
+<li><strong>Плагин</strong> — набор навыков под целую работу, вместе с подключениями. У Anthropic есть плагины для финансов (анализ отклонений, финансовые модели, инвестиционные записки, квартальные отчёты), юристов, продаж. Customize → Plugins → установить; <code>/setup-claude</code> расспросит вас и порекомендует подходящие. Плагины могут запускать программы с вашими правами — только из доверенных источников и одобренные в организации.</li>
+</ul>
+<h3 id="cowork-browser">Браузер</h3>
+<p>Расширение Claude в Chrome и встроенный браузер настольного приложения нужны для систем, к которым нет подключения: внутренние порталы, панели показателей. Вы должны быть уже авторизованы на сайте — Claude не входит за вас; перед чувствительными действиями он по умолчанию спрашивает.</p>
+<h3 id="cowork-schedule">Задачи по расписанию</h3>
+<p>Напишите <code>/schedule</code> в задаче или выберите <strong>Scheduled</strong> → New task. Можно настроить вместе с Claude (он задаст вопросы) или вручную: название, поручение, режим разрешений, частота (ежечасно, ежедневно, еженедельно, по будням), папка.</p>
+<p>Хорошие задачи по расписанию: утренняя сводка по почте и календарю, еженедельный отчёт, регулярный мониторинг новостей регулятора, сортировка входящих файлов. <strong>На первых порах пусть результатом будет черновик</strong>, а не отправленное письмо.</p>
+<p class="course-next"><a href="#safety">Дальше: Безопасность и данные →</a></p></section><section class="tab-panel" id="safety" data-tab-panel="safety"><h2 class="tab-title">8. Безопасность и данные</h2>
+<h3 id="business-data">Что говорит Anthropic о рабочих планах</h3>
+<ul>
+<li>В коммерческих продуктах (Claude for Work) ваши запросы и ответы по умолчанию <strong>не используются для обучения моделей</strong>. Исключение — если вы сами отправили отзыв (палец вверх или вниз): тогда разговор может храниться до пяти лет. Администратор может выключить оценки.</li>
+<li>В Team и Enterprise данными управляет организация, а Anthropic выступает обработчиком данных. Удалённый разговор исчезает из истории сразу и с серверов — в течение 30 дней.</li>
+</ul>
+<h3 id="audit-gaps">Где следа аудита нет</h3>
+<ul>
+<li><strong>Локальные сессии Cowork</strong> хранят историю на компьютере сотрудника: на них не распространяются стандартные сроки хранения, администратор не может централизованно управлять ими и удалять их.</li>
+<li><strong>Надстройки Office</strong> не попадают в журналы аудита и не наследуют сроки хранения организации (кроме Enterprise с Compliance API).</li>
+</ul>
+<h3 id="not-for">Когда Cowork и надстройки не подходят</h3>
+<ul>
+<li>Регулируемые процессы, где обязателен след аудита.</li>
+<li>Действия с серьёзными последствиями: отправка юридических документов, публичные сообщения, платежи.</li>
+<li>Чувствительные персональные данные вне границ, одобренных ИТ.</li>
+</ul>
+<h3 id="cowork-rules">Десять правил Anthropic для Cowork</h3>
+<ol class="rai-principles">
+<li><b>Не давайте доступ к файлам с конфиденциальными данными</b><span>Отдельная рабочая папка, не «Документы» и не «Рабочий стол».</span></li>
+<li><b>Следите за задачами, а не только за командами</b><span>Смотрите план и ход работы во вкладке прогресса.</span></li>
+<li><b>Осторожно с задачами по расписанию</b><span>Сначала — черновики.</span></li>
+<li><b>Контроль — по важности</b><span>Чем выше ставки, тем строже режим и проверка.</span></li>
+<li><b>Осторожно с управлением компьютером</b><span>Это бета, и Claude действует на вашем экране.</span></li>
+<li><b>Только надёжные сайты</b><span>Ограничьте браузер проверенными источниками.</span></li>
+<li><b>Особая осторожность с незнакомыми подключениями и плагинами</b><span>Только одобренные.</span></li>
+<li><b>Внимание к обмену данными между приложениями</b><span>Что из одной системы может уйти в другую.</span></li>
+<li><b>Облачные сессии могут доставать до вашего компьютера</b><span>Понимайте, к чему у них есть доступ.</span></li>
+<li><b>Сразу сообщайте о подозрительном</b><span>Остановите задачу и напишите в ИТ.</span></li>
+</ol>
+<p>Ещё три привычки из курса: храните резервные копии вне досягаемости Claude; пробуйте новые процедуры на копиях; разрушительные указания формулируйте точно — «удали» и «обнови» можно понять по-разному. За каждое действие, которое Claude выполнил по вашему поручению, отвечаете вы.</p>
+<p class="course-next"><a href="#roles">Дальше: Сценарии по ролям →</a></p></section><section class="tab-panel" id="roles" data-tab-panel="roles"><h2 class="tab-title">9. Сценарии по ролям</h2>
+<div class="rai-cards rai-cards--2">
+<article><h3>Финансы: анализ отклонений</h3><p><b>Где:</b> Excel или Cowork. «Возьми факт из листа "Сентябрь", сравни с планом, напиши комментарии к отклонениям больше 5% в столбце F, затем сделай три слайда для руководства».</p></article>
+<article><h3>Финансы: прогноз и сценарии</h3><p><b>Где:</b> Cowork, можно ежемесячно по расписанию. «Загрузи факт в модель, продли на четыре квартала, посчитай базовый, оптимистичный и пессимистичный сценарии, перечисли изменённые допущения и напиши записку на страницу».</p></article>
+<article><h3>Финансы: разобраться в чужой таблице</h3><p><b>Где:</b> Excel. «Объясни, как устроена эта модель и откуда берётся итог на листе "Сводка"; найди жёстко вбитые числа вместо формул».</p></article>
+<article><h3>Комплаенс и юристы: правки договора</h3><p><b>Где:</b> Word. «Кратко изложи, что поменял контрагент, и отметь изменения в условиях ответственности и сроках». Заключение делает юрист.</p></article>
+<article><h3>Комплаенс: проверка по списку</h3><p><b>Где:</b> проект или навык. Документ проверяется по вашему чек-листу: соответствует / не соответствует / нет в документе — с цитатой.</p></article>
+<article><h3>HR: адаптация новичка</h3><p><b>Где:</b> проект. «По документам проекта собери руководство для нового сотрудника отдела: первая неделя, к кому с чем идти, главные регламенты».</p></article>
+<article><h3>Операции: протокол и задачи</h3><p><b>Где:</b> чат или Cowork. «По расшифровке совещания сделай протокол: решения, задачи, ответственные, сроки».</p></article>
+<article><h3>Руководитель: подготовка к неделе</h3><p><b>Где:</b> Cowork по расписанию с подключением к почте и календарю. «Каждый понедельник в 8:00 — сводка встреч недели и писем, которые ждут моего ответа». Только черновик.</p></article>
+</div>
+<p>Хотите внедрить такой сценарий в своём подразделении — <a href="../../../services/how-to-engage/index.html">расскажите о нём</a>: так задача попадает к нам как <a class="term" href="../../../reference/vocabulary/index.html#run-rate" title="Небольшая повторяющаяся работа, которая выполняется в рамках одной итерации по понятному шаблону.">текущая работа <span class="term-en">(run-rate work)</span></a>.</p>
+<p>Все ссылки на курсы и документацию — в Справочнике: <a href="../../../reference/anthropic/index.html">Обучение Anthropic</a>.</p>
+<p class="kb-source">По материалам: <a href="https://support.claude.com/ru/articles/13345190">Справочный центр Claude, документация Claude для Office и курсы Claude 101 и Introduction to Claude Cowork</a> — официальная документация Anthropic на русском. Здесь — короткая выжимка с нашими примерами.</p>
+</section></div></article></div></div>
+</main>
+<footer class="o-footbar">
+<nav class="fb-left" aria-label="Правовая информация"><a href="../../../privacy/index.html">Конфиденциальность</a><a href="../../../terms-of-use/index.html">Условия использования</a></nav>
+<div class="fb-right"><span class="foot-text">2026 Хаб Компетенций AI. v2.1 <a class="contact" href="mailto:talimbayev@obank.kg?subject=%D0%A5%D0%B0%D0%B1%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%86%D0%B8%D0%B9%20%5BWXSXJ%5D%3A%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%20%D0%BE%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B5">Связаться с нами</a></span>
+<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Отзыв о странице</span><span>ID: WXSXJ</span></button></div>
+</footer>
+</div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Хаб Компетенций [WXSXJ]: отзыв о странице" data-ref="WXSXJ" data-page="Работа в Claude: проекты, документы, Office и Cowork — полное руководство">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Отзыв о странице</h2><code>ID: WXSXJ</code></div>
+    <div class="fb-body"><p>Оставить отзыв о содержании этой страницы: <a data-mail href="mailto:talimbayev@obank.kg">отзыв</a>.</p><button class="oc-button" value="close">Закрыть</button></div>
+  </form>
+</dialog>
+</body></html>
