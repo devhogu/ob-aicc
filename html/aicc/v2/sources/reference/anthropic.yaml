@@ -59,6 +59,7 @@
   what: Стартовая страница академии с рекомендованным порядком обучения.
   lang: en
   url: https://academy.claude.com/start
+  ours: [anthropic-academy]
 - group: Claude Academy
   title: Все материалы
   what: Полный каталог курсов и материалов академии с поиском.
@@ -69,6 +70,7 @@
   what: Короткие материалы о том, как устроены большие языковые модели.
   lang: en
   url: https://academy.claude.com/collections/how-ai-works
+  ours: [ai-capabilities-limitations]
 - group: Claude Academy
   title: Материалы по Claude
   what: Всё о Claude в браузере и приложениях — разговор, проекты, артефакты, навыки.
@@ -86,12 +88,13 @@
   what: Агентная разработка в терминале, редакторе и настольном приложении.
   lang: en
   url: https://academy.claude.com/products/code
-  ours: [claude-code-how-it-works]
+  ours: [claude-code-how-it-works, claude-code-in-action]
 - group: Claude Academy
   title: Материалы по Claude Tag
   what: Claude в рабочем пространстве Slack команды.
   lang: en
   url: https://academy.claude.com/products/tag
+  ours: [claude-tag]
 - group: Claude Academy
   title: Материалы по Claude Platform
   what: Разработка собственных решений на API и платформе Claude.
@@ -102,7 +105,7 @@
   what: Четыре навыка работы с AI (4D) — эффективно, этично и безопасно.
   lang: en
   url: https://academy.claude.com/courses/ai-fluency-framework-foundations
-  ours: [ai-fluency-4d]
+  ours: [ai-fluency-complete-guide, ai-fluency-4d]
 - group: Курсы для всех
   title: AI Capabilities and Limitations
   what: Верная картина того, что большие языковые модели умеют и чего не умеют.
@@ -126,32 +129,37 @@
   what: Claude в Slack команды — что ему поручать и как направлять.
   lang: en
   url: https://academy.claude.com/courses/introduction-to-claude-tag
+  ours: [claude-tag]
 - group: Курсы для всех
   title: Building Effective Human-Agent Teams
   what: Как команде перейти от личной работы с AI к совместной работе людей и агентов. Бета.
   lang: en
   url: https://academy.claude.com/courses/building-effective-human-agent-teams
+  ours: [human-agent-teams]
 - group: Курсы для всех
   title: AI Fluency для отдельных аудиторий
   what: Варианты курса для разработчиков продуктов, творческих профессий, преподавателей, школ, студентов, некоммерческих организаций и малого бизнеса.
   lang: en
   url: https://academy.claude.com/all
+  ours: [ai-fluency-complete-guide]
 - group: Курсы для руководителей
   title: Deploying Claude Enterprise with Confidence
   what: Пять решений при внедрении Claude в организации — структура, доступ, управление, расходы, прозрачность.
   lang: en
   url: https://academy.claude.com/courses/deploying-claude-enterprise-with-confidence
+  ours: [deploying-claude-enterprise]
 - group: Курсы по Claude Code и агентам
   title: Claude Code 101
   what: Что такое Claude Code, как он работает и основные приёмы работы.
   lang: en
   url: https://academy.claude.com/courses/claude-code-101
-  ours: [claude-code-first-session, claude-code-how-it-works]
+  ours: [claude-code-first-session, claude-code-how-it-works, claude-code-in-action]
 - group: Курсы по Claude Code и агентам
   title: Claude Code in Action
   what: Долгие сессии, которым можно доверять, — направлять, настраивать, автоматизировать, проверять.
   lang: en
   url: https://academy.claude.com/courses/claude-code-in-action
+  ours: [claude-code-in-action]
 - group: Курсы по Claude Code и агентам
   title: Introduction to Agent Skills
   what: Создавать, настраивать и делиться навыками в Claude Code.

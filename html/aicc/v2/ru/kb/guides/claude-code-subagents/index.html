@@ -171,7 +171,7 @@
 </svg><span>Справочник</span></a></div></nav></details></aside>
 <main class="o-main hub-main" id="main" tabindex="-1">
 <div class="crumbbar has-ctx"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Навигационная цепочка"><a href="../../index.html">База знаний</a> / <span aria-current="page">Помощники в Claude Code (subagents)</span></nav></div></div>
-<div class="o-reading"><div class="o-copy"><h1>Помощники в Claude Code (subagents)</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← Все руководства</a><span>Claude Code</span><span>продвинутый</span><span>5 мин</span></p>
+<div class="o-reading"><div class="o-copy"><h1>Помощники в Claude Code (subagents)</h1><article class="page-body o-doc"><p class="kb-head"><a href="../../index.html">← Все руководства</a><span>Claude Code</span><span>продвинутый</span><span>8 мин</span></p>
 <p>Помощник (subagent) — это отдельный исполнитель внутри сеанса: со своим контекстом, своими инструкциями и своим набором разрешённых инструментов. Основной Claude поручает ему часть работы и получает обратно только выводы.</p>
 <h2 id="why">Зачем</h2>
 <div class="rai-cards rai-cards--4">
@@ -199,10 +199,27 @@ model: sonnet
 <li>Гарантированно — упоминанием через <code>@</code> в запросе.</li>
 <li>Независимая проверка готовой работы: «Поручи помощнику проверить изменения по плану и перечислить пробелы» — свежий взгляд не зависит от рассуждений того, кто писал код.</li>
 </ul>
+<h2 id="design">Как спроектировать хорошего помощника</h2>
+<p>По курсу Introduction to Subagents:</p>
+<ul>
+<li><strong>Описание решает, что поручит основной Claude.</strong> Имя и описание всех помощников видны основному агенту, и по описанию он пишет поручение. Впишите туда, что помощнику нужно получить: «назови точно, какие файлы проверить», «верни источники, на которые можно сослаться».</li>
+<li><strong>Формат ответа — главное улучшение.</strong> Он даёт помощнику точку остановки. Для ревью: итог · критичное · важное · мелкое · рекомендации · вердикт.</li>
+<li><strong>Раздел «Препятствия».</strong> Пусть помощник сообщает о проблемах настройки, обходных путях и капризных зависимостях — иначе основной Claude будет открывать их заново.</li>
+<li><strong>Минимум инструментов.</strong> Исследователю — поиск и чтение; ревьюеру — плюс команды для <code>git diff</code>; правки — только тому, кто правит.</li>
+</ul>
+<h3 id="need">Нужен ли помощник</h3>
+<p>Решающий вопрос: <strong>важна ли вам промежуточная работа?</strong> Если важен только вывод — помощник экономит контекст. Если нужен ход рассуждений — делайте в основном разговоре: помощник возвращает только итог, а как он к нему пришёл, не видно.</p>
+<p>Хорошо подходят: исследование, ревью (Claude лучше проверяет код, «написанный кем-то другим»), задачи с особыми правилами — тексты, оформление по дизайн-системе.</p>
+<h3 id="antipatterns">Чего не делать</h3>
+<ul>
+<li><strong>Роли-«эксперты».</strong> «Ты — эксперт по Python» ничего не добавляет.</li>
+<li><strong>Последовательные цепочки</strong> «воспроизвести → отладить → исправить» разными помощниками: контекст теряется при каждой передаче.</li>
+<li><strong>Помощник для запуска тестов</strong>, который прячет полный вывод: по тестам Anthropic такой вариант показал худший результат.</li>
+</ul>
 <h2 id="not">Когда не нужен</h2>
 <p>Для мелких точечных правок и задач, где нужно часто переспрашивать, — помощник только добавит лишний шаг.</p>
-<p class="kb-source">По материалам: <a href="https://code.claude.com/docs/ru/sub-agents">Создание пользовательских subagents (документация на русском)</a> — официальная документация Anthropic на русском. Здесь — короткая выжимка с нашими примерами.</p>
-</article></div><aside class="o-context" aria-label="На этой странице"><strong>На этой странице</strong><a class="lv2" href="#why">Зачем</a><a class="lv2" href="#create">Как сделать своего</a><a class="lv2" href="#use">Как вызвать</a><a class="lv2" href="#not">Когда не нужен</a></aside></div>
+<p class="kb-source">По материалам: <a href="https://code.claude.com/docs/ru/sub-agents">Создание пользовательских subagents (документация на русском) и курс Introduction to Subagents</a> — официальная документация Anthropic на русском. Здесь — короткая выжимка с нашими примерами.</p>
+</article></div><aside class="o-context" aria-label="На этой странице"><strong>На этой странице</strong><a class="lv2" href="#why">Зачем</a><a class="lv2" href="#create">Как сделать своего</a><a class="lv2" href="#use">Как вызвать</a><a class="lv2" href="#design">Как спроектировать хорошего помощника</a><a class="lv3" href="#need">Нужен ли помощник</a><a class="lv3" href="#antipatterns">Чего не делать</a><a class="lv2" href="#not">Когда не нужен</a></aside></div>
 </main>
 <footer class="o-footbar">
 <nav class="fb-left" aria-label="Правовая информация"><a href="../../../privacy/index.html">Конфиденциальность</a><a href="../../../terms-of-use/index.html">Условия использования</a></nav>
