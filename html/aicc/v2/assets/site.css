@@ -871,3 +871,15 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .pi-weeks li.is-picked{box-shadow:0 0 0 2px var(--text)}
 .pi-item.is-picked{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand)}
 .pi-view .pop-days{margin-top:4px}
+/* the views read as the second half of the page: room around them and big tab titles */
+.here{margin-bottom:48px}
+.here-asof{margin-top:4px}
+.hub-board .pf-filter{margin:0 0 44px}
+.pf-tabs{gap:44px;margin:0 0 28px;padding-top:28px;border-top:1px solid var(--border)}
+.pf-tabs button{padding:6px 0 14px;gap:4px}
+.pf-tabs button>span{font:700 26px/1.15 var(--font-heading);color:var(--text-muted)}
+.pf-tabs button:hover>span{color:var(--text)}
+.pf-tabs button[aria-selected=true]>span{color:var(--link)}
+.pf-tabs button>small{font-size:13px}
+.pf-tabs button[aria-selected=true]{border-bottom-width:3px}
+.pf-tip{margin-bottom:28px}
