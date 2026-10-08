@@ -264,3 +264,14 @@ h2#h-sec{margin:0;text-align:center;font-size:30px}
 .o-footbar .foot-text{grid-column:2;text-align:center;flex:none}
 .o-footbar .pagefb{grid-column:3;justify-self:end}
 @media(max-width:1100px){.o-footbar .fb-right{grid-template-columns:1fr;row-gap:12px;justify-items:center}.o-footbar .foot-text,.o-footbar .pagefb{grid-column:1;justify-self:center}}
+/* reading layout: the text, and "on this page" in a column at its right */
+.o-reading.o-single{grid-template-columns:minmax(0,1fr)}
+.o-copy{min-width:0}
+.o-copy>h1{margin:8px 0 16px}
+.page-body>p:first-child{font-size:18px;line-height:28px;color:var(--text-muted);max-width:none}
+.o-context a.lv3{padding-left:12px;font-size:13px}
+.o-context a{overflow-wrap:anywhere}
+.crumbbar.has-ctx{display:grid;grid-template-columns:minmax(0,1fr) var(--context-width);gap:32px}
+@media(max-width:1250px){.crumbbar.has-ctx{grid-template-columns:minmax(0,1fr)}}
+.o-doc table:has(th:nth-child(2):last-child){table-layout:fixed}
+.o-doc table:has(th:nth-child(2):last-child) th:first-child{width:30%}

@@ -262,7 +262,7 @@ def navigation(page, pages, site):
             f'<nav class="portal-sections" aria-label="{escape(m["nav_label"])}">{"".join(groups)}</nav></details></aside>')
 
 
-def crumbbar(page, pages, site):
+def crumbbar(page, pages, site, has_ctx=False):
     """The line above the title: where the page sits in its section, and the next page of the section."""
     m = site['messages']['ru']
     section = next(s for s in site['sections'] if s['id'] == page.section)
@@ -276,7 +276,7 @@ def crumbbar(page, pages, site):
         nxt = members[members.index(page) + 1]
         following = (f'<a class="crumb-next" href="{escape(rel(page.url, nxt.url))}" rel="next"><span>{escape(m["next"])}</span> '
                      f'<strong>{escape(nxt.nav_title)}</strong> &rsaquo;</a>')
-    return f'<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="{escape(m["breadcrumb"])}">{parts}</nav>{following}</div></div>'
+    return f'<div class="crumbbar{" has-ctx" if has_ctx else ""}"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="{escape(m["breadcrumb"])}">{parts}</nav>{following}</div></div>'
 
 
 def render_page(page, pages, site):
@@ -285,20 +285,18 @@ def render_page(page, pages, site):
     here = page.url
     root = posixpath.relpath('.', posixpath.dirname(here))
     asset = lambda name: rel(here, 'assets/' + name)
-    toc = ''
-    if len(page.headings) >= 4 and page.layout != 'home':
-        toc = (f'<nav class="page-toc" aria-label="{escape(m["on_this_page"])}"><strong>{escape(m["on_this_page"])}</strong><ul>' +
-               ''.join(f'<li class="{tag}"><a href="#{i}">{escape(label)}</a></li>' for tag, i, label in page.headings) + '</ul></nav>')
+    context = ''
+    if len(page.headings) >= 2 and page.layout != 'home':
+        context = (f'<aside class="o-context" aria-label="{escape(m["on_this_page"])}"><strong>{escape(m["on_this_page"])}</strong>' +
+                   ''.join(f'<a class="lv{2 if tag == "h2" else 3}" href="#{i}">{escape(label)}</a>' for tag, i, label in page.headings) + '</aside>')
     subject = quote(m['feedback_subject'].format(id=page.ident))
     section = next(s for s in site['sections'] if s['id'] == page.section)
     if page.layout == 'home':
         # the front page carries its own title inside the hero; the page identifier sits beside it
-        head, lede = '', ''
         body = f'<div class="o-wide">{page.body}</div>'
     else:
-        lede = f'<p class="lede">{escape(page.summary)}</p>' if page.summary and page.id != 'vocabulary' else ''
-        head = f'<div class="page-title"><h1>{escape(page.title)}</h1></div>'
-        body = page.body
+        single = '' if context else ' o-single'
+        body = (f'<div class="o-reading{single}"><div class="o-copy"><h1>{escape(page.title)}</h1><article class="page-body o-doc">{page.body}</article></div>{context}</div>')
     return f'''<!doctype html>
 <html lang="ru" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
@@ -317,9 +315,8 @@ def render_page(page, pages, site):
 </header>
 <div class="o-frame">{navigation(page, pages, site)}
 <main class="o-main hub-main" id="main" tabindex="-1">
-{crumbbar(page, pages, site)}
-{head}{lede}{toc}
-<article class="page-body">{body}</article>
+{crumbbar(page, pages, site, bool(context))}
+{body}
 </main>
 <footer class="o-footbar">
 <nav class="fb-left" aria-label="{escape(m["legal_label"])}"><a href="{escape(rel(here, pages["privacy"].url))}"{' aria-current="page"' if page.id == "privacy" else ""}>{escape(m["privacy"])}</a><a href="{escape(rel(here, pages["terms-of-use"].url))}"{' aria-current="page"' if page.id == "terms-of-use" else ""}>{escape(m["terms_of_use"])}</a></nav>
