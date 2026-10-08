@@ -323,7 +323,7 @@ def render_page(page, pages, site):
 </main>
 <footer class="o-footbar">
 <nav class="fb-left" aria-label="{escape(m["legal_label"])}"><a href="{escape(rel(here, pages["privacy"].url))}"{' aria-current="page"' if page.id == "privacy" else ""}>{escape(m["privacy"])}</a><a href="{escape(rel(here, pages["terms-of-use"].url))}"{' aria-current="page"' if page.id == "terms-of-use" else ""}>{escape(m["terms_of_use"])}</a></nav>
-<div class="fb-right"><span class="foot-text">{escape(m["footer"])} <a class="contact" href="mailto:{site["contact"]}?subject={subject}">{escape(m["contact_us"])}</a> <a class="contact" href="{escape(rel(here, "sources/index.html"))}">{escape(m["sources_title"])}</a></span>
+<div class="fb-right"><span class="foot-text">{escape(m["footer"])} <a class="contact" href="mailto:{site["contact"]}?subject={subject}">{escape(m["contact_us"])}</a></span>
 <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>{escape(m["pagefb"])}</span><span>ID: {page.ident}</span></button></div>
 </footer>
 </div>
