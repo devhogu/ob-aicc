@@ -4,7 +4,7 @@ summary: "Постоянная работа для небольших повто
 profile: run-rate
 class_of_service: текущая работа
 stage: Воронка
-area: build-and-run
+area: "Создание и сопровождение решений"
 people:
   business_owner: {position: "представитель функции, которая формулирует просьбы и принимает результат", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по текущей работе", holder: ""}

@@ -5,7 +5,7 @@ profile: initiative
 class_of_service: инициатива
 stage: Воронка
 function: "FP&A"
-area: build-and-run
+area: "Управленческая отчётность и материалы для инвесторов"
 people:
   business_owner: {position: "представитель функции FP&A, которой нужен результат", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}

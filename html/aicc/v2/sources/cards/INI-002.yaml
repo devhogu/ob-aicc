@@ -4,7 +4,7 @@ summary: "Собираем в одну карту то, что функции Б
 profile: initiative
 class_of_service: инициатива
 stage: Воронка
-area: research-and-exploration
+area: "Аналитика и поддержка решений"
 people:
   business_owner: {position: "представитель функций и владельцев услуг, которым нужна карта ландшафта и перечень кандидатов", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}

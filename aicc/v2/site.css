@@ -355,3 +355,19 @@ h2#h-sec{margin:0;text-align:center;font-size:30px}
 @media(max-width:1000px){.kb-illus{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.kb-illus{grid-template-columns:minmax(0,1fr)}}
 .page-body .kb-illus h4{border:0;padding:0}
+/* service cards that open in place */
+.svc-grid{display:grid;gap:12px;margin:16px 0 8px}
+details.svc{border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+details.svc[open]{border-color:var(--border-control)}
+details.svc>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:16px 20px}
+details.svc>summary::-webkit-details-marker{display:none}
+details.svc>summary strong{font-family:var(--font-heading);font-size:17px}
+details.svc>summary span{grid-column:1;color:var(--text-muted);font-size:14px;line-height:1.45}
+details.svc>summary::after{content:'+';grid-column:2;grid-row:1/3;align-self:center;font-size:22px;color:var(--brand);line-height:1}
+details.svc[open]>summary::after{content:'−'}
+details.svc .svc-body{padding:0 20px 18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;font-size:14px;line-height:1.5}
+details.svc .svc-body h4{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);border:0;padding:0}
+details.svc .svc-body ul{margin:0;padding-left:18px}
+.page-body details.svc .svc-body li{margin:2px 0}
+details.svc .svc-body p{margin:0}
+@media(max-width:900px){details.svc .svc-body{grid-template-columns:minmax(0,1fr)}}

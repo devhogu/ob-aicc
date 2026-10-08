@@ -5,7 +5,7 @@ profile: initiative
 class_of_service: инициатива
 stage: Воронка
 function: "Фронт-офис, розничный бизнес, коммерческие продажи"
-area: research-and-exploration
+area: "Аналитика и поддержка решений"
 people:
   business_owner: {position: "представитель фронт-офиса, розничного бизнеса и коммерческих продаж, которым нужен результат", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}

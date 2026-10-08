@@ -5,7 +5,7 @@ profile: initiative
 class_of_service: инициатива
 stage: Воронка
 function: "Комплаенс, HR, правовая функция, финансы и бухгалтерский учёт"
-area: enablement
+area: "Обучение и внедрение"
 people:
   business_owner: {position: "представитель каждой из функций, которой нужен результат", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}

@@ -8,7 +8,7 @@ profile: initiative            # initiative | run-rate | recurring-check | enabl
 class_of_service: инициатива   # инициатива | текущая работа | срочная работа
 stage: Воронка                 # Воронка | Проработка | Готово к старту | В работе | Завершено | Отложено | Закрыто
 function: ""                   # функция, которой нужен результат
-area: ""                       # направление услуг
+area: ""                       # услуга: например «Сервисы знаний»
 people:
   business_owner: {position: "кто в функции отвечает за результат", holder: ""}
   product_manager: {position: "кто отвечает за то, что делаем", holder: ""}

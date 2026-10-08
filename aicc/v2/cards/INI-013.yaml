@@ -5,7 +5,7 @@ profile: initiative
 class_of_service: инициатива
 stage: Воронка
 function: "Клиентское обслуживание"
-area: build-and-run
+area: "Сервисы знаний"
 people:
   business_owner: {position: "представитель клиентского обслуживания, которому нужен результат", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}

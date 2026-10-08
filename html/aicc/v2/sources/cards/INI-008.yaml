@@ -4,7 +4,7 @@ summary: "Строим базы знаний функций Банка по од
 profile: initiative
 class_of_service: инициатива
 stage: Воронка
-area: knowledge-services
+area: "Сервисы знаний"
 people:
   business_owner: {position: "представитель функции, чьи знания собираются в базу", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}

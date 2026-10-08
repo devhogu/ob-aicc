@@ -5,7 +5,7 @@ profile: run-rate
 class_of_service: текущая работа
 stage: Воронка
 function: HR
-area: workplace-automation
+area: "Автоматизация рабочего места"
 people:
   business_owner: {position: "представитель функции HR, который формулирует просьбы и принимает результат", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по текущей работе", holder: ""}

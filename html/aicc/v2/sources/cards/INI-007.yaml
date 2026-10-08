@@ -5,7 +5,7 @@ profile: initiative
 class_of_service: инициатива
 stage: Воронка
 function: "Розничное кредитование"
-area: research-and-exploration
+area: "Аналитика и поддержка решений"
 people:
   business_owner: {position: "представитель функции розничного кредитования, которой нужен результат", holder: ""}
   product_manager: {position: "менеджер продукта Хаба по этой теме", holder: ""}
