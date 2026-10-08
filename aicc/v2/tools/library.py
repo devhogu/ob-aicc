@@ -130,8 +130,10 @@ def add_pages(pages, site, api):
             f'<b>{e(names[mid]["title"])}</b>'
             f'<div class="lm-progress lm-progress--mini" data-map-progress="{e(mid)}" data-total="{sum(len(lv["steps"]) for lv in names[mid]["levels"])}"><span class="lm-bar"><i></i></span><b></b></div></a>'
             for i, mid in enumerate(order))
+        drawn = roadmap_svg(data, names, lambda mid: rel(url_of(here), url_of(f"kb/maps/{mid}")), lambda mm: (sum(len(lv['steps']) for lv in mm['levels']), 0))
         return (f'<section class="kb-maps" aria-label="Карты обучения"><div class="kb-maps__head"><h2>Карты обучения: от нуля до эксперта</h2>'
-                f'<a href="{e(rel(url_of(here), url_of("kb/maps")))}">Вся дорожная карта →</a></div><div class="kb-maps__grid">{cards}</div></section>')
+                f'<a href="{e(rel(url_of(here), url_of("kb/maps")))}">Вся дорожная карта →</a></div>'
+                f'<figure class="rm-figure rm-figure--compact">{drawn}</figure><div class="kb-maps__grid">{cards}</div></section>')
 
     def featured_band():
         """The deep guides, shown first: each is a course of several parts."""
@@ -165,6 +167,118 @@ def add_pages(pages, site, api):
                        + ('официальная документация Anthropic на русском. Здесь — короткая выжимка с нашими примерами.</p>\n' if ru else
                           'Anthropic, на английском. Здесь — короткий пересказ на русском с нашими примерами.</p>\n'))
         p.nav = False
+
+
+LEVEL_COLORS = ['#9aa3b2', '#5b6bd6', '#d6006f', '#2e9e5b']
+
+
+def wrap(text, width):
+    """Split a label into lines of about `width` characters for SVG text."""
+    lines, line = [], ''
+    for word in text.split():
+        if line and len(line) + 1 + len(word) > width:
+            lines.append(line)
+            line = word
+        else:
+            line = f'{line} {word}'.strip()
+    return lines + [line] if line else lines
+
+
+def svg_text(x, y, text, width, cls, anchor='middle', up=False):
+    lines = wrap(text, width)
+    if up:
+        y -= (len(lines) - 1) * 16
+    spans = ''.join(f'<tspan x="{x}" dy="{0 if i == 0 else 16}">{escape(l)}</tspan>' for i, l in enumerate(lines))
+    return f'<text class="{cls}" x="{x}" y="{y}" text-anchor="{anchor}">{spans}</text>'
+
+
+# START_CONTRACT: roadmap_svg
+#   PURPOSE: The roadmap as a metro line: a start, the core maps as stations in order, then a fork into one track per role, each ending at an expert flag.
+#   INPUTS: { data: dict - maps.yaml; maps: dict - id -> map; link: callable(map_id) -> href; totals: callable(map) -> (steps, minutes) }
+#   OUTPUTS: { str - inline SVG; progress rings are filled by site.js from the reader's ticks }
+#   SIDE_EFFECTS: none
+# END_CONTRACT: roadmap_svg
+def roadmap_svg(data, maps, link, totals):
+    core, branches = data['roadmap']['core'], data['roadmap']['branches']
+    W = 1180
+    spread = 140
+    H = 210 + spread * max(1, len(branches) - 1)
+    mid = H // 2
+    x0, step = 60, 150
+    xs = [x0 + 120 + i * step for i in range(len(core))]
+    fork = xs[-1] + 110
+    ys = [round(mid + (k - (len(branches) - 1) / 2) * spread) for k in range(len(branches))]
+    out = [f'<svg class="rm-svg" viewBox="0 0 {W} {H}" role="img" aria-label="Дорожная карта обучения">',
+           '<defs><linearGradient id="rm-grad" x1="0" x2="1"><stop offset="0" stop-color="#d6006f"/><stop offset="1" stop-color="#5b6bd6"/></linearGradient></defs>',
+           f'<path class="rm-track" d="M{x0},{mid} L{fork},{mid}"/>']
+    for k, y in enumerate(ys):
+        out.append(f'<path class="rm-track rm-track--branch rm-track--b{k}" d="M{fork},{mid} C{fork + 70},{mid} {fork + 50},{y} {fork + 120},{y} L{W - 70},{y}"/>')
+    out.append(f'<g class="rm-start"><circle cx="{x0}" cy="{mid}" r="22"/><text x="{x0}" y="{mid + 4}" text-anchor="middle">Старт</text></g>')
+    for i, (map_id, x) in enumerate(zip(core, xs)):
+        m = maps[map_id]
+        count, minutes = totals(m)
+        up = i % 2 == 0
+        out.append(f'<a href="{escape(link(map_id))}" class="rm-node"><title>{escape(m["title"])} — {count} шагов</title>'
+                   f'<circle class="rm-ring-bg" cx="{x}" cy="{mid}" r="34"/><circle class="rm-ring" data-ring="{escape(map_id)}" data-total="{count}" cx="{x}" cy="{mid}" r="34" transform="rotate(-90 {x} {mid})"/>'
+                   f'<circle class="rm-station" cx="{x}" cy="{mid}" r="26"/><text class="rm-num" x="{x}" y="{mid + 6}" text-anchor="middle">{i + 1}</text>'
+                   + svg_text(x, mid - 50 if up else mid + 60, m['title'], 18, 'rm-label', up=up) + '</a>')
+    out.append(f'<circle class="rm-forkdot" cx="{fork}" cy="{mid}" r="9"/>')
+    for k, (b, y) in enumerate(zip(branches, ys)):
+        for j, map_id in enumerate(b['maps']):
+            m = maps[map_id]
+            count, _ = totals(m)
+            x = fork + 230 + j * 150
+            out.append(f'<a href="{escape(link(map_id))}" class="rm-node rm-node--branch rm-node--b{k}"><title>{escape(m["title"])} — {count} шагов</title>'
+                       f'<circle class="rm-ring-bg" cx="{x}" cy="{y}" r="30"/><circle class="rm-ring" data-ring="{escape(map_id)}" data-total="{count}" cx="{x}" cy="{y}" r="30" transform="rotate(-90 {x} {y})"/>'
+                       f'<circle class="rm-station" cx="{x}" cy="{y}" r="22"/>'
+                       + svg_text(x, y - 44, b['title'], 20, 'rm-branch-title', up=True)
+                       + svg_text(x, y + 52, m['title'], 18, 'rm-label') + '</a>')
+        gx = W - 70
+        out.append(f'<g class="rm-goal"><path d="M{gx},{y + 4} l0,-30 l24,8 l-24,8"/><text x="{gx}" y="{y + 26}" text-anchor="middle">Эксперт</text></g>')
+    out.append('</svg>')
+    return ''.join(out)
+
+
+# START_CONTRACT: map_svg
+#   PURPOSE: One map as a track: start, the steps of each level on a segment in the level's colour, a milestone flag at every checkpoint, an expert flag at the end.
+#   INPUTS: { map_id: str; m: dict - the map; infos: list - per level, per step (title, kind 'guide'|'course', key) }
+#   OUTPUTS: { str - inline SVG; site.js marks done steps and the next one }
+#   SIDE_EFFECTS: none
+# END_CONTRACT: map_svg
+def map_svg(map_id, m, infos, levels):
+    points = sum(len(lv) for lv in infos) + len(infos)
+    W, y = 1120, 110
+    x0, x1 = 60, W - 110
+    gap = (x1 - x0) / (points + 1)
+    out = [f'<svg class="lm-svg" viewBox="0 0 {W} 210" role="img" aria-label="Путь по карте">']
+    x = x0 + gap
+    segs, nodes, n = [], [], 0
+    for i, steps in enumerate(infos):
+        start = x - gap
+        for title, kind, key in steps:
+            n += 1
+            label = f'Шаг {n}. {title}'
+            shape = (f'<rect class="lm-node-shape" x="{x - 13:.1f}" y="{y - 13}" width="26" height="26" rx="4" transform="rotate(45 {x:.1f} {y})"/>' if kind == 'course'
+                     else f'<circle class="lm-node-shape" cx="{x:.1f}" cy="{y}" r="15"/>')
+            nodes.append(f'<a href="#step-{n}" class="lm-node lm-node--l{i + 1}" data-node-step="{escape(map_id)}|{escape(key)}"><title>{escape(label)}</title>{shape}'
+                         f'<text x="{x:.1f}" y="{y + 5}" text-anchor="middle">{n}</text></a>')
+            x += gap
+        segs.append(f'<path class="lm-seg" stroke="{LEVEL_COLORS[i]}" d="M{start:.1f},{y} L{x:.1f},{y}"/>')
+        segs.append(svg_text(round((start + x) / 2), y - 46, f'Уровень {i + 1} · {levels[i]}', 26, f'lm-svg-level lm-svg-level--{i + 1}'))
+        nodes.append(f'<a href="#level-{i + 1}" class="lm-flag"><title>Контрольная точка уровня {i + 1}: {escape(m["levels"][i]["checkpoint"])}</title>'
+                     f'<path d="M{x:.1f},{y + 22} L{x:.1f},{y - 30} l20,7 l-20,7" stroke="{LEVEL_COLORS[i]}" fill="{LEVEL_COLORS[i]}"/></a>')
+        x += gap
+    out.append(f'<path class="lm-seg lm-seg--start" d="M{x0},{y} L{x0 + gap:.1f},{y}"/>')
+    out.extend(segs)
+    out.append(f'<circle class="lm-start" cx="{x0}" cy="{y}" r="9"/><text class="lm-svg-small" x="{x0}" y="{y + 34}" text-anchor="middle">старт</text>')
+    out.extend(nodes)
+    out.append(f'<g class="lm-goal"><circle cx="{x1 + 50}" cy="{y}" r="22"/><text x="{x1 + 50}" y="{y + 5}" text-anchor="middle">★</text>'
+               f'<text class="lm-svg-small" x="{x1 + 50}" y="{y + 44}" text-anchor="middle">эксперт</text></g>')
+    out.append(f'<g class="lm-legend"><circle cx="70" cy="190" r="7"/><text x="84" y="194">руководство Хаба</text>'
+               f'<rect x="224" y="183" width="12" height="12" rx="2" transform="rotate(45 230 189)"/><text x="244" y="194">курс или документация</text>'
+               f'<path d="M420,196 L420,182 l12,4 l-12,4" stroke="#5b6bd6" fill="#5b6bd6"/><text x="440" y="194">контрольная точка</text></g>')
+    out.append('</svg>')
+    return ''.join(out)
 
 
 # START_CONTRACT: add_maps
@@ -212,15 +326,19 @@ def add_maps(pages, api):
         m = maps[map_id]
         here = f'kb/maps/{map_id}'
         count, minutes = totals(m, here)
+        infos = [[(lambda s: (s[0], 'course' if s[5] else 'guide', s[4]))(step_info(st, here)) for st in lv['steps']] for lv in m['levels']]
         out = [f'<p class="lede">{e(m["goal"])}</p>',
-               f'<div class="lm-head"><span><b>Для кого:</b> {e(m["for"])}</span><span><b>Шагов:</b> {count} · {hours(minutes)}</span>{progress(map_id, count)}</div>']
+               f'<div class="lm-head"><span><b>Для кого:</b> {e(m["for"])}</span><span><b>Шагов:</b> {count} · {hours(minutes)}</span>{progress(map_id, count)}</div>',
+               f'<figure class="lm-figure">{map_svg(map_id, m, infos, levels)}<figcaption>Наведите на шаг — увидите, что это; нажмите — перейдёте к нему. Пройденные шаги отмечаются зелёным, следующий — пульсирует.</figcaption></figure>']
+        number = 0
         for i, lv in enumerate(m['levels']):
             items = []
             for step in lv['steps']:
+                number += 1
                 title, href, label, mins, key, outside = step_info(step, here)
                 link = (f'<a href="{e(href)}" target="_blank" rel="noopener">{e(title)} ↗</a>' if outside else f'<a href="{e(href)}">{e(title)}</a>')
                 practice = f'<p class="lm-practice"><b>Попробуйте:</b> {e(step["practice"])}</p>' if step.get('practice') else ''
-                items.append(f'<li class="lm-step" data-step="{e(map_id)}|{e(key)}"><button type="button" class="lm-check" data-step-toggle aria-pressed="false" title="Отметить пройденным"><span class="o-sr-only">Отметить пройденным</span></button>'
+                items.append(f'<li class="lm-step" id="step-{number}" data-step="{e(map_id)}|{e(key)}"><span class="lm-num">{number}</span><button type="button" class="lm-check" data-step-toggle aria-pressed="false" title="Отметить пройденным"><span class="o-sr-only">Отметить пройденным</span></button>'
                              f'<div class="lm-body"><div class="lm-title">{link}<span class="lm-tag">{e(label)} · {mins} мин</span></div>'
                              f'<p>{e(step["outcome"])}</p>{practice}</div></li>')
             out.append(f'<section class="lm-level lm-level--{i + 1}"><header><span class="lm-badge">Уровень {i + 1}</span><h2 id="level-{i + 1}">{e(levels[i])}</h2></header>'
@@ -245,7 +363,9 @@ def add_maps(pages, api):
     body = (f'<p class="lede">{e(data["roadmap"]["lede"])}</p>'
             '<p class="pf-tip">Отмечайте пройденные шаги на картах — прогресс сохраняется в вашем браузере и виден здесь. '
             '<button type="button" class="lm-reset" data-learn-reset>Сбросить прогресс</button></p>'
-            f'<ol class="rm-line">{core}</ol><div class="rm-fork"><span>Дальше — по вашей роли</span></div><div class="rm-branches">{branches}</div>'
+            f'<figure class="rm-figure">{roadmap_svg(data, maps, lambda mid: rel(url_of(here), url_of(f"kb/maps/{mid}")), lambda mm: totals(mm, here))}'
+            '<figcaption>Начните со старта и двигайтесь по станциям. После четвёртой — выберите специализацию. Кольцо вокруг станции заполняется по мере прохождения карты.</figcaption></figure>'
+            f'<h2 class="rm-h">Остановки по порядку</h2><ol class="rm-line">{core}</ol><div class="rm-fork"><span>Специализации — по вашей роли</span></div><div class="rm-branches">{branches}</div>'
             f'<p>Отдельные руководства и поиск по ним — в <a href="{e(rel(url_of(here), url_of("kb")))}">Базе знаний</a>.</p>')
     page = Page(here, data['roadmap']['title'], 'kb', 1, data['roadmap']['lede'], body)
     page.nav_title = 'Карты обучения'

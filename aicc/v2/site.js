@@ -238,6 +238,24 @@
         var label = el.querySelector('b'); if (label) label.textContent = done ? done + ' из ' + total : (el.classList.contains('lm-progress--mini') ? total + ' шагов' : '0 из ' + total);
         el.classList.toggle('is-complete', total > 0 && done >= total);
       });
+      // the drawn path: done steps, and the first step still to do pulses as "you are here"
+      document.querySelectorAll('.lm-svg').forEach(function (svg) {
+        var next = null;
+        svg.querySelectorAll('[data-node-step]').forEach(function (n) {
+          var done = !!state[n.dataset.nodeStep];
+          n.classList.toggle('is-done', done); n.classList.remove('is-next');
+          if (!done && !next) next = n;
+        });
+        if (next) next.classList.add('is-next');
+      });
+      // stations on the roadmap: a ring filled by the share of the map's steps that are done
+      document.querySelectorAll('[data-ring]').forEach(function (ring) {
+        var id = ring.dataset.ring, total = parseInt(ring.dataset.total, 10) || 0, done = 0;
+        Object.keys(state).forEach(function (k) { if (state[k] && k.indexOf(id + '|') === 0) done++; });
+        var len = 2 * Math.PI * parseFloat(ring.getAttribute('r')), share = total ? Math.min(1, done / total) : 0;
+        ring.style.strokeDasharray = (len * share) + ' ' + len;
+        ring.classList.toggle('is-complete', share >= 1);
+      });
     }
     document.addEventListener('click', function (ev) {
       var b = ev.target.closest('[data-step-toggle]');
