@@ -891,3 +891,56 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .hub-board .pf-filter select{width:200px}
 .hub-board .pf-filter output{margin-left:auto;font-size:12px;color:var(--text-muted)}
 .pf-tip{margin-bottom:12px}
+/* course layout: sections as numbered tabs */
+.course{margin-top:28px}
+.course-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.course-tabs button{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--text-muted);font:500 14px/1.2 var(--font-body);cursor:pointer}
+.course-tabs button b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--surface-subtle);color:var(--text);font-size:12px}
+.course-tabs button:hover{border-color:var(--brand);color:var(--text)}
+.course-tabs button[aria-selected=true]{border-color:var(--brand);background:var(--surface-selected);color:var(--link)}
+.course-tabs button[aria-selected=true] b{background:var(--brand);color:#fff}
+.course .tab-title{font-size:24px;margin:0 0 12px}
+.tabs-on.course .tab-title{position:static;width:auto;height:auto;overflow:visible;clip:auto}
+.course-next{margin:32px 0 0;padding-top:16px;border-top:1px solid var(--border);text-align:right;font-weight:600}
+/* responsible AI visuals */
+.page-body .rai-kinds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:20px 0}
+.rai-kinds article{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--border);border-top:4px solid var(--brand);border-radius:12px;background:var(--surface)}
+.rai-kinds article:nth-child(1){border-top-color:#9aa3b2}.rai-kinds article:nth-child(2){border-top-color:#5b6bd6}.rai-kinds article:nth-child(3){border-top-color:var(--brand)}.rai-kinds article:nth-child(4){border-top-color:#d98a00}
+.rai-kinds small{font:700 12px/1 var(--font-heading);color:var(--text-muted)}
+.page-body .rai-kinds h3{margin:0;font-size:17px}
+.page-body .rai-how{margin:0;font-size:13px;color:var(--text-muted)}
+.page-body .rai-kinds dl{margin:6px 0 0;display:grid;gap:2px}
+.rai-kinds dt{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--text-muted);margin-top:6px}
+.page-body .rai-kinds dd{margin:0;font-size:14px}
+.page-body .rai-cards{display:grid;gap:14px;margin:20px 0}
+.rai-cards--3{grid-template-columns:repeat(3,minmax(0,1fr))}.rai-cards--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rai-cards article{padding:16px 18px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.page-body .rai-cards h3{margin:0 0 6px;font-size:16px}
+.page-body .rai-cards p{margin:0;font-size:14px;color:var(--text-muted)}
+.rai-cards--areas article{border-left:3px solid var(--brand)}
+.rai-myths article{background:var(--surface-subtle);border-color:transparent}
+.page-body .rai-flow{list-style:none;counter-reset:f;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:24px 0;padding:0}
+.page-body .rai-flow--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.page-body .rai-flow li{counter-increment:f;position:relative;margin:0;padding:16px 28px 16px 18px;background:var(--surface-subtle);clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%,16px 50%);display:flex;flex-direction:column;gap:4px}
+.page-body .rai-flow li:first-child{clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%);border-radius:10px 0 0 10px}
+.page-body .rai-flow li:nth-child(2n){background:var(--surface-selected)}
+.page-body .rai-flow li:not(:first-child){padding-left:30px}
+.rai-flow li b::before{content:counter(f) ". ";color:var(--link)}
+.rai-flow li span{font-size:13px;color:var(--text-muted)}
+.page-body .rai-risks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0}
+.rai-risks section{padding:16px 18px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.page-body .rai-risks h3{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--link)}
+.page-body .rai-risks ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.page-body .rai-risks li{margin:0;display:flex;flex-direction:column;gap:2px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.page-body .rai-risks li:last-child{border-bottom:0;padding-bottom:0}
+.rai-risks li b{font-size:15px}
+.rai-risks li span{font-size:14px}
+.rai-risks li em{font-style:normal;font-size:13px;color:#1f6b3f}
+.rai-risks li em::before{content:"✓ "}
+:root[data-theme="dark"] .rai-risks li em{color:#86d9a0}
+.page-body .rai-principles{list-style:none;counter-reset:p;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:20px 0;padding:0}
+.page-body .rai-principles li{counter-increment:p;margin:0;padding:16px 18px 16px 58px;position:relative;border:1px solid var(--border);border-radius:12px;background:var(--surface);display:flex;flex-direction:column;gap:4px}
+.rai-principles li::before{content:counter(p);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font:700 13px/1 var(--font-heading)}
+.rai-principles li b{font-size:15px}
+.rai-principles li span{font-size:14px;color:var(--text-muted)}
+@media (max-width:900px){.page-body .rai-kinds,.rai-cards--3,.rai-cards--4,.page-body .rai-risks,.page-body .rai-flow,.page-body .rai-flow--4{grid-template-columns:1fr}.page-body .rai-flow li{clip-path:none;border-radius:10px;margin-bottom:6px}}

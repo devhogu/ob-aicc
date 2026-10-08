@@ -358,6 +358,24 @@ def page_end(page, pages, site):
     return out
 
 
+# START_CONTRACT: course
+#   PURPOSE: Turn a page into a short course: the text before the first section stays as the introduction, each section becomes a tab, and each tab ends with a step to the next.
+#   INPUTS: { body: str - rendered page HTML with <h2 id> sections }
+#   OUTPUTS: { str - HTML; without the script every section stays visible in order }
+#   SIDE_EFFECTS: none
+# END_CONTRACT: course
+def course(body):
+    parts = re.split(r'<h2 id="([^"]+)">(.*?)</h2>', body)
+    intro, sections = parts[0], [(parts[i], parts[i + 1], parts[i + 2]) for i in range(1, len(parts), 3)]
+    heads = ''.join(f'<button type="button" role="tab" data-tab="{key}"{" aria-selected=true" if n == 0 else ""}><b>{n + 1}</b><span>{title}</span></button>'
+                    for n, (key, title, _) in enumerate(sections))
+    panels = ''.join(
+        f'<section class="tab-panel" id="{key}" data-tab-panel="{key}"><h2 class="tab-title">{n + 1}. {title}</h2>{html}'
+        + (f'<p class="course-next"><a href="#{sections[n + 1][0]}">Дальше: {sections[n + 1][1]} →</a></p>' if n + 1 < len(sections) else '')
+        + '</section>' for n, (key, title, html) in enumerate(sections))
+    return f'{intro}<div class="course" data-tabs><div class="course-tabs" role="tablist">{heads}</div>{panels}</div>'
+
+
 def render_page(page, pages, site):
     m = site['messages']['ru']
     names = site['names']['ru']
@@ -365,7 +383,7 @@ def render_page(page, pages, site):
     root = posixpath.relpath('.', posixpath.dirname(here))
     asset = lambda name: rel(here, 'assets/' + name)
     context = ''
-    if len(page.headings) >= 2 and page.layout != 'home':
+    if len(page.headings) >= 2 and page.layout not in ('home', 'course'):
         context = (f'<aside class="o-context" aria-label="{escape(m["on_this_page"])}"><strong>{escape(m["on_this_page"])}</strong>' +
                    ''.join(f'<a class="lv{2 if tag == "h2" else 3}" href="#{i}">{escape(label)}</a>' for tag, i, label in page.headings) + '</aside>')
     subject = quote(m['feedback_subject'].format(id=page.ident))
@@ -377,6 +395,8 @@ def render_page(page, pages, site):
                       f'<link rel="stylesheet" href="{escape(asset("discovery.css"))}"><script defer src="{escape(asset("discovery.js"))}"></script>')
     if page.layout == 'raw':
         body = page.body
+    elif page.layout == 'course':
+        body = (f'<div class="o-reading o-single"><div class="o-copy"><h1>{escape(page.title)}</h1><article class="page-body o-doc">{course(page.body)}</article>{page_end(page, pages, site)}</div></div>')
     elif page.layout == 'home':
         # the front page carries its own title inside the hero; the page identifier sits beside it
         body = f'<div class="o-wide">{page.body}</div>'
