@@ -237,7 +237,6 @@ def add_pages(pages, site, terms, api):
                     ('backlog', 'Бэклог', backlog_html), ('decisions', 'Решения', decisions), ('register', 'Реестр', register)])
             + panel() + ''.join(detail_template(c) for c in cards)
             + ''.join(detail_template(c, w['id'], f'<p class="pf-notice"><strong>{e(w["id"])}</strong> · {"Capability" if w["type"] == "capability" else "Feature"} · {e(w["title"])} · {e(w["state"])}</p>') for c, w in work)
-            + f'<h2>Как это работает</h2><p>У каждого проекта есть карточка: один файл, где записано, что делаем, зачем, кто отвечает, на каком этапе и в какую итерацию запланирована работа. Карточку ведёт руководитель проекта; все виды на этой странице собираются из карточек. <a href="{link(here, "projects/new")}">Завести карточку</a>.</p>'
             + '</article>')
     pages[here] = Page(here, 'Проекты', 'projects', 0, 'Все проекты на одной странице: портфель, программа, план PI по итерациям, бэклог, решения и реестр.', body)
 
