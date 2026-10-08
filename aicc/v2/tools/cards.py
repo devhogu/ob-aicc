@@ -197,7 +197,7 @@ def add_pages(pages, site, terms, api):
                              'href': rel(api.url_of(here), api.url_of(ids[c['id']]))} for w in c.get('work', [])]}
                  for c in sorted(cards, key=rank_key) if c.get('work')]
     cal_data = {'ip_weeks': cadence.DATA['ip_weeks'], 'notes': cadence.DATA['notes'], 'rows': plan_rows}
-    plan = (lead('Когда: календарь PI от сегодняшней даты и работа проектов по итерациям. Итерация — календарный месяц, PI — квартал из трёх итераций; в конце PI — неделя IP (инновации и планирование): ревью, демонстрация и планирование следующего PI. Работа попадает в итерацию на планировании; что ещё не запланировано, стоит справа. Стрелки листают по одному PI.')
+    plan = (lead('Когда: календарь PI от сегодняшней даты и работа проектов по итерациям. Итерация — календарный месяц, PI — квартал из трёх итераций; в конце PI — Planning, неделя инноваций и планирования (IP): ревью, демонстрация и планирование следующего PI. Работа попадает в итерацию на планировании; что ещё не запланировано, стоит справа. Стрелки листают по одному PI.')
             + f'<section class="pi-cal" data-pi-calendar="{e(json.dumps(cal_data, ensure_ascii=False))}">{cadence.calendar_html(day, 0, plan_rows)}</section>')
 
     # what comes next

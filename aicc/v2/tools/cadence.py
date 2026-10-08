@@ -112,12 +112,12 @@ def short(a, b):
     return f'{a.day} {SHORT[a.month - 1]} – {b.day} {SHORT[b.month - 1]}'
 
 
-IP_TIP = ('Неделя инноваций и планирования. Это последняя рабочая неделя PI, отдельной итерацией она не считается: '
+IP_TIP = ('Неделя инноваций и планирования (IP). Это последняя рабочая неделя PI, отдельной итерацией она не считается: '
           'ревью и демонстрация третьей итерации, итоги PI, планирование следующего PI, время на инновации и обучение. Новую работу в эту неделю не берут.')
 
 
 def ip_tip(pi):
-    return f'<span class="here-tip" role="tooltip"><b>Неделя IP · {span(pi["ip"]["start"], pi["ip"]["end"])}</b>{IP_TIP}</span>'
+    return f'<span class="here-tip" role="tooltip"><b>Planning · {span(pi["ip"]["start"], pi["ip"]["end"])}</b>{IP_TIP}</span>'
 
 
 def here_html(day):
@@ -139,15 +139,13 @@ def here_html(day):
         s = it['start'] + timedelta(weeks=w - 1)
         n = f'{it["pi"]} {it["name"]}W{w}'
         weeks.append(f'<li><button type="button"{cls("is-done" if w < week else "is-current" if w == week else "", "is-ip" if n == ip else "", "is-picked" if w == week else "")} '
-                     f'data-here-week data-range="W{w} · {span(s, s + timedelta(days=6))}{" · сейчас" if w == week else ""}" data-note="{esc(DATA["notes"].get(n, ""))}">W{w}</button></li>')
-    note = r['note']
+                     f'data-here-week data-range="W{w} · {span(s, s + timedelta(days=6))}{" · Planning" if n == ip else ""}{" · сейчас" if w == week else ""}">{"Planning" if n == ip else f"W{w}"}</button></li>')
     return (f'<div class="here-tile" data-week="{monday.isoformat()}" tabindex="0"><small>Сегодня</small><strong>{day.day} {LONG[day.month - 1]} {day.year}</strong><span>{DAYS[day.weekday()]}</span></div>'
             f'<div class="here-tile" data-pi="{pi["name"]}" tabindex="0"><small>Программный инкремент · неделя {pi_week} из {pi_weeks}</small><div class="here-head"><strong>PI {pi["name"]}</strong><span>{span(pi["start"], pi["end"])}</span></div>'
             f'<ol class="here-pi">{"".join(segs)}</ol>'
-            f'<span class="here-ip" tabindex="0"><i></i>Неделя IP · {span(pi["ip"]["start"], pi["ip"]["end"])}{ip_tip(pi)}</span></div>'
+            f'<span class="here-ip" tabindex="0"><i></i>Planning · {span(pi["ip"]["start"], pi["ip"]["end"])}{ip_tip(pi)}</span></div>'
             f'<div class="here-tile" data-it="{it_key(it)}" tabindex="0"><small>Итерация · неделя {week} из {it["weeks"]}</small><div class="here-head"><strong>{it["name"]} · {it["title"]}</strong><span>{span(it["start"], it["end"])}</span></div>'
-            f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>W{week} · {span(monday, monday + timedelta(days=6))} · сейчас</span>'
-            f'<span class="here-note" data-here-note{"" if note else " hidden"}>{esc(note)}</span></div>')
+            f'<ol class="here-weeks">{"".join(weeks)}</ol><span class="here-range" data-here-range>W{week} · {span(monday, monday + timedelta(days=6))}{" · Planning" if f"{it['pi']} {it['name']}W{week}" == ip else ""} · сейчас</span></div>')
 
 
 def cls(*names):
@@ -223,7 +221,7 @@ def calendar_html(day, shift=0, rows=()):
         out.append(f'<article{cls("pi-card", "is-current" if pi["name"] == it["pi"] else "", "is-selected" if pi["name"] == shown["name"] else "")} data-pi="{pi["name"]}" tabindex="0">'
                    f'<header><strong>{pi["name"]}</strong><small>{state}</small></header><span class="pi-dates">{span(pi["start"], pi["end"])}</span>'
                    f'<div class="pi-progress" title="Пройдено {pct}%"><span style="width:{pct}%"></span></div>'
-                   f'<ol class="pi-its">{its}</ol><p class="pi-ip"><b>Неделя IP</b> {span(pi["ip"]["start"], pi["ip"]["end"])}</p></article>')
+                   f'<ol class="pi-its">{its}</ol><p class="pi-ip"><b>Planning</b> {span(pi["ip"]["start"], pi["ip"]["end"])}</p></article>')
     out.append('</div>')
     ip = shown['ip']['name']
     weeks = []
