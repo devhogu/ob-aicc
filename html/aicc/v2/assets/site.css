@@ -236,3 +236,26 @@ h2#h-sec{margin:0;text-align:center;font-size:30px}
 .o-footbar .fb-right{padding:20px 20px 20px 34px}
 .o-footbar .fb-left,.o-footbar .fb-right{border-top:0;box-shadow:inset 0 1px 0 var(--border)}
 .o-footbar .fb-left a{padding:1px 12px}
+/* room to breathe: a readable column, an 8px rhythm (24 between cards, 32 inside a block, 64 between blocks) */
+.hub-main>*{align-self:center;width:100%;max-width:1280px}
+.home-hero{padding-top:8px}
+.home-hero h1{margin:0 0 24px}
+.home-lead{margin:0}
+.home-tagline{margin:32px 0 0}
+.home-ctas{margin:32px 0 0;gap:16px}
+.home-stand{margin:64px 0 0;gap:24px}
+.home-stand li{padding:32px 32px 28px}
+.home-pri{margin:64px 0 0}
+.home-pri h2{margin:0 0 12px}
+.home-pri .home-pri-lead{margin:0 0 32px}
+.home-chips{gap:24px;max-width:none}
+.home-chips a{padding:22px 28px;min-height:96px}
+.home-group{margin-top:64px}
+.home-group h2{margin:0 0 32px}
+.home-group .home-sections,.home-group h2+.home-sections{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:0}
+.home-sections .o-card{padding:28px 28px 26px;min-height:184px}
+.home-newhere{margin:64px 0 32px;padding:28px 32px}
+@media(max-width:1250px){.home-group .home-sections,.home-group h2+.home-sections{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.home-group .home-sections,.home-group h2+.home-sections{grid-template-columns:minmax(0,1fr)}.home-stand{margin-top:48px}.home-pri,.home-group{margin-top:48px}}
+.o-footbar .fb-left{padding:28px 12px 28px}
+.o-footbar .fb-right{padding:28px 28px 28px 34px}
