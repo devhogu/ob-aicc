@@ -231,3 +231,8 @@ h2#h-sec{margin:0;text-align:center;font-size:30px}
 .home-group{margin-top:40px}
 .home-group h2{margin:0;text-align:center;font-size:30px}
 .home-group .home-sections,.home-group h2+.home-sections{margin:24px 0 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+/* the bar's content sits at the same distance from the divider above, the panel's bottom and the panel's right edge */
+.o-footbar .fb-left{padding:20px 12px 20px}
+.o-footbar .fb-right{padding:20px 20px 20px 34px}
+.o-footbar .fb-left,.o-footbar .fb-right{border-top:0;box-shadow:inset 0 1px 0 var(--border)}
+.o-footbar .fb-left a{padding:1px 12px}
