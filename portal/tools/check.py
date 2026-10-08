@@ -94,7 +94,7 @@ for lang in ('en', 'ru'):
             errors.append('redirect folder %s/%s holds %s' % (lang, rel, sorted(fs)))
         elif fs and not os.path.exists(moved):
             errors.append('redirect %s/%s has no page in v1' % (lang, rel))
-expected_root = {'index.html', 'assets', 'en', 'ru'}
+expected_root = {'index.html', 'assets', 'en', 'ru', 'sources'}
 if set(os.listdir(OUT)) != expected_root:
     errors.append('html/aicc holds %s, expected exactly %s' % (sorted(os.listdir(OUT)), sorted(expected_root)))
 for lang in ('en', 'ru'):

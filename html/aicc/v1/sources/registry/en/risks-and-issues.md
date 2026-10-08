@@ -1,0 +1,10 @@
+# Risks and Issues
+
+One line for each risk, issue, deficiency, AI Incident, Exception, and Finding. Type: Risk, Issue, Deficiency, Incident, Exception, or Finding. Severity: for an Incident, as the incident management of the Bank classifies it; for a Risk, Issue, Finding, or Deficiency, Blocker, Major, or Minor. Expires: the date on which an Exception expires (AI Policy 6.1), and empty for any other type. Due or review: the date or the event at which the action is due or the item is reviewed. The Executive Sponsor reviews the open Exceptions each month, and an Exception that has expired is decided at once.
+
+| Identifier | Type | Description | Severity | Owner | Action | Status | Expires | Due or review |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| RI-006 | Issue | The lists of acts and regulators, and of the policies of the Bank that apply, in the Standards Record are unverified until the Control Function Contacts of compliance and of legal confirm them (AI Policy 1.3, 1.4), so the question of AI Policy 3.2, whether a Solution is in a category that the law treats as high risk, cannot yet be answered with certainty | Major | Competence Center Lead | Ask the Contacts of compliance and of legal, once named, to confirm the standing of each entry and record who confirmed and when; until then each entry stays "to confirm" | Open |  | Monthly Steering, until closed |
+| RI-007 | Risk | Employees use AI that is not approved before the tolerance of AI Policy 2.1 ends on 2026-12-31, and may enter internal documents or data of the Bank into external services (AI Policy 2.6) | Major | Competence Center Lead | List each known use in the AI Registry; for each use reported, propose to the Domain Owner an approved Solution or the stop of the use (AI Policy 2.7); ask information security for the report of Standards PLT-006 | Open |  | 2026-12-31 |
+
+AI Incidents to date: none recorded. Exceptions to date: none. An AI Incident carries the key of its AI Incident Review in its description, and an Exception carries the key of its Control Sign-Off or Decision Record.

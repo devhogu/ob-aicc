@@ -1952,6 +1952,7 @@ def main():
     write(os.path.join(OUT, 'index.html'), gateway())
     import package
     count += package.build(PACKAGE, 'v1', LANGS)
+    count += package.publish_sources(ROOT, OUT)
     print('built %d pages, %d diagrams (%d not rendered)' % (count, len(site.svgs), len(missing)))
 
 

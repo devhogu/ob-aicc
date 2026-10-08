@@ -1,0 +1,274 @@
+# Market data
+
+Market data is the external data stream that drives the Bank's valuation, risk measurement, and pricing functions — covering securities prices, interest rate and FX spot and forward rates, credit spreads, commodity prices, volatility surfaces, and the macro-economic indices that underpin stress testing and economic scenario modeling. Sourced from vendors (Bloomberg, Refinitiv), the domestic exchange and official rate publications, and inter-dealer brokers, market data must be received, quality-checked, normalized, and loaded into downstream systems within strict timeliness windows. A stale price or an outlier rate that propagates into the valuation or VaR engine before detection creates downstream errors in MTM P&L, margin calls, and regulatory capital. **The GenAI opportunity is to automate market data quality monitoring before downstream systems consume the feed, generate yield curve construction commentary without manual drafting, and synthesize cross-vendor rate discrepancies into actionable alerts** — compressing the gap between data-quality event and remediation from hours to minutes.
+
+## Problems
+
+### Pricing & rates {#pricing-rates}
+
+| Lens | Problem |
+| --- | --- |
+| Insights & analytics | Market data quality — stale prices, outlier rates, missing fields, and cross-vendor discrepancies — is assessed through end-of-day reconciliation between vendor feeds and the valuation engine output. Quality anomalies that enter the valuation engine before end-of-day reconciliation cause MTM errors, incorrect margin calls, and VaR distortions that are identified only after the downstream system has consumed and acted on the incorrect data. |
+| Enablement | Yield curve construction — selecting input instruments, applying bootstrapping methodology, interpolating missing tenors, and documenting the construction rationale for front-office and risk review — is a daily quant task that precedes the distribution of curves to pricing and risk systems. The documentation and commentary step consumes a material portion of the quant team's morning preparation time. |
+| Automation | Daily market data quality checks, curve construction documentation, and vendor-feed completeness reports follow defined rule sets applied to structured market data on each delivery cycle. Each process is repeatable and data-driven — candidates for continuous AI-driven execution before downstream systems consume the feed. |
+| New business opportunities | Pre-consumption market data quality monitoring — catching stale prices and outlier rates before they reach the valuation engine — eliminates the downstream rework cost of MTM restatements, incorrect margin calls, and VaR corrections. Banks with real-time quality gates upstream of the valuation engine process fewer end-of-day breaks than peers relying on post-consumption reconciliation. |
+
+## Pricing & rates feeds {#pricing-rates-feeds}
+
+Real-time and end-of-day price feeds for securities, derivatives, and money market instruments — sourced from the domestic exchange, vendor-normalized feeds (Bloomberg, Refinitiv), and inter-dealer brokers. Pricing feeds drive MTM valuation, collateral margin calls, and performance attribution; their timeliness and accuracy are operational prerequisites for the valuation and risk engines. Feed latency, missing instruments, and outlier prices require detection and remediation before downstream systems consume the data.
+
+### End-of-Day Price Validation Gate
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/eod-price-validation-gate
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent validates end-of-day prices for securities, derivatives, and money market instruments — sourced from the domestic exchange, Bloomberg, and Refinitiv — against prior-day levels, cross-vendor benchmarks, and bid-offer spread consistency before the valuation engine runs. Outlier prices are quarantined and a structured exception report is routed to the market data team for resolution. The valuation engine receives a cleared, timestamped price set; each day's applied price set is archived with the validation record.
+- Problem to solve: End-of-day price validation is performed manually by the market data team, comparing vendor-supplied prices against prior-day levels and flagging obvious outliers before the valuation run. The manual check scope is limited by time available within the EOD processing window; the instrument universe for complex structured products and illiquid bonds is only partially reviewed. Outlier prices that pass the manual check propagate into the MTM valuation, generating unexplained P&L movements that require investigation the following morning.
+- Solution: The AI agent reads the EOD price set from each vendor source and applies a multi-layer validation: prior-day comparison with a tolerance band calibrated per instrument type and market, cross-vendor benchmark check where multiple sources are available, and bid-offer spread plausibility check. Instruments failing any validation layer are quarantined with the failure description and a suggested substitute price from the next-ranked source. The market data team reviews the exception list, approves substitutions, and clears the price set for the valuation engine. The applied price set and validation record are archived per day.
+- OKR: The valuation engine runs each day on a validated, cleared price set, with outlier prices identified and resolved before the MTM valuation and P&L attribution cycle.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent validates 100% of EOD prices across the domestic exchange, Bloomberg, and Refinitiv feeds for ≥ 48 weeks within 12 months; multi-layer validation active for all instrument types from go-live. |
+| Acceptance | ≥ 85% of quarantined prices confirmed as genuine outliers by the market data team; unexplained EOD P&L movements attributable to undetected price anomalies reduced by ≥ 80% within 3 months of go-live. |
+| Cycle | EOD price validation completed within 20 minutes of feed receipt, ahead of the valuation engine start; manual price check scope extended from partial to full instrument universe. |
+
+### Real-Time Feed Latency Monitor
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/real-time-feed-latency-monitor
+- Lens: Insights
+- Complexity: S
+- Intent: The AI agent monitors intraday latency for real-time price feeds across the domestic exchange and inter-dealer broker connections, alerting the market data team when feed latency for a key instrument group exceeds the threshold required for intraday risk calculation and collateral margin calls. The alert includes the affected feed, the current latency, and the downstream risk processes whose data currency is compromised.
+- Problem to solve: Real-time price feed latency — the gap between a market transaction occurring and the price reaching the risk engine — is monitored at the infrastructure level but not in terms of the business impact on downstream risk processes. When exchange feed latency spikes during high-volatility periods, the risk engine continues to calculate VaR and margin requirements on stale prices. The market data team learns of latency events from infrastructure alerts; the connection to the impact on intraday margin calls and VaR calculations is not made until the risk desk notices unusual sensitivity outputs.
+- Solution: The AI agent monitors the timestamp lag between market events and price updates in the risk engine for each feed and instrument group on a continuous intraday basis. When latency for a feed exceeds the threshold defined for the downstream processes that consume it — intraday VaR, collateral margin call trigger, or real-time limit monitoring — an alert is generated with the current latency, the affected feed, and the downstream risk processes whose data currency is compromised. The market data and risk teams use the alert to decide whether to halt stale-price-dependent processes pending feed restoration.
+- OKR: Feed latency events are detected and communicated to the market data and risk teams before stale-price-dependent risk calculations affect intraday margin calls or limit decisions.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent monitors real-time feed latency for ≥ 95% of the instrument universe across the domestic exchange and inter-dealer broker connections for ≥ 48 weeks within 12 months; latency thresholds calibrated per feed and downstream process within 60 days of go-live. |
+| Acceptance | ≥ 85% of latency alerts confirmed as business-material by the risk desk; false-positive alert rate ≤ 10% within 3 months of go-live. |
+| Cycle | Latency alert delivered within 2 minutes of threshold breach; stale-price risk calculation events reduced by ≥ 60% within 6 months of go-live. |
+
+### Missing Instrument Coverage Report
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/pricing-rates-feeds/missing-instrument-coverage-report
+- Lens: Enablement
+- Complexity: S
+- Intent: The AI agent compares the Bank's current trading book and collateral inventory against the instruments covered by active pricing feeds, identifying positions for which no vendor price is received. Missing-coverage instruments are ranked by position size and valuation impact, giving the market data team a prioritized sourcing agenda. The AI agent also identifies instruments where vendor coverage has recently lapsed, flagging the downstream positions affected.
+- Problem to solve: The universe of instruments held in the trading book evolves as new positions are established. The market data team maintains pricing feed subscriptions for the expected instrument universe but gaps emerge when new instruments are traded outside the subscribed coverage set, when vendors drop instruments from feeds without notice, or when illiquid instruments lack vendor coverage entirely. Missing-price instruments fall back to manually sourced or stale prices; the full scope of missing coverage is not known until the valuation run reports exceptions.
+- Solution: The AI agent reads the current trading book and collateral inventory, compiles the instrument universe requiring a priced feed, and cross-references it against the active vendor feed coverage set. Instruments with no active vendor price source are identified and ranked by position size and estimated valuation impact. The market data team receives a weekly missing-coverage report with the gap list, an indication of whether an alternative source is available but not subscribed, and the positions affected by the gap. Newly lapsed coverage events — instruments present in last week's feed set but absent this week — are flagged separately for immediate investigation.
+- OKR: The market data team holds a current, ranked view of pricing feed coverage gaps against the trading book and collateral universe, enabling proactive sourcing before valuation exceptions occur.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces weekly missing-coverage reports for ≥ 48 weeks within 12 months; trading book and collateral inventory cross-reference active from go-live. |
+| Acceptance | ≥ 90% of missing-coverage flags confirmed as genuine gaps by the market data team; lapsed-coverage alerts actioned within 24 hours in ≥ 80% of cases. |
+| Cycle | Coverage gap identification cycle shifted from valuation-exception discovery to a weekly proactive scan; valuation exceptions from missing-price instruments reduced by ≥ 60% within 3 months. |
+
+## External index & macro data {#external-index-macro-data}
+
+Macro-economic and sector indices — GDP, CPI, PMI, unemployment, commodity prices, and sector benchmarks — sourced from the national statistics office, central banks, and international providers (IMF, World Bank, Bloomberg Economics). These inputs underpin stress testing, economic capital models, and IFRS 9 forward-looking macro adjustments. Publication schedules vary by indicator and country; revision cycles mean that macro data consumed in a model run may be superseded before the next cycle.
+
+### Macro Data Publication Tracker
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/macro-data-publication-tracker
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent monitors publication schedules for macro-economic and sector index inputs — GDP, CPI, PMI, unemployment, and commodity prices from the national statistics office, the central bank, the IMF, the World Bank, and Bloomberg Economics — and alerts the market risk and IFRS 9 teams when a scheduled publication is late, when a revised estimate supersedes a value already consumed in a model run, or when a new publication cycle is approaching. The alert enables the consuming team to assess whether a model re-run is required before the next reporting cycle.
+- Problem to solve: Macro indicator inputs are published on varying schedules across national statistics agencies and international providers; publication lags and revision cycles mean that a value loaded into a stress test or IFRS 9 macro adjustment model may be superseded before the next model run. The market risk and IFRS 9 teams monitor macro publications manually, relying on provider release calendars and email notifications. Late publications or mid-cycle revisions that require a model re-run are identified inconsistently.
+- Solution: The AI agent maintains a publication schedule register for each macro indicator — provider, expected publication date, revision cycle, and the model runs that consume the indicator. It monitors each indicator's source feed daily, detects late publications and revised estimates, and generates an alert when a publication event is late beyond the expected window or when a revised estimate supersedes a value consumed in an active model run. The alert specifies the affected model and the magnitude of the revision, so that the market risk or IFRS 9 team can decide whether a re-run is required before the next reporting cycle.
+- OKR: The market risk and IFRS 9 teams are alerted to late macro publications and mid-cycle revisions before they affect the next model run or reporting cycle, enabling timely re-run decisions.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent monitors 100% of macro indicator inputs across all consuming models for ≥ 48 weeks within 12 months; publication schedule register populated and validated against provider calendars within 60 days of go-live. |
+| Acceptance | ≥ 90% of late publication and revision alerts confirmed as requiring review by the market risk or IFRS 9 team; false-positive alert rate ≤ 8% within 3 months of go-live. |
+| Cycle | Late publication alert delivered within 4 hours of the scheduled publication window closing; model re-run decision made before the next downstream consumption event in ≥ 90% of cases. |
+
+### Macro Indicator Consistency Check
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/macro-indicator-consistency-check
+- Lens: Insights
+- Complexity: S
+- Intent: The AI agent cross-validates macro indicators consumed from multiple providers — comparing the national statistics office's GDP and CPI estimates with central bank, IMF, and World Bank estimates for the domestic market and its main trading partners — and flags divergences that exceed defined tolerance bands. The market risk and IFRS 9 teams use the consistency report to assess whether provider divergences represent data quality issues or genuine analytical differences, and to document the basis for the input values selected for model consumption.
+- Problem to solve: Macro indicators for the domestic market and its main trading partners are sourced from multiple providers — national agencies, central banks, and international organizations — whose estimates for the same indicator may diverge materially due to methodology differences, revision schedules, or data quality issues. Model inputs are selected from a single provider by convention, without systematic comparison against alternative estimates. Divergences that represent data quality issues rather than analytical differences go undetected until model validation or audit review.
+- Solution: The AI agent reads macro indicator values from each subscribed provider for the same indicator and period and calculates the cross-provider divergence. Divergences exceeding a defined tolerance band — calibrated per indicator and market based on historical provider variance — are flagged in a weekly consistency report with the divergence magnitude, the providers involved, and the indicator currently selected for model consumption. The market risk and IFRS 9 teams review flagged divergences and document the basis for the selected input value.
+- OKR: Cross-provider macro indicator divergences are identified and reviewed before model consumption, with the basis for input selection documented for audit and model validation.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces weekly consistency reports covering all macro indicators with multiple provider sources for ≥ 48 weeks within 12 months; tolerance bands calibrated per indicator and market within 60 days of go-live. |
+| Acceptance | ≥ 80% of flagged divergences reviewed and documented by the market risk or IFRS 9 team within the week of flagging; input selection documentation adopted as standard practice for ≥ 90% of model runs within 6 months. |
+| Cycle | Cross-provider consistency check cycle shifted from ad hoc manual comparison to a weekly structured report; undocumented input selection risk eliminated from ≥ 95% of model runs within 6 months. |
+
+### IFRS 9 Macro Input Version Control
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/external-index-macro-data/ifrs9-macro-input-version-control
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent maintains a versioned record of every macro indicator value consumed in each IFRS 9 ECL model run — provider, vintage, publication date, and revision status — enabling the credit risk and finance teams to reproduce any historical ECL calculation and to assess the provision impact when a revised macro estimate supersedes a value used in a prior run. The version control record supports audit evidence under IFRS 9 and data lineage for macro overlay inputs in line with the BCBS 239 principles.
+- Problem to solve: IFRS 9 ECL calculations consume macro indicators whose values change with each new publication or revision cycle. The specific vintage of each macro input consumed in each model run is not systematically recorded; when an auditor or regulator asks which GDP or CPI estimate was used in a given quarterly provision calculation, the credit risk team reconstructs the answer from email archives and model logs. Revision cycles mean that the reconstructed input value may differ from the actual value consumed if provider data has been back-revised.
+- Solution: The AI agent captures the macro indicator values at the point of consumption for each IFRS 9 model run — provider, indicator, period, value, publication date, and revision status — and stores the versioned record in the model data lineage register. When a revised estimate supersedes a value consumed in a prior run, the AI agent flags the estimated provision impact of the revision for the credit risk and finance teams, who decide whether a re-run or restatement is required. The version control record is available for audit and regulatory inquiry as a complete IFRS 9 macro input lineage trail.
+- OKR: Every IFRS 9 model run carries a complete versioned record of macro indicator inputs, enabling full reproducibility and audit evidence for ECL calculations.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent captures macro input version records for 100% of IFRS 9 model runs for ≥ 4 consecutive quarterly cycles within the first year; lineage register integrated with the BCBS 239 data lineage framework within 90 days of go-live. |
+| Acceptance | ≥ 95% of versioned records confirmed as complete and accurate by the credit risk team at the first external audit; revision impact assessments delivered within 24 hours of a revised macro estimate being published. |
+| Cycle | Macro input version capture automated for 100% of model runs from go-live; historical IFRS 9 macro input reconstruction time for audit inquiries reduced from days of manual archive review to ≤ 1 hour of register query. |
+
+## FX & benchmark rates {#fx-benchmark-rates}
+
+Foreign exchange spot and forward rates, official exchange rates and reference rates published by the central bank, and benchmark interest rates (the domestic benchmark rate, SOFR, EURIBOR) that underpin FX revaluation, funding cost calculations, and hedging instrument pricing. Benchmark rates are published on defined schedules by the relevant administrator (for example the central bank for official exchange rates, the Federal Reserve Bank of New York for SOFR, and EMMI for EURIBOR); receipt, quality validation, and loading into the rate engine must complete before the downstream valuation and FX processing cycles run. Rate anomalies — an official rate published outside the expected window, a reference rate with an unusual magnitude — require immediate detection.
+
+### FX Rate Context Brief
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/fx-rate-context-brief
+- Lens: Enablement
+- Complexity: S
+- Intent: The AI agent produces the morning FX rate context brief — official exchange rates, notable overnight moves, and any rate anomaly flags — for the treasury desk and valuation team before the processing cycle opens. The brief is generated from published rate feeds and prior-close data without manual assembly by a treasury analyst. The treasury desk reviews the brief before authorizing the revaluation cycle.
+- Problem to solve: Treasury and valuation teams require the morning official exchange rates alongside overnight interbank moves before the FX revaluation cycle begins. The rate context brief is assembled manually from rate feeds and prior-close data each morning by a treasury analyst before the processing window opens. The brief is time-sensitive; any delay in rate anomaly detection delays the valuation cycle.
+- Solution: The AI agent reads the published official exchange rates, the overnight domestic benchmark rate, and interbank reference rates, and compares each rate against the prior close and expected range. It produces the morning FX rate context brief: rate levels by currency pair, overnight move summary, spread between official and interbank rates, and anomaly flags for rates outside expected ranges. The treasury desk reviews the brief before authorizing the revaluation cycle.
+- OKR: The treasury desk and valuation team receive a morning FX rate context brief before the revaluation cycle opens, covering official exchange rates, overnight moves, and anomaly flags, without manual assembly by a treasury analyst.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces the morning FX rate context brief for ≥ 95% of trading days within 12 months of go-live; official exchange rates, interbank references, and anomaly flags included in each output. |
+| Acceptance | ≥ 90% of briefs accepted by the treasury desk without additional manual rate verification; anomaly flag accuracy confirmed against daily rate validation records in ≥ 95% of outputs. |
+| Cycle | Morning brief available for treasury desk review within 15 minutes of official rate publication, replacing 60–90 minutes of manual assembly per trading day. |
+
+### Benchmark Rate Anomaly Detection
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/benchmark-rate-anomaly-detection
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent monitors inbound FX spot and forward rates, official exchange rates and reference rates, and benchmark interest rates (the domestic benchmark rate, SOFR, EURIBOR) for anomalies — rates published outside the expected time window, rates with magnitude outside historical bounds, and cross-pair inconsistencies — before they are loaded into the downstream rate engine. Anomalous rates are quarantined and an alert is routed to the market data team for resolution before the valuation and FX processing cycles consume the feed.
+- Problem to solve: Rate anomalies — an official exchange rate published two hours outside its normal window, a reference rate with an order-of-magnitude error, a SOFR fixing that violates arbitrage bounds — are identified manually by the market data team after loading, often during the downstream valuation or P&L calculation step when an unusual MTM movement triggers investigation. The detection-to-remediation cycle, measured from initial feed receipt to corrected rate loaded, routinely extends past the valuation cycle start time.
+- Solution: The AI agent reads each rate feed on receipt and applies a three-layer validation: publication-time check against the defined schedule window for each administrator, magnitude check using a rolling historical range and prior-day comparison, and cross-rate consistency check for FX pairs and the basis between benchmark rates across currencies. Rates failing any layer are quarantined and a structured alert — rate identifier, failure type, expected versus received value — is routed immediately to the market data team. The downstream rate engine receives a cleared rate set; quarantined rates are flagged for manual resolution or fallback substitution.
+- OKR: Rate anomalies are detected and quarantined before downstream valuation and FX processing systems consume the feed, eliminating anomaly-driven MTM errors.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent validates 100% of inbound rate feeds — official exchange rates and reference rates, the domestic benchmark rate, SOFR, and EURIBOR — for ≥ 48 weeks within 12 months; three-layer validation applied from go-live. |
+| Acceptance | ≥ 90% of quarantined rates confirmed as genuine anomalies by the market data team; false-positive quarantine rate ≤ 5% within 3 months of go-live. |
+| Cycle | Anomaly detection completed within 5 minutes of feed receipt; rate anomaly impact on valuation cycles eliminated in ≥ 95% of days within 6 months of go-live. |
+
+### FX Rate Coverage Completeness Report
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/fx-benchmark-rates/fx-rate-coverage-completeness-report
+- Lens: Insights
+- Complexity: S
+- Intent: The AI agent produces a daily FX rate coverage completeness report showing which currency pairs and benchmark rates were received, which were absent or delayed, and which were sourced from fallback providers. The treasury and market data teams use the report to monitor feed reliability, to assess the frequency of fallback substitutions, and to provide the evidence base for vendor SLA reviews and contract renegotiations.
+- Problem to solve: FX rate coverage completeness — which pairs were received from primary sources versus fallbacks, and which were absent — is tracked implicitly through the rate engine's feed log but not surfaced as a structured daily report. The market data team has no consolidated view of feed completeness trends by currency pair and provider. Vendor SLA reviews rely on manually compiled incident logs rather than a continuous completeness record; the evidence base for SLA breach claims and contract renegotiations is incomplete.
+- Solution: The AI agent reads the daily rate engine feed log and classifies each rate record as received-from-primary, received-from-fallback, or absent. It produces a daily coverage completeness report by currency pair, benchmark rate, and provider, with a trend summary showing the rolling 30-day completeness rate per feed. Feeds where the fallback substitution frequency or absence rate exceeds a defined threshold are flagged for vendor review. The treasury and market data teams use the report to monitor feed reliability; the monthly aggregate is formatted for inclusion in vendor SLA review documentation.
+- OKR: The market data and treasury teams hold a continuous, evidence-based view of FX rate coverage completeness by feed and currency pair, supporting vendor SLA management and contract review.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces daily coverage completeness reports for ≥ 48 weeks within 12 months; all primary and fallback rate feeds included from go-live. |
+| Acceptance | ≥ 90% of completeness reports confirmed as accurate by the market data team; vendor SLA breach evidence from the AI agent's reports adopted for ≥ 2 contract review cycles within the first year. |
+| Cycle | Coverage completeness report available by 09:00 each business day; manual incident log compilation for vendor reviews replaced by the AI-generated monthly aggregate within 3 months. |
+
+## Market data quality & vendor management {#market-data-quality-vendor}
+
+The governance framework for assessing vendor feed quality against SLA commitments, managing the market data entitlement register, and supporting contract and coverage reviews. Market data costs represent a significant expense line for trading banks; the entitlement register determines which desks and functions have access to which data feeds, and its accuracy drives licensing compliance. Vendor feed quality — measured against completeness, timeliness, and accuracy SLAs — is the evidence base for contract renegotiation and vendor selection decisions.
+
+### Market Data Feed Quality Monitor
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/market-data-feed-quality-monitor
+- Lens: Optimize
+- Complexity: S
+- Intent: The AI agent monitors incoming market data feeds for completeness, timeliness, and accuracy before downstream valuation and risk systems consume the data, and compiles the monthly vendor SLA compliance report for contract review. Intraday anomaly alerts — an official rate published outside the expected window, a reference rate with an unusual magnitude — are routed to the market data team for same-day remediation. The monthly SLA report supports vendor performance discussions and contract management.
+- Problem to solve: Market data feed monitoring and vendor SLA reporting are operated as separate manual processes. Feed anomalies require detection before downstream valuation and VaR engines consume the data, but no automated pre-consumption check exists across the full vendor coverage set. Monthly SLA compliance reports are compiled manually from feed monitoring logs and are produced after the period closes rather than on a continuous basis.
+- Solution: The AI agent monitors feeds from each vendor on an intraday cadence, flagging completeness gaps, timeliness breaches, and outlier values before downstream systems consume the data. At month-end it computes completeness, timeliness, and accuracy metrics against the SLA thresholds in each vendor contract and generates the monthly SLA compliance report per vendor — including breach counts, severity distribution, and three-month trend. The market data team uses intraday alerts for same-day remediation and the monthly report for vendor performance review.
+- OKR: The market data team receives intraday anomaly alerts before downstream valuation and risk systems consume feed data, and a monthly vendor SLA compliance report per vendor for contract management.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent monitors ≥ 95% of active vendor feeds on an intraday cadence from go-live; monthly SLA compliance reports produced for 100% of contracted vendors for ≥ 12 consecutive months. |
+| Acceptance | ≥ 85% of intraday anomaly alerts confirmed as requiring same-day remediation by the market data team; monthly SLA metric calculations validated against vendor raw logs in ≥ 90% of reports. |
+| Cycle | Anomaly alerts issued within 15 minutes of feed ingestion, replacing end-of-day manual review as the detection mechanism; monthly SLA report produced within 3 business days of month close. |
+
+### Vendor Entitlement Register Audit
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/vendor-entitlement-register-audit
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent reconciles the active market data entitlement register against current user access logs and licensed feed subscriptions, identifying entitlements held by former staff, unused feed subscriptions, and access granted beyond the licensed scope. The market data and procurement teams use the reconciliation report to rationalize licensing costs, close compliance exposure from unlicensed access, and support the annual vendor contract review.
+- Problem to solve: The market data entitlement register is maintained manually; additions are made when access is provisioned but removals depend on HR and IT offboarding processes that are not always synchronized with the market data team. The register accumulates stale entitlements — former staff, role changes, desk closures — that maintain licensing charges without active use. Unlicensed access — users consuming feeds not covered by the current subscription — creates compliance exposure under vendor and exchange data agreements.
+- Solution: The AI agent reads the current entitlement register, cross-references it against active user access logs from the rate engine and analytics platforms, and compares the active feed list against the licensed subscription set. It produces a reconciliation report: entitlements held by users with no active access in the trailing period (candidates for removal), feed subscriptions with zero active consumption (candidates for cancellation), and active feed consumption without a matching entitlement record (compliance exposure). The market data team and procurement team use the report for the quarterly entitlement review and annual contract renegotiation.
+- OKR: The market data entitlement register is maintained at current accuracy through quarterly automated reconciliation, with licensing compliance maintained and unused subscriptions identified for cost rationalization.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces quarterly entitlement reconciliation reports for ≥ 4 consecutive quarters within the first year; all vendor entitlement registers and access log sources integrated within 60 days of go-live. |
+| Acceptance | ≥ 80% of stale entitlement flags confirmed as candidates for removal by the market data team; unlicensed access flags confirmed as compliance exposure in ≥ 90% of cases. |
+| Cycle | Entitlement review cycle shifted from annual manual audit to quarterly automated reconciliation; licensing compliance exposure from stale and unlicensed access eliminated within 6 months of go-live. |
+
+### Vendor SLA Performance Dashboard
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/market-data-quality-vendor/vendor-sla-performance-dashboard
+- Lens: Insights
+- Complexity: S
+- Intent: The AI agent aggregates daily feed completeness, timeliness, and accuracy metrics for each market data vendor against contracted SLA thresholds, producing a monthly vendor SLA performance dashboard for the market data team and procurement. The dashboard quantifies breach frequency, calculates cumulative SLA credit entitlements, and provides the evidence base for vendor renegotiation and selection decisions.
+- Problem to solve: Vendor SLA performance is tracked through daily incident logs maintained manually by the market data team. Monthly aggregation for contract reviews is a manual exercise, and the scope of incidents captured depends on which team members submitted logs. SLA breach credits are under-claimed because the incident evidence required for credit claims is not consistently assembled. Vendor selection decisions at contract renewal lack a structured multi-period performance comparison.
+- Solution: The AI agent reads daily feed quality metrics — completeness by instrument, latency against the contracted delivery window, and accuracy against reference benchmarks — for each vendor, and maps each metric failure to the corresponding SLA threshold. It produces a monthly performance dashboard: SLA performance by vendor and feed type, breach count and cumulative credit entitlement, and a multi-period trend comparing the current contract year to the prior year. The procurement team uses the dashboard at contract review meetings; the market data team uses it to support credit claims.
+- OKR: The market data team and procurement hold a structured monthly SLA performance record for each vendor, with credit entitlements quantified and evidence assembled for contract review.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces monthly SLA performance dashboards for ≥ 12 consecutive months within the first year; all contracted vendor feeds included and SLA thresholds mapped within 60 days of go-live. |
+| Acceptance | ≥ 85% of SLA breach flags confirmed as genuine by the market data team; credit claim evidence from the AI agent's reports accepted by vendors in ≥ 3 of 4 quarterly claim cycles. |
+| Cycle | Monthly SLA performance dashboard available ≤ 3 business days after month close; manual incident log compilation for vendor reviews replaced by AI-generated evidence in 100% of contract cycles. |
+
+## Curve construction & interpolation {#curve-construction-interpolation}
+
+The daily construction of yield curves, credit spread curves, and volatility surfaces from input instrument prices — applying bootstrapping, interpolation, and extrapolation methodologies to produce the continuous term structure used by pricing models, VaR calculation, and IFRS 9 discounting. Curve construction for local-currency and major-currency markets requires instrument selection, methodology application, and documentation of the construction rationale. Input instrument liquidity varies by tenor; sparse or illiquid tenors require interpolation choices that carry model risk and must be documented for risk and audit review.
+
+### Yield Curve Input Quality Gate
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/yield-curve-input-quality-gate
+- Lens: Enablement
+- Complexity: S
+- Intent: The AI agent validates the instrument price inputs used in daily yield curve construction — checking for missing tenors, outlier prices relative to prior-day levels and inter-dealer consensus, and stale rates — before the bootstrapping process runs. The market data team receives a pre-construction quality report flagging inputs that require substitution or manual override. Curve construction proceeds with a documented input quality record attached to the day's constructed curve.
+- Problem to solve: Yield curve construction for local-currency and major-currency markets relies on instrument prices sourced from the domestic exchange, inter-dealer brokers, and vendor feeds. Missing tenors, vendor feed outages, and outlier prices are identified during or after the bootstrapping process, requiring re-runs and delaying the delivery of constructed curves to pricing and VaR engines. The input quality check is performed manually and inconsistently before each construction run; curve construction occasionally proceeds with undetected problematic inputs.
+- Solution: The AI agent reads the daily instrument price inputs assembled for each curve construction run and applies quality rules: tenor coverage completeness against the required construction set, outlier detection using prior-day levels and inter-dealer consensus bands, and staleness check against the expected intraday feed schedule. Inputs failing any rule are flagged with the failure type and a suggested substitution source. The market data team reviews the report, applies substitutions or manual overrides, and confirms the input set is cleared for construction. The day's constructed curve carries a reference to the input quality record.
+- OKR: Yield curve construction runs on a complete, quality-validated input set each day, with problematic inputs identified and resolved before the bootstrapping process runs.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent delivers pre-construction quality reports for ≥ 95% of scheduled curve construction runs across local-currency and major-currency curves for ≥ 48 weeks within 12 months; quality rules applied to all curve families from go-live. |
+| Acceptance | ≥ 85% of flagged input failures confirmed as requiring substitution or override by the market data team; curve re-runs due to undetected input failures reduced by ≥ 70% within 3 months of go-live. |
+| Cycle | Pre-construction quality check delivered within 15 minutes of input assembly completion, ahead of the scheduled bootstrapping run; manual input review step replaced by the AI agent's structured quality gate in ≥ 90% of construction runs. |
+
+### Yield Curve Construction Commentary
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/curve-construction-commentary
+- Lens: Automation
+- Complexity: M
+- Intent: The AI agent generates the daily yield curve construction commentary — input instrument selection rationale, interpolation method, and notable curve movement — for front-office and treasury review. In local-currency markets, sparse liquidity at certain tenors adds interpolation judgment that must be documented for risk and audit review. The quant reviews and adds forward-looking context before distribution.
+- Problem to solve: Daily yield curve construction requires the quant team to select input instruments, apply interpolation methodology, and document the construction rationale for front-office and risk review. Sparse liquidity at certain tenors in local-currency markets adds interpolation judgment that must be documented for risk and audit review. The commentary step consumes quant capacity each morning before curve distribution.
+- Solution: The AI agent reads the day's input instrument set, interpolation parameters, and prior-day curve and generates the construction commentary: input selection rationale with liquidity and term coverage assessment, interpolation method choice, curve movement attribution relative to prior day, and notable features such as inversion, kink, or bid-offer spread widening. The quant reviews and adds forward-looking context before distribution to front-office and treasury.
+- OKR: The quant team distributes a daily yield curve construction commentary — covering input selection, interpolation rationale, and movement attribution for local-currency and major-currency curves — drafted by the AI agent and reviewed by the quant before distribution.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces the morning yield curve commentary for ≥ 95% of trading days within 12 months of go-live; local-currency and major-currency curves covered in each daily output. |
+| Acceptance | ≥ 90% of AI-generated commentaries accepted by the quant with only forward-looking context additions; interpolation judgment documentation rated sufficient for risk and audit review in ≥ 85% of cycles. |
+| Cycle | Morning commentary ready for quant review within 30 minutes of market data publication, replacing manual drafting that previously consumed 60–90 minutes of quant capacity each morning. |
+
+### Interpolation Methodology Review Brief
+
+- URN: urn:financial-services:scenario:banking-data-analytics/market-data/curve-construction-interpolation/interpolation-methodology-review-brief
+- Lens: Insights
+- Complexity: M
+- Intent: The AI agent reviews the daily bootstrapped yield curves against the applied interpolation methodology — flagging tenors where the interpolation choice has produced rates that deviate materially from reasonable market expectations and documenting the methodology rationale for audit and risk review. The market risk team uses the brief to assess whether the interpolation choices carry material model risk and to support the curve methodology documentation required under model approval frameworks.
+- Problem to solve: Sparse or illiquid tenors in local-currency yield curves require interpolation choices whose model risk must be documented for risk and audit review. The interpolation methodology is applied automatically by the curve construction system; the rationale documentation — which tenors were interpolated, which methodology was applied, and why the output is reasonable — is produced manually by the market risk quant team. The documentation is produced episodically when requested by audit or model review rather than as a daily record attached to each constructed curve.
+- Solution: The AI agent reads the constructed yield curve outputs and the interpolation methodology parameters applied by the curve engine, identifies tenors where interpolated rates are the sole basis for the curve point, and compares interpolated rates to historical ranges and neighboring tenor levels. It produces a daily methodology review brief: the set of interpolated tenors, the method applied, and a commentary on whether the interpolated levels are within reasonable bounds. Tenors where the interpolation gap is material — the interpolated rate deviates significantly from historical range or neighboring tenors — are flagged for review by the market risk quant team. The brief is attached to the curve record as daily documentation.
+- OKR: Each daily constructed yield curve carries a methodology review brief documenting interpolated tenors, applied method, and a reasonableness assessment, satisfying audit and model review documentation requirements.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces daily methodology review briefs for ≥ 95% of scheduled curve construction runs for ≥ 48 weeks within 12 months; all local-currency and major-currency curve families covered from go-live. |
+| Acceptance | ≥ 80% of methodology briefs accepted by the market risk quant team as sufficient for audit documentation without supplementary manual notes; material interpolation gap flags confirmed as requiring review in ≥ 85% of cases. |
+| Cycle | Methodology documentation cycle shifted from episodic manual production to a daily automated brief; documentation gap at audit or model review eliminated within 6 months of go-live. |

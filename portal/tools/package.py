@@ -6,10 +6,14 @@
 # END_MODULE_CONTRACT
 #
 # START_MODULE_MAP
+#   SOURCES - source folders published inside a version
+#   publish_sources - copy the source documents into a version folder with a linked index
 #   build - write the chooser and the redirects; return the number of files written
 # END_MODULE_MAP
 import os
 import shutil
+from html import escape
+from pathlib import Path
 
 
 def _page(target, title, body=''):
@@ -46,3 +50,37 @@ def build(package, version, langs):
     with open(os.path.join(package, 'index.html'), 'w', encoding='utf-8') as fh:
         fh.write(_page(f'{version}/', 'AI Competence Center', f'<ul><li><a href="{version}/">Version 1</a></li></ul>'))
     return count + 1
+
+
+SOURCES = ('charter', 'registry', 'portfolio', 'lab')
+
+
+# START_CONTRACT: publish_sources
+#   PURPOSE: Copy the Markdown source documents of a version into its folder and write a linked index, so the version can be read without the repository.
+#   INPUTS: { root: str - repository root; version_dir: str - the built version folder }
+#   OUTPUTS: { int - files written }
+#   SIDE_EFFECTS: Replaces version_dir/sources.
+# END_CONTRACT: publish_sources
+def publish_sources(root, version_dir):
+    target_root = Path(version_dir) / 'sources'
+    shutil.rmtree(target_root, ignore_errors=True)
+    listing = []
+    for name in SOURCES:
+        for path in sorted((Path(root) / name).rglob('*')):
+            if path.is_file() and '__pycache__' not in path.parts and path.suffix in ('.md', '.json', '.yaml', '.yml'):
+                relative = path.relative_to(root)
+                target = target_root / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(path, target)
+                listing.append(relative.as_posix())
+    groups = {}
+    for item in listing:
+        groups.setdefault('/'.join(item.split('/')[:2]), []).append(item)
+    body = ''.join(f'<h2>{escape(group)}</h2><ul>' + ''.join(f'<li><a href="{escape(item)}">{escape(item)}</a></li>' for item in items) + '</ul>'
+                   for group, items in sorted(groups.items()))
+    (target_root / 'index.html').write_text(
+        '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Source documents</title></head>'
+        '<body style="font:16px/1.5 system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem">'
+        '<h1>Source documents of the site</h1><p>The Markdown documents the site is built from. <a href="../ru/center/">Back to the site</a></p>'
+        + body + '</body></html>\n', encoding='utf-8')
+    return len(listing) + 1

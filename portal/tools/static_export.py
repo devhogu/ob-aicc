@@ -221,6 +221,9 @@ def adapt(text, page, lang, files):
         if n.tag in ('script', 'template', 'dialog') or n.has('modal') or n.has('mm-dark') or n.has('kb-detail'):
             n.remove()
             continue
+        if n.tag == 'meta' and n.attrs.get('http-equiv', '').lower() == 'refresh' and page == lang + '/index.html':
+            n.attrs['content'] = '0; url=center/index.html'  # the language entry forwards to the Center
+            continue
         if n.tag == 'meta' and n.attrs.get('http-equiv', '').lower() == 'refresh' or n.tag == 'link' and n.attrs.get('rel') in ('alternate', 'modulepreload', 'preload'):
             n.remove()
             continue

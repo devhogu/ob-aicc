@@ -1,0 +1,10 @@
+# AI Registry
+
+Each known AI use, model, and AI agent. Type is Solution, model, provider, or assistant. The AI Registry is a Record of the Competence Center, kept by the Competence Center Lead. The AI Platform feeds it (Standards PLT-001). The Competence Center Lead lists the uses already in place by 2026-12-31 (AI Policy 2.1), and a Solution has its entry when it is defined (Solution Lifecycle Model 5.2).
+
+| Type | Solution | Name | Domain | Domain Owner | Solution Engineer | Risk Tier | Risk Tier assigned by and date, and told to the Domain Owner on | Approved for (data class) | Approved by and date | Models, versions, and providers | Data classes | Knowledge sources, owner, review date | AI agents and permissions and scope | Stage | Last validation, valid until | Released by, date | Provider check, valid until | Reassess by | Training of the users complete (AI Policy 2.1), noted by the Competence Center Lead without names | Checker and date of the check of a Risk Tier 1 Solution (AI Policy 3.3) | Monitoring alert levels and who watches (AI Policy 3.7) | Last reconciled |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+The training column states the date on which the training that the Competence Center sets for the Solution is complete for its users, and it holds no name (AI Policy 2.1; Operating Model 7.4 limits personal data). The check column is for a Risk Tier 1 Solution: the person who checked it, who is not the builder, and the date; for a Risk Tier 2 or 3 Solution it states `-` and the validation is in the column Last validation, valid until (AI Policy 3.3). The monitoring column states the alert levels of the monitoring of the Solution and who watches each, or where the Solution Definition states them (AI Policy 3.7). The column Last reconciled states the date on which the Competence Center Lead last reconciled the entry with the feed of the AI Platform and with the reports of the use of AI services that are not in the AI Registry (Standards PLT-001, PLT-006).
+
+Uses listed to date: none.

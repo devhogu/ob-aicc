@@ -46,6 +46,8 @@ class SiteCheck(unittest.TestCase):
                 (package / lang).mkdir()
                 (package / lang / 'index.html').write_text('<!doctype html><title>redirect</title>', encoding='utf-8')
             (site / 'index.html').write_text('<!doctype html><html lang="en"><body><a href="en/">English</a></body></html>', encoding='utf-8')
+            (site / 'sources').mkdir()
+            (site / 'sources' / 'index.html').write_text('<!doctype html><title>sources</title>', encoding='utf-8')
             assets = site / 'assets'
             assets.mkdir()
             for lang in ('en', 'ru'):

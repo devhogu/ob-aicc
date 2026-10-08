@@ -42,7 +42,14 @@ async def check(source, report_dir):
             context.on('request', lambda r: external.append(r.url) if r.url.startswith(('http:', 'https:')) else None)
             context.on('requestfailed', lambda r: failed.append({'url': r.url, 'failure': r.failure}))
             context.on('page', lambda p: p.on('pageerror', lambda e: errors.append(str(e))))
-            paths = sorted(p for p in manifest['files'] if p.endswith('.html'))
+            entries = ('en/index.html', 'ru/index.html')
+            paths = sorted(p for p in manifest['files'] if p.endswith('.html') and p not in entries and not p.startswith('sources/'))
+            for entry in entries:  # the language entries forward to the Center
+                forward = await context.new_page()
+                await forward.goto((folder / entry).as_uri(), wait_until='load')
+                await forward.wait_for_url('**/' + entry.split('/')[0] + '/center/index.html')
+                assert await forward.locator('h1').count() == 1, entry
+                await forward.close()
             queue = asyncio.Queue()
             for path in paths:
                 queue.put_nowait(path)
@@ -62,7 +69,7 @@ async def check(source, report_dir):
             page = await context.new_page()
             await page.goto((folder / 'aicc.html').as_uri())
             await page.locator('a[lang="ru"]').click()
-            assert urlsplit(page.url).path.endswith('/ru/index.html')
+            await page.wait_for_url('**/ru/center/index.html')
             await page.locator('#theme-switch').click()
             selected = await page.locator('html').get_attribute('data-theme')
             await page.evaluate('localStorage.clear()')
@@ -70,12 +77,12 @@ async def check(source, report_dir):
             # A file navigation can commit before its head scripts finish loading.
             await page.wait_for_load_state('load')
             assert await page.locator('html').get_attribute('data-theme') == selected
-            assert urlsplit(page.url).path.endswith('/en/index.html')
+            assert urlsplit(page.url).path.endswith('/en/center/index.html')
             for lang in ('en', 'ru'):
-                # The router searches every branch by default: each branch index loads as a script, never by fetch.
-                await page.goto((folder / lang / 'index.html').as_uri())
+                # Global search covers every branch: each branch index loads as a script, never by fetch.
+                await page.goto((folder / lang / 'center/index.html').as_uri())
                 await page.evaluate("() => { window.fetch = () => { throw new Error('fetch is unavailable in the file edition'); }; }")
-                assert await page.locator('#q-all').is_checked()
+                await page.locator('#q-all').check()
                 await page.locator('#q').fill('Frontline Service Copilot' if lang == 'en' else 'AI-помощник сотрудника первой линии')
                 found = page.locator('#results a[href*="discovery/"]').first
                 await found.wait_for(state='visible')

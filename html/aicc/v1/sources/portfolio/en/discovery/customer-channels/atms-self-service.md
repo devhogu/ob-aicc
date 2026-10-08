@@ -1,0 +1,222 @@
+# ATMs & self-service
+
+ATM and self-service networks are the cash distribution and basic self-service infrastructure for retail banking in markets where cash usage remains significant. Supervisory requirements commonly set network uptime obligations and reporting requirements for self-service availability; ATM network failures generate regulatory notifications and customer complaints simultaneously. The ATM estate carries substantial operating cost — armored cash logistics, hardware maintenance contracts, and cash working capital — and is under structural pressure as digital adoption shifts high-frequency transactions off the physical channel. **The opportunity for GenAI is predictive instrumentation of the ATM estate** — replacing reactive maintenance with predictive scheduling, optimizing cash loads from demand forecasts, and detecting fraud patterns before customer losses accumulate.
+
+## Problems
+
+### Network uptime {#network-uptime}
+
+| Lens | Problem |
+| --- | --- |
+| Insights & analytics | ATM network uptime is tracked from incident logs on a reactive basis. The ATM operations team does not have a predictive view of which machines are approaching component failure before the failure event creates a service disruption. Network uptime reporting to the regulator is compiled from incident records after the fact — a measure of past performance rather than a forward signal. |
+| Enablement | ATM network deployment decisions — where to site new machines, which machines to decommission, and where to upgrade to higher-capacity units — are made from periodic utilization reviews without a model of how digital adoption shifts are changing the economic case for each ATM location. The Head of Self-Service cannot test network configuration scenarios without commissioning analytical work. |
+| Automation | Cash replenishment orders are calculated manually per machine from recent draw history with fixed safety margins. Fraud detection relies on reactive review of disputed transaction patterns. Both are data-driven, structured tasks where an AI agent can replace the manual calculation cycle. |
+| New business opportunities | An ATM network operating at predictive maintenance and demand-optimized cash loads reduces two cost lines simultaneously: unplanned engineering dispatch cost falls as preventive maintenance replaces reactive call-outs; vault cash working capital cost falls as load amounts match demand. The savings fund the shift toward higher-value self-service terminal configurations. |
+
+## ATM uptime & incident management {#atm-uptime-incident-management}
+
+The monitoring, incident response, and preventive maintenance of the ATM fleet to maintain network uptime above the regulatory and contractual SLA threshold. Network availability requirements commonly oblige banks to report ATM outage events exceeding defined durations and to maintain documented maintenance records for supervisory review. Reactive maintenance — dispatching engineers after a failure — generates both the direct cost of the service call and a secondary cost in regulatory incident notification and customer complaint handling. Predictive maintenance shifts the same engineering resource to scheduled visits before failure occurs.
+
+### ATM Incident Response Automation
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/atm-uptime-incident-management/atm-incident-response-automation
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent detects ATM outage events from monitoring signals, drafts the regulatory incident notification, generates the field engineer dispatch instruction, and queues the customer-facing outage message — all before the first human response. The ATM operations team reviews and releases each output; structured response steps that previously required manual initiation are pre-prepared within minutes of outage detection. Time from outage detection to regulatory notification submission and to field dispatch are the primary outcome metrics.
+- Problem to solve: When an ATM outage is detected, the operations team initiates multiple parallel response steps manually: logging the incident, drafting the regulatory notification, contacting the field service provider, and activating the customer-facing outage message. Each step requires the same structured inputs — machine ID, location, fault code, and outage time — that are available from the monitoring system at the moment of detection. Under network availability requirements, outage reporting timelines are typically measured from detection; manual multi-step initiation extends the regulatory exposure window when incident volume is high.
+- Solution: The AI agent listens to ATM monitoring events and, on outage detection, reads the machine record — ID, location, fault code, maintenance history — and generates the regulatory notification draft, field dispatch instruction, and customer-facing outage message simultaneously. The ATM operations team reviews all three outputs before release; confirmation timestamps are recorded for the regulatory audit trail. Time from detection to notification submission and to field dispatch confirmation are tracked against the pre-deployment manual baseline.
+- OKR: For every detected ATM outage, a regulatory incident notification draft, a field engineer dispatch instruction, and a customer-facing outage message are available to the ATM operations team for review and release within minutes of detection.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent prepares all three outputs for ≥95% of detected outage events within 10 minutes of detection, for ≥48 consecutive weeks post go-live. |
+| Acceptance | ≥85% of notification drafts, dispatch instructions, and outage messages released by the ATM operations team without material amendment; confirmation timestamps recorded for 100% of releases. |
+| Cycle | Time from outage detection to release-ready regulatory notification and field dispatch instruction reduced from 30–60 minutes of manual multi-step initiation to ≤10 minutes. |
+
+### ATM Fleet Health Intelligence
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/atm-uptime-incident-management/atm-fleet-health-intelligence
+- Lens: Insights
+- Complexity: M
+- Intent: The AI agent consolidates ATM hardware telemetry, incident logs, and maintenance records into a weekly fleet health brief for the ATM operations manager, ranking machines by failure risk and identifying patterns that precede outage events. The brief decomposes uptime performance by machine type, region, and maintenance cohort, surfacing the maintenance and configuration interventions most correlated with outage prevention. The ATM operations manager directs preventive maintenance dispatch from the ranked risk register rather than from a fixed rotation schedule.
+- Problem to solve: ATM uptime monitoring tracks machine status in real time but does not produce a ranked risk register — machines approaching failure are not distinguishable from stable machines until the fault occurs. Maintenance is scheduled on a fixed rotation regardless of per-machine condition signals, meaning high-risk machines may wait for a scheduled visit while low-risk machines are serviced on the same cadence. Under network uptime requirements, each outage event can carry a regulatory notification obligation and a customer complaint exposure; the current model cannot prevent failures that are predictable from hardware telemetry trends.
+- Solution: The AI agent reads ATM hardware telemetry — error code frequency, cash mechanism cycle count, card reader error rate — alongside maintenance history and incident records, and scores each machine by failure risk over a rolling 14-day horizon. The weekly fleet health brief ranks machines by risk score, identifies the maintenance patterns most correlated with avoiding outage, and flags machines requiring priority dispatch outside the scheduled rotation. The ATM operations manager directs maintenance dispatch from the ranked register; mean time between failures and outage-related regulatory notifications are the primary outcome metrics.
+- OKR: A weekly fleet health brief — ranking machines by failure risk over a rolling 14-day horizon and flagging machines requiring priority dispatch outside the scheduled rotation — is available to the ATM operations manager to direct preventive maintenance.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent scores ≥98% of the ATM fleet and delivers the fleet health brief for ≥95% of scheduled weeks for ≥48 consecutive weeks post go-live. |
+| Acceptance | ≥70% of machines flagged for priority dispatch confirmed on inspection as requiring intervention; mean time between failures and outage-related regulatory notifications tracked as primary outcome metrics. |
+| Cycle | Failure-risk identification moved from detection at the fault event to up to 14 days of advance notice in a weekly ranked risk register. |
+
+### ATM Maintenance Schedule Optimization
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/atm-uptime-incident-management/atm-maintenance-schedule-optimisation
+- Lens: Optimize
+- Complexity: M
+- Intent: The AI agent analyzes per-machine failure history, hardware telemetry trends, and armored carrier visit schedules to generate an optimized maintenance calendar that combines cash replenishment and preventive maintenance visits, reducing total visit frequency without increasing outage risk. The combined schedule is presented to the ATM operations manager for approval before submission to the field service provider. Visit consolidation efficiency and outage rate against the pre-optimization baseline are the primary outcome metrics.
+- Problem to solve: ATM preventive maintenance visits and cash replenishment visits are scheduled independently by different teams; machines frequently receive both a maintenance engineer and a cash carrier within a short window, generating avoidable site-visit cost. The maintenance schedule is a fixed rotation that does not reflect per-machine condition or demand; high-utilization machines at cash-intensive locations require different maintenance frequency than low-utilization terminals. The cost of uncoordinated visit scheduling compounds as the fleet grows and armored carrier contract rates are renegotiated.
+- Solution: The AI agent reads per-machine failure history, hardware telemetry, cash replenishment schedule, and armored carrier visit records, and models a consolidated maintenance calendar that aligns maintenance and replenishment visits where the risk profile and logistics permit. It flags machines whose failure risk warrants visit frequency above the current schedule and those whose low-risk profile allows visit deferral. The ATM operations manager reviews and approves the consolidated calendar before submission; visit count reduction and outage rate against the pre-optimization baseline are tracked as outcomes.
+- OKR: A consolidated maintenance calendar — aligning preventive maintenance and cash replenishment visits where risk profile and logistics permit, and flagging machines that need a higher or lower visit frequency — is available to the ATM operations manager for approval before submission to the field service provider.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent generates the consolidated calendar covering ≥95% of the fleet for ≥95% of scheduled planning cycles for ≥12 consecutive months post go-live. |
+| Acceptance | ≥80% of proposed visit consolidations approved by the ATM operations manager without amendment; total site visits reduced by ≥10% with no increase in outage rate against the pre-optimization baseline. |
+| Cycle | Maintenance scheduling moved from a fixed rotation set independently of replenishment visits to a consolidated calendar delivered within 2 days of each planning-cycle data refresh. |
+
+## ATM fraud & skimming detection {#atm-fraud-skimming-detection}
+
+The detection of card-skimming devices, coordinated card-cloning attacks, and ATM-targeted fraud patterns from transaction and physical-event data. Anti-fraud requirements commonly oblige banks to report ATM-related fraud incidents within defined timelines and to maintain documented detection and response procedures. Card-skimming at ATMs produces a recognizable forensic pattern — a cluster of fraudulent withdrawals from cards that recently transacted at the same machine — but the pattern typically surfaces in complaint data after multiple customers have reported losses. Early pattern detection requires joining transaction data and physical ATM event logs in near-real-time.
+
+### ATM Skimming Regulatory Incident Reporter
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/atm-fraud-skimming-detection/atm-skimming-regulatory-incident-reporter
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent drafts the regulatory incident notification for ATM skimming events from the fraud alert record, machine event log, and case timeline, ready for fraud operations review before submission. The draft covers all mandatory fields under the applicable anti-fraud incident reporting requirements — event date, affected machine, estimated card exposure, and initial remediation steps. The fraud operations team reviews and submits; the AI agent maintains a case audit trail from detection to notification.
+- Problem to solve: Regulatory incident notifications for ATM fraud events are drafted manually by the fraud operations team after the investigation is underway. Notification timelines are commonly measured from the date a bank identifies the incident — not from when investigation concludes — creating regulatory exposure when manual drafting adds hours to the notification cycle. Each notification draws on the same structured inputs: machine ID, event log, card exposure estimate, and remediation action. The manual drafting step adds no analytical value and creates timeline risk.
+- Solution: The AI agent reads the fraud alert record, ATM event log, and initial investigation findings, and generates a regulatory notification draft with all mandatory fields pre-populated. The fraud operations team reviews for accuracy and submits; the AI agent records submission timestamp and maintains a complete case audit trail from detection alert to regulatory acknowledgment. Notification drafting time and the gap between detection and submission are tracked as the primary outcome metrics.
+- OKR: A regulatory incident notification draft for each ATM skimming event — event date, affected machine, estimated card exposure, and initial remediation steps pre-populated from the fraud alert record, machine event log, and case timeline — is available to the fraud operations team for review and submission.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent drafts the notification for ≥98% of ATM skimming events within 1 hour of the fraud alert, for ≥12 consecutive months post go-live. |
+| Acceptance | ≥85% of drafts submitted by the fraud operations team without material amendment to mandatory fields; 100% of notifications submitted within the regulatory timeline. |
+| Cycle | Notification drafting time reduced from several hours of manual drafting to ≤1 hour of review; gap between detection and submission tracked against the pre-deployment baseline. |
+
+### ATM Fraud Customer Alert Dispatch
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/atm-fraud-skimming-detection/atm-fraud-customer-alert-dispatch
+- Lens: Enablement
+- Complexity: S
+- Intent: The AI agent identifies the cardholder population exposed to a confirmed skimming device, generates personalized alert messages for each affected customer, and queues them for dispatch through the Bank's notification infrastructure. The alert includes the incident date range, recommended action, and a card replacement or PIN change instruction tailored to the customer's channel preference on record. The fraud operations team reviews the dispatch queue before release; no individual cardholder alert is sent without human confirmation.
+- Problem to solve: When a skimming device is confirmed, the fraud operations team manually extracts the list of cardholders who transacted at the affected machine within the exposure window, drafts alert communications, and submits them for dispatch. Manual extraction and drafting takes several hours; during that period affected cardholders remain unaware of the risk. Consumer-protection requirements commonly make timely customer notification of fraud exposure an obligation; manual drafting introduces delay without contributing analytical judgment.
+- Solution: The AI agent reads the fraud alert with machine ID and exposure window, queries card transaction records to identify all cardholders who transacted at the affected machine, and generates a personalized alert for each customer. Alerts are tailored by channel preference — SMS, push notification, or email — with the correct instruction for card replacement or PIN change. The fraud operations team reviews the dispatch queue and releases; dispatch count, confirmation rate, and time from detection to first customer notification are the primary outcome metrics.
+- OKR: Every cardholder exposed to a confirmed skimming device receives a personalized alert — incident date range, recommended action, and card replacement or PIN change instruction, through the channel preference on record — once the fraud operations team has reviewed and released the dispatch queue.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent identifies the exposed cardholder population and queues personalized alerts for ≥98% of confirmed skimming events within 1 hour of confirmation, for ≥12 consecutive months post go-live. |
+| Acceptance | ≥90% of queued alerts released by the fraud operations team without correction to the recipient list or instruction; delivery confirmation rate ≥95%. |
+| Cycle | Time from skimming confirmation to first customer notification reduced from several hours of manual extraction and drafting to ≤2 hours. |
+
+### ATM Fraud Pattern Detection
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/atm-fraud-skimming-detection/atm-fraud-pattern-detection
+- Lens: Insights
+- Complexity: M
+- Intent: The AI agent monitors ATM transaction and physical-event data to detect skimming device installation patterns and coordinated card-cloning activity, surfacing alerts to the fraud operations team before customer losses accumulate. The detection model clusters transactions by originating ATM and time window, identifying machines with a disproportionate share of subsequent fraud reports. Alerts include machine ID, event timeline, and recommended response to support rapid inspection and regulatory notification.
+- Problem to solve: ATM skimming and card-cloning attacks produce a recognizable clustering pattern — fraudulent withdrawals concentrated from cards that recently transacted at the same machine — but the pattern is currently identified from customer fraud reports after losses have accumulated. The fraud operations team lacks infrastructure to detect machine-event correlation in near-real time, delaying the inspection and regulatory incident notification cycle. Incident reporting timelines commonly begin from the point a bank identifies the attack; late pattern detection extends the Bank's regulatory exposure window.
+- Solution: The AI agent reads ATM transaction logs and physical-event signals — cabinet-open events, foreign-device triggers, power anomalies — and clusters transactions by originating ATM and time window. It flags machines with a disproportionate share of subsequent fraud reports and generates an alert with machine ID, event timeline, and recommended response for the fraud operations team. The fraud operations team dispatches an inspection and files the regulatory notification per applicable incident reporting requirements from the alert date.
+- OKR: ATM skimming and card-cloning attack patterns are detected from transaction and physical-event clustering data and surfaced to the fraud operations team before customer losses accumulate.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent processes ATM transaction and physical-event logs for ≥98% of network machines on a continuous cadence from go-live. |
+| Acceptance | ≥70% of machine-level fraud alerts confirmed as genuine attack indicators by the fraud operations team on investigation. |
+| Cycle | Fraud pattern identification moved from discovery through customer fraud reports, after losses have accumulated, to alert delivery within ≤4 hours of the event signal. |
+
+## Cash replenishment optimization {#cash-replenishment-optimisation}
+
+The logistics and working capital management of vault cash across the ATM fleet — determining how much cash to load per machine, when to schedule armored carrier visits, and how to balance idle cash cost against out-of-service risk. Cash replenishment is a material working capital cost and an operational risk: under-loaded machines generate regulatory incidents and customer complaints; over-loaded machines tie up treasury cash at the cost of overnight funding. Optimization requires per-machine demand forecasting at a granularity that manual calculation from recent draw history cannot achieve.
+
+### ATM Replenishment Logistics Briefing
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/cash-replenishment-optimisation/atm-replenishment-logistics-briefing
+- Lens: Enablement
+- Complexity: S
+- Intent: The AI agent assembles the pre-route briefing for cash carrier crews from the day's replenishment schedule, per-machine current cash level, forecasted demand to next visit, and any active maintenance or access constraints. The briefing is generated each working day before dispatch, enabling crews to sequence their route by depletion risk and identify machines requiring priority loading. The cash carrier supervisor reviews and releases the briefing; no dispatch occurs without confirmation.
+- Problem to solve: Cash carrier crews receive a static replenishment schedule and load quantities; they have no visibility into which machines on the route are at higher depletion risk at the time of departure. Routing sequences are fixed by geography rather than dynamic depletion priority, meaning a machine approaching cash-out may be reached late in the route while lower-priority machines are loaded first. The manual briefing process requires the cash logistics team to pull current ATM cash levels and maintenance status from separate systems before each dispatch, adding time with no analytical value.
+- Solution: The AI agent reads current ATM cash levels, the day's demand forecast, maintenance and access constraints, and the carrier's scheduled route, generating a ranked dispatch briefing with priority sequence, recommended load quantities per machine, and any access flags. The cash carrier supervisor reviews the briefing and releases for dispatch; route sequence is confirmed as consistent with the day's risk ranking before departure. Out-of-service events attributable to late-route prioritization and average idle cash balance per machine are tracked against the pre-deployment baseline.
+- OKR: A daily pre-route briefing — machines ranked by depletion risk with priority sequence, recommended load quantities, and maintenance or access flags — is available to the cash carrier supervisor for review and release before each dispatch.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent generates the pre-route briefing before dispatch on ≥98% of working days for ≥48 consecutive weeks post go-live. |
+| Acceptance | ≥85% of briefings released by the cash carrier supervisor without change to priority sequence or load quantities; out-of-service events attributable to late-route prioritization tracked as primary outcome metric. |
+| Cycle | Briefing preparation reduced from 1–2 hours of manual extraction of cash levels and maintenance status from separate systems to ≤15 minutes of supervisor review. |
+
+### ATM Cash Load Optimization
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/cash-replenishment-optimisation/atm-cash-load-optimisation
+- Lens: Automation
+- Complexity: M
+- Intent: The AI agent forecasts ATM cash demand by machine from per-machine draw history and calendar inputs, generating optimized load orders that reduce idle cash and out-of-service events from cash depletion. The forecast carries a rolling three-day horizon per ATM, calibrated to payroll dates, public holidays, and local event patterns. The cash logistics team executes against the AI-generated schedule; outcomes are tracked against the pre-deployment depletion and idle cash baselines.
+- Problem to solve: ATM cash replenishment orders are calculated from recent draw history with fixed safety margins that do not reflect per-machine demand variability. Over-loaded machines at low-draw locations tie up vault cash at overnight funding cost; under-loaded machines at high-demand sites generate out-of-service events that breach network uptime standards and trigger regulatory incident reporting obligations. Calendar-driven demand spikes — payroll weekends, public holidays, local retail events — are not systematically factored into the current manual ordering model.
+- Solution: The AI agent reads per-ATM draw history and calendar inputs and models demand by machine, producing optimized cash load orders with a rolling three-day horizon. The cash logistics team executes against the generated schedule; the AI agent flags machines approaching depletion risk within the horizon for priority dispatch. Out-of-service events from cash depletion and average idle cash balance are tracked as the primary outcome metrics.
+- OKR: Optimized cash load orders are available for each ATM on a rolling three-day horizon, calibrated to per-machine demand variability and calendar inputs — reducing idle cash balance and out-of-service events from cash depletion.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent produces load order recommendations for ≥95% of ATMs in the active network on each scheduled ordering cycle for ≥26 consecutive weeks. |
+| Acceptance | ≥85% of AI-generated load orders executed by the cash logistics team without material amendment to volume or timing. |
+| Cycle | Manual ATM order calculation cycle eliminated; load order preparation time reduced from 4–6 hours of manual draw-history review to ≤30 minutes of logistics team confirmation. |
+
+### ATM Demand Forecast Intelligence
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/cash-replenishment-optimisation/atm-demand-forecast-intelligence
+- Lens: Insights
+- Complexity: M
+- Intent: The AI agent produces a weekly per-ATM demand forecast decomposed by location cluster, day-of-week pattern, and calendar event, surfacing the machines and periods where current replenishment intervals create the highest out-of-service risk. The forecast brief identifies machines where demand has shifted materially from the prior-period baseline — a signal for logistics reallocation decisions. The cash logistics manager uses the brief to adjust carrier routing before the next replenishment cycle.
+- Problem to solve: ATM cash logistics decisions use aggregate demand history; the cash logistics team cannot distinguish machines with stable demand from those with rising or shifting patterns without commissioning discrete analytical work per location. Demand shifts from new merchant openings, residential development, or changing transit patterns are absorbed into the fixed replenishment schedule only after out-of-service events signal a capacity problem. The absence of a current-state demand intelligence brief means replenishment routing is optimized for last period's demand, not the current one.
+- Solution: The AI agent reads per-ATM draw records, calendar inputs, and location cluster context, generating a weekly demand forecast with a confidence range per machine. It flags machines where demand has shifted materially from the rolling prior-period baseline and estimates the out-of-service risk under the current replenishment interval. The cash logistics manager reviews the brief and adjusts carrier routing before the next cycle; out-of-service events from cash depletion and average idle cash balance per machine are the tracked outcomes.
+- OKR: A weekly per-ATM demand forecast brief — decomposed by location cluster, day-of-week pattern, and calendar event, and flagging machines where demand has shifted from the prior-period baseline with the out-of-service risk under the current replenishment interval — is available to the cash logistics manager before the next replenishment cycle.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent delivers the demand forecast brief covering ≥95% of active ATMs for ≥95% of scheduled weeks for ≥48 consecutive weeks post go-live. |
+| Acceptance | ≥75% of flagged demand shifts confirmed by the cash logistics manager as warranting a routing or interval adjustment; out-of-service events from cash depletion and average idle cash balance per machine tracked as primary outcome metrics. |
+| Cycle | Demand shift identification moved from discrete analytical work per location, or discovery after out-of-service events, to weekly automated delivery ahead of each replenishment cycle. |
+
+## Self-service channel evolution {#self-service-channel-evolution}
+
+The strategic management of the self-service terminal estate — decisions about terminal configuration (cash dispenser, cash recycler, multi-function kiosk), network density evolution, and the migration of transaction types from physical self-service to digital channels. Financial-inclusion requirements commonly mean that a bank operating in regions with low digital adoption cannot withdraw ATM coverage without regulatory engagement. Channel evolution decisions balance cost reduction, customer segment economics, and regulatory access obligations across a multi-year timeline.
+
+### Terminal Configuration Change Automation
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/self-service-channel-evolution/terminal-configuration-change-automation
+- Lens: Automation
+- Complexity: S
+- Intent: The AI agent drafts the terminal configuration change package — change specification, affected machine list, rollback plan, and regulatory notification where required — from the approved migration decision, ready for the ATM operations team to review and release. The package covers all documentation required for the Bank's change control process and for any regulatory reporting obligation that applies to network changes. The ATM operations team reviews and confirms before any configuration change is submitted.
+- Problem to solve: Each approved self-service channel configuration change — enabling a new transaction type, withdrawing a legacy function, or reconfiguring a terminal for recycler operation — requires a change package that draws on the same structured inputs: machine list, change specification, rollback plan, and regulatory notification. Manual assembly of each change package by the ATM operations team consumes time proportional to the number of terminals affected and adds no analytical judgment beyond structuring known information. Change package assembly is a consistent bottleneck in the migration implementation cycle; decisions approved in the quarterly review take additional weeks to progress to configuration simply due to documentation assembly.
+- Solution: The AI agent reads the approved migration decision record — affected machine list, change specification, and implementation timeline — and generates the complete change package with change specification, rollback plan, and regulatory notification draft. The ATM operations team reviews all outputs before any submission; confirmation timestamps are maintained in the audit trail. Change package preparation time and the gap between decision approval and configuration submission are tracked against the pre-deployment manual baseline.
+- OKR: A complete terminal configuration change package — change specification, affected machine list, rollback plan, and regulatory notification draft where required — is available to the ATM operations team for review and release for each approved migration decision.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent drafts the change package for ≥95% of approved configuration change decisions within 2 working days of approval, for ≥4 consecutive quarters post go-live. |
+| Acceptance | ≥85% of change packages confirmed by the ATM operations team without material amendment and accepted by change control on first submission. |
+| Cycle | Change package preparation reduced from weeks of manual documentation assembly to ≤2 working days; gap between decision approval and configuration submission tracked against the pre-deployment baseline. |
+
+### Self-Service Migration Readiness Intelligence
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/self-service-channel-evolution/self-service-migration-readiness-intelligence
+- Lens: Insights
+- Complexity: M
+- Intent: The AI agent analyzes ATM and kiosk transaction mix by location to identify the transaction types and customer segments most ready for digital channel migration, and the locations where self-service configuration changes would capture the highest volume shift. The quarterly brief provides the Head of Self-Service with a ranked migration opportunity list across the terminal estate, including estimated volume shift and revenue impact per location cluster. The brief is the primary input for the next network configuration review.
+- Problem to solve: Self-service channel evolution decisions — which transaction types to migrate digitally, which terminal configurations to upgrade — are made on annual network reviews using aggregate volume data. Location-level decomposition of transaction mix and customer segment usage is not available at the cadence needed to inform configuration prioritization between annual cycles. Financial-inclusion requirements commonly expect a migration decision to demonstrate that digital alternatives are accessible to the affected customer population before ATM coverage is withdrawn; the analytical evidence for this assessment is currently produced ad hoc.
+- Solution: The AI agent reads per-terminal transaction logs decomposed by transaction type, time of day, and customer segment proxy, and clusters locations by migration readiness — distinguishing terminals where digital alternatives are established from those serving populations without reliable digital access. It estimates volume shift and revenue impact for each configuration change under consideration, and flags locations where regulatory access obligations constrain migration speed. The Head of Self-Service reviews the quarterly brief and prioritizes the network configuration backlog from the evidence base generated.
+- OKR: A quarterly migration readiness brief — a ranked list of migration opportunities across the terminal estate with estimated volume shift and revenue impact per location cluster, and locations where access obligations constrain migration flagged — is available to the Head of Self-Service as the primary input for the network configuration review.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent delivers the migration readiness brief for ≥95% of scheduled quarterly cycles for ≥4 consecutive quarters post go-live. |
+| Acceptance | ≥75% of ranked migration opportunities confirmed as actionable by the Head of Self-Service for the network configuration backlog. |
+| Cycle | Location-level migration readiness analysis moved from annual network reviews on aggregate volume data to quarterly delivery within 2 weeks of quarter close. |
+
+### Self-Service Network Commercial Modeling
+
+- URN: urn:financial-services:scenario:customer-channels/atms-self-service/self-service-channel-evolution/self-service-network-commercial-modelling
+- Lens: New opps
+- Complexity: M
+- Intent: The AI agent models the commercial case for terminal estate reconfiguration — cash recycler upgrades, multi-function kiosk deployment, or terminal retirement — from operating cost data, transaction revenue, and demand forecasts by location. The output presents the revenue and cost profile of each configuration option over a three-year horizon, with the assumption set transparent for review. The Head of Self-Service and Treasury review the model before capital allocation decisions are made.
+- Problem to solve: Terminal investment cases — upgrading dispensers to recyclers, deploying multi-function kiosks, or retiring terminals — are constructed manually with assumptions sourced from separate systems: hardware cost schedules, transaction revenue by terminal, armored carrier contract rates, and demand forecasts. Manual model construction takes several weeks per investment case; the number of location-specific models that can be produced in a planning cycle is constrained by analyst capacity. The absence of a rapid commercial modeling capability means some evolution options are not evaluated before the capital budget is committed.
+- Solution: The AI agent reads terminal operating cost data, per-machine transaction revenue, armored carrier contract rates, hardware refresh cost schedules, and demand forecasts, generating a three-year commercial model for each configuration option under evaluation. The output presents the net present value and payback period per configuration option with the assumption set visible for review, and flags options that do not clear the Bank's hurdle rate. The Head of Self-Service and Treasury review the models; capital allocation decisions are made from a full set of evaluated options rather than from the subset that could be manually modeled before budget commitment.
+- OKR: A three-year commercial model for each terminal configuration option under evaluation — net present value and payback period with the assumption set visible, and options below the Bank's hurdle rate flagged — is available to the Head of Self-Service and Treasury before capital allocation decisions.
+
+| Dimension | Key result |
+| --- | --- |
+| Adoption | The AI agent generates a commercial model for ≥90% of configuration options submitted for evaluation in each planning cycle, for ≥2 consecutive planning cycles post go-live. |
+| Acceptance | ≥75% of models accepted by the Head of Self-Service and Treasury as the basis for capital allocation without manual remodeling. |
+| Cycle | Commercial model construction reduced from several weeks per investment case to ≤3 days of AI-generated modeling and review. |

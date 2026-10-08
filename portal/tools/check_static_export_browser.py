@@ -95,6 +95,8 @@ async def check(folder, report_dir):
                 context.on('requestfailed', lambda r: failed.append({'url':r.url,'error':r.failure}))
                 queue = asyncio.Queue()
                 for path in sorted(standalone.rglob('*.html')):
+                    if path.parent == standalone and path.name in ('index.html', 'aicc.html'):
+                        continue  # the entries forward to the Center and are checked below
                     queue.put_nowait(path)
                 async def sweep():
                     page = await context.new_page()
@@ -116,7 +118,7 @@ async def check(folder, report_dir):
                     assert await page.locator('parsererror').count() == 0, diagram
                 for width in (1440, 900, 390):
                     await page.set_viewport_size({'width':width,'height':900})
-                    for route in ('index.html','contents.html','center/index.html','center/about/values-and-principles/index.html','discovery/strategic-portfolio/index.html','discovery/value-streams/index.html','lab/index.html','portfolio/index.html','program/index.html','program/service-resolution/charter/index.html'):
+                    for route in ('contents.html','center/index.html','center/about/values-and-principles/index.html','discovery/strategic-portfolio/index.html','discovery/value-streams/index.html','lab/index.html','portfolio/index.html','program/index.html','program/service-resolution/charter/index.html'):
                         await page.goto((standalone / route).as_uri())
                         assert await page.evaluate('document.documentElement.scrollWidth <= innerWidth + 1'), (lang, width, route, 'page overflow')
                         if route == 'discovery/strategic-portfolio/index.html':
@@ -147,6 +149,7 @@ async def check(folder, report_dir):
                     await page.goto((standalone / 'discovery/value-streams/index.html').as_uri())
                     await page.screenshot(path=str(report_dir / f'{lang}-{width}.png'), full_page=True)
                 await page.goto((standalone / 'index.html').as_uri())
+                await page.wait_for_url('**/center/index.html')  # the language entry forwards to the Center
                 await page.locator('.static-contents-link').click()
                 assert page.url.split('#')[0].endswith('/contents.html')
                 await page.locator('a[href="center/about/strategy/index.html"]').click()

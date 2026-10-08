@@ -21,7 +21,7 @@ def build(output):
         page = (f'<!doctype html>\n<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
                 f'<meta http-equiv="refresh" content="0; url={target}"><link rel="canonical" href="{target}">'
                 f'<title>{title}</title><script>location.replace("{target}"+location.hash)</script></head>'
-                f'<body><h1><a href="{target}">{title}</a></h1></body></html>\n')
+                f'<body><main><h1><a href="{target}">{title}</a></h1></main></body></html>\n')
         entry = output / lang / 'index.html'
         entry.parent.mkdir(parents=True, exist_ok=True)
         entry.write_text(page, encoding='utf-8')
