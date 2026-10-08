@@ -275,3 +275,7 @@ h2#h-sec{margin:0;text-align:center;font-size:30px}
 @media(max-width:1250px){.crumbbar.has-ctx{grid-template-columns:minmax(0,1fr)}}
 .o-doc table:has(th:nth-child(2):last-child){table-layout:fixed}
 .o-doc table:has(th:nth-child(2):last-child) th:first-child{width:30%}
+/* room above the page: the breadcrumb no longer touches the header, and the title stands clear of it */
+.hub-main.o-main{padding-top:56px}
+.crumbbar{margin:0 0 32px}
+.home-hero{padding-top:0}
