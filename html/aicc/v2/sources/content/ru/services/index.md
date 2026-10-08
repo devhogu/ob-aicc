@@ -22,7 +22,7 @@ order: 10
 | Группа | Услуги |
 | --- | --- |
 | [Консультации и постановка задач](page:services/advise-and-formulate) | [Стратегия и устройство работы](page:services/strategy-and-governance), [Внутренние документы и процессы](page:services/normatives-and-processes), [Исследования и наблюдение за отраслью](page:services/research-and-exploration), [Бизнес-кейсы и сценарии](page:services/business-cases-and-scenarios) |
-| [Создание и сопровождение решений](page:services/build-and-run) | [Сервисы знаний](page:services/knowledge-services), [Автоматизация рабочего места](page:services/workplace-automation), [Аналитика и поддержка решений](page:services/analytics-and-decision-support), [Подготовка материалов](page:services/content-management), [Платформы](page:services/platforms) |
+| [Создание и сопровождение решений](page:services/build-and-run) | [Сервисы знаний](page:services/knowledge-services), [Обработка входных данных](page:services/input-processing), [Автоматизация рабочего места](page:services/workplace-automation), [Аналитика и поддержка решений](page:services/analytics-and-decision-support), [Управленческая отчётность и материалы для инвесторов](page:services/content-management), [Платформы](page:services/platforms) |
 | [Обучение и внедрение](page:services/enablement) | [Обучение и обмен знаниями](page:services/training-and-knowledge-sharing), [Внедрение и жизненный цикл решений](page:services/adoption-and-lifecycle-management) |
 | [Проверка и надёжность](page:services/assurance) | [Правила, проверки и критерии](page:services/policies-controls-criteria), [Оценка и экспертиза](page:services/assessments-and-evaluations), [Уровень риска](page:services/risk-tiering), [Наблюдение за работающими решениями](page:services/oversight) |
 
