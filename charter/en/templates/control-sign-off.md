@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-TPL-03-EN
 title: Control Sign-Off
-status: active
+status: draft
 revision: 1.0
 created: 2026-10-02
 revised: 2026-10-02

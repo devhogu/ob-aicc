@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-ORG-01-EN
 title: Operating Model
-status: active
+status: draft
 revision: 2.2
 created: 2026-10-02
 revised: 2026-10-07
@@ -383,7 +383,7 @@ Figure 8: the status of a control in the Control Matrix.
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
-| 2.0 | 2026-10-03 | Controls given their elements, type, and five status meanings and each carried by a loop, with governance measures, Steering attendance, the three lines, appointments and growth, and the Competence Center portal added, and the Strategic Priorities placed in the strategic loop. | DR-2026-062 |
-| 2.1 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |
-| 2.2 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | DR-2026-066 |
+| 1.0 | 2026-10-02 | Baseline. | — |
+| 2.0 | 2026-10-03 | Controls given their elements, type, and five status meanings and each carried by a loop, with governance measures, Steering attendance, the three lines, appointments and growth, and the Competence Center portal added, and the Strategic Priorities placed in the strategic loop. | — |
+| 2.1 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | — |
+| 2.2 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | — |

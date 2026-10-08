@@ -4,15 +4,15 @@
 | --- | --- |
 | Identifier | INI-007 |
 | Title | Retail credit: credit lines, loans, and mortgages |
-| State and Stage | Discovery: Scoping |
+| State and Stage | Proposed |
 | Strategic Priority | PRI-5 AI in banking operations and systems; PRI-4 Expertise at the point of work |
 | Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
-| Domain Owner (represents the client function) | Retail banking functions for credit lines, loans, and mortgages. The Domain Owner is not yet named; a Steering action |
+| Domain Owner (represents the client function) | Retail banking functions for credit lines, loans, and mortgages. The Domain Owner is not appointed |
 | Solutions expected | The Solutions, with their types, are defined in discovery |
 | Business acceptor | The head of the retail credit function (section 6) |
-| Service Agreement | Not issued (RI-004) |
+| Service Agreement | Not issued |
 | Period | September to December 2026 |
-| Date of last change | 2026-10-02 |
+| Date of last change | 2026-10-08 |
 
 Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 6 (the approver and the Service Agreement).
 
@@ -70,7 +70,7 @@ Dependencies: DEP-004 (named Domain Owners and Domain Experts), DEP-010 (the com
 
 ## 6. Decision and acceptance
 
-The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-061).
+No decision on this Initiative has been taken; the table below is completed as each decision is taken.
 
 | Decision | By | Date | Record |
 | --- | --- | --- | --- |

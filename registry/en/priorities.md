@@ -1,15 +1,15 @@
 # Priorities
 
-The Strategic Priorities come from the Statement of Intent, and they were set on 2026-09-02 at the first Steering (`steering/2026-09-02-first.md`; DR-2026-061). Each year, at the yearly Steering, the Executive Sponsor sets the Investment Envelope and the target Maturity Level for each Strategic Priority, and the Investment Guardrails, for the next year (Operating Model 6.5); the next is the yearly Steering of December 2026. This Record holds no figures of the Bank. Where a decision needs a figure, the Record names the figure that is to be used and the source where it lives, and the figure itself is kept in that source.
+Status: Draft. The Strategic Priorities come from the Statement of Intent. Each year, at the yearly Steering, the Executive Sponsor sets the Investment Envelope and the target Maturity Level for each Strategic Priority, and the Investment Guardrails, for the next year (Operating Model 6.5); the next is the yearly Steering of December 2026. This Record holds no figures of the Bank. Where a decision needs a figure, the Record names the figure that is to be used and the source where it lives, and the figure itself is kept in that source.
 
 | Identifier | Strategic Priority | Domain Owners | Investment Envelope: which figure, and its source | Maturity Level reached | Target | Target date |
 | --- | --- | --- | --- | --- | --- | --- |
-| PRI-1 | Customer intelligence | Commercial front office, retail functions, commercial sales | None |  |  |  |
-| PRI-2 | Business intelligence | FP&A (Ademi Moldogazieva) | None |  |  |  |
-| PRI-3 | Adoption within Domains | Compliance, HR, legal, finance, accounting | None |  |  |  |
-| PRI-4 | Expertise at the point of work | Legal, HR, commercial functions, retail credit | None |  |  |  |
-| PRI-5 | AI in banking operations and systems | Retail credit | None |  |  |  |
-| PRI-6 | Information technology operations and service lifecycle |  | None |  |  |  |
+| PRI-1 | Customer intelligence | | None |  |  |  |
+| PRI-2 | Business intelligence | | None |  |  |  |
+| PRI-3 | Adoption within Domains | | None |  |  |  |
+| PRI-4 | Expertise at the point of work | | None |  |  |  |
+| PRI-5 | AI in banking operations and systems | | None |  |  |  |
+| PRI-6 | Information technology operations and service lifecycle | | None |  |  |  |
 | PRI-7 | Software engineering |  | None |  |  |  |
 
 ## Measures of the Maturity Levels

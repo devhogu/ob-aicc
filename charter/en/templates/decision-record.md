@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-TPL-08-EN
 title: Decision Record
-status: active
+status: draft
 revision: 1.1
 created: 2026-10-02
 revised: 2026-10-07

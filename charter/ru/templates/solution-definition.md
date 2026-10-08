@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-01-RU
 title: Описание решения
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.2
 source: charter/en/templates/solution-definition.md
-source_sha256: 4b9fece6f3d58ba7ac4c0168ea9acba8050af3ce914aedf8a6ed578fe4785140
+source_sha256: 4a6b42a689970288a51add260bca2a3f84a1e1a26b14aae853985b9daab9558a
 translation_status: reviewed
 ```
 

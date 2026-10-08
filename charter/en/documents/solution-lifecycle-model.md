@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-ORG-03-EN
 title: Solution Lifecycle Model
-status: active
+status: draft
 revision: 2.3
 created: 2026-10-02
 revised: 2026-10-07
@@ -623,8 +623,8 @@ Figure 13: the loop of a change to a released Solution.
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
-| 2.0 | 2026-10-03 | Added the definitions of ready and done, the Program Board on the boards, the participants of the events with the work and feedback loops, the separations, the service steps with the four signals and the Handover of a Service to an IT function of the Bank, the service operations practices and the default meaning of the classes of service, the rules of the Lab, and the measures with their target rules and governance; the Domain Owner states the business value of an item. | DR-2026-062 |
+| 1.0 | 2026-10-02 | Baseline. | — |
+| 2.0 | 2026-10-03 | Added the definitions of ready and done, the Program Board on the boards, the participants of the events with the work and feedback loops, the separations, the service steps with the four signals and the Handover of a Service to an IT function of the Bank, the service operations practices and the default meaning of the classes of service, the rules of the Lab, and the measures with their target rules and governance; the Domain Owner states the business value of an item. | — |
 | 2.1 | 2026-10-03 | Corrected the units and population of expected lead time; completed the run-rate approval, parent, record, and delivery path; distinguished the Planning selection from later admissions in the acceptance measure. | none (correction under Document Catalog 4.2) |
-| 2.2 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |
-| 2.3 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | DR-2026-066 |
+| 2.2 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | — |
+| 2.3 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | — |

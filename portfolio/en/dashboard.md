@@ -1,6 +1,6 @@
 # Dashboard
 
-The state of the Program Increment at a glance. The Competence Center Lead updates it at each Weekly Review, from the Records named in each section. Last updated: 2026-10-06. Last Weekly Review baseline: 2026-10-03. Intake update only: INI-013 entered the Funnel; no delivery admission or business approval. The approved English baseline and Standing Initiative establishment are recorded in DR-2026-063; this Dashboard records the resulting state and counts.
+The state of the Program Increment at a glance. The Competence Center Lead updates it at each Weekly Review, from the Records named in each section. Last updated: 2026-10-08. This is a clean baseline: every Initiative is Proposed, and no decision, approval, acceptance or appointment is recorded. This Dashboard records the resulting state and counts.
 
 ## 1. Program Increment
 
@@ -27,7 +27,7 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 | Portfolio Kanban: Initiatives | Funnel | Reviewing | Analyzing | Portfolio Backlog | MVP | Implementation | Done |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Limit | No cap | No cap | No cap | No cap | 1 shared Active | 1 shared Active | No cap |
-| Items | 1 | 6 | 0 | 0 | 0 | 0 | 0 |
+| Items | 7 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 | Program Kanban: Capabilities and Features | Backlog | Ready | Active | Review | Done | Waiting (flag, in any column) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 | Dependencies Met by their date |  |
 | Work in progress against the Limits | Initiatives 0 of 1; Features 0 of 1; Capabilities 0 of 1 |
 | Time from a proposal to its approval, and from its approval to its acceptance |  |
-| Funnel: the age of the oldest item, and the items in the funnel | 1 item; INI-013 entered the Funnel on 2026-10-06; age observation not recorded |
+| Funnel: the age of the oldest item, and the items in the funnel | 7 items; the Funnel entry dates are not recorded, so the age observation is not recorded |
 | Approved Initiatives waiting, and the days waiting | 0 |
 | Business cases returned | 0 |
 | Release: time from verified to released, and the items of the Acceptance Checklist not met |  |
@@ -53,7 +53,7 @@ Source: board.md, the Portfolio Backlog, and the Program Backlog.
 | Change failure rate, and repeat incidents of live Solutions |  |
 | Benefit confirmed against the claimed benefit and the Envelope |  |
 
-Four Standing Initiatives (INI-009 to INI-012) are Approved under DR-2026-063 and tracked separately from the ordinary portfolio Kanban. Their measures and shared capacity limits are adopted; RI-008 is Closed and DEP-015 is Met. No run-rate Feature has been admitted under them, so none is Active.
+Four Standing Initiatives (INI-009 to INI-012) are Proposed and tracked separately from the ordinary portfolio Kanban. Their measures and shared capacity limits are drafted. No run-rate Feature has been admitted under them, so none is Active.
 
 ## 4. Roadmap
 
@@ -69,16 +69,16 @@ Source: dependencies.md.
 
 | Dependencies | Open | Met | At risk |
 | --- | --- | --- | --- |
-| 15 | 14 | 1 | 0 |
+| 15 | 15 | 0 | 0 |
 
 ## 6. Risks and issues
 
-Source: risks-and-issues.md. Three risks are accepted limits; two Issues, one Risk, and one Deficiency are Open. RI-008 is Closed by the baseline establishment approval. C-08 is in Deficiency (RI-004), and C-32 is Open because its remediation due date has not been recorded.
+Source: risks-and-issues.md. The entries recorded there are counted by severity.
 
 | Severity | Open or accepted |
 | --- | --- |
 | Blocker | 0 |
-| Major | 7 |
+| Major | 2 |
 | Minor | 0 |
 
 ## 7. Measures of the Maturity Level

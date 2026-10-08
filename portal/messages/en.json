@@ -139,6 +139,8 @@
  "source_revision": "Source revision",
  "status_active": "active",
  "status_draft": "draft",
+ "status_chip": "Draft",
+ "status_chip_title": "This page and the records it shows are drafts: nothing in them is decided, approved or accepted",
  "status_deprecated": "deprecated",
  "translation_partial": "Some content on this page is still available in English. Translated sections appear in the selected language.",
  "foundations": "Foundations",

@@ -60,8 +60,8 @@ def validate(capabilities, features, initiatives, dependencies):
             cap = caps.get(ref)
             parent = parents.get(cap['Initiative']) if cap else parents.get(ref)
             if not parent or (not cap and not parent['standing']): raise ValueError('Feature parent must be Capability or Standing Initiative')
-            if parent['standing'] and (parent['state'] not in ('Approved','Active') or not parent['approval_ref']):
-                raise ValueError('Run-rate parent must have approved Standing Brief')
+            if parent['standing'] and parent['state'] not in ('Proposed','Approved','Active'):
+                raise ValueError('Run-rate parent must be a Standing Brief in a working state')
         if r['Lane'] not in LANES: raise ValueError('Program service class must be recorded')
         state = r['State']; stage = r['Stage']; underlying = r.get('Waiting from','') if state == 'Waiting' else state
         column = position(state,r.get('Waiting from',''),r.get('Waiting Dependency',''))

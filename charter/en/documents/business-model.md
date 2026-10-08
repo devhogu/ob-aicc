@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-MND-03-EN
 title: Business Model
-status: active
+status: draft
 revision: 2.2
 created: 2026-10-02
 revised: 2026-10-07
@@ -113,7 +113,7 @@ revised: 2026-10-07
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
-| 2.0 | 2026-10-03 | Added the four service areas and fifteen service categories, the two modes of run-rate work and an Initiative with the Standing Initiatives, the Package and the two-part catalog, the intake record and catalog check, drafting for a function, the regulatory and technology watch, and the limit that the Competence Center does not operate a Solution at the scale of the Bank. | DR-2026-062 |
+| 1.0 | 2026-10-02 | Baseline. | — |
+| 2.0 | 2026-10-03 | Added the four service areas and fifteen service categories, the two modes of run-rate work and an Initiative with the Standing Initiatives, the Package and the two-part catalog, the intake record and catalog check, drafting for a function, the regulatory and technology watch, and the limit that the Competence Center does not operate a Solution at the scale of the Bank. | — |
 | 2.1 | 2026-10-03 | Clarified the direct parent and the prerequisite approval of run-rate work, without changing the service offer or the authority of the Executive Sponsor. | none (correction under Document Catalog 4.2) |
-| 2.2 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | DR-2026-066 |
+| 2.2 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | — |

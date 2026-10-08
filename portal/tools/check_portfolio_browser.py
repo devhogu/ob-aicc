@@ -32,7 +32,7 @@ def interactions(page,lang,counts):
     dialog=page.locator('[data-pf-panel]:visible [data-kb-panel]')
     assert dialog.is_visible()
     assert 'INI-004' in dialog.inner_text()
-    assert 'DR-2026-061' in dialog.inner_text()
+    assert 'DR-2026-' not in dialog.inner_text()
     assert ('Not recorded' if lang=='en' else 'Не указано') in dialog.inner_text()
     assert urlsplit(dialog.locator('[data-kb-full]').get_attribute('href')).path.endswith(('/ini-004/','/ini-004/index.html'))
     page.keyboard.press('Escape');assert not dialog.is_visible()
@@ -50,7 +50,7 @@ def interactions(page,lang,counts):
     assert not page.locator('.pf-filter').is_visible()
     page.locator('[data-pf-tab="standing"]').focus();page.keyboard.press('ArrowRight')
     assert page.locator('#roadmap').is_visible()
-    assert page.locator('#roadmap li').count()==13
+    assert page.locator('#roadmap li').count()==12
     page.locator('[data-pf-tab="board"]').click()
     counts['interactive_paths']+=1
 

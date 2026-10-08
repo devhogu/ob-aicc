@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-14-RU
 title: Описание пакета
-status: active
+status: draft
 revision: 1.1
 created: 2026-10-03
 revised: 2026-10-07
 source_revision: 1.1
 source: charter/en/templates/package-definition.md
-source_sha256: 5f4fd35b8abe8446780cd205e1b0bf7cfded92b78dbc3256762c2c2811e91eb1
+source_sha256: 277d2171e729494875eac98884a07e31cc91b9829993467f6d5d9ff4fd0a49f7
 translation_status: reviewed
 ```
 

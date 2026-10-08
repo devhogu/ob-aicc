@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-TPL-04-EN
 title: Steering Summary
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07

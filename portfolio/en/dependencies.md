@@ -15,7 +15,6 @@ The following table places the Milestones of the Roadmap (roadmap.md) at the Ite
 
 | Milestone | Roadmap | Program Increment | 2026 I10 (Oct) | 2026 I11 (Nov) | 2026 I12 (Dec) | IP week | Depends on | State |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| MS-002 | The Holders of the Roles are named, by 2026-12-01 | 2026-PIQ4 | | | Due 2026-12-01 | | DEP-004 | Planned |
 | MS-003 | Every known AI use is in the AI Registry with a Risk Tier | 2026-PIQ4 | | | Due 2026-12-31 (AI Policy 2.1) | | - | Planned |
 | MS-006 | First Domain engaged, with the first Solution | 2026-PIQ4 | | | | | - | Planned |
 | MS-009 | The service landscape map is presented | 2026-PIQ4 | | | | | DEP-001, DEP-002 | Planned |
@@ -47,7 +46,7 @@ The following table places the Milestones of the Roadmap (roadmap.md) at the Ite
 | DEP-012 | INI-008 Knowledge bases | The list of functions and the knowledge they hold | INI-002 | when the first base is chosen | Open |
 | DEP-013 | INI-008 Knowledge bases | Source documents with an owner and a review date | The function that owns each base | for each base | Open |
 | DEP-014 | Any Initiative that expects Risk Tier 2 or 3, and its Solution | The clearance of the business case, and the validation by the Control Function Contacts | Control Functions | before the business case is approved, and before the first deployment | Open |
-| DEP-015 | INI-009, INI-010, INI-011, INI-012 | Baseline approval of the four Standing Initiative Briefs and initial shared capacity and Team limits, recorded in DR-2026-063 | Baseline owner approval; subsequent decisions follow Business Model 4.9 and Solution Lifecycle Model 4.2 | Met 2026-10-03 | Met |
+| DEP-015 | INI-009, INI-010, INI-011, INI-012 | Approval of the four Standing Initiative Briefs and of the initial shared capacity and Team limits | Decisions follow Business Model 4.9 and Solution Lifecycle Model 4.2 |  | Open |
 
 ## 4. Scope of each item by month
 

@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-03-RU
 title: Заключение контрольной функции
-status: active
+status: draft
 revision: 1.0
 created: 2026-10-02
 revised: 2026-10-02
 source_revision: 1.0
 source: charter/en/templates/control-sign-off.md
-source_sha256: 5cb84e3840f16fda8f14fe83c1f000155f0070edb4539b1c01114fbb01f14625
+source_sha256: 482fe184ca89702c44358a4a4ff7b1fddbde95ec7c3a673a8984414c124099de
 translation_status: reviewed
 ```
 

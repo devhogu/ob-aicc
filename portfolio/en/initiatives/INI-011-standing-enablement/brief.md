@@ -1,12 +1,12 @@
 # INI-011 Standing Initiative: Enablement
 
-**Approved Initiative Brief.** Established on 2026-10-03 by the baseline approval recorded in DR-2026-063. The Executive Sponsor retains accountability under Business Model 4.9. The Initiative is Approved and becomes Active when its first approved run-rate Feature is pulled.
+**Draft Initiative Brief.** The Executive Sponsor retains accountability under Business Model 4.9. The Initiative is Proposed, with no Stage, and becomes Active when its first approved run-rate Feature is pulled.
 
 | Field | Entry |
 | --- | --- |
 | Identifier | INI-011 |
 | Title | Standing Initiative: Enablement |
-| State and Stage | Approved; no Stage |
+| State and Stage | Proposed; no Stage |
 | Strategic Priority | Enabling (all priorities); each request records the priority it supports |
 | Source scenario | None: a Standing Initiative carries run-rate work, not a scenario of the catalog |
 | Service area and category | Enablement; Training and knowledge sharing; Adoption and lifecycle management |
@@ -17,10 +17,10 @@
 | Solutions expected | None committed by this Brief; each AI Solution arising from a Feature needs its own definition and approvals |
 | Business acceptor | Executive Sponsor for the Standing Initiative; the product owner accepts each Feature |
 | Service Agreement | Not required for the Standing Initiative or its run-rate Features (Business Model 4.8) |
-| Period | Standing arrangement from 2026-10-03; reviewed at each quarterly Steering |
-| Date of last change | 2026-10-03 |
+| Period | Standing arrangement from its establishment; reviewed at each quarterly Steering |
+| Date of last change | 2026-10-08 |
 
-Open sections: none. The scope, measures, capacity rule, and baseline approval are settled below.
+Open sections: 6 (the establishment approval of this Brief and the first recurring review). The scope, measures, and capacity rule are drafted below.
 
 ## 1. Hypothesis
 
@@ -45,23 +45,23 @@ Each run-rate Feature sits directly under this Initiative in the Program Backlog
 
 ## 4. Cost and value
 
-The Standing Initiatives share the existing the Competence Center Team capacity; no separate headcount, funding, or fixed share of capacity is reserved for a service area. The initial Team limit is one Feature in progress across ordinary and run-rate delivery combined, including a Feature in Review or Waiting. The Ready queue holds at most two Features. The same shared limit applies across lanes and Domains; an urgent request changes the order of work and does not add capacity. The boards record these limits under DR-2026-063.
+The Standing Initiatives share the existing the Competence Center Team capacity; no separate headcount, funding, or fixed share of capacity is reserved for a service area. The initial Team limit is one Feature in progress across ordinary and run-rate delivery combined, including a Feature in Review or Waiting. The Ready queue holds at most two Features. The same shared limit applies across lanes and Domains; an urgent request changes the order of work and does not add capacity. The boards record these limits.
 
 At each Weekly Review the Competence Center Lead admits the highest-ranked eligible request that fits the remaining Iteration and the shared limit. If none fits, none is admitted. Each request states its expected benefit and acceptance criteria. Financial figures remain in their governed sources. The normal monthly and quarterly reviews may change the limits and work mix within the authority of the charter.
 
 ## 5. Risks, dependencies, and Risk Tier
 
-The baseline approval and initial capacity rule are recorded in DR-2026-063; RI-008 is closed and DEP-015 is Met. Each request still requires available capacity within the shared limit, a named client and Domain Owner, and the approval for its purpose and data class where AI is used. The Risk Tier, provider assessment, independent check or validation, and production-change controls apply to each use as the charter requires.
+Each request still requires available capacity within the shared limit, a named client and Domain Owner, and the approval for its purpose and data class where AI is used. The Risk Tier, provider assessment, independent check or validation, and production-change controls apply to each use as the charter requires.
 
 ## 6. Decision and acceptance
 
-The evidence of the establishment approval is the baseline owner's instruction recorded in DR-2026-063. Subsequent quarterly decisions remain with the Executive Sponsor under Business Model 4.9.
+No establishment approval of this Brief is recorded yet. Subsequent quarterly decisions remain with the Executive Sponsor under Business Model 4.9.
 
 | Decision | Authority and record | Date | Result |
 | --- | --- | --- | --- |
-| Establishment approval of this Brief | Baseline owner instruction, recorded in DR-2026-063 | 2026-10-03 | Approved |
-| Initial measures, work mix, and Team limits | Baseline establishment in DR-2026-063; section 2 and section 4 of this Brief | 2026-10-03 | Adopted |
-| First recurring review | Executive Sponsor at quarterly Steering under Business Model 4.9 | 2026-12-23 | Scheduled |
+| Establishment approval of this Brief | | | Draft |
+| Initial measures, work mix, and Team limits | | | Draft |
+| First recurring review | | | Draft |
 
 ## Amendments after approval
 

@@ -16,14 +16,14 @@
     {
       "path": "charter/en/README.md",
       "hash_basis": "file_bytes",
-      "sha256": "9a809cecabbb47bc8591d8f6fee08f88b01779c44d01d6ce1c02196a8c5adc7a",
+      "sha256": "4f5a44d4c8390b60b4bdd649a51e33f36b6420b6fa283e3fc2d4d15b29966717",
       "baseline_path": "charter/README.md",
       "baseline_sha256": "b9cca5895f2e2ab1af2dd99d9b11f220c18e00cf9de4accca52670d2b1880563"
     },
     {
       "path": "charter/en/documents/ai-policy.md",
       "hash_basis": "file_bytes",
-      "sha256": "3c0462d36fa4c48808331be748832a2b5dbbf7a94fc120b250b9ccdca1272b68",
+      "sha256": "6f8c0dfd75b9314a84ae7e620e13972c5085ef06b607449639442e46b484af5f",
       "document": {
         "id": "AICC-POL-01-EN",
         "status": "active",
@@ -36,7 +36,7 @@
     {
       "path": "charter/en/documents/aicc-charter.md",
       "hash_basis": "file_bytes",
-      "sha256": "3e664ca4a7d1f067a5f8427e01aca98fb1b90e5927dcb34ff962a0c509e76401",
+      "sha256": "ca704e6837d24e33a3076bbcb93e33cce6817b884148949b3ef3502a97161636",
       "document": {
         "id": "AICC-MND-02-EN",
         "status": "active",
@@ -49,7 +49,7 @@
     {
       "path": "charter/en/documents/business-model.md",
       "hash_basis": "file_bytes",
-      "sha256": "f7247ceec50613b6993fe8a12b6662357fd0d5aa5cc72c53d68244a1d4ce563b",
+      "sha256": "8ab81d0fcee5e7e61ec58f898c2bbb40094b5a6d78002191d3d9667289ffaf33",
       "document": {
         "id": "AICC-MND-03-EN",
         "status": "active",
@@ -62,7 +62,7 @@
     {
       "path": "charter/en/documents/document-catalog.md",
       "hash_basis": "file_bytes",
-      "sha256": "fcac5dd30f1c773dbbc47021805fa11f22b9a512f30ad32b83d9ddc0051e1da1",
+      "sha256": "4d80a149df2bff928f5e755b79149c5adf9e406731c84aba978fad4375ae029f",
       "document": {
         "id": "AICC-REF-02-EN",
         "status": "active",
@@ -75,7 +75,7 @@
     {
       "path": "charter/en/documents/operating-model.md",
       "hash_basis": "file_bytes",
-      "sha256": "c9a39461f54fa944f2d47f690fe1b07896d39669e1e8871f6c141bb439a4f70b",
+      "sha256": "b4d2ec448e4d4104c71513220393a11221bcf4b494237e227c57c4cb8e4a08ad",
       "document": {
         "id": "AICC-ORG-01-EN",
         "status": "active",
@@ -88,7 +88,7 @@
     {
       "path": "charter/en/documents/portfolio-management-model.md",
       "hash_basis": "file_bytes",
-      "sha256": "656c2bd651647240f6501055f9d341be4b21aa92d84667169a10ec4985e618fd",
+      "sha256": "eb253fa5b80daac6b1213b316f4a6f263bb0806fb821efa9d28f5a9c2062d69a",
       "document": {
         "id": "AICC-ORG-02-EN",
         "status": "active",
@@ -101,7 +101,7 @@
     {
       "path": "charter/en/documents/solution-lifecycle-model.md",
       "hash_basis": "file_bytes",
-      "sha256": "d14efe2c1981ae238a1577914c8e2c5ff89e1cd958587a9e5f7b6def1f8074fc",
+      "sha256": "111a731efeb63dd0617b1f88f7f701f084829a9bba7012960bb670bf0628ebec",
       "document": {
         "id": "AICC-ORG-03-EN",
         "status": "active",
@@ -114,7 +114,7 @@
     {
       "path": "charter/en/documents/statement-of-intent.md",
       "hash_basis": "file_bytes",
-      "sha256": "50d67c19c4367f4e2322449a5542cc506715faf8e3d53541efb17f0464b98315",
+      "sha256": "9a6cdfba51d4b3e7a820e50affea5243e4d7ce659553b23d299962b3537c6ee4",
       "document": {
         "id": "AICC-MND-01-EN",
         "status": "active",
@@ -127,7 +127,7 @@
     {
       "path": "charter/en/documents/vocabulary.md",
       "hash_basis": "file_bytes",
-      "sha256": "6a5f9b511bfe8c923bb42af6779198808c5fabbac7b470b97f1b271748dc63a4",
+      "sha256": "67fec6da5d2c66a1560f5d5764e4046686dfb78b56c13918d12636cb52142c3c",
       "document": {
         "id": "AICC-REF-01-EN",
         "status": "active",
@@ -196,7 +196,7 @@
     {
       "path": "charter/en/templates/acceptance-checklist.md",
       "hash_basis": "file_bytes",
-      "sha256": "dfa0020e0b26010b66ab41e5c3f6d6e6dbf6df951ecf436eb98abc38f932f922",
+      "sha256": "acb35bd73df98b41bbdab8138991b8f3a7e07409440f9077b57ccd6433f2a19a",
       "document": {
         "id": "AICC-TPL-13-EN",
         "status": "active",
@@ -209,7 +209,7 @@
     {
       "path": "charter/en/templates/ai-incident-review.md",
       "hash_basis": "file_bytes",
-      "sha256": "3c0672d44cf63ca88b5ab33f7f361bccafb2857cc36132d8c671f07216d229be",
+      "sha256": "24d3931e70a682bb7c576dfeb7862fcf2fa8c964eeebbe4a3103d4858cd3c369",
       "document": {
         "id": "AICC-TPL-10-EN",
         "status": "active",
@@ -222,7 +222,7 @@
     {
       "path": "charter/en/templates/appointments-record.md",
       "hash_basis": "file_bytes",
-      "sha256": "195537670c79de08c90c4c75448b63f0e2643d44a19c3430e04dd1f8c238d7a8",
+      "sha256": "06acb0396a1d732f9c9ad485f90ea9b8f15b12d94cdb12d0ae92e33581f6e4a7",
       "document": {
         "id": "AICC-TPL-09-EN",
         "status": "active",
@@ -235,7 +235,7 @@
     {
       "path": "charter/en/templates/control-sign-off.md",
       "hash_basis": "file_bytes",
-      "sha256": "5cb84e3840f16fda8f14fe83c1f000155f0070edb4539b1c01114fbb01f14625",
+      "sha256": "482fe184ca89702c44358a4a4ff7b1fddbde95ec7c3a673a8984414c124099de",
       "document": {
         "id": "AICC-TPL-03-EN",
         "status": "active",
@@ -248,7 +248,7 @@
     {
       "path": "charter/en/templates/decision-record.md",
       "hash_basis": "file_bytes",
-      "sha256": "cdadac5b95ad3a791a03837aaba35d4927d9e57beceefbb3d54f115e8ace159c",
+      "sha256": "c680d766dccadbab5422e4ff2b936d59833d1af90414519054ae6da67076c9a0",
       "document": {
         "id": "AICC-TPL-08-EN",
         "status": "active",
@@ -261,7 +261,7 @@
     {
       "path": "charter/en/templates/initiative-brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "1fc9e90d58aa6d7f13a2b3a1b4e5cdd91bb469d74f74f56820221750ac60b32d",
+      "sha256": "49f95eac3f8834b7edf0916455599d87f3bd156308685e3e5c8dfd2f31a489f1",
       "document": {
         "id": "AICC-TPL-02-EN",
         "status": "active",
@@ -274,7 +274,7 @@
     {
       "path": "charter/en/templates/outcome-report.md",
       "hash_basis": "file_bytes",
-      "sha256": "873161145d5efefb65010660c4bd43cd2a2a69dff19bce34afec9bd5022da7f6",
+      "sha256": "cfc9e2d8515efd7b0c008becfb102fe2c2f1c774214db70962ca8a03d9c06f0d",
       "document": {
         "id": "AICC-TPL-07-EN",
         "status": "active",
@@ -287,7 +287,7 @@
     {
       "path": "charter/en/templates/package-definition.md",
       "hash_basis": "file_bytes",
-      "sha256": "5f4fd35b8abe8446780cd205e1b0bf7cfded92b78dbc3256762c2c2811e91eb1",
+      "sha256": "277d2171e729494875eac98884a07e31cc91b9829993467f6d5d9ff4fd0a49f7",
       "document": {
         "id": "AICC-TPL-14-EN",
         "status": "active",
@@ -300,7 +300,7 @@
     {
       "path": "charter/en/templates/proposal.md",
       "hash_basis": "file_bytes",
-      "sha256": "fbae901940a1c1fe2177132cb6220ec4b82a9f7818f2af7472801454c6536b79",
+      "sha256": "9f4935df662f7dad1d7e1898df797cc724c2944fbf060d651ac053b2a7ca2fbf",
       "document": {
         "id": "AICC-TPL-12-EN",
         "status": "active",
@@ -313,7 +313,7 @@
     {
       "path": "charter/en/templates/quarterly-report.md",
       "hash_basis": "file_bytes",
-      "sha256": "c03503b061b5950fb735c3b086251e6a62375cd057ec9c60b9beb48e45f9f2d0",
+      "sha256": "0d7125cb4114addf686e2a06e921e7cb3890f017772fdc96902fc444fc7ef37b",
       "document": {
         "id": "AICC-TPL-05-EN",
         "status": "active",
@@ -326,7 +326,7 @@
     {
       "path": "charter/en/templates/registry-snapshot.md",
       "hash_basis": "file_bytes",
-      "sha256": "4f5d2eceee3eb73c5e2f9110ee5a5b45dc86f263bf73c19b23bcd6aaea6b0e1b",
+      "sha256": "4e90107a617dff1a653902f2e70a2bf50e8b9f97c492d5d1573f7dc412dcb39f",
       "document": {
         "id": "AICC-TPL-11-EN",
         "status": "active",
@@ -339,7 +339,7 @@
     {
       "path": "charter/en/templates/service-agreement.md",
       "hash_basis": "file_bytes",
-      "sha256": "bd961de27036f3025590c7e1927cd92ea68f9afa680e61192aec866c4f0cb125",
+      "sha256": "723a0a6c9fea35f5d2fef22d044049af713e52fb9d6dc175fa40bfdd4492d241",
       "document": {
         "id": "AICC-TPL-06-EN",
         "status": "active",
@@ -352,7 +352,7 @@
     {
       "path": "charter/en/templates/solution-definition.md",
       "hash_basis": "file_bytes",
-      "sha256": "4b9fece6f3d58ba7ac4c0168ea9acba8050af3ce914aedf8a6ed578fe4785140",
+      "sha256": "4a6b42a689970288a51add260bca2a3f84a1e1a26b14aae853985b9daab9558a",
       "document": {
         "id": "AICC-TPL-01-EN",
         "status": "active",
@@ -365,7 +365,7 @@
     {
       "path": "charter/en/templates/steering-summary.md",
       "hash_basis": "file_bytes",
-      "sha256": "ec471c886b0e1680380e0c3f2f5bf55c882db24a865ce6d3a141ea9cd2fa2dc9",
+      "sha256": "acdefb8816372a0349e12cde66d4ea72c213364fec1c18ec3cb2ec28ca6926fc",
       "document": {
         "id": "AICC-TPL-04-EN",
         "status": "active",
@@ -427,7 +427,7 @@
     {
       "path": "charter/en/shared-technology-terminology.md",
       "hash_basis": "file_bytes",
-      "sha256": "f6dcbce720f8b2a5a64030fa23e5606b31d93b7338f0c3206ade112c3f93cd7a"
+      "sha256": "272bf1c130f2539960e18bef8bb3f751872962d3bdca676a7736716d23c35b16"
     },
     {
       "path": "portal/content/en/about/how-we-work.md",
@@ -1258,7 +1258,7 @@
     {
       "path": "portal/messages/en.json",
       "hash_basis": "file_bytes",
-      "sha256": "856cacae1cbb763976716f19df471778b647ef3dd23eb746a6f0cc9532f89987",
+      "sha256": "8a6f975515ecf5d20b11f902840555910779b054e947c0254206fdc700512035",
       "baseline_path": "portal/messages/en.json",
       "baseline_sha256": "f5f7ba5d166f962f82d874684f4bdbb85f8d8bb893ad10cd7c8cf211cbf92b98"
     },
@@ -1377,28 +1377,28 @@
     {
       "path": "registry/en/README.md",
       "hash_basis": "file_bytes",
-      "sha256": "0491b947eec996ac5e0df88fe92b85234af237e170f42e308a5ecdbaada17cf2",
+      "sha256": "fc3d09e0a0ffa44c5f49aa8f4b16eb2782aaa7347181685e9050b7f738b17693",
       "baseline_path": "registry/README.md",
       "baseline_sha256": "82d8c21f5f3e1faca2753b90692e0b3b01720a9d6ae8b6da869d5588324f7abb"
     },
     {
       "path": "registry/en/ai-registry.md",
       "hash_basis": "file_bytes",
-      "sha256": "0ce5acfaf6a9f11626b1c82f6a09d8ae8c8be1887e9b5fdb9d1f1f378953abd7",
+      "sha256": "efa32c0ee17998c096f58f4d28efd4476127dfa32342b06d034967426994f629",
       "baseline_path": "registry/ai-registry.md",
       "baseline_sha256": "707029790a51eed30caa08febd2901f0a31449dfe3e69946881c8b22099d0bff"
     },
     {
       "path": "registry/en/appointments.md",
       "hash_basis": "file_bytes",
-      "sha256": "036c56e6019593308890da77f1f778439d539aeea0301d091a43f076ae459a14",
+      "sha256": "1fa1e0d5ff7faed4904f1ef4e576493a0f286e6a1d4828d6a05e20c820a636c0",
       "baseline_path": "registry/appointments.md",
       "baseline_sha256": "5239522067613521bdbb2c06ecc56be3767faa7da6b3e31038f480c9cac9453f"
     },
     {
       "path": "portfolio/en/board.md",
       "hash_basis": "file_bytes",
-      "sha256": "40c721e860ee64ec5a9cfecfbc93ef16caa485dbba185763394b5c5340c924fe",
+      "sha256": "cae44ed94b9cdfbc011dacf47318364aa8f63023abac3203c7a9ebf98e1abd43",
       "baseline_path": "registry/board.md",
       "baseline_sha256": "8d952b9a4dddddfc1e229b5bf53de2b72f90edadfb401541874f7a14fdb90850"
     },
@@ -1412,140 +1412,112 @@
     {
       "path": "registry/en/control-matrix.md",
       "hash_basis": "file_bytes",
-      "sha256": "e62859ddd32ffb7383d4f9d9cd8e37f11579ccdb1078e3e12f94ff0a75cd9477",
+      "sha256": "856ccf306b3d5e3d4666e4656bf7141c853edb7f37307a4d4e172f92d42f0254",
       "baseline_path": "registry/control-matrix.md",
       "baseline_sha256": "93b7733f7390cdd710a500a32b98d6536edc828e6edd723973135f84290b6ae2"
     },
     {
       "path": "portfolio/en/dashboard.md",
       "hash_basis": "file_bytes",
-      "sha256": "5840d2ee3cdf8161ca7f4a689e47594bd938e70ce8cfe17194781991e327dadc",
+      "sha256": "488200208fde239305e620658e36c35202aefeebe575e282c1491edc12d99503",
       "baseline_path": "registry/dashboard.md",
       "baseline_sha256": "e308648f5e95f8420c50f68fccc70775337375b760a7b5fb8409cd8a895bdea7"
     },
     {
       "path": "registry/en/decision-log.md",
       "hash_basis": "file_bytes",
-      "sha256": "649d313a51707dbba748447276eedb03706d6dd55a42ecba1627db9f1ae24c8c",
+      "sha256": "5121db418898a5a11c27259be4750950dce055afd61cd59d334766b66ddf08d1",
       "baseline_path": "registry/decision-log.md",
       "baseline_sha256": "c1c52d67510a5a55640be4d50c2c8d51404fcbc1ce695d2cf727cbac747d0159"
     },
     {
-      "path": "registry/en/decisions/DR-2026-060-baseline-of-the-charter-and-the-registry.md",
-      "hash_basis": "file_bytes",
-      "sha256": "cdd91229d28bee7bfa9eddd9026dcddfd92e6aa68b92cee47d04eed20f7964eb",
-      "baseline_path": "registry/decisions/DR-2026-060-baseline-of-the-charter-and-the-registry.md",
-      "baseline_sha256": "cdd91229d28bee7bfa9eddd9026dcddfd92e6aa68b92cee47d04eed20f7964eb"
-    },
-    {
-      "path": "registry/en/decisions/DR-2026-061-the-first-steering.md",
-      "hash_basis": "file_bytes",
-      "sha256": "2031fdb157ce0ae2cde22e839c5be2c7b3cad0cd015e6b09b98793083263597c",
-      "baseline_path": "registry/decisions/DR-2026-061-the-first-steering.md",
-      "baseline_sha256": "2031fdb157ce0ae2cde22e839c5be2c7b3cad0cd015e6b09b98793083263597c"
-    },
-    {
-      "path": "registry/en/decisions/DR-2026-062-revision-2-0-of-the-documents.md",
-      "hash_basis": "file_bytes",
-      "sha256": "67140fcb6da72722879dda5b04ac635d2bcc7026951ff87ab0500a655f70b507",
-      "baseline_path": "registry/decisions/DR-2026-062-revision-2-0-of-the-documents.md",
-      "baseline_sha256": "67140fcb6da72722879dda5b04ac635d2bcc7026951ff87ab0500a655f70b507"
-    },
-    {
-      "path": "registry/en/decisions/DR-2026-063-approved-english-baseline.md",
-      "hash_basis": "file_bytes",
-      "sha256": "e1aa0247a0ef7996c2ec2e881ff733a1ec1f6001072e4a4608b823155c07f1fe",
-      "baseline_path": "registry/decisions/DR-2026-063-approved-english-baseline.md",
-      "baseline_sha256": "8f2ffc3cd82b8a0da2f21a2a3903900da3d3cb3f48908054b607a055452e9612"
-    },
-    {
       "path": "registry/en/decisions/README.md",
       "hash_basis": "file_bytes",
-      "sha256": "5cf08cdc0f172665ad2db1da993df4550eb96087a4b5349483715c96146487d2",
+      "sha256": "575c06b20a33ee00772521d39042e7068fe8961bc5fb06f6f1fa630dede2b2ca",
       "baseline_path": "registry/decisions/README.md",
       "baseline_sha256": "5cf08cdc0f172665ad2db1da993df4550eb96087a4b5349483715c96146487d2"
     },
     {
       "path": "portfolio/en/dependencies.md",
       "hash_basis": "file_bytes",
-      "sha256": "cf56bc4f9306f344bfa33847fb42f9257dffb5a76681647d6074bdba15aac9c3",
+      "sha256": "6de16960cb6e12d6c7b53a8aaacd7016deaa6c097bb26a0c6b5c340607a37456",
       "baseline_path": "registry/dependencies.md",
       "baseline_sha256": "3614bdd175ee4eb89ee0d16a94bd321b18a88c7a282cfdd37702c0ff3bdf86a3"
     },
     {
       "path": "portfolio/en/initiatives/INI-002-service-landscape-discovery/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "a82340408ae48523a986be5882d0d968d2404023f235d486997822b5a40ceaff",
+      "sha256": "8dbc31b187ef1ed1c6354b28f3d7b805366eafa9b3181c86fcc9f9781b0d051f",
       "baseline_path": "registry/initiatives/INI-002-service-landscape-discovery/brief.md",
       "baseline_sha256": "b103ba498ef197394531b1296c4ca7e13134cfda4fd1e20b839b696abe78c5d7"
     },
     {
       "path": "portfolio/en/initiatives/INI-003-ai-in-daily-work-of-functions/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "9934304e376502150f1c838c0d35a33c605d0c25b014998420d68db65c57d52d",
+      "sha256": "6051eeaadbc360ec44cd714f87dc1afd46bc09481804de69384b82f10ae2328e",
       "baseline_path": "registry/initiatives/INI-003-ai-in-daily-work-of-functions/brief.md",
       "baseline_sha256": "7bbd8c56d0420772860903a6a6dd0c467d4c3b51f44f92535fa35756b8c88c11"
     },
     {
       "path": "portfolio/en/initiatives/INI-004-fpa-board-reporting/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "aa0cb236840ded07b96f32952ef6b7bac61fd3486c372d4ec7df877c6439f23b",
+      "sha256": "58998382f7bba80d7a80f20ecc9ea8323a9bb76e21f6c9ff44869100fa25bf66",
       "baseline_path": "registry/initiatives/INI-004-fpa-board-reporting/brief.md",
       "baseline_sha256": "dc50c4e5c234b504b34e0f399d1ce40437ff70c9af362cc8546c72321cc581d8"
     },
     {
       "path": "portfolio/en/initiatives/INI-006-customer-experience-intelligence-discovery/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "780e9807592b6921099a5b04d96b2174e61e09220a3eaae57e67437ef345ec74",
+      "sha256": "a466f589911cc3db05bdf1a19bfcc0599adf5bb4f1a6fe58e1785afae07bf9fc",
       "baseline_path": "registry/initiatives/INI-006-customer-experience-intelligence-discovery/brief.md",
       "baseline_sha256": "000d31116abd24a2cd91b4df2592c20ff89ca5cd23096ed9dc89abb3f2fc98be"
     },
     {
       "path": "portfolio/en/initiatives/INI-007-retail-credit-discovery/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "a3332517703bc53562a5c9017e053b3fe89ad3920b2e63112f1df4fb78bea15d",
+      "sha256": "5007c2c71bd56af0932a038079a561e53fd1ff3d72a4932070a51a87d6a561c7",
       "baseline_path": "registry/initiatives/INI-007-retail-credit-discovery/brief.md",
       "baseline_sha256": "3d2f37818f5504de93f460b9e1b4c2fc9ac407366c457222fbd74d3b0c78dacd"
     },
     {
       "path": "portfolio/en/initiatives/INI-008-knowledge-bases/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "bb3e8eb0a686829f8429c2fd40994ce0669e4fccd7dbf3c20a09627a96a5a86c",
+      "sha256": "47ce32f38501285b2fa6368ac5a378b020fba9834297e615ae9ec539ceeb15b3",
       "baseline_path": "registry/initiatives/INI-008-knowledge-bases/brief.md",
       "baseline_sha256": "88d6fde675c6a49a4dc6d76137bede833f247341540a3481bc1ff56613e6984f"
     },
     {
       "path": "portfolio/en/initiatives/INI-009-standing-advise-and-formulate/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "1c61d20b17a9769be87f447b7349ffe9e1a75884edd1f5ababc4f4de72e3d626",
+      "sha256": "4ea68739c5df5c04948a631fc1b543ae767de68b4013e232d83dde62b62dd733",
       "baseline_path": "registry/initiatives/INI-009-standing-advise-and-formulate/brief.md",
       "baseline_sha256": "1d90c59757eeb80ac6c0e1ba7f41cb0edba7fd5452f5f379f2ec06d22a3a652b"
     },
     {
       "path": "portfolio/en/initiatives/INI-010-standing-build-and-run/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "78e2f6a0f138f01d59701eb778a68260889dabc0a448afbd786fb0fedb0ae843",
+      "sha256": "33a3fae27f5d3273607ec5929cd142560d7337a203eb51537d843836f8dff8c7",
       "baseline_path": "registry/initiatives/INI-010-standing-build-and-run/brief.md",
       "baseline_sha256": "a9db6a8ec31ce8d3ea4240fc8d7ff72ef96d9ca4c23bda5e0915fa784ce1e765"
     },
     {
       "path": "portfolio/en/initiatives/INI-011-standing-enablement/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "41e72739da34744195cca817ab7dbde35c5c0bf95ad13f6c4fed11aa03e0be74",
+      "sha256": "9580012e43eeda88f2ca0d1e242b7022634e030ab2aa85070c5ac7ba698eba3e",
       "baseline_path": "registry/initiatives/INI-011-standing-enablement/brief.md",
       "baseline_sha256": "e19c79e561462a44fe0ccc2efef96e7cada5bea34d2da2eda23018677ac8aa49"
     },
     {
       "path": "portfolio/en/initiatives/INI-012-standing-assurance/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "9d98c3c90afdb93c508a915e0ab52cf202657b11bf0052045f1d91d8658a87dd",
+      "sha256": "443edfe155c3e58b3293fad7e9c90b9e40974ed397a824dd1f59fbba362b4b6e",
       "baseline_path": "registry/initiatives/INI-012-standing-assurance/brief.md",
       "baseline_sha256": "f5291e606f464ed49e134e79b8225a20b868d940ae53c526d98ee32436f1dfc0"
     },
     {
       "path": "portfolio/en/initiatives/README.md",
       "hash_basis": "file_bytes",
-      "sha256": "bc56def37ada41b16edb337a13df5f9b526cc839e07fef9b5fb753c1c43b8a7c",
+      "sha256": "fe02deaab04ca539250666e6dbb3f2639f71686344f5f2d0cf81933cc6b67330",
       "baseline_path": "registry/initiatives/README.md",
       "baseline_sha256": "bc56def37ada41b16edb337a13df5f9b526cc839e07fef9b5fb753c1c43b8a7c"
     },
@@ -1580,35 +1552,35 @@
     {
       "path": "portfolio/en/pi/2026-PIQ4/iterations.md",
       "hash_basis": "file_bytes",
-      "sha256": "babda95271e3a32806c1fe7bf13e09697cd3ed49844ca3430d7a061baf29ff4d",
+      "sha256": "e4d9a70545e56d2ef1b79420feba53cbb1b042d663e386849facb62d0c0a87d8",
       "baseline_path": "registry/pi/2026-PIQ4/iterations.md",
       "baseline_sha256": "babda95271e3a32806c1fe7bf13e09697cd3ed49844ca3430d7a061baf29ff4d"
     },
     {
       "path": "portfolio/en/pi/2026-PIQ4/objectives.md",
       "hash_basis": "file_bytes",
-      "sha256": "b89b700ab24c9ad974cc4a7b93aa0f2a7083191e216a1b3e1095b680d6d478bd",
+      "sha256": "8a3ab7fa4761b73ce2f2980afb2abd07a5c9e57836c796cf4578b0c974934d86",
       "baseline_path": "registry/pi/2026-PIQ4/objectives.md",
       "baseline_sha256": "eede145f32a420905aec0c2fdbe81ce9610b1bbaf9a50967da1ba75088070913"
     },
     {
       "path": "portfolio/en/portfolio-backlog.md",
       "hash_basis": "file_bytes",
-      "sha256": "5597592f588a2b906e91e9a93b3b773a2c767e6af4572e2021b9abd4db992f36",
+      "sha256": "90b3f6903755366be12d1c01e8c5615027e9f12fc9d590db92138aed84f06dc8",
       "baseline_path": "registry/portfolio-backlog.md",
       "baseline_sha256": "be434d3d7e485ac6ddf733911320e4ce27f354382111ab40d9ab6de772cf54d8"
     },
     {
       "path": "registry/en/priorities.md",
       "hash_basis": "file_bytes",
-      "sha256": "fab15194825e39825a8aced51e3a8f8013e17fb713d00c598a6b3a42463480f6",
+      "sha256": "3feb507c822e45055f6178f40dfd28ed8574572272bd529bb4bc34450621cfd7",
       "baseline_path": "registry/priorities.md",
       "baseline_sha256": "7bfc8d6f6e540f0b83656e821de5dd0510fc7d667be136916dd873cdfb694138"
     },
     {
       "path": "portfolio/en/program-backlog.md",
       "hash_basis": "file_bytes",
-      "sha256": "b7cbbf9d3c10148d8c87ecfa8503e569aacd84f35c56797bcc54db2b7a731480",
+      "sha256": "c1bb0eef7a08ac022f0441601fb6f22796d73806b45ed2359c5caa3de3ec3108",
       "baseline_path": "registry/program-backlog.md",
       "baseline_sha256": "2a341fdbddcf82fd7773b3e9b63aa11f41b4d0a0a047801d799ec8943ae3aa64"
     },
@@ -1622,54 +1594,37 @@
     {
       "path": "registry/en/risks-and-issues.md",
       "hash_basis": "file_bytes",
-      "sha256": "a3ab8e1884801a599e47e6321142ca03eb18cc873f0a2eee0bb03bdbc1b3312d",
+      "sha256": "74b49b5db1a6a0603a4559092ac5f1e52d34ac5679c87782d66a509a534697be",
       "baseline_path": "registry/risks-and-issues.md",
       "baseline_sha256": "4b2b1835976300a7077454f0fcad3d05de194c8672185dfe6d8bcc8edf7e17c2"
     },
     {
       "path": "portfolio/en/roadmap.md",
       "hash_basis": "file_bytes",
-      "sha256": "890482aeac1f083be2d986b821bb63fe0f1b2353b03f2723a80161292aea295f",
+      "sha256": "d3c8b41cdcb127bf2b20a95c5a2ca23220a216ee7ad223fa626db835f083408e",
       "baseline_path": "registry/roadmap.md",
       "baseline_sha256": "829229f3b5ac5045d12a9584145322dacb20e74f97d8b93f2fad663036a3053f"
     },
     {
       "path": "registry/en/standards.md",
       "hash_basis": "file_bytes",
-      "sha256": "402e9a1ed7fa9cc7e8a01fa7a5d397c53e3c5fa1eeb354a61f0dc7eac678419e",
+      "sha256": "b0fd70210f9e767d352a1d7c01cc1f5c9e2e84ed9f3900deafb049449b01d097",
       "baseline_path": "registry/standards.md",
       "baseline_sha256": "b2833e470ea6ca0ba5213553040645ae44ae285fe22d2bc4d52336faad97a3c8"
     },
     {
-      "path": "registry/en/steering/2026-09-02-first.md",
-      "hash_basis": "file_bytes",
-      "sha256": "68116369538c22228d02b0a8dc8a9a13a8a5ae65320e4695917bbe38ff38d64b",
-      "baseline_path": "registry/steering/2026-09-02-first.md",
-      "baseline_sha256": "68116369538c22228d02b0a8dc8a9a13a8a5ae65320e4695917bbe38ff38d64b"
-    },
-    {
       "path": "registry/en/steering/README.md",
       "hash_basis": "file_bytes",
-      "sha256": "5e7476719829367ca3a0ec1d79020e879265eac97cc5cc967b287c67fdf137fa",
+      "sha256": "bf0cf85b4259fdc3fa4c4a18df3ca2eee847a089df104c2c061680f5291695c6",
       "baseline_path": "registry/steering/README.md",
       "baseline_sha256": "5e7476719829367ca3a0ec1d79020e879265eac97cc5cc967b287c67fdf137fa"
     },
     {
       "path": "portfolio/en/teams.md",
       "hash_basis": "file_bytes",
-      "sha256": "a0c5389490767e2e6b3c68a37ee4770f0e1d9684a9ec2d55fa88fc995e61adfc",
+      "sha256": "f6cb8d01c397c113088d305f3f408f0fa38c121b5887b6971b3d1acd5448e2d2",
       "baseline_path": "registry/teams.md",
       "baseline_sha256": "8fcc507c0653294e5c595965d5ce67607d7c142e67c7f7a7af30c8b6824d9633"
-    },
-    {
-      "path": "registry/en/decisions/DR-2026-064-shared-industry-terminology.md",
-      "hash_basis": "file_bytes",
-      "sha256": "0b11d293310e9fefca861e8e6bdd7b0b9b34548111a59cd3e52bc1149ad1925a"
-    },
-    {
-      "path": "registry/en/decisions/DR-2026-065-portfolio-holds-the-working-state.md",
-      "hash_basis": "file_bytes",
-      "sha256": "5850297470b1c726d6857d54e402003add075e98954278ba69f67df8cef5f6b5"
     },
     {
       "path": "portfolio/en/discovery/README.md",
@@ -2059,7 +2014,7 @@
     {
       "path": "portfolio/en/initiatives/INI-013-service-resolution/brief.md",
       "hash_basis": "file_bytes",
-      "sha256": "f3ca370546f715bc8f7ad2fb3d79f1372a912d9ad9c9d5566091a05dea8b44c7"
+      "sha256": "3e5573f1b9f7e0eea41008b00b4851f946822421c9de9ce0eb0c9410e5da98f8"
     },
     {
       "path": "portfolio/en/projects/README.md",
@@ -2130,11 +2085,6 @@
       "path": "portfolio/en/projects/service-resolution/technical-design.md",
       "hash_basis": "file_bytes",
       "sha256": "2d90dfc767c3387515bf1dd4cb877dbe8b0e79e035e6e6a66a7fb2fb6ae118bf"
-    },
-    {
-      "path": "registry/en/decisions/DR-2026-066-the-name-competence-center.md",
-      "hash_basis": "file_bytes",
-      "sha256": "644e2ee8a8f058990f5e165c88df28f8c878492124efc386fa75e1524c08e30c"
     }
   ],
   "baseline_tag": "baseline-2026-10-03-en-v2.2",

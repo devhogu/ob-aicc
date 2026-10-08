@@ -50,25 +50,22 @@ class PortfolioRules(unittest.TestCase):
         for lang in ('en','ru'):
             d = portfolio.project(lang=lang)
             self.assertEqual([x['id'] for x in d['items']], expected)
-            self.assertEqual(d['date'],'2026-10-06')
-            self.assertEqual(d['counts']['Reviewing'],6)
+            self.assertEqual(d['date'],'2026-10-08')
+            self.assertEqual(d['counts']['Funnel'],7);self.assertEqual(d['counts']['Reviewing'],0)
             self.assertEqual(d['capacity']['active'],0)
             self.assertEqual(d['capacity']['limit'],1)
             ordinary = [x for x in d['items'] if not x['standing']]
-            self.assertEqual([x['rank'] for x in ordinary],[1,2,3,4,5,6,None])
-            # Scored order is different; the first-100-days order must survive.
-            self.assertGreater(ordinary[2]['wsjf'], ordinary[0]['wsjf'])
-            self.assertTrue(all(x['stage_entered'] is None and x['approval_ref'] is None for x in ordinary[:6]))
-            self.assertEqual([x['state'] for x in d['items'][7:]],['Approved']*4)
+            self.assertTrue(all(x['rank'] is None and x['approval_ref'] is None for x in ordinary))
+            self.assertEqual([x['state'] for x in d['items']],['Proposed']*11)
             self.assertEqual(d['features'],0)
             proposed = next(x for x in d['items'] if x['id']=='INI-013')
             self.assertEqual(proposed['column'],'Funnel')
-            self.assertEqual(proposed['stage_entered'],'2026-10-06')
+            self.assertFalse(proposed['stage_entered'])
             self.assertIsNone(proposed['goal_confirmation'])
             self.assertIsNone(proposed['approval_ref'])
             self.assertIsNone(proposed['wsjf'])
             self.assertTrue(any(r['Value']=='' for r in d['measures']))
-            self.assertEqual(len(d['milestones']),13)
+            self.assertEqual(len(d['milestones']),12)
             public = json.dumps(d,ensure_ascii=False)
             self.assertNotIn('Moldogazieva',public);self.assertNotIn('Молдогазиева',public)
             self.assertEqual(next(x for x in d['items'] if x['id']=='INI-004')['owner'], 'Head of the FP&A function' if lang=='en' else 'Руководитель подразделения FP&A')
@@ -77,7 +74,7 @@ class PortfolioRules(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp); shutil.copytree(portfolio.workspace.ROOT/'portfolio/en',root/'portfolio/en');shutil.copytree(portfolio.workspace.ROOT/'registry/en',root/'registry/en')
             path = root/'portfolio/en/portfolio-backlog.md'
-            path.write_text(path.read_text().replace('| Discovery | Scoping |','| Approved |  |',1))
+            path.write_text(path.read_text().replace('| Proposed |  |','| Approved |  |',1))
             with self.assertRaisesRegex(ValueError,'state disagreement'):
                 portfolio.project(root)
 
@@ -90,7 +87,7 @@ class PortfolioRules(unittest.TestCase):
             snapshot.write_text(snapshot.read_text().replace('1 shared Active','2 shared Active'))
             self.assertEqual(portfolio.project(root)['capacity']['limit'],2)
             path=root/'portfolio/en/dashboard.md'
-            path.write_text(path.read_text().replace('| Items | 1 | 6 |','| Items | 1 | 5 |',1))
+            path.write_text(path.read_text().replace('| Items | 7 | 0 |','| Items | 6 | 0 |',1))
             with self.assertRaisesRegex(ValueError,'count disagreement'):
                 portfolio.project(root)
 

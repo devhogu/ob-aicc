@@ -6,25 +6,25 @@ The architecture standards of the Competence Center, the requirements that the u
 
 | Identifier | Standard | Applies to | Date |
 | --- | --- | --- | --- |
-| ARC-001 | A Solution that answers from knowledge cites the source, and each source has a named owner and a review date noted in the AI Registry. | Every Solution that uses knowledge | 2026-10-02 |
-| ARC-002 | The design lets the Solution be suspended without loss of the record of its use. | Every Solution | 2026-10-02 |
-| ARC-003 | Each figure in a published edition has its source, date, calculation, and reviewer recorded. | Output published to the Board or to investors | 2026-10-02 |
-| ARC-004 | Where a person decides, the Solution records the contribution of the AI and the decision of the person. | Every Solution used in a decision process | 2026-10-02 |
-| ARC-005 | A Solution that reads untrusted content, such as mail, documents from outside the Bank, or web pages, has only the permissions that its task needs, filters its input and its output, and puts a person before any action that it proposes. | Every Solution that reads untrusted content | 2026-10-03 |
-| ARC-006 | The license of each open component, model, and dataset of a Solution is recorded in its Solution Definition, and the security test covers these components. | Every Solution that uses an open component, model, or dataset | 2026-10-03 |
-| ARC-007 | An AI agent has only the functions, permissions, and autonomy that its task needs, within its Risk Tier and as the AI Registry records; its actions are logged; and a person can stop it on a channel that the AI agent cannot influence. | Every AI agent | 2026-10-03 |
-| ARC-008 | The monitoring of a Solution has alert levels for performance, drift, the human override and correction rate, incidents, and cost, each with who watches it, and an alert level that is crossed triggers a review. | Every Solution in use | 2026-10-03 |
+| ARC-001 | A Solution that answers from knowledge cites the source, and each source has a named owner and a review date noted in the AI Registry. | Every Solution that uses knowledge | |
+| ARC-002 | The design lets the Solution be suspended without loss of the record of its use. | Every Solution | |
+| ARC-003 | Each figure in a published edition has its source, date, calculation, and reviewer recorded. | Output published to the Board or to investors | |
+| ARC-004 | Where a person decides, the Solution records the contribution of the AI and the decision of the person. | Every Solution used in a decision process | |
+| ARC-005 | A Solution that reads untrusted content, such as mail, documents from outside the Bank, or web pages, has only the permissions that its task needs, filters its input and its output, and puts a person before any action that it proposes. | Every Solution that reads untrusted content | |
+| ARC-006 | The license of each open component, model, and dataset of a Solution is recorded in its Solution Definition, and the security test covers these components. | Every Solution that uses an open component, model, or dataset | |
+| ARC-007 | An AI agent has only the functions, permissions, and autonomy that its task needs, within its Risk Tier and as the AI Registry records; its actions are logged; and a person can stop it on a channel that the AI agent cannot influence. | Every AI agent | |
+| ARC-008 | The monitoring of a Solution has alert levels for performance, drift, the human override and correction rate, incidents, and cost, each with who watches it, and an alert level that is crossed triggers a review. | Every Solution in use | |
 
 ## Requirements on the AI Platform
 
 | Identifier | Requirement | Applies to | Date |
 | --- | --- | --- | --- |
-| PLT-001 | The AI Platform feeds the AI Registry, a Record of the Competence Center kept by the Competence Center Lead, and keeps what it feeds current. | Every Solution | 2026-10-02 |
-| PLT-002 | The AI Platform provides logging, with the retention that the rules require. | Risk Tier 2 and 3 | 2026-10-02 |
-| PLT-003 | The AI Platform supports continuous monitoring, with alerts. | Risk Tier 3 | 2026-10-02 |
-| PLT-004 | The AI Platform keeps data separated, as the data classification rules require. | Every Solution | 2026-10-02 |
-| PLT-005 | The AI Platform allows a Solution to be suspended pending review. | Every Solution | 2026-10-02 |
-| PLT-006 | The AI Platform, or information security, reports use of AI services that are not in the AI Registry. | The Bank | 2026-10-02 |
+| PLT-001 | The AI Platform feeds the AI Registry, a Record of the Competence Center kept by the Competence Center Lead, and keeps what it feeds current. | Every Solution | |
+| PLT-002 | The AI Platform provides logging, with the retention that the rules require. | Risk Tier 2 and 3 | |
+| PLT-003 | The AI Platform supports continuous monitoring, with alerts. | Risk Tier 3 | |
+| PLT-004 | The AI Platform keeps data separated, as the data classification rules require. | Every Solution | |
+| PLT-005 | The AI Platform allows a Solution to be suspended pending review. | Every Solution | |
+| PLT-006 | The AI Platform, or information security, reports use of AI services that are not in the AI Registry. | The Bank | |
 
 ## External instruments and standards
 

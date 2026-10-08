@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-04-RU
 title: Итоги управляющего совещания
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.2
 source: charter/en/templates/steering-summary.md
-source_sha256: ec471c886b0e1680380e0c3f2f5bf55c882db24a865ce6d3a141ea9cd2fa2dc9
+source_sha256: acdefb8816372a0349e12cde66d4ea72c213364fec1c18ec3cb2ec28ca6926fc
 translation_status: reviewed
 ```
 

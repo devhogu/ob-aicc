@@ -159,16 +159,20 @@ def project(root=workspace.ROOT, lang='en'):
             mvp, out_scope, risk, controls, steps = '', '', '', '', []
             decision_rows = en.table(path, 'Decision | Authority and record')
             establishment = next(r for r in decision_rows if r['Decision'] == 'Establishment approval of this Brief')
-            approval_ref = ', '.join(re.findall(r'DR-\d{4}-\d+', establishment['Authority and record']))
-            if establishment['Result'] != 'Approved' or not approval_ref or establishment['Date'] not in row['Approved on']:
-                raise ValueError('Standing approval disagreement: ' + identifier)
+            approval_ref = ', '.join(re.findall(r'DR-\d{4}-\d+', establishment['Authority and record'])) or None
             review_date = next(r['Date'] for r in decision_rows if r['Decision'] == 'First recurring review') or None
-            log = {r['Identifier']: r for r in en.table(GOVERNANCE + 'decision-log.md', 'Identifier | Date')}
-            local_log = {r['Identifier']: r for r in sources.table(GOVERNANCE + 'decision-log.md', 'Identifier | Date')}
-            refs = approval_ref.split(', ')
-            if any(r not in log for r in refs): raise ValueError('Unknown Decision Record: ' + identifier)
-            # Business Model 4.9: the Executive Sponsor approves; show the authority actually recorded.
-            authority = None if all('Executive Sponsor' in log[r]['Decided by'] for r in refs) else '; '.join(_plain(local_log[r]['Decided by']) for r in refs)
+            if state == 'Approved':
+                if establishment['Result'] != 'Approved' or not approval_ref or establishment['Date'] not in row['Approved on']:
+                    raise ValueError('Standing approval disagreement: ' + identifier)
+                log = {r['Identifier']: r for r in en.table(GOVERNANCE + 'decision-log.md', 'Identifier | Date')}
+                local_log = {r['Identifier']: r for r in sources.table(GOVERNANCE + 'decision-log.md', 'Identifier | Date')}
+                refs = approval_ref.split(', ')
+                if any(r not in log for r in refs): raise ValueError('Unknown Decision Record: ' + identifier)
+                # Business Model 4.9: the Executive Sponsor approves; show the authority actually recorded.
+                authority = None if all('Executive Sponsor' in log[r]['Decided by'] for r in refs) else '; '.join(_plain(local_log[r]['Decided by']) for r in refs)
+            elif approval_ref or establishment['Result'] == 'Approved':
+                # A draft baseline records no decision: a Brief that is not Approved cites none.
+                raise ValueError('Standing Initiative cites an approval but is not Approved: ' + identifier)
         items.append({'id': identifier, 'title': _plain(public_meta['Title']), 'state': state, 'stage': stage,
                       'status': public_meta['State and Stage'], 'standing': standing, 'column': column,
                       'rank': int(row['Rank']) if row['Rank'] else None, 'priorities': row_priorities,
@@ -255,7 +259,7 @@ UI = {
  'mvp_gate':'Decision after the MVP', 'impl_gate':'No portfolio gate (each Solution passes its own gates)', 'risk':'Risk and clearances', 'risk_note':'An expected Risk Tier is not an assigned tier, and it does not mean that the business case is cleared or validated.',
  'dependencies':'Dependencies', 'agreement':'Service Agreement', 'approval':'Business-case approval',
  'confirmation':'Decision Record DR-2026-061 confirms a goal of the first 100 days. It does not approve the business case.',
- 'standing_intro':'Standing Initiatives, one per service area, approved for small run-rate requests. They take no place under the limit on Active Initiatives.',
+ 'standing_intro':'Standing Initiatives, one per service area, proposed for small run-rate requests. They take no place under the limit on Active Initiatives.',
  'standing_gate':'Admit the next eligible Feature at the Weekly Review', 'standing_decider':'Competence Center Lead, within the shared Team limits',
  'standing_note':'Each Feature needs a client function and its Domain Owner, acceptance criteria, known dependencies, AI use approval for its data class where AI applies, and a scope that fits one Iteration.',
  'standing_review':'Next quarterly review', 'standing_approval':'Approval recorded', 'no_mvp':'No MVP of its own; the work is done as run-rate Features.',
@@ -290,7 +294,7 @@ UI = {
  'mvp_gate':'Управленческое решение по итогам MVP', 'impl_gate':'Контрольной точки портфеля нет (каждое решение проходит собственные контрольные точки)', 'risk':'Риск и согласования', 'risk_note':'Указание ожидаемой категории риска не означает её присвоения, а также согласования или валидации бизнес-кейса.',
  'dependencies':'Зависимости', 'agreement':'Соглашение о взаимодействии', 'approval':'Одобрение бизнес-кейса',
  'confirmation':'Протоколом решения DR-2026-061 подтверждена цель первых 100 дней. Бизнес-кейс этим протоколом не одобрен.',
- 'standing_intro':'Постоянные инициативы, по одной на каждое направление услуг, одобрены для выполнения небольших текущих запросов. Мест в лимите инициатив в работе они не занимают.',
+ 'standing_intro':'Постоянные инициативы, по одной на каждое направление услуг, предложены для выполнения небольших текущих запросов. Мест в лимите инициатив в работе они не занимают.',
  'standing_gate':'Принять в работу следующую Feature, отвечающую требованиям, на еженедельном обзоре', 'standing_decider':'Руководитель Центра Компетенций в пределах общих WIP-лимитов команды',
  'standing_note':'Для каждой Feature необходимы подразделение-заказчик и владелец направления, критерии приёмки, известные зависимости, одобрение применения AI для соответствующего класса данных (если используется AI) и объём, укладывающийся в одну итерацию.',
  'standing_review':'Следующее ежеквартальное рассмотрение', 'standing_approval':'Одобрение зафиксировано', 'no_mvp':'Собственный MVP не требуется; работа выполняется в виде Features текущих работ.',

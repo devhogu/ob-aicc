@@ -29,8 +29,7 @@ class ProgramDelivery(unittest.TestCase):
             self.assertEqual((proposal['state'],proposal['column'],proposal['project_key']),('Proposed','Funnel','service-resolution'))
             self.assertIsNone(proposal['approval_ref']);self.assertIsNone(proposal['rank'])
             funnel = next(r for r in data['portfolio']['measures'] if r['Flow Measure'].startswith(('Funnel:', 'Воронка:')))
-            self.assertIn('1 ',funnel['Value'])
-            self.assertIn('2026-10-06',funnel['Value'])
+            self.assertIn('7 ',funnel['Value'])
             self.assertEqual(data['portfolio']['capacity']['feature'],{'progress':0,'ready':0})
 
     def test_model_mapping_distinguishes_completed_review_and_acceptance(self):
@@ -50,7 +49,7 @@ class ProgramDelivery(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'parent must'):delivery.validate([], [wrong],[parent],{'DEP-016':{}})
 
     def test_runrate_uses_approved_standing_parent_and_each_admission(self):
-        bad={**self.standing,'approval_ref':None}
+        bad={**self.standing,'state':'Closed'}
         with self.assertRaisesRegex(ValueError,'Standing Brief'):delivery.validate([],[self.feature()],[bad],{'DEP-016':{}})
         missing=self.feature(state='Approved',**{'Approved by and date':''})
         with self.assertRaisesRegex(ValueError,'admission record'):delivery.validate([],[missing],[self.standing],{'DEP-016':{}})

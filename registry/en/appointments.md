@@ -4,17 +4,15 @@ This is the Appointments Record, in the form of the Appointments Record Template
 
 ## Part A. The map
 
-Appointments missing on 2026-10-02 are made by 2026-12-01; the Executive Sponsor names acting Holders meanwhile (Operating Model 4.8); see RI-005.
-
 | Role | Scope | Holder (name and post) | Deputy | Status | From | To | Appointed by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Executive Sponsor | The Bank | Simen Munter, Chief Executive Officer of the Bank | | Appointed | 2026-09-02 | | The Board (AI Competence Center Charter 3.1) | |
-| Competence Center Lead | Competence Center | Timur Alimbayev, head of the Competence Center | | Appointed | 2026-09-02 | | Executive Sponsor | DR-2026-061 |
-| Solution Engineer | Competence Center | Timur Alimbayev, head of the Competence Center | | Appointed | 2026-09-02 | | Executive Sponsor | DR-2026-061 |
-| Platform Owner | The AI Platform | | | | | | Head of technology | |
-| Domain Owner | FP&A | Ademi Moldogazieva, head of the FP&A function | | Appointed | 2026-09-02 | | Executive Sponsor (the holder is the head of the function, so the next level appoints, Operating Model 4.6) | DR-2026-061 |
-| Domain Owner | Other Domains | | | | | | The head of the Domain | |
-| Domain Expert | Each Domain | | | | | | Domain Owner | |
+| Executive Sponsor | The Bank | | | Not appointed | | | | |
+| Competence Center Lead | Competence Center | | | Not appointed | | | | |
+| Solution Engineer | Competence Center | | | Not appointed | | | | |
+| Platform Owner | The AI Platform | | | Not appointed | | | | |
+| Domain Owner | FP&A | | | Not appointed | | | | |
+| Domain Owner | Other Domains | | | Not appointed | | | | |
+| Domain Expert | Each Domain | | | Not appointed | | | | |
 
 The Executive Sponsor names the members of the AI Steering Committee, the heads of the functions (Operating Model 4.5, 4.6). While the Committee is not formed, the Executive Sponsor decides alone (Operating Model 6.2).
 
@@ -57,26 +55,22 @@ The RACI of the charter is in the Organization guide. Role combinations that the
 
 | Accepted limit | Risks and Issues | Compensating control |
 | --- | --- | --- |
-| The Competence Center Lead issues the Service Agreement, delivers, and writes the Outcome Report (Business Model 7.5) | RI-001 | The Domain Owner, or the Executive Sponsor for enabling work, accepts the Outcome Report, and the Steering samples the Decisions of the Competence Center Lead each month |
-| The Competence Center Lead accepts the Features and the Capabilities, and gives the final acceptance of the Team, for a Solution that the Competence Center Lead built (Solution Lifecycle Model 7.3(d)) | RI-001 | The test by a person other than the builder, the check or the validation by another person, the acceptance of the Domain Owner, the release decision, and the monthly sample of the Decisions of the Competence Center Lead by the Executive Sponsor |
+
+No accepted limit is recorded yet.
 
 ## Part C. The appointment log
 
 | Entry | Date entered | Event | Role | Person | Effective from and to | Decided by | Decision reference (DR-[yyyy]-[nnn], or the number and date of the order) |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| AP-001 | 2026-09-02 | Appointed | Executive Sponsor | Simen Munter | From 2026-09-02 | The Board | |
-| AP-002 | 2026-09-02 | Appointed | Competence Center Lead | Timur Alimbayev | From 2026-09-02 | Executive Sponsor | DR-2026-061 |
-| AP-003 | 2026-09-02 | Appointed | Solution Engineer | Timur Alimbayev | From 2026-09-02 | Executive Sponsor | DR-2026-061 |
-| AP-004 | 2026-09-02 | Appointed | Domain Owner (FP&A) | Ademi Moldogazieva | From 2026-09-02 | Executive Sponsor | DR-2026-061 |
-| AP-005 | 2026-10-02 | Recorded at the baseline | All filled Roles | | As entered in AP-001 to AP-004 | Competence Center Lead | DR-2026-060 |
+
+No appointment is recorded yet.
 
 ## Part D. Declarations and competence
 
 | Holder | Role accepted (date) | Conflict declaration (date, outcome) | Training required and completed | Line manager's consent and time allocation |
 | --- | --- | --- | --- | --- |
-| Simen Munter | 2026-09-02 | | | |
-| Timur Alimbayev | 2026-09-02 | | | Not applicable: the Holder is the head of the Competence Center |
-| Ademi Moldogazieva | 2026-09-02 | | | |
+
+No declaration is recorded yet.
 
 ## Part E. Tools and access
 

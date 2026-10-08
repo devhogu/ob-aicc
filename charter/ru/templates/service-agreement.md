@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-06-RU
 title: Соглашение о взаимодействии
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.2
 source: charter/en/templates/service-agreement.md
-source_sha256: bd961de27036f3025590c7e1927cd92ea68f9afa680e61192aec866c4f0cb125
+source_sha256: 723a0a6c9fea35f5d2fef22d044049af713e52fb9d6dc175fa40bfdd4492d241
 translation_status: reviewed
 ```
 

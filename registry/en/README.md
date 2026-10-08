@@ -26,7 +26,7 @@ Closed and dated extracts, always kept here. The Operating Model 8 lists the con
 | Record | Where | Holds |
 | --- | --- | --- |
 | Decision Log | [decision-log.md](decision-log.md) | Decisions, one line each |
-| Decisions | [decisions/](decisions) | The Decision Records, from DR-2026-060 |
+| Decisions | [decisions/](decisions) | The Decision Records |
 | Approved records | `approved/` | The closed copy of each Initiative Brief, Service Agreement, and Outcome Report at the decision that approves or accepts it, named with its identifier and the Decision Record. Created with the first one |
 | Reports | [reports/](reports) | Quarterly Reports, named `2026-PIQ4.md` |
 | Steering | [steering/](steering) | The Steering Summaries |
@@ -42,5 +42,3 @@ Identifiers: PRI-n priority, DR-yyyy-nnn Decision, RI-nnn risk or issue, ARC-nnn
 The Registry holds the nil statements that an auditor needs. The Risks and Issues states the AI Incidents and Exceptions to date, and the AI Registry states the uses listed to date.
 
 The Solutions, the Initiatives, and the projects are in the Portfolio (`portfolio/`), and the cadence is in the charter workflows.
-
-The charter baseline and the four Standing Initiatives are approved under [DR-2026-063](decisions/DR-2026-063-approved-english-baseline.md). The Registry continues to show actual work and evidence after that baseline; an operational action is kept here until performed, and is not an unresolved charter provision.

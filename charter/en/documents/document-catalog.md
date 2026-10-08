@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-REF-02-EN
 title: Document Catalog
-status: active
+status: draft
 revision: 3.5
 created: 2026-10-02
 revised: 2026-10-07
@@ -109,16 +109,16 @@ The table is in the order of use, and the identifiers do not follow that order. 
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
-| 2.0 | 2026-10-03 | Added the Package Definition AICC-TPL-14 to the Templates, the rules for the pages that the Competence Center portal adds to explain the charter, and the service areas, the modes, the governance measures, the service steps, and the Lab to the purposes of the documents. | DR-2026-062 |
+| 1.0 | 2026-10-02 | Baseline. | — |
+| 2.0 | 2026-10-03 | Added the Package Definition AICC-TPL-14 to the Templates, the rules for the pages that the Competence Center portal adds to explain the charter, and the service areas, the modes, the governance measures, the service steps, and the Lab to the purposes of the documents. | — |
 | 2.1 | 2026-10-03 | Clarified that the Languages column records availability; removed the fixed source-language designation. | none |
 | 2.2 | 2026-10-03 | Recorded the Russian versions of Vocabulary and Style and Document Catalog; document rules are unchanged. | none |
 | 2.3 | 2026-10-03 | Recorded the Russian versions of the Statement of Intent and AI Competence Center Charter; document rules are unchanged. | none |
 | 2.4 | 2026-10-03 | Recorded the Russian versions of Business Model and Operating Model; document rules are unchanged. | none |
 | 2.5 | 2026-10-03 | Recorded the Russian versions of Portfolio Management Model, Solution Lifecycle Model and AI Policy; all nine governing documents are available in both languages, with document rules unchanged. | none |
-| 3.0 | 2026-10-04 | Aligned the terminology check with the accepted industry-first naming rule and recorded the shared terminology companion and its place beside the nine governing documents. | DR-2026-064 |
+| 3.0 | 2026-10-04 | Aligned the terminology check with the accepted industry-first naming rule and recorded the shared terminology companion and its place beside the nine governing documents. | — |
 | 3.1 | 2026-10-04 | Recorded separate English and Russian editions of the shared terminology reference, each with definitions and application in its own language. | none (correction under Document Catalog 4.2) |
 | 3.2 | 2026-10-04 | Clarified the governing vocabulary's function: defined meanings, interpretation and document style. | none (correction under Document Catalog 4.2) |
 | 3.3 | 2026-10-04 | Recorded consistent application of the shared terminology in the corpus and portal; no document authority or operating requirement changed. | none (correction under Document Catalog 4.2) |
-| 3.4 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |
-| 3.5 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | DR-2026-066 |
+| 3.4 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | — |
+| 3.5 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | — |

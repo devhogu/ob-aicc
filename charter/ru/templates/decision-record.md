@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-08-RU
 title: Протокол решения
-status: active
+status: draft
 revision: 1.1
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.1
 source: charter/en/templates/decision-record.md
-source_sha256: cdadac5b95ad3a791a03837aaba35d4927d9e57beceefbb3d54f115e8ace159c
+source_sha256: c680d766dccadbab5422e4ff2b936d59833d1af90414519054ae6da67076c9a0
 translation_status: reviewed
 ```
 

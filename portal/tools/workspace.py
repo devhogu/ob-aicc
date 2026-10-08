@@ -104,6 +104,8 @@ def header(url, lang, section, m=None):
         switches.append(f'<a lang="{language}" hreflang="{language}" href="{escape(relative(url, target))}"{current}>{language.upper()}</a>')
     scope = m['header_scope'] if section == 'center' else label
     scope = '' if section == ROUTER else f'<span class="header-scope">{escape(scope)}</span>'
+    # Every page of this edition is a draft: nothing in it is decided, approved or accepted.
+    scope += f'<span class="status-chip" title="{escape(m["status_chip_title"])}">{escape(m["status_chip"])}</span>'
     # Global search is a scope of the same box; it is on by default on the router.
     checked = ' checked' if section == ROUTER else ''
     every = f'<label class="search-scope"><input id="q-all" type="checkbox"{checked}><span>{escape(SEARCH_TEXT["all"][lang])}</span></label>'

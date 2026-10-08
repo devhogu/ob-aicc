@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-TPL-09-EN
 title: Appointments Record
-status: active
+status: draft
 revision: 1.3
 created: 2026-10-02
 revised: 2026-10-07

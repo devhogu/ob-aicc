@@ -6,7 +6,7 @@ The intent and direction of the Teams for the Program Increment, which are the g
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | See the service landscape | INI-002 | Competence Center Team | Executive Sponsor | | | | Planned |
 | Discover customer experience intelligence | INI-006 | Commercial front office, retail, commercial sales | The heads of the functions | | | | Planned |
-| FP&A Board reporting of financial metrics | INI-004 | FP&A Team | Ademi Moldogazieva | | | | Planned |
+| FP&A Board reporting of financial metrics | INI-004 | FP&A Team | The head of the FP&A function | | | | Planned |
 | AI in the daily work of functions | INI-003 | Compliance, HR, legal, finance, accounting | The head of each function | | | | Planned |
 | Retail credit: discovery and mortgage rejection analysis | INI-007 | Retail credit | The head of the retail credit function | | | | Planned |
 | Knowledge bases across functions | INI-008 | The functions concerned | The head of each function | | | | Planned |

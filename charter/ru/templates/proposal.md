@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-12-RU
 title: Предложение
-status: active
+status: draft
 revision: 1.1
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.1
 source: charter/en/templates/proposal.md
-source_sha256: fbae901940a1c1fe2177132cb6220ec4b82a9f7818f2af7472801454c6536b79
+source_sha256: 9f4935df662f7dad1d7e1898df797cc724c2944fbf060d651ac053b2a7ca2fbf
 translation_status: reviewed
 ```
 

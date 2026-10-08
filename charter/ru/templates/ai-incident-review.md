@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-10-RU
 title: Разбор инцидента AI
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.2
 source: charter/en/templates/ai-incident-review.md
-source_sha256: 3c0672d44cf63ca88b5ab33f7f361bccafb2857cc36132d8c671f07216d229be
+source_sha256: 24d3931e70a682bb7c576dfeb7862fcf2fa8c964eeebbe4a3103d4858cd3c369
 translation_status: reviewed
 ```
 

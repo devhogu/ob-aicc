@@ -6,7 +6,7 @@ The Roadmap shows three horizons: the current Program Increment as intent and di
 
 | Program Increment | Status | Content |
 | --- | --- | --- |
-| 2026-PIQ4 | Intent and direction | The six goals of the first 100 days (INI-002, INI-006, INI-004, INI-003, INI-007, INI-008); the Holders named |
+| 2026-PIQ4 | Intent and direction | The six goals of the first 100 days (INI-002, INI-006, INI-004, INI-003, INI-007, INI-008) |
 | 2027-PIQ1 | Planned | The Solutions that come from the goals; the AI Registry complete; the first deployments; Maturity Level 1 |
 | 2027-PIQ2 and later | Indicative | Scale of the first Solutions; Maturity Level 2 for the first Strategic Priorities |
 
@@ -14,7 +14,6 @@ The Roadmap shows three horizons: the current Program Increment as intent and di
 
 | Identifier | Milestone | Evidence | Owner | Program Increment | Status |
 | --- | --- | --- | --- | --- | --- |
-| MS-002 | The Holders of the Roles are named, by 2026-12-01 | Appointments | Competence Center Lead | 2026-PIQ4 | Planned |
 | MS-003 | Every known AI use is in the AI Registry with a Risk Tier | AI Registry | Competence Center Lead | 2026-PIQ4 | Planned |
 | MS-004 | The events of the loops are running: Iterations, the Program Increment, and the Steering | Steering Summaries; Iteration Backlogs | Competence Center Lead | 2027-PIQ1 | Planned |
 | MS-005 | Maturity Level 1 reached | Quarterly Report | Competence Center Lead | 2027-PIQ1 | Planned |
@@ -23,7 +22,7 @@ The Roadmap shows three horizons: the current Program Increment as intent and di
 | MS-008 | Maturity Level 2 reached for the first Strategic Priorities | Quarterly Report | Competence Center Lead | 2027-PIQ2 | Planned |
 | MS-009 | The service landscape map is presented | Landscape portal reviewed by owners; list of where AI is used; ranked candidates (INI-002) | Competence Center Lead | 2026-PIQ4 | Planned |
 | MS-010 | Customer experience discovery is complete | Sources mapped; approach to consolidate and analyze; proposal for next quarter (INI-006) | Competence Center Lead | 2026-PIQ4 | Planned |
-| MS-011 | FP&A Board reporting is running | Board portal; monthly pipeline run once; quarterly edition designed; approval by the Executive Sponsor in place (INI-004) | Ademi Moldogazieva | 2026-PIQ4 | Planned |
+| MS-011 | FP&A Board reporting is running | Board portal; monthly pipeline run once; quarterly edition designed; approval by the Executive Sponsor in place (INI-004) |  | 2026-PIQ4 | Planned |
 | MS-012 | Functions are introduced to AI | Ranked tasks for compliance, HR, legal, finance, accounting; first use with training (INI-003) | Competence Center Lead | 2026-PIQ4 | Planned |
 | MS-013 | Retail credit discovery is complete | Discussions documented; opportunities ranked; mortgage rejection analysis approach agreed (INI-007) | Competence Center Lead | 2026-PIQ4 | Planned |
 | MS-014 | Knowledge base approach is agreed and the first base is in use | Common approach; ranked list; legal knowledge base (INI-008) | Competence Center Lead | 2026-PIQ4 | Planned |

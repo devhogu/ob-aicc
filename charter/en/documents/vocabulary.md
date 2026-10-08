@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-REF-01-EN
 title: Vocabulary and Style
-status: active
+status: draft
 revision: 3.6
 created: 2026-10-02
 revised: 2026-10-07
@@ -263,13 +263,13 @@ revised: 2026-10-07
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
-| 2.0 | 2026-10-03 | Defined the modes, run-rate work, the Standing Initiatives, the service areas and categories, the Package and the catalog, the Lab, the service steps and the four signals, the governance measures, the class of service, and the terms of AI and of control that were used without a definition; widened Steering, Measure, Roadmap, the Competence Center portal, and Experiment; replaced Reusable asset by Package; added the style clauses on external terms and on the pages of the Competence Center portal. | DR-2026-062 |
+| 1.0 | 2026-10-02 | Baseline. | — |
+| 2.0 | 2026-10-03 | Defined the modes, run-rate work, the Standing Initiatives, the service areas and categories, the Package and the catalog, the Lab, the service steps and the four signals, the governance measures, the class of service, and the terms of AI and of control that were used without a definition; widened Steering, Measure, Roadmap, the Competence Center portal, and Experiment; replaced Reusable asset by Package; added the style clauses on external terms and on the pages of the Competence Center portal. | — |
 | 2.1 | 2026-10-03 | Aligned Feature, definition of done, and control status with the governing clauses and the corrected run-rate path. | none (correction under Document Catalog 4.2) |
-| 3.0 | 2026-10-04 | Adopted established industry terminology, replaced blanket naming exclusions with Related terms, and defined business case, value stream, SLA, WIP, metric and KPI with their the Competence Center relationships. Existing commitments, measurement boundaries, authorities and states are unchanged. | DR-2026-064 |
+| 3.0 | 2026-10-04 | Adopted established industry terminology, replaced blanket naming exclusions with Related terms, and defined business case, value stream, SLA, WIP, metric and KPI with their the Competence Center relationships. Existing commitments, measurement boundaries, authorities and states are unchanged. | — |
 | 3.1 | 2026-10-04 | Clarified that each language edition of the shared terminology reference contains definitions and application in its own language; meanings and fixed names remain aligned. | none (correction under Document Catalog 4.2) |
 | 3.2 | 2026-10-04 | Clarified functional interpretation and concept distinctions; reconciled acceptance, delegation and record definitions with governing clauses and aligned the language editions. No operating requirements or decision rights changed. | none (correction under Document Catalog 4.2) |
 | 3.3 | 2026-10-04 | Applied fixed international naming and clarified acceptance timing and the existing separation-of-duties exception; governing requirements and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
 | 3.4 | 2026-10-05 | Defined a Strategic Priority as a top priority of the strategy of the Bank for the adoption of AI, in line with the Statement of Intent 9.1; meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
-| 3.5 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | DR-2026-065 |
-| 3.6 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | DR-2026-066 |
+| 3.5 | 2026-10-07 | The Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels | — |
+| 3.6 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | — |

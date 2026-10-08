@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-05-RU
 title: Квартальный отчёт
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.2
 source: charter/en/templates/quarterly-report.md
-source_sha256: c03503b061b5950fb735c3b086251e6a62375cd057ec9c60b9beb48e45f9f2d0
+source_sha256: 0d7125cb4114addf686e2a06e921e7cb3890f017772fdc96902fc444fc7ef37b
 translation_status: reviewed
 ```
 

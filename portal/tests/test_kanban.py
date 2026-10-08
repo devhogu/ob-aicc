@@ -27,7 +27,7 @@ class SharedKanban(unittest.TestCase):
             self.assertEqual(set(c['data-kb-open'] for c in parsed.cards),set(parsed.templates))
             self.assertTrue(all(c['href'].startswith('ini-') for c in parsed.cards))
             self.assertNotIn('<dialog',text)
-            self.assertIn('DR-2026-061',text)
+            self.assertNotIn('DR-2026-',text)
             self.assertIn('service-resolution/',text)
 
     def test_production_delivery_has_no_demo_cards_but_keeps_intake_documents(self):

@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-09-RU
 title: Реестр назначений
-status: active
+status: draft
 revision: 1.3
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.3
 source: charter/en/templates/appointments-record.md
-source_sha256: 195537670c79de08c90c4c75448b63f0e2643d44a19c3430e04dd1f8c238d7a8
+source_sha256: 06acb0396a1d732f9c9ad485f90ea9b8f15b12d94cdb12d0ae92e33581f6e4a7
 translation_status: reviewed
 ```
 

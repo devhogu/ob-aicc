@@ -17,7 +17,7 @@
 | Business acceptor | Customer Service Domain Owner; appointment and applicable approval guardrails to be confirmed |
 | Service Agreement | Not issued |
 | Period | Not set |
-| Date of last change | 2026-10-06 |
+| Date of last change | 2026-10-08 |
 
 Open sections: 1 (business requester and intake screening); 2 (indicator source references, baselines and targets); 3 (selected journey, queue and time-box); 4 (effort, cost references, business capacity and sunset rule); 5 (project-specific Dependency identifiers and risk references); 6 (appointments, clearances, approvals and Service Agreement).
 
@@ -73,11 +73,11 @@ Risks include missing read interfaces/customer keys/timestamps, interpretation q
 
 | Decision | By | Date | Record |
 | --- | --- | --- | --- |
-| Intake screening and decision to enter Discovery | Competence Center Lead with Customer Service Domain Owner | | |
-| Approval of the business case | Domain Owner; Executive Sponsor if guardrails or cross-Domain scope require it | | |
+| Intake screening and decision to enter Discovery | | | |
+| Approval of the business case | | | |
 | Control Function clearance | Model risk, information security, data protection, compliance and legal | | |
 | Service Agreement issued | Competence Center Lead | | |
 | Decision after the MVP | Business-case approver | | |
 | Acceptance on delivery | Business acceptor | | |
 
-No business decision, clearance, date, assignment or achieved result is inferred from the proposal or the portal change. DR-2026-061 is not evidence for this new intake. The complete project workbook remains the native working-document bundle.
+No business decision, clearance, date, assignment or achieved result is inferred from the proposal or the portal change. The complete project workbook remains the native working-document bundle.

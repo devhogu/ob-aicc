@@ -266,12 +266,12 @@ References: Vocabulary and Style; Operating Model, section 7; [Collaboration too
 | --- | --- | --- |
 | 0.1 | 2026-10-04 | Initial terminology reference with definitions and protected product names |
 | 0.2 | 2026-10-04 | Extended coverage to business and delivery terminology, including KPI, SLA, WIP, WIP limit, business case and value stream |
-| 1.0 | 2026-10-04 | Aligned terminology with Vocabulary and Style and the Document Catalog under DR-2026-064 |
+| 1.0 | 2026-10-04 | Aligned terminology with Vocabulary and Style and the Document Catalog |
 | 1.1 | 2026-10-04 | Restated the reference in formal institutional language; distinguished fixed names from permitted language variants and removed drafting provenance from the operative text |
 | 1.2 | 2026-10-04 | Consolidated all entries by subject using a uniform explanatory structure; definitions and application distinctions retained |
 | 1.3 | 2026-10-04 | Established separate language editions, each containing definitions and application in its own language |
 | 1.4 | 2026-10-04 | Standardized the universal term column and added professional names to the language editions while preserving application rules |
 | 1.5 | 2026-10-04 | Aligned corpus references with fixed international names and recorded plural forms used in the corpus; meanings and usage classes retained. |
 | 1.6 | 2026-10-04 | Established protected terms (2.8–2.12) and stated the protected status and protected use of each entry; removed the provisions specific to other language editions from 2.1, 2.2, 7.2 and 7.4 and the reference to a source in another language; replaced the PI / IP entry with separate entries for Program Increment and IP week; added 95 entries, among them agile and scaled agile delivery (work items, events, Program Board, PI Objective, product owner), IT service management (incident, problem, change, request, ticket, known error, post-incident review, runbook), flow and delivery measures, AI and machine learning, AI security, data, and financial technology and governance. |
-| 1.7 | 2026-10-07 | Redefined the Competence Center use of cutover under DR-2026-065: the Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels |
+| 1.7 | 2026-10-07 | Redefined the Competence Center use of cutover: the Portfolio holds the working state of the portfolio and the program; the Registry keeps governance and evidence; Jira runs the daily work and mirrors the portfolio and program levels |
 | 1.8 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code |

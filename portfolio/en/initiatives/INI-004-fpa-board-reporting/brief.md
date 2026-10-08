@@ -4,15 +4,15 @@
 | --- | --- |
 | Identifier | INI-004 |
 | Title | FP&A: Board reporting of financial metrics |
-| State and Stage | Discovery: Scoping |
+| State and Stage | Proposed |
 | Strategic Priority | PRI-2 Business intelligence |
 | Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
-| Domain Owner (represents the client function) | FP&A analytics function. Domain Owner: Ademi Moldogazieva, head of the FP&A function |
+| Domain Owner (represents the client function) | FP&A analytics function. The Domain Owner is the head of the FP&A function; not appointed |
 | Solutions expected | SOL-001 FP&A Board reporting pipeline; its type is set when the Solution is defined |
-| Business acceptor | Ademi Moldogazieva, head of the FP&A function (section 6) |
-| Service Agreement | Not issued (RI-004) |
+| Business acceptor | The head of the FP&A function (section 6) |
+| Service Agreement | Not issued |
 | Period | September to December 2026 |
-| Date of last change | 2026-10-02 |
+| Date of last change | 2026-10-08 |
 
 Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 6 (the approver and the Service Agreement).
 
@@ -70,7 +70,7 @@ Dependencies: DEP-004 (a named Domain Expert), DEP-006 (the time of FP&A, the da
 
 ## 6. Decision and acceptance
 
-The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-061).
+No decision on this Initiative has been taken; the table below is completed as each decision is taken.
 
 | Decision | By | Date | Record |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (
 | Clearance of the Control Function Contacts, when Risk Tier 2 or 3 is expected (Portfolio Management Model 6.4; for a higher Risk Tier assigned later, AI Policy 3.2) | Control Function Contacts concerned | | |
 | Service Agreement issued | Competence Center Lead | | |
 | Decision after the MVP (Portfolio Management Model 7.2) | | | |
-| Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | Ademi Moldogazieva, head of the FP&A function | | |
+| Acceptance on delivery (Solution Lifecycle Model 7.3(c)) | The head of the FP&A function | | |
 
 ## Amendments after approval
 

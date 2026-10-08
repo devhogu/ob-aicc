@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-13-RU
 title: Контрольный лист приёмки
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.2
 source: charter/en/templates/acceptance-checklist.md
-source_sha256: dfa0020e0b26010b66ab41e5c3f6d6e6dbf6df951ecf436eb98abc38f932f922
+source_sha256: acb35bd73df98b41bbdab8138991b8f3a7e07409440f9077b57ccd6433f2a19a
 translation_status: reviewed
 ```
 

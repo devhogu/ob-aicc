@@ -18,7 +18,7 @@ def main():
         assert f'data-dl-item="INI-013"' in text
         assert text.count('data-dl-item=')==7 and text.count('data-dl-panel')==3
         assert 'delivery.css?' in text and 'delivery.js?' in text
-        assert portfolio._date(lang, '2026-10-06') in text and 'INI-006' in text
+        assert 'INI-006' in text
         assert not any(s in text for s in ['Moldogazieva','Молдогазиева','html-alt/'])
         record=(output/lang/'portfolio/ini-013/index.html').read_text()
         assert 'DR-2026-061 confirms' not in record and 'DR-2026-061 подтверждает' not in record

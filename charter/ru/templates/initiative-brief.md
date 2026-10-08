@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-02-RU
 title: Паспорт инициативы
-status: active
+status: draft
 revision: 1.4
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.4
 source: charter/en/templates/initiative-brief.md
-source_sha256: 1fc9e90d58aa6d7f13a2b3a1b4e5cdd91bb469d74f74f56820221750ac60b32d
+source_sha256: 49f95eac3f8834b7edf0916455599d87f3bd156308685e3e5c8dfd2f31a489f1
 translation_status: reviewed
 ```
 

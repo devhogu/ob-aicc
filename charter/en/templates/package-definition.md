@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-TPL-14-EN
 title: Package Definition
-status: active
+status: draft
 revision: 1.1
 created: 2026-10-03
 revised: 2026-10-07

@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-TPL-02-EN
 title: Initiative Brief
-status: active
+status: draft
 revision: 1.4
 created: 2026-10-02
 revised: 2026-10-07

@@ -1,7 +1,7 @@
 ```yaml
 id: AICC-MND-02-EN
 title: AI Competence Center Charter
-status: active
+status: draft
 revision: 2.2
 created: 2026-10-02
 revised: 2026-10-07
@@ -67,7 +67,7 @@ revised: 2026-10-07
 
 | Revision | Date | Change | Decision |
 | --- | --- | --- | --- |
-| 1.0 | 2026-10-02 | Baseline. | DR-2026-060 |
-| 2.0 | 2026-10-03 | Stated the mission of the Competence Center and kept the former mission as its purpose, added the reporting line, the absence of an administrative line, and the limits that the Competence Center is not a platform team or a Control Function and does not operate a Solution at the scale of the Bank, the four service areas and two modes of the offer, and the minimum content of the Quarterly Report. | DR-2026-062 |
+| 1.0 | 2026-10-02 | Baseline. | — |
+| 2.0 | 2026-10-03 | Stated the mission of the Competence Center and kept the former mission as its purpose, added the reporting line, the absence of an administrative line, and the limits that the Competence Center is not a platform team or a Control Function and does not operate a Solution at the scale of the Bank, the four service areas and two modes of the offer, and the minimum content of the Quarterly Report. | — |
 | 2.1 | 2026-10-04 | Applied fixed international AI agent naming consistently; functional meaning and decision rights are unchanged. | none (correction under Document Catalog 4.2) |
-| 2.2 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | DR-2026-066 |
+| 2.2 | 2026-10-07 | The unit is named the Competence Center, and the AI Competence Center in titles; the role AICC Lead is the Competence Center Lead; AICC stays only as a code | — |

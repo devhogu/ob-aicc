@@ -7,23 +7,24 @@ The Portfolio Kanban shows the Initiatives by step of the Portfolio Management M
 | Funnel | Reviewing | Analyzing | Portfolio Backlog | MVP | Implementation | Done |
 | --- | --- | --- | --- | --- | --- | --- |
 | No WIP cap: intake queue | No WIP cap: discovery queue | No WIP cap: business-case queue | No WIP cap: approved queue | Shared Active limit: 1 | Shared Active limit: 1 | No WIP cap: completed work |
-| INI-013 | INI-002 | | | | | |
-|  | INI-006 | | | | | |
-|  | INI-004 | | | | | |
-|  | INI-003 | | | | | |
-|  | INI-007 | | | | | |
-|  | INI-008 | | | | | |
+| INI-002 |  |  |  |  |  |  |
+| INI-006 |  |  |  |  |  |  |
+| INI-004 |  |  |  |  |  |  |
+| INI-003 |  |  |  |  |  |  |
+| INI-007 |  |  |  |  |  |  |
+| INI-008 |  |  |  |  |  |  |
+| INI-013 |  |  |  |  |  |  |
 
 ## Standing Initiatives
 
-These Standing Initiatives are Approved under DR-2026-063 and sit outside the ordinary portfolio Kanban. They become Active when the first run-rate Feature is pulled. No Feature has been admitted under them at establishment.
+These Standing Initiatives are Proposed and sit outside the ordinary portfolio Kanban. They become Active when the first run-rate Feature is pulled. No Feature has been admitted under them.
 
 | Initiative | Service area | State | Approval |
 | --- | --- | --- | --- |
-| INI-009 | Advise and formulate | Approved | 2026-10-03; DR-2026-063 |
-| INI-010 | Build and run | Approved | 2026-10-03; DR-2026-063 |
-| INI-011 | Enablement | Approved | 2026-10-03; DR-2026-063 |
-| INI-012 | Assurance | Approved | 2026-10-03; DR-2026-063 |
+| INI-009 | Advise and formulate | Proposed |  |
+| INI-010 | Build and run | Proposed |  |
+| INI-011 | Enablement | Proposed |  |
+| INI-012 | Assurance | Proposed |  |
 
 ## Program Kanban
 
@@ -40,6 +41,6 @@ Waiting, Deferred, Rejected, and Pivoted items: none.
 
 ## Initial operating limits
 
-DR-2026-063 establishes the limits for the existing one-person the Competence Center Team. One Feature in progress is the total across ordinary delivery and all four Standing Initiatives, across every lane and Domain. Active, Completed, Review, and Waiting after work starts share that single place. A blocked Feature continues to use it. A Capability has a separate limit of one in progress and one Ready because it groups Features. The portfolio limit of one Active ordinary Initiative is shared across MVP and Implementation; Standing Initiatives are excluded.
+The initial limits for the existing one-person the Competence Center Team are as follows. One Feature in progress is the total across ordinary delivery and all four Standing Initiatives, across every lane and Domain. Active, Completed, Review, and Waiting after work starts share that single place. A blocked Feature continues to use it. A Capability has a separate limit of one in progress and one Ready because it groups Features. The portfolio limit of one Active ordinary Initiative is shared across MVP and Implementation; Standing Initiatives are excluded.
 
-The four service areas share capacity in the order of the ranked Program Backlog. There is no reserved allocation per area and no additional headcount or funding. An urgent request is reordered within the same limits. The Competence Center Lead reviews the limits at monthly Steering, and the Executive Sponsor reviews the mix and Standing Initiatives at quarterly Steering. These are adopted initial settings; a later change is recorded through the normal cadence.
+The four service areas share capacity in the order of the ranked Program Backlog. There is no reserved allocation per area and no additional headcount or funding. An urgent request is reordered within the same limits. The Competence Center Lead reviews the limits at monthly Steering, and the Executive Sponsor reviews the mix and Standing Initiatives at quarterly Steering. These are proposed initial settings; a later change is recorded through the normal cadence.

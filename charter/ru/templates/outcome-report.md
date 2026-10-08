@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-07-RU
 title: Отчёт о результатах
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.2
 source: charter/en/templates/outcome-report.md
-source_sha256: 873161145d5efefb65010660c4bd43cd2a2a69dff19bce34afec9bd5022da7f6
+source_sha256: cfc9e2d8515efd7b0c008becfb102fe2c2f1c774214db70962ca8a03d9c06f0d
 translation_status: reviewed
 ```
 

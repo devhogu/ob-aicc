@@ -1,13 +1,13 @@
 ```yaml
 id: AICC-TPL-11-RU
 title: Снимок папки
-status: active
+status: draft
 revision: 1.2
 created: 2026-10-02
 revised: 2026-10-07
 source_revision: 1.2
 source: charter/en/templates/registry-snapshot.md
-source_sha256: 4f5d2eceee3eb73c5e2f9110ee5a5b45dc86f263bf73c19b23bcd6aaea6b0e1b
+source_sha256: 4e90107a617dff1a653902f2e70a2bf50e8b9f97c492d5d1573f7dc412dcb39f
 translation_status: reviewed
 ```
 

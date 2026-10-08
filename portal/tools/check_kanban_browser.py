@@ -89,7 +89,6 @@ def main():
                             page.locator('#review [data-kb-open=INI-004]').click();assert page.locator('#review [data-kb-panel]').is_visible()
                             page.locator('[data-pf-tab=standing]').click();page.locator('#standing [data-kb-open=INI-009]').click()
                             assert page.locator('#standing [data-kb-panel]').is_visible()
-                            assert page.locator('#standing .pf-notice').is_visible() # Approval authority limitation stays visible.
                             if width in (1440,390):page.screenshot(path=str(REPORT/f'{lang}-{width}-{theme}-portfolio.png'),full_page=True)
                             pfstyle=page.locator('#standing [data-kb-open=INI-009]').evaluate('e=>({font:getComputedStyle(e.querySelector("h3")).font, padding:getComputedStyle(e).padding, radius:getComputedStyle(e).borderRadius,bg:getComputedStyle(e).backgroundColor,fg:getComputedStyle(e).color})')
                             page.goto(base+lang+'/program/');page.evaluate('t=>document.documentElement.dataset.theme=t',theme)

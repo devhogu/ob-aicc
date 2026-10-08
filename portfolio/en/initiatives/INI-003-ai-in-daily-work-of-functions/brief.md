@@ -4,15 +4,15 @@
 | --- | --- |
 | Identifier | INI-003 |
 | Title | AI in the daily work of functions: compliance, HR, legal, finance, and accounting |
-| State and Stage | Discovery: Scoping |
+| State and Stage | Proposed |
 | Strategic Priority | PRI-3 Adoption within Domains |
 | Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
-| Domain Owner (represents the client function) | Compliance, HR, legal, finance, and accounting. The Domain Owner of each function is not yet named; a Steering action |
+| Domain Owner (represents the client function) | Compliance, HR, legal, finance, and accounting. The Domain Owner of each function is not appointed |
 | Solutions expected | The Solutions, with their types, are defined in discovery from the ranked tasks |
 | Business acceptor | The head of each function, for the part of its function; the Executive Sponsor for the whole (section 6) |
-| Service Agreement | Not issued (RI-004) |
+| Service Agreement | Not issued |
 | Period | September to December 2026 |
-| Date of last change | 2026-10-02 |
+| Date of last change | 2026-10-08 |
 
 Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 6 (the approver and the Service Agreement).
 
@@ -68,7 +68,7 @@ Dependencies: DEP-003 (the ranked candidates from INI-002), DEP-004 (named Domai
 
 ## 6. Decision and acceptance
 
-The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-061).
+No decision on this Initiative has been taken; the table below is completed as each decision is taken.
 
 | Decision | By | Date | Record |
 | --- | --- | --- | --- |

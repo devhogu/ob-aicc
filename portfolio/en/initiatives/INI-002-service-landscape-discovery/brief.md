@@ -4,15 +4,15 @@
 | --- | --- |
 | Identifier | INI-002 |
 | Title | Service landscape discovery |
-| State and Stage | Discovery: Scoping |
+| State and Stage | Proposed |
 | Strategic Priority | Enabling (all priorities) |
 | Source scenario | [URN of the source scenario, if any; entered at the Scoped gate] |
-| Domain Owner (represents the client function) | Enabling work: the Executive Sponsor stands in for the Domain Owner (Portfolio Management Model 5.2). Enterprise architecture leads the work, with the function heads and service owners of the Bank; its lead is not yet named, a Steering action |
+| Domain Owner (represents the client function) | Enabling work: the Executive Sponsor stands in for the Domain Owner (Portfolio Management Model 5.2). Enterprise architecture leads the work, with the function heads and service owners of the Bank; its lead is not appointed |
 | Solutions expected | None: the Initiative ends in ranked candidates for the Backlog |
 | Business acceptor | Executive Sponsor, because it is enabling work across all functions (section 6) |
-| Service Agreement | Not issued (RI-004) |
+| Service Agreement | Not issued |
 | Period | September to December 2026 |
-| Date of last change | 2026-10-02 |
+| Date of last change | 2026-10-08 |
 
 Open sections: 2 (the source system of the figures, and the baseline and target of each indicator); 6 (the approver and the Service Agreement).
 
@@ -69,7 +69,7 @@ Dependencies: DEP-001 (time and knowledge of the function heads and service owne
 
 ## 6. Decision and acceptance
 
-The Executive Sponsor confirmed the Initiative as a goal of the first 100 days (DR-2026-061).
+No decision on this Initiative has been taken; the table below is completed as each decision is taken.
 
 | Decision | By | Date | Record |
 | --- | --- | --- | --- |
