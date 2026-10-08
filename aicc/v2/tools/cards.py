@@ -95,21 +95,12 @@ def add_pages(pages, site, terms, api):
         f'<p class="lede">Все проекты Хаба в одном месте. Каждый проект ведёт своя карточка, сайт показывает её как есть.</p>'
         f'<ul class="stats">{counts}</ul>'
         f'<h2>Виды</h2><ul class="cards">'
-        f'<li><strong><a href="{link(here, "projects/funnel")}">Воронка</a></strong> все идеи, которые ждут разбора</li>'
-        f'<li><strong><a href="{link(here, "projects/portfolio")}">Портфель</a></strong> инициативы по состояниям, функциям и направлениям</li>'
+        f'<li><strong><a href="{link(here, "projects/portfolio")}">Портфель</a></strong> канбан от воронки до завершения, по функциям и направлениям</li>'
         f'<li><strong><a href="{link(here, "projects/program")}">Программа</a></strong> возможности и функции на доске</li>'
         f'<li><strong><a href="{link(here, "projects/new")}">Завести карточку</a></strong> как принести идею или проект</li></ul>'
         f'<h2>Как это работает</h2>'
         f'<p>У каждого проекта есть карточка: один файл, в котором записано, что делаем, зачем, кто отвечает и на каком мы этапе. Карточку ведёт руководитель проекта. Пока карточка актуальна, сайт показывает проект правильно. Это всё, что нужно для отчётности.</p>')
-    pages[here] = Page(here, 'Проекты', 'projects', 0, 'Воронка, портфель и программа в виде карточек.', body)
-
-    # the Funnel
-    here = 'projects/funnel'
-    funnel = ''.join(tile(here, c) for c in by_stage['Воронка']) or '<li class="tile-empty">Пока ничего</li>'
-    deferred = ''.join(tile(here, c) for c in by_stage['Отложено'])
-    body = (f'<p class="lede">Все идеи, которые ждут разбора. Принести свою можно в любой момент: <a href="{link(here, "projects/new")}">заведите карточку</a>.</p>'
-            f'<ul class="tiles wide">{funnel}</ul>' + (f'<h2>Отложено</h2><ul class="tiles wide">{deferred}</ul>' if deferred else ''))
-    pages[here] = Page(here, 'Воронка', 'projects', 10, 'Идеи, которые ждут разбора.', body)
+    pages[here] = Page(here, 'Проекты', 'projects', 0, 'Портфель и программа в виде карточек.', body)
 
     # the Portfolio
     here = 'projects/portfolio'
@@ -122,8 +113,10 @@ def add_pages(pages, site, terms, api):
             out.append(f'<h3>{escape(value)}</h3><ul class="tiles wide">' + ''.join(tile(here, c) for c in members) + '</ul>')
         return f'<h2>{escape(label)}</h2>' + ''.join(out)
     closed = ''.join(tile(here, c) for c in by_stage['Закрыто'])
+    deferred = ''.join(tile(here, c) for c in by_stage['Отложено'])
     body = (f'<p class="lede">Все инициативы и повторяющиеся работы по состояниям. Работа начинается, когда есть место: действует {term(terms, "wip-limit", "лимит работ в процессе", api.url_of(here))}.</p>'
             f'<div class="board">{board}</div>' + grouped('function', 'По функциям') + grouped('area', 'По направлениям') +
+            (f'<h2>Отложено</h2><ul class="tiles wide">{deferred}</ul>' if deferred else '') +
             (f'<h2>Закрыто</h2><ul class="tiles wide">{closed}</ul>' if closed else ''))
     pages[here] = Page(here, 'Портфель', 'projects', 20, 'Инициативы по состояниям, функциям и направлениям.', body)
 
@@ -187,11 +180,11 @@ def render_card(card, page_id, pages, terms, api, ids):
     decisions = ''.join(f'<tr><td>{e(d["what"])}</td><td>{e(d.get("who") or "—")}</td><td>{e(d.get("when") or "—")}</td></tr>' for d in card.get('decisions', []))
     closure = card.get('closure') or {}
     links = card.get('links') or {}
-    profile_page = 'process/profiles/' + profile
+    profile_page = 'process/profiles'
     meta = ' · '.join(dict.fromkeys(x for x in (PROFILE_TITLE[profile], (card.get('class_of_service') or '').capitalize(), card.get('function')) if x))
     body = (
         f'<p class="card-meta"><span class="stage">{e(card["stage"])}</span> <span class="dot {STATUS_CLASS[status]}"></span> Состояние: {e(status)} · {e(meta)}</p>'
-        f'<p>Как устроена работа такого вида: <a href="{e(rel(here, api.url_of(profile_page)))}">профиль «{e(PROFILE_TITLE[profile])}»</a>.</p>'
+        f'<p>Как устроена работа такого вида: <a href="{e(rel(here, api.url_of(profile_page)))}#{profile}">профиль «{e(PROFILE_TITLE[profile])}»</a>.</p>'
         f'<h2>Люди</h2><div class="o-table-wrap"><table><thead><tr><th>Роль</th><th>Позиция</th><th>Кто</th></tr></thead><tbody>{people}</tbody></table></div>'
         f'<h2>Задача и результат</h2><div class="o-table-wrap"><table><tbody>{out_rows}</tbody></table></div>'
         + (f'<h2>Условия</h2><div class="o-table-wrap"><table><tbody>{con_rows}</tbody></table></div>' if con_rows else '')

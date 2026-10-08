@@ -53,7 +53,7 @@ class Parsed(HTMLParser):
             self.chips += 1
         if 'pagefb' in classes:
             self._stack.append('pagefb')
-        elif tag in ('script', 'style', 'pre', 'code') or 'term-en' in classes or tag == 'title':
+        elif tag in ('script', 'style', 'pre', 'code') or 'term-en' in classes or 'en' in classes or tag == 'title':
             self._stack.append('skip')
         else:
             self._stack.append('')
