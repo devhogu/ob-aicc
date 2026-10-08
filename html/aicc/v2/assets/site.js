@@ -139,6 +139,23 @@
   });
 
 
+
+  // accordion kanban: one column open at a time; a click on a narrow column, or on a card in it, opens that column
+  document.querySelectorAll('[data-kb-accordion]').forEach(function (board) {
+    var cols = Array.prototype.slice.call(board.querySelectorAll('[data-kb-column]'));
+    function open(col) { cols.forEach(function (c) { c.classList.toggle('is-open', c === col); }); }
+    cols.forEach(function (col) {
+      var head = col.querySelector('.kb-column-head');
+      head.addEventListener('click', function () { open(col); });
+      head.addEventListener('keydown', function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); open(col); } });
+      col.querySelectorAll('[data-kb-open]').forEach(function (card) {
+        card.addEventListener('click', function (ev) {
+          if (!col.classList.contains('is-open')) { ev.preventDefault(); ev.stopImmediatePropagation(); open(col); }
+        }, true);
+      });
+    });
+    open(cols.filter(function (c) { return c.querySelector('[data-kb-open]'); })[0] || cols[0]);
+  });
   // live boards: search and filters, and a card opens in place
   document.querySelectorAll('[data-kanban-workspace]').forEach(function (root) {
     var search = root.querySelector('[data-kb-search]'), selects = root.querySelectorAll('[data-kb-filter]'), count = root.querySelector('[data-kb-count]');

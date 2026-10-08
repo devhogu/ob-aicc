@@ -138,7 +138,7 @@ def add_pages(pages, site, terms, api):
                 f'<p class="pf-notice"><strong>Следующий шаг.</strong> {e(card["live"].get("next_step") or "—")}</p></template>')
 
     def column(title, en, count, caption, cards_html):
-        return (f'<section class="kb-column"><div class="kb-column-head"><div><h3>{e(title)}<span class="kb-step-en" lang="en">{e(en)}</span></h3>'
+        return (f'<section class="kb-column" data-kb-column><div class="kb-column-head" role="button" tabindex="0" aria-label="Показать колонку «{e(title)}»"><div><h3>{e(title)}<span class="kb-step-en" lang="en">{e(en)}</span></h3>'
                 f'<span class="kb-count">{count}</span></div><small>{e(caption)}</small></div>'
                 f'<div class="kb-stack">{cards_html or "<span class=kb-empty>Пока ничего</span>"}</div></section>')
 
@@ -190,7 +190,7 @@ def add_pages(pages, site, terms, api):
                           ''.join(kb_card(here, c, c['id'], c['title'], PROFILE_TITLE[c['profile']], c['live'].get('next_step') or c['stage'],
                                           c.get('function') or '—', c.get('class_of_service') or '') for c in sorted(by_stage[s], key=rank_key)))
                    for s in STAGES)
-    board = f'<div class="kb-scroll"><div class="kb-board" style="grid-template-columns:repeat(5,minmax(170px,1fr));min-width:900px">{cols}</div></div>'
+    board = f'<div class="kb-scroll"><div class="kb-board kb-accordion" data-kb-accordion>{cols}</div></div>'
     off = by_stage['Отложено'] + by_stage['Закрыто']
     if off:
         board += '<h3>Отложено и закрыто</h3><div class="kb-scroll"><div class="kb-board" style="grid-template-columns:repeat(4,minmax(170px,1fr))">' + ''.join(
