@@ -26,7 +26,8 @@ from localization import Sources, canonical_path, front_matter, validate_transla
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PORTAL = os.path.join(ROOT, 'portal')
-OUT = os.path.join(ROOT, 'html', 'aicc')
+PACKAGE = os.path.join(ROOT, 'html', 'aicc')
+OUT = os.path.join(PACKAGE, 'v1')
 SITEMAP = os.path.join(ROOT, 'portal', 'sections', 'center', 'sitemap.json')
 CACHE = os.path.join(PORTAL, '.cache', 'mermaid-v6')
 NPX = os.environ.get('MMDC_NPX', os.path.expanduser('~/.npm/_npx/668c188756b835f3/node_modules'))
@@ -1949,6 +1950,8 @@ def main():
     import router
     count += router.build(OUT)
     write(os.path.join(OUT, 'index.html'), gateway())
+    import package
+    count += package.build(PACKAGE, 'v1', LANGS)
     print('built %d pages, %d diagrams (%d not rendered)' % (count, len(site.svgs), len(missing)))
 
 

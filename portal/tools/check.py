@@ -17,18 +17,19 @@ from html.parser import HTMLParser
 from urllib.parse import urldefrag, urljoin
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-OUT = os.path.join(ROOT, 'html', 'aicc')
+PACKAGE = os.path.join(ROOT, 'html', 'aicc')
+OUT = os.path.join(PACKAGE, 'v1')
 BRANCHES = ('center', 'discovery', 'portfolio', 'program', 'lab')
 errors = []
 
 
 def tree_hash():
     h = {}
-    for d, _, fs in os.walk(OUT):
+    for d, _, fs in os.walk(PACKAGE):
         for f in fs:
             path = os.path.join(d, f)
             with open(path, 'rb') as fh:
-                h[os.path.relpath(path, OUT)] = hashlib.sha256(fh.read()).hexdigest()
+                h[os.path.relpath(path, PACKAGE)] = hashlib.sha256(fh.read()).hexdigest()
     return h
 
 
@@ -82,6 +83,17 @@ def pages(lang):
     return out
 
 
+PACKAGE_ENTRIES = {'index.html', 'en', 'ru', 'v1'}
+if set(os.listdir(PACKAGE)) != PACKAGE_ENTRIES:
+    errors.append('the package root holds %s, expected exactly %s' % (sorted(os.listdir(PACKAGE)), sorted(PACKAGE_ENTRIES)))
+for lang in ('en', 'ru'):
+    for d, _, fs in os.walk(os.path.join(PACKAGE, lang)):
+        rel = os.path.relpath(d, os.path.join(PACKAGE, lang)).replace(os.sep, '/')
+        moved = os.path.join(OUT, lang, '' if rel == '.' else rel, 'index.html')
+        if fs != ['index.html'] and fs:
+            errors.append('redirect folder %s/%s holds %s' % (lang, rel, sorted(fs)))
+        elif fs and not os.path.exists(moved):
+            errors.append('redirect %s/%s has no page in v1' % (lang, rel))
 expected_root = {'index.html', 'assets', 'en', 'ru'}
 if set(os.listdir(OUT)) != expected_root:
     errors.append('html/aicc holds %s, expected exactly %s' % (sorted(os.listdir(OUT)), sorted(expected_root)))

@@ -40,7 +40,7 @@ from threading import Thread
 from playwright.async_api import async_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT_SITE = ROOT.parent / 'html' / 'aicc'
+OUT_SITE = ROOT.parent / 'html' / 'aicc' / 'v1'
 VERIFY = ROOT / 'verification'
 LOCAL_LIBS = ROOT / '.tools' / 'pw-syslibs'
 VIEWPORTS = {'mobile': (390, 844), 'desktop': (1440, 900)}

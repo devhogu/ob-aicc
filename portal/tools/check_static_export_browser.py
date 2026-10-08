@@ -53,7 +53,7 @@ def atoms(text):
 
 
 def verify_content(folder, manifest):
-    original = snapshot(ROOT / 'html/aicc')
+    original = snapshot(ROOT / 'html/aicc/v1')
     assert manifest['source_tree_sha256'] == digest(original), 'Export is not from the current complete site'
     for lang in ('en', 'ru'):
         paths = [p for p in original if p.startswith(lang + '/') and p.endswith('.html')]

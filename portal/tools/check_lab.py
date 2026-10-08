@@ -10,7 +10,7 @@ from urllib.parse import urlsplit
 import lab
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / 'html/aicc'
+OUTPUT = ROOT / 'html/aicc/v1'
 SOURCE_BLOCKS = {'page-header__intent', 'cl-chev-name', 'cl-lane-label__name', 'cl-card',
                  'cl-page-subhead', 'cl-page-subhead-intent', 'cl-system__label', 'cl-system__name',
                  'cl-system__role', 'cl-spine__label', 'cl-implication', 'cl-block-title',

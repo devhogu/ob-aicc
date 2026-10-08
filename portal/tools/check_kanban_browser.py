@@ -60,7 +60,7 @@ def inspect(page,first,second,close,counts):
 def main():
     REPORT.mkdir(parents=True,exist_ok=True);counts=Counter();errors=[];views=[]
     with tempfile.TemporaryDirectory(prefix='aicc-kanban-') as tmp:
-        output=Path(tmp)/'site';shutil.copytree(workspace.ROOT/'html/aicc',output)
+        output=Path(tmp)/'site';shutil.copytree(workspace.ROOT/'html/aicc/v1',output)
         for lang in ('en','ru'):fixture(output,lang)
         server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(output)))
         threading.Thread(target=server.serve_forever,daemon=True).start();base=f'http://127.0.0.1:{server.server_port}/'

@@ -14,7 +14,7 @@ from export_portable import export
 import lab
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / 'html/aicc'
+OUTPUT = ROOT / 'html/aicc/v1'
 REPORT = ROOT / '.runtime/ai-lab'
 
 

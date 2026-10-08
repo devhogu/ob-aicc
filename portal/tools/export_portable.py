@@ -243,7 +243,7 @@ def export(source, output):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--source', type=Path, default=ROOT / 'html/aicc')
+    parser.add_argument('--source', type=Path, default=ROOT / 'html/aicc/v1')
     parser.add_argument('--output', type=Path, default=ROOT / 'portal/published')
     parser.add_argument('--static', action='store_true', help='Separate EN/RU editions, light only, no JavaScript')
     args = parser.parse_args()

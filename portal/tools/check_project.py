@@ -100,4 +100,4 @@ def check(output):
 
 
 if __name__=='__main__':
-    errors,counts=check(ROOT/'html/aicc');print(json.dumps({'counts':counts,'errors':errors},ensure_ascii=False,indent=2));raise SystemExit(bool(errors))
+    errors,counts=check(ROOT/'html/aicc/v1');print(json.dumps({'counts':counts,'errors':errors},ensure_ascii=False,indent=2));raise SystemExit(bool(errors))

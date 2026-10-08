@@ -30,7 +30,7 @@ class SiteCheck(unittest.TestCase):
             checker = root / 'portal' / 'tools' / 'check.py'
             checker.parent.mkdir(parents=True)
             shutil.copyfile(CHECKER, checker)
-            site = root / 'html' / 'aicc'
+            site = root / 'html' / 'aicc' / 'v1'
             pages = {f'{lang}/': body for lang in ('en', 'ru')}
             pages.update({f'{lang}/{branch}/': '' for lang in ('en', 'ru') for branch in BRANCHES})
             pages.update(extra or {})
@@ -38,6 +38,11 @@ class SiteCheck(unittest.TestCase):
                 target = site / route / 'index.html'
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(page(route.split('/')[0], route.count('/'), content), encoding='utf-8')
+            package = site.parent
+            (package / 'index.html').write_text('<!doctype html><title>chooser</title>', encoding='utf-8')
+            for lang in ('en', 'ru'):
+                (package / lang).mkdir()
+                (package / lang / 'index.html').write_text('<!doctype html><title>redirect</title>', encoding='utf-8')
             (site / 'index.html').write_text('<!doctype html><html lang="en"><body><a href="en/">English</a></body></html>', encoding='utf-8')
             assets = site / 'assets'
             assets.mkdir()

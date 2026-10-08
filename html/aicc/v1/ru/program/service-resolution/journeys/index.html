@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Карта маршрутов и порядок выбора · Программа</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../../assets/charter.css?v=99f0026a">
+<link rel="stylesheet" href="../../../../assets/neighbours.css?v=d325da5e">
+
+<link rel="alternate" hreflang="en" href="../../../../en/program/service-resolution/journeys/">
+<script src="../../../../assets/site.js?v=7885dba4" defer data-search="../../../../assets/search-program-ru.json" data-search-all="../../../../assets/search-center-ru.json ../../../../assets/search-discovery-ru.json ../../../../assets/search-portfolio-ru.json ../../../../assets/search-program-ru.json ../../../../assets/search-lab-ru.json" data-search-names="Центр Компетенций|Каталог сценариев|Портфель инициатив|Программа|AI Lab" data-t-none="По запросу ничего не найдено." data-t-light="Дневной режим" data-t-dark="Ночной режим" data-t-copied="Скопировано" data-t-mail-body="Страница: {title}
+Номер: {ref}
+Адрес: {url}
+
+Вопрос или замечание:
+" data-t-dz-close="Закрыть"></script>
+<link rel="stylesheet" href="../../../../assets/project.css?v=1b24d895"><script defer src="../../../../assets/project.js?v=20eeeeb8" data-project-ui="{&quot;overview&quot;: &quot;Обзор проекта&quot;, &quot;documents&quot;: &quot;Документы проекта&quot;, &quot;contents&quot;: &quot;Разделы документа&quot;, &quot;register&quot;: &quot;Бэклог программы&quot;, &quot;proposal&quot;: &quot;Предлагаемая инициатива&quot;, &quot;expand&quot;: &quot;Развернуть диаграмму&quot;, &quot;close&quot;: &quot;Закрыть&quot;, &quot;fit&quot;: &quot;Вписать&quot;, &quot;actual&quot;: &quot;100%&quot;, &quot;out&quot;: &quot;Уменьшить&quot;, &quot;in&quot;: &quot;Увеличить&quot;, &quot;view&quot;: &quot;Развернутая диаграмма&quot;, &quot;hint&quot;: &quot;Прокрутка для перемещения · Ctrl/⌘ + колесо для масштаба&quot;}"></script>
+</head><body class="portal-workspace project-workspace" data-portal-section="program">
+<a class="o-skip" href="#main">К содержанию</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>Центр Компетенций по AI</span></a>
+  <span class="header-scope">Программа</span><span class="status-chip" title="Эта страница и показанные на ней документы — черновики: ничего в них не принято и не утверждено">Черновик</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Поиск в разделе</label><input id="q" type="search" autocomplete="off" placeholder="Поиск в разделе" aria-controls="results"><label class="search-scope"><input id="q-all" type="checkbox"><span>Все разделы</span></label><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Язык"><a lang="en" hreflang="en" href="../../../../en/program/service-resolution/journeys/">EN</a><a lang="ru" hreflang="ru" href="./" aria-current="true">RU</a></nav><button id="theme-switch" type="button" class="theme-switch" aria-label="Ночной режим" title="Ночной режим"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Разделы сайта</summary><nav class="portal-sections" aria-label="Разделы"><div class="portal-nav-group">
+<a class="portal-section-link" data-section="center" href="../../../center/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 10h.01" />
+  <path d="M12 14h.01" />
+  <path d="M12 6h.01" />
+  <path d="M16 10h.01" />
+  <path d="M16 14h.01" />
+  <path d="M16 6h.01" />
+  <path d="M8 10h.01" />
+  <path d="M8 14h.01" />
+  <path d="M8 6h.01" />
+  <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+  <rect x="4" y="2" width="16" height="20" rx="2" />
+</svg>
+<span>Центр Компетенций</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="discovery" href="../../../discovery/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+<span>Каталог сценариев</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="portfolio" href="../../../portfolio/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span>Портфель инициатив</span></a></div><div class="portal-nav-group is-current">
+<a class="portal-section-link" data-section="program" href="../../" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span>Программа</span></a><div class="portal-local-nav"><a href="../../">Бэклог программы</a><a href="../">Обзор проекта</a><a href="../charter/">Паспорт инициативы</a><a href="./" aria-current="page">Карта маршрутов</a><details class="project-nav-topics"><summary>Разделы документа</summary><div><a href="#ru-journeys-the-three-candidates">Три варианта</a><a href="#ru-journeys-selection-rule">Правило выбора</a><a href="#ru-journeys-how-the-selected-journey-enters-the-initiative-brief">Как выбранный клиентский маршрут отражается в паспорте инициативы</a></div></details><a href="payment-issue/">Решение вопросов по платежам</a><a href="card-dispute/">Сопровождение споров по картам</a><a href="onboarding-kyc/">Сопровождение оформления и KYC</a><a href="../governance/">Управление проектом и роли</a><a href="../how-it-works/">Порядок пилотного применения</a><a href="../controls-and-evidence/">Меры контроля и подтверждающие материалы</a><a href="../technical-design/">Технический проект</a><a href="../journey-profiles/">Профили маршрутов</a><a href="../it-readiness/">Готовность IT</a></div></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="lab" href="../../../lab/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+<span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../../center/privacy/">Конфиденциальность</a><a href="../../../center/terms-of-use/">Условия использования</a></div><p class="o-caption">Версия 2.2 · октябрь 2026</p></div></aside>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><article class="project-content"><span class="neighbour-status">Предложено</span><nav class="project-breadcrumb"><a href="../../../portfolio/ini-013/">Инициатива портфеля: INI-013</a> · <a href="../../#intake">Бэклог программы</a></nav><nav class="project-breadcrumb" aria-label="Обзор проекта"><a href="../">Решение клиентских обращений на основе клиентской аналитики</a><span aria-hidden="true"> / </span><span>Карта маршрутов</span></nav><section id="ru-journeys" class="doc-panel" data-document="ru-journeys"><div class="doc-label">Карта маршрутов</div><h1 id="ru-journeys-journey-options-and-selection">Карта маршрутов и порядок выбора</h1>
+
+<p>Пилотное применение охватывает один клиентский маршрут, одну очередь обращений и одну группу обслуживания. Рассматриваются три клиентских маршрута. При определении объёма (шаг «Рассмотрение», «Проработка»: «Определение объёма») руководитель Центра Компетенций и владелец направления — руководитель подразделения клиентского обслуживания — выбирают один из них по приведённому ниже правилу. Для каждого варианта составлено одностраничное приложение, в котором указано только то, что относится именно к нему. Общее для всех трёх (обязательства по разработке и внедрению, распределение ответственности, оформление одобрения, охват рисков) приведено на страницах «<a href="../charter/#ru-charter">Паспорт инициативы</a>», «<a href="../governance/#ru-governance">Управление проектом и роли</a>» и «<a href="../controls-and-evidence/#ru-controls">Контроль и подтверждающие материалы</a>»; техническая сторона — на странице «<a href="../journey-profiles/#ru-journey-profiles">Технические профили клиентских маршрутов</a>».</p>
+
+<p>Статус: INI-013 (состояние «Предложено»; воронка портфеля). Клиентский маршрут пока не выбран.</p>
+
+<section class="project-topic"><h2 id="ru-journeys-the-three-candidates">Три варианта</h2>
+
+<p>Объёмы здесь не публикуются: для каждого варианта указана ссылка на источник управленческой отчётности (MI), который проверяется при определении объёма.</p>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Клиентский маршрут</th>
+<th>Проблема клиента</th>
+<th>Проверяемый результат</th>
+<th>Профильное подразделение (зависимость)</th>
+<th>Что усложняет работу</th>
+<th>Ожидаемый объём</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="payment-issue/#ru-journey-payment">Решение вопросов по платежам</a></td>
+<td>Клиент снова обращается в Банк, потому что ему неясно, что происходит с неисполненным, находящимся в обработке или возвращённым платежом и кто за него отвечает</td>
+<td>Меньше повторных обращений; быстрее подтверждённое решение вопроса</td>
+<td>Подразделение платёжных операций</td>
+<td>Низкая сложность. Статус должен поступать из платёжной системы по выбранному типу платежей</td>
+<td>[отчёт MI: обращения по платежам в месяц по типам платежей]; вероятно, наибольший из трёх</td>
+</tr>
+<tr>
+<td><a href="card-dispute/#ru-journey-dispute">Сопровождение споров по картам</a></td>
+<td>Клиент не видит, как продвигается спор по карте, каких подтверждающих документов ещё не хватает и каков следующий шаг</td>
+<td>Меньше обращений о статусе, которых можно было избежать; меньше повторных запросов подтверждающих документов</td>
+<td>Подразделение по работе со спорными операциями</td>
+<td>Средняя сложность. Правила платёжных систем и нормативные сроки; ошибка в сроке может лишить клиента его права</td>
+<td>[отчёт MI: открытые споры и обращения о статусе в месяц по типам споров]; для одной группы, вероятно, небольшой</td>
+</tr>
+<tr>
+<td><a href="onboarding-kyc/#ru-journey-kyc">Сопровождение оформления и KYC</a></td>
+<td>Заявка застревает на этапах приёма документов, верификации и рассмотрения, и у клиента не раз запрашивают одни и те же сведения</td>
+<td>Меньше повторных запросов сведений; меньше времени до обоснованного следующего шага</td>
+<td>Подразделение оформления клиентов и KYC</td>
+<td>Сложность от средней до высокой. Строгое ограничение доступа к сведениям о противодействии финансовым преступлениям; комплаенс может потребовать повышения категории риска</td>
+<td>[отчёт MI: приостановленные заявки в месяц по сегментам и каналам оформления]; зависит от канала оформления</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Два других клиентских маршрута для первого пилотного применения не предлагаются. Статус кредитной заявки зависит от кредитного решения, которое исключено из пилотного применения, и от нескольких кредитных подразделений. Урегулирование жалоб подчиняется собственным правилам ответа клиентам и решениям о компенсации, а проблема там — в качестве урегулирования, а не в разрозненной истории кейса. Любой из этих маршрутов может появиться позже как новая потребность в воронке.</p>
+
+</section><section class="project-topic"><h2 id="ru-journeys-selection-rule">Правило выбора</h2>
+
+<p>Выбирается клиентский маршрут, который удовлетворяет всем семи условиям. Если им удовлетворяют два маршрута, предпочтение отдаётся тому, объём которого позволяет подтвердить результат в пределах тайм-бокса (раздел «Ожидаемый объём» каждого приложения).</p>
+
+<ol>
+<li><strong>Объём:</strong> число повторных обращений или приостановленных кейсов существенно, что подтверждается имеющимся отчётом MI.</li>
+<li><strong>Одно профильное подразделение:</strong> за базовый процесс отвечает одно подразделение, которое учитывается как зависимость. Оно утверждает перечень действий, определения исходов и интерпретацию исторических кейсов и выделяет экспертов направления. Если оно также претендует на часть выгоды, у инициативы появляется второе направление (см. «<a href="../governance/#ru-governance">Управление проектом и роли</a>»).</li>
+<li><strong>Устоявшийся процесс:</strong> процесс урегулирования уже сложился, поэтому ассистент объясняет существующий процесс, а не определяет новый.</li>
+<li><strong>Доступные записи:</strong> состояние кейса, обращения и предшествующие коммуникации можно прочитать через интерфейс для чтения или из одобренной выгрузки; они связаны общим ключом клиента и имеют временные отметки. Каждое из этих условий — допущение, которое подтверждается при определении объёма.</li>
+<li><strong>Измеримый результат:</strong> опережающие индикаторы можно измерить по имеющейся отчётности MI без применения AI, чтобы базовые значения были определены на стадии «Бизнес-кейс».</li>
+<li><strong>Группа для первого применения:</strong> одна группа подразделения клиентского обслуживания может работать в качестве первых пользователей; её время указывается в части B соглашения о взаимодействии.</li>
+<li><strong>Категория риска 2 сохраняется:</strong> клиентский маршрут не добавляет ничего, что повысило бы ожидаемую категорию риска выше 2.</li>
+</ol>
+
+<figure class="project-diagram"><div class="project-diagram-preview" tabindex="0" role="region" aria-label="Правило выбора клиентского маршрута" style="--project-graph-width:678.6160888671875px"><svg role="img" aria-label="Правило выбора клиентского маршрута" id="ru-project-journeys" width="100%" xmlns="http://www.w3.org/2000/svg" class="flowchart" style="max-width: 678.6160888671875px;" viewBox="4 4 678.6160888671875 1374.5625" aria-roledescription="flowchart-v2"><g><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></path></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></polygon></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></circle></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"></circle></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"></path></marker><marker id="mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edges edgePaths"><path d="M522.8303451538086,72.375L522.8303451538086,108.375" id="mm-project-journeys-ru-35b880fc0e74-light-L_A_B_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 32 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_A_B_0" data-points="W3sieCI6NTIyLjgzMDM0NTE1MzgwODYsInkiOjcyLjM3NX0seyJ4Ijo1MjIuODMwMzQ1MTUzODA4NiwieSI6MTEyLjM3NX1d" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M475.5684382120768,255.125L475.5684382120768,268.0539321881345Q475.5684382120768,275.125 468.4973704002113,275.125L446.4549865740725,275.125Q439.38391876220703,275.125 439.38391876220703,282.1960678118655L439.38391876220703,354.125" id="mm-project-journeys-ru-35b880fc0e74-light-L_B_C_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 125.85626220703125 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_B_C_0" data-points="W3sieCI6NDc1LjU2ODQzODIxMjA3NjgsInkiOjI1NS4xMjV9LHsieCI6NDc1LjU2ODQzODIxMjA3NjgsInkiOjI3NS4xMjV9LHsieCI6NDM5LjM4MzkxODc2MjIwNzAzLCJ5IjoyNzUuMTI1fSx7IngiOjQzOS4zODM5MTg3NjIyMDcwMywieSI6MzU4LjEyNX1d" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M393.75296783447266,464.5L393.75296783447266,477.4289321881345Q393.75296783447266,484.5 386.6819000226072,484.5L364.00856018247094,484.5Q356.93749237060547,484.5 356.93749237060547,491.5710678118655L356.93749237060547,563.5" id="mm-project-journeys-ru-35b880fc0e74-light-L_C_D_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 126.4871826171875 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_C_D_0" data-points="W3sieCI6MzkzLjc1Mjk2NzgzNDQ3MjY2LCJ5Ijo0NjQuNX0seyJ4IjozOTMuNzUyOTY3ODM0NDcyNjYsInkiOjQ4NC41fSx7IngiOjM1Ni45Mzc0OTIzNzA2MDU0NywieSI6NDg0LjV9LHsieCI6MzU2LjkzNzQ5MjM3MDYwNTQ3LCJ5Ijo1NjcuNX1d" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M311.9732081095377,673.875L311.9732081095377,686.8039321881345Q311.9732081095377,693.875 304.90214029767225,693.875L279.3121337908694,693.875Q272.2410659790039,693.875 272.2410659790039,700.9460678118655L272.2410659790039,772.875" id="mm-project-journeys-ru-35b880fc0e74-light-L_D_E_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 129.40386962890625 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_D_E_0" data-points="W3sieCI6MzExLjk3MzIwODEwOTUzNzcsInkiOjY3My44NzV9LHsieCI6MzExLjk3MzIwODEwOTUzNzcsInkiOjY5My44NzV9LHsieCI6MjcyLjI0MTA2NTk3OTAwMzksInkiOjY5My44NzV9LHsieCI6MjcyLjI0MTA2NTk3OTAwMzksInkiOjc3Ni44NzV9XQ==" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M225.77678171793622,883.25L225.77678171793622,896.1789321881345Q225.77678171793622,903.25 218.70571390607074,903.25L179.76749420346704,903.25Q172.69642639160156,903.25 172.69642639160156,910.3210678118655L172.69642639160156,982.25" id="mm-project-journeys-ru-35b880fc0e74-light-L_E_F_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 142.7520751953125 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_E_F_0" data-points="W3sieCI6MjI1Ljc3Njc4MTcxNzkzNjIyLCJ5Ijo4ODMuMjV9LHsieCI6MjI1Ljc3Njc4MTcxNzkzNjIyLCJ5Ijo5MDMuMjV9LHsieCI6MTcyLjY5NjQyNjM5MTYwMTU2LCJ5Ijo5MDMuMjV9LHsieCI6MTcyLjY5NjQyNjM5MTYwMTU2LCJ5Ijo5ODYuMjV9XQ==" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M129,1110.8125L129,1269.8125" id="mm-project-journeys-ru-35b880fc0e74-light-L_F_G_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 155 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_F_G_0" data-points="W3sieCI6MTI5LCJ5IjoxMTEwLjgxMjV9LHsieCI6MTI5LCJ5IjoxMjczLjgxMjV9XQ==" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M570.0922520955403,255.125L570.0922520955403,268.0539321881345Q570.0922520955403,275.125 577.1633199074058,275.125L605.2741572044106,275.125Q612.345225016276,275.125 612.345225016276,282.1960678118655L612.345225016276,306.625L612.345225016276,411.3125L612.345225016276,516L612.345225016276,620.6875L612.345225016276,830.0625L612.345225016276,934.75L612.345225016276,1048.53125L612.345225016276,1162.3125L612.345225016276,1186.7414321881345Q612.345225016276,1193.8125 605.2741572044106,1193.8125L598.440106711605,1193.8125Q591.3690388997396,1193.8125 591.3690388997396,1200.8835678118655L591.3690388997396,1269.8125" id="mm-project-journeys-ru-35b880fc0e74-light-L_B_N_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 1063.260009765625 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_B_N_0" data-points="W3sieCI6NTcwLjA5MjI1MjA5NTU0MDMsInkiOjI1NS4xMjV9LHsieCI6NTcwLjA5MjI1MjA5NTU0MDMsInkiOjI3NS4xMjV9LHsieCI6NjEyLjM0NTIyNTAxNjI3NiwieSI6Mjc1LjEyNX0seyJ4Ijo2MTIuMzQ1MjI1MDE2Mjc2LCJ5IjozMDYuNjI1fSx7IngiOjYxMi4zNDUyMjUwMTYyNzYsInkiOjQxMS4zMTI1fSx7IngiOjYxMi4zNDUyMjUwMTYyNzYsInkiOjUxNn0seyJ4Ijo2MTIuMzQ1MjI1MDE2Mjc2LCJ5Ijo2MjAuNjg3NX0seyJ4Ijo2MTIuMzQ1MjI1MDE2Mjc2LCJ5Ijo4MzAuMDYyNX0seyJ4Ijo2MTIuMzQ1MjI1MDE2Mjc2LCJ5Ijo5MzQuNzV9LHsieCI6NjEyLjM0NTIyNTAxNjI3NiwieSI6MTA0OC41MzEyNX0seyJ4Ijo2MTIuMzQ1MjI1MDE2Mjc2LCJ5IjoxMTYyLjMxMjV9LHsieCI6NjEyLjM0NTIyNTAxNjI3NiwieSI6MTE5My44MTI1fSx7IngiOjU5MS4zNjkwMzg4OTk3Mzk2LCJ5IjoxMTkzLjgxMjV9LHsieCI6NTkxLjM2OTAzODg5OTczOTYsInkiOjEyNzMuODEyNX1d" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M485.0148696899414,464.5L485.0148696899414,477.4289321881345Q485.0148696899414,484.5 492.0859375018069,484.5L525.1432062766762,484.5Q532.2142740885416,484.5 532.2142740885416,491.5710678118655L532.2142740885416,516L532.2142740885416,620.6875L532.2142740885416,725.375L532.2142740885416,934.75L532.2142740885416,1048.53125L532.2142740885416,1162.3125L532.2142740885416,1186.7414321881345Q532.2142740885416,1193.8125 539.285341900407,1193.8125L554.1313044212075,1193.8125Q561.2023722330729,1193.8125 561.2023722330729,1200.8835678118655L561.2023722330729,1269.8125" id="mm-project-journeys-ru-35b880fc0e74-light-L_C_N_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 866.8433227539062 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_C_N_0" data-points="W3sieCI6NDg1LjAxNDg2OTY4OTk0MTQsInkiOjQ2NC41fSx7IngiOjQ4NS4wMTQ4Njk2ODk5NDE0LCJ5Ijo0ODQuNX0seyJ4Ijo1MzIuMjE0Mjc0MDg4NTQxNiwieSI6NDg0LjV9LHsieCI6NTMyLjIxNDI3NDA4ODU0MTYsInkiOjUxNn0seyJ4Ijo1MzIuMjE0Mjc0MDg4NTQxNiwieSI6NjIwLjY4NzV9LHsieCI6NTMyLjIxNDI3NDA4ODU0MTYsInkiOjcyNS4zNzV9LHsieCI6NTMyLjIxNDI3NDA4ODU0MTYsInkiOjkzNC43NX0seyJ4Ijo1MzIuMjE0Mjc0MDg4NTQxNiwieSI6MTA0OC41MzEyNX0seyJ4Ijo1MzIuMjE0Mjc0MDg4NTQxNiwieSI6MTE2Mi4zMTI1fSx7IngiOjUzMi4yMTQyNzQwODg1NDE2LCJ5IjoxMTkzLjgxMjV9LHsieCI6NTYxLjIwMjM3MjIzMzA3MjksInkiOjExOTMuODEyNX0seyJ4Ijo1NjEuMjAyMzcyMjMzMDcyOSwieSI6MTI3My44MTI1fV0=" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M401.9017766316732,673.875L401.9017766316732,686.8039321881345Q401.9017766316732,693.875 408.9728444435387,693.875L445.6789220156085,693.875Q452.749989827474,693.875 452.749989827474,700.9460678118655L452.749989827474,725.375L452.749989827474,830.0625L452.749989827474,1048.53125L452.749989827474,1162.3125L452.749989827474,1206.7414321881345Q452.749989827474,1213.8125 459.8210576393395,1213.8125L523.9646377545407,1213.8125Q531.0357055664062,1213.8125 531.0357055664062,1220.8835678118655L531.0357055664062,1269.8125" id="mm-project-journeys-ru-35b880fc0e74-light-L_D_N_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 710.4148559570312 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_D_N_0" data-points="W3sieCI6NDAxLjkwMTc3NjYzMTY3MzIsInkiOjY3My44NzV9LHsieCI6NDAxLjkwMTc3NjYzMTY3MzIsInkiOjY5My44NzV9LHsieCI6NDUyLjc0OTk4OTgyNzQ3NCwieSI6NjkzLjg3NX0seyJ4Ijo0NTIuNzQ5OTg5ODI3NDc0LCJ5Ijo3MjUuMzc1fSx7IngiOjQ1Mi43NDk5ODk4Mjc0NzQsInkiOjgzMC4wNjI1fSx7IngiOjQ1Mi43NDk5ODk4Mjc0NzQsInkiOjEwNDguNTMxMjV9LHsieCI6NDUyLjc0OTk4OTgyNzQ3NCwieSI6MTE2Mi4zMTI1fSx7IngiOjQ1Mi43NDk5ODk4Mjc0NzQsInkiOjEyMTMuODEyNX0seyJ4Ijo1MzEuMDM1NzA1NTY2NDA2MiwieSI6MTIxMy44MTI1fSx7IngiOjUzMS4wMzU3MDU1NjY0MDYyLCJ5IjoxMjczLjgxMjV9XQ==" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M318.70535024007165,883.25L318.70535024007165,896.1789321881345Q318.70535024007165,903.25 325.7764180519371,903.25L364.7146377545408,903.25Q371.78570556640625,903.25 371.78570556640625,910.3210678118655L371.78570556640625,934.75L371.78570556640625,1162.3125L371.78570556640625,1226.7414321881345Q371.78570556640625,1233.8125 378.8567733782717,1233.8125L493.79797108787415,1233.8125Q500.8690388997396,1233.8125 500.8690388997396,1240.8835678118655L500.8690388997396,1269.8125" id="mm-project-journeys-ru-35b880fc0e74-light-L_E_N_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 554.069580078125 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_E_N_0" data-points="W3sieCI6MzE4LjcwNTM1MDI0MDA3MTY1LCJ5Ijo4ODMuMjV9LHsieCI6MzE4LjcwNTM1MDI0MDA3MTY1LCJ5Ijo5MDMuMjV9LHsieCI6MzcxLjc4NTcwNTU2NjQwNjI1LCJ5Ijo5MDMuMjV9LHsieCI6MzcxLjc4NTcwNTU2NjQwNjI1LCJ5Ijo5MzQuNzV9LHsieCI6MzcxLjc4NTcwNTU2NjQwNjI1LCJ5IjoxMTYyLjMxMjV9LHsieCI6MzcxLjc4NTcwNTU2NjQwNjI1LCJ5IjoxMjMzLjgxMjV9LHsieCI6NTAwLjg2OTAzODg5OTczOTYsInkiOjEyMzMuODEyNX0seyJ4Ijo1MDAuODY5MDM4ODk5NzM5NiwieSI6MTI3My44MTI1fV0=" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path><path d="M216.39285278320312,1110.8125L216.39285278320312,1246.7414321881345Q216.39285278320312,1253.8125 223.4639205950686,1253.8125L463.6313044212075,1253.8125Q470.702372233073,1253.8125 470.702372233073,1260.8835678118655L470.702372233073,1269.8125" id="mm-project-journeys-ru-35b880fc0e74-light-L_F_N_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style="stroke-dasharray: 0 0 403.981201171875 4; stroke-dashoffset: 0;;" data-edge="true" data-et="edge" data-id="L_F_N_0" data-points="W3sieCI6MjE2LjM5Mjg1Mjc4MzIwMzEyLCJ5IjoxMTEwLjgxMjV9LHsieCI6MjE2LjM5Mjg1Mjc4MzIwMzEyLCJ5IjoxMjUzLjgxMjV9LHsieCI6NDcwLjcwMjM3MjIzMzA3MywieSI6MTI1My44MTI1fSx7IngiOjQ3MC43MDIzNzIyMzMwNzMsInkiOjEyNzMuODEyNX1d" data-look="neo" marker-end="url(#mm-project-journeys-ru-35b880fc0e74-light_flowchart-v2-pointEnd-margin)"></path></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(439.38391876220703, 306.625)"><g class="label" data-id="L_B_C_0" transform="translate(-14, -11.5)"><foreignObject width="28" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Да</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(356.93749237060547, 516)"><g class="label" data-id="L_C_D_0" transform="translate(-14, -11.5)"><foreignObject width="28" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Да</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(272.2410659790039, 725.375)"><g class="label" data-id="L_D_E_0" transform="translate(-14, -11.5)"><foreignObject width="28" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Да</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(172.69642639160156, 934.75)"><g class="label" data-id="L_E_F_0" transform="translate(-14, -11.5)"><foreignObject width="28" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Да</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(129, 1162.3125)"><g class="label" data-id="L_F_G_0" transform="translate(-14, -11.5)"><foreignObject width="28" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Да</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(612.345225016276, 725.375)"><g class="label" data-id="L_B_N_0" transform="translate(-18, -11.5)"><foreignObject width="36" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Нет</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(532.2142740885416, 830.0625)"><g class="label" data-id="L_C_N_0" transform="translate(-18, -11.5)"><foreignObject width="36" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Нет</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(452.749989827474, 934.75)"><g class="label" data-id="L_D_N_0" transform="translate(-18, -11.5)"><foreignObject width="36" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Нет</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(371.78570556640625, 1048.53125)"><g class="label" data-id="L_E_N_0" transform="translate(-18, -11.5)"><foreignObject width="36" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Нет</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(216.39285278320312, 1162.3125)"><g class="label" data-id="L_F_N_0" transform="translate(-18, -11.5)"><foreignObject width="36" height="23"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Нет</p></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="mm-project-journeys-ru-35b880fc0e74-light-flowchart-A-0" data-look="neo" transform="translate(522.8303451538086, 42.1875)"><rect class="basic label-container" style="" x="-95" y="-30.1875" width="190" height="60.375"></rect><g class="label" style="" transform="translate(-79, -18.1875)"><rect></rect><foreignObject width="158" height="36.375"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 260px; text-align: center;"><span class="nodeLabel"><p>Кандидат: клиентский<br>маршрут</p></span></div></foreignObject></g></g><g class="node default" id="mm-project-journeys-ru-35b880fc0e74-light-flowchart-B-1" data-look="neo" transform="translate(522.8303451538086, 183.75)"><polygon points="40.785714285714285,0 262.7857142857143,0 303.57142857142856,-71.375 262.7857142857143,-142.75 40.785714285714285,-142.75 0,-71.375" class="label-container" transform="translate(-151.78571428571428,71.375)"></polygon><g class="label" style="" transform="translate(-95, -36.375)"><rect></rect><foreignObject width="190" height="72.75"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 260px; text-align: center;"><span class="nodeLabel"><p>Существенный объём<br>повторных обращений или<br>остановившихся кейсов по<br>действующему отчёту MI?</p></span></div></foreignObject></g></g><g class="node default" id="mm-project-journeys-ru-35b880fc0e74-light-flowchart-C-3" data-look="neo" transform="translate(439.38391876220703, 411.3125)"><polygon points="30.392857142857142,0 263.3928571428571,0 293.7857142857143,-53.1875 263.3928571428571,-106.375 30.392857142857142,-106.375 0,-53.1875" class="label-container" transform="translate(-146.89285714285714,53.1875)"></polygon><g class="label" style="" transform="translate(-100.5, -18.1875)"><rect></rect><foreignObject width="201" height="36.375"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 260px; text-align: center;"><span class="nodeLabel"><p>Процессом владеет одно<br>профильное подразделение?</p></span></div></foreignObject></g></g><g class="node default" id="mm-project-journeys-ru-35b880fc0e74-light-flowchart-D-5" data-look="neo" transform="translate(356.93749237060547, 620.6875)"><polygon points="30.392857142857142,0 259.3928571428571,0 289.7857142857143,-53.1875 259.3928571428571,-106.375 30.392857142857142,-106.375 0,-53.1875" class="label-container" transform="translate(-144.89285714285714,53.1875)"></polygon><g class="label" style="" transform="translate(-98.5, -18.1875)"><rect></rect><foreignObject width="197" height="36.375"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 260px; text-align: center;"><span class="nodeLabel"><p>Процесс устоялся, а записи<br>доступны?</p></span></div></foreignObject></g></g><g class="node default" id="mm-project-journeys-ru-35b880fc0e74-light-flowchart-E-7" data-look="neo" transform="translate(272.2410659790039, 830.0625)"><polygon points="30.392857142857142,0 268.3928571428571,0 298.7857142857143,-53.1875 268.3928571428571,-106.375 30.392857142857142,-106.375 0,-53.1875" class="label-container" transform="translate(-149.39285714285714,53.1875)"></polygon><g class="label" style="" transform="translate(-103, -18.1875)"><rect></rect><foreignObject width="206" height="36.375"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 260px; text-align: center;"><span class="nodeLabel"><p>Результат измерим по<br>действующей отчётности MI?</p></span></div></foreignObject></g></g><g class="node default" id="mm-project-journeys-ru-35b880fc0e74-light-flowchart-F-9" data-look="neo" transform="translate(172.69642639160156, 1048.53125)"><polygon points="35.589285714285715,0 246.58928571428572,0 282.17857142857144,-62.28125 246.58928571428572,-124.5625 35.589285714285715,-124.5625 0,-62.28125" class="label-container" transform="translate(-141.08928571428572,62.28125)"></polygon><g class="label" style="" transform="translate(-89.5, -27.28125)"><rect></rect><foreignObject width="179" height="54.5625"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 260px; text-align: center;"><span class="nodeLabel"><p>Есть группа для первого<br>применения, и категория<br>риска 2 сохраняется?</p></span></div></foreignObject></g></g><g class="node default" id="mm-project-journeys-ru-35b880fc0e74-light-flowchart-G-11" data-look="neo" transform="translate(129, 1322.1875)"><rect class="basic label-container" style="" x="-117" y="-48.375" width="234" height="96.75"></rect><g class="label" style="" transform="translate(-101, -36.375)"><rect></rect><foreignObject width="202" height="72.75"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 260px; text-align: center;"><span class="nodeLabel"><p>Внести выбор в журнал<br>решений и заполнить<br>приложение по клиентскому<br>маршруту</p></span></div></foreignObject></g></g><g class="node default" id="mm-project-journeys-ru-35b880fc0e74-light-flowchart-N-13" data-look="neo" transform="translate(531.0357055664062, 1313.09375)"><rect class="basic label-container" style="" x="-100.5" y="-39.28125" width="201" height="78.5625"></rect><g class="label" style="" transform="translate(-84.5, -27.28125)"><rect></rect><foreignObject width="169" height="54.5625"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 260px; text-align: center;"><span class="nodeLabel"><p>Сузить объём работ или<br>ожидать выполнения<br>указанной зависимости</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="mm-project-journeys-ru-35b880fc0e74-light-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"></feDropShadow></filter></defs><defs><filter id="mm-project-journeys-ru-35b880fc0e74-light-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"></feDropShadow></filter></defs><linearGradient id="mm-project-journeys-ru-35b880fc0e74-light-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7A56C2" stop-opacity="1"></stop><stop offset="100%" stop-color="hsl(219.1304347826, 60%, 85.4901960784%)" stop-opacity="1"></stop></linearGradient></svg></div><figcaption><span>Правило выбора клиентского маршрута</span><button type="button" class="oc-button project-diagram-open" aria-haspopup="dialog" aria-label="Развернуть диаграмму: Правило выбора клиентского маршрута">Развернуть диаграмму</button></figcaption></figure>
+<p>Если ни один вариант не удовлетворяет правилу, объём работ сужается (меньше состояний, один тип платежей или споров) либо инициатива ожидает выполнения указанной зависимости, которая её блокирует.</p>
+
+</section><section class="project-topic"><h2 id="ru-journeys-how-the-selected-journey-enters-the-initiative-brief">Как выбранный клиентский маршрут отражается в паспорте инициативы</h2>
+
+<p>Выбор клиентского маршрута — контрольная точка определения объёма. Руководитель Центра Компетенций совместно с владельцем направления вносит его в журнал решений, а в паспорте выбранный маршрут указывается в объёме работ и в составе ожидаемых решений. Приложение по выбранному маршруту заполняется и хранится вместе с паспортом в папке инициативы в портфеле под названием «Паспорт инициативы: приложение по клиентскому маршруту»; два других остаются вариантами на этой странице. После этого каждый раздел приложения переносится в одно определённое место.</p>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Раздел приложения</th>
+<th>Куда переносится</th>
+<th>Кто заполняет или утверждает</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Объём работ и исключения</td>
+<td>Раздел 3 паспорта; впоследствии — область применения в описании решения</td>
+<td>Руководитель Центра Компетенций совместно с владельцем направления; паспорт одобряет владелец направления</td>
+</tr>
+<tr>
+<td>Профильное подразделение и что оно утверждает</td>
+<td>Раздел 5 паспорта как зависимость, на борде программы с указанием итерации, к которой нужен результат; утверждённое подразделением становится критериями приёмки в описании решения</td>
+<td>Утверждает руководитель профильного подразделения; руководитель Центра Компетенций фиксирует каждое утверждение как выполненную зависимость</td>
+</tr>
+<tr>
+<td>Области компетенции контрольных функций, которые добавляет клиентский маршрут</td>
+<td>Раздел 5 паспорта: представители контрольных функций, согласующие бизнес-кейс</td>
+<td>Каждый соответствующий представитель контрольной функции — заключением контрольной функции</td>
+</tr>
+<tr>
+<td>Базовые показатели</td>
+<td>Раздел 2 паспорта (индикатор клиентского маршрута) и приложение об измерениях на странице «<a href="../charter/#ru-charter">Паспорт инициативы</a>»</td>
+<td>Базовое значение определяет владелец каждого источника; целевые значения устанавливает владелец направления</td>
+</tr>
+<tr>
+<td>Критерии качества и контрольных пределов</td>
+<td>Критерии приёмки и сигнальные значения в описании решения (см. «<a href="../controls-and-evidence/#ru-controls">Контроль и подтверждающие материалы</a>»)</td>
+<td>Описание решения одобряет владелец направления, а если решение создал руководитель Центра Компетенций — куратор Центра Компетенций</td>
+</tr>
+<tr>
+<td>Условия остановки</td>
+<td>Условия применения и сигнальные значения в описании решения; факты для управленческого решения по итогам MVP</td>
+<td>Применение решения приостанавливает руководитель Центра Компетенций или представитель контрольной функции; управленческое решение по итогам MVP принимает лицо, одобрившее паспорт</td>
+</tr>
+<tr>
+<td>Ожидаемый объём</td>
+<td>Приложение об измерениях: устанавливается ли для индикатора повторных обращений целевое значение или он учитывается лишь как указание на направление изменений — согласно протоколу решения об одобрении паспорта</td>
+<td>Объём предоставляет владелец источника; лицо, одобрившее паспорт, признаёт вывод, который этот объём позволяет сделать</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>После одобрения изменение типа платежей, типа споров, сегмента, канала оформления или очереди обращений оформляется как изменение паспорта с протоколом решения. Другой клиентский маршрут к этому пилотному применению не добавляется: он вносится в воронку как новая потребность и может повторно использовать компоненты и оценочные наборы этого пилотного применения.</p>
+</section></section></article>
+<footer class="o-footer">
+      <span class="foot-text">Центр Компетенций по AI, O!Bank. Версия 2.2, 2026 год. <a class="contact" href="mailto:talimbayev@obank.kg?subject=%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB%20%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%86%D0%B8%D0%B9%20%5BGRXW1%5D%3A%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%20%D0%BE%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B5">Связаться с нами</a> <a class="contact" href="../../../center/privacy/">Конфиденциальность</a> <a class="contact" href="../../../center/terms-of-use/">Условия использования</a></span>
+      <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Отзыв о странице</span><span>ID: GRXW1</span></button>
+    </footer></main></div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Портал Центра Компетенций [GRXW1]: отзыв о странице" data-ref="GRXW1" data-page="Карта маршрутов и порядок выбора">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Отзыв о странице</h2><code>ID: GRXW1</code><button type="button" class="fb-copy" data-copy-text="GRXW1">Копировать</button></div>
+    <div class="fb-body"><p>Оставить отзыв о содержании этой страницы: <a data-mail href="mailto:talimbayev@obank.kg">отзыв</a>.</p><button class="oc-button" value="close">Закрыть</button></div>
+  </form>
+</dialog>
+</body></html>

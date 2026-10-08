@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Credit &amp; exposure data · Discovery Catalog</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../../assets/charter.css?v=99f0026a">
+<link rel="stylesheet" href="../../../../assets/neighbours.css?v=d325da5e">
+
+<link rel="alternate" hreflang="ru" href="../../../../ru/discovery/banking-data-analytics/credit-exposure-data/">
+<script src="../../../../assets/site.js?v=7885dba4" defer data-search="../../../../assets/search-discovery-en.json" data-search-all="../../../../assets/search-center-en.json ../../../../assets/search-discovery-en.json ../../../../assets/search-portfolio-en.json ../../../../assets/search-program-en.json ../../../../assets/search-lab-en.json" data-search-names="Competence Center|Discovery Catalog|Portfolio|Program|AI Lab" data-t-none="No page matches the query." data-t-light="Light theme" data-t-dark="Dark theme" data-t-copied="Copied" data-t-mail-body="Page: {title}
+Reference: {ref}
+Address: {url}
+
+Question or comment:
+" data-t-dz-close="Close"></script>
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=e6c81b23">
+<script defer src="../../../../assets/discovery.js"></script>
+</head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>AI Competence Center</span></a>
+  <span class="header-scope">Discovery Catalog</span><span class="status-chip" title="This page and the records it shows are drafts: nothing in them is decided, approved or accepted">Draft</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search this section</label><input id="q" type="search" autocomplete="off" placeholder="Search this section" aria-controls="results"><label class="search-scope"><input id="q-all" type="checkbox"><span>All sections</span></label><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Language"><a lang="en" hreflang="en" href="./" aria-current="true">EN</a><a lang="ru" hreflang="ru" href="../../../../ru/discovery/banking-data-analytics/credit-exposure-data/">RU</a></nav><button id="theme-switch" type="button" class="theme-switch" aria-label="Dark theme" title="Dark theme"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Sections of the site</summary><nav class="portal-sections" aria-label="Sections"><div class="portal-nav-group">
+<a class="portal-section-link" data-section="center" href="../../../center/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 10h.01" />
+  <path d="M12 14h.01" />
+  <path d="M12 6h.01" />
+  <path d="M16 10h.01" />
+  <path d="M16 14h.01" />
+  <path d="M16 6h.01" />
+  <path d="M8 10h.01" />
+  <path d="M8 14h.01" />
+  <path d="M8 6h.01" />
+  <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+  <rect x="4" y="2" width="16" height="20" rx="2" />
+</svg>
+<span>Competence Center</span></a></div><div class="portal-nav-group is-current">
+<a class="portal-section-link" data-section="discovery" href="../../" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+<span>Discovery Catalog</span></a><div class="portal-local-nav"><a href="../../">Overview</a><a href="../../strategic-portfolio/">Strategic Banking Portfolio</a><a href="../../strategic-initiatives/">Strategic Initiatives &amp; Transformation</a><a href="../../value-streams/">Operational Value Streams</a><a href="../../customer-market-intelligence/">Customer &amp; Market Intelligence</a><a href="../../customer-channels/">Customer &amp; Channels</a><a href="../../risk-control/">Risk &amp; Control</a><a href="../../shared-banking-capabilities/">Shared Banking Capabilities</a><a href="../../finance-treasury/">Finance &amp; Treasury</a><a href="../" aria-current="true">Banking Data &amp; Analytics</a><a href="../../regulatory-horizon/">Regulatory Horizon</a></div></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="portfolio" href="../../../portfolio/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span>Portfolio</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="program" href="../../../program/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span>Program</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="lab" href="../../../lab/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+<span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../../center/privacy/">Privacy</a><a href="../../../center/terms-of-use/">Terms of use</a></div><p class="o-caption">Version 2.2 · October 2026</p></div></aside>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Banking Data &amp; Analytics</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Credit &amp; exposure data</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Credit &amp; exposure data</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Credit &amp; exposure data is the risk data layer that aggregates every on- and off-balance-sheet commitment the Bank has made to borrowers, counterparties, and connected-party groups — covering loan-level records, counterparty and group exposure aggregations, collateral and security data, the PD/LGD/EAD credit parameter inputs that drive capital where the Bank uses internal-ratings (IRB) models, and the ECL and provision data required for IFRS 9 reporting. Large-exposure requirements, in line with Basel III, call for credit and exposure data to be aggregated across all product types within a defined supervisory response window. BCBS 239 Principle 4 (completeness) sets the expectation that no material exposure is excluded from the aggregate. <strong>The GenAI opportunity is to automate large-exposure aggregation on a weekly cadence, monitor collateral valuations against LTV covenants continuously, and generate ECL provision narratives without manual assembly</strong> — sustaining a current view of credit risk data between monthly reporting cycles.</p>
+</header>
+<style>
+  #problems-tab-loan-level-exposure:checked ~ .problems-tab-bar label[for="problems-tab-loan-level-exposure"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-loan-level-exposure:checked ~ .problems-panel[data-tab="loan-level-exposure"] {
+    display: block;
+  }
+</style>
+<section class="concern-problems" aria-label="Problems">
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-loan-level-exposure" value="loan-level-exposure" checked aria-label="Loan-level exposure">
+  <div class="problems-tab-bar" role="tablist">
+    <label class="problems-tab-label" for="problems-tab-loan-level-exposure" role="tab" aria-controls="problems-panel-loan-level-exposure">Loan-level exposure</label>
+  </div>
+  <hr class="problems-divider">
+  <div class="problems-panel" id="problems-panel-loan-level-exposure" data-tab="loan-level-exposure" role="tabpanel" aria-labelledby="problems-tab-loan-level-exposure">
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Large-exposure monitoring — the aggregation of on- and off-balance-sheet exposures to each counterparty and connected-party group across all product types — is performed monthly from separate system exports. Between cycles, exposure movements relative to regulatory thresholds are visible only to the teams monitoring individual product books; a cumulative approach to the limit by a group of connected counterparties may not be detected until the monthly aggregate runs.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>Credit review preparation for the watchlist and large-exposure committees requires assembling the current exposure picture — loans, commitments, derivatives, and trade finance — for each counterparty from separate product systems. The data-assembly step precedes the substantive credit analysis; for counterparties with complex product relationships, the assembly consumes the majority of preparation time.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>Large-exposure aggregation, ECL staging flow computation, and PD/LGD/EAD model output compilation each follow defined logic applied to structured credit and position data on monthly or quarterly cycles. The aggregation logic is prescribed by the regulatory framework and is repeatable; the execution is manual and time-intensive.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>A continuously aggregated large-exposure view — updated weekly from live product positions — gives the Chief Credit Officer visibility into concentration headroom and group exposure utilization that monthly reporting cannot provide. Credit appetite deployment decisions for new transactions can be assessed against current exposure before committee approval.</p></article></div>
+  </div>
+</section>
+<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<section class="l3-section" id="loan-level-exposure-records">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Loan-level exposure records</h2>
+    <p class="l3-section__intent">The granular record for each loan or credit facility — covering outstanding balance, committed amount, drawn and undrawn portions, facility terms, maturity, collateral linkage, and risk classification. Loan-level records are the atomic unit from which portfolio analytics, concentration metrics, and regulatory reporting are derived. Their completeness and accuracy determine the reliability of every aggregate produced from the credit book; missing or misclassified records propagate into IFRS 9 staging, large-exposure calculations, and capital computation.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/loan-level-exposure-records/loan-book-data-quality-scan" id="scenario-loan-book-data-quality-scan" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Loan Book Data Quality Scan</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent runs a daily data quality scan across loan-level records in core banking — checking completeness of mandatory fields, consistency of drawn and committed amounts, validity of risk classification codes, and linkage to the collateral registry and customer golden record. The credit operations team receives a prioritized exception list by field type and facility size. Exceptions affecting IFRS 9 staging or large-exposure aggregation are flagged at elevated priority for same-day remediation.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Loan-level record quality is validated manually at month-end as part of the ECL and regulatory reporting close. Between month-end cycles, new disbursements, drawdowns, and re-pricing events may introduce incomplete or inconsistent records that are not detected until the next validation run. Missing risk classification codes, mismatched drawn and committed amounts, and absent collateral linkages propagate silently into portfolio analytics, IFRS 9 staging, and large-exposure aggregation until the month-end check.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads all active loan and credit facility records from core banking and applies a quality rule set covering mandatory field completeness, amount consistency, risk classification code validity, and collateral and customer golden record linkage. Records failing any rule are categorized by failure type and ranked by outstanding balance and downstream impact — IFRS 9 staging impact, large-exposure aggregation impact, or regulatory reporting impact. The credit operations team receives the exception list each morning with remediation priority and SLA by exception category, confirms the exceptions, and remediates them.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Loan-level data quality exceptions are identified daily for the credit operations team and remediated before they propagate into IFRS 9 staging, large-exposure aggregation, or regulatory reporting.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces daily loan book quality scans covering 100% of active facilities for ≥ 48 weeks within 12 months; quality rule set approved by credit risk and data governance within 60 days of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of exceptions confirmed as genuine data quality failures by credit operations; high-priority exceptions remediated within the same-day SLA in ≥ 80% of cases within 3 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Loan book quality validation cycle shifted from monthly manual review to a daily automated scan; exceptions affecting IFRS 9 or large-exposure aggregation cleared before the next downstream calculation run in ≥ 90% of cases.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/loan-level-exposure-records/loan-classification-consistency-check" id="scenario-loan-classification-consistency-check" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Loan Classification Consistency Check</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent identifies loan facilities where the risk classification assigned in core banking is inconsistent with the IFRS 9 stage, the PD band, or the days-past-due status of the underlying account. The credit risk team uses the inconsistency report to investigate potential classification errors and update records before the next ECL and capital calculation cycle. Systematic classification patterns that diverge from model-implied grades are flagged for model validation review.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/#expected-credit-loss">Expected credit loss</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Risk classifications are assigned to loan facilities in core banking by credit officers and updated through the periodic review process. IFRS 9 staging and PD bands — IRB PD bands where the Bank uses internal-ratings models — are generated separately by the model engine. Where a facility carries a risk grade that is materially inconsistent with its model-implied PD or its IFRS 9 stage, the inconsistency may reflect a genuine credit judgment or a classification error. Without a systematic cross-check, classification errors are identified only when they surface in the Pillar 3 disclosure review or the external audit.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads risk classifications from core banking and cross-references each facility against its IFRS 9 stage, model-implied PD band, and days-past-due status. Facilities where the assigned grade is more than one notch above the model-implied grade, or where the IFRS 9 stage does not align with the PD-implied staging outcome, are flagged in a monthly inconsistency report. The report distinguishes between potentially genuine overrides — larger facilities with documented credit officer justification — and unexplained divergences for investigation. The credit risk team investigates the unexplained divergences and corrects records before the next ECL and capital calculation cycle; systematic divergence patterns across a portfolio segment are flagged for the model validation team.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Loan risk classification inconsistencies are identified for the credit risk team before each ECL and capital calculation cycle, with genuine overrides distinguished from unexplained divergences requiring investigation.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces monthly classification consistency reports covering 100% of active facilities for ≥ 12 consecutive months; cross-reference logic validated by credit risk and model validation within 60 days of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of flagged inconsistencies confirmed as requiring investigation or correction by the credit risk team; model validation team reviews systematic divergence flags for ≥ 90% of flagged portfolio segments within the quarter.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Classification inconsistency detection cycle shifted from ad hoc audit identification to a monthly structured cross-check; inconsistencies corrected before ECL and capital runs in ≥ 85% of cases within 6 months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/loan-level-exposure-records/portfolio-concentration-analytics" id="scenario-portfolio-concentration-analytics" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Portfolio Concentration Analytics</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent aggregates loan-level records by sector, geography, product type, collateral type, and risk grade band to produce a monthly portfolio concentration report for the Risk Committee and the credit portfolio team. The report identifies concentration build-up against board-approved appetite limits and generates a narrative summary of the three largest concentration movements since the prior month. The credit portfolio team uses the report for portfolio steering and appetite limit breach monitoring.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Portfolio concentration analysis requires aggregating the full loan book by multiple dimensions — sector, geography, product type, risk grade — and measuring each concentration against the board-approved limit framework. The aggregation is performed monthly by the credit analytics team using SQL extracts from core banking and credit systems. The resulting concentration table is distributed to the Risk Committee but without a narrative identifying which concentrations are growing fastest or approaching limits. Portfolio steering decisions are based on the concentration table without a structured signal about emerging risks.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current loan book from core banking, aggregates by sector, geography, product type, collateral type, and risk grade band, and calculates utilization ratios against board-approved concentration limits. It produces the concentration table and a narrative summary identifying the three largest concentration movements month-on-month, any concentration approaching within 10% of an appetite limit, and the sector and geography mix of new disbursements in the period. The credit portfolio team reviews and approves the report before it goes to the Risk Committee, and receives an accompanying alert for concentrations approaching appetite limits.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Risk Committee and credit portfolio team receive a structured monthly concentration report with narrative signals on emerging build-up, supporting proactive portfolio steering before appetite limits are reached.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces monthly concentration reports covering 100% of the loan book for ≥ 12 consecutive months; concentration limit framework ingested and applied from go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of narrative summaries accepted by the credit portfolio team as accurate without material amendments; concentration limit alerts confirmed as requiring action in ≥ 80% of cases within 3 months.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Concentration report assembly time reduced from 2–3 analyst days to ≤ half a day of review and approval per month; narrative commentary delivered alongside the concentration table from the first production cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="collateral-security-data">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Collateral &amp; security data</h2>
+    <p class="l3-section__intent">The records of collateral pledged against each secured credit facility — property valuations and legal registrations, financial security market values, inventory and receivables pledges, and personal guarantees — linked to the corresponding loan record. Collateral data drives LTV covenant monitoring, credit-impairment assessment, and LGD parameter calibration. How current a valuation is depends on the collateral type: financial securities update at market prices daily; commercial real estate updates through formal appraisals annually. The gap between formal valuation cycles and current market conditions creates LTV uncertainty that continuous monitoring tools can estimate but not fully resolve.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/collateral-security-data/collateral-valuation-monitoring" id="scenario-collateral-valuation-monitoring" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Collateral Valuation Monitoring</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent monitors collateral valuations against loan exposures, flagging LTV covenant approaches and breaches before the next scheduled review cycle. The credit risk team receives a collateral-monitoring report ranked by severity of coverage deterioration. Interim market-index adjustments are applied to property and securities valuations between formal appraisals to maintain a current LTV view.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Collateral valuations — real estate, securities, and inventory — are updated on cycles ranging from monthly to annually depending on asset class. Between updates, market movements can erode collateral cover against the outstanding loan balance without the credit risk team's awareness. Collateral shortfalls are identified at the next formal valuation unless interim monitoring is in place.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads current collateral valuations, applies market index adjustments for property and securities between formal appraisals, and computes current LTV for each secured exposure. It flags exposures where the adjusted LTV has crossed or is approaching covenant thresholds and generates a collateral-monitoring report for the credit risk team ranked by severity of coverage deterioration. The credit officer uses the report to prioritize collateral review and remediation actions.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The credit risk team monitors current LTV positions every business day between formal appraisal cycles, with interim market-index adjustments applied to property and securities collateral and covenant-threshold alerts routed by severity.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent applies market-index LTV adjustments to ≥ 95% of secured exposures on a daily cadence; collateral-monitoring report delivered to the credit risk team each business day within year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of LTV covenant-approach alerts rated as actionable by credit officers; index-adjusted LTV values validated against formal appraisal outcomes within ± 5% for ≥ 90% of exposures at the next formal revaluation.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Collateral coverage deterioration identified within 1 business day of the triggering market movement, compared to identification at the next scheduled formal appraisal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/collateral-security-data/collateral-registry-completeness-check" id="scenario-collateral-registry-completeness-check" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Collateral Registry Completeness Check</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent scans the collateral registry daily against the loan book to identify secured facilities where collateral linkage is missing, valuations are overdue for refresh, or legal registration records are absent. The credit operations team receives a prioritized gap list by collateral type and facility size. Each gap carries an SLA for remediation based on the proximity of the next LTV covenant test or ECL assessment date.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Collateral records are maintained across the collateral registry and core banking systems; completeness checks are performed manually at quarter-end ahead of ECL and LTV reporting cycles. Between cycles, newly disbursed secured facilities may carry incomplete collateral linkage, overdue valuations, or missing legal registration data. These gaps surface as last-minute remediation items during the reporting close, compressing the time available for credit quality assessment.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the secured loan population from core banking and cross-references each facility against the collateral registry — checking collateral linkage, last-valuation date against required refresh frequency by collateral type, and legal registration status. Facilities with gaps are ranked by outstanding balance and proximity to the next LTV or ECL assessment. The credit operations team receives a daily prioritized work list with gap type, SLA, and responsible owner, and confirms and closes each gap.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The collateral registry carries complete, current records for every secured facility, with gaps identified for the credit operations team and remediated before the next LTV covenant test or ECL assessment date.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces daily collateral completeness reports covering 100% of the secured loan population for ≥ 48 weeks within the first 12 months; gap detection active across all collateral types from go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of flagged gaps confirmed as requiring remediation by the credit operations team; false-positive rate on gap flags ≤ 10% within 3 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Collateral completeness check cycle reduced from quarterly manual review to a daily automated scan; remediation backlog at quarter-end reduced to ≤ 5% of the secured portfolio within 6 months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/collateral-security-data/collateral-ltv-covenant-watch" id="scenario-collateral-ltv-covenant-watch" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Collateral LTV Covenant Watch</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent monitors LTV ratios on commercial real estate and financial security collateral on a continuous basis, flagging facilities approaching covenant breach thresholds and generating a pre-breach notice for the relationship manager (RM). For financial securities, the AI agent applies current market prices daily; for commercial real estate, it estimates the current value between formal appraisal cycles using index adjustments. The RM uses the notice to initiate borrower dialogue before a formal covenant event is triggered.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>LTV covenant monitoring for real estate collateral relies on annual formal appraisals; between cycles the Bank carries LTV uncertainty as property market conditions move. Financial securities collateral updates daily from market prices but LTV monitoring against covenant thresholds is a manual step performed by credit analysts. Facilities approaching breach thresholds are identified reactively — at the point of breach rather than in advance — limiting the Bank's ability to manage the credit event proactively.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent retrieves outstanding balances from core banking and current collateral values — market price for financial securities, index-adjusted estimate for commercial real estate — and calculates the current LTV for each secured facility. Facilities within a defined proximity band of the covenant threshold are flagged in a daily watch list ranked by headroom remaining. For each flagged facility, the AI agent drafts a pre-breach notice summarizing the current LTV, the covenant threshold, and the estimated market movement required to trigger a formal event. The RM reviews and initiates borrower dialogue as appropriate.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Relationship managers receive early warning of LTV covenant proximity on all secured facilities, enabling proactive borrower engagement before formal covenant breach events materialize.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces daily LTV watch lists covering 100% of LTV-covenanted facilities for ≥ 48 weeks within 12 months; index-adjusted commercial real estate (CRE) estimation methodology approved by credit risk within 90 days of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of pre-breach notices acted on by RMs within the defined response window; RM confirmation that index-adjusted LTV estimates are directionally reliable in ≥ 85% of cases reviewed.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>LTV monitoring cadence for CRE collateral shifted from annual formal appraisal review to a continuous index-adjusted daily watch; pre-breach notice issued ≥ 30 days before formal covenant event in ≥ 90% of breach cases within 6 months.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="counterparty-group-exposure">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Counterparty &amp; group exposure</h2>
+    <p class="l3-section__intent">The aggregated credit exposure to a single counterparty or connected group of counterparties — consolidating on-balance-sheet loans and commitments, off-balance-sheet contingent liabilities, derivative mark-to-market exposure, and trade finance obligations — measured against single-name and group limits. Large-exposure limits commonly cap a single counterparty or connected group at 25% of Tier 1 capital; positions approaching this threshold typically trigger enhanced monitoring and supervisory notification. Aggregation across product types and entity hierarchies is the primary data challenge.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/counterparty-group-exposure/large-exposure-limit-utilisation-report" id="scenario-large-exposure-limit-utilisation-report" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Large-Exposure Limit Utilization Report</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates the monthly large-exposure limit utilization report for the Risk Committee and the supervisory submission, covering all single-name and group exposures above 10% of Tier 1 capital with utilization ratios, headroom, and trend commentary. The risk officer reviews the draft report and adds qualitative context; the AI agent handles data assembly and the utilization narrative. The report is formatted to the regulator's large-exposure reporting template.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The large-exposure limit utilization report is assembled manually each month by the credit risk team, aggregating exposure data across product types and formatting the utilization table and narrative for the Risk Committee pack and the supervisory submission. The assembly step — pulling current exposures, calculating utilization ratios, and drafting the trend commentary — consumes two to three analyst days each cycle and is compressed when the Risk Committee pack deadline follows the month-end data close by fewer than five business days.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the consolidated counterparty and group exposure statement, retrieves the current Tier 1 capital figure from the capital reporting system, calculates utilization ratios against single-name and group limits, and identifies exposures above the 10% reporting threshold. It drafts the utilization table and a trend commentary section noting month-on-month movements above a defined threshold. The risk officer reviews the draft, adds qualitative context, and approves for Risk Committee submission and regulatory filing.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Risk Committee and the regulator receive a complete, formatted large-exposure utilization report on each monthly cycle with analyst capacity directed to qualitative review rather than data assembly.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-assembled large-exposure reports delivered for ≥ 12 consecutive monthly cycles within the first year; the regulator's template formatting applied from go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of report drafts accepted by the risk officer without material data amendments; utilization calculations validated against manual checks in ≥ 95% of cases in the first quarter.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Report assembly time reduced from 2–3 analyst days to ≤ half a day of review and approval per cycle within 3 months of go-live.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/counterparty-group-exposure/counterparty-group-aggregation" id="scenario-counterparty-group-aggregation" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Counterparty Group Exposure Aggregation</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent aggregates on-balance-sheet loans and commitments, off-balance-sheet contingent liabilities, derivative MTM exposure, and trade finance obligations for each counterparty and connected group on a weekly cadence, producing a consolidated exposure statement measured against single-name and group limits under large-exposure requirements. The credit risk team uses the statement to monitor the large-exposure limit, commonly 25% of Tier 1 capital, and to prepare the supervisory notification when positions approach it.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Aggregating total counterparty exposure across product types — loans, derivatives, letters of credit, guarantees — requires joining records from core banking, treasury, trade finance, and the derivatives ledger. The aggregation is performed manually by the credit risk team ahead of each monthly reporting cycle. Connected-party group hierarchies are maintained separately in the entity management system; mapping each counterparty to its group and consolidating group-level exposure is an additional manual step. Positions approaching the 25% limit are identified at the monthly cycle rather than on a continuous basis.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads exposure records from core banking, the derivatives ledger, trade finance, and the off-balance-sheet commitment register, resolves each counterparty to its connected group using the entity hierarchy, and produces a consolidated exposure statement by counterparty and group. Positions crossing 20% of Tier 1 capital (the early-warning threshold) are flagged with a pre-notification brief for the credit risk officer. The credit risk team validates the weekly statement, which is formatted for the Risk Committee pack and for supervisory notification under large-exposure requirements.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The credit risk team holds a current, product-complete view of single-name and group exposures measured against large-exposure limits, with pre-notification briefs generated before the supervisory threshold is reached.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces weekly consolidated exposure statements covering all product types for ≥ 48 weeks within 12 months; connected-group hierarchy ingested from the entity management system and applied from go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 90% of exposure aggregations validated by the credit risk team as complete and accurate against manual cross-checks in the first quarter; pre-notification briefs issued for 100% of positions crossing the 20% early-warning threshold.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Exposure aggregation cycle reduced from monthly manual consolidation to a weekly automated run; large-exposure monitoring posture shifted from reactive monthly identification to continuous weekly tracking within 3 months of go-live.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/counterparty-group-exposure/connected-party-group-mapping" id="scenario-connected-party-group-mapping" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Connected-Party Group Mapping</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes ownership and control data from the entity registry and beneficial ownership records, applying FIBO entity relationship structures, to identify connected-party groups that are not captured in the current manual hierarchy. The credit risk team uses the AI-generated group map to update the entity hierarchy before the next large-exposure aggregation cycle. Groups with incomplete or stale ownership data are flagged for CDE refresh.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Connected-party group hierarchies rely on ownership and control data maintained in the entity registry; groups are defined manually when relationships are identified during KYC or credit review. Groups where ownership structures are opaque, where control is exercised through nominees or intermediate holding companies, or where group membership has changed since the last review are not reliably captured. Large-exposure rules commonly require connected groups to be aggregated even where direct ownership falls below formal thresholds if control is exercised in other ways.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads entity ownership, control, and beneficial ownership records from the KYC system and entity registry, applies FIBO entity relationship structures to identify indirect ownership chains and control relationships, and generates a proposed group map for entities where the current hierarchy is absent or where ownership data has changed since the last review. The credit risk team reviews and approves proposed group assignments before they are applied to the exposure aggregation. Entities where beneficial ownership data is missing or expired are flagged for CDE refresh.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The connected-party group hierarchy is kept current and accurate through monthly analysis of ownership and control records, with new and updated group relationships identified for the credit risk team before each large-exposure aggregation cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces group mapping proposals on a monthly cadence covering all entities with ownership changes or absent hierarchy entries for ≥ 12 consecutive months; FIBO relationship model applied from go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of proposed group assignments confirmed as correct by the credit risk team on first review; beneficial ownership data gap flags actioned in ≥ 85% of cases within one KYC refresh cycle.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Connected-party group hierarchy review cycle reduced from ad hoc manual updates to a monthly structured pass; ownership changes reflected in the proposed group map within one monthly cycle of the registry or KYC update.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="ecl-provision-data">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">ECL &amp; provision data</h2>
+    <p class="l3-section__intent">The expected credit loss calculation and provision balance under IFRS 9 — produced quarterly from PD, LGD, EAD, and forward-looking macroeconomic adjustment factors, staged by SICR trigger assessment (Stage 1, 2, and 3). ECL provision data drives the Bank's impairment charge, regulatory capital deductions, and Pillar 3 disclosures. The quarterly provision narrative — explaining stage movements, macro overlay assumptions, and variance to the prior quarter — is consumed by the Audit Committee, external auditors, and supervisory authorities. Its production requires cross-referencing model outputs, staging flow data, and prior disclosures across finance and credit risk teams.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/ecl-provision-data/macro-overlay-sensitivity-brief" id="scenario-macro-overlay-sensitivity-brief" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Macro Overlay Sensitivity Brief</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent produces a sensitivity brief quantifying the ECL provision impact of varying the macro overlay assumptions — GDP growth, unemployment, and commodity price inputs — across the base, downside, and severe downside scenarios. The brief enables the Audit Committee and finance leadership to assess provision sensitivity before approving the quarterly overlay assumptions. The credit risk team uses the brief to support the overlay calibration decision and to document the basis for the selected assumptions.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>IFRS 9 forward-looking macro adjustments require a bank to apply probability-weighted macro scenarios to ECL calculations. The overlay calibration decision — selecting the scenario weights and input values — is reviewed by the Audit Committee and finance leadership each quarter. The provision sensitivity to different overlay assumptions is calculated manually by the credit risk team for the scenarios under consideration; the calculation scope is limited by the time available within the quarterly close window.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the approved scenario framework, retrieves the macro input ranges for GDP, unemployment, and commodity price under each scenario weight, and runs a parametric sensitivity calculation showing provision movement per unit change in each macro input. It produces a structured sensitivity brief: a scenario sensitivity table by portfolio segment, a commentary on the scenarios driving the largest provision swing, and a comparison to the prior quarter's overlay assumptions and their outturn. The credit risk team uses the brief in the overlay calibration discussion and as supporting documentation for the selected assumptions.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Audit Committee and finance leadership make the quarterly macro overlay calibration decision with access to a structured sensitivity brief covering the full scenario range, with the calculation delivered within the close window.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent delivers the macro overlay sensitivity brief for ≥ 4 consecutive quarterly ECL cycles within the first year; sensitivity calculation methodology reviewed and approved by model risk within 60 days.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of sensitivity briefs used by the credit risk team in the overlay calibration discussion without material supplementary calculations; Audit Committee confirms sensitivity brief addresses scenario questions in ≥ 3 of 4 cycles.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Macro sensitivity calculation time within the quarterly close reduced from 1–2 days of manual calculation to ≤ 4 hours of automated run and review.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/ecl-provision-data/exposure-aggregation-narrative" id="scenario-exposure-aggregation-narrative" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">ECL Provision Narrative</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent assembles the quarterly IFRS 9 ECL provision narrative — stage movements, macro overlay rationale, and variance to prior quarter — for finance controller and CRO review. The narrative is generated in the prescribed format from model outputs, staging flow data, and prior disclosures. The finance controller and CRO review and sign off before disclosure.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The quarterly IFRS 9 ECL narrative requires cross-referencing model outputs, staging flow data, macro overlay assumptions, and prior disclosures. Inconsistencies between the model output view and the prior-quarter disclosure framing are identified late in the drafting process. The narrative drafting consumes substantial analyst hours per cycle before sign-off.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads current ECL model outputs, staging flow data, macro overlay assumptions, and prior quarter disclosures. It generates the IFRS 9 provision narrative in the prescribed format — stage movement explanation, macro overlay rationale, and variance analysis relative to the prior quarter. The finance controller and CRO review the AI-generated narrative and sign off before disclosure.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The finance controller and CRO review an AI-assembled quarterly IFRS 9 ECL provision narrative — covering stage movements, macro overlay rationale, and variance to prior quarter — in the prescribed disclosure format before sign-off.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces the IFRS 9 provision narrative for 100% of quarterly disclosure cycles within 12 months of go-live; stage movement, macro overlay, and variance sections included in each output.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of narratives accepted by the finance controller and CRO without material amendment to the quantitative sections; macro overlay rationale rated as accurately described in ≥ 90% of cycles.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Narrative drafting time reduced from substantial analyst hours per cycle to ≤ 4 hours of finance controller and CRO review per quarterly cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/ecl-provision-data/ecl-stage-movement-analysis" id="scenario-ecl-stage-movement-analysis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">ECL Stage Movement Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes quarterly IFRS 9 stage flow data — the population and balance movements between Stage 1, Stage 2, and Stage 3 — and produces a structured stage movement commentary for the Audit Committee and external auditors. The commentary explains the SICR triggers driving Stage 2 inflows, the cures and write-offs driving Stage 3 outflows, and the net provision impact of each flow. The credit risk team reviews the draft commentary and adds forward-looking context before Audit Committee submission.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/#expected-credit-loss">Expected credit loss</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The quarterly ECL provision narrative requires a detailed analysis of stage movements — which facilities moved between IFRS 9 stages, what SICR triggers drove Stage 2 inflows, and what the provision impact was by portfolio segment. Assembling the stage flow analysis from the ECL model output and provision system requires the credit risk and finance teams to join staging, PD, and balance data across multiple systems. The narrative drafting step follows the data assembly and consumes senior risk officer time that could be directed to analytical interpretation.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the quarterly staging flow data from the ECL system — opening and closing stage populations, transfers by direction and SICR trigger type, and provision balance movements — and produces a structured stage movement commentary: a flow table by portfolio segment, a SICR trigger attribution section, and a provision impact summary. The credit risk team reviews the draft, adds forward-looking context on portfolio quality trends, and approves for Audit Committee and external auditor submission.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Audit Committee and external auditors receive a structured, data-grounded stage movement commentary on each quarterly ECL cycle, with analyst capacity directed to interpretation and forward-looking assessment.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces stage movement commentary for ≥ 4 consecutive quarterly ECL cycles within the first year; SICR trigger attribution logic validated by credit risk within 60 days of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 80% of draft commentaries accepted by credit risk as factually complete without data amendments; Audit Committee feedback confirms commentary addresses stage movement questions in ≥ 3 of 4 quarterly cycles.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Stage movement data assembly and commentary drafting cycle reduced from 3–4 analyst days to ≤ 1 day of review and approval per quarter.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="credit-parameter-inputs">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Credit parameter inputs (PD/LGD/EAD)</h2>
+    <p class="l3-section__intent">The probability of default (PD), loss given default (LGD), and exposure at default (EAD) estimates — produced by IRB models where the Bank uses internal ratings — that are consumed by regulatory capital computation (RWA), IFRS 9 ECL staging, and risk-adjusted pricing. Under the Basel III Pillar 1 IRB framework and supervisory model approval requirements, PD/LGD/EAD parameters are generated from approved models, monitored for performance against approved benchmarks, and recalibrated when performance deteriorates below supervisory thresholds. The parameters are regenerated monthly and consumed by capital, credit risk, and finance teams.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/credit-parameter-inputs/credit-parameter-review-brief" id="scenario-credit-parameter-review-brief" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Credit Parameter Review Brief</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Where the Bank uses internal-ratings (IRB) models, the AI agent assembles the quarterly PD/LGD/EAD model performance review pack — actual versus predicted default rates, back-test results, and recalibration triggers — for the model validation committee. The pack is assembled in the format required by applicable model governance requirements. The model validation officer reviews the AI-assembled pack and adds professional judgment on recalibration decisions before committee submission.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/#model-risk">Model risk management</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The quarterly IRB model performance review requires the model risk team to extract back-test outputs, compare predicted PD/LGD/EAD against observed outcomes, and assess whether performance thresholds defined in the model approval require recalibration. The assembly of the review pack from multiple model output systems is a manual data consolidation exercise that consumes model validation team capacity before each committee cycle. Deadline pressure limits the depth of validation analysis.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads back-test results, predicted versus observed default and loss rates, and model performance thresholds from the model risk system. It assembles the review pack in the prescribed format — per-model performance summary, threshold breach flags, and recalibration recommendation triggers under applicable model governance requirements. The model validation officer reviews the AI-assembled pack and adds professional judgment on recalibration decisions before committee submission.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The model validation committee receives an AI-assembled PD/LGD/EAD performance review pack in the prescribed supervisory format, enabling the model validation officer to concentrate review capacity on recalibration judgment rather than data assembly.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent assembles the quarterly model performance review pack for 100% of in-scope IRB models across all four quarters within the first 12 months; delivery completed ≥ 5 business days before each committee cycle.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of AI-assembled packs accepted by the model validation officer without material amendment to the quantitative sections; recalibration trigger flags validated as accurate in ≥ 90% of cases.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Review pack assembly time reduced from days of manual data consolidation to ≤ 4 hours of model validation officer review per quarterly cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/credit-parameter-inputs/pd-lgd-ead-output-quality-gate" id="scenario-pd-lgd-ead-output-quality-gate" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">PD/LGD/EAD Output Quality Gate</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent validates each monthly PD, LGD, and EAD parameter run against a defined set of quality rules — population completeness, parameter distribution plausibility, and cross-system consistency with prior-month values — before the outputs are consumed by IFRS 9 staging and, where the Bank uses internal-ratings (IRB) models, by capital computation. Validation failures are routed to the model operations team with a failure description and the downstream impact if the parameter run proceeds uncorrected.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>PD, LGD, and EAD parameters are regenerated monthly; each run is consumed directly by RWA capital computation and IFRS 9 ECL staging. Quality validation before consumption is a manual review step performed by the model operations team, checking that the population is complete, that parameter distributions fall within expected ranges, and that month-on-month movements are within acceptable bounds. The review is time-constrained within the month-end close window; anomalous parameter outputs that pass the manual review propagate into capital and ECL calculations.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the completed PD, LGD, and EAD parameter run and applies a defined quality rule set: population count against prior month and expected portfolio size, distribution percentile checks against approved benchmark bands, and month-on-month movement flags for parameters exceeding a defined threshold. Failures are routed to the model operations team as a structured quality report — failure type, affected segment or model, and the capital and ECL impact of proceeding with the flagged output. The parameter run is cleared for downstream consumption only after the team resolves or accepts each flagged item.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">PD, LGD, and EAD parameter runs pass a structured quality gate before downstream consumption, with anomalies identified and resolved within the month-end close window.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent applies the quality gate to 100% of monthly parameter runs for ≥ 12 consecutive months within the first year; quality rule set approved by model risk within 60 days of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 90% of quality failures confirmed as genuine anomalies requiring resolution by the model operations team; false-positive rate on quality flags ≤ 8% within 3 months of go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Manual quality review step replaced by automated gate for ≥ 95% of parameter runs within 6 months; gate output delivered within 2 hours of parameter run completion, ahead of the downstream consumption window.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:banking-data-analytics/credit-exposure-data/credit-parameter-inputs/irb-model-performance-monitor" id="scenario-irb-model-performance-monitor" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">IRB Model Performance Monitor</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">Where the Bank uses internal-ratings (IRB) models, the AI agent monitors PD, LGD, and EAD model performance against approved benchmarks on a monthly cadence, producing a model performance dashboard for the model risk and credit risk teams. The dashboard flags models where discriminatory power, calibration, or stability metrics have deteriorated below supervisory thresholds, triggering the model review process under supervisory model approval requirements. The model risk team uses the dashboard as the primary input to the quarterly model review agenda.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>IRB model performance monitoring requires the model risk team to calculate Gini coefficients, Brier scores, PSI, and calibration metrics for each approved PD, LGD, and EAD model against the approved performance benchmarks. The calculation is performed quarterly using validation cohort data; deterioration in model performance between quarterly reviews is not detected until the next scheduled run. Supervisory model approval frameworks expect timely identification and escalation of performance breaches.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the monthly PD, LGD, and EAD outputs for each approved model, retrieves the corresponding validation cohort outcomes, and calculates discriminatory power (Gini, AUC), calibration (mean predicted vs actual default rate), and stability (PSI) metrics. Models where any metric crosses the threshold defined in the approved model documentation are flagged with a model review trigger. The monthly dashboard is structured for the model risk team, which confirms each review trigger, and is formatted for inclusion in the quarterly model review agenda submitted to the regulator under model approval reporting requirements.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Model performance deterioration across the IRB parameter set is identified for the model risk team at a monthly cadence, with review triggers generated before the quarterly regulatory model review cycle.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>The AI agent produces monthly model performance dashboards covering 100% of approved PD, LGD, and EAD models for ≥ 12 consecutive months within the first year; metric calculations aligned to approved model documentation thresholds from go-live.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥ 85% of performance breach flags confirmed as requiring model review by the model risk team; metric calculations validated against manual quarterly calculations in ≥ 95% of cases in the first two quarters.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Performance monitoring cadence shifted from quarterly manual calculation to a monthly automated run; breach detection lead time extended from zero (detected at quarterly review) to up to 2 months before the next scheduled review cycle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+</div>
+<footer class="o-footer">
+      <span class="foot-text">AI Competence Center, O!Bank. Version 2.2, 2026. <a class="contact" href="mailto:talimbayev@obank.kg?subject=Competence%20Center%20portal%20%5BX2EXW%5D%20page%20feedback">Contact us</a> <a class="contact" href="../../../center/privacy/">Privacy</a> <a class="contact" href="../../../center/terms-of-use/">Terms of use</a></span>
+      <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: X2EXW</span></button>
+    </footer></main></div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Center portal [X2EXW] page feedback" data-ref="X2EXW" data-page="Credit &amp; exposure data">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: X2EXW</code><button type="button" class="fb-copy" data-copy-text="X2EXW">Copy</button></div>
+    <div class="fb-body"><p>Provide feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>
+  </form>
+</dialog>
+</body></html>

@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>Liquidity management · Discovery Catalog</title>
+<script>try{var t=localStorage.getItem('aicc-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../assets/styles/tokens.css">
+<link rel="stylesheet" href="../../assets/styles/components.css">
+<link rel="stylesheet" href="../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern.css">
+<link rel="stylesheet" href="../../assets/styles/layouts/concern-l2.css">
+
+<link rel="stylesheet" href="../../../../assets/ui/fonts.css">
+<link rel="stylesheet" href="../../../../assets/ui/tokens.css">
+<link rel="stylesheet" href="../../../../assets/ui/primitives.css">
+<link rel="stylesheet" href="../../../../assets/ui/workspace.css">
+<link rel="stylesheet" href="../../../../assets/charter.css?v=99f0026a">
+<link rel="stylesheet" href="../../../../assets/neighbours.css?v=d325da5e">
+
+<link rel="alternate" hreflang="ru" href="../../../../ru/discovery/finance-treasury/liquidity-management/">
+<script src="../../../../assets/site.js?v=7885dba4" defer data-search="../../../../assets/search-discovery-en.json" data-search-all="../../../../assets/search-center-en.json ../../../../assets/search-discovery-en.json ../../../../assets/search-portfolio-en.json ../../../../assets/search-program-en.json ../../../../assets/search-lab-en.json" data-search-names="Competence Center|Discovery Catalog|Portfolio|Program|AI Lab" data-t-none="No page matches the query." data-t-light="Light theme" data-t-dark="Dark theme" data-t-copied="Copied" data-t-mail-body="Page: {title}
+Reference: {ref}
+Address: {url}
+
+Question or comment:
+" data-t-dz-close="Close"></script>
+<link rel="stylesheet" href="../../../../assets/discovery.css?v=e6c81b23">
+<script defer src="../../../../assets/discovery.js"></script>
+</head><body class="portal-workspace discovery-workspace page--concern page--concern-l2" data-portal-section="discovery">
+<a class="o-skip" href="#main">Skip to content</a>
+<header class="o-header">
+  <a class="o-identity" href="../../../"><img src="../../../../assets/ui/assets/logos/o-mark.svg" width="34" height="38" alt=""><span>AI Competence Center</span></a>
+  <span class="header-scope">Discovery Catalog</span><span class="status-chip" title="This page and the records it shows are drafts: nothing in them is decided, approved or accepted">Draft</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Search this section</label><input id="q" type="search" autocomplete="off" placeholder="Search this section" aria-controls="results"><label class="search-scope"><input id="q-all" type="checkbox"><span>All sections</span></label><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><nav class="lang-switch" aria-label="Language"><a lang="en" hreflang="en" href="./" aria-current="true">EN</a><a lang="ru" hreflang="ru" href="../../../../ru/discovery/finance-treasury/liquidity-management/">RU</a></nav><button id="theme-switch" type="button" class="theme-switch" aria-label="Dark theme" title="Dark theme"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg>
+</span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Sections of the site</summary><nav class="portal-sections" aria-label="Sections"><div class="portal-nav-group">
+<a class="portal-section-link" data-section="center" href="../../../center/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 10h.01" />
+  <path d="M12 14h.01" />
+  <path d="M12 6h.01" />
+  <path d="M16 10h.01" />
+  <path d="M16 14h.01" />
+  <path d="M16 6h.01" />
+  <path d="M8 10h.01" />
+  <path d="M8 14h.01" />
+  <path d="M8 6h.01" />
+  <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" />
+  <rect x="4" y="2" width="16" height="20" rx="2" />
+</svg>
+<span>Competence Center</span></a></div><div class="portal-nav-group is-current">
+<a class="portal-section-link" data-section="discovery" href="../../" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 21-4.34-4.34" />
+  <circle cx="11" cy="11" r="8" />
+</svg>
+<span>Discovery Catalog</span></a><div class="portal-local-nav"><a href="../../">Overview</a><a href="../../strategic-portfolio/">Strategic Banking Portfolio</a><a href="../../strategic-initiatives/">Strategic Initiatives &amp; Transformation</a><a href="../../value-streams/">Operational Value Streams</a><a href="../../customer-market-intelligence/">Customer &amp; Market Intelligence</a><a href="../../customer-channels/">Customer &amp; Channels</a><a href="../../risk-control/">Risk &amp; Control</a><a href="../../shared-banking-capabilities/">Shared Banking Capabilities</a><a href="../" aria-current="true">Finance &amp; Treasury</a><a href="../../banking-data-analytics/">Banking Data &amp; Analytics</a><a href="../../regulatory-horizon/">Regulatory Horizon</a></div></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="portfolio" href="../../../portfolio/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+<span>Portfolio</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="program" href="../../../program/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg>
+<span>Program</span></a></div><div class="portal-nav-group">
+<a class="portal-section-link" data-section="lab" href="../../../lab/"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+</svg>
+<span>AI Lab</span></a></div></nav></details><div class="nav-foot"><div class="nav-legal"><a href="../../../center/privacy/">Privacy</a><a href="../../../center/terms-of-use/">Terms of use</a></div><p class="o-caption">Version 2.2 · October 2026</p></div></aside>
+<main class="o-main neighbour-main" id="main" tabindex="-1"><div class="discovery-content">
+
+<div class="page">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <span class="breadcrumb__item">
+    <a class="breadcrumb__link" href="../../index.html">Discovery Catalog</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a class="breadcrumb__link" href="../index.html">Finance &amp; Treasury</a>
+  </span>
+  <span class="breadcrumb__item">
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span class="breadcrumb__current" aria-current="page">Liquidity management</span>
+  </span>
+</nav>
+</div>
+<header class="page-header">
+  <div class="page-header__title-row">
+    <div>
+      <h1 class="page-header__title">Liquidity management</h1>
+    </div>
+  </div>
+  <p class="page-header__intent">Liquidity management is the Bank's discipline for maintaining sufficient liquid assets and diversified funding to meet obligations under both normal and stressed conditions. The Treasurer monitors LCR and NSFR ratios daily against regulatory minima, manages the HQLA portfolio, and operates the Contingency Funding Plan. <strong>The GenAI opportunity is continuous liquidity intelligence — automating the daily reporting cycle, compressing stress scenario analysis, and surfacing slow-burn composition trends before they breach regulatory thresholds.</strong></p>
+</header>
+<style>
+  #problems-tab-cash-liquidity-position:checked ~ .problems-tab-bar label[for="problems-tab-cash-liquidity-position"] {
+    color: var(--ink-accent);
+    border-bottom-color: var(--ink-accent);
+    background: var(--paper-blue-soft);
+    font-weight: 600;
+  }
+  #problems-tab-cash-liquidity-position:checked ~ .problems-panel[data-tab="cash-liquidity-position"] {
+    display: block;
+  }
+</style>
+<section class="concern-problems" aria-label="Problems">
+  <input type="radio" class="problems-tab-input" name="problems-tabs" id="problems-tab-cash-liquidity-position" value="cash-liquidity-position" checked aria-label="Cash &amp; liquidity position">
+  <div class="problems-tab-bar" role="tablist">
+    <label class="problems-tab-label" for="problems-tab-cash-liquidity-position" role="tab" aria-controls="problems-panel-cash-liquidity-position">Cash &amp; liquidity position</label>
+  </div>
+  <hr class="problems-divider">
+  <div class="problems-panel" id="problems-panel-cash-liquidity-position" data-tab="cash-liquidity-position" role="tabpanel" aria-labelledby="problems-tab-cash-liquidity-position">
+    <div class="discovery-context-grid"><article class="discovery-context-card"><h3>Insights &amp; analytics</h3><p>Slow-burn funding composition trends — time-deposit migration to on-demand, deposit beta acceleration, or wholesale funding concentration growth — are identified at the quarterly stress refresh cycle, not as they develop. The Treasurer's daily view covers ratio compliance but not the trajectory of the inputs driving the ratio.</p></article><article class="discovery-context-card"><h3>Enablement</h3><p>When HQLA moves materially overnight — from repo, deposit concentration change, or wholesale maturity — attributing the movement to its source requires the treasury operations team to cross-reference treasury, funding, and cash management systems manually. The answer arrives after the morning meeting, not before.</p></article><article class="discovery-context-card"><h3>Automation</h3><p>The daily liquidity report — covering LCR, NSFR, HQLA composition, deposit flows, and funding maturities — is assembled each morning from system exports by a treasury operations team. The assembly consumes two to three hours before the Treasurer's review window opens. The report's structure is prescribed and inputs are known.</p></article><article class="discovery-context-card"><h3>New business opportunities</h3><p>Banks with continuous deposit composition and funding maturity visibility can optimize HQLA portfolio yield and funding cost within regulatory buffers in real time. Deposits repricing ahead of maturity, short-tenor wholesale funding extending opportunistically, and HQLA rebalancing between asset classes each require a current position view to execute with precision.</p></article></div>
+  </div>
+</section>
+<div id="main-content" class="l3-sections" aria-label="Sub-concerns">
+<section class="l3-section" id="daily-lcr-nsfr">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Daily LCR &amp; NSFR monitoring</h2>
+    <p class="l3-section__intent">Daily LCR and NSFR ratio compliance is the Treasurer's primary regulatory obligation — maintained against the regulator's minima and internal management thresholds. The daily report covers ratio levels, HQLA composition, inflow and outflow drivers, and the overnight movement attribution that the Treasurer reviews before markets open.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/daily-lcr-nsfr/daily-lcr-nsfr-monitoring" id="scenario-daily-lcr-nsfr-monitoring" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Daily LCR / NSFR Monitoring &amp; Commentary</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates the daily LCR and NSFR commentary for the Treasurer — ratio movement attribution, HQLA composition note, regulatory buffer position, and ALCO-format narrative — from overnight system feeds.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The daily liquidity report covering LCR, NSFR, HQLA composition, and overnight ratio movement is assembled by treasury operations from multiple systems each morning. The assembly and drafting cycle delays the Treasurer's decision window on the day's funding and investment actions.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads overnight LCR and NSFR data feeds, attributes ratio movements to inflow, outflow, and HQLA changes, and generates the daily report and accompanying ALCO-format narrative in the Treasurer's house structure. HQLA classification against LCR and NSFR regulatory eligibility rules is applied automatically to surface rebalancing requirements; the report is available at system open for the Treasurer's review.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The daily LCR and NSFR report — covering ratio movement attribution, HQLA composition, regulatory buffer position, and ALCO-format narrative — is available to the Treasurer at system open each business day from overnight feeds.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced daily liquidity report delivered at system open for ≥220 trading days in year 1; ALCO-format narrative included in every daily output.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of daily reports accepted by the Treasurer as accurate without requiring manual restatement; ratio figures reconcile to the formal monthly liquidity report in ≥98% of checked periods.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Daily liquidity report available at system open vs. 1–2 hours post-open in the prior manual assembly process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/daily-lcr-nsfr/lcr-nsfr-driver-trend-analysis" id="scenario-lcr-nsfr-driver-trend-analysis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">LCR &amp; NSFR Driver Trend Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes the rolling twenty-trading-day history of LCR and NSFR movements to identify structural trends in inflow, outflow, and HQLA components — distinguishing seasonal patterns from persistent deterioration before the trend breaches a management threshold.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The daily liquidity report covers the overnight movement but does not contextualize it against the rolling trend. Persistent intra-month deterioration in a specific outflow category — such as retail deposit run-off or corporate line drawdowns — is visible in the daily report only as a sequence of individual movements that the Treasurer must manually aggregate to identify the structural direction.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent maintains a rolling twenty-trading-day history of each LCR and NSFR component. It applies a trend decomposition to distinguish seasonal from structural movements and surfaces any component where the twenty-day direction shows persistent deterioration against the prior equivalent period. The trend analysis is appended to the daily report as a supplementary section each morning and shared with the Treasurer and the Treasury liquidity desk. Threshold-crossing trends trigger a proactive alert before the monthly ALCO cycle.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Treasurer receives, with each daily liquidity report, a twenty-trading-day trend analysis of LCR and NSFR components that separates seasonal movements from persistent deterioration before a management threshold is breached.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced trend analysis appended to the daily report on ≥220 trading days in year 1; all inflow, outflow, and HQLA components covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of persistent-deterioration flags confirmed by the Treasurer as structural rather than seasonal; ≥90% of threshold-crossing trends alerted before the monthly ALCO cycle.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Structural trend direction visible each morning, vs. manual aggregation of individual daily movements by the Treasurer in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/daily-lcr-nsfr/lcr-buffer-optimisation-signal" id="scenario-lcr-buffer-optimisation-signal" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">LCR Buffer Optimization Signal</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent analyzes the HQLA portfolio composition and the current LCR calculation to identify Level 1 and Level 2 rebalancing opportunities that maintain the regulatory ratio while improving portfolio yield within the regulator's eligibility constraints.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The HQLA portfolio is managed to maintain LCR compliance, but the composition between Level 1 central bank reserves, Level 1 government securities, and Level 2 assets is not systematically optimized for yield within the regulatory framework. Over-allocation to central bank reserves above the minimum required buffer suppresses yield without adding regulatory benefit; the analysis to identify rebalancing opportunities requires a manual cross-reference of the current HQLA composition against the LCR calculation.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current HQLA portfolio composition, the daily LCR calculation inputs, and the applicable regulatory eligibility and haircut schedule. It computes the minimum required Level 1 balance for the current outflow base, identifies excess central bank reserves above that minimum, and presents a rebalancing signal — volume of excess reserves, eligible government securities that could replace them within Level 1, and the estimated yield pickup. The Treasurer reviews the signal and makes the reinvestment decision; the AI agent updates the analysis each day the excess persists.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Treasurer receives a rebalancing signal — the volume of central bank reserves held above the minimum required Level 1 balance, the eligible government securities that could replace them, and the estimated yield pickup — on each day the excess persists.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced rebalancing signal refreshed on ≥95% of business days on which excess reserves are identified in year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥75% of signals rated by the Treasurer as actionable for the reinvestment decision; proposed replacement securities confirmed as eligible under the regulatory haircut schedule in 100% of reviewed signals.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Rebalancing opportunity identified daily, vs. a manual cross-reference of HQLA composition against the LCR calculation in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="contingency-funding-plan">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Contingency Funding Plan (CFP)</h2>
+    <p class="l3-section__intent">The Contingency Funding Plan is the Bank's documented playbook for managing liquidity under stress — sequencing the contingent actions available to the Treasurer from HQLA disposal through emergency borrowing facilities, with estimated execution timelines and liquidity values per action. The regulator requires the CFP to be maintained, stress-tested, and available for supervisory review.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/contingency-funding-plan/cfp-annual-review-narrative" id="scenario-cfp-annual-review-narrative" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">CFP Annual Review Narrative</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent drafts the annual CFP review narrative for the regulator — covering changes to the action register, revised stress outflow estimates, test exercise results, and governance attestation — from current Treasury data and the prior submission as a style anchor.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The annual CFP review narrative is a regulatory-required document prepared by Treasury with CFO and CRO sign-off. Drafting draws on test exercise results, the current action register, and the prior submission for structural consistency. The process takes one to two weeks of Treasury time and is repeated as a manual drafting exercise each year.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current CFP action register with any changes from the prior year, the results of the most recent CFP test exercise, the current stress outflow estimates, and the prior-year approved CFP narrative as a style anchor. It generates a full draft covering the prescribed sections — governance, action register, stress estimates, test results, and attestation — and flags each change from the prior submission for explicit disclosure. Treasury reviews and edits; the AI agent handles the drafting cycle and version control.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">Treasury receives a full draft of the annual CFP review narrative — governance, action register, stress estimates, test results, and attestation — with each change from the prior submission flagged for explicit disclosure, ahead of CFO and CRO sign-off.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-drafted CFP review narrative used for ≥1 annual CFP review within year 1; all prescribed sections covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of drafted sections accepted by Treasury without material rewrite; changes from the prior submission flagged with ≥95% completeness on Treasury review.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Full draft available within 3 business days of the action register, test results, and stress estimates being final, vs. one to two weeks of Treasury drafting in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/contingency-funding-plan/cfp-stress-analysis" id="scenario-cfp-stress-analysis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--enablement">Enablement</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Contingency Funding Plan Stress Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent runs liquidity stress scenarios against current position data and produces the CFP narrative — survival horizon, trigger conditions, and contingent action inventory — for ALCO and regulatory review.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Stress-scenario liquidity analysis for the Contingency Funding Plan is produced quarterly — and ad hoc after a market event — by cross-referencing the stress model, HQLA inventory, funding concentration data, and the documented contingent action list. Each production run is manual and the output is current only at point-in-time.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the liquidity stress model, current HQLA inventory, funding maturity profile, and contingent action list. It runs the prescribed stress scenarios, computes survival horizons per scenario, identifies assumptions that drive the most adverse outcomes, and generates the CFP narrative sections. The Treasurer checks the generated analysis and ALCO reviews it before approving the submission; the AI agent is re-run on demand following a material market event.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Contingency Funding Plan stress analysis — survival horizon, trigger conditions, and contingent action inventory — is produced from current position data for each prescribed scenario and available for ALCO and regulatory review on demand, including after material market events.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced CFP stress analysis used for ≥4 scheduled quarterly reviews and all ad hoc requests triggered by material market events within year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of CFP stress narratives approved by the Treasurer without material amendment to the survival horizon calculation; scenario outputs reconcile to the liquidity stress model within ±2% on periodic validation.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>CFP narrative available for ALCO review within 2 business days of a stress run trigger, vs. 1–2 weeks of manual assembly in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/contingency-funding-plan/cfp-stress-action-sequencing" id="scenario-cfp-stress-action-sequencing" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">CFP Stress Action Sequencing</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent models the execution sequence and cumulative liquidity value of CFP contingent actions under each stress scenario — HQLA disposal, repo facility drawdown, emergency central bank borrowing — and identifies the minimum action set required to cover projected outflows within each stress horizon.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The CFP lists contingent actions with estimated liquidity values and execution timelines, but does not model the optimal sequencing of those actions under specific stress scenarios. ALCO and the Treasurer assess the adequacy of the CFP at annual review against a static stress outflow estimate, without a dynamic view of which action sequences are executable under market stress conditions.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the CFP action register with estimated liquidity values and execution timelines, and the stress scenario outflow projections by day from the current ILAAP. It models the execution sequence for each stress scenario, applying haircuts and timeline constraints to each action, and computes the cumulative liquidity coverage at each day of the stress horizon. Minimum action sets that cover projected outflows are identified for each scenario. ALCO and the Treasurer review the sequencing analysis at the annual CFP stress test review.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">ALCO and the Treasurer receive, for the annual CFP stress test review, a sequencing analysis showing cumulative liquidity coverage at each day of the stress horizon and the minimum set of contingent actions that covers projected outflows under each stress scenario.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced sequencing analysis used for ≥1 annual CFP stress test review within year 1; all ILAAP stress scenarios and CFP actions modeled.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of minimum action sets confirmed by the Treasurer as executable under stress conditions; haircuts and execution timelines reconcile to the CFP action register in ≥98% of reviewed actions.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Sequencing analysis available within 3 business days of the ILAAP outflow projections, vs. assessment against a static stress outflow estimate in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="investment-portfolio">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">HQLA portfolio &amp; investment management</h2>
+    <p class="l3-section__intent">The HQLA portfolio holds the securities and central bank reserves that constitute the Bank's liquid asset buffer under LCR and NSFR. Portfolio composition — between Level 1 assets (central bank reserves, government securities) and Level 2 assets — determines both the quality of the liquidity buffer and the yield the Bank earns on its surplus liquidity. Reinvestment decisions require cross-referencing portfolio yield, duration, market rates, and regulatory eligibility.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/investment-portfolio/hqla-portfolio-yield-duration-dashboard" id="scenario-hqla-portfolio-yield-duration-dashboard" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">HQLA Portfolio Yield &amp; Duration Dashboard</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent produces a daily HQLA portfolio dashboard covering current yield, duration, and spread-to-benchmark by asset class and regulatory tier, and flags positions where duration drift or credit spread widening has moved the portfolio outside its approved investment mandate.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The HQLA portfolio is monitored against LCR and NSFR eligibility but not systematically against the yield and duration parameters of the investment mandate. Duration drift from maturing instruments and mark-to-market spread movements are visible in the portfolio system but not surfaced in a daily management view that links portfolio composition to both regulatory eligibility and mandate compliance.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the portfolio position file and current market data feeds. It computes current weighted-average yield, duration, and spread-to-benchmark by Level 1 and Level 2 asset class, applies the Bank's investment mandate parameters, and flags any position or aggregate exposure that sits outside the mandate range. The dashboard is available to the Treasurer each morning alongside the daily LCR report. Mandate breaches trigger an immediate alert for remediation review; the Treasurer confirms or escalates each flag.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Treasurer receives a daily HQLA portfolio dashboard — yield, duration, and spread-to-benchmark by Level 1 and Level 2 asset class — with positions outside the approved investment mandate flagged, alongside the daily LCR report.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced dashboard available each morning on ≥220 trading days in year 1; all HQLA asset classes covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of mandate flags confirmed or escalated by the Treasurer as genuine; yield and duration figures reconcile to the portfolio system in ≥98% of sampled positions.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Duration drift and spread movements against the mandate visible each morning, vs. no daily management view linking composition to mandate compliance in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/investment-portfolio/hqla-reinvestment-decision-support" id="scenario-hqla-reinvestment-decision-support" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">HQLA Reinvestment Decision Support</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">When an HQLA instrument matures or a reinvestment window opens, the AI agent presents the Treasurer with a ranked set of eligible replacement instruments — government bonds, central bank facilities, and qualifying Level 2 securities — scored by yield, LCR haircut, duration fit, and regulatory eligibility under the regulator's rules.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>HQLA reinvestment decisions are made by the Treasurer from a manual scan of available instruments against the regulatory eligibility schedule and the current portfolio gap. The analysis takes two to four hours per decision and is made without a consistent scoring framework that weighs yield against haircut cost and duration fit simultaneously.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the maturing instrument details, the current portfolio composition, and the applicable regulatory eligibility and haircut schedule. It screens the universe of eligible instruments available in the market that day and scores each by yield-to-maturity, LCR haircut-adjusted return, duration fit to the portfolio target, and regulatory tier. The ranked shortlist and scoring rationale are presented to the Treasurer for the reinvestment decision. The Treasurer selects the instrument; the AI agent does not execute any transaction.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Treasurer receives, when an HQLA instrument matures or a reinvestment window opens, a ranked shortlist of eligible replacement instruments scored by yield-to-maturity, LCR haircut-adjusted return, duration fit, and regulatory tier, with the scoring rationale.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced shortlist used for ≥90% of HQLA reinvestment decisions in year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>Treasurer selects from the top three ranked instruments in ≥80% of decisions; eligibility and haircut classification confirmed correct in 100% of reviewed shortlists.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Ranked shortlist available within 30 minutes of the reinvestment trigger, vs. two to four hours of manual scanning per decision in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/investment-portfolio/hqla-stress-scenario-adequacy-check" id="scenario-hqla-stress-scenario-adequacy-check" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">HQLA Stress Scenario Adequacy Check</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent applies the Bank's LCR and ILAAP stress scenario outflow assumptions to the current HQLA portfolio — applying regulatory haircuts and sale-execution constraints — and reports whether the portfolio provides adequate liquidity coverage at each day of each stress horizon.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body"><p class="horizon-chip"><span>Regulatory Horizon:</span> <a href="../../regulatory-horizon/#capital-liquidity">Capital and liquidity reforms</a></p>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The HQLA portfolio is sized against the LCR minimum on a daily basis but is not regularly assessed against the multi-week stress horizons in the ILAAP. A portfolio that passes LCR on day one may prove insufficient after 10 or 20 days if the composition relies on Level 2 assets subject to daily sale volume constraints or market-liquidity haircuts under stress.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current portfolio composition, the ILAAP stress scenario outflow profiles by day across 30- and 90-day horizons, and the regulatory haircut and daily sale volume limits applicable to each asset class. It computes the projected net liquidity position at each day under each stress scenario, identifies the day and scenario where the net position first approaches or breaches zero, and produces a portfolio adequacy report for the Treasurer and ALCO. Results inform the next quarterly portfolio composition review.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Treasurer and ALCO receive a portfolio adequacy report showing the projected net liquidity position at each day of the 30- and 90-day ILAAP stress horizons, and the day and scenario where it first approaches or breaches zero, ahead of each quarterly portfolio composition review.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced adequacy report used for ≥4 quarterly portfolio composition reviews within year 1; all ILAAP stress scenarios covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of adequacy reports accepted by the Treasurer without material recalculation; haircuts and daily sale volume limits applied correctly in ≥98% of reviewed asset classes.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Multi-week stress adequacy assessed each quarter within 2 business days of the portfolio position date, vs. sizing against the daily LCR minimum only in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+<section class="l3-section" id="funding-strategy">
+  <header class="l3-section__head">
+    <h2 class="l3-section__title">Funding strategy &amp; wholesale mix</h2>
+    <p class="l3-section__intent">The funding strategy covers the Bank's mix of retail deposits, corporate deposits, wholesale term funding, and central bank facilities — and the pricing, tenor, and diversification decisions that minimize funding cost within LCR, NSFR, and concentration limits. The Treasurer presents a quarterly funding strategy memo to ALCO with recommendations on deposit pricing, wholesale issuance, and contingent facility utilization.</p>
+  </header>
+  <div class="scenarios-column-labels l3-section__column-labels" role="row" aria-hidden="true">
+    <span class="scenarios-col-label scenarios-col-label--lens">Lens</span>
+    <span class="scenarios-col-label scenarios-col-label--scenario">Scenario</span>
+    <span class="scenarios-col-label scenarios-col-label--intent">Intent</span>
+    <span class="scenarios-col-label scenarios-col-label--complexity">Complexity</span>
+  </div>
+  <div class="l3-section__scenarios">
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/funding-strategy/deposit-concentration-risk-insight" id="scenario-deposit-concentration-risk-insight" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--insights">Insights</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Deposit Concentration Risk Insight</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent monitors the retail and corporate deposit book for single-counterparty, sector, and geographic concentration against the Bank's approved funding concentration limits, and surfaces emerging concentrations before they breach the threshold reported to ALCO.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Deposit concentration analysis is a component of the quarterly funding strategy memo but is not monitored continuously between ALCO cycles. A single large corporate deposit that grows to represent a material share of the funding base, or a geographic concentration in a market exhibiting credit stress, may not be visible to the Treasurer until the quarterly memo is assembled.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current deposit register at the single-counterparty, sector, and geography level and computes concentration ratios against the Bank's approved limits. It produces a weekly concentration dashboard for the Treasurer identifying the top twenty depositors by balance, the top five sector concentrations, and any balance movement that has brought a concentration measure within 10% of the approved limit. Limit proximity alerts are issued immediately when the threshold is crossed, for the Treasurer to confirm. ALCO reviews the concentration analysis at each quarterly funding strategy session.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Treasurer receives a weekly deposit concentration dashboard — the top twenty depositors, the top five sector concentrations, and any measure within 10% of its approved limit — with an immediate alert when a limit proximity threshold is crossed.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced concentration dashboard delivered for ≥48 of 52 weeks in year 1; single-counterparty, sector, and geographic measures covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥85% of limit proximity alerts confirmed by the Treasurer as accurate; concentration ratios reconcile to the deposit register in ≥98% of sampled measures.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Emerging concentrations visible weekly, vs. only when the quarterly funding strategy memo is assembled in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/funding-strategy/wholesale-funding-maturity-ladder" id="scenario-wholesale-funding-maturity-ladder" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--automation">Automation</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Wholesale Funding Maturity Ladder</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent generates the forward wholesale funding maturity ladder — by instrument, counterparty, and tenor bucket — from current funding register data, identifies refinancing concentrations in the 90-day and 12-month buckets, and presents the ladder to the Treasurer each week, ahead of the quarterly ALCO funding strategy session.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--S" title="Complexity">S</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>The wholesale funding maturity profile is assembled from the funding register for each ALCO cycle, a process that requires data extraction across term deposits, repo agreements, medium-term notes, and, where the Bank issues them, covered bonds. Refinancing concentrations in near-term tenor buckets — where several instruments mature in the same two-week window — are identified during the assembly process rather than as a proactive signal that drives pre-emptive action.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the funding register across all wholesale instrument categories and constructs a daily maturity ladder by 7-day, 30-day, 90-day, 180-day, and 12-month tenor buckets. It identifies windows where refinancing concentration in any 14-day period exceeds a defined threshold relative to the HQLA buffer and presents the ladder and concentration flags to the Treasurer each week. ALCO reviews the ladder at the quarterly funding strategy session; the Treasurer uses the weekly output to plan pre-emptive issuance timing.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Treasurer receives a weekly forward wholesale funding maturity ladder — by instrument, counterparty, and tenor bucket — with refinancing concentrations in any 14-day window flagged against the HQLA buffer.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced maturity ladder delivered for ≥48 of 52 weeks in year 1 and reviewed at ≥4 quarterly ALCO funding strategy sessions; all wholesale instrument categories covered.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥90% of ladders accepted by the Treasurer without correction; maturities reconcile to the funding register in ≥98% of sampled instruments.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Refinancing concentrations flagged weekly, vs. identified only during assembly for each ALCO cycle in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+<details class="scenario-card" data-urn="urn:financial-services:scenario:finance-treasury/liquidity-management/funding-strategy/funding-strategy-scenario-analysis" id="scenario-funding-strategy-scenario-analysis" data-ui-pattern="scenario">
+  <summary class="scenario-card__summary">
+    <span class="scenario-lens scenario-lens--optimize">Optimize</span>
+    <div class="scenario-card__title-col">
+      <span class="scenario-card__chevron" aria-hidden="true">▸</span>
+      <h3 class="scenario-card__title">Funding Strategy Scenario Analysis</h3>
+    </div>
+    <div class="scenario-card__intent-col">
+      <p class="scenario-card__intent">The AI agent models the cost and regulatory-ratio impact of alternative funding mixes against the current cash forecast and market conditions, ranking options for the Treasury funding committee.</p>
+    </div>
+    <span class="scenario-complexity scenario-complexity--M" title="Complexity">M</span>
+  </summary>
+  <div class="scenario-card__body">
+    <div class="scenario-section">
+      <div class="scenario-section__label">Problem to solve</div>
+      <p>Funding mix scenario analysis is produced by Treasury analysts ahead of the weekly funding committee decision. The analysis window is constrained by the manual data update and ratio calculation cycle, limiting the range of scenarios the committee can consider within the available decision time.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">Solution</div>
+      <p>The AI agent reads the current cash forecast, market rates, deposit repricing data, and regulatory ratio headroom, and produces a ranked comparison of funding mix options — cost, LCR impact, NSFR impact, concentration risk, and maturity profile — for the funding committee. The committee reviews the comparison and selects the funding mix; scenario breadth expands without extending the decision window.</p>
+    </div>
+    <div class="scenario-section">
+      <div class="scenario-section__label">OKR</div>
+      <p class="okr-objective">The Treasury funding committee reviews a ranked comparison of funding mix alternatives — covering cost, LCR impact, NSFR impact, concentration risk, and maturity profile — produced from current cash forecast, market rates, and regulatory ratio headroom before each weekly decision.</p>
+      <div class="okr-grid">
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Adoption</div>
+          <p>AI-produced funding strategy scenario comparison used for ≥40 of 52 weekly funding committee meetings in year 1.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Acceptance</div>
+          <p>≥80% of funding committee decisions cite the AI-produced scenario comparison as the primary analytical input; ratio calculations reconcile to Treasury management system outputs within ±0.5 percentage points in ≥97% of reviewed weeks.</p>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr__dim">Cycle</div>
+          <p>Funding mix scenario comparison available for committee review within 2 hours of data refresh, vs. 4–8 hours of manual analyst assembly in the prior process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+</div>
+
+</div>
+</div>
+<footer class="o-footer">
+      <span class="foot-text">AI Competence Center, O!Bank. Version 2.2, 2026. <a class="contact" href="mailto:talimbayev@obank.kg?subject=Competence%20Center%20portal%20%5BWG6AP%5D%20page%20feedback">Contact us</a> <a class="contact" href="../../../center/privacy/">Privacy</a> <a class="contact" href="../../../center/terms-of-use/">Terms of use</a></span>
+      <button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Page feedback</span><span>ID: WG6AP</span></button>
+    </footer></main></div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Competence Center portal [WG6AP] page feedback" data-ref="WG6AP" data-page="Liquidity management">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Page feedback</h2><code>ID: WG6AP</code><button type="button" class="fb-copy" data-copy-text="WG6AP">Copy</button></div>
+    <div class="fb-body"><p>Provide feedback on the content of this page: <a data-mail href="mailto:talimbayev@obank.kg">feedback</a>.</p><button class="oc-button" value="close">Close</button></div>
+  </form>
+</dialog>
+</body></html>

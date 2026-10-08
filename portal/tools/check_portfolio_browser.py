@@ -14,7 +14,7 @@ from export_portable import export
 from check_lab_browser import contrast
 import portfolio
 
-OUTPUT=portfolio.workspace.ROOT/'html/aicc'
+OUTPUT=portfolio.workspace.ROOT/'html/aicc/v1'
 REPORT=portfolio.workspace.ROOT/'.runtime/portfolio'
 
 

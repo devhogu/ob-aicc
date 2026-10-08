@@ -13,7 +13,7 @@ from check_lab_browser import contrast
 from export_portable import export
 import workspace
 
-ROOT=workspace.ROOT;OUTPUT=ROOT/'html/aicc';REPORT=ROOT/'.runtime/delivery'
+ROOT=workspace.ROOT;OUTPUT=ROOT/'html/aicc/v1';REPORT=ROOT/'.runtime/delivery'
 
 
 class Quiet(SimpleHTTPRequestHandler):

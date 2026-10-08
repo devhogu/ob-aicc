@@ -8,7 +8,7 @@ from urllib.parse import urljoin, urlsplit
 import portfolio
 
 ROOT = portfolio.workspace.ROOT
-OUTPUT = ROOT/'html/aicc'
+OUTPUT = ROOT/'html/aicc/v1'
 
 
 class Published(HTMLParser):

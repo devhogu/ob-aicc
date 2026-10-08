@@ -14,7 +14,7 @@ from check_project import DOCUMENTS
 from export_portable import export
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / 'html/aicc'
+OUTPUT = ROOT / 'html/aicc/v1'
 REPORT = ROOT / '.runtime/project'
 
 

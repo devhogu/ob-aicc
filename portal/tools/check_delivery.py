@@ -9,7 +9,7 @@ import portfolio
 
 
 def main():
-    root=delivery.workspace.ROOT;output=root/'html/aicc'
+    root=delivery.workspace.ROOT;output=root/'html/aicc/v1'
     for lang in ('en','ru'):
         data=delivery.project(lang=lang)
         assert data['items']==[] and set(data['counts'].values())=={0}

@@ -10,7 +10,7 @@ from urllib.parse import urljoin, urlsplit
 import discovery
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / 'html/aicc'
+OUTPUT = ROOT / 'html/aicc/v1'
 SECTIONS = ('center', 'discovery', 'portfolio', 'program', 'lab')
 # The language router at /{lang}/ belongs to no branch.
 ROUTER = 'router'

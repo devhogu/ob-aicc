@@ -35,7 +35,7 @@ The build converts the Markdown with clause anchors, links each cross-reference 
 ## Build and check
 
 ```sh
-python3 portal/tools/build.py            # regenerate html/aicc/ (the first run draws the diagrams, which takes about a minute; later runs use portal/.cache)
+python3 portal/tools/build.py            # regenerate html/aicc/v1/ and the package root html/aicc/ (the first run draws the diagrams, which takes about a minute; later runs use portal/.cache)
 python3 portal/tools/check_sources.py    # pinned English sources and all Russian translation metadata
 python3 -m unittest discover -s portal/tests  # language selection through the real renderer
 python3 portal/tools/check.py            # layout, every href/src and search result, anchors, language parity, one h1 per page, no external resource loads (citations allowed)
