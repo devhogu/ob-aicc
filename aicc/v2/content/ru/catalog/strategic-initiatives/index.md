@@ -79,7 +79,7 @@ order: 100
 
 | Подгруппа | Элементы |
 | --- | --- |
-| Воронка идей и эксперименты | [Поиск идей и поэтапный отбор](page:catalog/strategic-initiatives/innovation-portfolio#idea-sourcing-stage-gate), [Проектирование минимального работающего продукта и проверка гипотез](page:catalog/strategic-initiatives/innovation-portfolio#mvp-design-hypothesis-testing), [Аналитика экспериментов](page:catalog/strategic-initiatives/innovation-portfolio#experiment-analytics) |
+| Воронка идей и эксперименты | [Поиск идей и поэтапный отбор](page:catalog/strategic-initiatives/innovation-portfolio#idea-sourcing-stage-gate), [Проектирование минимально жизнеспособного продукта и проверка гипотез](page:catalog/strategic-initiatives/innovation-portfolio#mvp-design-hypothesis-testing), [Аналитика экспериментов](page:catalog/strategic-initiatives/innovation-portfolio#experiment-analytics) |
 | Промышленное внедрение и масштабирование | [Решение о масштабировании](page:catalog/strategic-initiatives/innovation-portfolio#scaling-decision), [Ребалансировка портфеля](page:catalog/strategic-initiatives/innovation-portfolio#portfolio-rebalancing), [P&L инноваций](page:catalog/strategic-initiatives/innovation-portfolio#innovation-pl) |
 
 ### [ESG-обязательства](page:catalog/strategic-initiatives/esg-commitments) {#esg-commitments}

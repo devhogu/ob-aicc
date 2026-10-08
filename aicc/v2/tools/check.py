@@ -113,6 +113,8 @@ def check():
                 errors.append(f'{name}: forbidden wording {hit[0]!r}')
         if name != 'ru/vocabulary/index.html':
             for term in terms:
+                if term['ru'].lower().startswith(term['en'].lower()):
+                    continue  # the Russian text itself uses the English word, as the terminology map prescribes
                 for hit in re.finditer(r'(?<![\w-])' + re.escape(term['en']) + r'(?![\w-])', text, re.I):
                     errors.append(f'{name}: English term {term["en"]!r} outside the vocabulary form')
                     break

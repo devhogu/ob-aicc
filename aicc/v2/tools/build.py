@@ -143,7 +143,7 @@ def term_html(terms, key, surface, here):
     entry = terms[key]
     href = rel(here, url_of('vocabulary')) + '#' + key
     return (f'<a class="term" href="{href}" title="{escape(entry["definition"], quote=True)}">'
-            f'{escape(surface or entry["ru"])} <span class="term-en">({escape(entry["en"])})</span></a>')
+            f'{escape(surface or entry["ru"])}' + ('' if (surface or entry['ru']).lower().startswith(entry['en'].lower()) else f' <span class="term-en">({escape(entry["en"])})</span>') + '</a>')
 
 
 # START_CONTRACT: render_markdown
