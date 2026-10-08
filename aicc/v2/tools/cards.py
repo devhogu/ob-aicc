@@ -13,12 +13,15 @@
 #   render_card - one card as a page
 # END_MODULE_MAP
 """Project cards and the views rendered from them."""
+from datetime import date
 import json
 from html import escape
 from pathlib import Path
 
 import jsonschema
 import yaml
+
+import cadence
 
 ROOT = Path(__file__).resolve().parents[3]
 CARDS = ROOT / 'aicc' / 'v2' / 'cards'
@@ -82,7 +85,7 @@ def add_pages(pages, site, terms, api):
     ids = {c['id']: 'projects/' + c['id'].lower() for c in cards}
     e = escape
     wip = site.get('wip_limits', {})
-    cad = site.get('cadence', {})
+    day = date.fromisoformat(site['as_of_date'])
     by_stage = {s: [c for c in cards if c['stage'] == s] for s in STAGES + OFF_FLOW}
     work = [(c, w) for c in cards for w in c.get('work', [])]
 
@@ -98,10 +101,8 @@ def add_pages(pages, site, terms, api):
         return (card.get('rank') or 10 ** 6, card['id'])
 
     def header(sub):
-        line = f'PI {e(cad["pi"])}: итерации {e(cad["iterations"])}, с {e(cad["from"])} по {e(cad["to"])}' if cad else ''
-        now = f' · сейчас: {e(cad["current"])}' if cad.get('current') else ''
         return (f'<header class="pf-header"><span class="pf-meta">По состоянию на {e(site.get("as_of", ""))}</span>'
-                f'<p class="pf-sub">{e(sub)}</p><p class="pf-muted">{line}{now}</p></header>')
+                f'<p class="pf-sub">{e(sub)}</p><p class="pf-muted" data-pi-now>{e(cadence.now_line(day))}</p></header>')
 
     def stats(items):
         return '<div class="pf-stats">' + ''.join(f'<div><strong>{e(str(v))}</strong><span>{e(k)}</span></div>' for k, v in items) + '</div>'
@@ -178,6 +179,8 @@ def add_pages(pages, site, terms, api):
             + f'<a class="proj-door" href="{link(here, "projects/program")}"><small>Уровень 3</small><strong>Программа</strong><span>Capabilities и Features на доске с дорожками по классам обслуживания, бэклог программы и поступление из портфеля.</span>'
             + '<ul class="mini-board">' + ''.join(f'<li><span class="mini-count">{sum(1 for _, w in work if w["state"] == s)}</span><span>{e(s)}</span></li>' for s in PROGRAM_COLUMNS) + '</ul></a>'
             + '</div>'
+            + '<h2 id="pi-calendar">Календарь PI</h2><p class="pf-muted">Итерация — календарный месяц, PI — квартал из трёх итераций. В конце PI — неделя IP (инновации и планирование): ревью, демонстрация и планирование следующего PI. Календарь считается от сегодняшней даты, стрелки листают по одному PI.</p>'
+            + f'<section class="pi-cal" data-pi-calendar="{e(json.dumps({k: cadence.DATA[k] for k in ("ip_weeks", "notes")}, ensure_ascii=False))}">{cadence.calendar_html(day)}</section>'
             + '<h2>Ближайшие точки контроля</h2><p class="pf-muted">Что решается дальше по каждой открытой карточке и кто решает. Подробнее — на странице <a href="' + link(here, 'projects/decisions') + '">Точки контроля и решения</a>.</p>'
             + filters(len(upcoming)) + table(['Карточка', 'Название', 'Состояние', 'Следующая точка контроля', 'Кто решает'], rows)
             + f'<h2>Как это работает</h2><p>У каждого проекта есть карточка: один файл, где записано, что делаем, зачем, кто отвечает и на каком этапе. Карточку ведёт руководитель проекта; пока она актуальна, все виды здесь показывают проект правильно. <a href="{link(here, "projects/new")}">Завести карточку</a>.</p>'

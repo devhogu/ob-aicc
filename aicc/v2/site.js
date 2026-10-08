@@ -206,4 +206,81 @@
     buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.tab); }); });
     show(buttons[0].dataset.tab);
   });
+  // PI calendar: the same rules as aicc/v2/tools/cadence.py, applied to the reader's date on every load
+  var PI = (function () {
+    var DAY = 864e5, WEEK = 7 * DAY;
+    var MONTHS = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+    var SHORT = ['янв', 'фев', 'мар', 'апр', 'мая', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+    var LONG = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+    var data = {ip_weeks: {}, notes: {}};
+    function at(y, m, d) { return Date.UTC(y, m - 1, d); }
+    function parts(t) { var x = new Date(t); return {y: x.getUTCFullYear(), m: x.getUTCMonth() + 1, d: x.getUTCDate(), wd: (x.getUTCDay() + 6) % 7}; }
+    function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+    function firstMonday(y, m) { var t = at(y, m, 1); return t + ((3 - parts(t).wd + 7) % 7) * DAY - 3 * DAY; }
+    function iteration(y, m) {
+      var s = firstMonday(y, m), n = firstMonday(y + (m === 12 ? 1 : 0), m % 12 + 1);
+      return {name: 'I' + (m < 10 ? '0' : '') + m, month: m, year: y, pi: y + '-PIQ' + (Math.floor((m - 1) / 3) + 1), start: s, end: n - DAY, weeks: Math.round((n - s) / WEEK), title: MONTHS[m - 1]};
+    }
+    function weekOf(t) {
+      var monday = t - parts(t).wd * DAY, th = parts(monday + 3 * DAY), it = iteration(th.y, th.m);
+      return [it, Math.round((monday - it.start) / WEEK) + 1];
+    }
+    function increment(y, q) {
+      var its = [1, 2, 3].map(function (k) { return iteration(y, 3 * (q - 1) + k); }), last = its[2], name = y + '-PIQ' + q;
+      var ipWeek = last.month === 12 && last.weeks === 5 ? last.weeks - 1 : last.weeks;
+      if (data.ip_weeks[name]) ipWeek = parseInt(data.ip_weeks[name].split('W').pop(), 10);
+      var ipStart = last.start + (ipWeek - 1) * WEEK;
+      return {name: name, iterations: its, start: its[0].start, end: last.end, ip: {name: name + ' ' + last.name + 'W' + ipWeek, start: ipStart, end: ipStart + 4 * DAY}};
+    }
+    function span(a, b, long) {
+      var x = parts(a), y = parts(b), n = long ? LONG : SHORT;
+      return x.d + ' ' + n[x.m - 1] + (x.y !== y.y ? ' ' + x.y : '') + ' – ' + y.d + ' ' + n[y.m - 1] + ' ' + y.y;
+    }
+    function today() { var n = new Date(); return at(n.getFullYear(), n.getMonth() + 1, n.getDate()); }
+    function nowLine(day) {
+      var w = weekOf(day), it = w[0], pi = increment(it.year, Math.floor((it.month - 1) / 3) + 1);
+      return 'PI ' + pi.name + ': итерации ' + pi.iterations[0].name + '–' + pi.iterations[2].name + ', ' + span(pi.start, pi.end, true) + ' · ' +
+        'сейчас: итерация ' + it.name + ' (' + it.title + '), неделя ' + w[1] + ' из ' + it.weeks;
+    }
+    function calendar(day, shift) {
+      var w = weekOf(day), it = w[0], week = w[1], year = it.year, quarter = Math.floor((it.month - 1) / 3) + 1, q = year * 4 + quarter - 1 + shift;
+      var monday = it.start + (week - 1) * WEEK, wname = it.pi + ' ' + it.name + 'W' + week, note = data.notes[wname] || '';
+      var out = ['<div class="pi-bar"><div class="pi-now"><span class="pi-now__label">Сейчас</span><strong>' + it.pi + ' · ' + it.name + ' · неделя ' + week + ' из ' + it.weeks + '</strong><span>' + span(monday, monday + 6 * DAY) + '</span>' +
+        (note ? '<span class="pi-note">' + esc(note) + '</span>' : '') + '</div>' +
+        '<div class="pi-nav"><button type="button" data-pi-step="-1" aria-label="Предыдущий PI">‹</button><button type="button" data-pi-step="0">Сегодня</button><button type="button" data-pi-step="1" aria-label="Следующий PI">›</button></div></div><div class="pi-row">'];
+      for (var k = 0; k < 3; k++) {
+        var pi = increment(Math.floor((q + k) / 4), (q + k) % 4 + 1);
+        var total = Math.round((pi.end - pi.start) / DAY) + 1, done = Math.max(0, Math.min(total, Math.round((day - pi.start) / DAY) + 1)), pct = Math.floor(100 * done / total);
+        var state = pi.name === it.pi ? 'идёт' : (done === total ? 'завершён' : 'впереди');
+        var rows = pi.iterations.map(function (i) {
+          return '<li' + (i.name === it.name && i.year === it.year ? ' class="is-current"' : '') + '><b>' + i.name + '</b><em>' + i.title + '</em><span>' + span(i.start, i.end) + ' · ' + i.weeks + ' нед.</span></li>';
+        }).join('');
+        out.push('<article class="pi-card' + (pi.name === it.pi ? ' is-current' : '') + '"><header><strong>' + pi.name + '</strong><small>' + state + '</small></header>' +
+          '<span class="pi-dates">' + span(pi.start, pi.end) + '</span><div class="pi-progress" title="Пройдено ' + pct + '%"><span style="width:' + pct + '%"></span></div>' +
+          '<ol class="pi-its">' + rows + '</ol><p class="pi-ip"><b>Неделя IP</b> ' + span(pi.ip.start, pi.ip.end) + '</p></article>');
+      }
+      var ip = increment(year, quarter).ip.name, weeks = [];
+      for (var n = 1; n <= it.weeks; n++) {
+        var start = it.start + (n - 1) * WEEK, name = it.pi + ' ' + it.name + 'W' + n, text = data.notes[name] || '';
+        var cls = [n === week ? 'is-current' : '', name === ip ? 'is-ip' : ''].filter(Boolean).join(' ');
+        weeks.push('<li' + (cls ? ' class="' + cls + '"' : '') + (text ? ' title="' + esc(text) + '"' : '') + '><b>W' + n + '</b><span>' + span(start, start + 6 * DAY) + '</span>' + (text ? '<small>' + esc(text.split(';')[0]) + '</small>' : '') + '</li>');
+      }
+      out.push('</div><div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + it.name + ' (' + it.title + ')</span><ol>' + weeks.join('') + '</ol></div>');
+      return out.join('');
+    }
+    return {data: data, today: today, at: at, nowLine: nowLine, calendar: calendar};
+  })();
+  window.HubPI = PI;
+  document.querySelectorAll('[data-pi-now]').forEach(function (el) { el.textContent = PI.nowLine(PI.today()); });
+  document.querySelectorAll('[data-pi-calendar]').forEach(function (el) {
+    try { var given = JSON.parse(el.dataset.piCalendar); PI.data.ip_weeks = given.ip_weeks || {}; PI.data.notes = given.notes || {}; } catch (e) {}
+    var shift = 0;
+    function draw() { el.innerHTML = PI.calendar(PI.today(), shift); }
+    draw();
+    el.addEventListener('click', function (ev) {
+      var b = ev.target.closest('[data-pi-step]'); if (!b) return;
+      var step = parseInt(b.dataset.piStep, 10); shift = step ? shift + step : 0; draw();
+      var again = el.querySelector('[data-pi-step="' + b.dataset.piStep + '"]'); if (again) again.focus();
+    });
+  });
 })();
