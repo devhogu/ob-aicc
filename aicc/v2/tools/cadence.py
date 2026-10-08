@@ -150,7 +150,7 @@ def here_html(day):
             text = f'{i["label"]} W{w} · {week_range(s, k)}' + (f' · {TAG[k]}' if k else '')
             cells.append(f'<button type="button"{cls("is-done" if s < monday else "is-current" if s == monday else "", f"is-{k}" if k else "", "is-picked" if s == monday else "")} '
                          f'data-here-week data-range="{pick(text, s == monday)}" aria-label="{i["label"]} W{w}"></button>')
-        segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "", "is-picked" if it_key(i) == it_key(it) else "")} style="flex:{i["weeks"]}">'
+        segs.append(f'<li{cls("is-current" if it_key(i) == it_key(it) else "", "is-done" if i["end"] < monday else "", "is-picked" if it_key(i) == it_key(it) else "")} data-here-it="{it_key(i)}" style="flex:{i["weeks"]}">'
                     f'<span class="here-cells">{"".join(cells)}</span>'
                     f'<button type="button" class="here-it" data-here-week data-range="{i["label"]} · {short(i["start"], i["end"])} · {i["weeks"]} нед."><b>{i["label"]} · {i["title"]}</b><span>{short(i["start"], i["end"])}</span></button>'
                     '</li>')

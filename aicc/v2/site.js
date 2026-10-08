@@ -291,24 +291,33 @@
             ' data-here-week data-range="' + pick(text, s === monday) + '" aria-label="' + i.label + ' W' + n + '"></button>';
         }
         var cur = itKey(i) === itKey(it);
-        return '<li' + cls(cur ? 'is-current' : '', i.end < monday ? 'is-done' : '', cur ? 'is-picked' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span>' +
+        return '<li' + cls(cur ? 'is-current' : '', i.end < monday ? 'is-done' : '', cur ? 'is-picked' : '') + ' data-here-it="' + itKey(i) + '" style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span>' +
           '<button type="button" class="here-it" data-here-week data-range="' + i.label + ' · ' + short(i.start, i.end) + ' · ' + i.weeks + ' нед."><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></button></li>';
       }).join('');
-      var weeks = '';
-      for (var n = 1; n <= it.weeks; n++) {
-        var s = it.start + (n - 1) * WEEK, k = weekKind(it, n, ip);
-        weeks += '<li><button type="button"' + cls(n < week ? 'is-done' : n === week ? 'is-current' : '', k ? 'is-' + k : '', n === week ? 'is-picked' : '') +
-          ' data-here-week data-range="' + pick('W' + n + ' · ' + weekRange(s, k) + (k ? ' · ' + TAG[k] : ''), n === week) + '">' + (k ? TAG[k] : 'W' + n) + '</button></li>';
-      }
       var now = weekKind(it, week, ip);
       return '<div class="here-tile" data-week="' + iso(monday) + '" tabindex="0"><small>Сегодня</small><strong>' + p.d + ' ' + LONG[p.m - 1] + ' ' + p.y + '</strong><span>' + DAYS[p.wd] + '</span></div>' +
         '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><div class="here-head"><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span></div>' +
         '<ol class="here-pi">' + segs + '</ol>' +
         '<span class="here-range" data-here-range>' + pick(it.label + ' W' + week + ' · ' + weekRange(monday, now) + (now ? ' · ' + TAG[now] : ''), true) + '</span>' +
         '</div>' +
-        '<div class="here-tile" data-it="' + itKey(it) + '" tabindex="0"><small>Итерация · неделя ' + week + ' из ' + it.weeks + '</small><div class="here-head"><strong>' + it.label + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span></div>' +
-        '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>' + pick('W' + week + ' · ' + weekRange(monday, now) + (now ? ' · ' + TAG[now] : ''), true) + '</span></div>';
+        iterTile(it, day, null);
     }
+    // the iteration tile for any iteration; pick is the Monday of the week to show, or null for today's week (or the first)
+    function iterTile(i, day, pick) {
+      var w = weekOf(day), cur = itKey(i) === itKey(w[0]), monday = day - parts(day).wd * DAY, ip = increment(i.year, Math.floor((i.month - 1) / 3) + 1).ip.name;
+      if (pick === null) pick = cur ? monday : i.start;
+      function text(n, s) { var k = weekKind(i, n, ip); return esc('W' + n + ' · ' + weekRange(s, k) + (k ? ' · ' + TAG[k] : '') + (s === monday ? ' · сейчас' : '')); }
+      var weeks = '', shown = '';
+      for (var n = 1; n <= i.weeks; n++) {
+        var s = i.start + (n - 1) * WEEK, k = weekKind(i, n, ip);
+        weeks += '<li><button type="button"' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', k ? 'is-' + k : '', s === pick ? 'is-picked' : '') +
+          ' data-here-week data-range="' + text(n, s) + '">' + (k ? TAG[k] : 'W' + n) + '</button></li>';
+        if (s === pick) shown = text(n, s);
+      }
+      return '<div class="here-tile" data-it="' + itKey(i) + '" tabindex="0"><small>Итерация · ' + (cur ? 'неделя ' + w[1] + ' из ' + i.weeks : i.weeks + ' нед.') + '</small><div class="here-head"><strong>' + i.label + ' · ' + i.title + '</strong><span>' + span(i.start, i.end) + '</span></div>' +
+        '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>' + shown + '</span></div>';
+    }
+    function iterTileOf(key, day, n) { var p = key.split('-').map(Number), i = iteration(p[0], p[1]); return iterTile(i, day, n ? i.start + (n - 1) * WEEK : null); }
     // state: {pi, it} - the increment and iteration picked by the reader; empty means today's
     function calendar(day, shift, state) {
       state = state || {};
@@ -414,7 +423,7 @@
     function pop(kind, key, day) {
       return kind === 'pi' ? popPI(key, day) : kind === 'it' ? popIt(key, day) : kind === 'week' ? popWeek(key, day) : popItem(key);
     }
-    return {data: data, today: today, at: at, here: here, calendar: calendar, pop: pop, qIndex: qIndex, weekOf: weekOf, fromIso: fromIso, itKey: itKey};
+    return {data: data, today: today, at: at, here: here, iterTileOf: iterTileOf, calendar: calendar, pop: pop, qIndex: qIndex, weekOf: weekOf, fromIso: fromIso, itKey: itKey};
   })();
   window.HubPI = PI;
 
@@ -495,14 +504,27 @@
         var seg = target.closest('.here-pi > li'); return seg ? seg.querySelector('.here-it') : null;
       }
       var kept = new Map();
-      h.querySelectorAll('.here-tile').forEach(function (tile) { var k = tile.querySelector('[data-here-week].is-picked'); if (k) kept.set(tile, k); });
+      function bind(tile) {
+        var k = tile.querySelector('[data-here-week].is-picked'); if (k) kept.set(tile, k);
+        tile.querySelectorAll('.here-pi, .here-weeks').forEach(function (area) {
+          area.addEventListener('mouseleave', function () { if (kept.get(tile)) show(kept.get(tile)); });
+        });
+      }
+      h.querySelectorAll('.here-tile').forEach(bind);
       h.addEventListener('mouseover', function (ev) { var wk = under(ev.target); if (wk) show(wk); });
-      h.querySelectorAll('.here-pi, .here-weeks').forEach(function (area) {
-        area.addEventListener('mouseleave', function () { var tile = area.closest('.here-tile'); if (kept.get(tile)) show(kept.get(tile)); });
-      });
       h.addEventListener('click', function (ev) {
         var wk = under(ev.target);
-        if (wk) { kept.set(wk.closest('.here-tile'), wk); show(wk); return; }  // stay on the tile
+        if (wk) {  // stay on the tile; an iteration picked on the PI tile also fills the iteration tile
+          kept.set(wk.closest('.here-tile'), wk); show(wk);
+          var seg = wk.closest('[data-here-it]'), old = h.querySelector('.here-tile[data-it]');
+          if (seg && old) {
+            var cells = Array.prototype.slice.call(seg.querySelectorAll('.here-cells [data-here-week]')), n = cells.indexOf(wk) + 1;
+            var box = document.createElement('div'); box.innerHTML = PI.iterTileOf(seg.dataset.hereIt, day, n || null);
+            var tile = box.firstChild; old.replaceWith(tile); bind(tile);
+            tile.classList.add('is-flash'); setTimeout(function () { tile.classList.remove('is-flash'); }, 900);
+          }
+          return;
+        }
         var t = ev.target.closest('[data-week],[data-it],[data-pi]'); if (!t) return;
         jump(t);
       });

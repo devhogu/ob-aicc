@@ -831,7 +831,6 @@ details.svc[open]::after{opacity:1}
 .here-it b{font-size:12px;color:var(--text)}
 .here-it span{font-size:11px;color:var(--text-muted)}
 .here-it:hover b{color:var(--link)}
-.here-it.is-picked b{text-decoration:underline;text-underline-offset:3px}
 .here-pi li.is-current .here-it b{color:var(--link)}
 .here-it:focus-visible,.here-cells button:focus-visible,.here-key:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
 button.here-key{border:0;font:400 12px/1.4 var(--font-body)}
@@ -854,3 +853,5 @@ button.here-key{font-size:11px;padding:2px 8px 2px 5px;gap:4px;white-space:nowra
 .here-pi li .here-key--ip>b{color:var(--plan)}
 .here-time{grid-template-columns:minmax(0,.6fr) minmax(0,.95fr) minmax(0,1fr)}
 .here-pi{gap:6px}
+.here-it:hover b{color:inherit}
+.here-tile.is-flash{animation:pi-flash .9s ease-out}
