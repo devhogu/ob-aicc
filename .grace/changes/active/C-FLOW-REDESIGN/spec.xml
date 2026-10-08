@@ -1,0 +1,46 @@
+<GraceChangeSpec graceVersion="4.0" status="draft">
+  <C-FLOW-REDESIGN>
+    <Summary>Redesign the end-to-end process of the Competence Center as a lean agile flow on two separate floors, the functional and the governance floor, with Project Profiles and live Project Cards, and refactor the corpus, the Portfolio records and the portal to it in verified phases.</Summary>
+    <Problem>The corpus mirrors the SAFe states but adds five portfolio gates, a pull gate, three Steering forums and five Program Increment events for a unit of about three people. Functional decisions and governance controls are mixed in the Operating Model control table and in the Solution Lifecycle Model. Project documents mix theory with live facts, and the backlog and the boards are hand-kept tables, so a project cannot be started from a profile or tracked as a live card.</Problem>
+    <Goals>
+      <Goal>Portfolio end-to-end management: from the Discovery catalog and the Funnel to Done, on one Portfolio Kanban of five states (Funnel, Shaping, Ready, Doing, Done), with three decisions (Start, Invest, Persevere/pivot/stop), acceptance as part of the definition of done, a pull that is a limit on work in progress, and one monthly forum with the quarterly and yearly reviews as deeper agendas.</Goal>
+      <Goal>Program execution management: Capabilities and Features on a Program Kanban pulled by rule (free slot, class of service, WSJF only as a tie-breaker), a weekly review, a monthly Iteration review and one quarterly review-and-plan session, with the Team level kept in Jira and only projected on the site.</Goal>
+      <Goal>Two floors: the functional (commercial) floor and the governance floor are defined separately. Governance defines policy, Risk Tiers, the control catalogue, control profiles by Tier, registers and assurance. The functional flow invokes governance at named hooks or embeds it in the definition of done and in the decisions, and governance runs its own cadence of sampling and review without gating items outside those hooks.</Goal>
+      <Goal>Project Profiles and Project Cards: one Project Profile per kind of work (Initiative delivery, run-rate engagement, control activity, enablement programme) as static theory on the site; one live Project Card per real project in the Portfolio folder, which maps Roles to positions and people and is rendered on the live part of the site.</Goal>
+      <Goal>Retain the intent: record the design before engineering, then refactor in verified phases, each with its Decision Record, both editions of the corpus, and passing checks.</Goal>
+    </Goals>
+    <Constraints>
+      <Constraint>Stay close to SAFe and lean agile practice: minimal gates, decisions by a pre-agreed rule and one named decider, forums for flow and exceptions, not for items. The research reports in wiki/research/flow-design/ are the evidence base; claims marked unverified there are to be confirmed before they are written into the corpus.</Constraint>
+      <Constraint>No requirement of the AI Policy is dropped or weakened. Before any gate, forum or control is removed, each of the 32 controls of the Operating Model is mapped to a hook, to a functional decision or to the governance calendar, and the evidence chain is shown to be preserved. Closed evidence records are not rewritten.</Constraint>
+      <Constraint>The Control Function Contacts agree to checklist-by-Risk-Tier in place of separate gates before the corpus is amended. Risk Tier 1 is the lowest tier and Tier 3 the highest, as in the corpus.</Constraint>
+      <Constraint>The static site holds theory only: no live appointments, positions or people. A Project Card holds the runtime mapping, and a Role the charter already defines is resolved from the Appointments Record by reference, not copied. Names and posts of Holders only, as Operating Model 7.4 limits personal data; the live rendering of them needs one sentence in the corpus.</Constraint>
+      <Constraint>State is a field with the date of each state; no folder stands for a state; a path holds identity (the identifier), and service area, category, mode, client function and profile are fields. A card exists for each unit managed as a project (an Initiative, or a run-rate Feature); Capabilities and Features inside a project are rows with Jira keys, not separate cards.</Constraint>
+      <Constraint>Jira is the runtime and the site is a thin projection; no second ledger and no hand-kept project data in the site. Backlogs and boards become views generated from the cards; the corpus records that name them (Portfolio Management Model 9.4) are amended accordingly.</Constraint>
+      <Constraint>Names: Project Profile (профиль проекта) and Project Card (карточка проекта); Package is reserved for reusable solution kits (PKG-nnn); the Initiative Brief stays the business case (паспорт инициативы); the Competence Center naming rule of DR-2026-066 applies to all new text.</Constraint>
+      <Constraint>Corpus changes are made in both editions under a Decision Record per phase, with the translation map updated, and each phase is checked and publishable on its own.</Constraint>
+    </Constraints>
+    <NonGoals>
+      <NonGoal>A Jira synchronisation or an automatic status pull: the cards are filled by hand first, and the sync is a later change.</NonGoal>
+      <NonGoal>Changes to the requirements of the AI Policy, or to any recorded state, rank, limit, decision or appointment, as part of the redesign itself.</NonGoal>
+      <NonGoal>Full SAFe ceremony (Program Increment planning events, Release Train roles, Participatory Budgeting among value streams) or ISO/IEC 42001 certification.</NonGoal>
+      <NonGoal>Building the live governance view of the site (registers and control status); it is noted as a later branch.</NonGoal>
+    </NonGoals>
+    <AcceptanceCriteria>
+      <Criterion>The owner approves the design and closes the open decisions recorded in the design context, in a Decision Record.</Criterion>
+      <Criterion>A table maps all 32 controls to a functional decision, a hook or the governance calendar, with the first control profiles by Risk Tier, and the Control Function Contacts have reviewed it.</Criterion>
+      <Criterion>The Portfolio Management Model, the Solution Lifecycle Model, the Business Model and the Operating Model describe the new flow in both editions, with the governance set (control catalogue and control profiles) separate from the functional flow, and no residual reference to the removed gates and forums.</Criterion>
+      <Criterion>The four Project Profiles and the Project Card schema and template exist in both languages; INI-013, the Standing Initiatives and the first run-rate project exist as cards; the Portfolio and Program views are generated from the cards with no hand-kept backlog table.</Criterion>
+      <Criterion>All site, source and browser checks pass after each phase, and each phase is published.</Criterion>
+    </AcceptanceCriteria>
+    <AffectedAreas><M-PORTAL-PROJECTION /><M-PORTAL-LOCALIZATION /><M-PORTAL-NEIGHBOURS /><M-PORTAL-SOURCE /></AffectedAreas>
+    <VerificationIntent>
+      <ExpectedCommand>python3 -m unittest discover -s portal/tests</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check.py --idempotent</ExpectedCommand>
+      <ExpectedCommand>python3 portal/tools/check_sources.py</ExpectedCommand>
+      <ExpectedEvidence>The control mapping table with the review of the Control Function Contacts; per phase, rendered-text comparison where content only moves; browser checks of the Portfolio, Program and project views rendered from cards.</ExpectedEvidence>
+    </VerificationIntent>
+    <Assumptions>
+      <Assumption>The owner stated the intent in the project conversation of 2026-10-07 and 2026-10-08 (quoted in the design context) and asked on 2026-10-08 to record the intent and the refactor approach before engineering. This spec is a draft until the owner approves it explicitly.</Assumption>
+    </Assumptions>
+  </C-FLOW-REDESIGN>
+</GraceChangeSpec>
