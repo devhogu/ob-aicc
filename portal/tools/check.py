@@ -78,7 +78,7 @@ def pages(lang):
     base = os.path.join(OUT, lang)
     out = {}
     for d, _, fs in os.walk(base):
-        if 'index.html' in fs:
+        if 'index.html' in fs and d != base:
             out['/' + os.path.relpath(d, base).replace(os.sep, '/') + '/'] = os.path.join(d, 'index.html')
     return out
 
@@ -103,6 +103,10 @@ for lang in ('en', 'ru'):
         errors.append('%s/ holds %s, expected exactly the router and the branches %s' % (lang, sorted(found), ', '.join(BRANCHES)))
 
 all_pages = {l: pages(l) for l in ('en', 'ru')}
+for lang in ('en', 'ru'):
+    with open(os.path.join(OUT, lang, 'index.html'), encoding='utf-8') as fh:
+        if 'url=center/' not in fh.read():
+            errors.append('%s/ must forward to center/' % lang)
 norm = lambda k: k.replace('/./', '/')
 if set(map(norm, all_pages['en'])) != set(map(norm, all_pages['ru'])):
     errors.append('the page sets of en and ru differ')

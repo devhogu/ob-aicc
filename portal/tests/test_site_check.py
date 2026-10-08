@@ -31,13 +31,15 @@ class SiteCheck(unittest.TestCase):
             checker.parent.mkdir(parents=True)
             shutil.copyfile(CHECKER, checker)
             site = root / 'html' / 'aicc' / 'v1'
-            pages = {f'{lang}/': body for lang in ('en', 'ru')}
-            pages.update({f'{lang}/{branch}/': '' for lang in ('en', 'ru') for branch in BRANCHES})
+            pages = {f'{lang}/{branch}/': '' for lang in ('en', 'ru') for branch in BRANCHES}
+            pages.update({f'{lang}/center/': body for lang in ('en', 'ru')})
             pages.update(extra or {})
             for route, content in pages.items():
                 target = site / route / 'index.html'
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_text(page(route.split('/')[0], route.count('/'), content), encoding='utf-8')
+            for lang in ('en', 'ru'):
+                (site / lang / 'index.html').write_text('<!doctype html><meta http-equiv="refresh" content="0; url=center/">', encoding='utf-8')
             package = site.parent
             (package / 'index.html').write_text('<!doctype html><title>chooser</title>', encoding='utf-8')
             for lang in ('en', 'ru'):
@@ -56,7 +58,7 @@ class SiteCheck(unittest.TestCase):
             )
 
     def test_complete_layout_passes(self):
-        result = self.run_check('<a href="center/">Center</a>',
+        result = self.run_check('<a href="../lab/">Lab</a>',
                                 search={'center-en': [{'u': '/en/center/#top', 't': 'C', 'h': 'C', 'x': ''}]})
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
@@ -79,10 +81,10 @@ class SiteCheck(unittest.TestCase):
 
     def test_broken_internal_links_and_indexes_are_rejected(self):
         for body, message in (
-            ('<a href="initiatives/">Old route</a>', 'broken link initiatives/'),
-            ('<a href="center/#nowhere">Anchor</a>', 'missing anchor center/#nowhere'),
-            ('<script src="../assets/site.js" data-search="../assets/search-center-en.json" data-search-all="../assets/search-projects-en.json"></script>', 'broken link ../assets/site.js'),
-            ('<script data-search-all="../assets/search-projects-en.json"></script>', 'broken link ../assets/search-projects-en.json'),
+            ('<a href="../initiatives/">Old route</a>', 'broken link ../initiatives/'),
+            ('<a href="#nowhere">Anchor</a>', 'missing anchor #nowhere'),
+            ('<script src="../../assets/site.js" data-search="../../assets/search-center-en.json" data-search-all="../../assets/search-projects-en.json"></script>', 'broken link ../../assets/site.js'),
+            ('<script data-search-all="../../assets/search-projects-en.json"></script>', 'broken link ../../assets/search-projects-en.json'),
             ('<a href="/en/center/">Root link</a>', 'site-absolute link /en/center/'),
         ):
             with self.subTest(body=body):

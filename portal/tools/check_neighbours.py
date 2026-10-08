@@ -12,8 +12,6 @@ import discovery
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / 'html/aicc/v1'
 SECTIONS = ('center', 'discovery', 'portfolio', 'program', 'lab')
-# The language router at /{lang}/ belongs to no branch.
-ROUTER = 'router'
 # Discovery pages composed by the portal rather than built from the catalog records.
 AUTHORED_DISCOVERY = {'regulatory-horizon/index.html'}
 
@@ -26,7 +24,6 @@ class Inspection(HTMLParser):
         self.search = None
         self.search_all = []
         self.global_default = False
-        self.doors = []
         self.in_main = False
         self.in_footer = False
         self.nav_footer_depth = 0
@@ -75,8 +72,6 @@ class Inspection(HTMLParser):
             self.search_all = attrs.get('data-search-all', '').split()
         if tag == 'input' and attrs.get('id') == 'q-all':
             self.global_default = 'checked' in attrs
-        if tag == 'a' and 'data-door' in attrs:
-            self.doors.append(attrs['data-door'])
         if 'horizon-chip' in attrs.get('class', '').split():
             self.derived = tag
         if tag == 'details':
@@ -116,8 +111,6 @@ def section_for(path):
     parts = path.strip('/').split('/')
     if len(parts) > 1 and parts[1] in SECTIONS:
         return parts[1]
-    if len(parts) == 1 or parts[1:] == ['index.html']:
-        return ROUTER
     return None
 
 
@@ -127,7 +120,10 @@ def check():
     references = {}
     for lang in ('en', 'ru'):
         seen_refs = set()
-        pages = sorted((OUTPUT / lang).rglob('index.html'))
+        pages = sorted(page for page in (OUTPUT / lang).rglob('index.html') if page.parent != OUTPUT / lang)
+        entry = (OUTPUT / lang / 'index.html').read_text()
+        if 'url=center/' not in entry:
+            errors.append(f'/{lang}/: the language entry must forward to center/')
         discovery_pages = list((OUTPUT / lang / 'discovery').rglob('index.html'))
         source_pages = discovery.pages(lang)
         expected_pages = len(source_pages) + len(AUTHORED_DISCOVERY)
@@ -142,15 +138,14 @@ def check():
             counts[section + '_pages'] += 1
             if parsed.section != section or parsed.groups != list(SECTIONS):
                 errors.append(f'{path}: incorrect section identity/navigation')
-            # The router searches every branch by default; its own index is the Center's.
-            expected_search = f'search-{"center" if section == ROUTER else section}-{lang}.json'
+            expected_search = f'search-{section}-{lang}.json'
             if not parsed.search or parsed.search.rsplit('/', 1)[-1] != expected_search:
                 errors.append(f'{path}: incorrect search scope')
             everything = [f'search-{s}-{lang}.json' for s in SECTIONS]
             if [name.rsplit('/', 1)[-1] for name in parsed.search_all] != everything:
                 errors.append(f'{path}: global search does not cover every branch')
-            if parsed.global_default != (section == ROUTER):
-                errors.append(f'{path}: global search must be on by default exactly on the router')
+            if parsed.global_default:
+                errors.append(f'{path}: global search must be off until the reader turns it on')
             legal = {f'/{lang}/center/privacy/', f'/{lang}/center/terms-of-use/'}
             for location, links in (('sidebar', parsed.nav_footer_links), ('footer', parsed.footer_links)):
                 targets = {urlsplit(urljoin('http://portal' + path, href)).path for href in links}
@@ -177,13 +172,8 @@ def check():
                 if target.netloc != 'portal' or target.scheme not in ('http', 'https'):
                     continue
                 relationship = section == 'program' and bool(re.fullmatch(r'/(en|ru)/portfolio/(ini-\d+/)?',target.path)) or section == 'portfolio' and bool(re.fullmatch(r'/(en|ru)/program/(service-resolution/)?',target.path)) or section == 'portfolio' and bool(re.fullmatch(r'/(en|ru)/center/portfolio/portfolio-management-model/',target.path))
-                # The router leads to the home of each branch, and nowhere else.
-                door = section == ROUTER and target.path in {f'/{lang}/{s}/' for s in SECTIONS}
-                if section_for(target.path) != section and not relationship and not door:
+                if section_for(target.path) != section and not relationship:
                     errors.append(f'{path}: body link crosses section: {href}')
-            if section == ROUTER:
-                if parsed.doors != list(SECTIONS):
-                    errors.append(f'{path}: the router must hold exactly the five branch doors in order')
             if section != 'center':
                 for marker in ('class="term"', 'class="xref"', 'class="doc-facts"'):
                     if marker in text:

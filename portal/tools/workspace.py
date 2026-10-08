@@ -7,9 +7,8 @@
 # START_MODULE_MAP
 #   ROOT - repository root for shared assets
 #   SECTIONS - bilingual branch identities and route prefixes
-#   ROUTER - the language router that leads to the five branches
 #   REFERENCE_PREFIX - former routes whose page references renamed branches keep
-#   SEARCH_TEXT - search labels of a branch, the router and the global scope
+#   SEARCH_TEXT - search labels of a branch and the global scope
 #   route - the site-absolute route of a branch page
 #   search_index - the search index of a branch
 #   CONTACT - shared portal feedback contact
@@ -28,7 +27,7 @@
 #   feedback_dialog - render the shared page feedback dialog
 #   styles - load the shared visual shell
 #   script - bind interactions to the branch search index and to every branch index for global search
-#   page - render an independent branch page (or the router) without charter metadata
+#   page - render an independent branch page without charter metadata
 # END_MODULE_MAP
 """The common roof. Section renderers own their bodies, search and metadata."""
 from functools import lru_cache
@@ -41,14 +40,11 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[2]
 SECTIONS = json.loads((ROOT / 'portal/sections/navigation.json').read_text())
-# The language router at /{lang}/ belongs to no branch; it carries the shared shell and global search.
-ROUTER = 'router'
 # Feedback references are quoted by readers. Branch routes renamed by the bounded-branch layout keep the
 # reference of their former route, so a quoted ID still names the same page.
 REFERENCE_PREFIX = {'portfolio/': 'initiatives/', 'program/': 'projects/'}
 SEARCH_TEXT = {
     'branch': {'en': 'Search this section', 'ru': 'Поиск в разделе'},
-    'router': {'en': 'Search the Competence Center', 'ru': 'Поиск по сайту Центра Компетенций'},
     'all': {'en': 'All sections', 'ru': 'Все разделы'},
 }
 CONTACT = {'name': 'Timur Alimbayev', 'email': 'talimbayev@obank.kg'}
@@ -71,15 +67,11 @@ def icon(name):
 
 
 def section_label(section, lang):
-    if section == ROUTER:
-        return messages(lang)['site_short']
     return next(s['label'][lang] for s in SECTIONS if s['id'] == section)
 
 
 def route(lang, section, rest=''):
     """The site-absolute route of a page of a branch, e.g. route('en', 'program', 'items/x/')."""
-    if section == ROUTER:
-        return f'/{lang}/' + rest
     return f'/{lang}/' + next(s['path'] for s in SECTIONS if s['id'] == section) + rest
 
 
@@ -96,21 +88,20 @@ def asset(url, name):
 def header(url, lang, section, m=None):
     m = m or messages(lang)
     label = section_label(section, lang)
-    search = m['search_label'] if section == 'center' else SEARCH_TEXT['router' if section == ROUTER else 'branch'][lang]
+    search = m['search_label'] if section == 'center' else SEARCH_TEXT['branch'][lang]
     switches = []
     for language in ('en', 'ru'):
         target = url.replace('/' + lang + '/', '/' + language + '/', 1)
         current = ' aria-current="true"' if language == lang else ''
         switches.append(f'<a lang="{language}" hreflang="{language}" href="{escape(relative(url, target))}"{current}>{language.upper()}</a>')
     scope = m['header_scope'] if section == 'center' else label
-    scope = '' if section == ROUTER else f'<span class="header-scope">{escape(scope)}</span>'
+    scope = f'<span class="header-scope">{escape(scope)}</span>'
     # Every page of this edition is a draft: nothing in it is decided, approved or accepted.
     scope += f'<span class="status-chip" title="{escape(m["status_chip_title"])}">{escape(m["status_chip"])}</span>'
-    # Global search is a scope of the same box; it is on by default on the router.
-    checked = ' checked' if section == ROUTER else ''
-    every = f'<label class="search-scope"><input id="q-all" type="checkbox"{checked}><span>{escape(SEARCH_TEXT["all"][lang])}</span></label>'
+    # Global search is a scope of the same box; it is off until the reader turns it on.
+    every = f'<label class="search-scope"><input id="q-all" type="checkbox"><span>{escape(SEARCH_TEXT["all"][lang])}</span></label>'
     return f'''<header class="o-header">
-  <a class="o-identity" href="{relative(url, '/' + lang + '/')}"><img src="{relative(url, '/assets/ui/assets/logos/o-mark.svg')}" width="34" height="38" alt=""><span>{escape(m['site_name'])}</span></a>
+  <a class="o-identity" href="{relative(url, route(lang, 'center'))}"><img src="{relative(url, '/assets/ui/assets/logos/o-mark.svg')}" width="34" height="38" alt=""><span>{escape(m['site_name'])}</span></a>
   {scope}
   <div class="o-search" role="search"><label class="o-sr-only" for="q">{escape(search)}</label><input id="q" type="search" autocomplete="off" placeholder="{escape(search)}" aria-controls="results">{every}<div id="results" class="o-search-results" hidden></div></div>
   <div class="o-tools"><nav class="lang-switch" aria-label="{escape(m['language_label'])}">{''.join(switches)}</nav><button id="theme-switch" type="button" class="theme-switch" aria-label="{escape(m['theme_to_dark'])}" title="{escape(m['theme_to_dark'])}"><span class="ts-moon">{icon('moon')}</span><span class="ts-sun">{icon('sun')}</span></button></div>
@@ -196,8 +187,7 @@ def styles(url):
 
 def script(url, lang, section, m=None):
     m = m or messages(lang)
-    # The router searches the whole site by default; its own index is the Center's.
-    index = search_index(lang, 'center' if section == ROUTER else section)
+    index = search_index(lang, section)
     every = ' '.join(relative(url, search_index(lang, s['id'])) for s in SECTIONS)
     names = '|'.join(s['label'][lang] for s in SECTIONS)
     return f'''<script src="{asset(url, 'site.js')}" defer data-search="{relative(url, index)}" data-search-all="{escape(every)}" data-search-names="{escape(names)}" data-t-none="{escape(m['search_none'])}" data-t-light="{escape(m['theme_to_light'])}" data-t-dark="{escape(m['theme_to_dark'])}" data-t-copied="{escape(m['copied'])}" data-t-mail-body="{escape(m['fb_mail_body'])}" data-t-dz-close="{escape(m['dz_close'])}"></script>'''

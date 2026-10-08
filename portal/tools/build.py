@@ -47,7 +47,7 @@ def unc(base_url, rel=''):
     return '\\\\' + path.replace('/', '\\').rstrip('\\')
 PREFIX = {'about': 'ABT', 'responsible-ai': 'RAI', 'services': 'SRV', 'portfolio': 'PFL', 'delivery': 'DLV', 'governance': 'GOV', 'organization': 'ORG', 'knowledge-base': 'KNB', 'reference': 'REF'}
 LANGS = ['en', 'ru']
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'ru'
 BASELINE = {'revision': '2.2', 'date': '2026-10-03'}  # English source edition; documents retain their own revisions.
 
 FONTS = os.path.join(ROOT, 'portal', '.tools', 'pw-syslibs')
@@ -1902,7 +1902,7 @@ def gateway():
     links = ''.join('<li><a lang="%s" hreflang="%s" href="%s/">%s</a></li>' % (l, l, l, {'en': 'English', 'ru': 'Русский'}[l]) for l in LANGS)
     return f'''<!doctype html>
 <html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark"><meta http-equiv="refresh" content="0; url={DEFAULT_LANG}/">
+<meta name="color-scheme" content="light dark"><meta http-equiv="refresh" content="0; url={DEFAULT_LANG}/center/">
 <title>AI Competence Center</title>
 <link rel="stylesheet" href="assets/ui/fonts.css"><link rel="stylesheet" href="assets/ui/tokens.css"><link rel="stylesheet" href="assets/ui/workspace.css"><link rel="stylesheet" href="assets/charter.css">
 </head><body class="charter"><main class="o-main gateway" id="main"><img src="assets/ui/assets/logos/o-mark.svg" width="48" height="54" alt="">

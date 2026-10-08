@@ -215,28 +215,25 @@ def check_domain_previews(page, route, counts):
     page.goto(route)
 
 
-def check_router_and_global_search(page, base, counts):
-    """The router leads to every branch; global search reaches across branches and names each result's branch."""
+def check_entry_and_global_search(page, base, counts):
+    """The language entry opens the Center; global search reaches across branches and names each result's branch."""
     page.set_viewport_size({'width': 1440, 'height': 1000})
     names = {'en': 'Discovery Catalog', 'ru': 'Каталог сценариев'}
     for lang in ('en', 'ru'):
         # The scenario is named in the language of the edition.
         copilot = next(e['h'] for e in json.loads((OUTPUT / f'assets/search-discovery-{lang}.json').read_text()) if e['u'].endswith('#scenario-frontline-service-copilot'))
         page.goto(base + lang + '/')
-        assert page.locator('body').get_attribute('data-portal-section') == 'router'
-        assert page.locator('.router-door').evaluate_all('els=>els.map(e=>e.dataset.door)') == GROUPS
-        assert page.locator('.o-nav .portal-section-link[aria-current]').count() == 0
-        assert page.locator('#q-all').is_checked(), 'Global search is not on by default on the router'
+        page.wait_for_url('**/' + lang + '/center/')
+        assert page.locator('body').get_attribute('data-portal-section') == 'center', 'The language entry does not open the Center'
+        assert not page.locator('#q-all').is_checked(), 'Global search is on before the reader turns it on'
         for door in GROUPS:
-            page.goto(base + lang + '/')
-            fact = page.locator(f'.router-door[data-door="{door}"] .router-fact').inner_text()
-            assert re.search(r'\d', fact), 'Router fact without a count: ' + door
-            page.locator(f'.router-door[data-door="{door}"]').click()
+            page.goto(base + lang + '/' + door + '/')
             assert page.locator('body').get_attribute('data-portal-section') == door
-            assert urlsplit(page.url).path.endswith(f'/{lang}/{door}/')
             page.locator('.o-identity').click()
-            assert urlsplit(page.url).path.endswith(f'/{lang}/'), 'The brand does not lead to the router'
-            counts['router_doors'] += 1
+            assert urlsplit(page.url).path.endswith(f'/{lang}/center/'), 'The brand does not lead to the Center'
+            counts['branch_doors'] += 1
+        page.goto(base + lang + '/center/')
+        page.locator('#q-all').check()
         page.locator('#q').fill(copilot)
         result = page.locator('#results a').filter(has_text=copilot).first
         result.wait_for()
@@ -383,7 +380,7 @@ def main():
                 errors.append('Search crossed section boundary')
             counts['scoped_search_checks'] += 2
             check_existing_aicc(page, base, counts)
-            check_router_and_global_search(page, base, counts)
+            check_entry_and_global_search(page, base, counts)
             # Direct-file test uses an isolated output and never refreshes portal/published.
             with tempfile.TemporaryDirectory(prefix='aicc-neighbours-') as temp:
                 folder = Path(temp) / 'Портал AICC'
@@ -401,8 +398,9 @@ def main():
                 filepage.locator('.portal-section-link[data-section="program"]').click()
                 if '/ru/program/index.html' not in filepage.url:
                     errors.append('Portable section/language navigation failed')
-                # Global search from the router of the direct-file edition loads every branch index as a script.
-                filepage.goto((folder / 'en/index.html').as_uri())
+                # Global search of the direct-file edition loads every branch index as a script.
+                filepage.goto((folder / 'en/center/index.html').as_uri())
+                filepage.locator('#q-all').check()
                 filepage.locator('#q').fill('Frontline Service Copilot')
                 found = filepage.locator('#results a').filter(has_text='Frontline Service Copilot').first
                 found.wait_for()

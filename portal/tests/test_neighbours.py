@@ -2,6 +2,7 @@
 from pathlib import Path
 import re
 import sys
+import tempfile
 import unittest
 from urllib.parse import urlsplit
 
@@ -35,23 +36,16 @@ class NeighbourRendering(unittest.TestCase):
         self.assertEqual(workspace.page_key('/ru/portfolio/ini-004/'), 'initiatives/ini-004/index')
         self.assertEqual(workspace.page_key('/en/lab/'), 'lab/index')
 
-    def test_router_leads_to_the_five_branches_with_counted_facts(self):
+    def test_language_entry_forwards_to_the_center_and_the_brand_leads_there(self):
         import router
-        for lang in ('en', 'ru'):
-            with self.subTest(lang=lang):
-                url, markup = router.router_page(lang)
-                parsed = Inspection(markup)
-                self.assertEqual(url, f'/{lang}/')
-                self.assertEqual(parsed.section, 'router')
-                self.assertEqual(parsed.doors, ['center', 'discovery', 'portfolio', 'program', 'lab'])
-                self.assertTrue(parsed.global_default)
-                self.assertEqual(parsed.main_links, ['center/', 'discovery/', 'portfolio/', 'program/', 'lab/'])
-                counts = router.facts(lang)
-                self.assertEqual(counts['discovery'], len(neighbours.scenario_index(lang)))
-                self.assertEqual(counts['center'], len([p for p in (workspace.ROOT / 'charter/en').rglob('*.md') if p.name != 'README.md']))
-                fact = f'{counts["lab"]} workflow tasks' if lang == 'en' else f'Задач процесса: {counts["lab"]}'
-                self.assertIn(fact, markup)
-                self.assertIn(f'href="../{"ru" if lang == "en" else "en"}/"', markup)
+        with tempfile.TemporaryDirectory() as tmp:
+            router.build(tmp)
+            for lang in ('en', 'ru'):
+                with self.subTest(lang=lang):
+                    entry = (Path(tmp) / lang / 'index.html').read_text()
+                    self.assertIn('url=center/', entry)
+        markup = workspace.page('/en/lab/', 'en', 'lab', 'Lab', '<p>x</p>', '')
+        self.assertIn('class="o-identity" href="../center/"', markup)
 
     def test_discovery_preserves_scenario_text_and_direct_search_destination(self):
         source = discovery.source(Path('shared-banking-capabilities/customer-servicing/index.html'), 'en')

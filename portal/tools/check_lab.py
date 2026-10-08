@@ -125,6 +125,8 @@ def check(output=OUTPUT):
         counts[lang + '_lab_search_entries'] = len(entries)
     for lang in ('en', 'ru'):
         for route in (Path(output) / lang).rglob('index.html'):
+            if route.parent == Path(output) / lang:
+                continue  # the language entry only forwards to the Center
             text = route.read_text()
             label = re.search(r'<a\b[^>]*data-section="lab"[^>]*>.*?<span>(.*?)</span>\s*</a>', text, re.S)
             if not label or label[1] != 'AI Lab':
