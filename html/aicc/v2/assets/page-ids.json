@@ -81,6 +81,13 @@
  "hub/values": "AN4SK",
  "hub/what-we-do": "7C6W4",
  "index": "A7GAV",
+ "kb": "YTQ1T",
+ "kb/guides/automate-a-routine-task": "TRBWJ",
+ "kb/guides/checking-results": "QQDQ1",
+ "kb/guides/claude-code-first-session": "7H57B",
+ "kb/guides/getting-started": "VNM9Z",
+ "kb/guides/what-to-share": "0E28Y",
+ "kb/guides/writing-a-task": "GQ0JK",
  "privacy": "ARG36",
  "process": "5D9JJ",
  "process/portfolio": "V6S46",
@@ -102,6 +109,10 @@
  "projects/ini-014": "A78FR",
  "projects/ini-015": "54F69",
  "projects/new": "4W12A",
+ "reference": "KQBRZ",
+ "reference/regulation": "GWK7E",
+ "reference/resources": "FYZTY",
+ "reference/vocabulary": "WEA5T",
  "responsible-ai": "VKKHB",
  "responsible-ai/ai-terms-explained": "K1KXN",
  "responsible-ai/how-we-apply-it": "TGENS",
@@ -109,6 +120,5 @@
  "services/governance": "DDRCC",
  "services/how-to-engage": "CKZBM",
  "services/input-processing": "8J4XZ",
- "terms-of-use": "14TWB",
- "vocabulary": "246D9"
+ "terms-of-use": "14TWB"
 }

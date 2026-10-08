@@ -63,11 +63,19 @@
       }
     },
     {
-      "id": "vocabulary",
-      "path": "vocabulary/",
-      "icon": "file-text",
+      "id": "kb",
+      "path": "kb/",
+      "icon": "info",
       "label": {
-        "ru": "Словарь"
+        "ru": "База знаний"
+      }
+    },
+    {
+      "id": "reference",
+      "path": "reference/",
+      "icon": "link",
+      "label": {
+        "ru": "Справочник"
       }
     }
   ],

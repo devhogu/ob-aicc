@@ -218,6 +218,28 @@
     window.addEventListener('hashchange', fromHash);
     if (!fromHash()) show(keys[0]);
   });
+  // reference and knowledge base lists: a search box and topic chips over cards; empty groups hide
+  document.querySelectorAll('[data-lib]').forEach(function (root) {
+    var search = root.querySelector('[data-lib-search]'), count = root.querySelector('[data-lib-count]'), group = '';
+    function apply() {
+      var q = (search.value || '').toLowerCase().trim(), shown = 0;
+      root.querySelectorAll('[data-lib-item]').forEach(function (el) {
+        var ok = (!group || el.dataset.group === group) && (!q || (el.dataset.find || '').indexOf(q) >= 0);
+        el.hidden = !ok; if (ok) shown++;
+      });
+      root.querySelectorAll('[data-lib-section]').forEach(function (s) { s.hidden = !s.querySelector('[data-lib-item]:not([hidden])'); });
+      count.textContent = shown ? 'Показано: ' + shown : 'Ничего не найдено';
+    }
+    search.addEventListener('input', apply);
+    root.querySelectorAll('[data-lib-group]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        group = b.dataset.libGroup;
+        root.querySelectorAll('[data-lib-group]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        apply();
+      });
+    });
+  });
+
   // PI calendar: the same rules as aicc/v2/tools/cadence.py, applied to the reader's date on every load
   var PI = (function () {
     var DAY = 864e5, WEEK = 7 * DAY;

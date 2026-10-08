@@ -112,6 +112,7 @@ class Page:
     def __init__(self, page_id, title, section, order, summary, body, source=None, nav=True, nav_title=None, layout=''):
         self.id, self.title, self.section, self.order = page_id, title, section, order
         self.nav_title, self.layout = nav_title or title, layout
+        self.meta = {}
         self.related = []
         self.summary, self.body, self.source, self.nav = summary, body, source, nav
         self.ident = ''
@@ -141,7 +142,7 @@ def front_matter(text, path):
 def term_html(terms, key, surface, here):
     """A vocabulary term as it appears in running text: the Russian word with the English term beside it, linked to the vocabulary."""
     entry = terms[key]
-    href = rel(here, url_of('vocabulary')) + '#' + key
+    href = rel(here, url_of('reference/vocabulary')) + '#' + key
     return (f'<a class="term" href="{href}" title="{escape(entry["definition"], quote=True)}">'
             f'{escape(surface or entry["ru"])}' + ('' if (surface or entry['ru']).lower().startswith(entry['en'].lower()) else f' <span class="term-en">({escape(entry["en"])})</span>') + '</a>')
 
@@ -241,6 +242,7 @@ def load_pages(site, terms):
         pages[page_id] = Page(page_id, meta['title'], section, int(meta.get('order', 100)), meta.get('summary', ''), body,
                               source=path, nav=str(meta.get('nav', 'true')).lower() not in ('false', 'no', '0'), nav_title=meta.get('nav_title'), layout=meta.get('layout', ''))
         pages[page_id].related = [x.strip() for x in meta.get('related', '').split(',') if x.strip()]
+        pages[page_id].meta = meta
     return pages
 
 
@@ -265,15 +267,17 @@ def load_catalog(pages):
 
 
 def add_generated(pages, site, terms):
-    """Pages that are projections of data rather than Markdown: the vocabulary, and later the card views."""
+    """Pages that are projections of data rather than Markdown: the vocabulary, the project views, the reference and the knowledge base."""
     rows = ''.join(
         f'<tr id="{escape(t["id"])}"><td><strong>{escape(t["ru"])}</strong> <span class="term-en">({escape(t["en"])})</span></td>'
         f'<td>{escape(t["definition"])}</td></tr>' for t in sorted(terms.values(), key=lambda t: t['ru'].casefold()))
     m = site['messages']['ru']
     body = (f'<p class="lede">{escape(m["vocabulary_intro"])}</p><div class="o-table-wrap"><table class="vocabulary"><thead><tr>'
             f'<th>{escape(m["vocabulary_term"])}</th><th>{escape(m["vocabulary_definition"])}</th></tr></thead><tbody>{rows}</tbody></table></div>')
-    pages['vocabulary'] = Page('vocabulary', 'Словарь', 'vocabulary', 0, m['vocabulary_intro'], body)
+    pages['reference/vocabulary'] = Page('reference/vocabulary', 'Словарь', 'reference', 30, m['vocabulary_intro'], body)
     import cards
+    import library
+    library.add_pages(pages, site, sys.modules[__name__])
     cards.add_pages(pages, site, terms, sys.modules[__name__])
 
 
@@ -465,7 +469,7 @@ def publish_sources(site):
     """The source files of this version, so it can be read without the repository."""
     base = OUT / 'sources'
     listing = []
-    for folder in ('content', 'vocabulary', 'cards'):
+    for folder in ('content', 'vocabulary', 'cards', 'reference'):
         for path in sorted((SRC / folder).rglob('*')):
             if path.is_file() and path.suffix in ('.md', '.yaml', '.yml', '.json'):
                 target = base / path.relative_to(SRC)

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ru" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark">
+<title>База знаний · Хаб Компетенций по AI</title>
+<script>try{var t=localStorage.getItem('hub-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){}</script>
+<link rel="stylesheet" href="../../assets/ui/fonts.css"><link rel="stylesheet" href="../../assets/ui/tokens.css"><link rel="stylesheet" href="../../assets/ui/primitives.css"><link rel="stylesheet" href="../../assets/ui/workspace.css"><link rel="stylesheet" href="../../assets/site.css">
+<script src="../../assets/search-ru.js"></script><script src="../../assets/site.js" defer data-root="../.." data-t-none="По запросу ничего не найдено." data-t-light="Дневной режим" data-t-dark="Ночной режим" data-t-mail-body="Страница: {title}
+Номер: {ref}
+Адрес: {url}
+
+Вопрос или замечание:
+"></script>
+</head><body class="portal-workspace" data-portal-section="kb" data-page="kb">
+<a class="o-skip" href="#main">К содержанию</a>
+<header class="o-header">
+  <a class="o-identity" href="../index.html"><img src="../../assets/ui/assets/logos/hub-mark.svg" width="36" height="36" alt=""><span>Хаб Компетенций по AI</span></a>
+  <span class="header-scope">База знаний</span>
+  <span class="status-chip" title="Эта страница и показанные на ней записи — черновики: ничего в них не принято и не утверждено">Черновик</span>
+  <div class="o-search" role="search"><label class="o-sr-only" for="q">Поиск по Хабу</label><input id="q" type="search" autocomplete="off" placeholder="Поиск по Хабу" aria-controls="results"><div id="results" class="o-search-results" hidden></div></div>
+  <div class="o-tools"><button id="theme-switch" type="button" class="theme-switch" aria-label="Ночной режим" title="Ночной режим"><span class="ts-moon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+</svg></span><span class="ts-sun"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg></span></button></div>
+</header>
+<div class="o-frame"><aside class="o-nav"><details open><summary>Разделы сайта</summary><nav class="portal-sections" aria-label="Разделы"><div class="portal-nav-group"><a class="portal-section-link" data-section="hub" href="../index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="16" y="16" width="6" height="6" rx="1" />
+  <rect x="2" y="16" width="6" height="6" rx="1" />
+  <rect x="9" y="2" width="6" height="6" rx="1" />
+  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+  <path d="M12 12V8" />
+</svg><span>Хаб Компетенций</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="services" href="../services/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+  <circle cx="9" cy="7" r="4" />
+</svg><span>Услуги</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="process" href="../process/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="8" x="3" y="3" rx="2" />
+  <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+  <rect width="8" height="8" x="13" y="13" rx="2" />
+</svg><span>Процесс</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="catalog" href="../catalog/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 5h13" />
+  <path d="M13 12h8" />
+  <path d="M13 19h8" />
+  <path d="M3 10a2 2 0 0 0 2 2h3" />
+  <path d="M3 5v12a2 2 0 0 0 2 2h3" />
+</svg><span>Каталог сценариев</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="projects" href="../projects/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg><span>Проекты</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="responsible-ai" href="../responsible-ai/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+  <path d="m9 12 2 2 4-4" />
+</svg><span>Ответственный AI</span></a></div><div class="portal-nav-group is-current"><a class="portal-section-link" data-section="kb" href="index.html" aria-current="true"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="12" r="10" />
+  <path d="M12 16v-4" />
+  <path d="M12 8h.01" />
+</svg><span>База знаний</span></a></div><div class="portal-nav-group"><a class="portal-section-link" data-section="reference" href="../reference/index.html"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+</svg><span>Справочник</span></a></div></nav></details></aside>
+<main class="o-main hub-main" id="main" tabindex="-1">
+<div class="crumbbar"><div class="crumbline"><nav class="o-eyebrow crumbs" aria-label="Навигационная цепочка"><a href="index.html">База знаний</a></nav></div></div>
+<div class="o-reading o-single"><div class="o-copy"><h1>База знаний</h1><article class="page-body o-doc"><p class="lede">Руководства по работе с AI: как начать, как поставить задачу, как работать безопасно и как автоматизировать свою работу. Короткие и практичные; новые появляются по мере того, как мы осваиваем инструменты.</p><p class="pf-tip">Пользуйтесь только теми инструментами и аккаунтами, которые одобрены в вашей организации. Если инструмента нет — <a href="../services/how-to-engage/index.html">напишите нам</a>, разберёмся вместе.</p><div class="lib" data-lib><div class="lib-find"><input type="search" data-lib-search placeholder="Найти руководство" aria-label="Поиск"><output data-lib-count aria-live="polite">Показано: 6</output></div><div class="lib-chips" role="group" aria-label="Разделы"><button type="button" class="lib-chip" data-lib-group="" aria-pressed="true">Все</button><button type="button" class="lib-chip" data-lib-group="Начало работы" aria-pressed="false">Начало работы</button><button type="button" class="lib-chip" data-lib-group="Постановка задачи" aria-pressed="false">Постановка задачи</button><button type="button" class="lib-chip" data-lib-group="Безопасная работа" aria-pressed="false">Безопасная работа</button><button type="button" class="lib-chip" data-lib-group="Claude Code" aria-pressed="false">Claude Code</button><button type="button" class="lib-chip" data-lib-group="Автоматизация" aria-pressed="false">Автоматизация</button></div><div class="lib-grid"><a class="lib-card lib-card--link" href="guides/getting-started/index.html" data-lib-item data-group="Начало работы" data-find="с чего начать работу с ai-ассистентом первые полчаса с ассистентом: какую задачу взять, как начать разговор и чего от него ждать. начало работы ассистент, первый шаг, чат"><div class="lib-card__top"><small>Начало работы</small><span class="lib-time">5 мин · с нуля</span></div><h3>С чего начать работу с AI-ассистентом</h3><p>Первые полчаса с ассистентом: какую задачу взять, как начать разговор и чего от него ждать.</p></a><a class="lib-card lib-card--link" href="guides/writing-a-task/index.html" data-lib-item data-group="Постановка задачи" data-find="как поставить задачу ассистенту пять частей хорошего запроса — роль, задача, материалы, формат и проверка — и примеры до и после. постановка задачи запрос, промпт, формулировка"><div class="lib-card__top"><small>Постановка задачи</small><span class="lib-time">7 мин · базовый</span></div><h3>Как поставить задачу ассистенту</h3><p>Пять частей хорошего запроса — роль, задача, материалы, формат и проверка — и примеры до и после.</p></a><a class="lib-card lib-card--link" href="guides/what-to-share/index.html" data-lib-item data-group="Безопасная работа" data-find="что можно и нельзя передавать ai простое правило для данных: что можно вставлять в ассистента, что только в одобренный внутренний сервис, а что — никуда. безопасная работа данные, конфиденциальность, утечка"><div class="lib-card__top"><small>Безопасная работа</small><span class="lib-time">4 мин · с нуля</span></div><h3>Что можно и нельзя передавать AI</h3><p>Простое правило для данных: что можно вставлять в ассистента, что только в одобренный внутренний сервис, а что — никуда.</p></a><a class="lib-card lib-card--link" href="guides/checking-results/index.html" data-lib-item data-group="Безопасная работа" data-find="как проверять результат ai короткий список проверки для ответа ассистента — от фактов и цифр до тона, — и когда проверять особенно тщательно. безопасная работа проверка, галлюцинация, качество"><div class="lib-card__top"><small>Безопасная работа</small><span class="lib-time">5 мин · базовый</span></div><h3>Как проверять результат AI</h3><p>Короткий список проверки для ответа ассистента — от фактов и цифр до тона, — и когда проверять особенно тщательно.</p></a><a class="lib-card lib-card--link" href="guides/claude-code-first-session/index.html" data-lib-item data-group="Claude Code" data-find="claude code: первый сеанс в репозитории что такое claude code, как начать работу в своём репозитории, как давать задачи и не терять контроль над изменениями. claude code claude code, разработка, терминал, репозиторий"><div class="lib-card__top"><small>Claude Code</small><span class="lib-time">8 мин · базовый</span></div><h3>Claude Code: первый сеанс в репозитории</h3><p>Что такое Claude Code, как начать работу в своём репозитории, как давать задачи и не терять контроль над изменениями.</p></a><a class="lib-card lib-card--link" href="guides/automate-a-routine-task/index.html" data-lib-item data-group="Автоматизация" data-find="как автоматизировать рутинную задачу от повторяющейся ручной работы к готовой автоматизации за пять шагов — с проверкой человеком и без лишнего риска. автоматизация автоматизация, рабочее место, сценарий, отчёт"><div class="lib-card__top"><small>Автоматизация</small><span class="lib-time">7 мин · базовый</span></div><h3>Как автоматизировать рутинную задачу</h3><p>От повторяющейся ручной работы к готовой автоматизации за пять шагов — с проверкой человеком и без лишнего риска.</p></a></div></div></article></div></div>
+</main>
+<footer class="o-footbar">
+<nav class="fb-left" aria-label="Правовая информация"><a href="../privacy/index.html">Конфиденциальность</a><a href="../terms-of-use/index.html">Условия использования</a></nav>
+<div class="fb-right"><span class="foot-text">2026 Хаб Компетенций AI. v2.1 <a class="contact" href="mailto:talimbayev@obank.kg?subject=%D0%A5%D0%B0%D0%B1%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%86%D0%B8%D0%B9%20%5BYTQ1T%5D%3A%20%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%20%D0%BE%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B5">Связаться с нами</a></span>
+<button type="button" class="pagefb" data-dialog="fb" aria-haspopup="dialog"><span>Отзыв о странице</span><span>ID: YTQ1T</span></button></div>
+</footer>
+</div>
+<dialog id="fb" class="fb" aria-labelledby="fb-t" data-subject="Хаб Компетенций [YTQ1T]: отзыв о странице" data-ref="YTQ1T" data-page="База знаний">
+  <form method="dialog">
+    <div class="fb-head"><h2 id="fb-t">Отзыв о странице</h2><code>ID: YTQ1T</code></div>
+    <div class="fb-body"><p>Оставить отзыв о содержании этой страницы: <a data-mail href="mailto:talimbayev@obank.kg">отзыв</a>.</p><button class="oc-button" value="close">Закрыть</button></div>
+  </form>
+</dialog>
+</body></html>

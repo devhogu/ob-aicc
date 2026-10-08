@@ -25,7 +25,7 @@ class Markers(unittest.TestCase):
         pages, site = fixture()
         html = build.render_markdown('Уровень [[funnel|воронки]].', pages['process/levels'], TERMS, pages, site)
         self.assertIn('воронки <span class="term-en">(funnel)</span>', html)
-        self.assertIn('href="../../vocabulary/index.html#funnel"', html)
+        self.assertIn('href="../../reference/vocabulary/index.html#funnel"', html)
 
     def test_unknown_term_or_page_is_refused(self):
         pages, site = fixture()

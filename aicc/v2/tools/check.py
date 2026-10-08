@@ -112,7 +112,7 @@ def check():
             if hit:
                 errors.append(f'{name}: forbidden wording {hit[0]!r}')
         carried = 'class="discovery-content"' in pages[name].read_text(encoding='utf-8')  # carried over verbatim from the catalog
-        if name != 'ru/vocabulary/index.html' and not carried:
+        if name != 'ru/reference/vocabulary/index.html' and not carried:
             for term in terms:
                 if term['ru'].lower().startswith(term['en'].lower()):
                     continue  # the Russian text itself uses the English word, as the terminology map prescribes
