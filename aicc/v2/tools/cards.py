@@ -182,7 +182,7 @@ def add_pages(pages, site, terms, api):
 
     # what is being built now
     def wcard(c, w):
-        return kb_card(here, c, w['id'], w['title'], 'Capability' if w['type'] == 'capability' else 'Feature', f'{c["id"]} · {c["title"]}', c.get('function') or '—', ('Jira ' + w['jira']) if w.get('jira') else (w.get('iteration') or ''))
+        return kb_card(here, c, w['id'], w['title'], 'Capability' if w['type'] == 'capability' else 'Feature', f'{c["id"]} · {c["title"]}', c.get('function') or '—', ('Jira ' + w['jira']) if w.get('jira') else (w.get('iteration') or '').replace(' I', ' i'))
     head_cells = ''.join(f'<th><div class="kb-column-head"><div><h3>{e(s)}<span class="kb-step-en" lang="en">{e(pg_en[s])}</span></h3><span class="kb-count">{sum(1 for _, w in work if w["state"] == s)}</span></div><small>{e(pg_gate[s])}</small></div></th>' for s in PROGRAM_COLUMNS)
     lane_rows = ''.join(f'<tr><th scope="row">{e(l.capitalize())}<span class="kb-step-en" lang="en">{e(LANE_EN[l])}</span></th>' + ''.join(
         '<td><div class="kb-stack">' + (''.join(wcard(c, w) for c, w in work if w['state'] == s and lane_of(c, w) == l) or '<span class="kb-empty">—</span>') + '</div></td>' for s in PROGRAM_COLUMNS) + '</tr>' for l in LANES)
@@ -205,7 +205,7 @@ def add_pages(pages, site, terms, api):
     backlog_rows = [f'<tr {card_attrs(c)} data-kb-row><td>{e(str(c["rank"])) if c.get("rank") else "без места"}</td><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td><td>{e(c["title"])}</td>'
                     f'<td>{e(c["stage"])}</td><td>{e(c.get("function") or "—")}</td></tr>' for c in backlog]
     pb_rows = [f'<tr {card_attrs(c)} data-kb-row><td>{e(w["id"])}</td><td>{"Capability" if w["type"] == "capability" else "Feature"}</td><td>{e(w["title"])}</td><td>{e(w["state"])}</td>'
-               f'<td>{e(w.get("iteration") or "—")}</td><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td></tr>' for c, w in work if w['state'] != 'Завершено']
+               f'<td>{e((w.get("iteration") or "—").replace(" I", " i"))}</td><td><a href="{link(here, ids[c["id"]])}">{e(c["id"])}</a></td></tr>' for c, w in work if w['state'] != 'Завершено']
     backlog_html = (lead('Что дальше по очереди. Порядок проектов задаёт менеджер продукта, порядок работы между проектами — форум решений по программе.')
                     + '<h3>Проекты, ещё не начатые</h3>' + table(['Место', 'Карточка', 'Название', 'Состояние', 'Функция'], backlog_rows)
                     + '<h3>Capabilities и Features, ещё не принятые</h3>' + table(['Ключ', 'Вид', 'Название', 'Состояние', 'Итерация', 'Карточка'], pb_rows))

@@ -232,7 +232,7 @@
     function firstMonday(y, m) { var t = at(y, m, 1); return t + ((3 - parts(t).wd + 7) % 7) * DAY - 3 * DAY; }
     function iteration(y, m) {
       var s = firstMonday(y, m), n = firstMonday(y + (m === 12 ? 1 : 0), m % 12 + 1);
-      return {name: 'I' + (m < 10 ? '0' : '') + m, month: m, year: y, pi: y + '-PIQ' + (Math.floor((m - 1) / 3) + 1), start: s, end: n - DAY, weeks: Math.round((n - s) / WEEK), title: MONTHS[m - 1]};
+      return {name: 'I' + (m < 10 ? '0' : '') + m, label: 'i' + (m < 10 ? '0' : '') + m, month: m, year: y, pi: y + '-PIQ' + (Math.floor((m - 1) / 3) + 1), start: s, end: n - DAY, weeks: Math.round((n - s) / WEEK), title: MONTHS[m - 1]};
     }
     function itKey(i) { return i.year + '-' + (i.month < 10 ? '0' : '') + i.month; }
     function weekOf(t) {
@@ -259,7 +259,7 @@
     function board(pi, it, sel) {
       var names = pi.iterations.map(function (i) { return pi.name + ' ' + i.name; });
       var head = pi.iterations.map(function (i) {
-        return '<th' + cls(itKey(i) === itKey(it) ? 'is-current' : '', itKey(i) === itKey(sel) ? 'is-selected' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.name + '</b> ' + i.title + '<small>' + span(i.start, i.end) + '</small></th>';
+        return '<th' + cls(itKey(i) === itKey(it) ? 'is-current' : '', itKey(i) === itKey(sel) ? 'is-selected' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.label + '</b> ' + i.title + '<small>' + span(i.start, i.end) + '</small></th>';
       }).join('');
       var body = [];
       data.rows.forEach(function (row) {
@@ -285,7 +285,7 @@
           var s = i.start + (k - 1) * WEEK, n = i.pi + ' ' + i.name + 'W' + k;
           cells += '<i' + cls(s < monday ? 'is-done' : s === monday ? 'is-current' : '', n === ip ? 'is-ip' : '') + (n === ip ? ' tabindex="0"' : '') + '>' + (n === ip ? ipTip(pi) : '') + '</i>';
         }
-        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', i.end < monday ? 'is-done' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span><b>' + i.name + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></li>';
+        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', i.end < monday ? 'is-done' : '') + ' style="flex:' + i.weeks + '"><span class="here-cells">' + cells + '</span><b>' + i.label + ' · ' + i.title + '</b><span>' + short(i.start, i.end) + '</span></li>';
       }).join('');
       var weeks = '';
       for (var n = 1; n <= it.weeks; n++) {
@@ -297,7 +297,7 @@
         '<div class="here-tile" data-pi="' + pi.name + '" tabindex="0"><small>Программный инкремент · неделя ' + piWeek + ' из ' + piWeeks + '</small><div class="here-head"><strong>PI ' + pi.name + '</strong><span>' + span(pi.start, pi.end) + '</span></div>' +
         '<ol class="here-pi">' + segs + '</ol>' +
         '<span class="here-ip" tabindex="0"><i></i>Planning · ' + span(pi.ip.start, pi.ip.end) + ipTip(pi) + '</span></div>' +
-        '<div class="here-tile" data-it="' + itKey(it) + '" tabindex="0"><small>Итерация · неделя ' + week + ' из ' + it.weeks + '</small><div class="here-head"><strong>' + it.name + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span></div>' +
+        '<div class="here-tile" data-it="' + itKey(it) + '" tabindex="0"><small>Итерация · неделя ' + week + ' из ' + it.weeks + '</small><div class="here-head"><strong>' + it.label + ' · ' + it.title + '</strong><span>' + span(it.start, it.end) + '</span></div>' +
         '<ol class="here-weeks">' + weeks + '</ol><span class="here-range" data-here-range>W' + week + ' · ' + span(monday, monday + 6 * DAY) + (it.pi + ' ' + it.name + 'W' + week === ip ? ' · Planning' : '') + ' · сейчас</span></div>';
     }
     // state: {pi, it} - the increment and iteration picked by the reader; empty means today's
@@ -308,14 +308,14 @@
       var shown = pis.filter(function (p) { return p.name === state.pi; })[0] || pis[0];
       var sel = shown.iterations.filter(function (i) { return itKey(i) === state.it; })[0] || (it.pi === shown.name ? it : shown.iterations[0]);
       var monday = it.start + (week - 1) * WEEK, note = data.notes[it.pi + ' ' + it.name + 'W' + week] || '';
-      var out = ['<div class="pi-bar"><div class="pi-now" data-week="' + iso(monday) + '" tabindex="0"><span class="pi-now__label">Сейчас</span><strong>' + it.pi + ' · ' + it.name + ' · неделя ' + week + ' из ' + it.weeks + '</strong><span>' + span(monday, monday + 6 * DAY) + '</span>' +
+      var out = ['<div class="pi-bar"><div class="pi-now" data-week="' + iso(monday) + '" tabindex="0"><span class="pi-now__label">Сейчас</span><strong>' + it.pi + ' · ' + it.label + ' · неделя ' + week + ' из ' + it.weeks + '</strong><span>' + span(monday, monday + 6 * DAY) + '</span>' +
         (note ? '<span class="pi-note">' + esc(note) + '</span>' : '') + '</div>' +
         '<div class="pi-nav"><button type="button" data-pi-step="-1" aria-label="Предыдущий PI">‹</button><button type="button" data-pi-step="0">Сегодня</button><button type="button" data-pi-step="1" aria-label="Следующий PI">›</button></div></div><div class="pi-row">'];
       pis.forEach(function (pi) {
         var total = Math.round((pi.end - pi.start) / DAY) + 1, done = Math.max(0, Math.min(total, Math.round((day - pi.start) / DAY) + 1)), pct = Math.floor(100 * done / total);
         var st = pi.name === it.pi ? 'идёт' : (done === total ? 'завершён' : 'впереди');
         var its = pi.iterations.map(function (i) {
-          return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', itKey(i) === itKey(sel) ? 'is-selected' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.name + '</b><em>' + i.title + '</em><span>' + span(i.start, i.end) + ' · ' + i.weeks + ' нед.</span></li>';
+          return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '', itKey(i) === itKey(sel) ? 'is-selected' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.label + '</b><em>' + i.title + '</em><span>' + span(i.start, i.end) + ' · ' + i.weeks + ' нед.</span></li>';
         }).join('');
         out.push('<article' + cls('pi-card', pi.name === it.pi ? 'is-current' : '', pi.name === shown.name ? 'is-selected' : '') + ' data-pi="' + pi.name + '" tabindex="0">' +
           '<header><strong>' + pi.name + '</strong><small>' + st + '</small></header><span class="pi-dates">' + span(pi.start, pi.end) + '</span>' +
@@ -328,7 +328,7 @@
         var start = sel.start + (n - 1) * WEEK, name = sel.pi + ' ' + sel.name + 'W' + n, text = data.notes[name] || '';
         weeks.push('<li' + cls(start === monday ? 'is-current' : '', name === shown.ip.name ? 'is-ip' : '') + ' data-week="' + iso(start) + '" tabindex="0"><b>W' + n + '</b><span>' + span(start, start + 6 * DAY) + '</span>' + (text ? '<small>' + esc(text.split(';')[0]) + '</small>' : '') + '</li>');
       }
-      out.push('<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + sel.name + ' (' + sel.title + ') · нажмите на неделю, итерацию или PI, чтобы открыть подробности</span><ol>' + weeks.join('') + '</ol></div>' +
+      out.push('<div class="pi-weeks"><span class="pi-weeks__label">Недели итерации ' + sel.label + ' (' + sel.title + ') · нажмите на неделю, итерацию или PI, чтобы открыть подробности</span><ol>' + weeks.join('') + '</ol></div>' +
         '<h3 class="pi-board-title">Работа по итерациям ' + shown.name + '</h3>' + board(shown, it, sel));
       return out.join('');
     }
@@ -348,7 +348,7 @@
       var total = Math.round((pi.end - pi.start) / DAY) + 1, done = Math.max(0, Math.min(total, Math.round((day - pi.start) / DAY) + 1));
       var rows = pi.iterations.map(function (i) {
         var n = work([pi.name + ' ' + i.name]).length;
-        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.name + '</b><span>' + i.title + '</span><span>' + span(i.start, i.end) + '</span><span>' + i.weeks + ' нед.</span><span>' + (n ? 'работ: ' + n : '—') + '</span></li>';
+        return '<li' + cls(itKey(i) === itKey(it) ? 'is-current' : '') + ' data-it="' + itKey(i) + '" tabindex="0"><b>' + i.label + '</b><span>' + i.title + '</span><span>' + span(i.start, i.end) + '</span><span>' + i.weeks + ' нед.</span><span>' + (n ? 'работ: ' + n : '—') + '</span></li>';
       }).join('');
       var marked = [];
       for (var t = pi.start; t <= pi.end; t += WEEK) { var note = weekNote(t); if (note) marked.push('<li data-week="' + iso(t) + '" tabindex="0"><b>' + span(t, t + 6 * DAY) + '</b><span>' + esc(note) + '</span></li>'); }
@@ -365,7 +365,7 @@
         var s = i.start + (n - 1) * WEEK, note = data.notes[i.pi + ' ' + i.name + 'W' + n] || '';
         weeks.push('<li' + cls(s === monday ? 'is-current' : '', i.pi + ' ' + i.name + 'W' + n === ip ? 'is-ip' : '') + ' data-week="' + iso(s) + '" tabindex="0"><b>W' + n + '</b><span>' + span(s, s + 6 * DAY) + '</span><span>' + (esc(note) || '—') + '</span></li>');
       }
-      return '<header><small>Итерация · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a>' + (itKey(i) === itKey(w[0]) ? ' · идёт, неделя ' + w[1] : '') + '</small><h2>' + i.name + ' · ' + i.title + ' ' + i.year + '</h2><p>' + span(i.start, i.end, true) + ' · ' + i.weeks + ' нед.</p></header>' +
+      return '<header><small>Итерация · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a>' + (itKey(i) === itKey(w[0]) ? ' · идёт, неделя ' + w[1] : '') + '</small><h2>' + i.label + ' · ' + i.title + ' ' + i.year + '</h2><p>' + span(i.start, i.end, true) + ' · ' + i.weeks + ' нед.</p></header>' +
         '<h3>Недели</h3><ul class="pop-rows pop-rows--weeks">' + weeks.join('') + '</ul>' +
         '<h3>Работа в этой итерации</h3>' + itemList(work([i.pi + ' ' + i.name]), 'В эту итерацию работа пока не запланирована.');
     }
@@ -384,11 +384,11 @@
         var t = start + k * DAY, p = parts(t), label = p.d + ' ' + SHORT[p.m - 1];
         days.push('<li' + cls(k > 4 ? 'is-weekend' : '', marks[label] || '', t === day ? 'is-today' : '') + '><small>' + DAYS[k].slice(0, 2) + '</small><b>' + p.d + '</b><span>' + SHORT[p.m - 1] + '</span></li>');
       }
-      return '<header><small>Неделя ' + w[1] + ' из ' + i.weeks + ' · итерация <a href="#" data-it="' + itKey(i) + '">' + i.name + ' ' + i.title + '</a> · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a></small><h2>W' + w[1] + ' · ' + span(start, start + 6 * DAY) + '</h2>' +
+      return '<header><small>Неделя ' + w[1] + ' из ' + i.weeks + ' · итерация <a href="#" data-it="' + itKey(i) + '">' + i.label + ' ' + i.title + '</a> · PI <a href="#" data-pi="' + i.pi + '">' + i.pi + '</a></small><h2>W' + w[1] + ' · ' + span(start, start + 6 * DAY) + '</h2>' +
         (events.length ? '<p class="pop-events">' + events.map(function (e) { return '<span>' + esc(e) + '</span>'; }).join('') + '</p>' : '') + '</header>' +
         '<ol class="pop-days">' + days.join('') + '</ol>' +
         '<p class="pop-legend"><span class="is-off">нерабочий день</span><span class="is-short">сокращённый день</span><span class="is-away">вероятны отсутствия</span><span class="is-today">сегодня</span></p>' +
-        '<h3>Работа в итерации ' + i.name + '</h3>' + itemList(work([i.pi + ' ' + i.name]), 'В эту итерацию работа пока не запланирована.');
+        '<h3>Работа в итерации ' + i.label + '</h3>' + itemList(work([i.pi + ' ' + i.name]), 'В эту итерацию работа пока не запланирована.');
     }
     function popItem(id) {
       var found = null, card = null;
@@ -396,7 +396,7 @@
       if (!found) return '<p class="pop-muted">Не найдено.</p>';
       var tpl = document.querySelector('template[data-kb-detail="' + card.id + '"]'), wrap = document.createElement('div');
       if (tpl) wrap.appendChild(tpl.content.cloneNode(true));
-      var planned = found.iteration ? 'итерация <a href="#" data-it="' + found.iteration.slice(0, 4) + '-' + found.iteration.slice(11, 13) + '">' + esc(found.iteration) + '</a>' : 'ещё не запланировано';
+      var planned = found.iteration ? 'итерация <a href="#" data-it="' + found.iteration.slice(0, 4) + '-' + found.iteration.slice(11, 13) + '">' + esc(found.iteration.replace(' I', ' i')) + '</a>' : 'ещё не запланировано';
       return '<header><small>' + esc(found.id) + ' · ' + esc(found.state) + ' · ' + planned + '</small><h2>' + esc(found.title) + '</h2></header>' +
         '<h3>Проект ' + esc(card.id) + '</h3><div class="pop-card">' + wrap.innerHTML + '</div>' +
         '<p><a class="pop-full" href="' + esc(card.href) + '">Полная карточка проекта →</a></p>';

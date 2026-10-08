@@ -789,3 +789,17 @@ details.svc[open]::after{opacity:1}
 .here-place .here-tile{padding:10px 14px}
 .page-body .here-flow li{padding:6px 8px 6px 14px}
 .here-flow li strong{font-size:18px}
+/* room to breathe in the time tiles */
+.here{gap:16px}
+.here-time,.here-place{gap:16px}
+.here-tile{padding:18px 20px;gap:10px}
+.here-tile strong{font-size:20px}
+.here-head{gap:4px 12px}
+.here-pi{gap:10px;margin-top:4px}
+.page-body .here-pi li{padding:8px 8px;gap:4px}
+.here-cells{gap:3px}
+.here-weeks{gap:6px;margin-top:4px}
+.here-weeks button{padding:6px 0;font-size:12px}
+.here-range{margin-top:2px}
+.here-place .here-tile{padding:14px 18px}
+.page-body .here-flow li{padding:8px 8px 8px 14px}
