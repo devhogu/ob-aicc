@@ -40,7 +40,52 @@ def main(source):
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text('<!--page ' + json.dumps(meta, ensure_ascii=False) + ' -->\n' + main_html.strip() + '\n', encoding='utf-8')
         count += 1
+    relocate_regulation()
     print(f'imported {count} catalog pages')
+
+
+MOVED = {'from': 'regulatory-horizon', 'id': 'hub/regulation', 'section': 'hub', 'order': 50}
+
+
+def relocate_regulation():
+    """The regulatory page is general information, not a scenario area: it moves to the Hub section, and every link follows it."""
+    import posixpath
+    old_dir = 'ru/catalog/' + MOVED['from'] + '/'
+    new_dir = 'ru/' + MOVED['id'] + '/'
+    src = DEST / 'pages' / MOVED['from'] / 'index.html'
+    text = src.read_text(encoding='utf-8')
+    head, body = text.split('-->\n', 1)
+    meta = json.loads(head[len('<!--page '):].strip())
+    meta.update({'id': MOVED['id'], 'section': MOVED['section'], 'order': MOVED['order']})
+
+    def move(match):
+        href = match[2]
+        if href.startswith(('#', 'http', 'mailto')):
+            return match[0]
+        path, _, frag = href.partition('#')
+        target = posixpath.normpath(posixpath.join(old_dir, path)) + ('/' if path.endswith('/') else '')
+        return f'{match[1]}="{posixpath.relpath(target, new_dir) + ("/" if path.endswith("/") else "")}{"#" + frag if frag else ""}"'
+    body = re.sub(r'(href)="([^"]+)"', move, body)
+    body = body.replace('<a class="breadcrumb__link" href="../../catalog/">Каталог сценариев</a>', '<a class="breadcrumb__link" href="../../index.html">Хаб Компетенций</a>')
+    out = DEST / 'pages' / '_moved' / 'regulation.html'
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text('<!--page ' + json.dumps(meta, ensure_ascii=False) + ' -->\n' + body, encoding='utf-8')
+    shutil.rmtree(src.parent)
+    # pages that pointed at it now point at its new place
+    for page in (DEST / 'pages').rglob('index.html'):
+        rel = page.parent.relative_to(DEST / 'pages').as_posix()
+        here = 'ru/catalog/' + ('' if rel == '.' else rel + '/')
+        s = page.read_text(encoding='utf-8')
+
+        def repoint(match):
+            path, _, frag = match[1].partition('#')
+            target = posixpath.normpath(posixpath.join(here, path))
+            if not target.startswith('ru/catalog/' + MOVED['from']):
+                return match[0]
+            return 'href="' + posixpath.relpath(new_dir + 'index.html', here) + ('#' + frag if frag else '') + '"'
+        n = re.sub(r'href="([^"]+)"', repoint, s)
+        if n != s:
+            page.write_text(n, encoding='utf-8')
 
 
 if __name__ == '__main__':

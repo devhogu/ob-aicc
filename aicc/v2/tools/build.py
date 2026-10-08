@@ -253,11 +253,12 @@ def load_catalog(pages):
     order = {}
     for n, href in enumerate(re.findall(r'href="([^"#]+)', home)):
         order.setdefault(('catalog/' + href.replace('/index.html', '')).rstrip('/'), n + 1)
-    for path in sorted(base.rglob('index.html')):
+    for path in sorted(list(base.rglob('index.html')) + list(base.glob('_moved/*.html'))):
         text = path.read_text(encoding='utf-8')
         meta = json.loads(re.match(r'<!--page (.*?) -->\n', text)[1])
         body = text[text.index('-->\n') + 4:]
-        page = Page(meta['id'], meta['title'], 'catalog', 0 if meta['id'] == 'catalog' else order.get(meta['id'], 9999), meta['summary'], body, layout='raw',
+        section = meta.get('section', 'catalog')
+        page = Page(meta['id'], meta['title'], section, meta.get('order') or (0 if meta['id'] == 'catalog' else order.get(meta['id'], 9999)), meta['summary'], body, layout='raw',
                     nav_title='Обзор' if meta['id'] == 'catalog' else None)
         page.styles = meta['styles']
         pages[meta['id']] = page
