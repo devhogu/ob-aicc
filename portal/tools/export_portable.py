@@ -174,7 +174,7 @@ def export(source, output):
         text = Page(data.decode(), path, original).rendered()
         if path == 'index.html':
             text = re.sub(r'<meta\b[^>]*http-equiv=["\']refresh["\'][^>]*>', '', text, flags=re.I)
-        elif path in ('en/index.html', 'ru/index.html'):
+        elif path in ('en/index.html', 'ru/index.html') and 'data-search=' not in text:
             # The language entry only forwards to the Center; a file origin needs the explicit file name.
             text = text.replace('url=center/"', 'url=center/index.html"')
             text = re.sub(r'<script>location\.replace\([^<]*</script>', '', text)
