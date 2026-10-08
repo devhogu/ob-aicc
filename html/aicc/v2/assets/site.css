@@ -195,3 +195,23 @@ dialog.fb .fb-body .oc-button{flex:none;align-self:flex-end}
 .home-hero h1{margin-top:0}
 .o-nav{display:flex;flex-direction:column}
 .o-nav .nav-foot{margin-top:auto;padding-top:24px}
+/* front page: one gap between its blocks, one gap inside the hero */
+.home-hero{padding-bottom:0;margin-bottom:0}
+.home-lead{margin:0}
+.home-tagline{margin:40px 0 0}
+.home-ctas{margin:40px 0 0}
+.home-stand{margin:40px 0 0}
+.home-pri{margin:40px 0 0}
+.home-pri-lead{margin:0 0 24px}
+.home-pri h2{margin:0 0 10px}
+.home-sections,h2+.home-sections{margin:24px 0 0}
+h2#h-sec{margin:40px 0 0;text-align:center;font-size:30px}
+.home-newhere{margin:40px 0 24px}
+.home-hero h1{margin:0 0 24px}
+.home-pri-lead{margin:0 0 24px}
+.home-pri h2{margin:0 0 12px}
+.home-chips{margin:0 auto}
+section[aria-labelledby=h-sec]{margin-top:40px}
+h2#h-sec{margin:0;text-align:center;font-size:30px}
+.home-sections,h2+.home-sections{margin:24px 0 0}
+.home-pri .home-pri-lead{margin:0 0 24px}
