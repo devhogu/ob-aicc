@@ -7,7 +7,7 @@ related: process/portfolio, process/program, process/profiles, hub/values
 
 В каждом проекте три роли. Это роли в проекте, а не должности: одну роль могут выполнять несколько человек, а один человек может совмещать две. Кто сейчас в какой роли, указано на карточке. Чтобы принести идею, роль не нужна.
 
-<ul class="o-grid card-list cards-compact read-further">
+<ul class="o-grid card-list cards-compact role-cards">
 <li class="o-card card--compact"><p class="card-kicker">Зачем</p><h3>[[business-owner|Бизнес-владелец]]</h3><p class="card-desc">Представляет подразделение, которому нужен результат. Решает, стоит ли начинать и продолжать работу, и принимает результат.</p></li>
 <li class="o-card card--compact"><p class="card-kicker">Что и в каком порядке</p><h3>[[product-manager|Менеджер продукта]]</h3><p class="card-desc">Формулирует ценность, ведёт воронку и бэклог, принимает каждую Feature.</p></li>
 <li class="o-card card--compact"><p class="card-kicker">Как и когда</p><h3>[[project-manager|Руководитель проекта]]</h3><p class="card-desc">Ведёт проект изо дня в день и следит, чтобы карточка была актуальной.</p></li>
