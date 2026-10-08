@@ -203,9 +203,13 @@
     var buttons = root.querySelectorAll('[data-tab]'), panels = root.querySelectorAll('[data-tab-panel]');
     root.classList.add('tabs-on');
     var keys = Array.prototype.map.call(buttons, function (b) { return b.dataset.tab; });
+    var bar = root.closest('[data-kanban-workspace]') && root.closest('[data-kanban-workspace]').querySelector('[data-kb-filterbar]');
     function show(key) {
       buttons.forEach(function (b) { b.setAttribute('aria-selected', String(b.dataset.tab === key)); });
       panels.forEach(function (p) { p.hidden = p.dataset.tabPanel !== key; });
+      // the search and filters sit right above the open view
+      var open = root.querySelector('[data-tab-panel="' + key + '"]'), after = open && open.querySelector('.pf-tip');
+      if (bar && after) after.after(bar);
       root.dispatchEvent(new Event('kb-refresh', {bubbles: true}));
     }
     // a tab opens from the address (#plan) and keeps it, so a view can be linked to

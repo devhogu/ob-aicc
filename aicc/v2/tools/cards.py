@@ -114,9 +114,9 @@ def add_pages(pages, site, terms, api):
     def filters(count):
         functions = sorted({c.get('function') for c in cards if c.get('function')})
         areas = sorted({c.get('area') for c in cards if c.get('area')})
-        return (f'<div class="pf-filter" role="search"><label>Найти<input type="search" data-kb-search placeholder="идентификатор, название, функция"></label>'
-                f'<label>Функция<select data-kb-filter="function">{options(functions, "Все функции")}</select></label>'
-                f'<label>Услуга<select data-kb-filter="area">{options(areas, "Все услуги")}</select></label>'
+        return (f'<div class="pf-filter" role="search" data-kb-filterbar><label><span class="pf-filter__label">Найти</span><input type="search" data-kb-search placeholder="Найти: идентификатор, название, функция"></label>'
+                f'<label><span class="pf-filter__label">Функция</span><select data-kb-filter="function">{options(functions, "Все функции")}</select></label>'
+                f'<label><span class="pf-filter__label">Услуга</span><select data-kb-filter="area">{options(areas, "Все услуги")}</select></label>'
                 f'<output data-kb-count aria-live="polite">Показано: {count}</output></div>')
 
     def card_attrs(card):
