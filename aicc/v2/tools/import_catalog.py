@@ -40,7 +40,8 @@ def main(source):
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text('<!--page ' + json.dumps(meta, ensure_ascii=False) + ' -->\n' + main_html.strip() + '\n', encoding='utf-8')
         count += 1
-    relocate_regulation()
+    # relocate_regulation()  # the page belongs with the scenarios it links to
+    present_regulation()
     print(f'imported {count} catalog pages')
 
 
@@ -86,6 +87,32 @@ def relocate_regulation():
         n = re.sub(r'href="([^"]+)"', repoint, s)
         if n != s:
             page.write_text(n, encoding='utf-8')
+
+
+
+STATUS = {'Применяется, подлежит подтверждению': ('applies', 'Применяется'), 'Ожидается, подлежит подтверждению': ('expected', 'Ожидается'), 'Справочный': ('reference', 'Для справки')}
+
+
+def present_regulation():
+    """Make the top of the regulatory page a clear overview: a summary of statuses and one card per theme; drop the internal theme codes."""
+    path = DEST / 'pages' / 'regulatory-horizon' / 'index.html'
+    text = path.read_text(encoding='utf-8')
+    text = re.sub(r'<span class="horizon-theme__id">[^<]*</span>', '', text)
+    themes = re.findall(r'<section class="horizon-theme" id="([^"]+)"><header class="horizon-theme__head"><h2>(.*?)</h2><span class="horizon-standing">(.*?)</span></header>'
+                        r'<p class="horizon-theme__instruments"><strong>Акты:</strong>\s*(.*?)</p>', text, re.S)
+    counts = dict(re.findall(r'<li><a href="#([^"]+)">[^<]*</a> <span class="card-link__count">\((\d+)\)</span></li>', text))
+    cards, tally = [], {}
+    for ident, title, standing, acts in themes:
+        key, label = STATUS.get(standing, ('reference', standing))
+        tally[key] = tally.get(key, 0) + 1
+        acts = re.sub(r'^.*?например\s*', '', acts).strip()
+        n = counts.get(ident, '0')
+        cards.append(f'<a class="hz-card hz-card--{key}" href="#{ident}"><span class="hz-status">{label}</span><strong>{title}</strong>'
+                     f'<span class="hz-acts">{acts}</span><span class="hz-count">{n} сценариев каталога</span></a>')
+    summary = ''.join(f'<span class="hz-sum hz-sum--{k}"><b>{tally.get(k, 0)}</b> {lbl.lower()}</span>' for k, lbl in (('applies', 'Применяются'), ('expected', 'Ожидаются'), ('reference', 'Для справки')))
+    grid = f'<div class="hz-summary">{summary}<span class="hz-note">статусы подлежат подтверждению</span></div><div class="hz-grid">{"".join(cards)}</div>'
+    text = re.sub(r'<ol class="horizon-contents">.*?</ol>', lambda _: grid, text, count=1, flags=re.S)
+    path.write_text(text, encoding='utf-8')
 
 
 if __name__ == '__main__':
