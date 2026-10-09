@@ -266,6 +266,12 @@
         a.textContent = (n === 1 ? 'Начать: шаг 1' : 'Продолжить: шаг ' + n) + ' — ' + (link ? link.textContent.replace(' ↗', '') : '') + ' →';
         if (link && link.dataset.map) a.dataset.map = link.dataset.map;
       });
+      // the roadmap line: the segment after a stop turns green once that map is done
+      document.querySelectorAll('[data-seg]').forEach(function (seg) {
+        var id = seg.dataset.seg, total = parseInt(seg.dataset.total, 10) || 0, done = 0;
+        Object.keys(state).forEach(function (k) { if (state[k] && k.indexOf(id + '|') === 0) done++; });
+        seg.classList.toggle('is-complete', total > 0 && done >= total);
+      });
       // stations on the roadmap: a ring filled by the share of the map's steps that are done
       document.querySelectorAll('[data-ring]').forEach(function (ring) {
         var id = ring.dataset.ring, total = parseInt(ring.dataset.total, 10) || 0, done = 0;

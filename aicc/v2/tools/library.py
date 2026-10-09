@@ -170,6 +170,7 @@ def add_pages(pages, site, api):
 
 
 LEVEL_COLORS = ['#9aa3b2', '#5b6bd6', '#d6006f', '#2e9e5b']
+BRANCH_COLORS = ['#5b6bd6', '#2e9e5b', '#d98a00']
 
 
 def wrap(text, width):
@@ -209,10 +210,13 @@ def roadmap_svg(data, maps, link, totals):
     fork = xs[-1] + 110
     ys = [round(mid + (k - (len(branches) - 1) / 2) * spread) for k in range(len(branches))]
     out = [f'<svg class="rm-svg" viewBox="0 0 {W} {H}" role="img" aria-label="Дорожная карта обучения">',
-           f'<defs><linearGradient id="rm-grad" gradientUnits="userSpaceOnUse" x1="{x0}" y1="{mid}" x2="{fork}" y2="{mid}"><stop offset="0" stop-color="#d6006f"/><stop offset="1" stop-color="#5b6bd6"/></linearGradient></defs>',
-           f'<path class="rm-track" d="M{x0},{mid} L{fork},{mid}"/>']
+           f'<path class="rm-track" stroke="#d6006f" d="M{x0},{mid} L{xs[0]},{mid}"/>']
+    # the core line, one segment per stop: it turns green once the map behind it is done (site.js, data-seg)
+    ends = xs[1:] + [fork]
+    for map_id, a, b in zip(core, xs, ends):
+        out.append(f'<path class="rm-track rm-seg" data-seg="{escape(map_id)}" data-total="{totals(maps[map_id])[0]}" stroke="#d6006f" d="M{a},{mid} L{b},{mid}"/>')
     for k, y in enumerate(ys):
-        out.append(f'<path class="rm-track rm-track--branch rm-track--b{k}" d="M{fork},{mid} C{fork + 70},{mid} {fork + 50},{y} {fork + 120},{y} L{W - 70},{y}"/>')
+        out.append(f'<path class="rm-track rm-track--branch rm-track--b{k}" stroke="{BRANCH_COLORS[k % len(BRANCH_COLORS)]}" d="M{fork},{mid} C{fork + 70},{mid} {fork + 50},{y} {fork + 120},{y} L{W - 70},{y}"/>')
     out.append(f'<g class="rm-start"><circle cx="{x0}" cy="{mid}" r="22"/><text x="{x0}" y="{mid + 4}" text-anchor="middle">Старт</text></g>')
     for i, (map_id, x) in enumerate(zip(core, xs)):
         m = maps[map_id]
